@@ -1,7 +1,7 @@
 window.HW2_ARTIGO_CONTA = true; /* aula de artigos: a/an/the contam */
 /* A MAN GOING DOWN · LIÇÃO DE CASA 2.0 (23/10/2026)
    Motor: hw2.js (fonte em _plano-50/live-class/kit/hw2/). JSON puro depois do "=": o gera_audio.py lê este arquivo.
-   Alvo: artigos a/an/the. A2: dicas em português só nas notas (d). Bíblia: nenhum versículo aqui; o diálogo é original. O motor trata a/an/the como iguais: os itens pedem artigo que falta, não a troca. */
+   Alvo: artigos a/an/the. A2: dicas em português só nas notas (d). Versículos (World English Bible, ao pé da letra): Luke 10:31 (Out loud), Luke 10:37 (Listen) e Luke 10:29 (Você). Nada da Bíblia é marcado como errado. O motor trata a/an/the como iguais: os itens pedem artigo que falta, não a troca. */
 window.HW2 = {
   "id": "a-man-going-down",
   "titulo": "A Man Going Down",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rate": "-14%",
   "rodadas": {
     "listen": {
-      "sub": "Mia and Leo on a road. A new scene, about 40 seconds.",
+      "sub": "Mia and Leo on a road. Mia quotes Luke 10:37. A new scene, about 40 seconds.",
       "img": "https://wolf-labs.pages.dev/p/4e89f462cc38/a-man-going-down/img/live-estrada.webp",
       "leg": "The road near the bridge",
       "audio": "audio/listen.mp3",
@@ -70,6 +70,10 @@ window.HW2 = {
         {
           "quem": "leo",
           "t": "Yes. The man is in a hospital now, and I think the woman is a hero."
+        },
+        {
+          "quem": "mia",
+          "t": "Jesus tells a story like that. At the end he says, “Go and do likewise.”"
         }
       ],
       "perguntas": [
@@ -106,7 +110,7 @@ window.HW2 = {
       ]
     },
     "out": {
-      "sub": "Three sentences from the story. Hear it, then say it.",
+      "sub": "Three sentences from the story. The third is from the Bible: Luke 10:31 (World English Bible). Hear it, then say it.",
       "frases": [
         {
           "t": "A man was going down the road, and the man was hurt.",
@@ -119,7 +123,7 @@ window.HW2 = {
           "au": "audio/say2.mp3"
         },
         {
-          "t": "The priest saw the man, but the priest walked by.",
+          "t": "By chance a certain priest was going down that way.",
           "img": "https://wolf-labs.pages.dev/p/4e89f462cc38/a-man-going-down/img/live-marco.webp",
           "au": "audio/say3.mp3"
         }
@@ -176,7 +180,7 @@ window.HW2 = {
       "sub": "Two questions about you. Say it or type it.",
       "perguntas": [
         {
-          "q": "Who is a good neighbor on your street? What does he or she do?",
+          "q": "In Luke 10:29 a man asks Jesus, “Who is my neighbor?” Who is a good neighbor on your street? What does he or she do?",
           "ph": "A … lives on my street. The … is …",
           "ex": "An old woman lives on the corner. The woman waters my plants when I travel."
         },

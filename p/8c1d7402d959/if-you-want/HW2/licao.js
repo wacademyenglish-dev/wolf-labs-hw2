@@ -1,6 +1,6 @@
 /* IF YOU WANT · LIÇÃO DE CASA 2.0 (23/10/2026)
    Motor: hw2.js (fonte em _plano-50/live-class/kit/hw2/). JSON puro depois do "=": o gera_audio.py lê este arquivo.
-   Alvo: can / can't / couldn't. Bíblia: nenhum versículo aqui; o diálogo é original e nada da Bíblia é marcado como errado. A1: dicas em português só nas notas (d). */
+   Alvo: can / can't / couldn't. Versículos (World English Bible, ao pé da letra): Mark 1:40 (Out loud, Você) e Mark 1:41 (Listen). Nada da Bíblia é marcado como errado. A1: dicas em português só nas notas (d). */
 window.HW2 = {
   "id": "if-you-want",
   "titulo": "If You Want",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rate": "-14%",
   "rodadas": {
     "listen": {
-      "sub": "Mia tells Leo a story she is reading. A new scene, about 30 seconds.",
+      "sub": "Mia tells Leo a story she is reading. She quotes Mark 1:41. A new scene, about 30 seconds.",
       "img": "https://wolf-labs.pages.dev/p/8c1d7402d959/if-you-want/img/live-casa.webp",
       "leg": "A small room, a warm window",
       "audio": "audio/listen.mp3",
@@ -48,7 +48,7 @@ window.HW2 = {
         },
         {
           "quem": "mia",
-          "t": "Before, he couldn't. But now he can. Someone helps him."
+          "t": "Before, he couldn't. But now he can. Jesus helps him. He says, “I want to. Be made clean.”"
         },
         {
           "quem": "leo",
@@ -87,7 +87,7 @@ window.HW2 = {
       ]
     },
     "out": {
-      "sub": "Three sentences from the story. Hear it, then say it.",
+      "sub": "Three sentences from the story. The third is from the Bible: Mark 1:40 (World English Bible). Hear it, then say it.",
       "frases": [
         {
           "t": "He can't live in the city.",
@@ -100,7 +100,7 @@ window.HW2 = {
           "au": "audio/say2.mp3"
         },
         {
-          "t": "Can you help me? Yes, I can.",
+          "t": "If you want to, you can make me clean.",
           "img": "https://wolf-labs.pages.dev/p/8c1d7402d959/if-you-want/img/live-porta.webp",
           "au": "audio/say3.mp3"
         }
@@ -162,9 +162,9 @@ window.HW2 = {
       "sub": "Two questions about you. Say it or type it.",
       "perguntas": [
         {
-          "q": "What can you cook? What can't you cook?",
-          "ph": "I can cook … I can't cook …",
-          "ex": "I can cook rice and beans. I can't cook fish."
+          "q": "In Mark 1:40 a man says to Jesus, “If you want to, you can make me clean.” Think of a friend. What can you do to help a friend? What can't you do?",
+          "ph": "I can … I can't …",
+          "ex": "I can listen and I can cook for my friend. I can't give money."
         },
         {
           "q": "What can you do very well?",

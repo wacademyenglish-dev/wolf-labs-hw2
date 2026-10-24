@@ -1,6 +1,6 @@
 /* THE EMPTY TOMB · LIÇÃO DE CASA 2.0 (23/10/2026)
    Motor: hw2.js (fonte em _plano-50/live-class/kit/hw2/). JSON puro depois do "=": o gera_audio.py lê este arquivo.
-   Alvo: was/were (antes) × is/are (agora); Where is he? A1: dicas em português só nas notas (d). Bíblia: nenhum versículo aqui e nada é marcado errado; o diálogo é original. */
+   Alvo: was/were (antes) × is/are (agora); Where is he? A1: dicas em português só nas notas (d). Versículos (World English Bible, ao pé da letra): Matthew 28:6 (Listen e Out loud) e Matthew 28:8 (Você). Nada da Bíblia é marcado como errado. */
 window.HW2 = {
   "id": "the-empty-tomb",
   "titulo": "The Empty Tomb",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rate": "-14%",
   "rodadas": {
     "listen": {
-      "sub": "Mia and Leo in a garden on Sunday morning. A new scene, about 40 seconds.",
+      "sub": "Mia and Leo in a garden on Sunday morning. Mia quotes Matthew 28:6. A new scene, about 40 seconds.",
       "img": "https://wolf-labs.pages.dev/p/749c8e5ebdca/the-empty-tomb/img/live-noite.webp",
       "leg": "A garden, very early",
       "audio": "audio/listen.mp3",
@@ -68,7 +68,15 @@ window.HW2 = {
         },
         {
           "quem": "mia",
-          "t": "Yes. They ask: where is he? And a man in white says: he is alive."
+          "t": "Yes. They ask: where is he?"
+        },
+        {
+          "quem": "leo",
+          "t": "And what is the answer?"
+        },
+        {
+          "quem": "mia",
+          "t": "A man in white says, “He is not here, for he has risen, just like he said.”"
         }
       ],
       "perguntas": [
@@ -105,7 +113,7 @@ window.HW2 = {
       ]
     },
     "out": {
-      "sub": "Three sentences from the story. Hear it, then say it.",
+      "sub": "Three sentences from the story. The third is from the Bible: Matthew 28:6 (World English Bible). Hear it, then say it.",
       "frases": [
         {
           "t": "On Friday the tomb was closed.",
@@ -118,7 +126,7 @@ window.HW2 = {
           "au": "audio/say2.mp3"
         },
         {
-          "t": "The stone was big. Now the tomb is empty.",
+          "t": "Come, see the place where the Lord was lying.",
           "img": "https://wolf-labs.pages.dev/p/749c8e5ebdca/the-empty-tomb/img/live-manha.webp",
           "au": "audio/say3.mp3"
         }
@@ -178,9 +186,9 @@ window.HW2 = {
           "ex": "I was at home with my family. We were tired."
         },
         {
-          "q": "How are you right now?",
-          "ph": "I am … / I am not …",
-          "ex": "I am a bit tired, but I am happy."
+          "q": "Matthew 28:8 says, “They departed quickly from the tomb with fear and great joy, and ran to bring his disciples word.” When were you full of joy? Where were you?",
+          "ph": "I was at … We were …",
+          "ex": "I was at the beach with my friends. We were very happy."
         }
       ]
     }

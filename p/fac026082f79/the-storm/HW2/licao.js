@@ -1,6 +1,6 @@
 /* THE STORM · LIÇÃO DE CASA 2.0 (23/10/2026)
    Motor: hw2.js (fonte em _plano-50/live-class/kit/hw2/). JSON puro depois do "=": o gera_audio.py lê este arquivo.
-   Alvo: orders (imperativo). A1: dicas em português só nas notas (d). Bíblia: nenhum versículo aqui; o diálogo é original. */
+   Alvo: orders (imperativo). A1: dicas em português só nas notas (d). Versículos (World English Bible, ao pé da letra): Mark 4:39 (Listen e Out loud) e Mark 4:40 (Você). Nada da Bíblia é marcado como errado. */
 window.HW2 = {
   "id": "the-storm",
   "titulo": "The Storm",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rate": "-14%",
   "rodadas": {
     "listen": {
-      "sub": "Mia and Leo in a small boat. A new scene, about 30 seconds.",
+      "sub": "Mia and Leo in a small boat. Mia quotes Mark 4:39. A new scene, about 30 seconds.",
       "img": "https://wolf-labs.pages.dev/p/fac026082f79/the-storm/img/live-conves.webp",
       "leg": "A small boat, a big wind",
       "audio": "audio/listen.mp3",
@@ -68,7 +68,11 @@ window.HW2 = {
         },
         {
           "quem": "mia",
-          "t": "Yes! The water is calm. Sit down and rest."
+          "t": "Yes! The water is calm. It is like the old story: Jesus says to the sea, “Peace! Be still!”"
+        },
+        {
+          "quem": "leo",
+          "t": "Sit down and rest, Mia."
         }
       ],
       "perguntas": [
@@ -105,7 +109,7 @@ window.HW2 = {
       ]
     },
     "out": {
-      "sub": "Three sentences from the story. Hear it, then say it.",
+      "sub": "Three sentences from the story. The third is from the Bible: Mark 4:39 (World English Bible). Hear it, then say it.",
       "frases": [
         {
           "t": "Hold the rope and don't stand up.",
@@ -118,7 +122,7 @@ window.HW2 = {
           "au": "audio/say2.mp3"
         },
         {
-          "t": "Be still. The water is calm now.",
+          "t": "The wind ceased and there was a great calm.",
           "img": "https://wolf-labs.pages.dev/p/fac026082f79/the-storm/img/live-calma.webp",
           "au": "audio/say3.mp3"
         }
@@ -179,7 +183,7 @@ window.HW2 = {
       "sub": "Two questions about you. Say it or type it.",
       "perguntas": [
         {
-          "q": "A friend is afraid. What do you say?",
+          "q": "In Mark 4:40 Jesus asks his friends, “Why are you so afraid?” A friend is afraid. What do you say?",
           "ph": "Don't … ! Let's …",
           "ex": "Don't worry! Let's take a walk."
         },
