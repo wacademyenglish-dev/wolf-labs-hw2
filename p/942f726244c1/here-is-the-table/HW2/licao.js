@@ -119,7 +119,8 @@ window.HW2 = {
         {
           "t": "You don’t know what I am doing now, but you will understand later.",
           "img": "https://wolf-labs.pages.dev/p/942f726244c1/here-is-the-table/img/live-jarro.webp",
-          "au": "audio/say2.mp3"
+          "au": "audio/say2.mp3",
+          "ref": "John 13:7"
         },
         {
           "t": "The basin is under the table.",

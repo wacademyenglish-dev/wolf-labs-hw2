@@ -107,12 +107,14 @@ window.HW2 = {
         {
           "t": "While they talked and questioned together, Jesus himself came near, and went with them.",
           "img": "https://wolf-labs.pages.dev/p/46193e331b31/the-road-to-emmaus/img/live-emaus.webp",
-          "au": "audio/say2.mp3"
+          "au": "audio/say2.mp3",
+          "ref": "Luke 24:15"
         },
         {
           "t": "Their eyes were opened and they recognized him; then he vanished out of their sight.",
           "img": "https://wolf-labs.pages.dev/p/46193e331b31/the-road-to-emmaus/img/live-pao.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Luke 24:31"
         }
       ]
     },

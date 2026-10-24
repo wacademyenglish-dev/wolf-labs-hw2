@@ -120,7 +120,8 @@ window.HW2 = {
         {
           "t": "He hurried, came down, and received him joyfully.",
           "img": "https://wolf-labs.pages.dev/p/4946559346e0/too-short-to-see/img/live-casa.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Luke 19:6"
         }
       ]
     },

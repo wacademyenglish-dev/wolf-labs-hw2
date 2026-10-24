@@ -124,7 +124,8 @@ window.HW2 = {
         {
           "t": "The wind ceased and there was a great calm.",
           "img": "https://wolf-labs.pages.dev/p/fac026082f79/the-storm/img/live-calma.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Mark 4:39"
         }
       ]
     },

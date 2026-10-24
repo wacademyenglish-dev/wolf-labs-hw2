@@ -102,7 +102,8 @@ window.HW2 = {
         {
           "t": "If you want to, you can make me clean.",
           "img": "https://wolf-labs.pages.dev/p/8c1d7402d959/if-you-want/img/live-porta.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Mark 1:40"
         }
       ]
     },

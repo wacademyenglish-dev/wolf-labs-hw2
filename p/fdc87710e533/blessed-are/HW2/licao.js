@@ -120,7 +120,8 @@ window.HW2 = {
         {
           "t": "Blessed are the peacemakers, for they shall be called children of God.",
           "img": "https://wolf-labs.pages.dev/p/fdc87710e533/blessed-are/img/live-capa2.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Matthew 5:9"
         }
       ]
     },

@@ -6,6 +6,7 @@ window.HW2 = {
   "titulo": "The Phone Shop",
   "nivel": "A2",
   "minutos": 10,
+  "capa": "https://wolf-labs.pages.dev/p/ff11dc413322/a2-review-the-phone-shop/img/live-capa.webp",
   "alvo": "Unit 5 review, comparing and describing: comparatives and superlatives (faster than, the cheapest), as ... as, bored x boring, adverbs of manner (well, quickly), good at + -ing; never more fast, never the most cheap, never works good",
   "abrir": "What is the best thing you have?",
   "fecho": "Compare: <b>faster than</b> · the top: <b>the cheapest</b> · equal: <b>as … as</b>. The thing: <b>boring</b>; the person: <b>bored</b>. How you do it: <b>well, quickly</b> (never <i>works good</i>). <b>Good at</b> + <b>-ing</b>.",
@@ -25,6 +26,8 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo needs a new phone and Mia works in the shop. About 45 seconds.",
+      "img": "https://wolf-labs.pages.dev/p/ff11dc413322/a2-review-the-phone-shop/img/live-capa.webp",
+      "leg": "At the phone shop",
       "audio": "audio/listen.mp3",
       "falas": [
         {

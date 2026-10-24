@@ -6,6 +6,7 @@ window.HW2 = {
   "titulo": "The Event Planner",
   "nivel": "A2",
   "minutos": 10,
+  "capa": "https://wolf-labs.pages.dev/p/962332ac0c58/a2-review-the-event-planner/img/live-capa.webp",
   "alvo": "Unit 6 review, plans and predictions: at / on / in with time, movement prepositions (get off, through, into), will (quick decision, promise, prediction) x going to (plan), present continuous for what is already booked; never in Monday, never I will to call",
   "abrir": "What are you doing this Saturday?",
   "fecho": "Time: <b>at</b> 7 PM · <b>on</b> Monday · <b>in</b> June. Plan: <b>going to</b>. Decision now: <b>I'll</b> (never <i>will to</i>). Already booked: <b>I'm meeting</b> my boss at ten.",
@@ -25,6 +26,8 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo plans a party and Mia is the event planner. About 45 seconds.",
+      "img": "https://wolf-labs.pages.dev/p/962332ac0c58/a2-review-the-event-planner/img/live-conversa.webp",
+      "leg": "At the planner's desk",
       "audio": "audio/listen.mp3",
       "falas": [
         {
@@ -105,7 +108,7 @@ window.HW2 = {
       "sub": "Three sentences about the big day. Hear it, then say it.",
       "frases": [
         {
-          "t": "The party is on June twelfth, at four.",
+          "t": "The party is on June twelfth, at four.", "img": "https://wolf-labs.pages.dev/p/962332ac0c58/a2-review-the-event-planner/img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {

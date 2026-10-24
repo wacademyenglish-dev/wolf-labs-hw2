@@ -111,12 +111,14 @@ window.HW2 = {
         {
           "t": "Arise, take up your mat, and walk.",
           "img": "https://wolf-labs.pages.dev/p/9e8be6899633/thirty-eight-years/img/live-betesda.webp",
-          "au": "audio/say2.mp3"
+          "au": "audio/say2.mp3",
+          "ref": "John 5:8"
         },
         {
           "t": "Immediately, the man was made well, and took up his mat and walked.",
           "img": "https://wolf-labs.pages.dev/p/9e8be6899633/thirty-eight-years/img/live-capa2.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "John 5:9"
         }
       ]
     },

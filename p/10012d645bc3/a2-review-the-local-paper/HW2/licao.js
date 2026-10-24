@@ -6,6 +6,7 @@ window.HW2 = {
   "titulo": "The Local Paper",
   "nivel": "A2",
   "minutos": 10,
+  "capa": "https://wolf-labs.pages.dev/p/10012d645bc3/a2-review-the-local-paper/img/live-capa.webp",
   "alvo": "Unit 2 review, stories in the past: past simple regular and irregular (saw, called, went), did / didn't + base verb, Who called...? (subject, no did) x Who did you call? (object), first / then / after that / finally, so / because",
   "abrir": "What did you do last weekend?",
   "fecho": "Past: <b>called, saw, went</b>. Questions and no: <b>did / didn't + base verb</b> (<i>He didn't go.</i>). Subject question: <b>Who called?</b> (no did). Order: <b>First, Then, After that, Finally</b>.",
@@ -25,6 +26,8 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia is a reporter and Leo saw a story. A new scene, about 45 seconds.",
+      "img": "https://wolf-labs.pages.dev/p/10012d645bc3/a2-review-the-local-paper/img/live-capa.webp",
+      "leg": "At the local paper",
       "audio": "audio/listen.mp3",
       "falas": [
         {

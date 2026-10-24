@@ -45,7 +45,7 @@ window.HW2 = {
         },
         {
           "quem": "leo",
-          "t": "A man fell from his bike near the bridge. The man was hurt."
+          "t": "A man fell from his bike near the bridge. The man hurt his knee."
         },
         {
           "quem": "mia",
@@ -61,7 +61,7 @@ window.HW2 = {
         },
         {
           "quem": "leo",
-          "t": "I don't know. She is a stranger. The woman called an ambulance, and she stayed an hour with the man."
+          "t": "I don't know. She is a stranger. The woman gave him a bottle of water, and she stayed an hour with the man."
         },
         {
           "quem": "mia",
@@ -69,7 +69,7 @@ window.HW2 = {
         },
         {
           "quem": "leo",
-          "t": "Yes. The man is in a hospital now, and I think the woman is a hero."
+          "t": "Yes. The man is fine now, and I think the woman is a hero."
         },
         {
           "quem": "mia",
@@ -125,7 +125,8 @@ window.HW2 = {
         {
           "t": "By chance a certain priest was going down that way.",
           "img": "https://wolf-labs.pages.dev/p/4e89f462cc38/a-man-going-down/img/live-marco.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Luke 10:31"
         }
       ]
     },

@@ -111,7 +111,8 @@ window.HW2 = {
         {
           "t": "Don’t be afraid. From now on you will be catching people alive.",
           "img": "https://wolf-labs.pages.dev/p/29e0d6d267c3/the-net/img/live-barcos.webp",
-          "au": "audio/say2.mp3"
+          "au": "audio/say2.mp3",
+          "ref": "Luke 5:10"
         },
         {
           "t": "Will you come with me? Yes, I will.",

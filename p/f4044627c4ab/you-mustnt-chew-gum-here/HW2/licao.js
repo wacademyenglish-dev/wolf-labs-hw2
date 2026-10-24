@@ -6,6 +6,7 @@ window.HW2 = {
   "titulo": "You Mustn't Chew Gum Here",
   "nivel": "A2",
   "minutos": 10,
+  "capa": "https://wolf-labs.pages.dev/p/f4044627c4ab/you-mustnt-chew-gum-here/img/live-capa.webp",
   "alvo": "must / mustn't / don't have to: must + verb for a rule, mustn't for a wall (forbidden), don't have to for an open door (not necessary); had to for the past; never must to, don't must",
   "abrir": "What is one rule you have at home?",
   "fecho": "<b>must</b> = a rule. <b>mustn't</b> = forbidden, a wall. <b>don't have to</b> = not necessary, an open door. Never <i>must to</i>, never <i>don't must</i>. Past: <i>I had to wait.</i>",
@@ -25,6 +26,8 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before a trip to Tokyo. A new scene, about 45 seconds.",
+      "img": "https://wolf-labs.pages.dev/p/f4044627c4ab/you-mustnt-chew-gum-here/img/live-mesa.webp",
+      "leg": "Packing for Tokyo",
       "audio": "audio/listen.mp3",
       "falas": [
         {
@@ -105,7 +108,7 @@ window.HW2 = {
       "sub": "Three rules for a visitor. Hear it, then say it.",
       "frases": [
         {
-          "t": "You must take off your shoes at the door.",
+          "t": "You must take off your shoes at the door.", "img": "https://wolf-labs.pages.dev/p/f4044627c4ab/you-mustnt-chew-gum-here/img/live-genkan.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -113,7 +116,7 @@ window.HW2 = {
           "au": "audio/say2.mp3"
         },
         {
-          "t": "You don't have to pay in cash.",
+          "t": "You don't have to pay in cash.", "img": "https://wolf-labs.pages.dev/p/f4044627c4ab/you-mustnt-chew-gum-here/img/live-aviao.webp",
           "au": "audio/say3.mp3"
         }
       ]

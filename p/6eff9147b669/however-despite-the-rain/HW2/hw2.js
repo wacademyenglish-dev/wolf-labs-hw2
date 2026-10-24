@@ -9,6 +9,10 @@
                   0.75×, transcrição só depois de ouvir; 2 perguntas.
      O  Out loud  repita e veja: o reconhecimento de voz do navegador
                   marca as palavras que ele entendeu. NÃO é nota.
+                  24/10/2026: com a "Atualização de fala" baixada no app,
+                  o corretor de SONS (no aparelho, pela ponte 'hw-pron')
+                  marca a palavra e o som trocado ("th → you said t") +
+                  uma dica; o professor recebe sons certos / trocas.
      F  Focus     montar / juntar / consertar; antes de marcar errado
                   o Wolf confere ("certo vale"); "Why?" no erro.
      W  Write     escrita curta com o corretor da aula + o Wolf
@@ -207,6 +211,116 @@
     }
     return { pede: pede, ligada: function () { return mock || NA_PLATAFORMA; } };
   })();
+  /* ── a fala no aparelho: Atualização de fala (24/10/2026) ──────
+     O corretor de pronúncia (HuBERT + CMUdict) roda NA PLATAFORMA, que
+     é onde o aluno baixa a "Atualização de fala" (~134 MB, uma vez). A
+     HW grava aqui (para sozinha no silêncio), corta, reamostra para
+     16 kHz e manda pela ponte {wolf:'hw-pron'}; a plataforma devolve o
+     veredito por palavra e por som. Sem a atualização (ou num aparelho
+     que não roda) a resposta é {indisponivel:true} e o Out loud segue
+     com o reconhecimento do navegador, como sempre. */
+  var Pron = (function () {
+    var pend = {}, n = 0, origem = null, est = null, ouvintes = [];
+    try { origem = PARA ? new URL(PARA).origin : null; } catch (e) {}
+    function avisa() { ouvintes.forEach(function (f) { try { f(est); } catch (e) {} }); }
+    window.addEventListener('message', function (ev) {
+      var d = ev.data; if (!d || (d.wolf !== 'hw-pron-resposta' && d.wolf !== 'hw-pron-aviso')) return;
+      if (ev.source !== window.parent || (origem && ev.origin !== origem)) return;
+      if (d.wolf === 'hw-pron-aviso') { est = { disponivel: !!d.disponivel, motivo: d.disponivel ? null : 'nao-baixada' }; avisa(); return; }
+      var f = pend[d.id]; if (!f) return; delete pend[d.id]; f(d);
+    });
+    function pede(modo, extra, transfer, tempo) {
+      if (!NA_PLATAFORMA) return Promise.resolve({ ok: false, erro: 'fora' });
+      return new Promise(function (ok) {
+        var id = 'pr' + (++n) + '-' + Date.now().toString(36); pend[id] = ok;
+        var msg = { wolf: 'hw-pron', v: 1, id: id, modo: modo }; for (var c in extra) msg[c] = extra[c];
+        try { window.parent.postMessage(msg, PARA, transfer || []); } catch (e) { delete pend[id]; ok({ ok: false, erro: 'fora' }); return; }
+        setTimeout(function () { if (pend[id]) { delete pend[id]; ok({ ok: false, erro: 'tempo' }); } }, tempo || 60000);
+      });
+    }
+    return {
+      consulta: function () {
+        return pede('estado', {}, null, 3000).then(function (r) {
+          est = r && r.ok ? { disponivel: !!r.disponivel, motivo: r.motivo || null } : { disponivel: false, motivo: 'sem-ponte' };
+          avisa(); return est;
+        });
+      },
+      estado: function () { return est; },
+      marca: function (e) { est = e; avisa(); },
+      quando: function (f) { ouvintes.push(f); },
+      avaliar: function (frase, audio) { return pede('avaliar', { frase: frase, sr: 16000, audio: audio }, [audio.buffer], 60000); },
+      abrir: function () { return pede('abrir', {}, null, 5000); }
+    };
+  })();
+
+  /* o gravador com fim automático (do protótipo aprovado): calibra o ruído nos primeiros
+     300 ms; depois que a fala começa, 1,1 s de silêncio encerra. Tocar de novo = parar.
+     Sem fala em 5 s = "I didn't hear you". Teto de 15 s. Sem contagem regressiva. */
+  function para16k(ab) {
+    var AC = window.AudioContext || window.webkitAudioContext, tmp = new AC();
+    return new Promise(function (ok, no) { tmp.decodeAudioData(ab, ok, no); }).then(function (b) {
+      try { tmp.close(); } catch (e) {}
+      var n = Math.max(1, Math.ceil(b.duration * 16000)), off = new OfflineAudioContext(1, n, 16000), src = off.createBufferSource();
+      src.buffer = b; src.connect(off.destination); src.start();
+      return off.startRendering();
+    }).then(function (r) { return r.getChannelData(0).slice(); });
+  }
+  function cortaSilencio(w, thr) {
+    var F = 320, n = Math.floor(w.length / F), e = new Float32Array(n), mx = 0, i, k, s;
+    for (i = 0; i < n; i++) { s = 0; for (k = 0; k < F; k++) s += w[i * F + k] * w[i * F + k]; e[i] = Math.sqrt(s / F); mx = Math.max(mx, e[i]); }
+    var t = Math.max(thr || 0, mx * 0.06, 0.004), a = 0, b = n - 1;
+    while (a < n && e[a] < t) a++; while (b > a && e[b] < t) b--;
+    if (a >= b) return w;
+    return w.slice(Math.max(0, (a - 8) * F), Math.min(w.length, (b + 13) * F));
+  }
+  var Ouvido = {
+    atual: null,
+    pode: function () { return !!(window.MediaRecorder && navigator.mediaDevices && navigator.mediaDevices.getUserMedia && (window.AudioContext || window.webkitAudioContext) && window.OfflineAudioContext); },
+    grava: function (o) {
+      var VAD = { calib: 300, silencio: 1100, semFala: 5000, teto: 15000, minOn: 90 };
+      var vivo = { parar: function () {}, cancela: function () { vivo.cancelado = true; vivo.parar(); } };
+      Ouvido.atual = vivo;
+      navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: true } }).then(function (st) {
+        if (vivo.cancelado) { st.getTracks().forEach(function (t) { t.stop(); }); Ouvido.atual = null; return; }
+        var AC = window.AudioContext || window.webkitAudioContext;
+        var rec = new MediaRecorder(st), pedacos = [], ac = new AC(), an = ac.createAnalyser(); an.fftSize = 1024;
+        ac.createMediaStreamSource(st).connect(an);
+        var buf = new Float32Array(an.fftSize), t0 = performance.now(), ruido = [], thr = 0, falouEm = 0, ultimoAlto = 0, corrida = 0, por = '', pico = 0;
+        var fim = function (r) { if (rec.state === 'recording') { por = por || r; rec.stop(); } };
+        vivo.parar = function () { fim('toque'); };
+        rec.ondataavailable = function (e) { if (e.data && e.data.size) pedacos.push(e.data); };
+        var relogio = setInterval(function () {
+          an.getFloatTimeDomainData(buf); var s = 0; for (var i = 0; i < buf.length; i++) s += buf[i] * buf[i];
+          var rms = Math.sqrt(s / buf.length), agora = performance.now() - t0;
+          if (agora < VAD.calib) ruido.push(rms);
+          else {
+            if (!thr) { var m = ruido.reduce(function (a, b) { return a + b; }, 0) / Math.max(1, ruido.length); thr = Math.max(m * 3.5, 0.006); }
+            if (rms > thr) { corrida += 30; if (corrida >= VAD.minOn && !falouEm) falouEm = agora; if (falouEm) ultimoAlto = agora; } else corrida = 0;
+            if (falouEm && agora - ultimoAlto > VAD.silencio) fim('silencio');
+            if (!falouEm && agora > VAD.semFala) fim('semfala');
+            if (agora > VAD.teto) fim('teto');
+          }
+          pico = Math.max(pico * 0.9, rms);
+          if (o.onNivel) o.onNivel(Math.min(1, pico / Math.max(thr * 6, 0.05)));
+        }, 30);
+        rec.onstop = function () {
+          clearInterval(relogio); st.getTracks().forEach(function (t) { t.stop(); }); try { ac.close(); } catch (e) {}
+          Ouvido.atual = null;
+          if (vivo.cancelado) return;
+          if (por === 'semfala' || (!falouEm && por !== 'toque')) { o.onErro('silencio'); return; }
+          var blob = new Blob(pedacos, { type: rec.mimeType || 'audio/webm' });
+          (blob.arrayBuffer ? blob.arrayBuffer() : new Response(blob).arrayBuffer()).then(para16k).then(function (w) {
+            var a = cortaSilencio(w, thr);
+            if (a.length < 16000 * 0.3) { o.onErro('silencio'); return; }
+            o.onFim({ audio: a, por: por });
+          }).catch(function () { o.onErro('decodifica'); });
+        };
+        rec.start();
+      }).catch(function () { Ouvido.atual = null; if (!vivo.cancelado) o.onErro('mic'); });
+      return vivo;
+    }
+  };
+
   var ERRO_IA = { pausa: 'Wolf is resting this month.', plano: 'Wolf is not on for you yet.', hoje: 'That’s enough Wolf for today.', sessao: 'Your session ended. Sign in again.', fora: 'Wolf works inside the Wolf Labs app.', tempo: 'Wolf took too long. Try again.' };
   function erroIA(r) { return ERRO_IA[r && r.erro] || 'Wolf didn’t answer now.'; }
 
@@ -257,7 +371,7 @@
   function feito(k) { if (!S.fez[k]) { S.fez[k] = 1; grava(); toast(NOME[k] + ' ✓'); } letras(); rodape(); }
 
   function pinta() {
-    AU.pause(); if (Grava.mr) Grava.para();
+    AU.pause(); if (Grava.mr) Grava.para(); if (Ouvido.atual) Ouvido.atual.cancela();
     var m = $('#main');
     if (S.p >= ORDEM.length) { m.innerHTML = resultado(); letras(); rodape(); envia(); window.scrollTo(0, 0); return; }
     var k = ORDEM[S.p];
@@ -298,6 +412,7 @@
     AU.onpause = function () { pl.innerHTML = PLAY; pl.setAttribute('aria-label', 'Play'); };
     AU.ontimeupdate = function () {
       var d = AU.duration || 1, c = AU.currentTime;
+      if (!$('#plb')) return;   /* 24/10: o pause() da troca de rodada ainda dispara um timeupdate */
       $('#plb').style.width = Math.min(100, c / d * 100) + '%';
       $('#plt').textContent = Math.floor(c) + ' / ' + Math.round(d) + ' s';
       var i = -1; t.forEach(function (x, k) { if (c >= x.ini && c < x.fim + 0.25) i = k; });
@@ -325,21 +440,131 @@
   }
 
   /* ── O · Out loud ────────────────────────────────────────────── */
+  /* com a Atualização de fala: o corretor de sons; sem ela: o navegador (como sempre) */
+  function modoPron() { var e = Pron.estado(); return !!(e && e.disponivel && Ouvido.pode()); }
+  function linkPron() { var e = Pron.estado(); return !!(e && !e.disponivel && e.motivo === 'nao-baixada' && Ouvido.pode()); }
+  var PINTOU_OUT = '';
   PINTA.out = function () {
-    var r = R.out, pode = WolfFala.suportado();
+    var r = R.out, pron = modoPron(), pode = pron || WolfFala.suportado(), link = linkPron();
+    PINTOU_OUT = (pron ? 'p' : 'n') + (link ? 'l' : '');
+    var intro = pron
+      ? 'This is not a grade. Tap the mic and read the sentence: it stops by itself when you finish. Words in <b style="color:var(--ok)">green</b> sound right. A word in <b style="color:var(--amb)">yellow</b> has a sound to fix, and the note shows which one.'
+      : 'This is not a grade. The phone tries to understand you, like a person on the phone. Words in <b style="color:var(--amb)">yellow</b> are the ones it missed: say them again, slowly.' + (pode ? '' : ' <b>Your browser can’t listen here</b>, so say each one out loud and tap “I said it”.');
     return cabeca('out', r.sub || 'Say each sentence. See what the phone understood.') +
-      '<div class="vidro" style="padding:12px 14px"><p class="dicapt" style="margin:0">This is not a grade. The phone tries to understand you, like a person on the phone. Words in <b style="color:var(--amb)">yellow</b> are the ones it missed: say them again, slowly.' + (pode ? '' : ' <b>Your browser can’t listen here</b>, so say each one out loud and tap “I said it”.') + '</p></div>' +
+      '<div class="vidro" style="padding:12px 14px"><p class="dicapt" style="margin:0">' + intro + '</p>' +
+      (link ? '<button class="pron-link" data-pron-abrir="1">Download the speech update to see which sound to fix</button>' : '') + '</div>' +
       r.frases.map(function (f, k) {
         return '<div class="vidro fala" data-k="' + k + '">' + figura(f.img) +
           '<p class="fr" id="fr' + k + '">' + f.t.split(/\s+/).map(function (w, i) { return '<span class="w" data-i="' + i + '">' + esc(w) + '</span>'; }).join(' ') + '</p>' +
+          (f.ref ? '<p class="ref">' + esc(f.ref) + ' · World English Bible</p>' : '') +
           '<div class="fala-bts">' + (f.au ? '<button class="pil" data-ouve="' + k + '">▶ Hear it</button><button class="pil" data-ouve="' + k + '" data-lento="1">0.75×</button>' : '') +
-          (pode ? '<button class="mic" data-mic="' + k + '">' + MIC + '<span>Say it</span></button>'
+          (pron ? '<button class="mic" data-pmic="' + k + '">' + MIC + '<span>Say it</span></button>'
+            : pode ? '<button class="mic" data-mic="' + k + '">' + MIC + '<span>Say it</span></button>'
                 : (Grava.pode() ? '<button class="pil" data-grava="' + k + '">● Record</button>' : '') + '<button class="bt" data-disse="' + k + '">I said it</button>') +
-          '</div><div class="ouvido" id="ouv' + k + '"' + (pode ? '' : ' hidden') + '><b>The phone heard</b><span>…</span></div><audio id="eu' + k + '" controls hidden></audio>' +
-          '<p class="veredito" id="ver' + k + '" hidden></p><div id="dica' + k + '"></div></div>';
+          '</div>' + (pron ? '<div class="nivel" id="niv' + k + '" hidden><i></i></div>' : '') +
+          '<div class="ouvido" id="ouv' + k + '"' + (pode && !pron ? '' : ' hidden') + '><b>The phone heard</b><span>…</span></div><audio id="eu' + k + '" controls hidden></audio>' +
+          '<p class="veredito" id="ver' + k + '" hidden></p><div class="sons" id="sons' + k + '"></div><div id="dica' + k + '"></div></div>';
       }).join('');
   };
-  LIGA_.out = function () { R.out.frases.forEach(function (f, k) { var o = S.out[k]; if (o && o.melhor) mostraFala(k, o.melhor, o.ouviu); else if (o && o.disse) { var v = $('#ver' + k); v.hidden = false; v.textContent = 'Said out loud ✓'; } }); };
+  LIGA_.out = function () {
+    R.out.frases.forEach(function (f, k) {
+      var o = S.out[k];
+      if (o && o.pron && o.pron.ultima) mostraPron(k, o.pron.ultima);
+      else if (o && o.melhor) { var ob = $('#ouv' + k); if (ob) ob.hidden = false; mostraFala(k, o.melhor, o.ouviu); }
+      else if (o && o.disse) { var v = $('#ver' + k); v.hidden = false; v.textContent = 'Said out loud ✓'; }
+    });
+  };
+  /* a resposta da plataforma chegou (ou a atualização terminou de baixar): repinta o Out loud se o modo mudou */
+  Pron.quando(function () {
+    if (ORDEM[S.p] !== 'out' || Ouvido.atual || ESCUTA) return;
+    if (PINTOU_OUT === (modoPron() ? 'p' : 'n') + (linkPron() ? 'l' : '')) return;
+    var y = window.scrollY; pinta(); window.scrollTo(0, y);
+  });
+
+  /* tokens iguais aos da plataforma (fala-worker.js: a mesma regra) */
+  function toksPron(s) { return (String(s).toLowerCase().replace(/[’‘]/g, "'").match(/[a-z']+/g) || []).map(function (w) { return w.replace(/^'+|'+$/g, ''); }).filter(Boolean); }
+  function compactaPron(r) {
+    return {
+      ok: (r.palavras || []).map(function (p) { return p.ok !== false; }),
+      oov: (r.palavras || []).map(function (p) { return !!p.oov; }),
+      trocas: (r.trocas || []).slice(0, 6).map(function (t) { return { som: String(t.som || '').slice(0, 16), disse: String(t.disse || '').slice(0, 16), palavra: String(t.palavra || '').slice(0, 30), rotulo: String(t.rotulo || '').slice(0, 80) }; }),
+      dica: String(r.dica || '').slice(0, 200), sc: +r.sons_certos || 0, st: +r.sons_total || 0
+    };
+  }
+  function mostraPron(k, c) {
+    var idx = 0;
+    $$('#fr' + k + ' .w').forEach(function (w) {
+      var tk = toksPron(w.textContent), mal = false, conta = false;
+      tk.forEach(function () { if (c.ok[idx] === false) mal = true; if (c.oov[idx] === false) conta = true; idx++; });
+      w.classList.remove('faltou'); w.classList.toggle('pegou', conta && !mal); w.classList.toggle('som', mal);
+    });
+    var v = $('#ver' + k); if (!v) return;
+    v.hidden = false;
+    v.className = 'veredito' + (c.trocas.length ? '' : ' tudo');
+    v.textContent = c.trocas.length ? (c.trocas.length === 1 ? 'One sound to fix. Read the note, then say it again.' : c.trocas.length + ' sounds to fix. Read the notes, then say it again.') : 'All the sounds we check sound right ✓';
+    var box = $('#sons' + k);
+    box.innerHTML = c.trocas.length
+      ? '<ul class="sons-l">' + c.trocas.slice(0, 3).map(function (t) { return '<li><b>' + esc(t.palavra) + '</b><span>' + esc(t.rotulo || (t.som + ' → you said ' + t.disse)) + '</span></li>'; }).join('') + '</ul>' +
+        (c.dica ? '<p class="sons-dica"><b>Tip</b>' + esc(c.dica) + '</p>' : '')
+      : '';
+    var d = $('#dica' + k); if (d) d.innerHTML = '';
+  }
+  function falarPron(k, bt) {
+    if (Ouvido.atual) { Ouvido.atual.parar(); return; }
+    if (ESCUTA) return;
+    var f = R.out.frases[k], niv = $('#niv' + k), ver = $('#ver' + k);
+    AU.pause();
+    bt.classList.add('ouvindo'); $('span', bt).textContent = 'Listening… tap to stop';
+    if (niv) niv.hidden = false;
+    ver.hidden = false; ver.className = 'veredito'; ver.textContent = 'Read the sentence. I stop when you finish.';
+    var sb = $('#sons' + k); if (sb) sb.innerHTML = '';
+    var fecha = function (rot) { bt.classList.remove('ouvindo'); bt.disabled = false; $('span', bt).textContent = rot || 'Say it again'; if (niv) { niv.hidden = true; $('i', niv).style.width = '0'; } };
+    Ouvido.grava({
+      onNivel: function (lv) { if (niv) $('i', niv).style.width = Math.round(lv * 100) + '%'; },
+      onErro: function (tipo) {
+        fecha(S.out[k] && S.out[k].pron ? 'Say it again' : 'Say it');
+        if (tipo === 'mic') {
+          ver.innerHTML = 'The microphone is blocked here. Say it out loud, then tap <b>I said it</b>.';
+          var bts = bt.parentNode; if (!$('[data-disse]', bts)) bts.insertAdjacentHTML('beforeend', '<button class="bt" data-disse="' + k + '">I said it</button>');
+          return;
+        }
+        ver.textContent = tipo === 'silencio' ? 'I didn’t hear you. Tap and try again.' : 'The recording didn’t work. Tap and try again.';
+        pulaBt(k, bt);
+      },
+      onFim: function (g) {
+        bt.classList.remove('ouvindo'); bt.disabled = true; $('span', bt).textContent = 'Checking…';
+        if (niv) niv.hidden = true;
+        ver.textContent = 'Checking the sounds…';
+        Pron.avaliar(f.t, g.audio).then(function (r) {
+          fecha();
+          if (r && r.indisponivel) { Pron.marca({ disponivel: false, motivo: r.motivo || 'nao-baixada' }); toast('Simple check for now'); return; }
+          if (!r || !r.ok) {
+            if (r && r.erro === 'sem-dicionario' && WolfFala.suportado()) {
+              ver.textContent = 'This sentence uses the simple check. Tap the mic again.';
+              bt.removeAttribute('data-pmic'); bt.setAttribute('data-mic', k); var ob = $('#ouv' + k); if (ob) ob.hidden = false;
+              return;
+            }
+            ver.textContent = r && r.erro === 'confuso' ? 'I couldn’t follow the whole sentence. Tap and say it again.'
+              : r && r.erro === 'silencio' ? 'I didn’t hear you. Tap and try again.' : 'The check didn’t work this time. Tap and try again.';
+            pulaBt(k, bt);
+            return;
+          }
+          var c = compactaPron(r), o = S.out[k] || { tent: 0 };
+          o.tent = (o.tent || 0) + 1; o.pron = o.pron || {};
+          if (!o.pron.primeira) o.pron.primeira = c;
+          o.pron.ultima = c; if (!c.trocas.length) o.pron.limpa = 1;
+          S.out[k] = o; grava();
+          mostraPron(k, c);
+          confereOut();
+        });
+      }
+    });
+  }
+  /* 24/10 (Carlos): quando o corretor não entende, o aluno não fica preso — pula para a próxima frase */
+  function pulaBt(k, bt) {
+    var bts = bt.parentNode; if ($('[data-pula]', bts)) return;
+    bts.insertAdjacentHTML('beforeend', '<button class="pil" data-pula="' + k + '">' + (k < R.out.frases.length - 1 ? 'Next sentence →' : 'Skip this one') + '</button>');
+  }
   var ESCUTA = null;
   function falar(k, bt) {
     if (ESCUTA) { ESCUTA.parar(); return; }
@@ -366,7 +591,7 @@
         if (e === 'not-allowed' || e === 'service-not-allowed' || e === 'audio-capture' || e === 'start') {
           ouv.innerHTML = 'The microphone is blocked here. Say it out loud, then tap <b>I said it</b>.';
           var bts = bt.parentNode; if (!$('[data-disse]', bts)) bts.insertAdjacentHTML('beforeend', '<button class="bt" data-disse="' + k + '">I said it</button>');
-        } else ouv.textContent = e === 'no-speech' ? 'I didn’t hear anything. Try again, a little closer to the mic.' : 'The phone didn’t catch it. Try again.';
+        } else { ouv.textContent = e === 'no-speech' ? 'I didn’t hear anything. Try again, a little closer to the mic.' : 'The phone didn’t catch it. Try again.'; pulaBt(k, bt); }
       }
     });
   }
@@ -380,7 +605,7 @@
     if (m.faltaram.length && IA.ligada() && !d.innerHTML) d.innerHTML = '<div class="acoes"><button class="wolfbt" data-dica="' + k + '"><span class="orbe"></span>Tip from Wolf</button></div>';
     if (!m.faltaram.length) d.innerHTML = '';
   }
-  function confereOut() { if (R.out.frases.every(function (f, k) { var o = S.out[k]; return o && (o.melhor || o.disse); })) feito('out'); }
+  function confereOut() { if (R.out.frases.every(function (f, k) { var o = S.out[k]; return o && (o.melhor || o.disse || o.pron || o.pulou); })) feito('out'); }
   function dicaPron(k, bt) {
     var f = R.out.frases[k], o = S.out[k] || {};
     bt.classList.add('pensando'); bt.disabled = true; bt.lastChild.textContent = 'Wolf is listening…';
@@ -566,19 +791,34 @@
   function contas() {
     var L = R.listen.perguntas.map(function (q, j) { var v = S.listen.r[j]; return { ok: !!(v && v.ok), t: 'Listen: ' + q.q, c: q.op[q.a], w: q.por }; });
     var F = R.focus.itens.map(function (it, j) { var s = S.focus[j] || {}; return { ok: !!(s.certo && s.primeira), t: 'Focus: ' + texto(it.t) + (it.mostra ? ' — ' + it.mostra : ''), c: it.r, w: texto(it.d || '') }; });
-    var outOk = R.out.frases.filter(function (f, k) { var o = S.out[k]; return o && o.melhor && o.melhor.pegou === o.melhor.total; }).length;
+    var outOk = R.out.frases.filter(function (f, k) { var o = S.out[k]; return o && ((o.melhor && o.melhor.pegou === o.melhor.total) || (o.pron && o.pron.limpa)); }).length;
     var nao = [];
     R.out.frases.forEach(function (f, k) { var o = S.out[k]; ((o && o.melhor && o.melhor.faltaram) || []).forEach(function (w) { if (nao.indexOf(w) < 0) nao.push(w); }); });
+    /* Atualização de fala: os sons da 1ª tentativa de cada frase (vão para o professor; o aluno não vê nota) */
+    var sons = { c: 0, t: 0, trocas: [] };
+    R.out.frases.forEach(function (f, k) {
+      var p = S.out[k] && S.out[k].pron && S.out[k].pron.primeira; if (!p) return;
+      sons.c += p.sc || 0; sons.t += p.st || 0;
+      (p.trocas || []).forEach(function (t) { sons.trocas.push({ som: t.som, disse: t.disse, palavra: t.palavra }); });
+    });
+    var rOut = { k: 'out', certas: outOk, de: R.out.frases.length };
+    if (sons.t) { rOut.sons_certos = sons.c; rOut.sons_total = sons.t; rOut.trocas = sons.trocas.slice(0, 16); }
     var itens = L.concat(F), som = itens.filter(function (x) { return x.ok; }).length;
     return {
-      itens: itens, som: som, de: itens.length, nao: nao,
+      itens: itens, som: som, de: itens.length, nao: nao, sons: sons,
       rodadas: [
         { k: 'listen', certas: L.filter(function (x) { return x.ok; }).length, de: L.length },
-        { k: 'out', certas: outOk, de: R.out.frases.length },
+        rOut,
         { k: 'focus', certas: F.filter(function (x) { return x.ok; }).length, de: F.length },
         { k: 'write', certas: 0, de: 0 }, { k: 'you', certas: 0, de: 0 }
       ]
     };
+  }
+  /* "th (three, think) · -ed (worked)": um som por vez, sem número */
+  function praticar(trocas) {
+    var g = {}, ordem = [];
+    trocas.forEach(function (t) { if (!g[t.som]) { g[t.som] = []; ordem.push(t.som); } if (t.palavra && g[t.som].indexOf(t.palavra) < 0) g[t.som].push(t.palavra); });
+    return ordem.slice(0, 3).map(function (s) { return '<b>' + esc(s) + '</b>' + (g[s].length ? ' (' + g[s].slice(0, 3).map(esc).join(', ') + ')' : ''); }).join(' · ');
   }
   function resultado() {
     if (!S.t1) { S.t1 = Date.now(); grava(); }
@@ -589,11 +829,14 @@
       '<text x="60" y="68" text-anchor="middle" font-family="Gloock,serif" font-size="27" fill="#fff">' + c.som + '/' + c.de + '</text></svg>' +
       '<div><h2>' + (pc >= 85 ? 'Excellent.' : pc >= 60 ? 'Good work.' : 'Done. Well done for finishing.') + '</h2><p>' + c.som + ' of ' + c.de + ' right on the first try · ' + min + ' min. Your teacher sees this.</p></div></div>' +
       '<div class="vidro"><ul class="res-rod">' + c.rodadas.map(function (r) {
-        var v = r.de ? Math.round(r.certas / r.de * 100) : (S.fez[r.k] ? 100 : 0);
-        return '<li><span>' + nomes[r.k] + '</span><i><em style="width:' + v + '%"></em></i><small>' + (r.de ? r.certas + '/' + r.de : (S.fez[r.k] ? '✓' : '—')) + '</small></li>';
+        /* com o corretor de sons, o Out loud do aluno não vira número (o professor recebe os sons) */
+        var semNota = r.k === 'out' && c.sons.t;
+        var v = r.de && !semNota ? Math.round(r.certas / r.de * 100) : (S.fez[r.k] ? 100 : 0);
+        return '<li><span>' + nomes[r.k] + '</span><i><em style="width:' + v + '%"></em></i><small>' + (r.de && !semNota ? r.certas + '/' + r.de : (S.fez[r.k] ? '✓' : '—')) + '</small></li>';
       }).join('') + '</ul><p class="dicapt">Out loud is not part of the score: it shows what the phone understood.</p></div>' +
       '<div class="vidro prof"><h3>For your next class</h3><ul>' +
-      (c.nao.length ? '<li>Say these again: <b>' + c.nao.map(esc).join(', ') + '</b></li>' : '<li>The phone understood all your sentences.</li>') +
+      (c.nao.length ? '<li>Say these again: <b>' + c.nao.map(esc).join(', ') + '</b></li>' : c.sons.t ? '' : '<li>The phone understood all your sentences.</li>') +
+      (c.sons.t ? (c.sons.trocas.length ? '<li>Sounds to practise: ' + praticar(c.sons.trocas) + '</li>' : '<li>All the sounds we checked sounded right.</li>') : '') +
       (S.erros.length ? S.erros.slice(0, 4).map(function (e) { return '<li>' + esc(e.certa) + '</li>'; }).join('') : '') +
       '</ul><p class="envio" id="envio">' + (NA_PLATAFORMA ? 'Sending to your teacher…' : 'Open this homework in the Wolf Labs app to send it to your teacher.') + '</p></div>' +
       (H.fecho ? '<div class="vidro"><p class="dicapt" style="margin:0">' + H.fecho + '</p></div>' : '') +
@@ -610,7 +853,10 @@
       escrita: [{ pedido: texto(R.write.pede), texto: S.write.t || '' }].concat(R.you.perguntas.map(function (q, j) { return { pedido: q.q, texto: S.you.t[j] || '' }; })).filter(function (x) { return x.texto.trim(); }),
       abrir_com: H.abrir || ''
     };
-    var nota = (c.nao.length ? 'não entendeu: ' + c.nao.slice(0, 4).join(', ') : 'fala ok') + (S.erros.length ? ' · ' + S.erros.length + ' erro' + (S.erros.length > 1 ? 's' : '') : '');
+    var falaNota = [];
+    if (c.nao.length) falaNota.push('não entendeu: ' + c.nao.slice(0, 4).join(', '));
+    if (c.sons.t) falaNota.push('sons certos ' + Math.round(100 * c.sons.c / c.sons.t) + '%');
+    var nota = (falaNota.length ? falaNota.join(' · ') : 'fala ok') + (S.erros.length ? ' · ' + S.erros.length + ' erro' + (S.erros.length > 1 ? 's' : '') : '');
     try {
       window.parent.postMessage({ wolf: 'hw2-relatorio', v: 1, dados: dados }, PARA);
       window.parent.postMessage({ wolf: 'hw-resultado', v: 1, tarefa: Q.get('t') || null, hw: 'hw2-' + H.id, placar: c.som, de: c.de,
@@ -636,7 +882,10 @@
     /* out loud */
     if (t.hasAttribute('data-ouve')) { var f = R.out.frases[+t.getAttribute('data-ouve')]; AU.src = f.au; AU.playbackRate = t.hasAttribute('data-lento') ? 0.75 : 1; var p = AU.play(); if (p && p.catch) p.catch(function () {}); return; }
     if (t.hasAttribute('data-mic')) { falar(+t.getAttribute('data-mic'), t); return; }
+    if (t.hasAttribute('data-pmic')) { falarPron(+t.getAttribute('data-pmic'), t); return; }
+    if (t.hasAttribute('data-pron-abrir')) { Pron.abrir(); return; }
     if (t.hasAttribute('data-dica')) { dicaPron(+t.getAttribute('data-dica'), t); return; }
+    if (t.hasAttribute('data-pula')) { var kp = +t.getAttribute('data-pula'); var op = S.out[kp] || {}; op.pulou = 1; S.out[kp] = op; grava(); var vp = $('#ver' + kp); vp.hidden = false; vp.className = 'veredito'; vp.textContent = 'Skipped. You can come back to it.'; t.remove(); confereOut(); var prox = $('.fala[data-k="' + (kp + 1) + '"]'); if (prox) prox.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
     if (t.hasAttribute('data-disse')) { var kd = +t.getAttribute('data-disse'); var od = S.out[kd] || {}; od.disse = 1; S.out[kd] = od; grava(); var vd = $('#ver' + kd); vd.hidden = false; vd.className = 'veredito tudo'; vd.textContent = 'Said out loud ✓'; confereOut(); return; }
     if (t.hasAttribute('data-grava')) {
       var kg = +t.getAttribute('data-grava');
@@ -678,6 +927,7 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Enter' && e.target.matches && e.target.matches('.campo input, .campo textarea')) { e.preventDefault(); var b = e.target.parentNode.querySelector('[data-check]'); if (b) b.click(); } });
 
   /* para o teste automático (e para depurar): o motor por dentro */
-  window.__hw2 = { aceita: aceita, comparaFala: comparaFala, normal: normal, estado: function () { return S; }, contas: contas };
+  window.__hw2 = { aceita: aceita, comparaFala: comparaFala, normal: normal, estado: function () { return S; }, contas: contas, pron: Pron };
   pinta();
+  if (NA_PLATAFORMA) Pron.consulta();   /* a plataforma tem a Atualização de fala? (3 s; plataforma antiga = sem resposta = navegador) */
 })();

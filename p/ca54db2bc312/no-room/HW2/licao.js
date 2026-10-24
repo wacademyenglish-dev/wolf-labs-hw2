@@ -115,7 +115,8 @@ window.HW2 = {
         {
           "t": "Glory to God in the highest, on earth peace, good will toward men.",
           "img": "https://wolf-labs.pages.dev/p/ca54db2bc312/no-room/img/live-campo.webp",
-          "au": "audio/say2.mp3"
+          "au": "audio/say2.mp3",
+          "ref": "Luke 2:14"
         },
         {
           "t": "Is there a room? No, there isn't.",

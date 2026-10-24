@@ -6,6 +6,7 @@ window.HW2 = {
   "titulo": "The Blackout",
   "nivel": "A2",
   "minutos": 10,
+  "capa": "https://wolf-labs.pages.dev/p/f796133fa172/a2-review-the-blackout/img/live-capa.webp",
   "alvo": "Unit 3 review, what was happening: past continuous (was / were + -ing), past continuous x past simple with when / while, used to / didn't use to, would for past habits; never she were, never I use to",
   "abrir": "What were you doing last night at eight?",
   "fecho": "Action in progress: <b>was / were + -ing</b> (<i>I was cooking</i>). Short action: past simple (<i>when the lights went out</i>). Old habit: <b>used to</b> or <b>would</b>. Never <i>she were</i>, never <i>I use to</i>.",
@@ -25,6 +26,8 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in their building after the lights went out. About 45 seconds.",
+      "img": "https://wolf-labs.pages.dev/p/f796133fa172/a2-review-the-blackout/img/live-capa.webp",
+      "leg": "The building in the dark",
       "audio": "audio/listen.mp3",
       "falas": [
         {
@@ -113,7 +116,7 @@ window.HW2 = {
           "au": "audio/say2.mp3"
         },
         {
-          "t": "We used to play cards in the dark.",
+          "t": "We used to play cards in the dark.", "img": "https://wolf-labs.pages.dev/p/f796133fa172/a2-review-the-blackout/img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]

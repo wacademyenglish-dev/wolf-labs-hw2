@@ -107,12 +107,14 @@ window.HW2 = {
         {
           "t": "Don’t marvel that I said to you, ‘You must all be born anew.’",
           "img": "https://wolf-labs.pages.dev/p/a166bd9ca2eb/the-wind-blows/img/live-terraco.webp",
-          "au": "audio/say2.mp3"
+          "au": "audio/say2.mp3",
+          "ref": "John 3:7"
         },
         {
           "t": "Nicodemus answered him, “How can these things be?”",
           "img": "https://wolf-labs.pages.dev/p/a166bd9ca2eb/the-wind-blows/img/live-janelas.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "John 3:9"
         }
       ]
     },

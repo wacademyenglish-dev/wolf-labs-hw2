@@ -112,7 +112,8 @@ window.HW2 = {
         {
           "t": "He denied Jesus, saying, “Woman, I don’t know him.”",
           "img": "https://wolf-labs.pages.dev/p/c3eca1cf30fd/arent-you-one-of-them/img/live-patio.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Luke 22:57"
         }
       ]
     },

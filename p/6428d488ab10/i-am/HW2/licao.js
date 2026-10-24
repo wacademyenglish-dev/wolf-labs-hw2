@@ -115,7 +115,8 @@ window.HW2 = {
         {
           "t": "I am the good shepherd. The good shepherd lays down his life for the sheep.",
           "img": "https://wolf-labs.pages.dev/p/6428d488ab10/i-am/img/live-ceia.webp",
-          "au": "audio/say2.mp3"
+          "au": "audio/say2.mp3",
+          "ref": "John 10:11"
         },
         {
           "t": "Is he a teacher? Yes, he is.",

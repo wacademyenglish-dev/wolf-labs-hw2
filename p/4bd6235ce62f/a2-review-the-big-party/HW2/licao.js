@@ -7,6 +7,7 @@ window.HW2 = {
   "titulo": "The Big Party",
   "nivel": "A2",
   "minutos": 10,
+  "capa": "https://wolf-labs.pages.dev/p/4bd6235ce62f/a2-review-the-big-party/img/live-capa.webp",
   "alvo": "Unit 4 review, how much, how many, who: a few / many (countable), a little / much (uncountable), a lot of, too much / too many, enough, some / any, nobody / anything (one negative only), a / an / the",
   "abrir": "What do you bring to a party?",
   "fecho": "Countable: <b>a few, many, too many</b>. Uncountable: <b>a little, much, too much</b>. <b>Enough</b> goes before the noun. Questions and no: <b>any / anything</b>. One negative only: <i>There isn't anything</i>. <b>An</b> before a vowel sound.",
@@ -26,6 +27,8 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a birthday party. A new scene, about 45 seconds.",
+      "img": "https://wolf-labs.pages.dev/p/4bd6235ce62f/a2-review-the-big-party/img/live-capa.webp",
+      "leg": "Getting ready for the party",
       "audio": "audio/listen.mp3",
       "falas": [
         {
@@ -106,7 +109,7 @@ window.HW2 = {
       "sub": "Three sentences about the party. Hear it, then say it.",
       "frases": [
         {
-          "t": "We have a few cups and a little ice.",
+          "t": "We have a few cups and a little ice.", "img": "https://wolf-labs.pages.dev/p/4bd6235ce62f/a2-review-the-big-party/img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -114,7 +117,7 @@ window.HW2 = {
           "au": "audio/say2.mp3"
         },
         {
-          "t": "There are too many people and not enough chairs.",
+          "t": "There are too many people and not enough chairs.", "img": "https://wolf-labs.pages.dev/p/4bd6235ce62f/a2-review-the-big-party/img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]

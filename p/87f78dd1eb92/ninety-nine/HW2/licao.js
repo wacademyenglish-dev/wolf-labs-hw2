@@ -128,7 +128,8 @@ window.HW2 = {
         {
           "t": "When he has found it, he carries it on his shoulders, rejoicing.",
           "img": "https://wolf-labs.pages.dev/p/87f78dd1eb92/ninety-nine/img/live-pasto.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Luke 15:5"
         }
       ]
     },

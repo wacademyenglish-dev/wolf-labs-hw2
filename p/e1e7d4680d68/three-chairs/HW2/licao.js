@@ -124,7 +124,8 @@ window.HW2 = {
         {
           "t": "Put a ring on his hand and sandals on his feet.",
           "img": "https://wolf-labs.pages.dev/p/e1e7d4680d68/three-chairs/img/live-capa2.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Luke 15:22"
         }
       ]
     },

@@ -128,7 +128,8 @@ window.HW2 = {
         {
           "t": "Where is he who is born King of the Jews?",
           "img": "https://wolf-labs.pages.dev/p/20e556fdbbea/the-wise-men/img/live-casa.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Matthew 2:2"
         }
       ]
     },

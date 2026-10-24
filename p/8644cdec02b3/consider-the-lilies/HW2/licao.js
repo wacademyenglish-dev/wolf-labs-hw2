@@ -108,7 +108,8 @@ window.HW2 = {
         {
           "t": "But seek God’s Kingdom, and all these things will be added to you.",
           "img": "https://wolf-labs.pages.dev/p/8644cdec02b3/consider-the-lilies/img/live-lirios.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Luke 12:31"
         }
       ]
     },

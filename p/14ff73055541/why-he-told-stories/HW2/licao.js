@@ -120,7 +120,8 @@ window.HW2 = {
         {
           "t": "Listen! Behold, the farmer went out to sow.",
           "img": "https://wolf-labs.pages.dev/p/14ff73055541/why-he-told-stories/img/live-manuscritos.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Mark 4:3"
         }
       ]
     },

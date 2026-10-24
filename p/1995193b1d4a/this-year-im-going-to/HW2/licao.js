@@ -6,6 +6,7 @@ window.HW2 = {
   "titulo": "This Year I'm Going to…",
   "nivel": "A2",
   "minutos": 10,
+  "capa": "https://wolf-labs.pages.dev/p/1995193b1d4a/this-year-im-going-to/img/live-capa.webp",
   "alvo": "going to (plan or proof you can see) x will (decided now, promise, I think); want to / would like to + verb; never will to, going + verb without to",
   "abrir": "What is one thing you want to do this year?",
   "fecho": "<b>going to</b> = a plan or proof you can see: <i>I'm going to learn the guitar. Look, it's going to rain.</i> <b>will</b> = decided now, a promise: <i>I'll help you. I'll call you.</i> <b>want to / would like to</b> + verb. Never <i>will to</i>.",
@@ -25,6 +26,8 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in January. A new scene, about 45 seconds.",
+      "img": "https://wolf-labs.pages.dev/p/1995193b1d4a/this-year-im-going-to/img/live-sala.webp",
+      "leg": "A new year begins",
       "audio": "audio/listen.mp3",
       "falas": [
         {
@@ -105,11 +108,11 @@ window.HW2 = {
       "sub": "Three sentences about plans and promises. Hear it, then say it.",
       "frases": [
         {
-          "t": "I bought a guitar. I'm going to learn it this year.",
+          "t": "I bought a guitar. I'm going to learn it this year.", "img": "https://wolf-labs.pages.dev/p/1995193b1d4a/this-year-im-going-to/img/live-quadro.webp",
           "au": "audio/say1.mp3"
         },
         {
-          "t": "Look at the sky. It's going to rain.",
+          "t": "Look at the sky. It's going to rain.", "img": "https://wolf-labs.pages.dev/p/1995193b1d4a/this-year-im-going-to/img/live-janela.webp",
           "au": "audio/say2.mp3"
         },
         {

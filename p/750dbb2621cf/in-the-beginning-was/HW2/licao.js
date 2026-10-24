@@ -116,7 +116,8 @@ window.HW2 = {
         {
           "t": "In him was life, and the life was the light of men.",
           "img": "https://wolf-labs.pages.dev/p/750dbb2621cf/in-the-beginning-was/img/live-lampada.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "John 1:4"
         }
       ]
     },

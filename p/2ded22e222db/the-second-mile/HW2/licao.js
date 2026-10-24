@@ -111,7 +111,8 @@ window.HW2 = {
         {
           "t": "Whoever compels you to go one mile, go with him two.",
           "img": "https://wolf-labs.pages.dev/p/2ded22e222db/the-second-mile/img/live-marco.webp",
-          "au": "audio/say2.mp3"
+          "au": "audio/say2.mp3",
+          "ref": "Matthew 5:41"
         },
         {
           "t": "If you are tired, sit down and rest.",

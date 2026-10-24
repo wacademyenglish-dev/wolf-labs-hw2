@@ -116,7 +116,8 @@ window.HW2 = {
         {
           "t": "Pilate said to him, “What is truth?”",
           "img": "https://wolf-labs.pages.dev/p/18a426914660/what-is-truth/img/live-pretorio.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "John 18:38"
         }
       ]
     },

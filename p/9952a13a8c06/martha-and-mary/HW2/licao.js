@@ -120,7 +120,8 @@ window.HW2 = {
         {
           "t": "She had a sister called Mary, who also sat at Jesus’ feet and heard his word.",
           "img": "https://wolf-labs.pages.dev/p/9952a13a8c06/martha-and-mary/img/live-sala.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Luke 10:39"
         }
       ]
     },

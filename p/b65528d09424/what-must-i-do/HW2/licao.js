@@ -111,12 +111,14 @@ window.HW2 = {
         {
           "t": "He said to him, “Teacher, I have observed all these things from my youth.”",
           "img": "https://wolf-labs.pages.dev/p/b65528d09424/what-must-i-do/img/live-mercado.webp",
-          "au": "audio/say2.mp3"
+          "au": "audio/say2.mp3",
+          "ref": "Mark 10:20"
         },
         {
           "t": "They were exceedingly astonished, saying to him, “Then who can be saved?”",
           "img": "https://wolf-labs.pages.dev/p/b65528d09424/what-must-i-do/img/live-capa2.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Mark 10:26"
         }
       ]
     },

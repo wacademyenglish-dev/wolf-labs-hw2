@@ -6,6 +6,7 @@ window.HW2 = {
   "titulo": "I Decided to Stay",
   "nivel": "A2",
   "minutos": 10,
+  "capa": "https://wolf-labs.pages.dev/p/56ebfb365684/i-decided-to-stay/img/live-capa.webp",
   "alvo": "verb patterns: want / need / plan / hope / decide + to + verb; enjoy / avoid / finish / mind / keep + -ing; never to + -ing",
   "abrir": "Where do you want to travel one day?",
   "fecho": "<b>want, need, plan, hope, decide + TO + verb</b>: <i>I decided to stay.</i> <b>enjoy, avoid, finish, mind, keep + -ING</b>: <i>I enjoy walking.</i> Never <i>to</i> and <i>-ing</i> together.",
@@ -25,6 +26,8 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on a video call. A new scene, about 45 seconds.",
+      "img": "https://wolf-labs.pages.dev/p/56ebfb365684/i-decided-to-stay/img/live-sala.webp",
+      "leg": "A video call from Galway",
       "audio": "audio/listen.mp3",
       "falas": [
         {
@@ -105,7 +108,7 @@ window.HW2 = {
       "sub": "Three sentences about a new life. Hear it, then say it.",
       "frases": [
         {
-          "t": "I decided to stay another year.",
+          "t": "I decided to stay another year.", "img": "https://wolf-labs.pages.dev/p/56ebfb365684/i-decided-to-stay/img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -113,7 +116,7 @@ window.HW2 = {
           "au": "audio/say2.mp3"
         },
         {
-          "t": "I finished packing at ten.",
+          "t": "I finished packing at ten.", "img": "https://wolf-labs.pages.dev/p/56ebfb365684/i-decided-to-stay/img/live-mala.webp",
           "au": "audio/say3.mp3"
         }
       ]

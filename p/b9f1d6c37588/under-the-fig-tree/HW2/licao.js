@@ -128,7 +128,8 @@ window.HW2 = {
         {
           "t": "Before Philip called you, when you were under the fig tree, I saw you.",
           "img": "https://wolf-labs.pages.dev/p/b9f1d6c37588/under-the-fig-tree/img/live-figueira.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "John 1:48"
         }
       ]
     },

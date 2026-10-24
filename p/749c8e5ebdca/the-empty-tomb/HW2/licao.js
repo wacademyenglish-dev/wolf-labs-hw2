@@ -128,7 +128,8 @@ window.HW2 = {
         {
           "t": "Come, see the place where the Lord was lying.",
           "img": "https://wolf-labs.pages.dev/p/749c8e5ebdca/the-empty-tomb/img/live-manha.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Matthew 28:6"
         }
       ]
     },

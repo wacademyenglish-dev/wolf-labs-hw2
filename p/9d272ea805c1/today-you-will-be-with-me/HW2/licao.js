@@ -116,7 +116,8 @@ window.HW2 = {
         {
           "t": "Assuredly I tell you, today you will be with me in Paradise.",
           "img": "https://wolf-labs.pages.dev/p/9d272ea805c1/today-you-will-be-with-me/img/live-relogio.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Luke 23:43"
         }
       ]
     },

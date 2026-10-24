@@ -111,12 +111,14 @@ window.HW2 = {
         {
           "t": "Jesus said to her, “I am he, the one who speaks to you.”",
           "img": "https://wolf-labs.pages.dev/p/117dc0a5067d/everything-i-ever-did/img/live-capa2.webp",
-          "au": "audio/say2.mp3"
+          "au": "audio/say2.mp3",
+          "ref": "John 4:26"
         },
         {
           "t": "They went out of the city, and were coming to him.",
           "img": "https://wolf-labs.pages.dev/p/117dc0a5067d/everything-i-ever-did/img/live-vila.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "John 4:30"
         }
       ]
     },

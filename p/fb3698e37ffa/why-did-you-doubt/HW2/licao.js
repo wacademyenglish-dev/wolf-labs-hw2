@@ -124,7 +124,8 @@ window.HW2 = {
         {
           "t": "When they got up into the boat, the wind ceased.",
           "img": "https://wolf-labs.pages.dev/p/fb3698e37ffa/why-did-you-doubt/img/live-capa2.webp",
-          "au": "audio/say3.mp3"
+          "au": "audio/say3.mp3",
+          "ref": "Matthew 14:32"
         }
       ]
     },
