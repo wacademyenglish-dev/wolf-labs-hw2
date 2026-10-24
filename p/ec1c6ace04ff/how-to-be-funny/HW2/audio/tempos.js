@@ -1,0 +1,2 @@
+/* gerado por gera_audio.py: o começo e o fim de cada fala do Listen (segundos) */
+window.HW2_TEMPOS = {"listen": [{"ini": 0.35, "fim": 5.67}, {"ini": 6.22, "fim": 11.83}, {"ini": 12.38, "fim": 17.83}, {"ini": 18.38, "fim": 21.95}, {"ini": 22.5, "fim": 27.05}, {"ini": 27.6, "fim": 32.78}, {"ini": 33.33, "fim": 37.88}, {"ini": 38.43, "fim": 43.21}, {"ini": 43.76, "fim": 48.74}, {"ini": 49.29, "fim": 50.88}, {"ini": 51.43, "fim": 52.63}], "dur": 53.1};
