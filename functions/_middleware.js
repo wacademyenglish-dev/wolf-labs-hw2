@@ -62,7 +62,15 @@ export async function onRequest({ request, env, next }) {
   if (!achado) return next();                        // só a página passa pela porta
 
   const escopo = `/p/${achado[1].toLowerCase()}/`;
-  const k = await chave(segredo);
+  /* 26/10: a aluna-teste via "Abra pelo app" mesmo entrando pelo app — a chave colada aqui pode
+     ter vindo com espaço/quebra de linha. Tenta as duas chaves, cruas e aparadas; a que bater assina o cookie. */
+  const cands = [...new Set([env.WL_CRACHA_SEGREDO2, env.WL_CRACHA_SEGREDO]
+    .filter(Boolean).flatMap((s) => [String(s), String(s).trim()]).filter(Boolean))];
+  let k = await chave(segredo);
+  for (const s of cands) {
+    const kk = await chave(s);
+    if (await confere(url.searchParams.get('wl_t'), escopo, '', kk)) { k = kk; break; }
+  }
 
   if (await confere(url.searchParams.get('wl_t'), escopo, '', k)) {
     const cookie = await assina(escopo, '|c', DOZE_HORAS, k);
