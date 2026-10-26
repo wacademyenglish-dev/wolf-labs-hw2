@@ -86,5 +86,11 @@ export async function onRequest({ request, env, next }) {
     saida.headers.set('Cache-Control', 'private, no-store');
     return saida;
   }
-  return new Response(FORA, { status: 403, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
+  /* 26/10: o motivo, em letra pequena, para descobrir por que a aluna-teste não entrava (não revela chave nenhuma) */
+  const t = url.searchParams.get('wl_t') || '';
+  const exp = Number(String(t).split('.')[0]);
+  const motivo = !t ? 'sem-cracha' : !/^\d+\.[\w-]+$/.test(t) ? 'cracha-torto'
+    : exp < Math.floor(Date.now() / 1000) ? 'cracha-vencido' : 'assinatura-nao-bate';
+  const pagina = FORA.replace('</div></body>', `<p style="margin-top:28px;font-size:11px;color:#5e5878">código: ${motivo} · chaves: ${cands.length}</p></div></body>`);
+  return new Response(pagina, { status: 403, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
 }
