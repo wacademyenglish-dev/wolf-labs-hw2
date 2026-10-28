@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Who Am I?",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/91a0ef4534d4/aupair-who-am-i/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "introducing yourself to a host family: I am 22 (years old), never I have 22 years; can + plain verb, no to; he / she / it + -s; love + -ing",
   "abrir": "How do you say who you are in three short lines?",
   "fecho": "Age: <b>I am</b> 22 years old. After <b>can</b>, the plain verb: <i>I can drive.</i> He, she, it: <b>-s</b>: <i>She loves kids.</i> <b>Love</b> + <b>-ing</b>: <i>I love playing.</i>",
@@ -98,24 +98,24 @@ window.HW2 = {
           "por": "I can swim too, but not very well."
         }
       ],
-      "img": "https://wolf-labs.pages.dev/p/91a0ef4534d4/aupair-who-am-i/img/live-conversa.webp"
+      "img": "../img/live-conversa.webp"
     },
     "out": {
       "sub": "Three lines to say to a family. Hear it, then say it.",
       "frases": [
         {
           "t": "Hi! I am Ana, and I am twenty-two years old.",
-          "img": "https://wolf-labs.pages.dev/p/91a0ef4534d4/aupair-who-am-i/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I love playing with kids, and I can cook.",
-          "img": "https://wolf-labs.pages.dev/p/91a0ef4534d4/aupair-who-am-i/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I live with my parents and my little brother.",
-          "img": "https://wolf-labs.pages.dev/p/91a0ef4534d4/aupair-who-am-i/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -166,7 +166,7 @@ window.HW2 = {
       "pede": "Look at the picture: a living room, like your host family's. Write 2 or 3 sentences to introduce yourself: your age, what you love doing and what you can do.",
       "ph": "I am … years old. I love …ing.",
       "ex": "I am twenty-two years old. I love cooking with kids, and I can drive.",
-      "img": "https://wolf-labs.pages.dev/p/91a0ef4534d4/aupair-who-am-i/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A family living room"
     },
     "you": {

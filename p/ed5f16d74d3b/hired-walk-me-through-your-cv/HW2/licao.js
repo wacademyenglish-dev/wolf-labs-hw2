@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Walk Me Through Your CV",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ed5f16d74d3b/hired-walk-me-through-your-cv/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "telling your career: past simple for finished jobs (I worked there in 2019, I left two years ago, I was promoted), present perfect + since / for for the current job (I have worked here since 2022); never I work here since, never I have worked there in 2019, never since two years",
   "abrir": "Say your career in one breath: where do you work, and since when?",
   "fecho": "<b>Finished</b> job: past simple (<i>I worked there for two years; I left in 2022</i>). <b>Still true</b>: <b>have + worked</b> with <b>since</b> or <b>for</b> (<i>I have worked here since 2022</i>). <b>Ago</b> goes with the past simple (<i>two years ago</i>); <b>since</b> needs a starting point. Someone promoted you: <i>I was promoted</i>. About 90 seconds, then a clear next step.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before her interview. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/ed5f16d74d3b/hired-walk-me-through-your-cv/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The corridor before the interview",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I have worked at Brightway Media since 2022.",
-          "img": "https://wolf-labs.pages.dev/p/ed5f16d74d3b/hired-walk-me-through-your-cv/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Before that, I worked at a small agency for two years.",
-          "img": "https://wolf-labs.pages.dev/p/ed5f16d74d3b/hired-walk-me-through-your-cv/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I was promoted after one year because I raised our sales.",
-          "img": "https://wolf-labs.pages.dev/p/ed5f16d74d3b/hired-walk-me-through-your-cv/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -175,7 +175,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ed5f16d74d3b/hired-walk-me-through-your-cv/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A CV on the desk, a lamp, a pen",
       "pede": "Look at the picture: a CV on a desk. Tell your career in 2 or 3 sentences: your current job or study with <b>since</b> or <b>for</b>, and one finished job with the past simple.",
       "ph": "I have worked as … since …",

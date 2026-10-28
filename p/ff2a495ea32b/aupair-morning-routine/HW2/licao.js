@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Morning Routine",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ff2a495ea32b/aupair-morning-routine/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "kind imperatives and Let's with please (Shoes on, please. Let's eat.), Don't + verb, and order words first, then, after that; never no run, never Let's to go",
   "abrir": "What do you do first every morning?",
   "fecho": "<b>Please</b> makes it kind: <i>Shoes on, please.</i> <b>Let's</b> + verb: <i>Let's eat together.</i> No: <b>Don't</b> + verb: <i>Don't run inside.</i> Order: <b>first, then, after that</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before school. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/ff2a495ea32b/aupair-morning-routine/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A backpack and fruit in the kitchen",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Let's eat breakfast together.",
-          "img": "https://wolf-labs.pages.dev/p/ff2a495ea32b/aupair-morning-routine/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "First we eat, then we brush our teeth.",
-          "img": "https://wolf-labs.pages.dev/p/ff2a495ea32b/aupair-morning-routine/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Don't run inside, please.",
-          "img": "https://wolf-labs.pages.dev/p/ff2a495ea32b/aupair-morning-routine/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ff2a495ea32b/aupair-morning-routine/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A backpack and fruit in a kitchen",
       "pede": "Look at the picture: a backpack and fruit in a warm kitchen. Write 2 or 3 sentences to a child before school. Use <b>Let's</b>, <b>please</b> or <b>Don't</b>.",
       "ph": "Let's … Backpack on, please.",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "We’re Working on Your Proposal.",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/216ee29a3919/selling-services-working-on-your-proposal/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "present continuous for now / this week (am / is / are + -ing) × present simple for routines; never “we working”, “I am work”, “we are send every month”",
   "abrir": "A client asks: “How is my proposal going?” What do you say?",
   "fecho": "Now, today, this week → <b>am / is / are + -ing</b>. Every week, usually → <b>present simple</b> (we send).",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "A client calls Mia for news about the proposal. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/216ee29a3919/selling-services-working-on-your-proposal/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A laptop with a status e-mail at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We’re working on your proposal this week.",
-          "img": "https://wolf-labs.pages.dev/p/216ee29a3919/selling-services-working-on-your-proposal/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "My team is checking the numbers.",
-          "img": "https://wolf-labs.pages.dev/p/216ee29a3919/selling-services-working-on-your-proposal/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We send an update every Monday.",
-          "img": "https://wolf-labs.pages.dev/p/216ee29a3919/selling-services-working-on-your-proposal/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/216ee29a3919/selling-services-working-on-your-proposal/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A laptop with a status e-mail at night",
       "pede": "Write a short status e-mail (3 sentences): what you’re doing this week, what your team is doing, one routine.",
       "ph": "This week we’re … My team is … We usually …",

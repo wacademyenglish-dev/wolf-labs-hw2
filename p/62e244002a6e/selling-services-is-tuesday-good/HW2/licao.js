@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Is Tuesday at 10 Good for You?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/62e244002a6e/selling-services-is-tuesday-good/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "on + day/date, at + time, in + the morning/month; 1–12 + a.m. / p.m.; never “in Monday”, “at the morning”, “15h”",
   "abrir": "A client can’t come on Thursday. What do you write?",
   "fecho": "<b>on</b> + day / date · <b>at</b> + time · <b>in</b> + the morning / March. The clock: 1 to 12 + <b>a.m. / p.m.</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "A client calls Mia to move a meeting. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/62e244002a6e/selling-services-is-tuesday-good/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A calendar on a laptop screen at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Is Tuesday at 10 a.m. good for you?",
-          "img": "https://wolf-labs.pages.dev/p/62e244002a6e/selling-services-is-tuesday-good/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I’m busy in the morning.",
-          "img": "https://wolf-labs.pages.dev/p/62e244002a6e/selling-services-is-tuesday-good/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Can we meet on Monday at 3 p.m.?",
-          "img": "https://wolf-labs.pages.dev/p/62e244002a6e/selling-services-is-tuesday-good/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/62e244002a6e/selling-services-is-tuesday-good/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A calendar on a laptop screen at night",
       "pede": "Write a short message to move a meeting: say sorry and give two new options.",
       "ph": "Sorry, I can’t … on … Is … at … good for you? Or …?",

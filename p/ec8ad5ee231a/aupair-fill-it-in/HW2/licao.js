@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Fill It In",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ec8ad5ee231a/aupair-fill-it-in/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "filling in forms in English: surname = last name, given name = first name; dates in the American order MM/DD/YYYY; marital status words (single, married); an emergency contact is another person; always a practice person, never real data",
   "abrir": "What forms do you have to fill in to be an au pair?",
   "fecho": "<b>Surname</b> = last name · <b>given name</b> = first name. In the USA the date is <b>MM/DD/YYYY</b>: March 7, 2003 = 03/07/2003. Marital status: <b>single</b>, married. An emergency contact is <b>another person</b>.",
@@ -98,24 +98,24 @@ window.HW2 = {
           "por": "Another person, for example his mother."
         }
       ],
-      "img": "https://wolf-labs.pages.dev/p/ec8ad5ee231a/aupair-fill-it-in/img/live-conversa.webp"
+      "img": "../img/live-conversa.webp"
     },
     "out": {
       "sub": "Three lines about a form. Hear it, then say it.",
       "frases": [
         {
           "t": "My surname is Lima, and my given name is Rui.",
-          "img": "https://wolf-labs.pages.dev/p/ec8ad5ee231a/aupair-fill-it-in/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "In the USA, the month comes first.",
-          "img": "https://wolf-labs.pages.dev/p/ec8ad5ee231a/aupair-fill-it-in/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The emergency contact is another person.",
-          "img": "https://wolf-labs.pages.dev/p/ec8ad5ee231a/aupair-fill-it-in/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
       "pede": "Look at the picture: a red folder with a pen. Write 2 or 3 sentences about a practice form: the surname, how to write March 7th and the emergency contact. Use a practice person, never your real data.",
       "ph": "The surname is …",
       "ex": "The surname is Lima. March 7th is 03/07 in the USA. The emergency contact is his mother.",
-      "img": "https://wolf-labs.pages.dev/p/ec8ad5ee231a/aupair-fill-it-in/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A folder, glasses and a pen"
     },
     "you": {

@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "Let’s Sort This Out",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ff26763f810e/health-lets-sort-this-out/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "calm a frustrated patient without saying calm down: name the feeling (I can see you're frustrated), sorry for the experience (I'm sorry you've had to wait so long), what I can do with a time (Here's what I can do: statement order; in ten minutes); never waited so much, Here's what can I do, after ten minutes",
   "abrir": "What makes you lose your patience at a reception desk?",
   "fecho": "Never <i>calm down</i>. Name it: <b>I can see you're frustrated.</b> Sorry for the experience: <b>I'm sorry you've had to wait so long.</b> An option and a time: <b>Here's what I can do</b> (not <i>what can I do</i>), <b>in ten minutes</b>. And together: <b>Let's sort this out.</b>",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo at the clinic reception, Mia helps. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/ff26763f810e/health-lets-sort-this-out/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The reception desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -118,12 +118,12 @@ window.HW2 = {
       "frases": [
         {
           "t": "I can see you're really frustrated. Tell me what happened.",
-          "img": "https://wolf-labs.pages.dev/p/ff26763f810e/health-lets-sort-this-out/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I'm sorry you've had to wait so long.",
-          "img": "https://wolf-labs.pages.dev/p/ff26763f810e/health-lets-sort-this-out/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ff26763f810e/health-lets-sort-this-out/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty waiting room",
       "pede": "Look at the picture: an empty waiting room at the end of the day. A patient's appointment was cancelled and nobody called. Write 2 or 3 sentences: name the feeling, say sorry for the experience, and say what you can do, with a time.",
       "ph": "I can see you're … I'm sorry …",

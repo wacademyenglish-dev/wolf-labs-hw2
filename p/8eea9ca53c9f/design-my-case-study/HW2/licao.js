@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "My Case Study",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/8eea9ca53c9f/design-my-case-study/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "telling a project as a story in the past: context (This project was for..., I was...) · problem · goal (Our goal was to + verb) · process (First, I... Then, we...) · result (As a result,...); I = my part, we = the team; irregular past (made, chose, grew)",
   "abrir": "Think of a project you are proud of. Who was it for?",
   "fecho": "A case study is a story in the past: <b>This project was for…</b> · <b>The problem was that…</b> · <b>Our goal was to</b> + verb · <b>First, I… Then, we…</b> · <b>As a result,…</b> Say <b>I</b> for your part and <b>we</b> for the team. Watch the irregular verbs: <i>made, chose, grew</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia practises a portfolio review with Leo. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/8eea9ca53c9f/design-my-case-study/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The waiting room before the review",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This project was for a small cinema, and I was the only designer.",
-          "img": "https://wolf-labs.pages.dev/p/8eea9ca53c9f/design-my-case-study/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "First, I watched six people book a ticket. Then, we tested two seat maps.",
-          "img": "https://wolf-labs.pages.dev/p/8eea9ca53c9f/design-my-case-study/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "As a result, completed purchases rose by twenty-eight percent.",
-          "img": "https://wolf-labs.pages.dev/p/8eea9ca53c9f/design-my-case-study/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/8eea9ca53c9f/design-my-case-study/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A waiting room before a portfolio review",
       "pede": "Look at the picture: a waiting room before a portfolio review. Write 3 sentences about one project of yours (real or invented): the problem, your goal and the result. Use the past, and <b>I</b> or <b>we</b>.",
       "ph": "The problem was that …",

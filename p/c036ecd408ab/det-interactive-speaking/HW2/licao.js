@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Interactive Speaking",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c036ecd408ab/det-interactive-speaking/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "answer + one detail + one example, matching the tense of the question: Do you ...? -> I usually; Have you ever ...? -> present perfect; If you had ...? -> I would",
   "abrir": "What do you usually do after work or class?",
   "fecho": "<b>Answer first</b>, then <b>one detail</b>, then <b>one example</b>. Match the question: <i>Have you ever...?</i> -> <i>Yes, I have been...</i>; <i>If you had...?</i> -> <i>I would...</i>. Never <i>I have went</i>, never <i>I am agree</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia helps Leo practice for a speaking test. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c036ecd408ab/det-interactive-speaking/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two microphones on a round table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I usually go to the park near my house, and I take my dog.",
-          "img": "https://wolf-labs.pages.dev/p/c036ecd408ab/det-interactive-speaking/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Yes, my routine has changed, because I've started working from home.",
-          "img": "https://wolf-labs.pages.dev/p/c036ecd408ab/det-interactive-speaking/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If I had a free day, I would go to the beach with my friends.",
-          "img": "https://wolf-labs.pages.dev/p/c036ecd408ab/det-interactive-speaking/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -175,7 +175,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c036ecd408ab/det-interactive-speaking/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two microphones on a round table",
       "pede": "Look at the picture: two microphones on a table. Imagine this question: <i>What do you usually do on weekends?</i> Write a short answer: <b>answer + one detail + one example</b>.",
       "ph": "On weekends I usually ...",

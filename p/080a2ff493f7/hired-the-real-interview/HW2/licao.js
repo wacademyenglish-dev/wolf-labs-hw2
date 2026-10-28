@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Real Interview",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/080a2ff493f7/hired-the-real-interview/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the full job interview: I've been + -ing / have + past participle with since and for; the story (mistake, fix, lesson); I'd like to / I hope to have; Could you tell me ...?",
   "abrir": "Which interview question makes you most nervous?",
   "fecho": "<b>I've worked here since 2019</b> / <b>for four years</b>: not <i>I work here since</i>. Tell a story in three steps: the mistake, the fix, what you do now. Ask politely: <i>Could you tell me what a typical week looks like?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a mock interview. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/080a2ff493f7/hired-the-real-interview/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A door open to a lit room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/080a2ff493f7/hired-the-real-interview/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty chair in a spotlight",
       "pede": "Look at the picture: an empty chair, waiting for you. Write 2 or 3 sentences to answer <b>Why should we hire you?</b> Give one example. Use <b>I've ...</b>, <b>for</b> or <b>since</b>.",
       "ph": "From what I understand, this role needs …",

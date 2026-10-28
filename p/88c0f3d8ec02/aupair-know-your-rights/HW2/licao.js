@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Know Your Rights",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/88c0f3d8ec02/aupair-know-your-rights/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "talking about program limits: up to / no more than + number (ten hours a day, forty-five a week); more than, never more of; has the right to; a day and a half off; paid vacation (uncountable)",
   "abrir": "What is one rule about working hours that you already know?",
   "fecho": "<b>Up to</b> and <b>no more than</b> mark the limit: <i>up to ten hours a day.</i> Compare with <b>more than</b>, never <i>more of</i>. <b>She has the right to</b> keep her passport (he, she, it: <b>has</b>). <b>Vacation</b> is uncountable: <i>two weeks of paid vacation.</i> Knowing the rules protects everyone.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about her first week. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/88c0f3d8ec02/aupair-know-your-rights/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A private bedroom at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I can work up to ten hours a day.",
-          "img": "https://wolf-labs.pages.dev/p/88c0f3d8ec02/aupair-know-your-rights/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I have a day and a half off every week.",
-          "img": "https://wolf-labs.pages.dev/p/88c0f3d8ec02/aupair-know-your-rights/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "My passport and my documents are mine.",
-          "img": "https://wolf-labs.pages.dev/p/88c0f3d8ec02/aupair-know-your-rights/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/88c0f3d8ec02/aupair-know-your-rights/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A private bedroom at night",
       "pede": "Look at the picture: a private bedroom. Write 2 or 3 sentences about your rights and your time off. Use <b>up to</b>, <b>no more than</b> or <b>has the right to</b>.",
       "ph": "I have the right to …",

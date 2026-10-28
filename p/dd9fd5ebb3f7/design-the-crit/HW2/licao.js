@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Crit",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/dd9fd5ebb3f7/design-the-crit/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "giving design feedback in three steps, what, why, how: What's working is ...; The ... is a bit ...; Users might ... because ...; I wonder if ...; You could try ... (plain verb after could and might); soft language",
   "abrir": "What was the most useful feedback you ever got? What made it useful?",
   "fecho": "Good feedback has three steps: <b>what</b> (name the element), <b>why</b> (the effect on the user), <b>how</b> (a suggestion). Start with something that works: <i>What's working really well is the photo.</i> Then be soft: <i>The date is a bit small. Users <b>might</b> miss it. I <b>wonder if</b> it has enough contrast. You <b>could try</b> white letters.</i> After <b>could</b> and <b>might</b>, the plain verb.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia gives Leo feedback on his poster. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/dd9fd5ebb3f7/design-the-crit/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Drawings pinned on a wall",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "What's working really well is the photo.",
-          "img": "https://wolf-labs.pages.dev/p/dd9fd5ebb3f7/design-the-crit/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The date is a bit small, so people might miss it.",
-          "img": "https://wolf-labs.pages.dev/p/dd9fd5ebb3f7/design-the-crit/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "You could try white letters and a bigger size.",
-          "img": "https://wolf-labs.pages.dev/p/dd9fd5ebb3f7/design-the-crit/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/dd9fd5ebb3f7/design-the-crit/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Drawings pinned on a wall",
       "pede": "Look at the picture: drawings pinned on a wall in a crit. Imagine you give feedback on one of them. Write what works, one problem, and one suggestion.",
       "ph": "What's working is … The … might … You could try …",

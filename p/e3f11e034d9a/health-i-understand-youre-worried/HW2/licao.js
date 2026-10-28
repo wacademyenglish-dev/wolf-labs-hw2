@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "I Understand You’re Worried",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e3f11e034d9a/health-i-understand-youre-worried/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "name the feeling and validate it (I can see you're worried. That's completely understandable.), thank (Thank you for telling me: for + -ing), then a concrete action with a time (I'll let you know as soon as the doctor is free: present after as soon as); never thank you for tell me, as soon as ... will be, is normal without it",
   "abrir": "What do you say to a friend who is worried?",
   "fecho": "Name it: <b>I can see you're worried.</b> Validate it: <b>That's completely understandable.</b> Thank them: <b>Thank you for telling me</b> (for + -ing). Then a concrete action and a time: <b>I'll let you know as soon as the doctor is free</b> (present after <i>as soon as</i>).",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia, a nurse, and Leo in the waiting room. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e3f11e034d9a/health-i-understand-youre-worried/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Rain on the waiting-room window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -114,7 +114,7 @@ window.HW2 = {
       "frases": [
         {
           "t": "I can see you're worried, and that's completely understandable.",
-          "img": "https://wolf-labs.pages.dev/p/e3f11e034d9a/health-i-understand-youre-worried/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e3f11e034d9a/health-i-understand-youre-worried/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Rain on the waiting-room window",
       "pede": "Look at the picture: rain on the window of a waiting room. A patient has waited forty minutes and is worried about the time. Write 2 or 3 sentences: name the feeling, say it's understandable, and give a concrete action with a time.",
       "ph": "I can see you're …",

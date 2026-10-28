@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Walk Me Through It",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/35cc7953e87b/design-walk-me-through-it/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "presenting a design decision with its reason: goal + decision + because / so that / to + verb; Our goal was to ...; As a result ...; answering an opinion with Yes, ... Can you help me understand ...?",
   "abrir": "When did you last explain a choice you made? Who was listening?",
   "fecho": "A design decision always comes with a reason: <i>We moved the button <b>so that</b> people can reach it. We chose green <b>because</b> it feels calm. We made the logo smaller <b>to</b> save space.</i> Start with the goal (<b>Our goal was to ...</b>), end with the result (<b>As a result, ...</b>). When someone says <i>I don't like it</i>: <b>Yes, ... Can you help me understand ...?</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia presents a new screen to her manager. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/35cc7953e87b/design-walk-me-through-it/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The review room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Let me walk you through the new order screen.",
-          "img": "https://wolf-labs.pages.dev/p/35cc7953e87b/design-walk-me-through-it/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We moved the button so that people can reach it.",
-          "img": "https://wolf-labs.pages.dev/p/35cc7953e87b/design-walk-me-through-it/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "As a result, ordering now takes three taps.",
-          "img": "https://wolf-labs.pages.dev/p/35cc7953e87b/design-walk-me-through-it/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/35cc7953e87b/design-walk-me-through-it/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty stage, one red light",
       "pede": "Look at the picture: an empty stage with one red light. Imagine you present a design of yours. Write 2 or 3 sentences: one decision and its reason. Use <b>because</b>, <b>so that</b> or <b>to</b>.",
       "ph": "We chose … because …",

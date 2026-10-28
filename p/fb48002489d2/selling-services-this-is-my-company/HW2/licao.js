@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "This Is My Company",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fb48002489d2/selling-services-this-is-my-company/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "be: is / isn’t / are / aren’t / I’m not; never “it don’t is”",
   "abrir": "A stranger on LinkedIn asks: “What is your company?” What do you say?",
   "fecho": "With <b>be</b> the negative is <b>not</b>: <i>it isn’t, they aren’t, I’m not</i>. Never “don’t is”.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Two people meet at a business event. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/fb48002489d2/selling-services-this-is-my-company/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Coffee at a business event",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "My company isn’t a software company.",
-          "img": "https://wolf-labs.pages.dev/p/fb48002489d2/selling-services-this-is-my-company/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The reports aren’t ready on time.",
-          "img": "https://wolf-labs.pages.dev/p/fb48002489d2/selling-services-this-is-my-company/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "There are two thousand employees.",
-          "img": "https://wolf-labs.pages.dev/p/fb48002489d2/selling-services-this-is-my-company/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fb48002489d2/selling-services-this-is-my-company/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A laptop on a desk at night",
       "pede": "Write 2 or 3 sentences about you and your company: who you are, what your company is, and what it isn’t.",
       "ph": "I’m … We’re a … We aren’t …",

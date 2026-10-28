@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Tricky Question",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/10c985b7d6bc/hired-the-tricky-question/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "buying time and answering hard questions: That's a good question. Let me think about that for a second; Just to make sure I understand, ...?; I would start by + -ing; positive about the past (It wasn't the right fit, but I learned a lot); never let me to think, never start by look",
   "abrir": "What question would make your mind go blank in an interview?",
   "fecho": "Three seconds of silence feels long to you, but it looks like thinking. <b>Buy time</b>: <i>That's a good question. Let me think about that for a second.</i> <b>Check</b>: <i>Just to make sure I understand, …?</i> <b>Explain your thinking</b>: <i>I would start by looking at the data.</i> <b>Stay positive</b> about the past: <i>It wasn't the right fit, but I learned a lot.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia gives Leo hard questions. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/10c985b7d6bc/hired-the-tricky-question/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A chess board in the dark",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "That's a good question. Let me think about that for a second.",
-          "img": "https://wolf-labs.pages.dev/p/10c985b7d6bc/hired-the-tricky-question/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I don't know exactly, but I would start with the population.",
-          "img": "https://wolf-labs.pages.dev/p/10c985b7d6bc/hired-the-tricky-question/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It wasn't the right fit, but I learned a lot.",
-          "img": "https://wolf-labs.pages.dev/p/10c985b7d6bc/hired-the-tricky-question/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/10c985b7d6bc/hired-the-tricky-question/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An hourglass on a dark table",
       "pede": "Look at the picture: an hourglass. Imagine an interviewer asks a hard question and you need time. Write 2 or 3 sentences: a phrase to buy time, then how you would start.",
       "ph": "That's a good question. Let me …",

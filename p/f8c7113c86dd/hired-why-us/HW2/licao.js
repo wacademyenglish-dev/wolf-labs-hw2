@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Why Us?",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f8c7113c86dd/hired-why-us/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "answering Why do you want to work here? with a specific fact and a reason: What drew me to ... is ..., I have always been interested in ..., I was impressed by ..., This role is a great fit for me because ...; interested (not interesting), since + starting point, impressed by",
   "abrir": "Name a company you like. What do you know about it?",
   "fecho": "A weak answer fits any company (<i>You are a big company</i>). A strong one has <b>one fact about them</b> and <b>one fact about you</b>: <b>What drew me to … is …</b> · <b>I have always been interested in …</b> · <b>I was impressed by …</b> · <b>This role is a great fit for me because …</b> · <b>I really want to be part of that.</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo practice with a fictional company. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f8c7113c86dd/hired-why-us/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The lobby of a company",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "What drew me to your company is the free version for schools.",
-          "img": "https://wolf-labs.pages.dev/p/f8c7113c86dd/hired-why-us/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I have always been interested in education.",
-          "img": "https://wolf-labs.pages.dev/p/f8c7113c86dd/hired-why-us/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I really want to be part of that.",
-          "img": "https://wolf-labs.pages.dev/p/f8c7113c86dd/hired-why-us/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -177,7 +177,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f8c7113c86dd/hired-why-us/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The lobby of a company at night",
       "pede": "Look at the picture: the lobby of a company. Imagine your interview is there. Write 2 or 3 sentences: one fact about the company and why it fits you. Use <b>What drew me to</b> or <b>I was impressed by</b>.",
       "ph": "What drew me to your company is …",

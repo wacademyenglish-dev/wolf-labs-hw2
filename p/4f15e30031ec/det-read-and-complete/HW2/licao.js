@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Read and Complete",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4f15e30031ec/det-read-and-complete/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "completing a paragraph with a method: read first, think grammar (-s, -ed, -ing, plural, comparative -er), easy gaps first, check the American spelling (color, center)",
   "abrir": "When you read a long text, do you start at the first word or look at the whole page first?",
   "fecho": "A method for three minutes: <b>1</b> read the whole paragraph · <b>2</b> think grammar (-s, -ed, -ing, plural) · <b>3</b> easy gaps first · <b>4</b> check the spelling. In the test: <b>color</b>, <b>center</b>, <b>organize</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia coaches Leo before the paragraph task. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/4f15e30031ec/det-read-and-complete/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A long, dark hallway with warm lights",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -164,7 +164,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4f15e30031ec/det-read-and-complete/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An open notebook and reading glasses",
       "pede": "Look at the picture: an open notebook and glasses. Write a short paragraph of 3 sentences about your study routine. Make the first sentence complete, then use <b>each</b>, <b>also</b> and one American spelling (<b>color</b>, <b>center</b> or <b>organize</b>).",
       "ph": "I study English …",

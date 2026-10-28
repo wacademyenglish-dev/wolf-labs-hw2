@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Why This Color?",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/85e76fb851df/design-why-this-color/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "describing a design precisely: too + adjective (a problem), adjective + enough (not big enough), feels / looks + adjective, feels / looks like + noun, -ish for color",
   "abrir": "Look around you. What color do you see the most?",
   "fecho": "<b>too</b> + adjective = a problem: <i>The text is too small.</i> Adjective + <b>enough</b>: <i>It is not big enough.</i> <b>feels / looks</b> + adjective: <i>It feels calm.</i> <b>feels / looks like</b> + noun: <i>It looks like a circus.</i> <b>-ish</b> = a little: <i>a bluish grey.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo choose colors for a café sign. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/85e76fb851df/design-why-this-color/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Jars of paint on a shelf",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The yellow looks too bright for a café.",
-          "img": "https://wolf-labs.pages.dev/p/85e76fb851df/design-why-this-color/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The contrast is not strong enough.",
-          "img": "https://wolf-labs.pages.dev/p/85e76fb851df/design-why-this-color/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It feels warm and calm, like a quiet morning.",
-          "img": "https://wolf-labs.pages.dev/p/85e76fb851df/design-why-this-color/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/85e76fb851df/design-why-this-color/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Jars of paint on a shelf",
       "pede": "Look at the picture: shelves with jars of paint in many colors. Choose two colors for a poster or a room and describe them. Use <b>feels</b>, <b>looks</b>, <b>too</b> or <b>enough</b>.",
       "ph": "I would choose … because it feels …",

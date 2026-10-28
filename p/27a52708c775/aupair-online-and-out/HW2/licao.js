@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Online and Out",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/27a52708c775/aupair-online-and-out/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "polite permission and preference: Could I + plain verb, Would you mind if I + past simple, I'd rather (not) + plain verb; Just so you know + plan; never could I to, never I'd rather to, never would you mind if I will",
   "abrir": "What do you always ask before you post a photo of someone?",
   "fecho": "<b>Could I + plain verb</b>: <i>Could I share this photo?</i> <b>Would you mind if I + past</b>: <i>Would you mind if I shared it?</i> <b>I'd rather + plain verb</b>: <i>I'd rather not post it.</i> No <i>to</i> after could or rather.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks the host dad before she posts, and tells him her plan for Saturday. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/27a52708c775/aupair-online-and-out/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A wet city street at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Could I share this photo, or would you prefer I didn't?",
-          "img": "https://wolf-labs.pages.dev/p/27a52708c775/aupair-online-and-out/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Just so you know, I'm going downtown on Saturday.",
-          "img": "https://wolf-labs.pages.dev/p/27a52708c775/aupair-online-and-out/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'd rather not post a photo of the kids.",
-          "img": "https://wolf-labs.pages.dev/p/27a52708c775/aupair-online-and-out/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/27a52708c775/aupair-online-and-out/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A wet city street at night",
       "pede": "Look at the picture: a wet city street at night. Write 2 or 3 sentences to your host family about a night out. Use <b>Just so you know</b>, <b>I'd rather</b> or <b>Could I</b>.",
       "ph": "Just so you know, I'm going …",

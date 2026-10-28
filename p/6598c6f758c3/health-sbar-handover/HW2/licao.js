@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "SBAR Handover",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/6598c6f758c3/health-sbar-handover/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "SBAR handover in four steps: Situation in one sentence (This is… I'm calling about…) · Background, only what matters (He was admitted… with…) · Assessment with numbers (His saturation is…) · Recommendation as a clear request (Could you…? Would you consider…?)",
   "abrir": "Who do you usually talk to at the end of your shift?",
   "fecho": "<b>S</b>: <i>This is Mia, the nurse on Ward 5. I'm calling about Mr. Hall in bed 6.</i> <b>B</b>: only what matters: <i>He was admitted two days ago with mild asthma.</i> <b>A</b>: numbers first: <i>His saturation is 98 percent.</i> <b>R</b>: a clear request: <i>Could you review him this morning?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia, a ward nurse, calls Dr. Leo on a quiet morning. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/6598c6f758c3/health-sbar-handover/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The phone on the ward desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,7 +110,7 @@ window.HW2 = {
         {
           "t": "Hi, this is Mia, the nurse on Ward 5. I'm calling about Mr. Hall in bed 6.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/6598c6f758c3/health-sbar-handover/img/live-capa.webp"
+          "img": "../img/live-capa.webp"
         },
         {
           "t": "He was admitted two days ago with mild asthma, and his oxygen saturation is now 98 percent.",
@@ -119,7 +119,7 @@ window.HW2 = {
         {
           "t": "Could you review him this morning and consider discharge?",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/6598c6f758c3/health-sbar-handover/img/live-capa.webp"
+          "img": "../img/live-capa.webp"
         }
       ]
     },
@@ -169,7 +169,7 @@ window.HW2 = {
       "pede": "Look at the picture: a phone and a notebook on a desk. Write a short SBAR for a routine case: a patient with a sprained ankle who is ready to start physio. Give <b>S</b>, <b>B</b>, one number for <b>A</b>, and a clear <b>R</b>.",
       "ph": "I'm calling about …",
       "ex": "I'm calling about Ms. Lopes in bed 3. She was admitted yesterday with a sprained ankle. Her pain is now 2 out of 10. Could you see her today and refer her to physio?",
-      "img": "https://wolf-labs.pages.dev/p/6598c6f758c3/health-sbar-handover/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A phone and a notebook on a desk"
     },
     "you": {

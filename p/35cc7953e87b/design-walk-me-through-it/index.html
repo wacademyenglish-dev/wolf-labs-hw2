@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Walk Me Through It · Live Class</title>
+<meta name="wolf-kick" content="B1 · Presenting design decisions and the reasons behind them">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>DESIGN ENGLISH</b><span>English for Designers · Module 2 · Lesson 4 of 12</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Walk Me Through It · English for Designers · Lesson 4 of 12</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> presenting design decisions: the walkthrough (Let me walk you through…, Our goal was to…), decision + reason (We chose… because…, We moved… so that…, We used… to…) and answering opinions (Yes, … Can you help me understand…?).</p><p style="margin:0 0 6px"><b>The story:</b> A video about getting designs approved, then a fictional gym app (FitNook) presented in a design review.</p><p style="margin:0 0 6px"><b>About 34 min:</b> I · Before the Meeting (8) · II · A Walkthrough (10) · III · Decision + Reason (12) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Think of a design you made. Why did you choose those colors? Say it in one sentence.”</p></div><!--/prep-->
+    <p>For graphic designers and interior designers, swap the app for a poster or a room; the structure is the same. Insist on the reason: when the student says “we chose blue”, ask “why?” until a so that / because appears.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>Let me walk you through… · Our goal was to… · We chose… because… · We moved… so that… · As a result,… · Yes,… Can you help me understand…?</p>
+    <h4>BEFORE THE MEETING</h4>
+    <p>Synthesis, how to present design decisions to stakeholders (3:41–5:43): preparation, the pause, lead with yes, help me understand.</p>
+    <h4>A WALKTHROUGH</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>DECISION + REASON</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to bring one screen, poster or room of their own to explain in the next lessons.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>We choosed (We chose)</i>, <i>so that people can to reach (so that people can reach)</i>, <i>for make it faster (to make it faster)</i>, <i>I like this color (give a reason, not a taste)</i>. B1+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Before the Meeting and II · A Walkthrough.</li>
+      <li><b>Focus</b>: III · Decision + Reason and IV · I Can.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/legenda.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

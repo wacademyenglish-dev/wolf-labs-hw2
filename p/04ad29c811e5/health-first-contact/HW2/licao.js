@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "First Contact",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/04ad29c811e5/health-first-contact/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the first contact with AIDET: Acknowledge (Good morning, Mr. ...), Introduce (I'm ..., your nurse today), Duration (This will take about ...), Explanation (I'm going to + verb; You may feel ...), Thank you; I'm going to + plain verb (never I go to); may + plain verb (no to); examine (not make an exam)",
   "abrir": "What do you say to a new patient in the first ten seconds?",
   "fecho": "Five steps, thirty seconds: <b>Good morning, Mr. Lane</b> · <b>I'm Mia, your nurse today</b> · <b>This will take about ten minutes</b> · <b>I'm going to</b> + verb · <b>Thank you</b>. Say <i>I'm going to check</i>, never <i>I go to check</i>. After <b>may</b>, the plain verb: <i>You may feel a small scratch.</i>",
@@ -120,7 +120,7 @@ window.HW2 = {
         {
           "t": "Good morning, Mr. Lane. I'm Mia, your nurse today.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/04ad29c811e5/health-first-contact/img/live-capa.webp"
+          "img": "../img/live-capa.webp"
         },
         {
           "t": "This will take about ten minutes.",
@@ -180,7 +180,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/04ad29c811e5/health-first-contact/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A quiet desk before the first patient",
       "pede": "Look at the picture: a stethoscope and a cup of tea on a desk, before the first patient. Write your first contact with a patient in your profession: greet, introduce yourself, say how long it takes and what you are going to do. Use <b>This will take about</b> and <b>I'm going to</b>.",
       "ph": "Good morning, Ms. … I'm …, your … today.",

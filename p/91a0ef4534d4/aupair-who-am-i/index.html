@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Who Am I? · Live Class</title>
+<meta name="wolf-kick" content="A2 · Introduce yourself to a family">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>AU PAIR</b><span>Au Pair · Module 1 · Lesson 1 of 24</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Who Am I? · Au Pair · Lesson 1 of 24</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the first lesson of the Au Pair course (24 lessons, 6 modules: the profile, forms and documents, the interviews, your rights and your safety, life in the house, limits and life outside). Today: introducing yourself to a host family with the present simple and can.</p><p style="margin:0 0 6px"><b>The story:</b> Laura, a real au pair from Spain (AuPairCare video), tells how nervous she was and how her host family welcomed her. Then the student answers a host mom’s first questions and writes five lines about herself.</p><p style="margin:0 0 6px"><b>About 41 min:</b> I · Meet Laura (10) · II · Say It Right (9) · III · Tell Me About You (9) · IV · Your First Lines (9) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “If a family could ask you only one question, what would you like them to ask?”</p></div><!--/prep-->
+    <p>This course takes the student from the agency profile to her first week in the house, with what she needs to know to be protected. The tone is warm: many students are nervous about leaving home. Validate that (Laura was nervous too).</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>I am 22 (years old) · I’m from… · I live with… · I love + -ing · I can + verb · she loves (-s)</p>
+    <h4>MEET LAURA</h4>
+    <p>AuPairCare, “What is an Au Pair | Meet Laura from Spain” (2 min, captions checked on 15/10/2026). BEFORE: what does an au pair do? WATCH once. AFTER: five questions. Play it twice if needed: it is real, natural English with a Spanish accent.</p>
+    <h4>SAY IT RIGHT</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>TELL ME ABOUT YOU</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>YOUR FIRST LINES</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to keep the five lines: in Lesson 2 they become the start of the letter to the family.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I have 22 years</i>, <i>I can to drive</i>, <i>my mom work</i>, <i>I love play</i>. A2+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Meet Laura.</li>
+      <li><b>Focus</b>: II · Say It Right and V · I Can.</li>
+      <li><b>Out loud</b>: III · Tell Me About You.</li>
+      <li><b>Write</b>: IV · Your First Lines.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/legenda.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

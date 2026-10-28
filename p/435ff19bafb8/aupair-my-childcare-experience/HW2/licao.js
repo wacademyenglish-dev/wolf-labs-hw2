@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "My Childcare Experience",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/435ff19bafb8/aupair-my-childcare-experience/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "telling stories with children in the past simple: regular -ed, irregular verbs (took, made, read, sang, built), didn't + base verb, never took / readed / didn't wanted",
   "abrir": "What is a day with a child that you remember?",
   "fecho": "Past simple, one day: <b>-ed</b> (<i>we played</i>) or irregular (<i>took, made, sang, built</i>). No: <b>didn't</b> + plain verb: <i>He didn't want to sleep.</i> Never <i>readed</i> or <i>didn't wanted</i>.",
@@ -94,24 +94,24 @@ window.HW2 = {
           "por": "In the end, he slept."
         }
       ],
-      "img": "https://wolf-labs.pages.dev/p/435ff19bafb8/aupair-my-childcare-experience/img/live-conversa.webp"
+      "img": "../img/live-conversa.webp"
     },
     "out": {
       "sub": "Three lines from a story. Hear it, then say it.",
       "frases": [
         {
           "t": "I took my cousins to the park.",
-          "img": "https://wolf-labs.pages.dev/p/435ff19bafb8/aupair-my-childcare-experience/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We built a tent with chairs and a sheet.",
-          "img": "https://wolf-labs.pages.dev/p/435ff19bafb8/aupair-my-childcare-experience/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I sang a song, and he fell asleep.",
-          "img": "https://wolf-labs.pages.dev/p/435ff19bafb8/aupair-my-childcare-experience/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -158,7 +158,7 @@ window.HW2 = {
       "pede": "Look at the picture: a tent with lights in a playroom. Write 2 or 3 sentences about a day with a child, real or imagined. Use the past simple.",
       "ph": "Last year I … with …",
       "ex": "Last year I took my cousin to the park. We played with a ball, and then we ate ice cream.",
-      "img": "https://wolf-labs.pages.dev/p/435ff19bafb8/aupair-my-childcare-experience/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A tent with lights"
     },
     "you": {

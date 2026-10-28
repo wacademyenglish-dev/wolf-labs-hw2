@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What Is the Test?",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/dd41fbe7d10d/det-what-is-the-test/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "talking about how the test works: present simple facts (it takes, you get), the adaptive rule with if + present, from ... to, take a test; and the first task, real words only",
   "abrir": "Why would you take an English test? Say one reason.",
   "fecho": "<b>Take</b> a test (not <i>make</i>). <b>From</b> 10 <b>to</b> 160. <b>If you answer well</b>, the next question <b>gets</b> harder: no <i>will</i> after <i>if</i>. Real or fake? When you are not sure, leave it.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia explains the test to Leo. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/dd41fbe7d10d/det-what-is-the-test/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A desk, a laptop and a notebook",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -162,7 +162,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/dd41fbe7d10d/det-what-is-the-test/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A desk, a laptop and a notebook",
       "pede": "Look at the picture: a desk with a laptop and a notebook. Write 2 or 3 sentences about how you will take the test: where, when and what you need on the desk. Use <b>I'm going to</b> and <b>it takes</b>.",
       "ph": "I'm going to take the test …",

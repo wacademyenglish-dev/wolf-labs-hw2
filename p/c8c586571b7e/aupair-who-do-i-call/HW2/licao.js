@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Who Do I Call",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c8c586571b7e/aupair-who-do-i-call/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "first conditional for small problems at work: If + present simple, will + verb (never if I will have); when + present for time (when I arrive); to + verb for purpose (never for ask); calling the family or the coordinator",
   "abrir": "A small problem comes up with your schedule. Who do you talk to first?",
   "fecho": "<b>If</b> + present, <b>will</b> + verb: <i>If I lose my key, I will tell the host mom.</i> Never <i>if I will</i>, never <i>when I will arrive</i>. Purpose: <b>to</b> + verb: <i>I called to ask about my schedule.</i> A small problem: the family first, then your coordinator.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia has two small problems. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c8c586571b7e/aupair-who-do-i-call/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A quiet café table for two",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If I have a schedule problem, I will call my coordinator.",
-          "img": "https://wolf-labs.pages.dev/p/c8c586571b7e/aupair-who-do-i-call/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I saved my coordinator's number on my first day.",
-          "img": "https://wolf-labs.pages.dev/p/c8c586571b7e/aupair-who-do-i-call/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Could you help me with my schedule, please?",
-          "img": "https://wolf-labs.pages.dev/p/c8c586571b7e/aupair-who-do-i-call/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c8c586571b7e/aupair-who-do-i-call/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A phone on a bedside table",
       "pede": "Look at the picture: a phone on a bedside table. Write 2 or 3 sentences about a small problem (a key, a class, your schedule) and who you will call. Use <b>if + present, will + verb</b>.",
       "ph": "If I …, I will …",

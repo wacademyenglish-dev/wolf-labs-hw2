@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Tell Me About Yourself",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2946decc8d21/hired-tell-me-about-yourself/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the 60-second pitch: present simple (who I am) · past simple (where I started) · present perfect with since / for (experience) · I'm proud of + -ing; never I work here since, experience in lead, proud of cut",
   "abrir": "If a stranger at a job interview says \"Tell me about yourself\", what do you say first?",
   "fecho": "Start with your <b>profession</b>, not your age: <i>I'm a ..., and I've worked in ... for four years.</i> Past simple for the start: <i>I started at...</i>. Present perfect for experience: <b>since</b> + a point, <b>for</b> + a length. <b>Proud of</b> + -ing.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "A mock interview. Leo asks, Mia answers. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2946decc8d21/hired-tell-me-about-yourself/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An interview room at sunset",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'm a project coordinator with five years of experience.",
-          "img": "https://wolf-labs.pages.dev/p/2946decc8d21/hired-tell-me-about-yourself/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I began as an assistant, where I organized three events a month.",
-          "img": "https://wolf-labs.pages.dev/p/2946decc8d21/hired-tell-me-about-yourself/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Since 2022, I've managed a team of four.",
-          "img": "https://wolf-labs.pages.dev/p/2946decc8d21/hired-tell-me-about-yourself/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2946decc8d21/hired-tell-me-about-yourself/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two cups of coffee before the interview",
       "pede": "Look at the picture: two cups of coffee before an interview. Write 2 or 3 sentences of your own pitch: who you are, one thing you have done, and why this job. No address or phone number.",
       "ph": "I'm a … and I've … for …",

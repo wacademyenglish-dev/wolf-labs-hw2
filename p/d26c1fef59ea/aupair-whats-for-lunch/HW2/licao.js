@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What's for Lunch?",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d26c1fef59ea/aupair-whats-for-lunch/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "some / any with food (some in positive sentences and offers, any in negatives and questions), countable and uncountable (two slices of bread), How much / How many; never there isn't some, never two breads, never how much eggs",
   "abrir": "What do you eat for lunch every day?",
   "fecho": "<b>some</b> = positive and offers: <i>There is some chicken. Would you like some salad?</i> <b>any</b> = negative and questions: <i>There isn't any rice. Is there any pasta?</i> <b>How many</b> + things you count (eggs); <b>How much</b> + things you don't count (milk).",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan the kids' lunch. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/d26c1fef59ea/aupair-whats-for-lunch/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The open fridge",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "There is some chicken in the fridge.",
-          "img": "https://wolf-labs.pages.dev/p/d26c1fef59ea/aupair-whats-for-lunch/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "There isn't any rice today.",
-          "img": "https://wolf-labs.pages.dev/p/d26c1fef59ea/aupair-whats-for-lunch/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "How many tomatoes do we have?",
-          "img": "https://wolf-labs.pages.dev/p/d26c1fef59ea/aupair-whats-for-lunch/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d26c1fef59ea/aupair-whats-for-lunch/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A plate with salad and a sandwich",
       "pede": "Look at the picture: a plate with salad and a sandwich. Write 2 or 3 sentences about a lunch for the kids. What is there, and what isn't there? Use <b>some</b> and <b>any</b>.",
       "ph": "There is some … There isn't any …",

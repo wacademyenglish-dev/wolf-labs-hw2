@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Your Price Is Too High",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/9303fb2ec22d/design-your-price-is-too-high/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "talking about price and scope without apologizing: Here's what's included; With that budget, I could ...; What I can do is ...; third person -s (includes); depends on; can't + short verb",
   "abrir": "Has someone ever said your work or your price was too high? What did you say?",
   "fecho": "When the price is too high, explain the value and change the scope, not the price: <b>Here's what's included…</b> <b>With that budget, I could…</b> <b>What I can do is…</b> No apology needed. Watch the small words: <i>the price includes</i> (with -s), <i>it depends on</i> (not <i>of</i>), <i>I can't lower</i> (no <i>to</i>).",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia, a designer, and Leo, a client, talk about a price. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/9303fb2ec22d/design-your-price-is-too-high/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The meeting room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Here's what's included in that price.",
-          "img": "https://wolf-labs.pages.dev/p/9303fb2ec22d/design-your-price-is-too-high/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "With that budget, I could design the main poster.",
-          "img": "https://wolf-labs.pages.dev/p/9303fb2ec22d/design-your-price-is-too-high/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I keep my rates the same, but I can change the scope.",
-          "img": "https://wolf-labs.pages.dev/p/9303fb2ec22d/design-your-price-is-too-high/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/9303fb2ec22d/design-your-price-is-too-high/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The meeting room",
       "pede": "Look at the picture. A client says your price is too high. Write two or three sentences: say what is included, then offer a smaller option. No apology.",
       "ph": "Here's what's included: …",

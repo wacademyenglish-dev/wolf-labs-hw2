@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Low-Fi First",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/bdece5ab3d4d/design-low-fi-first/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "presenting work in progress: This is still a rough version; Please ignore ... for now; might / will / going to + plain verb (no to after might or will); What we're testing here is ...; asking for specific feedback",
   "abrir": "Do you show unfinished work to other people? Why, or why not?",
   "fecho": "Say that it is rough: <i>This is still a rough version.</i> Say what to ignore: <i>Please ignore the colors <b>for now</b>.</i> Say what may change: <i>The layout <b>might</b> change. We <b>will</b> add the colors later. We are <b>going to</b> test it next week.</i> After <b>might</b> and <b>will</b>, the plain verb, never <i>to</i>. Ask for the right feedback: <i>What we're testing is the order.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia shows Leo a paper sketch of an app. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/bdece5ab3d4d/design-low-fi-first/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A wall of sticky notes",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This is still a rough version of the home screen.",
-          "img": "https://wolf-labs.pages.dev/p/bdece5ab3d4d/design-low-fi-first/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Please ignore the colors for now.",
-          "img": "https://wolf-labs.pages.dev/p/bdece5ab3d4d/design-low-fi-first/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We're going to test it with five students.",
-          "img": "https://wolf-labs.pages.dev/p/bdece5ab3d4d/design-low-fi-first/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/bdece5ab3d4d/design-low-fi-first/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A wall of sticky notes",
       "pede": "Look at the picture: a wall of sticky notes. Imagine you show a rough sketch to a client. Write 2 or 3 sentences: what is still rough, and what might change. Use <b>still</b>, <b>might</b>, <b>for now</b> or <b>going to</b>.",
       "ph": "This is still rough. The … might …",

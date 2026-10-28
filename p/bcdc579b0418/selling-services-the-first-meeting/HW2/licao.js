@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The First Meeting",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/bcdc579b0418/selling-services-the-first-meeting/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "review: be + isn’t, there is / there are, don’t + action, questions; the follow-up e-mail",
   "abrir": "After a first meeting, what do you write in the e-mail?",
   "fecho": "A meeting in four moves: <b>We’re … / We aren’t …</b> · <b>There are …</b> · <b>We don’t …</b> · <b>Is Friday good for you?</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia meets a finance director. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/bcdc579b0418/selling-services-the-first-meeting/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A meeting table at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Thank you for the meeting today.",
-          "img": "https://wolf-labs.pages.dev/p/bcdc579b0418/selling-services-the-first-meeting/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "There are a lot of manual processes, and it isn’t efficient.",
-          "img": "https://wolf-labs.pages.dev/p/bcdc579b0418/selling-services-the-first-meeting/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Is Friday good for a second meeting?",
-          "img": "https://wolf-labs.pages.dev/p/bcdc579b0418/selling-services-the-first-meeting/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -164,7 +164,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/bcdc579b0418/selling-services-the-first-meeting/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A meeting table at night",
       "pede": "Write a short follow-up e-mail (3 or 4 sentences): thank you, one fact about the client, the next step.",
       "ph": "Hi …, Thank you for … There are … Is … good for …?",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Is There a Payroll Team?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2eb0183f1c47/selling-services-is-there-a-payroll-team/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "questions Is there / Are there / Do you / Does it + short answers; never “You use SAP?”, never “Yes, I use”",
   "abrir": "Before a call with a CFO: what is your first question?",
   "fecho": "The helper comes first: <b>Is there…? Are there…? Do you…? Does it…?</b> Short answers repeat it: <i>Yes, we do. No, it isn’t.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks a CFO six short questions. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2eb0183f1c47/selling-services-is-there-a-payroll-team/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A phone call at the office at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Is there a payroll team?",
-          "img": "https://wolf-labs.pages.dev/p/2eb0183f1c47/selling-services-is-there-a-payroll-team/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Are there many manual processes?",
-          "img": "https://wolf-labs.pages.dev/p/2eb0183f1c47/selling-services-is-there-a-payroll-team/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "No, it isn’t. It’s in another office.",
-          "img": "https://wolf-labs.pages.dev/p/2eb0183f1c47/selling-services-is-there-a-payroll-team/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2eb0183f1c47/selling-services-is-there-a-payroll-team/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A phone call at the office at night",
       "pede": "Write 3 questions for a discovery call with a real or invented client.",
       "ph": "Is there …? Do you use …? Are there …?",

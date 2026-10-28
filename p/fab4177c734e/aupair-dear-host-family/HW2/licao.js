@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Dear Host Family",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fab4177c734e/aupair-dear-host-family/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "writing the letter to the host family: and adds, because gives a reason, so gives a result; a comma before so; never because of + subject",
   "abrir": "What is one special thing about you?",
   "fecho": "<b>and</b> adds · <b>because</b> + the reason · <b>so</b> + the result, with a comma: <i>My cousins are small, so I babysit them.</i> After <b>because</b>, a full idea: <i>because I am patient</i>, never <i>because of I am</i>.",
@@ -102,24 +102,24 @@ window.HW2 = {
           "por": "My cousins are little, so I babysit them every weekend."
         }
       ],
-      "img": "https://wolf-labs.pages.dev/p/fab4177c734e/aupair-dear-host-family/img/live-conversa.webp"
+      "img": "../img/live-conversa.webp"
     },
     "out": {
       "sub": "Three lines for your letter. Hear it, then say it.",
       "frases": [
         {
           "t": "I love children, and I love outdoor games.",
-          "img": "https://wolf-labs.pages.dev/p/fab4177c734e/aupair-dear-host-family/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I want to come because I want to learn English.",
-          "img": "https://wolf-labs.pages.dev/p/fab4177c734e/aupair-dear-host-family/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "My cousins are small, so I play with them every weekend.",
-          "img": "https://wolf-labs.pages.dev/p/fab4177c734e/aupair-dear-host-family/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -170,7 +170,7 @@ window.HW2 = {
       "pede": "Look at the picture: a kitchen table with pencils and a cup. Write 2 or 3 lines for your letter. Use <b>and</b>, <b>because</b> or <b>so</b>.",
       "ph": "Dear Host Family, I love …",
       "ex": "Dear Host Family, I love children and I make a great cake. I want to come because I want to learn English.",
-      "img": "https://wolf-labs.pages.dev/p/fab4177c734e/aupair-dear-host-family/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The kitchen table"
     },
     "you": {

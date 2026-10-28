@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Who Do I Call? · Live Class</title>
+<meta name="wolf-kick" content="A2 · Your safety network">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>AU PAIR</b><span>Au Pair · Module 4 · Lesson 15 of 24</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Who Do I Call? · Au Pair · Lesson 15 of 24</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the safety network: the local coordinator (first call for any family problem), the agency, the State Department help line (1-866-283-9090, jvisas@state.gov), 911 for emergencies, the National Human Trafficking Hotline (1-888-373-7888, text 233733) and the Brazilian consulate. Rematch (changing families) is done through the agency. Plus: how to make a clear 911 call.</p><p style="margin:0 0 6px"><b>The story:</b> InterExchange coordinators explain their work (video). Eight situations to match with the right call. A 911 call in order. The student’s contact list.</p><p style="margin:0 0 6px"><b>About 41 min:</b> I · Your Local Coordinator (8) · II · Who Do I Call? (12) · III · A 911 Call (8) · IV · My Contacts (9) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “If something went wrong tonight in the USA, who would you call?” Most students don’t know: that is the lesson.</p></div><!--/prep-->
+    <p>Numbers checked on 15/10/2026: State Department help line on j1visa.state.gov; trafficking hotline on humantraffickinghotline.org (24/7). Check them again before each new group. The consulate number depends on the region: the student finds it on the Itamaraty website. Program rule: the local coordinator contacts the family and the au pair within 48 hours of arrival and meets them in person within two weeks.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>911, what is your emergency? · my coordinator · the agency · 1-866-283-9090 · 1-888-373-7888 · rematch</p>
+    <h4>YOUR LOCAL COORDINATOR</h4>
+    <p>InterExchange, “Au Pair USA Local Coordinators”, only 1:33–3:05 (captions checked on 15/10/2026).</p>
+    <h4>WHO DO I CALL?</h4>
+    <p>Listen or read, then choose one option. The colors show right and wrong, and one line says why. Ask the student WHY before you move on.</p>
+    <h4>A 911 CALL</h4>
+    <p>The events are mixed. The student taps them in order; wrong order shows in red. When it’s right, the student tells the whole story with first, then, after that, finally.</p>
+    <h4>MY CONTACTS</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Homework that matters: the student saves every number in her phone AND writes the house address on paper.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>calling the parents before 911 in a medical emergency</i>, <i>not knowing the address of the house</i>, <i>thinking rematch is running away</i>. B1: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Your Local Coordinator.</li>
+      <li><b>Focus</b>: II · Who Do I Call? and V · I Can.</li>
+      <li><b>Out loud</b>: III · A 911 Call.</li>
+      <li><b>Write</b>: IV · My Contacts.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/legenda.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

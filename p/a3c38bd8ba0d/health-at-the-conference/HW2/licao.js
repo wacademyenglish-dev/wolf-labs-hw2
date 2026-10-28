@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "At the Conference",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a3c38bd8ba0d/health-at-the-conference/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "a short poster pitch (Our aim was to… · We studied… · We found that… · This suggests that… may… · However,… more research is needed) and calm answers to questions (That's a great question. We didn't look at that, but…)",
   "abrir": "Have you ever presented your work to a group?",
   "fecho": "The pitch skeleton: <b>Our aim was to</b> + verb · <b>We studied…</b> · <b>We found that…</b> · <b>This suggests that… may…</b> · <b>However,… more research is needed.</b> Careful words (<i>suggests, may, in our sample</i>) make you more credible. No answer? <b>That's a great question. We didn't look at that, but…</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia presents a poster about hand hygiene. Leo stops to ask questions. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a3c38bd8ba0d/health-at-the-conference/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The conference hall before the talks",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -106,7 +106,7 @@ window.HW2 = {
         {
           "t": "Our aim was to improve hand hygiene on two hospital wards.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/a3c38bd8ba0d/health-at-the-conference/img/live-capa.webp"
+          "img": "../img/live-capa.webp"
         },
         {
           "t": "This suggests that simple reminders may help.",
@@ -115,7 +115,7 @@ window.HW2 = {
         {
           "t": "That's a great question. We didn't look at that in this study.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/a3c38bd8ba0d/health-at-the-conference/img/live-capa.webp"
+          "img": "../img/live-capa.webp"
         }
       ]
     },
@@ -161,7 +161,7 @@ window.HW2 = {
       "pede": "Look at the picture: an empty stage, just before the talks. Imagine your own small study (real or invented). Write 3 sentences: your aim (<b>Our aim was to</b>), your finding, carefully (<b>This suggests that… may…</b>), and one limitation (<b>However,…</b>).",
       "ph": "Our aim was to …",
       "ex": "Our aim was to reduce waiting times at our clinic. We found that a new check-in system cut waiting by ten minutes. This suggests that it may help, but it was only one clinic.",
-      "img": "https://wolf-labs.pages.dev/p/a3c38bd8ba0d/health-at-the-conference/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty stage with a podium"
     },
     "you": {

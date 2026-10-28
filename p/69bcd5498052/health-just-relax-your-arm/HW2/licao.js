@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Just Relax Your Arm",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/69bcd5498052/health-just-relax-your-arm/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "gentle instructions during an exam: Could you + verb + for me? · I'm just going to + verb · You may feel a little... / This might feel cold · Let me know if..., and I'll stop · Try to keep still (say what TO do); plain verb after could, never to; present after if",
   "abrir": "Think of a check-up. What does the nurse or doctor ask you to do?",
   "fecho": "An order becomes a request with <b>Could you…</b> + <b>for me</b>: <i>Could you open wide for me?</i> Before you touch, say <b>I'm just going to…</b> and warn: <b>You may feel a little…</b> Give control: <b>Let me know if</b> it feels uncomfortable, <b>and I'll stop.</b> Instead of <i>Don't move</i>, say <b>Try to keep still.</b>",
@@ -109,7 +109,7 @@ window.HW2 = {
       "frases": [
         {
           "t": "Could you open wide for me?",
-          "img": "https://wolf-labs.pages.dev/p/69bcd5498052/health-just-relax-your-arm/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/69bcd5498052/health-just-relax-your-arm/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A quiet treatment room",
       "pede": "Look at the picture: a quiet treatment room with a chair. Write 3 gentle sentences for a patient: one request (<b>Could you… for me?</b>), one warning (<b>You may feel…</b> or <b>This might…</b>) and one sentence that gives control (<b>Let me know if…</b>).",
       "ph": "Could you … for me?",

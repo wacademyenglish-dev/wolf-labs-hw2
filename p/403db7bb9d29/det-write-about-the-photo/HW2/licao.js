@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Write About the Photo",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/403db7bb9d29/det-write-about-the-photo/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "one rich sentence about a photo: place + details + adjectives + with / which / where; there is / there are; very + adjective",
   "abrir": "What can you see around you right now?",
   "fecho": "A rich sentence = <b>place + details + adjectives + with / which / where</b>: <i>There is a small tent by a calm lake, with a fire next to it.</i> <b>There is</b> + one thing, <b>there are</b> + two or more. Never <i>In this photo have</i>, never <i>a fire what is burning</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo describes a photo to Mia. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/403db7bb9d29/det-write-about-the-photo/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty gallery with warm lights",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "There is a white card on a dark desk, with a warm lamp above it.",
-          "img": "https://wolf-labs.pages.dev/p/403db7bb9d29/det-write-about-the-photo/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "This is an empty gallery, where warm lights shine on the walls.",
-          "img": "https://wolf-labs.pages.dev/p/403db7bb9d29/det-write-about-the-photo/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "There are four small pictures on the wall, which makes the room look very quiet.",
-          "img": "https://wolf-labs.pages.dev/p/403db7bb9d29/det-write-about-the-photo/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/403db7bb9d29/det-write-about-the-photo/img/live-foto-acampamento.webp",
+      "img": "../img/live-foto-acampamento.webp",
       "leg": "A tent by a lake at dusk",
       "pede": "Look at the picture. Write 2 sentences about it in one minute. Use two adjectives and <b>with</b>, <b>which</b> or <b>where</b>.",
       "ph": "There is a ... tent by a ... lake, with ...",

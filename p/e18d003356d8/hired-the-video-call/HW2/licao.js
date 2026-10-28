@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Video Call",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e18d003356d8/hired-the-video-call/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "fixing problems on a video interview in calm, natural English: You're on mute / You're breaking up / I lost you; Sorry about that. Can you hear me now? Let me ...; on mute, hear you well, share with, Could you repeat (no to)",
   "abrir": "What can go wrong in an online interview, and what would you say?",
   "fecho": "A technical problem is not a disaster: <b>name it, fix it, apologize once, continue</b>. <i>Sorry about that. Can you hear me now?</i> <i>Let me move closer to the router.</i> It is <b>on mute</b>, you <b>hear someone well</b>, you <b>share</b> your screen <b>with</b> someone.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo do a test call before her interview. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e18d003356d8/hired-the-video-call/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A small desk with a lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Sorry about that, can you hear me now?",
-          "img": "https://wolf-labs.pages.dev/p/e18d003356d8/hired-the-video-call/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Let me move closer to the router.",
-          "img": "https://wolf-labs.pages.dev/p/e18d003356d8/hired-the-video-call/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Excuse me for one second, I will mute myself.",
-          "img": "https://wolf-labs.pages.dev/p/e18d003356d8/hired-the-video-call/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e18d003356d8/hired-the-video-call/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A laptop and headphones on a desk",
       "pede": "Look at the picture: a laptop and headphones on a desk, ready for a call. Write 2 or 3 sentences: how you prepare your space, and what you say if the sound fails. Use <b>Sorry about that</b> or <b>Let me ...</b>.",
       "ph": "I sit in front of ... Sorry about that, ...",

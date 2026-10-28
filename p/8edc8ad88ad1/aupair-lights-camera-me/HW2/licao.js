@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Lights, Camera, Me!",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/8edc8ad88ad1/aupair-lights-camera-me/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the application video: present perfect for experience (I have babysat, Have you ever ...?) versus past simple with a time (I traveled in 2023); have + participle, never have + base verb",
   "abrir": "What do you want a family to see in your video?",
   "fecho": "Life experience, no time: <b>have + participle</b> (<i>I have babysat.</i>). With a time (last year, in 2023): <b>past simple</b> (<i>I traveled in 2023.</i>). Question: <b>Have you ever ...?</b> Irregular: teach, taught.",
@@ -104,17 +104,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I have babysat my cousins many times.",
-          "img": "https://wolf-labs.pages.dev/p/8edc8ad88ad1/aupair-lights-camera-me/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I traveled to Chile in 2023.",
-          "img": "https://wolf-labs.pages.dev/p/8edc8ad88ad1/aupair-lights-camera-me/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Have you ever worked with children?",
-          "img": "https://wolf-labs.pages.dev/p/8edc8ad88ad1/aupair-lights-camera-me/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
       "pede": "Look at the picture: a phone on a tripod. Write 2 or 3 sentences for your video: one experience with <b>have + participle</b> and one moment with a time, in the past simple.",
       "ph": "I have … I … last year.",
       "ex": "I have worked with children. I babysat my neighbor's daughter last summer.",
-      "img": "https://wolf-labs.pages.dev/p/8edc8ad88ad1/aupair-lights-camera-me/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A phone on a tripod, ready to record"
     },
     "you": {

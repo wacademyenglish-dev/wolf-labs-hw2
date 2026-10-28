@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Listen and Type · Live Class</title>
+<meta name="wolf-kick" content="B1 · Type what is written, not what you hear">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>DET PREP</b><span>Duolingo English Test Prep · Lesson 6 of 16</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Listen and Type · DET Prep · Lesson 6 of 16</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Listen and Type question: the student hears one sentence (up to three times) and types it exactly. Fast speech hides things: linked words (wanna), weak small words (of sounds like “a”), quiet endings (-ed, -s) and words with the same sound (they’re / their).</p><p style="margin:0 0 6px"><b>The story:</b> No story: eight sentences from everyday life, in five accents (American, British, Australian, Indian, Irish, Canadian), recorded with neural voices.</p><p style="margin:0 0 6px"><b>About 37 min:</b> I · Where Words Hide (9) · II · Eight Sentences (16) · III · Memory (8) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> Say fast: “I wanna go.” Ask: “How do you write it?” The answer is the lesson.</p></div><!--/prep-->
+    <p>The audio plays up to three times, like the test. Teach the three listens: meaning, details, check. Punctuation does not count in our check; spelling does.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>want to / going to (not wanna / gonna) · weak small words: of, a, to · quiet -ed and -s · they’re / their / there · to / too · your / you’re · three listens: meaning, details, check</p>
+    <h4>WHERE WORDS HIDE</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>EIGHT SENTENCES</h4>
+    <p>Listen and Type: the audio plays up to 3 times, like the test. The student types, then <b>Check</b> compares word by word: green is right, red is missing or misspelled. Read the tip out loud.</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. If the student misses small words, play the sentence again and ask them to count the words first.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>wanna</i>, <i>a cup a tea</i>, <i>yesterday I walk</i>, <i>their late</i>, <i>your late</i>. B1+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Where Words Hide and II · Eight Sentences and III · Memory.</li>
+      <li><b>Focus</b>: IV · I Can.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

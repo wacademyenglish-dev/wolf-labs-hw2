@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "Tricky Questions",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/39997a422cb6/aupair-tricky-questions/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "second conditional: What would you do if + past? If + past, I would + plain verb; never if + would, would + past, will for an imaginary situation",
   "abrir": "What is the hardest question you could get in an interview?",
   "fecho": "<b>What would you do if + past?</b> Answer with <b>If + past, I would + plain verb</b>: <i>If the baby cried, I would check his diaper.</i> Never <i>if + would</i> and never <i>would + past</i>.",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo practice the interview in the kitchen. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/39997a422cb6/aupair-tricky-questions/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A lunch box and apples on the kitchen table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -104,17 +104,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "What would you do if the baby cried?",
-          "img": "https://wolf-labs.pages.dev/p/39997a422cb6/aupair-tricky-questions/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I would stay calm and call the parents.",
-          "img": "https://wolf-labs.pages.dev/p/39997a422cb6/aupair-tricky-questions/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If I were you, I would ask the family first.",
-          "img": "https://wolf-labs.pages.dev/p/39997a422cb6/aupair-tricky-questions/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -160,7 +160,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/39997a422cb6/aupair-tricky-questions/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A question mark over an open book",
       "pede": "Look at the picture: a question mark over an open book. Write 2 or 3 sentences: one tricky question a host mom could ask, and how you would answer it. Use <b>If + past, I would + verb</b>.",
       "ph": "What would you do if …?",

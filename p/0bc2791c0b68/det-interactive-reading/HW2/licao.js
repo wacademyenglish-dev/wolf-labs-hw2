@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Interactive Reading",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0bc2791c0b68/det-interactive-reading/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "reading signposts (however, as a result, in other words, no longer, on the other hand) to complete a text, choose the missing sentence and the title",
   "abrir": "Think of a place near you that changed. What is different now?",
   "fecho": "Signposts tell you what comes next: <b>however</b> = contrast, <b>as a result</b> = consequence, <b>in other words</b> = the same idea again, <b>no longer</b> = a change. Use them to find the missing sentence, and choose a title that covers the whole text.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo practice a reading task. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/0bc2791c0b68/det-interactive-reading/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A reading nook at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Nobody wanted to walk there. However, the path is full of people now.",
-          "img": "https://wolf-labs.pages.dev/p/0bc2791c0b68/det-interactive-reading/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The river is clean again. As a result, fish came back to the town.",
-          "img": "https://wolf-labs.pages.dev/p/0bc2791c0b68/det-interactive-reading/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "In other words, the river became the heart of the town.",
-          "img": "https://wolf-labs.pages.dev/p/0bc2791c0b68/det-interactive-reading/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0bc2791c0b68/det-interactive-reading/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A reading nook",
       "pede": "Look at the picture: a quiet reading nook. Write 2 or 3 sentences about a place that changed (a street, a shop, a park). Use <b>however</b>, <b>as a result</b> or <b>in other words</b>.",
       "ph": "My street used to be quiet. However, …",

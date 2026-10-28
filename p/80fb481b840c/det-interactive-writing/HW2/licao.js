@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Interactive Writing",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/80fb481b840c/det-interactive-writing/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "a clear paragraph with varied connectors: topic sentence, Before / Now, Moreover, However, For instance, Overall; On the other hand (never In the other hand), Besides that (never Besides of that)",
   "abrir": "Which app or device helps you most in your week?",
   "fecho": "A paragraph has three parts: <b>topic sentence</b> -> <b>support</b> (<i>Moreover, For instance, However</i>) -> <b>wrap-up</b> (<i>Overall,</i>). <b>On the other hand</b>, never <i>in the other hand</i>. <b>Besides that</b>, never <i>besides of that</i>. One connector at a time: never <i>However, but</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a paragraph. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/80fb481b840c/det-interactive-writing/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A dark cabin with a window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Before, I took a bus to the bank, but now I use an app.",
-          "img": "https://wolf-labs.pages.dev/p/80fb481b840c/det-interactive-writing/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Moreover, my phone reminds me of every appointment.",
-          "img": "https://wolf-labs.pages.dev/p/80fb481b840c/det-interactive-writing/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Overall, small tools like these save me a lot of time.",
-          "img": "https://wolf-labs.pages.dev/p/80fb481b840c/det-interactive-writing/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/80fb481b840c/det-interactive-writing/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A typewriter with a blank page",
       "pede": "Look at the picture: a typewriter with a blank page. Write a short paragraph (3 or 4 sentences) about an app or device that helps you. Use a topic sentence, <b>Moreover</b> or <b>For instance</b>, and <b>Overall</b>.",
       "ph": "A good example of ... is my ...",

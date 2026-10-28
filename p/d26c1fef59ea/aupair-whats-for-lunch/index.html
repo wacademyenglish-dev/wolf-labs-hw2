@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · What’s for Lunch? · Live Class</title>
+<meta name="wolf-kick" content="A2 · Food, labels and allergies">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>AU PAIR</b><span>Au Pair · Module 5 · Lesson 19 of 24</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>What’s for Lunch? · Au Pair · Lesson 19 of 24</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> food in the house: some / any, countable and uncountable, how much / how many; reading allergy labels (contains, may contain, made in a factory that also processes…); helping a picky eater; talking about food with the family.</p><p style="margin:0 0 6px"><b>The story:</b> The Parkers again: Leo is allergic to peanuts and Emma can’t have milk. Five fictional product labels. A picky eater. A food conversation.</p><p style="margin:0 0 6px"><b>About 41 min:</b> I · Some or Any? (9) · II · Read the Label (12) · III · The Picky Eater (8) · IV · Food Talk (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “What would you cook for an American family on your first weekend?”</p></div><!--/prep-->
+    <p>Allergies are serious: the rule taught is “if you are not sure, don’t give it, and ask the parents”. Families with severe allergies usually have an emergency plan (and sometimes medication like an auto-injector): the student must ask about it on day one. All product names here are fictional.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>some / any · How much? / How many? · Contains: · May contain traces of… · a slice of bread · Would you like some…?</p>
+    <h4>SOME OR ANY?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>READ THE LABEL</h4>
+    <p>Listen or read, then choose one option. The colors show right and wrong, and one line says why. Ask the student WHY before you move on.</p>
+    <h4>THE PICKY EATER</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>FOOD TALK</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to prepare three snack ideas in English for kids with no peanuts and no milk.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>There isn’t some</i>, <i>two breads</i>, <i>How much eggs?</i>, <i>Would you like any…? (offer)</i>. A2+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Some or Any? and II · Read the Label and V · I Can.</li>
+      <li><b>Out loud</b>: III · The Picky Eater and IV · Food Talk.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

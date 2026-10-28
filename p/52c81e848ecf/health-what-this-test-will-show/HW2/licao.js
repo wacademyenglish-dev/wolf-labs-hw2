@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What This Test Will Show",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/52c81e848ecf/health-what-this-test-will-show/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "explaining a routine test: agenda (I'm going to explain..., and then you can ask me anything) · This test will show... · steps in order (First, Then, After that, Finally) · will / won't for what the patient will feel and when results come (on Friday) · checking: Does that make sense so far?",
   "abrir": "Think of a routine test you know well. What does it show?",
   "fecho": "Start with an agenda: <b>I'm going to explain the test, and then you can ask me anything.</b> Say what it <b>will show</b>. Give the steps in order: <b>First, Then, After that, Finally</b>. Use <b>will / won't</b>: <i>You won't feel anything.</i> Days take <b>on</b>: <i>ready on Friday</i>. Check: <b>Does that make sense so far?</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia, a nurse, explains a routine blood test to Leo at his yearly check-up. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/52c81e848ecf/health-what-this-test-will-show/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The lab, early in the morning",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -122,7 +122,7 @@ window.HW2 = {
         },
         {
           "t": "This test will show your vitamin D level.",
-          "img": "https://wolf-labs.pages.dev/p/52c81e848ecf/health-what-this-test-will-show/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/52c81e848ecf/health-what-this-test-will-show/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Test tubes in a quiet lab",
       "pede": "Look at the picture: test tubes in a quiet lab. Explain a routine test to a patient in 3 sentences: what it <b>will show</b>, the steps (<b>first, then</b>), and when the results <b>will be ready</b>.",
       "ph": "This test will show …",

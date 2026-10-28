@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Salary Talk",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/8c4322fe7a3a/hired-salary-talk/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "salary talk after an offer: thank first, ask one clarifying question, then make the ask (Based on ..., I'm targeting ...); a conditional to move things forward (If we could ..., I'd ...); Based ON, a month, would after if + past",
   "abrir": "Someone offers you less money than you hoped. What do you say first?",
   "fecho": "The order of a good salary talk: <b>thank</b> (<i>Thank you so much, I'm excited</i>), <b>ask</b> one question (<i>Could you tell me how the bonus works?</i>), then <b>make the ask</b>: <i>Based on my experience, I'm targeting nine thousand a month.</i> It is <b>based on</b>, never <i>based in</i>. To move things forward: <b>If we could ..., I'd ...</b> (<i>would</i>, not <i>will</i>).",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about her offer call. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/8c4322fe7a3a/hired-salary-talk/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two cups on a dark table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Thank you so much, I'm really excited about the role.",
-          "img": "https://wolf-labs.pages.dev/p/8c4322fe7a3a/hired-salary-talk/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Could you tell me how the annual bonus works?",
-          "img": "https://wolf-labs.pages.dev/p/8c4322fe7a3a/hired-salary-talk/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Based on the market, I'm targeting nine thousand a month.",
-          "img": "https://wolf-labs.pages.dev/p/8c4322fe7a3a/hired-salary-talk/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -179,7 +179,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/8c4322fe7a3a/hired-salary-talk/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two cups on a dark table",
       "pede": "Look at the picture: two cups on a table, the start of a serious talk. You get a job offer, and you hope for more. Write 2 or 3 sentences: <b>thank</b> them, <b>ask</b> one question, then <b>make the ask</b> with <b>Based on ...</b>.",
       "ph": "Thank you so much for the offer. Could you tell me ...?",

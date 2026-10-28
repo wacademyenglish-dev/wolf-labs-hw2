@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "On a Scale of One to Ten",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/1a09f1ace354/health-on-a-scale-of-one-to-ten/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "rating everyday pain: On a scale of zero to ten, how bad is it? / What number would you give it?; anchors mild (1-3), moderate (4-6), severe (7-10); pain words sharp, dull, throbbing, burning, comes and goes; a headache (not a pain of head); severe pain (not very strong pain); on a scale (not in a scale); ask again after treatment",
   "abrir": "How do you explain the number ten to a patient?",
   "fecho": "Ask: <b>On a scale of zero to ten, how bad is it?</b> (on a scale, not <i>in a scale</i>). Give anchors: <b>mild</b> 1–3, <b>moderate</b> 4–6, <b>severe</b> 7–10. Listen for the words: <b>sharp</b>, <b>dull</b>, <b>throbbing</b>, <b>burning</b>, <b>comes and goes</b>. Say <i>a headache</i>, <i>severe pain</i>. And ask again after treatment.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia, a physiotherapist, sees Leo for a sore back after a weekend in the garden. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/1a09f1ace354/health-on-a-scale-of-one-to-ten/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A heat pack on the treatment table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -126,7 +126,7 @@ window.HW2 = {
         {
           "t": "Zero is no pain at all, and ten is the worst pain you can imagine.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/1a09f1ace354/health-on-a-scale-of-one-to-ten/img/live-capa.webp"
+          "img": "../img/live-capa.webp"
         },
         {
           "t": "It's a dull ache, and it comes and goes.",
@@ -182,7 +182,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/1a09f1ace354/health-on-a-scale-of-one-to-ten/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A heat pack and a cold pack, ready",
       "pede": "Look at the picture: a heat pack and a cold pack on a table. A patient has a sore shoulder after a long day at the computer. Write 2 or 3 sentences to the patient: ask for a number, give the anchors, and say you will ask again after the treatment.",
       "ph": "On a scale of zero to ten, …",

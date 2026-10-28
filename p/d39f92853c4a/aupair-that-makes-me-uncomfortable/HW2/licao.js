@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "That Makes Me Uncomfortable",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d39f92853c4a/aupair-that-makes-me-uncomfortable/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "saying no kindly and firmly: I understand, but ... · I'm not comfortable with + noun / -ing · Could we + plain verb? · I'd rather + plain verb · I need to check with ... first; never comfortable to, Could we to, I need check",
   "abrir": "When was the last time you said no politely? What did you say?",
   "fecho": "Kind and firm has three steps: <b>I understand, but…</b> (acknowledge) · <b>I'm not comfortable with</b> + noun or -ing (say no) · <b>Could we</b> + plain verb? (offer a next step). Never <i>comfortable to</i>, never <i>Could we to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia, an au pair, talks with her host dad Leo. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/d39f92853c4a/aupair-that-makes-me-uncomfortable/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A quiet evening, a city outside the window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I understand, but I'm not comfortable with that.",
-          "img": "https://wolf-labs.pages.dev/p/d39f92853c4a/aupair-that-makes-me-uncomfortable/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Could we write the schedule down, please?",
-          "img": "https://wolf-labs.pages.dev/p/d39f92853c4a/aupair-that-makes-me-uncomfortable/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I need to check with my coordinator first.",
-          "img": "https://wolf-labs.pages.dev/p/d39f92853c4a/aupair-that-makes-me-uncomfortable/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d39f92853c4a/aupair-that-makes-me-uncomfortable/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A closed door at night",
       "pede": "Look at the picture: a closed door at night. Write 2 or 3 sentences: say no, kindly and firmly, to a request about your workload, schedule, privacy or a house rule. Use <b>I understand, but…</b>, <b>I'm not comfortable with…</b> or <b>Could we…?</b>",
       "ph": "I understand, but I'm not comfortable with …",

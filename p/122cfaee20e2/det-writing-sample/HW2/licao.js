@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Writing Sample",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/122cfaee20e2/det-writing-sample/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "formal register for a three-part text (goal, plan, last sentence): no gonna / u / stuff; going to; do a degree (not make); In addition to that; want to + verb",
   "abrir": "What is one goal you have for the next five years?",
   "fecho": "Write like a future student: <b>going to</b> (not <i>gonna</i>), <b>you</b> (not <i>u</i>), a precise word (not <i>stuff</i>). Three parts: <b>goal + reason</b> -> <b>plan</b> (<i>In addition to that, ...</i>) -> <b>last sentence</b>. <b>Do</b> a master's degree, never <i>make</i>. <b>I want to study</b>, never <i>I want study</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia reads Leo's draft. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/122cfaee20e2/det-writing-sample/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A quiet classroom at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "In the next five years, I am going to finish my degree in design.",
-          "img": "https://wolf-labs.pages.dev/p/122cfaee20e2/det-writing-sample/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "To achieve this goal, I plan to save money and study every morning.",
-          "img": "https://wolf-labs.pages.dev/p/122cfaee20e2/det-writing-sample/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "That is why I hope to join this program next year.",
-          "img": "https://wolf-labs.pages.dev/p/122cfaee20e2/det-writing-sample/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/122cfaee20e2/det-writing-sample/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A sealed envelope on a dark desk",
       "pede": "Look at the picture: a sealed envelope. Write 3 formal sentences about a goal for the next five years: the <b>goal</b>, one <b>step</b>, and a <b>last sentence</b>. No gonna, no u.",
       "ph": "In the next five years, I am going to ...",

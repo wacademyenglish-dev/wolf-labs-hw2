@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Last Year We Saved 20%",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f150476c2a66/selling-services-last-year-we-saved/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "past simple: was / were, -ed, had / made / sent / began, didn’t + simple verb; never “we didn’t saved”",
   "abrir": "A client asks: “Do you have a client like us?” What story do you tell?",
   "fecho": "In the past the verb changes: <b>saved, connected, had, made, sent, began</b>. Negative: <b>didn’t + simple verb</b>. Be: <b>wasn’t / weren’t</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells a client a success story. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f150476c2a66/selling-services-last-year-we-saved/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A report on a laptop at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Last year we saved 20% for a client.",
-          "img": "https://wolf-labs.pages.dev/p/f150476c2a66/selling-services-last-year-we-saved/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We began in March and connected SAP with payroll.",
-          "img": "https://wolf-labs.pages.dev/p/f150476c2a66/selling-services-last-year-we-saved/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "They didn’t need a new ERP.",
-          "img": "https://wolf-labs.pages.dev/p/f150476c2a66/selling-services-last-year-we-saved/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f150476c2a66/selling-services-last-year-we-saved/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A report on a laptop at night",
       "pede": "Write a mini case in 3 sentences: the problem, what you did, the result with a number.",
       "ph": "Last year, … was … We … They saved …",

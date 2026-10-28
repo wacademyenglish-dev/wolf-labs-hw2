@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Read, Then Speak · Live Class</title>
+<meta name="wolf-kick" content="B1 · Answer, reason, example, wrap-up">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>DET PREP</b><span>Duolingo English Test Prep · Lesson 9 of 16</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Read, Then Speak · DET Prep · Lesson 9 of 16</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Read, Then Speak question: a written topic with guide questions, about 20 seconds to prepare, then 30 to 90 seconds of speaking. The student learns a shape for any topic: answer → reason → example → wrap-up.</p><p style="margin:0 0 6px"><b>The story:</b> No story: a model answer in pieces, six quick topics with the die, then three real topics with the clock.</p><p style="margin:0 0 6px"><b>About 35 min:</b> I · The Story in Order (7) · II · The Die (8) · III · Three Topics (16) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “What is your favorite season?” Let the student answer freely; then show how the four pieces make the same answer stronger.</p></div><!--/prep-->
+    <p>The most common problem is a slow start (“Well… so… this topic is about…”). Train a first sentence that answers the question directly. The guide questions on the card are the map: one sentence or two for each.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>answer in the first sentence · The main reason is… · For example,… · That’s why… · On the other hand,… · would + verb for wishes</p>
+    <h4>THE STORY IN ORDER</h4>
+    <p>The events are mixed. The student taps them in order; wrong order shows in red. When it’s right, the student tells the whole story with first, then, after that, finally.</p>
+    <h4>THE DIE</h4>
+    <p>Tap <b>Roll the die</b>: the number chooses one of the six topics (no repeats until all six are done). The student does the challenge from memory.</p>
+    <h4>THREE TOPICS</h4>
+    <p>The task with the real clock of the test. Read the task together, tap <b>Start</b>: the prep time runs, then the answer time starts by itself. Do not help while the clock runs. When it stops, go through the checklist together (tap what was there), then <b>Show answer</b> for the model. <b>Try again</b> is a good idea: the second try is always better.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Record the student (with permission) in Topic 1 and Topic 3: the difference in shape is easy to hear.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>starting with “this topic is about”</i>, <i>no example</i>, <i>stopping at 30 seconds</i>, <i>I would like learn</i>, <i>the reason is because</i>. B1+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · The Story in Order and III · Three Topics.</li>
+      <li><b>Focus</b>: II · The Die and IV · I Can.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

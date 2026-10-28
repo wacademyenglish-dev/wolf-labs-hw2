@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "There Are a Lot of Manual Processes",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0d8da0502514/selling-services-manual-processes/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "there is / there are + a / some / many / a lot of; never “there is three”, never “have” for “tem”",
   "abrir": "Think of a client. How many employees are there?",
   "fecho": "One thing: <b>there is</b>. Two or more: <b>there are</b>. “Tem” is <b>there is / there are</b>, not “have”.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo about a new client. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/0d8da0502514/selling-services-manual-processes/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A spreadsheet on a laptop at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "There are two ERPs in the company.",
-          "img": "https://wolf-labs.pages.dev/p/0d8da0502514/selling-services-manual-processes/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "There are a lot of manual processes.",
-          "img": "https://wolf-labs.pages.dev/p/0d8da0502514/selling-services-manual-processes/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "There isn’t a payroll system.",
-          "img": "https://wolf-labs.pages.dev/p/0d8da0502514/selling-services-manual-processes/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0d8da0502514/selling-services-manual-processes/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A spreadsheet on a laptop at night",
       "pede": "Write 2 or 3 sentences about a client company: employees, systems, one problem. No secret numbers.",
       "ph": "There are … There is … There isn’t …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Red Flags",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3db8790eb304/aupair-red-flags/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "advice with should / shouldn't + plain verb (never should to); if + present simple for a general situation (If a family asks for money, say no); I agree (never I am agree); calm steps for warning signs",
   "abrir": "What is a warning sign that something is not right?",
   "fecho": "<b>Should</b> / <b>shouldn't</b> + plain verb: <i>You should talk to your agency.</i> <b>If</b> + present, an instruction: <i>If a family asks for money, say no.</i> He, she, it: <b>asks</b>. <i>I agree</i>, never <i>I am agree</i>. A red flag is a reason to talk to someone, not to panic.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks Leo about a strange message. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/3db8790eb304/aupair-red-flags/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A small red flag on a desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Real families work with the agency.",
-          "img": "https://wolf-labs.pages.dev/p/3db8790eb304/aupair-red-flags/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "You should never send money to a family.",
-          "img": "https://wolf-labs.pages.dev/p/3db8790eb304/aupair-red-flags/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "A red flag is a reason to ask for help.",
-          "img": "https://wolf-labs.pages.dev/p/3db8790eb304/aupair-red-flags/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3db8790eb304/aupair-red-flags/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A small red flag on a desk",
       "pede": "Look at the picture: a small red flag. Write 2 or 3 sentences of advice for a new au pair about warning signs. Use <b>should</b>, <b>shouldn't</b> or <b>if</b>.",
       "ph": "You should …",

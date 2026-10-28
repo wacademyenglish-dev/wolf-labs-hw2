@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Listen and Type",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/9feda3bf7033/det-listen-and-type/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Listen and Type: type the written form of fast speech (want to, going to), hear weak small words (of, a, to), use grammar for quiet -ed / -s, and choose between same-sound words (their / there / they're)",
   "abrir": "What do you do when you cannot understand a word in English?",
   "fecho": "Type the <b>written form</b>, not the sound: <b>wanna → want to</b>. Small words are weak but there: <b>a cup of tea</b>. Endings are quiet: <b>yesterday</b> tells you <b>walked</b>. Same sound, different word: <b>their car, over there, they're late</b>. Listen three times: meaning, details, check.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo practice dictation. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/9feda3bf7033/det-listen-and-type/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A desk with headphones",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I want to practice a little every day.",
-          "img": "https://wolf-labs.pages.dev/p/9feda3bf7033/det-listen-and-type/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She walked to the station with a cup of tea.",
-          "img": "https://wolf-labs.pages.dev/p/9feda3bf7033/det-listen-and-type/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "They're sure their keys are over there.",
-          "img": "https://wolf-labs.pages.dev/p/9feda3bf7033/det-listen-and-type/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/9feda3bf7033/det-listen-and-type/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A recording booth",
       "pede": "Look at the picture: a recording booth. Write 2 or 3 sentences about yesterday. Use a past verb with <b>-ed</b> and the small word <b>of</b>.",
       "ph": "Yesterday I walked to …",

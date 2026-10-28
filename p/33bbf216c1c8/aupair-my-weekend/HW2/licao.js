@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "My Weekend",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/33bbf216c1c8/aupair-my-weekend/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "telling the weekend in the past simple (went, ate, took, visited, walked) · next weekend with going to / will; never I go ... last Saturday, never eated / goed, never going to + past",
   "abrir": "What did you do last weekend?",
   "fecho": "<b>Last weekend</b> = past: <i>I went, we ate, I took</i> (some verbs change: go-went, eat-ate) and <i>-ed</i> for the others (visited, walked). <b>Next weekend</b> = <i>I'm going to</i> + plain verb: <i>I'm going to rest.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo about her weekend. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/33bbf216c1c8/aupair-my-weekend/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A city skyline at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "On Saturday, I took the train downtown.",
-          "img": "https://wolf-labs.pages.dev/p/33bbf216c1c8/aupair-my-weekend/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We visited a museum and ate pizza.",
-          "img": "https://wolf-labs.pages.dev/p/33bbf216c1c8/aupair-my-weekend/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Next weekend, I'm going to rest.",
-          "img": "https://wolf-labs.pages.dev/p/33bbf216c1c8/aupair-my-weekend/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/33bbf216c1c8/aupair-my-weekend/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A diner at night, two milkshakes",
       "pede": "Look at the picture: a diner at night with two milkshakes. Write 2 or 3 sentences: what you did last weekend (past) and what you are going to do next weekend.",
       "ph": "Last weekend I … Next weekend I'm going to …",

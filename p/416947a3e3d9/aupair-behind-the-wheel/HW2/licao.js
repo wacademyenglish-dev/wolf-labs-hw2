@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Behind the Wheel",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/416947a3e3d9/aupair-behind-the-wheel/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "should / shouldn't for advice on safe driving; should + plain verb, no to, no -s; Should I ...? never Do I should, never should don't",
   "abrir": "What is one thing a good driver always does?",
   "fecho": "<b>should</b> = good advice: <i>You should check the mirrors.</i> <b>shouldn't</b> = bad idea: <i>You shouldn't touch your phone.</i> After should, the plain verb. The question: <i>Should I set the GPS?</i> Never <i>should don't</i>, never <i>Do I should</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo and Mia practice before the school run. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/416947a3e3d9/aupair-behind-the-wheel/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The view through the windshield at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "You should check the mirrors first.",
-          "img": "https://wolf-labs.pages.dev/p/416947a3e3d9/aupair-behind-the-wheel/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "You shouldn't touch your phone while you drive.",
-          "img": "https://wolf-labs.pages.dev/p/416947a3e3d9/aupair-behind-the-wheel/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "You should stop completely at a stop sign.",
-          "img": "https://wolf-labs.pages.dev/p/416947a3e3d9/aupair-behind-the-wheel/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/416947a3e3d9/aupair-behind-the-wheel/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The view through the windshield at night",
       "pede": "Look at the picture: the view through a car windshield at night. Give 2 or 3 pieces of advice to a new driver. Use <b>should</b> or <b>shouldn't</b>.",
       "ph": "You should … You shouldn't …",

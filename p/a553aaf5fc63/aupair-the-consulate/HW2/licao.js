@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Consulate",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a553aaf5fc63/aupair-the-consulate/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "short, true answers for the visa interview: I am going as an au pair; I will + plain verb (I will live, I will take care); Yes, I have / No, I haven't; I am 22 (never I have 22 years)",
   "abrir": "Imagine the officer says good morning. What do you say?",
   "fecho": "<b>Short and true.</b> <i>I am going as an au pair.</i> After <b>will</b>, the plain verb: <i>I will live with a family.</i> Age: <i>I am 22</i>, never <i>I have 22 years</i>. If your real plan is different, talk to your agency first.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia practices the interview with Leo. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/a553aaf5fc63/aupair-the-consulate/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A waiting room at sunset",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I am going to the United States as an au pair.",
-          "img": "https://wolf-labs.pages.dev/p/a553aaf5fc63/aupair-the-consulate/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I will live with a host family in Illinois.",
-          "img": "https://wolf-labs.pages.dev/p/a553aaf5fc63/aupair-the-consulate/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Here are my passport and my documents.",
-          "img": "https://wolf-labs.pages.dev/p/a553aaf5fc63/aupair-the-consulate/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a553aaf5fc63/aupair-the-consulate/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty waiting room",
       "pede": "Look at the picture: a waiting room before the interview. Write 2 or 3 true sentences you would tell the officer: where you are going and who you will live with. Use <b>I am going</b> and <b>I will</b>.",
       "ph": "I am going to the United States as …",

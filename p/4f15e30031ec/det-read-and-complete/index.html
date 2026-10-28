@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Read and Complete · Live Class</title>
+<meta name="wolf-kick" content="B1 · A paragraph, three minutes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>DET PREP</b><span>Duolingo English Test Prep · Lesson 4 of 16</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Read and Complete · DET Prep · Lesson 4 of 16</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Read and Complete question: a paragraph with many words cut in half, about three minutes for all of them. The first sentence is complete. The student learns a four-step method and practices with two timed paragraphs.</p><p style="margin:0 0 6px"><b>The story:</b> No story: the student is the candidate. Method → two timed paragraphs → checking a candidate’s answers for mistakes.</p><p style="margin:0 0 6px"><b>About 33 min:</b> I · The Method (8) · II · Two Paragraphs (14) · III · Find the Mistakes (7) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Three minutes, ten gaps: where do you start?” Most students say “the first gap”. The method says: read everything first.</p></div><!--/prep-->
+    <p>This question uses American spelling. Grammar endings (-s, -ed, -er, plural) are where most points are lost: train the student to check them in the last 30 seconds.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>read the whole paragraph first · think grammar: -s, -ed, -ing, plural · small words first · check spelling at the end · the first sentence gives the topic · American spelling</p>
+    <h4>THE METHOD</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>TWO PARAGRAPHS</h4>
+    <p>The gaps: the student types only the missing letters (the box moves to the next gap by itself). With a clock, the text stays blurred until you start it. <b>Check</b> paints right and wrong and shows the full word. Spelling counts.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to time the reading step: about 20 seconds is the goal.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>peoples</i>, <i>withought</i>, <i>more hard</i>, <i>do a mistake</i>, <i>allso</i>, <i>helps the brain stores</i>. B1+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Method.</li>
+      <li><b>Write</b>: II · Two Paragraphs.</li>
+      <li><b>Focus</b>: III · Find the Mistakes and IV · I Can.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

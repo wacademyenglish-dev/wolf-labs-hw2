@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Fill It In · Live Class</title>
+<meta name="wolf-kick" content="A2 · Forms in English, without mistakes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>AU PAIR</b><span>Au Pair · Module 2 · Lesson 5 of 24</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Fill It In · Au Pair · Lesson 5 of 24</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> filling in forms in English: surname versus given name, the American date (MM/DD/YYYY), marital status, emergency contact and relationship. Everything with a FICTIONAL person.</p><p style="margin:0 0 6px"><b>The story:</b> Mariana Costa Ribeiro (fictional) fills in an application for a fictional agency, BrightPath Au Pair.</p><p style="margin:0 0 6px"><b>About 34 min:</b> I · The Traps of a Form (10) · II · Speed Round (6) · III · The Practice Form (14) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> Write 03/07 on the board and ask: “What date is this?” In Brazil: July 3rd. In the USA: March 7th.</p></div><!--/prep-->
+    <p>IMPORTANT: never ask the student to type her real documents, passport number or address in class. The real visa form (DS-160) is filled in by the student alone, on the official website, with the real documents in hand.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>surname / last name / family name · given name / first name · MM/DD/YYYY · marital status: single, married · emergency contact + relationship · * = required</p>
+    <h4>THE TRAPS OF A FORM</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>SPEED ROUND</h4>
+    <p>A 60-second speed round. Tap <b>Start the clock</b>, then <b>Right</b> or <b>Pass</b> for each item; the answer is on your screen. At the end of class, play again and beat the score.</p>
+    <h4>THE PRACTICE FORM</h4>
+    <p>A practice form in English, filled in with a FICTIONAL person’s data (never the student’s real documents in class). The student reads the profile card and fills in the form; <b>Check the form</b> shows each field right or wrong, with the correct answer.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Remind the student: on real forms, copy names exactly as in the passport, including both family names.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>day and month swapped</i>, <i>surname and given name swapped</i>, <i>marital status: alone</i>, <i>emergency contact: myself</i>. A2+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Traps of a Form and II · Speed Round and IV · I Can.</li>
+      <li><b>Write</b>: III · The Practice Form.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

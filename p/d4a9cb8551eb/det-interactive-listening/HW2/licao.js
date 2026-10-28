@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Interactive Listening",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d4a9cb8551eb/det-interactive-listening/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "Interactive Listening: choose the answer a real person would say next (answer + reason, polite no, follow-up question), complete notes from a voice message, summarize a conversation (who, problem, solution)",
   "abrir": "What do you say when someone changes your plans?",
   "fecho": "The best answer <b>answers the question and keeps the conversation going</b>: a reason, a polite no, a follow-up question. In notes, write the key facts: <b>day, time, place, what to bring</b>. A summary has three parts: <b>who, the problem, the solution</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a phone call. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/d4a9cb8551eb/det-interactive-listening/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The campus at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Thursday works better for me, if that is possible.",
-          "img": "https://wolf-labs.pages.dev/p/d4a9cb8551eb/det-interactive-listening/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "No problem. Is there a place on the waiting list?",
-          "img": "https://wolf-labs.pages.dev/p/d4a9cb8551eb/det-interactive-listening/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Perfect. Thank you, and see you on Thursday.",
-          "img": "https://wolf-labs.pages.dev/p/d4a9cb8551eb/det-interactive-listening/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d4a9cb8551eb/det-interactive-listening/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A radio in a dark room",
       "pede": "Look at the picture: an old radio. Write 2 or 3 sentences that summarize a short conversation you had this week: who, the problem, the solution.",
       "ph": "I talked to … about …",

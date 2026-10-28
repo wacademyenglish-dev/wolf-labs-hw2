@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Sorry, Could You Repeat That?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c81be9989c12/selling-services-could-you-repeat-that/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "phone survival: Could you repeat that? / speak more slowly / spell that? / Let me check; e-mails with at, dot, underscore",
   "abrir": "On the phone, you don’t understand the client. What do you say?",
   "fecho": "Polite and calm: <b>Sorry, could you repeat that?</b> · <b>Could you speak more slowly, please?</b> · <b>Could you spell that?</b> · @ = <b>at</b>, . = <b>dot</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "A client calls Mia on a bad line. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c81be9989c12/selling-services-could-you-repeat-that/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A phone on a desk at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Sorry, could you repeat that?",
-          "img": "https://wolf-labs.pages.dev/p/c81be9989c12/selling-services-could-you-repeat-that/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Could you speak more slowly, please?",
-          "img": "https://wolf-labs.pages.dev/p/c81be9989c12/selling-services-could-you-repeat-that/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "My e-mail is … at … dot com.",
-          "img": "https://wolf-labs.pages.dev/p/c81be9989c12/selling-services-could-you-repeat-that/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c81be9989c12/selling-services-could-you-repeat-that/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A phone on a desk at night",
       "pede": "Write your phone card: two polite phrases and your work e-mail in words.",
       "ph": "Sorry, could you …? My e-mail is … at … dot com.",

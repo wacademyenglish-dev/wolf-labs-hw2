@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Speaking Sample",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4a7de6d03399/det-speaking-sample/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "telling a story in five steps (situation, challenge, action, result, lesson) with past tenses and linkers: Two years ago, The challenge was, So I decided to, As a result, What I learned is that",
   "abrir": "What is one thing you did last year that you are proud of?",
   "fecho": "Five steps, five short lines: <b>Two years ago, I...</b> (situation) · <b>The challenge was...</b> · <b>So I decided to + verb</b> · <b>As a result, ...</b> · <b>What I learned is that...</b>. Finished time = past simple: <i>Two years ago I moved</i>, never <i>I have moved</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia coaches Leo for a long answer. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/4a7de6d03399/det-speaking-sample/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Bright bulbs around a dark mirror",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Two years ago, I started a night course while I was working full time.",
-          "img": "https://wolf-labs.pages.dev/p/4a7de6d03399/det-speaking-sample/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The challenge was time, so I decided to plan my week every Sunday.",
-          "img": "https://wolf-labs.pages.dev/p/4a7de6d03399/det-speaking-sample/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "As a result, I passed the exam, and what I learned is that small habits work.",
-          "img": "https://wolf-labs.pages.dev/p/4a7de6d03399/det-speaking-sample/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4a7de6d03399/det-speaking-sample/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Bright bulbs around a dark mirror",
       "pede": "Look at the picture: bright bulbs around a mirror, backstage. Plan your story about a challenge you faced. Write <b>five short lines</b>, one for each step.",
       "ph": "Situation: ... Challenge: ... Action: ...",

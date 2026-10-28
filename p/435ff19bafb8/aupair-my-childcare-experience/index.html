@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · My Childcare Experience · Live Class</title>
+<meta name="wolf-kick" content="A2 · Tell your stories with children">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>AU PAIR</b><span>Au Pair · Module 1 · Lesson 4 of 24</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>My Childcare Experience · Au Pair · Lesson 4 of 24</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> telling experiences with children in the past simple. The video shows how an agency screens au pairs: application, interview, at least 200 hours of childcare experience, references, background check, health certificate, training.</p><p style="margin:0 0 6px"><b>The story:</b> A Cultural Care video for host families explains the screening. Then Camila’s story (invented) with mistakes, and the student tells a real story.</p><p style="margin:0 0 6px"><b>About 40 min:</b> I · How Agencies Check You (9) · II · Memory (8) · III · Find the Mistakes (7) · IV · Your Best Story (12) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “How many hours have you spent with children in your life? Let’s count: family, babysitting, school, church, volunteering.”</p></div><!--/prep-->
+    <p>The program rule says au pairs need at least 200 hours of documented infant care experience to be placed with children under two. Help the student list real hours with dates and a contact person: never invent experience.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>took · made · read · taught · fed · sang · didn’t + base verb · One day, … Suddenly, … In the end, … · I was taking care of… · 200 hours of experience · a contact person for each experience</p>
+    <h4>HOW AGENCIES CHECK YOU</h4>
+    <p>Cultural Care Au Pair, “How are Au Pairs Screened and Trained?” (2 min, captions checked on 15/10/2026). It is made for host families: ask the student what it means for HER application.</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>YOUR BEST STORY</h4>
+    <p>The task with the real clock of the test. Read the task together, tap <b>Start</b>: the prep time runs, then the answer time starts by itself. Do not help while the clock runs. When it stops, go through the checklist together (tap what was there), then <b>Show answer</b> for the model. <b>Try again</b> is a good idea: the second try is always better.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Homework idea: a table with all childcare experience (where, when, hours, contact). It helps with the real application.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I take care (for the past)</i>, <i>didn’t wanted</i>, <i>readed</i>, <i>maked</i>. A2+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · How Agencies Check You and II · Memory.</li>
+      <li><b>Focus</b>: III · Find the Mistakes and V · I Can.</li>
+      <li><b>Out loud</b>: IV · Your Best Story.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/legenda.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

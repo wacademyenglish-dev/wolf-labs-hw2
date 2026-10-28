@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It's a Match",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/34500dab5a0c/aupair-its-a-match/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "answering a host family kindly: I would love to be... ; Thank you for + -ing; a polite no (I don't think we are the right match); will / going to for the arrival; Could you tell me what the weather is like?",
   "abrir": "A family you do not want writes to you. What do you do?",
   "fecho": "<b>Yes:</b> <i>I would love to be your au pair. Thank you for choosing me.</i> <b>Kind no:</b> <i>Thank you for your message, but I don't think we are the right match.</i> <b>Plans:</b> <i>I am going to arrive in March.</i> A question inside a question keeps the order: <i>Could you tell me what the weather is like?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia answers two families. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/34500dab5a0c/aupair-its-a-match/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A living room waiting for a new au pair",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I would love to be your au pair.",
-          "img": "https://wolf-labs.pages.dev/p/34500dab5a0c/aupair-its-a-match/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Thank you so much for your message.",
-          "img": "https://wolf-labs.pages.dev/p/34500dab5a0c/aupair-its-a-match/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I am going to arrive in March.",
-          "img": "https://wolf-labs.pages.dev/p/34500dab5a0c/aupair-its-a-match/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/34500dab5a0c/aupair-its-a-match/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A clock on a quiet wall",
       "pede": "Look at the picture: a clock on a quiet wall. Write 2 or 3 lines to a family: say yes, say thank you and say when you are going to arrive. Use <b>I would love to</b> and <b>I am going to</b>.",
       "ph": "Hi! I would love to …",

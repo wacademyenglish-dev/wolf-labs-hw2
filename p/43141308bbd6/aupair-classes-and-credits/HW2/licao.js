@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Classes and Credits",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/43141308bbd6/aupair-classes-and-credits/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "reading a course catalog and enrolling: at least / up to + number · on + days · How many credits? · I'd like to enroll in ...; never in Saturdays, how much credits, minimum six credits",
   "abrir": "What would you like to study, and when could you do it?",
   "fecho": "<b>At least</b> six credits = six or more. <b>Up to</b> $500 = $500 is the top. Days take <b>on</b>: <i>on Saturdays</i>. Credits you count: <b>How many credits?</b> · <b>I'd like to enroll in</b> + course.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia calls the college. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/43141308bbd6/aupair-classes-and-credits/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty classroom at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I need at least six credits this year.",
-          "img": "https://wolf-labs.pages.dev/p/43141308bbd6/aupair-classes-and-credits/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The family pays up to five hundred dollars.",
-          "img": "https://wolf-labs.pages.dev/p/43141308bbd6/aupair-classes-and-credits/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The course is on Saturdays, from nine to twelve.",
-          "img": "https://wolf-labs.pages.dev/p/43141308bbd6/aupair-classes-and-credits/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/43141308bbd6/aupair-classes-and-credits/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Books on a library table",
       "pede": "Look at the picture: books on a library table. Write 2 or 3 sentences about a course you would like to take: the name, when it is, the credits or the price. Use <b>on</b>, <b>at least</b> or <b>up to</b>.",
       "ph": "I'd like to take a course in …",

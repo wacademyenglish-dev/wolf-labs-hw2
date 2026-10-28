@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Safety First",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/55ad3d60fdb4/aupair-safety-first/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "must (necessary), mustn't (forbidden), don't have to (not necessary); must + plain verb, no to, no -s; Do I have to ...? never Do I must; never mustn't for something that is only not necessary",
   "abrir": "What is one safety rule you know for children?",
   "fecho": "<b>must</b> = necessary: <i>You must close the gate.</i> <b>mustn't</b> = forbidden: <i>Kids mustn't touch the stove.</i> <b>don't have to</b> = not necessary: <i>You don't have to cook for us.</i> After must, the plain verb. The question: <i>Do I have to ...?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo shows Mia the safety rules at home. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/55ad3d60fdb4/aupair-safety-first/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A baby gate at the top of the stairs",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "You must close the gate every night.",
-          "img": "https://wolf-labs.pages.dev/p/55ad3d60fdb4/aupair-safety-first/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Children mustn't run on the stairs.",
-          "img": "https://wolf-labs.pages.dev/p/55ad3d60fdb4/aupair-safety-first/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "You don't have to close it in the morning.",
-          "img": "https://wolf-labs.pages.dev/p/55ad3d60fdb4/aupair-safety-first/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/55ad3d60fdb4/aupair-safety-first/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A baby gate at the top of the stairs",
       "pede": "Look at the picture: a baby gate at the top of the stairs. Write 2 or 3 safety rules for the kids at home. Use <b>must</b>, <b>mustn't</b> or <b>don't have to</b>.",
       "ph": "You must … Children mustn't …",

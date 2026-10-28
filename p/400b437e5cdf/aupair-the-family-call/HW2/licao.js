@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "The Family Call",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/400b437e5cdf/aupair-the-family-call/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "questions with do / does, How old are, will before the subject: What do the kids like? What does she like? How old is Emma? When will I start?; never What the kids like, How many years has, do she, When I will",
   "abrir": "What would you ask a new family?",
   "fecho": "<b>What do</b> the kids like? <b>What does</b> she like? <b>How old</b> are they? <b>When will I</b> start? In a question, <b>do / does / will</b> come before the subject.",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo, ten minutes before the video call. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/400b437e5cdf/aupair-the-family-call/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A porch light at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -108,17 +108,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "How old are the kids?",
-          "img": "https://wolf-labs.pages.dev/p/400b437e5cdf/aupair-the-family-call/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "What do the kids like to do after school?",
-          "img": "https://wolf-labs.pages.dev/p/400b437e5cdf/aupair-the-family-call/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "How many hours will I work per week?",
-          "img": "https://wolf-labs.pages.dev/p/400b437e5cdf/aupair-the-family-call/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -162,7 +162,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/400b437e5cdf/aupair-the-family-call/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A laptop, ready for the video call",
       "pede": "Look at the picture: a laptop, ready for the video call. Write 3 questions you will ask the family. Use <b>What do…</b>, <b>How old…</b> or <b>How many hours will I…</b>",
       "ph": "How old …?",

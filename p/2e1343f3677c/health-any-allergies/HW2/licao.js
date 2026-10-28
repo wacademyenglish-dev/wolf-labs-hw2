@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Any Allergies?",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2e1343f3677c/health-any-allergies/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "admission questions: Do you have any allergies? What happens when you take it? (the reaction); Are you taking any medication at the moment? (now); Have you ever had an operation? (have + past participle); allergic to (never allergic of); Do you smoke?; read it back: Let me read this back to you",
   "abrir": "What three questions do you ask every new patient?",
   "fecho": "Three question shapes: <b>Do you</b> …? for habits (<i>Do you smoke?</i>), <b>Are you taking</b> …? for now (<i>Are you taking any medication at the moment?</i>), <b>Have you ever had</b> …? for life (<i>Have you ever had an operation?</i>). Allergic <b>to</b>, never <i>of</i>. Always ask the reaction: <i>What happens when you take it?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo welcomes Mia, a new patient, at the front desk of a dental clinic. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2e1343f3677c/health-any-allergies/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The front desk of the clinic",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -130,7 +130,7 @@ window.HW2 = {
         {
           "t": "Do you have any allergies? What happens when you take it?",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/2e1343f3677c/health-any-allergies/img/live-conversa.webp"
+          "img": "../img/live-conversa.webp"
         },
         {
           "t": "Are you taking any medication at the moment?",
@@ -183,7 +183,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2e1343f3677c/health-any-allergies/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The front desk before the clinic opens",
       "pede": "Look at the picture: a quiet front desk before the clinic opens. A new patient arrives. Write 3 questions for the admission form: allergies (and the reaction), medication now, and operations in the past.",
       "ph": "Do you have any allergies? …",

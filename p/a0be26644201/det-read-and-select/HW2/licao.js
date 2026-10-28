@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Read and Select",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a0be26644201/det-read-and-select/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "spotting real English words: y changes to i (happiness, beautiful), prefixes un- / im- / dis-, endings -ful / -ness / -ion, and common spelling traps (receive, knowledge)",
   "abrir": "Which English word is hard for you to spell?",
   "fecho": "<b>y → i</b>: happy → <b>happiness</b>, beauty → <b>beautiful</b>. Prefix: <b>un</b>happy, <b>im</b>possible. Ending: decide → decis<b>ion</b>. Spelling: <b>rec<u>ei</u>ve</b>, <b>knowle<u>dg</u>e</b>. Not sure? Leave it.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo play a game with words. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a0be26644201/det-read-and-select/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A long library, dark and quiet",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -160,7 +160,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a0be26644201/det-read-and-select/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Reading glasses on a dark desk, next to a lamp",
       "pede": "Look at the picture: reading glasses on a dark desk. Write 2 or 3 sentences with real words from the lesson: <b>happiness</b>, <b>knowledge</b>, <b>impossible</b>, <b>receive</b> or <b>beautiful</b>. Check every letter.",
       "ph": "Reading gives me …",

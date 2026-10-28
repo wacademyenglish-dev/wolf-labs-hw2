@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "We Do Payroll. We Don’t Sell SAP.",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0dfa4c1ae737/selling-services-we-dont-sell-sap/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "don’t / doesn’t + action verb × isn’t / aren’t with be; never “it don’t is”, never “we aren’t sell”",
   "abrir": "A client asks: “Do you sell software?” What is your answer?",
   "fecho": "The test: an <b>action</b>? → <i>don’t / doesn’t</i> + verb. No action (be)? → <i>isn’t / aren’t</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "A client asks Mia some direct questions. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/0dfa4c1ae737/selling-services-we-dont-sell-sap/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An office at night with a phone on the desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We don’t sell software. It isn’t our business.",
-          "img": "https://wolf-labs.pages.dev/p/0dfa4c1ae737/selling-services-we-dont-sell-sap/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The price isn’t per hour.",
-          "img": "https://wolf-labs.pages.dev/p/0dfa4c1ae737/selling-services-we-dont-sell-sap/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "There are three ERPs: SAP, Oracle and TOTVS.",
-          "img": "https://wolf-labs.pages.dev/p/0dfa4c1ae737/selling-services-we-dont-sell-sap/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -162,7 +162,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0dfa4c1ae737/selling-services-we-dont-sell-sap/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A meeting table at night",
       "pede": "Write your pitch in 2 or 3 sentences: what your company does, what it doesn’t do, and what it isn’t.",
       "ph": "We do … We don’t … We aren’t …",

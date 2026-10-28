@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · On a Scale of One to Ten · Live Class</title>
+<meta name="wolf-kick" content="B1 · Describing and rating pain">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>HEALTH ENGLISH</b><span>English for Healthcare · Module 1 · Lesson 3 of 16</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>On a Scale of One to Ten · English for Healthcare · Lesson 3 of 16</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> rating pain (0 to 10 with anchors: mild 1–3, moderate 4–6, severe 7–10) and understanding the words patients use: sharp, dull, throbbing, burning, stabbing, comes and goes.</p><p style="margin:0 0 6px"><b>The story:</b> An EnglishMedEd video: a nurse helps a patient with a back injury rate her pain. Then five recorded patients (British, American, Australian, Indian accents) describe their pain.</p><p style="margin:0 0 6px"><b>About 37 min:</b> I · The Pain Scale (7) · II · Memory (8) · III · Five Patients (10) · IV · Explain the Scale (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “How would you describe a headache in Portuguese? Latejante? Em pontada?” Then find the English words.</p></div><!--/prep-->
+    <p>Patients rarely use textbook words; they use images (a hammer, fire, a knife). Train the student to translate images into clinical words, and to always re-rate pain after treatment.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>On a scale of 0 to 10… · mild / moderate / severe · sharp / dull · throbbing / burning / stabbing · comes and goes · How is the pain now?</p>
+    <h4>THE PAIN SCALE</h4>
+    <p>EnglishMedEd (Virginia Allum), “How to Help Patients Accurately Rate Their Pain Using a Pain Scale” (2 min, captions checked on 15/10/2026). Clear, slow, Australian English.</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>FIVE PATIENTS</h4>
+    <p>Listen or read, then choose one option. The colors show right and wrong, and one line says why. Ask the student WHY before you move on.</p>
+    <h4>EXPLAIN THE SCALE</h4>
+    <p>The task with the real clock of the test. Read the task together, tap <b>Start</b>: the prep time runs, then the answer time starts by itself. Do not help while the clock runs. When it stops, go through the checklist together (tap what was there), then <b>Show answer</b> for the model. <b>Try again</b> is a good idea: the second try is always better.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student which pain words they hear most in their profession (dentists: throbbing, sensitive; physios: stiff, aching).</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>the pain is very strong (severe)</i>, <i>I have a pain of head (a headache)</i>, <i>it pulses (it’s throbbing)</i>. B1+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Pain Scale and II · Memory and III · Five Patients.</li>
+      <li><b>Out loud</b>: IV · Explain the Scale.</li>
+      <li><b>Focus</b>: V · I Can.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/legenda.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

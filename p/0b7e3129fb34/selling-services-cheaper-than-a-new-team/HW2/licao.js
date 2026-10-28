@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It’s Cheaper Than a New Team",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0b7e3129fb34/selling-services-cheaper-than-a-new-team/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "comparatives: -er, more + long word, better / worse, less, than; never “more cheap”, “more better”, “cheaper that”",
   "abrir": "A client says: “Why not a new team inside the company?” What do you answer?",
   "fecho": "Short word → <b>-er</b> (cheaper) · long word → <b>more</b> (more efficient) · good → <b>better</b> · always <b>than</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia compares in-house and outsourcing with a client. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/0b7e3129fb34/selling-services-cheaper-than-a-new-team/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two options on a whiteboard at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Our service is cheaper than a new team.",
-          "img": "https://wolf-labs.pages.dev/p/0b7e3129fb34/selling-services-cheaper-than-a-new-team/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It’s faster and more efficient.",
-          "img": "https://wolf-labs.pages.dev/p/0b7e3129fb34/selling-services-cheaper-than-a-new-team/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Our reports are better than spreadsheets.",
-          "img": "https://wolf-labs.pages.dev/p/0b7e3129fb34/selling-services-cheaper-than-a-new-team/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0b7e3129fb34/selling-services-cheaper-than-a-new-team/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "Two options on a whiteboard at night",
       "pede": "Compare your service with a new team in 2 or 3 sentences: cost, time, quality.",
       "ph": "It’s cheaper than … It’s faster … Our … is more … than …",

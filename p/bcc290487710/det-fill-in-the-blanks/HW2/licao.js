@@ -1,4 +1,4 @@
-/* FILL IN THE BLANKS · LIÇÃO DE CASA 2.0 (24/10/2026)
+﻿/* FILL IN THE BLANKS · LIÇÃO DE CASA 2.0 (24/10/2026)
    Motor: hw2.js (fonte em _plano-50/live-class/kit/hw2/). JSON puro depois do "=": o gera_audio.py lê este arquivo.
    Alvo: completing a word from the clue around the gap: can/could + base verb, is/was + -ed, a lot. B1: nenhum português. */
 window.HW2 = {
@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Fill in the Blanks",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/bcc290487710/det-fill-in-the-blanks/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "completing a word from the clue around the gap: can/could + base verb, is/was + -ed, a lot of + noun, how? = adverb -ly, look forward to + -ing",
   "abrir": "What do you do when you forget a word in English?",
   "fecho": "The clue is <b>around</b> the gap. <b>Could you</b> + base verb · <b>is / was</b> + -ed (closed, delayed) · <b>a lot of</b> + noun · <b>how?</b> → -ly (clearly) · <b>look forward to</b> + -ing.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo practice in a quiet cafe. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/bcc290487710/det-fill-in-the-blanks/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A candle and a cup on a dark table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -164,7 +164,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/bcc290487710/det-fill-in-the-blanks/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A candle and a cup on a dark table",
       "pede": "Look at the picture: a candle and a cup on a table in a quiet cafe. Write 2 or 3 sentences about it. Use at least one word in <b>-ed</b> (like <i>closed</i>), one adverb in <b>-ly</b> and <b>a lot of</b> + noun.",
       "ph": "The cafe is quiet …",

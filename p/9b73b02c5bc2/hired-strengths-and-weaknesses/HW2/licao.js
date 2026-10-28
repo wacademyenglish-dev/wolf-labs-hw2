@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Strengths and Weaknesses",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/9b73b02c5bc2/hired-strengths-and-weaknesses/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "talking about yourself honestly: I tend to + plain verb, I used to ... now I ..., I have started + -ing, I am working on ... by + -ing, one strength with proof (I have never missed a deadline); no fake weakness, no cliche",
   "abrir": "What is one thing you do very well? How could you prove it?",
   "fecho": "A real weakness has three parts: <b>the weakness</b> (<i>I tend to forget small details</i>), <b>the action</b> (<i>I have started using a checklist</i>; <i>I am working on it by practicing</i>), <b>the result</b>. After <b>tend to</b> the plain verb; after <b>by</b> the <b>-ing</b> form. A strength needs proof: <i>I am very reliable. In four years, I have never missed a deadline.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia coaches Leo before his interview. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/9b73b02c5bc2/hired-strengths-and-weaknesses/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty meeting room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I tend to say yes to every request.",
-          "img": "https://wolf-labs.pages.dev/p/9b73b02c5bc2/hired-strengths-and-weaknesses/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I have started using a priority list.",
-          "img": "https://wolf-labs.pages.dev/p/9b73b02c5bc2/hired-strengths-and-weaknesses/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "In four years, I have never missed a deadline.",
-          "img": "https://wolf-labs.pages.dev/p/9b73b02c5bc2/hired-strengths-and-weaknesses/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/9b73b02c5bc2/hired-strengths-and-weaknesses/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A small brass scale in balance",
       "pede": "Look at the picture: a small scale in balance. Write 2 or 3 sentences: one real weakness and what you are doing about it. Use <b>I tend to</b>, <b>I have started</b> or <b>I am working on</b>.",
       "ph": "I tend to … so I have started …",

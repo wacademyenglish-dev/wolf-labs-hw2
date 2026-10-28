@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "Read Before You Sign",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2aaeb23f0669/aupair-read-before-you-sign/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "must / must not / don't have to / can for rules in an agreement; up to = the maximum, per week = every week; never must to, until for a limit, don't have to for something forbidden",
   "abrir": "Have you ever signed something without reading it?",
   "fecho": "<b>must</b> = required · <b>must not</b> = forbidden · <b>don't have to</b> = not required · <b>up to</b> = the maximum: <i>up to 45 hours per week.</i> After them, the plain verb: never <i>must to</i>.",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the dining table. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2aaeb23f0669/aupair-read-before-you-sign/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A table with papers and a lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -108,17 +108,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I must read every line before I sign.",
-          "img": "https://wolf-labs.pages.dev/p/2aaeb23f0669/aupair-read-before-you-sign/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I can work up to forty-five hours per week.",
-          "img": "https://wolf-labs.pages.dev/p/2aaeb23f0669/aupair-read-before-you-sign/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Could you explain this line to me, please?",
-          "img": "https://wolf-labs.pages.dev/p/2aaeb23f0669/aupair-read-before-you-sign/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2aaeb23f0669/aupair-read-before-you-sign/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A notebook, a pen and a cup of tea",
       "pede": "Look at the picture: a notebook, a pen and a cup of tea, the moment before you sign. Write 2 or 3 sentences: one rule you must follow, one thing you don't have to do, and one question you will ask before you sign.",
       "ph": "I must … I don't have to …",

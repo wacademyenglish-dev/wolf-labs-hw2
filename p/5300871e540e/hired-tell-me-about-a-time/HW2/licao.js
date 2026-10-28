@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Tell Me About a Time",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5300871e540e/hired-tell-me-about-a-time/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "telling a work story in STAR order (situation, task, action, result) with narrative tenses: past continuous for the background (I was working), past perfect for what happened before (we had sent), past simple for your actions; never I was work, never had send, never have created in a finished story",
   "abrir": "Think of a day at work or school when something went wrong. What was it?",
   "fecho": "A story has four steps: <b>situation</b>, <b>task</b>, <b>action</b>, <b>result</b>. <b>Was + -ing</b> for the background (<i>I was working</i>). <b>Had + third form</b> for what happened before (<i>we had sent the wrong order</i>). <b>Past simple</b> for what YOU did (<i>I called, I found</i>). End with the result: <i>As a result, …</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo a work story. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/5300871e540e/hired-tell-me-about-a-time/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A notebook and a coffee, end of the day",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Last year, I was working as a team leader.",
-          "img": "https://wolf-labs.pages.dev/p/5300871e540e/hired-tell-me-about-a-time/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We had sent the wrong jackets to her store.",
-          "img": "https://wolf-labs.pages.dev/p/5300871e540e/hired-tell-me-about-a-time/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "As a result, she stayed with us.",
-          "img": "https://wolf-labs.pages.dev/p/5300871e540e/hired-tell-me-about-a-time/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5300871e540e/hired-tell-me-about-a-time/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A notebook and a coffee on a dark desk",
       "pede": "Look at the picture: a notebook and a coffee, the end of a hard day. Write 2 or 3 sentences about a real problem at work or school: the situation, what you did, the result.",
       "ph": "Last year, I was … One day, …",

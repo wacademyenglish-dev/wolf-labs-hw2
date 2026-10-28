@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Read, Then Speak",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/866690077247/det-read-then-speak/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "Read, Then Speak: a four-part answer (answer in the first sentence, The main reason is, For example, That's why) using the guide questions on the card as a map",
   "abrir": "What is one topic you could talk about for a whole minute?",
   "fecho": "Four parts, any topic: <b>answer</b> in the first sentence, <b>the main reason is…</b>, <b>for example…</b>, <b>that's why…</b>. The guide questions on the card are your map. To reach sixty seconds, add one more detail to each part.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo practice a speaking topic. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/866690077247/det-read-then-speak/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty lecture room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "A place I love in my city is the old park by the river.",
-          "img": "https://wolf-labs.pages.dev/p/866690077247/det-read-then-speak/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The main reason is that it helps me relax after work.",
-          "img": "https://wolf-labs.pages.dev/p/866690077247/det-read-then-speak/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "That's why it is my favorite place to spend a weekend.",
-          "img": "https://wolf-labs.pages.dev/p/866690077247/det-read-then-speak/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/866690077247/det-read-then-speak/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty lecture room",
       "pede": "Look at the picture: an empty lecture room. Write 3 sentences: do you prefer mornings or evenings? Give an answer, a reason and an example.",
       "ph": "I prefer … The main reason is …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Do We Have a Deal?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2e7c4eda10e7/selling-services-do-we-have-a-deal/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "review 6–14 in a negotiation: What about…? / We can offer… / Do we have a deal? + going to, past, comparatives, can",
   "abrir": "A client says: “The price is a problem.” What is your first sentence?",
   "fecho": "Negotiate in three moves: <b>What about…?</b> · <b>We can offer…</b> · <b>Do we have a deal?</b> And give a reason: <i>it’s cheaper than…, last year we saved…</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia negotiates with a CFO. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2e7c4eda10e7/selling-services-do-we-have-a-deal/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two coffees on a meeting table at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "What about a two-year contract?",
-          "img": "https://wolf-labs.pages.dev/p/2e7c4eda10e7/selling-services-do-we-have-a-deal/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We can offer a free first month.",
-          "img": "https://wolf-labs.pages.dev/p/2e7c4eda10e7/selling-services-do-we-have-a-deal/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Do we have a deal?",
-          "img": "https://wolf-labs.pages.dev/p/2e7c4eda10e7/selling-services-do-we-have-a-deal/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2e7c4eda10e7/selling-services-do-we-have-a-deal/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "Two coffees on a meeting table at night",
       "pede": "Write a short closing e-mail (3 or 4 sentences): thank you, the start date, the offer, the next step.",
       "ph": "Hi …, Thank you for … We’re going to start on … Can you sign …?",

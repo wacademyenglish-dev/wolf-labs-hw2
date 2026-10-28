@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Speak About the Photo",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/30287032f4cd/det-speak-about-the-photo/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "describing a photo with a route: big picture (This photo shows) → places (in the foreground, in the background, on the left, next to) → details (there is / there are) → a guess with a reason (It might be ... because ...)",
   "abrir": "Look around you. How would you describe this place to a friend in one sentence?",
   "fecho": "A photo has a route: <b>big picture</b> (This photo shows…), <b>places</b> (in the foreground, in the background, on the left), <b>details</b> (there is / there are), <b>a guess</b> (It might be… because…). Four steps fill ninety seconds.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia helps Leo describe a photo. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/30287032f4cd/det-speak-about-the-photo/img/live-foto-mercado.webp",
+      "img": "../img/live-foto-mercado.webp",
       "leg": "A market in the evening",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This photo shows a market in the evening, with warm lights.",
-          "img": "https://wolf-labs.pages.dev/p/30287032f4cd/det-speak-about-the-photo/img/live-foto-mercado.webp",
+          "img": "../img/live-foto-mercado.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "In the foreground, there is a big pot on the stove.",
-          "img": "https://wolf-labs.pages.dev/p/30287032f4cd/det-speak-about-the-photo/img/live-foto-cozinha.webp",
+          "img": "../img/live-foto-cozinha.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It might be a quiet station, because there are no people around.",
-          "img": "https://wolf-labs.pages.dev/p/30287032f4cd/det-speak-about-the-photo/img/live-foto-estacao.webp",
+          "img": "../img/live-foto-estacao.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/30287032f4cd/det-speak-about-the-photo/img/live-foto-estacao.webp",
+      "img": "../img/live-foto-estacao.webp",
       "leg": "A small station at night",
       "pede": "Look at the picture: a small station at night. Write 2 or 3 sentences about it. Use <b>in the foreground</b>, <b>there is / there are</b> and <b>It might be … because</b>.",
       "ph": "This photo shows …",

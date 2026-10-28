@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Mock Test 2 and the Plan",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/809fbc659662/det-mock-test-2-and-the-plan/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "making a test-day plan: if + present, will + verb (If I feel nervous, I will ...); going to for plans; before + -ing (before starting)",
   "abrir": "Think of something important you will do soon. What is your plan for the day before?",
   "fecho": "A plan is a list of <b>if</b> and <b>will</b>. After <b>if</b>, use the present: <i>If I feel nervous, I will take a deep breath</i>, not <i>if I will feel</i>. For a plan you have already made, use <b>going to</b>: <i>I'm going to check my ID</i>. After <b>before</b>, use <b>-ing</b>: <i>before starting</i>. And always read the official rules before you book.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan the days before the real test. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/809fbc659662/det-mock-test-2-and-the-plan/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The night before",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'm going to do one practice a day.",
-          "img": "https://wolf-labs.pages.dev/p/809fbc659662/det-mock-test-2-and-the-plan/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If I don't know a word, I will keep going.",
-          "img": "https://wolf-labs.pages.dev/p/809fbc659662/det-mock-test-2-and-the-plan/img/live-foto-chuva.webp",
+          "img": "../img/live-foto-chuva.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Before I book, I will read the official rules.",
-          "img": "https://wolf-labs.pages.dev/p/809fbc659662/det-mock-test-2-and-the-plan/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -175,7 +175,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/809fbc659662/det-mock-test-2-and-the-plan/img/live-foto-chuva.webp",
+      "img": "../img/live-foto-chuva.webp",
       "leg": "The night before a big day",
       "pede": "Look at the picture: a quiet night before a big day. Write your own plan for a test, an interview or a trip. Use <b>if</b> + present, <b>will</b> and <b>going to</b>.",
       "ph": "The day before, I'm going to …",

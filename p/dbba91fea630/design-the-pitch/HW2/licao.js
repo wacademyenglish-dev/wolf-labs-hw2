@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Pitch",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/dbba91fea630/design-the-pitch/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "pitching a project from brief to delivery: past simple story · decisions with reasons (because + clause, so that + clause, to + verb; never because of + clause, never for + verb) · polite reply to an opinion (I'm glad you brought that up; My only concern was...) · I agree, never I am agree",
   "abrir": "Think of a project you did. What was the client like?",
   "fecho": "A pitch is a story with reasons. <b>Because</b> + a clause: <i>We chose yellow because it feels friendly.</i> <b>So that</b> + a clause: <i>…so that the room feels brighter.</i> <b>To</b> + verb: <i>We moved the desk to use the daylight.</i> Answer an opinion politely: <b>I'm glad you brought that up.</b> Say <i>I agree</i>, never <i>I am agree</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia pitches a project to a client, played by Leo. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/dbba91fea630/design-the-pitch/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The big meeting",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'd like to show you a project I'm really proud of.",
-          "img": "https://wolf-labs.pages.dev/p/dbba91fea630/design-the-pitch/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We moved the armchairs next to the window to use the daylight.",
-          "img": "https://wolf-labs.pages.dev/p/dbba91fea630/design-the-pitch/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We chose yellow because it makes the corner feel friendly.",
-          "img": "https://wolf-labs.pages.dev/p/dbba91fea630/design-the-pitch/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/dbba91fea630/design-the-pitch/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A stool under a spotlight",
       "pede": "Look at the picture: a single stool under a light, like a stage. Imagine you are pitching a project. Write 3 sentences: one decision, the reason (<b>because</b>, <b>so that</b> or <b>to</b>), and the result.",
       "ph": "We chose … because …",

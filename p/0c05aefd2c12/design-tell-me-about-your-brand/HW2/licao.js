@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Tell Me About Your Brand",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0c05aefd2c12/design-tell-me-about-your-brand/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "open questions for a client brief: Can you tell me about ...? What are you hoping to ...? Who is it for? (preposition at the end); question order (What do you want ...?); indirect question order (Can you tell me what your deadline is?)",
   "abrir": "What is the first thing you ask a new client? What do you need to know?",
   "fecho": "Open questions make the client talk: <b>Can you tell me about…?</b> <b>What are you hoping to achieve?</b> <b>Who is it for?</b> The preposition goes at the end. A normal question needs <b>do</b>: <i>What do you want to change?</i> Inside <b>Can you tell me…</b>, the order is normal: <i>what your deadline is</i>, not <i>what is your deadline</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia, a designer, and Leo, a shop owner, on a first call. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/0c05aefd2c12/design-tell-me-about-your-brand/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The designer's desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Can you tell me about your shop?",
-          "img": "https://wolf-labs.pages.dev/p/0c05aefd2c12/design-tell-me-about-your-brand/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "What are you hoping to achieve with the new brand?",
-          "img": "https://wolf-labs.pages.dev/p/0c05aefd2c12/design-tell-me-about-your-brand/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Who are your customers, and who is it for?",
-          "img": "https://wolf-labs.pages.dev/p/0c05aefd2c12/design-tell-me-about-your-brand/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0c05aefd2c12/design-tell-me-about-your-brand/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A designer's desk, before the first call",
       "pede": "Look at the picture: a desk before a client call. You are the designer. Write three questions for the first call: one about the business, one about the goal, one about the audience.",
       "ph": "Can you tell me about …?",

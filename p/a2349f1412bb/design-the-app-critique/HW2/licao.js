@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The App Critique",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a2349f1412bb/design-the-app-critique/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "a strong critique comment = user + element + effect, with so / because / might (The button is small, so it might be hard to see); overview (This app helps people + verb); opportunity and trade-off; too + adjective, never too much + adjective; helps + person + plain verb",
   "abrir": "Which app do you open first in the morning? What does it do for you?",
   "fecho": "A strong comment names the <b>user</b>, the <b>element</b> and the <b>effect</b>: <i>The button is small, so new users might not see it.</i> Start with an overview: <i>This app helps people find a bike.</i> End with an <b>opportunity</b> and a <b>trade-off</b>. Say <b>too small</b>, never <i>too much small</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia critiques an app out loud while Leo plays the interviewer. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a2349f1412bb/design-the-app-critique/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The interview room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The app helps people find and unlock a bike nearby.",
-          "img": "https://wolf-labs.pages.dev/p/a2349f1412bb/design-the-app-critique/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The button is small and gray, so it might be hard to see.",
-          "img": "https://wolf-labs.pages.dev/p/a2349f1412bb/design-the-app-critique/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "A bigger price helps, but the trade-off is less space for the map.",
-          "img": "https://wolf-labs.pages.dev/p/a2349f1412bb/design-the-app-critique/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a2349f1412bb/design-the-app-critique/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A phone and a notebook on a dark desk",
       "pede": "Look at the picture: a phone and a notebook. Choose an app you use. Write 3 sentences: what the app does, one strong comment (user + element + effect), and one trade-off.",
       "ph": "This app helps … One problem is that …, so …",

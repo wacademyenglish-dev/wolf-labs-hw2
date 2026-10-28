@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "My First Week",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/53e4e41515fd/aupair-my-first-week/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "arrival day talk: How was your flight? (past simple) · Could I have ...? · I'm looking forward to + -ing · I'm not used to + -ing · arrived in; never looking forward to meet, used to eat, arrived to",
   "abrir": "What do you want to ask on your first night in a new house?",
   "fecho": "<b>Could I have</b> + noun: a polite request. <b>I'm looking forward to</b> + -ing: <i>meeting the kids</i>. <b>I'm not used to</b> + -ing: <i>eating early</i>. <b>Arrived in</b> a city. Never <i>looking forward to meet</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia arrives at her host family's house. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/53e4e41515fd/aupair-my-first-week/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A welcome room: flowers on the bed",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Thank you! I'm looking forward to meeting the kids.",
-          "img": "https://wolf-labs.pages.dev/p/53e4e41515fd/aupair-my-first-week/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Could I have the wifi password, please?",
-          "img": "https://wolf-labs.pages.dev/p/53e4e41515fd/aupair-my-first-week/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'm not used to eating dinner so early.",
-          "img": "https://wolf-labs.pages.dev/p/53e4e41515fd/aupair-my-first-week/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/53e4e41515fd/aupair-my-first-week/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A front door with a warm lamp",
       "pede": "Look at the picture: a front door with a warm lamp. Write 2 or 3 sentences to your host family on your first night: thank them, ask for something, say one thing you are looking forward to.",
       "ph": "Thank you for … Could I have …?",

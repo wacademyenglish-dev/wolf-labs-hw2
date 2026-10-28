@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "We’re Going to Start in March",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/58a7c5d4555b/selling-services-going-to-start-in-march/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "going to + verb for plans; negative and questions; never “we go to start”, “we are going start”, “going to started”",
   "abrir": "A client asks: “So, what’s the plan?” What is your first sentence?",
   "fecho": "A plan: <b>be + going to + verb</b>: <i>We’re going to start in March. We aren’t going to change your ERP. Are you going to be there?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia explains a project plan to a client. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/58a7c5d4555b/selling-services-going-to-start-in-march/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A calendar on a wall at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We’re going to start in March.",
-          "img": "https://wolf-labs.pages.dev/p/58a7c5d4555b/selling-services-going-to-start-in-march/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We aren’t going to change your ERP.",
-          "img": "https://wolf-labs.pages.dev/p/58a7c5d4555b/selling-services-going-to-start-in-march/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The go-live is going to be on June 1.",
-          "img": "https://wolf-labs.pages.dev/p/58a7c5d4555b/selling-services-going-to-start-in-march/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/58a7c5d4555b/selling-services-going-to-start-in-march/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A calendar on a wall at night",
       "pede": "Write a project plan in 3 or 4 short steps: kick-off, work, tests, go-live.",
       "ph": "First, we’re going to … Then … The go-live is going to be …",

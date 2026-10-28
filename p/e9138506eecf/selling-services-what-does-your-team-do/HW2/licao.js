@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What Does Your Team Do?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e9138506eecf/selling-services-what-does-your-team-do/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "present simple 3rd person: she works, he doesn’t send, does it…?; never “she work”, never “he don’t”",
   "abrir": "Think of a client. Who does payroll there?",
   "fecho": "He, she, it, the team: verb + <b>s</b> (she works). Negative: <b>doesn’t</b> + verb. Question: <b>Does</b> … + verb. Only one s.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks a client who does what in his finance team. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e9138506eecf/selling-services-what-does-your-team-do/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A whiteboard with a process map at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "She does payroll with spreadsheets.",
-          "img": "https://wolf-labs.pages.dev/p/e9138506eecf/selling-services-what-does-your-team-do/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The team doesn’t use the ERP.",
-          "img": "https://wolf-labs.pages.dev/p/e9138506eecf/selling-services-what-does-your-team-do/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Who pays the suppliers?",
-          "img": "https://wolf-labs.pages.dev/p/e9138506eecf/selling-services-what-does-your-team-do/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e9138506eecf/selling-services-what-does-your-team-do/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A whiteboard with a process map at night",
       "pede": "Write 3 sentences: who does what in a client’s finance team (or in your team).",
       "ph": "… does payroll. He / She uses … The team doesn’t …",

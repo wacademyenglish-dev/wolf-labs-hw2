@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Final_v3_FINAL",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ba6f6618ad35/design-final-v3-final/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "revisions and deadlines: will have + past participle (I'll have finished it by Friday) · by = no later than · until = all the time up to · once + present (once you sign off, never once you will) · a round of revisions, just a heads-up",
   "abrir": "When did you last send a file to a client or a teacher? Was it on time?",
   "fecho": "<b>By</b> = no later than (<i>send it by Friday</i>). <b>Until</b> = all the time up to (<i>she is away until Wednesday</i>). <b>I'll have finished</b> = done before that time: <b>will have</b> + third form. <b>Once</b> + present: <i>Once you sign off, I'll send the files.</i> A <b>round of revisions</b> is a planned set of changes; <b>just a heads-up</b> warns about a risk.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a design studio on Thursday morning. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/ba6f6618ad35/design-final-v3-final/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The project inbox",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'll have finished the layout by Thursday evening.",
-          "img": "https://wolf-labs.pages.dev/p/ba6f6618ad35/design-final-v3-final/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The client is away until Wednesday, so she will check it on Thursday.",
-          "img": "https://wolf-labs.pages.dev/p/ba6f6618ad35/design-final-v3-final/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Just a heads-up: any change after Friday might delay the printing.",
-          "img": "https://wolf-labs.pages.dev/p/ba6f6618ad35/design-final-v3-final/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ba6f6618ad35/design-final-v3-final/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An hourglass on a stack of project papers",
       "pede": "Look at the picture: an hourglass on a pile of project papers. Write a short status update for a client. Say what you <b>will have finished by</b> a day, what you need from them <b>by</b> a day, and one risk (<b>just a heads-up</b>).",
       "ph": "I'll have finished … by …",

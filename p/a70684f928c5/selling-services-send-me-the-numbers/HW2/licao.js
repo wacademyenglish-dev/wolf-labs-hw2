@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Can You Send Me the Numbers?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a70684f928c5/selling-services-send-me-the-numbers/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "can / can’t + verb, Can you…?, Could you…, please?; never “can to”, never “You can send me?”",
   "abrir": "You need the headcount from a client. How do you ask?",
   "fecho": "<b>can / can’t</b> + verb (no “to”). Question: <b>Can you…?</b> Polite request: <b>Could you…, please?</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks a client for numbers for the proposal. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a70684f928c5/selling-services-send-me-the-numbers/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An open laptop with an e-mail draft at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Could you send me the headcount, please?",
-          "img": "https://wolf-labs.pages.dev/p/a70684f928c5/selling-services-send-me-the-numbers/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We can sign an NDA first.",
-          "img": "https://wolf-labs.pages.dev/p/a70684f928c5/selling-services-send-me-the-numbers/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I can’t meet on Monday.",
-          "img": "https://wolf-labs.pages.dev/p/a70684f928c5/selling-services-send-me-the-numbers/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -162,7 +162,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a70684f928c5/selling-services-send-me-the-numbers/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "An open laptop with an e-mail draft at night",
       "pede": "Write a short e-mail (3 or 4 sentences) to ask a client for two numbers. Be polite.",
       "ph": "Hi …, Could you send me …, please? Can you …? Can I call you on …?",

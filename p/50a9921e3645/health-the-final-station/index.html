@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Final Station · Live Class</title>
+<meta name="wolf-kick" content="B1 · A whole consultation, from hello to handover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>HEALTH ENGLISH</b><span>English for Healthcare · Module 4 · Lesson 16 of 16</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Final Station · English for Healthcare · Lesson 16 of 16</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> closing the course with one full consultation: opening, history, red flags, ICE (ideas, concerns, expectations), empathy, summary, a plan in plain English with safety-netting, and an SBAR handover to a colleague.</p><p style="margin:0 0 6px"><b>The story:</b> A real OSCE video (a young man afraid of a heart attack because his father died of one), then a fictional patient with a tension headache who is afraid of a brain tumor, then a fictional deteriorating patient to hand over.</p><p style="margin:0 0 6px"><b>About 43 min:</b> I · What Are You Worried About? (9) · II · The Full Consultation (16) · III · Plan and Handover (14) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Think about a patient who was very worried. What were they really afraid of?”</p></div><!--/prep-->
+    <p>This is the last lesson: let the student lead and interrupt only at the end. In the full consultation (cadeira), play the patient naturally and wait for the ICE questions; if the student forgets them, show the worry on your face. Give feedback on three things only: one strength, one phrase to change, one thing to practice.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>What do you think could be causing it? · Is there anything you’re worried about? · What were you hoping I could do today? · I’m sorry to hear that. · Let me summarize… · Come back straight away if…</p>
+    <h4>WHAT ARE YOU WORRIED ABOUT?</h4>
+    <p>Geeky Medics, chest pain history (2:33–4:22): the student asks about ideas, concerns and expectations and then summarizes.</p>
+    <h4>THE FULL CONSULTATION</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>PLAN AND HANDOVER</h4>
+    <p>The task with the real clock of the test. Read the task together, tap <b>Start</b>: the prep time runs, then the answer time starts by itself. Do not help while the clock runs. When it stops, go through the checklist together (tap what was there), then <b>Show answer</b> for the model. <b>Try again</b> is a good idea: the second try is always better.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Celebrate the end of the course. Ask the student which lesson phrase they now use at work, and which situation still feels hard.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>What is your worry? (Is anything worrying you?)</i>, <i>Do you want a scan? (closed, leading)</i>, <i>jargon in the plan (tension-type cephalalgia)</i>, <i>no safety-netting</i>. B1+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · What Are You Worried About?.</li>
+      <li><b>Out loud</b>: II · The Full Consultation and III · Plan and Handover.</li>
+      <li><b>Focus</b>: IV · I Can.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/legenda.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+</body>
+</html>

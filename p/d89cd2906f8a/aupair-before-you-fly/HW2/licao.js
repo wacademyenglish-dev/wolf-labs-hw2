@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "Before You Fly",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d89cd2906f8a/aupair-before-you-fly/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "should + plain verb for advice (what to keep with you); in the suitcase, with me, on paper; never should to, should takes, on the suitcase",
   "abrir": "What do you always carry in your bag?",
   "fecho": "<b>should</b> + plain verb for advice: <i>You should keep your passport with you.</i> Never <i>should to</i> or <i>should takes</i>. <b>In</b> the suitcase, <b>with</b> me, <b>on</b> paper.",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo the night before her flight. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/d89cd2906f8a/aupair-before-you-fly/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A window at night, the airport gate",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -108,12 +108,12 @@ window.HW2 = {
       "frases": [
         {
           "t": "I should keep my passport with me.",
-          "img": "https://wolf-labs.pages.dev/p/d89cd2906f8a/aupair-before-you-fly/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The copies go in the big suitcase.",
-          "img": "https://wolf-labs.pages.dev/p/d89cd2906f8a/aupair-before-you-fly/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d89cd2906f8a/aupair-before-you-fly/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A suitcase by the door, ready to go",
       "pede": "Look at the picture: a suitcase by the door. Write 2 or 3 sentences: two things you should keep with you, and one thing that goes in the suitcase.",
       "ph": "I should keep … with me.",

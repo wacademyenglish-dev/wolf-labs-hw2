@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "How Much Is It?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/530ef2591591/selling-services-how-much-is-it/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "big numbers (thousand, million, no s), percent, How much (money) × How many (people, invoices), 1.2 × 4,000",
   "abrir": "A client asks: “How much is it?” What three numbers do you give?",
   "fecho": "<b>thousand, million, percent</b>: no s. Money → <b>How much?</b> People, invoices → <b>How many?</b> 1.2 = one <b>point</b> two.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "A client asks Mia about the price. About one minute.",
-      "img": "https://wolf-labs.pages.dev/p/530ef2591591/selling-services-how-much-is-it/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A calculator and a proposal on a desk at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "There are four thousand employees.",
-          "img": "https://wolf-labs.pages.dev/p/530ef2591591/selling-services-how-much-is-it/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "You save twenty-five percent.",
-          "img": "https://wolf-labs.pages.dev/p/530ef2591591/selling-services-how-much-is-it/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "How much is the monthly fee?",
-          "img": "https://wolf-labs.pages.dev/p/530ef2591591/selling-services-how-much-is-it/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -166,7 +166,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/530ef2591591/selling-services-how-much-is-it/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A calculator and a proposal on a desk at night",
       "pede": "Write three numbers for a proposal: the cost today, your price, the savings.",
       "ph": "Today it costs … a year. With us, it’s … a month. You save … percent.",

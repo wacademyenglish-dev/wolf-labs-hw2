@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Mock Test 1",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/34fec063cab7/det-mock-test-1/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "talking about a practice test: ran out of time, made (not did) a mistake, didn't + base verb (didn't have), should have + past participle",
   "abrir": "Think of the last test you took. What went well, and what went wrong?",
   "fecho": "After a practice test, name the problem and make a plan. You <b>ran out of time</b>. You <b>made</b> a mistake, you don't <i>do</i> one. After <b>didn't</b>, the verb stays short: <i>didn't have</i>, not <i>didn't had</i>. And for the next time: <b>should have + past participle</b>: <i>I should have checked my answers</i>. One problem, one plan, for each part.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after Mock Test 1. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/34fec063cab7/det-mock-test-1/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The exam hall",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I ran out of time before the last gap.",
-          "img": "https://wolf-labs.pages.dev/p/34fec063cab7/det-mock-test-1/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I made two mistakes in the dictation.",
-          "img": "https://wolf-labs.pages.dev/p/34fec063cab7/det-mock-test-1/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I should have checked my answers.",
-          "img": "https://wolf-labs.pages.dev/p/34fec063cab7/det-mock-test-1/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/34fec063cab7/det-mock-test-1/img/live-foto-bicicletas.webp",
+      "img": "../img/live-foto-bicicletas.webp",
       "leg": "A photo task, like in the test",
       "pede": "Look at the picture. Write one rich sentence about it, like in the test: the place, two details, and <b>where</b> or <b>which</b>. Then add one sentence about your last practice: what went wrong, or what you <b>should have</b> done.",
       "ph": "This is a street by a canal at night, where …",

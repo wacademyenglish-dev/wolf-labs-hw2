@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Group Interview",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3efc42b72d6d/hired-the-group-interview/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the language of a good team player in a group interview: agree (I agree with ...), build (Building on what ... said), disagree softly (I see it slightly differently, because ...), take and give turns (Can I add something? / What do you think, ...?)",
   "abrir": "In a group task, do you talk first or listen first?",
   "fecho": "Interviewers want the one who listens. <b>Build</b>: <i>Building on what Ana said, ...</i>. <b>Agree</b>: <i>I agree with Ana</i> (never <i>I am agree</i>). <b>Disagree softly</b>: <i>I see it slightly differently, because ...</i>. <b>Turns</b>: <i>Can I add something?</i> <i>What do you think, Bruno?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about her group interview. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/3efc42b72d6d/hired-the-group-interview/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Sticky notes on a window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Building on what Ana said, we could invite the best clients.",
-          "img": "https://wolf-labs.pages.dev/p/3efc42b72d6d/hired-the-group-interview/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I see it slightly differently, because the budget is small.",
-          "img": "https://wolf-labs.pages.dev/p/3efc42b72d6d/hired-the-group-interview/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "What do you think, Bruno?",
-          "img": "https://wolf-labs.pages.dev/p/3efc42b72d6d/hired-the-group-interview/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3efc42b72d6d/hired-the-group-interview/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Sticky notes on a dark window",
       "pede": "Look at the picture: sticky notes full of ideas. In a group task, you must choose ONE event for a hotel. Write 2 or 3 sentences: <b>build</b> on an idea, <b>disagree</b> softly, or <b>invite</b> a quiet person.",
       "ph": "Building on what ... said, ...",

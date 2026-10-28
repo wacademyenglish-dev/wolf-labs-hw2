@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Your Questions for Them",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2444f533fd16/hired-your-questions-for-them/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "polite indirect questions at the end of an interview: Could you tell me what ...? / I was wondering how ... / Do you know when ...; after the opener the order is a statement (subject before verb), no do / does / is first",
   "abrir": "The interviewer says: do you have any questions for us? What do you usually say?",
   "fecho": "A polite question opens with <b>Could you tell me ...</b>, <b>I was wondering ...</b> or <b>Do you know ...</b>. After that, the order is a statement: <i>Could you tell me what the team <b>is</b> like?</i> not <i>what <b>is</b> the team like</i>. Ask two or three: the role, the team, success, the next steps.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about her interview. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2444f533fd16/hired-your-questions-for-them/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A dark office at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Could you tell me what a typical day in this role looks like?",
-          "img": "https://wolf-labs.pages.dev/p/2444f533fd16/hired-your-questions-for-them/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I was wondering who I would work with most closely.",
-          "img": "https://wolf-labs.pages.dev/p/2444f533fd16/hired-your-questions-for-them/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Could you tell me what the next steps are?",
-          "img": "https://wolf-labs.pages.dev/p/2444f533fd16/hired-your-questions-for-them/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2444f533fd16/hired-your-questions-for-them/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A golden question mark in the dark",
       "pede": "Look at the picture: a question mark in the dark. It is the end of an interview, and it is your turn. Write 2 or 3 polite questions with <b>Could you tell me ...</b> or <b>I was wondering ...</b>.",
       "ph": "Could you tell me what ...?",

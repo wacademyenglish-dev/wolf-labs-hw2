@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Twice a Day With Food",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/43e68e5076cc/health-twice-a-day-with-food/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "explaining a medicine: dose and frequency (once / twice / three times a day, every eight hours) · with food, on an empty stomach · should / shouldn't / must not · avoid + -ing · finish the whole course · teach-back (Can you tell me how you're going to take it?)",
   "abrir": "When did you last pick up a medicine at a pharmacy? What did they tell you?",
   "fecho": "Say the dose and how often: <b>once / twice / three times a day</b>, <b>every eight hours</b> (never <i>two times for day</i>). Food: <b>with food</b> or <b>on an empty stomach</b>. Advice: <b>should</b> + plain verb; rules: <b>must not</b>. <b>Avoid</b> + -ing: <i>avoid drinking alcohol</i>. Finish with a teach-back: <b>Can you tell me how you're going to take it?</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia, a pharmacist, explains a new medicine to Leo. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/43e68e5076cc/health-twice-a-day-with-food/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The pharmacy counter",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -121,12 +121,12 @@ window.HW2 = {
       "frases": [
         {
           "t": "Take one tablet twice a day, with food.",
-          "img": "https://wolf-labs.pages.dev/p/43e68e5076cc/health-twice-a-day-with-food/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "You should finish the whole course, even if you feel better.",
-          "img": "https://wolf-labs.pages.dev/p/43e68e5076cc/health-twice-a-day-with-food/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
@@ -177,7 +177,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/43e68e5076cc/health-twice-a-day-with-food/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A pill organizer on the table",
       "pede": "Look at the picture: a pill organizer on a kitchen table. Explain a medicine to a patient in 3 sentences: the dose and <b>how often</b>, food, and one thing to <b>avoid</b>.",
       "ph": "Take one … a day, …",
