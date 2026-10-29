@@ -192,3 +192,26 @@ button:disabled{cursor:default}
 @media (prefers-reduced-motion:reduce){.h2-rod,.mic.ouvindo,.pensando .orbe,.mal{animation:none}.toast{transition:none}}
 @media (min-width:700px){.h2{padding-left:24px;padding-right:24px}.fr{font-size:27px}.h2-img{aspect-ratio:16/7}}
 @media (max-width:400px){.res-topo{grid-template-columns:1fr;text-align:center}.anel{margin:0 auto}}
+
+/* 28/10/2026 · O WOLF ACOMPANHA A LIÇÃO: a abertura com o nome, a pista, a explicação ao vivo, o fim */
+#wabre:empty{display:none}
+.w-abre{margin:14px 0 4px;padding:14px 16px;border-color:rgba(179,156,255,.4);background:linear-gradient(160deg,rgba(155,123,255,.2),rgba(155,123,255,.07))}
+.w-abre .cab{margin-bottom:8px}
+.w-fecha{margin-left:auto;width:30px;height:30px;border:0;border-radius:50%;background:rgba(255,255,255,.07);color:var(--t2);font-size:18px;line-height:1}
+.w-fala{margin:0 0 8px;font-size:15.5px;line-height:1.5;color:var(--t1)}
+.w-fala.pensando{color:var(--t3)}
+.w-perg{margin:2px 0 10px;font:400 19px/1.35 Gloock,Georgia,serif;color:var(--t1)}
+.w-perg small{display:block;margin-top:4px;font:600 13.5px/1.4 Manrope,sans-serif;color:var(--t3)}
+.w-eu{margin:0 0 6px;color:var(--t2);font-style:italic}
+.w-corr{margin:0;font-size:14.5px}
+.w-corr small{display:block;color:var(--t3)}
+.w-campo{margin:4px 0 6px}
+.w-campo .wolfbt{min-height:50px}
+.orbe.mini{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:7px}
+.porque.wolf b{color:#d7ccff}
+.porque.wolf i{color:var(--t2)}
+.lwhy:empty{display:none}
+.lwhy .acoes{margin-top:8px}
+.w-fim p{margin:0 0 6px}
+.w-fim b{color:var(--t1)}
+@media (prefers-reduced-motion:reduce){.pensando .orbe{animation:none}}

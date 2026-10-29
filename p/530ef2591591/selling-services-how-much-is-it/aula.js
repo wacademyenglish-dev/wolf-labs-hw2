@@ -19,7 +19,7 @@ var L = [
   { k: 'dialogo', est: 'l', min: 8, img: 'conversa', rot: 'III · “So, How Much Is It?”', t: 'A finance director asks about the price.', p: 'One question before. Listen. Then the questions.' },
   { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Thousand, Not “Thousands”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
   { k: 'multipla', est: 'f', min: 7, img: 'mesa', rot: 'V · Numbers in the Proposal', t: 'Six lines from a proposal.', p: 'Read the line out loud. Choose. Then say why.' },
-  { k: 'escolha', est: 'o', min: 5, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'calculo', est: 'o', min: 6, img: 'conversa', rot: 'VI · The Savings Calculator', t: 'Change the numbers. Watch the savings.', p: 'Put in the client’s numbers. Then say the result: “You save … a month.”' },
   { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your Three Numbers', t: 'Cost today, your price, the savings.', p: 'Write them. Then say them out loud, slowly and clearly.' },
   { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
@@ -100,3 +100,12 @@ var PODE = [
   'I can say percent and read 1.2 and 4,000 the English way.',
   'I can present three numbers for a proposal.'
 ];
+
+var CALCULO = { rot: 'SAVINGS CALCULATOR', cliente: 'Serra Steel (fictional)',
+  campos: [
+    { k: 'pessoas', r: 'People in payroll', v: 6, un: 'people' },
+    { k: 'horas', r: 'Manual work per month', v: 400, un: 'hours' },
+    { k: 'custo', r: 'Cost of one hour', v: 60, un: 'R$' },
+    { k: 'pct', r: 'Work we automate', v: 40, un: '%' }],
+  fala: 'Say it: “You save … hours a month. That is R$ … a month, and R$ … a year.”',
+  modelo: 'With these numbers, you save one hundred and sixty hours a month. That is nine thousand six hundred reais a month, and one hundred and fifteen thousand two hundred reais a year.' };

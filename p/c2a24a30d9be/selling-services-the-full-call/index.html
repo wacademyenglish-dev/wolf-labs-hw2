@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Full Call · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>SELLING SERVICES</b><span>Business · Made to Measure · Lesson 25</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Full Call · Selling Services · Lesson 25</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 25 (questions review: do · does · is · can · will · wh-). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Leo calls Grace Miller, HR director of Pine Hotels (fictional): a model discovery call from hello to the next step. The student fixes question errors, turns CRM notes into questions, writes his own call script and then uses it in a live discovery call with you as Paula Reyes, finance manager of Coral Bay Resorts (fictional).</p><p style="margin:0 0 6px"><b>About 58 min:</b> I · Your Calls (5) · II · A Full Call (8) · III · The Helper in the Question (8) · IV · From Notes to Questions (7) · V · Your Call Script (9) · VI · The Discovery Call (12) · VII · You Choose (6) · VIII · I Can (3).</p><p style="margin:0"><b>Open with:</b> “How many calls do you make in a week? What’s your first question on a call?”</p></div><!--/prep-->
+    <p>A review of every question form in the course. Brazilians ask with intonation only (“You use SAP?”), drop the helper after What/How many (“What system you use?”), invert like Portuguese (“How many employees has the company?”) and say “Where is located the office?”. Rule: a helper in every question (do, does, is, can, will). Order matters today: he writes the script in V and USES it in VI. In VI you are Paula: answer only what he asks; if a question has no helper, look confused and wait.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>Hi, this is … I’m calling about … Is this a good time? · Do you…? Does she…? · What / Who / How many … do you …? · Can we meet next week? I’ll send you …</p>
+    <h4>YOUR CALLS</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>A FULL CALL</h4>
+    <p>A short audio dialogue (American voices). BEFORE: one question. LISTEN: play it once without stopping (0.75× is fine for A1), then the questions; <b>Show answer</b> after the student tries. The transcript opens only after the audio ends: read it together and point to the highlighted words.</p>
+    <h4>THE HELPER IN THE QUESTION</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>FROM NOTES TO QUESTIONS</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>YOUR CALL SCRIPT</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>THE DISCOVERY CALL</h4>
+    <p>Arena do Cliente: YOU are the client. Read the client card on your screen (only you see the answers). The student asks; you answer ONLY what was asked, short and a little busy. Tap each fact when the student finds it. At the end, Show answer has model questions. (Soon the AI can play the client; the card stays the same.)</p>
+    <h4>YOU CHOOSE</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask him to make one real discovery call this week with the script and tell you what happened in the next class.</p>
+    <div class="glossario-prof" style="margin:18px 0 0;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(127,209,185,.5);background:rgba(127,209,185,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#7fd1b9">THE TECH WORDS · SÓ PARA O PROFESSOR</h4><p style="margin:0 0 8px">O aluno vende serviços B2B. Você não precisa ser especialista; precisa saber do que ele está falando. Não ensine estes termos: deixe que ele explique o trabalho dele (é conversa real).</p><ul style="margin:0;padding-left:18px;line-height:1.55"><li><b>BPO (Business Process Outsourcing)</b>: Terceirização de processos: a empresa contratada EXECUTA uma rotina do cliente (folha de pagamento, contabilidade, fiscal, contas a pagar). O cliente para de fazer aquilo dentro de casa.</li><li><b>BTO (Business Transformation Outsourcing)</b>: Terceirização com transformação: além de executar, a contratada MUDA o processo (tecnologia, automação, integração de sistemas). Vende-se como “melhorar”, não só “fazer por você”.</li><li><b>ERP</b>: Sistema de gestão que integra finanças, compras, estoque, RH etc. Exemplos (marcas): SAP, Oracle, TOTVS. Um BPO/BTO não vende o ERP: trabalha COM ele ou o integra.</li><li><b>Discovery call</b>: Primeira ligação de “descoberta”: o vendedor faz perguntas para entender a empresa, o problema e quem decide, antes de oferecer algo.</li><li><b>Call script</b>: Roteiro da ligação: abertura, perguntas e próximo passo, escritos antes de ligar.</li><li><b>Decision maker</b>: Quem decide/assina a compra (muitas vezes o CFO ou o CEO).</li><li><b>In-house</b>: Feito dentro da própria empresa, com equipe própria (o contrário de terceirizado/outsourced).</li><li><b>Seasonal hiring</b>: Contratação sazonal: empresas (hotéis, varejo) contratam muita gente temporária em certas épocas, o que complica a folha.</li></ul></div>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>You use SAP? (Do you use SAP?)</i>, <i>What system you use? (What system do you use?)</i>, <i>How many employees has the company? (How many employees does the company have?)</i>, <i>Where is located the office? (Where is the office?)</i>. A1+: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · Your Calls and VI · The Discovery Call and VII · You Choose.</li>
+      <li><b>Listen</b>: II · A Full Call.</li>
+      <li><b>Focus</b>: III · The Helper in the Question and IV · From Notes to Questions and VIII · I Can.</li>
+      <li><b>Write</b>: V · Your Call Script.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="revisao.js"></script>
+<script src="dialogo.js"></script>
+<script src="cliente.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SELLING SERVICES · LESSON 25 (A1+) · pergunta-surpresa · 28/10/2026 · 3 perguntas, escolha + frase pronta (regra A1 leve) */
+window.WL_FAISCA = {
+ "nivel": "A1",
+ "qs": [
+  {
+   "cena": "dialogo",
+   "tipo": "Opinion",
+   "q": "Twenty minutes for a first call is…",
+   "opc": [
+    "short",
+    "OK",
+    "long"
+   ],
+   "st": [
+    "I think it’s … because …",
+    "The client …"
+   ],
+   "ex": "I think it’s OK. The client is busy, but six questions is possible.",
+   "push": "Are your first calls long?"
+  },
+  {
+   "cena": "cliente",
+   "tipo": "What if",
+   "q": "The client says: “Sorry, I only have five minutes.” You say…",
+   "opc": [
+    "Can we …?",
+    "OK, just two questions."
+   ],
+   "st": [
+    "No problem. Can we talk on …?",
+    "OK, just two questions: …?"
+   ],
+   "ex": "OK, just two questions: How many employees do you have? Who signs the contracts?",
+   "push": "Does this happen to you?"
+  },
+  {
+   "cena": "escolha",
+   "tipo": "And you?",
+   "q": "Do you take notes on paper or on the computer?",
+   "opc": [
+    "on paper",
+    "on the computer",
+    "on my phone"
+   ],
+   "st": [
+    "I take notes …",
+    "Because it’s …"
+   ],
+   "ex": "I take notes on paper. It’s faster for me.",
+   "push": "Do you read your notes after the call?"
+  }
+ ]
+};
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+</body>
+</html>

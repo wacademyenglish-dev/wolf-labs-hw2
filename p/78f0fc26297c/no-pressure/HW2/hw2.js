@@ -33,6 +33,25 @@
 
    O recado do fim é o MESMO de sempre (wolf:'hw-resultado', placar de
    primeira tentativa) + um recado novo, wolf:'hw2-relatorio'.
+
+   28/10/2026 · O WOLF ACOMPANHA A LIÇÃO (desenho HFPprMBW1gub8EhEmMYAGe):
+     · abertura: o Wolf chama o aluno pelo nome e liga com algo real
+       ("Oi, Marina! Semana passada o -es te pegou…") + uma pergunta
+       pessoal ligada ao assunto (hw_abertura, feita 1 vez por dia);
+       o aluno responde em inglês e o Wolf comenta (hw_comenta).
+     · Focus: acertou de primeira = só comemora (grátis). 1º erro =
+       a PISTA PRONTA (pistas.js, window.HW2_WOLF, escrita uma vez em
+       lote; nunca entrega a resposta). 2º erro = o Wolf ao vivo lê a
+       resposta e explica o erro DELE, com exemplo da vida dele
+       (hw_explica; a parte geral fica guardada para o próximo aluno).
+     · o "por quê?" (orbe) em toda pergunta, já respondida: o aluno
+       escreve a dúvida do jeito dele (porque + duvida).
+     · fim: o que melhorou, o que volta, as correções vão para o
+       caderno (wolf:'hw2-caderno') e o professor recebe o resumo.
+     · A1/A2: o Wolf fala português simples; B1+: só inglês. Lição
+       bíblica (WOLFAITH): nunca marca o versículo como errado.
+     · as respostas que a tela mostra chegam em pedaços (vivo:true →
+       wolf:'hw-ia-parcial').
    ================================================================ */
 (function () {
   'use strict';
@@ -43,6 +62,13 @@
   var PARA = Q.get('wl');
   var NA_PLATAFORMA = (function () { try { return window.parent !== window && !!PARA; } catch (e) { return false; } })();
   var ORDEM = ['listen', 'out', 'focus', 'write', 'you'];
+  /* 28/10 · o Wolf na lição: pistas prontas (pistas.js), a língua do Wolf e a regra da lição bíblica */
+  var WOLF = window.HW2_WOLF || {};
+  var PISTAS = WOLF.pistas || {};
+  var BAIXO = /^A[12]/i.test(String(H.nivel || ''));
+  var BIBLICA = !!WOLF.biblica || /WOLFAITH/i.test(decodeURIComponent(location.pathname)) || /WOLFAITH/i.test(String(H.linha || ''));
+  function W(en, pt) { return BAIXO ? pt : en; }
+  var VIVAS = BAIXO ? ['Isso!', 'Boa!', 'Perfeito!', 'Mandou bem!'] : ['Nice!', 'Spot on!', 'Exactly!', 'Well done!'];
   var NOME = { listen: 'Listen', out: 'Out loud', focus: 'Focus', write: 'Write', you: 'You' };
   var LETRA = { listen: 'L', out: 'O', focus: 'F', write: 'W', you: 'Y' };
 
@@ -183,30 +209,37 @@
 
   /* ── a ponte da IA (pela plataforma) ─────────────────────────── */
   var IA = (function () {
-    var pend = {}, n = 0, origem = null;
+    var pend = {}, parc = {}, n = 0, origem = null;
     try { origem = PARA ? new URL(PARA).origin : null; } catch (e) {}
     var mock = Q.get('mock') === '1';
     window.addEventListener('message', function (ev) {
-      var d = ev.data; if (!d || d.wolf !== 'hw-ia-resposta') return;
+      var d = ev.data; if (!d || (d.wolf !== 'hw-ia-resposta' && d.wolf !== 'hw-ia-parcial')) return;
       if (ev.source !== window.parent || (origem && ev.origin !== origem)) return;
-      var f = pend[d.id]; if (!f) return; delete pend[d.id]; f(d);
+      if (d.wolf === 'hw-ia-parcial') { var fp = parc[d.id]; if (fp) fp(String(d.t || '')); return; }
+      var f = pend[d.id]; if (!f) return; delete pend[d.id]; delete parc[d.id]; f(d);
     });
     function falso(modo, c) {
       var s = {
         confere: { certo: aceita(c.resposta, c.chave) || /\b(so|because|but|and)\b/i.test(c.resposta || ''), comentario: 'Mock: same meaning, another order.', outra_forma: c.chave },
         porque: { explica: 'Mock: o resultado vem depois de so; a razão vem depois de because.', regra: 'A, so B = B because A' },
         dica_pron: { palavra: 'eggs', silabas: 'EGGS', dica: 'Mock: termine com um z bem curto: egz.' },
-        corrige: { fixes: /\bi\b/.test(c.texto || '') ? [{ errado: 'i', certo: 'I', porque: 'Mock: I é sempre maiúsculo.' }] : [], elogio: 'Mock: nice use of because!' }
+        corrige: { fixes: /\bi\b/.test(c.texto || '') ? [{ errado: 'i', certo: 'I', porque: 'Mock: I é sempre maiúsculo.' }] : [], elogio: 'Mock: nice use of because!' },
+        hw_abertura: { abertura: 'Mock: Oi, Marina! Semana passada o -es te pegou. Hoje ele volta.', pergunta: 'Mock: What did you buy this week, and why?', ajuda_pt: 'Mock: O que você comprou esta semana, e por quê?' },
+        hw_explica: { explica: 'Mock: você pensou certo, mas o motivo vem depois de because.', regra: 'because + motivo', exemplo: 'Mock: I study English because I love music.' },
+        hw_comenta: { comentario: 'Mock: Bread and coffee, a good start! I like it.', correcao: null }
       }[modo];
       return new Promise(function (ok) { setTimeout(function () { ok(s ? { ok: true, saida: s } : { ok: false, erro: 'dados' }); }, 450); });
     }
-    function pede(modo, dados) {
+    /* op.vivo + op.parcial(t): a resposta chega em pedaços (streaming), quando a plataforma sabe fazer */
+    function pede(modo, dados, op) {
+      op = op || {};
       if (mock) return falso(modo, dados || {});
       if (!NA_PLATAFORMA) return Promise.resolve({ ok: false, erro: 'fora' });
       return new Promise(function (ok) {
         var id = 'ia' + (++n) + '-' + Date.now().toString(36); pend[id] = ok;
-        try { window.parent.postMessage({ wolf: 'hw-ia', v: 1, id: id, modo: modo, dados: dados }, PARA); } catch (e) { delete pend[id]; ok({ ok: false, erro: 'fora' }); return; }
-        setTimeout(function () { if (pend[id]) { delete pend[id]; ok({ ok: false, erro: 'tempo' }); } }, 25000);
+        if (op.parcial) parc[id] = op.parcial;
+        try { window.parent.postMessage({ wolf: 'hw-ia', v: 1, id: id, modo: modo, dados: dados, vivo: !!op.parcial }, PARA); } catch (e) { delete pend[id]; delete parc[id]; ok({ ok: false, erro: 'fora' }); return; }
+        setTimeout(function () { if (pend[id]) { delete pend[id]; delete parc[id]; ok({ ok: false, erro: 'tempo' }); } }, 25000);
       });
     }
     return { pede: pede, ligada: function () { return mock || NA_PLATAFORMA; } };
@@ -326,9 +359,10 @@
 
   /* ── o estado (localStorage) ─────────────────────────────────── */
   var CH = 'wolf-hw2-' + H.id;
-  function novo() { return { v: 1, p: 0, fez: {}, listen: { ouviu: false, r: {} }, out: {}, focus: {}, write: { t: '', ia: null }, you: { t: [], ia: [] }, erros: [], t0: Date.now(), t1: null }; }
+  function novo() { return { v: 1, p: 0, fez: {}, listen: { ouviu: false, r: {} }, out: {}, focus: {}, write: { t: '', ia: null }, you: { t: [], ia: [] }, erros: [], t0: Date.now(), t1: null, wolf: { abre: null, resp: '', com: null, fechou: 0 } }; }
   var S = novo();
   try { var g = JSON.parse(localStorage.getItem(CH)); if (g && g.v === 1) S = g; } catch (e) {}
+  if (!S.wolf) S.wolf = { abre: null, resp: '', com: null, fechou: 0 };
   function grava() { try { localStorage.setItem(CH, JSON.stringify(S)); } catch (e) {} }
   (function () { var p = +Q.get('p'); if (p >= 1 && p <= 6) S.p = p - 1; })();
   function anotaErro(q, minha, certa) {
@@ -375,9 +409,47 @@
     var m = $('#main');
     if (S.p >= ORDEM.length) { m.innerHTML = resultado(); letras(); rodape(); envia(); window.scrollTo(0, 0); return; }
     var k = ORDEM[S.p];
-    m.innerHTML = '<section class="h2-rod" data-rodada="' + k + '">' + PINTA[k]() + '</section>';
+    m.innerHTML = (S.p === 0 ? '<div id="wabre"></div>' : '') + '<section class="h2-rod" data-rodada="' + k + '">' + PINTA[k]() + '</section>';
     if (LIGA_[k]) LIGA_[k]();
+    if (S.p === 0) abertura();
     letras(); rodape(); window.scrollTo(0, 0);
+  }
+
+  /* ── 28/10 · o Wolf abre a lição: o nome do aluno + uma pergunta pessoal ── */
+  function wolfCaixa(cls, cab, corpo) { return '<div class="wolf-res ' + (cls || '') + '"><div class="cab"><span class="orbe"></span>' + cab + '</div>' + corpo + '</div>'; }
+  function abertura() {
+    var box = $('#wabre'); if (!box || S.wolf.fechou) return;
+    var a = S.wolf.abre;
+    if (!a) {
+      if (!IA.ligada() || abertura.pediu) return;
+      abertura.pediu = 1;
+      box.innerHTML = wolfCaixa('w-abre pensando', 'Wolf', W('Getting your lesson ready…', 'Preparando a sua lição…'));
+      IA.pede('hw_abertura', { titulo: texto(H.titulo), alvo: H.alvo, licao: H.id, biblica: BIBLICA }).then(function (r) {
+        if (!r.ok || !r.saida || !r.saida.abertura) { box.innerHTML = ''; return; }
+        S.wolf.abre = { abertura: r.saida.abertura, pergunta: r.saida.pergunta || '', ajuda_pt: r.saida.ajuda_pt || '' }; grava(); abertura();
+      });
+      return;
+    }
+    var com = S.wolf.com;
+    box.innerHTML = '<div class="wolf-res w-abre"><div class="cab"><span class="orbe"></span>Wolf<button class="w-fecha" data-wfecha aria-label="' + W('Close', 'Fechar') + '">×</button></div>' +
+      '<p class="w-fala">' + esc(a.abertura) + '</p>' +
+      (a.pergunta ? '<p class="w-perg">' + esc(a.pergunta) + (a.ajuda_pt ? '<small>' + esc(a.ajuda_pt) + '</small>' : '') + '</p>' +
+        (com ? '<p class="w-eu">“' + esc(S.wolf.resp) + '”</p><p class="w-fala">' + esc(com.comentario || '') + '</p>' +
+               (com.correcao && com.correcao.certo ? '<p class="w-corr"><s>' + esc(com.correcao.errado) + '</s> → <ins>' + esc(com.correcao.certo) + '</ins>' + (com.correcao.porque ? '<small>' + esc(com.correcao.porque) + '</small>' : '') + '</p>' : '')
+             : '<div class="campo w-campo"><textarea rows="1" id="wresp" maxlength="300" placeholder="' + W('Answer in English…', 'Responda em inglês…') + '" aria-label="' + esc(a.pergunta) + '">' + esc(S.wolf.resp || '') + '</textarea><button class="bt" data-wresp>' + W('Send', 'Enviar') + '</button></div>' +
+               '<button class="verex" data-wfecha>' + W('Maybe later', 'Agora não') + '</button>') : '') +
+      '</div>';
+  }
+  function respondeAbertura(bt) {
+    var ta = $('#wresp'), t = (ta && ta.value || '').trim();
+    if (t.length < 3) { if (ta) { ta.classList.add('mal'); setTimeout(function () { ta.classList.remove('mal'); }, 340); } return; }
+    S.wolf.resp = t.slice(0, 300); grava(); bt.disabled = true;
+    var corpo = $('#wabre .w-campo'); var vivo = document.createElement('p'); vivo.className = 'w-fala pensando'; vivo.textContent = W('Wolf is reading…', 'O Wolf está lendo…');
+    corpo.parentNode.insertBefore(vivo, corpo.nextSibling);
+    IA.pede('hw_comenta', { pergunta: S.wolf.abre.pergunta, resposta: S.wolf.resp, alvo: H.alvo, titulo: texto(H.titulo), licao: H.id }, { parcial: function (t) { vivo.classList.remove('pensando'); vivo.textContent = t; } }).then(function (r) {
+      if (!r.ok) { bt.disabled = false; vivo.textContent = erroIA(r); return; }
+      S.wolf.com = { comentario: r.saida.comentario || '', correcao: r.saida.correcao || null }; grava(); abertura();
+    });
   }
 
   /* ── L · Listen ──────────────────────────────────────────────── */
@@ -395,7 +467,7 @@
         var ops = baralha(q.op.map(function (o, i) { return { o: o, i: i }; }), j + 3);
         return '<div class="q" data-j="' + j + '"><p class="q-t">' + (j + 1) + '. ' + esc(q.q) + '</p><div class="ops">' +
           ops.map(function (x, n) { return '<button class="op" data-op="' + x.i + '"><i>' + 'ABC'.charAt(n) + '</i><span>' + esc(x.o) + '</span></button>'; }).join('') +
-          '</div><p class="porque" hidden></p></div>';
+          '</div><p class="porque" hidden></p><div class="lwhy" id="lwhy' + j + '"></div></div>';
       }).join('') + '</div>';
   };
   LIGA_.listen = function () {
@@ -432,6 +504,7 @@
     $$('.op', q).forEach(function (b) { b.disabled = true; var i = +b.getAttribute('data-op'); if (i === it.a) b.classList.add('certo'); else if (i === escolha) b.classList.add('errado'); });
     var pq = $('.porque', q); pq.hidden = false; pq.className = 'porque' + (escolha === it.a ? '' : ' no');
     pq.innerHTML = (escolha === it.a ? 'Yes. ' : 'Not this time. ') + '<i>“' + esc(it.por) + '”</i>';
+    var lw = $('#lwhy' + j); if (lw && IA.ligada() && !lw.innerHTML) lw.innerHTML = botaoPorque('l' + j);
     if (novo) {
       S.listen.r[j] = { esc: escolha, ok: escolha === it.a }; if (escolha !== it.a) anotaErro('Listen: ' + it.q, it.op[escolha], it.op[it.a]);
       grava();
@@ -675,25 +748,46 @@
     });
   }
   function certoFocus(j, resp, nota, viaIA) {
-    var s = S.focus[j]; s.fim = 1; s.certo = 1; s.primeira = !s.n; s.final = resp; s.nota = (viaIA ? 'Wolf: correct! ' : '') + (nota || ''); grava();
+    var s = S.focus[j]; s.fim = 1; s.certo = 1; s.primeira = !s.n; s.final = resp;
+    /* 28/10: acertou de primeira, o Wolf só comemora (grátis) */
+    if (!viaIA && !nota && s.primeira) nota = 'Wolf: ' + VIVAS[j % VIVAS.length];
+    s.nota = (viaIA ? 'Wolf: correct! ' : '') + (nota || ''); grava();
     fechaItem($('.it[data-j="' + j + '"]'), j, true, resp, s.nota, false);
     confereFocusFim();
   }
   function erradoFocus(j, resp, nota) {
     var it = R.focus.itens[j], s = S.focus[j], box = $('.it[data-j="' + j + '"]'), pq = $('#pq' + j);
-    s.n = (s.n || 0) + 1; s.ultima = resp; if (s.n === 1) anotaErro('Focus: ' + texto(it.t) + (it.mostra ? ' — ' + it.mostra : ''), resp, it.r);
+    s.n = (s.n || 0) + 1; s.ultima = resp; if (s.n === 1) { s.err1 = resp; anotaErro('Focus: ' + texto(it.t) + (it.mostra ? ' — ' + it.mostra : ''), resp, it.r); }
     box.classList.add('mal'); setTimeout(function () { box.classList.remove('mal'); }, 340);
     if (s.n >= CHANCES) { s.fim = 1; s.certo = 0; s.final = it.r; grava(); fechaItem(box, j, false, it.r, nota, false); confereFocusFim(); return; }
     grava();
     pq.hidden = false; pq.className = 'porque no';
-    pq.innerHTML = 'Not yet.' + (nota ? ' <i>' + esc(nota) + '</i>' : '') + ' (' + (CHANCES - s.n) + ' ' + (CHANCES - s.n === 1 ? 'try' : 'tries') + ' left)';
+    var resta = ' (' + (CHANCES - s.n) + ' ' + (CHANCES - s.n === 1 ? 'try' : 'tries') + ' left)';
+    var pista = PISTAS['f' + j];
+    if (s.n === 1 && pista) {
+      /* 28/10 · 1º erro: a pista pronta (escrita antes, sem custo; nunca a resposta) */
+      pq.className = 'porque wolf'; pq.innerHTML = '<span class="orbe mini"></span>' + W('Almost! ', 'Quase! ') + esc(pista) + '<small>' + resta.trim() + '</small>';
+    } else if (s.n === 2 && IA.ligada()) {
+      /* 28/10 · 2º erro: o Wolf lê a resposta e explica o erro DELE, ao vivo */
+      pq.className = 'porque wolf pensando'; pq.innerHTML = '<span class="orbe mini"></span><span class="w-vivo">' + W('Wolf is reading your answer…', 'O Wolf está lendo a sua resposta…') + '</span>';
+      s.ajuda = 1; grava();
+      var alvoTxt = $('.w-vivo', pq);
+      IA.pede('hw_explica', { licao: H.id, item: 'f' + j, titulo: texto(H.titulo), alvo: H.alvo, pergunta: texto(it.t) + (it.mostra ? ' — ' + it.mostra : ''), certa: it.r, minha: resp, pista: pista || '', dica: texto(it.d || ''), biblica: BIBLICA },
+        { parcial: function (t) { pq.classList.remove('pensando'); alvoTxt.textContent = t; } }).then(function (r) {
+        pq.classList.remove('pensando');
+        if (!r.ok) { pq.className = 'porque no'; pq.innerHTML = 'Not yet.' + (nota ? ' <i>' + esc(nota) + '</i>' : '') + resta; return; }
+        var x = r.saida || {};
+        pq.innerHTML = '<span class="orbe mini"></span>' + esc(x.explica || '') + (x.regra ? '<br><b>' + esc(x.regra) + '</b>' : '') + (x.exemplo ? '<br><i>“' + esc(x.exemplo) + '”</i>' : '') + '<small>' + resta.trim() + '</small>';
+      });
+    } else pq.innerHTML = 'Not yet.' + (nota ? ' <i>' + esc(nota) + '</i>' : '') + resta;
     $('#tent' + j).textContent = '';
-    porqueBt(j);
   }
   function porqueBt(j) {
-    var w = $('#why' + j); if (w.innerHTML) return;
-    w.innerHTML = '<div class="acoes"><button class="wolfbt" data-why="' + j + '"><span class="orbe"></span>Why?</button></div>';
+    var w = $('#why' + j); if (!w || w.innerHTML) return;
+    w.innerHTML = botaoPorque('f' + j);
   }
+  /* 28/10 · o "por quê?" (orbe) em toda pergunta já respondida: abre um campo para a dúvida do aluno */
+  function botaoPorque(k) { return '<div class="acoes"><button class="wolfbt" data-why="' + k + '"><span class="orbe"></span>' + W('Why?', 'Por quê?') + '</button></div>'; }
   function fechaItem(box, j, certo, final, nota, restaura) {
     var it = R.focus.itens[j], pq = $('#pq' + j);
     box.classList.add(certo ? 'certo' : 'revelado');
@@ -703,18 +797,36 @@
     pq.hidden = false; pq.className = 'porque' + (certo ? (/^Wolf/.test(nota) ? ' wolf' : '') : ' no');
     pq.innerHTML = certo ? (nota ? esc(nota) : 'Yes! <i>' + esc(it.r) + '</i>') + (it.d ? '<small>' + it.d + '</small>' : '')
                          : 'The answer: <b>' + esc(it.r) + '</b>' + (it.d ? '<small>' + it.d + '</small>' : '');
-    if (!certo) porqueBt(j);
+    if (IA.ligada() || !certo) porqueBt(j);
   }
   function confereFocusFim() { if (R.focus.itens.every(function (x, j) { return S.focus[j] && S.focus[j].fim; })) feito('focus'); }
-  function porQue(j, bt) {
-    var it = R.focus.itens[j], s = S.focus[j] || {}, w = $('#why' + j);
-    bt.disabled = true; bt.classList.add('pensando'); bt.lastChild.textContent = 'Wolf is thinking…';
-    var semIA = function (msg) { w.innerHTML = '<div class="wolf-res"><div class="cab"><span class="orbe"></span>Why</div>' + (it.d || esc(it.r)) + (msg ? '<br><small>' + esc(msg) + '</small>' : '') + '</div>'; };
+  /* k = 'f3' (Focus) ou 'l1' (Listen). 1º toque: abre o campo da dúvida (opcional); 2º: pergunta ao Wolf */
+  function dadosDoItem(k) {
+    var j = +k.slice(1);
+    if (k.charAt(0) === 'l') {
+      var q = R.listen.perguntas[j], v = S.listen.r[j] || {};
+      return { w: $('#lwhy' + j), sem: esc(q.por), pergunta: 'Listening: ' + q.q, certa: q.op[q.a], minha: v.ok ? '' : (q.op[v.esc] || ''), dica: q.por };
+    }
+    var it = R.focus.itens[j], s = S.focus[j] || {};
+    return { w: $('#why' + j), sem: it.d || esc(it.r), pergunta: texto(it.t) + (it.mostra ? ' — ' + it.mostra : ''), certa: it.r, minha: s.certo ? '' : (s.ultima || ''), dica: texto(it.d || '') };
+  }
+  function porQue(k, bt) {
+    var d = dadosDoItem(k), w = d.w;
+    var semIA = function (msg) { w.innerHTML = wolfCaixa('', W('Why', 'Por quê'), d.sem + (msg ? '<br><small>' + esc(msg) + '</small>' : '')); };
     if (!IA.ligada()) return semIA('');
-    IA.pede('porque', { pergunta: texto(it.t) + (it.mostra ? ' — ' + it.mostra : ''), certa: it.r, minha: s.ultima || '', dica: texto(it.d || '') }).then(function (r) {
+    if (!bt.hasAttribute('data-pronto')) {
+      w.innerHTML = '<div class="campo w-campo"><textarea rows="1" id="wd' + k + '" maxlength="240" placeholder="' + W('Your question (optional)…', 'Sua dúvida (se quiser)…') + '" aria-label="' + W('Your question', 'Sua dúvida') + '"></textarea>' +
+        '<button class="wolfbt" data-why="' + k + '" data-pronto><span class="orbe"></span>' + W('Ask Wolf', 'Perguntar') + '</button></div>';
+      var ta = $('#wd' + k); if (ta) ta.focus();
+      return;
+    }
+    var duvida = (($('#wd' + k) || {}).value || '').trim();
+    w.innerHTML = '<div class="wolf-res pensando"><div class="cab"><span class="orbe"></span>' + W('Why · Wolf', 'Por quê · Wolf') + '</div><span class="w-vivo">' + W('Wolf is thinking…', 'O Wolf está pensando…') + '</span></div>';
+    var vivo = $('.w-vivo', w);
+    IA.pede('porque', { pergunta: d.pergunta, certa: d.certa, minha: d.minha, dica: d.dica, duvida: duvida, biblica: BIBLICA }, { parcial: function (t) { w.firstChild.classList.remove('pensando'); vivo.textContent = t; } }).then(function (r) {
       if (!r.ok) return semIA(erroIA(r));
       var x = r.saida || {};
-      w.innerHTML = '<div class="wolf-res"><div class="cab"><span class="orbe"></span>Why · Wolf</div>' + esc(x.explica || '') + (x.regra ? '<br><b>' + esc(x.regra) + '</b>' : '') + (x.treino ? '<br><small>Try: ' + esc(x.treino) + '</small>' : '') + '</div>';
+      w.innerHTML = wolfCaixa('', W('Why · Wolf', 'Por quê · Wolf'), (duvida ? '<p class="w-eu">“' + esc(duvida) + '”</p>' : '') + esc(x.explica || '') + (x.regra ? '<br><b>' + esc(x.regra) + '</b>' : '') + (x.treino ? '<br><small>' + W('Try: ', 'Tente: ') + esc(x.treino) + '</small>' : ''));
     });
   }
 
@@ -839,9 +951,30 @@
       (c.sons.t ? (c.sons.trocas.length ? '<li>Sounds to practise: ' + praticar(c.sons.trocas) + '</li>' : '<li>All the sounds we checked sounded right.</li>') : '') +
       (S.erros.length ? S.erros.slice(0, 4).map(function (e) { return '<li>' + esc(e.certa) + '</li>'; }).join('') : '') +
       '</ul><p class="envio" id="envio">' + (NA_PLATAFORMA ? 'Sending to your teacher…' : 'Open this homework in the Wolf Labs app to send it to your teacher.') + '</p></div>' +
+      fimWolf(c) +
       (H.fecho ? '<div class="vidro"><p class="dicapt" style="margin:0">' + H.fecho + '</p></div>' : '') +
       '<div class="acoes" style="justify-content:center;margin-top:14px"><button class="bt gh" id="refaz">Do it again</button></div></section>';
   }
+  /* 28/10 · o Wolf fecha a lição: o que melhorou e o que volta (sem IA: feito com o que já foi registrado) */
+  function correcoes() {
+    return R.focus.itens.map(function (it, j) { var s = S.focus[j] || {}; return s.err1 ? { errado: s.err1, certo: it.r } : null; }).filter(Boolean).slice(0, 3);
+  }
+  function fimWolf(c) {
+    var boas = c.rodadas.filter(function (r) { return r.de && r.certas === r.de; }).map(function (r) { return { listen: 'Listen', out: 'Out loud', focus: 'Focus' }[r.k]; });
+    var volta = S.erros.slice(0, 2).map(function (e) { return '<b>' + esc(e.certa) + '</b>'; });
+    var ajudas = R.focus.itens.filter(function (x, j) { return S.focus[j] && S.focus[j].ajuda; }).length;
+    var cad = correcoes();
+    if (!boas.length && !volta.length && !cad.length) return '';
+    return '<div class="vidro">' + wolfCaixa('w-fim', 'Wolf',
+      (boas.length ? '<p>' + W('Strong today: ', 'Forte hoje: ') + boas.join(', ') + '.</p>' : '') +
+      (volta.length ? '<p>' + W('Coming back next time: ', 'Volta na próxima: ') + volta.join(' · ') + '</p>' : '<p>' + W('Nothing to bring back. Great job!', 'Nada para voltar. Muito bem!') + '</p>') +
+      (ajudas ? '<p><small>' + W(ajudas + ' with Wolf’s help.', ajudas + ' com a ajuda do Wolf.') + '</small></p>' : '') +
+      (cad.length && NA_PLATAFORMA ? '<p id="wcad"><small>' + W('Saving your fixes to My notes…', 'Guardando as correções no seu caderno…') + '</small></p>' : '')) + '</div>';
+  }
+  window.addEventListener('message', function (ev) {
+    var d = ev.data; if (!d || d.wolf !== 'hw2-caderno-resposta' || ev.source !== window.parent) return;
+    var el = $('#wcad'); if (el) el.innerHTML = '<small>' + (d.ok && d.n ? W(d.n === 1 ? '1 fix went to My notes.' : d.n + ' fixes went to My notes.', d.n === 1 ? '1 correção foi para o seu caderno.' : d.n + ' correções foram para o seu caderno.') : W('Your teacher has your fixes.', 'Seu professor tem as suas correções.')) + '</small>';
+  });
   var ENVIADO = '';
   function envia() {
     if (!NA_PLATAFORMA) return;
@@ -856,13 +989,15 @@
     var falaNota = [];
     if (c.nao.length) falaNota.push('não entendeu: ' + c.nao.slice(0, 4).join(', '));
     if (c.sons.t) falaNota.push('sons certos ' + Math.round(100 * c.sons.c / c.sons.t) + '%');
-    var nota = (falaNota.length ? falaNota.join(' · ') : 'fala ok') + (S.erros.length ? ' · ' + S.erros.length + ' erro' + (S.erros.length > 1 ? 's' : '') : '');
+    var ajudas = R.focus.itens.filter(function (x, j) { return S.focus[j] && S.focus[j].ajuda; }).length;
+    var nota = (falaNota.length ? falaNota.join(' · ') : 'fala ok') + (S.erros.length ? ' · ' + S.erros.length + ' erro' + (S.erros.length > 1 ? 's' : '') : '') + (ajudas ? ' · ' + ajudas + ' com ajuda do Wolf' : '');
     try {
       window.parent.postMessage({ wolf: 'hw2-relatorio', v: 1, dados: dados }, PARA);
       window.parent.postMessage({ wolf: 'hw-resultado', v: 1, tarefa: Q.get('t') || null, hw: 'hw2-' + H.id, placar: c.som, de: c.de,
         segundaTentativa: c.itens.map(function (x, i) { return x.ok ? null : i + 1; }).filter(Boolean),
         respostas: c.itens.map(function (x, i) { return { q: i + 1, primeira: x.ok, t: x.t.slice(0, 240), c: x.c, w: x.w ? x.w.slice(0, 240) : null }; }),
         nota: nota, em: new Date().toISOString() }, PARA);
+      var cad = correcoes(); if (cad.length) window.parent.postMessage({ wolf: 'hw2-caderno', v: 1, itens: cad }, PARA);
     } catch (e) {}
   }
   window.addEventListener('message', function (ev) {
@@ -899,7 +1034,9 @@
     if (t.hasAttribute('data-limpa')) { var jl = t.getAttribute('data-limpa'); $$('#lin' + jl + ' .ficha').forEach(function (b) { $('#fic' + jl).appendChild(b); }); return; }
     if (t.hasAttribute('data-check')) { confereFocus(+t.getAttribute('data-check'), t); return; }
     if (t.hasAttribute('data-mostra')) { var jm = +t.getAttribute('data-mostra'), itm = R.focus.itens[jm], sm = S.focus[jm] = S.focus[jm] || { n: 0 }; if (sm.fim) return; if (!sm.n) anotaErro('Focus: ' + texto(itm.t) + (itm.mostra ? ' — ' + itm.mostra : ''), '(showed the answer)', itm.r); sm.n = Math.max(1, sm.n); sm.fim = 1; sm.certo = 0; sm.final = itm.r; grava(); fechaItem($('.it[data-j="' + jm + '"]'), jm, false, itm.r, '', false); confereFocusFim(); return; }
-    if (t.hasAttribute('data-why')) { porQue(+t.getAttribute('data-why'), t); return; }
+    if (t.hasAttribute('data-why')) { var kw = t.getAttribute('data-why'); porQue(/^[fl]/.test(kw) ? kw : 'f' + kw, t); return; }
+    if (t.hasAttribute('data-wresp')) { respondeAbertura(t); return; }
+    if (t.hasAttribute('data-wfecha')) { S.wolf.fechou = 1; grava(); var wb = $('#wabre'); if (wb) wb.innerHTML = ''; return; }
     /* write */
     if (t.id === 'wex') { $('#wexp').hidden = false; t.hidden = true; return; }
     if (t.id === 'wcheck') {
@@ -924,7 +1061,7 @@
   // campo de resposta é textarea de uma linha que cresce: frase longa não some no celular
   function cresce(el) { el.style.height = 'auto'; el.style.height = (el.scrollHeight + 3) + 'px'; }
   document.addEventListener('input', function (e) { if (e.target.matches && e.target.matches('.campo textarea')) cresce(e.target); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Enter' && e.target.matches && e.target.matches('.campo input, .campo textarea')) { e.preventDefault(); var b = e.target.parentNode.querySelector('[data-check]'); if (b) b.click(); } });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Enter' && e.target.matches && e.target.matches('.campo input, .campo textarea')) { e.preventDefault(); var b = e.target.parentNode.querySelector('[data-check],[data-wresp],[data-why]'); if (b) b.click(); } });
 
   /* para o teste automático (e para depurar): o motor por dentro */
   window.__hw2 = { aceita: aceita, comparaFala: comparaFala, normal: normal, estado: function () { return S; }, contas: contas, pron: Pron };
