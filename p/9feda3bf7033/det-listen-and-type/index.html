@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>Listen and Type · DET Prep · Lesson 6 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Listen and Type question: the student hears one sentence (up to three times) and types it exactly. Fast speech hides things: linked words (wanna), weak small words (of sounds like “a”), quiet endings (-ed, -s) and words with the same sound (they’re / their).</p><p style="margin:0 0 6px"><b>The story:</b> No story: eight sentences from everyday life, in five accents (American, British, Australian, Indian, Irish, Canadian), recorded with neural voices.</p><p style="margin:0 0 6px"><b>About 37 min:</b> I · Where Words Hide (9) · II · Eight Sentences (16) · III · Memory (8) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> Say fast: “I wanna go.” Ask: “How do you write it?” The answer is the lesson.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Listen and Type question: the student hears one sentence (up to three times) and types it exactly. Fast speech hides things: linked words (wanna), weak small words (of sounds like “a”), quiet endings (-ed, -s) and words with the same sound (they’re / their).</p><p style="margin:0 0 6px"><b>The story:</b> No story: eight sentences from everyday life, in five accents (American, British, Australian, Indian, Irish, Canadian), recorded with neural voices.</p><p style="margin:0 0 6px"><b>About 44 min:</b> I · Where Words Hide (9) · II · Eight Sentences (16) · III · What Trips You Up? (7) · IV · Memory (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> Say fast: “I wanna go.” Ask: “How do you write it?” The answer is the lesson.</p></div><!--/prep-->
     <p>The audio plays up to three times, like the test. Teach the three listens: meaning, details, check. Punctuation does not count in our check; spelling does.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>want to / going to (not wanna / gonna) · weak small words: of, a, to · quiet -ed and -s · they’re / their / there · to / too · your / you’re · three listens: meaning, details, check</p>
@@ -53,10 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. If the student misses small words, play the sentence again and ask them to count the words first.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>wanna</i>, <i>a cup a tea</i>, <i>yesterday I walk</i>, <i>their late</i>, <i>your late</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>WHAT TRIPS YOU UP? (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the eight sentences, the student stops and thinks about their own listening. They put five problems in order, from the hardest to the easiest, and explain the top one and the last one with a real example from today. Wait five seconds in silence. Then tap Show my teacher’s order, compare, and agree on one top 3 together. Use the PUSH line to turn it into a plan for this week. Recast quietly while they talk (want to, going to, the -ed endings); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
-      <li><b>Listen</b>: I · Where Words Hide and II · Eight Sentences and III · Memory.</li>
-      <li><b>Focus</b>: IV · I Can.</li>
+      <li><b>Listen</b>: I · Where Words Hide and II · Eight Sentences and IV · Memory.</li>
+      <li><b>Out loud</b>: III · What Trips You Up?</li>
+      <li><b>Focus</b>: V · I Can.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -69,5 +73,41 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DET PREP 06 · LISTEN AND TYPE · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'descobre', tipo: 'And you?', q: 'What do you listen to in English: series, music, podcasts or nothing yet?',
+    opc: ['Series', 'Music', 'Podcasts'], st: ['I usually listen to …', 'I want to … (not “wanna”)'],
+    ex: 'Series, with subtitles in English. I want to try without subtitles, but they speak so fast.', push: 'Which series is the hardest to understand?' },
+  { cena: 'ditado', tipo: 'Would you rather', q: 'Would you rather understand every accent a little, or one accent perfectly?',
+    opc: ['Every accent a little', 'One accent perfectly'], st: ['I’d rather …, because …', 'For example, …'],
+    ex: 'Every accent a little. At work I talk to people from India, the UK and the USA, so I need all of them.', push: 'Which accent from today was the easiest for you?' },
+  { cena: 'memoria', tipo: 'Opinion', q: 'People write “your” for “you’re” in messages all the time. Does it bother you?',
+    opc: ['Yes, a lot', 'A little', 'Not at all'], st: ['It bothers me, because …', 'Honestly, I think …'],
+    ex: 'A little. In a message to a friend it’s fine. In a job application, it looks careless.', push: 'Do you make the same kind of mistake in Portuguese?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DET PREP 06 · LISTEN AND TYPE (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O ranking entra DEPOIS de "II · Eight Sentences" (apos: 'ditado'), no MEIO da aula, antes da Memory. Depois de oito
+   frases com seis sotaques, o aluno ordena o que mais o atrapalha ao ouvir e compara com a ordem do professor.
+   Os esconderijos da aula (want to / going to, of, -ed, they’re / their / there) são os próprios itens, e os
+   iniciadores pedem a forma escrita (want to, not wanna). O "IV · I Can" (agora V) fica por último com o link da lição de casa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'ranking', apos: 'ditado', est: 'o', min: 7, img: 'conversa', rot: 'What Trips You Up?',
+    t: 'Eight sentences, six accents. What was hardest for you?',
+    p: 'Put the five problems in order: 1 is the hardest for you. Then compare with your teacher’s order.',
+    formato: 'ranking',
+    q: 'What makes listening hard for you?',
+    itens: ['Fast speech: “wanna”, “gonna”', 'Small words: of, to, a', 'Quiet endings: -ed, -s', 'Same sound: their, there, they’re', 'Accents I don’t know'],
+    prof: [2, 4, 1, 0, 3],
+    dica: 'Tap from the hardest to the easiest. Tap again to take it out.',
+    st: ['For me, the hardest is …, because …', 'When people speak fast, I …', 'I want to get better at … (not “wanna”)', 'That’s why I’m going to …'],
+    ex: 'For me, the hardest is quiet endings. When people speak fast, I don’t hear the -ed, so I write the present. I want to listen for words like “yesterday” first. That’s why I’m going to check the time words in every sentence.',
+    push: 'You can fix only ONE before the test. Which one, and how will you practice it this week?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>Fill in the Blanks · DET Prep · Lesson 3 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Fill in the Blanks question: one sentence, one word with only its first letters, about 20 seconds. The student learns to read the grammar around the gap BEFORE typing: could + base verb, was + -ed, a lot of + noun, how? = adverb.</p><p style="margin:0 0 6px"><b>The story:</b> No story: the student is the candidate. Notice (four pairs) → name the kind of word (six items) → eight timed sentences.</p><p style="margin:0 0 6px"><b>About 32 min:</b> I · The Clue Around the Gap (10) · II · What Kind of Word? (6) · III · Eight Sentences (12) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “The museum is clo___ on Mondays. Close or closed?” Let the student explain why.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Fill in the Blanks question: one sentence, one word with only its first letters, about 20 seconds. The student learns to read the grammar around the gap BEFORE typing: could + base verb, was + -ed, a lot of + noun, how? = adverb.</p><p style="margin:0 0 6px"><b>The story:</b> No story: the student is the candidate. Notice (four pairs) → name the kind of word (six items) → eight timed sentences.</p><p style="margin:0 0 6px"><b>About 39 min:</b> I · The Clue Around the Gap (10) · II · What Kind of Word? (6) · III · The Study Group Votes (7) · IV · Eight Sentences (12) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “The museum is clo___ on Mondays. Close or closed?” Let the student explain why.</p></div><!--/prep-->
     <p>Spelling counts: one wrong letter makes the gap wrong. Ask the student to read the whole sentence first, even with the clock running: it is faster than guessing twice.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>could / can / to + base verb · was / were / is + -ed · a / the / a lot of + noun · how? → adverb -ly · what kind? → adjective · look forward to + -ing</p>
@@ -53,10 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. If a gap goes wrong, ask what kind of word it was. The answer is usually there.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>could you reminded</i>, <i>the museum is close</i>, <i>a lot of experienced</i>, <i>spoke very clear</i>, <i>looking forward to see</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE STUDY GROUP VOTES (III) AND THE SURPRISE QUESTION</h4>
+    <p>Before the eight sentences with the clock, a council vote. The student is in a study group with four weeks to the test, and votes on four rules: Yes, No, or Propose a change. Wait five seconds in silence, then vote the other way and argue a little. Use the PUSH line when the vote is too easy. At the end, the student proposes a rule of their own in 45 seconds and you vote. Recast quietly while they talk, especially the clues of the lesson (could + base verb, a lot of + noun, looking forward to + -ing); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
-      <li><b>Focus</b>: I · The Clue Around the Gap and II · What Kind of Word? and IV · I Can.</li>
-      <li><b>Write</b>: III · Eight Sentences.</li>
+      <li><b>Focus</b>: I · The Clue Around the Gap and II · What Kind of Word? and V · I Can.</li>
+      <li><b>Out loud</b>: III · The Study Group Votes.</li>
+      <li><b>Write</b>: IV · Eight Sentences.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -69,5 +73,61 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DET PREP 03 · FILL IN THE BLANKS · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'descobre', tipo: 'And you?', q: 'What are you looking forward to this month?',
+    opc: ['A trip', 'A day off', 'Seeing someone'], st: ['I’m looking forward to …ing', 'The main reason is …'],
+    ex: 'I’m looking forward to seeing my best friend. She lives in another city, and she is visiting next week.', push: 'And something you are NOT looking forward to?' },
+  { cena: 'lacunas', tipo: 'Opinion', q: 'Twenty seconds for one word. Is the clock your friend or your enemy?',
+    opc: ['My friend', 'My enemy', 'It depends'], st: ['For me, the clock is …, because …', 'I work better when …'],
+    ex: 'My enemy. When I see the seconds, I forget easy words. I need to practice calmly first.', push: 'Do you finish things faster with a deadline at work too?' },
+  { cena: 'multipla', tipo: 'What if', q: 'What if you could ask a friend for ONE clue in the test? What would you ask?',
+    opc: ['What kind of word?', 'The first letter', 'Is it the past?'], st: ['I would ask …, because …', 'It could help me …'],
+    ex: 'What kind of word. When I know it’s a noun or a verb, the letters come easily.', push: 'And if the friend gives you the wrong clue?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DET PREP 03 · FILL IN THE BLANKS (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A votação do conselho entra DEPOIS de "II · What Kind of Word?" (apos: 'multipla'), no MEIO da aula, antes das oito
+   frases com relógio. O grupo de estudo do aluno vota regras para o mês da prova: Yes / Propose a change / No.
+   As pistas da aula moram nos iniciadores: could + verbo base, a lot of + substantivo, advérbio em -ly,
+   look forward to + -ing. O "IV · I Can" (agora V) fica por último com o link da lição de casa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'conselho', apos: 'multipla', est: 'o', min: 7, img: 'conversa', rot: 'The Study Group Votes',
+    t: 'Your study group votes on four new rules.',
+    p: 'Vote on each rule: yes, no, or propose a change. Then say why. Your teacher votes the other way.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Rule 1', sit: 'The test is in four weeks. Someone in the group proposes:',
+        q: '“Phones stay in another room during study time.”', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I vote yes, because I can’t study …', 'We could … instead.', 'I need my phone for a lot of …'],
+        ex: 'Propose a change. We could put the phones on airplane mode on the table. I use a dictionary app a lot, so I need it.',
+        push: 'Last week you checked your phone twelve times in one hour. Still a change?' },
+      { tag: 'Rule 2', sit: 'Someone proposes:',
+        q: '“Twenty minutes of English every day, even on Sundays.”', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I vote …, because …', 'We could … on Sundays.', 'I’m looking forward to …ing'],
+        ex: 'Yes. Twenty minutes is easy. I could do it on the bus, and on Sundays I could watch a series in English.',
+        push: 'And on your birthday? Twenty minutes too?' },
+      { tag: 'Rule 3', sit: 'Someone proposes:',
+        q: '“Every repeated mistake costs one dollar in a jar. The money pays for pizza after the test.”', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['It’s a good idea, because …', 'We could … instead of money.', 'I would pay a lot of …'],
+        ex: 'Propose a change. Money makes people nervous. We could do ten push-ups for each mistake instead, and pizza for everybody at the end.',
+        push: 'Who decides what a “repeated” mistake is: you or the group?' },
+      { tag: 'Rule 4', sit: 'Someone proposes:',
+        q: '“Nobody books the real test before 120 in three practice tests.”', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I vote …, because …', 'We could book it when …', 'I’m looking forward to taking …'],
+        ex: 'No. A date in the calendar makes me study seriously. I’m looking forward to booking it this week.',
+        push: 'Your friend booked early, got 105 and paid for a second test. Still no?' }
+    ],
+    fim: { tag: 'Your rule', q: 'Now propose one rule for the group. Your teacher votes.', segundos: 45,
+      nota: 'Forty-five seconds to sell your rule. Then your teacher votes, and says why.',
+      st: ['My rule is: …', 'We could …, because …', 'I think it would really help, because …'],
+      ex: 'My rule is: one practice test every Saturday at nine, with the real clock. We could compare scores after, because it would show us what to study.',
+      push: 'I vote no. Convince me in one more sentence.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

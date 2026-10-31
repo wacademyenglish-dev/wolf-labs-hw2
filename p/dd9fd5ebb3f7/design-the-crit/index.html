@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>The Crit · English for Designers · Lesson 7 of 12</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> giving feedback in a critique: what, why, how; specific positives (What’s working really well is…); softening (a bit, might, I wonder if…, You could try…, What if…?); balancing positive and negative.</p><p style="margin:0 0 6px"><b>The story:</b> An NN/g video about critique, a colleague’s bad feedback on a fictional restaurant website, then a crit where the teacher is the designer.</p><p style="margin:0 0 6px"><b>About 38 min:</b> I · Three Tips for a Crit (8) · II · Fix the Feedback (10) · III · Your Turn in the Crit (16) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “In your team, how do people give feedback? Direct? Polite? Silent?”</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> giving feedback in a critique: what, why, how; specific positives (What’s working really well is…); softening (a bit, might, I wonder if…, You could try…, What if…?); balancing positive and negative.</p><p style="margin:0 0 6px"><b>The story:</b> An NN/g video about critique, a colleague’s bad feedback on a fictional restaurant website, then a crit where the teacher is the designer.</p><p style="margin:0 0 6px"><b>About 45 min:</b> I · Three Tips for a Crit (8) · II · Fix the Feedback (10) · III · The Studio Council (7) · IV · Your Turn in the Crit (16) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “In your team, how do people give feedback? Direct? Polite? Silent?”</p></div><!--/prep-->
     <p>In the crit (cadeira), show the student any real website, poster or room photo you choose (not your own work, to avoid pressure), or describe a fictional gym home page. React a bit defensively once, so the student practices staying kind.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>What kind of feedback are you looking for? · What’s working really well is… · The … is a bit… · Users might… · You could try… / What if…? · I wonder if…</p>
@@ -53,11 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to bring a design (their own or someone else’s) to receive feedback in the next lesson.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>I don’t like (with no reason)</i>, <i>You must change (You could try…)</i>, <i>It is a little bit ugly (It feels a bit heavy)</i>, <i>I wonder if it has not enough contrast (I wonder if it has enough contrast)</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE STUDIO COUNCIL (III) AND THE SURPRISE QUESTION</h4>
+    <p>Before the crit role-play, a council vote. A fictional studio proposes three new rules for its Friday crit (juniors speak first; no “I like it” without what, why, how; feedback only by chat). Your student votes Yes, Propose a change or No, and says why. Wait five seconds in silence, don’t vote first, and use the PUSH line to make the vote harder. There is no right answer. Recast quietly while they talk (What’s working is …, I wonder if …, It might …, You could try …); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · Three Tips for a Crit.</li>
-      <li><b>Focus</b>: II · Fix the Feedback and IV · I Can.</li>
-      <li><b>Out loud</b>: III · Your Turn in the Crit.</li>
+      <li><b>Focus</b>: II · Fix the Feedback and V · I Can.</li>
+      <li><b>Out loud</b>: III · The Studio Council and IV · Your Turn in the Crit.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -72,5 +75,50 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DESIGN 07 · THE CRIT · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'Who gave you the most useful feedback in your life: a teacher, a boss, a friend?',
+    opc: ['A teacher', 'A boss', 'A friend'], st: ['It was …, and what helped was …', 'They said I might …'],
+    ex: 'A friend. She said: “Your work is good, but I wonder if you’re hiding the best part.” She was right.', push: 'Did you like hearing it, at that moment?' },
+  { cena: 'erros', tipo: 'Opinion', q: 'Is “kind” feedback sometimes too soft to help?',
+    opc: ['Yes, often', 'Sometimes', 'No, kind is better'], st: ['I think soft feedback might …', 'It depends on …'],
+    ex: 'Sometimes. If it’s too soft, people don’t hear the problem. “I wonder if…” is great, but you still need a clear what.', push: 'And with your best friend’s work? Honest or kind?' },
+  { cena: 'cadeira', tipo: 'Would you rather', q: 'Would you rather get feedback in front of the team, or alone by message?',
+    opc: ['In front of the team', 'Alone, by message'], st: ['I’d rather …, because …', 'In front of the team, I might …'],
+    ex: 'Alone, by message. In front of the team, I might defend myself instead of listening.', push: 'And when you GIVE feedback? Same answer?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DESIGN 07 · THE CRIT (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O conselho entra no MEIO, DEPOIS de "II · Fix the Feedback" (apos: 'erros') e antes de "III · Your Turn in the Crit"
+   (a cadeira, a tela forte da aula, fica intacta); o I Can continua por último com o carimbo e a lição de casa (nada de
+   hw aqui). Um estúdio (FICTÍCIO) vota as regras novas da crit da semana: o aluno vota Yes / Propose a change / No e
+   defende com a língua da aula (What’s working is …, I wonder if …, It might …, You could try …). Sem resposta certa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'conselho', apos: 'erros', est: 'o', min: 7, img: 'conversa', rot: 'The Studio Council', t: 'New rules for the Friday crit. You have a vote.',
+    p: 'Read the proposal. Vote, or say your own idea. Then say why, softly. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Juniors first', sit: 'The studio manager says: “From now on, the juniors give feedback first, before the seniors.”',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I vote yes, because juniors might …', 'I wonder if …', 'You could try …'],
+        ex: 'Yes. Juniors might not speak after a senior has an opinion. I wonder if it works better with a time limit: two minutes each.',
+        push: 'The junior is your intern, and today it’s YOUR design on the wall. Does your vote change?' },
+      { tag: 'No “I like it”', sit: 'A senior designer says: “No more ‘I like it’ in the crit. Every comment needs a what, a why and a how.”',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['What’s working about this idea is …', 'It might make people …', 'What if we …?'],
+        ex: 'Propose a change. What’s working is the structure, but it might make people too quiet. What if “I like it” is OK, but only with a “because”?',
+        push: 'Last week, a whole crit was only “I like it”. Do you change your vote?' },
+      { tag: 'Chat only', sit: 'The art director says: “Feedback only by chat, in writing. No more crit meetings. They take too long.”',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I wonder if written feedback …', 'It might feel …', 'You could try … once a month'],
+        ex: 'No. Written feedback might feel cold, and people can’t ask “What do you mean?”. You could try a short crit, twenty minutes, and the rest by chat.',
+        push: 'You’re shy, and in the chat you give your best feedback. Does your vote change?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

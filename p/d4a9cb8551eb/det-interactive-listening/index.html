@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>Interactive Listening · DET Prep · Lesson 7 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Interactive Listening question: a conversation on campus, line by line. The student chooses the best response each time, completes notes from what they heard (Listen and Complete, new since July 2025) and writes a short summary of the conversation.</p><p style="margin:0 0 6px"><b>The story:</b> Two short campus situations (invented): a student asks Professor Hayes for more time on an essay; a classmate, Sophie, invites the student to a study group. Then a voice message from Maya changes the plan.</p><p style="margin:0 0 6px"><b>About 34 min:</b> I · Two Conversations (14) · II · Listen and Complete (8) · III · Summarize It (8) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “A professor asks: ‘What happened?’ What do you say?” Collect two or three ideas before the audio.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Interactive Listening question: a conversation on campus, line by line. The student chooses the best response each time, completes notes from what they heard (Listen and Complete, new since July 2025) and writes a short summary of the conversation.</p><p style="margin:0 0 6px"><b>The story:</b> Two short campus situations (invented): a student asks Professor Hayes for more time on an essay; a classmate, Sophie, invites the student to a study group. Then a voice message from Maya changes the plan.</p><p style="margin:0 0 6px"><b>About 41 min:</b> I · Two Conversations (14) · II · Listen and Complete (8) · III · The Study Group Jury (7) · IV · Summarize It (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “A professor asks: ‘What happened?’ What do you say?” Collect two or three ideas before the audio.</p></div><!--/prep-->
     <p>Each line is recorded (neural voices, American and British). In the test, every line plays once: play each one ONCE first, then again only to discuss. The right answer always does two things: it answers, and it keeps the conversation going.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>answer + move on · a polite no: I’d love to, but… · asking a useful question back · closing: Perfect, see you then! · notes: day, time, place · summary: who, problem, solution</p>
@@ -53,11 +53,15 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to say each chosen answer out loud, with natural intonation: it trains Interactive Speaking too.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>answers that repeat the question</i>, <i>answers that are true but not a reply</i>, <i>summary in the present tense</i>, <i>missing the deadline in the summary</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE STUDY GROUP JURY (III) AND THE SURPRISE QUESTION</h4>
+    <p>After Maya’s voice message, the student becomes the jury for three cases from the same study group: who is to blame for a missed meeting, what to do with a classmate who always says “I’d love to, but…”, and whether a professor should give extra days for a late essay. The student reads the evidence, gives a verdict and explains it in the past tense; wait five seconds in silence, then defend the other side and use the PUSH line. This is good practice for the written summary that comes next (who, the problem, the solution). Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · Two Conversations and II · Listen and Complete.</li>
-      <li><b>Write</b>: III · Summarize It.</li>
-      <li><b>Focus</b>: IV · I Can.</li>
+      <li><b>Out loud</b>: III · The Study Group Jury.</li>
+      <li><b>Write</b>: IV · Summarize It.</li>
+      <li><b>Focus</b>: V · I Can.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -70,5 +74,54 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DET PREP 07 · INTERACTIVE LISTENING · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'multipla', tipo: 'And you?', q: 'When did you last say “I’d love to, but…”? What was the invitation?',
+    opc: ['A party', 'Extra work', 'A trip'], st: ['Last week, someone invited me to …', 'I said: “I’d love to, but …”'],
+    ex: 'Last Friday, my cousin invited me to a barbecue. I said: “I’d love to, but I have to study for my test.”', push: 'Was it true, or just a polite excuse?' },
+  { cena: 'lacunas', tipo: 'Would you rather', q: 'Would you rather get a voice message or a text message?',
+    opc: ['A voice message', 'A text message'], st: ['I’d rather get …, because …', 'Voice messages are …'],
+    ex: 'A text. I can read it in a meeting, and I can find the time and the place again later.', push: 'Do you send long voice messages? Be honest!' },
+  { cena: 'prova', tipo: 'Opinion', q: 'Study groups: they help you learn more, or they’re mostly coffee and chat?',
+    opc: ['They help a lot', 'Coffee and chat', 'It depends on the group'], st: ['In my experience, …', 'The problem was …', 'For example, …'],
+    ex: 'It depends on the group. In college, my group talked a lot, but we also explained things to each other. I learned more there than alone.', push: 'What is ONE rule for a good study group?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DET PREP 07 · INTERACTIVE LISTENING (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O júri entra DEPOIS de "II · Listen and Complete" (apos: 'lacunas'), no MEIO da aula, antes do resumo escrito.
+   O recado de voz da Maya mudou o grupo de estudo de dia: três casos do mesmo grupo, com provas, para o aluno julgar.
+   A língua da aula (o resumo: who, the problem, the solution; recusar com educação: I’d love to, but …) mora nos
+   iniciadores, no passado. O "IV · I Can" (agora V) fica por último com o link da lição de casa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'juri', apos: 'lacunas', est: 'o', min: 7, img: 'conversa', rot: 'The Study Group Jury',
+    t: 'Three cases from the study group. You are the jury.',
+    p: 'Read the evidence. Give your verdict, then say why in the past tense. Your teacher defends the other side.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The message', sit: 'Maya moved the study group to Thursday. Tom went on Wednesday and waited alone for an hour.',
+        provas: ['Maya sent a voice message at 11 PM.', 'Tom never listens to voice messages. He only reads texts.', 'The group chat had the new day in writing too.'],
+        q: 'Whose fault was it?', opc: ['Maya’s', 'Tom’s', 'Both'],
+        st: ['In my opinion, it was … fault, because …', 'The problem was that …', 'The solution is …'],
+        ex: 'Tom’s fault. The problem was that he didn’t read the chat, and the new day was there in writing. The solution is simple: he should check the chat before he goes.',
+        push: 'Maya changed the day four times this month. Still Tom’s fault?' },
+      { tag: 'The no-show', sit: 'Sophie said “I’d love to, but I have to work” three weeks in a row. Now some people want to remove her from the group.',
+        provas: ['She works nights at a restaurant.', 'She always sends her notes before the meeting.', 'Two people say she never helps in the discussion.'],
+        q: 'What should the group do?', opc: ['She stays', 'One more chance', 'She leaves'],
+        st: ['She should …, because …', 'I’d love to …, but …', 'The group could …'],
+        ex: 'She stays. She sent her notes every week, so she helped the group. The group could meet on Sunday morning once a month, so she can come.',
+        push: 'You prepared for three hours and she only sent a photo of her notebook. Still fair?' },
+      { tag: 'The deadline', sit: 'Leo asked Professor Hayes for three more days for his essay. He asked at 2 AM, the night before.',
+        provas: ['It was his first late essay this year.', 'He had three exams that week.', 'Everybody else sent the essay on time.'],
+        q: 'What should the professor do?', opc: ['Give three days', 'Give one day', 'No extra time'],
+        st: ['I think the professor should …, because …', 'Leo asked …, but …', 'Next time, he should …'],
+        ex: 'Give one day. It was his first time, so he deserves a little help. But he asked at 2 AM, and that isn’t fair to the others. Next time, he should ask a week before.',
+        push: 'You sent your essay on time and slept four hours. Still one day for Leo?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

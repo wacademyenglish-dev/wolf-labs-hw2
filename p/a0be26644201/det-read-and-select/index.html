@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>Read and Select · DET Prep · Lesson 2 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Read and Select question: a grid of words, a clock, and the student taps only the real English words. Fake words are built to look real: a real ending in the wrong word, a real prefix in the wrong place, a missing letter, y that should become i.</p><p style="margin:0 0 6px"><b>The story:</b> No story: the student is the candidate. The lesson moves from noticing how fakes are made to three timed rounds and a fast word-family drill.</p><p style="margin:0 0 6px"><b>About 32 min:</b> I · How Fake Words Are Made (10) · II · Three Rounds (12) · III · Speed Round (6) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Is ‘happyness’ a word?” Most students say yes. That is exactly the trap of today.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Read and Select question: a grid of words, a clock, and the student taps only the real English words. Fake words are built to look real: a real ending in the wrong word, a real prefix in the wrong place, a missing letter, y that should become i.</p><p style="margin:0 0 6px"><b>The story:</b> No story: the student is the candidate. The lesson moves from noticing how fakes are made to three timed rounds and a fast word-family drill.</p><p style="margin:0 0 6px"><b>About 39 min:</b> I · How Fake Words Are Made (10) · II · Three Rounds (12) · III · Unpopular Opinions (7) · IV · Speed Round (6) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Is ‘happyness’ a word?” Most students say yes. That is exactly the trap of today.</p></div><!--/prep-->
     <p>This question rewards vocabulary depth AND caution. In the test, tapping a fake word costs more than missing a real one, so teach the habit: when in doubt, leave it.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>y → i (happiness, beautiful) · un- / dis- / im- · -ment / -ness / -ful / -tion · missing letters · word families · when in doubt, leave it</p>
@@ -53,9 +53,13 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. If the student taps fakes, slow down the next round: accuracy first, speed second.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>happyness</i>, <i>beautyful</i>, <i>unpossible</i>, <i>decidement</i>, <i>knowlege</i>, <i>childs</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (III) AND THE SURPRISE QUESTION</h4>
+    <p>After three rounds of tapping, the student stops and gives opinions about words: spelling, word lists, guessing and English spelling itself. For each statement, the student taps a number from 1 to 5 and defends it; you take the opposite number and argue back. Wait five seconds in silence before they start. Use the PUSH line when the answer is too safe. Recast quietly while they talk, and push the word families of the lesson (impossible, decision, carefully, useless); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
-      <li><b>Focus</b>: I · How Fake Words Are Made and II · Three Rounds and III · Speed Round and IV · I Can.</li>
+      <li><b>Focus</b>: I · How Fake Words Are Made and II · Three Rounds and IV · Speed Round and V · I Can.</li>
+      <li><b>Out loud</b>: III · Unpopular Opinions.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -68,5 +72,52 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DET PREP 02 · READ AND SELECT · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'descobre', tipo: 'And you?', q: 'What is your favorite English word? Why do you like it?',
+    opc: ['It sounds nice', 'It’s useful', 'It’s funny'], st: ['My favorite word is …, because …', 'I learned it from …'],
+    ex: 'My favorite word is “meanwhile”. It sounds smart, and it helps me tell stories.', push: 'And a word you really hate?' },
+  { cena: 'rapido', tipo: 'What if', q: 'What if you could delete one English spelling rule forever? Which one?',
+    opc: ['y → i (happiness)', 'Silent letters (knowledge)', 'Double letters (necessary)'], st: ['I’d delete …, because …', 'It’s impossible to remember …'],
+    ex: 'Silent letters. Why is there a k in “knowledge”? Nobody says it.', push: 'Would English be easier, or just uglier?' },
+  { cena: 'palavras', tipo: 'Would you rather', q: 'Would you rather know 10,000 words and speak slowly, or 3,000 words and speak fast?',
+    opc: ['10,000 words, slowly', '3,000 words, fast'], st: ['I’d rather …, because …', 'For example, …'],
+    ex: 'Three thousand and fast. In a conversation, people want an answer now, not the perfect word.', push: 'And for the test? Same choice?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DET PREP 02 · READ AND SELECT (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A escala de opiniões impopulares entra DEPOIS de "II · Three Rounds" (apos: 'palavras'), no MEIO da aula, antes da
+   Speed Round. A aula é toda reconhecer palavra real × falsa; aqui o aluno para e opina sobre palavras, ortografia e
+   o "chute". As famílias de palavras da aula (impossible, decision, carefully, useless, knowledge) moram nos iniciadores.
+   O "IV · I Can" (agora V) fica por último com o link da lição de casa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'escala', apos: 'palavras', est: 'o', min: 7, img: 'conversa', rot: 'Unpopular Opinions',
+    t: 'Four opinions about words. How much do you agree?',
+    p: 'Tap a number from 1 to 5. Then defend it. Your teacher takes the opposite number.',
+    formato: 'escala', tag: 'Agree or disagree?',
+    frases: [
+      { f: 'Spelling is useless now. My phone corrects everything.',
+        st: ['I totally disagree, because …', 'It’s not useless when …', 'Honestly, I spell carefully only when …'],
+        ex: 'I disagree. In the test, one wrong letter makes the word wrong, and my phone isn’t there. In a job email, a spelling mistake also looks careless.',
+        push: 'And in a quick message to a friend? Does spelling matter there?' },
+      { f: 'Learning lists of words is a waste of time. You learn words from series and songs.',
+        st: ['For me, it’s impossible to …', 'My decision is to …', 'I learned the word … from …'],
+        ex: 'I partly agree. I learned a lot of words from series. But a list is faster before a test, so my decision is to do both.',
+        push: 'Where did you learn the word “knowledge”: in a series or in a list?' },
+      { f: 'If you’re not sure about a word, tap it. You might be lucky.',
+        st: ['I’d rather leave it, because …', 'Guessing is smart when …', 'A fake word I tap costs …'],
+        ex: 'I disagree. In this task a fake word I tap costs more than a real word I miss. When I’m not sure, I leave it.',
+        push: 'And in real life? Do you guess a word you don’t know, or do you ask?' },
+      { f: 'English spelling is crazy. It should be simpler: “thru”, “nite”, “luv”.',
+        st: ['I agree, because …', 'It would be impossible to …', 'The problem with simple spelling is …'],
+        ex: 'I agree a little. “Thorough” and “through” are a nightmare. But if everybody spelled their own way, reading would be impossible.',
+        push: 'Which English word is the hardest for you to spell?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

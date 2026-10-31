@@ -53,11 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to check her camera location setting today, in class, with you.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>posting first, asking later</i>, <i>sharing addresses or routines</i>, <i>getting into a car without checking</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>YOUR CALL (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After “Ask Politely”, three grey moments with three reasonable answers each: a perfect photo of Leo at the park while the parents are busy, a party 40 minutes away with an unclear ride home, and Mia (12) who wants to follow the au pair on Instagram. The student chooses, or says their own idea, and explains. There is no single right answer here, only safer and less safe ones; let them choose. Wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk (Can I …, or would you prefer …?; Just so you know …); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · What a Post Can Show.</li>
-      <li><b>Focus</b>: II · Safe or Not Safe? and IV · I Can.</li>
-      <li><b>Out loud</b>: III · Ask Politely.</li>
+      <li><b>Focus</b>: II · Safe or Not Safe? and V · I Can.</li>
+      <li><b>Out loud</b>: III · Ask Politely and IV · Your Call.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -72,5 +75,52 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AU PAIR 16 · ONLINE AND OUT · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'What kind of photos do you usually post?',
+    opc: ['Food and places', 'Me and my friends', 'I almost never post'], st: ['I usually post …', 'I never post …, because …'],
+    ex: 'Food and places. I almost never post photos of my face.', push: 'Is your profile public or private?' },
+  { cena: 'separa', tipo: 'Opinion', q: 'Which safety rule is the hardest for you to follow?',
+    opc: ['Location off', 'Tell someone where I go', 'Phone always charged'], st: ['The hardest for me is …, because …', 'I always forget to …'],
+    ex: 'Phone always charged. My battery is always at 10% at night!', push: 'What’s your plan B, then?' },
+  { cena: 'transforma', tipo: 'Would you rather', q: 'Would you rather live one year with no social media, or one year with no music?',
+    opc: ['No social media', 'No music'], st: ['I’d rather live with no …, because …', 'I could live without …'],
+    ex: 'No social media. I can call my friends, but I can’t live without music in the car.', push: 'And no photos at all for a year?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AU PAIR 16 · ONLINE AND OUT (CURSOS, B1) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O dilema entra DEPOIS de "III · Ask Politely" (apos: 'transforma') e antes de "IV · I Can", que fica por último com
+   o carimbo e o link da lição de casa (nada de hw aqui). O II separa seguro × não seguro em casos claros; aqui são três
+   casos CINZENTOS, com três saídas razoáveis cada: a foto fofa no parque, a festa longe com carona incerta, a filha de
+   12 anos que quer seguir a au pair. A língua da aula (Can I …, or would you prefer …?; Just so you know …; I'd rather
+   not …) mora nos iniciadores. Nada de perigo grave nem violência: só escolhas do dia a dia. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'dilema', apos: 'transforma', est: 'o', min: 7, img: 'conversa', rot: 'Your Call',
+    t: 'Three real moments. What do you do?',
+    p: 'Choose one option, or say your own idea. Then explain. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The cute photo', sit: 'At the park, Leo (4) gives you a flower. It’s a perfect photo. Your friends would love it. The parents are in a meeting until 6.',
+        q: 'What do you do?', opc: ['Post it now', 'Ask the parents first', 'Keep it on my phone'],
+        st: ['I’d ask: “Can I …, or would you prefer …?”', 'I’d rather …, because …', 'It’s only OK if …'],
+        ex: 'Keep it on my phone and ask the parents at 6. Maybe they say yes, and I can post it without his face.',
+        push: 'Your friend posts photos of her host kids every day, and her family doesn’t mind. Same for you?' },
+      { tag: 'The party', sit: 'A new friend from the gym invites you to a party at her friend’s house. It’s 40 minutes away. She says: “Don’t worry, someone will drive you home.”',
+        q: 'What do you do?', opc: ['Go, it sounds fun', 'Go, with my own ride home', 'Say no this time'],
+        st: ['Just so you know, I’m going to …', 'I’d go, but only if …', 'I’d rather not …, because …'],
+        ex: 'Go, with my own ride home. I’d tell my host family where I am, keep my phone charged, and book a ride-share back by midnight.',
+        push: 'Your phone is at 15% and the ride home costs 40 dollars. Still going?' },
+      { tag: 'The follow request', sit: 'Mia, your host family’s 12-year-old, asks: “Can I follow you on Instagram? Pleeease?” Your account has photos from your nights out.',
+        q: 'What do you do?', opc: ['Accept her', 'Ask her parents first', 'Say no, kindly'],
+        st: ['I’d say: “…”', 'I’d ask her parents: “Would you prefer …?”', 'I’d rather keep …, because …'],
+        ex: 'Ask her parents first. I’d say: “Let me check with your mom.” And maybe I’d use a close friends list for my nights out.',
+        push: 'Mia says: “All my friends follow their au pairs!” What now?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

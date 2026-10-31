@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>What Is the Test? · DET Prep · Lesson 1 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the first lesson of the prep course. The student learns how the test works (at home, about one hour, adaptive), what the score means (10–160 and four subscores) and tries two real tasks with the real clock.</p><p style="margin:0 0 6px"><b>The story:</b> No story today: the student is the candidate. Treat it like the first meeting with a coach: what is the test, why the student is taking it, and a first taste of the pressure of the clock.</p><p style="margin:0 0 6px"><b>About 32 min:</b> I · The Test in One Page (9) · II · True to the Test (6) · III · First Taste: Real or Fake? (5) · IV · First Taste: Read, Then Speak (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “What score do you need, and for what?” Write the number down: it is the goal of the course.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the first lesson of the prep course. The student learns how the test works (at home, about one hour, adaptive), what the score means (10–160 and four subscores) and tries two real tasks with the real clock.</p><p style="margin:0 0 6px"><b>The story:</b> No story today: the student is the candidate. Treat it like the first meeting with a coach: what is the test, why the student is taking it, and a first taste of the pressure of the clock.</p><p style="margin:0 0 6px"><b>About 39 min:</b> I · The Test in One Page (9) · II · True to the Test (6) · III · At Home or at a Center? (7) · IV · First Taste: Real or Fake? (5) · V · First Taste: Read, Then Speak (8) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “What score do you need, and for what?” Write the number down: it is the goal of the course.</p></div><!--/prep-->
     <p>The format was checked in October 2026 (in July 2025 the test lost Read Aloud and Listen, Then Speak, and gained Interactive Speaking). Formats change: before the student books, check the official website together. The test name is a trademark: we use it only to say what the course prepares for.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>at home, about one hour · adaptive questions · score 10–160 · Literacy, Comprehension, Conversation, Production · writing and speaking samples · the clock</p>
@@ -55,11 +55,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Write down the score the student needs. Every lesson ends with the same question: are we closer?</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>stopping before 30 seconds</i>, <i>long silence while thinking</i>, <i>tapping every word that looks familiar</i>, <i>apologizing for the English</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>AT HOME OR AT A CENTER? (III) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the facts, a real argument. The student picks a side (one hour at home, or three hours at a test center) and defends it for one minute with the clock; then taps Swap sides and defends the other one. Wait five seconds in silence before they start, and don’t give your opinion first. Use the PUSH line (the internet drops in the middle of the test) when the answer gets too easy. Recast quietly while they talk (The main reason is…, For example…, That’s why…); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · The Test in One Page.</li>
-      <li><b>Focus</b>: II · True to the Test and III · First Taste: Real or Fake? and V · I Can.</li>
-      <li><b>Out loud</b>: IV · First Taste: Read, Then Speak.</li>
+      <li><b>Focus</b>: II · True to the Test and IV · First Taste: Real or Fake? and VI · I Can.</li>
+      <li><b>Out loud</b>: III · At Home or at a Center? and V · First Taste: Read, Then Speak.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -72,5 +75,43 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DET PREP 01 · WHAT IS THE TEST? · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'What is your score for? What door does it open for you?',
+    opc: ['Study abroad', 'A new job', 'Just to know my level'], st: ['The main reason is …', 'With this score, I can …'],
+    ex: 'A new job. The main reason is that my company works with clients in Canada, and they ask for a score.', push: 'What score do you need, exactly?' },
+  { cena: 'palavras', tipo: 'Opinion', q: 'The test is adaptive: you do well, it gets harder. Is that fair?',
+    opc: ['Yes, it’s fair', 'Not sure', 'No, it’s stressful'], st: ['I think it’s fair, because …', 'For me, it’s stressful, because …'],
+    ex: 'Yes, it’s fair. A hard question means I’m doing well, so I shouldn’t be afraid of it.', push: 'A very hard question appears. Good news or bad news for you?' },
+  { cena: 'prova', tipo: 'Would you rather', q: 'Would you rather have 20 seconds to prepare and 90 to speak, or no time to prepare and only 35 seconds?',
+    opc: ['20 to prepare, 90 to speak', 'No time, 35 seconds'], st: ['I’d rather …, because …', 'For example, …'],
+    ex: 'Twenty to prepare. I need a few seconds to find my first sentence. After that, I can keep going.', push: 'Which one is closer to a real conversation?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DET PREP 01 · WHAT IS THE TEST? (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A arena entra DEPOIS de "II · True to the Test" (apos: 'multipla'), no MEIO da aula, antes dos dois gostos de prova.
+   O aluno acabou de aprender os fatos (em casa, uma hora, adaptativa); agora defende um lado: prova curta em casa
+   ou prova longa num centro, e troca de lado. A língua da aula (The main reason is…, For example,…, That’s why…)
+   mora nos iniciadores. O "V · I Can" (agora VI) fica por último com o link da lição de casa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'arena', apos: 'multipla', est: 'o', min: 7, img: 'conversa', rot: 'At Home or at a Center?',
+    t: 'One hour at home, or three hours at a test center?',
+    p: 'Pick a side and defend it for one minute. Then swap and defend the other side.',
+    formato: 'arena',
+    q: 'Which test shows your real English better?',
+    lados: [
+      { nome: 'One hour at home', arg: 'Cheaper and faster, your own chair, no travel, results in two days.' },
+      { nome: 'Three hours at a center', arg: 'More time to show your level, no noise from home, a real exam feeling.' }
+    ],
+    st: ['The main reason is …', 'For example, …', 'On the other hand, …', 'That’s why …'],
+    ex: 'One hour at home. The main reason is stress: a long day at a test center makes me tired, and I make silly mistakes. For example, last year I did a three-hour exam and my head was empty at the end. That’s why a short test at home shows my real level better.',
+    push: 'Your internet drops in the middle of the test at home. Still the best choice?',
+    segundos: 60 }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>Mock Test 1 · DET Prep · Lesson 15 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the first full mock test: every question type of the course, in order, with the real clock. All content is original (never from the real test). Teach nothing during the tasks; give feedback only at the end of each part.</p><p style="margin:0 0 6px"><b>The story:</b> No story: a full practice test. Five parts: Read and Select → Fill in the Blanks and Read and Complete → Listen and Type → a conversation at Student Services and a short text → speaking and writing (photo, topic, two recorded questions, writing sample).</p><p style="margin:0 0 6px"><b>About 46 min:</b> I · Read and Select (3) · II · Fill in and Complete (7) · III · Listen and Type (5) · IV · Listening and Reading (7) · V · Speaking and Writing (20) · VI · Results (4).</p><p style="margin:0"><b>Open with:</b> “Today is test day. Water, quiet room, phone away. Ready?” Keep the tone calm and serious.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the first full mock test: every question type of the course, in order, with the real clock. All content is original (never from the real test). Teach nothing during the tasks; give feedback only at the end of each part.</p><p style="margin:0 0 6px"><b>The story:</b> No story: a full practice test. Five parts: Read and Select → Fill in the Blanks and Read and Complete → Listen and Type → a conversation at Student Services and a short text → speaking and writing (photo, topic, two recorded questions, writing sample).</p><p style="margin:0 0 6px"><b>About 53 min:</b> I · Read and Select (3) · II · Fill in and Complete (7) · III · Listen and Type (5) · IV · Listening and Reading (7) · V · Speaking and Writing (20) · VI · The Jury (7) · VII · Results (4).</p><p style="margin:0"><b>Open with:</b> “Today is test day. Water, quiet room, phone away. Ready?” Keep the tone calm and serious.</p></div><!--/prep-->
     <p>It takes about 50 minutes. Write down, for each part, what went well and one thing to fix: that list is the plan for the last lesson. There is no official score here; do not promise a number. Use the checklist results to say which parts are strong and which need work.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>Read and Select · Fill in the Blanks · Read and Complete · Listen and Type · Interactive Listening and Reading · Speaking and Writing</p>
@@ -57,12 +57,15 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. For each line the student does NOT tap, choose one lesson of the course to review before Mock Test 2.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>tapping fake words</i>, <i>spelling in the gaps</i>, <i>missing small words in dictation</i>, <i>stopping before the clock in speaking</i>, <i>informal register in the sample</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE JURY (VI) AND THE SURPRISE QUESTION</h4>
+    <p>The mock is never interrupted, so the conversation comes after Part V. The student is a judge: three fictional candidates, three pieces of evidence each. Ready to book, almost, or not yet? They give a verdict and say why; you are the other judge and push back. In the last word, the student gives a verdict on THEMSELVES after today’s mock (45 seconds), and that opens the Results. Wait five seconds in silence before they start. Use the PUSH line when the answer is too safe. Recast quietly while they talk, and push the language of good answers (The main reason is, However, As a result, should, If I were…, I would…); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. In a mock test, use it only between parts, never during a task.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
-      <li><b>Focus</b>: I · Read and Select and VI · Results.</li>
+      <li><b>Focus</b>: I · Read and Select and VII · Results.</li>
       <li><b>Write</b>: II · Fill in and Complete.</li>
       <li><b>Listen</b>: III · Listen and Type and IV · Listening and Reading.</li>
-      <li><b>Out loud</b>: V · Speaking and Writing.</li>
+      <li><b>Out loud</b>: V · Speaking and Writing and VI · The Jury.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -75,5 +78,62 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DET PREP 15 · MOCK TEST 1 · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas (entre as partes, nunca no meio de uma tarefa) */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'What do you do to stay calm before a test or an important meeting?',
+    opc: ['Breathe and drink water', 'Listen to music', 'Talk to someone'], st: ['Before a test, I usually …', 'It helps me because …'],
+    ex: 'I listen to one song with headphones and drink water. It helps me because I stop thinking about the clock.', push: 'Does it really work? Or is it a habit?' },
+  { cena: 'multipla', tipo: 'Opinion', q: 'Which part of today’s mock felt the most like real life?',
+    opc: ['The conversation at Student Services', 'Listen and Type', 'Writing about the photo'], st: ['…, because in real life …', 'I’ve had a conversation like that when …'],
+    ex: 'The conversation at Student Services. In real life, I’ve had to ask for a new card at my gym, and it was the same.', push: 'And which part felt the least like real life?' },
+  { cena: 'prova', tipo: 'Would you rather', q: 'Would you rather take the test at home in the morning, or at night?',
+    opc: ['In the morning', 'At night'], st: ['I’d rather …, because …', 'In the morning, my brain …'],
+    ex: 'In the morning. My house is quiet before nine, and my brain is fresh. At night, I’m tired after work.', push: 'And on a weekday or on a Sunday?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DET PREP 15 · MOCK TEST 1 (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O júri com provas entra DEPOIS de "V · Speaking and Writing" (apos: 'prova') e antes de "VI · Results", que fica por
+   último com o link da lição de casa (nada de hw aqui). O simulado não pode ser interrompido ("no teaching during the
+   tasks"), então a conversa vem depois da prova: o aluno é o júri de três candidatos fictícios (pronto para marcar a
+   prova? quase? ainda não?) e, na última palavra, dá o veredito sobre ELE MESMO, que abre o Results. A língua das
+   respostas da prova (The main reason is, However, As a result, should, If I were …, I would) mora nos iniciadores.
+   Nada de regra oficial da prova afirmada aqui: as regras se conferem no site oficial (o curso diz isso). */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'juri', apos: 'prova', est: 'o', min: 7, img: 'conversa', rot: 'The Jury',
+    t: 'Three candidates. Are they ready to book the test?',
+    p: 'Read the evidence. Give your verdict and say why. Your teacher is the other judge, and pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Bruna', sit: 'Bruna wants to book her test this week.',
+        provas: ['Reading and listening: almost perfect.', 'Speaking: she always stops after 40 seconds.', 'Her university deadline is in three weeks.'],
+        q: 'Your verdict?', opc: [{ t: 'Ready · book it', cor: 'g' }, { t: 'Almost · one more week', cor: 'y' }, { t: 'Not yet · keep training', cor: 'r' }],
+        st: ['The evidence shows that …', 'However, …', 'If I were her, I would …'],
+        ex: 'Almost. Her reading and listening are great. However, stopping at 40 seconds costs points. If I were her, I would practise speaking for one week, and then book.',
+        push: 'One more week means only two weeks before the deadline. Still “almost”?' },
+      { tag: 'Diego', sit: 'Diego says: “I’m ready. I just want to finish this.”',
+        provas: ['Every part is OK, never great.', 'He practises at midnight, after work.', 'With the clock on, he panics and skips questions.'],
+        q: 'Your verdict?', opc: [{ t: 'Ready · book it', cor: 'g' }, { t: 'Almost · one more week', cor: 'y' }, { t: 'Not yet · keep training', cor: 'r' }],
+        st: ['The main reason is …', 'He should …', 'As a result, …'],
+        ex: 'Not yet. The main reason is the clock: he panics and skips questions. He should do one full mock on a Saturday morning, rested. As a result, he will see his real level.',
+        push: 'He says: “I have no time on Saturdays.” What do you say?' },
+      { tag: 'Ana', sit: 'Ana booked her test for tomorrow at 9 a.m.',
+        provas: ['Two mocks, two very good results.', 'She has never tested her camera or microphone.', 'She shares a small apartment with three roommates.'],
+        q: 'Your verdict?', opc: [{ t: 'Ready · book it', cor: 'g' }, { t: 'Almost · one more week', cor: 'y' }, { t: 'Not yet · keep training', cor: 'r' }],
+        st: ['Her English is …, but …', 'Tonight, she should …', 'If I were her, I would …'],
+        ex: 'Ready, with one condition. Her English is great, but the room is a problem. Tonight, she should test her camera and microphone and ask her roommates for two quiet hours.',
+        push: 'The internet in her building is slow in the morning. Does your verdict change?' }
+    ],
+    fim: { tag: 'Your verdict', q: 'Now YOU are the candidate. After today’s mock, what is your verdict?', segundos: 45,
+      opc: [{ t: 'Ready', cor: 'g' }, { t: 'Almost', cor: 'y' }, { t: 'Not yet', cor: 'r' }],
+      nota: 'Forty-five seconds to defend it. Then your teacher gives a verdict too, and you look at the results together.',
+      st: ['My verdict is …, because …', 'The evidence from today shows …', 'Before I book, I should …'],
+      ex: 'Almost. Today, reading and writing went well. However, I stopped early in the speaking tasks. Before I book, I should practise the speaking sample three more times.',
+      push: 'And if the test was tomorrow morning? What would you do tonight?' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

@@ -55,12 +55,15 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Homework that matters: the student saves every number in her phone AND writes the house address on paper.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>calling the parents before 911 in a medical emergency</i>, <i>not knowing the address of the house</i>, <i>thinking rematch is running away</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE SATURDAY DEAL (III) AND THE SURPRISE QUESTION</h4>
+    <p>Right after “Who do I call?”, the student practices the first step of the network: talking to the family. You are Jen, the host mom; Emma has soccer every Saturday at 8. Ask your four questions; your secret limit (only you see it) is Friday afternoon off, and the dad can take Emma two Saturdays a month. Then close the deal together. Any deal is fine if it keeps a day and a half off every week and one full weekend a month. Wait five seconds in silence, then use the PUSH line. Recast quietly while they talk (I understand, but …; Could we …?); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · Your Local Coordinator.</li>
-      <li><b>Focus</b>: II · Who Do I Call? and V · I Can.</li>
-      <li><b>Out loud</b>: III · A 911 Call.</li>
-      <li><b>Write</b>: IV · My Contacts.</li>
+      <li><b>Focus</b>: II · Who Do I Call? and VI · I Can.</li>
+      <li><b>Out loud</b>: III · The Saturday Deal and IV · A 911 Call.</li>
+      <li><b>Write</b>: V · My Contacts.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -75,5 +78,50 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AU PAIR 15 · WHO DO I CALL? · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas (nada de emergência ou saúde) */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'Who is the first person you call when you have a problem?',
+    opc: ['A friend', 'My sister or brother', 'I solve it alone'], st: ['The first person I call is …, because …', 'I usually …'],
+    ex: 'My best friend, Lara. She listens, and she always has a practical idea.', push: 'And who do you call with good news?' },
+  { cena: 'multipla', tipo: 'Opinion', q: 'Is it easy for you to ask for help?',
+    opc: ['Yes, easy', 'Only with people I know', 'No, it’s hard'], st: ['For me, asking for help is …, because …', 'I prefer to …'],
+    ex: 'Only with people I know. With strangers, I feel shy, so I try to solve it alone first.', push: 'When was the last time you asked a stranger for help?' },
+  { cena: 'cartao', tipo: 'Would you rather', q: 'Would you rather have a coordinator who calls you every week, or only when you need her?',
+    opc: ['Every week', 'Only when I need her'], st: ['I’d rather have a coordinator who …', 'That way, I …'],
+    ex: 'Every week. That way, small problems don’t become big problems.', push: 'Every week, even when everything is great?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AU PAIR 15 · WHO DO I CALL? (CURSOS, B1) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A negociação leve entra DEPOIS de "II · Who Do I Call?" (apos: 'multipla'), no MEIO da aula, antes do "III · A 911
+   Call", e o "V · I Can" (agora VI) fica por último com o carimbo e o link da lição de casa (nada de hw aqui).
+   O II ensina "a família primeiro, depois a coordenadora"; aqui o aluno FAZ a primeira parte: conversa com a host mom
+   sobre o futebol de sábado e fecha um acordo dentro das regras (1,5 dia de folga por semana, 1 fim de semana inteiro
+   por mês). Nada de emergência, saúde ou perigo neste momento: só um problema comum de agenda. Família FICTÍCIA. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'sabado', apos: 'multipla', est: 'o', min: 7, img: 'conversa', rot: 'The Saturday Deal',
+    t: 'Talk to the family first. Close a deal.',
+    p: 'You are the au pair. Your teacher is the host mom. Answer her four questions, then agree on Saturdays.',
+    formato: 'papel',
+    aluno: { quem: 'You · the au pair', quer: 'Your Saturdays free to meet other au pairs.', limite: 'The rules: 1.5 days off a week, one full weekend a month.' },
+    prof: { quem: 'Jen · host mom', quer: 'An au pair for Emma’s soccer, every Saturday 8–12.', limite: 'Secret: she can give Friday afternoon off. Dad can take Emma two Saturdays a month.' },
+    rot_perg: 'The host mom asks',
+    perguntas: [
+      { q: '“Emma has soccer every Saturday at 8. Can you take her, every week?”', ex: 'I understand, but Saturday is part of my time off. Could we talk about it?' },
+      { q: '“It’s only four hours. You don’t do anything on Saturday morning, right?”', ex: 'Actually, I meet the other au pairs on Saturdays. It’s important for me. What if we find another solution?' },
+      { q: '“What if we give you Friday afternoon off instead?”', ex: 'That could work. Then I still have a day and a half off every week, right?' },
+      { q: '“OK. And your full weekend every month? Soccer is every Saturday.”', ex: 'One weekend a month, I need Friday evening to Monday morning free. Could Emma’s dad take her that Saturday?' }
+    ],
+    st: ['I understand, but …', 'Could we …?', 'What if …?', 'If we can’t agree, I’ll talk to my coordinator.'],
+    acordo: { tag: 'The deal', q: 'Which deal do you close?',
+      opc: ['Every Saturday · Friday off', 'Two Saturdays · Dad the rest', 'No deal · call the coordinator'],
+      st: ['So we agree that …', 'Could we write it down?'],
+      ex: 'So we agree that I take Emma two Saturdays a month, and her dad takes her on the others. Could we write it on the schedule?' },
+    push: 'The host mom: “Our last au pair never said no.” What do you say?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

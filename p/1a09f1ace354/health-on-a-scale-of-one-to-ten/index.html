@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>On a Scale of One to Ten · English for Healthcare · Lesson 3 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> rating pain (0 to 10 with anchors: mild 1–3, moderate 4–6, severe 7–10) and understanding the words patients use: sharp, dull, throbbing, burning, stabbing, comes and goes.</p><p style="margin:0 0 6px"><b>The story:</b> An EnglishMedEd video: a nurse helps a patient with a back injury rate her pain. Then five recorded patients (British, American, Australian, Indian accents) describe their pain.</p><p style="margin:0 0 6px"><b>About 37 min:</b> I · The Pain Scale (7) · II · Memory (8) · III · Five Patients (10) · IV · Explain the Scale (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “How would you describe a headache in Portuguese? Latejante? Em pontada?” Then find the English words.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> rating pain (0 to 10 with anchors: mild 1–3, moderate 4–6, severe 7–10) and understanding the words patients use: sharp, dull, throbbing, burning, stabbing, comes and goes.</p><p style="margin:0 0 6px"><b>The story:</b> An EnglishMedEd video: a nurse helps a patient with a back injury rate her pain. Then five recorded patients (British, American, Australian, Indian accents) describe their pain.</p><p style="margin:0 0 6px"><b>About 44 min:</b> I · The Pain Scale (7) · II · Memory (8) · III · Five Patients (10) · IV · The Pain Scale Jury (7) · V · Explain the Scale (8) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “How would you describe a headache in Portuguese? Latejante? Em pontada?” Then find the English words.</p></div><!--/prep-->
     <p>Patients rarely use textbook words; they use images (a hammer, fire, a knife). Train the student to translate images into clinical words, and to always re-rate pain after treatment.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>On a scale of 0 to 10… · mild / moderate / severe · sharp / dull · throbbing / burning / stabbing · comes and goes · How is the pain now?</p>
@@ -55,11 +55,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student which pain words they hear most in their profession (dentists: throbbing, sensitive; physios: stiff, aching).</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>the pain is very strong (severe)</i>, <i>I have a pain of head (a headache)</i>, <i>it pulses (it’s throbbing)</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE PAIN SCALE JURY (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After listening to the five patients, the student is the jury for three fictional professionals: a nurse who wrote “10” without explaining the scale, a dentist who explained it well but never asked again after the painkiller, and a physio who gave anchors and wrote what she saw. For each one the student reads the evidence, gives a verdict (good job, half right, not good) and says why. More than one verdict can be defended. Wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk (mild, moderate, severe; What number would you give it now?); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · The Pain Scale and II · Memory and III · Five Patients.</li>
-      <li><b>Out loud</b>: IV · Explain the Scale.</li>
-      <li><b>Focus</b>: V · I Can.</li>
+      <li><b>Out loud</b>: IV · The Pain Scale Jury and V · Explain the Scale.</li>
+      <li><b>Focus</b>: VI · I Can.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -74,5 +77,55 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SAÚDE 03 · ON A SCALE OF ONE TO TEN · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'When something hurts a little, do you say “I’m fine”, or do you tell everyone?',
+    opc: ['I always say “I’m fine”', 'It depends', 'I tell everyone!'], st: ['When something hurts, I usually …', 'My friends say I …'],
+    ex: 'I always say “I’m fine”. Last year I played football for a week with a sore ankle. Not my best idea.', push: 'Is that a good or a bad thing for a patient?' },
+  { cena: 'memoria', tipo: 'Opinion', q: 'Which pain word will be the most useful in your job?',
+    opc: ['sharp', 'throbbing', 'comes and goes'], st: ['For me, the most useful is …, because …', 'Patients often say …'],
+    ex: '“Comes and goes”. My patients rarely have constant pain; it changes with movement.', push: 'Which word is the hardest to say well?' },
+  { cena: 'prova', tipo: 'Would you rather', q: 'With patients, would you rather use the number scale (0 to 10) or a scale with faces?',
+    opc: ['Numbers, 0 to 10', 'Faces'], st: ['I’d rather use …, because …', 'Faces are good for …'],
+    ex: 'Faces for children, numbers for adults. A child understands a sad face faster than an 8.', push: 'And for an adult who doesn’t speak English well?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SAÚDE 03 · ON A SCALE OF ONE TO TEN (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O júri entra DEPOIS de "III · Five Patients" (apos: 'multipla'), antes de "IV · Explain the Scale" (a prova) e do
+   "I Can", que fica por último com o carimbo e o link da lição de casa (nada de hw aqui). O III é escuta com
+   resposta certa; aqui o aluno JULGA três profissionais (FICTÍCIOS) pelas provas: como cada um usou a escala.
+   Lesões leves do dia a dia (tornozelo, dente, costas depois de escorregar), nada de doença grave. A língua da aula
+   (mild / moderate / severe, sharp, throbbing, comes and goes, What number would you give it?) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'juri', apos: 'multipla', est: 'o', min: 7, img: 'conversa', rot: 'The Pain Scale Jury',
+    t: 'Three professionals used the scale. You are the jury.',
+    p: 'Read the evidence. Give your verdict, then say why, with the words from today. There is more than one good answer.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Nurse Kim', sit: 'A young man twisted his ankle playing football.',
+        provas: ['Kim asked: “Is it bad?”', 'He said: “Yes, very bad!”', 'Kim wrote “pain: 10” and left the room.'],
+        q: 'Your verdict on Kim?', opc: ['Good job', 'Half right', 'Not good'],
+        st: ['Kim didn’t explain that …', 'She needed to ask: “What number would you give it?”', 'A 10 is …, but he …'],
+        ex: 'Not good. She didn’t explain the scale. “Very bad” is not a number. She needed to say: 0 is no pain, 10 is the worst you can imagine, and then ask again.',
+        push: 'It was a crazy night with twenty patients waiting. Still “not good”?' },
+      { tag: 'Dr. Cruz', sit: 'A woman came to the dentist with a toothache.',
+        provas: ['He explained: “0 is no pain, 10 is the worst.”', 'She chose 6: “throbbing, all night”.', 'He gave a painkiller and never asked again.'],
+        q: 'Your verdict on Dr. Cruz?', opc: ['Good job', 'Half right', 'Not good'],
+        st: ['He explained the scale well, but …', 'A 6 is moderate, so …', 'After treatment, you always ask …'],
+        ex: 'Half right. He explained the scale, and a throbbing 6 is moderate. But after the painkiller he needed to ask again: “What number would you give it now?”',
+        push: 'She left the clinic smiling. Does the second question really matter?' },
+      { tag: 'Physio Lena', sit: 'A man slipped at home and hurt his back.',
+        provas: ['Lena gave anchors: mild, moderate, severe.', 'He said “8”, but he was laughing and walking.', 'Lena wrote: “8 · walking normally, smiling”.'],
+        q: 'Your verdict on Lena?', opc: ['Good job', 'Half right', 'Not good'],
+        st: ['She gave anchors: mild, moderate, severe …', 'His number says … but his body says …', 'I’d ask: “Does it stop you from …?”'],
+        ex: 'Good job. She gave anchors, and she wrote what she saw too. The number is his, not hers. Maybe I’d ask one more question: “Does it stop you from sleeping?”',
+        push: 'Should a professional ever change the patient’s number?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

@@ -53,10 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to save the help line in her phone today, under “State Department help line”.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>the hours of last week carry over</i>, <i>extra pay allows extra hours</i>, <i>sleeping kids don’t count</i>, <i>a family trip is vacation</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE HOT SEAT (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After counting the hours, the student changes sides: they are the local coordinator, and you are Bia, a shy au pair in her third week. Read Bia’s four questions (11 hours on Friday, the hours when the kids sleep, the passport in the safe, and, last, no full weekend off in two months). The student answers with the rules in their own words; then you both choose Bia’s first step. Wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk (The rule is …; You can say …); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · The Five Numbers and II · Your Rights Card.</li>
-      <li><b>Focus</b>: III · Count the Hours and IV · I Can.</li>
+      <li><b>Out loud</b>: IV · The Hot Seat.</li>
+      <li><b>Focus</b>: III · Count the Hours and V · I Can.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -71,5 +75,50 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AU PAIR 13 · KNOW YOUR RIGHTS · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'How many hours do you work or study in a normal week?',
+    opc: ['Less than 30', '30 to 45', 'More than 45'], st: ['In a normal week, I …', 'My busiest day is …, because …'],
+    ex: 'More than 45, with work and my English classes. Monday is the worst: I leave at 7 and come back at 10.', push: 'Is that too much for you?' },
+  { cena: 'leitura', tipo: 'Opinion', q: 'Which rule on the card is the most important for you?',
+    opc: ['The full weekend off', 'The private bedroom', 'Keeping my passport'], st: ['For me, the most important is …, because …', 'Without it, I …'],
+    ex: 'The private bedroom. After a long day with kids, I need a quiet place for me.', push: 'Which rule would you give up, if you had to?' },
+  { cena: 'multipla', tipo: 'What if', q: 'Your family is lovely, but they always ask for one extra hour. What do you do?',
+    opc: ['Say yes, they are lovely', 'Talk to them kindly', 'Call the coordinator'], st: ['I would …, because …', 'I’d say: “…”'],
+    ex: 'I would talk to them kindly: “I love working with you, but could we keep my hours to 45?”', push: 'And if they get upset?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AU PAIR 13 · KNOW YOUR RIGHTS (CURSOS, B1) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A cadeira quente entra DEPOIS de "III · Count the Hours" (apos: 'multipla') e antes de "IV · I Can", que fica por
+   último com o carimbo e o link da lição de casa (nada de hw aqui). O III é múltipla escolha com conta certa; aqui o
+   aluno troca de lado: ele é a coordenadora local na reunião do mês, e o professor é a Bia, au pair nova, tímida, que
+   pergunta. O aluno explica as regras com as próprias palavras (os cinco números, o passaporte, quem chamar). O limite
+   secreto da Bia: o problema de verdade só aparece na última pergunta. Regras conferidas no aula.js (22 CFR 62.31). */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'cadeira', apos: 'multipla', est: 'o', min: 7, img: 'conversa', rot: 'The Hot Seat',
+    t: 'You are the coordinator. A new au pair has questions.',
+    p: 'Your teacher is Bia, a new au pair. Answer her four questions with the rules. Then choose her first step.',
+    formato: 'papel',
+    aluno: { quem: 'You · the local coordinator', quer: 'Help Bia know the rules, kindly.', limite: 'Short answers, with the numbers.' },
+    prof: { quem: 'Bia · new au pair, week 3', quer: 'Answers. She is shy: “It’s not a big deal.”', limite: 'Secret: her real problem comes in question 4. No full weekend off in two months.' },
+    rot_perg: 'Bia asks',
+    perguntas: [
+      { q: '“My host mom asked me to work 11 hours on Friday. That’s OK if I have Monday off, right?”', ex: 'Not really. The limit is 10 hours a day, even if you have another day off. You can say: “I’d love to help, but the limit is 10 hours.”' },
+      { q: '“The kids sleep at 8, and the parents come home at midnight. Do those hours count?”', ex: 'Yes, they count. If you are in charge of the kids, you are working, even when they are asleep.' },
+      { q: '“My host dad wants to keep my passport in his safe. He says it’s for me. Is that normal?”', ex: 'Your passport is yours. Keep it with you. You can say: “Thank you, but I’d like to keep it in my room.”' },
+      { q: '“OK… and I haven’t had a full weekend off since I arrived. Two months. Is that a problem?”', ex: 'Yes, it is. You have one full weekend off every month, from Friday evening to Monday morning. Let’s talk to your family together.' }
+    ],
+    st: ['The rule is …', 'Every hour you are in charge of the kids …', 'You can say: “…”', 'If it continues, call me / the help line …'],
+    acordo: { tag: 'The first step', q: 'What should Bia do first?',
+      opc: ['Talk to the family', 'Meet the coordinator', 'Call the help line'],
+      st: ['First, you should …', 'If nothing changes, …'],
+      ex: 'First, you should talk to the family this week. I can be there with you. If nothing changes, you call the agency or the help line.' },
+    push: 'Bia: “Please don’t tell them I asked. They are so nice to me.” What do you say?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

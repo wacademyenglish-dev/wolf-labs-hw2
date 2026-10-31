@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>Read, Then Speak · DET Prep · Lesson 9 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Read, Then Speak question: a written topic with guide questions, about 20 seconds to prepare, then 30 to 90 seconds of speaking. The student learns a shape for any topic: answer → reason → example → wrap-up.</p><p style="margin:0 0 6px"><b>The story:</b> No story: a model answer in pieces, six quick topics with the die, then three real topics with the clock.</p><p style="margin:0 0 6px"><b>About 35 min:</b> I · The Story in Order (7) · II · The Die (8) · III · Three Topics (16) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “What is your favorite season?” Let the student answer freely; then show how the four pieces make the same answer stronger.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Read, Then Speak question: a written topic with guide questions, about 20 seconds to prepare, then 30 to 90 seconds of speaking. The student learns a shape for any topic: answer → reason → example → wrap-up.</p><p style="margin:0 0 6px"><b>The story:</b> No story: a model answer in pieces, six quick topics with the die, then three real topics with the clock.</p><p style="margin:0 0 6px"><b>About 42 min:</b> I · The Story in Order (7) · II · The Die (8) · III · Computer or Person? (7) · IV · Three Topics (16) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “What is your favorite season?” Let the student answer freely; then show how the four pieces make the same answer stronger.</p></div><!--/prep-->
     <p>The most common problem is a slow start (“Well… so… this topic is about…”). Train a first sentence that answers the question directly. The guide questions on the card are the map: one sentence or two for each.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>answer in the first sentence · The main reason is… · For example,… · That’s why… · On the other hand,… · would + verb for wishes</p>
@@ -53,10 +53,13 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Record the student (with permission) in Topic 1 and Topic 3: the difference in shape is easy to hear.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>starting with “this topic is about”</i>, <i>no example</i>, <i>stopping at 30 seconds</i>, <i>I would like learn</i>, <i>the reason is because</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>COMPUTER OR PERSON? (III) AND THE SURPRISE QUESTION</h4>
+    <p>Before the three topics with the real clock, a warm-up argument in the shape of the lesson. The student picks a side (a computer or a person should score speaking) and defends it for one minute: answer, reason, example, wrap-up. Then they tap Swap sides and defend the other one. Wait five seconds in silence before they start, and don’t give your opinion first. Use the PUSH line (150 from the computer, 120 from a person). Recast quietly while they talk (The main reason is…, For example…, That’s why…); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
-      <li><b>Out loud</b>: I · The Story in Order and III · Three Topics.</li>
-      <li><b>Focus</b>: II · The Die and IV · I Can.</li>
+      <li><b>Out loud</b>: I · The Story in Order and III · Computer or Person? and IV · Three Topics.</li>
+      <li><b>Focus</b>: II · The Die and V · I Can.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -69,5 +72,43 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DET PREP 09 · READ, THEN SPEAK · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'ordem', tipo: 'And you?', q: 'What is your favorite season, and why?',
+    opc: ['Summer', 'Winter', 'Autumn or spring'], st: ['My favorite season is …', 'The main reason is …', 'That’s why …'],
+    ex: 'My favorite season is winter. The main reason is that I sleep better when it’s cold. That’s why I wait for June every year.', push: 'Now say it again with an example from last year.' },
+  { cena: 'dado', tipo: 'Would you rather', q: 'Would you rather talk for 90 seconds about a topic you love, or 30 seconds about a topic you hate?',
+    opc: ['90 seconds, a topic I love', '30 seconds, a topic I hate'], st: ['I’d rather …, because …', 'For example, …'],
+    ex: 'Ninety seconds about a topic I love. When I like the topic, the time goes fast and the words come easily.', push: 'Name a topic you hate. Can you talk about it for 30 seconds now?' },
+  { cena: 'prova', tipo: 'What if', q: 'What if the test gives you a topic you know nothing about? What do you do first?',
+    opc: ['Give a clear answer anyway', 'Talk about a friend’s experience', 'Say I don’t know, and why'], st: ['First, I would …', 'My answer is …', 'That’s why …'],
+    ex: 'Give a clear answer anyway. Even “I’ve never tried it, but I’d like to” is an answer. Then a reason, and the shape does the rest.', push: 'Try it now: “Talk about your favorite kind of farm animal.”' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DET PREP 09 · READ, THEN SPEAK (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A arena entra DEPOIS de "II · The Die" (apos: 'dado'), no MEIO da aula, antes dos três temas com relógio.
+   A prova é corrigida por computador; aqui o aluno defende um lado (computador × pessoa corrigindo a fala) por um
+   minuto e troca de lado, usando o formato da aula: answer → reason → example → wrap-up (That’s why…).
+   Não repete o tema 3 da prova (estudar sozinho × em grupo). O "IV · I Can" (agora V) fica por último com o link da lição de casa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'arena', apos: 'dado', est: 'o', min: 7, img: 'conversa', rot: 'Computer or Person?',
+    t: 'Who should score your speaking: a computer or a person?',
+    p: 'Pick a side and defend it for one minute: answer, reason, example, wrap-up. Then swap sides.',
+    formato: 'arena',
+    q: 'Who gives the fairer score?',
+    lados: [
+      { nome: 'A computer', arg: 'Same rules for everyone, no bad mood, no favorites, results in two days.' },
+      { nome: 'A person', arg: 'Understands ideas, jokes and accents, not only words and pauses.' }
+    ],
+    st: ['My answer is …', 'The main reason is …', 'For example, …', 'That’s why …'],
+    ex: 'My answer is a computer. The main reason is that people get tired: the twentieth student of the day gets a worse score. For example, my teacher in school always gave lower grades on Friday afternoons. That’s why I trust a computer more.',
+    push: 'The computer gives you 150 and a person gives you 120 for the same answer. Which score is the real one?',
+    segundos: 60 }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

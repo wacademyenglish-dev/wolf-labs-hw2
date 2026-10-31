@@ -55,10 +55,13 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to prepare three snack ideas in English for kids with no peanuts and no milk.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>There isn’t some</i>, <i>two breads</i>, <i>How much eggs?</i>, <i>Would you like any…? (offer)</i>. A2+: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE DINNER DEAL (V) AND THE SURPRISE QUESTION</h4>
+    <p>After “Food Talk”, a short role play: you are Emma (7, no milk) and you want pizza, chocolate and no broccoli. Ask your four questions; your secret (only you see it) is that Emma eats carrots if she can cook them, and she loves fruit. The student answers as the au pair with some / any and offers (Would you like some …?), then you agree on dinner together. Play it light and a little dramatic. Wait five seconds in silence, then use the PUSH line. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
-      <li><b>Focus</b>: I · Some or Any? and II · Read the Label and V · I Can.</li>
-      <li><b>Out loud</b>: III · The Picky Eater and IV · Food Talk.</li>
+      <li><b>Focus</b>: I · Some or Any? and II · Read the Label and VI · I Can.</li>
+      <li><b>Out loud</b>: III · The Picky Eater and IV · Food Talk and V · The Dinner Deal.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -71,5 +74,51 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AU PAIR 19 · WHAT'S FOR LUNCH? · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'descobre', tipo: 'And you?', q: 'What is in your fridge right now?',
+    opc: ['A lot of things', 'Some things', 'Not much'], st: ['There is some …', 'There isn’t any …', 'There are some …'],
+    ex: 'Not much! There is some milk and some cheese, but there aren’t any vegetables.', push: 'What do you need to buy this week?' },
+  { cena: 'multipla', tipo: 'Opinion', q: 'Were you a picky eater when you were a child?',
+    opc: ['Yes, very', 'A little', 'No, I ate everything'], st: ['When I was a child, I didn’t eat any …', 'I loved …'],
+    ex: 'A little. I didn’t eat any onions, and I only ate rice and beans with fries!', push: 'Is there any food you still don’t eat?' },
+  { cena: 'escolha', tipo: 'Would you rather', q: 'Would you rather cook dinner for the family, or wash all the dishes?',
+    opc: ['Cook dinner', 'Wash the dishes'], st: ['I’d rather …, because …', 'I’m good at …'],
+    ex: 'Cook dinner. I can make some Brazilian food, and the kids can help me.', push: 'And if the family wants dinner at 5:30?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AU PAIR 19 · WHAT'S FOR LUNCH? (CURSOS, A2+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   FORMATO TROCADO: o lote pedia "aposta" (escolha + revela), mas o III · The Picky Eater JÁ é uma escolha A/B e o
+   IV · Food Talk já é o "E você?". Para não repetir escolha, entra uma NEGOCIAÇÃO LEVE (papel + acordo), diferente dos
+   vizinhos do lote (18 ranking, 20 semáforo). Entra DEPOIS de "IV · Food Talk" (apos: 'conversa') e antes de "V · I Can",
+   que fica por último com o carimbo e o link da lição de casa (nada de hw aqui). O professor é a Emma (7 anos, sem
+   leite, da própria aula) pedindo o jantar; o aluno é a au pair e fecha um acordo. A língua da aula (some / any; Would
+   you like some …?; There isn't any …; How much / How many) mora nos iniciadores e nas respostas. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'jantar', apos: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'The Dinner Deal',
+    t: 'Emma wants pizza. Make a dinner deal.',
+    p: 'You are the au pair. Your teacher is Emma, 7. Answer her four questions, then agree on dinner.',
+    formato: 'papel',
+    aluno: { quem: 'You · the au pair', quer: 'A good dinner with some vegetables.', limite: 'Emma can’t have milk. The parents say: no sweets on weekdays.' },
+    prof: { quem: 'Emma · 7 years old', quer: 'Pizza, juice and chocolate. No broccoli!', limite: 'Secret: she eats carrots if she can cook them. She loves fruit.' },
+    rot_perg: 'Emma asks',
+    perguntas: [
+      { q: '“Can we have pizza tonight? Pleeease?”', ex: 'Pizza has a lot of cheese, and you can’t have milk. Would you like some pasta with tomato sauce?' },
+      { q: '“Is there any chocolate? Just a little bit?”', ex: 'There isn’t any chocolate for weekdays. Would you like some strawberries for dessert?' },
+      { q: '“I don’t want any broccoli! How much do I have to eat?”', ex: 'Only three little pieces. Or you can choose: some carrots instead?' },
+      { q: '“Can I help you cook?”', ex: 'Yes! You can wash the carrots and put some on every plate.' }
+    ],
+    st: ['Would you like some …?', 'There isn’t any …, but …', 'How about some …?', 'You can help me …'],
+    acordo: { tag: 'The deal', q: 'Which dinner do you agree on?',
+      opc: ['Pasta · carrots · fruit', 'Rice and chicken · fruit', 'Pizza with no cheese'],
+      st: ['OK, so we agree on …', 'And for dessert, some …'],
+      ex: 'OK, so we agree on pasta with tomato sauce, some carrots you cook with me, and strawberries for dessert. Deal?' },
+    push: 'Emma: “My last au pair always gave me chocolate!” What do you say?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

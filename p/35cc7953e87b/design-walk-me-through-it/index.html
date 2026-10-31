@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>Walk Me Through It · English for Designers · Lesson 4 of 12</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> presenting design decisions: the walkthrough (Let me walk you through…, Our goal was to…), decision + reason (We chose… because…, We moved… so that…, We used… to…) and answering opinions (Yes, … Can you help me understand…?).</p><p style="margin:0 0 6px"><b>The story:</b> A video about getting designs approved, then a fictional gym app (FitNook) presented in a design review.</p><p style="margin:0 0 6px"><b>About 34 min:</b> I · Before the Meeting (8) · II · A Walkthrough (10) · III · Decision + Reason (12) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Think of a design you made. Why did you choose those colors? Say it in one sentence.”</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> presenting design decisions: the walkthrough (Let me walk you through…, Our goal was to…), decision + reason (We chose… because…, We moved… so that…, We used… to…) and answering opinions (Yes, … Can you help me understand…?).</p><p style="margin:0 0 6px"><b>The story:</b> A video about getting designs approved, then a fictional gym app (FitNook) presented in a design review.</p><p style="margin:0 0 6px"><b>About 41 min:</b> I · Before the Meeting (8) · II · A Walkthrough (10) · III · Decision + Reason (12) · IV · The Hot Seat (7) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Think of a design you made. Why did you choose those colors? Say it in one sentence.”</p></div><!--/prep-->
     <p>For graphic designers and interior designers, swap the app for a poster or a room; the structure is the same. Insist on the reason: when the student says “we chose blue”, ask “why?” until a so that / because appears.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>Let me walk you through… · Our goal was to… · We chose… because… · We moved… so that… · As a result,… · Yes,… Can you help me understand…?</p>
@@ -53,10 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to bring one screen, poster or room of their own to explain in the next lessons.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>We choosed (We chose)</i>, <i>so that people can to reach (so that people can reach)</i>, <i>for make it faster (to make it faster)</i>, <i>I like this color (give a reason, not a taste)</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE HOT SEAT (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After the sentence practice, a real back-and-forth. Your student designed the FitNook booking screen from II; you are Dan, the gym owner, with only opinions (button at the top, red, the long descriptions back). Your secret limit (only you see it): only the descriptions really matter, because two coaches complained; say it only if your student asks “Can you help me understand …?”. Ask the five lines in order, insist a little, and wait five seconds in silence after each. Then use the PUSH line (“I pay, I want it my way”). Recast quietly while they talk (We chose … because …, so that …, Yes, and …); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · Before the Meeting and II · A Walkthrough.</li>
-      <li><b>Focus</b>: III · Decision + Reason and IV · I Can.</li>
+      <li><b>Focus</b>: III · Decision + Reason and V · I Can.</li>
+      <li><b>Out loud</b>: IV · The Hot Seat (you are the gym owner).</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -71,5 +75,46 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DESIGN 04 · WALK ME THROUGH IT · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'When someone criticizes your work, what do you do first?',
+    opc: ['I defend it', 'I go quiet', 'I ask questions'], st: ['Usually, I …, because …', 'Next time, I want to …'],
+    ex: 'I go quiet, and later I think of the perfect answer. Next time, I want to pause and ask a question.', push: 'And when the criticism comes from your boss, in front of the team?' },
+  { cena: 'leitura', tipo: 'Opinion', q: 'Is “Because I like it” ever a good reason in design?',
+    opc: ['Never', 'Sometimes', 'Yes, taste matters'], st: ['I think it’s … a good reason, because …', 'We chose … so that …'],
+    ex: 'Sometimes. In my own home, yes. For a client’s app, I need a reason that helps the users.', push: 'And when the client says “Because I like it”?' },
+  { cena: 'transforma', tipo: 'What if', q: 'What if your manager loves a decision that you know is bad for the users?',
+    opc: ['I say it clearly', 'I test it first', 'I keep quiet'], st: ['If that happened, I’d …', 'Can you help me understand …?'],
+    ex: 'I’d test it first. If the users have problems, the numbers say it for me.', push: 'There is no time to test. Launch is tomorrow. What now?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DESIGN 04 · WALK ME THROUGH IT (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A cadeira quente entra DEPOIS de "III · Decision + Reason" (apos: 'transforma') e antes do I Can, que fica por
+   último com o carimbo e a lição de casa (nada de hw aqui). O II é o walkthrough do app FitNook (FICTÍCIO); aqui o
+   aluno é o designer daquela tela e o professor é o dono da academia, que só tem opiniões. O aluno defende cada
+   decisão com a língua da aula (We chose … because …, so that …, The idea is to …, Yes, and …, Can you help me
+   understand …?). O limite secreto: o dono só se importa de verdade com as descrições, e só conta se o aluno perguntar. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'cadeira', apos: 'transforma', est: 'o', min: 7, img: 'conversa', rot: 'The Hot Seat', t: 'The gym owner has opinions. You have reasons.',
+    p: 'Your teacher is the gym owner. Answer every opinion with a reason, and ask one good question.',
+    formato: 'papel',
+    aluno: { quem: 'You · the FitNook designer', quer: 'Keep your screen: “Book” at the bottom, green, short descriptions.', limite: 'You can change one thing, for a reason that helps users.' },
+    prof: { quem: 'Dan · owner of the FitNook gym', quer: 'The button at the top, his red logo color, the long descriptions back.', limite: 'Secret: only the descriptions matter (coaches complained). Say it only if asked “Can you help me understand …?”' },
+    rot_perg: 'The gym owner says',
+    perguntas: [
+      { q: '“Why is the Book button at the bottom? Important things go at the top.”', ex: 'Yes, I’m glad you brought that up. We moved it to the bottom so that people can tap it with one thumb, on the bus or at the gym door.' },
+      { q: '“I don’t like the green. Our logo is red. Can we use red?”', ex: 'Yes, and red is a strong color for the brand. We chose green for open classes because, in the test, red made people think the class was full.' },
+      { q: '“Where are my class descriptions? I want them back.”', ex: 'Can you help me understand what doesn’t work for you without them? The idea is to show time, coach and level first, and open the details on tap.' },
+      { q: '“Eight of ten users is not ten of ten. Is this really better?”', ex: 'Before, booking took six taps. As a result of the changes, it takes two. We could test again with ten more members next week.' },
+      { q: '“OK. If you change ONE thing for me, what is it?”', ex: 'Let me suggest one change: the coach’s name opens a short description in one tap, so that your coaches get more attention, and the screen stays fast.' }
+    ],
+    st: ['Yes, I’m glad you brought that up.', 'We chose … because …', 'We moved … so that …', 'Can you help me understand …?'],
+    push: 'The owner: “I pay for this app. I just want it my way.” What do you say now?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

@@ -53,11 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. If the student doesn’t drive, plan with her: families in cities with public transportation, and saying it clearly in the profile.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>You should to practice</i>, <i>You don’t should</i>, <i>lying about driving experience</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>TRAFFIC LIGHT (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After “Should or shouldn’t?”, four requests in the first week: a 10-minute drive to soccer, a morning with light snow, two extra kids with only two car seats, and an hour on the highway to the lake. For each one the student picks green (I can do it), yellow (practice or ask first) or red (I shouldn’t), then says what they should do. Only the car seats are a clear rule; the others depend on the student’s real experience, so let them choose. Wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk (I should …; I don’t feel safe driving …); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · Can Au Pairs Drive?.</li>
-      <li><b>Out loud</b>: II · Give Advice.</li>
-      <li><b>Focus</b>: III · Should or Shouldn’t? and IV · I Can.</li>
+      <li><b>Out loud</b>: II · Give Advice and IV · Traffic Light.</li>
+      <li><b>Focus</b>: III · Should or Shouldn’t? and V · I Can.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -72,5 +75,57 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AU PAIR 20 · BEHIND THE WHEEL · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas (nada de acidente) */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'How do you feel about driving?',
+    opc: ['I love it', 'It’s OK', 'I don’t drive'], st: ['I feel …, because …', 'I learned to drive when …'],
+    ex: 'It’s OK. I drive to work, but I hate parking!', push: 'Who taught you to drive?' },
+  { cena: 'transforma', tipo: 'Opinion', q: 'Who is a better driver in your family?',
+    opc: ['Me', 'My brother or sister', 'A cousin'], st: ['I think … is the best driver, because …', 'He / She should …'],
+    ex: 'My brother. He is calm, and he never uses his phone in the car. I should learn from him.', push: 'And who is the worst? Be honest!' },
+  { cena: 'separa', tipo: 'Would you rather', q: 'Would you rather drive the kids every day, or take the bus with them?',
+    opc: ['Drive every day', 'Take the bus'], st: ['I’d rather …, because …', 'With the bus, I …'],
+    ex: 'Take the bus. I can talk with the kids, and I don’t have to think about parking.', push: 'And in winter, at minus 10 degrees?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AU PAIR 20 · BEHIND THE WHEEL (CURSOS, B1) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O semáforo entra DEPOIS de "III · Should or Shouldn't?" (apos: 'separa') e antes de "IV · I Can", que fica por
+   último com o carimbo e o link da lição de casa (nada de hw aqui). O III separa conselhos claros; aqui são quatro
+   pedidos CINZENTOS da família, já na primeira semana: verde = I can do it, amarelo = I should practice / ask first,
+   vermelho = I shouldn't, I'll say no. A língua da aula (should / shouldn't; I don't feel safe driving …) mora nos
+   iniciadores. Nada de acidente: só decisões antes de pegar o volante. Família FICTÍCIA. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'semaforo', apos: 'separa', est: 'o', min: 6, img: 'conversa', rot: 'Traffic Light',
+    t: 'Your first week. Can you drive?',
+    p: 'Choose a color for each request, or say your own idea. Then say what you should do.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Soccer', sit: 'Host dad: “Can you drive Max to soccer tomorrow? It’s only 10 minutes.” You drove with him twice.',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green · I can do it', cor: 'g' }, { t: 'Yellow · practice first', cor: 'y' }, { t: 'Red · I shouldn’t', cor: 'r' }],
+        st: ['I think I should …', 'I shouldn’t …, because …', 'Could we practice …?'],
+        ex: 'Green, if I set the GPS before I start the car. Ten minutes is OK, and I know the car a little.',
+        push: 'It’s 5 p.m. and the traffic is heavy. Still green?' },
+      { tag: 'Light snow', sit: 'It’s snowing a little. School is open. You have never driven in snow.',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green · I can do it', cor: 'g' }, { t: 'Yellow · practice first', cor: 'y' }, { t: 'Red · I shouldn’t', cor: 'r' }],
+        st: ['I should practice …', 'I don’t feel safe driving …', 'Maybe we should …'],
+        ex: 'Red today. I don’t feel safe driving in snow yet. I should practice with the host mom on a quiet road this weekend.',
+        push: 'The parents are both at work and the kids must be at school at 8. What now?' },
+      { tag: 'Extra kids', sit: 'After a playdate, a mom asks: “Can you take my two kids home too?” You have two car seats in the car.',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green · I can do it', cor: 'g' }, { t: 'Yellow · ask first', cor: 'y' }, { t: 'Red · I shouldn’t', cor: 'r' }],
+        st: ['I shouldn’t …, because …', 'I should ask …', 'I’m sorry, but …'],
+        ex: 'Red. Four kids and only two car seats? I shouldn’t. I’d say: “I’m sorry, I don’t have car seats for them.”',
+        push: 'Her house is only two streets away. Does that change your color?' },
+      { tag: 'The highway', sit: 'Host mom: “On Saturday, can you drive the kids to the lake? It’s one hour on the highway.”',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green · I can do it', cor: 'g' }, { t: 'Yellow · practice first', cor: 'y' }, { t: 'Red · I shouldn’t', cor: 'r' }],
+        st: ['I should …, before …', 'I think we should …', 'I don’t feel safe …'],
+        ex: 'Yellow. I should drive on the highway with the host mom first. And Saturday is my day off, so I’d ask about that too.',
+        push: 'They say: “You can bring a friend, and we pay for lunch.” Green now?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

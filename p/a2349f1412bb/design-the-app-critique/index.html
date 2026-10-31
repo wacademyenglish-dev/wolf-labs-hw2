@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>The App Critique · English for Designers · Lesson 11 of 12</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the app critique: overview (This app helps… to…), users and one flow (Let me walk through one flow), strong comments (user + element + effect: …, so…), hedging (a bit, might, I wonder if…), opportunities and trade-offs.</p><p style="margin:0 0 6px"><b>The story:</b> A product designer’s critique structure, comments to sort into strong and weak, then two fictional apps (a food delivery app and a habit tracker) to critique live.</p><p style="margin:0 0 6px"><b>About 40 min:</b> I · A Structure for Any App (9) · II · Strong or Weak? (9) · III · Critique It Live (18) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Which app on your phone do you love, and which one makes you angry? Why?”</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the app critique: overview (This app helps… to…), users and one flow (Let me walk through one flow), strong comments (user + element + effect: …, so…), hedging (a bit, might, I wonder if…), opportunities and trade-offs.</p><p style="margin:0 0 6px"><b>The story:</b> A product designer’s critique structure, comments to sort into strong and weak, then two fictional apps (a food delivery app and a habit tracker) to critique live.</p><p style="margin:0 0 6px"><b>About 47 min:</b> I · A Structure for Any App (9) · II · Strong or Weak? (9) · III · Fix It First (7) · IV · Critique It Live (18) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Which app on your phone do you love, and which one makes you angry? Why?”</p></div><!--/prep-->
     <p>For graphic and interior designers, this is still useful: the same structure works to critique a poster or a hotel lobby. After the cards, ask the student to critique a real app on their phone, live.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>This app helps… to… · The main users are probably… · Let me walk through one flow: · One problem is that…, so… · One opportunity could be… · The trade-off is…</p>
@@ -53,11 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to practice one live critique of any app before the final lesson.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>The app is very intuitive (say why)</i>, <i>It helps the users to find (fine; also helps users find)</i>, <i>The trade-off is that is (that it is)</i>, <i>I would change all (be specific)</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>FIX IT FIRST (III) AND THE SURPRISE QUESTION</h4>
+    <p>Before the live critiques, a ranking. A fictional cinema app has five problems, and the team can fix one a month. Your student taps them in order (1 = fix first) and defends the first and the last. Then tap “Show my teacher’s order” (it starts with the hidden tickets and the six payment screens), disagree on one item and agree on one top 3 together. Wait five seconds in silence before you help, and use the PUSH line (the manager wants payment first). There is no right order. Recast quietly while they talk (user + element + effect, One problem is that …, so …, The trade-off is …); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · A Structure for Any App.</li>
-      <li><b>Focus</b>: II · Strong or Weak? and IV · I Can.</li>
-      <li><b>Out loud</b>: III · Critique It Live.</li>
+      <li><b>Focus</b>: II · Strong or Weak? and V · I Can.</li>
+      <li><b>Out loud</b>: III · Fix It First and IV · Critique It Live.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -72,5 +75,42 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DESIGN 11 · THE APP CRITIQUE · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'Which app on your phone do you open first in the morning?',
+    opc: ['A message app', 'A news or social app', 'Something else'], st: ['The first app I open is …, because …', 'It helps me …'],
+    ex: 'A message app. It helps me see if anything changed in my day before I get up.', push: 'Would you like to change that habit?' },
+  { cena: 'separa', tipo: 'Opinion', q: 'Is there a popular app that you think is badly designed?',
+    opc: ['Yes, one I use', 'Yes, but I love it', 'No, they’re all fine'], st: ['One problem with … is that …, so …', 'For a user like me, …'],
+    ex: 'Yes, one I use. One problem with my bank app is that the transfer button is hidden, so I search for it every time.', push: 'So why do you still use it?' },
+  { cena: 'prova', tipo: 'What if', q: 'What if the interviewer says: “Critique OUR app”, and you don’t like it?',
+    opc: ['I’m honest', 'I’m very polite', 'I talk only about the good parts'], st: ['I’d say: “What works well is …, but …”', 'I wonder if …', 'The trade-off is …'],
+    ex: 'I’m honest, but kind: “What works well is the checkout. I wonder if new users find the search easily.”', push: 'The designer of that app is in the room. Same answer?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DESIGN 11 · THE APP CRITIQUE (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O ranking com a ordem do professor entra no MEIO, DEPOIS de "II · Strong or Weak?" (apos: 'separa') e antes de
+   "III · Critique It Live" (a crítica de dois minutos, a tela forte, fica intacta); o I Can continua por último com o
+   carimbo e a lição de casa (nada de hw aqui). Um app de cinema (FICTÍCIO, diferente dos dois do III) tem cinco
+   problemas e o time só conserta um por mês: o aluno ordena, defende o primeiro e compara com a ordem do professor.
+   A língua da aula (user + element + effect, One problem is that …, so …, The trade-off is …, I wonder if …) mora
+   nos iniciadores. Sem ordem certa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'conserta', apos: 'separa', est: 'o', min: 7, img: 'conversa', rot: 'Fix It First', t: 'Five problems, one fix a month. What goes first?',
+    p: '“SeatSnap” sells cinema tickets. Put the problems in order: 1 is the first to fix. Then compare with your teacher.',
+    formato: 'ranking',
+    q: 'What do you fix first?',
+    itens: ['Seat map too small to tap', 'No dark mode in the cinema', 'Tickets hidden in the menu', 'Six screens to pay', 'No trailer before you buy'],
+    dica: 'Tap from the first fix to the last. Tap again to take it out.',
+    st: ['The first thing I’d fix is …, because users might …', 'One problem is that …, so …', 'The trade-off is …', 'I wonder if …'],
+    ex: 'The first thing I’d fix is the tickets in the menu. At the cinema door, with people behind you, users might panic because they can’t find the ticket. Six screens to pay is a problem too, but it happens only once.',
+    push: 'Your manager says: “Payment makes the money. Payment first.” Does your order change?',
+    prof: [2, 3, 0, 4, 1] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

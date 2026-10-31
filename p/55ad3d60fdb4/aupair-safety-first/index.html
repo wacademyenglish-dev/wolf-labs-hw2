@@ -53,10 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Homework: write five questions about safety rules to ask the host family in the first week.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>must to</i>, <i>she musts</i>, <i>mustn’t = not necessary (wrong)</i>, <i>Do I must…?</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>DAY ONE (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After “Must or mustn’t?”, the student ranks five questions to ask the family in the first hour: the address and emergency numbers, car seats, medicines and cleaning products, pool and bath rules, screens and sweets. There is no single right order; the student explains the top one and the last one with must / don’t have to. Then tap “Show my teacher’s order” (address, pool and bath, car seats, medicines, screens) and agree on one top 3 together. Wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · You Are Supported.</li>
-      <li><b>Focus</b>: II · Must, Mustn’t, Don’t Have To and III · Must or Mustn’t? and IV · I Can.</li>
+      <li><b>Focus</b>: II · Must, Mustn’t, Don’t Have To and III · Must or Mustn’t? and V · I Can.</li>
+      <li><b>Out loud</b>: IV · Day One.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -71,5 +75,42 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AU PAIR 18 · SAFETY FIRST · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas (leves, nada de acidente ou saúde) */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'When you were a child, what was a rule at home that you didn’t like?',
+    opc: ['Bedtime', 'No sweets', 'Homework first'], st: ['When I was a child, I had to …', 'I couldn’t …, and I hated it.'],
+    ex: 'Homework first. I had to do my homework before I could play outside. I hated it, but it worked!', push: 'Will you use that rule with your own kids one day?' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Which is more important for an au pair: being fun, or being careful?',
+    opc: ['Being fun', 'Being careful', 'Both, the same'], st: ['I think an au pair must be …, because …', 'She doesn’t have to be …'],
+    ex: 'Both, but careful comes first. A fun au pair who doesn’t watch the kids is not a good au pair.', push: 'And for the kids, what’s more important?' },
+  { cena: 'separa', tipo: 'What if', q: 'The parents’ rule is “no sweets”, and the grandparents give the kids candy. What do you do?',
+    opc: ['Nothing, it’s their family', 'Talk to the parents later', 'Say no to the grandparents'], st: ['I would …, because …', 'I don’t have to …, but I must …'],
+    ex: 'Talk to the parents later. I don’t have to fight with the grandparents, but I must tell the parents.', push: 'And if the kids ask you to keep it a secret?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AU PAIR 18 · SAFETY FIRST (CURSOS, B1) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O ranking entra DEPOIS de "III · Must or Mustn't?" (apos: 'separa') e antes de "IV · I Can", que fica por último
+   com o carimbo e o link da lição de casa (nada de hw aqui). O III classifica regras certas/erradas; aqui não há
+   ordem certa: o aluno escolhe o que perguntar PRIMEIRO à família no dia 1 (cinco perguntas), compara com a ordem do
+   professor e os dois fecham um top 3. A língua da aula (must / mustn't / don't have to; Do I have to …? Can I …?)
+   mora nos iniciadores. Itens neutros (casa, carro, telas): nada de acidente descrito nem saúde. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'ranking', apos: 'separa', est: 'o', min: 6, img: 'conversa', rot: 'Day One',
+    t: 'Day one with the family. What do you ask first?',
+    p: 'Put the five questions in order, from the most important. Explain your top one and your last one.',
+    formato: 'ranking',
+    q: 'Which question comes first?',
+    itens: ['“What is the address, and where are the emergency numbers?”', '“How do the car seats work?”', '“Where do you keep medicines and cleaning products?”', '“What are your rules for the pool and the bath?”', '“What are your rules for screens and sweets?”'],
+    st: ['First, I must know …, because …', 'I don’t have to ask about … on day one, because …', 'Do I have to …? / Can I …?'],
+    ex: 'First, I must know the address and the emergency numbers: for any call, the address comes first. Screens and sweets are last. I don’t have to know that in the first hour.',
+    push: 'You only have time for TWO questions before the parents leave. Which two?',
+    prof: [0, 3, 1, 2, 4],
+    dica: 'Tap from the most to the least important. Tap again to take it out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

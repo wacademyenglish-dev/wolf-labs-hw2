@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>Read and Complete · DET Prep · Lesson 4 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Read and Complete question: a paragraph with many words cut in half, about three minutes for all of them. The first sentence is complete. The student learns a four-step method and practices with two timed paragraphs.</p><p style="margin:0 0 6px"><b>The story:</b> No story: the student is the candidate. Method → two timed paragraphs → checking a candidate’s answers for mistakes.</p><p style="margin:0 0 6px"><b>About 33 min:</b> I · The Method (8) · II · Two Paragraphs (14) · III · Find the Mistakes (7) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Three minutes, ten gaps: where do you start?” Most students say “the first gap”. The method says: read everything first.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Read and Complete question: a paragraph with many words cut in half, about three minutes for all of them. The first sentence is complete. The student learns a four-step method and practices with two timed paragraphs.</p><p style="margin:0 0 6px"><b>The story:</b> No story: the student is the candidate. Method → two timed paragraphs → checking a candidate’s answers for mistakes.</p><p style="margin:0 0 6px"><b>About 40 min:</b> I · The Method (8) · II · Two Paragraphs (14) · III · A Quiet Saturday (7) · IV · Find the Mistakes (7) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Three minutes, ten gaps: where do you start?” Most students say “the first gap”. The method says: read everything first.</p></div><!--/prep-->
     <p>This question uses American spelling. Grammar endings (-s, -ed, -er, plural) are where most points are lost: train the student to check them in the last 30 seconds.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>read the whole paragraph first · think grammar: -s, -ed, -ing, plural · small words first · check spelling at the end · the first sentence gives the topic · American spelling</p>
@@ -53,11 +53,16 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to time the reading step: about 20 seconds is the goal.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>peoples</i>, <i>withought</i>, <i>more hard</i>, <i>do a mistake</i>, <i>allso</i>, <i>helps the brain stores</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>A QUIET SATURDAY (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the two paragraphs, a real negotiation. The test is at home, with a camera, and nobody can be in the room. Your student needs Saturday 9 to 11; you are Leo, the flatmate whose band rehearses in the living room at ten. Your secret limit (only you see it) is softer: the band can start at 11:30 or play in the drummer’s garage, but you want a favor back. Ask the four questions in order, insist a little, wait five seconds in silence after each, and don’t give your limit first. Then close the deal on screen and use the PUSH line. Recast quietly while they talk (It would be easier if…, What if you start later?, First… Then…); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · The Method.</li>
       <li><b>Write</b>: II · Two Paragraphs.</li>
-      <li><b>Focus</b>: III · Find the Mistakes and IV · I Can.</li>
+      <li><b>Out loud</b>: III · A Quiet Saturday.</li>
+      <li><b>Out loud</b>: III · A Quiet Saturday.</li>
+      <li><b>Focus</b>: IV · Find the Mistakes and V · I Can.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -70,5 +75,50 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DET PREP 04 · READ AND COMPLETE · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Do you read instructions before you start, or do you just start?',
+    opc: ['I read everything first', 'I start and see', 'It depends'], st: ['Usually, I …', 'For example, last week I …'],
+    ex: 'I just start. For example, last week I built a shelf without reading anything, and I had three screws left.', push: 'And with a new phone or app?' },
+  { cena: 'lacunas', tipo: 'Opinion', q: 'The bicycle paragraph says more lanes mean more bikes. Would it work in your city?',
+    opc: ['Yes, for sure', 'Maybe, slowly', 'No way'], st: ['In my city, …', 'It would be easier if …', 'The problem is …'],
+    ex: 'Maybe, slowly. My city is hot and has a lot of hills, so people would need electric bikes.', push: 'Would YOU leave your car or the bus for a bike?' },
+  { cena: 'erros', tipo: 'Would you rather', q: 'Would you rather find your own mistakes, or have a friend find them for you?',
+    opc: ['Find them myself', 'A friend finds them'], st: ['I’d rather …, because …', 'It’s easier to …'],
+    ex: 'A friend. I read what I wanted to write, not what I wrote. Other eyes are better.', push: 'And if the friend finds ten mistakes in a row?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DET PREP 04 · READ AND COMPLETE (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A negociação com limite secreto entra DEPOIS de "II · Two Paragraphs" (apos: 'lacunas'), no MEIO da aula, antes de
+   "III · Find the Mistakes". A prova é em casa, com câmera, sem barulho e sem ninguém na sala: o aluno negocia a
+   manhã de sábado com o colega de apartamento, que tem ensaio da banda na sala. O professor é o Leo e tem um limite
+   secreto. A língua da aula (o método em passos: First, … Then, …; formas -er: quieter, earlier, later) mora nos
+   iniciadores. O "IV · I Can" (agora V) fica por último com o link da lição de casa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'negocia', apos: 'lacunas', est: 'o', min: 7, img: 'conversa', rot: 'A Quiet Saturday',
+    t: 'Test day at home. Negotiate a quiet morning.',
+    p: 'You are taking the test on Saturday at nine. Your flatmate has other plans. Answer his questions, then close a deal.',
+    formato: 'papel',
+    aluno: { quem: 'You · taking the test', quer: 'Silence on Saturday, 9 to 11, and nobody in the living room.', limite: 'Your limit: Sunday is possible, but not after 2 PM.' },
+    prof: { quem: 'Leo · your flatmate', quer: 'His band rehearses in the living room every Saturday at ten.', limite: 'Secret limit: 11:30 is OK, or the drummer’s garage. He wants a favor back.' },
+    rot_perg: 'Leo asks',
+    perguntas: [
+      { q: '“Saturday morning? But the band always plays at ten. Why does it have to be that day?”', ex: 'I know it’s your band day. The test is at home, with a camera, and it needs a quiet room. Saturday is my only free morning this month.' },
+      { q: '“Can’t you just close your door? We’ll play quieter.”', ex: 'I wish I could. But if the microphone hears music, they can cancel my test. Even quieter is too loud.' },
+      { q: '“What if you take it at the library?”', ex: 'The library is a good idea in general, but people walk around and talk. The rules say nobody can be in the room.' },
+      { q: '“OK, OK. So what’s your plan? And what do I get?”', ex: 'First, you start a bit later, at 11:30. Then, after the test, I cook dinner for the whole band. Deal?' }
+    ],
+    st: ['I know it’s …, but …', 'It would be easier if …', 'What if you start later / earlier?', 'First, … Then, …'],
+    acordo: { tag: 'The deal', q: 'Which deal do you close with Leo?',
+      opc: ['Band at 11:30 · I cook', 'Test on Sunday', 'Band in the garage'],
+      st: ['So we agree: …', 'I owe you one.'],
+      ex: 'So we agree: the band starts at 11:30, and I cook dinner for everybody on Saturday night. Thanks, Leo. I owe you one.' },
+    push: 'Leo: “It’s only two hours. Last month I was quiet for your online meeting.” What do you say?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

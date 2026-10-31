@@ -53,11 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to write her five true answers and read them out loud once a day before the interview, without memorizing word by word.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>memorized speeches</i>, <i>very long answers</i>, <i>not knowing the family or the city</i>, <i>inventing anything</i>. A2+: one correction per answer is enough.</p>
+    <!--conversa--><h4>PLACE YOUR BET (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After the officer’s questions, three people in the consulate line: Ana without her DS-2019, Bruno with a memorized speech, Carla who hears the question in Portuguese. For each one the student bets what happens and says why (I bet she’s going to …), then taps the button to see what usually happens. Wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. The message stays the same: short, true answers and documents in your hand.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · What the J-1 Is.</li>
-      <li><b>Focus</b>: II · Good or Risky? and IV · I Can.</li>
-      <li><b>Out loud</b>: III · The Officer Asks.</li>
+      <li><b>Focus</b>: II · Good or Risky? and V · I Can.</li>
+      <li><b>Out loud</b>: III · The Officer Asks and IV · Place Your Bet.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -72,5 +75,55 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AU PAIR 11 · THE CONSULATE · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'Did you ever have an important interview? How did you feel?',
+    opc: ['Very nervous', 'A little nervous', 'Calm'], st: ['I had an interview for …', 'I felt …, because …'],
+    ex: 'Yes, for my first job at a store. I felt very nervous, but the manager was nice.', push: 'What did you do the night before?' },
+  { cena: 'separa', tipo: 'Opinion', q: 'Which question is the hardest for you at the consulate?',
+    opc: ['Your plans after the program', 'Your experience with kids', 'Your trips abroad'], st: ['For me, the hardest is …, because …', 'I’m going to practice …'],
+    ex: 'My plans after the program. I’m not sure yet, but I’m going to say my true plan: finish my degree.', push: 'Answer it now, in one sentence.' },
+  { cena: 'prova', tipo: 'Would you rather', q: 'Would you rather have the interview in English or in Portuguese?',
+    opc: ['In English', 'In Portuguese'], st: ['I’d rather have it in …, because …', 'In English, I can …'],
+    ex: 'In English. It’s good practice, and the family is going to speak English with me every day.', push: 'And if you are very nervous that morning?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AU PAIR 11 · THE CONSULATE (CURSOS, A2+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A aposta entra DEPOIS de "III · The Officer Asks" (apos: 'prova') e antes de "IV · I Can", que fica por último
+   com o carimbo e o link da lição de casa (nada de hw aqui). O III treina as respostas; aqui são três pequenas cenas
+   na fila do consulado com outras pessoas: o aluno aposta o que acontece e depois vê o que costuma acontecer.
+   A língua da aula (short, true answers; documents ready; I'm going to …) mora nos iniciadores e nas respostas.
+   Nada de ensinar a esconder ou mentir: as três "revelações" reforçam a verdade e os documentos na mão. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'aposta', apos: 'prova', est: 'o', min: 6, img: 'conversa', rot: 'Place Your Bet',
+    t: 'Three people in the line. What happens next?',
+    p: 'Read the situation and bet. Say why. Then check what usually happens.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The missing paper', sit: 'Ana is at the window. The officer asks for her DS-2019. It’s on her desk at home.',
+        q: 'What happens?', opc: ['She gets the visa anyway', 'She has to come back with it', 'The officer calls her agency'],
+        st: ['I bet she’s going to …', 'I think the officer will …, because …', 'Next time, she should …'],
+        ex: 'I bet she’s going to come back another day. The DS-2019 is the most important paper for the J-1.',
+        push: 'And if she has a photo of it on her phone?',
+        rot_revela: 'What usually happens', revela: 'Without the DS-2019, the officer can’t give the J-1 visa. Usually she must come back with the paper. Documents ready, in your hand, in order.' },
+      { tag: 'The speech', sit: 'Bruno memorized a two-minute speech. The officer asks: “Why are you going to the U.S.?” Bruno starts the speech.',
+        q: 'What happens?', opc: ['The officer loves it', 'The officer stops him and asks again', 'The officer gives him more time'],
+        st: ['I bet the officer will …', 'Bruno should just say: “I’m going …”', 'A short answer is better, because …'],
+        ex: 'I bet the officer will stop him. He only needs one sentence: “I’m going as an au pair, on the J-1 program.”',
+        push: 'You are very nervous. Is a memorized answer a good idea, or not?',
+        rot_revela: 'What usually happens', revela: 'Officers notice memorized speeches and often stop them with a new question. One short, true sentence works better.' },
+      { tag: 'Portuguese', sit: 'Carla is ready to answer in English. The officer looks at her papers and asks in Portuguese: “Para onde você vai?”',
+        q: 'What happens?', opc: ['Carla answers in Portuguese', 'Carla answers in English anyway', 'Carla asks for English'],
+        st: ['I bet Carla is going to …', 'I think it’s OK to …, because …', 'I would …'],
+        ex: 'I bet she’s going to answer in Portuguese. The officer asked in Portuguese, so it’s OK.',
+        push: 'Would you feel more relaxed in Portuguese, or more professional in English?',
+        rot_revela: 'What usually happens', revela: 'Interviews in Brazil can be in English or in Portuguese. Answer in the language of the question, short and true. Both are OK.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

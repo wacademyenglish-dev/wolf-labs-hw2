@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>Low-Fi First · English for Designers · Lesson 6 of 12</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> presenting unfinished work: still, for now, just a first sketch, haven’t … yet; the future of the project (will, might, going to); and asking for a specific kind of feedback (Does … make sense? What’s missing?).</p><p style="margin:0 0 6px"><b>The story:</b> A short NN/g video about showing sketches to leaders, then two fictional early designs: a pet clinic wireframe and a small apartment floor plan.</p><p style="margin:0 0 6px"><b>About 38 min:</b> I · Is It Too Early? (6) · II · Final or Not Yet? (12) · III · Present the Sketch (16) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Show me (or describe) the messiest sketch you ever made for a project. Did the client see it?”</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> presenting unfinished work: still, for now, just a first sketch, haven’t … yet; the future of the project (will, might, going to); and asking for a specific kind of feedback (Does … make sense? What’s missing?).</p><p style="margin:0 0 6px"><b>The story:</b> A short NN/g video about showing sketches to leaders, then two fictional early designs: a pet clinic wireframe and a small apartment floor plan.</p><p style="margin:0 0 6px"><b>About 45 min:</b> I · Is It Too Early? (6) · II · Final or Not Yet? (12) · III · Unpopular Opinions (7) · IV · Present the Sketch (16) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Show me (or describe) the messiest sketch you ever made for a project. Did the client see it?”</p></div><!--/prep-->
     <p>Act as a manager who comments on the colors of a gray wireframe; the student must redirect: “Please ignore the colors for now. What we’re testing is…”.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>This is still a rough version of… · Please ignore … for now. · … might …, depending on… · What we’re testing here is… · Next week, we’re going to… · Does … make sense?</p>
@@ -53,11 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to bring an early sketch of their own project for the feedback lessons.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>This is the final? (Is this the final version?)</i>, <i>We will to test (We will test)</i>, <i>Maybe the sofa will can go (The sofa might go)</i>, <i>You like it? (Does the order make sense?)</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (III) AND THE SURPRISE QUESTION</h4>
+    <p>Between the sentence practice and the timed presentations, three opinions many designers think but don’t say (never show a sketch; “this might change” sounds insecure; sketching together makes design worse). Your student taps a number from 1 to 5 and defends it. Wait five seconds in silence, don’t give your number first, and use the PUSH line to make them move or hold their number. There is no right answer. Recast quietly while they talk (still, for now, might, will, we’re going to); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · Is It Too Early?.</li>
-      <li><b>Focus</b>: II · Final or Not Yet? and IV · I Can.</li>
-      <li><b>Out loud</b>: III · Present the Sketch.</li>
+      <li><b>Focus</b>: II · Final or Not Yet? and V · I Can.</li>
+      <li><b>Out loud</b>: III · Unpopular Opinions and IV · Present the Sketch.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -72,5 +75,47 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DESIGN 06 · LOW-FI FIRST · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'Where do your ideas start: on paper, on a screen, or in your head?',
+    opc: ['On paper', 'On a screen', 'In my head'], st: ['My ideas usually start …', 'I’m going to try …'],
+    ex: 'In my head, in the shower! Then I draw them on paper before I forget.', push: 'Show me your last sketch. Do you still have it?' },
+  { cena: 'transforma', tipo: 'Opinion', q: 'Is it OK to show unfinished work to your boss?',
+    opc: ['Yes, early is better', 'Only when it’s almost ready', 'Never'], st: ['I think it’s … to show …, because …', 'I’d say: “This is still …”'],
+    ex: 'Yes, early is better. If my boss doesn’t like the direction, I lose one hour, not one week.', push: 'And if your boss is very critical and impatient?' },
+  { cena: 'prova', tipo: 'What if', q: 'What if your client sketches a layout on a napkin and says, “Just do this”?',
+    opc: ['I do it', 'I improve it', 'I ask questions first'], st: ['I’d ask: “What … ?”', 'It might …, so I’d …', 'We’re going to …'],
+    ex: 'I’d ask questions first: “What do you love about this layout?” Then I’d sketch two options, and one of them would be close to the napkin.', push: 'The napkin idea is actually great. Do you tell them?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DESIGN 06 · LOW-FI FIRST (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A escala de opiniões impopulares entra no MEIO, DEPOIS de "II · Final or Not Yet?" (apos: 'transforma') e antes de
+   "III · Present the Sketch"; o I Can fica por último com o carimbo e a lição de casa (nada de hw aqui). O vídeo diz
+   que rascunho é para mostrar; aqui o aluno dá a nota de 1 a 5 a três frases que muita gente pensa e não diz, e
+   defende com a língua do trabalho em andamento (still, for now, might, will, we’re going to). Sem resposta certa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'escala', apos: 'transforma', est: 'o', min: 7, img: 'conversa', rot: 'Unpopular Opinions', t: 'Sketches and “not ready yet”: how much do you agree?',
+    p: 'Read the opinion. Tap a number from 1 to 5. Then defend it with still, for now, might or going to.',
+    formato: 'escala', tag: 'Unpopular opinion?',
+    frases: [
+      { f: 'Never show a client a sketch. Clients only understand finished work.',
+        st: ['I’m a …, because a sketch might …', 'If I show it, I’ll say: “This is still …”', 'For now, I …'],
+        ex: 'I’m a 2. A client might not understand a sketch alone, but if I say “This is still rough, please ignore the colors for now”, a sketch saves us weeks.',
+        push: 'The client saw your gray wireframe and said: “Is this what I’m paying for?” Does your number change?' },
+      { f: 'A designer who says “this might change” sounds insecure.',
+        st: ['I agree. It sounds like …', 'I disagree: “might” shows that …', 'I’d say: “We’re going to test … first.”'],
+        ex: 'I’m a 1. “This might change” is honest. I’d say: “We’re going to test it with five users, and then we’ll decide.”',
+        push: 'Your new boss loves confident people. Would you still say “might” in your first week?' },
+      { f: 'When everybody sketches together, the design gets worse.',
+        st: ['I think … ideas will …', 'It might work if …', 'Someone still has to …'],
+        ex: 'I’m a 3. Ten people sketching will bring good ideas, but someone still has to choose and test. If nobody leads, it might become a monster.',
+        push: 'Your manager wants to join every sketch session. Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

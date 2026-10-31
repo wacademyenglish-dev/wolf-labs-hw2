@@ -55,11 +55,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to write the morning routine of the real family once she arrives, with the times.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>Go to brush (Go brush / Go and brush)</i>, <i>wake up the kids (wake the kids up)</i>, <i>Stop! (without what to do)</i>, <i>he don’t want</i>. A2+: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE JURY (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the morning in order, the student is the jury of two mornings that went wrong: Lily missed the bus (three pieces of evidence), and two au pairs handled “I don’t want breakfast!” in different ways. The student gives a verdict, explains it with first / then, and says the kind, clear sentence for next time. Both verdicts are open: let them choose. Wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk (Shoes on, please; Let’s …); at the end, ask them to fix one or two sentences themselves. Then “Your Routine” brings it to their own life.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · A Day With Gabi.</li>
-      <li><b>Out loud</b>: II · Kind and Clear and IV · Your Routine.</li>
-      <li><b>Focus</b>: III · The Morning in Order and V · I Can.</li>
+      <li><b>Out loud</b>: II · Kind and Clear and IV · The Jury and V · Your Routine.</li>
+      <li><b>Focus</b>: III · The Morning in Order and VI · I Can.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -74,5 +77,49 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AU PAIR 17 · MORNING ROUTINE · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'video', tipo: 'Opinion', q: 'Which part of Gabi’s day would you like most?',
+    opc: ['The swimming pool', 'The cinema', 'Cooking dinner'], st: ['I’d like … most, because …', 'I’m good at …'],
+    ex: 'The cinema! I love kids’ movies, and I can relax a little.', push: 'And which part would be the hardest for you?' },
+  { cena: 'transforma', tipo: 'And you?', q: 'When you were a child, who woke you up in the morning?',
+    opc: ['Someone in my family', 'An alarm clock', 'I woke up alone'], st: ['When I was a child, … woke me up.', 'Every morning, …'],
+    ex: 'My big brother. He opened the window and sang a very bad song!', push: 'Were you a fast or a slow kid in the morning?' },
+  { cena: 'ordem', tipo: 'Would you rather', q: 'Would you rather do the morning routine with three kids, or the bedtime routine with three kids?',
+    opc: ['The morning', 'The bedtime'], st: ['I’d rather do …, because …', 'In the morning, kids …'],
+    ex: 'The bedtime. In the morning there is the bus, and the bus doesn’t wait!', push: 'And with a baby who wakes up at 5?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AU PAIR 17 · MORNING ROUTINE (CURSOS, A2+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O júri entra DEPOIS de "III · The Morning in Order" (apos: 'ordem'), no MEIO da aula, antes do "IV · Your Routine"
+   (o "E você?" que a aula já tem), e o "V · I Can" (agora VI) fica por último com o carimbo e o link da lição de casa
+   (nada de hw aqui). A aula não tinha escolha nem debate: aqui o aluno é o júri de duas manhãs que deram errado, com
+   provas na tela, e decide quem foi o responsável / qual au pair fez melhor. A língua da aula (first, then, after that;
+   imperativos gentis: … on, please; Let's …; Can you …, please?) mora nos iniciadores. Nada de acidente ou saúde. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'juri', apos: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'The Jury',
+    t: 'Two mornings went wrong. You are the jury.',
+    p: 'Read the evidence. Give your verdict and say why. Then say what the au pair should say next time.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The missed bus', sit: 'Lily (6) missed the school bus. Her mom is not happy.',
+        provas: ['The au pair woke Lily up at 7:40, not 7:00.', 'Lily watched TV for 15 minutes in her pajamas.', 'Her shoes were not ready the night before.'],
+        q: 'Who is responsible?', opc: ['The au pair', 'Lily', 'Nobody: it happens'],
+        st: ['I think … is responsible, because first …, then …', 'Next time, she should say: “… on, please!”', 'It’s not Lily’s fault, because …'],
+        ex: 'The au pair. First, she woke Lily up late. Then she let her watch TV. Next time: “First we get dressed, then one show.”',
+        push: 'The au pair was up at 2 a.m. with Lily’s baby brother. Same verdict?' },
+      { tag: 'Breakfast', sit: 'Two au pairs, two kids who say: “I don’t want breakfast!”',
+        provas: ['Au pair A: “Let’s eat together! Banana or toast?” They were 10 minutes late for school.', 'Au pair B: “Eat your breakfast now!” The child cried, but they were on time.'],
+        q: 'Who did better?', opc: ['Au pair A', 'Au pair B', 'Neither'],
+        st: ['I think … did better, because …', 'Kids need …', 'I’d say: “Let’s …, then …”'],
+        ex: 'Au pair A. Kind and clear is better. But next time she can start breakfast 10 minutes earlier.',
+        push: 'Every day late? The school calls the parents. Still Au pair A?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

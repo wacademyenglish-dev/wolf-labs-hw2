@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>What This Test Will Show · English for Healthcare · Lesson 6 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> explaining tests, results and procedures: agenda, the result in context (normal range), simple words, steps in order (first, then, after that, finally), the future with will / won’t, and checking understanding.</p><p style="margin:0 0 6px"><b>The story:</b> A University of Nottingham video: a doctor explains a blood test result (anemia) and builds a diet plan with the patient. Then a dental filling explained in order, and the student’s own explanation.</p><p style="margin:0 0 6px"><b>About 38 min:</b> I · Explaining a Result (12) · II · Steps in Order (8) · III · Your Explanation (14) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “What test or procedure do you explain most often at work?” That will be the student’s final task today.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> explaining tests, results and procedures: agenda, the result in context (normal range), simple words, steps in order (first, then, after that, finally), the future with will / won’t, and checking understanding.</p><p style="margin:0 0 6px"><b>The story:</b> A University of Nottingham video: a doctor explains a blood test result (anemia) and builds a diet plan with the patient. Then a dental filling explained in order, and the student’s own explanation.</p><p style="margin:0 0 6px"><b>About 45 min:</b> I · Explaining a Result (12) · II · Steps in Order (8) · III · Unpopular Opinions (7) · IV · Your Explanation (14) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “What test or procedure do you explain most often at work?” That will be the student’s final task today.</p></div><!--/prep-->
     <p>The video shows only 0:47–5:30. Point out the techniques: agenda, normal range, reassurance (common and treatable), simple words, and involving the patient (asking about diet and preferences).</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>I’m going to explain… · This test will show… · First, … Then… After that… Finally… · You’ll feel… / you won’t feel… · The results will be ready… · Does that make sense so far?</p>
@@ -53,11 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Ask the student to write the explanation of their most common procedure: it becomes a script they can reuse.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>The exam will show (test)</i>, <i>You will feel nothing pain (won’t feel any pain)</i>, <i>Did you understand? (Does that make sense?)</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (III) AND THE SURPRISE QUESTION</h4>
+    <p>After putting the filling explanation in order, the student takes a position on HOW to explain. Four opinions: patients only need to trust you; results should reach the phone before the explanation; a drawing beats five minutes of talking; no questions means a good explanation. For each one the student taps a number from 1 to 5 and defends it; you take the opposite number and argue back. There is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk (will / won’t, first … then …, Does that make sense so far?); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · Explaining a Result.</li>
-      <li><b>Focus</b>: II · Steps in Order and IV · I Can.</li>
-      <li><b>Out loud</b>: III · Your Explanation.</li>
+      <li><b>Focus</b>: II · Steps in Order and V · I Can.</li>
+      <li><b>Out loud</b>: III · Unpopular Opinions and IV · Your Explanation.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -72,5 +75,53 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SAÚDE 06 · WHAT THIS TEST WILL SHOW · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'Think of a teacher or a professional who explained something really well. What did they do?',
+    opc: ['They used an example', 'They drew it', 'They went slowly'], st: ['I remember a … who …', 'First she …, then she …'],
+    ex: 'My driving instructor. First he showed me, then he did it slowly with me, and then he let me try. I understood everything.', push: 'And the worst explanation you ever heard?' },
+  { cena: 'ordem', tipo: 'Opinion', q: 'What is the hardest thing to explain in your job?',
+    opc: ['How a procedure works', 'Why you need to wait', 'What a number means'], st: ['For me, the hardest is …, because …', 'Patients usually ask …'],
+    ex: 'Why you need to wait. Patients want everything today, and “the results will be ready on Friday” sounds like forever.', push: 'How will you explain it next time?' },
+  { cena: 'prova', tipo: 'Would you rather', q: 'Would you rather learn something new from a short video or from a person explaining it?',
+    opc: ['A short video', 'A person'], st: ['I’d rather learn from …, because …', 'With a video, I can …'],
+    ex: 'A person. I can ask questions and the person sees when I’m lost.', push: 'And for your patients, at home, after the visit?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SAÚDE 06 · WHAT THIS TEST WILL SHOW (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A escala de opiniões impopulares entra DEPOIS de "II · Steps in Order" (apos: 'ordem'), no MEIO da aula, antes de
+   "III · Your Explanation" (a prova) e do "I Can", que fica por último com o carimbo e o link da lição de casa (nada de hw).
+   O II põe uma explicação em ordem; aqui o aluno se posiciona sobre COMO explicar: confiança × entendimento,
+   resultado no celular antes da conversa, desenho × fala, silêncio do paciente. A língua da aula (will / won’t,
+   first … then …, Does that make sense so far?) mora nos iniciadores. Nada de notícia ruim nem doença grave. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'escala', apos: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'Unpopular Opinions',
+    t: 'Four opinions about explaining. How much do you agree?',
+    p: 'Read the opinion. Tap a number from 1 to 5, then defend it. Your teacher takes the opposite side.',
+    formato: 'escala', tag: 'Agree or disagree?',
+    frases: [
+      { f: 'Patients don’t need to understand the test. They only need to trust you.',
+        st: ['If patients understand, they will …', 'Trust is important, but …', 'A patient who knows what will happen …'],
+        ex: '1, totally disagree. If patients understand the test, they will relax and they won’t move during it. Trust comes from the explanation.',
+        push: 'A patient says: “Please don’t explain, just do it.” Do you still explain?' },
+      { f: 'Results should go to the patient’s phone before the professional explains them.',
+        st: ['If the results arrive first, patients will …', 'First the explanation, then …', 'It’s their data, so …'],
+        ex: '2, disagree. If the numbers arrive first, patients will search the internet and get scared. First a short explanation, then the results.',
+        push: 'It’s a simple vitamin test and everything is normal. Still wait?' },
+      { f: 'A quick drawing explains better than five minutes of talking.',
+        st: ['A drawing will …, but …', 'First I’d draw …, then I’d say …', 'For some patients, …'],
+        ex: '4, agree. First I draw the tooth, then I show where the filling will go. Patients remember pictures much better than words.',
+        push: 'You can’t draw at all. Still a 4?' },
+      { f: 'If the patient doesn’t ask any questions, the explanation was good.',
+        st: ['No questions doesn’t mean …', 'I’ll always check: “Does that make sense so far?”', 'Some patients won’t ask because …'],
+        ex: '1, totally disagree. Some patients won’t ask because they’re shy or in a hurry. I’ll always check: “Does that make sense so far? Can you tell me what will happen first?”',
+        push: 'You have ten patients waiting. Is “Any questions?” enough?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

@@ -53,11 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Tell the student she can always practice a difficult conversation with you before having it with the family.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>OK… (too soft)</i>, <i>That’s not my job! (rude)</i>, <i>apologizing for saying no</i>, <i>laughing off an inappropriate comment</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE HOT SEAT (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After the host dad’s requests, the student changes places: they are an au pair in their second year, on a video call with Júlia, who flies next month. You are Júlia: ask about the strangest thing in the first month, culture shock, saying no to the family, and what they would do differently. They can invent their story. Your secret (only you see it): Júlia is afraid to say no, so push harder on question 3. Then they choose one tip for her. Wait five seconds in silence, then use the PUSH line. Recast quietly while they talk (I understand, but …; Could we …?); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · Culture Shock.</li>
-      <li><b>Focus</b>: II · Kind and Firm and IV · I Can.</li>
-      <li><b>Out loud</b>: III · The Host Dad Asks.</li>
+      <li><b>Focus</b>: II · Kind and Firm and V · I Can.</li>
+      <li><b>Out loud</b>: III · The Host Dad Asks and IV · The Hot Seat.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -72,5 +75,51 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AU PAIR 21 · THAT MAKES ME UNCOMFORTABLE · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'Did you ever feel culture shock? Where?',
+    opc: ['Yes, in another country', 'Yes, in another city', 'Not yet'], st: ['When I went to …, I felt …', 'The strangest thing was …'],
+    ex: 'Yes, in another city. I moved from Recife to São Paulo, and everybody was in a hurry all the time.', push: 'What helped you feel at home?' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Is it harder for Brazilians to say no?',
+    opc: ['Yes, much harder', 'It depends on the person', 'No, not really'], st: ['I think Brazilians …, because …', 'For me, saying no is …'],
+    ex: 'It depends on the person, but I think many Brazilians say “maybe” when they mean no.', push: 'Give me a “Brazilian no” you use.' },
+  { cena: 'prova', tipo: 'Would you rather', q: 'Would you rather say no face to face, or in a message?',
+    opc: ['Face to face', 'In a message'], st: ['I’d rather say no …, because …', 'In a message, I can …'],
+    ex: 'Face to face. It’s harder, but the other person sees I’m being kind.', push: 'And to your boss?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AU PAIR 21 · THAT MAKES ME UNCOMFORTABLE (CURSOS, B1) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   A cadeira quente entra DEPOIS de "III · The Host Dad Asks" (apos: 'prova') e antes de "IV · I Can", que fica por
+   último com o carimbo e o link da lição de casa (nada de hw aqui). O III é o aluno respondendo a pedidos; aqui ele
+   troca de lugar: já é au pair há um ano, numa chamada de vídeo com a Júlia, brasileira que embarca no mês que vem e
+   pergunta sobre choque cultural (o vídeo da aula) e sobre dizer não. Liga o I e o III com a vida do aluno (ele pode
+   inventar). A língua da aula (I understand, but …; I'm not comfortable with …; Could we …?; I need to check with my
+   coordinator first) mora nos iniciadores. Nada do pedido 5 do III (comentário impróprio): aqui só situações leves. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'cadeira', apos: 'prova', est: 'o', min: 7, img: 'conversa', rot: 'The Hot Seat',
+    t: 'One year later. A future au pair calls you.',
+    p: 'Your teacher is Júlia, who flies next month. Answer her four questions, then give her one tip.',
+    formato: 'papel',
+    aluno: { quem: 'You · au pair, year two', quer: 'Help Júlia. You can invent your story.', limite: 'Use the phrases from today.' },
+    prof: { quem: 'Júlia · flies next month', quer: 'Real answers, not a perfect story.', limite: 'Secret: she is afraid to say no. Push on question 3.' },
+    rot_perg: 'Júlia asks',
+    perguntas: [
+      { q: '“What was the strangest thing in your first month?”', ex: 'Dinner at 5:30! And nobody hugs when they say hi. I felt a bit lonely, but I talked to other au pairs and it got better.' },
+      { q: '“How did you deal with culture shock?”', ex: 'I kept an open mind, I joined the cluster meetings, and I cooked Brazilian food for the family on Sundays.' },
+      { q: '“Did you ever say no to your host family? How?”', ex: 'Yes. They asked me to work on my day off. I said: “I understand, but Saturday is my day off. Could we find another solution?”' },
+      { q: '“What would you do differently?”', ex: 'I would ask to write the schedule down from day one. Then we both know my hours.' }
+    ],
+    st: ['In my first month, I …', 'I said: “I understand, but …”', 'I’m not comfortable with …', 'If I could start again, I would …'],
+    acordo: { tag: 'Your top tip', q: 'One tip for Júlia. Which one?',
+      opc: ['Write it down', 'Say no early', 'Make friends'],
+      st: ['My top tip is …, because …', 'Don’t be afraid to …'],
+      ex: 'My top tip is: say no early, kindly. A small “no” in week one is easier than a big problem in month six.' },
+    push: 'Júlia: “What if they get angry with me?” What do you say?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

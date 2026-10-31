@@ -55,11 +55,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Remind the student: before accepting, check the agreement (Lesson 7) and the questions from Lesson 9.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>No. (alone)</i>, <i>silence</i>, <i>I go to arrive</i>, <i>I will to bring</i>. A2+: one correction per answer is enough.</p>
+    <!--conversa--><h4>TRAFFIC LIGHT (V) AND THE SURPRISE QUESTION</h4>
+    <p>After the match message, four new messages arrive: a farm far from the city, snow driving in Minnesota, a family that wants an answer in two hours, and first-time parents with a baby. For each one the student picks green (I would love to), yellow (I’d ask first) or red (a kind no), then says the answer to the family. There is no right color: it depends on their experience and goals. Wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk (Thank you so much …, but …; Could I have until …?); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · Matching Tips.</li>
-      <li><b>Focus</b>: II · Yes and No, Politely and V · I Can.</li>
-      <li><b>Out loud</b>: III · Family A or Family B?.</li>
+      <li><b>Focus</b>: II · Yes and No, Politely and VI · I Can.</li>
+      <li><b>Out loud</b>: III · Family A or Family B? and V · Traffic Light.</li>
       <li><b>Write</b>: IV · Your Match Message.</li>
     </ul>
 
@@ -75,5 +78,57 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AU PAIR 12 · IT'S A MATCH! · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'How fast do you usually answer messages?',
+    opc: ['In a few minutes', 'The same day', 'Sometimes I forget'], st: ['I usually answer …', 'When I’m busy, I …'],
+    ex: 'In a few minutes, but sometimes I read a message and forget to answer!', push: 'Who is the slowest person in your family?' },
+  { cena: 'transforma', tipo: 'Opinion', q: 'Is it harder for you to say yes or to say no?',
+    opc: ['To say no', 'To say yes'], st: ['For me, it’s harder to …, because …', 'When I say no, I feel …'],
+    ex: 'To say no. I don’t want people to feel bad, so I sometimes say yes and then I regret it.', push: 'When was the last time you said no to a friend?' },
+  { cena: 'cartao', tipo: 'What if', q: 'The family says yes! What are you going to do first?',
+    opc: ['Call my family', 'Post it online', 'Start packing'], st: ['First, I’m going to …', 'Then I will …'],
+    ex: 'First, I’m going to call my sister. Then I will look at the city on the map for an hour!', push: 'Who is going to cry first: you or your family?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AU PAIR 12 · IT'S A MATCH! (CURSOS, A2+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   O semáforo entra DEPOIS de "IV · Your Match Message" (apos: 'cartao') e antes de "V · I Can", que fica por último
+   com o carimbo e o link da lição de casa (nada de hw aqui). O III já escolhe entre DUAS famílias no papel; aqui são
+   quatro MENSAGENS de famílias que chegam na plataforma, cada uma com um detalhe que divide opiniões: verde = I would
+   love to, amarelo = pergunto antes, vermelho = um "não" gentil em 24 h. A língua da aula (I would love to …; Thank
+   you so much …, but …; Could I …?; I'm going to / I will) mora nos iniciadores. Famílias FICTÍCIAS. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'semaforo', apos: 'cartao', est: 'o', min: 6, img: 'conversa', rot: 'Traffic Light',
+    t: 'Four new messages. Green, yellow or red?',
+    p: 'Read the message from the family. Choose a color, then say your answer to them, kindly.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The farm', sit: '“Hi! We live on a farm, two hours from the city. Our three kids love horses. Would you like to talk?”',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green · I would love to', cor: 'g' }, { t: 'Yellow · I’d ask first', cor: 'y' }, { t: 'Red · a kind no', cor: 'r' }],
+        st: ['I would love to …, because …', 'Could I ask …?', 'Thank you so much for your message, but …'],
+        ex: 'Yellow. Horses sound amazing! But I’d ask: “Could I go to the city on my days off? Is there a bus?”',
+        push: 'There is no bus, and no other au pairs near the farm. Still yellow?' },
+      { tag: 'Snow and a car', sit: '“We need an au pair who drives every day, also in the snow. We live in Minnesota.”',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green · I would love to', cor: 'g' }, { t: 'Yellow · I’d ask first', cor: 'y' }, { t: 'Red · a kind no', cor: 'r' }],
+        st: ['I’m going to …', 'I’m looking for a family that …', 'Thank you so much, but …'],
+        ex: 'Red, for me. Thank you so much for your message, but I don’t feel safe driving in snow. I wish you the best!',
+        push: 'They say: “We will pay for driving lessons.” Does that change your color?' },
+      { tag: 'Two hours', sit: '“We love your profile! Can you answer today, in two hours? We are talking to five other au pairs.”',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green · I would love to', cor: 'g' }, { t: 'Yellow · I’d ask first', cor: 'y' }, { t: 'Red · a kind no', cor: 'r' }],
+        st: ['Could I have until …?', 'I will answer …', 'I need time to …, because …'],
+        ex: 'Yellow. I’d say: “Thank you! Could I have until tomorrow? I want to read your profile carefully.”',
+        push: 'They answer: “Sorry, today only.” What now?' },
+      { tag: 'The first baby', sit: '“We are first-time host parents. Our baby, Noah, is four months old. We are a little nervous, too!”',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green · I would love to', cor: 'g' }, { t: 'Yellow · I’d ask first', cor: 'y' }, { t: 'Red · a kind no', cor: 'r' }],
+        st: ['I would love to …', 'I have experience with …', 'Could you tell me …?'],
+        ex: 'Green! I would love to take care of Noah. I have a baby nephew, and I will learn the family routine fast.',
+        push: 'Do you really have experience with babies? Be honest.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>

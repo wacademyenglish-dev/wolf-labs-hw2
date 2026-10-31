@@ -358,3 +358,15 @@ mark.alvo.on{background:color-mix(in srgb,var(--ac) 26%,transparent);color:var(-
 .pj-res div { padding: 12px; border-radius: 14px; background: rgba(127,209,185,.08); border: 1px solid rgba(127,209,185,.3); }
 .pj-res small { letter-spacing: .08em; font-size: .66em; opacity: .75; display: block; }
 .pj-res b { font-size: 1.5em; color: var(--ac); font-variant-numeric: tabular-nums; }
+
+/* 31/10/2026 · auditoria: o Easy Reader longo (~290 palavras) passava da dobra a 1440x900 e 2000x1024.
+   No desktop o texto rola DENTRO do cartão: barra fina visível + esmaecido embaixo como pista.
+   O padding de baixo é do tamanho do esmaecido, então no fim da rolagem a última linha fica limpa.
+   No celular (uma coluna) nada muda: a página inteira rola, como sempre. */
+@media (min-width:1101px){
+  .lt-art .er-txt{max-height:max(240px,calc(100vh / var(--zv,1) - 392px));overflow-y:auto;overscroll-behavior:contain;
+    padding:0 10px 56px 0;scrollbar-width:thin;scrollbar-color:var(--ac2) transparent;
+    -webkit-mask-image:linear-gradient(180deg,#000 calc(100% - 64px),transparent);
+            mask-image:linear-gradient(180deg,#000 calc(100% - 64px),transparent)}
+  .lt-art:has(.er-txt) small::after{content:'  ·  SCROLL ↓';opacity:.7}
+}

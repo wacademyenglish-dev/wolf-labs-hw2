@@ -39,7 +39,7 @@
 <div id="guia" hidden>
   <div class="caixa vd" role="dialog" aria-label="Teacher guide">
     <h2>Interactive Writing · DET Prep · Lesson 13 of 16</h2>
-    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Interactive Writing question: a topic and about 5 minutes to write; then a follow-up question about the same topic and about 3 more minutes. The student learns a clear paragraph shape (topic sentence → support → wrap-up) and varied connectors.</p><p style="margin:0 0 6px"><b>The story:</b> A model paragraph from an invented candidate (a banking app), then the student writes about a time technology made life easier, and answers a follow-up about its disadvantages.</p><p style="margin:0 0 6px"><b>About 39 min:</b> I · A Model Paragraph (9) · II · Better Connectors (8) · III · Five, Then Three (18) · IV · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Which app would you miss most if it disappeared tomorrow?” That is the topic of today.</p></div><!--/prep-->
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the Interactive Writing question: a topic and about 5 minutes to write; then a follow-up question about the same topic and about 3 more minutes. The student learns a clear paragraph shape (topic sentence → support → wrap-up) and varied connectors.</p><p style="margin:0 0 6px"><b>The story:</b> A model paragraph from an invented candidate (a banking app), then the student writes about a time technology made life easier, and answers a follow-up about its disadvantages.</p><p style="margin:0 0 6px"><b>About 46 min:</b> I · A Model Paragraph (9) · II · Better Connectors (8) · III · Tech Dilemmas (7) · IV · Five, Then Three (18) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Which app would you miss most if it disappeared tomorrow?” That is the topic of today.</p></div><!--/prep-->
     <p>Do not help during the 5 minutes. After each part, read the text together with the corrector’s red lines, count the connectors and the words, and go through the checklist. The follow-up question tests if the student can extend an idea, not start again.</p>
     <h4>THE LANGUAGE OF THIS LESSON</h4>
     <p>topic sentence · Before, … Now, … · Moreover, (one more point) · However, (contrast) · For instance, (example) · Overall, (wrap-up)</p>
@@ -53,11 +53,14 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Keep both texts: they are a good base for the Writing Sample in the next lesson.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>and… and… and… (no variety)</i>, <i>But at the start of every sentence</i>, <i>like for example</i>, <i>no wrap-up</i>, <i>under 80 words</i>. B1+: one correction per answer is enough.</p>
+    <!--conversa--><h4>TECH DILEMMAS (III) AND THE SURPRISE QUESTION</h4>
+    <p>Before the five-minute writing, the student decides three technology dilemmas out loud: one month without one app, a perfect translation earbud, tablets instead of books at school. For each one, they choose, say why with a connector, and you push back. This gives them ideas and both sides for the writing (the advantage in Part 1, the disadvantage in Part 2). Wait five seconds in silence before they start. Use the PUSH line when the answer is too safe. Recast quietly while they talk, and push the connectors of the lesson (Before / Now, Moreover, However, For instance, As a result, Overall); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
       <li><b>Listen</b>: I · A Model Paragraph.</li>
-      <li><b>Write</b>: II · Better Connectors and III · Five, Then Three.</li>
-      <li><b>Focus</b>: IV · I Can.</li>
+      <li><b>Write</b>: II · Better Connectors and IV · Five, Then Three.</li>
+      <li><b>Focus</b>: V · I Can.</li>
     </ul>
 
     <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
@@ -70,5 +73,52 @@
 <script src="revisao.js"></script>
 <script src="focus.js"></script>
 <script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* DET PREP 13 · INTERACTIVE WRITING · pergunta-surpresa · 30/10/2026 · CURSOS: 3 perguntas */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'What did you do before smartphones that you don’t do now?',
+    opc: ['Use paper maps', 'Call to order food', 'Write letters or cards'], st: ['Before, I used to … . Now, I …', 'For instance, …'],
+    ex: 'Before, I called the pizza place and waited on the phone. Now, I order in one minute with an app.', push: 'Is there anything you miss from before?' },
+  { cena: 'transforma', tipo: 'Opinion', q: 'Which connector do you use too much when you speak English?',
+    opc: ['And', 'But', 'So'], st: ['I use “…” too much. Instead, I can say …', 'Moreover, …'],
+    ex: '“So.” I start every sentence with “so”. Instead, I can say “As a result” when I write.', push: 'Say one sentence now with “However”.' },
+  { cena: 'prova', tipo: 'What if', q: 'What if the internet stopped for one week in your city? What would change first?',
+    opc: ['My work', 'My shopping', 'My free time'], st: ['First, … . As a result, …', 'Overall, …'],
+    ex: 'My work would stop first: everything is online. As a result, I’d finally read the books on my shelf.', push: 'Would it be a good week or a bad week?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DET PREP 13 · INTERACTIVE WRITING (CURSOS, B1+) · conversa · 30/10/2026 · regra 3×3 do Carlos (CURSOS: 1 momento + 3 surpresas)
+   Os dilemas entram DEPOIS de "II · Better Connectors" (apos: 'transforma'), no MEIO da aula, antes da escrita de 5 + 3
+   minutos. O tema da prova é "a tecnologia que facilitou a sua vida" + "uma desvantagem": aqui o aluno decide, em voz alta,
+   três dilemas de tecnologia (um mês sem um app, o fone tradutor perfeito, o tablet na escola) e chega à escrita com
+   ideias e os dois lados. Os conectivos da aula (Before / Now, Moreover, However, For instance, As a result, Overall)
+   moram nos iniciadores. O "IV · I Can" (agora V) fica por último com o link da lição de casa. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'dilema', apos: 'transforma', est: 'o', min: 7, img: 'conversa', rot: 'Tech Dilemmas',
+    t: 'Three tech dilemmas. What do you choose?',
+    p: 'Choose one option, or say your own idea. Use a connector in every answer. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'One app less', sit: 'A challenge at your company: one month without ONE app on your phone. You choose which.',
+        q: 'Which app do you delete for a month?', opc: ['Maps', 'My banking app', 'My messages app'],
+        st: ['I’d delete … . However, …', 'Before, I … . Now, I …', 'As a result, …'],
+        ex: 'Maps. I know my city well, and I can ask people. However, I’d never delete messages: as a result, I’d miss my friends’ plans and my work groups.',
+        push: 'And if it was one year, not one month?' },
+      { tag: 'The perfect earbud', sit: 'A new earbud translates any language in real time. It’s free, and it’s perfect.',
+        q: 'Do you still study English?', opc: ['Yes, every week', 'Only a little', 'No, I stop'],
+        st: ['Yes, because … Moreover, …', 'For instance, …', 'Overall, …'],
+        ex: 'Yes, every week. A machine can translate words, but not jokes or feelings. Moreover, I want to think in English, not wait for a voice in my ear.',
+        push: 'The battery dies in the middle of a job interview. Now what?' },
+      { tag: 'The school tablet', sit: 'Your friend’s son is nine. His school wants to give every child a tablet and stop using paper books.',
+        q: 'What do you tell the school?', opc: ['Great idea', 'Tablets and books together', 'Keep the books'],
+        st: ['On the one hand, … On the other hand, …', 'For instance, …', 'As a result, …'],
+        ex: 'Tablets and books together. Tablets are great for videos and research. However, children read better on paper, and they get tired of screens fast.',
+        push: 'The tablets are free, and the books are expensive. Does that change your answer?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
 </body>
 </html>
