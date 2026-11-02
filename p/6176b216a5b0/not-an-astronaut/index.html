@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · I’m Not an Astronaut · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@200;300;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>I’m Not an Astronaut · Project Hail Mary</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>I’m Not an Astronaut · Mission Control</h2>
+    <p>A science teacher wakes up alone on a spaceship (<i>Project Hail Mary</i>, 2026). The screen is mission control: the crew of the Hail Mary is off the radar, and the student is the controller on duty. They scan six rooms of the ship and build the report for Earth, line by line: <b>Nobody is in the lab. Somebody left the microscope on.</b> The hour has ONE target: English says no only once. Portuguese says it twice (<i>não vi ninguém</i>), so “I didn’t see nobody” WILL come out.</p>
+    <p class="aq-guia"><b>Warm-up and The Interview (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the film under the photo). Let them talk; A2: short answers are fine. <b>2 · The Interview:</b> you are Ryland Grace: the card with his facts shows only on your screen (dashed border). You just woke up on a spaceship and you remember almost nothing. The student asks questions and taps each one; answer with somebody / nobody / nothing (“Nobody is here.”). Then the student guesses who you are, and the photo shows the answer.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> — I Crew Files (six people from their life; tap who they named), VI Earth Is Calling (you are Eva on the phone), VII Off the Record.</li>
+      <li><b>Listen</b> — III Incoming Transmission: three guesses, the official trailer, then ONE screen, the Mission debrief: the video stays on the left, six True or Lie lines on the right (tap ▶ to hear that moment again), and a ship map that lights one room for every right answer (“Crew found 3 / 6”). On a Lie the student says the true line. When all six are done, Eva asks one last question (“Would you go?”): the student taps an answer and says the sentence out loud.</li>
+      <li><b>Focus</b> — III Decode the Signal (six real lines), IV One No Is Enough (four cards and three traps), V Scan the Ship (the student builds every report line from pieces; one extra piece is always the trap, and Check explains it without giving the answer).</li>
+      <li><b>Write</b> — VIII The Mission Report. The red wavy line marks the double no, <i>nobody didn’t</i>, <i>anybody</i> in a yes sentence, <i>nobody</i> in a question and <i>nobody are</i>; the browser marks spelling. It goes to their My notes.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>In scene I, collect the double noes (“I don’t call nobody”) and say nothing: write them down. The rule comes in IV, from the trailer line “I’ve never done anything”. In VI, a no can never repeat: if it does, tap “Same no again”.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student opens the files, flips the cards, decodes, builds the reports and writes. Only you judge the speech (“who did they name?”, “Said it”, “Answered”). Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script><script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script><script src="/kit/legenda.js"></script><script src="palavras-dados.js"></script><script src="/kit/palavras.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "You. Then a man who wakes up alone.",
+   "p": "Answer three questions. Ask your teacher. Who is he?"
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn the words. In the video, they turn yellow."
+  },
+  "trailer": {
+   "t": "A man wakes up alone in space.",
+   "p": "Guess. Watch. Then True or Lie: find the crew."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it. Say it."
+  },
+  "sinal": {
+   "t": "Six lines. One word is missing.",
+   "p": "Say the whole line. Tap the missing word."
+  },
+  "regra": {
+   "t": "English says no only once.",
+   "p": "Read the cards out loud. Fix three mistakes."
+  },
+  "scan": {
+   "t": "The crew is gone. Scan every room.",
+   "p": "Pick a room. Build each line. Check. Say it."
+  },
+  "radio": {
+   "t": "One seat left. Eva wants you.",
+   "p": "Say no four ways. Then say yes, and why."
+  },
+  "voce": {
+   "t": "No spaceship now. Just you.",
+   "p": "Answer out loud. Then get another question."
+  },
+  "fim": {
+   "t": "Your last report to Earth.",
+   "p": "Write three lines: who is there, who isn’t, one strange thing."
+  }
+ },
+ "prep": {
+  "obj": "Uma negação só por frase (nobody, nothing, never x anybody, anything com not): Ryland Grace, professor de ciências, acorda sozinho na nave Hail Mary, e o aluno é o controle da missão.",
+  "armadilha": "O português nega duas vezes (“não vi ninguém”): sai “I didn’t see nobody”, “Nobody didn’t come”, “I don’t know nothing”, e ainda “anybody” em frase afirmativa e “nobody are”.",
+  "pal": [
+   "nobody",
+   "nothing",
+   "anybody",
+   "anything",
+   "somebody",
+   "never",
+   "crew",
+   "mission"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o filme: um homem sozinho numa nave e o controle da missão.",
+   "perg": "Would you go to space alone?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "mundo": {
+   "obj": "Três perguntas sobre a vida do aluno e a entrevista com Ryland Grace (o professor), que não lembra de quase nada.",
+   "perg": "Is anybody with you on the ship?",
+   "pula": "Duas perguntas bastam; anote os “não… nobody” sem corrigir."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir; no vídeo elas ficam amarelas.",
+   "perg": "Which word is new for you?",
+   "pula": "Deixe o aluno chutar e siga rápido."
+  },
+  "trailer": {
+   "obj": "O trailer inteiro: três palpites antes e seis linhas de verdade/mentira que acendem a nave.",
+   "perg": "Would you go?",
+   "pula": "Assista uma vez só; quatro linhas de verdade/mentira bastam."
+  },
+  "falas": {
+   "obj": "Fala por fala do trailer: ouvir de novo e repetir como o personagem.",
+   "perg": "Can you say it like Grace?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "sinal": {
+   "obj": "Seis falas reais da transmissão com uma palavra faltando; o aluno diz a linha inteira.",
+   "perg": "Which word is missing?",
+   "pula": "Quatro linhas bastam."
+  },
+  "regra": {
+   "obj": "A regra: o inglês diz não uma vez só (I’ve never done anything); quatro cartas e três armadilhas.",
+   "perg": "Didn’t see nobody, or didn’t see anybody?",
+   "pula": "Não corte: é a regra. Leia as cartas e conserte os erros."
+  },
+  "scan": {
+   "obj": "Seis salas da nave: o aluno monta o relatório com peças, uma delas sempre a armadilha.",
+   "perg": "Is anybody in the lab?",
+   "pula": "Quatro salas bastam."
+  },
+  "radio": {
+   "obj": "A Eva no telefone (o professor) oferece o último lugar; o aluno diz não de quatro jeitos e depois sim.",
+   "perg": "Why won’t you go?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "voce": {
+   "obj": "Perguntas pessoais, fora da nave, com nobody, nothing e never.",
+   "perg": "Is there anything you never do?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: relatório final à Terra em três linhas (quem está, quem não está, algo estranho); vai para My notes.",
+   "perg": "Who isn’t on the ship?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre ficar sozinho, esquecer e descobrir, com uma negação só por frase.",
+   "perg": "Is there anything you never forget?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher lados em dilemas da missão, com nobody/nothing e frases prontas.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Ryland Grace e responde sobre a nave com uma negação só.",
+   "perg": "Is anybody on the ship with you?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Alone, and far from home.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "nobody",
+    "nothing",
+    "anybody",
+    "anything",
+    "never"
+   ],
+   "cartas": [
+    {
+     "k": "ALONE",
+     "q": "Do you like being alone, or do you need somebody with you?",
+     "fup": "For how long?",
+     "st": [
+      "I like it when nobody …",
+      "I don’t like it. I need somebody …"
+     ],
+     "ex": "I like it when nobody is at home. I can do anything I want."
+    },
+    {
+     "k": "WAKING UP",
+     "q": "What is the first thing you do in the morning?",
+     "fup": "Is there anything you never do in the morning?",
+     "st": [
+      "First, I …",
+      "I never …"
+     ],
+     "ex": "First, I check my phone. I never eat anything before nine."
+    },
+    {
+     "k": "FORGETTING",
+     "q": "Is there anything you always forget?",
+     "fup": "Who helps you remember?",
+     "st": [
+      "I always forget …",
+      "Nobody helps me. I …"
+     ],
+     "ex": "I always forget my keys. Nobody helps me, so I have a box by the door."
+    },
+    {
+     "k": "SPACE",
+     "q": "Would you go to space, or nothing could make you go?",
+     "fup": "Who would you take?",
+     "st": [
+      "I would go with …",
+      "Nothing could make me …"
+     ],
+     "ex": "Nothing could make me go. I don’t want to see anything from that far."
+    },
+    {
+     "k": "SCIENCE",
+     "q": "Did you like science at school?",
+     "fup": "Was there anything you didn’t understand?",
+     "st": [
+      "I liked …, but …",
+      "I didn’t understand anything about …"
+     ],
+     "ex": "I liked biology, but I didn’t understand anything about physics."
+    },
+    {
+     "k": "YOUR WEEKEND",
+     "q": "What did you do last weekend?",
+     "fup": "Did you see anybody?",
+     "st": [
+      "I didn’t do anything special.",
+      "I saw … / I didn’t see anybody."
+     ],
+     "ex": "I didn’t do anything special. I didn’t see anybody, and it was great."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "nobody",
+    "nothing",
+    "anybody",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "You wake up alone on a ship and you remember nothing. Do you explore or wait?",
+     "a": "Explore",
+     "b": "Wait",
+     "fa": [
+      "Explore. Nobody is going to help me."
+     ],
+     "fb": [
+      "Wait. I don’t want to touch anything."
+     ]
+    },
+    {
+     "q": "Grace is a science teacher, not an astronaut. Is that a good idea?",
+     "a": "Good idea",
+     "b": "Bad idea",
+     "fa": [
+      "Good idea. Nobody explains science better than a teacher."
+     ],
+     "fb": [
+      "Bad idea. He doesn’t know anything about spaceships."
+     ]
+    },
+    {
+     "q": "One seat left on the ship. Do you go?",
+     "a": "I go",
+     "b": "I stay",
+     "fa": [
+      "I go. Nobody else can do it."
+     ],
+     "fb": [
+      "I stay. I don’t want to leave anybody at home."
+     ]
+    },
+    {
+     "q": "Space missions: worth the money, or not?",
+     "a": "Worth it",
+     "b": "Not worth it",
+     "fa": [
+      "Worth it. We learn things nobody knew before."
+     ],
+     "fb": [
+      "Not worth it. There’s nothing up there for us."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody lost, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Ryland Grace now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Ryland Grace. Say no only once.",
+   "perguntas": [
+    "Is anybody on the ship with you?",
+    "What do you remember about Earth?",
+    "Did anybody tell you about the mission?",
+    "Is there anything to eat on the ship?",
+    "Did you ever want to be an astronaut?",
+    "Who do you want to talk to right now?"
+   ],
+   "st": [
+    "Nobody is …",
+    "I don’t remember anything about …",
+    "I never …"
+   ],
+   "ex": "Nobody is here with me. I don’t remember anything about the mission. I’m not an astronaut. I’m a teacher!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

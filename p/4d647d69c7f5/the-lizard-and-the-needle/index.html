@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Lizard and the Needle · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Lizard and the Needle · The Four Levers</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Lizard and the Needle · The Four Levers</h2>
+    <p>Non-fiction, and the language of a mechanism. The weight-loss pen everybody talks about copies a hormone your gut makes, <b>GLP-1</b>. Your own GLP-1 is cut by an enzyme in about two minutes; the medicine started with a molecule found in the venom of a desert lizard, described in <b>1992</b>. Four verbs say what one thing does to another, and each one changes what comes after the person: <b>make / let</b> + person + verb (no <i>to</i>); <b>help</b> + person + (to) verb; <b>stop</b> + person + <b>from</b> + -ing. On screen, a panel of four levers: the right one lights up; a wrong sentence makes it spring back. The mold strip under it shows the slot after the person.</p>
+    <h4>THIS IS CONTENT, TOO</h4>
+    <p>The student learns how the medicine works by saying what does what. The facts are simplified but true. It is not medical advice, and the panel in scene VIII has no right answer. Nobody’s body is the topic: keep it on the mechanism and on habits.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>It makes me to feel full</i> · <i>They let me to eat</i> · <i>It stops me to eat</i> · <i>It stops me from eat</i> · <i>It helps me eating less</i> · <i>letted</i>. The question that fixes almost everything: <i>Which lever is it, and what comes after the person?</i></p>
+    <h4>THE RECORDINGS</h4>
+    <p>A researcher (II), a person who uses the pen (V) and a doctor (VII). Each plays with pause and 0.75×; the questions and the transcript open after listening. In VII the doctor is careful with blame (“it does not mean those people failed”): ask why that matters.</p>
+    <h4>THE CHAIN</h4>
+    <p>Scene IV: six links from the plate to the desert. Links 1 and 2 accept two levers (make or help). Link 6 is in the past: <b>let</b>, not <i>letted</i>.</p>
+    <h4>THE PANEL</h4>
+    <p>Scene VIII: the student picks a side; you read each person’s line in character and push back. Tap every lever you hear in the answer; two different levers close the round. Three rounds close the panel. Tap a classic mistake when you hear it, and the student says it again.</p>
+    <!--conversa--><h4>THE FOOD COUNCIL (VI) AND THE SURPRISE QUESTION</h4>
+<p>Scene VI is now a council vote, in the middle of the lesson. Your student sits on the city’s food council and votes three proposals (schools, offices, supermarkets): Yes, Propose a change, or No, and says why with a lever (make, let, help, stop). The Panel (VIII) is about the pen; this one is about everyday food rules, so it is not medical. There is no right answer. Wait five seconds in silence, vote the other way, and use the PUSH line (only you see it). Recast mistakes quietly (“stops me to eat” → “stops me from eating”); at the end, ask them to fix one or two sentences themselves. The last step: they write one rule of their own in one minute.</p>
+<p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I The Fridge Poll, IV The Mechanism Chain, VI The Food Council, VIII The Panel, IX Your Own Rules.</li>
+      <li><b>Listen</b>: II The Two-Minute Signal, V Food Noise, VII When People Stop.</li>
+      <li><b>Focus</b>: III The Four Levers.</li>
+      <li><b>Write</b>: X, their own leaflet. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE LIZARD AND THE NEEDLE (Main B1) · pergunta-surpresa · 27/10/2026 · make / let / help / stop */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'geladeira', tipo: 'And you?', q: 'What food makes you happy after a long day?',
+    opc: ['Something sweet', 'Something salty', 'A real meal'], st: ['… always makes me feel …', 'Nothing stops me from …', 'It helps me (to) relax.'],
+    ex: 'Something salty. A bowl of popcorn makes me feel at home, and nothing stops me from eating the whole bowl.', push: 'Who taught you that habit? Somebody in your family?' },
+  { cena: 'alavancas', tipo: 'Opinion', q: 'When you were a child, did your family make you eat things you didn’t like?',
+    opc: ['Yes, all the time', 'Sometimes', 'No, they let me choose'], st: ['They made me eat …', 'They let me …', 'They never stopped me from …'],
+    ex: 'Yes, all the time. They made me eat beans every day. Now I love them!', push: 'Will you (or would you) do the same with kids? Make them, or let them choose?' },
+  { cena: 'ruido', tipo: 'Would you rather', q: 'Would you rather never eat sweets again, or never eat bread again?',
+    opc: ['No more sweets', 'No more bread'], st: ['I’d rather stop eating …', 'Bread helps me (to) …', 'Nothing could make me …'],
+    ex: 'No more sweets. Nothing could make me stop eating bread. Breakfast without bread isn’t breakfast.', push: 'Pizza is bread. Are you sure?' },
+  { cena: 'regras', tipo: 'What if', q: 'A new phone app makes you photograph everything you eat for a week. Would you do it?',
+    opc: ['Yes, I’m curious', 'Only for one day', 'No way'], st: ['It would help me (to) see …', 'It would make me feel …', 'Nothing would make me …'],
+    ex: 'Only for one day. It would help me see how much coffee I drink, but a week would make me crazy.', push: 'And if your friends could see the photos?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE LIZARD AND THE NEEDLE (Main B1 · make / let / help / stop) · conversa · 27/10/2026 · regra 3×3
+   O conselho entra no lugar de "VI · Myth or Mechanism?" (extra, verdadeiro/falso sobre a caneta) e fica
+   no MEIO da aula. O painel VIII já debate a caneta; aqui o aluno vota regras de comida do dia a dia
+   (escola, escritório, supermercado), longe de remédio e de doença. As quatro alavancas moram nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'conselho', troca: 'mito', est: 'o', min: 7, img: 'cozinha', rot: 'The Food Council', t: 'The city’s food council. Three rules, your vote.',
+    p: 'Read the proposal. Vote. Then say why with a lever: MAKE, LET, HELP or STOP. Your teacher votes the other way.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Schools', sit: 'Proposal 1: schools stop selling soft drinks and sweets. Only water, juice and fruit at break time.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['It would help kids (to) …', 'It doesn’t stop them from …', 'Schools should let students …', 'I’d change it: …'],
+        ex: 'Propose a change. Stop selling soft drinks, yes. But let them buy one sweet on Fridays. Rules that are too hard make kids want it more.',
+        push: 'The kids just buy sweets at the shop across the street. Does your rule still work?' },
+      { tag: 'Offices', sit: 'Proposal 2: big companies must give free fruit every day, and they can’t have cake in meetings any more.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Free fruit would help people (to) …', 'A rule can’t make adults …', 'Let people decide …'],
+        ex: 'No. Free fruit is great, but you can’t stop adults from eating cake at a birthday. Let people choose.',
+        push: 'It’s your birthday at work. Your boss says: “No cake, it’s the rule.” How do you feel?' },
+      { tag: 'Supermarkets', sit: 'Proposal 3: supermarkets can’t put chocolate and sweets next to the checkout. Only near the back of the shop.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['It would stop people from …', 'The checkout makes people …', 'Shops should let customers …'],
+        ex: 'Yes. When you wait in the line, the chocolate makes you want it. Putting it at the back helps people (to) say no.',
+        push: 'You own the supermarket. Those sweets pay your workers. Still yes?' }
+    ],
+    fim: { tag: 'Your proposal', q: 'Now you write the law. One new food rule for your city, with one lever. The council has one minute to vote.',
+      segundos: 60, nota: 'Say your rule. Then your teacher argues against it for thirty seconds.',
+      st: ['My rule would make restaurants …', 'It would let people …', 'It would stop … from …'],
+      ex: 'My rule would make restaurants give free water to everybody. It would help people (to) drink less soda, and it doesn’t stop anybody from ordering one.',
+      push: 'Who pays for your rule? Restaurants say they’ll close. Answer them.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "geladeira": {
+   "t": "You and food.",
+   "p": "Read each message. Answer out loud."
+  },
+  "sinal": {
+   "t": "Why your own hormone is useless as medicine.",
+   "p": "Listen once. Four questions. Then one lever sentence."
+  },
+  "alavancas": {
+   "t": "Four levers, four molds.",
+   "p": "Read who, lever, whom and action. Say it."
+  },
+  "cadeia": {
+   "t": "From your plate to a desert, 1992.",
+   "p": "Choose the lever. Say the whole sentence."
+  },
+  "ruido": {
+   "t": "The strangest effect: food noise.",
+   "p": "Listen once. Three questions, then two about you."
+  },
+  "cv-conselho": {
+   "t": "The food council. Three rules, your vote.",
+   "p": "Vote. Say why with MAKE, LET, HELP or STOP."
+  },
+  "curva": {
+   "t": "What happens when people stop?",
+   "p": "Listen once. Answer four questions."
+  },
+  "painel": {
+   "t": "Sell the pen without a doctor?",
+   "p": "Pick a side. Answer each person with two levers."
+  },
+  "regras": {
+   "t": "Your rules, your family, your habits.",
+   "p": "Answer four questions. Ask the last one."
+  },
+  "fim": {
+   "t": "Write your own leaflet.",
+   "p": "Four sentences, one lever each. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Make / let / help / stop + pessoa: como funciona a caneta de emagrecer (GLP-1), que começou no veneno de um lagarto do deserto descrito em 1992.",
+  "armadilha": "O português põe “a” ou “de” depois da pessoa, então sai “It makes me to feel full”, “They let me to eat”, “It stops me to eat” e “It helps me eating”; e “letted” no passado.",
+  "pal": [
+   "make someone do",
+   "let someone do",
+   "help someone (to) do",
+   "stop someone from doing",
+   "hormone",
+   "gut",
+   "food noise",
+   "lizard",
+   "venom"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o folheto: a caneta mais falada do mundo começou na boca de um lagarto.",
+   "perg": "Have you heard about the weight-loss pen?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "geladeira": {
+   "obj": "Aquecimento pessoal: o aluno e a comida, por mensagens. Hábitos, nunca o corpo.",
+   "perg": "What makes you open the fridge at night?",
+   "pula": "Duas mensagens bastam."
+  },
+  "sinal": {
+   "obj": "Áudio da pesquisadora: o GLP-1 do corpo é cortado em dois minutos.",
+   "perg": "Why is your own GLP-1 useless as a medicine?",
+   "pula": "Duas perguntas e a frase com alavanca."
+  },
+  "alavancas": {
+   "obj": "A gramática: o molde depois da pessoa muda com make, let, help e stop.",
+   "perg": "Which lever is it, and what comes after the person?",
+   "pula": "Duas alavancas por rodada bastam."
+  },
+  "cadeia": {
+   "obj": "Seis elos do prato ao deserto, cada um com uma alavanca; o elo 6 é passado (let).",
+   "perg": "What does the hormone make your stomach do?",
+   "pula": "Quatro elos; não corte o 6 (let no passado)."
+  },
+  "ruido": {
+   "obj": "Áudio de quem usa a caneta: o “food noise” some.",
+   "perg": "What stops her from thinking about food?",
+   "pula": "Corte as duas perguntas pessoais."
+  },
+  "cv-conselho": {
+   "obj": "Conselho da cidade: votar três regras de comida e justificar com uma alavanca.",
+   "perg": "Should the city stop schools from selling soda? Why?",
+   "pula": "Duas propostas bastam."
+  },
+  "curva": {
+   "obj": "Áudio do médico: o que acontece quando param a caneta, sem culpar ninguém.",
+   "perg": "Why does the doctor say people didn’t fail?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "painel": {
+   "obj": "Debate: vender a caneta sem médico? O professor faz quatro personagens.",
+   "perg": "Should the pen be sold without a doctor? Why?",
+   "pula": "Cena extra: duas rodadas bastam."
+  },
+  "regras": {
+   "obj": "As regras e hábitos do aluno e da família, com as quatro alavancas.",
+   "perg": "What did your parents make you eat as a kid?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o folheto do aluno explicando a caneta em quatro frases.",
+   "perg": "How does the pen work, in one sentence?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre hábitos e regras, com make, let, help e stop.",
+   "perg": "What helps you sleep well?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre regras de comida e saúde, defendendo com alavancas.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno explica um mecanismo do dia a dia (como o café o acorda) em passos.",
+   "perg": "What does coffee make your body do?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Levers in your life.",
+   "p": "Pick a card. Use a lever in your answer.",
+   "palavras": [
+    "make",
+    "let",
+    "help",
+    "stop … from"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR MORNING",
+     "q": "What helps you wake up in the morning?",
+     "fup": "And what makes it harder?",
+     "st": [
+      "… helps me (to) …",
+      "… makes me …"
+     ],
+     "ex": "Coffee helps me wake up, but my phone makes me stay in bed."
+    },
+    {
+     "k": "YOUR CHILDHOOD",
+     "q": "What did your parents make you do as a kid?",
+     "fup": "What did they let you do?",
+     "st": [
+      "They made me …",
+      "They let me …"
+     ],
+     "ex": "They made me eat vegetables, but they let me stay up late on Fridays."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "What stops you from using your phone too much?",
+     "fup": "Does it work?",
+     "st": [
+      "… stops me from …-ing",
+      "Nothing stops me from …"
+     ],
+     "ex": "Nothing stops me from checking it. Not even a timer."
+    },
+    {
+     "k": "YOUR WORK",
+     "q": "What does your job make you do that you don’t like?",
+     "fup": "What does it let you do?",
+     "st": [
+      "My job makes me …",
+      "It lets me …"
+     ],
+     "ex": "It makes me answer emails at night, but it lets me work from home."
+    },
+    {
+     "k": "SLEEP",
+     "q": "What helps you sleep well?",
+     "fup": "What stops you from sleeping?",
+     "st": [
+      "… helps me sleep.",
+      "… stops me from sleeping."
+     ],
+     "ex": "A cold room helps me sleep. Noise stops me from sleeping."
+    },
+    {
+     "k": "ENGLISH",
+     "q": "What helps you learn English the most?",
+     "fup": "What stops you from practicing more?",
+     "st": [
+      "… helps me (to) …",
+      "… stops me from …"
+     ],
+     "ex": "Series help me understand. Time stops me from practicing more."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "make",
+    "let",
+    "help",
+    "stop … from"
+   ],
+   "rodadas": [
+    {
+     "q": "Should schools stop kids from bringing sweets?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. It helps kids eat better.",
+      "Parents can’t control everything."
+     ],
+     "fb": [
+      "No. Parents should decide.",
+      "Rules don’t make kids eat well."
+     ]
+    },
+    {
+     "q": "A sugar tax on soda: good idea or bad idea?",
+     "a": "Good idea",
+     "b": "Bad idea",
+     "fa": [
+      "Good idea. A higher price stops people from buying so much.",
+      "The money can help hospitals."
+     ],
+     "fb": [
+      "Bad idea. It makes poor families pay more.",
+      "Let people choose."
+     ]
+    },
+    {
+     "q": "Should supermarkets put fruit near the door and candy at the back?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. It helps people make better choices.",
+      "It doesn’t stop anybody from buying candy."
+     ],
+     "fb": [
+      "No. Shops should let customers decide.",
+      "It’s a kind of trick."
+     ]
+    },
+    {
+     "q": "A medicine that changes habits: a shortcut or a real help?",
+     "a": "A shortcut",
+     "b": "A real help",
+     "fa": [
+      "A shortcut. It doesn’t make you learn new habits.",
+      "When you stop, the old habits come back."
+     ],
+     "fb": [
+      "A real help. It lets people start again.",
+      "Willpower is not always enough."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody pulled a lever."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Mechanism",
+   "t": "Explain coffee like a leaflet.",
+   "p": "One step, one lever. Say it out loud.",
+   "prof": "Keep it light and on the mechanism; recast “makes me to” and “stops me to” quietly.",
+   "passos": [
+    {
+     "q": "You drink a coffee. What does it make your brain do?",
+     "st": [
+      "Coffee makes my brain …"
+     ],
+     "ex": "Coffee makes my brain feel awake."
+    },
+    {
+     "q": "What does it stop you from feeling?",
+     "st": [
+      "It stops me from feeling …"
+     ],
+     "ex": "It stops me from feeling tired for a few hours."
+    },
+    {
+     "q": "What does it help you do at work or in class?",
+     "st": [
+      "It helps me (to) …"
+     ],
+     "ex": "It helps me focus in the first meeting."
+    },
+    {
+     "q": "What doesn’t it let you do at night?",
+     "st": [
+      "It doesn’t let me …"
+     ],
+     "ex": "If I drink it after six, it doesn’t let me sleep."
+    }
+   ],
+   "fim": "Four links, four levers. That’s a mechanism."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

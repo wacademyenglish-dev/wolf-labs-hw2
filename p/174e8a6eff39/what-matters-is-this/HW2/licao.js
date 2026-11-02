@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What Matters Is This",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/174e8a6eff39/what-matters-is-this/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "cleft sentences and emphasis in persuasion: what-cleft (What matters is...) · it-cleft (It isn't X that... It's Y) · All I'm asking is... · The thing is... · The reason... is that... · emphatic do/did + plain verb; never the important is, all what, the reason is because",
   "abrir": "What is one thing you would like to change in your city?",
   "fecho": "Put the weight where you want it: <b>What matters is…</b> · <b>It isn't X that… It's Y</b> · <b>All I'm asking is…</b> · <b>The reason… is that…</b> · <b>The thing is…</b> · <b>did</b> + plain verb for emphasis (<i>I did try</i>). Never <i>the important is</i>, <i>all what</i> or <i>the reason is because</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia rehearses a sixty-second pitch with Leo. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/174e8a6eff39/what-matters-is-this/img/live-bastidor.webp",
+      "img": "../img/live-bastidor.webp",
       "leg": "Backstage, before the pitch",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "What matters is this: the kids up north have nowhere to borrow a book.",
-          "img": "https://wolf-labs.pages.dev/p/174e8a6eff39/what-matters-is-this/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It's the bus fare that stops them, not the distance.",
-          "img": "https://wolf-labs.pages.dev/p/174e8a6eff39/what-matters-is-this/img/live-roteiro.webp",
+          "img": "../img/live-roteiro.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "All I'm asking is that you give us one bus for one year.",
-          "img": "https://wolf-labs.pages.dev/p/174e8a6eff39/what-matters-is-this/img/live-microfone.webp",
+          "img": "../img/live-microfone.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -177,7 +177,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/174e8a6eff39/what-matters-is-this/img/live-plateia.webp",
+      "img": "../img/live-plateia.webp",
       "leg": "An empty theater, waiting",
       "pede": "Look at the picture: an empty theater. You have thirty seconds to convince it of one change in your street, school or workplace. Write 2 or 3 sentences. Use <b>What matters is…</b>, <b>It isn't X that… It's Y</b> or <b>All I'm asking is…</b>",
       "ph": "What matters is …",

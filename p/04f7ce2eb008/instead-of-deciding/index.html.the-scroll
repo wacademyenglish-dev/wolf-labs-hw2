@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>WOLF LABS | The Scroll (B2)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === NEURAL OS (PREMIUM TECH DYSTOPIA) === */
+        :root {
+            --bg-base: #050505;       
+            --bg-panel: rgba(15, 23, 42, 0.6); 
+            --bg-card: rgba(30, 41, 59, 0.5);  
+            --accent-cyan: #00f0ff;   
+            --accent-orange: #ff6b00; 
+            --accent-red: #ff2a2a;    
+            --text-main: #ffffff;     
+            --text-muted: #94a3b8;    
+            --border-soft: rgba(255, 255, 255, 0.1);
+            --border-cyan: rgba(0, 240, 255, 0.3);
+            --glow-cyan: rgba(0, 240, 255, 0.4);
+            --glow-orange: rgba(255, 107, 0, 0.4);
+        }
+
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(0, 240, 255, 0.04), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(255, 107, 0, 0.04), transparent 25%),
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+        }
+
+        .font-ui { font-family: 'Outfit', sans-serif; }
+        .font-code { font-family: 'Fira Code', monospace; }
+
+        /* GLASSMORPHISM UTILITIES */
+        .glass-panel {
+            background: var(--bg-panel);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-soft);
+        }
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-soft);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* HUD TOP */
+        #hud-top {
+            position: fixed; top: 0; left: 0; right: 0; padding: 12px 30px;
+            z-index: 1000; 
+            border-bottom-width: 0px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.8);
+        }
+        .hud-bar-container { width: 140px; height: 4px; background: rgba(255,255,255,0.1); overflow: hidden; border-radius: 4px;}
+        .hud-bar-fill { height: 100%; transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 10px currentColor;}
+
+        /* CONTENT ARENA */
+        #mission-arena { height: 100vh; padding-bottom: 100px; padding-top: 80px; overflow-y: auto; scroll-behavior: smooth;}
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: var(--accent-cyan); border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+
+        /* BUTTONS */
+        .btn-cyan {
+            background: rgba(0, 240, 255, 0.05); color: var(--accent-cyan); border-radius: 6px;
+            font-family: 'Fira Code', monospace; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;
+            transition: all 0.3s ease; border: 1px solid var(--border-cyan); cursor: pointer;
+            box-shadow: 0 0 0 rgba(0,240,255,0);
+        }
+        .btn-cyan:hover { background: var(--accent-cyan); color: #000; box-shadow: 0 0 20px var(--glow-cyan); transform: translateY(-2px); }
+        .btn-cyan:active { transform: scale(0.97); }
+
+        /* SLIDER */
+        input[type=range].cyber-slider { -webkit-appearance: none; width: 100%; background: transparent; }
+        input[type=range].cyber-slider:focus { outline: none; }
+        input[type=range].cyber-slider::-webkit-slider-runnable-track { width: 100%; height: 4px; cursor: pointer; background: rgba(255,255,255,0.1); border-radius: 2px; }
+        input[type=range].cyber-slider::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: var(--accent-orange); cursor: pointer; margin-top: -8px; box-shadow: 0 0 15px var(--glow-orange); transition: 0.2s; border: 2px solid var(--bg-base);}
+        input[type=range].cyber-slider::-webkit-slider-thumb:hover { transform: scale(1.3); }
+
+        /* KANBAN (Vocab Drag) */
+        .drag-word { padding: 12px 24px; background: rgba(255, 107, 0, 0.1); color: var(--accent-orange); display: inline-flex; align-items: center; justify-content: center; font-family: 'Fira Code', monospace; font-size: 0.95rem; font-weight: 600; cursor: grab; transition: all 0.2s; border-radius: 4px; user-select: none; border: 1px solid rgba(255, 107, 0, 0.3); backdrop-filter: blur(4px);}
+        .drag-word:hover { transform: translateY(-3px); background: rgba(255, 107, 0, 0.2); box-shadow: 0 5px 15px rgba(255, 107, 0, 0.2);}
+        .drag-word.dragging { opacity: 0.4; cursor: grabbing; transform: scale(1.05); }
+        .drop-zone { background: rgba(0,0,0,0.3); border: 1px dashed var(--text-muted); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 160px; transition: all 0.3s; }
+        .drop-zone.drag-over { background: rgba(0, 240, 255, 0.05); border-color: var(--accent-cyan); border-style: solid; box-shadow: inset 0 0 20px rgba(0,240,255,0.1);}
+        .drop-area { min-height: 50px; background: rgba(0,0,0,0.5); border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-top: 1rem; border: 1px solid transparent;}
+
+        /* TOGGLE TUNER */
+        .tuner-track { width: 64px; height: 32px; background: rgba(0,0,0,0.8); border-radius: 16px; position: relative; cursor: pointer; border: 1px solid var(--border-soft); transition: 0.3s; box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);}
+        .tuner-knob { width: 24px; height: 24px; background: var(--text-muted); border-radius: 50%; position: absolute; top: 3px; left: 4px; transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); box-shadow: 0 2px 5px rgba(0,0,0,0.5);}
+        .tuner-track.active { border-color: var(--accent-cyan); background: rgba(0,240,255,0.1);}
+        .tuner-track.active .tuner-knob { transform: translateX(30px); background: var(--accent-cyan); box-shadow: 0 0 10px var(--accent-cyan);}
+
+        /* LOGIC GATE (Node Match) */
+        .logic-node { background: rgba(255,255,255,0.02); border: 1px solid var(--border-soft); color: var(--text-main); padding: 1.2rem; border-radius: 8px; font-weight: 400; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; text-align: center; backdrop-filter: blur(5px);}
+        .logic-node:hover:not(.matched) { border-color: var(--accent-orange); color: var(--accent-orange); transform: translateY(-2px); background: rgba(255, 107, 0, 0.05);}
+        .logic-node.active { border-color: var(--accent-cyan); background: rgba(0, 240, 255, 0.1); box-shadow: inset 0 0 15px rgba(0, 240, 255, 0.2); color: var(--accent-cyan);}
+        .logic-node.matched { background: transparent; color: var(--text-muted); pointer-events: none; border-color: transparent; opacity: 0.5;}
+
+        /* REDACTED TEXT / FADED INK */
+        .faded-word { background-color: rgba(255, 107, 0, 0.1); color: var(--accent-orange); cursor: pointer; transition: all 0.2s; padding: 2px 8px; border-radius: 4px; border: 1px dashed var(--accent-orange); font-family: 'Fira Code', monospace; font-size: 0.9em;}
+        .faded-word:hover { background-color: var(--accent-orange); color: #000; box-shadow: 0 0 10px var(--glow-orange);}
+        .faded-fixed { background-color: rgba(0, 240, 255, 0.1); color: var(--accent-cyan); pointer-events: none; border: 1px solid var(--accent-cyan); padding: 2px 8px; border-radius: 4px; font-family: 'Fira Code', monospace; font-size: 0.9em;}
+
+        /* DOOM FEED (Social Simulator - FIXED & Ultra Premium) */
+        .social-sim { width: 100%; max-width: 400px; border: 8px solid #111; border-radius: 32px; background: #000; position: relative; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 25px 60px rgba(0,0,0,0.9), inset 0 0 0 1px #222;}
+        .social-sim::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width: 120px; height: 25px; background: #111; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; z-index: 100;}
+        .social-header { padding: 40px 20px 15px 20px; border-bottom: 1px solid #222; display: flex; justify-content: space-between; align-items: center; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); z-index: 10; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.9rem;}
+        
+        .doom-feed-wrapper { position: relative; height: 420px; width: 100%; overflow: hidden; background: #050505;}
+        .doom-post { position: absolute; inset: 0; padding: 20px; display: flex; flex-direction: column; justify-content: center; transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); opacity: 0; pointer-events: none;}
+        .doom-post.active { opacity: 1; pointer-events: auto; transform: translateY(0); z-index: 5;}
+        .doom-post.next { transform: translateY(100%); opacity: 0;}
+        .doom-post.prev { transform: translateY(-100%); opacity: 0;}
+        
+        .doom-post-inner { background: #111; border-radius: 16px; border: 1px solid #222; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.5); width: 100%; transition: 0.3s;}
+        .doom-img { width: 100%; height: 180px; background-size: cover; background-position: center; position: relative;}
+        .doom-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, #111, transparent); }
+        .doom-content { padding: 20px; }
+        .doom-source { font-size: 0.7rem; color: var(--accent-red); font-family: 'Fira Code', monospace; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px; display: flex; align-items: center; gap: 5px;}
+        .doom-headline { font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 20px; line-height: 1.4;}
+        .doom-actions { display: flex; gap: 10px; }
+        .d-btn { flex: 1; padding: 12px; border-radius: 8px; font-weight: 700; font-family: 'Outfit', sans-serif; font-size: 0.85rem; cursor: pointer; transition: 0.2s; text-align: center; border: none; letter-spacing: 0.5px;}
+        .d-btn.read { background: rgba(255, 42, 42, 0.1); color: var(--accent-red); border: 1px solid rgba(255, 42, 42, 0.3); }
+        .d-btn.read:active { background: var(--accent-red); color: #fff; transform: scale(0.95);}
+        .d-btn.skip { background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .d-btn.skip:active { background: rgba(255,255,255,0.1); transform: scale(0.95);}
+
+        /* GPT THERAPY SIMULATOR */
+        .chat-container { width: 100%; max-width: 800px; height: 400px; background: rgba(0,0,0,0.3); border: 1px solid var(--border-soft); border-radius: 16px; overflow-y: auto; padding: 25px; display: flex; flex-direction: column; gap: 20px; box-shadow: inset 0 0 40px rgba(0,0,0,0.5); backdrop-filter: blur(10px);}
+        .chat-msg { max-width: 80%; padding: 16px 20px; border-radius: 16px; font-size: 1.05rem; line-height: 1.6; animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; opacity: 0; transform: scale(0.95) translateY(10px);}
+        .chat-msg.user { align-self: flex-end; background: var(--border-soft); color: #fff; border-bottom-right-radius: 4px; border: 1px solid rgba(255,255,255,0.1);}
+        .chat-msg.ai { align-self: flex-start; background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.2); color: #fff; border-bottom-left-radius: 4px; box-shadow: 0 4px 15px rgba(0,240,255,0.05);}
+        .typing-indicator { display: flex; gap: 4px; padding: 5px; align-items: center; height: 24px;}
+        .typing-dot { width: 6px; height: 6px; background: var(--accent-cyan); border-radius: 50%; animation: typeBounce 1.4s infinite ease-in-out both; }
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes typeBounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+
+        /* POLAROIDS (Debate Flip) */
+        .polaroid-card { perspective: 1000px; cursor: pointer; }
+        .polaroid-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
+        .polaroid-card.flipped .polaroid-card-inner { transform: rotateY(180deg); }
+        .polaroid-front, .polaroid-back {
+            position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+            display: flex; flex-direction: column; padding: 2rem;
+            background: var(--bg-card); backdrop-filter: blur(12px); border-radius: 12px; border: 1px solid var(--border-soft);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+        .polaroid-front { align-items: center; justify-content: center; }
+        .polaroid-back { background: rgba(255, 107, 0, 0.05); transform: rotateY(180deg); align-items: center; justify-content: center; border-color: rgba(255, 107, 0, 0.3); }
+
+        /* UTILS */
+        .fade-in { animation: fadeIn 0.5s ease forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes popIn { to { transform: scale(1) translateY(0); opacity: 1; } }
+        @keyframes shake { 10%, 90% { transform: translate3d(-2px, 0, 0); } 20%, 80% { transform: translate3d(3px, 0, 0); } 30%, 50%, 70% { transform: translate3d(-5px, 0, 0); } 40%, 60% { transform: translate3d(5px, 0, 0); } }
+
+        /* DRAWERS */
+        .drawer { background: var(--bg-panel); backdrop-filter: blur(20px); border-left: 1px solid var(--border-soft); transform: translateX(100%); transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); z-index: 5100; box-shadow: -20px 0 50px rgba(0,0,0,0.8);}
+        .drawer.active { transform: translateX(0); }
+        
+        .video-wrapper { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-soft); box-shadow: 0 20px 40px rgba(0,0,0,0.8); z-index: 50; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; pointer-events: auto !important; z-index: 60; }
+        .starter-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; opacity: 0; margin-top: 0; }
+        .starter-content.open { max-height: 500px; opacity: 1; margin-top: 1.5rem; }
+    </style>
+</head>
+<body class="flex flex-col h-screen overflow-hidden text-base">
+
+    <!-- HUD SUPERIOR -->
+    <div id="hud-top" class="glass-panel hidden justify-between items-center w-full">
+        <div class="flex items-center gap-8">
+            <div class="flex flex-col gap-1.5">
+                <span class="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-widest font-code">Sanity Integrity (HP)</span>
+                <div class="hud-bar-container"><div id="hp-bar" class="hud-bar-fill bg-[var(--accent-cyan)]" style="width: 100%; box-shadow: 0 0 10px var(--accent-cyan);"></div></div>
+            </div>
+            <div class="flex flex-col gap-1.5">
+                <span class="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-widest font-code">Cognition Synced (XP)</span>
+                <div class="hud-bar-container"><div id="xp-bar" class="hud-bar-fill bg-[var(--accent-orange)]" style="width: 0%; box-shadow: 0 0 10px var(--accent-orange);"></div></div>
+            </div>
+        </div>
+        <div class="text-right flex items-center gap-5">
+            <button onclick="toggleTeacherHUD()" class="px-4 py-1.5 bg-transparent border border-[var(--border-soft)] rounded text-[10px] uppercase tracking-widest text-[var(--accent-cyan)] hover:bg-[var(--accent-cyan)] hover:text-black transition-all font-bold font-code"><i class="fas fa-terminal mr-2"></i>Admin</button>
+            <div class="border-l border-[var(--border-soft)] pl-5">
+                <p class="font-ui text-lg font-black text-white tracking-[0.2em] leading-none uppercase">WOLF LABS</p>
+                <p class="text-[9px] font-semibold text-[var(--accent-cyan)] tracking-[0.4em] uppercase mt-1.5 font-code opacity-80">Lv. B2 / Neural OS</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAINEL PRINCIPAL (CAPA) -->
+    <main id="dashboard" class="flex flex-col items-center relative px-8 pt-16 pb-48 z-10 w-full h-screen overflow-y-auto">
+        <button onclick="toggleFullscreen()" class="absolute top-8 right-10 text-[var(--text-muted)] hover:text-white text-xl z-50 transition-colors" title="Fullscreen"><i class="fas fa-expand"></i></button>
+        <div class="max-w-4xl w-full flex flex-col items-center text-center space-y-8 animate-in fade-in my-auto pb-10">
+            
+            <div class="glass-card p-8 mb-2 mt-10 inline-block border-t-2 border-[var(--accent-cyan)] rounded-2xl">
+                <div class="w-24 h-24 bg-black rounded-full flex items-center justify-center overflow-hidden text-[var(--accent-cyan)] border border-[var(--border-cyan)] shadow-[inset_0_0_20px_rgba(0,240,255,0.1)]">
+                    <i class="fas fa-fingerprint text-4xl animate-pulse"></i>
+                </div>
+            </div>
+
+            <div class="space-y-5">
+                <p class="text-[var(--accent-cyan)] font-semibold text-[11px] tracking-[0.4em] uppercase bg-black/40 border border-[var(--border-soft)] px-5 py-2 rounded-full inline-block font-code backdrop-blur-md">Mission Briefing</p>
+                <h1 class="text-6xl md:text-8xl font-black text-white leading-tight tracking-tighter font-ui uppercase" style="text-shadow: 0 10px 40px rgba(0,0,0,0.8);">THE <span class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-cyan)] to-blue-500">SCROLL</span></h1>
+                <p class="text-lg text-[var(--text-muted)] font-light mt-6 max-w-2xl mx-auto leading-relaxed">Year 2045. Citizens are trapped in an endless loop of bad news. As a Cognitive Detective, you must enter the system, analyze the psychology of addiction, and deprogram the minds.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-3 mt-8 font-code text-[10px] font-semibold tracking-widest uppercase text-[var(--text-muted)]">
+                <span class="px-4 py-2 bg-black/30 border border-[var(--border-soft)] rounded-full">Psychological Dystopia</span>
+                <span class="px-4 py-2 bg-[rgba(0,240,255,0.05)] border border-[var(--border-cyan)] text-[var(--accent-cyan)] rounded-full">Gerunds & Infinitives</span>
+                <span class="px-4 py-2 bg-[rgba(255,107,0,0.05)] border border-[rgba(255,107,0,0.3)] text-[var(--accent-orange)] rounded-full">B2 Vocabulary</span>
+            </div>
+
+            <button onclick="startMission()" class="mt-12 btn-cyan px-16 py-5 text-sm shadow-[0_0_40px_rgba(0,240,255,0.1)] rounded-full">
+                Connect to Network <i class="fas fa-link ml-3"></i>
+            </button>
+        </div>
+    </main>
+
+    <!-- ARENA DE CONTEÚDO DA LIÇÃO -->
+    <main id="mission-arena" class="hidden flex-grow flex-col relative mt-12">
+        <div id="mission-content" class="flex-grow overflow-y-auto px-4 py-8 flex flex-col items-center w-full"></div>
+    </main>
+
+    <!-- CONSOLA DE NAVEGAÇÃO -->
+    <footer id="nav-console" class="glass-panel hidden fixed bottom-0 left-0 w-full h-[75px] flex justify-between items-center px-8 z-[5000]">
+        <div class="flex items-center w-1/4">
+            <button onclick="goHome()" class="text-[var(--text-muted)] hover:text-[var(--accent-red)] transition-colors p-3 rounded-full hover:bg-white/5" title="Disconnect"><i class="fas fa-power-off text-xl"></i></button>
+        </div>
+        <div class="flex items-center gap-10 justify-center w-1/2">
+            <button onclick="prevStep()" class="text-[var(--text-muted)] hover:text-white transition-colors p-2"><i class="fas fa-angle-left text-2xl"></i></button>
+            <div class="bg-black/50 px-6 py-2 rounded-full border border-[var(--border-soft)]">
+                <span id="console-counter" class="text-[11px] font-bold text-[var(--accent-cyan)] tracking-[0.4em] uppercase font-code">SECTOR 01/23</span>
+            </div>
+            <button onclick="nextStep()" class="text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors p-2"><i class="fas fa-angle-right text-2xl"></i></button>
+        </div>
+        <div class="flex items-center justify-end gap-4 w-1/4">
+            <button onclick="toggleWhiteboard()" class="text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors p-3 rounded-full hover:bg-white/5" title="Memory Log"><i class="fas fa-brain text-lg"></i></button>
+            <button onclick="toggleLessonNavigator()" class="text-[var(--text-muted)] hover:text-[var(--accent-cyan)] transition-colors p-3 rounded-full hover:bg-white/5" title="Index"><i class="fas fa-list-ul text-lg"></i></button>
+        </div>
+    </footer>
+
+    <!-- DRAWERS -->
+    <aside id="whiteboard" class="fixed right-0 top-0 h-screen w-[400px] drawer flex flex-col pt-[70px]">
+        <div class="p-6 border-b border-[var(--border-soft)] flex justify-between items-center bg-black/20">
+            <h2 class="font-ui text-lg font-bold text-[var(--accent-cyan)] uppercase tracking-widest"><i class="fas fa-terminal mr-3 opacity-70"></i> Cognitive Log</h2>
+            <button onclick="toggleWhiteboard()" class="text-[var(--text-muted)] hover:text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="p-5 bg-black/40 flex flex-wrap gap-3 border-b border-[var(--border-soft)]">
+            <button onclick="insertTag('[VERB+ING]')" class="text-[10px] bg-white/5 border border-[var(--border-soft)] text-[var(--text-muted)] px-4 py-2 rounded hover:border-[var(--accent-cyan)] hover:text-[var(--accent-cyan)] transition-all font-code font-semibold uppercase tracking-wider">+ Gerund</button>
+            <button onclick="insertTag('[TO + VERB]')" class="text-[10px] bg-white/5 border border-[var(--border-soft)] text-[var(--text-muted)] px-4 py-2 rounded hover:border-[var(--accent-orange)] hover:text-[var(--accent-orange)] transition-all font-code font-semibold uppercase tracking-wider">+ Infinitive</button>
+        </div>
+        <textarea id="wb-text" class="flex-grow bg-transparent text-[var(--accent-cyan)] p-8 resize-none focus:outline-none font-code text-sm leading-relaxed" placeholder="> Log patient symptoms here..."></textarea>
+    </aside>
+
+    <aside id="lesson-navigator" class="fixed right-0 top-0 h-screen w-[320px] drawer flex flex-col pt-[70px]">
+        <div class="p-6 border-b border-[var(--border-soft)] flex justify-between items-center bg-black/20">
+            <h2 class="font-ui text-lg font-bold text-white uppercase tracking-widest">Mainframe Index</h2>
+            <button onclick="toggleLessonNavigator()" class="text-[var(--text-muted)] hover:text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="nav-steps-list" class="flex-grow overflow-y-auto p-4 space-y-2 bg-black/20"></div>
+    </aside>
+
+    <aside id="teacher-hud" class="fixed right-0 top-0 h-screen w-[350px] drawer flex flex-col pt-[70px]">
+        <div class="p-6 border-b border-[var(--border-soft)] flex justify-between items-center bg-black/20">
+            <h2 class="font-ui text-lg font-bold text-[var(--accent-orange)] uppercase tracking-widest"><i class="fas fa-user-ninja mr-3 opacity-70"></i> Director HUD</h2>
+            <button onclick="toggleTeacherHUD()"><i class="fas fa-times text-[var(--text-muted)] hover:text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition"></i></button>
+        </div>
+        <div class="flex-grow overflow-y-auto p-6 space-y-6 bg-black/20">
+            <div class="bg-black/40 p-6 rounded-xl border border-[var(--border-soft)] shadow-inner">
+                <p class="text-[10px] font-bold text-[var(--accent-orange)] uppercase tracking-widest mb-3 font-code">Lesson Goal</p>
+                <p class="text-sm text-[var(--text-muted)] leading-relaxed font-ui font-light">Level B2. Discuss psychological traps of tech. Grammar: Gerunds vs Infinitives. Vocab: Doomscrolling, compulsion, negativity bias.</p>
+            </div>
+            <div>
+                <p class="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest mb-4 font-code">Deploy Commendation</p>
+                <div class="space-y-3">
+                    <button onclick="triggerPraise('MIND HACKED', 'Perfect Syntax Used.')" class="w-full py-4 bg-[rgba(0,240,255,0.05)] text-[var(--accent-cyan)] border border-[var(--border-cyan)] rounded-lg font-bold text-xs hover:bg-[var(--accent-cyan)] hover:text-black transition-all uppercase tracking-widest font-code">SEND: BLUE</button>
+                    <button onclick="triggerPraise('COGNITIVE LEAP', 'Excellent Argument.')" class="w-full py-4 bg-[rgba(255,107,0,0.05)] text-[var(--accent-orange)] border border-[rgba(255,107,0,0.3)] rounded-lg font-bold text-xs hover:bg-[var(--accent-orange)] hover:text-black transition-all uppercase tracking-widest font-code">SEND: ORANGE</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Overlay de Elogio -->
+    <div id="praise-overlay" class="fixed inset-0 z-[6000] flex items-center justify-center bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-500 p-4">
+        <div id="praise-card" class="glass-card p-16 text-center transform scale-50 transition-transform duration-700 cubic-bezier(0.175, 0.885, 0.32, 1.275) border-t-4 border-[var(--accent-cyan)] rounded-3xl max-w-xl w-full">
+            <div class="w-24 h-24 mx-auto rounded-full bg-black flex items-center justify-center border border-[var(--border-cyan)] mb-8 shadow-[0_0_30px_rgba(0,240,255,0.3)]">
+                <i id="praise-icon" class="fas fa-brain text-5xl text-[var(--accent-cyan)]"></i>
+            </div>
+            <h2 id="praise-main" class="font-ui text-4xl md:text-5xl font-black tracking-widest uppercase mb-4 text-[var(--accent-cyan)]"></h2>
+            <p id="praise-sub" class="text-sm font-semibold text-[var(--text-muted)] tracking-[0.3em] uppercase font-code"></p>
+        </div>
+    </div>
+
+    <!-- SCRIPT DO MOTOR PRINCIPAL -->
+    <script>
+        let state = { hp: 100, xp: 0, current: 0 };
+        const esc = (s) => s ? s.replace(/'/g, "\\'").replace(/"/g, "&quot;") : "";
+        
+        const TYPES = { COVER: "Intro", WARMUP: "Scan", STORY: "Node", VIDEO: "Intel", VOCAB: "Hack", GRAMMAR: "Code", DRILL: "Wipe", BUILDER: "Draft", MATCH: "Node", SPEAKING: "Voice", WRAP: "End", TUNER: "Patch", CUSTOM: "Sim" };
+        function step(type, title, html) { return { type, title, html }; }
+
+        function updateHUD() {
+            const h = document.getElementById('hp-bar'); if(h) h.style.width = Math.max(0, state.hp) + '%';
+            const x = document.getElementById('xp-bar'); if(x) x.style.width = Math.min(100, (state.xp / 100) * 100) + '%';
+        }
+        function insertTag(tag) { const text = document.getElementById('wb-text'); if (text) { text.value += (text.value.length > 0 ? '\n' : '') + tag + ' '; text.focus(); } }
+
+        function shuffleArray(array) {
+            let curId = array.length;
+            while (0 !== curId) { let randId = Math.floor(Math.random() * curId); curId -= 1; let tmp = array[curId]; array[curId] = array[randId]; array[randId] = tmp; }
+            return array;
+        }
+
+        // --- TEMPLATES (Premium Style) ---
+        const bGuide = (title, points) => step(TYPES.COVER, title, `
+            <div class="max-w-3xl mx-auto space-y-8 animate-in fade-in py-10">
+                <div class="glass-card border-t-2 border-[var(--accent-cyan)] rounded-2xl">
+                    <p class="text-[var(--accent-cyan)] font-semibold uppercase tracking-[0.4em] text-[11px] mb-8 font-code text-center">
+                        <i class="fas fa-terminal text-lg mb-3 block opacity-80"></i> System Directives
+                    </p>
+                    <h2 class="font-ui text-4xl md:text-5xl font-black text-white text-center mb-10 pb-10 border-b border-[var(--border-soft)] uppercase tracking-tight">${title}</h2>
+                    <div class="space-y-6 px-6">
+                        ${points.map(p => `<p class="text-lg text-[var(--text-main)] flex items-start gap-5 font-ui font-light leading-relaxed"><i class="fas fa-check text-[var(--accent-cyan)] mt-1.5 opacity-60"></i> ${p}</p>`).join('')}
+                    </div>
+                </div>
+            </div>
+        `);
+
+        const bSlider = (title, prompt, minL, maxL, followup, starter) => step(TYPES.WARMUP, title, `
+            <div class="max-w-3xl mx-auto flex flex-col items-center justify-center min-h-[60vh] text-center space-y-10 animate-in fade-in py-10">
+                <p class="text-[10px] font-bold text-[var(--accent-orange)] uppercase tracking-[0.3em] bg-black/40 border border-[var(--border-soft)] px-5 py-2 rounded-full font-code backdrop-blur-sm">Initial Scan</p>
+                <h2 class="font-ui text-4xl md:text-5xl font-bold text-white tracking-tight uppercase">${prompt}</h2>
+                
+                <div class="w-full glass-card py-16 flex flex-col items-center mt-6 border-t-2 border-[var(--accent-orange)] rounded-2xl">
+                    <div class="text-7xl font-code font-black text-[var(--accent-orange)] mb-10" id="display-val" style="text-shadow: 0 0 30px var(--glow-orange);">50%</div>
+                    <div class="w-full px-12 relative">
+                        <input type="range" min="0" max="100" value="50" class="cyber-slider" oninput="document.getElementById('display-val').innerText = this.value + '%'">
+                    </div>
+                    <div class="flex justify-between w-full px-12 mt-8 text-xs font-semibold text-[var(--text-muted)] font-code uppercase tracking-[0.2em]">
+                        <span>${minL}</span>
+                        <span>${maxL}</span>
+                    </div>
+                </div>
+                
+                <div class="w-full max-w-3xl p-8 mt-10 text-left border-l-4 border-[var(--accent-cyan)] bg-black/40 backdrop-blur-md rounded-xl">
+                    <p class="text-[10px] font-bold text-[var(--accent-cyan)] uppercase tracking-[0.3em] mb-5 font-code">Director Override</p>
+                    <p class="text-2xl font-semibold text-white mb-6 font-ui leading-snug">${followup}</p>
+                    <div class="bg-black/60 p-5 rounded-lg border border-[var(--border-soft)]">
+                        <p class="text-lg font-normal text-[var(--text-muted)] font-code">"${starter}"</p>
+                    </div>
+                </div>
+            </div>
+        `);
+
+        const bStoryCard = (title, chapter, text, question) => step(TYPES.STORY, title, `
+            <div class="max-w-4xl mx-auto flex flex-col items-center py-10 animate-in fade-in min-h-[60vh] justify-center">
+                <p class="text-[10px] font-bold text-[var(--accent-cyan)] uppercase tracking-[0.3em] mb-6 bg-black/40 px-5 py-2 rounded-full border border-[rgba(0,240,255,0.3)] font-code"><i class="fas fa-book-open mr-2"></i> File ${chapter}</p>
+                <h2 class="font-ui text-4xl md:text-5xl font-black text-white tracking-tight uppercase mb-8 text-center">${title}</h2>
+                <div class="w-full glass-card p-12 rounded-3xl shadow-[0_0_40px_rgba(0,240,255,0.1)] relative">
+                    <i class="fas fa-quote-left absolute top-8 left-8 text-4xl text-[var(--accent-cyan)] opacity-20"></i>
+                    <p class="text-xl text-[var(--text-main)] leading-loose font-ui font-light relative z-10 text-center mb-8 px-6">${text}</p>
+                    <div class="border-t border-[var(--border-soft)] pt-8 mt-4">
+                        <p class="text-center text-[var(--accent-orange)] font-bold uppercase tracking-[0.2em] font-code text-sm">${question}</p>
+                    </div>
+                </div>
+                <div class="mt-10 text-[var(--text-muted)] text-xs uppercase tracking-widest font-code animate-pulse opacity-60">Initializing Next Node...</div>
+            </div>
+        `);
+
+        // FIXED SOCIAL SIMULATOR
+        const bSocialSimulator = (id, title, instruction, posts) => {
+            const postsHtml = posts.map((p, i) => `
+                <div class="doom-post absolute w-full h-full transition-all duration-500 ease-in-out ${i === 0 ? 'translate-y-0 opacity-100 z-10 pointer-events-auto' : 'translate-y-full opacity-0 pointer-events-none'}" id="dpost-${id}-${i}">
+                    <div class="doom-post-inner h-full flex flex-col">
+                        <div class="doom-img" style="background-image: url('${p.img}');"></div>
+                        <div class="doom-content flex-grow flex flex-col">
+                            <p class="doom-source"><i class="fas fa-exclamation-triangle"></i> ${p.source}</p>
+                            <p class="doom-headline flex-grow">${p.title}</p>
+                            <div class="doom-actions mt-auto">
+                                <button class="d-btn skip" onclick="doomAction('skip', '${id}', ${i}, ${posts.length})">IGNORE</button>
+                                <button class="d-btn read" onclick="doomAction('read', '${id}', ${i}, ${posts.length})">READ MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            return step(TYPES.CUSTOM, title, `
+                <div class="max-w-5xl mx-auto flex flex-col items-center py-10 animate-in fade-in">
+                    <p class="text-[10px] font-bold text-[var(--accent-red)] uppercase tracking-[0.3em] mb-6 bg-black/40 px-5 py-2 rounded-full border border-[rgba(255,42,42,0.3)] font-code"><i class="fas fa-mobile-alt mr-2"></i> Device Intercept</p>
+                    <h2 class="font-ui text-4xl md:text-5xl font-black text-white tracking-tight uppercase mb-6 text-center">${title}</h2>
+                    <p class="text-[var(--text-muted)] text-lg mb-12 text-center max-w-2xl font-light">${instruction}</p>
+                    
+                    <div class="social-sim">
+                        <div class="social-header">
+                            <span class="flex items-center gap-2"><i class="fas fa-wifi text-[var(--accent-cyan)]"></i> NeuralNet 5G</span>
+                            <span id="doom-clock" class="font-light">02:14 AM</span>
+                        </div>
+                        <div class="doom-feed-wrapper" id="feed-wrap-${id}">
+                            ${postsHtml}
+                        </div>
+                    </div>
+
+                    <div class="hidden w-full max-w-3xl mt-12 bg-black/50 border-l-4 border-[var(--accent-cyan)] p-8 rounded-xl shadow-2xl backdrop-blur-md" id="hub-doom-${id}">
+                        <p class="text-[10px] font-bold text-[var(--accent-cyan)] uppercase tracking-[0.3em] mb-4 font-code"><i class="fas fa-comment-dots mr-2"></i> Director Query</p>
+                        <p class="text-2xl font-semibold text-white leading-snug font-ui mb-6">"Did you notice your sanity dropping when you clicked 'Read More'? Why is it so hard to stop reading bad news?"</p>
+                        <div class="bg-black/60 p-5 rounded-lg border border-[var(--border-soft)]">
+                            <p class="text-lg font-normal text-[var(--accent-orange)] font-code">"I think we can't stop reading because..."</p>
+                        </div>
+                    </div>
+                </div>
+            `);
+        };
+
+        const bVideo = (title, desc, ytUrl) => step(TYPES.VIDEO, title, `
+            <div class="max-w-4xl mx-auto flex flex-col items-center justify-center min-h-[60vh] py-10 animate-in fade-in">
+                <p class="text-[10px] font-bold text-[var(--accent-cyan)] uppercase tracking-[0.4em] mb-6 bg-black/40 border border-[var(--border-soft)] px-5 py-2 rounded-full font-code"><i class="fas fa-video mr-2"></i> Security Feed</p>
+                <h2 class="font-ui text-4xl md:text-5xl font-black text-white tracking-tight uppercase mb-6 text-center">${title}</h2>
+                <p class="text-lg text-[var(--text-muted)] mb-10 text-center font-light max-w-2xl">${desc}</p>
+                
+                <div class="video-wrapper">
+                    <iframe src="${ytUrl}" allowfullscreen></iframe>
+                </div>
+            </div>
+        `);
+
+        const bVocabDrag = (id, title, instruction, items, followup) => {
+            let words = shuffleArray([...items]).map(w => `
+                <div class="drag-word" draggable="true" ondragstart="dragVocab(event, this)" ondragend="this.classList.remove('dragging')" data-word="${esc(w.word)}">
+                    <i class="fas fa-unlock-alt mr-3 opacity-40"></i>${w.word}
+                </div>
+            `).join('');
+
+            let dropzones = items.map((w, i) => `
+                <div class="drop-zone glass-panel" data-expected="${esc(w.word)}" ondrop="dropVocab(event, this)" ondragover="allowDropVocab(event)" ondragleave="leaveDropVocab(event)">
+                    <p class="text-[var(--text-main)] font-light text-lg leading-relaxed font-ui text-center">"${w.def}"</p>
+                    <div class="drop-area">
+                        <span class="text-xs font-code text-[var(--text-muted)] uppercase tracking-[0.2em] pointer-events-none">Drop Key Here</span>
+                    </div>
+                </div>
+            `).join('');
+
+            return step(TYPES.VOCAB, title, `
+                <div class="max-w-5xl mx-auto w-full flex flex-col items-center py-10 animate-in fade-in" id="vocab-container-${id}">
+                    <p class="text-[10px] font-bold text-[var(--accent-orange)] uppercase tracking-[0.4em] mb-6 bg-black/40 px-5 py-2 rounded-full border border-[rgba(255,107,0,0.3)] font-code shadow-sm"><i class="fas fa-brain mr-2"></i> Cognitive Hack</p>
+                    <h2 class="font-ui text-4xl md:text-5xl font-black text-white tracking-tight mb-6 text-center uppercase">${title}</h2>
+                    <p class="text-[var(--text-muted)] text-lg mb-12 text-center max-w-2xl font-light">${instruction}</p>
+                    
+                    <div class="w-full max-w-4xl mb-10 p-8 glass-card rounded-2xl">
+                        <p class="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-[0.3em] mb-6 font-code text-center">Encrypted Concepts</p>
+                        <div class="vocab-bank flex flex-wrap gap-4 min-h-[60px] items-center justify-center">
+                            ${words}
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+                        ${dropzones}
+                    </div>
+
+                    <div class="vocab-followup hidden w-full max-w-4xl mt-12 bg-black/50 border-l-4 border-[var(--accent-cyan)] p-8 rounded-xl shadow-2xl backdrop-blur-md relative overflow-hidden">
+                        <p class="text-[10px] font-bold text-[var(--accent-cyan)] uppercase tracking-[0.3em] mb-4 font-code"><i class="fas fa-comment-dots mr-2"></i> Director Query</p>
+                        <p class="text-2xl font-semibold text-white leading-snug font-ui">"${followup}"</p>
+                    </div>
+                </div>
+            `);
+        };
+
+        const bGrammar = (title, rule, examples, tagColor="var(--accent-cyan)") => step(TYPES.GRAMMAR, title, `
+            <div class="max-w-4xl mx-auto space-y-10 animate-in fade-in py-10">
+                <div class="text-center space-y-5 mb-14">
+                    <p class="text-[10px] font-bold text-[var(--bg-base)] uppercase tracking-[0.4em] inline-block px-5 py-2 rounded-full font-code shadow-sm" style="background-color: ${tagColor}">Syntax Protocol</p>
+                    <h2 class="font-ui text-5xl md:text-6xl font-black text-white tracking-tight uppercase">${title}</h2>
+                </div>
+                <div class="glass-card border-t-2 p-12 text-center rounded-3xl" style="border-top-color: ${tagColor}">
+                    <p class="text-[1.35rem] text-[var(--text-main)] font-light leading-loose font-ui">${rule.replace(/\[(.*?)\]/g, `<span style="color: ${tagColor}" class="font-bold bg-black/50 px-4 py-1.5 rounded-lg border border-white/10 font-code text-[1.15rem] mx-1">$1</span>`)}</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                    ${examples.map(ex => `
+                        <div class="glass-panel p-8 rounded-2xl text-center">
+                            <p class="text-[10px] font-semibold uppercase text-[var(--text-muted)] tracking-[0.3em] mb-5 font-code">${ex.context}</p>
+                            <p class="text-xl font-medium text-white font-ui leading-relaxed">"${ex.text.replace(/\[(.*?)\]/g, `<span style="color: ${tagColor}; font-weight: 700;">$1</span>`)}"</p>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `);
+
+        const bRedactedNotes = (id, title, instruction, text, expectedFixes) => {
+            let expectedFixesCopy = [...expectedFixes]; 
+            let htmlText = text.replace(/\[(.*?)\]/g, (match, word) => {
+                const fixData = expectedFixesCopy.shift();
+                return `<span class="faded-word" onclick="triggerFixer(this, '${esc(fixData)}')">${word}</span>`;
+            });
+
+            return step(TYPES.DRILL, title, `
+                <div class="max-w-4xl mx-auto w-full flex flex-col items-center py-10 animate-in fade-in">
+                    <p class="text-[10px] font-bold text-[var(--accent-orange)] uppercase tracking-[0.3em] mb-6 font-code bg-black/40 px-5 py-2 rounded-full border border-[rgba(255,107,0,0.3)]"><i class="fas fa-eraser mr-2"></i> Mind Wipe</p>
+                    <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight uppercase mb-6 text-center font-ui">${title}</h2>
+                    <p class="text-[var(--text-muted)] text-lg mb-12 text-center font-light">${instruction}</p>
+                    
+                    <div class="w-full glass-card p-14 rounded-3xl relative overflow-hidden text-[1.3rem] leading-loose text-white font-ui font-light min-h-[250px] text-center">
+                        ${htmlText}
+                        <div id="fix-panel" class="absolute bottom-0 left-0 w-full bg-black/90 backdrop-blur-xl border-t border-[var(--accent-orange)] p-8 transform translate-y-full transition-transform duration-500 cubic-bezier(0.175, 0.885, 0.32, 1.275) flex items-center gap-5 z-20">
+                            <span class="text-[var(--accent-orange)] text-xs uppercase tracking-[0.2em] font-bold font-code whitespace-nowrap">Inject Syntax:</span>
+                            <input type="text" id="fix-input" class="bg-black/50 text-white border border-[var(--border-soft)] rounded-lg px-5 py-3 flex-1 text-lg focus:outline-none focus:border-[var(--accent-orange)] font-code" autocomplete="off">
+                            <button onclick="submitFixer()" class="px-8 py-3 text-sm font-bold font-code rounded-lg uppercase tracking-widest transition-all hover:scale-95" style="background: rgba(255,107,0,0.1); border: 1px solid var(--accent-orange); color: var(--accent-orange);">Inject</button>
+                        </div>
+                    </div>
+                    <div id="fixer-hub" class="hidden mt-10 text-[var(--accent-cyan)] text-xs font-code font-bold uppercase tracking-[0.3em] bg-black/40 px-6 py-3 border border-[rgba(0,240,255,0.3)] rounded-full"><i class="fas fa-check mr-2"></i> Memory Restored.</div>
+                </div>
+            `);
+        }
+
+        const bLogicGate = (id, title, instruction, pairs) => {
+            let lefts = pairs.map((p, i) => ({text: p.left, id: i, type: 'L'}));
+            let rights = pairs.map((p, i) => ({text: p.right, id: i, type: 'R'}));
+            lefts = shuffleArray(lefts); rights = shuffleArray(rights);
+
+            const buildNodes = (arr) => arr.map(item => `
+                <div class="logic-node" data-id="${item.id}" data-type="${item.type}" onclick="handleMatch(this)">${item.text}</div>
+            `).join('');
+
+            return step(TYPES.MATCH, title, `
+                <div class="max-w-5xl mx-auto w-full flex flex-col items-center py-10 animate-in fade-in">
+                    <p class="text-[10px] font-bold text-[var(--accent-cyan)] uppercase tracking-[0.3em] mb-6 bg-black/40 px-5 py-2 rounded-full font-code border border-[rgba(0,240,255,0.3)]"><i class="fas fa-network-wired mr-2"></i> Neural Pathways</p>
+                    <h2 class="font-ui text-4xl md:text-5xl font-black text-white tracking-tight uppercase mb-6 text-center">${title}</h2>
+                    <p class="text-[var(--text-muted)] text-lg mb-12 text-center font-light">${instruction}</p>
+                    
+                    <div class="w-full max-w-4xl glass-card p-12 rounded-3xl relative" id="match-board">
+                        <div class="grid grid-cols-2 gap-16 w-full relative z-10">
+                            <div class="flex flex-col gap-6" id="match-left">${buildNodes(lefts)}</div>
+                            <div class="flex flex-col gap-6" id="match-right">${buildNodes(rights)}</div>
+                        </div>
+                    </div>
+                    <div id="match-hub" class="hidden mt-10 text-[var(--accent-orange)] text-xs font-bold font-code uppercase tracking-[0.3em] bg-black/40 px-6 py-3 rounded-full border border-[rgba(255,107,0,0.3)]"><i class="fas fa-check-circle mr-2"></i> Pathways Synced.</div>
+                </div>
+            `);
+        }
+
+        const bTuner = (id, title, instruction, textAff, textAlt, feedback, tagColor="var(--accent-cyan)") => step(TYPES.TUNER, title, `
+            <div class="max-w-4xl mx-auto flex flex-col items-center justify-center min-h-[60vh] text-center space-y-10 animate-in fade-in py-10">
+                <p class="text-[10px] font-bold text-[var(--bg-base)] uppercase tracking-[0.4em] inline-block px-5 py-2 rounded-full font-code shadow-sm" style="background-color: ${tagColor}">A/B Testing</p>
+                <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight uppercase font-ui">${title}</h2>
+                <p class="text-lg text-[var(--text-muted)] max-w-2xl font-light">${instruction}</p>
+                
+                <div class="w-full max-w-3xl glass-card flex flex-col items-center py-16 rounded-3xl">
+                    <div class="flex items-center gap-8 mb-14">
+                        <span class="font-code font-semibold text-[var(--text-muted)] text-xs w-32 text-right uppercase tracking-widest opacity-60" id="mode-aff-${id}">Error (L1)</span>
+                        <div class="tuner-track" id="tuner-track-${id}" onclick="toggleTuner('${id}', '${esc(textAff)}', '${esc(textAlt)}', '${esc(feedback)}', '${tagColor}')">
+                            <div class="tuner-knob"></div>
+                        </div>
+                        <span class="font-code font-semibold text-[var(--text-main)] text-xs w-32 text-left uppercase tracking-widest" id="mode-alt-${id}">Fix (Native)</span>
+                    </div>
+
+                    <div class="bg-black/40 w-full max-w-2xl p-10 rounded-2xl border border-[var(--border-soft)] flex items-center justify-center min-h-[140px] shadow-inner">
+                        <p id="tuner-text-${id}" class="text-2xl font-ui font-medium tracking-wide transition-opacity duration-300 text-[var(--accent-red)]">${textAff.replace(/\[(.*?)\]/g, `<span class="border-b-2 border-[var(--accent-red)]/50 pb-1">$1</span>`)}</p>
+                    </div>
+                    
+                    <div id="tuner-fb-${id}" class="hidden mt-10 text-xs font-bold text-[var(--accent-cyan)] font-code uppercase tracking-[0.3em]">
+                        <i class="fas fa-check-circle mr-2"></i> ${feedback}
+                    </div>
+                </div>
+            </div>
+        `);
+
+        const bGPTSimulator = (id, title, instruction) => step(TYPES.CUSTOM, title, `
+            <div class="max-w-4xl mx-auto flex flex-col items-center py-10 animate-in fade-in">
+                <p class="text-[10px] font-bold text-[var(--accent-cyan)] uppercase tracking-[0.3em] mb-6 bg-black/40 px-5 py-2 rounded-full border border-[rgba(0,240,255,0.3)] font-code"><i class="fas fa-microchip mr-2"></i> Therapy Session</p>
+                <h2 class="font-ui text-4xl md:text-5xl font-black text-white tracking-tight uppercase mb-6 text-center">${title}</h2>
+                <p class="text-[var(--text-muted)] text-lg mb-12 text-center font-light">${instruction}</p>
+                
+                <div class="chat-container" id="ai-chat-box-${id}">
+                    <div class="chat-msg ai">I am the System. I provide what humans want. Why do you blame me for their anxiety?</div>
+                </div>
+
+                <button class="btn-cyan px-12 py-4 mt-8 rounded-full shadow-[0_0_20px_rgba(0,240,255,0.1)]" id="prompt-btn-${id}" onclick="promptAI('${id}')">REPLY: "Because you exploit our negativity bias!"</button>
+
+                <div class="hidden w-full max-w-3xl mt-12 bg-black/50 border-l-4 border-[var(--accent-orange)] p-8 rounded-xl shadow-2xl backdrop-blur-md" id="ai-followup-${id}">
+                    <p class="text-[10px] font-bold text-[var(--accent-orange)] uppercase tracking-[0.3em] mb-4 font-code"><i class="fas fa-comment-dots mr-2"></i> Debate</p>
+                    <p class="text-2xl font-semibold text-white leading-snug font-ui mb-6">"The System claims it's our fault. Do you agree that humans naturally prefer bad news?"</p>
+                    <div class="bg-black/60 p-5 rounded-lg border border-[var(--border-soft)]">
+                        <p class="text-lg font-normal text-[var(--text-muted)] font-code">"I think we prefer bad news because..."</p>
+                    </div>
+                </div>
+            </div>
+        `);
+
+        const bRoleplay = (title, prompt, hint) => step(TYPES.SPEAKING, title, `
+            <div class="max-w-4xl mx-auto w-full flex flex-col items-center justify-center min-h-[60vh] text-center animate-in fade-in py-10 relative">
+                <div class="w-36 h-36 bg-black border border-[var(--border-soft)] rounded-full flex items-center justify-center mb-10 shadow-[0_0_40px_rgba(255,107,0,0.15)]"><i class="fas fa-broadcast-tower text-6xl text-[var(--accent-orange)] animate-pulse"></i></div>
+                <p class="text-[10px] font-bold text-[var(--accent-orange)] uppercase tracking-[0.3em] mb-6 bg-black/40 border border-[rgba(255,107,0,0.3)] px-5 py-2 rounded-full font-code">Pirate Broadcast</p>
+                <h2 class="font-ui text-4xl md:text-5xl font-black tracking-tight text-white leading-tight mb-14 uppercase">${prompt}</h2>
+                
+                <div class="w-full glass-card text-left border-l-4 border-[var(--accent-cyan)] rounded-2xl p-2">
+                    <div class="flex justify-between items-center cursor-pointer p-6" onclick="toggleStarter(this)">
+                        <div class="flex items-center gap-5">
+                            <i class="fas fa-lightbulb text-[var(--accent-cyan)] text-3xl opacity-80"></i>
+                            <span class="font-bold text-white tracking-widest uppercase text-xl font-ui">Show Script (Click)</span>
+                        </div>
+                        <i class="fas fa-chevron-down text-slate-500"></i>
+                    </div>
+                    <div class="starter-content text-left px-6 pb-6">
+                        <div class="bg-black/50 p-8 rounded-xl border border-[var(--border-soft)]">
+                            <p class="text-xl font-normal text-[var(--text-main)] leading-relaxed font-code whitespace-pre-line">${hint}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `);
+
+        const bDebateFlip = (title, instruction, cards) => step(TYPES.SPEAKING, title, `
+            <div class="max-w-4xl mx-auto flex flex-col items-center py-10 animate-in fade-in">
+                <p class="text-[10px] font-bold text-[var(--text-main)] uppercase tracking-[0.3em] mb-6 font-code bg-black/40 px-5 py-2 border border-[var(--border-soft)] rounded-full"><i class="fas fa-users mr-2"></i> Philosophy Board</p>
+                <h2 class="font-ui text-4xl md:text-5xl font-black text-white tracking-tight uppercase mb-6 text-center">${title}</h2>
+                <p class="text-[var(--text-muted)] text-lg mb-12 text-center font-light">${instruction}</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+                    ${cards.map((card, idx) => `
+                        <div class="polaroid-card w-full h-[250px]" onclick="this.classList.toggle('flipped')">
+                            <div class="polaroid-card-inner">
+                                <div class="polaroid-front">
+                                    <i class="fas fa-question-circle text-6xl text-[var(--text-muted)] mb-6 opacity-30"></i>
+                                    <p class="font-ui text-white font-bold tracking-widest uppercase text-xl">Dilemma ${idx + 1}</p>
+                                    <p class="text-xs text-[var(--accent-orange)] mt-4 font-code font-bold tracking-widest">CLICK TO REVEAL</p>
+                                </div>
+                                <div class="polaroid-back">
+                                    <p class="text-xl font-ui font-light text-white leading-relaxed p-6">"${card}"</p>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `);
+
+        const bWrap = () => step(TYPES.WRAP, "Mission Complete", `
+            <div class="text-center max-w-3xl mx-auto flex flex-col items-center justify-center min-h-[70vh] animate-in fade-in">
+                <div class="w-36 h-36 rounded-full bg-black mx-auto flex items-center justify-center text-7xl text-[var(--accent-cyan)] mb-12 shadow-[0_0_60px_rgba(0,240,255,0.2)] border border-[var(--border-cyan)]">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <h1 class="font-ui text-5xl md:text-7xl font-black text-white tracking-tighter mb-6 uppercase" style="text-shadow: 0 0 40px rgba(0,240,255,0.3);">MINDS FREED</h1>
+                <p class="text-xl text-[var(--text-muted)] mb-14 font-code leading-relaxed max-w-lg mx-auto font-light">You have successfully analyzed the Doomscrolling phenomenon. Your mastery of Gerunds and Infinitives is verified.</p>
+                <button onclick="goHome()" class="btn-cyan px-16 py-5 text-sm rounded-full">Disconnect</button>
+            </div>
+        `);
+
+        // --- LESSON DATA (THE SCROLL - B2) - EXACTLY 23 STEPS ---
+        const lessonData = [
+            /* 1 */ bGuide("The Scroll", [
+                "Role: Cognitive Detective.", 
+                "Target: A society addicted to bad news.",
+                "Grammar Focus: Gerunds vs. Infinitives.",
+                "Mission: Analyze the 'doomscrolling' phenomenon and deprogram the citizens."
+            ]),
+
+            /* 2 */ bSlider("Screen Time", "How much time do you spend scrolling on your phone daily?", "0 Hours", "8+ Hours", "Do you usually feel better or worse after scrolling?", "After scrolling, I usually feel..."),
+
+            /* 3 */ bStoryCard("The Dive", "01", "Year 2045. The world is quiet outside, but inside the NeuroNet, millions of minds are screaming. They are trapped in a cycle, scrolling through tragedy after tragedy. My mission is to plug in, understand their addiction, and break the loop.", "HAVE YOU EVER LOST TRACK OF TIME SCROLLING?"),
+
+            /* 4 */ bSocialSimulator("feed1", "The Doom Feed", "You are inside the network. Read the headlines. Notice what happens to your Sanity (HP) when you 'READ MORE'.", [
+                {img: "https://images.unsplash.com/photo-1612831455359-970e23a1e4e9?q=80&w=800", source: "GLOBAL NEWS", title: "ECONOMY CRASHING: MILLIONS TO LOSE JOBS NEXT MONTH."},
+                {img: "https://images.unsplash.com/photo-1584483766114-2cea6facdf57?q=80&w=800", source: "TECH ALERT", title: "NEW AI CAN HACK ANY NEURAL DEVICE IN SECONDS."},
+                {img: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=800", source: "HEALTH WATCH", title: "UNKNOWN VIRUS SPREADING RAPIDLY ACROSS THE SECTOR."}
+            ]),
+
+            /* 5 */ bVideo("The Compulsion", "Watch from 0:00 to 2:30. What is 'doomscrolling' and why does it make us feel 'ick'?", "https://www.youtube-nocookie.com/embed/WsKg6HsoDaw?start=0&end=150&rel=0&modestbranding=1"),
+
+            /* 6 */ bVocabDrag("vm1", "Cognitive Hack", "Drag the concepts to their correct definitions to unlock the next sector.", [
+                {word: "Doomscrolling", def: "Spending a lot of time looking at your phone reading bad news."},
+                {word: "Compulsion", def: "A very strong feeling of wanting to do something, especially something you shouldn't."},
+                {word: "On Tap", def: "Available easily and whenever you want it."},
+                {word: "Negativity Bias", def: "The human tendency to pay more attention to bad things than good things."}
+            ], "Have you ever felt a 'compulsion' to do something you knew was bad for you?"),
+
+            /* 7 */ bGrammar("Syntax Protocol I", "Verbs can be followed by a [Gerund] (verb+ing) or an [Infinitive] (to + verb). Use Gerunds as the subject of a sentence, after prepositions, or after verbs like 'avoid', 'enjoy', 'stop'.", [
+                {context: "Gerund as Subject", text: "[Scrolling] all night is bad for your brain."},
+                {context: "Verb + Gerund", text: "We should avoid [reading] bad news before bed."}
+            ], "var(--accent-cyan)"),
+
+            /* 8 */ bRedactedNotes("fix1", "Mind Wipe", "Fill in the missing verbs. Remember: After prepositions or verbs like 'avoid', use the Gerund (verb+ing).", 
+                "People are addicted to [read] bad news. However, they should avoid [look] at their phones right before [sleep].", 
+                ["reading", "looking", "sleeping"]
+            ),
+
+            /* 9 */ bStoryCard("The Addiction", "02", "Why do they keep looking? Every negative headline releases a tiny drop of cortisol, keeping them alert. The algorithm knows this. It feeds them fear because fear equals engagement. We need to look deeper into our biology.", "DO YOU THINK BAD NEWS IS MORE PROFITABLE THAN GOOD NEWS?"),
+
+            /* 10 */ bTuner("tun1", "Syntax Override I", "Test the code. Alternate to the correct form (Gerund vs Infinitive).", "I suggest [to stop] doomscrolling.", "I suggest [stopping] doomscrolling.", "Syntax Patched: 'Suggest' takes a gerund.", "var(--accent-cyan)"),
+
+            /* 11 */ bVideo("Caveman Evolution", "Watch from 2:30 to 4:30. Why did humans evolve to pay attention to negative things?", "https://www.youtube-nocookie.com/embed/WsKg6HsoDaw?start=150&end=270&rel=0&modestbranding=1"),
+
+            /* 12 */ bLogicGate("lg1", "Evolutionary Link", "Match the cause to the effect based on the video.", [
+                {left: "Because danger was everywhere in the past...", right: "...we evolved to look out for threats."},
+                {left: "Because we have news 'on tap'...", right: "...we consume more bad news than ever."},
+                {left: "Because we have 'negativity bias'...", right: "...we focus more on the negative stuff."}
+            ]),
+
+            /* 13 */ bStoryCard("Ancestral Echoes", "03", "The Anthropologist was right. Our brains are still sitting in caves, terrified of predators. When the citizens see a headline about a crisis, their caveman brains light up. They think they need this information to survive.", "HOW HAS TECHNOLOGY CHANGED THE 'CAVEMAN' FEAR?"),
+
+            /* 14 */ bGrammar("Syntax Protocol II", "Use the [Infinitive] (to + verb) after certain verbs like 'want', 'decide', 'need', 'learn', and after adjectives.", [
+                {context: "Verb + Infinitive", text: "We feel compelled [to look] at bad news."},
+                {context: "Adjective + Infinitive", text: "It is important [to disconnect] sometimes."}
+            ], "var(--accent-orange)"),
+
+            /* 15 */ bTuner("tun2", "Syntax Override II", "Test the code. Alternate to the correct form (Gerund vs Infinitive).", "I decided [stopping] my phone usage.", "I decided [to stop] my phone usage.", "Syntax Patched: 'Decide' takes an infinitive.", "var(--accent-orange)"),
+
+            /* 16 */ bRedactedNotes("fix2", "Memory Patch", "Fill in the missing verbs. Remember: 'Want', 'Need', and adjectives take the Infinitive (to + verb).", 
+                "We need [understand] why this happens. It is crucial [disconnect]. Do you want [help] them?", 
+                ["to understand", "to disconnect", "to help"]
+            ),
+
+            /* 17 */ bVideo("Romanticising Trauma", "Watch from 4:30 to the end. What does 'what doesn't kill you makes you stronger' mean?", "https://www.youtube-nocookie.com/embed/WsKg6HsoDaw?start=270&end=360&rel=0&modestbranding=1"),
+
+            /* 18 */ bVocabDrag("vm2", "Ethics Hack", "Drag the concepts to their correct definitions to understand the system's logic.", [
+                {word: "Romanticise", def: "To talk about something in a way that makes it sound better than it really is."},
+                {word: "Resilience", def: "The ability to be happy, successful, etc. again after something difficult."},
+                {word: "Trauma", def: "Severe emotional shock and pain caused by an extremely upsetting experience."},
+                {word: "Make up for", def: "To compensate for something bad with something good."}
+            ], "Do you agree that we 'romanticise' trauma?"),
+
+            /* 19 */ bGPTSimulator("gpt1", "Therapy Session", "Debate the System. Click the prompt to confront the AI running the doom feed."),
+
+            /* 20 */ bStoryCard("The Awakening", "04", "The algorithm realizes you are trying to pull the citizens out. It starts throwing red errors across your visor. The connection is unstable. It's time to broadcast a message to the entire network and shut this down.", "ARE YOU READY TO WAKE THEM UP?"),
+
+            /* 21 */ bDebateFlip("Cognitive Dilemmas", "Discuss these ethical questions with the Director.", [
+                "Should social media companies be legally forced to show positive news?",
+                "Is it possible to completely stop using your smartphone for a week?"
+            ]),
+
+            /* 22 */ bRoleplay("Pirate Broadcast", "Send a message to the citizens to wake them up.", "> Attention! Stop [verb+ing] bad news! You need [to + verb]... If you keep doing this, you will..."),
+
+            /* 23 */ bWrap()
+        ];
+
+        // --- RUNTIME LOGIC ---
+        function toggleElementClass(id, action, className) {
+            const el = document.getElementById(id);
+            if (el) { if (action === 'add') el.classList.add(className); else if (action === 'remove') el.classList.remove(className); }
+        }
+
+        let doomClockInterval;
+        function startMission() {
+            toggleElementClass('dashboard', 'add', 'hidden'); toggleElementClass('dashboard', 'remove', 'flex');
+            toggleElementClass('hud-top', 'remove', 'hidden'); toggleElementClass('hud-top', 'add', 'flex');
+            toggleElementClass('mission-arena', 'remove', 'hidden'); toggleElementClass('mission-arena', 'add', 'flex');
+            toggleElementClass('nav-console', 'remove', 'hidden'); toggleElementClass('nav-console', 'add', 'flex');
+            buildLessonNavigator(); renderStep();
+            
+            doomClockInterval = setInterval(() => {
+                const clock = document.getElementById('doom-clock');
+                if(clock) {
+                    let d = new Date();
+                    clock.innerText = d.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                }
+            }, 1000);
+        }
+
+        function goHome() {
+            clearInterval(doomClockInterval);
+            toggleElementClass('dashboard', 'remove', 'hidden'); toggleElementClass('dashboard', 'add', 'flex');
+            toggleElementClass('hud-top', 'add', 'hidden'); toggleElementClass('hud-top', 'remove', 'flex');
+            toggleElementClass('mission-arena', 'add', 'hidden'); toggleElementClass('mission-arena', 'remove', 'flex');
+            toggleElementClass('nav-console', 'add', 'hidden'); toggleElementClass('nav-console', 'remove', 'flex');
+            state.current = 0; state.hp = 100; state.xp = 0; updateHUD();
+            document.getElementById('lesson-navigator')?.classList.remove('active');
+            document.getElementById('teacher-hud')?.classList.remove('active');
+            document.getElementById('whiteboard')?.classList.remove('active');
+        }
+
+        function buildLessonNavigator() {
+            const navList = document.getElementById('nav-steps-list');
+            if(!navList) return;
+            navList.innerHTML = '';
+            lessonData.forEach((step, i) => {
+                const btn = document.createElement('div');
+                btn.className = `w-full text-left p-4 rounded-lg flex items-center gap-4 transition-all font-ui text-sm cursor-pointer mb-2 border ${i === state.current ? 'bg-[rgba(0,240,255,0.05)] text-[var(--accent-cyan)] border-[var(--accent-cyan)] font-semibold' : 'bg-black/20 text-[var(--text-muted)] border-transparent hover:bg-white/5'}`;
+                btn.innerHTML = `<span class="opacity-50 font-code text-xs w-6">${String(i+1).padStart(2,'0')}</span><span class="truncate">${step.title}</span>`;
+                btn.onclick = () => { state.current = i; renderStep(); toggleLessonNavigator(); };
+                navList.appendChild(btn);
+            });
+        }
+
+        function renderStep() {
+            if (!lessonData || !lessonData[state.current]) return;
+            const step = lessonData[state.current];
+            const sCount = document.getElementById('console-counter'); if(sCount) sCount.innerText = `SECTOR ${String(state.current + 1).padStart(2, '0')}/${lessonData.length}`;
+            const content = document.getElementById('mission-content'); if(content) content.innerHTML = `<div class="w-full max-w-7xl mx-auto">${step.html}</div>`;
+            updateHUD();
+            
+            // Highlight nav
+            const navList = document.getElementById('nav-steps-list');
+            if (navList) {
+                Array.from(navList.children).forEach((btn, i) => {
+                    if(i === state.current) { btn.className = 'w-full text-left p-4 rounded-lg flex items-center gap-4 transition-all font-ui text-sm cursor-pointer mb-2 border bg-[rgba(0,240,255,0.05)] text-[var(--accent-cyan)] border-[var(--accent-cyan)] font-semibold'; } 
+                    else { btn.className = 'w-full text-left p-4 rounded-lg flex items-center gap-4 transition-all font-ui text-sm cursor-pointer mb-2 border bg-black/20 text-[var(--text-muted)] border-transparent hover:bg-white/5'; }
+                });
+            }
+
+            // Scroll to top
+            document.getElementById('mission-arena').scrollTo(0,0);
+        }
+
+        function nextStep() { if (state.current < lessonData.length - 1) { state.current++; renderStep(); } else { goHome(); } }
+        function prevStep() { if (state.current > 0) { state.current--; renderStep(); } }
+        
+        function toggleLessonNavigator() { document.getElementById('lesson-navigator').classList.toggle('active'); document.getElementById('teacher-hud')?.classList.remove('active'); document.getElementById('whiteboard')?.classList.remove('active');}
+        function toggleTeacherHUD() { document.getElementById('teacher-hud').classList.toggle('active'); document.getElementById('lesson-navigator')?.classList.remove('active'); document.getElementById('whiteboard')?.classList.remove('active');}
+        function toggleWhiteboard() { document.getElementById('whiteboard').classList.toggle('active'); document.getElementById('lesson-navigator')?.classList.remove('active'); document.getElementById('teacher-hud')?.classList.remove('active');}
+        function toggleFullscreen() { if (!document.fullscreenElement) { document.documentElement.requestFullscreen().catch(err => console.log(err)); } else { if (document.exitFullscreen) document.exitFullscreen(); } }
+        function toggleStarter(btn) { const content = btn.nextElementSibling; if (content.classList.contains('open')) { content.classList.remove('open'); } else { content.classList.add('open'); } }
+
+        // --- MINIGAMES LOGIC ---
+
+        // Drag & Drop Vocab
+        function dragVocab(e, el) { e.dataTransfer.setData('text', el.dataset.word); el.classList.add('dragging'); }
+        function allowDropVocab(e) { e.preventDefault(); e.currentTarget.classList.add('drag-over'); }
+        function leaveDropVocab(e) { e.currentTarget.classList.remove('drag-over'); }
+        function dropVocab(e, zone) { 
+            e.preventDefault(); zone.classList.remove('drag-over'); 
+            const word = e.dataTransfer.getData('text'); 
+            if(word) checkVocabMatch(word, zone); 
+        }
+        function checkVocabMatch(wordStr, zone) {
+            const expected = zone.dataset.expected;
+            if(zone.querySelector('.matched-word')) return;
+
+            if(wordStr === expected) {
+                const wordEl = document.querySelector(`.drag-word[data-word="${wordStr}"]`);
+                if(!wordEl) return;
+                
+                const dropArea = zone.querySelector('.drop-area'); dropArea.innerHTML = ''; 
+                wordEl.classList.remove('drag-word');
+                wordEl.classList.add('matched-word', 'bg-[var(--accent-cyan)]', 'text-[#000]', 'w-full', 'h-full', 'm-0', 'shadow-[0_0_20px_rgba(0,240,255,0.3)]', 'flex', 'items-center', 'justify-center', 'font-bold', 'font-code', 'text-[0.95rem]', 'rounded', 'border-none');
+                wordEl.draggable = false;
+                
+                dropArea.appendChild(wordEl); dropArea.classList.replace('bg-[rgba(0,0,0,0.5)]', 'bg-transparent'); dropArea.style.border = "none";
+                zone.classList.replace('border-dashed', 'border-solid');
+                zone.classList.replace('border-[var(--text-muted)]', 'border-[var(--accent-cyan)]');
+                
+                state.xp += 3; updateHUD(); 
+                
+                const containerId = zone.closest('[id^="vocab-container-"]').id;
+                const container = document.getElementById(containerId);
+                const bank = container.querySelector('.vocab-bank');
+                if(bank.children.length === 0 || container.querySelectorAll('.matched-word').length === container.querySelectorAll('.drop-zone').length) {
+                    const followup = container.querySelector('.vocab-followup');
+                    followup.classList.remove('hidden'); followup.classList.add('animate-in', 'fade-in');
+                }
+            } else {
+                zone.classList.add('shake'); zone.style.borderColor = "var(--accent-red)"; state.hp -= 10; updateHUD();
+                setTimeout(() => { zone.classList.remove('shake'); zone.style.borderColor = "var(--text-muted)"; }, 400);
+            }
+        }
+
+        // Tuner
+        function toggleTuner(id, textAff, textAlt, feedback, tagColor) {
+            const btn = document.getElementById(`tuner-track-${id}`);
+            const textEl = document.getElementById(`tuner-text-${id}`);
+            const aff = document.getElementById(`mode-aff-${id}`); const alt = document.getElementById(`mode-alt-${id}`);
+            
+            btn.classList.toggle('active');
+            textEl.style.opacity = 0;
+            
+            setTimeout(() => {
+                if(btn.classList.contains('active')) {
+                    aff.classList.replace('text-[var(--text-muted)]', 'text-[var(--border-soft)]'); aff.classList.replace('opacity-60', 'opacity-30');
+                    alt.classList.replace('text-[var(--text-main)]', 'text-[var(--accent-cyan)]');
+                    textEl.innerHTML = textAlt.replace(/\[(.*?)\]/g, `<span style="color: ${tagColor}" class="border-b-2 border-[var(--accent-cyan)] pb-1">$1</span>`); 
+                    textEl.classList.replace('text-[var(--accent-red)]', 'text-white');
+                    document.getElementById(`tuner-fb-${id}`).classList.remove('hidden');
+                } else {
+                    aff.classList.replace('text-[var(--border-soft)]', 'text-[var(--text-muted)]'); aff.classList.replace('opacity-30', 'opacity-60');
+                    alt.classList.replace('text-[var(--accent-cyan)]', 'text-[var(--text-main)]');
+                    textEl.innerHTML = textAff.replace(/\[(.*?)\]/g, `<span class="border-b-2 border-[var(--accent-red)]/50 pb-1">$1</span>`); 
+                    textEl.classList.replace('text-white', 'text-[var(--accent-red)]');
+                    document.getElementById(`tuner-fb-${id}`).classList.add('hidden');
+                }
+                textEl.style.opacity = 1;
+            }, 250);
+        }
+
+        // Logic Gate (Match)
+        let activeMatch = null; let matchesMatched = 0;
+        function handleMatch(node) {
+            if (node.classList.contains('matched')) return;
+            if (!activeMatch) { activeMatch = node; node.classList.add('active'); } 
+            else {
+                if (activeMatch.dataset.type !== node.dataset.type && activeMatch.dataset.id === node.dataset.id) {
+                    activeMatch.classList.replace('active', 'matched'); node.classList.add('matched');
+                    activeMatch = null; matchesMatched++; state.xp += 2; updateHUD();
+                    if(matchesMatched === document.getElementById('match-board').children[0].children[0].children.length) { document.getElementById('match-hub').classList.remove('hidden'); matchesMatched = 0; }
+                } else {
+                    activeMatch.classList.remove('active'); activeMatch.classList.add('shake'); activeMatch.style.borderColor = "var(--accent-orange)"; activeMatch.style.color = "var(--accent-orange)";
+                    node.classList.add('shake'); node.style.borderColor = "var(--accent-orange)"; node.style.color = "var(--accent-orange)";
+                    state.hp -= 10; updateHUD();
+                    setTimeout(() => { 
+                        activeMatch.classList.remove('shake'); activeMatch.style.borderColor = "var(--border-soft)"; activeMatch.style.color = "var(--text-main)"; 
+                        node.classList.remove('shake'); node.style.borderColor = "var(--border-soft)"; node.style.color = "var(--text-main)"; 
+                        activeMatch = null; 
+                    }, 400);
+                }
+            }
+        }
+
+        // Fixer (Redacted)
+        let activeBug = null; let expectedFix = "";
+        function triggerFixer(el, answer) {
+            if(el.classList.contains('faded-fixed')) return;
+            activeBug = el; expectedFix = answer;
+            const panel = document.getElementById('fix-panel'); panel.classList.remove('translate-y-full');
+            document.getElementById('fix-input').value = ''; document.getElementById('fix-input').focus();
+        }
+        function submitFixer() {
+            const input = document.getElementById('fix-input').value.trim().toLowerCase();
+            const panel = document.getElementById('fix-panel');
+            if(input === expectedFix.toLowerCase()) {
+                activeBug.innerText = expectedFix; activeBug.classList.remove('faded-word'); activeBug.classList.add('faded-fixed');
+                panel.classList.add('translate-y-full');
+                if(activeBug.closest('.min-h-\\[250px\\]').querySelectorAll('.faded-word').length === 0) { state.xp += 5; updateHUD(); document.getElementById('fixer-hub').classList.remove('hidden');}
+            } else {
+                const inputEl = document.getElementById('fix-input'); inputEl.classList.add('shake'); inputEl.style.borderColor = "var(--accent-red)";
+                state.hp -= 10; updateHUD(); setTimeout(() => { inputEl.classList.remove('shake'); inputEl.style.borderColor = "var(--border-soft)"; }, 400);
+            }
+        }
+        document.getElementById('fix-input')?.addEventListener('keypress', (e) => { if (e.key === 'Enter') submitFixer(); });
+
+        // FIXED Doom Feed
+        window.doomAction = function(action, blockId, currentIndex, total) {
+            const currentPost = document.getElementById(`dpost-${blockId}-${currentIndex}`);
+            
+            if(action === 'read') {
+                state.hp -= 15; 
+                state.xp += 2;  
+                updateHUD();
+                currentPost.style.border = "1px solid var(--accent-red)";
+                currentPost.classList.add('shake');
+                setTimeout(() => transitionPost(), 400);
+            } else {
+                transitionPost();
+            }
+
+            function transitionPost() {
+                // Slide current up and hide
+                currentPost.classList.remove('translate-y-0', 'opacity-100', 'z-10', 'pointer-events-auto');
+                currentPost.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                
+                const nextIndex = currentIndex + 1;
+                if(nextIndex < total) {
+                    const nextPost = document.getElementById(`dpost-${blockId}-${nextIndex}`);
+                    nextPost.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+                    nextPost.classList.add('translate-y-0', 'opacity-100', 'z-10', 'pointer-events-auto');
+                } else {
+                    document.getElementById(`hub-doom-${blockId}`).classList.remove('hidden');
+                }
+            }
+        };
+
+        // GPT Simulator
+        let gptPrompted = false;
+        function promptAI(id) {
+            if (gptPrompted) return;
+            gptPrompted = true;
+            const btn = document.getElementById(`prompt-btn-${id}`);
+            btn.style.display = 'none';
+
+            const chat = document.getElementById(`ai-chat-box-${id}`);
+            chat.innerHTML += `<div class="chat-msg user">Because you exploit our negativity bias!</div>`;
+            chat.scrollTop = chat.scrollHeight;
+
+            setTimeout(() => {
+                const msgId = 'ai-msg-' + Date.now();
+                chat.innerHTML += `<div class="chat-msg ai" id="${msgId}"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
+                chat.scrollTop = chat.scrollHeight;
+                
+                setTimeout(() => {
+                    document.getElementById(msgId).innerHTML = `<div class="typewriter-text">Correct. You are biologically programmed to pay attention to danger. I just feed the algorithm.</div>`;
+                    chat.scrollTop = chat.scrollHeight;
+                    setTimeout(() => {
+                        document.getElementById(`ai-followup-${id}`).classList.remove('hidden');
+                        state.xp += 5; updateHUD(); 
+                    }, 2000);
+                }, 1800);
+            }, 600);
+        }
+
+        function triggerPraise(main, sub) {
+            document.getElementById('teacher-hud')?.classList.remove('active'); 
+            const overlay = document.getElementById('praise-overlay'); const card = document.getElementById('praise-card');
+            
+            document.getElementById('praise-main').innerText = main; document.getElementById('praise-sub').innerText = sub;
+            if(main === 'MIND HACKED') {
+                document.getElementById('praise-icon').className = "fas fa-brain text-5xl text-[var(--accent-cyan)]";
+                document.getElementById('praise-main').className = "font-ui text-4xl md:text-5xl font-black tracking-widest uppercase mb-4 text-[var(--accent-cyan)]";
+                card.style.boxShadow = "0 15px 50px rgba(0,0,0,0.8)";
+                card.style.borderColor = "var(--border-soft)";
+                card.style.borderTopColor = "var(--accent-cyan)";
+                card.querySelector('.rounded-full').style.borderColor = "var(--accent-cyan)";
+                card.querySelector('.rounded-full').style.boxShadow = "0 0 30px rgba(0,240,255,0.3)";
+            } else {
+                document.getElementById('praise-icon').className = "fas fa-bolt text-5xl text-[var(--accent-orange)]";
+                document.getElementById('praise-main').className = "font-ui text-4xl md:text-5xl font-black tracking-widest uppercase mb-4 text-[var(--accent-orange)]";
+                card.style.boxShadow = "0 15px 50px rgba(0,0,0,0.8)";
+                card.style.borderColor = "var(--border-soft)";
+                card.style.borderTopColor = "var(--accent-orange)";
+                card.querySelector('.rounded-full').style.borderColor = "var(--accent-orange)";
+                card.querySelector('.rounded-full').style.boxShadow = "0 0 30px rgba(255,107,0,0.3)";
+            }
+
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => card.classList.replace('scale-50', 'scale-100'), 50); 
+            setTimeout(() => { card.classList.replace('scale-100', 'scale-50'); overlay.classList.add('opacity-0', 'pointer-events-none'); }, 2500);
+        }
+        
+        window.onload = () => { updateHUD(); buildLessonNavigator(); goHome(); };
+    </script>
+</body>
+</html>

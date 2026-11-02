@@ -1,0 +1,72 @@
+/* ============================================================
+   YOU’RE SUPPOSED TO BRING A GIFT · THE INVITATION · LIVE CLASS
+   A base vem do kit (base.css). Identidade: um salão de casamento à
+   noite em Kyoto — preto laca; o convite preto com filete dourado;
+   selos de cera vermelho-escuro; mesas redondas que acendem em ouro;
+   serifa para o título, como num convite.
+   ============================================================ */
+:root{
+  --noite:#070607; --noite-rgb:7,6,7; --tinta:#eee9e2;
+  --t1:#f4efe8; --t2:#cfc6bb; --t2-rgb:207,198,187; --t3:#918679;
+  --ac:#d8b26a; --ac2:#f0d9a8; --cera:#8e2a2a; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(238,233,226,.05); --vidro2:rgba(238,233,226,.085); --vidro3:rgba(238,233,226,.12);
+  --fio:rgba(232,224,214,.12); --fio2:rgba(232,224,214,.22); --luz:rgba(238,233,226,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'Cormorant Garamond',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#241a06}
+.btn.cheio{color:#241a06}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:600 clamp(52px,5vw,96px)/.95 var(--serif);letter-spacing:-.01em}
+.capa h1 b{display:block;font-style:italic;font-weight:700;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#241c0e;color:var(--ac2)} .pilula.feito{border-color:var(--ok)}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,20px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.kg-ops{display:grid;gap:6px} .kg-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;margin:0 auto 12px} .kg-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1000px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.pista{margin:0;font:600 italic 16px var(--disp);color:var(--t3)}
+
+/* o convite */
+.kg-convite{display:grid;gap:14px;width:100%;max-width:720px;padding:22px;border-radius:14px;background:linear-gradient(170deg,#141110,#0a0909);border:1px solid #4a3c22;box-shadow:inset 0 0 0 6px #0a0909,inset 0 0 0 7px rgba(216,178,106,.55),0 20px 50px rgba(0,0,0,.6)}
+.kg-borda{display:grid;justify-items:center;gap:2px} .kg-borda small{font:800 11px var(--mono);letter-spacing:.22em;color:var(--ac)} .kg-borda b{font:italic 700 clamp(28px,2.4vw,40px) var(--serif);color:var(--ac2)}
+.kg-selos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kg-selo{display:grid;justify-items:center;gap:4px;padding:6px;border:0;border-radius:12px;background:none;color:var(--t2);cursor:pointer}
+.kg-selo svg{width:min(100%,82px);height:auto} .kg-selo .cera{fill:var(--cera);stroke:#b04545;stroke-width:2} .kg-selo .miolo{fill:none;stroke:rgba(255,220,200,.35);stroke-width:2;stroke-dasharray:3 4} .kg-selo text{font:700 18px var(--serif);fill:#f2d0c0}
+.kg-selo span{font:800 10px var(--mono);letter-spacing:.1em}
+.kg-selo.aberto .cera{fill:#3a1c1a;stroke:var(--ac)} .kg-selo.aberto .racha{fill:none;stroke:var(--ac2);stroke-width:3;stroke-linecap:round} .kg-selo.aberto span{color:var(--ac2)}
+.kg-selo.on{background:rgba(216,178,106,.1);outline:1px solid var(--ac)}
+.kg-linha{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);border-color:#4a3c22;background:linear-gradient(170deg,#141110,#0c0a09)} .kg-linha small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .kg-linha p{margin:0;font:italic 700 clamp(22px,1.9vw,32px)/1.3 var(--serif);color:var(--ac2)}
+
+/* o salão */
+.kg-salao{width:100%;max-width:1000px;margin:0 auto 6px} .kg-salao svg{display:block;width:100%;height:auto}
+.kg-salao.baixo{max-width:640px} .kg-salao.baixo + .kg-mesas-b{margin-bottom:4px}
+.kg-arco{fill:none;stroke:rgba(216,178,106,.18);stroke-width:2;stroke-dasharray:4 8}
+.kg-mesa{cursor:pointer} .kg-mesa circle{fill:#121010;stroke:#4a3c22;stroke-width:2;transition:all .4s} .kg-mesa text{font:800 11px var(--mono);letter-spacing:.06em;fill:var(--t3)}
+.kg-mesa.feita circle{fill:#2a210f;stroke:var(--ac);filter:drop-shadow(0 0 10px rgba(216,178,106,.5))} .kg-mesa.feita text{fill:var(--ac2)}
+.kg-mesa.on circle{stroke:var(--t1);stroke-width:3}
+.kg-mesas-b{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:0 0 10px} .kg-mesas-b .pilula{min-height:34px;padding:0 12px;font:800 11px var(--mono);letter-spacing:.08em}
+
+/* cenas */
+.kg-isso{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin:0 auto 14px}
+.kg-lado{min-width:260px;padding:22px;border-radius:18px;border:1px solid var(--fio2);background:#0f0d0c;color:var(--t1);font:700 clamp(20px,1.6vw,28px) var(--serif);letter-spacing:.04em;cursor:pointer}
+.kg-lado.on{border-color:var(--ac);color:var(--ac2);background:#241c0e} .kg-ou{font:italic 700 22px var(--serif);color:var(--t3)}
+.kg-envelope{display:grid;gap:10px;padding:26px 30px;border-radius:14px;max-width:900px;margin:0 auto;background:linear-gradient(170deg,#141110,#0a0909);border-color:#4a3c22;text-align:center} .kg-envelope small{font:800 11px var(--mono);letter-spacing:.2em;color:var(--ac)} .kg-envelope b{font:italic 700 clamp(24px,2.1vw,34px)/1.35 var(--serif);color:var(--ac2)}
+.kg-fato{padding:12px 18px;border-radius:var(--r2);font:500 clamp(16px,1.25vw,21px)/1.5 var(--disp);color:var(--t2);max-width:1300px;margin:0 auto 12px} .kg-fato b{color:var(--ac2)}
+.kg-caminhos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kg-caminho{display:grid;gap:6px;align-content:start;padding:12px 14px;border-radius:var(--r2)} .kg-caminho small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.kg-caminho p{margin:0;font:600 clamp(15px,1.15vw,19px)/1.4 var(--disp)} .kg-caminho .antes s{color:var(--t3);text-decoration-color:var(--erro)} .kg-caminho .depois b{color:var(--ac2)} .kg-caminho .nota{font-size:14px;color:var(--t3)} .kg-caminho .btn{justify-self:start} .kg-caminho.aberto{border-color:var(--ok)}
+.armas{margin-top:6px} .arma{min-height:0;padding:12px 14px}
+.kg-tel{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2);border-color:var(--ac)} .kg-tel small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .kg-tel p{margin:0;font:700 clamp(19px,1.55vw,26px)/1.4 var(--disp)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .kg-caminhos{grid-template-columns:1fr} .kg-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .kg-selos{grid-template-columns:repeat(4,1fr);gap:4px} .kg-selo span{font-size:8px} .kg-lado{min-width:0;width:100%} .kg-convite{padding:14px} }

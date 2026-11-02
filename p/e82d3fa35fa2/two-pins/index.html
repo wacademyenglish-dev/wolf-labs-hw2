@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Two Pins · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Two Pins · The Old City and the City Now</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Two Pins · The Old City and the City Now</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Almost everybody has two cities: the one they are from and the one they live in.</p><p style="margin:0 0 6px"><b>The grammar:</b> Left Pin, Right Pin: a postcard from Tim, then the rule. One word decides which pin you mean.</p><p style="margin:0 0 6px"><b>Short class (about 52 min):</b> I Your Two Pins · II Four People · III Six Places · IV Left Pin, Right Pin · V Which Question? · VI Home and People · VIII Your Next Home · X Your Line, Again. Skip if you’re short on time: VII The Landing Card and IX Your People (marked EXTRA on your screen). On the speaking pages the student speaks first and taps Check on their own screen. Full lesson: about 66 min.</p><p style="margin:0"><b>Open with:</b> “Where are you from?”</p></div><!--/prep-->
+    <p>Almost everybody has two cities: the one they are <b>from</b> and the one they <b>live in</b>. On a dark cork board, the red pin is the old city, the amber pin is the city now, and the string between them is the sentence. Four real people (Tim, Sian, Buli and Georgie) show the shape: none of them lives where they are from. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>am / is / are + from</b> (the left pin) · <b>live + in</b> (the right pin) · <b>was born in</b> (a third pin, always past). <i>Where are you from?</i> × <i>Where do you live?</i> Home: <b>a house / an apartment</b>, <b>with my family / on my own</b>. The mistakes: <i>I live from London</i>, <i>I am in Oxford</i> meaning origin, <i>I live at London</i>, <i>I born in</i>, <i>with my own</i>, <i>Where you live?</i></p>
+    <h4>THE AUDIO</h4>
+    <p>The speakers are British: they say <b>flat</b> and <b>flatmates</b>. The screen teaches the American words (<b>apartment</b>, <b>roommates</b>) and names flat as British. Every recording has pause and 0.75×; the words appear only after listening. Checked against the audio: each person also says their home and who they live with.</p>
+    <h4>THE PAGES</h4>
+    <p><b>I Your Two Pins</b>: three questions (left pin, right pin, the string). The student reads, says an answer about themselves, then taps Check: an example appears and the pins go up on the board. Nobody is corrected here. Ask the follow-up under the example.</p>
+    <p><b>II Four People</b>: play each of the four people (Tim, Sian, Buli, Georgie), then match every name to its two pins (Oxford → London…). Each right match fills a small board. When all four are done, the transcripts open and there is one question about the board.</p>
+    <p><b>III Six Places</b>: press play on the fast recording. Tap a city, then its box: the old city (I’m from) or the city now (I live in). A city in the wrong box goes back with one tap.</p>
+    <p><b>IV Left Pin, Right Pin</b>: a postcard from Tim on a dark paper. The student reads it and taps every from / live in (six; every word can be tapped). Then they finish the rule on the right: from or in, are you from, do you live, lives. The rule stays in the corner of V and IX.</p>
+    <p><b>V Which Question?</b>: six answers (I’m from Mexico · Near the station…). The student says the question out loud, then Check shows it. The last one has two questions (from and live).</p>
+    <p><b>VI Home and People</b>: the five short lines first (say each one), then play each person and tap their home and who they live with. The note about flat / apartment stays.</p>
+    <p><b>VII The Landing Card</b>: you are the officer on the card: the student reads each question and answers in a full sentence, then taps Check. Each Check fills a line; the sixth stamps WELCOME. Then the student asks you the six questions.</p>
+    <p><b>VIII Your Next Home</b>: a light ranking of three homes (see YOUR NEXT HOME below).</p>
+    <p><b>IX Your People</b>: five questions to build (where · your mother · from…). The student says each one, taps Check, then asks you and you answer.</p>
+    <!--conversa--><h4>YOUR NEXT HOME (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Three homes for the student’s next pin: a house with the family, an apartment on their own, an apartment with roommates. They tap them in order and say it with live in / with; then they open your order and you agree on one together. There is no right order. Say your order first, then wait five seconds in silence while they choose, and use the PUSH line (only you see it) for one more small question. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment (one of them brings back <i>I was born in</i>). Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Two Pins, VII The Landing Card (you are the officer), VIII Your Next Home (a light ranking), IX Your People (VII and IX are no longer extra).</li>
+      <li><b>Listen</b>: II Four People, III Six Places (ears only), VI Home and People.</li>
+      <li><b>Focus</b>: IV Left Pin, Right Pin (the postcard), V Which Question?.</li>
+      <li><b>Write</b>: X, their own pins, with the red wavy line for <i>live from / live at</i>, <i>I born in</i>, <i>I am born</i>, <i>born from</i>, <i>with my own</i>, <i>Where do you from?</i>, <i>she live</i>. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* TWO PINS (Main A1) · pergunta-surpresa · 27/10/2026 · from · live in · was born in */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'gente', tipo: 'And you?', q: 'Where were you born?',
+    opc: ['Here, in my city', 'In another city', 'In another country'], st: ['I was born in …', '…, but I live in …'],
+    ex: 'I was born in Recife, but I live in São Paulo.', push: 'Is it big? Yes or no?' },
+  { cena: 'lugares', tipo: 'Would you rather', q: 'Live in London or in New York?',
+    opc: ['London', 'New York'], st: ['I want to live in …'],
+    ex: 'London! I like the old buildings.', push: 'On your own? Yes or no?' },
+  { cena: 'cartao', tipo: 'And you?', q: 'Your best friend. Where is he or she from?',
+    opc: ['My city', 'Another city', 'Another country'], st: ['He’s from …', 'She’s from …, but she lives in …'],
+    ex: 'She’s from Salvador, but she lives in Lisbon now.', push: 'Do you visit? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* TWO PINS (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Ranking leve" no lugar de "VIII · A Third Pin" (extra; achar a palavra errada = prática controlada;
+   o was born in continua no iniciador daqui, na pergunta-surpresa e na escrita do X).
+   Três casas para o próximo alfinete: o aluno põe em ordem e diz com live in / with; depois vê a ordem do professor.
+   O cartão de pouso (VII) e Your People (IX) ficam.
+   A gramática da aula (I’m from · I live in · I was born in · a house / an apartment · with my family / on my own) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'casas', troca: 'nasci', est: 'o', min: 5, img: 'cidade-nova', rot: 'Your Next Home', t: 'Your next pin. Three homes.',
+    p: 'Put them in order. Your teacher answers first. Then say it with live in.',
+    formato: 'ranking',
+    q: 'The best home for you?',
+    itens: ['A house with my family', 'An apartment on my own', 'An apartment with roommates'],
+    prof: [1, 0, 2],
+    dica: 'Tap 1, 2, 3. Tap again to take it out.',
+    st: ['Number 1: I want to live in …', 'Now I live in … with …', 'I was born in …'],
+    ex: 'Number 1: an apartment on my own! Now I live in a house with my family.',
+    push: 'With a cat? Yes or no?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "First, your own two pins.",
+   "p": "Say your answer out loud. Then tap Check."
+  },
+  "gente": {
+   "t": "Four people, two cities each.",
+   "p": "Play each person. Match the name to the pins."
+  },
+  "lugares": {
+   "t": "Six places, said fast.",
+   "p": "Press play. Tap a city, then its box."
+  },
+  "regra": {
+   "t": "One word decides the pin.",
+   "p": "Read Tim’s postcard. Tap from and live. Finish the rule."
+  },
+  "perg": {
+   "t": "Six answers. What was the question?",
+   "p": "Read the answer. Say the question. Tap Check."
+  },
+  "casa": {
+   "t": "What kind of home? Who with?",
+   "p": "Say each line. Then tap each person’s home."
+  },
+  "cartao": {
+   "t": "You land in a new country.",
+   "p": "Answer the officer in a full sentence. Tap Check."
+  },
+  "cv-casas": {
+   "t": "Your next pin. Three homes.",
+   "p": "Put them in order. Say it with live in."
+  },
+  "povo": {
+   "t": "Your family and friends on the board.",
+   "p": "Build each question. Tap Check. Ask your teacher."
+  },
+  "fim": {
+   "t": "Write your pins.",
+   "p": "Born, from, live, home, who with."
+  }
+ },
+ "prep": {
+  "obj": "Be + from (cidade de origem), live in (cidade de agora) e was born in: quatro pessoas reais, Tim, Sian, Buli e Georgie, nenhuma mora onde nasceu.",
+  "armadilha": "O português mistura “sou de” e “moro em”: sai “I live from London”, “I live at London”, “I born in”, “with my own” e “Where you live?” sem o do.",
+  "pal": [
+   "I’m from",
+   "I live in",
+   "I was born in",
+   "Where are you from?",
+   "Where do you live?",
+   "an apartment",
+   "on my own",
+   "roommates"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: quase todo mundo tem duas cidades, a de origem e a de agora.",
+   "perg": "Where are you from?",
+   "pula": "Leia a frase da capa e espete o primeiro alfinete."
+  },
+  "abre": {
+   "obj": "Os dois alfinetes do aluno: de onde é, onde mora e o fio entre eles. Ninguém é corrigido aqui.",
+   "perg": "Where are you from, and where do you live now?",
+   "pula": "Duas perguntas bastam."
+  },
+  "gente": {
+   "obj": "Ouvir Tim, Sian, Buli e Georgie e ligar cada nome aos seus dois alfinetes.",
+   "perg": "Where is Sian from? Where does she live?",
+   "pula": "Três pessoas bastam."
+  },
+  "lugares": {
+   "obj": "Só ouvido: separar cada cidade em “de onde é” ou “onde mora”.",
+   "perg": "Is Oxford the old city or the city now?",
+   "pula": "Quatro cidades bastam."
+  },
+  "regra": {
+   "obj": "O cartão-postal do Tim: from para a origem, live in para agora; o aluno completa a regra.",
+   "perg": "Which word is the old city: from or in?",
+   "pula": "Leia o postal e complete só a regra."
+  },
+  "perg": {
+   "obj": "Formar a pergunta a partir da resposta: Where are you from? / Where do you live?",
+   "perg": "“Near the station.” What was the question?",
+   "pula": "Quatro respostas bastam."
+  },
+  "casa": {
+   "obj": "Tipo de casa e com quem: a house / an apartment, with my family / on my own.",
+   "perg": "Do you live in a house or an apartment? Who with?",
+   "pula": "As linhas curtas e duas pessoas bastam."
+  },
+  "cartao": {
+   "obj": "O cartão de desembarque: você é o oficial, o aluno responde em frases completas e depois pergunta.",
+   "perg": "Where were you born?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-casas": {
+   "obj": "Ranking leve de três casas para o próximo alfinete, com live in / live with.",
+   "perg": "Would you live with roommates? Why or why not?",
+   "pula": "Só o número 1 e um porquê bastam."
+  },
+  "povo": {
+   "obj": "Montar perguntas sobre a família do aluno e fazê-las a você.",
+   "perg": "Ask me: Where is your mother from?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: os alfinetes do aluno — nascido em, de onde é, onde mora, casa e com quem.",
+   "perg": "Where were you born, and where do you live now?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre cidades, casas e pessoas com from, live in e born in.",
+   "perg": "Where does your best friend live?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre dois jeitos de morar e defender com live in / live with e because.",
+   "perg": "A house or an apartment: which is better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Os dois alfinetes de uma pessoa conhecida, com he/she is from e lives in (com S).",
+   "perg": "Where is she from? Where does she live now?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More pins, more people.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "from",
+    "live in",
+    "born in",
+    "with"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FRIEND",
+     "q": "Where does your best friend live?",
+     "fup": "Is he or she from there?",
+     "st": [
+      "He lives in … / She lives in …",
+      "He’s from … / She’s from …"
+     ],
+     "ex": "She lives in Curitiba, but she’s from Manaus."
+    },
+    {
+     "k": "YOUR PARENTS",
+     "q": "Where were your parents born?",
+     "fup": "Where do they live now?",
+     "st": [
+      "My mother was born in …",
+      "They live in …"
+     ],
+     "ex": "My mother was born in Bahia. They live in Rio now."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "Do you live in a house or an apartment?",
+     "fup": "Who do you live with?",
+     "st": [
+      "I live in a … / an …",
+      "I live with … / on my own."
+     ],
+     "ex": "I live in an apartment with my husband and a cat."
+    },
+    {
+     "k": "A DREAM CITY",
+     "q": "Where would you like to live one day?",
+     "fup": "In a house or an apartment?",
+     "st": [
+      "I’d like to live in …",
+      "In a …"
+     ],
+     "ex": "I’d like to live in Lisbon, in a small apartment."
+    },
+    {
+     "k": "YOUR STREET",
+     "q": "Where do you live? Near what?",
+     "fup": "Do you like it?",
+     "st": [
+      "I live near …",
+      "I live next to …"
+     ],
+     "ex": "I live near the station. Yes, I like it."
+    },
+    {
+     "k": "A FAMOUS PERSON",
+     "q": "Where is your favorite singer or actor from?",
+     "fup": "Where does he or she live now?",
+     "st": [
+      "He’s from … / She’s from …",
+      "He lives in … / She lives in …"
+     ],
+     "ex": "She’s from Colombia, but she lives in Miami."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "live in",
+    "live with",
+    "on my own"
+   ],
+   "rodadas": [
+    {
+     "q": "Live in a house or in an apartment?",
+     "a": "A house",
+     "b": "An apartment",
+     "fa": [
+      "A house. I want a garden."
+     ],
+     "fb": [
+      "An apartment. It’s safe and easy."
+     ]
+    },
+    {
+     "q": "Live on your own or with roommates?",
+     "a": "On my own",
+     "b": "With roommates",
+     "fa": [
+      "On my own. I like quiet."
+     ],
+     "fb": [
+      "With roommates. It’s cheaper and more fun."
+     ]
+    },
+    {
+     "q": "Live in the city you are from, or in a new city?",
+     "a": "My city",
+     "b": "A new city",
+     "fa": [
+      "My city. My family lives there."
+     ],
+     "fb": [
+      "A new city. I want new people and new places."
+     ]
+    },
+    {
+     "q": "Live in a big city or a small town?",
+     "a": "A big city",
+     "b": "A small town",
+     "fa": [
+      "A big city. There is a lot to do."
+     ],
+     "fb": [
+      "A small town. Everybody knows your name."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and every pin found a place."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Someone’s Two Pins",
+   "t": "Two pins for a person you know.",
+   "p": "One step at a time. Use he or she.",
+   "prof": "Watch for lives with S and born with was; recast quietly, then ask for the whole person again.",
+   "passos": [
+    {
+     "q": "Who is the person?",
+     "st": [
+      "This is my …"
+     ],
+     "ex": "This is my cousin, Lucas."
+    },
+    {
+     "q": "Where was he or she born?",
+     "st": [
+      "He was born in … / She was born in …"
+     ],
+     "ex": "He was born in Fortaleza."
+    },
+    {
+     "q": "Where does he or she live now?",
+     "st": [
+      "He lives in … / She lives in …"
+     ],
+     "ex": "He lives in Toronto now."
+    },
+    {
+     "q": "What kind of home? Who with?",
+     "st": [
+      "He lives in a … with …",
+      "She lives on her own."
+     ],
+     "ex": "He lives in an apartment with two roommates."
+    }
+   ],
+   "fim": "Two pins and one string. That is a person’s story."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

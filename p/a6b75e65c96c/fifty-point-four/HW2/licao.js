@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Fifty Point Four",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a6b75e65c96c/fifty-point-four/img/live-feed.webp",
+  "capa": "../img/live-feed.webp",
   "alvo": "present perfect (no finished time: Have you ever deleted an app?) versus past simple (the time is said: I deleted it last year); never I have seen it yesterday, When have you started, Have you ever went",
   "abrir": "Have you ever deleted an app from your phone? When did you do it?",
   "fecho": "<b>Have you ever ...?</b> asks about life, no finished time: the present perfect. When the time is said (<i>yesterday, last year, in 2019</i>), use the <b>past simple</b>: <i>I deleted it last year.</i> Never <i>I have seen it yesterday</i>. Never <i>When have you started?</i>: it is <b>When did you start?</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about their phones. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a6b75e65c96c/fifty-point-four/img/live-espera.webp",
+      "img": "../img/live-espera.webp",
       "leg": "A waiting room, quiet and blue",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Have you ever deleted an app from your phone?",
-          "img": "https://wolf-labs.pages.dev/p/a6b75e65c96c/fifty-point-four/img/live-feed.webp",
+          "img": "../img/live-feed.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I deleted a game last year.",
-          "img": "https://wolf-labs.pages.dev/p/a6b75e65c96c/fifty-point-four/img/live-espera.webp",
+          "img": "../img/live-espera.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I've seen a lot of posts today.",
-          "img": "https://wolf-labs.pages.dev/p/a6b75e65c96c/fifty-point-four/img/live-tela.webp",
+          "img": "../img/live-tela.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -175,7 +175,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a6b75e65c96c/fifty-point-four/img/live-feed.webp",
+      "img": "../img/live-feed.webp",
       "leg": "A phone glowing in the dark",
       "pede": "Look at the picture: a phone glowing in the dark. Write 2 or 3 sentences about your phone. Use <b>have / haven't</b> for your life and the <b>past simple</b> with a time.",
       "ph": "I have never … but I deleted … last …",

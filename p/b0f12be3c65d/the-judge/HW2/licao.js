@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Judge",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b0f12be3c65d/the-judge/img/live-fitas.webp",
+  "capa": "../img/live-fitas.webp",
   "alvo": "superlatives: the + adjective + -est (the biggest, the tallest), the most + long adjective (the most beautiful), irregular the best / the worst; never 'the most big' or 'the goodest'",
   "abrir": "Who is the tallest person in your family?",
   "fecho": "One short word: add <b>the -est</b>: <i>the tallest, the biggest</i> (big: double the g). A long word: <b>the most</b>: <i>the most beautiful</i>. Two words break: <b>good → the best</b>, <b>bad → the worst</b>. Never <i>the most big</i>, never <i>the goodest</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the Riverside fair. A new scene, about 30 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/b0f12be3c65d/the-judge/img/live-tenda.webp",
+      "img": "../img/live-tenda.webp",
       "leg": "The fair, at sunset",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Leo's pumpkin is the biggest and the heaviest.",
-          "img": "https://wolf-labs.pages.dev/p/b0f12be3c65d/the-judge/img/live-abob-b.webp",
+          "img": "../img/live-abob-b.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The chocolate cake is the sweetest.",
-          "img": "https://wolf-labs.pages.dev/p/b0f12be3c65d/the-judge/img/live-bolos.webp",
+          "img": "../img/live-bolos.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "This is the most beautiful flower at the fair.",
-          "img": "https://wolf-labs.pages.dev/p/b0f12be3c65d/the-judge/img/live-flor-b.webp",
+          "img": "../img/live-flor-b.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b0f12be3c65d/the-judge/img/live-fitas.webp",
+      "img": "../img/live-fitas.webp",
       "leg": "Ribbons for the winners",
       "pede": "Look at the picture: ribbons for the winners. Write 2 or 3 prizes for people you know. Use <b>the …est, the most …</b> or <b>the best</b>.",
       "ph": "The tallest person in my family is …",

@@ -1,0 +1,81 @@
+/* ============================================================
+   UNDER PRESSURE · THE ATTENTION TARGET · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: sala de caldeiras à noite
+   — ferro escuro; o alvo da atenção em três anéis (corpo âmbar fosco,
+   tarefa verde-claro, sala azul-aço) com um ponto de luz branca; a
+   corrente de três elos: causa âmbar, efeito vermelho, propósito verde.
+   ============================================================ */
+:root{
+  --noite:#070809; --noite-rgb:7,8,9; --tinta:#e8eaea;
+  --t1:#eff1f1; --t2:#c5c9ca; --t2-rgb:197,201,202; --t3:#878c8e;
+  --ac:#f0b866; --ac2:#f8d9a6; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(232,234,234,.05); --vidro2:rgba(232,234,234,.085); --vidro3:rgba(232,234,234,.12);
+  --fio:rgba(224,228,228,.12); --fio2:rgba(224,228,228,.22); --luz:rgba(232,234,234,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1a04}
+.btn.cheio{color:#2a1a04}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:18px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2a1f10;color:var(--ac2)}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,20px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.versao.grande-v{min-height:58px;font:800 clamp(14px,1.1vw,18px) var(--mono);letter-spacing:.06em;text-align:center}
+.pt-ops{display:grid;gap:6px}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(18px,1.45vw,25px)/1.4 var(--disp)}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1000px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.ouve-c{display:grid;gap:8px;padding:10px 14px;border-radius:var(--r2)} .ouve-c .transcricao{margin:0}
+.pista{margin:0;font:600 italic 16px var(--disp);color:var(--t3)}
+.pt-esc{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:900px;margin:0 auto 12px} .pt-esc .versao{flex:1;min-width:180px}
+
+/* o alvo */
+.pt-alvo{position:relative;width:min(100%,380px);aspect-ratio:1;margin:0 auto}
+.pt-alvo.mini{width:min(100%,250px)}
+.pt-anel{position:absolute;border-radius:50%;display:grid;justify-items:center} .pt-anel small{margin-top:8px;font:800 10px var(--mono);letter-spacing:.14em}
+.pt-anel.sala{inset:0;border:2px solid rgba(111,150,200,.5);background:radial-gradient(circle,transparent 60%,rgba(111,150,200,.08))} .pt-anel.sala small{color:#9fb7da}
+.pt-anel.tarefa{inset:17%;border:2px solid rgba(143,217,162,.55);background:rgba(143,217,162,.05)} .pt-anel.tarefa small{color:var(--ok)}
+.pt-anel.corpo{inset:36%;border:2px solid rgba(240,184,102,.55);background:rgba(240,184,102,.07);align-content:center} .pt-anel.corpo small{margin:0;color:var(--ac2)}
+.pt-ponto{position:absolute;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:#fff;box-shadow:0 0 18px 6px rgba(255,255,255,.45);transition:left .8s cubic-bezier(.3,1.3,.5,1),top .8s cubic-bezier(.3,1.3,.5,1)}
+.pt-alvo.mini small{font-size:8px}
+
+/* a corrente */
+.pt-corrente{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:0 auto 12px;max-width:1300px}
+.pt-elo{display:grid;gap:4px;min-width:150px;max-width:360px;padding:10px 14px;border-radius:14px;border:2px solid var(--fio2);background:#0e1012;color:var(--t2);font:700 clamp(14px,1.1vw,18px)/1.3 var(--disp);text-align:center;cursor:default}
+.pt-elo small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.pt-elo.e0.on{border-color:var(--ac);color:var(--t1);background:#20190e} .pt-elo.e0.on small{color:var(--ac2)}
+.pt-elo.e1.on{border-color:#ff7a6e;color:var(--t1);background:#221110} .pt-elo.e1.on small{color:#ffb3aa}
+.pt-elo.e2.on{border-color:var(--ok);color:var(--t1);background:#0f1d14;box-shadow:0 0 16px rgba(143,217,162,.25)} .pt-elo.e2.on small{color:var(--ok)}
+.pt-corrente.grande .pt-elo{cursor:pointer;min-width:220px;padding:16px;font-size:clamp(17px,1.4vw,23px)}
+.pt-seta{color:var(--t3);font-weight:400;font-size:22px}
+.pt-regras{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1300px;margin:0 auto 12px}
+.pt-regra{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);border-color:var(--ec)} .pt-regra small{font:800 12px var(--mono);letter-spacing:.1em;color:var(--ec)} .pt-regra p{margin:0;font:600 clamp(17px,1.35vw,23px)/1.4 var(--disp)} .pt-regra b{color:var(--ec)}
+.pt-fato{max-width:900px;margin:0 auto 12px;text-align:center}
+.pt-partes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:1300px;margin:0 auto 12px} .pt-partes .versao{text-align:center}
+
+/* cenas */
+.pt-arenas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 12px}
+.pt-lista{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;max-width:1500px;margin:0 auto 10px}
+.pt-item{display:grid;grid-template-columns:30px 1fr 56px;gap:10px;align-items:center;padding:8px 12px;border-radius:12px;border:1px solid var(--fio);background:#0e1012;color:var(--t2);text-align:left;cursor:pointer;font:600 clamp(14px,1.05vw,17px)/1.35 var(--disp)}
+.pt-item b{font:800 13px var(--mono);color:var(--t3)} .pt-item i{font:800 11px var(--mono);font-style:normal;letter-spacing:.1em;color:var(--ac2);text-align:right}
+.pt-item.on{border-color:var(--ac);color:var(--t1);background:#1c160d}
+.pt-nums{display:grid;grid-template-columns:1fr 1fr;gap:10px} .pt-nums span{display:grid;gap:2px;padding:10px;border-radius:12px;background:#0e1012;text-align:center} .pt-nums b{font:800 30px var(--mono)} .pt-nums small{font:800 10px var(--mono);letter-spacing:.1em;color:var(--t3)} .pt-nums .w b{color:#9fb7da} .pt-nums .m b{color:var(--ac2)}
+.pt-perfil{display:grid;gap:8px;padding:18px 20px;border-radius:var(--r2)} .pt-perfil small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .pt-perfil h2{margin:0;font:800 clamp(26px,2.2vw,38px) var(--disp);color:var(--ac2)} .pt-perfil p{margin:0;font:500 clamp(17px,1.3vw,22px)/1.45 var(--disp);color:var(--t2)}
+.pt-perfil ul{margin:0;padding-left:20px;font:700 clamp(16px,1.25vw,21px)/1.45 var(--disp)} .pt-estudo{font:600 italic 15px var(--disp);color:var(--t3)}
+.pt-marcos{display:grid;gap:6px} .pt-marco{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:center;padding:10px 14px;border-radius:12px;border:1px solid var(--fio);background:#0e1012;color:var(--t3);text-align:left;cursor:pointer;font:600 clamp(15px,1.2vw,20px) var(--disp)}
+.pt-marco b{font:800 14px var(--mono)} .pt-marco.on{border-color:var(--ac);color:var(--t1)} .pt-marco.on b{color:var(--ac2)} .pt-marco.feito{color:var(--t2)} .pt-marco.feito b{color:var(--ok)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .pt-lista,.pt-regras{grid-template-columns:1fr} }
+@media (max-width:620px){ .pt-partes{grid-template-columns:1fr} .pt-elo{min-width:0;flex:1 1 100%} .pt-seta{display:none} .pt-item{grid-template-columns:24px 1fr 44px} }

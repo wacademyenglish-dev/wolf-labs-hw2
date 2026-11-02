@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Brain Lab",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/be9832fa941d/the-brain-lab/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "degree before a comparative: much / a lot / far + comparative (big difference), a bit / slightly + comparative (small difference), not nearly as ... as; never 'very faster' or 'more easier'",
   "abrir": "Is English harder or easier than your first language for you?",
   "fecho": "A big difference: <b>much / a lot / far</b> + comparative (<i>far slower</i>). A small one: <b>a bit / slightly</b> + comparative (<i>slightly faster</i>). Not the same at all: <b>not nearly as … as</b>. <b>Very</b> goes with <i>fast</i>, never with <i>faster</i>, and never <i>more easier</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a language lab. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/be9832fa941d/the-brain-lab/img/live-lab.webp",
+      "img": "../img/live-lab.webp",
       "leg": "The lab, before the test",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "English was much slower than Portuguese.",
-          "img": "https://wolf-labs.pages.dev/p/be9832fa941d/the-brain-lab/img/live-lab.webp",
+          "img": "../img/live-lab.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The switching test is far more difficult.",
-          "img": "https://wolf-labs.pages.dev/p/be9832fa941d/the-brain-lab/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "My English isn't nearly as fast as my Portuguese.",
-          "img": "https://wolf-labs.pages.dev/p/be9832fa941d/the-brain-lab/img/live-lab.webp",
+          "img": "../img/live-lab.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -178,7 +178,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/be9832fa941d/the-brain-lab/img/live-lab.webp",
+      "img": "../img/live-lab.webp",
       "leg": "A lab with a brain on the screen",
       "pede": "Look at the picture: a lab with a brain on a screen. Compare two things in your life (two languages, two jobs, two cities). Use <b>much / a lot / far</b>, <b>a bit / slightly</b> or <b>not nearly as … as</b>.",
       "ph": "Reading English is a lot easier than …",

@@ -1,0 +1,99 @@
+/* ============================================================
+   THIS TIME NEXT YEAR · THE MOMENT LINE · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: neon de 2050 sobre azul-
+   meia-noite quase preto — ciano e magenta contidos, torres em contorno
+   que acendem; a linha do momento com uma faixa listrada que corre.
+   ============================================================ */
+:root{
+  --noite:#05060c; --noite-rgb:5,6,12; --tinta:#e8eaf4;
+  --t1:#eff1fa; --t2:#c3c7da; --t2-rgb:195,199,218; --t3:#858aa3;
+  --ac:#ff5fb8; --ac2:#ffb1dc; --neon:#5ce1ff; --neon2:#b5f0ff; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(232,234,244,.05); --vidro2:rgba(232,234,244,.085); --vidro3:rgba(232,234,244,.12);
+  --fio:rgba(220,224,240,.12); --fio2:rgba(220,224,240,.22); --luz:rgba(232,234,244,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a0618}
+.btn.cheio{color:#2a0618}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--neon2);text-shadow:0 0 24px rgba(92,225,255,.35)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:18px;justify-items:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,20px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.ft-ops{display:grid;gap:6px} .ft-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;margin:0 auto 12px} .ft-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(18px,1.45vw,25px)/1.4 var(--disp)}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1000px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao u{text-decoration:none;color:var(--neon2);border-bottom:2px solid var(--neon);padding:0 4px}
+.pista{margin:0;font:600 italic 16px var(--disp);color:var(--t3)}
+
+/* vídeo selado */
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:800 28px var(--mono);letter-spacing:.2em;color:var(--neon2)} .selo-v small{font:600 15px var(--disp);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* a linha do momento */
+.ft-linha{display:grid;gap:8px;width:min(100%,640px)} .ft-linha.mini{width:min(100%,520px);margin:0 auto}
+.ft-eixo{position:relative;height:74px;border-bottom:2px solid var(--fio2)}
+.ft-agora{position:absolute;left:0;bottom:8px;font:800 12px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.ft-marca{position:absolute;bottom:-8px;transform:translateX(-50%);display:grid;justify-items:center;gap:4px} .ft-marca i{order:2;width:3px;height:54px;background:var(--ac);box-shadow:0 0 12px var(--ac)} .ft-marca b{order:1;white-space:nowrap;font:800 11px var(--mono);letter-spacing:.1em;color:var(--ac2)}
+.ft-faixa{position:absolute;bottom:8px;width:28%;height:16px;border-radius:8px;background:repeating-linear-gradient(-45deg,var(--neon) 0 8px,rgba(92,225,255,.25) 8px 16px);background-size:22px 22px;animation:anda 1.2s linear infinite;box-shadow:0 0 14px rgba(92,225,255,.45)}
+.ft-faixa.parado{animation:none}
+@keyframes anda{to{background-position:22px 0}}
+.ft-leg{font:700 11px var(--mono);letter-spacing:.1em;color:var(--t3);text-align:center}
+
+/* o horizonte */
+.ft-sky{display:flex;align-items:flex-end;gap:8px;width:min(100%,760px);height:230px;margin:0 auto 10px;padding:0 6px;border-bottom:2px solid rgba(92,225,255,.3)}
+.ft-torre{position:relative;flex:1;display:grid;align-content:end;justify-items:center;padding:8px 2px;border:2px solid #2a2f4a;border-bottom:0;border-radius:6px 6px 0 0;background:#090b16;color:var(--t3);cursor:pointer;transition:border-color .4s,box-shadow .4s}
+.ft-torre b{font:800 10px var(--mono);letter-spacing:.06em;writing-mode:vertical-rl;transform:rotate(180deg)}
+.ft-janelas{position:absolute;inset:10px 8px 40px;background-image:radial-gradient(circle,#232842 2px,transparent 2.5px);background-size:12px 14px;opacity:.9}
+.ft-torre.acesa{border-color:var(--neon);color:var(--neon2);box-shadow:0 0 18px rgba(92,225,255,.35)} .ft-torre.acesa .ft-janelas{background-image:radial-gradient(circle,var(--neon) 2px,transparent 2.5px)}
+.ft-torre.on{border-color:var(--ac)} .ft-torre.on b{color:var(--ac2)}
+
+.ft-sky.baixo{height:150px;margin-bottom:4px;width:min(100%,900px)} .ft-sky.baixo .ft-janelas{inset:8px 6px 34px}
+/* regra */
+.ft-fato{padding:12px 18px;border-radius:var(--r2);font:500 clamp(16px,1.25vw,21px)/1.5 var(--disp);color:var(--t2);max-width:1300px;margin:0 auto 12px} .ft-fato b{color:var(--neon2)}
+.ft-caminhos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.ft-caminho{display:grid;gap:6px;align-content:start;padding:12px 14px;border-radius:var(--r2)} .ft-caminho small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.ft-caminho p{margin:0;font:600 clamp(15px,1.15vw,19px)/1.4 var(--disp)} .ft-caminho .antes s{color:var(--t3);text-decoration-color:var(--erro)} .ft-caminho .depois b{color:var(--neon2)} .ft-caminho .nota{font-size:14px;color:var(--t3)} .ft-caminho .btn{justify-self:start}
+.ft-caminho.aberto{border-color:var(--ok)}
+.armas{margin-top:6px} .arma{min-height:0;padding:12px 14px}
+
+/* órbita, ligação */
+.ft-luas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 10px} .ft-luas span{padding:6px 12px;border-radius:999px;border:1px solid var(--fio2);font:800 11px var(--mono);letter-spacing:.08em;color:var(--t3)}
+.ft-luas span.on{border-color:var(--ac);color:var(--ac2)} .ft-luas span.acesa{border-color:var(--neon);color:var(--neon2);box-shadow:0 0 10px rgba(92,225,255,.3)}
+.ft-tel{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2);border-color:var(--neon)} .ft-tel small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--neon2)} .ft-tel p{margin:0;font:700 clamp(19px,1.55vw,26px)/1.4 var(--disp)} .ft-tel b{font:700 24px var(--disp)}
+.ft-tel.desligado{border-color:var(--fio2);text-align:center;max-width:600px;margin:0 auto 12px}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .ft-caminhos{grid-template-columns:1fr 1fr} .ft-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .ft-caminhos{grid-template-columns:1fr} .ft-sky{height:160px;gap:4px} .ft-torre b{font-size:8px} .ft-marca b{font-size:9px} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb .ft-sky{width:100%;margin:0 0 4px}
+.deb .ft-torre{cursor:default}

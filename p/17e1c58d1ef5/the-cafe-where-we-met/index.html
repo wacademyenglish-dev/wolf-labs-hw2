@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Café Where We Met · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Café Where We Met · A Little Guide to Portland</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Café Where We Met · A Little Guide to Portland</h2>
+    <p>An easy reader in six short pages. Rosa and Ben met in Portland ten years ago, when Ben spilled his coffee on Rosa’s book. Now Ben’s sister is moving to the city, and they write her a little guidebook: the places where their story happened. Rosa tells everybody they met at the Little Fern. The guide says something else: the Blue Door is the café <b>where</b> they met; the Little Fern is the café <b>which</b> they loved.</p>
+    <h4>THE TEST</h4>
+    <p>Say the second half alone. <i>We met <b>there</b></i> → where. <i>We loved <b>it</b></i> → which (or that). No extra <i>there</i> or <i>it</i> at the end. Before a new person, which / that can go, and the little word stays at the end: <b>the song we danced to</b>, <b>the bench we sat on</b>.</p>
+    <h4>THE PORTUGUESE TRAP</h4>
+    <p>One word covers which, that and who, and the word for where spreads to any place, so students say <i>the café where we loved</i>. Spoken Portuguese repeats the place or the thing at the end (<i>where we met there</i>, <i>which we crossed it</i>), and puts the preposition before, so it disappears in English (<i>the song we danced</i>).</p>
+    <h4>BEN’S CLUES</h4>
+    <p>Scene IV is the pressure: you read the two facts and the first words; the student, as Ben, says the clue at once. Clue 7 is the turn: they did NOT meet there.</p>
+    <!--conversa--><h4>THE JURY (VI) AND THE SURPRISE QUESTION</h4>
+    <p>After Lucy’s call, your student is the jury for three small cases from Rosa and Ben’s story: the coffee on the book, Rosa’s little lie, and a sign for the Little Fern. They read the evidence and give a verdict. There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. The last case is the rule itself: <i>the café where they met</i> × <i>the café which they loved</i>. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I, II The Guidebook (read the pages aloud), IV Ben’s Five Clues, V Lucy Calls, VI The Jury, VII Your City Guide.</li>
+      <li><b>Focus</b>: III The Rule. A sister lesson to <i>The Book You Keep</i>, in another format.</li>
+      <li><b>Write</b>: VIII, three pages of their own guide. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE CAFÉ WHERE WE MET (Main A2) · pergunta-surpresa · 27/10/2026 · who / which / where */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'guia', tipo: 'And you?', q: 'Is there a place in your city where something special happened to you?',
+    opc: ['Yes', 'Not really', 'Many places!'], st: ['There’s a … where I …', 'It’s the place which …'],
+    ex: 'Yes. There’s a small square where I learned to ride a bike.', push: 'Do you still go there?' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'Would you rather have a café where everybody knows you, or a café where nobody knows you?',
+    opc: ['Everybody knows me', 'Nobody knows me'], st: ['I’d rather have a café where …', 'I like places which …'],
+    ex: 'A café where nobody knows me. I like places which are quiet, with no questions.', push: 'And the waiter? Should he know your order?' },
+  { cena: 'luzes', tipo: 'Opinion', q: 'Ben’s clues around the city: romantic or too much?',
+    opc: ['Romantic', 'Too much', 'A little bit of both'], st: ['A man who … is …', 'The clue which I liked was …'],
+    ex: 'Romantic! A man who plans five clues really loves her.', push: 'Would you like a day like that? Yes or no?' },
+  { cena: 'lucy', tipo: 'What if', q: 'A friend moves to your city tomorrow. Who is the first person they should meet?',
+    opc: ['A friend of mine', 'A neighbour', 'Someone at a shop'], st: ['They should meet …, who …', 'There’s a person who …'],
+    ex: 'My neighbour Carla, who knows every good restaurant in the city.', push: 'And the first place? Where?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE CAFÉ WHERE WE MET (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O júri entra no lugar de "VI · Quick Check" (extra, prática controlada de tocar a palavra).
+   Depois da Lucy, o aluno julga três casos da história de Rosa e Ben, com as provas da própria
+   aula. A gramática (who / which / where / sem pronome) mora nos iniciadores; o último caso é,
+   ele mesmo, a regra: "the café where they met" × "the café which they loved". */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'juri', troca: 'quiz', est: 'o', min: 7, img: 'mesa', rot: 'The Jury', t: 'Three little cases from Rosa and Ben’s story. You decide.',
+    p: 'Read the evidence. Choose a verdict, or say your own. Say why with who, which or where. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The coffee', provas: ['Ben hit a chair and spilled his coffee on Rosa’s book.', 'The next day he bought a new copy at Mr. Okafor’s bookstore.', 'He wrote his phone number inside it.'],
+        q: 'What was the new book?', opc: ['A nice way to say sorry', 'A clever trick', 'Both!'],
+        st: ['The book which he bought was …', 'Ben is a man who …', 'I think …'],
+        ex: 'Both! The book which he bought was a sorry, and the number which he wrote was the trick.',
+        push: 'Would you call a stranger who wrote his number in a book?' },
+      { tag: 'The little lie', provas: ['They met at the Blue Door.', 'Rosa tells everybody they met at the Little Fern.', 'They went to the Little Fern every Saturday for ten years.'],
+        q: 'Is Rosa’s little lie OK?', opc: ['Yes, it’s sweet', 'No, tell the truth', 'It doesn’t matter'],
+        st: ['The café where they met is …', 'The café which they loved is …', 'It’s OK / not OK, because …'],
+        ex: 'Yes, it’s sweet. The Little Fern is the café which they loved for ten years. That’s the real story.',
+        push: 'Ben’s sister believes it. Is it still OK?' },
+      { tag: 'The sign', provas: ['The Little Fern wants a sign on the door: “The café where Rosa and Ben met”.', 'It’s good for business.', 'It isn’t true.'],
+        q: 'What should the café do?', opc: ['Put the sign up', 'No sign', 'Change the words'],
+        st: ['The sign should say: “The café which …”', 'A café where … is …', 'I would …'],
+        ex: 'Change the words: “The café which Rosa and Ben loved”. It’s true, and it’s still romantic.',
+        push: 'The owner says: “Nobody reads small words.” Do you agree?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "You and the places in your life.",
+   "p": "Read each message. Answer out loud."
+  },
+  "guia": {
+   "t": "Six places. Rosa and Ben’s story.",
+   "p": "Tap a pin. Read, answer, join the two ideas."
+  },
+  "regra": {
+   "t": "Where or which?",
+   "p": "Say each wrong line right. Then tap it."
+  },
+  "luzes": {
+   "t": "Ben is not home. Five clues.",
+   "p": "You are Ben. Say each clue fast."
+  },
+  "lucy": {
+   "t": "Lucy wants the whole story.",
+   "p": "You are Rosa. Tell it from memory."
+  },
+  "cv-juri": {
+   "t": "Three little cases. You decide.",
+   "p": "Read. Choose a verdict. Say why with who, which, where."
+  },
+  "roda": {
+   "t": "Your real city, one page at a time.",
+   "p": "Spin. Answer with who, which, that or where."
+  },
+  "fim": {
+   "t": "Which place tells your story?",
+   "p": "Write three pages of your guide. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Orações relativas (who, which, that, where, ou sem palavra): Rosa e Ben escrevem um guia de Portland para a irmã dele com os lugares da história deles.",
+  "armadilha": "O “que” e o “onde” do português viram uma palavra só: “the café where we loved”. E o brasileiro repete o lugar no fim (“where we met there”) ou some com a preposição (“the song we danced”).",
+  "pal": [
+   "where",
+   "which",
+   "who",
+   "that",
+   "the café where we met",
+   "the café which we loved",
+   "guidebook",
+   "anniversary",
+   "spilled"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o guia: o café onde se conheceram e o café que amavam.",
+   "perg": "Is there a café that is special to you?",
+   "pula": "Só leia a frase da capa e entre."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: os lugares da vida do aluno, por mensagens.",
+   "perg": "Where is a place where you feel happy?",
+   "pula": "Três mensagens bastam."
+  },
+  "guia": {
+   "obj": "Ler as seis páginas do guia e juntar duas ideias numa frase com who/which/where.",
+   "perg": "What happened at the Blue Door?",
+   "pula": "Quatro pins bastam."
+  },
+  "regra": {
+   "obj": "O teste: dizer a segunda metade sozinha (we met there → where; we loved it → which).",
+   "perg": "Where or which? Say the second half alone.",
+   "pula": "Corte duas linhas; não pule o teste."
+  },
+  "luzes": {
+   "obj": "Pressão: o aluno, como Ben, diz as pistas na hora. A pista 7 é a virada.",
+   "perg": "Where did you and Rosa really meet?",
+   "pula": "Três pistas bastam, mas faça a 7."
+  },
+  "lucy": {
+   "obj": "Recontar a história inteira para a Lucy, de memória, com relativas.",
+   "perg": "Where did you meet Ben, Rosa?",
+   "pula": "Corte as perguntas de detalhe."
+  },
+  "cv-juri": {
+   "obj": "Júri: três casos da história; veredito com who, which, where. Use a linha PUSH.",
+   "perg": "What is your verdict, and why?",
+   "pula": "Dois casos bastam; faça o último (a regra)."
+  },
+  "roda": {
+   "obj": "A cidade real do aluno, uma página por giro, com relativas.",
+   "perg": "Where is a place where you can eat well?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: três páginas do guia pessoal do aluno, com relativas.",
+   "perg": "Which place in your city tells your story?",
+   "pula": "Uma página basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre lugares e pessoas, com who, which e where.",
+   "perg": "Where is the place where you met your best friend?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e justificar com uma relativa pronta.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Ben e responde sobre a história, com relativas.",
+   "perg": "Where is the café where you met Rosa?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your places, your people.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "who",
+    "which",
+    "that",
+    "where"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CAFÉ",
+     "q": "Is there a café where you like to go?",
+     "fup": "What do you order there?",
+     "st": [
+      "There is a café where …",
+      "It’s the place where …"
+     ],
+     "ex": "There is a café where I go every Saturday."
+    },
+    {
+     "k": "OLD FRIEND",
+     "q": "Who is a friend that you met at school?",
+     "fup": "Where do you see them now?",
+     "st": [
+      "She is the friend who …",
+      "He is a person that …"
+     ],
+     "ex": "Ana is the friend who sat next to me in class."
+    },
+    {
+     "k": "A GIFT",
+     "q": "What is a gift that you still have?",
+     "fup": "Who gave it to you?",
+     "st": [
+      "It’s a … which …",
+      "It’s the gift that …"
+     ],
+     "ex": "It’s a watch which my brother gave me."
+    },
+    {
+     "k": "A SONG",
+     "q": "Is there a song that is special to you?",
+     "fup": "Where did you hear it first?",
+     "st": [
+      "It’s the song we …",
+      "It’s a song that …"
+     ],
+     "ex": "It’s the song we danced to at my sister’s party."
+    },
+    {
+     "k": "YOUR STREET",
+     "q": "What is the street where you live like?",
+     "fup": "Is there a shop that you love?",
+     "st": [
+      "I live on a street where …",
+      "There is a shop which …"
+     ],
+     "ex": "I live on a street where there are a lot of trees."
+    },
+    {
+     "k": "A FIRST",
+     "q": "Where is a place where you did something for the first time?",
+     "fup": "Who was with you?",
+     "st": [
+      "It’s the place where I first …",
+      "I was with a friend who …"
+     ],
+     "ex": "It’s the beach where I first swam in the sea."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "who",
+    "which",
+    "where",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Rosa’s little lie: OK or not OK?",
+     "a": "OK",
+     "b": "Not OK",
+     "fa": [
+      "OK. The Little Fern is the café which they loved."
+     ],
+     "fb": [
+      "Not OK. The Blue Door is the café where they met."
+     ]
+    },
+    {
+     "q": "A first date in a café or in a park?",
+     "a": "A café",
+     "b": "A park",
+     "fa": [
+      "A café. It’s a place where you can talk."
+     ],
+     "fb": [
+      "A park. It’s a place where you can walk."
+     ]
+    },
+    {
+     "q": "A paper guidebook or a map on your phone?",
+     "a": "Paper",
+     "b": "Phone",
+     "fa": [
+      "Paper. It’s a gift which you can keep."
+     ],
+     "fb": [
+      "Phone. It’s a map that never gets lost."
+     ]
+    },
+    {
+     "q": "Live in a big city or a small town?",
+     "a": "Big city",
+     "b": "Small town",
+     "fa": [
+      "A big city, where there is always something new."
+     ],
+     "fb": [
+      "A small town, where people know your name."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Ben now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Ben.",
+   "perguntas": [
+    "Where is the café where you met Rosa?",
+    "What happened to the book which Rosa was reading?",
+    "Who is the sister who is moving to Portland?",
+    "Which café do you and Rosa love?",
+    "Why does Rosa say you met at the Little Fern?",
+    "What is a place in Portland that Lucy has to see?"
+   ],
+   "st": [
+    "It’s the café where …",
+    "She’s the person who …",
+    "It’s a place which …"
+   ],
+   "ex": "The Blue Door is the café where I spilled my coffee on Rosa’s book."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

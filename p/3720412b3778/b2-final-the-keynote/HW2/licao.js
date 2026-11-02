@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Keynote",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3720412b3778/b2-final-the-keynote/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "sound like a confident speaker: hedging (seem to, tend to, it could be argued), discourse markers (actually, mind you, by the way), short answers (so do I, neither have I, I hope so), signposting (moving on, to sum up, what this means is); never are tend, never so after a negative",
   "abrir": "Think of a talk or a meeting you remember. How did the speaker end it?",
   "fecho": "<b>Hedge</b>: <i>seem to, tend to, it could be argued that…</i> <b>Markers</b>: <i>actually, mind you, by the way</i>. <b>Short answers</b> repeat the auxiliary: <i>so do I</i> after a positive, <i>neither have I</i> after a negative. <b>Signposts</b> guide the listener: <i>moving on, to sum up, what this means is…</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a conference talk. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/3720412b3778/b2-final-the-keynote/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The empty stage",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It could be argued that people tend to work better at home.",
-          "img": "https://wolf-labs.pages.dev/p/3720412b3778/b2-final-the-keynote/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Mind you, she designs offices, so she is not neutral.",
-          "img": "https://wolf-labs.pages.dev/p/3720412b3778/b2-final-the-keynote/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "To sum up, what this means is that trust matters.",
-          "img": "https://wolf-labs.pages.dev/p/3720412b3778/b2-final-the-keynote/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -172,7 +172,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3720412b3778/b2-final-the-keynote/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A stage with a microphone",
       "pede": "Look at the picture: a stage with one microphone. Write 2 or 3 sentences as if you were giving the closing talk. Use <b>tend to, it could be argued, mind you</b> or <b>to sum up</b>.",
       "ph": "It could be argued that …",

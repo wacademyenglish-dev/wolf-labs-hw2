@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -136,5 +137,284 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "What does your manager do on Mondays?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "A finance manager describes her team.",
+   "p": "Read it out loud. Answer the questions."
+  },
+  "dialogo": {
+   "t": "Who does what?",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "She works. He doesn’t.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "transforma": {
+   "t": "The client says I. You say she.",
+   "p": "Read the clue. Say the new sentence."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Your teacher answers first. Then you."
+  },
+  "cartao": {
+   "t": "Your client’s process map.",
+   "p": "Person, task, system, problem. Then say it."
+  },
+  "pode": {
+   "t": "Lesson 6: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Present simple na 3ª pessoa (she works, he doesn’t, does it…?); Rachel Kim, da Atlas Motors, explica ao Leo quem faz o quê no time de finanças.",
+  "armadilha": "Brasileiro esquece o -s (“she work”) e usa don’t para todos (“he don’t send”, “the team don’t use”); e põe dois -s: “does he pays”.",
+  "pal": [
+   "she works",
+   "he doesn’t",
+   "the team doesn’t",
+   "Does she …?",
+   "What does he do?",
+   "payroll",
+   "invoices",
+   "It takes … days."
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: entender e explicar quem faz o quê no time do cliente.",
+   "perg": "Who sends the proposals in your team?",
+   "pula": "Faça a pergunta de abertura e vá à cena I."
+  },
+  "conversa": {
+   "obj": "Small talk sobre a semana; depois de cada resposta o aluno pergunta “And you?”.",
+   "perg": "What does your manager do on Mondays?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler em voz alta o e-mail da Rachel e responder pelo sentido; depois achar o padrão.",
+   "perg": "Who does payroll?",
+   "pula": "Leia e responda duas perguntas."
+  },
+  "dialogo": {
+   "obj": "Ouvir a ligação (vozes americanas, pode a 0.75×) e responder quem faz o quê.",
+   "perg": "What does Tom do on Fridays?",
+   "pula": "Ouça uma vez e duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar pares e fixar o -s e o doesn’t na 3ª pessoa.",
+   "perg": "Why ‘doesn’t’ and not ‘don’t’?",
+   "pula": "Três pares e a regra."
+  },
+  "transforma": {
+   "obj": "Passar o que o cliente diz em I para he/she/it, como quem relata ao gerente.",
+   "perg": "How do you say it about her?",
+   "pula": "Quatro frases bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather: A ou B com because; você responde primeiro.",
+   "perg": "Why that one?",
+   "pula": "Uma escolha só."
+  },
+  "cartao": {
+   "obj": "Desenhar o mapa de processo do cliente (pessoa, tarefa, sistema, problema) e explicar em voz alta.",
+   "perg": "Does she use the ERP?",
+   "pula": "Duas pessoas no mapa bastam."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; o resto vai para a lição.",
+   "perg": "Can you explain who does what?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre o time e os clientes reais do aluno, na 3ª pessoa.",
+   "perg": "What does your client do?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas simples de vendedor, com motivo curto.",
+   "perg": "Which one is better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a Rachel Kim e responde sobre o time dela; você é o Leo.",
+   "perg": "Who does the invoices?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your team, your clients.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "he works",
+    "she doesn’t",
+    "Does he …?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR BOSS",
+     "q": "What does your boss do every morning?",
+     "fup": "Does he or she drink coffee?",
+     "st": [
+      "My boss …",
+      "She doesn’t …"
+     ],
+     "ex": "My boss reads emails. She doesn’t drink coffee."
+    },
+    {
+     "k": "A CLIENT",
+     "q": "What does your best client do?",
+     "fup": "Does the company use your service every month?",
+     "st": [
+      "My client …",
+      "The company …"
+     ],
+     "ex": "My client sells cars. The company uses my service every month."
+    },
+    {
+     "k": "A COLLEAGUE",
+     "q": "Who helps you at work? What does he or she do?",
+     "fup": "Does he work on Fridays?",
+     "st": [
+      "… helps me. He / She …"
+     ],
+     "ex": "Rita helps me. She sends the invoices."
+    },
+    {
+     "k": "THE SYSTEM",
+     "q": "What system does your team use?",
+     "fup": "Does it work well?",
+     "st": [
+      "We use …",
+      "It doesn’t …"
+     ],
+     "ex": "We use Excel. It doesn’t work well with big files."
+    },
+    {
+     "k": "A PROBLEM",
+     "q": "What problem does your client have?",
+     "fup": "How long does it take?",
+     "st": [
+      "The problem is …",
+      "It takes … days."
+     ],
+     "ex": "The problem is the payroll. It takes five days."
+    },
+    {
+     "k": "FRIDAYS",
+     "q": "What does your team do on Fridays?",
+     "fup": "Does anybody work late?",
+     "st": [
+      "On Fridays, the team …"
+     ],
+     "ex": "On Fridays, the team has lunch together. Nobody works late."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "it doesn’t",
+    "the client"
+   ],
+   "rodadas": [
+    {
+     "q": "First meeting: talk about your service or ask about the client’s team?",
+     "a": "My service",
+     "b": "Their team",
+     "fa": [
+      "My service. The client wants to know it."
+     ],
+     "fb": [
+      "Their team. I need to know who does what."
+     ]
+    },
+    {
+     "q": "A big client or many small clients?",
+     "a": "Big client",
+     "b": "Small clients",
+     "fa": [
+      "A big client. It pays more."
+     ],
+     "fb": [
+      "Many small ones. It’s safer."
+     ]
+    },
+    {
+     "q": "Talk to the manager or to the person who does the work?",
+     "a": "Manager",
+     "b": "The worker",
+     "fa": [
+      "The manager. She decides."
+     ],
+     "fb": [
+      "The worker. He knows the problem."
+     ]
+    },
+    {
+     "q": "Send an email or call the client?",
+     "a": "Email",
+     "b": "Call",
+     "fa": [
+      "An email. The client reads it later."
+     ],
+     "fb": [
+      "A call. It’s faster."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Rachel Kim now.",
+   "p": "Your teacher is Leo, the seller.",
+   "aluno": "Listen to Leo’s question. Answer as Rachel, the finance manager at Atlas Motors.",
+   "perguntas": [
+    "Who does the payroll?",
+    "Does she use a system?",
+    "What does Tom do?",
+    "Does the team work on weekends?",
+    "How long does the close take?",
+    "What doesn’t work well?"
+   ],
+   "st": [
+    "… does the payroll.",
+    "He / She uses …",
+    "It takes … days."
+   ],
+   "ex": "Ana does the payroll. She uses Excel. It takes five days, and it doesn’t work well."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "A1 Review: The New Apartment",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ce92ac386f29/a1-review-the-new-apartment/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 4 review: there is / there are and Is there...?; some / any; next to, in front of, between; at / in / on; how many / how much",
   "abrir": "What is there on your desk right now?",
   "fecho": "<b>There is</b> + one thing, <b>there are</b> + many: <i>There are two chairs.</i> <b>Any</b> in no and questions: <i>There isn't any milk.</i> Places: <b>next to · in front of · between</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo visit a flat for rent. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/ce92ac386f29/a1-review-the-new-apartment/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A balcony at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "There is a big sofa in the living room.",
-          "img": "https://wolf-labs.pages.dev/p/ce92ac386f29/a1-review-the-new-apartment/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The balcony is next to the living room.",
-          "img": "https://wolf-labs.pages.dev/p/ce92ac386f29/a1-review-the-new-apartment/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "There are some chairs on the balcony.",
-          "img": "https://wolf-labs.pages.dev/p/ce92ac386f29/a1-review-the-new-apartment/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ce92ac386f29/a1-review-the-new-apartment/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A balcony with a table and chairs",
       "pede": "Look at the picture: a balcony at night. Write 2 or 3 sentences about it. Use <b>there is / there are</b> and <b>next to / in front of / between</b>.",
       "ph": "There is a table on the balcony. …",

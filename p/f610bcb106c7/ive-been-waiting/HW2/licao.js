@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I've Been Waiting",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f610bcb106c7/ive-been-waiting/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "present perfect continuous: have / has been + -ing for something that started in the past and is still going; for + a length of time, since + a starting point; How long have you been ...?; state verbs (know, have, want) stay simple",
   "abrir": "What is the longest you have ever waited at an airport or a station?",
   "fecho": "<b>have / has been + -ing</b> for something still going: <i>We've been waiting since nine.</i> <b>For</b> + a length (<i>for four hours</i>), <b>since</b> + the start (<i>since midnight</i>). Know, have and want skip the -ing: <i>I've known her for years.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a departure gate, late at night. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f610bcb106c7/ive-been-waiting/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A paper cup and a suitcase at the gate",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We've been waiting at this gate since nine o'clock.",
-          "img": "https://wolf-labs.pages.dev/p/f610bcb106c7/ive-been-waiting/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The man has been sleeping on his suitcase for hours.",
-          "img": "https://wolf-labs.pages.dev/p/f610bcb106c7/ive-been-waiting/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "How long have you been sitting in this lounge?",
-          "img": "https://wolf-labs.pages.dev/p/f610bcb106c7/ive-been-waiting/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -170,7 +170,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f610bcb106c7/ive-been-waiting/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A paper cup of coffee beside a suitcase",
       "pede": "Look at the picture: a paper cup of coffee next to a suitcase in a quiet airport lounge. Write 2 or 3 sentences: how long this person has been waiting, and what they have been doing. Use <b>have been + -ing</b>, <b>for</b> and <b>since</b>.",
       "ph": "The traveler has been waiting since …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Why Didn't You Start in Greece?",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e09ba49aa3d4/why-didnt-you-start-in-greece/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "negative questions in the past: Why didn't you + plain verb? / Didn't you + verb? Never 'Why you didn't', never 'didn't you started'; ask the question, then answer it",
   "abrir": "Is there something you wanted to do last year, but didn't? Why not?",
   "fecho": "<b>Why didn't you + plain verb?</b> <i>Why didn't you start at home?</i> <b>Didn't you + verb?</b> <i>Didn't you like it?</i> The verb stays plain after <i>didn't</i> (no -ed), and <i>didn't</i> comes before <i>you</i>. Ask the question yourself, then answer it: <i>Because …</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks Leo about his new coffee shop. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e09ba49aa3d4/why-didnt-you-start-in-greece/img/live-prox.jpg",
+      "img": "../img/live-prox.jpg",
       "leg": "A desk with a calendar, headphones and a notebook",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Why didn't you start the business in your hometown?",
-          "img": "https://wolf-labs.pages.dev/p/e09ba49aa3d4/why-didnt-you-start-in-greece/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I didn't start at home because the rent was too high.",
-          "img": "https://wolf-labs.pages.dev/p/e09ba49aa3d4/why-didnt-you-start-in-greece/img/live-prox.jpg",
+          "img": "../img/live-prox.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Why didn't you tell me before? Because I was afraid.",
-          "img": "https://wolf-labs.pages.dev/p/e09ba49aa3d4/why-didnt-you-start-in-greece/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e09ba49aa3d4/why-didnt-you-start-in-greece/img/live-prox.jpg",
+      "img": "../img/live-prox.jpg",
       "leg": "A desk with a calendar, a notebook and headphones",
       "pede": "Look at the picture: a desk with a calendar, a notebook and headphones. Think of a decision you didn't make. Write 2 or 3 sentences: ask yourself a <b>Why didn't I …?</b> question, then answer it.",
       "ph": "Why didn't I …? Because …",

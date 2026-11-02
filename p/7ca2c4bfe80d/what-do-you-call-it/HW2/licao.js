@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What Do You Call It?",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/7ca2c4bfe80d/what-do-you-call-it/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "explaining a word you forgot: a thing you use to + verb · a place where + clause · a person who + verb; What do you call ...?",
   "abrir": "Which English word do you always forget?",
   "fecho": "Forgot a word? Explain it. A thing: <b>a thing you use to</b> + verb (<i>a thing you use to open a bottle</i>). A place: <b>a place where</b> + clause (<i>a place where you buy bread</i>). A person: <b>a person who</b> + verb (<i>a person who fixes cars</i>). Ask: <i>What do you call …?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about forgotten words. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/7ca2c4bfe80d/what-do-you-call-it/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A desk with headphones, a calendar and a notebook",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It's a place where you buy bread.",
-          "img": "https://wolf-labs.pages.dev/p/7ca2c4bfe80d/what-do-you-call-it/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It's a person who fixes the pipes in your kitchen.",
-          "img": "https://wolf-labs.pages.dev/p/7ca2c4bfe80d/what-do-you-call-it/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It's a thing you use to join papers together.",
-          "img": "https://wolf-labs.pages.dev/p/7ca2c4bfe80d/what-do-you-call-it/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/7ca2c4bfe80d/what-do-you-call-it/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A desk with headphones, a calendar and a notebook",
       "pede": "Look at the picture: a desk with headphones, a calendar and a notebook. Choose two things and explain each one to someone who doesn't know the word. Write 2 or 3 sentences. Use <b>a thing you use to</b>, <b>a place where</b> or <b>a person who</b>.",
       "ph": "It's a thing you use to …",

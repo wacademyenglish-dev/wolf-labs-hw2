@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · If I Hadn’t Missed It · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B2 · Unit 3 · Conditionals: what didn’t happen</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>If I Hadn’t Missed It · B2 Unit 3 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new B2 lesson on the third conditional (If I hadn’t missed the train, I wouldn’t have met her) and mixed conditionals (past → now: I wouldn’t be here now; now → past: If I were braver, I would have…).</p><p style="margin:0 0 6px"><b>The story:</b> Ten years ago Lena (invented) missed the 7:42 train by eight seconds, sat next to Inês, an architect, at the station café, heard about a job, moved to Porto and became an architect who lives by the sea.</p><p style="margin:0 0 6px"><b>About 37 min:</b> I · Eight Seconds (10) · II · The Council Vote (8) · III · The Other Life (9) · IV · Your Sliding Doors (10).</p><p style="margin:0"><b>Open with:</b> “Can you think of a small accident that changed something in your life?”</p></div><!--/prep-->
+    <p>A “sliding doors” story makes the chain natural. The student needs two things: the form (had + past participle / would have + past participle) and the time logic (past result or present result). The conversation is personal: let the student tell their own chain.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>If + had + past participle · would have + past participle (past result) · would + verb (present result: mixed) · If I were…, I would have… (now → past) · negatives: hadn’t, wouldn’t have · the chain: one if leads to another</p>
+    <h4>EIGHT SECONDS</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>THE OTHER LIFE</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>YOUR SLIDING DOORS</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>If I wouldn’t have missed (If I hadn’t missed)</i>, <i>I would met (I would have met)</i>, <i>If I didn’t miss it, I wouldn’t meet her (third: hadn’t missed / wouldn’t have met)</i>, <i>I wouldn’t have been here now (mixed: I wouldn’t be here now)</i>, <i>If I had knew (had known)</i>. B2: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE COUNCIL VOTE (II) AND THE SURPRISE QUESTION</h4>
+    <p>Lena’s town has three proposals (close the station café, hire only through public ads, phone-free tables). Your student votes Yes, No or Propose a change, and says why with third and mixed conditionals (If the café hadn’t been there, Lena wouldn’t be…). There is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Eight Seconds.</li>
+      <li><b>Focus</b>: III · The Other Life.</li>
+      <li><b>Out loud</b>: II · The Council Vote and IV · Your Sliding Doors.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* IF I HADN'T MISSED IT (Main B2 · Unit 3) · pergunta-surpresa · 28/10/2026 · third and mixed conditionals */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'leitura', tipo: 'Would you rather', q: 'Would you rather know your future, or be surprised by it?',
+    opc: ['Know it', 'Be surprised'], st: ['I’d rather …, because if I had known …', 'If I knew …, I would …'],
+    ex: 'Be surprised. If I had known everything ten years ago, I wouldn’t have tried half the things I did.', push: 'Not even next year’s salary? Yes or no?' },
+  { cena: 'cv-conselho', tipo: 'Opinion', q: 'Do you believe in luck, or do we make our own chances?',
+    opc: ['Luck', 'We make them', 'Both'], st: ['If Lena hadn’t …, …', 'I think …, because …'],
+    ex: 'Both. If Lena hadn’t talked to Inês, the missed train wouldn’t have changed anything. Luck opens the door; you walk through it.', push: 'Tell me about the luckiest day of your life.' },
+  { cena: 'transforma', tipo: 'What if', q: 'What if you had been born in another country? Where would you live now?',
+    opc: ['Somewhere cold', 'By the sea', 'In a big city'], st: ['If I had been born in …, I would … now.', 'I wouldn’t be … now.'],
+    ex: 'By the sea. If I had been born in Portugal, I would live in Porto like Lena, and maybe I wouldn’t be learning English now!', push: 'Would you still have the same friends?' },
+  { cena: 'conversa', tipo: 'And you?', q: 'Are you usually early, on time, or late?',
+    opc: ['Early', 'On time', 'Late'], st: ['I’m usually …', 'If I hadn’t been late once, I wouldn’t have …'],
+    ex: 'Late, I’m afraid. Last month, if I hadn’t been late, I wouldn’t have met my neighbour on the bus.', push: 'What’s the latest you have ever been? How many minutes?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* IF I HADN'T MISSED IT (Main B2 · Unit 3) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A votação do conselho entra no lugar de "II · The Chain" (tocar os seis fatos em ordem: prática controlada;
+   a corrente continua na III · The Other Life). Três propostas na cidade da Lena; o aluno vota Yes / Propose a change / No.
+   A gramática da aula (third e mixed conditional) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'conselho', troca: 'ordem', est: 'o', min: 8, img: 'capa', rot: 'The Council Vote', t: 'Three proposals. Your vote.',
+    p: 'Read each proposal for Lena’s town. Vote, or propose a change. Say why with third and mixed conditionals.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The café', sit: 'The station wants to close the small café on platform 2 and build a bigger platform for more trains.',
+        q: 'Close the station café?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['If the café hadn’t been there, Lena wouldn’t have …', 'If they close it, people won’t …', 'I’d propose …'],
+        ex: 'No. If the café hadn’t been there, Lena wouldn’t have met Inês, and she wouldn’t be an architect now. Small places like that change lives.',
+        push: 'The new platform means two thousand more passengers a day. Still no?' },
+      { tag: 'The office', sit: 'Lena got her job because Inês told her about it. Now the office wants to hire only through public ads: no more tips from friends.',
+        q: 'Only public ads from now on?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['If Inês hadn’t told her, Lena would never have …', 'If they had used ads, …', 'It would be fairer if …'],
+        ex: 'Propose a change: tips are fine, but everyone gets an interview. If Inês hadn’t told her, Lena would never have applied, and the office would have lost a great architect.',
+        push: 'A friend gets the job you wanted, thanks to a tip. Fair or not?' },
+      { tag: 'The phones', sit: 'The town loved Lena’s story. Now they want phone-free tables in every café, so strangers talk to each other.',
+        q: 'Phone-free tables in every café?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['If Lena had been on her phone, she wouldn’t have …', 'If I were …, I would …', 'I’d vote yes / no, because …'],
+        ex: 'Propose a change: one phone-free table per café, not all of them. If Lena had been on her phone, she wouldn’t have talked to Inês. But I need my phone for work.',
+        push: 'Would YOU sit at that table, next to a stranger, tomorrow morning?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Eight seconds. Lena tells her story.",
+   "p": "Read it out loud. Then look closer."
+  },
+  "cv-conselho": {
+   "t": "Three proposals for Lena’s town.",
+   "p": "Vote, or change it. Say why with if … had."
+  },
+  "transforma": {
+   "t": "What if it hadn’t happened?",
+   "p": "Read the fact and clue. Say the conditional."
+  },
+  "conversa": {
+   "t": "Small moments that changed everything.",
+   "p": "Answer. Then ask back: “And you?”"
+  }
+ },
+ "prep": {
+  "obj": "Terceira condicional (If I hadn’t missed the train, I wouldn’t have met her) e mistas (I wouldn’t be here now): Lena perdeu o trem das 7:42 por oito segundos e virou arquiteta no Porto.",
+  "armadilha": "O brasileiro diz “If I wouldn’t have missed” (calco de “se eu não tivesse”), “I would met”, “If I didn’t miss it, I wouldn’t meet her” e “I wouldn’t have been here now” na mista.",
+  "pal": [
+   "if I hadn’t…",
+   "I would have…",
+   "I wouldn’t be…now",
+   "if I were…",
+   "sliding doors",
+   "turning point",
+   "by eight seconds",
+   "by chance"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: oito segundos que mudaram a vida da Lena.",
+   "perg": "Can you think of a small accident that changed something?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Ler a história da Lena e achar o padrão da terceira condicional e da mista.",
+   "perg": "What would have happened if she hadn’t missed the train?",
+   "pula": "Leia e pule o Look closer se precisar."
+  },
+  "cv-conselho": {
+   "obj": "Votar três propostas para a cidade da Lena com condicionais (café, vagas, mesas sem celular).",
+   "perg": "If the café hadn’t been there, where would Lena be?",
+   "pula": "Duas propostas bastam, com o PUSH."
+  },
+  "transforma": {
+   "obj": "Transformar fatos em condicionais: passado → passado ou passado → agora.",
+   "perg": "Is the result in the past or now?",
+   "pula": "Não corte: é a prática. Quatro frases bastam."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal: os momentos “sliding doors” do aluno, com “And you?” de volta.",
+   "perg": "What small moment changed your life?",
+   "pula": "Duas perguntas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta sobre escolhas e acasos, com terceira condicional e mista.",
+   "perg": "What would you be doing now if you had chosen differently?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre acaso, escolha e arrependimento, com condicionais.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Lena e conta a corrente de “se” da vida dela.",
+   "perg": "Lena, what if you had caught the 7:42?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "The other lives you didn’t live.",
+   "p": "Pick a card. Follow the chain of ifs.",
+   "palavras": [
+    "if I hadn’t…",
+    "I would have…",
+    "I wouldn’t be…",
+    "if I were…"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CAREER",
+     "q": "How did you end up in your job or course?",
+     "fup": "What would you be doing if you hadn’t?",
+     "st": [
+      "If I hadn’t …, I would …",
+      "I’d probably be … now."
+     ],
+     "ex": "If I hadn’t failed my engineering exam, I’d probably be building bridges now."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Why do you live where you live?",
+     "fup": "Where would you be otherwise?",
+     "st": [
+      "If my parents hadn’t …, I wouldn’t be …"
+     ],
+     "ex": "If my parents hadn’t moved for work, I wouldn’t be living by the sea."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "How did you meet your best friend?",
+     "fup": "What if that day had been different?",
+     "st": [
+      "If I hadn’t gone to …, we would never have …"
+     ],
+     "ex": "If I hadn’t gone to that boring party, we would never have met."
+    },
+    {
+     "k": "ENGLISH",
+     "q": "Why did you start learning English?",
+     "fup": "Would your life be different without it?",
+     "st": [
+      "If I hadn’t started …, I wouldn’t …"
+     ],
+     "ex": "If I hadn’t started English, I wouldn’t have my current job."
+    },
+    {
+     "k": "BRAVERY",
+     "q": "What would you have done if you were braver?",
+     "fup": "Is it too late now?",
+     "st": [
+      "If I were braver, I would have …"
+     ],
+     "ex": "If I were braver, I would have studied music instead of law."
+    },
+    {
+     "k": "A LUCKY ESCAPE",
+     "q": "Have you ever been lucky because you were late?",
+     "fup": "What would have happened?",
+     "st": [
+      "If I had been on time, I would have …"
+     ],
+     "ex": "If I had been on time, I would have been stuck in that huge traffic jam."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "if … had",
+    "would have",
+    "The thing is, …",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Is life decided by chance or by choices?",
+     "a": "Chance",
+     "b": "Choices",
+     "fa": [
+      "Chance. If Lena had run faster, she would have caught the train.",
+      "Eight seconds decided everything."
+     ],
+     "fb": [
+      "Choices. She chose to talk to Inês.",
+      "If she hadn’t, the missed train wouldn’t have mattered."
+     ]
+    },
+    {
+     "q": "Should we think about the lives we didn’t live?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. If I had never thought about it, I wouldn’t know what I want now."
+     ],
+     "fb": [
+      "No. The thing is, “if I had…” changes nothing.",
+      "It only makes you sad."
+     ]
+    },
+    {
+     "q": "Talk to strangers in a café, or keep to yourself?",
+     "a": "Talk",
+     "b": "Keep to yourself",
+     "fa": [
+      "Talk. If Lena hadn’t talked to Inês, she wouldn’t be an architect today."
+     ],
+     "fb": [
+      "Keep to yourself. For every Inês, there are ten people who just want quiet."
+     ]
+    },
+    {
+     "q": "Better to regret what you did, or what you didn’t do?",
+     "a": "What I did",
+     "b": "What I didn’t do",
+     "fa": [
+      "What I did. At least I would have learned something.",
+      "Action teaches."
+     ],
+     "fb": [
+      "What I didn’t do. If I had tried, I would know.",
+      "Not knowing is worse."
+     ]
+    }
+   ],
+   "fim": "Four rounds. If you hadn’t argued, you wouldn’t have practiced this much."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Lena now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Lena, ten years later.",
+   "perguntas": [
+    "What would have happened if you had caught the 7:42?",
+    "If you hadn’t sat next to Inês, where would you be now?",
+    "Would you be an architect if you hadn’t moved to Porto?",
+    "Do you ever think about your other life?",
+    "If you were in that café again, would you do the same?",
+    "What advice would you have given yourself ten years ago?"
+   ],
+   "st": [
+    "If I had caught it, I would have …",
+    "I wouldn’t be … now.",
+    "If I hadn’t …"
+   ],
+   "ex": "If I had caught the 7:42, I would never have met Inês, and I wouldn’t be living by the sea."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a teacher in a perfect town. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/1b3d8d88bf19/pull-the-lever/img/live-bairro.webp",
+      "img": "../img/live-bairro.webp",
       "leg": "A perfect little town at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -100,7 +100,7 @@ window.HW2 = {
       "frases": [
         {
           "t": "Chidi has to teach a class.",
-          "img": "https://wolf-labs.pages.dev/p/1b3d8d88bf19/pull-the-lever/img/live-bairro.webp",
+          "img": "../img/live-bairro.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -152,7 +152,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/1b3d8d88bf19/pull-the-lever/img/live-bairro.webp",
+      "img": "../img/live-bairro.webp",
       "leg": "A perfect little town",
       "pede": "Look at the picture: a perfect town. Write 2 or 3 sentences: one thing you <b>have to</b> do, one thing you <b>don't have to</b> do, and one thing you <b>had to</b> do yesterday.",
       "ph": "I have to … I don't have to … Yesterday I had to …",

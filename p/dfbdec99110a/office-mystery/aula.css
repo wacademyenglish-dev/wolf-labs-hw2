@@ -1,0 +1,78 @@
+/* ============================================================
+   THE OFFICE MYSTERY · THE PROOF METER · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: perícia à noite — azul de
+   planta quase preto; a planta do escritório em linhas de projeto; os
+   marcadores amarelos numerados; o medidor de prova em meia-lua com
+   três faixas (vermelho, âmbar, verde) e um ponteiro.
+   ============================================================ */
+:root{
+  --noite:#05080d; --noite-rgb:5,8,13; --tinta:#e6ecf3;
+  --t1:#eef2f8; --t2:#c2cad6; --t2-rgb:194,202,214; --t3:#8590a2;
+  --ac:#f5c542; --ac2:#fbe08f; --bt:#4aa3e8; --bt2:#a6d2ff; --plano:#5fa8e8;
+  --vidro:rgba(230,236,243,.05); --vidro2:rgba(230,236,243,.085); --vidro3:rgba(230,236,243,.12);
+  --fio:rgba(216,226,240,.12); --fio2:rgba(216,226,240,.22); --luz:rgba(230,236,243,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a2104}
+.btn.cheio{color:#2a2104}
+.capa{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.versao.grande-v{min-height:58px;font:800 clamp(14px,1.1vw,18px) var(--mono);letter-spacing:.05em;text-align:center}
+.versao.grande-f{min-height:70px;font:700 clamp(18px,1.5vw,25px) var(--disp);text-align:center}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(17px,1.35vw,23px)/1.4 var(--disp)}
+.pede.centro{max-width:900px;margin:0 auto 12px;text-align:center}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .chefe-b{border-color:var(--ac)}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.ouve-c{display:grid;gap:8px;padding:10px 14px;border-radius:var(--r2)} .ouve-c .transcricao{margin:0}
+.pista{margin:0;font:600 italic 15px var(--disp);color:var(--t3)}
+.dois-f{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:1000px;margin:0 auto 12px;width:100%}
+.claim{display:grid;gap:10px;padding:14px 18px;border-radius:var(--r2)} .claim small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .claim .cl-t{margin:0;font:700 clamp(20px,1.6vw,27px)/1.35 var(--disp)} .claim .dois-f{margin:0} .claim .btn{justify-self:start}
+
+/* o medidor */
+.medidor{display:grid;justify-items:center;gap:4px;width:min(100%,420px);margin:0 auto}
+.medidor svg{width:100%;height:auto;overflow:visible}
+.medidor path{fill:none;stroke-width:16;stroke-linecap:round}
+.f-x{stroke:#ff6e6e;opacity:.55} .f-m{stroke:#f0b866;opacity:.55} .f-v{stroke:#8fd9a2;opacity:.55}
+.ponteiro{transform-origin:120px 120px;transition:transform .7s cubic-bezier(.3,1.5,.5,1)} .ponteiro path{stroke-width:5;filter:drop-shadow(0 0 6px currentColor)}
+.m-rot{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%} .m-rot span{text-align:center;font:800 11px var(--mono);letter-spacing:.1em;color:var(--t3)} .m-rot span.on{color:var(--gc)}
+.medidor.mini{width:min(100%,300px)}
+.graus{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.grau-b{display:grid;gap:4px;padding:14px 10px;border-radius:14px;border:1px solid var(--fio2);background:#0b1018;color:var(--t1);cursor:pointer;text-align:center}
+.grau-b b{font:800 clamp(14px,1.1vw,18px) var(--mono);letter-spacing:.06em;color:var(--gc)} .grau-b small{font:600 13px var(--disp);color:var(--t3)}
+.grau-b.certo{border-color:var(--gc);background:color-mix(in srgb,var(--gc) 14%,#0b1018)} .grau-b.errado{border-color:var(--erro);animation:treme .35s}
+
+/* o registro da porta */
+.registro{display:grid;gap:6px;padding:14px 16px;border-radius:var(--r2);font-family:var(--mono)} .registro small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.r-linha{display:grid;grid-template-columns:100px 1fr;gap:12px;padding:10px 12px;border-radius:10px;background:#0a0f16;border:1px solid transparent;font:600 clamp(14px,1.05vw,18px)/1.4 var(--disp);color:var(--t2)}
+.r-linha b{font:800 clamp(14px,1.05vw,17px) var(--mono);color:var(--plano)} .r-linha.on{border-color:var(--ac);color:var(--t1)} .r-linha.on b{color:var(--ac2)}
+
+/* a planta */
+.planta{position:relative;width:100%;aspect-ratio:16/10;border-radius:16px;background:#071019;border:1px solid #1b2c40;background-image:linear-gradient(rgba(95,168,232,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(95,168,232,.06) 1px,transparent 1px);background-size:24px 24px}
+.planta.mini{width:min(100%,520px)}
+.sala{position:absolute;border:2px solid rgba(95,168,232,.45);border-radius:4px} .sala small{position:absolute;left:8px;top:6px;font:800 10px var(--mono);letter-spacing:.14em;color:rgba(95,168,232,.8)}
+.retangulo{position:absolute;width:9%;height:9%;border:2px dashed rgba(251,224,143,.6);border-radius:2px}
+.marcador{position:absolute;width:38px;height:34px;margin:-17px 0 0 -19px;padding:0;border:0;cursor:pointer;background:var(--gc,var(--ac));clip-path:polygon(50% 0,100% 100%,0 100%);color:#1a1404;font:800 14px var(--mono);display:grid;place-items:end center;padding-bottom:3px;transition:transform .2s}
+.marcador.on{transform:scale(1.3);filter:drop-shadow(0 0 10px var(--gc,var(--ac)))} .marcador.feita{color:#0a0f0a}
+.planta.mini .marcador{width:28px;height:26px;margin:-13px 0 0 -14px;font-size:11px;pointer-events:none}
+
+/* o chefe */
+.pontos{display:grid;gap:6px} .ponto{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:center;padding:10px 14px;border-radius:12px;background:#0a0f16;border:1px solid var(--fio);font:600 clamp(15px,1.15vw,19px) var(--disp);color:var(--t3)}
+.ponto b{font:800 14px var(--mono);color:var(--t3)} .ponto.on{border-color:var(--ac);color:var(--t1)} .ponto.on b{color:var(--ac2)} .ponto.feito{color:var(--t2)} .ponto.feito b{color:var(--ok)}
+.carta-g{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2);border-color:var(--gc)} .carta-g small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--gc)} .carta-g b{font:600 clamp(18px,1.4vw,24px)/1.4 var(--disp)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} }
+@media (max-width:620px){ .dois-f,.graus{grid-template-columns:1fr} .r-linha{grid-template-columns:1fr;gap:2px} .marcador{width:30px;height:28px;margin:-14px 0 0 -15px;font-size:12px} .sala small{font-size:8px} }

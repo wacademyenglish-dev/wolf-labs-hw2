@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Phone Shop · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A2 · Unit 5 Review · The Phone Shop</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Phone Shop · A2 Unit 5 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 5 (Comparing and describing). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student works in a phone shop (the phones are invented: Nova 2, Nova 5, Pebble). You are three customers: a photographer, a grandfather and a student.</p><p style="margin:0 0 6px"><b>About 47 min:</b> I · The Ladder (8) · II · The Phone Shop (14) · III · One Week Later (6) · IV · Find the Mistakes (7) · V · The Hot Seat (8) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Climb the ladder. Step one is easy.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>comparatives · superlatives · as … as, the same as, different from · -ed × -ing adjectives · adverbs of manner · adjective + preposition + -ing</p>
+    <h4>THE LADDER</h4>
+    <p>Six steps from easy to hard. A good answer: tap <b>Go up</b>. Not yet: <b>Try again</b> on the same step.</p>
+    <h4>THE PHONE SHOP</h4>
+    <p>You are each customer. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then the student recommends a phone, comparing. The best match: photographer → Nova 5, grandfather → Pebble, student → Nova 2. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>more fast</i>, <i>the most cheap</i>, <i>as good than</i>, <i>I’m boring (for bored)</i>, <i>it works good</i>, <i>good in cook</i>. A2: one correction per answer is enough.</p>
+    <!--conversa--><h4>ONE WEEK LATER (III) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the shop, your student bets on what happened to each customer one week later. Let them choose and say why with comparatives, as … as and -ed / -ing; wait five seconds in silence, use the PUSH line (only you see it), and only then tap “Check what happened”. Being wrong is part of the fun. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Ladder, IV · Find the Mistakes and VI · I Can.</li>
+      <li><b>Out loud</b>: II · The Phone Shop, III · One Week Later and V · The Hot Seat.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW A2 · UNIT 5 · THE PHONE SHOP · pergunta-surpresa · 27/10/2026 · comparativo / superlativo · as … as · -ed × -ing · good at */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'escada', tipo: 'Would you rather', q: 'Would you rather have the best camera or the longest battery?',
+    opc: ['The best camera', 'The longest battery'], st: ['I’d rather have …, because …', 'For me, … is more important than …'],
+    ex: 'The longest battery. I’m bad at remembering my charger!', push: 'Your best friend’s wedding is tomorrow. Same answer?' },
+  { cena: 'erros', tipo: 'And you?', q: 'Which app on your phone is the most boring, and which is the most exciting?',
+    opc: ['Work apps are boring', 'Games are exciting', 'They’re all the same'], st: ['The most boring is …', '… is more exciting than …'],
+    ex: 'The most boring is my bank app. The most exciting is a language app, of course!', push: 'Delete one app now. Which one?' },
+  { cena: 'cadeira', tipo: 'Opinion', q: 'Are phones today better than phones ten years ago, or just more expensive?',
+    opc: ['Much better', 'Just more expensive', 'Both!'], st: ['Today’s phones are …er than …', 'They aren’t as … as …'],
+    ex: 'Both! They’re faster and better, but they aren’t as strong as my old phone. It never broke.', push: 'How much is too much for a phone? Say a number.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW A2 · UNIT 5 · THE PHONE SHOP · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Revisão curta (41 min, sem cena extra): uma aposta ENTRA depois da missão (II), no meio (+6 min).
+   Uma semana depois: o que aconteceu com cada cliente e o celular que o aluno recomendou? O aluno aposta,
+   defende com comparativo / superlativo / as … as / -ed × -ing, e abre "What happened". */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'aposta', apos: 'missao', est: 'o', min: 6, img: 'capa', rot: 'One Week Later', t: 'Your customers come back. Make a bet.',
+    p: 'Bet on what happened. Say why with better, the best, as … as, bored / boring. Then check.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The grandfather', sit: 'He bought the Pebble. One week later, he is back at the counter.',
+        q: 'Why is he back?', opc: ['He loves it', 'It’s too difficult', 'He’s bored of it'],
+        st: ['I bet he …, because …', 'It’s easier / bigger than …', 'He’s confused / excited …'],
+        ex: 'He loves it. The Pebble is easier than his old phone, so he wants one for a friend.',
+        push: 'Would you buy the Pebble for someone in your family? Who?',
+        revela: 'He loves it! He calls his grandkids more often than before, and he wants the same phone for his best friend.', rot_revela: 'Check what happened' },
+      { tag: 'The photographer', sit: 'She took the Nova 5 to a photo contest in the city.',
+        q: 'What happened?', opc: ['She won', 'She came second', 'She lost'],
+        st: ['I bet she …', 'Her camera is the best …', 'It isn’t as good as …'],
+        ex: 'She won! The Nova 5 has the best camera in the shop, and she’s very good at photos.',
+        push: 'Is a better phone a better photographer? Yes or no, and why?',
+        revela: 'She came second. The winner took the photo with an older, cheaper phone. She was surprised, not annoyed!', rot_revela: 'Check what happened' },
+      { tag: 'The student', sit: 'He played games on the Nova 2 all weekend, for hours and hours.',
+        q: 'How did the phone do?', opc: ['Perfect', 'It got very hot', 'The battery was bad'],
+        st: ['I bet it …', 'It’s faster than …, but …', 'The battery isn’t as … as …'],
+        ex: 'The battery was bad. It’s faster than his laptop, but it’s the cheapest, so the battery is worse.',
+        push: 'And your phone: what is the worst thing about it?',
+        revela: 'It worked well and fast, but the battery wasn’t as good as he thought: he charged it three times a day.', rot_revela: 'Check what happened' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "escada": {
+   "t": "Climb from easy to hard.",
+   "p": "One step at a time. Good answers go up."
+  },
+  "missao": {
+   "t": "Three customers. What do they need?",
+   "p": "Five questions each. Then recommend a phone."
+  },
+  "cv-aposta": {
+   "t": "One week later. Make a bet.",
+   "p": "Bet on what happened. Say why. Then check."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say it right. Then tap."
+  },
+  "cadeira": {
+   "t": "Now YOU ask the questions.",
+   "p": "Your teacher is in the hot seat. Ask, react."
+  },
+  "pode": {
+   "t": "Unit 5: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 5 (comparar e descrever): comparativo, superlativo, as … as, -ed x -ing, advérbios de modo; o aluno vende celulares (Nova 2, Nova 5, Pebble).",
+  "armadilha": "Comparar como em português: more fast, the most cheap, as good than; I’m boring (por bored), it works good e good in cook (por good at cooking).",
+  "pal": [
+   "faster than",
+   "the best",
+   "as … as",
+   "different from",
+   "bored / boring",
+   "well",
+   "good at …ing",
+   "battery",
+   "camera"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: uma loja de celulares e três clientes para ajudar.",
+   "perg": "Climb the ladder. Step one is easy.",
+   "pula": "Só leia o título e abra a primeira porta."
+  },
+  "escada": {
+   "obj": "Seis degraus do fácil ao difícil com tudo da unidade.",
+   "perg": "Which is faster: a bike or a bus?",
+   "pula": "Quatro degraus bastam."
+  },
+  "missao": {
+   "obj": "O aluno entrevista três clientes e recomenda um celular comparando (fotógrafo → Nova 5, avô → Pebble, estudante → Nova 2).",
+   "perg": "Which phone is the best for you?",
+   "pula": "Dois clientes bastam."
+  },
+  "cv-aposta": {
+   "obj": "Aposta: o que aconteceu com cada cliente uma semana depois; só depois conferir.",
+   "perg": "Was he happy or bored with the phone?",
+   "pula": "Duas apostas bastam."
+  },
+  "erros": {
+   "obj": "Achar os erros num bilhete, dizer a forma certa antes de tocar e ler tudo certo no fim.",
+   "perg": "What is wrong in this line?",
+   "pula": "Três erros bastam."
+  },
+  "cadeira": {
+   "obj": "O aluno pergunta; o professor responde como ele mesmo, curto. Reagir e fazer uma pergunta a mais.",
+   "perg": "What are you good at?",
+   "pula": "Três cartas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can” da Unidade 5; o que ficar aberto vai para a lição.",
+   "perg": "Can you compare two phones?",
+   "pula": "Leia rápido, sem exemplos. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas comparando e descrevendo coisas da vida do aluno.",
+   "perg": "Is your phone better than your old one?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado comparando, com than, the most e as … as.",
+   "perg": "Why is it better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve o anúncio do celular dele, passo a passo.",
+   "perg": "What is the best thing about it?",
+   "pula": "Faça os dois primeiros passos."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Compare and describe.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "better than",
+    "the best",
+    "as … as",
+    "bored / boring",
+    "good at"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PHONE",
+     "q": "Is your phone better or worse than your old one?",
+     "fup": "What is the best thing about it?",
+     "st": [
+      "It’s … than my old one.",
+      "The best thing is …"
+     ],
+     "ex": "It’s faster than my old one. The best thing is the camera."
+    },
+    {
+     "k": "BORING THINGS",
+     "q": "What is the most boring app on your phone?",
+     "fup": "When do you feel bored?",
+     "st": [
+      "The most boring app is …",
+      "I feel bored when …"
+     ],
+     "ex": "The most boring app is my bank app. I feel bored on long bus trips."
+    },
+    {
+     "k": "YOUR FAMILY",
+     "q": "Are you as tall as your father or your mother?",
+     "fup": "Who is the tallest in your family?",
+     "st": [
+      "I’m as tall as …",
+      "I’m not as … as …"
+     ],
+     "ex": "I’m not as tall as my father, but I’m taller than my mother."
+    },
+    {
+     "k": "SKILLS",
+     "q": "What are you good at: cooking or fixing things?",
+     "fup": "Who does it better in your home?",
+     "st": [
+      "I’m good at …ing.",
+      "My … does it better."
+     ],
+     "ex": "I’m good at cooking, but my wife fixes things better."
+    },
+    {
+     "k": "TWO CITIES",
+     "q": "Is your city different from the city where you were born?",
+     "fup": "Which one is more interesting?",
+     "st": [
+      "It’s different from …",
+      "… is more …"
+     ],
+     "ex": "It’s very different. My hometown is quieter, but this city is more interesting."
+    },
+    {
+     "k": "WORK",
+     "q": "Do you work quickly or carefully?",
+     "fup": "Is your job interesting or tiring?",
+     "st": [
+      "I work …",
+      "My job is …"
+     ],
+     "ex": "I work carefully. My job is interesting, but it’s tiring."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "better than",
+    "the most",
+    "as … as"
+   ],
+   "rodadas": [
+    {
+     "q": "The best camera or the longest battery?",
+     "a": "The camera",
+     "b": "The battery",
+     "fa": [
+      "The camera. Photos are more important than time."
+     ],
+     "fb": [
+      "The battery. A dead phone is the most boring thing."
+     ]
+    },
+    {
+     "q": "A cheap phone or an expensive phone?",
+     "a": "Cheap",
+     "b": "Expensive",
+     "fa": [
+      "Cheap. It’s as good as an expensive one for me."
+     ],
+     "fb": [
+      "Expensive. It works better and lasts longer."
+     ]
+    },
+    {
+     "q": "A big screen or a small phone?",
+     "a": "Big screen",
+     "b": "Small phone",
+     "fa": [
+      "Big screen. Videos are more interesting."
+     ],
+     "fb": [
+      "Small phone. It’s easier to carry."
+     ]
+    },
+    {
+     "q": "A new phone every year or the same phone for five years?",
+     "a": "Every year",
+     "b": "Five years",
+     "fa": [
+      "Every year. The new ones are always faster."
+     ],
+     "fb": [
+      "Five years. It’s cheaper and better for the planet."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody compared well."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Sell Your Phone",
+   "t": "Write an ad for your phone.",
+   "p": "One line for each step.",
+   "prof": "Listen for the slips: more fast, the most cheap, as good than, it works good.",
+   "passos": [
+    {
+     "q": "Compare it with another phone.",
+     "st": [
+      "It’s … than …",
+      "It isn’t as … as …"
+     ],
+     "ex": "It’s lighter than my old phone, and it isn’t as expensive as a new one."
+    },
+    {
+     "q": "What is the best thing about it?",
+     "st": [
+      "The best thing is …",
+      "It has the … in the shop."
+     ],
+     "ex": "The best thing is the battery. It has the longest battery in the shop."
+    },
+    {
+     "q": "How does it work?",
+     "st": [
+      "It works …",
+      "It takes photos …"
+     ],
+     "ex": "It works fast, and it takes photos beautifully."
+    },
+    {
+     "q": "Who is it good for?",
+     "st": [
+      "It’s perfect for people who are good at …",
+      "It’s great if you get bored …"
+     ],
+     "ex": "It’s perfect for people who are good at taking photos."
+    }
+   ],
+   "fim": "Your ad is ready. Sold!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

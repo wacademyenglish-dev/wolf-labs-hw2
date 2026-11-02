@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What Does Warm Mean?",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/81b2891d9d6f/what-does-warm-mean/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "extreme adjectives: very + normal adjective (very tired, very difficult), absolutely / really + extreme adjective (absolutely exhausted, absolutely boiling); never very + extreme, never absolutely + normal",
   "abrir": "What is the most boring part of your week?",
   "fecho": "<b>very</b> + normal adjective: <i>very tired, very hot, very good</i>. <b>absolutely / really</b> + extreme adjective: <i>absolutely exhausted, absolutely boiling, absolutely amazing</i>. Never <i>very exhausted</i> and never <i>absolutely tired</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a long meeting and a surprise drill at the office. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/81b2891d9d6f/what-does-warm-mean/img/live-escritorio.webp",
+      "img": "../img/live-escritorio.webp",
       "leg": "The quiet office",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The meeting was very boring and absolutely exhausting.",
-          "img": "https://wolf-labs.pages.dev/p/81b2891d9d6f/what-does-warm-mean/img/live-escritorio.webp",
+          "img": "../img/live-escritorio.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "My desk is very small, but my chair is absolutely huge.",
-          "img": "https://wolf-labs.pages.dev/p/81b2891d9d6f/what-does-warm-mean/img/live-mesa-dwight.webp",
+          "img": "../img/live-mesa-dwight.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I was absolutely terrified, but it was only a drill.",
-          "img": "https://wolf-labs.pages.dev/p/81b2891d9d6f/what-does-warm-mean/img/live-fumaca.webp",
+          "img": "../img/live-fumaca.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/81b2891d9d6f/what-does-warm-mean/img/live-mesa-dwight.webp",
+      "img": "../img/live-mesa-dwight.webp",
       "leg": "A quiet desk with a lamp",
       "pede": "Look at the picture: a quiet office desk with a lamp. Write 2 or 3 sentences about a day at work or school. Use <b>very</b> + a normal adjective and <b>absolutely</b> or <b>really</b> + an extreme one.",
       "ph": "My day was very … It was absolutely …",

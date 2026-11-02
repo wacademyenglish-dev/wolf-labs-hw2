@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "First, Then, Finally",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3b2c68c35832/first-then-finally/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "telling a story in the past, in order: First → Then / After that / Next → Finally / In the end; irregular verbs (went, threw, met, came, fell); didn't + the plain verb; after needs something after it (After that, ...)",
   "abrir": "What did you do this morning? Three things, in order.",
   "fecho": "A story = the past, in order: <b>First</b> → <b>Then / After that</b> → <b>Finally / In the end</b>. Irregular verbs have no -ed: <i>went, threw, met, came</i>. No: <b>didn't</b> + the plain verb: <i>I didn't go.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks Leo about his Sunday. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/3b2c68c35832/first-then-finally/img/live-parque.webp",
+      "img": "../img/live-parque.webp",
       "leg": "A park at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "First, I went to the park.",
-          "img": "https://wolf-labs.pages.dev/p/3b2c68c35832/first-then-finally/img/live-parque.webp",
+          "img": "../img/live-parque.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Then I threw a coin into the fountain.",
-          "img": "https://wolf-labs.pages.dev/p/3b2c68c35832/first-then-finally/img/live-fonte.webp",
+          "img": "../img/live-fonte.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "In the end, we sat on a bench.",
-          "img": "https://wolf-labs.pages.dev/p/3b2c68c35832/first-then-finally/img/live-banco.webp",
+          "img": "../img/live-banco.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3b2c68c35832/first-then-finally/img/live-moedas.webp",
+      "img": "../img/live-moedas.webp",
       "leg": "Coins in the water",
       "pede": "Look at the picture: coins in the water. Write 2 or 3 sentences about your last Sunday, in order. Use <b>First</b>, <b>Then / After that</b> and <b>Finally</b>.",
       "ph": "First, I …",

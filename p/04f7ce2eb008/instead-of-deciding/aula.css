@@ -1,0 +1,78 @@
+/* ============================================================
+   INSTEAD OF DECIDING · THE -ING GATE · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: o quarto à noite com a tela
+   apagada — azul-ardósia quase preto; o portão da preposição em arco de
+   néon frio (menta); a etiqueta -ING em coral, que é o único acento
+   quente; o relógio da noite acende em coral hora a hora.
+   ============================================================ */
+:root{
+  --noite:#05070a; --noite-rgb:5,7,10; --tinta:#e6ebef;
+  --t1:#eef2f5; --t2:#c2cad2; --t2-rgb:194,202,210; --t3:#808b96;
+  --ac:#ff8a6b; --ac2:#ffc4b2; --menta:#7fe3c4; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(230,235,239,.05); --vidro2:rgba(230,235,239,.085); --vidro3:rgba(230,235,239,.12);
+  --fio:rgba(220,228,236,.12); --fio2:rgba(220,228,236,.22); --luz:rgba(230,235,239,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2b0d04}
+.btn.cheio{color:#2b0d04}
+.capa{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:18px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2c1610;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.versao.grande-v{min-height:64px;font:800 clamp(18px,1.4vw,24px) var(--mono);text-align:center}
+.dm-ops{display:grid;gap:6px} .dm-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:0 auto 12px;width:100%} .dm-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1100px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao b{color:var(--menta)} .balao s{text-decoration-color:var(--erro);color:var(--t3)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.dm-ouve{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .dm-ouve .transcricao{margin:0}
+.dm-rot{margin:0;font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.dm-linha-ok{display:flex;align-items:center;gap:12px} .dm-linha-ok .aprova{flex:1;margin:0} .dm-linha-ok.centro{max-width:1100px;margin:0 auto;width:100%}
+
+/* o portão */
+.dm-portao{display:flex;align-items:center;justify-content:center;gap:clamp(10px,1.4vw,22px);width:100%;padding:22px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background:#080b10}
+.dm-bloco{display:inline-grid;place-items:center;min-width:clamp(90px,8vw,150px);padding:14px 16px;border-radius:12px;font:700 clamp(20px,1.7vw,30px) var(--mono);border:1px solid var(--fio2);background:#111620}
+.dm-bloco.entra{color:var(--t2)}
+.dm-bloco.sai{color:var(--t3);border-style:dashed}
+.dm-portao.passou .dm-bloco.sai{color:var(--t1);border-style:solid;border-color:var(--ok);animation:atravessa .6s ease-out}
+.dm-bloco em{font-style:normal;color:#2b0d04;background:var(--ac);padding:0 6px;margin-left:2px;border-radius:6px}
+.dm-arco{display:grid;grid-template-columns:8px auto 8px;align-items:end;gap:8px;padding-top:6px}
+.dm-arco i{display:block;width:8px;height:clamp(70px,6vw,110px);border-radius:4px;background:var(--menta);box-shadow:0 0 14px rgba(127,227,196,.45)}
+.dm-arco b{align-self:start;padding:8px 12px;border-radius:999px;border:2px solid var(--menta);font:800 clamp(13px,1vw,17px) var(--mono);letter-spacing:.08em;color:var(--menta);white-space:nowrap}
+@keyframes atravessa{from{transform:translateX(-60px);opacity:0}to{transform:none;opacity:1}}
+
+/* o relógio da noite */
+.dm-relogio{width:min(100%,460px);margin:0 auto}
+.dm-relogio svg{display:block;width:100%;height:auto}
+.dm-seg{fill:none;stroke:#1d2430;stroke-width:22;stroke-linecap:butt;transition:stroke .5s} .dm-seg.aceso{stroke:var(--ac);filter:drop-shadow(0 0 6px rgba(255,138,107,.45))} .dm-seg.agora{stroke:#3a2a26}
+.dm-relogio text{font:800 13px var(--mono);fill:var(--t3)} .dm-relogio text.aceso{fill:var(--ac2)} .dm-relogio .dm-meio{font-size:20px;fill:var(--t1)}
+
+/* cenas */
+.dm-temas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 12px}
+.dm-al{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 14px;border-radius:14px} .dm-al span{font:600 clamp(16px,1.25vw,21px) var(--disp)}
+.dm-al.certo{border-color:var(--ok)} .dm-al.errado{border-color:var(--erro)}
+.dm-fs{display:flex;gap:6px} .dm-fs .pilula{min-height:36px;padding:0 14px;font:800 12px var(--mono);letter-spacing:.06em}
+.dm-aneis{position:relative;display:grid;place-items:center;width:min(100%,380px);aspect-ratio:1;margin:0 auto}
+.dm-anel{position:absolute;display:grid;place-items:center;align-content:center;gap:4px;border-radius:50%;text-align:center}
+.dm-anel.fora{inset:0;border:2px dashed var(--fio2);align-content:start;padding-top:12%} .dm-anel.dentro{inset:30%;border:2px solid var(--menta);background:rgba(127,227,196,.06)}
+.dm-anel small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .dm-anel b{font:800 clamp(30px,2.6vw,46px) var(--mono);color:var(--t1)} .dm-anel.dentro small{color:var(--menta)}
+.dm-dois{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:700px;margin:0 auto 10px;width:100%}
+.dm-it{display:grid;gap:4px;max-width:900px;margin:0 auto 10px;width:100%;padding:10px 16px;border-radius:14px;text-align:center} .dm-it small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .dm-it b{font:700 clamp(17px,1.35vw,22px) var(--disp);color:var(--t2)}
+.dm-it.sim{border-color:var(--menta)} .dm-it.sim b{color:var(--menta)} .dm-it.nao{border-color:var(--fio2)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .dm-portao{padding:14px 10px}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .dm-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .dm-al{grid-template-columns:1fr} .dm-portao{flex-wrap:wrap} .dm-arco i{height:60px} }
+.dm-bloco{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
+.dm-anel.fora{padding-top:7%} .dm-anel.dentro{inset:36%} .dm-anel.fora b{font-size:clamp(24px,2vw,36px)}

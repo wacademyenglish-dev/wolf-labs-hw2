@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · A Small Black Coat · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A Small Black Coat · The Coat Rack</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>A Small Black Coat · The Coat Rack</h2>
+    <p>Day four of the race from London to Edinburgh. Bob is in Cambridge, it is 3°C, his train leaves in three hours, and he has no coat. The student dresses the hanger (the coat takes the color they say), tries three sizes on the mannequin, hangs the tags SIZE · COLOR · THING in order, and spends Bob’s £100 on the rack. Then they shop for three friends with you as the shop assistant, and write their own shopping list. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>size + color + thing</b>: <i>a small black coat</i>. The thing always comes last. One thing takes <b>a</b>: <i>I want a coat</i>. The mistakes to listen for: <i>a coat black</i>, <i>a black small coat</i>, <i>I want black coat</i>, and <i>want</i> said like <i>won’t</i>. Never explain the rule before they have built two coats.</p>
+    <!--conversa--><h4>WHAT DOES BOB WANT? (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the video in Cambridge: it is 3 °C and the train leaves in three hours. Your student is Bob and puts three things in order (a warm coat, a hot coffee, a big hat). There is no right answer. Say your own order first, then let them tap 1, 2, 3, wait five seconds in silence, and use the PUSH line (only you see it). The starters keep I want a … in their mouth. Then show your order and agree on one top 3. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I What Are You Wearing?, IV What Does Bob Want? (three things in order), IX The Rack, X The Shop Assistant, XI Your Wardrobe.</li>
+      <li><b>Listen</b>: II The Story So Far (listen first; the transcript opens after the audio ends), III Cold in Cambridge and VII In the Shop (the video: BEFORE, WATCH, AFTER), V The Colors.</li>
+      <li><b>Focus</b>: VI The Sizes (the mannequin), VIII The Tags (only one order hangs).</li>
+      <li><b>Write</b>: XII Your Shopping List, with the red wavy line for the order and the missing <i>a</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>THE PLAYER</h4>
+    <p>Every audio button plays and pauses. 0.75× makes every audio slower. In listening scenes the transcript only opens after the audio ends: first they listen, then they read.</p>
+    <h4>THE SHOP ASSISTANT</h4>
+    <p>You start: <i>“Hello! Can I help you?”</i> Be a little difficult (<i>“We don’t have red. Blue?”</i>). Tap each part you hear; the classic mistake has its own button, MISTAKE HEARD.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>Everything the student taps moves on both screens. You judge the speech. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* A SMALL BLACK COAT (Main A1) · pergunta-surpresa · 27/10/2026 · tamanho + cor + coisa · I want a … (máx. 3 no A1) */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'cores', tipo: 'Opinion', q: 'A new coat. What color?',
+    opc: ['Black', 'Red', 'Yellow'], st: ['I want a … coat.'],
+    ex: 'I want a red coat! Black is boring.', push: 'Yellow? Yes or no?' },
+  { cena: 'tamanho', tipo: 'And you?', q: 'Your shirts: small, medium or large?',
+    opc: ['Small', 'Medium', 'Large'], st: ['I want a … shirt.'],
+    ex: 'Medium. I want a medium blue shirt.', push: 'Always medium? Yes or no?' },
+  { cena: 'video2', tipo: 'Would you rather', q: 'A cheap coat or a warm coat?',
+    opc: ['A cheap coat', 'A warm coat'], st: ['I want a … coat.'],
+    ex: 'A warm coat. I’m always cold!', push: 'Fifty pounds? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* A SMALL BLACK COAT (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Ranking leve (3 itens, ordem do professor) no lugar de "IV · I Want a Coat" (extra; ouvir-e-repetir).
+   Colado ao vídeo III (Bob com frio em Cambridge): 3 °C, o trem sai em três horas — o que o aluno quer
+   primeiro no lugar do Bob? Os tamanhos e as cores ficam para o VI e o V; aqui entra o "I want a …" da aula.
+   A1 bem leve: três itens curtos, frase quase pronta, o professor mostra a ordem dele. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'lista', troca: 'quero', est: 'o', min: 6, img: 'rua', rot: 'What Does Bob Want?', t: 'It’s 3 °C. You are Bob.',
+    p: 'Put them in order: 1 is the top. Then say it with I want a …',
+    formato: 'ranking',
+    q: 'Cambridge. Very cold. What do you want first?',
+    itens: ['a warm coat', 'a hot coffee', 'a big hat'],
+    st: ['Number one: I want a …', 'Number three: a …'],
+    ex: 'Number one: I want a warm coat. Number three: a big hat.',
+    push: 'Coat or coffee? One word!',
+    prof: [1, 0, 2],
+    dica: 'Tap 1, 2, 3. Your teacher answers first.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "historia": {
+   "t": "Day four. Where is everyone?",
+   "p": "Listen first. Answer. Then read it out loud."
+  },
+  "video1": {
+   "t": "Bob in Cambridge. Six words.",
+   "p": "Ears only. Tap each word you hear."
+  },
+  "cv-lista": {
+   "p": "Put them in order. Say: I want a …"
+  },
+  "cores": {
+   "t": "Say a color. The coat takes it.",
+   "p": "Say the sentence. Tap the color. Check."
+  },
+  "tamanho": {
+   "t": "Three sizes. Only one fits Bob.",
+   "p": "Say the size. Then put it on him."
+  },
+  "video2": {
+   "t": "Bob in the shop.",
+   "p": "Tap each word you hear. Then one question."
+  },
+  "tags": {
+   "t": "SIZE, COLOR, THING.",
+   "p": "Say it first. Then hang the tags in order."
+  },
+  "arara": {
+   "t": "Six coats. Bob has £100.",
+   "p": "Say the coat. Tap for the price. Bob buys one."
+  },
+  "cliente": {
+   "t": "Your turn to shop.",
+   "p": "Three friends. Say what you want. Ask the price."
+  },
+  "fim": {
+   "t": "Now your shopping list.",
+   "p": "Write four things: size, color, thing."
+  }
+ },
+ "prep": {
+  "obj": "Tamanho + cor + coisa (a small black coat), com a coisa sempre no fim e o a na frente. Bob está em Cambridge, faz 3 °C e ele não tem casaco.",
+  "armadilha": "O português põe a cor depois: “a coat black”; a ordem trocada “a black small coat”; o a some (“I want black coat”); e want soa como won’t.",
+  "pal": [
+   "a small black coat",
+   "I want a …",
+   "size",
+   "color",
+   "small / medium / large",
+   "How much is it?",
+   "expensive",
+   "cheap",
+   "warm"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abre a aula: Bob está com frio, o trem sai em três horas, ele precisa de um casaco.",
+   "perg": "Are you cold today? What are you wearing?",
+   "pula": "Leia a frase da capa e siga."
+  },
+  "veste": {
+   "obj": "Aquecimento pessoal: o que o aluno está vestindo, antes de chegar no Bob.",
+   "perg": "What are you wearing today?",
+   "pula": "Duas cartas bastam."
+  },
+  "historia": {
+   "obj": "Escuta: o dia quatro da corrida; ouvir primeiro, depois ler a transcrição em voz alta.",
+   "perg": "Where is Bob? Where are Fran and Paula?",
+   "pula": "Uma carta basta."
+  },
+  "video1": {
+   "obj": "Vídeo em Cambridge: o aluno toca as seis palavras quando ouve.",
+   "perg": "Why is Bob cold?",
+   "pula": "Assista uma vez só; o vídeo vai inteiro."
+  },
+  "cv-lista": {
+   "obj": "O aluno é o Bob e ordena três coisas (casaco, café, chapéu) com I want a …; diga sua ordem primeiro.",
+   "perg": "You are Bob. What do you want first?",
+   "pula": "Só o número 1, com a frase inteira."
+  },
+  "cores": {
+   "obj": "Cena extra: cor antes da coisa; o casaco ganha a cor que o aluno diz.",
+   "perg": "What color is your coat?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "tamanho": {
+   "obj": "Tamanhos no manequim: só um casaco serve no Bob.",
+   "perg": "Small, medium or large? Which one fits?",
+   "pula": "Dois tamanhos bastam."
+  },
+  "video2": {
+   "obj": "Vídeo na loja: o aluno toca as palavras que já conhece; depois uma pergunta.",
+   "perg": "What does Bob buy?",
+   "pula": "Assista uma vez só; o vídeo vai inteiro."
+  },
+  "tags": {
+   "obj": "Cena extra: pendurar as etiquetas TAMANHO, COR, COISA na única ordem certa.",
+   "perg": "Size, color, thing: say it first.",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "arara": {
+   "obj": "Cena extra: a arara com seis casacos; dizer o casaco inteiro, ver o preço e decidir com £100.",
+   "perg": "Is it expensive or cheap?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cliente": {
+   "obj": "Cena extra: o professor é o vendedor; o aluno compra para três amigos.",
+   "perg": "Hello! Can I help you?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "guarda": {
+   "obj": "Cena extra: as roupas do próprio aluno, com tamanho e cor.",
+   "perg": "What is your favorite coat?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrever a lista de compras: quatro coisas com tamanho e cor; vai para o My notes.",
+   "perg": "What do you want to buy this month?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "quero": {
+   "obj": "O aluno é o Bob e ordena três coisas (casaco, café, chapéu) com I want a …; diga sua ordem primeiro.",
+   "perg": "You are Bob. What do you want first?",
+   "pula": "Só o número 1, com a frase inteira."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com tamanho + cor + coisa, sobre roupas e compras.",
+   "perg": "What do you want: a big bag or a small bag?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas peças e dizer a peça inteira, na ordem certa.",
+   "perg": "A black coat or a red coat?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno faz a mala do Bob para Edimburgo, passo a passo.",
+   "perg": "What does Bob want for Edinburgh?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More clothes questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "small",
+    "big",
+    "black",
+    "blue",
+    "I want a …"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR COAT",
+     "q": "Do you have a coat? What is it like?",
+     "fup": "Is it warm?",
+     "st": [
+      "I have a …",
+      "It's warm. / It's not warm."
+     ],
+     "ex": "I have a long black coat. It's warm."
+    },
+    {
+     "k": "YOUR SHOES",
+     "q": "What shoes are you wearing?",
+     "fup": "Big or small?",
+     "st": [
+      "I'm wearing …",
+      "They're …"
+     ],
+     "ex": "I'm wearing old white shoes."
+    },
+    {
+     "k": "A GIFT",
+     "q": "It's your friend's birthday. What do you buy?",
+     "fup": "How much is it?",
+     "st": [
+      "I want a … for her.",
+      "I want a … for him."
+     ],
+     "ex": "I want a small red bag for her."
+    },
+    {
+     "k": "3 °C",
+     "q": "It's 3 °C. What do you want?",
+     "fup": "A coffee or a hat?",
+     "st": [
+      "I want a …",
+      "I want a big …"
+     ],
+     "ex": "I want a big warm coat and a hot coffee."
+    },
+    {
+     "k": "YOUR BAG",
+     "q": "What's in your bag today?",
+     "fup": "What color is it?",
+     "st": [
+      "There's a …",
+      "It's …"
+     ],
+     "ex": "There's a small black phone and a blue pen."
+    },
+    {
+     "k": "SHOPPING",
+     "q": "Do you like shopping for clothes?",
+     "fup": "Online or in a shop?",
+     "st": [
+      "Yes, I like it.",
+      "No, I don't like it.",
+      "Online. / In a shop."
+     ],
+     "ex": "Yes, I like it. In a shop."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Say the whole thing. Your teacher disagrees.",
+   "palavras": [
+    "size",
+    "color",
+    "thing",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A black coat or a red coat?",
+     "a": "Black",
+     "b": "Red",
+     "fa": [
+      "A black coat. It's classic."
+     ],
+     "fb": [
+      "A red coat. It's happy."
+     ]
+    },
+    {
+     "q": "A big hat or a small hat?",
+     "a": "Big",
+     "b": "Small",
+     "fa": [
+      "A big hat. It's warm."
+     ],
+     "fb": [
+      "A small hat. It's cool."
+     ]
+    },
+    {
+     "q": "A cheap coat or an expensive coat?",
+     "a": "Cheap",
+     "b": "Expensive",
+     "fa": [
+      "A cheap coat. Bob has £100 for five days."
+     ],
+     "fb": [
+      "An expensive coat. It's warm for ten years."
+     ]
+    },
+    {
+     "q": "A hot coffee or a warm coat first?",
+     "a": "Coffee",
+     "b": "Coat",
+     "fa": [
+      "A hot coffee. It's fast."
+     ],
+     "fb": [
+      "A warm coat. It's 3 °C!"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Bob’s Bag",
+   "t": "Next stop: Edinburgh. It's cold.",
+   "p": "Pack Bob's bag, step by step.",
+   "prof": "Every thing with size + color + thing. Push for the a: a small blue hat.",
+   "passos": [
+    {
+     "q": "Bob has his coat. What does he want on his head?",
+     "st": [
+      "He wants a …"
+     ],
+     "ex": "He wants a big gray hat."
+    },
+    {
+     "q": "And on his hands?",
+     "st": [
+      "He wants … gloves."
+     ],
+     "ex": "He wants black gloves."
+    },
+    {
+     "q": "What does he want for the train?",
+     "st": [
+      "He wants a …"
+     ],
+     "ex": "He wants a small hot coffee."
+    },
+    {
+     "q": "And you? What do you want in Edinburgh?",
+     "st": [
+      "I want a …"
+     ],
+     "ex": "I want a long warm scarf."
+    }
+   ],
+   "fim": "Bob is ready. And so are you."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

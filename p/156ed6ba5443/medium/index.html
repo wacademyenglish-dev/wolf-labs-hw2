@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Medium · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Medium · The Size Ruler</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Medium · The Size Ruler</h2>
+    <p>Four boxes arrived this week, and all four shirts say MEDIUM, but they are four different sizes. The hour is a ruler: two things side by side, and the bar shows which is more. By the end, the student sees that <b>medium</b> is not a size at all: it is a comparison somebody else made. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>Short words take <b>-er</b> (<i>bigger, cheaper, happier</i>; two claps ending in -y also take -er). Long words take <b>more</b> (<i>more expensive, more comfortable</i>; <i>modern</i> has two claps and no -y: more). Then <b>than</b>, never <i>then</i> or <i>that</i>. Three break the rule: <b>better, worse, farther</b>. The common mistakes: <i>more big</i>, <i>more cheaper</i> (both at once), <i>bigger then</i>, <i>more better</i>.</p>
+    <h4>THAN IS WEAK</h4>
+    <p>In speech, <b>than</b> is /ðən/ and sounds like <i>then</i>. That is why people write the wrong one. Scene IV is about the spelling.</p>
+    <!--conversa--><h4>OK OR NOT OK? (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Three shopping choices from your student’s life, green OK or red Not OK: a cheaper store one hour away, a medium that is a little bigger, an online shirt that is cheaper but has no fitting room. There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it) for a yes/no follow-up. The starters keep <i>-er / more … / better + than</i> in their mouth. Recast mistakes quietly (<i>more cheap → cheaper</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Same Size Everywhere?, V The Rack, VII OK or Not OK? (three shopping choices), VIII At the Store, IX The Size Chart, X So What Is Medium?</li>
+      <li><b>Focus</b>: II Short Word, Long Word (clap, then drawer), III The Ruler (form, then than, then the opposite sentence), IV Than, Not Then, VI Good, Bad, Far.</li>
+      <li><b>Write</b>: XI Your Closet, with the red wavy line for <i>more big</i>, <i>more cheaper</i>, <i>bigger then/that</i>, <i>expensiver</i>, <i>gooder</i>, <i>more better</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>AT THE STORE</h4>
+    <p>Play the clerk. The student reads the problem and asks; then tap to see one way to say it. Any good request counts. Strong students: be a difficult clerk and say you don’t have it.</p>
+    <h4>SCENE I</h4>
+    <p>Don’t correct. Tap the forms you hear; mistakes have their own buttons. Scene XI brings them back.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The ruler, the drawers, the rack and the labels move on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* MEDIUM (Main A1) · pergunta-surpresa · 27/10/2026 · comparativos: -er · more · better · than */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'gavetas', tipo: 'And you?', q: 'Are you taller than your best friend?',
+    opc: ['Yes, I am.', 'No, I’m not.'], st: ['Yes. I am taller than …', 'No. … is taller than me.'],
+    ex: 'No. My friend Lia is taller than me.', push: 'Much taller? Yes or no?' },
+  { cena: 'than', tipo: 'Would you rather', q: 'A bigger house or a better car?',
+    opc: ['A bigger house', 'A better car'], st: ['A bigger house. It is more …', 'A better car. It is faster …'],
+    ex: 'A bigger house! It is more comfortable than a car.', push: 'Far from the city? Yes or no?' },
+  { cena: 'tres', tipo: 'Opinion', q: 'Summer or winter: which is better?',
+    opc: ['Summer', 'Winter'], st: ['Summer. It is better than …', 'Winter. It is cooler than …'],
+    ex: 'Winter! It is cooler, and I sleep better.', push: 'In Brazil too? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* MEDIUM (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   OK / Not OK (2 cores) no lugar de "VII · Four Labels" (extra; tocar e comparar etiquetas).
+   Três escolhas de compra da vida do aluno: a loja mais barata e longe, a medium maior que ele,
+   a camiseta online mais barata sem provador. A1 bem leve: duas opções, frase quase pronta,
+   o professor responde primeiro. Gramática da aula (-er / more … / better / than) nos iniciadores. */
+var CV_OK = [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }];
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'compras', troca: 'etiquetas', est: 'o', min: 6, img: 'quatro', rot: 'OK or Not OK?', t: 'Shopping day. OK or not OK?',
+    p: 'Read it. OK or not OK? Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The store', sit: 'Cheaper, but one hour away.', q: 'OK or not OK?',
+        opc: CV_OK,
+        st: ['OK. It is cheaper than …', 'Not OK. It is farther than …'],
+        ex: 'Not OK! One hour on the bus is worse than ten more reais.',
+        push: 'Fifty reais cheaper? Yes or no?' },
+      { tag: 'The size', sit: 'Your medium is a little bigger.', q: 'OK or not OK?',
+        opc: CV_OK,
+        st: ['OK. Bigger is more comfortable.', 'Not OK. It is bigger than me!'],
+        ex: 'OK! Bigger is more comfortable at home.',
+        push: 'For a party? Yes or no?' },
+      { tag: 'Online', sit: 'Online: cheaper, no fitting room.', q: 'OK or not OK?',
+        opc: CV_OK,
+        st: ['OK. Online is cheaper than …', 'Not OK. The store is better.'],
+        ex: 'Not OK. The store is better: I try it on first.',
+        push: 'Free returns. Change? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Compare yourself. Use any words.",
+   "p": "Answer out loud. The picture opens."
+  },
+  "gavetas": {
+   "t": "Short word or long word?",
+   "p": "Clap it. Drawer it. Say it with its noun."
+  },
+  "regua": {
+   "t": "Two things. Which one is more?",
+   "p": "Pick the form, then the little word. Say it."
+  },
+  "than": {
+   "t": "Three words that sound the same.",
+   "p": "Pick the word. Read it out loud, fast."
+  },
+  "arara": {
+   "t": "Four shirts. Compare any two.",
+   "p": "Say a sentence about them. Then check."
+  },
+  "cv-compras": {
+   "t": "Shopping day. OK or not OK?",
+   "p": "Choose. Teacher first. Then say the sentence."
+  },
+  "loja": {
+   "t": "Now you ask the clerk.",
+   "p": "Read the problem. Ask. Then see one way."
+  },
+  "tabela": {
+   "t": "Another country. Which size is yours?",
+   "p": "Read the chart. Compare out loud. Choose."
+  },
+  "medio": {
+   "t": "Three facts. They don’t agree.",
+   "p": "Answer first. Then open the answer."
+  },
+  "fim": {
+   "t": "Compare things in your closet.",
+   "p": "Five sentences with -er or more, and than."
+  }
+ },
+ "prep": {
+  "obj": "Comparativo (-er / more … than, better, worse, farther): quatro camisas MEDIUM de tamanhos diferentes; medium é uma comparação.",
+  "armadilha": "Do “mais grande” do português: more big, more cheaper (as duas formas juntas), more better; e “then” no lugar de “than”, que soa igual na fala.",
+  "pal": [
+   "bigger",
+   "smaller",
+   "cheaper",
+   "more expensive",
+   "more comfortable",
+   "better",
+   "worse",
+   "than",
+   "medium"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o mistério: quatro caixas, quatro camisas MEDIUM, quatro tamanhos.",
+   "perg": "Are all medium shirts the same size?",
+   "pula": "Só leia o título e abra as caixas."
+  },
+  "abre": {
+   "obj": "Aquecimento: o aluno se compara com qualquer palavra que tiver; o professor só anota as formas.",
+   "perg": "Are you taller than your mother?",
+   "pula": "Três respostas bastam; não corrija aqui."
+  },
+  "gavetas": {
+   "obj": "Regra das sílabas: palavra curta leva -er, longa leva more.",
+   "perg": "How many claps in “expensive”?",
+   "pula": "Faça metade das palavras."
+  },
+  "regua": {
+   "obj": "Monta a frase inteira: forma + than, e a frase oposta.",
+   "perg": "Which one is cheaper?",
+   "pula": "Pule a frase oposta."
+  },
+  "than": {
+   "obj": "Ortografia: than, não then nem that.",
+   "perg": "Than or then here?",
+   "pula": "Quatro frases bastam."
+  },
+  "arara": {
+   "obj": "Fala livre comparando duas camisas da arara.",
+   "perg": "Which shirt is bigger?",
+   "pula": "Duas rodadas bastam."
+  },
+  "tres": {
+   "obj": "Os três irregulares: better, worse, farther.",
+   "perg": "Is this store better or worse?",
+   "pula": "Faça só good e bad."
+  },
+  "cv-compras": {
+   "obj": "Opinião sobre três escolhas de compra, com as frases prontas.",
+   "perg": "Is a cheaper store one hour away OK?",
+   "pula": "Duas escolhas bastam."
+  },
+  "loja": {
+   "obj": "Role-play: o aluno pede ao vendedor outro tamanho.",
+   "perg": "Do you have a bigger one?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "tabela": {
+   "obj": "Lê uma tabela de tamanhos de outro país e compara em voz alta.",
+   "perg": "Is a US medium bigger than a Brazilian medium?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "medio": {
+   "obj": "Fecha a história: medium não é tamanho, é comparação.",
+   "perg": "So what is medium?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: cinco frases comparando coisas do armário, com a linha vermelha.",
+   "perg": "Which jacket is warmer?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas, comparando coisas da vida do aluno.",
+   "perg": "Which is better for you?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e defender com comparativo.",
+   "perg": "Why is it better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta, em passos, a compra de uma roupa.",
+   "perg": "Was it bigger or smaller than you thought?",
+   "pula": "Faça os dois primeiros passos."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More things to compare.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "bigger",
+    "cheaper",
+    "more comfortable",
+    "better",
+    "than"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR SHOES",
+     "q": "Which shoes are more comfortable: your old ones or your new ones?",
+     "fup": "Are they cheaper too?",
+     "st": [
+      "My old shoes are …",
+      "They are … than …"
+     ],
+     "ex": "My old shoes are more comfortable than my new ones."
+    },
+    {
+     "k": "TWO STORES",
+     "q": "Which store is better: a big store or a small store?",
+     "fup": "Is it cheaper?",
+     "st": [
+      "A small store is …",
+      "It is … than …"
+     ],
+     "ex": "A small store is better. It is friendlier than a big store."
+    },
+    {
+     "k": "ONLINE",
+     "q": "Is shopping online easier than shopping in a store?",
+     "fup": "Is it faster?",
+     "st": [
+      "Online is …",
+      "A store is …"
+     ],
+     "ex": "Online is easier, but a store is faster for me."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Is your city bigger or smaller than São Paulo?",
+     "fup": "Is it quieter?",
+     "st": [
+      "My city is …",
+      "It is … than …"
+     ],
+     "ex": "My city is smaller than São Paulo. It is quieter too."
+    },
+    {
+     "k": "SUMMER",
+     "q": "Which is better for you: summer or winter?",
+     "fup": "Are summer clothes cheaper?",
+     "st": [
+      "… is better.",
+      "It is … than …"
+     ],
+     "ex": "Winter is better. It is cooler than summer."
+    },
+    {
+     "k": "SIZES",
+     "q": "Is your favorite T-shirt bigger or smaller than your size?",
+     "fup": "Is it more comfortable?",
+     "st": [
+      "It is a little …",
+      "It is … than …"
+     ],
+     "ex": "It is a little bigger, and it is more comfortable than my other shirts."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "better",
+    "cheaper",
+    "more comfortable",
+    "than"
+   ],
+   "rodadas": [
+    {
+     "q": "A shirt a little big or a little small?",
+     "a": "A little big",
+     "b": "A little small",
+     "fa": [
+      "A little big. It is more comfortable."
+     ],
+     "fb": [
+      "A little small. It looks better."
+     ]
+    },
+    {
+     "q": "Buy online or buy in a store?",
+     "a": "Online",
+     "b": "In a store",
+     "fa": [
+      "Online. It is cheaper than a store."
+     ],
+     "fb": [
+      "In a store. There is a fitting room."
+     ]
+    },
+    {
+     "q": "One expensive jacket or three cheap ones?",
+     "a": "One expensive",
+     "b": "Three cheap",
+     "fa": [
+      "One expensive. It is better than three cheap ones."
+     ],
+     "fb": [
+      "Three cheap. Three is more than one."
+     ]
+    },
+    {
+     "q": "A store near home or a cheaper store far away?",
+     "a": "Near home",
+     "b": "Far and cheaper",
+     "fa": [
+      "Near home. It is faster."
+     ],
+     "fb": [
+      "Far away. It is cheaper, and I like the trip."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody compared."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Story",
+   "t": "The last thing you bought.",
+   "p": "Answer each step. Use -er, more and than.",
+   "prof": "Keep it to clothes or shoes; push for one sentence with than in every step.",
+   "passos": [
+    {
+     "q": "What did you buy, and where?",
+     "st": [
+      "I bought …",
+      "at …"
+     ],
+     "ex": "I bought a jacket at a store near my house."
+    },
+    {
+     "q": "Was it your normal size?",
+     "st": [
+      "It was a …",
+      "It was … than my …"
+     ],
+     "ex": "It was a medium. It was bigger than my old jacket."
+    },
+    {
+     "q": "Compare it with another one in the store.",
+     "st": [
+      "The other one was …",
+      "Mine is …"
+     ],
+     "ex": "The other one was cheaper, but mine is more comfortable."
+    },
+    {
+     "q": "Is it better or worse than you thought?",
+     "st": [
+      "It is …",
+      "It is … than I thought."
+     ],
+     "ex": "It is better than I thought."
+    }
+   ],
+   "fim": "One jacket, four comparisons. Medium is a comparison too."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

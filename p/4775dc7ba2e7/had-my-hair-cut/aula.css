@@ -1,0 +1,85 @@
+/* ============================================================
+   I HAD MY HAIR CUT · THE CLAIM TAGS · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: o balcão de retirada de
+   uma loja à noite — vinho escuro e latão; canhotos de papel manilha
+   ESCURO (nunca claro) com furo e barbante, numerados; a foto do
+   serviço apagada em cinza até a frase certa; carimbo READY verde.
+   ============================================================ */
+:root{
+  --noite:#0b0709; --noite-rgb:11,7,9; --tinta:#f1ebed;
+  --t1:#f4eef0; --t2:#d0c4c8; --t2-rgb:208,196,200; --t3:#968a8f;
+  --ac:#e8b86a; --ac2:#f6d9a6; --vinho:#7a2638; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(241,235,237,.05); --vidro2:rgba(241,235,237,.085); --vidro3:rgba(241,235,237,.12);
+  --fio:rgba(236,226,230,.12); --fio2:rgba(236,226,230,.22); --luz:rgba(241,235,237,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'Cormorant Garamond',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1a04}
+.btn.cheio{color:#2a1a04}
+.capa{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:600 clamp(60px,6vw,118px)/.92 var(--serif);letter-spacing:-.01em}
+.capa h1 b{display:block;font-weight:700;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.4 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:52px;padding:0 22px;font:700 clamp(16px,1.25vw,21px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,19px)}
+.versao.errado{border-color:var(--erro);animation:treme .35s}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:700 clamp(18px,1.4vw,24px)/1.4 var(--disp)}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:860px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao.ok-b small{color:var(--ok)}
+.balao u{text-decoration:none;color:var(--ac2);border-bottom:3px solid var(--ok)}
+.lacuna-q{display:inline-block;min-width:3.5em;border-bottom:3px solid var(--ac);color:var(--ac)}
+.aberta{position:relative;border-radius:var(--r1);background-size:cover;background-position:center;height:clamp(150px,calc(100vh / var(--zv,1) - 520px),380px);box-shadow:inset 0 0 120px rgba(0,0,0,.8)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(11,7,9,.88);font:700 13px var(--mono);color:var(--ac2)}
+
+/* a etiqueta */
+.tag{position:relative;display:grid;gap:4px;width:230px;padding:30px 18px 16px;border-radius:6px 6px 14px 14px;background:linear-gradient(170deg,#3b2c1d,#2a1f15);border:1px solid #5a4630;clip-path:polygon(18% 0,82% 0,100% 12%,100% 100%,0 100%,0 12%);box-shadow:0 14px 30px rgba(0,0,0,.6);transform:rotate(-3deg);transition:transform .4s}
+.tag .furo{position:absolute;top:10px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#0b0709;box-shadow:inset 0 0 0 2px #6a5236}
+.tag small{font:800 11px var(--mono);letter-spacing:.14em;color:#b89a72} .tag b{font:800 16px var(--mono);letter-spacing:.06em;color:#f0dcc0} .tag i{font:italic 600 17px var(--serif);color:#c9b391}
+.carimbo{position:absolute;right:10px;bottom:12px;padding:3px 10px;border:3px solid var(--ok);border-radius:6px;font:800 18px var(--mono);letter-spacing:.12em;color:var(--ok);transform:rotate(-12deg);background:rgba(10,30,18,.6);animation:bate .35s ease-out}
+.carimbo.diy{border-color:var(--erro);color:var(--erro);background:rgba(40,10,10,.6)}
+@keyframes bate{from{transform:rotate(-12deg) scale(1.6);opacity:0}}
+.tag.pronta{transform:rotate(2deg)}
+.trilho-c{position:relative;display:flex;gap:18px;justify-content:center;padding-top:24px;flex-wrap:wrap}
+.trilho-c::before{content:'';position:absolute;top:8px;left:0;right:0;height:6px;border-radius:3px;background:linear-gradient(90deg,#4d3a22,#8a6a3c,#4d3a22)}
+.trilho-c .tag:nth-child(2){transform:rotate(4deg)} .trilho-c .tag:nth-child(3){transform:rotate(-1deg)}
+.trilho-c.mini .tag{transform:rotate(-2deg)}
+.rail{position:relative;display:flex;flex-wrap:wrap;gap:6px;padding-top:12px;margin-bottom:6px}
+.rail::before{content:'';position:absolute;top:2px;left:0;right:0;height:4px;border-radius:2px;background:linear-gradient(90deg,#4d3a22,#8a6a3c,#4d3a22)}
+.mini-tag{display:grid;gap:0;min-height:0;padding:6px 14px 8px;border-radius:4px 4px 10px 10px;border:1px solid #5a4630;background:#2a1f15;color:#f0dcc0;font:800 13px var(--mono);letter-spacing:.06em;cursor:pointer;text-align:left}
+.mini-tag small{font:700 10px var(--mono);color:#a08560}
+.mini-tag.on{border-color:var(--ac);background:#3d2c14} .mini-tag.feita{border-color:var(--ok)} .mini-tag.feita small::after{content:' ✓';color:var(--ok)}
+.foto{position:relative;display:grid;place-items:end start;padding:16px;border-radius:var(--r1);overflow:hidden;height:clamp(240px,calc(100vh / var(--zv,1) - 470px),460px)}
+.foto .fundo{position:absolute;inset:0;background-size:cover;background-position:center;filter:grayscale(1) blur(3px) brightness(.5);transition:filter .8s;box-shadow:inset 0 0 120px rgba(0,0,0,.8)}
+.foto.viva .fundo{filter:none}
+.foto .tag{position:relative}
+
+/* regra */
+.fitas3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:10px 0 8px}
+.fita3{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);background:#160f12;border:1px solid var(--fio);border-top:5px solid}
+.fita3 small{font:800 12px var(--mono);letter-spacing:.12em} .fita3 b{font:600 clamp(17px,1.35vw,22px)/1.35 var(--disp);color:var(--t2)}
+.fita3.h{border-top-color:var(--ac)} .fita3.h small,.exemplo-r .h{color:var(--ac2)} .fita3.t{border-top-color:#c58ab0} .fita3.t small,.exemplo-r .t{color:#e2a9cd} .fita3.p{border-top-color:var(--ok)} .fita3.p small,.exemplo-r .p{color:var(--ok)}
+.exemplo-r{margin:4px 0 14px;font:600 clamp(18px,1.45vw,24px)/1.4 var(--disp);color:var(--t2)}
+
+/* semana, lados */
+.dias{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:6px}
+.dias span{min-width:58px;padding:6px 10px;border-radius:8px;border:1px solid var(--fio);background:#160f12;text-align:center;font:800 13px var(--mono);letter-spacing:.1em;color:var(--t3)}
+.dias span.on{border-color:var(--ac);color:var(--ac2);background:#2d1f0e} .dias span.foi{color:var(--ok);border-color:rgba(143,217,162,.4)}
+.lados{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;margin:0 0 10px}
+.lado-b{min-height:46px;padding:0 20px;border-radius:999px;border:2px solid #c58ab0;background:#1d1218;color:#e2a9cd;font:800 14px var(--mono);letter-spacing:.08em;cursor:pointer}
+.lado-b.pay{border-color:var(--ac);color:var(--ac2);background:#221808}
+.lado-b.on{box-shadow:0 0 0 4px rgba(232,184,106,.2);background:#3d2c14}
+.placar{font:800 13px var(--mono);letter-spacing:.1em;color:var(--t3)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)} .lado-fim .trilho-c{padding-top:22px}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .fitas3{grid-template-columns:1fr} .foto{height:300px} }
+@media (max-width:620px){ .tag{width:200px} .trilho-c .tag:nth-child(n+2){display:none} .foto{height:240px} }
+@media (min-width:1101px){ .cartas.mini:has(.carta:nth-child(8)){grid-template-columns:repeat(8,minmax(0,1fr))} }

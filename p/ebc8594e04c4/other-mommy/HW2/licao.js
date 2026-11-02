@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Other Mommy",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ebc8594e04c4/other-mommy/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "present simple with he / she: she wears, she has, she doesn't sing, Does she smile? (-s, has, doesn't + verb, Does + verb without -s)",
   "abrir": "What does your mother wear at home?",
   "fecho": "<b>She wears</b>: he / she takes an -s. <b>She has</b>: have becomes has. <b>She doesn't sing</b>: doesn't + the verb, no -s. A question: <b>Does she smile?</b> Yes, she does.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at two mothers in a picture. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/ebc8594e04c4/other-mommy/img/live-cozinha.webp",
+      "img": "../img/live-cozinha.webp",
       "leg": "A kitchen at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Mommy wears glasses and a blue sweater.",
-          "img": "https://wolf-labs.pages.dev/p/ebc8594e04c4/other-mommy/img/live-cama.webp",
+          "img": "../img/live-cama.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Other Mommy has long hair.",
-          "img": "https://wolf-labs.pages.dev/p/ebc8594e04c4/other-mommy/img/live-armario.webp",
+          "img": "../img/live-armario.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She doesn't sing at night.",
-          "img": "https://wolf-labs.pages.dev/p/ebc8594e04c4/other-mommy/img/live-chapeu.webp",
+          "img": "../img/live-chapeu.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ebc8594e04c4/other-mommy/img/live-cozinha.webp",
+      "img": "../img/live-cozinha.webp",
       "leg": "A kitchen, late",
       "pede": "Look at the picture: a kitchen at night. Write 2 or 3 sentences about a woman you know. Use <b>she wears, she has</b> and <b>she doesn't</b>.",
       "ph": "My mother wears … She has … She doesn't …",

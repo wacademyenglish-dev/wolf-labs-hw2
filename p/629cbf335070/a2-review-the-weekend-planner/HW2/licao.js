@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Weekend Planner",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/629cbf335070/a2-review-the-weekend-planner/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 9 review, if and verb + verb: first conditional (if + present, will; unless); zero conditional; want / need / decide + to, enjoy / avoid + -ing; told / asked me + to; remember / forget + to; never if it will rain, never I enjoy to cook",
   "abrir": "What do you want to do this weekend?",
   "fecho": "<b>If + present, will</b>: <i>If it rains, I'll stay.</i> Never <i>if it will rain</i>. <b>Want / need / decide + to</b>; <b>enjoy / avoid + -ing</b>. <b>She told me to call</b>. <b>Don't forget to</b> pack.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a weekend in the mountains. A new scene, about 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/629cbf335070/a2-review-the-weekend-planner/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A window with snow and candles",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If it rains, we will stay in the cabin.",
-          "img": "https://wolf-labs.pages.dev/p/629cbf335070/a2-review-the-weekend-planner/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I want to climb the big hill.",
-          "img": "https://wolf-labs.pages.dev/p/629cbf335070/a2-review-the-weekend-planner/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Don't forget to pack your charger.",
-          "img": "https://wolf-labs.pages.dev/p/629cbf335070/a2-review-the-weekend-planner/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/629cbf335070/a2-review-the-weekend-planner/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A mountain window with candles",
       "pede": "Look at the picture: a cabin window with snow outside. Write 2 or 3 sentences about a trip: what you <b>want to</b> do, what you <b>will</b> do <b>if it rains</b>, and one thing <b>not to forget</b>.",
       "ph": "This weekend I want to …",

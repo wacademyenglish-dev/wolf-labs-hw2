@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Scientists Have Found",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/6678a60a8897/scientists-have-found/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "news with the present perfect: Scientists have found... / the thing first with the passive: A rock has been found; has / have + been + past participle; just between has and been; a finished time needs the past simple",
   "abrir": "What is the biggest news you have heard this week?",
   "fecho": "<b>have / has + past participle</b> for new news: <i>Scientists have found a rock.</i> The thing first: <b>has / have been + participle</b>: <i>A rock has been found.</i> Never <i>It has been found a rock</i>. <b>Just</b> goes in the middle: <i>has just been sent</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in the newsroom before the 9 PM bulletin. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/6678a60a8897/scientists-have-found/img/live-estudio.webp",
+      "img": "../img/live-estudio.webp",
       "leg": "The news studio, before the bulletin",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "A rock has been found on Mars.",
-          "img": "https://wolf-labs.pages.dev/p/6678a60a8897/scientists-have-found/img/live-marte.webp",
+          "img": "../img/live-marte.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Samples have been collected from the old river.",
-          "img": "https://wolf-labs.pages.dev/p/6678a60a8897/scientists-have-found/img/live-laboratorio.webp",
+          "img": "../img/live-laboratorio.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The new photos have just been sent to the newsroom.",
-          "img": "https://wolf-labs.pages.dev/p/6678a60a8897/scientists-have-found/img/live-redacao.webp",
+          "img": "../img/live-redacao.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/6678a60a8897/scientists-have-found/img/live-laboratorio.webp",
+      "img": "../img/live-laboratorio.webp",
       "leg": "Sample tubes in a dark lab",
       "pede": "Look at the picture: sample tubes in a dark lab. Write 2 or 3 news sentences about your own city or your week. Put the thing first, with <b>has been</b> or <b>have been</b>.",
       "ph": "A new … has been …",

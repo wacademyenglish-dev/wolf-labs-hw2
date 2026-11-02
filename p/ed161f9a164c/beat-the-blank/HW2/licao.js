@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Beat the Blank",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ed161f9a164c/beat-the-blank/img/live-mesa.webp",
+  "capa": "../img/live-mesa.webp",
   "alvo": "going around a word you can't find: It's a kind of ..., It's the thing you use for ...-ing, It's when you ..., It's like ..., but ...; relative words that / who / where / whose / when in the middle",
   "abrir": "Think of a word you forgot in English last week. What did you say instead?",
   "fecho": "When the word doesn't come, don't stop: go around it. <b>It's a kind of …</b> · <b>It's the thing you use for …-ing</b> · <b>It's when you …</b> · <b>It's like …, but …</b> A joint in the middle: <b>that · who · where · whose · when</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo unpack a new kitchen. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/ed161f9a164c/beat-the-blank/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "The table, ready to unpack",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It's the thing you use for grating cheese.",
-          "img": "https://wolf-labs.pages.dev/p/ed161f9a164c/beat-the-blank/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It's a person whose job is to fix pipes.",
-          "img": "https://wolf-labs.pages.dev/p/ed161f9a164c/beat-the-blank/img/live-cinto.webp",
+          "img": "../img/live-cinto.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It's when you want to say something and the word doesn't come.",
-          "img": "https://wolf-labs.pages.dev/p/ed161f9a164c/beat-the-blank/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -178,7 +178,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ed161f9a164c/beat-the-blank/img/live-cinto.webp",
+      "img": "../img/live-cinto.webp",
       "leg": "A roll of tools on an old table",
       "pede": "Look at the picture: some tools in a leather roll. Pick one and describe it to a friend who doesn't know the word. Don't say its name. Use <b>It's the thing you use for …-ing</b>, <b>It's like …, but …</b> or <b>It's a kind of …</b>",
       "ph": "It's the thing you use for …",

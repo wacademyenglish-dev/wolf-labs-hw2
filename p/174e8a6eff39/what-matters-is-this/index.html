@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · What Matters Is This · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Gloock&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>What Matters Is This · One Light</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>What Matters Is This · One Light</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Pitch Night at a small downtown theater: every speaker gets sixty seconds under one spotlight to ask the town for something.</p><p style="margin:0 0 6px"><b>The grammar:</b> the student says Rosa’s lines with the frame first (V); then reads her final draft, taps the six frames and finishes the rule (VI).</p><p style="margin:0 0 6px"><b>Short class (about 50 min):</b> I Your Voice · III The Talk · V The Teardown · VI Rosa’s Final Draft · VII The Town Votes · VIII Your Sixty Seconds · IX The Ghost Light. Skip if you’re short on time: IV Line by Line (EXTRA). Full lesson: about 57 min.</p><p style="margin:0"><b>Open with:</b> “Have you ever spoken in front of a crowd? What was it, and how did your body feel?”</p></div><!--/prep-->
+    <p>Pitch Night at a small downtown theater: every speaker gets sixty seconds under one spotlight to ask the town for something. First the student takes apart a real persuasive talk, then fixes Rosa’s flat draft for her library on wheels, and at the end gives a sixty-second pitch of their own. The grammar is how good speakers move the light onto one idea: the <b>what-cleft</b> (<i>What matters is the kids</i>), the <b>it-cleft</b> (<i>It isn’t the bus that changes lives. It’s the driver.</i>), <b>All I’m asking is…</b>, <b>The thing is…</b>, <b>The reason… is that…</b>, the emphatic <b>do / did</b>, and the pause <i>— and this is what matters —</i>.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>The important is…</i> (an adjective can’t be the subject), <i>Is the kids that…</i> (no <b>it</b>), <i>all what</i>, <i>the reason is because</i>, <i>the reason of</i>, <i>this is what that matters</i>, <i>did tried</i>.</p>
+    <h4>ON SCREEN</h4>
+    <p>One light only. The flat line sits in the dark; when the cleft comes out right, a single tungsten cone sweeps across the sentence and stops on the words that matter. Read the lit words a beat later and a little louder. In scene VII, a row of the house lights up with every fixed line.</p>
+    <h4>THE TALK</h4>
+    <p>Scene III: a teacher and poet on the danger of silence (about four minutes), sealed until the first play, in four chapters. Each chapter shows two or three tap tasks next to the video: read them before you press play. After the talk: which word did you hear (▶ plays the moment), then two clefts said out loud with Check. The chapters <b>skip 3:06–3:25 on purpose</b> (a list of violent images). Chapter 3 mentions a boy beaten for being gay and a homeless man; if the student prefers, stay with the woman at the gala.</p>
+    <h4>THE NEW PAGES</h4>
+    <ul>
+      <li><b>V The Teardown</b>: Rosa’s flat line sits in the dark; the student says it with the frame first, then Check: the light lands on the right words.</li>
+      <li><b>VI Rosa’s Final Draft</b>: tap the six frames, finish the rule. The rule then stays in the corner.</li>
+      <li><b>VII The Town Votes</b>: five causes, only three get the money. The student ranks them, then compares with your order.</li>
+    </ul>
+    <h4>A NOTE</h4>
+    <p>Inversion for emphasis is taught in other C1 lessons and is not practiced here.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>silence</i>, <i>consequences</i>, <i>honest</i>, <i>sacrifice</i> and <i>dignity</i>, before the video, in mystery meaning and the word in your life. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE TOWN VOTES (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Scene VII is now a ranking: five pitches tonight, and the town can fund only three. The student orders the causes and defends the top one and the last one with a cleft (What the town really needs is… / It isn’t … that matters; it’s…). There is no right order. Wait five seconds in silence, use the PUSH line (only you see it), then tap “Show my teacher’s order” and agree on one top 3 together. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Voice, V The Teardown, VII The Town Votes and VIII Your Sixty Seconds.</li>
+      <li><b>Listen</b>: II The Words, III The Talk and IV Line by Line.</li>
+      <li><b>Focus</b>: VI Rosa’s Final Draft.</li>
+      <li><b>Write</b>: IX The Ghost Light.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* WHAT MATTERS IS THIS (Main C1) · pergunta-surpresa · 28/10/2026 · clivadas e ênfase */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'Who is the best speaker you have ever heard in real life?',
+    opc: ['A teacher', 'A boss or colleague', 'Someone in my family'], st: ['What made them special was …', 'It wasn’t what they said; it was …'],
+    ex: 'A teacher in high school. It wasn’t what she said that I remember; it was the way she waited before the important part.', push: 'What is one thing you could copy from them tomorrow?' },
+  { cena: 'video', tipo: 'Opinion', q: 'When something is wrong at work or school, do people around you speak up or stay quiet?',
+    opc: ['They speak up', 'They stay quiet', 'It depends who is listening'], st: ['The thing is, …', 'What stops people is …'],
+    ex: 'They stay quiet. The thing is, nobody wants to be the first. What stops people is the fear of looking difficult.', push: 'And you? When did you last speak up?' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'Would you rather give a sixty-second speech to five hundred strangers, or a ten-minute speech to ten friends?',
+    opc: ['500 strangers', '10 friends'], st: ['I’d rather …, because what scares me is …', 'It’s not the … that worries me; it’s …'],
+    ex: 'The strangers. It’s not the crowd that worries me; it’s the people who know me and will remember every mistake.', push: 'Sixty seconds starts now: what do you say?' },
+  { cena: 'pitch', tipo: 'What if', q: 'The town gives you $10,000 tomorrow for one project. What do you fund?',
+    opc: ['Something for kids', 'Something green', 'Something for culture'], st: ['What I’d do is …', 'The reason I’d choose … is that …'],
+    ex: 'Something green. What I’d do is plant trees on every street near the schools. The reason is that shade costs nothing once it grows.', push: 'Someone says it’s a waste of money. Answer them with “All I’m asking is…”.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WHAT MATTERS IS THIS (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O ranking entra no lugar de "VII · Sixty Seconds" (seis frases chatas reditas + Check: a mesma prática
+   controlada do V, repetida). A aula tem o pessoal (I) e o pitch livre (VIII); faltava uma DECISÃO.
+   Na Noite dos Pitches, cinco causas pedem dinheiro à cidade e só três ganham: o aluno ordena, o professor
+   mostra a sua ordem, e os dois fecham um top 3. A gramática (clivadas: What matters is · It isn't … that ·
+   All I'm asking is · The reason … is that) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'ranking', troca: 'sessenta', est: 'o', min: 7, img: 'holofote', rot: 'The Town Votes', t: 'Five pitches tonight. The town can fund only three.',
+    p: 'Order the five causes. Defend your top one and your last one with a cleft.',
+    formato: 'ranking',
+    q: 'Which causes should the town fund?',
+    itens: ['Rosa’s library on wheels', 'Street lights on the river path', 'A new skate park', 'A community vegetable garden', 'Longer hours at the public pool'],
+    st: ['What the town really needs is …', 'It isn’t … that matters most; it’s …', 'The reason I put … last is that …', 'All I’m asking is that we …'],
+    ex: 'My top one is the street lights. What matters most is that people feel safe walking home. And it isn’t a skate park that the town needs: the kids already use the school yard. The reason I put the pool last is that it only helps in summer.',
+    push: 'Rosa is in the front row. Look at her and explain her place.',
+    prof: [1, 0, 3, 2, 4],
+    dica: 'Tap from the cause the town needs most to the one it needs least. Tap again to take it out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "Backstage: you and your voice.",
+   "p": "Tap a card. Answer. Then your teacher answers."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen for them."
+  },
+  "video": {
+   "t": "A poet on the danger of silence.",
+   "p": "Read each task first. Play. Tap the answer."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it again."
+  },
+  "desmonte": {
+   "t": "Rosa’s pitch is true, but flat.",
+   "p": "Say it with the frame first. Then tap Check."
+  },
+  "regra": {
+   "t": "Hold the idea back, then land on it.",
+   "p": "Read it aloud. Tap the six frames. Finish the rule."
+  },
+  "cv-ranking": {
+   "t": "Five pitches. Money for three.",
+   "p": "Rank them. Defend first and last with a cleft."
+  },
+  "pitch": {
+   "t": "Your turn under the light.",
+   "p": "Pick a real cause. Build it, then sixty seconds."
+  },
+  "fim": {
+   "t": "What would you never stay silent about?",
+   "p": "Write your pitch. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Clivadas e ênfase para persuadir (What matters is…, It isn’t X that…, it’s Y, All I’m asking is…, The reason… is that…): Pitch Night num teatro, sessenta segundos sob um holofote.",
+  "armadilha": "O português “o importante é” vira “The important is…”; sai “Is the kids that…” (sem it), “all what”, “the reason is because”, “the reason of”, “this is what that matters” e “did tried”.",
+  "pal": [
+   "What matters is …",
+   "It isn’t … that …, it’s …",
+   "All I’m asking is …",
+   "The thing is, …",
+   "The reason … is that …",
+   "I do believe …",
+   "pitch",
+   "fund"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: um holofote só, e a frase que segura a ideia antes de pousar nela.",
+   "perg": "Have you ever spoken in front of a crowd?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento sobre falar em público e a própria voz; o professor também responde.",
+   "perg": "How did your body feel the last time you spoke in public?",
+   "pula": "Duas cartas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (silence, consequences, honest, sacrifice, dignity) com palpite primeiro.",
+   "perg": "Which word matters most to you?",
+   "pula": "Só as cinco palavras, sem o “word in your life”."
+  },
+  "video": {
+   "obj": "A palestra em quatro capítulos com tarefas; o capítulo 3 tem tema pesado, pode ficar na mulher da gala.",
+   "perg": "What does she say silence costs?",
+   "pula": "Capítulos 1 e 2 bastam."
+  },
+  "falas": {
+   "obj": "Todas as falas do vídeo uma a uma; as palavras amarelas abrem a explicação.",
+   "perg": "What exactly did she say here?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "desmonte": {
+   "obj": "A frase plana da Rosa dita de novo com a moldura na frente; a luz pousa nas palavras certas.",
+   "perg": "Where should the light land?",
+   "pula": "Três frases bastam."
+  },
+  "regra": {
+   "obj": "O discurso final da Rosa: ler, tocar as seis molduras e completar a regra.",
+   "perg": "What does each frame hold back?",
+   "pula": "Toque as molduras e complete só metade da regra."
+  },
+  "cv-ranking": {
+   "obj": "Cinco causas, verba para três: ordenar, defender a primeira e a última com clivada, chegar a um top 3 juntos.",
+   "perg": "What is it that the town really needs?",
+   "pula": "Defenda só a primeira e pule o top 3."
+  },
+  "pitch": {
+   "obj": "O aluno monta um pitch real, batida por batida, e fala em menos de sessenta segundos.",
+   "perg": "What is it that you want the town to fund?",
+   "pula": "Só a abertura e o pedido final."
+  },
+  "fim": {
+   "obj": "Escrita: o pitch do aluno sobre algo sobre o qual nunca ficaria calado.",
+   "perg": "What would you never stay silent about?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com clivadas sobre causas, prioridades e falar em público.",
+   "perg": "What matters most to you here?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre causas e verba pública, cada lado com uma clivada.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Rosa da biblioteca sobre rodas e responde às perguntas difíceis da plateia.",
+   "perg": "Why should the town fund a bus of books?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Put the light on one idea.",
+   "p": "Pick a card. Answer with a cleft.",
+   "palavras": [
+    "What matters is …",
+    "It isn’t … that …, it’s …",
+    "All I’m asking is …",
+    "The thing is, …",
+    "The reason … is that …"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CAUSE",
+     "q": "What cause would you give sixty seconds under the light to?",
+     "fup": "Who would you need to convince?",
+     "st": [
+      "What my town really needs is …"
+     ],
+     "ex": "What my town really needs is shade: trees on the avenue where people wait for the bus."
+    },
+    {
+     "k": "A GOOD SPEAKER",
+     "q": "Who is the best speaker you’ve ever heard live?",
+     "fup": "What made them good?",
+     "st": [
+      "It wasn’t … that impressed me, it was …"
+     ],
+     "ex": "It wasn’t her words that impressed me, it was the way she paused before the important ones."
+    },
+    {
+     "k": "SILENCE",
+     "q": "When is staying silent the right choice?",
+     "fup": "And when is it dangerous?",
+     "st": [
+      "The thing is, …",
+      "What makes silence dangerous is …"
+     ],
+     "ex": "The thing is, silence is fine in a small argument; what makes it dangerous is when someone is being treated unfairly."
+    },
+    {
+     "k": "AT WORK",
+     "q": "What do you wish your boss understood?",
+     "fup": "Have you said it?",
+     "st": [
+      "All I’m asking is …",
+      "What I need is …"
+     ],
+     "ex": "All I’m asking is one day a week without meetings."
+    },
+    {
+     "k": "THE REASON",
+     "q": "Why did you start learning English, really?",
+     "fup": "Has the reason changed?",
+     "st": [
+      "The reason I started is that …"
+     ],
+     "ex": "The reason I started is that I wanted to understand films without subtitles."
+    },
+    {
+     "k": "I DO",
+     "q": "What do you truly believe in, even if people laugh?",
+     "fup": "Why does it matter to you?",
+     "st": [
+      "I do believe that …",
+      "What people don’t see is …"
+     ],
+     "ex": "I do believe that small libraries change neighborhoods; what people don’t see is the kids who go there every day."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "What matters is …",
+    "It isn’t … that …, it’s …",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Public money: libraries or sports facilities?",
+     "a": "Libraries",
+     "b": "Sports",
+     "fa": [
+      "Libraries. What changes lives is reading.",
+      "Books last longer than a pitch."
+     ],
+     "fb": [
+      "Sports. It isn’t books that keep teenagers busy, it’s football.",
+      "Health is what matters first."
+     ]
+    },
+    {
+     "q": "A great pitch: emotion or numbers?",
+     "a": "Emotion",
+     "b": "Numbers",
+     "fa": [
+      "Emotion. What people remember is a story.",
+      "Numbers don’t make anyone cry."
+     ],
+     "fb": [
+      "Numbers. What the town needs to see is the cost.",
+      "Feelings don’t pay the driver."
+     ]
+    },
+    {
+     "q": "Should companies speak out on social issues?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. The thing is, silence is also a message.",
+      "Customers expect values."
+     ],
+     "fb": [
+      "No. All I want from a company is a good product.",
+      "It’s usually just marketing."
+     ]
+    },
+    {
+     "q": "Is sixty seconds enough to persuade anyone?",
+     "a": "Enough",
+     "b": "Too short",
+     "fa": [
+      "Enough. What matters is one clear idea.",
+      "Long speeches lose the room."
+     ],
+     "fb": [
+      "Too short. It isn’t the idea that’s hard, it’s the detail.",
+      "Big problems need time."
+     ]
+    }
+   ],
+   "fim": "Four rounds. What mattered tonight was that you spoke."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Rosa now.",
+   "p": "The audience questions you.",
+   "aluno": "Listen to your teacher’s question. Answer as Rosa, with a cleft to put the light on your point.",
+   "perguntas": [
+    "Rosa, why a library on wheels and not a normal library?",
+    "Isn’t the bus the most expensive part?",
+    "Who actually uses it?",
+    "Why should the town fund you and not the other four?",
+    "What happens if you don’t get the money?",
+    "What’s the one thing you want us to remember tonight?"
+   ],
+   "st": [
+    "What matters is …",
+    "It isn’t the bus that …, it’s …",
+    "All I’m asking is …"
+   ],
+   "ex": "It isn’t the bus that changes lives, it’s the driver. All I’m asking is one more year."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

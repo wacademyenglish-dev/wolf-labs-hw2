@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de The Life I Was Going to Have (11/10/2026): cinco falas do trailer de Dark Matter.
+   Forma: o corte do diretor. Alvo: o futuro visto do passado (was going to, was about to, would, was supposed to).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [0, 1], k: 'You wouldn’t believe me', cena: 'INT. KITCHEN · NIGHT', quem: 'Jason',
+    contexto: 'Jason comes back home changed. He wants to explain, but the truth sounds impossible.',
+    diretor: 'Jason comes home changed. He wants to tell his wife, but he can’t. What does he say?',
+    frase: 'Something happened to me, but <b>you wouldn’t believe me</b> if I told you.',
+    explica: 'He was going to tell her everything. Then he stopped.',
+    formula: 'He <b>was going to</b> tell her, but he didn’t. (the plan that didn’t happen)',
+    tente: 'Tell me about something you were going to say, and didn’t.',
+    ex: 'I was going to tell my boss I was unhappy, but I lost my courage.' },
+  { i: [2, 3, 4], k: 'The toast', cena: 'INT. DINING ROOM · NIGHT', quem: 'Jason and Daniela',
+    contexto: 'A happy family dinner. Jason makes a toast to his wife.',
+    diretor: 'A family dinner. Jason raises his glass to his wife. What does he say? What does she answer?',
+    frase: 'To my extraordinary wife Daniela, <b>I do not deserve you</b>. — That’s true.',
+    explica: 'A sweet line and a funny answer: their life is good, and they know it.',
+    formula: 'They <b>were about to</b> have a perfect night. (about to = in the next moment)',
+    tente: 'Tell me about a moment when something was about to go wrong.',
+    ex: 'I was about to leave the house when I saw I had no shoes on!' },
+  { i: [9, 10], k: 'One night', cena: 'EXT. CHICAGO STREET · NIGHT', quem: 'A voice in the trailer',
+    contexto: 'The narrator describes his perfect life... and then the turn.',
+    diretor: 'His life was perfect... until one night. What happens? Say it like a trailer voice.',
+    frase: 'Until one night, <b>he doesn’t make it home</b>.',
+    explica: '<i>Make it home</i> = arrive home. Trailers tell stories in the present to make them feel close.',
+    formula: 'He <b>was about to</b> get home when he <b>was taken</b>.',
+    tente: 'Tell me about a night that changed a plan.',
+    ex: 'We were about to leave for the airport when the storm started.' },
+  { i: [20, 21, 22, 23, 24, 25], k: 'Who are you?', cena: 'INT. A HOUSE THAT ISN’T HIS · DAY', quem: 'Jason and a woman',
+    contexto: 'He finds his wife. In this world, she has never met him.',
+    diretor: 'He finds the woman he married. She doesn’t know him. What does he say? What does she answer?',
+    frase: 'It’s Jason. You know me. ... Just tell me you know who I am. — <b>I’ve never seen you before in my life.</b>',
+    explica: 'Everything was supposed to be in its place. Nothing is.',
+    formula: 'They <b>were supposed to</b> be there. (the agreement, the expected thing that failed)',
+    tente: 'Tell me about a time someone was supposed to be there and wasn’t.',
+    ex: 'My friend was supposed to meet me at the cinema, but she forgot!' },
+  { i: [26, 27, 28], k: 'The doors', cena: 'INT. THE BOX · NO TIME', quem: 'A voice in the trailer',
+    contexto: 'He discovers a corridor of doors. Each one opens into another possible life.',
+    diretor: 'He sees a corridor of doors. Behind each one there is another life. What is behind them?',
+    frase: 'Behind every door in there is <b>a version of your life that you could have lived</b>.',
+    explica: 'Every choice he didn’t make is a door. In one, he was going to be a famous scientist.',
+    formula: 'He <b>was going to</b> be a famous scientist. · He knew he <b>would</b> find them.',
+    tente: 'Behind one of your doors, who were you going to be?',
+    ex: 'Behind one door I was going to be a chef in Italy. I’d love to open it!' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'diretor', cor: '#6b8fe0', titulo: 'The other lives.', sub: 'Read the moment, write the line in your head, then hear what Jason really says.', rot: { por: 'WHAT IT MEANS', padrao: 'WAS GOING TO · WAS ABOUT TO', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

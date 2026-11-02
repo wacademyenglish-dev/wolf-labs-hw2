@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Off the Top of My Head · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=DM+Serif+Display:ital@0;1&family=Karla:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Off the Top of My Head · The Gallery</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Off the Top of My Head · The Gallery</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Friday night at a tiny story club in Chicago.</p><p style="margin:0 0 6px"><b>The grammar:</b> An idiom is a fixed picture. Keep the words; move only the verb (she spilled the beans).</p><p style="margin:0 0 6px"><b>Short class (about 56 min):</b> I You and Stories · III The Hunt · V The Arena · VI The Wall · VII The Host’s Notes · VIII The Open Mic · IX Off the Top of Your Head · X Last Call. Skip if you’re short on time: IV Line by Line (marked EXTRA on your screen). On the practice pages the student speaks first and taps Check on their own screen. Full lesson: about 60 min.</p><p style="margin:0"><b>Open with:</b> “Who tells the best stories among your family and friends? Why?”</p></div><!--/prep-->
+    <p>Friday night at a tiny story club in Chicago. Before the open mic, the host plays a talk by a veteran teacher, a born storyteller, and the student hunts the expressions in it. Then the club’s famous wall: six paintings of idioms taken literally (beans spilled on a table, an elephant next to a sofa). After the rule, the open mic: six stories, each with a broken idiom to fix. The grammar of an idiom: <b>the words are fixed</b> (every <i>the</i>, every <i>-s</i>), <b>only the verb and the possessive move</b> (she <i>spilled</i> the beans, off the top of <i>her</i> head), and you <b>never translate one word for word</b>: you find the English picture.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p>Students translate their own idioms word by word and paint a picture nobody in English knows: <i>the eyes of the face</i>, <i>the last drop</i>, <i>stepped on the ball</i>, <i>the chip fell</i>, <i>two rabbits</i>. The most dangerous one: <b>kick the bucket</b> means <b>to die</b>, never “to give up in anger”. Say it with a smile, then never let it pass. The second trap is changing what is fixed: <i>spilled the bean</i>, <i>an elephant in the room</i>, <i>from the top of my head</i>.</p>
+    <h4>ON SCREEN</h4>
+    <p>The gallery: each painting in a dark frame with a brass plate that is engraved when the student taps Check. The OPEN MIC sign: the bulbs light up when the six stories are checked.</p>
+    <p><b>The Wall (VI)</b>: six paintings. The student describes the painting and guesses the idiom; the card below tells what happened (Maya’s little brother told Sam everything). The student says it with the idiom, then taps Check: the model sentence appears and the brass plate is engraved with the idiom and its meaning. Under it, one question to talk about.</p>
+    <p><b>The Host’s Notes (VII)</b>: Dee, the host, writes down the best moments of the night, on dark paper. The student reads the notes out loud and taps every idiom (six; every word can be tapped, wrong taps go red). Then they finish the rule on the right by choosing inside each line (the beans, broke, her head, the elephant, an arm and a leg, throw in the towel; kick the bucket = to die). The rule then stays in the corner of VIII.</p>
+    <p><b>The Open Mic (VIII)</b>: six short stories, each ending with a translated, broken idiom (<i>the eyes of the face</i>, <i>kicked the bucket</i>, <i>the last drop</i>…). The student tells each story out loud with the right idiom, then taps Check: the fixes appear and the bulbs light. Then the student tells one story like these from their own life.</p>
+    <h4>THE TALK</h4>
+    <p>Scene III: the talk (about eight minutes), sealed, in four chapters. <b>Before</b>: two guesses (no right answer yet; the chapters tell). <b>Watch</b>: every chapter has a short task next to the video: read it, play the chapter (it stops by itself), tap the answer. In chapters 2 and 3 the hunt shows the MEANING (<i>end of discussion</i>) and the student taps the words the speaker used (<i>case closed</i>, <i>a bunch of hooey</i>, <i>sucks all the life out of you</i>). Chapter 4 is true or false. <b>After</b>: why she talks like this (one tap) and four lines with one wrong word: the student says the right one, then Check. Every line has a ▶ time button that plays the talk from that moment: the exact words matter, because idioms are fixed. Note: the captions write “on the road” where she says “on a roll”, so that moment is not a task.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>educators</i>, <i>poverty</i>, <i>relationships</i>, <i>apologize</i> and <i>difficult</i>, before the video, in predict the story and the word in your life. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE ARENA (V) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the talk: the colleague’s line, “They don’t pay me to like the kids.” Your student picks a side and defends it for one minute (start the timer) with two idioms from tonight, then taps Swap sides and defends the other one. There is no right side. Wait five seconds in silence before the first minute, and use the PUSH line (only you see it) to make it harder. Recast quietly while they talk (fixed words: case closed, a bunch of hooey); at the end ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Stories, V The Arena, VI The Wall, VIII The Open Mic and IX Off the Top of Your Head (no longer extra).</li>
+      <li><b>Listen</b>: II The Words, III The Hunt and IV Line by Line.</li>
+      <li><b>Focus</b>: VII The Host’s Notes.</li>
+      <li><b>Write</b>: X Last Call.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* OFF THE TOP OF MY HEAD (Main C1) · pergunta-surpresa · 28/10/2026 · idioms: fixed words, only the verb moves */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'Who was the champion in your life: the adult who never gave up on you?',
+    opc: ['A teacher', 'Someone in my family', 'A coach or a boss'], st: ['Off the top of my head, …', 'They never threw in the towel with me, even when …'],
+    ex: 'A coach I had at fourteen. I dropped the ball in every game, but he never threw in the towel with me.', push: 'Did you ever tell them? What would you say now?' },
+  { cena: 'parede', tipo: 'Would you rather', q: 'Would you rather be the person who spills the beans, or the one who keeps every secret forever?',
+    opc: ['Spill the beans', 'Keep every secret'], st: ['I’d rather …, because …', 'Keeping it to myself would …'],
+    ex: 'I’d rather keep every secret. I spilled the beans about a surprise party once, and my friend still teases me.', push: 'What if the secret was hurting someone? Still quiet?' },
+  { cena: 'regra', tipo: 'Opinion', q: 'Is there an idiom in your language that you wish English had?',
+    opc: ['Yes, I have one', 'Not really'], st: ['In my language we say … It means …', 'The English picture would be …'],
+    ex: 'Yes: we say “to push with your belly”, which means to put something off. English would say “to drag your feet”.', push: 'Translate it word for word. Would an English speaker understand? Why not?' },
+  { cena: 'mic', tipo: 'What if', q: 'You get two minutes at the open mic tonight, no preparation. What story do you tell?',
+    opc: ['Something funny', 'Something embarrassing', 'I’d leave the stage!'], st: ['Off the top of my head, I’d tell …', 'It was a piece of cake until …'],
+    ex: 'Something embarrassing: the day I broke the ice at a new job by calling my boss by the wrong name.', push: 'Start now. You have twenty seconds and one idiom.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* OFF THE TOP OF MY HEAD (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A arena ENTRA depois do IV (Line by Line, extra), colada na palestra: o único extra é o Line by Line,
+   que fica (as palavras amarelas explicam-se lá). A aula curta vai a ~56 min. A frase do colega na
+   palestra ("They don't pay me to like the kids") vira a arena. As expressões da aula (case closed,
+   a bunch of hooey, drop the ball, off the top of my head…) moram nos iniciadores. Formato: arena. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'arena', apos: 'falas', est: 'o', min: 5, img: 'palco', rot: 'The Arena', t: 'Back to the talk: is a teacher paid to like the kids?',
+    p: 'Pick a side and defend it for one minute, with two idioms from tonight. Then swap and defend the other side.',
+    formato: 'arena', segundos: 60,
+    q: '“They don’t pay me to like the kids. They pay me to teach.”',
+    lados: [ { nome: 'The colleague is right', arg: 'Teach the lesson well. Liking every kid is a bonus, not the job.' },
+             { nome: 'The speaker is right', arg: 'Kids don’t learn from people they don’t like. The bond comes first.' } ],
+    st: ['Off the top of my head, …', 'Honestly, that’s a bunch of hooey, because …', 'A teacher who … really drops the ball.', 'For me it’s case closed: …'],
+    ex: 'The speaker is right. Off the top of my head, my best teacher wasn’t the smartest one; she just believed in us. A teacher who only reads the book and never looks at the kids really drops the ball. Case closed.',
+    push: 'Think of the teacher you liked least. Did you learn anything from them? Then the colleague has a point.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "You, stories, and your expressions.",
+   "p": "Tap a card. Answer. Then your teacher answers."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen for them."
+  },
+  "video": {
+   "t": "Every kid needs a champion. Hunt the idioms.",
+   "p": "Guess first. Play each chapter. Tap your answers."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it again."
+  },
+  "cv-arena": {
+   "t": "Is a teacher paid to like the kids?",
+   "p": "Defend a side for one minute. Then swap."
+  },
+  "parede": {
+   "t": "Six idioms, painted literally.",
+   "p": "Guess the idiom. Say it. Then tap Check."
+  },
+  "regra": {
+   "t": "The host’s notes, Friday night.",
+   "p": "Read aloud. Tap every idiom. Finish the rule."
+  },
+  "mic": {
+   "t": "Six stories. Each idiom is broken.",
+   "p": "Tell it with the right idiom. Then tap Check."
+  },
+  "roda": {
+   "t": "Your life, no time to prepare.",
+   "p": "Tap a card. Answer fast with its idiom."
+  },
+  "fim": {
+   "t": "Natural, or overdone?",
+   "p": "A story from your week, two idioms. To My notes."
+  }
+ },
+ "prep": {
+  "obj": "Expressões idiomáticas como imagem fixa (spill the beans, the elephant in the room, off the top of my head): uma noite num clube de histórias em Chicago, com a palestra de uma professora veterana.",
+  "armadilha": "O brasileiro traduz a própria expressão palavra por palavra (“the eyes of the face”, “the last drop”, “stepped on the ball”) e mexe no que é fixo (“spilled the bean”). E “kick the bucket” é morrer, nunca “chutar o balde”.",
+  "pal": [
+   "off the top of my head",
+   "spill the beans",
+   "the elephant in the room",
+   "cost an arm and a leg",
+   "throw in the towel",
+   "break the ice",
+   "case closed",
+   "kick the bucket"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: a expressão é uma imagem fixa; só o verbo e o possessivo mudam.",
+   "perg": "Who tells the best stories in your family?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento sobre histórias e expressões de família; o professor também responde.",
+   "perg": "What expression did you grow up hearing?",
+   "pula": "Duas cartas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir, com palpite primeiro.",
+   "perg": "What do you think the talk is about?",
+   "pula": "Só as cinco palavras, sem o “word in your life”."
+  },
+  "video": {
+   "obj": "A palestra em quatro capítulos: tarefas curtas, caçar as expressões, verdadeiro ou falso.",
+   "perg": "Which expression did she use for that?",
+   "pula": "Capítulos 1 e 2 bastam."
+  },
+  "falas": {
+   "obj": "Todas as falas do vídeo uma a uma; as palavras amarelas abrem a explicação.",
+   "perg": "What exactly did she say here?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-arena": {
+   "obj": "Arena: “They don’t pay me to like the kids.” Defender um lado por um minuto com duas expressões, depois trocar.",
+   "perg": "Is a teacher paid to like the kids?",
+   "pula": "Um lado só, sem a troca."
+  },
+  "parede": {
+   "obj": "Seis pinturas literais: descrever, adivinhar a expressão e dizer a frase com ela.",
+   "perg": "What idiom is this painting?",
+   "pula": "Quatro pinturas bastam."
+  },
+  "regra": {
+   "obj": "As notas da Dee: ler, tocar as seis expressões e completar a regra (o que é fixo, kick the bucket).",
+   "perg": "Which words in this idiom can you change?",
+   "pula": "Toque as expressões e complete só metade da regra."
+  },
+  "mic": {
+   "obj": "Seis histórias com expressão traduzida e quebrada; o aluno conserta e conta uma da própria vida.",
+   "perg": "What’s the English picture for that?",
+   "pula": "Três histórias bastam, sem a do aluno."
+  },
+  "roda": {
+   "obj": "Perguntas rápidas sobre a vida real, cada uma com a expressão da carta.",
+   "perg": "Off the top of your head, what …?",
+   "pula": "Três cartas bastam."
+  },
+  "fim": {
+   "obj": "Escrita: uma história da semana com duas expressões da noite.",
+   "perg": "What happened this week that deserves an idiom?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com expressões fixas sobre a vida do aluno, sem tradução literal.",
+   "perg": "What’s the English picture for that?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre expressões, professores e histórias, com uma expressão por argumento.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta uma história de open mic em quatro passos, com três expressões no lugar certo.",
+   "perg": "Where does your story start?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More idioms, real life.",
+   "p": "Pick a card. Use the idiom on it.",
+   "palavras": [
+    "spill the beans",
+    "break the ice",
+    "cost an arm and a leg",
+    "throw in the towel",
+    "the elephant in the room",
+    "off the top of my head"
+   ],
+   "cartas": [
+    {
+     "k": "SPILL THE BEANS",
+     "q": "Who in your life can never keep a secret?",
+     "fup": "What did they spill?",
+     "st": [
+      "My … always spills the beans.",
+      "Last time, …"
+     ],
+     "ex": "My sister always spills the beans; last time, she told my mom about my new job before I did."
+    },
+    {
+     "k": "BREAK THE ICE",
+     "q": "How do you break the ice with someone new?",
+     "fup": "Has it ever gone wrong?",
+     "st": [
+      "I usually break the ice by …"
+     ],
+     "ex": "I usually break the ice by asking about their weekend, never about their job."
+    },
+    {
+     "k": "AN ARM AND A LEG",
+     "q": "What cost you an arm and a leg, and was it worth it?",
+     "fup": "Would you buy it again?",
+     "st": [
+      "… cost me an arm and a leg, but …"
+     ],
+     "ex": "My braces cost me an arm and a leg, but I smile more now."
+    },
+    {
+     "k": "THE TOWEL",
+     "q": "When did you almost throw in the towel, and didn’t?",
+     "fup": "What kept you going?",
+     "st": [
+      "I nearly threw in the towel when …",
+      "What kept me going was …"
+     ],
+     "ex": "I nearly threw in the towel in my second year of college; what kept me going was one teacher."
+    },
+    {
+     "k": "THE ELEPHANT",
+     "q": "Is there an elephant in the room at your work or family table?",
+     "fup": "Will anyone mention it?",
+     "st": [
+      "The elephant in the room is …",
+      "Nobody wants to …"
+     ],
+     "ex": "The elephant in the room is that the project is late, and nobody wants to say it first."
+    },
+    {
+     "k": "BRAZILIAN PICTURES",
+     "q": "Which Brazilian expression would you love to export, and how would you explain it?",
+     "fup": "Is there an English picture for it?",
+     "st": [
+      "In Portuguese we say …, which basically means …",
+      "The closest English idiom is …"
+     ],
+     "ex": "In Portuguese we say “empurrar com a barriga”, which basically means to put something off; the closest English idiom is “kick the can down the road”."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "The thing is, …",
+    "case closed",
+    "off the top of my head"
+   ],
+   "rodadas": [
+    {
+     "q": "Should learners use idioms, or just speak clearly?",
+     "a": "Use idioms",
+     "b": "Speak clearly",
+     "fa": [
+      "Use them. One good idiom breaks the ice instantly.",
+      "That’s how natives really talk."
+     ],
+     "fb": [
+      "Speak clearly. A wrong idiom costs more than no idiom.",
+      "Clarity first, case closed."
+     ]
+    },
+    {
+     "q": "Do the best teachers need to like their students?",
+     "a": "Yes",
+     "b": "Not necessarily",
+     "fa": [
+      "Yes. Kids know when you don’t, and they throw in the towel.",
+      "Every kid needs a champion."
+     ],
+     "fb": [
+      "Not necessarily. Respect and good teaching are enough.",
+      "Liking can’t be part of a contract."
+     ]
+    },
+    {
+     "q": "Good storytellers: born or made?",
+     "a": "Born",
+     "b": "Made",
+     "fa": [
+      "Born. You can’t teach timing.",
+      "Some people just light up a room."
+     ],
+     "fb": [
+      "Made. Off the top of my head, I know three people who learned it.",
+      "Practice beats talent."
+     ]
+    },
+    {
+     "q": "Should someone tell a story at the open mic in their second language?",
+     "a": "Go for it",
+     "b": "Wait a bit",
+     "fa": [
+      "Go for it. Mistakes are part of the charm.",
+      "The audience is on your side."
+     ],
+     "fb": [
+      "Wait a bit. A broken idiom can kill the punchline.",
+      "Practice with friends first."
+     ]
+    }
+   ],
+   "fim": "Four rounds, no towels thrown. Case closed."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Open Mic",
+   "t": "Your three-minute story.",
+   "p": "One step at a time. Three idioms.",
+   "prof": "A light, true story; watch the fixed words and stop any word-for-word Portuguese picture.",
+   "passos": [
+    {
+     "q": "Set the scene: where were you, and who was there?",
+     "st": [
+      "So, picture this: …"
+     ],
+     "ex": "So, picture this: my cousin’s wedding, two hundred people, and I was giving the speech."
+    },
+    {
+     "q": "What went wrong?",
+     "st": [
+      "Then someone spilled the beans about …",
+      "The elephant in the room was …"
+     ],
+     "ex": "Then my uncle spilled the beans about the groom’s first girlfriend, into the microphone."
+    },
+    {
+     "q": "How did you deal with it?",
+     "st": [
+      "I was about to throw in the towel, but …",
+      "Off the top of my head, I …"
+     ],
+     "ex": "I was about to throw in the towel, but off the top of my head I made a joke about exes."
+    },
+    {
+     "q": "How did it end?",
+     "st": [
+      "In the end, …",
+      "It cost me …, but …"
+     ],
+     "ex": "In the end, everybody laughed, and the groom still talks to me."
+    }
+   ],
+   "fim": "The bulbs are on. Take a bow."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

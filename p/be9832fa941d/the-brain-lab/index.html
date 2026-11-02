@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Brain Lab · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Brain Lab · The Scan</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Brain Lab · The Scan</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A lesson about what a second language does to the brain, with a short video and two real tests.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Dial: Not just “faster”. How MUCH faster?</p><p style="margin:0 0 6px"><b>Short class (about 43 min):</b> I The Language Passport · II The Stroop Test · IV The Video · VI The Dial · VII Which Bilingual Are You? · X Your Brain Report. Skip if you’re short on time: VIII, IX (marked EXTRA on your screen). Full lesson: about 57 min.</p><p style="margin:0"><b>Open with:</b> “Which language do you dream in? Always the same one?”</p></div><!--/prep-->
+    <p>A lesson about what a second language does to the brain, with a short video and two real tests. <b>Your student is the volunteer</b> in a language lab. <b>You are the researcher</b>: you ask, you start the tests, you read the results. Every scene lights up one region of the brain on the screen. The grammar is <b>how MUCH more</b>: <i>I was a lot slower in English. Switching is far harder.</i> The trap: <i>very faster</i>, <i>more easier</i>. The big question: <b>is it ever too late to learn a language?</b></p>
+    <h4>THE PASSPORT</h4>
+    <p>Scene I is only talk. The last question is a trap: if your student says <i>very harder</i>, tap it and don’t correct. The report gives it back at the end.</p>
+    <h4>THE TESTS ARE REAL</h4>
+    <p>Scenes II and VIII: press Start, then tap ANSWERED after each word or card; the screen measures the time. In the Stroop test only you see the ink’s name. In the switch test, tap MISTAKE whenever your student uses the wrong language. Your student only speaks.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene IV: a short video about the bilingual brain, sealed until you press play, in four chapters; each stops by itself. The questions are open. If a chapter stops mid-sentence, adjust it. After the four chapters, the last step is ONE screen: the video stays on the left, with the brain scan under it; on the right, six True or Lie lines from the video (tap a time to hear that moment again). Every right answer lights one region of the brain. On a Lie the student says the true line, with a degree (much, far, a lot, a bit). When all six are done, the researcher asks one last question (“Is a bilingual brain very different?”): the student taps an answer and says the sentence out loud.</p>
+    <h4>THE DIAL</h4>
+    <p>Scene VI: your student reads the numbers and says the sentence; you tap the degree you heard. If you hear <i>very</i> + comparative or <i>more</i> + -er, tap it: the screen explains.</p>
+    <p class="pal-guia"><b>The words (III)</b>: <i>bilingual</i>, <i>subtitles</i>, <i>proficient</i>, <i>accent</i> and <i>advantages</i>, before the video, in match the columns and the word in your life. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (V, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE COUNCIL (IX) AND THE SURPRISE QUESTION</h4>
+    <p>After the switch test, your student sits on the lab council and votes on three proposals: Yes, No, or Propose a change. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the vote harder. Recast quietly while they talk (“very faster” → “much faster”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I The Language Passport, II The Stroop Test, VII Which Bilingual Are You?, VIII The Switch Test and IX The Council.</li>
+      <li><b>Listen</b>: III The Words, IV The Video and V Line by Line.</li>
+      <li><b>Focus</b>: VI The Dial.</li>
+      <li><b>Write</b>: X Your Brain Report.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE BRAIN LAB (Main B1) · pergunta-surpresa · 27/10/2026 · much / far / a bit + comparativo */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'stroop', tipo: 'Opinion', q: 'Which round was harder for you: Portuguese or English?',
+    opc: ['Portuguese', 'English', 'The same'], st: ['The … round was much harder, because …', 'It was only a bit …'],
+    ex: 'Portuguese, believe it or not! My brain reads Portuguese far faster, so it said the word, not the color.', push: 'Would you be much faster with a second try? Bet on it.' },
+  { cena: 'palavras', tipo: 'And you?', q: 'Where do you hear the most English in your week?',
+    opc: ['Music', 'Series and films', 'Work', 'Games'], st: ['I hear far more English in … than in …', 'It’s a lot easier when …'],
+    ex: 'Series. I hear far more English on Netflix than at work, and it’s a lot easier to follow with subtitles.', push: 'And how much do you SPEAK in your week? Say a number of minutes.' },
+  { cena: 'tipos', tipo: 'Would you rather', q: 'Would you rather speak five languages a bit, or one more language perfectly?',
+    opc: ['Five, a bit', 'One, perfectly'], st: ['I’d rather …, because it’s much more …'],
+    ex: 'One, perfectly. It’s much more useful to really talk to people than to say hello in five languages.', push: 'Which language would be number three for you?' },
+  { cena: 'troca', tipo: 'What if', q: 'You wake up tomorrow and you dream in English. What changed?',
+    opc: ['My English', 'My series', 'My friends'], st: ['My English would be far …', 'I’d feel slightly …'],
+    ex: 'My series. I watch far too many shows in English before bed.', push: 'Have you ever dreamt in English? What happened in the dream?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE BRAIN LAB (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O conselho entra no lugar de "IX · Myth or Fact?" (extra; o vídeo já fecha com um Verdade ou
+   Mentira e uma pergunta do pesquisador). Depois do teste da troca, o aluno vira membro do conselho
+   do laboratório e vota três propostas: Yes, Propose a change ou No. A gramática da aula (much / far /
+   a lot / a bit / slightly + comparativo, not nearly as … as) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'conselho', troca: 'mito', est: 'o', min: 7, img: 'lab', rot: 'The Council', t: 'The lab council votes. You have one vote.',
+    p: 'Read the proposal. Vote Yes, No, or propose a change. Then say why, with much, far, a bit or slightly.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Schools', sit: 'The lab’s results are in: children who start a second language early switch far faster.',
+        q: 'Proposal: every child starts English at four.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Kids learn much faster when …', 'It would be a bit better if …', 'Four is far too …'],
+        ex: 'Propose a change: start at six. Four-year-olds learn much faster, but they need their first language a bit more at that age.',
+        push: 'You didn’t start at four. Is your English much worse because of that?' },
+      { tag: 'Screens', sit: 'The lab says subtitles in the same language help you catch words slightly better than subtitles in Portuguese.',
+        q: 'Proposal: English films on TV only with English subtitles.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['English subtitles are far more …', 'It isn’t nearly as relaxing as …', 'It’s only slightly …'],
+        ex: 'No. It’s far more useful for students, but it isn’t nearly as relaxing for my brother after work.',
+        push: 'Tonight: would you watch a whole film with English subtitles? Yes or no?' },
+      { tag: 'Work', sit: 'Bilingual workers do the same job, but they talk to many more clients.',
+        q: 'Proposal: companies pay bilingual workers 20% more.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['They’re a lot more …, so …', '20% is much too …', 'A bit more, maybe …'],
+        ex: 'Propose a change: 10%. They’re a lot more useful with clients, but 20% is much too much for the same job.',
+        push: 'You are the boss and the money is yours. Still 20%?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "passa": {
+   "t": "Before the tests: your languages.",
+   "p": "Answer out loud. The last question is a trap."
+  },
+  "stroop": {
+   "t": "Say the COLOR. Not the word.",
+   "p": "Two rounds: Portuguese, then English. The clock is real."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen for the yellow words."
+  },
+  "video": {
+   "t": "What does a second language do?",
+   "p": "Answer first. Watch four chapters. Then True or Lie."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line to hear it again."
+  },
+  "dial": {
+   "t": "Not just faster. How MUCH faster?",
+   "p": "Read the numbers. Say the sentence."
+  },
+  "tipos": {
+   "t": "Three bilinguals, three different brains.",
+   "p": "Guess each type. Then: which one are you?"
+  },
+  "troca": {
+   "t": "Violet: English. Green: Portuguese.",
+   "p": "Say each number in its border’s language."
+  },
+  "cv-conselho": {
+   "t": "The council votes. You have one vote.",
+   "p": "Vote Yes, No or change it. Say why."
+  },
+  "laudo": {
+   "t": "Is it ever too late to learn?",
+   "p": "Read your numbers out loud. Then write your report."
+  }
+ },
+ "prep": {
+  "obj": "Comparativo com intensidade (much, far, a lot, a bit, slightly + -er/more): o aluno é voluntário num laboratório que mede o cérebro bilíngue.",
+  "armadilha": "O brasileiro traduz “muito mais rápido” como “very faster” e mistura as duas formas (“more easier”), porque em português “muito” serve para tudo.",
+  "pal": [
+   "much faster",
+   "far harder",
+   "a bit slower",
+   "slightly",
+   "bilingual",
+   "subtitles",
+   "proficient",
+   "accent",
+   "advantages"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o laboratório: duas línguas, um cérebro, quanto mais difícil?",
+   "perg": "Which language do you dream in?",
+   "pula": "Só leia a frase da capa e entre."
+  },
+  "passa": {
+   "obj": "Aquecimento pessoal: o passaporte de línguas; a última pergunta é uma armadilha (very harder).",
+   "perg": "Is English harder than Portuguese for you?",
+   "pula": "Três perguntas, mas não corte a armadilha."
+  },
+  "stroop": {
+   "obj": "Teste de Stroop real: dizer a cor da tinta, em português e em inglês, com tempo medido.",
+   "perg": "Which round was harder, and how much?",
+   "pula": "Uma rodada em cada língua basta."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir: bilingual, subtitles, proficient, accent, advantages.",
+   "perg": "Do you watch movies with subtitles?",
+   "pula": "Ligue as colunas e siga; pule a palavra na sua vida."
+  },
+  "video": {
+   "obj": "Vídeo sobre o cérebro bilíngue em quatro capítulos, depois True or Lie com grau.",
+   "perg": "Is a bilingual brain very different?",
+   "pula": "Quatro True or Lie bastam."
+  },
+  "falas": {
+   "obj": "Linha a linha do vídeo; as linhas amarelas explicam as palavras.",
+   "perg": "Can you hear the yellow word?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "dial": {
+   "obj": "Foco: o grau do comparativo; o professor toca o grau que ouviu.",
+   "perg": "How much slower were you in English?",
+   "pula": "Quatro frases bastam."
+  },
+  "tipos": {
+   "obj": "Três bilíngues de uma família, três cérebros: adivinhar o tipo e se identificar.",
+   "perg": "Which one are you, and why?",
+   "pula": "Duas pessoas e a pergunta final."
+  },
+  "troca": {
+   "obj": "Teste de troca real: dizer números na língua da borda, com e sem alternar.",
+   "perg": "How much harder was round two?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-conselho": {
+   "obj": "Conselho do laboratório: votar em três propostas e justificar com grau.",
+   "perg": "Why do you vote no?",
+   "pula": "Cena extra: uma proposta basta."
+  },
+  "laudo": {
+   "obj": "Escrita: o laudo do cérebro do aluno com os números da aula e a armadilha devolvida.",
+   "perg": "Is it ever too late to learn a language?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre línguas e aprendizado com comparativo e grau.",
+   "perg": "Is it much easier to read or to listen in English?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre aprender línguas, com argumentos em comparativo.",
+   "perg": "Why is that side far better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno compara o inglês dele de antes e de agora, com grau.",
+   "perg": "How much better is your English now?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your brain on English.",
+   "p": "Pick a card. Say how MUCH.",
+   "palavras": [
+    "much",
+    "far",
+    "a lot",
+    "a bit",
+    "slightly"
+   ],
+   "cartas": [
+    {
+     "k": "READ OR LISTEN",
+     "q": "Is reading in English easier than listening for you?",
+     "fup": "How much easier?",
+     "st": [
+      "Reading is much easier than …",
+      "Listening is a bit harder, because …"
+     ],
+     "ex": "Reading is far easier for me. Listening is a lot faster than my brain."
+    },
+    {
+     "k": "TIRED BRAIN",
+     "q": "Are you slower in English when you are tired?",
+     "fup": "What happens to your words?",
+     "st": [
+      "When I’m tired, I’m much slower …",
+      "My English gets a bit worse when …"
+     ],
+     "ex": "When I’m tired, I’m much slower, and I forget simple words."
+    },
+    {
+     "k": "SUBTITLES",
+     "q": "Are movies harder without subtitles?",
+     "fup": "Which accent is the hardest?",
+     "st": [
+      "Without subtitles, it’s far harder …",
+      "British English is slightly …"
+     ],
+     "ex": "Without subtitles, it’s a lot harder, especially with a Scottish accent."
+    },
+    {
+     "k": "YOUR TEACHERS",
+     "q": "Is learning now different from learning at school?",
+     "fup": "Why?",
+     "st": [
+      "Now it’s much more …",
+      "At school it was a bit …"
+     ],
+     "ex": "Now it’s much more interesting, because I choose the topics."
+    },
+    {
+     "k": "THE PHONE",
+     "q": "Is your phone in English or Portuguese?",
+     "fup": "Would English make you learn faster?",
+     "st": [
+      "It would be slightly …",
+      "It’s a lot easier in …"
+     ],
+     "ex": "It’s in English. At first it was a bit harder, but now it’s normal."
+    },
+    {
+     "k": "THE FUTURE",
+     "q": "Will English be more important for you in five years?",
+     "fup": "How much more?",
+     "st": [
+      "It will be far more important, because …",
+      "It will be slightly …"
+     ],
+     "ex": "It will be far more important, because my company is going global."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "The Debate",
+   "t": "Pick a side. Defend it.",
+   "p": "Your teacher argues the other side.",
+   "palavras": [
+    "much better",
+    "far easier",
+    "a bit",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Children learn languages much faster than adults. True?",
+     "a": "Yes, much faster",
+     "b": "No, not really",
+     "fa": [
+      "Yes. Children are much less afraid of mistakes.",
+      "Their brains are far more flexible."
+     ],
+     "fb": [
+      "No. Adults are a lot more organized.",
+      "We can study grammar, so we’re only slightly slower."
+     ]
+    },
+    {
+     "q": "Grammar first or conversation first?",
+     "a": "Grammar first",
+     "b": "Conversation first",
+     "fa": [
+      "Grammar first. Your sentences are much more correct.",
+      "Conversation is far easier with a base."
+     ],
+     "fb": [
+      "Conversation first. It’s a lot more fun.",
+      "You learn far faster when you need the words."
+     ]
+    },
+    {
+     "q": "Living abroad for a year or studying at home for five?",
+     "a": "A year abroad",
+     "b": "Five years at home",
+     "fa": [
+      "A year abroad. You learn much faster when you have no choice.",
+      "It’s far more intense."
+     ],
+     "fb": [
+      "Five years at home. It’s a lot cheaper.",
+      "And your English is slightly slower, but deeper."
+     ]
+    },
+    {
+     "q": "Learn a third language now or wait?",
+     "a": "Now",
+     "b": "Wait",
+     "fa": [
+      "Now. The second one makes the third one much easier.",
+      "The brain is already trained."
+     ],
+     "fb": [
+      "Wait. Two at the same time is far more confusing.",
+      "Your English needs to be a bit stronger first."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and your brain worked much harder than usual."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Then and Now",
+   "t": "Your English, then and now.",
+   "p": "Compare step by step. Say how much.",
+   "prof": "Push for a degree in every answer. If you hear very + -er, ask “very or much?”",
+   "passos": [
+    {
+     "q": "Think of your first English class. How was it?",
+     "st": [
+      "It was much harder than …",
+      "I was a lot more nervous …"
+     ],
+     "ex": "It was far harder than now. I was a lot more nervous."
+    },
+    {
+     "q": "And your listening? Then and now?",
+     "st": [
+      "Now I understand much more …",
+      "I’m still slightly …"
+     ],
+     "ex": "Now I understand much more, but fast speakers are still a bit hard."
+    },
+    {
+     "q": "What is still far harder than you want?",
+     "st": [
+      "… is still far harder than …"
+     ],
+     "ex": "Phone calls are still far harder than real conversations."
+    },
+    {
+     "q": "In one year, how much better do you want to be?",
+     "st": [
+      "I want to be much more …",
+      "I’d like to be a bit faster at …"
+     ],
+     "ex": "I want to be much more confident in meetings."
+    }
+   ],
+   "fim": "Your brain report has a new page: then and now."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

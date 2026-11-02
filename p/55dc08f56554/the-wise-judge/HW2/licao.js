@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Wise Judge",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/55dc08f56554/the-wise-judge/img/live-camara.webp",
+  "capa": "../img/live-camara.webp",
   "alvo": "verb patterns: want / need / decide / plan / promise + to + verb; stop / keep / avoid / enjoy + -ing; after a preposition always -ing (afraid of failing, thank you for helping)",
   "abrir": "What advice do you give your friends but never take yourself?",
   "fecho": "<b>want / need / decide / plan / promise + to</b>: <i>I need to decide.</i> <b>stop / keep / avoid / enjoy + -ing</b>: <i>Stop waiting.</i> After a preposition, always <b>-ing</b>: <i>afraid of failing, thank you for helping</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks Leo for advice about her job. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/55dc08f56554/the-wise-judge/img/live-camara.webp",
+      "img": "../img/live-camara.webp",
       "leg": "A candle, a scroll and a window at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Ana needs to stop waiting for the perfect moment.",
-          "img": "https://wolf-labs.pages.dev/p/55dc08f56554/the-wise-judge/img/live-balanca.webp",
+          "img": "../img/live-balanca.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She decided to apply, so she stopped worrying about it.",
-          "img": "https://wolf-labs.pages.dev/p/55dc08f56554/the-wise-judge/img/live-camara.webp",
+          "img": "../img/live-camara.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He is afraid of failing, but he wants to try.",
-          "img": "https://wolf-labs.pages.dev/p/55dc08f56554/the-wise-judge/img/live-corte.webp",
+          "img": "../img/live-corte.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/55dc08f56554/the-wise-judge/img/live-camara.webp",
+      "img": "../img/live-camara.webp",
       "leg": "A candle and an open scroll by a window at night",
       "pede": "Look at the picture: a candle, a scroll and a window at night. Imagine a wise judge writing advice for you. Write 2 or 3 sentences about yourself in the third person. Use <b>want / need / decide + to</b> and <b>stop / keep / avoid + -ing</b>.",
       "ph": "[Your name] needs to stop …",

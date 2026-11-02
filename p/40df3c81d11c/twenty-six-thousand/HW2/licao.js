@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Twenty-Six Thousand",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/40df3c81d11c/twenty-six-thousand/img/live-ceu.webp",
+  "capa": "../img/live-ceu.webp",
   "alvo": "wish / if only: wish + past simple for now (I wish I spoke French), wish + had + past participle for before (I wish I had learned it), wish + someone else + would for a habit that annoys you; never I wish I have / I went about the past",
   "abrir": "What is one thing you wish were different right now?",
   "fecho": "A wish steps the verb back. <b>Now</b>: one step (<i>I wish I spoke French</i>). <b>Then</b>: two steps (<i>I wish I had taken the job</i>). <b>Someone else's habit</b>: <b>would</b> (<i>I wish he would turn it down</i>). Never <i>I wish I have</i>, never <i>I wish I went</i> about the past. <b>If only</b> works the same way.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about regrets. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/40df3c81d11c/twenty-six-thousand/img/live-ceu.webp",
+      "img": "../img/live-ceu.webp",
       "leg": "A night sky and one tree",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I wish I had learned Spanish before I moved.",
-          "img": "https://wolf-labs.pages.dev/p/40df3c81d11c/twenty-six-thousand/img/live-ceu.webp",
+          "img": "../img/live-ceu.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If only I lived closer to my family.",
-          "img": "https://wolf-labs.pages.dev/p/40df3c81d11c/twenty-six-thousand/img/live-bilhetes.webp",
+          "img": "../img/live-bilhetes.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I wish my neighbor would turn the music down.",
-          "img": "https://wolf-labs.pages.dev/p/40df3c81d11c/twenty-six-thousand/img/live-arena.webp",
+          "img": "../img/live-arena.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/40df3c81d11c/twenty-six-thousand/img/live-bilhetes.webp",
+      "img": "../img/live-bilhetes.webp",
       "leg": "Paper notes on a dark table",
       "pede": "Look at the picture: paper notes scattered on a dark table. Write 2 or 3 wishes of your own. Use <b>I wish + past</b>, <b>I wish + had + participle</b> or <b>I wish + someone + would</b>.",
       "ph": "I wish I …",

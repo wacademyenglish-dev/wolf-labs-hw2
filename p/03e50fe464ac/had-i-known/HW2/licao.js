@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Had I Known",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/03e50fe464ac/had-i-known/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "inverted conditionals: Had I known (past), Were I / Were it not for (now), Should you need (future); no if, no contraction, not after the subject",
   "abrir": "Is there something you would do differently, had you known?",
   "fecho": "Drop the <b>if</b> and move the auxiliary to the front: <b>Had I known</b>, I would have called (past) · <b>Were it not for</b> your help, I would have failed (now) · <b>Should you need</b> anything, call me (possible future). No <i>if</i> with these: not <i>If had I known</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a concert Leo missed. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/03e50fe464ac/had-i-known/img/live-palco.webp",
+      "img": "../img/live-palco.webp",
       "leg": "An empty stage",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Had I known it was the last show, I would have gone.",
-          "img": "https://wolf-labs.pages.dev/p/03e50fe464ac/had-i-known/img/live-palco.webp",
+          "img": "../img/live-palco.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Were it not for my cousin, I would have missed it.",
-          "img": "https://wolf-labs.pages.dev/p/03e50fe464ac/had-i-known/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Should you need a ride, just call me.",
-          "img": "https://wolf-labs.pages.dev/p/03e50fe464ac/had-i-known/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/03e50fe464ac/had-i-known/img/live-palco.webp",
+      "img": "../img/live-palco.webp",
       "leg": "An empty stage with a red curtain",
       "pede": "Look at the picture: an empty stage. Write three sentences about a chance you missed or got. Use one with <b>Had I …</b>, one with <b>Were it not for …</b> and one with <b>Should you …</b>.",
       "ph": "Had I known …",

@@ -12,7 +12,7 @@
    timer, não conta ponto, não tem IA. O motor não foi tocado: este bloco só observa o #main.
    Este bloco fica ANTES do window.HW2 (o gera_audio.py e o teste leem o JSON até o fim do arquivo). */
 (function () {
-  var FOTO = 'https://wolf-labs.pages.dev/p/06a43087e651/saori/img/saori.jpg';
+  var FOTO = '../img/saori.jpg';
   var st = document.createElement('style');
   st.textContent =
     '.saori-hw{position:fixed;inset:0;z-index:50;display:grid;place-items:center;overflow-y:auto;padding:28px 16px calc(28px + env(safe-area-inset-bottom));background:radial-gradient(520px 420px at 50% 30%,rgba(98,72,200,.18),transparent 70%),#0d0b14;animation:saoriEntra .6s ease}' +
@@ -63,7 +63,7 @@ window.HW2 = {
   "titulo": "Before You",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/06a43087e651/saori/img/live-d5.webp",
+  "capa": "../img/live-d5.webp",
   "alvo": "before / after / when + a whole sentence (before he went out) or -ing (before going out), never to; no will after the knot (after I get home, I'll call you); when keeps both halves in the same tense (when I was a child, we had a dog)",
   "abrir": "What did you do after you got home yesterday?",
   "fecho": "After <b>before</b> and <b>after</b>, a whole sentence (<i>before he went out</i>) or -ing (<i>before going out</i>), never <i>to</i>. After the knot, no <i>will</i>: <i>I’ll call you after I get home</i>. And <b>when</b> keeps both halves in the same tense: <i>When I was a child, we had a dog</i>.",
@@ -83,7 +83,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo about her new dog. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/06a43087e651/saori/img/live-d2.webp",
+      "img": "../img/live-d2.webp",
       "leg": "A dog at a new door",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -174,17 +174,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "He waited in a shelter before somebody came for him.",
-          "img": "https://wolf-labs.pages.dev/p/06a43087e651/saori/img/live-d1.webp",
+          "img": "../img/live-d1.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "When they drove home, he looked out of the window.",
-          "img": "https://wolf-labs.pages.dev/p/06a43087e651/saori/img/live-d3.webp",
+          "img": "../img/live-d3.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "After running in the garden, he fell asleep on the sofa.",
-          "img": "https://wolf-labs.pages.dev/p/06a43087e651/saori/img/live-d6.webp",
+          "img": "../img/live-d6.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -230,7 +230,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/06a43087e651/saori/img/live-d6.webp",
+      "img": "../img/live-d6.webp",
       "leg": "Asleep on the sofa, at the end of a long day",
       "pede": "Look at the picture: a dog asleep on the sofa at the end of a good day. Write 2 or 3 sentences about an animal you know: yours, a friend's or your family's. Use <b>before</b>, <b>after</b> or <b>when</b> with a whole sentence.",
       "ph": "When I was a child, … After she came home, …",

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Debate Night · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B1 · Unit 10 Review · The B1 Final</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Debate Night · B1 Unit 10 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 10 (Closing Book B1). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> The last review of Book B1. It’s debate night at the town theater, played on a board game. On many squares you disagree, so the student has to answer with however, despite and even though. Then the student writes an opening speech.</p><p style="margin:0 0 6px"><b>About 51 min:</b> I · Memory (8) · II · Debate Night (15) · III · Your Opening Speech (7) · IV · Backstage (7) · V · The Hot Seat (8) · VI · I Can (3) · VII · The Next Book (3).</p><p style="margin:0"><b>Open with:</b> “Open two cards. Find the pair, then make the sentence.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>purpose: to, in order to, so that · cause and result: because of, leads to · contrast: however, despite, even though · emphatic do · bring / take, come / go · say it without the word</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>DEBATE NIGHT</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>YOUR OPENING SPEECH</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. This is the last review of Book B1. After I Can there is one more short scene, VI The Next Book, with what Book B2 brings.</p>
+    <h4>THE NEXT BOOK</h4>
+    <p>The last scene of the book: three cards with what the next book brings. Read them together and ask which one the student wants first.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>despite of</i>, <i>despite it was raining</i>, <i>so that to</i>, <i>even though of</i>, <i>it leads in</i>, <i>I do went (for I did go)</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>BACKSTAGE (IV) AND THE SURPRISE QUESTION</h4>
+    <p>The lesson is already a debate, so this moment is different: three small dilemmas backstage, five minutes before the student goes on stage (the microphone stops working, the opponent is a nervous best friend, which prize to take). No right answer: the student chooses and says why with even though, despite, so that and in order to. Wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Memory and VII · The Next Book.</li>
+      <li><b>Out loud</b>: II · Debate Night, IV · Backstage and V · The Hot Seat.</li>
+      <li><b>Write</b>: III · Your Opening Speech.</li>
+      <li><b>Focus</b>: VI · I Can.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* MAIN SERIES · B1 · REVISÃO 10 · THE DEBATE NIGHT · pergunta-surpresa · 27/10/2026 · so that / in order to, even though / despite, because of, do enfático */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'memoria', tipo: 'And you?', q: 'What’s something you do every week so that your life is easier?',
+    opc: ['Something at home', 'Something at work', 'Something with money'], st: ['I … so that …', 'I … in order to …'],
+    ex: 'Something at home. I cook on Sundays so that I don’t have to cook every night.', push: 'Does it really work? Be honest!' },
+  { cena: 'tabuleiro', tipo: 'Would you rather', q: 'Would you rather speak in front of 500 people or sing in front of 5?',
+    opc: ['Speak to 500', 'Sing to 5'], st: ['I’d rather …, even though …', 'Despite …, I’d …'],
+    ex: 'Speak to 500. Even though I’d be nervous, I can’t sing at all!', push: 'The five people are your boss and your colleagues. Still sing?' },
+  { cena: 'cadeira', tipo: 'Opinion', q: 'Which is better: changing your mind, or always keeping your opinion?',
+    opc: ['Changing your mind', 'Keeping your opinion'], st: ['However, …', 'Because of …, I think …', 'I do believe …'],
+    ex: 'Changing your mind. I do believe it shows you listen. However, you need good reasons.', push: 'Tell me one opinion you changed in the last few years.' },
+  { cena: 'ponte', tipo: 'What if', q: 'Book B1 is done! What will you do with your English in the next six months?',
+    opc: ['Travel', 'Work', 'Watch and read more'], st: ['I want to … so that …', 'Despite …, I’m going to …'],
+    ex: 'Watch and read more. I want to watch series without subtitles so that I can hear real English.', push: 'What is the first step, this week?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* MAIN SERIES · B1 · REVISÃO 10 · THE DEBATE NIGHT · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A aula já É um debate (tabuleiro, discurso, cadeira quente): o formato novo é o DILEMA, sobre o que
+   acontece nos bastidores da noite, não sobre os temas do debate. Entra DEPOIS de "III · Your Opening
+   Speech": o aluno escreveu o discurso; antes de subir ao palco, três escolhas. 44 → 51 min (não havia
+   cena extra). Gramática da unidade 10 nos iniciadores: so that / in order to, even though / despite /
+   however, because of. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'dilema', apos: 'cartao', est: 'o', min: 7, img: 'capa', rot: 'Backstage', t: 'Five minutes before you go on stage…',
+    p: 'Three surprises backstage. Choose one, or say your own idea. Then say why.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The microphone', sit: 'Your microphone stops working. The technician says it will take ten minutes to fix it.',
+        q: 'What do you do?', opc: ['Speak without it', 'Wait for the fix', 'Ask to go last'],
+        st: ['Even though …, I’d …', 'I’d … so that …', 'Despite the …, I’d …'],
+        ex: 'Speak without it. Even though the theater is big, I have a strong voice, and I want to speak while I’m ready.',
+        push: 'The people at the back can’t hear you, and they start talking. Now what?' },
+      { tag: 'Your opponent', sit: 'Your opponent is your best friend. She is very nervous, and her notes are a mess.',
+        q: 'What do you do?', opc: ['Help her before', 'Play to win', 'Go easy on stage'],
+        st: ['I’d help her in order to …', 'However, a debate is …', 'Because of our friendship, …'],
+        ex: 'Help her before. However, on stage I play to win. That’s fair, and she would do the same.',
+        push: 'The prize is a trip to London, and only one person wins it. Still help her?' },
+      { tag: 'The prize', sit: 'You win! The prize: a weekend at the beach, or a free month of English classes for a friend.',
+        q: 'Which one do you take?', opc: ['The weekend for me', 'The classes for a friend'],
+        st: ['I’d take … so that …', 'Despite …, I’d choose …', 'I do think …'],
+        ex: 'The classes for my friend. Even though I love the beach, he really wants to learn, and I do think it changes lives.',
+        push: 'Your friend never finishes anything he starts. Still the classes?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "memoria": {
+   "t": "Find the pairs.",
+   "p": "Open two cards. Find a pair. Make a sentence."
+  },
+  "tabuleiro": {
+   "t": "Roll, move, defend your idea.",
+   "p": "Do your square out loud. Your teacher may disagree."
+  },
+  "cartao": {
+   "t": "Write your opening speech.",
+   "p": "Four lines: idea, why, other side, goal."
+  },
+  "cv-dilema": {
+   "t": "Five minutes before the stage…",
+   "p": "Three surprises. Choose one. Say why."
+  },
+  "cadeira": {
+   "t": "Now YOU ask the questions.",
+   "p": "Your teacher is in the hot seat. Ask, react."
+  },
+  "pode": {
+   "t": "Unit 10: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  },
+  "ponte": {
+   "t": "Book B1 is done. Here is B2.",
+   "p": "Read the three cards. Which one first?"
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 10, a última do livro B1 (propósito, causa e resultado, contraste, do enfático, bring/take, come/go): noite de debate no teatro da cidade.",
+  "armadilha": "O brasileiro diz “despite of”, “despite it was raining”, “so that to”, “even though of”, “it leads in” e “I do went” no lugar de “I did go”.",
+  "pal": [
+   "in order to",
+   "so that",
+   "because of",
+   "leads to",
+   "however",
+   "despite",
+   "even though",
+   "I did go"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a noite de debate no teatro: a última revisão do livro B1.",
+   "perg": "Do you like to argue, or do you avoid it?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "memoria": {
+   "obj": "Jogo da memória; cada par vira uma frase com a gramática da unidade.",
+   "perg": "Can you make a sentence with that pair?",
+   "pula": "Quatro pares bastam."
+  },
+  "tabuleiro": {
+   "obj": "Tabuleiro de debate: o professor discorda e o aluno responde com however, despite, even though.",
+   "perg": "I disagree. What do you say?",
+   "pula": "Pare na metade do tabuleiro se precisar."
+  },
+  "cartao": {
+   "obj": "Escrita: discurso de abertura em quatro linhas curtas.",
+   "perg": "What is your idea, and why?",
+   "pula": "Três linhas bastam; uma correção por linha."
+  },
+  "cv-dilema": {
+   "obj": "Três dilemas nos bastidores, justificando com even though, despite, so that.",
+   "perg": "What do you do, and why?",
+   "pula": "Dois dilemas bastam; use a linha PUSH."
+  },
+  "cadeira": {
+   "obj": "Cadeira quente invertida: o aluno pergunta e o professor responde como ele mesmo.",
+   "perg": "What do you want to ask me?",
+   "pula": "Quatro cartas bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê cada linha e marca o que já consegue; o professor carimba.",
+   "perg": "Can you use despite now?",
+   "pula": "Não pule: o que ficar aberto vai para a lição."
+  },
+  "ponte": {
+   "obj": "Fecha o livro B1: três cartas com o que o livro B2 traz.",
+   "perg": "Which one do you want first?",
+   "pula": "Leia uma carta só. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com propósito, causa e contraste sobre o ano do aluno.",
+   "perg": "What did you do this year in order to improve your English?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Um debate de verdade, com argumentos de duas frases e conectores de contraste.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta a própria jornada no livro B1, do começo ao fim, com os conectores.",
+   "perg": "Why did you start?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Purpose, cause, contrast.",
+   "p": "Pick a card. Answer with a connector.",
+   "palavras": [
+    "so that",
+    "because of",
+    "despite",
+    "even though",
+    "however"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR ENGLISH",
+     "q": "What did you do this year in order to improve your English?",
+     "fup": "What worked best?",
+     "st": [
+      "I … in order to …",
+      "I … so that I could …"
+     ],
+     "ex": "I watched series with English subtitles so that I could hear real speech."
+    },
+    {
+     "k": "A HARD WEEK",
+     "q": "Tell me about a week that was hard, but you kept going.",
+     "fup": "What helped you?",
+     "st": [
+      "Even though …, I …",
+      "Despite …, I …"
+     ],
+     "ex": "Even though I was sick, I went to the meeting."
+    },
+    {
+     "k": "BIG CHANGE",
+     "q": "What change in your city happened because of one decision?",
+     "fup": "Was it good?",
+     "st": [
+      "Because of …, …",
+      "It led to …"
+     ],
+     "ex": "Because of the new metro line, traffic got better."
+    },
+    {
+     "k": "I DID",
+     "q": "What is something people don’t believe you did?",
+     "fup": "Can you prove it?",
+     "st": [
+      "I did …! Really.",
+      "I do like …, however …"
+     ],
+     "ex": "I did run a marathon once! Really, I have the medal."
+    },
+    {
+     "k": "BRING OR TAKE",
+     "q": "What do you always bring to a party, and what do you take home?",
+     "fup": "Who invites you most?",
+     "st": [
+      "I always bring …",
+      "I usually take … home."
+     ],
+     "ex": "I always bring a dessert, and I usually take the empty plate home."
+    },
+    {
+     "k": "A GOOD ARGUMENT",
+     "q": "When did you change your mind after a discussion?",
+     "fup": "What convinced you?",
+     "st": [
+      "At first I thought …; however, …",
+      "Despite …, I changed my mind."
+     ],
+     "ex": "At first I hated electric cars; however, my friend changed my mind."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Debate Night",
+   "t": "One more debate.",
+   "p": "Two sentences per side. Connect your ideas.",
+   "palavras": [
+    "however",
+    "despite",
+    "even though",
+    "so that",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Should every student learn to debate at school?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Kids need to argue well so that they can defend their ideas.",
+      "Even though it’s hard, it builds confidence."
+     ],
+     "fb": [
+      "No. Despite the benefits, shy kids would suffer.",
+      "Debate can lead to fights in class."
+     ]
+    },
+    {
+     "q": "Online debates: useful or a waste of time?",
+     "a": "Useful",
+     "b": "A waste",
+     "fa": [
+      "Useful. I’ve learned new ideas despite the noise.",
+      "Some threads lead to real change."
+     ],
+     "fb": [
+      "A waste. Even though people talk a lot, nobody listens.",
+      "It usually leads to anger, not ideas."
+     ]
+    },
+    {
+     "q": "Win the argument or keep the friend?",
+     "a": "Win",
+     "b": "Keep the friend",
+     "fa": [
+      "Win, if I’m right. However, I say it kindly.",
+      "Truth is important."
+     ],
+     "fb": [
+      "Keep the friend. Even though I’m right, it isn’t worth it.",
+      "Friends last longer than arguments."
+     ]
+    },
+    {
+     "q": "Move to Book B2 now, or review B1 first?",
+     "a": "Move on",
+     "b": "Review",
+     "fa": [
+      "Move on. I learn more with new challenges.",
+      "Despite a few mistakes, I’m ready."
+     ],
+     "fb": [
+      "Review first, so that the base is strong.",
+      "B2 is harder; however, B1 is still fresh in my head."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The floor is closed, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your B1 Story",
+   "t": "Your journey through Book B1.",
+   "p": "Answer each step out loud.",
+   "prof": "Push one connector per step; recast “despite of” and “so that to” quietly.",
+   "passos": [
+    {
+     "q": "Why did you start studying B1?",
+     "st": [
+      "I started in order to …",
+      "I wanted to … so that …"
+     ],
+     "ex": "I started in order to get a better job."
+    },
+    {
+     "q": "What was hard along the way?",
+     "st": [
+      "Even though …, …",
+      "Despite …, I kept going."
+     ],
+     "ex": "Even though I had little time, I never missed a class."
+    },
+    {
+     "q": "What changed because of your English?",
+     "st": [
+      "Because of my English, …",
+      "It led to …"
+     ],
+     "ex": "Because of my English, I can watch the news without subtitles."
+    },
+    {
+     "q": "What is your goal for Book B2?",
+     "st": [
+      "My goal is to … so that …",
+      "However hard it is, I …"
+     ],
+     "ex": "My goal is to speak at meetings so that my boss notices me."
+    }
+   ],
+   "fim": "That is your opening speech for Book B2."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Having Missed the Train",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a807be5239d4/having-missed-the-train/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "participle clauses: Having + past participle (first this, then that), -ing (at the same time, or the reason), Not + -ing (negative), past participle alone (done to it); the subject right after the comma is the one who does the first part; never Having miss, Don't knowing, a dangling subject",
   "abrir": "What is the last thing you missed, and what did you do instead?",
   "fecho": "<b>Having + participle</b> = first this, then that: <i>Having missed the bus, she took a taxi.</i> <b>-ing</b> = same time or reason: <i>Walking home, I got wet.</i> <b>Not + -ing</b>: <i>Not knowing the way, he asked.</i> <b>Participle alone</b> = done to it: <i>Left alone, the bag looked odd.</i> The subject after the comma is the one who does the first part.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo about a night train. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a807be5239d4/having-missed-the-train/img/live-plataforma.webp",
+      "img": "../img/live-plataforma.webp",
       "leg": "An empty platform at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Having missed the last bus, I took the night train.",
-          "img": "https://wolf-labs.pages.dev/p/a807be5239d4/having-missed-the-train/img/live-plataforma.webp",
+          "img": "../img/live-plataforma.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Walking into the compartment, I saw a brown bag.",
-          "img": "https://wolf-labs.pages.dev/p/a807be5239d4/having-missed-the-train/img/live-cabine.webp",
+          "img": "../img/live-cabine.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Not knowing whose it was, I called the conductor.",
-          "img": "https://wolf-labs.pages.dev/p/a807be5239d4/having-missed-the-train/img/live-maleta.webp",
+          "img": "../img/live-maleta.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a807be5239d4/having-missed-the-train/img/live-maleta.webp",
+      "img": "../img/live-maleta.webp",
       "leg": "A brown bag on a train seat",
       "pede": "Look at the picture: a brown bag on a train seat. Write 2 or 3 sentences about a trip or a day when something went wrong. Use <b>Having + participle</b>, <b>-ing</b> or <b>Not + -ing</b>.",
       "ph": "Having missed …, I …",

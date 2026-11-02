@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Time Capsule · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B1 · Unit 3 Review · The Time Capsule</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Time Capsule · B1 Unit 3 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 3 (Before and after). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> In 2006 a class buried a time capsule in the school garden. Today your student opens it on a board game: every square is an object from 2006. In the end, the student plans a new capsule for 2046.</p><p style="margin:0 0 6px"><b>About 42 min:</b> I · The Die (8) · II · Open the Capsule (15) · III · The 2046 Capsule (7) · IV · The Hot Seat (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Roll the die. The number chooses the challenge.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>past perfect · past perfect for the story behind · was going to: plans that changed · kept + -ing, ended up + -ing · going to or will · future continuous: will be doing</p>
+    <h4>THE DIE</h4>
+    <p>Tap <b>Roll the die</b>: the number chooses one of the six topics (no repeats until all six are done). The student does the challenge from memory.</p>
+    <h4>OPEN THE CAPSULE</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>when I arrived, the show already started</i>, <i>I was go to</i>, <i>kept to say</i>, <i>ended up to work</i>, <i>will flying</i>, <i>I’m going to answer it (a decision now: I’ll answer it)</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE 2046 CAPSULE (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the 2006 capsule, your student ranks five objects for the 2046 capsule: which one will surprise people most? They explain their top one and their last one, then open your order and agree on one top 3 together. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make it harder. Recast quietly (will be paying, had never seen, was going to); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Die and V · I Can.</li>
+      <li><b>Out loud</b>: II · Open the Capsule, III · The 2046 Capsule and IV · The Hot Seat.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW B1 · UNIT 3 · THE TIME CAPSULE · pergunta-surpresa · 27/10/2026 · past perfect · was going to · will be …ing */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'dado', tipo: 'Would you rather', q: 'Would you rather open a time capsule from 1986 or one from 2046?',
+    opc: ['From 1986', 'From 2046'], st: ['I’d rather open …, because …', 'In 1986 people had never …', 'In 2046 people will be …'],
+    ex: 'From 2046! I want to know what people will be doing. In 1986, my parents hadn’t even met.', push: 'You can’t tell anyone what you saw. Still 2046?' },
+  { cena: 'tabuleiro', tipo: 'What if', q: 'What if you found a letter you wrote when you were fifteen? What do you think it says?',
+    opc: ['Big dreams', 'Problems at school', 'Something embarrassing'], st: ['I think I had written about …', 'I was going to …, but …'],
+    ex: 'Big dreams. I was going to live in New York and be a famous DJ. I ended up in an office, but I still love music!', push: 'Would you read it out loud to your friends? Yes or no?' },
+  { cena: 'cadeira', tipo: 'Opinion', q: 'Was life better in 2006 or now?',
+    opc: ['In 2006', 'Now', 'The same'], st: ['In 2006 I had never …', 'Back then, things kept …', 'Now we …'],
+    ex: 'Now. In 2006 I had never left my state, and the internet kept falling all the time!', push: 'Name one thing from 2006 you’d bring back today.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW B1 · UNIT 3 · THE TIME CAPSULE · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O ranking entra no lugar de "III · Find the Mistakes" (achar o erro na carta: prática controlada).
+   Depois de abrir a cápsula de 2006, o aluno decide o que vai surpreender quem abrir a de 2046, e compara
+   com a ordem do professor. A gramática da unidade (will be …ing, going to / will, was going to, had done)
+   mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'ranking', troca: 'erros', est: 'o', min: 7, img: 'conversa', rot: 'The 2046 Capsule', t: 'Five objects for the 2046 capsule.',
+    p: 'Put them in order, then explain your top one and your last one.',
+    formato: 'ranking',
+    q: 'What will surprise people in 2046 the most?',
+    itens: ['A paper map', 'A bank card', 'A TV remote', 'A printed photo', 'A handwritten letter'],
+    prof: [1, 2, 0, 4, 3],
+    dica: 'Tap from the biggest surprise to the smallest. Tap again to take it out.',
+    st: ['In 2046, nobody will be using …', 'People will be …ing instead.', 'I was going to put … first, but …'],
+    ex: 'Number 1: the bank card. In 2046 nobody will be using cards: they’ll be paying with their faces. Last: the printed photo. People will always love photos on paper.',
+    push: 'There is space for only two objects. Which two go in, and why?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "tabuleiro": {
+   "t": "Roll, move, take out an object.",
+   "p": "Your teacher rolls. Do your square out loud."
+  },
+  "cv-ranking": {
+   "t": "Five objects for 2046.",
+   "p": "Put them in order. Explain your top and last."
+  },
+  "cadeira": {
+   "t": "Now YOU ask.",
+   "p": "Your teacher is in the hot seat. Ask and react."
+  },
+  "pode": {
+   "t": "Unit 3: what can you do now?",
+   "p": "Read each line aloud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 3 (antes e depois): past perfect, was going to, kept / ended up + -ing, going to x will, future continuous; abrir a cápsula de 2006 e planejar a de 2046.",
+  "armadilha": "Sem past perfect (“when I arrived, the show already started”), “I was go to”, “kept to say”, “ended up to work”, “will flying” e going to para decisão na hora.",
+  "pal": [
+   "had already",
+   "was going to",
+   "kept + -ing",
+   "ended up + -ing",
+   "going to",
+   "will",
+   "will be doing",
+   "time capsule"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a cápsula do tempo enterrada em 2006 no jardim da escola.",
+   "perg": "What would you put in a time capsule?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "dado": {
+   "obj": "O dado escolhe um dos seis tópicos; o aluno faz o desafio de memória.",
+   "perg": "Can you do it without help?",
+   "pula": "Quatro números bastam."
+  },
+  "tabuleiro": {
+   "obj": "Jogo de tabuleiro: cada casa é um objeto de 2006 e uma tarefa que mistura a gramática.",
+   "perg": "What had people done before 2006?",
+   "pula": "Pare o tabuleiro na metade se precisar."
+  },
+  "cv-ranking": {
+   "obj": "Ranking de cinco objetos para 2046; explicar o primeiro e o último e fechar um top 3.",
+   "perg": "Which object will surprise people most in 2046?",
+   "pula": "Só o primeiro e o último."
+  },
+  "cadeira": {
+   "obj": "O aluno pergunta e o professor responde curto, como ele mesmo.",
+   "perg": "What were you going to be when you were a kid?",
+   "pula": "Três cartas bastam."
+  },
+  "pode": {
+   "obj": "Checklist “I can” da unidade; o que ficar aberto vai para a lição e a próxima aula.",
+   "perg": "Which line is still hard for you?",
+   "pula": "Nunca corte; leia rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa pessoal misturando passado, planos que mudaram e futuro.",
+   "perg": "What were you going to do last year?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre passado e futuro, com a gramática da unidade.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "A história de vida do aluno de 2006 a 2046, passo a passo.",
+   "perg": "What will you be doing in 2046?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Before, after, and later.",
+   "p": "Pick a card. Answer from memory.",
+   "palavras": [
+    "had",
+    "was going to",
+    "ended up",
+    "will be"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR 2006",
+     "q": "Where were you in 2006, and what had you just started?",
+     "fup": "What did you love then?",
+     "st": [
+      "In 2006 I had just …",
+      "Back then I …"
+     ],
+     "ex": "In 2006 I had just started school, and I loved one cartoon."
+    },
+    {
+     "k": "CHANGED PLANS",
+     "q": "Tell me about a plan that changed.",
+     "fup": "What happened instead?",
+     "st": [
+      "I was going to …, but …",
+      "I ended up …"
+     ],
+     "ex": "I was going to study law, but I ended up working in design."
+    },
+    {
+     "k": "KEPT DOING",
+     "q": "Is there something you kept doing for years?",
+     "fup": "Do you still do it?",
+     "st": [
+      "I kept … for …",
+      "I kept …, even when …"
+     ],
+     "ex": "I kept playing guitar for ten years, even when nobody listened."
+    },
+    {
+     "k": "THIS WEEKEND",
+     "q": "What are you going to do this weekend?",
+     "fup": "And if it rains?",
+     "st": [
+      "I’m going to …",
+      "If it rains, I’ll …"
+     ],
+     "ex": "I’m going to visit my sister. If it rains, I’ll stay in and cook."
+    },
+    {
+     "k": "THIS TIME TOMORROW",
+     "q": "What will you be doing this time tomorrow?",
+     "fup": "Is it a normal day?",
+     "st": [
+      "I’ll be …",
+      "This time tomorrow I’ll be …"
+     ],
+     "ex": "This time tomorrow I’ll be sitting in a meeting."
+    },
+    {
+     "k": "OLD OBJECTS",
+     "q": "What object from your past do you still have?",
+     "fup": "Why did you keep it?",
+     "st": [
+      "I still have … that I had …",
+      "I had never … before …"
+     ],
+     "ex": "I still have a phone I had bought with my first salary."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Defend it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "was going to",
+    "will",
+    "had",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Life in 2006 or life today?",
+     "a": "2006",
+     "b": "Today",
+     "fa": [
+      "2006. People hadn’t started living on their phones.",
+      "Friends met in person."
+     ],
+     "fb": [
+      "Today. Things that had been hard are easy now.",
+      "We can talk to anyone, anywhere."
+     ]
+    },
+    {
+     "q": "Open a time capsule after 20 years, or 50?",
+     "a": "20 years",
+     "b": "50 years",
+     "fa": [
+      "Twenty, because you’ll still remember everything.",
+      "You’ll be there to open it."
+     ],
+     "fb": [
+      "Fifty. It will be much more surprising.",
+      "Your grandchildren will be opening it."
+     ]
+    },
+    {
+     "q": "Plan your future, or see what happens?",
+     "a": "Plan",
+     "b": "See",
+     "fa": [
+      "Plan. If you don’t, you end up doing nothing.",
+      "A plan gives you direction."
+     ],
+     "fb": [
+      "See. I was going to be a doctor, and I’m happy I didn’t.",
+      "Life keeps changing your plans."
+     ]
+    },
+    {
+     "q": "In 2046, will people be working from home or back in offices?",
+     "a": "From home",
+     "b": "In offices",
+     "fa": [
+      "From home. We’ll be meeting in virtual rooms.",
+      "Nobody will want traffic again."
+     ],
+     "fb": [
+      "In offices. People will miss each other.",
+      "Teams work better face to face."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the capsule is still closed."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "2006 to 2046",
+   "t": "Your life in four times.",
+   "p": "Four steps. Each one has its grammar.",
+   "prof": "Each step reviews one topic: past perfect, was going to, ended up, future continuous.",
+   "passos": [
+    {
+     "q": "2006: what had you already done by then?",
+     "st": [
+      "By 2006, I had already …",
+      "I had never …"
+     ],
+     "ex": "By 2006, I had already moved to a new city, but I had never traveled abroad."
+    },
+    {
+     "q": "A plan from the past: what were you going to do?",
+     "st": [
+      "I was going to …, but …"
+     ],
+     "ex": "I was going to live in Canada, but I met my partner."
+    },
+    {
+     "q": "What did you end up doing instead?",
+     "st": [
+      "I ended up …",
+      "I kept …"
+     ],
+     "ex": "I ended up opening a small business, and I kept learning English."
+    },
+    {
+     "q": "2046: what will you be doing?",
+     "st": [
+      "In 2046, I’ll be …"
+     ],
+     "ex": "In 2046, I’ll be living near the sea and teaching my grandchildren to cook."
+    }
+   ],
+   "fim": "Your own capsule: 2006 to 2046, in four sentences."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

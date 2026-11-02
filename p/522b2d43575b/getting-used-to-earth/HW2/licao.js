@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Getting Used to Earth",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/522b2d43575b/getting-used-to-earth/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "used to + verb (a finished past habit; didn't use to; Did you use to ...?) · be used to + -ing / noun (it is normal for you now) · get used to + -ing / noun (it is becoming normal); never used to + -ing, never be used to + plain verb, never didn't used to",
   "abrir": "What are you not used to yet at work or at school?",
   "fecho": "<b>used to</b> + verb = a past habit that stopped: <i>She used to live by the sea.</i> Negative: <b>didn't use to</b>. <b>be used to</b> + -ing = normal for you now: <i>I'm used to waking up early.</i> <b>get used to</b> + -ing = becoming normal: <i>I'm getting used to the noise.</i> Never <i>used to living</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo about a new neighbor. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/522b2d43575b/getting-used-to-earth/img/live-janela.webp",
+      "img": "../img/live-janela.webp",
       "leg": "A dog bed by a window at dawn",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "She used to live under a red sun.",
-          "img": "https://wolf-labs.pages.dev/p/522b2d43575b/getting-used-to-earth/img/live-argo.webp",
+          "img": "../img/live-argo.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I'm not used to waking up this early.",
-          "img": "https://wolf-labs.pages.dev/p/522b2d43575b/getting-used-to-earth/img/live-janela.webp",
+          "img": "../img/live-janela.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It takes a month to get used to a new city.",
-          "img": "https://wolf-labs.pages.dev/p/522b2d43575b/getting-used-to-earth/img/live-cidade.webp",
+          "img": "../img/live-cidade.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/522b2d43575b/getting-used-to-earth/img/live-cidade.webp",
+      "img": "../img/live-cidade.webp",
       "leg": "A big city at night, from above",
       "pede": "Look at the picture: a big city at night, seen from above. Write 2 or 3 sentences about a place that is new for someone (maybe you). Use <b>used to</b>, <b>be used to</b> or <b>get used to</b>.",
       "ph": "I used to … I'm getting used to … I'm not used to …",

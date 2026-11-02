@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Find Out or Ascertain?",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/1dd1ade1a886/find-out-or-ascertain/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "phrasal verbs for speech and one-word verbs for formal writing: find out / ascertain, look into / investigate, set up / establish, put up with / tolerate, come up with / devise, go up / increase, turn down / reject; keep the particle (put up with, come up with); never a formal verb in casual speech",
   "abrir": "What problem at home or at work have you had to look into recently?",
   "fecho": "People get phrasal verbs, documents get one-word verbs: <b>find out / ascertain · look into / investigate · put up with / tolerate · come up with / devise · go up / increase</b>. Keep the whole phrasal verb: <i>put up <b>with</b></i>, <i>come up <b>with</b></i>. And a formal verb in casual speech sounds robotic: <i>I'll ascertain the time of the film</i> is a joke.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia manages a hotel, and Leo writes the report. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/1dd1ade1a886/find-out-or-ascertain/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A hotel library corridor, late at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Guests can't put up with the noise anymore.",
-          "img": "https://wolf-labs.pages.dev/p/1dd1ade1a886/find-out-or-ascertain/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I'll find out where it's coming from.",
-          "img": "https://wolf-labs.pages.dev/p/1dd1ade1a886/find-out-or-ascertain/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Management will investigate the matter in order to ascertain its cause.",
-          "img": "https://wolf-labs.pages.dev/p/1dd1ade1a886/find-out-or-ascertain/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/1dd1ade1a886/find-out-or-ascertain/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A dark hotel library corridor",
       "pede": "Look at the picture: a dark library corridor in a hotel. Write 2 or 3 sentences: say a problem to a colleague with a phrasal verb, then write it as a formal report line with a one-word verb. Use <b>look into / investigate</b>, <b>find out / ascertain</b> or <b>put up with / tolerate</b>.",
       "ph": "Let's look into … / Management will investigate …",

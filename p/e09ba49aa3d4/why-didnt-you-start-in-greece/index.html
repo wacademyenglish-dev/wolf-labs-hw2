@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Why Didn&rsquo;t You Start in Greece? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 1 · B1</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 1 · Why Didn&rsquo;t You Start in Greece? · B1</h2>
+    <p>Episode 1 of the BBC Learning English podcast <b>Better Speaking</b>, in its B1 version (shorter clips, simpler tasks). Stelios Haji-Ioannou is Greek, but he started his airline in London; everybody asks him why. The language is the <b>negative question in the past</b> (<b>Why didn&rsquo;t you&hellip;? Didn&rsquo;t you&hellip;?</b>) and his trick: ask the question first, then answer it. The sister lesson for B2 is &ldquo;Organize Your Speaking&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Big decisions, Ask it, then answer it. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Why didn&rsquo;t you…, Find the answer, Fix the traps, Choose the right words.</li>
+      <li><b>Write</b> &mdash; Your question, your answer. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>The -ed stays after didn&rsquo;t: <i>Why didn&rsquo;t you started?</i> The word order follows Portuguese: <i>Why you didn&rsquo;t come?</i> And &ldquo;por que voc&ecirc; n&atilde;o&hellip;&rdquo; becomes <i>Why not you called me?</i></p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 1 · WHY DIDN'T YOU…? (B1)
+   Vídeo: BBC Learning English, Better Speaking (hsAPJRWHu4U), três trechos (~3:10), os mesmos do B2 menos o último.
+   Alvo: pergunta negativa no passado (Why didn't you…? Didn't you…?) e responder a própria pergunta,
+   como o Stelios. Nenhuma B1 ensina. A aula irmã B2 é a "Organize Your Speaking". */
+const M = { nome: "Why Didn't You Start in Greece?", kick: "B1 · WHY DIDN'T YOU…? DIDN'T YOU…?" };
+var EP = {
+  n: 1, de: 8, nivel: 'B1', titulo: 'Why Didn\'t You Start in Greece?', video: 'hsAPJRWHu4U',
+  convidado: 'Stelios Haji-Ioannou', habilidade: 'ask and answer your own question',
+  trechos: [
+    { ini: 41, fim: 77, rot: 'Stelios: why London?' },
+    { ini: 155, fim: 232, rot: 'Richard: ask, then answer' },
+    { ini: 374, fim: 416, rot: 'Stelios: keep it simple' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'He is from Greece, but he started his airline in London. Everybody asks him the same question. Today you learn his trick: ask the question first, then answer it.',
+      nota: 'Ask: have you ever moved, or wanted to move, to another city? Why?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Big <em>decisions</em>', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Each answer with a reason: because, so.',
+      cartas: [
+        { frente: 'Move', verso: 'Did you ever move to a new city, or a new job? Why?', dica: 'Yes, I moved to… because…', cor: 'var(--guest)', fw: { q: 'Why didn\'t you stay where you were?', st: ['Because…', 'I didn\'t stay because…', 'It was too…'], help: '“I didn\'t stay in my hometown because there were no jobs.”' } },
+        { frente: 'Study', verso: 'Why did you start learning English?', dica: 'I started because…', cor: 'var(--host)', fw: { q: 'Why didn\'t you start before?', st: ['I didn\'t have time.', 'I didn\'t need it.', 'Because…'], help: '“I didn\'t start before because I didn\'t need it at work.”' } },
+        { frente: 'Trip', verso: 'Where was your last trip? Did you like it?', dica: 'My last trip was to…', cor: 'var(--teacher)', fw: { q: 'Why didn\'t you go somewhere else?', st: ['It was cheaper.', 'My friends were there.', 'Because…'], help: '“I didn\'t go to the beach because it was too expensive.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 3 minutes', titulo: 'Listen to <em>Stelios</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the three clips in order. After: true or false.',
+      antes: [ { q: 'Stelios is from Greece. Where did he start his airline?', ops: [{ t: 'In Greece' }, { t: 'In London' }, { t: 'In Germany' }] }, { q: 'Why do you think he chose that place?', ops: [{ t: 'It was a big market' }, { t: 'He liked the weather' }] } ],
+      durante: 'Listen for his question: “Why didn\'t you start the airline in Greece?” And listen to his answer.',
+      depois: [ { f: 'People ask Stelios: “Why didn\'t you start the airline in Greece?”', ok: 1 }, { f: 'He says Greece is too big.', ok: 0 }, { f: 'The only language he could speak was English.', ok: 1 }, { f: 'He says: use a lot of jokes with people from other countries.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Why <em>didn\'t</em> you…?', pt: 'Pergunta negativa no passado: Why didn\'t you + verbo (sem -ed).',
+      nota: 'Read each card aloud. The red card is the -ed after didn\'t.',
+      cartoes: [ { g: 'Why <b>didn\'t</b> you <b>start</b> in Greece?', p: 'didn\'t + the verb, no -ed.' }, { g: '<b>Didn\'t</b> you like it?', p: 'Surprise: I thought you liked it!' }, { g: 'Why didn\'t I…? <b>Because</b>…', p: 'Ask your own question, then answer it.' }, { g: 'Why didn\'t you started?', p: 'After didn\'t: START, not STARTED.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'question and answer', titulo: 'Find the <em>answer</em>', pt: 'Toque na pergunta e depois na resposta dela.',
+      nota: 'Say each pair aloud as a mini dialog.',
+      esq: ['Why didn\'t you start in Greece?', 'Why didn\'t you go to France?', 'Didn\'t you like the party?', 'Why didn\'t you call me?', 'Why didn\'t you come by car?'], dir: ['Greece is too small.', 'The only language I spoke was English.', 'Not really. It was too loud.', 'My phone died!', 'The traffic is terrible.'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Ask me one Why didn\'t you…? question.', st: ['Why didn\'t you…?', 'Didn\'t you…?'], help: '“Why didn\'t you become a doctor?”' } },
+    { k: 'cartas', est: 'o', rot: 'the Stelios trick', titulo: 'Ask it, then <em>answer</em> it', pt: 'Leia a pergunta que todo mundo faz e responda como o Stelios.',
+      nota: 'The student reads the question as if someone asked it, then answers: “And one of the things I say is…”.',
+      cartas: [
+        { frente: 'School', sob: 'question 1', verso: 'People ask me: “Why didn\'t you study English at school?”', dica: 'And I say…', cor: 'var(--guest)', fw: { q: 'Now one more question about your life.', st: ['People ask me: Why didn\'t you…?', 'And I say…', 'Because…'], help: '“People ask me: Why didn\'t you get a dog? And I say: my apartment is too small.”' } },
+        { frente: 'Party', sob: 'question 2', verso: 'People ask me: “Why didn\'t you go to the party last weekend?”', dica: 'And I say…', cor: 'var(--host)' },
+        { frente: 'Job', sob: 'question 3', verso: 'People ask me: “Why didn\'t you choose a different job?”', dica: 'And I say…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'The -ed after didn\'t, the missing did, and “why not” word by word.',
+      itens: [ { erro: 'Why didn\'t you <s>started</s> in Greece?', certo: 'Why didn\'t you <b>start</b> in Greece?', por: 'After didn\'t: no -ed.' }, { erro: 'Why <s>you didn\'t</s> come?', certo: 'Why <b>didn\'t you</b> come?', por: 'Question: didn\'t comes before you.' }, { erro: '<s>Why not you called me?</s>', certo: 'Why <b>didn\'t you call</b> me?', por: '“Por que você não…” = Why didn\'t you…?' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right words</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the episode and close to it. Read each one aloud.',
+      itens: [ { f: 'Why didn\'t you ___ the airline in Greece?', ops: ['start', 'started'], ok: 0 }, { f: 'Why ___ you go to France or Germany?', ops: ['didn\'t', 'don\'t'], ok: 0 }, { f: 'Greece is ___ small.', ops: ['too', 'very much'], ok: 0 }, { f: 'The only language I ___ speak was English.', ops: ['could', 'can'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>question</em>, your answer', pt: 'Escreva uma pergunta que as pessoas sempre fazem a você, e a sua resposta.',
+      ph: 'People always ask me: Why didn\'t you…? And one of the things I say is…', nota: 'The line under the paper catches “didn\'t + -ed” and “why you didn\'t”. SAVE sends it to My notes. Then the student says it without reading.',
+      banco: ['People always ask me:', 'Why didn\'t you', '?', 'And one of the things I say is', 'Because', 'It was too', 'I didn\'t'],
+      regras: [['\\bdidn\'?t (started|liked|wanted|called|played|worked|stayed|moved|studied|decided|tried|went|came)\\b', 'Check: after didn\'t, no -ed.'], ['\\bwhy (you|he|she|they|we) didn\'?t\\b', 'Check: Why didn\'t you…? (didn\'t first).']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'What do you call it?', tx: 'A football coach doesn\'t know a word in English. So he invents one, and everybody understands.',
+      ganchos: [['Next guest', 'a football coach'], ['The skill', 'explain a word you don\'t know'], ['Your task', 'ask one Why didn\'t you…? this week']], nota: 'Ask: how often do you speak English outside class? That opens Episode 2.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "Greek, but he started in London. Ask it, then answer it."
+  },
+  "c9": {
+   "p": "A coach doesn't know a word. So he invents one."
+  }
+ },
+ "prep": {
+  "obj": "Pergunta negativa no passado (Why didn't you…? Didn't you…?) e o truque do Stelios: fazer a pergunta e responder. Ele é grego, mas abriu a companhia aérea em Londres.",
+  "armadilha": "O -ed fica depois de didn't (“Why didn't you started?”), a ordem segue o português (“Why you didn't come?”) e “por que você não…” vira “Why not you called me?”.",
+  "pal": [
+   "Why didn't you…?",
+   "Didn't you…?",
+   "because",
+   "so",
+   "airline",
+   "start a business",
+   "One of the things I say is…",
+   "the reason is"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o convidado: Stelios, grego, abriu a companhia aérea em Londres. Todo mundo pergunta por quê.",
+   "perg": "Have you ever moved, or wanted to move, to another city? Why?",
+   "pula": "Uma resposta e siga."
+  },
+  "c1": {
+   "obj": "Conversa sobre grandes decisões; cada resposta com um motivo (because, so).",
+   "perg": "What was a big decision in your life? Why?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os três clipes do Stelios, em ordem: duas previsões antes, verdadeiro ou falso depois.",
+   "perg": "Why didn't he start in Greece?",
+   "pula": "Assista uma vez só; os clipes vão inteiros."
+  },
+  "c3": {
+   "obj": "A regra: Why didn't you + verbo base; o cartão vermelho é o -ed depois de didn't.",
+   "perg": "Why didn't you study English as a child?",
+   "pula": "Leia os cartões e peça uma pergunta."
+  },
+  "c4": {
+   "obj": "Ligar pergunta e resposta e dizer cada par como um minidiálogo.",
+   "perg": "Read it as a dialog: you ask, I answer.",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "O truque do Stelios: o aluno lê a pergunta como se alguém perguntasse e responde.",
+   "perg": "Why didn't you…? Ask it, then answer it.",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Corrigir as três armadilhas: didn't + -ed, did que some, “why not” palavra por palavra.",
+   "perg": "What's wrong here? Say the right one.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c7": {
+   "obj": "Prática com falas do episódio e parecidas; ler cada uma em voz alta.",
+   "perg": "Read it aloud. Why is that the right word?",
+   "pula": "Faça três linhas."
+  },
+  "c8": {
+   "obj": "Escrever a própria pergunta e a resposta; vai para o My notes e o aluno diz sem ler.",
+   "perg": "Now say it without reading.",
+   "pula": "Uma pergunta e uma resposta bastam."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 2: um técnico inventa uma palavra em inglês e todos entendem.",
+   "perg": "How often do you speak English outside class?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais perguntas negativas no passado sobre decisões da vida do aluno.",
+   "perg": "Why didn't you choose another job?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre decisões, com motivos.",
+   "perg": "Which side are you on? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o convidado do programa e responde perguntas Why didn't you…?",
+   "perg": "Why didn't you start in your hometown?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Why didn't you…?",
+   "p": "Pick a card. Answer with a reason.",
+   "palavras": [
+    "Why didn't you…?",
+    "because",
+    "so",
+    "the reason is"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CITY",
+     "q": "Why didn't you move to another city? Or why did you?",
+     "fup": "Didn't you want to try?",
+     "st": [
+      "I didn't move because …",
+      "I moved because …"
+     ],
+     "ex": "I didn't move because my family is here, so it was an easy choice."
+    },
+    {
+     "k": "YOUR STUDIES",
+     "q": "Why didn't you study something different?",
+     "fup": "Didn't you like other subjects?",
+     "st": [
+      "I didn't study … because …",
+      "The reason is …"
+     ],
+     "ex": "I didn't study medicine because I hate blood."
+    },
+    {
+     "k": "YOUR ENGLISH",
+     "q": "Why didn't you start English earlier?",
+     "fup": "Didn't you have time?",
+     "st": [
+      "I didn't start earlier because …"
+     ],
+     "ex": "I didn't start earlier because I didn't need it at work."
+    },
+    {
+     "k": "A BUSINESS",
+     "q": "Did you ever want to start a business? Why didn't you?",
+     "fup": "What kind of business?",
+     "st": [
+      "I wanted to open a …",
+      "I didn't because …"
+     ],
+     "ex": "I wanted to open a café, but I didn't because it was too expensive."
+    },
+    {
+     "k": "LAST WEEKEND",
+     "q": "What didn't you do last weekend? Why not?",
+     "fup": "Didn't you want to?",
+     "st": [
+      "I didn't … because …"
+     ],
+     "ex": "I didn't go out because it rained all weekend."
+    },
+    {
+     "k": "THE TRICK",
+     "q": "Ask yourself a question about your job. Then answer it.",
+     "fup": "Was that easy or hard?",
+     "st": [
+      "People ask me why I …",
+      "And one of the things I say is …"
+     ],
+     "ex": "People ask me why I didn't become a doctor. And one of the things I say is: I like computers more."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "so",
+    "that's why",
+    "I see, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Start a business at home or in another country?",
+     "a": "At home",
+     "b": "Abroad",
+     "fa": [
+      "At home. You know the people and the language.",
+      "That's why it's safer."
+     ],
+     "fb": [
+      "Abroad. Stelios did it in London, and it worked.",
+      "A bigger market means more chances."
+     ]
+    },
+    {
+     "q": "A big decision: think for months or decide fast?",
+     "a": "Think for months",
+     "b": "Decide fast",
+     "fa": [
+      "Think for months. A mistake is expensive.",
+      "You need all the information."
+     ],
+     "fb": [
+      "Decide fast. If you wait, the chance goes away.",
+      "You can fix things later."
+     ]
+    },
+    {
+     "q": "Work for a big company or for yourself?",
+     "a": "A big company",
+     "b": "For yourself",
+     "fa": [
+      "A big company. The salary comes every month.",
+      "You learn from other people."
+     ],
+     "fb": [
+      "For yourself. You make the rules.",
+      "Nobody tells you what to do."
+     ]
+    },
+    {
+     "q": "When people ask “why didn't you…?”: explain or just smile?",
+     "a": "Explain",
+     "b": "Just smile",
+     "fa": [
+      "Explain. People understand you better.",
+      "And you practice your English!"
+     ],
+     "fb": [
+      "Just smile. You don't need to explain your life.",
+      "It's your decision, not theirs."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the guest on air.",
+   "p": "Your teacher interviews you about a decision.",
+   "aluno": "Listen to your teacher’s question. Answer as the guest: ask it, then answer it.",
+   "perguntas": [
+    "Why didn't you stay in your first job?",
+    "Didn't you feel afraid?",
+    "Why didn't you ask your family for help?",
+    "Why didn't you give up?",
+    "Didn't you want an easier life?",
+    "What didn't you expect?"
+   ],
+   "st": [
+    "Why didn't I …? Well, …",
+    "And one of the things I say is …",
+    "The reason is …"
+   ],
+   "ex": "Why didn't I stay? Well, one of the things I say is: I wanted to learn something new."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

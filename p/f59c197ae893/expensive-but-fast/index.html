@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Expensive but Fast · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="serie.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Challenge · Episode 2</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season map: London to Edinburgh"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>The Challenge · Episode 2 · Expensive but Fast</h2>
+    <p>Episode 2 of <b>The London to Edinburgh Challenge</b>. Bob takes the train, Fran takes her bike, Paula stays in London. Every choice has a good side and a bad side, so the language is <b>adjectives</b> (fast, slow, cheap, expensive), <b>but</b> and <b>and</b>, and <b>it isn&rsquo;t</b>. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Previously on The Challenge, How do you travel, Train, bus or bike. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Episode 2, in three steps. The video unlocks when the student answers the Before questions.</li>
+      <li><b>Focus</b> &mdash; But or and, Find the opposite, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Your trip. It goes to the student&rsquo;s My notes.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Portuguese drops the subject: &ldquo;&eacute; caro, mas &eacute; r&aacute;pido&rdquo; becomes <i>is expensive, but is fast</i>. And the plural sneaks in: <i>the bus are cheap</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The map on top shows the season; today stop 2 lights up. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* THE CHALLENGE · EPISODE 2 · EXPENSIVE BUT FAST (A1)
+   Vídeo: BBC Learning English, "Bus, train, or bike?" (qnLaRJ3rZMk, 8:04).
+   Substitui a "Expensive but Fast" no MESMO endereço (p/f59c197ae893/expensive-but-fast). */
+const M = { nome: "Expensive but Fast", kick: "A1 · ADJECTIVES, BUT AND AND, IT ISN'T" };
+var EP = {
+  n: 2, titulo: 'Expensive but Fast', video: 'qnLaRJ3rZMk', onde: { Fran: 'on a bike', Bob: 'on a train', Paula: 'in London' },
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'Train, bus or bike? The train is fast, but it\'s expensive. Cycling is cheap, but it\'s slow. Three people, three choices.',
+      nota: 'Ask before NEXT: how do you go to Edinburgh, train, bus or bike?' },
+    { k: 'cartas', est: 'o', rot: 'previously on', titulo: 'Previously on <em>The Challenge</em>', pt: 'Vire as cartas: quem é quem?',
+      nota: 'A quick recap of Episode 1 in the student\'s words: She\'s… He\'s… from…',
+      cartas: [
+        { frente: 'Fran', sob: 'Episode 1', verso: 'I\'m Fran. I\'m 25. I\'m from Cambridge.', dica: 'She\'s …', cor: 'var(--fran)', fw: { q: 'Who is the winner? Guess. Why?', st: ['I think Fran is the winner.', 'She\'s …', 'He\'s …'], help: 'Just a guess: “I think Bob is the winner. He\'s young.”' } },
+        { frente: 'Bob', sob: 'Episode 1', verso: 'Hello, I\'m Bob. I\'m 20. I\'m from York.', dica: 'He\'s …', cor: 'var(--bob)' },
+        { frente: 'Paula', sob: 'Episode 1', verso: 'Hi, I\'m Paula. I\'m from Rochester.', dica: 'She\'s from …', cor: 'var(--paula)' }
+      ] },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'How do <em>you</em> travel?', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Push for an adjective in every answer: cheap, expensive, fast, slow.',
+      cartas: [
+        { frente: 'Bus?', verso: 'How do you go to work or school?', dica: 'I go by bus / by car / on foot.', cor: 'var(--paula)', fw: { q: 'Is it fast or slow?', st: ['It\'s fast.', 'It\'s slow.', 'It\'s fast, but it\'s expensive.'], help: 'Say: “I go by bus. It\'s cheap, but it\'s slow.”' } },
+        { frente: '£?', verso: 'Is the bus cheap in your city?', dica: 'It\'s cheap. / It isn\'t cheap.', cor: 'var(--bob)', fw: { q: 'How much is it?', st: ['It\'s … reais.', 'It\'s cheap.', 'It isn\'t cheap.'], help: 'Use a number: “It\'s five reais.”' } },
+        { frente: 'Fast?', verso: 'Train or plane: which is fast?', dica: 'The plane is fast, but …', cor: 'var(--fran)', fw: { q: 'And which is cheap?', st: ['The train is cheap.', 'The plane is expensive.', '… but …'], help: '“The plane is fast, but it\'s expensive.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'Episode 2 · 8:04', titulo: 'Watch <em>Episode 2</em>', pt: 'Responda antes. O vídeo destrava depois.',
+      nota: 'Before: two guesses, no wrong answer. The video unlocks. Watch the whole episode. After: true or false.',
+      antes: [ { q: 'Which is cheap?', ops: [{ t: 'the train' }, { t: 'the bus' }, { t: 'the bike' }] }, { q: 'Which is fast?', ops: [{ t: 'the train' }, { t: 'the bus' }, { t: 'the bike' }] } ],
+      durante: 'Listen: what does Fran choose? And Bob? And where is Paula?',
+      depois: [ { f: 'The train is cheap.', ok: 0 }, { f: 'Cycling is twenty pounds.', ok: 1 }, { f: 'Bob\'s train is cancelled.', ok: 1 }, { f: 'Paula is in Manchester.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: '<em>But</em> or <em>and</em>?', pt: 'but = mas (ideia diferente) · and = e (mesma direção) · isn\'t = is not.',
+      nota: 'Read each card. The red card is the Portuguese trap: “não é rápido” becomes “is no fast”.',
+      cartoes: [ { g: 'It\'s expensive, <b>but</b> it\'s fast.', p: 'but: the second idea is different.' }, { g: 'It\'s cheap <b>and</b> it\'s good.', p: 'and: the same direction.' }, { g: 'It <b>isn\'t</b> fast.', p: 'isn\'t = is not.' }, { g: 'It\'s no fast.', p: 'Not “no fast”. Say: it isn\'t fast.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'opposites', titulo: 'Find the <em>opposite</em>', pt: 'Toque numa palavra e depois no contrário dela.', grande: 1,
+      nota: 'Every word from the episode has a partner. Say both out loud: cheap, expensive.',
+      esq: ['cheap', 'fast', 'big', 'good', 'hot'], dir: ['expensive', 'slow', 'small', 'bad', 'cold'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Your phone: is it cheap or expensive? Fast or slow?', st: ['It\'s …', 'It\'s …, but it\'s …', 'It isn\'t …'], help: '“My phone is old, but it\'s fast.”' } },
+    { k: 'cartas', est: 'o', rot: 'your choice', titulo: 'Train, bus or <em>bike</em>?', pt: 'Escolha um transporte e defenda a escolha.',
+      nota: 'The student chooses for their own trip London to Edinburgh, and defends it with but.',
+      cartas: [
+        { frente: 'Train', sob: 'Bob', verso: 'Fast. Expensive. (And sometimes cancelled!)', dica: 'It\'s fast, but …', cor: 'var(--bob)', fw: { q: 'Why the train?', st: ['It\'s fast, but it\'s expensive.', 'It isn\'t slow.', 'I like trains.'], help: 'Use but: “It\'s expensive, but it\'s fast.”' } },
+        { frente: 'Bike', sob: 'Fran', verso: 'Twenty pounds. Cheap. Very slow.', dica: 'It\'s cheap, but …', cor: 'var(--fran)', fw: { q: 'Why the bike?', st: ['It\'s cheap, but it\'s slow.', 'It\'s good for me.', 'It isn\'t expensive.'], help: '“It\'s cheap, but it\'s slow.”' } },
+        { frente: 'Bus', sob: 'Paula?', verso: 'Cheap. Slow. Very, very long!', dica: 'It isn\'t fast …', cor: 'var(--paula)', fw: { q: 'Why the bus?', st: ['It\'s cheap.', 'It isn\'t fast, but …', 'It\'s good.'], help: '“It isn\'t fast, but it\'s cheap.”' } }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'The student taps and the sentence fixes itself; ask them to read the right one out loud.',
+      itens: [ { erro: 'It\'s <s>no</s> fast.', certo: 'It <b>isn\'t</b> fast.', por: '“Não é” is isn\'t.' }, { erro: 'The train is expensive, but <s>is</s> fast.', certo: 'The train is expensive, but <b>it\'s</b> fast.', por: 'English needs the it.' }, { erro: 'The bus <s>are</s> cheap.', certo: 'The bus <b>is</b> cheap.', por: 'One bus: is.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Four lines from the episode. Ask the student to read each one out loud.',
+      itens: [ { f: 'The train is fast, ___ it\'s expensive.', ops: ['but', 'and'], ok: 0 }, { f: 'Cycling is cheap, but it\'s ___.', ops: ['slow', 'fast'], ok: 0 }, { f: 'The train ___ fast today.', ops: ['isn\'t', 'is no'], ok: 0 }, { f: 'London is big ___ busy.', ops: ['and', 'but'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>trip</em>', pt: 'Escreva como você vai ao trabalho ou à escola. Toque nas peças.',
+      ph: 'I go by bus. It\'s cheap, but it\'s slow.', nota: 'The line under the paper catches “it\'s no fast” and “but is fast”. SAVE sends it to My notes.',
+      banco: ['I go by', 'It\'s', 'It isn\'t', 'but', 'and', 'cheap', 'expensive', 'fast', 'slow'],
+      regras: [['\\bit\'?s no\\b', 'Check: it isn\'t (fast), not it\'s no.'], ['\\bbut is\\b', 'Check: but it\'s (fast).']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Look at my pictures!', tx: 'Paula is still in London. Big, busy, amazing: the shops, the park, the river…',
+      ganchos: [['Paula', 'in London'], ['Bob', 'in Cambridge'], ['Fran', 'on the road']], nota: 'Ask: what is your favorite place in a big city? That opens Episode 3.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="serie.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Adjetivos (fast, slow, cheap, expensive) com but e and, e o negativo it isn’t: no episódio 2, Bob vai de trem, Fran de bicicleta e Paula fica em Londres.",
+  "armadilha": "O português solta o sujeito e usa “não é”: “é caro, mas é rápido” vira is expensive, but is fast; “não é rápido” vira it’s no fast. E o plural escapa: the bus are cheap.",
+  "pal": [
+   "fast",
+   "slow",
+   "cheap",
+   "expensive",
+   "but",
+   "and",
+   "it isn’t",
+   "train",
+   "bike"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abre o episódio 2: trem, ônibus ou bicicleta, cada escolha com um lado bom e um ruim.",
+   "perg": "Train, bus or bike to Edinburgh?",
+   "pula": "Uma resposta curta basta; vá para o NEXT."
+  },
+  "c1": {
+   "obj": "Recapitula o episódio 1 com She’s… He’s… from…",
+   "perg": "Who is Fran? Where is she from?",
+   "pula": "Vire só uma carta."
+  },
+  "c2": {
+   "obj": "Conversa sobre como o aluno se desloca, sempre com um adjetivo.",
+   "perg": "How do you go to work? Is it fast?",
+   "pula": "Duas cartas bastam."
+  },
+  "c3": {
+   "obj": "Assistir ao episódio 2 inteiro: palpites antes, verdadeiro ou falso depois.",
+   "perg": "What does Fran choose? And Bob?",
+   "pula": "Pule o durante; faça antes e depois."
+  },
+  "c4": {
+   "obj": "A regra: but para ideia diferente, and para a mesma direção, isn’t para negar.",
+   "perg": "Is the train cheap?",
+   "pula": "Leia os quatro cartões; sem frases extras."
+  },
+  "c5": {
+   "obj": "Pares de opostos do episódio, dizendo os dois em voz alta.",
+   "perg": "Your phone: is it fast or slow?",
+   "pula": "Pule a pergunta do post-it."
+  },
+  "c6": {
+   "obj": "O aluno escolhe o transporte da sua viagem e defende com but.",
+   "perg": "Why the bike? It’s cheap, but…?",
+   "pula": "Uma carta basta."
+  },
+  "c7": {
+   "obj": "Três armadilhas: it’s no fast, but is fast e the bus are.",
+   "perg": "How do you say “não é rápido”?",
+   "pula": "Faça as três, rápido; não explique de novo."
+  },
+  "c8": {
+   "obj": "Quatro frases do episódio: escolher but/and, isn’t, slow.",
+   "perg": "But or and here?",
+   "pula": "Duas frases bastam."
+  },
+  "c9": {
+   "obj": "Escrita: como o aluno vai ao trabalho, com but; vai para o My notes.",
+   "perg": "How do you go to work? Is it cheap?",
+   "pula": "Duas frases bastam."
+  },
+  "c10": {
+   "obj": "Gancho do episódio 3: Paula e as fotos de Londres.",
+   "perg": "What is your favorite place in a big city?",
+   "pula": "Só a pergunta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre coisas do dia a dia, com adjetivo e but.",
+   "perg": "Is your city big or small?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre dois transportes e dizer um motivo curto.",
+   "perg": "Train or plane? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta a sua própria viagem para Edimburgo, passo a passo.",
+   "perg": "How do you go? Is it fast or slow?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Good side, bad side.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "fast",
+    "slow",
+    "cheap",
+    "expensive",
+    "but",
+    "and",
+    "isn’t"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CITY",
+     "q": "Is your city big or small?",
+     "fup": "Is it expensive?",
+     "st": [
+      "It’s big, but …",
+      "It isn’t …"
+     ],
+     "ex": "My city is big, but it isn’t expensive."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Is your phone new or old?",
+     "fup": "Is it fast?",
+     "st": [
+      "It’s old, but …",
+      "It’s new and …"
+     ],
+     "ex": "My phone is old, but it’s fast."
+    },
+    {
+     "k": "COFFEE",
+     "q": "Is coffee cheap or expensive here?",
+     "fup": "Is it good?",
+     "st": [
+      "It’s cheap and …",
+      "It isn’t cheap, but …"
+     ],
+     "ex": "Coffee isn’t cheap, but it’s very good."
+    },
+    {
+     "k": "YOUR CAR",
+     "q": "Car or bus: which is fast in your city?",
+     "fup": "And which is cheap?",
+     "st": [
+      "The car is fast, but …",
+      "The bus is …"
+     ],
+     "ex": "The car is fast, but it’s expensive. The bus is cheap."
+    },
+    {
+     "k": "THE WEATHER",
+     "q": "Is it hot or cold today?",
+     "fup": "Is it good for a bike?",
+     "st": [
+      "It’s hot and …",
+      "It isn’t cold."
+     ],
+     "ex": "It’s hot and sunny. It’s good for a bike."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "Is your job easy or difficult?",
+     "fup": "Is it good?",
+     "st": [
+      "It’s difficult, but …",
+      "It’s easy and …"
+     ],
+     "ex": "My job is difficult, but it’s good."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "fast",
+    "slow",
+    "cheap",
+    "expensive",
+    "but"
+   ],
+   "rodadas": [
+    {
+     "q": "Train or plane?",
+     "a": "The train",
+     "b": "The plane",
+     "fa": [
+      "The train. It’s slow, but it’s cheap."
+     ],
+     "fb": [
+      "The plane. It’s expensive, but it’s fast."
+     ]
+    },
+    {
+     "q": "Bike or car in your city?",
+     "a": "A bike",
+     "b": "A car",
+     "fa": [
+      "A bike. It’s cheap and it’s good for me."
+     ],
+     "fb": [
+      "A car. It’s fast, and it isn’t cold."
+     ]
+    },
+    {
+     "q": "Big city or small town?",
+     "a": "Big city",
+     "b": "Small town",
+     "fa": [
+      "A big city. It’s busy, but it’s amazing."
+     ],
+     "fb": [
+      "A small town. It isn’t busy, and it’s cheap."
+     ]
+    },
+    {
+     "q": "Bus or taxi at night?",
+     "a": "The bus",
+     "b": "A taxi",
+     "fa": [
+      "The bus. It’s slow, but it’s cheap."
+     ],
+     "fb": [
+      "A taxi. It’s expensive, but it’s fast."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Fast or cheap: everybody had a reason."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Challenge",
+   "t": "You go to Edinburgh too.",
+   "p": "Answer each step. Use but.",
+   "prof": "The student plans their own London to Edinburgh trip; push for one adjective and one but in every answer.",
+   "passos": [
+    {
+     "q": "How do you go: train, bus or bike?",
+     "st": [
+      "I go by …",
+      "I go on a bike."
+     ],
+     "ex": "I go by bus."
+    },
+    {
+     "q": "Is it fast or slow? Cheap or expensive?",
+     "st": [
+      "It’s …, but it’s …",
+      "It isn’t …"
+     ],
+     "ex": "It’s slow, but it’s cheap."
+    },
+    {
+     "q": "Who goes with you: Fran, Bob or Paula?",
+     "st": [
+      "I go with …",
+      "… is fun, but …"
+     ],
+     "ex": "I go with Fran. She’s fun, but her bike is slow!"
+    },
+    {
+     "q": "Are you the winner? Why?",
+     "st": [
+      "Yes! I’m …",
+      "No. I’m …, but …"
+     ],
+     "ex": "No. I’m slow, but I’m happy."
+    }
+   ],
+   "fim": "Your trip is ready. Is it fast or cheap?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

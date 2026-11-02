@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I'm Not an Astronaut",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/6176b216a5b0/not-an-astronaut/img/live-controle.webp",
+  "capa": "../img/live-controle.webp",
   "alvo": "somebody / anybody / nobody and something / anything / nothing: one negative per sentence",
   "abrir": "Who do you call when you have a problem?",
   "fecho": "<b>One no is enough:</b> <i>I didn't see anybody</i> or <i>I saw nobody</i>, never <i>I didn't see nobody</i>. In yes sentences: <b>somebody, something</b>. In questions and after not: <b>anybody, anything</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in Mission Control. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/6176b216a5b0/not-an-astronaut/img/live-controle.webp",
+      "img": "../img/live-controle.webp",
       "leg": "Ship scan, room by room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Nobody is in the lab, but somebody left a cup.",
-          "img": "https://wolf-labs.pages.dev/p/6176b216a5b0/not-an-astronaut/img/live-escotilha.webp",
+          "img": "../img/live-escotilha.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I can't see anybody on the bridge.",
-          "img": "https://wolf-labs.pages.dev/p/6176b216a5b0/not-an-astronaut/img/live-ponte.webp",
+          "img": "../img/live-ponte.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "There isn't anything on the screens.",
-          "img": "https://wolf-labs.pages.dev/p/6176b216a5b0/not-an-astronaut/img/live-controle.webp",
+          "img": "../img/live-controle.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -185,7 +185,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/6176b216a5b0/not-an-astronaut/img/live-estrelas.webp",
+      "img": "../img/live-estrelas.webp",
       "leg": "Far from home",
       "pede": "Look at the picture. Write 3 short lines for Earth: who is on the ship, who isn't, and one strange thing. Use <b>somebody, nobody, something</b> or <b>nothing</b>.",
       "ph": "Nobody is in … but somebody …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Postcards Home",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4f3f1634c999/a1-review-postcards-home/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 9 review: the weather with It's; comparatives (bigger than, never more big); superlatives (the best); good (thing) x well (action); so = result, because = reason",
   "abrir": "What is the weather like today?",
   "fecho": "Weather: <b>It is</b> sunny, <b>It is</b> cold. Compare: <b>bigger than</b>, <b>smaller than</b>, <b>better than</b>. <b>The best</b> = number one. <b>Good</b> + thing, <b>well</b> + action: <i>I sleep well.</i> <b>So</b> = result, <b>because</b> = reason.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo calls Mia from a trip. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/4f3f1634c999/a1-review-postcards-home/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Night clouds from a plane window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It is sunny and very hot today.",
-          "img": "https://wolf-labs.pages.dev/p/4f3f1634c999/a1-review-postcards-home/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Lisbon is smaller than our city.",
-          "img": "https://wolf-labs.pages.dev/p/4f3f1634c999/a1-review-postcards-home/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The food is the best, and I sleep well.",
-          "img": "https://wolf-labs.pages.dev/p/4f3f1634c999/a1-review-postcards-home/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -157,7 +157,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4f3f1634c999/a1-review-postcards-home/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A globe and two small planes",
       "pede": "Look at the picture: a globe and two small planes. Write 2 or 3 sentences about a trip. Use <b>It is ...</b>, <b>bigger / smaller than</b>, <b>so</b> or <b>because</b>.",
       "ph": "I am in … It is …",

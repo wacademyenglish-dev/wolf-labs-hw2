@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -116,5 +117,286 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Prepare, and answer feedback.",
+   "p": "One question, the video, then the questions."
+  },
+  "leitura": {
+   "t": "Three design decisions.",
+   "p": "Read it like a presenter. Then answer."
+  },
+  "transforma": {
+   "t": "Say what you did and why.",
+   "p": "Read the clue. Say one sentence with a reason."
+  },
+  "cv-cadeira": {
+   "t": "The gym owner has opinions.",
+   "p": "Answer with reasons. Ask one good question."
+  },
+  "pode": {
+   "t": "Lesson 4: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Apresentar decisões de design com motivo (Let me walk you through…, We chose… because…, so that…, to…) e responder opiniões (Yes, … Can you help me understand…?): o app de academia FitNook.",
+  "armadilha": "O brasileiro diz “We choosed”, “so that people can to reach”, “for make it faster” (do “para fazer”) e justifica com gosto (“I like this color”) em vez de motivo.",
+  "pal": [
+   "Let me walk you through…",
+   "Our goal was to…",
+   "We chose… because…",
+   "so that…",
+   "to + verb",
+   "As a result,…",
+   "Can you help me understand…?",
+   "stakeholder"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: bom design é metade do trabalho; a outra metade é explicar.",
+   "perg": "Why did you choose those colors in your last design?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "video": {
+   "obj": "Ouvir: como preparar a reunião e responder feedback (3:41–5:43).",
+   "perg": "What does “lead with yes” mean?",
+   "pula": "Assista uma vez só e faça duas perguntas."
+  },
+  "leitura": {
+   "obj": "Ler o walkthrough do FitNook como apresentador e achar o padrão decisão + motivo.",
+   "perg": "Why did they move the button?",
+   "pula": "Leia e faça uma pergunta."
+  },
+  "transforma": {
+   "obj": "Transformar decisões soltas em frases com because, so that ou to.",
+   "perg": "Why? Say it with so that.",
+   "pula": "Seis frases bastam."
+  },
+  "cv-cadeira": {
+   "obj": "Momento de conversa: o professor é o Dan, dono da academia, cheio de opiniões.",
+   "perg": "Can you help me understand why the descriptions matter?",
+   "pula": "Três falas do Dan bastam."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 4: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you present a design decision with a reason now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre o trabalho real do aluno como designer, sempre com motivo.",
+   "perg": "What is a design decision you’re proud of, and why?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de design com cliente, defendidos com because / so that.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno faz o walkthrough de um projeto próprio, passo a passo.",
+   "perg": "What was your goal?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your designs, your reasons.",
+   "p": "Pick a card. Always give a why.",
+   "palavras": [
+    "because",
+    "so that",
+    "to",
+    "Our goal was to…"
+   ],
+   "cartas": [
+    {
+     "k": "PROUD OF",
+     "q": "What design decision are you proud of?",
+     "fup": "Why did you make it?",
+     "st": [
+      "I chose …",
+      "so that …"
+     ],
+     "ex": "I chose a dark background so that the photos look brighter."
+    },
+    {
+     "k": "A BAD CLIENT",
+     "q": "What did a client ask for that you didn’t agree with?",
+     "fup": "What did you say?",
+     "st": [
+      "The client wanted …",
+      "I said: Yes, and …"
+     ],
+     "ex": "The client wanted a bigger logo. I said: Yes, and we can make it bigger on the first page only."
+    },
+    {
+     "k": "COLORS",
+     "q": "How do you choose colors for a project?",
+     "fup": "Give me a real example.",
+     "st": [
+      "Our goal is usually to …",
+      "We use … because …"
+     ],
+     "ex": "For a bakery, we used warm colors because they feel like fresh bread."
+    },
+    {
+     "k": "PRESENTING",
+     "q": "Do you like presenting your work?",
+     "fup": "What makes you nervous?",
+     "st": [
+      "I like / don’t like it, because …",
+      "What makes me nervous is …"
+     ],
+     "ex": "I don’t love it, because people give opinions, not reasons."
+    },
+    {
+     "k": "YOUR TOOLS",
+     "q": "Which tools do you use, and why?",
+     "fup": "Would you change any?",
+     "st": [
+      "I use … to …",
+      "I’d switch to … so that …"
+     ],
+     "ex": "I use Figma to share designs with clients in real time."
+    },
+    {
+     "k": "FEEDBACK",
+     "q": "What is the worst feedback you’ve received?",
+     "fup": "How would you answer it now?",
+     "st": [
+      "Someone said …",
+      "Now I’d ask: Can you help me understand …?"
+     ],
+     "ex": "Someone said “make it pop”. Now I’d ask: Can you help me understand what feels flat?"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Client’s way or your way?",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "because",
+    "so that",
+    "Yes, and…"
+   ],
+   "rodadas": [
+    {
+     "q": "The client pays. Do it their way, or defend your design?",
+     "a": "Their way",
+     "b": "Defend it",
+     "fa": [
+      "Their way. The client knows the business.",
+      "A happy client comes back."
+     ],
+     "fb": [
+      "Defend it, with reasons. They hired me so that the design works.",
+      "Users matter more than taste."
+     ]
+    },
+    {
+     "q": "Show one option or three options?",
+     "a": "One",
+     "b": "Three",
+     "fa": [
+      "One. It shows confidence.",
+      "Three options mean three fights."
+     ],
+     "fb": [
+      "Three. The client feels part of it.",
+      "One can look like a take-it-or-leave-it."
+     ]
+    },
+    {
+     "q": "Present live, or send a recorded walkthrough?",
+     "a": "Live",
+     "b": "Recorded",
+     "fa": [
+      "Live, so that I can answer questions at once.",
+      "Energy matters."
+     ],
+     "fb": [
+      "Recorded. People watch it when they have time.",
+      "I can prepare every word."
+     ]
+    },
+    {
+     "q": "Long descriptions in the app, or short ones?",
+     "a": "Long",
+     "b": "Short",
+     "fa": [
+      "Long, so that people know the class before they book.",
+      "Two coaches complained."
+     ],
+     "fb": [
+      "Short, because people don’t read on phones.",
+      "Add a “more” button."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Walkthrough",
+   "t": "Walk me through your project.",
+   "p": "A real project. One step at a time.",
+   "prof": "Play a stakeholder with opinions. After each step, give one opinion with no reason.",
+   "passos": [
+    {
+     "q": "What is the project? Start the walkthrough.",
+     "st": [
+      "Let me walk you through …"
+     ],
+     "ex": "Let me walk you through the new menu for a café in Curitiba."
+    },
+    {
+     "q": "What was the goal?",
+     "st": [
+      "Our goal was to …"
+     ],
+     "ex": "Our goal was to help people order faster at lunchtime."
+    },
+    {
+     "q": "Say two decisions, each with a reason.",
+     "st": [
+      "We chose … because …",
+      "We moved … so that …"
+     ],
+     "ex": "We chose big photos because people order with their eyes. We moved the prices to the right so that they are easy to compare."
+    },
+    {
+     "q": "What was the result?",
+     "st": [
+      "As a result, …"
+     ],
+     "ex": "As a result, the line at lunchtime is five minutes shorter."
+    }
+   ],
+   "fim": "Walkthrough done. Now say it again in under one minute."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

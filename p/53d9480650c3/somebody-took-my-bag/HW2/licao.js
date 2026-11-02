@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Somebody Took My Bag",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/53d9480650c3/somebody-took-my-bag/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "some- / any- / no- + -body / -thing / -where: some- in a positive sentence, any- in a question or with not, no- already says no (one negative only: never isn't nothing, nobody didn't); everybody, somebody, nobody take a singular verb",
   "abrir": "Do you like big parties or small ones?",
   "fecho": "<b>some-</b> = positive (<i>somebody took it</i>). <b>any-</b> = question or <b>not</b> (<i>Is there anything? There isn't anything.</i>). <b>no-</b> is already negative: <i>Nobody saw it.</i> One no only! <b>Everybody / nobody</b> + singular verb: <i>Everybody is ready.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia lost her bag at a party. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/53d9480650c3/somebody-took-my-bag/img/live-corredor.webp",
+      "img": "../img/live-corredor.webp",
       "leg": "A purple hallway",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Somebody took my bag.",
-          "img": "https://wolf-labs.pages.dev/p/53d9480650c3/somebody-took-my-bag/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "There isn't anything in the hall.",
-          "img": "https://wolf-labs.pages.dev/p/53d9480650c3/somebody-took-my-bag/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Nobody saw it because everybody wore a costume.",
-          "img": "https://wolf-labs.pages.dev/p/53d9480650c3/somebody-took-my-bag/img/live-fantasias.webp",
+          "img": "../img/live-fantasias.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/53d9480650c3/somebody-took-my-bag/img/live-festa.webp",
+      "img": "../img/live-festa.webp",
       "leg": "A party table with candy",
       "pede": "Look at the picture: a party table with candy and pumpkins. Write 2 or 3 sentences about it. Use <b>somebody</b>, <b>anything</b>, <b>nobody</b>, <b>nothing</b> or <b>everybody</b>.",
       "ph": "Everybody is …",

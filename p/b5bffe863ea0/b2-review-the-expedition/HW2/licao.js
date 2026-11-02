@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Expedition",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b5bffe863ea0/b2-review-the-expedition/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 1 review: past perfect simple and continuous (nobody had used it; I had been repairing), used to x be / get used to + -ing, future perfect and future continuous (by next June I will have finished), by x until, was going to",
   "abrir": "What had changed the last time you came back from a trip?",
   "fecho": "<b>had done</b> = the earlier past: <i>nobody had used the cabin</i>. <b>had been doing</b> = the activity before that moment. <b>be / get used to + -ing</b>: <i>I'm used to sleeping late</i>. <b>will have done</b> = finished before a future point; <b>will be doing</b> = in progress then. <b>By</b> = deadline; <b>until</b> = all the time up to. <b>was going to</b> = the plan that changed.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after four months at a mountain station. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/b5bffe863ea0/b2-review-the-expedition/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A cabin at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -162,7 +162,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b5bffe863ea0/b2-review-the-expedition/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A lantern, a map and a notebook on a desk",
       "pede": "Look at the picture: a lantern, a map and a notebook on a dark desk at a remote station. Write 2 or 3 sentences about the expedition: what had changed when the team arrived, what they were going to do, and what they will have done by next year.",
       "ph": "When the team arrived, ...",

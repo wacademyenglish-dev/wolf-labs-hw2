@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Fifteen Minutes",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/cda192a457e6/fifteen-minutes/img/live-portao.webp",
+  "capa": "../img/live-portao.webp",
   "alvo": "past perfect: had + third form, the past of the past, only with two past moments; When I arrived, the train had left (it was already gone); never had went, had began, or had with only one moment",
   "abrir": "Think of a time you arrived late. What had already happened?",
   "fecho": "<b>Had</b> + third form = the past of the past: the thing that was already over. <i>When I arrived, the train had left.</i> You need <b>two</b> past moments. With only one, use the past simple: <i>Yesterday I missed my bus</i>, never <i>had missed</i>. Third form: <i>gone</i>, <i>begun</i>, never <i>had went</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo, one evening at the station. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/cda192a457e6/fifteen-minutes/img/live-plataforma.webp",
+      "img": "../img/live-plataforma.webp",
       "leg": "A dark platform",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "When we arrived, the gate had already closed.",
-          "img": "https://wolf-labs.pages.dev/p/cda192a457e6/fifteen-minutes/img/live-portao.webp",
+          "img": "../img/live-portao.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I had never missed a train before that day.",
-          "img": "https://wolf-labs.pages.dev/p/cda192a457e6/fifteen-minutes/img/live-plataforma.webp",
+          "img": "../img/live-plataforma.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She had forgotten her suitcase, so she went back.",
-          "img": "https://wolf-labs.pages.dev/p/cda192a457e6/fifteen-minutes/img/live-mala.webp",
+          "img": "../img/live-mala.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/cda192a457e6/fifteen-minutes/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "An empty room with a table",
       "pede": "Look at the picture: an empty room with a table. Write 2 or 3 sentences about a time you waited in a room like this. What had happened before? Use <b>had</b> + third form.",
       "ph": "Before I waited, I had …",

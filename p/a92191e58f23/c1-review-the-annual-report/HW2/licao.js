@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Annual Report",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a92191e58f23/c1-review-the-annual-report/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the dense written sentence: nominalisation (the reduction in costs), Having + participle, verbless clauses (Though tired, ...), in light of, notwithstanding, subjunctive after vital / essential (It is vital that he be informed)",
   "abrir": "Why do official reports sound so different from chat messages?",
   "fecho": "Written style packs more into each sentence. A verb becomes a noun: <b>the reduction in costs</b>. <b>Having reviewed</b> the data, … <b>Though tired</b>, the team … <b>In light of</b> this, … <b>Notwithstanding</b> some delays, … After <b>vital</b>, the plain form: <b>It is vital that he be informed</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo edit a report for a river charity. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a92191e58f23/c1-review-the-annual-report/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A leather notebook on a desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Having reviewed the data, the board approved the plan.",
-          "img": "https://wolf-labs.pages.dev/p/a92191e58f23/c1-review-the-annual-report/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Though tired, the team finished on time.",
-          "img": "https://wolf-labs.pages.dev/p/a92191e58f23/c1-review-the-annual-report/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It is vital that the budget be maintained.",
-          "img": "https://wolf-labs.pages.dev/p/a92191e58f23/c1-review-the-annual-report/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a92191e58f23/c1-review-the-annual-report/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A city office at night",
       "pede": "Look at the picture: an office at night. Write 2 or 3 formal sentences about a project of yours. Use <b>Having</b> + participle, <b>Though</b> + adjective or <b>In light of</b>.",
       "ph": "Having reviewed …",

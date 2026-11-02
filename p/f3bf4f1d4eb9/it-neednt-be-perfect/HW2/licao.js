@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It Needn't Be Perfect",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f3bf4f1d4eb9/it-neednt-be-perfect/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "not necessary (needn't + plain verb, don't have to, don't need to, there's no need to) versus not allowed (mustn't, aren't allowed to); no 'to' after needn't or mustn't; never 'don't must'",
   "abrir": "What is something people think is necessary, but really isn't?",
   "fecho": "<b>Not necessary:</b> <i>You needn't bring anything</i> (no <i>to</i> after needn't) · <i>You don't have to / don't need to</i> · <i>There's no need to</i>. <b>Not allowed:</b> <i>You mustn't</i> · <i>You aren't allowed to</i>. Never <i>don't must</i>. And <i>you mustn't pay</i> is not the same as <i>you don't have to pay</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia invites Leo to dinner. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f3bf4f1d4eb9/it-neednt-be-perfect/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A quiet kitchen at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "You needn't call me when you arrive, but you mustn't leave the gate open.",
-          "img": "https://wolf-labs.pages.dev/p/f3bf4f1d4eb9/it-neednt-be-perfect/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "There's no need to dress up, and you don't have to stay late.",
-          "img": "https://wolf-labs.pages.dev/p/f3bf4f1d4eb9/it-neednt-be-perfect/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We aren't allowed to touch the thermostat, so you needn't ask.",
-          "img": "https://wolf-labs.pages.dev/p/f3bf4f1d4eb9/it-neednt-be-perfect/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f3bf4f1d4eb9/it-neednt-be-perfect/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A quiet kitchen at night",
       "pede": "Look at the picture: a quiet kitchen. A guest is coming to stay. Write 2 or 3 sentences: one thing they needn't do, and one thing they mustn't do or aren't allowed to do.",
       "ph": "You needn't … but you mustn't …",

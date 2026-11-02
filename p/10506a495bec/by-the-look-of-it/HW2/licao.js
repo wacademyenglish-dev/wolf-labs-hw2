@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "By the Look of It",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/10506a495bec/by-the-look-of-it/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "looks / sounds / seems + adjective (looks expensive) vs looks / sounds / seems like + noun or full sentence (looks like a trap, sounds like it's raining); by the look of it",
   "abrir": "What does your neighborhood sound like at night?",
   "fecho": "<b>Looks / sounds / seems + adjective</b>: <i>It looks expensive.</i> Add <b>like</b> for a noun or a full sentence: <i>It looks like a trap. It sounds like it's raining.</i> <b>By the look of it</b> = judging by what I can see.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a quiet dinner. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/10506a495bec/by-the-look-of-it/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A dark restaurant",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It sounds like rain, but it looks like a clear night.",
-          "img": "https://wolf-labs.pages.dev/p/10506a495bec/by-the-look-of-it/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The room looks expensive, and the waiter seems nervous.",
-          "img": "https://wolf-labs.pages.dev/p/10506a495bec/by-the-look-of-it/img/live-bairro.webp",
+          "img": "../img/live-bairro.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It seems like he is hiding something.",
-          "img": "https://wolf-labs.pages.dev/p/10506a495bec/by-the-look-of-it/img/live-igreja.webp",
+          "img": "../img/live-igreja.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/10506a495bec/by-the-look-of-it/img/live-igreja.webp",
+      "img": "../img/live-igreja.webp",
       "leg": "A quiet room, late",
       "pede": "Look at the picture: a room in the dark. Write 2 or 3 sentences: what it looks like, what it sounds like, how the people seem. Use <b>looks / sounds / seems</b> with or without <b>like</b>.",
       "ph": "The room looks … It sounds like …",

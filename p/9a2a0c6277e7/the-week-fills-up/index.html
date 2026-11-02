@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Week Fills Up · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Week Fills Up · The Planner Wall</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Week Fills Up · The Planner Wall</h2>
+    <p>The present continuous is the form of now, and English lends it to the future: <b>I’m working on Saturday</b>. The day at the end turns now into an arrangement. Your student fills a week with four slots and six invitations, turns two people down without the word no, and finds the one free hour in your calendar and theirs. Decisions made this second take <b>I’ll</b>; guesses take <b>will</b>.</p>
+    <h4>WHO AGREED?</h4>
+    <p>When your student is stuck, ask: <i>Is it already in the calendar? Who agreed to it?</i></p>
+    <h4>SPENT IS SPENT</h4>
+    <p>Scene III: an accepted invitation can’t be undone (a teacher-only button clears the week). The two invitations that lose their slot come back in scene IV.</p>
+    <h4>THE INFORMATION GAP</h4>
+    <p>Scene VII: your calendar is hidden. Your student asks about a slot; you tap it and answer with the continuous: <i>On Monday at one I’m teaching.</i> Only Thursday at 1 PM is free in both calendars.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I meet my doctor tomorrow</i>, <i>I will see him on Friday</i> for something booked, <i>What do you do tomorrow?</i>, and <i>It’s raining tomorrow</i>.</p>
+    <!--conversa--><h4>WHAT GOES FIRST? (VI) AND THE SURPRISE QUESTION</h4>
+    <p>A ranking. Saturday is full, and a friend calls with two free concert tickets for tonight: your student puts five plans in order, from the first thing they cancel to the last. There is no right order. Wait five seconds in silence while they think, let them explain the top and the bottom, then use the PUSH line (only you see it). Open your own order and agree on one top 3 together. Listen for the arrangement (<i>I’m having lunch with…</i>) and for decisions made right now (<i>OK, I’ll call…</i>); recast quietly, and at the end ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Week Already, III Six Invitations, IV The Refusals, VI What Goes First?, VII Two Calendars, VIII Six About Your Week.</li>
+      <li><b>Focus</b>: II Now or Already?</li>
+      <li><b>Listen</b>: V The Day Comes Last (the transcript opens after they listen).</li>
+      <li><b>Write</b>: IX, their week. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE WEEK FILLS UP (Main A2) · pergunta-surpresa · 27/10/2026 · present continuous para o marcado · I'll */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'agora', tipo: 'Would you rather', q: 'Would you rather have a full week or an empty week?',
+    opc: ['A full week', 'An empty week'], st: ['I’d rather have …, because …'],
+    ex: 'An empty week! Then I’ll decide every day.', push: 'What are you doing this Sunday?' },
+  { cena: 'recusa', tipo: 'And you?', q: 'Is it hard for you to say no to an invitation?',
+    opc: ['Yes, very hard', 'Sometimes', 'No, it’s easy'], st: ['When someone invites me, I …', 'I usually say: “Sorry, I’m …ing.”'],
+    ex: 'Yes, very hard. I always say yes, and then my week fills up!', push: 'What did you say no to last time?' },
+  { cena: 'ouve', tipo: 'What if', q: 'A friend calls right now: “Are you doing anything tonight?”',
+    opc: ['I’m free!', 'I’m busy', 'I’ll check'], st: ['Tonight I’m …', 'I’m not doing anything. I’ll …'],
+    ex: 'I’m busy. I’m having dinner with my sister. But I’m free on Friday!', push: 'Now ask me the same question.' },
+  { cena: 'seu', tipo: 'Opinion', q: 'Paper planner, phone calendar, or your head?',
+    opc: ['Paper', 'My phone', 'My head!'], st: ['I write my plans …', 'I use …, because …'],
+    ex: 'My head! And then I forget I’m seeing the dentist on Monday.', push: 'Look at your week: what are you doing on Thursday?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE WEEK FILLS UP (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O ranking entra no lugar de "VI · Who Agreed, and When?" (extra, prática controlada), no meio da aula.
+   O sábado está cheio e o amigo liga com ingressos para hoje: o que você cancela primeiro?
+   Presente contínuo para o marcado + I'll para o que se decide agora (a gramática) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'cancela', troca: 'will', est: 'o', min: 6, img: 'agenda', rot: 'What Goes First?', t: 'Saturday is full. Then your friend calls.',
+    p: 'Two free concert tickets for tonight. Say why with I’m …ing and I’ll.',
+    formato: 'ranking',
+    q: 'What do you cancel first?',
+    itens: ['the gym at 10 AM', 'lunch with my family', 'my English homework', 'cleaning the house', 'a haircut at 4 PM'],
+    dica: 'Tap from the first thing you cancel to the last. Tap again to take it out.',
+    st: ['I’m cancelling … first, because …', 'I’m not cancelling …', 'OK. I’ll call … and …'],
+    ex: 'Cleaning the house first. Nobody is waiting for that! I’m not cancelling lunch with my family.',
+    push: 'Your friend says: “The concert starts at four.” The haircut is in the way now. What do you do?',
+    prof: [3, 0, 4, 1, 2] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "What is already fixed this week?",
+   "p": "You are the guest. Answer out loud."
+  },
+  "agora": {
+   "t": "Same three words. The day decides.",
+   "p": "Read the line. Now, or already arranged?"
+  },
+  "convites": {
+   "t": "Four free slots. Six invitations.",
+   "p": "Say the sentence. Then accept. No changes."
+  },
+  "recusa": {
+   "t": "Two people. Never say no.",
+   "p": "Turn them down with what you’re doing."
+  },
+  "ouve": {
+   "t": "The day comes last.",
+   "p": "Play it. Now, or arranged? Then read it."
+  },
+  "cv-cancela": {
+   "t": "Saturday is full. Then your friend calls.",
+   "p": "Two concert tickets. Rank your plans. Say why."
+  },
+  "duas": {
+   "t": "Coffee with your teacher. One slot works.",
+   "p": "Ask about a slot. Then book it."
+  },
+  "seu": {
+   "t": "Six questions about your week.",
+   "p": "Answer out loud. Then ask your teacher."
+  },
+  "fim": {
+   "t": "Your week, written.",
+   "p": "Three arranged plans, and one you’re NOT doing."
+  }
+ },
+ "prep": {
+  "obj": "Presente contínuo para planos já combinados (I’m working on Saturday) e I’ll para decisões na hora: uma semana com quatro horários e seis convites.",
+  "armadilha": "Usar o presente simples como em português (I meet my doctor tomorrow), will para algo já marcado, What do you do tomorrow? e It’s raining tomorrow para previsão.",
+  "pal": [
+   "I’m working on Saturday",
+   "What are you doing on…?",
+   "I’m meeting",
+   "I’ll",
+   "arrangement",
+   "free slot",
+   "turn down",
+   "I’m afraid I’m…"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: I’m working vira futuro com o dia no fim.",
+   "perg": "What are you doing this weekend?",
+   "pula": "Só leia o título e abra a semana."
+  },
+  "abre": {
+   "obj": "Aquecimento: o que já está marcado na semana do aluno.",
+   "perg": "What are you doing on Friday?",
+   "pula": "Três perguntas bastam."
+  },
+  "agora": {
+   "obj": "Mesmas palavras: acontecendo agora ou já combinado? O dia decide.",
+   "perg": "Is it happening now or already arranged?",
+   "pula": "Quatro linhas bastam."
+  },
+  "convites": {
+   "obj": "Quatro horários, seis convites; aceitar não tem volta.",
+   "perg": "What are you doing on Saturday night?",
+   "pula": "Não pule: os dois recusados voltam na IV."
+  },
+  "recusa": {
+   "obj": "Recusar sem dizer no, com o que o aluno já vai fazer.",
+   "perg": "Can you come to my party on Friday?",
+   "pula": "Uma recusa basta."
+  },
+  "ouve": {
+   "obj": "Escuta: as duas metades soam iguais até o dia no fim.",
+   "perg": "Right now, or arranged?",
+   "pula": "Três áudios bastam."
+  },
+  "cv-cancela": {
+   "obj": "Ranking: o que cancelar primeiro por dois ingressos de show hoje à noite.",
+   "perg": "What are you cancelling first?",
+   "pula": "Explique só o primeiro e o último."
+  },
+  "duas": {
+   "obj": "Lacuna de informação: achar o horário livre nas duas agendas (quinta, 13h).",
+   "perg": "What are you doing on Monday at nine?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "seu": {
+   "obj": "Seis perguntas sobre a semana real do aluno, e ele pergunta de volta.",
+   "perg": "Who are you seeing this week?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: três planos combinados e um que o aluno NÃO vai fazer.",
+   "perg": "What are you not doing this week?",
+   "pula": "Dois planos bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas sobre planos já combinados, com presente contínuo.",
+   "perg": "What are you doing tonight?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre agenda e convites; decisão na hora com I’ll.",
+   "perg": "What will you do?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta o próximo fim de semana, passo a passo.",
+   "perg": "Who are you meeting?",
+   "pula": "Faça os dois primeiros passos."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about your next days.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’m …ing",
+    "on Friday",
+    "tonight",
+    "I’ll",
+    "already"
+   ],
+   "cartas": [
+    {
+     "k": "TONIGHT",
+     "q": "What are you doing tonight?",
+     "fup": "Who are you doing it with?",
+     "st": [
+      "Tonight I’m …",
+      "I’m not … tonight."
+     ],
+     "ex": "Tonight I’m having dinner with my sister."
+    },
+    {
+     "k": "THIS WEEKEND",
+     "q": "Are you going anywhere this weekend?",
+     "fup": "Is it already booked?",
+     "st": [
+      "I’m going to …",
+      "I’m staying …"
+     ],
+     "ex": "I’m staying home on Saturday, but I’m going to the beach on Sunday."
+    },
+    {
+     "k": "THE DOCTOR",
+     "q": "Are you seeing a doctor or a dentist this month?",
+     "fup": "What day is it?",
+     "st": [
+      "I’m seeing …",
+      "I’m not seeing …"
+     ],
+     "ex": "I’m seeing the dentist on the 15th, at ten."
+    },
+    {
+     "k": "WORK",
+     "q": "Are you working late any day this week?",
+     "fup": "Why?",
+     "st": [
+      "I’m working late on …",
+      "I’m not working late …"
+     ],
+     "ex": "I’m working late on Wednesday. We have a meeting."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "Are you meeting a friend this week?",
+     "fup": "Where are you meeting?",
+     "st": [
+      "I’m meeting … on …",
+      "We’re having …"
+     ],
+     "ex": "I’m meeting Ana on Thursday. We’re having coffee near her office."
+    },
+    {
+     "k": "A CHANGE",
+     "q": "Your Saturday plan gets cancelled. What will you do?",
+     "fup": "Who will you call?",
+     "st": [
+      "I’ll …",
+      "I’ll call …"
+     ],
+     "ex": "I’ll stay in bed, and then I’ll call my brother."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I’m …ing",
+    "I’ll"
+   ],
+   "rodadas": [
+    {
+     "q": "A full calendar or an empty weekend?",
+     "a": "Full",
+     "b": "Empty",
+     "fa": [
+      "Full. I’m seeing people every day, and I love it."
+     ],
+     "fb": [
+      "Empty. I’m not doing anything, and that is the plan."
+     ]
+    },
+    {
+     "q": "Plan everything or decide on the day?",
+     "a": "Plan",
+     "b": "Decide on the day",
+     "fa": [
+      "Plan. I’m already meeting Leo on Friday."
+     ],
+     "fb": [
+      "Decide on the day. OK, I’ll go to the park!"
+     ]
+    },
+    {
+     "q": "A friend invites you, but you’re tired. Go or stay?",
+     "a": "Go",
+     "b": "Stay",
+     "fa": [
+      "Go. I’ll sleep on Sunday."
+     ],
+     "fb": [
+      "Stay. Sorry, I’m resting tonight."
+     ]
+    },
+    {
+     "q": "Paper planner or phone calendar?",
+     "a": "Paper",
+     "b": "Phone",
+     "fa": [
+      "Paper. I’m buying a new one on Monday."
+     ],
+     "fb": [
+      "Phone. It tells me what I’m doing tomorrow."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the week is full."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Next Weekend",
+   "t": "Fill your next weekend.",
+   "p": "One step at a time. Arranged plans only.",
+   "prof": "Ask Who agreed to it? if a plan is only a wish; then it takes going to or I’ll.",
+   "passos": [
+    {
+     "q": "What are you doing on Friday night?",
+     "st": [
+      "On Friday night I’m …",
+      "I’m not …"
+     ],
+     "ex": "On Friday night I’m going to a birthday party."
+    },
+    {
+     "q": "Who are you meeting on Saturday, and where?",
+     "st": [
+      "I’m meeting … at …"
+     ],
+     "ex": "I’m meeting my cousins at a restaurant downtown."
+    },
+    {
+     "q": "What are you NOT doing this weekend?",
+     "st": [
+      "I’m not … this weekend."
+     ],
+     "ex": "I’m not working this weekend, finally."
+    },
+    {
+     "q": "Something changes on Sunday. Decide now.",
+     "st": [
+      "OK, I’ll …"
+     ],
+     "ex": "It’s raining? OK, I’ll watch a movie at home."
+    }
+   ],
+   "fim": "Your weekend is in the planner now."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

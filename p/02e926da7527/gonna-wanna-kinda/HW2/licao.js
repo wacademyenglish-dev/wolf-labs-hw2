@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Gonna, Wanna, Kinda",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/02e926da7527/gonna-wanna-kinda/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "spoken English versus written English: gonna, wanna, gotta, kinda, sorta, dunno, lemme, 'cause, y'know; understand them in series and films, use them only with friends, never in a work email; never gonna to, gotta to, or wanna you to",
   "abrir": "What do you hear in English series that you never saw in your textbooks?",
   "fecho": "Understand all of it, use some of it. <b>gonna = going to · wanna = want to · gotta = have got to · kinda = kind of · dunno = I don't know · lemme = let me</b>. They already contain <b>to</b>: never <i>gonna to</i>. With a person it is <b>want you to</b>, never <i>wanna you to</i>. With friends, fine. In a work email or an exam, never.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo sends Mia a voice message about a concert. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/02e926da7527/gonna-wanna-kinda/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A record player in a dark room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I kinda wanna go, but I gotta check my week first.",
-          "img": "https://wolf-labs.pages.dev/p/02e926da7527/gonna-wanna-kinda/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I'm gonna buy two tonight, 'cause they're gonna sell out.",
-          "img": "https://wolf-labs.pages.dev/p/02e926da7527/gonna-wanna-kinda/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I dunno the time. Lemme check.",
-          "img": "https://wolf-labs.pages.dev/p/02e926da7527/gonna-wanna-kinda/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -170,7 +170,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/02e926da7527/gonna-wanna-kinda/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A record player in a dark room",
       "pede": "Look at the picture: a record player in a dark room. Write 2 or 3 sentences as a relaxed voice message to a friend about a gig or a night out. Use <b>gonna</b>, <b>wanna</b>, <b>gotta</b> or <b>kinda</b>.",
       "ph": "Hey! I'm gonna …",

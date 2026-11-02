@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "The Time Capsule",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/23d42f77eefb/b1-review-the-time-capsule/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 3 review: past perfect (had already started); was going to, kept + -ing, ended up + -ing; going to / will; future continuous (will be doing)",
   "abrir": "What plan did you have that changed?",
   "fecho": "<b>had + participle</b> for what happened earlier: <i>The film had already started.</i> <b>was going to</b> = a plan that changed. <b>kept / ended up + -ing</b>. <b>Will be + -ing</b> = in progress in the future: <i>This time next year I'll be living by the sea.</i>",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo open a time capsule buried in 2006. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/23d42f77eefb/b1-review-the-time-capsule/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An old box with a camera and a lantern",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -108,12 +108,12 @@ window.HW2 = {
       "frases": [
         {
           "t": "When we arrived, the show had already started.",
-          "img": "https://wolf-labs.pages.dev/p/23d42f77eefb/b1-review-the-time-capsule/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I was going to call you, but I lost my phone.",
-          "img": "https://wolf-labs.pages.dev/p/23d42f77eefb/b1-review-the-time-capsule/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/23d42f77eefb/b1-review-the-time-capsule/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An old box with a camera, papers and a lantern",
       "pede": "Look at the picture: an old box with a camera, papers and a lantern. Write 2 or 3 sentences: what you are going to put in a box for the year 2046, and what you will be doing then. Use <b>going to</b>, <b>will</b> and <b>will be + -ing</b>.",
       "ph": "I'm going to put … In 2046 I'll be …",

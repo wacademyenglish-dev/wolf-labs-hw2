@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Turn Left",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/7e99609ef02d/turn-left/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "directions: turn left / turn right, go up / go down, go straight on, at the end of the road, at the top of the hill; start with the verb; never turn to the left, in the end of, go to up",
   "abrir": "How do you go from your home to a shop?",
   "fecho": "Start with the verb: <b>Turn left. Go up the hill. Go straight on.</b> <b>At the end of</b> the road, <b>at the top of</b> the hill. Never <i>turn to the left</i>, never <i>in the end of</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia helps Leo find a café. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/7e99609ef02d/turn-left/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A quiet street at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -95,17 +95,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Turn left at the station.",
-          "img": "https://wolf-labs.pages.dev/p/7e99609ef02d/turn-left/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Go up the hill.",
-          "img": "https://wolf-labs.pages.dev/p/7e99609ef02d/turn-left/img/live-prox.jpg",
+          "img": "../img/live-prox.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The shop is at the end of the road.",
-          "img": "https://wolf-labs.pages.dev/p/7e99609ef02d/turn-left/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -155,7 +155,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/7e99609ef02d/turn-left/img/live-prox.jpg",
+      "img": "../img/live-prox.jpg",
       "leg": "A castle on a hill, with steps",
       "pede": "Look at the picture: a castle on a hill, with steps. Write 2 or 3 sentences: directions from the bottom to the castle. Use <b>Go up</b>, <b>Turn left</b> or <b>At the end of</b>.",
       "ph": "Go up the steps. At the end …",

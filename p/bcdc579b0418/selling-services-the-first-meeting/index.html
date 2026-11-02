@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -133,5 +134,285 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "A big meeting this week?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "dialogo": {
+   "t": "Leo meets the director of Serra Steel.",
+   "p": "One question. Listen. Then answer."
+  },
+  "cadeira": {
+   "t": "Now you sell. Your teacher is the director.",
+   "p": "Do each task. Ask, listen, react."
+  },
+  "escolha": {
+   "t": "The meeting is over. What now?",
+   "p": "Choose A or B. Say why."
+  },
+  "erros": {
+   "t": "A follow-up email, five mistakes.",
+   "p": "Find one. Say it right. Tap it."
+  },
+  "cartao": {
+   "t": "Write your follow-up email.",
+   "p": "Thanks, two facts, what you do, next step."
+  },
+  "pode": {
+   "t": "Lesson 5: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da unidade 5: is / there are / don’t / perguntas, numa primeira reunião. Leo se encontra com Daniel Price, diretor financeiro da Serra Steel; depois o aluno faz a reunião.",
+  "armadilha": "Brasileiro diz Have many employees? (tem muitos funcionários?), There is 200 people, We not do payroll e Friday is good? sem inverter.",
+  "pal": [
+   "We’re…",
+   "We don’t…",
+   "How many… are there?",
+   "Is there…?",
+   "Do you…?",
+   "Is Friday good for…?",
+   "follow-up"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a primeira reunião presencial com um diretor financeiro.",
+   "perg": "Do you prepare for meetings?",
+   "pula": "Leia a capa e siga."
+  },
+  "conversa": {
+   "obj": "Small talk sobre a semana; o aluno pergunta And you?",
+   "perg": "Is there a big meeting this week?",
+   "pula": "Três perguntas bastam."
+  },
+  "dialogo": {
+   "obj": "Escuta: Leo e o diretor da Serra Steel; pode usar 0.75×.",
+   "perg": "How many employees are there at Serra Steel?",
+   "pula": "Ouça uma vez e faça três perguntas."
+  },
+  "cadeira": {
+   "obj": "Você é o diretor e responde curto; o aluno conduz a reunião.",
+   "perg": "So, what does your company do?",
+   "pula": "Quatro tarefas bastam."
+  },
+  "escolha": {
+   "obj": "Escolher o próximo passo, A ou B, com because; você responde também.",
+   "perg": "A call or a visit? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "erros": {
+   "obj": "Achar e dizer certo os cinco erros do e-mail de follow-up.",
+   "perg": "What is wrong in this line?",
+   "pula": "Três erros bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: o e-mail de follow-up do aluno; adapte a uma reunião real se houver.",
+   "perg": "What is the next step with your client?",
+   "pula": "Agradecimento e próximo passo bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; você confirma e carimba.",
+   "perg": "Can you lead a first meeting now?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa simples sobre a empresa e os clientes reais do aluno.",
+   "perg": "How many clients are there in your company?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre reuniões de venda.",
+   "perg": "Which one do you choose?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play invertido: o aluno é o diretor da Serra Steel e você é o vendedor.",
+   "perg": "Daniel, how many employees are there?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about your company.",
+   "p": "Pick a card. Answer. Then “And you?”",
+   "palavras": [
+    "We’re …",
+    "We don’t …",
+    "There are …",
+    "Is there …?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR COMPANY",
+     "q": "How many people are there in your company?",
+     "fup": "Is it big or small?",
+     "st": [
+      "There are …",
+      "We’re a … company."
+     ],
+     "ex": "There are 40 people. We’re a small company."
+    },
+    {
+     "k": "WHAT YOU DO",
+     "q": "What does your company do?",
+     "fup": "What don’t you do?",
+     "st": [
+      "We do …",
+      "We don’t do …"
+     ],
+     "ex": "We do payroll. We don’t do taxes."
+    },
+    {
+     "k": "CLIENTS",
+     "q": "Who are your clients?",
+     "fup": "Are they big?",
+     "st": [
+      "Our clients are …",
+      "They’re …"
+     ],
+     "ex": "Our clients are factories. They’re big."
+    },
+    {
+     "k": "MEETINGS",
+     "q": "Do you prefer meetings in person or online?",
+     "fup": "Why?",
+     "st": [
+      "I prefer …",
+      "because …"
+     ],
+     "ex": "I prefer in person because I see the client’s face."
+    },
+    {
+     "k": "YOUR OFFICE",
+     "q": "Is there a meeting room in your office?",
+     "fup": "Is it nice?",
+     "st": [
+      "Yes, there is. / No, there isn’t.",
+      "It’s …"
+     ],
+     "ex": "Yes, there is. It’s small but nice."
+    },
+    {
+     "k": "THIS FRIDAY",
+     "q": "Is Friday good for a meeting?",
+     "fup": "What time?",
+     "st": [
+      "Yes, Friday is good.",
+      "No, … is better."
+     ],
+     "ex": "No, Thursday is better. At ten."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I prefer …",
+    "because",
+    "We don’t …"
+   ],
+   "rodadas": [
+    {
+     "q": "After the meeting: send an email today or tomorrow?",
+     "a": "Today",
+     "b": "Tomorrow",
+     "fa": [
+      "Today.",
+      "The client remembers me."
+     ],
+     "fb": [
+      "Tomorrow.",
+      "I have time to write a good email."
+     ]
+    },
+    {
+     "q": "First meeting: talk a lot or ask a lot?",
+     "a": "Talk a lot",
+     "b": "Ask a lot",
+     "fa": [
+      "Talk a lot.",
+      "The client needs to know us."
+     ],
+     "fb": [
+      "Ask a lot.",
+      "I need to know the client."
+     ]
+    },
+    {
+     "q": "Meet the finance director or the HR director?",
+     "a": "Finance",
+     "b": "HR",
+     "fa": [
+      "Finance.",
+      "They decide about money."
+     ],
+     "fb": [
+      "HR.",
+      "They know the problems."
+     ]
+    },
+    {
+     "q": "Coffee meeting or office meeting?",
+     "a": "Coffee",
+     "b": "Office",
+     "fa": [
+      "Coffee.",
+      "It’s relaxed."
+     ],
+     "fb": [
+      "Office.",
+      "It’s professional."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Next step: the follow-up."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Daniel Price now.",
+   "p": "Your teacher is the seller.",
+   "aluno": "Listen to your teacher’s question. Answer as Daniel Price, finance director of Serra Steel.",
+   "perguntas": [
+    "Hi, Daniel! How many employees are there at Serra Steel?",
+    "Is there a payroll team?",
+    "Do you do payroll inside the company?",
+    "Are there problems with payroll?",
+    "Do you work with other suppliers?",
+    "Is Friday good for a second meeting?"
+   ],
+   "st": [
+    "There are …",
+    "We do / We don’t …",
+    "Yes, Friday is good. / No, …"
+   ],
+   "ex": "There are 300 employees. We don’t have a big payroll team, and there are problems every month."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

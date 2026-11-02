@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Two Hundred and Twenty Words · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Instrument+Serif:ital@0;1&family=Public+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Two Hundred and Twenty Words · The X-Ray</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Two Hundred and Twenty Words · The X-Ray</h2>
+    <p>A letter from the city arrives. It never once says what it is going to do, yet inside it a school bus route is being cut. The letter hides every event inside a noun: <b>the discontinuation of certain low-utilization services</b>. That is <b>nominalization</b>. At C1 the student needs both directions: <b>unpack</b> a nominalization (who did what?) and <b>build</b> one when a report must be short. English often uses the zero form (<b>a cut, a rise, a change</b>) where students reach for <i>-tion</i> or <i>-ing</i>. And every nominalization can delete the person responsible.</p>
+    <h4>ON SCREEN</h4>
+    <p>The letter is shown as an X-ray: in scene III, tap a marked noun and the lens shows the verb and the hidden person inside it. In scene V, every compression sends the person who disappeared to the wall of the missing (THE COMPANY, THE CUSTOMERS, THE TEAM…). Scene VI turns chains of OF into stacks, with the main noun last.</p>
+    <h4>NOTES</h4>
+    <p>Scene II is built to fail: if the student can’t say what is going to happen, that is the point. Scene VII is unfair on purpose: the compressed reply gets a meeting, the human one gets a form letter. Discuss it, and ask for a version that keeps both the number and the son.</p>
+    <!--conversa--><h4>THE ARENA (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Scene VII is now an arena: the student picks the reply they would send to the city (the mother’s human one, or the neighbor’s compressed one) and defends it for one minute with nominalized phrases; then they swap and defend the other. There is no right answer. Wait five seconds in silence before they start, then use the PUSH line (only you see it) to make it harder, and finish by asking for one sentence that keeps both the number and the son. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I A Long Email, VII The Reply That Worked, VIII Sixty Seconds.</li>
+      <li><b>Listen</b>: II The Letter (read it aloud).</li>
+      <li><b>Focus</b>: III The X-Ray, IV How English Builds Them, V Who Disappeared?, VI Stack It.</li>
+      <li><b>Write</b>: IX, the email from scene I, shorter, with the person responsible named. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* TWO HUNDRED AND TWENTY WORDS (Main C1) · pergunta-surpresa · 27/10/2026 · nominalização */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'carta', tipo: 'And you?', q: 'Have you ever received a letter or email that hid the real news in the middle?',
+    opc: ['Yes, from a company', 'Yes, from work', 'Not that I noticed'], st: ['It was a notification of …', 'The real news was a … in …', 'I only noticed the … later.'],
+    ex: 'Yes, from my bank. It was a “notification of changes to account conditions”, and the real news was a rise in the monthly fee.', push: 'Did you complain? Who did you complain to: a person, or a department?' },
+  { cena: 'encolhe', tipo: 'Opinion', q: 'At work, who hides behind nouns the most?',
+    opc: ['Managers', 'Lawyers', 'Companies, in emails', 'Nobody I know'], st: ['They love phrases like “a decision has been …”', 'The real reason is the avoidance of …'],
+    ex: 'Companies, in emails. “Following a review of our pricing” always means a price rise, and nobody signs it.', push: 'Is that always bad? When is hiding the person actually kind or professional?' },
+  { cena: 'pilha', tipo: 'What if', q: 'Your company sends one sentence to all staff tomorrow. Which one worries you most?',
+    opc: ['A restructuring announcement', 'A policy review', 'A budget cut'], st: ['A … announcement usually means …', 'The word that worries me is …, because …'],
+    ex: 'A restructuring announcement. It sounds neutral, but the real meaning is usually job losses.', push: 'Unpack it: who restructures what, and who loses?' },
+  { cena: 'projeto', tipo: 'Would you rather', q: 'Would you rather write a report for a director, or explain it to her face in sixty seconds?',
+    opc: ['Write it', 'Say it'], st: ['I’d rather … because my strength is …', 'A face-to-face explanation gives me …'],
+    ex: 'Say it. A written report gets a quick read and a filing; a conversation gets a decision.', push: 'She has thirty seconds, not sixty. What is your first noun phrase?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* TWO HUNDRED AND TWENTY WORDS (Main C1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A arena entra no lugar de "VII · The Reply That Worked" (extra) e guarda o mesmo nome e a mesma
+   ideia: a resposta humana da mãe contra a resposta comprimida do vizinho. O aluno defende uma,
+   depois troca. A gramática da aula (nominalização: substantivo, pilha, quem sumiu) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'arena', troca: 'resposta', est: 'o', min: 7, img: 'predio', rot: 'The Reply That Worked', t: 'Two replies to the city. Only one got a meeting.',
+    p: 'You live on that bus route. Pick the reply you would send and defend it for one minute. Then swap and defend the other one.',
+    formato: 'arena', segundos: 60,
+    q: 'Your child’s bus is being cut. Which reply do you send?',
+    lados: [
+      { nome: 'Reply A · the mother', arg: '“My son can’t get to school now.” A face, no number.' },
+      { nome: 'Reply B · the neighbor', arg: '“The route discontinuation will prevent school access for 40 children.”' }
+    ],
+    st: ['The main strength of Reply … is its …', 'A request for a review meeting sounds …', 'The problem with that phrasing is the loss of …', 'In a decision like this, the deciding factor is …'],
+    ex: 'Reply B, at first. The city only answers in its own register, and “a review meeting” is a request they can’t ignore. But its weakness is the disappearance of the child: forty children is a statistic. I’d send B, with one human sentence at the end.',
+    push: 'B got the meeting, A got a form letter. Is that a victory for clear writing, or a failure of the city? And write one sentence that keeps both the number and the son.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "A long, formal email you wrote recently.",
+   "p": "Tap who it was to. Then answer."
+  },
+  "carta": {
+   "t": "A letter from the city. A bus stops running.",
+   "p": "Read it aloud. Answer three questions, or say you can’t."
+  },
+  "raiox": {
+   "t": "Every noun hides a verb and a person.",
+   "p": "Tap a noun. Choose the verb. Say who does it."
+  },
+  "regra": {
+   "t": "-tion, -ment, -al, -ance, and no ending.",
+   "p": "Choose the noun. Say a short phrase with it."
+  },
+  "encolhe": {
+   "t": "Who disappeared?",
+   "p": "Choose the short version. Say who disappeared."
+  },
+  "pilha": {
+   "t": "Stack it before the noun. No chains of OF.",
+   "p": "Choose the stacked version. Read it from the end."
+  },
+  "cv-arena": {
+   "t": "Two replies. Only one got a meeting.",
+   "p": "Defend one reply for a minute. Then swap."
+  },
+  "projeto": {
+   "t": "A project in sixty seconds.",
+   "p": "Choose each part. Then say your own version."
+  },
+  "fim": {
+   "t": "Your email from scene I, shorter.",
+   "p": "Use nouns. Name who is responsible."
+  }
+ },
+ "prep": {
+  "obj": "Nominalização: desfazer (quem fez o quê?) e construir (verbo vira substantivo, forma zero, empilhar antes do substantivo), numa carta da prefeitura que esconde o corte de uma linha de ônibus escolar.",
+  "armadilha": "O brasileiro busca -tion ou -ing onde o inglês usa a forma zero (a cut, a rise, a change); encadeia OF como no português (the report of the analysis of the costs); e esquece que a nominalização apaga quem é responsável.",
+  "pal": [
+   "discontinuation",
+   "reduction",
+   "a cut",
+   "a rise",
+   "approval",
+   "utilization",
+   "cost reduction plan",
+   "who is responsible"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: substantivos que escondem verbos, e pessoas que somem.",
+   "perg": "Have you ever read a letter that said nothing?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Um e-mail longo e formal que o aluno escreveu; não corrigir, guardar para a cena IX.",
+   "perg": "Who was your last long email to?",
+   "pula": "Uma pergunta basta; guarde o e-mail."
+  },
+  "carta": {
+   "obj": "A carta da prefeitura: feita para falhar; se o aluno não sabe o que vai acontecer, é esse o ponto.",
+   "perg": "What exactly is going to happen?",
+   "pula": "Leia e faça só a primeira pergunta."
+  },
+  "raiox": {
+   "obj": "Raio-X de cada substantivo: o verbo dentro e a pessoa escondida.",
+   "perg": "Who would do this, and what would they do?",
+   "pula": "Quatro substantivos bastam."
+  },
+  "regra": {
+   "obj": "Como o inglês forma os substantivos, incluindo a forma zero (a cut, a change).",
+   "perg": "Which ending, or no ending at all?",
+   "pula": "Quatro palavras bastam."
+  },
+  "encolhe": {
+   "obj": "Condensar seis frases para um relatório; cada pessoa que some vai para o mural.",
+   "perg": "Who disappeared from this sentence?",
+   "pula": "Três frases bastam."
+  },
+  "pilha": {
+   "obj": "Trocar correntes de OF por pilhas com o substantivo principal no fim.",
+   "perg": "What’s the main noun here?",
+   "pula": "Três frases bastam."
+  },
+  "cv-arena": {
+   "obj": "Arena: a resposta humana da mãe × a comprimida do vizinho; defender uma e depois a outra.",
+   "perg": "Can you keep both the number and the son?",
+   "pula": "Um lado só, sem trocar."
+  },
+  "projeto": {
+   "obj": "Resumir um projeto em 60 segundos para um diretor, com substantivos e sem perder as pessoas.",
+   "perg": "Who is doing what, in one line?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o e-mail da cena I, mais curto, com substantivos e com o responsável nomeado; vai para o My notes.",
+   "perg": "Who is responsible in your email?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre linguagem burocrática e quem se esconde atrás dela.",
+   "perg": "Who is really behind that noun?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre texto curto × humano, relatório × carta, com nominalizações.",
+   "perg": "Which side, and who disappears?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve uma resposta à prefeitura em quatro passos: curta, mas com pessoas.",
+   "perg": "What’s the number, and who is the person?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Who is hiding in that noun?",
+   "p": "Pick a card. Unpack it, then compress it.",
+   "palavras": [
+    "a cut",
+    "a reduction",
+    "the implementation of",
+    "approval",
+    "who is responsible"
+   ],
+   "cartas": [
+    {
+     "k": "OFFICE SPEAK",
+     "q": "What’s the most bureaucratic sentence you’ve heard at work?",
+     "fup": "Who was actually doing what?",
+     "st": [
+      "They said “…”. In other words, …"
+     ],
+     "ex": "They said “a restructuring of the team”. In other words, they fired three people."
+    },
+    {
+     "k": "BAD NEWS",
+     "q": "How does your bank or phone company announce a price rise?",
+     "fup": "Who decided it?",
+     "st": [
+      "They call it “…”, but really …"
+     ],
+     "ex": "They call it “a tariff adjustment”, but really the company raised my bill by 12%."
+    },
+    {
+     "k": "YOUR REPORT",
+     "q": "Summarize your last month at work in one noun phrase.",
+     "fup": "Now say it with people and verbs.",
+     "st": [
+      "The … of …",
+      "We …"
+     ],
+     "ex": "The completion of the client migration. In other words, my team moved forty clients."
+    },
+    {
+     "k": "HIDING",
+     "q": "When is it useful to hide who did something?",
+     "fup": "And when is it dishonest?",
+     "st": [
+      "It’s useful when …",
+      "It’s dishonest when …"
+     ],
+     "ex": "It’s useful when nobody needs blame; it’s dishonest when the person should apologize."
+    },
+    {
+     "k": "STACK IT",
+     "q": "Describe a project you know with one stacked noun phrase.",
+     "fup": "Read it from the end.",
+     "st": [
+      "a … … … plan / project"
+     ],
+     "ex": "a city center bike lane expansion project"
+    },
+    {
+     "k": "THE LETTER",
+     "q": "If you got the city’s letter, what would you do first?",
+     "fup": "Who would you call?",
+     "st": [
+      "First I’d …",
+      "I’d ask who is responsible for …"
+     ],
+     "ex": "First I’d ask who exactly decided the discontinuation of the route."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "nominalization",
+    "who is responsible",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Official letters: short and technical, or long and human?",
+     "a": "Short and technical",
+     "b": "Long and human",
+     "fa": [
+      "Short. A clear reduction in costs is easy to read.",
+      "Officials have thousands of letters to send."
+     ],
+     "fb": [
+      "Human. A family needs to know a bus is stopping.",
+      "The thing is, nouns hide the people."
+     ]
+    },
+    {
+     "q": "Is nominalization dishonest?",
+     "a": "Dishonest",
+     "b": "Just efficient",
+     "fa": [
+      "Dishonest. “The discontinuation of services” hides who cut them.",
+      "It’s designed to avoid blame."
+     ],
+     "fb": [
+      "Efficient. Reports need to be short.",
+      "I see your point, but not every noun is a lie."
+     ]
+    },
+    {
+     "q": "The compressed reply got a meeting. Is that fair?",
+     "a": "Fair",
+     "b": "Unfair",
+     "fa": [
+      "Fair. It spoke the city’s language.",
+      "Officials respond to numbers, not feelings."
+     ],
+     "fb": [
+      "Unfair. The mother’s reply had the real story.",
+      "The thing is, a system that ignores people is broken."
+     ]
+    },
+    {
+     "q": "In your job: more nouns, or more verbs?",
+     "a": "More nouns",
+     "b": "More verbs",
+     "fa": [
+      "Nouns. Directors want the result in one line.",
+      "“Cost reduction” fits on a slide."
+     ],
+     "fb": [
+      "Verbs. “We cut costs” shows who did it.",
+      "Verbs make teams visible."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The completion of the debate, with nobody missing."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Your Reply",
+   "t": "Answer the city in four lines.",
+   "p": "Short, with nouns, and with people.",
+   "prof": "The student writes a reply that keeps both the number and the son (the guide’s challenge); check that the person responsible is named.",
+   "passos": [
+    {
+     "q": "Name the decision, in one noun phrase.",
+     "st": [
+      "Regarding the … of …,"
+     ],
+     "ex": "Regarding the discontinuation of the school bus route on March 1,"
+    },
+    {
+     "q": "Give one number.",
+     "st": [
+      "This affects … students / families …"
+     ],
+     "ex": "this affects 40 children who have no other way to reach school."
+    },
+    {
+     "q": "Bring back one person.",
+     "st": [
+      "One of them is …, who …"
+     ],
+     "ex": "One of them is my son, Leo, who would lose his only way to school."
+    },
+    {
+     "q": "Ask who is responsible, and for a meeting.",
+     "st": [
+      "Who is responsible for …? We request …"
+     ],
+     "ex": "Who is responsible for this decision? We request a meeting before the route is cut."
+    }
+   ],
+   "fim": "Short, precise, and nobody disappeared."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

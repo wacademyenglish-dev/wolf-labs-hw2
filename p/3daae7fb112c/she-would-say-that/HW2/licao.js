@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "She Would Say That",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3daae7fb112c/she-would-say-that/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "will and would for what is typical: She would say that, wouldn't she? (predictable); He will leave his socks everywhere (annoying habit, stressed will); would for repeated past actions but used to for states; he's always -ing (complaint)",
   "abrir": "Who in your life will always say the same thing?",
   "fecho": "<b>She would say that, wouldn't she?</b> = typical of her. <b>He will leave</b> his cups everywhere = an annoying habit. <b>Would</b> + action = a past habit (<i>we would visit her every Sunday</i>); for a past state, <b>used to</b>. And <b>he's always losing</b> his keys = a complaint.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a dinner with an old friend. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/3daae7fb112c/she-would-say-that/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A table laid for dinner",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "My brother will leave his plates in the sink and then say he's tired.",
-          "img": "https://wolf-labs.pages.dev/p/3daae7fb112c/she-would-say-that/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "When I was little, my grandmother would make pasta for the whole street.",
-          "img": "https://wolf-labs.pages.dev/p/3daae7fb112c/she-would-say-that/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She would say that, wouldn't she? She's the one who designed it.",
-          "img": "https://wolf-labs.pages.dev/p/3daae7fb112c/she-would-say-that/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3daae7fb112c/she-would-say-that/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An armchair by a window",
       "pede": "Look at the picture: a quiet armchair by a window. Write 2 or 3 sentences about someone whose habits you know. Use <b>will</b> for an annoying habit and <b>would</b> for something they did often in the past.",
       "ph": "My uncle will always … and he would …",

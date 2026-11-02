@@ -1,0 +1,95 @@
+/* ============================================================
+   WHO CALLED WHO · THE ROUND TABLE · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: mesa de restaurante vista de
+   cima no escuro — tampo de madeira escura, dez lugares em círculo com
+   iniciais, setas cor de cobre de quem fez para quem recebeu; quem fez
+   acende em verde-água, quem recebeu em cobre, o "?" marca a ponta.
+   ============================================================ */
+:root{
+  --noite:#0b0a0c; --noite-rgb:11,10,12; --tinta:#ece8ee;
+  --t1:#f1edf3; --t2:#c9c3cd; --t2-rgb:201,195,205; --t3:#8b8590;
+  --ac:#d9875a; --ac2:#f4b99a; --fez:#5fd0c0; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(236,232,238,.05); --vidro2:rgba(236,232,238,.085); --vidro3:rgba(236,232,238,.12);
+  --fio:rgba(228,224,232,.12); --fio2:rgba(228,224,232,.22); --luz:rgba(236,232,238,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#22120a}
+.btn.cheio{color:#22120a}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(64px,6vw,118px)/.94 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:48px;padding:0 20px;font:700 clamp(17px,1.3vw,21px) var(--disp)}
+.pilula.mini-p{min-height:32px;padding:0 10px;font-size:14px}
+.tres-b{display:flex;flex-wrap:wrap;gap:6px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:8px} .versoes.duas-v{max-width:720px;margin:0 auto}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:700 clamp(19px,1.5vw,25px)/1.4 var(--disp)}
+.balao{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);text-align:center} .balao p{margin:0;font:800 clamp(26px,2.2vw,38px) var(--disp)}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+
+/* a mesa redonda */
+.mesa-r{display:block;width:100%;max-height:calc(100vh / var(--zv,1) - 360px);border-radius:16px;background:#0f0d10;box-shadow:var(--sombra)}
+.capa-d .mesa-r{max-height:calc(100vh / var(--zv,1) - 240px)}
+.tampo{fill:#2a1d14;stroke:#4a3322;stroke-width:6}
+.conta-t{font:700 12px var(--mono);letter-spacing:.2em;fill:#9a7a5e} .conta-v{font:700 20px var(--mono);fill:#d9b48f}
+.lugar circle{fill:#18161b;stroke:#3a3640;stroke-width:3} .lugar text{font:700 16px var(--mono);fill:var(--t2)} .lugar .nome-l{font:600 13px var(--disp);fill:var(--t3)}
+.lugar.fez circle{stroke:var(--fez);fill:#13221f} .lugar.fez text{fill:var(--fez)}
+.lugar.recebeu circle{stroke:var(--ac);fill:#24170f} .lugar.recebeu text{fill:var(--ac2)}
+.lugar.culpado circle{stroke:var(--erro);fill:#2a1214;stroke-width:4} .lugar.culpado text{fill:var(--erro)}
+.seta{fill:none;stroke:var(--ac);stroke-width:3;opacity:.75} .seta.nova{stroke:var(--fez);opacity:1;stroke-dasharray:600;stroke-dashoffset:600;animation:desenha .9s ease-out forwards} .seta.fina{stroke-width:1.5;opacity:.35}
+.ponta-s{fill:var(--ac)}
+@keyframes desenha{to{stroke-dashoffset:0}}
+
+/* mensagens, botões */
+.msg-g{display:grid;gap:6px;padding:16px 18px;border-radius:18px 18px 18px 4px;background:#1a1720;border:1px solid #2e2a36}
+.msg-g small{font:700 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .msg-g p{margin:0;font:700 clamp(24px,2vw,34px)/1.5 var(--disp)}
+.nome-b{padding:2px 12px;border-radius:10px;border:2px dashed var(--fio2);background:transparent;color:var(--t1);font:inherit;cursor:pointer}
+.nome-b.certo{border-style:solid;border-color:var(--fez);color:var(--fez)} .nome-b.errado{border-style:solid;border-color:var(--erro);animation:treme .35s}
+.dois-l{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lado-btn{display:grid;gap:4px;justify-items:center;padding:14px;border-radius:var(--r2);border:1px solid var(--fio2);background:#141217;color:var(--t1);cursor:pointer}
+.lado-btn b{font:800 clamp(15px,1.1vw,18px) var(--mono);letter-spacing:.06em} .lado-btn small{font:600 14px var(--disp);color:var(--t3)}
+.lado-btn.on-l{border-color:var(--ac);background:#24170f}
+
+/* regra, bea */
+.regras-w{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:10px 0 16px}
+.regra-w{display:grid;gap:6px;align-content:start;padding:14px;border-radius:14px;background:#141217;border-top:4px solid var(--rc,var(--fio2))}
+.regra-w.suj{--rc:var(--fez)} .regra-w.obj{--rc:var(--ac)}
+.regra-w small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--rc,var(--t3))} .regra-w b{font:700 clamp(16px,1.2vw,20px)/1.35 var(--disp)} .regra-w em{font:600 14px var(--disp);font-style:normal;color:var(--ac2)}
+.fatos-l{display:flex;flex-wrap:wrap;gap:6px} .fatos-l span{padding:4px 10px;border-radius:999px;background:#1a1720;font:600 14px var(--disp);color:var(--t2)}
+.bea-l{gap:8px;grid-template-columns:1fr 1fr} .bea-q{display:grid;gap:6px;padding:8px 12px;border-radius:14px} .bea-q .transcricao,.bea-q .recusa{margin:0}
+.resp-b{margin-left:auto;padding:2px 12px;border-radius:999px;background:#13221f;color:var(--fez);font:700 14px var(--disp)}
+
+/* escolhe, conserta, conta */
+.mesa-c:has(.caderno) .mesa-r{max-height:calc(100vh / var(--zv,1) - 420px)} .final-c{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding:10px 14px;border-radius:14px} .final-c b{font:800 clamp(18px,1.4vw,23px) var(--disp)}
+.seta-l{display:flex;justify-content:center;align-items:center;gap:16px;margin:4px auto 16px;font:800 clamp(28px,2.4vw,40px) var(--disp)}
+.seta-l i{font:700 clamp(18px,1.4vw,22px) var(--mono);font-style:normal;color:var(--ac2)} .seta-l span.q{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;border:3px dashed var(--ac);color:var(--ac2)}
+.palavras{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:900px;margin:10px auto 14px}
+.pal{padding:10px 16px;border-radius:12px;border:1px solid var(--fio2);background:#141217;color:var(--t1);font:700 clamp(24px,2vw,34px) var(--disp);cursor:pointer}
+.pal.certo{border-color:var(--ok);text-decoration:line-through;text-decoration-color:var(--erro)} .pal.errado{border-color:var(--erro);animation:treme .35s}
+.caderno{display:grid;gap:6px}
+.linha-c{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:6px 12px;border-radius:12px;background:#141217;border:1px solid var(--fio)}
+.linha-c b{font:700 clamp(16px,1.2vw,20px) var(--disp)} .linha-c em{font:600 15px var(--disp);font-style:normal;color:var(--ac2)} .linha-c .chip{margin-left:auto} .linha-c span{font:600 14px var(--disp);color:var(--t3)}
+.linha-c.feita{border-color:rgba(95,208,192,.35)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .regras-w{grid-template-columns:1fr 1fr} }
+@media (max-width:820px){ .dois-l,.regras-w{grid-template-columns:1fr} }
+
+/* 22/10/2026 · os formatos novos (formatos.js) */
+
+.c-escolhe .ec-mesa{display:grid;place-items:center}
+.c-escolhe .ec-mesa .mesa-r{width:min(520px,100%);max-height:290px}
+.c-regra .regras-w{margin-top:16px}

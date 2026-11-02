@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · This Year I’m Going to… · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Newsreader:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>This Year I’m Going to… · The January Tracker</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>This Year I’m Going to… · The January Tracker</h2>
+    <p>An easy reader in five short chapters. On December 31, the Carter family writes five New Year’s resolutions; the tracker shows thirty-one days of January for each one. Your student reads each chapter, answers a question and says the person’s line, and the row lights up to the day the resolution stopped (or to the 31st). This is a review lesson for <b>going to</b> (a plan from before, proof in front of you) and <b>will</b> (decided now, a promise, an opinion with <i>I think</i>), plus <b>want to / would like to</b> for goals and <b>was going to</b> for a plan that failed.</p>
+    <h4>WHEN WAS IT DECIDED?</h4>
+    <p>When your student is stuck, ask: <i>Is it on the card, or is he deciding now? Proof, or only an opinion?</i></p>
+    <h4>THE COUNTDOWN</h4>
+    <p>Scene IV is the pressure: 11:52 PM, eight quick lines at the party. You play each person; your student answers fast. Every right line lights a firework and moves the clock a minute.</p>
+    <h4>AUNT CLARA</h4>
+    <p>Scene VI: you are Aunt Clara on a video call from Mexico. Your student retells January from memory, then asks you back. Your answers are on your screen.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I will to run</i>, <i>I call you tomorrow</i> (as a promise), <i>It snows</i> (with clouds in front of you), <i>I think you do it</i>, <i>I went to clean it</i>, <i>I’m going run</i>, <i>I’d like speak</i>.</p>
+    <!--conversa--><h4>GREEN, YELLOW, RED (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After Aunt Clara’s call, your student judges four resolutions for their OWN life: green (I’m going to do it), yellow (maybe) or red (no way). There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Push for <b>going to</b> (a plan), <b>I’ll</b> (decided now) and <b>was going to</b> (a plan that failed). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Your New Year, IV The Countdown, V Your Year, VI Aunt Clara Calls, VII Green, Yellow, Red.</li>
+      <li><b>Focus</b>: II The January Tracker, III When Was It Decided?</li>
+      <li><b>Write</b>: VIII, their card for next January. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THIS YEAR I'M GOING TO… (Main A2) · pergunta-surpresa · 27/10/2026 · going to / will / would like to / was going to */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'tracker', tipo: 'Opinion', q: 'Which Carter resolution is the hardest one?',
+    opc: ['Running', 'Spanish', 'Another one'], st: ['The hardest one is …, because …', 'I don’t think they’ll …'],
+    ex: 'Running. In January it’s cold and dark, and I don’t think Marcus will run in the snow.', push: 'And for you? Which one is the easiest?' },
+  { cena: 'fogos', tipo: 'And you?', q: 'What are you going to do this weekend?',
+    opc: ['Something fun', 'Rest', 'Work'], st: ['I’m going to …', 'I’d like to …, but …'],
+    ex: 'Rest! I’m going to watch a series, and I’d like to sleep until ten.', push: 'Is that a plan, or did you decide now?' },
+  { cena: 'ano', tipo: 'Would you rather', q: 'Would you rather make one big resolution or five small ones?',
+    opc: ['One big one', 'Five small ones'], st: ['I’d rather …, because …', 'I think I’ll …'],
+    ex: 'Five small ones. If I stop one, I’m going to have four more!', push: 'Say one small one now. Right now.' },
+  { cena: 'clara', tipo: 'And you?', q: 'What were you going to do last week, but didn’t?',
+    opc: ['Clean something', 'Call someone', 'Study'], st: ['I was going to …, but …', 'I’ll … tomorrow.'],
+    ex: 'I was going to clean my room, but my friends called. I’ll do it tomorrow. Maybe!', push: 'Promise it to me now: I’ll …' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THIS YEAR I'M GOING TO… (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O semáforo entra no lugar de "VII · Quick Check" (extra, prática controlada de tocar a palavra).
+   Depois da tia Clara, o aluno julga quatro resoluções para a VIDA DELE: verde, amarelo ou
+   vermelho. A gramática da aula (going to / will / would like to / was going to) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'semaforo', troca: 'quiz', est: 'o', min: 7, img: 'quadro', rot: 'Green, Yellow, Red', t: 'Four resolutions. Would they survive January with you?',
+    p: 'Choose a colour for YOUR life. Say why with going to, will or was going to. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: '5 AM', sit: 'Resolution 1: wake up at 5 AM every day, and exercise before work.',
+        q: 'You, this January?', opc: [{ t: 'Green: I’m going to do it', cor: 'g' }, { t: 'Yellow: maybe one week', cor: 'y' }, { t: 'Red: no way', cor: 'r' }],
+        st: ['I’m going to …, because …', 'I was going to … last year, but …', 'I don’t think I’ll …'],
+        ex: 'Red! I was going to do it last year. On day two I turned off the alarm and went back to sleep.',
+        push: 'And at 6 AM? Does the colour change?' },
+      { tag: 'Phone', sit: 'Resolution 2: no phone after 10 PM. Not even one video.',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green: easy', cor: 'g' }, { t: 'Yellow: on weekdays', cor: 'y' }, { t: 'Red: impossible', cor: 'r' }],
+        st: ['I think I’ll …', 'I’d like to …, but …', 'On weekends I’m going to …'],
+        ex: 'Yellow. I’d like to sleep more, so I’m going to try on weekdays. But Saturday is for videos!',
+        push: 'Your friend sends a funny video at 10:30. Do you open it?' },
+      { tag: 'Money', sit: 'Resolution 3: save a little money every month for a big trip in December.',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green: I’m going to save', cor: 'g' }, { t: 'Yellow: some months', cor: 'y' }, { t: 'Red: not this year', cor: 'r' }],
+        st: ['I’m going to save …, because …', 'I’d like to go to …', 'I don’t think I’ll …'],
+        ex: 'Green. I’d like to go to Chile, so I’m going to save a little every month. I’ll start in January.',
+        push: 'A great sale in March. Do you spend the trip money?' },
+      { tag: 'New skill', sit: 'Resolution 4: learn one new thing this year: guitar, cooking, dancing … you choose.',
+        q: 'Green, yellow or red?', opc: [{ t: 'Green: I know what', cor: 'g' }, { t: 'Yellow: I have ideas', cor: 'y' }, { t: 'Red: no time', cor: 'r' }],
+        st: ['I’d like to learn …', 'I’m going to … every …', 'I was going to learn …, but …'],
+        ex: 'Green! I’d like to learn the guitar. I’m going to practise every Sunday, and my brother will teach me.',
+        push: 'Who will check on you in February, like Aunt Clara?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "You, your New Year, your habits.",
+   "p": "You are the guest. Answer out loud."
+  },
+  "tracker": {
+   "t": "Five resolutions. Which ones survive?",
+   "p": "Pick a person. Read, answer, say their line."
+  },
+  "regra": {
+   "t": "The card is going to. The window is will.",
+   "p": "Say each line the right way. Tap Fix it."
+  },
+  "fogos": {
+   "t": "11:52 PM. Five people talk to you.",
+   "p": "Answer fast. Good lines light a firework."
+  },
+  "ano": {
+   "t": "Your real plans, goals and promises.",
+   "p": "Pick five cards. Use going to or will."
+  },
+  "clara": {
+   "t": "Aunt Clara wants the January story.",
+   "p": "Tell her from memory. Then ask her back."
+  },
+  "cv-semaforo": {
+   "t": "Would they survive January with you?",
+   "p": "Pick a color. Say why. Your teacher pushes back."
+  },
+  "fim": {
+   "t": "Row six is empty. It’s yours.",
+   "p": "Write one plan, one goal, one promise. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Revisão de going to (plano de antes, prova na frente) e will (decidido agora, promessa, opinião), com was going to: a família Carter e cinco resoluções de janeiro.",
+  "armadilha": "O brasileiro diz “I will to run” e “I’m going run”, usa o presente como promessa (“I call you tomorrow”) e troca going to por “I went to”.",
+  "pal": [
+   "going to",
+   "will",
+   "I’ll",
+   "was going to",
+   "want to",
+   "would like to",
+   "resolution",
+   "promise",
+   "give up"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o tracker: cinco resoluções, 31 dias de janeiro.",
+   "perg": "Do you make New Year’s resolutions?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o Ano-Novo e os hábitos do aluno, como convidado de um programa.",
+   "perg": "What did you do last New Year’s Eve?",
+   "pula": "Duas perguntas bastam."
+  },
+  "tracker": {
+   "obj": "Leitura dos cinco capítulos: cada resolução da família Carter acende até o dia em que parou.",
+   "perg": "When did his resolution stop?",
+   "pula": "Três pessoas bastam; conte o resto em uma frase."
+  },
+  "regra": {
+   "obj": "Foco: quando foi decidido? Plano/prova = going to; decisão agora/opinião = will.",
+   "perg": "Is it on the card, or is he deciding now?",
+   "pula": "Quatro frases bastam."
+  },
+  "fogos": {
+   "obj": "Pressão da contagem regressiva: respostas rápidas na festa, uma frase certa por fogo.",
+   "perg": "It’s cold in here. What do you say?",
+   "pula": "Cinco falas bastam."
+  },
+  "ano": {
+   "obj": "Os planos, metas e promessas reais do aluno para o ano.",
+   "perg": "What are you going to do this year?",
+   "pula": "Três cartas bastam."
+  },
+  "clara": {
+   "obj": "O professor é a Tia Clara: o aluno reconta janeiro de memória e pergunta de volta.",
+   "perg": "So, what happened with Leo’s room?",
+   "pula": "Duas pessoas da família bastam."
+  },
+  "cv-semaforo": {
+   "obj": "Verde, amarelo ou vermelho: o aluno julga quatro resoluções para a própria vida.",
+   "perg": "Are you going to do it? Why not?",
+   "pula": "Duas resoluções bastam."
+  },
+  "fim": {
+   "obj": "Escrita: o cartão do aluno para o próximo janeiro (plano, meta, promessa).",
+   "perg": "Will you keep your promise?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre planos e decisões com going to e will.",
+   "perg": "What are you going to do this weekend?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre resoluções e justificar com going to e will.",
+   "perg": "Which side, and what are you going to do?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Vovô Walt, 71 anos, que aprendeu a nadar em janeiro.",
+   "perg": "Are you going to swim across the lake, Walt?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More plans, more promises.",
+   "p": "Pick a card. Use going to or will.",
+   "palavras": [
+    "going to",
+    "will",
+    "I’ll",
+    "was going to"
+   ],
+   "cartas": [
+    {
+     "k": "THIS WEEKEND",
+     "q": "What are you going to do this weekend?",
+     "fup": "Is it a plan or only an idea?",
+     "st": [
+      "I’m going to …",
+      "I think I’ll …"
+     ],
+     "ex": "I’m going to visit my sister on Saturday."
+    },
+    {
+     "k": "A FAILED PLAN",
+     "q": "Tell me about a plan that didn’t happen.",
+     "fup": "What happened?",
+     "st": [
+      "I was going to …, but …"
+     ],
+     "ex": "I was going to run every day, but it rained."
+    },
+    {
+     "k": "A PROMISE",
+     "q": "What can you promise your teacher today?",
+     "fup": "Will you really do it?",
+     "st": [
+      "I’ll …",
+      "I promise I’ll …"
+     ],
+     "ex": "I’ll do my homework on Tuesday, I promise."
+    },
+    {
+     "k": "THE WEATHER",
+     "q": "Look outside. What is the weather going to do?",
+     "fup": "And tomorrow?",
+     "st": [
+      "It’s going to …",
+      "I think it will …"
+     ],
+     "ex": "It’s going to rain. Look at the clouds."
+    },
+    {
+     "k": "A BIG GOAL",
+     "q": "What would you like to do before you are seventy?",
+     "fup": "When are you going to start?",
+     "st": [
+      "I’d like to …",
+      "I’m going to start …"
+     ],
+     "ex": "I’d like to learn to swim, like Grandpa Walt."
+    },
+    {
+     "k": "NEXT YEAR",
+     "q": "Where will you be next New Year’s Eve?",
+     "fup": "Who will be with you?",
+     "st": [
+      "I think I’ll be …",
+      "I’m going to …"
+     ],
+     "ex": "I think I’ll be at the beach with my family."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "going to",
+    "will",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Resolutions: write them down or keep them in your head?",
+     "a": "Write them down",
+     "b": "Keep them in my head",
+     "fa": [
+      "Write them down. I’m going to read them every week."
+     ],
+     "fb": [
+      "In my head. If I write them, I’ll lose the paper."
+     ]
+    },
+    {
+     "q": "One big resolution or five small ones?",
+     "a": "One big",
+     "b": "Five small",
+     "fa": [
+      "One big one. I’m going to focus on it."
+     ],
+     "fb": [
+      "Five small ones. I think I’ll keep two or three."
+     ]
+    },
+    {
+     "q": "Start on January 1 or start today?",
+     "a": "January 1",
+     "b": "Today",
+     "fa": [
+      "January 1. It’s a new start, so I’ll try harder."
+     ],
+     "fb": [
+      "Today. If I wait, I’m not going to start."
+     ]
+    },
+    {
+     "q": "Tell your family your plans, or keep them secret?",
+     "a": "Tell them",
+     "b": "Keep them secret",
+     "fa": [
+      "Tell them. They’re going to help me."
+     ],
+     "fb": [
+      "Keep them secret. They’ll laugh if I stop."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Grandpa Walt now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Grandpa Walt.",
+   "perguntas": [
+    "You are seventy-one. Why did you decide to learn to swim?",
+    "What were you going to do on January 3?",
+    "How did you feel at your first class?",
+    "Are you going to swim across the lake?",
+    "What will your family say?",
+    "What’s your resolution for next year?"
+   ],
+   "st": [
+    "I was going to …, but …",
+    "I’m going to …",
+    "I think I’ll …"
+   ],
+   "ex": "I’m going to swim across the lake in the summer. I think the family will cry."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

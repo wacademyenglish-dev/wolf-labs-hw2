@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Each Other · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Each Other · Two Brothers, Two Stories</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Each Other · Two Brothers, Two Stories</h2>
+    <p>Two brothers opened a bakery nine years ago. A filmmaker, Dana, interviewed them separately, and their stories don’t match: one says <i>we taught ourselves</i>, the other says <i>we taught each other</i>. The screen draws the action as arrows: an arrow that comes back to the same person is <b>-self</b>; two arrows that cross are <b>each other</b>. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>myself / yourself / himself / herself / ourselves / themselves</b> when the action comes back; <b>each other</b> when it crosses. Some verbs take nothing: <i>feel, get up, remember, relax, focus, complain</i>. <b>by myself</b> = nobody helped; <b>alone</b> = nobody was there. The mistakes: <i>themselves</i> for <i>each other</i>, <i>I feel myself tired</i>, <i>got himself up</i>, <i>each others</i>, <i>hisself</i>.</p>
+    <!--conversa--><h4>THE HOT SEAT (III) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the two microphones, your student becomes Rafa and you are Dana with the camera on. Four short questions: who is right, what he taught Tomás, the first year, one word for the film. You secretly like Tomás’s version, so make Rafa defend his. Wait five seconds in silence after each question; use the PUSH line (only you see it) at the end. Recast quietly while they talk (<i>each other</i>, not <i>themselves</i>; <i>by himself</i>); at the end, ask them to fix one or two sentences themselves. The Editor’s Cut (VIII) is still the decision at the end.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Two of Your Stories, III The Hot Seat, IV The Arrow, VIII The Editor’s Cut (you are Dana: push back three times, then give in; there is no right answer).</li>
+      <li><b>Focus</b>: II Two Microphones, V Which Way?, VI What English Throws Away, VII Count the Room, IX The Credits.</li>
+      <li><b>Write</b>: X, their two stories, with the red wavy line for -self after feel / get up / relax / remember, <i>each others</i>, <i>was by myself</i> for an empty room, <i>hisself</i>. It goes to their My notes.</li>
+    </ul>
+    <p>Nobody is angry: the brothers disagree about a word, not about each other. Keep it light. No audio or video: your voice is Dana’s.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* EACH OTHER (Main A2) · pergunta-surpresa · 27/10/2026 · myself / each other / by myself */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'seta', tipo: 'Would you rather', q: 'Would you rather learn something by yourself, with videos, or with a teacher?',
+    opc: ['By myself', 'With a teacher'], st: ['I’d rather teach myself …', 'I’d rather learn with …, because we …'],
+    ex: 'With a teacher. We talk to each other, and I don’t get lazy.', push: 'What would you like to teach yourself this year?' },
+  { cena: 'trilhos', tipo: 'And you?', q: 'Is there someone you help, and who helps you? Do you help each other?',
+    opc: ['Yes, always', 'Sometimes', 'Not really'], st: ['My … and I help each other with …', 'I do … by myself.'],
+    ex: 'Yes. My brother and I help each other with the car and the computer.', push: 'What did they help you with last time?' },
+  { cena: 'sala', tipo: 'Opinion', q: 'Working with family: good idea or bad idea?',
+    opc: ['Good idea', 'Bad idea', 'It depends'], st: ['Brothers / sisters … each other …', 'I think …'],
+    ex: 'It depends. Brothers know each other very well, but they argue every Monday!', push: 'Could you work with someone in your family? Who?' },
+  { cena: 'corte', tipo: 'What if', q: 'You open a small shop. What is it?',
+    opc: ['A bakery', 'A café', 'Something else'], st: ['I’d open … by myself.', 'I’d open it with …, and we’d …'],
+    ex: 'A café, with my best friend. We’d teach each other everything!', push: 'Who would do the hard jobs?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* EACH OTHER (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A aula já tem a decisão (VII · The Editor's Cut, extra, no fim). O momento novo é OUTRO formato e
+   fica no MEIO: cadeira quente curta logo depois de "II · Two Microphones", quando as histórias
+   não batem. O aluno é o Rafa; o professor é a Dana. -self / each other / by himself nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'cadeira', apos: 'mics', est: 'o', min: 6, img: 'ilha', rot: 'The Hot Seat', t: 'Dana’s camera is on. You are Rafa.',
+    p: 'Answer Dana as Rafa. Use each other, -self and by himself. Short answers are fine.',
+    formato: 'papel',
+    aluno: { quem: 'Rafa, Tomás’s brother', quer: 'Your line: “We taught each other.”' },
+    prof: { quem: 'Dana, the filmmaker', quer: 'One true story for her film', limite: 'She likes Tomás’s version. Make Rafa defend his.' },
+    rot_perg: 'Dana asks',
+    perguntas: [
+      { q: 'Tomás says, “We taught ourselves.” You say, “We taught each other.” Who is right?', ex: 'Me! He showed me the oven, and I showed him the books. We taught each other.' },
+      { q: 'What did YOU teach Tomás?', ex: 'The numbers. He never looked at the books by himself.' },
+      { q: 'The first year, you lived in another city. Wasn’t he alone?', ex: 'Yes, he was alone in the shop. But we called each other every night.' },
+      { q: 'One word for my film: ourselves, or each other?', ex: 'Each other. Without him, I’m just a man who bakes bread.' }
+    ],
+    st: ['We … each other.', 'He … by himself, but …', 'I taught myself …, and he …'],
+    push: 'Tomás is listening now. Say one nice thing to him with each other.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Three questions about you.",
+   "p": "Your teacher sends messages. Answer out loud."
+  },
+  "mics": {
+   "t": "Two interviews. Same story, or not?",
+   "p": "Read both lines out loud. Then decide."
+  },
+  "cv-cadeira": {
+   "t": "Dana’s camera is on. You are Rafa.",
+   "p": "Answer as Rafa. Use each other or -self."
+  },
+  "seta": {
+   "t": "The action goes one of two ways.",
+   "p": "Tap a shape. Say it. Try the other."
+  },
+  "trilhos": {
+   "t": "Both are correct. The story changes.",
+   "p": "Read the situation. Choose the arrow. Say it."
+  },
+  "tira": {
+   "t": "One word too many?",
+   "p": "Tap the extra word, or NOTHING TO TAKE."
+  },
+  "sala": {
+   "t": "Alone, or by myself?",
+   "p": "Count the people first. Then choose."
+  },
+  "corte": {
+   "t": "Only one version fits the film.",
+   "p": "Choose the version. Dana pushes back three times."
+  },
+  "creditos": {
+   "t": "Each credit line misses one piece.",
+   "p": "Choose the piece. Say the whole line."
+  },
+  "fim": {
+   "t": "Write your two stories.",
+   "p": "Something you taught yourself, and each other."
+  }
+ },
+ "prep": {
+  "obj": "Reflexivos (-self) quando a ação volta e each other quando ela cruza: dois irmãos abriram uma padaria há nove anos e contam à cineasta Dana duas histórias diferentes.",
+  "armadilha": "O português usa “se” para os dois casos (“eles se ensinaram”): sai themselves no lugar de each other, “I feel myself tired”, “got himself up”, “each others” e “hisself”.",
+  "pal": [
+   "myself",
+   "himself",
+   "ourselves",
+   "themselves",
+   "each other",
+   "by myself",
+   "alone",
+   "taught"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta as duas entrevistas sobre os mesmos nove anos e a palavrinha que muda a história.",
+   "perg": "Did you learn to cook by yourself?",
+   "pula": "Leia a frase da capa e abra o material filmado."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o que o aluno aprendeu sozinho e com alguém, sem corrigir.",
+   "perg": "What did you teach yourself?",
+   "pula": "Duas mensagens bastam."
+  },
+  "mics": {
+   "obj": "Comparar as falas de Rafa e Tomás: we taught ourselves × we taught each other.",
+   "perg": "Do the brothers tell the same story?",
+   "pula": "Três pares bastam."
+  },
+  "cv-cadeira": {
+   "obj": "Cadeira quente: o aluno é Rafa e defende a versão dele diante da câmera de Dana.",
+   "perg": "Rafa, who is right: you or Tomás?",
+   "pula": "Duas perguntas e a PUSH bastam."
+  },
+  "seta": {
+   "obj": "A seta: volta para a mesma pessoa (-self) ou cruza entre duas (each other).",
+   "perg": "Does the arrow come back or cross?",
+   "pula": "Três formas bastam."
+  },
+  "trilhos": {
+   "obj": "As duas formas estão certas; o que muda é o que aconteceu.",
+   "perg": "Did they help themselves or each other?",
+   "pula": "Três situações bastam."
+  },
+  "tira": {
+   "obj": "Verbos que não levam -self em inglês: feel, get up, remember, relax, focus, complain.",
+   "perg": "Is “myself” needed in “I feel myself tired”?",
+   "pula": "Quatro frases bastam."
+  },
+  "sala": {
+   "obj": "Contar as pessoas antes: alone = ninguém lá; by myself = ninguém ajudou.",
+   "perg": "How many people were there? Alone or by himself?",
+   "pula": "Três salas bastam."
+  },
+  "corte": {
+   "obj": "O corte final: o aluno escolhe a versão do filme e você, como Dana, contesta três vezes.",
+   "perg": "Which version goes out, and why?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "creditos": {
+   "obj": "Completar as linhas dos créditos com o reflexivo ou each other.",
+   "perg": "Which piece is missing here?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: algo que o aluno aprendeu sozinho e algo que ele e alguém ensinaram um ao outro.",
+   "perg": "What did you and a friend teach each other?",
+   "pula": "Uma história de cada basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa pessoal com -self, by myself e each other.",
+   "perg": "Who do you and your best friend help each other with?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre aprender sozinho ou junto e defender com because.",
+   "perg": "Is it better to learn by yourself or with someone?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "A versão de Tomás em quatro passos: o aluno conta a história da padaria do outro lado.",
+   "perg": "Tomás, did you teach yourselves or each other?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More stories about you.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "myself",
+    "by myself",
+    "each other",
+    "alone"
+   ],
+   "cartas": [
+    {
+     "k": "SELF-TAUGHT",
+     "q": "What is something you taught yourself?",
+     "fup": "How long did it take?",
+     "st": [
+      "I taught myself …",
+      "I learned it by myself."
+     ],
+     "ex": "I taught myself to play the guitar. It took two years."
+    },
+    {
+     "k": "A GOOD TEAM",
+     "q": "Who do you and a friend help each other with?",
+     "fup": "What do you do for each other?",
+     "st": [
+      "We help each other with …",
+      "We … each other."
+     ],
+     "ex": "My sister and I help each other with our kids."
+    },
+    {
+     "k": "ALONE",
+     "q": "Do you like eating alone in a restaurant?",
+     "fup": "Why or why not?",
+     "st": [
+      "Yes, I enjoy myself.",
+      "No, I don’t like being alone …"
+     ],
+     "ex": "Yes. I take a book and I enjoy myself."
+    },
+    {
+     "k": "OLD FRIENDS",
+     "q": "How long have you and your best friend known each other?",
+     "fup": "How often do you see each other?",
+     "st": [
+      "We have known each other for …",
+      "We see each other …"
+     ],
+     "ex": "We have known each other for fifteen years. We see each other every month."
+    },
+    {
+     "k": "A MISTAKE",
+     "q": "Did you ever hurt yourself doing something silly?",
+     "fup": "What happened?",
+     "st": [
+      "I hurt myself when …",
+      "I cut myself …"
+     ],
+     "ex": "I cut myself in the kitchen. I was cooking and talking."
+    },
+    {
+     "k": "THE FAMILY",
+     "q": "In your family, who talks to each other the most?",
+     "fup": "About what?",
+     "st": [
+      "My … and my … talk to each other …"
+     ],
+     "ex": "My mother and my aunt call each other every day."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "by myself",
+    "each other",
+    "ourselves"
+   ],
+   "rodadas": [
+    {
+     "q": "Learn a new thing by yourself or with a friend?",
+     "a": "By myself",
+     "b": "With a friend",
+     "fa": [
+      "By myself. I go at my own speed."
+     ],
+     "fb": [
+      "With a friend. We can help each other."
+     ]
+    },
+    {
+     "q": "Open a business with your brother or sister, or by yourself?",
+     "a": "With family",
+     "b": "By myself",
+     "fa": [
+      "With family. We know each other very well."
+     ],
+     "fb": [
+      "By myself. Family and business don’t mix."
+     ]
+    },
+    {
+     "q": "The film: Rafa’s version or Tomás’s version?",
+     "a": "Rafa’s",
+     "b": "Tomás’s",
+     "fa": [
+      "Rafa’s. They taught each other: the oven and the books."
+     ],
+     "fb": [
+      "Tomás’s. He opened the shop by himself for a whole year."
+     ]
+    },
+    {
+     "q": "Travel alone or with a group?",
+     "a": "Alone",
+     "b": "With a group",
+     "fa": [
+      "Alone. I can look after myself."
+     ],
+     "fb": [
+      "With a group. We take photos of each other."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody is angry, and everybody talked to each other."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Tomás’s Version",
+   "t": "Now tell it as Tomás.",
+   "p": "Four steps. Answer as Tomás.",
+   "prof": "Rafa had his say in scene III (we taught each other); Tomás says we taught ourselves. Recast quietly, keep it light.",
+   "passos": [
+    {
+     "q": "Tomás, how did the bakery start?",
+     "st": [
+      "Nine years ago, my brother and I …"
+     ],
+     "ex": "Nine years ago, my brother and I opened a bakery."
+    },
+    {
+     "q": "Who taught you to bake?",
+     "st": [
+      "We taught ourselves …",
+      "Nobody showed us …"
+     ],
+     "ex": "We taught ourselves. Nobody showed us anything."
+    },
+    {
+     "q": "What was the first year like?",
+     "st": [
+      "In the first year, I …",
+      "I opened the shop by myself …"
+     ],
+     "ex": "In the first year, Rafa lived in another city. I opened the shop by myself."
+    },
+    {
+     "q": "Rafa says you taught each other. What do you say?",
+     "st": [
+      "Maybe he remembers …",
+      "He showed me …, but …"
+     ],
+     "ex": "He showed me the books, yes. But I got up at four every morning."
+    }
+   ],
+   "fim": "Two brothers, two words, one bakery."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

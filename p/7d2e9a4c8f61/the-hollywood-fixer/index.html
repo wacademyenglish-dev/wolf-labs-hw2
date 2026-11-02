@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Hollywood Fixer · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Hollywood Fixer · The Spotlight</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Hollywood Fixer · The Spotlight</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Your student is a fixer on a film set.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Missing Person: Same words. One person of difference.</p><p style="margin:0 0 6px"><b>Short class (about 52 min):</b> I The Desk · II Four Voicemails · III The Missing Person · IV The Spotlight · V Set Notes · VI Say Takes Nobody · VIII Three Crises · IX The Press Conference. Skip if you’re short on time: VII (marked EXTRA on your screen). Full lesson: about 58 min.</p><p style="margin:0"><b>Open with:</b> “What does your family want you to do this year?”</p></div><!--/prep-->
+    <p>Your student is a fixer on a film set. At eleven a photo of the star, Nadia, leaked, and a sentence with a missing person almost cost her her name. The language is <b>want / ask / tell + person + to</b>. The person in the gap does the second verb; an empty gap sends it back to the first person (<i>she asked to delete</i> = she deletes). And <b>say</b> never takes a person.</p>
+    <h4>THE PAGES</h4>
+    <ul>
+      <li><b>III The Missing Person</b>: six lines in three pairs, side by side. The student reads each out loud, taps a line and then the person who does the second verb.</li>
+      <li><b>V Set Notes</b>: six notes. The student builds how they pass each one on, out loud, then taps Check and says it to you as if you were the person. The rule is in the corner.</li>
+      <li><b>VI Say Takes Nobody</b>: six lines, Right or Wrong. If a line is wrong, the student says it right.</li>
+      <li><b>VIII Three Crises</b>: three crisis cards. The student solves each one out loud (what the director wants, what you tell the crew, what you ask the studio) and you play everybody. Then tap the twist and react to it.</li>
+    </ul>
+    <h4>WHO DOES IT?</h4>
+    <p>When your student is stuck, ask one question: <i>Who does the second verb?</i></p>
+    <h4>THE SPOTLIGHT</h4>
+    <p>Scene IV: let the light stop on the wrong person before you say anything. The light is the correction.</p>
+    <h4>NOBODY LIED</h4>
+    <p>Scene VII: Theo didn’t lie. He left a person out. Don’t let it turn into a debate about honesty; the answer is grammatical.</p>
+    <h4>YOU PLAY EVERYBODY</h4>
+    <p>Scene VIII: you are the director, the actors and the reporter. React to the student’s orders as if they were real.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>The studio wants that she says nothing</i>, <i>she told me do it</i>, <i>he said me</i>, <i>told you don’t come</i>.</p>
+    <!--conversa--><h4>THE PRESS CONFERENCE (IX) AND THE SURPRISE QUESTION</h4>
+    <p>The lesson now ends at the studio gate: your student is the fixer, you are the reporters. Ask the five questions one by one (only you see your secret: the phone log). Wait five seconds in silence after each question, then use the PUSH line to make it harder. Every answer needs a person in the gap; recast quietly while they talk, and at the end ask them to fix one or two sentences themselves. To close, they choose the one sentence for the headline and say why. The writing from the old scene IX now lives in the homework (send the link at the end).</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I The Desk, V Set Notes, VIII Three Crises, IX The Press Conference.</li>
+      <li><b>Listen</b>: II Four Voicemails (the transcript opens after they listen).</li>
+      <li><b>Focus</b>: III The Missing Person, IV The Spotlight, VI Say Takes Nobody, VII Who Asked Who.</li>
+      <li><b>Write</b>: in the homework (send the link at the end of IX).</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE HOLLYWOOD FIXER (Main A2) · pergunta-surpresa · 26/10/2026 · want / ask / tell + person + to */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'abre', tipo: 'Would you rather', q: 'For one year: would you rather be the famous star or the fixer?',
+    opc: ['The star', 'The fixer'], st: ['I’d rather be the …, because people want me to …'],
+    ex: 'The fixer! Nobody wants me to smile for photos, and I can go to the supermarket.', push: 'What is the first thing a star would ask you to do?' },
+  { cena: 'recados', tipo: 'And you?', q: 'Who sends you the most messages? What do they ask you to do?',
+    opc: ['My family', 'My boss', 'A friend'], st: ['My … always asks me to …', 'They want me to …'],
+    ex: 'My mom. She always asks me to call her on Sunday, and she wants me to send photos of my food.', push: 'Do you always do it? Yes or no?' },
+  { cena: 'holofote', tipo: 'What if', q: 'A famous actor asks you to keep a big secret, for a lot of money. Do you say yes?',
+    opc: ['Yes, of course', 'No, never', 'It depends'], st: ['If they ask me to …, I …', 'I don’t want anybody to …'],
+    ex: 'It depends. If they ask me to lie to the police, no. If they want me to keep a birthday secret, yes!', push: 'And if your best friend asks you to tell them the secret?' },
+  { cena: 'crises', tipo: 'Opinion', q: 'Can a studio tell its actors not to post on social media?',
+    opc: ['Yes, it’s the job', 'No, it’s their life', 'Only sometimes'], st: ['The studio can tell them to …', 'Nobody can tell you not to …'],
+    ex: 'Only sometimes. The studio can tell them not to post photos from the set, but not from their home.', push: 'And your boss? Can your boss tell you not to post something?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE HOLLYWOOD FIXER (Main A2) · conversa · 26/10/2026 · regra 3×3 do Carlos
+   A coletiva de imprensa entra no lugar de "IX · That’s a Wrap" (a escrita das três notas vai
+   para a lição de casa). Nove da manhã, portão do estúdio: o aluno é o fixer, o professor faz
+   os repórteres. A gramática da aula (want / ask / tell + PESSOA + to · say sem pessoa) mora
+   nos iniciadores; o acordo no fim é a decisão: a frase que vira manchete. hw: 1 (era a última). */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'coletiva', troca: 'fim', est: 'o', min: 7, img: 'fundo', rot: 'The Press Conference', hw: 1,
+    t: 'Nine AM. Cameras at the gate. You answer for Nadia.',
+    p: 'Your teacher is the reporters. Answer as the fixer, with a person in the gap. Then choose the headline.',
+    formato: 'papel', rot_perg: 'A reporter asks',
+    aluno: { quem: 'The fixer', quer: 'Protect Nadia’s name. Tell the true story, nothing more.', limite: 'Every answer needs a person in the gap.' },
+    prof: { quem: 'Three reporters at the gate', quer: 'A big headline before ten.', limite: 'Secret: you have a copy of the phone log. It says T. MARSH.' },
+    perguntas: [
+      { q: 'Who deleted the photos last night?', ex: 'Nadia asked her assistant to delete them. She didn’t delete them herself.' },
+      { q: 'What does the studio want Nadia to do now?', ex: 'The studio wants her to rest. They want her to say nothing for a few days.' },
+      { q: 'Did somebody tell Nadia to stay quiet? Was it her idea?', ex: 'The studio told her not to post anything. It wasn’t her idea, but she agreed.' },
+      { q: 'What did Nadia say to you last night?', ex: 'She said she was very tired. She asked me to call her mother.' },
+      { q: 'And what do you want us, the press, to do?', ex: 'I want you to respect her privacy. I’m asking you to wait for the official note.' }
+    ],
+    st: ['Nadia asked … to …', 'The studio wants her to …', 'She said that …', 'I’m asking you to …'],
+    acordo: { tag: 'The headline', q: '“One sentence for the headline, please!” Which one?',
+      opc: ['Nadia asked Theo to delete them.', 'We want you to wait.', 'My own sentence'],
+      st: ['I want the headline to say …'],
+      ex: 'Nadia asked Theo to delete the photos. It’s true, it’s short, and nobody looks guilty.' },
+    push: 'Use the secret: “We have the phone log. It says T. MARSH. Did Theo lie to you?” Then: “Why should we wait? Tell us one more thing.”' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Nine at night. You fix problems.",
+   "p": "Answer each message out loud."
+  },
+  "recados": {
+   "t": "The photo leaked at eleven.",
+   "p": "Play a message. Say who DID the thing."
+  },
+  "falta": {
+   "t": "Same words. One person of difference.",
+   "p": "Read each line. Tap who does the second verb."
+  },
+  "holofote": {
+   "t": "The light follows the sentence.",
+   "p": "Fill the gap, or leave it. Watch the light."
+  },
+  "bilhetes": {
+   "t": "Six notes. Pass them on.",
+   "p": "Build it out loud. Tap Check. Say it to your teacher."
+  },
+  "say": {
+   "t": "Say never takes a person.",
+   "p": "Right or wrong? Say the wrong ones right."
+  },
+  "culpa": {
+   "t": "The studio is about to blame Nadia.",
+   "p": "Read the message and the receipt. Then answer."
+  },
+  "crises": {
+   "t": "Three crises on set.",
+   "p": "Solve each one out loud. Then tap the twist."
+  },
+  "cv-coletiva": {
+   "t": "Nine AM. You answer for Nadia.",
+   "p": "Answer the reporters. Then choose the headline."
+  }
+ },
+ "prep": {
+  "obj": "want / ask / tell + pessoa + to (e say sem pessoa): o aluno é o fixer de um set; a foto da estrela Nadia vazou e uma frase sem a pessoa quase acabou com ela.",
+  "armadilha": "O português usa “que” + subjuntivo: sai “The studio wants that she says nothing”. Também “she told me do it” (sem to), “he said me” e “told you don’t come”.",
+  "pal": [
+   "want someone to",
+   "ask someone to",
+   "tell someone to",
+   "tell someone not to",
+   "say",
+   "fixer",
+   "leak",
+   "blame"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o set, o fixer e a foto que vazou às onze.",
+   "perg": "Do you follow celebrity news?",
+   "pula": "Leia só o título e entre."
+  },
+  "abre": {
+   "obj": "Aquecimento: mensagens do professor que o aluno responde como fixer.",
+   "perg": "What does your family want you to do this year?",
+   "pula": "Três mensagens bastam."
+  },
+  "recados": {
+   "obj": "Escuta quatro recados e diz quem FEZ a ação, não quem fala.",
+   "perg": "Who deleted the photo?",
+   "pula": "Dois recados bastam."
+  },
+  "falta": {
+   "obj": "Pares de frases: com ou sem a pessoa no espaço muda quem faz o segundo verbo.",
+   "perg": "Who does the second verb?",
+   "pula": "Dois pares bastam."
+  },
+  "holofote": {
+   "obj": "O holofote mostra quem faz a ação; deixe a luz parar no errado antes de falar.",
+   "perg": "Where does the light go now?",
+   "pula": "Três frases bastam."
+  },
+  "bilhetes": {
+   "obj": "Passa adiante seis bilhetes com tell/ask + pessoa + to, dizendo ao professor como se fosse a pessoa.",
+   "perg": "What did the director tell you?",
+   "pula": "Três bilhetes bastam."
+  },
+  "say": {
+   "obj": "Fixa que say não leva pessoa (diferente de tell).",
+   "perg": "“He said me” or “He told me”?",
+   "pula": "Quatro linhas bastam."
+  },
+  "culpa": {
+   "obj": "O Theo não mentiu: deixou a pessoa de fora. Resposta gramatical, não debate moral.",
+   "perg": "Who asked who to delete it?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "crises": {
+   "obj": "Três crises no set; o professor faz todos e o aluno resolve com uma pessoa em cada espaço.",
+   "perg": "What do you tell the crew?",
+   "pula": "Duas crises bastam."
+  },
+  "cv-coletiva": {
+   "obj": "Coletiva de imprensa: o professor é a imprensa; o aluno responde por Nadia e escolhe a manchete.",
+   "perg": "Did the studio ask Nadia to stay quiet?",
+   "pula": "Três perguntas e a manchete. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa pessoal com want/ask/tell + pessoa + to.",
+   "perg": "What does your boss want you to do?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhe um lado em dilemas do set e justifica com a estrutura da aula.",
+   "perg": "Which side do you take?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Nadia e responde com want/ask/tell + pessoa + to.",
+   "perg": "What did the studio tell you to do?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Who wants you to do what?",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "want me to",
+    "asked me to",
+    "told me not to"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR BOSS",
+     "q": "What does your boss want you to do this month?",
+     "fup": "Do you want to do it?",
+     "st": [
+      "My boss wants me to …"
+     ],
+     "ex": "My boss wants me to finish a big report."
+    },
+    {
+     "k": "AS A CHILD",
+     "q": "What did your parents tell you not to do?",
+     "fup": "Did you listen?",
+     "st": [
+      "They told me not to …"
+     ],
+     "ex": "They told me not to talk to strangers. I listened."
+    },
+    {
+     "k": "A FAVOR",
+     "q": "What did a friend ask you to do recently?",
+     "fup": "Did you say yes?",
+     "st": [
+      "My friend asked me to …"
+     ],
+     "ex": "My friend asked me to look after her cat."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "What does your phone want you to do all the time?",
+     "fup": "Do you do it?",
+     "st": [
+      "It wants me to …"
+     ],
+     "ex": "It wants me to update the apps. I never do it."
+    },
+    {
+     "k": "YOUR DOCTOR",
+     "q": "What do doctors always tell people to do?",
+     "fup": "Do you do it?",
+     "st": [
+      "They tell people to …"
+     ],
+     "ex": "They tell people to drink more water and sleep more."
+    },
+    {
+     "k": "A CELEBRITY",
+     "q": "A famous person calls you. What do you ask them to do?",
+     "fup": "Why?",
+     "st": [
+      "I ask them to …"
+     ],
+     "ex": "I ask her to sing at my birthday party."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "The fixer decides.",
+   "p": "Pick a side. Your teacher takes the other one.",
+   "palavras": [
+    "tell her to",
+    "ask him to",
+    "want them to"
+   ],
+   "rodadas": [
+    {
+     "q": "After the leak: tell Nadia to talk or tell her to stay quiet?",
+     "a": "Talk",
+     "b": "Stay quiet",
+     "fa": [
+      "I tell her to talk. People want her to explain."
+     ],
+     "fb": [
+      "I tell her to stay quiet. The story dies in a week."
+     ]
+    },
+    {
+     "q": "Theo: ask him to apologize or ask him to leave?",
+     "a": "Apologize",
+     "b": "Leave",
+     "fa": [
+      "I ask him to apologize. It was a mistake."
+     ],
+     "fb": [
+      "I ask him to leave. The studio wants him to go."
+     ]
+    },
+    {
+     "q": "The director: tell him the truth or tell him nothing?",
+     "a": "The truth",
+     "b": "Nothing",
+     "fa": [
+      "I tell him the truth. He wants me to be honest."
+     ],
+     "fb": [
+      "I tell him nothing. I don’t want him to panic."
+     ]
+    },
+    {
+     "q": "A fixer’s life: exciting or too stressful?",
+     "a": "Exciting",
+     "b": "Too stressful",
+     "fa": [
+      "Exciting. Famous people ask you to help them."
+     ],
+     "fb": [
+      "Too stressful. Everybody wants you to fix everything."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Every crisis has a person in the gap."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Nadia now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Nadia.",
+   "perguntas": [
+    "Nadia, what did the studio tell you to do after the leak?",
+    "Did you ask anyone to delete the photo?",
+    "What does your director want you to do now?",
+    "What did your fixer tell you to say to the press?",
+    "What do your fans want you to do?",
+    "What do you want the reporters to do?"
+   ],
+   "st": [
+    "They told me to …",
+    "I asked … to …",
+    "I want them to …"
+   ],
+   "ex": "The studio told me to say nothing. I want the reporters to leave my family alone."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

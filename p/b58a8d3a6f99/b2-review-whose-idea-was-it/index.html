@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Whose Idea Was It? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B2 · Unit 7 Review · Whose Idea Was It?</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Whose Idea Was It? · B2 Unit 7 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 7 (Reporting and describing). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> The launch of the Glow Mug (an invented product) was a disaster: half the mugs broke. Your student works in HR. You are three colleagues: Priya (marketing), Otto (production) and Mr. Lane (the boss, who finally admits it was his idea).</p><p style="margin:0 0 6px"><b>About 41 min:</b> I · Bingo (8) · II · The Meeting (15) · III · The Jury (7) · IV · Would You Rather? (7) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Nine squares. Pick one, answer, and make a line.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>reported speech at work · reporting verbs + -ing: deny, admit, suggest, insist on · reporting verbs + to: promise, refuse, agree · extreme adjectives · compound adjectives · double comparatives</p>
+    <h4>BINGO</h4>
+    <p>A 3×3 card of quick tasks. The student picks a square and does it out loud; tap <b>Done</b>. Three in a line (across, down or diagonal) is a BINGO. Keep going for a second line if there is time.</p>
+    <h4>THE MEETING</h4>
+    <p>You are each colleague. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then you are the director: the student reports with denied / admitted / insisted on / promised. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>she denied to choose</i>, <i>he suggested us to launch</i>, <i>very exhausted</i>, <i>a ten-hours flight</i>, <i>the more we rushed, more mugs broke</i>, <i>he insisted to launch</i>. B2: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE JURY (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the HR interviews, the student is the jury: for Priya, Otto and Mr. Lane they read the evidence on the screen, choose a verdict (or say their own) and report what each person said with denied, admitted, insisted on and promised. There is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it) to make the verdict harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Bingo and V · I Can.</li>
+      <li><b>Out loud</b>: II · The Meeting, III · The Jury and IV · Would You Rather?.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW B2 · UNIT 7 · WHOSE IDEA WAS IT? · pergunta-surpresa · 28/10/2026 · reporting verbs, extreme and compound adjectives, the more… the more */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'bingo', tipo: 'And you?', q: 'Have you ever taken the blame for someone else?',
+    opc: ['Yes', 'No', 'Someone took it for me!'], st: ['I admitted …ing, even though …', 'I refused to …'],
+    ex: 'Yes. At school I admitted breaking a window. It was my brother! I promised not to tell anyone.', push: 'Did you ever tell?' },
+  { cena: 'missao', tipo: 'Opinion', q: 'When a team project fails, who should take the blame?',
+    opc: ['The boss', 'The whole team', 'The person who made the mistake'], st: ['I’d insist on …ing', 'The more …, the more …'],
+    ex: 'The boss. The more power you have, the more responsibility you take. I’d insist on that.', push: 'And when the project is a success? Who gets the credit?' },
+  { cena: 'escolha', tipo: 'And you?', q: 'What’s the most absolutely useless thing you’ve ever bought?',
+    opc: ['A gadget', 'Clothes', 'Something for the kitchen'], st: ['It was absolutely …', 'The more I used it, the …'],
+    ex: 'A gadget: a ten-dollar phone stand. It was absolutely useless. The more I used it, the more my phone fell.', push: 'Did you complain, or just laugh?' },
+  { cena: 'pode', tipo: 'What if', q: 'Your boss wants your project in two weeks. It needs two months. What do you say?',
+    opc: ['OK, two weeks', 'Ask for more time', 'Refuse'], st: ['I’d suggest …ing', 'I’d refuse to …', 'I’d promise to …'],
+    ex: 'Ask for more time. I’d suggest launching a small version first, and I’d promise to deliver the full one in March.', push: 'He insists: two weeks, or you’re off the project.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW B2 · UNIT 7 · WHOSE IDEA WAS IT? · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O júri com provas entra no lugar de "III · The Story in Order" (tocar os cartões em ordem e contar:
+   prática controlada). Depois de ouvir os três colegas (II), o aluno decide o que acontece com cada um,
+   com as provas da reunião na tela. O IV (Would You Rather) fica. A gramática da unidade (deny / admit +
+   -ing, promise / refuse + to, insist on, absolutely, the more… the more) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'juri', troca: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'The Jury', t: 'Who takes the blame for the Glow Mug?',
+    p: 'Read the evidence. Give a verdict, or say your own. Report what they said with deny, admit, insist on and promise. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Priya', provas: ['She denied choosing the date.', 'She admitted writing the ad in a hurry.', 'The ad promised “a mug that never breaks”.'],
+        q: 'What happens to Priya?', opc: ['Nothing', 'A warning', 'She rewrites every ad'],
+        st: ['She admitted …ing, so …', 'She denied …ing, but …', 'The more …, the more …'],
+        ex: 'A warning. She denied choosing the date, and I believe her. But she admitted writing the ad in a hurry, and the ad promised a mug that never breaks!',
+        push: 'Customers are posting her ad online and laughing. Still only a warning?' },
+      { tag: 'Otto', provas: ['He said he had warned everyone.', 'He admitted making the mugs nine times faster than usual.', 'He had promised to test every mug.'],
+        q: 'Is Otto guilty?', opc: ['Guilty', 'Partly guilty', 'Not guilty'],
+        st: ['He promised to …, but …', 'He refused to …', 'He insisted that …'],
+        ex: 'Partly guilty. He promised to test every mug and he didn’t. But he says he warned everyone, and the boss insisted on the date.',
+        push: 'Nobody remembers his warning, and there’s no email. Does it still count?' },
+      { tag: 'Mr. Lane', provas: ['He admitted choosing the date.', 'He apologised for not listening to Otto.', 'He promised the team a two-week break.'],
+        q: 'What should happen to the boss?', opc: ['He keeps his job', 'He loses his bonus', 'He leaves the company'],
+        st: ['He admitted …ing, which …', 'He promised to …', 'The more …, the less …'],
+        ex: 'He loses his bonus. He admitted choosing the date, which was brave, but he refused to listen to Otto. Words aren’t enough.',
+        push: 'He admitted it in front of everybody. Should honesty save his bonus?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "bingo": {
+   "t": "Nine squares. Make a line!",
+   "p": "Pick a square. Do it out loud. Three in a line wins."
+  },
+  "missao": {
+   "t": "Three colleagues. Who said what?",
+   "p": "Ask each one five questions. Then report to the director."
+  },
+  "cv-juri": {
+   "t": "Who takes the blame for the Glow Mug?",
+   "p": "Read the evidence. Give a verdict. Report with deny, admit."
+  },
+  "escolha": {
+   "t": "A or B? Say why.",
+   "p": "Choose one. Then say why, with because."
+  },
+  "pode": {
+   "t": "Unit 7: what can you do now?",
+   "p": "Read each line out loud. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 7 (reported speech, verbos de relato + -ing e + to, adjetivos extremos e compostos, double comparatives): o lançamento desastroso da Glow Mug.",
+  "armadilha": "O português põe infinitivo depois de tudo: “she denied to choose”, “he insisted to launch”, “he suggested us to launch”. Também “very exhausted”, “a ten-hours flight” e “the more we rushed, more mugs broke”.",
+  "pal": [
+   "deny -ing",
+   "admit -ing",
+   "suggest -ing",
+   "insist on -ing",
+   "promise to",
+   "refuse to",
+   "agree to",
+   "exhausted",
+   "the more…, the more…"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o caso: metade das canecas quebrou e ninguém quer levar a culpa.",
+   "perg": "Who usually takes the blame at your work?",
+   "pula": "Só leia a capa e comece o bingo."
+  },
+  "bingo": {
+   "obj": "Cartela 3×3 de tarefas rápidas com todos os tópicos da unidade.",
+   "perg": "Can you say it with an extreme adjective?",
+   "pula": "Uma linha de bingo basta."
+  },
+  "missao": {
+   "obj": "Priya, Otto e Mr. Lane: o aluno (RH) entrevista e relata ao diretor com denied, admitted, insisted on, promised.",
+   "perg": "What did Otto admit?",
+   "pula": "Dois colegas bastam; faça o relato."
+  },
+  "cv-juri": {
+   "obj": "Júri: um veredito para cada um, relatando o que disseram. Use a linha PUSH.",
+   "perg": "Who should take the blame, and why?",
+   "pula": "Dois casos bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather: escolher A ou B e justificar; o professor concorda ou discorda.",
+   "perg": "Which one would you rather, and why?",
+   "pula": "Três escolhas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação: cada “I can” lido e marcado; o que ficar aberto vai para a lição.",
+   "perg": "Can you report what someone said with deny or admit?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa relatando falas reais e descrevendo com adjetivos fortes.",
+   "perg": "What did your boss promise last time?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre culpa, prazos e lançamentos no trabalho.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Mr. Lane, o chefe que admite que a ideia foi dele, e responde à imprensa.",
+   "perg": "Why did you insist on launching so early?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Who said what, in your life?",
+   "p": "Pick a card. Report it with the right verb.",
+   "palavras": [
+    "admitted -ing",
+    "denied -ing",
+    "promised to",
+    "refused to",
+    "insisted on -ing"
+   ],
+   "cartas": [
+    {
+     "k": "A PROMISE",
+     "q": "Tell me about a promise someone made you and didn’t keep.",
+     "fup": "What did they say later?",
+     "st": [
+      "He promised to …",
+      "Later, he admitted …-ing"
+     ],
+     "ex": "My landlord promised to fix the shower, and later he admitted forgetting all about it."
+    },
+    {
+     "k": "A REFUSAL",
+     "q": "When did you refuse to do something at work?",
+     "fup": "What happened next?",
+     "st": [
+      "I refused to …",
+      "My boss insisted on …-ing"
+     ],
+     "ex": "I refused to work on Christmas, but my boss insisted on me staying until noon."
+    },
+    {
+     "k": "A DISASTER",
+     "q": "Describe a product or service that was a total disaster.",
+     "fup": "Who did people blame?",
+     "st": [
+      "It was absolutely …",
+      "The company denied …-ing"
+     ],
+     "ex": "It was an absolutely terrible phone, and the company denied knowing about the battery."
+    },
+    {
+     "k": "THE MORE",
+     "q": "What is true about work or study for you: the more…, the more…?",
+     "fup": "Why?",
+     "st": [
+      "The more I …, the more …",
+      "The less …, the better …"
+     ],
+     "ex": "The more I rush, the more mistakes I make."
+    },
+    {
+     "k": "A LONG DAY",
+     "q": "Describe your longest day this year.",
+     "fup": "How did you feel at the end?",
+     "st": [
+      "It was a …-hour day",
+      "I was completely …"
+     ],
+     "ex": "It was a fourteen-hour day, and I was completely exhausted."
+    },
+    {
+     "k": "A SUGGESTION",
+     "q": "What is the best suggestion a colleague ever gave you?",
+     "fup": "Did you follow it?",
+     "st": [
+      "She suggested …-ing",
+      "I agreed to …"
+     ],
+     "ex": "She suggested testing everything twice, and I agreed to try it."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "The thing is, …",
+    "I see your point, but …",
+    "admit",
+    "insist on"
+   ],
+   "rodadas": [
+    {
+     "q": "After a disaster, should the boss admit it publicly?",
+     "a": "Yes",
+     "b": "Not in public",
+     "fa": [
+      "Yes. Admitting it fast saves the brand.",
+      "People forgive honesty, not silence."
+     ],
+     "fb": [
+      "Not in public. Fix it first, then talk.",
+      "Some bosses admit things only to look good."
+     ]
+    },
+    {
+     "q": "Launch on time with problems, or launch late but perfect?",
+     "a": "On time",
+     "b": "Late but perfect",
+     "fa": [
+      "On time. The market won’t wait for you.",
+      "You can fix small problems later."
+     ],
+     "fb": [
+      "Late but perfect. Half the mugs broke, didn’t they?",
+      "The more you rush, the more you lose."
+     ]
+    },
+    {
+     "q": "Is it fair to blame a whole team?",
+     "a": "Fair",
+     "b": "Not fair",
+     "fa": [
+      "Fair. Everybody agreed to the plan.",
+      "Nobody refused to sign it."
+     ],
+     "fb": [
+      "Not fair. One person insisted on the date.",
+      "Blame should follow the decision."
+     ]
+    },
+    {
+     "q": "Report a colleague’s mistake to HR, or talk to them first?",
+     "a": "HR",
+     "b": "Talk first",
+     "fa": [
+      "HR. That’s what the process is for.",
+      "Talking first can look like a cover-up."
+     ],
+     "fb": [
+      "Talk first. They might admit it themselves.",
+      "HR is the last step, not the first."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody denied talking."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Mr. Lane now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Mr. Lane, the boss behind the Glow Mug.",
+   "perguntas": [
+    "Do you admit that the Glow Mug was your idea?",
+    "Why did you insist on launching so fast?",
+    "Did Priya or Otto suggest waiting?",
+    "Did you refuse to test the mugs again?",
+    "What do you promise to do for the customers now?",
+    "Was the launch a disaster or just a bad day?"
+   ],
+   "st": [
+    "I admit …-ing",
+    "I insisted on …-ing because …",
+    "I promise to …"
+   ],
+   "ex": "I admit choosing the date myself, and I promise to replace every broken mug."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

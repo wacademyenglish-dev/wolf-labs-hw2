@@ -1,0 +1,90 @@
+/* ============================================================
+   THE HIDDEN PRESENT · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Identidade: meia-noite de aniversário,
+   papel de presente vinho-escuro com bolinhas douradas e a fita dourada
+   que corta a caixa em quatro cantos (THIS · THAT · THESE · THOSE).
+   ============================================================ */
+:root{
+  --noite:#0d0809; --noite-rgb:13,8,9; --tinta:#f3e9de;
+  --t1:#f6eee4; --t2:#d7c8b9; --t2-rgb:215,200,185; --t3:#9a887a;
+  --ac:#e2b04a; --ac2:#ffd98a; --bt:#4aa3e8; --bt2:#a6d2ff; --vinho:#5c1a24;
+  --vidro:rgba(243,233,222,.05); --vidro2:rgba(243,233,222,.085); --vidro3:rgba(243,233,222,.12);
+  --fio:rgba(243,226,205,.12); --fio2:rgba(243,226,205,.22); --luz:rgba(243,233,222,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(4,1,2,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1d1404}
+.btn.cheio{color:#1d1404}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(56px,5.6vw,108px)/.95 var(--disp);letter-spacing:-.035em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa-caixa{display:grid;place-items:center}
+.vaga{color:var(--ac);letter-spacing:.06em}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande{min-height:58px;padding:0 26px;font:800 clamp(20px,1.6vw,26px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+
+/* a caixa de presente */
+.caixa{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;width:100%;max-width:460px;aspect-ratio:1;max-height:calc(100vh / var(--zv,1) - 380px);margin:0 auto;border-radius:14px;overflow:visible;
+  background:radial-gradient(circle at 20% 20%,rgba(226,176,74,.22) 0 3px,transparent 4px) 0 0/36px 36px,linear-gradient(160deg,#6a1e2a,#3a0f16);box-shadow:var(--sombra)}
+.caixa.capa{max-height:none;max-width:420px} .caixa.pequena{max-width:300px}
+.fita-h,.fita-v{position:absolute;background:linear-gradient(90deg,#b8862e,#f2cf7a,#b8862e);z-index:1;pointer-events:none}
+.fita-h{left:0;right:0;top:50%;height:26px;margin-top:-13px;background:linear-gradient(180deg,#b8862e,#f2cf7a,#b8862e)} .fita-v{top:0;bottom:0;left:50%;width:26px;margin-left:-13px}
+.laco{position:absolute;left:50%;top:-30px;width:90px;height:50px;margin-left:-45px;z-index:2;pointer-events:none;background:radial-gradient(ellipse at 25% 60%,#f2cf7a 0 30%,transparent 31%),radial-gradient(ellipse at 75% 60%,#f2cf7a 0 30%,transparent 31%),radial-gradient(circle at 50% 70%,#b8862e 0 12%,transparent 13%)}
+.eixo{position:absolute;left:50%;bottom:-30px;transform:translateX(-50%);font:700 11px var(--mono);letter-spacing:.16em;color:var(--t3);white-space:nowrap}
+.canto{position:relative;display:grid;place-content:center;justify-items:center;gap:4px;border:0;background:transparent;color:var(--t1);transition:background .3s}
+.canto b{font:800 clamp(26px,2.4vw,42px) var(--disp);letter-spacing:.02em;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.canto small{font:700 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.canto.on{background:rgba(143,217,162,.18);box-shadow:inset 0 0 0 3px var(--ok)} .canto.on b{color:var(--ok)}
+.canto.errado{background:rgba(255,110,110,.16);animation:treme .35s}
+.c-this{border-radius:14px 0 0 0} .c-that{border-radius:0 14px 0 0} .c-these{border-radius:0 0 0 14px} .c-those{border-radius:0 0 14px 0}
+
+.mesa-caixa{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:30px;align-items:center}
+.lado-caixa{display:grid;gap:12px}
+.q-mostra{margin:0;font:800 clamp(28px,2.4vw,40px) var(--disp);color:var(--ac2)}
+.foto-f{position:relative;aspect-ratio:16/9;max-height:calc(100vh / var(--zv,1) - 560px);border-radius:var(--r1);background-size:cover;background-position:center}
+.foto-f.grande{max-height:calc(100vh / var(--zv,1) - 420px)}
+.foto-f span{position:absolute;left:14px;bottom:12px;padding:4px 12px;border-radius:999px;background:rgba(13,8,9,.85);font:700 14px var(--mono);color:var(--ac2)}
+.opcoes-l{display:grid;gap:8px}
+.op-l{padding:14px 18px;border-radius:14px;border:1px solid var(--fio2);background:#1e0f12;font:700 clamp(20px,1.6vw,26px) var(--disp);color:var(--t1);text-align:left}
+.op-l.certo{border-color:var(--ok)} .op-l.errado{border-color:var(--erro);animation:treme .35s}
+
+/* III */
+.quarto{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center}
+.voce{position:absolute;left:12px;bottom:12px;padding:4px 12px;border-radius:999px;background:rgba(13,8,9,.85);font:700 13px var(--mono);color:var(--t2)}
+.alvo-q{position:absolute;display:grid;justify-items:center;padding:8px 14px;border-radius:12px;background:rgba(13,8,9,.88);border:2px solid var(--ac);font:800 20px var(--disp)}
+.alvo-q small{font:700 11px var(--mono);color:var(--ac2)}
+.alvo-q.perto{left:18%;bottom:18%} .alvo-q.longe{right:16%;top:22%}
+
+/* IV */
+.balao{position:relative;padding:16px 22px;border-radius:20px 20px 20px 4px;background:#2a1418;border:1px solid var(--fio2)}
+.balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .balao p{margin:4px 0 0;font:800 clamp(30px,2.6vw,44px) var(--disp)}
+
+/* V */
+.mesa-busca{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px;align-items:start}
+.lugares{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lugar-b{position:relative;display:grid;align-content:end;gap:2px;min-height:clamp(140px,calc((100vh / var(--zv,1) - 420px) / 2),240px);padding:12px;border-radius:var(--r2);background-size:cover;background-position:center;color:var(--t1);text-align:left;overflow:hidden}
+.lugar-b::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(13,8,9,.9))}
+.lugar-b>*{position:relative} .lugar-b b{font:800 18px var(--mono);color:var(--ac2)} .lugar-b small{color:var(--t2);font-weight:600}
+.lugar-b em{position:absolute;right:10px;top:10px;padding:4px 10px;border-radius:999px;background:rgba(13,8,9,.88);font:700 13px var(--disp);font-style:normal}
+.lugar-b.on{box-shadow:0 0 0 3px var(--ac)} .lugar-b.achou{box-shadow:0 0 0 3px var(--ok)} .lugar-b.achou em{color:var(--ok)}
+.lado-busca{display:grid;gap:12px}
+
+/* VI */
+.carta-a{display:grid;justify-items:center;gap:12px;padding:26px;border-radius:var(--r2)}
+.carta-a .mao{font-size:56px} .carta-a small{font:800 13px var(--mono);letter-spacing:.16em;color:var(--ac2)}
+.objs{display:flex;gap:14px} .obj{font-size:40px;color:var(--ac2)}
+.carta-a.longe .objs{transform:scale(.55);opacity:.8}
+
+.ultima{margin:0;font:600 clamp(18px,1.4vw,22px)/1.45 var(--disp);color:var(--t2)} .ultima b{color:var(--ac2)}
+.lado-fim .caixa{margin-top:30px}
+
+@media (max-width:1100px){ .mesa-caixa,.mesa-busca,.capa{grid-template-columns:1fr} }
+@media (max-width:820px){ .caixa{max-width:300px} .canto b{font-size:22px} .lugares{grid-template-columns:1fr 1fr} .lugar-b{min-height:120px} }

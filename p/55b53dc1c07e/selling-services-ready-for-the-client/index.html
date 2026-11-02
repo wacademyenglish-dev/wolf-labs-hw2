@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -137,5 +138,292 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "How was your weekend?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "dialogo": {
+   "t": "Leo calls Karen, the CFO.",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "Thirteen lessons, four traps.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "tabuleiro": {
+   "t": "Close the Deal: twelve squares.",
+   "p": "Roll, move, do the task out loud."
+  },
+  "erros": {
+   "t": "Leo’s follow-up email, five mistakes.",
+   "p": "Find one. Say it right. Tap it."
+  },
+  "cartao": {
+   "t": "Your follow-up after a real meeting.",
+   "p": "Thanks, what’s included, your task, next step."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose and say why."
+  },
+  "pode": {
+   "t": "Lesson 29: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Revisão das unidades 16–28 numa call de follow-up: Leo liga para Karen Wells, CFO da Lumen Logistics (small talk, objeção de preço, o que está incluído, quem assina, próximo passo).",
+  "armadilha": "As quatro armadilhas que voltaram: I love sail (love + -ing), OK, I send it (decisão é I’ll), You already worked…? (Have you ever…?) e it don’t include.",
+  "pal": [
+   "How was your weekend?",
+   "I love …ing",
+   "I’m calling about…",
+   "It includes…",
+   "I’ll send…",
+   "Have you ever…?",
+   "Would you like…?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: tabuleiro de doze casas e o follow-up.",
+   "perg": "Have you ever had a really difficult client?",
+   "pula": "Leia a capa e siga."
+  },
+  "conversa": {
+   "obj": "Small talk sobre o fim de semana e o que o aluno ama fazer; ele pergunta And you?",
+   "perg": "What do you love doing after work?",
+   "pula": "Três perguntas bastam."
+  },
+  "dialogo": {
+   "obj": "Escuta: a call de follow-up com a Karen; pode usar 0.75×.",
+   "perg": "What is Karen worried about?",
+   "pula": "Ouça uma vez e faça três perguntas."
+  },
+  "descobre": {
+   "obj": "As quatro armadilhas que mais voltaram nas lições 16–28.",
+   "perg": "Why is “OK, I send it” wrong?",
+   "pula": "Duas armadilhas bastam."
+  },
+  "tabuleiro": {
+   "obj": "Jogo de tabuleiro: um desafio de cada lição; peça UM detalhe a mais em cada casa.",
+   "perg": "Can you tell me one more detail?",
+   "pula": "Cinco casas bastam."
+  },
+  "erros": {
+   "obj": "Corrigir o e-mail do Leo e dizer de que lição é cada erro.",
+   "perg": "Which lesson is this from?",
+   "pula": "Três erros bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: follow-up depois de uma reunião real do aluno.",
+   "perg": "What is included, and what is the next step?",
+   "pula": "Agradecimento e próximo passo bastam."
+  },
+  "escolha": {
+   "obj": "Escolher A ou B com because; você responde também.",
+   "perg": "A discount or more services? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; você confirma e carimba.",
+   "perg": "Can you handle a follow-up call now?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa simples misturando as gramáticas da revisão, sobre o trabalho do aluno.",
+   "perg": "Have you ever lost a client?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre fechar negócio.",
+   "perg": "Which one do you choose?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play invertido: o aluno é a Karen, a CFO, e você é o Leo ligando.",
+   "perg": "Karen, how was your weekend?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about you and your clients.",
+   "p": "Pick a card. Answer. Then “And you?”",
+   "palavras": [
+    "I love …ing",
+    "I’ll …",
+    "Have you ever …?",
+    "It includes …"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WEEKEND",
+     "q": "How was your weekend?",
+     "fup": "What did you do?",
+     "st": [
+      "It was …",
+      "I …"
+     ],
+     "ex": "It was great. I visited my sister."
+    },
+    {
+     "k": "AFTER WORK",
+     "q": "What do you love doing after work?",
+     "fup": "How often?",
+     "st": [
+      "I love …ing."
+     ],
+     "ex": "I love cooking. I cook every night."
+    },
+    {
+     "k": "A HARD CLIENT",
+     "q": "Have you ever had a difficult client?",
+     "fup": "What happened?",
+     "st": [
+      "Yes, I have. / No, I haven’t.",
+      "The client …"
+     ],
+     "ex": "Yes, I have. The client wanted a discount every month."
+    },
+    {
+     "k": "YOUR SERVICE",
+     "q": "What does your service include?",
+     "fup": "What doesn’t it include?",
+     "st": [
+      "It includes …",
+      "It doesn’t include …"
+     ],
+     "ex": "It includes payroll and reports. It doesn’t include taxes."
+    },
+    {
+     "k": "DECISIONS",
+     "q": "A client asks for a proposal. What do you say?",
+     "fup": "When?",
+     "st": [
+      "OK, I’ll send it …"
+     ],
+     "ex": "OK, I’ll send it tomorrow morning."
+    },
+    {
+     "k": "A GOOD DEAL",
+     "q": "Have you ever closed a big deal?",
+     "fup": "How did you feel?",
+     "st": [
+      "Yes, I have. I …",
+      "Not yet, but I’ll …"
+     ],
+     "ex": "Not yet, but I’ll close one this year!"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’ll …",
+    "because",
+    "It includes …"
+   ],
+   "rodadas": [
+    {
+     "q": "The price is too high. Give a discount or explain what’s included?",
+     "a": "A discount",
+     "b": "Explain",
+     "fa": [
+      "A discount.",
+      "I’ll close the deal fast."
+     ],
+     "fb": [
+      "Explain.",
+      "It includes a lot of work."
+     ]
+    },
+    {
+     "q": "Follow up by phone or by email?",
+     "a": "By phone",
+     "b": "By email",
+     "fa": [
+      "By phone.",
+      "I love talking to clients."
+     ],
+     "fb": [
+      "By email.",
+      "The client can read it."
+     ]
+    },
+    {
+     "q": "Talk to the CFO or the CEO?",
+     "a": "The CFO",
+     "b": "The CEO",
+     "fa": [
+      "The CFO.",
+      "She knows the numbers."
+     ],
+     "fb": [
+      "The CEO.",
+      "He signs the contract."
+     ]
+    },
+    {
+     "q": "Small talk first, or business first?",
+     "a": "Small talk",
+     "b": "Business",
+     "fa": [
+      "Small talk.",
+      "How was your weekend? It’s friendly."
+     ],
+     "fb": [
+      "Business.",
+      "The client is busy."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You’re ready for the client."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Karen Wells now.",
+   "p": "Your teacher is Leo, on the phone.",
+   "aluno": "Listen to your teacher’s question. Answer as Karen Wells, CFO of Lumen Logistics.",
+   "perguntas": [
+    "Hi Karen, this is Leo. How was your weekend?",
+    "What do you love doing on weekends?",
+    "Have you ever worked with an outsourcing company?",
+    "Is the price OK for you?",
+    "Who signs the contract?",
+    "Would you like a second meeting next week?"
+   ],
+   "st": [
+    "It was …",
+    "I love …ing.",
+    "Yes, I have. / No, I haven’t."
+   ],
+   "ex": "It was great, thanks. I love sailing. But the price is a little high for us."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

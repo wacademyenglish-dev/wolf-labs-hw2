@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -136,5 +137,307 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "portas": {
+   "t": "Six questions. Pick a door.",
+   "p": "Yes, I have / No, I haven’t + one detail."
+  },
+  "dialogo": {
+   "t": "“Have you worked with a company like us?”",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "Have you ever…?",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "multipla": {
+   "t": "Yes, we have, or yes, we did?",
+   "p": "Choose the right word. Read it out loud."
+  },
+  "cartao": {
+   "t": "Your three experience lines.",
+   "p": "Write them now. You use them next."
+  },
+  "cliente": {
+   "t": "Victor has four doubts.",
+   "p": "Find each doubt. Answer with your experience."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose and say why."
+  },
+  "pode": {
+   "t": "Lesson 27: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 27: present perfect só para experiência (Have you ever…? / Yes, we have / We’ve never…). A controller Nora Bell pergunta ao Leo; depois o CFO Victor Hale duvida.",
+  "armadilha": "Tradução de “Você já trabalhou…?”: “You already worked…?”; esquecer o -ed (“Have you ever work”), responder “Yes, I do” e usar have com ano (“We have worked with them in 2024”).",
+  "pal": [
+   "Have you ever …?",
+   "Yes, we have.",
+   "No, I haven’t.",
+   "We’ve never …",
+   "In 2025, we worked …",
+   "experience",
+   "reference client",
+   "controller"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: todo cliente pergunta se já trabalhamos com uma empresa como a dele.",
+   "perg": "Have you ever presented in English?",
+   "pula": "Só leia o título da capa."
+  },
+  "portas": {
+   "obj": "Seis portas de “Have you ever…?” sobre a vida e o trabalho do aluno; corrigir só depois.",
+   "perg": "Have you ever traveled for work?",
+   "pula": "Quatro portas bastam."
+  },
+  "dialogo": {
+   "obj": "Ouvir a Nora, da Oakridge Paper, perguntando ao Leo sobre experiência, até do cliente perdido.",
+   "perg": "Has Bluepeak worked with paper companies?",
+   "pula": "Ouça uma vez e faça só duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar pares e fechar a regra: experiência = have + particípio; com data = passado simples.",
+   "perg": "Is there a time? Then which form?",
+   "pula": "Três pares e as armadilhas."
+  },
+  "multipla": {
+   "obj": "Escolher entre “Yes, we have” e “Yes, we did” em seis perguntas de cliente.",
+   "perg": "Why “we have” here, and “we did” there?",
+   "pula": "Quatro perguntas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: três linhas de experiência da empresa para usar na cena seguinte.",
+   "perg": "What has your company done that a client wants to hear?",
+   "pula": "Duas linhas bastam."
+  },
+  "cliente": {
+   "obj": "Arena do cliente: o professor é o Victor Hale, CFO educado mas desconfiado; o aluno acha as quatro dúvidas.",
+   "perg": "Have you ever worked with a company our size?",
+   "pula": "Duas dúvidas bastam."
+  },
+  "escolha": {
+   "obj": "Escolhas leves (A ou B) com because.",
+   "perg": "A or B? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; pedir as três linhas reais da empresa para o projeto final (aula 30).",
+   "perg": "Can you answer “Have you ever…?” about your company?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre experiências reais do aluno e da empresa com Have you ever…?",
+   "perg": "Have you ever lost a client?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher lados em dilemas de venda sobre experiência e honestidade.",
+   "perg": "Which side do you take?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar, em passos, a resposta completa à pergunta “Have you worked with a company like us?”.",
+   "perg": "What is your best example?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your experience.",
+   "p": "Pick a card. Answer, then ask back.",
+   "palavras": [
+    "Have you ever …?",
+    "Yes, I have.",
+    "No, I haven’t."
+   ],
+   "cartas": [
+    {
+     "k": "ABROAD",
+     "q": "Have you ever worked with a client from another country?",
+     "fup": "Where was the client from?",
+     "st": [
+      "Yes, I have. / No, I haven’t.",
+      "The client was from …"
+     ],
+     "ex": "Yes, I have. The client was from Chile."
+    },
+    {
+     "k": "A LOST CLIENT",
+     "q": "Have you ever lost a client?",
+     "fup": "What did you learn?",
+     "st": [
+      "Yes, we have. / No, we’ve never …",
+      "We learned …"
+     ],
+     "ex": "Yes, we have. We learned to call clients every month."
+    },
+    {
+     "k": "BIG MEETINGS",
+     "q": "Have you ever presented to a CEO?",
+     "fup": "Were you nervous?",
+     "st": [
+      "Yes, I have. / No, I haven’t.",
+      "I was …"
+     ],
+     "ex": "Yes, I have. I was very nervous."
+    },
+    {
+     "k": "SYSTEMS",
+     "q": "Have you ever used SAP or TOTVS?",
+     "fup": "Did you like it?",
+     "st": [
+      "Yes, I’ve used …",
+      "I liked it / I didn’t like it."
+     ],
+     "ex": "Yes, I’ve used TOTVS. I didn’t like it at first."
+    },
+    {
+     "k": "NEVER",
+     "q": "What have you never done at work, but want to do?",
+     "fup": "Why?",
+     "st": [
+      "I’ve never …",
+      "because …"
+     ],
+     "ex": "I’ve never visited a client in the US. I want to because it’s a big market."
+    },
+    {
+     "k": "THE BEST",
+     "q": "What’s the best project you’ve ever worked on?",
+     "fup": "When was it?",
+     "st": [
+      "The best project I’ve worked on is …",
+      "It was in …"
+     ],
+     "ex": "The best project I’ve worked on is a payroll for a hospital. It was in 2023."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "we’ve never",
+    "we have"
+   ],
+   "rodadas": [
+    {
+     "q": "The client asks about a lost client. Tell the truth, or change the subject?",
+     "a": "Tell the truth",
+     "b": "Change the subject",
+     "fa": [
+      "Tell the truth, because they can call that client."
+     ],
+     "fb": [
+      "Change the subject. We’ve never lost a big one."
+     ]
+    },
+    {
+     "q": "“We’ve never worked with paper companies.” Say it, or say “We have similar clients”?",
+     "a": "Say it",
+     "b": "Similar clients",
+     "fa": [
+      "Say it. It’s honest."
+     ],
+     "fb": [
+      "Similar clients. The process is the same."
+     ]
+    },
+    {
+     "q": "Show a reference client, or show numbers?",
+     "a": "Reference client",
+     "b": "Numbers",
+     "fa": [
+      "A reference client, because people trust people."
+     ],
+     "fb": [
+      "Numbers, because a CFO loves data."
+     ]
+    },
+    {
+     "q": "Work with a big famous client, or many small clients?",
+     "a": "One big client",
+     "b": "Many small",
+     "fa": [
+      "One big client. It looks great."
+     ],
+     "fb": [
+      "Many small clients. It’s safer."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Best Answer",
+   "t": "“A company like us?” Answer it.",
+   "p": "Four steps. Say it out loud.",
+   "prof": "You are Victor, the doubtful CFO: after the last step, say “Hmm, OK…” and ask one more question.",
+   "passos": [
+    {
+     "q": "Answer the question.",
+     "st": [
+      "Yes, we have.",
+      "We’ve worked with …"
+     ],
+     "ex": "Yes, we have. We’ve worked with three manufacturing companies."
+    },
+    {
+     "q": "Give one real example with a time.",
+     "st": [
+      "In …, we worked with …",
+      "They …"
+     ],
+     "ex": "In 2025, we worked with Atlas Motors. They had a slow payroll."
+    },
+    {
+     "q": "Say a result.",
+     "st": [
+      "We saved …",
+      "They …"
+     ],
+     "ex": "We saved them 20%, and they renewed for two years."
+    },
+    {
+     "q": "Be honest about one thing you haven’t done.",
+     "st": [
+      "We’ve never …, but …",
+      "We haven’t …, but …"
+     ],
+     "ex": "We’ve never worked with a paper company, but the payroll process is the same."
+    }
+   ],
+   "fim": "An honest answer with a real example. Victor is listening."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

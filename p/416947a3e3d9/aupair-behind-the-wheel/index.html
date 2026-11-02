@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -127,5 +128,267 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Can au pairs drive?",
+   "p": "One question, the video, then the questions."
+  },
+  "transforma": {
+   "t": "A problem. Your advice.",
+   "p": "Read the clue. Advise with should or shouldn’t."
+  },
+  "separa": {
+   "t": "Twelve driving situations.",
+   "p": "Choose the side. Say the full sentence."
+  },
+  "cv-semaforo": {
+   "t": "Your first week. Can you drive?",
+   "p": "Choose a color. Say what you should do."
+  },
+  "pode": {
+   "t": "Lesson 20: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Dar conselho com should / shouldn’t sobre dirigir nos EUA como au pair: carteira do Brasil, permissão internacional, carteira estadual, neve, celular e ônibus escolar.",
+  "armadilha": "O brasileiro diz “You should to practice” e “You don’t should”; e, por vergonha, mente sobre a experiência ao volante (questão de segurança).",
+  "pal": [
+   "You should…",
+   "You shouldn’t…",
+   "international driving permit",
+   "state driver’s license",
+   "car seat",
+   "distracted driving",
+   "school bus",
+   "I don’t feel safe driving today."
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: famílias precisam de au pair que dirige; o que a agência pede.",
+   "perg": "Do you drive in Brazil?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "video": {
+   "obj": "Ouvir: o FAQ oficial da Au Pair in America sobre dirigir nos EUA.",
+   "perg": "What do you need to drive in the U.S.?",
+   "pula": "Assista uma vez só e faça duas perguntas."
+  },
+  "transforma": {
+   "obj": "Seis problemas: dar conselho com should / shouldn’t.",
+   "perg": "What should she do?",
+   "pula": "Quatro problemas bastam."
+  },
+  "separa": {
+   "obj": "Doze situações ao volante: should ou shouldn’t, e por quê.",
+   "perg": "Should or shouldn’t? Why?",
+   "pula": "Oito situações bastam."
+  },
+  "cv-semaforo": {
+   "obj": "Momento de conversa: quatro pedidos da primeira semana; verde, amarelo ou vermelho.",
+   "perg": "Would you drive on the highway in your first week?",
+   "pula": "Dois pedidos bastam; não corte as cadeirinhas."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 20: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you give driving advice in English now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre direção e segurança na vida do aluno, com should.",
+   "perg": "What should a new driver never do?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de direção com crianças, com should / shouldn’t.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a coordenadora local e dá conselhos ao professor (a nova au pair).",
+   "perg": "Should I drive the kids in the snow?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "You, cars and good advice.",
+   "p": "Pick a card. Answer with should.",
+   "palavras": [
+    "should",
+    "shouldn’t",
+    "I think you should…"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR DRIVING",
+     "q": "Do you drive? How often?",
+     "fup": "Do you feel safe?",
+     "st": [
+      "I drive …",
+      "I feel …"
+     ],
+     "ex": "I drive every day, but only in my city. I feel safe there."
+    },
+    {
+     "k": "NEW DRIVERS",
+     "q": "What should a new driver never do?",
+     "fup": "Did you do it?",
+     "st": [
+      "A new driver shouldn’t …",
+      "Once, I …"
+     ],
+     "ex": "A new driver shouldn’t use the phone. Once, I did, and I almost hit a car."
+    },
+    {
+     "k": "SNOW",
+     "q": "Have you ever seen snow?",
+     "fup": "Would you drive in it?",
+     "st": [
+      "Yes / No, …",
+      "I think I should …"
+     ],
+     "ex": "No, never. I think I should practice with my host dad first."
+    },
+    {
+     "k": "BRAZIL VS USA",
+     "q": "What is different about driving in Brazil?",
+     "fup": "What should a tourist know?",
+     "st": [
+      "In Brazil, …",
+      "A tourist should …"
+     ],
+     "ex": "In Brazil, motorcycles are everywhere. A tourist should check the mirrors all the time."
+    },
+    {
+     "k": "HONESTY",
+     "q": "Should au pairs say the truth about their driving?",
+     "fup": "Why do some people lie?",
+     "st": [
+      "They should …, because …",
+      "Some people …"
+     ],
+     "ex": "They should, because it’s about the kids’ safety. Some people are afraid to lose the family."
+    },
+    {
+     "k": "NO CAR",
+     "q": "If you don’t drive, what should you look for in a family?",
+     "fup": "What city would be good?",
+     "st": [
+      "I should look for …",
+      "A city with …"
+     ],
+     "ex": "I should look for a family in a city with good buses."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "should",
+    "shouldn’t",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Light snow, school in 20 minutes. Drive or call a parent?",
+     "a": "Drive",
+     "b": "Call a parent",
+     "fa": [
+      "Drive, slowly. I practiced last week.",
+      "The kids shouldn’t miss school."
+     ],
+     "fb": [
+      "Call a parent. I shouldn’t drive if I don’t feel safe.",
+      "Snow is new for me."
+     ]
+    },
+    {
+     "q": "Should au pairs get a state license, or use the international permit?",
+     "a": "State license",
+     "b": "International permit",
+     "fa": [
+      "A state license. It’s the safest choice.",
+      "Rules change by state."
+     ],
+     "fb": [
+      "The permit. It’s faster at the start.",
+      "I should check with my coordinator."
+     ]
+    },
+    {
+     "q": "A kid cries in the back seat. Stop the car or keep driving?",
+     "a": "Stop",
+     "b": "Keep driving",
+     "fa": [
+      "Stop. I shouldn’t drive distracted.",
+      "One minute is nothing."
+     ],
+     "fb": [
+      "Keep driving. We’re almost home.",
+      "I should stay calm and talk to him."
+     ]
+    },
+    {
+     "q": "Say “I’m a great driver” in the interview, or tell the full truth?",
+     "a": "Great driver",
+     "b": "The full truth",
+     "fa": [
+      "Great driver. Families want confidence.",
+      "I can practice later."
+     ],
+     "fb": [
+      "The truth. A good family prefers an honest au pair.",
+      "It’s about safety."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the local coordinator.",
+   "p": "The new au pair asks you for advice.",
+   "aluno": "Listen to the au pair’s question. Answer as the coordinator, with should and shouldn’t.",
+   "perguntas": [
+    "Should I get a state driver’s license?",
+    "Should I drive the kids in the snow?",
+    "My host family has two car seats and three kids. What should I do?",
+    "Should I use my phone for directions?",
+    "What should I do near a school bus?",
+    "I don’t feel safe on the highway. What should I tell my family?"
+   ],
+   "st": [
+    "You should …",
+    "You shouldn’t …",
+    "I think you should …"
+   ],
+   "ex": "You shouldn’t drive three kids with two car seats. You should tell your host mom today."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

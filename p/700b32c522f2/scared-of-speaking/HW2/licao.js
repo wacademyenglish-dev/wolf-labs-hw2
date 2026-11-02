@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Scared of Speaking",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/700b32c522f2/scared-of-speaking/img/live-palco.webp",
+  "capa": "../img/live-palco.webp",
   "alvo": "adjective + small word + -ing: good at, scared of, tired of, nervous about, interested in, proud of; after the small word the verb ends in -ing; never good in, interested on, scared of speak",
   "abrir": "What are you good at?",
   "fecho": "Adjective + small word + <b>-ing</b>: <i>good at singing, scared of flying, tired of waiting, nervous about speaking, interested in learning</i>. Never <i>good in</i> or <i>scared of speak</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before an open mic night. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/700b32c522f2/scared-of-speaking/img/live-palco.webp",
+      "img": "../img/live-palco.webp",
       "leg": "A microphone on a stage",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'm good at cooking rice.",
-          "img": "https://wolf-labs.pages.dev/p/700b32c522f2/scared-of-speaking/img/live-palco.webp",
+          "img": "../img/live-palco.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She is nervous about speaking in public.",
-          "img": "https://wolf-labs.pages.dev/p/700b32c522f2/scared-of-speaking/img/live-palco.webp",
+          "img": "../img/live-palco.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We are tired of waiting for the bus.",
-          "img": "https://wolf-labs.pages.dev/p/700b32c522f2/scared-of-speaking/img/live-palco.webp",
+          "img": "../img/live-palco.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -155,7 +155,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/700b32c522f2/scared-of-speaking/img/live-palco.webp",
+      "img": "../img/live-palco.webp",
       "leg": "An empty stage with a microphone",
       "pede": "Look at the picture: a microphone on a stage. Write 2 or 3 sentences: one thing you are <b>good at</b>, and one thing you are <b>nervous about</b> or <b>tired of</b>. Use <b>-ing</b> after the small word.",
       "ph": "I'm good at …",

@@ -1,0 +1,151 @@
+/* ============================================================
+   Getting Used to Earth · The Earth Manual · LIVE CLASS 06/10/2026
+   her survival manual for Earth, page by page
+   ============================================================ */
+:root{
+  --noite:#08090f; --noite-rgb:8,9,15; --tinta:#e6e9ef;
+  --t1:#f1f3f7; --t2:#b3bac7; --t2-rgb:179,186,199; --t3:#7b8394;
+  --ac:#e4423f; --ac2:#f7b9b4; --frio:#4f7fe0; --coral:#f2837a;
+  --vidro:rgba(230,233,239,.045); --vidro2:rgba(230,233,239,.08); --vidro3:rgba(230,233,239,.11);
+  --fio:rgba(214,220,232,.11); --fio2:rgba(214,220,232,.2);
+  --ok:#9fdcae; --am:#e4423f; --erro:#f2837a; --lil:#c3a8f0;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Instrument Serif',Georgia,serif; --ui:'Hanken Grotesk',system-ui,sans-serif; --mono:'Hanken Grotesk',system-ui,sans-serif;
+  --r1:12px; --r2:8px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1a0505}
+.btn.cheio{background:var(--ac);border-color:var(--ac);color:#1a0505}
+.cab h1,.pergunta h2,.follow p.q,.carta b,.cr h3,#guia h2,.marca span{font-weight:400;letter-spacing:0}
+.cab h1{font-size:clamp(34px,2.9vw,56px)}
+.pergunta h2{font-size:clamp(24px,1.9vw,34px)}
+.capa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:10px 0 6px;font:400 clamp(58px,5.4vw,104px)/.98 var(--disp);color:var(--t1)}
+.capa .banda{margin:0 0 18px;font:500 clamp(18px,1.3vw,22px) var(--ui);color:var(--ac)}
+.capa .sub{margin:0 0 26px;font:400 clamp(18px,1.3vw,22px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.sg-foto{margin:0;display:grid;gap:14px}
+.sg-foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r1);border:1px solid #1a1e27;box-shadow:var(--sombra)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.05vw,17px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(159,220,174,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.sg-mesa{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.sg-ops{display:grid;gap:6px}
+.sg-linha-ok{display:flex;align-items:center;gap:12px} .sg-linha-ok span{flex:1}
+.sg-centro{max-width:1150px;margin:0 auto 14px;width:100%;display:grid;gap:12px}
+
+/* a onda da música: o traço comum */
+.onda{position:relative;display:flex;align-items:center;gap:2px;height:44px}
+.onda i{flex:1;border-radius:2px;background:linear-gradient(180deg,var(--ac),color-mix(in srgb,var(--ac) 40%,#000));opacity:.7}
+.onda .mk{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t1);border:0;padding:0;margin:0}
+.onda.grande{height:84px;max-width:1300px;width:100%;margin:34px auto 40px}
+.onda.grande button.mk:nth-child(even) span{top:auto;bottom:-30px}
+.onda.grande button.mk{width:14px;margin-left:-6px;background:transparent;cursor:pointer}
+.onda.grande button.mk::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--t2)}
+.onda.grande button.mk span{position:absolute;top:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 14px var(--ui);color:var(--t2);padding:3px 10px;border-radius:999px;border:1px solid var(--fio2);background:var(--noite)}
+.onda.grande button.mk.on::before{background:var(--ac2);width:3px}
+.onda.grande button.mk.on span{color:#1a0505;background:var(--ac);border-color:var(--ac)}
+.onda.grande button.mk:focus-visible span{outline:2px solid var(--ac2);outline-offset:2px}
+
+/* o resto: quieto */
+.sg-encarte{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:26px;max-width:1300px;margin:0 auto 18px;width:100%;padding:18px;border-radius:var(--r1)}
+.sg-capinha{display:grid;gap:10px}
+.sg-capinha img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid #20242f}
+.sg-capinha small{display:block;font:600 14px var(--ui);color:var(--ac)} .sg-capinha b{font:400 clamp(24px,1.9vw,32px)/1.1 var(--disp);color:var(--t1)}
+.sg-encarte dl{margin:0;display:grid;gap:14px;align-content:center}
+.sg-encarte dt{font:600 14px var(--ui);color:var(--frio)} .sg-encarte dd{margin:2px 0 0;font:400 clamp(19px,1.4vw,24px)/1.4 var(--disp);color:var(--t1)}
+.sg-selo{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:1px dashed var(--fio2);text-align:center;padding:16px}
+.sg-selo b{font:italic 400 clamp(30px,2.4vw,42px) var(--disp);color:var(--ac)} .sg-selo small{font:400 15px var(--ui);color:var(--t2)}
+.sg-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.sg-vcol{display:grid;gap:6px;width:100%;max-width:min(100%,82vh);justify-self:center} .sg-cred{font:400 13px var(--ui);color:var(--t3)}
+.sg-dica{text-align:center;font:italic 400 22px var(--disp);color:var(--t3)}
+.sg-sentido{display:block;font:400 clamp(19px,1.4vw,23px)/1.45 var(--disp);color:var(--t1);margin-bottom:8px}
+.sg-gram{display:block;font:400 16px/1.5 var(--ui);color:var(--t2)} .sg-gram b{color:var(--ac2)}
+.sg-pista{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--ac)}
+.sg-pista small{font:600 13px var(--ui);color:var(--ac)} .sg-pista p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.sg-fala{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--frio)}
+.sg-fala small{display:flex;align-items:center;gap:8px;font:600 13px var(--ui);color:var(--frio)} .sg-fala p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.sg-luz{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px rgba(242,131,122,.7)}
+.sg-ar{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px;border-radius:var(--r1)} .sg-ar p{margin:0;font:400 30px var(--disp);color:var(--t1)}
+.sg-carta{display:grid;gap:4px;padding:10px 14px;border-radius:var(--r2);border:1px solid var(--fio2);background:var(--vidro)}
+.sg-carta > small{font:600 13px var(--ui);color:var(--t3)}
+.sg-carta p{margin:0;font:400 clamp(14px,1vw,16px)/1.45 var(--ui);color:var(--t1)}
+.sg-carta.aluno{border-color:rgba(228,66,63,.45);background:rgba(228,66,63,.05)} .sg-carta.aluno > small{color:var(--ac)}
+.sg-carta.prof{border-style:dashed}
+.sg-carta details{margin-top:4px;display:grid;gap:3px} .sg-carta summary{cursor:pointer;font:600 13px var(--ui);color:var(--t3)}
+.so-aluno-c{display:none}
+html.wl-sala-aluno .so-aluno-c{display:grid}
+
+.fim .grande span{font-size:clamp(15px,1.1vw,18px)}
+
+/* a cara de Supergirl: Syne no título, Instrument Sans no texto, Kalam nas páginas do caderno */
+:root{--disp:'Instrument Sans',system-ui,sans-serif;--ui:'Instrument Sans',system-ui,sans-serif}
+.cab h1,.capa h1{font-family:'Syne',system-ui,sans-serif;font-weight:800;letter-spacing:-.015em}
+.capa h1{font-size:clamp(50px,4.8vw,92px);line-height:.98}
+.cab h1{font-size:clamp(26px,2.2vw,42px);line-height:1.12}
+.pergunta h2{font-family:var(--ui);font-weight:600}
+.sg-pista p{font-family:var(--ui)!important;font-weight:700}
+.sg-sentido,.sg-encarte dd{font-family:var(--ui)!important;font-weight:400}
+/* o caderno: o gesto forte */
+.sg-caderno{display:grid;grid-template-columns:1fr 14px 1.15fr;border-radius:8px;overflow:hidden;background:#11172a;box-shadow:inset 0 0 0 1px #24304f,0 18px 40px #000c;max-width:clamp(360px,34vw,640px);width:100%;margin:0 auto;min-height:clamp(240px,34vh,340px)}
+.sg-esq,.sg-dir{padding:12px 14px;background:repeating-linear-gradient(0deg,transparent 0 25px,#1c2440 25px 26px)}
+.sg-espiral{background:repeating-linear-gradient(0deg,#0a0e1a 0 8px,#3a4566 8px 11px,#0a0e1a 11px 18px)}
+.sg-tit{margin:0 0 6px;font:700 clamp(15px,1.1vw,19px) 'Kalam',cursive;color:#f7b9b4}
+.sg-esq ol{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.sg-ix{display:grid;grid-template-columns:16px 1fr 10px;gap:6px;align-items:center;min-height:clamp(20px,2.5vh,26px)}
+.sg-ix span{font:700 11px 'Instrument Sans',sans-serif;color:#4c5a80}
+.sg-ix b{font:400 clamp(13px,.95vw,16px) 'Kalam',cursive;color:#4c5a80}
+.sg-ix i{width:8px;height:8px;border-radius:50%;background:#1f2944}
+.sg-ix.ok b{color:#dfe6ff}.sg-ix.ok span{color:#7f93c9}
+.sg-ix.ok i.s-used{background:#e4423f}.sg-ix.ok i.s-normal{background:#4f7fe0}.sg-ix.ok i.s-getting{background:#e8c04a}.sg-ix.ok i.s-not{background:#8a8fa3}
+.sg-ix.vez b{color:#f7b9b4}
+.sg-pag{display:grid;gap:4px;justify-items:start;align-content:start;height:100%}
+.sg-pag small{font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#7f93c9}
+.sg-pag svg{width:clamp(64px,5.6vw,96px);height:auto;align-self:center;justify-self:center}
+.dd-r{fill:#e4423f;opacity:.8}.dd-y{fill:#e8c04a;opacity:.8}.dd-w{fill:none;stroke:#dfe6ff;stroke-width:3}.dd-l{fill:none;stroke:#dfe6ff;stroke-width:3;stroke-linecap:round}
+.sg-pag p{margin:0;font:400 clamp(16px,1.2vw,21px)/1.25 'Kalam',cursive;color:#eef2ff}
+.sg-carimbo{margin-top:4px;padding:2px 8px;border:2px solid currentColor;border-radius:3px;transform:rotate(-3deg);font:700 11px 'Instrument Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.sg-carimbo.s-used{color:#e4423f}.sg-carimbo.s-normal{color:#7fa6f0}.sg-carimbo.s-getting{color:#e8c04a}.sg-carimbo.s-not{color:#a3a8bb}
+.sg-pag.nova{animation:sg-escreve .9s ease-out both}
+@keyframes sg-escreve{from{opacity:0;clip-path:inset(0 0 100% 0)}to{opacity:1;clip-path:inset(0)}}
+.sg-pag.vazia p{color:#7f93c9;font-size:16px}
+.sg-caderno.cheio{box-shadow:inset 0 0 0 1px #e4423f66,0 0 30px #e4423f1c,0 18px 40px #000c}
+@media (prefers-reduced-motion:reduce){.sg-pag.nova{animation:none}}
+/* o resto: quieto */
+.sg-regra{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1300px;margin:0 auto 16px;width:100%}
+.sg-regra > div{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.sg-regra small{font:700 13px var(--ui);color:var(--frio)} .sg-regra p{margin:0;font:600 clamp(18px,1.3vw,23px)/1.35 var(--ui);color:var(--t1)} .sg-regra b{color:var(--ac2)} .sg-regra span{font:400 15px var(--ui);color:var(--t2)}
+.sg-novos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1300px;margin:0 auto;width:100%}
+.sg-no{display:grid;gap:6px;align-content:start;padding:14px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.sg-no small{font:700 13px var(--ui);color:var(--ac)} .sg-no p{margin:0;font:600 clamp(17px,1.2vw,21px)/1.3 var(--ui);color:var(--t1)}
+.sg-encarte .sg-capinha img{aspect-ratio:16/10;max-height:clamp(150px,23vh,250px)}
+.sg-encarte{margin-bottom:6px}.sg-encarte dl{gap:8px}.sg-encarte dd{font-size:clamp(16px,1.02vw,19px)!important;line-height:1.45}
+@media (max-width:1100px){ .sg-regra{grid-template-columns:1fr} .sg-novos{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .sg-novos{grid-template-columns:1fr} .capa h1{font-size:44px} .sg-caderno{max-width:100%;grid-template-columns:1fr 10px 1.2fr} .sg-esq,.sg-dir{padding:8px} .sg-ix b{font-size:12px} }
+
+@media (max-width:1100px){ .mesa-c,.capa,.sg-mesa,.sg-video,.sg-encarte{grid-template-columns:1fr} .sg-regra{grid-template-columns:1fr} }
+@media (max-width:620px){
+  .onda.grande{height:64px;margin-top:40px} .onda.grande button.mk span{font-size:11px;padding:2px 6px}
+  .sg-capinha img{aspect-ratio:16/9}
+}
+
+/* a tira de filme (aulas de filme no lugar da onda de som) */
+.tira{border-radius:6px;padding:0 6px;background:#070707;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.tira-furos{height:14px;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,255,255,.13) 9px 19px,transparent 19px 28px);background-size:28px 6px;background-repeat:repeat-x;background-position:0 50%}
+.tira-q{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tq{position:relative;display:grid;align-content:end;gap:1px;aspect-ratio:16/9;min-height:0;padding:6px 8px;border:0;border-radius:2px;overflow:hidden;text-align:left;background:#141414;font:inherit;color:inherit}
+.tq-img{position:absolute;inset:0;background:var(--bg) center/cover;filter:brightness(.42) saturate(.8)}
+.tq b,.tq span{position:relative}
+.tq b{font:600 10px var(--ui);color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.tq span{font:600 11px/1.15 var(--ui);color:var(--t1)}
+.tira.grande{max-width:1300px;width:100%;margin:6px auto 22px}
+.tira.grande .tq{cursor:pointer;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s}
+.tira.grande .tq b{font-size:13px} .tira.grande .tq span{font-size:clamp(14px,1.05vw,18px)}
+.tira.grande .tq:hover .tq-img{filter:brightness(.55)}
+.tira.grande .tq.on{outline-color:var(--ac)} .tira.grande .tq.on .tq-img{filter:brightness(.7) saturate(1)}
+.tira.grande .tq:focus-visible{outline-color:var(--ac2)}
+@media (max-width:620px){.tira.grande .tira-q{grid-template-columns:repeat(3,minmax(0,1fr))} .tira.grande .tq span{font-size:12px} .tira.grande .tq b{font-size:11px} .capa-r .tira{display:none}}
+
+
+/* 23/10/2026 · formatos novos: o caderno menor em cima das frases */
+.fm-obj .sg-caderno{max-width:min(760px,100%);margin:0 auto}

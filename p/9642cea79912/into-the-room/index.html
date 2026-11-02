@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Into the Room · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Into the Room · The Blueprint</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Into the Room · The Blueprint</h2>
+    <p>Portuguese keeps the path in the verb (one verb to enter, one to leave, one to cross). English keeps it in a small road word: <b>into, out of, onto, off, through, across, past</b>. The screen is a blueprint: a ball moves exactly along the path the student describes. At the end, the student guides you, eyes closed, to a treasure.</p>
+    <h4>THE T THAT MOVES</h4>
+    <p><i>in</i> is a place, <i>into</i> is a path. <i>on</i> is a place, <i>onto</i> is a path. Every road has a small diagram (the box and the arrow): point at it when they hesitate.</p>
+    <h4>THE SLIPS</h4>
+    <p><i>enter in the room</i> (enter takes nothing) · <i>go out the house</i> (out OF) · <i>got out the bus</i> (buses, trains, planes: get on / get off; cars and taxis: get in / get out of) · <i>crossed across</i>.</p>
+    <h4>EYES CLOSED</h4>
+    <p>Scene VII: press “My eyes are closed” and close them for real. Move only when the instruction is clear. A wrong road word means a wall: say so, and let them fix it.</p>
+    <!--conversa--><h4>THE BEST ROUTE (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Your student’s real routes become a decision: five ways to get to work, from the best to the worst. Let them order all five, wait five seconds in silence, then they explain the top and the last one with the road words. Show your own order and disagree on purpose; use the PUSH line (only you see it). Recast quietly (<i>walk across</i>, not <i>cross across</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Bed to Kitchen, V The Floor Plan, VI Through, Across, Past, VII Eyes Closed, VIII The Best Route.</li>
+      <li><b>Focus</b>: II Place or Path?, III One Verb, Six Roads, IV The Slips.</li>
+      <li><b>Write</b>: IX, the real route from bed to kitchen. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* INTO THE ROOM (Main A2) · pergunta-surpresa · 27/10/2026 · into · out of · onto · off · through · across · past */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'dois', tipo: 'And you?', q: 'What’s the first thing you do when you walk into your home?',
+    opc: ['Take off my shoes', 'Go into the kitchen', 'Fall onto the sofa'], st: ['When I walk into my home, I …', 'First I …, then I …'],
+    ex: 'I take off my shoes and go straight into the kitchen.', push: 'And the first thing you do when you get out of bed?' },
+  { cena: 'verbo', tipo: 'Would you rather', q: 'Would you rather walk through a dark forest or swim across a cold river?',
+    opc: ['Walk through the forest', 'Swim across the river'], st: ['I’d rather …, because …'],
+    ex: 'Swim across the river. A forest at night? No, thank you!', push: 'The river is one kilometer wide. Still swimming?' },
+  { cena: 'planta', tipo: 'What if', q: 'You’re locked out of your house. How do you get in?',
+    opc: ['Climb in through a window', 'Call a friend with a key', 'Wait outside'], st: ['I’d climb … through …', 'I’d go …'],
+    ex: 'I’d call my sister. Climbing in through a window? The neighbours would call the police!', push: 'Nobody answers the phone. Now what?' },
+  { cena: 'tres', tipo: 'Opinion', q: 'What place in your city do you always walk past, but never go into?',
+    opc: ['A shop', 'A restaurant', 'Something else'], st: ['I always walk past …, but …', 'I never go into it, because …'],
+    ex: 'A tiny Japanese restaurant. I walk past it every day, but I never go in.', push: 'Why not? Go in this week. Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* INTO THE ROOM (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O ranking entra no lugar de "VIII · Your Real Routes" (extra): as rotas reais viram uma decisão —
+   cinco jeitos de ir para o trabalho, do melhor ao pior, e a ordem do professor para discordar.
+   A gramática da aula (into · out of · onto · off · through · across · past) mora nos itens e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'rota', troca: 'seu', est: 'o', min: 7, img: 'corredor', rot: 'The Best Route', t: 'Five ways to get to work. Which one wins?',
+    p: 'Put them in order: 1 is the best. Say why with the road words. Then see your teacher’s order and disagree.',
+    formato: 'ranking',
+    q: 'The best way to get to work',
+    itens: ['Walk across a big park', 'Drive through a long tunnel', 'Get on a bus, get off at the door', 'Ride a bike past the river', 'Go down into the subway'],
+    st: ['Number one is …, because you go …', 'I’d never …, because …', 'You walk past …, so …'],
+    ex: 'Number one: ride a bike past the river. It’s free, and you see the water. Last: drive through the tunnel. It’s dark and full of cars.',
+    push: 'It’s raining hard today. Does your number one change?',
+    prof: [3, 0, 2, 4, 1],
+    dica: 'Tap from the best to the worst. Tap again to take it out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Bed to kitchen. Every step.",
+   "p": "Answer out loud. The picture opens."
+  },
+  "dois": {
+   "t": "One sits still. One moves.",
+   "p": "Read both. Tap the one that is MOVING."
+  },
+  "verbo": {
+   "t": "GO stays. The road changes.",
+   "p": "Say it with the road. Tap it. Watch the arrow."
+  },
+  "regra": {
+   "t": "Five slips everybody makes.",
+   "p": "Say each wrong line right. Then tap it."
+  },
+  "planta": {
+   "t": "Six legs. The ball follows your words.",
+   "p": "Say the whole leg. Tap the road."
+  },
+  "tres": {
+   "t": "Through, across, past.",
+   "p": "Say the example. Answer about your life."
+  },
+  "guia": {
+   "t": "Eyes closed. Guide your teacher.",
+   "p": "Say each step. Your teacher moves only with words."
+  },
+  "cv-rota": {
+   "t": "Five ways to work. Which wins?",
+   "p": "Put them in order. Say why. Then disagree."
+  },
+  "fim": {
+   "t": "Bed to kitchen, again.",
+   "p": "Write your real route with the road words."
+  }
+ },
+ "prep": {
+  "obj": "Preposições de movimento (into, out of, onto, off, through, across, past): numa planta da casa, a bolinha segue exatamente o caminho que o aluno descreve.",
+  "armadilha": "O português põe o caminho no verbo (entrar, sair, atravessar): sai “enter in the room”, “go out the house”, “got out the bus” e “crossed across”.",
+  "pal": [
+   "into",
+   "out of",
+   "onto",
+   "off",
+   "through",
+   "across",
+   "past",
+   "get on / get off",
+   "get in / get out of"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a planta da casa e a bolinha que segue as palavras do aluno.",
+   "perg": "Is your home big or small?",
+   "pula": "Leia só o título e entre."
+  },
+  "abre": {
+   "obj": "Diagnóstico: o aluno descreve o caminho da cama até a cozinha; volta no fim.",
+   "perg": "How do you get from your bed to the kitchen?",
+   "pula": "Uma descrição basta; não corrija agora."
+  },
+  "dois": {
+   "obj": "Lugar x caminho: in x into, on x onto.",
+   "perg": "Is it sitting still or moving?",
+   "pula": "Três pares bastam."
+  },
+  "verbo": {
+   "obj": "O verbo go fica igual; a palavrinha muda o caminho.",
+   "perg": "Go into or go out of?",
+   "pula": "Quatro estradas bastam."
+  },
+  "regra": {
+   "obj": "Corrige os escorregões: enter (sem in), out of, get on/off do ônibus, cross (sem across).",
+   "perg": "Is it “enter in the room”?",
+   "pula": "Três linhas bastam."
+  },
+  "planta": {
+   "obj": "Seis trechos pela casa; a bolinha se move com cada frase completa.",
+   "perg": "Where does the ball go now?",
+   "pula": "Quatro trechos bastam."
+  },
+  "tres": {
+   "obj": "Through, across e past, os três que se confundem, com exemplos da vida do aluno.",
+   "perg": "Do you walk through a park on your way to work?",
+   "pula": "Um exemplo de cada basta."
+  },
+  "guia": {
+   "obj": "O professor fecha os olhos e o aluno o guia até o tesouro só com palavras.",
+   "perg": "Where do I go now?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-rota": {
+   "obj": "Ranking de cinco caminhos para o trabalho, com as palavras de caminho; o professor discorda.",
+   "perg": "Why is that route the best?",
+   "pula": "Explique só o primeiro e o último."
+  },
+  "fim": {
+   "obj": "Escrita final: o caminho real da cama até a cozinha com into, out of, through, past; vai para o My notes.",
+   "perg": "What do you walk past on the way?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre caminhos e trajetos com as palavras de movimento.",
+   "perg": "How do you get to the nearest bakery?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhe entre dois caminhos e justifica com as palavras de movimento.",
+   "perg": "Which way do you take?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno guia o professor da porta do prédio até a casa dele, em passos.",
+   "perg": "Where do I go after the door?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More roads in your life.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "into",
+    "out of",
+    "through",
+    "across",
+    "past"
+   ],
+   "cartas": [
+    {
+     "k": "THE BAKERY",
+     "q": "How do you get to the nearest bakery?",
+     "fup": "What do you walk past?",
+     "st": [
+      "I go out of …",
+      "I walk past …"
+     ],
+     "ex": "I go out of my building and walk past the pharmacy."
+    },
+    {
+     "k": "THE BUS",
+     "q": "Describe your last bus or subway ride.",
+     "fup": "Was it full?",
+     "st": [
+      "I got on at …",
+      "I got off at …"
+     ],
+     "ex": "I got on at the station and got off near the mall."
+    },
+    {
+     "k": "A TAXI",
+     "q": "When did you last get into a taxi?",
+     "fup": "Where did you get out?",
+     "st": [
+      "I got into a taxi …",
+      "I got out of it at …"
+     ],
+     "ex": "I got into a taxi at the airport and got out of it at my hotel."
+    },
+    {
+     "k": "A BRIDGE",
+     "q": "Is there a bridge or a park near you?",
+     "fup": "Do you walk across it or through it?",
+     "st": [
+      "I walk across …",
+      "I walk through …"
+     ],
+     "ex": "I walk through the park every morning."
+    },
+    {
+     "k": "BAD DAY",
+     "q": "Did you ever walk into something by accident?",
+     "fup": "Was it funny?",
+     "st": [
+      "I walked into …"
+     ],
+     "ex": "I walked into a glass door at the mall. It was very funny."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "A tourist wants the beach. How do they go?",
+     "fup": "Is it far?",
+     "st": [
+      "Go across …",
+      "Go past …",
+      "Then go into …"
+     ],
+     "ex": "Go across the square, go past the church and then into the tunnel."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a road.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "through",
+    "across",
+    "past",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Through the park or past the shops?",
+     "a": "Through the park",
+     "b": "Past the shops",
+     "fa": [
+      "Through the park. It’s green and quiet."
+     ],
+     "fb": [
+      "Past the shops. I like the windows."
+     ]
+    },
+    {
+     "q": "Across the bridge or through the tunnel?",
+     "a": "Across the bridge",
+     "b": "Through the tunnel",
+     "fa": [
+      "Across the bridge. The view is great."
+     ],
+     "fb": [
+      "Through the tunnel. It’s faster."
+     ]
+    },
+    {
+     "q": "Get on a bus or get into a taxi?",
+     "a": "A bus",
+     "b": "A taxi",
+     "fa": [
+      "I get on a bus. It’s cheap."
+     ],
+     "fb": [
+      "I get into a taxi. It’s comfortable."
+     ]
+    },
+    {
+     "q": "The stairs or the elevator?",
+     "a": "The stairs",
+     "b": "The elevator",
+     "fa": [
+      "The stairs. I go up and down them every day."
+     ],
+     "fb": [
+      "The elevator. I get into it and relax."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Every road found its word."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Guide Me Home",
+   "t": "Guide your teacher to your door.",
+   "p": "Answer each step with a road word.",
+   "prof": "Close your eyes again. Move only when the road word is right.",
+   "passos": [
+    {
+     "q": "I’m at the bus stop. Where do I go?",
+     "st": [
+      "Get off the bus and walk …"
+     ],
+     "ex": "Get off the bus and walk across the street."
+    },
+    {
+     "q": "Then what?",
+     "st": [
+      "Walk past …",
+      "Go through …"
+     ],
+     "ex": "Walk past the bakery and go through the gate."
+    },
+    {
+     "q": "How do I get into your building?",
+     "st": [
+      "Go into …",
+      "Get into …"
+     ],
+     "ex": "Go into the building and get into the elevator."
+    },
+    {
+     "q": "Where is your door?",
+     "st": [
+      "Get out of … and …"
+     ],
+     "ex": "Get out of the elevator on the fifth floor. My door is on the left."
+    }
+   ],
+   "fim": "Four steps. Your teacher is at your door."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "However, Despite the Rain",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/6eff9147b669/however-despite-the-rain/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "but joins two ideas · However starts a new sentence · although / even though + subject + verb · despite / in spite of + noun or -ing · although OR but, never both; never despite of, despite + clause, in spite the",
   "abrir": "Think of a night out that did not go as planned. Did you still have fun?",
   "fecho": "<b>Although / even though</b> + a full clause: <i>Although it rained, we danced.</i> <b>Despite / in spite of</b> + a noun or -ing: <i>Despite the rain, we danced.</i> <b>However</b> starts a new sentence: <i>It rained. However, we stayed.</i> Use although OR but, never both. Never <i>despite of</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo about a rainy festival. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/6eff9147b669/however-despite-the-rain/img/live-palco.webp",
+      "img": "../img/live-palco.webp",
       "leg": "A stage with purple and blue lights",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Despite the rain, we stayed until midnight.",
-          "img": "https://wolf-labs.pages.dev/p/6eff9147b669/however-despite-the-rain/img/live-botas.webp",
+          "img": "../img/live-botas.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Although the band was late, nobody went home.",
-          "img": "https://wolf-labs.pages.dev/p/6eff9147b669/however-despite-the-rain/img/live-palco.webp",
+          "img": "../img/live-palco.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The mud was deep. However, we kept dancing.",
-          "img": "https://wolf-labs.pages.dev/p/6eff9147b669/however-despite-the-rain/img/live-luzes.webp",
+          "img": "../img/live-luzes.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/6eff9147b669/however-despite-the-rain/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A lamp and a red cup at a rainy window",
       "pede": "Look at the picture: a lamp and a cup at a rainy window. Write 2 or 3 sentences about a day when the weather or a problem did not stop you. Use <b>despite</b>, <b>although</b> or <b>however</b>.",
       "ph": "Despite the rain, I …",

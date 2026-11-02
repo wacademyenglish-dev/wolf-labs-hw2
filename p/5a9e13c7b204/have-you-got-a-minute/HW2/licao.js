@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Have You Got a Minute?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5a9e13c7b204/have-you-got-a-minute/img/live-bolsa.webp",
+  "capa": "../img/live-bolsa.webp",
   "alvo": "have got: I've got / she's got / I haven't got; questions Have you got ...? without do; short answers Yes, I have / No, I haven't / Yes, she has",
   "abrir": "What have you got in your bag today?",
   "fecho": "<b>I've got</b>, <b>she's got</b>, <b>I haven't got</b>. The question: <b>Have you got</b> a pen? (no <i>do</i>). Short answer: <b>Yes, I have.</b> <b>No, I haven't.</b> <b>Yes, she has.</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia checks Leo's bag before his trip. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/5a9e13c7b204/have-you-got-a-minute/img/live-bolsa.webp",
+      "img": "../img/live-bolsa.webp",
       "leg": "Things from a bag on a table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I've got my keys and my phone in my bag.",
-          "img": "https://wolf-labs.pages.dev/p/5a9e13c7b204/have-you-got-a-minute/img/live-bolsa.webp",
+          "img": "../img/live-bolsa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Have you got a minute? Yes, I have.",
-          "img": "https://wolf-labs.pages.dev/p/5a9e13c7b204/have-you-got-a-minute/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She hasn't got a key to my flat.",
-          "img": "https://wolf-labs.pages.dev/p/5a9e13c7b204/have-you-got-a-minute/img/live-bolsa.webp",
+          "img": "../img/live-bolsa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5a9e13c7b204/have-you-got-a-minute/img/live-bolsa.webp",
+      "img": "../img/live-bolsa.webp",
       "leg": "Things from a bag on a table",
       "pede": "Look at the picture: things from a bag. Write 2 or 3 sentences about what you have got in your bag. Use <b>I've got</b> and <b>I haven't got</b>.",
       "ph": "I've got … in my bag.",

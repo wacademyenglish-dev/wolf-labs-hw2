@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Since March · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Since March · Keys and a Contract</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Since March · Keys and a Contract</h2>
+    <p><i>I live here for ten years</i> is built from correct pieces. The shape is what is wrong, and a student can’t doubt a shape alone. Apartment 4B: two months without rent, and the landlady is at the door with the key. The student investigates, and every clue is a sentence that started in the past and hasn’t stopped. The screen is a contract with a ruler: <b>since</b> pins the start, <b>for</b> stretches the length, both end at <b>NOW</b>.</p>
+    <h4>THE MISTAKE COMES FIRST</h4>
+    <p>Scene I: let the student say <i>I live here since…</i>. Don’t correct it; it comes back at the end. <i>He has lived here</i> is a sentence about today, not a past tense.</p>
+    <h4>THE RULER · THE CALENDAR</h4>
+    <p>Scene IV: point at NOW every time. Scene VII: every crossed day has a date, and a date closes the door: past.</p>
+    <h4>SLOW CONTRADICTIONS</h4>
+    <p>Scene VIII: one sentence, pause, the other, pause, then decide. The last pair is the whole lesson.</p>
+    <!--conversa--><h4>GREEN, YELLOW, RED (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the rule, your student wants a room in the building and judges three situations: a flatmate’s dog, a neighbour’s piano, the landlady’s key. There is no right answer: let them choose a colour, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Push for <b>since</b> and <b>for</b> in every answer. Recast quietly (<i>I have lived</i>, not <i>I live here since</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I At the Door, V The Fridge, VII Green, Yellow, Red, IX The Room Interview.</li>
+      <li><b>Focus</b>: II Two Kinds of Fact, III I Live Here Since…, IV The Ruler, VI The Rule, VIII The Contradiction.</li>
+      <li><b>Write</b>: X, their own answers to the landlady. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SINCE MARCH (Main A2) · pergunta-surpresa · 27/10/2026 · have / has + particípio · since · for */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'dois', tipo: 'And you?', q: 'What is the oldest thing you have in your home?',
+    opc: ['A piece of furniture', 'Something in my kitchen', 'Clothes'], st: ['I have had … for …', 'I have had it since …'],
+    ex: 'A wooden chair. I have had it since 2010. It was my uncle’s.', push: 'Would you sell it? For how much?' },
+  { cena: 'regua', tipo: 'Would you rather', q: 'Would you rather live alone or with a friend?',
+    opc: ['Alone', 'With a friend'], st: ['I’d rather …, because …', 'I have lived … for …'],
+    ex: 'Alone. I have lived with my brother for three years, and I want my own kitchen!', push: 'Your best friend asks you today. Yes or no?' },
+  { cena: 'geladeira', tipo: 'Opinion', q: 'What’s the oldest thing in your fridge right now? Be honest!',
+    opc: ['Something OK', 'Something a bit old', 'I don’t want to know'], st: ['It has been there for …', 'It has been there since …'],
+    ex: 'A jar of jam. It has been there since Christmas!', push: 'Will you throw it away tonight? Yes or no?' },
+  { cena: 'entrevista', tipo: 'What if', q: 'A landlady asks: “Why should I give the room to you?” What do you say?',
+    opc: ['I’m quiet', 'I always pay on time', 'My own answer'], st: ['I have … for …', 'I have never …'],
+    ex: 'I have paid my rent on time for five years, and I have never had a problem with a neighbour.', push: 'She asks for one more reason. Go!' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SINCE MARCH (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O semáforo entra no lugar de "VII · The Calendar" (extra; treino controlado passado × present perfect),
+   logo depois da regra (VI): o aluno quer um quarto e decide se cada situação da casa é verde, amarela ou
+   vermelha. Nada do final da aula (o hospital) entra aqui. A gramática (have / has + particípio · since · for)
+   mora nas situações e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'sinal', troca: 'cal', est: 'o', min: 7, img: 'sala', rot: 'Green, Yellow, Red', t: 'You want a room in this building. Is it OK?',
+    p: 'Read each situation. Green, yellow or red? Say why with since or for. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The dog', sit: 'Your new flatmate has had a big dog since 2022. The dog comes too.',
+        q: 'Green, yellow or red?', opc: [{ t: 'Fine with me', cor: 'g' }, { t: 'We need to talk', cor: 'y' }, { t: 'I’m not moving in', cor: 'r' }],
+        st: ['It’s fine. I have had a dog for …', 'He has had it since …, so …', 'I have never …'],
+        ex: 'Fine with me! I have had a cat for six years, so I love animals.',
+        push: 'The dog sleeps in the living room, on the sofa. Still green?' },
+      { tag: 'The piano', sit: 'The neighbour has played the piano every night since Monday, from nine to eleven.',
+        q: 'Green, yellow or red?', opc: [{ t: 'Nice, free music', cor: 'g' }, { t: 'I’ll talk to her', cor: 'y' }, { t: 'I’ll call the landlady', cor: 'r' }],
+        st: ['She has played for …, so …', 'Since Monday, I haven’t …', 'I’d say: “…”'],
+        ex: 'Yellow. She has played every night for a week, and I haven’t slept well since Monday. I’ll talk to her.',
+        push: 'She is a music teacher, and she has a concert on Saturday. Do you change your colour?' },
+      { tag: 'The key', sit: 'The landlady has had a key to the room since 2020. She comes in to “check things” when you are out.',
+        q: 'Green, yellow or red?', opc: [{ t: 'OK, it’s her flat', cor: 'g' }, { t: 'Only with a message first', cor: 'y' }, { t: 'No, never', cor: 'r' }],
+        st: ['She has had the key for …, but …', 'I have lived in … since …', 'It’s my room, so …'],
+        ex: 'Red. She has had the key for years, but now it’s my room. She can message me first.',
+        push: 'The rent is half the price of other places. Still red?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "The landlady asks about you first.",
+   "p": "Your teacher sends messages. Answer out loud."
+  },
+  "dois": {
+   "t": "Eight facts. Did it stop?",
+   "p": "Read it out loud. Tap FINISHED or STILL TRUE."
+  },
+  "arm": {
+   "t": "Right words, wrong shape.",
+   "p": "Read the situation. Say the right one twice. Tap it."
+  },
+  "regua": {
+   "t": "Both end at NOW. They start differently.",
+   "p": "A point or a length? Say it. Tap SINCE or FOR."
+  },
+  "geladeira": {
+   "t": "June 23. The fridge is still running.",
+   "p": "Read the date. Say how long it has been here."
+  },
+  "regra": {
+   "t": "Not about the past. About now.",
+   "p": "Say each wrong line the right way. Then tap."
+  },
+  "cv-sinal": {
+   "t": "A room in this building. Is it OK?",
+   "p": "Green, yellow or red? Say why with since or for."
+  },
+  "contra": {
+   "t": "Two sentences. Together, or one is a lie?",
+   "p": "Read one. Open two. Then decide."
+  },
+  "entrevista": {
+   "t": "The landlady interviews you.",
+   "p": "Answer out loud. Then check the model."
+  },
+  "fim": {
+   "t": "One chair by the door.",
+   "p": "Write your answers: have or has + since or for."
+  }
+ },
+ "prep": {
+  "obj": "Present perfect com since (ponto de início) e for (duração), sempre até agora: no apartamento 4B ninguém vê o inquilino há meses, e a senhoria tem a chave.",
+  "armadilha": "O português diz “moro aqui há dez anos” no presente: sai “I live here for ten years” / “I live here since March”. As peças estão certas; a forma é que está errada.",
+  "pal": [
+   "have lived",
+   "has been",
+   "since March",
+   "for three months",
+   "How long have you…?",
+   "still",
+   "landlady",
+   "rent"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o mistério: o inquilino do 4B sumiu, a senhoria tem a chave, e toda pista começou no passado e não parou.",
+   "perg": "How long have you lived in your home?",
+   "pula": "Leia a frase da capa e bata na porta."
+  },
+  "abre": {
+   "obj": "O erro vem primeiro: deixe o aluno dizer “I live here since…”. Não corrija; volta no fim.",
+   "perg": "How long have you lived in your city?",
+   "pula": "Três mensagens bastam."
+  },
+  "dois": {
+   "obj": "Separar fatos terminados de fatos que continuam verdadeiros até agora.",
+   "perg": "Did it stop, or is it still true?",
+   "pula": "Cinco fatos bastam."
+  },
+  "arm": {
+   "obj": "A armadilha “I live here since…”: dizer a forma certa duas vezes.",
+   "perg": "Why is “I live here since March” wrong?",
+   "pula": "Três situações bastam."
+  },
+  "regua": {
+   "obj": "A régua: since marca o começo, for estica a duração; os dois terminam em NOW.",
+   "perg": "Is “March” a point or a length?",
+   "pula": "Cinco frases bastam; aponte para o NOW."
+  },
+  "geladeira": {
+   "obj": "A geladeira ligada em 23 de junho: calcular há quanto tempo cada coisa está ali.",
+   "perg": "How long has the milk been in the fridge?",
+   "pula": "Três itens bastam."
+  },
+  "regra": {
+   "obj": "A regra: he has lived é uma frase sobre hoje, não um passado; corrigir as linhas erradas.",
+   "perg": "Is “he has lived here” about the past or about now?",
+   "pula": "Corrija só três linhas."
+  },
+  "cv-sinal": {
+   "obj": "Conversa: julgar três situações do prédio (verde, amarelo, vermelho) com since e for.",
+   "perg": "The neighbor has played the piano for years. Green or red?",
+   "pula": "Duas situações bastam."
+  },
+  "contra": {
+   "obj": "Contradições lentas: duas frases que convivem ou uma que mente. O último par é a aula inteira.",
+   "perg": "Can both sentences be true?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "entrevista": {
+   "obj": "A senhoria entrevista o aluno para o quarto; ele responde com have + since/for.",
+   "perg": "How long have you had your job?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: as respostas do aluno à senhoria com have/has + since ou for.",
+   "perg": "How long have you known your best friend?",
+   "pula": "Três respostas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa pessoal com How long have you…? e since/for.",
+   "perg": "How long have you had your phone?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre moradia e defender com present perfect e because.",
+   "perg": "Is it better to stay in one home for years or to move?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Entrevista: o aluno é a senhoria e responde com has/have + since ou for.",
+   "perg": "How long have you had this building?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More “how long” questions.",
+   "p": "Pick a card. Answer with since or for.",
+   "palavras": [
+    "have lived",
+    "have known",
+    "since",
+    "for"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR HOME",
+     "q": "How long have you lived in your home?",
+     "fup": "Do you want to stay there?",
+     "st": [
+      "I have lived there for …",
+      "I have lived there since …"
+     ],
+     "ex": "I have lived there for six years, since my son was born."
+    },
+    {
+     "k": "AN OLD FRIEND",
+     "q": "Who is your oldest friend? How long have you known him or her?",
+     "fup": "Where did you meet?",
+     "st": [
+      "I have known … for …",
+      "… since we were …"
+     ],
+     "ex": "I have known Rafa since we were twelve. We met at school."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "How long have you had your phone?",
+     "fup": "Is it time for a new one?",
+     "st": [
+      "I have had it for …",
+      "I have had it since …"
+     ],
+     "ex": "I have had it for three years. Yes, it’s very slow now."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "How long have you worked at your job?",
+     "fup": "Has it changed a lot?",
+     "st": [
+      "I have worked there for …",
+      "Since …"
+     ],
+     "ex": "I have worked there since 2019. Yes, it has changed a lot."
+    },
+    {
+     "k": "ENGLISH",
+     "q": "How long have you studied English?",
+     "fup": "What has helped you the most?",
+     "st": [
+      "I have studied English for …",
+      "… has helped me."
+     ],
+     "ex": "I have studied English for two years. Series have helped me."
+    },
+    {
+     "k": "A HABIT",
+     "q": "What is something you have done every day for a long time?",
+     "fup": "Since when?",
+     "st": [
+      "I have … every day for …",
+      "Since …"
+     ],
+     "ex": "I have walked my dog every morning since 2020."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "since",
+    "for",
+    "have lived"
+   ],
+   "rodadas": [
+    {
+     "q": "Stay in one home for twenty years, or move every few years?",
+     "a": "Stay",
+     "b": "Move",
+     "fa": [
+      "Stay. My grandmother has lived in her house for forty years and she is happy."
+     ],
+     "fb": [
+      "Move. I have lived in one place for too long."
+     ]
+    },
+    {
+     "q": "The tenant hasn’t paid for two months. Wait, or open the door?",
+     "a": "Wait",
+     "b": "Open the door",
+     "fa": [
+      "Wait. Maybe he has been away for work."
+     ],
+     "fb": [
+      "Open the door. Nobody has seen him since March."
+     ]
+    },
+    {
+     "q": "Live with a roommate you have known for years, or with a stranger?",
+     "a": "An old friend",
+     "b": "A stranger",
+     "fa": [
+      "An old friend. I have known him for a long time."
+     ],
+     "fb": [
+      "A stranger. Friends and rent don’t mix."
+     ]
+    },
+    {
+     "q": "A building with a piano neighbor, or with a barking dog?",
+     "a": "The piano",
+     "b": "The dog",
+     "fa": [
+      "The piano. She has played for years, so she is good."
+     ],
+     "fb": [
+      "The dog. It has barked since morning, but it is cute."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and every answer ended at NOW."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the landlady now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the landlady.",
+   "perguntas": [
+    "How long have you had this building?",
+    "How long has the tenant lived in 4B?",
+    "When did you last see him?",
+    "How long has the rent been late?",
+    "How long have you had the key?",
+    "Have you ever opened a tenant’s door before?"
+   ],
+   "st": [
+    "I have had it for …",
+    "He has lived there since …",
+    "Nobody has seen him since …"
+   ],
+   "ex": "I have had this building for twenty years. Nobody has seen him since March."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

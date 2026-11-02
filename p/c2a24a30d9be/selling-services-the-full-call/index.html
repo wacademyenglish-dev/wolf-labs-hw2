@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -137,5 +138,309 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "How many calls do you make a week?",
+   "p": "Answer. Then ask your teacher: “And you?”"
+  },
+  "dialogo": {
+   "t": "Leo calls Pine Hotels.",
+   "p": "One question. Listen. Then the questions."
+  },
+  "descobre": {
+   "t": "The helper in the question.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "transforma": {
+   "t": "CRM notes are answers. What was the question?",
+   "p": "Read the note. Use the clue. Ask it."
+  },
+  "cartao": {
+   "t": "Hello, six questions, the next step.",
+   "p": "Write your call now. You use it next!"
+  },
+  "cliente": {
+   "t": "A new client. Your teacher is Paula.",
+   "p": "Use your script. Find five facts. Ask the next step."
+  },
+  "escolha": {
+   "t": "A or B? Say why.",
+   "p": "Your teacher answers first. Then you."
+  },
+  "pode": {
+   "t": "What can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão de todas as perguntas do curso (do, does, is, can, will, wh-): o Leo faz uma ligação de descoberta com a Grace Miller (Pine Hotels) e o aluno liga para a Paula Reyes (Coral Bay Resorts).",
+  "armadilha": "O brasileiro pergunta só com entonação (“You use SAP?”), tira o auxiliar depois de What (“What system you use?”), inverte como no português (“How many employees has the company?”) e diz “Where is located the office?”.",
+  "pal": [
+   "Is this a good time?",
+   "Do you …?",
+   "Does she …?",
+   "What … do you …?",
+   "How many … do you have?",
+   "Can we meet next week?",
+   "I’ll send you …",
+   "discovery call",
+   "next step"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 25: a ligação completa, do oi ao próximo passo.",
+   "perg": "What’s your first question on a call?",
+   "pula": "Pergunte e entre."
+  },
+  "conversa": {
+   "obj": "Aquecimento: as ligações do aluno na semana; ele devolve “And you?”.",
+   "perg": "How many calls do you make in a week?",
+   "pula": "Três perguntas bastam."
+  },
+  "dialogo": {
+   "obj": "Ouvir a ligação modelo do Leo com a Grace Miller (0,75× vale) e responder.",
+   "perg": "What is the next step in Leo’s call?",
+   "pula": "Uma escuta e duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar perguntas e fixar a regra: um auxiliar em toda pergunta.",
+   "perg": "Where is the helper in this question?",
+   "pula": "Não corte: é a regra da aula."
+  },
+  "transforma": {
+   "obj": "Transformar anotações do CRM nas perguntas que geraram cada resposta.",
+   "perg": "What was the question for this note?",
+   "pula": "Quatro notas bastam."
+  },
+  "cartao": {
+   "obj": "Escrever o roteiro: oi, seis perguntas e o próximo passo; é usado na cena seguinte.",
+   "perg": "What is your first question?",
+   "pula": "Quatro perguntas bastam; não pule: a cena VI usa."
+  },
+  "cliente": {
+   "obj": "Ligação de descoberta: o professor é a Paula e só responde o que for perguntado; pergunta sem auxiliar = cara de confusão.",
+   "perg": "How many employees do you have?",
+   "pula": "Três fatos e o próximo passo."
+  },
+  "escolha": {
+   "obj": "Escolhas A ou B com because; o professor responde primeiro.",
+   "perg": "A or B? Why?",
+   "pula": "Pode pular se faltar tempo."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; o que ficar aberto vai para a lição de casa.",
+   "perg": "Can you ask five client questions with a helper?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre as vendas reais do aluno, com todas as formas de pergunta.",
+   "perg": "What questions do your clients ask you?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas simples sobre como conduzir a ligação de descoberta.",
+   "perg": "Which one? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno planeja a próxima ligação com um cliente real, passo a passo.",
+   "perg": "What do you want to find out?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Questions from your sales life.",
+   "p": "Pick a card. Answer. Then ask one back.",
+   "palavras": [
+    "do",
+    "does",
+    "is",
+    "can",
+    "will"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CLIENTS",
+     "q": "What questions do your clients ask you?",
+     "fup": "What is the hardest one?",
+     "st": [
+      "They ask …",
+      "The hardest is …"
+     ],
+     "ex": "They ask, “How much does it cost?” The hardest is “Why are you better?”"
+    },
+    {
+     "k": "FIRST QUESTION",
+     "q": "What is your favorite first question?",
+     "fup": "Why does it work?",
+     "st": [
+      "I ask …",
+      "It works because …"
+     ],
+     "ex": "I ask, “Is this a good time?” It works because it is polite."
+    },
+    {
+     "k": "YOUR CRM",
+     "q": "Do you use a CRM?",
+     "fup": "What notes do you write?",
+     "st": [
+      "Yes, I use … / No, I don’t.",
+      "I write …"
+     ],
+     "ex": "Yes, I use HubSpot. I write the client’s problem and the next step."
+    },
+    {
+     "k": "NEXT STEP",
+     "q": "How do you ask for the next step?",
+     "fup": "Does it work?",
+     "st": [
+      "I say, “Can we …?”",
+      "Usually, …"
+     ],
+     "ex": "I say, “Can we meet next week?” Usually, they say yes."
+    },
+    {
+     "k": "A GOOD CALL",
+     "q": "What makes a good discovery call?",
+     "fup": "How long is it?",
+     "st": [
+      "A good call has …",
+      "It is about … minutes."
+     ],
+     "ex": "A good call has good questions and a clear next step. It is about twenty minutes."
+    },
+    {
+     "k": "YOUR WEEK",
+     "q": "Will you call a new client this week?",
+     "fup": "Who?",
+     "st": [
+      "Yes, I will. / No, I won’t.",
+      "I’ll call …"
+     ],
+     "ex": "Yes, I will. I’ll call a hotel group on Thursday."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think",
+    "it’s better"
+   ],
+   "rodadas": [
+    {
+     "q": "Ask about the problem first, or the budget first?",
+     "a": "The problem",
+     "b": "The budget",
+     "fa": [
+      "The problem. Clients buy solutions."
+     ],
+     "fb": [
+      "The budget. It saves time."
+     ]
+    },
+    {
+     "q": "Six questions or three questions?",
+     "a": "Six",
+     "b": "Three",
+     "fa": [
+      "Six. I learn more about the client."
+     ],
+     "fb": [
+      "Three. Clients are busy."
+     ]
+    },
+    {
+     "q": "Next step: a meeting or an e-mail with a proposal?",
+     "a": "A meeting",
+     "b": "An e-mail",
+     "fa": [
+      "A meeting. I can see the client."
+     ],
+     "fb": [
+      "An e-mail. It is fast and easy."
+     ]
+    },
+    {
+     "q": "Write notes during the call, or after the call?",
+     "a": "During",
+     "b": "After",
+     "fa": [
+      "During. I don’t forget the numbers."
+     ],
+     "fb": [
+      "After. I listen better."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Every question had a helper."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Your Next Call",
+   "t": "Plan a real discovery call.",
+   "p": "Four steps. A helper in every question.",
+   "prof": "If a question has no helper, look confused and wait, like Paula.",
+   "passos": [
+    {
+     "q": "Who do you call, and how do you start?",
+     "st": [
+      "Hi, this is … I’m calling about …"
+     ],
+     "ex": "Hi, this is Ana from Bluepeak. I’m calling about your payroll. Is this a good time?"
+    },
+    {
+     "q": "Write two questions about the company.",
+     "st": [
+      "How many … do you …?",
+      "What … do you use?"
+     ],
+     "ex": "How many employees do you have? What system do you use for payroll?"
+    },
+    {
+     "q": "Write one question about the problem.",
+     "st": [
+      "Is … a problem for you?",
+      "Does your team …?"
+     ],
+     "ex": "Is the end of the month a problem for your team?"
+    },
+    {
+     "q": "Ask for the next step.",
+     "st": [
+      "Can we …?",
+      "I’ll send you …"
+     ],
+     "ex": "Can we meet next Tuesday? I’ll send you a short proposal today."
+    }
+   ],
+   "fim": "A full call, ready for Monday."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

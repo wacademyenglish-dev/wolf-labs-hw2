@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -125,5 +126,260 @@ window.WL_CONVERSA = { nivel: 'A2', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "descobre": {
+   "t": "Same information, two ways. Which is right?",
+   "p": "Compare A and B. Then see the rules."
+  },
+  "rapido": {
+   "t": "Sixty seconds. How many?",
+   "p": "Answer fast. Then beat your score."
+  },
+  "formulario": {
+   "t": "Fill in the form for Mariana.",
+   "p": "Read her profile. Fill in every field. Check."
+  },
+  "cv-semaforo": {
+   "t": "Four forms. Green, yellow or red?",
+   "p": "Choose a color. Say what you would do."
+  },
+  "pode": {
+   "t": "What can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Formulários em inglês: surname x given name, data americana (MM/DD/YYYY), marital status, emergency contact e relationship. A Mariana Costa Ribeiro (fictícia) preenche a ficha da BrightPath Au Pair.",
+  "armadilha": "No Brasil 03/07 é 3 de julho; nos EUA, 7 de março. O brasileiro troca dia e mês, troca sobrenome e nome, escreve “marital status: alone” e põe a si mesmo como emergency contact.",
+  "pal": [
+   "surname / last name",
+   "given name / first name",
+   "MM/DD/YYYY",
+   "marital status",
+   "single / married",
+   "emergency contact",
+   "relationship",
+   "required"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 5 do Au Pair: preencher formulários.",
+   "perg": "What date is 03/07 in the USA?",
+   "pula": "Escreva 03/07 e pergunte; depois entre."
+  },
+  "descobre": {
+   "obj": "Comparar pares A e B e descobrir as regras e armadilhas dos formulários.",
+   "perg": "Which one is the surname?",
+   "pula": "Três pares bastam."
+  },
+  "rapido": {
+   "obj": "Rodada de 60 segundos; no fim da aula, jogar de novo e bater o placar.",
+   "perg": "What’s your score?",
+   "pula": "Uma rodada basta."
+  },
+  "formulario": {
+   "obj": "Preencher a ficha com os dados FICTÍCIOS da Mariana; nunca documentos reais do aluno.",
+   "perg": "What is Mariana’s given name?",
+   "pula": "Os campos com data e nome bastam."
+  },
+  "cv-semaforo": {
+   "obj": "Momento de conversa: quatro formulários da vida de au pair; verde, amarelo ou vermelho?",
+   "perg": "Would you fill in the “you won a trip” form?",
+   "pula": "Dois formulários bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; lembrar que nome real se copia igual ao passaporte.",
+   "perg": "Can you write today’s date the American way?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre formulários, datas e a vida de au pair, sem dados reais.",
+   "perg": "When is your birthday, the American way?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas sobre segurança de dados e formulários, com frases prontas.",
+   "perg": "Which side? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a Mariana e o professor faz as perguntas de um formulário em voz alta.",
+   "perg": "Mariana, what’s your surname?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Forms, dates and you.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "surname",
+    "given name",
+    "date",
+    "emergency contact"
+   ],
+   "cartas": [
+    {
+     "k": "DATES",
+     "q": "Say your birthday the American way. Month first!",
+     "fup": "Is that strange for you?",
+     "st": [
+      "My birthday is …",
+      "It’s a little …"
+     ],
+     "ex": "My birthday is September 14th, 09/14. It’s a little strange."
+    },
+    {
+     "k": "NAMES",
+     "q": "How many names do you have? Which is your surname?",
+     "fup": "Do people get it wrong?",
+     "st": [
+      "My surname is …",
+      "People sometimes …"
+     ],
+     "ex": "I have two family names. People sometimes think my middle name is my surname."
+    },
+    {
+     "k": "FORMS",
+     "q": "Do you like filling in forms?",
+     "fup": "Which form was the hardest?",
+     "st": [
+      "I like / don’t like …",
+      "The hardest was …"
+     ],
+     "ex": "I don’t like it. The hardest was a bank form with fifty fields."
+    },
+    {
+     "k": "EMERGENCY",
+     "q": "Who is a good emergency contact for an au pair? Not a real name!",
+     "fup": "What is the relationship?",
+     "st": [
+      "A good contact is …",
+      "The relationship is …"
+     ],
+     "ex": "A good contact is the host mom. The relationship is host family."
+    },
+    {
+     "k": "ONLINE",
+     "q": "Do you read a website before you type your data?",
+     "fup": "What do you check?",
+     "st": [
+      "Yes, I check …",
+      "No, but I should …"
+     ],
+     "ex": "Yes, I check the address and if it’s a real company."
+    },
+    {
+     "k": "THE U.S.",
+     "q": "What paperwork do you think is hardest in a new country?",
+     "fup": "Who can help?",
+     "st": [
+      "I think … is hardest.",
+      "… can help."
+     ],
+     "ex": "I think the visa is hardest. The agency can help."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think",
+    "it’s safer"
+   ],
+   "rodadas": [
+    {
+     "q": "Fill in a form on paper or online?",
+     "a": "On paper",
+     "b": "Online",
+     "fa": [
+      "On paper. I can read it slowly."
+     ],
+     "fb": [
+      "Online. It checks the mistakes for me."
+     ]
+    },
+    {
+     "q": "A website says “You won a trip!”. Fill it in or close it?",
+     "a": "Fill it in",
+     "b": "Close it",
+     "fa": [
+      "Fill it in. Maybe it’s true."
+     ],
+     "fb": [
+      "Close it. It’s a trap for your data."
+     ]
+    },
+    {
+     "q": "Ask the host family for help with forms, or do it alone?",
+     "a": "Ask for help",
+     "b": "Alone",
+     "fa": [
+      "Ask. They know American forms."
+     ],
+     "fb": [
+      "Alone. I want to learn, and it’s my data."
+     ]
+    },
+    {
+     "q": "Write the date as 07/03 or as July 3, 2026?",
+     "a": "Numbers",
+     "b": "Words",
+     "fa": [
+      "Numbers. The form asks for MM/DD/YYYY."
+     ],
+     "fb": [
+      "Words. Nobody can make a mistake."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Every field is right."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Mariana now.",
+   "p": "Your teacher reads the form to you.",
+   "aluno": "Listen to the question. Answer as Mariana Costa Ribeiro, with her profile card. Never your real data.",
+   "perguntas": [
+    "What’s your surname?",
+    "And your given name?",
+    "What’s your date of birth? Month first, please.",
+    "What’s your marital status?",
+    "Who is your emergency contact?",
+    "What is your relationship with that person?"
+   ],
+   "st": [
+    "My surname is …",
+    "It’s … / … …, …",
+    "My emergency contact is my …"
+   ],
+   "ex": "My surname is Costa Ribeiro, and my given name is Mariana. I’m single."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

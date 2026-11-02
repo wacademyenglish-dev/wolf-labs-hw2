@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Assuming That",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/13859ebd1d29/assuming-that/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "precise conditions: assuming (that) = we expect it, not certain · given that = a known fact (because) · supposing = let's imagine · providing / as long as = only on this condition · in the event of + noun · in case = a precaution, not 'if' · otherwise; present tense after assuming / providing, never will; never 'in the event of it rains'",
   "abrir": "What do you have to assume when you plan a trip?",
   "fecho": "<b>Assuming that</b> = we expect it. <b>Given that</b> = a fact we already know (it means <i>because</i>). <b>Supposing</b> = let's imagine it. <b>Providing / as long as</b> = only on this condition: <i>providing we pay</i>, never <i>providing we will pay</i>. <b>In the event of</b> + noun. <b>In case</b> is a precaution, not <i>if</i>: take the umbrella now. <b>Otherwise</b> = if not.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a weekend in the mountains. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/13859ebd1d29/assuming-that/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A notebook, a pen and a coffee: the plan",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Assuming that everyone gets Friday off, we leave at noon.",
-          "img": "https://wolf-labs.pages.dev/p/13859ebd1d29/assuming-that/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I'll book the cabin, providing we can cancel for free.",
-          "img": "https://wolf-labs.pages.dev/p/13859ebd1d29/assuming-that/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "In the event of snow, call the owner. Otherwise, we could get stuck.",
-          "img": "https://wolf-labs.pages.dev/p/13859ebd1d29/assuming-that/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/13859ebd1d29/assuming-that/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A notebook, a pen and a coffee on a desk",
       "pede": "Look at the picture: a notebook, a pen and a cup of coffee on a desk. Plan a trip, a party or a project. Write 2 or 3 sentences with <b>assuming that</b>, <b>providing</b>, <b>given that</b>, <b>in case</b> or <b>otherwise</b>.",
       "ph": "Assuming that …, we will …",

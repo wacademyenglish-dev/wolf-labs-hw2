@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -121,5 +122,277 @@ window.WL_CONVERSA = { nivel: 'A2', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A real au pair’s working day.",
+   "p": "One question, the video, then questions."
+  },
+  "transforma": {
+   "t": "From bossy to kind, still clear.",
+   "p": "Read the clue. Say it the kind way."
+  },
+  "ordem": {
+   "t": "A school morning, in pieces.",
+   "p": "Tap in order. Tell it with first, then."
+  },
+  "cv-juri": {
+   "t": "Two mornings went wrong. You judge.",
+   "p": "Give your verdict. Say it kindly next time."
+  },
+  "conversa": {
+   "t": "Talk about routines.",
+   "p": "Answer. Then ask back: “And you?”"
+  },
+  "pode": {
+   "t": "Lesson 17: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Rotina com crianças e instruções gentis e claras: Shoes on, please. Let’s… Can you…, please? First…, then…. Um dia de trabalho da au pair Gabi e uma manhã de escola em ordem.",
+  "armadilha": "Brasileiro diz Go to brush (Go brush), wake up the kids (wake the kids up), Stop! sem dizer o que fazer, e he don’t want.",
+  "pal": [
+   "Let’s…",
+   "Shoes on, please!",
+   "Can you…, please?",
+   "Walking feet inside",
+   "First…, then…",
+   "After that…",
+   "lunch box"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a manhã com as crianças: café, lancheira, sapatos, dentes, ônibus.",
+   "perg": "What was your morning like when you were seven?",
+   "pula": "Leia a capa e siga."
+  },
+  "video": {
+   "obj": "Escuta: o dia da Gabi com três meninas; as falas estão em 0:33, 1:43, 2:44, 4:32 e 5:39.",
+   "perg": "What does Gabi do first in the morning?",
+   "pula": "Assista só os trechos falados."
+  },
+  "transforma": {
+   "obj": "Transformar ordens mandonas em instruções gentis e claras.",
+   "perg": "How can you say “Stop running!” kindly?",
+   "pula": "Quatro frases bastam."
+  },
+  "ordem": {
+   "obj": "Ordenar a manhã de escola e contar com first, then, after that, finally.",
+   "perg": "What happens after breakfast?",
+   "pula": "Ordene e conte uma vez."
+  },
+  "cv-juri": {
+   "obj": "Conversa: júri de duas manhãs que deram errado e a frase gentil para a próxima vez.",
+   "perg": "Whose fault was it, and what should she say?",
+   "pula": "Um caso basta."
+  },
+  "conversa": {
+   "obj": "Small talk sobre rotinas; o aluno pergunta And you? depois de cada resposta.",
+   "perg": "What time do you get up?",
+   "pula": "Três perguntas bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; pedir a rotina da família real, com horários, quando chegar.",
+   "perg": "Can you give a child a kind, clear instruction?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre rotinas e crianças na vida do aluno.",
+   "perg": "What is your morning like now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas leves de rotina com crianças.",
+   "perg": "Which one works better, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: você é a mãe anfitriã e pergunta sobre a manhã; o aluno é a au pair.",
+   "perg": "How was the morning with the kids?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions about mornings.",
+   "p": "Pick a card. Answer. Then “And you?”",
+   "palavras": [
+    "First…",
+    "then…",
+    "after that…",
+    "Let’s…",
+    "…, please!"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR MORNING",
+     "q": "What is your morning like now?",
+     "fup": "What do you do first?",
+     "st": [
+      "First, I …",
+      "Then I …"
+     ],
+     "ex": "First, I make coffee. Then I check my phone. After that, I take a shower."
+    },
+    {
+     "k": "AS A CHILD",
+     "q": "Who woke you up when you were a child?",
+     "fup": "Was it kind or bossy?",
+     "st": [
+      "My … woke me up.",
+      "She said: …"
+     ],
+     "ex": "My grandmother woke me up. She said: Let’s go, sunshine!"
+    },
+    {
+     "k": "BREAKFAST",
+     "q": "What do kids eat for breakfast in Brazil?",
+     "fup": "And in the US?",
+     "st": [
+      "In Brazil, kids usually eat …",
+      "In the US, …"
+     ],
+     "ex": "In Brazil, kids usually eat bread and milk. In the US, maybe cereal."
+    },
+    {
+     "k": "NO!",
+     "q": "A child says “I don’t want to!”. What do you say?",
+     "fup": "Does it work?",
+     "st": [
+      "I say: Let’s …",
+      "I give a choice: … or …?"
+     ],
+     "ex": "I give a choice: the red shoes or the blue shoes?"
+    },
+    {
+     "k": "LATE",
+     "q": "Are you usually late or early in the morning?",
+     "fup": "What makes you late?",
+     "st": [
+      "I’m usually …",
+      "… makes me late."
+     ],
+     "ex": "I’m usually late. My phone makes me late!"
+    },
+    {
+     "k": "YOUR RULE",
+     "q": "What morning rule would you have for kids?",
+     "fup": "Why?",
+     "st": [
+      "My rule: …, please!",
+      "because …"
+     ],
+     "ex": "My rule: shoes on before breakfast, please! Because shoes take forever."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "Let’s…",
+    "First…, then…"
+   ],
+   "rodadas": [
+    {
+     "q": "Wake the kids up early, or let them sleep?",
+     "a": "Early",
+     "b": "Let them sleep",
+     "fa": [
+      "Early.",
+      "There is time for breakfast."
+     ],
+     "fb": [
+      "Let them sleep.",
+      "Tired kids are grumpy."
+     ]
+    },
+    {
+     "q": "Pack the lunch box at night, or in the morning?",
+     "a": "At night",
+     "b": "In the morning",
+     "fa": [
+      "At night.",
+      "The morning is calm."
+     ],
+     "fb": [
+      "In the morning.",
+      "The food is fresh."
+     ]
+    },
+    {
+     "q": "Give kids choices, or give clear orders?",
+     "a": "Choices",
+     "b": "Clear orders",
+     "fa": [
+      "Choices.",
+      "Red shoes or blue shoes? It works."
+     ],
+     "fb": [
+      "Clear orders, but kind.",
+      "Shoes on, please. It’s fast."
+     ]
+    },
+    {
+     "q": "TV at breakfast: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes, five minutes.",
+      "The kids eat quietly."
+     ],
+     "fb": [
+      "No.",
+      "First breakfast, then TV."
+     ]
+    }
+   ],
+   "fim": "Four rounds, and everybody caught the bus."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "Tell the host mom about the morning.",
+   "p": "Your teacher is the host mom.",
+   "aluno": "Listen to your teacher’s question. Answer as the au pair. Tell the morning in order.",
+   "perguntas": [
+    "Good morning! How was the morning with the kids?",
+    "What time did they wake up?",
+    "What did they eat for breakfast?",
+    "Lily didn’t want her shoes. What did you say?",
+    "Did they catch the bus?",
+    "What will you do differently tomorrow?"
+   ],
+   "st": [
+    "First, …, then …",
+    "I said: Let’s …",
+    "Tomorrow, I will …"
+   ],
+   "ex": "First, they woke up at seven. Then they ate cereal. Lily didn’t want her shoes, so I said: Red shoes or blue shoes?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

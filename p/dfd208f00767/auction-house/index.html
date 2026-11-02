@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Auction House · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:ital,wght@0,300;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Auction House · Going Once, Going Twice</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Auction House · Going Once, Going Twice</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Tonight you and your student run an auction.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Jump: The describing word jumps in front of the thing. Then a or an?</p><p style="margin:0 0 6px"><b>Short class (about 49 min):</b> I Your Treasure · III Catch Six · V The Jump · VI The Misprint · VII The Scale · IX Your Pick · XII Lot 00. Skip if you’re short on time: VIII, X, XI (marked EXTRA on your screen). Full lesson: about 69 min.</p><p style="margin:0"><b>Open with:</b> “Where did you get it?”</p></div><!--/prep-->
+    <p>Tonight you and your student run an <b>auction</b>. Things arrive with a lot number and a dark lot card, and nothing sells without a correct description. In scene VI you <b>compete</b> for the lots: every bid is a new sentence, and the price only goes up when the sentence is right. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>The describing word goes <b>before</b> the thing: <i>a small lamp</i>. <b>A</b> or <b>an</b> by the <b>sound</b>: <i>an old clock, a new clock</i>; <i>an umbrella</i>, but <i>a new umbrella</i>. <b>The</b> for a thing you already said: <i>There is a lamp. The lamp is small.</i> Four pairs: big / small · old / new · heavy / light · cheap / expensive. The mistakes: <i>a old clock</i>, <i>a clock old</i>, and <i>a</i> for something already on the table.</p>
+    <h4>THE AUDIO AND THE VIDEO</h4>
+    <p>The clip is from BBC Learning English (0:05–1:08): two boys play a memory game. After it, the two lists play again slower, listen first, transcript after. Scene III starts with six short clips: listen, then a or an. Scene V has the auctioneer’s voice for four of the words. Every audio has pause and 0.75×; all transcripts were checked against the audio.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>bored</i>, <i>remember</i>, <i>prize</i>, <i>late</i> and <i>applause</i>, before the video, in match the columns and the missing word. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>YOUR PICK (IX) AND THE SURPRISE QUESTION</h4>
+    <p>The lesson already has the bid, the sale and the coffee after the sale; here your student decides. Three short choices, one of three each: what to buy with 100 dollars, a gift for a best friend, one new thing for home. There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it). The options keep a / an + describing word, and the starters move to the (the second time). Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Treasure, VI The Misprint, VII The Scale, IX Your Pick (one of three, then I want the …), X Sell It to Me and XI After the Sale.</li>
+      <li><b>Listen</b>: II The Words, III Catch Six and IV Line by Line.</li>
+      <li><b>Focus</b>: V The Jump and VIII The Bid.</li>
+      <li><b>Write</b>: XII Lot 00.</li>
+    </ul>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The lot cards, the scale, the price and the curtain move on both screens. G opens this guide.</p>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE AUCTION HOUSE (Main A1) · pergunta-surpresa · 27/10/2026 · a / an + adjetivo (máx. 3 no A1) */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'video', tipo: 'What if', q: 'Your phone is old. Sell it?',
+    opc: ['Yes, sell it!', 'No, never!'], st: ['It’s an old phone, but …', 'Yes! I want a new …'],
+    ex: 'No, never! It’s an old phone, but it works.', push: 'For fifty dollars? Yes or no?' },
+  { cena: 'pulo', tipo: 'And you?', q: 'Do you have an umbrella?',
+    opc: ['Yes, an old one', 'Yes, a new one', 'No!'], st: ['I have an old umbrella.', 'I have a new umbrella.'],
+    ex: 'Yes, I have a big black umbrella.', push: 'In your bag? Yes or no?' },
+  { cena: 'balanca', tipo: 'And you?', q: 'Your bag today: heavy or light?',
+    opc: ['Heavy', 'Light'], st: ['My bag is heavy.', 'It’s a light bag.'],
+    ex: 'Heavy! I have a big book in it.', push: 'Every day? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE AUCTION HOUSE (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Escolha 1 de 3" no lugar de "IX · The Memory Game" (extra; repetir de memória a lista de lotes).
+   A aula já tem o lance (VIII), a venda (X) e a conversa depois do leilão (XI); faltava o aluno DECIDIR:
+   o que comprar com 100 dólares, um presente para o melhor amigo, uma coisa nova para casa. A1 bem leve:
+   três opções curtas, frase quase pronta, o professor responde primeiro. A gramática (a / an + adjetivo +
+   coisa; the na segunda vez) mora nas opções e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'escolha', troca: 'memoria', est: 'o', min: 6, img: 'salao', rot: 'Your Pick', t: 'Three lots. Choose one, three times.',
+    p: 'Choose one. Your teacher answers first. Then say it with I want the …',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Your $100', sit: 'You have 100 dollars.', q: 'Which lot?',
+        opc: ['an old clock', 'a small lamp', 'a big mirror'],
+        st: ['I want the old clock.', 'I want the small lamp.', 'I want the big mirror.'],
+        ex: 'I want the old clock. Old things are beautiful.',
+        push: 'Ninety dollars? Yes or no?' },
+      { tag: 'A gift', sit: 'A gift for your best friend.', q: 'Which one?',
+        opc: ['an expensive ring', 'a new radio', 'a cheap chair'],
+        st: ['I want the expensive ring.', 'I want the new radio.', 'I want the cheap chair.'],
+        ex: 'I want the new radio. My friend loves music.',
+        push: 'Expensive or cheap? One word.' },
+      { tag: 'Your home', sit: 'One new thing for your home.', q: 'What do you want?',
+        opc: ['a big TV', 'a new bed', 'an old sofa'],
+        st: ['I want a big TV.', 'I want a new bed.', 'I want an old sofa.'],
+        ex: 'I want a new bed. My bed is very old!',
+        push: 'Big or small? One word.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "tesouro": {
+   "t": "One special thing in your home.",
+   "p": "Show it. Make its label. Then three questions."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen: they turn yellow."
+  },
+  "video": {
+   "t": "Two boys play a memory game.",
+   "p": "Tap each word you hear. Then hear it slower."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again."
+  },
+  "pulo": {
+   "t": "The describing word jumps first. A or an?",
+   "p": "Listen: a or an? Then pick the label."
+  },
+  "catalogo": {
+   "t": "The catalog has mistakes.",
+   "p": "Say the right label. Then turn the card."
+  },
+  "balanca": {
+   "t": "Say the opposite.",
+   "p": "Say a full sentence. The scale tips."
+  },
+  "lance": {
+   "t": "You and your teacher want the same lots.",
+   "p": "Bid with a right sentence. Three bids per lot."
+  },
+  "cv-escolha": {
+   "t": "Three lots. Choose one each time.",
+   "p": "Choose. Your teacher goes first. Say I want the …"
+  },
+  "venda": {
+   "t": "Now you are the auctioneer.",
+   "p": "Show one thing. Sell it in 30 seconds."
+  },
+  "conversa": {
+   "t": "After the sale: coffee and questions.",
+   "p": "Answer about the things in your life."
+  },
+  "fim": {
+   "t": "Lot 00 is yours.",
+   "p": "Write five lots from your room: a / an, then the."
+  }
+ },
+ "prep": {
+  "obj": "Adjetivo antes do substantivo (a small lamp), a/an pelo som (an old clock) e the na segunda vez. Um leilão com lotes e lances.",
+  "armadilha": "O português põe o adjetivo depois (“relógio velho”): sai “a clock old”. E escolhem a/an pela letra, não pelo som: “a old clock”.",
+  "pal": [
+   "a small lamp",
+   "an old clock",
+   "the",
+   "cheap",
+   "expensive",
+   "heavy",
+   "light",
+   "lot",
+   "bid"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o leilão: oito coisas chegam, e nada se vende sem uma boa etiqueta.",
+   "perg": "Have you ever been to an auction?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "tesouro": {
+   "obj": "Aquecimento pessoal: o aluno mostra uma coisa especial e monta a etiqueta dela.",
+   "perg": "Where did you get it?",
+   "pula": "Uma coisa e duas perguntas bastam."
+  },
+  "palavras": {
+   "obj": "Pré-ensina cinco palavras do vídeo (bored, remember, prize, late, applause).",
+   "perg": "Which word do you know already?",
+   "pula": "Só o match das colunas."
+  },
+  "video": {
+   "obj": "Escuta do vídeo da BBC: o aluno pega seis palavras da lista do jogo de memória.",
+   "perg": "What things were on the list?",
+   "pula": "Pule a segunda escuta lenta."
+  },
+  "falas": {
+   "obj": "Fala por fala do vídeo; as linhas amarelas explicam as palavras novas.",
+   "perg": "Can you say this line with me?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "pulo": {
+   "obj": "A regra: o adjetivo pula para a frente da coisa, e o som decide a ou an.",
+   "perg": "A new umbrella or an new umbrella?",
+   "pula": "Quatro etiquetas bastam."
+  },
+  "catalogo": {
+   "obj": "Corrigir em voz alta as etiquetas erradas do catálogo (a clock old, a old lamp).",
+   "perg": "What is wrong with this label?",
+   "pula": "Quatro cartões bastam."
+  },
+  "balanca": {
+   "obj": "Pares de opostos (big/small, old/new, heavy/light, cheap/expensive) em frase inteira.",
+   "perg": "It is not heavy. So what is it?",
+   "pula": "Dois pares bastam."
+  },
+  "lance": {
+   "obj": "Disputa de lances com o professor: só sobe o preço se a frase estiver certa.",
+   "perg": "What is your bid? Describe the lot.",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-escolha": {
+   "obj": "Três escolhas pessoais; o aluno usa a/an + adjetivo e depois the.",
+   "perg": "Which one do you want? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "venda": {
+   "obj": "O aluno vira leiloeiro e vende uma coisa da casa em 30 segundos.",
+   "perg": "Why should I buy it?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "conversa": {
+   "obj": "Conversa depois do leilão sobre as coisas da vida do aluno.",
+   "perg": "What is the oldest thing in your home?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: catálogo do próprio quarto, a/an na primeira vez e the depois; vai para o My notes.",
+   "perg": "What is Lot 1 in your room?",
+   "pula": "Três lotes bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra sobre coisas e compras, com adjetivo antes do substantivo.",
+   "perg": "What is a cheap thing you love?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois objetos; o aluno defende com a/an + adjetivo.",
+   "perg": "An old car or a new car?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o leiloeiro e responde ao professor descrevendo os lotes.",
+   "perg": "What is the best lot tonight?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions about your things.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "a",
+    "an",
+    "the",
+    "old",
+    "new",
+    "cheap",
+    "expensive"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR BAG",
+     "q": "What is in your bag right now?",
+     "fup": "Is it old or new?",
+     "st": [
+      "There is a … in my bag.",
+      "The … is …"
+     ],
+     "ex": "There is a black wallet in my bag. The wallet is old."
+    },
+    {
+     "k": "YOUR KITCHEN",
+     "q": "What is a useful thing in your kitchen?",
+     "fup": "Is it big or small?",
+     "st": [
+      "I have a / an …",
+      "The … is …"
+     ],
+     "ex": "I have a small coffee machine. The machine is very useful."
+    },
+    {
+     "k": "A GIFT",
+     "q": "What is a nice gift you got?",
+     "fup": "Was it cheap or expensive?",
+     "st": [
+      "I got a / an …",
+      "It was …"
+     ],
+     "ex": "I got an old watch from my grandfather. It was expensive."
+    },
+    {
+     "k": "YOUR CLOTHES",
+     "q": "What is your favorite thing to wear?",
+     "fup": "Is it new or old?",
+     "st": [
+      "My favorite is a / an …",
+      "The … is …"
+     ],
+     "ex": "My favorite is a blue jacket. The jacket is very old."
+    },
+    {
+     "k": "SHOPPING",
+     "q": "What is the last thing you bought?",
+     "fup": "Was it a good price?",
+     "st": [
+      "I bought a / an …",
+      "The … was …"
+     ],
+     "ex": "I bought an orange umbrella. The umbrella was cheap."
+    },
+    {
+     "k": "YOUR DREAM",
+     "q": "What expensive thing do you want one day?",
+     "fup": "Why do you want it?",
+     "st": [
+      "I want a / an …",
+      "I want it because …"
+     ],
+     "ex": "I want a big red car. I want it for long trips."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "a",
+    "an",
+    "the"
+   ],
+   "rodadas": [
+    {
+     "q": "An old house or a new apartment?",
+     "a": "An old house",
+     "b": "A new apartment",
+     "fa": [
+      "An old house. It has a story."
+     ],
+     "fb": [
+      "A new apartment. Everything works."
+     ]
+    },
+    {
+     "q": "A cheap phone or an expensive phone?",
+     "a": "A cheap phone",
+     "b": "An expensive phone",
+     "fa": [
+      "A cheap phone. I lose phones."
+     ],
+     "fb": [
+      "An expensive phone. It takes good pictures."
+     ]
+    },
+    {
+     "q": "A big car or a small car?",
+     "a": "A big car",
+     "b": "A small car",
+     "fa": [
+      "A big car. My family is big."
+     ],
+     "fb": [
+      "A small car. Parking is easy."
+     ]
+    },
+    {
+     "q": "A heavy book or a light e-reader?",
+     "a": "A heavy book",
+     "b": "A light e-reader",
+     "fa": [
+      "A heavy book. I love paper."
+     ],
+     "fb": [
+      "A light e-reader. It goes in my bag."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the auctioneer now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the auctioneer.",
+   "perguntas": [
+    "What is the first lot tonight?",
+    "Is it old or new?",
+    "Who wants an expensive lot?",
+    "What is the cheapest thing in the room?",
+    "Is there a strange lot tonight?",
+    "What do you buy with the money?"
+   ],
+   "st": [
+    "The first lot is a / an …",
+    "It is a … and the … is …"
+   ],
+   "ex": "The first lot is an old clock. The clock is heavy, but it is beautiful."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+/* ============================================================
+   READ IT BACKWARDS · THE READING LAMP · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: a oficina à noite — nogueira
+   quase preta, cobre na lâmpada e no núcleo; as palavras num trilho de
+   madeira; a lâmpada acende o núcleo e anda para a esquerda; os degraus
+   do desmonte; o armário de nove gavetas com rótulos em mono.
+   ============================================================ */
+:root{
+  --noite:#090705; --noite-rgb:9,7,5; --tinta:#f1ece6;
+  --t1:#f6f1ea; --t2:#d0c6ba; --t2-rgb:208,198,186; --t3:#8c8073;
+  --ac:#f0a070; --ac2:#ffd2b5; --madeira:#2a1d14;
+  --vidro:rgba(241,236,230,.05); --vidro2:rgba(241,236,230,.085); --vidro3:rgba(241,236,230,.12);
+  --fio:rgba(236,226,214,.12); --fio2:rgba(236,226,214,.22); --luz:rgba(241,236,230,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Spectral',Georgia,serif; --ui:'Work Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --r1:16px; --r2:10px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2c1306}
+.btn.cheio{color:#2c1306}
+.capa{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:600 clamp(46px,4.3vw,82px)/.95 var(--disp);letter-spacing:-.02em}
+.capa h1 b{display:block;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(18px,1.4vw,24px)/1.5 var(--ui);color:var(--t2);max-width:30em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2b1a10;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.rb-ops{display:grid;gap:6px} .rb-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1300px;margin:10px auto;width:100%} .rb-ops.linha .versao{text-align:center;min-height:56px;font-weight:600}
+.rb-rot{margin:10px 0 0;font:600 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.rb-linha-ok{display:flex;align-items:center;gap:12px} .rb-linha-ok .aprova{flex:1;margin:0} .rb-linha-ok.centro{max-width:1300px;margin:0 auto;width:100%}
+.rb-objs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 12px}
+
+/* a lâmpada e o trilho */
+.rb-trilho{position:relative;display:grid;gap:10px;padding:14px 20px;border-radius:var(--r1);background:linear-gradient(180deg,#140e09,#0c0806);border:1px solid #3a2a1c;max-width:1300px;margin:0 auto;width:100%}
+.rb-lampada{display:flex;align-items:center;gap:10px;justify-content:flex-end}
+.rb-lampada i{width:16px;height:16px;border-radius:50%;background:#3a2a1c;transition:all .4s}
+.rb-lampada.on i{background:var(--ac);box-shadow:0 0 22px 6px rgba(240,160,112,.35)}
+.rb-lampada small{font:600 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .rb-lampada.on small{color:var(--ac2)}
+.rb-palavras{display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px;border-radius:8px;background:repeating-linear-gradient(90deg,#1e150e 0 40px,#21170f 40px 80px);border:1px solid #3a2a1c}
+.rb-pal{padding:6px 12px;border-radius:6px;background:#160f0a;border:1px solid #33241a;font:600 clamp(18px,1.5vw,26px) var(--disp);color:var(--t3);transition:all .4s}
+.rb-pal.luz{color:var(--t1);border-color:rgba(240,160,112,.4);background:#24180f;animation:acende .5s both}
+.rb-pal.nucleo.luz{background:var(--ac);border-color:var(--ac2);color:#2c1306;box-shadow:0 0 18px rgba(240,160,112,.45)}
+.rb-pal.resto{opacity:.5}
+@keyframes acende{from{color:var(--t3);background:#160f0a}}
+.rb-degraus{margin:0;padding:0 0 0 4px;list-style:none;display:flex;flex-wrap:wrap;gap:4px 22px}
+.rb-degraus li{position:relative;padding-left:22px;font:500 clamp(15px,1.15vw,19px)/1.4 var(--ui);color:var(--t2);animation:sobe .4s both}
+.rb-degraus li::before{content:'↳';position:absolute;left:0;color:var(--ac)} .rb-degraus b{color:var(--ac2)}
+@keyframes sobe{from{opacity:0;transform:translateX(10px)}}
+.rb-toque{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0}
+.rb-toque .pilula{font:600 clamp(16px,1.2vw,20px) var(--disp);min-height:44px}
+
+/* o armário */
+.rb-armario{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:6px;padding:14px;border-radius:var(--r1);background:#120c08;border:1px solid #3a2a1c;max-width:1300px;margin:0 auto 12px;width:100%}
+.rb-gaveta{display:grid;align-content:space-between;gap:10px;min-height:110px;padding:10px 8px;border-radius:6px;background:linear-gradient(180deg,#22180f,#1a120c);border:1px solid #3a2a1c;position:relative}
+.rb-gaveta::after{content:'';position:absolute;left:50%;bottom:10px;width:26px;height:5px;margin-left:-13px;border-radius:3px;background:#4a3624}
+.rb-gaveta small{font:600 9px var(--mono);letter-spacing:.1em;color:var(--t3)}
+.rb-gaveta b{font:600 clamp(14px,1.1vw,18px) var(--disp);color:var(--t1);padding-bottom:18px;word-break:break-word}
+.rb-gaveta.vazia{opacity:.4}
+.rb-gaveta.espera{border-style:dashed;border-color:rgba(240,160,112,.4)}
+.rb-gaveta.cheia{border-color:var(--ac);background:linear-gradient(180deg,#3a2414,#24170d);animation:abre .45s ease-out}
+@keyframes abre{from{transform:translateY(-8px)}}
+.rb-gaveta.nucleo{border-color:#5a4230} .rb-gaveta.nucleo b{color:var(--t3)}
+.rb-gaveta.nucleo.acesa{background:var(--ac);border-color:var(--ac2)} .rb-gaveta.nucleo.acesa b,.rb-gaveta.nucleo.acesa small{color:#2c1306}
+.rb-pecas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:6px 0 10px} .rb-pecas .pilula{font:600 clamp(16px,1.2vw,20px) var(--disp);min-height:44px}
+
+/* a regra */
+.rb-faixa{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;padding:12px 16px;border-radius:var(--r2);max-width:1300px;margin:0 auto 10px}
+.rb-faixa span{font:600 12px var(--mono);letter-spacing:.08em;color:var(--t2)} .rb-faixa i{color:var(--ac);font-style:normal} .rb-faixa b{padding:2px 10px;border-radius:4px;background:var(--ac);color:#2c1306;font:700 12px var(--mono)}
+.rb-lei{margin:0 0 12px;text-align:center;font:500 clamp(16px,1.2vw,20px)/1.5 var(--ui);color:var(--t2)} .rb-lei b{color:var(--ac2)}
+
+/* o hífen */
+.rb-passo{display:grid;justify-items:center;gap:6px;padding:18px;border-radius:var(--r1);max-width:900px;margin:0 auto;width:100%}
+.rb-fora{margin:0;font:500 clamp(20px,1.6vw,28px) var(--disp);color:var(--t2)}
+.rb-seta{font:600 11px var(--mono);letter-spacing:.14em;color:var(--ac)}
+.rb-dentro{margin:0;padding:8px 18px;border-radius:8px;border:1px dashed var(--fio2);font:600 clamp(22px,1.9vw,32px) var(--disp);color:var(--t3)}
+.rb-dentro.on{border:1px solid var(--ac);background:#24170d;color:var(--ac2);animation:abre .45s ease-out}
+
+/* longe demais */
+.rb-lista{display:grid;gap:8px;max-width:1300px;margin:0 auto;width:100%}
+.rb-tf{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 16px;border-radius:var(--r2)} .rb-tf span{display:block;font:600 clamp(17px,1.35vw,23px) var(--disp)}
+.rb-tf.certo{border-color:var(--ok)} .rb-tf.errado{border-color:var(--erro)}
+.rb-conta{font:600 10px var(--mono);letter-spacing:.14em;color:var(--t3)} .rb-conta.muito{color:var(--ac)}
+.rb-fs{display:flex;gap:6px} .rb-fs .pilula{min-height:38px;font:600 11px var(--mono);letter-spacing:.08em}
+.rb-cliente{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);border-color:rgba(240,160,112,.4)} .rb-cliente small{font:600 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .rb-cliente p{margin:0;font:600 clamp(19px,1.5vw,26px)/1.4 var(--disp)}
+
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .rb-trilho{padding:12px 14px} .lado-fim .rb-pal{font-size:16px;padding:4px 8px}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .rb-ops.linha{grid-template-columns:1fr} .rb-armario{grid-template-columns:repeat(5,minmax(0,1fr))} }
+@media (max-width:620px){ .rb-armario{grid-template-columns:repeat(3,minmax(0,1fr))} .rb-gaveta{min-height:84px} .rb-tf{grid-template-columns:1fr} .rb-pal{font-size:16px;padding:4px 8px} }
+
+
+.rb-cli{display:block;font:italic 600 14px var(--ui);color:var(--t3);margin-bottom:2px}
+.c-hifen .fm-folha,.c-venda .fm-folha{width:100%}
+.c-regra .rb-faixa{margin-bottom:14px}

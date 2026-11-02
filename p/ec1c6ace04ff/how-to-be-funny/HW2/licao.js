@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "How to Be Funny",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ec1c6ace04ff/how-to-be-funny/img/live-mic.jpg",
+  "capa": "../img/live-mic.jpg",
   "alvo": "even if (it doesn't matter if this is true) · whether ... or ... (it doesn't matter which one); never 'even that'",
   "abrir": "What did you do last time, even if you were nervous?",
   "fecho": "<b>Even if</b> = it doesn't matter if this is true: <i>Even if nobody laughs, I'll finish the joke.</i> <b>Whether … or …</b> = it doesn't matter which one: <i>Whether you're dry or goofy, be yourself.</i> Never <i>even that</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before an open mic night. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/ec1c6ace04ff/how-to-be-funny/img/live-palco.jpg",
+      "img": "../img/live-palco.jpg",
       "leg": "The stage, ten minutes before the show",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Even if nobody laughs, I will finish the joke.",
-          "img": "https://wolf-labs.pages.dev/p/ec1c6ace04ff/how-to-be-funny/img/live-mic.jpg",
+          "img": "../img/live-mic.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Whether you are dry or goofy, be yourself.",
-          "img": "https://wolf-labs.pages.dev/p/ec1c6ace04ff/how-to-be-funny/img/live-palco.jpg",
+          "img": "../img/live-palco.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Even if the pun is old, say it with a big smile.",
-          "img": "https://wolf-labs.pages.dev/p/ec1c6ace04ff/how-to-be-funny/img/live-mic.jpg",
+          "img": "../img/live-mic.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ec1c6ace04ff/how-to-be-funny/img/live-palco.jpg",
+      "img": "../img/live-palco.jpg",
       "leg": "An empty stage with a red curtain and candles",
       "pede": "Look at the picture: an empty stage with a red curtain and candles. Write 2 or 3 sentences about what you would do on that stage. Use <b>even if</b> and <b>whether … or …</b>.",
       "ph": "Even if I'm nervous, I will …",

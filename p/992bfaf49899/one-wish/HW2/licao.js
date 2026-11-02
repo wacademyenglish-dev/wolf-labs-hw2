@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "One Wish",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/992bfaf49899/one-wish/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "second conditional: If + past simple, would + plain verb for an unreal or unlikely situation (If I had one wish, I would ...); What would you do if ...?; could after if (If I could choose); never would after if, never if + present",
   "abrir": "If you had one wish, what would you ask for?",
   "fecho": "<b>If + past, would + verb</b> = something unreal or unlikely: <i>If I had one wish, I would ask for more time.</i> A question: <b>What would you do if …?</b> After <i>if</i>, never <i>would</i>: not <i>If I would have</i>. <b>If I could …</b> (not <i>If I can</i>).",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo find an old lamp in a shop. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/992bfaf49899/one-wish/img/live-lampada.webp",
+      "img": "../img/live-lampada.webp",
       "leg": "An old lamp with a thin smoke",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -97,17 +97,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If I had one wish, I would ask for more time.",
-          "img": "https://wolf-labs.pages.dev/p/992bfaf49899/one-wish/img/live-lampada.webp",
+          "img": "../img/live-lampada.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If I were you, I would sleep early tonight.",
-          "img": "https://wolf-labs.pages.dev/p/992bfaf49899/one-wish/img/live-quarto.webp",
+          "img": "../img/live-quarto.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If I found this shop, I would look at every shelf.",
-          "img": "https://wolf-labs.pages.dev/p/992bfaf49899/one-wish/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -151,7 +151,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/992bfaf49899/one-wish/img/live-quarto.webp",
+      "img": "../img/live-quarto.webp",
       "leg": "A quiet bedroom at night",
       "pede": "Look at the picture: a quiet bedroom at night. Write 2 or 3 sentences about wishes. Use <b>If + past, would + verb</b>.",
       "ph": "If I had …, I would …",

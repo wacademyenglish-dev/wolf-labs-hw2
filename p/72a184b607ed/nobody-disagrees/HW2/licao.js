@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Nobody Disagrees",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/72a184b607ed/nobody-disagrees/img/live-sala.webp",
+  "capa": "../img/live-sala.webp",
   "alvo": "disagreeing with care: I see what you mean, but... / I'm not sure that... / Isn't it a bit...? / Wouldn't it be better to...?; I don't agree (with you), never I'm not agree or I don't agree you",
   "abrir": "Who do you find hard to disagree with?",
   "fecho": "A careful no that is still a no: <b>I see what you mean, but…</b> · <b>I'm not sure that…</b> · <b>Isn't it a bit…?</b> · <b>Wouldn't it be better to…?</b> And <b>I don't agree with you</b>: never <i>I'm not agree</i>, never <i>I don't agree you</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before a meeting about a deadline. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/72a184b607ed/nobody-disagrees/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "An empty meeting room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I see what you mean, but I'm not sure.",
-          "img": "https://wolf-labs.pages.dev/p/72a184b607ed/nobody-disagrees/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Wouldn't it be better to wait until Wednesday?",
-          "img": "https://wolf-labs.pages.dev/p/72a184b607ed/nobody-disagrees/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Isn't it a bit early for that?",
-          "img": "https://wolf-labs.pages.dev/p/72a184b607ed/nobody-disagrees/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/72a184b607ed/nobody-disagrees/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A quiet table in a meeting room",
       "pede": "Look at the picture: a quiet meeting table. Write 2 or 3 sentences to disagree with a plan in a careful way. Use <b>I see what you mean, but</b>, <b>Isn't it a bit…?</b> or <b>Wouldn't it be better to…?</b>",
       "ph": "I see what you mean, but …",

@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Nobody Disagrees · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Nobody Disagrees · The Chairs</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Nobody Disagrees · The Chairs</h2>
+    <p>Disagreeing in English is mostly about the first three words. <b>You’re wrong</b> is correct grammar, and it pushes the chairs away from the table. <b>I’m not sure that’s right</b>, <b>I see what you mean, but…</b>, <b>Isn’t it a bit early?</b>, <b>Wouldn’t it be better to…?</b> say the same thing and keep everybody sitting down. Students also say <i>I’m not agree</i>. The screen is a meeting table seen from above: hot lines push the six chairs back; careful lines bring them in.</p>
+    <h4>DIRECT IS NOT WRONG</h4>
+    <p>“You’re wrong” is correct English. The lesson is about the temperature, not the grammar. The careful versions still say no.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Fifteen short recordings from a meeting about a deadline: the same fact three ways (III), three lines going up or down (V), and a six-turn meeting between Anna and Mark (VI). Each one plays with pause and 0.75×; the line appears only after listening.</p>
+    <h4>THE BAD IDEAS</h4>
+    <p>Scene VII: you are the boss. Read each idea, tap the opening you heard, then push back once with the line only you see. Under pressure, students drop the softener: name it.</p>
+    <h4>SCENE I COMES BACK</h4>
+    <p>Write down your student’s first words in scene I. In scene IX they say that same disagreement three ways.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I’m not agree</i>, <i>Is not it…?</i>, <i>Would not it be…?</i>, <i>I don’t agree you</i>, <i>I’m not sure that it work</i>.</p>
+    <!--conversa--><h4>SAY IT OR NOT? (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After the boss’s four bad ideas, three real moments: a friend’s logo, a wrong number in a meeting, a brother’s car. Your student decides if they speak, and if they do, they say the careful line out loud. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast mistakes quietly while they talk (watch for “I’m not agree” and “Is not it”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I The Thing You Don’t Say, II The Chairs, VII Four Bad Ideas, VIII Say It or Not?, IX Your Line, Three Ways.</li>
+      <li><b>Listen</b>: III One Fact, Three Ways, V Up or Down, VI The Recorded Meeting.</li>
+      <li><b>Focus</b>: IV Cool It Down.</li>
+      <li><b>Write</b>: X, their own careful line. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* NOBODY DISAGREES (Main B1) · pergunta-surpresa · 27/10/2026 · careful disagreement */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'termo', tipo: 'And you?', q: 'In your family, who always says exactly what they think?',
+    opc: ['Me!', 'Somebody else', 'Nobody'], st: ['My … always says …', 'In my family, nobody …'],
+    ex: 'My sister. She never says “I see what you mean”. She just says “No.”', push: 'Is that a good thing or a bad thing in your family?' },
+  { cena: 'voz', tipo: 'Would you rather', q: 'Would you rather have a boss who is always direct or a boss who is always polite?',
+    opc: ['Always direct', 'Always polite'], st: ['I’d rather have …, because …', 'A polite boss … but …'],
+    ex: 'Direct. I want to know what’s wrong fast. Polite bosses make me guess.', push: 'Your direct boss says your work is “bad” in front of everybody. Still direct?' },
+  { cena: 'ideias', tipo: 'Opinion', q: 'Is it OK to disagree with your teacher in class?',
+    opc: ['Yes, always', 'Yes, carefully', 'Not really'], st: ['I think it’s OK if …', 'I’m not sure that …'],
+    ex: 'Yes, carefully. I’d say “I see what you mean, but isn’t there another way?”', push: 'OK: disagree with me now. Anything about this lesson.' },
+  { cena: 'sua', tipo: 'What if', q: 'A friend says your favourite film is boring. What do you say?',
+    opc: ['Defend it', 'Laugh and agree', 'Change the subject'], st: ['I see what you mean, but …', 'Isn’t that a bit …?'],
+    ex: 'Defend it! “I see what you mean, it’s slow, but isn’t that the point? It makes you think.”', push: 'Now tell me a film everybody loves and you don’t.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* NOBODY DISAGREES (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O dilema entra no lugar de "VIII · I’m Not Agree" (extra; prática controlada repetida depois do IV).
+   Depois do chefe das quatro ideias ruins (VII), a pergunta de verdade: você fala, ou fica quieto?
+   Três situações da vida, e o aluno diz a frase cuidadosa que usaria. A gramática da aula
+   (I see what you mean, but… / Isn’t it a bit…? / Wouldn’t it be better to…?) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'dilema', troca: 'erros', est: 'o', min: 7, img: 'sala', rot: 'Say It or Not?', t: 'Three real moments. Do you say it, or keep quiet?',
+    p: 'Read the situation. Choose what you would really do. If you speak, say your careful line out loud.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The logo', sit: 'Your friend shows you the logo for her new cake shop. She is very proud. You think it looks cheap. It goes on the shop sign tomorrow.',
+        q: 'What do you do?', opc: ['Say it, carefully', 'Ask a question first', 'Say nothing'],
+        st: ['I love the idea, but isn’t it a bit …?', 'Wouldn’t it be better to …?', 'I’d say nothing, because …'],
+        ex: 'Ask a question first: “What do your customers think?” Then: “I love the colours, but isn’t the font a bit small for a sign?”',
+        push: 'The sign is already printed and paid for. Do you still say it?' },
+      { tag: 'The meeting', sit: 'In a video call with twelve people, your boss shows a sales number. You are sure it is wrong.',
+        q: 'What do you do?', opc: ['Say it now', 'Message the boss privately', 'Say nothing'],
+        st: ['Sorry, I’m not sure that number is …', 'I see what you mean, but …', 'I’d send a message, because …'],
+        ex: 'Message the boss privately: “I’m not sure that number is right. Wouldn’t it be better to check it before the client sees it?”',
+        push: 'The client is in the call, and he is writing the number down. Now?' },
+      { tag: 'The car', sit: 'Your brother wants to spend all his savings on an old sports car. He asks: “Great idea, right?”',
+        q: 'What do you say?', opc: ['Tell him what you think', 'Just ask questions', 'It’s his money'],
+        st: ['I see why you want it, but …', 'Isn’t it a bit …?', 'Wouldn’t it be smarter to …?'],
+        ex: 'Just ask questions: “How much is the insurance? Wouldn’t it be smarter to keep half the money?” He needs to find the answer himself.',
+        push: 'He buys it anyway, and it breaks down in a week. Do you say “I told you”?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Someone you disagree with, in silence.",
+   "p": "Tap who. Answer three questions. Keep your first words."
+  },
+  "termo": {
+   "t": "Eight real lines. Watch the chairs.",
+   "p": "Read it. Tap HOT or COOL. Say the careful version."
+  },
+  "tres": {
+   "t": "The deadline is too early. Three ways.",
+   "p": "Play each line. Say it back. Tap the effect."
+  },
+  "frases": {
+   "t": "Cool down six hot lines.",
+   "p": "Pick the careful no. Say it calmly."
+  },
+  "voz": {
+   "t": "Same words. One asks, one tells.",
+   "p": "Play both. Tap the real question."
+  },
+  "gravada": {
+   "t": "Anna wants March. Mark isn’t sure.",
+   "p": "Play each turn. Asking or telling?"
+  },
+  "ideias": {
+   "t": "The boss has four bad ideas.",
+   "p": "Disagree carefully. Finish your line. Expect pushback."
+  },
+  "cv-dilema": {
+   "t": "Say it, or keep quiet?",
+   "p": "Choose what you’d really do. Speak? Say your line."
+  },
+  "sua": {
+   "t": "Your line from scene I is back.",
+   "p": "Say it three ways. Which one would you use?"
+  },
+  "fim": {
+   "t": "The chairs are still at the table.",
+   "p": "Write a careful disagreement for your week. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Discordar com cuidado (I’m not sure that’s right, I see what you mean, but…, Isn’t it…?, Wouldn’t it be better to…?): uma reunião vista de cima, com cadeiras que fogem ou voltam.",
+  "armadilha": "O brasileiro diz “I’m not agree” (calco de “não concordo” com o verbo to be), “I don’t agree you” sem with, e “Is not it…?” no lugar de “Isn’t it…?”.",
+  "pal": [
+   "I don’t agree",
+   "I’m not sure that’s right",
+   "I see what you mean, but",
+   "Isn’t it a bit…?",
+   "Wouldn’t it be better to…?",
+   "deadline",
+   "push back",
+   "fair point"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: You’re wrong é inglês correto e espanta as cadeiras.",
+   "perg": "Is it easy for you to say no at work?",
+   "pula": "Só leia a capa e entre na reunião."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: alguém de quem o aluno discorda em silêncio. Anote as primeiras palavras dele.",
+   "perg": "What do you never say to this person?",
+   "pula": "Duas perguntas, mas anote a frase: ela volta."
+  },
+  "termo": {
+   "obj": "Oito falas de reuniões reais: quente ou frio, e a versão cuidadosa.",
+   "perg": "How would you say that without the chairs moving?",
+   "pula": "Quatro falas bastam."
+  },
+  "tres": {
+   "obj": "Ouvir o mesmo fato dito de três jeitos e o efeito de cada um na sala.",
+   "perg": "Which one would you use with your boss?",
+   "pula": "Dois jeitos bastam."
+  },
+  "frases": {
+   "obj": "Foco: escolher a versão cuidadosa que ainda diz não e está correta.",
+   "perg": "Does it still say no?",
+   "pula": "Quatro frases bastam."
+  },
+  "voz": {
+   "obj": "Entonação: a mesma pergunta subindo (pergunta de verdade) ou descendo (afirmação).",
+   "perg": "Which one really asks?",
+   "pula": "Dois pares bastam."
+  },
+  "gravada": {
+   "obj": "Reunião gravada entre Anna e Mark: perceber quem pergunta e quem afirma.",
+   "perg": "Is Mark asking or telling?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "ideias": {
+   "obj": "O professor é o chefe com quatro ideias ruins; o aluno discorda sem perder o tom sob pressão.",
+   "perg": "So you don’t like my idea?",
+   "pula": "Cena extra: duas ideias bastam."
+  },
+  "cv-dilema": {
+   "obj": "Três momentos reais: falar ou ficar quieto; se falar, dizer a frase cuidadosa.",
+   "perg": "Would you really say it? How?",
+   "pula": "Dois momentos bastam."
+  },
+  "sua": {
+   "obj": "A discordância da cena I volta, dita de três jeitos.",
+   "perg": "Which version would you really use?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: uma discordância cuidadosa para a semana real do aluno.",
+   "perg": "Who are you going to say it to?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre discordar em casa, no trabalho e entre amigos.",
+   "perg": "How do you disagree with your family?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade: o aluno defende um lado e discorda do professor com cuidado.",
+   "perg": "I see your point, but why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno prepara uma conversa difícil real, passo a passo, com aberturas cuidadosas.",
+   "perg": "What’s your first sentence?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Disagreeing in real life.",
+   "p": "Pick a card. Keep the chairs at the table.",
+   "palavras": [
+    "I’m not sure that’s right",
+    "I see what you mean, but",
+    "Isn’t it…?",
+    "Wouldn’t it be better to…?"
+   ],
+   "cartas": [
+    {
+     "k": "AT HOME",
+     "q": "Who do you disagree with most at home?",
+     "fup": "How do you usually say it?",
+     "st": [
+      "I usually say “I see what you mean, but …”",
+      "I don’t say anything, because …"
+     ],
+     "ex": "My brother. I usually say “I see what you mean, but that’s not fair.”"
+    },
+    {
+     "k": "THE BOSS",
+     "q": "Is it easy to disagree with your boss?",
+     "fup": "What happens if you do?",
+     "st": [
+      "It’s not easy, because …",
+      "I usually ask “Wouldn’t it be better to …?”"
+     ],
+     "ex": "Not really. I ask questions, like “Isn’t it a bit early?”"
+    },
+    {
+     "k": "FRIENDS",
+     "q": "Do you tell a friend when you don’t like their idea?",
+     "fup": "Can you give an example?",
+     "st": [
+      "Yes, but I say it carefully: …",
+      "No. I’m not sure it’s worth it, because …"
+     ],
+     "ex": "Yes. I said “I’m not sure that’s right” about his new job."
+    },
+    {
+     "k": "ONLINE",
+     "q": "Do you disagree with people online?",
+     "fup": "Why, or why not?",
+     "st": [
+      "Never, because …",
+      "Sometimes. I write “Fair point, but …”"
+     ],
+     "ex": "Never. Online, every line is a hot line."
+    },
+    {
+     "k": "BRAZIL VS. ABROAD",
+     "q": "Is disagreeing in Brazil different from the US?",
+     "fup": "Which is more direct?",
+     "st": [
+      "I think Brazilians are more …",
+      "In the US, people say …"
+     ],
+     "ex": "I think Brazilians are less direct. We say “maybe” when we mean no."
+    },
+    {
+     "k": "YOU WERE WRONG",
+     "q": "When did someone disagree with you, and they were right?",
+     "fup": "How did they say it?",
+     "st": [
+      "Once, someone told me …",
+      "They said “Wouldn’t it be better to …?”, and …"
+     ],
+     "ex": "My colleague said “Isn’t it a bit risky?” She was right."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "The Debate",
+   "t": "Pick a side. Disagree carefully.",
+   "p": "Your teacher argues the other side.",
+   "palavras": [
+    "I see what you mean, but",
+    "I’m not sure that’s right",
+    "Isn’t it…?",
+    "fair point"
+   ],
+   "rodadas": [
+    {
+     "q": "At work: direct is better than polite?",
+     "a": "Direct",
+     "b": "Polite",
+     "fa": [
+      "Direct. It saves time.",
+      "Everybody knows what you mean."
+     ],
+     "fb": [
+      "Polite. People listen when they don’t feel attacked.",
+      "The chairs stay at the table."
+     ]
+    },
+    {
+     "q": "Disagree in the meeting, or after it, in private?",
+     "a": "In the meeting",
+     "b": "After, in private",
+     "fa": [
+      "In the meeting. Later is too late.",
+      "The decision is already made."
+     ],
+     "fb": [
+      "In private. Nobody loses face.",
+      "And the boss listens much better."
+     ]
+    },
+    {
+     "q": "Should you tell a friend their business idea is bad?",
+     "a": "Yes, tell them",
+     "b": "No, let them try",
+     "fa": [
+      "Yes. A good friend tells the truth.",
+      "Better now than after they lose money."
+     ],
+     "fb": [
+      "No. Maybe I’m wrong.",
+      "People learn more from their own mistakes."
+     ]
+    },
+    {
+     "q": "Family dinner: talk about politics or never?",
+     "a": "Talk about it",
+     "b": "Never",
+     "fa": [
+      "Talk about it. Families can disagree.",
+      "It’s important to listen."
+     ],
+     "fb": [
+      "Never. Dinner is for the food.",
+      "Some chairs never come back."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Lots of no, and the chairs are still at the table."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Hard Talk",
+   "t": "Plan a hard conversation.",
+   "p": "Step by step. Start carefully.",
+   "prof": "Play the other person in step 4. Push back once. Listen for “I’m not agree”.",
+   "passos": [
+    {
+     "q": "Who do you need to disagree with this month?",
+     "st": [
+      "I need to talk to …, because …"
+     ],
+     "ex": "I need to talk to my manager, because the new schedule is impossible."
+    },
+    {
+     "q": "What is the hot version, the one you want to say?",
+     "st": [
+      "The hot version is: “…”"
+     ],
+     "ex": "The hot version is: “This schedule is crazy.”"
+    },
+    {
+     "q": "Now cool it down. What is your careful opening?",
+     "st": [
+      "I see what you mean, but …",
+      "Wouldn’t it be better to …?"
+     ],
+     "ex": "I see why we need it, but wouldn’t it be better to start in March?"
+    },
+    {
+     "q": "Your teacher is that person and pushes back. Answer.",
+     "st": [
+      "Fair point, but …",
+      "I’m still not sure that …"
+     ],
+     "ex": "Fair point, but I’m still not sure the team can do it in two weeks."
+    }
+   ],
+   "fim": "You said no, and nobody left the table."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

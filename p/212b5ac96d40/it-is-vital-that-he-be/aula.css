@@ -1,0 +1,94 @@
+/* ============================================================
+   IT IS VITAL THAT HE BE · THE MINUTES · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: o livro de atas à noite —
+   azul-tinta profundo, página de couro escuro com pauta fina, tinta
+   azul-pervinca em serifa Caslon; o bilhete do tesoureiro à mão
+   (Caveat), torto; a lente do farol com oito painéis em luz de lâmpada;
+   os carimbos DEMAND (pervinca) e FACT (cinza).
+   ============================================================ */
+:root{
+  --noite:#05070f; --noite-rgb:5,7,15; --tinta:#eceef6;
+  --t1:#f2f4fa; --t2:#c4c9da; --t2-rgb:196,201,218; --t3:#7f86a0;
+  --ac:#9db4ff; --ac2:#d3defe; --lamp:#ffd77a;
+  --vidro:rgba(236,238,246,.05); --vidro2:rgba(236,238,246,.085); --vidro3:rgba(236,238,246,.12);
+  --fio:rgba(226,230,244,.12); --fio2:rgba(226,230,244,.22); --luz:rgba(236,238,246,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Libre Caslon Text',Georgia,serif; --ui:'IBM Plex Sans',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --mao:'Caveat',cursive;
+  --r1:18px; --r2:12px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#0b1433}
+.btn.cheio{color:#0b1433}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:400 clamp(52px,5.2vw,98px)/.98 var(--disp);letter-spacing:-.02em}
+.capa h1 b{display:block;font-weight:700;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(18px,1.4vw,24px)/1.5 var(--ui);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#151c38;color:var(--ac2)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.vt-ops{display:grid;gap:6px} .vt-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:12px auto;width:100%} .vt-ops.linha .versao{text-align:center;min-height:60px;font-weight:600}
+.vt-linha-ok{display:flex;align-items:center;gap:12px} .vt-linha-ok .aprova{flex:1;margin:0} .vt-linha-ok.centro{max-width:1200px;margin:0 auto;width:100%}
+
+/* o livro de atas */
+.vt-livro{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr);gap:0;max-width:1200px;margin:0 auto;width:100%;border-radius:var(--r1);overflow:hidden;background:#0a0e1d;border:1px solid #1f2847;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.vt-bilhete{display:grid;align-content:center;gap:8px;padding:22px;background:#121733;border-right:1px solid #232c52;transform-origin:center}
+.vt-bilhete small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.vt-bilhete p{margin:0;padding:14px 16px;border-radius:4px;background:#1b2148;transform:rotate(-2deg);font:600 clamp(24px,2vw,34px)/1.15 var(--mao);color:#e8dfc4;box-shadow:0 8px 18px rgba(0,0,0,.4)}
+.vt-pagina{display:grid;align-content:center;gap:10px;padding:22px 26px;background:repeating-linear-gradient(180deg,transparent 0 37px,rgba(157,180,255,.09) 37px 38px),#0b1022}
+.vt-pagina small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.vt-tinta{margin:0;font:400 clamp(21px,1.75vw,30px)/1.45 var(--disp);color:var(--ac2);animation:escreve .9s ease-out both}
+.vt-tinta b{font-weight:700;color:var(--t1);border-bottom:2px solid var(--ac)}
+@keyframes escreve{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.vt-pauta{display:grid;gap:22px;margin:0} .vt-pauta span{display:block;height:2px;background:repeating-linear-gradient(90deg,var(--t3) 0 6px,transparent 6px 12px);opacity:.5}
+
+/* o verbo congelado */
+.vt-tres{display:grid;gap:6px}
+.vt-tipo{display:grid;gap:2px;padding:7px 14px;border-radius:var(--r2)} .vt-tipo small{font:700 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .vt-tipo p{margin:0;font:400 clamp(16px,1.15vw,19px) var(--disp);color:var(--ac2)}
+.vt-gelo{display:grid;gap:10px;padding:16px 18px;border-radius:var(--r1);border-color:rgba(157,180,255,.4)}
+.vt-gelo small{font:700 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.vt-sujs{display:flex;flex-wrap:wrap;gap:6px}
+.vt-gelo-f{margin:0;font:400 clamp(20px,1.6vw,28px) var(--disp)} .vt-gelo-f u{text-decoration:none;color:var(--t2);border-bottom:2px dashed var(--t3)} .vt-gelo-f b{display:inline-block;padding:0 10px;border-radius:6px;background:var(--ac);color:#0b1433;font-weight:700}
+.vt-gelo-n{margin:0;font:600 14px var(--ui);color:var(--t3)}
+
+/* a lente do farol */
+.vt-farol{position:relative;display:grid;justify-items:center;gap:10px;padding:20px 0;overflow:hidden;border-radius:var(--r1)}
+.vt-feixe{position:absolute;top:50%;left:50%;width:140%;height:70px;margin:-35px 0 0 -70%;background:linear-gradient(90deg,transparent,rgba(255,215,122,.10) 30%,transparent 50%,rgba(255,215,122,.10) 70%,transparent);opacity:0;transition:opacity 1s}
+.vt-feixe.gira{opacity:1;animation:gira 8s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.vt-lente{position:relative;width:min(300px,70vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#161b30 0 38%,#0c1020 39%);border:2px solid #232c52;display:grid;place-items:center}
+.vt-lente i{position:absolute;top:50%;left:50%;width:15%;height:15%;margin:-7.5% 0 0 -7.5%;border-radius:8px;background:#1a2040;border:1px solid #2b3560;transition:all .6s}
+.vt-lente i.acesa{background:radial-gradient(circle,#fff3c8,var(--lamp) 60%);border-color:#fff1c2;box-shadow:0 0 22px rgba(255,215,122,.55)}
+.vt-lente b{position:relative;font:700 30px var(--disp);color:var(--t1)}
+.vt-farol small{font:700 11px var(--mono);letter-spacing:.16em;color:var(--lamp)}
+.vt-voz{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2)} .vt-voz small{font:700 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .vt-voz p{margin:0;font:600 clamp(18px,1.4vw,24px)/1.4 var(--ui)}
+
+/* os carimbos */
+.vt-lista{display:grid;gap:8px;max-width:1300px;margin:0 auto;width:100%}
+.vt-cb{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;align-items:center;padding:10px 16px;border-radius:var(--r2)}
+.vt-cb p{margin:0;font:400 clamp(17px,1.3vw,22px)/1.4 var(--disp)} .vt-cb p b{color:var(--ac2)}
+.vt-cb.certo{border-color:var(--ok)} .vt-cb.errado{border-color:var(--erro)}
+.vt-cb-w{grid-column:1/-1;font:600 14px var(--ui);color:var(--t3)}
+.vt-selos{display:flex;gap:8px}
+.vt-selo{min-width:96px;min-height:40px;padding:0 12px;border-radius:6px;border:2px solid var(--fio2);background:none;font:700 12px var(--mono);letter-spacing:.14em;color:var(--t3);cursor:pointer;transform:rotate(-3deg)}
+.vt-selo.demand.on{border-color:var(--ac);color:var(--ac2);background:rgba(157,180,255,.12)}
+.vt-selo.fact.on{border-color:var(--t2);color:var(--t1);background:rgba(196,201,218,.1)}
+.vt-selo.on.mal{border-color:var(--erro);color:var(--erro);animation:treme .35s}
+
+/* o telefone */
+.vt-fone{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:1100px;margin:0 auto 12px;width:100%;padding:12px 18px;border-radius:var(--r2);border-color:rgba(157,180,255,.4)}
+.vt-fone b{font:700 13px var(--mono);letter-spacing:.12em;color:var(--ac2)} .vt-fone small{margin-left:auto;font:700 11px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.vt-pulso{width:12px;height:12px;border-radius:50%;background:var(--ac);animation:pulsa 1.4s infinite}
+@keyframes pulsa{0%{box-shadow:0 0 0 0 rgba(157,180,255,.5)}70%{box-shadow:0 0 0 10px rgba(157,180,255,0)}}
+
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .vt-lente{width:200px} .lado-fim .vt-farol{padding:6px 0}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .vt-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .vt-livro{grid-template-columns:1fr} .vt-bilhete{border-right:0;border-bottom:1px solid #232c52;padding:16px} .vt-pagina{padding:16px} .vt-cb{grid-template-columns:1fr} .vt-lente{width:220px} }
+
+/* 22/10/2026 · IV Around the Table (FM.fala): a lente menor em cima do cartão */
+.c-lente .vt-farol{padding:4px 0} .c-lente .vt-lente{width:190px}

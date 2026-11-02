@@ -1,0 +1,128 @@
+/* ============================================================
+   NOBODY HAD BEEN LIVING THERE · THE CROW HILL ARCHIVE · LIVE 09/10/2026
+   A base vem do kit (base.css). Identidade: a mesa do arquivo à
+   noite — recortes em sépia ESCURA com texto claro (nada de papel
+   branco), serifa de jornal antigo, alfinetes e o barbante vermelho.
+   ============================================================ */
+:root{
+  --noite:#0b0907; --noite-rgb:11,9,7; --tinta:#eee6da;
+  --t1:#f3ece2; --t2:#cfc4b4; --t2-rgb:207,196,180; --t3:#968a79;
+  --ac:#d9a35a; --ac2:#f0cf9a; --bt:#4aa3e8; --bt2:#a6d2ff; --fio-v:#c8323c;
+  --vidro:rgba(238,230,218,.05); --vidro2:rgba(238,230,218,.085); --vidro3:rgba(238,230,218,.12);
+  --fio:rgba(225,212,195,.12); --fio2:rgba(225,212,195,.22); --luz:rgba(238,230,218,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --jor:'Old Standard TT',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1a05}
+.btn.cheio{color:#2a1a05}
+.capa{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(50px,4.6vw,90px)/.98 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa-d{display:grid;justify-items:center}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.ini{margin:0;font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--ac2)}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .balao p{margin:0;font:700 clamp(18px,1.4vw,23px)/1.4 var(--disp)}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .pede b{font:700 clamp(18px,1.4vw,22px)/1.4 var(--disp)}
+.fitas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.fita{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .fita small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .fita b{font:700 clamp(15px,1.2vw,19px)/1.35 var(--disp)}
+.aberta{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center;max-height:calc(100vh / var(--zv,1) - 380px)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:5px 14px;border-radius:999px;background:rgba(11,9,7,.85);font:700 13px var(--mono);letter-spacing:.08em;color:var(--ac2)}
+
+/* os recortes: sépia escura, serifa de jornal */
+.recorte{position:relative;display:grid;gap:4px;align-content:start;padding:12px 14px;border-radius:6px;border:1px solid #4a3c2a;background:linear-gradient(170deg,#2b2318,#1d1810);color:var(--t1);text-align:left;cursor:pointer;box-shadow:0 10px 22px rgba(0,0,0,.45)}
+.recorte::before{content:'';position:absolute;top:-6px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--fio-v);box-shadow:0 2px 4px rgba(0,0,0,.6)}
+.recorte small{font:700 11px var(--mono);letter-spacing:.1em;color:var(--t3)} .recorte b{font:700 clamp(14px,1.05vw,17px)/1.2 var(--jor);text-transform:uppercase;letter-spacing:.02em}
+.recorte:hover{border-color:var(--ac)} .recorte.on{border-color:var(--ac);box-shadow:0 0 0 2px rgba(217,163,90,.35),0 10px 22px rgba(0,0,0,.45)} .recorte.feito{border-color:rgba(143,217,162,.5)} .recorte.feito small{color:var(--ok)}
+.mural{display:grid;grid-template-columns:1fr 1fr;gap:16px 12px;padding:18px 12px 10px;border-radius:var(--r1);background:radial-gradient(70% 60% at 50% 30%,#1c1610,#0e0b08);border:1px solid #2e261b}
+.mural .r1,.mural .r4{transform:rotate(1.2deg)} .mural .r2,.mural .r3{transform:rotate(-1deg)}
+.jornal{display:grid;gap:6px;padding:16px 18px;border-radius:var(--r2)!important;background:linear-gradient(170deg,#2b2318,#1d1810)!important;border-color:#4a3c2a!important}
+.jornal small{font:700 11px var(--mono);letter-spacing:.1em;color:var(--t3)} .jornal b{font:700 clamp(19px,1.5vw,24px)/1.2 var(--jor);text-transform:uppercase} .jornal p{margin:0;font:italic 400 clamp(16px,1.2vw,19px)/1.45 var(--jor);color:var(--t2)}
+.pilha{position:relative;width:min(420px,100%);height:320px}
+.recorte.solto{position:absolute;width:78%;cursor:default}
+.recorte.solto.s0{left:0;top:10px;transform:rotate(-4deg)} .recorte.solto.s1{right:0;top:110px;transform:rotate(3deg)} .recorte.solto.s2{left:8%;top:210px;transform:rotate(-1.5deg)}
+
+/* o barbante e a linha do tempo */
+.fio-tempo{position:relative;height:70px;margin:4px 6px 6px}
+.barb{position:absolute;left:2%;right:2%;top:22px;height:3px;border-radius:2px;background:repeating-linear-gradient(90deg,var(--fio-v) 0 10px,#8f222a 10px 14px);box-shadow:0 1px 3px rgba(0,0,0,.6)}
+.pino{position:absolute;top:10px;display:grid;justify-items:center;gap:6px;transform:translateX(-50%)}
+.pino i{width:16px;height:16px;border-radius:50%;background:#3a3026;border:2px solid #5a4a38} .pino b{font:700 12px var(--mono);color:var(--t3)}
+.pino.on i{background:var(--fio-v);border-color:#ff8a8f;box-shadow:0 0 10px rgba(200,50,60,.6)} .pino.on b{color:var(--ac2)}
+.dois-pinos{display:grid;grid-template-columns:1fr 70px 1fr;align-items:center;gap:8px;width:min(860px,100%);margin:6px auto 10px}
+.pin-card{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2)} .pin-card small{font:700 12px var(--mono);letter-spacing:.12em;color:var(--fio-v)} .pin-card b{font:700 clamp(17px,1.35vw,22px)/1.3 var(--disp)}
+.barb-curta{height:3px;background:var(--fio-v);border-radius:2px}
+
+/* o vídeo */
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;padding:16px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:800 24px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--disp);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.quatro-d{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:10px}
+
+/* a história de Jack */
+.pergaminho{display:grid;gap:8px;padding:18px 22px;border-radius:var(--r1)} .pergaminho small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)}
+.pergaminho h3{margin:0;font:700 clamp(21px,1.7vw,28px) var(--jor)}
+.conto{margin:0;font:400 clamp(16px,1.2vw,19px)/1.6 var(--jor);color:var(--t2)} .conto-vazio{margin:0;font:600 15px var(--disp);color:var(--t3)}
+.hist-q{gap:8px} .hist-q .pergunta{padding:10px 18px} .hist-q .pergunta h2{margin-top:4px;font-size:clamp(16px,1.2vw,20px)} .hist-q .resp-btn{margin-top:-4px}
+
+/* quiz e fim */
+.quiz{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q-linha{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .q-linha.feito{border-color:rgba(143,217,162,.4)!important}
+.q-linha p{margin:0;font:700 clamp(16px,1.25vw,20px)/1.4 var(--disp)} .q-linha .recusa{margin:0;font-size:15px}
+.gap{display:inline-block;min-width:3em;padding:0 6px;border-bottom:2px solid var(--ac);color:var(--ac2);text-align:center}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.quiz,.mesa-video{grid-template-columns:1fr} .fitas{grid-template-columns:1fr 1fr} }
+@media (max-width:820px){ .fitas,.quatro-d{grid-template-columns:1fr} .dois-pinos{grid-template-columns:1fr;gap:6px} .barb-curta{width:3px;height:22px;justify-self:center} .pino b{font-size:10px} .capa-d{display:none} }
+/* compacto: a B2 tem frases longas (09/10, medido em 1920x925) */
+.lado-l .versao{min-height:46px;padding:9px 16px;font-size:clamp(15px,1.1vw,18px)}
+.lado-l .pergunta.ja{padding:10px 18px} .lado-l .pergunta.ja h2{font-size:clamp(17px,1.25vw,21px)}
+.jornal{padding:12px 16px} .recorte{padding:10px 12px}
+.fitas{gap:8px} .fita{padding:10px 14px} .armas .arma{min-height:0}
+.dois-pinos{margin:2px auto 6px} .fio-tempo{height:60px}
+.hist-q .pergunta h2{font-size:clamp(15px,1.1vw,18px)} .conto{font-size:clamp(15px,1.1vw,18px)}
+/* tela larga do Carlos (2000x1024): a cena cresce um degrau a menos que o kit, para caber sem rolar (09/10) */
+@media (min-width:1560px) and (min-height:860px){ .cena{zoom:1.04} :root{--zv:1.04} }
+@media (min-width:1800px) and (min-height:940px){ .cena{zoom:1.15} :root{--zv:1.15} }
+@media (min-width:2200px) and (min-height:1100px){ .cena{zoom:1.35} :root{--zv:1.35} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb-mural{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 10px;padding:16px 10px 10px}
+.deb-rec{cursor:default;min-height:74px;opacity:.5;filter:grayscale(.7);transition:opacity .5s,filter .5s,box-shadow .4s}
+.deb-rec:hover{border-color:#4a3c2a}
+.deb-rec small{font-size:10px}
+.deb-rec b{font-size:12.5px;line-height:1.2}
+.deb-rec.feito{opacity:1;filter:none;border-color:rgba(143,217,162,.6);box-shadow:0 0 0 2px rgba(143,217,162,.25),0 10px 22px rgba(0,0,0,.45)}
+.deb-rec.perdido{opacity:.55;filter:grayscale(.5);border-color:rgba(255,110,110,.55)}
+.deb-rec.perdido small{color:#ffb3a8}
+.deb-rec.feito.nova{animation:debPino .7s ease-out}
+@keyframes debPino{0%{transform:translateY(-14px) rotate(-3deg);opacity:.2}100%{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.deb-rec.nova{animation:none}}
+@media (max-width:1100px){.deb-mural{grid-template-columns:repeat(2,minmax(0,1fr))}}

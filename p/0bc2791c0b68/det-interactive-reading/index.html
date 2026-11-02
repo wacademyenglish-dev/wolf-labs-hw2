@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -119,5 +120,288 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Read it once, for the meaning.",
+   "p": "Read out loud. Then the questions. Then the connectors."
+  },
+  "multipla": {
+   "t": "Five tasks, one text.",
+   "p": "Choose. Then show where you found it."
+  },
+  "cv-dilema": {
+   "t": "Three library decisions. Your choice?",
+   "p": "Choose or say your idea. Use the signposts."
+  },
+  "ordem": {
+   "t": "What happened first?",
+   "p": "Tap the cards in order. Then tell the story."
+  },
+  "pode": {
+   "t": "What can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Interactive Reading do DET: um texto sobre como as bibliotecas da cidade mudaram e cinco tarefas; a chave é ler os sinalizadores (however, no longer, as a result, in other words).",
+  "armadilha": "O brasileiro relê o texto inteiro a cada tarefa e perde tempo; escolhe título que cobre um parágrafo só e confunde lend e borrow (os dois são “emprestar”).",
+  "pal": [
+   "however",
+   "no longer",
+   "as a result",
+   "in other words",
+   "main idea",
+   "detail",
+   "title",
+   "lend / borrow"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 5 do DET Prep: Interactive Reading.",
+   "perg": "When did you last go to a library?",
+   "pula": "Pergunte e entre."
+  },
+  "leitura": {
+   "obj": "Uma leitura cuidadosa para o sentido, depois os conectores que sinalizam o texto.",
+   "perg": "What does a library offer today, apart from books?",
+   "pula": "Leia uma vez e vá direto aos conectores."
+  },
+  "multipla": {
+   "obj": "As cinco tarefas do Interactive Reading; o aluno aponta a linha de cada resposta.",
+   "perg": "Where in the text did you find it?",
+   "pula": "Três tarefas bastam."
+  },
+  "cv-dilema": {
+   "obj": "Momento de conversa: três decisões sobre a biblioteca, usando os sinalizadores do texto.",
+   "perg": "Should the library end the silence rule?",
+   "pula": "Dois dilemas bastam."
+  },
+  "ordem": {
+   "obj": "Ordenar uma história em pedaços e contar com first, then, after that, finally.",
+   "perg": "Which word tells you this comes after?",
+   "pula": "Ordene e pule a narração."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; o hábito de apontar a linha vale mais que a nota hoje.",
+   "perg": "Can you explain “no longer” with an example?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre leitura e lugares públicos, usando os sinalizadores do texto.",
+   "perg": "What do you no longer do that you used to do?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre bibliotecas, livros e estudo, com argumentos e conectores.",
+   "perg": "What is the strongest point on the other side?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve um parágrafo curto sobre um lugar que mudou, no estilo do texto do DET.",
+   "perg": "What changed, and what was the result?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Reading, places and change.",
+   "p": "Pick a card. Use a signpost word.",
+   "palavras": [
+    "however",
+    "no longer",
+    "as a result",
+    "in other words"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR READING",
+     "q": "What do you read most: books, news or messages?",
+     "fup": "Has that changed?",
+     "st": [
+      "I mostly read …",
+      "However, …"
+     ],
+     "ex": "I mostly read news on my phone. However, I read a real book on holidays."
+    },
+    {
+     "k": "NO LONGER",
+     "q": "What do you no longer do that you did five years ago?",
+     "fup": "Why did you stop?",
+     "st": [
+      "I no longer …",
+      "As a result, …"
+     ],
+     "ex": "I no longer buy newspapers. As a result, I read only headlines."
+    },
+    {
+     "k": "QUIET PLACES",
+     "q": "Where do you go when you need to study?",
+     "fup": "Why there?",
+     "st": [
+      "I usually go to …",
+      "In other words, …"
+     ],
+     "ex": "I usually go to a café with no music. In other words, I need quiet but not silence."
+    },
+    {
+     "k": "BORROWING",
+     "q": "Do you lend books to friends?",
+     "fup": "Do they give them back?",
+     "st": [
+      "I sometimes lend …",
+      "However, …"
+     ],
+     "ex": "I sometimes lend books to my sister. However, she never gives them back."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "How has a place in your city changed?",
+     "fup": "Is it better now?",
+     "st": [
+      "… is no longer …",
+      "As a result, …"
+     ],
+     "ex": "The old cinema is no longer a cinema. As a result, it’s a church now."
+    },
+    {
+     "k": "THE TEST",
+     "q": "What’s hardest for you in a reading test?",
+     "fup": "What will you do differently?",
+     "st": [
+      "The hardest part is …",
+      "From now on, …"
+     ],
+     "ex": "The hardest part is time. From now on, I’ll read once and only go back for specific lines."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Defend it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "however",
+    "as a result",
+    "because",
+    "I think"
+   ],
+   "rodadas": [
+    {
+     "q": "Paper books or e-books?",
+     "a": "Paper",
+     "b": "E-books",
+     "fa": [
+      "Paper. I remember more when I read on paper.",
+      "No notifications, no distractions."
+     ],
+     "fb": [
+      "E-books. You can carry a hundred books.",
+      "As a result, you read more."
+     ]
+    },
+    {
+     "q": "Should libraries stay silent, or become social spaces?",
+     "a": "Silent",
+     "b": "Social",
+     "fa": [
+      "Silent. Where else can people study in peace?",
+      "Noise is everywhere already."
+     ],
+     "fb": [
+      "Social. Libraries are no longer just for books.",
+      "Events bring young people in."
+     ]
+    },
+    {
+     "q": "City money: a new library or a new park?",
+     "a": "Library",
+     "b": "Park",
+     "fa": [
+      "A library. Education changes lives.",
+      "It’s free and open to everyone."
+     ],
+     "fb": [
+      "A park. People need green spaces.",
+      "However, a park helps health, and that matters too."
+     ]
+    },
+    {
+     "q": "For the DET: read every word, or skim first?",
+     "a": "Every word",
+     "b": "Skim first",
+     "fa": [
+      "Every word. You miss the details if you skim.",
+      "One careful reading is enough."
+     ],
+     "fb": [
+      "Skim first. The clock is short.",
+      "In other words, find the main idea, then the details."
+     ]
+    }
+   ],
+   "fim": "Four rounds. As a result, you’re ready for the text."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Your Text",
+   "t": "Write about a place that changed.",
+   "p": "Four steps. One signpost in each.",
+   "prof": "Check that every step has a signpost and that the last sentence covers the whole text, like a good title.",
+   "passos": [
+    {
+     "q": "What was the place like before?",
+     "st": [
+      "Years ago, … was …"
+     ],
+     "ex": "Years ago, the market near my house was small and dark."
+    },
+    {
+     "q": "What changed?",
+     "st": [
+      "However, …",
+      "It no longer …"
+     ],
+     "ex": "However, it no longer looks like that. It has a roof garden and food stalls."
+    },
+    {
+     "q": "What was the result?",
+     "st": [
+      "As a result, …"
+     ],
+     "ex": "As a result, families go there on Sundays, not only to shop."
+    },
+    {
+     "q": "Say the main idea again, in different words. Then give it a title.",
+     "st": [
+      "In other words, …",
+      "Title: …"
+     ],
+     "ex": "In other words, the market became a meeting place. Title: From Shopping to Sunday Plans."
+    }
+   ],
+   "fim": "A clear text, with a title that covers it all."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

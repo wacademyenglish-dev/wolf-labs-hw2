@@ -1,0 +1,116 @@
+/* ============================================================
+   THE LIZARD AND THE NEEDLE · THE FOUR LEVERS · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: um painel de laboratório
+   em aço escuro, quase preto; quatro alavancas com a cor de cada uma
+   (MAKE âmbar, LET ciano, HELP verde, STOP vermelho); a tira do molde
+   embaixo; o ocre do deserto como acento, porque a história termina lá.
+   ============================================================ */
+:root{
+  --noite:#07090b; --noite-rgb:7,9,11; --tinta:#e8ecee;
+  --t1:#eef2f3; --t2:#c3cbcf; --t2-rgb:195,203,207; --t3:#859096;
+  --ac:#e3a857; --ac2:#f3cf95; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(232,236,238,.05); --vidro2:rgba(232,236,238,.085); --vidro3:rgba(232,236,238,.12);
+  --fio:rgba(220,228,232,.12); --fio2:rgba(220,228,232,.22); --luz:rgba(232,236,238,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1a04}
+.btn.cheio{color:#2a1a04}
+.capa{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(56px,5.6vw,108px)/.95 var(--disp);letter-spacing:-.04em}
+.capa h1 i{font-style:normal;font-weight:200;color:var(--t3)} .capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:16px;justify-items:center}
+.bula{margin:0;font:700 12px var(--mono);letter-spacing:.18em;color:var(--t3)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.grande-p{min-height:52px;padding:0 22px;font:700 clamp(15px,1.15vw,20px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.on{border-color:var(--ac);background:#2a1d0b} .versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.versao.grande-v{min-height:64px;font:800 clamp(16px,1.3vw,22px) var(--mono);letter-spacing:.06em;text-align:center}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(17px,1.35vw,23px)/1.4 var(--disp)}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:900px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao u{text-decoration:none;color:var(--lc,var(--ac2));border-bottom:3px solid var(--lc,var(--ac2));padding:0 4px}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.ouve-c{display:grid;gap:8px;padding:10px 14px;border-radius:var(--r2)} .ouve-c .transcricao{margin:0}
+.pista{margin:0;font:600 italic 15px var(--disp);color:var(--t3)}
+
+/* o painel de alavancas */
+.painel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;width:min(100%,560px);padding:18px;border-radius:20px;background:linear-gradient(170deg,#161b1f,#0b0e11);border:1px solid #2a3238;box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 18px 40px rgba(0,0,0,.6)}
+.alav{display:grid;justify-items:center;gap:6px}
+.alav .trilho-a{position:relative;width:22px;height:120px;border-radius:11px;background:#05070a;border:1px solid #232b31;box-shadow:inset 0 2px 6px rgba(0,0,0,.8)}
+.alav .trilho-a i{position:absolute;left:50%;bottom:6px;width:38px;height:24px;margin-left:-19px;border-radius:8px;background:linear-gradient(180deg,#4a545c,#262d33);border:1px solid #59646d;transition:bottom .35s cubic-bezier(.3,1.4,.5,1),background .3s}
+.alav b{font:800 15px var(--mono);letter-spacing:.08em;color:var(--t3)} .alav small{font:700 10px var(--mono);letter-spacing:.08em;color:#5d676e;text-align:center}
+.alav.up .trilho-a i{bottom:90px;background:var(--lc);border-color:var(--lc);box-shadow:0 0 18px var(--lc)}
+.alav.up b{color:var(--lc)} .alav.up .trilho-a{border-color:var(--lc)}
+.alav.volta .trilho-a i{animation:volta .6s ease-out}
+@keyframes volta{0%{bottom:90px;background:var(--erro)}40%{bottom:40px}70%{bottom:14px}100%{bottom:6px}}
+.painel.mini{width:min(100%,380px);padding:12px;gap:8px} .painel.mini .trilho-a{height:64px;width:16px} .painel.mini .trilho-a i{width:28px;height:16px;margin-left:-14px} .painel.mini .alav.up .trilho-a i{bottom:42px} .painel.mini small{display:none} .painel.mini b{font-size:12px}
+.molde{display:grid;grid-template-columns:repeat(5,auto);gap:6px;justify-content:center}
+.molde span{display:grid;gap:2px;padding:8px 12px;border-radius:10px;background:#0c1013;border:1px solid var(--fio);font:700 clamp(15px,1.15vw,19px) var(--disp);text-align:center}
+.molde small{font:800 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.molde .m-lev{border-color:var(--lc);color:var(--lc)} .molde .m-enc{border:1px dashed var(--lc);color:var(--lc);font-family:var(--mono)}
+.c-make{color:#ffb15c} .c-let{color:#6fd3e8} .c-help{color:#8fd9a2} .c-stop{color:#ff7a6e}
+
+/* o quiz */
+.quiz{display:grid;gap:10px;padding:16px 18px;border-radius:var(--r2)} .quiz small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .quiz h3{margin:0;font:700 clamp(20px,1.6vw,27px)/1.3 var(--disp)}
+.ops{display:grid;gap:6px} .op{padding:12px 16px;border-radius:14px;border:1px solid var(--fio2);background:#0c1013;color:var(--t1);font:600 clamp(15px,1.15vw,19px) var(--disp);text-align:left;cursor:pointer}
+.op.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .op.errado{border-color:var(--erro);animation:treme .35s}
+.quiz .btn{justify-self:start}
+
+/* o anel de dois minutos */
+.anel{position:relative;width:200px;height:200px;margin:0 auto;padding:0;border:0;background:none} .anel svg{width:100%;height:100%;transform:rotate(-90deg)}
+.anel circle{fill:none;stroke-width:8} .a-fundo{stroke:#151b20} .a-vivo{stroke:var(--ac);stroke-dasharray:314;stroke-linecap:round;filter:drop-shadow(0 0 8px rgba(227,168,87,.6));transition:stroke-dashoffset .8s}
+.a-txt{position:absolute;inset:0;display:grid;place-content:center;text-align:center} .a-txt b{font:800 38px var(--mono);color:var(--ac2)} .a-txt small{font:800 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+
+/* a cadeia */
+.cadeia{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;margin:4px 0 6px}
+.elo{display:grid;gap:2px;min-width:104px;padding:8px 12px;border-radius:12px;background:#0c1013;border:1px solid var(--lc);font:800 13px var(--mono);letter-spacing:.06em;text-align:center;color:var(--t3)}
+.elo small{font-size:10px;color:var(--t3)} .elo i{font-style:normal;color:var(--lc);font-size:12px} .elo.on{color:var(--t1);border-color:var(--ac);box-shadow:0 0 0 2px rgba(227,168,87,.25)} .elo.feito{color:var(--t1)}
+.seta{color:var(--t3);font-weight:400}
+.quatro-l{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.lev-b{display:grid;gap:2px;padding:14px 8px;border-radius:14px;border:1px solid var(--fio2);background:#0c1013;color:var(--t1);cursor:pointer;text-align:center}
+.lev-b b{font:800 clamp(15px,1.2vw,20px) var(--mono);letter-spacing:.06em;color:var(--lc)} .lev-b small{font:700 10px var(--mono);letter-spacing:.06em;color:var(--t3)}
+.lev-b.certo{border-color:var(--lc);background:color-mix(in srgb,var(--lc) 14%,#0c1013)} .lev-b.errado{border-color:var(--erro);animation:treme .35s}
+.quatro-l.mini .lev-b{padding:10px 6px}
+.lagarto{display:grid;grid-template-columns:200px 1fr;gap:16px;align-items:center;padding:12px;border-radius:var(--r2)}
+.lagarto img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px} .lagarto small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .lagarto p{margin:6px 0 0;font:500 clamp(15px,1.15vw,19px)/1.5 var(--disp);color:var(--t2)} .lagarto b{color:var(--ac2)}
+
+/* o barulho da comida */
+.bolhas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:6px}
+.bolha{padding:10px 16px;border-radius:18px 18px 18px 4px;background:#141a1f;border:1px solid var(--fio2);font:600 italic clamp(17px,1.4vw,24px) var(--disp);color:var(--t2);transition:opacity 1s,filter 1s,transform 1s}
+.bolha.b1{transform:translateY(8px)} .bolha.b3{transform:translateY(-6px)}
+.bolha.some{opacity:.08;filter:blur(3px)}
+
+/* mito */
+.mito-b p{font-size:clamp(22px,2vw,32px)} .dois-m{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:700px;margin:0 auto 12px}
+
+/* a curva */
+.graf-c{padding:10px 14px;border-radius:var(--r2)} .graf{display:block;width:100%;height:auto}
+.graf text{font:700 11px var(--mono);letter-spacing:.08em;fill:var(--t3)} .graf .g-t.q{fill:var(--ac2)} .graf .g-t.ok{fill:var(--ok)}
+.g-ini{stroke:var(--fio2);stroke-dasharray:4 6} .g-sep{stroke:var(--erro);stroke-dasharray:3 5;opacity:.6}
+.g-l{fill:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400;animation:traca 1s ease-out forwards} .g1{stroke:#6fd3e8} .g2{stroke:var(--ac)}
+.g-p{fill:var(--ok)}
+@keyframes traca{to{stroke-dashoffset:0}}
+
+/* o painel de debate */
+.mocao{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .mocao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .mocao b{font:700 clamp(18px,1.4vw,24px)/1.35 var(--disp)}
+.lados{display:grid;grid-template-columns:1fr 1fr;gap:6px} .lados .versao{font:800 13px var(--mono);letter-spacing:.04em;text-align:center}
+.papeis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.papel-b{padding:12px 6px;border-radius:12px;border:1px solid var(--fio2);background:#0c1013;color:var(--t2);font:800 12px var(--mono);letter-spacing:.06em;cursor:pointer}
+.papel-b.on{border-color:var(--ac);color:var(--ac2)} .papel-b.feito{border-color:var(--ok);color:var(--ok)}
+.placar{margin:0;font:800 12px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.papel-fala p{font-size:clamp(18px,1.45vw,24px)}
+.lado-l .armas{grid-template-columns:1fr 1fr !important;margin-top:4px;gap:8px} .lado-l .arma{min-height:0;padding:10px 12px;gap:4px} .lado-l .arma .toque{display:none} .lado-l .cab{margin:6px 0 0}
+
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.geladeira-m .carta{background:linear-gradient(170deg,#1b1810,#11100b);border-color:#3a3220} .geladeira-m .carta b{color:var(--ac2)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} }
+@media (max-width:620px){ .quatro-l,.papeis{grid-template-columns:1fr 1fr} .molde{grid-template-columns:1fr 1fr} .lagarto{grid-template-columns:1fr} .lagarto img{aspect-ratio:16/9} .painel{gap:6px;padding:12px} .alav small{display:none} .lados,.dois-m{grid-template-columns:1fr} }

@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Beat the Blank · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Beat the Blank · The Detour</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Beat the Blank · The Detour</h2>
+    <p>Your student stops when a word doesn’t come, or switches language. This hour trains the reflex fluent speakers use all the time: <b>go around the word</b>. There are only four shapes: <b>It’s a kind of…</b>, <b>It’s the thing you use for …-ing</b>, <b>It’s when you…</b>, <b>It’s like…, but…</b> Inside each one is a small joint: <b>that, who, where, whose</b>, or nothing. The screen is a road with the bridge closed: the four shapes are the detour signs.</p>
+    <h4>NOBODY NAMES THE FIVE</h4>
+    <p>Scene I shows four objects and one feeling your student probably can’t name. Nobody names them until scene XI: not the screen, not you. Count the blanks with I GOT STUCK.</p>
+    <h4>DON’T SUPPLY THE WORD</h4>
+    <p>When your student is stuck, ask one question: <i>What do you DO with it?</i></p>
+    <h4>STRICT ON THE BAN, GENEROUS ON GRAMMAR</h4>
+    <p>Scene V: a forbidden word costs a point; broken grammar costs nothing today. Tap + DETOUR each time your student uses a shape.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>How do you say…?</i>, long silence, <i>the thing for open</i>, <i>a person who his job…</i>, <i>a place which you…</i></p>
+    <!--conversa--><h4>THE JURY (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After the forbidden cards, your student judges three people who lost a word in real life: Lucas in an interview, Mia with a translator app, Tom at a dinner party. There is no right verdict. Let them read the evidence and choose, wait five seconds in silence, then use the PUSH line (only you see it) to make it personal. Push them to show the better detour (“He could say: it’s when you…”). Recast quietly while they talk (the thing you use for <b>opening</b>, a person <b>who</b>…); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I The First Blank, V The Forbidden Cards, VI Which One Am I?, VIII The Jury, IX The Side Door, X No Take-Backs.</li>
+      <li><b>Listen</b>: II What You Do Now, IV Buying Time, VII The Joint (both versions).</li>
+      <li><b>Focus</b>: III The Four Detours, VII The Joint.</li>
+      <li><b>Write</b>: XI, three things from their home with a detour each. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* BEAT THE BLANK (Main B1) · pergunta-surpresa · 27/10/2026 · circunlocução: It's a kind of / It's the thing you use for / It's when you / It's like…, but… */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'reacao', tipo: 'And you?', q: 'When did a word last disappear in the middle of a sentence?',
+    opc: ['In English', 'In Portuguese!', 'Both, all the time'], st: ['Well, it was …', 'I was talking about … , and I couldn’t remember …'],
+    ex: 'In Portuguese! Well, it was yesterday. I was explaining my job, and I couldn’t remember the word for a kind of software.', push: 'What did you do: wait, or go around it?' },
+  { cena: 'tempo', tipo: 'Would you rather', q: 'Would you rather have a perfect vocabulary, or never feel nervous when you speak?',
+    opc: ['A perfect vocabulary', 'Never feel nervous'], st: ['I’d rather …, because …', 'How can I put it… It’s like …'],
+    ex: 'Never feel nervous. How can I put it… a big vocabulary is like a big car, but you need to be calm to drive it.', push: 'Which one would help you more at work tomorrow?' },
+  { cena: 'cartas', tipo: 'Opinion', q: 'Describe your favourite thing in your kitchen, without its name.',
+    opc: ['A machine', 'A tool', 'Something to eat'], st: ['It’s a kind of …', 'It’s the thing you use for …-ing', 'It’s like …, but …'],
+    ex: 'A machine. It’s like a small oven, but you use it for making bread crunchy in the morning.', push: 'I still don’t know. Give me one more detail.' },
+  { cena: 'semvolta', tipo: 'What if', q: 'You can only use 500 English words for a whole week. Which topic is hardest?',
+    opc: ['My job', 'My feelings', 'Food'], st: ['… would be the hardest, because …', 'It’s when you …'],
+    ex: 'My feelings. You know when you feel happy and sad at the same time? I don’t have a word for that.', push: 'Try it now: explain your job in three short sentences.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* BEAT THE BLANK (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O júri entra no lugar de "VIII · When It's a Verb" (extra, tocar as peças em ordem: prática
+   controlada). Depois das cartas e da junta, o aluno julga três pessoas que deram branco de
+   verdade. Os moldes da aula (It's a kind of… · It's when you… · It's like…, but…) e os compradores
+   de tempo (Well… · How can I put it…) moram nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'juri', troca: 'verbo', est: 'o', min: 7, img: 'porta', rot: 'The Jury', t: 'Three people lost a word. Was their move smart?',
+    p: 'Read the evidence. Give your verdict, or say your own. Explain it, and buy time in English if you need to. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The interview', provas: ['He forgot the word “deadline”.', 'He said it in Portuguese and smiled.', 'The interviewer didn’t understand.'],
+        q: 'Lucas, in a job interview. Verdict?', opc: ['Smart move', 'OK, but risky', 'Bad move'],
+        st: ['Well, I think it was …, because …', 'He could say: “It’s when you …”', 'How can I put it… It’s like …, but …'],
+        ex: 'Bad move. He could say: “It’s the day when you have to finish the work.” Everybody understands that.',
+        push: 'Be honest: have you ever done the same thing? When?' },
+      { tag: 'The app', provas: ['She didn’t know the word for a kitchen tool.', 'She stopped and used a translator app.', 'It took thirty seconds.'],
+        q: 'Mia, at dinner with new friends. Verdict?', opc: ['Smart move', 'OK, but risky', 'Bad move'],
+        st: ['Using an app is a kind of …', 'It’s OK when you …, but not when …', 'She could say: “It’s the thing you use for …”'],
+        ex: 'OK, but risky. Thirty seconds is a long silence. She could say: “It’s the thing you use for opening cans.”',
+        push: 'And in a job interview? Still OK to use the app?' },
+      { tag: 'The dinner', provas: ['He forgot the word “corkscrew”.', 'He said: “the thing you use for opening wine”.', 'People laughed, and then helped him.'],
+        q: 'Tom, at a dinner party. Verdict?', opc: ['Smart move', 'OK, but risky', 'Bad move'],
+        st: ['I think it was … , because …', 'People laughed, but …', 'It’s like …, but …'],
+        ex: 'Smart move. People laughed, but the conversation kept moving, and now he knows the word.',
+        push: 'Would YOU feel OK if people laughed? Really?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "branco": {
+   "t": "Four things and one feeling. No names.",
+   "p": "Describe each out loud. Stuck? Tap I GOT STUCK."
+  },
+  "reacao": {
+   "t": "Five things people do when a word disappears.",
+   "p": "Read them out loud. Which was yours? Then listen."
+  },
+  "moldes": {
+   "t": "Only four detours around a gap.",
+   "p": "Pick the detour. Say the whole sentence."
+  },
+  "tempo": {
+   "t": "Fill the silence with an English noise.",
+   "p": "Play one. Copy it. Use it in an answer."
+  },
+  "cartas": {
+   "t": "Describe it. Don’t say the forbidden words.",
+   "p": "Your teacher guesses. Every detour scores a point."
+  },
+  "qual": {
+   "t": "Four almost-twins. Pick one in your head.",
+   "p": "Don’t touch the screen. Describe it until they point."
+  },
+  "junta": {
+   "t": "Every detour has a small joint.",
+   "p": "Pick the joint. Say the whole sentence."
+  },
+  "cv-juri": {
+   "t": "Three people lost a word. Smart move?",
+   "p": "Read the evidence. Give your verdict and explain it."
+  },
+  "porta": {
+   "t": "Change the sentence. The hard word disappears.",
+   "p": "Read it. Say an easier version. Compare."
+  },
+  "semvolta": {
+   "t": "The words keep leaving. Don’t go quiet.",
+   "p": "Pick a topic and talk. Your teacher bans words."
+  },
+  "fim": {
+   "t": "The same five again. Now they get names.",
+   "p": "Describe three things from home. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Contornar a palavra que falta com quatro moldes (It’s a kind of…, the thing you use for…-ing, It’s when you…, It’s like…, but…) e relativas (that, who, where, whose).",
+  "armadilha": "O brasileiro para e pergunta “How do you say…?”, fica em silêncio ou troca de língua; e erra a junta: “the thing for open”, “a person who his job…”, “a place which you…”.",
+  "pal": [
+   "It’s a kind of…",
+   "the thing you use for …-ing",
+   "It’s when you…",
+   "It’s like…, but…",
+   "that",
+   "who",
+   "where",
+   "whose",
+   "Let me think…"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: quando a palavra não vem, não pare, contorne.",
+   "perg": "What do you do when a word doesn’t come?",
+   "pula": "Só leia a manchete e entre."
+  },
+  "branco": {
+   "obj": "Diagnóstico: descrever quatro objetos e um sentimento sem nomeá-los. Ninguém diz os nomes até a XI.",
+   "perg": "What do you DO with it?",
+   "pula": "Três itens bastam; conte os I GOT STUCK."
+  },
+  "reacao": {
+   "obj": "As cinco reações ao branco; o aluno reconhece a dele e ouve três fluentes.",
+   "perg": "Which one did you do in scene I?",
+   "pula": "Uma gravação basta."
+  },
+  "moldes": {
+   "obj": "Os quatro moldes do desvio: escolher o que serve e dizer a frase inteira.",
+   "perg": "Which detour fits here?",
+   "pula": "Quatro frases bastam, uma de cada molde."
+  },
+  "tempo": {
+   "obj": "Ganhar tempo com sons do inglês (Well…, Let me think…) em vez de silêncio.",
+   "perg": "Can you start your answer with a filler?",
+   "pula": "Dois sons bastam."
+  },
+  "cartas": {
+   "obj": "Cartas proibidas: descrever sem as palavras vetadas. Rígido no veto, generoso na gramática.",
+   "perg": "What is it like?",
+   "pula": "Quatro cartas bastam."
+  },
+  "qual": {
+   "obj": "Quatro coisas quase iguais: descrever a escolhida até o professor apontar.",
+   "perg": "How is yours different from the others?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "junta": {
+   "obj": "A palavrinha do meio (that, who, where, whose ou nada) que segura o desvio.",
+   "perg": "Which joint goes in the middle?",
+   "pula": "Cena extra: corte metade ou pule."
+  },
+  "cv-juri": {
+   "obj": "Júri: Lucas, Mia e Tom perderam uma palavra. A jogada foi boa? Use a linha PUSH.",
+   "perg": "Was his move smart? What could he say?",
+   "pula": "Dois casos bastam."
+  },
+  "porta": {
+   "obj": "Porta lateral: trocar a frase inteira para a palavra difícil sumir.",
+   "perg": "How can you say it in an easier way?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "semvolta": {
+   "obj": "Falar sem parar enquanto o professor proíbe palavras; calar é a única derrota.",
+   "perg": "Can you keep going without that word?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Volta dos cinco da cena I, agora com nome; escrita de três coisas de casa com desvio.",
+   "perg": "Can you describe it now, without the word?",
+   "pula": "Duas coisas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa usando os moldes do desvio em perguntas pessoais.",
+   "perg": "What is a word you always forget?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate curto sobre estratégias de comunicação, com motivos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Contar um momento real em que a palavra sumiu e como o aluno saiu.",
+   "perg": "What happened, and what did you say?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Talk around it.",
+   "p": "Pick a card. Use a detour if you need one.",
+   "palavras": [
+    "It’s a kind of…",
+    "the thing you use for…",
+    "It’s when you…",
+    "It’s like…, but…"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR KITCHEN",
+     "q": "Describe a thing in your kitchen you use every day, without its name.",
+     "fup": "Why couldn’t you live without it?",
+     "st": [
+      "It’s the thing you use for …-ing",
+      "It’s a kind of …"
+     ],
+     "ex": "It’s the thing you use for opening cans, and it’s always in the wrong drawer."
+    },
+    {
+     "k": "A FEELING",
+     "q": "Describe a feeling that has no easy word in English.",
+     "fup": "When did you last feel it?",
+     "st": [
+      "It’s when you …",
+      "It’s like …, but …"
+     ],
+     "ex": "It’s when you miss a place, but you know you can’t go back."
+    },
+    {
+     "k": "A BRAZILIAN THING",
+     "q": "Explain a Brazilian food or habit to a foreigner.",
+     "fup": "Would they like it? Why?",
+     "st": [
+      "It’s a kind of … that …",
+      "It’s like …, but …"
+     ],
+     "ex": "It’s like a pastry, but it’s fried and you eat it at the market."
+    },
+    {
+     "k": "A JOB",
+     "q": "Describe a job without saying its name.",
+     "fup": "Would you like to do it?",
+     "st": [
+      "It’s a person who …",
+      "It’s someone whose job is …"
+     ],
+     "ex": "It’s someone whose job is to fix the pipes in your house."
+    },
+    {
+     "k": "A PLACE",
+     "q": "Describe a place in your city without its name.",
+     "fup": "Why do people go there?",
+     "st": [
+      "It’s a place where …",
+      "It’s the kind of place that …"
+     ],
+     "ex": "It’s a place where people go on Sunday to buy fruit and talk."
+    },
+    {
+     "k": "YOUR BLANK",
+     "q": "Which word do you always forget in English?",
+     "fup": "What do you say instead now?",
+     "st": [
+      "I always forget the word for …",
+      "Now I say …"
+     ],
+     "ex": "I always forget the word for that thing on the stove, so now I say: the thing you use for frying."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "The thing is, …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "In a meeting, a word won’t come. Go around it or ask for it?",
+     "a": "Go around it",
+     "b": "Ask for it",
+     "fa": [
+      "Go around it. Nobody notices a detour.",
+      "Asking stops the whole conversation."
+     ],
+     "fb": [
+      "Ask for it. Then you learn the word forever.",
+      "People are usually happy to help."
+     ]
+    },
+    {
+     "q": "A translator app on your phone: smart or lazy?",
+     "a": "Smart",
+     "b": "Lazy",
+     "fa": [
+      "Smart. It gets the job done fast.",
+      "Nobody remembers every word."
+     ],
+     "fb": [
+      "Lazy. The conversation dies while you type.",
+      "You never build the reflex."
+     ]
+    },
+    {
+     "q": "Silence while you think, or a filler like “well…”?",
+     "a": "Silence",
+     "b": "A filler",
+     "fa": [
+      "Silence. It shows you are thinking.",
+      "Fillers can sound nervous."
+     ],
+     "fb": [
+      "A filler. Silence in English feels like a problem.",
+      "It buys time and keeps your turn."
+     ]
+    },
+    {
+     "q": "Mixing Portuguese and English: OK or never?",
+     "a": "OK",
+     "b": "Never",
+     "fa": [
+      "OK, if the other person understands.",
+      "Real people mix languages all the time."
+     ],
+     "fb": [
+      "Never in class. It becomes a habit.",
+      "The detour is the real skill."
+     ]
+    }
+   ],
+   "fim": "Four rounds. No blanks, and nobody went quiet."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Story",
+   "t": "The day the word disappeared.",
+   "p": "Tell a real blank, step by step.",
+   "prof": "Let them tell it in full; when they get stuck, ask what you DO with it instead of giving the word.",
+   "passos": [
+    {
+     "q": "Where were you, and who were you talking to?",
+     "st": [
+      "I was at … with someone who …"
+     ],
+     "ex": "I was at a hotel, talking to a woman who worked at the desk."
+    },
+    {
+     "q": "Which word didn’t come?",
+     "st": [
+      "I needed the word for the thing you use for …"
+     ],
+     "ex": "I needed the word for the thing you use for drying your hair."
+    },
+    {
+     "q": "What did you do: stop, switch, or go around it?",
+     "st": [
+      "I stopped and …",
+      "I went around it: I said …"
+     ],
+     "ex": "I stopped, and then I said: it’s a kind of machine that blows hot air."
+    },
+    {
+     "q": "What would you say today?",
+     "st": [
+      "Today I would say: it’s …"
+     ],
+     "ex": "Today I would say: it’s the thing you use for drying your hair, and I would not stop."
+    }
+   ],
+   "fim": "One real blank, beaten in English."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

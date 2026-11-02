@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Where Are You From? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Where Are You From? · Street Voices</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Where Are You From? · Street Voices</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Nadia Brooks does street interviews at a market in London.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: Question word, helper, person, verb. The little word goes at the end.</p><p style="margin:0 0 6px"><b>Short class (about 48 min):</b> I You and Your City · III Real Voices · V The Lost Questions · VI The Rule · VII Live at 7 PM · IX Your Pick · XI After the Show. Skip if you’re short on time: VIII, X (marked EXTRA on your screen). Full lesson: about 62 min.</p><p style="margin:0"><b>Open with:</b> “Where do you live? Is it a big city or a small town?”</p></div><!--/prep-->
+    <p>Nadia Brooks does street interviews at a market in London. Today six people answered, but the wind broke her microphone, and the recorder kept <b>only the answers</b>. The student hears each answer and gives back the question; every right question fills the empty line on an ID card. Then, live at 7 PM, eight questions with <b>does</b> stamp a passport. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>wh + do / does + person + verb</b>: <i>Where do you live? What does she do?</i> With <b>be</b>, no do: <i>Where are you from? When is your birthday?</i> <b>from / with</b> at the end. <b>does</b> takes the s (<i>Where does she live?</i>). <b>who</b> for a person, <b>what</b> for a thing or a job.</p>
+    <h4>THE TRAP</h4>
+    <p>Many learners put the little word first (<i>From where are you? With who you live?</i>) and ask without a helper (<i>Where you live?</i>) or mix be and do (<i>Where are you live? Where do you from?</i>). Also: <i>What do you make?</i> for a job, <i>What is your favorite singer?</i>, <i>Where does she lives?</i>, <i>Where do she work?</i></p>
+    <h4>THE VIDEO</h4>
+    <p>Four real people from BBC Learning English say where they are from and where they live, slowly and clearly, in four parts. Tap WHERE / WHAT / WHO / WHEN every time the student hears one.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>originally</i>, <i>diverse</i>, <i>shops</i>, <i>museums</i> and <i>markets</i>, before the video, in match the columns and hot seat. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>YOUR PICK (IX) AND THE SURPRISE QUESTION</h4>
+    <p>After Nadia’s microphone, three light choices: a guest for the show, a new city for one year, who you live with there. Answer first yourself, then let your student choose. Wait five seconds in silence, then use the PUSH line (only you see it): a quick yes or no. Each answer ends with a question back to you, so answer it. Recast quietly while they talk; at the end, ask them to fix one sentence themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Your City, V The Lost Questions, VII Live at 7 PM, VIII Your Turn at the Mic, IX Your Pick and X Interview Me.</li>
+      <li><b>Listen</b>: II The Words, III Real Voices and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule.</li>
+      <li><b>Write</b>: XI After the Show.</li>
+    </ul>
+    <p>No audio in this lesson: your voice is the recorder’s, the host’s and Nadia’s.</p>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* WHERE ARE YOU FROM? (Main A1) · pergunta-surpresa · 27/10/2026 · wh + do / does · wh + be */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'A house or a flat: where do you live?',
+    opc: ['A house', 'A flat'], st: ['I live in a …'],
+    ex: 'A flat. On the tenth floor!', push: 'With a pet? Yes or no?' },
+  { cena: 'fichas', tipo: 'Would you rather', q: 'Get up at 5 AM or work at night?',
+    opc: ['Get up at 5', 'Work at night'], st: ['I get up at …', 'I work at night.'],
+    ex: 'Work at night. I love the night!', push: 'And you, teacher? Ask me back.' },
+  { cena: 'carimbo', tipo: 'And you?', q: 'Who is your favorite singer?',
+    opc: ['A man', 'A woman', 'A band'], st: ['My favorite singer is …', 'Who is your favorite singer?'],
+    ex: 'A band! My favorite band is Coldplay. Who is your favorite singer?', push: 'Do you sing in the shower?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WHERE ARE YOU FROM? (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Escolha 1 de 3" no lugar de "IX · Quick Check" (extra, completar lacuna; a regra fica no VI).
+   Depois do microfone da Nadia (VIII): o convidado do programa, uma cidade nova por um ano, com quem morar lá.
+   A1 bem leve: três opções curtas, frase quase pronta nos iniciadores, o professor responde primeiro.
+   A gramática da aula (wh + do / does + pessoa + verbo · wh + be · from / with no fim) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'escolha', troca: 'quiz', est: 'o', min: 5, img: 'passaporte', rot: 'Your Pick', t: 'Street Voices, your way. Choose one, three times.',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The guest', sit: 'Tonight, one guest on the show.', q: 'Who do you want?',
+        opc: ['A chef', 'A pilot', 'A singer'],
+        st: ['A chef. What do you cook?', 'A pilot. Where do you fly?', 'A singer. Where are you from?'],
+        ex: 'A pilot! Where do you fly?',
+        push: 'One more question? Yes or no?' },
+      { tag: 'One year', sit: 'A new city for one year.', q: 'Where do you live?',
+        opc: ['London', 'New York', 'Tokyo'],
+        st: ['For one year, I live in …', 'And you? Where do you live?'],
+        ex: 'Tokyo! I live in Tokyo. And you?',
+        push: 'A big apartment? Yes or no?' },
+      { tag: 'At home', sit: 'One year in your new city.', q: 'Who do you live with?',
+        opc: ['A friend', 'A cat', 'Nobody!'],
+        st: ['I live with …', 'I live alone.', 'Who do you live with?'],
+        ex: 'A cat! I live with a cat. Who do you live with?',
+        push: 'Is it a good idea? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "You, your city, your people.",
+   "p": "Answer each message out loud."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen: they turn yellow."
+  },
+  "video": {
+   "t": "Four friends, four cities.",
+   "p": "Tap a question word when you hear it."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it again."
+  },
+  "fichas": {
+   "t": "Six answers, zero questions.",
+   "p": "Read the answer. Give the question."
+  },
+  "regra": {
+   "t": "Question word, helper, person, verb.",
+   "p": "Say each line the right way. Then tap it."
+  },
+  "carimbo": {
+   "t": "Live at 7 PM. Stamp the passport.",
+   "p": "Look at the card. Ask with does or is."
+  },
+  "nadia": {
+   "t": "Nadia is on YOUR street.",
+   "p": "Your teacher is Nadia. Answer, then ask back."
+  },
+  "cv-escolha": {
+   "t": "Street Voices, your way.",
+   "p": "Choose one. Your teacher answers first."
+  },
+  "roda": {
+   "t": "You are the reporter now.",
+   "p": "Pick a card. Ask your teacher."
+  },
+  "fim": {
+   "t": "Write three ID cards.",
+   "p": "Three people: a question and an answer each."
+  }
+ },
+ "prep": {
+  "obj": "Perguntas com wh + do / does + pessoa + verbo (e be sem do); o microfone da repórter Nadia Brooks quebrou e só ficaram as respostas.",
+  "armadilha": "O português põe a preposição na frente e dispensa auxiliar: “From where are you?”, “With who you live?”, “Where you live?”. Também mistura be e do: “Where are you live?”.",
+  "pal": [
+   "Where are you from?",
+   "Where do you live?",
+   "What does she do?",
+   "Who do you live with?",
+   "When is your birthday?",
+   "originally",
+   "diverse"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: entrevistas de rua num mercado de Londres.",
+   "perg": "Where are you from?",
+   "pula": "Só leia o título e comece."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: a cidade do aluno e as pessoas dele, por mensagens.",
+   "perg": "Is it a big city or a small town?",
+   "pula": "Três mensagens bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir: o aluno tenta adivinhar primeiro.",
+   "perg": "What does “diverse” mean?",
+   "pula": "Três palavras bastam."
+  },
+  "video": {
+   "obj": "Vídeo da BBC em quatro partes: tocar WHERE / WHAT / WHO / WHEN a cada vez que ouvir.",
+   "perg": "Where does he live now?",
+   "pula": "Duas partes bastam."
+  },
+  "falas": {
+   "obj": "Cada fala do vídeo, uma por uma, com explicação das palavras amarelas.",
+   "perg": "Can you say this line again?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fichas": {
+   "obj": "Seis respostas sem pergunta: o aluno devolve a pergunta e preenche a ficha.",
+   "perg": "What is the question for this answer?",
+   "pula": "Quatro fichas bastam."
+  },
+  "regra": {
+   "obj": "A regra: palavra de pergunta, auxiliar, pessoa, verbo; preposição no fim.",
+   "perg": "Where does “from” go?",
+   "pula": "Duas armadilhas bastam."
+  },
+  "carimbo": {
+   "obj": "Ao vivo às 7: o aluno pergunta sobre cada pessoa com does ou is e carimba o passaporte.",
+   "perg": "What does she do?",
+   "pula": "Cinco carimbos bastam."
+  },
+  "nadia": {
+   "obj": "Você é a Nadia na rua do aluno: ele responde e devolve a mesma pergunta.",
+   "perg": "Who do you live with?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-escolha": {
+   "obj": "Três escolhas leves: convidado do programa, cidade nova, com quem morar.",
+   "perg": "Which city do you choose? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "roda": {
+   "obj": "O aluno é o repórter e pergunta a você; depois você devolve.",
+   "perg": "What do you want to ask me?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: três fichas de pessoas da vida do aluno, com pergunta e resposta; vai para o My notes.",
+   "perg": "Where does your best friend live?",
+   "pula": "Duas fichas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas para o aluno responder e devolver perguntas com do / does / be.",
+   "perg": "Where do your parents live?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre cidades e lugares, depois perguntar o porquê.",
+   "perg": "Big city or small town?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é a Nadia Brooks; você pergunta sobre o trabalho dela.",
+   "perg": "Nadia, where do you work?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More street questions.",
+   "p": "Pick a card. Answer. Then ask it back.",
+   "palavras": [
+    "Where",
+    "What",
+    "Who",
+    "When",
+    "do / does"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PARENTS",
+     "q": "Where do your parents live?",
+     "fup": "Where are they from?",
+     "st": [
+      "They live in …",
+      "They’re from …"
+     ],
+     "ex": "They live in Campinas, but they’re from Minas."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What do you do?",
+     "fup": "Where do you work?",
+     "st": [
+      "I’m a …",
+      "I work at / in …"
+     ],
+     "ex": "I’m a nurse. I work in a big hospital."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "Who do you live with?",
+     "fup": "Who does the cooking?",
+     "st": [
+      "I live with …",
+      "I live alone."
+     ],
+     "ex": "I live with my husband and our dog."
+    },
+    {
+     "k": "YOUR BIRTHDAY",
+     "q": "When is your birthday?",
+     "fup": "What do you usually do?",
+     "st": [
+      "It’s on …"
+     ],
+     "ex": "It’s on July 9th. I usually have a party."
+    },
+    {
+     "k": "YOUR BEST FRIEND",
+     "q": "Where is your best friend from?",
+     "fup": "What does he do?",
+     "st": [
+      "He’s / She’s from …",
+      "He works …"
+     ],
+     "ex": "She’s from Recife. She works in a bank."
+    },
+    {
+     "k": "YOUR FAVORITE",
+     "q": "Who is your favorite actor?",
+     "fup": "Where is he from?",
+     "st": [
+      "My favorite actor is …",
+      "He’s from …"
+     ],
+     "ex": "My favorite actor is Wagner Moura. He’s from Bahia."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one. Then ask why.",
+   "palavras": [
+    "because",
+    "Why do you…?",
+    "live"
+   ],
+   "rodadas": [
+    {
+     "q": "Live in a big city or a small town?",
+     "a": "A big city",
+     "b": "A small town",
+     "fa": [
+      "A big city. There are shops, museums and markets."
+     ],
+     "fb": [
+      "A small town. People know your name."
+     ]
+    },
+    {
+     "q": "Live in London or in Rio for one year?",
+     "a": "London",
+     "b": "Rio",
+     "fa": [
+      "London. It’s very diverse."
+     ],
+     "fb": [
+      "Rio. I love the beach."
+     ]
+    },
+    {
+     "q": "Live with friends or live alone?",
+     "a": "With friends",
+     "b": "Alone",
+     "fa": [
+      "With friends. We cook together."
+     ],
+     "fb": [
+      "Alone. I like a quiet home."
+     ]
+    },
+    {
+     "q": "Answer a street interview or say no?",
+     "a": "Answer",
+     "b": "Say no",
+     "fa": [
+      "Answer. It’s fun!"
+     ],
+     "fb": [
+      "Say no. I don’t like cameras."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Now ask your teacher one more question."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Nadia Brooks now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Nadia, the street reporter.",
+   "perguntas": [
+    "Where are you from, Nadia?",
+    "Where do you live?",
+    "What do you do every day?",
+    "Who do you work with?",
+    "Where does your show happen?",
+    "What happened to your microphone today?"
+   ],
+   "st": [
+    "I’m from …",
+    "I live in …",
+    "I work with …"
+   ],
+   "ex": "I live in London. I do street interviews at a market."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

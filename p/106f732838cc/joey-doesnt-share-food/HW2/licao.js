@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Joey Doesn’t Share Food",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/106f732838cc/joey-doesnt-share-food/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "advice with should / shouldn't + the base verb (no to, no -s, no past); questions: Should I ...? Should we ...?",
   "abrir": "What do you share with your friends? What don't you share?",
   "fecho": "<b>Should</b> = a good idea. <b>Shouldn't</b> = a bad idea. After it, the plain verb: <i>He should share.</i> No <i>to</i>, no <i>-s</i>. Questions start with <b>Should</b>: <i>Should I call her? Should we wait?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a coffee table. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/106f732838cc/joey-doesnt-share-food/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "Two coffees, fries and cheesecake",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Joey should share his fries with his friends.",
-          "img": "https://wolf-labs.pages.dev/p/106f732838cc/joey-doesnt-share-food/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Monica shouldn't worry about the turkey tonight.",
-          "img": "https://wolf-labs.pages.dev/p/106f732838cc/joey-doesnt-share-food/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Should we wait for Rachel?",
-          "img": "https://wolf-labs.pages.dev/p/106f732838cc/joey-doesnt-share-food/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/106f732838cc/joey-doesnt-share-food/img/live-cozinha.webp",
+      "img": "../img/live-cozinha.webp",
       "leg": "A kitchen, dinner almost ready",
       "pede": "Look at the picture: a turkey and a dessert on the kitchen counter. Give 2 or 3 pieces of advice to the cook. Use <b>should</b> or <b>shouldn't</b>.",
       "ph": "You should …",

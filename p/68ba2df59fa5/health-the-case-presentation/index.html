@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -121,5 +122,285 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "A two-minute case presentation.",
+   "p": "Read it like a presenter. Then answer."
+  },
+  "transforma": {
+   "t": "Make it sound like a case presentation.",
+   "p": "Read the sentence and clue. Say it in the passive."
+  },
+  "cv-escala": {
+   "t": "Presenting at work: do you agree?",
+   "p": "Tap a number. Defend it."
+  },
+  "prova": {
+   "t": "Present a case in two minutes.",
+   "p": "One minute to plan with the card. Then present."
+  },
+  "pode": {
+   "t": "Lesson 14: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Apresentar um caso: a ordem (queixa, história, exame, testes, diagnóstico, tratamento, desfecho, plano), os marcadores (presented with, on examination, ruled out) e a passiva (was admitted, was referred).",
+  "armadilha": "Do português: “admitted in Monday” (é on Monday), “She was treat” (falta o -ed), “the exams showed” (é the tests) e contar a história fora de ordem.",
+  "pal": [
+   "presented with",
+   "has a history of",
+   "On examination,",
+   "showed",
+   "ruled out",
+   "was diagnosed with",
+   "was started on",
+   "was discharged with follow-up"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 14 de English for Healthcare: a apresentação de caso para colegas.",
+   "perg": "When did you last present a case? How long did it take?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "leitura": {
+   "obj": "Caso modelo (celulite, pedreiro de 45 anos com diabetes) lido como apresentador; sentido, depois o padrão.",
+   "perg": "What did the tests rule out?",
+   "pula": "Leia metade e faça duas perguntas."
+  },
+  "transforma": {
+   "obj": "Da ativa para a passiva: as frases ganham som de apresentação de caso.",
+   "perg": "They admitted him. How do you say it in a case?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-escala": {
+   "obj": "Quatro opiniões fortes sobre apresentar (slides pioram, cinco minutos no máximo, ler as notas).",
+   "perg": "Do slides make presentations worse?",
+   "pula": "Duas opiniões bastam."
+  },
+  "prova": {
+   "obj": "Tarefa com relógio: o aluno apresenta o caso fictício do abscesso dentário em dois minutos.",
+   "perg": "What did the patient present with?",
+   "pula": "Uma tentativa, sem repetir."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; lição: preparar um caso real ANONIMIZADO para a aula da conferência.",
+   "perg": "Can you present a case in order now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre apresentar no trabalho e a rotina clínica, com a passiva nas frases prontas.",
+   "perg": "Who do you present cases to?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre formatos de apresentação e reuniões clínicas.",
+   "perg": "Slides or no slides?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta um caso fictício novo, parte por parte, e apresenta no fim.",
+   "perg": "What was the patient diagnosed with?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Presenting at work.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "was admitted",
+    "was referred",
+    "presented with",
+    "On examination"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR AUDIENCE",
+     "q": "Who do you present cases or reports to at work?",
+     "fup": "Is it formal or informal?",
+     "st": [
+      "I present to …",
+      "It’s usually …"
+     ],
+     "ex": "I present to the other dentists on Fridays. It’s usually informal."
+    },
+    {
+     "k": "NERVES",
+     "q": "Do you get nervous when you present?",
+     "fup": "What helps you?",
+     "st": [
+      "I get nervous when …",
+      "It helps when I …"
+     ],
+     "ex": "I get nervous when the senior doctors ask questions. It helps when I practice the order."
+    },
+    {
+     "k": "THE ORDER",
+     "q": "Why is the order of a case so important?",
+     "fup": "What happens when it’s out of order?",
+     "st": [
+      "The order matters because …"
+     ],
+     "ex": "The order matters because colleagues follow the logic, from symptoms to plan."
+    },
+    {
+     "k": "INTERESTING",
+     "q": "What kind of case is the most interesting to present?",
+     "fup": "Why?",
+     "st": [
+      "The most interesting cases are …"
+     ],
+     "ex": "The most interesting cases are the ones where the first diagnosis was ruled out."
+    },
+    {
+     "k": "TIME",
+     "q": "How long should a case presentation be?",
+     "fup": "What can you cut?",
+     "st": [
+      "I think … minutes, because …"
+     ],
+     "ex": "I think two minutes, because people stop listening after that."
+    },
+    {
+     "k": "CONFERENCE",
+     "q": "Would you like to present at a conference in English?",
+     "fup": "What topic?",
+     "st": [
+      "I’d like to present …",
+      "Not yet, but …"
+     ],
+     "ex": "I’d like to present a case about implants. Not yet, but maybe next year."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "In my view,",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Slides or no slides for a case presentation?",
+     "a": "Slides",
+     "b": "No slides",
+     "fa": [
+      "Slides. Images and test results are easier to see.",
+      "People remember what they see."
+     ],
+     "fb": [
+      "No slides. People look at the screen, not at you.",
+      "A good story doesn’t need slides."
+     ]
+    },
+    {
+     "q": "Read your notes or speak from memory?",
+     "a": "Read notes",
+     "b": "From memory",
+     "fa": [
+      "Read notes. Accuracy matters in medicine.",
+      "You won’t forget a number."
+     ],
+     "fb": [
+      "From memory. It sounds confident and natural.",
+      "Notes for numbers only."
+     ]
+    },
+    {
+     "q": "Five minutes maximum, or as long as it takes?",
+     "a": "Five minutes",
+     "b": "As long as it takes",
+     "fa": [
+      "Five minutes. Everyone is busy.",
+      "Short forces you to choose what matters."
+     ],
+     "fb": [
+      "As long as it takes. Complex cases need time.",
+      "Cutting details can be dangerous."
+     ]
+    },
+    {
+     "q": "Questions during the presentation, or only at the end?",
+     "a": "During",
+     "b": "At the end",
+     "fa": [
+      "During. Problems are fixed right away.",
+      "It feels like a conversation."
+     ],
+     "fb": [
+      "At the end. The presenter keeps the order.",
+      "Many questions are answered later anyway."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The case is closed."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Case",
+   "t": "Build a short fictional case.",
+   "p": "One part at a time. Then present it.",
+   "prof": "EN: You are the senior colleague. After each step, ask one short clinical question.",
+   "passos": [
+    {
+     "q": "Who is the patient, and what did they present with?",
+     "st": [
+      "This is a …-year-old … who presented with …"
+     ],
+     "ex": "This is a 30-year-old teacher who presented with a toothache and fever."
+    },
+    {
+     "q": "History and examination.",
+     "st": [
+      "She has a history of …",
+      "On examination, …"
+     ],
+     "ex": "She has no history of disease. On examination, there was swelling on the left side."
+    },
+    {
+     "q": "Tests and diagnosis.",
+     "st": [
+      "The X-ray showed …",
+      "She was diagnosed with …"
+     ],
+     "ex": "The X-ray showed an abscess. She was diagnosed with a dental abscess."
+    },
+    {
+     "q": "Treatment and plan.",
+     "st": [
+      "She was started on …",
+      "She was discharged with …"
+     ],
+     "ex": "She was started on antibiotics and was discharged with follow-up in one week."
+    }
+   ],
+   "fim": "Now present it all, in under two minutes."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

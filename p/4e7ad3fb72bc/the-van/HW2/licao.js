@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Van",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4e7ad3fb72bc/the-van/img/live-van.webp",
+  "capa": "../img/live-van.webp",
   "alvo": "let's + plain verb to invite (Let's start); let's not to say no together; Shall we ...? to ask; never let's to",
   "abrir": "What do you suggest doing on Saturday?",
   "fecho": "<b>Let's</b> + the plain verb: <i>Let's start.</i> No, together: <b>Let's not</b> wait. To ask: <b>Shall we</b> go? Never <i>let's to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a van full of boxes. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/4e7ad3fb72bc/the-van/img/live-van.webp",
+      "img": "../img/live-van.webp",
       "leg": "The van and the boxes",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,7 +109,7 @@ window.HW2 = {
       "frases": [
         {
           "t": "Let's start with the small boxes.",
-          "img": "https://wolf-labs.pages.dev/p/4e7ad3fb72bc/the-van/img/live-van.webp",
+          "img": "../img/live-van.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4e7ad3fb72bc/the-van/img/live-rua.webp",
+      "img": "../img/live-rua.webp",
       "leg": "A quiet street on a rainy evening",
       "pede": "Look at the picture: a quiet street in the rain. Write 2 or 3 sentences to a friend: one thing to do with <b>Let's</b>, one thing <b>not</b> to do, and one question with <b>Shall we</b>.",
       "ph": "Let's …",

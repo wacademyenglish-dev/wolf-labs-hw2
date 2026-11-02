@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Light at Seven · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:ital,wght@0,300;0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Light at Seven · Windows at Night</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Light at Seven · Windows at Night</h2>
+    <p>The student just moved in. From the kitchen window they see a building across the courtyard, and one window that turns on at seven every night. The screen is that building: every time the student says a neighbor’s routine with the -s, a window lights up. On Friday the window stays dark; on Saturday there are two cups. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>Present simple, third person: <b>he works, she reads, it opens</b>. One S only: a plural front already has it (<i>the dogs bark</i>), so <i>they</i> takes none. Four endings: <i>works · watches · studies · has</i> (and <i>goes, does</i>). The negative moves the S into does: <i>he doesn’t wake up</i>. The mistakes: <i>she work / he go</i> and <i>they works / the dogs barks</i>.</p>
+    <h4>THE AUDIO</h4>
+    <p>Pause and 0.75× on every line; the transcript opens after listening; all were checked against the audio. Scene VIII is the whole story read aloud (about two minutes): listen twice, then the questions, then the text.</p>
+    <!--conversa--><h4>OK OR NOT OK? (V) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the eight windows light up, three neighbor rules, green or red: Tom plays the piano at midnight, Ana’s dog barks at six, and you watch the man’s window every night (the story of the lesson). There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it). The starters keep he / she …s in their mouth. Recast quietly while they talk (he play → he plays); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: II Every Night, VII Friday, Saturday, VIII The Whole Story.</li>
+      <li><b>Out loud</b>: I Someone in Your House, V OK or Not OK? (green or red, then he / she …s), IX Curious Neighbors.</li>
+      <li><b>Focus</b>: III One S Only (the front or the verb, never both), IV The Building (eight neighbors light eight windows), VI Four Endings.</li>
+      <li><b>Write</b>: X, their own building, with the red wavy line for <i>she work</i>, <i>they works</i>, <i>watchs / studys</i> and <i>doesn’t wakes</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The building, the windows and the seesaw move on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE LIGHT AT SEVEN (Main A1) · pergunta-surpresa · 27/10/2026 · he / she …s (máx. 3 no A1) */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'noites', tipo: 'And you?', q: 'Seven tonight: your best friend…',
+    opc: ['cooks.', 'works.', 'I don’t know!'], st: ['At seven, she …', 'At seven, he …'],
+    ex: 'At seven, my friend Bia cooks dinner.', push: 'Every night? Yes or no?' },
+  { cena: 'gang', tipo: 'Would you rather', q: 'A neighbor with a dog or a piano?',
+    opc: ['A dog', 'A piano'], st: ['The dog barks …', 'He plays the piano …'],
+    ex: 'A piano! A dog barks all day.', push: 'At night? Yes or no?' },
+  { cena: 'grafia', tipo: 'And you?', q: 'Saturday: who sleeps late in your house?',
+    opc: ['Me!', 'My brother', 'Nobody'], st: ['My … sleeps late.', 'I sleep late.'],
+    ex: 'My brother! He sleeps until twelve.', push: 'Every Saturday? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE LIGHT AT SEVEN (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   OK / Not OK (duas opções coloridas) ENTRA depois de "IV · The Building" (as cenas extra são a história
+   inteira e os vizinhos inventados; preferi não tirar nenhuma: a aula curta vai de 45 a 51 min, a inteira a 65).
+   Logo depois de acender as oito janelas: regras de vizinho — piano à meia-noite, o cachorro que late às seis,
+   e você olhando a janela dele toda noite (o próprio enredo da aula). A1 bem leve: duas opções, frase quase
+   pronta, o professor responde primeiro. A gramática (he / she …s) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'vizinho', apos: 'predio', est: 'o', min: 6, img: 'noite', rot: 'OK or Not OK?', t: 'Neighbor rules. You decide.',
+    p: 'Choose one. Your teacher answers first. Then say it with he …s or she …s.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The piano', sit: 'Tom plays the piano at midnight.', q: 'OK or not OK?',
+        opc: [{ t: 'OK!', cor: 'g' }, { t: 'Not OK!', cor: 'r' }],
+        st: ['OK! He plays well.', 'Not OK! He plays at midnight!'],
+        ex: 'Not OK! He plays at midnight, and I sleep at eleven.',
+        push: 'Every night? Yes or no?' },
+      { tag: 'The dog', sit: 'Ana’s dog barks at six.', q: 'OK or not OK?',
+        opc: [{ t: 'OK!', cor: 'g' }, { t: 'Not OK!', cor: 'r' }],
+        st: ['OK! I get up at six.', 'Not OK! It barks at six!'],
+        ex: 'OK! I get up at six. The dog is my alarm!',
+        push: 'On Sunday too? Yes or no?' },
+      { tag: 'The window', sit: 'You watch his window every night.', q: 'OK or not OK?',
+        opc: [{ t: 'OK!', cor: 'g' }, { t: 'Not OK!', cor: 'r' }],
+        st: ['OK! He reads, he makes coffee.', 'Not OK! He lives his life.'],
+        ex: 'OK, a little! He reads, he makes coffee. It’s like TV!',
+        push: 'He watches YOUR window. OK?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "One person in your house.",
+   "p": "Answer each message out loud."
+  },
+  "noites": {
+   "t": "Every night, the same four things.",
+   "p": "Listen. Say it. The window shows it."
+  },
+  "gang": {
+   "t": "One S: the front or the verb.",
+   "p": "Tap the side with the S. Say it."
+  },
+  "predio": {
+   "t": "Eight windows, eight neighbors.",
+   "p": "Pick the verb. Say it with the hour."
+  },
+  "cv-vizinho": {
+   "t": "Neighbor rules. You decide.",
+   "p": "Your teacher answers first. Then say he …s."
+  },
+  "grafia": {
+   "t": "Four ways to write the S.",
+   "p": "Look at the end. Pick it. Say it."
+  },
+  "escuro": {
+   "t": "Friday: dark. Saturday: two cups.",
+   "p": "Listen. Then say it: doesn’t, or they."
+  },
+  "historia": {
+   "t": "The whole story. Listen first.",
+   "p": "Listen twice. Answer. Then read it aloud."
+  },
+  "vizinhos": {
+   "t": "Now invent three neighbors.",
+   "p": "Who they are, what they do, when."
+  },
+  "fim": {
+   "t": "Write your own building.",
+   "p": "Four neighbors, four routines. Watch the S."
+  }
+ },
+ "prep": {
+  "obj": "Presente simples na 3ª pessoa (he works, she reads): o aluno vê pela janela a rotina dos vizinhos e a janela que acende às sete.",
+  "armadilha": "Em português o verbo não muda com ele/ela do jeito do inglês: sai “she work”, “he go”. E o S em dobro: “they works”, “the dogs barks”, “doesn’t wakes”.",
+  "pal": [
+   "works",
+   "watches",
+   "studies",
+   "has",
+   "goes",
+   "doesn’t",
+   "every night",
+   "at seven"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: um prédio do outro lado do pátio e a janela que acende às sete.",
+   "perg": "Do you know your neighbors?",
+   "pula": "Só leia o título e comece."
+  },
+  "abre": {
+   "obj": "Aquecimento: uma pessoa da casa do aluno e a rotina dela, por mensagens.",
+   "perg": "What does she do every morning?",
+   "pula": "Três mensagens bastam."
+  },
+  "noites": {
+   "obj": "Escuta: as quatro coisas de toda noite, ditas com o S da 3ª pessoa.",
+   "perg": "What does he do at seven?",
+   "pula": "Duas frases bastam."
+  },
+  "gang": {
+   "obj": "Um S só: no sujeito plural ou no verbo, nunca nos dois.",
+   "perg": "Where does the S go here?",
+   "pula": "Quatro frases bastam."
+  },
+  "predio": {
+   "obj": "Oito vizinhos: o aluno diz cada rotina com a hora e acende a janela.",
+   "perg": "What does she do, and when?",
+   "pula": "Cinco janelas bastam."
+  },
+  "cv-vizinho": {
+   "obj": "Três regras de vizinho, verde ou vermelho; o aluno opina com he / she …s.",
+   "perg": "Tom plays the piano at midnight. OK or not?",
+   "pula": "Duas regras bastam."
+  },
+  "grafia": {
+   "obj": "As quatro terminações: works, watches, studies, has (e goes, does).",
+   "perg": "How do you write watch with he?",
+   "pula": "Quatro verbos bastam."
+  },
+  "escuro": {
+   "obj": "Escuta: sexta escura (doesn’t) e sábado com duas xícaras (they, sem S).",
+   "perg": "Why is the window dark on Friday?",
+   "pula": "Uma frase de cada dia basta."
+  },
+  "historia": {
+   "obj": "A história inteira em áudio (uns dois minutos): ouvir duas vezes, responder, ler.",
+   "perg": "Who is the man in the window?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "vizinhos": {
+   "obj": "O aluno inventa três vizinhos: quem são, o que fazem e quando.",
+   "perg": "Who lives in this window?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o prédio do aluno, quatro vizinhos e quatro rotinas; vai para o My notes.",
+   "perg": "What does your neighbor do every day?",
+   "pula": "Duas rotinas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre a rotina de pessoas reais da vida do aluno, com he / she …s.",
+   "perg": "What does your best friend do on Sunday?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre vizinhos e rotina, usando a 3ª pessoa.",
+   "perg": "A quiet neighbor or a friendly neighbor?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno descreve, passo a passo, a noite de alguém que ele conhece.",
+   "perg": "What does this person do after dinner?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about real people.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "works",
+    "watches",
+    "studies",
+    "doesn’t",
+    "every day"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR NEIGHBOR",
+     "q": "Think of one neighbor. What does he or she do?",
+     "fup": "When does he leave home?",
+     "st": [
+      "He / She …s.",
+      "He doesn’t …"
+     ],
+     "ex": "My neighbor works at a bank. She leaves at seven."
+    },
+    {
+     "k": "YOUR BEST FRIEND",
+     "q": "What does your best friend do on Sundays?",
+     "fup": "Does she sleep late?",
+     "st": [
+      "She …s.",
+      "She doesn’t …"
+     ],
+     "ex": "She goes to the park. She doesn’t work on Sundays."
+    },
+    {
+     "k": "YOUR BOSS",
+     "q": "What does your boss or teacher do every morning?",
+     "fup": "Does he drink coffee?",
+     "st": [
+      "He …s.",
+      "He has …"
+     ],
+     "ex": "He checks his email and he has a big coffee."
+    },
+    {
+     "k": "THE DOG",
+     "q": "Is there a dog in your street? What does it do?",
+     "fup": "Does it bark at night?",
+     "st": [
+      "It …s.",
+      "It doesn’t …"
+     ],
+     "ex": "It barks at six and it sleeps all afternoon."
+    },
+    {
+     "k": "A FAMOUS PERSON",
+     "q": "Think of a famous person. What does he or she do?",
+     "fup": "Where does he live?",
+     "st": [
+      "He / She …s.",
+      "He lives in …"
+     ],
+     "ex": "She sings and she lives in Los Angeles."
+    },
+    {
+     "k": "AT NIGHT",
+     "q": "What does your family do every night?",
+     "fup": "Who goes to bed late?",
+     "st": [
+      "My … watches …",
+      "They … (no S)"
+     ],
+     "ex": "My dad watches the news. My kids play games."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "he …s",
+    "she doesn’t"
+   ],
+   "rodadas": [
+    {
+     "q": "A quiet neighbor or a friendly neighbor?",
+     "a": "Quiet",
+     "b": "Friendly",
+     "fa": [
+      "Quiet. He doesn’t make noise."
+     ],
+     "fb": [
+      "Friendly. She says hello every day."
+     ]
+    },
+    {
+     "q": "The man in the window: a writer or a cook?",
+     "a": "A writer",
+     "b": "A cook",
+     "fa": [
+      "A writer. He works every night at seven."
+     ],
+     "fb": [
+      "A cook. He makes dinner at seven."
+     ]
+    },
+    {
+     "q": "Live in a house or an apartment?",
+     "a": "A house",
+     "b": "An apartment",
+     "fa": [
+      "A house. Nobody watches me!"
+     ],
+     "fb": [
+      "An apartment. The doorman helps a lot."
+     ]
+    },
+    {
+     "q": "Watching a neighbor’s window: OK or not OK?",
+     "a": "OK",
+     "b": "Not OK",
+     "fa": [
+      "OK. He doesn’t know, and it’s only a light."
+     ],
+     "fb": [
+      "Not OK. Everybody needs a private life."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The windows go dark now."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "One Night",
+   "t": "One night in someone’s life.",
+   "p": "Choose a person. Tell their evening.",
+   "prof": "Ask one follow-up per step; recast any missing S quietly.",
+   "passos": [
+    {
+     "q": "Choose a person you know. Who is it?",
+     "st": [
+      "My … is …"
+     ],
+     "ex": "My sister Ana is a nurse."
+    },
+    {
+     "q": "What does she do when she gets home?",
+     "st": [
+      "She …s at …",
+      "First, she …"
+     ],
+     "ex": "She gets home at six and she takes a shower."
+    },
+    {
+     "q": "What does she do after dinner?",
+     "st": [
+      "She watches …",
+      "She doesn’t …"
+     ],
+     "ex": "She watches a series. She doesn’t cook."
+    },
+    {
+     "q": "When does she go to bed?",
+     "st": [
+      "She goes to bed at …"
+     ],
+     "ex": "She goes to bed at eleven, every night."
+    }
+   ],
+   "fim": "One more window lights up."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

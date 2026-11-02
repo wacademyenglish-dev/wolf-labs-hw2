@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Half of the World · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 5 · B1</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 5 · Half of the World · B1</h2>
+    <p>Episode 5 of <b>Better Speaking</b>, B1 version. Kofi Annan, from Ghana: half of humanity has never made a phone call. The language is <b>quantifiers</b>: <b>all of, most, most of, half of, some of, none of</b>. The sister lesson for B2 is &ldquo;Hold Their Attention&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; How many, Guess the survey. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; All, most, half of, Match the number, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Your world in numbers. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>&ldquo;A maioria das pessoas&rdquo; becomes <i>the most of people</i>. &ldquo;A metade de&rdquo; becomes <i>the half of</i>. And &ldquo;nenhum dos&rdquo; becomes <i>nobody of</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 5 · HALF OF THE WORLD (B1)
+   Vídeo: BBC Learning English, Better Speaking (fn0ns3BEflM), três trechos (~3:00).
+   Alvo: quantificadores (all, most, half of, some of, none of). Nenhuma B1 ensina. A aula irmã B2 é a "Hold Their Attention". */
+const M = { nome: "Half of the World", kick: "B1 · ALL, MOST, HALF OF, NONE OF" };
+var EP = {
+  n: 5, de: 8, nivel: 'B1', titulo: 'Half of the World', video: 'fn0ns3BEflM',
+  convidado: 'Kofi Annan', habilidade: 'talk about how many',
+  trechos: [
+    { ini: 66, fim: 130, rot: 'Kofi Annan on globalization' },
+    { ini: 223, fim: 289, rot: 'Richard: “try to imagine”' },
+    { ini: 289, fim: 358, rot: 'Prepare your words' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'Kofi Annan, from Ghana, speaks to the world: half of humanity has never made a phone call. Today: all, most, half of, none. How many?',
+      nota: 'Ask: how many people in your family speak English?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'How <em>many</em>?', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Help with all / most / some / none.',
+      cartas: [
+        { frente: 'Friends', verso: 'How many of your friends speak English?', dica: 'Most of my friends… / None of…', cor: 'var(--guest)', fw: { q: 'And in your family?', st: ['All of them…', 'Half of my family…', 'None of them…'], help: '“None of my family speaks English. I\'m the first!”' } },
+        { frente: 'Phone', verso: 'How many hours a day do you use your phone?', dica: 'About… hours.', cor: 'var(--host)', fw: { q: 'Can you imagine a day without it?', st: ['Yes, I can.', 'No, I can\'t.', 'Maybe half a day…'], help: '“Maybe half a day, on a Sunday.”' } },
+        { frente: 'World', verso: 'Do you think the world is fair? Why?', dica: 'I think… because…', cor: 'var(--teacher)', fw: { q: 'Give one example.', st: ['Some people…', 'Half of the world…', 'Most people…'], help: '“Some people have three cars and some people have no food.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 3 minutes', titulo: 'Listen to <em>Kofi Annan</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Kofi Annan was from…', ops: [{ t: 'Ghana' }, { t: 'Canada' }] }, { q: 'How much do half of the world\'s people live on, in his speech?', ops: [{ t: 'less than $2 a day' }, { t: 'more than $20 a day' }] } ],
+      durante: 'Listen for: “half of our fellow human beings”, “half of humanity”, “for all… for none”.',
+      depois: [ { f: 'Half of humanity had never made a phone call.', ok: 1 }, { f: 'Annan says globalization already works for all.', ok: 0 }, { f: 'Richard prepared football words before he met his friend.', ok: 1 }, { f: 'His friend Yon is from France.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'All, most, <em>half of</em>', pt: 'De todos a nenhum. Com “the / my / our” no meio, use OF.',
+      nota: 'Read each card. The red card is “the most of”.',
+      cartoes: [ { g: '<b>All of</b> my friends · <b>Most of</b> my friends', p: '100% · about 80%.' }, { g: '<b>Half of</b> humanity · <b>Some of</b> them', p: '50% · a few.' }, { g: '<b>None of</b> my family speaks English.', p: '0%.' }, { g: 'The most of people use phones.', p: 'Say: MOST people (no the).', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'how many?', titulo: 'Match the <em>number</em>', pt: 'Toque na palavra e depois no número.',
+      nota: 'Say a true sentence about your class or your family with each one.',
+      esq: ['all of them', 'most of them', 'half of them', 'some of them', 'none of them'], dir: ['10 of 10', '8 of 10', '5 of 10', '2 of 10', '0 of 10'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Tell me about the people at your work or school.', st: ['Most of them…', 'Half of them…', 'None of them…'], help: '“Most of them drink coffee. None of them drink tea.”' } },
+    { k: 'cartas', est: 'o', rot: 'the class survey', titulo: 'Guess the <em>survey</em>', pt: 'Vire a pergunta e adivinhe a resposta dos brasileiros com all / most / half / none.',
+      nota: 'The student guesses with a quantifier and a reason. There is no right answer; it is the reason that counts.',
+      cartas: [
+        { frente: 'Q1', sob: 'guess', verso: 'How many Brazilians have a smartphone?', dica: 'I think most of them…', cor: 'var(--guest)', fw: { q: 'Now make a survey question for me.', st: ['How many of your students…?', 'How many people…?'], help: '“How many of your students study at night?”' } },
+        { frente: 'Q2', sob: 'guess', verso: 'How many Brazilians speak English?', dica: 'I think some of them…', cor: 'var(--host)' },
+        { frente: 'Q3', sob: 'guess', verso: 'How many Brazilians like football?', dica: 'I think half of them…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: '“A maioria das pessoas”, “metade de” and “nenhum”.',
+      itens: [ { erro: '<s>The most of</s> people use phones.', certo: '<b>Most</b> people use phones.', por: 'No the before most.' }, { erro: '<s>The half of</s> the world…', certo: '<b>Half of</b> the world…', por: 'Half of (no the before half).' }, { erro: '<s>Nobody of</s> my friends came.', certo: '<b>None of</b> my friends came.', por: '“Nenhum dos” = none of.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the speech and close to it. Read each one aloud.',
+      itens: [ { f: '___ of humanity has never made a phone call.', ops: ['Half', 'The half'], ok: 0 }, { f: 'If it doesn\'t work for all, it will work for ___.', ops: ['none', 'nobody of'], ok: 0 }, { f: '___ people in my city like football.', ops: ['Most', 'The most of'], ok: 0 }, { f: 'They live on less ___ two dollars a day.', ops: ['than', 'of'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>world</em> in numbers', pt: 'Escreva cinco frases sobre a sua cidade, família ou trabalho com all, most, half of, some of e none of.',
+      ph: 'In my family, most of us… Half of my friends… None of my colleagues…', nota: 'The line under the paper catches “the most of” and “nobody of”. SAVE sends it to My notes.',
+      banco: ['All of', 'Most', 'Most of', 'Half of', 'Some of', 'None of', 'my friends', 'my family', 'people in my city'],
+      regras: [['\\bthe most of\\b', 'Check: MOST people / MOST OF my friends.'], ['\\bnobody of\\b', 'Check: NONE OF.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Nothing to lose', tx: 'A young tennis player hits a ball against a wall, every day. Years later, she plays her hero at Wimbledon.',
+      ganchos: [['Next guest', 'a tennis champion'], ['The skill', 'something, anything, nothing'], ['Your task', 'five “how many” sentences']], nota: 'Ask: did you have a hero when you were a child? That opens Episode 6.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "Half of humanity has never made a phone call. All, most, none?"
+  },
+  "c9": {
+   "p": "A girl hits a ball against a wall. Years later, Wimbledon."
+  }
+ },
+ "prep": {
+  "obj": "Quantificadores: all of, most, most of, half of, some of, none of. Kofi Annan, de Gana: metade da humanidade nunca fez uma ligação.",
+  "armadilha": "“A maioria das pessoas” vira “the most of people”, “a metade de” vira “the half of” e “nenhum dos” vira “nobody of”.",
+  "pal": [
+   "all of",
+   "most",
+   "most of",
+   "half of",
+   "some of",
+   "none of",
+   "humanity",
+   "a phone call",
+   "the world"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o convidado: Kofi Annan e a frase sobre metade da humanidade.",
+   "perg": "How many people in your family speak English?",
+   "pula": "Uma resposta e siga."
+  },
+  "c1": {
+   "obj": "Conversa sobre quantidades; ajude com all / most / some / none.",
+   "perg": "How many of your friends live in your city?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes do Kofi Annan, em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "How many people have never made a phone call?",
+   "pula": "Assista uma vez só; os clipes vão inteiros."
+  },
+  "c3": {
+   "obj": "A regra: all, most, half of, none of; o cartão vermelho é “the most of”.",
+   "perg": "Most people, or most of the people? Why?",
+   "pula": "Leia os cartões e peça uma frase com most."
+  },
+  "c4": {
+   "obj": "Ligar o quantificador ao número; o aluno diz uma frase verdadeira sobre a família ou a turma.",
+   "perg": "Half of your family… what?",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "A pesquisa da turma: o aluno chuta com um quantificador e um motivo; vale o motivo.",
+   "perg": "Most or some? Why do you think so?",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Corrigir as três armadilhas: the most of, the half of, nobody of.",
+   "perg": "What's wrong here? Say the right one.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c7": {
+   "obj": "Prática com linhas do discurso e parecidas; ler cada uma em voz alta.",
+   "perg": "Read it aloud. Why that word?",
+   "pula": "Faça três linhas."
+  },
+  "c8": {
+   "obj": "Escrever o mundo do aluno em números com quantificadores; vai para o My notes.",
+   "perg": "Most of your week is… what?",
+   "pula": "Três frases bastam."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 6: uma tenista treina contra o muro e anos depois joga em Wimbledon.",
+   "perg": "Did you have a hero when you were a child?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais quantificadores sobre o mundo e a vida do aluno.",
+   "perg": "How many of them? All, most, or none?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate com quantificadores sobre tecnologia e o mundo.",
+   "perg": "Which side are you on? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o convidado e responde perguntas sobre a cidade dele com quantificadores.",
+   "perg": "How many people in your city…?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your world in numbers.",
+   "p": "Pick a card. Use all, most, half, none.",
+   "palavras": [
+    "all of",
+    "most of",
+    "half of",
+    "some of",
+    "none of"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FRIENDS",
+     "q": "How many of your friends speak English?",
+     "fup": "And in your family?",
+     "st": [
+      "Most of my friends …",
+      "None of my …"
+     ],
+     "ex": "Some of my friends speak English. None of my grandparents do."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "How much of your day is on your phone?",
+     "fup": "Is that too much?",
+     "st": [
+      "Half of my day …",
+      "Most of my free time …"
+     ],
+     "ex": "Most of my free time is on my phone. That's too much!"
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Do most people in your city use the bus?",
+     "fup": "And you?",
+     "st": [
+      "Most people …",
+      "Not many people …"
+     ],
+     "ex": "Most people use the bus, but half of my friends have a car."
+    },
+    {
+     "k": "YOUR MONEY",
+     "q": "Where does most of your money go?",
+     "fup": "And the rest?",
+     "st": [
+      "Most of my money goes to …",
+      "Some of it …"
+     ],
+     "ex": "Most of my money goes to rent. Some of it goes to food."
+    },
+    {
+     "k": "THE WORLD",
+     "q": "Do you think most people in the world have internet now?",
+     "fup": "Why do you think so?",
+     "st": [
+      "I think most people …",
+      "I think about half of …"
+     ],
+     "ex": "I think about half of the world has fast internet."
+    },
+    {
+     "k": "YOUR WORK",
+     "q": "How many of your colleagues work from home?",
+     "fup": "Do you prefer home or the office?",
+     "st": [
+      "All of them …",
+      "None of them …",
+      "Half of them …"
+     ],
+     "ex": "Half of them work from home. I prefer the office."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "most people",
+    "half of",
+    "none of",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Technology: does it help most people, or only some of them?",
+     "a": "Most people",
+     "b": "Only some",
+     "fa": [
+      "Most people. Almost everyone has a phone now.",
+      "It helps with work, health and school."
+     ],
+     "fb": [
+      "Only some. Half of the world still has problems with the basics.",
+      "Technology isn't for all of us."
+     ]
+    },
+    {
+     "q": "Should all children learn English at school?",
+     "a": "All of them",
+     "b": "Not all",
+     "fa": [
+      "Yes, all of them. Most jobs need it now.",
+      "It opens doors."
+     ],
+     "fb": [
+      "Not all of them. Some of them need other things first.",
+      "It should be a choice."
+     ]
+    },
+    {
+     "q": "Social media: is most of it good or bad?",
+     "a": "Mostly good",
+     "b": "Mostly bad",
+     "fa": [
+      "Most of it is good. You learn a lot.",
+      "You talk to people far away."
+     ],
+     "fb": [
+      "Most of it is bad. Half of it isn't true.",
+      "People compare their lives all the time."
+     ]
+    },
+    {
+     "q": "Speeches: should most of a speech be numbers or stories?",
+     "a": "Numbers",
+     "b": "Stories",
+     "fa": [
+      "Numbers. 'Half of humanity' is powerful.",
+      "People remember a big number."
+     ],
+     "fb": [
+      "Stories. Most people forget numbers.",
+      "A story touches the heart."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the guest on air.",
+   "p": "Your teacher interviews you about your city.",
+   "aluno": "Listen to your teacher’s question. Answer as the guest, with all, most, half or none.",
+   "perguntas": [
+    "How many people in your city speak English?",
+    "Do most people in your city have a car?",
+    "How much of your city is green?",
+    "Do all young people go to university there?",
+    "How many of your neighbors do you know?",
+    "What do most tourists want to see?"
+   ],
+   "st": [
+    "Most of the people …",
+    "About half of …",
+    "None of …"
+   ],
+   "ex": "Most of the people in my city don't speak English, but about half of the young people do."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

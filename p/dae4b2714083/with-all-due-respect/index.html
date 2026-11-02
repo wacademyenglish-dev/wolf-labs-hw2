@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · With All Due Respect · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 5 · Distance and diplomacy</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>With All Due Respect · C1 Unit 5 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on disagreeing diplomatically: I take your point, but…; I hear what you’re saying. However, …; I see it slightly differently; I’m not sure I’d go that far; Correct me if I’m wrong, but…; Perhaps we could…; softeners (a bit, slightly, might).</p><p style="margin:0 0 6px"><b>The story:</b> The residents’ meeting at Green Towers (invented building): should the garden become a pool or a vegetable garden? Mr. Costa wants a pool, Ms. Lee wants the garden they voted for, Dr. Rao worries about money. The student is the mediator.</p><p style="margin:0 0 6px"><b>About 49 min:</b> I · The Meeting (10) · II · Direct or Diplomatic? (9) · III · Cool It Down (7) · IV · The Arena (8) · V · The Mediator (15).</p><p style="margin:0"><b>Open with:</b> “Think of a meeting or a family dinner where people disagreed. How did it go?”</p></div><!--/prep-->
+    <p>Brazilian professionals often sound too direct in English (“I don’t agree”, “You are wrong”) or too soft. Today is about the middle: recognize, make the difference small, propose. Point out that “With all due respect” is often aggressive in real life. In the mission you are three stubborn neighbors: be difficult, so the student has to be diplomatic.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>I take your point, but… · I hear what you’re saying. However, … · I see it slightly differently · I’m not sure I’d go that far · Correct me if I’m wrong, but… · softeners: a bit, slightly, perhaps, might</p>
+    <h4>THE MEETING</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>DIRECT OR DIPLOMATIC?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>COOL IT DOWN</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>THE MEDIATOR</h4>
+    <p>You are each neighbor, and you are stubborn. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then the student answers each neighbor diplomatically. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>you are wrong</i>, <i>I don’t agree with you (flat)</i>, <i>with all due respect (used aggressively)</i>, <i>I agree with you, but… (when you don’t)</i>, <i>that is not true</i>, <i>your idea is bad</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE ARENA (IV) AND THE SURPRISE QUESTION</h4>
+    <p>In the middle of the lesson, your student picks a side on a new building rule (no music after 10 PM, even on Saturdays) and defends it for one minute with the diplomatic language from the lesson; then tap <b>Swap sides</b> and they defend the other side. There is no right answer. Wait five seconds in silence, then interrupt them bluntly with the PUSH line (only you see it): they must disagree without “You’re wrong”. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Meeting.</li>
+      <li><b>Focus</b>: II · Direct or Diplomatic? and III · Cool It Down.</li>
+      <li><b>Out loud</b>: IV · The Arena and V · The Mediator.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* WITH ALL DUE RESPECT (Main C1) · pergunta-surpresa · 28/10/2026 · discordar com diplomacia */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Who in your life always says exactly what they think? Do you like it?',
+    opc: ['I love it', 'It depends', 'It drives me crazy'], st: ['I take your point, but …', 'I see it slightly differently.', 'It might be a bit …'],
+    ex: 'It depends. My brother is very direct. I take his point most of the time, but he could be a bit softer at family dinners.', push: 'Is that person you? Be honest.' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Are Brazilians more direct or more diplomatic than people from other countries?',
+    opc: ['More direct', 'More diplomatic', 'It depends on the person'], st: ['I’m not sure I’d go that far.', 'I see it slightly differently: …', 'Correct me if I’m wrong, but …'],
+    ex: 'More diplomatic, I think. We say “maybe” when we mean “no”. Correct me if I’m wrong, but that confuses a lot of foreigners.', push: 'Then why do foreigners often say we interrupt a lot?' },
+  { cena: 'transforma', tipo: 'What if', q: 'Your boss presents a plan you think is terrible, in front of everyone. What do you say?',
+    opc: ['Nothing, now', 'Something soft', 'Exactly what I think'], st: ['I take your point, but …', 'Perhaps we could …', 'I hear what you’re saying. However, …'],
+    ex: 'Something soft. I’d say: “I hear what you’re saying. However, perhaps we could look at the budget first?” Then I’d talk to her after the meeting.', push: 'The plan affects your team directly. Still soft?' },
+  { cena: 'missao', tipo: 'Would you rather', q: 'Would you rather lose an argument and keep a friend, or win it and lose the friend?',
+    opc: ['Keep the friend', 'Win the argument'], st: ['I’d rather …, because …', 'I’m not sure I’d …'],
+    ex: 'Keep the friend. I’m not sure I’d even remember the argument a year later.', push: 'What if you are 100% right and it’s about money?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WITH ALL DUE RESPECT (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A arena ENTRA depois de "III · Cool It Down" (a aula tinha 41 min e nenhuma cena extra: somar 8 min cabe).
+   No meio da aula, o aluno escolhe um lado sobre a regra de barulho do prédio e defende por 60 s; depois troca
+   de lado. O alvo (I take your point, but…; I see it slightly differently; I’m not sure I’d go that far;
+   Correct me if I’m wrong, but…; Perhaps we could…) mora nos iniciadores. Formato: arena with swap. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'arena', apos: 'transforma', est: 'o', min: 8, img: 'conversa', rot: 'The Arena', t: 'Music after 10 PM: yes or no?',
+    p: 'Pick a side and defend it for one minute. Then swap and defend the other side. Disagree, but keep the peace.',
+    formato: 'arena', segundos: 60,
+    q: 'New rule at Green Towers: no music after 10 PM, even on Saturdays.',
+    lados: [ { nome: 'Keep the rule', arg: 'People work early, babies sleep, walls are thin.' },
+             { nome: 'Drop the rule', arg: 'Weekends are for living. Just talk to your neighbor.' } ],
+    st: ['I take your point, but …', 'I see it slightly differently: …', 'I’m not sure I’d go that far.', 'Correct me if I’m wrong, but …', 'Perhaps we could …'],
+    ex: 'I take your point, but a strict rule might be a bit too much on a Saturday. Correct me if I’m wrong, but most of us are awake at eleven anyway. Perhaps we could say midnight on weekends?',
+    push: 'Interrupt them: “Nonsense. Rules are rules.” They must answer without “You’re wrong” or “I don’t agree”.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "The garden: pool or vegetables?",
+   "p": "Read it out loud with your teacher. Look closer."
+  },
+  "descobre": {
+   "t": "Same message, different temperature.",
+   "p": "Compare A and B. How would they feel?"
+  },
+  "transforma": {
+   "t": "Hot → diplomatic.",
+   "p": "Read the clue. Say the diplomatic version."
+  },
+  "cv-arena": {
+   "t": "Music after 10 PM: yes or no?",
+   "p": "Defend a side for one minute. Then swap."
+  },
+  "missao": {
+   "t": "Three neighbors. Three strong opinions.",
+   "p": "Ask each one questions. Then answer diplomatically."
+  }
+ },
+ "prep": {
+  "obj": "Discordar com diplomacia (I take your point, but…, I see it slightly differently, Perhaps we could…): a reunião do Green Towers decide se o jardim vira piscina ou horta, e o aluno é o mediador.",
+  "armadilha": "O brasileiro soa direto demais em inglês (“I don’t agree”, “You are wrong”, “That is not true”) ou usa “With all due respect” achando educado, quando na prática soa agressivo.",
+  "pal": [
+   "I take your point, but …",
+   "I hear what you’re saying. However, …",
+   "I see it slightly differently",
+   "I’m not sure I’d go that far",
+   "Correct me if I’m wrong, but …",
+   "Perhaps we could …",
+   "slightly",
+   "might"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: o meio-termo entre direto e mole: reconhecer, diminuir a diferença, propor.",
+   "perg": "Think of a meeting where people disagreed. How did it go?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Leitura a dois da reunião (Mr. Costa, Ms. Lee, Dr. Rao); depois achar as frases diplomáticas.",
+   "perg": "Who sounds most reasonable, and why?",
+   "pula": "Leia metade da reunião e mostre o padrão."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: a mesma mensagem, outra temperatura; depois regras e armadilhas.",
+   "perg": "How would the other person feel after A?",
+   "pula": "Três pares e uma armadilha bastam."
+  },
+  "transforma": {
+   "obj": "Frase quente vira diplomática com a pista.",
+   "perg": "How could you say that without a fight?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-arena": {
+   "obj": "Arena: música até tarde no sábado; defender um lado por um minuto, trocar; o PUSH interrompe sem educação.",
+   "perg": "Can you disagree without saying “you’re wrong”?",
+   "pula": "Um lado só, sem a troca."
+  },
+  "missao": {
+   "obj": "Missão: o professor faz os três vizinhos teimosos; o aluno pergunta e responde a cada um com diplomacia.",
+   "perg": "What does each neighbor really want?",
+   "pula": "Dois vizinhos bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre conflitos de vizinho, trabalho e família, com a linguagem diplomática.",
+   "perg": "How would you say that diplomatically?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Mais debate de condomínio e trabalho; discordar sem “you’re wrong”.",
+   "perg": "Which side, and how do you disagree politely?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Mr. Costa e defende a piscina diante do professor, sem perder a diplomacia.",
+   "perg": "Why a pool, Mr. Costa?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Disagree, keep the peace.",
+   "p": "Pick a card. Answer, then soften it.",
+   "palavras": [
+    "I take your point, but …",
+    "I see it slightly differently",
+    "I’m not sure I’d go that far",
+    "Perhaps we could …",
+    "Correct me if I’m wrong, but …"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR BUILDING",
+     "q": "What do neighbors argue about where you live?",
+     "fup": "Whose side are you on?",
+     "st": [
+      "The big issue is …",
+      "I see both sides, but …"
+     ],
+     "ex": "The big issue is the parking spaces, and I see both sides, but I’d prefer a rotation."
+    },
+    {
+     "k": "TOO DIRECT",
+     "q": "Has someone been too direct with you in a meeting?",
+     "fup": "How would you have said it?",
+     "st": [
+      "They just said, “…”",
+      "What they could have said is …"
+     ],
+     "ex": "They just said, “That won’t work.” What they could have said is “I’m not sure that would work here.”"
+    },
+    {
+     "k": "FAMILY DINNER",
+     "q": "Which topic is off-limits at your family dinners?",
+     "fup": "What happens when someone brings it up?",
+     "st": [
+      "We tend to avoid …",
+      "Somebody usually says, “…”"
+     ],
+     "ex": "We tend to avoid politics; somebody usually says, “Perhaps we could talk about something else.”"
+    },
+    {
+     "k": "SAYING NO",
+     "q": "How do you say no to your boss without saying no?",
+     "fup": "Does it work?",
+     "st": [
+      "I usually say, “I hear what you’re saying. However, …”"
+     ],
+     "ex": "I usually say, “I hear what you’re saying. However, I might need another week to do it well.”"
+    },
+    {
+     "k": "BRAZILIAN STYLE",
+     "q": "Are Brazilians more direct or more diplomatic than people abroad?",
+     "fup": "Where did you notice it?",
+     "st": [
+      "In my experience, …",
+      "Correct me if I’m wrong, but …"
+     ],
+     "ex": "Correct me if I’m wrong, but we avoid open conflict, and then complain in the WhatsApp group."
+    },
+    {
+     "k": "THE COMPROMISE",
+     "q": "Tell me about a compromise you’re proud of.",
+     "fup": "Who gave up the most?",
+     "st": [
+      "In the end, we agreed to …",
+      "Perhaps the key was …"
+     ],
+     "ex": "In the end, we agreed to alternate holidays between both families; perhaps the key was a calendar."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Disagree with your teacher, politely.",
+   "palavras": [
+    "I take your point, but …",
+    "I see it slightly differently",
+    "I’m not sure I’d go that far",
+    "Perhaps we could …"
+   ],
+   "rodadas": [
+    {
+     "q": "The Green Towers garden: a pool or a vegetable garden?",
+     "a": "A pool",
+     "b": "Vegetables",
+     "fa": [
+      "A pool. It would raise the value of every apartment.",
+      "Families would actually use it."
+     ],
+     "fb": [
+      "Vegetables. That’s what the residents voted for.",
+      "A pool might cost far more than we think."
+     ]
+    },
+    {
+     "q": "Are pets a right or a privilege in a building?",
+     "a": "A right",
+     "b": "A privilege",
+     "fa": [
+      "A right. It’s my apartment, after all.",
+      "Most pets are quieter than people."
+     ],
+     "fb": [
+      "A privilege. Shared spaces need shared rules.",
+      "One barking dog affects everyone."
+     ]
+    },
+    {
+     "q": "At work: say what you think, or keep the peace?",
+     "a": "Say it",
+     "b": "Keep the peace",
+     "fa": [
+      "Say it, diplomatically. Silence helps no one.",
+      "Problems grow in the dark."
+     ],
+     "fb": [
+      "Keep the peace. Not every battle is worth it.",
+      "Choose the moment carefully."
+     ]
+    },
+    {
+     "q": "Is “With all due respect” polite or aggressive?",
+     "a": "Polite",
+     "b": "Aggressive",
+     "fa": [
+      "Polite. It’s literally about respect.",
+      "It warns that disagreement is coming."
+     ],
+     "fb": [
+      "Aggressive. Everyone knows what comes next.",
+      "I’d go with “I see it slightly differently.”"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Strong opinions, no broken windows."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Mr. Costa now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Mr. Costa: firm, but diplomatic.",
+   "perguntas": [
+    "Mr. Costa, why do you want a pool so badly?",
+    "Ms. Lee says the residents already voted. What do you say to her?",
+    "Dr. Rao says there’s no money. Is he wrong?",
+    "Wouldn’t a pool be noisy for the ground floor?",
+    "What compromise could you accept?",
+    "If you lose the vote, what will you do?"
+   ],
+   "st": [
+    "I take your point, but …",
+    "I see it slightly differently.",
+    "Perhaps we could …"
+   ],
+   "ex": "I take your point about the vote, but perhaps we could have a small pool and keep part of the garden."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

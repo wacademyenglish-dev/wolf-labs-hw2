@@ -1,0 +1,90 @@
+/* ============================================================
+   WRAPPING IT UP · THE LONG TABLE · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: jantar de véspera à luz de
+   vela — verde-pinheiro quase preto, toalha vinho, três velas; quem fala
+   acende em cranberry, VOCÊ em dourado de vela; a tesoura risca a
+   resposta do Leo e sobra a palavrinha num selo dourado; a guirlanda de
+   dez luzes.
+   ============================================================ */
+:root{
+  --noite:#050907; --noite-rgb:5,9,7; --tinta:#edf0ec;
+  --t1:#f3f5f1; --t2:#c6cdc4; --t2-rgb:198,205,196; --t3:#82907f;
+  --ac:#ff8597; --ac2:#ffc3cc; --vela:#f3c76b; --pinho:#7fcf9e;
+  --vidro:rgba(237,240,236,.05); --vidro2:rgba(237,240,236,.085); --vidro3:rgba(237,240,236,.12);
+  --fio:rgba(228,236,226,.12); --fio2:rgba(228,236,226,.22); --luz:rgba(237,240,236,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Fraunces',Georgia,serif; --ui:'Nunito Sans',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:22px; --r2:16px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2c070e}
+.btn.cheio{color:#2c070e}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:700 clamp(56px,5.6vw,108px)/.92 var(--disp);letter-spacing:-.03em}
+.capa h1 b{display:block;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.45vw,25px)/1.45 var(--ui);color:var(--t2);max-width:28em} .capa .sub b{color:var(--vela)}
+.capa-r{display:grid;gap:14px;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.tb-ops{display:grid;gap:6px}
+.tb-rot{margin:0;font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.tb-linha-ok{display:flex;align-items:center;gap:12px} .tb-linha-ok .aprova{flex:1;margin:0}
+.tb-diz{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);border-color:rgba(255,133,151,.4)} .tb-diz small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .tb-diz p{margin:0;font:700 clamp(19px,1.5vw,26px)/1.35 var(--disp)}
+.balao-tb{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);border-color:var(--ok)} .balao-tb small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ok)} .balao-tb p{margin:0;font:700 clamp(20px,1.6vw,28px) var(--disp)}
+
+/* a mesa comprida */
+.tb-mesa{position:relative;width:100%;aspect-ratio:2/1.15;min-height:220px}
+.tb-tampo{position:absolute;inset:22% 16%;border-radius:999px;background:radial-gradient(ellipse at center,#3a1219 0%,#24090f 70%);border:2px solid #4a1a22;display:flex;align-items:center;justify-content:center;gap:12%;box-shadow:inset 0 0 40px rgba(0,0,0,.6)}
+.tb-vela{width:10px;height:28px;border-radius:3px;background:#e9dcc0;position:relative;opacity:.9}
+.tb-vela::before{content:'';position:absolute;left:50%;top:-14px;width:10px;height:14px;margin-left:-5px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:var(--vela);box-shadow:0 0 16px 6px rgba(243,199,107,.35);animation:chama 2.4s ease-in-out infinite}
+@keyframes chama{50%{transform:scale(.85,1.1)}}
+.tb-lugar{position:absolute;transform:translate(-50%,-50%);display:grid;justify-items:center;gap:3px;text-align:center}
+.tb-lugar i{width:30px;height:30px;border-radius:50%;background:#18221b;border:2px solid #2c3a2f;transition:all .4s}
+.tb-lugar small{font:800 9px/1.15 var(--mono);letter-spacing:.06em;color:var(--t3)}
+.tb-lugar.feito i{border-color:var(--pinho);background:#14301f}
+.tb-lugar.fala i{background:var(--ac);border-color:var(--ac2);box-shadow:0 0 18px rgba(255,133,151,.5)} .tb-lugar.fala small{color:var(--ac2)}
+.tb-lugar.voce i{background:var(--vela);border-color:#ffe3a6} .tb-lugar.voce small{color:var(--vela)}
+.tb-lugar.vazio i{border-style:dashed;background:none}
+
+/* a tesoura */
+.tb-papel{display:grid;gap:8px;padding:14px 18px;border-radius:6px var(--r2) var(--r2) 6px;background:#0f1511;border:1px dashed var(--fio2)}
+.tb-papel small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.tb-papel p{margin:0;font:600 clamp(18px,1.4vw,24px)/1.4 var(--disp);color:var(--t2)}
+.tb-papel.cortado{border-style:solid;border-color:rgba(243,199,107,.45)} .tb-papel.cortado small{color:var(--vela)}
+.tb-robo{font-size:clamp(14px,1.05vw,17px)!important;color:var(--t3)!important} .tb-robo s{text-decoration-color:var(--ac);text-decoration-thickness:2px}
+.tb-curta{font:700 clamp(24px,2vw,34px)/1.2 var(--disp)!important;color:var(--t1)!important;animation:sobe .5s ease-out} .tb-curta span{color:var(--t2);font-size:.7em}
+@keyframes sobe{from{transform:translateY(8px);opacity:0}}
+.tb-chave{display:inline-block;padding:0 10px;border-radius:999px;background:var(--vela);color:#2a1a00;font-style:normal}
+
+/* a regra */
+.tb-quatro{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 14px}
+.tb-tipo{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .tb-tipo small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .tb-tipo p{margin:0;font:700 clamp(16px,1.2vw,20px)/1.35 var(--disp);color:var(--ac2)}
+
+/* o auxiliar */
+.tb-marca{padding:0 6px;border-radius:8px;border-bottom:3px dotted var(--t3)} .tb-marca em{font:italic 700 .8em var(--disp);color:var(--t3)}
+.tb-marca.on{background:rgba(243,199,107,.18);border-bottom:3px solid var(--vela);color:var(--vela)} .tb-marca.on em{color:var(--vela)}
+.tb-auxs{display:flex;flex-wrap:wrap;gap:8px} .tb-auxs .pilula{min-width:84px;justify-content:center;font:800 16px var(--mono)}
+
+/* a guirlanda */
+.tb-guirlanda{position:relative;width:min(100%,420px);aspect-ratio:1;margin:0 auto}
+.tb-aro{position:absolute;inset:10%;border-radius:50%;border:22px solid #13301f;box-shadow:inset 0 0 0 2px #1f4a30,0 0 0 2px #1f4a30}
+.tb-guirlanda i{position:absolute;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#2a2a22;border:2px solid #3b3a2c;transition:all .5s}
+.tb-guirlanda i.acesa{background:var(--vela);border-color:#ffe3a6;box-shadow:0 0 18px 4px rgba(243,199,107,.45)}
+.tb-guirlanda i.acesa:nth-child(3n){background:var(--ac);border-color:var(--ac2);box-shadow:0 0 18px 4px rgba(255,133,151,.4)}
+.tb-guirlanda b{position:absolute;inset:0;display:grid;place-items:center;font:700 40px var(--disp);color:var(--t1)}
+
+/* o telefone */
+.tb-fone{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:1100px;margin:0 auto 12px;width:100%;padding:12px 18px;border-radius:var(--r2);border-color:rgba(127,207,158,.4)}
+.tb-fone b{font:800 13px var(--mono);letter-spacing:.12em;color:var(--pinho)} .tb-fone small{margin-left:auto;font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.tb-pulso{width:12px;height:12px;border-radius:50%;background:var(--pinho);animation:pulsa 1.4s infinite}
+@keyframes pulsa{0%{box-shadow:0 0 0 0 rgba(127,207,158,.5)}70%{box-shadow:0 0 0 10px rgba(127,207,158,0)}}
+
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .tb-mesa{max-width:440px;margin:0 auto}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .tb-quatro{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .tb-quatro{grid-template-columns:1fr} .tb-lugar small{font-size:7px} .tb-lugar i{width:20px;height:20px} .tb-mesa{min-height:0} .tb-guirlanda{width:min(100%,260px)} .tb-guirlanda i{width:18px;height:18px;margin:-9px 0 0 -9px} .tb-aro{border-width:14px} }

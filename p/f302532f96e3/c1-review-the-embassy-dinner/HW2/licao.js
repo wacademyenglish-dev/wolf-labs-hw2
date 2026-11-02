@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Embassy Dinner",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f302532f96e3/c1-review-the-embassy-dinner/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "distance and diplomacy: I was wondering whether you might ..., I'm afraid ..., It would appear that ..., The evidence suggests ..., Mistakes were made (no agent), neither ... nor, I take your point, but ...",
   "abrir": "When was the last time you had to say something difficult kindly?",
   "fecho": "Distance is polite. Ask softly: <b>I was wondering whether you might</b> … Warn first: <b>I'm afraid</b> … Hedge: <b>It would appear that</b> … No blame: <b>Mistakes were made</b>. <b>Neither … nor</b> takes no <i>not</i>. Disagree: <b>I take your point, but</b> I see it <b>differently</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before a dinner at an embassy. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f302532f96e3/c1-review-the-embassy-dinner/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A long table, ready for guests",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I was wondering whether you might prefer the window seat.",
-          "img": "https://wolf-labs.pages.dev/p/f302532f96e3/c1-review-the-embassy-dinner/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I take your point, but I see it slightly differently.",
-          "img": "https://wolf-labs.pages.dev/p/f302532f96e3/c1-review-the-embassy-dinner/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It would appear that mistakes were made.",
-          "img": "https://wolf-labs.pages.dev/p/f302532f96e3/c1-review-the-embassy-dinner/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f302532f96e3/c1-review-the-embassy-dinner/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A long table, ready for guests",
       "pede": "Look at the picture: a table ready for a formal dinner. Write 2 or 3 careful sentences to a guest with a problem. Use <b>I'm afraid</b>, <b>It would appear that</b> or <b>I was wondering whether</b>.",
       "ph": "I'm afraid …",

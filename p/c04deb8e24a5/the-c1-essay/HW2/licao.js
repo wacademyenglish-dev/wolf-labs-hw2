@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Essay",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c04deb8e24a5/the-c1-essay/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the C1 argumentative essay: thesis (This essay will argue that), arguments with evidence (Firstly, A further argument is that, For instance), the other side (It is often argued that ... However, this view overlooks ...), one conclusion phrase (On balance / In conclusion), no personal I think; discuss + noun, On the other hand",
   "abrir": "What topic would you love to argue about in writing?",
   "fecho": "A C1 essay is not a list of opinions. <b>Thesis</b>: <i>This essay will argue that…</i> <b>Arguments</b>: <i>Firstly, …</i> <i>A further argument is that…</i> <b>Evidence</b>: <i>For instance, …</i> <b>The other side</b>: <i>It is often argued that… However, this view overlooks…</i> <b>Conclusion</b>: one phrase only, <i>On balance, …</i> Say <b>On the other hand</b>, never <i>in the other hand</i>, and <b>discuss</b> a topic, never <i>discuss about</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia reads Leo's draft essay. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c04deb8e24a5/the-c1-essay/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A frosted window and a small lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This essay will argue that a four-day week should become standard.",
-          "img": "https://wolf-labs.pages.dev/p/c04deb8e24a5/the-c1-essay/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It is often argued that it costs too much.",
-          "img": "https://wolf-labs.pages.dev/p/c04deb8e24a5/the-c1-essay/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "On balance, the benefits clearly outweigh the costs.",
-          "img": "https://wolf-labs.pages.dev/p/c04deb8e24a5/the-c1-essay/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c04deb8e24a5/the-c1-essay/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A typewriter with a blank page",
       "pede": "Look at the picture: a typewriter with a blank page. Write 2 or 3 sentences for an essay: a thesis, and one argument with evidence. Use <b>This essay will argue that</b>, <b>Firstly</b> and <b>For instance</b>.",
       "ph": "This essay will argue that …",

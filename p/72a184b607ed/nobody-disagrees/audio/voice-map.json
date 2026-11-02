@@ -1,0 +1,29 @@
+{
+ "Callum": {
+  "voice_id": "wNrcUqZN35sbTl2vAQU2",
+  "model": "eleven_v3",
+  "files": [
+   "j1.mp3",
+   "j2.mp3",
+   "j3.mp3",
+   "v1up.mp3",
+   "v1down.mp3",
+   "v2up.mp3",
+   "v2down.mp3",
+   "v3up.mp3",
+   "v3down.mp3",
+   "r2.mp3",
+   "r4.mp3"
+  ]
+ },
+ "Sienna": {
+  "voice_id": "oGZR5g7rlFABaB1ZfWkI",
+  "model": "eleven_v3",
+  "files": [
+   "r1.mp3",
+   "r3.mp3",
+   "r5.mp3",
+   "r6.mp3"
+  ]
+ }
+}

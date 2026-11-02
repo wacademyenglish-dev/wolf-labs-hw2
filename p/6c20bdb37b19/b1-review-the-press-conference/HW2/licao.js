@@ -4,7 +4,7 @@ window.HW2 = {
   "titulo": "The Press Conference",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/6c20bdb37b19/b1-review-the-press-conference/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "Unit 9 review: question tags (you're tired, aren't you?); indirect questions (Could you tell me where the bank is?); reported speech (she said she was, he told me he would, she asked if)",
   "abrir": "What would you ask a famous person?",
   "fecho": "<b>Tags</b>: <i>You're tired, aren't you?</i> · <b>Indirect questions</b>: <i>Could you tell me where the station is?</i> (normal order, no do / does) · <b>Reported speech</b>: <i>She said she was tired. He told me he would come.</i>",
@@ -24,7 +24,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a press conference. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/6c20bdb37b19/b1-review-the-press-conference/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A TV studio with a sofa",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -160,7 +160,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/6c20bdb37b19/b1-review-the-press-conference/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A studio with a sofa and lights",
       "pede": "Look at the picture: a TV studio with a sofa. Imagine a guest. Write 2 or 3 sentences: what the guest said, and one polite question you would ask. Use <b>said / told me</b> and <b>Could you tell me …?</b>",
       "ph": "The guest said that …",

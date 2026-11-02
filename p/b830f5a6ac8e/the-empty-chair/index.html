@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Empty Chair · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Empty Chair · The Calendar</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Empty Chair · The Calendar</h2>
+    <p>In April, Maya asked her manager, Daniel, for a conversation. He moved it three times. In July she gave her notice, and the conversation never happened. Her chair is still in the meeting room. The hour uses the empty chair technique: the student talks <i>to</i> someone who is not there, then changes chairs and answers as that person. The language is the past of advice and possibility: <b>should have</b> (it was your job), <b>could have</b> (it was a chance), <b>shouldn’t have</b> (you did it, and it was wrong) and <b>couldn’t have</b> (it was impossible). On screen, a desk calendar from April to July with the meeting stamped MOVED three times, a door that closes to move advice into the past, and a filing cabinet with three drawers: DUTY, CHANCE, IMPOSSIBLE.</p>
+    <h4>THE QUESTION THAT DECIDES</h4>
+    <p>Should or could? Ask one thing: was anybody counting on you? Yes: should have. No, it was only open: could have. Never possible: couldn’t have.</p>
+    <h4>THE WARM-UP COMES BACK</h4>
+    <p>Scene I: tap the form you hear for the first half of each answer (only you see the buttons). Most students say <i>she should do</i> about last week. Don’t correct; the count comes back in scene X.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Five recordings, each with pause and 0.75×; the transcript opens after listening. Voice 3 can go in DUTY or CHANCE: ask which one they would say. Voice 4 is the other direction: the founder did it (shouldn’t have).</p>
+    <h4>THE PHYSICAL SCENE</h4>
+    <p>Scene VII asks the student to stand up and change chairs, really. Online, they move to another chair in the room. Don’t skip it: the change of seat is what makes the second voice come out. Let them speak to the chair: “you”, not “she”.</p>
+    <h4>KEEP IT SAFE</h4>
+    <p>The regrets in this hour are about work, study and small decisions. If the student brings something heavy, listen, then go back to Daniel and Maya.</p>
+    <!--conversa--><h4>THE LATE PROJECT (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>A work negotiation after the empty chair: the student runs a project that was ten days late, and you are Ms. Lane, the client. Ask the four questions, wait five seconds in silence, and only accept answers that own the mistake (we should have, I couldn’t have …, but I could have). Your secret limit is on your screen only: start at 30% off and give in only for a clear “we should have”. Use the PUSH line to test their limit, then close the deal on screen. Recast mistakes quietly; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I The Chair Swap, VI The Draft, VII Change Chairs, VIII The Late Project, IX Your Own Chair.</li>
+      <li><b>Listen</b>: IV Four Confessions.</li>
+      <li><b>Focus</b>: II The Door Closes, III Three Drawers, V Did It or Didn’t?</li>
+      <li><b>Write</b>: X, their chair again with the door closed. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE EMPTY CHAIR (Main B2) · pergunta-surpresa · 28/10/2026 · should have / could have / couldn't have */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'porta', tipo: 'And you?', q: 'What is a small thing you should have done this week, and didn’t?',
+    opc: ['Work', 'Study', 'Something at home'], st: ['I should have …', 'I could have …, but …'],
+    ex: 'Study. I should have reviewed my English notes on Tuesday, but I watched a series instead.', push: 'Is the door still open? What will you do tonight?' },
+  { cena: 'vozes', tipo: 'Opinion', q: 'Is it better to have a boss who says sorry often, or one who is never wrong?',
+    opc: ['Says sorry', 'Never wrong'], st: ['A good boss should have …', 'They could have …'],
+    ex: 'Says sorry. A boss who says “I should have listened” is a boss you can talk to.', push: 'And if they say sorry every day for the same thing?' },
+  { cena: 'rascunho', tipo: 'Would you rather', q: 'Would you rather send a message you regret, or never send one you should have sent?',
+    opc: ['Send and regret', 'Never send'], st: ['I’d rather …, because I shouldn’t have …', 'At least I could have …'],
+    ex: 'Send and regret. At least the other person knows. I couldn’t live with “I could have said something”.', push: 'Tell me about one message you almost didn’t send.' },
+  { cena: 'vida', tipo: 'What if', q: 'What if you could go back one year and give yourself one piece of advice?',
+    opc: ['About work', 'About study', 'About money'], st: ['I should have started …', 'I shouldn’t have …'],
+    ex: 'About money. I should have started saving a little every month, not only in December.', push: 'Would the you of one year ago listen?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE EMPTY CHAIR (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A negociação entra no lugar de "VIII · The Tribunal" (extra). A aula já tem o pessoal (I, IX), a
+   decisão do rascunho (VI) e o papel da cadeira vazia (VII, a cena física: fica). Faltava negociar:
+   um projeto que atrasou dez dias, o cliente quer desconto; o limite do cliente fica só com o professor.
+   A gramática (should have / shouldn't have / could have / couldn't have + particípio) mora nos
+   iniciadores e nas respostas. Arrependimento pequeno, de trabalho, como pede o KEEP IT SAFE da aula. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'cliente', troca: 'tribunal', est: 'o', min: 7, img: 'sala', rot: 'The Late Project',
+    t: 'Ten days late. The client is on the phone.',
+    p: 'You run the project. Your teacher is the client. Own the mistake, then close a deal.',
+    formato: 'papel',
+    aluno: { quem: 'You · project manager', quer: 'Keep the client for the next project.', limite: 'Your limit: 10% off, or one free month of support. Not both.' },
+    prof: { quem: 'Ms. Lane · the client', quer: 'Her new website arrived ten days after her launch party.', limite: 'She starts at 30% off. She accepts any deal with a clear “we should have”. No apology: no next project.' },
+    rot_perg: 'Ms. Lane asks',
+    perguntas: [
+      { q: '“Ten days. Why didn’t anybody call me?”', ex: 'You’re right. We should have called you in the first week. I couldn’t have known about the server problem, but I should have told you about it.' },
+      { q: '“My launch party had no website. Who pays for that?”', ex: 'We shouldn’t have promised that date. We could have given you a safer one, and we didn’t.' },
+      { q: '“What would you do differently?”', ex: 'I should have checked the plan with the designers, and we could have sent you an update every Friday.' },
+      { q: '“Another agency is 20% cheaper. Why should I stay?”', ex: 'Because we know your business now. We should have shown it better this time, but the next project starts with a real plan.' }
+    ],
+    st: ['We should have …', 'We shouldn’t have …', 'I couldn’t have …, but I could have …'],
+    push: 'Ms. Lane: “Thirty per cent, or I write a review today.” Hold your limit.',
+    acordo: { tag: 'The deal', q: 'What do you offer Ms. Lane?',
+      opc: ['10% off', 'A free month', 'Just sorry'],
+      st: ['We should have …, so we’d like to …'],
+      ex: 'A free month of support. We should have called you, so the next month of changes is on us.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "troca": {
+   "t": "Someone you admire, in your chair, last week.",
+   "p": "Tap a seat. What would they have done?"
+  },
+  "porta": {
+   "t": "Open door: advice. Closed door: the past.",
+   "p": "Say it open. Close the door. Say it again."
+  },
+  "gavetas": {
+   "t": "DUTY, CHANCE or IMPOSSIBLE?",
+   "p": "Was anybody counting on you? Tap the drawer. Say it."
+  },
+  "vozes": {
+   "t": "Four people, four confessions.",
+   "p": "Play a voice. Say the confession. Choose the drawer."
+  },
+  "fez": {
+   "t": "What you didn’t do, and what you did.",
+   "p": "Did it happen? Tap. Then say the regret."
+  },
+  "rascunho": {
+   "t": "Daniel’s email to Maya. Never sent.",
+   "p": "Fix each crossed-out line. Then: send or keep?"
+  },
+  "cadeira": {
+   "t": "Maya is in the empty chair.",
+   "p": "Talk to her as Daniel. Then change chairs."
+  },
+  "cv-cliente": {
+   "t": "Ten days late. The client is calling.",
+   "p": "Own the mistake. Then close a deal."
+  },
+  "vida": {
+   "t": "Your own chair. Small regrets only.",
+   "p": "Four questions. Answer honestly."
+  },
+  "fim": {
+   "t": "Your first answer, with the door closed.",
+   "p": "Write it again. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Should have, could have, shouldn’t have, couldn’t have: Maya pediu uma conversa em abril, Daniel adiou três vezes, ela saiu em julho; a cadeira vazia continua na sala.",
+  "armadilha": "O brasileiro usa “she should do” para o passado (calco de “ela deveria fazer/ter feito”), confunde should have (dever) com could have (chance) e diz “should have went”.",
+  "pal": [
+   "should have",
+   "shouldn’t have",
+   "could have",
+   "couldn’t have",
+   "counting on",
+   "move a meeting",
+   "give notice",
+   "own the mistake",
+   "draft"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: a conversa adiada três vezes e a cadeira vazia da Maya.",
+   "perg": "Have you ever moved a meeting you didn’t want?",
+   "pula": "Só leia a capa e sente."
+  },
+  "troca": {
+   "obj": "Aquecimento: alguém que o aluno admira na cadeira dele na semana passada. Marque a forma, não corrija.",
+   "perg": "What would she have done in your place?",
+   "pula": "Dois assentos; marque as formas, elas voltam."
+  },
+  "porta": {
+   "obj": "A porta fecha: o conselho (should do) vira passado (should have done).",
+   "perg": "And now that the door is closed?",
+   "pula": "Três frases bastam."
+  },
+  "gavetas": {
+   "obj": "Três gavetas: dever (should have), chance (could have), impossível (couldn’t have).",
+   "perg": "Was anybody counting on him?",
+   "pula": "Quatro fatos bastam."
+  },
+  "vozes": {
+   "obj": "Quatro confissões de um grupo de líderes; a voz 3 cabe em duas gavetas, a 4 é shouldn’t have.",
+   "perg": "Which drawer, and why?",
+   "pula": "Três vozes; mantenha a 4."
+  },
+  "fez": {
+   "obj": "Arrependimento do que não fez (should have) e do que fez (shouldn’t have).",
+   "perg": "Did it happen?",
+   "pula": "Quatro itens bastam."
+  },
+  "rascunho": {
+   "obj": "O e-mail nunca enviado do Daniel: corrigir cada linha riscada e decidir se manda.",
+   "perg": "Should he send it now?",
+   "pula": "Quatro linhas e a decisão."
+  },
+  "cadeira": {
+   "obj": "Técnica da cadeira vazia: o aluno fala com a Maya como Daniel, troca de cadeira e responde como ela.",
+   "perg": "What do you want to tell her?",
+   "pula": "Cena extra, mas não pule a troca de cadeira se fizer."
+  },
+  "cv-cliente": {
+   "obj": "Negociação: o projeto atrasou dez dias e o professor é a cliente, Ms. Lane; só aceita quem assume o erro.",
+   "perg": "Why didn’t you tell me earlier?",
+   "pula": "Duas perguntas e feche o acordo."
+  },
+  "vida": {
+   "obj": "Pequenos arrependimentos do aluno: trabalho, estudo, decisões. Se vier algo pesado, ouça e volte à história.",
+   "perg": "What should you have done differently this year?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: a resposta da cena I de novo, agora com a porta fechada.",
+   "perg": "What should you have done last week?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa leve sobre o passado com should have e could have.",
+   "perg": "What could you have done better this week?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre liderança e responsabilidade, com should have e couldn’t have.",
+   "perg": "I see your point, but should he really have known?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Daniel e responde à entrevista sobre a Maya.",
+   "perg": "Daniel, why did you move the meeting three times?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Small doors, already closed.",
+   "p": "Pick a card. Duty, chance or impossible?",
+   "palavras": [
+    "should have",
+    "shouldn’t have",
+    "could have",
+    "couldn’t have"
+   ],
+   "cartas": [
+    {
+     "k": "THIS WEEK",
+     "q": "What could you have done better this week?",
+     "fup": "Was anybody counting on you?",
+     "st": [
+      "I could have …",
+      "To be honest, I should have …"
+     ],
+     "ex": "I could have slept earlier. I should have answered my sister’s message."
+    },
+    {
+     "k": "A BAD BUY",
+     "q": "What’s something you bought that you shouldn’t have?",
+     "fup": "What could you have bought instead?",
+     "st": [
+      "I shouldn’t have bought …",
+      "I could have …"
+     ],
+     "ex": "I shouldn’t have bought that exercise bike. I could have just walked."
+    },
+    {
+     "k": "A GOOD BOSS",
+     "q": "Think of a manager you had. What should they have done differently?",
+     "fup": "Could you have said it to them?",
+     "st": [
+      "They should have …",
+      "I couldn’t have told them, because …"
+     ],
+     "ex": "She should have listened more. I couldn’t have told her: she never had time."
+    },
+    {
+     "k": "SCHOOL DAYS",
+     "q": "What should your school have taught you?",
+     "fup": "Could you have learned it alone?",
+     "st": [
+      "They should have taught us …",
+      "I could have …"
+     ],
+     "ex": "They should have taught us how to manage money."
+    },
+    {
+     "k": "THE MEETING",
+     "q": "Have you ever left a meeting thinking “I should have said something”?",
+     "fup": "What would you have said?",
+     "st": [
+      "I should have said …",
+      "I couldn’t have said it, because …"
+     ],
+     "ex": "Yes. I should have said the deadline was impossible."
+    },
+    {
+     "k": "NO REGRETS",
+     "q": "Tell me about something you did that you definitely should have done.",
+     "fup": "What if you hadn’t?",
+     "st": [
+      "The best thing I did was …",
+      "I could have stayed, but …"
+     ],
+     "ex": "I could have stayed in my old job, but I left. Best decision ever."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "The Debate",
+   "t": "Pick a side. Argue it like an adult.",
+   "p": "Your teacher argues the other side.",
+   "palavras": [
+    "should have",
+    "couldn’t have",
+    "The thing is, …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Maya left. Whose fault was it?",
+     "a": "Daniel’s",
+     "b": "Nobody’s",
+     "fa": [
+      "Daniel’s. He should have taken the meeting the first time.",
+      "The thing is, she was counting on him."
+     ],
+     "fb": [
+      "Nobody’s. He couldn’t have known she would leave.",
+      "She could have told him it was urgent."
+     ]
+    },
+    {
+     "q": "Should managers say sorry to their team?",
+     "a": "Yes, always",
+     "b": "Only sometimes",
+     "fa": [
+      "Yes. A manager who never says “I should have” loses the team.",
+      "Owning a mistake builds trust."
+     ],
+     "fb": [
+      "Only sometimes. Too many apologies look weak.",
+      "I see your point, but a leader has to decide and move on."
+     ]
+    },
+    {
+     "q": "Send the old email to Maya, or let it go?",
+     "a": "Send it",
+     "b": "Let it go",
+     "fa": [
+      "Send it. Late is better than never.",
+      "She deserves to hear it."
+     ],
+     "fb": [
+      "Let it go. He should have sent it in July.",
+      "Now it’s only for him, not for her."
+     ]
+    },
+    {
+     "q": "Is it healthy to talk about what you should have done?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. That’s how you learn.",
+      "The thing is, the door closes, but the lesson stays."
+     ],
+     "fb": [
+      "No. You can’t change it.",
+      "I see your point, but it only keeps you in the past."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The door is closed, and you still won the argument."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Daniel now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Daniel, Maya’s old manager.",
+   "perguntas": [
+    "Why did you move the meeting three times?",
+    "What should you have done in April?",
+    "Could you have known she was going to leave?",
+    "What shouldn’t you have said to her?",
+    "Why didn’t you send the email in July?",
+    "What will you do differently with the next Maya?"
+   ],
+   "st": [
+    "I should have …",
+    "I couldn’t have known …, but …",
+    "The thing is, …"
+   ],
+   "ex": "I should have taken the meeting in April. The thing is, I thought it could wait."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

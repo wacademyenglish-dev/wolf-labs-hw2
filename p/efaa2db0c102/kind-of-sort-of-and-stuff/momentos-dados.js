@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de Kind Of, Sort Of, and Stuff (11/10/2026): perguntas de pegadinha na rua, em Washington.
+   Forma: o termômetro da certeza. Alvo: linguagem vaga (kind of / sort of, and stuff, or something, -ish, a bit).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [9, 10, 11, 12], k: 'Some stuff', quem: 'The host',
+    contexto: 'The host introduces his trick questions, very casually.',
+    frase: 'We had a lot of fun with it, I had a lot of laughs, so hopefully you’ll learn <b>some stuff</b> with it and see if you can get some right.',
+    explica: '<i>Stuff</i> = things, in a relaxed way. Natural speakers are often vague on purpose.',
+    formula: 'some <b>stuff</b> · …<b>and stuff</b> = and things like that',
+    tente: 'Describe your weekend vaguely, like a native speaker: …and stuff.',
+    ex: 'I just cleaned the house, watched some series and stuff.',
+    sente: { q: 'How formal is the host?', de: 'very casual', a: 'very formal', st: 'He’s … because he says stuff…' } },
+  { i: [16, 17, 18, 19, 20], k: 'Everest?', quem: 'A man in the street',
+    contexto: 'The question: what is the highest mountain in the world? A man doubts the obvious answer.',
+    frase: 'Mount Everest? I don’t know, but I think it’s not Everest, it’s one in Japan, I believe. <b>I think it’s supposed to be Everest</b>, but we’ll just go with that.',
+    explica: 'He changes his mind three times in one answer. The question is a little tricky.',
+    formula: 'It’s <b>kind of</b> a trick question. · It’s <b>sort of</b> confusing. (kind of / sort of = a little)',
+    tente: 'Describe your English today with kind of or sort of.',
+    ex: 'My English is kind of good, but my pronunciation is sort of strange.',
+    sente: { q: 'How sure is he?', de: 'not sure at all', a: 'totally sure', st: 'He’s … because he says kind of…' } },
+  { i: [31, 32, 33], k: 'A guess', quem: 'A woman in the street',
+    contexto: 'The real trick: what was the highest mountain BEFORE Everest was discovered?',
+    frase: 'I’m gonna guess <b>Mount McKinley</b>. The one that was discovered before Mount Everest.',
+    explica: 'The answer is still Everest: it was there, just not discovered! She guesses, and she knows it’s a guess.',
+    formula: 'It’s Mount McKinley <b>or something</b>. · <b>or something like that</b> (I’m not sure)',
+    tente: 'Answer vaguely: What time did you go to bed last night?',
+    ex: 'Eleven or something. Maybe midnight, something like that.',
+    sente: { q: 'How confident is she?', de: 'just guessing', a: 'very confident', st: 'She’s … because she says or something…' } },
+  { i: [45, 46], k: 'The taxi', quem: 'A man in the street',
+    contexto: 'A taxi goes the wrong way on a one-way street. Two police officers see it and do nothing. Why?',
+    frase: '<b>Maybe the police officer directed them</b> to go that way.',
+    explica: 'A creative guess. The real answer: the taxi driver is walking, not driving!',
+    formula: 'It’s <b>a bit</b> strange. · It’s <b>kind of</b> confusing. (soft words for a strong idea)',
+    tente: 'Describe a strange thing that happened this week with a bit or kind of.',
+    ex: 'My neighbor was singing at 6 AM. It was a bit weird, kind of funny too.',
+    sente: { q: 'How close is his answer?', de: 'far', a: 'correct', st: 'It’s … because…' } },
+  { i: [53, 54, 55], k: 'No idea', quem: 'A woman in the street',
+    contexto: 'Another person gives up on the taxi question.',
+    frase: '<b>I have no idea.</b> Because if they’re driving the wrong way too, I don’t know.',
+    explica: 'Honest and natural. When we don’t know exact numbers or times, we use <i>-ish</i>.',
+    formula: 'I’ll be there at nine<b>-ish</b>. · She’s thirty-<b>ish</b>. · a blu<b>ish</b> car',
+    tente: 'Answer with -ish: When do you usually have lunch? How old is your best friend?',
+    ex: 'I have lunch at one-ish. My best friend is forty-ish.',
+    sente: { q: 'How lost is she?', de: 'not lost', a: 'totally lost', st: 'She’s … because she has no idea…' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#d9a35a', titulo: 'Trick questions, vague answers.', sub: 'Hear the answer, measure how sure they are, then answer vaguely, like a native.', rot: { por: 'WHAT IT MEANS', padrao: 'KIND OF · OR SOMETHING · -ISH', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

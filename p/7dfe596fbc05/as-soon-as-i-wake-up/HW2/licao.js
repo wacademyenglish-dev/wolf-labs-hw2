@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "As Soon As I Wake Up",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/7dfe596fbc05/as-soon-as-i-wake-up/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "time clauses about the future: as soon as / until / before / after / when / by the time + PRESENT, and will in the other half; never when I will arrive",
   "abrir": "What do you do as soon as you wake up?",
   "fecho": "Talking about tomorrow? The time half stays in the <b>present</b>: <i>I'll call you when I arrive. As soon as I wake up, I'll drink water.</i> <b>Until</b> = all the time up to that moment. Never <i>when I will arrive</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo the night before an early train. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/7dfe596fbc05/as-soon-as-i-wake-up/img/live-quarto.webp",
+      "img": "../img/live-quarto.webp",
       "leg": "The night before the train",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -108,11 +108,11 @@ window.HW2 = {
       "sub": "Three sentences about tomorrow morning. Hear it, then say it.",
       "frases": [
         {
-          "t": "I'll call you as soon as I arrive.", "img": "https://wolf-labs.pages.dev/p/7dfe596fbc05/as-soon-as-i-wake-up/img/live-cidade.webp",
+          "t": "I'll call you as soon as I arrive.", "img": "../img/live-cidade.webp",
           "au": "audio/say1.mp3"
         },
         {
-          "t": "I'll wait here until the train comes.", "img": "https://wolf-labs.pages.dev/p/7dfe596fbc05/as-soon-as-i-wake-up/img/live-relogio.webp",
+          "t": "I'll wait here until the train comes.", "img": "../img/live-relogio.webp",
           "au": "audio/say2.mp3"
         },
         {

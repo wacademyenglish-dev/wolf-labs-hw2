@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Bear That in Mind",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/9f61147ad06a/bear-that-in-mind/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "formal verb + noun partners: bear in mind, take into account / consideration, raise a concern, address an issue, draw a conclusion, reach an agreement, meet a deadline, pose a risk, carry out a review, make a recommendation",
   "abrir": "Think of the last big meeting you attended. What was left unresolved?",
   "fecho": "The right verb for the right noun: <b>raise</b> a concern, <b>address</b> an issue, <b>draw</b> a conclusion, <b>reach</b> an agreement, <b>meet</b> a deadline, <b>pose</b> a risk, <b>carry out</b> a review, <b>make</b> a recommendation. And <b>take into account</b>, never <i>take in consideration</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo the night before a review. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/9f61147ad06a/bear-that-in-mind/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A desk, a notebook and a pen",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We need to take the new budget into account before we draw any conclusions.",
-          "img": "https://wolf-labs.pages.dev/p/9f61147ad06a/bear-that-in-mind/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Several people raised concerns, but none of them has been addressed yet.",
-          "img": "https://wolf-labs.pages.dev/p/9f61147ad06a/bear-that-in-mind/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If we can't meet the deadline, I'll make a recommendation to the board.",
-          "img": "https://wolf-labs.pages.dev/p/9f61147ad06a/bear-that-in-mind/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/9f61147ad06a/bear-that-in-mind/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A desk, a notebook and a pen",
       "pede": "Look at the picture: a desk before an important meeting. Write 2 or 3 sentences about a project or a meeting you know. Use two of these: <b>bear in mind</b>, <b>raise a concern</b>, <b>meet a deadline</b>, <b>draw a conclusion</b>, <b>reach an agreement</b>.",
       "ph": "Before the meeting, we need to bear in mind that …",

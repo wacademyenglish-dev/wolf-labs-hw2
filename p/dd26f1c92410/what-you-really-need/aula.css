@@ -1,0 +1,139 @@
+/* ============================================================
+   WHAT YOU REALLY NEED · THE ADVICE HOUR · LIVE CLASS  11/10/2026
+   A base vem do kit (base.css). Identidade: estúdio de rádio às 11 da
+   noite. Azul-noite, âmbar de lâmpada, o vermelho do ON AIR só na
+   lâmpada e no carimbo. Letreiro em Big Shoulders Display.
+   ============================================================ */
+:root{
+  --noite:#080c16; --noite-rgb:8,12,22; --tinta:#eef2fb;
+  --t1:#f1f4fb; --t2:#b9c3d8; --t2-rgb:185,195,216; --t3:#7f8aa3;
+  --ac:#ffb347; --ac2:#ffd08a; --ar:#ff4d42; --azul:#5fa8ff; --bt:#e0952f; --bt2:#ffd08a;
+  --vidro:rgba(238,242,251,.05); --vidro2:rgba(238,242,251,.085); --vidro3:rgba(238,242,251,.12);
+  --fio:rgba(255,179,71,.15); --fio2:rgba(255,179,71,.3); --luz:rgba(238,242,251,.17);
+  --ok:#8fe3a8; --am:#f0b866; --erro:#ff7a72; --lil:#9fc3ff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --letreiro:'Big Shoulders Display','Urbanist',system-ui,sans-serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1600}
+.btn.cheio{color:#2a1600}
+.cab h1{font-family:var(--letreiro);font-weight:800;letter-spacing:.01em;text-transform:none}
+
+/* a capa: o letreiro, a lâmpada ON AIR e a frequência */
+.capa{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center}
+.capa .kick{font-family:var(--ui);letter-spacing:.16em}
+.capa h1{margin:12px 0 16px;font:800 clamp(56px,6vw,118px)/.92 var(--letreiro);letter-spacing:-.005em}
+.capa h1 b{color:var(--ac);font-weight:800}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--t1)}
+.capa-r{display:grid;gap:22px;justify-items:center}
+.lampada{display:grid;place-items:center;padding:16px 30px;border-radius:14px;background:radial-gradient(circle at 50% 40%,#ff6a5c,#b8221a);box-shadow:0 0 0 4px rgba(255,77,66,.18),0 0 60px rgba(255,77,66,.55);animation:pisca 3.2s ease-in-out infinite}
+.lampada span{font:800 clamp(28px,2.6vw,44px) var(--letreiro);letter-spacing:.14em;color:#fff1ee}
+.lampada.mini{position:absolute;right:16px;bottom:-14px;padding:6px 12px;border-radius:8px;background:#2a2f3c;box-shadow:none;animation:none}
+.lampada.mini span{font-size:14px;color:var(--t3)}
+@keyframes pisca{50%{box-shadow:0 0 0 4px rgba(255,77,66,.1),0 0 30px rgba(255,77,66,.3)}}
+.freq{display:grid;justify-items:center;padding:14px 26px;border-radius:16px;background:#0d1322;border:1px solid var(--fio2)}
+.freq b{font:800 clamp(44px,4vw,72px)/1 var(--letreiro);color:var(--ac2);font-variant-numeric:tabular-nums}
+.freq small{font:800 12px var(--ui);letter-spacing:.2em;color:var(--t3)}
+
+/* I · o dial */
+.dial{display:grid;gap:18px;padding:22px;border-radius:var(--r1);background:linear-gradient(180deg,#121a2c,#0b111d);border:1px solid var(--fio2);box-shadow:inset 0 0 40px rgba(0,0,0,.5)}
+.dial-escala{position:relative;display:flex;justify-content:space-between;height:70px;padding:0 6px;border-radius:12px;background:linear-gradient(180deg,rgba(255,179,71,.14),rgba(255,179,71,.04));border:1px solid var(--fio)}
+.dial-escala i{position:relative;width:2px;height:22px;background:var(--fio2);margin-top:10px}
+.dial-escala i span{position:absolute;top:28px;left:50%;transform:translateX(-50%);font:700 13px var(--ui);color:var(--t3);font-variant-numeric:tabular-nums}
+.dial-agulha{position:absolute;top:4px;bottom:4px;width:4px;margin-left:-2px;border-radius:2px;background:var(--ar);box-shadow:0 0 14px var(--ar);transition:left .35s ease-out}
+.dial-bt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.estacao{display:grid;gap:2px;justify-items:start;padding:12px 14px;border-radius:14px;border:1px solid var(--fio);background:var(--vidro);color:var(--t2);font:inherit;cursor:pointer;text-align:left}
+.estacao b{font:800 26px var(--letreiro);color:var(--t1);font-variant-numeric:tabular-nums}
+.estacao small{font:700 13px var(--ui)}
+.estacao.on{border-color:var(--ac);background:rgba(255,179,71,.1)} .estacao.on b{color:var(--ac2)}
+.estacao.feito:not(.on){border-color:rgba(143,227,168,.45)}
+.dial-card{display:grid;gap:10px;padding:clamp(18px,2.4vw,28px);border-radius:var(--r1);background:var(--vidro2);border:1px solid var(--fio2)}
+.dial-card small{font:800 12px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.dial-card h2{margin:0;font:700 clamp(21px,2vw,28px)/1.3 var(--disp);color:var(--t1)}
+.dial-card p{margin:0;color:var(--t2)}
+
+/* III · as linhas e a ficha do ouvinte */
+.botoes-l{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:4px 0 12px}
+.linha-b{display:grid;justify-items:center;gap:4px;padding:10px 16px;border-radius:14px;border:1px solid var(--fio);background:var(--vidro);color:var(--t2);font:inherit;cursor:pointer}
+.linha-b i{width:18px;height:18px;border-radius:50%;background:#3a2a12;box-shadow:inset 0 0 0 2px rgba(255,179,71,.4)}
+.linha-b b{font:800 12px var(--ui);letter-spacing:.14em} .linha-b small{font:700 13px var(--disp);color:var(--t1)}
+.linha-b.on{border-color:var(--ac)} .linha-b.on i{background:var(--ac);box-shadow:0 0 16px var(--ac);animation:pisca 1.6s ease-in-out infinite}
+.linha-b.feito i{background:var(--ok);box-shadow:0 0 10px rgba(143,227,168,.6)}
+.ficha{position:relative;display:grid;gap:6px;padding:20px 24px;border-radius:var(--r1);background:linear-gradient(160deg,#141d31,#0d1322);border:1px solid var(--fio2);box-shadow:var(--sombra)}
+.ficha small{font:800 12px var(--ui);letter-spacing:.16em;color:var(--t3)}
+.ficha-nome{font:800 clamp(30px,2.6vw,42px)/1 var(--letreiro);color:var(--ac2);letter-spacing:.02em}
+.ficha p{margin:0;font:500 clamp(17px,1.35vw,21px)/1.5 var(--disp);color:var(--t1)}
+.ficha-luz{position:absolute;right:20px;top:20px;width:14px;height:14px;border-radius:50%;background:var(--ac);box-shadow:0 0 14px var(--ac);animation:pisca 1.6s infinite}
+.ficha-luz.ok{background:var(--ok);box-shadow:0 0 12px var(--ok);animation:none}
+.carimbo-r{justify-self:end;margin-top:6px;padding:5px 12px;border:2px solid var(--ar);border-radius:8px;font:800 13px var(--ui);letter-spacing:.14em;color:var(--ar);transform:rotate(-4deg);animation:carimba .35s ease-out}
+@keyframes carimba{from{transform:rotate(-4deg) scale(1.5);opacity:0}}
+
+/* VII e X · o envelope e o cartão de deixa */
+.envelope{display:grid;gap:6px;padding:18px 22px;border-radius:14px;background:#141d31;border:1px dashed var(--fio2)}
+.envelope small{font:800 11px var(--ui);letter-spacing:.16em;color:var(--ac2)}
+.envelope b{font:800 22px var(--letreiro);color:var(--t1)}
+.envelope p{margin:0;color:var(--t2);font-size:16px}
+.envelope.mini p{color:var(--t1)}
+.cue{position:relative;display:grid;gap:8px;padding:22px 26px 28px;border-radius:14px;background:linear-gradient(180deg,#1a2338,#111828);border:1px solid var(--fio2);border-left:6px solid var(--ar)}
+.cue small{font:800 11px var(--ui);letter-spacing:.18em;color:var(--ar)}
+.cue span{font:600 clamp(18px,1.4vw,22px)/1.4 var(--disp);color:var(--t1)} .cue u{text-decoration:none;border-bottom:3px solid var(--ac)}
+.onair-tag{position:absolute;left:12px;top:12px;padding:5px 12px;border-radius:8px;background:var(--ar);color:#fff1ee;font:800 13px var(--ui);letter-spacing:.16em;box-shadow:0 0 22px rgba(255,77,66,.6)}
+
+/* peças comuns desta aula */
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,227,168,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,122,114,.12);animation:treme .35s}
+.pilula.grande-p{min-height:52px;padding:0 22px;font:700 clamp(15px,1.2vw,20px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:12px;align-content:start;justify-items:stretch}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,19px);text-align:left}
+.versao.errado{border-color:var(--erro);animation:treme .35s}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.dial-mesa{align-items:center}
+.pede{display:grid;gap:4px;padding:12px 18px;border-radius:var(--r2)} .pede small{font:800 11px var(--ui);letter-spacing:.16em;color:var(--ac2)} .pede b{font:600 clamp(17px,1.35vw,23px)/1.4 var(--disp)}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:900px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--ui);letter-spacing:.16em;color:var(--ar)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)}
+.balao u{text-decoration:none;color:var(--ac2);border-bottom:3px solid var(--ok)}
+.lacuna-q{display:inline-block;min-width:3.5em;border-bottom:3px solid var(--ac);color:var(--ac)}
+.aberta{position:relative;border-radius:var(--r1);background-size:cover;background-position:center;height:clamp(150px,calc(100vh / var(--zv,1) - 560px),300px);box-shadow:inset 0 0 120px rgba(0,0,0,.8)}
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:800 34px var(--letreiro);letter-spacing:.18em;color:var(--t3)} .selo-v small{font:600 15px var(--disp);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--ui);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* VI · a mesa de som: quatro faders */
+.fitas4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:10px 0 14px}
+.fita4{position:relative;display:grid;gap:6px;padding:12px 16px 12px 34px;border-radius:var(--r2);background:rgba(238,242,251,.04);border:1px solid var(--fio)}
+.fita4 .fader{position:absolute;left:12px;top:12px;bottom:12px;width:6px;border-radius:3px;background:rgba(255,179,71,.18)}
+.fita4 .fader::after{content:"";position:absolute;left:-5px;top:30%;width:16px;height:10px;border-radius:3px;background:var(--ac);box-shadow:0 0 10px var(--ac)}
+.fita4 small{font:800 13px var(--letreiro);letter-spacing:.08em;color:var(--ac2)} .fita4 b{font:600 clamp(16px,1.25vw,20px)/1.4 var(--disp)}
+.fita4.f1 .fader::after{top:55%;background:var(--azul);box-shadow:0 0 10px var(--azul)} .fita4.f2 .fader::after{top:15%;background:var(--ok);box-shadow:0 0 10px var(--ok)} .fita4.f3 .fader::after{top:70%;background:var(--ar);box-shadow:0 0 10px var(--ar)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .fitas4{grid-template-columns:1fr 1fr} .capa-r{justify-items:start;grid-auto-flow:column} }
+@media (max-width:620px){ .fitas4{grid-template-columns:1fr} .capa-r{grid-auto-flow:row} .dial-bt{grid-template-columns:1fr 1fr} .estacao b{font-size:22px} .linha-b{padding:8px 10px} }
+@media (prefers-reduced-motion:reduce){ .lampada,.linha-b.on i,.ficha-luz{animation:none} .dial-agulha{transition:none} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb-linhas{margin:2px 0 0;justify-content:flex-start;gap:8px}
+.deb-linha{cursor:default;padding:8px 12px}
+.deb-linha.feito{border-color:rgba(143,227,168,.5)}
+.deb-linha.perdida i{background:var(--erro);opacity:.6}

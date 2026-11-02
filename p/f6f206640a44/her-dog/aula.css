@@ -1,0 +1,125 @@
+/* ============================================================
+   HER DOG · THE WAITING ROOM · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). A cara de 23/09 continua: a clínica
+   antes do amanhecer (azul-petróleo escuro), o rosa da ficha do paciente
+   e o latão da plaquinha.
+   ============================================================ */
+:root{
+  --noite:#081014; --noite-rgb:8,16,20; --tinta:#e8eef0;
+  --t1:#eef3f4; --t2:#c5d0d3; --t2-rgb:197,208,211; --t3:#87979c;
+  --ac:#e88aa8; --ac2:#ffc2d4; --bt:#d6b35a; --bt2:#f3dc9a;
+  --vidro:rgba(232,238,240,.05); --vidro2:rgba(232,238,240,.085); --vidro3:rgba(232,238,240,.12);
+  --fio:rgba(220,235,240,.12); --fio2:rgba(220,235,240,.22); --luz:rgba(232,238,240,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mao:'Caveat',cursive; --mono:'Space Mono',ui-monospace,monospace;
+  --serifa:'Fraunces',Georgia,serif;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(1,4,6,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a0e18}
+.btn.cheio{color:#2a0e18}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:300 clamp(64px,7vw,130px)/.95 var(--serifa);letter-spacing:-.02em}
+.capa h1 b{font-weight:700;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa .foto{position:relative;border-radius:30px;overflow:hidden;aspect-ratio:16/11;border:1px solid var(--fio);box-shadow:var(--sombra)}
+.capa .foto img{width:100%;height:100%;object-fit:cover;filter:brightness(.85)}
+.placa-capa{position:absolute;right:6%;bottom:8%;display:grid;gap:2px;padding:12px 20px;border-radius:8px;background:#f6dde5;color:#2a0e18;box-shadow:0 14px 40px rgba(0,0,0,.6);transform:rotate(-2deg)}
+.placa-capa small,.placa-capa span{font:700 11px var(--mono);letter-spacing:.14em;color:#8a4a5e}
+.placa-capa b{font:700 38px/1.05 var(--mao);color:#2a0e18}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.dois-b{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.escolha-b{flex:1;min-width:160px;max-width:340px;min-height:64px;border-radius:16px;border:2px solid var(--fio2);background:var(--vidro);font:800 clamp(18px,1.5vw,24px) var(--ui);letter-spacing:.06em;color:var(--t1)}
+.escolha-b.certo{border-color:var(--ok);background:rgba(143,217,162,.14)} .escolha-b.errado{border-color:var(--erro);animation:treme .35s}
+
+/* os capítulos */
+.mesa-livro{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:24px;align-items:start}
+.livro{display:grid;gap:14px;padding:24px 28px;border-radius:var(--r1);background:linear-gradient(180deg,#221b18,#1a1512)!important;color:#f1e6da;border:1px solid #4a3a30!important;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.topo-livro{display:flex;align-items:baseline;gap:14px;padding-bottom:10px;border-bottom:1px solid #4a3a30;flex-wrap:wrap}
+.topo-livro small{font:800 12px var(--mono);letter-spacing:.16em;color:var(--ac)}
+.topo-livro b{font:700 italic clamp(26px,2.2vw,36px) var(--serifa)}
+.topo-livro span{margin-left:auto;font:700 12px var(--mono);color:#a89a88}
+.linhas-l{margin:0;padding-left:28px;display:grid;gap:8px;font:500 clamp(20px,1.6vw,27px)/1.4 var(--serifa)}
+.linhas-l li::marker{color:#7d6e5e;font:700 14px var(--mono)}
+.linhas-l li.nova{animation:aparece .5s ease}
+@keyframes aparece{from{opacity:0;transform:translateY(8px)}}
+.linhas-l b{color:var(--ac2)}
+.livro .btn{justify-self:start}
+.lado-livro{display:grid;gap:14px}
+.foto-livro{aspect-ratio:16/7;border-radius:var(--r2);background:#000 center/cover;border:1px solid var(--fio);filter:brightness(.85)}
+.perguntas-l{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2)}
+.perguntas-l h5{margin:0;font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.perguntas-l ol{margin:0;padding-left:20px;display:grid;gap:6px;font:600 clamp(17px,1.3vw,21px)/1.35 var(--disp)}
+.perguntas-l .resp-btn{justify-content:flex-start}
+
+/* a ficha do paciente */
+.ficha-pac{display:grid;gap:10px;padding:18px 22px;border-radius:12px;background:linear-gradient(180deg,#3a1f2a,#2a1620)!important;color:#fbe6ee;border:1px solid #6a3a4c!important}
+.ficha-pac small{font:800 11px var(--mono);letter-spacing:.14em;color:#e2a4b8}
+.ficha-pac p{display:grid;grid-template-columns:90px 1fr;align-items:end;gap:10px;margin:0}
+.ficha-pac span{font:800 12px var(--mono);letter-spacing:.12em;color:#e2a4b8}
+.ficha-pac b{min-height:36px;border-bottom:2px solid #8a5266;font:700 30px var(--mao)}
+.ficha-pac b.escrito{animation:aparece .6s ease}
+.ficha-pac b.pisca{animation:pisca 1.2s ease-in-out infinite;border-bottom-color:var(--ac)}
+@keyframes pisca{50%{background:rgba(160,86,110,.15)}}
+.ficha-pac.grande b{font-size:clamp(28px,2.4vw,40px)}
+.ficha-pac b.dono{color:var(--ac2)}
+.frase-ficha{margin-top:8px;font:700 clamp(26px,2.2vw,38px) var(--serifa)}
+.frase-ficha i{color:var(--ac);letter-spacing:.1em} .frase-ficha u{color:var(--ok);text-decoration-thickness:3px}
+
+/* III · a aposta */
+.mesa-aposta{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;align-items:center}
+.foto-aposta{display:grid;align-content:end;min-height:340px;padding:20px;border-radius:var(--r1);background:#000 center/cover!important;position:relative;overflow:hidden}
+.foto-aposta::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,16,20,0),rgba(8,16,20,.88))}
+.foto-aposta span{position:relative;font:600 italic clamp(20px,1.6vw,26px) var(--serifa)}
+.lado-aposta{display:grid;gap:12px}
+.fichas-aposta{display:grid;gap:10px}
+.ficha-aposta{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:14px;border:1px solid var(--fio2);background:var(--vidro);font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--t1);text-align:left}
+.ficha-aposta i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(232,138,168,.18);color:var(--ac2);font-style:normal;font-weight:800}
+.ficha-aposta.on{border-color:var(--ac);background:rgba(232,138,168,.14)}
+
+/* V · ache o dono */
+.frase-dono,.balao-sala{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:20px;border-radius:var(--r2);max-width:1000px;margin:0 auto;width:100%}
+.balao-sala{flex-direction:column;align-items:center}
+.balao-sala small{font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.pals{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pal{min-height:54px;padding:0 16px;border-radius:12px;border:1px solid var(--fio2);background:rgba(255,255,255,.03);font:700 clamp(20px,1.7vw,28px) var(--disp);color:var(--t1);transition:transform .15s}
+.pal:hover:not(:disabled){transform:translateY(-2px)}
+.pal.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pal.errado{border-color:var(--erro);animation:treme .35s}
+.pal s{color:var(--erro);text-decoration-thickness:3px}
+.regra-dono{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:baseline;justify-content:center;padding:14px 20px;border-radius:var(--r2);max-width:1100px;margin:0 auto;width:100%}
+.regra-dono b{font:800 12px var(--ui);letter-spacing:.14em;color:var(--bt2)}
+.regra-dono span{font:700 clamp(17px,1.3vw,21px) var(--disp)} .regra-dono em{font-style:normal;color:var(--t3)}
+
+/* VI · as fichas */
+.mesa-ficha{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px;align-items:center}
+.lado-ficha{display:grid;gap:14px}
+.quatro{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.palavra-b{min-height:70px;border-radius:16px;border:2px solid var(--fio2);background:var(--vidro);font:700 italic clamp(26px,2.2vw,36px) var(--serifa);color:var(--t1);transition:transform .15s}
+.palavra-b:hover:not(:disabled){transform:translateY(-2px)}
+.palavra-b.certo{border-color:var(--ok);background:rgba(143,217,162,.14)} .palavra-b.errado{border-color:var(--erro);animation:treme .35s}
+
+/* IX · a plaquinha */
+.plaquinha{position:relative;justify-self:center;width:200px;height:200px;border:0;background:none;perspective:900px;padding:0}
+.plaquinha .frente,.plaquinha .verso{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:4px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f6e3a6,#c9a24a 60%,#8a6a26);box-shadow:inset 0 0 0 6px rgba(0,0,0,.12),0 12px 30px rgba(0,0,0,.5);backface-visibility:hidden;transition:transform .7s;color:#3a2a0a}
+.plaquinha .verso{transform:rotateY(180deg)}
+.plaquinha.virada .frente{transform:rotateY(-180deg)} .plaquinha.virada .verso{transform:rotateY(0)}
+.plaquinha small{font:800 11px var(--mono);letter-spacing:.16em}
+.plaquinha b{font:800 30px var(--serifa)} .plaquinha .verso b{font-size:20px}
+.plaquinha em{font:700 22px var(--mao);font-style:normal}
+
+/* XI · o resultado */
+.resultado{display:grid;gap:8px;padding:18px 22px;border-radius:var(--r2);border-color:var(--ac)!important}
+.resultado small{font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.resultado p{margin:0;font:600 italic 20px var(--serifa);color:var(--t2)}
+.resultado b{font:800 clamp(20px,1.6vw,26px) var(--disp)}
+.titulo-errado{font:700 clamp(20px,1.6vw,26px) var(--serifa)} .titulo-errado s{color:var(--erro)} .titulo-errado u{color:var(--ok)}
+.fim .grande span{font-size:clamp(24px,2.1vw,34px)}
+
+@media (max-width:1100px){ .mesa-livro,.mesa-aposta,.mesa-ficha{grid-template-columns:1fr} .foto-livro{display:none} }
+@media (max-width:820px){
+  .capa .foto{aspect-ratio:16/12}
+  .livro{padding:18px}
+  .foto-aposta{min-height:220px}
+  .plaquinha{width:160px;height:160px}
+}

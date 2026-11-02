@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "A2 Review: The City Survey",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/da740726ec32/a2-review-the-city-survey/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "A2 unit 1 review: present simple (usually) × present continuous (right now); asking for clarification (Could you say that again? What does ... mean?); buying time (Give me a second); too / either, so do I / neither do I",
   "abrir": "What do you usually do in the evening?",
   "fecho": "<b>Usually</b> = present simple (<i>she works</i>). <b>Right now</b> = <b>am / is / are + -ing</b> (<i>I'm waiting</i>). Not clear? <i>Could you say that again? What does … mean?</i> Agree: <b>Me too / So do I</b> · <b>Me neither / Neither do I</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia does a city survey at a bus stop. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/da740726ec32/a2-review-the-city-survey/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Rain on a bus window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I usually cook dinner at seven.",
-          "img": "https://wolf-labs.pages.dev/p/da740726ec32/a2-review-the-city-survey/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Right now I'm waiting for the bus.",
-          "img": "https://wolf-labs.pages.dev/p/da740726ec32/a2-review-the-city-survey/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Sorry, could you say that again, please?",
-          "img": "https://wolf-labs.pages.dev/p/da740726ec32/a2-review-the-city-survey/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/da740726ec32/a2-review-the-city-survey/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A notebook on a night street",
       "pede": "Look at the picture: a notebook on a night street. Write 2 or 3 sentences for the survey: what you <b>usually</b> do in the evening, and what you are doing <b>right now</b>.",
       "ph": "In the evening I usually …",

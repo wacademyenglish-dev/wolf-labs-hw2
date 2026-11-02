@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Award Night",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/52813776eee8/c1-review-the-award-night/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "emphasis: it-clefts (It was my father who ...), It wasn't until ... that ..., what-clefts (What matters is ...), All we had was ..., fronting (That recipe I will never change), emphatic do (I did like it)",
   "abrir": "Who taught you something you still use today?",
   "fecho": "Put one idea in the spotlight. <b>It was my father who</b> taught me. <b>It wasn't until</b> June <b>that</b> she called. <b>What matters most is</b> the people. <b>All we had was</b> two ovens. Front it: <i>That recipe I will never change.</i> Stress it: <b>I did like</b> it, with the plain verb.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a gala. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/52813776eee8/c1-review-the-award-night/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A ballroom before the gala",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It was my father who taught me to bake.",
-          "img": "https://wolf-labs.pages.dev/p/52813776eee8/c1-review-the-award-night/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It wasn't until he retired that I took over the shop.",
-          "img": "https://wolf-labs.pages.dev/p/52813776eee8/c1-review-the-award-night/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "That recipe I will never change.",
-          "img": "https://wolf-labs.pages.dev/p/52813776eee8/c1-review-the-award-night/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/52813776eee8/c1-review-the-award-night/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty ballroom",
       "pede": "Look at the picture: a ballroom before a gala. Write 2 or 3 sentences about a person or a day that matters to you. Use <b>It was … who</b>, <b>What matters is</b> or <b>I did</b> + verb.",
       "ph": "It was my … who …",

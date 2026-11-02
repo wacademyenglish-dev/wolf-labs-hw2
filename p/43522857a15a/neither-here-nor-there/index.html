@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Neither Here Nor There · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 9 · Register and style</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Neither Here Nor There · C1 Unit 9 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on nuanced opinion phrases: I’m all for it, I’m in two minds, I have mixed feelings, I’m sitting on the fence, I couldn’t care less, it’s not my cup of tea, it’s neither here nor there, if you ask me, the way I see it, for what it’s worth, to be fair.</p><p style="margin:0 0 6px"><b>The story:</b> City Radio’s phone-in (invented): should the main streets close to cars on Sundays? Marta is all for it, Bruno is in two minds, Dona Celia couldn’t care less, Tom has mixed feelings.</p><p style="margin:0 0 6px"><b>About 47 min:</b> I · Hot Topics (6) · II · The Phone-In (10) · III · What’s the Temperature? (9) · IV · Sunday Streets (8) · V · The Opinion Board (14).</p><p style="margin:0"><b>Open with:</b> “What do you think about working from home?”</p></div><!--/prep-->
+    <p>Opinions have a temperature. The student moves beyond “in my opinion” to strong, middle and zero-interest positions. Big trap: “I couldn’t care less” means zero interest. The phone-in shows five temperatures; the board lets the student choose their own on everyday topics.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>I’m all for it / I’m totally against it · I’m in two minds / I have mixed feelings · I’m sitting on the fence · I couldn’t care less / not my cup of tea · it’s neither here nor there (irrelevant) · if you ask me, the way I see it, for what it’s worth, to be fair</p>
+    <h4>HOT TOPICS</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>THE PHONE-IN</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>WHAT’S THE TEMPERATURE?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>THE OPINION BOARD</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I couldn’t care less (understood as caring a lot)</i>, <i>I’m agree</i>, <i>in two minds of it</i>, <i>not my cup of coffee</i>, <i>in my opinion, I loved it (redundant)</i>, <i>I’m in the fence</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>SUNDAY STREETS (IV) AND THE SURPRISE QUESTION</h4>
+    <p>This scene replaces the Memory game. The phone-in worked: the streets are closed to cars on Sundays. Now your student is on the city council and solves three problems from the first month (Bruno’s shop, the street music, the cost), choosing an option and giving their opinion with the right temperature: <i>all for it</i>, <i>in two minds</i>, <i>neither here nor there</i>. There is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it) to make the decision harder. Recast quietly while they talk (watch for <i>I’m agree</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · Hot Topics, IV · Sunday Streets and V · The Opinion Board.</li>
+      <li><b>Listen</b>: II · The Phone-In.</li>
+      <li><b>Focus</b>: III · What’s the Temperature?.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* NEITHER HERE NOR THERE (Main C1) · pergunta-surpresa · 28/10/2026 · opinions with nuance */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Would you ever call a radio show to give your opinion?',
+    opc: ['Yes, I’d love to', 'Only about something I really care about', 'Never'], st: ['If you ask me, …', 'To be honest, it’s not my cup of tea.'],
+    ex: 'Never. Talking to thousands of strangers is not my cup of tea. I’d write a comment instead.', push: 'The topic is your street, and they’re about to close it. Do you call now?' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Is “sitting on the fence” a weakness or a strength?',
+    opc: ['A weakness', 'A strength', 'I’m in two minds'], st: ['The way I see it, …', 'To be fair, …'],
+    ex: 'A strength, sometimes. To be fair, some questions really have two sides, and deciding too fast is worse.', push: 'Name one topic where you’ve been on the fence for years.' },
+  { cena: 'cv-dilema', tipo: 'Would you rather', q: 'Would you rather live on a street with no cars, or a street with all the shops and noise?',
+    opc: ['No cars, quiet', 'Shops and noise'], st: ['I’m all for …', 'I have mixed feelings, but …'],
+    ex: 'No cars. I’m all for quiet streets, even if I have to walk ten minutes to a shop.', push: 'Your rent goes up 20% on the quiet street. Still?' },
+  { cena: 'tabuleiro', tipo: 'What if', q: 'What’s something people argue about that you couldn’t care less about?',
+    opc: ['A sport', 'Celebrity news', 'Something else'], st: ['I couldn’t care less about …', 'It’s neither here nor there to me whether …'],
+    ex: 'Celebrity news. I couldn’t care less who is dating who.', push: 'Your best friend cares a lot about it. Do you pretend to be interested?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* NEITHER HERE NOR THERE (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O dilema TROCA "IV · Memory" (prática controlada de pares; as mesmas expressões voltam no tabuleiro V).
+   A aula já tem opinião no I (Hot Topics) e no V (The Opinion Board): aqui o formato é outro, uma DECISÃO.
+   O programa de rádio da aula (fechar a rua aos domingos) virou lei: o aluno é do conselho da cidade e resolve
+   três problemas do primeiro mês, cada um com a “temperatura” certa (all for it, in two minds, neither here nor there). */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'dilema', troca: 'memoria', est: 'o', min: 8, img: 'capa', rot: 'Sunday Streets', t: 'The streets are closed. Now what?',
+    p: 'The city said yes: no cars on Sundays. One month later, three problems arrive on your desk. Decide, and show the temperature of your opinion.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Bruno’s shop', sit: 'Bruno’s Sunday sales went down 30%. He wants cars back on his street.', q: 'What do you do?',
+        opc: ['Cars back after 2 PM', 'Free parking nearby', 'Nothing: shops will adapt'],
+        st: ['I’m in two minds: …', 'To be fair to Bruno, …', 'If you ask me, …'],
+        ex: 'Free parking nearby. To be fair to Bruno, he pays taxes too. But I’m all for keeping the street closed.',
+        push: 'Ten other shops sold MORE on Sundays. Does Bruno still get special help?' },
+      { tag: 'The music', sit: 'Street musicians play until 10 PM. The neighbours on the main street can’t sleep.', q: 'What’s the new rule?',
+        opc: ['Music until 8 PM', 'No rule: it’s Sunday!', 'Only quiet music'],
+        st: ['The way I see it, …', 'For what it’s worth, …', 'I couldn’t care less about …, but …'],
+        ex: 'Music until 8 PM. The way I see it, Sunday is for everybody, and that includes people who want to sleep.',
+        push: 'The musicians say it’s their best day of the week. Who loses?' },
+      { tag: 'The cost', sit: 'A councillor says the Sundays cost the city too much in cleaning. Tom says that’s neither here nor there.', q: 'Is the cost relevant?',
+        opc: ['Very relevant', 'Neither here nor there', 'Make the visitors pay'],
+        st: ['That’s neither here nor there, because …', 'I have mixed feelings: …', 'I’m all for it, provided that …'],
+        ex: 'Neither here nor there. If people love it, the city can find the money. And happy people spend more in the shops.',
+        push: 'The money comes from the library budget. Still neither here nor there?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "What do you think?",
+   "p": "Give your opinion with detail. Then ask it back."
+  },
+  "leitura": {
+   "t": "Close the streets on Sundays?",
+   "p": "Read each caller at a different temperature."
+  },
+  "descobre": {
+   "t": "How strong is each opinion?",
+   "p": "Compare A and B. For, against, or middle?"
+  },
+  "cv-dilema": {
+   "t": "The streets are closed. Now what?",
+   "p": "Solve three problems. Show your opinion’s temperature."
+  },
+  "tabuleiro": {
+   "t": "Roll, move, give your opinion.",
+   "p": "Your teacher rolls. Answer with a nuanced phrase."
+  }
+ },
+ "prep": {
+  "obj": "Opiniões com temperatura (I’m all for it, I’m in two minds, I couldn’t care less, it’s neither here nor there): o programa de rádio sobre fechar as ruas aos domingos.",
+  "armadilha": "“I couldn’t care less” é interesse zero, mas o brasileiro entende o contrário; e ainda “I’m agree”, “I’m in the fence”, “not my cup of coffee” e o eterno “in my opinion”.",
+  "pal": [
+   "I’m all for it",
+   "I’m in two minds",
+   "I have mixed feelings",
+   "I’m sitting on the fence",
+   "I couldn’t care less",
+   "not my cup of tea",
+   "neither here nor there",
+   "for what it’s worth"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: opinião tem temperatura, forte, no meio ou interesse zero.",
+   "perg": "What do you think about working from home?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "conversa": {
+   "obj": "Temas quentes do dia a dia; o aluno opina com detalhe e devolve a pergunta.",
+   "perg": "What do you think about working from home?",
+   "pula": "Duas perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Leitura dos ouvintes do rádio (Marta, Bruno, Dona Celia, Tom), cada um numa temperatura.",
+   "perg": "Who couldn’t care less, and why?",
+   "pula": "Leia três ouvintes e faça uma pergunta."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: medir a força de cada opinião; a armadilha do “couldn’t care less”.",
+   "perg": "Is this strong, middle or zero interest?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "cv-dilema": {
+   "obj": "No conselho da cidade: três problemas do primeiro mês (a loja do Bruno, a música, o custo).",
+   "perg": "What would you decide, and how strongly?",
+   "pula": "Um problema basta."
+  },
+  "tabuleiro": {
+   "obj": "Jogo de tabuleiro: o dado leva a temas do dia a dia; opinião com a temperatura certa.",
+   "perg": "Where are you on this one?",
+   "pula": "Pare na metade do tabuleiro. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais temas para opinar com nuance, do forte ao interesse zero.",
+   "perg": "How strongly do you feel about that?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre a cidade e o dia a dia, com a temperatura de cada lado.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira Bruno, o dono da loja dividido, e responde ao professor com nuance.",
+   "perg": "Bruno, are you for it or against it now?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "What’s your temperature?",
+   "p": "Pick a card. Show how strongly you feel.",
+   "palavras": [
+    "I’m all for it",
+    "I’m in two minds",
+    "I couldn’t care less",
+    "not my cup of tea",
+    "to be fair"
+   ],
+   "cartas": [
+    {
+     "k": "THE FOUR-DAY WEEK",
+     "q": "A four-day work week for everyone: yes or no?",
+     "fup": "Who would lose?",
+     "st": [
+      "I’m all for it.",
+      "To be fair, …"
+     ],
+     "ex": "I’m all for it. To be fair, some jobs would need more people."
+    },
+    {
+     "k": "CELEBRITIES",
+     "q": "Celebrity weddings and breakups: do you follow them?",
+     "fup": "Why do so many people care?",
+     "st": [
+      "I couldn’t care less about …",
+      "For what it’s worth, …"
+     ],
+     "ex": "I couldn’t care less about celebrity weddings. For what it’s worth, my mother loves them."
+    },
+    {
+     "k": "SMART CITIES",
+     "q": "Cameras on every corner to make the city safer?",
+     "fup": "Who should see the images?",
+     "st": [
+      "I have mixed feelings about …",
+      "On the one hand, …"
+     ],
+     "ex": "I have mixed feelings about it. On the one hand, I’d feel safer; on the other, I hate being watched."
+    },
+    {
+     "k": "TRENDS",
+     "q": "Which popular trend is just not for you?",
+     "fup": "Have you ever tried it?",
+     "st": [
+      "It’s not my cup of tea.",
+      "The way I see it, …"
+     ],
+     "ex": "Cold showers in the morning are not my cup of tea. The way I see it, life is hard enough."
+    },
+    {
+     "k": "A BIG MOVE",
+     "q": "Would you move to another country for a better salary?",
+     "fup": "What would make you decide?",
+     "st": [
+      "I’m in two minds.",
+      "If you ask me, …"
+     ],
+     "ex": "I’m in two minds. If you ask me, money alone isn’t enough."
+    },
+    {
+     "k": "THE FENCE",
+     "q": "What issue do you always avoid taking a side on?",
+     "fup": "Why do you stay on the fence?",
+     "st": [
+      "I’m sitting on the fence on …",
+      "It’s neither here nor there, but …"
+     ],
+     "ex": "I’m sitting on the fence on politics at family lunches. It keeps the peace."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’m all for it",
+    "I’m totally against it",
+    "If you ask me, …",
+    "To be fair, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Close the main streets to cars on Sundays?",
+     "a": "For it",
+     "b": "Against it",
+     "fa": [
+      "I’m all for it. Cities belong to people, not cars.",
+      "Kids can finally ride bikes safely."
+     ],
+     "fb": [
+      "I’m totally against it. Shops like Bruno’s lose customers.",
+      "If you ask me, it’s a hobby for people without cars."
+     ]
+    },
+    {
+     "q": "Is sitting on the fence wise or cowardly?",
+     "a": "Wise",
+     "b": "Cowardly",
+     "fa": [
+      "Wise. Some issues really have two sides.",
+      "To be fair, you can change your mind later."
+     ],
+     "fb": [
+      "Cowardly. At some point you have to choose.",
+      "The fence is comfortable, and that’s the problem."
+     ]
+    },
+    {
+     "q": "Should cities ask residents before big changes?",
+     "a": "Always",
+     "b": "Not always",
+     "fa": [
+      "Always. It’s our street, after all.",
+      "For what it’s worth, people accept what they chose."
+     ],
+     "fb": [
+      "Not always. Nothing would ever change.",
+      "Most people couldn’t care less until it happens."
+     ]
+    },
+    {
+     "q": "Street musicians: life in the city or just noise?",
+     "a": "Life",
+     "b": "Noise",
+     "fa": [
+      "Life. A city without music is just traffic.",
+      "I’m all for it, within reason."
+     ],
+     "fb": [
+      "Noise. Neighbors didn’t choose the concert.",
+      "Not my cup of tea at eight a.m. on a Sunday."
+     ]
+    }
+   ],
+   "fim": "Four rounds. For what it’s worth, everybody had a temperature."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Bruno now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Bruno, the shop owner who is in two minds.",
+   "perguntas": [
+    "Bruno, one month later: are you for the Sunday streets or against them?",
+    "How have Sundays changed for your shop?",
+    "What do your customers say about it?",
+    "What do you think of the street musicians outside your door?",
+    "Dona Celia couldn’t care less. Does that annoy you?",
+    "If the city asked you to vote again tomorrow, what would you say?"
+   ],
+   "st": [
+    "I’m in two minds.",
+    "To be fair, …",
+    "If you ask me, …"
+   ],
+   "ex": "I’m in two minds. To be fair, more people walk past, but fewer of them buy anything."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

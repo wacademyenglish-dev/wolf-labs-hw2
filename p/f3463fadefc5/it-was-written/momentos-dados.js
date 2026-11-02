@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de It Was Written (11/10/2026): cinco falas do trailer de Dune: Part Three.
+   Forma: o termômetro (a dor da Chani). Alvo: o futuro visto do passado (was supposed to, would, was to, was going to, it was written).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [0], k: 'I trusted you', quem: 'Chani',
+    contexto: 'Paul is now emperor of the universe. Chani, who loved him in the desert, feels betrayed.',
+    frase: 'I <b>trusted</b> you!',
+    explica: 'Three words, all the pain of the story. The trust was the plan, and the plan failed.',
+    formula: 'She <b>was supposed to</b> trust him forever. (was supposed to = the plan that failed)',
+    tente: 'Tell me about a plan that was supposed to happen and didn’t.',
+    ex: 'We were supposed to travel in July, but my flight was cancelled.',
+    sente: { q: 'How hurt is Chani?', de: 'a little upset', a: 'heartbroken', st: 'She’s … because he was supposed to …' } },
+  { i: [1, 2], k: 'A promise', quem: 'Chani',
+    contexto: 'She reminds him of what he said in the beginning.',
+    frase: 'You promised me that <b>you would never take power</b> in your name.',
+    explica: 'In reported promises, <i>will</i> becomes <i>would</i>: the future, seen from the past.',
+    formula: 'He promised he <b>would</b> never take power. · ✗ he promised he will never',
+    tente: 'Tell me about a promise someone made to you. Did they keep it?',
+    ex: 'My father promised he would teach me to drive. He kept his promise.',
+    sente: { q: 'How angry is Chani now?', de: 'calm', a: 'furious', st: 'She’s … because he promised he would …' } },
+  { i: [3], k: 'Your home', quem: 'Chani',
+    contexto: 'Paul made her believe that he belonged to the desert, with her people.',
+    frase: 'You convinced me that <b>this was your home</b>.',
+    explica: 'He talked as if the desert were his destiny. That was the future he showed her.',
+    formula: 'The desert <b>was to be</b> his home. (was to = destiny, a fixed plan)',
+    tente: 'Where were you to live, or what were you to be, when you were a child?',
+    ex: 'I was to be a doctor, like my mother. Life had other plans!',
+    sente: { q: 'How betrayed does she feel?', de: 'not at all', a: 'completely', st: 'She feels … because the desert was to be …' } },
+  { i: [4], k: 'I was your home', quem: 'Chani',
+    contexto: 'And the hardest part: he made her believe she was his home too.',
+    frase: 'That <b>I was your home</b>!',
+    explica: 'Not a place this time, a person. They were going to live a simple life together. That future never came.',
+    formula: 'They <b>were going to</b> live together in the desert. (the plan, not what happened)',
+    tente: 'Tell me about something you were going to do last weekend, but didn’t.',
+    ex: 'I was going to clean the house, but I watched a whole series instead.',
+    sente: { q: 'How strong is this moment?', de: 'quiet', a: 'explosive', st: 'It’s … because they were going to …' } },
+  { i: [5, 6, 7], k: 'Thousands of worlds', quem: 'Paul',
+    contexto: 'Paul talks with a man who knows the legend. The cost of his victory is enormous.',
+    frase: 'What do you know about me? ... I’ve destroyed <b>thousands of worlds</b>. What are your thoughts on that?',
+    explica: 'The prophecy said he would win. It didn’t say what winning would cost.',
+    formula: '<b>It was written</b> that he <b>would</b> win. · He <b>was never to</b> be free.',
+    tente: 'Did you ever feel that something was “written”, like destiny? Tell me.',
+    ex: 'I missed my bus and met my wife at the next stop. It was written!',
+    sente: { q: 'How dark is Paul here?', de: 'hopeful', a: 'very dark', st: 'He’s … because it was written that he would …' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#d9a35a', titulo: 'The visions.', sub: 'Hear the line, measure the feeling, then tell the future as it was seen from the past.', rot: { por: 'WHAT IT MEANS', padrao: 'THE FUTURE IN THE PAST', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Noun Does the Work · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Noun Does the Work · The Verb Map</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Noun Does the Work · The Verb Map</h2>
+    <p>In Portuguese, one verb covers almost everything: photo, mistake, break. English splits the job across four verbs, and the <b>noun</b> chooses: <b>make</b> a decision, <b>do</b> the dishes, <b>take</b> a photo, <b>have</b> lunch. A few nouns live on the border: <b>take / have a look, a break, a shower, a rest</b>. Students say <i>make a photo</i> and <i>do a mistake</i>. The meaning of the verb helps a little; memory of the pair helps much more. On screen, a map with four territories (MAKE, DO, TAKE, HAVE) and a striped border strip shared by TAKE and HAVE; every noun drops a pin in its territory.</p>
+    <h4>THE NOUN CHOOSES</h4>
+    <p>Don’t ask “what does DO mean?”. Ask “what does this noun go with?”. In scene II the student says the whole phrase before tapping a territory.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Scene V: four recordings, one voice, each with pause and 0.75×; the verb is fast and quiet. Lines 1 and 2: the same sentence, and the noun changed the verb. Lines 3 and 4: the same request with TAKE and HAVE, both right.</p>
+    <h4>A NOTE</h4>
+    <p><i>make notes</i> exists too (writing your own notes), but <i>take notes</i> is the usual one in a talk. <i>take a decision</i> is heard in British English; this lesson trains <b>make a decision</b>.</p>
+    <h4>THE DAY</h4>
+    <p>Scene VII: push for eight collocations in one story. The counter adds them up as you go; count them out loud together.</p>
+    <!--conversa--><h4>A GOOD DAY (IV) AND THE SURPRISE QUESTION</h4>
+    <p>In the middle of the Focus scenes, your student puts five pieces of a good day in order (take a real break, make a big decision, do some exercise…) and explains the top one and the last one, saying the verb with each noun. There is no right order: wait five seconds in silence, then use the PUSH line (only you see it). Then show your own order and agree on one top three together. Recast verb slips quietly (make a break → take a break); at the end, ask them to fix one or two themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Yesterday, IV A Good Day, VII A Whole Day.</li>
+      <li><b>Listen</b>: V Which One Went In.</li>
+      <li><b>Focus</b>: II The Verb Map, III Six Lines, VI Beyond the Kitchen, VIII Wrong Territory.</li>
+      <li><b>Write</b>: IX, their yesterday with every noun in place. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE NOUN DOES THE WORK (Main B2) · pergunta-surpresa · 28/10/2026 · make / do / take / have */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'mapa', tipo: 'Would you rather', q: 'Would you rather do the dishes every day for a month or make dinner every day for a month?',
+    opc: ['Do the dishes', 'Make dinner'], st: ['I’d rather … , because …', 'Making … takes …'],
+    ex: 'Make dinner. Doing the dishes is boring, but making dinner is creative, and I can listen to music.',
+    push: 'Dinner for six people, every night. Still dinner?' },
+  { cena: 'seis', tipo: 'And you?', q: 'When did you last make a mistake at work or school that was actually funny?',
+    opc: ['This week', 'This year', 'Never! I’m perfect'], st: ['I made a mistake when …', 'I took … and …'],
+    ex: 'This week. I made a mistake in an email and sent “Best wishes” to my boss as “Beast wishes”.',
+    push: 'Did anybody notice? What did you do next?' },
+  { cena: 'alem', tipo: 'Opinion', q: 'Is it better to take a risk at twenty-five or at forty-five?',
+    opc: ['At twenty-five', 'At forty-five', 'Any time'], st: ['You should take a risk when …', 'At … you can make …'],
+    ex: 'At forty-five. You make better decisions, and you have more money to lose.',
+    push: 'What risk would you take this year, if you could?' },
+  { cena: 'dia', tipo: 'What if', q: 'Tomorrow you have no work and no plans. What do you do first?',
+    opc: ['Have a long breakfast', 'Do some exercise', 'Take a nap'], st: ['First, I’d have …', 'Then I’d take …'],
+    ex: 'Have a long breakfast. Then I’d take a walk and do absolutely nothing useful.',
+    push: 'Your friend calls and asks you a big favour for the whole afternoon. Do you do it?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE NOUN DOES THE WORK (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O ranking entra no lugar de "IV · Only One Works" (escolher o verbo da lacuna: a MESMA mecânica do VI,
+   Beyond the Kitchen, que fica). A aula tinha quatro telas de Focus seguidas no meio; agora, depois do mapa
+   e das seis linhas, o aluno ordena cinco pedaços de um dia bom, cada um com o seu verbo, e compara com o professor.
+   A gramática da aula (make / do / take / have + substantivo) está nos itens e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'ranking', troca: 'so', est: 'o', min: 7, img: 'mesa', rot: 'A Good Day', t: 'What makes a day a good day? Put five things in order.',
+    p: 'Tap from the most to the least important for you. Explain your top one and your last one.',
+    formato: 'ranking',
+    q: 'A good day for me is a day when I …',
+    itens: ['have a long lunch with someone', 'make a big decision', 'take a real break, phone off', 'do some exercise', 'take a small risk'],
+    prof: [2, 3, 0, 4, 1],
+    st: ['For me, taking a … comes first, because …', 'I’d rather have … than make …', 'Doing … is last for me, because …', 'A day without … is …'],
+    ex: 'Number one: take a real break, phone off. I make a hundred small decisions every day, so a big one is last. Doing some exercise is second: after it, I have a better time at everything.',
+    push: 'You can keep only TWO for a whole month. Which two, and what do you lose?',
+    dica: 'Tap from the most to the least important. Say the verb with each one. Tap again to take it out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "ontem": {
+   "t": "Yesterday. Which of these did you do?",
+   "p": "Tap one. Then answer out loud."
+  },
+  "mapa": {
+   "t": "Every noun lives somewhere on the map.",
+   "p": "Say the noun with a verb. Tap its territory."
+  },
+  "seis": {
+   "t": "Six work lines. Three wrong verbs.",
+   "p": "Read it out loud. Tap RIGHT or WRONG."
+  },
+  "cv-ranking": {
+   "t": "What makes a good day?",
+   "p": "Order five things. Explain your top and last."
+  },
+  "ouve": {
+   "t": "Fast, quiet verbs. Four lines.",
+   "p": "Play each line. Tap the verb you heard."
+  },
+  "alem": {
+   "t": "Four verbs at work, in the news, in life.",
+   "p": "Choose the verb. Say the whole sentence."
+  },
+  "dia": {
+   "t": "One real day, eight collocations.",
+   "p": "Say the model line. Then say your own."
+  },
+  "erros": {
+   "t": "Five phrases in the wrong place.",
+   "p": "Choose the fix. Say the whole sentence."
+  },
+  "fim": {
+   "t": "Your yesterday, every noun in place.",
+   "p": "Write it with four verbs or more. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Collocations com make, do, take e have: o substantivo escolhe o verbo (make a decision, do the dishes, take a photo, have lunch), num mapa com quatro territórios.",
+  "armadilha": "O “fazer” do português cobre quase tudo, então sai “make a photo”, “do a mistake”, “make a break”. Pergunte com o que o substantivo anda, não o que o verbo significa.",
+  "pal": [
+   "make a decision",
+   "make a mistake",
+   "do the dishes",
+   "do some exercise",
+   "take a photo",
+   "take a break",
+   "have lunch",
+   "have a look",
+   "take notes"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: o substantivo decide o verbo, não o contrário.",
+   "perg": "What did you do yesterday?",
+   "pula": "Só leia a frase da capa e entre."
+  },
+  "ontem": {
+   "obj": "Aquecimento pessoal: o que o aluno fez ontem, já com as collocations.",
+   "perg": "Did you take a break yesterday?",
+   "pula": "Duas respostas bastam."
+  },
+  "mapa": {
+   "obj": "O mapa dos quatro verbos e a fronteira TAKE/HAVE; o aluno diz a expressão inteira antes de tocar.",
+   "perg": "What does this noun go with?",
+   "pula": "Oito substantivos bastam."
+  },
+  "seis": {
+   "obj": "Seis frases de trabalho, três com o verbo errado: certo ou errado?",
+   "perg": "Is this verb right for this noun?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-ranking": {
+   "obj": "Ranquear cinco partes de um bom dia e explicar o primeiro e o último, com o verbo certo. Use a linha PUSH.",
+   "perg": "Why is that number one for you?",
+   "pula": "Só o primeiro e o último."
+  },
+  "ouve": {
+   "obj": "Ouvir o verbo rápido e fraco em quatro gravações; linhas 3 e 4: take e have, ambos certos.",
+   "perg": "Which verb went in?",
+   "pula": "Duas gravações bastam."
+  },
+  "alem": {
+   "obj": "Os mesmos quatro verbos fora da cozinha: trabalho, notícias, vida.",
+   "perg": "Which verb fits here?",
+   "pula": "Quatro frases bastam."
+  },
+  "dia": {
+   "obj": "Contar um dia real com oito collocations; o contador soma em voz alta.",
+   "perg": "What did you do after lunch?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "erros": {
+   "obj": "Cinco expressões no território errado e uma certa: escolher a correção.",
+   "perg": "Which one is already fine?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o ontem da cena I com cada substantivo no lugar.",
+   "perg": "Which verb goes with that noun?",
+   "pula": "Quatro frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta usando as collocations naturalmente.",
+   "perg": "When did you last make a big decision?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre rotina e trabalho, com collocations nos argumentos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Planejar o dia perfeito do aluno com o máximo de collocations certas.",
+   "perg": "What would you do first?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Let the noun choose.",
+   "p": "Pick a card. Get every verb right.",
+   "palavras": [
+    "make",
+    "do",
+    "take",
+    "have"
+   ],
+   "cartas": [
+    {
+     "k": "BIG DECISION",
+     "q": "When did you last make a big decision?",
+     "fup": "Did you take your time, or decide fast?",
+     "st": [
+      "I made a decision to …",
+      "I took …"
+     ],
+     "ex": "Last year I made the decision to change jobs, and I took three months to think."
+    },
+    {
+     "k": "A MISTAKE",
+     "q": "What is a mistake you made that taught you something?",
+     "fup": "Would you do it differently now?",
+     "st": [
+      "I made a mistake when …",
+      "Now I …"
+     ],
+     "ex": "I made a big mistake when I signed a contract without reading it."
+    },
+    {
+     "k": "HOUSEWORK",
+     "q": "Which housework do you hate doing?",
+     "fup": "Who does it in your house?",
+     "st": [
+      "I hate doing …",
+      "My … does …"
+     ],
+     "ex": "I hate doing the ironing, so my partner does it and I do the dishes."
+    },
+    {
+     "k": "BREAKS",
+     "q": "Do you take real breaks at work?",
+     "fup": "What do you do in them?",
+     "st": [
+      "I take a break …",
+      "I have a coffee and …"
+     ],
+     "ex": "I take a break at three, have a coffee and don’t look at my phone."
+    },
+    {
+     "k": "PHOTOS",
+     "q": "Do you take a lot of photos?",
+     "fup": "Do you ever look at them again?",
+     "st": [
+      "I take photos of …",
+      "I have a look at them …"
+     ],
+     "ex": "I take photos of food, but I never have a look at them again."
+    },
+    {
+     "k": "PROGRESS",
+     "q": "Where have you made the most progress this year?",
+     "fup": "What helped?",
+     "st": [
+      "I’ve made progress in …",
+      "I did a course in …"
+     ],
+     "ex": "I’ve made progress in my English, because I did an intensive course."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "make",
+    "do",
+    "take",
+    "have",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Make big decisions fast, or take your time?",
+     "a": "Fast",
+     "b": "Take your time",
+     "fa": [
+      "Fast. If you take too long, the chance is gone.",
+      "Your first feeling is usually right."
+     ],
+     "fb": [
+      "Take your time. Fast decisions cause big mistakes.",
+      "Sleep on it and look again."
+     ]
+    },
+    {
+     "q": "Do housework every day, or all on Saturday?",
+     "a": "Every day",
+     "b": "On Saturday",
+     "fa": [
+      "Every day. Ten minutes and the house stays clean.",
+      "Saturday should be for fun."
+     ],
+     "fb": [
+      "On Saturday. During the week I have no energy.",
+      "Do it all at once and it’s over."
+     ]
+    },
+    {
+     "q": "Take a nap at work: professional or lazy?",
+     "a": "Professional",
+     "b": "Lazy",
+     "fa": [
+      "Professional. You make fewer mistakes after a rest.",
+      "Some big companies have nap rooms."
+     ],
+     "fb": [
+      "Lazy. You can have a rest at home.",
+      "Clients don’t want to see you sleeping."
+     ]
+    },
+    {
+     "q": "Is it OK to make mistakes in front of your boss?",
+     "a": "Yes",
+     "b": "Better not",
+     "fa": [
+      "Yes. It shows you are trying new things.",
+      "Good bosses make mistakes too."
+     ],
+     "fb": [
+      "Better not. Do your homework first.",
+      "First impressions are hard to fix."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You made your point."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Perfect Day",
+   "t": "Plan a perfect day.",
+   "p": "Step by step. Count the collocations.",
+   "prof": "Count every correct collocation out loud with them; if a verb slips, ask “What does that noun go with?”",
+   "passos": [
+    {
+     "q": "How does your perfect day start?",
+     "st": [
+      "I’d have …",
+      "I’d take …"
+     ],
+     "ex": "I’d have a long breakfast and take a walk by the sea."
+    },
+    {
+     "q": "What would you do in the afternoon?",
+     "st": [
+      "I’d do …",
+      "I’d take some photos of …"
+     ],
+     "ex": "I’d do some exercise and take photos of the old town."
+    },
+    {
+     "q": "What wouldn’t you have to do?",
+     "st": [
+      "I wouldn’t do any …",
+      "I wouldn’t make any …"
+     ],
+     "ex": "I wouldn’t do any housework, and I wouldn’t make a single decision."
+    },
+    {
+     "q": "How would the day end?",
+     "st": [
+      "I’d have dinner with …",
+      "I’d make …"
+     ],
+     "ex": "I’d have dinner with my friends and make a toast to doing nothing."
+    }
+   ],
+   "fim": "One perfect day, every noun in its place."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

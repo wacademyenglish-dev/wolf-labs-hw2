@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Missing Years",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/20bac56f120e/the-missing-years/img/live-mar.webp",
+  "capa": "../img/live-mar.webp",
   "alvo": "past simple of a journey: was / were (one thing, many things), irregular verbs (took, ate, forgot, came), didn't + plain verb, Did he ...? Yes, he did.",
   "abrir": "What was your longest trip? How long was it?",
   "fecho": "<b>was</b> (I, he, she, it) · <b>were</b> (you, we, they, many things). Irregular: <b>took, ate, forgot, came</b>. No: <b>didn't</b> + plain verb. Question: <b>Did</b> he + plain verb?",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a film trailer about a long way home. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/20bac56f120e/the-missing-years/img/live-mar.webp",
+      "img": "../img/live-mar.webp",
       "leg": "A dark sea",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,12 +109,12 @@ window.HW2 = {
       "frases": [
         {
           "t": "The sea was dark and the storm was huge.",
-          "img": "https://wolf-labs.pages.dev/p/20bac56f120e/the-missing-years/img/live-mar.webp",
+          "img": "../img/live-mar.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The king didn't forget his home.",
-          "img": "https://wolf-labs.pages.dev/p/20bac56f120e/the-missing-years/img/live-ilha.webp",
+          "img": "../img/live-ilha.webp",
           "au": "audio/say2.mp3"
         },
         {
@@ -164,7 +164,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/20bac56f120e/the-missing-years/img/live-mar.webp",
+      "img": "../img/live-mar.webp",
       "leg": "A dark sea under a storm",
       "pede": "Look at the picture: a dark sea. Write 2 or 3 sentences about a trip you remember: where you <b>were</b>, what you <b>ate</b> or <b>took</b>, and one thing you <b>didn't</b> do.",
       "ph": "On my last trip I was …",

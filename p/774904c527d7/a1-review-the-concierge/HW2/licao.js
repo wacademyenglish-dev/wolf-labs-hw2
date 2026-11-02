@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "A1 Review: The Concierge",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/774904c527d7/a1-review-the-concierge/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 5 review: the imperative (verb first); Don't + verb; steps with first, then, finally; let's / Shall we...?; directions (go straight, turn left AT, on your right, next to)",
   "abrir": "Give me one rule from your home.",
   "fecho": "Verb first: <i>Go straight.</i> <b>Don't</b> + verb: <i>Don't take the bus.</i> <b>Let's</b> + verb: <i>Let's go.</i> Turn left <b>at</b> the bank. It's <b>on</b> your right.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia is the concierge. Leo is a tourist. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/774904c527d7/a1-review-the-concierge/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An old street at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Go straight and turn left at the bank.",
-          "img": "https://wolf-labs.pages.dev/p/774904c527d7/a1-review-the-concierge/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Don't take the bus. Walk!",
-          "img": "https://wolf-labs.pages.dev/p/774904c527d7/a1-review-the-concierge/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Let's go to the café at eight.",
-          "img": "https://wolf-labs.pages.dev/p/774904c527d7/a1-review-the-concierge/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -157,7 +157,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/774904c527d7/a1-review-the-concierge/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An old street at night",
       "pede": "Look at the picture: an old street at night. Write 2 or 3 sentences: tell a tourist the way. Use the verb first, <b>turn left / right at</b> and <b>Don't</b>.",
       "ph": "Go straight. Turn left at …",

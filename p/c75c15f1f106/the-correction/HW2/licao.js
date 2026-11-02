@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "The Correction",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c75c15f1f106/the-correction/img/live-jornais.webp",
+  "capa": "../img/live-jornais.webp",
   "alvo": "quantifiers: a few / a little = some, and it is fine; few / little = hardly any, a small complaint; few + things you count, little + things you can't count; most / most of the / most of them (never the most of)",
   "abrir": "What do you have a few of, and what do you have little of?",
   "fecho": "<b>A few / a little</b> = some, and that is fine. <b>Few / little</b> = hardly any: a small complaint. Count it? <b>few</b>. Can’t count it? <b>little</b>. And <b>most / most of the / most of them</b>, never <i>the most of</i>.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo write a report about a workshop. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c75c15f1f106/the-correction/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A desk with a phone and headphones",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "A few people came, and they liked it.",
-          "img": "https://wolf-labs.pages.dev/p/c75c15f1f106/the-correction/img/live-jornais.webp",
+          "img": "../img/live-jornais.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We had little coffee, so it finished quickly.",
-          "img": "https://wolf-labs.pages.dev/p/c75c15f1f106/the-correction/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Most of the people stayed until the end.",
-          "img": "https://wolf-labs.pages.dev/p/c75c15f1f106/the-correction/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -166,7 +166,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c75c15f1f106/the-correction/img/live-jornais.webp",
+      "img": "../img/live-jornais.webp",
       "leg": "A pile of newspapers under a lamp",
       "pede": "Look at the picture: a pile of newspapers under a lamp. Write 2 or 3 sentences about your last week. Use <b>a few / a little</b> for something fine, <b>few / little</b> for a small complaint, and <b>most of</b> ...",
       "ph": "Last week I had a few …",

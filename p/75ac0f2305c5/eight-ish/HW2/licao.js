@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Eight-ish",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/75ac0f2305c5/eight-ish/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "approximate numbers and times: about / around + number, number + -ish, more or less at the end; never more or less of, never around of, never she has thirty years",
   "abrir": "What time do you usually have dinner, more or less?",
   "fecho": "When you aren't sure: <b>about</b> or <b>around</b> + number (<i>about twenty minutes</i>), number + <b>-ish</b> (<i>eight-ish</i>), <b>more or less</b> at the end. Never <i>more or less of</i>, never <i>around of</i>. An age uses be: <i>She is about thirty.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a dinner party. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/75ac0f2305c5/eight-ish/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A red sofa, an accordion and a stack of records",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Let's meet at seven-ish.",
-          "img": "https://wolf-labs.pages.dev/p/75ac0f2305c5/eight-ish/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It takes about twenty minutes, more or less.",
-          "img": "https://wolf-labs.pages.dev/p/75ac0f2305c5/eight-ish/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She is around thirty years old.",
-          "img": "https://wolf-labs.pages.dev/p/75ac0f2305c5/eight-ish/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/75ac0f2305c5/eight-ish/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A red sofa, an accordion and a stack of records",
       "pede": "Look at the picture: a red sofa, an accordion and a stack of old records. Write 2 or 3 sentences about your week with numbers that are not exact. Use <b>about</b>, <b>around</b>, <b>-ish</b> or <b>more or less</b>.",
       "ph": "I wake up at about … I work around … hours a day …",

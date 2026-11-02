@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "And You?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/9b95ace5cc68/and-you/img/live-pingpong.webp",
+  "capa": "../img/live-pingpong.webp",
   "alvo": "sending the question back: And you? / What about you?; the echo that copies the verb (I live near here. Do you? / I'm a designer. Are you?)",
   "abrir": "Where are you from? And you?",
   "fecho": "Answer, then send the ball back: <b>And you?</b> or <b>What about you?</b> The echo copies the verb: <i>I like tea. Do you?</i> <i>I'm tired. Are you?</i> <i>I've got two cats. Have you?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a bus stop. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/9b95ace5cc68/and-you/img/live-fila.webp",
+      "img": "../img/live-fila.webp",
       "leg": "A bus stop on a rainy evening",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'm from Recife. And you?",
-          "img": "https://wolf-labs.pages.dev/p/9b95ace5cc68/and-you/img/live-fila.webp",
+          "img": "../img/live-fila.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I work at night. Do you?",
-          "img": "https://wolf-labs.pages.dev/p/9b95ace5cc68/and-you/img/live-fria.webp",
+          "img": "../img/live-fria.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'm a designer. What about you?",
-          "img": "https://wolf-labs.pages.dev/p/9b95ace5cc68/and-you/img/live-pingpong.webp",
+          "img": "../img/live-pingpong.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/9b95ace5cc68/and-you/img/live-pingpong.webp",
+      "img": "../img/live-pingpong.webp",
       "leg": "A ping-pong table, two rackets and a ball",
       "pede": "Look at the picture: a ping-pong table. Write a small talk with a stranger, 2 or 3 lines. Answer, then send the ball back with <b>And you?</b>, <b>Do you?</b> or <b>Are you?</b>",
       "ph": "I'm from … And you?",

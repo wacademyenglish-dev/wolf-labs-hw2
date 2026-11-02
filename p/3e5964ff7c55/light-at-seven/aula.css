@@ -1,0 +1,91 @@
+/* ============================================================
+   THE LIGHT AT SEVEN · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Identidade: o pátio à noite, azul-tinta;
+   o PRÉDIO em CSS com quinze janelas escuras que acendem em âmbar quente
+   (só a janela acesa tem luz; nada de campo claro grande).
+   ============================================================ */
+:root{
+  --noite:#060a10; --noite-rgb:6,10,16; --tinta:#e6ecf4;
+  --t1:#edf2f8; --t2:#c4cfdc; --t2-rgb:196,207,220; --t3:#7f8da0;
+  --ac:#f0b04a; --ac2:#ffd690; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(230,236,244,.05); --vidro2:rgba(230,236,244,.085); --vidro3:rgba(230,236,244,.12);
+  --fio:rgba(210,224,240,.12); --fio2:rgba(210,224,240,.22); --luz:rgba(230,236,244,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'Fraunces',Georgia,serif;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,2,6,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1d1404}
+.btn.cheio{color:#1d1404}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:300 clamp(58px,5.6vw,108px)/.95 var(--serif);letter-spacing:-.03em}
+.capa h1 b{display:block;font-weight:700;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa-predio{position:relative;display:grid;place-items:center}
+.relogio-c{position:absolute;top:-6px;right:10%;padding:4px 12px;border-radius:999px;background:#0e1520;border:1px solid var(--fio2);font:700 14px var(--mono);color:var(--ac2)}
+.vaga{color:var(--ac);letter-spacing:.06em}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande{min-height:58px;padding:0 24px;font:800 clamp(19px,1.5vw,24px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.toca-linha{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:var(--r2);font:600 clamp(18px,1.4vw,22px)/1.35 var(--disp)}
+.toca-linha .transcricao{margin:0}
+
+/* o prédio */
+.predio{position:relative;width:100%;max-width:420px;margin:0 auto;padding:22px 22px 0;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#1a2230,#121924);box-shadow:var(--sombra)}
+.telhado{position:absolute;left:-10px;right:-10px;top:-14px;height:16px;border-radius:4px;background:#0c121b}
+.janelas{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.4vw,22px)}
+.jan{position:relative;display:grid;place-items:center;aspect-ratio:3/4;max-height:calc((100vh / var(--zv,1) - 560px) / 5);border-radius:3px;background:#0a0f17;border:3px solid #26303f;transition:background .6s,box-shadow .6s}
+.jan.acesa{background:radial-gradient(circle at 50% 40%,#ffd690,#d18a2a);box-shadow:0 0 30px rgba(240,176,74,.45);border-color:#5a4020}
+.jan i{font-style:normal;font-size:clamp(18px,1.6vw,28px)}
+.jan.dele{border-color:var(--ac)}
+.porta-p{width:22%;height:46px;margin:16px auto 0;border-radius:4px 4px 0 0;background:#0a0f17;border:3px solid #26303f;border-bottom:0}
+
+.mesa-predio{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:30px;align-items:start}
+.lado-predio{display:grid;gap:10px}
+.acao{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:var(--r2)}
+.acao>div{flex:1} .hora-a{font:700 16px var(--mono);color:var(--ac2);width:60px} .ic-a{font-size:26px}
+.acao.feita{border-color:rgba(240,176,74,.5)!important}
+
+/* III */
+.gangorra{display:flex;justify-content:center;align-items:center;gap:20px;max-width:1000px;margin:0 auto;width:100%;transition:transform .6s}
+.gangorra.l0{transform:rotate(-3deg)} .gangorra.l1{transform:rotate(3deg)}
+.prato{flex:1;display:grid;justify-items:center;gap:6px;padding:24px;border-radius:var(--r2);border:2px solid var(--fio2);background:#0f1622;color:var(--t1)}
+.prato small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .prato b{font:800 clamp(30px,2.6vw,48px) var(--disp)}
+.prato.certo{border-color:var(--ok)} .prato.certo b{color:var(--ok)} .prato.errado{border-color:var(--erro);animation:treme .35s}
+.eixo-g{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--ac);color:#1d1404;font:800 32px var(--serif)}
+
+/* IV */
+.vizinhos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.viz{display:grid;justify-items:center;gap:2px;padding:10px 6px;border-radius:12px;border:1px solid var(--fio2);background:#0f1622;color:var(--t1)}
+.viz span{font-size:24px} .viz b{font:800 15px var(--disp)} .viz small{color:var(--t3);font-weight:600}
+.viz.on{border-color:var(--ac)} .viz.feito{border-color:var(--ok);background:rgba(240,176,74,.08)}
+
+/* V */
+.palavra-g{display:grid;justify-items:center;gap:6px;max-width:620px;margin:0 auto;width:100%;padding:18px;border-radius:var(--r2)}
+.palavra-g small{font:800 11.5px var(--mono);letter-spacing:.14em;color:var(--t3)} .palavra-g b{font:700 clamp(46px,4vw,74px)/1 var(--serif);font-style:italic;color:var(--ac2)}
+.placas-f{display:flex;flex-wrap:wrap;justify-content:center;gap:10px} .placas-f span{padding:10px 18px;border-radius:999px;border:1px solid var(--fio2);font:700 22px var(--serif);font-style:italic;color:var(--ac2)}
+
+/* VI */
+.mesa-esc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:start}
+.foto-e{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center}
+.foto-e span{position:absolute;left:14px;top:12px;padding:4px 12px;border-radius:999px;background:rgba(6,10,16,.85);font:700 13px var(--mono);color:var(--ac2)}
+
+/* VII */
+.mesa-hist{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;align-items:start}
+.lado-h{display:grid;gap:10px}
+.lado-h2 .transcricao{max-height:calc(100vh / var(--zv,1) - 360px);overflow:auto;padding:16px 20px;border-radius:var(--r2);background:#0e1420;border:1px solid var(--fio);font:500 clamp(17px,1.25vw,21px)/1.5 var(--serif);text-align:left}
+.lado-h2 .transcricao.vazia{font:600 16px var(--ui);text-align:center}
+.pq{display:grid;grid-template-columns:34px 1fr;gap:6px 12px;align-items:center;padding:10px 14px;border-radius:14px;background:var(--vidro);border:1px solid var(--fio)}
+.pq span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ac);color:#1d1404;font:800 14px var(--mono)}
+.pq p{margin:0;font:700 clamp(18px,1.4vw,22px) var(--disp)} .pq .resp-btn,.pq .resposta{grid-column:2;margin:0}
+.fim .grande span{font-size:clamp(20px,1.6vw,26px)}
+
+@media (max-width:1100px){ .mesa-predio,.mesa-esc,.mesa-hist,.capa{grid-template-columns:1fr} }
+@media (max-width:820px){ .vizinhos{grid-template-columns:repeat(2,minmax(0,1fr))} .gangorra{flex-direction:column} .predio{max-width:280px} .jan{max-height:none} .acao{flex-wrap:wrap} }
+.mesa-predio .predio{max-width:340px} .jan{width:100%;justify-self:center}
+.janelas{justify-items:center}

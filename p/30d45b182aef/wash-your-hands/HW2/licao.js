@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Wash Your Hands",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/30d45b182aef/wash-your-hands/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "orders and rules in the office: verb first (Close the door), Please + verb, Don't + verb, Let's + verb, Be quiet / Don't be late",
   "abrir": "What signs do you see at work or at school?",
   "fecho": "A rule starts with the <b>verb</b>: <i>Close the door.</i> Add <b>please</b> to be polite: <i>Please wash your hands.</i> For no, use <b>don't</b>: <i>Don't touch it.</i> For you and me, use <b>let's</b>: <i>Let's have a meeting.</i> With adjectives, add <b>be</b>: <i>Be quiet. Don't be late.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a small office. A new scene, about 30 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/30d45b182aef/wash-your-hands/img/live-escritorio.webp",
+      "img": "../img/live-escritorio.webp",
       "leg": "The office, at the end of the day",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Please close the door. Don't leave it open.",
-          "img": "https://wolf-labs.pages.dev/p/30d45b182aef/wash-your-hands/img/live-escritorio.webp",
+          "img": "../img/live-escritorio.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Be quiet, please. The boss is on the phone.",
-          "img": "https://wolf-labs.pages.dev/p/30d45b182aef/wash-your-hands/img/live-impressora.webp",
+          "img": "../img/live-impressora.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Let's make tea. Don't forget the cups.",
-          "img": "https://wolf-labs.pages.dev/p/30d45b182aef/wash-your-hands/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/30d45b182aef/wash-your-hands/img/live-impressora.webp",
+      "img": "../img/live-impressora.webp",
       "leg": "The office printer",
       "pede": "Look at the picture: a printer in an office. Write 3 signs for the office wall. Use <b>Please, Don't</b> or <b>Let's</b>.",
       "ph": "Please …",

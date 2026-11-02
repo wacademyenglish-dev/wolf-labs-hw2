@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Had My Hair Cut",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4775dc7ba2e7/had-my-hair-cut/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "have / get + the thing + past participle (somebody did it for you): I had my hair cut; the thing goes in the middle; I cut my hair = I did it myself; get is more informal",
   "abrir": "Who does things for you?",
   "fecho": "<b>have</b> + the thing + <b>participle</b>: somebody did it for you (<i>I had my hair cut.</i>). The thing goes in the middle: <i>She had her car washed.</i> <b>I cut my hair</b> = you held the scissors. <b>Get</b> works too, a bit more informal.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a wedding. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/4775dc7ba2e7/had-my-hair-cut/img/live-vestido.webp",
+      "img": "../img/live-vestido.webp",
       "leg": "A wedding dress on a stand",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "She had her hair cut on Monday.",
-          "img": "https://wolf-labs.pages.dev/p/4775dc7ba2e7/had-my-hair-cut/img/live-cabelo.webp",
+          "img": "../img/live-cabelo.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I had my dress shortened last week.",
-          "img": "https://wolf-labs.pages.dev/p/4775dc7ba2e7/had-my-hair-cut/img/live-vestido.webp",
+          "img": "../img/live-vestido.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He is getting his car washed today.",
-          "img": "https://wolf-labs.pages.dev/p/4775dc7ba2e7/had-my-hair-cut/img/live-carro.webp",
+          "img": "../img/live-carro.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4775dc7ba2e7/had-my-hair-cut/img/live-vestido.webp",
+      "img": "../img/live-vestido.webp",
       "leg": "A wedding dress on a stand",
       "pede": "Look at the picture: a wedding dress on a stand. Write 2 or 3 sentences about things you had done by someone else, or things you need to have done. Use <b>had … done</b> or <b>need to have … done</b>.",
       "ph": "I had my … done. I need to have my …",

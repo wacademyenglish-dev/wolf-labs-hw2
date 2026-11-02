@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "This Time Tomorrow",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/282a216bacba/this-time-tomorrow/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "future continuous: will be + -ing for something in progress at a moment in the future (this time tomorrow, at nine); won't be + -ing; the polite question Will you be -ing?; state verbs stay simple (will know, never will be knowing); never will + -ing without be",
   "abrir": "What will you be doing this time tomorrow?",
   "fecho": "<b>will be + -ing</b> = something in progress at a future moment: <i>This time tomorrow, I will be sitting on a train.</i> Negative: <b>won't be + -ing</b>. A polite question: <b>Will you be using the car?</b> Never <i>will sitting</i>, never <i>will be sit</i>. Verbs like <i>know</i> stay simple: <i>will know</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about the big message. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/282a216bacba/this-time-tomorrow/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A road at night under a big moon",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This time tomorrow, I will be sitting on a train.",
-          "img": "https://wolf-labs.pages.dev/p/282a216bacba/this-time-tomorrow/img/live-trem.webp",
+          "img": "../img/live-trem.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "At midnight, we will be riding bikes under the moon.",
-          "img": "https://wolf-labs.pages.dev/p/282a216bacba/this-time-tomorrow/img/live-bicicleta.webp",
+          "img": "../img/live-bicicleta.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "On Friday night, I will be driving on a quiet road.",
-          "img": "https://wolf-labs.pages.dev/p/282a216bacba/this-time-tomorrow/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -155,7 +155,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/282a216bacba/this-time-tomorrow/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A road at night",
       "pede": "Look at the picture: a road at night. Write 2 or 3 sentences about this time tomorrow. Use <b>will be + -ing</b> and <b>won't be + -ing</b>.",
       "ph": "This time tomorrow, I will be …",

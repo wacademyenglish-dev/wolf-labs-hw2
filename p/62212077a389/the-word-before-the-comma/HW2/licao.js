@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Word Before the Comma",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/62212077a389/the-word-before-the-comma/img/live-palco.webp",
+  "capa": "../img/live-palco.webp",
   "alvo": "first conditional: if + present, will + plain verb; no will after if / when / unless / as soon as / until / in case; unless = if not; when = sure, if = maybe",
   "abrir": "What will you do this weekend if the weather is bad?",
   "fecho": "<b>If + present</b>, <b>will + plain verb</b>: <i>If it rains, we'll stay home.</i> No <b>will</b> after <b>if, when, unless, as soon as, until, in case</b>. <b>Unless</b> = if not: <i>We'll go unless it rains.</i> <b>When</b> is sure, <b>if</b> is maybe.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a concert in the park. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/62212077a389/the-word-before-the-comma/img/live-porta.webp",
+      "img": "../img/live-porta.webp",
       "leg": "A coat and an umbrella by the door",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If it rains tomorrow, I'll stay home.",
-          "img": "https://wolf-labs.pages.dev/p/62212077a389/the-word-before-the-comma/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We won't start unless everyone is here.",
-          "img": "https://wolf-labs.pages.dev/p/62212077a389/the-word-before-the-comma/img/live-palco.webp",
+          "img": "../img/live-palco.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Take a coat in case it gets cold.",
-          "img": "https://wolf-labs.pages.dev/p/62212077a389/the-word-before-the-comma/img/live-prisma.webp",
+          "img": "../img/live-prisma.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/62212077a389/the-word-before-the-comma/img/live-porta.webp",
+      "img": "../img/live-porta.webp",
       "leg": "A red coat and an umbrella by the door",
       "pede": "Look at the picture: a coat and an umbrella by the door. Write your plan B for the weekend in 2 or 3 sentences. Use <b>if</b>, <b>in case</b> or <b>unless</b>.",
       "ph": "If it rains, I'll …",

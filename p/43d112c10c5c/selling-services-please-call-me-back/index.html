@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -117,5 +118,302 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "Do you listen to your voicemails?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "ditado": {
+   "t": "Ana leaves a voicemail. Six sentences.",
+   "p": "Listen up to three times. Type every word."
+  },
+  "formulario": {
+   "t": "Put the voicemail in the CRM.",
+   "p": "Fill every field: digits, a.m. or p.m. Check."
+  },
+  "descobre": {
+   "t": "“Call me back”, not “return me”.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "cadeira": {
+   "t": "Call Victor back.",
+   "p": "Your teacher is Victor. Say numbers and times clearly."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Your teacher goes first. Choose. Say why."
+  },
+  "cartao": {
+   "t": "Your thirty-second voicemail.",
+   "p": "Write it. Say it. Your teacher writes your number."
+  },
+  "pode": {
+   "t": "Lesson 18: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 18: recado de voz com números, horários e e-mails, e please + verbo. A Ana Ruiz (Tallow Foods) e o Victor Hale (Granite Labs) deixam recados para o Leo.",
+  "armadilha": "Do “me retorne” sai “Please return me”; também “call me in the number”, “at 15h” (é 3 p.m.) e “Please to call”. Número se diz dígito a dígito, 0 = “oh”.",
+  "pal": [
+   "Please call me back",
+   "at 555-0143",
+   "five five five, oh one four three",
+   "after 3 p.m.",
+   "dot",
+   "at",
+   "voicemail",
+   "I’m free on…"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 18 de Selling Services: pegar e dar número, horário e e-mail sem erro.",
+   "perg": "Do you listen to your voicemails?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal sobre telefone e horários; o aluno pergunta “And you?”.",
+   "perg": "What time do you start work? And finish?",
+   "pula": "Três perguntas bastam."
+  },
+  "ditado": {
+   "obj": "Listen and Type: o recado da Ana em seis frases; números em dígitos, e-mail como se ouve.",
+   "perg": "What’s her phone number?",
+   "pula": "Quatro frases bastam."
+  },
+  "formulario": {
+   "obj": "O recado do Victor no CRM: nome, motivo, telefone em dígitos, horário com a.m./p.m., e-mail (dados fictícios).",
+   "perg": "What’s the best time to call him?",
+   "pula": "Metade dos campos basta."
+  },
+  "descobre": {
+   "obj": "Pares: call me back x return me; at 3 p.m. x at 15h; depois regras e armadilhas.",
+   "perg": "Please return me or please call me back?",
+   "pula": "Três pares + as armadilhas bastam."
+  },
+  "cadeira": {
+   "obj": "O aluno liga de volta para o Victor (professor) e fala números e horários com clareza.",
+   "perg": "Sorry, can you repeat the number?",
+   "pula": "Três tarefas bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather leve: A ou B, com because; o professor responde também.",
+   "perg": "A or B? Why?",
+   "pula": "Uma escolha basta."
+  },
+  "cartao": {
+   "obj": "Escrita e fala: recado de 30 segundos para um cliente real; o professor anota número e e-mail.",
+   "perg": "What’s your e-mail? Slowly, please.",
+   "pula": "Nome + número + horário bastam."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; o que ficar aberto vai para a lição.",
+   "perg": "Can you leave a clear voicemail now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa leve sobre telefone e horários no trabalho do aluno, com números e please.",
+   "perg": "When are you free to talk to clients?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre recados e ligações.",
+   "perg": "Voicemail or text message?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno deixa um recado de volta para a Ana, frase por frase.",
+   "perg": "What do you say first in your message?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Phones, numbers and times.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "Please call me back",
+    "a.m. / p.m.",
+    "at",
+    "dot"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR HOURS",
+     "q": "What time do you start and finish work?",
+     "fup": "Say it with a.m. and p.m.",
+     "st": [
+      "I start at … a.m.",
+      "I finish at … p.m."
+     ],
+     "ex": "I start at 9 a.m. and I finish at 6 p.m."
+    },
+    {
+     "k": "FREE TIME",
+     "q": "When are you free to talk to clients?",
+     "fup": "And when are you never free?",
+     "st": [
+      "I’m free on … after …"
+     ],
+     "ex": "I’m free on Tuesday after 3 p.m. I’m never free on Monday morning."
+    },
+    {
+     "k": "VOICEMAIL",
+     "q": "Do you leave voicemails or send messages?",
+     "fup": "Why?",
+     "st": [
+      "I usually …, because …"
+     ],
+     "ex": "I usually send messages, because nobody listens to voicemails."
+    },
+    {
+     "k": "NUMBERS",
+     "q": "Are numbers difficult for you in English?",
+     "fup": "Which ones?",
+     "st": [
+      "… are difficult.",
+      "I always confuse …"
+     ],
+     "ex": "Phone numbers are difficult. I always confuse thirteen and thirty."
+    },
+    {
+     "k": "E-MAIL",
+     "q": "Spell a work e-mail in English (a fictional one is fine).",
+     "fup": "Is it easy to say?",
+     "st": [
+      "It’s … at … dot com."
+     ],
+     "ex": "It’s maria dot souza at nova dot com."
+    },
+    {
+     "k": "CALL BACK",
+     "q": "How fast do you call clients back?",
+     "fup": "What if you can’t?",
+     "st": [
+      "I call back …",
+      "If I can’t, I …"
+     ],
+     "ex": "I call back in one hour. If I can’t, I send a short message."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "please",
+    "a.m. / p.m."
+   ],
+   "rodadas": [
+    {
+     "q": "Voicemail or text message?",
+     "a": "Voicemail",
+     "b": "Text message",
+     "fa": [
+      "Voicemail. The client hears my voice."
+     ],
+     "fb": [
+      "Text message. The client can read the number."
+     ]
+    },
+    {
+     "q": "Call clients at 9 a.m. or at 4 p.m.?",
+     "a": "9 a.m.",
+     "b": "4 p.m.",
+     "fa": [
+      "9 a.m. They are fresh."
+     ],
+     "fb": [
+      "4 p.m. They are not so busy."
+     ]
+    },
+    {
+     "q": "Say the number once or twice in a voicemail?",
+     "a": "Once",
+     "b": "Twice",
+     "fa": [
+      "Once. The message is short."
+     ],
+     "fb": [
+      "Twice. Please, always twice!"
+     ]
+    },
+    {
+     "q": "Call back today or tomorrow morning?",
+     "a": "Today",
+     "b": "Tomorrow morning",
+     "fa": [
+      "Today. The client is waiting."
+     ],
+     "fb": [
+      "Tomorrow morning. It’s after 6 p.m."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Please call me back."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Call Ana Back",
+   "t": "Leave Ana a voicemail.",
+   "p": "One sentence at a time. Then say it all.",
+   "prof": "EN: You are Ana’s voicemail. After the last step, write the number and time the student said.",
+   "passos": [
+    {
+     "q": "Say hello and who you are.",
+     "st": [
+      "Hi Ana, this is … from …"
+     ],
+     "ex": "Hi Ana, this is Leo, returning your call."
+    },
+    {
+     "q": "Say why you are calling.",
+     "st": [
+      "I’m calling about …"
+     ],
+     "ex": "I’m calling about your message from this morning."
+    },
+    {
+     "q": "Give your number, slowly.",
+     "st": [
+      "Please call me back at …"
+     ],
+     "ex": "Please call me back at 555-0178. Five five five, oh one seven eight."
+    },
+    {
+     "q": "Give the best time, and say goodbye.",
+     "st": [
+      "I’m free on … after …",
+      "Thanks, bye!"
+     ],
+     "ex": "I’m free on Tuesday after 3 p.m. Thanks, bye!"
+    }
+   ],
+   "fim": "Now say it all in thirty seconds."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

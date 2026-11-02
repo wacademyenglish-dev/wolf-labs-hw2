@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The New Apartment · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A1 · Unit 4 Review · The New Apartment</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The New Apartment · A1 Unit 4 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 4 (Where things are). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student helps at a small rental agency. You are the owner of three apartments, and then the client.</p><p style="margin:0 0 6px"><b>About 43 min:</b> I · Speed Round (6) · II · The New Apartment (15) · III · OK or Not OK? (5) · IV · Your Home (6) · V · Would You Rather? (7) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Pick a door.” There is no order. One minute per door, no notes.</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>at / in / on with places · next to, in front of, between · there is / there are · Is there…? / Are there…? · some / any · how much / how many</p>
+    <h4>SPEED ROUND</h4>
+    <p>A 60-second speed round. Tap <b>Start the clock</b>, then <b>Right</b> or <b>Pass</b> for each item; the answer is on your screen. At the end of class, play again and beat the score.</p>
+    <h4>THE NEW APARTMENT</h4>
+    <p>You are the owner. Your card (only you see it) has the answers. When the student asks a question, tap it: the apartment card fills in. If the student freezes, tap <b>Say it easier</b>. Then you are the client: the student describes one apartment with there is / there are and where it is. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>YOUR HOME</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>have two bedrooms (for there are)</i>, <i>in the home</i>, <i>between of</i>, <i>next of</i>, <i>there isn’t some</i>, <i>how much chairs</i>. A1: one correction per answer is enough.</p>
+    <!--conversa--><h4>OK OR NOT OK? (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the three apartments, the student is the client: three quick cases (no kitchen, a school in front, no elevator), OK or not OK, with there is / there isn’t / there are. Answer first yourself, as a model. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk; at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Speed Round and VI · I Can.</li>
+      <li><b>Out loud</b>: II · The New Apartment, III · OK or Not OK? and V · Would You Rather?.</li>
+      <li><b>Write</b>: IV · Your Home.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* MAIN SERIES · A1 · REVISÃO 04 · THE NEW APARTMENT · pergunta-surpresa · 27/10/2026 · in / on, there is, preposições */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'rapido', tipo: 'And you?', q: 'Where is your phone now?',
+    opc: ['On the table', 'In my hand', 'In my bag'], st: ['It’s on / in …', 'My phone is …'],
+    ex: 'It’s in my hand! I’m in class.', push: 'Is it new? Yes or no?' },
+  { cena: 'cartao', tipo: 'Opinion', q: 'A good home: what is there?',
+    opc: ['A big kitchen', 'A balcony', 'A garden'], st: ['In a good home, there is a …'],
+    ex: 'In a good home, there is a balcony with plants.', push: 'Is there a balcony in your home? Yes or no?' },
+  { cena: 'escolha', tipo: 'What if', q: 'A friend sleeps over. Where?',
+    opc: ['On the sofa', 'In my bed', 'On the floor'], st: ['On the … ! There is …'],
+    ex: 'On the sofa! There is a big sofa in my living room.', push: 'Is your sofa big? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* MAIN SERIES · A1 · REVISÃO 04 · THE NEW APARTMENT · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Formato curto: UM momento leve (OK / not OK, 2 cores) no MEIO, depois da missão (II): o aluno vira o
+   cliente e decide se aceita o que viu nos apartamentos. A aula já tem o Would You Rather (IV).
+   Gramática da unidade 4 nos iniciadores: there is / there isn't / there are. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'cliente', apos: 'missao', est: 'o', min: 5, img: 'conversa', rot: 'OK or Not OK?', t: 'Now YOU are the client.',
+    p: 'OK or not OK for you? Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Hill Road', sit: 'Apartment 3: there isn’t a kitchen.', q: 'No kitchen. OK for you?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. There is a … near.', 'Not OK! I need a …'],
+        ex: 'Not OK! I need a kitchen. I cook every day.',
+        push: 'Do you cook every day? Yes or no?' },
+      { tag: 'The school', sit: 'It’s in front of a school.', q: 'A school in front. OK?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. There are …', 'Not OK. There is a lot of …'],
+        ex: 'Not OK! There are children, and there is a lot of noise at 7 a.m.',
+        push: 'Do you get up early? Yes or no?' },
+      { tag: 'The top floor', sit: 'It’s on the top floor.', q: 'No elevator. OK?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK! There are …, but …', 'Not OK. There isn’t …'],
+        ex: 'OK! There are a lot of stairs, but the view is great.',
+        push: 'Are there stairs in your home? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "rapido": {
+   "t": "Sixty seconds. How many can you do?",
+   "p": "Answer fast. Then try to beat your score."
+  },
+  "missao": {
+   "t": "Three apartments. Ask the owner.",
+   "p": "Five questions each. Then describe one."
+  },
+  "cv-cliente": {
+   "t": "Now YOU are the client.",
+   "p": "OK or not OK? Teacher first. Say it."
+  },
+  "cartao": {
+   "t": "Your home is for rent!",
+   "p": "Four lines: rooms, what there is, where."
+  },
+  "escolha": {
+   "t": "A or B? Choose and say why.",
+   "p": "Choose one. Say why, with because."
+  },
+  "pode": {
+   "t": "Unit 4: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 4 (onde as coisas estão): at/in/on, next to/between, there is/are, some/any, how much/many; o aluno ajuda numa imobiliária.",
+  "armadilha": "“Tem dois quartos” vira have two bedrooms (no lugar de there are); in the home, between of, next of, there isn’t some, how much chairs.",
+  "pal": [
+   "there is",
+   "there are",
+   "Is there…?",
+   "some",
+   "any",
+   "next to",
+   "between",
+   "in front of",
+   "how many"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: seis portas, três apartamentos e um cliente que precisa de casa.",
+   "perg": "Pick a door.",
+   "pula": "Só leia o título e abra a primeira porta."
+  },
+  "rapido": {
+   "obj": "Rodada de 60 segundos com tudo da unidade; jogue de novo no fim.",
+   "perg": "Is there a bank near your house?",
+   "pula": "Uma rodada só, sem revanche."
+  },
+  "missao": {
+   "obj": "O aluno pergunta ao dono (Is there…? How many…?) e depois descreve um apartamento.",
+   "perg": "How many bedrooms are there?",
+   "pula": "Dois apartamentos bastam."
+  },
+  "cv-cliente": {
+   "obj": "O aluno é o cliente: três casos, OK ou não, com there is / there isn’t.",
+   "perg": "There is no elevator. OK for you?",
+   "pula": "Dois casos bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: anúncio da casa do aluno, com o modelo ao lado.",
+   "perg": "What is there in your living room?",
+   "pula": "Três linhas bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather: A ou B com because; o professor concorda ou discorda.",
+   "perg": "Why?",
+   "pula": "Duas perguntas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; o que ficar aberto vai para a lição e a próxima aula.",
+   "perg": "Can you say where things are?",
+   "pula": "Leia rápido, sem exemplos. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas sobre a casa e o bairro do aluno, com a gramática da unidade.",
+   "perg": "What is there in your street?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre casas e bairros.",
+   "perg": "Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o dono de um apartamento e responde ao cliente.",
+   "perg": "Is there a balcony?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions about your home.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "there is",
+    "there are",
+    "some",
+    "any",
+    "next to"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR STREET",
+     "q": "Is there a bakery or a pharmacy on your street?",
+     "fup": "What is next to it?",
+     "st": [
+      "There is a …",
+      "It is next to …"
+     ],
+     "ex": "There is a pharmacy. It is next to a bank."
+    },
+    {
+     "k": "YOUR KITCHEN",
+     "q": "Are there any plants in your kitchen, or not?",
+     "fup": "Where are they?",
+     "st": [
+      "There are some …",
+      "There aren’t any …"
+     ],
+     "ex": "There are some plants. They are on the window."
+    },
+    {
+     "k": "YOUR ROOM",
+     "q": "What is next to your bed: a table or a chair?",
+     "fup": "What is on it?",
+     "st": [
+      "There is a … next to …",
+      "On it, there is …"
+     ],
+     "ex": "There is a small table next to my bed. There is a lamp on it."
+    },
+    {
+     "k": "YOUR BUILDING",
+     "q": "Is there an elevator in your building, or not?",
+     "fup": "How many floors are there?",
+     "st": [
+      "There is …",
+      "There are … floors."
+     ],
+     "ex": "There isn’t an elevator. There are three floors."
+    },
+    {
+     "k": "YOUR CLOSET",
+     "q": "How many shoes are there in your closet: a few or a lot?",
+     "fup": "Are there any old shoes?",
+     "st": [
+      "There are …",
+      "There aren’t any …"
+     ],
+     "ex": "There are a lot of shoes, and there are some old ones."
+    },
+    {
+     "k": "YOUR FRIDGE",
+     "q": "Is there any milk in your fridge now?",
+     "fup": "How much milk is there?",
+     "st": [
+      "There is some …",
+      "There isn’t any …"
+     ],
+     "ex": "There is some milk, but there isn’t any juice."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "there is",
+    "there are",
+    "next to"
+   ],
+   "rodadas": [
+    {
+     "q": "A house or an apartment?",
+     "a": "A house",
+     "b": "An apartment",
+     "fa": [
+      "A house. There is a garden."
+     ],
+     "fb": [
+      "An apartment. There are neighbors next to me."
+     ]
+    },
+    {
+     "q": "A big kitchen or a big living room?",
+     "a": "A big kitchen",
+     "b": "A big living room",
+     "fa": [
+      "A big kitchen. There is space for friends."
+     ],
+     "fb": [
+      "A big living room. There is a big sofa."
+     ]
+    },
+    {
+     "q": "Live next to a park or next to a mall?",
+     "a": "A park",
+     "b": "A mall",
+     "fa": [
+      "A park. There are trees and birds."
+     ],
+     "fb": [
+      "A mall. There are a lot of stores."
+     ]
+    },
+    {
+     "q": "A window in front of the sea or in front of the city?",
+     "a": "The sea",
+     "b": "The city",
+     "fa": [
+      "The sea. There is a lot of blue."
+     ],
+     "fb": [
+      "The city. There are lights at night."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody found a home."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the apartment owner now.",
+   "p": "Your teacher is the client.",
+   "aluno": "Listen to your teacher’s question. Answer as the owner.",
+   "perguntas": [
+    "How many bedrooms are there?",
+    "Is there a balcony?",
+    "Are there any shops near the building?",
+    "What is next to the kitchen?",
+    "Is there a school in front of the building?",
+    "How much is the rent?"
+   ],
+   "st": [
+    "There is …",
+    "There are …",
+    "It is next to …"
+   ],
+   "ex": "There are two bedrooms, and there is a small balcony next to the kitchen."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

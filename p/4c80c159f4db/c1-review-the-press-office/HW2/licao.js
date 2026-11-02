@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Review: The Press Office",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4c80c159f4db/c1-review-the-press-office/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 8 review (explain and report): analogies (it's a bit like, think of it as), participle clauses (Having checked...), impersonal reports (it has been suggested / agreed that), source and distance (reportedly, allegedly, according to), rephrasing (in other words), short answers (if so, if not, not that I know of)",
   "abrir": "What is a rumour you heard this week? Where did it come from?",
   "fecho": "<b>Source and distance</b>: <i>according to</i> the team, <i>reportedly</i>, <i>allegedly</i>. <b>Impersonal</b>: <i>It has been suggested that…</i> <b>Participle</b>: <i>Having checked the logs, the team found nothing.</i> <b>Explain</b>: <i>It's a bit like…</i>, <i>Think of it as…</i>, <i>In other words…</i> Short answers: <i>If so… If not… Not that I know of.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the press office on a busy afternoon. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/4c80c159f4db/c1-review-the-press-office/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A lamp and a phone on a quiet desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Reportedly, someone tried to open the door last night.",
-          "img": "https://wolf-labs.pages.dev/p/4c80c159f4db/c1-review-the-press-office/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Having checked the logs, the team found nothing missing.",
-          "img": "https://wolf-labs.pages.dev/p/4c80c159f4db/c1-review-the-press-office/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It has been agreed that an outside audit will start this week.",
-          "img": "https://wolf-labs.pages.dev/p/4c80c159f4db/c1-review-the-press-office/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4c80c159f4db/c1-review-the-press-office/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A lamp and a phone on a quiet desk",
       "pede": "Look at the picture: a lamp and a phone on a quiet desk. Write 2 or 3 sentences for a press statement about a rumour at a company. Use <b>according to…</b>, <b>reportedly</b>, <b>it has been suggested that…</b> or <b>in other words</b>.",
       "ph": "According to our team, there was reportedly …",

@@ -1,0 +1,13 @@
+/* As regras do corretor desta aula (nível 1): present continuous. Sujeito + -ing sem be (Chihiro walking), be + verbo sem -ing (is walk, are eat), grafia (takeing, makeing, cleanning, eatting, writeing), plural com is (parents is), singular com are (Haku are), pergunta na ordem da frase com ? (She is crying?), do / does + -ing, not + -ing sem be. O corretor separa as frases com espaço na frente. A aula e a lição de casa Live usam este arquivo. */
+WolfCorretor.regras = function (frase, m) {
+  var A = WolfCorretor.acha, out = [];
+  out = out.concat(A(/^\s*((?:i|you|he|she|we|they|it|chihiro|haku|no-face|yubaba|lin|my \w+|the \w+|her \w+|his \w+) (?:\w+ing))\b/g, m, 1, 'Right now: am / is / are + -ing. She is walking.', function (x) { return !/\b(?:thing|nothing|something|anything|everything|morning|evening|king|ring|spring|building|ceiling|being|sing|bring)$/.test(x[1]) && !/ (?:is|are|am|was|were) /.test(x[1]); }));
+  out = out.concat(A(/\b((?:is|are|am|isn't|isn’t|aren't|aren’t) (?:walk|eat|take|fly|watch|clean|cry|sleep|work|help|run|cook|play|swim|read|sing|talk|go|wait|look|rain|smile|study|drive|dance|write))\b(?! (?:to|from|in|at|on))/g, m, 1, 'After am / is / are: the verb + -ing. is walking, are eating.', function (x) { return !/\b(?:is|are) (?:watch|walk|work|cook|play|swim|read|talk|look|study|drive|dance|run|rain) (?:a|the|an)\b/.test(frase) || true; }));
+  out = out.concat(A(/\b(takeing|makeing|writeing|danceing|smileing|rideing|comeing|haveing|cleanning|eatting|playying|walkking|readding|sleepping|cookking|rainning)\b/g, m, 1, 'Spelling: take → taking (no e), clean → cleaning, eat → eating.'));
+  out = out.concat(A(/\b((?:parents|spirits|they|we|people|kids|friends|lin and chihiro|\w+ and \w+) is \w+ing)\b/g, m, 1, 'Two or more: are. They are eating.'));
+  out = out.concat(A(/\b((?:haku|chihiro|she|he|it|my mother|my father|my cat|my dog|the dragon|the witch) are \w+ing)\b/g, m, 1, 'One person or thing: is. Haku is flying.', function (x) { return !/\band \w+ are \w+ing\b/.test(frase); }));
+  out = out.concat(A(/^\s*((?:i|you|he|she|we|they|chihiro|haku|my \w+|the \w+) (?:is|are|am) \w+ing[^?]*\?)/g, m, 1, 'Questions: is / are first. Is she crying?'));
+  out = out.concat(A(/\b((?:do|does|don't|don’t|doesn't|doesn’t) (?:\w+ )?\w+ing)\b/g, m, 1, 'No do / does here: Is she…? She isn’t…', function (x) { return /\b(?:do|does|don't|don’t|doesn't|doesn’t) (?:(?:you|he|she|they|i|we|it|chihiro|haku|yubaba) )?(?!thing|nothing|something|anything|everything)\w+ing\b/.test(x[1]); }));
+  out = out.concat(A(/\b((?:i|you|he|she|we|they|it|yubaba|chihiro) not \w+ing)\b/g, m, 1, 'The negative: isn’t / aren’t + -ing.'));
+  return out;
+};

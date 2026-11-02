@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Fifty Point Four · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Fifty Point Four · The Phone and the Drawer</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Fifty Point Four · The Phone and the Drawer</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Present perfect for experience with no finished time: Have you ever deleted an app?</p><p style="margin:0 0 6px"><b>The grammar:</b> The Phone and the Drawer: No finished time? It stays on the phone. A finished time? It goes to the drawer.</p><p style="margin:0 0 6px"><b>Short class (about 45 min):</b> I Today, on Your Phone · II The Phone and the Drawer · III Fifty Point Four · IV How It Learns · V Have You Ever…? · VI Who Did the Filtering? · X Your Feed, Again. Skip if you’re short on time: VII, VIII Have You Ever Asked? and IX I Have Seen It Yesterday (marked EXTRA on your screen). Full lesson: about 65 min.</p><p style="margin:0"><b>Open with:</b> “How much of what they saw came from sources that already agreed with them?”</p></div><!--/prep-->
+    <p><b>Present perfect</b> for experience with no finished time: <b>Have you ever deleted an app?</b> <b>Past simple</b> as soon as a finished time appears: <b>When did you delete it? I deleted it last year.</b> Many students say <i>I have seen it yesterday</i>. The theme is the feed: a big 2023 study found that 50.4% of what people saw came from sources that already agreed with them. On screen: a phone and an archive drawer. No finished time keeps the post on the phone; a finished time drops it into the drawer.</p>
+    <h4>THE STUDIES ARE CAREFUL</h4>
+    <p>Three months changed nothing measurable. That is not “the feed is harmless”. Don’t let your student say more than the study did; the author’s voice in scene III says exactly this.</p>
+    <h4>THE AUDIO</h4>
+    <p>Two recordings: an engineer on how the ranking learns (IV) and the author of the study (III). The transcript opens after each one is played.</p>
+    <h4>THE PAGES</h4>
+    <ul>
+      <li><b>II The Phone and the Drawer</b>: six posts. The student taps a post, then the phone (no finished time) or the drawer (a finished time); the phone and the drawer fill up. Then they read each one out loud.</li>
+      <li><b>V Have You Ever…?</b>: six pairs of question and answer. The student builds the follow-up out loud and asks you, then taps Check. The last one answers NO: no finished moment.</li>
+      <li><b>VIII Have You Ever Asked?</b>: a wheel picks the question. The student asks you, you answer honestly, and they follow up in the past simple (they tap the counter each time). Then swap.</li>
+      <li><b>IX I Have Seen It Yesterday</b>: six sentences, Right or Wrong. If it is wrong, the student says the whole sentence right.</li>
+    </ul>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I have seen it yesterday</i>, <i>When have you started…?</i>, <i>I saw never</i>, <i>Have you ever went…?</i></p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (VII) AND THE SURPRISE QUESTION</h4>
+    <p>In the middle of the lesson, your student gives a number from 1 to 5 to four opinions about their feed and defends it with one thing they’ve done and when they did it. There is no right answer: wait five seconds in silence, pick the opposite number yourself, then use the PUSH line (only you see it). Recast quietly while they talk (“I have deleted it last year” → “I deleted it last year”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Today, on Your Phone, VII Unpopular Opinions, VIII Have You Ever Asked?</li>
+      <li><b>Listen</b>: III Fifty Point Four, IV How It Learns.</li>
+      <li><b>Focus</b>: II The Phone and the Drawer, V Have You Ever…?, VI Who Did the Filtering?, IX I Have Seen It Yesterday.</li>
+      <li><b>Write</b>: X, their own feed. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* FIFTY POINT FOUR (Main B1) · pergunta-surpresa · 27/10/2026 · present perfect × past simple */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'numeros', tipo: 'And you?', q: 'What is the last thing that made you stop scrolling?',
+    opc: ['A video', 'A photo', 'A piece of news', 'A friend’s post'], st: ['I’ve just seen …', 'This morning I stopped on …, because …'],
+    ex: 'A video. This morning I stopped on a cat that opened a door. I’ve watched it three times since then.', push: 'Did you send it to anybody? Who?' },
+  { cena: 'aprende', tipo: 'What if', q: 'Your phone shows a screen: “Today you have scrolled 3 km.” What do you do?',
+    opc: ['Put it away', 'Laugh and keep going', 'Delete an app'], st: ['I’ve never …, so I would …', 'Last time I saw my screen time, I …'],
+    ex: 'Laugh and keep going. I’ve seen my screen time before, and I didn’t change anything.', push: 'What is the most you have ever scrolled in one day? Guess a number.' },
+  { cena: 'mao', tipo: 'Would you rather', q: 'Would you rather see only friends for a month, or only strangers?',
+    opc: ['Only friends', 'Only strangers'], st: ['I’d rather …, because I’ve …'],
+    ex: 'Only strangers. I’ve seen my friends’ posts a thousand times, but last week a stranger taught me a great recipe.', push: 'And if the strangers all disagree with you?' },
+  { cena: 'erros', tipo: 'Opinion', q: 'What app have you used the most this week, and was it worth it?',
+    opc: ['Yes, it was useful', 'Half and half', 'No, honestly'], st: ['I’ve used … the most.', 'Yesterday I … for …'],
+    ex: 'Half and half. I’ve used the video app the most. Yesterday I learned a song, but I also lost two hours.', push: 'Would you pay to use it? How much a month?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* FIFTY POINT FOUR (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A escala de opiniões impopulares entra no lugar de "VII · They Turned It Off" (extra; as escutas
+   fortes III e IV ficam). No meio da aula, depois do estudo dos dez milhões (VI), o aluno dá uma nota
+   a quatro frases sobre o feed e defende. A gramática da aula (present perfect sem tempo × past
+   simple com tempo terminado) mora nos iniciadores. O VIII já é a conversa "Have you ever…?". */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'escala', troca: 'desligou', est: 'o', min: 7, img: 'tela', rot: 'Unpopular Opinions', t: 'Your feed: four opinions. Do you agree?',
+    p: 'Tap a number from 1 to 5. Then defend it: one thing you’ve done, and when you did it. Your teacher picks the opposite number.',
+    formato: 'escala', tag: 'Unpopular opinion',
+    frases: [
+      { f: 'A feed in time order, newest first, is better than a smart feed.',
+        st: ['I’ve never tried …, but …', 'Last year I …, and …', 'I’ve always …'],
+        ex: '4. I’ve tried it on one app. Last month I changed it to newest first, and I saw my friends again, not only videos.',
+        push: 'In the study, people with the time-order feed saw MORE posts from bad sources. Still a 4?' },
+      { f: 'If I only see one side, it’s my fault, not the app’s.',
+        st: ['I’ve followed …', 'I unfollowed … when …', 'The app has never …'],
+        ex: '3. I’ve followed only people like me for years. But I didn’t choose the videos the app showed me yesterday.',
+        push: 'Remember the study: your own hand did more filtering than the machine. Does that change your number?' },
+      { f: 'Deleting a social app for a month is easier than it sounds.',
+        st: ['I’ve deleted … before.', 'I deleted it in …, and …', 'I’ve never been able to …'],
+        ex: '2. I’ve deleted one app twice. Both times I installed it again in less than a week.',
+        push: 'OK: which app would you delete tonight, for thirty days?' },
+      { f: 'The like button doesn’t matter. Nobody really cares about likes.',
+        st: ['I’ve posted … and …', 'Last week I …', 'I’ve never checked …'],
+        ex: '1. I care. Last week I posted a photo of my dog and I checked the likes five times in one hour.',
+        push: 'The engineer said the pause of your thumb counts more than the like. Have you ever thought about that?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "hoje": {
+   "t": "What have you seen on your phone today?",
+   "p": "Tap it and say it. Then tap when."
+  },
+  "feed": {
+   "t": "No finished time? Phone. A finished time? Drawer.",
+   "p": "Tap a post, then phone or drawer. Read out loud."
+  },
+  "numeros": {
+   "t": "2023: 23,000 feeds, three months.",
+   "p": "Guess out loud, then tap. Then the author speaks."
+  },
+  "aprende": {
+   "t": "How does a feed learn?",
+   "p": "Listen once. Tap the four steps in order."
+  },
+  "ever": {
+   "t": "Have you ever…? Then: when?",
+   "p": "Build the follow-up out loud. Then tap Check."
+  },
+  "mao": {
+   "t": "Ten million people, 2015.",
+   "p": "Read the card. The machine, your hand, or nobody?"
+  },
+  "cv-escala": {
+   "t": "Four opinions about your feed.",
+   "p": "Tap 1 to 5. Defend it: what you did, when."
+  },
+  "conversa": {
+   "t": "Ask your teacher. Then follow up.",
+   "p": "Spin. Ask. Follow up in the past simple."
+  },
+  "erros": {
+   "t": "Five problems. One is right.",
+   "p": "Right or wrong? Say the wrong ones right."
+  },
+  "fim": {
+   "t": "Your feed, again.",
+   "p": "Three things you’ve done, and when. To My notes."
+  }
+ },
+ "prep": {
+  "obj": "Present perfect para experiência sem tempo terminado e past simple quando o tempo aparece: o estudo de 2023 que achou 50,4% de conteúdo que já concordava com a pessoa.",
+  "armadilha": "O brasileiro diz “I have seen it yesterday” (o “já vi ontem” do português), “When have you started?” e “Have you ever went?”; e põe never depois do verbo: “I saw never”.",
+  "pal": [
+   "Have you ever …?",
+   "When did you …?",
+   "yesterday",
+   "last year",
+   "feed",
+   "scroll",
+   "sources",
+   "agree with"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o tema: o feed infinito e o número 50,4.",
+   "perg": "Have you ever scrolled past something you disagreed with?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "hoje": {
+   "obj": "Aquecimento: o que o aluno já viu hoje no celular e quando viu.",
+   "perg": "What have you seen today, and when did you see it?",
+   "pula": "Duas frases bastam."
+  },
+  "feed": {
+   "obj": "Celular (sem tempo terminado, present perfect) ou gaveta (tempo terminado, past simple).",
+   "perg": "Is there a finished time here?",
+   "pula": "Quatro posts bastam."
+  },
+  "numeros": {
+   "obj": "Adivinhar os números do estudo de 2023 e ouvir a autora; não exagerar o achado.",
+   "perg": "What did three months change?",
+   "pula": "Corte dois números; não corte a fala da autora."
+  },
+  "aprende": {
+   "obj": "Ouvir o engenheiro e ordenar os quatro passos de como o feed aprende.",
+   "perg": "What does the feed learn first?",
+   "pula": "Ouça uma vez só e ordene juntos."
+  },
+  "ever": {
+   "obj": "Pergunta no present perfect, follow-up no past simple; o último par responde NO.",
+   "perg": "When did you do it?",
+   "pula": "Quatro pares bastam."
+  },
+  "mao": {
+   "obj": "Estudo de 2015: quem filtrou, a máquina, a mão da pessoa ou ninguém mediu.",
+   "perg": "Who did the filtering here?",
+   "pula": "Três cartas bastam."
+  },
+  "cv-escala": {
+   "obj": "Dar nota de 1 a 5 a quatro opiniões e defender com algo que fez e quando.",
+   "perg": "What have you done, and when did you do it?",
+   "pula": "Duas opiniões bastam; use a linha PUSH."
+  },
+  "conversa": {
+   "obj": "Roleta: o aluno pergunta ao professor com Have you ever e faz follow-up; depois troca.",
+   "perg": "When did you do that?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "erros": {
+   "obj": "Certo ou errado: corrigir frases como “I have seen it yesterday”.",
+   "perg": "Is this right? Say it right.",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: três coisas que o aluno já fez no feed e quando fez.",
+   "perg": "What have you done on your feed this year?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais Have you ever com follow-up no past simple, sobre a vida online.",
+   "perg": "Have you ever deleted an app?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre feeds e algoritmos, com experiência e data.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "A história do aluno com uma rede social, do primeiro post até hoje.",
+   "perg": "When did you join it?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More of your online life.",
+   "p": "Pick a card. Answer, then follow up.",
+   "palavras": [
+    "Have you ever …?",
+    "When did you …?",
+    "never",
+    "last …"
+   ],
+   "cartas": [
+    {
+     "k": "DELETED",
+     "q": "Have you ever deleted an app because of the time you spent on it?",
+     "fup": "When did you delete it?",
+     "st": [
+      "Yes, I have. I deleted … last …",
+      "No, I’ve never …"
+     ],
+     "ex": "Yes, I have. I deleted Instagram last year, for two months."
+    },
+    {
+     "k": "FAKE NEWS",
+     "q": "Have you ever shared something that was not true?",
+     "fup": "When did you find out?",
+     "st": [
+      "Yes, once. I shared …",
+      "I’ve never …, because …"
+     ],
+     "ex": "Yes, once. I shared a fake video in 2020."
+    },
+    {
+     "k": "UNFOLLOW",
+     "q": "Have you ever unfollowed a friend?",
+     "fup": "Why did you do it?",
+     "st": [
+      "Yes. I unfollowed … when …",
+      "No, but I’ve muted …"
+     ],
+     "ex": "No, but I’ve muted my cousin. I muted him last month."
+    },
+    {
+     "k": "VIRAL",
+     "q": "Have you ever posted something that a lot of people saw?",
+     "fup": "How did you feel?",
+     "st": [
+      "Yes. I posted …",
+      "Not really. My best post …"
+     ],
+     "ex": "Yes. I posted a photo of my dog, and it got 2,000 likes."
+    },
+    {
+     "k": "ARGUMENT",
+     "q": "Have you ever argued with a stranger online?",
+     "fup": "Who won?",
+     "st": [
+      "Yes, I have. Last … I …",
+      "I’ve never …, because …"
+     ],
+     "ex": "I’ve never argued online, because it never changes anything."
+    },
+    {
+     "k": "NO PHONE",
+     "q": "Have you ever spent a whole day without your phone?",
+     "fup": "When was the last time?",
+     "st": [
+      "Yes. The last time was …",
+      "No, I’ve never …"
+     ],
+     "ex": "Yes. The last time was on a trip to the beach in March."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Use something you’ve done as proof.",
+   "palavras": [
+    "because",
+    "I’ve seen …",
+    "last year, I …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Who is in control of your feed: you or the machine?",
+     "a": "Me",
+     "b": "The machine",
+     "fa": [
+      "Me. I’ve chosen every account I follow.",
+      "Last week, I unfollowed five pages."
+     ],
+     "fb": [
+      "The machine. It has learned what I like.",
+      "I never chose most of what I saw today."
+     ]
+    },
+    {
+     "q": "A feed in time order or a feed that learns?",
+     "a": "Time order",
+     "b": "It learns",
+     "fa": [
+      "Time order. I want to see everything.",
+      "The old Facebook was better for me."
+     ],
+     "fb": [
+      "It learns. I’ve never had time for everything.",
+      "It shows me what I need."
+     ]
+    },
+    {
+     "q": "Should you follow people who disagree with you?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. I’ve learned a lot from people I disagree with.",
+      "A bubble is dangerous."
+     ],
+     "fb": [
+      "No. I’ve tried it, and I only got angry.",
+      "My feed is my free time."
+     ]
+    },
+    {
+     "q": "Did the 2023 study show the feed is harmless?",
+     "a": "Harmless",
+     "b": "Not proven",
+     "fa": [
+      "Harmless. Three months changed nothing.",
+      "People were not more extreme after."
+     ],
+     "fb": [
+      "Not proven. Three months is very short.",
+      "The author said exactly that."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Story",
+   "t": "You and one app.",
+   "p": "Answer each step out loud.",
+   "prof": "Present perfect for the life so far, past simple as soon as a date appears.",
+   "passos": [
+    {
+     "q": "Which app have you used the most in your life?",
+     "st": [
+      "I’ve used … the most.",
+      "I’ve had it since …"
+     ],
+     "ex": "I’ve used WhatsApp the most. I’ve had it since 2012."
+    },
+    {
+     "q": "When did you start? What did you post first?",
+     "st": [
+      "I started in …",
+      "My first post was …"
+     ],
+     "ex": "I started in 2014, and my first post was a photo of my lunch."
+    },
+    {
+     "q": "What has changed since then?",
+     "st": [
+      "Since then, I’ve …",
+      "I’ve stopped …"
+     ],
+     "ex": "Since then, I’ve stopped posting and I only watch."
+    },
+    {
+     "q": "What is the best thing you’ve found there?",
+     "st": [
+      "The best thing I’ve found is …",
+      "I found it when …"
+     ],
+     "ex": "The best thing I’ve found is a cooking channel. I found it last winter."
+    }
+   ],
+   "fim": "That is your history with one app. Now ask your teacher the same four."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

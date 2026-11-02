@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de The Monster Maker (11/10/2026): cinco falas da criatura no trailer de Frankenstein.
+   Forma: o termômetro do medo. Alvo: has / has got para descrever, hasn’t got, Has it got…?, tamanho + cor + coisa.
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [0, 1, 2], k: 'His story', quem: 'The creature',
+    contexto: 'The creature speaks for the first time. His creator has one story. Now he tells his.',
+    frase: 'My maker told his tale. And I… <b>will tell you mine</b>.',
+    explica: '<i>Tale</i> = story. <i>Mine</i> = my story. The monster has got a story too.',
+    formula: 'The creature <b>has got</b> a story. = He <b>has</b> a story.',
+    tente: 'Describe a scary person from a film: What has he got?',
+    ex: 'He’s got a long black coat and a very pale face.',
+    sente: { q: 'How scary is his voice?', de: 'calm', a: 'terrifying', st: 'It’s … because he has got …' } },
+  { i: [3, 4, 5], k: 'Pieces', quem: 'The creature',
+    contexto: 'He remembers his first moments. His body is made of different people.',
+    frase: 'I remember… pieces. <b>Memories of different men.</b>',
+    explica: 'His body has got parts of many men. Describe him with <i>has got</i> or <i>has</i>.',
+    formula: 'He<b>’s got</b> scars. · He <b>has</b> big hands. · ✗ He have got',
+    tente: 'Describe the monster with three parts of his body.',
+    ex: 'He’s got big hands, long arms and a lot of scars.',
+    sente: { q: 'How sad is this memory?', de: 'not sad', a: 'very sad', st: 'It’s … because he has got …' } },
+  { i: [6, 7, 8], k: 'The name', quem: 'The creature',
+    contexto: 'He finds a name on a paper: the name of his maker.',
+    frase: 'Then I saw it. Your name. <b>Victor Frankenstein.</b>',
+    explica: 'The creator has got a name. The creature hasn’t got one. (Frankenstein is the doctor, not the monster!)',
+    formula: '<b>Has</b> he <b>got</b> a name? No, he <b>hasn’t</b>. · <b>Does</b> he <b>have</b> a name? No, he <b>doesn’t</b>.',
+    tente: 'Ask your teacher three questions about a monster with Has it got…?',
+    ex: 'Has it got fangs? Has it got wings? Has it got a tail?',
+    sente: { q: 'How angry is he?', de: 'calm', a: 'furious', st: 'He’s … because he hasn’t got …' } },
+  { i: [9, 10], k: 'One thing', quem: 'The creature',
+    contexto: 'He finds his creator and asks him for one thing.',
+    frase: 'My creator. <b>I demand a single grace</b> from you.',
+    explica: '<i>Demand</i> = ask very strongly. <i>A single grace</i> = one kindness. He hasn’t got love, or a family.',
+    formula: 'He <b>hasn’t got</b> a family. = He <b>doesn’t have</b> a family. · ✗ He don’t have',
+    tente: 'Tell me two things you haven’t got but want.',
+    ex: 'I haven’t got a car. I haven’t got a garden, but I want one!',
+    sente: { q: 'How desperate is he?', de: 'relaxed', a: 'desperate', st: 'He’s … because he hasn’t got …' } },
+  { i: [11, 12, 13], k: 'Rage', quem: 'The creature',
+    contexto: 'His last words are a warning: no love means rage.',
+    frase: 'If you are not to award me love… then I will indulge… <b>in rage</b>.',
+    explica: '<i>Rage</i> = very strong anger. If nobody loves him, he will be angry. Now look at his eyes in the trailer.',
+    formula: 'It<b>’s got</b> two small yellow eyes. (number + size + color + thing · ✗ two yellows eyes)',
+    tente: 'Describe a monster you imagine: number, size, color, thing.',
+    ex: 'It’s got three big green eyes and two small black horns.',
+    sente: { q: 'How dangerous is he now?', de: 'harmless', a: 'very dangerous', st: 'He’s … because he’s got …' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#8fbf5a', titulo: 'The creature speaks.', sub: 'Hear the line, measure the fear, then describe the monster: it’s got…', rot: { por: 'WHAT IT MEANS', padrao: 'HAS GOT · HASN’T GOT', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

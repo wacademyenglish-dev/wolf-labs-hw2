@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Page Thirty-Four · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Page Thirty-Four · The Night Shelf</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Page Thirty-Four · The Night Shelf</h2>
+    <p><b>Would rather</b> takes a plain verb and <b>than</b>: <b>I’d rather read than scroll.</b> <b>Prefer</b> takes <b>to</b>: <b>I prefer reading to scrolling</b>, or <b>I prefer to read</b>. Students say <i>I’d rather to read</i> and <i>I prefer read</i>. The story: six books on a shelf at night, five with a bookmark ribbon stuck near the start. Five were chosen for their readers; the sixth, the only one without a bookmark, the reader chose himself, and finished.</p>
+    <h4>I PREFER TO READ IS RIGHT</h4>
+    <p>Never mark it wrong. Scene IV is about the PAIR: prefer… TO, rather… THAN.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Five readers, one short recording each, explaining why they stopped (scene III), and the same recordings again to find who chose each book (scene V). Each plays with pause and 0.75×; the transcript opens only after listening.</p>
+    <h4>THE TWIST</h4>
+    <p>Scene V: nobody chose their own book. Ask “What do the five have in common?” and wait; let your student find it. Scene VI: the sixth book has no ribbon.</p>
+    <h4>YOUR BOOK CLUB</h4>
+    <p>Scene VIII: your student asks; you answer in full, then ask back. They answer with rather, then with prefer.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I’d rather to read</i>, <i>I prefer read</i>, <i>I prefer reading than…</i>, <i>I’d rather walk to drive</i>, <i>Would you rather to…?</i></p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (IX) AND THE SURPRISE QUESTION</h4>
+<p>Scene IX is now a scale of unpopular opinions about reading: four statements, and your student taps from 1 (totally disagree) to 5 (totally agree), then defends the number with RATHER or PREFER. There is no right answer. Wait five seconds in silence, then take the opposite number and use the PUSH line (only you see it). Recast mistakes quietly while they talk (“I’d rather to …” → “I’d rather …”); at the end, ask them to fix one or two sentences themselves. The last statement brings back the sixth book.</p>
+<p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Six Spines, II Page Thirty-Four, VII Not Tonight, VIII The Book Club, IX Unpopular Opinions.</li>
+      <li><b>Listen</b>: III Instead, V Who Chose It (five recordings).</li>
+      <li><b>Focus</b>: IV To or Than, VI The Sixth Book.</li>
+      <li><b>Write</b>: X, their own shelf. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* PAGE THIRTY-FOUR (Main B1) · pergunta-surpresa · 27/10/2026 · I'd rather / prefer */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'pagina', tipo: 'And you?', q: 'Is there a book, series or course you started and never finished?',
+    opc: ['Yes, a book', 'Yes, a series', 'No, I always finish'], st: ['I stopped on …, because …', 'I’d rather … than …', 'I prefer to finish …'],
+    ex: 'Yes, a series. I stopped in season two. I’d rather watch something new than finish something boring.', push: 'Would you go back to it now? Why or why not?' },
+  { cena: 'emvez', tipo: 'Would you rather', q: 'On a free night, would you rather read for an hour or scroll your phone for an hour?',
+    opc: ['Read', 'Scroll'], st: ['Honestly, I’d rather …', 'I prefer …ing to …ing, because …'],
+    ex: 'Honestly, I’d rather scroll. I prefer reading on holiday, not after work.', push: 'Be honest: what did you do last night?' },
+  { cena: 'quem', tipo: 'Opinion', q: 'Your boss gives everybody a book to read for work. Good idea or bad idea?',
+    opc: ['Good idea', 'Bad idea', 'Only if we choose it'], st: ['I’d rather choose …', 'I prefer to …', 'I’d rather not, because …'],
+    ex: 'Only if we choose it. I’d rather pick from a list of five than get one book for everybody.', push: 'And if they pay you one hour a week to read it?' },
+  { cena: 'nao', tipo: 'What if', q: 'A friend says: “Come to my book club! We meet every Monday.” What do you say?',
+    opc: ['Yes, sure', 'Maybe once', 'I’d rather not'], st: ['I’d rather not, thanks.', 'I’d prefer to try it once.', 'I’d love to, but …'],
+    ex: 'Maybe once. I’d prefer to try it once before I say yes to every Monday.', push: 'The book this month is 600 pages. Still yes?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* PAGE THIRTY-FOUR · THE NIGHT SHELF (Main B1 · I'd rather / prefer) · conversa · 27/10/2026 · regra 3×3
+   A aula já tem muitas escolhas "would you rather" (I, III, VIII). O momento novo é OUTRO formato: a escala
+   de opiniões impopulares sobre ler, no lugar de "IX · No To After Rather" (extra, correção controlada).
+   A última frase traz a virada da aula: o único livro terminado foi o que o leitor escolheu sozinho. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'escala', troca: 'erros', est: 'o', min: 7, img: 'estante', rot: 'Unpopular Opinions', t: 'Four opinions about reading. Some people get angry about these.',
+    p: 'Tap how much you agree. Then defend your number with RATHER or PREFER. Your teacher takes the opposite number.',
+    formato: 'escala', tag: 'Unpopular opinion?',
+    frases: [
+      { f: 'If a book is boring on page thirty-four, you should stop. Life is too short.',
+        st: ['I’d rather stop than …', 'I prefer to give a book …', 'I’d rather not stop, because …'],
+        ex: 'Totally agree. I’d rather stop on page thirty-four than read three hundred pages I hate.',
+        push: 'Some of the best books are slow at the start. Name one film or series that got good late.' },
+      { f: 'The film is usually better than the book.',
+        st: ['I’d rather watch … than read …', 'I prefer reading to watching, because …', 'It depends: I’d rather …'],
+        ex: 'Disagree. I prefer reading to watching, because in a book I choose the faces and the voices.',
+        push: 'Name one film that was better than the book. Just one.' },
+      { f: 'Listening to an audiobook is real reading.',
+        st: ['I prefer listening to reading when …', 'I’d rather read the real thing than …', 'For me, reading means …'],
+        ex: 'Agree. I prefer listening to reading on the bus. The story goes into my head the same way.',
+        push: 'If you listen at double speed while you cook, does it still count?' },
+      { f: 'A book somebody chooses for you is never as good as one you choose yourself.',
+        st: ['I’d rather choose my own books, because …', 'I prefer books that friends …', 'Not always: I’d rather …'],
+        ex: 'Agree. Five books on the shelf, and the only one finished was the one the reader chose. I’d rather choose myself.',
+        push: 'Your best friend gives you a book for your birthday. Do you read it, or put it on the shelf?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "lombadas": {
+   "t": "Six books. No titles.",
+   "p": "Which would you rather read? Use THAN. Give a reason."
+  },
+  "pagina": {
+   "t": "How far did each reader get?",
+   "p": "Guess out loud. Tap. Then answer."
+  },
+  "emvez": {
+   "t": "Behind every bookmark, a night.",
+   "p": "Play it. Choose what they’d rather do. Say it."
+  },
+  "ponte": {
+   "t": "PREFER takes TO. RATHER takes THAN.",
+   "p": "Choose the word. Say the whole sentence."
+  },
+  "quem": {
+   "t": "Who chose each book?",
+   "p": "Listen again. Choose who. What do the five share?"
+  },
+  "sexto": {
+   "t": "The sixth book: 302 pages.",
+   "p": "Answer five short questions."
+  },
+  "nao": {
+   "t": "You don’t owe anybody a reason.",
+   "p": "Read the offer. Answer in one sentence. Tap it."
+  },
+  "clube": {
+   "t": "Your teacher’s book club.",
+   "p": "Ask. Then answer with RATHER, then PREFER."
+  },
+  "cv-escala": {
+   "t": "Four unpopular opinions about reading.",
+   "p": "Tap a number. Defend it with RATHER or PREFER."
+  },
+  "fim": {
+   "t": "Your own shelf.",
+   "p": "Use rather, prefer and rather not. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Would rather + verbo + than e prefer + to: seis livros na estante, cinco escolhidos por outras pessoas e largados na página 34; o sexto, escolhido pelo leitor, foi até o fim.",
+  "armadilha": "O brasileiro diz “I’d rather to read” e “I prefer read”, e mistura os pares: “I prefer reading than…”, “I’d rather walk to drive”. I prefer to read está certo: nunca marque errado.",
+  "pal": [
+   "would rather … than",
+   "prefer …ing to …ing",
+   "prefer to",
+   "bookmark",
+   "spine",
+   "finish a book",
+   "give up"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a estante noturna: dois caminhos, duas palavrinhas e seis livros.",
+   "perg": "Would you rather read or scroll tonight?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "lombadas": {
+   "obj": "Seis lombadas sem título: escolher com would rather… than e dar um motivo.",
+   "perg": "Which would you rather read, and why?",
+   "pula": "Três pares bastam; guarde as escolhas para a cena X."
+  },
+  "pagina": {
+   "obj": "Adivinhar até onde cada leitor chegou (quase todos param no começo).",
+   "perg": "How far do you think this reader got?",
+   "pula": "Três livros bastam."
+  },
+  "emvez": {
+   "obj": "Áudios: cada leitor conta por que parou e o que preferiu fazer.",
+   "perg": "What would she rather do than read?",
+   "pula": "Três gravações bastam."
+  },
+  "ponte": {
+   "obj": "A regra dos pares: prefer… to, rather… than.",
+   "perg": "To or than?",
+   "pula": "Quatro frases bastam."
+  },
+  "quem": {
+   "obj": "A virada: ninguém escolheu o próprio livro. Deixar o aluno descobrir.",
+   "perg": "What do the five have in common?",
+   "pula": "Não corte a pergunta final; espere o aluno."
+  },
+  "sexto": {
+   "obj": "O sexto livro, sem marcador: o único escolhido pelo leitor, e terminado.",
+   "perg": "Why did he finish this one?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "nao": {
+   "obj": "Recusar ofertas com uma frase (I’d rather not), sem dever explicação.",
+   "perg": "How do you say no, politely?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "clube": {
+   "obj": "Clube do livro: o aluno pergunta, o professor responde e devolve a pergunta.",
+   "perg": "Would you rather read fiction or non-fiction?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-escala": {
+   "obj": "Escala de opiniões impopulares sobre leitura, defendidas com rather/prefer.",
+   "perg": "Why that number?",
+   "pula": "Duas opiniões; a última traz o sexto livro."
+  },
+  "fim": {
+   "obj": "Escrita: a estante do aluno, com as escolhas da cena I.",
+   "perg": "What would you rather not read?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com would rather e prefer sobre hábitos e lazer.",
+   "perg": "What do you prefer doing on a free night?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre leitura, presentes e telas, com would rather e prefer.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escolhe e recomenda um livro (ou filme) que ele mesmo escolheu, em passos.",
+   "perg": "What did you choose yourself and finish?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Rather this than that.",
+   "p": "Pick a card. Use RATHER or PREFER.",
+   "palavras": [
+    "I’d rather … than …",
+    "I prefer …ing to …ing",
+    "I’d rather not"
+   ],
+   "cartas": [
+    {
+     "k": "A FREE NIGHT",
+     "q": "What would you rather do on a free night?",
+     "fup": "And on a rainy Sunday?",
+     "st": [
+      "I’d rather … than …"
+     ],
+     "ex": "I’d rather cook for friends than go out."
+    },
+    {
+     "k": "PAPER OR SCREEN",
+     "q": "Do you prefer paper books or e-books?",
+     "fup": "Why?",
+     "st": [
+      "I prefer … to …",
+      "I prefer to …"
+     ],
+     "ex": "I prefer paper books to e-books. I like to see the bookmark move."
+    },
+    {
+     "k": "A GIFT BOOK",
+     "q": "Did anybody give you a book you never finished?",
+     "fup": "Why did you stop?",
+     "st": [
+      "Somebody gave me …",
+      "I’d rather have chosen …"
+     ],
+     "ex": "My aunt gave me a history book. I stopped on page thirty."
+    },
+    {
+     "k": "MUSIC OR SILENCE",
+     "q": "Would you rather work with music or in silence?",
+     "fup": "Does it depend on the task?",
+     "st": [
+      "I’d rather work with …",
+      "I prefer … to …"
+     ],
+     "ex": "I’d rather work in silence. I prefer music for cleaning."
+    },
+    {
+     "k": "BOOK OR FILM",
+     "q": "Do you prefer reading the book or watching the film?",
+     "fup": "Which one is usually better?",
+     "st": [
+      "I prefer …ing to …ing"
+     ],
+     "ex": "I prefer watching the film to reading the book. I’m a slow reader."
+    },
+    {
+     "k": "SAYING NO",
+     "q": "What is something you’d rather not do this week?",
+     "fup": "Do you have to do it?",
+     "st": [
+      "I’d rather not …",
+      "But I have to …"
+     ],
+     "ex": "I’d rather not go to the dentist, but I have to."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’d rather",
+    "I prefer … to",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Give a book you love, or ask what they like?",
+     "a": "A book I love",
+     "b": "Ask first",
+     "fa": [
+      "A book I love. I’d rather share something real.",
+      "A gift says who you are."
+     ],
+     "fb": [
+      "Ask first. The five readers stopped on page thirty-four.",
+      "People prefer choosing their own books."
+     ]
+    },
+    {
+     "q": "Stop a boring book, or finish it?",
+     "a": "Stop it",
+     "b": "Finish it",
+     "fa": [
+      "Stop it. Life is too short.",
+      "I’d rather start a new one than suffer."
+     ],
+     "fb": [
+      "Finish it. The end can change everything.",
+      "I prefer finishing things to leaving them."
+     ]
+    },
+    {
+     "q": "A book club or reading alone?",
+     "a": "Book club",
+     "b": "Alone",
+     "fa": [
+      "A book club. A date helps me finish.",
+      "I prefer talking about books to just reading them."
+     ],
+     "fb": [
+      "Alone. I’d rather read at my own speed.",
+      "Nobody chooses my book for me."
+     ]
+    },
+    {
+     "q": "Audiobooks: real reading or not?",
+     "a": "Real reading",
+     "b": "Not really",
+     "fa": [
+      "Real reading. The story is the same.",
+      "I’d rather listen than not read at all."
+     ],
+     "fb": [
+      "Not really. You don’t see the words.",
+      "I prefer holding the book."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Two little words, a lot of opinions."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Sixth Book",
+   "t": "The one you chose yourself.",
+   "p": "Answer each step. Then recommend it.",
+   "prof": "A film or series is fine if the student doesn’t read much; keep rather/prefer in every step.",
+   "passos": [
+    {
+     "q": "Think of a book, film or series you chose yourself and finished. What is it?",
+     "st": [
+      "I chose … myself."
+     ],
+     "ex": "I chose a detective series myself, and I finished it in a week."
+    },
+    {
+     "q": "Why did you prefer it to other options?",
+     "st": [
+      "I preferred it to … because …"
+     ],
+     "ex": "I preferred it to the popular ones because the story was slow and real."
+    },
+    {
+     "q": "What would you rather do than stop in the middle?",
+     "st": [
+      "I’d rather … than stop."
+     ],
+     "ex": "I’d rather sleep less than stop in the middle."
+    },
+    {
+     "q": "Who would you give it to? Or would you rather let them choose?",
+     "st": [
+      "I’d give it to …",
+      "I’d rather let … choose."
+     ],
+     "ex": "I’d rather let my brother choose. But I’d leave it on his shelf."
+    }
+   ],
+   "fim": "No bookmark on page thirty-four this time."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

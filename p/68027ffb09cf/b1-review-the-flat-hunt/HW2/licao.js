@@ -4,7 +4,7 @@ window.HW2 = {
   "titulo": "The Flat Hunt",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/68027ffb09cf/b1-review-the-flat-hunt/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 8 review: relative clauses (who, which, that, where); make / let / help + person + plain verb; stop + -ing; hear / see + someone + -ing; would rather + plain verb",
   "abrir": "What would you rather have: a big flat or a nice street?",
   "fecho": "<b>who</b> (people) · <b>which / that</b> (things) · <b>where</b> (places) · <b>make / let / help + person + plain verb</b> · <b>stop + -ing</b> · <b>hear / see + someone + -ing</b> · <b>would rather + plain verb</b>.",
@@ -24,7 +24,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at a new flat. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/68027ffb09cf/b1-review-the-flat-hunt/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty room with a box",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -160,7 +160,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/68027ffb09cf/b1-review-the-flat-hunt/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty room with a box and a window",
       "pede": "Look at the picture: an empty room with a box and a window. Write 2 or 3 sentences about a flat you would like. Use <b>which / who / where</b> and <b>I'd rather</b>.",
       "ph": "I'd like a flat which …",

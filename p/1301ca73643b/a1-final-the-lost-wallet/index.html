@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Lost Wallet · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A1 · Unit 10 Review · The A1 Final</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Lost Wallet · A1 Unit 10 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 10 (Yesterday and tomorrow). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> The last review of Book A1. Your student is the manager of a café; a black wallet was on a table last night. You are three customers: Ms. Lee, Mr. Costa and Dani. Then you are the owner of the wallet.</p><p style="margin:0 0 6px"><b>About 41 min:</b> I · The Die (8) · II · The Lost Wallet (14) · III · The Reward (7) · IV · Small Talk (6) · V · I Can (3) · VI · The Next Book (3).</p><p style="margin:0"><b>Open with:</b> “Pick a door.” There is no order. One minute per door, no notes.</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>was / were · there was / there were · past simple: -ed and irregulars · didn’t + verb, Did…? · going to for plans · still / already / not … yet</p>
+    <h4>THE DIE</h4>
+    <p>Tap <b>Roll the die</b>: the number chooses one of the six topics (no repeats until all six are done). The student does the challenge from memory.</p>
+    <h4>THE LOST WALLET</h4>
+    <p>You are each customer. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Only Dani saw the wallet. Then you are the owner on the phone: the student tells you what each customer said, in the past, and the plans for tomorrow. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>SMALL TALK</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. This is the last review of Book A1. After I Can there is one more short scene, VI The Next Book: three cards with what Book A2 brings. Read them together and ask which one the student wants first.</p>
+    <h4>THE NEXT BOOK</h4>
+    <p>The last scene of the book: three cards with what the next book brings. Read them together and ask which one the student wants first.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>she didn’t saw</i>, <i>they was</i>, <i>I going to</i>, <i>goed / eated</i>, <i>had a garden (for there was)</i>, <i>did you went?</i>. A1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE REWARD (III) AND THE SURPRISE QUESTION</h4>
+    <p>The wallet is home, and now the student decides: what to do with a reward, what to do with a wallet in the street, and one thing they lost last year. There is no right answer. Answer first, short, so they hear the sentence; then wait five seconds in silence and use the PUSH line (only you see it): a yes / no question. Recast mistakes quietly (“I’m going to” for “I going to”, “didn’t see” for “didn’t saw”); at the end, ask them to fix one sentence themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one light personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Die and V · I Can.</li>
+      <li><b>Out loud</b>: II · The Lost Wallet, III · The Reward and IV · Small Talk.</li>
+      <li><b>Listen</b>: VI · The Next Book.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE LOST WALLET (Main A1 · Unit 10 Review) · pergunta-surpresa · 27/10/2026 · was / did / going to */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'dado', tipo: 'And you?', q: 'Where were you at six yesterday?',
+    opc: ['At home', 'At work', 'Out'], st: ['At six I was …', 'I was with …'],
+    ex: 'At six I was at work, with my boss.', push: 'Was it fun? Yes or no?' },
+  { cena: 'missao', tipo: 'Would you rather', q: 'Tonight: a café or a restaurant?',
+    opc: ['A café', 'A restaurant'], st: ['I’m going to go to …', 'because …'],
+    ex: 'A café. I’m going to have a cake!', push: 'Chocolate cake? Yes or no?' },
+  { cena: 'ponte', tipo: 'Opinion', q: 'Book A1: easy or difficult?',
+    opc: ['Easy', 'OK', 'Difficult'], st: ['It was …', 'The … was difficult.'],
+    ex: 'It was OK. The past was difficult!', push: 'Ready for Book A2? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE LOST WALLET (Main A1 · Unit 10 Review · the A1 final) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "The Reward" entra no lugar de "III · The Story in Order" (pôr cartões em ordem = prática controlada).
+   A aula já tinha o papel (II, o aluno gerente pergunta aos clientes) e o "And you?" (IV · Small Talk);
+   faltava a DECISÃO: o que fazer com a recompensa, com uma carteira na rua. Gramática da unidade
+   (going to, did / didn't, was) nos iniciadores. A1 leve: 3 opções curtas, o professor responde primeiro. */
+
+/* Calço local (27/10): o revisao.js desta aula usa TOQUES['cv-prox'] no "Next question" do IV · Small Talk,
+   e o kit/conversa.js registra um 'cv-prox' com o mesmo nome (sem data-c ele quebra). Aqui os dois convivem:
+   botão com data-c (os momentos de conversa) vai para o novo; sem data-c, para o do Small Talk. */
+(function () {
+  if (typeof TOQUES === 'undefined' || !TOQUES['cv-prox']) return;
+  var velho = TOQUES['cv-prox'], novo = null;
+  Object.defineProperty(TOQUES, 'cv-prox', { configurable: true, enumerable: true,
+    get: function () { return function (b, n, v, c) { return c ? (novo ? novo(b, n, v, c) : false) : velho(b, n, v, c); }; },
+    set: function (f) { novo = f; } });
+})();
+
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'premio', troca: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'The Reward', t: 'The wallet is home. Now you decide.',
+    p: 'Choose one. Say it with the sentence. Your teacher answers first.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The reward', q: 'The owner gives you 100 reais!', opc: ['Keep it', 'Give it to Dani', 'Cake for everybody'],
+        st: ['I’m going to …', 'because …'],
+        ex: 'I’m going to give it to Dani, because she saw the wallet.',
+        push: 'All of it? Yes or no?' },
+      { tag: 'In the street', q: 'You find a wallet. What now?', opc: ['Call the police', 'Look for a name', 'Ask in a shop'],
+        st: ['I’m going to …', 'I’m not going to …'],
+        ex: 'I’m going to look for a name. Then I’m going to call the person.',
+        push: 'There’s no name. The police? Yes or no?' },
+      { tag: 'And you?', q: 'What did you lose last year?', opc: ['My keys', 'My phone', 'Nothing!'],
+        st: ['I lost my …', 'It was in / on …'],
+        ex: 'My keys! They were in my bag, under a book.',
+        push: 'Did you find them? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "dado": {
+   "t": "Roll the die. The number chooses.",
+   "p": "Do the challenge out loud, from memory."
+  },
+  "missao": {
+   "t": "Whose wallet is it?",
+   "p": "Five questions each. Then call the owner."
+  },
+  "cv-premio": {
+   "t": "The wallet is home. You decide.",
+   "p": "Choose one. Teacher first. Say the sentence."
+  },
+  "conversa": {
+   "t": "Book A1 is almost done. Let’s talk.",
+   "p": "Answer. Then ask back: “And you?”"
+  },
+  "pode": {
+   "t": "Unit 10: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  },
+  "ponte": {
+   "t": "Book A1 is done. Here is A2.",
+   "p": "Read the three cards. Which one first?"
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 10 (ontem e amanhã): was/were, there was/were, passado, didn’t, Did…?, going to e already/yet; a carteira esquecida no café.",
+  "armadilha": "Passado em dobro: she didn’t saw, did you went?; they was; I going to sem o be; goed, eated; had a garden no lugar de there was.",
+  "pal": [
+   "was",
+   "were",
+   "there was",
+   "didn’t",
+   "Did you…?",
+   "going to",
+   "already",
+   "yet",
+   "wallet"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a última revisão do livro A1: uma carteira no café e um final feliz.",
+   "perg": "Pick a door.",
+   "pula": "Só leia o título e abra a primeira porta."
+  },
+  "dado": {
+   "obj": "O dado escolhe um dos seis tópicos; o aluno faz o desafio de memória.",
+   "perg": "What did you do yesterday?",
+   "pula": "Quatro jogadas bastam."
+  },
+  "missao": {
+   "obj": "O aluno pergunta a três clientes no passado; depois conta tudo ao dono por telefone.",
+   "perg": "Where were you last night?",
+   "pula": "Dois clientes bastam (Dani é obrigatória)."
+  },
+  "cv-premio": {
+   "obj": "Três decisões: a recompensa, uma carteira na rua, algo que o aluno perdeu.",
+   "perg": "What are you going to do with the reward?",
+   "pula": "Duas decisões bastam."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal; o aluno devolve com “And you?”.",
+   "perg": "What are you going to do this weekend?",
+   "pula": "Três perguntas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can” da Unidade 10; o que ficar aberto vai para a lição.",
+   "perg": "Can you talk about last weekend?",
+   "pula": "Leia rápido, sem exemplos."
+  },
+  "ponte": {
+   "obj": "Fecha o livro A1: três cartões do livro A2; o aluno escolhe o primeiro.",
+   "perg": "Which one do you want first?",
+   "pula": "Leia só os títulos. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas sobre ontem e amanhã, com passado e going to.",
+   "perg": "Did you lose something last year?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre achados e perdidos, com passado e going to.",
+   "perg": "Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é Dani, a cliente que viu a carteira, e responde ao entrevistador.",
+   "perg": "Did you see the wallet?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Yesterday and tomorrow.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "was",
+    "were",
+    "didn’t",
+    "going to"
+   ],
+   "cartas": [
+    {
+     "k": "LAST NIGHT",
+     "q": "Were you at home or out last night?",
+     "fup": "What did you eat?",
+     "st": [
+      "I was …",
+      "I ate …"
+     ],
+     "ex": "I was at home. I ate pasta."
+    },
+    {
+     "k": "A CAFÉ",
+     "q": "Did you go to a café last week, or not?",
+     "fup": "Was it good?",
+     "st": [
+      "I went to …",
+      "I didn’t go …"
+     ],
+     "ex": "I went to a small café. It was very good."
+    },
+    {
+     "k": "LOST THINGS",
+     "q": "Did you lose your keys or your phone this year?",
+     "fup": "Did you find them?",
+     "st": [
+      "I lost my …",
+      "I didn’t lose …"
+     ],
+     "ex": "I lost my keys in May, but I found them in my bag."
+    },
+    {
+     "k": "TOMORROW",
+     "q": "Are you going to work or rest tomorrow?",
+     "fup": "What time are you going to wake up?",
+     "st": [
+      "I’m going to …",
+      "I’m not going to …"
+     ],
+     "ex": "I’m going to work. I’m going to wake up at six."
+    },
+    {
+     "k": "YOUR CHILDHOOD",
+     "q": "Was there a park or a beach near your house?",
+     "fup": "Did you go there often?",
+     "st": [
+      "There was a …",
+      "There wasn’t a …"
+     ],
+     "ex": "There was a park, and I went there every day."
+    },
+    {
+     "k": "HOMEWORK",
+     "q": "Did you finish your homework already, or not yet?",
+     "fup": "Are you going to do it tonight?",
+     "st": [
+      "I already …",
+      "I didn’t … yet."
+     ],
+     "ex": "I didn’t finish it yet. I’m going to do it tonight."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "going to",
+    "was",
+    "didn’t"
+   ],
+   "rodadas": [
+    {
+     "q": "You find a wallet. Call the owner or go to the police?",
+     "a": "Call the owner",
+     "b": "The police",
+     "fa": [
+      "Call the owner. It is going to be fast."
+     ],
+     "fb": [
+      "The police. They are going to find the owner."
+     ]
+    },
+    {
+     "q": "A reward: money or a free coffee every week?",
+     "a": "Money",
+     "b": "Free coffee",
+     "fa": [
+      "Money. I’m going to buy a new bag."
+     ],
+     "fb": [
+      "Free coffee. I’m going to go there every week."
+     ]
+    },
+    {
+     "q": "Last weekend: was it a busy weekend or a quiet one?",
+     "a": "Busy",
+     "b": "Quiet",
+     "fa": [
+      "Busy. I went out on Saturday and Sunday."
+     ],
+     "fb": [
+      "Quiet. I didn’t go out."
+     ]
+    },
+    {
+     "q": "Next weekend: go out or stay home?",
+     "a": "Go out",
+     "b": "Stay home",
+     "fa": [
+      "Go out. I’m going to see friends."
+     ],
+     "fb": [
+      "Stay home. I’m going to sleep a lot."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the wallet is home."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Dani now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Dani.",
+   "perguntas": [
+    "Were you at the café last night?",
+    "What did you drink?",
+    "Did you see the wallet?",
+    "Where was it?",
+    "Was there anybody at the table?",
+    "What are you going to do tomorrow?"
+   ],
+   "st": [
+    "I was …",
+    "I saw …",
+    "I’m going to …"
+   ],
+   "ex": "Yes, I was there. I saw a black wallet on a table."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -122,5 +123,267 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A pharmacist explains a new medicine.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "transforma": {
+   "t": "Turn the label into plain English.",
+   "p": "Read the label and the clue. Tell the patient."
+  },
+  "cv-conselho": {
+   "t": "Three pharmacy ideas. Your vote?",
+   "p": "Vote on each idea. Say why."
+  },
+  "multipla": {
+   "t": "Five instructions. What do they mean?",
+   "p": "Choose. Then explain it to the patient."
+  },
+  "pode": {
+   "t": "Lesson 7: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Orientação de medicamento: perguntas antes, dose, frequência (twice a day, every 8 hours, as needed), comida, o que evitar, efeitos colaterais e teach-back.",
+  "armadilha": "Tradução direta: “two times for day”, “take with the stomach empty”, “remedy” para remédio e “it can give sleep” em vez de “it may make you sleepy”.",
+  "pal": [
+   "twice a day",
+   "every 8 hours",
+   "with food",
+   "on an empty stomach",
+   "as needed, up to …",
+   "You should avoid …",
+   "side effects",
+   "Can you tell me how you’re going to take it?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 7: explicar um medicamento ao paciente.",
+   "perg": "How do you say “de 8 em 8 horas” in English?",
+   "pula": "Só leia o título da capa."
+  },
+  "video": {
+   "obj": "Assistir à estação prática de farmácia (0:23–5:00) com a orientação de uma receita nova.",
+   "perg": "What did the pharmacist ask before explaining the dose?",
+   "pula": "O vídeo é inteiro; faça só uma pergunta depois."
+  },
+  "transforma": {
+   "obj": "Transformar rótulos em inglês simples para o paciente.",
+   "perg": "How would you say this label to a patient?",
+   "pula": "Quatro rótulos bastam."
+  },
+  "cv-conselho": {
+   "obj": "Conversa: votar três ideias da farmácia (figuras no rótulo, teach-back sempre, lembrete no celular).",
+   "perg": "Would you do a teach-back even with a long queue?",
+   "pula": "Duas ideias bastam."
+  },
+  "multipla": {
+   "obj": "Interpretar cinco instruções e explicá-las ao paciente.",
+   "perg": "What does “as needed, up to three a day” mean?",
+   "pula": "Três instruções bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; pedir o roteiro do medicamento que o aluno mais explica.",
+   "perg": "Can you explain a dose clearly?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre a prática profissional do aluno ao explicar medicamentos e orientar pacientes.",
+   "perg": "Which instruction do patients get wrong most often?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de dilemas de orientação ao paciente, com frases prontas.",
+   "perg": "Which side do you take, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o professor é o paciente com dúvidas; o aluno é o profissional e faz o teach-back.",
+   "perg": "Can I take it with coffee?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Medicines in your work.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "should",
+    "must not",
+    "twice a day"
+   ],
+   "cartas": [
+    {
+     "k": "THE CLASSIC",
+     "q": "Which instruction do patients get wrong most often?",
+     "fup": "How do you explain it now?",
+     "st": [
+      "Patients often …",
+      "Now I say: “…”"
+     ],
+     "ex": "Patients often stop antibiotics early. Now I say: “You should finish the whole box, even if you feel better.”"
+    },
+    {
+     "k": "PLAIN WORDS",
+     "q": "What medical word is hard to explain to patients?",
+     "fup": "What simpler word do you use?",
+     "st": [
+      "… is hard to explain.",
+      "I usually say …"
+     ],
+     "ex": "“Hypertension” is hard to explain. I usually say “high blood pressure”."
+    },
+    {
+     "k": "TEACH-BACK",
+     "q": "Do you ask patients to repeat the instructions?",
+     "fup": "What happens when they can’t?",
+     "st": [
+      "Yes, I ask: “Can you tell me …?”",
+      "When they can’t, I …"
+     ],
+     "ex": "Yes, I ask: “Can you tell me how you’re going to take it?” When they can’t, I write it with pictures."
+    },
+    {
+     "k": "FOOD",
+     "q": "How do you explain “on an empty stomach”?",
+     "fup": "Do patients usually follow it?",
+     "st": [
+      "I say it means …",
+      "Most patients …"
+     ],
+     "ex": "I say it means one hour before breakfast. Most patients forget on weekends."
+    },
+    {
+     "k": "SIDE EFFECTS",
+     "q": "How do you talk about side effects without scaring the patient?",
+     "fup": "When should they call you?",
+     "st": [
+      "I say it may …",
+      "They should call if …"
+     ],
+     "ex": "I say it may make you a little sleepy. They should call if they feel dizzy."
+    },
+    {
+     "k": "ENGLISH AT WORK",
+     "q": "Have you ever explained a medicine in English?",
+     "fup": "What was the hardest part?",
+     "st": [
+      "Yes, once I … / Not yet, but …",
+      "The hardest part was …"
+     ],
+     "ex": "Not yet, but I have tourists at my pharmacy. The hardest part will be the numbers."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "should",
+    "I think",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Pictures on every label (sun, moon, plate): yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Everybody understands a picture.",
+      "It helps older patients."
+     ],
+     "fb": [
+      "No. Pictures can be confusing.",
+      "Clear words are better."
+     ]
+    },
+    {
+     "q": "Teach-back for every new prescription, even with a long queue?",
+     "a": "Always",
+     "b": "Only when needed",
+     "fa": [
+      "Always. One mistake is dangerous.",
+      "It only takes one minute."
+     ],
+     "fb": [
+      "Only when needed. The queue gets angry.",
+      "Some patients already know the medicine."
+     ]
+    },
+    {
+     "q": "Explain everything in person, or give a printed sheet?",
+     "a": "In person",
+     "b": "Printed sheet",
+     "fa": [
+      "In person. Patients don’t read sheets.",
+      "You can see if they understand."
+     ],
+     "fb": [
+      "A printed sheet. They can read it at home.",
+      "Nobody remembers everything."
+     ]
+    },
+    {
+     "q": "Phone reminders for every dose: helpful or annoying?",
+     "a": "Helpful",
+     "b": "Annoying",
+     "fa": [
+      "Helpful. People forget, especially at night.",
+      "It can save a treatment."
+     ],
+     "fb": [
+      "Annoying. Patients turn them off.",
+      "A simple routine works better."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You counsel the patient now.",
+   "p": "Your teacher is the patient.",
+   "aluno": "Listen to your teacher’s question. Answer as the pharmacist, in plain English.",
+   "perguntas": [
+    "How many times a day do I take it?",
+    "Can I take it with coffee?",
+    "What if I forget a dose?",
+    "Should I take it with food?",
+    "Is it OK if I drink alcohol this weekend?",
+    "Will it make me sleepy at work?"
+   ],
+   "st": [
+    "You should take it …",
+    "You must not …",
+    "It may …"
+   ],
+   "ex": "You should take it twice a day, with food. You must not take more than two in one day."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

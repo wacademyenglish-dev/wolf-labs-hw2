@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "Call Me",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c54d080b662a/call-me/img/live-festa.webp",
+  "capa": "../img/live-festa.webp",
   "alvo": "object pronouns after the verb and after to / with / for / about: me, him, her, us, them, it; subject pronouns (I, he, she, we, they) start a sentence and never follow a verb: call him, not call he",
   "abrir": "Who do you call first with good news?",
   "fecho": "<b>I, he, she, we, they</b> start a sentence. After a verb, or after <b>to / with / for / about</b>, they change: <b>me, him, her, us, them</b>. <i>I called him. Tell her about it. Come with us.</i> <b>you</b> and <b>it</b> never change.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a surprise party on the phone. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/c54d080b662a/call-me/img/live-festa.webp",
+      "img": "../img/live-festa.webp",
       "leg": "A birthday cake in a living room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -102,17 +102,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I called him, and he can drive us.",
-          "img": "https://wolf-labs.pages.dev/p/c54d080b662a/call-me/img/live-festa.webp",
+          "img": "../img/live-festa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Don't tell her about the party.",
-          "img": "https://wolf-labs.pages.dev/p/c54d080b662a/call-me/img/live-festa.webp",
+          "img": "../img/live-festa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Send it to me, and I will send it to them.",
-          "img": "https://wolf-labs.pages.dev/p/c54d080b662a/call-me/img/live-festa.webp",
+          "img": "../img/live-festa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -156,7 +156,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c54d080b662a/call-me/img/live-festa.webp",
+      "img": "../img/live-festa.webp",
       "leg": "A birthday cake in a living room",
       "pede": "Look at the picture: a birthday cake in a living room, ready for a party. Write 2 or 3 sentences about the party: who you call, and what you tell them. Use <b>me, him, her, us, them, it</b> after the verb.",
       "ph": "I called … and I told …",

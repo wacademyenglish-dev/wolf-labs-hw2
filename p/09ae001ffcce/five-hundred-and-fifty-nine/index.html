@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Turn It On · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Turn It On · The Dark Apartment</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Turn It On · The Dark Apartment</h2>
+    <p>In the first minutes your student will say <i>turn on it</i> or <i>pick up her</i>. Nobody has ever corrected it, because a listener understands anyway. The hour bets on two ideas: the small word <b>is</b> the verb, and <b>it, them, him, her, me</b> go <b>in the middle</b>. The screen is an apartment at night, seen from above: every pronoun in the right place lights a room.</p>
+    <h4>THE SMALL WORD, NOT THE LIST</h4>
+    <p>Don’t turn scene IV into a vocabulary list. Ask why each verb goes with its small word: <i>What does OFF usually mean?</i></p>
+    <h4>THE TRAP IS ONE INCH WIDE</h4>
+    <p>Scene V proves it in three steps. Don’t explain before step 3.</p>
+    <h4>NEVER OPENS</h4>
+    <p><i>look for, look after, deal with, run into</i> never split; the starters in VIII use them. No rule says which; these few are learned by heart.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>turn on it</i>, <i>pick up her</i>, <i>send back it</i>, <i>call back me</i>, and after an hour of IT in the middle, <i>I’m looking it for</i>.</p>
+    <!--conversa--><h4>YOUR CALL, IN THE DARK (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Three small dilemmas at home: the lights go out, the neighbor’s music at midnight, a friend’s cat for two weeks. There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. The starters carry the verbs that never open (<i>look for it, look after it, deal with it</i>) and the ones that do (<i>turn it down, turn it off</i>). Recast quietly while they talk (<i>turn it down</i>, never <i>turn down it</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Six, Out Loud, III One Verb, Four Switches, VIII Your Call, In the Dark, IX The Broken One.</li>
+      <li><b>Focus</b>: II The Number, IV Six Small Words, V Three Steps, VII The Dark Apartment.</li>
+      <li><b>Listen</b>: VI Four Voices (the transcript opens after they listen).</li>
+      <li><b>Write</b>: X, four instructions for their home. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* TURN IT ON (Main A2) · pergunta-surpresa · 27/10/2026 · phrasal verbs, pronome no meio */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'take', tipo: 'Would you rather', q: 'Would you rather get up at 5 AM or stay up until 2 AM?',
+    opc: ['Get up at 5', 'Stay up until 2'], st: ['I’d rather …, because …'],
+    ex: 'Stay up until two. I can’t get up early, never!', push: 'What time did you get up today?' },
+  { cena: 'familias', tipo: 'And you?', q: 'What do you always put off?',
+    opc: ['Cleaning', 'Paying bills', 'Calling people back', 'Something else'], st: ['I always put off …', 'I put it off because …'],
+    ex: 'Calling people back. I see the call, and I put it off for days.', push: 'Who are you going to call back today?' },
+  { cena: 'passos', tipo: 'What if', q: 'You buy a jacket online. It’s too small. What do you do?',
+    opc: ['Send it back', 'Give it away', 'Keep it anyway'], st: ['I’d send it back …', 'I’d give it away to …'],
+    ex: 'I’d give it away to my sister. Sending it back is too much work!', push: 'And if it was very expensive?' },
+  { cena: 'vozes', tipo: 'Opinion', q: 'Is it a good idea to turn your phone off for a whole weekend?',
+    opc: ['Yes, great idea', 'Only at night', 'No, never'], st: ['I think you can turn it off …', 'I can’t turn it off, because …'],
+    ex: 'Yes! I turn it off on Sundays, and I feel great.', push: 'When did you last turn it off for a whole day?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* TURN IT ON (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O dilema entra no lugar de "VIII · Five That Never Open" (extra, prática controlada). O apartamento
+   no escuro (VII, a cara da aula) fica. Os verbos que nunca abrem (look for, look after, deal with)
+   continuam na hora: estão nos iniciadores, junto com turn it down / turn it off (pronome no meio). */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'dilema', troca: 'nunca', est: 'o', min: 6, img: 'sala', rot: 'Your Call, In the Dark', t: 'Three problems at home. What would you do?',
+    p: 'Choose one, or say your own idea. Use a phrasal verb: turn it off, look for it, deal with it.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Lights out', sit: 'Eight at night. The lights go out in your building. Your phone is on 5%.',
+        q: 'What do you do first?', opc: ['Look for candles', 'Call the manager', 'Go to bed early'],
+        st: ['I’d look for …', 'I’d turn off my phone and …', 'I’d call them up and …'],
+        ex: 'I’d turn my phone off to save it, and look for candles in the kitchen.',
+        push: 'The lights don’t come back on until morning. What do you do all night?' },
+      { tag: 'The music', sit: 'Midnight. Your neighbor’s music is very loud. You start work at seven.',
+        q: 'What do you do?', opc: ['Knock and ask', 'Turn my TV up', 'Deal with it tomorrow'],
+        st: ['I’d ask them to turn it down.', 'I’d turn … up', 'I’d deal with it …'],
+        ex: 'I’d knock and ask them to turn it down. Nicely!',
+        push: 'They turn it down. Ten minutes later, they turn it up again. Now what?' },
+      { tag: 'The cat', sit: 'A friend asks you to look after her cat for two weeks. You don’t like cats.',
+        q: 'What do you say?', opc: ['Yes, I’ll do it', 'One week only', 'No, sorry'],
+        st: ['I’ll look after it, but …', 'I can’t look after it, because …', 'I’d turn her down …'],
+        ex: 'One week only. I’ll look after it, but I can’t deal with it for two weeks!',
+        push: 'She offers to pay you. Does your answer change?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Six fast questions.",
+   "p": "Answer each one out loud, in whole sentences."
+  },
+  "numero": {
+   "t": "Why a list doesn’t work.",
+   "p": "Guess first, out loud. Then tap."
+  },
+  "take": {
+   "t": "TAKE: four small words, four verbs.",
+   "p": "Guess the meaning out loud. Flip the switch."
+  },
+  "familias": {
+   "t": "Each small word has an idea.",
+   "p": "Tap a verb. Say why. Tap its small word."
+  },
+  "passos": {
+   "t": "Three steps. The third is the hour.",
+   "p": "Pick. Then read the right one out loud."
+  },
+  "vozes": {
+   "t": "Four real sentences.",
+   "p": "Play it. Pick the small word you heard."
+  },
+  "casa": {
+   "t": "Six dark rooms. Six instructions.",
+   "p": "Say it with a pronoun in the middle."
+  },
+  "cv-dilema": {
+   "t": "Three problems at home. Your call?",
+   "p": "Choose or say your idea. Use a phrasal verb."
+  },
+  "ligacao": {
+   "t": "It arrived broken. Call the store.",
+   "p": "Answer the store out loud. Open the model."
+  },
+  "fim": {
+   "t": "Your six come back.",
+   "p": "Write four home instructions with it or them."
+  }
+ },
+ "prep": {
+  "obj": "Phrasal verbs: a palavrinha é o verbo, e o pronome (it, them, him, her, me) vai no meio. Um apartamento escuro visto de cima: cada pronome no lugar certo acende um cômodo.",
+  "armadilha": "Em português o pronome não separa o verbo (“liga ele”): sai “turn on it”, “pick up her”, “send back it”, “call back me”; e depois de uma hora de it no meio, “I’m looking it for”.",
+  "pal": [
+   "turn it on",
+   "turn it off",
+   "turn it down",
+   "pick her up",
+   "call me back",
+   "look for it",
+   "look after it",
+   "deal with it"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: a palavrinha é o verbo e o pronome só tem um lugar.",
+   "perg": "What do you turn on first when you get home?",
+   "pula": "Leia a frase da capa e acenda o primeiro interruptor."
+  },
+  "abre": {
+   "obj": "Diagnóstico: seis perguntas rápidas; deixe sair “turn on it” sem corrigir.",
+   "perg": "What time do you turn off your phone?",
+   "pula": "Três perguntas bastam."
+  },
+  "numero": {
+   "obj": "Por que uma lista de phrasal verbs não funciona: são milhares.",
+   "perg": "How many phrasal verbs are there, do you think?",
+   "pula": "Mostre o número e siga."
+  },
+  "take": {
+   "obj": "O mesmo verbo TAKE com quatro palavrinhas vira quatro verbos diferentes.",
+   "perg": "What does “take off” mean here?",
+   "pula": "Duas chaves bastam."
+  },
+  "familias": {
+   "obj": "Doze verbos, seis palavrinhas: cada palavrinha tem uma ideia (off = sair, desligar).",
+   "perg": "What does OFF usually mean?",
+   "pula": "Seis verbos bastam; não vire lista de vocabulário."
+  },
+  "passos": {
+   "obj": "Três passos que provam a armadilha do pronome. Não explique antes do passo 3.",
+   "perg": "Where does “it” go?",
+   "pula": "Não pule o passo 3: é a aula."
+  },
+  "vozes": {
+   "obj": "Ouvir quatro frases reais e pegar a palavrinha; a transcrição abre depois.",
+   "perg": "Which small word did you hear?",
+   "pula": "Duas vozes bastam."
+  },
+  "casa": {
+   "obj": "Seis cômodos escuros: dizer cada instrução com pronome no meio e acender a luz.",
+   "perg": "Turn on the light. Now say it with “it”.",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-dilema": {
+   "obj": "Três dilemas em casa (luz apagada, música à meia-noite, gato de um amigo) com phrasal verbs.",
+   "perg": "Your neighbor’s music is loud at midnight. What do you do?",
+   "pula": "Dois dilemas bastam."
+  },
+  "ligacao": {
+   "obj": "Roleplay: algo chegou quebrado; você é a loja e o aluno resolve com send it back, pick it up.",
+   "perg": "What do you want to do with it?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: quatro instruções para a casa do aluno com it ou them no lugar certo.",
+   "perg": "What do you always forget to turn off?",
+   "pula": "Duas instruções bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa pessoal com phrasal verbs separáveis e os que nunca abrem.",
+   "perg": "Who looks after your plants when you travel?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado em situações de casa e defender com phrasal verbs e pronomes.",
+   "perg": "Would you turn it down or turn it off?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Entrevista: o aluno é o vizinho da música alta e responde com phrasal verbs.",
+   "perg": "Can you turn your music down, please?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More switches at home.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "turn it off",
+    "pick it up",
+    "look for it",
+    "look after it"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PHONE",
+     "q": "When do you turn your phone off?",
+     "fup": "Do you ever turn it off for a whole day?",
+     "st": [
+      "I turn it off when …",
+      "I never turn it off."
+     ],
+     "ex": "I turn it off at eleven. I never turn it off on weekdays."
+    },
+    {
+     "k": "LOST THINGS",
+     "q": "What do you always look for in the morning?",
+     "fup": "Where do you find it?",
+     "st": [
+      "I always look for my …",
+      "I find it …"
+     ],
+     "ex": "I always look for my keys. I find them in my jacket."
+    },
+    {
+     "k": "YOUR PLANTS",
+     "q": "Who looks after your home when you travel?",
+     "fup": "Do you pay them?",
+     "st": [
+      "My … looks after it.",
+      "Nobody. I …"
+     ],
+     "ex": "My neighbor looks after it. I bring her a gift."
+    },
+    {
+     "k": "THE TV",
+     "q": "Who turns the TV on in your house?",
+     "fup": "And who turns it down?",
+     "st": [
+      "My … turns it on.",
+      "I turn it down when …"
+     ],
+     "ex": "My son turns it on. I turn it down at night."
+    },
+    {
+     "k": "CLOTHES",
+     "q": "Do you try clothes on in the store or at home?",
+     "fup": "Do you take them back sometimes?",
+     "st": [
+      "I try them on …",
+      "Yes, I take them back when …"
+     ],
+     "ex": "I try them on at home. I take them back when they’re small."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "Who picks you up when your car breaks down?",
+     "fup": "Do you call them back fast?",
+     "st": [
+      "My … picks me up.",
+      "I call … and …"
+     ],
+     "ex": "My brother picks me up. He always calls me back."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "turn it down",
+    "deal with it",
+    "send it back"
+   ],
+   "rodadas": [
+    {
+     "q": "The neighbor’s music at midnight: knock or deal with it?",
+     "a": "Knock",
+     "b": "Deal with it",
+     "fa": [
+      "Knock. I ask him to turn it down."
+     ],
+     "fb": [
+      "Deal with it. I put my headphones on."
+     ]
+    },
+    {
+     "q": "A new lamp arrives broken: send it back or fix it?",
+     "a": "Send it back",
+     "b": "Fix it",
+     "fa": [
+      "Send it back. I paid for a new one."
+     ],
+     "fb": [
+      "Fix it. Sending it back takes weeks."
+     ]
+    },
+    {
+     "q": "The lights go out: look for a candle or go to bed?",
+     "a": "A candle",
+     "b": "Bed",
+     "fa": [
+      "Look for a candle. I need to see."
+     ],
+     "fb": [
+      "Go to bed. I can deal with it tomorrow."
+     ]
+    },
+    {
+     "q": "A friend’s cat for two weeks: say yes or say no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. I can look after it."
+     ],
+     "fb": [
+      "No. I can’t look after it. I travel a lot."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and every pronoun found its place."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the noisy neighbor now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the neighbor with the loud music.",
+   "perguntas": [
+    "Can you turn your music down, please?",
+    "Why do you turn it on so late?",
+    "Can you turn it off at eleven?",
+    "Who looks after your dog when you go out?",
+    "Can you pick up your boxes from the hall?",
+    "Can I call you back tomorrow about this?"
+   ],
+   "st": [
+    "OK, I’ll turn it down.",
+    "I turn it on because …",
+    "Sure, call me back …"
+   ],
+   "ex": "Sorry! I’ll turn it down now. I turn it on late because I work at night."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -121,5 +122,284 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A recruiter tells a story in three steps.",
+   "p": "One question, then the video, then questions."
+  },
+  "ordem": {
+   "t": "A story about an angry client.",
+   "p": "Tap the five sentences in order."
+  },
+  "prova": {
+   "t": "Two classic questions. Your stories.",
+   "p": "Prepare, start the clock, tell it."
+  },
+  "cv-folga": {
+   "t": "One week off, two people.",
+   "p": "Answer Rafa. Then close a deal."
+  },
+  "pode": {
+   "t": "Lesson 4: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Perguntas comportamentais (Tell me about a time when…) com STAR e tempos narrativos: past continuous, past perfect, past simple e um resultado. Duas histórias do aluno.",
+  "armadilha": "“We solved” (diga o que VOCÊ fez: I called…), “When I was work there”, “They already sent” no lugar de “had already sent” e terminar sem resultado: “and that’s it”.",
+  "pal": [
+   "Tell me about a time when…",
+   "situation",
+   "task",
+   "action",
+   "result",
+   "I was working as…",
+   "we had sent",
+   "As a result,",
+   "What I learned was…"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 4 do WOLF HIRED: histórias STAR para perguntas comportamentais.",
+   "perg": "What’s the most stressful day you’ve had at work?",
+   "pula": "Leia o título e siga."
+  },
+  "video": {
+   "obj": "Escuta: um recrutador explica o STAR com um exemplo (6:00–8:00).",
+   "perg": "What are the four steps?",
+   "pula": "O vídeo é inteiro; faça só a pergunta de antes."
+  },
+  "ordem": {
+   "obj": "Ordenar a história do cliente irritado e contá-la com os tempos narrativos.",
+   "perg": "What had happened before the client called?",
+   "pula": "Ordene; conte só a ação e o resultado."
+  },
+  "prova": {
+   "obj": "Duas histórias do aluno no relógio real; checklist e segunda tentativa.",
+   "perg": "Tell me about a time when you solved a problem.",
+   "pula": "Uma história só, com segunda tentativa."
+  },
+  "cv-folga": {
+   "obj": "Viver um conflito: negociar a última semana de dezembro com o Rafa.",
+   "perg": "What can you offer Rafa?",
+   "pula": "Duas falas do Rafa e feche o acordo."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; peça a terceira história (um sucesso) de lição.",
+   "perg": "Can you tell a STAR story in two minutes?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais perguntas comportamentais curtas, com começo de frase pronto.",
+   "perg": "Tell me about a time when you were under pressure.",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre como se apresentar numa entrevista, com frases prontas.",
+   "perg": "What would a recruiter prefer?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar a terceira história STAR do curso: um sucesso.",
+   "perg": "What was the result, in numbers?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More interview questions.",
+   "p": "Pick a card. Tell a short STAR story.",
+   "palavras": [
+    "I was working as…",
+    "had already",
+    "So I…",
+    "As a result,"
+   ],
+   "cartas": [
+    {
+     "k": "PRESSURE",
+     "q": "Tell me about a time when you were under pressure.",
+     "fup": "What was the result?",
+     "st": [
+      "Last year, I was working as …",
+      "As a result, …"
+     ],
+     "ex": "Last year, I was working as a sales assistant before Christmas. I organized the orders by priority, and as a result, nothing was late."
+    },
+    {
+     "k": "A MISTAKE",
+     "q": "Tell me about a mistake you made at work.",
+     "fup": "What did you learn?",
+     "st": [
+      "I had forgotten to …",
+      "What I learned was …"
+     ],
+     "ex": "I had forgotten to send a file to a client. What I learned was to use a checklist."
+    },
+    {
+     "k": "TEAMWORK",
+     "q": "Tell me about a time you helped a colleague.",
+     "fup": "Did they thank you?",
+     "st": [
+      "A colleague was …, so I …"
+     ],
+     "ex": "A colleague was struggling with a report, so I stayed one hour and helped her."
+    },
+    {
+     "k": "NEW SKILL",
+     "q": "Tell me about a time you learned something fast.",
+     "fup": "How did you do it?",
+     "st": [
+      "I had never … before, so I …"
+     ],
+     "ex": "I had never used Excel before, so I watched videos every night for a week."
+    },
+    {
+     "k": "A CHANGE",
+     "q": "Tell me about a time something changed at work.",
+     "fup": "How did you adapt?",
+     "st": [
+      "We were using … when …"
+     ],
+     "ex": "We were using paper forms when the company moved to an app. I trained my team."
+    },
+    {
+     "k": "PROUD",
+     "q": "What is a result you are proud of?",
+     "fup": "What did YOU do?",
+     "st": [
+      "I …, and as a result, …"
+     ],
+     "ex": "I called every old client, and as a result, twelve came back."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "What do recruiters want?",
+   "p": "Pick a side. Your teacher takes the other.",
+   "palavras": [
+    "I think",
+    "because",
+    "on the other hand"
+   ],
+   "rodadas": [
+    {
+     "q": "Say “I” or “we” in your stories?",
+     "a": "I",
+     "b": "We",
+     "fa": [
+      "“I”. The recruiter wants to know what I did.",
+      "“We solved it” hides my action."
+     ],
+     "fb": [
+      "“We”. Companies want team players.",
+      "Saying “I” all the time sounds arrogant."
+     ]
+    },
+    {
+     "q": "Tell a story about a failure, or only about successes?",
+     "a": "A failure too",
+     "b": "Only successes",
+     "fa": [
+      "A failure too. What I learned is the best part.",
+      "It shows I’m honest."
+     ],
+     "fb": [
+      "Only successes. The interview is short.",
+      "Why give them a reason to say no?"
+     ]
+    },
+    {
+     "q": "Memorize your stories, or tell them naturally?",
+     "a": "Memorize",
+     "b": "Naturally",
+     "fa": [
+      "Memorize. Under pressure, I forget everything.",
+      "A good structure needs practice."
+     ],
+     "fb": [
+      "Naturally. Memorized stories sound like robots.",
+      "Know the four steps, not every word."
+     ]
+    },
+    {
+     "q": "Give up the December week, or fight for it?",
+     "a": "Give it up",
+     "b": "Fight for it",
+     "fa": [
+      "Give it up. A good colleague is worth more than a week.",
+      "Next year it will be my turn."
+     ],
+     "fb": [
+      "Fight for it. I had planned this trip for months.",
+      "A fair deal is better than a silent sacrifice."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Your Third Story",
+   "t": "Your success story, in STAR.",
+   "p": "One step at a time. Say it, then write it.",
+   "prof": "This is the third story of the course (a success). Write it in the chat as the student speaks, then fix the tenses together.",
+   "passos": [
+    {
+     "q": "Situation: where were you working, and what was happening?",
+     "st": [
+      "Two years ago, I was working as …",
+      "At that time, …"
+     ],
+     "ex": "Two years ago, I was working as a store manager. Sales were falling every month."
+    },
+    {
+     "q": "Task: what did you have to do?",
+     "st": [
+      "I had to …"
+     ],
+     "ex": "I had to bring the numbers back up in three months."
+    },
+    {
+     "q": "Action: what did YOU do? Two or three steps.",
+     "st": [
+      "So I … Then I …"
+     ],
+     "ex": "So I changed the window displays. Then I started a WhatsApp list for regular clients."
+    },
+    {
+     "q": "Result: what happened, with a number?",
+     "st": [
+      "As a result, …",
+      "What I learned was …"
+     ],
+     "ex": "As a result, sales went up 20%. What I learned was to listen to the clients first."
+    }
+   ],
+   "fim": "Three stories ready: a challenge, a conflict and a success."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

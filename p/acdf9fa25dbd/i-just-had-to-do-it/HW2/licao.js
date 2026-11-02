@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Just Had to Do It",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/acdf9fa25dbd/i-just-had-to-do-it/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "had to / didn't have to (obligation in the past); Did you have to ...? with the plain verb; never musted, never had that, never You had to ...? as a question",
   "abrir": "What did you have to do yesterday?",
   "fecho": "<b>had to</b> + plain verb = it was necessary: <i>I had to carry every box.</i> <b>didn't have to</b> = it wasn't necessary: <i>We didn't have to pay.</i> The question: <b>Did you have to</b> work? Must has no past: never <i>I musted study</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about moving house. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/acdf9fa25dbd/i-just-had-to-do-it/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A record player under the northern lights",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We had to wait for an hour, but we didn't have to pay.",
-          "img": "https://wolf-labs.pages.dev/p/acdf9fa25dbd/i-just-had-to-do-it/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Did you have to work on Saturday?",
-          "img": "https://wolf-labs.pages.dev/p/acdf9fa25dbd/i-just-had-to-do-it/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I didn't have to cook, but I had to wash the dishes.",
-          "img": "https://wolf-labs.pages.dev/p/acdf9fa25dbd/i-just-had-to-do-it/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/acdf9fa25dbd/i-just-had-to-do-it/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A record player under the northern lights",
       "pede": "Look at the picture: a record player under the northern lights, far from everything. Write 2 or 3 sentences about something you had to do last month, and something you didn't have to do. Use <b>had to</b> and <b>didn't have to</b>.",
       "ph": "Last month I had to … but I didn't have to …",

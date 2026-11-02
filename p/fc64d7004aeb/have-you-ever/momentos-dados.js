@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de Have You Ever? (11/10/2026): entrevistas de rua em Toronto sobre casa e saudade (Easy English).
+   Forma: o termômetro (saudade). Alvo: present perfect de experiência (ever / never / once) e o detalhe no passado.
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [6, 7, 8], k: 'Another country', quem: 'Rebecca and a student',
+    contexto: 'Rebecca asks students in Toronto about home and homesickness.',
+    frase: '<b>Have you ever lived</b> in another country? — No, no, I haven’t. I’m living in another country right now.',
+    explica: 'A life experience, with no time: present perfect. The funny part: he is abroad right now.',
+    formula: '<b>Have</b> you <b>ever lived</b>…? · Yes, I <b>have</b>. · No, I <b>haven’t</b>.',
+    tente: 'Have you ever lived in another city or country?',
+    ex: 'Yes, I have. I lived in Portugal for a year.',
+    sente: { q: 'How funny is his answer?', de: 'serious', a: 'very funny', st: 'It’s … because he has…' } },
+  { i: [19, 20, 21], k: 'Never abroad', quem: 'A student',
+    contexto: 'Another student makes a clear difference between two experiences.',
+    frase: '<b>I’ve never lived abroad</b>. I’ve traveled abroad, but I’ve never lived abroad.',
+    explica: '<i>Abroad</i> = in another country. <i>Never</i> goes between <i>have</i> and the participle.',
+    formula: 'I’ve <b>never</b> lived abroad. · I’ve been there <b>once</b> / <b>twice</b>.',
+    tente: 'Tell me one thing you’ve never done and one you’ve done twice.',
+    ex: 'I’ve never been on a cruise. I’ve been to Buenos Aires twice.',
+    sente: { q: 'How sure is she?', de: 'not sure', a: 'totally sure', st: 'She’s … because she has never…' } },
+  { i: [54, 55, 56, 57], k: 'Homesick', quem: 'A student',
+    contexto: 'Rebecca asks the big question. The answer comes fast.',
+    frase: 'Have you ever felt homesick? — Yeah, definitely. So <b>when I first moved</b> to this university, I was very homesick.',
+    explica: '<i>Homesick</i> = sad because you miss home. The question is general; the details (when, where) go to the past.',
+    formula: 'Have you ever felt homesick? Yes. <b>When I moved</b>, I <b>was</b> very homesick. (detail → past)',
+    tente: 'Have you ever felt homesick? When was it?',
+    ex: 'Yes, I have. When I went to camp at nine, I cried every night!',
+    sente: { q: 'How homesick was she?', de: 'not at all', a: 'very homesick', st: 'She was … because when she moved…' } },
+  { i: [62, 63, 64], k: 'The first years', quem: 'A student',
+    contexto: 'For another student, the feeling stayed for a long time.',
+    frase: 'I would say the first couple years when I moved here, <b>I was definitely homesick</b>. I missed my family, my friends.',
+    explica: 'A finished period (the first couple of years) takes the past simple.',
+    formula: '<b>Have</b> you ever <b>missed</b> home? — Yes. I <b>missed</b> my family in my first year.',
+    tente: 'What did you miss the most the first time you were far from home?',
+    ex: 'I missed my mom’s food. I missed my bed too!',
+    sente: { q: 'How hard were those years?', de: 'easy', a: 'very hard', st: 'They were … because he missed…' } },
+  { i: [97, 98, 99, 100, 101, 102, 103], k: 'What is home?', quem: 'A student',
+    contexto: 'The last question of the video has a beautiful answer.',
+    frase: 'What does home mean to you? — I guess it means <b>wherever my community is</b>.',
+    explica: 'For her, home is not a place: it is the people. Her family and friends are home.',
+    formula: 'I’ve lived in three cities, but home <b>is</b> wherever my family <b>is</b>.',
+    tente: 'What does home mean to you?',
+    ex: 'Home is my grandmother’s kitchen. It’s wherever my family eats together.',
+    sente: { q: 'How warm is this answer?', de: 'cold', a: 'very warm', st: 'It’s … because home is…' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#5aa9d6', titulo: 'Far from home: five answers.', sub: 'Hear the answer, measure the feeling, then tell your own experience.', rot: { por: 'WHAT IT MEANS', padrao: 'HAVE YOU EVER…?', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

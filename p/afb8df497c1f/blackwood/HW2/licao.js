@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Blackwood",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/afb8df497c1f/blackwood/img/live-cabana.webp",
+  "capa": "../img/live-cabana.webp",
   "alvo": "past continuous + past simple: was / were + -ing for the long action in progress, past simple for the short action that interrupts it; while + the long action, when + the short one; What were you doing? / What did you do?",
   "abrir": "What were you doing at nine o'clock last night?",
   "fecho": "The <b>long action</b> in progress: <b>was / were + -ing</b>. The <b>short action</b> that interrupts it: the <b>past simple</b>. <i>I was editing a tape when the lights went out.</i> <b>While</b> + the long one, <b>when</b> + the short one. Questions: <b>What were you doing?</b> / <b>What did you do?</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a night at the radio station. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/afb8df497c1f/blackwood/img/live-telefone.webp",
+      "img": "../img/live-telefone.webp",
       "leg": "Two old phones on a desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I was editing a tape when the lights went out.",
-          "img": "https://wolf-labs.pages.dev/p/afb8df497c1f/blackwood/img/live-telefone.webp",
+          "img": "../img/live-telefone.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "While I was looking for a torch, the phone rang.",
-          "img": "https://wolf-labs.pages.dev/p/afb8df497c1f/blackwood/img/live-caderno.webp",
+          "img": "../img/live-caderno.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We were telling stories when the lights came back.",
-          "img": "https://wolf-labs.pages.dev/p/afb8df497c1f/blackwood/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/afb8df497c1f/blackwood/img/live-cabana.webp",
+      "img": "../img/live-cabana.webp",
       "leg": "A small cabin in the woods at night",
       "pede": "Look at the picture: a small cabin in the woods at night. Imagine you were there last night. Write 2 or 3 sentences: what you were doing when something happened, and what you did. Use <b>was / were + -ing</b> and the <b>past simple</b>, with <b>when</b> or <b>while</b>.",
       "ph": "I was reading when …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Review: The Style Guide",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/08d132ad6873/c1-review-the-style-guide/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 9 review (register and style): formal and friendly voices, spoken and written forms (look into / investigate, gonna / going to), contract language (shall, prior to, subject to), understatement (not exactly memorable), opinion idioms (I'm all for it, I couldn't care less)",
   "abrir": "Who do you write to in a formal way? And who in a friendly way?",
   "fecho": "<b>Same message, different voice.</b> Spoken: <i>we'll look into it</i>. Written: <i>we will investigate</i>. Contracts: <i>shall</i>, <i>prior to</i>, <i>subject to</i>. Understatement: <i>not exactly memorable</i>. Opinions: <i>I'm all for it</i>, <i>I couldn't care less</i>. Formal closing: <i>I look forward to hearing from you.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo, two editors, check an email before it goes out. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/08d132ad6873/c1-review-the-style-guide/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A reading nook with a lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "In a meeting, I would say we'll look into it.",
-          "img": "https://wolf-labs.pages.dev/p/08d132ad6873/c1-review-the-style-guide/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Prior to the first of May, the author shall deliver the manuscript.",
-          "img": "https://wolf-labs.pages.dev/p/08d132ad6873/c1-review-the-style-guide/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The ending is not exactly memorable, but the characters are lovely.",
-          "img": "https://wolf-labs.pages.dev/p/08d132ad6873/c1-review-the-style-guide/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/08d132ad6873/c1-review-the-style-guide/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A quill, a candle and a page on an editor's desk",
       "pede": "Look at the picture: an editor's desk with a quill and a candle. Write 2 or 3 sentences: say one piece of news in a friendly voice, then in a formal voice. Use <b>look into / investigate</b>, <b>gonna / going to</b> or <b>not exactly</b>.",
       "ph": "Friendly: We'll look into it. Formal: …",

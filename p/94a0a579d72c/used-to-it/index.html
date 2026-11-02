@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Used to It · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Used to It · The Moving Box</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Used to It · The Moving Box</h2>
+    <p>Same three words, two grammars. <b>I used to wake up early</b> is a habit that ended. <b>I’m used to waking up early</b> is normal for you today. The difference is BE, and that TO is a preposition, so -ING follows. Between them is the road: <b>I’m getting used to it</b>. On screen, a cardboard moving box where old habits drop in (the flaps close when it’s full), and a twelve-month strip that goes from the orange of home to the ice of Toronto, lighting up as strange becomes normal.</p>
+    <h4>ONE QUESTION</h4>
+    <p>Is it still happening? If not: <i>used to</i>. If it’s normal now: <i>be used to</i>. If it still costs something: <i>getting used to</i>.</p>
+    <h4>DON’T CORRECT SCENE I</h4>
+    <p>Write the three answers down. Listen for <i>I’m used to wake up</i> and <i>I used to living</i>. They come back in scene X.</p>
+    <h4>ANA’S YEAR</h4>
+    <p>Scene IV tells one year in six steps. Habits from back home drop into the box; the rest lights up the months. Step 5 is the trap: <i>used to have</i>. Ask what Ana still finds hard.</p>
+    <h4>THE SWALLOWED BE</h4>
+    <p>Scene VI has no recording: your voice is the audio. Tap the sentence you will read (only you see it), read it at natural speed, and the student says which one they heard. Then you both say both.</p>
+    <h4>YOU MOVED</h4>
+    <p>Scene VII: you play somebody who moved abroad three years ago. Invent freely; answer with all three forms. At the end, ask the student to tell your story back in three sentences.</p>
+    <!--conversa--><h4>HOT TAKES (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After the interview, your student reads four hot takes about change and taps how much they agree. There is no right answer. Let them choose a number, wait five seconds in silence, then they defend it while you take the opposite number. Use the PUSH line (only you see it) to make it personal. Recast quietly while they talk (I’m used to <b>waking</b>, not “wake”; I’m <b>getting</b> used to it); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Strange at First, IV Ana’s First Year, VII The Interview, VIII Hot Takes, IX Three Moments.</li>
+      <li><b>Listen</b>: VI The Word You Swallow (your voice).</li>
+      <li><b>Focus</b>: II Over, or Ordinary?, III That TO Is a Preposition, V What Comes After TO.</li>
+      <li><b>Write</b>: X, one change at three moments. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* USED TO IT (Main B1) · pergunta-surpresa · 27/10/2026 · used to / be used to / get used to */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'prateleira', tipo: 'And you?', q: 'What is something you used to love that you don’t care about now?',
+    opc: ['A food', 'A hobby', 'A TV show or a game'], st: ['I used to love …, but now …', 'When I was …, I used to …'],
+    ex: 'A hobby. I used to love skateboarding, but now I’m used to my sofa.', push: 'Would you try it again this weekend? Why not?' },
+  { cena: 'ana', tipo: 'Would you rather', q: 'Would you rather move to a very cold city or a very hot one?',
+    opc: ['A very cold city', 'A very hot city'], st: ['I’d rather …, because I’m used to …', 'I could never get used to …'],
+    ex: 'A very hot city. I’m used to the heat, and I could never get used to snow in April.', push: 'For five years? Still the same answer?' },
+  { cena: 'voz', tipo: 'Opinion', q: 'What is the hardest thing to get used to in a new job?',
+    opc: ['The people', 'The schedule', 'The rules'], st: ['The hardest thing to get used to is …', 'When I started …, I wasn’t used to …'],
+    ex: 'The schedule. When I started my job, I wasn’t used to waking up at six.', push: 'And what was the easiest? Give me an example.' },
+  { cena: 'linha', tipo: 'What if', q: 'Tomorrow your phone stops working for a month. What would you have to get used to?',
+    opc: ['No maps', 'No messages', 'No music'], st: ['I would have to get used to …', 'I’m so used to … that …'],
+    ex: 'No maps. I’m so used to my phone that I don’t know the streets in my own city.', push: 'Would your life be better after the month? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* USED TO IT (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A escala de opiniões impopulares entra no lugar de "VIII · Eight Broken Lines" (extra, prática
+   controlada de correção). Depois da entrevista (VII), o aluno toma partido sobre mudanças.
+   Gramática da aula (used to + verbo · be used to + -ing · get used to) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'escala', troca: 'conserta', est: 'o', min: 7, img: 'neve', rot: 'Hot Takes', t: 'Four hot takes about change. How much do you agree?',
+    p: 'Read the sentence out loud. Tap a number, then defend it with an example. Your teacher takes the opposite number.',
+    formato: 'escala', tag: 'Unpopular opinion?',
+    frases: [
+      { f: 'You can get used to anything in a month.',
+        st: ['I agree. When I …, I got used to it in …', 'No way. I’m still getting used to …', 'It depends. You can get used to …, but not …'],
+        ex: 'I disagree. I moved to a new flat two years ago, and I’m still getting used to the noise at night.',
+        push: 'Name one thing you will NEVER get used to. Never.' },
+      { f: 'Life was better when people used to call instead of texting.',
+        st: ['People used to …, and it was …', 'I’m used to texting, so …', 'I used to …, but now I …'],
+        ex: 'I agree, a little. We used to call our friends every night. Now I’m used to texting, and I hate it when my phone rings.',
+        push: 'When did you last call a friend just to talk? Be honest.' },
+      { f: 'Kids get used to a new place much faster than adults.',
+        st: ['Kids get used to … because …', 'Adults are used to …, so …', 'When I was a kid, I used to …'],
+        ex: 'Totally agree. When I was a kid, we moved, and I got used to my new school in a week. My parents took a year.',
+        push: 'So should a family with kids move to another country? Yes or no?' },
+      { f: 'If you get used to something bad, you stop trying to change it.',
+        st: ['When you’re used to …, you …', 'I got used to …, and I never …', 'Not always. I was used to …, but I …'],
+        ex: 'Agree. I was used to sleeping five hours a night, and I didn’t see the problem. Now I sleep seven.',
+        push: 'What bad thing are YOU used to right now?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Things that changed.",
+   "p": "Answer three questions in whole sentences."
+  },
+  "prateleira": {
+   "t": "Over, or ordinary?",
+   "p": "Read it out loud. Box it, or keep it."
+  },
+  "regra": {
+   "t": "That TO is a preposition.",
+   "p": "Three questions. Choose, then say why."
+  },
+  "ana": {
+   "t": "Ana’s first year in Toronto.",
+   "p": "Choose the words. Old habits go in the box."
+  },
+  "metades": {
+   "t": "What comes after TO?",
+   "p": "Choose the piece. Say the whole sentence."
+  },
+  "voz": {
+   "t": "The word you swallow.",
+   "p": "Hear one sentence. Say which. Then say both."
+  },
+  "entrevista": {
+   "t": "Your teacher moved abroad.",
+   "p": "Ask a card’s question. Then one follow-up."
+  },
+  "cv-escala": {
+   "t": "Four hot takes about change.",
+   "p": "Tap a number. Defend it with an example."
+  },
+  "linha": {
+   "t": "Three moments on one line.",
+   "p": "Before, during or after? Then your own change."
+  },
+  "fim": {
+   "t": "Your line, in shape.",
+   "p": "One change at three moments. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Used to (hábito que acabou) × be used to + -ing (normal hoje) × getting used to: a Ana se mudou de uma cidade quente para Toronto e passa um ano se acostumando.",
+  "armadilha": "Como “acostumado a” vem com verbo no infinitivo em português, sai “I’m used to wake up”; e o contrário, “I used to living”. Na fala rápida, o be some.",
+  "pal": [
+   "used to",
+   "be used to …ing",
+   "get used to",
+   "getting used to",
+   "habit",
+   "move abroad",
+   "strange at first"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a mudança da Ana: antes andava a pé; em Toronto, está se acostumando à neve.",
+   "perg": "Have you ever moved to a new city?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Três perguntas sobre mudanças, sem corrigir; anote as respostas para a cena X.",
+   "perg": "What was strange at first but is normal now?",
+   "pula": "Não corte: as respostas voltam na cena X."
+  },
+  "prateleira": {
+   "obj": "Separar o que acabou (caixa) do que é normal hoje (mesa).",
+   "perg": "Is it still happening?",
+   "pula": "Cinco frases bastam."
+  },
+  "regra": {
+   "obj": "A regra: o TO de be used to é preposição, por isso vem -ing.",
+   "perg": "Is it over, or normal now?",
+   "pula": "Duas perguntas bastam."
+  },
+  "ana": {
+   "obj": "O ano da Ana em seis momentos; o passo 5 é a armadilha (used to have).",
+   "perg": "What does Ana still find hard?",
+   "pula": "Quatro momentos; não corte o 5."
+  },
+  "metades": {
+   "obj": "O pedaço depois do TO decide: verbo puro ou -ing.",
+   "perg": "What comes after TO here?",
+   "pula": "Quatro frases bastam."
+  },
+  "voz": {
+   "obj": "Ouvido: o professor lê uma frase do par e o aluno diz qual ouviu.",
+   "perg": "Which one did you hear?",
+   "pula": "Três pares bastam."
+  },
+  "entrevista": {
+   "obj": "O professor faz alguém que se mudou há três anos; o aluno entrevista e reconta.",
+   "perg": "What did you use to miss?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-escala": {
+   "obj": "Quatro opiniões fortes sobre mudança; o aluno dá um número e defende.",
+   "perg": "Why that number?",
+   "pula": "Duas opiniões bastam."
+  },
+  "linha": {
+   "obj": "Uma linha com três momentos: antes, durante e depois de uma mudança.",
+   "perg": "Before, during or after?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: uma mudança da vida do aluno nos três momentos; reler as frases da cena I.",
+   "perg": "What are you getting used to now?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre hábitos antigos, novos e em andamento.",
+   "perg": "What are you getting used to these days?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre mudanças de vida, usando as três formas.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Ana e conta o primeiro ano em Toronto.",
+   "perg": "What did you use to do back home, Ana?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Over, ordinary, or on the road?",
+   "p": "Pick a card. Use the three forms.",
+   "palavras": [
+    "used to",
+    "I’m used to …ing",
+    "I’m getting used to …"
+   ],
+   "cartas": [
+    {
+     "k": "AS A KID",
+     "q": "What did you use to do as a kid that you don’t do now?",
+     "fup": "Do you miss it?",
+     "st": [
+      "I used to …",
+      "I don’t … anymore."
+     ],
+     "ex": "I used to ride my bike everywhere. I miss it."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What are you used to doing at work now?",
+     "fup": "Was it hard at first?",
+     "st": [
+      "I’m used to …ing",
+      "At first it was …"
+     ],
+     "ex": "I’m used to answering fifty emails a day. At first it was a nightmare."
+    },
+    {
+     "k": "THIS YEAR",
+     "q": "What are you getting used to this year?",
+     "fup": "How long will it take?",
+     "st": [
+      "I’m getting used to …",
+      "It still feels …"
+     ],
+     "ex": "I’m getting used to waking up at six. It still feels too early."
+    },
+    {
+     "k": "THE WEATHER",
+     "q": "Could you get used to snow, like Ana?",
+     "fup": "What would be the hardest part?",
+     "st": [
+      "I could get used to …",
+      "I’d never get used to …"
+     ],
+     "ex": "I’d never get used to the cold, but I could get used to the quiet."
+    },
+    {
+     "k": "TECHNOLOGY",
+     "q": "What technology did you use to hate but now you’re used to?",
+     "fup": "Why did you change?",
+     "st": [
+      "I used to hate …",
+      "Now I’m used to …ing"
+     ],
+     "ex": "I used to hate video calls. Now I’m used to having them every day."
+    },
+    {
+     "k": "FOOD",
+     "q": "Is there a food you didn’t use to like but eat now?",
+     "fup": "What changed?",
+     "st": [
+      "I didn’t use to like …",
+      "Now I’m used to …"
+     ],
+     "ex": "I didn’t use to like coffee. Now I’m used to drinking three a day."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "used to",
+    "be used to",
+    "get used to",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Can you get used to anything?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. People get used to snow, noise, anything.",
+      "After a year, it’s normal."
+     ],
+     "fb": [
+      "No. Some things never feel normal.",
+      "I’m not used to the cold after ten years."
+     ]
+    },
+    {
+     "q": "Move abroad for a better job?",
+     "a": "Yes, go",
+     "b": "No, stay",
+     "fa": [
+      "Yes. You get used to the new place.",
+      "The first year is hard, then it’s home."
+     ],
+     "fb": [
+      "No. I’m used to my people and my food.",
+      "A job is not everything."
+     ]
+    },
+    {
+     "q": "Is life better now than how it used to be?",
+     "a": "Better now",
+     "b": "Better before",
+     "fa": [
+      "Better now. We used to have fewer choices.",
+      "I’m used to the comfort."
+     ],
+     "fb": [
+      "Better before. People used to talk more.",
+      "We’re getting used to being alone."
+     ]
+    },
+    {
+     "q": "Change your routine often, or keep it the same?",
+     "a": "Change it",
+     "b": "Keep it",
+     "fa": [
+      "Change it. You never get bored.",
+      "Getting used to new things keeps the brain young."
+     ],
+     "fb": [
+      "Keep it. I’m used to my mornings.",
+      "A routine helps me relax."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You’re getting used to arguing in English."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Ana now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Ana.",
+   "perguntas": [
+    "What did you use to do back home every day?",
+    "What was the strangest thing in your first month in Toronto?",
+    "Are you used to the snow now?",
+    "What are you still getting used to?",
+    "What did you use to have that you don’t have now?",
+    "Would you go back? Why, or why not?"
+   ],
+   "st": [
+    "Back home, I used to …",
+    "I’m used to …ing now.",
+    "I’m still getting used to …"
+   ],
+   "ex": "Back home, I used to walk everywhere. Now I’m used to taking the subway."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

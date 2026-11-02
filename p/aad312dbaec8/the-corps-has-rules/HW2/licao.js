@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Corps Has Rules",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/aad312dbaec8/the-corps-has-rules/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "must / mustn't (a rule, a ban) and have to / don't have to (a need, no need); plain verb after them, no to after must; doesn't have to with he / she; mustn't is not the same as don't have to",
   "abrir": "What must you do every day?",
   "fecho": "<b>must</b> = a rule: <i>You must light the lanterns.</i> <b>mustn't</b> = it is forbidden: <i>You mustn't walk alone.</i> <b>have to</b> = a need; <b>don't have to</b> = it is not needed, but it is OK. After <b>must</b>, the plain verb, never <i>to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia is new in a night guide group. Leo tells her the rules. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/aad312dbaec8/the-corps-has-rules/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A mountain road with lanterns",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "You must light the lanterns before dark.",
-          "img": "https://wolf-labs.pages.dev/p/aad312dbaec8/the-corps-has-rules/img/live-glicinias.webp",
+          "img": "../img/live-glicinias.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "You mustn't walk alone in the forest.",
-          "img": "https://wolf-labs.pages.dev/p/aad312dbaec8/the-corps-has-rules/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She doesn't have to carry a big bag.",
-          "img": "https://wolf-labs.pages.dev/p/aad312dbaec8/the-corps-has-rules/img/live-glicinias.webp",
+          "img": "../img/live-glicinias.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/aad312dbaec8/the-corps-has-rules/img/live-glicinias.webp",
+      "img": "../img/live-glicinias.webp",
       "leg": "A road with lanterns",
       "pede": "Look at the picture: a road with lanterns at night. Write 2 or 3 sentences about the rules of your home or your work. Use <b>must</b>, <b>mustn't</b> and <b>don't have to</b>.",
       "ph": "At home you must … You mustn't … You don't have to …",

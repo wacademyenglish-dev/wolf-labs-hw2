@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Who's Running? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="serie.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Challenge · Episode 9</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season map: London to Edinburgh"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>The Challenge · Episode 9 · Who's Running?</h2>
+    <p>Episode 9. The race to the castle: Paula gets a taxi, Bob runs, Fran cycles again. The language is <b>am / is / are + -ing</b> for what is happening right now. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Previously on The Challenge, Right now, What am I doing. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Episode 9, in three steps. The video unlocks when the student answers the Before questions.</li>
+      <li><b>Focus</b> &mdash; Right now: -ing, Who is doing what, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Right now in your house. It goes to the student&rsquo;s My notes.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>The be disappears: <i>she walking</i>. The -ing disappears: <i>I&rsquo;m run</i>. And they gets is: <i>they is running</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The map on top shows the season; today stop 9 lights up. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* THE CHALLENGE · EPISODE 9 · WHO'S RUNNING? (A1)
+   Vídeo: BBC Learning English, "They're running to the castle" (GETeTKPtPPU, 5:07). AULA NOVA. */
+const M = { nome: "Who's Running?", kick: "A1 · AM, IS, ARE + -ING (RIGHT NOW)" };
+var EP = {
+  n: 9, titulo: 'Who\'s Running?', video: 'GETeTKPtPPU', onde: { Fran: 'cycling', Bob: 'running', Paula: 'in a taxi' },
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'Holyrood is behind them. Now: Edinburgh Castle, at the top of the hill. Taxi, running or cycling?',
+      nota: 'Ask: if you need to arrive fast, do you run or take a taxi?' },
+    { k: 'cartas', est: 'o', rot: 'previously on', titulo: 'Previously on <em>The Challenge</em>', pt: 'Vire as cartas e lembre o episódio 8.',
+      nota: 'Recap of Episode 8 with directions.',
+      cartas: [
+        { frente: 'Paula', sob: 'Episode 8', verso: 'I need to go to Holyrood, at the end of the Royal Mile.', dica: 'She\'s first!', cor: 'var(--paula)', fw: { q: 'Tell me the way from here to your front door.', st: ['Go …', 'Turn …', 'It\'s at the end of …'], help: '“Go out of this room. Turn right. The door is at the end.”' } },
+        { frente: 'Bob', sob: 'Episode 8', verso: 'That hill? Up there?', dica: 'He\'s tired!', cor: 'var(--bob)' },
+        { frente: 'Castle', sob: 'Episode 8', verso: 'To win, go to Edinburgh Castle. It\'s at the top of the hill.', dica: 'The finish line', cor: 'var(--ok)' }
+      ] },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Right <em>now</em>', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Every answer with -ing.',
+      cartas: [
+        { frente: 'Now?', verso: 'What are you doing right now?', dica: 'I\'m …ing.', cor: 'var(--fran)', fw: { q: 'And what is your family doing now?', st: ['My mum is …ing.', 'My brother is …ing.', 'They\'re …ing.'], help: '“My mum is cooking. My brother is sleeping!”' } },
+        { frente: 'Run?', verso: 'Do you like running?', dica: 'Yes, I do. / No, I don\'t.', cor: 'var(--bob)', fw: { q: 'What sport do you like?', st: ['I like …', 'I don\'t like sports.', 'I\'m …ing a lot now.'], help: '“I like swimming.”' } },
+        { frente: 'Guess!', verso: 'What is your best friend doing right now? Guess!', dica: 'I think she\'s …ing.', cor: 'var(--paula)', fw: { q: 'Why do you think that?', st: ['She always …', 'It\'s … o\'clock.', 'I don\'t know!'], help: '“It\'s 8 PM. I think she\'s watching TV.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'Episode 9 · 5:07', titulo: 'Watch <em>Episode 9</em>', pt: 'Responda antes. O vídeo destrava depois.',
+      nota: 'Before: two guesses. After: true or false about who is doing what.',
+      antes: [ { q: 'Who is going to win?', ops: [{ t: 'Fran' }, { t: 'Bob' }, { t: 'Paula' }] }, { q: 'How do they go to the castle?', ops: [{ t: 'all in a taxi' }, { t: 'in different ways' }] } ],
+      durante: 'Listen: who is running? Who is walking? Who is cycling? Who is getting a taxi?',
+      depois: [ { f: 'Paula is getting a taxi.', ok: 1 }, { f: 'Bob is walking.', ok: 0 }, { f: 'Fran is cycling again.', ok: 1 }, { f: 'At the end, Fran is walking.', ok: 1 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Right now: <em>-ing</em>', pt: 'am / is / are + verbo com -ing: o que está acontecendo agora.',
+      nota: 'Read each card. The red card: the be disappears in Portuguese speakers\' English.',
+      cartoes: [ { g: 'I\'<b>m running</b>.', p: 'I + am + -ing.' }, { g: 'She\'<b>s walking</b>. He\'<b>s cycling</b>.', p: 'he / she + is + -ing.' }, { g: 'They\'<b>re running</b> to the castle.', p: 'they + are + -ing.' }, { g: 'She walking.', p: 'Don\'t forget is: she\'s walking.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'the race', titulo: 'Who is doing <em>what</em>?', pt: 'Toque na pessoa e depois no que ela está fazendo.',
+      nota: 'The first part of the race. Say the full sentence: Paula is getting a taxi.',
+      esq: ['Paula', 'Bob', 'Fran', 'The presenter', 'Fran and Paula'], dir: ['is getting a taxi', 'is running', 'is cycling again', 'is waiting at the castle', 'are running to the castle'], ordem: [2, 4, 0, 3, 1],
+      fw: { q: 'Who are you on the team: Fran, Bob or Paula? Why?', st: ['I\'m Fran, I like cycling.', 'I\'m Bob, I\'m always running.', 'I\'m Paula, I like taxis!'], help: '“I\'m Paula. I\'m always getting a taxi!”' } },
+    { k: 'cartas', est: 'o', rot: 'act it out', titulo: 'What am I <em>doing</em>?', pt: 'O professor faz a mímica. O aluno adivinha: You\'re …ing!',
+      nota: 'You act; the student guesses with You\'re …ing. Then swap: the student acts, you guess.',
+      cartas: [
+        { frente: 'Act 1', sob: 'teacher acts', verso: 'running', dica: 'You\'re running!', cor: 'var(--bob)', fw: { q: 'Your turn: act something. I guess!', st: ['Yes! I\'m …ing.', 'No, I\'m not.', 'Try again!'], help: 'Act: cooking, sleeping, swimming, reading…' } },
+        { frente: 'Act 2', sob: 'teacher acts', verso: 'getting a taxi', dica: 'You\'re getting a taxi!', cor: 'var(--paula)' },
+        { frente: 'Act 3', sob: 'teacher acts', verso: 'cycling', dica: 'You\'re cycling!', cor: 'var(--fran)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'The missing be, the missing -ing, and are with they.',
+      itens: [ { erro: 'She <s>walking</s>.', certo: 'She<b>\'s</b> walking.', por: 'Don\'t forget is.' }, { erro: 'I\'m <s>run</s>.', certo: 'I\'m <b>running</b>.', por: 'be + verb-ing.' }, { erro: 'They <s>is</s> running.', certo: 'They <b>are</b> running.', por: 'They: are.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the race. Read each one out loud.',
+      itens: [ { f: 'Paula ___ getting a taxi.', ops: ['is', 'are'], ok: 0 }, { f: 'Bob is ___.', ops: ['running', 'run'], ok: 0 }, { f: 'Fran and Paula ___ running to the castle.', ops: ['are', 'is'], ok: 0 }, { f: 'I\'m ___ again!', ops: ['cycling', 'cycle'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Right now in your <em>house</em>', pt: 'Escreva o que cada pessoa da sua casa está fazendo agora.',
+      ph: 'Right now I\'m … My mum is …', nota: 'The line under the paper catches “she walking” and “I\'m run”. SAVE sends it to My notes.',
+      banco: ['Right now', 'I\'m', 'He\'s', 'She\'s', 'They\'re', 'working', 'studying', 'sleeping', 'cooking', 'watching TV'],
+      regras: [['\\b(she|he|it) (?!is\\b|was\\b|has\\b)[a-z]+ing\\b', 'Check: she\'s (walking), with is.'], ['\\bI\'?m (run|walk|cycle|study|work|cook|sleep|watch)\\b', 'Check: be + verb-ing: I\'m running.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'I won!', tx: 'The last episode. Who\'s going to win?',
+      ganchos: [['Fran', '?'], ['Bob', '?'], ['Paula', '?']], nota: 'Ask for a final prediction: who wins? Then Episode 10.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="serie.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Am / is / are + -ing para o que acontece agora: no episódio 9, a corrida até o Castelo de Edimburgo; Paula pega um táxi, Bob corre e Fran vai de bicicleta.",
+  "armadilha": "“Ela está andando” perde o “está” no inglês: she walking; o -ing some: I’m run; e they ganha is: they is running.",
+  "pal": [
+   "I’m running",
+   "she’s walking",
+   "he’s cycling",
+   "they’re running",
+   "getting a taxi",
+   "right now",
+   "the castle",
+   "the hill"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abre o episódio 9: o castelo no alto da colina; táxi, correr ou pedalar.",
+   "perg": "Do you run or take a taxi?",
+   "pula": "Uma resposta curta basta; vá para o NEXT."
+  },
+  "c1": {
+   "obj": "Recapitula o episódio 8 com direções (go, turn, at the end of).",
+   "perg": "Where is Holyrood?",
+   "pula": "Vire só uma carta."
+  },
+  "c2": {
+   "obj": "Conversa sobre agora: o que o aluno e a família estão fazendo, sempre com -ing.",
+   "perg": "What are you doing right now?",
+   "pula": "Duas cartas bastam."
+  },
+  "c3": {
+   "obj": "Assistir ao episódio 9: palpites antes, verdadeiro ou falso sobre quem faz o quê.",
+   "perg": "Who is getting a taxi?",
+   "pula": "Pule o durante; faça antes e depois."
+  },
+  "c4": {
+   "obj": "A regra: am / is / are + verbo com -ing para o que acontece agora.",
+   "perg": "She walking or she’s walking?",
+   "pula": "Leia os quatro cartões; sem frases extras."
+  },
+  "c5": {
+   "obj": "Ligar cada pessoa ao que ela está fazendo na corrida, com a frase inteira.",
+   "perg": "What is Bob doing?",
+   "pula": "Pule a pergunta do post-it."
+  },
+  "c6": {
+   "obj": "Mímica: o professor faz, o aluno adivinha com You’re …ing; depois trocam.",
+   "perg": "What am I doing?",
+   "pula": "Duas mímicas bastam."
+  },
+  "c7": {
+   "obj": "Três armadilhas: o be que some, o -ing que some e they is.",
+   "perg": "How do you say “ela está andando”?",
+   "pula": "Faça as três, rápido; não explique de novo."
+  },
+  "c8": {
+   "obj": "Quatro frases da corrida: is/are e o verbo com -ing.",
+   "perg": "Is or are here?",
+   "pula": "Duas frases bastam."
+  },
+  "c9": {
+   "obj": "Escrita: o que cada pessoa da casa está fazendo agora; vai para o My notes.",
+   "perg": "What is your family doing now?",
+   "pula": "Três frases bastam."
+  },
+  "c10": {
+   "obj": "Gancho do último episódio: quem ganha a corrida?",
+   "perg": "Who wins? Fran, Bob or Paula?",
+   "pula": "Só o palpite. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre agora e hoje, com am / is / are + -ing.",
+   "perg": "What is your city doing right now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre correr, pedalar, táxi, com um motivo curto.",
+   "perg": "Running or cycling? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o Bob, correndo para o castelo, e responde com -ing.",
+   "perg": "Bob, what are you doing now?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "What’s happening now?",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’m",
+    "she’s",
+    "he’s",
+    "they’re",
+    "-ing",
+    "right now"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR STREET",
+     "q": "What are people doing in your street right now?",
+     "fup": "Is it noisy?",
+     "st": [
+      "People are …ing.",
+      "A man is …ing."
+     ],
+     "ex": "People are walking to work. A man is selling coffee."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Who is texting you today?",
+     "fup": "What is she saying?",
+     "st": [
+      "My … is texting me.",
+      "She’s asking …"
+     ],
+     "ex": "My sister is texting me. She’s asking about dinner."
+    },
+    {
+     "k": "YOUR PET",
+     "q": "Do you have a pet? What is it doing now?",
+     "fup": "Is it sleeping?",
+     "st": [
+      "My dog is …ing.",
+      "I think it’s …ing."
+     ],
+     "ex": "My cat is sleeping on the sofa. It’s always sleeping!"
+    },
+    {
+     "k": "THE WEATHER",
+     "q": "Is it raining or is the sun shining?",
+     "fup": "Is it good for running?",
+     "st": [
+      "It’s raining.",
+      "The sun is shining."
+     ],
+     "ex": "It isn’t raining. The sun is shining. It’s good for running."
+    },
+    {
+     "k": "YOUR TEACHER",
+     "q": "Guess: what is your teacher doing after class?",
+     "fup": "Why do you think that?",
+     "st": [
+      "I think you’re …ing.",
+      "You’re …ing."
+     ],
+     "ex": "I think you’re having lunch. It’s twelve o’clock."
+    },
+    {
+     "k": "THIS WEEK",
+     "q": "What are you learning or reading this week?",
+     "fup": "Is it difficult?",
+     "st": [
+      "I’m reading …",
+      "I’m learning …"
+     ],
+     "ex": "I’m learning English and I’m reading a book about Scotland."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "running",
+    "cycling",
+    "fast",
+    "cheap",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Running or cycling?",
+     "a": "Running",
+     "b": "Cycling",
+     "fa": [
+      "Running. It’s easy and it’s cheap."
+     ],
+     "fb": [
+      "Cycling. It’s fast and it’s fun."
+     ]
+    },
+    {
+     "q": "A taxi or the bus?",
+     "a": "A taxi",
+     "b": "The bus",
+     "fa": [
+      "A taxi. It’s fast, like Paula!"
+     ],
+     "fb": [
+      "The bus. It’s slow, but it’s cheap."
+     ]
+    },
+    {
+     "q": "Up the hill: walking or running?",
+     "a": "Walking",
+     "b": "Running",
+     "fa": [
+      "Walking. I’m not tired at the top."
+     ],
+     "fb": [
+      "Running. I’m first at the castle."
+     ]
+    },
+    {
+     "q": "Sunday morning: sleeping or running?",
+     "a": "Sleeping",
+     "b": "Running",
+     "fa": [
+      "Sleeping. It’s Sunday!"
+     ],
+     "fb": [
+      "Running. It’s good for me."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Everybody is running to the castle now."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Bob now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Bob.",
+   "perguntas": [
+    "Bob, what are you doing right now?",
+    "Where are you running to?",
+    "What is Paula doing?",
+    "Is Fran cycling again?",
+    "Are you feeling tired?",
+    "Who is winning right now?"
+   ],
+   "st": [
+    "I’m …ing.",
+    "She’s …ing.",
+    "I think … is winning."
+   ],
+   "ex": "I’m running up the hill. Paula is getting a taxi!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

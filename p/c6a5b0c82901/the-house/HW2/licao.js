@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "The House",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c6a5b0c82901/the-house/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "there is / there are, Is there ...?, there isn't / aren't, and his / her / their: there is + one, there are + two or more, never have for there is, never the bed of him",
   "abrir": "What is there in your house? Say three things.",
   "fecho": "<b>There is</b> + one thing: <i>There is a dog.</i> <b>There are</b> + two or more: <i>There are two trees.</i> A question: <b>Is there</b> a light? No: <b>there isn't</b>. Whose? <b>his</b> (a man) · <b>her</b> (a woman) · <b>their</b> (many).",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at a picture of a stone house. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/c6a5b0c82901/the-house/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A stone house at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "There is a small light by the door.",
-          "img": "https://wolf-labs.pages.dev/p/c6a5b0c82901/the-house/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "There is an old dog on the step.",
-          "img": "https://wolf-labs.pages.dev/p/c6a5b0c82901/the-house/img/live-cena3-cao.webp",
+          "img": "../img/live-cena3-cao.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It is her loom, and it is his bed.",
-          "img": "https://wolf-labs.pages.dev/p/c6a5b0c82901/the-house/img/live-cena4-tear.webp",
+          "img": "../img/live-cena4-tear.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -166,7 +166,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c6a5b0c82901/the-house/img/live-cena5-janela.webp",
+      "img": "../img/live-cena5-janela.webp",
       "leg": "A room with a window to the sea",
       "pede": "Look at the picture: a room with a window to the sea at night. Write 2 or 3 sentences: what is there in the room? Use <b>there is</b>, <b>there are</b> or <b>there isn't</b>.",
       "ph": "There is … There isn't …",

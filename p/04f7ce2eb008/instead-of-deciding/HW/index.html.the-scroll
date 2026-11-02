@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>NeuralNet | Mobile Uplink</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === NEURAL OS (MOBILE UPLINK THEME) === */
+        :root {
+            --bg-base: #050505;       
+            --bg-panel: rgba(15, 23, 42, 0.7); 
+            --accent-cyan: #00f0ff;   
+            --accent-orange: #ff6b00; 
+            --accent-red: #ff2a2a;    
+            --text-main: #ffffff;     
+            --text-muted: #94a3b8;    
+            --border-soft: rgba(255, 255, 255, 0.1);
+            --border-cyan: rgba(0, 240, 255, 0.3);
+            --glow-cyan: rgba(0, 240, 255, 0.4);
+            --glow-orange: rgba(255, 107, 0, 0.4);
+        }
+
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            background-color: #000; 
+            color: var(--text-main);
+            display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .font-ui { font-family: 'Outfit', sans-serif; }
+        .font-code { font-family: 'Fira Code', monospace; }
+
+        /* Mobile App Container Frame */
+        #mobile-app {
+            width: 100%; max-width: 430px; 
+            height: 100vh; max-height: 932px;
+            background-color: var(--bg-base);
+            position: relative; display: flex; flex-direction: column; overflow: hidden;
+            box-shadow: 0 0 50px rgba(0, 240, 255, 0.1);
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 20px 20px, 20px 20px;
+        }
+
+        /* Layout */
+        header { flex-shrink: 0; background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(16px); z-index: 50; border-bottom: 1px solid var(--border-soft); }
+        main { flex-grow: 1; overflow-y: auto; padding: 1.5rem; position: relative; }
+
+        /* Progress Bar */
+        .progress-track { width: 100%; height: 3px; background: rgba(255,255,255,0.1); overflow: hidden; margin-top: 15px; }
+        .progress-fill { height: 100%; background: var(--accent-cyan); transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1); box-shadow: 0 0 10px var(--accent-cyan); }
+
+        /* Glass Cards & Buttons */
+        .question-card { 
+            background: var(--bg-panel); 
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-soft); 
+            border-radius: 20px; padding: 1.5rem; 
+            animation: slideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5); 
+        }
+        
+        .opt-btn { 
+            width: 100%; text-align: left; background: rgba(0,0,0,0.4); 
+            border: 1px solid var(--border-soft); padding: 1.2rem; border-radius: 12px; 
+            margin-bottom: 0.75rem; font-family: 'Fira Code', monospace; font-weight: 500; font-size: 0.9rem;
+            transition: all 0.2s; display: flex; justify-content: space-between; align-items: center; 
+        }
+        .opt-btn:active { transform: scale(0.98); }
+        .opt-btn.selected-correct { border-color: var(--accent-cyan); background: rgba(0, 240, 255, 0.1); color: var(--accent-cyan); box-shadow: inset 0 0 15px rgba(0, 240, 255, 0.1);}
+        .opt-btn.selected-error { border-color: var(--accent-red); background: rgba(255, 42, 42, 0.1); color: var(--accent-red); }
+
+        .btn-primary { 
+            width: 100%; background: rgba(0, 240, 255, 0.1); color: var(--accent-cyan); 
+            padding: 1.2rem; border-radius: 12px; font-family: 'Fira Code', monospace; font-weight: 700; 
+            text-transform: uppercase; letter-spacing: 0.1em; text-align: center; border: 1px solid var(--border-cyan); 
+            transition: all 0.2s; box-shadow: 0 4px 15px rgba(0, 240, 255, 0.05);
+        }
+        .btn-primary:active { background: var(--accent-cyan); color: #000; transform: scale(0.98); box-shadow: 0 0 20px var(--glow-cyan);}
+
+        /* Input specific */
+        .type-input { 
+            width: 100%; background: rgba(0,0,0,0.5); border: 1px solid var(--border-soft); 
+            color: var(--accent-orange); padding: 1.2rem; border-radius: 12px; 
+            font-family: 'Fira Code', monospace; text-align: center; margin-bottom: 1.2rem; font-size: 1.1rem; font-weight: 600;
+        }
+        .type-input:focus { outline: none; border-color: var(--accent-orange); box-shadow: 0 0 15px rgba(255, 107, 0, 0.2); }
+        .type-input.error { border-color: var(--accent-red); color: var(--accent-red); animation: shake 0.4s; }
+
+        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+        /* Confetti Canvas */
+        #confetti { position: absolute; inset: 0; pointer-events: none; z-index: 100; }
+        
+        .hide { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <div id="mobile-app">
+        <!-- Header -->
+        <header class="p-5 flex flex-col">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-[rgba(0,240,255,0.1)] border border-[rgba(0,240,255,0.3)] flex items-center justify-center shadow-[0_0_10px_rgba(0,240,255,0.2)]"><i class="fas fa-satellite-dish text-[var(--accent-cyan)] text-sm"></i></div>
+                    <div>
+                        <h1 class="text-[15px] font-bold leading-tight font-ui tracking-wide">Neural Uplink</h1>
+                        <p class="text-[10px] text-[var(--text-muted)] font-code uppercase tracking-[0.2em] font-semibold">Cognitive Scan</p>
+                    </div>
+                </div>
+                <div class="text-right bg-black/40 px-3 py-1.5 rounded-full border border-[var(--border-soft)]">
+                    <span id="q-counter" class="text-xs font-code text-[var(--accent-cyan)] font-bold tracking-[0.2em]">01/15</span>
+                </div>
+            </div>
+            <div class="progress-track">
+                <div id="progress" class="progress-fill" style="width: 0%;"></div>
+            </div>
+        </header>
+
+        <!-- Main Content (Exercises) -->
+        <main id="app-main" class="flex flex-col justify-center">
+            
+            <!-- Welcome Screen -->
+            <div id="screen-welcome" class="text-center question-card border-t-2 border-[var(--accent-cyan)]">
+                <div class="w-20 h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-6 border border-[var(--border-cyan)] shadow-[0_0_20px_rgba(0,240,255,0.2)]">
+                    <i class="fas fa-fingerprint text-3xl text-[var(--accent-cyan)]"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-3 font-ui tracking-tight">Deprogramming Protocol</h2>
+                <p class="text-[14px] text-[var(--text-muted)] mb-8 leading-relaxed font-ui font-light">Connect to the mainframe. Audit the syntax logs for Gerunds and Infinitives to free the citizens from doomscrolling.</p>
+                
+                <div class="text-left bg-black/40 p-4 rounded-xl mb-8 border border-[var(--border-soft)]">
+                    <p class="text-[11px] font-code text-[var(--accent-cyan)] font-bold tracking-wide"><i class="fas fa-check-circle mr-2"></i> Fix: "avoid reading"</p>
+                    <p class="text-[11px] font-code text-[var(--accent-red)] mt-3 font-bold tracking-wide"><i class="fas fa-times-circle mr-2"></i> Bug: "avoid to read"</p>
+                </div>
+                
+                <button onclick="startGame()" class="btn-primary">Initiate Uplink</button>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="screen-quiz" class="hide flex flex-col justify-center h-full">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- Result Screen -->
+            <div id="screen-result" class="hide text-center question-card border-t-2 border-[var(--accent-orange)]">
+                <div class="w-24 h-24 bg-black rounded-full flex items-center justify-center mx-auto mb-6 border border-[rgba(255,107,0,0.5)] shadow-[0_0_30px_rgba(255,107,0,0.3)]">
+                    <i class="fas fa-brain text-5xl text-[var(--accent-orange)]"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-white mb-3 font-ui tracking-tight">Minds Freed</h2>
+                <p class="text-[14px] text-[var(--text-muted)] mb-8 font-ui font-light leading-relaxed">You have successfully patched the cognitive network and repaired the syntax.</p>
+                
+                <div class="bg-black/50 p-6 rounded-2xl border border-[var(--border-soft)] mb-8">
+                    <p class="text-[10px] uppercase font-bold text-[var(--text-muted)] tracking-[0.3em] font-code mb-2">Clarity Rate</p>
+                    <p id="final-score" class="text-5xl font-bold text-[var(--accent-cyan)] font-code">100%</p>
+                </div>
+
+                <p class="text-xs text-[var(--accent-cyan)] font-code uppercase tracking-widest opacity-70">>> Disconnecting...</p>
+            </div>
+
+        </main>
+
+        <canvas id="confetti"></canvas>
+    </div>
+
+    <script>
+        // --- DATA (B2 Gerunds & Infinitives) ---
+        const exercises = [
+            { type: 'ab', context: 'Syntax Audit 01', bug: 'They avoid to read the news.', clean: 'They avoid reading the news.' },
+            { type: 'ab', context: 'Syntax Audit 02', bug: 'I decided stopping my usage.', clean: 'I decided to stop my usage.' },
+            { type: 'input', context: 'Memory Fragment', corrupted: 'We need [understand] the algorithm.', expected: 'to understand', hint: 'Inject Gerund or Infinitive' },
+            { type: 'input', context: 'Memory Fragment', corrupted: 'I suggest [disconnect] from the network.', expected: 'disconnecting', hint: 'Inject Gerund or Infinitive' },
+            { type: 'ab', context: 'Syntax Audit 03', bug: 'She enjoys to learn new concepts.', clean: 'She enjoys learning new concepts.' },
+            { type: 'input', context: 'Memory Fragment', corrupted: 'The system forces us [scroll] constantly.', expected: 'to scroll', hint: 'Inject Gerund or Infinitive' },
+            { type: 'ab', context: 'Syntax Audit 04', bug: 'Citizens want escaping the loop.', clean: 'Citizens want to escape the loop.' },
+            { type: 'input', context: 'Subject Injection', corrupted: '[read] bad news all day is harmful.', expected: 'reading', hint: 'Inject Gerund as Subject' },
+            { type: 'ab', context: 'Syntax Audit 05', bug: 'The AI promised fixing the issue.', clean: 'The AI promised to fix the issue.' },
+            { type: 'input', context: 'Preposition Patch', corrupted: 'We are addicted to [consume] tragedy.', expected: 'consuming', hint: 'Inject Gerund or Infinitive' },
+            { type: 'ab', context: 'Syntax Audit 06', bug: 'Do you miss to read physical books?', clean: 'Do you miss reading physical books?' },
+            { type: 'input', context: 'Adjective Patch', corrupted: 'It is important [protect] your mind.', expected: 'to protect', hint: 'Inject Gerund or Infinitive' },
+            { type: 'ab', context: 'Syntax Audit 07', bug: 'We cannot afford losing our freedom.', clean: 'We cannot afford to lose our freedom.' },
+            { type: 'input', context: 'Preposition Patch', corrupted: 'I look forward to [reboot] the system.', expected: 'rebooting', hint: 'Inject Gerund or Infinitive' },
+            { type: 'ab', context: 'Syntax Audit 08', bug: 'Can you help me stopping?', clean: 'Can you help me to stop?' }
+        ];
+
+        // --- STATE ---
+        let state = { current: 0, errors: 0 };
+
+        // --- LOGIC ---
+        function startGame() {
+            document.getElementById('screen-welcome').classList.add('hide');
+            document.getElementById('screen-quiz').classList.remove('hide');
+            renderQuestion();
+        }
+
+        function updateProgress() {
+            const perc = (state.current / exercises.length) * 100;
+            document.getElementById('progress').style.width = perc + '%';
+            document.getElementById('q-counter').innerText = `${String(state.current + 1).padStart(2, '0')}/${exercises.length}`;
+        }
+
+        function shuffleArray(array) {
+            let curId = array.length;
+            while (0 !== curId) { let randId = Math.floor(Math.random() * curId); curId -= 1; let tmp = array[curId]; array[curId] = array[randId]; array[randId] = tmp; }
+            return array;
+        }
+
+        function renderQuestion() {
+            if (state.current >= exercises.length) return endHomework();
+            
+            updateProgress();
+            const ex = exercises[state.current];
+            const container = document.getElementById('screen-quiz');
+            
+            let html = `
+                <div class="question-card" id="q-card">
+                    <p class="text-[10px] text-[var(--accent-orange)] font-bold uppercase tracking-[0.2em] font-code mb-5"><i class="fas fa-folder-open mr-2"></i>${ex.context}</p>
+            `;
+
+            if (ex.type === 'ab') {
+                const opts = shuffleArray([
+                    { text: ex.clean, isCorrect: true },
+                    { text: ex.bug, isCorrect: false }
+                ]);
+
+                html += `
+                    <h2 class="text-xl font-bold text-white mb-6 font-ui tracking-tight">Select the native syntax:</h2>
+                    <div class="space-y-3" id="ab-opts">
+                        <button onclick="handleAB(this, ${opts[0].isCorrect})" class="opt-btn"><span>${opts[0].text}</span><i class="fas fa-circle text-[var(--border-soft)] text-[10px] icon-status"></i></button>
+                        <button onclick="handleAB(this, ${opts[1].isCorrect})" class="opt-btn"><span>${opts[1].text}</span><i class="fas fa-circle text-[var(--border-soft)] text-[10px] icon-status"></i></button>
+                    </div>
+                `;
+            } else if (ex.type === 'input') {
+                html += `
+                    <h2 class="text-xl font-bold text-white mb-3 font-ui tracking-tight">Resolve the corrupted code:</h2>
+                    <p class="text-[var(--accent-red)] font-code text-sm mb-6 bg-black/50 p-4 rounded-xl text-center border border-[rgba(255,42,42,0.2)]">${ex.corrupted}</p>
+                    <input type="text" id="type-ans" class="type-input" placeholder="${ex.hint}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <button id="btn-submit" onclick="handleInput('${ex.expected}')" class="btn-primary" style="background: rgba(255,107,0,0.1); color: var(--accent-orange); border-color: var(--accent-orange);">Inject Patch</button>
+                `;
+            }
+
+            html += `</div>`;
+            container.innerHTML = html;
+
+            if (ex.type === 'input') {
+                const inputEl = document.getElementById('type-ans');
+                inputEl.focus();
+                inputEl.addEventListener('keypress', function(e) { if (e.key === 'Enter') document.getElementById('btn-submit').click(); });
+            }
+        }
+
+        function handleAB(btn, isCorrect) {
+            const buttons = document.getElementById('ab-opts').querySelectorAll('button');
+            buttons.forEach(b => { b.onclick = null; b.style.opacity = '0.5'; });
+            btn.style.opacity = '1';
+
+            const icon = btn.querySelector('.icon-status');
+
+            if (isCorrect) {
+                btn.classList.add('selected-correct');
+                icon.className = 'fas fa-check-circle text-[var(--accent-cyan)] text-lg icon-status drop-shadow-[0_0_5px_rgba(0,240,255,0.5)]';
+                setTimeout(nextQuestion, 700);
+            } else {
+                btn.classList.add('selected-error');
+                icon.className = 'fas fa-times-circle text-[var(--accent-red)] text-lg icon-status';
+                state.errors++;
+                
+                // Show the correct one
+                buttons.forEach(b => {
+                    if(!b.classList.contains('selected-error')) {
+                        b.classList.add('selected-correct'); b.style.opacity = '1';
+                        b.querySelector('.icon-status').className = 'fas fa-check-circle text-[var(--accent-cyan)] text-lg icon-status';
+                    }
+                });
+                setTimeout(nextQuestion, 1600);
+            }
+        }
+
+        function handleInput(expected) {
+            const input = document.getElementById('type-ans');
+            const val = input.value.trim().toLowerCase();
+            const btn = document.getElementById('btn-submit');
+
+            if (val === expected.toLowerCase()) {
+                input.style.borderColor = 'var(--accent-cyan)';
+                input.style.color = 'var(--accent-cyan)';
+                input.style.boxShadow = 'inset 0 0 10px rgba(0,240,255,0.2)';
+                btn.style.background = 'rgba(0,240,255,0.1)';
+                btn.style.color = 'var(--accent-cyan)';
+                btn.style.borderColor = 'var(--accent-cyan)';
+                btn.innerHTML = '<i class="fas fa-check mr-2"></i> Verified';
+                setTimeout(nextQuestion, 700);
+            } else {
+                input.classList.remove('error');
+                void input.offsetWidth; 
+                input.classList.add('error');
+                input.value = '';
+                input.placeholder = "Try again!";
+                state.errors++;
+            }
+        }
+
+        function nextQuestion() { state.current++; renderQuestion(); }
+
+        function endHomework() {
+            document.getElementById('screen-quiz').classList.add('hide');
+            document.getElementById('screen-result').classList.remove('hide');
+            document.getElementById('progress').style.width = '100%';
+            document.getElementById('q-counter').innerText = 'DONE';
+
+            const accuracy = Math.max(0, 100 - (state.errors * 5));
+            const scoreEl = document.getElementById('final-score');
+            scoreEl.innerText = `${accuracy}%`;
+            
+            if(accuracy < 70) {
+                scoreEl.className = "text-5xl font-code font-bold text-[var(--accent-red)]";
+            } else {
+                scoreEl.className = "text-5xl font-code font-bold text-[var(--accent-cyan)]";
+            }
+
+            shootConfetti();
+        }
+
+        // --- VISUAL EFFECTS ---
+        function shootConfetti() {
+            const cCanvas = document.getElementById('confetti'); const cCtx = cCanvas.getContext('2d');
+            cCanvas.width = document.getElementById('mobile-app').offsetWidth; cCanvas.height = document.getElementById('mobile-app').offsetHeight;
+            const pieces = []; const colors = ['#00f0ff', '#ff6b00', '#ffffff', '#0ea5e9']; 
+            for(let i=0; i<50; i++) pieces.push({ x: cCanvas.width/2, y: cCanvas.height/2, vx: (Math.random()-0.5)*15, vy: (Math.random()-1)*15-5, size: Math.random()*5+3, color: colors[Math.floor(Math.random()*colors.length)], rot: Math.random()*360, rotSpeed: (Math.random()-0.5)*10 });
+            function animateC() {
+                cCtx.clearRect(0, 0, cCanvas.width, cCanvas.height); let active = false;
+                pieces.forEach(p => {
+                    p.x += p.vx; p.y += p.vy; p.vy += 0.5; p.rot += p.rotSpeed; if(p.y < cCanvas.height) active = true;
+                    cCtx.save(); cCtx.translate(p.x, p.y); cCtx.rotate(p.rot*Math.PI/180); cCtx.fillStyle = p.color; 
+                    cCtx.fillRect(-p.size/2, -p.size/2, p.size, p.size); cCtx.restore();
+                });
+                if(active) requestAnimationFrame(animateC); else cCtx.clearRect(0, 0, cCanvas.width, cCanvas.height);
+            }
+            animateC();
+        }
+    </script>
+</body>
+</html>

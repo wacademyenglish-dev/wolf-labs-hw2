@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Flat Hunt · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B1 · Unit 8 Review · The Flat Hunt</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Flat Hunt · B1 Unit 8 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 8 (Describing and choosing). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student needs a new flat and visits three: a city center flat, a garden flat and a top-floor flat. You are each owner. In the end, the student tells a friend which flat they’d rather take.</p><p style="margin:0 0 6px"><b>About 49 min:</b> I · Six Doors (8) · II · Three Flats (15) · III · The Story in Order (7) · IV · The Residents’ Meeting (7) · V · The Hot Seat (8) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Six doors. Choose one, open it, and do the challenge.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>who, which, that · where · make, let, help + person + verb · stop + -ing · hear / see + someone + -ing · would rather, prefer</p>
+    <h4>SIX DOORS</h4>
+    <p>Six doors, one per topic of the unit. The student picks any door and does the task from memory. Tap <b>Got it</b> or <b>Review</b>; amber doors come back as a short list “to review”.</p>
+    <h4>THREE FLATS</h4>
+    <p>You are each owner. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then you are the friend: the student describes the flat with which / where / who and says I’d rather… Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>THE STORY IN ORDER</h4>
+    <p>The events are mixed. The student taps them in order; wrong order shows in red. When it’s right, the student tells the whole story with first, then, after that, finally.</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>the flat what has a garden</i>, <i>the street where I live there</i>, <i>she makes you to recycle</i>, <i>I’d rather to live</i>, <i>I heard a dog to bark</i>, <i>I prefer cook than order</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE RESIDENTS’ MEETING (IV) AND THE SURPRISE QUESTION</h4>
+    <p>The student has moved in; now it is the first building meeting. Three proposals (dogs, music after 8 p.m., a barbecue roof) and the student votes Yes, Propose a change or No, with make / let, stop + -ing and who / which / where. You are the neighbor who wants the opposite. Wait five seconds in silence after each vote, then use the PUSH line (only you see it) to make it harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Six Doors and VI · I Can.</li>
+      <li><b>Out loud</b>: II · Three Flats, III · The Story in Order, IV · The Residents’ Meeting and V · The Hot Seat.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* MAIN SERIES · B1 · REVISÃO 08 · THE FLAT HUNT · pergunta-surpresa · 27/10/2026 · relativas, make / let, stop -ing, would rather */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'portas', tipo: 'Would you rather', q: 'Would you rather live in a tiny flat in the city center or a big house far from everything?',
+    opc: ['The tiny flat', 'The big house'], st: ['I’d rather live in …', 'I prefer … to …'],
+    ex: 'The tiny flat. I’d rather walk everywhere than spend two hours in traffic.', push: 'The tiny flat has no window in the bedroom. Still?' },
+  { cena: 'missao', tipo: 'And you?', q: 'Who is the neighbor you remember most, from any home you’ve had?',
+    opc: ['A nice one', 'A noisy one', 'A strange one'], st: ['It was a man / woman who …', 'I could hear him / her …-ing …'],
+    ex: 'A noisy one. It was a guy who practiced the trumpet. I could hear him playing every Sunday at eight!', push: 'Did you ever say something to that neighbor? What?' },
+  { cena: 'cadeira', tipo: 'What if', q: 'Your new landlord lets you change ONE thing in the flat. What do you change?',
+    opc: ['The kitchen', 'The bathroom', 'The walls'], st: ['I’d make it a place where …', 'I’d rather have a … which …'],
+    ex: 'The walls. I’d paint the living room dark green: a place where I can read and relax.', push: 'You have to pay for it, and you leave in one year. Still?' },
+  { cena: 'pode', tipo: 'Opinion', q: 'What’s a habit you’d like to stop, at home?',
+    opc: ['Something with my phone', 'Something with food', 'Something with sleep'], st: ['I want to stop …-ing.', 'My … makes me …'],
+    ex: 'Something with my phone. I want to stop checking it in bed. It makes me sleep late.', push: 'Starting tonight? Say what you will do instead.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* MAIN SERIES · B1 · REVISÃO 08 · THE FLAT HUNT · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A missão já termina escolhendo o apartamento, e o IV é a cadeira quente: o formato novo é o CONSELHO.
+   Entra DEPOIS de "III · The Story in Order" (a mudança): o aluno se mudou e vai à primeira reunião do
+   prédio; três propostas, ele vota Yes / Propose a change / No. 42 → 49 min (não havia cena extra).
+   Gramática da unidade 8 nos iniciadores: make / let + pessoa + verbo, stop + -ing, who / which / where,
+   would rather. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'conselho', apos: 'ordem', est: 'o', min: 7, img: 'capa', rot: 'The Residents’ Meeting', t: 'Your first building meeting. Vote!',
+    p: 'Read each proposal. Vote, then say why. Your teacher is the neighbor who wants the opposite.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Pets', sit: 'Some neighbors want a new rule: no dogs in the building. The old man who grows tomatoes has a big, noisy dog.',
+        q: 'Proposal 1: the building stops letting tenants have dogs.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['The building shouldn’t make people …', 'I’d rather they let …', 'People who have dogs …'],
+        ex: 'Propose a change. Let people keep their dogs, but make them walk the dogs outside, not in the garden.',
+        push: 'The dog barks at six every morning, right under YOUR window. Still no rule?' },
+      { tag: 'Quiet hours', sit: 'The woman who plays the drums practices every evening from seven to nine.',
+        q: 'Proposal 2: no music after 8 p.m. in the whole building.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I can hear her …-ing every night, so …', 'We could let her … until …', 'I’d rather …'],
+        ex: 'No. Eight is too early. Let her play until nine, and make the rule for after ten.',
+        push: 'She is a professional and this is her job. Can you stop someone working at home?' },
+      { tag: 'The roof', sit: 'There is an empty roof which has a great view of the city.',
+        q: 'Proposal 3: turn the roof into a place where neighbors can have barbecues.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['It would be a place where …', 'The building should help us …', 'I’d prefer … to …'],
+        ex: 'Yes! A place where neighbors meet is great. But the building should make people clean everything after.',
+        push: 'Your flat is right under the roof. Every Saturday, until midnight. Still yes?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "portas": {
+   "t": "Six doors. One minute each.",
+   "p": "Pick a door. Do the task from memory."
+  },
+  "missao": {
+   "t": "Three flats, three owners.",
+   "p": "Ask each owner five questions. Then choose a flat."
+  },
+  "ordem": {
+   "t": "What happened first?",
+   "p": "Tap the cards in order. Then tell the story."
+  },
+  "cv-conselho": {
+   "t": "Your first building meeting. Vote!",
+   "p": "Read the proposal. Vote. Say why."
+  },
+  "cadeira": {
+   "t": "Now YOU ask the questions.",
+   "p": "Your teacher is in the hot seat. Ask and react."
+  },
+  "pode": {
+   "t": "Unit 8: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 8 (who/which/that/where, make/let/help, stop + -ing, hear/see + -ing, would rather/prefer): o aluno visita três apartamentos e escolhe um.",
+  "armadilha": "O brasileiro diz “the flat what has a garden”, “where I live there”, “she makes you to recycle”, “I’d rather to live”, “I heard a dog to bark” e “I prefer cook than order”.",
+  "pal": [
+   "which",
+   "where",
+   "who",
+   "make / let + person",
+   "stop + -ing",
+   "hear someone …ing",
+   "would rather",
+   "prefer … to"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: procurar apartamento e visitar três donos muito diferentes.",
+   "perg": "Six doors. Which one do you open first?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "portas": {
+   "obj": "Seis portas, uma por tema da unidade, feitas de memória.",
+   "perg": "Can you do this one from memory?",
+   "pula": "Quatro portas bastam."
+  },
+  "missao": {
+   "obj": "O aluno entrevista os donos e depois descreve o apartamento escolhido com which/where/who e I’d rather.",
+   "perg": "Which flat would you rather take, and why?",
+   "pula": "Dois apartamentos; não corte a escolha final."
+  },
+  "ordem": {
+   "obj": "Pôr os fatos em ordem e contar a história com first, then, after that, finally.",
+   "perg": "What happened first?",
+   "pula": "Ordene e conte em três frases."
+  },
+  "cv-conselho": {
+   "obj": "Reunião de condomínio: votar cães, música depois das 20h e churrasqueira no terraço.",
+   "perg": "Should the building let people play music after 8?",
+   "pula": "Duas propostas bastam."
+  },
+  "cadeira": {
+   "obj": "Inversão: o aluno pergunta e o professor responde, curto, como ele mesmo.",
+   "perg": "What would you like to ask me?",
+   "pula": "Três cartas bastam."
+  },
+  "pode": {
+   "obj": "Checklist “I can” da unidade; o que ficar aberto vai para a lição de casa.",
+   "perg": "Can you describe your street with where?",
+   "pula": "Leia as linhas sem conversar. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre casa e vizinhança com as estruturas da unidade.",
+   "perg": "What would you rather have: a garden or a view?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre dois tipos de moradia e defender com would rather/prefer.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno descreve o apartamento dos sonhos em quatro passos.",
+   "perg": "Where is your dream flat?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Home, street and neighbors.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "which",
+    "where",
+    "who",
+    "would rather",
+    "prefer … to"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR STREET",
+     "q": "Describe the street where you live.",
+     "fup": "What do you hear there at night?",
+     "st": [
+      "It’s a street where …",
+      "At night I hear people …ing"
+     ],
+     "ex": "It’s a street where everybody knows each other. At night I hear dogs barking."
+    },
+    {
+     "k": "A NEIGHBOR",
+     "q": "Is there a neighbor who you really like?",
+     "fup": "Why?",
+     "st": [
+      "There’s a neighbor who …",
+      "She always lets me …"
+     ],
+     "ex": "There’s a neighbor who waters my plants. She always lets me use her ladder."
+    },
+    {
+     "k": "GARDEN OR VIEW",
+     "q": "Would you rather have a garden or a view?",
+     "fup": "Why?",
+     "st": [
+      "I’d rather have … than …",
+      "I prefer … to …"
+     ],
+     "ex": "I’d rather have a garden than a view. I prefer growing things to looking at them."
+    },
+    {
+     "k": "HOUSE RULES",
+     "q": "What did your parents make you do at home?",
+     "fup": "And what did they let you do?",
+     "st": [
+      "They made me …",
+      "They let me …"
+     ],
+     "ex": "They made me wash the dishes, but they let me choose the music."
+    },
+    {
+     "k": "A BAD HABIT",
+     "q": "What should you stop doing at home?",
+     "fup": "Who helps you stop?",
+     "st": [
+      "I should stop …ing",
+      "My … helps me …"
+     ],
+     "ex": "I should stop eating on the sofa. My partner helps me remember."
+    },
+    {
+     "k": "MOVING",
+     "q": "Would you rather move to a big city or a small town?",
+     "fup": "What would you miss?",
+     "st": [
+      "I’d rather move to …",
+      "I’d miss the place where …"
+     ],
+     "ex": "I’d rather move to a small town. I’d miss the café where I work."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’d rather",
+    "I prefer … to",
+    "which",
+    "where"
+   ],
+   "rodadas": [
+    {
+     "q": "City center flat or garden flat?",
+     "a": "City center",
+     "b": "Garden",
+     "fa": [
+      "City center. I’d rather walk than drive.",
+      "It’s a place where everything is close."
+     ],
+     "fb": [
+      "Garden. I prefer quiet to noise.",
+      "I want a place where I can grow tomatoes."
+     ]
+    },
+    {
+     "q": "Live alone or with roommates?",
+     "a": "Alone",
+     "b": "Roommates",
+     "fa": [
+      "Alone. Nobody makes me clean at their time.",
+      "I’d rather pay more and have peace."
+     ],
+     "fb": [
+      "Roommates. It helps you save money.",
+      "I prefer company to silence."
+     ]
+    },
+    {
+     "q": "Top floor with no elevator, or ground floor with no view?",
+     "a": "Top floor",
+     "b": "Ground floor",
+     "fa": [
+      "Top floor. The stairs make me exercise.",
+      "I’d rather have light than comfort."
+     ],
+     "fb": [
+      "Ground floor. I prefer easy shopping to a nice view.",
+      "I don’t want to stop carrying bags."
+     ]
+    },
+    {
+     "q": "Should buildings let tenants have dogs?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. A dog helps people feel less alone.",
+      "Owners who train their dogs are fine."
+     ],
+     "fb": [
+      "No. I don’t want to hear dogs barking all night.",
+      "Some neighbors have allergies."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Everybody chose a flat, nobody signed a contract."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Dream Flat",
+   "t": "Your dream flat.",
+   "p": "One step at a time. Describe it out loud.",
+   "prof": "One unit structure per step; one correction per answer is enough.",
+   "passos": [
+    {
+     "q": "Where is it? Describe the neighborhood.",
+     "st": [
+      "It’s in a neighborhood where …"
+     ],
+     "ex": "It’s in a neighborhood where you can walk to the beach."
+    },
+    {
+     "q": "What is the flat like?",
+     "st": [
+      "It’s a flat which has …"
+     ],
+     "ex": "It’s a flat which has a big kitchen and a balcony."
+    },
+    {
+     "q": "Who lives next door? What do you hear?",
+     "st": [
+      "Next door there’s a … who …",
+      "I can hear … …ing"
+     ],
+     "ex": "Next door there’s an old man who plays the piano. I can hear him playing on Sundays."
+    },
+    {
+     "q": "Why would you rather live there than where you live now?",
+     "st": [
+      "I’d rather live there than …, because …"
+     ],
+     "ex": "I’d rather live there than here, because I prefer the sea to traffic."
+    }
+   ],
+   "fim": "Keys in your hand. Welcome home."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

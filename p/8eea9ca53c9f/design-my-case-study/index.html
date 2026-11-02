@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -121,5 +122,265 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "What interviewers want to see.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "ordem": {
+   "t": "A case study in six steps.",
+   "p": "Tap the six parts in order."
+  },
+  "cv-dilema": {
+   "t": "The interview is tomorrow.",
+   "p": "Choose. Say why, in the past."
+  },
+  "prova": {
+   "t": "Two minutes, one project.",
+   "p": "Prepare. Start the clock. Present."
+  },
+  "pode": {
+   "t": "Lesson 10: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Apresentar um case de portfólio: papel (I / we), problema, objetivo, processo, resultado, no past simple com sequenciadores e reflexão (If I did it again, I would…).",
+  "armadilha": "“We maked”, “I was responsible to” (do português “responsável por” virando to), “The result was very good” sem número e “If I did again, I will”.",
+  "pal": [
+   "This project was for …",
+   "My role was …",
+   "The problem was that …",
+   "Our goal was to …",
+   "First, … Then, …",
+   "As a result, …",
+   "If I did it again, I would …"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: contar um projeto do portfólio como uma história com resultado.",
+   "perg": "Which project in your portfolio are you most proud of? Why?",
+   "pula": "Faça a pergunta de abertura e vá ao vídeo."
+  },
+  "video": {
+   "obj": "Ver a design lead sobre a parte do case na entrevista (3:56–6:50).",
+   "perg": "What do interviewers want to see?",
+   "pula": "Assista uma vez só e faça uma pergunta."
+  },
+  "ordem": {
+   "obj": "Pôr o case do app de biblioteca em ordem e contar com first, then, after that, finally.",
+   "perg": "What comes after the problem?",
+   "pula": "Ordene e conte só o começo."
+  },
+  "cv-dilema": {
+   "obj": "Três escolhas difíceis: projeto bonito ou com números, I ou we, o favorito que nunca saiu.",
+   "perg": "Would you say ‘I’ or ‘we’ here?",
+   "pula": "Um dilema só."
+  },
+  "prova": {
+   "obj": "Apresentar um projeto em dois minutos (de preferência o do aluno), depois uma pergunta de entrevistador.",
+   "perg": "What was the hardest part?",
+   "pula": "Uma tentativa, sem repetir."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; o resto vai para a lição.",
+   "perg": "Can you present a case study now?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre projetos reais do aluno, no passado e com reflexão.",
+   "perg": "What would you do differently?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre escolhas de portfólio e entrevista.",
+   "perg": "Which project would you show?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play invertido: o aluno é o entrevistador e pergunta sobre o seu projeto.",
+   "perg": "What was your role?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your projects, your story.",
+   "p": "Pick a card. Answer in the past.",
+   "palavras": [
+    "My role was …",
+    "As a result, …",
+    "If I did it again, I would …"
+   ],
+   "cartas": [
+    {
+     "k": "FIRST PROJECT",
+     "q": "What was your first paid design project?",
+     "fup": "How much did you charge?",
+     "st": [
+      "My first project was for …",
+      "I charged …"
+     ],
+     "ex": "My first project was a logo for my uncle’s bakery. I charged almost nothing."
+    },
+    {
+     "k": "A FAILURE",
+     "q": "Tell me about a project that didn’t go well.",
+     "fup": "What would you do differently?",
+     "st": [
+      "The problem was that …",
+      "If I did it again, I would …"
+     ],
+     "ex": "The problem was that I didn’t ask enough questions. If I did it again, I would write a brief first."
+    },
+    {
+     "k": "TEAMWORK",
+     "q": "Do you prefer to work alone or in a team?",
+     "fup": "When do you say ‘I’ and when ‘we’?",
+     "st": [
+      "I prefer … because …",
+      "I say ‘we’ when …"
+     ],
+     "ex": "I prefer a small team. I say ‘we’ when the idea came from the group."
+    },
+    {
+     "k": "NUMBERS",
+     "q": "Did any of your projects have a measurable result?",
+     "fup": "How did you know?",
+     "st": [
+      "As a result, …",
+      "The client told me …"
+     ],
+     "ex": "Yes. As a result of the new menu design, the café sold 20% more desserts."
+    },
+    {
+     "k": "THE PROCESS",
+     "q": "What is the first thing you do in a new project?",
+     "fup": "And the last?",
+     "st": [
+      "First, I …",
+      "In the end, I …"
+     ],
+     "ex": "First, I research the competitors. In the end, I send a short guide with the files."
+    },
+    {
+     "k": "DREAM CLIENT",
+     "q": "If you could work for any brand, which would it be?",
+     "fup": "What would you change?",
+     "st": [
+      "I would work for …",
+      "I would change …"
+     ],
+     "ex": "I would work for a big football club. I would change their app."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "As a result",
+    "I think"
+   ],
+   "rodadas": [
+    {
+     "q": "Show the most beautiful project or the one with the best numbers?",
+     "a": "Beautiful",
+     "b": "Numbers",
+     "fa": [
+      "The beautiful one. They hire designers for the eye.",
+      "First impressions matter."
+     ],
+     "fb": [
+      "The one with numbers. It shows business value.",
+      "Companies want results."
+     ]
+    },
+    {
+     "q": "The big idea came from a colleague. Say ‘I’ or ‘we’?",
+     "a": "I",
+     "b": "We",
+     "fa": [
+      "‘I’ for my part. They’re hiring me, not the team.",
+      "Just be clear about what I did."
+     ],
+     "fb": [
+      "‘We’. Taking credit is risky.",
+      "Interviewers notice and respect honesty."
+     ]
+    },
+    {
+     "q": "A great project that was never launched: show it or skip it?",
+     "a": "Show it",
+     "b": "Skip it",
+     "fa": [
+      "Show it. The process was real.",
+      "I can explain why it stopped."
+     ],
+     "fb": [
+      "Skip it. There’s no result to show.",
+      "Better a smaller project that launched."
+     ]
+    },
+    {
+     "q": "Portfolio: many projects or three deep case studies?",
+     "a": "Many",
+     "b": "Three deep",
+     "fa": [
+      "Many. It shows range.",
+      "Different clients, different styles."
+     ],
+     "fb": [
+      "Three deep ones. Interviewers have little time.",
+      "Depth shows how you think."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the interviewer now.",
+   "p": "Ask your teacher about a project.",
+   "aluno": "You are the design lead. Read each question to your teacher and listen. Then ask one follow-up.",
+   "perguntas": [
+    "Who was this project for?",
+    "What was your role?",
+    "What was the main problem?",
+    "What did you do first?",
+    "What was the result?",
+    "If you did it again, what would you change?"
+   ],
+   "st": [
+    "Interesting. And then …?",
+    "Can you give me a number?"
+   ],
+   "ex": "Interesting. Can you give me a number for that result?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

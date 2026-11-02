@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "That's a Great Question",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/422f8d754555/thats-a-great-question/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "handling questions after a talk: buy time (Let me think about that for a second), check (If I understand you correctly), admit (I don't have the figures with me / I'd have to check), park (Can I come back to that at the end?), stay on topic (a bit outside the scope), calm a hostile one (I can see why you'd think that. However, ...), close (Does that answer your question?)",
   "abrir": "Which question do you fear most after a presentation?",
   "fecho": "After a talk, the questions decide how you sound. <b>Buy time</b>: <i>Let me think about that for a second.</i> <b>Check</b>: <i>If I understand you correctly, you're asking…</i> <b>Admit, then offer</b>: <i>I don't have the figures with me, but I'd be happy to send them.</i> <b>Stay on topic</b>: <i>a bit outside the scope of today's talk</i>. <b>Calm a hostile one</b>: <i>I can see why you'd think that. However, …</i> <b>Close</b>: <i>Does that answer your question?</i> Never <i>answer to</i> a question, and never invent a number.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo rehearse the questions for his talk. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/422f8d754555/thats-a-great-question/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A glass of water and a notebook at the lectern",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I don't have the exact figures with me, but I'd be happy to send them.",
-          "img": "https://wolf-labs.pages.dev/p/422f8d754555/thats-a-great-question/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "That's a bit outside the scope of today's talk.",
-          "img": "https://wolf-labs.pages.dev/p/422f8d754555/thats-a-great-question/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If I understand you correctly, you're asking about the cost.",
-          "img": "https://wolf-labs.pages.dev/p/422f8d754555/thats-a-great-question/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/422f8d754555/thats-a-great-question/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A glass of water and a notebook at the lectern",
       "pede": "Look at the picture: a glass of water and a notebook at a lectern. Write 2 or 3 sentences: a difficult question you might get, and how you would answer it calmly. Use <b>Let me think about that</b>, <b>I can see why you'd think that</b> or <b>I'd have to check</b>.",
       "ph": "A difficult question would be … I would say …",

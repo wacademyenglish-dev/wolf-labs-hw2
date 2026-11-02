@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Though Exhausted, She Ran",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/6b5192b78611/though-exhausted-she-ran/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "clauses with no verb in literary writing: cut the subject AND the be, keep the linking word (though, although, when, while, once, if) and the adjective / participle / place; the subject after the comma is the one the clause is about; never Though was exhausted, Despite tired, Once finishing",
   "abrir": "Think of a moment when you kept going even though you were tired. What kept you going?",
   "fecho": "Cut the subject <b>and</b> the verb <i>be</i>; keep the linking word and the rest: <i>Though she was exhausted</i> → <b>Though exhausted</b>, she ran. <i>When she was asked</i> → <b>When asked</b>, she shrugged. The subject after the comma must be the one the clause is about. With no linking word it still works: <i>Alone at the window, she waited.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo edit her short story. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/6b5192b78611/though-exhausted-she-ran/img/live-pagina.webp",
+      "img": "../img/live-pagina.webp",
       "leg": "A notebook and a cup, late at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Though exhausted, she kept running toward the lighthouse.",
-          "img": "https://wolf-labs.pages.dev/p/6b5192b78611/though-exhausted-she-ran/img/live-farol.webp",
+          "img": "../img/live-farol.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "When asked about the race, he simply smiled.",
-          "img": "https://wolf-labs.pages.dev/p/6b5192b78611/though-exhausted-she-ran/img/live-percurso.webp",
+          "img": "../img/live-percurso.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Alone at the start line, she waited for the sun.",
-          "img": "https://wolf-labs.pages.dev/p/6b5192b78611/though-exhausted-she-ran/img/live-largada.webp",
+          "img": "../img/live-largada.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -178,7 +178,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/6b5192b78611/though-exhausted-she-ran/img/live-pagina.webp",
+      "img": "../img/live-pagina.webp",
       "leg": "A notebook and a cup, late at night",
       "pede": "Look at the picture: a notebook and a cup on a desk at night. Write 2 or 3 literary sentences about a hard day. Use at least one clause with no verb: <b>Though tired</b>, <b>When asked</b>, <b>Alone at</b> …",
       "ph": "Though tired, I …",

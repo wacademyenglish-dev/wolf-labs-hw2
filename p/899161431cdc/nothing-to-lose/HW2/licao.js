@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Nothing to Lose",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/899161431cdc/nothing-to-lose/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "something / anything / nothing: something in positive sentences, anything in negatives and questions, nothing alone (not + anything); one negative only, never don't have nothing; nothing to + verb",
   "abrir": "What is something you want to try this year?",
   "fecho": "<b>something</b> in a positive sentence: <i>I want to try something new.</i> <b>anything</b> after not and in questions: <i>I don't have anything to lose. Is there anything in your bag?</i> <b>nothing</b> alone: <i>I have nothing to lose.</i> One negative only: never <i>don't have nothing</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo the night before an audition. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/899161431cdc/nothing-to-lose/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A racket and a tennis ball against an old brick wall",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I don't have anything to lose.",
-          "img": "https://wolf-labs.pages.dev/p/899161431cdc/nothing-to-lose/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Is there anything in your bag?",
-          "img": "https://wolf-labs.pages.dev/p/899161431cdc/nothing-to-lose/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I want to try something new this year.",
-          "img": "https://wolf-labs.pages.dev/p/899161431cdc/nothing-to-lose/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/899161431cdc/nothing-to-lose/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A racket and a tennis ball against an old brick wall",
       "pede": "Look at the picture: a racket and a ball against an old brick wall, with nobody watching. Write 2 or 3 sentences about something you want to try this year. Use <b>something</b>, <b>anything</b> or <b>nothing</b>.",
       "ph": "This year I want to try something … I don't have anything to lose …",

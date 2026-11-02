@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "On the Record",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/068273ae404e/on-the-record/img/live-redacao.webp",
+  "capa": "../img/live-redacao.webp",
   "alvo": "reported speech: said (that) / told + person; the step back in time (is → was, will → would, can → could); reported questions (asked if / asked where + statement order, no did); told him to + verb",
   "abrir": "Think of something somebody told you this week. What exactly did they say?",
   "fecho": "<b>Said</b> has no person; <b>told</b> needs one: <i>He said he was busy. He told me he was busy.</i> The tense steps back: <i>is → was, will → would</i>. A reported question keeps normal order: <i>She asked where he lived.</i> Orders: <i>told us to turn it off</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a newsroom after a press conference. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/068273ae404e/on-the-record/img/live-coletiva.webp",
+      "img": "../img/live-coletiva.webp",
       "leg": "A press room with microphones",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The mayor said the bridge would open in June.",
-          "img": "https://wolf-labs.pages.dev/p/068273ae404e/on-the-record/img/live-coletiva.webp",
+          "img": "../img/live-coletiva.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She asked me if I had read the report.",
-          "img": "https://wolf-labs.pages.dev/p/068273ae404e/on-the-record/img/live-redacao.webp",
+          "img": "../img/live-redacao.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He told us to send the story before midnight.",
-          "img": "https://wolf-labs.pages.dev/p/068273ae404e/on-the-record/img/live-torre.webp",
+          "img": "../img/live-torre.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/068273ae404e/on-the-record/img/live-redacao.webp",
+      "img": "../img/live-redacao.webp",
       "leg": "A typewriter and a pile of newspapers",
       "pede": "Look at the picture: a newsroom desk at night. Write 2 or 3 sentences about something somebody said, told or asked you this week. Use <b>said</b>, <b>told me</b> or <b>asked me if / where</b>.",
       "ph": "My friend told me … She asked me if …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It Is Believed",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/7006c312e0fb/it-is-believed/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "passive reporting: It is said / believed / thought / reported that + clause; He is said / believed / thought to be (now); He is said / believed / thought to have + past participle (earlier); never It says that, never is said have (no to), never to be + past for a finished action",
   "abrir": "What is said about your city that may not be true?",
   "fecho": "<b>It is said that</b> + a full clause: <i>It is said that the guard left early.</i> <b>He is said to</b> + verb: <i>He is believed to be a spy.</i> For an earlier action: <b>to have</b> + past participle: <i>He is thought to have left at nine.</i> Never <i>It says that</i>, never <i>is said have</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a newsroom, after a file goes missing. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/7006c312e0fb/it-is-believed/img/live-arquivos.webp",
+      "img": "../img/live-arquivos.webp",
       "leg": "A room full of old files",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It is said that the file was taken at night.",
-          "img": "https://wolf-labs.pages.dev/p/7006c312e0fb/it-is-believed/img/live-arquivos.webp",
+          "img": "../img/live-arquivos.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The signal is believed to come from far away.",
-          "img": "https://wolf-labs.pages.dev/p/7006c312e0fb/it-is-believed/img/live-antena.webp",
+          "img": "../img/live-antena.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Something is said to have fallen near this farm.",
-          "img": "https://wolf-labs.pages.dev/p/7006c312e0fb/it-is-believed/img/live-roswell.webp",
+          "img": "../img/live-roswell.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -158,7 +158,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/7006c312e0fb/it-is-believed/img/live-antena.webp",
+      "img": "../img/live-antena.webp",
       "leg": "A big antenna under the night sky",
       "pede": "Look at the picture: a big antenna under the night sky. Write 2 or 3 sentences about a rumor or a mystery you know. Use <b>It is said that</b>, <b>is believed to</b> or <b>is thought to have</b>.",
       "ph": "It is said that … / … is believed to …",

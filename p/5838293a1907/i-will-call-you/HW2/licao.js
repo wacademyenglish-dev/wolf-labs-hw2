@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Will Call You",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5838293a1907/i-will-call-you/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "will for promises (I'll be there, I won't forget), offers (I'll carry it) and decisions made now (The phone is ringing: I'll get it); going to for plans already made; Shall I ...? for offers",
   "abrir": "Think of a friend who needs help this week. What could you offer to do?",
   "fecho": "<b>will</b> for a promise, an offer or a decision made now: <i>I'll carry it. I won't be late.</i> <b>Going to</b> for a plan made before: <i>I'm going to visit my aunt.</i> <b>Shall I ...?</b> to offer: <i>Shall I call the florist?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a kitchen, the night before a wedding. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/5838293a1907/i-will-call-you/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A phone and a glass of water at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Don't worry, I'll pick up the cake at noon.",
-          "img": "https://wolf-labs.pages.dev/p/5838293a1907/i-will-call-you/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Shall I call the florist for you?",
-          "img": "https://wolf-labs.pages.dev/p/5838293a1907/i-will-call-you/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'm going to wear my grey suit, but I won't dance.",
-          "img": "https://wolf-labs.pages.dev/p/5838293a1907/i-will-call-you/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5838293a1907/i-will-call-you/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A phone and a glass of water on a bedside table",
       "pede": "Look at the picture: a phone and a glass of water on a bedside table, late at night. Write 2 or 3 sentences: a promise you will make to a friend, and something you are going to do tomorrow. Use <b>will</b>, <b>won't</b> and <b>going to</b>.",
       "ph": "I promise I'll … Tomorrow I'm going to …",

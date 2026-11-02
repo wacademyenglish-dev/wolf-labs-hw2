@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Award Night · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 3 Review · The Award Night</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Award Night · C1 Unit 3 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 3 (Emphasis). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Chef Rosa (invented) wins Best New Restaurant and has thirty seconds to thank everyone. Her speech is full of clefts, fronting and emphatic do. Then the student transforms neutral sentences and talks about their own life, with emphasis.</p><p style="margin:0 0 6px"><b>About 42 min:</b> I · Speed Round (6) · II · The Speech (9) · III · The Morning After (7) · IV · Turn On the Spotlight (8) · V · After the Gala (8) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Sixty seconds. Ready? Start the clock.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>it-clefts: It was … who… · what-clefts: What matters is… · It wasn’t until … that… · fronting: This I will never forget · emphatic do / did · all / the only thing / the reason why</p>
+    <h4>SPEED ROUND</h4>
+    <p>A 60-second speed round. Tap <b>Start the clock</b>, then <b>Right</b> or <b>Pass</b> for each item; the answer is on your screen. At the end of class, play again and beat the score.</p>
+    <h4>THE SPEECH</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>TURN ON THE SPOTLIGHT</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>AFTER THE GALA</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>it was my mother that she taught me</i>, <i>the thing what I need</i>, <i>it wasn’t until 2019 when</i>, <i>all what we had</i>, <i>I do believed</i>, <i>the reason is because</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE MORNING AFTER (III) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Rosa’s speech, the award changes everything: three decisions for the student to make for her (a company wants her name, a critic wants the regulars’ table, the prize money). There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Listen for the Unit 3 emphasis (What matters is…, It was … who…, The reason why…, All she needs is…, I do think…); recast quietly while they talk, and at the end ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Speed Round and IV · Turn On the Spotlight and VI · I Can.</li>
+      <li><b>Listen</b>: II · The Speech.</li>
+      <li><b>Out loud</b>: III · The Morning After and V · After the Gala.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW C1 · UNIT 3 · THE AWARD NIGHT · pergunta-surpresa · 28/10/2026 · clefts, fronting, emphatic do */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'rapido', tipo: 'Would you rather', q: 'Would you rather win an award in public or get a quiet thank-you from one person?',
+    opc: ['The award', 'The quiet thank-you'], st: ['What I’d really want is …', 'It’s the … that matters.'],
+    ex: 'The quiet thank-you. What I’d really want is to know I helped someone. It’s the person that matters, not the trophy.', push: 'The award comes with a year’s salary. Still the thank-you?' },
+  { cena: 'transforma', tipo: 'Opinion', q: 'Are awards fair, or are they just about who you know?',
+    opc: ['Mostly fair', 'Mostly who you know', 'A bit of both'], st: ['What people forget is …', 'It isn’t … that wins; it’s …'],
+    ex: 'A bit of both. What people forget is that someone has to notice you first. It isn’t always the best who wins; it’s the most visible.', push: 'Name one award you think got it wrong.' },
+  { cena: 'conversa', tipo: 'And you?', q: 'What’s a small achievement of yours that nobody gave you a prize for?',
+    opc: ['At work', 'In my studies', 'In my personal life'], st: ['It was … that I’m proudest of.', 'All I did was …, but …'],
+    ex: 'In my studies. All I did was study twenty minutes every morning, but it was that routine that got me to C1.', push: 'Give yourself the award now: thirty-second speech, with one cleft.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW C1 · UNIT 3 · THE AWARD NIGHT · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O dilema ENTRA depois de "II · The Speech" (a aula tinha 35 min e nenhuma cena extra: somar 7 min cabe).
+   A aula já tem a conversa pessoal no IV (After the Gala) e nenhum momento de decisão. Depois do prêmio,
+   a Rosa tem três decisões difíceis; o aluno escolhe por ela, com a ênfase da Unidade 3 nos iniciadores:
+   What matters is…, It’s … that…, The reason why… is…, All she needs is…, I do think… */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'dilema', apos: 'leitura', est: 'o', min: 7, img: 'capa', rot: 'The Morning After', t: 'The award changes everything. Decide for Rosa.',
+    p: 'Read each situation. Choose, or say your own idea. Then say why, with emphasis. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The offer', sit: 'The next morning, a big food company calls. They want to buy Rosa’s name and open fifty “Rosa” restaurants across the country.',
+        q: 'What should Rosa do?', opc: ['Sell the name', 'Stay small', 'Open just one more'],
+        st: ['What matters most is …', 'The reason why she should … is …', 'It’s … that made her famous.'],
+        ex: 'Stay small. It’s the twelve chairs that made her famous. What matters is who she cooks for, and she can’t cook for fifty restaurants.',
+        push: 'They offer enough money for her whole team to buy a house. Still small?' },
+      { tag: 'The critic', sit: 'The most famous critic in the city wants Friday’s best table. A regular family booked it months ago for their anniversary.',
+        q: 'Who gets the table?', opc: ['The critic', 'The family', 'Ask the family'],
+        st: ['It was the regulars who …', 'What she owes them is …', 'I do think …'],
+        ex: 'The family. It was the regulars who kept her open in 2019. I do think a critic can wait one week.',
+        push: 'The critic writes: “No table, no review. Ever.” Same answer?' },
+      { tag: 'The prize', sit: 'The award comes with £20,000. The kitchen is old, the team is tired, and Rosa has no savings.',
+        q: 'What should she do with the money?', opc: ['Share it with the team', 'A new kitchen', 'Save it'],
+        st: ['All she really needs is …', 'What the team deserves is …', 'The reason why … is …'],
+        ex: 'Share it with the team. What they deserve is more than a thank-you in a speech. All she really needs is the same old pan.',
+        push: 'One of the cooks has only worked there for two weeks. Equal share?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "rapido": {
+   "t": "Sixty seconds. How many?",
+   "p": "Answer fast. Then try to beat your score."
+  },
+  "leitura": {
+   "t": "Thirty seconds on stage.",
+   "p": "Read it with feeling. Answer. Find the emphasis."
+  },
+  "cv-dilema": {
+   "t": "The award changes everything.",
+   "p": "Decide for Rosa. Say why, with emphasis."
+  },
+  "transforma": {
+   "t": "Neutral → emphatic.",
+   "p": "Read the clue. Say it with emphasis."
+  },
+  "conversa": {
+   "t": "Your life, with emphasis.",
+   "p": "Answer with a cleft or fronting. Ask it back."
+  },
+  "pode": {
+   "t": "Unit 3: what can you do now?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 3 (ênfase: it-clefts, what-clefts, It wasn’t until… that, fronting, do enfático): a Chef Rosa ganha o prêmio e tem trinta segundos para agradecer.",
+  "armadilha": "O português repete o sujeito e usa “que”, então sai “It was my mother that she taught me”, “the thing what I need”, “all what we had”; e “It wasn’t until 2019 when”, “I do believed”, “the reason is because”.",
+  "pal": [
+   "It was … who …",
+   "What matters is …",
+   "It wasn’t until … that …",
+   "This I will never forget",
+   "I do think …",
+   "All I need is …",
+   "The reason why …",
+   "the only thing"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Revisão sem gramática nova: o aluno puxa a ênfase da memória e os erros mostram o que rever.",
+   "perg": "Sixty seconds. Ready?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "rapido": {
+   "obj": "Rodada de 60 segundos com as formas de ênfase da unidade.",
+   "perg": "Can you say that with a cleft?",
+   "pula": "Uma rodada só, sem revanche."
+  },
+  "leitura": {
+   "obj": "O discurso da Rosa lido com emoção; perguntas de sentido e depois achar a ênfase.",
+   "perg": "Who does Rosa thank first, and why?",
+   "pula": "Leia o discurso e pule o padrão."
+  },
+  "cv-dilema": {
+   "obj": "Três decisões para a Rosa (empresa quer o nome, crítico quer a mesa dos fregueses, o dinheiro do prêmio), com ênfase; PUSH.",
+   "perg": "What would you do in Rosa’s place, and why?",
+   "pula": "Uma decisão basta."
+  },
+  "transforma": {
+   "obj": "Frase neutra vira enfática com a pista.",
+   "perg": "Where do you want the spotlight?",
+   "pula": "Quatro frases bastam."
+  },
+  "conversa": {
+   "obj": "Perguntas pessoais respondidas com clivada ou fronting; o aluno devolve a pergunta.",
+   "perg": "What matters most to you right now?",
+   "pula": "Duas perguntas bastam."
+  },
+  "pode": {
+   "obj": "O aluno lê as frases “I can” e marca; o que ficar aberto vai para a lição de casa.",
+   "perg": "Which one is still hard for you?",
+   "pula": "Não pule: é rápido e fecha a unidade. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com ênfase sobre conquistas e pessoas importantes na vida do aluno.",
+   "perg": "Who was it that made the difference?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre prêmios, sucesso e fama, com uma estrutura de ênfase por argumento.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Chef Rosa na manhã seguinte e dá uma entrevista cheia de ênfase.",
+   "perg": "What was it that won you the award?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your thank-you speech.",
+   "p": "Pick a card. Put something in the spotlight.",
+   "palavras": [
+    "It was … who …",
+    "What … was …",
+    "It wasn’t until … that …",
+    "All I …",
+    "I do …"
+   ],
+   "cartas": [
+    {
+     "k": "THANK YOU",
+     "q": "If you won an award tomorrow, who would you thank first?",
+     "fup": "What did they do, exactly?",
+     "st": [
+      "It was … who …",
+      "What I owe them is …"
+     ],
+     "ex": "It was my grandfather who taught me to finish what I start."
+    },
+    {
+     "k": "A TURNING POINT",
+     "q": "When did you finally understand what you wanted to do?",
+     "fup": "What happened that year?",
+     "st": [
+      "It wasn’t until … that I …"
+     ],
+     "ex": "It wasn’t until I moved abroad that I realised I wanted to teach."
+    },
+    {
+     "k": "WHAT MATTERS",
+     "q": "What matters most to you in a job?",
+     "fup": "Has that changed with time?",
+     "st": [
+      "What matters most to me is …",
+      "The thing I can’t stand is …"
+     ],
+     "ex": "What matters most to me is autonomy; the thing I can’t stand is being micromanaged."
+    },
+    {
+     "k": "NEVER FORGET",
+     "q": "Tell me about a moment you will never forget.",
+     "fup": "Why that one?",
+     "st": [
+      "That moment I will never forget.",
+      "What I remember most is …"
+     ],
+     "ex": "My first paycheck I will never forget; what I remember most is buying my mother lunch."
+    },
+    {
+     "k": "ALL I NEED",
+     "q": "What’s all you need for a perfect weekend?",
+     "fup": "When did you last have one?",
+     "st": [
+      "All I need is …"
+     ],
+     "ex": "All I need is a long lunch, a good book and no notifications."
+    },
+    {
+     "k": "I DO",
+     "q": "What do people think you don’t like, but you actually do?",
+     "fup": "Why the confusion?",
+     "st": [
+      "I do enjoy …, actually.",
+      "The reason why people think that is …"
+     ],
+     "ex": "I do enjoy parties, actually; the reason why people think I don’t is that I leave early."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "What matters is …",
+    "It’s … that …",
+    "I do think …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Do awards help restaurants, or ruin them?",
+     "a": "Help",
+     "b": "Ruin",
+     "fa": [
+      "Help. What a small place needs is visibility.",
+      "It was the award that filled Rosa’s tables."
+     ],
+     "fb": [
+      "Ruin. It’s the regulars who lose their table.",
+      "Prices go up, and the soul goes out."
+     ]
+    },
+    {
+     "q": "Success: talent or the people around you?",
+     "a": "Talent",
+     "b": "People",
+     "fa": [
+      "Talent. What really counts is what you do alone at 3 a.m.",
+      "Nobody can practice for you."
+     ],
+     "fb": [
+      "People. It’s always someone who opens the door.",
+      "I do think nobody makes it alone."
+     ]
+    },
+    {
+     "q": "Should a chef sell her name to a big company?",
+     "a": "Sell it",
+     "b": "Never",
+     "fa": [
+      "Sell it. What she needs is security.",
+      "Fame doesn’t last; money might."
+     ],
+     "fb": [
+      "Never. All she has is her name.",
+      "It’s trust that you sell, not a logo."
+     ]
+    },
+    {
+     "q": "Thank-you speeches: short or long?",
+     "a": "Short",
+     "b": "Long",
+     "fa": [
+      "Short. What the audience wants is dinner.",
+      "Thirty seconds is a gift."
+     ],
+     "fb": [
+      "Long. It’s the only night you can thank everyone.",
+      "I do think people deserve their names said."
+     ]
+    }
+   ],
+   "fim": "Four rounds. What we did, we did with emphasis."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Chef Rosa now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Rosa, with a cleft, fronting or emphatic do.",
+   "perguntas": [
+    "Chef Rosa, what was it that won you Best New Restaurant?",
+    "Who was it that taught you to cook?",
+    "When did you realise you had a chance of winning?",
+    "What matters most to you now, the prize or the regulars?",
+    "Do you really cook every night yourself?",
+    "What is the one thing you will never change?"
+   ],
+   "st": [
+    "It was … who …",
+    "What matters is …",
+    "I do …"
+   ],
+   "ex": "It was my aunt who taught me, and what matters most now is that the regulars still get their table."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

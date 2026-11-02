@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Seven Things the House Can Do",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d3bd236dbea3/seven-things/img/live-sala.webp",
+  "capa": "../img/live-sala.webp",
   "alvo": "can / can't: ability, permission, possibility; the same form for I, you, he, she, it (never cans); the plain verb right after can (never can to); the question Can you...? with Yes, I can. / No, I can't.; never do you can, I no can",
   "abrir": "What can you do very well?",
   "fecho": "<b>Can</b> never changes: <i>I can, she can, the house can</i>. The plain verb comes right after: <i>can lock</i>, never <i>can to lock</i>. The no: <b>can't</b>. The question: <b>Can</b> you…? Yes, I can. / No, I can't.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a smart house. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/d3bd236dbea3/seven-things/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "A dark living room with a line of light",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -106,17 +106,17 @@ window.HW2 = {
         {
           "t": "The house can turn the lights off.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/d3bd236dbea3/seven-things/img/live-sala.webp"
+          "img": "../img/live-sala.webp"
         },
         {
           "t": "The house can't wash the dishes.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/d3bd236dbea3/seven-things/img/live-pia.webp"
+          "img": "../img/live-pia.webp"
         },
         {
           "t": "My mother can come in. She has a key.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/d3bd236dbea3/seven-things/img/live-chave.webp"
+          "img": "../img/live-chave.webp"
         }
       ]
     },
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d3bd236dbea3/seven-things/img/live-pia.webp",
+      "img": "../img/live-pia.webp",
       "leg": "Plates drying in a dark kitchen",
       "pede": "Look at the picture: plates drying in a dark kitchen. Write 2 or 3 sentences about what you can do and what you can't do in your kitchen. Use <b>can</b> or <b>can't</b>.",
       "ph": "In my kitchen I can … I can't …",

@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Hidden Present · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Hidden Present · A Birthday at Midnight</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Hidden Present · A Birthday at Midnight</h2>
+    <p>It is midnight before Leo’s birthday, and his present is hidden somewhere in the house. Leo is awake on the stairs and keeps pointing at things. The center of the screen is the wrapped present: the gold ribbon cuts the box into four corners, <b>one or more</b> against <b>near or far</b>, and each word lives in one corner. This lesson uses the body: your student holds, points at and shows real things from their own home on the camera. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>this</b> (one, near) · <b>that</b> (one, far) · <b>these</b> (more, near) · <b>those</b> (more, far). One takes <b>is</b>, more takes <b>are</b>: <i>What’s that? What are those?</i> The mistakes: <i>this are</i>, <i>these is</i>, <i>What is those?</i>, <i>that shoes</i>. The sound: <i>this</i> /ðɪs/ is short, <i>these</i> /ðiːz/ is long. Smile on <i>these</i>.</p>
+    <!--conversa--><h4>YOUR PICK (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Leo is asleep: three choices with this, that, these and those: his present, the party cake, and a present for your student. Answer first yourself, as a model, and point at the screen while you say it. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk (<i>this sneakers</i> → <i>these sneakers</i>); at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Show Me (hold it, point at it, on camera), IV Leo Is Awake (you are Leo), V Hot and Cold, VI Point and Ask, VII The Birthday Plan.</li>
+      <li><b>Focus</b>: II The Ribbon Box (tap the corner), III Near or Far?, VIII Your Pick (out loud).</li>
+      <li><b>Write</b>: IX Back to Bed, their own room, with the red wavy line for <i>this are</i>, <i>these is</i>, <i>What is those</i> and <i>that shoes</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>HOT AND COLD</h4>
+    <p>The student picks a place and asks the question; you answer. The present is in the drawer (look closely at the photo). The bed is warmer; the books and the wardrobe are colder.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The box, the corners and the search move on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE HIDDEN PRESENT (Main A1) · pergunta-surpresa · 27/10/2026 · this / that / these / those */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'fita', tipo: 'And you?', q: 'What is near you now?',
+    opc: ['A cup', 'My phone', 'Books'], st: ['This is my …', 'These are my …'],
+    ex: 'These are my books. And that is my cat!', push: 'Can I see it? Yes or no?' },
+  { cena: 'perto', tipo: 'Would you rather', q: 'A big party or a small dinner?',
+    opc: ['A big party', 'A small dinner'], st: ['A big party! That is fun.', 'A small dinner. That is my favorite.'],
+    ex: 'A small dinner. That is my favorite.', push: 'On your birthday? Yes or no?' },
+  { cena: 'busca', tipo: 'And you?', q: 'Do you hide presents?',
+    opc: ['Yes, I do.', 'No, I don’t.'], st: ['Yes. In that drawer!', 'No. I give them fast.'],
+    ex: 'Yes! In that closet, under those boxes.', push: 'Does anyone find them? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE HIDDEN PRESENT (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Escolha 1 de 3" no lugar de "VIII · Quick Quiz" (extra, prática controlada: escolher a palavra).
+   O Leo dorme: o aluno escolhe o presente dele, o bolo da festa e um presente para si.
+   A1 bem leve: três opções, frase quase pronta, o professor responde primeiro.
+   A gramática da aula (this / that / these / those) mora nas opções e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'escolha', troca: 'quiz', est: 'o', min: 5, img: 'presente', rot: 'Your Pick', t: 'Birthday choices. Choose one, three times.',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'For Leo', sit: 'Leo is ten tomorrow.', q: 'Which present for Leo?',
+        opc: ['These sneakers', 'This book', 'Those socks'],
+        st: ['These sneakers! They are …', 'This book. It is …', 'Those socks. They are …'],
+        ex: 'These sneakers! They are red, and red is his color.',
+        push: 'Is it expensive? Yes or no?' },
+      { tag: 'The cake', q: 'Which cake for the party?',
+        opc: ['This chocolate cake', 'That lemon cake', 'These cupcakes'],
+        st: ['This chocolate cake, please!', 'That lemon cake. It is …', 'These cupcakes. They are …'],
+        ex: 'These cupcakes! They are small and pretty.',
+        push: 'Two cakes? Yes or no?' },
+      { tag: 'For you', sit: 'Now it’s your birthday.', q: 'Which present for you?',
+        opc: ['This phone', 'These shoes', 'That trip'],
+        st: ['This phone. Mine is old.', 'These shoes. They are …', 'That trip! It is …'],
+        ex: 'That trip! To the beach, with my friends.',
+        push: 'With your family too? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "mostra": {
+   "t": "Things from your own home.",
+   "p": "Do what the card says, on camera. Say it."
+  },
+  "fita": {
+   "t": "The ribbon cuts the box into four.",
+   "p": "Look. Say the sentence. Tap its corner."
+  },
+  "perto": {
+   "t": "Leo’s room. You are by the door.",
+   "p": "Say the sentence. Then pick yours."
+  },
+  "leo": {
+   "t": "Leo is on the stairs. He asks.",
+   "p": "Your teacher is Leo. Answer, but don’t tell!"
+  },
+  "busca": {
+   "t": "Find the present. Four places.",
+   "p": "Pick a place. Ask the right question."
+  },
+  "aponta": {
+   "t": "Now you ask: one or more? Near or far?",
+   "p": "Read the card. Ask the right question."
+  },
+  "plano": {
+   "t": "Leo is asleep. Talk about presents.",
+   "p": "Answer six questions about you."
+  },
+  "cv-escolha": {
+   "t": "Birthday choices: pick one, three times.",
+   "p": "Your teacher answers first. Then you say it."
+  },
+  "fim": {
+   "t": "1 AM. The present is wrapped.",
+   "p": "Write six sentences about your room. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "This, that, these, those (perto/longe, um/vários) com is/are: meia-noite antes do aniversário do Leo, e o presente escondido na casa.",
+  "armadilha": "O brasileiro troca this/these pelo som (os dois viram “dis”), diz these is, this are, What is those? e that shoes, porque “esse/esses” não marca o plural igual.",
+  "pal": [
+   "this",
+   "that",
+   "these",
+   "those",
+   "What’s this?",
+   "What are those?",
+   "present",
+   "drawer"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: meia-noite, o presente do Leo escondido em casa.",
+   "perg": "Do you hide presents at home?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "mostra": {
+   "obj": "Usar o corpo: o aluno segura, aponta e mostra coisas da casa dele na câmera.",
+   "perg": "What’s that behind you?",
+   "pula": "Três cartas bastam."
+  },
+  "fita": {
+   "obj": "A caixa com a fita: cada palavra no seu canto (um/vários, perto/longe).",
+   "perg": "One or more? Near or far?",
+   "pula": "Quatro fotos bastam, uma por canto."
+  },
+  "perto": {
+   "obj": "No quarto do Leo, da porta: escolher entre perto e longe.",
+   "perg": "Is it near you or far?",
+   "pula": "Quatro frases bastam."
+  },
+  "leo": {
+   "obj": "O professor é o Leo e aponta coisas; o aluno responde sem contar do presente.",
+   "perg": "What’s that? What are those?",
+   "pula": "Quatro perguntas do Leo bastam."
+  },
+  "busca": {
+   "obj": "Quente ou frio: o aluno pergunta certo para achar o presente (está na gaveta).",
+   "perg": "What’s in that drawer?",
+   "pula": "Deixe achar logo na gaveta se faltar tempo."
+  },
+  "aponta": {
+   "obj": "Inverter: agora o aluno pergunta, escolhendo a palavra certa.",
+   "perg": "What are those?",
+   "pula": "Quatro cartas bastam."
+  },
+  "plano": {
+   "obj": "Seis perguntas pessoais sobre presentes e aniversários.",
+   "perg": "What’s the best present you got?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-escolha": {
+   "obj": "Conversa: três escolhas de aniversário com this/that/these/those; o professor responde primeiro.",
+   "perg": "Which present for Leo: this one or that one?",
+   "pula": "Duas escolhas bastam."
+  },
+  "fim": {
+   "obj": "Escrita: seis frases sobre o próprio quarto, com a linha vermelha.",
+   "perg": "What’s that on your wall?",
+   "pula": "Quatro frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa apontando coisas reais da casa do aluno.",
+   "perg": "What are those on your desk?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre dois presentes ou opções, com this one / that one.",
+   "perg": "This one or that one? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Leo e responde às perguntas sobre o aniversário.",
+   "perg": "What’s that in your hand, Leo?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More things around you.",
+   "p": "Pick a card. Point and answer.",
+   "palavras": [
+    "this",
+    "that",
+    "these",
+    "those",
+    "is",
+    "are"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR DESK",
+     "q": "What’s this on your desk?",
+     "fup": "Is it new or old?",
+     "st": [
+      "This is my …",
+      "These are my …"
+     ],
+     "ex": "This is my phone, and these are my keys."
+    },
+    {
+     "k": "YOUR WALL",
+     "q": "What’s that on your wall?",
+     "fup": "Do you like it?",
+     "st": [
+      "That is a …",
+      "Those are …"
+     ],
+     "ex": "That is a clock, and those are photos of my family."
+    },
+    {
+     "k": "YOUR CLOTHES",
+     "q": "Are these your favorite shoes?",
+     "fup": "Where are they from?",
+     "st": [
+      "Yes, these are …",
+      "No, these are …"
+     ],
+     "ex": "No, these are old. My favorite shoes are those, by the door."
+    },
+    {
+     "k": "YOUR WINDOW",
+     "q": "What’s that outside your window?",
+     "fup": "Is it noisy?",
+     "st": [
+      "That is a …",
+      "Those are …"
+     ],
+     "ex": "Those are trees, and that is a school."
+    },
+    {
+     "k": "YOUR BEST PRESENT",
+     "q": "Show me a present someone gave you.",
+     "fup": "Who gave it to you?",
+     "st": [
+      "This is a …",
+      "These are …"
+     ],
+     "ex": "This is a watch. My brother gave it to me."
+    },
+    {
+     "k": "YOUR KITCHEN",
+     "q": "What are those in your kitchen?",
+     "fup": "Do you use them every day?",
+     "st": [
+      "Those are …",
+      "That is …"
+     ],
+     "ex": "Those are my cups, and that is my coffee machine."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "This one or that one?",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "this one",
+    "that one",
+    "these",
+    "those",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A present for Leo: a ball or a book?",
+     "a": "The ball",
+     "b": "The book",
+     "fa": [
+      "This ball. He likes to play."
+     ],
+     "fb": [
+      "That book. He likes stories."
+     ]
+    },
+    {
+     "q": "The party cake: chocolate or strawberry?",
+     "a": "Chocolate",
+     "b": "Strawberry",
+     "fa": [
+      "This chocolate cake. It is the best."
+     ],
+     "fb": [
+      "That strawberry cake. It is pretty."
+     ]
+    },
+    {
+     "q": "Hide the present: in the drawer or under the bed?",
+     "a": "The drawer",
+     "b": "Under the bed",
+     "fa": [
+      "That drawer. Leo never opens it."
+     ],
+     "fb": [
+      "Under the bed. It is dark there."
+     ]
+    },
+    {
+     "q": "Birthday: a big party or a small dinner?",
+     "a": "A big party",
+     "b": "A small dinner",
+     "fa": [
+      "A big party. These days are special."
+     ],
+     "fb": [
+      "A small dinner. Those parties are too loud."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Leo now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Leo.",
+   "perguntas": [
+    "Why are you on the stairs at midnight?",
+    "What’s that in your hand?",
+    "Are those your new shoes?",
+    "What’s in that drawer, do you think?",
+    "Is this your birthday cake?",
+    "What do you want: this present or that one?"
+   ],
+   "st": [
+    "This is my …",
+    "That is …",
+    "Those are …"
+   ],
+   "ex": "This is my book. I can’t sleep! What’s in that drawer?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

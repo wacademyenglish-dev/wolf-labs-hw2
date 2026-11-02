@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Which Is Why It Matters",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e924bc7628be/which-is-why/img/live-sala.webp",
+  "capa": "../img/live-sala.webp",
   "alvo": "non-defining relative with ', which' that comments on the whole idea before it (which is why / which means / which explains / which surprised); a comma before which; never 'what is why', 'that means' after a comma, or 'which it means'",
   "abrir": "Do you vote in every election in your country?",
   "fecho": "A comma + <b>which</b> comments on the <b>whole idea</b> before it: <i>Turnout was low, which is why the lines were short.</i> Use <b>which is why / which means / which explains / which surprised</b>. Never <i>, what is why</i>, never <i>, that means</i>, never <i>which it means</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the news desk on election night. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e924bc7628be/which-is-why/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "An empty hall at sunset",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The town hall stays open late, which is why the lights are on.",
-          "img": "https://wolf-labs.pages.dev/p/e924bc7628be/which-is-why/img/live-prefeitura.webp",
+          "img": "../img/live-prefeitura.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Each voter steps into a booth, which means the vote is private.",
-          "img": "https://wolf-labs.pages.dev/p/e924bc7628be/which-is-why/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "One piece fell, which made all the others fall.",
-          "img": "https://wolf-labs.pages.dev/p/e924bc7628be/which-is-why/img/live-domino.webp",
+          "img": "../img/live-domino.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e924bc7628be/which-is-why/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Empty voting booths in a quiet hall",
       "pede": "Look at the picture: empty voting booths in a quiet hall. Write 2 or 3 sentences about your day or your country. End each one with a comment: <b>, which is why</b>, <b>, which means</b> or <b>, which surprised me</b>.",
       "ph": "I woke up early today, which …",

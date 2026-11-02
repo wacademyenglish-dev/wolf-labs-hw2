@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de Cheer You Up (11/10/2026): cinco falas do trailer de Pluribus.
+   Forma: quem disse — a Carol ou "os outros"? Alvo: phrasal verbs separáveis (o pronome no meio).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [0, 1, 2], k: 'Good morning', quem: 'The others',
+    contexto: 'Everybody in the world is suddenly happy, except Carol. A friendly voice wakes her up.',
+    frase: 'Good morning, Carol. Is there anything we could do to <b>cheer you up</b>?',
+    quemOps: ['Carol', 'The others'],
+    explica: '<i>Cheer up</i> = make someone happy again. With a pronoun, it goes in the middle: cheer <b>you</b> up, never <i>cheer up you</i>.',
+    formula: 'cheer <b>you</b> up · cheer <b>Carol</b> up = cheer up <b>Carol</b> · ✗ cheer up you',
+    tente: 'What cheers you up on a bad day?',
+    ex: 'Music cheers me up. A good pizza cheers me up too!' },
+  { i: [5], k: 'Be happy', quem: 'The others',
+    contexto: 'Many people say her name again and again. They smile. They only want one thing.',
+    frase: 'We just want you <b>to be happy</b>.',
+    quemOps: ['Carol', 'The others'],
+    explica: 'It sounds kind, but it is scary: everybody says the same thing at the same time. They want to cheer her up, at any cost.',
+    formula: 'They want to cheer <b>her</b> up. · Don’t cheer <b>me</b> up!',
+    tente: 'Who cheers you up when you are sad? How?',
+    ex: 'My best friend cheers me up. She sends me funny videos.' },
+  { i: [9], k: 'Reverse it', quem: 'Carol',
+    contexto: 'Carol doesn’t want their happiness. She wants the old world back.',
+    frase: 'How do I <b>reverse</b> all this?',
+    quemOps: ['Carol', 'The others'],
+    explica: '<i>Reverse</i> = make it go back to how it was. She wants to turn <b>it</b> off, like a machine.',
+    formula: 'turn <b>it</b> off · turn <b>it</b> back · ✗ turn off it',
+    tente: 'Something at home is too loud. What do you say? Use turn it down or turn it off.',
+    ex: 'The TV is too loud. Please turn it down!' },
+  { i: [10, 11], k: 'Figure it out', quem: 'The others',
+    contexto: 'They promise to study Carol. They want to know why she is not like them.',
+    frase: 'Rest assured, Carol, we will <b>figure out</b> what makes you different.',
+    quemOps: ['Carol', 'The others'],
+    explica: '<i>Figure out</i> = understand, find the answer. With a long object it stays together; with <i>it</i>, the pronoun goes in the middle.',
+    formula: 'figure out <b>the problem</b> · figure <b>it</b> out',
+    tente: 'Think of a problem you figured out last week. How did you figure it out?',
+    ex: 'My phone didn’t work. I looked it up on YouTube and I figured it out.' },
+  { i: [17, 18, 19], k: 'Anything', quem: 'Carol',
+    contexto: 'Carol tests them. She asks for very dangerous things, and they always say yes.',
+    frase: 'If I asked right now, would you <b>give me</b> a hand grenade? — Yes.',
+    quemOps: ['Carol', 'The others'],
+    explica: 'They will give her anything. And if she wants it back? <i>Give it back</i>: the pronoun in the middle again.',
+    formula: 'give <b>it</b> back · give <b>me</b> a hand · ✗ give back it',
+    tente: 'A friend has something of yours. Ask for it politely.',
+    ex: 'Can you give it back tomorrow, please? I need it for work.' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'quem', cor: '#f2c94c', titulo: 'Carol, or the others?', sub: 'Hear the line and say who says it. Then find the little word in the middle.', rot: { por: 'WHAT IT MEANS', padrao: 'THE PRONOUN IN THE MIDDLE', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Page Thirty-Four",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/849b0e3ddab2/page-thirty-four/img/live-estante.webp",
+  "capa": "../img/live-estante.webp",
   "alvo": "I'd rather + plain verb + than + plain verb (no to); I prefer + -ing + to + -ing, or I prefer to + verb; I'd rather not as a full answer; Would you rather A or B?",
   "abrir": "What would you rather do tonight?",
   "fecho": "<b>I'd rather</b> + plain verb + <b>than</b> + plain verb: <i>I'd rather read than scroll.</i> Never <i>rather to</i>. <b>I prefer</b> + -ing + <b>to</b> + -ing: <i>I prefer reading to scrolling.</i> A full answer: <i>I'd rather not.</i> The question: <i>Would you rather stay in or go out?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about their night reading. A new scene, about 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/849b0e3ddab2/page-thirty-four/img/live-cabeceira.webp",
+      "img": "../img/live-cabeceira.webp",
       "leg": "A lamp, a mug and an open book",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'd rather read a few pages than watch another episode.",
-          "img": "https://wolf-labs.pages.dev/p/849b0e3ddab2/page-thirty-four/img/live-cabeceira.webp",
+          "img": "../img/live-cabeceira.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She prefers reading in bed to reading at a desk.",
-          "img": "https://wolf-labs.pages.dev/p/849b0e3ddab2/page-thirty-four/img/live-estante.webp",
+          "img": "../img/live-estante.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Would you rather finish this book or start a new one?",
-          "img": "https://wolf-labs.pages.dev/p/849b0e3ddab2/page-thirty-four/img/live-marcador.webp",
+          "img": "../img/live-marcador.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -157,7 +157,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/849b0e3ddab2/page-thirty-four/img/live-cabeceira.webp",
+      "img": "../img/live-cabeceira.webp",
       "leg": "A lamp, a mug and an open book",
       "pede": "Look at the picture: a lamp, a mug and an open book on a night table. Write 2 or 3 sentences about your night: what you'd rather do than scroll, what you prefer, and one thing you'd rather not do. Use <b>I'd rather ... than</b> and <b>prefer ... to</b>.",
       "ph": "At night I'd rather … than …",

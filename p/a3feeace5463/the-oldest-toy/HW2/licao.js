@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "The Oldest Toy in the Box",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a3feeace5463/the-oldest-toy/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "superlatives: the + -est (the oldest), y becomes -iest (the funniest), the most + long adjectives (the most useful), irregular the best / the worst; in the room, on the shelf",
   "abrir": "What is the oldest thing in your bedroom?",
   "fecho": "<b>The oldest</b>: short adjective, the + -est. <b>The funniest</b>: y becomes -iest. <b>The most useful</b>: long adjective, the most. Two special ones: <b>the best</b>, <b>the worst</b>. And the place: <b>in</b> the room, <b>on</b> the shelf.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo write labels for a toy shelf. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/a3feeace5463/the-oldest-toy/img/live-brecho.webp",
+      "img": "../img/live-brecho.webp",
       "leg": "The toy shelf",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -114,17 +114,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The wooden horse is the oldest toy on the shelf.",
-          "img": "https://wolf-labs.pages.dev/p/a3feeace5463/the-oldest-toy/img/live-brecho.webp",
+          "img": "../img/live-brecho.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The helmet is the shiniest thing in the room.",
-          "img": "https://wolf-labs.pages.dev/p/a3feeace5463/the-oldest-toy/img/live-brinquedos.webp",
+          "img": "../img/live-brinquedos.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The little fork is the most useful toy in the house.",
-          "img": "https://wolf-labs.pages.dev/p/a3feeace5463/the-oldest-toy/img/live-garfo.webp",
+          "img": "../img/live-garfo.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a3feeace5463/the-oldest-toy/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A child's room in the evening",
       "pede": "Look at the picture: a toy box, a tablet and an old hat in a room. Write 2 or 3 sentences about the things in the picture. Use <b>the oldest, the newest, the most useful</b> or <b>the best</b>.",
       "ph": "The oldest thing in the picture is …",

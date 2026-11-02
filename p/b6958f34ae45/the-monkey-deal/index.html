@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · I Ended Up · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>I Ended Up · The Saturday Clock</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>I Ended Up · The Saturday Clock</h2>
+    <p>The thing you said you were going to do, and what you did instead. Three verbs tell one day: <b>I was going to</b> (the plan), <b>I kept + -ing</b> (the loop), <b>I ended up + -ing</b> (what really happened). Students usually own WAS GOING TO and have never produced the other two. Every task gets a clock: a dashed hand for the plan, an amber arc that runs around for the loop, and a coral hand where the day ended.</p>
+    <h4>THE TEST IS A CONVERSATION STARTER</h4>
+    <p>Scene I: ten sentences, often / sometimes / never. Ask for one real example on a few of them. The score is not a diagnosis; say so. What matters is the ONE sentence your student marks as most true. It comes back in Scene VIII.</p>
+    <h4>THE CLOCK</h4>
+    <p>Scene III is the heart. Your student says the KEPT line, you tap what you heard; the arc runs. Then the ENDED UP line; the coral hand lands. Then all three lines as one story. Ask for a sixth task from their own Saturday.</p>
+    <h4>THE LAST WORD IS WILL</h4>
+    <p>Scene VIII: six questions, one push-back each (only you see it). Question 3 often changes the room. The last answer is the only WILL of the hour: one small thing they will do today.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I kept to check</i>, <i>I ended up to do</i>, <i>I ended up slept</i>, <i>I kept look</i>, <i>I was going to starting</i>.</p>
+    <!--conversa--><h4>THE HOT SEAT (VI) AND THE SURPRISE QUESTION</h4>
+    <p>Your student becomes Sam, the writer who started a book ten years ago and still hasn’t finished it. You are the radio host. Ask the four questions in character, wait five seconds in silence after each one, and let them build the story with the plan (<b>was going to</b>), the loop (<b>kept -ing</b>) and what really happened (<b>ended up -ing</b>). Use the PUSH line (only you see it) at the end. Recast quietly while they talk (kept <b>checking</b>, not “kept to check”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I How Bad Is It?, III The Saturday Clock, IV The Words for It, VI The Hot Seat, VII Finish It, VIII The Last Word.</li>
+      <li><b>Focus</b>: II Three Hands, V Six Plans, Six Excuses.</li>
+      <li><b>Write</b>: IX, their own clock and one WILL. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* I ENDED UP (Main B1) · pergunta-surpresa · 27/10/2026 · was going to / kept + -ing / ended up + -ing */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'verbos', tipo: 'And you?', q: 'What were you going to do last weekend that you didn’t do?',
+    opc: ['Exercise', 'Clean the house', 'Study'], st: ['I was going to …, but I kept …', 'I ended up …-ing'],
+    ex: 'Clean the house. I was going to start on Saturday morning, but I kept watching videos, and I ended up cleaning on Sunday night.', push: 'And this weekend? Same plan?' },
+  { cena: 'palavras', tipo: 'Would you rather', q: 'Would you rather do the hardest task first, or the easiest one?',
+    opc: ['The hardest first', 'The easiest first'], st: ['I’d rather …, because if I don’t, I end up …', 'Last time, I kept …'],
+    ex: 'The easiest first. If I start with the hardest, I keep looking at my phone.', push: 'Be honest: is that a plan, or an excuse?' },
+  { cena: 'metades', tipo: 'Opinion', q: 'Is putting things off always bad?',
+    opc: ['Yes, always', 'Sometimes it helps', 'No, it’s normal'], st: ['Sometimes I was going to …, and it was better that I …', 'I once ended up …-ing, and …'],
+    ex: 'Sometimes it helps. I was going to buy a new phone, and I kept putting it off. I ended up saving the money!', push: 'Give me one thing you should NOT put off this week.' },
+  { cena: 'ultima', tipo: 'What if', q: 'Your phone is locked in a box for one whole day. What do you end up doing?',
+    opc: ['Something useful', 'Something fun', 'Nothing!'], st: ['I’d probably end up …-ing', 'I’d keep …-ing'],
+    ex: 'Something useful. I’d keep looking for my phone at first, but I’d probably end up finishing a book.', push: 'Which hour of the day would be the hardest?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* I ENDED UP (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A cadeira quente entra no lugar de "VI · Only One Fits" (dizer e tocar: prática controlada; as
+   três formas continuam no II, no relógio III e no V). O aluno vira o Sam, o escritor que há dez
+   anos ia escrever um livro; o professor é a apresentadora do rádio.
+   Gramática (was going to + verbo · kept + -ing · ended up + -ing · e o WILL do fim) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'cadeira', troca: 'lacuna', est: 'o', min: 7, img: 'bolsa', rot: 'The Hot Seat', t: 'Ten years ago, Sam started a book. It still isn’t finished.',
+    p: 'You are Sam, on a radio show. Your teacher is the host. Answer every question in character, with the plan, the loop and what really happened.',
+    formato: 'papel', rot_perg: 'The host asks',
+    aluno: { quem: 'Sam, the writer', quer: 'To explain why the book isn’t finished, and not look lazy.' },
+    prof: { quem: 'The radio host', quer: 'The real story, and a date for the book.' },
+    perguntas: [
+      { q: 'Ten years ago, what was your plan?', ex: 'I was going to write one page every morning, before work. Easy!' },
+      { q: 'So what happened every morning?', ex: 'I kept checking my emails. Then I kept making coffee. Then it was time for work.' },
+      { q: 'And what did you end up doing with all that time?', ex: 'I ended up writing a lot of shopping lists. And I ended up learning to cook, so it wasn’t all bad.' },
+      { q: 'Last question: when will the book be finished?', ex: 'I’ll finish the first chapter by Friday. I’ll send it to you, I promise.' }
+    ],
+    st: ['I was going to …', 'I kept …-ing', 'I ended up …-ing', 'I’ll …'],
+    push: 'Your listeners don’t believe you. Why should they believe you this time?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "teste": {
+   "t": "How bad is it? Often, sometimes, never?",
+   "p": "Read each one out loud. Then pick the truest."
+  },
+  "verbos": {
+   "t": "The plan, the loop, what really happened.",
+   "p": "Read the three. Say them about your morning."
+  },
+  "relogio": {
+   "t": "Five Saturday plans. None went to plan.",
+   "p": "Pick a task. Say KEPT, then ENDED UP."
+  },
+  "palavras": {
+   "t": "Eight ways to say “not doing it”.",
+   "p": "Guess the meaning. Tap. Use it about you."
+  },
+  "metades": {
+   "t": "Six plans, six short excuses.",
+   "p": "Choose the reason. Say the whole sentence."
+  },
+  "cv-cadeira": {
+   "t": "Sam’s book: ten years, still unfinished.",
+   "p": "You are Sam on the radio. Answer in character."
+  },
+  "voce": {
+   "t": "Six beginnings. You finish them, truly.",
+   "p": "Pick a card. Finish it about you."
+  },
+  "ultima": {
+   "t": "Just questions, and one WILL.",
+   "p": "Answer. Your last answer starts with I’ll."
+  },
+  "fim": {
+   "t": "Your week, on the clock.",
+   "p": "Write plan, loop, what happened, and one WILL."
+  }
+ },
+ "prep": {
+  "obj": "Was going to (o plano), kept + -ing (o ciclo) e ended up + -ing (o que aconteceu): o relógio do sábado com cinco planos que não deram certo.",
+  "armadilha": "O brasileiro diz “I kept to check” e “I ended up to do” (calco de “continuei a”, “acabei por”), “ended up slept” e “was going to starting”; depois de kept e ended up vem sempre -ing.",
+  "pal": [
+   "I was going to",
+   "I kept checking",
+   "I ended up",
+   "procrastinate",
+   "put it off",
+   "excuse",
+   "I’ll"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o tema: o que você ia fazer e o que fez no lugar.",
+   "perg": "What were you going to do last weekend?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "teste": {
+   "obj": "Teste de procrastinação: puxa conversa; a frase mais verdadeira volta na cena VIII.",
+   "perg": "Which one is most true for you?",
+   "pula": "Cinco frases bastam; não pule a escolha final."
+  },
+  "verbos": {
+   "obj": "Os três verbos do dia: plano, ciclo e resultado, e as armadilhas de -ing.",
+   "perg": "What were you going to do this morning?",
+   "pula": "Não corte: é a regra. Pule a parte sobre a manhã."
+  },
+  "relogio": {
+   "obj": "O coração da aula: cada tarefa no relógio com KEPT e ENDED UP, depois a história inteira.",
+   "perg": "What did you keep doing instead?",
+   "pula": "Três tarefas bastam."
+  },
+  "palavras": {
+   "obj": "Oito expressões sobre o que não estamos fazendo (put off, get around to…).",
+   "perg": "What do you always put off?",
+   "pula": "Quatro expressões bastam."
+  },
+  "metades": {
+   "obj": "Juntar seis planos com seis desculpas curtas e dizer a frase inteira.",
+   "perg": "Why didn’t that plan happen?",
+   "pula": "Três frases bastam."
+  },
+  "cv-cadeira": {
+   "obj": "O aluno é o Sam, escritor de um livro inacabado há dez anos, numa rádio.",
+   "perg": "Sam, what were you going to write?",
+   "pula": "Duas perguntas e o PUSH."
+  },
+  "voce": {
+   "obj": "Terminar seis começos com verdades da vida do aluno; o professor também.",
+   "perg": "What do you keep doing at night?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "ultima": {
+   "obj": "Seis perguntas com contra-argumento; a última resposta é um I’ll para hoje.",
+   "perg": "What will you do today?",
+   "pula": "Cena extra: faça só a última pergunta."
+  },
+  "fim": {
+   "obj": "Escrita: o relógio da semana do aluno e uma coisa que ele VAI fazer hoje.",
+   "perg": "What did you end up doing this week?",
+   "pula": "Plano e resultado bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre planos que mudaram, com was going to, kept -ing e ended up -ing.",
+   "perg": "What did you end up doing yesterday?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre procrastinar, planejar e desistir, com os três verbos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta um projeto antigo que nunca terminou, do plano ao resultado.",
+   "perg": "What do you keep putting off?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Plans that went sideways.",
+   "p": "Pick a card. Use the three verbs.",
+   "palavras": [
+    "was going to",
+    "kept + -ing",
+    "ended up + -ing"
+   ],
+   "cartas": [
+    {
+     "k": "LAST NIGHT",
+     "q": "What were you going to do last night?",
+     "fup": "What did you end up doing?",
+     "st": [
+      "I was going to …, but I ended up …ing."
+     ],
+     "ex": "I was going to sleep early, but I ended up watching three episodes."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "What do you keep checking on your phone?",
+     "fup": "How many times a day?",
+     "st": [
+      "I keep checking …",
+      "I keep …ing, even when …"
+     ],
+     "ex": "I keep checking my email, even on Sunday."
+    },
+    {
+     "k": "THE GYM",
+     "q": "Were you ever going to start a sport?",
+     "fup": "What happened?",
+     "st": [
+      "I was going to …",
+      "I kept saying “next week”, and …"
+     ],
+     "ex": "I was going to start running. I kept saying “next week”, and I never started."
+    },
+    {
+     "k": "A TRIP",
+     "q": "Did a trip ever change at the last minute?",
+     "fup": "Where did you end up?",
+     "st": [
+      "We were going to go to …, but we ended up …"
+     ],
+     "ex": "We were going to go to the beach, but we ended up staying home because of the rain."
+    },
+    {
+     "k": "SHOPPING",
+     "q": "Did you ever go out for one thing and buy many?",
+     "fup": "What did you end up buying?",
+     "st": [
+      "I was going to buy …",
+      "I ended up buying …"
+     ],
+     "ex": "I was going to buy milk. I ended up buying a whole dinner."
+    },
+    {
+     "k": "STUDYING",
+     "q": "When you study, what do you keep doing?",
+     "fup": "How do you stop it?",
+     "st": [
+      "I keep …ing.",
+      "In the end, I …"
+     ],
+     "ex": "I keep opening the fridge. In the end, I study in the library."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "kept",
+    "ended up",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Procrastination: always bad, or sometimes useful?",
+     "a": "Always bad",
+     "b": "Sometimes useful",
+     "fa": [
+      "Always bad. You keep worrying about it.",
+      "And you end up doing it badly at midnight."
+     ],
+     "fb": [
+      "Sometimes useful. Some problems solve themselves.",
+      "I ended up not needing to do half of my list."
+     ]
+    },
+    {
+     "q": "Big plans or small plans?",
+     "a": "Big plans",
+     "b": "Small plans",
+     "fa": [
+      "Big plans. Even if you fail, you end up somewhere good."
+     ],
+     "fb": [
+      "Small plans. You actually finish them."
+     ]
+    },
+    {
+     "q": "An unfinished project after a year: keep going or let it go?",
+     "a": "Keep going",
+     "b": "Let it go",
+     "fa": [
+      "Keep going. You were going to finish it for a reason."
+     ],
+     "fb": [
+      "Let it go. You kept trying, and it’s OK to stop."
+     ]
+    },
+    {
+     "q": "Phone in another room when you work: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. If it’s near me, I keep checking it."
+     ],
+     "fb": [
+      "No. I end up worrying about the messages."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You were going to lose one, and you ended up winning all four."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Story",
+   "t": "Your unfinished book.",
+   "p": "Like Sam: tell it step by step.",
+   "prof": "Listen for kept to check and ended up to do; recast with -ing.",
+   "passos": [
+    {
+     "q": "Think of a project you never finished. What was it?",
+     "st": [
+      "I was going to …"
+     ],
+     "ex": "I was going to learn the guitar."
+    },
+    {
+     "q": "What did you keep doing instead?",
+     "st": [
+      "I kept …ing."
+     ],
+     "ex": "I kept watching videos about the guitar, not playing it."
+    },
+    {
+     "q": "What did you end up doing?",
+     "st": [
+      "I ended up …ing."
+     ],
+     "ex": "I ended up selling the guitar to my cousin."
+    },
+    {
+     "q": "What will you do about it now?",
+     "st": [
+      "I’ll …"
+     ],
+     "ex": "I’ll borrow it back and play one song a week."
+    }
+   ],
+   "fim": "The clock is yours now. Start with one small I’ll."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Actually, Anyway, Mind You",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5c3ad14364ac/actually-anyway-mind-you/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "discourse markers with one job each: actually (corrects a fact or surprises, never 'now'), by the way (a side topic), anyway (back to the subject or closing), mind you (the other side), as I was saying (back after an interruption)",
   "abrir": "Think of the last conversation where you changed the subject. Which little word did you use?",
   "fecho": "Each little word has <b>one job</b>. <b>Actually</b>: a correction or a surprise, never <i>now</i>. <b>By the way</b>: a side topic. <b>Anyway</b>: back to the subject, or the end. <b>Mind you</b>: the other side of the picture. <b>As I was saying</b>: back after an interruption.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia hosts a podcast. Leo is her guest. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/5c3ad14364ac/actually-anyway-mind-you/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "The mixing desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -114,17 +114,17 @@ window.HW2 = {
         {
           "t": "Actually, I love cooking shows.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/5c3ad14364ac/actually-anyway-mind-you/img/live-fones.webp"
+          "img": "../img/live-fones.webp"
         },
         {
           "t": "By the way, did you try the new ramen place?",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/5c3ad14364ac/actually-anyway-mind-you/img/live-sofa.webp"
+          "img": "../img/live-sofa.webp"
         },
         {
           "t": "It was awful. Mind you, the food was incredible.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/5c3ad14364ac/actually-anyway-mind-you/img/live-cabine.webp"
+          "img": "../img/live-cabine.webp"
         }
       ]
     },
@@ -177,7 +177,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5c3ad14364ac/actually-anyway-mind-you/img/live-sofa.webp",
+      "img": "../img/live-sofa.webp",
       "leg": "A talk show sofa",
       "pede": "Look at the picture: a sofa in the spotlight. You are the host of a small talk show. Write a short chat with a guest. Use <b>actually, by the way, anyway</b> or <b>mind you</b>.",
       "ph": "Actually, …",

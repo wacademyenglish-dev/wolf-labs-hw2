@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Left on the Desk",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/21cf295bf17e/left-on-the-desk/img/live-luminaria.webp",
+  "capa": "../img/live-luminaria.webp",
   "alvo": "reduced relative clauses: cut who / which / that + BE and nothing else; -ing when the noun does the action (the client waiting in reception), -ed / past participle when the noun receives it (the report left on the desk); no BE, no cut (the woman who called you)",
   "abrir": "Look at your desk right now. What is the oldest thing on it?",
   "fecho": "<b>Cut who / which / that + BE</b>, nothing else. <b>-ing</b>: the noun does it (<i>the client waiting in reception</i>). <b>-ed</b>: the noun receives it (<i>the report left on the desk</i>). No BE, nothing to cut: <i>the woman who called you</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia hands over her desk to Leo before a nine o'clock meeting. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/21cf295bf17e/left-on-the-desk/img/live-luminaria.webp",
+      "img": "../img/live-luminaria.webp",
       "leg": "Papers under a desk lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The report left on my desk needs a signature.",
-          "img": "https://wolf-labs.pages.dev/p/21cf295bf17e/left-on-the-desk/img/live-luminaria.webp",
+          "img": "../img/live-luminaria.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The client waiting in reception wants a date.",
-          "img": "https://wolf-labs.pages.dev/p/21cf295bf17e/left-on-the-desk/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Anyone asking about the invoice should talk to Marta.",
-          "img": "https://wolf-labs.pages.dev/p/21cf295bf17e/left-on-the-desk/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -170,7 +170,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/21cf295bf17e/left-on-the-desk/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A desk by a window with a lamp, a cup and one page",
       "pede": "Look at the picture: a desk by a window, a lamp, a cup and one page left on the table. Describe the scene in 2 or 3 short, exact sentences. Use <b>-ing</b> or <b>-ed</b> after the noun, without who / which / that.",
       "ph": "The page left on the desk …",

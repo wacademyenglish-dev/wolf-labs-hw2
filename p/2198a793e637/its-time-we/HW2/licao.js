@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It's Time We Stood Together",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2198a793e637/its-time-we/img/live-reuniao.webp",
+  "capa": "../img/live-reuniao.webp",
   "alvo": "would rather + plain verb (I'd rather stay than leave), would rather + person + past (I'd rather you called me), I'd rather not, Would you rather ...?, it's time + person + past (it's time we left), it's time to + verb",
   "abrir": "Would you rather stay home or go out this weekend?",
   "fecho": "<b>Would rather</b> + plain verb: <i>I'd rather stay.</i> With another person, the past form: <i>I'd rather you called me.</i> <b>It's time we</b> + past: <i>It's time we left.</i> Or <b>it's time to</b> + verb: <i>It's time to go.</i> Never <i>would rather to</i>, never <i>it's time we go</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo prepare a meeting of their building's group. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2198a793e637/its-time-we/img/live-reuniao.webp",
+      "img": "../img/live-reuniao.webp",
       "leg": "A round meeting room with screens",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'd rather you called me before you came.",
-          "img": "https://wolf-labs.pages.dev/p/2198a793e637/its-time-we/img/live-reuniao.webp",
+          "img": "../img/live-reuniao.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It's time we talked to our neighbor.",
-          "img": "https://wolf-labs.pages.dev/p/2198a793e637/its-time-we/img/live-mansao.webp",
+          "img": "../img/live-mansao.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Would you rather meet outside or in my flat?",
-          "img": "https://wolf-labs.pages.dev/p/2198a793e637/its-time-we/img/live-clube.webp",
+          "img": "../img/live-clube.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2198a793e637/its-time-we/img/live-clube.webp",
+      "img": "../img/live-clube.webp",
       "leg": "A quiet room with a TV",
       "pede": "Look at the picture: a quiet room with a TV. Write 2 or 3 sentences about a group you are in (family, class, work). Say what you would rather do and what it is time to do. Use <b>I'd rather …</b>, <b>I'd rather you …</b> and <b>it's time we …</b>.",
       "ph": "It's time we … I'd rather …",

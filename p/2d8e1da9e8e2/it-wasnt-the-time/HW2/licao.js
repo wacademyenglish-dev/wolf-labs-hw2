@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It Wasn’t the Time",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2d8e1da9e8e2/it-wasnt-the-time/img/live-mesa.webp",
+  "capa": "../img/live-mesa.webp",
   "alvo": "cleft sentences to focus one part: It is / was X that / who ...; What ... is / was X; the thing that ...; It isn't X that ..., it's Y; never drop the IT, never use what instead of that",
   "abrir": "What takes you longer than it should? Is it really the time?",
   "fecho": "<b>It is / was</b> + the focus + <b>that / who</b>: <i>It was the notifications that broke our focus.</i> <b>What</b> + clause + <b>is / was</b>: <i>What slowed us down was the chat.</i> Contrast: <i>It wasn’t the deadline that failed us; it was the interruptions.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo review a project that went wrong. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2d8e1da9e8e2/it-wasnt-the-time/img/live-plateia.webp",
+      "img": "../img/live-plateia.webp",
       "leg": "A dark lecture hall",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It wasn’t the deadline that failed us.",
-          "img": "https://wolf-labs.pages.dev/p/2d8e1da9e8e2/it-wasnt-the-time/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "What slowed the team down was the chat window.",
-          "img": "https://wolf-labs.pages.dev/p/2d8e1da9e8e2/it-wasnt-the-time/img/live-plateia.webp",
+          "img": "../img/live-plateia.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It’s in the morning that I focus best.",
-          "img": "https://wolf-labs.pages.dev/p/2d8e1da9e8e2/it-wasnt-the-time/img/live-pista.webp",
+          "img": "../img/live-pista.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2d8e1da9e8e2/it-wasnt-the-time/img/live-plateia.webp",
+      "img": "../img/live-plateia.webp",
       "leg": "A dark lecture hall with a lit podium",
       "pede": "Look at the picture: an empty lecture hall with one light. Write 2 or 3 sentences about what really affects your focus. Put the focus on one part with <b>It is … that …</b> or <b>What … is …</b>.",
       "ph": "It isn’t … that … It’s …",

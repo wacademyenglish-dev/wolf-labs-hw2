@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Casting",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/bce1b46416bf/a2-review-the-casting/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 8 review, done and not yet: Have you ever ...? (never, once, twice) + the right participle (seen, gone, eaten); the detail in the past simple (I went in 2019); already / yet / just; since + a point, for + a length; never I have saw, never I live here since",
   "abrir": "Have you ever been on TV?",
   "fecho": "Experience: <b>have / has + participle</b> (<i>I've seen it.</i>). The detail, with a finished time: <b>past simple</b> (<i>I went in 2019.</i>). <b>Already</b> in the middle, <b>yet</b> at the end. <b>For</b> + a length, <b>since</b> + a point.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia is the producer of a travel show. Leo is at the casting. About 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/bce1b46416bf/a2-review-the-casting/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A world map made of lights",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Have you ever seen the northern lights?",
-          "img": "https://wolf-labs.pages.dev/p/bce1b46416bf/a2-review-the-casting/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I went to Japan in 2019.",
-          "img": "https://wolf-labs.pages.dev/p/bce1b46416bf/a2-review-the-casting/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I haven't finished my video yet.",
-          "img": "https://wolf-labs.pages.dev/p/bce1b46416bf/a2-review-the-casting/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/bce1b46416bf/a2-review-the-casting/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty chair on a dark stage",
       "pede": "Look at the picture: an empty chair at a casting. Write 2 or 3 sentences: one place you have been, <b>when</b> you went (past simple), and one thing you <b>haven't</b> done <b>yet</b>.",
       "ph": "I've been to … I went …",

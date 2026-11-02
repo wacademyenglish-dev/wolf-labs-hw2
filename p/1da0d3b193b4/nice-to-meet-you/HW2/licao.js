@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "Nice to Meet You",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/1da0d3b193b4/nice-to-meet-you/img/live-porta.webp",
+  "capa": "../img/live-porta.webp",
   "alvo": "hello / hi / hey + I'm / My name's (never 'my name's is') · What's your name? · How do you spell it? · Nice to meet you · his (a man) / her (a woman)",
   "abrir": "What's your name? How do you spell it?",
   "fecho": "<b>Hello · Hi · Hey</b>, then your name: <b>I'm Mia</b> or <b>My name's Mia</b>, never <i>my name's is</i>. Ask: <b>What's your name? How do you spell it?</b> The first time: <b>Nice to meet you</b>. A man: <b>his</b> name. A woman: <b>her</b> name.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the welcome desk. A new scene, about 30 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/1da0d3b193b4/nice-to-meet-you/img/live-porta.webp",
+      "img": "../img/live-porta.webp",
       "leg": "The door of the welcome desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -100,17 +100,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Hello! My name's Leo. What's your name?",
-          "img": "https://wolf-labs.pages.dev/p/1da0d3b193b4/nice-to-meet-you/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Her name's Priya, and his name's Kofi.",
-          "img": "https://wolf-labs.pages.dev/p/1da0d3b193b4/nice-to-meet-you/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Nice to meet you, too.",
-          "img": "https://wolf-labs.pages.dev/p/1da0d3b193b4/nice-to-meet-you/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -158,7 +158,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/1da0d3b193b4/nice-to-meet-you/img/live-porta.webp",
+      "img": "../img/live-porta.webp",
       "leg": "A door and a table with badges",
       "pede": "Look at the picture: a door and a table with badges. Write 2 or 3 sentences: say hello, say your name, and ask a name. Use <b>Hello</b>, <b>My name's</b> or <b>What's your name?</b>",
       "ph": "Hello! My name's … What's your name?",

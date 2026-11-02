@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de Joey Doesn’t Share Food (11/10/2026): cinco momentos de comida em Friends.
+   Forma: o corte do diretor — o aluno diz o que o personagem DEVERIA fazer antes de ouvir a fala.
+   Alvo: should / shouldn’t. Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [13, 14, 15, 16], k: 'The trifle', cena: 'INT. MONICA’S APARTMENT · THANKSGIVING', quem: 'Rachel',
+    contexto: 'Rachel made her first Thanksgiving dessert. Two pages of the cookbook were stuck together.',
+    diretor: 'Rachel’s dessert has a strange layer. You are her friend. What should you say to her?',
+    frase: 'Then raspberries, more ladyfingers, then <b>beef sautéed with peas and onions</b>.',
+    explica: 'Beef in a dessert! Her friends don’t want to make her sad, so nobody tells the truth.',
+    formula: 'She <b>shouldn’t put</b> beef in a dessert. · You <b>should tell</b> her.',
+    tente: 'A friend cooks something terrible for you. Should you tell the truth?',
+    ex: 'I think you should say it’s different, but you shouldn’t say it’s bad.' },
+  { i: [36, 37], k: 'The turkey', cena: 'INT. MONICA’S APARTMENT · THANKSGIVING', quem: 'Joey',
+    contexto: 'Monica comes in, and Joey has a whole turkey on his head. He can’t take it off.',
+    diretor: 'Joey has a turkey on his head, and it won’t come off. What should he do?',
+    frase: 'How did it get on? — I put it on <b>to scare Chandler</b>.',
+    explica: '<i>To scare</i> = to make someone afraid. It isn’t scary. It’s very funny.',
+    formula: 'He <b>should take</b> it off! · <b>Should</b> we call a doctor? (should + verb, no <i>to</i>)',
+    tente: 'Your friend can’t take a ring off his finger. Give him three pieces of advice.',
+    ex: 'You should use soap. You shouldn’t pull too hard. You should go to the hospital!' },
+  { i: [76, 77, 78, 79, 80], k: 'The cheesecake', cena: 'INT. RACHEL’S APARTMENT · DAY', quem: 'Chandler',
+    contexto: 'The cheesecake is for a neighbor downstairs, but Rachel and Chandler opened it. And it was amazing.',
+    diretor: 'The cheesecake isn’t theirs, and they ate some. What should they do now?',
+    frase: 'You can’t return a box after you’ve opened the box. — Why not? — <b>Because it’s too delicious.</b>',
+    explica: 'He knows it’s wrong, but the cake is too good. <i>Too</i> + adjective = more than is OK.',
+    formula: 'They <b>should give</b> it back. · They <b>shouldn’t eat</b> it. · ✗ should to give',
+    tente: 'You get a package for your neighbor by mistake, and it’s chocolate. What should you do?',
+    ex: 'I should give it to her. But maybe I should eat one first!' },
+  { i: [126, 127, 128, 129, 130, 131, 132, 133, 134], k: 'The chicken', cena: 'INT. APARTMENT · NIGHT', quem: 'Joey',
+    contexto: 'Joey is going out to get chicken, and he asks his friend if he wants some. Again. And again.',
+    diretor: 'Joey asks the same question for the fifth time. What should his friend say?',
+    frase: 'I’m gonna go get some chicken. You want some? ... <b>For the last time, no!</b>',
+    explica: '<i>For the last time</i> = I said this many times, please stop. Joey doesn’t stop.',
+    formula: '<b>Should</b> he stop asking? Yes, he <b>should</b>. · <b>Should</b> I ask again?',
+    tente: 'Ask your teacher for advice about something real. Start with Should I…?',
+    ex: 'Should I study in the morning or at night?' },
+  { i: [155, 156, 157, 158, 159], k: 'The sandwich', cena: 'INT. CENTRAL PERK · DAY', quem: 'Ross',
+    contexto: 'Somebody at work ate Ross’s Thanksgiving sandwich. For his friends it is just a sandwich. For Ross, it is everything.',
+    diretor: 'Somebody at work ate Ross’s sandwich. What should he do? What shouldn’t he do?',
+    frase: 'Someone at work <b>ate my sandwich</b>. My Thanksgiving leftover sandwich.',
+    explica: '<i>Leftover</i> = food from yesterday’s big meal. Ross is very, very upset.',
+    formula: 'He <b>should talk</b> to his boss. · He <b>shouldn’t shout</b> at work.',
+    tente: 'Someone eats your food at work. What should you do?',
+    ex: 'I should write my name on the box. I shouldn’t get angry in front of everybody.' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'diretor', cor: '#9b6bd6', titulo: 'What should they do?', sub: 'Read the moment, give your advice, then hear what really happens.', rot: { por: 'WHAT IT MEANS', padrao: 'SHOULD · SHOULDN’T', voce: 'YOUR ADVICE', ex: 'LIKE THIS' } };

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Reportedly, Allegedly",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2dd84eca9370/reportedly-allegedly/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "source and distance: reportedly (several reports, no single source) · according to + a source (never 'according to me': in my opinion) · allegedly (accused, not proven; never for good news) · apparently (I heard / it seems) · supposedly (people say so, with doubt) · seemingly · sources say · rumour has it that",
   "abrir": "When you hear a surprising story, how do you decide if it is true?",
   "fecho": "A careful reporter shows the source and the distance. <b>Reportedly</b>: several reports, no single source. <b>According to</b> + a source: <i>according to the caretaker</i>, never <i>according to me</i> (say <b>in my opinion</b>). <b>Allegedly</b>: accused but not proven, so never for good news. <b>Apparently</b> = I heard it, it seems. <b>Supposedly</b> = people say so, and I doubt it.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a radio newsroom, minutes before the news. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2dd84eca9370/reportedly-allegedly/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The radio desk, red light on",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "According to the caretaker, the cake was gone by six.",
-          "img": "https://wolf-labs.pages.dev/p/2dd84eca9370/reportedly-allegedly/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The mayor allegedly ate the last slice, but he hasn't commented.",
-          "img": "https://wolf-labs.pages.dev/p/2dd84eca9370/reportedly-allegedly/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The cake was supposedly protected by a camera, but it was seemingly switched off.",
-          "img": "https://wolf-labs.pages.dev/p/2dd84eca9370/reportedly-allegedly/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -177,7 +177,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2dd84eca9370/reportedly-allegedly/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A city at night, seen from a window",
       "pede": "Look at the picture: a city at night, seen from a window. Write 2 or 3 news lines about a light, made-up story (a lost umbrella, a famous cat, a late train). Use <b>reportedly</b>, <b>according to …</b>, <b>apparently</b> or <b>supposedly</b>. Keep it friendly: <b>allegedly</b> only for a joke.",
       "ph": "The town's famous cat has reportedly …",

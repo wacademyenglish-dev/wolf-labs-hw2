@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Think You Should",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/6ff73ab0dbfe/i-think-you-should/img/live-prox.jpg",
+  "capa": "../img/live-prox.jpg",
   "alvo": "opinion and advice with should / shouldn't: I think ... should + plain verb; I don't think ... should; I agree with you (not 'I am agree'); no 'to' after should",
   "abrir": "What advice did a friend give you that really helped?",
   "fecho": "<b>should / shouldn't + plain verb</b>: <i>You should sleep earlier.</i> No <i>to</i> after should. Opinion: <b>I think … should</b> · <b>I don't think … should</b>. Agree: <b>I agree</b>, never <i>I am agree</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about football and advice. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/6ff73ab0dbfe/i-think-you-should/img/live-prox.jpg",
+      "img": "../img/live-prox.jpg",
       "leg": "A record player on a dark beach under green lights",
       "audio": "audio/listen.mp3",
       "falas": [

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Hold Their Attention",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/cb4e81e74b75/hold-their-attention/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "holding attention: invite the listener (Try to imagine…, Picture this…), strengthen a point (The simple fact of the matter is this…), contrast (all / none), vary your words; imagine + noun with no 'you'; less than, never 'less of'; advice (noun) vs advise (verb)",
   "abrir": "Think of a speech or a talk that you remember. Why do you remember it?",
   "fecho": "To hold attention, <b>invite</b> the listener (<i>Try to imagine…</i>), <b>strengthen</b> the point (<i>The simple fact of the matter is this…</i>), <b>contrast</b> (<i>all / none</i>), and vary your words. Traps: <i>Imagine you a world</i> is <b>Imagine a world</b>, <i>less of</i> is <b>less than</b>, and <b>advice</b> is the noun while <b>advise</b> is the verb.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia rehearses an opening for a speech and Leo listens. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/cb4e81e74b75/hold-their-attention/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A big hall, empty, before a speech",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/cb4e81e74b75/hold-their-attention/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A big hall, empty, before a speech",
       "pede": "Look at the picture: a big empty hall before a speech. Write the opening of a talk about something that matters to you. Use <b>Try to imagine</b>, <b>The simple fact of the matter is this</b> or a contrast with <b>all / none</b>.",
       "ph": "Try to imagine …",

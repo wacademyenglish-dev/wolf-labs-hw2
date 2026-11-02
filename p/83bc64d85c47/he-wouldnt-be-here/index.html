@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · He Wouldn’t Be Here · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Archivo+Black&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>He Wouldn’t Be Here · The Boys · The Vought Ranking</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>He Wouldn’t Be Here · The Boys · The Vought Ranking</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Heroes as a product, and a normal guy who lost everything.</p><p style="margin:0 0 6px"><b>The grammar:</b> Then and Now: If it hadn’t happened, he wouldn’t be here.</p><p style="margin:0 0 6px"><b>The class (about 57 min):</b> I Warm-up and Pick a Side · III The Trailer · IV The Hero Jury · V Scene by Scene · VI Then and Now · VII The Vought Ranking · VIII Your Other Life · IX One Minute. No extra scenes: every scene is part of the class.</p><p style="margin:0"><b>Open with:</b> “You know Hughie now. In the trailer, what would be different if Robin were still alive? Guess.”</p></div><!--/prep-->
+    <p><i>The Boys</i> (Prime Video, 2019): superheroes owned by a company, Vought, rich, famous and often terrible. Hughie is a normal guy until a hero, A-Train, runs through his girlfriend Robin in the street; Vought calls it an accident. Vought’s PR team decides what the public thinks of each hero. The grammar: <b>mixed conditionals</b>: <b>past → now</b> (if + had + participle, would + verb: if A-Train hadn’t run so fast, Robin would be alive now) and <b>now → past</b> (if + past, would have + participle: if Homelander were honest, he would have told the truth last year).</p>
+    <p>A note for the teacher: <b>the trailer has strong violence and strong language.</b> Watch it first and decide whether to show it; the lesson works without it. Only clean lines are used, checked against the subtitles (23/09) and told in our own words. The heroes on the board are names only, no faces.</p>
+    <p class="aq-guia"><b>Warm-up and Pick a Side (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the show under the photo). Let them talk; don’t correct the grammar yet. <b>2 · Pick a Side:</b> Vought and its heroes, or the Boys. The student taps one side and defends it for thirty seconds. Then tap “The teacher pushes back”: read the counter-argument in your voice and let them answer. Twice. Push for mixed conditionals (if they hadn’t…, they would…).</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>superheroes</i>, <i>upset</i>, <i>damage</i>, <i>enemies</i> and <i>surprises</i>, before the video, in mystery meaning and hot seat. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (V)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <p class="fim-guia"><b>The ending (IX, One Minute)</b>: the student picks a topic (the road you didn’t take, if you were a different person, Hughie’s life without The Boys) and talks for one minute with mixed conditionals. Then the teacher. Speaking only.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is the Vought tower at night. I: Warm-up and Pick a Side. III: the trailer in three steps. <b>Before:</b> a 30-second clock; the student says as many mixed conditionals as they can (“If I hadn’t started English, I would be … now”), then the teacher. <b>Watch:</b> five questions with two answers each (What do people love? What kind of day is it?…), each with a ▶ time: tap it and the video jumps to that moment; only clean lines were chosen, but the teacher still decides whether to show the trailer. <b>After:</b> Which word did you hear? Five lines (cozy or crazy, bad or bed, friends or trends…), each with a ▶. V: five frames on the film strip. <b>VI, Then and Now:</b> six sentences and two boxes: Past → now (the result is now) and Now → past (the result was in the past). The student taps a sentence and then its box; when all six are in the right box, the rule board appears and stays in the corner on the next pages. <b>VII, The Vought Ranking:</b> a backstage approval board with six heroes and their scores. For each clue (“if · A-Train · not run so fast · Robin · be alive now”) the student says the sentence, taps Check, and the right sentence appears; the hero moves up or down with an arrow and the new score, and the PR note explains the fact. At the end the whole board has moved. <b>VIII, Your Other Life:</b> two conversations; the teacher picks A (the road you didn’t take) or B (if you were a different person). IX: one minute.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>would have been alive now</i> (now: would be), <i>if he didn’t run…, would be alive now</i>, <i>if he were honest, he would tell the truth last year</i> (would have told), <i>if he would be honest</i>, <i>wouldn’t been</i>, <i>wouldn’t lied</i>, <i>won’t be</i>, <i>hadn’t spoke</i>, <i>Where you would be…?</i>, <i>never had met</i>.</p>
+    <!--conversa--><h4>THE HERO JURY (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the trailer, your student judges three choices the trailer shows: Starlight in her dream team, Hughie with Butcher, and Vought’s PR team with the truth. Read the evidence together, let them choose a verdict, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. There is no right answer. Recast mistakes quietly while they talk; at the end, ask them to fix one or two mixed conditionals themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up and Pick a Side, IV The Hero Jury, VII The Vought Ranking, VIII Your Other Life and IX One Minute.</li>
+      <li><b>Listen</b>: II The Words, III The Trailer and V Line by Line.</li>
+      <li><b>Focus</b>: VI Then and Now.</li>
+      <li><b>Write</b>: the homework (the lesson ends speaking).</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script src="aquece.js"></script>
+<script src="final.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* HE WOULDN’T BE HERE · THE BOYS (WOLFLIX B2) · pergunta-surpresa · 29/10/2026 · mixed conditionals */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'palavras', tipo: 'Would you rather', q: 'Would you rather be famous and fake, or unknown and honest?',
+    opc: ['Famous and fake', 'Unknown and honest'], st: ['I’d rather be …, because if I were …, I would have …'],
+    ex: 'Unknown and honest. If I were famous, I would have lost my privacy years ago.', push: 'Fame pays all your bills for life. Still honest?' },
+  { cena: 'falas', tipo: 'And you?', q: 'Who surprised you once, like Hughie surprises Butcher?',
+    opc: ['A friend', 'Someone at work', 'Someone in my family'], st: ['If … hadn’t …, I wouldn’t … now.'],
+    ex: 'A friend. She seemed shy, but she planned a whole trip. If she hadn’t planned it, I wouldn’t know Chile now.', push: 'And when did YOU surprise someone?' },
+  { cena: 'ranking', tipo: 'Opinion', q: 'Do companies decide what we think about celebrities?',
+    opc: ['Yes, completely', 'A little', 'No, we decide'], st: ['If social media didn’t exist, we would have …', 'I think …'],
+    ex: 'A little. If social media didn’t exist, we would have believed every magazine.', push: 'Name one celebrity you liked because of good marketing.' },
+  { cena: 'mistos', tipo: 'What if', q: 'What if you had got a superpower at ten? What would your life be like now?',
+    opc: ['I’d be a hero', 'I’d be rich', 'I’d keep it secret'], st: ['If I had got …, I would be … now.'],
+    ex: 'I’d keep it secret. If I had got super speed at ten, I would be a very relaxed person now: never late!', push: 'Vought offers you a contract. Do you sign it?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* HE WOULDN’T BE HERE · THE BOYS (WOLFLIX B2) · conversa · 29/10/2026 · regra 3×3 do Carlos
+   O júri entra DEPOIS do trailer (III), colado nele: três escolhas que o trailer mostra (Starlight,
+   Hughie, a equipe de PR da Vought), cada uma com as provas do próprio trailer. Formato trocado:
+   o lote pedia arena com troca de lado, mas a cena I já tem o "Pick a Side" (Vought × the Boys,
+   defender e o professor rebate); outra arena repetiria o mesmo gesto. Nada sobre o Robin.
+   A gramática da aula (mixed conditionals) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'juri', apos: 'video', est: 'o', min: 7, img: 'torre', rot: 'The Hero Jury', t: 'You saw the trailer. Now judge three choices.',
+    p: 'Read the evidence. Choose a verdict, or say your own. Defend it with a mixed conditional. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Starlight', sit: 'Starlight just joined the Seven, her dream team. In the trailer she says she’s “just having a bad day”.',
+        provas: ['She smiles for the cameras.', 'She tells a stranger she doesn’t know what she’s doing.', 'She is still on the team.'],
+        q: 'What should Starlight do?', opc: ['Stay and change it', 'Quit and tell the truth', 'Stay quiet'],
+        st: ['If she hadn’t joined, she would … now.', 'If she were braver, she would have …', 'If I were her, I would …'],
+        ex: 'Stay and change it. If she quit, nobody would have listened to her. If she hadn’t joined, she wouldn’t have any power now.',
+        push: 'Your dream job turns out to be fake in the first month. Would YOU stay?' },
+      { tag: 'Hughie', sit: 'A hero tells Hughie he doesn’t have the fight. Butcher says the kid is full of surprises.',
+        provas: ['Hughie worked in a small shop.', 'He has no powers.', 'He joined a dangerous team anyway.'],
+        q: 'Is Hughie brave, or is Butcher using him?', opc: ['He’s brave', 'He’s in over his head', 'Butcher is using him'],
+        st: ['If he hadn’t met Butcher, he would still …', 'If he were a fighter, he would have …', 'I think he …'],
+        ex: 'Butcher is using him. If Hughie hadn’t met Butcher, he would still be at the shop, and he would be safe now.',
+        push: 'Maybe Butcher is using him AND he is brave. Can both be true?' },
+      { tag: 'Vought PR', sit: 'You run Vought’s PR team. You know the truth about the heroes. The public only sees the smiles.',
+        provas: ['The heroes save people on camera.', 'The company decides every story.', 'The truth could crash the ranking.'],
+        q: 'What do you do with the truth?', opc: ['Tell everything', 'Tell a small part', 'Protect the image'],
+        st: ['If people knew, they would have …', 'If we hadn’t hidden it, we wouldn’t … now.', 'If I were in charge, I would …'],
+        ex: 'Tell a small part. If people knew everything, they would have stopped trusting heroes years ago. If we hadn’t hidden so much, we wouldn’t be so scared now.',
+        push: 'The truth costs you your job and your bonus. Same answer?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "Moments that changed you. Then heroes for sale.",
+   "p": "Answer three questions. Pick a side. Defend it."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn the words. In the video, they turn yellow."
+  },
+  "video": {
+   "t": "The Boys. The official trailer.",
+   "p": "Beat the clock first. Watch. Then two tasks."
+  },
+  "cv-juri": {
+   "t": "Judge three choices.",
+   "p": "Read the evidence. Choose. Defend it with if."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it. Say it."
+  },
+  "regra": {
+   "t": "Past to now, or now to past?",
+   "p": "Tap a sentence, then its box. Read the rule."
+  },
+  "ranking": {
+   "t": "Six heroes. Every sentence moves one.",
+   "p": "Read the clue. Say the sentence. Tap Check."
+  },
+  "mistos": {
+   "t": "Your other life.",
+   "p": "Your teacher picks A or B. Use mixed conditionals."
+  },
+  "fim": {
+   "t": "One minute of your other life.",
+   "p": "Pick a topic. Talk one minute. Then the teacher."
+  }
+ },
+ "prep": {
+  "obj": "Condicionais mistas: passado → agora (if + had + particípio, would + verbo) e agora → passado (if + past, would have + particípio): heróis viram produto da Vought, e a vida do Hughie muda num segundo.",
+  "armadilha": "O brasileiro mistura os tempos: “would have been alive now” (agora = would be), “if he didn’t run” para o passado, “if he would be honest”, “wouldn’t lied”, “hadn’t spoke”.",
+  "pal": [
+   "if I hadn’t…, I would be…",
+   "if I were…, I would have…",
+   "wouldn’t be here",
+   "would have told",
+   "damage",
+   "enemies",
+   "PR",
+   "Vought"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a série: a torre da Vought à noite.",
+   "perg": "If heroes were real, would you trust them?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "mundo": {
+   "obj": "Três perguntas sobre momentos que mudaram o aluno e um lado a defender sobre heróis à venda.",
+   "perg": "If that hadn’t happened, where would you be now?",
+   "pula": "Duas perguntas bastam; o lado fica."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (superheroes, upset, damage, enemies, surprises) antes de assistir.",
+   "perg": "What surprises changed your plans?",
+   "pula": "Deixe o aluno chutar e siga rápido."
+  },
+  "video": {
+   "obj": "O trailer inteiro: 30 segundos de condicionais antes e duas tarefas curtas depois.",
+   "perg": "What would be different if Robin were still alive?",
+   "pula": "Assista uma vez só; faça só uma das duas tarefas."
+  },
+  "cv-juri": {
+   "obj": "Júri dos heróis: três escolhas do trailer (Starlight, Hughie…) julgadas com condicionais mistas.",
+   "perg": "If she hadn’t joined, would she be happier now?",
+   "pula": "Duas escolhas bastam, com o PUSH."
+  },
+  "falas": {
+   "obj": "Fala por fala do trailer: ouvir de novo e repetir como o personagem.",
+   "perg": "How would Hughie say it?",
+   "pula": "Duas falas bastam."
+  },
+  "regra": {
+   "obj": "A regra: separar frases passado → agora e agora → passado, e ler os dois modelos.",
+   "perg": "Is that a past cause or a present cause?",
+   "pula": "Não corte: é a regra. Quatro frases bastam."
+  },
+  "ranking": {
+   "obj": "Ranking da Vought: cada frase com condicional mista sobe ou desce um herói no quadro.",
+   "perg": "If Homelander were honest, what would he have done?",
+   "pula": "Quatro heróis bastam."
+  },
+  "mistos": {
+   "obj": "A outra vida do aluno: o professor escolhe A ou B e ele responde com condicionais mistas.",
+   "perg": "If you had chosen another job, who would you be today?",
+   "pula": "Uma opção só basta."
+  },
+  "fim": {
+   "obj": "Um minuto sobre a outra vida (o caminho não tomado, outra pessoa, o Hughie sem The Boys); depois o professor.",
+   "perg": "If you had taken the other road, where would you be?",
+   "pula": "Um tema só, sem o do professor. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa adulta sobre escolhas, viradas e personalidade com condicionais mistas.",
+   "perg": "If you hadn’t moved, who would you be now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre os dilemas da série: heróis como produto, verdade e PR.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Hughie e responde perguntas com condicionais mistas.",
+   "perg": "If you hadn’t met Butcher, where would you be now?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Other roads, other lives.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "if I hadn’t…, I would…",
+    "if I were…, I would have…"
+   ],
+   "cartas": [
+    {
+     "k": "THE ROAD NOT TAKEN",
+     "q": "Which decision, if you hadn’t made it, would change your life most today?",
+     "fup": "Do you ever wonder about it?",
+     "st": [
+      "If I hadn’t …, I wouldn’t be …",
+      "The thing is, …"
+     ],
+     "ex": "If I hadn’t taken that job in 2018, I wouldn’t be living in this city now."
+    },
+    {
+     "k": "YOUR CHARACTER",
+     "q": "If you were a braver person, what would you have done differently?",
+     "fup": "Is it too late?",
+     "st": [
+      "If I were braver, I would have …",
+      "I’d have …"
+     ],
+     "ex": "If I were braver, I would have quit my first job much sooner."
+    },
+    {
+     "k": "ENGLISH",
+     "q": "If you hadn’t started English, what would be different now?",
+     "fup": "Would you miss it?",
+     "st": [
+      "If I hadn’t started, I wouldn’t …",
+      "I’d probably …"
+     ],
+     "ex": "If I hadn’t started, I wouldn’t understand half the series I watch."
+    },
+    {
+     "k": "FAME",
+     "q": "If you were famous, would you have said yes to everything a company asked?",
+     "fup": "Where’s your line?",
+     "st": [
+      "If I were famous, I would never have …",
+      "I see the appeal, but …"
+     ],
+     "ex": "If I were famous, I would never have sold a product I don’t believe in."
+    },
+    {
+     "k": "A LUCKY MOMENT",
+     "q": "What lucky moment explains where you are today?",
+     "fup": "If it hadn’t happened?",
+     "st": [
+      "If I hadn’t met …, I wouldn’t …",
+      "Without it, I’d …"
+     ],
+     "ex": "If I hadn’t met my old boss on a train, I wouldn’t have this career now."
+    },
+    {
+     "k": "SUPERPOWERS",
+     "q": "If you had a superpower, what would you have done with it last week?",
+     "fup": "Would anyone have noticed?",
+     "st": [
+      "If I could …, I would have …",
+      "Nobody would have …"
+     ],
+     "ex": "If I could fly, I would have skipped the traffic on Monday. Everybody would have noticed."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "if … had …, … would be",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Should heroes be owned by a company like Vought?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. If nobody had organized them, there would be chaos now.",
+      "Companies at least answer to someone."
+     ],
+     "fb": [
+      "No. If Vought weren’t in charge, the truth would have come out years ago.",
+      "Profit and power are a terrible mix."
+     ]
+    },
+    {
+     "q": "Hughie joins The Boys for revenge. Right choice?",
+     "a": "Right",
+     "b": "Wrong",
+     "fa": [
+      "Right. If he hadn’t joined, nobody would know the truth now.",
+      "Someone had to act."
+     ],
+     "fb": [
+      "Wrong. If he were thinking clearly, he would have gone to a lawyer.",
+      "Revenge changes who you are."
+     ]
+    },
+    {
+     "q": "PR teams decide what we think of public figures. Is that so bad?",
+     "a": "It’s fine",
+     "b": "It’s dangerous",
+     "fa": [
+      "It’s fine. If nobody had managed their image, we’d have nobody to admire.",
+      "Everyone curates a little."
+     ],
+     "fb": [
+      "It’s dangerous. If PR hadn’t covered the accidents, people would be safer now.",
+      "Image shouldn’t replace the truth."
+     ]
+    },
+    {
+     "q": "Starlight joined her dream team and found the dark side. Should she stay inside or leave?",
+     "a": "Stay inside",
+     "b": "Leave",
+     "fa": [
+      "Stay. If she had left, nobody would be fighting from the inside now.",
+      "Change needs people on the inside."
+     ],
+     "fb": [
+      "Leave. If she were really free, she would have left on day one.",
+      "You can’t fix a system that owns you."
+     ]
+    }
+   ],
+   "fim": "Four rounds. If you hadn’t argued, this page would be very quiet."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Hughie now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Hughie, with mixed conditionals.",
+   "perguntas": [
+    "If you hadn’t met Butcher, where would you be now?",
+    "If you were a hero, what would you have done that day?",
+    "If Vought had told the truth, would you be in The Boys today?",
+    "If you were braver, what would you have said to A-Train?",
+    "If you hadn’t joined, would you be happier now?",
+    "If you could go back, what would you have done differently?"
+   ],
+   "st": [
+    "If I hadn’t …, I would be …",
+    "If I were …, I would have …",
+    "Honestly, …"
+   ],
+   "ex": "If I hadn’t met Butcher, I would be selling electronics now, and I would still be scared of everything."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

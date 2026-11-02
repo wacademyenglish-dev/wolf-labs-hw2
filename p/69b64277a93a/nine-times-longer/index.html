@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Nine Times Longer · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Nine Times Longer · The Gears</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+﻿    <h2>Nine Times Longer · The Gears</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> computers and people share one problem: time spent choosing is time not doing. A spacecraft on Mars learned it in 1997.</p><p style="margin:0 0 6px"><b>The grammar:</b> The more / -er X, the more / less / -er Y (two THEs, one comma) · the fewer + things you can count · the short form (the sooner, the better) · twice as long as, three times longer than.</p><p style="margin:0 0 6px"><b>The lesson (about 55 min, ~45 without the extras):</b> I Your Gears · II Mars, 1997 · III The Two THEs · IV Six Voices · V The Words · VI The Machines · VII Line by Line (extra) · VIII The Debate · IX Your Numbers · X Fix the Findings (extra) · XI Your Laws.</p><p style="margin:0"><b>Open with:</b> “Pick something you do every week. What changes when you do more of it?”</p></div><!--/prep-->
+    <h4>A CONVERSATION LESSON</h4>
+    <p>This is B2: the student talks most of the time. Only the six voices have options to choose; everything else is talk. Your job is to ask the follow-up, take the other side, and listen for the second THE.</p>
+    <h4>WHAT EACH SCENE DOES</h4>
+    <ul>
+      <li><b>I · Your Gears</b> (talk, 6 min). The student picks gear A (an activity) and gear B (what changes), then says if they turn together or against each other. Four questions follow. <b>Write down their first sentence exactly</b> (“When I sleep more…” or “More I sleep, more I…”): you use it in III.</li>
+      <li><b>II · Mars, 1997</b> (predict and defend, 6 min). The student picks a theory and defends it; push back. Then open the file: “The more small tasks it did, the less important work it finished.” Two questions about their life.</li>
+      <li><b>III · The Two THEs</b> (rule, 8 min). The grammar stays on screen. The student links the columns: a first half, then the half that finishes it; a line joins them and the gears turn. For each sentence ask: “Is it true? When is it not true?” Then go back to their sentence from I and fix it together.</li>
+      <li><b>IV · Six Voices</b> (listen and retell, 8 min). After each voice, the student chooses the sentence that says what they mean (the wrong ones change the meaning) and reads it out loud. Then one question about them. Voice 6 disagrees: use it for a mini-debate.</li>
+      <li><b>V–VII · The video</b> (words, video, Line by Line). After the video, the last step is ONE screen: the video stays on the left (tap a time to hear that moment again), with the two gears from scene I under it; on the right, six True or Lie lines about what the video says (an inbox that doubles, the Linux fix, interruptions). Every right answer fills a block, and the gears start to turn. On a Lie the student says the true line. When all six are done, the teacher asks one last question (“Your inbox doubles tomorrow. What is your plan?”): the student taps an answer and says the sentence out loud, with two THEs.</li>
+      <li><b>VIII · The Debate</b> (10 min, the heart of the lesson). Read each idea and take the other side (your card says how). The student answers with “Up to a point…”, “Not necessarily…”, “That depends on…”. The last one: they make a claim and you answer.</li>
+      <li><b>IX · Your Numbers</b> (6 min). Real numbers from their life. While they talk, tap the multiplier (½, ×2, ×3…) and the blocks build. Watch for “two times longer as” and “nine times more long”.</li>
+      <li><b>X · Fix the Findings</b> (extra, 5 min). Six lab notes; five are wrong, number 4 is right.</li>
+      <li><b>XI · Your Laws</b> (6 min). Three laws of their life with two THEs. Try to break one of them. It goes to their My notes.</li>
+    </ul>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>More you practice, more you learn</i> (no THE) · <i>the more…, less…</i> (the second THE falls) · <i>the most / the least</i> · <i>the more long / the more good</i> · <i>nine times more long</i> · <i>the less messages</i> (fewer).</p>
+    <!--conversa--><h4>THE COUNCIL (X) AND THE SURPRISE QUESTION</h4>
+    <p>Your student sits on the office council and votes on three rules from the video: email twice a day, a no-meeting Wednesday, three buckets instead of a ranked list. They vote yes, no, or propose a change, and say why with two THEs or a multiplier; you vote the other way. Wait five seconds in silence, then use the PUSH line (only you see it). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Gears · II Mars · VIII The Debate · IX Your Numbers · X The Council.</li>
+      <li><b>Listen</b>: IV Six Voices · V–VII the video.</li>
+      <li><b>Focus</b>: III The Two THEs.</li>
+      <li><b>Write</b>: XI Your Laws (and the homework).</li>
+    </ul>
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* NINE TIMES LONGER 2.0 (Main B2) · pergunta-surpresa · 28/10/2026 · the more…, the…; multiplicadores */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'nave', tipo: 'Would you rather', q: 'Would you rather work on a robot on Mars or answer emails on Earth for the same salary?',
+    opc: ['A robot on Mars', 'Emails on Earth'], st: ['I’d rather …, because the more …, the …'],
+    ex: 'A robot on Mars! The stranger the problem, the more interesting the job.',
+    push: 'The robot needs you at 3 AM every night. Still Mars?' },
+  { cena: 'vozes', tipo: 'And you?', q: 'What takes you twice as long as it should?',
+    opc: ['Getting ready', 'Answering messages', 'Choosing a film'], st: ['… takes me twice as long as …', 'The more I …, the longer …'],
+    ex: 'Choosing a film. It takes me twice as long as watching it. The more options there are, the less I can decide.',
+    push: 'Who do you know who takes even longer? Describe them with two THEs.' },
+  { cena: 'video', tipo: 'Opinion', q: 'Before the video: is a bigger to-do list good or bad for you?',
+    opc: ['Good: I see everything', 'Bad: it stresses me', 'It depends'], st: ['The longer my list, the …', 'The more I write down, the …'],
+    ex: 'Bad. The longer my list, the less I start. I look at it and make a coffee.',
+    push: 'So how do you remember things? Show me your system.' },
+  { cena: 'vezes', tipo: 'What if', q: 'Your day suddenly has twice as many hours. What gets the extra time?',
+    opc: ['Sleep', 'Work', 'Something new'], st: ['With twice as many hours, I’d …', 'The more free time I had, the more …'],
+    ex: 'Something new. With twice as many hours, I’d finally learn the guitar.',
+    push: 'Be honest: wouldn’t it all go to your phone?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* NINE TIMES LONGER 2.0 (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O conselho entra no lugar de "X · Fix the Findings" (extra; seis notas para corrigir, prática controlada).
+   A aula já tem o Debate (VIII, concordar ou rebater): aqui é OUTRO formato, o voto do conselho, com a opção
+   de propor uma mudança. Três regras para o escritório, tiradas do vídeo (inbox, context switches, buckets do Linux).
+   A gramática da aula (the more…, the…; twice as long, three times more) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'conselho', troca: 'erros', est: 'o', min: 7, img: 'envelopes', rot: 'The Council', t: 'You sit on the office council. Three new rules, from the video.',
+    p: 'Vote on each rule: yes, no, or propose a change. Say why with two THEs or a multiplier. Your teacher votes the other way.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The inbox', sit: 'From Monday, everyone checks email only twice a day: at 9 AM and at 4 PM.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['The less often we check, the more …', 'It would take twice as long to …', 'Yes, if we change it to …'],
+        ex: 'Propose a change: three times a day. The less often we check, the more we finish, but clients can’t wait seven hours.',
+        push: 'Your boss sends you an urgent email at 9:15. Do you see it at 4? Still your vote?' },
+      { tag: 'No-meeting day', sit: 'Every Wednesday has no meetings and no calls. One full day with no context switches.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['The fewer switches we make, the …', 'One quiet day is worth twice as much as …', 'No, because the longer we wait, the …'],
+        ex: 'Yes. The fewer switches I make, the deeper I work. One quiet Wednesday is worth three noisy Mondays.',
+        push: 'The meetings don’t disappear: Thursday now has twice as many. Still yes?' },
+      { tag: 'Three buckets', sit: 'No more long ranked to-do lists. Every task goes into one of three buckets: now, this week, later.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['The longer the list, the less …', 'Ranking takes three times longer than …', 'I’d propose … buckets instead.'],
+        ex: 'Yes. The longer my list gets, the less I actually do. With three buckets I stop ranking and start working.',
+        push: 'And the important task that sits in “later” for six months? Who rescues it?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Something you do is gear A.",
+   "p": "Pick an activity. Say what changes with it."
+  },
+  "nave": {
+   "t": "Mars, 1997: it had power, then silence.",
+   "p": "Pick a theory. Defend it. Then open the file."
+  },
+  "dois": {
+   "t": "Two THEs, one comma.",
+   "p": "Tap a first half, then its ending. Read it."
+  },
+  "vozes": {
+   "t": "Six voices, no structure.",
+   "p": "Listen. Choose what they mean. Answer about you."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen: they turn yellow."
+  },
+  "video": {
+   "t": "What machines learned about time.",
+   "p": "Guess first. Watch. Then True or Lie."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again. Say it."
+  },
+  "debate": {
+   "t": "Five ideas about work and life.",
+   "p": "Your teacher disagrees. Answer with two THEs."
+  },
+  "vezes": {
+   "t": "Twice as long, half as many.",
+   "p": "Answer with a real number from your life."
+  },
+  "cv-conselho": {
+   "t": "The office council: three new rules.",
+   "p": "Vote, or change it. Say why with two THEs."
+  },
+  "leis": {
+   "t": "Three laws of your life.",
+   "p": "Write them with two THEs. They go to My notes."
+  }
+ },
+ "prep": {
+  "obj": "The more X, the more/less Y (dois THEs, uma vírgula), the fewer, the sooner the better e multiplicadores (twice as long as): uma sonda em Marte em 1997 e o tempo gasto escolhendo.",
+  "armadilha": "O brasileiro diz “More you practice, more you learn” (sem THE, calco de “quanto mais… mais”), derruba o segundo THE, usa “the more long” e “nine times more long”, e less com contáveis.",
+  "pal": [
+   "the more…, the more…",
+   "the less…, the less…",
+   "the fewer",
+   "the sooner, the better",
+   "twice as long as",
+   "three times longer than",
+   "half as many",
+   "up to a point"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o tema: tempo gasto escolhendo é tempo sem fazer; engrenagens que giram juntas.",
+   "perg": "What changes when you do more of something?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento: engrenagem A e B da vida do aluno; anote a primeira frase dele para a cena III.",
+   "perg": "When you sleep more, what happens?",
+   "pula": "Duas perguntas bastam; anote a frase."
+  },
+  "nave": {
+   "obj": "Prever e defender: por que a sonda de Marte parou em 1997? Depois abrir o arquivo.",
+   "perg": "Why do you think it went quiet?",
+   "pula": "Uma teoria e o arquivo."
+  },
+  "dois": {
+   "obj": "A regra: dois THEs e uma vírgula; ligar metades e corrigir a frase da cena I.",
+   "perg": "Is it true? When is it not true?",
+   "pula": "Não corte: é a regra. Quatro frases bastam."
+  },
+  "vozes": {
+   "obj": "Seis pessoas dizem uma proporção sem a estrutura; o aluno escolhe a frase certa.",
+   "perg": "What does she really mean?",
+   "pula": "Quatro vozes bastam; guarde a 6 para o mini-debate."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir.",
+   "perg": "Can you guess what it means?",
+   "pula": "Deixe o aluno chutar e siga; cinco minutos no máximo."
+  },
+  "video": {
+   "obj": "Vídeo sobre o que os computadores aprenderam sobre tempo; True or Lie e a pergunta da caixa de e-mail.",
+   "perg": "Your inbox doubles tomorrow. What is your plan?",
+   "pula": "Corte as perguntas abertas, mantenha o True or Lie."
+  },
+  "falas": {
+   "obj": "Ouvir de novo as falas com palavras amarelas e ver a explicação.",
+   "perg": "Can you say that line again?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "debate": {
+   "obj": "O coração da aula: cinco ideias sobre trabalho e vida; o professor pega o outro lado.",
+   "perg": "Up to a point. But when is it not true?",
+   "pula": "Três ideias bastam."
+  },
+  "vezes": {
+   "obj": "Números reais da vida do aluno com multiplicadores; os blocos sobem enquanto ele fala.",
+   "perg": "How much longer is your commute than ten years ago?",
+   "pula": "Três números bastam."
+  },
+  "cv-conselho": {
+   "obj": "Conselho do escritório: votar três regras do vídeo com dois THEs ou multiplicador.",
+   "perg": "Email twice a day: yes or no?",
+   "pula": "Duas regras bastam, com o PUSH."
+  },
+  "leis": {
+   "obj": "Escrita: três leis da vida do aluno com dois THEs; o professor tenta quebrar uma.",
+   "perg": "Can you think of an exception?",
+   "pula": "Uma lei basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta sobre proporções da vida com dois THEs e multiplicadores.",
+   "perg": "The more you earn, the happier you are?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre tempo, escolhas e trabalho, com dois THEs nos argumentos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta um plano para a semana caótica, argumentando com proporções.",
+   "perg": "What would you cut first?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "The gears of your life.",
+   "p": "Pick a card. Answer with two THEs.",
+   "palavras": [
+    "the more…, the more…",
+    "the less…",
+    "the fewer",
+    "twice as…"
+   ],
+   "cartas": [
+    {
+     "k": "MONEY",
+     "q": "Does more money make people happier?",
+     "fup": "Is there a point where it stops?",
+     "st": [
+      "The more …, the …",
+      "Up to a point, but …"
+     ],
+     "ex": "Up to a point. The more you earn, the more you spend, so the happiness disappears."
+    },
+    {
+     "k": "CHOICES",
+     "q": "Is it easier to choose with more options or fewer?",
+     "fup": "What about streaming apps?",
+     "st": [
+      "The more options …, the longer …",
+      "The fewer …, the easier …"
+     ],
+     "ex": "The more shows there are, the longer I spend scrolling instead of watching."
+    },
+    {
+     "k": "YOUR COMMUTE",
+     "q": "How long does your commute take, compared to before?",
+     "fup": "What do you do during it?",
+     "st": [
+      "It takes twice as long as …",
+      "It’s half as long as …"
+     ],
+     "ex": "It takes twice as long as it did five years ago, so I listen to podcasts."
+    },
+    {
+     "k": "MEETINGS",
+     "q": "Do more meetings mean better work?",
+     "fup": "What is the perfect number?",
+     "st": [
+      "The more meetings …, the less …",
+      "That depends on …"
+     ],
+     "ex": "The more meetings we have, the less real work gets done."
+    },
+    {
+     "k": "AGE",
+     "q": "Does time move faster as you get older?",
+     "fup": "Why do you think so?",
+     "st": [
+      "The older I get, the faster …"
+     ],
+     "ex": "The older I get, the faster the years go. December arrives in May."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "What happens when you check your phone more?",
+     "fup": "Have you tried to stop?",
+     "st": [
+      "The more I check it, the …",
+      "The less I …, the better …"
+     ],
+     "ex": "The less I look at my phone, the better I sleep. Simple, but hard."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "the more…, the…",
+    "up to a point",
+    "not necessarily"
+   ],
+   "rodadas": [
+    {
+     "q": "The harder you work, the more successful you are. True?",
+     "a": "True",
+     "b": "Not necessarily",
+     "fa": [
+      "True. The more hours you put in, the more you learn.",
+      "Talent is not enough."
+     ],
+     "fb": [
+      "Not necessarily. The more tired you are, the worse your decisions.",
+      "Smart beats long."
+     ]
+    },
+    {
+     "q": "Answer emails at once, or twice a day?",
+     "a": "At once",
+     "b": "Twice a day",
+     "fa": [
+      "At once. The sooner you answer, the fewer problems grow.",
+      "People appreciate speed."
+     ],
+     "fb": [
+      "Twice a day. The more you interrupt yourself, the less you finish.",
+      "Like the spacecraft on Mars."
+     ]
+    },
+    {
+     "q": "A to-do list: rank every task, or use three big buckets?",
+     "a": "Rank everything",
+     "b": "Three buckets",
+     "fa": [
+      "Rank everything. The clearer the list, the calmer I feel."
+     ],
+     "fb": [
+      "Three buckets. The longer you spend ranking, the less time you have to do."
+     ]
+    },
+    {
+     "q": "A four-day work week: more productive or less?",
+     "a": "More",
+     "b": "Less",
+     "fa": [
+      "More. The more rested people are, the better they work.",
+      "Studies seem to agree."
+     ],
+     "fb": [
+      "Less. The fewer days you have, the more stress you pack into them."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The longer you argue, the better your English gets."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Week",
+   "t": "Your inbox just doubled.",
+   "p": "Plan your week. Defend every step.",
+   "prof": "Push back on each step; listen for the second THE and twice as… as.",
+   "passos": [
+    {
+     "q": "Monday: you have twice as many tasks as usual. What do you do first?",
+     "st": [
+      "First, I’d …, because the sooner …, the …"
+     ],
+     "ex": "First, I’d delete what isn’t urgent, because the shorter the list, the clearer my head."
+    },
+    {
+     "q": "What do you stop doing this week?",
+     "st": [
+      "I’d stop …, because the more I …, the less …"
+     ],
+     "ex": "I’d stop checking email every ten minutes. The more I check it, the less I finish."
+    },
+    {
+     "q": "Who do you ask for help, and how?",
+     "st": [
+      "I’d ask …, because …"
+     ],
+     "ex": "I’d ask my colleague to take two meetings. The fewer meetings I have, the faster I work."
+    },
+    {
+     "q": "Friday: what is your new law of time?",
+     "st": [
+      "My law: the more …, the …"
+     ],
+     "ex": "My law: the earlier I start, the earlier I stop."
+    }
+   ],
+   "fim": "The gears turn. The fewer choices you waste, the more time you keep."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

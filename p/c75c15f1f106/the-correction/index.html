@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Correction · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Correction · The Missing “A”</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Correction · The Missing “A”</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A newspaper got one letter wrong.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Report: the survey report, before the paper changed one letter.</p><p style="margin:0 0 6px"><b>Short class (about 45 min):</b> I Few or a Few? · II The Report · III Which Side of Zero? · IV The Help Desk · V Most of the What? · VI Can You Count It? · X Back to You. Skip if you’re short on time: VII The Word That Decides, VIII The Banned Words and IX Write the Correction (marked EXTRA on your screen). On the practice pages the student speaks first and taps Check on their own screen. Full lesson: about 65 min.</p><p style="margin:0"><b>Open with:</b> “Friends in your city”</p></div><!--/prep-->
+    <p>A newspaper got one letter wrong. The report said <b>A few teachers still ask for paper copies</b> (some, and it’s fine). The paper dropped one letter and printed <b>FEW TEACHERS STILL ASK FOR PAPER COPIES</b> (almost none, so the city wants to stop printing them). The phone hasn’t stopped since seven. <b>a few / a little</b> = some; <b>few / little</b> = hardly any. <b>few</b> with things you count, <b>little</b> with things you don’t. Plus <b>most / most of the / most of them</b>. Both versions are correct English: that’s why the mistake survives for years. The headline is set in metal type; the loose copper “A” goes in and out.</p>
+    <h4>NO RECORDINGS IN THIS ONE</h4>
+    <p>Your voice is the recording. Where the screen asks a question, ask it out loud with real feeling (the callers in scene IV are angry).</p>
+    <h4>THE PAGES</h4>
+    <p><b>I Few or a Few?</b>: four situations. The student taps how it is for them (enough / almost none), the sentence appears, and they say it out loud and why. Their answers come back in scene X.</p>
+    <p><b>II The Report</b>: a survey report on a paper-style screen. The student reads it and taps every few / a few / little / a little (every word can be tapped; only the four count). Then they finish the rule on the right by choosing inside each line. When it is ready, the headline above gets its missing A back and the rule stays in the corner of the next pages.</p>
+    <p><b>III Which Side of Zero?</b>: six sentences and six meanings. Tap a sentence, then what it means (almost empty room / some people were there). No article-picking: the meaning picks the pair.</p>
+    <p><b>IV The Help Desk</b>: six blinking lines. The student reads the caller, explains in their own words, then taps Check: the model answer appears and the light goes off. Under it, one question for a short chat.</p>
+    <p><b>V Most of the What?</b>: six lines with the wrong shape (the most of, most them, most of teachers, most the). The student says each right, then Check. The three shapes stay in the corner.</p>
+    <p><b>VI Can You Count It?</b>: six words (money, friends, time…). Tap a word, then its box: I can count it / I can’t count it. If a word goes in the wrong box, tap it to take it back.</p>
+    <p><b>VII The Word That Decides</b>: five teachers, five lines. True or lie? If it is a lie, the student says the truth (the article decides: the model appears under the line).</p>
+    <p><b>VIII The Banned Words (extra)</b>: six numbers out of 140. The student says each one without most, many or a lot, then taps Check.</p>
+    <p><b>IX Write the Correction</b>: three drafts of the correction, one wrong word in each. The student says the right word, then Check; the headline appears with its A. Then they tell the correction with the facts and tap each word when they use it (most of the, a few, none of them, barely any).</p>
+    <h4>THE NOUN NEVER DECIDES</h4>
+    <p>In few / a few, the article decides. If your student hesitates, cover the noun. The corrector can’t tell a “few” that should be “a few”: ask “Is it a complaint?”</p>
+    <h4>SCENE I COMES BACK</h4>
+    <p>Your student’s four answers about their own life return in the last scene.</p>
+    <!--conversa--><h4>THE JURY (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After the five teachers, your student is the jury for the missing “A”: the editor who cut it, the paper (where the correction goes) and the readers who shared the headline. They read the evidence, choose a verdict and defend it with a few, few, a little or most of; you argue the other side. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast mistakes quietly while they talk (watch for “the most of the” and “a few money”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Few or a Few?, IV The Help Desk, VII The Word That Decides, VIII The Jury, IX Write the Correction (VII and IX are no longer extra).</li>
+      <li><b>Focus</b>: II The Report, III Which Side of Zero?, V Most of the What?, VI Can You Count It?</li>
+      <li><b>Write</b>: X, their own life. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE CORRECTION (Main B1) · pergunta-surpresa · 27/10/2026 · a few / few / a little / little / most of */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'manchete', tipo: 'And you?', q: 'How do you read the news: the whole story, or only the headlines?',
+    opc: ['The whole story', 'Only headlines', 'I don’t read the news'], st: ['Most of the time, I …', 'I read a few …, but few …'],
+    ex: 'Only headlines, most of the time. I read a few full stories on Sunday, when I have a little more time.', push: 'Has a headline ever fooled you?' },
+  { cena: 'painel', tipo: 'Would you rather', q: 'Would you rather answer angry phone calls for a day or write a correction everybody reads?',
+    opc: ['Answer the calls', 'Write the correction'], st: ['I’d rather …, because few people …', 'There’s little …'],
+    ex: 'Write the correction. There’s little I hate more than angry phone calls.', push: 'Your name goes on the correction, in big letters. Still?' },
+  { cena: 'conta', tipo: 'What if', q: 'You can have a little more of one thing every day. What is it?',
+    opc: ['Time', 'Sleep', 'Money', 'Patience'], st: ['I’d like a little more …, because …', 'I have very little …'],
+    ex: 'Sleep. I have very little in the week, and a few more minutes would change everything.', push: 'And what do you have too much of?' },
+  { cena: 'fim', tipo: 'Opinion', q: 'Do most people say sorry when they make a mistake at work?',
+    opc: ['Yes, most do', 'Only a few', 'Very few'], st: ['Most of the people I know …', 'Only a few …, because …'],
+    ex: 'Only a few. Most of my colleagues explain the mistake, but very few actually say sorry.', push: 'And you? Tell me about the last time you said sorry at work.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE CORRECTION (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O júri entra no lugar de "VIII · The Banned Words" (extra; prática controlada repetida depois do V e do VI).
+   Depois das cinco professoras (VII), o aluno julga quem errou na manchete: o editor que cortou o "A",
+   o jornal (onde imprimir a correção) e os leitores que compartilharam sem ler. Provas na tela.
+   A gramática (a few / few / a little / little / most of) mora nos iniciadores e nas provas. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'juri', troca: 'proibidas', est: 'o', min: 7, img: 'jornais', rot: 'The Jury', t: 'One missing letter. Who is responsible?',
+    p: 'Read the evidence. Give your verdict, and say why with a few, few, a little or most of. Your teacher argues the other side.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The editor', provas: ['The headline was one letter too long, so Tom cut the “A”.', 'In twenty years, Tom has made very few mistakes.'],
+        q: 'What should happen to Tom?', opc: ['A warning', 'Nothing: fix it and move on', 'No more front pages'],
+        st: ['He has made few mistakes, so …', 'Only a few readers …', 'A little mistake, but …'],
+        ex: 'A warning. He has made very few mistakes, but this little letter changed the whole story.',
+        push: 'Most of the teachers in the city called the paper. Still only a warning?' },
+      { tag: 'The paper', provas: ['Most of the readers only saw the headline.', 'The correction is short: a few lines.'],
+        q: 'Where should the correction go?', opc: ['Page 1, big', 'A small note inside', 'Online only'],
+        st: ['Most of the readers …, so …', 'A few lines on page 1 …', 'Very few people read …'],
+        ex: 'Page 1. Most of the readers saw the mistake there, and very few people read page 12.',
+        push: 'Page 1 costs the paper a big advertisement. Who pays for it?' },
+      { tag: 'The readers', provas: ['A few thousand people shared the headline online.', 'Few of them opened the report.'],
+        q: 'Are the readers guilty too?', opc: ['Yes', 'A little', 'No: they trusted the paper'],
+        st: ['Few of them …, so …', 'Most of us …', 'They’re a little guilty, because …'],
+        ex: 'A little. Few of them read the report, but most of us share headlines without reading. I do it too.',
+        push: 'When did YOU last share something without reading it? Be honest.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "vida": {
+   "t": "Four questions about you.",
+   "p": "Tap what is true. Say it, and why."
+  },
+  "manchete": {
+   "t": "The report, before one letter changed.",
+   "p": "Read it out loud. Tap few and little. Finish the rule."
+  },
+  "zero": {
+   "t": "Some, or almost none?",
+   "p": "Tap a sentence, then its meaning. Read them aloud."
+  },
+  "painel": {
+   "t": "Six angry callers. One headline.",
+   "p": "Explain it out loud. Then tap Check."
+  },
+  "most": {
+   "t": "Most of the what?",
+   "p": "Say each line right, out loud. Then tap Check."
+  },
+  "conta": {
+   "t": "Now the noun decides.",
+   "p": "Tap a word, then its box. Say a sentence."
+  },
+  "palavra": {
+   "t": "Five teachers. One small word decides.",
+   "p": "True or lie? If it’s a lie, say the truth."
+  },
+  "cv-juri": {
+   "t": "One missing letter. Who is responsible?",
+   "p": "Read the evidence. Give a verdict. Say why."
+  },
+  "correcao": {
+   "t": "Tomorrow’s correction. Short, and right.",
+   "p": "Fix each draft. Tell the correction. Tap each word."
+  },
+  "fim": {
+   "t": "Your four answers come back.",
+   "p": "Write about your life with the five words. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "A few / few, a little / little e most of the: o jornal tirou um “A” e “A few teachers ask for paper copies” virou FEW TEACHERS, quase ninguém.",
+  "armadilha": "O brasileiro não sente a diferença entre “poucos” e “alguns” no artigo: troca few por a few, diz “the most of the”, “most of teachers” e “a few money”.",
+  "pal": [
+   "a few",
+   "few",
+   "a little",
+   "little",
+   "most of the",
+   "most of them",
+   "none of them",
+   "barely any",
+   "headline"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: o jornal errou uma letra na manchete.",
+   "perg": "Do you still read news on paper?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "vida": {
+   "obj": "Aquecimento pessoal: quatro situações da vida do aluno com few/a few. Voltam na cena X.",
+   "perg": "Do you have a few friends in your city, or few?",
+   "pula": "Três perguntas bastam."
+  },
+  "manchete": {
+   "obj": "Ler o relatório, achar few/a few/little/a little e completar a regra.",
+   "perg": "Is “a few” some, or almost none?",
+   "pula": "Leia só o primeiro parágrafo."
+  },
+  "zero": {
+   "obj": "Ligar frase ao sentido: acima do zero (some) ou abaixo (almost none).",
+   "perg": "Which side of zero is this?",
+   "pula": "Quatro frases bastam."
+  },
+  "painel": {
+   "obj": "Seis leitores bravos: o aluno explica a diferença com as próprias palavras.",
+   "perg": "Why is this caller angry?",
+   "pula": "Três ligações bastam."
+  },
+  "most": {
+   "obj": "Most / most of the / most of them: corrigir a forma errada em voz alta.",
+   "perg": "Most, most of the, or most of them?",
+   "pula": "Quatro linhas bastam."
+  },
+  "conta": {
+   "obj": "Contável ou incontável decide o par: few/a few ou little/a little.",
+   "perg": "Can you count it?",
+   "pula": "Quatro palavras bastam."
+  },
+  "palavra": {
+   "obj": "Cinco professores: verdade ou mentira, decidida pelo artigo.",
+   "perg": "Is it true, or a lie?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-juri": {
+   "obj": "Júri do “A” perdido: editor, jornal ou leitores; veredito com a few, few, a little, most of.",
+   "perg": "Who is most responsible, and why?",
+   "pula": "Dois acusados bastam."
+  },
+  "correcao": {
+   "obj": "Corrigir três rascunhos da errata e contar a correção com os fatos.",
+   "perg": "What should the correction say?",
+   "pula": "Cena extra: um rascunho basta."
+  },
+  "fim": {
+   "obj": "Escrita: a vida do aluno com a few, few, a little, little e most of.",
+   "perg": "Has anything changed since scene I?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa pessoal: some ou quase nada, com o artigo certo.",
+   "perg": "Do you have a little free time, or little?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate com argumentos: papel ou tela, jornais e erros.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o editor que cortou o “A” e responde à entrevista.",
+   "perg": "Why did you cut the A?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Some, or almost none?",
+   "p": "Pick a card. Choose the article. Say why.",
+   "palavras": [
+    "a few",
+    "few",
+    "a little",
+    "little",
+    "most of"
+   ],
+   "cartas": [
+    {
+     "k": "FREE TIME",
+     "q": "How much free time do you have on weekdays?",
+     "fup": "What do you do with it?",
+     "st": [
+      "I have a little time to …",
+      "I have little time, so …"
+     ],
+     "ex": "I have little time on weekdays, so most of my reading happens on Sunday."
+    },
+    {
+     "k": "OLD FRIENDS",
+     "q": "How many school friends do you still see?",
+     "fup": "Why do people lose touch?",
+     "st": [
+      "I still see a few …",
+      "Few of them …"
+     ],
+     "ex": "I still see a few of them, but most of them moved away."
+    },
+    {
+     "k": "PAPER",
+     "q": "What do you still do on paper?",
+     "fup": "Will it disappear?",
+     "st": [
+      "I still use paper for a few things: …",
+      "Most of my … is on my phone."
+     ],
+     "ex": "I still write a few birthday cards, but most of my notes are on my phone."
+    },
+    {
+     "k": "YOUR WORK",
+     "q": "Do most of your colleagues like their job?",
+     "fup": "And you?",
+     "st": [
+      "Most of them …",
+      "A few of them …"
+     ],
+     "ex": "Most of them like it, but a few of them want to leave."
+    },
+    {
+     "k": "MONEY",
+     "q": "Do you save a little money every month?",
+     "fup": "What are you saving for?",
+     "st": [
+      "I save a little …",
+      "There is little money left after …"
+     ],
+     "ex": "I save a little every month for a trip next year."
+    },
+    {
+     "k": "THE NEWS",
+     "q": "How much of the news do you believe?",
+     "fup": "Where do you read it?",
+     "st": [
+      "I believe most of …",
+      "Few headlines …"
+     ],
+     "ex": "I believe most of it, but few headlines tell the whole story."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Defend it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "a few",
+    "few",
+    "most of",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Should the city keep printing paper copies for teachers?",
+     "a": "Keep them",
+     "b": "Stop them",
+     "fa": [
+      "Keep them. A few teachers really need them.",
+      "Most of the cost is small anyway."
+     ],
+     "fb": [
+      "Stop them. Few people read paper now.",
+      "Most of the copies end up in the trash."
+     ]
+    },
+    {
+     "q": "A newspaper mistake: a small correction or a front-page apology?",
+     "a": "Small correction",
+     "b": "Front page",
+     "fa": [
+      "A small correction. It was one letter.",
+      "Most of the readers will understand."
+     ],
+     "fb": [
+      "The front page. The headline was on the front page.",
+      "A few lines inside are not enough."
+     ]
+    },
+    {
+     "q": "Paper books or e-books?",
+     "a": "Paper",
+     "b": "E-books",
+     "fa": [
+      "Paper. I read a little every night, without a screen.",
+      "Few things feel better than a real book."
+     ],
+     "fb": [
+      "E-books. I travel a lot, so I need a few books in one place.",
+      "Most of my reading is on the train."
+     ]
+    },
+    {
+     "q": "Share a headline you didn’t read, or never share it?",
+     "a": "Share it",
+     "b": "Never",
+     "fa": [
+      "Share it. Most of the time headlines are right.",
+      "Nobody has time to read every article."
+     ],
+     "fb": [
+      "Never. A few words can change everything.",
+      "This story shows it: one letter."
+     ]
+    }
+   ],
+   "fim": "Four rounds. A few good points, and few easy answers."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the editor now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the editor who cut the A.",
+   "perguntas": [
+    "What did the report really say?",
+    "Why did you cut the A from the headline?",
+    "How many people called the paper?",
+    "Did most of the teachers stop asking for paper copies?",
+    "What does the correction say tomorrow?",
+    "Will you check a few more letters next time?"
+   ],
+   "st": [
+    "The report said a few …",
+    "Most of the callers …",
+    "I only had a little …"
+   ],
+   "ex": "The report said a few teachers still ask for paper, but I printed few. Most of the callers were right."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

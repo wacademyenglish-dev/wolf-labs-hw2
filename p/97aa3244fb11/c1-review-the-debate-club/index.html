@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Debate Club · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 7 Review · The Debate Club</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Debate Club · C1 Unit 7 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 7 (Argue and persuade). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> The final of a university debate club (invented). The board is twelve motions; on each square the student argues for one minute, conceding, contrasting and persuading. Then pick-a-side questions and feedback.</p><p style="margin:0 0 6px"><b>About 48 min:</b> I · The Die (8) · II · The Motions (16) · III · Pick a Side (7) · IV · The Coach (6) · V · After the Debate (7) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Roll the die. The number chooses the challenge.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>synthesis: in short, the bottom line is · granted, be that as it may · persuasion: imagine, what if, mixed conditionals · feedback: what I liked was, it might be worth · on the contrary × on the other hand · assuming, given that, providing</p>
+    <h4>THE DIE</h4>
+    <p>Tap <b>Roll the die</b>: the number chooses one of the six topics (no repeats until all six are done). The student does the challenge from memory.</p>
+    <h4>THE MOTIONS</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>PICK A SIDE</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>AFTER THE DEBATE</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>on the contrary (for on the other hand)</i>, <i>be that as it is</i>, <i>what if we would</i>, <i>it might worth</i>, <i>given that (for a hypothesis)</i>, <i>in short of</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE COACH (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After Pick a Side, your student becomes the team coach and you play Sam, a nervous first-year debater ten minutes before the final. Ask Sam’s four questions; the student answers in role with the Unit 7 tools (what I liked was, it might be worth, granted / be that as it may, assuming). Sam’s secret: Sam opens if the coach praises one real strength first and allows one note card. Wait five seconds in silence after each question, use the PUSH line (only you see it), recast quietly while they talk, then close the plan on screen and ask for one or two self-corrections.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Die and VI · I Can.</li>
+      <li><b>Out loud</b>: II · The Motions and III · Pick a Side, IV · The Coach and V · After the Debate.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW C1 · UNIT 7 · THE DEBATE CLUB · pergunta-surpresa · 28/10/2026 · concede, contrast, persuade, condições */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'dado', tipo: 'And you?', q: 'Are you the kind of person who argues to win, or argues to understand?',
+    opc: ['To win', 'To understand', 'It depends on the topic'], st: ['Granted, I …', 'On the other hand, …'],
+    ex: 'To understand, mostly. Granted, I hate losing about football. On the other hand, at work I really listen.', push: 'Tell me the last time you argued only to win.' },
+  { cena: 'tabuleiro', tipo: 'Would you rather', q: 'Would you rather debate against a calm expert or a loud amateur?',
+    opc: ['A calm expert', 'A loud amateur'], st: ['I’d rather …, given that …', 'Be that as it may, …'],
+    ex: 'A calm expert. Given that experts use evidence, I’d learn something, even if I lose.', push: 'The loud amateur wins the audience vote. Still your choice?' },
+  { cena: 'escolha', tipo: 'What if', q: 'What if every family argument had a one-minute limit per person?',
+    opc: ['Brilliant idea', 'Total disaster', 'Only for some topics'], st: ['If my family had …, we would …', 'Imagine …'],
+    ex: 'Brilliant idea. Imagine my brother talking for only one minute! If we had that rule, dinners would be calmer.', push: 'Who in your family would break the rule first?' },
+  { cena: 'conversa', tipo: 'Opinion', q: 'Is it a strength or a weakness to change your mind in public?',
+    opc: ['A strength', 'A weakness', 'It depends on how'], st: ['On the contrary, …', 'The bottom line is …'],
+    ex: 'A strength. People call it weak; on the contrary, it shows you listen. The bottom line is: evidence should win.', push: 'Would you vote for a leader who changes their mind every month?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW C1 · UNIT 7 · THE DEBATE CLUB · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A aula já é um debate (II · The Motions, III · Pick a Side): em vez da arena, um PAPEL de outro tipo.
+   O conselheiro ENTRA depois de "III · Pick a Side" (42 min, nenhuma cena extra: +6 min cabe).
+   O aluno é o técnico do time; o professor é um calouro nervoso antes da final. A Unidade 7 mora nos
+   iniciadores: what I liked was, it might be worth, granted / be that as it may, assuming / providing, in short. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'tecnico', apos: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'The Coach', t: 'Ten minutes before the final.',
+    p: 'You are the team coach. Your teacher is a nervous first-year debater. Give feedback in role, kindly but honestly. Then agree on the plan.',
+    formato: 'papel',
+    aluno: { quem: 'The coach', quer: 'You want Sam to open the final with a strong, short speech.', limite: 'Your line: Sam speaks first. No reading from the phone.' },
+    prof: { quem: 'Sam, first year', quer: 'Sam wants to speak last, or not at all.', limite: 'Secret: Sam will open if the coach praises one real strength first and lets Sam keep one note card.' },
+    rot_perg: 'Sam asks',
+    perguntas: [
+      { q: 'Be honest. Was my practice speech terrible?',
+        ex: 'Not at all. What I liked was your opening story. It might be worth cutting the statistics: three numbers are enough.' },
+      { q: 'Granted, I know the topic. But what if I freeze on stage?',
+        ex: 'Be that as it may, you froze in practice and still finished. Imagine the judges seeing you recover: that’s persuasive.' },
+      { q: 'Why can’t I just speak last, like I asked?',
+        ex: 'Assuming you open strongly, the team sets the tone. Given that our last speaker is our best, you’re more useful first.' },
+      { q: 'In short, what should I remember when I walk on stage?',
+        ex: 'In short: one story, two arguments, one bottom line. The bottom line is that you know this better than they do.' }
+    ],
+    st: ['What I liked was …', 'It might be worth …', 'Granted, … Be that as it may, …', 'Assuming …, …'],
+    push: 'Sam says: “On the contrary, I think I should leave the team.” Change Sam’s mind in two sentences.',
+    acordo: { tag: 'The plan', q: 'What do you agree on?',
+      opc: ['Sam opens, with one card', 'Sam speaks second', 'Sam opens, no notes'],
+      st: ['Providing that you …, I’m happy to …', 'The bottom line is …'],
+      ex: 'Sam opens, with one card. Providing that you only use it for the numbers, I’m happy with that.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "dado": {
+   "t": "Roll the die. The number chooses.",
+   "p": "Your teacher rolls. Do the challenge from memory."
+  },
+  "tabuleiro": {
+   "t": "Twelve motions. One minute each.",
+   "p": "Your teacher rolls and reads the motion. Argue it."
+  },
+  "escolha": {
+   "t": "A or B, and persuade me.",
+   "p": "Choose. Persuade your teacher in three sentences."
+  },
+  "cv-tecnico": {
+   "t": "Ten minutes before the final.",
+   "p": "Coach Sam, kindly but honestly. Then agree on a plan."
+  },
+  "conversa": {
+   "t": "After the debate: real opinions.",
+   "p": "Answer. Then ask the question back."
+  },
+  "pode": {
+   "t": "Unit 7: what can you do now?",
+   "p": "Read each line aloud. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 7 (argumentar e persuadir): síntese, concessão (granted, be that as it may), persuasão (what if, imagine), feedback, contraste e condições precisas, na final de um clube de debate.",
+  "armadilha": "On the contrary no lugar de on the other hand; “be that as it is”; “what if we would”; “it might worth” (it might be worth); given that para hipótese; “in short of”.",
+  "pal": [
+   "in short",
+   "the bottom line is",
+   "granted",
+   "be that as it may",
+   "what if",
+   "it might be worth",
+   "on the other hand",
+   "assuming",
+   "providing"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: nada de gramática nova, argumentar de memória na final do clube de debate.",
+   "perg": "Have you ever won an argument you were wrong about?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "dado": {
+   "obj": "O dado escolhe um dos seis tópicos da unidade; desafio de memória.",
+   "perg": "Which tool does this challenge need?",
+   "pula": "Três lançamentos bastam."
+  },
+  "tabuleiro": {
+   "obj": "Tabuleiro de 12 moções: um minuto de argumento por casa, concedendo, contrastando e persuadindo.",
+   "perg": "Granted, but what’s your bottom line?",
+   "pula": "Pare na metade do tabuleiro."
+  },
+  "escolha": {
+   "obj": "Escolha A ou B e convença o professor em três frases.",
+   "perg": "Why should I agree with you?",
+   "pula": "Duas escolhas bastam."
+  },
+  "cv-tecnico": {
+   "obj": "O aluno é o técnico; o professor é o Sam, calouro nervoso; feedback gentil e honesto e um plano.",
+   "perg": "What did you like, and what might be worth changing?",
+   "pula": "Duas perguntas do Sam bastam."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal sobre feedback e opiniões reais; o aluno devolve a pergunta.",
+   "perg": "How do you take criticism?",
+   "pula": "Duas perguntas bastam."
+  },
+  "pode": {
+   "obj": "Checklist “I can” da unidade; o que ficar aberto vai para a lição de casa.",
+   "perg": "Which tool is still hard for you?",
+   "pula": "Leia só as linhas em aberto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa usando as ferramentas de argumento sobre a vida do aluno.",
+   "perg": "Granted, but what’s the bottom line?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade, com concessão e síntese em cada lado.",
+   "perg": "Be that as it may, why your side?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno faz o discurso de encerramento da final em quatro passos.",
+   "perg": "What’s your bottom line?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Argue about your own life.",
+   "p": "Pick a card. Concede, then persuade.",
+   "palavras": [
+    "granted",
+    "be that as it may",
+    "in short",
+    "the bottom line is",
+    "it might be worth",
+    "assuming"
+   ],
+   "cartas": [
+    {
+     "k": "A HABIT",
+     "q": "What habit of yours would you defend, even if it’s bad for you?",
+     "fup": "Granted, but is it worth it?",
+     "st": [
+      "Granted, it’s …, but …",
+      "Be that as it may, …"
+     ],
+     "ex": "Granted, coffee at night is a bad idea. Be that as it may, it’s my favorite moment."
+    },
+    {
+     "k": "FEEDBACK",
+     "q": "What’s the best feedback you’ve ever received?",
+     "fup": "How was it said?",
+     "st": [
+      "What I liked was …",
+      "It might be worth …"
+     ],
+     "ex": "My boss said, “What I liked was your honesty; it might be worth shortening your emails.”"
+    },
+    {
+     "k": "WHAT IF",
+     "q": "What if your company let everyone choose their own hours?",
+     "fup": "Would it work for you?",
+     "st": [
+      "What if we …?",
+      "Imagine …"
+     ],
+     "ex": "Imagine starting at eleven. What if productivity actually went up?"
+    },
+    {
+     "k": "IN SHORT",
+     "q": "Sum up your last year in one sentence.",
+     "fup": "And the bottom line?",
+     "st": [
+      "In short, …",
+      "The bottom line is …"
+     ],
+     "ex": "In short, a hard year. The bottom line is, I learned to say no."
+    },
+    {
+     "k": "YOUR CONDITIONS",
+     "q": "Would you move abroad for work? On what condition?",
+     "fup": "And if they said no?",
+     "st": [
+      "Providing …, I would …",
+      "Assuming …"
+     ],
+     "ex": "Providing my family came too, I would move tomorrow."
+    },
+    {
+     "k": "TWO SIDES",
+     "q": "Is social media good or bad for friendships?",
+     "fup": "Where do you stand?",
+     "st": [
+      "On the one hand, …; on the other hand, …"
+     ],
+     "ex": "On the one hand, I talk to old friends; on the other hand, I see them less."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "granted",
+    "be that as it may",
+    "the bottom line is",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Debate clubs: real skill, or just a game?",
+     "a": "Real skill",
+     "b": "Just a game",
+     "fa": [
+      "Real skill. Arguing both sides is how you understand people.",
+      "The bottom line is, it trains your brain."
+     ],
+     "fb": [
+      "Just a game. Granted, it’s fun, but winning isn’t thinking.",
+      "Real life doesn’t give you one minute."
+     ]
+    },
+    {
+     "q": "Should a coach be kind or tough before a final?",
+     "a": "Kind",
+     "b": "Tough",
+     "fa": [
+      "Kind. A nervous speaker needs confidence, not a list.",
+      "What I liked was… opens every door."
+     ],
+     "fb": [
+      "Tough. Be that as it may, the final won’t be kind.",
+      "Honest notes now save the team later."
+     ]
+    },
+    {
+     "q": "Is it ever right to argue for something you don’t believe?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Lawyers do it every day.",
+      "Granted, it feels strange, but it builds empathy."
+     ],
+     "fb": [
+      "No. In short, it trains people to lie well.",
+      "I see your point, but my words should be mine."
+     ]
+    },
+    {
+     "q": "Facts or stories: what persuades people more?",
+     "a": "Facts",
+     "b": "Stories",
+     "fa": [
+      "Facts. Assuming people are rational, numbers win.",
+      "Stories can lie."
+     ],
+     "fb": [
+      "Stories. Imagine a number crying. Nobody remembers it.",
+      "The bottom line is, people feel first."
+     ]
+    }
+   ],
+   "fim": "Four rounds. In short, a draw. The bottom line is, everybody argued."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Closing Argument",
+   "t": "Close the final.",
+   "p": "One step at a time. Then say it all.",
+   "prof": "The student picks a motion from the board; they close it in four moves. Watch for “be that as it is” and “it might worth”.",
+   "passos": [
+    {
+     "q": "Your motion, and your side.",
+     "st": [
+      "This house believes that …, and we agree."
+     ],
+     "ex": "This house believes that homework should be banned, and we agree."
+    },
+    {
+     "q": "Concede the other side’s best point.",
+     "st": [
+      "Granted, …",
+      "Be that as it may, …"
+     ],
+     "ex": "Granted, practice matters. Be that as it may, tired kids don’t learn."
+    },
+    {
+     "q": "Persuade: make them imagine.",
+     "st": [
+      "Imagine …",
+      "What if …?"
+     ],
+     "ex": "Imagine a child who reads for fun at night instead of copying answers."
+    },
+    {
+     "q": "Sum it up.",
+     "st": [
+      "In short, …",
+      "The bottom line is …"
+     ],
+     "ex": "In short, less homework, more learning. The bottom line is, childhood is short."
+    }
+   ],
+   "fim": "Concede, persuade, sum up. That’s how finals are won."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

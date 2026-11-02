@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Due to, As a Result · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Due to, As a Result · The Drift Map</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Due to, As a Result · The Drift Map</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> January 1992.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: What comes after the linker? A noun, or a whole sentence?</p><p style="margin:0 0 6px"><b>Short class (about 50 min):</b> I You and the Sea · III The Explainer · V The Drift Map · VI The Rule · VII The Deep Conveyor · X The Drift Lab Jury · XI End of the Shift. Skip if you’re short on time: VIII, IX (marked EXTRA on your screen). Full lesson: about 64 min.</p><p style="margin:0"><b>Open with:</b> “When did you last see the ocean? Where were you, and what was the water like?”</p></div><!--/prep-->
+    <p>January 1992. A winter storm hits a cargo ship in the North Pacific, and thousands of plastic bath toys fall into the sea. Over the next years they wash up in Alaska, go around a giant gyre, and some get trapped in the Arctic ice. The student watches a short explainer about ocean currents, then works the night shift at the Drift Lab in Sitka: first they rebuild the ducks’ journey on the drift map, then they run the deep conveyor. The grammar: <b>due to / owing to / because of + a noun</b> (the cause), <b>because + a sentence</b>, <b>As a result, / Consequently,</b> at the start of a <b>new sentence</b> (the effect), and <b>, which led to + a noun or -ing</b> for the next link. On screen, the North Pacific gyre with six stations and a yellow duck that moves on and fades as the years go by; then the deep conveyor, a loop of eight stretches that light up.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III: a four-minute explainer, <b>sealed</b> until you press play, in four chapters that stop by themselves: the lost ducks, the wind and the spin of the Earth, the deep currents, and why it matters for climate. The chapter times are estimates; if a chapter cuts mid-sentence, let it play a few more seconds. After the video (scene III, step 3): ONE screen. The video stays on the left (tap a time to hear that moment again), with the drift map from the lesson under it; on the right, six True or Lie lines from the explainer. Every right answer lights a station and the duck moves on. On a Lie the student says the true line. When all six are done, June asks one last question (“Why is my old duck almost white?”): the student taps an answer and says the sentence out loud with due to, as a result or which led to.</p>
+    <h4>THE TRAP</h4>
+    <p>Portuguese lets a whole sentence follow the words for <i>due to</i> and <i>because of</i>, so students say <i>Due to the wind was strong</i>. In English those take a noun; a full sentence needs <b>because</b>. The Portuguese word for <i>consequently</i> can glue two sentences with a comma; in English, <b>consequently</b> and <b>as a result</b> start a new sentence. Also: <i>as consequence</i> (no article), <i>owning to</i>, <i>led to</i> + a full sentence.</p>
+    <h4>THE DRIFT MAP AND THE CONVEYOR</h4>
+    <p>Scene V, before the rule: <i>because</i> and <i>so</i> are fine; collect what comes out. Scene V is the pressure: read the fact and the linker on the card, and the student builds the sentence with THAT linker. Help only with the noun: <i>the sun is strong → the strong sun</i>.</p>
+    <h4>THE FACTS</h4>
+    <p>The duck spill is real. The Drift Lab and June the beachcomber are invented. The science is kept simple: wind moves surface water; the Earth’s spin bends currents into gyres; cold, salty water sinks; the deep loop takes about a thousand years.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>storm</i>, <i>currents</i>, <i>tides</i>, <i>patterns</i> and <i>salty</i>, before the video, in hear it in the video and turn the cards. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE DRIFT LAB JURY (X) AND THE SURPRISE QUESTION</h4>
+    <p>End of the night shift: the student is the jury in three cases about the 1992 ducks (is the shipping company guilty, should the toy company pay for the clean-up, can June keep the duck she found). Each case has three pieces of evidence. The student chooses a verdict and explains the chain with due to, as a result and which led to. There is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and the Sea, V The Drift Map, VII The Deep Conveyor, VIII Your Chain Reactions, IX The Beachcomber Calls and X The Drift Lab Jury.</li>
+      <li><b>Listen</b>: II The Words, III The Explainer and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule.</li>
+      <li><b>Write</b>: XI End of the Shift.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* DUE TO, AS A RESULT (Main B2) · pergunta-surpresa · 28/10/2026 · causa e efeito */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'video', tipo: 'Would you rather', q: 'Would you rather spend a week on a cargo ship or a week on a cruise ship?',
+    opc: ['A cargo ship', 'A cruise ship'], st: ['I’d rather …, because of …', '…, which would lead to …'],
+    ex: 'A cargo ship! Because of the silence, I could read all day, which would lead to a very calm week.',
+    push: 'No Wi-Fi, no pool, and the food is the same every day. Still the cargo ship?' },
+  { cena: 'deriva', tipo: 'And you?', q: 'What is the strangest thing you have ever found on a beach or in the street?',
+    opc: ['Something funny', 'Something valuable', 'Something gross'], st: ['I found … due to …', 'As a result, I …'],
+    ex: 'Something valuable: a 50-real note in the sand. As a result, I bought ice cream for everybody.',
+    push: 'Did you look for the owner? Be honest.' },
+  { cena: 'esteira', tipo: 'Opinion', q: 'Plastic in the ocean: whose job is it to fix it?',
+    opc: ['Companies', 'Governments', 'Each of us'], st: ['Owing to …, I think …', 'If companies …, it would lead to …'],
+    ex: 'Companies. Most of the plastic is there because of packaging. As a result, they should pay for new materials.',
+    push: 'How many plastic bottles did YOU use this week?' },
+  { cena: 'roda', tipo: 'What if', q: 'What if your phone fell into the sea today? What would happen next?',
+    opc: ['A disaster', 'A relief', 'Not a big deal'], st: ['I would lose …, which would lead to …', 'As a result, I …'],
+    ex: 'A relief, honestly. I would lose my work chats, which would lead to a quiet weekend. As a result, I might finally read a book.',
+    push: 'All your photos from the last three years are only on that phone. Still a relief?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* DUE TO, AS A RESULT (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O júri com provas entra no lugar de "X · Quick Check" (extra, prática controlada; o mapa da deriva V,
+   a regra VI e a esteira VII ficam). Fim do turno no Drift Lab: três casos sobre os patinhos de 1992.
+   A June (IX) disse "I'm keeping the duck": o terceiro caso decide se ela pode. A gramática da aula
+   (due to / because of + substantivo, As a result, + frase nova, which led to) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'juri', troca: 'quiz', est: 'o', min: 7, img: 'laboratorio', rot: 'The Drift Lab Jury', t: 'End of the shift. Three cases, three verdicts.',
+    p: 'Read the evidence. Choose a verdict, or say your own. Explain the chain: the cause, then the effect.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The ship', sit: '1992: a cargo ship lost twelve containers in a storm, and thousands of plastic toys went into the sea.',
+        provas: ['It was the worst winter storm in ten years.', 'The containers were tied with old straps.', 'The captain chose the fast route, through the storm area.'],
+        q: 'Is the shipping company guilty?', opc: ['Guilty', 'Not guilty', 'Partly guilty'],
+        st: ['The toys were lost due to …', 'The captain chose …, which led to …', '…. As a result, the company …'],
+        ex: 'Partly guilty. The containers broke open due to the storm, but the captain chose the fast route, which led to the accident. As a result, the company should pay something.',
+        push: 'Every ship on that route was in the same storm, and only this one lost its toys. Still only partly?' },
+      { tag: 'The toys', sit: 'Thirty years later, the clean-up bill is still open.',
+        provas: ['The toy plastic lasts for hundreds of years.', 'The toy company never paid for any clean-up.', 'Scientists used the ducks to map the currents for free.'],
+        q: 'Does the toy maker pay?', opc: ['Yes, all of it', 'Half of it', 'No'],
+        st: ['Because of their cheap plastic, …', 'The ducks helped science, which led to …', 'Owing to …, they should …'],
+        ex: 'Half of it. Because of their plastic, beaches are still dirty. But the ducks helped scientists, which led to new maps of the currents.',
+        push: 'The scientists never asked for the ducks; it was an accident. Does that still count for the toy company?' },
+      { tag: 'June’s duck', sit: 'June found an old white duck on a public beach. She says: “I’m keeping it.”',
+        provas: ['A collector offers her 1,000 dollars for it.', 'The lab needs it to date the drift.', 'The beach is public, and she found it first.'],
+        q: 'Who keeps the duck?', opc: ['June', 'The lab', 'Sell it and share'],
+        st: ['She found it first. As a result, …', 'Due to the research, …', 'Selling it would lead to …'],
+        ex: 'The lab, but June gets a photo and her name in the report. The lab needs it for research. As a result, the whole world learns something.',
+        push: 'You found it on your beach, and someone offers you 1,000 dollars. Would you give it to the lab?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "You, the sea, and lost things.",
+   "p": "Tap a card. Answer. Then your teacher answers."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them first. They turn yellow in the video."
+  },
+  "video": {
+   "t": "How do ocean currents work?",
+   "p": "Answer first. Four chapters. Then True or Lie."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line to hear it. Yellow words explain."
+  },
+  "deriva": {
+   "t": "Six stations, six links in the chain.",
+   "p": "Read the log. Join cause and effect in one sentence."
+  },
+  "regra": {
+   "t": "After the linker: a noun, or a sentence?",
+   "p": "Say each wrong line right. Then tap SHOW ME."
+  },
+  "esteira": {
+   "t": "Eight links, one loop. Build them fast.",
+   "p": "Hear the fact and linker. Build the sentence."
+  },
+  "roda": {
+   "t": "Your life is a chain too.",
+   "p": "Tap four. Two links: the cause, then the effect."
+  },
+  "june": {
+   "t": "2 AM. June found an old duck.",
+   "p": "Explain its journey. A linker in every answer."
+  },
+  "cv-juri": {
+   "t": "Three cases, three verdicts.",
+   "p": "Read the evidence. Decide. Explain the chain."
+  },
+  "fim": {
+   "t": "What small thing led to something big?",
+   "p": "Write your chain, four links long. To My notes."
+  }
+ },
+ "prep": {
+  "obj": "Causa e efeito (due to/owing to/because of + substantivo, because + frase, As a result/Consequently, which led to): os patinhos de banho que caíram de um navio em 1992 e rodaram o mundo.",
+  "armadilha": "O português aceita frase depois de “devido a”, então sai “Due to the wind was strong”; também cola “consequently” com vírgula, diz “as consequence”, “owning to” e “led to” + frase inteira.",
+  "pal": [
+   "due to",
+   "owing to",
+   "because of",
+   "as a result",
+   "consequently",
+   "which led to",
+   "currents",
+   "gyre",
+   "storm"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: uma tempestade em 1992 e milhares de patinhos no mar.",
+   "perg": "When did you last see the ocean?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento: o aluno, o mar e as coisas que se perdem; o professor responde também.",
+   "perg": "What is the most important thing you have ever lost?",
+   "pula": "Duas cartas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir: storm, currents, tides, patterns, salty.",
+   "perg": "What is the difference between currents and tides?",
+   "pula": "Deixe o aluno adivinhar; não explique tudo."
+  },
+  "video": {
+   "obj": "Vídeo sobre correntes em quatro capítulos e True or Lie; a June fecha com uma pergunta.",
+   "perg": "Why did the ducks go around in a circle?",
+   "pula": "Não corte os capítulos; quatro linhas do True or Lie bastam."
+  },
+  "falas": {
+   "obj": "Cada fala do vídeo de novo; as palavras amarelas abrem a explicação.",
+   "perg": "Can you say that line again?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "deriva": {
+   "obj": "Antes da regra: refazer a viagem dos patinhos no mapa, juntando causa e efeito (because e so valem).",
+   "perg": "What happened as a result?",
+   "pula": "Quatro estações bastam."
+  },
+  "regra": {
+   "obj": "A regra: depois de due to/because of vem substantivo; frase inteira pede because.",
+   "perg": "Is there a noun or a sentence after the linker?",
+   "pula": "Corte duas linhas."
+  },
+  "esteira": {
+   "obj": "Pressão: a esteira profunda, oito elos; construir cada frase com o conector do cartão.",
+   "perg": "Can you say it with consequently?",
+   "pula": "Cinco elos bastam."
+  },
+  "roda": {
+   "obj": "Reações em cadeia da vida do aluno, em dois elos: causa e efeito.",
+   "perg": "What did that lead to?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "june": {
+   "obj": "O professor é a June; o aluno explica a viagem do patinho com um conector por resposta.",
+   "perg": "Why is my old duck almost white?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-juri": {
+   "obj": "Júri: três casos sobre os patinhos de 1992; escolher um veredito e explicar a cadeia.",
+   "perg": "Is the shipping company guilty? Why?",
+   "pula": "Dois casos bastam; use a linha PUSH."
+  },
+  "fim": {
+   "obj": "Escrita: uma reação em cadeia da vida do aluno, com quatro elos.",
+   "perg": "What small thing led to something big?",
+   "pula": "Três elos bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta de causa e efeito sobre cidade, trabalho e decisões.",
+   "perg": "What changed in your city due to one decision?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre plástico, oceano e responsabilidade, argumentando com cadeias de causa.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira um dos patinhos de 1992 e conta a própria viagem.",
+   "perg": "Why did you end up in Alaska?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Cause, then effect.",
+   "p": "Pick a card. Build the chain out loud.",
+   "palavras": [
+    "due to",
+    "because of",
+    "as a result",
+    "which led to",
+    "consequently"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CITY",
+     "q": "What changed in your city due to one big decision?",
+     "fup": "Was it worth it?",
+     "st": [
+      "Due to the new …, …",
+      "As a result, …"
+     ],
+     "ex": "Due to the new bike lanes, traffic slowed down. As a result, more people started cycling."
+    },
+    {
+     "k": "A BAD DAY",
+     "q": "Describe a day where one small thing ruined everything.",
+     "fup": "Could you have stopped it?",
+     "st": [
+      "Because of …, I missed …",
+      "…, which led to …"
+     ],
+     "ex": "Because of a dead phone battery, I missed the alarm, which led to the worst Monday ever."
+    },
+    {
+     "k": "WEATHER",
+     "q": "Has the weather ever changed your plans completely?",
+     "fup": "What did you do instead?",
+     "st": [
+      "Owing to the …, the … was cancelled.",
+      "Consequently, we …"
+     ],
+     "ex": "Owing to the storm, our flight was cancelled. Consequently, we spent a night at the airport."
+    },
+    {
+     "k": "WORK",
+     "q": "What change at work had effects nobody expected?",
+     "fup": "Who noticed first?",
+     "st": [
+      "Due to …, …",
+      "As a result, nobody …"
+     ],
+     "ex": "Due to remote work, the office got empty. As a result, nobody knows the new people."
+    },
+    {
+     "k": "PLASTIC",
+     "q": "What plastic thing do you use every day that you could stop using?",
+     "fup": "Why haven’t you stopped?",
+     "st": [
+      "Because of …, I still …",
+      "If I stopped, it would lead to …"
+     ],
+     "ex": "Because of convenience, I still buy bottled water."
+    },
+    {
+     "k": "A TURNING POINT",
+     "q": "What is a turning point in your life that started with something tiny?",
+     "fup": "Where would you be without it?",
+     "st": [
+      "It all started because of …",
+      "…, which led to …"
+     ],
+     "ex": "It all started because of a wrong bus, which led to meeting my best friend."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Build the chain.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "The thing is, …",
+    "As a result, …",
+    "which led to",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Who should pay for plastic in the ocean: companies or consumers?",
+     "a": "Companies",
+     "b": "Consumers",
+     "fa": [
+      "Companies. They make it, and owing to cheap plastic, they make more profit.",
+      "As a result, they should clean it up."
+     ],
+     "fb": [
+      "Consumers. The demand comes from us.",
+      "Our choices lead to their production."
+     ]
+    },
+    {
+     "q": "Was the 1992 spill a disaster or a gift to science?",
+     "a": "A disaster",
+     "b": "A gift",
+     "fa": [
+      "A disaster. Due to the spill, plastic is still in the Arctic ice.",
+      "Nothing justifies that."
+     ],
+     "fb": [
+      "A gift. Because of the ducks, scientists mapped the currents.",
+      "As a result, we understand the ocean better."
+     ]
+    },
+    {
+     "q": "Ban single-use plastic completely, or reduce it slowly?",
+     "a": "Ban it",
+     "b": "Reduce slowly",
+     "fa": [
+      "Ban it. Slow change has led to almost no change.",
+      "The ocean can’t wait."
+     ],
+     "fb": [
+      "Reduce slowly. A ban would lead to chaos for small shops.",
+      "Consequently, people would resist it."
+     ]
+    },
+    {
+     "q": "Can one person’s choices really change the ocean?",
+     "a": "Yes",
+     "b": "Not really",
+     "fa": [
+      "Yes. One choice leads to another, and habits spread.",
+      "Every duck in the sea was one toy."
+     ],
+     "fb": [
+      "Not really. Due to the scale of industry, individuals barely count.",
+      "What we need are laws."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The shift is over, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are a 1992 duck.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as one of the yellow ducks that fell into the sea in 1992.",
+   "perguntas": [
+    "Why did you fall into the sea?",
+    "What happened as a result of the storm?",
+    "Why did you end up in Alaska?",
+    "What made you go around in a giant circle?",
+    "Why are you almost white now?",
+    "What did your journey lead to for science?"
+   ],
+   "st": [
+    "Due to …, I …",
+    "As a result, …",
+    "…, which led to …"
+   ],
+   "ex": "Due to a winter storm, my container fell off the ship. As a result, I traveled the whole Pacific."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

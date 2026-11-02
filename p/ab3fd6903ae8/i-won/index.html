@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · I Won! · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="serie.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Challenge · Episode 10</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season map: London to Edinburgh"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>The Challenge · Episode 10 · I Won!</h2>
+    <p>The final episode. Who won? Paula, Bob and Fran tell their five days. The language is <b>the past</b>: regular verbs with -ed (worked, wanted, liked) and two that change (go &rarr; went, win &rarr; won). (Was and were are already in &ldquo;I Was Not Alone&rdquo;, so today the target is the past of verbs.) No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Previously on The Challenge, Last week, Your last five days. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Episode 10, in three steps. The video unlocks when the student answers the Before questions.</li>
+      <li><b>Focus</b> &mdash; Yesterday: the past, Today and yesterday, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Your last five days. It goes to the student&rsquo;s My notes.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>The -ed goes on an irregular verb: <i>I goed</i>. The present stays after yesterday: <i>yesterday I work</i>. And <i>Paula win!</i> instead of <i>Paula won!</i></p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The map on top shows the season; today stop 10 lights up. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* THE CHALLENGE · EPISODE 10 · I WON! (A1)
+   Vídeo: BBC Learning English, "The final - who's going to win?" (YLj89r5JC_4, 5:39). AULA NOVA.
+   Alvo: o passado dos verbos (e não WAS/WERE, que já é a "I Was Not Alone"). */
+const M = { nome: "I Won!", kick: "A1 · PAST: WORKED, WENT, WON, WANTED" };
+var EP = {
+  n: 10, titulo: 'I Won!', video: 'YLj89r5JC_4', onde: { Fran: 'at the castle', Bob: 'at the castle', Paula: 'at the castle' },
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'The last episode. Five days, three people, one castle. Who won? And how were their five days?',
+      nota: 'Ask for the final prediction before the video.' },
+    { k: 'cartas', est: 'o', rot: 'previously on', titulo: 'Previously on <em>The Challenge</em>', pt: 'Vire as cartas e lembre o episódio 9.',
+      nota: 'Recap of Episode 9 with -ing.',
+      cartas: [
+        { frente: 'Paula', sob: 'Episode 9', verso: 'I\'m getting a taxi.', dica: 'She\'s getting a taxi.', cor: 'var(--paula)', fw: { q: 'Who is going to win? Why?', st: ['I think … is going to win.', '… is fast.', '… is running.'], help: '“I think Paula. She\'s in a taxi!”' } },
+        { frente: 'Bob', sob: 'Episode 9', verso: 'I\'m walking. Actually, I\'m running!', dica: 'He\'s running.', cor: 'var(--bob)' },
+        { frente: 'Fran', sob: 'Episode 9', verso: 'I\'m cycling again.', dica: 'She\'s cycling.', cor: 'var(--fran)' }
+      ] },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Last <em>week</em>', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Help with the past: went, worked, watched.',
+      cartas: [
+        { frente: 'Sat?', verso: 'What did you do last weekend?', dica: 'I went to … / I watched …', cor: 'var(--fran)', fw: { q: 'Was it good?', st: ['It was great.', 'It was boring.', 'I went to …'], help: '“I went to the beach. It was great!”' } },
+        { frente: 'Win?', verso: 'Do you like competitions?', dica: 'Yes, I do. / No, I don\'t.', cor: 'var(--paula)', fw: { q: 'Did you win something once?', st: ['Yes, I won …', 'No, never!', 'My team won …'], help: '“Yes! I won a chocolate at school.”' } },
+        { frente: 'Hard?', verso: 'What was a difficult week for you?', dica: 'It was …', cor: 'var(--bob)', fw: { q: 'What did you do?', st: ['I worked a lot.', 'I wanted to stop.', 'I didn\'t stop.'], help: '“I worked a lot, but I didn\'t stop.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'Episode 10 · 5:39', titulo: 'Watch <em>the final</em>', pt: 'Responda antes. O vídeo destrava depois.',
+      nota: 'Before: two guesses. After: true or false about the five days.',
+      antes: [ { q: 'Who wins?', ops: [{ t: 'Fran' }, { t: 'Bob' }, { t: 'Paula' }] }, { q: 'Was the challenge easy?', ops: [{ t: 'yes' }, { t: 'no' }] } ],
+      durante: 'Listen for the past: worked, went, wanted, won, was.',
+      depois: [ { f: 'Paula won.', ok: 1 }, { f: 'Bob worked on a farm.', ok: 0 }, { f: 'Paula went to the parks.', ok: 1 }, { f: 'Fran wanted to stop.', ok: 1 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Yesterday: the <em>past</em>', pt: 'verbos regulares + -ed · alguns mudam: go → went, win → won.',
+      nota: 'Read each card. The red card: the -ed on an irregular verb.',
+      cartoes: [ { g: 'Today I work. Yesterday I <b>worked</b>.', p: 'Regular verbs: + -ed.' }, { g: 'go → <b>went</b> · win → <b>won</b>', p: 'Some verbs change.' }, { g: 'It <b>was</b> horrible. You <b>were</b> amazing.', p: 'be in the past.' }, { g: 'I goed to the parks.', p: 'go is irregular: went.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'now and then', titulo: 'Today and <em>yesterday</em>', pt: 'Toque no verbo e depois no passado dele.', grande: 1,
+      nota: 'The verbs of the final. Say a sentence with each past form.',
+      esq: ['work', 'go', 'win', 'want', 'like'], dir: ['worked', 'went', 'won', 'wanted', 'liked'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'What did you do last Saturday?', st: ['I worked.', 'I went to …', 'I wanted to …'], help: '“I went to my mum\'s house.”' } },
+    { k: 'cartas', est: 'o', rot: 'the five days', titulo: 'Your last <em>five days</em>', pt: 'Vire as cartas: como foram os cinco dias de cada um?',
+      nota: 'What each contestant says at the end. Then the student tells their own week in the past.',
+      cartas: [
+        { frente: 'Paula', sob: 'the winner', verso: 'I stayed in London. I went to the parks. It was amazing, and I won!', dica: 'She won.', cor: 'var(--paula)', fw: { q: 'And your week? Tell me three things you did.', st: ['I went to …', 'I worked …', 'I wanted to …'], help: '“I worked, I went to the gym and I watched a film.”' } },
+        { frente: 'Bob', sob: 'the chef', verso: 'I worked as a chef. I didn\'t like it. Difficult, but I liked it.', dica: 'He worked.', cor: 'var(--bob)' },
+        { frente: 'Fran', sob: 'the cyclist', verso: 'Very difficult. I wanted to stop, but I\'m so happy I did it.', dica: 'She wanted to stop.', cor: 'var(--fran)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: '-ed on an irregular verb, the present for the past, and won.',
+      itens: [ { erro: 'I <s>goed</s> to the parks.', certo: 'I <b>went</b> to the parks.', por: 'go is irregular: went.' }, { erro: 'Yesterday I <s>work</s> on a farm.', certo: 'Yesterday I <b>worked</b> on a farm.', por: 'Yesterday: past, + -ed.' }, { erro: 'Paula <s>win</s>!', certo: 'Paula <b>won</b>!', por: 'win → won.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the final. Read each one out loud.',
+      itens: [ { f: 'Paula ___!', ops: ['won', 'win'], ok: 0 }, { f: 'Yesterday I ___ as a chef.', ops: ['worked', 'work'], ok: 0 }, { f: 'You ___ amazing.', ops: ['were', 'was'], ok: 0 }, { f: 'Paula ___ to the parks.', ops: ['went', 'goed'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your last <em>five days</em>', pt: 'Escreva como foram os seus últimos cinco dias. Toque nas peças.',
+      ph: 'Last week I went to … I worked …', nota: 'The line under the paper catches “goed” and “I win”. SAVE sends it to My notes.',
+      banco: ['Last week', 'I went to', 'I worked', 'I wanted to', 'It was', 'amazing', 'difficult', 'I won!'],
+      regras: [['\\bgoed\\b', 'Check: go → went.'], ['\\byesterday,? I (work|go|want|like|watch|study)\\b', 'Check: yesterday needs the past: worked, went…']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'You did it!', tx: 'London to Edinburgh in ten episodes. Three people, one hundred pounds, five days… and a lot of English.',
+      ganchos: [['Paula', 'the winner'], ['Bob', 'the chef'], ['Fran', 'never stopped']], nota: 'Close the season: which episode was your favorite? Why?' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="serie.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "The last episode. Who won? How were their days?"
+  },
+  "c10": {
+   "p": "London to Edinburgh in ten episodes. Well done!"
+  }
+ },
+ "prep": {
+  "obj": "O passado: verbos regulares com -ed (worked, wanted, liked) e dois que mudam (go → went, win → won). Final da série: quem ganhou e como foram os cinco dias.",
+  "armadilha": "O -ed vai no verbo irregular (“I goed”), o presente fica depois de yesterday (“yesterday I work”) e “Paula win!” no lugar de “Paula won!”.",
+  "pal": [
+   "worked",
+   "wanted",
+   "liked",
+   "went",
+   "won",
+   "was",
+   "yesterday",
+   "last week",
+   "five days"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abre o final: cinco dias, três pessoas, um castelo. Quem ganhou?",
+   "perg": "Who wins: Fran, Bob or Paula?",
+   "pula": "Só o palpite e siga."
+  },
+  "c1": {
+   "obj": "Previously on: revisão do episódio 9 com -ing.",
+   "perg": "What is Bob doing?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Conversa sobre a semana passada; ajude com went, worked, watched.",
+   "perg": "What did you do last weekend?",
+   "pula": "Duas cartas bastam."
+  },
+  "c3": {
+   "obj": "O episódio final inteiro: dois palpites, vídeo, verdadeiro ou falso sobre os cinco dias.",
+   "perg": "Who won? Were you right?",
+   "pula": "Assista uma vez só; o vídeo vai inteiro."
+  },
+  "c4": {
+   "obj": "A regra: -ed nos regulares, go → went, win → won; o cartão vermelho é o -ed no irregular.",
+   "perg": "Yesterday I… what did you do?",
+   "pula": "Leia os cartões e peça uma frase com went."
+  },
+  "c5": {
+   "obj": "Hoje e ontem: ligar o verbo ao passado e dizer uma frase com cada.",
+   "perg": "Go, went. Say a sentence with went.",
+   "pula": "Faça os pares e uma frase só."
+  },
+  "c6": {
+   "obj": "O que cada competidor diz no fim; depois o aluno conta os últimos cinco dias dele.",
+   "perg": "And your last five days? What did you do?",
+   "pula": "Leia os competidores e peça dois dias do aluno."
+  },
+  "c7": {
+   "obj": "Corrigir as três armadilhas: goed, yesterday I work, Paula win.",
+   "perg": "Which one is right? Read it out loud.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c8": {
+   "obj": "Prática com falas do final; ler cada uma em voz alta.",
+   "perg": "Read the full line out loud, please.",
+   "pula": "Faça duas linhas."
+  },
+  "c9": {
+   "obj": "Escrever os últimos cinco dias no passado; vai para o My notes.",
+   "perg": "What was the best day of your week?",
+   "pula": "Três dias bastam."
+  },
+  "c10": {
+   "obj": "Fecha a temporada: episódio favorito e por quê.",
+   "perg": "Which episode was your favorite? Why?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa no passado, sobre a corrida e a vida do aluno.",
+   "perg": "What did you do yesterday?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas opções sobre a corrida e defender no passado.",
+   "perg": "Who had the best five days?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Paula, a vencedora, e conta os cinco dias no passado.",
+   "perg": "Paula, how did you feel at the castle?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Tell me about last week.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "went",
+    "worked",
+    "wanted",
+    "liked",
+    "won"
+   ],
+   "cartas": [
+    {
+     "k": "YESTERDAY",
+     "q": "What did you do yesterday?",
+     "fup": "Did you work?",
+     "st": [
+      "Yesterday I …",
+      "I worked / I went …"
+     ],
+     "ex": "Yesterday I worked and I went to the gym."
+    },
+    {
+     "k": "LAST WEEKEND",
+     "q": "Where did you go last weekend?",
+     "fup": "Did you like it?",
+     "st": [
+      "I went to …",
+      "I liked it. / I didn't like it."
+     ],
+     "ex": "I went to the beach. I liked it."
+    },
+    {
+     "k": "A PRIZE",
+     "q": "Did you win something once?",
+     "fup": "What was it?",
+     "st": [
+      "Yes, I won …",
+      "No, never!"
+     ],
+     "ex": "Yes, I won a chocolate at school."
+    },
+    {
+     "k": "A TRIP",
+     "q": "Where did you go on your last trip?",
+     "fup": "Did you go by bus, train or car?",
+     "st": [
+      "I went to …",
+      "I went by …"
+     ],
+     "ex": "I went to Salvador. I went by car."
+    },
+    {
+     "k": "LAST MONTH",
+     "q": "What did you want last month?",
+     "fup": "Did you get it?",
+     "st": [
+      "I wanted to …",
+      "I wanted a …"
+     ],
+     "ex": "I wanted a new phone. No, I didn't get it."
+    },
+    {
+     "k": "THE RACE",
+     "q": "Did you like the ten episodes?",
+     "fup": "Who did you like best?",
+     "st": [
+      "I liked …",
+      "I didn't like …"
+     ],
+     "ex": "I liked it. I liked Paula best."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "was",
+    "went",
+    "liked",
+    "won",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "The best day: the first or the last?",
+     "a": "The first",
+     "b": "The last",
+     "fa": [
+      "The first. They met in London, and it was new."
+     ],
+     "fb": [
+      "The last. Paula won!"
+     ]
+    },
+    {
+     "q": "The best transport: the train or the bike?",
+     "a": "The train",
+     "b": "The bike",
+     "fa": [
+      "The train. It was fast."
+     ],
+     "fb": [
+      "The bike. It was cheap."
+     ]
+    },
+    {
+     "q": "The best city: London or Edinburgh?",
+     "a": "London",
+     "b": "Edinburgh",
+     "fa": [
+      "London. I liked the start."
+     ],
+     "fb": [
+      "Edinburgh. I liked the castle."
+     ]
+    },
+    {
+     "q": "The race: easy or difficult?",
+     "a": "Easy",
+     "b": "Difficult",
+     "fa": [
+      "Easy. They had £100."
+     ],
+     "fb": [
+      "Difficult. They worked a lot."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Paula now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Paula. You won!",
+   "perguntas": [
+    "Paula, you won! How do you feel?",
+    "Where did you go on day one?",
+    "Did you work in the race?",
+    "What did you like?",
+    "What didn't you like?",
+    "What did you want at the end?"
+   ],
+   "st": [
+    "I went to …",
+    "I worked …",
+    "I liked …"
+   ],
+   "ex": "I won! I went to a lot of places, and I liked the castle."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

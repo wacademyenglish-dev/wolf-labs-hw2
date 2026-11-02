@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -120,5 +121,289 @@ window.WL_CONVERSA = { nivel: 'A2', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "descobre": {
+   "t": "Some or any? Small words in the kitchen.",
+   "p": "Compare A and B. Then see the rule."
+  },
+  "multipla": {
+   "t": "Leo: no peanuts. Emma: no milk.",
+   "p": "Read each label. Can the kids eat it?"
+  },
+  "escolha": {
+   "t": "A child who won’t eat. Two ideas.",
+   "p": "Choose one. Say why."
+  },
+  "conversa": {
+   "t": "Talk about food with the family.",
+   "p": "Answer. Then ask back: “And you?”"
+  },
+  "cv-jantar": {
+   "t": "Emma wants pizza. Make a deal.",
+   "p": "Answer Emma’s four questions. Agree on dinner."
+  },
+  "pode": {
+   "t": "Lesson 19: what can you do now?",
+   "p": "Read each line aloud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Some/any, contável e incontável, how much/how many e rótulos de alergia: os Parker de novo; o Leo é alérgico a amendoim e a Emma não pode leite.",
+  "armadilha": "O brasileiro diz “There isn’t some”, conta incontável (“two breads”), pergunta “How much eggs?” e oferece com any: “Would you like any juice?” (oferta pede some).",
+  "pal": [
+   "some",
+   "any",
+   "How much …?",
+   "How many …?",
+   "a slice of bread",
+   "Contains:",
+   "may contain traces of",
+   "Would you like some …?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: comida, rótulos e alergias na casa da família.",
+   "perg": "What would you cook for an American family?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "descobre": {
+   "obj": "Comparar some e any em pares e ver a regra; armadilhas com contável.",
+   "perg": "Why “any” here and “some” there?",
+   "pula": "Dois pares bastam."
+  },
+  "multipla": {
+   "obj": "Ler cinco rótulos fictícios e decidir se as crianças podem comer; na dúvida, não dar.",
+   "perg": "Can Leo eat this? Why?",
+   "pula": "Três rótulos bastam."
+  },
+  "escolha": {
+   "obj": "Duas ideias para uma criança que não come; o aluno escolhe e diz por quê.",
+   "perg": "Which idea would you try first?",
+   "pula": "Uma escolha só basta."
+  },
+  "conversa": {
+   "obj": "Conversa leve sobre comida com a família, devolvendo “And you?”.",
+   "perg": "What do you usually eat for breakfast?",
+   "pula": "Três perguntas bastam."
+  },
+  "cv-jantar": {
+   "obj": "Role play: o professor é a Emma, 7 anos, sem leite, que quer pizza; fechar o jantar.",
+   "perg": "Can I have some chocolate?",
+   "pula": "Duas perguntas e feche o acordo."
+  },
+  "pode": {
+   "obj": "Ler as frases “I can” e marcar o que já consegue; três lanches sem amendoim e sem leite.",
+   "perg": "Can you read an allergy label now?",
+   "pula": "Leia só as que faltam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre a cozinha e os hábitos de comida do aluno, com some/any e how much/many.",
+   "perg": "Is there any fruit in your kitchen now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas leves de au pair na cozinha, com some/any.",
+   "perg": "Cook with the kids or alone?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Planejar o almoço seguro de sábado para o Leo e a Emma, em passos.",
+   "perg": "What can both kids eat?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your kitchen, your food.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "some",
+    "any",
+    "How much",
+    "How many"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FRIDGE",
+     "q": "What is there in your fridge right now?",
+     "fup": "Is there any milk?",
+     "st": [
+      "There is some …",
+      "There aren’t any …"
+     ],
+     "ex": "There is some cheese, but there aren’t any eggs."
+    },
+    {
+     "k": "BREAKFAST",
+     "q": "What do you usually have for breakfast?",
+     "fup": "How much coffee do you drink?",
+     "st": [
+      "I usually have some …",
+      "I drink … cups."
+     ],
+     "ex": "I usually have some bread and fruit. I drink two cups of coffee."
+    },
+    {
+     "k": "ALLERGIES",
+     "q": "Do you have any food allergies?",
+     "fup": "Do you know anyone who does?",
+     "st": [
+      "No, I don’t have any …",
+      "My friend can’t eat …"
+     ],
+     "ex": "No, I don’t have any allergies. My friend can’t eat gluten."
+    },
+    {
+     "k": "PICKY",
+     "q": "Were you a picky eater as a child?",
+     "fup": "What didn’t you eat?",
+     "st": [
+      "Yes, I was. I didn’t eat any …",
+      "No, I ate …"
+     ],
+     "ex": "Yes, I was. I didn’t eat any vegetables."
+    },
+    {
+     "k": "BRAZILIAN FOOD",
+     "q": "What Brazilian food would you cook for the family?",
+     "fup": "How many people can it feed?",
+     "st": [
+      "I’d make some …",
+      "It’s enough for …"
+     ],
+     "ex": "I’d make some pão de queijo. It’s enough for six people."
+    },
+    {
+     "k": "SHOPPING",
+     "q": "How often do you go to the supermarket?",
+     "fup": "What do you always buy?",
+     "st": [
+      "I go …",
+      "I always buy some …"
+     ],
+     "ex": "I go every week. I always buy some bananas."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "In the kitchen. Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "some",
+    "any"
+   ],
+   "rodadas": [
+    {
+     "q": "Cook with the kids or cook alone?",
+     "a": "With the kids",
+     "b": "Alone",
+     "fa": [
+      "With the kids. Emma eats carrots if she cooks them."
+     ],
+     "fb": [
+      "Alone. It’s faster and safer."
+     ]
+    },
+    {
+     "q": "A label says “may contain traces of peanuts”. Give it to Leo or not?",
+     "a": "Don’t give it",
+     "b": "Ask the parents",
+     "fa": [
+      "Don’t give it. If I’m not sure, no."
+     ],
+     "fb": [
+      "Ask the parents first. They know the emergency plan."
+     ]
+    },
+    {
+     "q": "Snacks: fruit or crackers?",
+     "a": "Fruit",
+     "b": "Crackers",
+     "fa": [
+      "Fruit. There is no milk in an apple."
+     ],
+     "fb": [
+      "Crackers. Kids like them, but read the label."
+     ]
+    },
+    {
+     "q": "Pizza on Friday night: yes or no?",
+     "a": "Yes, pizza",
+     "b": "No pizza",
+     "fa": [
+      "Yes. Some pizza with no cheese for Emma."
+     ],
+     "fb": [
+      "No. We can make some pasta together."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Plan the Lunch",
+   "t": "Saturday lunch for Leo and Emma.",
+   "p": "One step at a time. Say it.",
+   "prof": "You are Mrs. Parker. At each step, ask: “Is there any milk or peanut in that?”",
+   "passos": [
+    {
+     "q": "What is there in the kitchen? Check first.",
+     "st": [
+      "There is some …",
+      "There isn’t any …"
+     ],
+     "ex": "There is some rice and some chicken, but there isn’t any bread."
+    },
+    {
+     "q": "What will you cook? Is it safe for both kids?",
+     "st": [
+      "I’ll make some …",
+      "It has no …"
+     ],
+     "ex": "I’ll make some chicken and rice. It has no milk and no peanuts."
+    },
+    {
+     "q": "How much or how many do you need?",
+     "st": [
+      "I need … ",
+      "How many …?"
+     ],
+     "ex": "I need two cups of rice and four carrots."
+    },
+    {
+     "q": "Dessert: what can they have?",
+     "st": [
+      "They can have some …"
+     ],
+     "ex": "They can have some strawberries. Emma loves fruit."
+    }
+   ],
+   "fim": "A safe lunch, and two happy kids."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

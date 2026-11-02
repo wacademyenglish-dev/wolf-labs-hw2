@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Look at My Pictures · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Look at My Pictures · Three Frames</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Look at My Pictures · Three Frames</h2>
+    <p>The race from London to Edinburgh: Bob is on a train, Fran is on a bike, and Paula is still in London, taking photos. The lesson is her album. Three frames are drawn on the screen: <b>AT</b> is a pin on the map (one point), <b>IN</b> is a box around you, <b>ON</b> is a surface or a line under you. A photo only sticks in the right frame; in the wrong one, it falls off. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>at / in / on</b> with places: <i>at the shops, at work</i> · <i>in London, in the park, in the kitchen</i> · <i>on the bus, on a bridge, on the street</i>. <b>Home</b> takes no word: <i>I’m home</i>. And <b>very</b> comes before the word: <i>very big</i>. The common mistakes: <i>in the bus</i>, <i>at London</i>, <i>at home</i> / <i>go to home</i>, <i>big very</i>. A taxi or a car is small: you sit <i>in</i> it.</p>
+    <!--conversa--><h4>YOUR PICK (IX) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Paula’s video, three short choices, one of three each: where you are on a free day in London, the best place for Paula’s next photo, and where you are on Saturday at ten. There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it). The starters keep at / in / on (and home with no word) in their mouth. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Last Photo, II The Race, VI Very (zoom and say it bigger), VII Paula’s Album, IX Your Pick (one of three, then the sentence), X Your Three Photos.</li>
+      <li><b>Listen</b>: II, IV and VII have audio with pause and 0.75×. The student hears first; the transcript opens after. Every transcript was checked against the audio.</li>
+      <li><b>Focus</b>: V The Three Frames (eight photos to drop).</li>
+      <li><b>Write</b>: XI Your Album, five captions, with the red wavy line for <i>in the bus</i>, <i>at London</i>, <i>at home</i>, <i>in work</i>, <i>in a bridge</i>, <i>on the park</i> and <i>big very</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>THE VIDEO</h4>
+    <p>Two pieces of the same video: 0:02–1:10 (the start of the race) and 2:16–3:20 (Paula in London). Before: a guess. During: tap the six words. After: one question, then the transcript.</p>
+    <h4>SCENE I</h4>
+    <p>Don’t correct. Tap the word the student used (in, on, at, or none). Scene XI brings it back: “In scene I your teacher heard…”.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The frames, the album and the columns move on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* LOOK AT MY PICTURES (Main A1) · pergunta-surpresa · 27/10/2026 · at / in / on + very (máx. 3 no A1) */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'video1', tipo: 'Would you rather', q: 'A long trip: train or plane?',
+    opc: ['On a train', 'On a plane'], st: ['On a train. It’s …', 'On a plane. It’s …'],
+    ex: 'On a train! It’s very relaxing.', push: 'Five days? Yes or no?' },
+  { cena: 'molduras', tipo: 'And you?', q: 'Where is your phone now?',
+    opc: ['In my hand', 'On the table', 'In my bag'], st: ['It’s in …', 'It’s on …'],
+    ex: 'It’s on the table, next to me.', push: 'Very old? Yes or no?' },
+  { cena: 'very', tipo: 'Opinion', q: 'Your city: very big or very small?',
+    opc: ['Very big', 'Very small'], st: ['My city is very …'],
+    ex: 'My city is very small, but very nice.', push: 'Very busy? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* LOOK AT MY PICTURES (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Escolha 1 de 3" no lugar de "IX · Sort Them, Fast" (extra; prática controlada das colunas: as molduras do V
+   continuam sendo a tela forte). Entra logo depois do vídeo da Paula em Londres (VIII): um dia livre em Londres,
+   a melhor foto para o álbum da Paula, e o sábado do aluno. A1 bem leve: três opções curtas, frase quase pronta,
+   o professor responde primeiro. A gramática (at / in / on + lugar, very, home sem preposição) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'escolha', troca: 'colunas', est: 'o', min: 6, img: 'bridge', rot: 'Your Pick', t: 'Three places. Choose one, three times.',
+    p: 'Choose one. Your teacher answers first. Then say it with in, on or at.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'London', sit: 'One free day in London.', q: 'Where are you?',
+        opc: ['At the shops', 'In the park', 'On a bridge'],
+        st: ['I’m at the shops.', 'I’m in the park.', 'I’m on a bridge.', 'It’s very …'],
+        ex: 'I’m in the park. It’s very green.',
+        push: 'Very busy? Yes or no?' },
+      { tag: 'The photo', sit: 'Paula wants one more photo.', q: 'The best place?',
+        opc: ['On the bus', 'In a café', 'At the station'],
+        st: ['On the bus. It’s …', 'In a café. It’s …', 'At the station. It’s …'],
+        ex: 'In a café. It’s very nice.',
+        push: 'With Bob? Yes or no?' },
+      { tag: 'You', sit: 'Saturday. Ten in the morning.', q: 'Where are you?',
+        opc: ['Home', 'In the park', 'At work'],
+        st: ['I’m home.', 'I’m in the park.', 'I’m at work.'],
+        ex: 'I’m home, in bed! It’s very quiet.',
+        push: 'Every Saturday? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "foto": {
+   "t": "Find the last photo on your phone.",
+   "p": "Pick a card. Answer out loud."
+  },
+  "corrida": {
+   "t": "Three cards. The race.",
+   "p": "Listen first. Then read the transcript out loud."
+  },
+  "ouve": {
+   "t": "Five places. Hear it, say it.",
+   "p": "Play it. Say it three times. Then show it."
+  },
+  "molduras": {
+   "t": "Three frames: at, in, on.",
+   "p": "Say the sentence. Then drop the photo."
+  },
+  "very": {
+   "t": "Very: a bigger photo, a bigger voice.",
+   "p": "Play it. Say it. Zoom and say it bigger."
+  },
+  "album": {
+   "t": "Paula’s captions lost one word.",
+   "p": "Play it. Put the word back. Say it."
+  },
+  "video2": {
+   "t": "Paula in London.",
+   "p": "Tap each word you hear. Then one question."
+  },
+  "cv-escolha": {
+   "t": "Three places. Choose one.",
+   "p": "Your teacher answers first. Say it with in, on or at."
+  },
+  "suas": {
+   "t": "Three photos from your phone.",
+   "p": "Say where you are, what it’s like, what you’re doing."
+  },
+  "fim": {
+   "t": "Write the captions for your album.",
+   "p": "Five captions with at, in, on and very."
+  }
+ },
+ "prep": {
+  "obj": "Preposições de lugar at/in/on e very: a corrida de Londres a Edimburgo, e o álbum da Paula, que ficou em Londres tirando fotos.",
+  "armadilha": "O português usa “em” para tudo: sai “in the bus”, “at London”, “at home/go to home”, “in work” e “big very”. Lembre: on the bus, in London, I’m home, very big.",
+  "pal": [
+   "at the shops",
+   "at work",
+   "in London",
+   "in the park",
+   "on the bus",
+   "on a bridge",
+   "home",
+   "very"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o álbum e as três molduras: at (ponto), in (caixa), on (superfície).",
+   "perg": "Do you take a lot of photos?",
+   "pula": "Leia só o título e entre."
+  },
+  "foto": {
+   "obj": "Diagnóstico: o aluno descreve a última foto do celular; o professor só marca a palavra usada.",
+   "perg": "Where are you in your last photo?",
+   "pula": "Uma foto basta; não corrija agora."
+  },
+  "corrida": {
+   "obj": "Escuta os três cartões da história: Bob no trem, Fran de bicicleta, Paula em Londres.",
+   "perg": "Where is Bob? Where is Fran?",
+   "pula": "Ouça os três cartões, sem ler a transcrição."
+  },
+  "video1": {
+   "obj": "Vídeo 0:02–1:10, o começo da corrida; o aluno toca as seis palavras.",
+   "perg": "Who is on a bike?",
+   "pula": "Assista uma vez e responda a pergunta."
+  },
+  "ouve": {
+   "obj": "Escuta cinco lugares, repete três vezes e coloca na moldura.",
+   "perg": "Is it in, on or at?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "molduras": {
+   "obj": "Fixa a regra: oito fotos para soltar na moldura certa (at, in, on).",
+   "perg": "Why is it “on the bus”?",
+   "pula": "Cinco fotos bastam."
+  },
+  "very": {
+   "obj": "Very antes do adjetivo, com zoom na foto e na voz.",
+   "perg": "Is London big? Very big?",
+   "pula": "Três frases bastam."
+  },
+  "album": {
+   "obj": "Completa as legendas do álbum da Paula e transfere para a foto do aluno.",
+   "perg": "Where is Paula in this photo?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "video2": {
+   "obj": "Vídeo 2:16–3:20, Paula em Londres, com palavras conhecidas.",
+   "perg": "Where is Paula now?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-escolha": {
+   "obj": "Conversa de escolha: dia livre em Londres, próxima foto da Paula, sábado às dez.",
+   "perg": "Where are you on Saturday at ten?",
+   "pula": "Duas escolhas bastam."
+  },
+  "suas": {
+   "obj": "O aluno mostra três fotos dele: onde está, como é, o que faz.",
+   "perg": "Where are you in this photo? What is it like?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita final: cinco legendas com at/in/on e very; volta o que ele disse na cena I; vai para o My notes.",
+   "perg": "Where are you in your favorite photo?",
+   "pula": "Três legendas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre lugares do dia a dia com at/in/on.",
+   "perg": "Where are you at eight in the morning?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhe entre dois lugares e justifica com at/in/on e very.",
+   "perg": "Which one do you pick? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Paula e responde onde está e como é cada lugar.",
+   "perg": "Where are you now, Paula?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Where are you?",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "at",
+    "in",
+    "on",
+    "home",
+    "very"
+   ],
+   "cartas": [
+    {
+     "k": "8 AM",
+     "q": "Where are you at eight in the morning?",
+     "fup": "Is it very busy?",
+     "st": [
+      "I’m at …",
+      "I’m in …",
+      "I’m home."
+     ],
+     "ex": "I’m on the bus. It is very full."
+    },
+    {
+     "k": "YOUR LUNCH",
+     "q": "Where do you have lunch?",
+     "fup": "Is it good?",
+     "st": [
+      "I have lunch at …",
+      "… in …"
+     ],
+     "ex": "I have lunch at work, in the kitchen."
+    },
+    {
+     "k": "SATURDAY",
+     "q": "Where are you on Saturday afternoon?",
+     "fup": "Who is with you?",
+     "st": [
+      "I’m in …",
+      "I’m at …"
+     ],
+     "ex": "I’m in the park with my dog."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Where is your phone right now?",
+     "fup": "Where are your keys?",
+     "st": [
+      "It’s on …",
+      "It’s in …"
+     ],
+     "ex": "It’s on the table. My keys are in my bag."
+    },
+    {
+     "k": "A TRIP",
+     "q": "A city you love. Where is it?",
+     "fup": "Is it very big?",
+     "st": [
+      "… is in …",
+      "It is very …"
+     ],
+     "ex": "Gramado is in the south of Brazil. It is very cold in July."
+    },
+    {
+     "k": "YOUR WORK",
+     "q": "Where do you work?",
+     "fup": "Do you go by car or by bus?",
+     "st": [
+      "I work at …",
+      "I work in …",
+      "I go on the …"
+     ],
+     "ex": "I work in an office. I go on the subway."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a place.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "at",
+    "in",
+    "on",
+    "very"
+   ],
+   "rodadas": [
+    {
+     "q": "London to Edinburgh: on a train or on a bike?",
+     "a": "On a train",
+     "b": "On a bike",
+     "fa": [
+      "On a train. It is very fast."
+     ],
+     "fb": [
+      "On a bike. It is very beautiful."
+     ]
+    },
+    {
+     "q": "A free day: in the park or at the shops?",
+     "a": "In the park",
+     "b": "At the shops",
+     "fa": [
+      "In the park. It is very quiet."
+     ],
+     "fb": [
+      "At the shops. I need new shoes."
+     ]
+    },
+    {
+     "q": "Sunday night: at home or at a restaurant?",
+     "a": "At home",
+     "b": "At a restaurant",
+     "fa": [
+      "I’m home. It is very comfortable."
+     ],
+     "fb": [
+      "At a restaurant. It is very fun."
+     ]
+    },
+    {
+     "q": "The best photo: on a bridge or in a museum?",
+     "a": "On a bridge",
+     "b": "In a museum",
+     "fa": [
+      "On a bridge. The view is very nice."
+     ],
+     "fb": [
+      "In a museum. It is very interesting."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Every photo found its frame."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Paula now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Paula.",
+   "perguntas": [
+    "Where are you right now, Paula?",
+    "Where are Bob and Fran?",
+    "Where is your favorite photo from?",
+    "Is London very big?",
+    "Where do you have lunch today?",
+    "Where are you tonight?"
+   ],
+   "st": [
+    "I’m in …",
+    "I’m on …",
+    "It is very …"
+   ],
+   "ex": "I’m on a bridge in London. It is very windy, but the view is very nice."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

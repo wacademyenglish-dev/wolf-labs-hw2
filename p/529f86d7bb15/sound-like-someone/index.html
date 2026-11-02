@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Sound Like Someone · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 4 · B2</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 4 · Sound Like Someone · B2</h2>
+    <p>Episode 4 of <b>Better Speaking</b>. Bj&ouml;rk talks about her albums Debut and Post with very natural English. Richard shows why: she speaks in <b>chunks</b> (<b>take it as it comes, the ups and downs, a week in the life of, a piece of advice</b>), and she has copied the sounds of London (the t that disappears in <i>better</i>, <i>little</i>). The advice: choose one person and copy the way they speak. The sister lesson for B1 is &ldquo;I Just Had to Do It&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Your English model, Copy the rhythm. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Speak in chunks, Finish the chunk, Fix the traps, Choose the chunk.</li>
+      <li><b>Write</b> &mdash; Your chunk notebook. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Chunks translated from Portuguese: <i>an advice</i>, <i>do a mistake</i>, <i>highs and lows parts</i>. And speaking word by word, which makes even correct English sound slow.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 4 · SOUND LIKE SOMEONE (B2)
+   Vídeo: BBC Learning English, Better Speaking (p4X2IVigD1c, 11:10), três trechos (~4:50).
+   Alvo: chunks e colocações (take it as it comes, the ups and downs, a piece of advice, a week in the life of)
+   e copiar um modelo de pronúncia (o t que some em better, little). */
+const M = { nome: "Sound Like Someone", kick: "B2 · CHUNKS: TAKE IT AS IT COMES, UPS AND DOWNS" };
+var EP = {
+  n: 4, de: 8, nivel: 'B2', titulo: 'Sound Like Someone', video: 'p4X2IVigD1c',
+  convidado: 'Björk', habilidade: 'speak in chunks, copy a model',
+  trechos: [
+    { ini: 89, fim: 174, rot: 'Björk: Debut and Post' },
+    { ini: 293, fim: 427, rot: 'Richard: speak in chunks' },
+    { ini: 497, fim: 599, rot: 'Copy one person' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'An Icelandic singer talks about her first two albums, and she sounds completely natural. Her secret: she doesn\'t speak word by word. She speaks in chunks.',
+      nota: 'Ask: whose voice in English do you love listening to?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Your English <em>model</em>', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Push for detail: why that person, what exactly they do.',
+      cartas: [
+        { frente: 'Voice', verso: 'If you could sound like one person in English, who would it be?', dica: 'I\'d love to sound like…', cor: 'var(--guest)', fw: { q: 'What is it about the way they speak?', st: ['The rhythm…', 'They sound so relaxed…', 'Their accent…'], help: '“Her rhythm. She never rushes, but she never stops.”' } },
+        { frente: 'Second', verso: 'Is the second time always better? Think of a second album, a second job, a second try.', dica: 'In my experience…', cor: 'var(--host)', fw: { q: 'Tell me about a second try that went better.', st: ['The first time, I…', 'The second time…', 'I learned that…'], help: '“My second job interview was much better. I knew what to expect.”' } },
+        { frente: 'Plans', verso: 'Do you plan your week, or do you take it as it comes?', dica: 'I tend to…', cor: 'var(--teacher)', fw: { q: 'What happens when the plan fails?', st: ['I panic.', 'I go with the flow.', 'It depends on…'], help: '“I panic for five minutes, and then I go with the flow.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 5 minutes', titulo: 'Listen to <em>Björk</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Björk\'s second album, Post, compared to Debut:', ops: [{ t: 'a totally new idea' }, { t: 'the same idea, done better' }] }, { q: 'What helps you speak faster?', ops: [{ t: 'Words in groups' }, { t: 'One word at a time' }] } ],
+      durante: 'Clip 1 is Björk. Listen for the chunks: “the ups and downs”, “take it as it comes”. Clip 2: Richard on chunks. Clip 3: choose one person to copy.',
+      depois: [ { f: 'Björk thought about her first album for about ten years.', ok: 1 }, { f: 'She says you should plan your life carefully.', ok: 0 }, { f: 'Richard records “a piece of advice”, not just “advice”.', ok: 1 }, { f: 'Richard says the London “t” in better is always wrong.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Speak in <em>chunks</em>', pt: 'Aprenda as palavras em grupos que andam juntos, e diga o grupo de uma vez.',
+      nota: 'Read each chunk as ONE word, fast, then use it in a sentence.',
+      cartoes: [ { g: '<b>take it as it comes</b>', p: 'Don\'t plan, just accept what happens.' }, { g: '<b>the ups and downs</b> · <b>a week in the life of</b>', p: 'Fixed pairs and frames.' }, { g: '<b>a piece of advice</b> · <b>make a mistake</b>', p: 'Record the chunk, not the single word.' }, { g: 'an advice · do a mistake', p: 'Advice has no “an”; we MAKE mistakes.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'complete the chunk', titulo: 'Finish the <em>chunk</em>', pt: 'Toque no começo e depois no fim que combina.',
+      nota: 'Say each full chunk aloud three times, faster each time.',
+      esq: ['take it as', 'the ups and', 'a piece of', 'a week in the', 'enjoy it to the'], dir: ['it comes', 'downs', 'advice', 'life of', 'maximum'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Use two chunks to describe your last year.', st: ['There were a lot of ups and downs…', 'I just took it as it came…'], help: '“It had its ups and downs, but I just took it as it came.”' } },
+    { k: 'cartas', est: 'o', rot: 'shadowing', titulo: 'Copy the <em>rhythm</em>', pt: 'Vire a carta, ouça o professor e repita com o mesmo ritmo.',
+      nota: 'Read each line naturally, with weak sounds and the London t if you like. The student shadows you twice: first slow, then at your speed.',
+      cartas: [
+        { frente: 'Line 1', sob: 'shadow it', verso: 'I can do much better than that, you know?', dica: 'Copy the rhythm, not the words.', cor: 'var(--guest)', fw: { q: 'Now pick a line of your own and say it like your model.', st: ['I\'d say it like…', 'My model would say…'], help: 'Choose a line from a series you love and shadow it.' } },
+        { frente: 'Line 2', sob: 'shadow it', verso: 'You just can\'t plan your life, and you\'re not supposed to.', dica: 'Stress: PLAN, LIFE, SUPPOSED.', cor: 'var(--host)' },
+        { frente: 'Line 3', sob: 'shadow it', verso: 'Just enjoy it to the maximum and take it as it comes.', dica: 'One breath. Chunks.', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'Chunks translated word by word from Portuguese.',
+      itens: [ { erro: 'Can I give you <s>an advice</s>?', certo: 'Can I give you <b>a piece of advice</b>?', por: 'Advice is uncountable.' }, { erro: 'Everybody <s>does mistakes</s>.', certo: 'Everybody <b>makes mistakes</b>.', por: 'Make a mistake.' }, { erro: 'Life has its <s>highs and lows parts</s>.', certo: 'Life has its <b>ups and downs</b>.', por: 'The fixed chunk.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>chunk</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from Björk and Richard. Read each one in one breath.',
+      itens: [ { f: 'You\'re supposed to just enjoy it and take it as it ___.', ops: ['comes', 'goes'], ok: 0 }, { f: 'All the ups and ___ you have in one week.', ops: ['downs', 'lows'], ok: 0 }, { f: 'I write “a ___ of advice” in my notebook.', ops: ['piece', 'part'], ok: 0 }, { f: 'Try to get as much ___ to listening as possible.', ops: ['exposure', 'exhibition'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>chunk notebook</em>', pt: 'Escreva cinco chunks que você quer usar, cada um numa frase sua. Depois diga em voz alta, de uma vez.',
+      ph: '1. take it as it comes: I never plan my weekends, I just take it as it comes. 2. …', nota: 'The line under the paper catches “an advice” and “do a mistake”. SAVE sends it to My notes.',
+      banco: ['take it as it comes', 'the ups and downs', 'a piece of advice', 'make a mistake', 'enjoy it to the maximum', 'a week in the life of'],
+      regras: [['\\ban advice\\b', 'Check: a piece of advice.'], ['\\b(do|does|did|doing) (a )?mistakes?\\b', 'Check: MAKE a mistake.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Hold their attention', tx: 'A speech to the world about globalization. How do you make a whole room want to listen?',
+      ganchos: [['Next guest', 'Kofi Annan'], ['The skill', 'keep people listening'], ['Your task', 'shadow your model for 5 minutes']], nota: 'Ask: what was the best talk or class you ever heard? Why? That opens Episode 5.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Falar em chunks (take it as it comes, the ups and downs, a week in the life of, a piece of advice) e copiar um modelo; Björk fala dos álbuns Debut e Post com inglês natural.",
+  "armadilha": "Chunks traduzidos do português: an advice, do a mistake, highs and lows parts; e falar palavra por palavra, o que deixa até o inglês correto lento.",
+  "pal": [
+   "chunk",
+   "take it as it comes",
+   "the ups and downs",
+   "a week in the life of",
+   "a piece of advice",
+   "make a mistake",
+   "copy a model"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta Björk e a habilidade: falar em blocos e copiar um modelo.",
+   "perg": "Whose voice in English do you love?",
+   "pula": "Uma resposta e NEXT."
+  },
+  "c1": {
+   "obj": "Conversa sobre o modelo de inglês do aluno: quem é e o que faz.",
+   "perg": "What exactly does that person do?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes da Björk em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "Why does she sound so natural?",
+   "pula": "Veja os clipes uma vez; pule o durante."
+  },
+  "c3": {
+   "obj": "A regra: cada chunk dito como UMA palavra, rápido, e usado numa frase.",
+   "perg": "Can you say it in one breath?",
+   "pula": "Leia três chunks e use um."
+  },
+  "c4": {
+   "obj": "Completar o chunk e dizê-lo três vezes, cada vez mais rápido.",
+   "perg": "Faster this time?",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "Shadowing: o aluno repete o professor duas vezes, devagar e depois na mesma velocidade.",
+   "perg": "Can you match my speed?",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Três armadilhas: chunks traduzidos do português.",
+   "perg": "Do you make or do a mistake?",
+   "pula": "Faça as três, rápido."
+  },
+  "c7": {
+   "obj": "Escolher o chunk certo em falas da Björk e do Richard, lidas num fôlego só.",
+   "perg": "Which chunk fits here?",
+   "pula": "Metade das frases basta."
+  },
+  "c8": {
+   "obj": "Escrita: o caderno de chunks do aluno; vai para o My notes.",
+   "perg": "Which chunk will you use this week?",
+   "pula": "Três chunks bastam."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 5: prender a atenção de uma sala.",
+   "perg": "What was the best talk you ever heard?",
+   "pula": "Só a pergunta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa em que cada resposta precisa de um chunk da aula.",
+   "perg": "Can you say that with a chunk?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre modelos, sotaques e imitar.",
+   "perg": "I see your point, but is copying real?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escolhe o seu modelo e monta um plano de imitação.",
+   "perg": "Who is your model, and why?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 6,
+   "rot": "More to Talk About",
+   "t": "Answer in chunks.",
+   "p": "Pick a card. Use one chunk, fast.",
+   "palavras": [
+    "take it as it comes",
+    "the ups and downs",
+    "a week in the life of",
+    "a piece of advice",
+    "make a mistake"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WEEK",
+     "q": "What would “a week in the life of” you look like on film?",
+     "fup": "Which day would be the boring one?",
+     "st": [
+      "A week in the life of me is …",
+      "Honestly, …"
+     ],
+     "ex": "A week in the life of me is mostly emails and coffee. Wednesday would be the boring one."
+    },
+    {
+     "k": "PLANS",
+     "q": "Are you a planner, or do you take it as it comes?",
+     "fup": "Has that ever backfired?",
+     "st": [
+      "I tend to take it as it comes.",
+      "I’m a planner, but …"
+     ],
+     "ex": "I tend to take it as it comes. It backfired on a trip once: no hotel at midnight."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What are the ups and downs of your job?",
+     "fup": "Which one wins most weeks?",
+     "st": [
+      "The ups are …",
+      "The downs are …"
+     ],
+     "ex": "The ups are the people. The downs are the deadlines, and the deadlines usually win."
+    },
+    {
+     "k": "ADVICE",
+     "q": "What’s the best piece of advice anyone ever gave you?",
+     "fup": "Did you follow it?",
+     "st": [
+      "The best piece of advice …",
+      "I didn’t at first, but …"
+     ],
+     "ex": "The best piece of advice was “sleep on it”. I didn’t at first, but now I always do."
+    },
+    {
+     "k": "MISTAKES",
+     "q": "What mistake do you make again and again in English?",
+     "fup": "Why do you think it sticks?",
+     "st": [
+      "I keep making …",
+      "It comes from …"
+     ],
+     "ex": "I keep making the same mistake with “do” and “make”. It comes from Portuguese “fazer”."
+    },
+    {
+     "k": "ALBUMS",
+     "q": "Is there an album you know from start to finish?",
+     "fup": "What’s the story behind it for you?",
+     "st": [
+      "I know … by heart.",
+      "It reminds me of …"
+     ],
+     "ex": "I know an old rock album by heart. It reminds me of long drives with my dad."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Argue it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "the thing is",
+    "I see your point, but",
+    "on the other hand"
+   ],
+   "rodadas": [
+    {
+     "q": "Copy one model, or mix many?",
+     "a": "One model",
+     "b": "Many",
+     "fa": [
+      "One model. You get a consistent sound, like Björk with London."
+     ],
+     "fb": [
+      "Many. Copying one person makes you a cheap imitation."
+     ]
+    },
+    {
+     "q": "British or American sounds?",
+     "a": "British",
+     "b": "American",
+     "fa": [
+      "British. It’s what I grew up hearing on the BBC."
+     ],
+     "fb": [
+      "American. It’s everywhere: films, series, work calls."
+     ]
+    },
+    {
+     "q": "Learn chunks or learn grammar rules?",
+     "a": "Chunks",
+     "b": "Rules",
+     "fa": [
+      "Chunks. That’s how real people talk, in blocks."
+     ],
+     "fb": [
+      "Rules. Without them you can’t build anything new."
+     ]
+    },
+    {
+     "q": "Keep your Brazilian accent, or lose it?",
+     "a": "Keep it",
+     "b": "Lose it",
+     "fa": [
+      "Keep it. It’s part of who you are, and people understand you."
+     ],
+     "fb": [
+      "Lose it, as much as you can. It helps at work, like it or not."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Plenty of ups and downs, and every chunk in one breath."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Model",
+   "t": "Choose someone. Sound like them.",
+   "p": "One step at a time. Speak in chunks.",
+   "prof": "Make the student commit to one real model and one daily habit; push for chunks in every answer.",
+   "passos": [
+    {
+     "q": "Who is your model, and where can you hear them?",
+     "st": [
+      "My model is …",
+      "I can hear them on …"
+     ],
+     "ex": "My model is a podcast host. I can hear her every morning on my way to work."
+    },
+    {
+     "q": "What exactly do you want to copy?",
+     "st": [
+      "The way they …",
+      "Especially …"
+     ],
+     "ex": "The way she links words. Especially how she says “a bit of a”."
+    },
+    {
+     "q": "Pick three of their chunks to steal.",
+     "st": [
+      "The first one is …",
+      "I love how they say …"
+     ],
+     "ex": "“To be fair”, “at the end of the day” and “a bit of a nightmare”."
+    },
+    {
+     "q": "How will you practice them this week?",
+     "st": [
+      "Every day I’ll …",
+      "I’m going to shadow …"
+     ],
+     "ex": "I’m going to shadow two minutes of her show every day, first slow, then at her speed."
+    }
+   ],
+   "fim": "You have a model and three chunks. Now take it as it comes."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

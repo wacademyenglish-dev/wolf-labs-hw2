@@ -1,0 +1,96 @@
+/* ============================================================
+   TWO HUNDRED AND TWENTY WORDS · THE X-RAY · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: o negativo de raio-X — azul
+   de chapa quase preto, a carta oficial em ciano de negatoscópio, os
+   substantivos marcados como lupas que acendem; a pessoa escondida em
+   âmbar; a parede dos desaparecidos com cartões MISSING.
+   ============================================================ */
+:root{
+  --noite:#04080c; --noite-rgb:4,8,12; --tinta:#e8f1f5;
+  --t1:#f0f7fa; --t2:#bfd0d8; --t2-rgb:191,208,216; --t3:#7a8f99;
+  --ac:#6ad6f0; --ac2:#bff0fb; --ambar:#ffbf5c;
+  --vidro:rgba(232,241,245,.05); --vidro2:rgba(232,241,245,.085); --vidro3:rgba(232,241,245,.12);
+  --fio:rgba(220,236,242,.12); --fio2:rgba(220,236,242,.22); --luz:rgba(232,241,245,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Instrument Serif',Georgia,serif; --ui:'Public Sans',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:16px; --r2:10px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#022430}
+.btn.cheio{color:#022430}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:400 clamp(46px,4.2vw,80px)/.95 var(--disp);letter-spacing:-.01em}
+.capa h1 b{display:block;font-weight:400;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(18px,1.4vw,24px)/1.5 var(--ui);color:var(--t2);max-width:30em} .capa .sub b{color:var(--ambar)}
+.capa-r{display:grid;gap:12px;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#0c2a33;color:var(--ac2)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:26px;align-items:start;margin-top:8px}
+.nz-ops{display:grid;gap:6px} .nz-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:10px auto;width:100%} .nz-ops.linha .versao{text-align:center;min-height:54px;font-weight:700}
+.nz-ops.linha3{grid-template-columns:repeat(3,1fr)} .nz-ops.linha3 .versao{text-align:center;font:700 clamp(15px,1.15vw,19px) var(--mono)}
+.nz-linha-ok{display:flex;align-items:center;gap:12px} .nz-linha-ok .aprova{flex:1;margin:0} .nz-linha-ok.centro{max-width:1200px;margin:0 auto;width:100%}
+.nz-dests{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 12px}
+
+/* a carta em negativo */
+.nz-carta{position:relative;display:grid;gap:10px;padding:18px 22px;border-radius:6px;background:linear-gradient(180deg,#081a22,#06121a);border:1px solid #17404d;box-shadow:inset 0 0 60px rgba(106,214,240,.06)}
+.nz-timbre{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-bottom:8px;border-bottom:1px solid #17404d}
+.nz-timbre b{font:700 12px var(--mono);letter-spacing:.14em;color:var(--ac2)} .nz-timbre small{font:700 10px var(--mono);letter-spacing:.1em;color:var(--t3)}
+.nz-carta p{margin:0;font:500 clamp(15px,1.12vw,18px)/1.75 var(--ui);color:var(--t2)}
+.nz-nome,.nz-nome-f{display:inline;padding:1px 6px;border-radius:4px;border:1px dashed rgba(106,214,240,.55);background:rgba(106,214,240,.07);font:700 1em var(--ui);color:var(--ac2)}
+.nz-nome{cursor:pointer}
+.nz-nome.on{border-style:solid;border-color:var(--ac);background:rgba(106,214,240,.22);box-shadow:0 0 12px rgba(106,214,240,.4)}
+.nz-nome.raio{border-style:solid;border-color:var(--ambar);color:var(--ambar);background:rgba(255,191,92,.1)}
+.nz-carimbo{justify-self:end;padding:4px 10px;border:2px solid rgba(255,110,110,.6);border-radius:4px;transform:rotate(-4deg);font:700 11px var(--mono);letter-spacing:.14em;color:#ff9c9c}
+.nz-conta{margin:0;font:700 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+
+/* a lupa */
+.nz-lupa{display:grid;justify-items:center;gap:6px;padding:20px 28px;border-radius:28px;text-align:center;border:2px solid #17404d;background:radial-gradient(circle,#0c2a33,#06121a 70%)}
+.nz-lupa.on{border-color:var(--ac);box-shadow:0 0 30px rgba(106,214,240,.25)}
+.nz-lupa small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.nz-lupa > b{font:400 clamp(30px,2.6vw,46px)/1 var(--disp);color:var(--ac2)}
+.nz-seta{font:700 18px var(--mono);color:var(--t3)}
+.nz-lupa p{margin:0;font:700 clamp(18px,1.4vw,24px) var(--ui);color:var(--t1)} .nz-lupa em{font:700 10px var(--mono);font-style:normal;letter-spacing:.14em;color:var(--t3);margin-right:8px}
+.nz-pessoa{color:var(--ambar)!important}
+.nz-vazio{color:var(--t3)!important;font:italic 500 16px var(--ui)!important}
+
+/* a regra */
+.nz-cinco{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:0 0 12px}
+.nz-tipo{display:grid;gap:4px;padding:10px 14px;border-radius:var(--r2)} .nz-tipo small{font:700 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .nz-tipo p{margin:0;font:400 clamp(18px,1.4vw,24px) var(--disp);color:var(--t1)}
+.nz-tipo.zero{border-color:rgba(255,191,92,.5)} .nz-tipo.zero small{color:var(--ambar)}
+.nz-esq{display:grid;justify-items:center;gap:4px;padding:16px;border-radius:var(--r1);max-width:900px;margin:0 auto;width:100%} .nz-esq p{margin:0;font:400 clamp(26px,2.2vw,38px) var(--disp)} .nz-esq b{font-weight:400;color:var(--ac2)} .nz-esq u{text-decoration:none;color:var(--t3)} .nz-esq small{font:700 11px var(--mono);letter-spacing:.14em;color:var(--ambar)}
+
+/* quem sumiu */
+.nz-longa{display:grid;gap:6px;padding:12px 16px;border-radius:var(--r2)} .nz-longa small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)} .nz-longa p{margin:0;font:500 clamp(17px,1.3vw,22px)/1.45 var(--ui)}
+.nz-parede{display:grid;gap:10px;padding:14px 16px;border-radius:var(--r1);background:repeating-linear-gradient(90deg,#071016 0 3px,#081218 3px 6px);border:1px solid #17404d}
+.nz-parede > small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--ambar)}
+.nz-parede > div{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.nz-sumido{display:grid;justify-items:center;gap:4px;padding:10px 8px;border-radius:4px;background:#0d1a20;border:1px solid #2a4650;animation:cai .5s ease-out;transform:rotate(-1.5deg)}
+.nz-sumido:nth-child(even){transform:rotate(1.5deg)}
+.nz-sumido i{width:34px;height:40px;border-radius:50% 50% 8px 8px;background:radial-gradient(circle at 50% 30%,#2e4a55 0 30%,transparent 31%),linear-gradient(180deg,transparent 55%,#2e4a55 55%)}
+.nz-sumido b{font:700 12px var(--mono);letter-spacing:.06em;color:var(--t1);text-align:center} .nz-sumido em{font:700 9px var(--mono);font-style:normal;letter-spacing:.2em;color:#ff9c9c}
+@keyframes cai{from{opacity:0;transform:translateY(-10px)}}
+.nz-parede .nz-vazio{font:italic 500 14px var(--ui);color:var(--t3)}
+
+/* empilhar */
+.nz-corrente{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;align-items:center;padding:12px;border-radius:var(--r2);max-width:1000px;margin:0 auto;transition:opacity .6s}
+.nz-corrente span{padding:4px 10px;border-radius:4px;border:1px solid var(--fio2);font:500 clamp(17px,1.3vw,22px) var(--ui)} .nz-corrente i{font:700 14px var(--mono);font-style:normal;color:#ff9c9c}
+.nz-corrente.some{opacity:.35}
+.nz-seta-b{text-align:center;font:700 11px var(--mono);letter-spacing:.14em;color:var(--t3);margin:6px 0}
+.nz-pilha{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;padding:12px;border-radius:var(--r2);max-width:1000px;margin:0 auto;min-height:56px}
+.nz-pilha span{padding:6px 12px;border-radius:4px;background:#0c2a33;border:1px solid var(--ac);font:700 clamp(18px,1.4vw,24px) var(--ui);color:var(--ac2);animation:cai .4s both}
+.nz-pilha span.chefe{background:var(--ambar);border-color:#ffe0a8;color:#2d1a00}
+.nz-pilha em{color:var(--t3)}
+
+/* a resposta e o projeto */
+.nz-duas{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1200px;margin:0 auto 12px;width:100%}
+.nz-resp{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2)} .nz-resp small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)} .nz-resp p{margin:0;font:400 clamp(18px,1.4vw,24px)/1.35 var(--disp)} .nz-resp em{font:700 11px var(--mono);font-style:normal;letter-spacing:.1em;color:#ff9c9c}
+.nz-resp.b{border-color:rgba(106,214,240,.45)} .nz-resp.b em{color:var(--ok)}
+.nz-rot-p{display:grid;gap:4px;padding:16px;border-radius:var(--r2)} .nz-rot-p small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)} .nz-rot-p b{font:400 clamp(30px,2.6vw,46px) var(--disp);color:var(--ac2)}
+
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .nz-ops.linha{grid-template-columns:1fr} .nz-cinco{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:620px){ .nz-cinco{grid-template-columns:1fr 1fr} .nz-duas{grid-template-columns:1fr} .nz-ops.linha3{grid-template-columns:1fr} }

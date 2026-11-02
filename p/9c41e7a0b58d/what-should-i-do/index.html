@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · What Should I Do? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>What Should I Do? · The On-Air Desk</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>What Should I Do? · The On-Air Desk</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> What do I do?</p><p style="margin:0 0 6px"><b>The grammar:</b> No To, No S: Should never changes. No TO. No S. No DO.</p><p style="margin:0 0 6px"><b>Short class (about 52 min):</b> I Your Problem · II Last Night’s Show · III No To, No S · IV Two Different Questions · V The Letter Stack · VI Asking for Advice · VIII The Big Decision · X Off Air. Skip if you’re short on time: VII, IX (marked EXTRA on your screen). Full lesson: about 66 min.</p><p style="margin:0"><b>Open with:</b> “What’s one small problem you have this week?”</p></div><!--/prep-->
+    <p><i>What do I do?</i> is correct English, but it asks about a task, not for advice. This hour teaches <b>What should I do?</b>, <b>Should I…?</b>, <b>You should…</b> and <b>You shouldn’t…</b>. Your student hosts a late-night radio advice show: letters arrive in a stack, and every letter answered with one should and one shouldn’t pushes a fader up. Then the phone lines open and you call in.</p>
+    <h4>SHOULD NEVER MOVES</h4>
+    <p><i>You should to go</i>, <i>she shoulds</i>, <i>they don’t should</i>: the classic three. Cover everything after <i>should</i> and ask what is left.</p>
+    <h4>THE FADERS</h4>
+    <p>Scenes V and VII: tap SHOULD and SHOULDN’T when you hear them. The faders are for fun; the two sentences are the point.</p>
+    <h4>YOU CALL IN</h4>
+    <p>Scene VII: you are five callers. Keep the problems small and real, and push back once (<i>Oh, but…</i>) so your student gives a second piece of advice.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>What do I do?</i> (asking for advice), <i>What I should do?</i>, <i>should to</i>, <i>shoulds</i>, <i>don’t should</i>, and advice that rises at the end and sounds unsure.</p>
+    <!--conversa--><h4>THE BIG DECISION (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Three new callers (Wendy, Tom and Lucy), each with three choices. Your student picks the best one for the caller and says why with <i>should</i> and <i>shouldn’t</i>. There is no right answer. Wait five seconds in silence after each question, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk (<i>should to go</i> → <i>should go</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Problem, V The Letter Stack, VII The Phone Lines, VIII The Big Decision, IX Your Turn to Call.</li>
+      <li><b>Listen</b>: II Last Night’s Show (the transcript opens after they listen).</li>
+      <li><b>Focus</b>: III No To, No S, IV Two Different Questions, VI Asking for Advice.</li>
+      <li><b>Write</b>: X, a letter to the show and its answer. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* WHAT SHOULD I DO? (Main A2) · pergunta-surpresa · 26/10/2026 · should / shouldn’t / Should I…? */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'ontem', tipo: 'Would you rather', q: 'Would you rather work at night or very early in the morning?',
+    opc: ['At night', 'Early in the morning'], st: ['I’d rather work …, because …'],
+    ex: 'Early in the morning. At night I’m always tired, and I like the sunrise.', push: 'What time should you go to bed for that?' },
+  { cena: 'duas', tipo: 'And you?', q: 'What is the best advice somebody gave you?',
+    opc: ['From my family', 'From a friend', 'From a teacher'], st: ['My … told me: “You should …”', '… said I shouldn’t …'],
+    ex: 'From my grandfather. He told me: “You should always say thank you.” I still do it.', push: 'Did you follow it every time?' },
+  { cena: 'ordem', tipo: 'What if', q: 'A friend asks: “Should I cut my hair very short?” What do you say?',
+    opc: ['Yes, do it!', 'No, you shouldn’t', 'Ask me why first'], st: ['You should …', 'You shouldn’t …, because …'],
+    ex: 'Ask why first. If it’s for summer, she should do it. If she’s sad, she shouldn’t cut it today.', push: 'And you: should YOU change your hair?' },
+  { cena: 'seu', tipo: 'Opinion', q: 'Should people ask the internet for advice?',
+    opc: ['Yes, it’s fast', 'Only for small things', 'No, ask a person'], st: ['People should …', 'You shouldn’t ask the internet about …'],
+    ex: 'Only for small things. You should ask the internet about recipes. You shouldn’t ask it about your love life!', push: 'What was the last thing you asked the internet?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WHAT SHOULD I DO? (Main A2) · conversa · 26/10/2026 · regra 3×3 do Carlos
+   "The Big Decision" entra no lugar de "VIII · The Voice Falls" (extra; repetir e tocar sobe/desce).
+   O plano pedia um conselheiro (papel), mas a aula já tem dois: VII (o professor liga cinco vezes)
+   e IX (o aluno liga para o programa). Faltava DECIDIR: três ouvintes novos (nenhum está na pilha
+   de cartas nem nas linhas), cada um com três caminhos; o aluno escolhe e defende, o professor
+   aperta. Leve, A2, com iniciadores prontos.
+   A gramática da aula (should / shouldn’t + verbo puro, Should I…?) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'decisao', troca: 'voz', est: 'o', min: 7, img: 'cartas', rot: 'The Big Decision',
+    t: 'Three new callers. Each one has three choices.',
+    p: 'Choose the best one for the caller. Say why with should and shouldn’t. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Wendy calls', sit: '“My best friend’s birthday party and my cousin’s wedding are on the same Saturday!”',
+        q: 'Where should Wendy go?', opc: ['The party', 'The wedding', 'Both: half and half'],
+        st: ['She should go to …, because …', 'She shouldn’t …', 'She should call her … first.'],
+        ex: 'The wedding. A birthday is every year, but a wedding is one time. She should take her friend out to dinner the next week.',
+        push: 'The friend says: “If you don’t come, I’m very sad.” What should Wendy do now?' },
+      { tag: 'Tom calls', sit: '“I found a wallet on the bus. There’s 200 dollars inside, no name, and a photo of a dog.”',
+        q: 'What should Tom do?', opc: ['Take it to the police', 'Post the dog photo online', 'Keep the money'],
+        st: ['He should …, because …', 'He shouldn’t keep …', 'Somebody is looking for …'],
+        ex: 'Post the dog photo online! Somebody loves that dog. He shouldn’t keep the money: it isn’t his.',
+        push: 'Nobody answers for one month. Should he keep it then?' },
+      { tag: 'Lucy calls', sit: '“My boss invited me to dinner at her house on Friday. I don’t know her very well.”',
+        q: 'What should Lucy bring?', opc: ['Flowers', 'A dessert', 'Nothing'],
+        st: ['She should bring …', 'She shouldn’t go with …', 'Should she …?'],
+        ex: 'A dessert. Everybody likes chocolate cake. She shouldn’t go with nothing: it’s her first time there.',
+        push: 'And what should she NOT talk about at dinner?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "One small problem this week?",
+   "p": "Answer out loud. The picture opens."
+  },
+  "ontem": {
+   "t": "A night guard called the show.",
+   "p": "Read his question. Play the advice. Say it back."
+  },
+  "forma": {
+   "t": "Should never changes.",
+   "p": "No TO. No S. No DO. Pick, then say it."
+  },
+  "duas": {
+   "t": "Two correct questions. Different jobs.",
+   "p": "Read both. Say the difference. Then open it."
+  },
+  "cartas": {
+   "t": "Six letters. Two pieces of advice each.",
+   "p": "Read it. Give one SHOULD, one SHOULDN’T."
+  },
+  "ordem": {
+   "t": "Now you ask. Should goes first.",
+   "p": "Tap the words in order. Ask your teacher."
+  },
+  "linhas": {
+   "t": "The phone lines are open.",
+   "p": "Ask a question first. Then give advice."
+  },
+  "cv-decisao": {
+   "t": "Three callers. Three choices each.",
+   "p": "Pick the best. Say why with should."
+  },
+  "seu": {
+   "t": "Now you call the show.",
+   "p": "Tell a real problem. Ask for advice."
+  },
+  "fim": {
+   "t": "Sunrise. Your problem comes back.",
+   "p": "Write a letter to the show. Answer it yourself."
+  }
+ },
+ "prep": {
+  "obj": "Should para conselho: What should I do?, Should I…?, You should / shouldn’t. O aluno apresenta um programa de rádio de conselhos de madrugada.",
+  "armadilha": "Brasileiro pede conselho com “What do I do?” (tradução de “o que eu faço?”) e conjuga o should: “should to go”, “she shoulds”, “don’t should”, “What I should do?”.",
+  "pal": [
+   "What should I do?",
+   "Should I…?",
+   "You should",
+   "You shouldn’t",
+   "advice",
+   "caller",
+   "on air",
+   "problem"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o programa de rádio de madrugada: cartas chegam e cada conselho sobe um fader.",
+   "perg": "Do you listen to the radio?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: um probleminha da semana; ele volta no fim.",
+   "perg": "What’s one small problem you have this week?",
+   "pula": "Duas respostas bastam."
+  },
+  "ontem": {
+   "obj": "Escuta: o vigia noturno ligou ontem; ouvir o conselho e repetir.",
+   "perg": "What should he do?",
+   "pula": "Ouça uma vez e repita uma frase."
+  },
+  "forma": {
+   "obj": "Should nunca muda: sem to, sem s, sem do.",
+   "perg": "Should to go or should go?",
+   "pula": "Quatro frases bastam."
+  },
+  "duas": {
+   "obj": "What do I do? (tarefa) × What should I do? (conselho).",
+   "perg": "Which one asks for advice?",
+   "pula": "Dois pares bastam."
+  },
+  "cartas": {
+   "obj": "Seis cartas: um should e um shouldn’t para cada.",
+   "perg": "What should she do? What shouldn’t she do?",
+   "pula": "Três cartas bastam."
+  },
+  "ordem": {
+   "obj": "Montar a pergunta com should na frente e perguntar ao professor.",
+   "perg": "Should I learn to drive?",
+   "pula": "Três perguntas bastam."
+  },
+  "linhas": {
+   "obj": "Professor faz cinco ouvintes ao vivo; o aluno pergunta antes e aconselha depois.",
+   "perg": "What should I do?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-decisao": {
+   "obj": "Wendy, Tom e Lucy com três escolhas cada; o aluno escolhe e defende com should.",
+   "perg": "Which choice should Tom take?",
+   "pula": "Dois ouvintes bastam."
+  },
+  "seu": {
+   "obj": "O aluno liga com um problema real e pede conselho ao professor apresentador.",
+   "perg": "What’s your problem tonight?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: carta ao programa sobre o problema da cena I e a resposta; vai para o My notes.",
+   "perg": "What should you do about your problem?",
+   "pula": "Carta curta e dois conselhos bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra pedindo e dando conselhos sobre a vida do aluno.",
+   "perg": "What should a new student of English do first?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dois lados de um conselho; o aluno defende com should / shouldn’t.",
+   "perg": "Should you tell a friend the truth?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o apresentador do programa e o professor pede conselhos.",
+   "perg": "What should I do about my neighbor?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More advice, please.",
+   "p": "Pick a card. Give your advice out loud.",
+   "palavras": [
+    "should",
+    "shouldn’t",
+    "Should I…?",
+    "What should I do?"
+   ],
+   "cartas": [
+    {
+     "k": "SLEEP",
+     "q": "Your friend can’t sleep. What should he do?",
+     "fup": "What shouldn’t he do at night?",
+     "st": [
+      "He should …",
+      "He shouldn’t …"
+     ],
+     "ex": "He should read a book. He shouldn’t look at his phone in bed."
+    },
+    {
+     "k": "ENGLISH",
+     "q": "What should a new student of English do first?",
+     "fup": "What shouldn’t they worry about?",
+     "st": [
+      "They should …",
+      "They shouldn’t worry about …"
+     ],
+     "ex": "They should watch series in English. They shouldn’t worry about mistakes."
+    },
+    {
+     "k": "MONEY",
+     "q": "Your cousin spends too much. What should she do?",
+     "fup": "Should she use a credit card?",
+     "st": [
+      "She should …",
+      "She shouldn’t …"
+     ],
+     "ex": "She should write down every expense. She shouldn’t use her credit card for small things."
+    },
+    {
+     "k": "WORK",
+     "q": "Should people work on weekends?",
+     "fup": "What should they do instead?",
+     "st": [
+      "Yes, they should …",
+      "No, they shouldn’t. They should …"
+     ],
+     "ex": "No, they shouldn’t. They should rest and see their friends."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "A tourist is coming to your city. What should they see?",
+     "fup": "Where shouldn’t they go?",
+     "st": [
+      "They should see …",
+      "They shouldn’t …"
+     ],
+     "ex": "They should see the old market. They shouldn’t drive downtown."
+    },
+    {
+     "k": "YOUR WEEK",
+     "q": "What should you do this week, but don’t want to?",
+     "fup": "Should I help you?",
+     "st": [
+      "I should …, but …"
+     ],
+     "ex": "I should go to the dentist, but I’m scared."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "should",
+    "shouldn’t"
+   ],
+   "rodadas": [
+    {
+     "q": "Your friend’s new haircut is bad. Should you tell her?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Friends should be honest."
+     ],
+     "fb": [
+      "No. You shouldn’t hurt her. It grows back."
+     ]
+    },
+    {
+     "q": "A night guard is always tired. Should he change jobs?",
+     "a": "Change jobs",
+     "b": "Stay",
+     "fa": [
+      "He should change. Sleep is important."
+     ],
+     "fb": [
+      "He should stay. He should just sleep more in the day."
+     ]
+    },
+    {
+     "q": "Should kids have a phone at ten?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Parents should know where they are."
+     ],
+     "fb": [
+      "No. They should play outside."
+     ]
+    },
+    {
+     "q": "Your neighbor is loud at night. Talk to him or call the building manager?",
+     "a": "Talk to him",
+     "b": "Call the manager",
+     "fa": [
+      "You should talk to him first. Maybe he doesn’t know."
+     ],
+     "fb": [
+      "You should call the manager. You shouldn’t fight."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the radio host now.",
+   "p": "Your teacher calls with problems.",
+   "aluno": "Listen to your teacher’s problem. Answer as the host of the night show: one should, one shouldn’t.",
+   "perguntas": [
+    "I always arrive late to work. What should I do?",
+    "My dog barks all night. Should I buy a bigger house?",
+    "I want to learn guitar, but I’m forty. Should I start?",
+    "My best friend never pays me back. What should I say?",
+    "I drink five coffees a day. Is that a problem?",
+    "And you, host? What should you do after the show?"
+   ],
+   "st": [
+    "You should …",
+    "You shouldn’t …",
+    "I think you should …"
+   ],
+   "ex": "You should leave home ten minutes earlier. You shouldn’t check your phone in the morning."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

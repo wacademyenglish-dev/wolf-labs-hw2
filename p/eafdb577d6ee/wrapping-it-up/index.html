@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Wrapping It Up · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,700&family=Nunito+Sans:opsz,wght@6..12,500;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Wrapping It Up · The Long Table</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Wrapping It Up · The Long Table</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Christmas Eve at Grandma Edith’s: twelve people at one long table, and everybody talks at once.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: Don’t repeat. Keep one small word.</p><p style="margin:0 0 6px"><b>Short class (about 54 min):</b> I Your Holidays · II The Crackers · III The Rule · IV The Tense Decides · V The Wreath · VI Aunt Ruth on Speaker · VII Leaving Early · VIII Your Own Table. On the speaking pages the student speaks first and taps Check on their own screen. Full lesson: about 54 min.</p><p style="margin:0"><b>Open with:</b> “What is the biggest family night of the year for you?”</p></div><!--/prep-->
+    <p>Christmas Eve at Grandma Edith’s: twelve people at one long table, and everybody talks at once. A full answer to every question sounds like a robot (<i>Yes, I am staying for dessert</i>). Real people cut it short and keep one small word: <b>so / not</b> (<i>I think so, I hope not, I’m afraid not</i>), the <b>auxiliary</b> (<i>So do I, Neither can I, Nor have I</i>, the echo <i>She did?</i>), <b>to</b> (<i>I’d love to</i>) and <b>one / ones</b>. Many students answer <i>I think yes</i>, <i>I also don’t</i>, <i>I’d love</i>, <i>the red</i>, or <i>Is it?</i> for every piece of news. On screen: the long table from above (whoever speaks lights up, YOU in candle gold), and the scissors that cut Leo’s long answer until only the small word stays.</p>
+    <h4>THE PAGES</h4>
+    <p><b>II The Crackers</b>: six crackers. The student reads the relative’s question and answers short, out loud (before tapping). Then Check: the short answer appears and the scissors cut Leo’s long answer down to the small word (am, so, so again, to, can, not).</p>
+    <p><b>III The Rule</b>: the table talk on a dark paper. The student reads it out loud and taps the small word that holds each answer (so, not, do, can, to, one; every word can be tapped, only the six count). Then they finish the rule on the right by choosing inside each line. The rule stays in the corner of IV, VI and VII.</p>
+    <p><b>IV The Tense Decides</b>: six answers with a wrong helper (Nor do I, Neither do I, So do I, She does?, You do?). The student says the answer right (the helper comes from their sentence: have, did, am, did, can, will), then taps Check.</p>
+    <p><b>V The Wreath</b>: six things the relatives say, six short answers. Tap what they say, then its answer; every right pair lights the wreath. Then the student says each pair out loud, fast.</p>
+    <p><b>VI Aunt Ruth on Speaker</b>: four calls. The student reads Aunt Ruth’s line, answers short and adds one detail, taps Check (an example appears), then asks her back (the question is on the screen). You answer as Aunt Ruth: the line in brackets is yours.</p>
+    <h4>THE TENSE DECIDES</h4>
+    <p>When no helper is visible in their sentence (<i>Mia got engaged</i>), the helper is still there: present do, past did. In IV the wrong helper is underlined: ask “Which helper is in their sentence?”</p>
+    <h4>A NOTE</h4>
+    <p>A live A2 lesson already teaches <i>too / either / So do I</i>. This one is the B2 version: so / not, every auxiliary, echo questions, to and one.</p>
+    <!--conversa--><h4>LEAVING EARLY (VII) AND THE SURPRISE QUESTION</h4>
+    <p>A negotiation with a secret limit. It’s ten o’clock on Christmas Eve; the student wants to leave for a party and you are Grandma Edith, who wants everyone at the table until midnight. Ask her four questions: the student answers short first (I’m afraid not, I suppose so, I’d love to, the small one), then negotiates. Your limit is on your screen only: you accept 11:00 if they help with the dishes and promise to come for lunch. Wait five seconds in silence before you give in, and use the PUSH line to make it harder. Close the deal on the screen. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Holidays, II The Crackers, V The Wreath, VI Aunt Ruth on Speaker (you are Aunt Ruth), VII Leaving Early (you are Grandma Edith).</li>
+      <li><b>Focus</b>: III The Rule, IV The Tense Decides.</li>
+      <li><b>Write</b>: VIII, three lines the student’s family always says, with short answers. They go to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* WRAPPING IT UP (Main B2) · pergunta-surpresa · 28/10/2026 · respostas curtas: so / not, So do I, I'd love to, one / ones */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'tesoura', tipo: 'Would you rather', q: 'Would you rather spend the holidays with twelve relatives, or alone on a beach?',
+    opc: ['Twelve relatives', 'Alone on a beach'], st: ['I’d rather …', 'I’d love to …, but …'],
+    ex: 'Alone on a beach, I think. I’d love to try it once, but my family would never forgive me.',
+    push: 'Three days alone, no phone signal. Still the beach?' },
+  { cena: 'regra', tipo: 'And you?', q: 'I hate long phone calls. Do you?',
+    opc: ['So do I!', 'I don’t.', 'It depends.'], st: ['So do I. …', 'I don’t. I …', 'It depends on …'],
+    ex: 'So do I! I always say “I’m afraid I have to go” after five minutes.',
+    push: 'Who is the one person you’d talk to for two hours?' },
+  { cena: 'guirlanda', tipo: 'Opinion', q: 'Gifts: big expensive ones, or small ones with a story?',
+    opc: ['Big ones', 'Small ones', 'No gifts at all'], st: ['Small ones, because …', 'I think so too / I don’t think so …'],
+    ex: 'Small ones. The best gift I got was a small notebook my brother made.',
+    push: 'Someone gives you a small one and you gave a big one. Is that OK?' },
+  { cena: 'ruth', tipo: 'What if', q: 'Your family asks you to host the big dinner next year. What do you say?',
+    opc: ['I’d love to!', 'I suppose so.', 'I’m afraid not!'], st: ['I’d love to, but …', 'I suppose so, if …', 'I’m afraid not, because …'],
+    ex: 'I suppose so, if everybody brings one dish. My kitchen is tiny.',
+    push: 'Twelve people, one bathroom, and your uncle stays the night. Still yes?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WRAPPING IT UP (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A negociação com limite secreto entra no lugar de "VII · Short and Real" (escolher a resposta curta
+   e falar: prática controlada; a mesa comprida, a tesoura e a tia Ruth ficam). 22h na véspera de Natal:
+   o aluno quer sair cedo para encontrar os amigos; a avó Edith quer todo mundo até a meia-noite.
+   A gramática da aula (I think so / I'm afraid not / I suppose so, So do I / Neither can I, I'd love to,
+   one / ones) mora nas perguntas, nos exemplos e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'saida', troca: 'real', est: 'o', min: 7, img: 'lareira', rot: 'Leaving Early', t: 'It’s ten o’clock. Your friends are waiting for you.',
+    p: 'Your teacher is Grandma Edith. Answer short first (so, not, to, one), then negotiate. Close a deal you can live with.',
+    formato: 'papel', rot_perg: 'Grandma Edith asks',
+    aluno: { quem: 'You, the grandchild', quer: 'Leave now. Your friends are at a party across town.', limite: 'Secret limit: you must leave by 11:30, or you miss the last train.' },
+    prof: { quem: 'Grandma Edith', quer: 'Everybody at the table until midnight, for the gifts.', limite: 'Secret limit: she accepts 11:00 if you help with the dishes and promise to come for lunch tomorrow.' },
+    perguntas: [
+      { q: '“You’re staying until midnight, aren’t you?”', ex: 'I’m afraid not, Grandma. My friends are waiting, and I’d love to see them before the year ends.' },
+      { q: '“But you love opening the gifts! Don’t you?”', ex: 'I do! So does Leo. Could I open mine now? Just the small one?' },
+      { q: '“Will you at least help with the dishes before you go?”', ex: 'I suppose so. If I wash the big ones, can Mia dry them?' },
+      { q: '“And will you come back for lunch tomorrow?”', ex: 'I hope so! I’ll try to be here by one.' }
+    ],
+    st: ['I’m afraid not, but …', 'I’d love to, but …', 'I suppose so, if …', 'What about the small one?'],
+    push: 'Grandma Edith: “Your cousin Mia stayed last year, and she had a party too.” Still leaving?',
+    acordo: { tag: 'The deal', q: 'What time do you leave?', opc: ['Midnight, after the gifts', '11:00, after the dishes', 'Now, back for lunch'],
+      st: ['OK. I think so, if …', 'Deal. I’ll …'],
+      ex: '11:00, after the dishes. I’ll wash the big pans, open my gift early, and I’ll be back for lunch. I promise!' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "You, your family, the end of the year.",
+   "p": "Tap a gift tag. Answer out loud."
+  },
+  "tesoura": {
+   "t": "Leo’s answers are way too long.",
+   "p": "Answer short, out loud. Tap Check. Watch the scissors."
+  },
+  "regra": {
+   "t": "Don’t repeat. Keep one small word.",
+   "p": "Read aloud. Tap the small words. Finish the rule."
+  },
+  "aux": {
+   "t": "The helper comes from their sentence.",
+   "p": "Fix the wrong helper out loud. Then tap Check."
+  },
+  "guirlanda": {
+   "t": "Six quick lines around the table.",
+   "p": "Match each line to its answer. Say the pairs fast."
+  },
+  "ruth": {
+   "t": "Aunt Ruth is on speaker.",
+   "p": "Answer short, add a detail. Tap Check. Ask her back."
+  },
+  "cv-saida": {
+   "t": "Ten o’clock. Your friends are waiting.",
+   "p": "Your teacher is Grandma Edith. Answer short, then negotiate."
+  },
+  "fim": {
+   "t": "Who talks most at your table?",
+   "p": "Three family lines, your short answers. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Respostas curtas sem repetir: so / not (I hope not), auxiliar (So do I, Neither can I, She did?), to (I’d love to) e one / ones, na ceia de Natal da avó Edith.",
+  "armadilha": "Do “acho que sim” e “eu também não”: sai “I think yes”, “I also don’t”, “I’d love” sem to, “the red” sem one e “Is it?” para toda notícia, sem pegar o auxiliar da frase.",
+  "pal": [
+   "I think so",
+   "I hope not",
+   "I’m afraid not",
+   "So do I",
+   "Neither can I",
+   "She did?",
+   "I’d love to",
+   "the small one"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a mesa comprida da avó Edith: doze pessoas falando ao mesmo tempo.",
+   "perg": "What is the biggest family night of the year for you?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal: festas, família e o fim do ano do aluno.",
+   "perg": "Who cooks at your family’s big dinners?",
+   "pula": "Duas etiquetas bastam."
+  },
+  "tesoura": {
+   "obj": "Seis crackers: responder curto antes de tocar; a tesoura corta a resposta longa do Leo.",
+   "perg": "Can you say it in two words?",
+   "pula": "Quatro crackers bastam."
+  },
+  "regra": {
+   "obj": "A conversa da mesa: achar a palavrinha (so, not, do, can, to, one) e fechar a regra.",
+   "perg": "Which small word holds this answer?",
+   "pula": "Não corte a regra."
+  },
+  "aux": {
+   "obj": "O tempo decide: o auxiliar vem da frase do outro (have, did, am, can, will).",
+   "perg": "Which helper is in their sentence?",
+   "pula": "Quatro respostas bastam."
+  },
+  "guirlanda": {
+   "obj": "Seis falas, seis respostas curtas; depois dizer os pares rápido.",
+   "perg": "What’s the short answer?",
+   "pula": "Pule a rodada rápida no fim."
+  },
+  "ruth": {
+   "obj": "O professor é a tia Ruth ao telefone; resposta curta, um detalhe e pergunta de volta.",
+   "perg": "Are you all having a good time?",
+   "pula": "Duas ligações bastam."
+  },
+  "cv-saida": {
+   "obj": "Negociação com a avó Edith (limite secreto: 23h se lavar a louça e voltar para o almoço).",
+   "perg": "You’re not leaving already, are you?",
+   "pula": "Duas perguntas e feche o acordo."
+  },
+  "fim": {
+   "obj": "Escrita: três frases que a família do aluno sempre diz, e as respostas curtas dele.",
+   "perg": "What does your family always say?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa aberta em que o professor reage e o aluno responde curto e acrescenta.",
+   "perg": "Do you think so?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre festas de família, com respostas curtas e argumentos.",
+   "perg": "I see your point, but don’t you think so?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o pequeno Leo e responde à família só com respostas curtas.",
+   "perg": "Leo, did you write all the crackers?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Short first, then the detail.",
+   "p": "Pick a card. Answer short. Then add more.",
+   "palavras": [
+    "I think so",
+    "I hope not",
+    "So do I",
+    "I’d love to",
+    "one"
+   ],
+   "cartas": [
+    {
+     "k": "NEXT YEAR",
+     "q": "Will next year be better than this one?",
+     "fup": "What would make it better?",
+     "st": [
+      "I hope so. …",
+      "I’m afraid not. …"
+     ],
+     "ex": "I hope so. I’m planning to travel more and work a little less."
+    },
+    {
+     "k": "FAMILY DINNERS",
+     "q": "Do you enjoy big family dinners?",
+     "fup": "What’s the best part?",
+     "st": [
+      "I do, actually. …",
+      "Not really. …"
+     ],
+     "ex": "I do, actually. The food is the best part, and the arguments the worst."
+    },
+    {
+     "k": "GIFTS",
+     "q": "Do you prefer giving gifts or getting them?",
+     "fup": "What’s the best one you ever gave?",
+     "st": [
+      "Giving, I suppose. …",
+      "The best one was …"
+     ],
+     "ex": "Giving, I suppose. The best one was a handmade one: a photo book for my mother."
+    },
+    {
+     "k": "NEW YEAR’S PLANS",
+     "q": "Are you going to make any resolutions?",
+     "fup": "Did you keep last year’s?",
+     "st": [
+      "I doubt it. …",
+      "I’d love to, but …"
+     ],
+     "ex": "I doubt it. I never keep them past February."
+    },
+    {
+     "k": "THE OLD TRADITIONS",
+     "q": "Your family still does the old traditions, doesn’t it?",
+     "fup": "Which one would you keep forever?",
+     "st": [
+      "Some of them do. …",
+      "The one I’d keep is …"
+     ],
+     "ex": "Some of them do. The one I’d keep is the long lunch on the 25th."
+    },
+    {
+     "k": "QUICK NEWS",
+     "q": "Your teacher tells you two pieces of news. React fast.",
+     "fup": "Now tell your teacher one.",
+     "st": [
+      "You did? …",
+      "Neither have I! …"
+     ],
+     "ex": "You did? That’s amazing. Neither have I ever been to Lisbon."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Short, then argue.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I think so",
+    "I don’t think so",
+    "I see your point, but",
+    "The thing is"
+   ],
+   "rodadas": [
+    {
+     "q": "Is it rude to leave a family dinner early?",
+     "a": "Rude",
+     "b": "Not rude",
+     "fa": [
+      "I think so. The night is one evening a year.",
+      "The thing is, grandparents notice who leaves."
+     ],
+     "fb": [
+      "I don’t think so. You came, you ate, you helped.",
+      "Adults have other places to be."
+     ]
+    },
+    {
+     "q": "Phones at the holiday table: allowed or not?",
+     "a": "Allowed",
+     "b": "Not allowed",
+     "fa": [
+      "Allowed, for photos and calls with people who couldn’t come.",
+      "Aunt Ruth was on speaker, after all."
+     ],
+     "fb": [
+      "Not allowed. Neither should the TV be on.",
+      "I see your point, but one night without screens won’t hurt."
+     ]
+    },
+    {
+     "q": "Big family gatherings or small ones?",
+     "a": "Big",
+     "b": "Small",
+     "fa": [
+      "Big. The noise is the tradition.",
+      "Everybody talking at once is the best part."
+     ],
+     "fb": [
+      "Small. You actually talk to people.",
+      "With twelve people, you only hear half of every story."
+     ]
+    },
+    {
+     "q": "Real gifts or no gifts at all?",
+     "a": "Real gifts",
+     "b": "No gifts",
+     "fa": [
+      "Real gifts, but small ones.",
+      "A good gift shows you listened all year."
+     ],
+     "fb": [
+      "No gifts. Time together is enough.",
+      "The thing is, nobody remembers last year’s presents."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Did anyone win? I don’t think so."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are little Leo now.",
+   "p": "Your teacher interviews you. Keep it short.",
+   "aluno": "Listen to your teacher’s question. Answer as Leo: short first, then one detail.",
+   "perguntas": [
+    "Did you write all the answers in the crackers?",
+    "Were they a bit too long?",
+    "Are you staying up until midnight?",
+    "Do you like Grandma Edith’s dessert?",
+    "Which present is yours, the big one or the small one?",
+    "Will you write the crackers again next year?"
+   ],
+   "st": [
+    "I did. …",
+    "I hope so. …",
+    "The big one. …"
+   ],
+   "ex": "I did. They were a bit long, I suppose. Next year I’ll write short ones."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

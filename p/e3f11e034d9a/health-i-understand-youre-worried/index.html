@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -112,5 +113,265 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A nurse, a patient and her husband.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "multipla": {
+   "t": "Five worried people.",
+   "p": "Choose the most caring answer. Say it warmly."
+  },
+  "cv-espera": {
+   "t": "What makes a worried person feel heard?",
+   "p": "Rank the ideas. Compare with your teacher."
+  },
+  "transforma": {
+   "t": "Same information, more care.",
+   "p": "Read the cold answer. Say it the caring way."
+  },
+  "pode": {
+   "t": "Lesson 10: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Empatia com paciente e família: nomear e validar a emoção, agradecer a informação, seguir com uma ação e um prazo, e dizer não com gentileza e alternativa.",
+  "armadilha": "O calor brasileiro existe, mas a tradução sai fria: “Calm down” (irrita), “It’s nothing”, “That’s not my job”, e prometer o que não controla.",
+  "pal": [
+   "I can see you’re worried.",
+   "That’s completely understandable.",
+   "I’m really glad you told me.",
+   "Let me find out and come back in …",
+   "Let’s go through it together.",
+   "For this part …, but I’ll …"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: o desafio não é sentir empatia, é dizê-la em inglês.",
+   "perg": "What did a health professional once say that made you feel cared for?",
+   "pula": "Faça a pergunta de abertura e vá ao vídeo."
+  },
+  "video": {
+   "obj": "Ver a enfermeira da AHRQ incluindo o marido no plano de recuperação.",
+   "perg": "How does the nurse include the husband?",
+   "pula": "Assista uma vez só e faça uma pergunta."
+  },
+  "multipla": {
+   "obj": "Ouvir cinco pessoas preocupadas, escolher a resposta mais acolhedora e dizê-la com voz calorosa.",
+   "perg": "Why is that answer more caring?",
+   "pula": "Três pessoas bastam."
+  },
+  "cv-espera": {
+   "obj": "Ranquear cinco ideias para a sala de espera cheia.",
+   "perg": "What helps a worried family most?",
+   "pula": "Só o primeiro lugar e um porquê."
+  },
+  "transforma": {
+   "obj": "Transformar respostas frias em acolhedoras, com a mesma informação.",
+   "perg": "How would you say that more warmly?",
+   "pula": "Quatro frases bastam."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; pergunte qual frase vai usar amanhã no trabalho.",
+   "perg": "Which phrase will you use tomorrow?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre empatia na prática clínica real do aluno.",
+   "perg": "When is empathy hardest for you?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de comunicação com pacientes e famílias, com argumentos.",
+   "perg": "What would you say to the family?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: você é um familiar preocupado; o aluno é o profissional e acolhe.",
+   "perg": "Why is nobody telling me anything?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Care, in real life.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I can see …",
+    "That’s understandable.",
+    "Let me …",
+    "together"
+   ],
+   "cartas": [
+    {
+     "k": "HARDEST MOMENT",
+     "q": "When is it hardest for you to be patient with a patient?",
+     "fup": "What helps you?",
+     "st": [
+      "It’s hardest when …",
+      "What helps me is …"
+     ],
+     "ex": "It’s hardest when the clinic is full. What helps me is taking one breath before I answer."
+    },
+    {
+     "k": "THE FAMILY",
+     "q": "Do families help or make things harder in your job?",
+     "fup": "Give me an example.",
+     "st": [
+      "Most of the time, …",
+      "Once, …"
+     ],
+     "ex": "Most of the time, they help. Once, a daughter explained her father’s medicines better than he could."
+    },
+    {
+     "k": "BAD NEWS",
+     "q": "Who taught you how to talk to worried people?",
+     "fup": "Was it a person or experience?",
+     "st": [
+      "I learned it from …"
+     ],
+     "ex": "I learned it from an older nurse. She always sat down to talk."
+    },
+    {
+     "k": "SAYING NO",
+     "q": "What do patients ask for that you can’t give?",
+     "fup": "How do you say no?",
+     "st": [
+      "They often ask for …",
+      "I say: for this part …, but I’ll …"
+     ],
+     "ex": "They often ask for antibiotics. I say: for this part I can’t, but I’ll explain what will help."
+    },
+    {
+     "k": "WARM VOICE",
+     "q": "Is it harder to sound warm in English than in Portuguese?",
+     "fup": "Why?",
+     "st": [
+      "Yes, because …",
+      "Not really, because …"
+     ],
+     "ex": "Yes, because I focus on grammar and forget my voice."
+    },
+    {
+     "k": "YOUR OWN CARE",
+     "q": "As a patient, what makes you feel heard?",
+     "fup": "And what makes you feel ignored?",
+     "st": [
+      "I feel heard when …",
+      "I feel ignored when …"
+     ],
+     "ex": "I feel heard when they look at me. I feel ignored when they only look at the screen."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I can see …",
+    "because",
+    "I think"
+   ],
+   "rodadas": [
+    {
+     "q": "A patient waits two hours. Apologize for the system, or just explain the reason?",
+     "a": "Apologize",
+     "b": "Explain",
+     "fa": [
+      "Apologize. Their feeling is real.",
+      "‘I’m sorry for the wait’ costs nothing."
+     ],
+     "fb": [
+      "Explain. Facts calm people down.",
+      "Saying sorry for everything sounds empty."
+     ]
+    },
+    {
+     "q": "Tell a worried family a time (“in 30 minutes”), or avoid promising?",
+     "a": "Give a time",
+     "b": "Don’t promise",
+     "fa": [
+      "Give a time. Waiting with no time is the worst.",
+      "Then come back, even with no news."
+     ],
+     "fb": [
+      "Don’t promise. Hospitals are unpredictable.",
+      "A broken promise hurts trust."
+     ]
+    },
+    {
+     "q": "Show your own emotion with a patient, or stay professional?",
+     "a": "Show it",
+     "b": "Stay professional",
+     "fa": [
+      "Show a little. Patients like a human.",
+      "It builds connection."
+     ],
+     "fb": [
+      "Stay professional. They need you calm.",
+      "Your feelings are for later."
+     ]
+    },
+    {
+     "q": "Family in the room during the consultation: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. They help with the details.",
+      "And they’ll help at home."
+     ],
+     "fb": [
+      "Ask the patient first. Some things are private.",
+      "The patient decides, not the family."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "A worried husband at the desk.",
+   "p": "Your teacher is the husband.",
+   "aluno": "Listen to the husband. Answer as the nurse: name the feeling, then an action and a time.",
+   "perguntas": [
+    "I’ve been here for three hours. Why is nobody telling me anything?",
+    "Is my wife going to be OK?",
+    "Can I go in and see her now?",
+    "Why can’t the doctor talk to me?",
+    "What should I do when she comes home?",
+    "Can you promise she’ll be home tomorrow?"
+   ],
+   "st": [
+    "I can see you’re worried.",
+    "Let me find out and come back in …",
+    "For this part …, but I’ll …"
+   ],
+   "ex": "I can see you’re worried, and that’s completely understandable. Let me find out and come back in ten minutes."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

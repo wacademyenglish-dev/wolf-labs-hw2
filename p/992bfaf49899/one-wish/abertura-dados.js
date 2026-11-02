@@ -1,0 +1,2 @@
+/* a abertura desta aula (kit/abertura.js) · modo mural · gravado por kit/abertura_grava.py */
+window.WL_ABERTURA = {"modo": "mural", "rot": "One Wish", "t": "One wish, one word.", "p": "Each of you writes one word for your wish. Then each word becomes a story.", "q": "If you had one wish, what would it be? One word.", "extras": ["love", "time", "money"], "de": "film", "fup": "Why that word? What would you do if you had it?", "fst": ["If I had …, I would …", "If I were …, I would …"], "fex": "Time. If I had more time, I would learn to paint."};

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Each Other",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d9460daee277/each-other/img/live-padaria.webp",
+  "capa": "../img/live-padaria.webp",
   "alvo": "myself / themselves (the action comes back) x each other (the action crosses); verbs with no -self (feel, get up, relax, remember); by myself x alone",
   "abrir": "What did you teach yourself to do?",
   "fecho": "<b>myself / themselves</b>: the action comes back to the same person. <b>each other</b>: it goes across between two people. <b>feel, get up, relax</b> take no -self: <i>I feel tired.</i> <b>by myself</b> = nobody helped · <b>alone</b> = nobody there.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia talks to Leo about his two brothers and their bakery. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/d9460daee277/each-other/img/live-padaria.webp",
+      "img": "../img/live-padaria.webp",
       "leg": "A quiet bakery after closing",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "They taught themselves to bake.",
-          "img": "https://wolf-labs.pages.dev/p/d9460daee277/each-other/img/live-padaria.webp",
+          "img": "../img/live-padaria.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "They helped each other every day.",
-          "img": "https://wolf-labs.pages.dev/p/d9460daee277/each-other/img/live-ilha.webp",
+          "img": "../img/live-ilha.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He got up at four. He didn't feel tired.",
-          "img": "https://wolf-labs.pages.dev/p/d9460daee277/each-other/img/live-padaria.webp",
+          "img": "../img/live-padaria.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d9460daee277/each-other/img/live-padaria.webp",
+      "img": "../img/live-padaria.webp",
       "leg": "An empty bakery with two chairs",
       "pede": "Look at the picture: an empty bakery with two chairs. Write 2 or 3 sentences: something you taught yourself, and something you and another person did for each other.",
       "ph": "I taught myself …",

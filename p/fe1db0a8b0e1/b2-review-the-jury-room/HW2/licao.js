@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Jury Room",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fe1db0a8b0e1/b2-review-the-jury-room/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "third conditional (if + had + participle, would have + participle), mixed conditional (past if, present result: would + plain verb), should have / could have + participle; never would after if",
   "abrir": "Think of a small thing that went wrong this week. What would you do differently?",
   "fecho": "<b>If + had + participle, would have + participle</b>: the past that did not happen (<i>If he had known, he would have stopped</i>). Never <i>would</i> after <i>if</i>. A past cause with a result now: <i>If I hadn't come, I would be home now.</i> <b>Should have / could have</b> + participle: what was right, or possible, and did not happen.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a day on a jury. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/fe1db0a8b0e1/b2-review-the-jury-room/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The courthouse corridor",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If the party had ended at midnight, she would have slept well.",
-          "img": "https://wolf-labs.pages.dev/p/fe1db0a8b0e1/b2-review-the-jury-room/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "He should have asked the neighbors before he invited everyone.",
-          "img": "https://wolf-labs.pages.dev/p/fe1db0a8b0e1/b2-review-the-jury-room/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She could have knocked on his door, but she waited until two.",
-          "img": "https://wolf-labs.pages.dev/p/fe1db0a8b0e1/b2-review-the-jury-room/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fe1db0a8b0e1/b2-review-the-jury-room/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The corridor outside the jury room",
       "pede": "Look at the picture: an empty corridor outside a jury room. Write 2 or 3 sentences about something that went wrong for you recently. Use <b>If I had …, I would have …</b>, <b>should have</b> or <b>could have</b>.",
       "ph": "If I had …, I would have …",

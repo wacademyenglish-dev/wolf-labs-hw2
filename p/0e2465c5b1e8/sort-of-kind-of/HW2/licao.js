@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Sort Of, Kind Of",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0e2465c5b1e8/sort-of-kind-of/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "vague language on purpose: sort of, kind of, -ish (tallish, eight-ish), about, like + number, more or less, or something, and stuff; one vague word is enough; never more or less of, a type of shy",
   "abrir": "What time do you usually get home, more or less?",
   "fecho": "<b>Sort of / kind of</b> + adjective: <i>kind of shy</i>. <b>-ish</b>: <i>tallish, eight-ish</i>. Numbers: <b>about</b> fifty, <b>like</b> fifty, <b>more or less</b>. Lists: <b>or something</b>, <b>and stuff</b>. One vague word is enough. Never <i>more or less of</i>, never <i>a type of shy</i>.",
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0e2465c5b1e8/sort-of-kind-of/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "An accordion and records on a red sofa",
       "pede": "Look at the picture: an accordion and a pile of records on a red sofa. Write 2 or 3 sentences describing the room or its owner, without being exact. Use <b>sort of</b>, <b>kind of</b>, <b>-ish</b>, <b>about</b> or <b>more or less</b>.",
       "ph": "It's a kind of music room, with about ...",

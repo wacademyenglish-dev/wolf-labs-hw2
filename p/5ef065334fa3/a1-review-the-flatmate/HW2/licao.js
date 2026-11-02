@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "A1 Review: The Flatmate",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5ef065334fa3/a1-review-the-flatmate/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 6 review: he / she + -s; doesn't + plain verb; Do / Does ...? and short answers; at + time; on + date; always / usually / sometimes / never",
   "abrir": "What time do you usually get up on Sundays?",
   "fecho": "<b>He / she + -s</b>: <i>She works.</i> After <b>doesn't</b>, no -s: <i>He doesn't cook.</i> <b>At</b> + time, <b>on</b> + date. <b>Always / sometimes / never</b> go before the verb.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo choose a new flatmate. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/5ef065334fa3/a1-review-the-flatmate/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A living room at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "She gets up at half past six.",
-          "img": "https://wolf-labs.pages.dev/p/5ef065334fa3/a1-review-the-flatmate/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She never plays loud music.",
-          "img": "https://wolf-labs.pages.dev/p/5ef065334fa3/a1-review-the-flatmate/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "My birthday is on December third.",
-          "img": "https://wolf-labs.pages.dev/p/5ef065334fa3/a1-review-the-flatmate/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5ef065334fa3/a1-review-the-flatmate/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A living room at night",
       "pede": "Look at the picture: a living room at night. Imagine your flatmate lives here. Write 2 or 3 sentences about his or her day. Use <b>-s</b>, <b>doesn't</b> and <b>always / never</b>.",
       "ph": "My flatmate gets up at …",

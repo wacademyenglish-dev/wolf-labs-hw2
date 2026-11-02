@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Thirty-Three Point Nine",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b62284f62f61/thirty-three-point-nine/img/live-caixa.webp",
+  "capa": "../img/live-caixa.webp",
   "alvo": "present perfect continuous: have / has been + -ing for something that started and continues; since + a point in time, for + a piece of time; How long have you been ...?",
   "abrir": "What have you been putting off lately?",
   "fecho": "<b>have / has been + -ing</b> for something that started and is still going: <i>I've been waiting for an hour.</i> <b>Since</b> + the starting point (<i>since March</i>); <b>for</b> + the length (<i>for seven months</i>). The question: <i>How long have you been living here?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the office. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/b62284f62f61/thirty-three-point-nine/img/live-envelope.webp",
+      "img": "../img/live-envelope.webp",
       "leg": "The unopened letter",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I've been working at this desk since nine o'clock.",
-          "img": "https://wolf-labs.pages.dev/p/b62284f62f61/thirty-three-point-nine/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The coat has been hanging by the door for three weeks.",
-          "img": "https://wolf-labs.pages.dev/p/b62284f62f61/thirty-three-point-nine/img/live-casaco.webp",
+          "img": "../img/live-casaco.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "How long have you been keeping this box in the hallway?",
-          "img": "https://wolf-labs.pages.dev/p/b62284f62f61/thirty-three-point-nine/img/live-caixa.webp",
+          "img": "../img/live-caixa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b62284f62f61/thirty-three-point-nine/img/live-poeira.webp",
+      "img": "../img/live-poeira.webp",
       "leg": "A closed laptop, covered in dust",
       "pede": "Look at the picture: a closed laptop covered in dust. Write 2 or 3 sentences: how long it has been closed, and what you have been putting off. Use <b>have been + -ing</b>, <b>for</b> and <b>since</b>.",
       "ph": "The laptop has been closed since …",

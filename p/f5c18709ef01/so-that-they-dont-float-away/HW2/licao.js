@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "So That They Don't Float Away",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f5c18709ef01/so-that-they-dont-float-away/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "purpose: to / in order to (same person) · so that + subject + can / will / won't (past: could / would / wouldn't) · negative: so as not to / in order not to · never for + verb (for keep), never to don't",
   "abrir": "Why do you do the little things you do every day? Give me a reason.",
   "fecho": "<b>To / in order to</b> + plain verb: <i>I use straps to keep things still.</i> <b>So that</b> + a new person: <i>so that they don't float away</i> (past: <i>so that it wouldn't float away</i>). Negative: <b>so as not to</b> / <b>in order not to</b>. Never <i>for keep</i>, never <i>to don't</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo asks Mia questions on a space station. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f5c18709ef01/so-that-they-dont-float-away/img/live-cozinha.webp",
+      "img": "../img/live-cozinha.webp",
       "leg": "A dim galley with a cup and a round window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We tie everything down so that nothing floats away.",
-          "img": "https://wolf-labs.pages.dev/p/f5c18709ef01/so-that-they-dont-float-away/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She exercises two hours a day in order to stay strong.",
-          "img": "https://wolf-labs.pages.dev/p/f5c18709ef01/so-that-they-dont-float-away/img/live-treino.webp",
+          "img": "../img/live-treino.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He moves slowly so as not to hit the wall.",
-          "img": "https://wolf-labs.pages.dev/p/f5c18709ef01/so-that-they-dont-float-away/img/live-modulo.webp",
+          "img": "../img/live-modulo.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f5c18709ef01/so-that-they-dont-float-away/img/live-cupula.webp",
+      "img": "../img/live-cupula.webp",
       "leg": "A round window with the Earth's edge",
       "pede": "Look at the picture: a round window in space, with the edge of the Earth. Write 2 or 3 sentences about things you do for a reason. Use <b>to</b>, <b>so that</b> or <b>so as not to</b>.",
       "ph": "I … so that …",

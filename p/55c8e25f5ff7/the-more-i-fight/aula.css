@@ -1,0 +1,171 @@
+/* ============================================================
+   The More I Fight · The System · LIVE CLASS 06/10/2026
+   the blue window of the System, rank E to S
+   ============================================================ */
+:root{
+  --noite:#05070f; --noite-rgb:5,7,15; --tinta:#e6e9ef;
+  --t1:#f1f3f7; --t2:#b3bac7; --t2-rgb:179,186,199; --t3:#7b8394;
+  --ac:#4aa8ff; --ac2:#9fd4ff; --frio:#b9a4ff; --coral:#f2837a;
+  --vidro:rgba(230,233,239,.045); --vidro2:rgba(230,233,239,.08); --vidro3:rgba(230,233,239,.11);
+  --fio:rgba(214,220,232,.11); --fio2:rgba(214,220,232,.2);
+  --ok:#9fdcae; --am:#4aa8ff; --erro:#f2837a; --lil:#c3a8f0;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Instrument Serif',Georgia,serif; --ui:'Hanken Grotesk',system-ui,sans-serif; --mono:'Hanken Grotesk',system-ui,sans-serif;
+  --r1:12px; --r2:8px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#021027}
+.btn.cheio{background:var(--ac);border-color:var(--ac);color:#021027}
+.cab h1,.pergunta h2,.follow p.q,.carta b,.cr h3,#guia h2,.marca span{font-weight:400;letter-spacing:0}
+.cab h1{font-size:clamp(34px,2.9vw,56px)}
+.pergunta h2{font-size:clamp(24px,1.9vw,34px)}
+.capa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:10px 0 6px;font:400 clamp(58px,5.4vw,104px)/.98 var(--disp);color:var(--t1)}
+.capa .banda{margin:0 0 18px;font:500 clamp(18px,1.3vw,22px) var(--ui);color:var(--ac)}
+.capa .sub{margin:0 0 26px;font:400 clamp(18px,1.3vw,22px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.sl-foto{margin:0;display:grid;gap:14px}
+.sl-foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r1);border:1px solid #1a1e27;box-shadow:var(--sombra)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.05vw,17px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(159,220,174,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.sl-mesa{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.sl-ops{display:grid;gap:6px}
+.sl-linha-ok{display:flex;align-items:center;gap:12px} .sl-linha-ok span{flex:1}
+.sl-centro{max-width:1150px;margin:0 auto 14px;width:100%;display:grid;gap:12px}
+
+/* a onda da música: o traço comum */
+.onda{position:relative;display:flex;align-items:center;gap:2px;height:44px}
+.onda i{flex:1;border-radius:2px;background:linear-gradient(180deg,var(--ac),color-mix(in srgb,var(--ac) 40%,#000));opacity:.7}
+.onda .mk{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t1);border:0;padding:0;margin:0}
+.onda.grande{height:84px;max-width:1300px;width:100%;margin:34px auto 40px}
+.onda.grande button.mk:nth-child(even) span{top:auto;bottom:-30px}
+.onda.grande button.mk{width:14px;margin-left:-6px;background:transparent;cursor:pointer}
+.onda.grande button.mk::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--t2)}
+.onda.grande button.mk span{position:absolute;top:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 14px var(--ui);color:var(--t2);padding:3px 10px;border-radius:999px;border:1px solid var(--fio2);background:var(--noite)}
+.onda.grande button.mk.on::before{background:var(--ac2);width:3px}
+.onda.grande button.mk.on span{color:#021027;background:var(--ac);border-color:var(--ac)}
+.onda.grande button.mk:focus-visible span{outline:2px solid var(--ac2);outline-offset:2px}
+
+/* o resto: quieto */
+.sl-encarte{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:26px;max-width:1300px;margin:0 auto 18px;width:100%;padding:18px;border-radius:var(--r1)}
+.sl-capinha{display:grid;gap:10px}
+.sl-capinha img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid #20242f}
+.sl-capinha small{display:block;font:600 14px var(--ui);color:var(--ac)} .sl-capinha b{font:400 clamp(24px,1.9vw,32px)/1.1 var(--disp);color:var(--t1)}
+.sl-encarte dl{margin:0;display:grid;gap:14px;align-content:center}
+.sl-encarte dt{font:600 14px var(--ui);color:var(--frio)} .sl-encarte dd{margin:2px 0 0;font:400 clamp(19px,1.4vw,24px)/1.4 var(--disp);color:var(--t1)}
+.sl-selo{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:1px dashed var(--fio2);text-align:center;padding:16px}
+.sl-selo b{font:italic 400 clamp(30px,2.4vw,42px) var(--disp);color:var(--ac)} .sl-selo small{font:400 15px var(--ui);color:var(--t2)}
+.sl-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.sl-vcol{display:grid;gap:6px;width:100%;max-width:min(100%,82vh);justify-self:center} .sl-cred{font:400 13px var(--ui);color:var(--t3)}
+.sl-dica{text-align:center;font:italic 400 22px var(--disp);color:var(--t3)}
+.sl-sentido{display:block;font:400 clamp(19px,1.4vw,23px)/1.45 var(--disp);color:var(--t1);margin-bottom:8px}
+.sl-gram{display:block;font:400 16px/1.5 var(--ui);color:var(--t2)} .sl-gram b{color:var(--ac2)}
+.sl-pista{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--ac)}
+.sl-pista small{font:600 13px var(--ui);color:var(--ac)} .sl-pista p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.sl-fala{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--frio)}
+.sl-fala small{display:flex;align-items:center;gap:8px;font:600 13px var(--ui);color:var(--frio)} .sl-fala p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.sl-luz{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px rgba(242,131,122,.7)}
+.sl-ar{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px;border-radius:var(--r1)} .sl-ar p{margin:0;font:400 30px var(--disp);color:var(--t1)}
+.sl-carta{display:grid;gap:4px;padding:10px 14px;border-radius:var(--r2);border:1px solid var(--fio2);background:var(--vidro)}
+.sl-carta > small{font:600 13px var(--ui);color:var(--t3)}
+.sl-carta p{margin:0;font:400 clamp(14px,1vw,16px)/1.45 var(--ui);color:var(--t1)}
+.sl-carta.aluno{border-color:rgba(74,168,255,.45);background:rgba(74,168,255,.05)} .sl-carta.aluno > small{color:var(--ac)}
+.sl-carta.prof{border-style:dashed}
+.sl-carta details{margin-top:4px;display:grid;gap:3px} .sl-carta summary{cursor:pointer;font:600 13px var(--ui);color:var(--t3)}
+.so-aluno-c{display:none}
+html.wl-sala-aluno .so-aluno-c{display:grid}
+
+.fim .grande span{font-size:clamp(15px,1.1vw,18px)}
+
+/* a cara de Solo Leveling: Oxanium nos títulos e na janela do Sistema, Hanken Grotesk no texto */
+:root{--disp:'Oxanium',system-ui,sans-serif;--ui:'Hanken Grotesk',system-ui,sans-serif}
+.cab h1,.capa h1{font-weight:700;letter-spacing:.01em}
+.capa h1{font-size:clamp(50px,5vw,96px);line-height:.98;text-shadow:0 0 30px #4aa8ff40}
+.cab h1{font-size:clamp(26px,2.3vw,44px);line-height:1.1}
+.pergunta h2{font-family:var(--ui);font-weight:600}
+.sl-pista p{font-family:var(--ui)!important;font-weight:700}
+.sl-sentido,.sl-encarte dd{font-family:var(--ui)!important;font-weight:400}
+/* a janela do Sistema: o gesto forte */
+.sl-janela{position:relative;display:grid;gap:10px;padding:14px 18px 12px;border-radius:4px;background:linear-gradient(180deg,#0a1a38f2,#050c1ef2);border:1px solid #4aa8ff99;box-shadow:0 0 0 1px #02060f inset,0 0 34px #4aa8ff26,0 18px 40px #000c;font-family:'Oxanium',system-ui,sans-serif}
+.sl-janela::before,.sl-janela::after{content:'';position:absolute;width:14px;height:14px;border:2px solid #8fd0ff}
+.sl-janela::before{top:-3px;left:-3px;border-right:0;border-bottom:0}
+.sl-janela::after{bottom:-3px;right:-3px;border-left:0;border-top:0}
+.sl-topo{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px solid #4aa8ff40;padding-bottom:6px}
+.sl-topo b{font:700 clamp(15px,1.1vw,19px) 'Oxanium',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8fd0ff}
+.sl-topo b::before{content:'[ ';color:#4aa8ff}.sl-topo b::after{content:' ]';color:#4aa8ff}
+.sl-topo small{font:500 12px 'Oxanium',sans-serif;color:#7f93b8}
+.sl-perfil{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
+.sl-hex{position:relative;width:clamp(78px,6.4vw,104px);aspect-ratio:1;display:grid;place-items:center}
+.sl-hex svg{position:absolute;inset:0;width:100%;height:100%}
+.sl-hex polygon{fill:#0b1f44;stroke:#4aa8ff;stroke-width:3}
+.sl-hex b{position:relative;font:700 clamp(36px,3vw,52px)/1 'Oxanium',sans-serif;color:#e4eeff;text-shadow:0 0 16px #4aa8ff}
+.sl-hex small{position:absolute;bottom:14%;font:600 10px 'Oxanium',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7f93b8}
+.sl-hex.sobe b{animation:sl-sobe 1s ease-out both}
+@keyframes sl-sobe{0%{transform:translateY(30%) scale(.6);opacity:0}60%{transform:translateY(-6%) scale(1.15);opacity:1}100%{transform:none}}
+.sl-medidor{display:grid;gap:6px;min-width:0}
+.sl-medidor > small{font:600 12px 'Oxanium',sans-serif;color:#7f93b8}
+.sl-escada{display:flex;gap:6px}
+.sl-escada span{flex:1;text-align:center;padding:3px 0;border:1px solid #4aa8ff33;border-radius:2px;font:700 13px 'Oxanium',sans-serif;color:#4c6086}
+.sl-escada span.passou{color:#8fd0ff;border-color:#4aa8ff66}
+.sl-escada span.agora{color:#021027;background:#4aa8ff;border-color:#4aa8ff;box-shadow:0 0 12px #4aa8ff88}
+.sl-xp{height:10px;border-radius:2px;background:#0c1a36;box-shadow:inset 0 0 0 1px #4aa8ff40;overflow:hidden}
+.sl-xp i{display:block;height:100%;background:linear-gradient(90deg,#2d6fd6,#6fd0ff);box-shadow:0 0 12px #4aa8ff;transition:width .8s ease-out}
+.sl-lista{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.sl-q{display:grid;grid-template-columns:18px 1fr auto;gap:10px;align-items:center;padding:4px 8px;border-radius:2px;font:600 clamp(13px,.95vw,16px) 'Oxanium',sans-serif;color:#7f93b8}
+.sl-q b{font:600 12px 'Oxanium',sans-serif;color:#4c6086}
+.sl-caixa{width:14px;height:14px;border:1.5px solid #4aa8ff66;border-radius:2px;position:relative}
+.sl-q.ok{color:#d6e6ff}.sl-q.ok b{color:#8fd0ff}
+.sl-q.ok .sl-caixa{background:#4aa8ff;border-color:#4aa8ff}
+.sl-q.ok .sl-caixa::after{content:'';position:absolute;left:3.5px;top:0;width:4px;height:8px;border:solid #021027;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.sl-q.vez{background:#4aa8ff14;box-shadow:inset 2px 0 0 #b9a4ff;color:#e4eeff}.sl-q.vez b{color:#b9a4ff}
+.sl-q.novo{animation:sl-marca .9s ease-out both}
+@keyframes sl-marca{0%{background:#4aa8ff55}100%{background:transparent}}
+.sl-aviso{margin:0;padding-top:6px;border-top:1px solid #4aa8ff26;font:600 clamp(13px,1.6vh,16px) 'Oxanium',sans-serif;color:#8fd0ff;text-align:center;letter-spacing:.04em}
+.sl-janela.cheio{border-color:#b9a4ff;box-shadow:0 0 0 1px #02060f inset,0 0 40px #8b6cf650,0 18px 40px #000c}
+.sl-janela.cheio .sl-hex polygon{stroke:#b9a4ff;fill:#1a1240}
+.sl-janela.cheio .sl-hex b{text-shadow:0 0 20px #b9a4ff}
+.sl-janela.cheio .sl-aviso{color:#b9a4ff}
+@media (prefers-reduced-motion:reduce){.sl-hex.sobe b,.sl-q.novo{animation:none}.sl-xp i{transition:none}}
+/* o resto: quieto */
+.sl-regra{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1300px;margin:0 auto 16px;width:100%}
+.sl-regra > div{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.sl-regra small{font:700 13px var(--ui);color:var(--frio)} .sl-regra p{margin:0;font:600 clamp(18px,1.3vw,23px)/1.35 var(--ui);color:var(--t1)} .sl-regra b{color:var(--ac2)} .sl-regra span{font:500 15px var(--ui);color:var(--t2)}
+.sl-diarias{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1300px;margin:0 auto;width:100%}
+.sl-di{display:grid;gap:6px;align-content:start;padding:14px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.sl-di small{font:700 13px var(--ui);color:var(--ac)} .sl-di p{margin:0;font:600 clamp(17px,1.2vw,21px)/1.3 var(--ui);color:var(--t1)}
+.sl-encarte .sl-capinha img{aspect-ratio:16/10;max-height:clamp(150px,23vh,250px)}
+.sl-encarte{margin-bottom:6px}.sl-encarte dl{gap:8px}.sl-encarte dd{font-size:clamp(16px,1.02vw,19px)!important;line-height:1.45}
+@media (max-width:1100px){ .sl-regra{grid-template-columns:1fr} .sl-diarias{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .sl-diarias{grid-template-columns:1fr} .sl-perfil{gap:10px} .sl-q{font-size:13px;gap:8px} .sl-topo small{display:none} }
+
+@media (max-width:1100px){ .mesa-c,.capa,.sl-mesa,.sl-video,.sl-encarte{grid-template-columns:1fr} .sl-regra{grid-template-columns:1fr} }
+@media (max-width:620px){
+  .onda.grande{height:64px;margin-top:40px} .onda.grande button.mk span{font-size:11px;padding:2px 6px}
+  .sl-capinha img{aspect-ratio:16/9}
+}
+
+/* a tira de filme (aulas de filme no lugar da onda de som) */
+.tira{border-radius:6px;padding:0 6px;background:#070707;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.tira-furos{height:14px;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,255,255,.13) 9px 19px,transparent 19px 28px);background-size:28px 6px;background-repeat:repeat-x;background-position:0 50%}
+.tira-q{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tq{position:relative;display:grid;align-content:end;gap:1px;aspect-ratio:16/9;min-height:0;padding:6px 8px;border:0;border-radius:2px;overflow:hidden;text-align:left;background:#141414;font:inherit;color:inherit}
+.tq-img{position:absolute;inset:0;background:var(--bg) center/cover;filter:brightness(.42) saturate(.8)}
+.tq b,.tq span{position:relative}
+.tq b{font:600 10px var(--ui);color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.tq span{font:600 11px/1.15 var(--ui);color:var(--t1)}
+.tira.grande{max-width:1300px;width:100%;margin:6px auto 22px}
+.tira.grande .tq{cursor:pointer;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s}
+.tira.grande .tq b{font-size:13px} .tira.grande .tq span{font-size:clamp(14px,1.05vw,18px)}
+.tira.grande .tq:hover .tq-img{filter:brightness(.55)}
+.tira.grande .tq.on{outline-color:var(--ac)} .tira.grande .tq.on .tq-img{filter:brightness(.7) saturate(1)}
+.tira.grande .tq:focus-visible{outline-color:var(--ac2)}
+@media (max-width:620px){.tira.grande .tira-q{grid-template-columns:repeat(3,minmax(0,1fr))} .tira.grande .tq span{font-size:12px} .tira.grande .tq b{font-size:11px} .capa-r .tira{display:none}}
+
+
+/* 22/10/2026 · formatos novos: a janela do Sistema ao lado das ligações */
+.fm-obj .sl-janela{padding:10px 14px 10px}
+.fm-obj .sl-hex{width:clamp(60px,5vw,80px)}
+.fm-obj .sl-q{padding:2px 8px}
+.sl-mesa .f2-liga{gap:10px}
+.sl-mesa .f2-liga .f2-bt{font-size:13.5px;padding:7px 11px}

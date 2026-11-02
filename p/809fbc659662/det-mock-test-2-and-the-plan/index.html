@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -121,5 +122,312 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "palavras": {
+   "t": "Real words only.",
+   "p": "One round, one minute."
+  },
+  "lacunas": {
+   "t": "Three sentences, then a paragraph.",
+   "p": "Twenty seconds each. Three minutes for the paragraph."
+  },
+  "ditado": {
+   "t": "Three sentences. Three plays each.",
+   "p": "Type every word."
+  },
+  "multipla": {
+   "t": "A phone call, then a short text.",
+   "p": "Listen once to each line. Then choose."
+  },
+  "prova": {
+   "t": "Six tasks with the real clock.",
+   "p": "Photos, a paragraph, two questions, the sample."
+  },
+  "cartao": {
+   "t": "Write your test-day plan.",
+   "p": "Five lines, from the week before to the test."
+  },
+  "cv-cadeira": {
+   "t": "Four questions from admissions.",
+   "p": "Your teacher works there. Answer with a clear shape."
+  },
+  "pode": {
+   "t": "The course is done. Are you ready?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Último simulado completo do DET Prep (todas as tarefas, conteúdo novo) e o plano para os dias antes da prova. Comparar com o Mock Test 1 pelas checklists.",
+  "armadilha": "Na escrita e na fala, o brasileiro responde sem forma: opinião solta, sem razão, exemplo e fecho. Na digitação, erros de ortografia contam. Nunca prometa nota.",
+  "pal": [
+   "answer, reason, example, wrap-up",
+   "speaking sample",
+   "the real clock",
+   "test-day plan",
+   "official rules",
+   "Read and Select",
+   "Listen and Type"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a última aula: simulado 2 e o plano do dia da prova.",
+   "perg": "Last time, what was the part to fix?",
+   "pula": "Traga a lista do Mock Test 1 e siga."
+  },
+  "palavras": {
+   "obj": "Read and Select: tocar só as palavras reais em um minuto.",
+   "perg": "Why is that one a fake word?",
+   "pula": "Uma rodada, sem comentar cada palavra."
+  },
+  "lacunas": {
+   "obj": "Completar letras que faltam em frases e num parágrafo, com relógio.",
+   "perg": "How do you spell it?",
+   "pula": "Só o parágrafo."
+  },
+  "ditado": {
+   "obj": "Listen and Type: ouvir até três vezes e digitar tudo.",
+   "perg": "Which word did you miss?",
+   "pula": "Duas frases bastam."
+  },
+  "multipla": {
+   "obj": "Ligação para o escritório de moradia e texto sobre multitarefa; escolher e dizer por quê.",
+   "perg": "Why is that the answer?",
+   "pula": "Só a ligação."
+  },
+  "prova": {
+   "obj": "Seis tarefas de fala e escrita no relógio real, com checklist e segunda tentativa.",
+   "perg": "Did you give a reason and an example?",
+   "pula": "Uma foto, o parágrafo e o speaking sample."
+  },
+  "cartao": {
+   "obj": "Escrever o plano: semana antes, véspera, sala, dia, durante a prova.",
+   "perg": "What will you do the day before?",
+   "pula": "Três linhas bastam."
+  },
+  "cv-cadeira": {
+   "obj": "Hot seat: o aluno responde à admissão da universidade dos sonhos com forma clara.",
+   "perg": "Why do you want to study here?",
+   "pula": "Duas perguntas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação final; abrir o site oficial juntos antes de marcar a prova.",
+   "perg": "Are you ready to book the test?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Perguntas no estilo do DET sobre a vida do aluno, com a forma resposta-razão-exemplo-fecho.",
+   "perg": "What is your reason for taking the test?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre estratégias de prova e de estudo, com frases prontas.",
+   "perg": "Which strategy is better for you?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Planejar, em passos, o que vem depois da prova: o objetivo real do aluno.",
+   "perg": "What will the score open for you?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Test-style questions about you.",
+   "p": "Pick a card. Answer, reason, example, wrap-up.",
+   "palavras": [
+    "I think…",
+    "The main reason is…",
+    "For example,",
+    "So, overall,"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR GOAL",
+     "q": "Why are you taking the Duolingo English Test?",
+     "fup": "What happens if you get the score?",
+     "st": [
+      "The main reason is …",
+      "So, overall, …"
+     ],
+     "ex": "The main reason is a master’s degree in Canada. So, overall, this score opens the door."
+    },
+    {
+     "k": "MULTITASKING",
+     "q": "Do you think people can really multitask?",
+     "fup": "Can you?",
+     "st": [
+      "I think …",
+      "For example, …"
+     ],
+     "ex": "I don’t think so. For example, when I text in a meeting, I miss what people say."
+    },
+    {
+     "k": "HOUSING",
+     "q": "Would you rather live with other students or alone?",
+     "fup": "Why?",
+     "st": [
+      "I’d rather …",
+      "The main reason is …"
+     ],
+     "ex": "I’d rather live with other students. The main reason is my English would improve faster."
+    },
+    {
+     "k": "A HARD SKILL",
+     "q": "Which part of the test was hardest for you, and why?",
+     "fup": "What helped?",
+     "st": [
+      "The hardest part was …",
+      "What helped was …"
+     ],
+     "ex": "The hardest part was Listen and Type. What helped was reading the tip first."
+    },
+    {
+     "k": "STUDY HABITS",
+     "q": "Describe how you study best.",
+     "fup": "Morning or night?",
+     "st": [
+      "I study best when …",
+      "For example, …"
+     ],
+     "ex": "I study best in short blocks. For example, twenty minutes before work."
+    },
+    {
+     "k": "THE FUTURE",
+     "q": "Where do you see yourself in five years?",
+     "fup": "How does English help?",
+     "st": [
+      "In five years, I see myself …",
+      "So, overall, …"
+     ],
+     "ex": "In five years, I see myself working abroad. So, overall, English is the first step."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Test strategies.",
+   "p": "Pick a side. Your teacher takes the other.",
+   "palavras": [
+    "I think",
+    "because",
+    "on the other hand"
+   ],
+   "rodadas": [
+    {
+     "q": "Study the night before, or rest completely?",
+     "a": "Study",
+     "b": "Rest",
+     "fa": [
+      "Study a little. A quick review gives me confidence.",
+      "Just the question types, nothing new."
+     ],
+     "fb": [
+      "Rest. A tired brain makes spelling mistakes.",
+      "The work is done; sleep is the last step."
+     ]
+    },
+    {
+     "q": "Take the test in the morning or at night?",
+     "a": "Morning",
+     "b": "Night",
+     "fa": [
+      "Morning. My head is fresh.",
+      "The house is quiet early."
+     ],
+     "fb": [
+      "Night. I’m more awake later.",
+      "I have no work to worry about."
+     ]
+    },
+    {
+     "q": "Speak for the full 90 seconds, or stop when your idea ends?",
+     "a": "Full 90 seconds",
+     "b": "Stop at the end of the idea",
+     "fa": [
+      "The full time. More speech shows more English.",
+      "The route helps me fill it."
+     ],
+     "fb": [
+      "Stop at the end. Repeating myself sounds bad.",
+      "A strong wrap-up is better than filler."
+     ]
+    },
+    {
+     "q": "Take the test once and wait, or book two tries?",
+     "a": "Once",
+     "b": "Two tries",
+     "fa": [
+      "Once. I want to focus all my energy.",
+      "It’s cheaper."
+     ],
+     "fb": [
+      "Two tries. Less pressure on the first one.",
+      "The second try is always better, like in class."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "After the Test",
+   "t": "Plan what comes after the score.",
+   "p": "Your real goal, step by step.",
+   "prof": "Celebrate the end of the course. Keep it on the student’s real goal; do not promise a score.",
+   "passos": [
+    {
+     "q": "What score do you need, and for what?",
+     "st": [
+      "I need …, because …"
+     ],
+     "ex": "I need 120, because my university asks for it."
+    },
+    {
+     "q": "Where will you send it first?",
+     "st": [
+      "First, I’ll send it to …"
+     ],
+     "ex": "First, I’ll send it to the University of Toronto."
+    },
+    {
+     "q": "What will you do if the score is lower?",
+     "st": [
+      "If it’s lower, I’ll …"
+     ],
+     "ex": "If it’s lower, I’ll study the weak part and try again in a month."
+    },
+    {
+     "q": "How will you keep your English going after the test?",
+     "st": [
+      "I’ll keep …",
+      "Every week, I’ll …"
+     ],
+     "ex": "I’ll keep my lessons. Every week, I’ll watch one talk without subtitles."
+    }
+   ],
+   "fim": "The plan is ready. Now open the official website and book it."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

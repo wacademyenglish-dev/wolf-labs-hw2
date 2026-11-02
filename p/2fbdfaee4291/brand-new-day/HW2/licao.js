@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Brand New Day",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2fbdfaee4291/brand-new-day/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "used to (a past habit or state that is over) versus the present perfect with for and since (something that started and continues); ever in questions (Have you ever been ...?); finished time (ago, last week) takes the simple past",
   "abrir": "What did you use to do that you don't do anymore?",
   "fecho": "<b>used to</b> + verb = a past habit that is over: <i>I used to live in Queens.</i> <b>Present perfect + for / since</b> = it started and it continues: <i>I've lived here for three weeks.</i> <i>Have you ever been ...?</i> asks about your life up to now. With <b>ago</b> or <b>last week</b>, use the simple past.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia visits Leo in his new flat. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2fbdfaee4291/brand-new-day/img/live-corredor.webp",
+      "img": "../img/live-corredor.webp",
       "leg": "The hallway outside the new flat",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I've lived in this building for three weeks.",
-          "img": "https://wolf-labs.pages.dev/p/2fbdfaee4291/brand-new-day/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I used to live in Queens, near my cousins.",
-          "img": "https://wolf-labs.pages.dev/p/2fbdfaee4291/brand-new-day/img/live-queens.webp",
+          "img": "../img/live-queens.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Have you ever been up on the roof at night?",
-          "img": "https://wolf-labs.pages.dev/p/2fbdfaee4291/brand-new-day/img/live-telhado.webp",
+          "img": "../img/live-telhado.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2fbdfaee4291/brand-new-day/img/live-telhado.webp",
+      "img": "../img/live-telhado.webp",
       "leg": "A rooftop over the city",
       "pede": "Look at the picture: a rooftop over the city at night. Write 2 or 3 sentences about a change in your life. What did you <b>use to</b> do? What <b>have you done</b> since then, or for how long?",
       "ph": "I used to … but I have … since …",

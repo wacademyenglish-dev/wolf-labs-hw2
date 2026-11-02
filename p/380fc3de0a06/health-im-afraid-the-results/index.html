@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -124,5 +125,275 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A doctor updates a patient’s son.",
+   "p": "One question, the video, then questions."
+  },
+  "ordem": {
+   "t": "The SPIKES route: six steps.",
+   "p": "Put them in order. Name each step."
+  },
+  "descobre": {
+   "t": "Too blunt, too vague, or clear and kind?",
+   "p": "Compare A and B. Which one helps?"
+  },
+  "cv-dificil": {
+   "t": "Hard news at work: when, where, how?",
+   "p": "Choose how. Say your first two sentences."
+  },
+  "prova": {
+   "t": "A hard conversation from your profession.",
+   "p": "Plan 30 seconds. Then speak slowly."
+  },
+  "pode": {
+   "t": "Lesson 9: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Dar notícia difícil com SPIKES: aviso prévio, o fato em palavras simples, nomear a emoção, silêncio, plano e pergunta aberta. Vídeo de um cirurgião falando com o filho de uma paciente.",
+  "armadilha": "Brasileiro dá a notícia sem aviso, se esconde atrás do jargão, consola com Don’t worry, it will be fine e fecha com Any questions? em vez de What questions do you have?",
+  "pal": [
+   "Shall we go somewhere quieter?",
+   "Can you tell me what you already know?",
+   "I’m afraid…",
+   "Unfortunately…",
+   "I can see this is hard to hear.",
+   "Here’s what we’ll do next.",
+   "What questions do you have?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula com cuidado: as conversas mais difíceis pedem o inglês mais claro.",
+   "perg": "What makes a conversation difficult at work?",
+   "pula": "Vá devagar; o aluno conta algo pessoal só se quiser."
+  },
+  "video": {
+   "obj": "Escuta: o cirurgião conta ao filho a complicação depois da cirurgia (inglês britânico).",
+   "perg": "How does the doctor start the conversation?",
+   "pula": "Assista uma vez e faça duas perguntas."
+  },
+  "ordem": {
+   "obj": "Ordenar as seis frases do SPIKES e nomear cada passo.",
+   "perg": "Why does the doctor ask what the son already knows?",
+   "pula": "Ordene sem nomear todos os passos."
+  },
+  "descobre": {
+   "obj": "Comparar frases diretas demais, vagas demais e claras e gentis.",
+   "perg": "Which one helps the patient, and why?",
+   "pula": "Três pares bastam."
+  },
+  "cv-dificil": {
+   "obj": "Conversa: três notícias difíceis de trabalho (nenhuma de saúde) e as duas primeiras frases.",
+   "perg": "Where and when would you give this news?",
+   "pula": "Duas notícias bastam."
+  },
+  "prova": {
+   "obj": "Caso fictício da profissão do aluno com relógio; reaja como paciente real (silêncio, pergunta, emoção).",
+   "perg": "Did you pause after the key fact?",
+   "pula": "Uma tentativa e o checklist bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; lembrar de seguir os protocolos da instituição na vida real.",
+   "perg": "Can you give difficult news clearly and kindly?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre comunicação difícil no trabalho, sem pedir experiências de perda.",
+   "perg": "What helps you stay calm in a hard conversation?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre verdade, cuidado e jeito de comunicar.",
+   "perg": "Where do you stand, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play com caso fictício: você é o familiar de um paciente e o aluno usa o SPIKES.",
+   "perg": "Doctor, how is my father?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about hard conversations.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’m afraid…",
+    "Unfortunately…",
+    "I can see…",
+    "Here’s what we’ll do next."
+   ],
+   "cartas": [
+    {
+     "k": "STAYING CALM",
+     "q": "What helps you stay calm before a hard conversation at work?",
+     "fup": "Do you prepare your first sentence?",
+     "st": [
+      "What helps me is …",
+      "I usually …"
+     ],
+     "ex": "What helps me is breathing and planning my first sentence. I usually find a quiet room."
+    },
+    {
+     "k": "SILENCE",
+     "q": "Is silence easy or hard for you in a conversation?",
+     "fup": "Why do people fill it?",
+     "st": [
+      "Silence is … for me.",
+      "I think people …"
+     ],
+     "ex": "Silence is hard for me. I think people fill it because they feel uncomfortable."
+    },
+    {
+     "k": "JARGON",
+     "q": "Which technical words in your job confuse patients?",
+     "fup": "How do you say them in plain words?",
+     "st": [
+      "Patients don’t understand …",
+      "I say …"
+     ],
+     "ex": "Patients don’t understand “benign”. I say “it isn’t cancer”."
+    },
+    {
+     "k": "A GOOD EXAMPLE",
+     "q": "Have you seen a colleague give hard news really well?",
+     "fup": "What did they do?",
+     "st": [
+      "Yes, I saw …",
+      "They …"
+     ],
+     "ex": "Yes, I saw a senior nurse. She sat down, used the patient’s name and waited."
+    },
+    {
+     "k": "THE PLAN",
+     "q": "Why is a plan important after bad news?",
+     "fup": "What can a plan include?",
+     "st": [
+      "A plan helps because …",
+      "It can include …"
+     ],
+     "ex": "A plan helps because people need a next step. It can include the next exam and a phone number."
+    },
+    {
+     "k": "QUESTIONS",
+     "q": "“Any questions?” or “What questions do you have?” Which is better?",
+     "fup": "Why?",
+     "st": [
+      "I think … is better because …"
+     ],
+     "ex": "I think “What questions do you have?” is better because it says questions are normal."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but…",
+    "I’m afraid…",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Give all the information at once, or in small pieces?",
+     "a": "All at once",
+     "b": "In small pieces",
+     "fa": [
+      "All at once. People deserve the full picture.",
+      "Waiting makes it worse."
+     ],
+     "fb": [
+      "In small pieces. People can’t hear everything in shock.",
+      "Ask what they want to know first."
+     ]
+    },
+    {
+     "q": "Should the family hear the news before the patient?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Sometimes yes. The family can support the patient.",
+      "It depends on the culture."
+     ],
+     "fb": [
+      "No. The patient has the right to know first.",
+      "It’s their body and their decision."
+     ]
+    },
+    {
+     "q": "“Don’t worry, it will be fine”: kind or wrong?",
+     "a": "Kind",
+     "b": "Wrong",
+     "fa": [
+      "Kind. People need hope.",
+      "A little comfort helps."
+     ],
+     "fb": [
+      "Wrong. You can’t promise that.",
+      "Say “Here’s what we’ll do next” instead."
+     ]
+    },
+    {
+     "q": "Hard news: in person only, or by video call too?",
+     "a": "In person only",
+     "b": "Video is OK",
+     "fa": [
+      "In person only. You can see the reaction.",
+      "Silence works better in a room."
+     ],
+     "fb": [
+      "Video is OK. Waiting days is worse.",
+      "It’s about the words, not the place."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Clear, kind, and honest."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "A fictional case: the family asks.",
+   "p": "Your teacher is the patient’s daughter.",
+   "aluno": "Listen to your teacher’s question. Answer as the health professional in a fictional case. Follow SPIKES: slow, clear, kind.",
+   "perguntas": [
+    "Hello. Is there news about my father?",
+    "What do you mean, a complication?",
+    "Is it serious?",
+    "Why didn’t anyone tell me earlier?",
+    "What happens now?",
+    "Can I see him?"
+   ],
+   "st": [
+    "Shall we sit down somewhere quieter?",
+    "I’m afraid …",
+    "Here’s what we’ll do next: …"
+   ],
+   "ex": "Shall we sit down somewhere quieter? I’m afraid there was a complication after the surgery. I can see this is hard to hear. Here’s what we’ll do next."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

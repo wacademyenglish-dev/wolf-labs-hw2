@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Heard Something Moving",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/15b72f4206d6/i-heard-something-moving/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "hear / see / watch / feel + someone + -ing (a part of the action) or the plain verb (the whole action); him / her / them, never he / she; no to, no -s, no -ed after the person; listen needs to",
   "abrir": "What do you hear from your window at night?",
   "fecho": "<b>hear / see / watch / feel + someone + -ing</b> = a part of it: <i>I heard someone walking.</i> <b>+ plain verb</b> = all of it: <i>I saw him close the door.</i> <i>him, her, them</i>, never <i>he, she</i>. No <b>to</b>, no <b>-s</b>, no <b>-ed</b>. <i>Listen</i> needs <b>to</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Night Calls, a late radio show. Mia is the host and Leo calls in. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/15b72f4206d6/i-heard-something-moving/img/live-casa.webp",
+      "img": "../img/live-casa.webp",
       "leg": "A porch with pumpkins at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I heard someone walking on the road.",
-          "img": "https://wolf-labs.pages.dev/p/15b72f4206d6/i-heard-something-moving/img/live-estrada.webp",
+          "img": "../img/live-estrada.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I watched the fog roll over the hill.",
-          "img": "https://wolf-labs.pages.dev/p/15b72f4206d6/i-heard-something-moving/img/live-fogueira.webp",
+          "img": "../img/live-fogueira.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I heard the radio turn on by itself.",
-          "img": "https://wolf-labs.pages.dev/p/15b72f4206d6/i-heard-something-moving/img/live-estudio.webp",
+          "img": "../img/live-estudio.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/15b72f4206d6/i-heard-something-moving/img/live-fogueira.webp",
+      "img": "../img/live-fogueira.webp",
       "leg": "A lantern on a foggy hill",
       "pede": "Look at the picture: a small lantern on a foggy hill. Write 2 or 3 sentences about a sound or a sight at night. Use <b>heard</b>, <b>saw</b> or <b>felt</b> + a person or thing + <b>-ing</b> or the plain verb.",
       "ph": "I heard … I saw …",

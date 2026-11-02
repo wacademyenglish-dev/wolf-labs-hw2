@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Whoever Takes It",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/737bb2ad36b5/whoever-takes-it/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "whoever / whatever / wherever / whenever / however (= any person who / anything that / any place where / any time when / no matter how): the verb after whoever agrees with it (whoever wants), however + adjective + subject + verb",
   "abrir": "What do you do whenever you have free time?",
   "fecho": "<b>Whoever</b> = any person who: <i>Whoever wants can come.</i> <b>Whatever</b> = anything that. <b>Wherever</b> = any place where. <b>Whenever</b> = any time that, with a present verb: <i>Whenever I arrive, I call.</i> <b>However</b> + adjective + subject + verb: <i>However cold it is, we go.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a long walk across the hills. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/737bb2ad36b5/whoever-takes-it/img/live-mapa.webp",
+      "img": "../img/live-mapa.webp",
       "leg": "The old map",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Whoever carries the map must keep it dry.",
-          "img": "https://wolf-labs.pages.dev/p/737bb2ad36b5/whoever-takes-it/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Wherever we go, we follow the river.",
-          "img": "https://wolf-labs.pages.dev/p/737bb2ad36b5/whoever-takes-it/img/live-rio.webp",
+          "img": "../img/live-rio.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Whenever it rains, we wait in the cave.",
-          "img": "https://wolf-labs.pages.dev/p/737bb2ad36b5/whoever-takes-it/img/live-caverna.webp",
+          "img": "../img/live-caverna.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/737bb2ad36b5/whoever-takes-it/img/live-condado.webp",
+      "img": "../img/live-condado.webp",
       "leg": "A small house with warm lights",
       "pede": "Look at the picture: a small house with warm lights in the evening. Write 2 or 3 sentences about your habits or a rule at home. Use two of these: <b>whoever, whatever, wherever, whenever, however</b>.",
       "ph": "Whenever I … Wherever I …",

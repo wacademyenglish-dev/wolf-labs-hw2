@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "This Time Next Year",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ed2f6b2a0f48/this-time-next-year/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "future continuous: will be + -ing for something in progress at a moment in the future · won't be + -ing · Will you be using ...? (the polite question) · state verbs (know, have, be) stay simple · age with BE; never will working, will be work, in this time next year",
   "abrir": "What will you be doing this time next year?",
   "fecho": "<b>will be + -ing</b> = in progress at a future moment: <i>This time next year, I'll be living in Spain.</i> <b>Won't be + -ing</b>: <i>I won't be driving.</i> Polite question: <i>Will you be using the room?</i> State verbs stay simple: <i>I'll know</i>, not <i>I'll be knowing</i>. Never <i>in this time next year</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about next year. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/ed2f6b2a0f48/this-time-next-year/img/live-cidade.webp",
+      "img": "../img/live-cidade.webp",
       "leg": "A road leading to a neon city",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This time next year, I'll be living in a new city.",
-          "img": "https://wolf-labs.pages.dev/p/ed2f6b2a0f48/this-time-next-year/img/live-cidade.webp",
+          "img": "../img/live-cidade.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "At nine tomorrow, she'll be sitting in a meeting.",
-          "img": "https://wolf-labs.pages.dev/p/ed2f6b2a0f48/this-time-next-year/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Next summer, we'll be travelling around the world.",
-          "img": "https://wolf-labs.pages.dev/p/ed2f6b2a0f48/this-time-next-year/img/live-orbita.webp",
+          "img": "../img/live-orbita.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ed2f6b2a0f48/this-time-next-year/img/live-orbita.webp",
+      "img": "../img/live-orbita.webp",
       "leg": "A small planet far away in the dark",
       "pede": "Look at the picture: a small planet far away in the dark. Write 2 or 3 sentences about your life this time next year. Use <b>will be + -ing</b> or <b>won't be + -ing</b>.",
       "ph": "This time next year, I'll be …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "After the Journey",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4434aeb5997a/ten-year-adventure/img/live-diario.webp",
+  "capa": "../img/live-diario.webp",
   "alvo": "time before a noun is singular with a hyphen: a ten-year journey, an eight-hour sleep, a thousand-year-old elf; vs. it lasted ten years",
   "abrir": "Is ten years a long time for you?",
   "fecho": "On its own, time keeps its S: <i>It lasted ten years.</i> Before a noun it becomes one unit, singular, with a hyphen: <i>a ten-<b>year</b> journey, an eight-<b>hour</b> sleep, a thousand-<b>year</b>-old elf.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about an elf anime. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/4434aeb5997a/ten-year-adventure/img/live-mapa.webp",
+      "img": "../img/live-mapa.webp",
       "leg": "The map of the journey",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It was a ten-year journey, but for her it felt short.",
-          "img": "https://wolf-labs.pages.dev/p/4434aeb5997a/ten-year-adventure/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She is a thousand-year-old elf with a very long memory.",
-          "img": "https://wolf-labs.pages.dev/p/4434aeb5997a/ten-year-adventure/img/live-flores.webp",
+          "img": "../img/live-flores.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "They met again to keep a fifty-year-old promise.",
-          "img": "https://wolf-labs.pages.dev/p/4434aeb5997a/ten-year-adventure/img/live-chuva.webp",
+          "img": "../img/live-chuva.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4434aeb5997a/ten-year-adventure/img/live-grimorio.webp",
+      "img": "../img/live-grimorio.webp",
       "leg": "An old journal from the road",
       "pede": "Look at the picture: an old journal from the road. Write 2 or 3 sentences about a trip or a long wait in your life. Put the time before a noun: <b>a two-day trip, a ten-year wait</b>.",
       "ph": "I took a … trip.",

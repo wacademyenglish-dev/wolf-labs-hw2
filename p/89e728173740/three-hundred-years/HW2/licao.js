@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Three Hundred Years",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/89e728173740/three-hundred-years/img/live-estojo.webp",
+  "capa": "../img/live-estojo.webp",
   "alvo": "concession: although / even though + clause · despite / in spite of + noun or -ing (despite the fact that + clause) · even if for something imagined; never despite of, never although + but",
   "abrir": "What do you keep doing in spite of the difficulty?",
   "fecho": "<b>Although / even though</b> + subject and verb. <b>Despite / in spite of</b> + a noun or -ing (<i>in spite <b>of</b></i>, never <i>despite of</i>). <b>Even if</b> is for something imagined. Only one connector per turn: <i>Although it was old, it came last</i>, not <i>…, but it came last</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at lunch. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/89e728173740/three-hundred-years/img/live-estojo.webp",
+      "img": "../img/live-estojo.webp",
       "leg": "A closed case on a table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Even though it cost millions, the old violin came last.",
-          "img": "https://wolf-labs.pages.dev/p/89e728173740/three-hundred-years/img/live-estojo.webp",
+          "img": "../img/live-estojo.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "In spite of years of practice, the players preferred the new one.",
-          "img": "https://wolf-labs.pages.dev/p/89e728173740/three-hundred-years/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Although the test was small, it made everybody think.",
-          "img": "https://wolf-labs.pages.dev/p/89e728173740/three-hundred-years/img/live-estojo.webp",
+          "img": "../img/live-estojo.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/89e728173740/three-hundred-years/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "A rehearsal room, empty",
       "pede": "Look at the picture: an empty rehearsal room. Write 2 or 3 sentences about something you did or would do against the odds. Use <b>although, even though, despite, in spite of</b> or <b>even if</b>.",
       "ph": "Although it was difficult, I …",

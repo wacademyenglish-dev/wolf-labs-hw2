@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Two Lives · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Two Lives · The Scale</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Two Lives · The Scale</h2>
+    <p>Two lives, and hardly a <i>better</i> in the whole hour. Your student compares a big city and a small town, home and office, before and now, with <b>as … as</b>, <b>not as … as</b>, <b>just as</b>, <b>twice / half as … as</b>, <b>the same as</b> and <b>different from</b>. The screen is a brass scale: equal sentences keep it level; <i>not as … as</i> sends down the side that has more.</p>
+    <h4>AS OPENS, AS CLOSES</h4>
+    <p>The most common slip is <i>as good than</i>. When it happens, just say: <i>AS opened it…</i></p>
+    <h4>THE NEGATIVE IS THE USEFUL ONE</h4>
+    <p><i>not as big as</i> says less without sounding rude. In scene IV the hard part is the side: the side with more goes down, and it’s the OTHER one.</p>
+    <h4>THE DEBATE</h4>
+    <p>Scene IX: your student picks city or country, and you take the other side for real. Push back with the same shapes.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>as expensive than</i>, <i>the same that</i>, <i>different of</i>, <i>twice more expensive than</i>, <i>so expensive as</i>. You will also hear <i>different than</i> in American speech; teach <i>from</i>.</p>
+    <!--conversa--><h4>THE JURY (V) AND THE SURPRISE QUESTION</h4>
+    <p>Scene V is now a jury: Bia and a job in the capital, Leo and the office, Dani and Rafa between the beach and the city. The numbers are the evidence. Your student chooses a verdict and says why with <i>as … as</i>, <i>twice / half as</i>, <i>not as … as</i>. Wait five seconds in silence before they speak, then use the PUSH line (only you see it). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves. The city-or-country debate stays in IX.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Two Lives, V The Jury, IX City or Country?</li>
+      <li><b>Listen</b>: II Three Voices, VII The Study, VIII Two Strangers (the transcript opens after they listen).</li>
+      <li><b>Focus</b>: III Six Shapes, IV The Scale, VI One Wrong Word.</li>
+      <li><b>Write</b>: X, their two lives. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* TWO LIVES (Main A2) · pergunta-surpresa · 27/10/2026 · as … as / the same as / different from */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'vozes', tipo: 'And you?', q: 'Is your street as quiet as you want?',
+    opc: ['Yes, very quiet', 'Not as quiet as I want', 'It’s a party!'], st: ['My street is (not) as … as …'],
+    ex: 'Not as quiet as I want. My neighbour’s dog is just as loud as a car alarm.', push: 'What time does it get quiet?' },
+  { cena: 'balanca', tipo: 'Would you rather', q: 'A flat twice as big, or a commute half as long?',
+    opc: ['Twice as big', 'Half as long'], st: ['I’d rather have …, because …'],
+    ex: 'Half as long. My time is more important than space.', push: 'How many minutes is your commute now?' },
+  { cena: 'palavra', tipo: 'Opinion', q: 'Is your city as friendly as people say?',
+    opc: ['Just as friendly', 'Not as friendly', 'Friendlier!'], st: ['People here are (not) as … as …', 'It’s different from …'],
+    ex: 'Not as friendly. People here are just as nice, but they are always in a hurry.', push: 'Give me one example from this week.' },
+  { cena: 'estudo', tipo: 'What if', q: 'For one year, same salary: where do you live?',
+    opc: ['A big city', 'A small town', 'The beach'], st: ['The … is not as … as …', 'My life would be different from …'],
+    ex: 'The beach. It’s not as busy as the city, and my days would be different from now.', push: 'What do you miss after one month?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* TWO LIVES (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O júri entra no lugar de "V · How Much, Exactly?" (prática controlada: ler dois números e tocar a forma).
+   Os números continuam: viraram as PROVAS de cada caso. O debate cidade × interior (IX) já existe,
+   por isso aqui é outro formato: júri com provas, no MEIO da aula. Gramática: as … as, not as … as,
+   twice / half as … as, the same as, different from. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'juri', troca: 'numeros', est: 'o', min: 7, img: 'cidade', rot: 'The Jury', t: 'Three people, three choices. You are the jury.',
+    p: 'Read the evidence. Choose a verdict, or say your own. Say why with as … as. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Bia', sit: 'Bia, 29, small town. A job offer in the capital.',
+        provas: ['Salary: twice as high as now', 'Rent: three times as expensive', 'Commute: 50 minutes, now 10'],
+        q: 'Should Bia take the job?', opc: ['Take it', 'Stay in the town', 'Ask to work from home'],
+        st: ['The salary is twice as …, but …', 'The rent is not as … as …', 'Her life would be different from …'],
+        ex: 'Ask to work from home. The salary is twice as high, but the rent is three times as expensive. It’s not as good as it looks.',
+        push: 'The company says no: office only. Now what?' },
+      { tag: 'Leo', sit: 'Leo works from home. His boss wants three office days.',
+        provas: ['The office: one hour away', 'His work at home: just as good as before', 'Some weeks he talks to nobody'],
+        q: 'Who is right?', opc: ['Leo', 'The boss', 'Both, a little'],
+        st: ['His work is just as good as …', 'Home is not as … as the office', 'Three days is (not) the same as …'],
+        ex: 'Both, a little. His work is just as good as before, but home is not as social as the office. One day is enough.',
+        push: 'You are the boss. One sentence: why do you want him there?' },
+      { tag: 'Dani & Rafa', sit: 'Dani wants a beach town. Rafa wants the city.',
+        provas: ['Beach rent: half as expensive', 'Jobs at the beach: not as good', 'Rafa’s friends: all in the city'],
+        q: 'Your verdict?', opc: ['The beach', 'The city', 'Try it for one year'],
+        st: ['The rent is half as …, so …', 'The jobs are not as … as …', 'For Rafa, the beach is different from …'],
+        ex: 'Try it for one year. The rent is half as expensive, but the jobs are not as good. After one year, they know.',
+        push: 'And you? Beach or city, for one year? Same money.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Everybody has two lives.",
+   "p": "Answer each message out loud."
+  },
+  "vozes": {
+   "t": "Three people changed their lives.",
+   "p": "Play one. Pick what’s true. Say the sentence."
+  },
+  "regra": {
+   "t": "Six shapes. None says better.",
+   "p": "Read each shape. Then make your own."
+  },
+  "balanca": {
+   "t": "Level, or which side goes down?",
+   "p": "Read it out loud. Then tap the scale."
+  },
+  "cv-juri": {
+   "t": "Three people, three choices.",
+   "p": "Choose a verdict. Say why with as … as."
+  },
+  "palavra": {
+   "t": "Every mistake is one word.",
+   "p": "Read it. Tap the wrong word. Say it right."
+  },
+  "estudo": {
+   "t": "1,600 people. Two days at home.",
+   "p": "Guess first, out loud. Then play the result."
+  },
+  "estranhos": {
+   "t": "Two strangers.",
+   "p": "Play. Pick the line. Say: She says…"
+  },
+  "debate": {
+   "t": "City or country? Pick a side.",
+   "p": "Your point, your teacher’s answer, your reply."
+  },
+  "fim": {
+   "t": "Your two lives, from scene I.",
+   "p": "Write both lives with as … as and the same as."
+  }
+ },
+ "prep": {
+  "obj": "Comparar sem better: as … as, not as … as, twice/half as … as, the same as, different from; cidade grande x cidade pequena, casa x escritório, na balança.",
+  "armadilha": "O português mistura “tão … quanto” com “mais … que”: sai “as good than”, “the same that”, “different of”, “twice more expensive than” e “so expensive as”.",
+  "pal": [
+   "as … as",
+   "not as … as",
+   "just as",
+   "twice as … as",
+   "half as … as",
+   "the same as",
+   "different from",
+   "remote work"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta as duas vidas e a balança: frases iguais deixam o prato nivelado.",
+   "perg": "Do you live in a big city or a small town?",
+   "pula": "Leia só o título e entre."
+  },
+  "abre": {
+   "obj": "Diagnóstico pessoal: o aluno compara duas vidas dele; volta na cena X.",
+   "perg": "Is your life now as busy as five years ago?",
+   "pula": "Duas mensagens bastam."
+  },
+  "vozes": {
+   "obj": "Escuta três pessoas que mudaram de vida e diz a frase comparativa certa.",
+   "perg": "Is her new life as expensive as her old one?",
+   "pula": "Duas vozes bastam."
+  },
+  "regra": {
+   "obj": "Fixa as seis formas de comparar sem better.",
+   "perg": "Can you make one with “twice as”?",
+   "pula": "Leia as seis e crie só uma."
+  },
+  "balanca": {
+   "obj": "Not as … as: o lado que tem MAIS desce (o outro lado).",
+   "perg": "Which side goes down?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-juri": {
+   "obj": "Júri com Bia, Leo, Dani e Rafa; os números são a evidência; o professor contra-argumenta.",
+   "perg": "Was Bia right to move? Why?",
+   "pula": "Dois casos bastam."
+  },
+  "palavra": {
+   "obj": "Cada erro é uma palavra só (than, that, of): acha e corrige.",
+   "perg": "Which word is wrong?",
+   "pula": "Quatro frases bastam."
+  },
+  "estudo": {
+   "obj": "O estudo com 1.600 pessoas: palpite e resultado sobre dois dias em casa.",
+   "perg": "Are people at home as productive as at the office?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "estranhos": {
+   "obj": "Escuta dois desconhecidos e reporta: She says… / He says…",
+   "perg": "What does he say about the country?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "debate": {
+   "obj": "Debate cidade x campo; o professor defende o outro lado de verdade.",
+   "perg": "Is the country as boring as people say?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita final: as duas vidas do aluno com as … as, not as … as, the same as, different from; vai para o My notes.",
+   "perg": "Is your weekend life different from your work life?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa pessoal comparando duas coisas sem better.",
+   "perg": "Is your city as safe as before?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhe um lado e justifica com as … as / not as … as.",
+   "perg": "Which side do you take?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno compara em passos a vida dele hoje com a de dez anos atrás.",
+   "perg": "Is your life now as … as ten years ago?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Weigh more of your life.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "as … as",
+    "not as … as",
+    "the same as",
+    "different from"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CITY",
+     "q": "Is your city as safe as it was ten years ago?",
+     "fup": "What changed?",
+     "st": [
+      "It’s as … as …",
+      "It isn’t as … as …"
+     ],
+     "ex": "It isn’t as safe as it was, but it’s just as beautiful."
+    },
+    {
+     "k": "HOME OFFICE",
+     "q": "Is working at home as good as working at the office?",
+     "fup": "Where do you work better?",
+     "st": [
+      "Working at home is …"
+     ],
+     "ex": "Working at home is just as good, but it isn’t as fun."
+    },
+    {
+     "k": "FAMILY",
+     "q": "Are you the same as your parents, or different?",
+     "fup": "In what way?",
+     "st": [
+      "I’m the same as …",
+      "I’m different from …"
+     ],
+     "ex": "I’m different from my father. I’m not as calm as he is."
+    },
+    {
+     "k": "PRICES",
+     "q": "Is food twice as expensive as before?",
+     "fup": "What costs the most now?",
+     "st": [
+      "… is twice as expensive as …"
+     ],
+     "ex": "Coffee is twice as expensive as it was two years ago."
+    },
+    {
+     "k": "WEEKENDS",
+     "q": "Is Saturday as relaxing as Sunday for you?",
+     "fup": "Why?",
+     "st": [
+      "Saturday isn’t as … as …"
+     ],
+     "ex": "Saturday isn’t as relaxing as Sunday. I have to do the shopping."
+    },
+    {
+     "k": "TECHNOLOGY",
+     "q": "Is your phone as important as your wallet?",
+     "fup": "Could you live without it?",
+     "st": [
+      "My phone is as … as …"
+     ],
+     "ex": "My phone is just as important as my wallet. My cards are on it."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "as … as",
+    "not as … as",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Office or home office?",
+     "a": "Office",
+     "b": "Home office",
+     "fa": [
+      "The office. Home isn’t as quiet as people think."
+     ],
+     "fb": [
+      "Home. The office is twice as far as the gym."
+     ]
+    },
+    {
+     "q": "Beach town or capital city?",
+     "a": "Beach town",
+     "b": "Capital city",
+     "fa": [
+      "Beach town. Life isn’t as fast as in the capital."
+     ],
+     "fb": [
+      "Capital city. A small town isn’t as interesting."
+     ]
+    },
+    {
+     "q": "A big salary or a short commute?",
+     "a": "Big salary",
+     "b": "Short commute",
+     "fa": [
+      "Big salary. Time is as important as money, but bills come first."
+     ],
+     "fb": [
+      "Short commute. Money isn’t as important as time."
+     ]
+    },
+    {
+     "q": "Old friends or new friends?",
+     "a": "Old friends",
+     "b": "New friends",
+     "fa": [
+      "Old friends. New friends aren’t as close."
+     ],
+     "fb": [
+      "New friends. They are just as good."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The scale stayed level."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Then and Now",
+   "t": "Your life ten years ago and now.",
+   "p": "Answer each step. No better allowed.",
+   "prof": "Every time they say better or worse, point at the scale and ask for as … as.",
+   "passos": [
+    {
+     "q": "Where did you live then? Where now?",
+     "st": [
+      "My home now is …",
+      "… is different from …"
+     ],
+     "ex": "My home now is twice as big as my old flat."
+    },
+    {
+     "q": "Is your job as stressful as before?",
+     "st": [
+      "My job isn’t as … as …"
+     ],
+     "ex": "My job isn’t as stressful as it was. I have more experience."
+    },
+    {
+     "q": "Do you have as much free time?",
+     "st": [
+      "I have just as …",
+      "I don’t have as much … as …"
+     ],
+     "ex": "I don’t have as much free time as I did."
+    },
+    {
+     "q": "What is the same as ten years ago?",
+     "st": [
+      "… is the same as …"
+     ],
+     "ex": "My Sunday lunch is the same as ten years ago: my mom’s pasta."
+    }
+   ],
+   "fim": "Two lives, one scale, and you weighed both."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Same Name · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Same Name · Lost and Found</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Same Name · Lost and Found</h2>
+    <p>The student takes over the school’s lost and found counter. On screen, a dark wooden cabinet with seven drawers, seven names, and two of them are Marta. Every object has a clue; the student finds the owner, says it with the owner first (<i>Pedro’s jacket</i>) and asks <i>Whose…?</i> Then people come to the counter, and the answers get short: <i>It’s mine.</i> No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>The owner first, with ’s: <b>Pedro’s jacket</b>, never <i>the jacket of Pedro</i> (of is for things: <i>the door of the car</i>). Two-word names take the s at the end: <b>Marta Reis’s cap</b>. <b>Whose…?</b> asks for the owner (not <i>who’s</i>). When the thing is clear, drop it: <b>mine, yours, his, hers, ours, theirs</b>.</p>
+    <h4>SCENE IV · YOU READ</h4>
+    <p>The sentence appears only on your side (the student doesn’t see it). Read it once, at normal speed; the student taps the word that got the s.</p>
+    <!--conversa--><h4>WHAT IS THE WORST? (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Behind the lost and found counter, your student ranks three things: my phone, my keys, my friend’s book. What is the worst to lose? Answer first yourself, as a model; then let them tap their order, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. “Show my teacher’s order” shows yours. Recast quietly while they talk (<i>the book of my friend</i> → <i>my friend’s book</i>); at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Desk, VI At the Counter (you play each visitor), IX Your Things.</li>
+      <li><b>Listen</b>: IV The Sound.</li>
+      <li><b>Focus</b>: II The Owner Comes First, III Seven Tags, V The Drawers, VII Mine, Yours, His, VIII What Is the Worst? (ranking, out loud).</li>
+      <li><b>Write</b>: X, tags for their own things, with the red wavy line for <i>the … of my sister</i>, <i>who’s bag</i>, <i>it’s my.</i>, <i>mine car</i> and <i>your’s</i>. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE SAME NAME (Main A1) · pergunta-surpresa · 27/10/2026 · 's · Whose…? · mine / yours */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'etiqueta', tipo: 'And you?', q: 'Do you wear your friends’ clothes?',
+    opc: ['Yes, I do.', 'No, I don’t.'], st: ['Yes. This jacket is my sister’s.', 'No. My clothes are mine!'],
+    ex: 'Yes! This jacket is my sister’s.', push: 'Does she know? Yes or no?' },
+  { cena: 'gaveta', tipo: 'Would you rather', q: 'Find a lost wallet or a lost dog?',
+    opc: ['A wallet', 'A dog'], st: ['A wallet. Whose is it?', 'A dog! Whose dog is it?'],
+    ex: 'A dog! I ask: “Whose dog is this?”', push: 'Do you call the owner? Yes or no?' },
+  { cena: 'balcao', tipo: 'And you?', q: 'What do you lose all the time?',
+    opc: ['My keys', 'My glasses', 'My phone'], st: ['My keys. I always lose them.', 'I always lose my …'],
+    ex: 'My keys! My brother finds them and says: “Are these yours?”', push: 'Today too? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE SAME NAME (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Ranking leve de 3 no lugar de "VIII · Fold the Sentence" (extra, prática controlada: dobrar a frase longa;
+   o VII Mine, Yours, His fica e ensina as palavras curtas). No achados e perdidos, o aluno decide o que é
+   pior perder; o professor mostra a ordem dele. A1 bem leve: três itens, frase quase pronta.
+   A gramática da aula ('s com o dono primeiro · mine / yours / hers) mora nos itens e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'pior', troca: 'dobra', est: 'o', min: 5, img: 'caixa', rot: 'What Is the Worst?', t: 'Lost and found. What is the worst to lose?',
+    p: 'Tap them in order: 1 is the worst. Your teacher answers first.',
+    formato: 'ranking',
+    itens: ['My phone', 'My keys', 'My friend’s book'],
+    q: 'What is the worst to lose?',
+    dica: 'Tap the worst first. Tap again to take it out.',
+    st: ['Number one is my …', 'My friend’s book! It isn’t mine.', 'My keys. They are …'],
+    ex: 'Number one is my friend’s book. It isn’t mine, it’s hers!',
+    push: 'Do you lose things? Yes or no?',
+    prof: [2, 0, 1] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Three things near you. Whose are they?",
+   "p": "Answer each message out loud."
+  },
+  "regra": {
+   "t": "The owner comes first.",
+   "p": "Tap each piece. Read the line out loud."
+  },
+  "etiqueta": {
+   "t": "Seven tags.",
+   "p": "Tap the owner, the small s, the thing. Say it."
+  },
+  "som": {
+   "t": "Where is the small s?",
+   "p": "Listen to your teacher. Tap the word with s."
+  },
+  "gaveta": {
+   "t": "Seven things, no tags. Find the owner.",
+   "p": "Say “I think it’s …’s, because …”. Open it."
+  },
+  "balcao": {
+   "t": "People come to the counter.",
+   "p": "Ask. Listen. Give it back with a short word."
+  },
+  "meu": {
+   "t": "When the thing is clear, drop it.",
+   "p": "Read the first line. Pick the short word."
+  },
+  "cv-pior": {
+   "t": "What is the worst to lose?",
+   "p": "Tap them in order: 1 is the worst."
+  },
+  "seu": {
+   "t": "Real answers now.",
+   "p": "Five questions. Answer in full sentences."
+  },
+  "fim": {
+   "t": "Tags for your own things.",
+   "p": "Five things and their owners. One Whose…? question."
+  }
+ },
+ "prep": {
+  "obj": "Possessivo com ’s (o dono primeiro), Whose…? e mine/yours/his/hers/ours/theirs. O aluno assume o achados e perdidos da escola, com duas Martas.",
+  "armadilha": "O português diz “a jaqueta do Pedro”: sai “the jacket of Pedro”. E “who’s bag” no lugar de whose, “it’s my.” sem a coisa, “mine car” e “your’s”.",
+  "pal": [
+   "Pedro’s jacket",
+   "Marta Reis’s cap",
+   "Whose is this?",
+   "mine",
+   "yours",
+   "his",
+   "hers",
+   "lost and found"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o achados e perdidos: sete gavetas, sete nomes, duas Martas.",
+   "perg": "Do you lose things a lot?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "abre": {
+   "obj": "Aquecimento: três coisas perto do aluno e de quem são.",
+   "perg": "Whose is that cup?",
+   "pula": "Duas mensagens bastam."
+  },
+  "regra": {
+   "obj": "A ordem fixa: dono + ’s + coisa (Pedro’s jacket).",
+   "perg": "Who comes first: the owner or the thing?",
+   "pula": "Duas linhas bastam."
+  },
+  "etiqueta": {
+   "obj": "Montar sete etiquetas com ’s, inclusive nome de duas palavras (Marta Reis’s).",
+   "perg": "Whose cap is it?",
+   "pula": "Quatro etiquetas bastam."
+  },
+  "som": {
+   "obj": "Escuta: o professor lê e o aluno acha a palavra que levou o s.",
+   "perg": "Which word got the s?",
+   "pula": "Três frases bastam."
+  },
+  "gaveta": {
+   "obj": "Dedução pelas pistas: I think it’s …’s, because …",
+   "perg": "Whose is it? Why?",
+   "pula": "Quatro gavetas bastam."
+  },
+  "balcao": {
+   "obj": "Professor faz cada visitante; o aluno pergunta e devolve com mine, his, hers.",
+   "perg": "Is this yours?",
+   "pula": "Três visitantes bastam."
+  },
+  "meu": {
+   "obj": "Quando a coisa está clara, ela cai: It’s my bag → It’s mine.",
+   "perg": "It’s my phone. It’s …?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-pior": {
+   "obj": "Ranking: o pior de perder (meu celular, minhas chaves, o livro do meu amigo).",
+   "perg": "What is the worst to lose?",
+   "pula": "Só o primeiro lugar e o porquê."
+  },
+  "seu": {
+   "obj": "Cinco perguntas reais sobre as coisas do aluno, em frase inteira.",
+   "perg": "Whose car do you drive?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: etiquetas das coisas de casa e de quem são, com uma pergunta Whose…?; vai para o My notes.",
+   "perg": "Whose is the TV in your house?",
+   "pula": "Três etiquetas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra sobre as coisas da família, com ’s e mine/yours.",
+   "perg": "Whose room is the biggest in your home?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre emprestar e dividir, com possessivos.",
+   "perg": "Your car or your friend’s car?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta uma coisa perdida (real ou inventada) em passos curtos.",
+   "perg": "What is lost? Whose is it?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions about your things.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "’s",
+    "whose",
+    "mine",
+    "yours",
+    "his",
+    "hers"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR HOME",
+     "q": "Whose room is the biggest in your home?",
+     "fup": "Is yours big or small?",
+     "st": [
+      "My …’s room is the biggest.",
+      "Mine is …"
+     ],
+     "ex": "My parents’ room is the biggest. Mine is small."
+    },
+    {
+     "k": "THE CAR",
+     "q": "Whose car do you use?",
+     "fup": "Is it yours?",
+     "st": [
+      "I use my …’s car.",
+      "It’s mine."
+     ],
+     "ex": "I use my sister’s car. It isn’t mine."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Whose number do you call the most?",
+     "fup": "Is his or hers the first on your list?",
+     "st": [
+      "I call my …’s number.",
+      "His / Hers is …"
+     ],
+     "ex": "I call my mom’s number the most. Hers is the first on my list."
+    },
+    {
+     "k": "YOUR CLOTHES",
+     "q": "Do you wear your brother’s or sister’s clothes?",
+     "fup": "Do they wear yours?",
+     "st": [
+      "Yes, I wear my …’s …",
+      "No. Mine are …"
+     ],
+     "ex": "Yes, I wear my brother’s jackets. He doesn’t wear mine."
+    },
+    {
+     "k": "YOUR DESK",
+     "q": "Is everything on your desk yours?",
+     "fup": "Whose is the cup?",
+     "st": [
+      "Yes, it’s all mine.",
+      "No. The … is my …’s."
+     ],
+     "ex": "No. The cup is my husband’s."
+    },
+    {
+     "k": "LOST THINGS",
+     "q": "What do you lose the most?",
+     "fup": "Whose things do you find?",
+     "st": [
+      "I lose my …",
+      "I find my …’s …"
+     ],
+     "ex": "I lose my keys. I always find my son’s socks."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "mine",
+    "yours",
+    "’s"
+   ],
+   "rodadas": [
+    {
+     "q": "Your car or your friend’s car for a trip?",
+     "a": "Mine",
+     "b": "My friend’s",
+     "fa": [
+      "Mine. I know my car."
+     ],
+     "fb": [
+      "My friend’s. His is bigger."
+     ]
+    },
+    {
+     "q": "Lost phone or lost keys?",
+     "a": "Phone",
+     "b": "Keys",
+     "fa": [
+      "My phone is worse. My life is in it."
+     ],
+     "fb": [
+      "My keys are worse. I can’t go home."
+     ]
+    },
+    {
+     "q": "Wear your sister’s jacket or buy one?",
+     "a": "Wear hers",
+     "b": "Buy one",
+     "fa": [
+      "Wear hers. It’s free."
+     ],
+     "fb": [
+      "Buy one. I want mine."
+     ]
+    },
+    {
+     "q": "A found wallet: take it to the counter or call the owner?",
+     "a": "The counter",
+     "b": "Call the owner",
+     "fa": [
+      "The counter. It’s their job."
+     ],
+     "fb": [
+      "Call the owner. The number is in it."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Lost Thing",
+   "t": "Something is lost.",
+   "p": "One step at a time. Say it out loud.",
+   "prof": "You run the counter now: ask Whose is it? and push for owner first, then mine / yours.",
+   "passos": [
+    {
+     "q": "What is lost? Whose is it?",
+     "st": [
+      "It’s my …’s …",
+      "It’s mine."
+     ],
+     "ex": "It’s my daughter’s backpack."
+    },
+    {
+     "q": "What is it like?",
+     "st": [
+      "It’s …",
+      "Hers / His is …"
+     ],
+     "ex": "It’s blue and small. Hers has a cat on it."
+    },
+    {
+     "q": "Where is it, maybe?",
+     "st": [
+      "Maybe it’s in my …’s car.",
+      "Maybe it’s at …"
+     ],
+     "ex": "Maybe it’s in my friend’s car."
+    },
+    {
+     "q": "Your teacher finds it. What do you say?",
+     "st": [
+      "Yes! It’s …",
+      "Thank you. It’s …"
+     ],
+     "ex": "Yes! It’s hers. Thank you so much."
+    }
+   ],
+   "fim": "Found it. Counter closed for today."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

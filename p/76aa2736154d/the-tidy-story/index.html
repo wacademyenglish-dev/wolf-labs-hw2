@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Tidy Story · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Tidy Story · The Evidence Ladder</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Tidy Story · The Evidence Ladder</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> “It takes ten thousand hours.” Everybody says it; almost nobody can say who counted.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule You Hear: Think of a rule for success that you hear all the time.</p><p style="margin:0 0 6px"><b>Short class (about 50 min):</b> I The Rule You Hear · II Who Counted? · III Move the Name · IV The Time Goes Inside · VII One Minute, Count the Owners · XI Unpopular Opinions · XII File It. Skip if you’re short on time: V, IX, X (marked EXTRA on your screen). Full lesson: about 70 min.</p><p style="margin:0"><b>Open with:</b> “Where did you first hear it?”</p></div><!--/prep-->
+    <p>“It takes ten thousand hours.” Everybody says it; almost nobody can say who counted. This hour teaches students to hand a claim back to its owner, or to notice there is none. Portuguese has one door and gives <b>It is said that …</b>. English has a second: <b>Federer is said to have tried ten sports</b>, still a sentence about Federer. The reporting verb stays present; the past goes inside the infinitive (<b>to have tried</b>). Students say <i>He is said that he …</i> and <i>is said to tried</i>. On screen, an evidence ladder with five rungs: said, thought, believed, reported, known. Each claim climbs only as high as its evidence pays for.</p>
+    <h4>NOT A DEBUNKING</h4>
+    <p>The hour doesn’t say the rule is false. It asks who counted, and how to say it without signing it. III: the student says each rumor with the name first, then taps Check. IV: sort six sentences into NOW and BEFORE. V: match each situation to the sentence that keeps the topic first. X: three friend cards. XI: three unpopular opinions on a 1–5 scale (see below).</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Each with pause and 0.75×; the transcript opens after listening. Scene II: two colleagues at the coffee machine; the chain of sources lights up back to a question mark; the student taps True or Lie on four lines. Scene IX: a researcher uses four reporting verbs, the student taps the verb she used, and each claim climbs to its rung.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene VII: about one minute (0:07 to 1:15), sealed until the student slides the ruler. While it plays, the student taps True or Lie (the ▶ replays the line); afterwards, matches each claim to its owner.</p>
+    <h4>A NOTE</h4>
+    <p>The sister lesson “It Is Thought to Have Been …” goes deeper into the perfect infinitive; here the center is choosing the door (name first or IT) and the weight of the verb.</p>
+    <p class="pal-guia"><b>The words (VI)</b>: <i>practice</i>, <i>curious</i>, <i>athletes</i>, <i>specializing</i> and <i>careers</i>, before the video, in mystery meaning and hot seat. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (VIII, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (XI) AND THE SURPRISE QUESTION</h4>
+    <p>After the video, the ladder and the friend, your student finally signs (or doesn’t sign) three tidy stories: a better-looking CV, talent against practice, and kids who choose early. For each statement they tap a number from 1 to 5 and defend it; take the opposite number and argue back. There is no right answer. Wait five seconds in silence before they speak, then use the PUSH line (only you see it) to make the position harder. Listen for the ladder verbs (<i>is said to</i>, <i>is known to have</i>) and recast quietly (<i>is said that he</i> → <i>he is said to</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I The Rule You Hear, X Keep Your Distance and XI Unpopular Opinions.</li>
+      <li><b>Listen</b>: II Who Counted?, VI The Words, VII One Minute, Count the Owners, VIII Line by Line and IX The Evidence Ladder.</li>
+      <li><b>Focus</b>: III Move the Name, IV The Time Goes Inside and V Whose Sentence Is It?</li>
+      <li><b>Write</b>: XII File It.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE TIDY STORY (Main B2) · pergunta-surpresa · 26/10/2026 · passiva de relato (is said / thought / known + to) */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'nome', tipo: 'And you?', q: 'What is your city said to be famous for? Is it true?',
+    opc: ['Totally true', 'Half true', 'Not true at all'], st: ['My city is said to be …', 'It’s known to have …, but …'],
+    ex: 'Half true. My city is said to have the best food in the country. The food is great, but it’s known to be very expensive.', push: 'What should it be famous for instead?' },
+  { cena: 'tempo', tipo: 'Opinion', q: 'Which famous “fact” do you think is just a tidy story?',
+    opc: ['We use 10% of our brain', 'Goldfish forget in 3 seconds', 'Another one'], st: ['It’s often said that …, but …', '… is believed to …, but nobody …'],
+    ex: 'The goldfish one. Goldfish are said to forget in three seconds, but they are known to learn tricks and remember them for months.', push: 'Who told it to you first? Did you repeat it?' },
+  { cena: 'escada', tipo: 'What if', q: 'A colleague is said to be leaving the company. Nobody has confirmed it. What do you do?',
+    opc: ['Ask her directly', 'Wait for news', 'Ask another colleague'], st: ['She’s said to be …, so I’d …', 'Until it’s known, I …'],
+    ex: 'Wait. She’s only said to be leaving: that’s the bottom of the ladder. Until it’s known, I wouldn’t repeat it.', push: 'And if it was your boss? Would you still wait?' },
+  { cena: 'explica', tipo: 'Would you rather', q: 'Would you rather be great at one thing or good at many things?',
+    opc: ['Great at one thing', 'Good at many things'], st: ['I’d rather …, because …', 'People who … are thought to …'],
+    ex: 'Good at many things. People who try lots of things are thought to find the right one later, and it’s more fun.', push: 'Name the one thing you would choose. Right now.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE TIDY STORY (Main B2) · conversa · 26/10/2026 · regra 3×3 do Carlos
+   "Unpopular Opinions" entra no lugar de "XI · He Is Said That" (extra; achar a parte quebrada
+   de cinco frases, prática controlada). O plano pedia trocar o IX, mas o IX é a ESCADA DA
+   EVIDÊNCIA, a cara da aula (o subtítulo é "The Evidence Ladder"): fica. A escala vem depois do
+   vídeo, da escada e do amigo (X): o aluno já ouviu quem é dono de cada afirmação; agora ele
+   assina (ou não) três opiniões sobre histórias arrumadas demais.
+   A gramática da aula (is said / thought / believed / known + to; It is said that) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'opinioes', troca: 'erros', est: 'o', min: 7, img: 'gaveta', rot: 'Unpopular Opinions',
+    t: 'Three tidy stories people love. Do you sign them?',
+    p: 'Tap a number. Defend it. Use the ladder: said, thought, believed, known.',
+    formato: 'escala', tag: 'How far do you agree?',
+    frases: [
+      { f: 'Making your CV look better is lying.',
+        st: ['Tidying a CV is thought to be normal, but …', 'Recruiters are known to …', 'It’s only lying if …'],
+        ex: '2, I disagree. Everybody is said to tidy their CV, and recruiters know it. Choosing what to show isn’t lying. Inventing a job is.',
+        push: 'You led the team for one week while your boss was on vacation. Can your CV say “team leader”?' },
+      { f: 'Talent is overrated. Anyone can be great with enough practice.',
+        st: ['Practice is believed to …, but …', 'Some people are said to be born with …', 'The research is reported to show …'],
+        ex: '4, I agree. Talent is thought to matter, but the people at the top are reported to practice more than everybody else, and in the right way.',
+        push: 'Then why can’t you, with ten thousand hours, sing like your favorite singer?' },
+      { f: 'Kids should choose one thing early and stick to it.',
+        st: ['Early specialization is thought to …', 'Many top athletes are known to have …', 'In my experience, …'],
+        ex: '1, totally disagree. Future elites are said to have tried lots of sports first. I changed my mind three times before I found my job.',
+        push: 'Your kid is the best swimmer in the city at nine. Do you let her quit for guitar?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "regra": {
+   "t": "A rule for success you hear all the time.",
+   "p": "Tap the rule. Then answer out loud."
+  },
+  "copa": {
+   "t": "Two colleagues. One rule. One question.",
+   "p": "Play the four lines. Follow the chain. True or Lie."
+  },
+  "nome": {
+   "t": "Move the name to the front.",
+   "p": "Say the rumor with the name first. Tap Check."
+  },
+  "tempo": {
+   "t": "The time goes inside: to be or to have.",
+   "p": "Tap a sentence, then NOW or BEFORE. Say it."
+  },
+  "portas": {
+   "t": "Keep YOUR topic as the subject.",
+   "p": "Tap a situation, then the right sentence. Say it."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen for the yellow words."
+  },
+  "video": {
+   "t": "One minute. Count the owners.",
+   "p": "Slide the ruler. True or Lie. Match each claim."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line to hear it again."
+  },
+  "escada": {
+   "t": "Said, thought, reported, known.",
+   "p": "Tap the verb she used. Say why it fits."
+  },
+  "explica": {
+   "t": "Explain the rule without signing it.",
+   "p": "Your teacher is the friend. Tap a card. Keep your distance."
+  },
+  "cv-opinioes": {
+   "t": "Three tidy stories. Do you sign them?",
+   "p": "Tap a number. Defend it with the ladder."
+  },
+  "fim": {
+   "t": "Your rule from scene I, unsigned.",
+   "p": "Write it, plus one thing said about your city."
+  }
+ },
+ "prep": {
+  "obj": "Passiva de relato (X is said to be / is thought to have + particípio, it is believed that): “dez mil horas” — todo mundo repete, quase ninguém sabe quem contou.",
+  "armadilha": "Português só tem a porta “diz-se que”, então o brasileiro mistura as duas: “He is said that he…”; e põe o passado no verbo errado: “is said to tried” em vez de “is said to have tried”.",
+  "pal": [
+   "is said to",
+   "is thought to",
+   "is believed to",
+   "is reported to",
+   "is known to have",
+   "it is said that",
+   "claim",
+   "evidence",
+   "practice"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: dez mil horas é “dito” ser o número, e a frase não assina nada.",
+   "perg": "Have you heard of the ten-thousand-hour rule?",
+   "pula": "Só leia a capa e suba a escada."
+  },
+  "regra": {
+   "obj": "Aquecimento: uma regra de sucesso que o aluno ouve sempre, e de onde ela veio.",
+   "perg": "Where did you first hear it?",
+   "pula": "Uma regra e duas perguntas."
+  },
+  "copa": {
+   "obj": "Dois colegas na máquina de café: seguir a corrente de fontes até o ponto de interrogação.",
+   "perg": "So who counted?",
+   "pula": "Ouça as quatro falas; pule o True or Lie se faltar tempo."
+  },
+  "nome": {
+   "obj": "Mover o nome para a frente: It is said that Federer… vira Federer is said to…",
+   "perg": "Can you start with the name?",
+   "pula": "Três boatos bastam."
+  },
+  "tempo": {
+   "obj": "Foco: o verbo de relato fica no presente; o tempo vai para dentro (to be agora, to have + particípio antes).",
+   "perg": "Is it now, or before?",
+   "pula": "Quatro frases bastam."
+  },
+  "portas": {
+   "obj": "As duas portas estão certas: escolher a que mantém o tópico como sujeito.",
+   "perg": "What is your topic here?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir: practice, curious, athletes, specializing, careers.",
+   "perg": "Are you curious or specialized?",
+   "pula": "Deixe o aluno adivinhar; três palavras bastam."
+  },
+  "video": {
+   "obj": "Um minuto sobre prática (0:07 a 1:15): True or Lie e ligar cada afirmação ao dono.",
+   "perg": "Who says that, the video or the researchers?",
+   "pula": "Não corte; quatro True or Lie bastam."
+  },
+  "falas": {
+   "obj": "Linha a linha do vídeo; as linhas amarelas explicam as palavras.",
+   "perg": "Can you hear the yellow word?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "escada": {
+   "obj": "A pesquisadora usa quatro verbos de relato; cada afirmação sobe até o degrau que a evidência paga.",
+   "perg": "Why is it only “thought”, not “known”?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "explica": {
+   "obj": "O professor é um amigo convicto da regra; o aluno explica sem assinar a afirmação.",
+   "perg": "But everybody knows it’s true, right?",
+   "pula": "Cena extra: um cartão basta."
+  },
+  "cv-opinioes": {
+   "obj": "Três histórias arrumadinhas (CV, talento × prática, crianças que escolhem cedo) de 1 a 5, com os verbos da escada.",
+   "perg": "Would you sign that, or is it only said?",
+   "pula": "Duas opiniões bastam."
+  },
+  "fim": {
+   "obj": "Escrita: a regra da cena I sem assinar, e algo que se diz sobre a cidade do aluno.",
+   "perg": "What is your city said to be famous for?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa devolvendo afirmações ao dono, com is said to e is thought to.",
+   "perg": "Who says that, and who counted?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre talento, prática e evidência, sem assinar o que não se sabe.",
+   "perg": "Is that known, or only believed?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno pega uma “verdade” popular e a sobe na escada da evidência, passo a passo.",
+   "perg": "How high does it really climb?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Who counted?",
+   "p": "Pick a card. Don’t sign what you can’t prove.",
+   "palavras": [
+    "is said to",
+    "is thought to",
+    "is believed to",
+    "is known to",
+    "it is said that"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FAMILY",
+     "q": "What is said about your family? A story everybody repeats.",
+     "fup": "Is it true?",
+     "st": [
+      "My grandfather is said to have …",
+      "It is said that …"
+     ],
+     "ex": "My grandfather is said to have crossed the country on a bicycle."
+    },
+    {
+     "k": "FOOD MYTHS",
+     "q": "What food rule do people repeat that nobody checks?",
+     "fup": "Do you follow it?",
+     "st": [
+      "Coffee is thought to …",
+      "… is believed to be …"
+     ],
+     "ex": "Eating at night is believed to make you fat, but nobody can tell me who counted."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What is your job said to be like? And what is it really like?",
+     "fup": "What do people get wrong?",
+     "st": [
+      "My job is said to be …, but …"
+     ],
+     "ex": "Teachers are said to have long holidays, but nobody counts the weekends."
+    },
+    {
+     "k": "A FAMOUS PLACE",
+     "q": "What is a famous place in your country said to have?",
+     "fup": "Have you been there?",
+     "st": [
+      "… is said to have …",
+      "… is known to be …"
+     ],
+     "ex": "That old hotel is said to have a ghost on the fifth floor."
+    },
+    {
+     "k": "SUCCESS",
+     "q": "What is the secret of success said to be in your field?",
+     "fup": "Do you sign it?",
+     "st": [
+      "Success is thought to come from …",
+      "I wouldn’t sign it, because …"
+     ],
+     "ex": "Success is thought to come from contacts. I would sign that one."
+    },
+    {
+     "k": "THE INTERNET",
+     "q": "Tell me about a “fact” you saw online that turned out to be false.",
+     "fup": "Who shared it?",
+     "st": [
+      "It was reported that …, but …",
+      "… was said to have …"
+     ],
+     "ex": "A famous actor was reported to have quit acting, but he posted a new trailer the next day."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "The Debate",
+   "t": "Pick a side. Sign only what you can.",
+   "p": "Your teacher argues the other side.",
+   "palavras": [
+    "is said to",
+    "is known to",
+    "The thing is, …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Talent or practice: which matters more?",
+     "a": "Talent",
+     "b": "Practice",
+     "fa": [
+      "Talent. Some people are known to learn ten times faster.",
+      "The thing is, practice can’t make everybody a Federer."
+     ],
+     "fb": [
+      "Practice. Talent is said to matter, but nobody measures it.",
+      "Hours are something you can count."
+     ]
+    },
+    {
+     "q": "Should kids specialize early in one sport or instrument?",
+     "a": "Specialize early",
+     "b": "Try many things",
+     "fa": [
+      "Early. Champions are said to have started at five.",
+      "Time is limited."
+     ],
+     "fb": [
+      "Try many things. Many athletes are thought to have tried several sports first.",
+      "I see your point, but kids get tired of one thing."
+     ]
+    },
+    {
+     "q": "Should journalists say “it is said” or name the source?",
+     "a": "It is said",
+     "b": "Name the source",
+     "fa": [
+      "“It is said” protects the source.",
+      "Sometimes that’s the only way to tell the story."
+     ],
+     "fb": [
+      "Name the source. “It is said” signs nothing.",
+      "Readers deserve to know who counted."
+     ]
+    },
+    {
+     "q": "Do rules for success help, or just sell books?",
+     "a": "They help",
+     "b": "They sell books",
+     "fa": [
+      "They help. A simple rule is known to motivate people.",
+      "Even if the number is wrong."
+     ],
+     "fb": [
+      "They sell books. A tidy story is easier to sell than the truth.",
+      "The thing is, real life isn’t tidy."
+     ]
+    }
+   ],
+   "fim": "Four rounds. It is said that nobody won."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Climb the Ladder",
+   "t": "One popular “fact”, up the ladder.",
+   "p": "Step by step. Find its real rung.",
+   "prof": "Let the student choose any popular claim (we use 10% of our brain, drink eight glasses a day…). Push: who counted?",
+   "passos": [
+    {
+     "q": "Choose a “fact” everybody repeats.",
+     "st": [
+      "People say that …",
+      "It is said that …"
+     ],
+     "ex": "People say that we only use ten percent of our brain."
+    },
+    {
+     "q": "Move the name to the front.",
+     "st": [
+      "… is said to …",
+      "… is thought to …"
+     ],
+     "ex": "Our brain is said to work at only ten percent."
+    },
+    {
+     "q": "Who counted? Is there a real owner?",
+     "st": [
+      "It was reported by …",
+      "Nobody seems to have …"
+     ],
+     "ex": "Nobody seems to have measured it. It was never reported by a real study."
+    },
+    {
+     "q": "Now choose its real rung: said, thought, believed, reported or known?",
+     "st": [
+      "It’s only said, because …",
+      "It’s known, because …"
+     ],
+     "ex": "It’s only said. It isn’t known, because there’s no evidence."
+    }
+   ],
+   "fim": "Filed. Signed by nobody."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

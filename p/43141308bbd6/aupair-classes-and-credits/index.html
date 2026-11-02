@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -124,5 +125,297 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Au pairs share how they improved.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "leitura": {
+   "t": "Lakeview’s course catalog.",
+   "p": "Read the catalog. Then answer."
+  },
+  "multipla": {
+   "t": "Six credits, $500 from the family.",
+   "p": "Read the case. Choose. Explain the numbers."
+  },
+  "cv-escolha": {
+   "t": "Choose your six credits.",
+   "p": "Choose one, or say your idea. Then say why."
+  },
+  "formulario": {
+   "t": "Fill in Mariana’s form.",
+   "p": "Read her choices. Fill in every field."
+  },
+  "pode": {
+   "t": "Lesson 23: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "A parte de estudo do programa: pelo menos seis créditos numa faculdade credenciada, a família paga até US$ 500; ler catálogo, fazer as contas, planejar horário e se matricular.",
+  "armadilha": "Achar que qualquer curso conta, se matricular antes de combinar o horário com a família e esquecer o recibo; na fala, “I would choose” sem motivo e confundir credits com “aulas”.",
+  "pal": [
+   "credits",
+   "semester hours",
+   "accredited",
+   "up to $500",
+   "I’d pay the rest",
+   "enroll",
+   "enrollment form",
+   "Could we plan my schedule?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a parte de estudo do ano de au pair.",
+   "perg": "If you could study anything in the USA for free, what would it be?",
+   "pula": "Só leia o título da capa."
+  },
+  "video": {
+   "obj": "Assistir às dicas de au pairs para melhorar o inglês (40 s).",
+   "perg": "Which tip would you try first?",
+   "pula": "O vídeo é inteiro; faça só uma pergunta depois."
+  },
+  "leitura": {
+   "obj": "Ler o catálogo da Lakeview (fictícia) e responder sobre créditos, preços e horários.",
+   "perg": "Which course gives the most credits?",
+   "pula": "Leia metade e faça duas perguntas."
+  },
+  "multipla": {
+   "obj": "Fazer as contas de cinco casos: créditos, US$ 500 da família e o resto.",
+   "perg": "How much does the au pair pay?",
+   "pula": "Três casos bastam."
+  },
+  "cv-escolha": {
+   "obj": "Conversa: rápido ou devagar, útil ou divertido, online ou presencial; defender a escolha.",
+   "perg": "Useful or fun: which would you choose?",
+   "pula": "Duas rodadas bastam."
+  },
+  "formulario": {
+   "obj": "Escrita: preencher a matrícula da Mariana (fictícia) e conferir.",
+   "perg": "Which fields were hard?",
+   "pula": "Metade dos campos basta."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; perguntar qual curso o aluno escolheria (a próxima aula é o projeto final).",
+   "perg": "Which course would you choose, and why?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre estudos, cursos e planos do aluno.",
+   "perg": "What was your favorite class at school?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de dilemas de estudo durante o ano de au pair.",
+   "perg": "Which side do you take?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Planejar, em passos, a semana de aulas combinada com a família.",
+   "perg": "When would you study, and who would watch the kids?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Studying and you.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’d choose …",
+    "I’d pay …",
+    "because"
+   ],
+   "cartas": [
+    {
+     "k": "SCHOOL",
+     "q": "What was your favorite class at school?",
+     "fup": "Why did you like it?",
+     "st": [
+      "My favorite class was …",
+      "I liked it because …"
+     ],
+     "ex": "My favorite class was art. I liked it because the teacher was fun."
+    },
+    {
+     "k": "A NEW SKILL",
+     "q": "What skill would you like to learn in the USA?",
+     "fup": "How would it help you later?",
+     "st": [
+      "I’d like to learn …",
+      "It would help me …"
+     ],
+     "ex": "I’d like to learn photography. It would help me start a small business."
+    },
+    {
+     "k": "ONLINE",
+     "q": "Have you ever taken an online course?",
+     "fup": "Did you finish it?",
+     "st": [
+      "Yes, I took … / No, never.",
+      "I finished it / I stopped because …"
+     ],
+     "ex": "Yes, I took an Excel course. I stopped because I was too busy."
+    },
+    {
+     "k": "MONEY",
+     "q": "How much would you pay for a course you really want?",
+     "fup": "Would you pay the rest yourself?",
+     "st": [
+      "I’d pay up to …",
+      "Yes, I’d pay the rest because …"
+     ],
+     "ex": "I’d pay up to $300. Yes, I’d pay the rest because it’s an investment."
+    },
+    {
+     "k": "CLASSMATES",
+     "q": "Would you like to study with Americans or with other au pairs?",
+     "fup": "Why?",
+     "st": [
+      "I’d prefer …",
+      "because …"
+     ],
+     "ex": "I’d prefer Americans, because I’d speak more English."
+    },
+    {
+     "k": "AFTER THE YEAR",
+     "q": "What would you like to do after your au pair year?",
+     "fup": "Could a course help?",
+     "st": [
+      "After the year, I’d like to …",
+      "A course in … could help."
+     ],
+     "ex": "After the year, I’d like to work with kids in Brazil. A course in child development could help."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’d choose …",
+    "because",
+    "I think"
+   ],
+   "rodadas": [
+    {
+     "q": "One weekend course, or a class every week?",
+     "a": "One weekend",
+     "b": "Every week",
+     "fa": [
+      "One weekend. It’s fast and easy to plan.",
+      "Then I’m free all year."
+     ],
+     "fb": [
+      "Every week. I learn more.",
+      "I meet the same people every week."
+     ]
+    },
+    {
+     "q": "Child Development or Photography?",
+     "a": "Child Development",
+     "b": "Photography",
+     "fa": [
+      "Child Development. It helps with my job.",
+      "The family will like it too."
+     ],
+     "fb": [
+      "Photography. It’s my year too.",
+      "I can take amazing pictures of my trips."
+     ]
+    },
+    {
+     "q": "Online or in the classroom?",
+     "a": "Online",
+     "b": "Classroom",
+     "fa": [
+      "Online. I can study after the kids sleep.",
+      "No car needed."
+     ],
+     "fb": [
+      "In the classroom. I meet people.",
+      "I practice English for real."
+     ]
+    },
+    {
+     "q": "Spend only the family’s $500, or pay more for a better course?",
+     "a": "Only $500",
+     "b": "Pay more",
+     "fa": [
+      "Only $500. I want to save money.",
+      "The rule is six credits, not the best course."
+     ],
+     "fb": [
+      "Pay more. It’s a once-in-a-lifetime chance.",
+      "A good course looks great on a CV."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Study Plan",
+   "t": "Plan your course week.",
+   "p": "Four steps. Say it to the host mom.",
+   "prof": "You are the host mom: listen to the plan and ask one question about the kids’ schedule.",
+   "passos": [
+    {
+     "q": "Which course would you choose?",
+     "st": [
+      "I’d choose …",
+      "because …"
+     ],
+     "ex": "I’d choose English Conversation, because I want to speak better."
+    },
+    {
+     "q": "When is the class?",
+     "st": [
+      "It’s on …",
+      "from … to …"
+     ],
+     "ex": "It’s on Tuesday evenings, from six to nine."
+    },
+    {
+     "q": "Ask the host mom about the schedule.",
+     "st": [
+      "Could we plan my schedule?",
+      "Is it OK if …?"
+     ],
+     "ex": "Could we plan my schedule? Is it OK if I finish work at five on Tuesdays?"
+    },
+    {
+     "q": "Explain the money.",
+     "st": [
+      "The course is …",
+      "You pay up to $500, and I’d pay …"
+     ],
+     "ex": "The course is $650. You pay up to $500, and I’d pay the rest."
+    }
+   ],
+   "fim": "A clear plan. Now ask the host family for real."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

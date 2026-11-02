@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Three People, Five Days",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e9df8a3d124f/three-people/img/live-mesa.jpg",
+  "capa": "../img/live-mesa.jpg",
   "alvo": "I'm + name / age; the tens versus the teens (thirteen x thirty, fourteen x forty); the days in order; prices (How much is it? It's forty pounds.)",
   "abrir": "How old are you? What is your favorite day?",
   "fecho": "<b>I'm</b> + age: <i>I'm thirty.</i> Never <i>I have thirty</i>. <b>-teen</b> = 13 to 19 (thirTEEN); <b>-ty</b> = tens (THIRty). A price: <i>It's forty pounds.</i> Days in order: Monday, Tuesday, Wednesday, Thursday, Friday.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a station. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/e9df8a3d124f/three-people/img/live-rochester.webp",
+      "img": "../img/live-rochester.webp",
       "leg": "A quiet station at dusk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Hi, I'm Leo. I'm thirty.",
-          "img": "https://wolf-labs.pages.dev/p/e9df8a3d124f/three-people/img/live-mesa.jpg",
+          "img": "../img/live-mesa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The train is forty pounds on Friday.",
-          "img": "https://wolf-labs.pages.dev/p/e9df8a3d124f/three-people/img/live-rochester.webp",
+          "img": "../img/live-rochester.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "My sister is thirteen, not thirty.",
-          "img": "https://wolf-labs.pages.dev/p/e9df8a3d124f/three-people/img/live-mesa.jpg",
+          "img": "../img/live-mesa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e9df8a3d124f/three-people/img/live-mesa.jpg",
+      "img": "../img/live-mesa.jpg",
       "leg": "Phones, a map and some money on a dark table",
       "pede": "Look at the picture: phones, a map and money on a table. Write 2 or 3 sentences: your name, your age, and one thing with its price. Use <b>I'm</b> and <b>It's ... pounds</b>.",
       "ph": "I'm … I'm … It's … pounds.",

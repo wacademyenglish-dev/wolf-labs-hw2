@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · You’re Supposed to Bring a Gift · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Cormorant+Garamond:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>You’re Supposed to Bring a Gift · The Invitation</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>You’re Supposed to Bring a Gift · The Invitation</h2>
+    <p>The student’s friend Emma is marrying Kenji in Kyoto. The student bought the perfect gift, a big coffee machine. Then the invitation arrives, black and gold, with a guest guide inside: guests are supposed to bring money in a special envelope, with new bills. The grammar: <b>be supposed to</b> (the rule, the plan, what people expect), <b>be expected to</b> (the same, more formal), <b>not supposed to</b> (the etiquette says no) and <b>was / were supposed to</b> (the plan, and it didn’t happen). On screen, the invitation with eight wax seals that crack open, and a seating chart of eight round tables that light up in gold.</p>
+    <h4>THE INVITATION</h4>
+    <p>Scene II, before the rule: the student opens a seal, reads the line and says what guests have to do. Tap exactly what you heard. Collect what they say: many will say <i>We supposed to …</i> or <i>Is to bring …</i></p>
+    <h4>THE TRAPS</h4>
+    <p><i>Is to bring a gift?</i> (no person, no be) · <i>We supposed to</i> (no be) · <i>supposed bring</i> (no to) · <i>suppose to</i> (no d) · <i>supposedly</i> (= people say, not the rule) · <i>don’t have to</i> for something the etiquette forbids · <i>supposed to being</i>.</p>
+    <h4>THE SEATING CHART</h4>
+    <p>Scene IV, after the rule, is the pressure: eight tables, eight guests with a question. You play each guest in character; the student answers fast, starting with the words under the line. Listen for <i>were supposed to</i> (Yuki, your plus-one) and <i>not supposed to</i> (Jess, Amy).</p>
+    <h4>THE CUSTOMS</h4>
+    <p>At a Japanese wedding reception, guests usually give money in a special envelope, sit where the seating chart says, keep speeches short and avoid sad words. Customs change from family to family: if the student knows Japan, let them add to it. This lesson has no recording: your voice is the audio.</p>
+    <!--conversa--><h4>THE ETIQUETTE JURY (VI) AND THE SURPRISE QUESTION</h4>
+    <p>After Leo’s call, your student is the jury for three guests who broke the guest guide: Mr. Sato’s twenty-minute speech, cousin Amy’s white dress, and their own coffee machine. They read the evidence, choose a verdict and say why; you defend the guest. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk (“she not supposed to” → “she wasn’t supposed to”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Parties, II The Invitation, IV The Seating Chart, V The Morning After, VI The Etiquette Jury, VII Your Rules.</li>
+      <li><b>Focus</b>: III The Rule.</li>
+      <li><b>Write</b>: VIII, the guest guide for their city. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* YOU’RE SUPPOSED TO BRING A GIFT (Main B1) · pergunta-surpresa · 27/10/2026 · be supposed to */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'convite', tipo: 'Would you rather', q: 'Would you rather give money in an envelope, or choose a real gift?',
+    opc: ['Money', 'A real gift'], st: ['I’d rather …, because a gift is supposed to …'],
+    ex: 'A real gift. A gift is supposed to show you know the person. Money is easy, but it’s cold.', push: 'And if they asked for money on the invitation?' },
+  { cena: 'regra', tipo: 'And you?', q: 'What is one rule at your work or school that nobody follows?',
+    opc: ['About time', 'About phones', 'About clothes', 'Something else'], st: ['We’re supposed to …, but nobody …'],
+    ex: 'About phones. We’re supposed to leave our phones on the desk in meetings, but nobody does.', push: 'And you? Do you follow it?' },
+  { cena: 'manha', tipo: 'What if', q: 'You were supposed to arrive at a wedding at four, and it’s five now. What do you do?',
+    opc: ['Go in quietly', 'Text the bride', 'Go home'], st: ['I was supposed to …, so I’d …'],
+    ex: 'Go in quietly. I was supposed to be there at four, but the party is the important part, not the church.', push: 'Who is the first person you say sorry to?' },
+  { cena: 'regras', tipo: 'Opinion', q: 'In Brazil, are guests supposed to arrive on time at a party?',
+    opc: ['Yes, on time', 'Thirty minutes late', 'One hour late'], st: ['Guests are expected to …', 'You’re not supposed to …'],
+    ex: 'Thirty minutes late. You’re not supposed to arrive on time: the host is still in the shower!', push: 'What about a work dinner? Same rule?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* YOU’RE SUPPOSED TO BRING A GIFT (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O júri com provas entra no lugar de "VI · Quick Check" (extra, prática controlada). Depois da
+   ligação do Leo, o aluno julga três convidados que quebraram o guia: o Mr. Sato do discurso de vinte
+   minutos, a prima Amy de branco e... o próprio aluno, com a cafeteira. A gramática da aula (be
+   supposed to / not supposed to / was supposed to / be expected to) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'juri', troca: 'quiz', est: 'o', min: 7, img: 'mesas', rot: 'The Etiquette Jury', t: 'Three guests broke the guide. You are the jury.',
+    p: 'Read the evidence. Choose a verdict, or say your own. Then say why with supposed to. Your teacher defends the guest.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Mr. Sato', sit: 'Mr. Sato’s speech was twenty minutes long.',
+        provas: ['The guide said three minutes.', 'Everybody laughed the whole time.', 'The soup was cold when he finished.'],
+        q: 'Your verdict?', opc: ['Guilty', 'Not guilty', 'Guilty, but forgiven'],
+        st: ['He was supposed to …, but …', 'Speeches are expected to …', 'If people laughed, …'],
+        ex: 'Guilty, but forgiven. His speech was supposed to be three minutes, but everybody laughed. Cold soup is a small price.',
+        push: 'Next year it’s YOUR wedding, and Mr. Sato asks to speak. Yes or no?' },
+      { tag: 'Cousin Amy', sit: 'Cousin Amy wore a long white dress.',
+        provas: ['Guests aren’t supposed to wear white.', 'She says it was “snow”, not white.', 'Emma, the bride, didn’t say anything.'],
+        q: 'Your verdict?', opc: ['Guilty', 'Not guilty', 'Guilty, but forgiven'],
+        st: ['She wasn’t supposed to …', 'Guests are expected to …', 'Maybe she was supposed to …'],
+        ex: 'Guilty. Guests aren’t supposed to wear white, and “snow” is white. She wanted the photos.',
+        push: 'Emma didn’t complain. If the bride is happy, is there really a crime?' },
+      { tag: 'You!', sit: 'You brought a huge coffee machine in a box.',
+        provas: ['The guide: no boxes, an envelope.', 'Kenji uses it every morning.'],
+        q: 'Your verdict?', opc: ['Guilty', 'Not guilty', 'Guilty, but forgiven'],
+        st: ['I was supposed to …, but …', 'I wasn’t expected to …', 'Guests are supposed to …, but …'],
+        ex: 'Guilty, but forgiven. I was supposed to bring an envelope, but Kenji loves his coffee now.',
+        push: 'Emma’s mother-in-law saw the box at the door. Still forgiven?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "festas": {
+   "t": "You and big parties. This or that?",
+   "p": "Choose fast. Then tell a real story."
+  },
+  "convite": {
+   "t": "Eight gold seals. What are guests supposed to do?",
+   "p": "Open a seal. Read it. Say what guests do."
+  },
+  "regra": {
+   "t": "Person + BE + supposed to + verb.",
+   "p": "Say each wrong line right. Tap SHOW ME."
+  },
+  "mesas": {
+   "t": "Eight tables. Every guest has a question.",
+   "p": "Your teacher is the guest. Answer at once."
+  },
+  "manha": {
+   "t": "Leo has a wedding in Japan next month.",
+   "p": "Explain the etiquette. Then ask Leo one question."
+  },
+  "cv-juri": {
+   "t": "Three guests broke the guide. You’re the jury.",
+   "p": "Read the evidence. Choose a verdict. Say why."
+  },
+  "regras": {
+   "t": "What are you supposed to do?",
+   "p": "Tap five. Answer with supposed to or expected to."
+  },
+  "fim": {
+   "t": "Parties in your country: rules and reality.",
+   "p": "Write the guest guide for your city. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Be supposed to, be expected to, not supposed to e was supposed to: Emma casa com Kenji em Kyoto, e o presente perfeito (uma cafeteira) não é o que o guia pede.",
+  "armadilha": "O brasileiro tira o be (“We supposed to bring”), tira a pessoa (“Is to bring a gift?”), escreve “suppose to” sem d e usa don’t have to para algo proibido (é not supposed to).",
+  "pal": [
+   "be supposed to",
+   "not supposed to",
+   "was supposed to",
+   "be expected to",
+   "guest guide",
+   "envelope",
+   "seating chart",
+   "etiquette"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: o presente perfeito, e o convite diz que não é para levar.",
+   "perg": "What do you usually give at a wedding?",
+   "pula": "Só leia a capa e abra o convite."
+  },
+  "festas": {
+   "obj": "Aquecimento pessoal: o aluno e festas grandes, isto ou aquilo, com uma história real.",
+   "perg": "What’s the best party you’ve ever been to?",
+   "pula": "Três escolhas e uma história."
+  },
+  "convite": {
+   "obj": "Oito selos do guia dos convidados: dizer o que os convidados têm de fazer. Anote os erros (We supposed to).",
+   "perg": "What are the guests supposed to bring?",
+   "pula": "Cinco selos bastam."
+  },
+  "regra": {
+   "obj": "Foco: pessoa + be + supposed to + verbo; corrigir as linhas erradas.",
+   "perg": "Where is the BE in this sentence?",
+   "pula": "Quatro linhas bastam."
+  },
+  "mesas": {
+   "obj": "Pressão na recepção: oito convidados perguntam e o aluno responde rápido (were supposed to, not supposed to).",
+   "perg": "Where am I supposed to sit?",
+   "pula": "Cinco mesas bastam; não corte Yuki."
+  },
+  "manha": {
+   "obj": "O professor é o Leo, que vai a um casamento no Japão: o aluno conta a história e explica a etiqueta.",
+   "perg": "So what am I supposed to give them?",
+   "pula": "Três regras e uma pergunta ao Leo."
+  },
+  "cv-juri": {
+   "obj": "Júri da etiqueta: o discurso do Sr. Sato, o vestido branco da Amy e a cafeteira do aluno.",
+   "perg": "Guilty or not guilty? Why?",
+   "pula": "Dois convidados bastam."
+  },
+  "regras": {
+   "obj": "A etiqueta da vida do aluno: cinco situações com supposed to, expected to, was supposed to.",
+   "perg": "What are you supposed to do at work on Fridays?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o guia do convidado para uma festa na cidade do aluno, regras e realidade.",
+   "perg": "What is nobody really supposed to do at a party here?",
+   "pula": "Três regras bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre etiqueta e regras sociais com supposed to.",
+   "perg": "What are you supposed to bring to a barbecue here?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre etiqueta em festas, com supposed to e expected to.",
+   "perg": "Are guests really supposed to do that?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Emma, a noiva, e responde sobre o casamento e o presente.",
+   "perg": "Emma, what were the guests supposed to bring?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "The rules nobody writes down.",
+   "p": "Pick a card. Use supposed to.",
+   "palavras": [
+    "supposed to",
+    "not supposed to",
+    "was supposed to",
+    "expected to"
+   ],
+   "cartas": [
+    {
+     "k": "A BARBECUE",
+     "q": "What are you supposed to bring to a barbecue in Brazil?",
+     "fup": "What happens if you bring nothing?",
+     "st": [
+      "You’re supposed to bring …",
+      "You’re not supposed to …"
+     ],
+     "ex": "You’re supposed to bring meat or drinks, and you’re not supposed to leave early."
+    },
+    {
+     "k": "A BIRTHDAY",
+     "q": "At a birthday party here, what are guests expected to do?",
+     "fup": "Do you like that?",
+     "st": [
+      "Guests are expected to …",
+      "Everybody is supposed to sing …"
+     ],
+     "ex": "Guests are expected to stay for the cake and sing."
+    },
+    {
+     "k": "A PLAN THAT FAILED",
+     "q": "Tell me about a party where something was supposed to happen and didn’t.",
+     "fup": "What went wrong?",
+     "st": [
+      "… was supposed to …, but …"
+     ],
+     "ex": "The band was supposed to play at nine, but it arrived at midnight."
+    },
+    {
+     "k": "THE TABLE",
+     "q": "At dinner with your family, what are you not supposed to do?",
+     "fup": "Who made that rule?",
+     "st": [
+      "You’re not supposed to …",
+      "Kids are supposed to …"
+     ],
+     "ex": "You’re not supposed to use your phone at the table."
+    },
+    {
+     "k": "THE OFFICE",
+     "q": "What are you supposed to do at work that nobody really does?",
+     "fup": "Why not?",
+     "st": [
+      "We’re supposed to …, but nobody …"
+     ],
+     "ex": "We’re supposed to clean the coffee machine, but nobody does."
+    },
+    {
+     "k": "ABROAD",
+     "q": "What’s a custom from another country that surprised you?",
+     "fup": "Would you follow it?",
+     "st": [
+      "In …, you’re supposed to …"
+     ],
+     "ex": "In Japan, you’re not supposed to tip at restaurants."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "The Debate",
+   "t": "Pick a side. Defend your etiquette.",
+   "p": "Your teacher argues the other side.",
+   "palavras": [
+    "supposed to",
+    "not supposed to",
+    "expected to",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Wedding gifts: money or a real present?",
+     "a": "Money",
+     "b": "A real present",
+     "fa": [
+      "Money. The couple can buy what they really need.",
+      "And you’re not supposed to bring a coffee machine to Kyoto."
+     ],
+     "fb": [
+      "A real present. Money feels cold.",
+      "A gift is supposed to show you thought about them."
+     ]
+    },
+    {
+     "q": "Arriving on time at a party in Brazil: polite or strange?",
+     "a": "Polite",
+     "b": "Strange",
+     "fa": [
+      "Polite. The invitation says eight, so you’re supposed to arrive at eight.",
+      "Respect the hosts."
+     ],
+     "fb": [
+      "Strange. Nobody is expected to arrive on time.",
+      "The hosts aren’t even ready."
+     ]
+    },
+    {
+     "q": "If you’re a guest in another country, should you follow every custom?",
+     "a": "Yes, every one",
+     "b": "Not every one",
+     "fa": [
+      "Yes. You’re their guest.",
+      "You’re supposed to respect their home."
+     ],
+     "fb": [
+      "Not every one. Nobody expects a foreigner to know everything.",
+      "A smile is enough."
+     ]
+    },
+    {
+     "q": "Wedding speeches: short or long?",
+     "a": "Short",
+     "b": "Long",
+     "fa": [
+      "Short. Speeches are supposed to be three minutes.",
+      "Mr. Sato talked for twenty."
+     ],
+     "fb": [
+      "Long, if they’re good. People are expected to tell stories.",
+      "That’s what makes it personal."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You were supposed to lose one, and you didn’t."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Emma now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Emma, the bride.",
+   "perguntas": [
+    "Emma, what were the guests supposed to bring?",
+    "Why are guests expected to use new bills?",
+    "What were you supposed to do at the reception?",
+    "Cousin Amy wore white. Was she supposed to?",
+    "Your friend brought a coffee machine. What did you think?",
+    "What’s one rule you didn’t like?"
+   ],
+   "st": [
+    "Guests were supposed to …",
+    "She wasn’t supposed to …",
+    "I was supposed to …, but …"
+   ],
+   "ex": "Guests were supposed to bring money in an envelope, but honestly, I love the coffee machine."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

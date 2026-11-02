@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Book You Keep · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Book You Keep · The Card Catalog</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Book You Keep · The Card Catalog</h2>
+    <p>A second-hand bookshop keeps a card for every book, every person and every place. The student learns to describe without naming: <b>a person who…</b>, <b>a thing that…</b>, <b>a place where…</b>. The screen is a card catalog with three drawers, and a card only goes into the drawer of the right word.</p>
+    <h4>NO WHAT · WHERE NEVER GOES</h4>
+    <p><i>the book what I keep</i> is the error of the hour. WHO and THAT can disappear before a new person (<i>the book you keep</i>); WHERE stays.</p>
+    <h4>THE AUDIO</h4>
+    <p>Eleven recordings, checked on 06/10. The six customers match. The four dedications didn’t match the old transcript: the voices say other lines (“For Ana…”, “To the boy who reads at the table…”, “…in the station where we said goodbye”, “If you are reading it, you found me.”), so scene VI now follows the recordings. The ledger is worded differently too; the transcript follows the voice.</p>
+    <h4>THE GUESSING GAME</h4>
+    <p>Scene IX is the heart: the student defines, you guess. Guess slowly.</p>
+    <!--conversa--><h4>THE SHOP’S NEW IDEAS (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>A traffic light: the owner has three new ideas (books in brown paper, a free reading corner, notes inside that cost more), and your student gives each one green, yellow or red. There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make it personal. Recast quietly while they talk (<i>a book that</i>, never <i>a book what</i>; <i>a place where</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Book, VIII The Shop’s New Ideas, IX Don’t Say It.</li>
+      <li><b>Listen</b>: II Six Voices, VI Written Inside, VII The Ledger. <b>Focus</b>: III The Card Catalog, IV Pull the Word, V The Rule.</li>
+      <li><b>Write</b>: X, their own card. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE BOOK YOU KEEP (Main A2) · pergunta-surpresa · 27/10/2026 · who / that / where */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'vozes', tipo: 'And you?', q: 'Who is a person who always gives you good books, movies or series?',
+    opc: ['A friend', 'Someone in my family', 'Nobody!'], st: ['It’s a friend who …', 'It’s someone who …'],
+    ex: 'A friend who works in a bookshop. She always knows what I like.', push: 'What was the last thing they told you to read or watch?' },
+  { cena: 'puxa', tipo: 'Would you rather', q: 'Would you rather read on paper or on a screen?',
+    opc: ['On paper', 'On a screen'], st: ['I’d rather read …, because I like a book that …'],
+    ex: 'On paper. I like a book that I can hold and write in.', push: 'Where do you read most: at home, on the bus, in bed?' },
+  { cena: 'ded', tipo: 'What if', q: 'You find a book with a note inside: “If you are reading it, you found me.” What do you do?',
+    opc: ['Look for the person', 'Keep the book', 'Leave it for someone'], st: ['I’d look for the person who …', 'I’d leave it in a place where …'],
+    ex: 'I’d leave it in a place where another person can find it, like a café.', push: 'Would you write a note too? What would it say?' },
+  { cena: 'adivinha', tipo: 'Opinion', q: 'Everything is online now. Are bookshops still important?',
+    opc: ['Yes, very', 'A little', 'Not really'], st: ['A bookshop is a place where …', 'People who … still …'],
+    ex: 'Yes! It’s a place where you find books that you didn’t know you wanted.', push: 'When did you last go into a bookshop?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE BOOK YOU KEEP (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O semáforo entra no lugar de "VIII · Two Cards, One Right" (extra, prática controlada repetida da cena V).
+   O dono do sebo tem três ideias novas; o aluno dá verde, amarelo ou vermelho e defende com
+   who / that / where (a gramática da aula) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'semaforo', troca: 'erro', est: 'o', min: 6, img: 'estante', rot: 'The Shop’s New Ideas', t: 'The owner has three new ideas. Green, yellow or red?',
+    p: 'Choose a color. Say why with who, that or where. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Blind date', sit: 'Idea 1: books wrapped in brown paper. You only see one line, like “a book that will make you cry”.',
+        q: 'Would you buy a book that you can’t see?', opc: [{ t: 'Yes, I love it', cor: 'g' }, { t: 'Maybe', cor: 'y' }, { t: 'No way', cor: 'r' }],
+        st: ['Green, because I want a book that …', 'I’d never buy a book that …', 'It’s good for people who …'],
+        ex: 'Green! I want a book that surprises me. I never know what to choose.',
+        push: 'Write the line for your favorite book: “a book that …”' },
+      { tag: 'The corner', sit: 'Idea 2: a corner where people can read for free all day, with coffee.',
+        q: 'Is it a good idea for the shop?', opc: [{ t: 'Great idea', cor: 'g' }, { t: 'Only with rules', cor: 'y' }, { t: 'Bad for business', cor: 'r' }],
+        st: ['It’s a place where …', 'People who … will …', 'Yellow, because …'],
+        ex: 'Yellow. It’s a place where people can relax, but people who never buy anything will stay all day.',
+        push: 'Would you pay for the coffee? How much?' },
+      { tag: 'Written inside', sit: 'Idea 3: books with old notes or dedications inside cost MORE.',
+        q: 'More money for a book that has a stranger’s note?', opc: [{ t: 'Yes, it’s special', cor: 'g' }, { t: 'Same price', cor: 'y' }, { t: 'No, it’s private', cor: 'r' }],
+        st: ['A book that has … is …', 'The person who wrote it …', 'Red, because …'],
+        ex: 'Red. The person who wrote it maybe wants it back. It’s private.',
+        push: 'Is there a book where YOU wrote something inside? What?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Your shelf first.",
+   "p": "Answer each message out loud."
+  },
+  "vozes": {
+   "t": "Six customers, six favorite books.",
+   "p": "Play one. Did they use a joining word?"
+  },
+  "fichas": {
+   "t": "Eight cards. Three drawers.",
+   "p": "Say the line. Put the card in its drawer."
+  },
+  "puxa": {
+   "t": "Some joining words can disappear.",
+   "p": "Guess first: can the word go?"
+  },
+  "regra": {
+   "t": "Describe without naming.",
+   "p": "Say each line the right way. Then tap it."
+  },
+  "ded": {
+   "t": "A line written inside each book.",
+   "p": "Play it. Answer. Describe the book."
+  },
+  "registro": {
+   "t": "The shop’s ledger: three days.",
+   "p": "Play it. Answer one line at a time."
+  },
+  "cv-semaforo": {
+   "t": "Three new ideas. Green, yellow or red?",
+   "p": "Choose a color. Say why with who, that, where."
+  },
+  "adivinha": {
+   "t": "Think of something. Don’t say it.",
+   "p": "Describe it with the frame. Your teacher guesses."
+  },
+  "fim": {
+   "t": "The book you keep, on a card.",
+   "p": "Describe it without its name. Who gave it?"
+  }
+ },
+ "prep": {
+  "obj": "Orações relativas (a person who, a thing that, a place where) para descrever sem dizer o nome: o fichário de um sebo com três gavetas.",
+  "armadilha": "O “que” do português vira what: “the book what I keep”. Também usar which / that para lugar em vez de where, e achar que where pode sumir como who / that.",
+  "pal": [
+   "a person who",
+   "a thing that",
+   "a place where",
+   "the book you keep",
+   "second-hand",
+   "a dedication",
+   "a ledger"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: o livro que você guarda e o fichário do sebo.",
+   "perg": "Is there a book you never give away?",
+   "pula": "Só leia o título e comece."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal sobre a estante e os livros do aluno, por mensagens.",
+   "perg": "What book is on your shelf right now?",
+   "pula": "Três mensagens bastam."
+  },
+  "vozes": {
+   "obj": "Seis clientes falam do livro favorito: o aluno nota se descreveram com who / that / where.",
+   "perg": "What is the book, in their words?",
+   "pula": "Três vozes bastam."
+  },
+  "fichas": {
+   "obj": "Oito fichas e três gavetas: who para pessoa, that para coisa, where para lugar.",
+   "perg": "Which drawer: who, that or where?",
+   "pula": "Cinco fichas bastam."
+  },
+  "puxa": {
+   "obj": "Who e that podem sumir antes de outra pessoa; where fica.",
+   "perg": "Can this word disappear?",
+   "pula": "Três frases bastam."
+  },
+  "regra": {
+   "obj": "A regra: três gavetas, um só trabalho, e nunca what.",
+   "perg": "Why not “the book what I keep”?",
+   "pula": "Duas armadilhas bastam."
+  },
+  "ded": {
+   "obj": "Quatro livros com dedicatória: ouvir, responder e descrever com a palavra de ligação.",
+   "perg": "Who wrote this line, and for who?",
+   "pula": "Duas dedicatórias bastam."
+  },
+  "registro": {
+   "obj": "O livro-caixa da loja: três dias em áudio, uma pergunta por linha.",
+   "perg": "Who came to the shop on Monday?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-semaforo": {
+   "obj": "Três ideias do dono, verde, amarelo ou vermelho, com who / that / where no porquê.",
+   "perg": "Books in brown paper: green or red?",
+   "pula": "Duas ideias bastam."
+  },
+  "adivinha": {
+   "obj": "O coração da aula: o aluno define sem dizer o nome, você adivinha devagar.",
+   "perg": "Is it a person, a thing or a place?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: a ficha do livro do aluno, sem o nome, com quem deu ou onde achou; vai para o My notes.",
+   "perg": "Who gave you this book?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas para descrever pessoas, coisas e lugares da vida do aluno com orações relativas.",
+   "perg": "Who is a person who changed your life?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre livros e lojas, com who / that / where.",
+   "perg": "Paper books or e-books?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno cria a ficha de um objeto que guarda, passo a passo.",
+   "perg": "What is a thing that you keep?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More cards for the catalog.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "who",
+    "that",
+    "where"
+   ],
+   "cartas": [
+    {
+     "k": "A PERSON",
+     "q": "Think of a person who changed your life. Who is it?",
+     "fup": "What did they do?",
+     "st": [
+      "It’s a person who …"
+     ],
+     "ex": "It’s my first teacher, a woman who loved books."
+    },
+    {
+     "k": "A PLACE",
+     "q": "Where is a place where you feel calm?",
+     "fup": "When do you go there?",
+     "st": [
+      "It’s a place where …"
+     ],
+     "ex": "It’s a beach where nobody goes in winter."
+    },
+    {
+     "k": "A THING",
+     "q": "What is a thing that you always carry?",
+     "fup": "Why?",
+     "st": [
+      "It’s a thing that …"
+     ],
+     "ex": "It’s a notebook that my sister gave me."
+    },
+    {
+     "k": "A FILM",
+     "q": "What is a film that makes you cry?",
+     "fup": "Who did you watch it with?",
+     "st": [
+      "It’s a film that …"
+     ],
+     "ex": "It’s a film that my father loved."
+    },
+    {
+     "k": "A SHOP",
+     "q": "Is there a shop where you love to spend time?",
+     "fup": "What do you buy there?",
+     "st": [
+      "It’s a shop where …"
+     ],
+     "ex": "It’s a small bookshop where the owner knows my name."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "Describe a friend who is very different from you.",
+     "fup": "What do you do together?",
+     "st": [
+      "She’s a friend who …"
+     ],
+     "ex": "She’s a friend who hates reading but loves music."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "who",
+    "that",
+    "where",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Paper books or e-books?",
+     "a": "Paper",
+     "b": "E-books",
+     "fa": [
+      "Paper. I like books that smell old."
+     ],
+     "fb": [
+      "E-books. I want a phone that carries a thousand books."
+     ]
+    },
+    {
+     "q": "A big bookstore or a small second-hand shop?",
+     "a": "Big bookstore",
+     "b": "Second-hand shop",
+     "fa": [
+      "Big. I like a place where I find everything."
+     ],
+     "fb": [
+      "Second-hand. I like books that have a story."
+     ]
+    },
+    {
+     "q": "Write in your books or keep them clean?",
+     "a": "Write in them",
+     "b": "Keep them clean",
+     "fa": [
+      "Write. A book that has notes is a diary too."
+     ],
+     "fb": [
+      "Clean. I want books that look new."
+     ]
+    },
+    {
+     "q": "Lend your favorite book or never lend it?",
+     "a": "Lend it",
+     "b": "Never",
+     "fa": [
+      "Lend it, but only to a friend who gives it back."
+     ],
+     "fb": [
+      "Never. It’s a book that I keep forever."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Every card is in its drawer."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Thing You Keep",
+   "t": "Something you keep, on a card.",
+   "p": "Think of an object. Don’t name it.",
+   "prof": "Try to guess the object after each step; guess wrong on purpose once.",
+   "passos": [
+    {
+     "q": "What kind of thing is it?",
+     "st": [
+      "It’s a thing that …"
+     ],
+     "ex": "It’s a thing that you wear on your wrist."
+    },
+    {
+     "q": "Who gave it to you, or where did you find it?",
+     "st": [
+      "A person who … gave it to me.",
+      "I found it in a place where …"
+     ],
+     "ex": "A man who lived next door gave it to me."
+    },
+    {
+     "q": "Where do you keep it now?",
+     "st": [
+      "I keep it in a place where …"
+     ],
+     "ex": "I keep it in a box where I put old letters."
+    },
+    {
+     "q": "Now say its name. Why do you keep it?",
+     "st": [
+      "It’s my … I keep it because …"
+     ],
+     "ex": "It’s my grandfather’s old watch. I keep it because it still works."
+    }
+   ],
+   "fim": "Your card is in the catalog now."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -120,5 +121,267 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "descobre": {
+   "t": "Two answers, one question.",
+   "p": "Compare A and B. Which gets more points?"
+  },
+  "cv-escala": {
+   "t": "Four opinions about talking.",
+   "p": "Tap 1 to 5. Answer, add a detail and an example."
+  },
+  "prova": {
+   "t": "Listen once. Answer for 35 seconds.",
+   "p": "Play it. Start the clock. Answer + 1 + 1."
+  },
+  "escolha": {
+   "t": "A or B? 30 seconds.",
+   "p": "Choose fast. Give a reason and an example."
+  },
+  "pode": {
+   "t": "Lesson 10: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Interactive Speaking do DET: perguntas em sequência, 35 segundos cada, sem preparo; a fórmula é resposta + um detalhe + um exemplo, no tempo da pergunta.",
+  "armadilha": "Resposta de uma palavra, “I am agree”, não acompanhar o tempo verbal (“Has it changed?” — “Yes, I start…”; “If you had…?” — “I will”) e silêncio longo antes de começar.",
+  "pal": [
+   "answer first",
+   "one detail",
+   "one example",
+   "I usually …",
+   "It has changed …",
+   "I would …",
+   "Well, I’d say …",
+   "For example, …"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a questão nova do DET: uma voz, várias perguntas sobre um tema, sem preparo.",
+   "perg": "What did you have for breakfast?",
+   "pula": "Faça a pergunta-surpresa e vá à cena I."
+  },
+  "descobre": {
+   "obj": "Comparar duas respostas e ver por que a de resposta + 1 + 1 ganha mais pontos.",
+   "perg": "Why does B get more points?",
+   "pula": "Dois pares e a regra."
+  },
+  "cv-escala": {
+   "obj": "Aquecimento com opiniões: nota de 1 a 5, já usando resposta + detalhe + exemplo.",
+   "perg": "Do you agree? Give me one example.",
+   "pula": "Duas opiniões bastam."
+  },
+  "prova": {
+   "obj": "Seis perguntas gravadas sobre tempo livre, com o relógio real; toque cada uma uma vez só.",
+   "perg": "Did you match the tense of the question?",
+   "pula": "Quatro perguntas bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather rápido: escolher, motivo e exemplo em 30 segundos.",
+   "perg": "Why? Give me an example.",
+   "pula": "Duas escolhas bastam."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; o resto vai para a lição.",
+   "perg": "Can you answer in 35 seconds now?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais perguntas no estilo da prova sobre a vida real do aluno.",
+   "perg": "Answer, one detail, one example.",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate rápido com a fórmula resposta + detalhe + exemplo.",
+   "perg": "What’s your example?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o examinador e faz perguntas em tempos diferentes a você.",
+   "perg": "Did your teacher match the tense?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More test-style questions.",
+   "p": "Pick a card. Answer + 1 + 1.",
+   "palavras": [
+    "Well, I’d say …",
+    "For example, …",
+    "It has …",
+    "I would …"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WEEKEND",
+     "q": "What do you usually do on weekends?",
+     "fup": "Has it changed since you were a teenager?",
+     "st": [
+      "I usually …",
+      "For example, last Saturday …"
+     ],
+     "ex": "I usually rest. For example, last Saturday I watched two movies and cooked lunch."
+    },
+    {
+     "k": "CHANGE",
+     "q": "How has your city changed in the last ten years?",
+     "fup": "Is it better now?",
+     "st": [
+      "It has become …",
+      "For example, …"
+     ],
+     "ex": "It has become more crowded. For example, it takes me an hour to cross the city now."
+    },
+    {
+     "k": "IMAGINE",
+     "q": "If you had a free month, what would you do?",
+     "fup": "Who would you go with?",
+     "st": [
+      "I would …",
+      "For example, I’d …"
+     ],
+     "ex": "I would travel around the south. For example, I’d spend a week in the mountains."
+    },
+    {
+     "k": "ADVICE",
+     "q": "What advice would you give to someone starting English?",
+     "fup": "What worked for you?",
+     "st": [
+      "I’d say they should …",
+      "In my case, …"
+     ],
+     "ex": "I’d say they should watch series with subtitles. In my case, it changed everything."
+    },
+    {
+     "k": "TECHNOLOGY",
+     "q": "Do you spend too much time on your phone?",
+     "fup": "Have you ever tried to stop?",
+     "st": [
+      "Honestly, …",
+      "I’ve tried to …"
+     ],
+     "ex": "Honestly, yes. I’ve tried to turn it off after ten, but it lasted three days."
+    },
+    {
+     "k": "A HOBBY",
+     "q": "What hobby have you always wanted to try?",
+     "fup": "Why haven’t you tried it yet?",
+     "st": [
+      "I’ve always wanted to …",
+      "I haven’t … because …"
+     ],
+     "ex": "I’ve always wanted to surf. I haven’t tried it because I live far from the sea."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Answer, one detail, one example.",
+   "palavras": [
+    "because",
+    "for example",
+    "I’d say"
+   ],
+   "rodadas": [
+    {
+     "q": "Free time: alone or with friends?",
+     "a": "Alone",
+     "b": "With friends",
+     "fa": [
+      "Alone. I need quiet to recharge.",
+      "For example, I read on Sunday mornings."
+     ],
+     "fb": [
+      "With friends. Time goes faster.",
+      "For example, we play soccer every Thursday."
+     ]
+    },
+    {
+     "q": "Is it better to talk fast or talk with fewer mistakes in the test?",
+     "a": "Fast",
+     "b": "Fewer mistakes",
+     "fa": [
+      "Fast. The test wants fluency.",
+      "For example, a long answer shows more vocabulary."
+     ],
+     "fb": [
+      "Fewer mistakes. Clear is better than long.",
+      "For example, one clear example beats three broken ones."
+     ]
+    },
+    {
+     "q": "A city break or a nature trip?",
+     "a": "City",
+     "b": "Nature",
+     "fa": [
+      "A city. There are museums and food.",
+      "For example, I loved Buenos Aires."
+     ],
+     "fb": [
+      "Nature. I need to disconnect.",
+      "For example, I went to Chapada and turned off my phone."
+     ]
+    },
+    {
+     "q": "Practice speaking alone, or only with people?",
+     "a": "Alone",
+     "b": "With people",
+     "fa": [
+      "Alone. I can record myself and listen.",
+      "For example, I talk in the car."
+     ],
+     "fb": [
+      "With people. A real reaction helps.",
+      "For example, my teacher stops me when I freeze."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Examiner",
+   "t": "You are the examiner now.",
+   "p": "Ask. Listen. Check the tense.",
+   "aluno": "Read each question to your teacher, one time only. Listen: answer, one detail, one example, right tense?",
+   "perguntas": [
+    "What do you usually do after work?",
+    "Has your free time changed in the last few years?",
+    "What did you do last weekend?",
+    "If you could learn any skill, what would it be?",
+    "Do you think people work too much today?",
+    "What would you recommend to a tourist in your city?"
+   ],
+   "st": [
+    "Good. Now, …",
+    "Can you give me an example?"
+   ],
+   "ex": "Good. Now, has your free time changed in the last few years?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+{
+ "c-bob.mp3": "Bob is on the train, it is expensive, and it is slow.",
+ "c-fran.mp3": "Fran is on a bike. It is cheap, but it is slow.",
+ "c-paula.mp3": "Paula is still in London.",
+ "r-city.mp3": "London to Edinburgh. It is far train bus or bike Everyone costs something",
+ "r-money.mp3": "100 pounds, five days, that is all they have, no more.",
+ "r-people.mp3": "Three people. Fran, Bob, and Paula. They are in London. They do not know each other.",
+ "t-bike.mp3": "The bike. It is cheap, but it is slow.",
+ "t-bob.mp3": "Bob's train is cancelled. Now it is expensive, and it is slow.",
+ "t-bus.mp3": "The bus. It is expensive. And it is slow.",
+ "t-train.mp3": "The train. It is expensive, but it is fast.",
+ "v-cancel.mp3": "I can take the train. It is expensive but it is fast. The train is cancelled. It is expensive and this is not fast. The train is slow. Oh no Bob. It is expensive and it is slow. That is not good.",
+ "v-price.mp3": "London to Edinburgh, three people, 100 pounds, five days. The train is expensive, the bus is expensive, but cycling is cheap. It is cheap, 20 pounds, but it is slow.",
+ "w-andslow.mp3": "It is expensive, and it is slow.",
+ "w-butfast.mp3": "It is expensive, but it is fast.",
+ "w-butslow.mp3": "It is cheap, but it is slow.",
+ "w-cheap.mp3": "It is cheap.",
+ "w-expensive.mp3": "It is expensive.",
+ "w-fast.mp3": "It is fast.",
+ "w-isnt.mp3": "It isn't fast.",
+ "w-slow.mp3": "It is slow.",
+ "w-twenty.mp3": "20 pounds."
+}

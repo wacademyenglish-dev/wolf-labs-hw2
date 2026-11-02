@@ -1,0 +1,67 @@
+/* ============================================================
+   PAGE THIRTY-FOUR · THE NIGHT SHELF · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: uma estante de madeira à
+   noite sob uma luminária âmbar — marrom-tabaco quase preto; lombadas
+   em tons escuros (nenhuma clara); as fitas dos marcadores são a cor.
+   ============================================================ */
+:root{
+  --noite:#0b0807; --noite-rgb:11,8,7; --tinta:#f0ebe6;
+  --t1:#f3eee9; --t2:#cfc6bd; --t2-rgb:207,198,189; --t3:#958a7f;
+  --ac:#e8b86a; --ac2:#f6d9a6; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(240,235,230,.05); --vidro2:rgba(240,235,230,.085); --vidro3:rgba(240,235,230,.12);
+  --fio:rgba(236,228,220,.12); --fio2:rgba(236,228,220,.22); --luz:rgba(240,235,230,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'Cormorant Garamond',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1a04}
+.btn.cheio{color:#2a1a04}
+.capa{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:600 clamp(62px,6.2vw,122px)/.9 var(--serif);letter-spacing:-.01em}
+.capa h1 b{display:block;font-weight:600;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--t1)}
+.capa-r{display:grid;place-items:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:52px;padding:0 22px;font:700 clamp(15px,1.2vw,20px) var(--disp)}
+.pilula.rather-not{min-height:64px;padding:0 34px;font:600 italic clamp(24px,2vw,34px) var(--serif);border-color:var(--ac);color:var(--ac2)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start} .lado-l.centro{justify-items:center}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s} .versao[disabled]{opacity:.45}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:6px;padding:10px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(17px,1.35vw,23px)/1.4 var(--disp)}
+.pede .transcricao{margin:0}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:900px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao s{text-decoration-color:var(--erro);color:var(--t3)}
+.balao u{text-decoration:none;color:var(--ac2);border-bottom:3px solid var(--ok)}
+.aberta{position:relative;border-radius:var(--r1);background-size:cover;background-position:center;height:clamp(150px,calc(100vh / var(--zv,1) - 520px),360px);box-shadow:inset 0 0 120px rgba(0,0,0,.8)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(11,8,7,.88);font:700 13px var(--mono);color:var(--ac2)}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+
+/* a estante */
+.estante{display:block;width:min(100%,560px);height:auto;max-height:calc(100vh / var(--zv,1) - 420px);min-height:200px}
+.estante.mini{width:min(100%,320px);min-height:0;max-height:none;margin:0 auto}
+.estante .fundo-e{fill:#120d0a;stroke:#2a1f17;stroke-width:2}
+.estante .tabua-e{fill:#3a2a1c;stroke:#5a4128;stroke-width:1.5}
+.estante .livro{transition:opacity .4s,transform .4s} .estante .livro.apagado{opacity:.25}
+.estante .livro.sel{transform:translateY(-10px)}
+.estante .fita{stroke:rgba(0,0,0,.3);stroke-width:1}
+
+/* cenas */
+.dois-l{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lombada-b{display:grid;grid-template-columns:18px 1fr;grid-template-rows:auto auto;column-gap:12px;align-items:center;padding:14px 16px;border-radius:16px;border:1px solid var(--fio2);background:#140f0c;color:var(--t1);text-align:left;cursor:pointer}
+.lombada-b i{grid-row:1 / 3;width:18px;height:56px;border-radius:3px}
+.lombada-b b{font:700 clamp(17px,1.35vw,22px) var(--disp)} .lombada-b small{font:700 12px var(--mono);color:var(--t3)}
+.lombada-b.on{border-color:var(--ac);background:#2a1d0c}
+.esc-lista{display:grid;gap:6px} .esc-l{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;background:#140f0c;border:1px solid var(--fio);font:600 clamp(14px,1.05vw,17px) var(--disp)} .esc-l i{width:10px;height:28px;border-radius:2px;flex:none} .esc-l b{color:var(--ac2)}
+.ponte-f{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:14px;padding:18px 24px;border-radius:var(--r2);max-width:1000px;margin:0 auto 14px;font:600 clamp(24px,2.2vw,38px)/1.3 var(--serif)}
+.ponte-f .gap{min-width:3em;text-align:center;border-bottom:3px solid var(--ac);color:var(--ac);font-family:var(--mono);font-size:.8em} .ponte-f .gap.ok{border-color:var(--ok);color:var(--ok)}
+.dois-f{display:grid;gap:8px} .dois-f span{display:grid;gap:2px;padding:10px 14px;border-radius:12px;background:#140f0c;border:1px solid var(--fio);font:600 clamp(16px,1.25vw,20px)/1.35 var(--disp)} .dois-f small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .estante{max-height:none} }
+@media (max-width:620px){ .dois-l{grid-template-columns:1fr} }

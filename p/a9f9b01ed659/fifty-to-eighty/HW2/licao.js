@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Fifty to Eighty",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a9f9b01ed659/fifty-to-eighty/img/live-caminho.webp",
+  "capa": "../img/live-caminho.webp",
   "alvo": "mixed conditionals: if + past perfect (closed past) + would + verb (result still true NOW); if + past simple / were (always true about you) + would have + participle (result already finished)",
   "abrir": "Think of one decision from years ago. How is your life different today?",
   "fecho": "A closed past, a result that is still true <b>now</b>: <i>If I had taken that job, I would be living by the sea now.</i> (<b>had</b> + participle → <b>would</b> + verb.) Something always true about you, a result in the past: <i>If I were braver, I would have quit last year.</i> (<b>were</b> → <b>would have</b> + participle.) The result picks the tense of its half.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on a walk. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a9f9b01ed659/fifty-to-eighty/img/live-caminho.webp",
+      "img": "../img/live-caminho.webp",
       "leg": "A quiet street in autumn",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If I had taken that job, I would be living by the sea now.",
-          "img": "https://wolf-labs.pages.dev/p/a9f9b01ed659/fifty-to-eighty/img/live-caminho.webp",
+          "img": "../img/live-caminho.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If I were braver, I would have quit last year.",
-          "img": "https://wolf-labs.pages.dev/p/a9f9b01ed659/fifty-to-eighty/img/live-domingo.webp",
+          "img": "../img/live-domingo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If we had kept in touch, we would know the news today.",
-          "img": "https://wolf-labs.pages.dev/p/a9f9b01ed659/fifty-to-eighty/img/live-arquivo.webp",
+          "img": "../img/live-arquivo.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a9f9b01ed659/fifty-to-eighty/img/live-caminho.webp",
+      "img": "../img/live-caminho.webp",
       "leg": "A quiet street, a bench, autumn leaves",
       "pede": "Look at the picture: a quiet street in autumn. Write 2 or 3 sentences: one decision from the past that shapes your life now, and one thing about you that changed something last year. Use <b>if + had</b> … <b>would</b>, and <b>if + were</b> … <b>would have</b>.",
       "ph": "If I had …, I would …",

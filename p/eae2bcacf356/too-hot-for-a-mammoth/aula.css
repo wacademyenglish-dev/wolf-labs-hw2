@@ -1,0 +1,143 @@
+/* ============================================================
+   ICE AGE: BOILING POINT · THE ICE BRIDGE · LIVE CLASS 06/10/2026
+   WOLFLIX Live (catálogo 07/10): família animação, modo sobrevivência. Azul de geleira, laranja de lava como alerta; Lilita One. Aquecimento mentira, final cadeira. Prefixo ia-.
+   ============================================================ */
+:root{
+  --noite:#080b10; --noite-rgb:8,11,16; --tinta:#e6e9ef;
+  --t1:#f1f3f7; --t2:#b3bac7; --t2-rgb:179,186,199; --t3:#7b8394;
+  --ac:#7fd6f0; --ac2:#d4f3ff; --frio:#ff8a3d; --coral:#f2837a;
+  --vidro:rgba(230,233,239,.045); --vidro2:rgba(230,233,239,.08); --vidro3:rgba(230,233,239,.11);
+  --fio:rgba(214,220,232,.11); --fio2:rgba(214,220,232,.2);
+  --ok:#9fdcae; --am:#7fd6f0; --erro:#f2837a; --lil:#c3a8f0;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Instrument Serif',Georgia,serif; --ui:'Hanken Grotesk',system-ui,sans-serif; --mono:'Hanken Grotesk',system-ui,sans-serif;
+  --r1:12px; --r2:8px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#062430}
+.btn.cheio{background:var(--ac);border-color:var(--ac);color:#062430}
+.cab h1,.pergunta h2,.follow p.q,.carta b,.cr h3,#guia h2,.marca span{font-weight:400;letter-spacing:0}
+.cab h1{font-size:clamp(34px,2.9vw,56px)}
+.pergunta h2{font-size:clamp(24px,1.9vw,34px)}
+.capa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:10px 0 6px;font:400 clamp(58px,5.4vw,104px)/.98 var(--disp);color:var(--t1)}
+.capa .banda{margin:0 0 18px;font:500 clamp(18px,1.3vw,22px) var(--ui);color:var(--ac)}
+.capa .sub{margin:0 0 26px;font:400 clamp(18px,1.3vw,22px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.ia-foto{margin:0;display:grid;gap:14px}
+.ia-foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r1);border:1px solid #1a1e27;box-shadow:var(--sombra)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.05vw,17px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(159,220,174,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.ia-mesa{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.ia-ops{display:grid;gap:6px}
+.ia-linha-ok{display:flex;align-items:center;gap:12px} .ia-linha-ok span{flex:1}
+.ia-centro{max-width:1150px;margin:0 auto 14px;width:100%;display:grid;gap:12px}
+
+/* a onda da música: o traço comum */
+.onda{position:relative;display:flex;align-items:center;gap:2px;height:44px}
+.onda i{flex:1;border-radius:2px;background:linear-gradient(180deg,var(--ac),color-mix(in srgb,var(--ac) 40%,#000));opacity:.7}
+.onda .mk{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t1);border:0;padding:0;margin:0}
+.onda.grande{height:84px;max-width:1300px;width:100%;margin:34px auto 40px}
+.onda.grande button.mk:nth-child(even) span{top:auto;bottom:-30px}
+.onda.grande button.mk{width:14px;margin-left:-6px;background:transparent;cursor:pointer}
+.onda.grande button.mk::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--t2)}
+.onda.grande button.mk span{position:absolute;top:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 14px var(--ui);color:var(--t2);padding:3px 10px;border-radius:999px;border:1px solid var(--fio2);background:var(--noite)}
+.onda.grande button.mk.on::before{background:var(--ac2);width:3px}
+.onda.grande button.mk.on span{color:#062430;background:var(--ac);border-color:var(--ac)}
+.onda.grande button.mk:focus-visible span{outline:2px solid var(--ac2);outline-offset:2px}
+
+/* o resto: quieto */
+.ia-encarte{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:26px;max-width:1300px;margin:0 auto 18px;width:100%;padding:18px;border-radius:var(--r1)}
+.ia-capinha{display:grid;gap:10px}
+.ia-capinha img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid #20242f}
+.ia-capinha small{display:block;font:600 14px var(--ui);color:var(--ac)} .ia-capinha b{font:400 clamp(24px,1.9vw,32px)/1.1 var(--disp);color:var(--t1)}
+.ia-encarte dl{margin:0;display:grid;gap:14px;align-content:center}
+.ia-encarte dt{font:600 14px var(--ui);color:var(--frio)} .ia-encarte dd{margin:2px 0 0;font:400 clamp(19px,1.4vw,24px)/1.4 var(--disp);color:var(--t1)}
+.ia-selo{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:1px dashed var(--fio2);text-align:center;padding:16px}
+.ia-selo b{font:italic 400 clamp(30px,2.4vw,42px) var(--disp);color:var(--ac)} .ia-selo small{font:400 15px var(--ui);color:var(--t2)}
+.ia-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.ia-vcol{display:grid;gap:6px;width:100%;max-width:min(100%,82vh);justify-self:center} .ia-cred{font:400 13px var(--ui);color:var(--t3)}
+.ia-dica{text-align:center;font:italic 400 22px var(--disp);color:var(--t3)}
+.ia-sentido{display:block;font:400 clamp(19px,1.4vw,23px)/1.45 var(--disp);color:var(--t1);margin-bottom:8px}
+.ia-gram{display:block;font:400 16px/1.5 var(--ui);color:var(--t2)} .ia-gram b{color:var(--ac2)}
+.ia-pista{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--ac)}
+.ia-pista small{font:600 13px var(--ui);color:var(--ac)} .ia-pista p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.ia-fala{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--frio)}
+.ia-fala small{display:flex;align-items:center;gap:8px;font:600 13px var(--ui);color:var(--frio)} .ia-fala p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.ia-luz{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px rgba(242,131,122,.7)}
+.ia-ar{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px;border-radius:var(--r1)} .ia-ar p{margin:0;font:400 30px var(--disp);color:var(--t1)}
+.ia-carta{display:grid;gap:4px;padding:10px 14px;border-radius:var(--r2);border:1px solid var(--fio2);background:var(--vidro)}
+.ia-carta > small{font:600 13px var(--ui);color:var(--t3)}
+.ia-carta p{margin:0;font:400 clamp(14px,1vw,16px)/1.45 var(--ui);color:var(--t1)}
+.ia-carta.aluno{border-color:rgba(127,214,240,.45);background:rgba(127,214,240,.05)} .ia-carta.aluno > small{color:var(--ac)}
+.ia-carta.prof{border-style:dashed}
+.ia-carta details{margin-top:4px;display:grid;gap:3px} .ia-carta summary{cursor:pointer;font:600 13px var(--ui);color:var(--t3)}
+.so-aluno-c{display:none}
+html.wl-sala-aluno .so-aluno-c{display:grid}
+
+.fim .grande span{font-size:clamp(15px,1.1vw,18px)}
+
+/* a cara da Era do Gelo: Lilita One nos títulos, Nunito no texto */
+:root{--disp:'Lilita One',system-ui,sans-serif;--ui:'Nunito',system-ui,sans-serif}
+.cab h1,.capa h1{font-weight:400}
+.capa h1{font-size:clamp(52px,4.8vw,92px);line-height:1;color:var(--ac2)}
+.pergunta h2{font-family:var(--ui);font-weight:800}
+.ia-sentido,.ia-encarte dd{font-family:var(--ui)!important;font-weight:700}
+/* a ponte: o gesto forte */
+.ia-cena{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:stretch;max-width:1300px;width:100%;margin:4px auto 16px;padding:16px 20px;border-radius:14px;background:radial-gradient(90% 80% at 50% 0,#14202b,#080b10 80%);box-shadow:inset 0 0 0 1px #1e2d3a,0 18px 40px #0009}
+.ia-termo{display:grid;justify-items:center;align-content:center;gap:6px;min-width:64px}
+.ia-termo b{font:400 26px var(--disp);color:var(--t1)}
+.ia-termo small{font:800 12px var(--ui);color:var(--t2);text-transform:uppercase;letter-spacing:.06em}
+.ia-tubo{position:relative;width:16px;height:clamp(70px,10vh,110px);border-radius:8px;background:#0e141b;box-shadow:inset 0 0 0 2px #2a3a48;overflow:hidden}
+.ia-tubo i{position:absolute;left:3px;right:3px;bottom:3px;border-radius:5px;background:linear-gradient(0deg,#ff6a2a,#ffb070);transition:height .8s}
+.ia-vao{position:relative;display:grid;align-content:center;min-height:clamp(92px,12vh,136px)}
+.ia-ponte{position:relative;z-index:1;display:grid;grid-template-columns:repeat(8,1fr);gap:4px;padding:0 4px}
+.ia-bloco{display:grid;place-items:end center;height:clamp(42px,5.8vh,62px);padding:4px 2px;border-radius:4px 4px 2px 2px;background:linear-gradient(180deg,#5a2a14,#2a140a);box-shadow:inset 0 -6px 12px rgba(255,120,40,.25);text-align:center}
+.ia-bloco small{font:800 11px/1.1 var(--ui);color:#c98a66}
+.ia-bloco.vez{box-shadow:inset 0 -6px 12px rgba(255,120,40,.4),0 0 0 2px var(--ac)}
+.ia-bloco.vez small{color:#fff}
+.ia-bloco.gelo{background:linear-gradient(180deg,#7cc6dd 0,#2f7a96 16%,#143847 100%);box-shadow:inset 0 2px 0 rgba(212,243,255,.55),0 4px 10px #0008}
+.ia-bloco.gelo small{color:#d4f3ff}
+.ia-bloco.novo{animation:congela .7s ease-out both}
+@keyframes congela{0%{background:#5a2a14;transform:scale(.96)}60%{transform:scale(1.04)}}
+.ia-lava{position:absolute;left:0;right:0;bottom:0;height:42%;border-radius:8px;background:linear-gradient(180deg,#ff8a3d,#a3300e 70%,#4a1205);opacity:.55;filter:blur(1px)}
+.ia-lava.calma{opacity:.25}
+@media (prefers-reduced-motion:reduce){.ia-bloco.novo{animation:none}.ia-tubo i{transition:none}}
+/* o resto: quieto */
+.ia-regra{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1300px;margin:0 auto 16px;width:100%}
+.ia-regra > div{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.ia-regra small{font:800 13px var(--ui);color:var(--frio)} .ia-regra p{margin:0;font:700 clamp(19px,1.4vw,24px)/1.4 var(--ui);color:var(--t1)} .ia-regra b{font-weight:800;color:var(--ac2)} .ia-regra span{font:600 14px var(--ui);color:var(--t2)}
+.ia-demais{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1300px;margin:0 auto;width:100%}
+.ia-dm{display:grid;gap:6px;align-content:start;padding:14px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.ia-dm small{font:800 13px var(--ui);color:var(--ac)} .ia-dm p{margin:0;font:700 clamp(19px,1.4vw,24px)/1.3 var(--ui);color:var(--t1)}
+@media (max-width:1100px){ .ia-regra{grid-template-columns:1fr} .ia-demais{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .ia-cena{grid-template-columns:1fr;gap:10px} .ia-termo{grid-auto-flow:column;align-items:center} .ia-tubo{display:none} .ia-ponte{grid-template-columns:repeat(4,1fr)} .ia-demais{grid-template-columns:1fr} }
+
+@media (max-width:1100px){ .mesa-c,.capa,.ia-mesa,.ia-video,.ia-encarte{grid-template-columns:1fr} .ia-regra{grid-template-columns:1fr} }
+@media (max-width:620px){
+  .onda.grande{height:64px;margin-top:40px} .onda.grande button.mk span{font-size:11px;padding:2px 6px}
+  .ia-capinha img{aspect-ratio:16/9}
+}
+
+/* a tira de filme (aulas de filme no lugar da onda de som) */
+.tira{border-radius:6px;padding:0 6px;background:#070707;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.tira-furos{height:14px;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,255,255,.13) 9px 19px,transparent 19px 28px);background-size:28px 6px;background-repeat:repeat-x;background-position:0 50%}
+.tira-q{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tq{position:relative;display:grid;align-content:end;gap:1px;aspect-ratio:16/9;min-height:0;padding:6px 8px;border:0;border-radius:2px;overflow:hidden;text-align:left;background:#141414;font:inherit;color:inherit}
+.tq-img{position:absolute;inset:0;background:var(--bg) center/cover;filter:brightness(.42) saturate(.8)}
+.tq b,.tq span{position:relative}
+.tq b{font:600 10px var(--ui);color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.tq span{font:600 11px/1.15 var(--ui);color:var(--t1)}
+.tira.grande{max-width:1300px;width:100%;margin:6px auto 22px}
+.tira.grande .tq{cursor:pointer;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s}
+.tira.grande .tq b{font-size:13px} .tira.grande .tq span{font-size:clamp(14px,1.05vw,18px)}
+.tira.grande .tq:hover .tq-img{filter:brightness(.55)}
+.tira.grande .tq.on{outline-color:var(--ac)} .tira.grande .tq.on .tq-img{filter:brightness(.7) saturate(1)}
+.tira.grande .tq:focus-visible{outline-color:var(--ac2)}
+@media (max-width:620px){.tira.grande .tira-q{grid-template-columns:repeat(3,minmax(0,1fr))} .tira.grande .tq span{font-size:12px} .tira.grande .tq b{font-size:11px} .capa-r .tira{display:none}}
+
+
+/* 23/10/2026 · formatos novos: a ponte com seis blocos */
+.ia-ponte{grid-template-columns:repeat(6,1fr)}
+@media (max-width:620px){.ia-ponte{grid-template-columns:repeat(3,1fr)}}

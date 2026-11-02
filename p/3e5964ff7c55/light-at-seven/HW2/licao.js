@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Light at Seven",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3e5964ff7c55/light-at-seven/img/live-noite.webp",
+  "capa": "../img/live-noite.webp",
   "alvo": "present simple with he / she / it: verb + S (she works, he goes, she studies, he has); they take no S; he / she doesn't + plain verb; the S has one place only",
   "abrir": "What does one person in your house do at seven?",
   "fecho": "<b>He, she, it</b>: verb + <b>S</b>: <i>he wakes up, she reads.</i> <b>They</b>: no S. <b>Doesn't</b> + plain verb: <i>he doesn't work.</i> One S, one place: never <i>he doesn't works.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo about her neighbor. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/3e5964ff7c55/light-at-seven/img/live-manha.webp",
+      "img": "../img/live-manha.webp",
       "leg": "A courtyard in the morning",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "My neighbor wakes up at six.",
-          "img": "https://wolf-labs.pages.dev/p/3e5964ff7c55/light-at-seven/img/live-manha.webp",
+          "img": "../img/live-manha.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "He reads a book at night.",
-          "img": "https://wolf-labs.pages.dev/p/3e5964ff7c55/light-at-seven/img/live-uma.webp",
+          "img": "../img/live-uma.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The light comes on at seven.",
-          "img": "https://wolf-labs.pages.dev/p/3e5964ff7c55/light-at-seven/img/live-noite.webp",
+          "img": "../img/live-noite.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3e5964ff7c55/light-at-seven/img/live-noite.webp",
+      "img": "../img/live-noite.webp",
       "leg": "A window across a dark courtyard",
       "pede": "Look at the picture: a window across a dark courtyard. Imagine one neighbor. Write 2 or 3 sentences: what he or she <b>does</b> and when. Remember the S.",
       "ph": "My neighbor wakes up at …",

@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Lost Phone · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Lost Phone · The Lock Screen</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Lost Phone · The Lock Screen</h2>
+    <p>Someone left a phone on the 8:15 bus. No name, just nine apps and 451 photos. The phone is drawn on screen with a dark lock screen; next to it, the owner’s profile card fills in with every sentence the student says. In the end the owner walks in and takes one line away: she walks seven dogs every day because it’s her job, and she doesn’t like it. Doing is not liking. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>like / love / hate + -ing</b> (<i>I like cooking</i>; <i>I like to cook</i> is also correct, but today we train the -ing shape). The answer says what: <b>Yes, I like it / them</b>, never <i>Yes, I like.</i> She: <b>doesn’t like</b>, one S only. The mistakes: <i>I like watch</i>, <i>I like of…</i>, <i>Yes, I like.</i>, <i>she don’t like</i>, <i>doesn’t likes</i>.</p>
+    <!--conversa--><h4>WOULD YOU RATHER (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Before the owner comes in, three light “would you rather” choices, two options each: lose your phone or your keys, a Saturday job walking dogs or washing cars, photos of people or places. There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it) for a yes/no follow-up. The starters keep <i>love / like / hate + -ing</i> and <i>don’t like</i> in their mouth. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: II Nine Apps, VI Three Cards, IX The Owner (pause and 0.75× on every recording; transcripts after listening, checked against the audio).</li>
+      <li><b>Out loud</b>: I Your Phone First, V The Photo Roll, VIII Would You Rather (three choices), X Is It Really Yours? (you are a stranger, then the owner).</li>
+      <li><b>Focus</b>: III After the Verb, IV Yes, I Like It, VII What She Doesn’t Like.</li>
+      <li><b>Write</b>: XI, their own profile card, with the red wavy line for <i>like watch</i>, <i>like of</i>, <i>Yes, I like.</i>, <i>she don’t like</i>, <i>doesn’t likes</i> and spellings like <i>runing</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>THE OWNER</h4>
+    <p>Scene IX: let the student read the card first, then play the owner. The wrong line is <i>She loves dogs.</i> Ask: does she walk dogs? Does she like it?</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE LOST PHONE (Main A1) · pergunta-surpresa · 27/10/2026 · like / love / hate + -ing */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'tela', tipo: 'And you?', q: 'Do you like taking selfies?',
+    opc: ['Yes', 'No'], st: ['Yes, I love taking selfies.', 'No, I hate taking selfies.'],
+    ex: 'No, I hate taking selfies. I like taking photos of food!', push: 'At the gym? Yes or no?' },
+  { cena: 'objeto', tipo: 'Would you rather', q: 'Music on the bus, or silence?',
+    opc: ['Music', 'Silence'], st: ['Music. I love listening to …', 'Silence. I like thinking.'],
+    ex: 'Music! I love listening to old songs on the bus.', push: 'Loud? Yes or no?' },
+  { cena: 'dona', tipo: 'Opinion', q: 'A job you don’t like: OK?',
+    opc: ['OK', 'Not OK'], st: ['OK. I don’t like …ing, but …', 'Not OK. I hate …ing.'],
+    ex: 'OK. I don’t like washing dishes, but it is my job!', push: 'For ten years? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE LOST PHONE (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Would you rather" (2 opções) no lugar de "VIII · Ask the Phone" (extra; perguntar e tocar).
+   Antes da dona aparecer (IX), o aluno escolhe três vezes sobre a vida dele: perder o celular ou as chaves,
+   passear com cachorros ou lavar carros, fotos de pessoas ou de lugares.
+   A1 bem leve: duas opções, frase quase pronta, o professor responde primeiro.
+   Gramática da aula (like / love / hate + -ing · don't like) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'prefere', troca: 'busca', est: 'o', min: 6, img: 'bandeja', rot: 'Would You Rather', t: 'Her phone, your life. Choose, three times.',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Lost', q: 'Lose your phone or your keys?',
+        opc: ['My phone', 'My keys'],
+        st: ['My keys. I love using my phone.', 'My phone. I hate looking for keys.'],
+        ex: 'My keys! I love taking photos. My phone is my life.',
+        push: 'For one week? Yes or no?' },
+      { tag: 'A job', sit: 'A Saturday job.', q: 'Walk dogs or wash cars?',
+        opc: ['Walk dogs', 'Wash cars'],
+        st: ['Walk dogs. I like walking.', 'Wash cars. I don’t like dogs.'],
+        ex: 'Walk dogs! I love walking in the park.',
+        push: 'Seven dogs? Yes or no?' },
+      { tag: 'Photos', q: 'Your photos: people or places?',
+        opc: ['People', 'Places'],
+        st: ['People. I love taking photos of …', 'Places. I like taking photos of …'],
+        ex: 'Places! I love taking photos of the sea.',
+        push: 'Food photos too? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Take out your own phone.",
+   "p": "You are the guest. Answer out loud."
+  },
+  "tela": {
+   "t": "No name. Only nine apps.",
+   "p": "Listen. Tap an icon. Say the line."
+  },
+  "depois": {
+   "t": "After like, love and hate: -ing.",
+   "p": "Pick the piece. Then read the sentence."
+  },
+  "objeto": {
+   "t": "The answer can’t stop at the verb.",
+   "p": "Pick the last word. Say the whole answer."
+  },
+  "rolo": {
+   "t": "451 photos. One pile is much bigger.",
+   "p": "Tap a pile. Say the number and the sentence."
+  },
+  "cartas": {
+   "t": "Three cards about you.",
+   "p": "Listen. Then open a card and answer."
+  },
+  "nao": {
+   "t": "A phone says no without words.",
+   "p": "Read the clue. Pick the piece. Say it."
+  },
+  "cv-prefere": {
+   "t": "Her phone, your life.",
+   "p": "Choose one. Then say it with the sentence."
+  },
+  "dona": {
+   "t": "Her card is ready. The door opens.",
+   "p": "Listen to the owner. Which line is wrong?"
+  },
+  "devolver": {
+   "t": "Two people say: it’s my phone.",
+   "p": "Ask Do you like…? Find the real owner."
+  },
+  "fim": {
+   "t": "Your own profile card.",
+   "p": "Six lines: what you like, love and don’t like."
+  }
+ },
+ "prep": {
+  "obj": "Like/love/hate + -ing e doesn’t like: um celular esquecido no ônibus das 8:15, sem nome, só nove apps e 451 fotos; a dona aparece no fim.",
+  "armadilha": "O português usa “gosto de” + infinitivo: sai “I like watch”, “I like of…”, “Yes, I like.” sem o objeto e “she don’t like” / “doesn’t likes”.",
+  "pal": [
+   "like",
+   "love",
+   "hate",
+   "doesn’t like",
+   "cooking",
+   "walking",
+   "Yes, I like it.",
+   "Do you like…?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o mistério: um celular perdido no ônibus, sem nome. De quem é?",
+   "perg": "Did you ever lose your phone?",
+   "pula": "Leia a frase da capa e desbloqueie a tela."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal com o celular do aluno: apps e hábitos, sem corrigir.",
+   "perg": "What app do you open first in the morning?",
+   "pula": "Três perguntas bastam."
+  },
+  "tela": {
+   "obj": "Nove apps: adivinhar o que a dona gosta de fazer e dizer a frase com -ing.",
+   "perg": "She has a running app. What does she like doing?",
+   "pula": "Cinco apps bastam."
+  },
+  "depois": {
+   "obj": "Depois de like/love/hate o verbo ganha -ing e nada entra no meio.",
+   "perg": "Is it “I like watch” or “I like watching”?",
+   "pula": "Quatro frases bastam."
+  },
+  "objeto": {
+   "obj": "A resposta não para no verbo: Yes, I like it / them.",
+   "perg": "Do you like coffee? Answer with the whole sentence.",
+   "pula": "Quatro respostas bastam."
+  },
+  "rolo": {
+   "obj": "Ler números das pilhas de fotos e dizer o que a dona ama fazer.",
+   "perg": "Which pile is the biggest? What does she love?",
+   "pula": "Três pilhas bastam."
+  },
+  "cartas": {
+   "obj": "Ouvir e responder às perguntas dos três cartões sobre o próprio aluno.",
+   "perg": "Do you like cooking for other people?",
+   "pula": "Dois cartões bastam."
+  },
+  "nao": {
+   "obj": "Doesn’t like a partir de pistas do celular: um S só.",
+   "perg": "What doesn’t she like? How do you know?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-prefere": {
+   "obj": "Conversa: três escolhas “would you rather” com like/love/hate + -ing.",
+   "perg": "Would you rather lose your phone or your keys?",
+   "pula": "Duas escolhas bastam."
+  },
+  "dona": {
+   "obj": "A dona fala: ela passeia com sete cachorros por trabalho e não gosta. Fazer não é gostar.",
+   "perg": "Does she walk dogs? Does she like it?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "devolver": {
+   "obj": "Roleplay: o aluno pergunta Do you like…? para achar a verdadeira dona.",
+   "perg": "Ask me: Do you like running?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o cartão de perfil do próprio aluno, com like, love, hate e don’t like.",
+   "perg": "What do you do every day but don’t like?",
+   "pula": "Quatro linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre gostos do aluno com -ing e respostas completas.",
+   "perg": "What do you love doing on Sunday?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e defender com like/love/hate + -ing.",
+   "perg": "Do you like taking photos of people or places?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Entrevista: o aluno é a dona do celular e responde com like/doesn’t like.",
+   "perg": "Do you like walking dogs?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about what you like.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "like",
+    "love",
+    "hate",
+    "-ing"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR SUNDAY",
+     "q": "What do you love doing on Sunday?",
+     "fup": "Do you like doing it alone?",
+     "st": [
+      "I love …ing",
+      "I like … with …"
+     ],
+     "ex": "I love sleeping late. I like having lunch with my family."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Do you like taking photos?",
+     "fup": "Of people or of places?",
+     "st": [
+      "Yes, I like it. I …",
+      "No, I don’t like it."
+     ],
+     "ex": "Yes, I like it. I take photos of food."
+    },
+    {
+     "k": "HOUSEWORK",
+     "q": "What housework do you hate doing?",
+     "fup": "Who does it in your house?",
+     "st": [
+      "I hate …ing",
+      "My … does it."
+     ],
+     "ex": "I hate washing the dishes. My husband does it."
+    },
+    {
+     "k": "THE BUS",
+     "q": "Do you like taking the bus?",
+     "fup": "What do you do on the bus?",
+     "st": [
+      "Yes, I like it. / No, I don’t like it.",
+      "On the bus I …"
+     ],
+     "ex": "No, I don’t like it. On the bus I listen to podcasts."
+    },
+    {
+     "k": "YOUR FRIEND",
+     "q": "What does your best friend like doing?",
+     "fup": "What doesn’t she or he like?",
+     "st": [
+      "She likes …ing",
+      "He doesn’t like …ing"
+     ],
+     "ex": "She likes dancing. She doesn’t like cooking."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What part of your job do you like?",
+     "fup": "And what part don’t you like?",
+     "st": [
+      "I like …ing",
+      "I don’t like …ing"
+     ],
+     "ex": "I like talking to people. I don’t like writing emails."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "like",
+    "love",
+    "hate"
+   ],
+   "rodadas": [
+    {
+     "q": "Lose your phone or lose your keys?",
+     "a": "My phone",
+     "b": "My keys",
+     "fa": [
+      "My phone. I hate carrying it everywhere."
+     ],
+     "fb": [
+      "My keys. I love using my phone."
+     ]
+    },
+    {
+     "q": "A Saturday job: walking dogs or washing cars?",
+     "a": "Walking dogs",
+     "b": "Washing cars",
+     "fa": [
+      "Walking dogs. I love being outside."
+     ],
+     "fb": [
+      "Washing cars. I don’t like running after dogs."
+     ]
+    },
+    {
+     "q": "Photos of people or photos of places?",
+     "a": "People",
+     "b": "Places",
+     "fa": [
+      "People. I like remembering faces."
+     ],
+     "fb": [
+      "Places. I love traveling."
+     ]
+    },
+    {
+     "q": "You find a phone on the bus. Look at the photos, or don’t?",
+     "a": "Look",
+     "b": "Don’t look",
+     "fa": [
+      "Look. I need to find the owner."
+     ],
+     "fb": [
+      "Don’t look. I hate people looking at my photos."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody said what they like."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the phone’s owner now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the phone’s owner.",
+   "perguntas": [
+    "Do you like walking dogs?",
+    "Why do you do it every day?",
+    "What do you love doing on the weekend?",
+    "Do you like taking the 8:15 bus?",
+    "What do you hate doing?",
+    "Do you like your phone? What app do you love?"
+   ],
+   "st": [
+    "I like …ing",
+    "I don’t like …ing",
+    "I love …ing"
+   ],
+   "ex": "I walk seven dogs every day. It’s my job, but I don’t like it."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

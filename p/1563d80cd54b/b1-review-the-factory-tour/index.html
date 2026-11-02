@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Factory Tour · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B1 · Unit 7 Review · The Factory Tour</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Factory Tour · B1 Unit 7 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 7 (The passive). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student is the guide at Cacau Lume, a small chocolate factory (invented, opened in 1952). The tour is a board game: on every square the student explains how something is done, in the passive. You are the curious visitor.</p><p style="margin:0 0 6px"><b>About 48 min:</b> I · The Ladder (8) · II · The Tour (15) · III · Unpopular Opinions (7) · IV · Find the Mistakes (7) · V · Would You Rather? (7) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Climb the ladder. Six steps, from easy to hard.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>present passive · past passive · the passive when the person is not important · the passive with by · present perfect passive for news · have / get something done</p>
+    <h4>THE LADDER</h4>
+    <p>Six steps from easy to hard. A good answer: tap <b>Go up</b>. Not yet: <b>Try again</b> on the same step.</p>
+    <h4>THE TOUR</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>it opened (for was opened)</i>, <i>is grow</i>, <i>is make</i>, <i>designed from (for by)</i>, <i>has created (for has been created)</i>, <i>I cut my hair (for I had my hair cut)</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the tour, three statements to agree or disagree with: made by hand or by machines, getting your hair cut by a friend, keeping ugly old buildings. The student taps a number from 1 to 5 and defends it with the passive; then you take the opposite number and argue back. Wait five seconds in silence before they answer, and use the PUSH line (only you see it) to make it harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Ladder and IV · Find the Mistakes and VI · I Can.</li>
+      <li><b>Out loud</b>: II · The Tour, III · Unpopular Opinions and V · Would You Rather?.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* MAIN SERIES · B1 · REVISÃO 07 · THE FACTORY TOUR · pergunta-surpresa · 27/10/2026 · a passiva, by, has been, have something done */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'escada', tipo: 'And you?', q: 'What’s something in your home that was made in another country?',
+    opc: ['My phone', 'My clothes', 'Something in my kitchen'], st: ['My … was made in …', 'It was bought …'],
+    ex: 'My coffee machine. It was made in Italy, and it was given to me by my brother.', push: 'Would you pay more for the same thing made in Brazil?' },
+  { cena: 'erros', tipo: 'What if', q: 'A new chocolate flavor is named after you. What is it made of?',
+    opc: ['Something sweet', 'Something strange', 'Something Brazilian'], st: ['It’s made of …', 'It would be called …'],
+    ex: 'Something Brazilian. It’s made of dark chocolate and cupuaçu, and it would be called “The Teacher’s Pet”!', push: 'Nobody buys it in the first month. What do you change?' },
+  { cena: 'escolha', tipo: 'Would you rather', q: 'Would you rather do it yourself or have it done for you: painting your bedroom?',
+    opc: ['Do it myself', 'Have it done'], st: ['I’d rather do it myself, because …', 'I’d have it done by …'],
+    ex: 'Have it done. The last time I painted a wall, the floor was painted too!', push: 'It costs your whole weekend’s money. Still?' },
+  { cena: 'pode', tipo: 'Opinion', q: 'Good news or bad news first? What’s a headline you’d love to read tomorrow?',
+    opc: ['Something about my city', 'Something about the world', 'Something about me'], st: ['… has been found / opened / chosen.', 'A new … has been built.'],
+    ex: 'Something about my city: “A new beach park has been opened, and the traffic has been fixed!”', push: 'Now the bad news version of the same headline.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* MAIN SERIES · B1 · REVISÃO 07 · THE FACTORY TOUR · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A escala de opiniões impopulares entra DEPOIS de "II · The Tour" (o tabuleiro), no meio da aula: o aluno
+   acabou de ser guia da Cacau Lume e agora defende o que pensa sobre feito à mão × feito por máquina.
+   A aula não tinha cena extra; 41 → 48 min. O IV (Would You Rather?) fica: formato diferente.
+   Gramática da unidade 7 (a passiva, by, has been, have something done) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'escala', apos: 'tabuleiro', est: 'o', min: 7, img: 'conversa', rot: 'Unpopular Opinions', t: 'The tour is over. What do you really think?',
+    p: 'Tap a number from 1 to 5. Then defend it. Your teacher takes the opposite number.',
+    formato: 'escala', tag: 'Unpopular opinion?',
+    frases: [
+      { f: 'Things made by hand are always better than things made by machines.',
+        st: ['Things which are made by hand …', 'It depends on how it’s made …', 'Most things are made by machines, and …'],
+        ex: 'I’d say 2. My phone was made by machines, and it’s perfect. But a cake made by hand is always better!',
+        push: 'Your chair, your shoes, your phone: which of them was made by hand? So why pay more?' },
+      { f: 'You should never get your hair cut by a friend.',
+        st: ['I had my hair cut by …', 'It should be done by …', 'I get it done …'],
+        ex: '5! I had my hair cut by a friend once. It was done in ten minutes, and it took three months to grow back.',
+        push: 'A friend who is a real hairdresser, for free. Still never?' },
+      { f: 'Old buildings should be kept, even when they are ugly.',
+        st: ['It was built in …, so …', 'They should be kept / knocked down because …', 'Many old buildings have been …'],
+        ex: '4. Old buildings have stories. Our train station was built in 1920 and it has just been painted. It looks great now!',
+        push: 'The ugly old building is empty, and a big new park could be built there. Still keep it?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "escada": {
+   "t": "Climb from easy to hard.",
+   "p": "One step at a time. A good answer goes up."
+  },
+  "tabuleiro": {
+   "t": "Roll, move, explain each room.",
+   "p": "You are the guide. Explain your square out loud."
+  },
+  "cv-escala": {
+   "t": "What do you really think?",
+   "p": "Tap 1 to 5. Defend it."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say the right form. Tap."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose one. Say why, with because."
+  },
+  "pode": {
+   "t": "Unit 7: what can you do now?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unit 7: voz passiva (presente, passado, by, present perfect) e have/get something done. O aluno é o guia da Cacau Lume, fábrica de chocolate de 1952.",
+  "armadilha": "O brasileiro esquece o be (“it opened in 1952”, “is make”), usa from no lugar de by (“designed from”) e diz “has created” por has been created; e “I cut my hair” por I had my hair cut.",
+  "pal": [
+   "is made",
+   "was opened",
+   "by",
+   "has been",
+   "is grown",
+   "had it done",
+   "factory",
+   "by hand"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: um tour pela fábrica de chocolate Cacau Lume.",
+   "perg": "Do you like chocolate? Which kind?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "escada": {
+   "obj": "Seis degraus do fácil ao difícil, puxando a passiva de memória.",
+   "perg": "Where is chocolate made?",
+   "pula": "Quatro degraus bastam."
+  },
+  "tabuleiro": {
+   "obj": "Jogo de tabuleiro: em cada casa o aluno, como guia, explica como algo é feito na passiva.",
+   "perg": "How is this chocolate made?",
+   "pula": "Pare na metade do tabuleiro."
+  },
+  "cv-escala": {
+   "obj": "Opiniões impopulares de 1 a 5: feito à mão x máquina, cabelo cortado por amigo, prédios velhos.",
+   "perg": "Should old buildings be kept?",
+   "pula": "Duas opiniões bastam, com o PUSH."
+  },
+  "erros": {
+   "obj": "Achar e dizer a forma certa dos erros num bilhete curto, depois ler inteiro.",
+   "perg": "What is the right form?",
+   "pula": "Corte a leitura final."
+  },
+  "escolha": {
+   "obj": "Would you rather: escolher A ou B e justificar com because, usando a passiva.",
+   "perg": "Which one, and why?",
+   "pula": "Três escolhas bastam."
+  },
+  "pode": {
+   "obj": "Checklist do I can: o aluno lê e marca o que já sabe; o resto vai para a lição.",
+   "perg": "Which one is still hard for you?",
+   "pula": "Não corte: fecha a unidade. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre coisas do dia a dia: onde e como são feitas, com a passiva.",
+   "perg": "Where was your phone made?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate com a passiva nos argumentos: à mão ou máquina, novo ou consertado.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno apresenta um produto da cidade dele como guia, passo a passo na passiva.",
+   "perg": "How is it made?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Who made it? Who cares?",
+   "p": "Pick a card. Answer in the passive.",
+   "palavras": [
+    "is made",
+    "was built",
+    "by",
+    "has been",
+    "had it done"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PHONE",
+     "q": "Where was your phone made?",
+     "fup": "Has it ever been repaired?",
+     "st": [
+      "It was made in …",
+      "It has been repaired …"
+     ],
+     "ex": "It was made in China, and the screen has been repaired twice."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What is your city known for?",
+     "fup": "Is it still made there?",
+     "st": [
+      "It’s known for …",
+      "… is still made / grown there."
+     ],
+     "ex": "It’s known for coffee. Coffee is still grown near the city."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "When was your building built?",
+     "fup": "Has it been painted recently?",
+     "st": [
+      "It was built in …",
+      "It has been …"
+     ],
+     "ex": "It was built in the 1980s, and it has just been painted."
+    },
+    {
+     "k": "YOUR FOOD",
+     "q": "Which food in your house is made by hand?",
+     "fup": "Who is it made by?",
+     "st": [
+      "… is made by hand by …"
+     ],
+     "ex": "The bread is made by hand by my father on Sundays."
+    },
+    {
+     "k": "SERVICES",
+     "q": "What did you have done last month?",
+     "fup": "Was it done well?",
+     "st": [
+      "I had my … done.",
+      "I got my … fixed."
+     ],
+     "ex": "I had my car checked. It was done well, but it was expensive."
+    },
+    {
+     "k": "FAVORITE THINGS",
+     "q": "What is your favorite object at home?",
+     "fup": "Was it a gift?",
+     "st": [
+      "It was given to me by …",
+      "It was bought in …"
+     ],
+     "ex": "It’s an old watch. It was given to me by my grandmother."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "is made",
+    "by hand",
+    "by machines",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Chocolate made by hand or by machines?",
+     "a": "By hand",
+     "b": "By machines",
+     "fa": [
+      "By hand. Every bar is made with care.",
+      "You can taste the difference."
+     ],
+     "fb": [
+      "By machines. It’s made faster and cheaper.",
+      "And every bar is the same."
+     ]
+    },
+    {
+     "q": "A broken phone: have it repaired or buy a new one?",
+     "a": "Repaired",
+     "b": "New one",
+     "fa": [
+      "Have it repaired. Less waste is made."
+     ],
+     "fb": [
+      "Buy a new one. Old phones are repaired again and again."
+     ]
+    },
+    {
+     "q": "Old factories: keep them or replace them?",
+     "a": "Keep them",
+     "b": "Replace them",
+     "fa": [
+      "Keep them. They were built by our grandparents.",
+      "They can be turned into museums."
+     ],
+     "fb": [
+      "Replace them. Space is needed for homes."
+     ]
+    },
+    {
+     "q": "Factory tours: interesting or boring?",
+     "a": "Interesting",
+     "b": "Boring",
+     "fa": [
+      "Interesting. You see how things are made."
+     ],
+     "fb": [
+      "Boring. Everything is explained twice, and nothing is tasted."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The tour is over, and the argument has been won by both."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Tour",
+   "t": "You are the guide again.",
+   "p": "Pick a product from your city. Explain it.",
+   "prof": "You are the curious visitor: ask “Who is it made by?” after each step.",
+   "passos": [
+    {
+     "q": "What product is your city or region known for?",
+     "st": [
+      "… is known for …"
+     ],
+     "ex": "My region is known for cheese."
+    },
+    {
+     "q": "How is it made? Give two steps.",
+     "st": [
+      "First, the … is …",
+      "Then it is …"
+     ],
+     "ex": "First, the milk is heated. Then it is left in a cold room for months."
+    },
+    {
+     "q": "Who is it made by, and when was it first made?",
+     "st": [
+      "It is made by …",
+      "It was first made in …"
+     ],
+     "ex": "It is made by small farms. It was first made two hundred years ago."
+    },
+    {
+     "q": "What has been changed recently?",
+     "st": [
+      "… has been …"
+     ],
+     "ex": "A new machine has been bought, but the recipe hasn’t been changed."
+    }
+   ],
+   "fim": "The visitors are happy. Is there a free sample at the end?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de You Mustn’t Chew Gum Here (11/10/2026): as regras de etiqueta no Japão.
+   Forma: o corte do diretor (o aluno é o guia: dá a regra antes de ouvir). Alvo: must, mustn’t × don’t have to, had to.
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [8, 9, 10], k: 'Escalators', cena: 'TOKYO · A TRAIN STATION', quem: 'The travel guide',
+    contexto: 'A guide explains the unwritten rules of Japan, starting with the escalators.',
+    diretor: 'You are the guide. Tell a tourist the rule for escalators in Japan.',
+    frase: 'For almost all escalators in Japan, you <b>stand on the left-hand side</b> and let people pass on the right.',
+    explica: 'Everybody follows this rule (but not in Osaka, where it is the opposite!).',
+    formula: 'You <b>must</b> stand on the left. (a rule) · ✗ You must to stand',
+    tente: 'Tell me one rule on the buses or the subway in your city.',
+    ex: 'You must give your seat to old people. You must not eat on the subway.' },
+  { i: [20, 21, 22, 23], k: 'Trash', cena: 'TOKYO · A STREET', quem: 'The travel guide',
+    contexto: 'Tourists always ask the same question: where are the trash cans?',
+    diretor: 'A tourist can’t find a trash can anywhere. What do you tell him?',
+    frase: 'Why are there no trash cans in Japan? Because actually in this country <b>what you’re supposed to do is bring your trash home</b> with you.',
+    explica: '<i>Supposed to</i> = what people expect you to do. You take your trash with you.',
+    formula: 'You <b>have to</b> take your trash home. · You <b>don’t have to</b> look for a bin. (not necessary)',
+    tente: 'What do you have to do at home every day? What don’t you have to do?',
+    ex: 'I have to wash the dishes. I don’t have to cook: my husband does it!' },
+  { i: [28, 29, 30], k: 'Shoes', cena: 'A JAPANESE HOME · THE ENTRANCE', quem: 'The travel guide',
+    contexto: 'At the door of a house there is a small step. It has a meaning.',
+    diretor: 'A friend visits a Japanese home. What must she do at the door?',
+    frase: 'Shoes. Whenever you see a step in an entryway like this, it means <b>take off your shoes</b>.',
+    explica: 'The step is a sign: from here, no shoes. And don’t put your feet on the dirty ground either.',
+    formula: 'You <b>must</b> take off your shoes. · You <b>mustn’t</b> walk in with them.',
+    tente: 'What must visitors do in your home?',
+    ex: 'They must say hello to my grandmother first!' },
+  { i: [39, 40, 41], k: 'Trains', cena: 'TOKYO · A MORNING TRAIN', quem: 'The travel guide',
+    contexto: 'Japanese trains are very quiet. There is a reason.',
+    diretor: 'What is the rule for talking on a Tokyo train in the morning?',
+    frase: 'Talking on trains. <b>Just don’t do it.</b> Especially during morning commute.',
+    explica: '<i>Commute</i> = the trip to work. Mustn’t = it is not allowed. Don’t have to = it is not necessary. Very different!',
+    formula: 'You <b>mustn’t</b> talk on the train. (not allowed) · ✗ You don’t have to talk (= no need)',
+    tente: 'What mustn’t people do in a cinema? What don’t they have to do?',
+    ex: 'You mustn’t talk on the phone. You don’t have to buy popcorn.' },
+  { i: [54, 55, 56, 57], k: 'Chopsticks', cena: 'A RESTAURANT', quem: 'The travel guide',
+    contexto: 'The biggest rule of all is about chopsticks and rice.',
+    diretor: 'The biggest chopstick rule: what mustn’t you do with your rice?',
+    frase: 'Next, and this is a big one, <b>do not stick your chopsticks in rice</b> or anything and leave them standing.',
+    explica: 'Chopsticks standing in rice remind people of a funeral ritual. It is a strong taboo.',
+    formula: 'You <b>mustn’t</b> stick them in rice. · On my trip I <b>had to</b> learn fast. (past)',
+    tente: 'Tell me about a rule you had to learn in a new place.',
+    ex: 'In my new job I had to learn to wear a badge every day.' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'diretor', cor: '#d9534f', titulo: 'You are the guide.', sub: 'Read the situation, give the rule your way, then hear the real tip.', rot: { por: 'WHAT IT MEANS', padrao: 'MUST · MUSTN’T · DON’T HAVE TO', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -136,5 +137,289 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "What are you going to do this week?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "Leo sends the project plan.",
+   "p": "Read it out loud. Then answer."
+  },
+  "dialogo": {
+   "t": "“So, what’s the plan?”",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "Going to, not “go to”.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "ordem": {
+   "t": "Five steps, one project.",
+   "p": "Order the steps. Read the plan aloud."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose and say why."
+  },
+  "cartao": {
+   "t": "A four-step plan for a real client.",
+   "p": "Kick-off, work, tests, go-live. Present it."
+  },
+  "pode": {
+   "t": "Lesson 13: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da unidade 13: going to para planos. Leo manda o plano do projeto ao Tom Reed, da Brava Foods, e explica numa call: kick-off, mapa de processos, integração, testes, go-live.",
+  "armadilha": "Brasileiro traduz “vamos começar” como we go to start, esquece o to (we are going start) e põe passado depois de going to (going to started).",
+  "pal": [
+   "We’re going to start in…",
+   "First,… Then,…",
+   "We aren’t going to…",
+   "Are you going to…?",
+   "kick-off",
+   "go-live",
+   "test"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o cliente que quer o plano antes de dizer sim.",
+   "perg": "Are you going to travel this month?",
+   "pula": "Leia a capa e siga."
+  },
+  "conversa": {
+   "obj": "Small talk sobre os planos da semana; o aluno pergunta And you?",
+   "perg": "What are you going to do this week?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Leitura do e-mail com o plano; perguntas de sentido e o padrão.",
+   "perg": "When are they going to start?",
+   "pula": "Leia e faça duas perguntas."
+  },
+  "dialogo": {
+   "obj": "Escuta: o gerente de projeto da Brava Foods pergunta pelo plano; pode usar 0.75×.",
+   "perg": "When is the go-live going to be?",
+   "pula": "Ouça uma vez e faça três perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar go to × going to; três checagens: be? going TO? verbo simples?",
+   "perg": "Why is “we go to start” wrong?",
+   "pula": "Três pares bastam."
+  },
+  "ordem": {
+   "obj": "Ordenar os cinco passos do projeto e ler o plano como apresentação.",
+   "perg": "What are you going to do first?",
+   "pula": "Ordene e leia uma vez."
+  },
+  "escolha": {
+   "obj": "Escolher A ou B com because; você responde também.",
+   "perg": "Start in March or in April? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: plano de quatro passos para um cliente real, com meses reais; depois apresentar.",
+   "perg": "When is the go-live going to be?",
+   "pula": "Três passos bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; você confirma e carimba.",
+   "perg": "Can you explain a project plan now?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa simples sobre planos de trabalho e de vida com going to.",
+   "perg": "What are you going to do next month?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre planejar um projeto.",
+   "perg": "Which one do you choose?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é o Leo e você é o Tom Reed perguntando pelo plano.",
+   "perg": "Leo, when are you going to start?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about your plans.",
+   "p": "Pick a card. Answer. Then “And you?”",
+   "palavras": [
+    "I’m going to …",
+    "We’re going to …",
+    "We aren’t going to …"
+   ],
+   "cartas": [
+    {
+     "k": "THIS WEEKEND",
+     "q": "What are you going to do this weekend?",
+     "fup": "With who?",
+     "st": [
+      "I’m going to …"
+     ],
+     "ex": "I’m going to visit my parents."
+    },
+    {
+     "k": "NEXT MONTH",
+     "q": "What are you going to do at work next month?",
+     "fup": "Is it a big project?",
+     "st": [
+      "We’re going to …"
+     ],
+     "ex": "We’re going to start a project with a new client."
+    },
+    {
+     "k": "A CLIENT",
+     "q": "Are you going to meet a client this week?",
+     "fup": "When?",
+     "st": [
+      "Yes, I’m going to meet …",
+      "No, I’m not."
+     ],
+     "ex": "Yes, I’m going to meet a client on Thursday."
+    },
+    {
+     "k": "THIS YEAR",
+     "q": "What are you going to learn this year?",
+     "fup": "Why?",
+     "st": [
+      "I’m going to learn …"
+     ],
+     "ex": "I’m going to learn English for my job."
+    },
+    {
+     "k": "NOT GOING TO",
+     "q": "What are you not going to do this week?",
+     "fup": "Why not?",
+     "st": [
+      "I’m not going to …"
+     ],
+     "ex": "I’m not going to work on Saturday. I need to rest."
+    },
+    {
+     "k": "YOUR TEAM",
+     "q": "Is your team going to grow this year?",
+     "fup": "How many people?",
+     "st": [
+      "Yes, we’re going to …",
+      "No, we aren’t."
+     ],
+     "ex": "Yes, we’re going to hire two people."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "We’re going to …",
+    "because",
+    "I prefer …"
+   ],
+   "rodadas": [
+    {
+     "q": "Start the project in March or in April?",
+     "a": "March",
+     "b": "April",
+     "fa": [
+      "March.",
+      "We’re going to finish early."
+     ],
+     "fb": [
+      "April.",
+      "We’re going to have more time to plan."
+     ]
+    },
+    {
+     "q": "Kick-off: in person or online?",
+     "a": "In person",
+     "b": "Online",
+     "fa": [
+      "In person.",
+      "We’re going to meet the team."
+     ],
+     "fb": [
+      "Online.",
+      "It’s going to be fast."
+     ]
+    },
+    {
+     "q": "One test or two tests before the go-live?",
+     "a": "One test",
+     "b": "Two tests",
+     "fa": [
+      "One test.",
+      "The client is in a hurry."
+     ],
+     "fb": [
+      "Two tests.",
+      "We aren’t going to have problems."
+     ]
+    },
+    {
+     "q": "Send the plan by email or present it on a call?",
+     "a": "By email",
+     "b": "On a call",
+     "fa": [
+      "By email.",
+      "The client can read it two times."
+     ],
+     "fb": [
+      "On a call.",
+      "I’m going to answer questions."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The plan is ready."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Leo. Explain the plan.",
+   "p": "Your teacher is Tom Reed.",
+   "aluno": "Listen to your teacher’s question. Answer as Leo. Explain the plan with going to.",
+   "perguntas": [
+    "Leo, when are you going to start?",
+    "What are you going to do first?",
+    "Are you going to work with our TOTVS team?",
+    "How many tests are you going to do?",
+    "When is the go-live going to be?",
+    "Are you going to send me the plan by email?"
+   ],
+   "st": [
+    "We’re going to start in …",
+    "First, we’re going to …",
+    "The go-live is going to be on …"
+   ],
+   "ex": "We’re going to start in March. First, we’re going to have a kick-off meeting. Then we’re going to map the process."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

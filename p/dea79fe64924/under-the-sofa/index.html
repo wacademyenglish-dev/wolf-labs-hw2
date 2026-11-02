@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Under the Sofa · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A1 · Unit 4 · Where things are</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Under the Sofa · A1 Unit 4 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new A1 lesson on saying where things are: in, on, under, next to, behind, between; Where is…? / Where are…? It’s… / They’re…</p><p style="margin:0 0 6px"><b>The story:</b> Lia, the neighbor in 4B (invented), is on a trip. The student has her keys, her plants and her cat, Mochi. Mochi, the keys and the student’s phone are lost in the apartment.</p><p style="margin:0 0 6px"><b>About 46 min:</b> I · The Note (9) · II · In, On or Under? (9) · III · Where Is Mochi? (15) · IV · Mochi’s Bed (6) · V · Your Home (7).</p><p style="margin:0"><b>Open with:</b> “Where are your keys right now? Point and say.”</p></div><!--/prep-->
+    <p>A1 students only need short answers here: “Under the sofa.” is a perfect answer. Point at real things around you and the student during the lesson. In the mission, answer only yes / no and short words, so the student does the asking.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>in (inside, rooms) · on (surfaces) · under · next to · behind · between</p>
+    <h4>THE NOTE</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>IN, ON OR UNDER?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>WHERE IS MOCHI?</h4>
+    <p>Each card is a lost thing, and only you know where it is. The student asks; tap each question when it is asked, and answer short (yes, no, a word). If the student freezes, tap <b>Say it easier</b>. At the end Lia calls and the student says where each thing is. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>YOUR HOME (V)</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>on the kitchen (in the kitchen)</i>, <i>in the table (on the table)</i>, <i>next the door (next to the door)</i>, <i>between of (between)</i>, <i>the keys is (the keys are)</i>. A1: one correction per answer is enough.</p>
+    <!--conversa--><h4>MOCHI’S BED (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Mochi is found, and now the student decides where Mochi sleeps: three places, 1 to 3. Say your order first, short (“Number 1: next to the window”), then let them tap theirs, wait five seconds in silence, and use the PUSH line (only you see it): a yes / no question. Then tap <b>Show my teacher’s order</b> and agree on one top 3. Recast quietly (“in the kitchen” for “on the kitchen”); at the end, ask them to fix one sentence themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one light personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Note.</li>
+      <li><b>Focus</b>: II · In, On or Under?.</li>
+      <li><b>Out loud</b>: III · Where Is Mochi?, IV · Mochi’s Bed and V · Your Home.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* UNDER THE SOFA (Main A1 · Unit 4) · pergunta-surpresa · 27/10/2026 · in / on / under / next to */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Where are your shoes now?',
+    opc: ['Under the bed', 'Next to the door', 'On my feet!'], st: ['They’re …'],
+    ex: 'They’re next to the door.', push: 'Under the bed? Yes or no?' },
+  { cena: 'descobre', tipo: 'What if', q: 'Your keys are lost. Look where first?',
+    opc: ['In my bag', 'On the table', 'Under the sofa'], st: ['I look in / on / under …'],
+    ex: 'I look in my bag. They’re always in my bag!', push: 'In the fridge? Yes or no?' },
+  { cena: 'missao', tipo: 'Would you rather', q: 'A cat or a dog at home?',
+    opc: ['A cat', 'A dog'], st: ['A …, please!', 'It sleeps on / under …'],
+    ex: 'A cat! It sleeps on the sofa.', push: 'Two cats? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* UNDER THE SOFA (Main A1 · Unit 4) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Mochi’s Bed" entra DEPOIS de "III · Where Is Mochi?" (a aula tem 40 min e nenhuma cena extra; as quatro
+   são o coração: leitura, regra, missão, conversa). A aula já tinha o papel (III, o aluno pergunta onde
+   está cada coisa) e o "And you?" (IV · Your Home); faltava a DECISÃO: o aluno põe em ordem os três
+   lugares para a cama do Mochi, com in / on / under / next to nos iniciadores. A1 leve: 3 itens. */
+
+/* Calço local (27/10): o revisao.js desta aula usa TOQUES['cv-prox'] no "Next question" do IV · Your Home,
+   e o kit/conversa.js registra um 'cv-prox' com o mesmo nome (sem data-c ele quebra). Aqui os dois convivem:
+   botão com data-c (os momentos de conversa) vai para o novo; sem data-c, para o da conversa da aula. */
+(function () {
+  if (typeof TOQUES === 'undefined' || !TOQUES['cv-prox']) return;
+  var velho = TOQUES['cv-prox'], novo = null;
+  Object.defineProperty(TOQUES, 'cv-prox', { configurable: true, enumerable: true,
+    get: function () { return function (b, n, v, c) { return c ? (novo ? novo(b, n, v, c) : false) : velho(b, n, v, c); }; },
+    set: function (f) { novo = f; } });
+})();
+
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'cama', apos: 'missao', est: 'o', min: 6, img: 'capa', rot: 'Mochi’s Bed', t: 'Mochi needs a bed. You choose.',
+    p: 'Put three places in order. Then say why.',
+    formato: 'ranking',
+    q: 'Best place for Mochi’s bed?',
+    itens: ['Under the sofa', 'On the bed', 'Next to the window'],
+    prof: [2, 0, 1],
+    dica: 'Tap 1, 2, 3. Your teacher answers first.',
+    st: ['Number 1 is … the …', 'because it’s …'],
+    ex: 'Number 1: next to the window, because it’s warm. Mochi likes the sun.',
+    push: 'On YOUR bed? Yes or no?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Your neighbor left a note.",
+   "p": "Read it with your teacher. Then look closer."
+  },
+  "descobre": {
+   "t": "Small words, big difference.",
+   "p": "Compare A and B. Which is right?"
+  },
+  "missao": {
+   "t": "Three things are lost.",
+   "p": "Ask five questions each. Then say where."
+  },
+  "cv-cama": {
+   "t": "Mochi needs a bed. You choose.",
+   "p": "Put three places in order. Say why."
+  },
+  "conversa": {
+   "t": "Your home: where are your things?",
+   "p": "Answer. Then ask back: “And you?”"
+  }
+ },
+ "prep": {
+  "obj": "Preposições de lugar (in, on, under, next to, behind, between) e Where is / Where are: Mochi, a gata da vizinha Lia, as chaves e o celular sumiram.",
+  "armadilha": "O “em” do português vira in para tudo: “on the kitchen” / “in the table”. Também “next the door”, “between of” e “the keys is”.",
+  "pal": [
+   "in",
+   "on",
+   "under",
+   "next to",
+   "behind",
+   "between",
+   "Where is…?",
+   "Where are…?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: Lia viajou, e a gata, as chaves e o celular sumiram.",
+   "perg": "Where are your keys right now?",
+   "pula": "Só leia o título e comece."
+  },
+  "leitura": {
+   "obj": "Leitura do bilhete da Lia em voz alta, perguntas de sentido e o padrão.",
+   "perg": "What does Lia want you to do?",
+   "pula": "Leia e pule o Look closer."
+  },
+  "descobre": {
+   "obj": "Duas frases lado a lado: o aluno explica a diferença (pode ser em português) e depois as armadilhas.",
+   "perg": "Why is it “on the table”, not “in”?",
+   "pula": "Três pares bastam."
+  },
+  "missao": {
+   "obj": "Só você sabe onde estão as coisas; o aluno pergunta, você responde curto, e no fim ele conta à Lia.",
+   "perg": "Is Mochi under the sofa?",
+   "pula": "Duas coisas bastam."
+  },
+  "cv-cama": {
+   "obj": "Ordenar três lugares para a cama da Mochi e combinar um top 3.",
+   "perg": "Where does Mochi sleep? Why?",
+   "pula": "Só o número 1 basta."
+  },
+  "conversa": {
+   "obj": "Conversa sobre a casa do aluno: onde ficam as coisas, e ele pergunta “And you?”.",
+   "perg": "Where is your TV?",
+   "pula": "Três perguntas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre lugares reais da casa e da vida do aluno, com preposições.",
+   "perg": "Where is your phone right now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre onde ficam as coisas, com preposições e porquê.",
+   "perg": "Keys in a bag or next to the door?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é a Mochi; você pergunta onde ela estava e onde ficam as coisas.",
+   "perg": "Mochi, where were you?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Where is everything?",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "in",
+    "on",
+    "under",
+    "next to",
+    "behind",
+    "between"
+   ],
+   "cartas": [
+    {
+     "k": "RIGHT NOW",
+     "q": "Where is your phone right now?",
+     "fup": "And your keys?",
+     "st": [
+      "It’s on …",
+      "They’re in …"
+     ],
+     "ex": "It’s on the table. My keys are in my bag."
+    },
+    {
+     "k": "YOUR BEDROOM",
+     "q": "What is next to your bed?",
+     "fup": "Is there anything under it?",
+     "st": [
+      "There is … next to …",
+      "Under my bed, …"
+     ],
+     "ex": "There is a lamp next to my bed. My shoes are under it."
+    },
+    {
+     "k": "THE KITCHEN",
+     "q": "Where is the coffee in your kitchen?",
+     "fup": "Is it behind something?",
+     "st": [
+      "It’s in …",
+      "It’s behind …"
+     ],
+     "ex": "It’s in the cupboard, behind the sugar."
+    },
+    {
+     "k": "LOST THINGS",
+     "q": "What do you always lose at home?",
+     "fup": "Where is it usually?",
+     "st": [
+      "I always lose my …",
+      "It’s usually …"
+     ],
+     "ex": "I always lose my glasses. They’re usually on the sofa."
+    },
+    {
+     "k": "YOUR STREET",
+     "q": "What is next to your home?",
+     "fup": "Is there a store near you?",
+     "st": [
+      "There is … next to …",
+      "It’s between … and …"
+     ],
+     "ex": "My building is between a bakery and a pharmacy."
+    },
+    {
+     "k": "YOUR PET",
+     "q": "Where does your pet sleep, or where do pets sleep in your family?",
+     "fup": "On the bed or under it?",
+     "st": [
+      "It sleeps in / on …"
+     ],
+     "ex": "My dog sleeps on the sofa, next to me."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "in",
+    "on",
+    "next to"
+   ],
+   "rodadas": [
+    {
+     "q": "Keys in your bag or next to the door?",
+     "a": "In my bag",
+     "b": "Next to the door",
+     "fa": [
+      "In my bag. They are always with me."
+     ],
+     "fb": [
+      "Next to the door. I see them when I go out."
+     ]
+    },
+    {
+     "q": "A cat sleeps on the bed or in its own bed?",
+     "a": "On my bed",
+     "b": "In its bed",
+     "fa": [
+      "On my bed. It’s warm!"
+     ],
+     "fb": [
+      "In its own bed. My bed is for me."
+     ]
+    },
+    {
+     "q": "TV in the bedroom or in the living room?",
+     "a": "Bedroom",
+     "b": "Living room",
+     "fa": [
+      "In the bedroom. I watch in bed."
+     ],
+     "fb": [
+      "In the living room. The bedroom is for sleeping."
+     ]
+    },
+    {
+     "q": "Phone on the table at dinner or in your pocket?",
+     "a": "On the table",
+     "b": "In my pocket",
+     "fa": [
+      "On the table. Maybe somebody calls."
+     ],
+     "fb": [
+      "In my pocket. Dinner is for talking."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Everything is in its place."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Mochi now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Mochi, the cat.",
+   "perguntas": [
+    "Mochi, where were you? Under the sofa?",
+    "Where is your favorite place in the apartment?",
+    "Where is your food?",
+    "Where are Lia’s keys? Do you know?",
+    "Where do you sleep in the afternoon?",
+    "What is behind the sofa?"
+   ],
+   "st": [
+    "It’s in / on / under …",
+    "They’re next to …",
+    "I sleep …"
+   ],
+   "ex": "I was under the sofa. My favorite place is on the window, next to the plants."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

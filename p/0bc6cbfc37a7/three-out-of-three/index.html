@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Three Out of Three · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Three Out of Three · The Spotlight</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Three Out of Three · The Spotlight</h2>
+    <p>The passive puts the thing the action happens to at the front: <b>be + third form</b>. <b>By …</b> only when the doer matters. Some verbs never take it: <b>happen, come, go, arrive, die</b>. Students say <i>was stole</i>, <i>it was did</i>, <i>it was happened</i>. The story: a woman with no amygdala felt no fear of snakes or horror movies, but in 2013, one breath of CO₂ gave her the first panic attack of her life. On screen, a dark stage: in the passive, the object card steps into the spotlight at the front, the verb becomes a lamp (was + third form), and the doer goes to the wings, with a BY tag, or disappears.</p>
+    <h4>NOT ABOUT THE STUDENT’S FEAR</h4>
+    <p>Every question is about the woman, the study or the recordings. If the student shares something personal, listen, then go back. Scene IX is a finding about other people, not advice.</p>
+    <h4>THREE PATIENTS</h4>
+    <p>Say the sample size out loud: three patients and twelve healthy people. The finding moved a conclusion; it didn’t replace it with a certainty.</p>
+    <h4>THE SPOTLIGHT</h4>
+    <p>Scene III: two taps. First the verb (be + third form); then KEEP or DROP the doer. Sentence 1 accepts both: drop it if the cause is known, keep it if the cause is the news.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Three recordings, each with pause and 0.75×; questions and transcripts open after listening: the neurologist (V), the 2013 researcher (VII), and the “I am excited” study (IX). In V, line 2 is the trap: <b>came</b>.</p>
+    <!--conversa--><h4>WHAT WOULD YOU DO? (VIII) AND THE SURPRISE QUESTION</h4>
+<p>Scene VIII is now three light dilemmas about courage (a TV night in a “haunted” house, a talk on stage, a skydive that has already been paid) and a last word: if their fear could be switched off for a year, like the woman in the lesson, would they do it? There is no right answer. Let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast mistakes quietly (“was stole” → “was stolen”); at the end, ask them to fix one or two sentences themselves.</p>
+<p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Done for You, II The Tank Room, VI The Empty Column, VIII What Would You Do?</li>
+      <li><b>Listen</b>: V What the Neurologist Saw, VII Three Out of Three, IX The Same Body.</li>
+      <li><b>Focus</b>: III The Spotlight, IV Be and the Third Form.</li>
+      <li><b>Write</b>: X, done for you, again. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THREE OUT OF THREE (Main B1) · pergunta-surpresa · 27/10/2026 · passive voice */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'dado', tipo: 'And you?', q: 'What is the nicest thing that was done for you this year?',
+    opc: ['At work', 'At home', 'By a stranger'], st: ['I was given …', 'I was helped by …', 'It was done by …'],
+    ex: 'By a stranger. My phone was found on the bus, and it was given back to me the same day.', push: 'Did you say thank you? How?' },
+  { cena: 'mulher', tipo: 'Opinion', q: 'Horror films: are they fun or a waste of a good night?',
+    opc: ['Fun!', 'A waste', 'Only with friends'], st: ['I’m scared by …', 'I was never scared by …', 'They’re made for …'],
+    ex: 'Only with friends. I’m easily scared by sounds, so I need somebody next to me.', push: 'What was the last one you saw? Was it any good?' },
+  { cena: 'coluna', tipo: 'Would you rather', q: 'Would you rather hold a spider for ten seconds or sing alone on a stage?',
+    opc: ['Hold the spider', 'Sing on stage'], st: ['I’d rather …, because …', 'I wouldn’t want to be seen …'],
+    ex: 'Hold the spider. I wouldn’t want to be seen singing by two hundred people!', push: 'The spider is this big (show with your hands). Still?' },
+  { cena: 'corpo', tipo: 'What if', q: 'Before a big interview, a friend says: “Don’t say you’re nervous. Say you’re excited.” Would you try it?',
+    opc: ['Yes, why not', 'It sounds silly', 'I already do'], st: ['I’d try it, because …', 'I was told that …', 'It was shown that …'],
+    ex: 'Yes, why not. It was shown in a study, and it costs nothing.', push: 'Say it now, out loud: “I’m excited!” How does it feel?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THREE OUT OF THREE (Main B1 · passive voice) · conversa · 27/10/2026 · regra 3×3
+   Os dilemas entram no lugar de "VIII · The Newsroom" (extra, manchetes na passiva para escolher).
+   A aula fala do medo no corpo dos outros; aqui o aluno decide o que faria com o próprio medo em três
+   situações leves (casa "assombrada" de TV, palestra no palco, salto de paraquedas), e no fim: desligaria
+   o medo, como a mulher da aula? A passiva mora nos iniciadores. Nada de doença ou hospital. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'dilema', troca: 'jornal', est: 'o', min: 7, img: 'microfone', rot: 'What Would You Do?', t: 'Three offers. Each one needs a little courage.',
+    p: 'Read the situation. Choose, or say your own idea. Then say why with the passive. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The TV show', sit: 'A TV show invites you to spend one night in a “haunted” house. You will be filmed all night. If you stay until morning, you are paid 2,000 dollars.',
+        q: 'What do you do?', opc: ['I go', 'I go with a friend', 'No way'],
+        st: ['I’d go, because I’d be paid …', 'I wouldn’t want to be filmed when …', 'If I screamed, it would be seen by …'],
+        ex: 'I go with a friend. The money is good, but if I screamed alone, it would be seen by the whole country!',
+        push: 'They say friends aren’t allowed. Alone, or nothing?' },
+      { tag: 'The stage', sit: 'Your company asks everybody to give a five-minute talk on stage next month. You can say no, but it will be noticed by your boss.',
+        q: 'What do you do?', opc: ['Do the talk', 'Ask for a small room', 'Say no'],
+        st: ['I was asked to …, so …', 'It would be noticed if …', 'I’d rather be given …'],
+        ex: 'Ask for a small room. If I’m given ten people instead of two hundred, I can do it.',
+        push: 'Your boss says: “The people who do the stage get noticed for promotions.” Still the small room?' },
+      { tag: 'The jump', sit: 'For your birthday, your friends booked a skydive for you. It has already been paid. The plane leaves on Saturday at 7 a.m.',
+        q: 'What do you do?', opc: ['I jump', 'I watch from the ground', 'I ask for the money'],
+        st: ['It has already been paid, so …', 'I’d be pushed out of the plane by …', 'I’d rather be given …'],
+        ex: 'I jump. It has already been paid, and the video would be watched by my family for years.',
+        push: 'The instructor says: “Last chance. The door is open.” Do you still go?' }
+    ],
+    fim: { tag: 'The last word', q: 'The woman in this lesson feels no fear. If your fear could be switched off for a year, would you do it?',
+      opc: ['Yes, switch it off', 'No, I keep it'], segundos: 60, nota: 'One minute for your answer. Then your teacher takes the other side.',
+      st: ['Without fear, I would be …', 'Fear is needed when …', 'I’d be stopped by nothing, so …'],
+      ex: 'No, I keep it. Fear is needed when you cross the street at night. Without it, I would be in trouble every week.',
+      push: 'Think of one thing you never did because you were scared. Now: switch it off?' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "dado": {
+   "t": "This year, things were done for you.",
+   "p": "Tap three starters. Finish each one, true."
+  },
+  "mulher": {
+   "t": "Five things were done to one woman.",
+   "p": "Say what most people feel. Then choose hers."
+  },
+  "palco": {
+   "t": "The thing steps into the light.",
+   "p": "Tap the verb, then the doer. Then say it."
+  },
+  "be": {
+   "t": "BE and the third form.",
+   "p": "Choose the form. Say the whole sentence."
+  },
+  "neuro": {
+   "t": "What the neurologist saw.",
+   "p": "Listen once. Finish five sentences. One verb won’t."
+  },
+  "coluna": {
+   "t": "Put each threat in its column.",
+   "p": "Read the card out loud. Tap the column."
+  },
+  "panico": {
+   "t": "2013: one breath of 35% CO₂.",
+   "p": "Play the researcher once. Guess each number."
+  },
+  "cv-dilema": {
+   "t": "Three offers. A little courage.",
+   "p": "Choose. Say why with the passive."
+  },
+  "corpo": {
+   "t": "One more study, about a word.",
+   "p": "Listen once. Answer four. Say what you think."
+  },
+  "fim": {
+   "t": "Done for you, again.",
+   "p": "Rewrite your three. Add her story. To My notes."
+  }
+ },
+ "prep": {
+  "obj": "Voz passiva (be + particípio; by só quando quem faz importa): a mulher sem amígdala que não sentia medo até uma respiração de CO₂ em 2013.",
+  "armadilha": "O brasileiro diz “it was stole”, “it was did” e põe na passiva verbos que não aceitam: “it was happened”, “he was died”, “they were arrived”.",
+  "pal": [
+   "was given",
+   "were shown",
+   "was tested",
+   "by",
+   "amygdala",
+   "panic attack",
+   "fear",
+   "happened"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: ela viu cobras e filmes de terror sem medo, até uma respiração.",
+   "perg": "Can a person live with no fear at all?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "dado": {
+   "obj": "Aquecimento: coisas feitas para o aluno neste ano, com a passiva.",
+   "perg": "What was done for you this year?",
+   "pula": "Duas frases bastam."
+  },
+  "mulher": {
+   "obj": "Cinco coisas feitas à mulher: o que a maioria sentiria e o que ela sentiu.",
+   "perg": "What would most people feel here?",
+   "pula": "Três situações bastam."
+  },
+  "palco": {
+   "obj": "O palco: o objeto vai para a luz, o verbo vira was + particípio, quem faz sai.",
+   "perg": "Do we need the doer here?",
+   "pula": "Corte duas frases."
+  },
+  "be": {
+   "obj": "Escolher a forma de be + particípio; verbos como happen e arrive não vão para a passiva.",
+   "perg": "Can this verb go into the passive?",
+   "pula": "Corte duas frases."
+  },
+  "neuro": {
+   "obj": "Ouvir a neurologista e completar cinco frases; a linha 2 tem a armadilha (came).",
+   "perg": "What was she shown?",
+   "pula": "Três frases bastam."
+  },
+  "coluna": {
+   "obj": "Separar cada ameaça testada na coluna certa, lendo em voz alta.",
+   "perg": "Which column does this go in?",
+   "pula": "Quatro cartas bastam."
+  },
+  "panico": {
+   "obj": "Ouvir o pesquisador de 2013 e adivinhar os números (3 pacientes, 12 saudáveis).",
+   "perg": "How many people were tested?",
+   "pula": "Cena extra: pode pular; conte o achado em uma frase."
+  },
+  "cv-dilema": {
+   "obj": "Três dilemas leves de coragem e o medo desligado por um ano; justificar com a passiva.",
+   "perg": "Would you do it? Why?",
+   "pula": "Dois dilemas bastam; use a linha PUSH."
+  },
+  "corpo": {
+   "obj": "Ouvir o estudo do “I am excited” e responder quatro perguntas.",
+   "perg": "What was the group told to say?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: as três frases da cena I de novo e a história dela na passiva.",
+   "perg": "What was done to her in 2013?",
+   "pula": "Quatro frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com a passiva sobre coisas feitas, inventadas e construídas.",
+   "perg": "Where was your phone made?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre ciência e medo, com a passiva nos argumentos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Recontar o estudo como manchete de jornal, passo a passo, na passiva.",
+   "perg": "What was she given?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Made, built, given.",
+   "p": "Pick a card. Answer with the passive.",
+   "palavras": [
+    "was made",
+    "was built",
+    "was given",
+    "by"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PHONE",
+     "q": "Where was your phone made?",
+     "fup": "Was it a gift, or did you buy it?",
+     "st": [
+      "It was made in …",
+      "It was given to me by …"
+     ],
+     "ex": "It was made in China, and it was given to me by my sister."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "When was your city founded?",
+     "fup": "Who was it named after?",
+     "st": [
+      "It was founded in …",
+      "It was named after …"
+     ],
+     "ex": "My city was founded in 1554, and it was named after a saint."
+    },
+    {
+     "k": "A BIG GIFT",
+     "q": "What is the best thing you were ever given?",
+     "fup": "Why was it special?",
+     "st": [
+      "I was given …",
+      "It was chosen by …"
+     ],
+     "ex": "I was given a guitar when I was fifteen."
+    },
+    {
+     "k": "YOUR STREET",
+     "q": "What is being built near your home?",
+     "fup": "Is it a good idea?",
+     "st": [
+      "A new … is being built.",
+      "The old … was taken down."
+     ],
+     "ex": "A new mall is being built, and the old park was closed."
+    },
+    {
+     "k": "AT WORK",
+     "q": "What are you usually asked to do at work?",
+     "fup": "Is it ever done by someone else?",
+     "st": [
+      "I am usually asked to …",
+      "It is done by …"
+     ],
+     "ex": "I am usually asked to answer emails before ten."
+    },
+    {
+     "k": "A SCIENCE STORY",
+     "q": "What science story were you surprised by?",
+     "fup": "Where was it published?",
+     "st": [
+      "I was surprised by …",
+      "It was published in …"
+     ],
+     "ex": "I was surprised by a study that was published last year."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "should be",
+    "was proven",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "A life with no fear: a gift or a danger?",
+     "a": "A gift",
+     "b": "A danger",
+     "fa": [
+      "A gift. You are never stopped by panic.",
+      "You could do anything."
+     ],
+     "fb": [
+      "A danger. Fear is there to protect us.",
+      "She could be hurt easily."
+     ]
+    },
+    {
+     "q": "Should people be paid to be tested in studies?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Their time is given to science.",
+      "It is fair."
+     ],
+     "fb": [
+      "No. People should be helped to decide freely.",
+      "Money changes the choice."
+     ]
+    },
+    {
+     "q": "Three patients: is that enough to change an idea?",
+     "a": "Enough",
+     "b": "Not enough",
+     "fa": [
+      "Enough. All three were scared by the gas.",
+      "Three out of three is strong."
+     ],
+     "fb": [
+      "Not enough. More people should be tested.",
+      "One study is never the last word."
+     ]
+    },
+    {
+     "q": "Scary movies: good for you or bad for you?",
+     "a": "Good",
+     "b": "Bad",
+     "fa": [
+      "Good. Fear is felt in a safe place.",
+      "It is like exercise for the brain."
+     ],
+     "fb": [
+      "Bad. Sleep is often ruined after them.",
+      "Why pay to feel bad?"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Headline",
+   "t": "Tell her story as news.",
+   "p": "Answer each step in the passive.",
+   "prof": "Push for be + third form in every step; recast “was happened” quietly.",
+   "passos": [
+    {
+     "q": "What was she shown, over the years?",
+     "st": [
+      "She was shown …",
+      "She was taken to …"
+     ],
+     "ex": "She was shown snakes and horror movies, and she was taken to a haunted house."
+    },
+    {
+     "q": "What was found? How did she react?",
+     "st": [
+      "No fear was found …",
+      "She was not scared by …"
+     ],
+     "ex": "She was not scared by anything, and no fear was found."
+    },
+    {
+     "q": "What was she given in 2013?",
+     "st": [
+      "In 2013, she was given …",
+      "Twelve healthy people were also …"
+     ],
+     "ex": "In 2013, she was given one breath of air with 35% CO₂."
+    },
+    {
+     "q": "Write the headline. What was learned?",
+     "st": [
+      "It was learned that …",
+      "Woman With No Fear …"
+     ],
+     "ex": "Woman With No Fear Is Panicked by One Breath of Air."
+    }
+   ],
+   "fim": "Your headline is ready. Read it out loud like the news."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

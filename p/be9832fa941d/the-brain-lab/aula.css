@@ -1,0 +1,97 @@
+/* ============================================================
+   THE BRAIN LAB · THE SCAN · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: a sala de exame à noite —
+   preto-violeta; o cérebro como constelação de oito regiões em traço
+   violeta que acendem; o mostrador do grau em arco; os cartões dos
+   testes com borda violeta (inglês) e verde (português). As cores do
+   Stroop aparecem só na palavra, sobre fundo escuro.
+   ============================================================ */
+:root{
+  --noite:#07060d; --noite-rgb:7,6,13; --tinta:#ece9f6;
+  --t1:#f0edf8; --t2:#c8c3da; --t2-rgb:200,195,218; --t3:#8c86a6;
+  --ac:#a98bff; --ac2:#d6c9ff; --verde:#46d39a; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(236,233,246,.05); --vidro2:rgba(236,233,246,.085); --vidro3:rgba(236,233,246,.12);
+  --fio:rgba(228,224,242,.12); --fio2:rgba(228,224,242,.22); --luz:rgba(236,233,246,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Bricolage Grotesque','Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#140a2e}
+.btn.cheio{color:#140a2e}
+.capa{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:600 clamp(64px,6.4vw,124px)/.9 var(--disp);letter-spacing:-.03em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--ui);color:var(--t2);max-width:26em} .capa .sub b{color:var(--t1)}
+.capa-r{display:grid;place-items:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#1d1438;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:50px;padding:0 20px;font:700 clamp(14px,1.1vw,19px) var(--ui)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start} .lado-l.centro{justify-items:center}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(17px,1.35vw,23px)/1.4 var(--ui)}
+.pede.centro-t{max-width:900px;margin:0 auto;text-align:center} .pede.dados{width:100%}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:900px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(19px,1.6vw,27px)/1.4 var(--ui)}
+.balao.ok-b{border-color:var(--ok)}
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:800 28px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--ui);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* o cérebro */
+.cerebro{display:block;width:min(100%,420px);height:auto;max-height:calc(100vh / var(--zv,1) - 360px);min-height:200px}
+.cerebro.mini{width:200px;min-height:0;max-height:none;margin:0 auto}
+.cerebro .contorno{fill:#0e0b1c;stroke:#3a2f63;stroke-width:3} .cerebro .sulco{fill:none;stroke:#2a2248;stroke-width:2;stroke-dasharray:5 6}
+.cerebro .reg{fill:rgba(169,139,255,.04);stroke:rgba(169,139,255,.28);stroke-width:1.5;stroke-dasharray:3 4}
+.cerebro .reg.on{fill:rgba(169,139,255,.22);stroke:var(--ac);stroke-dasharray:none;filter:drop-shadow(0 0 8px rgba(169,139,255,.55))}
+.cerebro .reg.agora{animation:pulsa 1.8s ease-in-out infinite} @keyframes pulsa{50%{fill:rgba(169,139,255,.38)}}
+.cerebro .liga{stroke:rgba(169,139,255,.12);stroke-width:1.5} .cerebro .liga.on{stroke:rgba(214,201,255,.5)}
+
+/* passaporte, stroop, troca */
+.passaporte{display:grid;gap:10px;padding:16px 18px;border-radius:var(--r2);border:1px solid #3a2f63;background:linear-gradient(160deg,#151030,#0d0a1d)} .passaporte small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.carimbos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.carimbo-p{display:grid;gap:2px;padding:8px 10px;border-radius:10px;border:2px dashed #3a2f63;font:700 13px var(--mono);color:var(--t3);text-align:center} .carimbo-p b{font-size:11px;letter-spacing:.1em}
+.carimbo-p.on{border-style:solid;border-color:var(--ac);color:var(--ac2);transform:rotate(-2deg)} .carimbo-p.trap.on{border-color:var(--am);color:var(--am)}
+.tempos-st{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:4px 0 10px}
+.tempos-st span{display:grid;gap:2px;min-width:180px;padding:8px 16px;border-radius:12px;background:#0f0c1f;border:1px solid var(--fio);text-align:center} .tempos-st small{font:800 10px var(--mono);letter-spacing:.12em;color:var(--t3)} .tempos-st b{font:800 22px var(--mono);color:var(--t2)}
+.tempos-st span.feito{border-color:var(--ac)} .tempos-st span.feito b{color:var(--ac2)}
+.palavra-st{margin:14px auto;padding:30px 20px;max-width:760px;border-radius:var(--r1);background:#0a0814;border:1px solid var(--fio);text-align:center;font:800 clamp(56px,7vw,120px)/1 var(--disp);letter-spacing:.04em}
+.cartao-n{display:grid;place-items:center;width:clamp(160px,14vw,230px);height:clamp(180px,calc(100vh / var(--zv,1) - 560px),300px);margin:10px auto;border-radius:22px;background:#0a0814;border:8px solid}
+.cartao-n b{font:800 clamp(72px,7vw,120px)/1 var(--disp);color:var(--t1)} .cartao-n.en{border-color:var(--ac)} .cartao-n.pt{border-color:var(--verde)}
+
+/* mostrador, tipos, laudo */
+.mostrador{display:block;width:min(100%,380px);height:auto}
+.mostrador .arco-m{fill:none;stroke:#2a2248;stroke-width:16;stroke-linecap:round} .mostrador .marca-m{font:800 11px var(--mono);letter-spacing:.06em;fill:var(--ac2);text-anchor:middle}
+.mostrador .ponteiro-m{stroke:var(--ac);stroke-width:6;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(169,139,255,.7))} .mostrador .eixo-m{fill:var(--ac2)}
+.tipos-l{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:6px 0 10px} .tipos-l span{display:grid;gap:2px;padding:10px 14px;border-radius:12px;background:#0f0c1f;border:1px solid var(--fio);font:500 15px/1.35 var(--ui);color:var(--t2)} .tipos-l b{font:800 12px var(--mono);letter-spacing:.12em;color:var(--ac2)}
+.laudo{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2)} .laudo small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .laudo span{display:flex;justify-content:space-between;gap:10px;font:600 15px var(--ui);color:var(--t2)} .laudo b{color:var(--t1);font-family:var(--mono)}
+.laudo .volta{display:block;color:var(--am)} .laudo s{text-decoration-color:var(--erro)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .tipos-l{grid-template-columns:1fr} .cerebro{max-height:none} }
+@media (max-width:620px){ .carimbos{grid-template-columns:1fr 1fr} .tempos-st span{min-width:140px} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb-cerebro{display:grid;place-items:center;padding:4px 0 0}
+.deb-cerebro .cerebro.mini{width:min(100%,230px)}

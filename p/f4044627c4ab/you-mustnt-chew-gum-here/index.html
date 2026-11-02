@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · You Mustn’t Chew Gum Here · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>You Mustn’t Chew Gum Here · The Sign Wall</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>You Mustn’t Chew Gum Here · The Sign Wall</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A review lesson: it works as a follow-up to a lesson on have to / don’t have to.</p><p style="margin:0 0 6px"><b>The grammar:</b> Three Signs: MUST is a rule. MUSTN’T is a wall. DON’T HAVE TO is an open door.</p><p style="margin:0 0 6px"><b>Short class (about 43 min):</b> I You and Rules · III An Insider’s Guide · V Lia’s Diary · VI Three Signs · VII Passport Control · X The Bet · XI The Flight Home. Skip if you’re short on time: VIII, IX (marked EXTRA on your screen). Full lesson: about 64 min.</p><p style="margin:0"><b>Open with:</b> “When you were a kid, what were the rules in your house?”</p></div><!--/prep-->
+    <p>A review lesson: it works as a follow-up to a lesson on <b>have to / don’t have to</b>. Lia travels through Japan with a notebook: every city gives her a rule, and it becomes a sign-sticker in her rule book. Your student watches a short guide to good manners in Japan, reads Lia’s diary, goes through passport control, and ends with the rules of their own home. The center: <b>mustn’t</b> is a wall (NOT ALLOWED); <b>don’t have to</b> is a free door (NOT NECESSARY).</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III: sealed until your student answers the two questions, then four chapters that stop by themselves. At 1:25 the guide says <i>Talking on trains: just don’t do it</i>; at 1:32, <i>if you do have to have a chat, just keep it down</i>: a ban and a softer rule, side by side. After the video (page III, step 3): ONE screen. The video stays on the left, with Lia’s rule book under it; on the right, six True or Lie lines from the video (tap a time to hear that moment again). Every right answer sticks a new sign in the book. The two train lines (1:26 “just don’t do it” and 1:31 “just keep it down”) are still there: a ban and a softer rule, side by side. On a Lie the student says the true line. When all six are done, Yuki asks for one rule for her first day: the student taps an answer and says the sentence out loud, with must, mustn’t or don’t have to. (The video stops by itself at 2:14, before the last tip.)</p>
+    <h4>THE TRAP</h4>
+    <p>Students often mix <i>not allowed</i> and <i>not necessary</i>. They say <i>You mustn’t pay, it’s free</i> (they mean: not necessary) and <i>You don’t have to smoke here</i> (they mean: not allowed). Ask: <i>Is it a wall, or a free door?</i></p>
+    <h4>THE PASSPORT</h4>
+    <p>Scene V is the pressure: eight signs, one stamp each. Read the sign; your student says the rule at once.</p>
+    <h4>THE FACTS</h4>
+    <p>In Singapore you can’t buy chewing gum in shops, and you can’t bring it into the country. In Japan tips are not expected, and swimsuits are not allowed in a traditional hot spring.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>respect</i>, <i>customs</i>, <i>trash</i>, <i>polite</i> and <i>frustrated</i>, before the video, in match the columns and the word in your life. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE BET (X) AND THE SURPRISE QUESTION</h4>
+    <p>Lia’s rule book is full, so your student bets on the rules of three new places: a Sunday in Germany, a sandwich in Venice, a tip in New York. Let them bet and say why, wait five seconds in silence, then use the PUSH line (only you see it) to make it harder. Only then tap <i>Check the real rule</i>. A wrong bet is fine: ask what they think of the real rule. Recast <b>must / mustn’t / don’t have to</b> quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Rules, V Lia’s Diary, VII Passport Control, VIII Your House Rules, IX The Houseguest and X The Bet (they bet first, then check the real rule).</li>
+      <li><b>Listen</b>: II The Words, III An Insider’s Guide and IV Line by Line.</li>
+      <li><b>Focus</b>: VI Three Signs.</li>
+      <li><b>Write</b>: XI The Flight Home.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* YOU MUSTN'T CHEW GUM HERE (Main A2) · pergunta-surpresa · 27/10/2026 · must / mustn't / don't have to */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'video', tipo: 'Would you rather', q: 'Would you rather have quiet trains, like in Tokyo, or trains where you can talk?',
+    opc: ['Quiet trains', 'Talking is OK'], st: ['I’d rather …, because …', 'People mustn’t … / don’t have to …'],
+    ex: 'Quiet trains! In the morning I’m tired, and people mustn’t shout on the phone.', push: 'And music without headphones? Yes or no?' },
+  { cena: 'diario', tipo: 'And you?', q: 'On a trip, what rule did you break by mistake?',
+    opc: ['A small one', 'Never!', 'I don’t remember'], st: ['I didn’t know you must / mustn’t …', 'I had to …'],
+    ex: 'A small one. In a museum I took a photo, and you mustn’t take photos there. I had to say sorry!', push: 'Did anybody see you?' },
+  { cena: 'passaporte', tipo: 'Opinion', q: 'Which rule from this lesson is the best one?',
+    opc: ['No phone calls on trains', 'Shoes off at home', 'Take your trash home'], st: ['The best one is …, because …', 'In Brazil, we must / don’t have to …'],
+    ex: 'Take your trash home. In my city, people mustn’t throw trash in the street, but they do!', push: 'Which one would you NOT like in Brazil?' },
+  { cena: 'yuki', tipo: 'What if', q: 'A tourist asks you: “What mustn’t I do in your city?” What do you say?',
+    opc: ['Something about safety', 'Something about food', 'Something about the beach'], st: ['You mustn’t …', 'You don’t have to …, but you must …'],
+    ex: 'You mustn’t use your phone on the bus at night. And you don’t have to tip, but people like it.', push: 'And one thing they MUST do or eat?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* YOU MUSTN'T CHEW GUM HERE (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A aposta entra no lugar de "X · Quick Check" (extra, prática controlada de tocar a palavra).
+   Lia já fechou o livro de regras do Japão e de Singapura; agora o aluno aposta nas regras de
+   outros três lugares (Alemanha, Veneza, Nova York) e depois confere. A gramática da aula
+   (must / mustn't / don't have to) mora nas opções e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'aposta', troca: 'quiz', est: 'o', min: 7, img: 'aviao', rot: 'The Bet', t: 'Lia’s next trip: three new places.',
+    p: 'Bet on the rule: must, mustn’t or don’t have to? Say why. Then check the real rule.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Germany', sit: 'Sunday morning in a small German town. The grass in your garden is very long.',
+        q: 'Can you cut the grass today?', opc: ['You must do it early', 'You mustn’t do it', 'You don’t have to ask'],
+        st: ['I bet you mustn’t …, because …', 'I think you don’t have to …', 'Maybe you must …'],
+        ex: 'I bet you mustn’t do it. Sunday is a quiet day, and the machine is very loud.',
+        push: 'And a party with loud music on Sunday night? Must, mustn’t or don’t have to?',
+        revela: 'You mustn’t. In Germany, Sunday is a quiet day: no lawn mowers and no loud drills.', rot_revela: 'Check the real rule' },
+      { tag: 'Venice', sit: 'A hot day in Venice. You buy a sandwich and see some beautiful old steps near the famous square.',
+        q: 'Can you sit on the steps and eat it?', opc: ['Sure, you don’t have to ask', 'You mustn’t do it', 'You must pay first'],
+        st: ['I bet you …', 'You mustn’t … there, because …', 'You don’t have to …'],
+        ex: 'You don’t have to ask! It’s a street, and the steps are free.',
+        push: 'Imagine it IS a rule. Fair for tourists, or silly?',
+        revela: 'You mustn’t. In the famous parts of Venice, you mustn’t sit down and have a picnic on the street. There is a fine!', rot_revela: 'Check the real rule' },
+      { tag: 'New York', sit: 'Dinner in New York. The food was OK, the waiter was nice. The bill is $40.',
+        q: 'What about a tip?', opc: ['You must leave a tip', 'You mustn’t leave a tip', 'You don’t have to'],
+        st: ['In New York, I think you …', 'It’s not like Japan: you …', 'I bet you don’t have to …'],
+        ex: 'You don’t have to. It’s like Japan: the waiter has a salary.',
+        push: 'Japan: no tip. New York: a big tip. And in Brazil? What is fair for you?',
+        revela: 'It isn’t the law, but almost everybody leaves 15 to 20 percent. For people in New York, it feels like a must!', rot_revela: 'Check the real rule' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "You and rules.",
+   "p": "Read each message. Answer out loud."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn the words. They turn yellow in the video."
+  },
+  "video": {
+   "t": "Good manners in Japan.",
+   "p": "Answer first. Watch four chapters. Then True or Lie."
+  },
+  "falas": {
+   "t": "The video, line by line.",
+   "p": "Tap a line to hear it again."
+  },
+  "diario": {
+   "t": "Four pages, four cities, four rules.",
+   "p": "Read a page out loud. Say the rule."
+  },
+  "regra": {
+   "t": "A rule, a wall, an open door.",
+   "p": "Read the three signs. Then fix four mistakes."
+  },
+  "passaporte": {
+   "t": "Five signs. Get a stamp.",
+   "p": "Hear the sign. Say the rule fast."
+  },
+  "casa": {
+   "t": "Your home has rules too.",
+   "p": "Pick five cards. Answer with the three rules."
+  },
+  "yuki": {
+   "t": "Yuki is staying with you for a week.",
+   "p": "Your teacher is Yuki. Tell her your real rules."
+  },
+  "cv-aposta": {
+   "t": "Lia’s next trip: three places.",
+   "p": "Bet on the rule. Say why. Then check."
+  },
+  "fim": {
+   "t": "The rule book is full.",
+   "p": "Write your home rules: two of each kind."
+  }
+ },
+ "prep": {
+  "obj": "Must / mustn’t / don’t have to: a Lia viaja pelo Japão com um caderno, e cada cidade vira um adesivo de regra no livro dela.",
+  "armadilha": "O brasileiro traduz “não precisa” e “não pode” do mesmo jeito: diz “You mustn’t pay, it’s free” (quer dizer don’t have to) e “You don’t have to smoke here” (quer dizer mustn’t).",
+  "pal": [
+   "must",
+   "mustn’t",
+   "don’t have to",
+   "respect",
+   "customs",
+   "trash",
+   "polite",
+   "frustrated"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: o livro de regras de viagem da Lia (Tóquio, Singapura, gorjeta).",
+   "perg": "When you were a kid, what were the rules in your house?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o aluno e as regras, por mensagens.",
+   "perg": "Do you like rules, or do you break them?",
+   "pula": "Duas mensagens bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir: respect, customs, trash, polite, frustrated.",
+   "perg": "Which word is about your city?",
+   "pula": "Deixe o aluno chutar e siga rápido."
+  },
+  "video": {
+   "obj": "Vídeo sobre boas maneiras no Japão em quatro capítulos; depois True or Lie.",
+   "perg": "What must you do on a train in Japan?",
+   "pula": "Corte a conversa depois; não corte o True or Lie."
+  },
+  "falas": {
+   "obj": "Linha a linha do vídeo, com as palavras amarelas explicadas.",
+   "perg": "What does “keep it down” mean?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "diario": {
+   "obj": "Diário da Lia: ler em voz alta e tirar a regra de cada cidade.",
+   "perg": "What is the rule in this city?",
+   "pula": "Duas páginas bastam."
+  },
+  "regra": {
+   "obj": "A regra: must é regra, mustn’t é parede, don’t have to é porta aberta.",
+   "perg": "Is it a wall, or a free door?",
+   "pula": "Corrija dois erros, não quatro."
+  },
+  "passaporte": {
+   "obj": "Pressão: o professor lê a placa e o aluno diz a regra na hora.",
+   "perg": "Must, mustn’t or don’t have to?",
+   "pula": "Três placas bastam."
+  },
+  "casa": {
+   "obj": "As regras da casa do aluno, com must, mustn’t e don’t have to.",
+   "perg": "What mustn’t you do in your house?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "yuki": {
+   "obj": "Role-play: a Yuki vai passar uma semana na casa do aluno e pergunta as regras.",
+   "perg": "Do I have to take off my shoes?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-aposta": {
+   "obj": "Aposta: qual é a regra na Alemanha, em Veneza e em Nova York? Justificar e conferir.",
+   "perg": "What do you bet, and why?",
+   "pula": "Dois lugares bastam."
+  },
+  "fim": {
+   "obj": "Escrita: as regras da casa do aluno para um hóspede, duas de cada tipo.",
+   "perg": "What must a guest do in your home?",
+   "pula": "Uma de cada tipo basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre regras do trabalho, da cidade e da infância.",
+   "perg": "What do you have to do at work?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre regras de viagem e de casa.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Lia e conta as regras que aprendeu no Japão.",
+   "perg": "What mustn’t you do in Japan, Lia?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Rules in your life.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "must",
+    "mustn’t",
+    "don’t have to",
+    "have to"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WORK",
+     "q": "What do you have to do every day at work?",
+     "fup": "And what don’t you have to do?",
+     "st": [
+      "I have to …",
+      "I don’t have to …"
+     ],
+     "ex": "I have to answer emails, but I don’t have to wear a suit."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What mustn’t you do in your city?",
+     "fup": "Do people follow that rule?",
+     "st": [
+      "You mustn’t …",
+      "People …, but …"
+     ],
+     "ex": "You mustn’t smoke on the bus, and people follow it."
+    },
+    {
+     "k": "AS A KID",
+     "q": "What did you have to do as a kid?",
+     "fup": "Did you like that rule?",
+     "st": [
+      "I had to …",
+      "I didn’t have to …"
+     ],
+     "ex": "I had to be home at eight. I hated it."
+    },
+    {
+     "k": "BRAZIL",
+     "q": "What must a tourist know about Brazil?",
+     "fup": "What don’t they have to worry about?",
+     "st": [
+      "A tourist must …",
+      "They don’t have to …"
+     ],
+     "ex": "A tourist must try açaí. They don’t have to tip in a bar."
+    },
+    {
+     "k": "YOUR CLASS",
+     "q": "What must you do to learn English?",
+     "fup": "What don’t you have to do?",
+     "st": [
+      "I must …",
+      "I don’t have to …"
+     ],
+     "ex": "I must speak every day. I don’t have to be perfect."
+    },
+    {
+     "k": "YOUR WEEKEND",
+     "q": "What don’t you have to do on Sunday?",
+     "fup": "What do you do instead?",
+     "st": [
+      "On Sunday I don’t have to …",
+      "I …"
+     ],
+     "ex": "On Sunday I don’t have to wake up early. I sleep until ten."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "must",
+    "mustn’t",
+    "don’t have to",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Tips: must you tip, or don’t you have to?",
+     "a": "You must",
+     "b": "You don’t have to",
+     "fa": [
+      "You must tip, because waiters work hard."
+     ],
+     "fb": [
+      "You don’t have to. The price is the price."
+     ]
+    },
+    {
+     "q": "Shoes in the house: on or off?",
+     "a": "Off",
+     "b": "On",
+     "fa": [
+      "Off. You mustn’t bring the street in."
+     ],
+     "fb": [
+      "On. Guests don’t have to take them off."
+     ]
+    },
+    {
+     "q": "Phones on the train: talk or stay quiet?",
+     "a": "Stay quiet",
+     "b": "Talk",
+     "fa": [
+      "Stay quiet. You mustn’t bother people."
+     ],
+     "fb": [
+      "Talk, but keep it down."
+     ]
+    },
+    {
+     "q": "More rules in a city, or fewer rules?",
+     "a": "More",
+     "b": "Fewer",
+     "fa": [
+      "More. The city is cleaner and safer."
+     ],
+     "fb": [
+      "Fewer. People are adults."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Lia now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Lia.",
+   "perguntas": [
+    "What must you do on an escalator in Tokyo?",
+    "What mustn’t you do on a train in Japan?",
+    "Do you have to tip in a restaurant there?",
+    "What mustn’t you bring to Singapore?",
+    "Which rule was the strangest for you?",
+    "What rule from Japan do you want in your country?"
+   ],
+   "st": [
+    "You must …",
+    "You mustn’t …",
+    "You don’t have to …"
+   ],
+   "ex": "You don’t have to tip in Japan. It’s not expected."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Due To, As a Result",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/1b5d9fa5c9a9/due-to-as-a-result/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "cause and effect: due to / owing to / because of + noun; because + clause; As a result, / Consequently, start a new sentence; as a result OF + noun; which led to + noun or -ing",
   "abrir": "Think of something small that caused something big this week. What was the cause?",
   "fecho": "<b>Due to / because of / owing to</b> + a noun. <b>Because</b> + a whole clause. <b>As a result,</b> and <b>Consequently,</b> start a new sentence with the effect. <b>As a result of</b> + a noun. <b>Which led to</b> + a noun or an -ing form.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the Drift Lab. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/1b5d9fa5c9a9/due-to-as-a-result/img/live-laboratorio.webp",
+      "img": "../img/live-laboratorio.webp",
       "leg": "The Drift Lab",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
         {
           "t": "The ferry stopped due to the storm.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/1b5d9fa5c9a9/due-to-as-a-result/img/live-navio.webp"
+          "img": "../img/live-navio.webp"
         },
         {
           "t": "The sea was rough because the wind blew all night.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/1b5d9fa5c9a9/due-to-as-a-result/img/live-praia.webp"
+          "img": "../img/live-praia.webp"
         },
         {
           "t": "As a result, nobody could cross the bay.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/1b5d9fa5c9a9/due-to-as-a-result/img/live-farol.webp"
+          "img": "../img/live-farol.webp"
         }
       ]
     },
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/1b5d9fa5c9a9/due-to-as-a-result/img/live-pato.webp",
+      "img": "../img/live-pato.webp",
       "leg": "A toy duck on the beach",
       "pede": "Look at the picture: a small toy duck on a dark beach. Write a short chain of causes and effects about its journey. Use <b>due to, because of, as a result</b> or <b>which led to</b>.",
       "ph": "Due to a storm, …",

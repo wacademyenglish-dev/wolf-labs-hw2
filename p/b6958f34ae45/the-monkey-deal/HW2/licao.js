@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Ended Up",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b6958f34ae45/the-monkey-deal/img/live-sofa.webp",
+  "capa": "../img/live-sofa.webp",
   "alvo": "was going to + verb (the plan) · kept + -ing (the loop) · ended up + -ing (what really happened); never kept to, ended up to, ended up + past",
   "abrir": "What were you going to do last weekend, and what happened instead?",
   "fecho": "<b>I was going to</b> + verb: the plan (<i>I was going to start at nine</i>). <b>I kept</b> + -ing: the loop (<i>I kept checking my phone</i>). <b>I ended up</b> + -ing: what really happened (<i>I ended up ordering a pizza</i>). Never <i>kept to</i>, never <i>ended up to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on a Sunday morning. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/b6958f34ae45/the-monkey-deal/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A desk with a laptop and a cold coffee",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I was going to start at nine, but I kept opening and closing the file.",
-          "img": "https://wolf-labs.pages.dev/p/b6958f34ae45/the-monkey-deal/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I kept looking for my other shoe, so I ended up walking around the block.",
-          "img": "https://wolf-labs.pages.dev/p/b6958f34ae45/the-monkey-deal/img/live-bolsa.webp",
+          "img": "../img/live-bolsa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We were going to leave early, but we ended up watching one more episode.",
-          "img": "https://wolf-labs.pages.dev/p/b6958f34ae45/the-monkey-deal/img/live-sofa.webp",
+          "img": "../img/live-sofa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b6958f34ae45/the-monkey-deal/img/live-sofa.webp",
+      "img": "../img/live-sofa.webp",
       "leg": "A blanket, popcorn and a phone",
       "pede": "Look at the picture: a blanket, popcorn and a phone on the sofa. Write 2 or 3 sentences about a day when you had a plan and it changed. Use <b>was going to</b>, <b>kept + -ing</b> or <b>ended up + -ing</b>.",
       "ph": "I was going to … but I kept … and I ended up …",

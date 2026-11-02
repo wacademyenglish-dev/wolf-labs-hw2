@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Proof Room",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/52d2d4535f61/the-proof-room/img/live-saida.webp",
+  "capa": "../img/live-saida.webp",
   "alvo": "could (years, a skill) vs was able to (one moment, you did it) vs managed to (one moment, and it was hard); couldn't works for both",
   "abrir": "What was the hardest thing you did this week?",
   "fecho": "<b>Could</b> is for years, a skill: <i>I could swim at six.</i> For one moment use <b>was able to</b> (<i>I was able to book the last seat</i>) or <b>managed to</b> when it was hard (<i>After three tries, I managed to open it</i>). <b>Couldn't</b> works for both.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before work. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/52d2d4535f61/the-proof-room/img/live-caixa.webp",
+      "img": "../img/live-caixa.webp",
       "leg": "A stuck bike lock",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "After ten minutes, I managed to open the lock.",
-          "img": "https://wolf-labs.pages.dev/p/52d2d4535f61/the-proof-room/img/live-caixa.webp",
+          "img": "../img/live-caixa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Last year I could open any lock, but today I couldn't.",
-          "img": "https://wolf-labs.pages.dev/p/52d2d4535f61/the-proof-room/img/live-chaves.webp",
+          "img": "../img/live-chaves.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I was able to catch the early train, but I couldn't find a seat.",
-          "img": "https://wolf-labs.pages.dev/p/52d2d4535f61/the-proof-room/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/52d2d4535f61/the-proof-room/img/live-chaves.webp",
+      "img": "../img/live-chaves.webp",
       "leg": "Four keys on a table",
       "pede": "Look at the picture: the keys. Write 2 or 3 sentences: a problem you solved once (<b>managed to</b> / <b>was able to</b>) and something you <b>could</b> do as a child.",
       "ph": "Last week I managed to …",

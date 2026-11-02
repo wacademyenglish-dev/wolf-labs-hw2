@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Pitch Night",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5afa9d9bf166/b2-review-pitch-night/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "relative clauses (who, which, that, whose; never what), non-defining clauses between commas (which, not that), sentence relative ', which is why', reduced relatives (keys left by the door, people living alone), preposition + -ing (instead of explaining, insist on paying), make a decision / a mistake",
   "abrir": "Think of an invention you could not live without. Why do you need it?",
   "fecho": "<b>Who / which / that</b> for the thing or person, <b>whose</b> for what belongs to them, never <i>what</i>. Extra information goes between commas, with <b>which</b>: <i>The lamp, which costs forty dollars, …</i> <b>, which is why</b> adds the result. After a preposition: <b>-ing</b> (<i>insisted on paying</i>). <b>Make</b> a decision, a mistake.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after pitch night at a workshop. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/5afa9d9bf166/b2-review-pitch-night/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The lounge",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The lamp, which costs forty dollars, wakes you with the sunrise.",
-          "img": "https://wolf-labs.pages.dev/p/5afa9d9bf166/b2-review-pitch-night/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "He insisted on showing us the backpack instead of explaining it.",
-          "img": "https://wolf-labs.pages.dev/p/5afa9d9bf166/b2-review-pitch-night/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "People living alone love a box for keys left by the door.",
-          "img": "https://wolf-labs.pages.dev/p/5afa9d9bf166/b2-review-pitch-night/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5afa9d9bf166/b2-review-pitch-night/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A quiet lounge",
       "pede": "Look at the picture: a quiet lounge where people wait. Imagine you are an inventor pitching an idea there. Describe it with <b>who, which, whose</b> or <b>, which is why</b>.",
       "ph": "I invented a … which …",

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · What Did You Do on Saturday? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:opsz,wght@9..144,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>What Did You Do on Saturday? · The Monday Mic</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>What Did You Do on Saturday? · The Monday Mic</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> It’s Monday morning, and the student is the new street reporter for The Monday Morning.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: In a past question, did carries the past.</p><p style="margin:0 0 6px"><b>Short class (about 43 min):</b> I You and the Weekend · III Four Weekends · V Maple Street Plaza · VI The Rule · VII The Mystery Guest · XI The Monday Page. Skip if you’re short on time: VIII, IX, X (marked EXTRA on your screen). Full lesson: about 63 min.</p><p style="margin:0"><b>Open with:</b> “What do you usually do on Saturdays?”</p></div><!--/prep-->
+    <p>It’s Monday morning, and the student is the new street reporter for <i>The Monday Morning</i>. The column always asks one thing: <b>What did you do on Saturday?</b> First, four real people answer on video. Then the student takes the microphone to a plaza and asks the questions. After the rule, a <b>mystery guest</b>: the student can only ask <b>Did you…?</b>, and reports each answer to Nora, the editor, with a short answer. The front page, printed on dark paper, fills with YES and NO stamps. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>did</b> carries the past, so the verb goes back to its base: <i>Did you <b>go</b>? Where did you <b>go</b>?</i> The order: <b>question word + did + you + verb</b>. Short answers: <b>Yes, I did. No, she didn’t.</b> The mistakes: <i>Did you went?</i>, <i>Where you went?</i>, <i>You went?</i> (only the voice), <i>Yes, I went</i> as a short answer, <i>No, she don’t</i>.</p>
+    <h4>THE VIDEO</h4>
+    <p>A real video, 0:06 to 2:18, in four chapters (Tim, Buli, Sian, Georgie), sealed until you start. Every question in it has <b>did</b>. The speakers are British: they say <i>at the weekend</i>; in American English, <i>on the weekend</i>.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>weekend</i>, <i>hiking</i>, <i>beach</i>, <i>cake</i> and <i>swimming</i>, before the video, in match the columns and the missing word. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE REPORTER’S CHOICE (IX) AND THE SURPRISE QUESTION</h4>
+    <p>The student is still the Monday reporter: first they choose the question for a tired friend (you answer it, with <i>Yes, I did / No, I didn’t</i>), then which weekend from the video goes on page one. Answer first, then let them choose; wait five seconds in silence and let them say the whole sentence. The PUSH line (only you see it) is a quick yes or no. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one light personal question. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and the Weekend, V Maple Street Plaza, VII The Mystery Guest, VIII Monday, 8 AM, IX The Reporter’s Choice and X Your Weekend.</li>
+      <li><b>Listen</b>: II The Words, III Four Weekends and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule.</li>
+      <li><b>Write</b>: XI The Monday Page.</li>
+    </ul>
+    <p>No audio in this lesson: your voice is the guest’s and Nora’s.</p>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* WHAT DID YOU DO ON SATURDAY? (Main A1) · pergunta-surpresa · 27/10/2026 · Did you …? · did + verbo base */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'Last Saturday: did you cook?',
+    opc: ['Yes, I did.', 'No, I didn’t.'], st: ['Yes, I did. I made …', 'No, I didn’t. I …'],
+    ex: 'No, I didn’t. My brother made pizza!', push: 'Good pizza?' },
+  { cena: 'praca', tipo: 'Would you rather', q: 'Saturday night: a party or the sofa?',
+    opc: ['A party', 'The sofa'], st: ['Last Saturday, I …', 'I didn’t …'],
+    ex: 'The sofa! Last Saturday I didn’t go out. I watched a movie.', push: 'A good movie?' },
+  { cena: 'guest', tipo: 'And you?', q: 'Last Sunday: what did you eat?',
+    opc: ['Pizza', 'Rice and beans', 'I don’t remember!'], st: ['I ate …', 'I didn’t eat …'],
+    ex: 'Rice and beans, with my sister. I didn’t cook!', push: 'Dessert?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WHAT DID YOU DO ON SATURDAY? · THE MONDAY MIC (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A1 bem leve: escolher 1 de 3, frase quase pronta, o professor responde primeiro.
+   Entra no lugar de "IX · Quick Check" (extra, tocar-depois-dizer). O aluno é o repórter de
+   segunda: escolhe a primeira pergunta para o amigo cansado e o fim de semana do vídeo que vai para
+   a primeira página. A gramática (Did you …? · Yes, I did / No, I didn’t · did + verbo base) mora
+   nas opções e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'reporter', troca: 'quiz', est: 'o', min: 5, img: 'grafica', rot: 'The Reporter’s Choice', t: 'Monday morning. You choose.',
+    p: 'Your teacher answers first. Then choose one and say it.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The first question', sit: 'Monday. Your friend looks very tired.',
+        q: 'What do you ask first?', opc: ['Did you go out?', 'Did you sleep?', 'Did you work?'],
+        st: ['Did you …?', 'Yes, I did. / No, I didn’t.'],
+        ex: '“Did you go out?” “Yes, I did. I went to a party!”',
+        push: 'And you? Did you sleep?' },
+      { tag: 'Page one', sit: 'Page one has space for one weekend.',
+        q: 'Which one?', opc: ['Tim’s horror movie', 'Buli’s ice cream', 'Sian’s chocolate cake'],
+        st: ['… made / had / watched …', 'Did you …? is my question.'],
+        ex: 'Sian’s cake! She made it, and her family ate it all.',
+        push: 'A photo too? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Before the interviews: your weekends.",
+   "p": "You are the guest. Answer out loud."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. They turn yellow in the video."
+  },
+  "video": {
+   "t": "Four friends, four weekends.",
+   "p": "Listen to the answers and the questions."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again."
+  },
+  "praca": {
+   "t": "Eight answers. Ask the questions.",
+   "p": "Tap a person. Read. Ask the question."
+  },
+  "regra": {
+   "t": "In a past question, did carries the past.",
+   "p": "Say each wrong line right. Then tap it."
+  },
+  "guest": {
+   "t": "A mystery guest. Who is she?",
+   "p": "Ask Did you …? Then tell Nora."
+  },
+  "nora": {
+   "t": "Nora asks about YOUR Saturday.",
+   "p": "Short answer, one more sentence. Ask back."
+  },
+  "cv-reporter": {
+   "t": "Monday morning. You choose.",
+   "p": "Teacher first. Then choose and say it."
+  },
+  "roda": {
+   "t": "The microphone turns around.",
+   "p": "Pick a card. Answer. Ask your teacher."
+  },
+  "fim": {
+   "t": "Write your own interview.",
+   "p": "Three questions with did, and your answers."
+  }
+ },
+ "prep": {
+  "obj": "Perguntas no passado com did (Did you go? Where did you go?) e respostas curtas: o aluno é o repórter de rua do jornal The Monday Morning.",
+  "armadilha": "Passado em dobro (Did you went?), pergunta sem did como em português (Where you went? You went?), Yes, I went como resposta curta, No, she don’t.",
+  "pal": [
+   "Did you…?",
+   "Where did you go?",
+   "What did you do?",
+   "Yes, I did.",
+   "No, I didn’t.",
+   "weekend",
+   "hiking",
+   "beach"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o microfone de segunda: uma pergunta, várias respostas.",
+   "perg": "What do you usually do on Saturdays?",
+   "pula": "Só leia o título e pegue o microfone."
+  },
+  "abre": {
+   "obj": "Aquecimento: o aluno é o convidado do programa e fala dos fins de semana.",
+   "perg": "What did you do on Saturday?",
+   "pula": "Três perguntas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir (weekend, hiking, beach, cake, swimming).",
+   "perg": "What is hiking?",
+   "pula": "Faça só o ligar colunas."
+  },
+  "video": {
+   "obj": "Vídeo real em quatro capítulos (Tim, Buli, Sian, Georgie); todas as perguntas com did. Falantes britânicos.",
+   "perg": "Where did Sian go?",
+   "pula": "Veja dois capítulos."
+  },
+  "falas": {
+   "obj": "Fala por fala do vídeo; as palavras amarelas abrem a explicação.",
+   "perg": "What did he say here?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "praca": {
+   "obj": "O aluno tem as respostas de oito pessoas e faz a pergunta certa para cada uma.",
+   "perg": "What is the question for this answer?",
+   "pula": "Quatro pessoas bastam."
+  },
+  "regra": {
+   "obj": "A regra: did leva o passado, o verbo volta à base.",
+   "perg": "Did you went or did you go?",
+   "pula": "Três linhas bastam."
+  },
+  "guest": {
+   "obj": "Convidado misterioso: só perguntas Did you…?; depois resposta curta para Nora.",
+   "perg": "Did she go to the beach?",
+   "pula": "Quatro pistas bastam."
+  },
+  "nora": {
+   "obj": "Nora pergunta do sábado do aluno: resposta curta, mais uma frase e pergunta de volta.",
+   "perg": "Did you go out on Saturday?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-reporter": {
+   "obj": "O repórter escolhe a pergunta para um amigo cansado e o fim de semana da capa.",
+   "perg": "Which weekend goes on page one?",
+   "pula": "Uma escolha basta."
+  },
+  "roda": {
+   "obj": "Cartas de conversa: o aluno responde e faz a mesma pergunta ao professor.",
+   "perg": "Did you cook on Sunday?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: entrevista com três perguntas com did e respostas, com a linha vermelha.",
+   "perg": "Where did you go last Saturday?",
+   "pula": "Duas perguntas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas sobre o fim de semana, com Did you…? e respostas curtas.",
+   "perg": "Did you sleep late?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre fins de semana, respondendo no passado.",
+   "perg": "Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno é o repórter e entrevista o professor, passo a passo.",
+   "perg": "Did you have fun?",
+   "pula": "Faça os dois primeiros passos."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More weekend questions.",
+   "p": "Pick a card. Short answer, then one more.",
+   "palavras": [
+    "Did you…?",
+    "Yes, I did.",
+    "No, I didn’t.",
+    "went",
+    "had"
+   ],
+   "cartas": [
+    {
+     "k": "SATURDAY MORNING",
+     "q": "Did you sleep late on Saturday, or wake up early?",
+     "fup": "What time did you get up?",
+     "st": [
+      "Yes, I did. I …",
+      "No, I didn’t. I …"
+     ],
+     "ex": "Yes, I did. I got up at ten."
+    },
+    {
+     "k": "FOOD",
+     "q": "Did you cook on the weekend, or eat out?",
+     "fup": "What did you eat?",
+     "st": [
+      "I cooked …",
+      "I ate out. I had …"
+     ],
+     "ex": "I ate out. I had a pizza with my sister."
+    },
+    {
+     "k": "OUTSIDE",
+     "q": "Did you go to the beach or to a park?",
+     "fup": "Who did you go with?",
+     "st": [
+      "I went to …",
+      "I didn’t go out."
+     ],
+     "ex": "I didn’t go to the beach, but I went to a park with my dog."
+    },
+    {
+     "k": "SPORTS",
+     "q": "Did you go swimming or hiking last month?",
+     "fup": "Did you like it?",
+     "st": [
+      "Yes, I did. I went …",
+      "No, I didn’t."
+     ],
+     "ex": "No, I didn’t. I didn’t do any sports."
+    },
+    {
+     "k": "FRIENDS",
+     "q": "Did you see a friend on Sunday?",
+     "fup": "Where did you go?",
+     "st": [
+      "Yes, I did. We went …",
+      "No, I didn’t. I stayed …"
+     ],
+     "ex": "Yes, I did. We went to a café."
+    },
+    {
+     "k": "TV",
+     "q": "Did you watch a movie or a series?",
+     "fup": "Did you like it?",
+     "st": [
+      "I watched …",
+      "It was …"
+     ],
+     "ex": "I watched a series. It was very good."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "Did you…?",
+    "went",
+    "stayed"
+   ],
+   "rodadas": [
+    {
+     "q": "The best Saturday: you went out or you stayed home?",
+     "a": "Went out",
+     "b": "Stayed home",
+     "fa": [
+      "I went out. I saw my friends."
+     ],
+     "fb": [
+      "I stayed home. I slept a lot."
+     ]
+    },
+    {
+     "q": "A beach day or a hiking day?",
+     "a": "The beach",
+     "b": "Hiking",
+     "fa": [
+      "The beach. I went swimming."
+     ],
+     "fb": [
+      "Hiking. I walked for five hours."
+     ]
+    },
+    {
+     "q": "Sunday lunch: you cooked or you ate out?",
+     "a": "Cooked",
+     "b": "Ate out",
+     "fa": [
+      "I cooked. It was cheaper."
+     ],
+     "fb": [
+      "I ate out. I didn’t wash the dishes."
+     ]
+    },
+    {
+     "q": "Page one: a quiet weekend or a crazy weekend?",
+     "a": "Quiet",
+     "b": "Crazy",
+     "fa": [
+      "Quiet. Everybody had a quiet weekend."
+     ],
+     "fb": [
+      "Crazy. People like a good story."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the page is full."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Interview",
+   "t": "Now interview your teacher.",
+   "p": "Ask each question with did. Then report.",
+   "prof": "Answer briefly, then let the student report to Nora: He / She went …",
+   "passos": [
+    {
+     "q": "Ask where your teacher went on Saturday.",
+     "st": [
+      "Where did you …?"
+     ],
+     "ex": "Where did you go on Saturday?"
+    },
+    {
+     "q": "Ask what your teacher did there.",
+     "st": [
+      "What did you …?"
+     ],
+     "ex": "What did you do there?"
+    },
+    {
+     "q": "Ask a yes or no question.",
+     "st": [
+      "Did you …?"
+     ],
+     "ex": "Did you have fun?"
+    },
+    {
+     "q": "Now tell Nora the answers.",
+     "st": [
+      "My teacher went …",
+      "He / She didn’t …"
+     ],
+     "ex": "My teacher went to the park. She didn’t go swimming."
+    }
+   ],
+   "fim": "Interview done. Page one is ready."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

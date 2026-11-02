@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "With All Due Respect",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/dae4b2714083/with-all-due-respect/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "disagreeing diplomatically: I take your point, but ... · I see it slightly differently · I'm not sure I'd go that far · Correct me if I'm wrong, but ... · I hear what you're saying. However, ... · softeners (a bit, slightly, perhaps, might); With all due respect is a warning, not a compliment; never 'with all respect', 'I see it different', 'disagree of'",
   "abrir": "Think of the last time someone disagreed with you politely. What did they say?",
   "fecho": "<b>Recognise first, then soften</b>: <i>I take your point, but I see it slightly differently.</i> <b>Ask, don't accuse</b>: <i>Correct me if I'm wrong, but didn't we vote last spring?</i> Cool it down with <b>a bit, slightly, perhaps, might</b>. The full phrase is <b>with all due respect</b>, and it usually warns that something sharp is coming. You <b>disagree with</b> someone, never <i>of</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before a tense residents' meeting. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/dae4b2714083/with-all-due-respect/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The meeting room, before the meeting",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I take your point, but I see it slightly differently.",
-          "img": "https://wolf-labs.pages.dev/p/dae4b2714083/with-all-due-respect/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Correct me if I'm wrong, but didn't we vote on this last spring?",
-          "img": "https://wolf-labs.pages.dev/p/dae4b2714083/with-all-due-respect/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I hear what you're saying. However, perhaps we could look at the costs first.",
-          "img": "https://wolf-labs.pages.dev/p/dae4b2714083/with-all-due-respect/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/dae4b2714083/with-all-due-respect/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A quiet lounge after a tense meeting",
       "pede": "Look at the picture: a quiet lounge, two cups on a table, after a tense meeting. Write 2 or 3 sentences disagreeing politely with someone about a real topic (a plan, a rule, a price). Use <b>I take your point, but …</b>, <b>I see it slightly differently</b> or <b>I'm not sure I'd go that far</b>.",
       "ph": "I take your point, but …",

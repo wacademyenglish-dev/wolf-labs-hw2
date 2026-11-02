@@ -1,0 +1,2 @@
+/* a abertura desta aula (kit/abertura.js) · modo mural · gravado por kit/abertura_grava.py */
+window.WL_ABERTURA = {"modo": "mural", "rot": "One Word", "t": "Big news, in one word.", "p": "Each of you writes one word about recent news. Then talk about it.", "q": "One word: what is the biggest news of your week?", "extras": ["Mars", "rain", "prices"], "de": "news", "fup": "Why that word? What has happened? What has been found or made?", "fst": ["Scientists have found …", "… has been …", "It has just …"], "fex": "Rain. It has rained every day. A road has been closed."};

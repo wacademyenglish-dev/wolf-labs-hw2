@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Old Photo",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/42ef449fab0a/the-old-photo/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "there was / there were (one thing, many things), there wasn't / weren't any, Was there ...? Were there ...?; the past of there is / there are",
   "abrir": "What was there on your street when you were a child?",
   "fecho": "<b>There was</b> + one thing, <b>there were</b> + many things: <i>There was a cinema, and there were two coffee shops.</i> No: <b>there wasn't a</b> / <b>there weren't any</b>. A question: <b>Was there a ...?</b> Never <i>had</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo find a box of old photos. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/42ef449fab0a/the-old-photo/img/live-caixa.webp",
+      "img": "../img/live-caixa.webp",
       "leg": "A box of old photos",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -99,17 +99,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "There was a small cinema on Main Street.",
-          "img": "https://wolf-labs.pages.dev/p/42ef449fab0a/the-old-photo/img/live-rua.webp",
+          "img": "../img/live-rua.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "There were two old trains at the station.",
-          "img": "https://wolf-labs.pages.dev/p/42ef449fab0a/the-old-photo/img/live-estacao.webp",
+          "img": "../img/live-estacao.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "There wasn't a TV in the kitchen.",
-          "img": "https://wolf-labs.pages.dev/p/42ef449fab0a/the-old-photo/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -153,7 +153,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/42ef449fab0a/the-old-photo/img/live-caixa.webp",
+      "img": "../img/live-caixa.webp",
       "leg": "A box of old photos",
       "pede": "Look at the picture: a box of old photos. Write 2 or 3 sentences about a street or a town in the past. Use <b>there was</b>, <b>there were</b> or <b>there weren't any</b>.",
       "ph": "In the old photo there was …",

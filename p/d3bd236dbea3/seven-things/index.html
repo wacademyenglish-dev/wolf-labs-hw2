@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Seven Things the House Can Do · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Smart House · Can and Can’t</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Seven Things the House Can Do · The Smart House</h2>
+    <p>The owner is away for a week. The smart house runs on its own and writes down everything it does. On screen: a control panel with seven functions. Every <b>can</b> lights a function; every <b>can’t</b> turns one red. At the end, the night log shows one thing the house <b>can’t</b> do, so somebody was inside. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>can / can’t</b> + the plain verb, one form for everyone: <i>he can</i>, never <i>he cans</i>; <i>can swim</i>, never <i>can to swim</i>. Questions and short answers with no <i>do</i>: <b>Can you…? Yes, I can. / No, I can’t.</b> One word, three jobs: ability, permission, possibility. In speech, <i>can</i> is short and weak (/kən/); <i>can’t</i> is long and strong.</p>
+    <h4>THE AUDIO</h4>
+    <p>Every line has pause and 0.75×, and the transcript opens only after listening. All transcripts were checked against the audio. The four questions in scene XI are the house asking the student about their own life (<i>What can you do that most people cannot?</i> and three more).</p>
+    <!--conversa--><h4>OK OR NOT OK? (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Three things the smart house can do in your student’s home: open the door for the neighbour, play loud music at seven, talk to the cat. Green OK or red Not OK, then the sentence with can or can’t. This keeps the permission job of can alive before the night log. There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it) to make it a little harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You First, II Can You?, III The Panel, VII OK or Not OK? (green or red, then can / can’t), IX She Has a Key, X Sell Me the House.</li>
+      <li><b>Listen</b>: V No Hands, VI Hey, House (the student wakes the house out loud, asks, then hears the answer), XI Lights Off.</li>
+      <li><b>Focus</b>: IV It Never Changes, VIII The Night Log. Don’t give the mystery away: let the red list from scene V do the work.</li>
+      <li><b>Write</b>: XI, their own house, with the red wavy line for <i>cans</i>, <i>can to</i>, <i>don’t can</i>, <i>Do you can</i> and <i>can drives</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>THE SALE</h4>
+    <p>Round 1: sell the house with energy; the student asks with <i>Can it…?</i> Round 2: swap. Tap the ideas you use and the parts you hear. Strong students: the customer must find one thing the house can’t do.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The panel, the red functions, the log and the wake-up light move on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SEVEN THINGS THE HOUSE CAN DO (Main A1) · pergunta-surpresa · 27/10/2026 · can / can’t */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'painel', tipo: 'Would you rather', q: 'A house that can cook, or clean?',
+    opc: ['Cook', 'Clean'], st: ['A house that can …', 'I can’t … very well.'],
+    ex: 'Cook! I can’t cook very well.', push: 'Can you clean? Yes or no?' },
+  { cena: 'limites', tipo: 'And you?', q: 'What can’t you do at home?',
+    opc: ['Sing loud', 'Cook', 'Sleep late'], st: ['At home, I can’t …'],
+    ex: 'At home, I can’t sing loud. My neighbours!', push: 'Can you play music at night? Yes or no?' },
+  { cena: 'registro', tipo: 'What if', q: 'Your house can do one new thing. What?',
+    opc: ['Make coffee', 'Walk the dog', 'Do my homework'], st: ['My house can …'],
+    ex: 'My house can make coffee. Every morning!', push: 'Every day? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SEVEN THINGS THE HOUSE CAN DO (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "OK / Not OK" (duas cores) no lugar de "VII · Three Jobs" (extra, prática controlada de escolher o trabalho do can).
+   O trabalho da PERMISSÃO continua aqui, na voz do aluno: a casa PODE abrir a porta para a vizinha? Tocar música às 7? Falar com o gato?
+   O painel (III), a regra (IV), o registro e a chave (VIII–IX) e a venda (X) ficam.
+   A gramática da aula (can / can’t + verbo, uma forma para todos) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'ok', troca: 'tres', est: 'o', min: 5, img: 'sala', rot: 'OK or Not OK?', t: 'Your smart house. OK, or not OK?',
+    p: 'Choose one. Your teacher answers first. Then say it with can or can’t.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The door', sit: 'Your neighbour is at the door.', q: 'The house can open it. OK?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. She can come in.', 'Not OK. She can’t come in.'],
+        ex: 'Not OK! She can’t come in. She can wait.',
+        push: 'And your best friend? OK?' },
+      { tag: 'Music', sit: 'Seven in the morning.', q: 'The house can play loud music. OK?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. It can play music.', 'Not OK. It can’t play music now.'],
+        ex: 'Not OK. It can’t play music at seven. I sleep!',
+        push: 'At nine? OK?' },
+      { tag: 'The cat', sit: 'Your cat is alone all day.', q: 'The house can talk to your cat. OK?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. It can talk to my cat.', 'Not OK. It can’t talk to him.'],
+        ex: 'OK! It can talk to my cat. He can listen to music too.',
+        push: 'Can the cat open the door? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "eu": {
+   "t": "Three things you can do. One you can’t.",
+   "p": "Say them out loud. Any words are OK."
+  },
+  "consigo": {
+   "t": "Six questions about you.",
+   "p": "Answer Yes, I can or No, I can’t."
+  },
+  "painel": {
+   "t": "Seven functions, seven rooms.",
+   "p": "Tap a function. Say what the house can do."
+  },
+  "naomuda": {
+   "t": "The middle word never moves.",
+   "p": "Pick the piece. Read the sentence."
+  },
+  "limites": {
+   "t": "Where does the house stop?",
+   "p": "Listen first. Say both halves."
+  },
+  "hey": {
+   "t": "The house is asleep. Wake it up.",
+   "p": "Say Hey, House! Ask. Then listen."
+  },
+  "cv-ok": {
+   "t": "Your smart house. OK or not OK?",
+   "p": "Choose. Your teacher goes first. Use can or can’t."
+  },
+  "registro": {
+   "t": "The night log.",
+   "p": "Read each line. One line is not its work."
+  },
+  "chave": {
+   "t": "Six a.m. The plates are still drying.",
+   "p": "Read the three facts. Who is it?"
+  },
+  "venda": {
+   "t": "A salesperson and a suspicious customer.",
+   "p": "Round 1: you ask. Round 2: you sell."
+  },
+  "fim": {
+   "t": "Four questions from the house.",
+   "p": "Listen and answer. Then write about your house."
+  }
+ },
+ "prep": {
+  "obj": "Can / can’t + verbo puro: habilidade, permissão e possibilidade. A casa inteligente se cuida sozinha, mas o log da noite mostra que alguém entrou.",
+  "armadilha": "Brasileiro conjuga e põe auxiliar: “he cans”, “can to swim”, “Do you can…?”. E fala can forte demais: na fala é /kən/, curto.",
+  "pal": [
+   "can",
+   "can’t",
+   "Can it…?",
+   "Yes, it can.",
+   "No, it can’t.",
+   "turn on",
+   "open",
+   "smart house"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a casa inteligente: o dono viajou e a casa faz tudo sozinha.",
+   "perg": "Would you like a smart house?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "eu": {
+   "obj": "Aquecimento pessoal: coisas que o aluno sabe e não sabe fazer. Não corrija ainda.",
+   "perg": "What can you do well?",
+   "pula": "Duas coisas bastam."
+  },
+  "consigo": {
+   "obj": "Perguntas com Can you…? e respostas curtas, sem do.",
+   "perg": "Can you cook? Can you swim?",
+   "pula": "Quatro perguntas bastam."
+  },
+  "painel": {
+   "obj": "Cada função da casa vira uma frase com can (It can open the door).",
+   "perg": "What can the house do in the kitchen?",
+   "pula": "Quatro funções bastam."
+  },
+  "naomuda": {
+   "obj": "Can não muda com a pessoa: he can, she can, they can.",
+   "perg": "He can or he cans?",
+   "pula": "Quatro frases bastam."
+  },
+  "limites": {
+   "obj": "Escuta: o que a casa pode e não pode fazer; can’t forte e longo.",
+   "perg": "Can the house cook? What can’t it do?",
+   "pula": "Três frases bastam."
+  },
+  "hey": {
+   "obj": "O aluno acorda a casa em voz alta, pergunta com Can you…? e ouve a resposta.",
+   "perg": "What do you ask the house?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-ok": {
+   "obj": "Três situações da casa do aluno; can de permissão, OK ou não OK.",
+   "perg": "Can the house open the door for the neighbor?",
+   "pula": "Duas situações bastam."
+  },
+  "registro": {
+   "obj": "O log da noite: uma linha não é trabalho da casa. Não entregue o mistério.",
+   "perg": "Which line is strange?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "chave": {
+   "obj": "Três pistas para descobrir quem tem a chave da casa.",
+   "perg": "Who is it? How do you know?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "venda": {
+   "obj": "Vender a casa: o cliente pergunta com Can it…?; depois os papéis trocam.",
+   "perg": "Can it wash the dishes?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "A casa pergunta sobre a vida do aluno; depois ele escreve sobre a própria casa.",
+   "perg": "What can you do that most people can’t?",
+   "pula": "Duas perguntas e três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra sobre habilidades e tecnologia, com can / can’t.",
+   "perg": "What can your phone do?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre casas e máquinas, sempre com can.",
+   "perg": "A robot that can cook or can clean?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a casa inteligente e responde ao professor com can / can’t.",
+   "perg": "House, what can you do at night?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More can questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "can",
+    "can’t",
+    "Yes, I can.",
+    "No, I can’t."
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PHONE",
+     "q": "What can your phone do?",
+     "fup": "What can’t it do?",
+     "st": [
+      "It can …",
+      "It can’t …"
+     ],
+     "ex": "It can take great pictures, but it can’t make coffee."
+    },
+    {
+     "k": "YOUR KITCHEN",
+     "q": "What can you cook?",
+     "fup": "Can you make a cake?",
+     "st": [
+      "I can cook …",
+      "No, I can’t."
+     ],
+     "ex": "I can cook rice and beans. No, I can’t make a cake."
+    },
+    {
+     "k": "YOUR LANGUAGES",
+     "q": "What languages can you speak?",
+     "fup": "Can you sing in English?",
+     "st": [
+      "I can speak …",
+      "I can’t …"
+     ],
+     "ex": "I can speak Portuguese and a little English. I can’t speak Spanish."
+    },
+    {
+     "k": "YOUR WEEKEND",
+     "q": "What can you do on Saturday that you can’t do on Monday?",
+     "fup": "Can you sleep late?",
+     "st": [
+      "On Saturday I can …",
+      "Yes, I can."
+     ],
+     "ex": "On Saturday I can sleep late and watch movies."
+    },
+    {
+     "k": "YOUR TALENT",
+     "q": "What can you do very well?",
+     "fup": "Can your friends do it too?",
+     "st": [
+      "I can … very well.",
+      "They can’t …"
+     ],
+     "ex": "I can draw very well. My friends can’t draw."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "What can your neighbors hear from your home?",
+     "fup": "Can you hear them?",
+     "st": [
+      "They can hear …",
+      "I can hear …"
+     ],
+     "ex": "They can hear my dog. I can hear their baby at night."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "can",
+    "can’t"
+   ],
+   "rodadas": [
+    {
+     "q": "A robot that can cook or a robot that can clean?",
+     "a": "Cook",
+     "b": "Clean",
+     "fa": [
+      "Cook. I can’t cook."
+     ],
+     "fb": [
+      "Clean. I hate cleaning."
+     ]
+    },
+    {
+     "q": "A smart house or a normal house?",
+     "a": "Smart house",
+     "b": "Normal house",
+     "fa": [
+      "A smart house. It can do everything."
+     ],
+     "fb": [
+      "A normal house. It can’t listen to me."
+     ]
+    },
+    {
+     "q": "The house can open the door for friends: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. My friends can come in."
+     ],
+     "fb": [
+      "No. Only I can open the door."
+     ]
+    },
+    {
+     "q": "Can you live one week without your phone?",
+     "a": "Yes, I can",
+     "b": "No, I can’t",
+     "fa": [
+      "Yes, I can. I can read books."
+     ],
+     "fb": [
+      "No, I can’t. I can’t work without it."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the smart house now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the smart house.",
+   "perguntas": [
+    "Can you open the door?",
+    "Can you cook dinner?",
+    "What can you do at night?",
+    "Can you talk to the cat?",
+    "What can’t you do?",
+    "Can you see who came in last night?"
+   ],
+   "st": [
+    "Yes, I can.",
+    "No, I can’t.",
+    "I can … but I can’t …"
+   ],
+   "ex": "Yes, I can open the door. But I can’t wash the plates."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

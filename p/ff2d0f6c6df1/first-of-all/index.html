@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · First of All · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 7 · B1</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 7 · First of All · B1</h2>
+    <p>Episode 7 of <b>Better Speaking</b>, B1 version. Steffi Graf tells her month in order: first Paris, then Wimbledon. Callum puts Richard&rsquo;s morning in order. The language is <b>sequencers</b>: <b>first of all, then, after that, finally</b>. The sister lesson for B2 is &ldquo;Before Paris&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Your day, Fix the order. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; In order, Put Richard&rsquo;s day in order, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Your perfect day. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>&ldquo;Depois&rdquo; at the start becomes <i>After, I went&hellip;</i>. <i>Firstly of all</i>. And &ldquo;no final&rdquo; becomes <i>in the final</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 7 · FIRST OF ALL (B1)
+   Vídeo: BBC Learning English, Better Speaking (Fq_kvS7RcAM), três trechos (~3:00).
+   Alvo: contar na ordem (first of all, then, after that, finally). Nenhuma B1 ensina. A aula irmã B2 é a "Before Paris". */
+const M = { nome: "First of All", kick: "B1 · FIRST OF ALL, THEN, AFTER THAT, FINALLY" };
+var EP = {
+  n: 7, de: 8, nivel: 'B1', titulo: 'First of All', video: 'Fq_kvS7RcAM',
+  convidado: 'Steffi Graf', habilidade: 'tell a story in order',
+  trechos: [
+    { ini: 81, fim: 140, rot: 'Steffi: Paris, then Wimbledon' },
+    { ini: 242, fim: 301, rot: 'Callum puts Richard\'s day in order' },
+    { ini: 507, fim: 566, rot: 'Learners: mistakes are OK' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'First Paris, then Wimbledon. Steffi Graf tells her month in order, and it\'s easy to follow. Today: first of all, then, after that, finally.',
+      nota: 'Ask: what did you do last Saturday? From the morning.' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Your <em>day</em>', pt: 'Abra uma carta e conte em voz alta, na ordem.',
+      nota: 'Talk only. Ask “and then?” to keep the story going.',
+      cartas: [
+        { frente: 'Today', verso: 'What did you do this morning?', dica: 'First, I… then I…', cor: 'var(--guest)', fw: { q: 'And after that?', st: ['After that, I…', 'Then I…', 'Finally, I…'], help: '“After that, I took the bus to work.”' } },
+        { frente: 'Tennis', verso: 'Do you watch tennis or any sport on TV?', dica: 'Yes, I watch… / No, I don\'t.', cor: 'var(--host)', fw: { q: 'Who is your favorite athlete?', st: ['My favorite is…', 'I like… because…'], help: '“My favorite is Rayssa Leal. She\'s so young!”' } },
+        { frente: 'Mistakes', verso: 'Do you worry about making mistakes in English?', dica: 'Yes, a lot. / Not really.', cor: 'var(--teacher)', fw: { q: 'What do you do after a mistake?', st: ['I try again.', 'I stop talking.', 'I laugh.'], help: '“I laugh and try again!”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 3 minutes', titulo: 'Listen to <em>Steffi Graf</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Steffi Graf is from…', ops: [{ t: 'Germany' }, { t: 'France' }] }, { q: 'Before Paris, her back was…', ops: [{ t: 'hurting' }, { t: 'perfect' }] } ],
+      durante: 'Listen to Callum put Richard\'s morning in order: first, then, after that, finally.',
+      depois: [ { f: 'Steffi wasn\'t sure she could play in Paris.', ok: 1 }, { f: 'Richard went to the BBC first, then to work.', ok: 0 }, { f: 'At the pub, Richard had an orange juice.', ok: 1 }, { f: 'The learners say mistakes are a shame.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'In <em>order</em>', pt: 'As palavras que mostram a ordem: começo, meio e fim.',
+      nota: 'Read each card. The red card is “after” alone at the start.',
+      cartoes: [ { g: '<b>First of all</b>, I got up.', p: 'The beginning.' }, { g: '<b>Then</b> I went to work. <b>After that</b>, I went to the pub.', p: 'The middle.' }, { g: '<b>Finally</b>, I came to the BBC.', p: 'The end.' }, { g: 'After, I went to the pub.', p: 'Say: After THAT, I went… or Then I went…', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'Richard\'s morning', titulo: 'Put Richard\'s day in <em>order</em>', pt: 'Toque na palavra e depois no que Richard fez.',
+      nota: 'From the episode. Say the full story in order at the end.',
+      esq: ['First of all,', 'Then', 'After that,', 'While he was in the pub,', 'Finally,'], dir: ['he got up.', 'he went to work.', 'he went to the pub.', 'he bumped into a friend.', 'he came to the BBC.'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Now tell me your morning with the same words.', st: ['First of all, I…', 'Then I…', 'Finally, I…'], help: '“First of all, I had coffee. Then I walked the dog.”' } },
+    { k: 'cartas', est: 'o', rot: 'the mixed-up day', titulo: 'Fix the <em>order</em>', pt: 'Vire a carta: as ações estão misturadas. Conte na ordem certa.',
+      nota: 'The student reorders the actions and tells the story with first, then, after that, finally.',
+      cartas: [
+        { frente: 'Day 1', sob: 'reorder', verso: 'had breakfast · went to bed · got up · went to school', dica: 'First of all,…', cor: 'var(--guest)', fw: { q: 'Now mix up your own day. I\'ll put it in order.', st: ['I…, I…, I…'], help: 'Say four things you did yesterday, in the wrong order.' } },
+        { frente: 'Day 2', sob: 'reorder', verso: 'paid · went to the supermarket · cooked dinner · made a list', dica: 'Then… After that…', cor: 'var(--host)' },
+        { frente: 'Day 3', sob: 'reorder', verso: 'won the final · played in Paris · hurt her back · went to Wimbledon', dica: 'Finally,…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: '“Depois”, “primeiramente” and “no final”.',
+      itens: [ { erro: '<s>After,</s> I went to the pub.', certo: '<b>After that,</b> I went to the pub.', por: '“Depois” at the start = after that / then.' }, { erro: '<s>Firstly of all</s>, I got up.', certo: '<b>First of all</b>, I got up.', por: 'First of all (or just First).' }, { erro: '<s>In the final</s>, I came to the BBC.', certo: '<b>Finally</b>, I came to the BBC.', por: '“No final” = finally / in the end.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Read each one aloud.',
+      itens: [ { f: '___ of all, you got up.', ops: ['First', 'Firstly'], ok: 0 }, { f: 'After ___, you went to the pub.', ops: ['that', 'it'], ok: 0 }, { f: '___, you came to the BBC.', ops: ['Finally', 'In the final'], ok: 0 }, { f: '___ Paris, I wasn\'t sure I could play.', ops: ['Before', 'First'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>perfect day</em>', pt: 'Escreva o seu dia perfeito, na ordem, com first of all, then, after that e finally.',
+      ph: 'First of all, I… Then I… After that, I… Finally, I…', nota: 'The line under the paper catches “After,” at the start and “in the final”. SAVE sends it to My notes.',
+      banco: ['First of all,', 'Then', 'After that,', 'Finally,', 'I woke up', 'I went to', 'I had'],
+      regras: [['(^|[.!?]\\s*)after,', 'Check: After THAT, … or Then…'], ['\\bin the final\\b', 'Check: FINALLY or IN THE END.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Eight-ish', tx: 'The last episode: ABBA. “About eight or nine golden records.” How to say a number when you aren\'t sure.',
+      ganchos: [['Next guest', 'ABBA'], ['The skill', 'about, around, -ish'], ['Your task', 'tell your day in order']], nota: 'Ask: what time do you usually have dinner? More or less? That opens Episode 8.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "First Paris, then Wimbledon. A story in order is easy to follow."
+  },
+  "c9": {
+   "p": "ABBA: “eight or nine records”. Numbers when you aren't sure."
+  }
+ },
+ "prep": {
+  "obj": "Sequenciadores: first of all, then, after that, finally. Steffi Graf conta o mês em ordem (primeiro Paris, depois Wimbledon); Callum ordena a manhã do Richard.",
+  "armadilha": "“Depois” no começo vira “After, I went…”, “primeiramente” vira “Firstly of all” e “no final” vira “in the final”.",
+  "pal": [
+   "first of all",
+   "then",
+   "after that",
+   "finally",
+   "in the end",
+   "Paris",
+   "Wimbledon",
+   "And then?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a convidada: Steffi Graf conta o mês em ordem e é fácil de acompanhar.",
+   "perg": "What did you do last Saturday? From the morning.",
+   "pula": "Uma resposta e siga."
+  },
+  "c1": {
+   "obj": "Conversa sobre o dia do aluno; pergunte “and then?” para a história continuar.",
+   "perg": "What did you do this morning? And then?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes da Steffi Graf, em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "Where did she go first?",
+   "pula": "Assista uma vez só; os clipes vão inteiros."
+  },
+  "c3": {
+   "obj": "A regra: first of all, then, after that, finally; o cartão vermelho é After sozinho no começo.",
+   "perg": "Tell me your morning with first of all and then.",
+   "pula": "Leia os cartões e peça três frases."
+  },
+  "c4": {
+   "obj": "Ordenar a manhã do Richard (do episódio) e contar a história inteira no fim.",
+   "perg": "Tell Richard's morning from the start.",
+   "pula": "Ordene e pule o reconto."
+  },
+  "c5": {
+   "obj": "O dia bagunçado: o aluno reordena as ações e conta com os sequenciadores.",
+   "perg": "What comes first? And after that?",
+   "pula": "Uma carta basta."
+  },
+  "c6": {
+   "obj": "Corrigir as três armadilhas: After no começo, Firstly of all, in the final.",
+   "perg": "What's wrong here? Say the right one.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c7": {
+   "obj": "Prática: escolher a palavra e ler cada frase em voz alta.",
+   "perg": "Read it aloud. Why that word?",
+   "pula": "Faça três linhas."
+  },
+  "c8": {
+   "obj": "Escrever o dia perfeito em ordem; vai para o My notes.",
+   "perg": "What happens first on your perfect day?",
+   "pula": "Três passos bastam."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 8: ABBA e números aproximados.",
+   "perg": "What time do you usually have dinner? More or less?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais histórias em ordem sobre a vida do aluno.",
+   "perg": "What happened first? And then?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre ordem e planejamento, com sequenciadores nos argumentos.",
+   "perg": "Which side are you on? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Steffi Graf e conta o mês dela em ordem.",
+   "perg": "Steffi, what did you do first?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Tell it in order.",
+   "p": "Pick a card. First, then, finally.",
+   "palavras": [
+    "first of all",
+    "then",
+    "after that",
+    "finally"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR MORNING",
+     "q": "What did you do this morning, in order?",
+     "fup": "And after that?",
+     "st": [
+      "First of all, I …",
+      "Then I …",
+      "After that, …"
+     ],
+     "ex": "First of all, I made coffee. Then I checked my phone. After that, I took a shower."
+    },
+    {
+     "k": "A TRIP",
+     "q": "Tell me about a trip, from the start.",
+     "fup": "What happened in the end?",
+     "st": [
+      "First, we went to …",
+      "Finally, …"
+     ],
+     "ex": "First, we went to Rio. Then we drove to Paraty. Finally, we came home tired."
+    },
+    {
+     "k": "A RECIPE",
+     "q": "How do you make your favorite dish?",
+     "fup": "What's the secret step?",
+     "st": [
+      "First of all, you …",
+      "Then you …",
+      "Finally, …"
+     ],
+     "ex": "First of all, you cut the onions. Then you fry them. Finally, you add the rice."
+    },
+    {
+     "k": "YOUR CAREER",
+     "q": "Tell me your work story in three steps.",
+     "fup": "What comes next?",
+     "st": [
+      "First, I worked as …",
+      "After that, …",
+      "Now …"
+     ],
+     "ex": "First, I worked in a shop. After that, I studied design. Now I work for an agency."
+    },
+    {
+     "k": "A BAD DAY",
+     "q": "Tell me about a day when everything went wrong.",
+     "fup": "How did it end?",
+     "st": [
+      "First of all, …",
+      "Then …",
+      "And finally …"
+     ],
+     "ex": "First of all, I lost my keys. Then it rained. And finally, my bus didn't come."
+    },
+    {
+     "k": "YOUR WEEKEND PLAN",
+     "q": "What's your plan for next weekend, in order?",
+     "fup": "What's the best part?",
+     "st": [
+      "First, I'm going to …",
+      "After that, …"
+     ],
+     "ex": "First, I'm going to sleep late. After that, I'm going to visit my mom."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "first of all",
+    "then",
+    "finally",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Plan your day in order, or just go with the flow?",
+     "a": "Plan it",
+     "b": "Go with the flow",
+     "fa": [
+      "Plan it. First of all, you do the hard things.",
+      "Then the rest of the day is easy."
+     ],
+     "fb": [
+      "Go with the flow. Plans always change.",
+      "The best things happen by surprise."
+     ]
+    },
+    {
+     "q": "Tell a story from the start, or start with the big moment?",
+     "a": "From the start",
+     "b": "The big moment",
+     "fa": [
+      "From the start, like Steffi Graf. It's easy to follow.",
+      "First Paris, then Wimbledon."
+     ],
+     "fb": [
+      "The big moment first. People listen more.",
+      "Then you explain how it happened."
+     ]
+    },
+    {
+     "q": "Work first and rest later, or rest first?",
+     "a": "Work first",
+     "b": "Rest first",
+     "fa": [
+      "Work first. Then you rest with no worries.",
+      "Finally, you enjoy your free time."
+     ],
+     "fb": [
+      "Rest first. After that, you work better.",
+      "A tired person makes mistakes."
+     ]
+    },
+    {
+     "q": "In a presentation: first the numbers or first a story?",
+     "a": "Numbers",
+     "b": "A story",
+     "fa": [
+      "The numbers first. People want the facts.",
+      "Then you explain them."
+     ],
+     "fb": [
+      "A story first. People wake up.",
+      "After that, they want the numbers."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Steffi Graf now.",
+   "p": "Your teacher interviews you on air.",
+   "aluno": "Listen to your teacher’s question. Answer as Steffi Graf. Tell it in order.",
+   "perguntas": [
+    "Steffi, where did you go first that month?",
+    "What did you do after Paris?",
+    "How did you prepare between the two?",
+    "What did you do on the first day at Wimbledon?",
+    "What happened in the end?",
+    "What did you do after the tournament?"
+   ],
+   "st": [
+    "First of all, I …",
+    "After that, I …",
+    "Finally, …"
+   ],
+   "ex": "First of all, I played in Paris. After that, I went to Wimbledon."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

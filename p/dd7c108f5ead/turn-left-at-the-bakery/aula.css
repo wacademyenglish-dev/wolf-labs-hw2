@@ -1,0 +1,92 @@
+/* ============================================================
+   TURN LEFT AT THE BAKERY · THE MAP OF GULL HARBOR · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Identidade: porto à noite; azul-petróleo
+   fundo, a praça e o mapa da avó desenhados em SVG escuro (ruas em
+   tinta clara apagada, nunca papel branco), linha vermelha, alfinete âmbar.
+   ============================================================ */
+:root{
+  --noite:#070c12; --noite-rgb:7,12,18; --tinta:#e6edf3;
+  --t1:#edf3f8; --t2:#c3cfda; --t2-rgb:195,207,218; --t3:#8796a5;
+  --ac:#f0a84a; --ac2:#ffcf8a; --bt:#4aa3e8; --bt2:#a6d2ff; --verm:#e0504a; --mar:#0d2233;
+  --vidro:rgba(230,237,243,.05); --vidro2:rgba(230,237,243,.085); --vidro3:rgba(230,237,243,.12);
+  --fio:rgba(210,224,236,.12); --fio2:rgba(210,224,236,.22); --luz:rgba(230,237,243,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1d1204}
+.btn.cheio{color:#1d1204}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:44px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(58px,5.4vw,108px)/.95 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa .sub b{color:var(--ac2)}
+.capa-mapa{padding:14px;border-radius:var(--r1)}
+.sussurro{margin:8px 0 0;font:600 16px var(--disp);color:var(--t3);font-style:italic;text-align:center}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{text-align:left;padding:9px 14px;font-size:clamp(16px,1.2vw,19px)}
+.ini{margin:0;font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--ac2)}
+.balao{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)}
+.balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)}
+.balao p{margin:0;font:600 clamp(18px,1.4vw,22px)/1.4 var(--disp)}
+.balao.achou{border-color:rgba(143,217,162,.45)!important} .balao.resp{border-color:rgba(240,168,74,.4)!important}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .pede b{font:800 clamp(20px,1.6vw,26px) var(--disp)}
+
+/* a praça */
+.mesa-praca{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+.praca-box{padding:8px;border-radius:var(--r1)}
+.praca-svg{display:block;width:100%;max-height:calc(100vh / var(--zv,1) - 360px);margin:0 auto}
+.pr-chao{fill:#0f1c27;stroke:#22384b;stroke-width:2}
+.pr-fonte{fill:#14324a;stroke:#2f5d80;stroke-width:3} .pr-fonte.alvo{stroke:var(--ac);stroke-width:5}
+.pr-lugar rect{fill:#131b24;stroke:#2c3b4a;stroke-width:2}
+.pr-lugar.voce rect{fill:#2a2010;stroke:var(--ac)} .pr-lugar.alvo rect{stroke:var(--ac);stroke-width:4;fill:#2a2010}
+.pr-lugar.feito rect{stroke:var(--ok)}
+.pr-t{fill:#e6edf3;font:800 13px var(--ui);text-anchor:middle;letter-spacing:.06em} .pr-t.pq{font-size:11px;fill:#8fb3cf} .pr-t.ouro{fill:var(--ac2)}
+.pr-liga{stroke:var(--ac);stroke-width:2;stroke-dasharray:6 6;opacity:.7}
+.kenji circle,.kenji path{fill:var(--ac)}
+.perg-p{display:flex;flex-wrap:wrap;gap:6px} .perg-p .chip{text-transform:capitalize} .perg-p .chip.feito{border-color:var(--ok)}
+
+/* a regra */
+.fitas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.fita{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .fita small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .fita b{font:700 clamp(17px,1.3vw,21px)/1.35 var(--disp)}
+
+/* o mapa da avó */
+.mesa-mapa{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:20px;align-items:start}
+.mapa-box{padding:10px;border-radius:var(--r1)}
+.mapa-svg{display:block;width:100%;max-height:calc(100vh / var(--zv,1) - 300px);background:#101820;border-radius:14px}
+.capa-mapa .mapa-svg{max-height:none}
+.mar{fill:var(--mar)}
+.rua{stroke:#2a3a48;stroke-width:3.4;stroke-linecap:round}
+.rua-t{fill:#6f8598;font:800 2.1px var(--ui);letter-spacing:.08em} .rua-t.ouro{fill:var(--ac2);font-size:2.6px}
+.marco rect{fill:#1a2430;stroke:#3a4c5c;stroke-width:.35} .marco text{fill:#d8e2ea;font:800 2.2px var(--ui);text-anchor:middle}
+.marco.farol rect{fill:#3a1414;stroke:var(--verm)}
+.linha-v{fill:none;stroke:var(--verm);stroke-width:1.1;stroke-dasharray:2.4 1.4;stroke-linejoin:round;stroke-linecap:round}
+.xis line{stroke:var(--verm);stroke-width:1.1;stroke-linecap:round} .xis.achou line{stroke:var(--ac2);stroke-width:1.4}
+.pino circle{fill:var(--ac);stroke:#1d1204;stroke-width:.5} .pino path{fill:var(--ac)}
+.pino{transition:transform .5s ease}
+.linha-ok{display:flex;gap:12px;align-items:center;flex-wrap:wrap} .linha-ok .aprova{margin:0}
+
+/* bakery, cartões */
+.mesa-lista{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:start}
+.foto-b{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center}
+.foto-b span{position:absolute;left:14px;bottom:12px;padding:4px 12px;border-radius:999px;background:rgba(7,12,18,.85);font:700 13px var(--mono);color:var(--ac2)}
+.quiz{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q-linha{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .q-linha.feito{border-color:rgba(143,217,162,.4)!important}
+.q-linha p{margin:0;font:700 clamp(17px,1.3vw,21px)/1.4 var(--disp)} .q-linha .recusa{margin:0;font-size:15px}
+.gap{display:inline-block;min-width:3em;padding:0 6px;border-bottom:2px solid var(--ac);color:var(--ac2);text-align:center}
+.cartoes-c{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.cartao-c{display:grid;gap:4px;padding:16px;border-radius:var(--r2);border:1px solid var(--fio2);background:#0f1720;color:var(--t1);text-align:left}
+.cartao-c small{font:800 11px var(--mono);color:var(--t3)} .cartao-c b{font:800 20px var(--disp);color:var(--ac2)}
+.cartao-c.on{border-color:var(--ac)} .cartao-c.feito{border-color:rgba(143,217,162,.45)}
+.fim .grande span{font-size:clamp(18px,1.4vw,23px)}
+
+@media (max-width:1100px){ .mesa-praca,.mesa-mapa,.mesa-lista,.capa,.fitas,.quiz{grid-template-columns:1fr} .praca-svg,.mapa-svg{max-height:none} }

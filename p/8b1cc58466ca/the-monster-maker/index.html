@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Monster Maker · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Courier+Prime:wght@400;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Monster Maker · Studio 13 · Night Shoot</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Monster Maker · Studio 13 · Night Shoot</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A night shoot at a horror film studio. The student is the creature designer.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: He’s got long black hair.</p><p style="margin:0 0 6px"><b>Short class (about 48 min):</b> I Before the Shoot · III The Trailer · V The Rule · VI The Creature Sheet · VII Casting · X The Scariest · XI Your Creature. Skip if you’re short on time: VIII, IX (marked EXTRA on your screen). Full lesson: about 62 min.</p><p style="margin:0"><b>Open with:</b> “Do you watch horror films?”</p></div><!--/prep-->
+    <p>A night shoot at Studio 13, on a horror film. The student is the creature designer: they fill in the creature sheet part by part (the portrait changes on the screen), do the casting with the files of eight classic film monsters, and at the wrap party draw the guest in costume that you describe. The grammar is <b>has / has got</b> to describe: <i>He’s got scars = He has scars</i>; <b>hasn’t got</b>; <b>Has it got…? Yes, it has.</b> And the order <b>size + color + thing</b>: <i>two small yellow eyes</i>, with no -s on colors. The color of the body uses <b>is</b>: <i>He’s grey.</i></p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III: the official trailer of <i>Frankenstein</i> (2025, Guillermo del Toro). Part 1 (0:00–1:00): the creature remembers, “I remember… pieces.” Part 2 (1:00–2:23): “Victor Frankenstein. My creator.” Each part stops by itself. After the two parts, the lesson ends the trailer with ONE screen: the trailer stays on the left (tap a time to hear that moment again; the time buttons play only the part where the creature speaks, up to 1:40, and each one stops by itself), with the creature’s portrait under it; on the right, six True or Lie lines about what he says. Every right answer adds one part to the portrait. On a Lie the student says the true line (a short answer is fine). When all six are done, the director asks the last question (monster or victim?): the student taps an answer and says the sentence out loud, with has got / hasn’t got.</p>
+    <h4>THE CREATURE SHEET · CASTING · THE WRAP PARTY</h4>
+    <p>Scene VI: six parts; the student taps a choice, the portrait changes, and the student says the sentence. Scene VII: eight casting files (Dracula, the Mummy, the Werewolf, the Witch, the Zombie, the Creature, the Ghost, the Invisible Man), each with its film and its features; the secret one has a SECRET tag on your screen only. The student asks <i>Has it got fangs?</i>, you answer <i>Yes, it has / No, it hasn’t</i>, and anybody can tap a file to put it out. Scene IX: you read a guest’s description twice; the student draws on paper or on the board, then you show the guest. At the end, the student describes a costume and you draw it.</p>
+    <h4>WHY PUMPKINS?</h4>
+    <p>Scene VIII: a short A1 story about the Irish turnip lanterns that became American jack-o’-lanterns.</p>
+    <h4>THE MISTAKES</h4>
+    <p><i>He have got</i>, <i>He has got grey</i>, <i>hair black</i>, <i>two reds eyes</i>, <i>It don’t have</i>, <i>Have he got…?</i></p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>maker</i>, <i>remember</i>, <i>pieces</i>, <i>creator</i> and <i>run</i>, before the video, in match the columns and the word in your life. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <!--conversa--><h4>THE SCARIEST (X) AND THE SURPRISE QUESTION</h4>
+    <p>Before the creature file, your student ranks three monsters for the film: the werewolf, the zombie, the ghost. There is no right order. They tap 1, 2, 3 and say their number one with <i>It’s got</i> / <i>It hasn’t got</i>; then show your own order and agree on one top 3. Wait five seconds in silence before helping; the PUSH line (only you see it) is a quick yes or no. Recast quietly; at the end, ask them to fix one sentence themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Before the Shoot, VI The Creature Sheet, VII Casting and X The Scariest.</li>
+      <li><b>Listen</b>: II The Words, III The Trailer, IV Line by Line, VIII Why Pumpkins? and IX The Wrap Party.</li>
+      <li><b>Focus</b>: V The Rule.</li>
+      <li><b>Write</b>: XI Your Creature.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js" data-capa="poster"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE MONSTER MAKER (Main A1) · pergunta-surpresa · 27/10/2026 · has got / have got para descrever */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'regra', tipo: 'Would you rather', q: 'A pet: a black cat or a bat?',
+    opc: ['A black cat', 'A bat'], st: ['A black cat. It’s got …', 'A bat. It’s got …'],
+    ex: 'A black cat! It’s got green eyes.', push: 'Has it got a name? Yes or no?' },
+  { cena: 'oficina', tipo: 'And you?', q: 'And you? Your hair and eyes?',
+    opc: ['Short hair', 'Long hair', 'No hair!'], st: ['I’ve got … hair and … eyes.'],
+    ex: 'I’ve got short black hair and brown eyes.', push: 'Your brother too? Yes or no?' },
+  { cena: 'adivinha', tipo: 'What if', q: 'A monster for one night. What have you got?',
+    opc: ['Fangs', 'Wings', 'A tail'], st: ['I’ve got …', 'I haven’t got …'],
+    ex: 'Wings! I’ve got big black wings.', push: 'Can you fly? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE MONSTER MAKER (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Ranking leve de 3 itens no lugar de "X · Quick Check" (extra, completar lacuna; a regra fica no V).
+   O meio da aula já conversa: "Monster or victim?" colado no trailer (III), a ficha da criatura (VI) e o casting (VII).
+   Fim da filmagem: o aluno põe em ordem os monstros mais assustadores; o professor mostra a ordem dele.
+   A gramática da aula (It’s got / It hasn’t got · Has it got…?) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'medo', troca: 'quiz', est: 'o', min: 5, img: 'estudio', rot: 'The Scariest', t: 'Casting is over. Who is the scariest?',
+    p: 'Tap your number 1, 2 and 3. Say your number 1 with It’s got. Then see your teacher’s order.',
+    formato: 'ranking',
+    q: 'The scariest monster for your film?',
+    itens: ['The werewolf', 'The zombie', 'The ghost'],
+    st: ['Number one is the …', 'It’s got …', 'It hasn’t got …'],
+    ex: 'Number one is the ghost. It hasn’t got a face!',
+    push: 'Still number one at 3 AM? Yes or no?',
+    prof: [2, 1, 0],
+    dica: 'Tap 1, then 2, then 3. Tap again to take it out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "You, Halloween and horror films.",
+   "p": "Your teacher sends messages. Answer out loud."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn the words. Then listen: they turn yellow."
+  },
+  "video": {
+   "t": "Frankenstein: the creature tells his story.",
+   "p": "Answer out loud. Then True or Lie."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again. Say it."
+  },
+  "regra": {
+   "t": "He’s got long black hair.",
+   "p": "Say each trap the right way. Then tap it."
+  },
+  "oficina": {
+   "t": "Design the creature, part by part.",
+   "p": "Choose a part. Say it: It’s got …"
+  },
+  "adivinha": {
+   "t": "Eight monsters. Your teacher chose one.",
+   "p": "Ask: Has it got fangs? Tap the ones out."
+  },
+  "historia": {
+   "t": "Why faces in pumpkins?",
+   "p": "Your teacher reads the story. Then answer."
+  },
+  "ditado": {
+   "t": "Your teacher describes a guest. You draw.",
+   "p": "Listen and draw. Then compare."
+  },
+  "cv-medo": {
+   "t": "Who is the scariest?",
+   "p": "Tap 1, 2, 3. Say your number 1."
+  },
+  "fim": {
+   "t": "The creature file for your film.",
+   "p": "Write five sentences with has got."
+  }
+ },
+ "prep": {
+  "obj": "Has/has got para descrever (hasn’t got, Has it got…?) e a ordem tamanho + cor + coisa: o aluno é o designer da criatura numa filmagem noturna de terror.",
+  "armadilha": "O português usa “ter” e põe a cor depois: sai “He have got”, “He has got grey” (cor do corpo é is), “hair black”, “two reds eyes”, “It don’t have” e “Have he got…?”.",
+  "pal": [
+   "has got",
+   "hasn’t got",
+   "Has it got…?",
+   "fangs",
+   "scars",
+   "stitches",
+   "creator",
+   "remember",
+   "pieces"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a filmagem: no Studio 13 o aluno desenha a criatura de um filme de terror.",
+   "perg": "Do you watch horror films?",
+   "pula": "Leia a frase da capa e entre no estúdio."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: Halloween e filmes de terror, sem corrigir.",
+   "perg": "What is the scariest film you know?",
+   "pula": "Três mensagens bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do trailer antes de assistir: maker, remember, pieces, creator, run.",
+   "perg": "Who is your creator in this story?",
+   "pula": "Ligar as colunas e seguir; a palavra na vida do aluno pode cair."
+  },
+  "video": {
+   "obj": "Trailer de Frankenstein (2025) em duas partes; depois True or Lie, que monta o retrato.",
+   "perg": "Is the creature a monster or a victim?",
+   "pula": "Quatro linhas de True or Lie bastam."
+  },
+  "falas": {
+   "obj": "Linha a linha: ouvir de novo as falas com palavras amarelas e dizer como o personagem.",
+   "perg": "Can you say it like the creature?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "regra": {
+   "obj": "A regra: has got = has, hasn’t got, Has it got…?, tamanho + cor + coisa, cor do corpo com is.",
+   "perg": "Is it “He has got grey” or “He’s grey”?",
+   "pula": "Corrija só três armadilhas."
+  },
+  "oficina": {
+   "obj": "Ficha da criatura: o aluno escolhe seis partes e diz a frase com It’s got.",
+   "perg": "What has it got? Describe its eyes.",
+   "pula": "Quatro partes bastam."
+  },
+  "adivinha": {
+   "obj": "Casting: o aluno pergunta Has it got…? para achar o monstro secreto entre oito fichas.",
+   "perg": "Ask me: Has it got fangs?",
+   "pula": "Uma rodada basta."
+  },
+  "historia": {
+   "obj": "Leitura curta: as lanternas de nabo irlandesas que viraram abóboras americanas.",
+   "perg": "Why do we make faces in pumpkins?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "ditado": {
+   "obj": "Ditado desenhado: você descreve um convidado fantasiado e o aluno desenha.",
+   "perg": "What has the guest got on his head?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-medo": {
+   "obj": "Ranking dos monstros mais assustadores, defendendo o número 1 com It’s got / It hasn’t got.",
+   "perg": "Why is the werewolf your number one?",
+   "pula": "Só o número 1 e um porquê bastam."
+  },
+  "fim": {
+   "obj": "Escrita: a ficha da criatura do filme do aluno em cinco frases com has got.",
+   "perg": "What has your creature got? What hasn’t it got?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa descrevendo pessoas, animais e personagens com has got.",
+   "perg": "Has your best friend got long hair?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre monstros e fantasias e defender com has got e because.",
+   "perg": "Which monster is scarier? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Entrevista: o aluno é a criatura e responde com I’ve got / I haven’t got.",
+   "perg": "Have you got a name?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Describe more people and things.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "has got",
+    "hasn’t got",
+    "have got"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FRIEND",
+     "q": "What has your best friend got? Describe him or her.",
+     "fup": "Has he or she got glasses?",
+     "st": [
+      "He’s got … / She’s got …",
+      "He hasn’t got … / She hasn’t got …"
+     ],
+     "ex": "She’s got short brown hair. She hasn’t got glasses."
+    },
+    {
+     "k": "A PET",
+     "q": "Have you got a pet, or has a friend got one?",
+     "fup": "What color is it?",
+     "st": [
+      "I’ve got a …",
+      "It’s got …"
+     ],
+     "ex": "My sister has got a cat. It’s got big green eyes."
+    },
+    {
+     "k": "YOUR COSTUME",
+     "q": "What is a good Halloween costume for you?",
+     "fup": "Has it got a mask?",
+     "st": [
+      "It’s got …",
+      "It hasn’t got …"
+     ],
+     "ex": "A vampire. It’s got a long black cape and two fangs."
+    },
+    {
+     "k": "A FILM MONSTER",
+     "q": "What is your favorite film monster?",
+     "fup": "Has it got a name?",
+     "st": [
+      "My favorite is …",
+      "It’s got …"
+     ],
+     "ex": "My favorite is the Mummy. It’s got long white bandages."
+    },
+    {
+     "k": "YOUR HOUSE",
+     "q": "Has your house got a scary room?",
+     "fup": "What has it got inside?",
+     "st": [
+      "Yes, it’s got …",
+      "No, it hasn’t got …"
+     ],
+     "ex": "Yes, the garage. It’s got old boxes and no light."
+    },
+    {
+     "k": "A FAMOUS FACE",
+     "q": "Describe a famous actor or actress.",
+     "fup": "Has he or she got blue eyes?",
+     "st": [
+      "He’s got … / She’s got …"
+     ],
+     "ex": "He’s got short black hair and a big smile."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "has got",
+    "hasn’t got"
+   ],
+   "rodadas": [
+    {
+     "q": "Scarier: the vampire or the ghost?",
+     "a": "The vampire",
+     "b": "The ghost",
+     "fa": [
+      "The vampire. It’s got long fangs."
+     ],
+     "fb": [
+      "The ghost. It hasn’t got a face."
+     ]
+    },
+    {
+     "q": "The creature: a monster or a victim?",
+     "a": "A monster",
+     "b": "A victim",
+     "fa": [
+      "A monster. He’s got scars and he’s very strong."
+     ],
+     "fb": [
+      "A victim. He hasn’t got a family or a name."
+     ]
+    },
+    {
+     "q": "A costume with a mask or without a mask?",
+     "a": "With a mask",
+     "b": "Without a mask",
+     "fa": [
+      "With a mask. It’s got a scary face."
+     ],
+     "fb": [
+      "Without a mask. I’ve got a good scary smile."
+     ]
+    },
+    {
+     "q": "A horror film at night or in the afternoon?",
+     "a": "At night",
+     "b": "In the afternoon",
+     "fa": [
+      "At night. It’s got the right mood."
+     ],
+     "fb": [
+      "In the afternoon. I haven’t got a strong heart!"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and every monster got a description."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the creature now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the creature.",
+   "perguntas": [
+    "Have you got a name?",
+    "What have you got on your face?",
+    "Have you got long hair or short hair?",
+    "Have you got a family?",
+    "What do you remember?",
+    "Who is your creator? Has he got a kind face?"
+   ],
+   "st": [
+    "I’ve got …",
+    "I haven’t got …",
+    "He’s got …"
+   ],
+   "ex": "I haven’t got a name. I’ve got long black hair and big scars."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

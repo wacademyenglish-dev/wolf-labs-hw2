@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Pitch Night · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B2 · Unit 5 Review · Pitch Night</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Pitch Night · B2 Unit 5 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 5 (Describing with precision). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Pitch night at an inventors’ workshop. Your student is the investor with money for one idea. You are three inventors (invented products): Luna (a sleep lamp for night workers), Bruno (a plant sensor) and Dona Cida (a box that records grandparents’ recipes).</p><p style="margin:0 0 6px"><b>About 49 min:</b> I · Six Doors (8) · II · The Pitches (15) · III · The Investor’s Dilemma (7) · IV · Your Pitch (7) · V · The Hot Seat (8) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Six doors. Choose one, open it, and do the challenge.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>defining and non-defining relative clauses · sentence relatives: which is why, which means · reduced relative clauses · preposition + -ing · the to on its own · collocations with make</p>
+    <h4>SIX DOORS</h4>
+    <p>Six doors, one per topic of the unit. The student picks any door and does the task from memory. Tap <b>Got it</b> or <b>Review</b>; amber doors come back as a short list “to review”.</p>
+    <h4>THE PITCHES</h4>
+    <p>You are each inventor. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then the student announces the investment with which means / which is why. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>YOUR PITCH</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>a lamp what changes color</i>, <i>my aunt, that is a nurse</i>, <i>instead of change</i>, <i>I did a decision</i>, <i>a woman which car (for whose car)</i>, <i>the book which written by</i>. B2: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE INVESTOR’S DILEMMA (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the pitches, three hard calls with the same inventors: Luna wants to hire her brother, a big company wants to buy Bruno’s sensor, a TV channel wants Dona Cida’s recordings. The student chooses (or says their own idea) and explains with which, whose, which is why and instead of. There is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Six Doors and VI · I Can.</li>
+      <li><b>Out loud</b>: II · The Pitches, III · The Investor’s Dilemma and V · The Hot Seat.</li>
+      <li><b>Write</b>: IV · Your Pitch.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW B2 · UNIT 5 · PITCH NIGHT · pergunta-surpresa · 28/10/2026 · relative clauses, which is why, instead of + -ing, make */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'portas', tipo: 'And you?', q: 'What’s one thing you use every day that you couldn’t live without?',
+    opc: ['My phone', 'Something in the kitchen', 'Something else'], st: ['It’s a … which …', 'Instead of using it, I’d have to …'],
+    ex: 'Something in the kitchen: my coffee machine, which is the first thing I touch every morning. Instead of using it, I’d have to go to a café.', push: 'One month without it. Could you do it?' },
+  { cena: 'missao', tipo: 'What if', q: 'You have money for one idea of your own. What do you invent?',
+    opc: ['An app', 'A gadget', 'A service'], st: ['It would be a … which …', 'It’s for people …ing …'],
+    ex: 'An app which tells you when your bus is full. It’s for people living far from the centre, like me.', push: 'Who is your first customer?' },
+  { cena: 'cartao', tipo: 'Opinion', q: 'Is a good idea enough, or does the person behind it matter more?',
+    opc: ['The idea', 'The person', 'Both, equally'], st: ['A person whose …', '…, which is why …'],
+    ex: 'The person. A good idea in the hands of someone who gives up is nothing, which is why investors look at the team first.', push: 'Name one famous product that was a bad idea but still worked.' },
+  { cena: 'pode', tipo: 'Would you rather', q: 'Would you rather invent something famous or get rich from someone else’s idea?',
+    opc: ['Invent it', 'Get rich'], st: ['I’d rather …, which means …'],
+    ex: 'Invent it. I’d rather make something people remember, which means I’d accept less money.', push: 'Nobody knows your name, but you’re rich. Still no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW B2 · UNIT 5 · PITCH NIGHT · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O dilema ENTRA depois de "II · The Pitches" (a missão), no meio da aula. Revisão sem cena extra nem prática
+   repetida (Six Doors aquece, Your Pitch é o Write, o Hot Seat é o professor respondendo): 42 → 49 min.
+   O investimento foi feito; agora vêm as decisões difíceis com os três inventores da noite. A gramática da
+   unidade (who / which / whose, which is why / which means, reduced relatives, instead of + -ing) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'dilema', apos: 'missao', est: 'o', min: 7, img: 'capa', rot: 'The Investor’s Dilemma', t: 'Pitch night is over. Now the hard calls.',
+    p: 'Three problems after the investment. Choose one option, or say your own. Say why with which, whose, which is why or instead of.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Luna', sit: 'Imagine you invested in Luna’s sleep lamp. She wants to hire her brother as sales manager. He has never sold anything.',
+        q: 'What do you tell her?', opc: ['Hire him', 'A trial month first', 'Hire an expert'],
+        st: ['I’d hire someone whose experience …', '…, which means …', 'Instead of hiring …, she should …'],
+        ex: 'A trial month first. He believes in the product, which is important. But instead of giving him the job now, I’d give him one month to prove it.',
+        push: 'He’s also putting his own savings into the company. Does that change your answer?' },
+      { tag: 'Bruno', sit: 'A huge company offers to buy Bruno’s plant sensor for a million dollars. They plan to sell it for three times the price.',
+        q: 'Should Bruno sell?', opc: ['Sell it', 'Say no', 'Sell only part of it'],
+        st: ['…, which is why he should …', 'A company whose …', 'Instead of selling, …'],
+        ex: 'Say no. His first sensor was too expensive, which is why nobody bought it. A sensor sold for three times the price will kill the idea.',
+        push: 'A million dollars, today. Would YOU say no?' },
+      { tag: 'Dona Cida', sit: 'A TV channel wants to use the recordings from Dona Cida’s recipe box for a cooking show.',
+        q: 'What should she do?', opc: ['Say yes', 'Ask every family first', 'Say no'],
+        st: ['The families, whose recipes …, …', '…, which means …', 'Instead of …ing, she should …'],
+        ex: 'Ask every family first. The recipes belong to them, which means the TV channel should pay the families, not only Dona Cida.',
+        push: 'Only half of the families say yes. Now what?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "portas": {
+   "t": "Six doors. One minute each.",
+   "p": "Pick a door. Do it from memory."
+  },
+  "missao": {
+   "t": "Three inventors. One investment.",
+   "p": "Ask each one five questions. Then announce it."
+  },
+  "cv-dilema": {
+   "t": "Pitch night is over. Hard calls.",
+   "p": "Choose, or say your own. Explain with which or whose."
+  },
+  "cartao": {
+   "t": "Now pitch your own idea.",
+   "p": "Four lines: what, who for, why, and instead."
+  },
+  "cadeira": {
+   "t": "Now YOU ask.",
+   "p": "Your teacher is in the hot seat. Ask and react."
+  },
+  "pode": {
+   "t": "Unit 5: what can you do now?",
+   "p": "Read each line aloud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 5: relativas (com e sem vírgula, whose, which is why), relativas reduzidas, preposição + -ing e collocations com make; noite de pitch com três inventores.",
+  "armadilha": "“A lamp what changes color”, “my aunt, that is a nurse”, “instead of change”, “I did a decision”, “a woman which car” (whose) e “the book which written by”.",
+  "pal": [
+   "which",
+   "whose",
+   "which is why",
+   "which means",
+   "people working…",
+   "instead of …ing",
+   "make a decision",
+   "pitch",
+   "investor"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a noite de pitch: o aluno é o investidor com dinheiro para uma ideia.",
+   "perg": "Have you ever had an idea for a product?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "portas": {
+   "obj": "Seis portas, uma por tópico; o aluno faz de memória e as âmbar viram lista de revisão.",
+   "perg": "Can you do it without notes?",
+   "pula": "Quatro portas bastam."
+  },
+  "missao": {
+   "obj": "O professor é Luna, Bruno e Dona Cida; o aluno pergunta e anuncia com which means / which is why.",
+   "perg": "Whose idea gets the money, and why?",
+   "pula": "Dois inventores bastam."
+  },
+  "cv-dilema": {
+   "obj": "Três decisões difíceis depois do investimento; explicar com which, whose, instead of.",
+   "perg": "What would you do instead?",
+   "pula": "Dois problemas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: o pitch do aluno em quatro linhas com o modelo ao lado.",
+   "perg": "Who is your idea for?",
+   "pula": "Três linhas bastam."
+  },
+  "cadeira": {
+   "obj": "O aluno pergunta e o professor responde curto, como ele mesmo.",
+   "perg": "What’s the best decision you’ve ever made?",
+   "pula": "Três cartas bastam."
+  },
+  "pode": {
+   "obj": "Checklist “I can” da unidade; o que ficar aberto vai para a lição e a próxima aula.",
+   "perg": "Which line is still hard for you?",
+   "pula": "Nunca corte; leia rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa aberta descrevendo pessoas, objetos e escolhas com precisão.",
+   "perg": "Who is someone whose work you admire?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre investimento, inovação e negócios.",
+   "perg": "I see your point, but which is riskier?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Dona Cida e defende a caixa de receitas diante do investidor.",
+   "perg": "Dona Cida, who is your box for?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Describe it precisely.",
+   "p": "Pick a card. Say exactly which one.",
+   "palavras": [
+    "which",
+    "whose",
+    "which is why",
+    "instead of",
+    "make"
+   ],
+   "cartas": [
+    {
+     "k": "A GREAT PRODUCT",
+     "q": "What is a product that changed your daily life?",
+     "fup": "What did you do before it?",
+     "st": [
+      "It’s a … which …",
+      "Instead of …ing, I now …"
+     ],
+     "ex": "It’s an app which tracks my spending. Instead of guessing, I now know where my money goes."
+    },
+    {
+     "k": "SOMEONE TO ADMIRE",
+     "q": "Who is someone whose work you really admire?",
+     "fup": "What makes it special?",
+     "st": [
+      "She’s someone whose …",
+      "He made …, which means …"
+     ],
+     "ex": "My old boss, whose ideas were always simple. She made decisions fast, which meant we never waited."
+    },
+    {
+     "k": "A BAD INVENTION",
+     "q": "What invention do you think the world would be better without?",
+     "fup": "What would people do instead?",
+     "st": [
+      "…, which is why …",
+      "Instead of …ing, people would …"
+     ],
+     "ex": "Self-checkout machines, which is why I always look for a real cashier."
+    },
+    {
+     "k": "A BIG DECISION",
+     "q": "What is the hardest decision you have had to make?",
+     "fup": "Would you make it again?",
+     "st": [
+      "I made a decision to …",
+      "…, which means …"
+     ],
+     "ex": "I made a decision to move cities, which meant starting from zero."
+    },
+    {
+     "k": "YOUR NEIGHBORHOOD",
+     "q": "What does your neighborhood need that nobody has made yet?",
+     "fup": "Who would use it?",
+     "st": [
+      "People living here need …",
+      "Something which …"
+     ],
+     "ex": "People living here need a café which stays open late for night workers."
+    },
+    {
+     "k": "FAMILY RECIPES",
+     "q": "Is there a family recipe that nobody has written down?",
+     "fup": "Whose is it?",
+     "st": [
+      "My grandmother, whose …",
+      "It’s a dish which …"
+     ],
+     "ex": "My grandmother, whose bean stew is famous, never measured anything, which is why no one can copy it."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Argue it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "which is why",
+    "which means",
+    "I see your point, but",
+    "The thing is"
+   ],
+   "rodadas": [
+    {
+     "q": "A small founder gets an offer from a big company: sell or stay independent?",
+     "a": "Sell",
+     "b": "Stay independent",
+     "fa": [
+      "Sell. The idea reaches millions, which a small team can’t do.",
+      "Founders who sell can start again."
+     ],
+     "fb": [
+      "Stay. Big companies buy ideas to bury them.",
+      "I see your point, but the soul of the product disappears."
+     ]
+    },
+    {
+     "q": "Hire family in a startup: smart or a mistake?",
+     "a": "Smart",
+     "b": "Mistake",
+     "fa": [
+      "Smart. You hire people whose loyalty you know.",
+      "Trust is worth more than a CV."
+     ],
+     "fb": [
+      "A mistake. You can’t fire your brother, which is the whole problem.",
+      "The thing is, every dinner becomes a meeting."
+     ]
+    },
+    {
+     "q": "Invest in a useful idea or a fun idea?",
+     "a": "Useful",
+     "b": "Fun",
+     "fa": [
+      "Useful. A plant sensor solves a real problem, which means steady sales.",
+      "Fun ideas fade fast."
+     ],
+     "fb": [
+      "Fun. People pay for joy, not just for solutions.",
+      "I see your point, but the best products are both."
+     ]
+    },
+    {
+     "q": "Old family recipes on TV: share them or keep them private?",
+     "a": "Share",
+     "b": "Keep private",
+     "fa": [
+      "Share them. Recipes which stay in drawers disappear.",
+      "It’s a way to honor the cook."
+     ],
+     "fb": [
+      "Keep them. Some things belong to the family.",
+      "The thing is, TV changes everything it touches."
+     ]
+    }
+   ],
+   "fim": "Four rounds. No deal yet, which is why we need another pitch night."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Dona Cida now.",
+   "p": "Your teacher is the investor. Convince them.",
+   "aluno": "Listen to the investor’s question. Answer as Dona Cida, the inventor of the recipe box.",
+   "perguntas": [
+    "What exactly is your box, and what does it do?",
+    "Who is it for?",
+    "Why did you make it?",
+    "What do families do instead, right now?",
+    "A TV channel wants your recordings. What do you say?",
+    "Why should I invest in you, instead of the others?"
+   ],
+   "st": [
+    "It’s a box which …",
+    "It’s for grandparents whose …",
+    "…, which is why …"
+   ],
+   "ex": "It’s a box which records grandparents while they cook, which is why no recipe gets lost."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

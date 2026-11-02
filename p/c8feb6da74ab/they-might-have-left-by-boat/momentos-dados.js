@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de They Might Have Left by Boat (11/10/2026): o mistério da colônia de Roanoke (TED-Ed).
+   Forma: o termômetro da certeza. Alvo: especular sobre o passado (must have / may, might, could have / can’t, couldn’t have + particípio).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [0, 1, 2, 3, 4, 5], k: 'The mystery', quem: 'The narrator',
+    contexto: 'In the 1580s, an English colony on Roanoke Island disappeared. All 116 people.',
+    frase: 'One of America’s oldest mysteries is <b>the fate of the island colony of Roanoke</b>.',
+    explica: '<i>Fate</i> = what finally happened to someone. 116 people can’t just vanish. Something happened.',
+    formula: 'Something <b>must have</b> happened to them. (almost sure) · ✗ must to have',
+    tente: 'Your neighbor’s car is gone and the house is dark. What must have happened?',
+    ex: 'They must have gone on vacation. They must have left early.',
+    sente: { q: 'How mysterious is this?', de: 'simple', a: 'very mysterious', st: 'It’s … because something must have…' } },
+  { i: [6, 7, 8, 9, 10], k: 'The theories', quem: 'The narrator',
+    contexto: 'Historians have many theories, and no proof.',
+    frase: '<b>Did the settlers relocate</b> to join the friendly Croatoan tribe? Did they die of natural causes? Were they killed by a hostile native tribe or by the Spanish?',
+    explica: '<i>Relocate</i> = move to a new place. Each question is a possibility.',
+    formula: 'They <b>might have</b> moved. · They <b>could have</b> died of disease. (possible)',
+    tente: 'Your friend didn’t answer your messages all day. Give three possibilities.',
+    ex: 'She might have lost her phone. She could have been busy. She may have been sick.',
+    sente: { q: 'How sure are the historians?', de: 'not sure at all', a: 'very sure', st: 'They’re … because they might have…' } },
+  { i: [49, 50, 51, 52], k: 'The promise', quem: 'The narrator',
+    contexto: 'Before the governor left for England, the colonists made a plan.',
+    frase: 'In his journal, White wrote that the colonists said that if they moved before his return, <b>they would leave their new location written on a tree</b> or a door.',
+    explica: 'They had a clear system. So the message on the tree was not an accident.',
+    formula: 'They <b>must have</b> planned to move. (strong evidence)',
+    tente: 'You find a note on your door: “Back at 6.” What must have happened?',
+    ex: 'My roommate must have gone to the market. She must have forgotten her keys.',
+    sente: { q: 'How strong is this clue?', de: 'weak', a: 'very strong', st: 'It’s … because they must have…' } },
+  { i: [56, 57, 58, 59, 60, 61], k: 'Croatoan', quem: 'The narrator',
+    contexto: 'Three years later, the governor returns. The colony is empty. One word is carved on a tree.',
+    frase: 'He found an empty colony. The only clue was the word Croatoan carved on a tree, and the letters CRO carved on another. <b>This may have been a reference</b> to nearby Croatoan Island.',
+    explica: '<i>Carved</i> = cut into wood. One word, two possible meanings: a place or a people.',
+    formula: 'It <b>may have been</b> a message. · ✗ They might have went → might have <b>gone</b>',
+    tente: 'You find a strange word written on a wall in your city. What may it have meant?',
+    ex: 'It may have been a name. It could have been a secret code!',
+    sente: { q: 'How clear is the clue?', de: 'very clear', a: 'very confusing', st: 'It’s … because it may have meant…' } },
+  { i: [72, 73, 76, 77, 78, 79, 80], k: 'No graves', quem: 'The narrator',
+    contexto: 'Later searches found nothing, but objects appeared in a native village nearby.',
+    frase: 'Later searches uncovered no further clues and no graves. ... Many historians believe the settlers <b>likely joined Manteo’s tribe</b>, judging by artifacts like copper rings, English pottery, and a lead pencil.',
+    explica: 'No graves means they probably didn’t die there. English objects in a native village: a strong hint.',
+    formula: 'They <b>can’t have</b> all died there: there were no graves. (impossible) · They <b>must have</b> joined the tribe.',
+    tente: 'Look at the evidence: your cake is gone and your brother has chocolate on his face. What can’t have happened?',
+    ex: 'The cat can’t have eaten it. My brother must have eaten it!',
+    sente: { q: 'How close are we to the answer?', de: 'far', a: 'very close', st: 'We’re … because they can’t have…' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#5f9fc9', titulo: 'The lost colony: five clues.', sub: 'Hear the clue, measure your certainty, then speculate: must have, might have, can’t have.', rot: { por: 'WHAT IT MEANS', padrao: 'MUST · MIGHT · CAN’T HAVE', voce: 'YOUR THEORY', ex: 'LIKE THIS' } };

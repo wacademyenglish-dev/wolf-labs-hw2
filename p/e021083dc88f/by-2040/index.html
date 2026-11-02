@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · By 2040 We Will Have… · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>By 2040 We Will Have … · The Blueprint</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>By 2040 We Will Have … · The Blueprint</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> The city is making a time capsule to open in 2040.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: Stand in 2040. Look back, and look around.</p><p style="margin:0 0 6px"><b>Short class (about 50 min):</b> I Your Future · III The Future of Cities · V The Rule · VI The 2040 Blueprint · VII The Capsule · X The Arena · XI Open in 2040. Skip if you’re short on time: VIII, IX (marked EXTRA on your screen). Full lesson: about 64 min.</p><p style="margin:0"><b>Open with:</b> “How old will you be in 2040? How do you imagine yourself?”</p></div><!--/prep-->
+    <p>The city is making a time capsule to open in 2040. The student watches a short video on the future of cities, predicts the 2040 skyline on a blueprint, and fills the capsule with messages to their future self. The grammar is two ways of standing in the future and looking around: <b>will have + participle</b> (finished before that moment: <i>by 2040 we will have built …</i>) and <b>will be + -ing</b> (in progress at that moment: <i>in 2040 we will be growing food on rooftops</i>). On screen, a 2040 city plan: eight plots, and a building rises in blueprint lines when the prediction comes out in the right form. A ruler with 2040 in the middle shows the two arrows: look back, look around.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III: a four-minute video, <b>sealed</b> until you press play, in five chapters that stop by themselves. The last chapter is the future: listen for <i>will</i> and <i>might</i>. The narrator says what WILL happen; the student then stands in 2040 and says what will HAVE happened. After the video (page III, step 3): ONE screen. The video stays on the left, with the 2040 city plan under it; on the right, six True or Lie lines from the video (tap the time to hear that moment again). Every right answer raises a building on the plan. On a Lie the student says the true line. When all six are done, Noa asks one last question (“Which idea will your city have by 2040?”): the student taps an answer and says the sentence out loud, with will have or will be.</p>
+    <h4>THE TRAPS</h4>
+    <p><i>By 2040 we will build …</i> (finished before: will HAVE built) · <i>In 2040 I will work at home</i> for a scene in progress (will BE working) · <i>will have finish</i> · <i>until June</i> for a deadline (by June) · <i>by the time you will read</i> (by the time you read).</p>
+    <h4>THE BLUEPRINT</h4>
+    <p>Scene IV is the pressure: read each plot; the student predicts; tap the form you heard; the building goes up. A present-simple or simple-future answer does not build anything.</p>
+    <h4>THE CAPSULE</h4>
+    <p>Scene VII: six slips. Every slip wants one sentence of each: what they will have done, and what they will be doing. Tap each form you hear; the slip drops into the capsule when both are there.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>urban</i>, <i>increase</i>, <i>settlements</i>, <i>surplus</i> and <i>overcrowded</i>, before the video, in the missing word and the word in your life. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE ARENA (X) AND THE SURPRISE QUESTION</h4>
+    <p>After the capsule, one argument from the video’s idea of homes built up, not out: the city wants ten housing towers in the big park by 2040. The student picks a side and defends it for one minute with will have and will be; then they swap and defend the other side. Wait five seconds in silence before they start, and use the PUSH line (only you see it) to make it harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Future, VI The 2040 Blueprint, VII The Capsule, VIII The 2040 Wheel, IX A Call from 2040 and X The Arena.</li>
+      <li><b>Listen</b>: II The Words, III The Future of Cities and IV Line by Line.</li>
+      <li><b>Focus</b>: V The Rule.</li>
+      <li><b>Write</b>: XI Open in 2040.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* BY 2040 WE WILL HAVE… (Main B2) · pergunta-surpresa · 27/10/2026 · will have done × will be doing */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'video', tipo: 'Would you rather', q: 'Would you rather live in a city in 1926 or in 2040?',
+    opc: ['1926', '2040'], st: ['I’d rather live in …, because by then …', 'In 2040, people will be …'],
+    ex: '2040. By then they will have fixed the traffic, I hope, and I will be working from a café by the river.',
+    push: 'In 2040 there will be cameras everywhere and no cash. Still 2040?' },
+  { cena: 'regra', tipo: 'And you?', q: 'What will you have done by the end of this year?',
+    opc: ['Something big', 'Something small', 'Nothing yet!'], st: ['By December, I will have …', 'By the time the year ends, I …'],
+    ex: 'Something small. By December I will have finished this English book, and I will have paid for my holiday.',
+    push: 'And what will you NOT have done, even if you promised?' },
+  { cena: 'planta', tipo: 'What if', q: 'Your street in 2040: no cars, and a farm on every roof. What will you be doing on a Sunday morning?',
+    opc: ['Gardening', 'Sleeping', 'Something else'], st: ['On a Sunday in 2040, I will be …', 'My neighbours will be …'],
+    ex: 'Sleeping, honestly. But my neighbours will be picking tomatoes on the roof, and the kids will be riding bikes in the street.',
+    push: 'Who will have to wake up early to water the farm? You?' },
+  { cena: 'capsula', tipo: 'Opinion', q: 'By 2040, which skill will have become more useful: speaking English or knowing how to code?',
+    opc: ['English', 'Code', 'Neither'], st: ['By 2040, … will have become …', 'People will still be …'],
+    ex: 'English. Machines will have learned to code, but people will still be talking to each other.',
+    push: 'Machines will be translating everything in real time, too. Still English?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* BY 2040 WE WILL HAVE… (Main B2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A arena entra no lugar de "X · Quick Check" (extra, prática controlada; a régua e a planta ficam).
+   O vídeo diz que as casas do futuro sobem em vez de se espalhar: a cidade quer erguer torres no
+   parque grande. O aluno defende um lado por um minuto e depois troca. A gramática da aula
+   (will have + particípio × will be + -ing, by the time + presente) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'arena', troca: 'quiz', est: 'o', min: 7, img: 'muralha', rot: 'The Arena', t: 'The city wants towers in the big park by 2040.',
+    p: 'Pick a side and defend it for one minute with will have and will be. Then swap and defend the other side.',
+    formato: 'arena', segundos: 60,
+    q: 'By 2040, the city will have built ten housing towers in the big park. Yes or no?',
+    lados: [
+      { nome: 'Build the towers', arg: 'Thousands of families need homes near their jobs.' },
+      { nome: 'Keep the park', arg: 'A city with no green space isn’t worth living in.' }
+    ],
+    st: ['By 2040, we will have …', 'In 2040, families will be …', 'By the time the towers are ready, …', 'If we don’t, by 2040 …'],
+    ex: 'Build them. By 2040, five thousand families will have moved in, and they won’t be spending three hours a day on buses. By the time my kids grow up, the city will have planted gardens on every roof.',
+    push: 'The towers will be right in front of YOUR window, and the park was where you ran every morning. Still yes?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "Where will you be in 2040?",
+   "p": "Tap a card. Answer. Then your teacher answers."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them first. They turn yellow in the video."
+  },
+  "video": {
+   "t": "Ten thousand years of cities in four minutes.",
+   "p": "Answer first. Watch five chapters. Then True or Lie."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line to hear it. Yellow words explain."
+  },
+  "regra": {
+   "t": "Stand in 2040. Look back, look around.",
+   "p": "Say each wrong line right. Then tap SHOW ME."
+  },
+  "planta": {
+   "t": "Eight empty plots. Predict each one, fast.",
+   "p": "Use WILL HAVE or WILL BE. The building rises."
+  },
+  "capsula": {
+   "t": "Six slips for the capsule.",
+   "p": "Per slip: what you will have done, will be doing."
+  },
+  "roda": {
+   "t": "Better future, or just different?",
+   "p": "Tap five. Predict and defend. Your teacher disagrees."
+  },
+  "noa": {
+   "t": "Noa found your message in 2040.",
+   "p": "Your teacher is Noa. Answer, then ask back."
+  },
+  "cv-arena": {
+   "t": "Towers in the big park by 2040?",
+   "p": "Defend a side for one minute. Then swap."
+  },
+  "fim": {
+   "t": "Your letter to 2040.",
+   "p": "Use will have and will be. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Future perfect (will have + particípio) e future continuous (will be + -ing): a cidade enterra uma cápsula do tempo para abrir em 2040 e o aluno prevê o skyline.",
+  "armadilha": "O português usa o futuro simples para tudo: “By 2040 we will build…” (é will have built), “In 2040 I will work at home” para cena em andamento; também “until June” por “by June” e “by the time you will read”.",
+  "pal": [
+   "will have + participle",
+   "will be + -ing",
+   "by 2040",
+   "by the time",
+   "urban",
+   "overcrowded",
+   "settlement",
+   "surplus",
+   "time capsule"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a cápsula: o que terá mudado e o que estaremos fazendo em 2040.",
+   "perg": "How old will you be in 2040?",
+   "pula": "Só leia a manchete e entre."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal: onde o aluno estará e o que estará fazendo em 2040.",
+   "perg": "What will you be doing in 2040?",
+   "pula": "Duas cartas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (urban, increase, settlements, surplus, overcrowded); o aluno chuta primeiro.",
+   "perg": "What makes a city overcrowded?",
+   "pula": "Só as palavras, sem exemplo."
+  },
+  "video": {
+   "obj": "Dez mil anos de cidades em cinco capítulos; depois seis True or Lie e a pergunta da Noa.",
+   "perg": "Which idea will your city have by 2040?",
+   "pula": "Não corte: é a base da aula."
+  },
+  "falas": {
+   "obj": "Linha a linha do vídeo; as palavras amarelas abrem a explicação.",
+   "perg": "Can you say this line again?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "regra": {
+   "obj": "A régua de 2040: olhar para trás (will have done) e em volta (will be doing). Corrigir as armadilhas.",
+   "perg": "Finished before 2040, or in progress then?",
+   "pula": "Quatro linhas bastam."
+  },
+  "planta": {
+   "obj": "Pressão: oito lotes da planta de 2040; a forma certa levanta o prédio.",
+   "perg": "What will they have built here by 2040?",
+   "pula": "Cinco lotes bastam."
+  },
+  "capsula": {
+   "obj": "Seis bilhetes para a cápsula, cada um com as duas formas; o bilhete cai quando as duas aparecem.",
+   "perg": "What will you have done by then?",
+   "pula": "Três bilhetes bastam."
+  },
+  "roda": {
+   "obj": "Prever e defender: o futuro será melhor ou só diferente? O professor pega o outro lado.",
+   "perg": "Will people be working less in 2040?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "noa": {
+   "obj": "Noa, repórter de rádio em 2040, achou a mensagem do aluno; ele responde e pergunta de volta.",
+   "perg": "What will you have achieved by 2040?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-arena": {
+   "obj": "Arena: dez torres de moradia no parque até 2040? Um minuto de cada lado. Use a linha PUSH.",
+   "perg": "What will the city have lost by 2040?",
+   "pula": "Só um lado, sem trocar."
+  },
+  "fim": {
+   "obj": "Escrita: a carta do aluno para 2040, com will have e will be.",
+   "perg": "What will you be doing when someone reads it?",
+   "pula": "Quatro frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais previsões pessoais e sobre o mundo, com as duas formas.",
+   "perg": "What will have changed in your city?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre o futuro: trabalho, carros, cidades, tecnologia.",
+   "perg": "Why will that happen?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Planejar a década do aluno de trás para frente, a partir de 2040.",
+   "perg": "Where will you be living by then?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Look back from 2040.",
+   "p": "Pick a card. Use will have or will be.",
+   "palavras": [
+    "will have done",
+    "will be doing",
+    "by then",
+    "by the time"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR STREET",
+     "q": "What will have changed on your street by 2040?",
+     "fup": "Will it be better or worse?",
+     "st": [
+      "By 2040, they will have …",
+      "People will be …"
+     ],
+     "ex": "By 2040, they will have closed the old market, and people will be shopping only online."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "Will your job still exist in 2040?",
+     "fup": "What will people in your area be doing?",
+     "st": [
+      "I think it will have …",
+      "We’ll be … instead of …"
+     ],
+     "ex": "I think AI will have taken half of my tasks, but we’ll be doing more creative work."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "Where will you be living in 2040?",
+     "fup": "Who will be living with you?",
+     "st": [
+      "I’ll be living in …",
+      "By then, I’ll have …"
+     ],
+     "ex": "I’ll be living near the sea, and by then I’ll have paid for the flat."
+    },
+    {
+     "k": "THE CITY",
+     "q": "Will your city be more crowded or emptier in 2040?",
+     "fup": "Why?",
+     "st": [
+      "The city will have grown …",
+      "More people will be …"
+     ],
+     "ex": "The city will have grown up, not out: everybody will be living in towers."
+    },
+    {
+     "k": "YOUR SKILLS",
+     "q": "What will you have learned by 2040?",
+     "fup": "What will you be using it for?",
+     "st": [
+      "I’ll have learned …",
+      "I’ll be using it to …"
+     ],
+     "ex": "I’ll have learned Spanish, and I’ll be using it with clients in Mexico."
+    },
+    {
+     "k": "TRANSPORT",
+     "q": "How will you be getting to work in 2040?",
+     "fup": "Will people still own cars?",
+     "st": [
+      "I’ll be taking …",
+      "Cities will have banned …"
+     ],
+     "ex": "I’ll be taking a driverless bus, and the city will have banned cars downtown."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "will have",
+    "will be",
+    "The thing is, …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "By 2040, will most people be working from home?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Companies will have closed most offices by then.",
+      "Nobody will be wasting two hours in traffic."
+     ],
+     "fb": [
+      "No. People will have missed real teams.",
+      "We’ll be going back to offices, just fewer days."
+     ]
+    },
+    {
+     "q": "Will big cities be better places to live in 2040?",
+     "a": "Better",
+     "b": "Worse",
+     "fa": [
+      "Better. They will have built parks and clean transport.",
+      "People will be growing food on rooftops."
+     ],
+     "fb": [
+      "Worse. Rent will have doubled again.",
+      "Only rich people will be living downtown."
+     ]
+    },
+    {
+     "q": "Should your city stop growing?",
+     "a": "Stop",
+     "b": "Keep growing",
+     "fa": [
+      "Stop. It will have lost every green space by 2040.",
+      "Growth isn’t the same as quality."
+     ],
+     "fb": [
+      "Keep growing. Growth means jobs.",
+      "Young people will be looking for homes."
+     ]
+    },
+    {
+     "q": "Will 2040 be better, or just different?",
+     "a": "Better",
+     "b": "Just different",
+     "fa": [
+      "Better. We will have solved problems we can’t imagine now.",
+      "Every generation lives longer."
+     ],
+     "fb": [
+      "Just different. We will have created new problems.",
+      "Progress always comes with a price."
+     ]
+    }
+   ],
+   "fim": "Four rounds. By 2040, you will have won one of them."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Blueprint",
+   "t": "Your life plan, from 2040 back.",
+   "p": "Start in 2040. Walk back to today.",
+   "prof": "Push for precise time markers (by 2030, by the time I’m 50) and recast simple future into will have where it’s a finished result.",
+   "passos": [
+    {
+     "q": "It’s 2040. What will you be doing on a normal Tuesday?",
+     "st": [
+      "On a Tuesday in 2040, I’ll be …"
+     ],
+     "ex": "On a Tuesday in 2040, I’ll be teaching online from a small house in the mountains."
+    },
+    {
+     "q": "What will you have done by 2035 to get there?",
+     "st": [
+      "By 2035, I’ll have …"
+     ],
+     "ex": "By 2035, I’ll have sold my apartment in the city."
+    },
+    {
+     "q": "What will you have finished by 2030?",
+     "st": [
+      "By 2030, I’ll have finished …"
+     ],
+     "ex": "By 2030, I’ll have finished my master’s degree."
+    },
+    {
+     "q": "So, what will you be doing next month?",
+     "st": [
+      "Next month, I’ll be …"
+     ],
+     "ex": "Next month, I’ll be looking for courses and saving money."
+    }
+   ],
+   "fim": "One blueprint, from 2040 back to now."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

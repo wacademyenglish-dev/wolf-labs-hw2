@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Mind Matters",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/739fb77408a7/mind-matters/img/live-janela.webp",
+  "capa": "../img/live-janela.webp",
   "alvo": "deduction with must be / might be / can't be (how sure you are: 100%, 50%, 0%); never must not be for impossible; no to after them",
   "abrir": "Your friend is late and doesn't answer the phone. What might be the reason?",
   "fecho": "You are not saying what is true: you are saying how sure you are. <b>must be</b> = 100% sure. <b>might be</b> = maybe, 50%. <b>can't be</b> = impossible, 0%. Never <i>must not be</i> for impossible, and no <i>to</i>: <i>She must be tired.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo find two bags at the station. A new scene, about 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/739fb77408a7/mind-matters/img/live-bolsa2.webp",
+      "img": "../img/live-bolsa2.webp",
       "leg": "A bag left at the station",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The owner of this bag must be a parent.",
-          "img": "https://wolf-labs.pages.dev/p/739fb77408a7/mind-matters/img/live-bolsa2.webp",
+          "img": "../img/live-bolsa2.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "That briefcase might belong to a teacher.",
-          "img": "https://wolf-labs.pages.dev/p/739fb77408a7/mind-matters/img/live-bolsa3.webp",
+          "img": "../img/live-bolsa3.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The coffee can't be hot after eight hours.",
-          "img": "https://wolf-labs.pages.dev/p/739fb77408a7/mind-matters/img/live-bolsa3.webp",
+          "img": "../img/live-bolsa3.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/739fb77408a7/mind-matters/img/live-janela.webp",
+      "img": "../img/live-janela.webp",
       "leg": "A lit window in a dark street",
       "pede": "Look at the picture: a window with a warm light, in a dark street. Write 2 or 3 sentences: who lives there, and what are they doing? Use <b>must be, might be</b> and <b>can't be</b>.",
       "ph": "The person must be …",

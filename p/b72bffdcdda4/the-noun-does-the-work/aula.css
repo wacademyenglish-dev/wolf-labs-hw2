@@ -1,0 +1,71 @@
+/* ============================================================
+   THE NOUN DOES THE WORK · THE VERB MAP · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: um mapa à noite — azul-
+   petróleo quase preto; quatro territórios em cores escuras de atlas
+   (MAKE terracota, DO oliva, TAKE azul, HAVE ameixa) e a faixa da
+   fronteira TAKE/HAVE listrada; os alfinetes em creme.
+   ============================================================ */
+:root{
+  --noite:#05080a; --noite-rgb:5,8,10; --tinta:#e7ecee;
+  --t1:#eff3f4; --t2:#c3ccd0; --t2-rgb:195,204,208; --t3:#80898e;
+  --ac:#f0c987; --ac2:#f9e4bd; --mk:#d9805c; --dd:#a6c06a; --tk:#6fa6dc; --hv:#c08ad6; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(231,236,238,.05); --vidro2:rgba(231,236,238,.085); --vidro3:rgba(231,236,238,.12);
+  --fio:rgba(224,230,232,.12); --fio2:rgba(224,230,232,.22); --luz:rgba(231,236,238,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1d06}
+.btn.cheio{color:#2a1d06}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(56px,5.6vw,108px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2a220f;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.nw-ops{display:grid;gap:6px} .nw-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;margin:0 auto 12px;width:100%} .nw-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1100px;margin:0 auto 10px;width:100%} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao s{text-decoration-color:var(--erro);color:var(--t3)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.nw-linha-ok{display:flex;align-items:center;gap:12px} .nw-linha-ok .aprova{flex:1;margin:0} .nw-linha-ok.centro{max-width:1100px;margin:0 auto;width:100%}
+.nw-temas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 12px}
+.nw-rot{margin:0;font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+
+/* o mapa */
+.nw-mapa{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;gap:6px;width:100%;max-width:720px;padding:10px;border-radius:var(--r2);background:#081014;border:1px solid var(--fio2);box-shadow:inset 0 0 40px rgba(0,0,0,.6)}
+.nw-zona{display:grid;align-content:start;gap:4px;min-height:110px;padding:12px 14px;border-radius:12px;border:1px dashed rgba(255,255,255,.12);text-align:left;color:var(--t1);font:inherit;cursor:default}
+button.nw-zona{cursor:pointer} button.nw-zona:hover{border-style:solid;border-color:var(--ac)}
+.nw-zona b{font:800 clamp(16px,1.3vw,22px) var(--mono);letter-spacing:.14em} .nw-zona small{font:600 12px var(--disp);color:var(--t3)}
+.nw-zona.make{background:linear-gradient(135deg,rgba(217,128,92,.2),rgba(217,128,92,.06))} .nw-zona.make b{color:var(--mk)}
+.nw-zona.do{background:linear-gradient(135deg,rgba(166,192,106,.18),rgba(166,192,106,.05))} .nw-zona.do b{color:var(--dd)}
+.nw-zona.take{grid-row:2;background:linear-gradient(135deg,rgba(111,166,220,.2),rgba(111,166,220,.06))} .nw-zona.take b{color:var(--tk)}
+.nw-zona.have{grid-row:2;grid-column:2;background:linear-gradient(135deg,rgba(192,138,214,.2),rgba(192,138,214,.06))} .nw-zona.have b{color:var(--hv)}
+.nw-zona.ambos{grid-row:3;grid-column:1 / -1;min-height:76px;background:repeating-linear-gradient(135deg,rgba(111,166,220,.14) 0 14px,rgba(192,138,214,.14) 14px 28px)} .nw-zona.ambos b{background:linear-gradient(90deg,var(--tk),var(--hv));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nw-pinos{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.nw-pino{display:inline-flex;align-items:center;gap:5px;padding:3px 9px 3px 6px;border-radius:999px;background:#1c2329;border:1px solid rgba(240,201,135,.4);font:700 12px var(--disp);color:var(--ac2);animation:cai .45s cubic-bezier(.3,1.5,.5,1)}
+.nw-pino::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--ac);box-shadow:0 0 6px rgba(240,201,135,.6)}
+@keyframes cai{from{transform:translateY(-16px);opacity:0}}
+.nw-carta{display:grid;gap:6px;padding:20px 24px;border-radius:var(--r2);border-color:rgba(240,201,135,.45);text-align:center} .nw-carta small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .nw-carta b{font:800 clamp(30px,2.6vw,46px) var(--disp);color:var(--t1)}
+
+/* listas, áudio, placar */
+.nw-lista{display:grid;gap:8px;max-width:1200px;margin:0 auto 10px;width:100%}
+.nw-tf{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 14px;border-radius:14px} .nw-tf span{font:600 clamp(16px,1.25vw,21px) var(--disp)} .nw-tf span b{color:var(--ac2)}
+.nw-tf.certo{border-color:var(--ok)} .nw-tf.errado{border-color:var(--erro)}
+.nw-fs{display:flex;gap:6px;flex-wrap:wrap} .nw-fs .pilula{min-height:36px;padding:0 14px;font:800 12px var(--mono);letter-spacing:.06em}
+.nw-ouves{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:1300px;margin:0 auto 10px;width:100%}
+.nw-ouve{display:grid;gap:10px;padding:12px 16px;border-radius:14px} .nw-ouve p{margin:0;font:600 clamp(17px,1.35vw,23px) var(--disp)} .nw-ouve p b{color:var(--ac2)}
+.nw-ouve.certo{border-color:var(--ok)}
+.nw-placar{display:grid;gap:8px;justify-items:start;padding:16px 20px;border-radius:var(--r2)} .nw-placar small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .nw-placar b{font:800 clamp(40px,3.4vw,60px) var(--mono);color:var(--ac2);line-height:1}
+.nw-placar div{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;width:100%} .nw-placar i{height:12px;border-radius:3px;background:#1c2329} .nw-placar i.on{background:var(--ac)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .nw-mapa{max-width:440px} .lado-fim .nw-zona{min-height:70px;padding:8px 10px}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .nw-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .nw-tf{grid-template-columns:1fr} .nw-ouves{grid-template-columns:1fr} .nw-zona{min-height:80px} }

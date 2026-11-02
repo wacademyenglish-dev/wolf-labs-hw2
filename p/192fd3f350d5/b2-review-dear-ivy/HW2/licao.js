@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Dear Ivy",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/192fd3f350d5/b2-review-dear-ivy/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 2 review: first conditional with unless, provided that, as long as; second conditional (If I won ..., I would ...); wish + past (I wish I had); second x third conditional (If you had asked, I would have helped); If I were you",
   "abrir": "What advice would you give a friend who hates their job?",
   "fecho": "<b>unless</b> = if not · <b>provided that / as long as</b> = on the condition that, with a present verb. <b>If + past, would</b> for the imaginary: <i>If I won, I would travel.</i> <b>wish + past</b>: <i>I wish I had more time.</i> <b>If + had + participle, would have + participle</b> for the past: <i>If you had asked, I would have helped.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo answer letters for an advice column. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/192fd3f350d5/b2-review-dear-ivy/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A window seat at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -156,7 +156,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/192fd3f350d5/b2-review-dear-ivy/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Readers' letters on a desk",
       "pede": "Look at the picture: letters on a desk under a small lamp, readers' letters for an advice column. Answer one reader who wants to change careers. Write 2 or 3 sentences with <b>provided that</b>, <b>unless</b>, <b>If I were you</b> or <b>I wish</b>.",
       "ph": "Dear reader, if I were you, ...",

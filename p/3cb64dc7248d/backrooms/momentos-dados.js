@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de Backrooms (11/10/2026): cinco falas do trailer, a descoberta do Clark.
+   Forma: o termômetro (empolgação, dúvida, medo). Alvo: present perfect (has found, have been… since, never / ever / just).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [0, 1, 2, 3, 4], k: 'I found something', quem: 'Clark, on the phone',
+    contexto: 'Clark calls a friend late at night. He found something behind his store. Not an object. A place.',
+    frase: 'I found something. In the store. — What did you find? — <b>The place.</b>',
+    explica: 'It’s news, and it’s still true now: the place is there. That is why we tell it with the present perfect.',
+    formula: 'He <b>has found</b> a place. (news, now) · He <b>found</b> it last Tuesday. (finished time)',
+    tente: 'What is something new you have found or discovered this month?',
+    ex: 'I’ve found a great bakery near my work. I found it last Monday.',
+    sente: { q: 'How excited is Clark?', de: 'calm', a: 'super excited', st: 'He’s … because he has just …' } },
+  { i: [5, 6, 7, 8, 9, 10], k: 'Proof', quem: 'Clark',
+    contexto: 'His friend doesn’t really believe him. Clark promises to show him.',
+    frase: 'I’m not saying I don’t believe you. — Okay. <b>I’m gonna come back here with proof.</b>',
+    explica: '<i>Proof</i> = something that shows it is true: a video, a photo. Nobody has seen this place before.',
+    formula: '<b>Have</b> you <b>ever seen</b> a place like this? — No, I’ve <b>never</b> seen one.',
+    tente: 'Ask your teacher three questions with Have you ever…?',
+    ex: 'Have you ever seen a ghost? Have you ever been lost in a building?',
+    sente: { q: 'How much does his friend believe him?', de: 'totally', a: 'not at all', st: 'His friend … because Clark hasn’t …' } },
+  { i: [13, 14, 15], k: 'Every night', quem: 'Clark',
+    contexto: 'Clark goes back again and again. The place is enormous.',
+    frase: '<b>I’ve been here every night since I found the place</b>, and I still barely scratched the surface.',
+    explica: '<i>Scratch the surface</i> = see only a tiny part. He started in the past, and he still comes every night.',
+    formula: 'I <b>have been</b> here every night <b>since</b> I found it. · <b>for</b> two weeks · ✗ since two weeks',
+    tente: 'What have you done every day since you started this course?',
+    ex: 'I’ve listened to English music every day since March, for seven months.',
+    sente: { q: 'How obsessed is Clark?', de: 'relaxed', a: 'totally obsessed', st: 'He’s … because he has been there …' } },
+  { i: [17, 18, 19, 20, 21], k: 'All these rooms', quem: 'Clark',
+    contexto: 'His friend lifts him up to look over the walls. From above, there are only rooms, forever.',
+    frase: 'Pull me up! — What do you see? — All these rooms. <b>This place builds them.</b>',
+    explica: 'A maze that grows by itself. Nobody has seen the end of it.',
+    formula: 'Nobody <b>has seen</b> the end. · He <b>has just</b> seen it. (just = a moment ago)',
+    tente: 'Tell me something you have just done today.',
+    ex: 'I’ve just had a coffee, and I’ve just answered all my emails.',
+    sente: { q: 'How amazed is Clark?', de: 'bored', a: 'amazed', st: 'He’s … because he has never …' } },
+  { i: [22, 23], k: 'On and on', quem: 'Clark',
+    contexto: 'The place never ends. For the first time, Clark is afraid.',
+    frase: 'Hey, it just goes on and on. Sometimes <b>I’m scared I’ll get lost</b>.',
+    explica: '<i>Goes on and on</i> = it never ends. He has been there many times, but he has never found the end.',
+    formula: 'He <b>has never</b> seen anything like it. · <b>Has</b> anyone <b>ever</b> come back?',
+    tente: 'Have you ever been lost? Where? What happened?',
+    ex: 'I’ve been lost in a huge mall. I walked for an hour!',
+    sente: { q: 'How scared is he now?', de: 'calm', a: 'terrified', st: 'He’s … because he has never …' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#d9c45a', titulo: 'Five lines. Feel the place.', sub: 'Hear the line, put it on the thermometer, then say why with the present perfect.', rot: { por: 'WHAT IT MEANS', padrao: 'HAVE / HAS + PARTICIPLE', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

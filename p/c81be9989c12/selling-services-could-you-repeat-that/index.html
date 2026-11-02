@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -135,5 +136,282 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "How many calls this week?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "The Bluepeak phone tips.",
+   "p": "Read it out loud. Answer the questions."
+  },
+  "dialogo": {
+   "t": "A bad line. A fast client.",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "Polite, not “What?”",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "erros": {
+   "t": "Five mistakes in the call script.",
+   "p": "Find one. Say it right. Tap it."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Your teacher answers first. Then you."
+  },
+  "cartao": {
+   "t": "Your phone card.",
+   "p": "Write it. Then spell your email out loud."
+  },
+  "pode": {
+   "t": "Lesson 14: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Frases de telefone e soletrar nome e e-mail (Could you repeat that?, Could you spell that?, at, dot); Greg Novak liga para o Leo numa linha ruim e dita o e-mail.",
+  "armadilha": "“What?” (grosseiro em inglês), ordem seca “Repeat, please”, “more slow” no lugar de more slowly, “arroba / point” no e-mail e as letras A, E, I, G, J, R, Y.",
+  "pal": [
+   "Sorry, could you repeat that?",
+   "Could you speak more slowly, please?",
+   "Could you spell that, please?",
+   "Let me check: …",
+   "at",
+   "dot",
+   "underscore",
+   "dash"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula de sobrevivência: o telefone, que é o medo real do aluno.",
+   "perg": "How do you spell your first name?",
+   "pula": "Faça a pergunta de abertura e vá à cena I."
+  },
+  "conversa": {
+   "obj": "Small talk sobre ligações da semana; o aluno pergunta “And you?”.",
+   "perg": "How many calls did you have this week?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler as dicas do treinamento da Bluepeak e achar as frases que salvam a ligação.",
+   "perg": "What do you say when the line is bad?",
+   "pula": "Leia e responda duas perguntas."
+  },
+  "dialogo": {
+   "obj": "Ouvir o Greg Novak rápido numa linha ruim e anotar o e-mail dele.",
+   "perg": "What is Greg’s email?",
+   "pula": "Ouça uma vez e duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar respostas e ver por que “What?” e “Repeat, please” soam rudes.",
+   "perg": "Why is ‘What?’ a problem?",
+   "pula": "Dois pares e a regra."
+  },
+  "erros": {
+   "obj": "Corrigir os cinco erros do roteiro de ligação do colega.",
+   "perg": "What’s wrong in this line?",
+   "pula": "Três erros bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather: A ou B com because; você responde primeiro.",
+   "perg": "Why that one?",
+   "pula": "Uma escolha só."
+  },
+  "cartao": {
+   "obj": "Escrever o cartão do telefone e soletrar o e-mail real; você escreve o que ouve.",
+   "perg": "Could you spell your email, please?",
+   "pula": "Só o e-mail soletrado."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; o resto vai para a lição.",
+   "perg": "Can you spell your email now?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre ligações reais do aluno com clientes, com as frases educadas.",
+   "perg": "Who calls you at work?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas simples sobre telefone e e-mail no trabalho.",
+   "perg": "Call or email?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é o Greg Novak e dita os dados; você pede para repetir e soletrar.",
+   "perg": "Could you spell that, please?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "You and the phone.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "Could you …?",
+    "Let me check",
+    "at",
+    "dot"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR NAME",
+     "q": "Spell your full name.",
+     "fup": "Which letter is hard for people?",
+     "st": [
+      "My name is …",
+      "It’s spelled …"
+     ],
+     "ex": "My name is Rogério. It’s spelled R-O-G-E-R-I-O."
+    },
+    {
+     "k": "PHONE OR EMAIL",
+     "q": "Do you prefer phone calls or emails with clients?",
+     "fup": "Why?",
+     "st": [
+      "I prefer … because …"
+     ],
+     "ex": "I prefer emails because I have time to think."
+    },
+    {
+     "k": "A FAST CLIENT",
+     "q": "A client talks very fast. What do you say?",
+     "fup": "And if he is still fast?",
+     "st": [
+      "Sorry, could you …?"
+     ],
+     "ex": "Sorry, could you speak more slowly, please?"
+    },
+    {
+     "k": "YOUR EMAIL",
+     "q": "Say your work email, the English way.",
+     "fup": "Is there a dot or a dash?",
+     "st": [
+      "It’s … at … dot com."
+     ],
+     "ex": "It’s carlos dot lima at bluepeak dot com."
+    },
+    {
+     "k": "BAD LINE",
+     "q": "The line is bad. What do you do?",
+     "fup": "Do you call back?",
+     "st": [
+      "I say: …",
+      "I call back …"
+     ],
+     "ex": "I say: sorry, the line is bad. I’ll call you back."
+    },
+    {
+     "k": "CHECKING",
+     "q": "A client says a number. How do you check it?",
+     "fup": "Why is it important?",
+     "st": [
+      "Let me check: …"
+     ],
+     "ex": "Let me check: 555-0192. Is that right?"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "Could you …?"
+   ],
+   "rodadas": [
+    {
+     "q": "A new client: first a call or first an email?",
+     "a": "A call",
+     "b": "An email",
+     "fa": [
+      "A call. It’s more personal."
+     ],
+     "fb": [
+      "An email. The client reads it when he wants."
+     ]
+    },
+    {
+     "q": "You didn’t understand: ask again or guess?",
+     "a": "Ask again",
+     "b": "Guess",
+     "fa": [
+      "Ask again. A wrong email is a big problem."
+     ],
+     "fb": [
+      "Guess. I don’t want to ask three times."
+     ]
+    },
+    {
+     "q": "Video call or phone call with a client?",
+     "a": "Video",
+     "b": "Phone",
+     "fa": [
+      "Video. I can see the person’s face."
+     ],
+     "fb": [
+      "Phone. It’s easier, and I can read my notes."
+     ]
+    },
+    {
+     "q": "Answer the phone at lunch or call back later?",
+     "a": "Answer",
+     "b": "Call back",
+     "fa": [
+      "Answer. Clients don’t wait."
+     ],
+     "fb": [
+      "Call back. I need my lunch!"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Greg Novak now.",
+   "p": "Your teacher is Leo, the seller.",
+   "aluno": "You are Greg, finance manager at Westfield Plastics. Answer fast. Your teacher asks you to repeat and spell.",
+   "perguntas": [
+    "Sorry, could you repeat your name?",
+    "Could you spell your last name, please?",
+    "What’s your email?",
+    "Could you speak more slowly, please?",
+    "Let me check: is it novak at westfield dot com?",
+    "What’s your phone number?"
+   ],
+   "st": [
+    "It’s …",
+    "It’s spelled …",
+    "Yes, that’s right. / No, it’s …"
+   ],
+   "ex": "It’s Novak, N-O-V-A-K. My email is greg dot novak at westfield dot com."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

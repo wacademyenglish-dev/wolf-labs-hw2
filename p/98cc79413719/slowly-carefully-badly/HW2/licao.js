@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Slowly, Carefully, Badly",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/98cc79413719/slowly-carefully-badly/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "adverbs of manner: adjective + -ly (slowly, carefully, loudly, badly); the irregular ones: well, fast, hard, late; position after the object (speaks English well); never fastly, plays good",
   "abrir": "Do you eat fast or slowly?",
   "fecho": "<b>How?</b> adjective + <b>-ly</b>: <i>slowly, carefully, loudly, badly</i>. Four are special: <b>well, fast, hard, late</b>. The adverb goes after the object: <i>She speaks English very well.</i> Never <i>fastly</i>, never <i>plays good</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a kitchen. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/98cc79413719/slowly-carefully-badly/img/live-cozinha.webp",
+      "img": "../img/live-cozinha.webp",
       "leg": "In the kitchen",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -108,7 +108,7 @@ window.HW2 = {
       "sub": "Three sentences about how people do things. Hear it, then say it.",
       "frases": [
         {
-          "t": "Leo cooks slowly but carefully.", "img": "https://wolf-labs.pages.dev/p/98cc79413719/slowly-carefully-badly/img/live-cozinha.webp",
+          "t": "Leo cooks slowly but carefully.", "img": "../img/live-cozinha.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -116,7 +116,7 @@ window.HW2 = {
           "au": "audio/say2.mp3"
         },
         {
-          "t": "She speaks English very well.", "img": "https://wolf-labs.pages.dev/p/98cc79413719/slowly-carefully-badly/img/live-cabine.webp",
+          "t": "She speaks English very well.", "img": "../img/live-cabine.webp",
           "au": "audio/say3.mp3"
         }
       ]

@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Gate Had Closed · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Gate Had Closed · The Departure Board</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Gate Had Closed · The Departure Board</h2>
+    <p>The past perfect is the past of the past: <b>had + third form</b>, used when there are <b>two past moments</b> and one was already finished. <b>When I got to the gate, it had closed.</b> Students say <i>When I arrived, the train left</i> (which means they watched it leave) and <i>had went</i>. The first half is travel; the second half is a real study from 2014: people alone in an empty room for fifteen minutes, with a button that gave an electric shock. The screen is a departure board with two lanes: the front lane is the moment you’re telling; the event that was already over slides to the back lane.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Three: the empty room and the button (IV), boredom and the plastic cup (VII), and the brain at rest (IX). Each plays with pause and 0.75×; the transcript opens after listening. Both studies are small: say so.</p>
+    <h4>DID YOU SEE IT?</h4>
+    <p>Scene III: most students think “left” and “had left” mean the same. Make them act it out: point at the train leaving, or at the empty track. The corrector can’t hear this one: you can.</p>
+    <h4>DON’T OVERUSE IT</h4>
+    <p>Scene V, item 3: with one moment only, the past perfect is wrong. That is the real error after this lesson.</p>
+    <h4>YOUR WORST TRIP</h4>
+    <p>Scene VIII: tap the first sentence you heard; then your student tells the story. Ask “What had happened before that?” at least twice.</p>
+    <!--conversa--><h4>THE ARENA (IX) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the plastic cup study, your student defends a side: should everybody spend fifteen minutes a day with nothing to do? One minute for their side, then Swap sides and one minute for the other. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make it harder. Recast quietly while they talk (“had went” → “had gone”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Too Late, VI One Hundred and Ninety, VIII Your Worst Trip, IX The Arena.</li>
+      <li><b>Listen</b>: IV The Empty Room, VII The Plastic Cup.</li>
+      <li><b>Focus</b>: II Two Lanes, III Did You See It?, V The Past of the Past.</li>
+      <li><b>Write</b>: X, their own too-late story. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE GATE HAD CLOSED (Main B1) · pergunta-surpresa · 27/10/2026 · past perfect (had + particípio) */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'sentido', tipo: 'Would you rather', q: 'Would you rather wait one hour at the gate, or arrive one minute after it had closed?',
+    opc: ['Wait one hour', 'Risk it'], st: ['I’d rather …, because once I had …'],
+    ex: 'Wait one hour. Once I arrived just after the doors had closed, and I never want to feel that again.', push: 'And if the hour has no Wi-Fi?' },
+  { cena: 'sala', tipo: 'What if', q: 'You are alone in that room for fifteen minutes. Do you press the button?',
+    opc: ['Never', 'Once, to check', 'More than once'], st: ['I would …, because I had already …', 'After ten minutes, I …'],
+    ex: 'Once, to check. They had all tried it before, but I would want to know if it had changed.', push: 'And after fourteen minutes, with one minute to go?' },
+  { cena: 'regra', tipo: 'And you?', q: 'By the time you woke up today, what had already happened?',
+    opc: ['Something at home', 'Something at work', 'Something in the news'], st: ['By the time I woke up, … had already …'],
+    ex: 'Something at home. By the time I woke up, my brother had already eaten all the bread.', push: 'And what hadn’t happened yet that you were waiting for?' },
+  { cena: 'copo', tipo: 'And you?', q: 'Where were you the last time you had a really good idea?',
+    opc: ['In the shower', 'Walking', 'At my desk', 'Somewhere else'], st: ['I was …, and I had just …'],
+    ex: 'In the shower. I had worked on a problem all day, and the answer came with the shampoo.', push: 'Did you write it down, or had you forgotten it by the time you got out?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE GATE HAD CLOSED (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A arena entra no lugar de "IX · A Brain That Doesn’t Stop" (extra; a escuta forte é a IV, e a VII
+   já mostra o estudo do copo). Logo depois do copo, o aluno defende um lado sobre o tédio e depois
+   troca. A gramática da aula (had + particípio, dois momentos no passado) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'arena', troca: 'cerebro', est: 'o', min: 7, img: 'copo', rot: 'The Arena', t: 'Fifteen minutes of nothing: gift or punishment?',
+    p: 'Pick a side and defend it for one minute. Then swap and defend the other side. Use had for the moment before.',
+    formato: 'arena', segundos: 60,
+    q: 'Everybody should spend fifteen minutes a day with no phone and nothing to do.',
+    lados: [
+      { nome: 'Yes, do it', arg: 'Boredom gives your brain room to think.' },
+      { nome: 'No, thanks', arg: 'Free time is short. Use it for something good.' }
+    ],
+    st: ['The last time I was bored, I had just …', 'By the time …, I had already …', 'The people in the study had …, so …'],
+    ex: 'Yes, do it. Last month my phone died on the bus. By the time I got home, I had planned my whole weekend, and I hadn’t done that in months.',
+    push: 'Be honest: this morning, had you checked your phone before you got out of bed?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "atrasado": {
+   "t": "You arrived late. It was already over.",
+   "p": "Tap the closest one. Tell it. Keep your sentence."
+  },
+  "faixas": {
+   "t": "Front lane: now. Back lane: already over.",
+   "p": "Tap what happened FIRST. Then say the sentence."
+  },
+  "sentido": {
+   "t": "One word changes the story.",
+   "p": "Did you see it, or was it over?"
+  },
+  "sala": {
+   "t": "2014. Fifteen minutes alone. One button.",
+   "p": "Listen once. Tap the four things in order."
+  },
+  "regra": {
+   "t": "HAD + third form. Two past moments.",
+   "p": "Say the whole sentence before you tap."
+  },
+  "botao": {
+   "t": "Forty-two people, one button.",
+   "p": "Read the card out loud. Say the column. Tap."
+  },
+  "copo": {
+   "t": "Can boredom help you think?",
+   "p": "Listen once. Answer three questions."
+  },
+  "viagem": {
+   "t": "Four disasters. Tell one.",
+   "p": "Say the first sentence. Then tell the whole story."
+  },
+  "cv-arena": {
+   "t": "Fifteen minutes of nothing: gift or punishment?",
+   "p": "Defend a side for one minute. Then swap."
+  },
+  "fim": {
+   "t": "Your story from scene I comes back.",
+   "p": "Fix three sentences. Write your story. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Past perfect (had + particípio), o passado do passado: viagens perdidas e o estudo de 2014 com 15 minutos numa sala vazia e um botão de choque.",
+  "armadilha": "O português usa o pretérito para os dois momentos: “When I arrived, the train left” (que significa que ele viu o trem sair). Também sai “had went” e o past perfect usado com um momento só.",
+  "pal": [
+   "had + third form",
+   "already",
+   "by the time",
+   "when I got there",
+   "had closed",
+   "had left",
+   "boredom",
+   "the gate"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: o portão já tinha fechado quando a pessoa chegou.",
+   "perg": "Have you ever missed a flight or a train?",
+   "pula": "Só leia a manchete e entre."
+  },
+  "atrasado": {
+   "obj": "Aquecimento pessoal: uma vez em que o aluno chegou atrasado e algo já tinha acabado.",
+   "perg": "What had happened when you got there?",
+   "pula": "Uma história curta basta; guarde a frase."
+  },
+  "faixas": {
+   "obj": "Duas faixas: o momento contado na frente, o que já tinha acabado atrás.",
+   "perg": "Which one happened first?",
+   "pula": "Quatro pares bastam."
+  },
+  "sentido": {
+   "obj": "Left × had left: o aluno viu acontecer ou já tinha acabado? Faça encenar.",
+   "perg": "Did you see the train leave?",
+   "pula": "Três frases bastam."
+  },
+  "sala": {
+   "obj": "Ouvir o estudo de 2014 e ordenar o que aconteceu antes da porta fechar. Estudo pequeno: diga isso.",
+   "perg": "What had they done before the door closed?",
+   "pula": "Uma escuta e a ordem."
+  },
+  "regra": {
+   "obj": "A regra: had + terceira forma, só com dois momentos passados. Item 3: com um momento só, está errado.",
+   "perg": "Are there two past moments here?",
+   "pula": "Corte dois itens; não o 3."
+  },
+  "botao": {
+   "obj": "Classificar os cartões dos 42 participantes nas colunas, falando a frase.",
+   "perg": "What had they done before they pressed it?",
+   "pula": "Quatro cartões bastam."
+  },
+  "copo": {
+   "obj": "Outro estudo: o tédio e o copo de plástico. Ouvir e responder.",
+   "perg": "What had people done before the cup test?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "viagem": {
+   "obj": "O aluno conta um desastre de viagem; pergunte duas vezes What had happened before that?",
+   "perg": "What had happened before that?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-arena": {
+   "obj": "Arena: 15 minutos sem nada por dia, presente ou castigo? Um minuto de cada lado. Use a linha PUSH.",
+   "perg": "Should everybody have fifteen minutes of nothing?",
+   "pula": "Só um lado, sem trocar."
+  },
+  "fim": {
+   "obj": "A frase da cena I volta para corrigir; escrita da própria história de atraso com had.",
+   "perg": "What had already happened when you arrived?",
+   "pula": "Corrija as três e escreva três frases. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre momentos em que algo já tinha acontecido.",
+   "perg": "What had you done before you started this class?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre tédio, atrasos e celulares, com argumentos prontos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Contar um dia que deu errado em sequência, usando had para o que veio antes.",
+   "perg": "What had gone wrong before that?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Two moments, one sentence.",
+   "p": "Pick a card. Use had for the earlier one.",
+   "palavras": [
+    "had + third form",
+    "already",
+    "by the time",
+    "when"
+   ],
+   "cartas": [
+    {
+     "k": "THE PARTY",
+     "q": "Have you ever arrived at a party when it had already ended?",
+     "fup": "Why were you so late?",
+     "st": [
+      "When I got there, everybody had …",
+      "By the time I arrived, …"
+     ],
+     "ex": "When I got there, everybody had gone home, and only the host was washing the dishes."
+    },
+    {
+     "k": "THE MOVIE",
+     "q": "Have you ever walked into a movie that had already started?",
+     "fup": "Did you understand the story?",
+     "st": [
+      "When I sat down, the movie had …",
+      "I had missed …"
+     ],
+     "ex": "When I sat down, the movie had started, so I had missed the first murder."
+    },
+    {
+     "k": "BEFORE ENGLISH",
+     "q": "What had you tried before you started studying here?",
+     "fup": "Why didn’t it work?",
+     "st": [
+      "Before this, I had tried …",
+      "I had never …"
+     ],
+     "ex": "Before this, I had tried two apps, but I had never spoken to a real person."
+    },
+    {
+     "k": "BORED",
+     "q": "When were you really bored, with nothing to do?",
+     "fup": "What did you do in the end?",
+     "st": [
+      "I had forgotten my …, so …",
+      "Nobody had told me …"
+     ],
+     "ex": "I had forgotten my phone at home, so I just watched people at the airport for an hour."
+    },
+    {
+     "k": "FIRST TIME",
+     "q": "What had you never done before you were twenty?",
+     "fup": "When did you do it first?",
+     "st": [
+      "By twenty, I had never …",
+      "I had never … until …"
+     ],
+     "ex": "By twenty, I had never been on a plane."
+    },
+    {
+     "k": "THE SURPRISE",
+     "q": "Tell me about a time you found out something had changed.",
+     "fup": "How did you feel?",
+     "st": [
+      "When I came back, someone had …",
+      "I found out that …"
+     ],
+     "ex": "When I came back from vacation, my neighbor had painted his house bright pink."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "The thing is, …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Your flight is at 9. Get to the airport at 6 or at 8?",
+     "a": "At 6",
+     "b": "At 8",
+     "fa": [
+      "At 6. I’ve seen gates close.",
+      "Waiting is better than running."
+     ],
+     "fb": [
+      "At 8. Three hours of nothing is too much.",
+      "Airports are boring."
+     ]
+    },
+    {
+     "q": "Would you press the button to stop the boredom?",
+     "a": "Yes",
+     "b": "No way",
+     "fa": [
+      "Yes. Fifteen minutes alone with my thoughts is hard.",
+      "A small shock is at least something."
+     ],
+     "fb": [
+      "No way. Pain is worse than boredom.",
+      "I’d just think about my week."
+     ]
+    },
+    {
+     "q": "Waiting in line: phone or no phone?",
+     "a": "Phone",
+     "b": "No phone",
+     "fa": [
+      "Phone. Why waste the time?",
+      "I can answer my messages."
+     ],
+     "fb": [
+      "No phone. My brain needs a rest.",
+      "Good ideas come when you’re bored."
+     ]
+    },
+    {
+     "q": "A friend is always late. Say something or let it go?",
+     "a": "Say something",
+     "b": "Let it go",
+     "fa": [
+      "Say something. It’s about respect.",
+      "They won’t change if nobody tells them."
+     ],
+     "fb": [
+      "Let it go. A friend is more than a clock.",
+      "I just bring a book."
+     ]
+    }
+   ],
+   "fim": "Four rounds. By the time you finished, everybody had talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Story",
+   "t": "The day everything went wrong.",
+   "p": "Tell it step by step, with had.",
+   "prof": "After each step, ask “What had happened before that?” once; recast had went → had gone quietly.",
+   "passos": [
+    {
+     "q": "Where were you going, and why?",
+     "st": [
+      "I was going to … because …"
+     ],
+     "ex": "I was going to my cousin’s wedding in Recife."
+    },
+    {
+     "q": "What went wrong first?",
+     "st": [
+      "When I got to …, I realized I had …"
+     ],
+     "ex": "When I got to the airport, I realized I had left my ID at home."
+    },
+    {
+     "q": "What had already happened by the time you fixed it?",
+     "st": [
+      "By the time I …, the … had already …"
+     ],
+     "ex": "By the time I came back with it, the gate had already closed."
+    },
+    {
+     "q": "How did it end?",
+     "st": [
+      "In the end, …",
+      "I had never … before, so …"
+     ],
+     "ex": "In the end, I took a bus, and I arrived after they had cut the cake."
+    }
+   ],
+   "fim": "One bad day, two lanes, and it’s a story now."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

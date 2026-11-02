@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Fridge Door",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/de6ed7700e64/the-fridge-door/img/live-cozinha.webp",
+  "capa": "../img/live-cozinha.webp",
   "alvo": "already (yes, done, and early) · not ... yet (no, not done, but coming) · still (nothing changed): Is it here yet? / It is already here / It is still here",
   "abrir": "What is already finished in your house today?",
   "fecho": "<b>Already</b> = it is done (and early): <i>The milk is already finished.</i> <b>Not ... yet</b> = not done, but it is coming: <i>The bread is not here yet.</i> <b>Still</b> = nothing changed: <i>The soup is still hot.</i> A yes takes <b>already</b>; a no or a question takes <b>yet</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in the kitchen. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/de6ed7700e64/the-fridge-door/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A kitchen table in the evening",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The milk is already finished.",
-          "img": "https://wolf-labs.pages.dev/p/de6ed7700e64/the-fridge-door/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The bread is not here yet.",
-          "img": "https://wolf-labs.pages.dev/p/de6ed7700e64/the-fridge-door/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The soup is still hot.",
-          "img": "https://wolf-labs.pages.dev/p/de6ed7700e64/the-fridge-door/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/de6ed7700e64/the-fridge-door/img/live-cozinha.webp",
+      "img": "../img/live-cozinha.webp",
       "leg": "A kitchen at night",
       "pede": "Look at the picture: a kitchen at night, with dishes in the sink. Write 2 or 3 sentences. Use <b>already</b>, <b>still</b> and <b>not ... yet</b>.",
       "ph": "The dishes are still … The coffee is already …",

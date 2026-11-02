@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de The Unthinkable Decision (11/10/2026): cinco falas do trailer de Avengers: Doomsday.
+   Forma: o corte do diretor. Alvo: may not be able to, far + comparativo, a consequência (if we don’t / unless / otherwise).
+   A irmã B1 (In My Time) usa o mesmo trailer para orações relativas. Lidos pela cena Line by Line (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [0, 1, 2, 3], k: 'Something’s coming', cena: 'INT. DARK HALL · NIGHT', quem: 'A voice in the dark',
+    contexto: 'A deep voice warns the heroes that the enemy this time may be too big for them.',
+    diretor: 'You lead the heroes. Something terrible is coming. What do you tell them first, honestly?',
+    frase: 'Something <b>we may not be able to deter</b>, but before this day is done, we shall be faced with an unthinkable decision.',
+    explica: '<i>Deter</i> = stop or discourage. <i>May not be able to</i> admits weakness: it is possible they will fail.',
+    formula: 'We <b>may not be able to</b> stop it. (= perhaps we can’t) · ✗ may not can',
+    tente: 'What may you not be able to do this year, even if you try?',
+    ex: 'I may not be able to save enough for the trip, but I’ll try.' },
+  { i: [4, 5, 6, 7], k: 'Far stronger', cena: 'EXT. BATTLEFIELD · DUSK', quem: 'An old warrior',
+    contexto: 'An old warrior remembers the best fighters he ever knew.',
+    diretor: 'An old warrior remembers his friends from past wars. What does he say about them?',
+    frase: 'I fought with many warriors in my time. They were <b>far stronger</b> than all of us put together. And they died.',
+    explica: '<i>Far</i> makes a comparative much bigger. <i>Put together</i> = added up, all of us combined.',
+    formula: '<b>far</b> + comparative: far stronger, far older · = <b>much</b> stronger',
+    tente: 'Compare your life now with ten years ago using far.',
+    ex: 'My life is far busier now, but I’m far happier.' },
+  { i: [8, 9, 10, 11], k: 'Far less', cena: 'EXT. BATTLEFIELD · DUSK', quem: 'An old warrior',
+    contexto: 'And their enemies were nothing compared to this one.',
+    diretor: 'He compares the old enemies with the new one. What does he say?',
+    frase: 'They died facing enemies and threats that <b>scared me far less</b> than this one.',
+    explica: 'If the strongest warriors died against smaller enemies, what will happen now? The comparison is the warning.',
+    formula: 'far <b>less</b> + adjective / verb · far <b>more</b> dangerous',
+    tente: 'Name something that scares you far less now than when you were a child.',
+    ex: 'The dark scares me far less now. Bills scare me far more!' },
+  { i: [12, 13, 14], k: 'For nothing', cena: 'INT. HALL · NIGHT', quem: 'A voice in the hall',
+    contexto: 'The heroes argue among themselves. The voice tells them what is at stake.',
+    diretor: 'The heroes are fighting each other. What do you say to make them stop?',
+    frase: 'Everything that they sacrificed <b>will be for nothing</b>, if we do not stand together.',
+    explica: 'The consequence first, the condition after. You can say the same with <i>unless</i> or <i>otherwise</i>.',
+    formula: 'It will be for nothing <b>if we don’t</b> unite. · <b>unless</b> we unite · Unite, <b>otherwise</b> we lose.',
+    tente: 'Warn a friend about a consequence. Use unless or otherwise.',
+    ex: 'Book the tickets today, otherwise they’ll be gone. Unless you hurry, you’ll miss the show.' },
+  { i: [20, 21, 22], k: 'A miracle', cena: 'INT. HALL · NIGHT', quem: 'Two heroes',
+    contexto: 'The plan is impossible, and they both know it.',
+    diretor: 'The situation looks impossible. What does someone say? What does the other answer?',
+    frase: 'We’re going to <b>need a miracle</b>. — It’s not possible.',
+    explica: 'A short talk that sums up the trailer: hope versus reality.',
+    formula: '<b>Unless</b> a miracle happens, we lose. · We <b>may not be able to</b> win <b>otherwise</b>.',
+    tente: 'Think of a big challenge in your country. What will happen unless something changes?',
+    ex: 'Unless we invest in schools, the next generation won’t have opportunities.' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'diretor', cor: '#7f6be0', titulo: 'The war council.', sub: 'Read the moment, give the speech your way, then hear the original.', rot: { por: 'WHAT IT MEANS', padrao: 'MAY NOT BE ABLE TO · FAR · UNLESS', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

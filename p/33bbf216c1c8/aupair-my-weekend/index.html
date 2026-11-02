@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -121,5 +122,278 @@ window.WL_CONVERSA = { nivel: 'A2', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Wiktoria’s weekend in New York.",
+   "p": "One question. Then the video. Then the questions."
+  },
+  "conversa": {
+   "t": "Monday morning: the family asks.",
+   "p": "Answer in the past. Then ask: “And you?”"
+  },
+  "cartao": {
+   "t": "Plan a weekend trip.",
+   "p": "Where, who, how, what, and a safety plan."
+  },
+  "cv-sexta": {
+   "t": "Ask to leave early on Friday.",
+   "p": "Your teacher is Jen. Answer. Then close the deal."
+  },
+  "pode": {
+   "t": "Lesson 22: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "A vida fora da casa: contar o fim de semana no passado (went, visited, met, ate), planejar viagem com going to e will, e um plano de segurança. A Wiktoria, au pair polonesa, em Nova York.",
+  "armadilha": "O presente no lugar do passado: “I go”, “we visit” para o fim de semana passado. E as misturas “I’m going to went” e “I will to go”.",
+  "pal": [
+   "I went",
+   "we visited",
+   "I met",
+   "It was great!",
+   "I’m going to…",
+   "Maybe we’ll…",
+   "by train",
+   "I’ll share my location with…"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 22 do Au Pair: o fim de semana livre, de sexta à noite a segunda de manhã.",
+   "perg": "What did you do last weekend?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "video": {
+   "obj": "Vlog da Wiktoria (6 min): fim de semana em Nova York; inglês real de falante não nativa.",
+   "perg": "What did Wiktoria do in New York?",
+   "pula": "O vídeo vai inteiro; duas perguntas depois bastam."
+  },
+  "conversa": {
+   "obj": "Segunda de manhã com a família: o aluno conta no passado e pergunta de volta.",
+   "perg": "How was your weekend?",
+   "pula": "Três perguntas bastam."
+  },
+  "cartao": {
+   "obj": "O cartão de plano: onde, com quem, como, o que vai fazer e o plano de segurança.",
+   "perg": "Who will you share your location with?",
+   "pula": "Onde + segurança bastam."
+  },
+  "cv-sexta": {
+   "obj": "Negociação leve com a Jen para sair às 15h; limite secreto: a vizinha busca as crianças se o aluno preparar tudo na quinta.",
+   "perg": "Leave at 3 PM? Who picks up the kids?",
+   "pula": "Duas perguntas e feche o acordo."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; lição: três lugares para visitar perto da futura família.",
+   "perg": "Can you tell your weekend in the past now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre fins de semana e viagens, passado e futuro nas frases prontas.",
+   "perg": "What was your best weekend this year?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas de fim de semana em dois lados, com going to / will.",
+   "perg": "A big city or nature?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno planeja um fim de semana perto da futura família, passo a passo.",
+   "perg": "Where are you going to go first?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Weekends, past and future.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "went",
+    "visited",
+    "I’m going to",
+    "I’ll"
+   ],
+   "cartas": [
+    {
+     "k": "BEST WEEKEND",
+     "q": "What was your best weekend this year?",
+     "fup": "Who were you with?",
+     "st": [
+      "My best weekend was …",
+      "I went to …"
+     ],
+     "ex": "My best weekend was in July. I went to the beach with my sister."
+    },
+    {
+     "k": "LAST SUNDAY",
+     "q": "What did you do last Sunday?",
+     "fup": "Did you cook or eat out?",
+     "st": [
+      "Last Sunday I …"
+     ],
+     "ex": "Last Sunday I visited my grandma and we ate lasagna."
+    },
+    {
+     "k": "DREAM TRIP",
+     "q": "Which U.S. city are you going to visit first?",
+     "fup": "Why that one?",
+     "st": [
+      "I’m going to visit …",
+      "because …"
+     ],
+     "ex": "I’m going to visit New York because I want to see Central Park."
+    },
+    {
+     "k": "TRAVEL STYLE",
+     "q": "Do you plan everything or decide on the day?",
+     "fup": "What happened the last time?",
+     "st": [
+      "I usually …",
+      "Last time, I …"
+     ],
+     "ex": "I usually plan everything. Last time, I forgot to book the hotel!"
+    },
+    {
+     "k": "NEW FRIENDS",
+     "q": "How are you going to meet other au pairs?",
+     "fup": "What will you do together?",
+     "st": [
+      "I’m going to …",
+      "Maybe we’ll …"
+     ],
+     "ex": "I’m going to join a group online. Maybe we’ll go to a museum together."
+    },
+    {
+     "k": "SAFE TRIP",
+     "q": "What do you always do to stay safe on a trip?",
+     "fup": "Who do you tell?",
+     "st": [
+      "I always …",
+      "I’ll share my location with …"
+     ],
+     "ex": "I always save the hotel address. I’ll share my location with my host mom."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I’m going to",
+    "I’ll"
+   ],
+   "rodadas": [
+    {
+     "q": "A weekend in a big city or in nature?",
+     "a": "A big city",
+     "b": "Nature",
+     "fa": [
+      "A big city. I’m going to see museums and shows."
+     ],
+     "fb": [
+      "Nature. I need quiet after a week with kids."
+     ]
+    },
+    {
+     "q": "Travel by train or by bus?",
+     "a": "By train",
+     "b": "By bus",
+     "fa": [
+      "By train. It’s faster and comfortable."
+     ],
+     "fb": [
+      "By bus. It’s cheaper, and I’ll save money."
+     ]
+    },
+    {
+     "q": "Travel with other au pairs or alone?",
+     "a": "With au pairs",
+     "b": "Alone",
+     "fa": [
+      "With au pairs. It’s safer and more fun."
+     ],
+     "fb": [
+      "Alone. I choose everything."
+     ]
+    },
+    {
+     "q": "Leave on Friday at 3 PM or on Saturday morning?",
+     "a": "Friday",
+     "b": "Saturday",
+     "fa": [
+      "Friday. I’ll have more time there."
+     ],
+     "fb": [
+      "Saturday. It’s easier for the family."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Your bags are almost ready."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Weekend Off",
+   "t": "Plan your first weekend off.",
+   "p": "Plan step by step. Say it out loud.",
+   "prof": "EN: You are the host mom. After each step, ask one question about the plan.",
+   "passos": [
+    {
+     "q": "Where are you going to go?",
+     "st": [
+      "I’m going to go to …"
+     ],
+     "ex": "I’m going to go to Chicago."
+    },
+    {
+     "q": "Who with, and how?",
+     "st": [
+      "I’m going with …, by …"
+     ],
+     "ex": "I’m going with two au pairs from my cluster, by train."
+    },
+    {
+     "q": "What are you going to do there?",
+     "st": [
+      "We’re going to …",
+      "Maybe we’ll …"
+     ],
+     "ex": "We’re going to see the river. Maybe we’ll eat deep-dish pizza."
+    },
+    {
+     "q": "Your safety plan.",
+     "st": [
+      "I’ll share my location with …",
+      "I’ll text you when …"
+     ],
+     "ex": "I’ll share my location with you, and I’ll text you when we arrive."
+    }
+   ],
+   "fim": "On Monday morning, tell the family how it went."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

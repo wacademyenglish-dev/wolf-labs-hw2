@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Not Until Midnight · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 4 · Inversion</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Not Until Midnight · C1 Unit 4 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on inversion after negative expressions of time and place: Not until midnight did they arrive; Not until I saw it did I believe it; Not once did we stop; Not since 1990 has it snowed; Nowhere have I seen such stars.</p><p style="margin:0 0 6px"><b>The story:</b> A hiker (invented) tells the story of a night lost in the fog on a mountain, and the rescue at midnight.</p><p style="margin:0 0 6px"><b>About 48 min:</b> I · The Night on the Mountain (10) · II · Fact or Story? (9) · III · Make It Dramatic (8) · IV · On the Mountain (7) · V · The Story in Order (7) · VI · Your Story (7).</p><p style="margin:0"><b>Open with:</b> “Have you ever been lost? What did you feel when you finally got home?”</p></div><!--/prep-->
+    <p>Inversion feels artificial to students. Present it as a storyteller’s tool: it makes the listener wait. Read the story with drama. The key trap: with Not until + a clause, the inversion goes in the SECOND part. Tell the student it is natural in stories, speeches and writing, and that “It wasn’t until… that…” is the everyday alternative.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>Not until + time: Not until midnight did… · Not until + clause: Not until I saw it did I… · Not once did… · Not since … has / had… · Nowhere have I… · the everyday option: It wasn’t until… that…</p>
+    <h4>THE NIGHT ON THE MOUNTAIN</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>FACT OR STORY?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>MAKE IT DRAMATIC</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>THE STORY IN ORDER</h4>
+    <p>The events are mixed. The student taps them in order; wrong order shows in red. When it’s right, the student tells the whole story with first, then, after that, finally.</p>
+    <h4>YOUR STORY</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>Not until midnight they arrived</i>, <i>Not until did I see it I understood</i>, <i>Not once we stopped</i>, <i>Nowhere I have seen</i>, <i>Not since 2010 it has rained</i>, <i>Not until midnight arrived they</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>ON THE MOUNTAIN (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After the transformations, your student is on the mountain and makes three decisions: the fog at 4 p.m., the phone with 10% battery, and a night hike a month later. There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Push for one inversion per answer (Not until I’m safe will I…, Never would I…). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Night on the Mountain.</li>
+      <li><b>Focus</b>: II · Fact or Story? and III · Make It Dramatic.</li>
+      <li><b>Out loud</b>: IV · On the Mountain, V · The Story in Order and VI · Your Story.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* NOT UNTIL MIDNIGHT (Main C1) · pergunta-surpresa · 28/10/2026 · inversão depois de tempo e lugar */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'Would you rather', q: 'Would you rather spend a night lost on a mountain, or a night stuck in an airport?',
+    opc: ['The mountain', 'The airport'], st: ['Never would I …', 'Not once would I …'],
+    ex: 'The airport. Not once would I complain: there’s coffee, Wi-Fi and a floor to sleep on.', push: 'The mountain has the best stars of your life. The airport has a crying baby. Now?' },
+  { cena: 'descobre', tipo: 'And you?', q: 'What is something you didn’t understand until you were an adult?',
+    opc: ['Money', 'My family', 'Something else'], st: ['Not until I was … did I understand …', 'Not until I … did I …'],
+    ex: 'Money. Not until I paid my own rent did I understand why my dad turned off every light.', push: 'And something you STILL don’t understand?' },
+  { cena: 'ordem', tipo: 'Opinion', q: 'Is it a good idea to go on a trip with no plan at all?',
+    opc: ['Great idea', 'Bad idea', 'Depends where'], st: ['Not once have I …', 'Never would I …, unless …'],
+    ex: 'Depends where. In a city, great. On a mountain, never would I go without a map.', push: 'Tell me about one time a plan went wrong. Start with “Not until…”.' },
+  { cena: 'conversa', tipo: 'What if', q: 'You can see one view in the world for the first time tomorrow. Which one?',
+    opc: ['A night sky', 'The sea', 'A big city'], st: ['Nowhere have I seen …', 'Not since … have I …'],
+    ex: 'A night sky in the desert. Nowhere have I seen real darkness: in my city the sky is orange.', push: 'You can only go alone. Still that place?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* NOT UNTIL MIDNIGHT (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O dilema ENTRA depois do III (Make It Dramatic): a aula tem ~41 min e nenhum extra, então vai a ~48.
+   A aula não tinha momento de escolha (só a fala pessoal do V). No meio, o aluno está na montanha:
+   três decisões da tarde de neblina, sem ninguém se machucar. A inversão da aula (Not until … will I …,
+   Not once …, Never …, Nowhere …) mora nos iniciadores. Formato: dilemma (escolha). */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'dilema', apos: 'transforma', est: 'o', min: 7, img: 'capa', rot: 'On the Mountain', t: 'The fog is coming. What would you do?',
+    p: 'You are on the mountain. Choose, or say your own idea. Say why, and start with Not until, Not once or Never.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: '4 p.m.', sit: 'The fog is coming down. The hut is one hour behind you. The summit is only thirty minutes ahead.',
+        q: 'What do you do?', opc: ['Go back to the hut', 'Run to the summit', 'Sit and wait'],
+        st: ['Not until I’m safe will I …', 'Never would I …', 'Not once in my life have I …'],
+        ex: 'Go back to the hut. Never would I climb into fog. Not until the sky is clear will I think about the summit.',
+        push: 'Your friend says: “We came here for the summit. Thirty minutes!” Do you go alone, back down?' },
+      { tag: 'Your phone', sit: 'You’re lost, and your phone has 10% battery. There is a weak signal, only for a moment.',
+        q: 'Who do you call or text?', opc: ['The rescue line', 'A friend at home', 'Nobody: save the battery'],
+        st: ['Not until … will I …', 'Not once would I …', 'Only then would I …'],
+        ex: 'The rescue line. Not until they know where I am will I relax. A friend would only worry.',
+        push: 'The signal is enough for ONE message of ten words. Say it now.' },
+      { tag: 'Next month', sit: 'A month later, a friend invites you to a night hike on the same mountain. The guide is very good.',
+        q: 'Do you go?', opc: ['Yes, with a map', 'Only in daylight', 'Never again'],
+        st: ['Not until … will I go back.', 'Not once did I think …', 'Nowhere would I …'],
+        ex: 'Only in daylight. Not until I see the path with my own eyes will I go back there.',
+        push: 'The guide says the stars at night are the best of your life. Still only daylight?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "A hiker tells her story.",
+   "p": "Read it like a storyteller. Then look closer."
+  },
+  "descobre": {
+   "t": "Same event. One is a story.",
+   "p": "Compare A and B. Where does the verb go?"
+  },
+  "transforma": {
+   "t": "Plain → dramatic.",
+   "p": "Start with the clue. Say it with inversion."
+  },
+  "cv-dilema": {
+   "t": "The fog is coming. What would you do?",
+   "p": "Choose. Say why, starting with Not until or Never."
+  },
+  "ordem": {
+   "t": "What happened first?",
+   "p": "Tap the cards in order. Then tell it with connectors."
+  },
+  "conversa": {
+   "t": "Your own stories, with drama.",
+   "p": "Answer with one inversion. Then ask it back."
+  }
+ },
+ "prep": {
+  "obj": "Inversão depois de expressões negativas de tempo e lugar (Not until midnight did…, Not once did…, Not since 1990 has…, Nowhere have I…): uma noite perdida na neblina da montanha.",
+  "armadilha": "Com “Not until + oração” a inversão vai na SEGUNDA parte, e o brasileiro inverte a primeira ou nenhuma: “Not until midnight they arrived”, “Not once we stopped”, “Nowhere I have seen”.",
+  "pal": [
+   "Not until … did …",
+   "Not until I saw it did I …",
+   "Not once did …",
+   "Not since … has …",
+   "Nowhere have I …",
+   "It wasn’t until … that …",
+   "fog",
+   "rescue"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: a inversão é uma ferramenta de contador de histórias; faz o ouvinte esperar.",
+   "perg": "Have you ever been lost?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "A trilheira conta a noite na neblina e o resgate à meia-noite; achar as inversões.",
+   "perg": "When did she finally feel safe?",
+   "pula": "Leia e faça duas perguntas de sentido."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: fato x história; onde vai o verbo, e a alternativa It wasn’t until… that.",
+   "perg": "Where does the verb go in the story version?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "transforma": {
+   "obj": "Frase simples vira dramática começando pela pista.",
+   "perg": "Can you start with “Not until”?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-dilema": {
+   "obj": "Três decisões na montanha: a neblina às 16h, o celular com 10% e uma trilha noturna um mês depois.",
+   "perg": "What would you do, and why?",
+   "pula": "Uma decisão basta."
+  },
+  "ordem": {
+   "obj": "Os eventos da noite fora de ordem; ordenar e recontar com conectores.",
+   "perg": "What happened first?",
+   "pula": "Ordene e conte só o começo e o fim."
+  },
+  "conversa": {
+   "obj": "Histórias do aluno com uma inversão por resposta; ele devolve a pergunta.",
+   "perg": "Not until when did you realize?",
+   "pula": "Duas perguntas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais momentos da vida do aluno contados com inversões de tempo e lugar.",
+   "perg": "Not since when …?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre aventura, risco e tecnologia na natureza, com inversões.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a trilheira e responde ao professor, como repórter, com inversões dramáticas.",
+   "perg": "When did you know you were lost?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Make the listener wait.",
+   "p": "Pick a card. Start with the negative word.",
+   "palavras": [
+    "Not until … did I",
+    "Not once did …",
+    "Not since … have I",
+    "Nowhere have I …",
+    "It wasn’t until … that"
+   ],
+   "cartas": [
+    {
+     "k": "THE SKY",
+     "q": "Where have you seen the most beautiful sky or landscape?",
+     "fup": "Would you go back?",
+     "st": [
+      "Nowhere have I seen such …"
+     ],
+     "ex": "Nowhere have I seen such stars as in the Atacama Desert."
+    },
+    {
+     "k": "A LONG WAIT",
+     "q": "When did you wait a very long time for something?",
+     "fup": "Was it worth it?",
+     "st": [
+      "Not until … did I finally …"
+     ],
+     "ex": "Not until my third interview did I finally get the job."
+    },
+    {
+     "k": "SINCE THEN",
+     "q": "What haven’t you done since you were a child?",
+     "fup": "Why did you stop?",
+     "st": [
+      "Not since I was … have I …"
+     ],
+     "ex": "Not since I was ten have I climbed a tree."
+    },
+    {
+     "k": "NONSTOP",
+     "q": "Tell me about a day when you didn’t stop once.",
+     "fup": "How did you feel at night?",
+     "st": [
+      "Not once did I …"
+     ],
+     "ex": "On moving day, not once did I sit down. I slept on the floor at midnight."
+    },
+    {
+     "k": "BELIEVE IT",
+     "q": "What did you only believe when you saw it with your own eyes?",
+     "fup": "Who told you first?",
+     "st": [
+      "Not until I saw it did I …"
+     ],
+     "ex": "Not until I saw it did I believe my brother had shaved his beard."
+    },
+    {
+     "k": "EVERYDAY",
+     "q": "Tell one of those stories again, plainly, like in a chat.",
+     "fup": "Which version sounds better to you?",
+     "st": [
+      "It wasn’t until … that …"
+     ],
+     "ex": "It wasn’t until my third interview that I got the job."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "Not once …",
+    "Never …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Hiking alone: freedom or a bad idea?",
+     "a": "Freedom",
+     "b": "A bad idea",
+     "fa": [
+      "Freedom. Nowhere do I think as clearly as alone on a trail.",
+      "You go at your own pace."
+     ],
+     "fb": [
+      "A bad idea. Not until something goes wrong do you see the risk.",
+      "Ask the hiker in the fog."
+     ]
+    },
+    {
+     "q": "Should lost hikers pay for their own rescue?",
+     "a": "They should pay",
+     "b": "No, never",
+     "fa": [
+      "They should pay. Not once did they check the weather.",
+      "It makes people more careful."
+     ],
+     "fb": [
+      "No, never. People will wait too long to call for help.",
+      "Rescue is a public service."
+     ]
+    },
+    {
+     "q": "Phone or paper map in the mountains?",
+     "a": "Phone",
+     "b": "Paper map",
+     "fa": [
+      "Phone. GPS knows exactly where you are.",
+      "And you can call for help."
+     ],
+     "fb": [
+      "Paper map. Not once has a map run out of battery.",
+      "Ten percent goes very fast in the cold."
+     ]
+    },
+    {
+     "q": "Would you go back to a place where you had a bad experience?",
+     "a": "Go back",
+     "b": "Never again",
+     "fa": [
+      "Go back. Not until you return is the fear really gone.",
+      "One night doesn’t define a mountain."
+     ],
+     "fb": [
+      "Never again. There are other mountains.",
+      "Not since that night would I feel safe there."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Not once did anyone get lost."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the hiker now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the hiker, with drama and one inversion.",
+   "perguntas": [
+    "When did you realize the fog was a real problem?",
+    "Did you ever stop walking during the night?",
+    "When did you finally see the rescue team?",
+    "Have you been back to that mountain since?",
+    "Where have you felt so alone before?",
+    "What would you tell a hiker who starts late in the afternoon?"
+   ],
+   "st": [
+    "Not until … did I …",
+    "Not once did I …",
+    "Nowhere have I …"
+   ],
+   "ex": "Not until I saw the flashlights did I believe someone was coming."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

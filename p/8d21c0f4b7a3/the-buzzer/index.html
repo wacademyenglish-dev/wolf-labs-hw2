@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Buzzer · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Buzzer · A Game Show About the Future</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Buzzer · A Game Show About the Future</h2>
+    <p>The school rule says WILL is the far future and GOING TO is the near one. It’s wrong. Both are the future; what matters is <b>when the decision happened</b>. If the plan or the proof was already there, it’s <b>going to</b>. If it’s born while you speak (an offer, a promise, a refusal, an opinion), it’s <b>will</b>. The screen is a game show: a stage, a scoreboard and a red buzzer.</p>
+    <h4>THE SCOREBOARD · THE BUZZER</h4>
+    <p>Every right answer on the first try adds 100 points; read the score out loud like a host. Scenes V and VIII: the student presses, then answers in two seconds; speed matters more than polish. Tap “Good answer” to add the points.</p>
+    <h4>NO WILL TO</h4>
+    <p><i>I will to help</i> is the error of the hour. WILL takes the plain verb. And <i>will</i> for a plan that’s already booked.</p>
+    <h4>THEY HOST</h4>
+    <p>Scene IX: the student asks you. Answer for real. <b>Will you…?</b> asks you to do something; <b>Are you going to…?</b> asks about a plan.</p>
+    <!--conversa--><h4>THE PRODUCER (VII) AND THE SURPRISE QUESTION</h4>
+    <p>A light negotiation. Your student just won tonight’s show; you are the producer and you want them back on TV next Saturday. Three short questions, then the deal on the screen. You can add a second prize (the PUSH line, only you see it), but no money. Wait five seconds in silence after each question. Listen for the door: a plan that already exists is <i>going to</i>; an offer, a promise or a refusal born right now is <i>I’ll / I won’t</i>. Recast quietly while they talk (never <i>I will to</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-Up, IV Your Week, V The Buzzer Round, VII The Producer, VIII Promise, Offer, Refuse, IX Now You Host.</li>
+      <li><b>Focus</b>: II What Happens Next, III Two Doors, VI The Forecast.</li>
+      <li><b>Write</b>: X, a plan, a decision now and a promise. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE BUZZER (Main A2) · pergunta-surpresa · 27/10/2026 · will / going to */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'portas', tipo: 'And you?', q: 'What are you going to do this weekend? Is it already decided?',
+    opc: ['Yes, it’s a plan', 'Not yet', 'Nothing!'], st: ['I’m going to …', 'I don’t know. Maybe I’ll …'],
+    ex: 'Yes, it’s a plan. I’m going to watch a football game with my friends.', push: 'Who decided that: you, or someone else?' },
+  { cena: 'buzz1', tipo: 'Would you rather', q: 'Would you rather be on a game show or watch it at home?',
+    opc: ['Be on the show', 'Watch at home'], st: ['I’d rather …, because I’ll …'],
+    ex: 'Watch at home! On TV I’ll forget everything.', push: 'What kind of game show would you win?' },
+  { cena: 'previsao', tipo: 'Opinion', q: 'Do you believe the weather forecast for next week?',
+    opc: ['Yes', 'Only a little', 'Never'], st: ['I think it’s going to …', 'Nobody knows. Maybe it will …'],
+    ex: 'Only a little. Today I can see it’s going to rain, but next week? Nobody knows.', push: 'Look outside. What’s it going to be like tomorrow?' },
+  { cena: 'host', tipo: 'And you?', q: 'Make one promise for this week, to your teacher.',
+    opc: ['About English', 'About sleep', 'About something else'], st: ['I promise I’ll …', 'I won’t …'],
+    ex: 'About English. I promise I’ll study for twenty minutes on Saturday.', push: 'And if you don’t? What will you do for me?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE BUZZER (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A negociação leve entra no lugar de "VII · Two Contestants" (extra, prática controlada).
+   O aluno ganhou o programa; a produtora quer ele de volta no sábado. Planos com going to,
+   ofertas, promessas e recusas com will / won't (a gramática da aula) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'produtora', troca: 'casos', est: 'o', min: 6, img: 'fundo', rot: 'The Producer', t: 'You won tonight. Now the producer wants something.',
+    p: 'Answer the producer. Plans: going to. Offers and promises: I’ll / I won’t. Then close the deal.',
+    formato: 'papel',
+    aluno: { quem: 'Tonight’s winner', quer: 'Your prize: a weekend trip. And a free Saturday.' },
+    prof: { quem: 'The show’s producer', quer: 'You on TV again next Saturday', limite: 'She can add a second prize, but no money.' },
+    rot_perg: 'The producer asks',
+    perguntas: [
+      { q: 'Congratulations! What are you going to do with the trip?', ex: 'I’m going to take my sister to the beach.' },
+      { q: 'We have a special show next Saturday. Will you come back?', ex: 'Sorry, I’m going to visit my brother next Saturday.' },
+      { q: 'If you come back, I’ll give you a second prize. Will you think about it?', ex: 'OK, I’ll think about it. What’s the prize?' }
+    ],
+    st: ['I’m going to …', 'I’ll …, if you …', 'I won’t …'],
+    push: 'New offer: two concert tickets. Does that change your answer?',
+    acordo: { tag: 'The deal', q: 'What do you agree to?', opc: ['I’ll come back Saturday', 'I’ll come next month', 'I won’t come back'],
+      st: ['OK, I’ll … if you …', 'I’m going to …, so I won’t …'],
+      ex: 'I’ll come next month, if you give me two tickets. On Saturday I’m going to see my brother.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Three questions before the game.",
+   "p": "Answer each message out loud."
+  },
+  "prova": {
+   "t": "You can see it coming.",
+   "p": "Point at the proof. Say what happens next."
+  },
+  "portas": {
+   "t": "Two doors. When did the decision start?",
+   "p": "Read it out loud. Pick the right door."
+  },
+  "semana": {
+   "t": "Your week: booked or not?",
+   "p": "Say the whole sentence first."
+  },
+  "buzz1": {
+   "t": "Six situations. Nobody planned them.",
+   "p": "Press the buzzer. Answer with I’ll or I won’t."
+  },
+  "previsao": {
+   "t": "How far can the forecast see?",
+   "p": "Read the two bars. Then answer."
+  },
+  "cv-produtora": {
+   "t": "You won. The producer wants more.",
+   "p": "Plans: going to. Offers and promises: I’ll."
+  },
+  "buzz2": {
+   "t": "Three jobs GOING TO can’t do.",
+   "p": "Press. Start with I’ll or I won’t."
+  },
+  "host": {
+   "t": "Now you hold the questions.",
+   "p": "Tap a card. Ask your teacher out loud."
+  },
+  "fim": {
+   "t": "Your warm-up answers come back.",
+   "p": "Write a plan, a decision now, and a promise."
+  }
+ },
+ "prep": {
+  "obj": "Will × going to: não é longe × perto, é quando a decisão nasceu. Plano ou prova já existiam: going to. Decidido agora (oferta, promessa, recusa): I’ll. Um game show com buzzer.",
+  "armadilha": "“I will to help” (o will não leva to) e will para plano já marcado, porque a escola ensinou will = futuro distante. Em português os dois viram “vou”.",
+  "pal": [
+   "I’m going to",
+   "I’ll",
+   "I won’t",
+   "Will you…?",
+   "Are you going to…?",
+   "promise",
+   "offer",
+   "plan"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o game show do futuro: palco, placar e buzzer vermelho.",
+   "perg": "Do you like game shows?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "abre": {
+   "obj": "Aquecimento: três perguntas sobre o futuro do aluno; as respostas voltam no fim.",
+   "perg": "What are you going to do this weekend?",
+   "pula": "Duas mensagens bastam."
+  },
+  "prova": {
+   "obj": "Going to com prova visível: dá para ver o que vai acontecer.",
+   "perg": "What is going to happen next?",
+   "pula": "Três imagens bastam."
+  },
+  "portas": {
+   "obj": "Duas portas: a decisão já existia (going to) ou nasceu agora (will)?",
+   "perg": "When did the decision happen?",
+   "pula": "Quatro frases bastam."
+  },
+  "semana": {
+   "obj": "A semana do aluno: o que já está marcado vira going to.",
+   "perg": "What are you going to do on Wednesday?",
+   "pula": "Três dias bastam."
+  },
+  "buzz1": {
+   "obj": "Situações sem plano, resposta rápida com I’ll / I won’t. Velocidade vale mais que polimento.",
+   "perg": "The phone is ringing. What do you say?",
+   "pula": "Quatro situações bastam."
+  },
+  "previsao": {
+   "obj": "Previsão do tempo: prova (going to) e opinião (will).",
+   "perg": "Is it going to rain tomorrow?",
+   "pula": "Uma barra basta."
+  },
+  "cv-produtora": {
+   "obj": "Negociação leve com a produtora para voltar sábado; planos com going to, promessas com I’ll.",
+   "perg": "Will you come back next Saturday?",
+   "pula": "Duas perguntas bastam."
+  },
+  "buzz2": {
+   "obj": "Prometer, oferecer e recusar: os três trabalhos que só o will faz.",
+   "perg": "Your friend is moving house. What do you offer?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "host": {
+   "obj": "O aluno vira apresentador e pergunta ao professor: Will you…? × Are you going to…?",
+   "perg": "What do you want to ask me?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: um plano, uma decisão de agora e uma promessa; vai para o My notes.",
+   "perg": "What do you promise for next week?",
+   "pula": "Uma frase de cada basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra sobre planos e decisões do aluno, separando going to e will.",
+   "perg": "What are you going to do next year?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois na hora, com I’ll (decisão nascendo agora).",
+   "perg": "Pizza or sushi tonight?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o campeão da noite; o professor entrevista sobre planos e promessas.",
+   "perg": "What are you going to do with the prize?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions about your future.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "going to",
+    "I’ll",
+    "I won’t",
+    "I think … will"
+   ],
+   "cartas": [
+    {
+     "k": "NEXT YEAR",
+     "q": "What are you going to do next year?",
+     "fup": "Is it booked already?",
+     "st": [
+      "I’m going to …",
+      "It’s booked. / Not yet."
+     ],
+     "ex": "I’m going to visit Chile. The tickets are booked."
+    },
+    {
+     "k": "TONIGHT",
+     "q": "What are you going to have for dinner tonight?",
+     "fup": "Who is going to cook?",
+     "st": [
+      "I’m going to have …",
+      "… is going to cook."
+     ],
+     "ex": "I’m going to have soup. My husband is going to cook."
+    },
+    {
+     "k": "A PROMISE",
+     "q": "What promise do you want to make this year?",
+     "fup": "Will you really do it?",
+     "st": [
+      "I’ll …",
+      "I won’t …"
+     ],
+     "ex": "I’ll drink more water and I won’t check my phone in bed."
+    },
+    {
+     "k": "THE WORLD",
+     "q": "What do you think the world will be like in 2050?",
+     "fup": "Will people still drive cars?",
+     "st": [
+      "I think … will …",
+      "I don’t think … will …"
+     ],
+     "ex": "I think cars will drive themselves. I don’t think people will cook."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "Your friend is sad today. What will you do?",
+     "fup": "Will you call or visit?",
+     "st": [
+      "I’ll …",
+      "I’ll take …"
+     ],
+     "ex": "I’ll call her and I’ll take her for an ice cream."
+    },
+    {
+     "k": "YOUR ENGLISH",
+     "q": "What are you going to do with your English?",
+     "fup": "What will you try first?",
+     "st": [
+      "I’m going to …",
+      "I think I’ll …"
+     ],
+     "ex": "I’m going to work abroad. I think I’ll start with a video interview."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Quick Decisions",
+   "t": "Decide right now.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’ll",
+    "because",
+    "I won’t"
+   ],
+   "rodadas": [
+    {
+     "q": "Dinner tonight: pizza or sushi?",
+     "a": "Pizza",
+     "b": "Sushi",
+     "fa": [
+      "I’ll have pizza. It’s Friday."
+     ],
+     "fb": [
+      "I’ll have sushi. I won’t eat cheese today."
+     ]
+    },
+    {
+     "q": "It’s raining. Take a taxi or walk?",
+     "a": "A taxi",
+     "b": "Walk",
+     "fa": [
+      "I’ll take a taxi. I won’t get wet."
+     ],
+     "fb": [
+      "I’ll walk. I love the rain."
+     ]
+    },
+    {
+     "q": "A friend needs help moving. Help or send pizza?",
+     "a": "Help",
+     "b": "Send pizza",
+     "fa": [
+      "I’ll help. I’ll carry the boxes."
+     ],
+     "fb": [
+      "I’ll send pizza. My back hurts."
+     ]
+    },
+    {
+     "q": "The show calls you again. Yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes! I’ll be there on Saturday."
+     ],
+     "fb": [
+      "No. I won’t go on TV again."
+     ]
+    }
+   ],
+   "fim": "Four quick decisions. Every one was born right now."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are tonight’s champion.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the winner of the show.",
+   "perguntas": [
+    "What are you going to do with the prize?",
+    "Who are you going to call first?",
+    "Will you come back next Saturday?",
+    "Will you share the prize with anybody?",
+    "Are you going to celebrate tonight?",
+    "Any promise for your fans?"
+   ],
+   "st": [
+    "I’m going to …",
+    "I’ll …",
+    "I won’t …"
+   ],
+   "ex": "I’m going to call my mother first. And I promise I’ll come back next Saturday."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

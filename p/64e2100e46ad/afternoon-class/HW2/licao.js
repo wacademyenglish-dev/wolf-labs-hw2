@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Afternoon Class",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/64e2100e46ad/afternoon-class/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "present continuous: am / is / are + verb-ing for right now; spelling of -ing (write → writing, swim → swimming); isn't / aren't / I'm not; Are you ...ing?",
   "abrir": "Where are you right now? What are you doing?",
   "fecho": "<b>Right now</b> = two pieces: <b>am / is / are</b> + verb-<b>ing</b>: <i>The teacher is writing.</i> The spelling changes a little: <i>write → writing, swim → swimming.</i> No: <i>He isn't sleeping.</i> A question: <i>Are you studying?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo calls Mia at two o'clock. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/64e2100e46ad/afternoon-class/img/live-predio.webp",
+      "img": "../img/live-predio.webp",
       "leg": "A school at two o'clock",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The teacher is writing on the board.",
-          "img": "https://wolf-labs.pages.dev/p/64e2100e46ad/afternoon-class/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The cat is sleeping near the window.",
-          "img": "https://wolf-labs.pages.dev/p/64e2100e46ad/afternoon-class/img/live-gato.webp",
+          "img": "../img/live-gato.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It is raining, and the bird is eating.",
-          "img": "https://wolf-labs.pages.dev/p/64e2100e46ad/afternoon-class/img/live-chuva.webp",
+          "img": "../img/live-chuva.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/64e2100e46ad/afternoon-class/img/live-cachorro.webp",
+      "img": "../img/live-cachorro.webp",
       "leg": "A dog with a red ball",
       "pede": "Look at the picture: a dog with a red ball. Write 2 or 3 sentences about what is happening now. Use <b>am / is / are + -ing</b>.",
       "ph": "The dog is playing with …",

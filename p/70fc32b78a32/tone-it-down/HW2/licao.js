@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Tone It Down",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/70fc32b78a32/tone-it-down/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "understatement, euphemism and irony: not exactly cheap / luxurious, a bit of a problem, could be better, not bad at all, I'm not sure that's wise, let go; Oh, brilliant / Oh, great with a flat tone = the opposite",
   "abrir": "When did you describe something bad in a very polite way?",
   "fecho": "Polite does not mean weak. <b>Not exactly cheap</b> = expensive. <b>A bit of a problem</b> = a serious one. <b>Not bad at all</b> = good. <b>Oh, brilliant</b> in a flat voice = I am annoyed. The grammar stays exact: <i>a bit of a problem</i>, <i>could be better</i>, <i>I'm not sure</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo tells Mia about a disappointing hotel. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/70fc32b78a32/tone-it-down/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two cups by a rainy window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The service was not exactly what we had hoped for.",
-          "img": "https://wolf-labs.pages.dev/p/70fc32b78a32/tone-it-down/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It is a bit of a stretch to call that a five-star hotel.",
-          "img": "https://wolf-labs.pages.dev/p/70fc32b78a32/tone-it-down/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'm not sure that would be the wisest decision.",
-          "img": "https://wolf-labs.pages.dev/p/70fc32b78a32/tone-it-down/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -172,7 +172,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/70fc32b78a32/tone-it-down/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two cups by a rainy window",
       "pede": "Look at the picture: two cups by a window on a rainy night. Write 2 or 3 sentences: describe a disappointing place (a hotel, a restaurant, a shop) in a very polite, understated way. Use <b>not exactly</b>, <b>a bit of a</b> or <b>could be better</b>.",
       "ph": "The place was not exactly …",

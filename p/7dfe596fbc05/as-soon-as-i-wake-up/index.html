@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · As Soon As I Wake Up · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>As Soon As I Wake Up · The 5:30 Alarm</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>As Soon As I Wake Up · The 5:30 Alarm</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A listening lab about mornings.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: Talking about tomorrow? The time half stays in the present.</p><p style="margin:0 0 6px"><b>Short class (about 43 min):</b> I You and Your Mornings · III The Listening Lab · V Lena’s Morning · VI The Rule · VII Before the Sun Comes Up · IX Three Hard Mornings · X Your Tomorrow. Skip if you’re short on time: VIII (marked EXTRA on your screen). Full lesson: about 57 min.</p><p style="margin:0"><b>Open with:</b> “What time does your alarm ring? Do you get up right away?”</p></div><!--/prep-->
+    <p>A listening lab about mornings. First a real video about daily routines, sealed in four parts. Then an easy story in six chapters on a digital alarm clock: Lena, a nurse in Chicago, and her normal morning. Tomorrow is her first day at a new hospital, and tonight her alarm clock is broken. The student plans her morning, and every right plan lifts the sun over the city. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>The <b>time half</b> stays in the present: <i>when I arrive, as soon as I wake up, until the bus comes, by the time you get up</i>. The <b>other half</b> has the future: <i>I’ll call you</i>. <b>as soon as</b> = right after; <b>until</b> = all the time up to; <b>by the time</b> = at that moment, or earlier. Review: <i>when / before / after</i> + a full sentence.</p>
+    <h4>THE TRAP</h4>
+    <p>Many languages have a special future form after <i>when</i>, so learners grab <b>will</b> or <b>going to</b>: <i>when I will arrive</i>. Also: <i>until you don’t come</i> (an extra not), <i>until</i> for a deadline (<b>by the time</b>), <i>before to leave</i>, and a promise in the present (<i>When I arrive, I call you</i>).</p>
+    <h4>A REVIEW LESSON</h4>
+    <p>Works as a follow-up to a lesson on <i>when / before / after</i>; here the center is <b>as soon as, until, by the time</b> and the present for the future.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>breakfast</i>, <i>jogging</i>, <i>shower</i>, <i>podcast</i> and <i>exercise</i>, before the video, in memory and the missing word. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THREE HARD MORNINGS (IX) AND THE SURPRISE QUESTION</h4>
+    <p>After Lena’s call from the bus, your student plans three hard mornings of their own: no alarm, too early on day one, and late for work. There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Push for <b>as soon as / until / when / by the time + present</b> with <b>will</b> in the other half. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Your Mornings, V Lena’s Morning, VII Before the Sun Comes Up, VIII A Call from the Bus and IX Three Hard Mornings.</li>
+      <li><b>Listen</b>: II The Words, III The Listening Lab and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule.</li>
+      <li><b>Write</b>: X Your Tomorrow.</li>
+    </ul>
+    <p>No audio in this lesson: your voice is Lena’s.</p>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* AS SOON AS I WAKE UP (Main A2) · pergunta-surpresa · 27/10/2026 · as soon as / until / when + presente */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'video', tipo: 'Would you rather', q: 'Would you rather wake up at 5 AM and finish work early, or wake up at 10 AM and work late?',
+    opc: ['5 AM', '10 AM'], st: ['I’d rather …, because …', 'As soon as I finish, I’ll …'],
+    ex: '10 AM! I’m not a morning person. I don’t talk until I drink my coffee.', push: 'And on your vacation? What time?' },
+  { cena: 'relogio', tipo: 'And you?', q: 'What will you do as soon as you finish this class?',
+    opc: ['Eat something', 'Work', 'Rest'], st: ['As soon as I finish, I’ll …', 'I’ll … until …'],
+    ex: 'Eat something. As soon as we finish, I’ll make a sandwich.', push: 'And when you finish the sandwich?' },
+  { cena: 'regra', tipo: 'Opinion', q: 'Is the first hour of the morning the most important hour of the day?',
+    opc: ['Yes', 'No', 'It depends'], st: ['I think …, because …', 'When I wake up badly, …'],
+    ex: 'Yes. When my morning is bad, my whole day is bad.', push: 'What is your perfect first hour?' },
+  { cena: 'lena', tipo: 'What if', q: 'Tomorrow is a holiday. No alarm. What will you do when you wake up?',
+    opc: ['Stay in bed', 'Go out early', 'Watch something'], st: ['When I wake up, I’ll …', 'I’ll stay in bed until …'],
+    ex: 'Stay in bed. I’ll stay there until ten, and then I’ll make pancakes.', push: 'A friend calls at 8 AM. Do you answer?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AS SOON AS I WAKE UP (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O dilema entra no lugar de "IX · Quick Check" (extra, prática controlada de tocar a palavra).
+   Depois do telefonema da Lena, o aluno decide três manhãs difíceis dele mesmo. A gramática da
+   aula (as soon as / until / when / by the time + PRESENTE para o futuro, will na outra metade)
+   mora nos iniciadores. Nada de hospital: as situações são de manhã e de primeiro dia de trabalho. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'manha', troca: 'quiz', est: 'o', min: 7, img: 'janela', rot: 'Three Hard Mornings', t: 'Like Lena: three hard mornings. What do you do?',
+    p: 'Choose one, or say your own idea. Say your plan with as soon as, until or when. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'No alarm', sit: 'It’s 11 PM. Your alarm clock is broken, and tomorrow you start work at 7 AM.',
+        q: 'What’s your plan?', opc: ['Three phone alarms', 'A friend calls me', 'I don’t sleep!'],
+        st: ['As soon as the phone rings, I’ll …', 'I won’t sleep until …', 'When my friend calls, I’ll …'],
+        ex: 'Three phone alarms. As soon as the first one rings, I’ll get up. I won’t press snooze!',
+        push: 'Your phone has 10% battery and no charger. Now what?' },
+      { tag: 'Too early', sit: 'First day at a new job. You arrive 30 minutes early. The door is closed.',
+        q: 'What do you do?', opc: ['Wait at the door', 'Get a coffee nearby', 'Walk around the block'],
+        st: ['I’ll wait until …', 'As soon as the door opens, I’ll …', 'By the time they arrive, I’ll …'],
+        ex: 'Get a coffee nearby. I’ll stay there until 7:55. As soon as I finish, I’ll go back.',
+        push: 'Your new boss walks into the same café. Do you talk to her, or hide?' },
+      { tag: 'Late!', sit: 'You wake up at 7:40. Work starts at 8:00, and the bus takes 30 minutes.',
+        q: 'What do you do first?', opc: ['Call the boss', 'Run, no breakfast', 'Take a taxi'],
+        st: ['When I get there, I’ll …', 'As soon as I get up, I’ll …', 'By the time I arrive, …'],
+        ex: 'Call the boss. As soon as I wake up, I’ll call her. When I get there, I’ll say sorry again.',
+        push: 'It’s the third time this month. What do you say to the boss?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "You and your mornings.",
+   "p": "Answer each message out loud."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen: they turn yellow."
+  },
+  "video": {
+   "t": "Two people, two daily routines.",
+   "p": "Tap when, after, before or then."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it again."
+  },
+  "relogio": {
+   "t": "Lena’s morning, in six chapters.",
+   "p": "Tap a time. Read. Join two actions."
+  },
+  "regra": {
+   "t": "Tomorrow? The time half stays present.",
+   "p": "Say each line the right way. Then tap it."
+  },
+  "sol": {
+   "t": "Tonight Lena plans her first day.",
+   "p": "You are Lena. Finish the plan at once."
+  },
+  "lena": {
+   "t": "Lena calls you from the bus.",
+   "p": "Your teacher is Lena. Answer about your day."
+  },
+  "cv-manha": {
+   "t": "Three hard mornings. What do you do?",
+   "p": "Say your plan with as soon as or until."
+  },
+  "fim": {
+   "t": "Plan your real tomorrow morning.",
+   "p": "Alarm to door: present for time, will for plan."
+  }
+ },
+ "prep": {
+  "obj": "Orações de tempo no futuro (as soon as, until, when, by the time + presente; will na outra metade): Lena, enfermeira em Chicago, e o despertador quebrado na véspera do 1º dia.",
+  "armadilha": "O português usa futuro do subjuntivo (“quando eu chegar”) e o aluno põe will: “when I will arrive”. Também “until you don’t come”, “before to leave” e promessa no presente: “I call you”.",
+  "pal": [
+   "as soon as",
+   "until",
+   "by the time",
+   "when",
+   "before",
+   "after",
+   "I’ll call you",
+   "alarm"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: o despertador das 5:30 e a manhã da Lena.",
+   "perg": "What time does your alarm ring?",
+   "pula": "Só leia o título e comece."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal sobre as manhãs do aluno, por mensagens.",
+   "perg": "Do you get up right away?",
+   "pula": "Três mensagens bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir (breakfast, jogging, shower, podcast, exercise).",
+   "perg": "Do you listen to a podcast in the morning?",
+   "pula": "Três palavras bastam."
+  },
+  "video": {
+   "obj": "Vídeo real sobre rotina em quatro partes: tocar when / after / before / then ao ouvir.",
+   "perg": "What does she do after breakfast?",
+   "pula": "Duas partes bastam."
+  },
+  "falas": {
+   "obj": "Cada fala do vídeo, uma por uma, com explicação das palavras amarelas.",
+   "perg": "Can you say this line again?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "relogio": {
+   "obj": "A manhã normal da Lena em seis capítulos; o aluno junta duas ações numa frase.",
+   "perg": "What does Lena do as soon as she wakes up?",
+   "pula": "Quatro capítulos bastam."
+  },
+  "regra": {
+   "obj": "A regra: a metade do tempo fica no presente, a outra leva will.",
+   "perg": "Why “when I arrive”, not “when I will arrive”?",
+   "pula": "Duas armadilhas bastam."
+  },
+  "sol": {
+   "obj": "Você lê a situação e o começo; o aluno, como Lena, termina o plano e o sol sobe.",
+   "perg": "What will you do as soon as you get up?",
+   "pula": "Quatro planos bastam."
+  },
+  "lena": {
+   "obj": "Você é a Lena ligando do ônibus; o aluno, amigo dela, fala do próprio dia.",
+   "perg": "What will you do when you get to work?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-manha": {
+   "obj": "Três manhãs difíceis do aluno: ele escolhe e planeja; você complica.",
+   "perg": "No alarm tomorrow. What will you do?",
+   "pula": "Duas manhãs bastam."
+  },
+  "fim": {
+   "obj": "Escrita: a manhã real de amanhã, do despertador até a porta; vai para o My notes.",
+   "perg": "What will you do as soon as you wake up?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre planos próximos com as soon as, until, by the time + presente.",
+   "perg": "What will you do as soon as you get home?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre hábitos da manhã, com orações de tempo.",
+   "perg": "Coffee first or shower first?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é a Lena no fim do primeiro dia; você entrevista sobre os próximos planos.",
+   "perg": "Lena, what will you do when you get home?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More plans, more mornings.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "as soon as",
+    "until",
+    "by the time",
+    "when",
+    "will"
+   ],
+   "cartas": [
+    {
+     "k": "TONIGHT",
+     "q": "What will you do as soon as you get home tonight?",
+     "fup": "And before you go to bed?",
+     "st": [
+      "As soon as I get home, I’ll …",
+      "Before I go to bed, I’ll …"
+     ],
+     "ex": "As soon as I get home, I’ll take a shower."
+    },
+    {
+     "k": "THIS WEEKEND",
+     "q": "What will you do when you wake up on Saturday?",
+     "fup": "Will you stay in bed?",
+     "st": [
+      "When I wake up, I’ll …",
+      "I’ll stay in bed until …"
+     ],
+     "ex": "I’ll stay in bed until the sun comes up. Then I’ll make pancakes."
+    },
+    {
+     "k": "YOUR NEXT TRIP",
+     "q": "What will you do when you arrive at your next trip?",
+     "fup": "Who will you call?",
+     "st": [
+      "When I arrive, I’ll …",
+      "As soon as I …, I’ll …"
+     ],
+     "ex": "When I arrive, I’ll call my mother."
+    },
+    {
+     "k": "WAITING",
+     "q": "Your bus is late. What will you do until it comes?",
+     "fup": "Will you call someone?",
+     "st": [
+      "Until the bus comes, I’ll …"
+     ],
+     "ex": "Until the bus comes, I’ll listen to a podcast."
+    },
+    {
+     "k": "WORK",
+     "q": "What will be ready by the time you finish work tomorrow?",
+     "fup": "And what won’t?",
+     "st": [
+      "By the time I finish, I’ll …",
+      "… won’t be ready."
+     ],
+     "ex": "By the time I finish, I’ll have dinner plans."
+    },
+    {
+     "k": "NEXT YEAR",
+     "q": "What will you do as soon as you have a free month?",
+     "fup": "Where will you go?",
+     "st": [
+      "As soon as I have …, I’ll …"
+     ],
+     "ex": "As soon as I have a free month, I’ll travel to Chile."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "as soon as",
+    "until",
+    "when",
+    "will"
+   ],
+   "rodadas": [
+    {
+     "q": "Coffee first or shower first?",
+     "a": "Coffee",
+     "b": "Shower",
+     "fa": [
+      "Coffee. As soon as I wake up, I need it."
+     ],
+     "fb": [
+      "Shower. I won’t talk until I take a shower."
+     ]
+    },
+    {
+     "q": "Check your phone in bed or wait?",
+     "a": "Check in bed",
+     "b": "Wait",
+     "fa": [
+      "In bed. When I open my eyes, I’ll check my messages."
+     ],
+     "fb": [
+      "Wait. I won’t check it until I have breakfast."
+     ]
+    },
+    {
+     "q": "Snooze button: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. I’ll stay in bed until the second alarm."
+     ],
+     "fb": [
+      "No. As soon as it rings, I’ll get up."
+     ]
+    },
+    {
+     "q": "First day at a new job: arrive early or right on time?",
+     "a": "Early",
+     "b": "On time",
+     "fa": [
+      "Early. By the time my boss arrives, I’ll be ready."
+     ],
+     "fb": [
+      "On time. I’ll wait outside until it’s eight."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The sun is up now."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Lena now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Lena, after your first day at the new hospital.",
+   "perguntas": [
+    "Lena, what will you do as soon as you get home?",
+    "Will you buy a new alarm clock before you go to bed?",
+    "What time will you wake up tomorrow?",
+    "What will you eat when you get to the hospital?",
+    "Will you stay at work until it’s dark?",
+    "Who will you call when you finish your shift?"
+   ],
+   "st": [
+    "As soon as I …, I’ll …",
+    "I’ll stay until …",
+    "When I …, I’ll …"
+   ],
+   "ex": "As soon as I get home, I’ll buy a new alarm clock online!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · In My Opinion · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 3 · B2</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 3 · In My Opinion · B2</h2>
+    <p>Episode 3 of <b>Better Speaking</b>. Czech footballer V&aacute;clav N&ecaron;me&ccaron;ek, one of the first Europeans to play in China, sounds confident even with simple English. Richard builds an <b>opinion scale</b> (<b>I reckon, I believe, I strongly believe, I&rsquo;m absolutely certain, I&rsquo;m not so sure, but</b>) and a <b>response scale</b> (<b>Exactly &middot; That&rsquo;s true, but &middot; I agree up to a point, but &middot; Oh, come on!</b>). The sister lesson for B1 is &ldquo;I Think You Should&hellip;&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; What do you reckon, React like Callum. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Your opinion scale, Match the reaction, Fix the traps, Choose the phrase.</li>
+      <li><b>Write</b> &mdash; Your strong opinion. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>&ldquo;Eu concordo&rdquo; becomes <i>I am agree</i>. Double opinion openers: <i>In my opinion, I think&hellip;</i>. And &ldquo;acho que n&atilde;o&rdquo; becomes <i>I think that no</i> instead of <i>I don&rsquo;t think so</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 3 · IN MY OPINION (B2)
+   Vídeo: BBC Learning English, Better Speaking (fF4MrRD8ja8, 12:20), três trechos (~5:00).
+   Alvo: a régua da opinião (I reckon, I believe, I strongly believe, I'm absolutely certain, I'm not so sure, but)
+   e da resposta (Exactly · That's true, but · I agree up to a point, but · Oh, come on!). */
+const M = { nome: "In My Opinion", kick: "B2 · I RECKON, I STRONGLY BELIEVE, UP TO A POINT" };
+var EP = {
+  n: 3, de: 8, nivel: 'B2', titulo: 'In My Opinion', video: 'fF4MrRD8ja8',
+  convidado: 'Václav Němeček', habilidade: 'give and answer opinions',
+  trechos: [
+    { ini: 53, fim: 124, rot: 'Václav: football in China' },
+    { ini: 207, fim: 320, rot: 'From “I reckon” to “absolutely certain”' },
+    { ini: 323, fim: 443, rot: 'How to answer: “Oh, come on!”' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'His English isn\'t perfect. But when he says what he thinks, he sounds completely sure. Today: a whole range of ways to give your opinion, and to answer someone else\'s.',
+      nota: 'Ask: who do you know who always sounds sure of themselves?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'What do you <em>reckon</em>?', pt: 'Abra uma carta e dê a sua opinião em voz alta.',
+      nota: 'Talk only. These are mildly controversial on purpose; let the student defend a side.',
+      cartas: [
+        { frente: 'Players', verso: 'Should Brazilian clubs sign more foreign players?', dica: 'I think… / I\'m not so sure…', cor: 'var(--guest)', fw: { q: 'Why? Give one strong reason.', st: ['The main reason is…', 'On top of that,…', 'I reckon…'], help: '“I reckon it raises the level of the league.”' } },
+        { frente: 'Remote', verso: 'Is working from home better than working in an office?', dica: 'In my opinion…', cor: 'var(--host)', fw: { q: 'Would you ever go back to five days in the office?', st: ['No way.', 'Only if…', 'I\'m not so sure, but…'], help: '“Only if the office were five minutes from home.”' } },
+        { frente: 'Phones', verso: 'Should phones be banned in schools?', dica: 'I strongly believe…', cor: 'var(--teacher)', fw: { q: 'What do you say to someone who disagrees?', st: ['That\'s true, but…', 'I agree up to a point, but…', 'Oh, come on!'], help: '“That\'s true, but kids need a break from screens.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 5 minutes', titulo: 'Listen to <em>Václav</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Václav played football in China in 1998. Why was that unusual?', ops: [{ t: 'Few European players went' }, { t: 'China had no league' }] }, { q: 'What makes a speaker sound confident?', ops: [{ t: 'No mistakes at all' }, { t: 'Clear ways to give opinions' }] } ],
+      durante: 'Clip 1 is Václav. Clip 2: the opinion scale. Clip 3: how to answer, and Callum practicing with Richard.',
+      depois: [ { f: 'Richard says Václav\'s English level is very high.', ok: 0 }, { f: '“I reckon” is an informal way of giving an opinion.', ok: 1 }, { f: 'Richard says “yeah” is the best way to respond.', ok: 0 }, { f: '“Oh, come on!” is a natural way to disagree.', ok: 1 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Your opinion <em>scale</em>', pt: 'Do quase certo ao muito certo, do formal ao informal. E como responder.',
+      nota: 'Read each card. Ask: which ones do you already use? Which one is new?',
+      cartoes: [ { g: '<b>I reckon</b> it\'s going to rain.', p: 'Informal, everyday.' }, { g: '<b>I strongly believe</b> that… · <b>I\'m absolutely certain</b> that…', p: 'Very sure. Quite formal.' }, { g: '<b>I\'m not so sure, but</b>… · <b>I agree up to a point, but</b>…', p: 'Not sure, or partly agree.' }, { g: 'I am agree with you.', p: 'Agree is a verb: I agree.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'how sure?', titulo: 'Match the <em>reaction</em>', pt: 'Toque na reação e depois no que ela significa.',
+      nota: 'Say each one with the right tone of voice.',
+      esq: ['Exactly.', 'That\'s true, but…', 'I agree up to a point, but…', 'Oh, come on!', 'I\'m absolutely certain that…'], dir: ['I completely agree.', 'You\'re right, and here is another side.', 'I partly agree.', 'I strongly disagree (informal).', 'I\'m 100% sure.'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'React to this: “English is easier than Portuguese.”', st: ['Exactly.', 'I agree up to a point, but…', 'Oh, come on!'], help: '“I agree up to a point, but English spelling is a nightmare.”' } },
+    { k: 'cartas', est: 'o', rot: 'the hot seat', titulo: 'React like <em>Callum</em>', pt: 'Vire a frase polêmica e reaja com uma expressão da régua.',
+      nota: 'Like Richard and Callum: you read the statement as if you believed it; the student reacts with a phrase from the scale and a reason.',
+      cartas: [
+        { frente: 'Statement 1', sob: 'react', verso: 'I reckon football only creates violence.', dica: 'I agree up to a point, but…', cor: 'var(--guest)', fw: { q: 'Now give me a statement. I\'ll react.', st: ['I strongly believe that…', 'I reckon…', 'In my opinion…'], help: '“I strongly believe that coffee should be free at work.”' } },
+        { frente: 'Statement 2', sob: 'react', verso: 'Learning grammar is a waste of time.', dica: 'Oh, come on!', cor: 'var(--host)' },
+        { frente: 'Statement 3', sob: 'react', verso: 'Everybody should learn a second language at school.', dica: 'Exactly.', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: '“Eu concordo”, “na minha opinião” and “eu acho que não”.',
+      itens: [ { erro: 'I <s>am agree</s> with you.', certo: 'I <b>agree</b> with you.', por: '“Concordo” = I agree (no am).' }, { erro: '<s>In my opinion, I think</s> it\'s wrong.', certo: '<b>In my opinion,</b> it\'s wrong.', por: 'One opinion phrase is enough.' }, { erro: 'I think <s>that no</s>.', certo: 'I <b>don\'t think so</b>.', por: '“Acho que não” = I don\'t think so.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>phrase</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the episode and close to it. Read each one aloud with the right tone.',
+      itens: [ { f: 'I ___ it\'s going to rain later.', ops: ['reckon', 'am reckon'], ok: 0 }, { f: 'I agree up to a ___, but violence is a problem.', ops: ['point', 'moment'], ok: 0 }, { f: 'I\'m ___ certain that many people would disagree.', ops: ['absolutely', 'strongly'], ok: 0 }, { f: 'That\'s ___, but football can bring good things too.', ops: ['true', 'right agree'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>strong opinion</em>', pt: 'Escreva a sua opinião sobre um tema e a resposta para quem discorda.',
+      ph: 'I strongly believe that… Some people say… I agree up to a point, but…', nota: 'The line under the paper catches “am agree” and “I think that no”. SAVE sends it to My notes. Then the student defends it out loud.',
+      banco: ['I strongly believe that', 'I reckon', 'I\'m not so sure, but', 'Some people say', 'That\'s true, but', 'I agree up to a point, but', 'Exactly.'],
+      regras: [['\\b(am|is|are) agree\\b', 'Check: I agree (no am).'], ['\\bthink that no\\b', 'Check: I don\'t think so.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Sound like someone', tx: 'An Icelandic singer, two albums, and a theory: choose one person and copy the way they speak.',
+      ganchos: [['Next guest', 'a singer from Iceland'], ['The skill', 'sound more natural'], ['Your task', 'use “I reckon” this week']], nota: 'Ask: whose English would you like to sound like? That opens Episode 4.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Escala de opinião (I reckon, I strongly believe, I’m not so sure) e de reação (Exactly, I agree up to a point, Oh, come on!); Václav Němeček, que jogou na China, soa seguro com inglês simples.",
+  "armadilha": "“Eu concordo” vira I am agree; abertura dupla In my opinion, I think…; e “acho que não” vira I think that no em vez de I don’t think so.",
+  "pal": [
+   "I reckon",
+   "I strongly believe",
+   "I’m absolutely certain",
+   "I’m not so sure",
+   "Exactly.",
+   "I agree up to a point, but",
+   "Oh, come on!",
+   "I don’t think so"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o convidado e a habilidade: dar e responder opiniões com segurança.",
+   "perg": "Who always sounds sure of themselves?",
+   "pula": "Uma resposta e NEXT."
+  },
+  "c1": {
+   "obj": "Perguntas levemente polêmicas: o aluno defende um lado.",
+   "perg": "What do you reckon?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes do Václav em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "How does he sound so confident?",
+   "pula": "Veja os clipes uma vez; pule o durante."
+  },
+  "c3": {
+   "obj": "A escala: de I reckon a I’m absolutely certain, e de Exactly a Oh, come on!",
+   "perg": "Which one is new for you?",
+   "pula": "Leia os cartões; o vermelho é obrigatório."
+  },
+  "c4": {
+   "obj": "Ligar cada reação ao grau de concordância, com o tom certo.",
+   "perg": "How sure is “I agree up to a point”?",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "O professor lê a afirmação como se acreditasse; o aluno reage com a escala e um motivo.",
+   "perg": "Do you agree with me?",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Três armadilhas: I am agree, In my opinion I think, I think that no.",
+   "perg": "How do you say “acho que não”?",
+   "pula": "Faça as três, rápido."
+  },
+  "c7": {
+   "obj": "Escolher a frase certa em falas do episódio, lendo com o tom certo.",
+   "perg": "How sure is the speaker here?",
+   "pula": "Metade das frases basta."
+  },
+  "c8": {
+   "obj": "Escrita: uma opinião forte do aluno; depois defendê-la em voz alta.",
+   "perg": "Defend it. Why are you so sure?",
+   "pula": "Escreva; a defesa fica curta."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 4: escolher alguém e copiar o jeito de falar.",
+   "perg": "Whose English would you like to sound like?",
+   "pula": "Só a pergunta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais opiniões sobre temas do dia a dia, usando a escala inteira.",
+   "perg": "How sure are you, really?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade com reações da escala: concordar em parte, discordar com educação.",
+   "perg": "Do you agree up to a point?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o convidado e responde a perguntas provocativas com a escala de opinião.",
+   "perg": "Oh, come on, really?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 6,
+   "rot": "More to Talk About",
+   "t": "How sure are you?",
+   "p": "Pick a card. Choose your level of sure.",
+   "palavras": [
+    "I reckon",
+    "I strongly believe",
+    "I’m absolutely certain",
+    "I’m not so sure",
+    "I don’t think so"
+   ],
+   "cartas": [
+    {
+     "k": "WORK FROM HOME",
+     "q": "Is working from home here to stay?",
+     "fup": "For everyone, or only some jobs?",
+     "st": [
+      "I reckon …",
+      "I’m not so sure, but …"
+     ],
+     "ex": "I reckon it’s here to stay, but I’m not so sure it works for younger people."
+    },
+    {
+     "k": "FOOTBALL MONEY",
+     "q": "Are top footballers paid too much?",
+     "fup": "Who should earn more instead?",
+     "st": [
+      "I strongly believe …",
+      "I don’t think so, because …"
+     ],
+     "ex": "I strongly believe they are. Nurses save lives and earn a fraction of that."
+    },
+    {
+     "k": "AI AT WORK",
+     "q": "Will AI take your job in ten years?",
+     "fup": "What part of it, exactly?",
+     "st": [
+      "I’m absolutely certain …",
+      "I don’t think so. …"
+     ],
+     "ex": "I don’t think so. It’ll take the boring part, and I’m fine with that."
+    },
+    {
+     "k": "MOVING ABROAD",
+     "q": "Is it easier to build a career abroad, like Václav?",
+     "fup": "What do people underestimate?",
+     "st": [
+      "I reckon …",
+      "Up to a point, but …"
+     ],
+     "ex": "Up to a point, but people underestimate how lonely the first year is."
+    },
+    {
+     "k": "SOCIAL MEDIA",
+     "q": "Should kids under 14 be on social media?",
+     "fup": "Who decides: parents or the law?",
+     "st": [
+      "I strongly believe …",
+      "I’m not so sure that …"
+     ],
+     "ex": "I strongly believe they shouldn’t. The law should decide, not each family alone."
+    },
+    {
+     "k": "PERFECT ENGLISH",
+     "q": "Do you need perfect English to sound confident?",
+     "fup": "So what do you need?",
+     "st": [
+      "Oh, come on! …",
+      "I’m absolutely certain …"
+     ],
+     "ex": "Oh, come on! Václav’s English is simple, and he sounds completely sure."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. React to mine.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "Exactly.",
+    "That’s true, but",
+    "I agree up to a point, but",
+    "Oh, come on!"
+   ],
+   "rodadas": [
+    {
+     "q": "Say what you think at work, or keep the peace?",
+     "a": "Say it",
+     "b": "Keep the peace",
+     "fa": [
+      "Say it. Silence is how bad decisions get made."
+     ],
+     "fb": [
+      "Keep the peace. You pick your battles, or you lose all of them."
+     ]
+    },
+    {
+     "q": "Is a strong opinion better than a careful one?",
+     "a": "Strong",
+     "b": "Careful",
+     "fa": [
+      "Strong. People follow someone who sounds sure."
+     ],
+     "fb": [
+      "Careful. Sounding sure and being right are not the same thing."
+     ]
+    },
+    {
+     "q": "Should every country play football in the same style?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. The best style wins, so copy it."
+     ],
+     "fb": [
+      "No. Style is part of a country’s identity."
+     ]
+    },
+    {
+     "q": "Change your mind in public: strength or weakness?",
+     "a": "Strength",
+     "b": "Weakness",
+     "fa": [
+      "Strength. It shows you actually listen."
+     ],
+     "fb": [
+      "Weakness, at least at work. People remember who wobbled."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Some exactlys, a few come ons, and nobody said I am agree."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are today’s guest.",
+   "p": "Your teacher pushes. You hold your ground.",
+   "aluno": "Listen to your teacher’s statement or question. Answer as the guest, with a phrase from the scale and a reason.",
+   "perguntas": [
+    "Some people say your generation doesn’t work hard. What do you reckon?",
+    "Is it true that English is the only language that matters for business?",
+    "Do you believe talent matters more than effort?",
+    "I think big cities are better places to raise kids. Do you agree?",
+    "Are you certain that you made the right career choice?",
+    "Is there one opinion you’ve completely changed?"
+   ],
+   "st": [
+    "I agree up to a point, but …",
+    "I strongly believe …",
+    "Oh, come on! …"
+   ],
+   "ex": "I agree up to a point, but talent without effort goes nowhere. I’m absolutely certain about that."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Whoever Takes It · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Cinzel+Decorative:wght@700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>Whoever Takes It · The Lord of the Rings · The Bearers</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Whoever Takes It · The Lord of the Rings · The Bearers</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> One Ring, and everyone who ever held it.</p><p style="margin:0 0 6px"><b>The grammar:</b> Whoever Takes It: Whoever takes it will be changed.</p><p style="margin:0 0 6px"><b>The class (about 57 min):</b> I Warm-up and Pick a Side · II The Words · III The Prologue · IV Line by Line · V The Next Hand · VI Whoever Takes It · VII The Bearers · VIII Whatever You Say · IX The Interview. No extra scenes: every scene is part of the class.</p><p style="margin:0"><b>Open with:</b> “You know the Ring now. In the film, what happens to whoever holds it? Guess.”</p></div><!--/prep-->
+    <p><i>The Lord of the Rings: The Fellowship of the Ring</i> (2001), Peter Jackson, from Tolkien. The Dark Lord made one Ring to rule all the others; whoever holds it wants to keep it, and it changes them. It passed from Sauron to Isildur, to a river, to Gollum, to Bilbo, and then to Frodo, who must take it back to the fire. The grammar: <b>whoever / whatever / wherever / whenever / however</b>: one word; whoever takes a verb with -s; <b>however + adjective / adverb + subject + verb</b> (however hard he tries); and the present for the future after -ever (wherever you go, I will go).</p>
+    <p>A note for the teacher: the video is the film’s official opening (Warner Bros.); we stop at 3:56. An old battle, no blood. Times checked for the old lesson (24/09), told in our own words. Lesson 299 (same film) was the Council table; this one is the journey on the map.</p>
+    <p class="aq-guia"><b>Warm-up and Pick a Side (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the film under the photo). Let them talk; don’t correct the grammar yet. <b>2 · Pick a Side:</b> destroy the Ring, or use it to fight the Dark Lord? The student picks a side and defends it for thirty seconds. Then tap “The teacher pushes back” and let them answer. Twice. Push for whoever / whatever / however.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>given</i>, <i>power</i>, <i>cruelty</i>, <i>freedom</i> and <i>chance</i>, before the video, in memory and the word in your life. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <p class="fim-guia"><b>The ending (IX, The Interview)</b>: the teacher is Bilbo, who kept the Ring for sixty years. The student asks five questions with whenever, however, wherever, whoever, whatever. Then swap: the student is Frodo. Speaking only.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is an old ink map on a dark table with a gold ring. I: Warm-up and Pick a Side. III: the prologue in three steps. <b>Before:</b> a wheel that picks a question (a ring you find, what you never give away…). <b>Watch:</b> Which word did you hear? and What does he say?, each line with a ▶ time: tap it and the video jumps to that moment. <b>After:</b> two taps (what would you do with the Ring? who is stronger?) and the student says why. IV: five frames on the film strip. <b>V, The Next Hand:</b> a dilemma in three rounds (Isildur at the fire, a ring in a river, who carries it to the fire); the student chooses and says why. <b>VI, Whoever Takes It:</b> the student matches five words (whoever, whatever, wherever, whenever, however hard) to their meaning (any person who, any thing that…). When all five are right, the rule appears. The rule stays in the corner on the next pages. <b>VII, The Bearers:</b> an old map with six hands (Sauron, Isildur, Gollum, Bilbo, Frodo, the fire). For each hand there is a sentence with -ever: the student says if it is true or a lie, and if it is a lie they say the true sentence out loud. Every right answer carries the gold Ring one stop and draws the road. <b>VIII, Whatever You Say:</b> six cards with a question (Whatever you cook…, Wherever you travel…). The student opens one and answers for 30 seconds on the clock, without stopping. IX: the interview, the teacher is Bilbo.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>who ever / what ever / where ever</i> (one word), <i>whoever take it</i>, <i>whoever who</i>, <i>however he tries hard</i>, <i>however you are strong</i>, <i>wherever you will go</i>, <i>whatever it will cost</i>, <i>whatever it cost</i> (now: costs).</p>
+    <!--conversa--><h4>THE NEXT HAND (V) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Line by Line, three hands from the prologue, three choices: Isildur at the fire (what do you do, standing next to him?), a gold ring in a river (nobody saw you), and who should carry the Ring back to the fire. The student chooses one card and says why with whoever / whatever / wherever / however; there is no right answer, and they can say their own idea. Wait five seconds in silence before they start, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk (who ever, whoever take, however he tries hard); at the end, ask them to fix one or two sentences themselves. About six minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up and Pick a Side, V The Next Hand, VII The Bearers, VIII Whatever You Say and IX The Interview.</li>
+      <li><b>Listen</b>: II The Words, III The Prologue and IV Line by Line.</li>
+      <li><b>Focus</b>: VI Whoever Takes It.</li>
+      <li><b>Write</b>: the homework (the lesson ends speaking).</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script src="aquece.js"></script>
+<script src="final.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE LORD OF THE RINGS · THE BEARERS (WOLFLIX B2) · pergunta-surpresa · 29/10/2026 · whoever / whatever / wherever / whenever / however */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'Whenever you are in charge of something, even something small, do you change?',
+    opc: ['A bit, yes', 'Not at all', 'I get bossy!'], st: ['Whenever I’m in charge, I …', 'However small it is, …'],
+    ex: 'A bit, yes. Whenever I organise a trip with friends, I start giving orders to whoever is near me.', push: 'Would your friends say the same about you? What would they say?' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'Would you rather be invisible whenever you want, or know whatever people really think of you?',
+    opc: ['Invisible whenever I want', 'Know whatever people think'], st: ['I’d rather …, because whatever …', 'However tempting it is, …'],
+    ex: 'Invisible. Whatever people think of me, I don’t want to know it. However curious I am, it would hurt.', push: 'Not even what one person thinks? Who would it be?' },
+  { cena: 'mapa', tipo: 'What if', q: 'What if whoever found your phone today could open it? What would they see first?',
+    opc: ['Too many photos', 'My messages', 'Games and apps'], st: ['Whoever found it would …', 'Whatever they opened, …'],
+    ex: 'Whoever found it would see three thousand photos of my dog. Whatever they opened, it would be the dog.', push: 'Is there one app you would never let anyone open? Why?' },
+  { cena: 'quemquer', tipo: 'Opinion', q: 'Does power change whoever gets it, however good they are?',
+    opc: ['Always', 'Sometimes', 'Never'], st: ['However good you are, …', 'Whoever gets power …', 'It depends on whoever …'],
+    ex: 'Sometimes. Whoever gets power fast changes more. However good you are, you need people who tell you the truth.', push: 'Think of a boss or a leader you know. Did power change them, or not?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE LORD OF THE RINGS · THE BEARERS (WOLFLIX B2) · conversa · 29/10/2026 · regra 3×3 do Carlos
+   O lote pedia arena, mas a cena I (Pick a Side) já é uma arena: destruir o Anel × usá-lo, 30 s e o
+   professor rebate. Então aqui é o DILEMA em três rodadas, colado no trailer (logo depois de IV · Line
+   by Line): três mãos do prólogo (Isildur, o anel no rio, quem leva ao fogo), sempre com -ever.
+   Sem batalha, sem sangue. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'mao', apos: 'falas', est: 'o', min: 6, img: 'forja', rot: 'The Next Hand', t: 'Three hands. What would you do?',
+    p: 'Read the moment, choose one, and say why with whoever, whatever, wherever or however. There is no right answer.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Isildur', sit: 'Isildur had one chance to throw the Ring into the fire. He kept it.',
+        q: 'You are standing next to him. What do you do?',
+        opc: ['Tell him to throw it', 'Take it and throw it yourself', 'Let him choose: it’s his'],
+        st: ['Whatever he says, I would …', 'However angry he gets, …', 'Whoever holds it should …'],
+        ex: 'I would take it and throw it myself. Whatever he says later, the Ring has to go. However strong he is, he is already changing.',
+        push: 'And if he is your king and your best friend? Would you still take it from his hand?' },
+      { tag: 'The river', sit: 'Years later, the Ring is lost in a river. Whoever finds it will want to keep it.',
+        q: 'You find a gold ring in a river. Nobody saw you. What do you do?',
+        opc: ['Keep it, whatever it is', 'Take it to the police', 'Throw it back in the water'],
+        st: ['Whoever lost it …', 'Wherever I took it, …', 'Whatever it is, I …'],
+        ex: 'I would take it to the police. Whoever lost it is probably looking for it, however old it is.',
+        push: 'And if it made you invisible whenever you put it on? Still the police?' },
+      { tag: 'The fire', sit: 'Bilbo kept the Ring for sixty years. Now someone has to carry it back to the fire where it was made.',
+        q: 'Who should carry it?',
+        opc: ['A strong, brave warrior', 'A small, simple person', 'A group, taking turns'],
+        st: ['Whoever carries it must …', 'However brave you are, …', 'Wherever they go, …'],
+        ex: 'A small, simple person. Whoever wants power will keep it. However brave a warrior is, he wants to win, and the Ring knows that.',
+        push: 'Would YOU carry it? Whoever carries it never comes home the same.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "What you never let go, then one Ring.",
+   "p": "Answer three questions. Then decide about the Ring."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn the words. Listen for them in yellow."
+  },
+  "video": {
+   "t": "The Lord of the Rings. How it began.",
+   "p": "Spin the wheel. Watch. Then two tasks. Tap ▶ to replay."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it. Say it like the character."
+  },
+  "cv-mao": {
+   "t": "Three hands. What would you do?",
+   "p": "Choose one. Say why with whoever or whatever."
+  },
+  "regra": {
+   "t": "Whoever, whatever, wherever: the meaning.",
+   "p": "Match each word to its meaning. Read the rule."
+  },
+  "mapa": {
+   "t": "Six hands carry one Ring.",
+   "p": "True or a lie? Say the true one out loud."
+  },
+  "quemquer": {
+   "t": "Six questions with -ever.",
+   "p": "Open a card. Talk for 30 seconds nonstop."
+  },
+  "fim": {
+   "t": "Interview Bilbo, sixty years with the Ring.",
+   "p": "Ask with whoever and whatever. Then you are Frodo."
+  }
+ },
+ "prep": {
+  "obj": "Whoever / whatever / wherever / whenever / however (uma palavra, verbo com -s, presente para o futuro): o Anel passa de mão em mão, e quem o segura quer guardá-lo.",
+  "armadilha": "Do “quem quer que”: “whoever who”, “who ever” separado, “whoever take it”; o brasileiro põe will depois de -ever (“wherever you will go”) e erra a ordem com however (“however you are strong”).",
+  "pal": [
+   "whoever",
+   "whatever",
+   "wherever",
+   "whenever",
+   "however hard",
+   "power",
+   "freedom",
+   "chance"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o filme: um Anel e todos que já o seguraram.",
+   "perg": "What happens to whoever holds the Ring? Guess.",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "mundo": {
+   "obj": "Três perguntas sobre o que o aluno nunca larga; depois destruir ou usar o Anel, defendendo com -ever.",
+   "perg": "What is something you would never give away?",
+   "pula": "Duas perguntas bastam; um só contra-argumento."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do prólogo (given, power, cruelty, freedom, chance) antes de assistir.",
+   "perg": "When did you get a second chance?",
+   "pula": "Faça a memória e pule a palavra na sua vida."
+  },
+  "video": {
+   "obj": "O prólogo em três passos: a roda de perguntas, escuta com ▶ e duas escolhas sobre o Anel.",
+   "perg": "What would you do with the Ring?",
+   "pula": "Assista uma vez só e faça uma tarefa só; o vídeo é sempre inteiro."
+  },
+  "falas": {
+   "obj": "As falas com palavras amarelas, uma a uma; o aluno repete como o personagem.",
+   "perg": "Who says it, and what does it mean?",
+   "pula": "Duas falas bastam."
+  },
+  "cv-mao": {
+   "obj": "Três mãos do prólogo (Isildur no fogo, o anel no rio, quem leva o Anel): escolher e defender com -ever.",
+   "perg": "Standing next to Isildur, what do you do?",
+   "pula": "Duas mãos bastam, com o PUSH."
+  },
+  "regra": {
+   "obj": "Ligar cinco palavras -ever ao significado (any person who…); a regra aparece no fim.",
+   "perg": "Whoever takes it, or whoever take it?",
+   "pula": "Não corte: é a regra. Três pares bastam."
+  },
+  "mapa": {
+   "obj": "O mapa com seis mãos (Sauron a Frodo): verdade ou mentira com -ever; cada acerto leva o Anel uma parada.",
+   "perg": "True or a lie? Say the true one.",
+   "pula": "Quatro paradas bastam."
+  },
+  "quemquer": {
+   "obj": "Seis cartas (Whatever you cook…, Wherever you travel…): 30 segundos de fala sem parar.",
+   "perg": "Wherever you travel, what do you always take?",
+   "pula": "Três cartas bastam."
+  },
+  "fim": {
+   "obj": "Entrevista: o professor é Bilbo, que guardou o Anel por sessenta anos; depois o aluno vira Frodo.",
+   "perg": "Whenever you touched the Ring, how did you feel?",
+   "pula": "Três perguntas e sem troca. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta com -ever sobre apegos, poder e escolhas.",
+   "perg": "Whatever happens, what will you never give up?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre poder, tentação e responsabilidade no mundo do Anel.",
+   "perg": "Where do you stand, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira Gollum e responde ao professor com whoever, whatever e wherever.",
+   "perg": "Whoever has the Ring now, what will you do?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Whatever you hold on to.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "whoever",
+    "whatever",
+    "wherever",
+    "however"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR TREASURE",
+     "q": "What is something you would keep whatever it cost?",
+     "fup": "Why does it matter so much?",
+     "st": [
+      "Whatever happens, I’ll keep …",
+      "The thing is, …"
+     ],
+     "ex": "Whatever happens, I’ll keep my grandfather’s watch. The thing is, it’s all I have from him."
+    },
+    {
+     "k": "POWER",
+     "q": "Does power change whoever gets it?",
+     "fup": "Have you seen it happen?",
+     "st": [
+      "Whoever gets power …",
+      "I’ve seen someone who …"
+     ],
+     "ex": "Whoever gets power changes a little. I’ve seen a friend become a different person after a promotion."
+    },
+    {
+     "k": "A FOUND RING",
+     "q": "If you found something valuable that nobody saw, what would you do?",
+     "fup": "However small it was?",
+     "st": [
+      "Whoever lost it …",
+      "However small it is, …"
+     ],
+     "ex": "Whoever lost it must be worried. However small it is, I’d try to return it."
+    },
+    {
+     "k": "HOME",
+     "q": "Wherever you go, what do you always miss about home?",
+     "fup": "How do you deal with it?",
+     "st": [
+      "Wherever I go, I miss …"
+     ],
+     "ex": "Wherever I go, I miss my mother’s coffee in the morning."
+    },
+    {
+     "k": "STUBBORN",
+     "q": "What do you keep trying, however hard it is?",
+     "fup": "Will you ever give up?",
+     "st": [
+      "However hard it is, I keep …"
+     ],
+     "ex": "However hard it is, I keep studying English every week."
+    },
+    {
+     "k": "THE JOURNEY",
+     "q": "Who would you take on a long, dangerous journey?",
+     "fup": "Whoever you choose, why them?",
+     "st": [
+      "I’d take whoever …",
+      "Whenever things go wrong, …"
+     ],
+     "ex": "I’d take whoever can cook. Whenever things go wrong, good food helps."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "whoever",
+    "whatever",
+    "however",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Destroy the Ring, or use it against the Dark Lord?",
+     "a": "Destroy",
+     "b": "Use it",
+     "fa": [
+      "Destroy it. Whoever uses it becomes the next Dark Lord.",
+      "No good person stays good with that power."
+     ],
+     "fb": [
+      "Use it. Whatever it takes to win the war is worth it.",
+      "Destroying it is a long, risky journey."
+     ]
+    },
+    {
+     "q": "Isildur kept the Ring. Is he guilty, or just human?",
+     "a": "Guilty",
+     "b": "Just human",
+     "fa": [
+      "Guilty. He had the chance and he failed.",
+      "Whatever he felt, he should have thrown it in."
+     ],
+     "fb": [
+      "Just human. Whoever held it would have done the same.",
+      "The Ring was stronger than any man."
+     ]
+    },
+    {
+     "q": "Should the strongest or the humblest carry the Ring?",
+     "a": "The strongest",
+     "b": "The humblest",
+     "fa": [
+      "The strongest. Whoever carries it will be attacked.",
+      "You need power to survive the road."
+     ],
+     "fb": [
+      "The humblest. Whoever wants power can’t be trusted with it.",
+      "That’s why it was Frodo."
+     ]
+    },
+    {
+     "q": "Does absolute power always corrupt, however good the person?",
+     "a": "Always",
+     "b": "Not always",
+     "fa": [
+      "Always. However good you are, power changes you.",
+      "History has very few exceptions."
+     ],
+     "fb": [
+      "Not always. Some people give power back.",
+      "It depends on whoever is around them."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Whoever won, the Ring lost."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Gollum now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Gollum.",
+   "perguntas": [
+    "Whoever has the Ring now, what will you do?",
+    "Wherever Bilbo goes, will you follow him?",
+    "Whatever happened in the river, do you remember it?",
+    "However long it takes, will you find it?",
+    "Whenever you think of the Ring, how do you feel?",
+    "Whatever it costs, would you give it up?"
+   ],
+   "st": [
+    "Whoever has it, …",
+    "Wherever it goes, …",
+    "However long it takes, …"
+   ],
+   "ex": "Whoever has it is a thief. Wherever it goes, I will follow, however long it takes."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

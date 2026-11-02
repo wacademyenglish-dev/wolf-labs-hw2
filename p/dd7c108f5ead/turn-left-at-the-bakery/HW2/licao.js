@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Turn Left at the Bakery",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/dd7c108f5ead/turn-left-at-the-bakery/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "directions: go straight, turn left / right AT a place, go past, cross, on your left / right, next to, between ... and ..., opposite; verb first, no to after turn, no in for turning",
   "abrir": "What is next to your home?",
   "fecho": "Directions start with the verb: <b>Go straight. Turn left at the bakery. Go past the bank. Cross the square.</b> A side: <b>on your left / right</b>. A place: <b>next to</b>, <b>between A and B</b>, <b>opposite</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks Leo the way. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/dd7c108f5ead/turn-left-at-the-bakery/img/live-padaria.webp",
+      "img": "../img/live-padaria.webp",
       "leg": "The bakery window at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -95,17 +95,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Go straight, then turn left at the bakery.",
-          "img": "https://wolf-labs.pages.dev/p/dd7c108f5ead/turn-left-at-the-bakery/img/live-padaria.webp",
+          "img": "../img/live-padaria.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Go past the bank and cross the square.",
-          "img": "https://wolf-labs.pages.dev/p/dd7c108f5ead/turn-left-at-the-bakery/img/live-vila.webp",
+          "img": "../img/live-vila.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The coffee shop is opposite the museum.",
-          "img": "https://wolf-labs.pages.dev/p/dd7c108f5ead/turn-left-at-the-bakery/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -149,7 +149,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/dd7c108f5ead/turn-left-at-the-bakery/img/live-mapa.webp",
+      "img": "../img/live-mapa.webp",
       "leg": "An old map and a pencil",
       "pede": "Look at the picture: an old map. Write 2 or 3 steps from your home to a place you like. Use <b>go straight</b>, <b>turn left / right at</b>, <b>on your left</b> or <b>next to</b>.",
       "ph": "From my home, go straight …",

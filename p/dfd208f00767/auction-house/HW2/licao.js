@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "The Auction House",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/dfd208f00767/auction-house/img/live-leilao.webp",
+  "capa": "../img/live-leilao.webp",
   "alvo": "a / an (the SOUND after it: an old clock, a heavy box, an umbrella, a new umbrella) · the describing word in front of the thing (a small lamp, never a lamp small) · the second time, when we know which one: the",
   "abrir": "What is the oldest thing in your room?",
   "fecho": "<b>A</b> or <b>an</b> is the SOUND after it: <b>an old clock</b>, <b>a new clock</b>; <b>an umbrella</b>, <b>a new umbrella</b>. The describing word goes in front: <b>a small lamp</b>. The second time, we know which one: <b>the lamp</b>.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at an auction. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/dfd208f00767/auction-house/img/live-leilao.webp",
+      "img": "../img/live-leilao.webp",
       "leg": "The lots on the table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -96,17 +96,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Lot one is an old clock.",
-          "img": "https://wolf-labs.pages.dev/p/dfd208f00767/auction-house/img/live-relogio.webp",
+          "img": "../img/live-relogio.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "There is a heavy box on the table.",
-          "img": "https://wolf-labs.pages.dev/p/dfd208f00767/auction-house/img/live-leilao.webp",
+          "img": "../img/live-leilao.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I want the expensive watch.",
-          "img": "https://wolf-labs.pages.dev/p/dfd208f00767/auction-house/img/live-duas.webp",
+          "img": "../img/live-duas.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -150,7 +150,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/dfd208f00767/auction-house/img/live-balanca.webp",
+      "img": "../img/live-balanca.webp",
       "leg": "A scale on an old table",
       "pede": "Look at the picture: a scale on an old wooden table. Write 2 or 3 sentences: one lot with <b>a / an</b> and a describing word, then the same lot with <b>the</b>.",
       "ph": "Lot one is a / an … The … is …",

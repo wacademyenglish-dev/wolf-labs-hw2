@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Either One Works · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Either One Works · Two Keys</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Either One Works · Two Keys</h2>
+    <p>Your student’s friend Nico has two job offers, one in Denver and one in Portland, and an apartment in each city. He has to sign one lease by Friday at 6 PM, and everything is the same. “Either one works!” Then the one line that matters: his dog, Biscuit, isn’t allowed in <b>either</b> apartment. The grammar: <b>both</b> (the two, yes), <b>either</b> (one or the other), <b>neither</b> (not this one and not that one), the pairs <b>both… and / either… or / neither… nor</b>, and <b>of them</b>. The screen: two apartment keys that get a stamp for each line.</p>
+    <h4>THE TRAP</h4>
+    <p>Many students use a double negative (<i>I don’t like neither</i>, <i>Neither of them don’t allow</i>), put an article before both (<i>the both</i>), and translate “none of the two” and “any of the two” word for word. In English, <b>neither</b> is already the negative; with <i>don’t / can’t</i>, it’s <b>either</b>.</p>
+    <h4>HEADS OR TAILS</h4>
+    <p>Scene IV is the pressure: Nico sends eight nervous messages in the last hour. Read the message and the first words; your student finishes at once. The last message changes everything.</p>
+    <h4>WHEN THEY’RE STUCK</h4>
+    <p>Ask: <i>Yes to the two, or no to the two? Or one or the other?</i> Hold up two fingers.</p>
+    <!--conversa--><h4>THE COUNCIL (VI) AND THE SURPRISE QUESTION</h4>
+    <p>Nico has chosen Portland. Now your student sits on the council for his first month: three proposals (dogs in the office, home days, Denver calling again). They vote Yes, Propose a change or No, and defend the vote with both, either or neither; you vote the other way. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast mistakes quietly while they talk (watch for “the both” and double negatives); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Big Choices, II Two Keys, IV Heads or Tails, V Nico Calls Back, VI The Council, VII Your Two Options.</li>
+      <li><b>Focus</b>: III The Rule.</li>
+      <li><b>Write</b>: VIII, their own two options. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* EITHER ONE WORKS (Main B1) · pergunta-surpresa · 27/10/2026 · both / either / neither */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'duas', tipo: 'Would you rather', q: 'Would you rather live in a city with snowy winters or rainy winters?',
+    opc: ['Snow', 'Rain', 'Neither!'], st: ['I’d rather …, because …', 'Neither … nor …: I want …'],
+    ex: 'Neither! I like neither the snow nor the rain. I want a beach and 28 degrees.', push: 'You have to pick one. Which one, and why?' },
+  { cena: 'moeda', tipo: 'And you?', q: 'Have you ever flipped a coin to make a real decision?',
+    opc: ['Yes, once', 'Never', 'All the time'], st: ['Yes, I couldn’t choose between … and …', 'Never. Neither … nor …'],
+    ex: 'Yes, once. I couldn’t choose between two restaurants, and either one was fine, so I flipped a coin.', push: 'Did you follow the coin, or did you change your mind?' },
+  { cena: 'nico', tipo: 'What if', q: 'Two great job offers, same money. One is in another country. Which do you take?',
+    opc: ['The one at home', 'The one abroad', 'Neither'], st: ['Both jobs are …, but …', 'I’d take …, because neither …'],
+    ex: 'The one abroad. Both are good, but only one gives me a new language and new friends.', push: 'Your best friend asks you to stay. Still abroad?' },
+  { cena: 'opcoes', tipo: 'Opinion', q: 'Tea or coffee, cats or dogs: are you an “either one works” person, or do you always have a side?',
+    opc: ['Either one works', 'I always have a side'], st: ['Either one works for me, because …', 'I always choose …'],
+    ex: 'I always have a side. Coffee, dogs, and the beach. Neither tea nor cats, sorry!', push: 'Is it easier to live with an “either one” person or with a “one side” person?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* EITHER ONE WORKS (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O conselho entra no lugar de "VI · Quick Check" (extra; prática controlada repetida depois de II e IV),
+   no meio da aula, logo depois que o Nico escolhe Portland (V). Três propostas para o primeiro mês dele:
+   o aluno vota Yes / Propose a change / No e defende. A gramática (both / either / neither … nor) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'conselho', troca: 'quiz', est: 'o', min: 7, img: 'estrada', rot: 'The Council', t: 'Nico’s first month in Portland. You are on the council.',
+    p: 'Read each proposal. Vote, then defend your vote with both, either or neither. Your teacher votes the other way.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Dog Fridays', sit: 'Nico asks: can Biscuit come to the office on Fridays? Both bosses say yes. One coworker, Sam, is afraid of dogs.',
+        q: 'Proposal: dogs in the office every Friday.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Both Nico and Sam …, so …', 'Either … or …: that’s my change.', 'Neither … nor … , so I vote no.'],
+        ex: 'Propose a change. Either Biscuit stays in Nico’s room, or he comes only in the afternoon when Sam works from home. Both of them can be happy.',
+        push: 'Sam says: “It’s either me or the dog.” Now what?' },
+      { tag: 'Home days', sit: 'Nico misses his friends back home. He wants to work from home either Monday or Friday and fly back once a month.',
+        q: 'Proposal: one home day a week, and a flight home every month.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['He can have either … or …, not both.', 'Neither the money nor the time …', 'Both ideas are …'],
+        ex: 'Propose a change. He can have either the home day or the monthly flight, not both. Neither his money nor his boss can take both.',
+        push: 'He says he’ll quit if he can’t see his friends. Do you change your vote?' },
+      { tag: 'Denver calls', sit: 'Week two: Denver calls. Dogs OK now, and $5,000 more.',
+        q: 'Proposal: Nico moves to Denver.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Neither job is …', 'Both cities …, but …', 'Either he stays, or …'],
+        ex: 'No. He signed the contract, and both the job and the apartment are good. Neither $5,000 nor a new city is worth breaking his word.',
+        push: 'It’s $10,000 now, not five. Same vote?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "You, your home and big choices.",
+   "p": "Pick a card. Answer out loud."
+  },
+  "duas": {
+   "t": "Denver or Portland? Compare every line.",
+   "p": "Pick a line. Compare both sides in one sentence."
+  },
+  "regra": {
+   "t": "Both, either or neither?",
+   "p": "Read the three keys aloud. Fix the four mistakes."
+  },
+  "moeda": {
+   "t": "Friday, 5 PM. One hour left.",
+   "p": "Listen to Nico’s message. Finish it at once."
+  },
+  "nico": {
+   "t": "Twenty minutes left. Nico calls.",
+   "p": "Your teacher is Nico. Use both, either, neither."
+  },
+  "cv-conselho": {
+   "t": "Nico’s first month. You vote.",
+   "p": "Read each proposal. Vote. Defend it with both, either, neither."
+  },
+  "opcoes": {
+   "t": "Your life: two options.",
+   "p": "Pick five cards. Use both, either or neither."
+  },
+  "fim": {
+   "t": "Nico and Biscuit drive to Portland.",
+   "p": "Write your two options. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Both, either, neither (e both… and, either… or, neither… nor): Nico tem duas ofertas, Denver e Portland, e assina um contrato até sexta às 18h; o cachorro Biscuit não pode em nenhum.",
+  "armadilha": "Dupla negação do português (“I don’t like neither”, “Neither of them don’t allow”), “the both” e tradução literal de “nenhum dos dois” / “qualquer um dos dois”.",
+  "pal": [
+   "both",
+   "either",
+   "neither",
+   "both… and",
+   "either… or",
+   "neither… nor",
+   "either one works",
+   "lease",
+   "allowed"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta Nico, duas ofertas de emprego e duas chaves.",
+   "perg": "Have you ever had two good options at the same time?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal: a casa do aluno e as grandes escolhas da vida dele.",
+   "perg": "What was the biggest choice you made last year?",
+   "pula": "Duas cartas bastam."
+  },
+  "duas": {
+   "obj": "Comparar Denver e Portland linha a linha, uma frase por linha, antes da regra.",
+   "perg": "What do both apartments have?",
+   "pula": "Quatro linhas bastam."
+  },
+  "regra": {
+   "obj": "A regra: sim aos dois, um ou outro, não aos dois; corrigir quatro erros.",
+   "perg": "Yes to the two, or no to the two?",
+   "pula": "Não corte a dupla negação."
+  },
+  "moeda": {
+   "obj": "Pressão: oito mensagens nervosas do Nico, o aluno completa na hora.",
+   "perg": "What does Nico need to hear now?",
+   "pula": "Cinco mensagens bastam; não corte a última."
+  },
+  "nico": {
+   "obj": "O professor é o Nico ao telefone; decidem juntos com both/either/neither.",
+   "perg": "Which city should I choose?",
+   "pula": "Três falas bastam."
+  },
+  "cv-conselho": {
+   "obj": "Conselho: cachorro no escritório, home office, Denver ligando de novo; votar e defender.",
+   "perg": "How do you vote, and why?",
+   "pula": "Duas propostas bastam."
+  },
+  "opcoes": {
+   "obj": "Duas opções da vida do aluno, lado a lado, com both/either/neither.",
+   "perg": "Which two options do you have right now?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: as duas opções do aluno, o que ambas têm, o que nenhuma tem.",
+   "perg": "Does either one work for you?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa pessoal comparando pares da vida do aluno.",
+   "perg": "Do you like both, either or neither?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade: escolhas difíceis, com argumentos dos dois lados.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno ajuda um amigo imaginário a decidir entre duas opções, passo a passo.",
+   "perg": "Does either one work?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Two of everything.",
+   "p": "Pick a card. Use both, either or neither.",
+   "palavras": [
+    "both",
+    "either",
+    "neither",
+    "of them"
+   ],
+   "cartas": [
+    {
+     "k": "TWO CITIES",
+     "q": "Think of two cities you know. What do both of them have?",
+     "fup": "Could you live in either one?",
+     "st": [
+      "Both of them have …",
+      "Neither of them has …"
+     ],
+     "ex": "Both of them have great food, but neither of them has a beach."
+    },
+    {
+     "k": "CATS OR DOGS",
+     "q": "Cats or dogs?",
+     "fup": "Have you ever had either?",
+     "st": [
+      "I like both, because …",
+      "I don’t like either, because …"
+     ],
+     "ex": "I like both, but I don’t have either. My apartment is too small."
+    },
+    {
+     "k": "MORNING DRINKS",
+     "q": "Coffee or tea in the morning?",
+     "fup": "What about at night?",
+     "st": [
+      "I drink either … or …",
+      "I drink neither …"
+     ],
+     "ex": "I drink either coffee or tea, depending on the day."
+    },
+    {
+     "k": "YOUR PARENTS",
+     "q": "Are you more like your mother or your father?",
+     "fup": "In what way?",
+     "st": [
+      "I’m like both of them: …",
+      "I’m not really like either of them."
+     ],
+     "ex": "I’m like both of them. I’m stubborn and I talk a lot."
+    },
+    {
+     "k": "WEEKENDS",
+     "q": "Beach or mountains for a long weekend?",
+     "fup": "When did you last go?",
+     "st": [
+      "Either one works for me, …",
+      "Neither, I prefer …"
+     ],
+     "ex": "Either one works for me, as long as there is no traffic."
+    },
+    {
+     "k": "TWO JOBS",
+     "q": "Have you ever had to choose between two jobs or two courses?",
+     "fup": "Were you happy with your choice?",
+     "st": [
+      "Both were …, but …",
+      "Neither was perfect, so …"
+     ],
+     "ex": "Both were good, but neither paid very well, so I chose the closer one."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Defend it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "both",
+    "either",
+    "neither",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Two equal offers: decide with a list, or flip a coin?",
+     "a": "A list",
+     "b": "A coin",
+     "fa": [
+      "A list. Both options deserve a real look.",
+      "A coin is for small things."
+     ],
+     "fb": [
+      "A coin. If either one works, why suffer?",
+      "You feel the answer when the coin is in the air."
+     ]
+    },
+    {
+     "q": "A great apartment with no pets, or an okay one with Biscuit?",
+     "a": "Great apartment",
+     "b": "Biscuit",
+     "fa": [
+      "The apartment. A friend can keep the dog.",
+      "Good apartments are hard to find."
+     ],
+     "fb": [
+      "Biscuit. Neither apartment is worth losing your dog.",
+      "A home without him isn’t a home."
+     ]
+    },
+    {
+     "q": "Live near family, or far away for a better job?",
+     "a": "Near family",
+     "b": "Better job",
+     "fa": [
+      "Near family. You can’t have both, so choose people.",
+      "Jobs change; family stays."
+     ],
+     "fb": [
+      "The job. You can visit by plane.",
+      "Neither career nor family should keep you small."
+     ]
+    },
+    {
+     "q": "Big city or small town?",
+     "a": "Big city",
+     "b": "Small town",
+     "fa": [
+      "The big city. There are more jobs and more people.",
+      "You can be anyone there."
+     ],
+     "fb": [
+      "The small town. It’s quieter and cheaper.",
+      "Everybody knows your name and your dog’s name."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Either side could win, and neither did."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Advice",
+   "t": "A friend has two options.",
+   "p": "Four steps. Help them decide, like Nico.",
+   "prof": "Let the student invent the friend’s two options; push for both… and, neither… nor.",
+   "passos": [
+    {
+     "q": "What are your friend’s two options?",
+     "st": [
+      "My friend can either … or …"
+     ],
+     "ex": "My friend can either stay in her job or start her own café."
+    },
+    {
+     "q": "What do both options have?",
+     "st": [
+      "Both options …",
+      "Both … and … are …"
+     ],
+     "ex": "Both options pay the rent, and both are close to her home."
+    },
+    {
+     "q": "What does neither option have?",
+     "st": [
+      "Neither of them …",
+      "Neither … nor … is …"
+     ],
+     "ex": "Neither of them is easy, and neither gives her much free time."
+    },
+    {
+     "q": "Your advice: does either one work? Why?",
+     "st": [
+      "Either one works, but …",
+      "I’d choose …, because …"
+     ],
+     "ex": "Either one works, but I’d choose the café, because she’d be happier."
+    }
+   ],
+   "fim": "Like Nico on Friday at 6 PM: a choice, a reason, and no double negatives."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

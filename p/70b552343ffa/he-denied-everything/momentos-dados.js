@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de He Denied Everything (11/10/2026): cinco falas do trailer de Digger (as falas com palavrão ficaram de fora).
+   Forma: o termômetro (a pressão sobe). Alvo: reporting verbs (deny / admit + -ing, warn not to, blame for, accuse of, promise to).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [26, 27, 28, 29, 30, 31, 32], k: 'Paying for it', quem: 'Digger',
+    contexto: 'A scientist warns Digger, the billionaire, that the glacier is cracking. Digger is not in the mood.',
+    frase: 'I don’t believe you understand what’s happening, sir. — What did you just say? — Sorry, sir. — Well, <b>I know perfectly well what’s going on there</b>, because I’m paying for the whole thing.',
+    explica: 'He doesn’t accept the criticism, and at the same time he admits he is the one paying.',
+    formula: 'He <b>denied not understanding</b>. · He <b>admitted paying</b> for it. (deny / admit + <b>-ing</b>)',
+    tente: 'Report something a famous person admitted or denied recently.',
+    ex: 'The singer denied lying about the concert. Later, she admitted cancelling it.',
+    sente: { q: 'How angry is Digger?', de: 'calm', a: 'furious', st: 'He’s … because the scientist …' } },
+  { i: [39, 40, 41, 42, 43, 44], k: 'Worst case', quem: 'An adviser',
+    contexto: 'In the White House, an adviser tells the President how bad it can get.',
+    frase: 'Mr. President, we’re <b>utterly unprotected</b> against a disaster of this magnitude. — What’s our worst case scenario? — Eighteen trillion dollars, sir.',
+    explica: '<i>Utterly</i> = completely. <i>Magnitude</i> = size. The number makes the room go silent.',
+    formula: 'They <b>warned</b> the President <b>about</b> the cost. · They <b>warned</b> him <b>not to</b> wait.',
+    tente: 'What did someone warn you about this year? What did they warn you not to do?',
+    ex: 'My bank warned me about a scam. They warned me not to click on strange links.',
+    sente: { q: 'How worried is the room?', de: 'relaxed', a: 'panicking', st: 'They’re … because the adviser warned …' } },
+  { i: [49, 50], k: 'This mess', quem: 'The President',
+    contexto: 'The President points at Digger in front of everybody.',
+    frase: 'Digger here <b>got us into this mess</b>, and Digger’s gonna dig us out again.',
+    explica: '<i>Get someone into a mess</i> = cause the problem. A pun, too: Digger is going to dig them out.',
+    formula: 'He <b>blamed</b> Digger <b>for</b> the mess. · ✗ blamed Digger of',
+    tente: 'Tell me about a time someone blamed you for something you didn’t do.',
+    ex: 'My brother blamed me for breaking the TV. It was the cat!',
+    sente: { q: 'How public is the blame?', de: 'private', a: 'very public', st: 'It’s … because he blamed him in front of …' } },
+  { i: [52, 53], k: 'Your problem', quem: 'Someone in the room',
+    contexto: 'Someone says what everyone is thinking: Digger knew first.',
+    frase: 'You knew long before the rest of us. <b>That is why it is your problem!</b>',
+    explica: 'He knew and he didn’t act. That is the accusation.',
+    formula: 'They <b>accused</b> him <b>of hiding</b> the truth. (accuse someone of + -ing)',
+    tente: 'Report an accusation from the news, using accuse … of.',
+    ex: 'The opposition accused the mayor of wasting money.',
+    sente: { q: 'How trapped is Digger?', de: 'in control', a: 'trapped', st: 'He’s … because they accused him of …' } },
+  { i: [67, 68, 69, 70], k: 'The narrative', quem: 'Digger',
+    contexto: 'If he can’t control the ice, he can control the story people hear.',
+    frase: 'They already know the story. They know the facts. <b>The story is yet to be told.</b>',
+    explica: '<i>Yet to be told</i> = not told yet. The facts are one thing; the story people believe is another.',
+    formula: 'He <b>promised to save</b> the world. · He <b>refused to</b> stop. (promise / refuse + to)',
+    tente: 'Report a promise someone made to you, and something someone refused to do.',
+    ex: 'My boss promised to give me a raise. My landlord refused to fix the shower.',
+    sente: { q: 'How confident is Digger now?', de: 'lost', a: 'totally confident', st: 'He’s … because he promised to …' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#4fa8c9', titulo: 'The press conference.', sub: 'Hear the line, measure the pressure, then report it with the right verb.', rot: { por: 'WHAT IT MEANS', padrao: 'REPORTING VERBS', voce: 'REPORT IT', ex: 'LIKE THIS' } };

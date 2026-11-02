@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "He Wouldn’t Be Here",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/83bc64d85c47/he-wouldnt-be-here/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "mixed conditionals: if + had + past participle, would + base verb (a past choice, a result now); if + past simple, would have + past participle (a present fact, a past result); never would after if, never if + simple past for a past choice",
   "abrir": "What would your life be like now if you had chosen a different job or school?",
   "fecho": "<b>If + had + past participle, would + verb</b> = a past choice, a result now: <i>If I hadn't taken the job, I wouldn't be here.</i> <b>If + past, would have + past participle</b> = how you are now, and what it changed: <i>If I weren't so shy, I would have spoken.</i> Never <i>If I would have</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about their jobs in a big company. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/83bc64d85c47/he-wouldnt-be-here/img/live-torre.webp",
+      "img": "../img/live-torre.webp",
       "leg": "A tall company tower at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If I hadn't taken the job, I wouldn't be here.",
-          "img": "https://wolf-labs.pages.dev/p/83bc64d85c47/he-wouldnt-be-here/img/live-torre.webp",
+          "img": "../img/live-torre.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If we hadn't met, I would be alone now.",
-          "img": "https://wolf-labs.pages.dev/p/83bc64d85c47/he-wouldnt-be-here/img/live-bar.webp",
+          "img": "../img/live-bar.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If I weren't so shy, I would have sung on stage.",
-          "img": "https://wolf-labs.pages.dev/p/83bc64d85c47/he-wouldnt-be-here/img/live-palco.webp",
+          "img": "../img/live-palco.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -155,7 +155,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/83bc64d85c47/he-wouldnt-be-here/img/live-palco.webp",
+      "img": "../img/live-palco.webp",
       "leg": "An empty stage with warm lights",
       "pede": "Look at the picture: an empty stage with warm lights. Write 2 or 3 sentences about how one past choice changed your life now. Use <b>If + had + participle, would + verb</b>.",
       "ph": "If I hadn't …, I wouldn't …",

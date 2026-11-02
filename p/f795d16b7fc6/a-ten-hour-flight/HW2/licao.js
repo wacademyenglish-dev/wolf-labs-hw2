@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "A Ten-Hour Flight",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f795d16b7fc6/a-ten-hour-flight/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "compound adjectives before a noun: number + noun (a ten-hour flight), well + participle (a well-known hotel), noun + -ing (an Italian-speaking guide, a mouth-watering breakfast), noun + participle (hand-made bread); hyphen, one adjective, never plural",
   "abrir": "Think of your longest trip. How would you describe it in one short headline?",
   "fecho": "A long description becomes <b>one adjective</b>, with a hyphen, <b>before</b> the noun, and the first part is <b>never plural</b>: <i>a ten-hour flight</i>, <i>a well-known hotel</i>, <i>an Italian-speaking guide</i>, <i>a mouth-watering breakfast</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia writes a travel blog. Leo is her editor. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f795d16b7fc6/a-ten-hour-flight/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "The editor's desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -114,17 +114,17 @@ window.HW2 = {
         {
           "t": "It was a ten-hour flight.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/f795d16b7fc6/a-ten-hour-flight/img/live-janela.webp"
+          "img": "../img/live-janela.webp"
         },
         {
           "t": "We stayed in a well-known hotel.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/f795d16b7fc6/a-ten-hour-flight/img/live-mala.webp"
+          "img": "../img/live-mala.webp"
         },
         {
           "t": "We had a mouth-watering breakfast.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/f795d16b7fc6/a-ten-hour-flight/img/live-cafe.webp"
+          "img": "../img/live-cafe.webp"
         }
       ]
     },
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f795d16b7fc6/a-ten-hour-flight/img/live-vista.webp",
+      "img": "../img/live-vista.webp",
       "leg": "A mountain view at dusk",
       "pede": "Look at the picture: a mountain view at dusk. Write a short travel headline about a real trip. Use two compound adjectives, such as <b>five-star, well-known, ten-hour, mouth-watering</b>.",
       "ph": "It was a …",

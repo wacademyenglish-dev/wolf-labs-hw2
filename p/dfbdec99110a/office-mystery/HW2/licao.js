@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Office Mystery",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/dfbdec99110a/office-mystery/img/live-porta.webp",
+  "capa": "../img/live-porta.webp",
   "alvo": "deduction about the past: must have + third form (sure it happened), might have (maybe), can't have (sure it didn't); never must took, must have went, mustn't have for a negative deduction",
   "abrir": "Think of something you lost once. What might have happened to it?",
   "fecho": "<b>must have</b> + third form = I am sure it happened. <b>might have</b> = maybe. <b>can't have</b> = I am sure it didn't. The modal never changes: <i>She must have taken it</i>, never <i>must took</i>. For a negative deduction, use <b>can't have</b>, not <i>mustn't have</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the office. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/dfbdec99110a/office-mystery/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A dark desk by the window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Somebody must have opened this door last night.",
-          "img": "https://wolf-labs.pages.dev/p/dfbdec99110a/office-mystery/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It can't have been Arthur, because he left at nine.",
-          "img": "https://wolf-labs.pages.dev/p/dfbdec99110a/office-mystery/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The tea stain might have come from the kitchen.",
-          "img": "https://wolf-labs.pages.dev/p/dfbdec99110a/office-mystery/img/live-copa.webp",
+          "img": "../img/live-copa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/dfbdec99110a/office-mystery/img/live-garagem.webp",
+      "img": "../img/live-garagem.webp",
       "leg": "An empty car park at night",
       "pede": "Look at the picture: an empty car park at night. Write 2 or 3 sentences about who was here and what happened. Use <b>must have</b>, <b>might have</b> or <b>can't have</b>.",
       "ph": "Somebody must have … It can't have been …",

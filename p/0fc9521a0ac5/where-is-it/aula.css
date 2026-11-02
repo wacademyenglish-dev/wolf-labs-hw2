@@ -1,0 +1,81 @@
+/* ============================================================
+   WHERE IS IT? · THE DOLLHOUSE · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Identidade: casa de bonecas em corte,
+   à noite: parede verde-garrafa, chão de madeira escura, móveis em
+   madeira e veludo; as coisas (emoji) deslizam. Acento: âmbar de abajur.
+   ============================================================ */
+:root{
+  --noite:#0a0d0b; --noite-rgb:10,13,11; --tinta:#ebefe9;
+  --t1:#f0f4ee; --t2:#c9d2c6; --t2-rgb:201,210,198; --t3:#8c988a;
+  --ac:#f0b04a; --ac2:#ffd38c; --bt:#4aa3e8; --bt2:#a6d2ff; --madeira:#5a3d26;
+  --vidro:rgba(235,239,233,.05); --vidro2:rgba(235,239,233,.085); --vidro3:rgba(235,239,233,.12);
+  --fio:rgba(214,226,210,.12); --fio2:rgba(214,226,210,.22); --luz:rgba(235,239,233,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#201404}
+.btn.cheio{color:#201404}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:44px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(70px,7vw,136px)/.92 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande{min-height:52px;padding:0 20px;font:800 clamp(18px,1.4vw,22px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.acoes{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.toca-linha{display:flex;align-items:center;gap:12px;padding:8px 14px;border-radius:var(--r2);font:600 clamp(17px,1.3vw,21px)/1.35 var(--disp)}
+.toca-linha.feito{border-color:rgba(143,217,162,.4)!important} .toca-linha.on{border-color:var(--ac)!important}
+.toca-linha .transcricao{margin:0}
+.num{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:#26302a;font:800 13px var(--mono)}
+.frase-b u{text-decoration-color:var(--ac);text-underline-offset:5px;color:var(--ac2)}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .pede b{font:800 clamp(20px,1.6vw,26px) var(--disp)}
+
+/* a casa de bonecas */
+.casa-box{padding:10px;border-radius:var(--r1)}
+.casa{position:relative;aspect-ratio:16/10;border-radius:16px;overflow:hidden;background:#13221a;max-height:calc(100vh / var(--zv,1) - 330px);margin:0 auto}
+.casa .parede{position:absolute;inset:0 0 18% 0;background:linear-gradient(180deg,#183025,#122319);box-shadow:inset 0 0 80px rgba(0,0,0,.6)}
+.casa .chao{position:absolute;left:0;right:0;bottom:0;height:18%;background:repeating-linear-gradient(90deg,#3a2818 0 46px,#33230f 46px 48px)}
+.mesa{position:absolute;left:19%;width:24%;top:61%;height:22%}
+.mesa i{position:absolute;left:0;right:0;top:0;height:12%;border-radius:4px;background:#7a5434;box-shadow:0 3px 0 #4a3020}
+.mesa b{position:absolute;top:12%;bottom:0;left:6%;width:6%;background:#5a3d26} .mesa b.d{left:auto;right:6%}
+.sofa{position:absolute;left:56%;width:30%;top:46%;height:37%}
+.sofa i{position:absolute;left:0;right:0;top:0;height:46%;border-radius:16px 16px 4px 4px;background:#4d2030}
+.sofa b{position:absolute;left:-3%;right:-3%;top:40%;bottom:12%;border-radius:12px;background:#62293c}
+.estante{position:absolute;left:66%;width:20%;top:31%;height:2.5%;border-radius:2px;background:#7a5434;box-shadow:0 3px 0 #4a3020}
+.rot-casa{position:absolute;left:10px;top:8px;padding:3px 10px;border-radius:999px;background:rgba(10,13,11,.85);font:700 11px var(--mono);letter-spacing:.12em;color:var(--ac2);z-index:3}
+.coisa{position:absolute;transform:translate(-50%,-100%);font-size:clamp(26px,2.6vw,46px);line-height:1;transition:left .6s cubic-bezier(.3,1.3,.5,1),top .6s cubic-bezier(.3,1.3,.5,1);z-index:2;filter:drop-shadow(0 4px 4px rgba(0,0,0,.6))}
+.coisa.atras{z-index:0} .sofa{z-index:1}
+.coisa.fantasma{opacity:.3;filter:grayscale(1);outline:2px dashed var(--ac);outline-offset:4px;border-radius:8px}
+.coisa[role=button]{cursor:pointer} .coisa.acesa,.coisa.marcada{outline:3px solid var(--ok);outline-offset:4px;border-radius:10px}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px;align-items:start}
+
+/* o boneco */
+.mesa-b{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+.foto-b{position:relative;aspect-ratio:16/9;border-radius:var(--r1);background-size:cover;background-position:center}
+.foto-b span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(10,13,11,.85);font:700 13px var(--mono);color:var(--ac2)}
+.escutas{display:grid;grid-template-columns:1fr 1fr;gap:6px} .lin{flex:1} .escutas .toca-linha{font-size:clamp(15px,1.05vw,18px)}
+@media (min-width:1101px){.mesa-b{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+.lado-l.duas{grid-template-columns:1fr 1fr} .lado-l.duas .casa-box{padding:6px}
+
+.placas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.placa-l{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .placa-l.feita{border-color:rgba(143,217,162,.4)!important}
+.etiq{margin:0;font:700 clamp(18px,1.4vw,22px)/1.35 var(--disp)} .placa-l .aprova,.placa-l .recusa{margin:0;font-size:15px}
+
+.tres-tempos{display:flex;justify-content:center}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:12px}
+.lado-video h5{margin:0;font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.ouvidos{display:flex;flex-wrap:wrap;gap:10px}
+.ouvido{min-height:48px;padding:0 18px;border-radius:999px;border:1px solid var(--fio2);background:var(--vidro);font:700 clamp(17px,1.3vw,21px) var(--disp);color:var(--t1)}
+.ouvido.on{border-color:var(--ok);background:rgba(143,217,162,.14)}
+.fim .grande span{font-size:clamp(18px,1.4vw,23px)}
+
+@media (max-width:1100px){ .escutas,.lado-l.duas{grid-template-columns:1fr} .mesa-c,.mesa-b,.mesa-video,.capa,.placas{grid-template-columns:1fr} .casa{max-height:none} }

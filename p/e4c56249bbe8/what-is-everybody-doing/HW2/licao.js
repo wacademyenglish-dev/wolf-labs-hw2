@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What Is Everybody Doing?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e4c56249bbe8/what-is-everybody-doing/img/live-ponte.webp",
+  "capa": "../img/live-ponte.webp",
   "alvo": "present continuous: am / is / are + verb-ing for now; the question (Is she smiling?) and the negative (isn't / aren't + -ing); never she cleaning, is cook",
   "abrir": "What are you doing right now?",
   "fecho": "<b>Now</b> = <b>am / is / are</b> + verb-<b>ing</b>: <i>She is cleaning the floor.</i> No: <b>isn't / aren't</b>: <i>She isn't smiling.</i> Question: the little verb goes first: <i>Is she smiling? Are they running?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo watch the windows of a big old building at night. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/e4c56249bbe8/what-is-everybody-doing/img/live-mapa.webp",
+      "img": "../img/live-mapa.webp",
       "leg": "A big old building at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Two women are carrying big bowls.",
-          "img": "https://wolf-labs.pages.dev/p/e4c56249bbe8/what-is-everybody-doing/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The lights are shining on the bridge.",
-          "img": "https://wolf-labs.pages.dev/p/e4c56249bbe8/what-is-everybody-doing/img/live-ponte.webp",
+          "img": "../img/live-ponte.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "A girl is walking to the tunnel.",
-          "img": "https://wolf-labs.pages.dev/p/e4c56249bbe8/what-is-everybody-doing/img/live-tunel.webp",
+          "img": "../img/live-tunel.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e4c56249bbe8/what-is-everybody-doing/img/live-ponte.webp",
+      "img": "../img/live-ponte.webp",
       "leg": "A long bridge at night",
       "pede": "Look at the picture: a long bridge at night. Write 2 or 3 sentences: what is happening <b>now</b>, and what you are doing.",
       "ph": "It is night. The lights are … I am …",

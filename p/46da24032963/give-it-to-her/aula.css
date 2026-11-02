@@ -1,0 +1,94 @@
+/* ============================================================
+   GIVE IT TO HER · THE BIRTHDAY TABLE · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Aqui a identidade: a mesa comprida à luz
+   de vela, o vinho e a mostarda dos papéis de presente, as etiquetas de
+   papel cru.
+   ============================================================ */
+:root{
+  --noite:#0e0a0b; --noite-rgb:14,10,11; --tinta:#f0e6dc;
+  --t1:#f5eee8; --t2:#d6cbc2; --t2-rgb:214,203,194; --t3:#9a8e86;
+  --ac:#e2a63e; --ac2:#f6d290; --bt:#a8435f; --bt2:#e89ab0;
+  --vidro:rgba(240,230,220,.05); --vidro2:rgba(240,230,220,.085); --vidro3:rgba(240,230,220,.12);
+  --fio:rgba(240,225,210,.12); --fio2:rgba(240,225,210,.22); --luz:rgba(240,230,220,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mao:'Caveat',cursive; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(3,2,2,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1d1404}
+.btn.cheio{color:#1d1404}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(56px,5.8vw,110px)/.95 var(--disp);letter-spacing:-.035em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa .foto{position:relative;border-radius:30px;overflow:hidden;aspect-ratio:16/11;border:1px solid var(--fio);box-shadow:var(--sombra)}
+.capa .foto img{width:100%;height:100%;object-fit:cover;filter:brightness(.85)}
+.placa-capa{position:absolute;right:6%;bottom:8%;display:grid;padding:12px 20px;border-radius:8px;background:#efe3cf;color:#2b2116;box-shadow:0 14px 40px rgba(0,0,0,.6);transform:rotate(3deg)}
+.placa-capa small,.placa-capa span{font:700 11px var(--mono);letter-spacing:.14em;color:#7a5a46}
+.placa-capa b{font:700 44px/1.1 var(--mao);color:#a8435f}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versoes.linha{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.vaga{color:var(--ac);letter-spacing:.1em}
+.avatar{display:inline-grid;place-items:center;flex:none;width:64px;height:64px;border-radius:50%;background:var(--bt);color:#fff;font:800 24px var(--disp)}
+
+/* II · a mesa */
+.mesa-pres{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:22px;align-items:start}
+.mesa-festa{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:22px;border-radius:var(--r1);background:linear-gradient(180deg,#3a2418,#24160f)!important;border:1px solid #5a3a26!important}
+.presente{position:relative;display:grid;justify-items:center;gap:10px;padding:14px 8px;border:0;border-radius:18px;background:none;transition:transform .2s}
+.presente:hover{transform:translateY(-4px)}
+.presente.on{background:rgba(255,255,255,.06);box-shadow:0 0 0 2px var(--ac)}
+.caixa{position:relative;display:grid;place-items:center;width:100px;height:86px;border-radius:10px;background:var(--cor);box-shadow:inset 0 -10px 0 rgba(0,0,0,.18),0 10px 22px rgba(0,0,0,.45)}
+.caixa::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:14px;margin-left:-7px;background:rgba(255,240,210,.65)}
+.caixa .laco{position:absolute;top:-14px;left:50%;width:0;height:0}
+.caixa .laco::before,.caixa .laco::after{content:'';position:absolute;top:0;width:26px;height:18px;border-radius:50%;border:6px solid rgba(255,240,210,.85)}
+.caixa .laco::before{right:0;transform:rotate(-25deg)} .caixa .laco::after{left:0;transform:rotate(25deg)}
+.caixa em{position:relative;font-style:normal;font-size:32px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.5))}
+.etiqueta{display:grid;gap:1px;min-width:110px;padding:6px 12px;border-radius:4px 10px 10px 4px;background:#efe3cf;color:#2b2116;font:800 14px var(--ui);text-align:center;transform:rotate(-3deg);transition:transform .5s}
+.etiqueta small{font:700 10px var(--mono);letter-spacing:.14em;color:#8a6a50}
+.etiqueta s{color:#b8442f;text-decoration-thickness:2px}
+.etiqueta.virou{animation:vira .6s ease;background:#dff3e3;color:#1d3a24;transform:rotate(2deg)}
+@keyframes vira{0%{transform:rotateY(0)}50%{transform:rotateY(90deg)}100%{transform:rotateY(0) rotate(2deg)}}
+.lado-pres{display:grid;gap:12px} .lado-pres .versoes{display:grid;gap:8px}
+.lado-pres .pergunta h2{font-size:clamp(22px,1.8vw,30px)}
+
+/* IV · a porta */
+.mesa-porta{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:center}
+.porta-box{position:relative;display:grid;place-items:center;min-height:clamp(300px,calc(100vh / var(--zv,1) - 380px),520px);border-radius:var(--r1);background:#000 center/cover;overflow:hidden;border:1px solid var(--fio)}
+.porta-box::before{content:'';position:absolute;inset:0;background:rgba(14,10,11,.35)}
+.porta-box .folha{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,10,11,0),rgba(14,10,11,.2));transition:opacity .6s}
+.porta-box.aberta::before{background:radial-gradient(circle at 50% 40%,rgba(255,200,120,.3),rgba(14,10,11,.7))}
+.campainha{position:relative;min-height:64px;padding:0 26px;border-radius:999px;border:0;background:var(--ac);color:#1d1404;font:800 20px var(--ui);box-shadow:0 12px 30px rgba(0,0,0,.6);animation:pulsa 1.6s ease-in-out infinite}
+@keyframes pulsa{50%{transform:scale(1.04)}}
+.visita{position:relative;display:grid;gap:8px;max-width:86%;padding:20px 22px;border-radius:22px 22px 22px 6px;animation:entra .5s cubic-bezier(.2,.8,.2,1)}
+@keyframes entra{from{opacity:0;transform:translateY(20px)}}
+.visita small{font:800 12px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.visita p{margin:0;font:600 italic clamp(22px,1.9vw,30px)/1.3 var(--disp)}
+.visita .so-prof{color:var(--t3);font-size:14px}
+.lado-porta{display:grid;gap:12px} .lado-porta .versoes{display:grid;gap:8px}
+
+/* V · a roleta */
+.mesa-roda{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:26px;align-items:center}
+.roda-box{position:relative;display:grid;justify-items:center;gap:16px;padding:24px;border-radius:var(--r1)}
+.ponteiro{width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:26px solid var(--bt);margin-bottom:-28px;z-index:2}
+.roda-svg{width:min(100%,calc(100vh / var(--zv,1) - 470px));min-width:240px;max-width:380px;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.roda-svg .fatia{stroke:#0e0a0b;stroke-width:2} .roda-svg .f0{fill:#5a2436} .roda-svg .f1{fill:#3a1a24} .roda-svg .fatia.feita{fill:#6a5016}
+.roda-svg text{fill:#f0e6dc;font:800 8.5px var(--ui);letter-spacing:.04em;text-anchor:middle}
+.roda-svg .eixo{fill:var(--ac)}
+.lado-roda{display:grid;gap:12px} .lado-roda .resp-btn,.lado-roda .resposta{margin:0}
+
+/* VI · a avó */
+.ligacao{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:22px;align-items:start}
+.tel-avo{display:grid;justify-items:start;gap:10px;padding:22px;border-radius:28px}
+.tel-avo small{font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.tel-avo p{margin:0;font:600 italic clamp(22px,1.8vw,30px)/1.3 var(--disp)}
+.tel-avo.resp{border-color:rgba(143,217,162,.45)!important}
+.lado-avo{display:grid;gap:12px} .lado-avo .resp-btn,.lado-avo .resposta{margin:0}
+.fim .grande span{font-size:clamp(24px,2.1vw,34px)}
+
+@media (max-width:1100px){ .mesa-pres,.mesa-porta,.mesa-roda,.ligacao{grid-template-columns:1fr} }
+@media (max-width:820px){
+  .capa .foto{aspect-ratio:16/12}
+  .mesa-festa{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:12px}
+  .caixa{width:80px;height:68px}
+  .porta-box{min-height:300px}
+}

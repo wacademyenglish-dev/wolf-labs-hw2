@@ -1,0 +1,88 @@
+/* ============================================================
+   THERE IS · THE FRONT SEAT · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Identidade: sala de cinema escura;
+   a frase é uma fileira de POLTRONAS de veludo vinho com as palavras;
+   a da frente fica vazia (tracejada) até o THERE sentar. Acento: ouro.
+   ============================================================ */
+:root{
+  --noite:#0c0809; --noite-rgb:12,8,9; --tinta:#f2e8e2;
+  --t1:#f6efea; --t2:#d6c8c0; --t2-rgb:214,200,192; --t3:#9a8780;
+  --ac:#e6b04a; --ac2:#ffd98e; --bt:#4aa3e8; --bt2:#a6d2ff; --veludo:#6a1f24;
+  --vidro:rgba(242,232,226,.05); --vidro2:rgba(242,232,226,.085); --vidro3:rgba(242,232,226,.12);
+  --fio:rgba(242,222,214,.12); --fio2:rgba(242,222,214,.22); --luz:rgba(242,232,226,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(3,1,1,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1d1404}
+.btn.cheio{color:#1d1404}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(70px,7vw,136px)/.92 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa-pol{display:grid;gap:16px;justify-items:center}
+.sussurro{margin:0;font:600 18px var(--disp);color:var(--t3);font-style:italic}
+.vaga{color:var(--ac);letter-spacing:.06em}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande{min-height:58px;padding:0 24px;font:800 clamp(19px,1.5vw,24px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.toca-linha{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:var(--r2);font:600 clamp(18px,1.4vw,22px)/1.35 var(--disp)}
+.toca-linha.centro{justify-content:center;max-width:760px;margin:0 auto;width:100%}
+.toca-linha .transcricao{margin:0}
+
+/* as poltronas */
+.poltronas{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;padding:8px 4px}
+.poltrona{position:relative;display:grid;place-items:end center;min-width:clamp(60px,4.6vw,96px);height:clamp(66px,5vw,92px);padding:0 10px 12px;border-radius:22px 22px 8px 8px;background:linear-gradient(180deg,#7a2a2e,#4a1418);box-shadow:inset 0 -18px 0 rgba(0,0,0,.25),0 10px 18px rgba(0,0,0,.5)}
+.poltrona b{font:800 clamp(18px,1.45vw,26px) var(--disp);color:#fbe9df}
+.poltrona.frente{background:transparent;border:3px dashed var(--ac);box-shadow:none}
+.poltrona.frente.ocupada{border-style:solid;background:linear-gradient(180deg,#8a6a22,#4a3a10)} .poltrona.frente.ocupada b{color:var(--ac2)}
+.poltrona.coberta b{filter:blur(6px)}
+.poltronas.grande .poltrona{min-width:clamp(96px,8vw,140px);height:clamp(110px,9vw,150px)}
+.poltronas.mini .poltrona{min-width:64px;height:66px;padding-bottom:10px} .poltronas.mini .poltrona b{font-size:16px}
+
+.fato{display:grid;gap:4px;padding:10px 18px;border-radius:14px;max-width:760px;margin:0 auto;width:100%;text-align:center}
+.fato small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .fato p{margin:0;font:700 clamp(19px,1.5vw,24px) var(--disp)}
+
+/* II */
+.escutas{display:grid;gap:8px;max-width:1000px;margin:0 auto;width:100%}
+.num{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--veludo);font:800 14px var(--mono)}
+
+/* V */
+.mesa-lista{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:start}
+.foto-l{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center}
+.foto-l span{position:absolute;left:14px;bottom:12px;padding:4px 12px;border-radius:999px;background:rgba(12,8,9,.85);font:700 13px var(--mono);color:var(--ac2)}
+.lado-l{display:grid;gap:12px}
+.palavras-b{display:flex;flex-wrap:wrap;gap:8px}
+.pal-b{min-height:52px;padding:0 20px;border-radius:999px;border:1px solid var(--fio2);background:var(--vidro);font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--t1)}
+.pal-b.on{border-color:var(--ok);background:rgba(143,217,162,.14)} .pal-b.falta{border-color:var(--erro);text-decoration:line-through}
+
+/* VI */
+.cidades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cidade-b{position:relative;display:grid;align-content:end;gap:2px;min-height:clamp(110px,calc((100vh / var(--zv,1) - 500px) / 2.4),190px);padding:12px;border-radius:var(--r2);background-size:cover;background-position:center;color:var(--t1);text-align:left;overflow:hidden}
+.cidade-b::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,8,9,.1),rgba(12,8,9,.9))}
+.cidade-b>*{position:relative} .cidade-b b{font:800 22px var(--disp)} .cidade-b small{color:var(--t2);font-weight:600}
+.cidade-b.on{box-shadow:0 0 0 3px var(--ac)}
+.mesa-cid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px;align-items:start}
+.placa-c{display:grid;gap:8px;padding:16px;border-radius:8px;background:#1a2a20;border:3px solid #e6e0c8;box-shadow:var(--sombra)}
+.placa-c .tem{display:grid;grid-template-columns:1fr 1fr;gap:6px} .placa-c .tem span{font:700 17px var(--disp);color:#f0f0e0}
+.nao-tem{font:800 17px var(--disp);color:#ffb4b4}
+
+/* IX / X */
+.portas-d{display:grid;gap:8px}
+.porta-d{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:var(--r2);color:var(--t1);font:700 clamp(17px,1.3vw,21px) var(--disp);text-align:left}
+.porta-d span{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--veludo);font:800 14px var(--mono)}
+.porta-d.on{border-color:var(--ac)!important}
+.cartoes-c{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cartao-c{display:grid;gap:6px;padding:18px;border-radius:var(--r2);border:1px solid var(--fio2);background:#17110f;color:var(--t1);text-align:left}
+.cartao-c b{font:800 24px var(--disp);color:var(--ac2)} .cartao-c small{color:var(--t2);font:600 16px var(--disp)}
+.cartao-c.on{border-color:var(--ok);background:rgba(143,217,162,.08)}
+.fim .grande span{font-size:clamp(20px,1.6vw,26px)}
+
+@media (max-width:1100px){ .mesa-lista,.mesa-cid,.capa{grid-template-columns:1fr} .cidades{grid-template-columns:1fr 1fr} }
+@media (max-width:820px){ .cartoes-c{grid-template-columns:1fr} .poltrona{min-width:62px;height:70px;padding:0 8px 10px} .poltrona b{font-size:17px} .placa-c .tem{grid-template-columns:1fr} }

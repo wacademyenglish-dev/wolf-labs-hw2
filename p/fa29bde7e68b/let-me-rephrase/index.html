@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Let Me Rephrase · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 8 · Explain and report</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Let Me Rephrase · C1 Unit 8 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on rephrasing (in other words, that is to say, what I mean is, to put it another way / simply / bluntly, or rather, let me rephrase that) and on asking for clarity (what exactly do you mean by…?, are you saying that…?, so, if I understand correctly…).</p><p style="margin:0 0 6px"><b>The story:</b> A financial adviser (invented) explains a bad quarter to a confused client with technical words, and has to rephrase again and again.</p><p style="margin:0 0 6px"><b>About 47 min:</b> I · Lost in Explanation (6) · II · The Appointment (10) · III · Same Idea, Clearer (9) · IV · Speed Round (6) · V · Who Explains Worst? (7) · VI · Explain It to Me (9).</p><p style="margin:0"><b>Open with:</b> “Tell me about a time an expert explained something you didn’t understand.”</p></div><!--/prep-->
+    <p>C1 speakers are not perfect: they repair. Show the student that rephrasing is a skill, not a failure. Watch the Portuguese traps: “ou seja” → or be, “quer dizer” → want to say. In the hot seat, explain YOUR job in a deliberately complicated way, so the student has to ask for clarity.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>In other words / That is to say · What I mean is… · To put it another way / simply / bluntly · or rather (correcting yourself) · Let me rephrase that · What exactly do you mean by…? / Are you saying that…?</p>
+    <h4>LOST IN EXPLANATION</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>THE APPOINTMENT</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>SAME IDEA, CLEARER</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>SPEED ROUND</h4>
+    <p>A 60-second speed round. Tap <b>Start the clock</b>, then <b>Right</b> or <b>Pass</b> for each item; the answer is on your screen. At the end of class, play again and beat the score.</p>
+    <h4>EXPLAIN IT TO ME</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>or be (for ou seja)</i>, <i>what I want to say is</i>, <i>in other way</i>, <i>what do you want to say with that</i>, <i>in another words</i>, <i>I didn’t understand (only)</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>WHO EXPLAINS WORST? (V) AND THE SURPRISE QUESTION</h4>
+    <p>In the middle of the lesson, your student ranks five people from the hardest to understand to the easiest (a bank manager, IT support, a lawyer, a mechanic, a teenager explaining an app) and explains their top and last with <i>in other words, what I mean is, to put it simply</i>. There is no right answer. Wait five seconds in silence, then tap <b>Show my teacher’s order</b>, defend yours, and agree on one top 3 together. Use the PUSH line (only you see it) to make it personal. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · Lost in Explanation, V · Who Explains Worst? and VI · Explain It to Me.</li>
+      <li><b>Listen</b>: II · The Appointment.</li>
+      <li><b>Focus</b>: III · Same Idea, Clearer and IV · Speed Round.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* LET ME REPHRASE (Main C1) · pergunta-surpresa · 28/10/2026 · reformular e pedir reformulação */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'When you don’t understand something important, do you ask, or do you just nod?',
+    opc: ['I always ask', 'I nod and google it', 'I just nod'], st: ['I ask: “What exactly do you mean by …?”', 'To put it bluntly, I …'],
+    ex: 'I nod and google it later. To put it bluntly, I don’t want to look stupid in a meeting.', push: 'And when it’s about your money? Still nodding?' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Is it rude to ask someone to repeat something three times?',
+    opc: ['Not at all', 'A bit', 'Yes, very'], st: ['Not at all. What I mean is, …', 'Are you saying that …?'],
+    ex: 'Not at all. What I mean is, it’s their job to be clear, not my job to guess.', push: 'And if it’s your boss, in front of the client?' },
+  { cena: 'rapido', tipo: 'What if', q: 'You have to explain your job to a group of ten-year-olds. What do you say?',
+    opc: ['I make it a story', 'I use a toy example', 'I panic'], st: ['To put it simply, I …', 'In other words, my job is …'],
+    ex: 'I make it a story. To put it simply, I help a shop sell more. In other words, I’m a detective for sales.', push: 'One child asks: “But is it fun?” Answer honestly.' },
+  { cena: 'cadeira', tipo: 'Would you rather', q: 'Would you rather have a teacher who explains slowly, or one who explains fast but well?',
+    opc: ['Slowly', 'Fast but well'], st: ['I’d rather …, or rather, …', 'That is to say, …'],
+    ex: 'Fast but well. Slow explanations make me lose focus, or rather, they make me check my phone.', push: 'Your teacher is listening right now. Still the same answer?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* LET ME REPHRASE (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O ranking ENTRA depois de "IV · Speed Round" (a aula tinha 40 min e nenhuma cena extra: somar 7 min cabe;
+   a aula tinha o pessoal no I e o papel no V, faltava a decisão no meio).
+   O aluno põe em ordem quem explica pior (gerente do banco, suporte de TI, advogado, mecânico, adolescente
+   explicando um app) e compara com a ordem do professor. O alvo (in other words, what I mean is, to put it
+   simply, or rather) mora nos iniciadores. Formato: ranking with teacher order. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'ranking', apos: 'rapido', est: 'o', min: 7, img: 'capa', rot: 'Who Explains Worst?', t: 'Five experts. Who confuses you most?',
+    p: 'Who explains things worst? Put them in order, then compare with your teacher.',
+    formato: 'ranking',
+    q: 'Who is the hardest to understand?',
+    itens: ['A bank manager', 'An IT support person', 'A lawyer', 'A car mechanic', 'A teenager explaining an app'],
+    prof: [2, 0, 4, 1, 3],
+    st: ['In other words, number one …', 'What I mean is, they …', 'To put it simply, …', '…, or rather, …'],
+    ex: 'Number one is the IT support person. In other words, they speak in codes. What I mean is, they say “clear your cache” and I just nod. The mechanic is last: to put it simply, he shows me the broken part.',
+    push: 'Now explain your job in one sentence, “to put it simply”. Would your best friend understand it?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "When did someone confuse you?",
+   "p": "Answer with detail. Then ask it back."
+  },
+  "leitura": {
+   "t": "A very confused client.",
+   "p": "Read it aloud with your teacher. Then look closer."
+  },
+  "descobre": {
+   "t": "What does each phrase do?",
+   "p": "Compare A and B. What is the speaker doing?"
+  },
+  "rapido": {
+   "t": "Sixty seconds. How many can you do?",
+   "p": "Answer fast. Then try to beat your score."
+  },
+  "cv-ranking": {
+   "t": "Five experts. Who confuses you most?",
+   "p": "Rank them. Then compare with your teacher."
+  },
+  "cadeira": {
+   "t": "I explain badly. You make me rephrase.",
+   "p": "Ask for clarity. Then rephrase it yourself."
+  }
+ },
+ "prep": {
+  "obj": "Reformular (in other words, what I mean is, to put it simply, or rather, let me rephrase that) e pedir clareza (what exactly do you mean by…?), com um consultor financeiro e um cliente confuso.",
+  "armadilha": "Tradução literal: “ou seja” vira “or be”, “quer dizer” vira “want to say” (“what do you want to say with that?”); também “in other way”, “in another words”.",
+  "pal": [
+   "in other words",
+   "that is to say",
+   "what I mean is",
+   "to put it simply",
+   "or rather",
+   "let me rephrase that",
+   "what exactly do you mean by …?",
+   "are you saying that …?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: no C1 a gente não é perfeito, a gente conserta.",
+   "perg": "Has an expert ever lost you completely?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal sobre explicações confusas; o aluno devolve a pergunta.",
+   "perg": "Who explained something you didn’t understand?",
+   "pula": "Duas perguntas bastam."
+  },
+  "leitura": {
+   "obj": "O consultor explica um trimestre ruim com termos técnicos e precisa reformular várias vezes.",
+   "perg": "What is the adviser really saying?",
+   "pula": "Leia e faça só as perguntas de sentido."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: o que cada frase de reformulação faz.",
+   "perg": "Is the speaker correcting, simplifying or being blunt?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "rapido": {
+   "obj": "Rodada de 60 segundos: reformular rápido com a expressão certa.",
+   "perg": "In other words…?",
+   "pula": "Uma rodada só, sem repetir."
+  },
+  "cv-ranking": {
+   "obj": "Ranking de quem explica pior (gerente de banco, suporte de TI, advogado, mecânico, adolescente com app).",
+   "perg": "Who explains things worst, and why?",
+   "pula": "Só o primeiro e o último."
+  },
+  "cadeira": {
+   "obj": "O professor explica o próprio trabalho de modo complicado; o aluno pede clareza e reformula.",
+   "perg": "What exactly do you mean by that?",
+   "pula": "Duas rodadas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa em que o aluno se explica, reformula e se corrige.",
+   "perg": "Can you put that more simply?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre jargão, clareza e honestidade ao explicar.",
+   "perg": "Which side, and what do you mean by that?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o consultor financeiro e explica o trimestre ruim, cada vez mais simples.",
+   "perg": "So, did I lose money or not?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Say it, then say it better.",
+   "p": "Pick a card. Answer, then rephrase.",
+   "palavras": [
+    "in other words",
+    "what I mean is",
+    "to put it simply",
+    "or rather",
+    "let me rephrase that"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR JOB",
+     "q": "Explain your job to a ten-year-old.",
+     "fup": "Now to put it bluntly: is it a good job?",
+     "st": [
+      "I … To put it simply, …"
+     ],
+     "ex": "I manage supply chains. To put it simply, I make sure things arrive on time."
+    },
+    {
+     "k": "A HOBBY",
+     "q": "What’s a hobby of yours that people don’t understand?",
+     "fup": "What exactly do you get out of it?",
+     "st": [
+      "What I mean is …"
+     ],
+     "ex": "I restore old radios. What I mean is, I make dead things talk again."
+    },
+    {
+     "k": "A CORRECTION",
+     "q": "How many hours do you really work a week?",
+     "fup": "And how many are actually productive?",
+     "st": [
+      "About …, or rather …"
+     ],
+     "ex": "About forty, or rather forty-five if I count emails at night."
+    },
+    {
+     "k": "BAD NEWS",
+     "q": "How would you tell a friend their business idea is bad?",
+     "fup": "And to put it bluntly?",
+     "st": [
+      "In other words, …",
+      "To put it bluntly, …"
+     ],
+     "ex": "It might need more research. To put it bluntly, nobody will buy it."
+    },
+    {
+     "k": "LOST",
+     "q": "When did you last pretend to understand something?",
+     "fup": "What should you have asked?",
+     "st": [
+      "I should have asked: what exactly do you mean by …?"
+     ],
+     "ex": "At the bank. I should have asked what exactly they meant by a variable rate."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Describe your city in one complicated sentence, then simply.",
+     "fup": "Which version is more honest?",
+     "st": [
+      "…. In other words, …"
+     ],
+     "ex": "It’s a dynamic urban center with mobility challenges. In other words, traffic is terrible."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "in other words",
+    "what I mean is",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Technical jargon: necessary, or a way to hide things?",
+     "a": "Necessary",
+     "b": "Hiding things",
+     "fa": [
+      "Necessary. Experts need precise words.",
+      "What I mean is, “stuff” isn’t a diagnosis."
+     ],
+     "fb": [
+      "Hiding things. If you can’t say it simply, you’re hiding something.",
+      "In other words, jargon protects the expert, not the client."
+     ]
+    },
+    {
+     "q": "Asking “what do you mean?”: smart or embarrassing?",
+     "a": "Smart",
+     "b": "Embarrassing",
+     "fa": [
+      "Smart. The person who asks is the one who understands.",
+      "Pretending costs more later."
+     ],
+     "fb": [
+      "Embarrassing. In a meeting, everyone looks at you.",
+      "The thing is, nobody wants to look slow."
+     ]
+    },
+    {
+     "q": "A doctor should explain everything, or keep it short?",
+     "a": "Everything",
+     "b": "Keep it short",
+     "fa": [
+      "Everything. It’s my body; I need to understand.",
+      "To put it simply, informed patients heal better."
+     ],
+     "fb": [
+      "Keep it short. Too much detail scares people.",
+      "I see your point, but some people just want the plan."
+     ]
+    },
+    {
+     "q": "Correcting yourself mid-sentence: strength or weakness?",
+     "a": "Strength",
+     "b": "Weakness",
+     "fa": [
+      "Strength. “Or rather” shows you care about the truth.",
+      "Native speakers do it all the time."
+     ],
+     "fb": [
+      "Weakness. It sounds like you didn’t prepare.",
+      "In other words, think before you speak."
+     ]
+    }
+   ],
+   "fim": "Four rounds. In other words, nobody won, and everybody was clear."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the financial adviser now.",
+   "p": "Your teacher, the confused client, asks.",
+   "aluno": "Listen to your teacher’s question. Answer as the adviser, then rephrase it more simply.",
+   "perguntas": [
+    "So, was it a good quarter or a bad one?",
+    "What exactly do you mean by “volatility”?",
+    "Are you saying that I lost money?",
+    "Why didn’t you warn me earlier?",
+    "What should I do now, to put it simply?",
+    "Should I trust you next quarter?"
+   ],
+   "st": [
+    "In other words, …",
+    "To put it simply, …",
+    "Let me rephrase that: …"
+   ],
+   "ex": "The portfolio underperformed. In other words, you lost a little money this quarter."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

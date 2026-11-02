@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "How Much Is Too Much",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e61622e19bfe/how-much-is-too-much/img/live-manha.webp",
+  "capa": "../img/live-manha.webp",
   "alvo": "too much + uncountable (time, coffee, sleep) vs too many + countable (hours, cups, people); enough before a noun (enough time) and after an adjective (big enough); not enough as a complaint; too + adjective (too tired)",
   "abrir": "What do you have too much of in your week?",
   "fecho": "<b>Too many</b> + things you count (<i>hours, cups, people</i>). <b>Too much</b> + things you don't (<i>time, coffee, sleep</i>). <b>Enough</b> before a noun (<i>enough time</i>) and after an adjective (<i>big enough</i>). <b>Too</b> + adjective: <i>too tired</i>, never <i>too much tired</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a long week. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e61622e19bfe/how-much-is-too-much/img/live-mesa2.webp",
+      "img": "../img/live-mesa2.webp",
       "leg": "Two cups on a dark café table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I drink too many cups of coffee and I don't get enough sleep.",
-          "img": "https://wolf-labs.pages.dev/p/e61622e19bfe/how-much-is-too-much/img/live-mesa2.webp",
+          "img": "../img/live-mesa2.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "This bedroom is quiet enough, but it's too cold to sleep.",
-          "img": "https://wolf-labs.pages.dev/p/e61622e19bfe/how-much-is-too-much/img/live-quarto.webp",
+          "img": "../img/live-quarto.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Is two hours too much time on your phone?",
-          "img": "https://wolf-labs.pages.dev/p/e61622e19bfe/how-much-is-too-much/img/live-bolso.webp",
+          "img": "../img/live-bolso.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e61622e19bfe/how-much-is-too-much/img/live-manha.webp",
+      "img": "../img/live-manha.webp",
       "leg": "A messy bed on a tired morning",
       "pede": "Look at the picture: a messy bed on a tired morning. Write 2 or 3 sentences about your week. Use <b>too much</b>, <b>too many</b> or <b>enough</b> (or <b>not enough</b>).",
       "ph": "I have too much … I don't have enough …",

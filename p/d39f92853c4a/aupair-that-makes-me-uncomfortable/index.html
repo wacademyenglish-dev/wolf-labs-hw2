@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -121,5 +122,286 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Culture shock, and how to deal with it.",
+   "p": "One question, then the video, then the questions."
+  },
+  "descobre": {
+   "t": "Too soft, too hard, or just right?",
+   "p": "Compare A and B. Which is kind AND firm?"
+  },
+  "prova": {
+   "t": "Five requests. Kind and firm.",
+   "p": "Play it. Start the clock. Answer in 30 seconds."
+  },
+  "cv-cadeira": {
+   "t": "One year later. Júlia calls you.",
+   "p": "Answer her four questions. Then give one tip."
+  },
+  "pode": {
+   "t": "What can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Dizer não com gentileza e firmeza (reconhecer, dizer não claro, oferecer um próximo passo), separar pedido normal de sinal de alerta e lidar com o choque cultural.",
+  "armadilha": "O brasileiro evita o não direto: fica no “OK…” mole ou explica demais; quando enfim recusa, soa rude (“That’s not my job”). A meta é: I understand, but… + próximo passo.",
+  "pal": [
+   "I understand, but …",
+   "I’m not comfortable with that.",
+   "That’s not part of my duties.",
+   "I need to check with my coordinator first.",
+   "Could we write the schedule down?",
+   "culture shock",
+   "red flag"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 21 do Au Pair: dizer não com gentileza e firmeza.",
+   "perg": "Is it hard for you to say no? Why?",
+   "pula": "Pergunte e entre."
+  },
+  "video": {
+   "obj": "Assistir o vídeo de um minuto sobre choque cultural.",
+   "perg": "What is culture shock, in your words?",
+   "pula": "O vídeo é inteiro; uma pergunta depois basta."
+  },
+  "descobre": {
+   "obj": "Comparar respostas: mole demais, rude ou na medida; o aluno explica a diferença (pode em português).",
+   "perg": "Why is this one kind AND firm?",
+   "pula": "Dois pares bastam."
+  },
+  "prova": {
+   "obj": "Responder a cinco pedidos do pai anfitrião com relógio; o 4 é normal, o 5 é comentário impróprio (conduzir com calma).",
+   "perg": "Is this a normal request or a red flag?",
+   "pula": "Pule o pedido 5 se a aluna ficar desconfortável."
+  },
+  "cv-cadeira": {
+   "obj": "Momento de conversa: um ano depois, o aluno aconselha a Júlia, que embarca no mês que vem.",
+   "perg": "What’s your one tip for Júlia?",
+   "pula": "Duas perguntas e a dica."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; lembrar que ela pode ensaiar conversas difíceis com você antes.",
+   "perg": "Can you say no kindly in one sentence?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre dizer não, limites e choque cultural na vida real.",
+   "perg": "When did you last say no to someone?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas leves de convivência com a família anfitriã, decidindo se é pedido normal ou não.",
+   "perg": "Normal request or not? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta uma recusa gentil e firme em quatro passos para um pedido do dia a dia.",
+   "perg": "What’s your next step for them?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Kind, firm and far from home.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I understand, but …",
+    "I’m not comfortable",
+    "check with"
+   ],
+   "cartas": [
+    {
+     "k": "SAYING NO",
+     "q": "When did you last say no to someone?",
+     "fup": "How did they react?",
+     "st": [
+      "Last week, I said no to …",
+      "They were …"
+     ],
+     "ex": "Last week, I said no to an extra shift. My boss was surprised, but OK."
+    },
+    {
+     "k": "CULTURE SHOCK",
+     "q": "What do you think will surprise you most in the U.S.?",
+     "fup": "How will you deal with it?",
+     "st": [
+      "I think … will surprise me.",
+      "I’ll try to …"
+     ],
+     "ex": "I think dinner at 6 p.m. will surprise me. I’ll try to eat a snack later."
+    },
+    {
+     "k": "HOMESICK",
+     "q": "What will you miss most from Brazil?",
+     "fup": "What can help?",
+     "st": [
+      "I’ll miss …",
+      "What can help is …"
+     ],
+     "ex": "I’ll miss Sunday lunch with my family. What can help is a video call every Sunday."
+    },
+    {
+     "k": "BRAZILIAN NO",
+     "q": "Why is it hard for Brazilians to say a direct no?",
+     "fup": "Is it the same for you?",
+     "st": [
+      "I think it’s because …",
+      "For me, …"
+     ],
+     "ex": "I think it’s because we want people to like us. For me, it’s the same."
+    },
+    {
+     "k": "THE SCHEDULE",
+     "q": "Why is it a good idea to write the schedule down?",
+     "fup": "Who would you show it to?",
+     "st": [
+      "It’s a good idea because …",
+      "I’d show it to …"
+     ],
+     "ex": "It’s a good idea because nobody forgets. I’d show it to my host mom."
+    },
+    {
+     "k": "GOOD SURPRISES",
+     "q": "What new habit from the U.S. would you like to bring home?",
+     "fup": "Why that one?",
+     "st": [
+      "I’d like to bring …",
+      "because …"
+     ],
+     "ex": "I’d like to bring the habit of planning the week, because it saves stress."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Normal request, or not?",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "I understand, but …",
+    "because",
+    "part of my duties"
+   ],
+   "rodadas": [
+    {
+     "q": "The family asks you to eat dinner with them every night. Normal or too much?",
+     "a": "Normal",
+     "b": "Too much",
+     "fa": [
+      "Normal. They want you to feel like family.",
+      "It’s a great way to practice English."
+     ],
+     "fb": [
+      "Too much, every night. I need some time alone.",
+      "I understand, but could we make it four nights?"
+     ]
+    },
+    {
+     "q": "They ask you to walk the dog. Is it part of your duties?",
+     "a": "It’s fine",
+     "b": "Not my duty",
+     "fa": [
+      "It’s fine with the kids. It’s a family walk.",
+      "Small favors help the relationship."
+     ],
+     "fb": [
+      "Not alone. My duties are about the kids.",
+      "I’d check with my coordinator first."
+     ]
+    },
+    {
+     "q": "They change your schedule the night before. Accept it or ask for notice?",
+     "a": "Accept it",
+     "b": "Ask for notice",
+     "fa": [
+      "Accept, once. Things happen with kids.",
+      "Being flexible makes life easier."
+     ],
+     "fb": [
+      "Ask for notice. I have plans too.",
+      "Could we write the schedule down a week before?"
+     ]
+    },
+    {
+     "q": "Feeling homesick: tell the family, or keep it to yourself?",
+     "a": "Tell them",
+     "b": "Keep it",
+     "fa": [
+      "Tell them. They can help, and they understand.",
+      "Hiding it makes it worse."
+     ],
+     "fb": [
+      "Keep it, but talk to other au pairs.",
+      "I don’t want them to worry."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Kind, firm, and clear."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Kind No",
+   "t": "Build a kind, firm no.",
+   "p": "The request: babysit on your day off.",
+   "prof": "Model the tone once. Accept short answers, but the no must be clear.",
+   "passos": [
+    {
+     "q": "Show you understand the family’s problem.",
+     "st": [
+      "I understand that …"
+     ],
+     "ex": "I understand that you have a dinner on Saturday."
+    },
+    {
+     "q": "Say no clearly.",
+     "st": [
+      "But I’m not able to …",
+      "But Saturday is my day off, so …"
+     ],
+     "ex": "But Saturday is my day off, so I can’t work that night."
+    },
+    {
+     "q": "Offer a next step.",
+     "st": [
+      "Could we …?",
+      "Maybe …"
+     ],
+     "ex": "Could we ask another au pair? Maybe Carla is free."
+    },
+    {
+     "q": "End on a warm note.",
+     "st": [
+      "I hope …",
+      "Thank you for …"
+     ],
+     "ex": "Thank you for understanding. I hope you have a great dinner."
+    }
+   ],
+   "fim": "A clear no, and the relationship is still warm."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

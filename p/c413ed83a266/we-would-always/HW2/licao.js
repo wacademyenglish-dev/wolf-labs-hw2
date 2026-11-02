@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "We Would Always",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c413ed83a266/we-would-always/img/live-casa.webp",
+  "capa": "../img/live-casa.webp",
   "alvo": "would for a repeated past action (set the period first: When I was ten, we would ...); used to for a state (we used to have a dog); past simple for one time (That summer we went to the sea); never would for a state, never would to",
   "abrir": "What did you do on holidays when you were a child?",
   "fecho": "A habit in a period: <b>would</b> (<i>Every summer we would swim.</i>). A state: <b>used to</b> (<i>We used to have a dog.</i>). Once: past simple (<i>That summer we went to the sea.</i>).",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about childhood summers. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/c413ed83a266/we-would-always/img/live-lago.webp",
+      "img": "../img/live-lago.webp",
       "leg": "A wooden pier at dusk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "When I was ten, we would swim every morning.",
-          "img": "https://wolf-labs.pages.dev/p/c413ed83a266/we-would-always/img/live-lago.webp",
+          "img": "../img/live-lago.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We used to have a small house near the water.",
-          "img": "https://wolf-labs.pages.dev/p/c413ed83a266/we-would-always/img/live-casa.webp",
+          "img": "../img/live-casa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "That summer, we went to the sea.",
-          "img": "https://wolf-labs.pages.dev/p/c413ed83a266/we-would-always/img/live-estrada.webp",
+          "img": "../img/live-estrada.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c413ed83a266/we-would-always/img/live-casa.webp",
+      "img": "../img/live-casa.webp",
       "leg": "A little house by the water",
       "pede": "Look at the picture: a little house by the water. Write 2 or 3 sentences about a holiday when you were a child. Use <b>would</b> for a habit and <b>used to</b> for a state.",
       "ph": "When I was eight, we would …",

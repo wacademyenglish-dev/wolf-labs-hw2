@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Too Much Sugar",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c74e527f2f53/too-much-sugar/img/live-doces.webp",
+  "capa": "../img/live-doces.webp",
   "alvo": "much / many / a lot of; too much (uncountable) / too many (countable); too + adjective (too expensive); enough before a noun; never too many sugar, many money, too much expensive",
   "abrir": "What do you have too much of at home?",
   "fecho": "<b>Much</b> for what you can't count (<i>money, sugar</i>), <b>many</b> for what you can (<i>kids, candy bars</i>). <b>Too much / too many</b> = more than you want. <b>Too + adjective</b>: <i>too expensive</i>. <b>Enough</b> goes before the noun: <i>enough candy</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan the candy for Halloween. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/c74e527f2f53/too-much-sugar/img/live-doces.webp",
+      "img": "../img/live-doces.webp",
       "leg": "Jars of candy",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We don't have enough candy for forty kids.",
-          "img": "https://wolf-labs.pages.dev/p/c74e527f2f53/too-much-sugar/img/live-doces.webp",
+          "img": "../img/live-doces.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Too many candy bars cost too much money.",
-          "img": "https://wolf-labs.pages.dev/p/c74e527f2f53/too-much-sugar/img/live-precos.webp",
+          "img": "../img/live-precos.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Not many people give apples.",
-          "img": "https://wolf-labs.pages.dev/p/c74e527f2f53/too-much-sugar/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c74e527f2f53/too-much-sugar/img/live-porta.webp",
+      "img": "../img/live-porta.webp",
       "leg": "A door with pumpkins at night",
       "pede": "Look at the picture: a door with pumpkins at night. Write 2 or 3 sentences about a party or about your week. Use <b>too much</b>, <b>too many</b> or <b>enough</b>.",
       "ph": "At a party, there is too much … There aren't enough …",

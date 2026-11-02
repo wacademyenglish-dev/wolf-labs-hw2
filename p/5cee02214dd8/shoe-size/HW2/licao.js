@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Not Your Shoe Size",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5cee02214dd8/shoe-size/img/live-mesa.webp",
+  "capa": "../img/live-mesa.webp",
   "alvo": "hedging: tend to / seem to + bare verb, arguably, to some extent (always TO); a claim is not evidence, so match the strength of the sentence to the strength of the proof; never in some extent, tend to + -ing",
   "abrir": "Think of something you believe about people. How sure are you, really?",
   "fecho": "Match the sentence to the proof. <b>tend to / seem to</b> + base verb: <i>People tend to sleep better in a quiet room.</i> <b>Arguably</b> shows it is your reading of the evidence. <b>To some extent</b>: always <i>to</i>. A claim is not evidence: one small study is a reason to soften.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo prepare a short talk. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/5cee02214dd8/shoe-size/img/live-palco.webp",
+      "img": "../img/live-palco.webp",
       "leg": "An empty hall with one light",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Early risers tend to finish more tasks.",
-          "img": "https://wolf-labs.pages.dev/p/5cee02214dd8/shoe-size/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The habit is arguably more important than the hour.",
-          "img": "https://wolf-labs.pages.dev/p/5cee02214dd8/shoe-size/img/live-palco.webp",
+          "img": "../img/live-palco.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "This seems to be true, to some extent.",
-          "img": "https://wolf-labs.pages.dev/p/5cee02214dd8/shoe-size/img/live-regua.webp",
+          "img": "../img/live-regua.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5cee02214dd8/shoe-size/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A notebook, a pen and a lamp",
       "pede": "Look at the picture: a notebook, a pen and a lamp. Imagine you are preparing a short talk about a habit. Write 2 or 3 careful sentences. Use <b>tend to</b>, <b>seem to</b>, <b>arguably</b> or <b>to some extent</b>.",
       "ph": "People tend to …",

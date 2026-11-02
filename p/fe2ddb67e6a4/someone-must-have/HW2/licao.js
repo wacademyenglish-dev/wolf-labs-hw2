@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Someone Must Have",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fe2ddb67e6a4/someone-must-have/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "modals of deduction in the past (must have, might / could have, can't have + participle) and criticism (should have, shouldn't have); never must saw, never mustn't have for impossible",
   "abrir": "Think of something that went missing at your work or school. Who did you suspect?",
   "fecho": "<b>Modal + have + participle</b>. Almost sure: <b>must have</b>. Possible: <b>might / could have</b>. Impossible: <b>can't have</b> (never <i>mustn't have</i>). Criticism of what did not happen: <b>should have</b>. The participle is the third form: <i>might have gone</i>, not <i>went</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in the office kitchen. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/fe2ddb67e6a4/someone-must-have/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A notebook, a magnifying glass, a cup",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Someone must have forgotten to close the fridge.",
-          "img": "https://wolf-labs.pages.dev/p/fe2ddb67e6a4/someone-must-have/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It can't have been Dan, because he was away.",
-          "img": "https://wolf-labs.pages.dev/p/fe2ddb67e6a4/someone-must-have/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I should have checked my own desk first.",
-          "img": "https://wolf-labs.pages.dev/p/fe2ddb67e6a4/someone-must-have/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fe2ddb67e6a4/someone-must-have/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A notebook and a magnifying glass",
       "pede": "Look at the picture: a notebook, a magnifying glass and a cup. Write 2 or 3 sentences about a small mystery at home or at work. Use <b>must have, might have, can't have</b> or <b>should have</b>.",
       "ph": "Someone must have …",

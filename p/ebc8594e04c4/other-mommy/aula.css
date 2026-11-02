@@ -1,0 +1,190 @@
+/* ============================================================
+   OTHER MOMMY · TWO MOTHERS IN THE DARK · LIVE CLASS 06/10/2026
+   WOLFLIX Live (catálogo 07/10): família terror, modo lanterna. Breu, azul de luar, vermelho só no alerta; IM Fell English. Aquecimento imagem, final perguntas. Prefixo om-.
+   ============================================================ */
+:root{
+  --noite:#06070a; --noite-rgb:6,7,10; --tinta:#e6e9ef;
+  --t1:#f1f3f7; --t2:#b3bac7; --t2-rgb:179,186,199; --t3:#7b8394;
+  --ac:#d9534a; --ac2:#ffb0a8; --frio:#c9a26b; --coral:#f2837a;
+  --vidro:rgba(230,233,239,.045); --vidro2:rgba(230,233,239,.08); --vidro3:rgba(230,233,239,.11);
+  --fio:rgba(214,220,232,.11); --fio2:rgba(214,220,232,.2);
+  --ok:#9fdcae; --am:#d9534a; --erro:#f2837a; --lil:#c3a8f0;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Instrument Serif',Georgia,serif; --ui:'Hanken Grotesk',system-ui,sans-serif; --mono:'Hanken Grotesk',system-ui,sans-serif;
+  --r1:12px; --r2:8px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a0706}
+.btn.cheio{background:var(--ac);border-color:var(--ac);color:#2a0706}
+.cab h1,.pergunta h2,.follow p.q,.carta b,.cr h3,#guia h2,.marca span{font-weight:400;letter-spacing:0}
+.cab h1{font-size:clamp(34px,2.9vw,56px)}
+.pergunta h2{font-size:clamp(24px,1.9vw,34px)}
+.capa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:10px 0 6px;font:400 clamp(58px,5.4vw,104px)/.98 var(--disp);color:var(--t1)}
+.capa .banda{margin:0 0 18px;font:500 clamp(18px,1.3vw,22px) var(--ui);color:var(--ac)}
+.capa .sub{margin:0 0 26px;font:400 clamp(18px,1.3vw,22px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.om-foto{margin:0;display:grid;gap:14px}
+.om-foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r1);border:1px solid #1a1e27;box-shadow:var(--sombra)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.05vw,17px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(159,220,174,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.om-mesa{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.om-ops{display:grid;gap:6px}
+.om-linha-ok{display:flex;align-items:center;gap:12px} .om-linha-ok span{flex:1}
+.om-centro{max-width:1150px;margin:0 auto 14px;width:100%;display:grid;gap:12px}
+
+/* a onda da música: o traço comum */
+.onda{position:relative;display:flex;align-items:center;gap:2px;height:44px}
+.onda i{flex:1;border-radius:2px;background:linear-gradient(180deg,var(--ac),color-mix(in srgb,var(--ac) 40%,#000));opacity:.7}
+.onda .mk{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t1);border:0;padding:0;margin:0}
+.onda.grande{height:84px;max-width:1300px;width:100%;margin:34px auto 40px}
+.onda.grande button.mk:nth-child(even) span{top:auto;bottom:-30px}
+.onda.grande button.mk{width:14px;margin-left:-6px;background:transparent;cursor:pointer}
+.onda.grande button.mk::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--t2)}
+.onda.grande button.mk span{position:absolute;top:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 14px var(--ui);color:var(--t2);padding:3px 10px;border-radius:999px;border:1px solid var(--fio2);background:var(--noite)}
+.onda.grande button.mk.on::before{background:var(--ac2);width:3px}
+.onda.grande button.mk.on span{color:#2a0706;background:var(--ac);border-color:var(--ac)}
+.onda.grande button.mk:focus-visible span{outline:2px solid var(--ac2);outline-offset:2px}
+
+/* o resto: quieto */
+.om-encarte{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:26px;max-width:1300px;margin:0 auto 18px;width:100%;padding:18px;border-radius:var(--r1)}
+.om-capinha{display:grid;gap:10px}
+.om-capinha img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid #20242f}
+.om-capinha small{display:block;font:600 14px var(--ui);color:var(--ac)} .om-capinha b{font:400 clamp(24px,1.9vw,32px)/1.1 var(--disp);color:var(--t1)}
+.om-encarte dl{margin:0;display:grid;gap:14px;align-content:center}
+.om-encarte dt{font:600 14px var(--ui);color:var(--frio)} .om-encarte dd{margin:2px 0 0;font:400 clamp(19px,1.4vw,24px)/1.4 var(--disp);color:var(--t1)}
+.om-selo{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:1px dashed var(--fio2);text-align:center;padding:16px}
+.om-selo b{font:italic 400 clamp(30px,2.4vw,42px) var(--disp);color:var(--ac)} .om-selo small{font:400 15px var(--ui);color:var(--t2)}
+.om-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.om-vcol{display:grid;gap:6px;width:100%;max-width:min(100%,82vh);justify-self:center} .om-cred{font:400 13px var(--ui);color:var(--t3)}
+.om-dica{text-align:center;font:italic 400 22px var(--disp);color:var(--t3)}
+.om-sentido{display:block;font:400 clamp(19px,1.4vw,23px)/1.45 var(--disp);color:var(--t1);margin-bottom:8px}
+.om-gram{display:block;font:400 16px/1.5 var(--ui);color:var(--t2)} .om-gram b{color:var(--ac2)}
+.om-pista{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--ac)}
+.om-pista small{font:600 13px var(--ui);color:var(--ac)} .om-pista p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.om-fala{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--frio)}
+.om-fala small{display:flex;align-items:center;gap:8px;font:600 13px var(--ui);color:var(--frio)} .om-fala p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.om-luz{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px rgba(242,131,122,.7)}
+.om-ar{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px;border-radius:var(--r1)} .om-ar p{margin:0;font:400 30px var(--disp);color:var(--t1)}
+.om-carta{display:grid;gap:4px;padding:10px 14px;border-radius:var(--r2);border:1px solid var(--fio2);background:var(--vidro)}
+.om-carta > small{font:600 13px var(--ui);color:var(--t3)}
+.om-carta p{margin:0;font:400 clamp(14px,1vw,16px)/1.45 var(--ui);color:var(--t1)}
+.om-carta.aluno{border-color:rgba(217,83,74,.45);background:rgba(217,83,74,.05)} .om-carta.aluno > small{color:var(--ac)}
+.om-carta.prof{border-style:dashed}
+.om-carta details{margin-top:4px;display:grid;gap:3px} .om-carta summary{cursor:pointer;font:600 13px var(--ui);color:var(--t3)}
+.so-aluno-c{display:none}
+html.wl-sala-aluno .so-aluno-c{display:grid}
+
+.fim .grande span{font-size:clamp(15px,1.1vw,18px)}
+
+/* a cara do terror: IM Fell English nos títulos (livro de histórias antigo) */
+:root{--disp:'IM Fell English',Georgia,serif;--ui:'Nunito Sans',system-ui,sans-serif}
+.cab h1,.capa h1{font-weight:400}
+.capa h1{font-size:clamp(58px,5.4vw,104px);line-height:.98}
+.pergunta h2{font-family:var(--ui);font-weight:700}
+.om-sentido,.om-encarte dd{font-family:var(--ui)!important;font-weight:600}
+.om-aviso{margin:-8px 0 22px;padding:10px 14px;border-left:3px solid var(--ac);background:rgba(217,83,74,.07);font:600 15px/1.45 var(--ui);color:var(--t2);max-width:34em}
+/* as duas mães: o gesto forte */
+.om-quarto{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1300px;width:100%;margin:4px auto 16px}
+.om-mae{position:relative;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:18px;padding:16px 20px;border-radius:10px;background:#07090d;box-shadow:inset 0 0 0 1px #171b23;overflow:hidden;transition:background .6s}
+.om-mae > b{position:absolute;top:10px;left:16px;font:400 clamp(20px,1.5vw,26px) var(--disp);color:#4c5566}
+.om-other > b{color:#5a3a3a}
+.om-mae.luz{background:radial-gradient(60% 90% at 35% 55%,rgba(255,236,190,.09),#07090d 70%)}
+.om-mae.luz > b{color:var(--t1)}
+.om-silhueta{display:block;width:clamp(70px,6vw,100px);height:clamp(100px,14vh,140px);margin-top:26px;background:radial-gradient(circle at 50% 22%,#151a22 0 18%,transparent 19%),radial-gradient(ellipse at 50% 100%,#151a22 0 52%,transparent 53%)}
+.om-other .om-silhueta{background:radial-gradient(circle at 50% 22%,#1e1416 0 18%,transparent 19%),radial-gradient(ellipse at 50% 100%,#1e1416 0 52%,transparent 53%),linear-gradient(transparent 6%,transparent 6%)}
+.om-mae ul{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:8px}
+.om-traco{padding:6px 12px;border-radius:4px;font:700 clamp(14px,1.05vw,18px) var(--ui);color:#3a4250;border:1px dashed #1e2430}
+.om-traco.vez{color:#ffe8c0;border:1px solid rgba(255,220,160,.5);background:rgba(255,220,160,.06)}
+.om-traco.achado{color:#d8dde8;border:1px solid #2a3140;background:#10141b}
+.om-other .om-traco.achado{color:#f0c8c4;border-color:#4a2a2a;background:#160d0e}
+.om-traco.novo{animation:acha .8s ease-out both}
+@keyframes acha{0%{background:rgba(255,236,190,.18)}100%{}}
+@media (prefers-reduced-motion:reduce){.om-traco.novo{animation:none}}
+/* o resto: quieto */
+.om-regra{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1300px;margin:0 auto 16px;width:100%}
+.om-regra > div{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.om-regra small{font:800 13px var(--ui);color:var(--frio)} .om-regra p{margin:0;font:600 clamp(19px,1.4vw,24px)/1.4 var(--ui);color:var(--t1)} .om-regra b{font-weight:800;color:var(--ac2)} .om-regra span{font:600 14px var(--ui);color:var(--t2)}
+.om-familias{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1300px;margin:0 auto;width:100%}
+.om-fm{display:grid;gap:6px;align-content:start;padding:14px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.om-fm small{font:800 13px var(--ui);color:var(--ac)} .om-fm p{margin:0;font:600 clamp(19px,1.4vw,24px)/1.3 var(--ui);color:var(--t1)}
+@media (max-width:1100px){ .om-regra{grid-template-columns:1fr} .om-familias{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .om-quarto{grid-template-columns:1fr} .om-silhueta{display:none} .om-mae{grid-template-columns:1fr} .om-familias{grid-template-columns:1fr} }
+
+@media (max-width:1100px){ .mesa-c,.capa,.om-mesa,.om-video,.om-encarte{grid-template-columns:1fr} .om-regra{grid-template-columns:1fr} }
+@media (max-width:620px){
+  .onda.grande{height:64px;margin-top:40px} .onda.grande button.mk span{font-size:11px;padding:2px 6px}
+  .om-capinha img{aspect-ratio:16/9}
+}
+
+/* a tira de filme (aulas de filme no lugar da onda de som) */
+.tira{border-radius:6px;padding:0 6px;background:#070707;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.tira-furos{height:14px;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,255,255,.13) 9px 19px,transparent 19px 28px);background-size:28px 6px;background-repeat:repeat-x;background-position:0 50%}
+.tira-q{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tq{position:relative;display:grid;align-content:end;gap:1px;aspect-ratio:16/9;min-height:0;padding:6px 8px;border:0;border-radius:2px;overflow:hidden;text-align:left;background:#141414;font:inherit;color:inherit}
+.tq-img{position:absolute;inset:0;background:var(--bg) center/cover;filter:brightness(.42) saturate(.8)}
+.tq b,.tq span{position:relative}
+.tq b{font:600 10px var(--ui);color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.tq span{font:600 11px/1.15 var(--ui);color:var(--t1)}
+.tira.grande{max-width:1300px;width:100%;margin:6px auto 22px}
+.tira.grande .tq{cursor:pointer;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s}
+.tira.grande .tq b{font-size:13px} .tira.grande .tq span{font-size:clamp(14px,1.05vw,18px)}
+.tira.grande .tq:hover .tq-img{filter:brightness(.55)}
+.tira.grande .tq.on{outline-color:var(--ac)} .tira.grande .tq.on .tq-img{filter:brightness(.7) saturate(1)}
+.tira.grande .tq:focus-visible{outline-color:var(--ac2)}
+@media (max-width:620px){.tira.grande .tira-q{grid-template-columns:repeat(3,minmax(0,1fr))} .tira.grande .tq span{font-size:12px} .tira.grande .tq b{font-size:11px} .capa-r .tira{display:none}}
+
+/* ============================================================
+   PILOTO 08/10 · PÓS-TRAILER COM EVIDÊNCIAS (III depois do vídeo, IV, VIII)
+   escolha visível, caixas "I can see it" (luar) e "I'm not sure" (âmbar baixo),
+   tudo escuro; nada de cor de acerto/erro: a classificação é do aluno.
+   ============================================================ */
+.tira-nota{display:block;margin-top:4px;font:600 11px var(--ui);color:var(--t3);letter-spacing:.02em}
+.ev-hip{display:grid;gap:14px;max-width:1100px;margin:0 auto;width:100%}
+.ev-escolhas{display:flex;flex-wrap:wrap;gap:10px}
+.ev-escolha{min-height:52px;padding:10px 18px;border-radius:14px;border:1px solid var(--fio);background:var(--vidro);font:700 clamp(16px,1.15vw,20px)/1.25 var(--ui);color:var(--t1);cursor:pointer;text-align:left}
+.ev-escolha:hover{border-color:#8fa9d6}
+.ev-escolha.sel{border-color:#8fa9d6;background:#1a2336;box-shadow:inset 0 0 0 1px #8fa9d6}
+.ev-escolha:focus-visible,.ev-cx:focus-visible,.ev-aba:focus-visible{outline:3px solid #8fa9d6;outline-offset:2px}
+.ev-diz{margin:0;font:500 clamp(15px,1.05vw,18px)/1.45 var(--ui);color:var(--t2)} .ev-diz b{color:var(--t1)}
+.ev-abas{display:flex;flex-wrap:wrap;gap:6px;max-width:1300px;margin:0 auto 12px;width:100%}
+.ev-aba{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid var(--fio);background:var(--vidro);font:700 14px var(--ui);color:var(--t2);cursor:pointer}
+.ev-aba i{font-style:normal;font-weight:600;font-size:12px;color:var(--t3)}
+.ev-aba.sel{color:var(--t1);border-color:#8fa9d6;background:#1a2336}
+.ev-aba.quadro{margin-left:auto}
+.ev-pista{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:24px;align-items:start;max-width:1300px;margin:0 auto;width:100%}
+.ev-pista .om-vcol{max-width:min(100%,74vh)}
+.ev-pista > .lado-l{gap:8px}
+.ev-frase .mostra,.ev-frase [data-a="resp"]{margin:0}
+.ev-olhe{margin:0;display:grid;gap:2px;font:600 clamp(15px,.95vw,18px)/1.35 var(--ui);color:var(--t1)}
+.ev-olhe small{font:800 12px var(--ui);color:#8fa9d6;letter-spacing:.04em}
+.ev-frase{display:grid;gap:6px;padding:10px 14px;border-radius:var(--r1,14px);border:1px solid var(--fio);background:var(--vidro)}
+.ev-frase > p{margin:0;font:700 clamp(16px,1vw,19px)/1.3 var(--ui);color:var(--t1)}
+.ev-bt{display:flex;flex-wrap:wrap;gap:8px}
+.ev-cx{min-height:40px;padding:7px 14px;border-radius:12px;border:1px solid var(--fio);background:transparent;font:700 15px var(--ui);color:var(--t2);cursor:pointer}
+.ev-cx.ver.sel{color:#dbe6fa;border-color:#8fa9d6;background:#1a2336}
+.ev-cx.inc.sel{color:#f0dcb4;border-color:#b8945a;background:#2a2116}
+.ev-por{margin:0;font:500 14px/1.4 var(--ui);color:var(--t2)} .ev-por b{color:var(--t1)}
+.ev-prova{display:block;font:500 14px/1.4 var(--ui);color:var(--t1)}
+.ev-quadro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:22px;max-width:1300px;margin:0 auto;width:100%;align-items:start}
+.ev-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ev-col{display:grid;align-content:start;gap:6px;padding:12px 14px;border-radius:14px;border:1px solid var(--fio);background:#121722;min-height:180px}
+.ev-col.inc{background:#1a1610}
+.ev-col > small{font:800 13px var(--ui);color:#8fa9d6} .ev-col.inc > small{color:#c9a26b}
+.ev-col ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.ev-col li{display:grid;gap:1px;font:600 clamp(14px,.98vw,17px)/1.3 var(--ui);color:var(--t1)}
+.ev-col li i{font-style:normal;font-weight:600;font-size:12px;color:var(--t3)}
+.ev-vazio{margin:0;font:italic 500 14px var(--ui);color:var(--t3)}
+.ev-rev{display:grid;gap:10px;padding:14px 16px;border-radius:14px;border:1px solid var(--fio);background:var(--vidro)}
+.ev-rev > small{font:600 14px var(--ui);color:var(--t2)} .ev-rev > small b{color:var(--t1)}
+.ev-rev h3{margin:0;font:700 clamp(18px,1.3vw,22px) var(--ui);color:var(--t1)}
+.pergunta h2 small.fm-apoio{display:block;margin-top:8px;font:600 clamp(14px,1vw,17px)/1.4 var(--ui);color:var(--t2);text-transform:none;letter-spacing:0}
+@media (max-width:1100px){ .ev-pista,.ev-quadro{grid-template-columns:1fr} .ev-aba.quadro{margin-left:0} }
+@media (max-width:620px){ .ev-cols{grid-template-columns:1fr} .ev-col{min-height:0} .ev-aba{padding:7px 11px;font-size:13px} .ev-escolha{width:100%} }
+
+
+/* 23/10/2026 · formatos novos: as duas mães menores em cima do cartão */
+.fm-obj .om-quarto{margin:0 auto 6px;gap:12px}
+.fm-obj .om-mae{padding:12px 16px}
+.fm-obj .om-silhueta{height:clamp(70px,9vh,100px);margin-top:20px}

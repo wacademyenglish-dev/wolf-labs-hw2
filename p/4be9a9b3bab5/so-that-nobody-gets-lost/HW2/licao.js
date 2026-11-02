@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "So That Nobody Gets Lost",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4be9a9b3bab5/so-that-nobody-gets-lost/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "purpose vs reason: so that + subject + can / will / won't; in order to / so as to + verb; in order not to; because + clause; because of / due to + noun",
   "abrir": "Think of a rule in your town. What is it for?",
   "fecho": "<b>Purpose</b> answers <i>what for?</i>: <b>so that</b> + subject + verb, <b>in order to / so as to</b> + verb, <b>in order not to</b>. <b>Reason</b> answers <i>why?</i>: <b>because</b> + a clause, <b>because of / due to</b> + a noun. <i>We closed the path because of the rain, so that nobody slips.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a lantern walk for their village. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/4be9a9b3bab5/so-that-nobody-gets-lost/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Planning the lantern walk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We handed out lanterns so that nobody would get lost.",
-          "img": "https://wolf-labs.pages.dev/p/4be9a9b3bab5/so-that-nobody-gets-lost/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The lake path is closed because of the mud.",
-          "img": "https://wolf-labs.pages.dev/p/4be9a9b3bab5/so-that-nobody-gets-lost/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Let's meet early in order not to miss the start.",
-          "img": "https://wolf-labs.pages.dev/p/4be9a9b3bab5/so-that-nobody-gets-lost/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4be9a9b3bab5/so-that-nobody-gets-lost/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A lantern and a marker on a dark trail",
       "pede": "Look at the picture: a lantern and a marker on a dark trail. Design a short walk in a place you know. Say what you put there and what for. Use <b>so that</b>, <b>in order to</b> or <b>because of</b>.",
       "ph": "We'll put a lantern at the start so that …",

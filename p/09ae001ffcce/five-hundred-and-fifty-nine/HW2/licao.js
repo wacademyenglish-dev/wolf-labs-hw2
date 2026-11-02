@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Five Hundred and Fifty-Nine",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/09ae001ffcce/five-hundred-and-fifty-nine/img/live-painel.webp",
+  "capa": "../img/live-painel.webp",
   "alvo": "phrasal verbs: the small word is part of the verb (look / look up); with a noun it can go on both sides (turn on the light / turn the light on); with it / them / him / her only in the middle (turn it on); some never split (look for it, deal with it)",
   "abrir": "What do you do when your phone rings and you don't know the number?",
   "fecho": "The small word is part of the verb: <b>look</b> ≠ <b>look up</b>. With a noun: both sides (<i>turn on the light / turn the light on</i>). With <b>it, them, him, her</b>: only in the middle (<i>turn it on</i>). Never: <i>turn on it</i>. Some never split: <i>look for it</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo come home late. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/09ae001ffcce/five-hundred-and-fifty-nine/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "A dark room, one small lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It's dark. Please turn it on.",
-          "img": "https://wolf-labs.pages.dev/p/09ae001ffcce/five-hundred-and-fifty-nine/img/live-painel.webp",
+          "img": "../img/live-painel.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The phone is ringing. Pick it up.",
-          "img": "https://wolf-labs.pages.dev/p/09ae001ffcce/five-hundred-and-fifty-nine/img/live-telefone.webp",
+          "img": "../img/live-telefone.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Those boxes are old. I'll throw them out.",
-          "img": "https://wolf-labs.pages.dev/p/09ae001ffcce/five-hundred-and-fifty-nine/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/09ae001ffcce/five-hundred-and-fifty-nine/img/live-painel.webp",
+      "img": "../img/live-painel.webp",
       "leg": "Light switches on a wall",
       "pede": "Look at the picture: light switches on a dark wall. Write 2 or 3 instructions for your home. Put <b>it</b> or <b>them</b> in the middle: turn it on, pick it up, throw them out.",
       "ph": "Turn it …",

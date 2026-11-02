@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · By the Look of It · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Bodoni+Moda:wght@600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>By the Look of It · Daredevil: Born Again · The Sound Map</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>By the Look of It · Daredevil: Born Again · The Sound Map</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A blind lawyer who hears everything, and a criminal who became mayor. Matt is a lawyer by day, a vigilante by night, and a Catholic who goes to confession: a hero with two sides.</p><p style="margin:0 0 6px"><b>The grammar:</b> Looks, Sounds, Seems: It looks expensive. It looks like a trap.</p><p style="margin:0 0 6px"><b>Short class (about 52 min):</b> I In the Dark · II Who Are They? · III The Trailer · IV What Would You Do? · V Looks, Sounds, Seems · VI The Sound Map · VII The Lie Detector · IX The Hot Seat. Skip if you’re short on time: VIII (marked EXTRA on your screen). Full lesson: about 59 min.</p><p style="margin:0"><b>Open with:</b> “Matt Murdock is blind. He knows the world by sound. Close your eyes: let’s see if you can do it too.”</p></div><!--/prep-->
+    <p><i>Daredevil: Born Again</i> (Marvel, 2025) brings back Charlie Cox as Matt Murdock and Vincent D’Onofrio as Wilson Fisk. Matt is a lawyer in Hell’s Kitchen, New York, and he is blind, but his other senses are extraordinary: he can hear a heartbeat across a room. Fisk used to be the biggest criminal in the city; now he is the mayor. They sit at one table for a polite conversation, and neither says one true thing. The grammar: <b>looks / sounds / seems + adjective</b> (it looks expensive, he sounds calm) × <b>looks / sounds / seems like + a noun or a full sentence</b> (it looks like a trap, it sounds like it’s raining), and how we say where the evidence comes from (<b>by the look of it</b>, <b>I can hear…</b>).</p>
+    <p>A note for the teacher: the lesson plays the whole official trailer (2:07). The first half is the conversation at the table; the second half has fights, a hatchet and masked men, in fast cuts. Watch it once before. The times follow the official captions, and each moment is told in our own words.</p>
+    <p class="aq-guia"><b>In the Dark (I)</b>: three steps. 1) The student closes their eyes. 2) The first 20 seconds of the trailer play with the screen covered: only the sound. The student says where they are, who is talking and if they are friends (the chips help; Show answer gives a model). Play it again if they want. 3) Take off the cover: the picture confirms or breaks their guess, and two questions about their life (a sound they love or hate, what their street sounds like). Don’t correct the grammar here: the rule comes in V. Let them use “it sounds like” the way they can.</p>
+    <div class="pal-guia"><p><b>II · Who Are They? (7 min)</b>: four cards, two questions each. Tap the tabs or “Next card”.</p>
+    <ul>
+      <li><b>sec</b>: 7 minutes. About 1.5 minutes per card; if you’re short, do one question per card.</li>
+      <li><b>do</b>: the student reads the card out loud (or you read it), then answers the two questions. The chips are starters, tap the one they use. Show answer gives an example only after they try.</li>
+      <li><b>watch</b>: the cards: 1 Matt (blind since a childhood accident; his other senses work like a radar; lawyer by day, vigilante by night). 2 Fisk (the Kingpin, now the mayor: polite, calm, outside the law). 3 The name: a <i>daredevil</i> is a person who does dangerous things without fear (dare + devil); kids called quiet young Matt “Daredevil” as a joke, and he took the name. In Brazil he is “Demolidor” (o que demole). 4 Two sides: a devil’s costume on a Catholic who goes to confession and talks to his priest; lawyer and vigilante; faith and fights.</li>
+      <li><b>stuck</b>: give your own answer first, in one sentence, then ask again. Point to a starter: “It seems like…”.</li>
+      <li><b>strong</b>: read the dashed PUSH line (only you see it) and argue the other side. On card 4, keep it about values, not religion: respect the student’s beliefs, no debate about faith itself.</li>
+    </ul>
+    <p><b>III · The Trailer (6 min)</b>: BEFORE · WATCH · AFTER. The trailer stays whole (2:07).</p>
+    <ul>
+      <li><b>sec</b>: 1.5 min before, 2 min trailer, 2.5 min after.</li>
+      <li><b>do</b>: BEFORE: Matt’s radar at the dinner table. The student guesses what Matt can hear, smell and feel, then taps the card to see Matt’s answer. WATCH: the whole trailer, with three things to watch for. AFTER: four conversation questions; Show answer gives an example.</li>
+      <li><b>watch</b>: the second half of the trailer has fast fight cuts and masked men. Watch it once before class.</li>
+      <li><b>stuck</b>: in BEFORE, model one: “He can probably hear Fisk’s heart. It sounds calm.”</li>
+      <li><b>strong</b>: last question: “Is breaking the peace ever a good thing?” Ask for an example from history or their own life, not today’s politics.</li>
+    </ul>
+    <p><b>IV · What Would You Do? (7 min)</b>: five dilemmas, one at a time, then the last word: Matt or Fisk?</p>
+    <ul>
+      <li><b>sec</b>: 7 minutes. Do three dilemmas plus the one-minute debate if time is short. The dots on top go straight to any card.</li>
+      <li><b>do</b>: read the situation together. The student taps a side (or says their own idea) and explains why with a starter. Then you read the PUSH and argue against them. “Next dilemma” goes on.</li>
+      <li><b>watch</b>: the five: 1 The client (your client tells you “I did it”). 2 The safe streets (a mayor cuts crime but breaks the rules: would you vote for him?). 3 The mask (you saw where the masked man went: do you tell the police?). 4 The envelope (money for your family’s restaurant if you sign and don’t ask). 5 The confession (Matt asks his priest: is it wrong to do the right thing the wrong way? The student is the priest). There is no right answer; never mark one as wrong.</li>
+      <li><b>stuck</b>: “If I were…, I would…” is the bridge. Give two short options and let them choose.</li>
+      <li><b>strong</b>: the last word: the student picks Matt or Fisk and talks for one minute (the timer is on screen). Then swap: you defend the other side and the student answers back.</li>
+    </ul></div>
+    <p class="mt-guia"><b>The Lie Detector (VII)</b>: the student opens a topic card and tells three short stories about their week in one minute (the timer is on the screen), one is a lie. The teacher listens “to the heart” and judges out loud with the rule: <i>You sound nervous. It seems like you’re lying. It sounds like a true story.</i> Then swap: the teacher tells three, the student judges. Push for the reason: “Why does it sound like a lie?” Two or three rounds; this is the conversation of the lesson, not a quiz.</p>
+    <p class="fim-guia"><b>The ending (IX, The Hot Seat)</b>: the student is Matt after dinner with the mayor; the teacher asks five questions (what did the restaurant sound like, how did Fisk’s voice sound, does he seem like a good mayor, what does the city look like to you, you look tired). Then swap. Speaking only.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is a wet street in Hell’s Kitchen at night. I: In the Dark (the trailer sound with the screen covered). <b>II, Who Are They?:</b> four cards (Matt, Fisk, the name Daredevil, two sides) over a dark photo, two questions each with starters and Show answer; the PUSH line is only on your screen. <b>III:</b> the whole trailer in three steps. <b>Before:</b> Matt’s radar, four sense cards at the dinner table (guess, then tap). <b>Watch:</b> the trailer and three things to watch for. <b>After:</b> four conversation questions. <b>IV, What Would You Do?:</b> five dilemma cards, one at a time (pick a side, say why, the PUSH), then Matt or Fisk? with a one-minute timer. <b>V:</b> sort six words into three boxes (adjective, like + a noun, like + a sentence); when all six are right, the rule appears. <b>VI, The Sound Map:</b> six photos of the restaurant, dark. Matt can’t see, so the student builds a question out loud (what does the table look like? does that noise sound like a glass?), taps Check, and asks you; you answer with looks, sounds or seems. Each question lights one photo in red sound, the way Matt “sees”: the table, the glass, the heartbeat, the door, the mayor’s chair, the window. <b>VII, The Lie Detector:</b> pick a topic card, one minute on the timer. <b>VIII, Clues Around You:</b> six situations; tap what fits, then say the whole sentence. IX: the hot seat.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>looks like expensive</i>, <i>sounds like calm</i>, <i>sounds a glass / looks a trap</i>, <i>looks like trap</i>, <i>sounds calmly</i>, <i>the table look / the mayor seem / you looks</i>, <i>it sounds it’s raining</i>, <i>it seems like he lying</i>.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I In the Dark, II Who Are They?, IV What Would You Do?, VI The Sound Map (build the question, then ask), VII The Lie Detector, VIII Clues Around You and IX The Hot Seat.</li>
+      <li><b>Listen</b>: III The Trailer (the whole trailer).</li>
+      <li><b>Focus</b>: V Looks, Sounds, Seems.</li>
+      <li><b>Write</b>: the homework (the lesson ends speaking).</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece.js"></script>
+<script src="final.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* A pergunta-surpresa da Daredevil · By the Look of It (WOLFLIX B1) · 26/10/2026
+   looks / sounds / seems + adjetivo × looks / sounds / seems like + nome ou frase */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'escuro', tipo: 'And you?', q: 'Close your eyes for five seconds. What does your street sound like at night?',
+    opc: ['Quiet', 'Noisy', 'It depends'], st: ['At night, it sounds …', 'It sounds like …', 'It seems …, but …'],
+    ex: 'It sounds quiet, but at eleven it sounds like a party: my neighbour plays the drums!', push: 'Is that a good sound or a bad sound for you? Why?' },
+  { cena: 'regra', tipo: 'Opinion', q: 'Your new neighbour always looks very serious. Do you say hello first?',
+    opc: ['Yes, I do', 'No, I wait', 'Maybe'], st: ['He looks …, but …', 'It seems like …', 'Serious people seem …'],
+    ex: 'Yes, I do. He looks serious, but maybe he’s just shy.', push: 'He doesn’t answer. What does that seem like to you?' },
+  { cena: 'sonar', tipo: 'Would you rather', q: 'Which life sounds better: a lawyer by day, or a hero by night?',
+    opc: ['The lawyer', 'The hero', 'Neither'], st: ['… sounds more …', 'The hero’s life seems …', 'It looks exciting, but …'],
+    ex: 'The lawyer. The hero’s life looks exciting, but it sounds very tiring!', push: 'Matt does both. Is that brave, or a little crazy?' },
+  { cena: 'mentira', tipo: 'Opinion', q: 'Can you tell when a friend is lying? How?',
+    opc: ['Always', 'Sometimes', 'Never'], st: ['He / She looks …', 'Their voice sounds …', 'It seems like …'],
+    ex: 'Sometimes. My best friend looks at the floor, and her voice sounds a bit too happy.', push: 'And you? What do you do when you lie? Your teacher is watching.' },
+  { cena: 'pistas', tipo: 'What if', q: 'A new colleague gives you an expensive gift on day one. Kind, or a trap?',
+    opc: ['It’s kind', 'It looks like a trap', 'It depends'], st: ['It looks like …', 'It sounds too …', 'It seems kind, but …'],
+    ex: 'It looks like a trap to me. It seems kind, but it sounds like they want something.', push: 'What would Fisk do with that gift? And Matt?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "escuro": {
+   "t": "Listen like Matt.",
+   "p": "Screen covered. Say what you hear. Then uncover."
+  },
+  "quem": {
+   "t": "Matt and Fisk: who are they?",
+   "p": "Read a card. Answer out loud. Say why."
+  },
+  "video": {
+   "t": "Daredevil: Born Again. The whole trailer.",
+   "p": "Guess first. Watch. Say how it looked and sounded."
+  },
+  "dilema": {
+   "t": "No right answer. Only your reasons.",
+   "p": "Pick a side. Say why. Defend it one minute."
+  },
+  "regra": {
+   "t": "Which one needs like?",
+   "p": "Sort the words into three boxes. Read the rule."
+  },
+  "sonar": {
+   "t": "Work in the dark. Ask to light the room.",
+   "p": "Build the question. Tap Check. Ask your teacher."
+  },
+  "mentira": {
+   "t": "Three stories. One is a lie.",
+   "p": "Tell three in one minute. Then swap."
+  },
+  "pistas": {
+   "t": "Six clues. Looks, sounds or seems?",
+   "p": "Tap what fits. Say the whole sentence."
+  },
+  "fim": {
+   "t": "The hot seat: Matt, after dinner.",
+   "p": "Answer as Matt. Then swap."
+  }
+ },
+ "prep": {
+  "obj": "Looks/sounds/seems + adjetivo × looks/sounds/seems like + substantivo ou frase: Matt Murdock, cego, janta com Fisk, agora prefeito, e ouve o que ninguém diz.",
+  "armadilha": "O brasileiro diz “It looks like expensive” (o “parece” serve para tudo) ou “He seems a nice” e “It sounds rain”; também traduz “parece que” como “It seems that is raining”.",
+  "pal": [
+   "looks",
+   "looks like",
+   "sounds",
+   "sounds like",
+   "seems",
+   "seems like",
+   "by the look of it",
+   "I can hear"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta Matt, cego, que ouve um coração do outro lado da sala, e o jantar com o prefeito.",
+   "perg": "Could you recognize a friend just by their voice?",
+   "pula": "Só leia o título e entre no escuro."
+  },
+  "escuro": {
+   "obj": "Ouvir o começo do trailer com a tela coberta e dizer onde estão e quem fala.",
+   "perg": "What does it sound like?",
+   "pula": "Uma escuta só e tire a capa."
+  },
+  "quem": {
+   "obj": "Quatro cartões sobre Matt, Fisk, o nome Daredevil e os dois lados do herói.",
+   "perg": "Does Fisk seem dangerous to you?",
+   "pula": "Uma pergunta por cartão."
+  },
+  "video": {
+   "obj": "O trailer inteiro: o que os sentidos de Matt notam na mesa e como tudo pareceu e soou.",
+   "perg": "How did the dinner look and sound?",
+   "pula": "Assista uma vez só e faça só uma tarefa. Trailer sempre inteiro."
+  },
+  "dilema": {
+   "obj": "Dilema sem resposta certa: escolher um lado e defender Matt ou Fisk por um minuto.",
+   "perg": "What would you do?",
+   "pula": "Um dilema basta."
+  },
+  "regra": {
+   "obj": "A regra: separar palavras em três caixas (adjetivo, like + substantivo, like + frase).",
+   "perg": "Does it need like?",
+   "pula": "Não corte: é a regra."
+  },
+  "sonar": {
+   "obj": "Montar perguntas com looks/sounds/seems e perguntar ao professor; cada uma acende a sala.",
+   "perg": "What does the room sound like?",
+   "pula": "Quatro perguntas bastam."
+  },
+  "mentira": {
+   "obj": "Detector de mentira: três histórias curtas, uma falsa; o professor diz como o aluno soa.",
+   "perg": "Did I sound nervous?",
+   "pula": "Uma rodada só, sem trocar."
+  },
+  "pistas": {
+   "obj": "Seis pistas do dia a dia: o que parece, soa ou dá a impressão de ser.",
+   "perg": "What does it look like?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Fala livre: o aluno é Matt depois do jantar; o professor pergunta o que ele ouviu e o que pareceu.",
+   "perg": "Did the mayor sound honest?",
+   "pula": "Só o aluno como Matt, sem trocar. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre primeiras impressões, sons e aparências na vida do aluno.",
+   "perg": "What does your street sound like at night?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre aparências, confiança e justiça com as próprias mãos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve o próximo episódio: o que Matt ouve e o que tudo parece.",
+   "perg": "What does Matt hear next?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "First impressions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "looks",
+    "sounds",
+    "seems",
+    "like"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR STREET",
+     "q": "What does your street sound like at night?",
+     "fup": "Do you like it?",
+     "st": [
+      "It sounds like …",
+      "It sounds … , but …"
+     ],
+     "ex": "It sounds like a party every Friday. It sounds fun, but I can’t sleep."
+    },
+    {
+     "k": "FIRST DAY",
+     "q": "Think of someone you met recently. What did they seem like at first?",
+     "fup": "Were you right?",
+     "st": [
+      "At first, she seemed …",
+      "It turned out she …"
+     ],
+     "ex": "At first, she seemed really serious. It turned out she’s the funniest person in the office."
+    },
+    {
+     "k": "ON THE PHONE",
+     "q": "Can you tell how someone feels from their voice?",
+     "fup": "Give an example.",
+     "st": [
+      "You can tell when someone sounds …",
+      "My mom always sounds like …"
+     ],
+     "ex": "You can tell when someone sounds tired. My mom always sounds like she’s smiling."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "What does your home look like?",
+     "fup": "What does it say about you?",
+     "st": [
+      "It looks …",
+      "It looks like someone who …"
+     ],
+     "ex": "It looks a bit messy. It looks like someone who reads a lot lives there."
+    },
+    {
+     "k": "THE WEATHER",
+     "q": "What does the sky look like today?",
+     "fup": "What are your plans if it rains?",
+     "st": [
+      "By the look of it, …",
+      "It looks like it’s going to …"
+     ],
+     "ex": "By the look of it, it’s going to rain. It looks like I’m staying home."
+    },
+    {
+     "k": "A LIAR",
+     "q": "How can you tell when someone is lying?",
+     "fup": "Are you good at lying?",
+     "st": [
+      "They seem …",
+      "Their voice sounds …"
+     ],
+     "ex": "They seem too calm, and their voice sounds a little higher. I’m terrible at lying."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Looks can lie. Or can they?",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "seems",
+    "looks like",
+    "sounds like",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Fisk is now the mayor and seems calm and polite. Can a criminal really change?",
+     "a": "Yes, he can",
+     "b": "No, he can’t",
+     "fa": [
+      "Yes. People change when their life changes.",
+      "He seems different, and maybe he is."
+     ],
+     "fb": [
+      "No. It only looks like he’s changed.",
+      "A polite voice doesn’t mean a good heart."
+     ]
+    },
+    {
+     "q": "Matt fights crime at night, outside the law. Is that OK?",
+     "a": "OK",
+     "b": "Not OK",
+     "fa": [
+      "It’s OK. The law seems too slow for some criminals.",
+      "He protects people nobody else protects."
+     ],
+     "fb": [
+      "Not OK. He’s a lawyer; he should use the law.",
+      "It sounds heroic, but it’s dangerous."
+     ]
+    },
+    {
+     "q": "First impressions: are they usually right?",
+     "a": "Usually right",
+     "b": "Usually wrong",
+     "fa": [
+      "Usually right. You can tell a lot from how someone sounds.",
+      "My first feeling is almost always true."
+     ],
+     "fb": [
+      "Usually wrong. People seem one way when they’re nervous.",
+      "My best friend seemed rude at first."
+     ]
+    },
+    {
+     "q": "Would you like Matt’s super hearing?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. I’d know when someone was lying.",
+      "The world would sound amazing."
+     ],
+     "fb": [
+      "No. It sounds exhausting.",
+      "I don’t want to hear my neighbors."
+     ]
+    }
+   ],
+   "fim": "Four rounds. By the look of it, nobody won."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Writers’ Room",
+   "t": "Write the next episode.",
+   "p": "One step at a time. Use looks, sounds, seems.",
+   "prof": "You are the studio boss: ask “What does it sound like?” at every step and listen for looks like + noun versus looks + adjective.",
+   "passos": [
+    {
+     "q": "After the dinner, Matt walks home. What does the city sound like?",
+     "st": [
+      "It sounds like …",
+      "Everything sounds …"
+     ],
+     "ex": "It sounds like a normal night, but one car sounds like it’s following him."
+    },
+    {
+     "q": "Someone new comes to Matt’s office. What do they seem like?",
+     "st": [
+      "She seems …",
+      "It looks like she …"
+     ],
+     "ex": "She seems nervous. It looks like she’s hiding something in her bag."
+    },
+    {
+     "q": "What does Matt hear that nobody else hears?",
+     "st": [
+      "He can hear …",
+      "It sounds like …"
+     ],
+     "ex": "He can hear her heart. It sounds like she’s lying about her name."
+    },
+    {
+     "q": "How does the episode end?",
+     "st": [
+      "In the end, it seems that …",
+      "The last shot looks like …"
+     ],
+     "ex": "In the end, it seems that Fisk sent her. The last shot looks like a smile on Fisk’s face."
+    }
+   ],
+   "fim": "Sounds like a hit. Season two is yours."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

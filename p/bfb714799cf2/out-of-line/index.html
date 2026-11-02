@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Out of Line · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Out of Line · The Spotlight</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Out of Line · The Spotlight</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Put a negative word first (never, rarely, not only, hardly) and English flips the helper in front of the subject, like a question: Never have I seen a room go quiet like that.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Spotlight: a farewell speech at the pulpit. The negative word steps into the spotlight. Then the helper jumps before the subject.</p><p style="margin:0 0 6px"><b>Short class (about 52 min):</b> I Never Before · II The Spotlight · III Nothing to Move · IV The IF Disappears · V Where the Weight Falls · VI Two Halves · VIII One Minute at the Pulpit · X Step Down. Skip if you’re short on time: VII Earned or Showing Off? and IX Out of Order (marked EXTRA on your screen). On the speaking pages the student speaks first and taps Check on their own screen. Full lesson: about 65 min.</p><p style="margin:0"><b>Open with:</b> “What was it, and where?”</p></div><!--/prep-->
+    <p>Put a negative word first (<b>never, rarely, not only, hardly</b>) and English flips the helper in front of the subject, like a question: <b>Never have I seen a room go quiet like that.</b> No helper? Add <b>do / does / did</b>: <b>Rarely does she call.</b> The IF of a third conditional can disappear too: <b>Had I known …</b> Students say <i>Never I have seen</i>. The form moves the weight to the front; it belongs in speeches and strong writing, and it costs something every time. On screen, the stage from the cover is the reward: when the student finishes the rule in scene II, the words on the stage reorder themselves (the negative word steps into the spotlight, the helper jumps).</p>
+    <h4>THE PAGES</h4>
+    <p><b>I Never Before</b>: the student taps what it was (a place, a storm…), then three questions, one by one: they answer out loud and tap Check (an example and a follow-up appear). Don’t correct yet: write the strong sentence exactly.</p>
+    <p><b>II The Spotlight</b>: a farewell speech on a dark paper. The student reads it out loud and taps every inversion (never have I seen, rarely have we had, hardly had we finished, not only did you finish, never will I forget; every word can be tapped, only the five count). Then they finish the rule on the right by choosing inside each line. When it is ready, the stage on top shows the inverted sentence, and the rule stays in the corner of III, IV, VI, VIII and IX.</p>
+    <p><b>III Nothing to Move</b>: five lines with one wrong word (she calls, she finished, I eat, did we realized, did he knew). The student says each line right (do / does / did + plain verb), then taps Check.</p>
+    <p><b>IV The IF Disappears</b>: four sentences with IF. The student says them without IF (Had I known…), then taps Check.</p>
+    <p><b>V Where the Weight Falls</b>: play A and B first; the questions open after both are played. Three taps: which one puts the heavy word first, where the weight falls in B, what the form is for. Then they say both sentences themselves.</p>
+    <p><b>VI Two Halves</b>: five first halves and five second halves. Tap a first half, then its second half (hardly / scarcely … when, no sooner … than). When all are matched, they say each whole sentence out loud.</p>
+    <p><b>VII Earned or Showing Off? (extra)</b>: play the award speech and the story for a friend. Four lines: true or lie? If it is a lie, the student says the truth.</p>
+    <p><b>VIII One Minute at the Pulpit</b>: the speech in three parts (opening, middle, close). The student says each part out loud, taps Check, and the part joins the speech while the costume meter goes up (two inversions are earned, three are a costume). The middle part stays plain.</p>
+    <p><b>IX Out of Order (extra)</b>: six sentences, three out of order. Tap a sentence, then its box (out of order / in line). When all are in place, the three fixes appear: the student says them.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Each with pause and 0.75×; the transcript opens after listening. Scene V: the same sentence twice; listen for where the weight falls. Scene VII: an award speech and a story about getting home. The second speaker says “had I got” (British); American usually says “gotten”. The form is correct in both; the question is whether it was worth it.</p>
+    <h4>THE SPEECH</h4>
+    <p>Scene VIII: one minute, two inversions. The costume meter would go red at three: the middle line should be plain, so the strong lines land.</p>
+    <!--conversa--><h4>BEHIND THE PULPIT (IX) AND THE SURPRISE QUESTION</h4>
+    <p>Right after their one-minute speech, your student faces three real moments behind the pulpit: saying yes or no to a farewell speech, the blank in the middle, and the truth for a friend who used too many inversions. There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make it harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two inversions themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while: this lesson has many Focus scenes in the middle.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Never Before, VIII One Minute at the Pulpit (no longer extra), IX Behind the Pulpit.</li>
+      <li><b>Listen</b>: V Where the Weight Falls, VII Earned or Showing Off?</li>
+      <li><b>Focus</b>: II The Spotlight, III Nothing to Move, IV The IF Disappears, VI Two Halves.</li>
+      <li><b>Write</b>: X, their “never before” at the pulpit and plainly. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* OUT OF LINE (Main B2) · pergunta-surpresa · 28/10/2026 · inversão */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'palco', tipo: 'Would you rather', q: 'Would you rather give a speech to five hundred strangers or to ten people you know very well?',
+    opc: ['Five hundred strangers', 'Ten people I know'], st: ['I’d rather …, because rarely do I …', 'Never would I …'],
+    ex: 'Five hundred strangers. Never will I see them again, so who cares if I make a mistake?',
+    push: 'The ten people include your ex. Still the strangers?' },
+  { cena: 'semif', tipo: 'And you?', q: 'What is something you did not know a year ago that changed a decision?',
+    opc: ['Something about work', 'Something about money', 'Something about a person'], st: ['Had I known …, I would have …', 'Had I known …, I wouldn’t have …'],
+    ex: 'Something about money. Had I known about the bank fees, I would have changed banks years ago.',
+    push: 'And something you’re glad you didn’t know?' },
+  { cena: 'metades', tipo: 'Opinion', q: 'Which is worse: a speech that is too long or a speech that is too dramatic?',
+    opc: ['Too long', 'Too dramatic'], st: ['Rarely does a … speech …', 'Never have I enjoyed a …'],
+    ex: 'Too long. Never have I enjoyed a speech after the tenth minute.',
+    push: 'Give me one famous speech, or film speech, that was long and still great.' },
+  { cena: 'discurso', tipo: 'What if', q: 'Your company asks you for a thirty-second speech tomorrow about your job. Do you say yes?',
+    opc: ['Yes', 'Only if I can read it', 'No way'], st: ['Not once have I …', 'Seldom do I get the chance to …'],
+    ex: 'Yes. Seldom do I get the chance to explain what I really do all day.',
+    push: 'OK: thirty seconds, starting now.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* OUT OF LINE (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O dilema entra no lugar de "IX · Out of Order" (extra; separar seis frases, prática controlada repetida
+   depois do II, III, IV e VI). Logo depois do discurso de um minuto (VIII), três apertos reais do púlpito:
+   aceitar o discurso, o branco no meio, a verdade para o amigo que exagerou nas inversões.
+   A gramática da aula (inversão: Never have I…, Rarely do I…, No sooner… than, Had I known) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'dilema', troca: 'erros', est: 'o', min: 7, img: 'plateia', rot: 'Behind the Pulpit', t: 'Three hard moments behind the pulpit. What do you do?',
+    p: 'Read the situation. Choose, or say your own idea. Say why with one inversion. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The invitation', sit: 'A colleague is leaving. Your boss asks you to give the farewell speech tomorrow, in front of eighty people. You hate speaking in public.',
+        q: 'What do you say to your boss?', opc: ['Yes, I’ll do it', 'No, thank you', 'Only with a partner'],
+        st: ['Never have I …, but …', 'Rarely do I say no to …', 'Had you asked me earlier, I …'],
+        ex: 'Yes, I’ll do it. Never have I spoken to eighty people, but rarely does a friend leave after ten years.',
+        push: 'Your boss adds: “The CEO will be there.” Still yes?' },
+      { tag: 'The blank', sit: 'One minute into your speech, your mind goes blank. Eighty faces are looking at you.',
+        q: 'What do you do?', opc: ['Make a joke', 'Read from my phone', 'Say: “I forgot!”'],
+        st: ['No sooner had I … than …', 'Hardly had I … when …', 'Not once did I …'],
+        ex: 'Make a joke. No sooner had I forgotten the line than I said: “Rarely am I this quiet!” Everybody laughed.',
+        push: 'Nobody laughs at the joke. What is your next line?' },
+      { tag: 'The friend', sit: 'Your friend’s wedding speech has five inversions: “Never have I… Rarely have I… Not once did…”. People are smiling politely. Later he asks: “Was it good?”',
+        q: 'What do you tell him?', opc: ['The whole truth', 'It was perfect!', 'One small tip'],
+        st: ['Had you used fewer …, it …', 'Never have I heard …', 'Not once did you …'],
+        ex: 'One small tip. The speech was lovely, but had you used fewer inversions, it would have sounded more like you.',
+        push: 'He has to give the same speech again next week, at his sister’s wedding. Now the whole truth?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Something you had never seen before.",
+   "p": "Tap what it was. Answer. Then tap Check."
+  },
+  "palco": {
+   "t": "The negative word steps into the spotlight.",
+   "p": "Read the speech. Tap every inversion. Finish the rule."
+  },
+  "did": {
+   "t": "No helper? Borrow do, does, did.",
+   "p": "Say each line right. Then tap Check."
+  },
+  "semif": {
+   "t": "If I had known → Had I known.",
+   "p": "Say it without IF. Then tap Check."
+  },
+  "peso": {
+   "t": "Same sentence, twice. Where’s the weight?",
+   "p": "Play both. Tap your answers. Say both."
+  },
+  "metades": {
+   "t": "Hardly … when. No sooner … than.",
+   "p": "Match the halves. Say each whole sentence."
+  },
+  "mereceu": {
+   "t": "Earned, or showing off?",
+   "p": "Play both. True or lie? Fix the lies."
+  },
+  "discurso": {
+   "t": "One minute. Two inversions, no more.",
+   "p": "Say your part. Tap Check. Watch the meter."
+  },
+  "cv-dilema": {
+   "t": "Three hard moments at the pulpit.",
+   "p": "Choose. Say why with one inversion."
+  },
+  "fim": {
+   "t": "Your “never before”, at the pulpit.",
+   "p": "Write it inverted, then plainly. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Inversão depois de palavra negativa (Never have I seen…, Rarely does she…, Had I known…, Hardly… when): um discurso de despedida no púlpito, com o peso na frente.",
+  "armadilha": "O português não inverte, então sai “Never I have seen” e “Rarely she calls”; e, ao pegar o do emprestado, “did we realized”. A forma custa caro: três inversões já viram fantasia.",
+  "pal": [
+   "Never have I …",
+   "Rarely does …",
+   "Not only did …",
+   "Hardly had … when",
+   "No sooner … than",
+   "Had I known",
+   "spotlight",
+   "pulpit"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: a mesma frase como relato e como afirmação, com o peso na frente.",
+   "perg": "What was it, and where?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Algo que o aluno nunca tinha visto; não corrigir, anotar a frase forte para a cena X.",
+   "perg": "What had you never seen before that day?",
+   "pula": "Uma pergunta basta; guarde a frase."
+  },
+  "palco": {
+   "obj": "O discurso de despedida: achar as cinco inversões e completar a regra.",
+   "perg": "Where does the helper go?",
+   "pula": "Ache três inversões e complete a regra."
+  },
+  "did": {
+   "obj": "Sem auxiliar, emprestar do/does/did e deixar o verbo puro.",
+   "perg": "Which helper do you borrow here?",
+   "pula": "Três linhas bastam."
+  },
+  "semif": {
+   "obj": "O IF do terceiro condicional some: Had I known…",
+   "perg": "Can you say it without IF?",
+   "pula": "Duas frases bastam."
+  },
+  "peso": {
+   "obj": "Áudio: a mesma frase duas vezes; onde cai o peso e para que serve a forma.",
+   "perg": "Which one puts the heavy word first?",
+   "pula": "Ouça os dois e faça uma pergunta."
+  },
+  "metades": {
+   "obj": "Hardly/scarcely… when e no sooner… than: dois fatos quase colados.",
+   "perg": "What happened almost at the same time?",
+   "pula": "Três pares bastam."
+  },
+  "mereceu": {
+   "obj": "Dois áudios: um discurso de prêmio e uma história; quem mereceu a inversão?",
+   "perg": "Was the inversion worth it here?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "discurso": {
+   "obj": "Discurso de um minuto em três partes; o meio fica simples para o resto brilhar.",
+   "perg": "Where do you want the weight in your speech?",
+   "pula": "Abertura e fecho bastam."
+  },
+  "cv-dilema": {
+   "obj": "Três momentos difíceis no púlpito: aceitar o discurso, o branco, a verdade a um amigo.",
+   "perg": "What would you do, and why?",
+   "pula": "Dois momentos bastam."
+  },
+  "fim": {
+   "obj": "Escrita: o “never before” da cena I, invertido e depois simples.",
+   "perg": "Which version is stronger for you?",
+   "pula": "Uma frase de cada basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com inversões em momentos fortes da vida do aluno.",
+   "perg": "Never have you …? Tell me.",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre discursos, estilo e exagero, com uma inversão por lado.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno faz um brinde curto em quatro passos, com no máximo duas inversões.",
+   "perg": "Who is your toast for?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Weight at the front.",
+   "p": "Pick a card. One inversion, then speak plainly.",
+   "palavras": [
+    "Never have I …",
+    "Rarely do I …",
+    "Not only did …",
+    "Hardly had I … when",
+    "Had I known"
+   ],
+   "cartas": [
+    {
+     "k": "A BIG MOMENT",
+     "q": "What moment in your life would deserve an inversion?",
+     "fup": "Tell it plainly now.",
+     "st": [
+      "Never have I felt …",
+      "The thing is, …"
+     ],
+     "ex": "Never have I felt so nervous as on my first day at work."
+    },
+    {
+     "k": "RARELY",
+     "q": "What do you rarely do, but love when you do it?",
+     "fup": "Why so rarely?",
+     "st": [
+      "Rarely do I …, but when I do, …"
+     ],
+     "ex": "Rarely do I take a day off, but when I do, I go to the sea."
+    },
+    {
+     "k": "HAD I KNOWN",
+     "q": "What would you have done differently, had you known?",
+     "fup": "Do you regret it?",
+     "st": [
+      "Had I known …, I would have …"
+     ],
+     "ex": "Had I known how hard it was, I would have started English earlier."
+    },
+    {
+     "k": "NO SOONER",
+     "q": "Tell a time when something went wrong immediately.",
+     "fup": "How did you react?",
+     "st": [
+      "No sooner had I … than …",
+      "Hardly had I … when …"
+     ],
+     "ex": "No sooner had I sat down than the fire alarm went off."
+    },
+    {
+     "k": "NOT ONLY",
+     "q": "Who surprised you twice, in two ways?",
+     "fup": "What did you say to them?",
+     "st": [
+      "Not only did he/she …, but …"
+     ],
+     "ex": "Not only did my neighbor fix my car, but he refused any money."
+    },
+    {
+     "k": "A PROMISE",
+     "q": "What will you never do again?",
+     "fup": "What happened?",
+     "st": [
+      "Never again will I …",
+      "I see why it sounds dramatic, but …"
+     ],
+     "ex": "Never again will I book a 6 a.m. flight."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "The thing is, …",
+    "Rarely …",
+    "Never …"
+   ],
+   "rodadas": [
+    {
+     "q": "A farewell speech: written word for word, or from the heart?",
+     "a": "Written",
+     "b": "From the heart",
+     "fa": [
+      "Written. Rarely does improvising work under pressure.",
+      "A blank in the middle is a nightmare."
+     ],
+     "fb": [
+      "From the heart. Never has a read speech made me cry.",
+      "People want you, not a script."
+     ]
+    },
+    {
+     "q": "Formal English in a speech: elegant or showing off?",
+     "a": "Elegant",
+     "b": "Showing off",
+     "fa": [
+      "Elegant. A big moment deserves big words.",
+      "Two inversions mark the moment."
+     ],
+     "fb": [
+      "Showing off. Plain words land better.",
+      "Three inversions are a costume."
+     ]
+    },
+    {
+     "q": "Tell a friend the truth about a bad speech, or be kind?",
+     "a": "The truth",
+     "b": "Be kind",
+     "fa": [
+      "The truth. Had nobody told me, I’d still be doing it.",
+      "Real friends are honest."
+     ],
+     "fb": [
+      "Be kind. The speech is over; nothing can change it.",
+      "Timing matters more than honesty."
+     ]
+    },
+    {
+     "q": "Funny farewell speech or emotional one?",
+     "a": "Funny",
+     "b": "Emotional",
+     "fa": [
+      "Funny. Nobody wants to cry at work.",
+      "Laughter makes goodbye easier."
+     ],
+     "fb": [
+      "Emotional. Rarely do we tell colleagues what they mean.",
+      "It’s the last chance to say it."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Never has a debate had so much weight at the front."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Raise a Glass",
+   "t": "A short toast for someone.",
+   "p": "One step at a time. Two inversions, no more.",
+   "prof": "Imaginary or real person, but a happy occasion; watch the costume: the middle stays plain.",
+   "passos": [
+    {
+     "q": "Who is the toast for, and what’s the occasion?",
+     "st": [
+      "This toast is for …, who …"
+     ],
+     "ex": "This toast is for Marta, who is leaving after twelve years."
+    },
+    {
+     "q": "Open with weight: one inversion.",
+     "st": [
+      "Never have I met …",
+      "Rarely does a team …"
+     ],
+     "ex": "Never have I met someone who answers emails so fast."
+    },
+    {
+     "q": "The middle, plainly: one true story.",
+     "st": [
+      "I remember when …"
+     ],
+     "ex": "I remember when she stayed until midnight to help me with a report."
+    },
+    {
+     "q": "Close with weight: one more inversion.",
+     "st": [
+      "Not only did you …, but …",
+      "Never will we forget …"
+     ],
+     "ex": "Not only did you teach us the job, but you made us laugh doing it."
+    }
+   ],
+   "fim": "Glasses up. Two inversions earned, no costume."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

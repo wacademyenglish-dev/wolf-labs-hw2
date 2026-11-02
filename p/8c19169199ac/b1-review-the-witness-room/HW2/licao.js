@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "The Witness Room",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/8c19169199ac/b1-review-the-witness-room/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 1 review: past continuous x past simple (when / while); past simple (finished time) x present perfect (result now); present perfect for experience (ever / never)",
   "abrir": "What were you doing at this time yesterday?",
   "fecho": "<b>was / were + -ing</b> for the long action, <b>past simple</b> for the short one: <i>I was cooking when the phone rang.</i> Finished time (<i>last year</i>) = <b>past simple</b>. Result now or experience = <b>present perfect</b>: <i>I've lost my keys. I've never been to Japan.</i>",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a mystery at the town baking contest. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/8c19169199ac/b1-review-the-witness-room/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A lamp and a mug in a dark room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -108,12 +108,12 @@ window.HW2 = {
       "frases": [
         {
           "t": "I was making coffee when the lights went out.",
-          "img": "https://wolf-labs.pages.dev/p/8c19169199ac/b1-review-the-witness-room/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I've never been to Japan, but I went to Chile in 2019.",
-          "img": "https://wolf-labs.pages.dev/p/8c19169199ac/b1-review-the-witness-room/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/8c19169199ac/b1-review-the-witness-room/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A table with a lamp and a mug in a dark room",
       "pede": "Look at the picture: a table, a lamp and a mug in a dark room. Write 2 or 3 sentences: what you were doing when something surprising happened, and one thing you have done since. Use <b>was … -ing</b>, <b>when</b> or <b>while</b>.",
       "ph": "I was … when …",

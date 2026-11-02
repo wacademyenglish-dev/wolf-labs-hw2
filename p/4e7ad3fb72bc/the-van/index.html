@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Van · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Van · Let’s, Shall We?</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Van · Let’s, Shall We?</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A van stops on a narrow street at six in the evening, and two people have to empty it before dark.</p><p style="margin:0 0 6px"><b>The grammar:</b> The First Box: You and me, now.</p><p style="margin:0 0 6px"><b>Short class (about 43 min):</b> I Before It Arrives · II The First Box · III Let’s Not · IV Six More · V Shall We? · VI Two Kinds of Plan · X Let’s. Skip if you’re short on time: VII, VIII, IX (marked EXTRA on your screen). Full lesson: about 64 min.</p><p style="margin:0"><b>Open with:</b> “We have one hour and a full van. What do we do first?”</p></div><!--/prep-->
+    <p>A van stops on a narrow street at six in the evening, and two people have to empty it before dark. On screen, the open van with its load and a floor plan of the house: every right sentence moves one thing into its room. Every decision has to be said out loud to the other person. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>Let’s</b> + the plain verb: an invitation (you and me, now) that waits for an answer. <b>Let’s not</b> for a no. <b>Shall we…?</b> to ask instead of decide. And the trap: an invitation is not a plan already decided (<b>we’re going to</b>). The mistakes: <i>let’s to go</i>, <i>let’s don’t</i>, <i>we go eat</i>, <i>we will</i> as an invitation, <i>shall us</i>. Short answers: <i>Yes, let’s. / No, let’s not.</i></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Before It Arrives (nobody is corrected), VII On the Sidewalk (swap sides, then cover the lines), VIII Yes, Let’s (say no once), IX Your Room (a real room; if it isn’t true, it doesn’t count).</li>
+      <li><b>Focus</b>: II and IV The Van (ten things into four rooms), III Let’s Not, V Shall We? (the question mark is the clue), VI Two Kinds of Plan.</li>
+      <li><b>Write</b>: X, a plan for their own room, with the red wavy line for <i>let’s to</i>, <i>let’s don’t</i>, <i>let’s going</i>, <i>shall us</i>, <i>we go eat</i> and <i>lets</i>. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* A pergunta-surpresa da The Van (Main A1) · 26/10/2026 · let's + verbo · Shall we…?
+   A1 bem leve (Carlos, 26/10): escolher entre 2–3, frase quase pronta, o professor responde primeiro. */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'nao', tipo: 'Choose one', q: 'Saturday. The park or the cinema?',
+    opc: ['The park', 'The cinema'], st: ['Let’s go to the …'],
+    ex: 'Let’s go to the park!', push: 'It’s raining. The park? Yes or no?' },
+  { cena: 'shall', tipo: 'Choose one', q: 'Your friend is sad. Suggest something.',
+    opc: ['Pizza', 'A walk', 'A film'], st: ['Let’s eat a pizza.', 'Let’s go for a walk.', 'Let’s watch a film.'],
+    ex: 'Let’s watch a film!', push: 'Which film? Say one name.' },
+  { cena: 'duas', tipo: 'And you?', q: 'Sunday morning. Sleep or go out?',
+    opc: ['Sleep', 'Go out'], st: ['Let’s …', 'Shall we …?'],
+    ex: 'Let’s sleep! Shall we have breakfast at eleven?', push: 'What time? Say a time.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Three real suggestions. Say them.",
+   "p": "Answer out loud. The picture opens a little more."
+  },
+  "caixa1": {
+   "t": "You and me, now.",
+   "p": "Say the sentence first. Then pick its front."
+  },
+  "nao": {
+   "t": "Half of a move is saying no.",
+   "p": "Read the fact. Say it. Choose: yes, or not?"
+  },
+  "caixa2": {
+   "t": "Six things left. It’s getting dark.",
+   "p": "Same rule. Say it before you tap."
+  },
+  "shall": {
+   "t": "Sometimes you don’t decide. You ask.",
+   "p": "Look at the end: ? asks, . decides."
+  },
+  "duas": {
+   "t": "An invitation, or already decided?",
+   "p": "Read it. An invitation waits for an answer."
+  },
+  "papel": {
+   "t": "Six lines, two people, one van.",
+   "p": "Take one side. Then swap and cover the lines."
+  },
+  "responde": {
+   "t": "An invitation needs an answer.",
+   "p": "Invite your teacher. Your teacher says no once."
+  },
+  "quarto": {
+   "t": "Now a real room. Yours.",
+   "p": "Five suggestions about your real room."
+  },
+  "fim": {
+   "t": "A plan for your room, for two.",
+   "p": "Let’s, let’s not, Shall we…? It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Let’s + verbo, Let’s not e Shall we…? para convidar e decidir juntos: dois amigos esvaziam uma van numa rua estreita antes de escurecer.",
+  "armadilha": "O brasileiro diz let’s to go, let’s don’t, we go eat (“vamos comer”), usa we will como convite e shall us; também confunde convite com plano já decidido.",
+  "pal": [
+   "Let’s …",
+   "Let’s not …",
+   "Shall we …?",
+   "Yes, let’s.",
+   "No, let’s not.",
+   "We’re going to …",
+   "box",
+   "van"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: a van, seis da tarde, uma hora para esvaziar.",
+   "perg": "We have one hour and a full van. What do we do first?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento: três sugestões reais em voz alta; ninguém é corrigido.",
+   "perg": "It’s Saturday. What do we do?",
+   "pula": "Duas sugestões bastam."
+  },
+  "caixa1": {
+   "obj": "Let’s + verbo puro: cada frase certa leva uma coisa para o cômodo dela.",
+   "perg": "Where does the sofa go?",
+   "pula": "Quatro coisas bastam."
+  },
+  "nao": {
+   "obj": "Let’s not para recusar: ler o fato e decidir sim ou não.",
+   "perg": "The box is very heavy. Yes, or not?",
+   "pula": "Três fatos bastam."
+  },
+  "caixa2": {
+   "obj": "Mais seis coisas da van com a mesma regra, falando antes de tocar.",
+   "perg": "And the lamp?",
+   "pula": "Três coisas bastam."
+  },
+  "shall": {
+   "obj": "Shall we…? para perguntar em vez de decidir; a pista é o ponto de interrogação.",
+   "perg": "Shall we stop for pizza?",
+   "pula": "Quatro linhas bastam."
+  },
+  "duas": {
+   "obj": "Separar convite (Let’s) de plano já decidido (we’re going to).",
+   "perg": "Is it an invitation or a plan?",
+   "pula": "Quatro situações bastam."
+  },
+  "papel": {
+   "obj": "Diálogo na calçada: cada um um lado, depois troca e cobre as falas.",
+   "perg": "Can you do it without the lines?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "responde": {
+   "obj": "O aluno convida e o professor responde de verdade, dizendo não uma vez.",
+   "perg": "(Answer for real. Say no once: No, let’s not.)",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "quarto": {
+   "obj": "Cinco sugestões sobre um quarto real do aluno; se não for verdade, não vale.",
+   "perg": "What shall we do with your room?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: um plano para o próprio quarto, para duas pessoas, com a linha vermelha.",
+   "perg": "What’s your first suggestion?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais convites com Let’s e Shall we?, e respostas curtas.",
+   "perg": "Shall we go out tonight?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e responder com Yes, let’s / No, let’s not.",
+   "perg": "Which one? Let’s…?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Planejar um sábado a dois em passos, com convites e uma recusa.",
+   "perg": "What shall we do first?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More plans for two.",
+   "p": "Pick a card. Invite or answer out loud.",
+   "palavras": [
+    "Let’s",
+    "Let’s not",
+    "Shall we …?",
+    "Yes, let’s.",
+    "No, let’s not."
+   ],
+   "cartas": [
+    {
+     "k": "TONIGHT",
+     "q": "We are tired after the van. What shall we eat?",
+     "fup": "Shall we cook or order?",
+     "st": [
+      "Let’s order …",
+      "Let’s not cook. Let’s …"
+     ],
+     "ex": "Let’s not cook. Let’s order a pizza."
+    },
+    {
+     "k": "SATURDAY",
+     "q": "It’s Saturday morning. What shall we do?",
+     "fup": "And in the afternoon?",
+     "st": [
+      "Let’s go to …",
+      "Shall we …?"
+     ],
+     "ex": "Let’s go to the market. Shall we have lunch there?"
+    },
+    {
+     "k": "THE RAIN",
+     "q": "It’s raining. Shall we go out?",
+     "fup": "So what do we do?",
+     "st": [
+      "No, let’s not. Let’s …",
+      "Yes, let’s. Let’s take …"
+     ],
+     "ex": "No, let’s not. Let’s watch a movie."
+    },
+    {
+     "k": "YOUR KITCHEN",
+     "q": "The kitchen is a mess. What do we do?",
+     "fup": "Who washes the dishes?",
+     "st": [
+      "Let’s clean …",
+      "Shall we …?"
+     ],
+     "ex": "Let’s clean it now. Shall we play music?"
+    },
+    {
+     "k": "A PARTY",
+     "q": "Shall we have a party in the new house?",
+     "fup": "Who shall we invite?",
+     "st": [
+      "Yes, let’s. Let’s invite …",
+      "No, let’s not. Let’s …"
+     ],
+     "ex": "Yes, let’s. Let’s invite the neighbors."
+    },
+    {
+     "k": "A TRIP",
+     "q": "We have three free days. Shall we go away?",
+     "fup": "Where shall we go?",
+     "st": [
+      "Let’s go to …",
+      "Let’s not go far. Let’s …"
+     ],
+     "ex": "Let’s go to the beach. Let’s not take the car."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "Let’s",
+    "Let’s not",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "The big boxes first or the small boxes first?",
+     "a": "Big boxes",
+     "b": "Small boxes",
+     "fa": [
+      "Let’s carry the big boxes now. We are strong now."
+     ],
+     "fb": [
+      "Let’s start small. It’s faster."
+     ]
+    },
+    {
+     "q": "Finish tonight or stop and finish tomorrow?",
+     "a": "Tonight",
+     "b": "Tomorrow",
+     "fa": [
+      "Let’s finish tonight. Let’s not leave the van full."
+     ],
+     "fb": [
+      "Let’s stop now. Let’s not work in the dark."
+     ]
+    },
+    {
+     "q": "Pizza or sandwiches for dinner?",
+     "a": "Pizza",
+     "b": "Sandwiches",
+     "fa": [
+      "Let’s order pizza. It’s easy."
+     ],
+     "fb": [
+      "Let’s make sandwiches. It’s cheap."
+     ]
+    },
+    {
+     "q": "Ask the neighbors for help or do it alone?",
+     "a": "Ask",
+     "b": "Alone",
+     "fa": [
+      "Let’s ask them. Let’s make friends."
+     ],
+     "fb": [
+      "Let’s not ask. Let’s do it alone."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the van is empty."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Our Saturday",
+   "t": "Plan a Saturday for two.",
+   "p": "One step at a time. Invite your teacher.",
+   "prof": "Answer each invitation for real. Say No, let’s not once, so the student has to suggest again.",
+   "passos": [
+    {
+     "q": "The morning: suggest something.",
+     "st": [
+      "Let’s …",
+      "Shall we …?"
+     ],
+     "ex": "Let’s have breakfast at a café."
+    },
+    {
+     "q": "The afternoon: say no to one idea.",
+     "st": [
+      "Let’s not … . Let’s …"
+     ],
+     "ex": "Let’s not go to the mall. Let’s go to the park."
+    },
+    {
+     "q": "The evening: ask, don’t decide.",
+     "st": [
+      "Shall we …?"
+     ],
+     "ex": "Shall we watch a movie at home?"
+    },
+    {
+     "q": "Answer your teacher’s last idea.",
+     "st": [
+      "Yes, let’s!",
+      "No, let’s not. Let’s …"
+     ],
+     "ex": "Yes, let’s! Good idea."
+    }
+   ],
+   "fim": "One Saturday, two people, and every idea had an answer."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

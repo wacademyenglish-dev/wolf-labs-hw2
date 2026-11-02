@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -109,5 +110,283 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "descobre": {
+   "t": "What you hear is not what you type.",
+   "p": "Compare A and B. Which do you type? Why?"
+  },
+  "ditado": {
+   "t": "Eight sentences. Type every word.",
+   "p": "Play, type, play again, check. Three listens max."
+  },
+  "cv-ranking": {
+   "t": "What was hardest for you?",
+   "p": "Rank the five problems. Compare with your teacher."
+  },
+  "memoria": {
+   "t": "Find the pairs.",
+   "p": "Open two cards. Match. Make a sentence."
+  },
+  "pode": {
+   "t": "Lesson 6: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Listen and Type do DET: ouvir até três vezes e digitar exato. A fala rápida esconde palavras ligadas (wanna), palavras fracas (of, a, to), finais -ed/-s e homófonos (they’re/their).",
+  "armadilha": "Brasileiro digita o que ouve: “wanna”, “a cup a tea”, “yesterday I walk” (o -ed some no som) e troca homófonos: “their late”, “your late”.",
+  "pal": [
+   "want to",
+   "going to",
+   "a cup of tea",
+   "walked",
+   "they’re / their / there",
+   "to / too",
+   "your / you’re",
+   "meaning, details, check"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 6 do DET Prep: a questão Listen and Type.",
+   "perg": "I wanna go. How do you write it?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "descobre": {
+   "obj": "Pares A/B: o que se ouve x o que se digita; depois regras e armadilhas.",
+   "perg": "Which one do you type on the test?",
+   "pula": "Três pares + as armadilhas bastam."
+  },
+  "ditado": {
+   "obj": "Oito frases em seis sotaques, até três vezes: sentido, detalhes, conferir; ortografia conta, pontuação não.",
+   "perg": "How many words did you hear?",
+   "pula": "Cinco frases bastam."
+  },
+  "cv-ranking": {
+   "obj": "Reflexão: o aluno ordena os cinco problemas de escuta e compara com o professor; vira plano da semana.",
+   "perg": "What tripped you up the most today?",
+   "pula": "Só o primeiro e o último."
+  },
+  "memoria": {
+   "obj": "Jogo da memória com os pares da aula; uma frase com cada par.",
+   "perg": "Can you make a sentence with that pair?",
+   "pula": "Três pares bastam."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; o que ficar aberto vai para a lição.",
+   "perg": "Can you hear the -ed now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre escuta em inglês e a preparação do aluno para o DET.",
+   "perg": "Which accent is hardest for you?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre estratégias de estudo para o teste, com argumentos.",
+   "perg": "Subtitles on or off?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta um plano de escuta para a semana, passo a passo.",
+   "perg": "What will you listen to this week?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "You and listening.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "want to",
+    "going to",
+    "they’re / their",
+    "accent"
+   ],
+   "cartas": [
+    {
+     "k": "ACCENTS",
+     "q": "Which English accent is the hardest for you?",
+     "fup": "Which one is the easiest?",
+     "st": [
+      "The hardest one is …",
+      "… is easier because …"
+     ],
+     "ex": "The hardest one is Irish. American is easier because I watch a lot of series."
+    },
+    {
+     "k": "YOUR SERIES",
+     "q": "What are you watching in English right now?",
+     "fup": "With subtitles or without?",
+     "st": [
+      "I’m watching …",
+      "I watch it with …"
+     ],
+     "ex": "I’m watching a crime series. I watch it with English subtitles."
+    },
+    {
+     "k": "THE TEST",
+     "q": "Why are you going to take the DET?",
+     "fup": "When are you going to take it?",
+     "st": [
+      "I’m going to take it because …"
+     ],
+     "ex": "I’m going to take it because I want to study in Canada. Maybe in March."
+    },
+    {
+     "k": "LOST WORDS",
+     "q": "Which small words do you usually miss when you listen?",
+     "fup": "Why do you think that happens?",
+     "st": [
+      "I usually miss …",
+      "I think it’s because …"
+     ],
+     "ex": "I usually miss “of” and “to”. I think it’s because they’re very weak."
+    },
+    {
+     "k": "SONGS",
+     "q": "Do you understand songs in English?",
+     "fup": "Do you read the words first?",
+     "st": [
+      "I understand …",
+      "I usually …"
+     ],
+     "ex": "I understand some songs. I usually read the words first, then I listen."
+    },
+    {
+     "k": "BEST TIP",
+     "q": "What’s your best listening tip from today?",
+     "fup": "Are you going to use it this week?",
+     "st": [
+      "My best tip is …"
+     ],
+     "ex": "My best tip is to count the words before I type."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think",
+    "In my experience,…"
+   ],
+   "rodadas": [
+    {
+     "q": "Series with subtitles on or off?",
+     "a": "On",
+     "b": "Off",
+     "fa": [
+      "On. You see the words you can’t hear.",
+      "You connect sound and spelling."
+     ],
+     "fb": [
+      "Off. On the test, there are no subtitles.",
+      "Your ears work harder without them."
+     ]
+    },
+    {
+     "q": "Practice with one accent or many accents?",
+     "a": "One accent",
+     "b": "Many accents",
+     "fa": [
+      "One accent. Master it first.",
+      "Too many accents are confusing."
+     ],
+     "fb": [
+      "Many accents. The test has six of them.",
+      "Real life is not only American."
+     ]
+    },
+    {
+     "q": "On the test: type during the first listen or wait?",
+     "a": "Type now",
+     "b": "Wait",
+     "fa": [
+      "Type now. You remember more.",
+      "Three listens go fast."
+     ],
+     "fb": [
+      "Wait. First listen for meaning.",
+      "Typing too early makes you miss words."
+     ]
+    },
+    {
+     "q": "Study a little every day or a lot on the weekend?",
+     "a": "Every day",
+     "b": "The weekend",
+     "fa": [
+      "Every day. Ears need daily practice.",
+      "Twenty minutes is enough."
+     ],
+     "fb": [
+      "The weekend. You can focus for hours.",
+      "Weekdays are too busy."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Your ears worked hard today."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Listening Plan",
+   "t": "Plan your listening week.",
+   "p": "One step at a time. Say it out loud.",
+   "prof": "EN: You are the DET coach. After each step, make it a little more specific.",
+   "passos": [
+    {
+     "q": "What are you going to listen to?",
+     "st": [
+      "I’m going to listen to …"
+     ],
+     "ex": "I’m going to listen to a news podcast from Australia."
+    },
+    {
+     "q": "When, and for how long?",
+     "st": [
+      "Every …, for … minutes."
+     ],
+     "ex": "Every morning, for fifteen minutes, on the bus."
+    },
+    {
+     "q": "How are you going to practice typing?",
+     "st": [
+      "I’m going to …"
+     ],
+     "ex": "I’m going to pause, type one sentence and check it with the transcript."
+    },
+    {
+     "q": "What’s your trap to watch?",
+     "st": [
+      "I want to hear …"
+     ],
+     "ex": "I want to hear the -ed endings and the word “of”."
+    }
+   ],
+   "fim": "Your plan is ready. Three listens: meaning, details, check."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

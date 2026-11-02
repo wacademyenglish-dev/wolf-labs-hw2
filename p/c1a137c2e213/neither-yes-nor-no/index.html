@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Neither Yes nor No · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 5 · Distance and diplomacy</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Neither Yes nor No · C1 Unit 5 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on professional distance: the agentless passive (Your booking was moved; It has been decided that…; Your comments have been passed on), neither… nor, not only… but also, either… or, and the ethics of distance (Mistakes were made × We made a mistake).</p><p style="margin:0 0 6px"><b>The story:</b> Casa Lume (invented restaurant) got a one-star review: a birthday booking was given away and nobody apologized. The owner, Lia, answers in public with careful distance, and ends with a personal apology.</p><p style="margin:0 0 6px"><b>About 42 min:</b> I · The Owner’s Reply (10) · II · The Jury (7) · III · Where Did the People Go? (9) · IV · Cool and Professional (8) · V · Distance or Honesty? (8).</p><p style="margin:0"><b>Open with:</b> “Have you ever written a bad review? Did anybody answer?”</p></div><!--/prep-->
+    <p>The interesting part is the judgment, not only the form: when does distance protect people, and when does it hide responsibility? The final scene has no single right answer: let the student argue. Watch for “neither… or” and double negatives with neither.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>agentless passive: was moved, has been decided · It has been decided / agreed that… · neither… nor (verb agrees with the nearest) · not only… but also · either… or · distance × honesty: Mistakes were made / We made a mistake</p>
+    <h4>THE OWNER’S REPLY</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>WHERE DID THE PEOPLE GO?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>COOL AND PROFESSIONAL</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>DISTANCE OR HONESTY?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>neither… or (neither… nor)</i>, <i>Neither X nor Y aren’t (Neither X nor Y is)</i>, <i>It has decided that (It has been decided that)</i>, <i>Mistakes were made in a personal apology</i>, <i>not only… also (not only… but also)</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE JURY (II) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the owner’s reply, your student sits on a small jury: three everyday cases of blame (a cake on the wrong day, a meeting moved at night, cold food from a delivery app). They read the evidence, give a verdict, and say it twice: with distance (the agentless passive, neither… nor) and without it. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the verdict harder. Recast quietly while they talk, and at the end ask for one or two self-corrections.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Owner’s Reply.</li>
+      <li><b>Focus</b>: III · Where Did the People Go? and IV · Cool and Professional.</li>
+      <li><b>Out loud</b>: II · The Jury and V · Distance or Honesty?.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* NEITHER YES NOR NO · C1 · UNIT 5 · pergunta-surpresa · 29/10/2026 · agentless passive, neither… nor */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Do you read reviews before you choose a restaurant?',
+    opc: ['Always', 'Sometimes', 'Never'], st: ['I’m neither … nor …', 'Either I …, or I …'],
+    ex: 'Sometimes. I’m neither a review addict nor a risk taker: either a friend recommends it, or I read three reviews.', push: 'Do you trust five-star reviews, or one-star reviews more?' },
+  { cena: 'descobre', tipo: 'Would you rather', q: 'Would you rather get a perfect apology that sounds like a robot, or a clumsy one that sounds real?',
+    opc: ['The perfect one', 'The clumsy one'], st: ['What I want is …', 'Not only …, but also …'],
+    ex: 'The clumsy one. Not only does it sound real, but it also shows a person took the time.', push: 'The clumsy one comes three days late. Still better?' },
+  { cena: 'transforma', tipo: 'What if', q: 'What if your boss said “It has been decided that…” about your holidays?',
+    opc: ['I’d ask who decided', 'I’d accept it', 'I’d reply in the passive'], st: ['It has been noted that …', 'I’d ask who …'],
+    ex: 'I’d reply in the passive: “It has been noted that my holidays were booked in March.” Then I’d ask who decided.', push: 'Would you say it in a meeting, or in an email?' },
+  { cena: 'escolha', tipo: 'Opinion', q: 'Is “no comment” a polite answer, or a rude one?',
+    opc: ['Polite', 'Rude', 'Neither'], st: ['It’s neither … nor …, it’s …', 'It depends on whether …'],
+    ex: 'Neither. It’s neither polite nor rude, it’s just safe. It depends on whether you say it with a smile.', push: 'Answer my next question with “no comment”: what did you have for breakfast?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* NEITHER YES NOR NO · C1 · UNIT 5 · conversa · 29/10/2026 · regra 3×3 do Carlos
+   O júri ENTRA depois de "I · The Owner’s Reply" (35 min, nenhuma cena extra: +7 min cabe), no MEIO:
+   a aula já termina com uma escolha A/B (IV · Distance or Honesty?), então aqui é outro formato: júri com
+   provas. Três casos pequenos de culpa no trabalho; o aluno dá o veredito e o diz com a passiva sem agente
+   e neither… nor / either… or / not only… but also. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'juri', apos: 'leitura', est: 'o', min: 7, img: 'capa', rot: 'The Jury', t: 'Who is responsible? You decide.',
+    p: 'Three small cases. Read the evidence, give your verdict, and say it in two ways: with distance, then without it.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The cake', sit: 'A birthday cake ordered from Casa Lume was ready on Tuesday. The client wanted it on Thursday.',
+        provas: ['The order note says “Tuesday”.', 'The client’s email says “Thursday”.', 'Nobody called to confirm the date.'],
+        q: 'Your verdict?', opc: ['The client', 'The kitchen', 'Both'],
+        st: ['The date was written …', 'Neither … nor … checked …', 'Not only … but also …'],
+        ex: 'Both. The date was copied wrong, and neither the kitchen nor the client checked it. Not only should the kitchen call, but the client should also read the confirmation.',
+        push: 'The client is a regular who spends a lot. Does that change who you blame in public?' },
+      { tag: 'The meeting', sit: 'Your colleague missed a client meeting. The calendar invite was moved one hour earlier the night before.',
+        provas: ['The change was made at 11 p.m.', 'No message was sent with the change.', 'Your colleague never checks the calendar in the morning.'],
+        q: 'Your verdict?', opc: ['Your colleague', 'Whoever moved it', 'Neither'],
+        st: ['The meeting was moved …, but …', 'Either … or …', 'It has been agreed that …'],
+        ex: 'Whoever moved it. The meeting was moved at 11 p.m. and no message was sent. Either you send a message, or you don’t change it at night.',
+        push: 'The person who moved it is your boss. Same verdict, out loud?' },
+      { tag: 'The delivery', sit: 'A customer got cold food. The app says the order “was delayed”. The driver says he waited twenty minutes at the restaurant.',
+        provas: ['The restaurant was full that night.', 'The app sent no message to the customer.', 'The driver took a second order on the way.'],
+        q: 'Your verdict?', opc: ['The restaurant', 'The driver', 'The app'],
+        st: ['The order was delayed by …', 'Not only … but also …', 'Mistakes were made, and …'],
+        ex: 'The app. Not only was the order delayed, but the customer was also left without a message. “Was delayed” hides who should have told them.',
+        push: 'You are the app’s manager. Write the reply to the customer, with or without distance?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "One star, and a careful answer.",
+   "p": "Read the review and the reply. Look closer."
+  },
+  "cv-juri": {
+   "t": "Who is responsible? You decide.",
+   "p": "Give your verdict twice: with distance, then without."
+  },
+  "descobre": {
+   "t": "Who did it? The sentence won’t say.",
+   "p": "Compare A and B. Which has more distance?"
+  },
+  "transforma": {
+   "t": "Personal → distant.",
+   "p": "Read the clue. Say the distant version."
+  },
+  "escolha": {
+   "t": "Two replies. Which is better here?",
+   "p": "Choose A or B. Say why."
+  }
+ },
+ "prep": {
+  "obj": "Distância profissional (passiva sem agente, It has been decided that, neither… nor, not only… but also): a dona do Casa Lume responde a uma avaliação de uma estrela.",
+  "armadilha": "Brasileiro diz “neither… or”, junta negativas (“Neither X nor Y aren’t”), esquece o been (“It has decided that”) e usa “Mistakes were made” num pedido de desculpas pessoal.",
+  "pal": [
+   "was moved",
+   "It has been decided that …",
+   "have been passed on",
+   "neither … nor",
+   "not only … but also",
+   "either … or",
+   "Mistakes were made",
+   "We made a mistake"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: quando a distância protege e quando ela esconde a responsabilidade.",
+   "perg": "Have you ever written a bad review?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Leitura da avaliação e da resposta da Lia; perguntas de sentido e depois achar a passiva sem agente.",
+   "perg": "Who gave the birthday table away?",
+   "pula": "Leia a resposta inteira e só o começo da avaliação."
+  },
+  "cv-juri": {
+   "obj": "Júri de três casos de culpa (bolo, reunião, delivery): veredito dito com distância e sem ela; PUSH.",
+   "perg": "Who is responsible here, really?",
+   "pula": "Um caso basta."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: onde foram parar as pessoas da frase; depois regras e armadilhas.",
+   "perg": "When is that distance a problem?",
+   "pula": "Três pares e uma armadilha bastam."
+  },
+  "transforma": {
+   "obj": "Frase pessoal vira distante e profissional com a pista.",
+   "perg": "How would the company say that?",
+   "pula": "Quatro frases bastam."
+  },
+  "escolha": {
+   "obj": "Distância ou honestidade: escolher A ou B por situação e defender; sem resposta única.",
+   "perg": "Why is that reply better here?",
+   "pula": "Três situações bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre reclamações, culpa e respostas de empresas, com distância e sem ela.",
+   "perg": "Who made the mistake, and who said sorry?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre ética da distância: desculpas, culpa pública e avaliações.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve em voz alta a resposta da empresa a uma reclamação, com distância e um pedido de desculpas pessoal.",
+   "perg": "Where does the personal apology go?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Blame, distance, honesty.",
+   "p": "Pick a card. Try it with distance, then without.",
+   "palavras": [
+    "It was decided that …",
+    "has been passed on",
+    "neither … nor",
+    "not only … but also",
+    "either … or"
+   ],
+   "cartas": [
+    {
+     "k": "BAD SERVICE",
+     "q": "Tell me about bad service you got. Did anyone take responsibility?",
+     "fup": "What did they say?",
+     "st": [
+      "Neither the … nor the … apologised.",
+      "All I was told was that …"
+     ],
+     "ex": "Neither the waiter nor the manager apologised; all I was told was that “the order was lost”."
+    },
+    {
+     "k": "AT WORK",
+     "q": "When does your company use “it has been decided” instead of “we decided”?",
+     "fup": "Does it annoy you?",
+     "st": [
+      "It has been decided that …",
+      "What they mean is …"
+     ],
+     "ex": "It has been decided that we return to the office, which really means the CEO decided."
+    },
+    {
+     "k": "YOUR MISTAKE",
+     "q": "When did you admit a mistake directly, and how did it go?",
+     "fup": "Would distance have been easier?",
+     "st": [
+      "I simply said, “I made a mistake.”",
+      "Not only did …, but …"
+     ],
+     "ex": "I simply said, “I sent the wrong file.” Not only did my boss thank me, but she trusted me more."
+    },
+    {
+     "k": "EITHER OR",
+     "q": "What choice do you have to make soon, either one thing or another?",
+     "fup": "Which way are you leaning?",
+     "st": [
+      "Either I …, or I …"
+     ],
+     "ex": "Either I take the course this semester, or I wait a whole year."
+    },
+    {
+     "k": "PUBLIC REPLIES",
+     "q": "Which brand answers complaints well, in your opinion?",
+     "fup": "What do they do right?",
+     "st": [
+      "Not only do they …, but they also …"
+     ],
+     "ex": "Not only does my bank answer fast, but it also admits when it got something wrong."
+    },
+    {
+     "k": "NEITHER",
+     "q": "Name something you neither love nor hate, but do every day.",
+     "fup": "Why keep doing it?",
+     "st": [
+      "I neither love nor hate …"
+     ],
+     "ex": "I neither love nor hate my commute; it’s just podcast time."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "The thing is, …",
+    "Mistakes were made",
+    "We made a mistake"
+   ],
+   "rodadas": [
+    {
+     "q": "A company in trouble: “Mistakes were made” or “We made a mistake”?",
+     "a": "Mistakes were made",
+     "b": "We made a mistake",
+     "fa": [
+      "“Mistakes were made.” Lawyers exist for a reason.",
+      "Admitting blame can cost millions."
+     ],
+     "fb": [
+      "“We made a mistake.” People forgive honesty.",
+      "Distance sounds like hiding."
+     ]
+    },
+    {
+     "q": "Should a restaurant answer every bad review in public?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Not only the client reads it, but also future clients.",
+      "Silence looks like guilt."
+     ],
+     "fb": [
+      "No. A private message is more respectful.",
+      "A public fight helps nobody."
+     ]
+    },
+    {
+     "q": "Should Lia name the waiter who gave the table away?",
+     "a": "Name him",
+     "b": "Protect him",
+     "fa": [
+      "Name him. The client deserves to know what happened.",
+      "Hiding it protects nobody."
+     ],
+     "fb": [
+      "Protect him. Neither the client nor the public needs a name.",
+      "The owner takes the blame; that’s her job."
+     ]
+    },
+    {
+     "q": "One-star reviews: useful or unfair?",
+     "a": "Useful",
+     "b": "Unfair",
+     "fa": [
+      "Useful. It’s the only way some places listen.",
+      "Either they improve, or they close."
+     ],
+     "fb": [
+      "Unfair. One bad night can destroy years of work.",
+      "Talk to the manager first."
+     ]
+    }
+   ],
+   "fim": "Four rounds. It has been decided that everybody argued well."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Your Reply",
+   "t": "You run the place. Reply.",
+   "p": "One step at a time. Distance, then honesty.",
+   "prof": "Invented business and complaint; check the shift: distant in the middle, personal at the end, like Lia.",
+   "passos": [
+    {
+     "q": "What’s your business, and what went wrong?",
+     "st": [
+      "I run …, and a client complained that …"
+     ],
+     "ex": "I run a small bakery, and a client complained that her wedding cake arrived late."
+    },
+    {
+     "q": "Explain what happened, with distance.",
+     "st": [
+      "The order was …",
+      "It has been decided that …"
+     ],
+     "ex": "The order was sent to the wrong address, and it has been decided that all deliveries will be checked twice."
+    },
+    {
+     "q": "Show it was taken seriously.",
+     "st": [
+      "Your comments have been passed on to …",
+      "Not only …, but also …"
+     ],
+     "ex": "Your comments have been passed on to the team, and not only will you get a refund, but also a free cake."
+    },
+    {
+     "q": "End personally, without distance.",
+     "st": [
+      "I made a mistake, and …",
+      "I’m truly sorry that …"
+     ],
+     "ex": "I made a mistake, and I’m truly sorry that it happened on your day."
+    }
+   ],
+   "fim": "Distance where it helps, honesty where it counts."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

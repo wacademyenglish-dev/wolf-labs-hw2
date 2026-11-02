@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Every Last Cookie",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e1aec06cf52d/every-last-cookie/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "all / every / some / any / none / no and everybody / nobody: every + one thing (every cookie is), all + many things (all the cookies are), some (+) and any (- ?), none / nobody = zero with one negative only",
   "abrir": "What is in your kitchen right now?",
   "fecho": "<b>Every</b> + one thing: <i>every cookie is gone</i>. <b>All</b> + many things: <i>all the cookies are gone</i>. <b>Some</b> (+), <b>any</b> (- and ?). <b>None / no / nobody</b> = zero, and only one negative: <i>Nobody saw</i>, never <i>nobody didn't see</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in the office kitchen. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/e1aec06cf52d/every-last-cookie/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Notes on the fridge door",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Every last cookie is gone.",
-          "img": "https://wolf-labs.pages.dev/p/e1aec06cf52d/every-last-cookie/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "All the cookies are gone, and nobody knows why.",
-          "img": "https://wolf-labs.pages.dev/p/e1aec06cf52d/every-last-cookie/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "There are some crumbs, but there isn't any cookie.",
-          "img": "https://wolf-labs.pages.dev/p/e1aec06cf52d/every-last-cookie/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -170,7 +170,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e1aec06cf52d/every-last-cookie/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Notes on the fridge door",
       "pede": "Look at the picture: notes on a fridge door. Write 2 or 3 sentences about the office kitchen. Use <b>all</b>, <b>every</b>, <b>some</b>, <b>any</b>, <b>none</b> or <b>nobody</b>.",
       "ph": "Every note on the fridge is …",

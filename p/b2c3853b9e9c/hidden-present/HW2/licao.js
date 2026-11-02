@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Hidden Present",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b2c3853b9e9c/hidden-present/img/live-presente.webp",
+  "capa": "../img/live-presente.webp",
   "alvo": "this / that / these / those: one or more, near or far · What is this? What are those? · this / that + is, these / those + are (never 'this are', 'these is')",
   "abrir": "What is in your hand right now? And on your desk?",
   "fecho": "One and near: <b>this</b>. One and far: <b>that</b>. More and near: <b>these</b>. More and far: <b>those</b>. One takes <b>is</b> (<i>What's that?</i>), more takes <b>are</b> (<i>What are those?</i>). Never <i>this are</i>, never <i>these is</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo hide a present at midnight. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/b2c3853b9e9c/hidden-present/img/live-quarto.webp",
+      "img": "../img/live-quarto.webp",
       "leg": "A dark room at midnight",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -95,17 +95,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This is a cup, and that is a chair.",
-          "img": "https://wolf-labs.pages.dev/p/b2c3853b9e9c/hidden-present/img/live-xicara.webp",
+          "img": "../img/live-xicara.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "These are scissors.",
-          "img": "https://wolf-labs.pages.dev/p/b2c3853b9e9c/hidden-present/img/live-tesoura.webp",
+          "img": "../img/live-tesoura.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Those are socks over there.",
-          "img": "https://wolf-labs.pages.dev/p/b2c3853b9e9c/hidden-present/img/live-meias.webp",
+          "img": "../img/live-meias.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -153,7 +153,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b2c3853b9e9c/hidden-present/img/live-presente.webp",
+      "img": "../img/live-presente.webp",
       "leg": "A present on a shelf",
       "pede": "Look at the picture: a present on a shelf. Write 2 or 3 sentences about things near you and far from you. Use <b>this, that, these</b> or <b>those</b>.",
       "ph": "This is … That is … These are …",

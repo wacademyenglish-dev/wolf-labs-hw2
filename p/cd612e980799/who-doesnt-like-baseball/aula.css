@@ -1,0 +1,140 @@
+/* ============================================================
+   SUPERMAN & LOIS · THE KENT FRIDGE · LIVE CLASS 06/10/2026
+   WOLFLIX Live (catálogo 07/10): família herói (série de família), modo casting. Noite do Kansas, vermelho do Superman, azul, bilhetes na geladeira. Aquecimento pilha, final escrita. Prefixo kt-.
+   ============================================================ */
+:root{
+  --noite:#080b12; --noite-rgb:8,11,18; --tinta:#e6e9ef;
+  --t1:#f1f3f7; --t2:#b3bac7; --t2-rgb:179,186,199; --t3:#7b8394;
+  --ac:#e2493c; --ac2:#ffb3a8; --frio:#7fa7e0; --coral:#f2837a;
+  --vidro:rgba(230,233,239,.045); --vidro2:rgba(230,233,239,.08); --vidro3:rgba(230,233,239,.11);
+  --fio:rgba(214,220,232,.11); --fio2:rgba(214,220,232,.2);
+  --ok:#9fdcae; --am:#e2493c; --erro:#f2837a; --lil:#c3a8f0;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Instrument Serif',Georgia,serif; --ui:'Hanken Grotesk',system-ui,sans-serif; --mono:'Hanken Grotesk',system-ui,sans-serif;
+  --r1:12px; --r2:8px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a0805}
+.btn.cheio{background:var(--ac);border-color:var(--ac);color:#2a0805}
+.cab h1,.pergunta h2,.follow p.q,.carta b,.cr h3,#guia h2,.marca span{font-weight:400;letter-spacing:0}
+.cab h1{font-size:clamp(34px,2.9vw,56px)}
+.pergunta h2{font-size:clamp(24px,1.9vw,34px)}
+.capa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:10px 0 6px;font:400 clamp(58px,5.4vw,104px)/.98 var(--disp);color:var(--t1)}
+.capa .banda{margin:0 0 18px;font:500 clamp(18px,1.3vw,22px) var(--ui);color:var(--ac)}
+.capa .sub{margin:0 0 26px;font:400 clamp(18px,1.3vw,22px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.kt-foto{margin:0;display:grid;gap:14px}
+.kt-foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r1);border:1px solid #1a1e27;box-shadow:var(--sombra)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.05vw,17px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(159,220,174,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.kt-mesa{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.kt-ops{display:grid;gap:6px}
+.kt-linha-ok{display:flex;align-items:center;gap:12px} .kt-linha-ok span{flex:1}
+.kt-centro{max-width:1150px;margin:0 auto 14px;width:100%;display:grid;gap:12px}
+
+/* a onda da música: o traço comum */
+.onda{position:relative;display:flex;align-items:center;gap:2px;height:44px}
+.onda i{flex:1;border-radius:2px;background:linear-gradient(180deg,var(--ac),color-mix(in srgb,var(--ac) 40%,#000));opacity:.7}
+.onda .mk{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t1);border:0;padding:0;margin:0}
+.onda.grande{height:84px;max-width:1300px;width:100%;margin:34px auto 40px}
+.onda.grande button.mk:nth-child(even) span{top:auto;bottom:-30px}
+.onda.grande button.mk{width:14px;margin-left:-6px;background:transparent;cursor:pointer}
+.onda.grande button.mk::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--t2)}
+.onda.grande button.mk span{position:absolute;top:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 14px var(--ui);color:var(--t2);padding:3px 10px;border-radius:999px;border:1px solid var(--fio2);background:var(--noite)}
+.onda.grande button.mk.on::before{background:var(--ac2);width:3px}
+.onda.grande button.mk.on span{color:#2a0805;background:var(--ac);border-color:var(--ac)}
+.onda.grande button.mk:focus-visible span{outline:2px solid var(--ac2);outline-offset:2px}
+
+/* o resto: quieto */
+.kt-encarte{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:26px;max-width:1300px;margin:0 auto 18px;width:100%;padding:18px;border-radius:var(--r1)}
+.kt-capinha{display:grid;gap:10px}
+.kt-capinha img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid #20242f}
+.kt-capinha small{display:block;font:600 14px var(--ui);color:var(--ac)} .kt-capinha b{font:400 clamp(24px,1.9vw,32px)/1.1 var(--disp);color:var(--t1)}
+.kt-encarte dl{margin:0;display:grid;gap:14px;align-content:center}
+.kt-encarte dt{font:600 14px var(--ui);color:var(--frio)} .kt-encarte dd{margin:2px 0 0;font:400 clamp(19px,1.4vw,24px)/1.4 var(--disp);color:var(--t1)}
+.kt-selo{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:1px dashed var(--fio2);text-align:center;padding:16px}
+.kt-selo b{font:italic 400 clamp(30px,2.4vw,42px) var(--disp);color:var(--ac)} .kt-selo small{font:400 15px var(--ui);color:var(--t2)}
+.kt-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.kt-vcol{display:grid;gap:6px;width:100%;max-width:min(100%,82vh);justify-self:center} .kt-cred{font:400 13px var(--ui);color:var(--t3)}
+.kt-dica{text-align:center;font:italic 400 22px var(--disp);color:var(--t3)}
+.kt-sentido{display:block;font:400 clamp(19px,1.4vw,23px)/1.45 var(--disp);color:var(--t1);margin-bottom:8px}
+.kt-gram{display:block;font:400 16px/1.5 var(--ui);color:var(--t2)} .kt-gram b{color:var(--ac2)}
+.kt-pista{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--ac)}
+.kt-pista small{font:600 13px var(--ui);color:var(--ac)} .kt-pista p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.kt-fala{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--frio)}
+.kt-fala small{display:flex;align-items:center;gap:8px;font:600 13px var(--ui);color:var(--frio)} .kt-fala p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.kt-luz{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px rgba(242,131,122,.7)}
+.kt-ar{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px;border-radius:var(--r1)} .kt-ar p{margin:0;font:400 30px var(--disp);color:var(--t1)}
+.kt-carta{display:grid;gap:4px;padding:10px 14px;border-radius:var(--r2);border:1px solid var(--fio2);background:var(--vidro)}
+.kt-carta > small{font:600 13px var(--ui);color:var(--t3)}
+.kt-carta p{margin:0;font:400 clamp(14px,1vw,16px)/1.45 var(--ui);color:var(--t1)}
+.kt-carta.aluno{border-color:rgba(226,73,60,.45);background:rgba(226,73,60,.05)} .kt-carta.aluno > small{color:var(--ac)}
+.kt-carta.prof{border-style:dashed}
+.kt-carta details{margin-top:4px;display:grid;gap:3px} .kt-carta summary{cursor:pointer;font:600 13px var(--ui);color:var(--t3)}
+.so-aluno-c{display:none}
+html.wl-sala-aluno .so-aluno-c{display:grid}
+
+.fim .grande span{font-size:clamp(15px,1.1vw,18px)}
+
+/* a cara da família Kent: DM Serif Display nos títulos, Nunito Sans no texto */
+:root{--disp:'DM Serif Display',Georgia,serif;--ui:'Nunito Sans',system-ui,sans-serif}
+.capa h1{font-size:clamp(50px,4.6vw,88px);line-height:1}
+.pergunta h2{font-family:var(--ui);font-weight:700}
+.kt-sentido,.kt-encarte dd{font-family:var(--ui)!important;font-weight:600}
+/* a geladeira: o gesto forte */
+.kt-porta{position:relative;padding:22px 26px 26px 22px;border-radius:18px;background:linear-gradient(100deg,#23272e,#1a1d22 60%,#202329);box-shadow:inset 0 0 0 1px #333841,inset -8px 0 18px rgba(0,0,0,.35),0 20px 50px #000b}
+.kt-pega{position:absolute;right:10px;top:18%;width:8px;height:38%;border-radius:4px;background:linear-gradient(90deg,#4a505b,#6d7480,#4a505b);box-shadow:0 2px 6px #000a}
+.kt-notas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 14px}
+.kt-nota{position:relative;display:grid;gap:4px;align-content:start;min-height:clamp(86px,12vh,124px);padding:16px 12px 10px;border-radius:2px;background:color-mix(in srgb,var(--m) 16%,#17181c);transform:rotate(var(--r));box-shadow:0 6px 12px #0008;opacity:.35}
+.kt-ima{position:absolute;left:50%;top:-7px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8,var(--m) 45%,color-mix(in srgb,var(--m) 50%,#000));box-shadow:0 2px 4px #000a}
+.kt-nota small{font:800 12px var(--ui);color:color-mix(in srgb,var(--m) 70%,#fff)}
+.kt-nota span{font:600 clamp(14px,1vw,17px)/1.3 var(--ui);color:#efe9e0}
+.kt-nota.vez{opacity:1;box-shadow:0 0 0 2px var(--ac),0 6px 14px #000a;animation:balanca 2.4s ease-in-out infinite}
+.kt-nota.vez span{color:#b8b0a4}
+.kt-nota.colado{opacity:1}
+.kt-nota.novo{animation:cola .5s cubic-bezier(.3,1.5,.5,1) both}
+@keyframes cola{from{transform:rotate(var(--r)) translateY(-24px) scale(1.05);opacity:.3}}
+@keyframes balanca{50%{transform:rotate(calc(var(--r) + 2deg))}}
+@media (prefers-reduced-motion:reduce){.kt-nota.vez,.kt-nota.novo{animation:none}}
+/* o resto: quieto */
+.kt-regra{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1300px;margin:0 auto 16px;width:100%}
+.kt-regra > div{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.kt-regra small{font:800 13px var(--ui);color:var(--frio)} .kt-regra p{margin:0;font:600 clamp(19px,1.4vw,24px)/1.4 var(--ui);color:var(--t1)} .kt-regra b{font-weight:800;color:var(--ac2)} .kt-regra span{font:600 14px var(--ui);color:var(--t2)}
+.kt-gostos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1300px;margin:0 auto;width:100%}
+.kt-gs{display:grid;gap:6px;align-content:start;padding:14px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.kt-gs small{font:800 13px var(--ui);color:var(--ac)} .kt-gs p{margin:0;font:400 clamp(21px,1.6vw,27px)/1.25 var(--disp);color:var(--t1)}
+.fim .grande span{font-size:clamp(15px,1.1vw,18px)}
+@media (max-width:1100px){ .kt-regra{grid-template-columns:1fr} .kt-gostos{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .kt-notas{grid-template-columns:1fr 1fr} .kt-gostos{grid-template-columns:1fr} }
+
+@media (max-width:1100px){ .mesa-c,.capa,.kt-mesa,.kt-video,.kt-encarte{grid-template-columns:1fr} .kt-regra{grid-template-columns:1fr} }
+@media (max-width:620px){
+  .onda.grande{height:64px;margin-top:40px} .onda.grande button.mk span{font-size:11px;padding:2px 6px}
+  .kt-capinha img{aspect-ratio:16/9}
+}
+
+/* a tira de filme (aulas de filme no lugar da onda de som) */
+.tira{border-radius:6px;padding:0 6px;background:#070707;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.tira-furos{height:14px;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,255,255,.13) 9px 19px,transparent 19px 28px);background-size:28px 6px;background-repeat:repeat-x;background-position:0 50%}
+.tira-q{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tq{position:relative;display:grid;align-content:end;gap:1px;aspect-ratio:16/9;min-height:0;padding:6px 8px;border:0;border-radius:2px;overflow:hidden;text-align:left;background:#141414;font:inherit;color:inherit}
+.tq-img{position:absolute;inset:0;background:var(--bg) center/cover;filter:brightness(.42) saturate(.8)}
+.tq b,.tq span{position:relative}
+.tq b{font:600 10px var(--ui);color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.tq span{font:600 11px/1.15 var(--ui);color:var(--t1)}
+.tira.grande{max-width:1300px;width:100%;margin:6px auto 22px}
+.tira.grande .tq{cursor:pointer;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s}
+.tira.grande .tq b{font-size:13px} .tira.grande .tq span{font-size:clamp(14px,1.05vw,18px)}
+.tira.grande .tq:hover .tq-img{filter:brightness(.55)}
+.tira.grande .tq.on{outline-color:var(--ac)} .tira.grande .tq.on .tq-img{filter:brightness(.7) saturate(1)}
+.tira.grande .tq:focus-visible{outline-color:var(--ac2)}
+@media (max-width:620px){.tira.grande .tira-q{grid-template-columns:repeat(3,minmax(0,1fr))} .tira.grande .tq span{font-size:12px} .tira.grande .tq b{font-size:11px} .capa-r .tira{display:none}}
+
+
+/* 22/10/2026 · formatos novos: a geladeira com seis bilhetes, compacta em cima do cartão de cena */
+.fm-obj .kt-porta{max-width:min(780px,100%);margin:0 auto;padding:14px 20px 16px 16px}
+.fm-obj .kt-notas{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 12px}
+.fm-obj .kt-nota{min-height:clamp(58px,8vh,80px);padding:13px 10px 8px}
+@media (max-width:620px){.fm-obj .kt-notas{grid-template-columns:1fr 1fr}}

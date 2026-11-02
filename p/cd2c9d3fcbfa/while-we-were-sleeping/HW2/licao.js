@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "While We Were Sleeping",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/cd2c9d3fcbfa/while-we-were-sleeping/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "past continuous x past simple: was / were + -ing for the long action, cut by when + past simple (the moment); while + -ing; What were you doing when ...? ; never was + base verb, never while + past simple",
   "abrir": "What were you doing last night at nine?",
   "fecho": "<b>was / were + -ing</b> = the long action: <i>I was sleeping.</i> <b>when + past simple</b> = the moment that cuts it: <i>when the lights went out.</i> <b>while + -ing</b> = the long action again: <i>While she was cooking, …</i> A question: <b>What were you doing when …?</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo compare a strange night. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/cd2c9d3fcbfa/while-we-were-sleeping/img/live-tokio.webp",
+      "img": "../img/live-tokio.webp",
       "leg": "A control room full of screens",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I was sleeping when the lights went out.",
-          "img": "https://wolf-labs.pages.dev/p/cd2c9d3fcbfa/while-we-were-sleeping/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "While we were driving, the sky turned green.",
-          "img": "https://wolf-labs.pages.dev/p/cd2c9d3fcbfa/while-we-were-sleeping/img/live-campo.webp",
+          "img": "../img/live-campo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She was waiting for the bus when every clock stopped.",
-          "img": "https://wolf-labs.pages.dev/p/cd2c9d3fcbfa/while-we-were-sleeping/img/live-relogios.webp",
+          "img": "../img/live-relogios.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/cd2c9d3fcbfa/while-we-were-sleeping/img/live-tokio.webp",
+      "img": "../img/live-tokio.webp",
       "leg": "A control room at night",
       "pede": "Look at the picture: a control room full of screens at night. Write 2 or 3 sentences about a night you remember. Use <b>was / were + -ing</b> with <b>when</b> or <b>while</b>.",
       "ph": "I was … when …",

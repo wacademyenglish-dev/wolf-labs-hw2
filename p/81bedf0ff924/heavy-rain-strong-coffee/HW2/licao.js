@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Heavy Rain, Strong Coffee",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/81bedf0ff924/heavy-rain-strong-coffee/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "collocations: heavy rain / traffic / smoker, strong coffee / accent, highly recommended / unlikely, deeply grateful / moved, bitterly cold / disappointed, a narrow escape, a quick bite; never strong rain, high recommended, strongly disappointed",
   "abrir": "Think of the last time the weather ruined a plan. What did you do instead?",
   "fecho": "Words choose their partners: <b>heavy rain, heavy traffic</b> (never <i>strong rain</i>), <b>strong coffee, a strong accent</b>, <b>highly recommended, highly unlikely</b> (never <i>high recommended</i>), <b>deeply grateful, bitterly cold, bitterly disappointed</b>, <b>a narrow escape, a quick bite</b>. A native picks the pair, not the word-for-word translation.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on a rainy weekend in Lisbon. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/81bedf0ff924/heavy-rain-strong-coffee/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A rainy street and a tram at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We're stuck in heavy traffic, so we'll grab a quick bite.",
-          "img": "https://wolf-labs.pages.dev/p/81bedf0ff924/heavy-rain-strong-coffee/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The café is highly recommended, and the coffee is strong.",
-          "img": "https://wolf-labs.pages.dev/p/81bedf0ff924/heavy-rain-strong-coffee/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "That was a narrow escape, and I'm deeply grateful.",
-          "img": "https://wolf-labs.pages.dev/p/81bedf0ff924/heavy-rain-strong-coffee/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/81bedf0ff924/heavy-rain-strong-coffee/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A rainy street and a tram at night",
       "pede": "Look at the picture: a rainy street with a tram at night. Write 2 or 3 sentences about a trip or a rainy day. Use pairs such as <b>heavy rain</b>, <b>strong coffee</b>, <b>highly recommended</b> or <b>deeply grateful</b>.",
       "ph": "We had heavy rain, so …",

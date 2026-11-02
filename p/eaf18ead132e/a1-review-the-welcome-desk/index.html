@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Welcome Desk · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A1 · Unit 1 Review · The Welcome Desk</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Welcome Desk · A1 Unit 1 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 1 (Hello, I’m…). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student works at the welcome desk of a small hotel tonight. You are the three guests.</p><p style="margin:0 0 6px"><b>About 45 min:</b> I Six Doors (8) · II The Welcome Desk (15) · III The Night Shift (5) · IV Your Card (6) · V Small Talk (8) · VI I Can (4).</p><p style="margin:0"><b>Open with:</b> “Pick a door.” There is no order. One minute per door, no notes.</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again before the doors: let the student try first. Mistakes here are useful: they show you what to review. Each door is one topic of Unit 1. Tap <b>Got it</b> when the answer is good enough for A1, and <b>Review</b> when it isn’t. The amber doors come back at the end of scene I as a short list “to review”, and they are the first thing to practice in the homework.</p>
+    <h4>THE SIX DOORS</h4>
+    <p>Introductions and spelling (his / her) · giving the turn back (And you?) · be for age and feelings (I’m 30, not I have 30) · I’m from / I live in · he is / she is + a / an + job · days with on and How much is it?</p>
+    <h4>THE WELCOME DESK</h4>
+    <p>You are each guest. Your card (only you see it) has the answers. When the student asks a question, tap it: the guest card fills in. If the student freezes, tap <b>Say it easier</b>: the questions get shorter. After three guests, the manager calls: the student tells you about one guest with he / she. Listen for the three slips on your screen (he has 34, she is nurse, he is of Canada) and tap the one you heard.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I have 30</i>, <i>she is nurse</i>, <i>he is of Canada</i>, <i>I live at Recife</i>, <i>his name</i> for a woman, and a missing <i>And you?</i>. A1: one correction per answer is enough.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <!--conversa--><h4>THE NIGHT SHIFT (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the three guests, a short break in the middle of the review with two light choices: work at the desk or in the café, and live in Toronto or in Osaka (I’m…, I live in…). Answer first yourself, as a model. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk; at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: II The Welcome Desk, III The Night Shift and V Small Talk.</li>
+      <li><b>Focus</b>: I Six Doors and VI I Can.</li>
+      <li><b>Write</b>: IV Your Card.</li>
+    </ul>
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* MAIN SERIES · A1 · REVISÃO 01 · THE WELCOME DESK · pergunta-surpresa · 27/10/2026 · be, I'm from, he / she is, on + dia */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'portas', tipo: 'And you?', q: 'How are you today, really?',
+    opc: ['I’m fine.', 'I’m tired.', 'I’m hungry!'], st: ['I’m … today.', 'I’m not …'],
+    ex: 'I’m hungry! I’m not tired.', push: 'Coffee or dinner? One word.' },
+  { cena: 'cartao', tipo: 'Opinion', q: 'A good receptionist is…',
+    opc: ['friendly', 'fast', 'funny'], st: ['A good receptionist is …', 'I’m … too.'],
+    ex: 'Friendly! And I’m friendly too.', push: 'Are you fast? Yes or no?' },
+  { cena: 'conversa', tipo: 'Would you rather', q: 'A free hotel night: which day?',
+    opc: ['On Saturday', 'On Monday'], st: ['On … ! I’m free on …'],
+    ex: 'On Saturday! I’m free on Saturday.', push: 'Are you free on Sunday? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* MAIN SERIES · A1 · REVISÃO 01 · THE WELCOME DESK · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Formato curto: UM momento leve (would you rather, 2 opções) no MEIO, depois da recepção (II).
+   Gramática da unidade 1 nos iniciadores: I'm + adjetivo, I'm from / I live in, he / she is. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'turno', apos: 'missao', est: 'o', min: 5, img: 'conversa', rot: 'The Night Shift', t: 'The guests are in their rooms.',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Your job', sit: 'It’s 11 p.m. The hotel is quiet.', q: 'Would you rather work…',
+        opc: ['At the desk', 'In the café'],
+        st: ['At the … ! I’m …', 'I’m not … I’m …'],
+        ex: 'At the desk! I’m friendly, and I’m not tired.',
+        push: 'Are you a night person? Yes or no?' },
+      { tag: 'A new city', sit: 'Tom lives in Toronto. Yuki lives in Osaka.', q: 'Would you rather live in…',
+        opc: ['Toronto', 'Osaka'],
+        st: ['In … ! It’s a big city.', 'I live in …, but …'],
+        ex: 'In Osaka! I live in Recife, but I love Japanese food.',
+        push: 'Is it far from Brazil? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "portas": {
+   "t": "Six doors. One minute each.",
+   "p": "Pick a door. Do it out loud, no notes."
+  },
+  "missao": {
+   "t": "Three guests. You are at the desk.",
+   "p": "Ask each guest five questions. Then tell the manager."
+  },
+  "cv-turno": {
+   "t": "The night shift. Your choice.",
+   "p": "Choose one. Then say it with the sentence."
+  },
+  "cartao": {
+   "t": "Now you are the guest.",
+   "p": "Write four lines about you, one about a friend."
+  },
+  "conversa": {
+   "t": "The lobby is quiet. Let’s talk.",
+   "p": "Answer. Then ask back: “And you?”"
+  },
+  "pode": {
+   "t": "Unit 1: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 1 (Hello, I’m…): apresentar-se, soletrar, idade, origem, profissão, dias e preço. O aluno trabalha na recepção de um hotel pequeno.",
+  "armadilha": "O português puxa “I have 30” (tenho 30), “she is nurse” sem a/an, “he is of Canada”, “I live at Recife”, his para mulher e esquecer de devolver com “And you?”.",
+  "pal": [
+   "I’m",
+   "I’m from",
+   "I live in",
+   "a / an",
+   "his / her",
+   "And you?",
+   "How much is it?",
+   "on Monday"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: o aluno trabalha na recepção de um hotel pequeno esta noite.",
+   "perg": "Do you remember how to introduce yourself?",
+   "pula": "Leia a frase da capa e abra a primeira porta."
+  },
+  "portas": {
+   "obj": "Seis portas, um tema da Unidade 1 em cada, de memória. Got it ou Review marcam o que revisar.",
+   "perg": "Pick a door. What is the task?",
+   "pula": "Quatro portas bastam; as âmbar vão para a lição de casa."
+  },
+  "missao": {
+   "obj": "Recepção: o aluno faz cinco perguntas a cada hóspede e depois conta ao gerente com he/she.",
+   "perg": "What is the guest’s name? Where is she from?",
+   "pula": "Dois hóspedes bastam, mais o relato ao gerente."
+  },
+  "cv-turno": {
+   "obj": "Pausa leve: duas escolhas pessoais com I’m… e I live in…",
+   "perg": "Would you like to live in Toronto or in Osaka?",
+   "pula": "Uma escolha e a pergunta PUSH bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: o cartão do aluno como hóspede, mais uma linha sobre um amigo.",
+   "perg": "What is your friend’s job? Where is he or she from?",
+   "pula": "Três linhas bastam."
+  },
+  "conversa": {
+   "obj": "Small talk: responder e devolver a pergunta com And you?",
+   "perg": "How are you today? And what do you say back?",
+   "pula": "Três perguntas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”: o aluno lê, marca o que sabe e você carimba a unidade.",
+   "perg": "Can you say your age in English? Show me.",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais perguntas de apresentação, com resposta e And you?",
+   "perg": "Where do you live? And where are you from?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre a vida no hotel e defender com I’m e because.",
+   "perg": "Would you like to work at the desk or in the café?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno apresenta uma pessoa da família em quatro passos com he/she, a/an e his/her.",
+   "perg": "Who is this person? What is his or her job?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions at the desk.",
+   "p": "Pick a card. Answer. Then ask: “And you?”",
+   "palavras": [
+    "I’m",
+    "I live in",
+    "a / an",
+    "And you?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR NAME",
+     "q": "What’s your name? Can you spell it?",
+     "fup": "And your last name?",
+     "st": [
+      "My name is …",
+      "It’s …"
+     ],
+     "ex": "My name is Carla. C-A-R-L-A."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Where are you from?",
+     "fup": "Do you live there now?",
+     "st": [
+      "I’m from …",
+      "I live in …"
+     ],
+     "ex": "I’m from Belém, but I live in São Paulo."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What do you do?",
+     "fup": "Do you like it?",
+     "st": [
+      "I’m a …",
+      "I’m an …"
+     ],
+     "ex": "I’m an engineer. Yes, I like it."
+    },
+    {
+     "k": "HOW ARE YOU",
+     "q": "How are you today?",
+     "fup": "Why?",
+     "st": [
+      "I’m …",
+      "I’m a little …"
+     ],
+     "ex": "I’m tired, but I’m happy. And you?"
+    },
+    {
+     "k": "YOUR WEEK",
+     "q": "What is your favorite day of the week?",
+     "fup": "What do you do on that day?",
+     "st": [
+      "My favorite day is …",
+      "On … I …"
+     ],
+     "ex": "My favorite day is Saturday. On Saturday I go to the beach."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "Who is your best friend?",
+     "fup": "How old is he or she?",
+     "st": [
+      "His name is … / Her name is …",
+      "He’s … / She’s …"
+     ],
+     "ex": "Her name is Bia. She’s 32. She’s a nurse."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I’m",
+    "I live in"
+   ],
+   "rodadas": [
+    {
+     "q": "Work at the desk or in the café?",
+     "a": "At the desk",
+     "b": "In the café",
+     "fa": [
+      "At the desk. I like meeting new people."
+     ],
+     "fb": [
+      "In the café. I’m good with coffee."
+     ]
+    },
+    {
+     "q": "Live in Toronto or in Osaka?",
+     "a": "In Toronto",
+     "b": "In Osaka",
+     "fa": [
+      "In Toronto. I’m happy in the cold."
+     ],
+     "fb": [
+      "In Osaka. The food is great."
+     ]
+    },
+    {
+     "q": "A small hotel or a big hotel?",
+     "a": "Small",
+     "b": "Big",
+     "fa": [
+      "Small. It’s quiet and friendly."
+     ],
+     "fb": [
+      "Big. There is a pool."
+     ]
+    },
+    {
+     "q": "The night shift or the morning shift?",
+     "a": "The night shift",
+     "b": "The morning shift",
+     "fa": [
+      "The night shift. I’m a night person."
+     ],
+     "fb": [
+      "The morning shift. I’m tired at night."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody said “And you?”"
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Meet My Family",
+   "t": "Introduce one person to the manager.",
+   "p": "One step at a time. Use he or she.",
+   "prof": "Listen for a/an with jobs and his/her for the right person; one correction per answer is enough.",
+   "passos": [
+    {
+     "q": "Who is this person? What is his or her name?",
+     "st": [
+      "This is my …",
+      "His name is … / Her name is …"
+     ],
+     "ex": "This is my sister. Her name is Paula."
+    },
+    {
+     "q": "How old is the person?",
+     "st": [
+      "He’s … / She’s …"
+     ],
+     "ex": "She’s 28."
+    },
+    {
+     "q": "Where is the person from? Where does he or she live?",
+     "st": [
+      "He’s from … / She’s from …",
+      "He lives in … / She lives in …"
+     ],
+     "ex": "She’s from Recife. She lives in Lisbon."
+    },
+    {
+     "q": "What is the person’s job?",
+     "st": [
+      "He’s a … / She’s an …"
+     ],
+     "ex": "She’s an architect."
+    }
+   ],
+   "fim": "One guest, four lines. The manager is happy."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

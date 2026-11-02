@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Four Songs",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3998063b8069/four-songs/img/live-fundo.webp",
+  "capa": "../img/live-fundo.webp",
   "alvo": "talking about music and feelings: it reminds me of + noun · remember x remind · sounds + adjective x sounds like + noun · I feel like + -ing",
   "abrir": "What kind of music do you listen to when you cook?",
   "fecho": "<b>It reminds me of</b> + a person or place. <b>I remember</b> it myself. <b>It sounds</b> + adjective (<i>It sounds happy.</i>) but <b>sounds like</b> + noun (<i>It sounds like a party.</i>). <b>I feel like</b> + -ing (<i>I feel like dancing.</i>)",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about songs in a car. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/3998063b8069/four-songs/img/live-carro.webp",
+      "img": "../img/live-carro.webp",
       "leg": "A car in the rain, city lights",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This song reminds me of my grandfather.",
-          "img": "https://wolf-labs.pages.dev/p/3998063b8069/four-songs/img/live-fundo.webp",
+          "img": "../img/live-fundo.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It sounds happy. It sounds like a summer party.",
-          "img": "https://wolf-labs.pages.dev/p/3998063b8069/four-songs/img/live-carro.webp",
+          "img": "../img/live-carro.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I feel like dancing in the kitchen.",
-          "img": "https://wolf-labs.pages.dev/p/3998063b8069/four-songs/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3998063b8069/four-songs/img/live-fundo.webp",
+      "img": "../img/live-fundo.webp",
       "leg": "An old record player in the dark",
       "pede": "Look at the picture: an old record player in a dark room. Write 2 or 3 sentences about a song you know. Use <b>reminds me of</b>, <b>sounds</b> or <b>sounds like</b>, and <b>feel like</b>.",
       "ph": "This song reminds me of …",

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Turn Left at the Bakery · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Turn Left at the Bakery · The Map of Gull Harbor</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Turn Left at the Bakery · The Map of Gull Harbor</h2>
+    <p>Kenji arrives in Gull Harbor with the map his grandmother drew in 1974: a red line from the bus stop to an X. Her note says the box is across the street from the lighthouse. Yesterday he dug at the lighthouse door and found nothing. The student is the local who helps him: first in the round town square, then step by step along the red line, where a pin walks every time the step is right. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>Directions start with the <b>verb</b>: <i>Go straight. Turn left at the bakery. Go past the bank. Cross the street. Take the first right.</i> Places: <b>on</b> your left, <b>next to</b>, <b>between</b> A and B, <b>opposite</b>. Questions: <i>Excuse me, where is…? How do I get to…?</i></p>
+    <h4>THE TRAP</h4>
+    <p>Many learners use one expression for two places: at the door of a building, and across the street from it. In English, <b>in front of</b> is at its door, on the same side; across the street is <b>opposite</b>. That is Kenji’s mistake, and the whole story. Also expect: <i>turn right in the church</i>, <i>go right</i> for straight, <i>turn to right</i>, <i>traverse</i>, <i>pass for</i>, <i>get the first right</i>, <i>in your left</i>, <i>next of / near of</i>, <i>in the half of the square</i>.</p>
+    <!--conversa--><h4>OK OR NOT OK? (VI) AND THE SURPRISE QUESTION</h4>
+    <p>In the middle of the lesson, Kenji makes two choices in the street: he crosses on a red light, then he digs in the square. Answer first, then let them choose green or red; wait five seconds in silence and let them tell Kenji what to do, verb first: <i>Don’t cross. Go to …</i>. The PUSH line (only you see it) is a quick yes or no. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one light personal question. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Street, II The Square (Kenji stands at the bus stop looking at the fountain: his left and right), IV The Red Line (you are Kenji; the arrow on the pin is where he looks), V Mrs. Brennan (you are the baker), VI OK or Not OK? (Kenji’s choices), VII Your Town, VIII Paper or Phone?</li>
+      <li><b>Focus</b>: III The Rule (four traps, the student fixes each one out loud before tapping).</li>
+      <li><b>Write</b>: IX, the way from their home to a place they love, with the red wavy line for <i>go to straight</i>, <i>turn in</i>, <i>turn to right</i>, <i>in your left</i>, <i>next of</i>, <i>opposite of</i>, <i>traverse</i>, <i>How I go to…?</i> It goes to their My notes.</li>
+    </ul>
+    <p>No audio in this lesson: your voice is Kenji’s and Mrs. Brennan’s.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* TURN LEFT AT THE BAKERY (Main A1) · pergunta-surpresa · 27/10/2026 · directions · next to / opposite */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'praca', tipo: 'And you?', q: 'Is there a bakery near your home?',
+    opc: ['Yes, next to …', 'Yes, opposite …', 'No!'], st: ['It’s next to …', 'It’s opposite …'],
+    ex: 'Yes! It’s opposite the pharmacy.', push: 'Good bread?' },
+  { cena: 'linha', tipo: 'Would you rather', q: 'Walk or take a bus?',
+    opc: ['Walk', 'Take a bus'], st: ['Go straight …', 'Take the …'],
+    ex: 'Walk! Go straight, turn left, and I’m there.', push: 'In the rain?' },
+  { cena: 'brennan', tipo: 'What if', q: 'A tourist is lost on your street. You…',
+    opc: ['help', 'say “Sorry!”'], st: ['Go straight and …', 'Turn left at …'],
+    ex: 'Help! “Go straight and turn left at the bakery.”', push: 'In English?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* TURN LEFT AT THE BAKERY · THE MAP OF GULL HARBOR (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A1 bem leve: OK / not OK (2 opções coloridas), frase quase pronta, o professor responde primeiro.
+   Entra no lugar de "VI · Quick Check" (extra, tocar-depois-dizer), no meio da aula, depois da
+   Mrs. Brennan. Kenji faz escolhas na rua: o aluno diz se está certo e dá a ordem. A gramática
+   (o verbo primeiro: go, turn, cross, don’t … · next to / opposite) mora nos iniciadores. O "Paper
+   or Phone?" (VIII) continua: aqui a decisão é outra. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'kenji', troca: 'quiz', est: 'o', min: 5, img: 'vila', rot: 'OK or Not OK?', t: 'Kenji in Gull Harbor. You decide.',
+    p: 'Your teacher answers first. Then choose a color and tell Kenji.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The red light', sit: 'The light is red. Kenji crosses.',
+        q: 'OK or not OK?', opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['Don’t cross! …', 'Stop and …', 'Go straight …'],
+        ex: 'Not OK! Don’t cross, Kenji. Stop and wait.',
+        push: 'You do it? Yes or no?' },
+      { tag: 'The square', sit: 'Kenji digs in the square.',
+        q: 'OK or not OK?', opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['Don’t dig …!', 'Go to …', 'Ask …'],
+        ex: 'Not OK! Don’t dig in the square. Go to the bakery and ask Mrs. Brennan.',
+        push: 'At night? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Before the map: your street.",
+   "p": "Answer each message out loud."
+  },
+  "praca": {
+   "t": "Kenji is at the bus stop.",
+   "p": "Kenji asks. Look at the square. Tell him."
+  },
+  "regra": {
+   "t": "Verb first. Little words for places.",
+   "p": "Say each line the right way. Then tap it."
+  },
+  "linha": {
+   "t": "Guide Kenji along the red line.",
+   "p": "Give the next step. Watch his left, his right."
+  },
+  "brennan": {
+   "t": "Mrs. Brennan knew Grandma Aiko.",
+   "p": "Your teacher is the baker. Answer, then ask the way."
+  },
+  "cv-kenji": {
+   "t": "Kenji in Gull Harbor. You decide.",
+   "p": "Your teacher answers first. Choose a color. Tell Kenji."
+  },
+  "cidade": {
+   "t": "Your real streets.",
+   "p": "Pick a card. Answer about your town."
+  },
+  "papel": {
+   "t": "Paper map or phone map?",
+   "p": "Say yours. Then guide your teacher to a place."
+  },
+  "fim": {
+   "t": "From your door to a place you love.",
+   "p": "Write the way. Verb first. Use opposite."
+  }
+ },
+ "prep": {
+  "obj": "Direções com o verbo na frente e lugares (on your left, next to, between, opposite): Kenji segue o mapa da avó de 1974 em Gull Harbor.",
+  "armadilha": "“Em frente” serve para dois lugares no português; em inglês in front of é na porta, opposite / across the street é do outro lado. Também: turn to right, in your left, next of, traverse.",
+  "pal": [
+   "Go straight",
+   "Turn left at…",
+   "Go past",
+   "Cross the street",
+   "Take the first right",
+   "on your left",
+   "opposite",
+   "How do I get to…?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: o mapa da avó Aiko, a linha vermelha e o X.",
+   "perg": "Do you use paper maps?",
+   "pula": "Só leia o título e comece."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal sobre a rua e o bairro do aluno, por mensagens.",
+   "perg": "What is next to your home?",
+   "pula": "Três mensagens bastam."
+  },
+  "praca": {
+   "obj": "A praça redonda: Kenji no ponto olhando a fonte; o aluno diz onde fica cada lugar, do ponto de vista dele.",
+   "perg": "Where is the bank, for Kenji?",
+   "pula": "Quatro lugares bastam."
+  },
+  "regra": {
+   "obj": "A regra: verbo primeiro e as palavrinhas de lugar; quatro armadilhas consertadas em voz alta.",
+   "perg": "What is wrong with “turn to right”?",
+   "pula": "Duas armadilhas bastam."
+  },
+  "linha": {
+   "obj": "Você é o Kenji na linha vermelha: o aluno dá cada passo e o alfinete anda.",
+   "perg": "What do I do now? Left or right?",
+   "pula": "Até a metade da linha basta."
+  },
+  "brennan": {
+   "obj": "Você é a padeira, amiga antiga da avó Aiko: o aluno responde e pede o caminho.",
+   "perg": "How do I get to the lighthouse?",
+   "pula": "Três falas bastam."
+  },
+  "cv-kenji": {
+   "obj": "Duas escolhas do Kenji na rua, verde ou vermelho; o aluno manda com o verbo na frente.",
+   "perg": "He crosses on a red light. OK or not OK?",
+   "pula": "Uma escolha basta."
+  },
+  "cidade": {
+   "obj": "Perguntas sobre a cidade real do aluno: direções como um local.",
+   "perg": "How do I get to the best bakery in your town?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "papel": {
+   "obj": "Papel ou celular para viajar; depois o aluno guia você até o lugar favorito dele.",
+   "perg": "Paper map or phone map? Why?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o caminho da casa do aluno até um lugar que ele ama; vai para o My notes.",
+   "perg": "How do I get from your door to that place?",
+   "pula": "Quatro passos bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre lugares reais e caminhos do aluno, com direções.",
+   "perg": "How do you get to work?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado em dilemas de viagem e caminho, com direções.",
+   "perg": "Ask a person or ask the phone?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o Kenji; você entrevista sobre o mapa, a avó e o caminho.",
+   "perg": "Kenji, where is the box?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More ways to go.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "go straight",
+    "turn left",
+    "on your right",
+    "opposite",
+    "next to"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WORK",
+     "q": "How do you get to work or school?",
+     "fup": "Is there a bakery on the way?",
+     "st": [
+      "I go straight …",
+      "I turn … at …"
+     ],
+     "ex": "I go straight and turn left at the bank."
+    },
+    {
+     "k": "THE PHARMACY",
+     "q": "Where is the nearest pharmacy?",
+     "fup": "What is opposite it?",
+     "st": [
+      "It’s next to …",
+      "It’s opposite …"
+     ],
+     "ex": "It’s next to the supermarket, opposite a school."
+    },
+    {
+     "k": "LOST",
+     "q": "Do you often get lost?",
+     "fup": "What do you do?",
+     "st": [
+      "Yes, I do. I ask …",
+      "No, I don’t."
+     ],
+     "ex": "Yes, I do. I ask people: Excuse me, where is…?"
+    },
+    {
+     "k": "A TOURIST",
+     "q": "A tourist asks for the best view in your town. What do you say?",
+     "fup": "Is it far?",
+     "st": [
+      "Go straight …",
+      "It’s on your …"
+     ],
+     "ex": "Take the first right and go up the hill. It’s on your left."
+    },
+    {
+     "k": "YOUR BUILDING",
+     "q": "What is opposite your home?",
+     "fup": "And next to it?",
+     "st": [
+      "Opposite my home, there is …",
+      "Next to it, …"
+     ],
+     "ex": "Opposite my home there is a park. Next to it, a gym."
+    },
+    {
+     "k": "GRANDMA’S MAP",
+     "q": "Do you have an old map, photo or note from your family?",
+     "fup": "Where is it now?",
+     "st": [
+      "Yes, I have … It’s in …",
+      "No, but …"
+     ],
+     "ex": "Yes, I have an old photo. It’s in a box under my bed."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "turn",
+    "go straight"
+   ],
+   "rodadas": [
+    {
+     "q": "Lost in a new town: ask a person or ask the phone?",
+     "a": "A person",
+     "b": "The phone",
+     "fa": [
+      "A person. Say: Excuse me, how do I get to…?"
+     ],
+     "fb": [
+      "The phone. Turn left, turn right, easy."
+     ]
+    },
+    {
+     "q": "Walk or take a bus in a new city?",
+     "a": "Walk",
+     "b": "Bus",
+     "fa": [
+      "Walk. Go straight and look at everything."
+     ],
+     "fb": [
+      "Bus. Take the first bus and relax."
+     ]
+    },
+    {
+     "q": "Kenji: dig at night or ask Mrs. Brennan first?",
+     "a": "Dig at night",
+     "b": "Ask first",
+     "fa": [
+      "Dig at night. Nobody is in the street."
+     ],
+     "fb": [
+      "Ask first. Go to the bakery and talk to her."
+     ]
+    },
+    {
+     "q": "The fast way or the beautiful way?",
+     "a": "Fast",
+     "b": "Beautiful",
+     "fa": [
+      "The fast way. Cross the street and go straight."
+     ],
+     "fb": [
+      "The beautiful way. Go past the sea and the lighthouse."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody got lost."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Kenji now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Kenji.",
+   "perguntas": [
+    "Kenji, where is the X on the map?",
+    "How do you get from the bus stop to the bakery?",
+    "What is opposite the lighthouse?",
+    "Where did you dig yesterday? In front of the lighthouse?",
+    "What do you do first tomorrow?",
+    "Where is your grandma’s map now?"
+   ],
+   "st": [
+    "It’s opposite …",
+    "Go straight and turn …",
+    "It’s in my …"
+   ],
+   "ex": "The box is across the street from the lighthouse, not at the door!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

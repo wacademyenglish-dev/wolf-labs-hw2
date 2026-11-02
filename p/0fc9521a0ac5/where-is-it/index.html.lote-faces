@@ -1,0 +1,2484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WOLF LABS · Where Is It</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* ══════════════════════════════════════════════════════════════════
+   WOLF LABS · CHASSI 2026 · TOKENS
+   Um esqueleto. Duas luzes (noite e dia). Cinco faces.
+   Nada de cor literal fora deste arquivo e do 20-faces.
+   ══════════════════════════════════════════════════════════════════ */
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+/* A altura vem de html → body → .app em porcentagem, NUNCA de 100vh.
+   Em tela cheia o Chrome não recalcula vh de forma confiável quando o
+   elemento em tela cheia é o documento: a aula ficava com a altura da
+   janela antiga e sobrava metade da tela preta embaixo. */
+html{height:100%;font-size:calc(clamp(16px,.28vw + 10.8px,19px) * var(--zoom,1))}
+body{margin:0;overflow:hidden;height:100%;-webkit-font-smoothing:antialiased;
+  background:var(--bg);color:var(--t1);font-family:var(--ui)}
+
+:root{
+  /* ── tipografia ────────────────────────────────────────────────
+     O inglês é serifado. A ferramenta é grotesca. O dado é mono.
+     A separação carrega a distinção conteúdo/programa sem explicar. */
+  --ui:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --se:'Newsreader',Georgia,serif;
+  --di:'Archivo',system-ui,sans-serif;
+  --mo:'JetBrains Mono',ui-monospace,monospace;
+  --ci:'Instrument Serif',Georgia,serif;
+  --lh-t:1.04; --lh-q:1.28; --lh-b:1.58;
+  --ls-t:-.024em; --ls-l:.19em;
+
+  /* ── espaço · passos de 4, sem meio-termo ─────────────────────── */
+  --s1:6px; --s2:10px; --s3:14px; --s4:18px;
+  --s5:22px; --s6:28px; --s7:36px; --s8:48px;
+
+  /* ── forma ─────────────────────────────────────────────────────
+     O cromo não tem raio. A placa tem. A peça tem menos. */
+  --r-plate:14px; --r-well:10px; --r-piece:7px; --r-pill:999px;
+
+  /* ── alvo, foco, movimento ─────────────────────────────────────── */
+  --target:44px;
+  --m-cromo:120ms linear;
+  --m-peca:180ms cubic-bezier(.2,.8,.2,1);
+  --m-cena:360ms cubic-bezier(.22,.75,.2,1);
+
+  /* ── a marca ────────────────────────────────────────────────────
+     O lobo é CROMO, não é voz. Ele é dourado porque a marca é
+     dourada; o âmbar do professor continua sendo outra coisa e
+     nunca aparece do lado dele. */
+  --mark:url('img/mark-gold.png');
+
+  /* ── tinta SOBRE FOTO · não muda com a luz, porque a foto não muda ── */
+  --on-photo:#fff;
+  --on-photo-2:rgba(255,255,255,.86);
+  --on-photo-3:rgba(255,255,255,.64);
+}
+
+/* ══ NOITE · o padrão. Nunca #000: 4–7% de luminância, com matiz. ══ */
+:root,[data-luz="noite"]{
+  --bg:#080B12; --bg2:#0B1018;
+  --s-1:rgba(255,255,255,.038);
+  --s-2:rgba(255,255,255,.062);
+  --s-3:rgba(255,255,255,.092);
+  --plate:rgba(255,255,255,.048);
+  --ln:rgba(255,255,255,.10);
+  --ln2:rgba(255,255,255,.19);
+  --edge:rgba(255,255,255,.14);        /* o brilho de 1px no topo do vidro */
+  --t1:#E9EDF4; --t2:#A7B2C4; --t3:#6E7A8D;
+  --sh1:0 2px 8px rgba(0,0,0,.42);
+  --sh2:0 1px 0 rgba(255,255,255,.07) inset,0 6px 18px rgba(0,0,0,.5);
+  --sh3:0 1px 0 rgba(255,255,255,.06) inset,0 22px 52px rgba(0,0,0,.58);
+  --scrim:linear-gradient(transparent 26%,rgba(4,6,11,.9) 88%);
+  /* três vozes cromáticas, medidas sobre #080B12 */
+  --v-ac:#4FC8FF;   /* AÇÃO · o que reage ao toque      11.4:1 */
+  --v-yo:#5FE3B0;   /* A FALA DO ALUNO                  12.9:1 */
+  --v-pr:#E9B872;   /* O PROFESSOR                      10.6:1 */
+  --v-ok:#5FE3B0; --v-er:#FF8B84; --v-wa:#F2C078;
+  --v-ac-ink:#03202E; --v-yo-ink:#022018; --v-pr-ink:#241703;
+  --v-ac-fio:rgba(79,200,255,.32); --v-ac-vidro:rgba(79,200,255,.10);
+  --v-yo-fio:rgba(95,227,176,.32); --v-yo-vidro:rgba(95,227,176,.09);
+  --v-pr-fio:rgba(233,184,114,.30); --v-pr-vidro:rgba(233,184,114,.08);
+  color-scheme:dark;
+}
+
+/* ══ DIA · nunca #FFF. Papel morno, 3–5% abaixo do branco. ══════════
+   Não é a noite invertida: os pesos mudam, as vozes trocam de matiz
+   (a menta some no claro, entra magenta) e a sombra vira fio. */
+[data-luz="dia"]{
+  --bg:#E9EAEE; --bg2:#E2E4EA;
+  --s-1:rgba(255,255,255,.62);
+  --s-2:rgba(255,255,255,.82);
+  --s-3:#FBFBFD;
+  --plate:#F6F7FA;
+  --ln:rgba(16,26,44,.13);
+  --ln2:rgba(16,26,44,.26);
+  --edge:rgba(255,255,255,.9);
+  --t1:#121826; --t2:#454F62; --t3:#78829400;
+  --t3:#767F91;
+  --sh1:0 1px 2px rgba(16,26,44,.10);
+  --sh2:0 1px 3px rgba(16,26,44,.10),0 6px 16px rgba(16,26,44,.07);
+  --sh3:0 2px 6px rgba(16,26,44,.10),0 20px 44px rgba(16,26,44,.10);
+  --scrim:linear-gradient(transparent 26%,rgba(10,14,24,.86) 88%);
+  --v-ac:#0B5FC4;   /* medidas sobre #E9EAEE */
+  --v-yo:#A2246B;
+  --v-pr:#7A4A08;
+  --v-ok:#0E7A52; --v-er:#B3261E; --v-wa:#8A5A00;
+  --v-ac-ink:#fff; --v-yo-ink:#fff; --v-pr-ink:#fff;
+  --v-ac-fio:rgba(11,95,196,.30); --v-ac-vidro:rgba(11,95,196,.07);
+  --v-yo-fio:rgba(162,36,107,.28); --v-yo-vidro:rgba(162,36,107,.06);
+  --v-pr-fio:rgba(122,74,8,.28);  --v-pr-vidro:rgba(122,74,8,.06);
+  --mark:url('img/mark-gold-light.png');
+  color-scheme:light;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   AS CINCO FACES
+   Uma face muda TRÊS coisas e mais nada:
+     1. o campo (o fundo e a sua atmosfera)
+     2. o material da superfície (vidro · sólido · papel · placa)
+     3. a cor da AÇÃO
+   As outras duas vozes — a fala do aluno e o professor — NÃO mudam
+   de face nenhuma, para o aluno aprender uma vez que verde é a vez
+   dele e âmbar é o professor, e isso valer no produto inteiro.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ─── AURORA · vidro sobre azul-noite ────────────────────────────
+   O azul e o branco-quebrado da Wolf Academy levados a sério. O campo
+   é atmosfera e não se move. O vidro é UMA camada, com fio de 10% e
+   brilho interno de 1px no topo — é a aresta que separa vidro caro de
+   vidro barato, não o borrão. */
+.f-aurora{
+  --v-ac:#4FC8FF; --v-ac-ink:#03202E;
+  --v-ac-fio:rgba(79,200,255,.32); --v-ac-vidro:rgba(79,200,255,.10);
+  --mat:var(--plate); --mat-fio:var(--ln); --mat-sh:var(--sh2);
+  --mat-edge:inset 0 1px 0 var(--edge);
+  --blur:saturate(1.25) blur(14px);
+  --r-plate:14px;
+  background:
+   radial-gradient(58vw 42vh at 17% 6%,rgba(79,200,255,.10),transparent 62%),
+   radial-gradient(52vw 40vh at 87% 94%,rgba(142,155,255,.11),transparent 60%),
+   radial-gradient(70vw 52vh at 50% 122%,rgba(95,227,176,.045),transparent 60%),
+   linear-gradient(#080B12,#0A1120 58%,#080B12);
+}
+[data-luz="dia"] .f-aurora{
+  --v-ac:#0B5FC4; --v-ac-ink:#fff;
+  --v-ac-fio:rgba(11,95,196,.30); --v-ac-vidro:rgba(11,95,196,.07);
+  --mat:var(--s-3); --mat-fio:var(--ln); --mat-sh:var(--sh2);
+  --mat-edge:none; --blur:none;
+  background:
+   radial-gradient(58vw 42vh at 17% 4%,rgba(11,95,196,.11),transparent 62%),
+   radial-gradient(52vw 40vh at 87% 96%,rgba(83,97,216,.08),transparent 60%),
+   linear-gradient(#EDEEF2,#E6E8EE 60%,#EDEEF2);
+}
+
+/* ─── MESA · a bancada ───────────────────────────────────────────
+   A aula não é uma página: é uma superfície com objetos em cima.
+   Malha de pontos, peças com sombra CURTA e real, nada de vidro.
+   O gesto principal é MOVER. */
+.f-mesa{
+  --v-ac:#8AA6FF; --v-ac-ink:#0A1230;
+  --v-ac-fio:rgba(138,166,255,.34); --v-ac-vidro:rgba(138,166,255,.10);
+  --mat:#25231F; --mat-fio:rgba(237,234,226,.13); --mat-sh:0 2px 0 rgba(0,0,0,.45);
+  --mat-edge:none; --blur:none;
+  --r-plate:10px; --r-piece:6px;
+  --t1:#EFEBE2; --t2:#AFA99C; --t3:#7C766B;
+  --ln:rgba(237,234,226,.13); --ln2:rgba(237,234,226,.27);
+  background:
+   radial-gradient(circle at 1px 1px,rgba(237,234,226,.11) 1px,transparent 0) 0 0/22px 22px,
+   linear-gradient(#1B1A18,#201F1C);
+}
+[data-luz="dia"] .f-mesa{
+  --v-ac:#2646C8; --v-ac-ink:#fff;
+  --v-ac-fio:rgba(38,70,200,.30); --v-ac-vidro:rgba(38,70,200,.07);
+  --mat:#FCFAF5; --mat-fio:rgba(27,26,23,.14); --mat-sh:0 1px 0 rgba(27,26,23,.14),0 3px 8px rgba(27,26,23,.08);
+  --t1:#1B1A17; --t2:#4F4B43; --t3:#8A8478;
+  --ln:rgba(27,26,23,.14); --ln2:rgba(27,26,23,.28);
+  background:
+   radial-gradient(circle at 1px 1px,rgba(27,26,23,.15) 1px,transparent 0) 0 0/22px 22px,
+   #E8E3D8;
+}
+
+/* ─── PALCO · a sala escura ──────────────────────────────────────
+   Uma ideia por corte. A imagem é o CHÃO da tela inteira e o texto
+   vive onde vive a legenda de cinema. Duas tarjas carregam o cromo.
+   O dourado aqui NÃO é voz: é moldura. A voz do professor continua
+   sendo âmbar e continua tendo o mesmo papel. */
+.f-palco{
+  --v-ac:#6FD0F5; --v-ac-ink:#02202C;
+  --v-ac-fio:rgba(111,208,245,.32); --v-ac-vidro:rgba(111,208,245,.10);
+  --mat:rgba(255,255,255,.055); --mat-fio:rgba(255,255,255,.11);
+  --mat-sh:0 20px 60px rgba(0,0,0,.6); --mat-edge:inset 0 1px 0 rgba(255,255,255,.10);
+  --blur:saturate(1.1) blur(10px);
+  --tarja:#000; --moldura:#D8B87C;
+  --di:'Instrument Serif',Georgia,serif;
+  --bg:#06070A;
+  background:radial-gradient(78vw 56vh at 50% 44%,#0F1218,#06070A 74%);
+}
+[data-luz="dia"] .f-palco{
+  /* a sala escura NÃO fica branca: ela acende as paredes e mantém o
+     palco. Inverter esta face seria destruí-la. */
+  --v-ac:#0B5FC4; --v-ac-ink:#fff;
+  --mat:rgba(255,255,255,.92); --mat-fio:rgba(16,26,44,.12);
+  --mat-sh:var(--sh2); --mat-edge:none; --blur:none;
+  --tarja:#15171C; --moldura:#8A6A2E;
+  --bg:#DEDFE4;
+  background:radial-gradient(78vw 56vh at 50% 44%,#EAEBEF,#DEDFE4 74%);
+}
+
+/* ─── VIOLETA · o produto de butique ─────────────────────────────
+   A única face onde o canto redondo é grande, e ela existe para
+   provar que redondo pode ser adulto. Nada de vidro: superfícies
+   SÓLIDAS tingidas de violeta em quatro degraus, com um halo lilás
+   muito difuso atrás do conteúdo. */
+.f-violeta{
+  --v-ac:#B79CFF; --v-ac-ink:#150C2E;
+  --v-ac-fio:rgba(183,156,255,.34); --v-ac-vidro:rgba(183,156,255,.11);
+  --mat:#211934; --mat-fio:rgba(183,156,255,.16); --mat-sh:0 10px 30px rgba(0,0,0,.45);
+  --mat-edge:none; --blur:none;
+  --r-plate:20px; --r-well:14px; --r-piece:10px;
+  --di:'Fraunces',Georgia,serif;
+  --t1:#F0EBF8; --t2:#B7ACCE; --t3:#8177A0;
+  --ln:rgba(183,156,255,.16); --ln2:rgba(183,156,255,.30);
+  --bg:#120E1C;
+  background:
+   radial-gradient(62vw 44vh at 50% 108%,rgba(183,156,255,.17),transparent 66%),
+   radial-gradient(46vw 34vh at 7% -9%,rgba(227,167,232,.11),transparent 62%),
+   #120E1C;
+}
+[data-luz="dia"] .f-violeta{
+  --v-ac:#6134CF; --v-ac-ink:#fff;
+  --v-ac-fio:rgba(97,52,207,.28); --v-ac-vidro:rgba(97,52,207,.07);
+  --mat:#FFFFFF; --mat-fio:rgba(60,40,110,.13); --mat-sh:0 2px 8px rgba(60,40,110,.10);
+  --t1:#1C1630; --t2:#524868; --t3:#83789D;
+  --ln:rgba(60,40,110,.13); --ln2:rgba(60,40,110,.26);
+  --bg:#F2EFF9;
+  background:
+   radial-gradient(62vw 44vh at 50% 110%,rgba(97,52,207,.12),transparent 66%),
+   radial-gradient(46vw 34vh at 7% -9%,rgba(168,69,180,.07),transparent 62%),
+   #F2EFF9;
+}
+
+/* ─── ESTÚDIO · o dossiê ─────────────────────────────────────────
+   Cromo de ferramenta: trilho de evidência à esquerda, inspetor à
+   direita, régua no pé. MAS a placa central é de aula, não de
+   ferramenta — a direção 15 pontuou 4 em ALUNO no catálogo, e é
+   exatamente aqui que esse defeito se conserta. */
+.f-estudio{
+  --v-ac:#5AA6FF; --v-ac-ink:#03192E;
+  --v-ac-fio:rgba(90,166,255,.32); --v-ac-vidro:rgba(90,166,255,.10);
+  --mat:#181C22; --mat-fio:rgba(255,255,255,.09); --mat-sh:0 6px 18px rgba(0,0,0,.44);
+  --mat-edge:inset 0 1px 0 rgba(255,255,255,.05); --blur:none;
+  --r-plate:10px;
+  --cromo:#13161A; --cromo2:#1D2128;
+  --t1:#EDF0F4; --t2:#A4ACB7; --t3:#6C7581;
+  --ln:rgba(255,255,255,.085); --ln2:rgba(255,255,255,.17);
+  --bg:#0E1013;
+  background:linear-gradient(#0E1013,#111419);
+}
+[data-luz="dia"] .f-estudio{
+  --v-ac:#0B5FC4; --v-ac-ink:#fff;
+  --mat:#FFFFFF; --mat-fio:rgba(10,16,24,.12); --mat-sh:var(--sh2); --mat-edge:none;
+  --cromo:#E4E7EC; --cromo2:#EDEFF3;
+  --t1:#0F141A; --t2:#495360; --t3:#7D8794;
+  --ln:rgba(10,16,24,.11); --ln2:rgba(10,16,24,.20);
+  --bg:#E7E9ED;
+  background:linear-gradient(#E7E9ED,#E1E4E9);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   SALA · a galeria                              (direcao 05 do catalogo)
+   Uma ideia por parede. O espaco negativo e estrutura, nao sobra: a
+   foto e o objeto, e o texto e ETIQUETA DE MUSEU — bloco pequeno,
+   alinhado a esquerda, ao lado da peca, nunca por cima dela.
+   A direcao nasceu clara (parede de galeria). Aqui a NOITE e a mesma
+   sala com a luz baixa, que e o que o catalogo ja previa — e nao um
+   claro invertido. Sem vidro, sem sombra difusa: parede e moldura.
+   ══════════════════════════════════════════════════════════════════ */
+.f-sala{
+  --v-ac:#7FB4D4; --v-ac-ink:#08202E;
+  --v-ac-fio:rgba(127,180,212,.30); --v-ac-vidro:rgba(127,180,212,.09);
+  --mat:#211F1C; --mat-fio:rgba(237,233,225,.14); --mat-sh:0 1px 0 rgba(0,0,0,.4);
+  --mat-edge:none; --blur:none;
+  --r-plate:2px; --r-well:2px; --r-piece:2px;
+  --cromo:#141311; --cromo2:#1C1A18;
+  --t1:#EDE9E1; --t2:#A6A199; --t3:#726D65;
+  --ln:rgba(237,233,225,.13); --ln2:rgba(237,233,225,.26);
+  --bg:#1A1917;
+  --moldura:#D5B074;
+  --campo:radial-gradient(120% 80% at 50% 8%,rgba(255,247,232,.045),transparent 60%),
+          linear-gradient(#1A1917,#151412);
+  background:var(--campo);
+}
+[data-luz="dia"] .f-sala{
+  --v-ac:#14425C; --v-ac-ink:#fff;
+  --v-ac-fio:rgba(20,66,92,.30); --v-ac-vidro:rgba(20,66,92,.07);
+  --mat:#F4F1EA; --mat-fio:rgba(27,26,24,.16); --mat-sh:0 1px 0 rgba(27,26,24,.08);
+  --cromo:#E5E0D6; --cromo2:#EDE9E1;
+  --t1:#1B1A18; --t2:#55524C; --t3:#8E8A82;
+  --ln:rgba(27,26,24,.13); --ln2:rgba(27,26,24,.24);
+  --bg:#EDE9E1;
+  --moldura:#9A7B3F;
+  --campo:radial-gradient(120% 80% at 50% 6%,rgba(255,255,255,.55),transparent 60%),
+          linear-gradient(#EDE9E1,#E5E0D6);
+  background:var(--campo);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   CROMO · a moldura que não muda de aula nenhuma
+   Tela fixa, rolagem só dentro do tabuleiro. O professor nunca rola
+   no meio de uma explicação e o aluno nunca perde o enunciado.
+   ══════════════════════════════════════════════════════════════════ */
+/* o CAMPO da face pinta aqui. Ate agora `background:var(--bg)` tapava
+   qualquer campo com camadas (a malha da PLANTA sumia inteira): o .app
+   cobre a tela toda e vem depois na cascata. Face sem campo continua
+   caindo em --bg, entao nada muda para as cinco antigas. */
+.app{height:100%;width:100%;max-width:100%;display:grid;
+  grid-template-rows:auto 1fr auto;overflow:hidden;
+  background:var(--campo,var(--bg))}
+/* a própria aula vai para tela cheia — não o documento */
+.app:fullscreen,.app:-webkit-full-screen{width:100%;height:100%;background:var(--bg)}
+
+/* ── barra de cima ───────────────────────────────────────────────
+   min-height, nunca height: uma barra de altura fixa com overflow
+   hidden corta as letras pela metade quando o zoom sobe ou quando
+   alguém captura a página inteira. Ela cresce em vez de cortar. */
+.top{display:flex;align-items:center;gap:var(--s3);padding:var(--s1) var(--s5);
+  min-width:0;overflow-x:clip;overflow-y:visible;flex-wrap:wrap;
+  min-height:46px;flex:0 0 auto;border-bottom:1px solid var(--ln);
+  background:color-mix(in srgb,var(--bg) 78%,transparent);
+  backdrop-filter:var(--blur,none);position:relative;z-index:30}
+/* ── A MARCA · o bloco de identidade ──────────────────────────────
+   Lobo + palavra juntos, e um fio separando da aula. É a única coisa
+   da barra que não é controle: por isso ela tem o seu próprio bloco
+   e a sua própria borda, e o resto encosta nela. */
+.marca{display:inline-flex;align-items:center;gap:10px;flex:0 0 auto;
+  padding-right:var(--s4);border-right:1px solid var(--ln);margin-right:2px;
+  text-decoration:none}
+.top .mk{width:27px;height:27px;background:var(--mark) center/contain no-repeat;
+  flex:0 0 auto;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))}
+[data-luz="dia"] .top .mk{filter:none}
+.top .nm{display:flex;flex-direction:column;line-height:1.05}
+.top .nm b{font-family:var(--mo);font-size:.72rem;letter-spacing:.3em;
+  font-weight:700;color:var(--t1);white-space:nowrap}
+.top .nm s{text-decoration:none;font-family:var(--mo);font-size:.5rem;
+  letter-spacing:.24em;color:var(--v-ac);white-space:nowrap}
+.top .ti{font-family:var(--se);font-size:.98rem;color:var(--t1);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.top .sp{flex:1 1 auto;min-width:0}
+.tag{font-family:var(--mo);font-size:.6rem;letter-spacing:.16em;font-weight:600;
+  padding:3px 8px;border-radius:var(--r-pill);border:1px solid var(--ln2);
+  color:var(--t2);white-space:nowrap}
+.tag.ac{color:var(--v-ac);border-color:var(--v-ac-fio);background:var(--v-ac-vidro)}
+.tag.yo{color:var(--v-yo);border-color:var(--v-yo-fio);background:var(--v-yo-vidro)}
+.tag.pr{color:var(--v-pr);border-color:var(--v-pr-fio);background:var(--v-pr-vidro)}
+
+/* botão de cromo — 44px de alvo real, desenho de 28 */
+.cb{width:var(--target);height:36px;display:inline-flex;align-items:center;
+  justify-content:center;gap:6px;background:none;border:1px solid transparent;
+  border-radius:8px;color:var(--t2);cursor:pointer;font-family:var(--mo);
+  font-size:.62rem;letter-spacing:.14em;transition:var(--m-cromo);padding:0 8px}
+.cb.w{width:auto;min-width:var(--target)}
+.cb:hover{color:var(--t1);border-color:var(--ln2);background:var(--s-1)}
+.cb:focus-visible{outline:2px solid var(--v-ac);outline-offset:2px}
+.cb svg{width:16px;height:16px;fill:currentColor}
+.cb[aria-pressed="true"]{color:var(--v-ac);border-color:var(--v-ac-fio);background:var(--v-ac-vidro)}
+
+/* ── corpo: trilho · palco ────────────────────────────────────── */
+.body{position:relative;display:grid;grid-template-columns:190px minmax(0,1fr);
+  min-width:0;min-height:0;overflow:hidden;
+  transition:grid-template-columns 180ms cubic-bezier(.22,.75,.2,1)}
+/* o trilho recolhe no computador também — ele partilha a tela e às
+   vezes quer a cena inteira. A classe vai NO PRÓPRIO .body: assim a
+   coluna vira zero de verdade, e não uma faixa vazia. */
+.body.recolhido{grid-template-columns:0 minmax(0,1fr)}
+/* o trilho continua NA GRADE com largura zero. Tirá-lo com display:none
+   empurraria o palco para a primeira coluna — que é justamente a de
+   zero — e a cena sumiria. */
+.body.recolhido > .rail{overflow:hidden;border-right:0;opacity:0;pointer-events:none}
+.rail{border-right:1px solid var(--ln);overflow:hidden auto;padding:var(--s3) 0;
+  transition:opacity 140ms;
+  background:color-mix(in srgb,var(--bg) 60%,transparent);display:flex;flex-direction:column;gap:2px}
+.rail b{display:block;font-family:var(--mo);font-size:.56rem;letter-spacing:.2em;
+  color:var(--t3);padding:var(--s2) var(--s4) var(--s1)}
+.rl{display:grid;grid-template-columns:26px 1fr;align-items:baseline;gap:var(--s2);
+  padding:9px var(--s4);border:0;border-left:2px solid transparent;background:none;
+  text-align:left;cursor:pointer;color:var(--t2);font-family:var(--ui);font-size:.78rem;
+  transition:var(--m-cromo);width:100%;min-height:38px}
+.rl i{font-family:var(--mo);font-size:.58rem;font-style:normal;color:var(--t3);letter-spacing:.08em}
+.rl:hover{background:var(--s-1);color:var(--t1)}
+.rl.on{border-left-color:var(--v-ac);background:var(--v-ac-vidro);color:var(--t1);font-weight:600}
+.rl.on i{color:var(--v-ac)}
+.rl.fez i::after{content:' ✓';color:var(--v-ok)}
+.rl.opt{opacity:.62}
+.rl:focus-visible{outline:2px solid var(--v-ac);outline-offset:-2px}
+
+.stage{min-width:0;min-height:0;overflow:hidden;position:relative;display:flex}
+.scene{flex:1 1 0;min-width:0;min-height:0;max-width:100%;display:flex;flex-direction:column;
+  animation:ent var(--m-cena) both}
+@keyframes ent{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ── rodapé ───────────────────────────────────────────────────── */
+.foot{display:flex;align-items:center;gap:var(--s3);height:56px;padding:0 var(--s5);min-width:0;overflow:hidden;
+  border-top:1px solid var(--ln);flex:0 0 auto;
+  background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:var(--blur,none)}
+.bar{flex:1;height:3px;border-radius:2px;background:var(--s-2);overflow:hidden;min-width:60px}
+.bar i{display:block;height:100%;background:var(--v-ac);transition:width var(--m-cena)}
+.foot .ct{font-family:var(--mo);font-size:.62rem;letter-spacing:.13em;color:var(--t3);white-space:nowrap}
+
+/* o botão de avançar: a única coisa dourada do rodapé é a AÇÃO */
+.go{display:inline-flex;align-items:center;gap:9px;min-height:var(--target);
+  padding:0 var(--s5);border-radius:var(--r-pill);border:1px solid var(--v-ac-fio);
+  background:var(--v-ac);color:var(--v-ac-ink);font-family:var(--mo);font-weight:700;
+  font-size:.68rem;letter-spacing:.15em;cursor:pointer;transition:var(--m-peca);
+  box-shadow:var(--sh1)}
+.go:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.go:active{transform:none}
+.go:focus-visible{outline:2px solid var(--t1);outline-offset:3px}
+.go.gh{background:none;color:var(--t2);border-color:var(--ln2);box-shadow:none;font-weight:600}
+.go.gh:hover{color:var(--t1);border-color:var(--v-ac-fio);filter:none}
+.go[disabled]{opacity:.34;cursor:default;transform:none;filter:none}
+
+/* ── gaveta do professor ───────────────────────────────────────
+   Fechada por padrão. Ele partilha a tela no Meet: nada que seja
+   dele aparece sem que ele mande aparecer. */
+.prof{position:absolute;inset:0 0 0 auto;width:min(400px,42vw);z-index:40;
+  background:var(--bg2);border-left:1px solid var(--ln2);box-shadow:var(--sh3);
+  transform:translateX(101%);transition:transform 240ms cubic-bezier(.22,.75,.2,1);
+  display:flex;flex-direction:column;overflow:hidden}
+.prof.on{transform:none}
+.prof h4{margin:0;padding:var(--s4) var(--s5);border-bottom:1px solid var(--ln);
+  font-family:var(--mo);font-size:.62rem;letter-spacing:.18em;color:var(--v-pr);
+  display:flex;align-items:center;gap:var(--s2)}
+.prof h4 .sp{flex:1}
+.prof .in{padding:var(--s5);overflow-y:auto;display:flex;flex-direction:column;gap:var(--s5)}
+.prof .blk{display:flex;flex-direction:column;gap:6px}
+.prof .blk k{font-family:var(--mo);font-size:.56rem;letter-spacing:.19em;color:var(--v-pr)}
+.prof .blk p{margin:0;font-size:.86rem;line-height:var(--lh-b);color:var(--t2)}
+.prof .blk p b{color:var(--t1)}
+.prof .av{font-size:.68rem;color:var(--t3);border-top:1px solid var(--ln);padding-top:var(--s3);
+  font-family:var(--mo);letter-spacing:.1em}
+
+/* ── celular: a composição não encolhe, ela muda ───────────────── */
+@media (max-width:860px){
+  .body{grid-template-columns:minmax(0,1fr)}
+  .rail{position:absolute;inset:0 auto 0 0;width:220px;z-index:35;background:var(--bg2);
+    border-right:1px solid var(--ln2);box-shadow:var(--sh3);
+    transform:translateX(-101%);transition:transform 220ms}
+  .rail.on{transform:none}
+  .top{height:44px;padding:0 var(--s3);gap:var(--s2)}
+  .top .ti{font-size:.86rem}
+  .foot{height:auto;min-height:56px;padding:var(--s2) var(--s3);flex-wrap:wrap}
+  .prof{width:100%}
+  .top .zm,.top #bedit,.top #bfull,.top #blousa{display:none}
+  .top{flex-wrap:nowrap;gap:var(--s1)}
+  .top .ti{font-size:.82rem}
+  .top .tag:not(#cena){display:none}
+  .top .nm s{display:none}
+  .marca{padding-right:var(--s2);border-right:0}
+}
+
+/* ── zoom de texto ──────────────────────────────────────────────── */
+.zm{display:inline-flex;align-items:center;gap:2px}
+.zm b{font-family:var(--mo);font-size:.58rem;letter-spacing:.08em;color:var(--t3);min-width:2.6rem;
+  text-align:center}
+.zm .cb{width:30px;min-width:30px;padding:0;font-size:.9rem}
+
+/* ── A LOUSA · cromo do professor, e o aluno nunca vê ─────────────
+   Ela existe desde a regra 2 da casa e continua igual: as etiquetas,
+   o texto que salva sozinho, e a exportação com o que o aluno fez. */
+.lscrim{position:fixed;inset:0;background:rgba(3,5,9,.55);z-index:70;display:none}
+.lscrim.on{display:block}
+.lousa{position:fixed;top:0;right:0;bottom:0;width:min(430px,92vw);z-index:75;
+  background:var(--bg2);border-left:1px solid var(--ln2);box-shadow:var(--sh3);
+  display:none;flex-direction:column;padding:var(--s5);gap:var(--s3)}
+.lousa.on{display:flex}
+.lousa .lh{display:flex;align-items:center;gap:var(--s2)}
+.lousa .lh h3{margin:0;font-family:var(--di);font-weight:700;font-size:1.06rem;color:var(--t1)}
+.lousa .lh .sp{flex:1}
+.salvo{font-family:var(--mo);font-size:.58rem;letter-spacing:.14em;color:var(--v-ok);
+  opacity:0;transition:opacity var(--m-cromo)}
+.salvo.on{opacity:1}
+.ltags{display:flex;flex-wrap:wrap;gap:var(--s1)}
+.ltg{min-height:36px;padding:0 var(--s3);border:1px solid var(--ln2);border-radius:var(--r-pill);
+  background:none;font-family:var(--mo);font-size:.62rem;letter-spacing:.1em;color:var(--t2);cursor:pointer}
+.ltg:hover{border-color:var(--v-pr-fio);color:var(--v-pr);background:var(--v-pr-vidro)}
+.ltxt{flex:1;min-height:180px;width:100%;padding:var(--s3);border:1px solid var(--ln2);
+  border-radius:var(--r-well);background:var(--bg);color:var(--t1);font-family:var(--ui);
+  font-size:.94rem;line-height:1.6;resize:none}
+.ltxt:focus{outline:none;border-color:var(--v-pr)}
+.lf{display:flex;gap:var(--s2);flex-wrap:wrap}
+.lf .go{min-height:38px;padding:0 var(--s4);font-size:.62rem}
+
+/* ── TELA CHEIA · o conteúdo cresce, o cromo encolhe ──────────────
+   Nenhum elemento novo entra: só somem os que não são a aula. */
+/* ATENÇÃO · terceira vez que este erro aparece hoje:
+   `display:none` num item de grade TIRA O ITEM DA GRADE e empurra os
+   vizinhos para as trilhas de trás. Aqui a barra sumia, o palco caía na
+   trilha `auto` e o rodapé na `1fr` — a aula ficava com a altura do
+   conteúdo e sobrava meia tela preta embaixo.
+   A barra continua na grade, com altura zero. */
+body.cheia .app{grid-template-rows:0 1fr auto}
+body.cheia .top{height:0;min-height:0;padding:0;border:0;overflow:hidden;
+  opacity:0;pointer-events:none}
+body.cheia .body{border-top:3px solid var(--v-ac)}
+body.cheia .body{grid-template-columns:0 minmax(0,1fr)}
+body.cheia .rail{overflow:hidden;opacity:0;pointer-events:none;border-right:0}
+body.cheia .L{padding:var(--s7) var(--s8)}
+body.cheia .hd h2{font-size:clamp(1.9rem,3.4vw,3.1rem)}
+body.cheia .en{font-size:1.06em}
+
+/* ── RETRATO · uma tela mais alta do que larga não é uma tela de aula.
+   Acontece em tablet em pé, em captura de página inteira, e em janela
+   estreita. Em vez de esticar a foto até virar coluna, a cena empilha
+   e a foto ganha teto. */
+@media (max-aspect-ratio: 5/4){
+  .L,.L.split,.L.imgcon,.L.dossier,.L.wide{
+    grid-template-columns:minmax(0,1fr)!important;
+    grid-auto-rows:min-content;align-content:safe center;overflow-y:auto}
+  .L.void{place-items:safe center stretch}
+  .col,.col.mid{min-height:auto;justify-content:flex-start}
+  .grow{flex:0 0 auto}
+  .bd{min-height:auto}
+  .bd > .in{overflow-y:visible}
+  .ph{aspect-ratio:16/9;max-height:34vh;min-height:0}
+  .L.dossier .dl,.L.dossier .dr{display:none}
+}
+
+/* qual arquivo é este · fica no pé da coluna do professor */
+.carimbo{margin-top:auto;padding:var(--s3) var(--s5);border-top:1px solid var(--ln);
+  font-family:var(--mo);font-size:.56rem;letter-spacing:.14em;color:var(--t3)}
+
+/* ── A BARRA EM TELA ESTREITA ──────────────────────────────────────
+   Em 430px a barra somava 448px e o `overflow-x:clip` cortava: os
+   rotulos apareciam montados uns nos outros ("SCRIPTNOITEACHER").
+   O que sai sao as ETIQUETAS de cena (nivel, minutos, SCRIPT) — elas
+   sao informacao do professor e ele tem tudo isso na coluna dele e no
+   trilho. Os botoes e a marca ficam. */
+@media (max-width:520px){
+  .top > .tag,.top .ti{display:none}
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   COMPONENTES · o vocabulário de peças que toda aula usa
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── LAYOUTS ────────────────────────────────────────────────────
+   Composição horizontal, conteúdo centrado, área grande. Nada de
+   coluna estreita no meio e nada de margem gigante. */
+.L{flex:1;min-height:0;display:grid;padding:var(--s6) var(--s7);gap:var(--s6)}
+.L.void{place-items:center;grid-template-columns:minmax(0,1fr);overflow-y:auto}
+.L.void > *{max-width:60rem;width:100%}
+.L.split{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);align-items:stretch}
+.L.wide{grid-template-columns:minmax(0,1fr);overflow-y:auto}
+.L.wide > *{max-width:74rem;width:100%;justify-self:center}
+.L.imgcon{grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);align-items:center}
+/* A foto do imgcon guarda a proporção em que foi feita e fica centrada
+   na coluna. Esticar a caixa até a altura toda obrigava o object-fit a
+   comer as laterais — foi o que cortou a estação de Londres. */
+.L.imgcon > .ph{aspect-ratio:16/9;height:auto;max-height:100%;align-self:center}
+.L.cinema{padding:0;grid-template-columns:minmax(0,1fr)}
+.L.dossier{grid-template-columns:15rem minmax(0,1fr) 17rem;gap:var(--s5)}
+@media (max-width:1180px){
+  .L.dossier{grid-template-columns:minmax(0,1fr)}
+  .L.dossier .dl,.L.dossier .dr{display:none}
+}
+/* ── A DOBRA · abaixo de 1000 a tela deixa de ser fixa e vira pilha.
+   A ordem é sempre a mesma: cabeçalho, fonte, tabuleiro, ação. ─────── */
+@media (max-width:1000px){
+  .L{padding:var(--s4) var(--s5);gap:var(--s4);
+     grid-template-columns:minmax(0,1fr)!important;grid-auto-rows:min-content;
+     overflow-y:auto;align-content:safe center}
+  .L.void{place-items:safe center stretch}
+  .col,.col.mid{min-height:auto;justify-content:flex-start}
+  .grow{flex:0 0 auto}
+  .bd{min-height:auto}
+  .bd > .in{overflow-y:visible}
+  .ph{aspect-ratio:16/10;min-height:0}
+}
+.col{display:flex;flex-direction:column;min-width:0;min-height:0;gap:var(--s4)}
+.col.mid{justify-content:center}
+.grow{flex:1 1 auto;min-height:0}
+
+/* ── CABEÇALHO DE CENA ──────────────────────────────────────────
+   O título, e UMA frase de enunciado. O §03 do prompt é lei aqui:
+   o enunciado ideal é uma frase curta. Se não couber em uma, a cena
+   está errada, não o cabeçalho. */
+.hd{display:flex;flex-direction:column;gap:var(--s2);flex:0 0 auto}
+.hd .kk{display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap}
+.hd .kick{font-family:var(--mo);font-size:.58rem;letter-spacing:.24em;color:var(--v-ac)}
+.hd h2{margin:0;font-family:var(--di);font-weight:700;letter-spacing:var(--ls-t);
+  line-height:var(--lh-t);font-size:clamp(1.5rem,2.6vw,2.5rem);color:var(--t1)}
+.f-violeta .hd h2,.f-palco .hd h2{font-weight:400}
+.hd .como{margin:0;font-size:.92rem;line-height:1.5;color:var(--t2);max-width:46rem}
+.hd .como b{color:var(--t1);font-weight:600}
+.hd .pre{margin:0;font-family:var(--se);font-size:1.02rem;line-height:1.5;
+  color:var(--t2);max-width:44rem;font-style:italic}
+
+/* ── TODO INGLÊS É SERIFADO ─────────────────────────────────────── */
+.en{font-family:var(--se);line-height:var(--lh-q)}
+.en b,.en strong{font-weight:600;color:var(--t1)}
+.g{color:var(--v-ac);font-weight:600}
+.mk{color:var(--v-ac);font-weight:600}
+
+/* ── TABULEIRO ─────────────────────────────────────────────────── */
+.bd{background:var(--mat);border:1px solid var(--mat-fio);border-radius:var(--r-plate);
+  box-shadow:var(--mat-sh),var(--mat-edge,none);backdrop-filter:var(--blur,none);
+  display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.bd > .bh{display:flex;align-items:center;gap:var(--s2);padding:var(--s3) var(--s4);
+  border-bottom:1px solid var(--ln);flex:0 0 auto}
+.bd > .bh .sp{flex:1}
+.bd > .in{padding:var(--s4);overflow-y:auto;min-height:0;display:flex;
+  flex-direction:column;gap:var(--s3);flex:1 1 auto}
+.bd.flush > .in{padding:0}
+
+/* ── PEÇA · o que se toca ───────────────────────────────────────
+   Regra da casa: FIO PARA LER, SOMBRA PARA MEXER. Se tem sombra,
+   move ou responde. Se é só fio, é para ler. */
+.pc{display:flex;align-items:center;gap:var(--s3);min-height:var(--target);
+  padding:var(--s2) var(--s4);border-radius:var(--r-piece);border:1px solid var(--ln);
+  background:var(--s-1);color:var(--t1);font-family:var(--se);font-size:1rem;
+  line-height:1.35;text-align:left;cursor:pointer;transition:var(--m-peca);
+  box-shadow:var(--sh1);width:100%}
+.pc:hover{border-color:var(--v-ac-fio);background:var(--v-ac-vidro);transform:translateY(-1px)}
+.pc:focus-visible{outline:2px solid var(--v-ac);outline-offset:2px}
+.pc.on{border-color:var(--v-ac);background:var(--v-ac-vidro);box-shadow:var(--sh2)}
+.pc.ok{border-color:var(--v-ok);background:color-mix(in srgb,var(--v-ok) 12%,transparent)}
+.pc.no{border-color:var(--v-er);background:color-mix(in srgb,var(--v-er) 12%,transparent);
+  animation:shk 260ms}
+@keyframes shk{0%,100%{transform:none}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pc[disabled]{opacity:.42;cursor:default;box-shadow:none;transform:none}
+.pc .n{font-family:var(--mo);font-size:.6rem;letter-spacing:.12em;color:var(--t3);flex:0 0 auto}
+.pc .sp{flex:1}
+
+/* peça só de leitura — fio, sem sombra */
+.rd{border:1px solid var(--ln);border-radius:var(--r-piece);padding:var(--s3) var(--s4);
+  background:none;box-shadow:none;font-family:var(--se);line-height:var(--lh-q);color:var(--t2)}
+.rd b{color:var(--t1)}
+
+/* ── ZONA · o lugar onde a peça cai ─────────────────────────────── */
+.zn{border:1px dashed var(--ln2);border-radius:var(--r-well);padding:var(--s3);
+  display:flex;flex-direction:column;gap:var(--s2);min-height:5rem;background:var(--s-1);
+  transition:var(--m-peca)}
+.zn.aim{border-color:var(--v-ac);background:var(--v-ac-vidro);border-style:solid}
+.zn .zh{display:flex;flex-direction:column;gap:2px}
+.zn .zh k{font-family:var(--mo);font-size:.56rem;letter-spacing:.2em;color:var(--v-ac)}
+.zn .zh n{font-family:var(--di);font-weight:700;font-size:.94rem;color:var(--t1)}
+.zn .zh s{text-decoration:none;font-size:.74rem;color:var(--t3);font-family:var(--mo);letter-spacing:.06em}
+.zn .zo{font-size:.8rem;color:var(--t3);line-height:1.45}
+
+/* ── BOTÃO DE SOM · elegante, e a mão vê o estado ────────────────── */
+.pl{display:inline-flex;align-items:center;gap:var(--s2);min-height:var(--target);
+  padding:0 var(--s4) 0 6px;border-radius:var(--r-pill);border:1px solid var(--ln2);
+  background:var(--s-1);color:var(--t1);cursor:pointer;font-family:var(--mo);
+  font-size:.63rem;letter-spacing:.14em;transition:var(--m-peca)}
+.pl .ic{width:32px;height:32px;border-radius:50%;background:var(--v-ac);color:var(--v-ac-ink);
+  display:grid;place-items:center;flex:0 0 auto;transition:var(--m-peca)}
+.pl .ic svg{width:14px;height:14px;fill:currentColor}
+.pl .i-play{margin-left:1px} .pl .i-pause{display:none}
+.pl.on .i-play,.pl.pausado .i-play{display:none}
+.pl.on .i-pause{display:block;margin:0}
+.pl.pausado .i-pause{display:none}
+.pl.pausado .i-play{display:block;margin-left:1px}
+.pl:hover{border-color:var(--v-ac-fio);background:var(--v-ac-vidro)}
+.pl:hover .ic{transform:scale(1.06)}
+.pl:focus-visible{outline:2px solid var(--v-ac);outline-offset:2px}
+.pl.on .ic{background:var(--v-ok);color:var(--v-yo-ink)}
+.pl.pausado{border-color:var(--v-wa)}
+.pl.pausado .ic{background:var(--v-wa);color:var(--v-ac-ink)}
+.pl.pausado .wv i{background:var(--v-wa);height:4px;animation:none}
+.pl .wv{display:flex;align-items:center;gap:2px;height:14px}
+.pl .wv i{width:2px;background:var(--t3);border-radius:1px;height:4px}
+.pl.on .wv i{background:var(--v-ok);animation:wv 900ms ease-in-out infinite}
+.pl.on .wv i:nth-child(2){animation-delay:120ms}
+.pl.on .wv i:nth-child(3){animation-delay:240ms}
+.pl.on .wv i:nth-child(4){animation-delay:80ms}
+@keyframes wv{0%,100%{height:4px}50%{height:14px}}
+.pl.sm{min-height:36px;font-size:.58rem;padding:0 var(--s3) 0 5px}
+.pl.sm .ic{width:26px;height:26px}
+
+/* ── BOTÃO DE DICA · uma linha, e some ───────────────────────────
+   Ela é do ALUNO. Por isso não tem a cor da ação: tem a dele. */
+.dc{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 var(--s3);
+  border-radius:var(--r-pill);border:1px dashed var(--v-yo-fio);background:none;
+  color:var(--v-yo);font-family:var(--mo);font-size:.6rem;letter-spacing:.14em;
+  cursor:pointer;transition:var(--m-peca)}
+.dc:hover{background:var(--v-yo-vidro);border-style:solid}
+.dc:focus-visible{outline:2px solid var(--v-yo);outline-offset:2px}
+.dc svg{width:13px;height:13px;fill:currentColor}
+.dctx{font-size:.84rem;line-height:1.5;color:var(--v-yo);border-left:2px solid var(--v-yo-fio);
+  padding-left:var(--s3);margin:0;animation:ent 200ms both}
+
+/* ── HUB FLUTUANTE · WHAT ABOUT YOU? ─────────────────────────────
+   Fica no pé, fechado, e SÓ em cenas onde acrescenta conversa. Não
+   é painel: é uma aba que sobe. */
+.hub{position:absolute;left:50%;bottom:0;transform:translateX(-50%);z-index:25;
+  width:min(52rem,calc(100% - 3rem));display:flex;flex-direction:column;
+  border:1px solid var(--v-yo-fio);border-bottom:0;
+  border-radius:var(--r-plate) var(--r-plate) 0 0;
+  background:color-mix(in srgb,var(--bg2) 94%,var(--v-yo) 6%);
+  box-shadow:0 -10px 34px rgba(0,0,0,.32);backdrop-filter:var(--blur,none);
+  transition:transform 220ms cubic-bezier(.22,.75,.2,1)}
+.hub .hb{display:flex;align-items:center;gap:var(--s2);min-height:42px;padding:0 var(--s4);
+  border:0;background:none;color:var(--v-yo);font-family:var(--mo);font-size:.63rem;
+  letter-spacing:.18em;cursor:pointer;width:100%;text-align:left}
+.hub .hb .sp{flex:1}
+.hub .hb .ar{transition:var(--m-peca)}
+.hub.on .hb .ar{transform:rotate(180deg)}
+.hub .hin{display:none;padding:0 var(--s5) var(--s5);flex-direction:column;gap:var(--s3)}
+.hub.on .hin{display:flex}
+.hub .q{display:flex;gap:var(--s3);align-items:baseline}
+.hub .q i{font-family:var(--mo);font-size:.58rem;color:var(--v-yo);font-style:normal;flex:0 0 auto}
+.hub .q p{margin:0;font-family:var(--se);font-size:1.02rem;line-height:1.4;color:var(--t1)}
+.hub .q s{display:block;text-decoration:none;font-family:var(--ui);font-size:.8rem;
+  color:var(--t3);margin-top:3px}
+@media (max-width:860px){.hub{width:calc(100% - 1rem)}}
+
+/* o hub sobe por cima: a cena abre espaço para ele, nunca fica coberta */
+.stage.temhub .L{padding-bottom:calc(var(--s6) + 52px)}
+
+/* ── POP-UP · elegância, vidro, e SEMPRE leve ────────────────────
+   Não abre porque fica bonito. Abre quando explicar ali economiza
+   uma tela inteira. */
+.veu{position:fixed;inset:0;z-index:60;background:rgba(3,5,9,.62);
+  backdrop-filter:blur(3px);display:none;place-items:center;padding:var(--s5);
+  animation:fade 160ms both}
+.veu.on{display:grid}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.pop{width:min(40rem,100%);max-height:min(80vh,42rem);display:flex;flex-direction:column;
+  border-radius:var(--r-plate);border:1px solid var(--ln2);
+  background:color-mix(in srgb,var(--bg2) 92%,transparent);
+  box-shadow:var(--sh3),inset 0 1px 0 var(--edge);backdrop-filter:saturate(1.3) blur(20px);
+  animation:pin 200ms cubic-bezier(.22,.75,.2,1) both;overflow:hidden}
+@keyframes pin{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+.pop .ph{display:flex;align-items:center;gap:var(--s2);padding:var(--s4) var(--s5);
+  border-bottom:1px solid var(--ln)}
+.pop .ph k{font-family:var(--mo);font-size:.58rem;letter-spacing:.2em;color:var(--v-ac)}
+.pop .ph .sp{flex:1}
+.pop .ph .x{width:34px;height:34px;border-radius:8px;border:1px solid transparent;
+  background:none;color:var(--t3);cursor:pointer;font-size:1.1rem;line-height:1}
+.pop .ph .x:hover{color:var(--t1);border-color:var(--ln2);background:var(--s-1)}
+.pop .pin{padding:var(--s5);overflow-y:auto;display:flex;flex-direction:column;gap:var(--s4)}
+.pop .word{font-family:var(--se);font-size:1.7rem;line-height:1.1;color:var(--t1)}
+.pop .say{font-family:var(--mo);font-size:.72rem;letter-spacing:.06em;color:var(--v-ac)}
+.pop p{margin:0;font-size:.94rem;line-height:var(--lh-b);color:var(--t2)}
+.pop p b{color:var(--t1)}
+.pop .ex{font-family:var(--se);font-size:1.06rem;line-height:1.4;color:var(--t1);
+  border-left:2px solid var(--v-ac-fio);padding-left:var(--s4)}
+.pop .pt{font-size:.86rem;color:var(--t3);font-style:italic}
+.pop .cmp{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+.pop .cmp > div{border:1px solid var(--ln);border-radius:var(--r-well);padding:var(--s3)}
+.pop .cmp k{display:block;font-family:var(--mo);font-size:.56rem;letter-spacing:.18em;
+  color:var(--t3);margin-bottom:5px}
+.pop .cmp .bad k{color:var(--v-er)} .pop .cmp .good k{color:var(--v-ok)}
+.pop .cmp .en{font-size:1rem}
+.pop .cmp .bad .en{text-decoration:line-through;text-decoration-color:var(--v-er);color:var(--t3)}
+@media (max-width:640px){.pop .cmp{grid-template-columns:1fr}}
+
+/* palavra com pop-up: pontilhado por baixo, e o cursor diz */
+.gl{border-bottom:1px dashed var(--v-ac-fio);cursor:help;color:inherit}
+.gl:hover{border-bottom-style:solid;color:var(--v-ac)}
+
+/* ── RESPOSTA REVELADA ──────────────────────────────────────────── */
+.rev{border-left:2px solid var(--v-ac-fio);padding-left:var(--s4);
+  display:flex;flex-direction:column;gap:5px;animation:ent 200ms both}
+.rev k{font-family:var(--mo);font-size:.56rem;letter-spacing:.2em;color:var(--v-ac)}
+.rev p{margin:0;font-size:.88rem;line-height:1.55;color:var(--t2)}
+.rev .en{font-size:1.06rem;color:var(--t1)}
+
+/* ── FOTO ───────────────────────────────────────────────────────── */
+.ph{position:relative;border-radius:var(--r-plate);overflow:hidden;min-height:0;
+  background:var(--s-1);border:1px solid var(--ln)}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph cap{position:absolute;left:0;right:0;bottom:0;padding:var(--s5) var(--s4) var(--s3);
+  background:var(--scrim);color:var(--on-photo-2);font-family:var(--mo);
+  font-size:.6rem;letter-spacing:.16em}
+.ph.sq{aspect-ratio:1}
+.ph.wd{aspect-ratio:16/10}
+
+/* ── MOLDE / ANDAIME · o que o aluno pode dizer ─────────────────── */
+.md{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.md span{font-family:var(--se);font-size:.94rem;color:var(--v-yo);
+  border:1px dashed var(--v-yo-fio);border-radius:var(--r-pill);padding:5px var(--s3)}
+
+/* ── FECHO DA CENA ─────────────────────────────────────────────── */
+.dn{display:flex;align-items:baseline;gap:var(--s3);border-top:1px solid var(--ln);
+  padding-top:var(--s3);flex:0 0 auto}
+.dn k{font-family:var(--mo);font-size:.56rem;letter-spacing:.2em;color:var(--v-ok);flex:0 0 auto}
+.dn p{margin:0;font-family:var(--se);font-size:.98rem;line-height:1.4;color:var(--t2)}
+
+/* ── PLACAR / CONTADOR ─────────────────────────────────────────── */
+.ct3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4)}
+.ct3 > div{display:flex;flex-direction:column;gap:3px;text-align:center}
+.ct3 k{font-family:var(--mo);font-size:.56rem;letter-spacing:.2em;color:var(--t3)}
+.ct3 b{font-family:var(--di);font-size:2.4rem;line-height:1;color:var(--v-ac)}
+.ct3 i{font-style:normal;font-size:.78rem;color:var(--t3)}
+
+/* ── a transcrição no pop-up ─────────────────────────────────────── */
+.trl{display:flex;flex-direction:column;gap:var(--s2)}
+.tr1{display:flex;align-items:center;gap:var(--s3);padding-bottom:var(--s2);
+  border-bottom:1px solid var(--ln)}
+.tr1:last-child{border-bottom:0}
+.tr1 .en{font-size:1.06rem;line-height:1.35;color:var(--t1)}
+
+/* ── SOMBRA DE ROLAGEM ─────────────────────────────────────────────
+   O quadro rola por dentro quando o conteudo nao cabe, e ate aqui isso
+   acontecia SEM AVISO NENHUM: a ultima linha era cortada e nada na tela
+   dizia que havia mais. O professor perdia itens sem saber.
+   Truque de fundo puro: as duas primeiras camadas sao `local` (rolam
+   com o conteudo) e tapam as duas seguintes, que sao `scroll` (ficam
+   presas na caixa). Resultado: a sombra so aparece do lado em que ainda
+   ha conteudo, e some sozinha quando chega ao fim. Sem JS. */
+.bd > .in{
+  background:
+    linear-gradient(var(--mat) 34%, rgba(0,0,0,0)) top    / 100% 22px no-repeat,
+    linear-gradient(rgba(0,0,0,0), var(--mat) 66%) bottom / 100% 22px no-repeat,
+    radial-gradient(farthest-side at 50% 0,   rgba(0,0,0,.30), rgba(0,0,0,0)) top    / 100% 9px no-repeat,
+    radial-gradient(farthest-side at 50% 100%,rgba(0,0,0,.30), rgba(0,0,0,0)) bottom / 100% 9px no-repeat;
+  background-attachment: local, local, scroll, scroll;
+}
+[data-luz="dia"] .bd > .in{
+  background:
+    linear-gradient(var(--mat) 34%, rgba(255,255,255,0)) top    / 100% 22px no-repeat,
+    linear-gradient(rgba(255,255,255,0), var(--mat) 66%) bottom / 100% 22px no-repeat,
+    radial-gradient(farthest-side at 50% 0,   rgba(10,16,24,.16), rgba(0,0,0,0)) top    / 100% 9px no-repeat,
+    radial-gradient(farthest-side at 50% 100%,rgba(10,16,24,.16), rgba(0,0,0,0)) bottom / 100% 9px no-repeat;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   O EDITOR LOCAL · pertence ao sistema visual da aula, não é um CMS.
+   Fora do modo de edição ele não existe: nem borda, nem ícone, nem
+   um pixel a mais na tela do aluno.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* uma marca discreta onde há sobreposição local — só na edição */
+body.editando [data-ed]{outline:1px dashed var(--v-pr-fio);outline-offset:3px;
+  border-radius:3px;cursor:text;transition:var(--m-cromo)}
+body.editando [data-ed]:hover{outline-color:var(--v-pr);background:var(--v-pr-vidro)}
+body.editando [data-ed]::after{content:' ✎';font-size:.62em;color:var(--v-pr);opacity:.55}
+[data-ed].temlocal{border-bottom:1.5px solid var(--v-pr-fio)}
+body.editando [data-ed].temlocal{outline-style:solid;outline-color:var(--v-pr)}
+body.editando .stage{padding-bottom:0}
+
+/* o balão de edição de um campo */
+.edcx{display:block;margin:var(--s2) 0;padding:var(--s3);border-radius:var(--r-well);
+  border:1px solid var(--v-pr);background:var(--bg2);box-shadow:var(--sh3);
+  animation:ent 160ms both;max-width:44rem;position:relative;z-index:20}
+.edcx .edh{display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s2)}
+.edcx .edh k{font-family:var(--mo);font-size:.54rem;letter-spacing:.18em;color:var(--v-pr)}
+.edcx .edh .sp{flex:1}
+.edta{width:100%;font-family:var(--se);font-size:1.04rem;line-height:1.4;color:var(--t1);
+  background:var(--s-1);border:1px solid var(--ln2);border-radius:var(--r-piece);
+  padding:var(--s3);resize:vertical;min-height:4.4rem}
+.edta:focus{outline:none;border-color:var(--v-pr);background:var(--v-pr-vidro)}
+.edorig{margin-top:var(--s2);border-left:2px solid var(--ln2);padding-left:var(--s3)}
+.edorig k{font-family:var(--mo);font-size:.5rem;letter-spacing:.18em;color:var(--t3)}
+.edorig p{margin:2px 0 0;font-family:var(--se);font-size:.94rem;line-height:1.35;color:var(--t3)}
+.edf{display:flex;align-items:center;gap:var(--s2);margin-top:var(--s3);flex-wrap:wrap}
+.edf .go{min-height:36px;padding:0 var(--s4);font-size:.6rem}
+
+/* o painel lateral */
+.painel{position:fixed;top:0;right:0;bottom:0;width:min(400px,92vw);z-index:78;
+  background:var(--bg2);border-left:1px solid var(--v-pr-fio);box-shadow:var(--sh3);
+  display:none;flex-direction:column}
+.painel.on{display:flex}
+.pnh{display:flex;align-items:center;gap:var(--s2);padding:var(--s4) var(--s5);
+  border-bottom:1px solid var(--ln)}
+.pnh h3{margin:0;font-family:var(--mo);font-size:.62rem;letter-spacing:.2em;color:var(--v-pr)}
+.pnh .sp{flex:1}
+.pnin{padding:var(--s5);overflow-y:auto;display:flex;flex-direction:column;gap:var(--s5)}
+.pnav{margin:0;font-size:.84rem;line-height:1.55;color:var(--t2);
+  border-left:2px solid var(--v-pr-fio);padding-left:var(--s3)}
+.pnbl{display:flex;flex-direction:column;gap:7px}
+.pnbl > k{font-family:var(--mo);font-size:.54rem;letter-spacing:.2em;color:var(--v-pr)}
+.pnbl > s{text-decoration:none;font-size:.72rem;line-height:1.45;color:var(--t3)}
+.pnnota,.pnq{width:100%;font-family:var(--ui);font-size:.9rem;color:var(--t1);
+  background:var(--s-1);border:1px solid var(--ln2);border-radius:var(--r-piece);
+  padding:9px var(--s3);min-height:40px;resize:vertical}
+.pnnota:focus,.pnq:focus{outline:none;border-color:var(--v-pr);background:var(--v-pr-vidro)}
+.pnqs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px;counter-reset:q}
+.pnqs li{counter-increment:q;display:flex;align-items:baseline;gap:var(--s2);
+  font-family:var(--se);font-size:.96rem;color:var(--t1);
+  border-left:2px solid var(--v-yo-fio);padding-left:var(--s3)}
+.pnqs li span{flex:1}
+.pnqs .cb{width:30px;min-width:30px;height:30px}
+.pned{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+.pned li{display:flex;align-items:center;gap:var(--s2);font-family:var(--mo);
+  font-size:.62rem;color:var(--t2)}
+.pned li b{flex:1;font-weight:400;color:var(--t1)}
+.pned .cb{width:auto;padding:0 var(--s2);font-size:.56rem;border:1px solid var(--ln2)}
+.pnv{margin:0;font-size:.82rem;color:var(--t3)}
+#pnzera{text-align:left;line-height:1.35;padding:var(--s2) var(--s3);height:auto;min-height:36px}
+
+/* a pergunta que o professor acrescentou */
+.hub .q.minha p{color:var(--v-yo)}
+.mk-minha{display:inline-block;margin-left:var(--s2);font-family:var(--mo);font-size:.5rem;
+  letter-spacing:.16em;color:var(--v-yo);border:1px solid var(--v-yo-fio);
+  border-radius:var(--r-pill);padding:1px 6px;vertical-align:middle}
+
+/* a nota privada, dentro da gaveta do professor */
+.minhanota{border-left:2px solid var(--v-yo);padding-left:var(--s3)}
+.minhanota k{color:var(--v-yo)!important}
+
+/* o aviso de gravação */
+.toast{position:fixed;left:50%;bottom:var(--s6);transform:translate(-50%,14px);z-index:90;
+  padding:10px var(--s5);border-radius:var(--r-pill);font-family:var(--mo);font-size:.62rem;
+  letter-spacing:.12em;opacity:0;pointer-events:none;transition:var(--m-peca);
+  border:1px solid var(--v-er);background:var(--bg2);color:var(--v-er);box-shadow:var(--sh3)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.toast.ok{border-color:var(--v-ok);color:var(--v-ok)}
+
+@media (max-width:860px){ .painel{width:100%} }
+
+/* ══════════════════════════════════════════════════════════════════
+   A PRANCHA · face PLANTA
+   Desenho técnico: fio em vez de sombra, canto de 2 a 3px, nada de
+   penumbra. A peça central é o SVG da cena IV, onde o lugar da figura
+   É a preposição. Nada aqui pede para digitar.
+   ══════════════════════════════════════════════════════════════════ */
+
+.obj2{list-style:none;margin:0;padding:0;counter-reset:o;display:flex;flex-direction:column;gap:2px}
+.obj2 li{counter-increment:o;display:grid;grid-template-columns:26px 1fr;gap:var(--s3);
+  padding:var(--s2) 0;border-bottom:1px solid var(--ln);font-size:1.02rem;line-height:1.45}
+.obj2 li:last-child{border-bottom:0}
+.obj2 li::before{content:counter(o,decimal-leading-zero);font-family:var(--mo);font-size:.62rem;
+  color:var(--t3);letter-spacing:.06em;padding-top:.35em}
+
+.modo{align-self:flex-start;font-family:var(--mo);font-size:.5rem;letter-spacing:.26em;
+  color:var(--v-ac);border:1px solid var(--v-ac-fio);border-radius:2px;padding:2px 9px}
+
+.recusa{margin:0;font-family:var(--se);font-size:1rem;color:var(--v-er)}
+.nota{margin:0;font-size:.9rem;line-height:1.45;color:var(--t3)}
+.fecho{margin:0;font-family:var(--se);font-size:1.04rem;line-height:1.45;color:var(--t2)}
+.w{margin:0;font-size:.9rem;line-height:1.4;color:var(--t2)}
+.credito{margin:0;font-family:var(--mo);font-size:.54rem;letter-spacing:.18em;color:var(--t3);
+  text-align:center}
+
+/* ── A OBRA ──────────────────────────────────────────────────────
+   A foto e a PECA na parede. Moldura de fio dourado fino, luz de cima
+   vinda do campo, e nunca texto por cima dela: a etiqueta fica AO LADO,
+   que e a regra da galeria e a razao desta face existir. */
+.obra{position:relative;overflow:hidden;background:#000;
+  border:1px solid var(--moldura);outline:1px solid var(--ln);outline-offset:7px;
+  box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.obra img{width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(.92) contrast(1.04)}
+.obra img.entra{animation:ent 260ms both}
+.obra cap{position:absolute;left:0;bottom:0;padding:6px 11px;background:var(--scrim);
+  font-family:var(--mo);font-size:.5rem;letter-spacing:.2em;color:var(--on-photo)}
+.obra.grande{align-self:center;aspect-ratio:4/3;max-height:100%;width:100%}
+
+/* ── A ETIQUETA DE MUSEU ─────────────────────────────────────────
+   Bloco pequeno, alinhado a esquerda, com um fio dourado curto em cima.
+   E o unico lugar da cena onde a palavra da hora aparece escrita. */
+.placa{display:flex;flex-direction:column;gap:6px;padding-top:var(--s3);
+  border-top:2px solid var(--moldura);align-self:flex-start;max-width:34ch}
+.placa k{font-family:var(--mo);font-size:.52rem;letter-spacing:.24em;color:var(--t3)}
+.placa .diz{margin:0;font-family:var(--se);font-size:clamp(1.15rem,2.1vw,1.6rem);
+  line-height:1.28;color:var(--t1)}
+.placa .cota{font-style:normal;font-size:.88rem;line-height:1.35;color:var(--v-ac)}
+.etiq{justify-content:center;gap:var(--s4)}
+
+/* ── I · a abertura ──────────────────────────────────────────── */
+.esc{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2);width:100%}
+@media (max-width:900px){.esc{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.esc{grid-template-columns:1fr}}
+.op1{display:flex;flex-direction:column;gap:5px;text-align:left;cursor:pointer;
+  padding:var(--s3);min-height:var(--target);border-radius:var(--r-piece);
+  border:1px solid var(--ln);border-bottom:2px solid var(--v-yo-fio);
+  background:var(--s-1);transition:var(--m-peca)}
+.op1:hover{border-color:var(--v-yo)}
+.op1 .en{font-family:var(--se);font-size:1.04rem;line-height:1.3;color:var(--t1)}
+.op1 i{font-style:normal;font-size:.8rem;line-height:1.3;color:var(--t3)}
+.op1.pego{border-color:var(--v-yo);background:var(--v-yo-vidro)}
+.op1.pego .en{color:var(--v-yo)}
+
+/* ── II · ouvir e ler ────────────────────────────────────────── */
+.lo{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap;padding:9px 0;
+  border-bottom:1px solid var(--ln)}
+.lo:last-child{border-bottom:0}
+.lo .txt{font-family:var(--se);font-size:1.08rem;line-height:1.3;color:var(--t1);
+  animation:ent 200ms both}
+.ver{font-family:var(--mo);font-size:.56rem;letter-spacing:.14em;color:var(--t3);
+  background:none;border:1px dashed var(--ln2);border-radius:2px;padding:7px 12px;
+  min-height:34px;cursor:pointer}
+.ver:hover{border-color:var(--v-ac);color:var(--v-ac)}
+
+/* ── III e VII · o vídeo ─────────────────────────────────────── */
+.vid{position:relative;width:min(100%,60rem,calc(34vh * 16 / 9));aspect-ratio:16/9;
+  border:1px solid var(--ln2);background:#000;align-self:center;flex:0 0 auto}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.pals{display:flex;gap:var(--s2);flex-wrap:wrap;justify-content:center}
+.pal{font-family:var(--se);font-size:1.02rem;color:var(--t2);background:var(--s-1);
+  border:1px solid var(--ln);border-radius:var(--r-piece);padding:8px 14px;
+  min-height:var(--target);cursor:pointer;transition:var(--m-peca)}
+.pal:hover{border-color:var(--v-ac)}
+.pal.ouvi{border-color:var(--v-ok);color:var(--v-ok);background:var(--v-ac-vidro)}
+
+/* ── IV · a cena da hora ─────────────────────────────────────────
+   Desenho e foto lado a lado: a mesma verdade em duas vistas. */
+.cards{display:grid;grid-template-columns:repeat(7,1fr);gap:var(--s2);width:100%}
+@media (max-width:1000px){.cards{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:600px){.cards{grid-template-columns:repeat(2,1fr)}}
+.cd{cursor:pointer;padding:10px 6px;min-height:var(--target);border-radius:var(--r-piece);
+  border:1px solid var(--ln);background:var(--s-1);transition:var(--m-peca)}
+.cd .en{font-family:var(--se);font-size:1rem;line-height:1.2;color:var(--t1)}
+.cd:hover{border-color:var(--v-ac)}
+.cd.fez{border-bottom:2px solid var(--v-ok)}
+.cd.on{border-color:var(--v-ac);background:var(--v-ac-vidro)}
+.cd.on .en{color:var(--v-ac)}
+
+/* ── V · sete seguidas ───────────────────────────────────────── */
+.fila{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);width:100%}
+@media (max-width:1000px){.fila{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.fila{grid-template-columns:1fr}}
+.ct2{display:flex;flex-direction:column;gap:3px;text-align:left;cursor:pointer;
+  padding:var(--s3);min-height:5rem;border-radius:var(--r-plate);
+  border:1px solid var(--mat-fio);background:var(--mat);transition:var(--m-peca)}
+.ct2:hover{border-color:var(--v-ac)}
+.ct2 k{font-family:var(--mo);font-size:.5rem;letter-spacing:.18em;color:var(--t3)}
+.ct2 b{font-family:var(--se);font-weight:400;font-size:1.1rem;line-height:1.2;color:var(--t1)}
+.ct2 i{font-style:normal;font-family:var(--se);font-size:1rem;color:var(--v-ac)}
+.ct2.fez{opacity:.42;border-bottom:2px solid var(--v-ok)}
+
+/* ── VI · in ou at ───────────────────────────────────────────── */
+.perg{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;padding:var(--s3) var(--s4);
+  border:1px solid var(--v-ac-fio);background:var(--v-ac-vidro);border-radius:var(--r-plate)}
+.pq3{font-family:var(--di);font-weight:500;font-size:clamp(1rem,1.9vw,1.35rem);color:var(--t1)}
+.dporta{display:flex;align-items:baseline;gap:8px}
+.dporta b{font-family:var(--mo);font-size:.8rem;letter-spacing:.14em;color:var(--v-ac)}
+.dporta i{font-style:normal;font-size:.84rem;color:var(--t3)}
+.seis{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s6);align-content:start}
+@media (max-width:900px){.seis{grid-template-columns:1fr}}
+.seis > *:nth-last-child(-n+2){border-bottom:0}
+@media (max-width:900px){.seis > *:nth-last-child(2){border-bottom:1px solid var(--ln)}}
+.lu{display:flex;flex-direction:column;gap:5px;padding:8px 0;border-bottom:1px solid var(--ln)}
+.luh{display:flex;align-items:center;gap:var(--s3)}
+.nome{font-family:var(--se);font-size:1.08rem;color:var(--t1);flex:1}
+.lub{display:flex;gap:6px}
+.peca.opt{font-family:var(--mo);font-size:.66rem;letter-spacing:.16em;color:var(--t2);
+  background:var(--s-1);border:1px solid var(--ln);border-radius:var(--r-piece);
+  padding:7px 16px;min-height:36px;cursor:pointer;transition:var(--m-peca)}
+.peca.opt:hover{border-color:var(--v-ac);color:var(--t1)}
+.peca.opt.ok{border-color:var(--v-ok);color:var(--v-ok)}
+.peca.opt.err{border-color:var(--v-er);color:var(--v-er);animation:shk 300ms}
+.lur{display:flex;flex-direction:column;gap:3px;padding-left:var(--s3);
+  border-left:2px solid var(--v-ok);animation:ent 200ms both}
+.say{margin:0;font-family:var(--se);font-size:1rem;color:var(--v-ok)}
+
+/* ── VIII · o cofre ──────────────────────────────────────────── */
+.cofre{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);width:100%}
+@media (max-width:900px){.cofre{grid-template-columns:1fr}}
+.cf2{display:flex;flex-direction:column;gap:var(--s2);cursor:pointer;padding:var(--s4);
+  border-radius:var(--r-plate);border:1px solid var(--mat-fio);background:var(--mat);
+  transition:var(--m-peca)}
+.cf2:hover{border-color:var(--v-ac)}
+.cfl{display:flex;align-items:baseline;gap:var(--s3);flex-wrap:wrap}
+.cfl b{font-family:var(--se);font-weight:400;font-size:1.12rem;color:var(--t1)}
+.cfl b.b2{color:var(--v-ac)}
+.mais{font-family:var(--mo);color:var(--t3)}
+.cf2.fez{border-color:var(--v-ok)}
+
+/* ── IX · a devolução ────────────────────────────────────────── */
+.volta{display:flex;flex-direction:column;gap:4px;padding:var(--s3) var(--s4);
+  border-left:2px solid var(--v-yo);background:var(--v-yo-vidro);
+  border-radius:0 var(--r-piece) var(--r-piece) 0;width:100%}
+.volta k{font-family:var(--mo);font-size:.52rem;letter-spacing:.2em;color:var(--t3)}
+.volta p{margin:0;font-family:var(--se);font-size:1.1rem;color:var(--v-yo)}
+.rods{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3);width:100%}
+@media (max-width:1000px){.rods{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.rods{grid-template-columns:1fr}}
+.rd3{display:flex;flex-direction:column;gap:var(--s2);align-items:flex-start;padding:var(--s3);
+  border-radius:var(--r-plate);border:1px solid var(--mat-fio);background:var(--mat)}
+.r3h{display:flex;flex-direction:column;gap:2px}
+.r3h k{font-family:var(--mo);font-size:.5rem;letter-spacing:.18em;color:var(--v-ac)}
+.r3h .en{font-size:.88rem;line-height:1.3;color:var(--t2)}
+.pass{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px;flex:1}
+.pass li{font-family:var(--se);font-size:1rem;line-height:1.3;color:var(--t1);
+  padding-left:var(--s3);border-left:1px solid var(--ln)}
+.rd3 .feitob{align-self:flex-start;font-size:.52rem;margin-top:auto}
+.rd3.fez{border-color:var(--v-ok);opacity:.6}
+
+/* ── fecho ───────────────────────────────────────────────────── */
+.selo{width:60px;height:60px;background:var(--mark) center/contain no-repeat;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.45));opacity:.96}
+[data-luz="dia"] .selo{filter:none}
+.fim{margin:0;font-family:var(--di);font-weight:500;letter-spacing:.04em;
+  font-size:clamp(1.6rem,3.6vw,2.8rem);line-height:1;color:var(--t1)}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4);max-width:62rem;width:100%;
+  text-align:left}
+@media (max-width:800px){.duas{grid-template-columns:1fr}}
+.d2{display:flex;flex-direction:column;gap:5px;padding:var(--s4);border-radius:var(--r-plate);
+  border:1px solid var(--mat-fio);background:var(--mat)}
+.d2 k{font-family:var(--mo);font-size:.54rem;letter-spacing:.18em;color:var(--v-ac)}
+.d2 p{margin:0;font-family:var(--se);font-size:1.04rem;line-height:1.4;color:var(--t1)}
+
+/* ── extra · sessenta segundos ───────────────────────────────── */
+.arena{align-items:center;text-align:center;gap:var(--s4);max-width:52rem;justify-self:center}
+.vaz{margin:0;font-family:var(--di);font-weight:400;font-size:clamp(1.6rem,3.2vw,2.4rem);
+  line-height:1.1;color:var(--t3)}
+.prompt{margin:0;font-family:var(--se);font-size:clamp(1.15rem,2.3vw,1.6rem);line-height:1.35;
+  color:var(--t1);max-width:38ch}
+.soc{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);width:100%}
+@media (max-width:800px){.soc{grid-template-columns:1fr 1fr}}
+.cart{display:flex;flex-direction:column;gap:5px;text-align:left;cursor:pointer;padding:var(--s3);
+  min-height:3.6rem;border-radius:var(--r-piece);border:1px dashed var(--ln2);
+  background:transparent;transition:var(--m-peca)}
+.cart:hover{border-color:var(--v-ac)}
+.cart k{font-family:var(--mo);font-size:.5rem;letter-spacing:.2em;color:var(--t3)}
+.cart .en{font-family:var(--se);font-size:.98rem;line-height:1.3;color:var(--t1)}
+.cart.ab{border-style:solid;border-color:var(--v-ac);background:var(--s-1)}
+
+/* as colunas do imgcon esticam e rolam por dentro (erro já visto em
+   quatro aulas: centrado, ninguém limita a altura do quadro) */
+.L.imgcon{align-items:stretch}
+.L.imgcon > .ph{align-self:center}
+.L.imgcon > .col{overflow-y:auto;min-height:0}
+.L.wide > .col.mid{gap:var(--s3)}
+</style>
+</head>
+<body>
+<div class="app f-sala" id="app">
+
+  <header class="top">
+    <button class="cb" id="brail" aria-label="mostrar ou esconder as cenas" aria-pressed="false" title="mostrar ou esconder a coluna das cenas (S)">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
+    <span class="marca"><i class="mk"></i>
+      <span class="nm"><b>WOLF LABS</b><s>MAIN SERIES</s></span></span>
+    <span class="tag">A1</span>
+    <span class="ti">Where Is It</span>
+    <span class="sp"></span>
+    <span class="tag" id="cena">—</span>
+    <span class="zm" title="tamanho do texto — fica guardado neste computador">
+      <button class="cb" id="zmMenos" aria-label="texto menor">&minus;</button>
+      <b id="zmLbl">100%</b>
+      <button class="cb" id="zmMais" aria-label="texto maior">+</button>
+    </span>
+    <button class="cb w" id="bedit" title="editar esta aula — as mudanças ficam neste computador">EDIT</button>
+    <button class="cb w" id="btrans" title="a transcrição do áudio desta cena — abre só quando você quiser" hidden>SCRIPT</button>
+    <button class="cb w" id="blousa" title="a lousa — as suas anotações (B)">BOARD</button>
+    <button class="cb w" id="bluz" aria-pressed="false" title="noite, ou papel para preparar e imprimir (L)"><span>NOITE</span></button>
+    <button class="cb w" id="bprof" aria-pressed="false" title="coluna do professor (G)">TEACHER</button>
+    <button class="cb" id="bfull" title="tela cheia (F)" aria-label="tela cheia">
+      <svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"
+        fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+  </header>
+
+  <div class="body">
+    <nav class="rail" id="rail"></nav>
+    <div class="stage" id="stage"></div>
+    <aside class="prof" id="prof">
+      <h4><span>TEACHER · O ALUNO VÊ ISTO SE VOCÊ ESTIVER PARTILHANDO A TELA</span>
+        <span class="sp"></span>
+        <button class="cb" id="bprof2" onclick="document.getElementById('prof').classList.remove('on')">✕</button></h4>
+      <div class="in" id="profin"></div>
+      <div class="carimbo">BUILD 07/09 18:42</div>
+    </aside>
+  </div>
+
+  <footer class="foot">
+    <button class="go gh" id="ant">◂ BACK</button>
+    <div class="bar"><i id="barra"></i></div>
+    <span class="ct" id="conta">0 / 0</span>
+    <button class="go" id="prox">NEXT ▸</button>
+  </footer>
+</div>
+
+<div class="veu" id="veu"><div class="pop"></div></div>
+
+<!-- O EDITOR LOCAL DO PROFESSOR · nada daqui sai deste navegador -->
+<aside class="painel" id="painel" aria-label="editor local" data-wl-lock>
+  <div class="pnh"><h3>MY COPY</h3><span class="sp"></span>
+    <button class="cb" onclick="modoEdicao(false)" aria-label="sair da edição">&times;</button></div>
+  <div class="pnin" id="painelin"></div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<!-- A LOUSA DO PROFESSOR · fica neste computador, o aluno nunca vê -->
+<div class="lscrim" id="lscrim"></div>
+<aside class="lousa" id="lousa" aria-label="a lousa do professor" data-wl-lock>
+  <div class="lh"><h3>The Board</h3><span class="sp"></span>
+    <span class="salvo" id="lsalvo">saved</span>
+    <button class="cb" id="lfecha" aria-label="fechar">&times;</button></div>
+  <div class="ltags">
+    <button class="ltg" data-t="WORD">word</button>
+    <button class="ltg" data-t="FIX">fix</button>
+    <button class="ltg" data-t="GOOD">good</button>
+    <button class="ltg" data-t="ASK">ask</button>
+    <button class="ltg" data-t="SCENE">scene</button>
+  </div>
+  <textarea class="ltxt" id="ltxt"
+    placeholder="Notes for this student. Everything stays on this computer."></textarea>
+  <div class="lf">
+    <button class="go gh" id="lcopy">Copy</button>
+    <button class="go gh" id="ldl">Download</button>
+    <button class="go gh" id="lclear">Clear</button>
+  </div>
+</aside>
+
+<script>window.TRANSCRICAO={
+ "a-airport.mp3": "I am at the airport.",
+ "a-car.mp3": "I am in the car.",
+ "a-house.mp3": "I am in the house.",
+ "a-kitchen.mp3": "I am in the kitchen.",
+ "a-station.mp3": "I am at the station.",
+ "a-super.mp3": "I am at the supermarket.",
+ "k-home.mp3": "in the house · at home",
+ "k-school.mp3": "in the classroom · at school",
+ "k-shops.mp3": "in the shop · at the shops",
+ "k-work.mp3": "in the office · at work",
+ "s-above.mp3": "The box is above my head.",
+ "s-behind.mp3": "I am behind the box.",
+ "s-between.mp3": "I am between the chair and the box.",
+ "s-infront.mp3": "I am in front of the box.",
+ "s-nextto.mp3": "I am next to the box.",
+ "s-on.mp3": "I am on the chair.",
+ "s-under.mp3": "I am under the box.",
+ "v-clear.mp3": "Today we are looking at prepositions of place. I am sitting next to the box. In front of the box. And I am behind the box. Now I am under the box. The box is above my head. Now I am dancing between the chair and the box.",
+ "v-inat.mp3": "We use IN for spaces which are larger and more general, and we use AT for places with more specific activities. If you go to a supermarket, you are probably buying food. If you go to an airport, you are probably catching a flight."
+}
+;
+
+window.AULA_ID='where-wolf-v2';
+window.AULA_TITULO='Where Is It';
+window.AULA_NIVEL='A1';
+window.AULA_NOME='WHERE IS IT';
+window.AULA_FACE='f-sala';
+
+window.GLOSS={
+ 'in':{w:'in',tp:'ESPAÇO',say:'/ɪn/',
+   pt:'em — dentro de um espaço',
+   d:'IN é para <b>espaço</b>: uma coisa com lados, onde você está dentro. Um quarto, um carro, uma casa. A pergunta que resolve é uma só: <b>o que você faz ali?</b> Se não houver resposta, é espaço, e espaço leva IN.',
+   ex:'I am in the kitchen. &middot; I am in the car.'},
+ 'at':{w:'at',tp:'ATIVIDADE',say:'/æt/ · /ət/',
+   pt:'em — mas por um motivo',
+   d:'AT é para <b>lugar com atividade</b>: você está ali para fazer alguma coisa. Aeroporto para pegar um voo, mercado para comprar comida, estação para pegar um trem. Faça a pergunta: <b>o que você faz ali?</b> Se tiver resposta, é AT.',
+   ex:'I am at the airport. &middot; I am at the station.',
+   no:'I am in the airport, waiting for my flight.',
+   si:'I am at the airport, waiting for my flight.'},
+ 'on':{w:'on',tp:'EM CIMA, ENCOSTADO',say:'/ɒn/',
+   pt:'sobre — tocando a superfície',
+   d:'ON é <b>em cima e encostado</b>. O livro na mesa, você na cadeira. Se estiver em cima mas <b>sem tocar</b>, aí é ~above~.',
+   ex:'I am on the chair.'},
+ 'above':{w:'above',tp:'EM CIMA, SEM TOCAR',say:'/əˈbʌv/',
+   pt:'acima de',
+   d:'Mais alto, e <b>sem encostar</b>. É essa a única diferença para ~on~: a caixa acima da sua cabeça não está apoiada nela.',
+   ex:'The box is above my head.'},
+ 'under':{w:'under',tp:'EMBAIXO',say:'/ˈʌn.dər/',pt:'embaixo de',
+   d:'Mais baixo, coberto pela coisa. O oposto de ~above~.',
+   ex:'I am under the box.'},
+ 'behind':{w:'behind',tp:'ATRÁS — A LINHA TRACEJADA',say:'/bɪˈhaɪnd/',
+   pt:'atrás de',
+   d:'Atrás quer dizer que a coisa <b>tapa</b> você. Na foto, se você só vê parte dela, ela está atrás — e é isso que a palavra diz.',
+   ex:'I am behind the box.'},
+ 'infront':{w:'in front of',tp:'TRÊS PALAVRAS, UM SOM',say:'/ɪn ˈfrʌnt əv/',
+   pt:'na frente de',
+   d:'São três palavras e na boca elas viram uma só: <i>infruntov</i>. O <b>OF</b> não é opcional — sem ele a frase não existe.',
+   ex:'I am in front of the box.',
+   no:'I am in front the box.',si:'I am in front of the box.'},
+ 'between':{w:'between',tp:'PRECISA DE DOIS',say:'/bɪˈtwiːn/',
+   pt:'entre',
+   d:'BETWEEN só funciona com <b>duas coisas</b>, e as duas têm de ser ditas: <i>between the chair <b>and</b> the box</i>. Uma coisa só não tem entre.',
+   ex:'I am between the chair and the box.'},
+ 'nextto':{w:'next to',tp:'DO LADO',say:'/nekst tuː/',pt:'ao lado de',
+   d:'Do lado, perto o bastante para encostar o braço. É a mais fácil das sete e a que sai primeiro.',
+   ex:'I am next to the box.'}};
+
+var L=[
+
+/* ── GUIA ─────────────────────────────────────────────────────── */
+{type:'protocol',ch:'Teacher Guide',
+ t:'Where Is It',
+ pre:'Seven of these he can point at. Two of them his language never separates &mdash; and those two are the only grammar in the hour.',
+ objetivos:[
+  'put a thing in seven places: <b>next to, in front of, behind, under, above, between, on</b>',
+  'choose between <b>in</b> and <b>at</b> with one question',
+  'say what he does in a place, and let that decide the word',
+  'learn four pairs that have <b>no rule at all</b>, as combinations',
+  'describe a real room out loud, with the position word first'],
+ teacher:{sec:'—',
+  do:'Read the two halves before you open the lesson. The seven positions are vocabulary and they come out with the body &mdash; move your own body while he speaks. IN and AT are the only grammar in the hour.',
+  watch:'His language uses one word for IN, ON and AT. The seven positions it separates one by one, so those are not the trap. The trap is a choice his language never asked him to make.',
+  stuck:'One question solves the second half: <b>what do you do there?</b> An answer means AT. No answer means IN.',
+  strong:'Ask for the opposite of each position before you move on.'}},
+
+/* ── I · CONVERSATION · a primeira página é conversa ─────────────
+   Sem campo de digitar: quatro respostas para ele escolher e dizer em
+   voz alta, e a escolhida volta na cena IX. */
+{type:'wiabre',ch:'I · Look Around',min:3,layout:'imgcon',modo:'CONVERSATION',
+ kick:'A1 · WHERE THINGS ARE',
+ foto:'img/pos-fone.jpg',cap:'A TABLE, A PHONE, A BOOK',
+ t:'Where is your phone right now?',
+ pre:'Before anything else, your own room.',
+ como:'Say it out loud <b>first</b>. Then pick the one that is true.',
+ rotulo:'WHAT HE SAID',
+ escolhas:[
+  {t:'On the table.',d:'Touching the surface. That is ~on~.'},
+  {t:'In my pocket.',d:'Inside something with sides. That is ~in~.'},
+  {t:'In my hand.',d:'Also inside &mdash; a hand closes around it.'},
+  {t:'Under a book.',d:'Covered by the thing on top. That is ~under~.'}],
+ dica:'Nothing here gets corrected. This is the before picture.',
+ done:'Three words of English, before anybody explained anything. It comes back at the end of the hour.',
+ teacher:{sec:'3 min · conversation',
+  do:'Point at your own phone and say your own answer first &mdash; &ldquo;On the table.&rdquo; &mdash; then point at him and wait. He speaks in the first ninety seconds and it costs him three words.',
+  watch:'Whatever comes out, take it. He picks the card after he has said it, never before &mdash; the card is the record, not the exercise.',
+  stuck:'Pick the phone up, put it under a book, and ask again.',
+  strong:'Ask about two more things in the room.'}},
+
+/* ── II · AUDIO · ouvir, dizer, e só então ler ───────────────── */
+{type:'wiouve',ch:'II · Listen',min:6,layout:'split',modo:'AUDIO',script:1,
+ t:'I am next to the box.',
+ pre:'Five places. Listen, say it, and only then look.',
+ como:'Press it. Say it out loud. <b>Then</b> the words appear.',
+ linhas:[
+  {au:'s-nextto.mp3',en:'I am ~nextto~ the box.',k:'next to'},
+  {au:'s-infront.mp3',en:'I am ~infront~ the box.',k:'in front of'},
+  {au:'s-behind.mp3',en:'I am ~behind~ the box.',k:'behind'},
+  {au:'s-under.mp3',en:'I am ~under~ the box.',k:'under'},
+  {au:'s-on.mp3',en:'I am ~on~ the chair.',k:'on'}],
+ fecho:'Now say one about something in your own room.',
+ dica:'IN FRONT OF is three words and it comes out as one sound.',
+ done:'Five places, and you can point at every one of them.',
+ teacher:{sec:'6 min · the listening scene',
+  do:'HEAR IT, SAY IT, THEN SEE IT &mdash; the order never changes. Move your own body while he says it: stand next to your chair, then behind it. Beginners copy a body long before they copy a phrase.',
+  watch:'IN FRONT OF is three words and it comes out as one. Say it fast, once, and let him chase the speed.',
+  stuck:'Say it with him, at the same time, twice.',
+  strong:'Ask for the opposite of each one before you move on.'}},
+
+/* ── III · CINEMATIC · o vídeo, só os ouvidos ────────────────── */
+{type:'wivideo',ch:'III · Watch',min:5,layout:'wide',modo:'CINEMATIC',
+ t:'Six positions',
+ pre:'Ears only. Nothing to read yet.',
+ como:'Watch twice. Tap each word <b>when you hear it</b>.',
+ video:'pCoefMybtYc',de:16,ate:74,au:'v-clear.mp3',
+ credito:'BBC LEARNING ENGLISH · PREPOSITIONS OF PLACE',
+ palavras:['next to','in front of','behind','under','above','between'],
+ done:'Six positions, and one person who cannot stay still.',
+ teacher:{sec:'5 min',
+  do:'Read the six out loud before you press play, then play it twice. Say out loud that nobody has to understand the rest &mdash; it removes half the fear in one sentence.',
+  watch:'She moves fast and the fun is half the point. Let him laugh; a student who laughed at minute twelve is still awake at minute fifty.',
+  stuck:'Play it a third time and tap the first one yourself.',
+  strong:'Ask him to do the moves with her, standing up.'}},
+
+/* ── IV · A PRANCHA · a cena que a face existe para fazer ─────────
+   O cartão move a figura NO DESENHO e troca a foto ao lado. O lugar na
+   tela é a preposição, e BEHIND sai tracejado — convenção de prancha:
+   aresta escondida é tracejada. Ninguém explica e todo mundo entende. */
+{type:'wiprancha',ch:'IV · The Wall',min:10,layout:'imgcon',modo:'VISUAL',
+ t:'Move it',
+ pre:'A chair, a box, and a wooden figure that goes wherever you put it.',
+ como:'Tap a card. Watch it move. <b>Then</b> say the sentence out loud.',
+ foto:'img/pos-start.jpg',
+ legenda:'THE ROOM',
+ poses:[
+  {k:'nextto',t:'next to',im:'img/pos-nextto.jpg',say:'I am ~nextto~ the box.',au:'s-nextto.mp3',
+   cota:'beside it, same height'},
+  {k:'behind',t:'behind',im:'img/pos-behind.jpg',say:'I am ~behind~ the box.',au:'s-behind.mp3',
+   cota:'you only see part of it'},
+  {k:'on',t:'on',im:'img/pos-on.jpg',say:'I am ~on~ the chair.',au:'s-on.mp3',
+   cota:'resting on it, touching'},
+  {k:'under',t:'under',im:'img/pos-under.jpg',say:'I am ~under~ the box.',au:'s-under.mp3',
+   cota:'below it, covered'},
+  {k:'between',t:'between',im:'img/pos-between.jpg',say:'I am ~between~ the chair and the box.',au:'s-between.mp3',
+   cota:'two things, and you need both'},
+  {k:'infront',t:'in front of',im:'img/pos-infront.jpg',say:'I am ~infront~ the box.',au:'s-infront.mp3',
+   cota:'nearer to you than the box'},
+  {k:'above',t:'above',im:'img/pos-above.jpg',say:'The box is ~above~ my head.',au:'s-above.mp3',
+   cota:'higher, and not touching'}],
+ done:'Seven positions, and not one of them needed a rule.',
+ teacher:{sec:'10 min · the hour',
+  do:'THIS SCENE IS THE HOUR. Every card costs one sentence out loud &mdash; seven cards, seven sentences. Nothing here has to be memorised: it is all in the picture, and the picture moves.',
+  watch:'BEHIND and IN FRONT OF are the pair that swap under pressure. Do those two twice, and do them with your own body, not with words. <b>Point at the dashed outline</b> when you do BEHIND &mdash; hidden means dashed, and that lands without translation.',
+  stuck:'Put a real box on your desk and move your hand.',
+  strong:'You say a sentence, he moves it before you finish.'}},
+
+/* ── V · BOARD · sete seguidas ───────────────────────────────── */
+{type:'wiseguidas',ch:'V · Seven in a Row',min:5,layout:'wide',modo:'BOARD',
+ t:'Seven whole sentences, one after the other',
+ pre:'Saying it is faster than translating it.',
+ como:'Say the <b>whole sentence</b>. Then tap the card and go on.',
+ cartas:[
+  {n:'next to',w:'the box'},{n:'behind',w:'the box'},{n:'in front of',w:'the box'},
+  {n:'under',w:'the box'},{n:'above',w:'my head'},{n:'between',w:'the chair and the box'},
+  {n:'on',w:'the chair'}],
+ dica:'BETWEEN is the long one. Both halves, always: the chair AND the box.',
+ done:'Seven whole sentences in a row, and every one of them whole.',
+ teacher:{sec:'5 min',
+  do:'FULL SENTENCES, not single words. You say GO and he goes &mdash; seven, one after the other, no stopping. Run it twice and let the second run beat the first.',
+  watch:'BETWEEN is the long one. If he stumbles there, that is the card to open the next class with.',
+  stuck:'Say the first three with him, out loud.',
+  strong:'Backwards, from the last card.'}},
+
+/* ── VI · CONTRAST · a única gramática da hora ───────────────── */
+{type:'wiinat',ch:'VI · What Do You Do There?',min:8,layout:'wide',modo:'CONTRAST',script:1,
+ t:'in, or at?',
+ pre:'Those were the ones you can see. These you have to decide.',
+ como:'Ask yourself one question: <b>what do you do there?</b> Then choose.',
+ pergunta:'WHAT DO YOU DO THERE?',
+ op:[{k:'in',rot:'IN',oq:'a space, with sides'},{k:'at',rot:'AT',oq:'a place with a job'}],
+ lugares:[
+  {n:'the airport',k:'at',faz:'catch a flight',say:'I am ~at~ the airport.',au:'a-airport.mp3',
+   w:'People go there to catch a flight. That is an activity.'},
+  {n:'the house',k:'in',faz:'&mdash;',say:'I am ~in~ the house.',au:'a-house.mp3',
+   w:'A house is a space with walls. No activity, no AT.'},
+  {n:'the supermarket',k:'at',faz:'buy food',say:'I am at the supermarket.',au:'a-super.mp3',
+   w:'People go there to buy food. AT.'},
+  {n:'the kitchen',k:'in',faz:'&mdash;',say:'I am in the kitchen.',au:'a-kitchen.mp3',
+   w:'A room inside a house. A space, not an activity.'},
+  {n:'the station',k:'at',faz:'take a train',say:'I am at the station.',au:'a-station.mp3',
+   w:'People go there to take a train. AT.'},
+  {n:'the car',k:'in',faz:'&mdash;',say:'I am in the car.',au:'a-car.mp3',
+   w:'You are inside it, with the doors shut. IN.'}],
+ recusa:'Ask it again: what do you do there?',
+ done:'Bigger and general is IN. There for a reason is AT.',
+ teacher:{sec:'8 min · the only grammar',
+  do:'ASK THE QUESTION OUT LOUD every time before he chooses: what do you do there? If the answer is a job &mdash; catch a flight, buy food, take a train &mdash; it is AT. If there is no answer, it is a space, and spaces take IN.',
+  watch:'Say why only these two lock, out loud: the seven from the last scene his language also separates one by one, so they come out on their own. IN, ON and AT are the three his language does with a single word. It is not one more rule &mdash; it is a choice his language never asked him to make.',
+  stuck:'Answer the question yourself and let him choose the word.',
+  strong:'Three places from his own week, and the question for each.'}},
+
+/* ── VII · CINEMATIC · o vídeo de novo, e agora ele já sabe ─── */
+{type:'wivideo',ch:'VII · Watch',min:4,layout:'wide',modo:'CINEMATIC',
+ t:'Six words',
+ pre:'Same person. Faster now, and this time you already know the answer.',
+ como:'Watch. Tap each word when you hear it.',
+ video:'pCoefMybtYc',de:88,ate:128,au:'v-inat.mp3',
+ credito:'BBC LEARNING ENGLISH · IN AND AT',
+ palavras:['in','at','spaces','activities','supermarket','airport'],
+ done:'She said in forty seconds what you worked out yourself in eight minutes.',
+ teacher:{sec:'4 min',
+  do:'PLAY THIS ONLY AFTER THE LAST SCENE, never before. He already knows the answer; this cut is a native speaker agreeing with him, and that feeling is worth four minutes.',
+  watch:'She says LARGER AND MORE GENERAL fast. He does not need those words. He needs the two examples.',
+  stuck:'Play it a third time.',
+  strong:'Pause after each example and let him finish it.'}},
+
+/* ── VIII · BOARD · o cofre, e não há regra ──────────────────── */
+{type:'wicofre',ch:'VIII · No Rule Here',min:7,layout:'wide',modo:'BOARD',script:1,
+ t:'Just the combination',
+ pre:'Four pairs that break the question. Nobody can explain them, and that is not your fault.',
+ como:'Tap a pair. Say <b>both halves</b> out loud, twice.',
+ pares:[
+  {a:'in the office',b:'at work',au:'k-work.mp3',
+   w:'Same place, most days. Two different words.'},
+  {a:'in the house',b:'at home',au:'k-home.mp3',
+   w:'The building is a house. The feeling is home.'},
+  {a:'in the classroom',b:'at school',au:'k-school.mp3',
+   w:'One room, one whole place.'},
+  {a:'in the shop',b:'at the shops',au:'k-shops.mp3',
+   w:'One shop, and the whole street of them.'}],
+ done:'Four combinations. No rule, and nobody is going to give you one.',
+ teacher:{sec:'7 min',
+  do:'SAY OUT LOUD, BEFORE YOU START, that this scene has no rule and that it is not his fault. A student who stops hunting for logic here saves ten minutes of frustration and learns the four pairs faster.',
+  watch:'He will ask why. The honest answer is that nobody knows, and saying so builds more trust than inventing something.',
+  stuck:'Say both halves yourself and let him repeat.',
+  strong:'Use all four in one sentence about today.'}},
+
+/* ── IX · CONVERSATION · a devolução ─────────────────────────── */
+{type:'wivolta',ch:'IX · Your Turn',min:6,layout:'wide',modo:'CONVERSATION',
+ t:'Where are you?',
+ pre:'Everything together now. A real room, and a real person.',
+ como:'Say all three out loud. <b>Then</b> tap the round.',
+ semregistro:'Nothing saved from the first minutes. Ask him where his phone is again.',
+ rodadas:[
+  {t:'Slowly. You can read the steps.',
+   passos:['Where is your phone?','It is on&hellip;','And yours?']},
+  {t:'Now three real things in this room.',
+   passos:['The book is next to&hellip;','The chair is in front of&hellip;','My bag is under&hellip;']},
+  {t:'Now with in or at.',
+   passos:['I am at&hellip;','I am in&hellip;','And on Sunday?']},
+  {t:'Last one. No looking down.',
+   passos:['Where are you now?','Where were you at eight?','And tomorrow?']}],
+ done:'You put things in seven different places today, and asked about all of them.',
+ teacher:{sec:'6 min · conversation',
+  do:'ROUND TWO IS THE PAYOFF: real objects in the real room, described out loud with no cards on the screen. Round four is free &mdash; screen turned away if you can.',
+  watch:'If IN and AT come out swapped in round four, that is normal on day one. Note it and open the next class with the question: what do you do there?',
+  stuck:'Go back to round one and do it twice more.',
+  strong:'A fifth round where he describes the room and you draw it.'}},
+
+/* ── fecho ────────────────────────────────────────────────────── */
+{type:'clear',ch:'Done',min:1,layout:'void',
+ t:'WHERE IS IT',
+ lead:'next to &middot; in front of &middot; behind &middot; under &middot; above &middot; between &middot; on &middot; in &middot; at',
+ duas:[
+  {k:'SEVEN YOU CAN POINT AT',p:'next to &middot; in front of &middot; behind &middot; under &middot; above &middot; between &middot; on'},
+  {k:'TWO YOU HAVE TO ASK ABOUT',p:'<b>in</b> a space &middot; <b>at</b> a place with a job'}],
+ teacher:{sec:'1 min',
+  do:'Nine words. Seven of them he can point at, and two of them he has to ask a question about. Read the line together and end the class there.',
+  watch:'—'}},
+
+/* ── EXTRA · mais seis ────────────────────────────────────────── */
+{type:'wiinat',opt:1,ch:'Extra · Six More',min:5,layout:'wide',modo:'CONTRAST',
+ t:'in or at, faster',
+ pre:'No help underneath now. Just the question.',
+ como:'Ask the question. Then choose, and say it whole.',
+ pergunta:'WHAT DO YOU DO THERE?',
+ op:[{k:'in',rot:'IN',oq:'a space, with sides'},{k:'at',rot:'AT',oq:'a place with a job'}],
+ lugares:[
+  {n:'the hospital',k:'at',faz:'see a doctor',say:'I am at the hospital.',w:'Somebody goes there to see a doctor.'},
+  {n:'the bedroom',k:'in',faz:'&mdash;',say:'I am in the bedroom.',w:'A room. A space, not an activity.'},
+  {n:'the bus stop',k:'at',faz:'wait for a bus',say:'I am at the bus stop.',w:'You are there to wait for a bus.'},
+  {n:'the garden',k:'in',faz:'&mdash;',say:'I am in the garden.',w:'A space, with the house on one side.'},
+  {n:'the gym',k:'at',faz:'train',say:'I am at the gym.',w:'People go there to train.'},
+  {n:'the elevator',k:'in',faz:'&mdash;',say:'I am in the elevator.',w:'You are inside it, with the doors shut.'}],
+ recusa:'Ask it again: what do you do there?',
+ done:'Faster than the first time. That is the whole point.',
+ teacher:{sec:'5 min · extra',
+  do:'Only for whoever finishes early. Ask the question out loud, he answers, he chooses.',
+  watch:'No explanation underneath this time. The question is the only help.',
+  stuck:'Ask: what do you do there?',
+  strong:'No repeats. One try each.'}},
+
+/* ── EXTRA · sessenta segundos ────────────────────────────────── */
+{type:'wisessenta',opt:1,ch:'Extra · Sixty Seconds',min:5,layout:'void',modo:'IMMERSIVE',
+ t:'This room',
+ pre:'One minute. Where everything is.',
+ como:'Your teacher keeps the minute. You keep talking.',
+ prompt:'One minute about this room. Where is everything? No stopping.',
+ socorro:['The&hellip; is next to&hellip;','The&hellip; is under&hellip;','I am at&hellip;','Between the&hellip; and the&hellip;'],
+ nota:'No clock on this screen, on purpose. A clock measures hurry; this scene measures speaking.',
+ done:'—',
+ teacher:{sec:'5 min · extra',
+  do:'YOU keep the minute, on your own watch, and you do not interrupt for anything. Write the errors down and give them all at the end, in ten seconds.',
+  watch:'Listen for one thing only: did the position word land before the thing?',
+  stuck:'Point at one object and let him start there.',
+  strong:'Sixty seconds again, and the second run has to be better.'}},
+
+/* ── EXTRA · o vídeo inteiro ──────────────────────────────────── */
+{type:'wivideo',opt:1,ch:'Extra · The Whole Thing',min:5,layout:'wide',modo:'CINEMATIC',
+ t:'Watch it all',
+ pre:'Nothing to do. Just watch, and notice how much you follow.',
+ como:'Tap each word when you hear it. Only if you want to.',
+ video:'pCoefMybtYc',de:1,ate:150,au:'v-clear.mp3',
+ credito:'BBC LEARNING ENGLISH · THE WHOLE CUT',
+ palavras:['next to','behind','under','above','in','at'],
+ done:'You said every one of those out loud today. And you followed it.',
+ teacher:{sec:'5 min · extra',
+  do:'Only at the end, and only if there is time. He has used every word in this video out loud already, so he follows it &mdash; and feeling that is worth more than another exercise.',
+  watch:'She ends by saying there is no fast track. That is the most useful sentence in the video. Let it land.',
+  stuck:'—',
+  strong:'Ask which one was the hardest, and why.'}}
+];
+
+/* ══════════════════════════════════════════════════════════════════
+   CENAS · WHERE IS IT · face PLANTA
+   A prancha: papel de malha, folha de desenho, ciano de heliográfica.
+   A cena IV é a razão desta face existir — o LUGAR da figura no desenho
+   é a preposição, e a convenção da prancha (aresta escondida é
+   tracejada) ensina BEHIND sem uma palavra de explicação.
+   Nada nesta aula pede para digitar.
+   ══════════════════════════════════════════════════════════════════ */
+var CENA={};
+
+function MODO(s){ return s.modo?'<span class="modo">'+s.modo+'</span>':''; }
+
+CENA.protocol=function(s){
+  return LAY({layout:'wide'},'<div class="col mid" style="gap:var(--s5)">'
+   +'<div class="hd"><div class="kk"><span class="kick">TEACHER GUIDE</span></div>'
+   +'<h2>'+T(s.t)+'</h2><p class="pre en">'+T(s.pre)+'</p></div>'
+   +'<div class="bd"><div class="bh"><span class="tag ac">WHAT THEY LEAVE ABLE TO DO</span></div>'
+   +'<div class="in"><ol class="obj2">'+s.objetivos.map(function(o){
+       return '<li><span class="en">'+T(o)+'</span></li>'; }).join('')+'</ol></div></div>'
+   +'<p class="como">Press <b>G</b> for the teacher column. <b>S</b> opens the scene list.</p>'
+   +'</div>');
+};
+
+/* ── I · CONVERSATION · sem campo de digitar ─────────────────── */
+CENA.wiabre=function(s){
+  return LAY(s,
+   '<div class="obra grande"><img src="'+s.foto+'" alt=""><cap>'+T(s.cap)+'</cap></div>'
+  +'<div class="col etiq abre">'+MODO(s)+HD(s)+COMO(s)
+   +'<div class="esc">'+s.escolhas.map(function(e){
+      return '<button class="op1'+(S.d.onde===e.t?' pego':'')+'" data-onde="'+esc(e.t)+'">'
+       +'<span class="en">'+T(e.t)+'</span><i>'+T(e.d)+'</i></button>';
+    }).join('')+'</div>'
+   +'<div class="linha"><span class="sp"></span>'+DICA(s.dica)+'</div>'
+   +DN(s)+'</div>');
+};
+
+/* ── II · AUDIO · ouvir, dizer, ler ──────────────────────────── */
+CENA.wiouve=function(s){
+  return LAY(s,
+   '<div class="col">'+MODO(s)+HD(s)+COMO(s)
+    +'<div class="ph obra grow"><img src="img/pos-nextto.jpg" alt="">'
+      +'<cap>NEXT TO THE BOX</cap></div>'
+    +'<div class="linha"><span class="sp"></span>'+DICA(s.dica)+'</div></div>'
+  +'<div class="col">'
+   +'<div class="bd grow"><div class="bh"><span class="tag ac">FIVE PLACES</span>'
+     +'<span class="sp"></span><span class="tag" id="lc">0 / 5</span></div>'
+    +'<div class="in">'+s.linhas.map(function(l,i){
+       return '<div class="lo" data-lo="'+i+'">'+PLAY(l.au,'HEAR','sm')
+        +'<button class="ver">say it, then tap</button>'
+        +'<span class="en txt" hidden>'+T(l.en)+'</span></div>';
+     }).join('')+'</div></div>'
+   +'<p class="fecho en">'+T(s.fecho)+'</p>'
+   +DN(s)+'</div>');
+};
+
+/* ── III e VII · CINEMATIC · o vídeo ─────────────────────────── */
+CENA.wivideo=function(s){
+  return LAY(s,'<div class="col mid">'+MODO(s)+HD(s)+COMO(s)
+   +'<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/'+s.video
+     +'?start='+s.de+'&end='+s.ate+'&rel=0&modestbranding=1" allowfullscreen '
+     +'title="video"></iframe></div>'
+   +'<div class="linha"><span class="sp"></span>'+PLAY(s.au,'NO VIDEO? PLAY THE AUDIO','sm')
+     +'<span class="sp"></span></div>'
+   +'<div class="pals">'+s.palavras.map(function(p,i){
+      return '<button class="pal" data-pal="'+i+'"><span class="en">'+T(p)+'</span></button>';
+    }).join('')+'</div>'
+   +'<p class="credito">'+T(s.credito)+'</p>'
+   +DN(s)+'</div>');
+};
+
+/* ── IV · A PRANCHA · a cena da hora ─────────────────────────── */
+CENA.wiprancha=function(s){
+  return LAY(s,
+   '<div class="obra grande" id="obra"><img src="'+s.foto+'" alt="" id="fotoim"></div>'
+  +'<div class="col etiq">'+MODO(s)+HD(s)+COMO(s)
+   +'<div class="placa" id="placa">'
+     +'<k id="fotocap">'+T(s.legenda)+'</k>'
+     +'<p class="diz en" id="diz">Tap a card. It moves.</p>'
+     +'<i class="cota" id="cota"></i></div>'
+   +'<div class="cards">'+s.poses.map(function(p,i){
+      return '<button class="cd" data-cd="'+i+'" data-k="'+p.k+'">'
+       +'<span class="en">'+T(p.t)+'</span></button>';
+    }).join('')+'</div>'
+   +DN(s)+'</div>');
+};
+
+/* ── V · BOARD · sete seguidas ───────────────────────────────── */
+CENA.wiseguidas=function(s){
+  return LAY(s,'<div class="col mid">'+MODO(s)+HD(s)+COMO(s)
+   +'<div class="fila">'+s.cartas.map(function(c,i){
+      return '<button class="ct2" data-ct2="'+i+'">'
+       +'<k>'+String(i+1).padStart(2,'0')+'</k>'
+       +'<b class="en">I am '+T(c.n)+'</b><i class="en">'+T(c.w)+'</i></button>';
+    }).join('')+'</div>'
+   +'<div class="linha"><span class="tag" id="fc">0 / 7</span>'
+     +'<span class="sp"></span>'+DICA(s.dica)+'</div>'
+   +DN(s)+'</div>');
+};
+
+/* ── VI · CONTRAST · in ou at ────────────────────────────────── */
+CENA.wiinat=function(s){
+  return LAY(s,'<div class="col mid">'+MODO(s)+HD(s)+COMO(s)
+   +'<div class="perg"><span class="pq3">'+T(s.pergunta)+'</span>'
+     +s.op.map(function(o){ return '<span class="dporta"><b>'+o.rot+'</b>'
+       +'<i>'+T(o.oq)+'</i></span>'; }).join('')+'</div>'
+   +'<div class="bd"><div class="bh"><span class="tag ac">'+s.lugares.length+' PLACES</span>'
+     +'<span class="sp"></span><span class="tag" id="ic">0 / '+s.lugares.length+'</span></div>'
+    +'<div class="in"><div class="seis">'+s.lugares.map(function(l,i){
+       return '<div class="lu" data-lu="'+i+'" data-ok="'+l.k+'">'
+        +'<div class="luh"><span class="nome en">'+T(l.n)+'</span>'
+          +(l.au?PLAY(l.au,'','sm'):'')+'</div>'
+        +'<div class="lub">'+s.op.map(function(o){
+            return '<button class="peca opt" data-o="'+o.k+'">'+o.rot+'</button>';
+          }).join('')+'</div>'
+        +'<div class="lur" hidden><p class="say en">'+T(l.say)+'</p>'
+          +'<p class="w">'+T(l.w)+'</p></div></div>';
+     }).join('')+'</div></div></div>'
+   +'<p class="recusa" hidden>'+T(s.recusa)+'</p>'
+   +DN(s)+'</div>');
+};
+
+/* ── VIII · BOARD · o cofre ──────────────────────────────────── */
+CENA.wicofre=function(s){
+  return LAY(s,'<div class="col mid">'+MODO(s)+HD(s)+COMO(s)
+   +'<div class="cofre">'+s.pares.map(function(p,i){
+      return '<div class="cf2" data-cf2="'+i+'">'
+       +'<div class="cfl"><b class="en">'+T(p.a)+'</b>'
+         +'<span class="mais">·</span><b class="en b2">'+T(p.b)+'</b></div>'
+       +'<div class="cfa">'+PLAY(p.au,'SAY BOTH, TWICE','sm')+'</div>'
+       +'<p class="w" hidden>'+T(p.w)+'</p></div>';
+    }).join('')+'</div>'
+   +'<div class="linha"><span class="tag" id="kc">0 / 4</span><span class="sp"></span></div>'
+   +DN(s)+'</div>');
+};
+
+/* ── IX · CONVERSATION · a devolução ─────────────────────────── */
+CENA.wivolta=function(s){
+  var g=S.d.onde||'';
+  return LAY(s,'<div class="col mid">'+MODO(s)+HD(s)+COMO(s)
+   +'<div class="volta">'+(g
+      ? '<k>WHAT YOU SAID IN THE FIRST MINUTE</k><p class="en">&ldquo;'+T(g)+'&rdquo;</p>'
+      : '<k>NOTHING SAVED</k><p class="en">'+T(s.semregistro)+'</p>')+'</div>'
+   +'<div class="rods">'+s.rodadas.map(function(r,i){
+      return '<div class="rd3" data-rd3="'+i+'">'
+       +'<div class="r3h"><k>ROUND '+(i+1)+'</k><span class="en">'+T(r.t)+'</span></div>'
+       +'<ol class="pass">'+r.passos.map(function(p){
+           return '<li class="en">'+T(p)+'</li>'; }).join('')+'</ol>'
+       +'<button class="go feitob">SAID ALL THREE</button></div>';
+    }).join('')+'</div>'
+   +DN(s)+'</div>');
+};
+
+/* ── fecho ───────────────────────────────────────────────────── */
+CENA.clear=function(s){
+  return LAY(s,'<div class="col mid" style="align-items:center;text-align:center">'
+   +'<div class="selo"></div>'
+   +'<h2 class="fim">'+T(s.t)+'</h2>'
+   +'<p class="lead en">'+T(s.lead)+'</p>'
+   +'<div class="duas">'+s.duas.map(function(d){
+      return '<div class="d2"><k>'+T(d.k)+'</k><p class="en">'+T(d.p)+'</p></div>';
+    }).join('')+'</div></div>');
+};
+CENA.void=CENA.clear;
+
+/* ── EXTRA · sessenta segundos ───────────────────────────────── */
+CENA.wisessenta=function(s){
+  return LAY(s,'<div class="col mid arena">'+MODO(s)
+   +'<h2 class="vaz">'+T(s.t)+'</h2>'
+   +'<p class="prompt en">'+T(s.prompt)+'</p>'
+   +COMO(s)
+   +'<div class="soc">'+s.socorro.map(function(c,i){
+      return '<button class="cart" data-cart="'+i+'"><k>'+String(i+1).padStart(2,'0')+'</k>'
+       +'<span class="en" hidden>'+T(c)+'</span></button>';
+    }).join('')+'</div>'
+   +'<p class="nota">'+T(s.nota)+'</p></div>');
+};
+
+/* ══════════════════════════════════════════════════════════════════
+   CLIQUES
+   ══════════════════════════════════════════════════════════════════ */
+function conta(sel,id,tot){
+  var n=document.querySelectorAll(sel).length;
+  var c=document.getElementById(id); if(c) c.textContent=n+' / '+tot;
+  if(n===tot) feito();
+  return n;
+}
+
+document.addEventListener('click',function(e){
+  var t=e.target, s=comLocal(L[S.i],S.i);
+
+  /* I · a resposta dele, escolhida e não digitada */
+  var o1=t.closest('[data-onde]');
+  if(o1){
+    S.d.onde=o1.getAttribute('data-onde'); grava();
+    var irm=o1.parentNode.querySelectorAll('.op1');
+    for(var i=0;i<irm.length;i++) irm[i].classList.remove('pego');
+    o1.classList.add('pego'); feito(); return; }
+
+  /* II · disse, então lê */
+  if(t.closest('.ver')){
+    var lo=t.closest('.lo');
+    lo.querySelector('.txt').hidden=false; lo.classList.add('feita');
+    t.closest('.ver').remove();
+    conta('.lo.feita','lc',5); return; }
+
+  /* III e VII · a palavra ouvida */
+  var pl=t.closest('.pal');
+  if(pl){ pl.classList.toggle('ouvi');
+    if(document.querySelectorAll('.pal.ouvi').length===s.palavras.length) feito();
+    return; }
+
+  /* IV · A PRANCHA · o cartão move a figura no desenho E troca a foto */
+  var cd=t.closest('.cd');
+  if(cd){
+    var p=s.poses[+cd.getAttribute('data-cd')];
+    var im=document.getElementById('fotoim');
+    im.src=p.im; im.classList.remove('entra'); void im.offsetWidth; im.classList.add('entra');
+    document.getElementById('fotocap').textContent=p.t.toUpperCase();
+    document.getElementById('cota').textContent=p.cota;
+    var d=document.getElementById('diz');
+    d.innerHTML=T(p.say);
+    som(p.au,null);
+    var irm2=cd.parentNode.querySelectorAll('.cd');
+    for(var j=0;j<irm2.length;j++) irm2[j].classList.remove('on');
+    cd.classList.add('on','fez');
+    conta('.cd.fez','',7);
+    if(document.querySelectorAll('.cd.fez').length===7) feito();
+    return; }
+
+  /* V · sete seguidas */
+  var c2=t.closest('.ct2');
+  if(c2 && !c2.classList.contains('fez')){
+    c2.classList.add('fez'); conta('.ct2.fez','fc',7); return; }
+
+  /* VI · in ou at */
+  var op=t.closest('.opt');
+  if(op){
+    var lu=t.closest('.lu');
+    if(lu.classList.contains('feita')) return;
+    if(op.getAttribute('data-o')!==lu.getAttribute('data-ok')){
+      op.classList.add('err');
+      var r=document.querySelector('.recusa'); if(r) r.hidden=false;
+      return; }
+    op.classList.add('ok'); lu.classList.add('feita');
+    lu.querySelector('.lur').hidden=false;
+    conta('.lu.feita','ic',s.lugares.length); return; }
+
+  /* VIII · o cofre */
+  var cf=t.closest('.cf2');
+  if(cf && !t.closest('.pl') && !cf.classList.contains('fez')){
+    cf.classList.add('fez'); cf.querySelector('.w').hidden=false;
+    conta('.cf2.fez','kc',4); return; }
+
+  /* IX · a rodada */
+  if(t.closest('.feitob')){
+    var rd=t.closest('.rd3');
+    rd.classList.add('fez'); t.closest('.feitob').remove();
+    if(document.querySelectorAll('.rd3.fez').length===4) feito();
+    return; }
+
+  /* extra · a carta de socorro */
+  var ct=t.closest('.cart');
+  if(ct){ ct.classList.add('ab'); ct.querySelector('.en').hidden=false; return; }
+});
+
+/* ══════════════════════════════════════════════════════════════════
+   CAMADA LOCAL DO PROFESSOR
+   A aula publicada é imutável. O que o professor muda vive só no
+   navegador dele, como uma CAMADA POR CIMA — nunca por dentro.
+
+        AULA ORIGINAL  +  SOBREPOSIÇÃO LOCAL  =  o que ele vê
+
+   Nada aqui toca o `index.html`, nem a pasta, nem servidor nenhum.
+   ══════════════════════════════════════════════════════════════════ */
+var LOCAL=(function(){
+  var VERSAO=1;
+  var CHAVE='wolf-local::'+(window.AULA_ID||'aula');
+  var d={v:VERSAO,id:(window.AULA_ID||'aula'),atualizado:null,
+         campos:{},extras:{},notas:{}};
+  var falhou=false;
+
+  function carrega(){
+    try{
+      var cru=localStorage.getItem(CHAVE);
+      if(!cru) return;
+      var o=JSON.parse(cru);
+      if(!o||typeof o!=='object') return;
+      /* §38 · versão diferente é ignorada com segurança, nunca migra na marra */
+      if(o.v!==VERSAO) return;
+      d.campos=o.campos||{}; d.extras=o.extras||{}; d.notas=o.notas||{};
+      d.atualizado=o.atualizado||null;
+    }catch(e){ /* §36 · storage indisponível não apaga nada */ }
+  }
+  /* §37 · valida antes de gravar; se falhar, o último estado bom fica */
+  function grava(){
+    var texto;
+    try{ d.atualizado=new Date().toISOString(); texto=JSON.stringify(d); }
+    catch(e){ aviso('Local edits could not be saved on this device.'); return false; }
+    try{ localStorage.setItem(CHAVE,texto); falhou=false; salvou(); return true; }
+    catch(e){ falhou=true; aviso('Local edits could not be saved on this device.'); return false; }
+  }
+  function limpaTudo(){
+    d.campos={}; d.extras={}; d.notas={};
+    try{ localStorage.removeItem(CHAVE); }catch(e){}
+    d.atualizado=null;
+  }
+  carrega();
+  return {
+    dados:function(){ return d; },
+    campo:function(c){ return Object.prototype.hasOwnProperty.call(d.campos,c)?d.campos[c]:null; },
+    poe:function(c,v){ d.campos[c]=v; return grava(); },
+    tira:function(c){ delete d.campos[c]; return grava(); },
+    extrasDe:function(i){ return d.extras[i]||[]; },
+    poeExtra:function(i,q){ (d.extras[i]=d.extras[i]||[]).push(q); return grava(); },
+    mudaExtra:function(i,j,q){ if(d.extras[i]&&d.extras[i][j]){ d.extras[i][j]=q; return grava(); } },
+    tiraExtra:function(i,j){ if(d.extras[i]){ d.extras[i].splice(j,1);
+      if(!d.extras[i].length) delete d.extras[i]; return grava(); } },
+    nota:function(i){ return d.notas[i]||''; },
+    poeNota:function(i,t){ if(t) d.notas[i]=t; else delete d.notas[i]; return grava(); },
+    zera:limpaTudo,
+    quantos:function(){ var n=Object.keys(d.campos).length;
+      for(var k in d.extras) n+=d.extras[k].length;
+      return n+Object.keys(d.notas).length; },
+    falhou:function(){ return falhou; }
+  };
+})();
+
+/* ── ler um caminho dentro do objeto da cena ─────────────────────── */
+function leCaminho(o,c){
+  var p=c.split('.');
+  for(var i=0;i<p.length && o!=null;i++) o=o[p[i]];
+  return o;
+}
+function poeCaminho(o,c,v){
+  var p=c.split('.'), a=o;
+  for(var i=0;i<p.length-1;i++){ if(a[p[i]]==null) return; a=a[p[i]]; }
+  a[p[p.length-1]]=v;
+}
+
+/* ── a cena que o professor vê = original + sobreposição ──────────
+   O original NUNCA é tocado: isto devolve uma cópia. */
+function comLocal(s,i){
+  var tem=false, pref=i+'.';
+  var campos=LOCAL.dados().campos;
+  for(var k in campos) if(k.indexOf(pref)===0){ tem=true; break; }
+  var extras=LOCAL.extrasDe(i);
+  if(!tem && !extras.length) return s;
+
+  var c=JSON.parse(JSON.stringify(s));
+  for(var k2 in campos){
+    if(k2.indexOf(pref)!==0) continue;
+    var cam=k2.slice(pref.length);
+    if(leCaminho(c,cam)===undefined) continue;
+    poeCaminho(c,cam,campos[k2]);
+  }
+  if(extras.length){
+    c.hub=c.hub||{t:'WHAT ABOUT YOU?',qs:[]};
+    c.hub.qs=(c.hub.qs||[]).concat(extras.map(function(q){
+      return {q:q.q,s:q.s||'',pro:1};
+    }));
+  }
+  return c;
+}
+
+/* ── o que sai na tela: original é HTML de autor, sobreposição é
+      TEXTO PURO escapado (§30). O ~glossário~ continua funcionando. */
+function VAL(cam,orig){
+  var v=LOCAL.campo(cenaAtual()+'.'+cam);
+  if(v==null) return {html:T(orig||''),local:false};
+  return {html:T(esc(v)),local:true};
+}
+function cenaAtual(){ return S.i; }
+
+/* ── marca um pedaço de texto como editável ──────────────────────── */
+function ED(cam,orig,tag,cls){
+  var r=VAL(cam,orig);
+  tag=tag||'span';
+  return '<'+tag+' class="'+(cls||'')+(r.local?' temlocal':'')+'"'
+    +' data-ed="'+esc(cam)+'">'+r.html+'</'+tag+'>';
+}
+
+/* ══ MODO DE EDIÇÃO ═══════════════════════════════════════════════ */
+var EDITANDO=false;
+function modoEdicao(v){
+  EDITANDO=(v===undefined)?!EDITANDO:v;
+  document.body.classList.toggle('editando',EDITANDO);
+  document.getElementById('bedit').setAttribute('aria-pressed',EDITANDO);
+  var pn=document.getElementById('painel');
+  pn.classList.toggle('on',EDITANDO);
+  if(EDITANDO) pintaPainel(); else fechaCampo();
+  pinta();
+}
+
+/* o balão de edição de um campo */
+var ABERTO=null;
+function abreCampo(el){
+  fechaCampo();
+  var cam=el.getAttribute('data-ed');
+  var chave=S.i+'.'+cam;
+  var orig=leCaminho(L[S.i],cam);
+  var atual=LOCAL.campo(chave);
+  var cx=document.createElement('div');
+  cx.className='edcx';
+  cx.innerHTML=
+    '<div class="edh"><k>EDITING · '+esc(cam)+'</k><span class="sp"></span>'
+     +'<button class="cb" data-edx aria-label="fechar">&times;</button></div>'
+    +'<textarea class="edta" rows="3">'+esc(atual!=null?atual:semTags(orig))+'</textarea>'
+    +'<div class="edorig"><k>WOLF LABS ORIGINAL</k><p>'+esc(semTags(orig))+'</p></div>'
+    +'<div class="edf"><button class="go" data-edok>SAVE</button>'
+     +(atual!=null?'<button class="go gh" data-edreset>RESET THIS CHANGE</button>':'')
+     +'<span class="sp"></span><span class="edmsg"></span></div>';
+  el.insertAdjacentElement('afterend',cx);
+  ABERTO={el:el,cam:cam,cx:cx};
+  var ta=cx.querySelector('.edta'); ta.focus(); ta.setSelectionRange(ta.value.length,ta.value.length);
+}
+function fechaCampo(){ if(ABERTO&&ABERTO.cx&&ABERTO.cx.parentNode) ABERTO.cx.remove(); ABERTO=null; }
+/* o original é HTML de autor; no editor ele aparece como texto legível */
+function semTags(v){
+  return String(v==null?'':v).replace(/<[^>]*>/g,'')
+    .replace(/&mdash;/g,'—').replace(/&middot;/g,'·').replace(/&rsquo;/g,'’')
+    .replace(/&ldquo;/g,'“').replace(/&rdquo;/g,'”').replace(/&rarr;/g,'→')
+    .replace(/&amp;/g,'&').replace(/&nbsp;/g,' ');
+}
+
+/* ── o painel: nota, perguntas do professor, e o botão de restaurar ─ */
+function pintaPainel(){
+  var i=S.i, s=L[i];
+  var extras=LOCAL.extrasDe(i);
+  var meus=[]; var campos=LOCAL.dados().campos;
+  for(var k in campos) if(k.indexOf(i+'.')===0) meus.push(k.slice((i+'.').length));
+  document.getElementById('painelin').innerHTML=
+     '<p class="pnav">You are editing <b>your local copy</b>. Nothing here changes '
+    +'the Wolf Labs lesson, the published file, or another teacher&rsquo;s screen.</p>'
+    +'<div class="pnbl"><k>MY NOTE · '+(s.ch||'this scene')+'</k>'
+      +'<textarea class="pnnota" rows="2" placeholder="Private. Only you see this.">'
+      +esc(LOCAL.nota(i))+'</textarea>'
+      +'<s>Private to you. It lives in the TEACHER column, never on the student screen.</s></div>'
+    +'<div class="pnbl"><k>MY QUESTIONS</k>'
+      +(extras.length?'<ol class="pnqs">'+extras.map(function(q,j){
+          return '<li><span>'+esc(q.q)+'</span>'
+            +'<button class="cb" data-qdel="'+j+'" title="remover">&times;</button></li>';
+        }).join('')+'</ol>':'<p class="pnv">None yet.</p>')
+      +'<input class="pnq" placeholder="Add a question for this scene…">'
+      +'<s>Added to the WHAT ABOUT YOU hub of this scene, marked as yours.</s></div>'
+    +'<div class="pnbl"><k>MY EDITS IN THIS SCENE</k>'
+      +(meus.length?'<ul class="pned">'+meus.map(function(c){
+          return '<li><b>'+esc(c)+'</b><button class="cb" data-edundo="'+esc(c)+'">reset</button></li>';
+        }).join('')+'</ul>':'<p class="pnv">None in this scene.</p>')
+      +'</div>'
+    +'<div class="pnbl"><k>THIS LESSON</k>'
+      +'<p class="pnv">'+LOCAL.quantos()+' local change(s) saved on this computer.</p>'
+      +'<button class="go gh" id="pnzera">RESTORE THE ORIGINAL LESSON</button></div>';
+}
+
+/* ── avisos ──────────────────────────────────────────────────────── */
+var TOAST=null;
+function salvou(){ aviso('Saved on this computer.','ok'); }
+function aviso(txt,tipo){
+  var t=document.getElementById('toast');
+  t.textContent=txt; t.className='toast on '+(tipo||'err');
+  clearTimeout(TOAST); TOAST=setTimeout(function(){ t.className='toast'; },2200);
+}
+
+/* ── ligações ────────────────────────────────────────────────────── */
+document.addEventListener('click',function(e){
+  var t=e.target;
+  if(t.closest('#bedit')){ modoEdicao(); return; }
+  if(!EDITANDO) return;
+
+  var alvo=t.closest('[data-ed]');
+  if(alvo && !t.closest('.edcx')){ abreCampo(alvo); return; }
+  if(t.closest('[data-edx]')){ fechaCampo(); return; }
+  if(t.closest('[data-edok]')){
+    var v=ABERTO.cx.querySelector('.edta').value.trim();
+    var orig=semTags(leCaminho(L[S.i],ABERTO.cam));
+    if(v===orig||v===''){ LOCAL.tira(S.i+'.'+ABERTO.cam); } else { LOCAL.poe(S.i+'.'+ABERTO.cam,v); }
+    fechaCampo(); pinta(); pintaPainel(); return; }
+  if(t.closest('[data-edreset]')){
+    LOCAL.tira(S.i+'.'+ABERTO.cam); fechaCampo(); pinta(); pintaPainel(); return; }
+  var u=t.closest('[data-edundo]');
+  if(u){ LOCAL.tira(S.i+'.'+u.getAttribute('data-edundo')); pinta(); pintaPainel(); return; }
+  var qd=t.closest('[data-qdel]');
+  if(qd){ LOCAL.tiraExtra(S.i,+qd.getAttribute('data-qdel')); pinta(); pintaPainel(); return; }
+  if(t.closest('#pnzera')){
+    var b=t.closest('#pnzera');
+    if(b.dataset.certeza){ LOCAL.zera(); pinta(); pintaPainel();
+      aviso('Original lesson restored.','ok'); return; }
+    b.dataset.certeza='1';
+    b.textContent='Restore the original Wolf Labs lesson? Your local edits for this lesson will be removed. — CONFIRM';
+    setTimeout(function(){ if(b.dataset.certeza){ delete b.dataset.certeza;
+      b.textContent='RESTORE THE ORIGINAL LESSON'; } },5000);
+    return; }
+});
+document.addEventListener('keydown',function(e){
+  if(!EDITANDO) return;
+  if(e.key==='Enter' && e.target.classList.contains('pnq')){
+    var v=e.target.value.trim(); if(!v) return;
+    LOCAL.poeExtra(S.i,{q:v}); e.target.value=''; pinta(); pintaPainel(); }
+});
+document.addEventListener('change',function(e){
+  if(!EDITANDO) return;
+  if(e.target.classList.contains('pnnota')){ LOCAL.poeNota(S.i,e.target.value.trim()); }
+});
+
+/* ══════════════════════════════════════════════════════════════════
+   NÚCLEO · o que toda aula usa e nenhuma reescreve
+   ══════════════════════════════════════════════════════════════════ */
+'use strict';
+
+/* ── texto ────────────────────────────────────────────────────────
+   ~palavra~ vira uma palavra com pop-up. É a única marcação. */
+function T(s){ return G(String(s==null?'':s)); }
+function G(s){
+  return String(s).replace(/~([^~]+)~/g,function(m,w){
+    var k=w.toLowerCase().trim();
+    return '<span class="gl" data-gl="'+esc(k)+'" tabindex="0" role="button">'+w+'</span>';
+  });
+}
+function esc(v){ return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;'); }
+function ROM(n){ return ['','I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV'][n]||String(n); }
+/* baralha uma cópia — a ordem muda a cada abertura, o dado não */
+function RTSORTE(a){
+  var c=(a||[]).slice();
+  for(var i=c.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1));
+    var t=c[i]; c[i]=c[j]; c[j]=t; }
+  return c;
+}
+function el(h){ var d=document.createElement('div'); d.innerHTML=h.trim(); return d.firstElementChild; }
+
+/* ── estado ───────────────────────────────────────────────────────
+   Guardado no aparelho: se o professor recarregar no meio da aula,
+   a resposta que o aluno deu no minuto três não se perde. */
+var S={i:0,feito:{},d:{}};
+var CHAVE='wolf-'+(window.AULA_ID||'x');
+try{ var v=localStorage.getItem(CHAVE); if(v) S=Object.assign(S,JSON.parse(v)); }catch(e){}
+function grava(){ try{ localStorage.setItem(CHAVE,JSON.stringify(S)); }catch(e){} }
+
+/* ── som ──────────────────────────────────────────────────────────
+   Um só toca por vez. O botão sabe se está tocando. */
+/* Um áudio por vez, e o MESMO botão pausa e retoma. O professor
+   precisa parar no meio de uma frase para repetir uma palavra —
+   antes o clique recomeçava do zero e ele perdia o ponto. */
+var TOCA=null;
+function som(arq,btn){
+  if(!arq) return;
+  if(TOCA && TOCA.arq===arq){
+    if(TOCA.a.paused){ TOCA.a.play(); marcaSom(TOCA.b,'tocando'); }
+    else { TOCA.a.pause(); marcaSom(TOCA.b,'pausado'); }
+    return;
+  }
+  if(TOCA){ TOCA.a.pause(); marcaSom(TOCA.b,''); }
+  var a=new Audio((window.AUDIO&&window.AUDIO[arq])||('audio/'+arq));
+  TOCA={a:a,b:btn,arq:arq};
+  marcaSom(btn,'tocando');
+  a.onended=a.onerror=function(){ marcaSom(btn,''); if(TOCA&&TOCA.a===a) TOCA=null; };
+  a.play().catch(function(){ marcaSom(btn,''); });
+}
+function marcaSom(btn,estado){
+  if(!btn) return;
+  btn.classList.toggle('on',estado==='tocando');
+  btn.classList.toggle('pausado',estado==='pausado');
+  var r=btn.querySelector('.rot');
+  if(r) r.textContent = estado==='tocando' ? 'PAUSE'
+                      : estado==='pausado' ? 'RESUME'
+                      : (btn.getAttribute('data-rot')||'PLAY');
+}
+var SVGPLAY='<svg class="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></svg>'
+  +'<svg class="i-pause" viewBox="0 0 24 24"><path d="M7 4h4v16H7zM13 4h4v16h-4z"/></svg>';
+var SVGDICA='<svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2zm-2 18h4v1a2 2 0 0 1-4 0v-1z"/></svg>';
+/* botão de som com onda — a onda mexe só enquanto toca */
+function PLAY(arq,rot,cls){
+  var r=(rot===''?'':(rot||'PLAY'));
+  return '<button class="pl '+(cls||'')+'" data-au="'+esc(arq||'')+'"'
+   +' data-rot="'+esc(r)+'" title="tocar, pausar, retomar">'
+   +'<span class="ic">'+SVGPLAY+'</span>'
+   +'<span class="wv"><i></i><i></i><i></i><i></i></span>'
+   +(r?'<span class="rot">'+r+'</span>':'')+'</button>';
+}
+
+/* ── pop-up ───────────────────────────────────────────────────────
+   Um só na página. Recebe HTML montado por quem chamou. */
+function POP(titulo,html){
+  var v=document.getElementById('veu');
+  v.querySelector('.pop').innerHTML=
+    '<div class="ph"><k>'+(titulo||'')+'</k><span class="sp"></span>'
+    +'<button class="x" data-fecha aria-label="fechar">&times;</button></div>'
+    +'<div class="pin">'+html+'</div>';
+  v.classList.add('on');
+  var f=v.querySelector('.x'); if(f) f.focus();
+}
+function FECHA(){ document.getElementById('veu').classList.remove('on'); }
+
+/* o pop-up de palavra: vem do dicionário da aula */
+function POPPAL(k){
+  var g=(window.GLOSS||{})[k];
+  if(!g){ POP('WORD','<div class="word">'+k+'</div>'); return; }
+  POP(g.tp||'WORD',
+    '<div class="word">'+(g.w||k)+'</div>'
+   +(g.say?'<div class="say">'+g.say+'</div>':'')
+   +(g.pt?'<p class="pt">'+g.pt+'</p>':'')
+   +(g.d?'<p>'+T(g.d)+'</p>':'')
+   +(g.ex?'<div class="ex en">'+T(g.ex)+'</div>':'')
+   +(g.no?'<div class="cmp"><div class="bad"><k>NÃO EXISTE</k><div class="en">'+g.no+'</div></div>'
+      +'<div class="good"><k>É ASSIM</k><div class="en">'+g.si+'</div></div></div>':''));
+}
+
+/* ── TRANSCRIÇÃO ──────────────────────────────────────────────────
+   Ela existe, mas NÃO abre sozinha. O método da casa é ouvir, dizer,
+   e só então ler: transcrição aberta por padrão apagaria a escuta.
+   É um controle do professor, e fica no cromo, longe do conteúdo.
+
+   As linhas saem do arquivo `transcricao.json` da aula quando ele
+   existe; quando não existe, saem dos próprios dados da cena — cada
+   áudio já mora ao lado da frase que ele diz. */
+function linhasDaCena(s){
+  var out=[], vistos={};
+  (function anda(o){
+    if(!o||typeof o!=='object') return;
+    if(Array.isArray(o)){ o.forEach(anda); return; }
+    var arqs=[], txts=[];
+    for(var k in o){
+      var v=o[k];
+      if(typeof v==='string'){
+        if(/\.(mp3|m4a)$/i.test(v)) arqs.push({k:k,v:v});
+        else if(v.length>2 && /[a-z]/i.test(v)
+             && !/\.(jpe?g|png|webp|gif|svg)$/i.test(v) && v.indexOf('/')<0)
+          txts.push({k:k,v:v});
+      }
+    }
+    arqs.forEach(function(a){
+      if(vistos[a.v]) return; vistos[a.v]=1;
+      var t=(window.TRANSCRICAO&&window.TRANSCRICAO[a.v])||melhorTexto(txts,a.k)||'';
+      out.push({arq:a.v,txt:t});
+    });
+    for(var k2 in o) if(typeof o[k2]==='object') anda(o[k2]);
+  })(s);
+  return out;
+}
+/* a frase que o áudio diz é a irmã mais parecida com uma frase */
+function melhorTexto(txts,chaveAudio){
+  var pref=['en','fr','frase','diz','t','s','f','q','sai','ent'];
+  for(var i=0;i<pref.length;i++){
+    for(var j=0;j<txts.length;j++) if(txts[j].k===pref[i]) return txts[j].v;
+  }
+  return txts.length?txts[0].v:'';
+}
+function POPTRANSC(){
+  var ls=linhasDaCena(L[S.i]);
+  if(!ls.length){ POP('TRANSCRIPT','<p>No audio in this scene.</p>'); return; }
+  POP('TRANSCRIPT &middot; '+(L[S.i].ch||''),
+    '<p class="pt">The student should hear it and say it before reading it. '
+   +'Open this when it helps, not before.</p>'
+   +'<div class="trl">'+ls.map(function(l){
+      return '<div class="tr1">'+PLAY(l.arq,'','sm')
+        +'<span class="en">'+T(l.txt||'&mdash;')+'</span></div>';
+    }).join('')+'</div>');
+}
+
+/* ── hub de perguntas pessoais ────────────────────────────────────
+   Só aparece onde a cena declara `hub`. Não é painel: é uma aba. */
+function HUB(h){
+  if(!h) return '';
+  return '<div class="hub" id="hub"><button class="hb" data-hub>'
+   +'<span>'+(h.t||'WHAT ABOUT YOU?')+'</span><span class="sp"></span>'
+   +'<span class="ar">▲</span></button>'
+   +'<div class="hin">'+h.qs.map(function(q,i){
+      return '<div class="q'+(q.pro?' minha':'')+'"><i>'+(i+1).toString().padStart(2,'0')+'</i>'
+        +'<p>'+(q.pro?esc(q.q):ED('hub.qs.'+i+'.q',q.q,'span',''))
+        +(q.s?'<s>'+(q.pro?esc(q.s):ED('hub.qs.'+i+'.s',q.s,'span',''))+'</s>':'')
+        +(q.pro?'<b class="mk-minha">MINE</b>':'')+'</p></div>';
+    }).join('')+'</div></div>';
+}
+
+/* ── dica ─────────────────────────────────────────────────────────
+   Uma linha. Aparece, e não some sozinha — o professor decide. */
+function DICA(txt){
+  if(!txt) return '';
+  return '<div class="dcw"><button class="dc" data-dica="'+esc(txt)+'">'+SVGDICA+' A HINT</button></div>';
+}
+
+/* ── cabeçalho de cena ───────────────────────────────────────────── */
+function HD(s){
+  return '<div class="hd">'
+   +'<div class="kk">'+(s.kick?ED('kick',s.kick,'span','kick'):'')
+     +(s.etiq?ED('etiq',s.etiq,'span','tag ac'):'')+'</div>'
+   +ED('t',s.t,'h2','')
+   +(s.pre?ED('pre',s.pre,'p','pre en'):'')
+   +'</div>';
+}
+/* O ENUNCIADO fica colado no que se faz, nunca no cabeçalho. Uma
+   frase curta: se não couber em uma, a cena está errada. */
+function COMO(s){
+  return s.como?ED('como',s.como,'p','como'):'';
+}
+function DN(s){
+  if(!s.done) return '';
+  return '<div class="dn"><k>DONE</k>'+ED('done',s.done,'p','en')+'</div>';
+}
+function LAY(s,dentro){ return '<div class="L '+(s.layout||'void')+'">'+dentro+'</div>'; }
+
+/* ── navegação ────────────────────────────────────────────────────── */
+function vai(n){
+  if(n<0||n>=L.length) return;
+  S.i=n; grava(); pinta();
+  var r=document.querySelector('.rl.on'); if(r) r.scrollIntoView({block:'nearest'});
+}
+function feito(){ S.feito[S.i]=1; grava(); pintaTrilho(); }
+
+/* desenha a lista das cenas */
+function pintaTrilho(){
+  var r=document.getElementById('rail');
+  r.innerHTML='<b>'+(window.AULA_NOME||'')+'</b>'+L.map(function(s,i){
+    var num=s.type==='protocol'?'—':(s.opt?'+':(s.type==='clear'?'✓':ROM(numCena(i))));
+    return '<button class="rl'+(i===S.i?' on':'')+(S.feito[i]?' fez':'')
+      +(s.opt?' opt':'')+'" data-ir="'+i+'"><i>'+num+'</i><span>'+(s.ch||'')+'</span></button>';
+  }).join('');
+}
+function numCena(i){
+  var n=0; for(var j=0;j<=i;j++){ if(L[j].type!=='protocol'&&!L[j].opt&&L[j].type!=='clear') n++; }
+  return n;
+}
+
+function pinta(){
+  var s=comLocal(L[S.i],S.i);      /* original + sobreposição local */
+  var st=document.getElementById('stage');
+  st.innerHTML='<div class="scene">'+(CENA[s.type]?CENA[s.type](s):CENA.void(s))+'</div>'
+    +(s.hub?HUB(s.hub):'');
+  st.classList.toggle('temhub',!!s.hub);
+  document.getElementById('cena').textContent=
+    (s.type==='protocol'?'GUIDE':(s.opt?'EXTRA':ROM(numCena(S.i))))+(s.min?' · '+s.min+' MIN':'');
+  var p=0,t=0;
+  L.forEach(function(x,i){ if(!x.opt&&x.type!=='protocol'){ t++; if(S.feito[i]) p++; } });
+  document.getElementById('barra').style.width=(t?Math.round(p/t*100):0)+'%';
+  document.getElementById('conta').textContent=p+' / '+t;
+  /* A transcrição não aparece em toda cena com som: só onde a aula
+     declara `script:1` — normalmente a cena de listening. */
+  var bt=document.getElementById('btrans');
+  bt.hidden=!(s.script && linhasDaCena(s).length);
+  document.getElementById('ant').disabled=(S.i===0);
+  document.getElementById('prox').disabled=(S.i>=L.length-1);
+  pintaTrilho(); prof(s);
+}
+
+function prof(s){
+  var t=s.teacher||{};
+  var nota=(typeof LOCAL!=='undefined')?LOCAL.nota(S.i):'';
+  document.getElementById('profin').innerHTML=
+    (nota?'<div class="blk minhanota"><k>MY NOTE &middot; PRIVATE</k><p>'+esc(nota)+'</p></div>':'')
+   +(t.sec?'<div class="av">'+t.sec+'</div>':'')
+   +bloco('DO THIS',t.do)+bloco('WATCH FOR',t.watch)
+   +bloco('IF THEY ARE STUCK',t.stuck)+bloco('IF THEY ARE STRONG',t.strong);
+}
+function bloco(k,p){
+  if(!p||p==='—') return '';
+  return '<div class="blk"><k>'+k+'</k><p>'+T(p)+'</p></div>';
+}
+
+/* ── o diário · o que o aluno produziu, para a lousa exportar ────── */
+function diario(){
+  var o=[]; 
+  for(var k in S.d){ if(S.d[k]) o.push({k:k,v:S.d[k]}); }
+  return o;
+}
+
+/* ── zoom de texto · fica guardado neste computador ─────────────── */
+function zoom(v){
+  v=Math.min(1.4,Math.max(.8,v));
+  document.documentElement.style.setProperty('--zoom',v);
+  document.getElementById('zmLbl').textContent=Math.round(v*100)+'%';
+  try{ localStorage.setItem('wolf-zoom',v); }catch(e){}
+}
+
+/* ── tela cheia ───────────────────────────────────────────────────
+   Quem vai para tela cheia é o .app, não o documento: assim a caixa
+   em tela cheia é a própria aula e a altura fecha certo. E a classe
+   `cheia` segue o estado real do navegador — se o professor sair pelo
+   Esc, a barra de cima volta sozinha. */
+function cheia(){
+  var app=document.getElementById('app');
+  if(document.fullscreenElement||document.webkitFullscreenElement){
+    (document.exitFullscreen||document.webkitExitFullscreen||function(){}).call(document);
+  } else {
+    var pede=app.requestFullscreen||app.webkitRequestFullscreen;
+    if(pede){ var r=pede.call(app); if(r&&r.catch) r.catch(function(){ marcaCheia(true); }); }
+    else marcaCheia(true);   /* navegador sem tela cheia: só esconde o cromo */
+  }
+}
+function marcaCheia(v){
+  document.body.classList.toggle('cheia',v);
+  document.getElementById('bfull').setAttribute('aria-pressed',v);
+}
+['fullscreenchange','webkitfullscreenchange'].forEach(function(ev){
+  document.addEventListener(ev,function(){
+    marcaCheia(!!(document.fullscreenElement||document.webkitFullscreenElement));
+  });
+});
+
+/* ── A LOUSA (regra 2) ──────────────────────────────────────────── */
+var LOUSA=(function(){
+  var K='wolf-lousa-'+(window.AULA_ID||'x');
+  var el,ta,sc,sv,t=null;
+  function pronto(){
+    el=document.getElementById('lousa'); ta=document.getElementById('ltxt');
+    sc=document.getElementById('lscrim'); sv=document.getElementById('lsalvo');
+    try{ ta.value=localStorage.getItem(K)||''; }catch(e){}
+    ta.addEventListener('input',salva);
+  }
+  function salva(){
+    try{ localStorage.setItem(K,ta.value); }catch(e){}
+    sv.classList.add('on'); clearTimeout(t);
+    t=setTimeout(function(){ sv.classList.remove('on'); },1400);
+  }
+  function abre(v){
+    el.classList.toggle('on',v); sc.classList.toggle('on',v);
+    if(v) setTimeout(function(){ ta.focus(); },150);
+  }
+  function etiqueta(tg){
+    var tag=(tg==='SCENE'?'[SCENE '+(S.i)+'] ':'['+tg+'] ');
+    var p=ta.selectionStart,v=ta.value;
+    var nl=(p>0&&v[p-1]!=='\n')?'\n':'';
+    ta.value=v.slice(0,p)+nl+tag+v.slice(p);
+    ta.focus(); ta.selectionStart=ta.selectionEnd=p+nl.length+tag.length; salva();
+  }
+  function inteiro(){
+    var d=diario();
+    var j=d.length?'\n\n--- WHAT THE STUDENT DID ---\n'+d.map(function(x){return '\u00b7 '+x.k+': '+x.v;}).join('\n'):'';
+    return (window.AULA_TITULO||'')+' \u2014 '+(window.AULA_NIVEL||'')+' \u2014 '+new Date().toLocaleDateString()+'\n'
+      +'Scene '+S.i+' of '+(L.length-1)+'\n\n'
+      +((ta.value||'').trim()||'(no notes)')+j+'\n';
+  }
+  return {pronto:pronto,abre:abre,etiqueta:etiqueta,inteiro:inteiro,
+    aberta:function(){return el&&el.classList.contains('on');},
+    limpa:function(){ta.value='';salva();}};
+})();
+
+/* ── luz ──────────────────────────────────────────────────────────── */
+function luz(v){
+  document.documentElement.setAttribute('data-luz',v);
+  try{ localStorage.setItem('wolf-luz',v); }catch(e){}
+  var b=document.getElementById('bluz');
+  b.setAttribute('aria-pressed',v==='dia');
+  b.querySelector('span').textContent=v==='dia'?'DIA':'NOITE';
+}
+
+/* ── ligações ─────────────────────────────────────────────────────── */
+document.addEventListener('click',function(e){
+  var t=e.target;
+  var a=t.closest('[data-au]');   if(a){ som(a.getAttribute('data-au'),a); return; }
+  var g=t.closest('[data-gl]');   if(g){ POPPAL(g.getAttribute('data-gl')); return; }
+  var ir=t.closest('[data-ir]');  if(ir){ vai(+ir.getAttribute('data-ir')); fechaRail(); return; }
+  var h=t.closest('[data-hub]');  if(h){ h.parentNode.classList.toggle('on'); return; }
+  var d=t.closest('[data-dica]'); if(d){
+    var p=document.createElement('p'); p.className='dctx';
+    p.innerHTML=T(d.getAttribute('data-dica'));
+    d.parentNode.replaceChild(p,d); return; }
+  if(t.closest('[data-fecha]')||t.id==='veu'){ FECHA(); return; }
+  if(t.closest('#prox')){ feito(); vai(S.i+1); return; }
+  if(t.closest('#ant')){ vai(S.i-1); return; }
+  if(t.closest('#bprof')){ var pr=document.getElementById('prof');
+    pr.classList.toggle('on');
+    document.getElementById('bprof').setAttribute('aria-pressed',pr.classList.contains('on')); return; }
+  if(t.closest('#bluz')){ luz(document.documentElement.getAttribute('data-luz')==='dia'?'noite':'dia'); return; }
+  if(t.closest('#btrans')){ POPTRANSC(); return; }
+  if(t.closest('#brail')){ abreTrilho(); return; }
+  if(t.closest('#zmMenos')){ zoom(zAtual()-.05); return; }
+  if(t.closest('#zmMais')){ zoom(zAtual()+.05); return; }
+  if(t.closest('#bfull')){ cheia(); return; }
+  if(t.closest('#blousa')){ LOUSA.abre(!LOUSA.aberta()); return; }
+  if(t.closest('#lfecha')||t.id==='lscrim'){ LOUSA.abre(false); return; }
+  var tg=t.closest('.ltg'); if(tg){ LOUSA.etiqueta(tg.getAttribute('data-t')); return; }
+  if(t.closest('#lcopy')){ var b=t.closest('#lcopy');
+    navigator.clipboard.writeText(LOUSA.inteiro()).then(function(){
+      b.textContent='Copied'; setTimeout(function(){b.textContent='Copy';},1600); })
+      .catch(function(){ document.getElementById('ltxt').select(); }); return; }
+  if(t.closest('#ldl')){
+    var bl=new Blob([LOUSA.inteiro()],{type:'text/plain;charset=utf-8'});
+    var a=document.createElement('a'); a.href=URL.createObjectURL(bl);
+    a.download=(window.AULA_ID||'aula')+'-notes.txt'; a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);},2000); return; }
+  if(t.closest('#lclear')){ var lc=t.closest('#lclear');
+    if(lc.dataset.certeza){ LOUSA.limpa(); delete lc.dataset.certeza; lc.textContent='Clear'; return; }
+    lc.dataset.certeza='1'; lc.textContent='Sure?';
+    setTimeout(function(){ delete lc.dataset.certeza; lc.textContent='Clear'; },2600); return; }
+});
+/* ☰ · abre e fecha a lista das cenas.
+   ATENÇÃO: esta função NÃO pode se chamar trilho(). Já existe uma
+   pintaTrilho() que desenha a lista, e uma segunda declaração com o
+   mesmo nome apaga a primeira em silêncio — foi assim que a coluna
+   passou a abrir vazia. */
+function abreTrilho(v){
+  var r=document.getElementById('rail');
+  if(innerWidth<=860){ r.classList.toggle('on'); return; }
+  var b=r.parentNode;
+  var fora = (v===undefined) ? !b.classList.contains('recolhido') : v;
+  b.classList.toggle('recolhido',fora);
+  document.getElementById('brail').setAttribute('aria-pressed',fora);
+  try{ localStorage.setItem('wolf-trilho',fora?'0':'1'); }catch(e){}
+}
+function zAtual(){ var v=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--zoom')); return v||1; }
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){ FECHA(); return; }
+  if(e.key==='Enter'||e.key===' '){
+    var g=document.activeElement&&document.activeElement.closest&&document.activeElement.closest('[data-gl]');
+    if(g){ e.preventDefault(); POPPAL(g.getAttribute('data-gl')); }
+  }
+  if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA') return;
+  if(e.key==='ArrowRight'){ feito(); vai(S.i+1); }
+  if(e.key==='ArrowLeft'){ vai(S.i-1); }
+  if(e.key==='t'||e.key==='T'||e.key==='g'||e.key==='G'){ document.getElementById('bprof').click(); }
+  if(e.key==='b'||e.key==='B'){ document.getElementById('blousa').click(); }
+  if(e.key==='f'||e.key==='F'){ document.getElementById('bfull').click(); }
+  if(e.key==='s'||e.key==='S'){ document.getElementById('brail').click(); }
+  if(e.key==='l'||e.key==='L'){ document.getElementById('bluz').click(); }
+});
+function fechaRail(){ if(innerWidth<=860) document.getElementById('rail').classList.remove('on'); }
+
+/* ── partida ──────────────────────────────────────────────────────── */
+(function(){
+  var l='noite'; try{ l=localStorage.getItem('wolf-luz')||'noite'; }catch(e){}
+  luz(l);
+  var z=1; try{ z=parseFloat(localStorage.getItem('wolf-zoom'))||1; }catch(e){}
+  zoom(z);
+  /* a aula começa com a lista FECHADA: o professor partilha a tela e
+     o que ele quer ver primeiro é a cena, não o índice. */
+  var aberto='0'; try{ aberto=localStorage.getItem('wolf-trilho')||'0'; }catch(e){}
+  if(innerWidth>860) abreTrilho(aberto!=='1');
+  LOUSA.pronto();
+  if(S.i>=L.length) S.i=0;
+  pinta();
+})();
+</script>
+</body>
+</html>

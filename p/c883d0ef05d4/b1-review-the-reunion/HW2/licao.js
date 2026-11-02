@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "The Reunion",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c883d0ef05d4/b1-review-the-reunion/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 2 review: present perfect continuous (for / since); used to x present simple; should have / could have; be used to / get used to + -ing",
   "abrir": "Who is an old friend you haven't seen for years?",
   "fecho": "<b>have been + -ing</b> + <b>for / since</b>: <i>I've been living here for six years.</i> <b>used to</b> + verb for past habits. <b>should have</b> + participle for regrets. <b>be used to / get used to</b> + <b>-ing</b>: <i>I'm used to waking up early.</i>",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo meet at a class reunion twenty years after school. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c883d0ef05d4/b1-review-the-reunion/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two cups of coffee by a window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -104,12 +104,12 @@ window.HW2 = {
       "frases": [
         {
           "t": "I've been living in this city for six years.",
-          "img": "https://wolf-labs.pages.dev/p/c883d0ef05d4/b1-review-the-reunion/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I used to hate coffee, but now I drink it every day.",
-          "img": "https://wolf-labs.pages.dev/p/c883d0ef05d4/b1-review-the-reunion/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c883d0ef05d4/b1-review-the-reunion/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two cups of coffee by a window",
       "pede": "Look at the picture: two cups of coffee by a window. Write 2 or 3 sentences about an old friend: what you used to do together, and what they have been doing lately. Use <b>used to</b> and <b>have been + -ing</b>.",
       "ph": "We used to … Now she has been …",

@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Her Dog · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Her Dog · The Waiting Room</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Her Dog · The Waiting Room</h2>
+    <p>An easy reader in five chapters, and the title is the wrong sentence. A vet’s waiting room on a dark Tuesday morning: a woman holds the leash of a big old dog, and for four chapters everybody in the room (and your student) says <i>her dog</i>. In chapter five the vet reads the name on the card, and it is a man’s name. The story is the one rebuilt on 23/09; in the Live version the student reads line by line, makes a bet that comes back in chapter five, watches the patient card fill in, and turns the dog’s tag with a finger.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>His, her, their, its</b> choose by the <b>owner</b>, never by the thing. In Portuguese the possessive agrees with the thing, so <i>his mother</i> about a woman’s mother is not carelessness: it is the first language. Say this once, then let the scenes work. No S on the word (<i>her books</i>, never <i>hers books</i>); <i>its</i> has no apostrophe. When you don’t know the owner, English won’t let you finish: <b>Whose is it?</b></p>
+    <!--conversa--><h4>OK OR NOT OK? (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Back in the waiting room, your student judges three things people do: his bag on a chair, her loud phone call, their cookies for Bruno. Green or red, no right answer. Answer first yourself, as a model. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk (a man with <i>her bag</i> → <i>his bag</i>); at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your People (a diagnosis: don’t correct), the five chapters (read line by line), III Whose Dog?</li>
+      <li><b>Focus</b>: V Find the Owner First (tap the owner before the word appears), VI Eight Cards, VIII OK or Not OK? (out loud), X You Have to Know First.</li>
+      <li><b>Write</b>: XII Six of Your Own, with the red wavy line for <i>it’s name</i>, <i>hers brothers</i> and a man or woman with the wrong word in the same sentence. It goes to their My notes.</li>
+    </ul>
+    <h4>CHAPTER FIVE</h4>
+    <p>Let the silence happen before you explain anything. The bet from scene III comes back on the screen. Only the bet “Nobody in this room knows yet” wins.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The lines, the card, the tag and the bet move on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* HER DOG (Main A1) · pergunta-surpresa · 27/10/2026 · his / her / their / its */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'cap1', tipo: 'And you?', q: 'Do you have a pet?',
+    opc: ['Yes', 'No'], st: ['Yes. Its name is …', 'No. My friend has a dog. Her dog is …'],
+    ex: 'No. My friend has a cat. Her cat is called Mia.', push: 'Do you want one? Yes or no?' },
+  { cena: 'fichas', tipo: 'Would you rather', q: 'A dog or a cat?',
+    opc: ['A dog', 'A cat'], st: ['A dog. Its name is …', 'A cat. Its name is …'],
+    ex: 'A cat! Its name is Pipoca.', push: 'Two cats? Yes or no?' },
+  { cena: 'cap4', tipo: 'And you?', q: 'Do you know your neighbors’ names?',
+    opc: ['Yes, I do.', 'No, I don’t!'], st: ['His name is …', 'Her name is …', 'I don’t know their names!'],
+    ex: 'Yes. Her name is Clara. Her dog is very loud!', push: 'Do you talk to them? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* HER DOG (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "OK / not OK" (semáforo de duas cores) no lugar de "VIII · The Animal Doesn’t Decide" (extra, prática controlada:
+   achar a palavra errada). A aposta da aula (III) fica; este é outro formato, no meio, na sala de espera:
+   o aluno julga o que as pessoas fazem ali. A1 bem leve: duas opções, frase quase pronta, o professor responde primeiro.
+   A gramática da aula (his / her / their: quem escolhe é o dono) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'sala', troca: 'conserta', est: 'o', min: 5, img: 'sala', rot: 'OK or Not OK?', t: 'The waiting room. Is it OK?',
+    p: 'Choose OK or Not OK. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The bag', sit: 'The room is full.', q: 'His bag on a chair?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. It’s his bag.', 'Not OK. His bag goes on the floor.'],
+        ex: 'Not OK. His bag goes on the floor. A woman wants the chair!',
+        push: 'Your bag on a chair? Yes or no?' },
+      { tag: 'The phone', sit: 'A woman is on the phone.', q: 'Her call is very loud.',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. Her call is important.', 'Not OK. Her call is too loud.'],
+        ex: 'Not OK. Her call is too loud. The dogs are scared!',
+        push: 'And you? Loud on the phone? Yes or no?' },
+      { tag: 'The cookies', sit: 'Two kids have cookies.', q: 'Their cookies for Bruno?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. Their cookies are nice.', 'Not OK. Ask the owner first.'],
+        ex: 'Not OK. Their cookies are for kids. Ask the owner first.',
+        push: 'Do you give food to dogs? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "gente": {
+   "t": "Before the story: your people.",
+   "p": "You are the guest. Answer out loud."
+  },
+  "cap1": {
+   "p": "Read it out loud, line by line. Then answer."
+  },
+  "dono": {
+   "t": "Tap the owner first.",
+   "p": "Tap who HAS the thing. Then the word appears."
+  },
+  "fichas": {
+   "t": "The owner chooses the word.",
+   "p": "Say the sentence. Then tap his, her, their or its."
+  },
+  "cap3": {
+   "p": "Read it out loud, line by line. Then answer."
+  },
+  "cv-sala": {
+   "t": "The waiting room. OK or not OK?",
+   "p": "Choose OK or Not OK. Say it with the sentence."
+  },
+  "cap4": {
+   "p": "Read it out loud. Then turn the tag over."
+  },
+  "saber": {
+   "t": "Say it, or ask first?",
+   "p": "Tap SAY IT or ASK FIRST. Then say it."
+  },
+  "cap5": {
+   "p": "Read it out loud, line by line. Then check your bet."
+  },
+  "fim": {
+   "t": "Six words, six real people.",
+   "p": "One sentence for each word. Owner first."
+  }
+ },
+ "prep": {
+  "obj": "His/her/their/its escolhidos pelo dono, não pela coisa: um leitor fácil de cinco capítulos numa sala de espera do veterinário, com um cachorro grande e velho.",
+  "armadilha": "Em português o possessivo concorda com a coisa (“a mãe dele”/“seu”): sai “his mother” sobre a mãe de uma mulher, “hers books” com S e “it’s name” com apóstrofo.",
+  "pal": [
+   "his",
+   "her",
+   "their",
+   "its",
+   "my",
+   "our",
+   "Whose dog is it?",
+   "owner",
+   "leash"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o leitor: uma sala de espera do veterinário e duas palavras que todo mundo repete.",
+   "perg": "Do you have a dog, or does someone in your family?",
+   "pula": "Leia a frase da capa e abra a sala."
+  },
+  "gente": {
+   "obj": "Diagnóstico: o aluno fala das pessoas da vida dele; observe os possessivos, não corrija.",
+   "perg": "Tell me about your sister. What is her job?",
+   "pula": "Três perguntas bastam."
+  },
+  "cap1": {
+   "obj": "Capítulo 1 lido em voz alta, linha a linha: a sala de espera e a mulher com o cachorro.",
+   "perg": "Who is in the waiting room?",
+   "pula": "Leia você metade das linhas."
+  },
+  "aposta": {
+   "obj": "O aluno aposta de quem é o cachorro; a aposta volta no capítulo 5.",
+   "perg": "Whose dog is it, in your opinion?",
+   "pula": "Uma aposta e um porquê bastam."
+  },
+  "cap2": {
+   "obj": "Capítulo 2: a ficha do paciente se preenche enquanto o aluno lê.",
+   "perg": "What is the dog’s name?",
+   "pula": "Leia você metade das linhas."
+  },
+  "dono": {
+   "obj": "Achar o dono antes da palavra: o aluno toca em quem TEM a coisa.",
+   "perg": "Who has the bag here? A man or a woman?",
+   "pula": "Quatro frases bastam."
+  },
+  "fichas": {
+   "obj": "Oito cartões: o dono escolhe his, her, their ou its.",
+   "perg": "The owner is a woman. Which word?",
+   "pula": "Cinco cartões bastam."
+  },
+  "cap3": {
+   "obj": "Capítulo 3: as outras pessoas da sala de espera e as coisas delas.",
+   "perg": "Whose phone is loud?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-sala": {
+   "obj": "Conversa: julgar três atitudes na sala de espera (OK ou não) usando possessivos.",
+   "perg": "His bag is on a chair. Is it OK?",
+   "pula": "Duas situações bastam."
+  },
+  "cap4": {
+   "obj": "Capítulo 4: virar a plaquinha da coleira com o dedo e ler.",
+   "perg": "What is on its tag?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "saber": {
+   "obj": "Quando não se sabe o dono, o inglês não deixa terminar: perguntar Whose is it?",
+   "perg": "Do you know the owner? Can you say the sentence?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cap5": {
+   "obj": "Capítulo 5: o veterinário lê um nome de homem; a aposta volta. Deixe o silêncio antes de explicar.",
+   "perg": "So whose dog is it?",
+   "pula": "Cena extra, mas vale a pena: é o fim da história."
+  },
+  "fim": {
+   "obj": "Escrita: seis frases sobre pessoas reais com his, her, their, its, my, our.",
+   "perg": "Tell me one thing about your neighbor and his or her family.",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre pessoas e coisas da vida do aluno, com possessivos.",
+   "perg": "What is your best friend’s name?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre situações da sala de espera, com his/her/their.",
+   "perg": "Her dog, her rules?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno descreve uma pessoa próxima em quatro passos, escolhendo o possessivo pelo dono.",
+   "perg": "Who is this person, and what is his or her job?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More people, more owners.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "his",
+    "her",
+    "their",
+    "its"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR BEST FRIEND",
+     "q": "Who is your best friend?",
+     "fup": "What is her or his job?",
+     "st": [
+      "My best friend is …",
+      "His job is … / Her job is …"
+     ],
+     "ex": "My best friend is Ana. Her job is in a bank."
+    },
+    {
+     "k": "A PET",
+     "q": "Is there a pet in your family?",
+     "fup": "What is its name?",
+     "st": [
+      "Yes, my … has a …",
+      "Its name is …"
+     ],
+     "ex": "Yes, my brother has a cat. Its name is Mimi."
+    },
+    {
+     "k": "YOUR NEIGHBORS",
+     "q": "Who are your neighbors?",
+     "fup": "Is their house big or small?",
+     "st": [
+      "My neighbors are …",
+      "Their house is …"
+     ],
+     "ex": "My neighbors are an old couple. Their house is small."
+    },
+    {
+     "k": "YOUR FATHER",
+     "q": "What is your father’s favorite food?",
+     "fup": "And his favorite place?",
+     "st": [
+      "His favorite food is …",
+      "His favorite place is …"
+     ],
+     "ex": "His favorite food is fish. His favorite place is the beach."
+    },
+    {
+     "k": "YOUR BOSS",
+     "q": "Tell me about your boss or your teacher.",
+     "fup": "Is his or her office big?",
+     "st": [
+      "My boss is …",
+      "Her office is … / His office is …"
+     ],
+     "ex": "My boss is a woman. Her office is very small."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What is your city famous for?",
+     "fup": "What is its best place?",
+     "st": [
+      "My city is famous for …",
+      "Its best place is …"
+     ],
+     "ex": "My city is famous for its food. Its best place is the market."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "his",
+    "her",
+    "their"
+   ],
+   "rodadas": [
+    {
+     "q": "A man puts his bag on a chair. OK or not OK?",
+     "a": "OK",
+     "b": "Not OK",
+     "fa": [
+      "OK. The room is empty and his bag is heavy."
+     ],
+     "fb": [
+      "Not OK. A woman needs a chair for her son."
+     ]
+    },
+    {
+     "q": "A woman talks on her phone, very loud. OK or not OK?",
+     "a": "OK",
+     "b": "Not OK",
+     "fa": [
+      "OK. Maybe her call is important."
+     ],
+     "fb": [
+      "Not OK. Their dogs are nervous."
+     ]
+    },
+    {
+     "q": "A family gives their cookies to a dog. OK or not OK?",
+     "a": "OK",
+     "b": "Not OK",
+     "fa": [
+      "OK. It is a nice thing and the dog is happy."
+     ],
+     "fb": [
+      "Not OK. It is not their dog."
+     ]
+    },
+    {
+     "q": "You see a dog with a woman. Do you say “her dog”?",
+     "a": "Yes",
+     "b": "No, I ask",
+     "fa": [
+      "Yes. She has its leash."
+     ],
+     "fb": [
+      "No, I ask. Maybe it is her father’s dog."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and every owner had the right word."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your People",
+   "t": "One person from your life.",
+   "p": "One step at a time. Owner first.",
+   "prof": "Pick someone of the other gender from the student, so his/her is a real choice; recast quietly.",
+   "passos": [
+    {
+     "q": "Who is the person? A man or a woman?",
+     "st": [
+      "This is my …"
+     ],
+     "ex": "This is my uncle, Paulo."
+    },
+    {
+     "q": "What is the person’s job?",
+     "st": [
+      "His job is … / Her job is …"
+     ],
+     "ex": "His job is in a hospital. He is a nurse."
+    },
+    {
+     "q": "Who is in the person’s family?",
+     "st": [
+      "His … / Her … is …",
+      "Their … is …"
+     ],
+     "ex": "His wife is a teacher. Their son is ten."
+    },
+    {
+     "q": "Is there a pet? What is its name?",
+     "st": [
+      "Their … is called …",
+      "Its name is …"
+     ],
+     "ex": "Their dog is old. Its name is Thor."
+    }
+   ],
+   "fim": "One person, four owners, four right words."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

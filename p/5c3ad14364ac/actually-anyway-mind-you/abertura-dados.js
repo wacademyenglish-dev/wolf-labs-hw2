@@ -1,0 +1,2 @@
+/* a abertura desta aula (kit/abertura.js) · modo mural · gravado por kit/abertura_grava.py */
+window.WL_ABERTURA = {"modo": "mural", "rot": "One Word", "t": "Talker or listener?", "p": "Each of you writes one word about how you talk. Then talk — with markers.", "q": "One word: what kind of talker are you?", "extras": ["chatty", "quiet", "funny"], "de": "show", "fup": "Why that word? Tell a story using actually, anyway, mind you.", "fst": ["Actually, …", "Anyway, …", "Mind you, …"], "fex": "Chatty. Actually, I talk too much. Mind you, my mom talks more. Anyway…"};

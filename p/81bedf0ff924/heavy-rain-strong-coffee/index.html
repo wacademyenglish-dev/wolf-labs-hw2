@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Heavy Rain, Strong Coffee · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 1 · Precision</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Heavy Rain, Strong Coffee · C1 Unit 1 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on collocations (adjective / adverb + noun or adjective): heavy rain, strong coffee, deeply grateful, bitterly cold, highly recommended.</p><p style="margin:0 0 6px"><b>The story:</b> A travel blog, The Wandering Fork (invented): 48 hours in Lisbon under heavy rain. The student reads it, finds the word pairs, upgrades plain sentences and writes a review.</p><p style="margin:0 0 6px"><b>About 56 min:</b> I · Your Weather, Your Coffee (7) · II · The Blog (10) · III · Rainy Day Ranking (7) · IV · Which One Sounds Native? (9) · V · Upgrade It (7) · VI · Memory (8) · VII · Your Review (8).</p><p style="margin:0"><b>Open with:</b> “Before the words: tell me about your weather and your coffee today.”</p></div><!--/prep-->
+    <p>C1 students already have the grammar. What they lack is the word a native would choose. Don’t teach a list: let the student meet the pairs in the blog, notice them, and then use them. Portuguese pushes them to “strong rain” and “very grateful”: that is the target of today.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>heavy + rain, traffic, smoker, workload · strong + coffee, accent, wind, opinion · deeply + grateful, moved, concerned · bitterly + cold, disappointed · highly + recommended, unlikely, qualified · a narrow escape, a quick bite</p>
+    <h4>YOUR WEATHER, YOUR COFFEE</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>THE BLOG</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>WHICH ONE SOUNDS NATIVE?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>UPGRADE IT</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>YOUR REVIEW</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>strong rain</i>, <i>very grateful (weak: deeply grateful)</i>, <i>very very cold (bitterly cold)</i>, <i>I very recommend</i>, <i>highly cold</i>, <i>a strong traffic</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>RAINY DAY RANKING (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the blog: five plans for a rainy Saturday in Lisbon. Your student ranks them (1 is the first choice) and defends the top one and the last one with word pairs from the blog. There is no right order. Wait five seconds in silence, then use the PUSH line (only you see it). Then tap Show my teacher’s order and agree on one top 3 together. Recast quietly while they talk (heavy rain, not strong rain); at the end ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · Your Weather, Your Coffee and III · Rainy Day Ranking.</li>
+      <li><b>Listen</b>: II · The Blog and VI · Memory.</li>
+      <li><b>Focus</b>: IV · Which One Sounds Native? and V · Upgrade It.</li>
+      <li><b>Write</b>: VII · Your Review.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* HEAVY RAIN, STRONG COFFEE (Main C1, unit 1) · pergunta-surpresa · 28/10/2026 · collocations: heavy / strong / deeply / bitterly / highly */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Tell me about a trip where the weather ruined the plan.',
+    opc: ['It was a disaster', 'It turned out fine', 'Never happened to me'], st: ['There was heavy … all …', 'I was bitterly disappointed, but …'],
+    ex: 'It turned out fine. There was heavy rain all weekend at the beach, so we found a tiny café with strong coffee and played cards.', push: 'Would you go back to the same place?' },
+  { cena: 'descobre', tipo: 'Would you rather', q: 'Would you rather be stuck in heavy traffic for two hours, or wait two hours at an airport?',
+    opc: ['Heavy traffic', 'The airport'], st: ['I’d rather …, because …', 'It’s highly unlikely that …'],
+    ex: 'The airport. At least I can grab a quick bite and walk around. In heavy traffic I’m a prisoner.', push: 'The airport has no Wi-Fi and no coffee. Still the airport?' },
+  { cena: 'transforma', tipo: 'Opinion', q: 'Do online reviews still help you, or are they mostly fake now?',
+    opc: ['They still help', 'Mostly fake', 'Only the bad ones'], st: ['I’m deeply suspicious of …', 'A place that is highly …'],
+    ex: 'Only the bad ones. Five stars are highly suspicious, but a long angry review tells me something real.', push: 'Have you ever written a bad review? What happened?' },
+  { cena: 'memoria', tipo: 'What if', q: 'Someone you helped years ago sends you a thank-you message today. How do you feel?',
+    opc: ['Deeply moved', 'Surprised', 'A bit embarrassed'], st: ['I’d be deeply …', 'Honestly, I’d feel …'],
+    ex: 'Deeply moved. I’d probably read it three times and then call them.', push: 'Who would YOU like to thank, if you could send one message today?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* HEAVY RAIN, STRONG COFFEE (Main C1, unit 1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O ranking ENTRA depois do II (o blog), no meio da aula: a aula tem 49 min, sem extra e sem debate,
+   e vai a ~56. Cinco planos para um sábado de chuva em Lisboa; o aluno ordena, depois vê a ordem do
+   professor e os dois fecham um top 3. As colocações da aula (highly recommended, bitterly cold,
+   a quick bite, heavy traffic) moram nos iniciadores. Formato: ranking with teacher order. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'ranking', apos: 'leitura', est: 'o', min: 7, img: 'conversa', rot: 'Rainy Day Ranking', t: 'Rain all Saturday in Lisbon. Your plan?',
+    p: 'Put the five plans in order: 1 is your first choice. Defend your top one and your last one. Then compare with your teacher’s order and agree on a top 3.',
+    formato: 'ranking',
+    q: 'Heavy rain all day. Rank the plans.',
+    itens: ['A long lunch with strong coffee', 'A museum, all afternoon', 'A walk by the river in the rain', 'A ride on the yellow tram', 'A cooking class: custard tarts'],
+    prof: [4, 0, 3, 1, 2],
+    st: ['My number one is …: it’s highly recommended because …', 'A walk would be bitterly …', '… is highly unlikely to …', 'I’d be deeply disappointed if …'],
+    ex: 'My number one is the long lunch: strong coffee, warm tarts, and nobody gets wet. Last is the walk by the river: it would be bitterly cold, and a narrow escape from a tram is not my idea of fun.',
+    push: 'You only have 20 euros for the whole day. Does your top 3 change?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "Before the words: you.",
+   "p": "Answer with detail. Then ask it back."
+  },
+  "leitura": {
+   "t": "48 hours in a very wet Lisbon.",
+   "p": "Read it out loud. Answer. Find the word pairs."
+  },
+  "cv-ranking": {
+   "t": "Rain all Saturday. Your plan?",
+   "p": "Rank the five plans. Defend your first and last."
+  },
+  "descobre": {
+   "t": "Both correct. Which one is native?",
+   "p": "Compare A and B. Which would a native say?"
+  },
+  "transforma": {
+   "t": "Make it sound native.",
+   "p": "Read the clue. Say the upgraded version."
+  },
+  "memoria": {
+   "t": "Find the pairs.",
+   "p": "Open two cards. Then make a sentence."
+  },
+  "cartao": {
+   "t": "Your review, native style.",
+   "p": "Four lines, at least four word pairs."
+  }
+ },
+ "prep": {
+  "obj": "Colocações (heavy rain, strong coffee, deeply grateful, bitterly cold, highly recommended): o blog The Wandering Fork e 48 horas de chuva em Lisboa.",
+  "armadilha": "O português empurra para “strong rain”, “a strong traffic” e “very grateful”; e o brasileiro diz “I very recommend” e “highly cold”. A gramática está certa, a palavra é que não é a nativa.",
+  "pal": [
+   "heavy rain",
+   "heavy traffic",
+   "strong coffee",
+   "strong accent",
+   "deeply grateful",
+   "bitterly cold",
+   "highly recommended",
+   "a quick bite"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: a gramática o aluno já tem; falta a palavra que o nativo escolheria.",
+   "perg": "How’s your weather today? And your coffee?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "conversa": {
+   "obj": "Bate-papo sobre tempo e café; o aluno devolve a pergunta. Anotar “strong rain” se aparecer.",
+   "perg": "How do you take your coffee?",
+   "pula": "Duas perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Leitura do blog sobre Lisboa na chuva; perguntas de sentido e depois achar os pares.",
+   "perg": "Would you still go to Lisbon after reading this?",
+   "pula": "Leia metade do blog e ache três pares."
+  },
+  "cv-ranking": {
+   "obj": "Cinco planos para sábado chuvoso: ordenar, defender o primeiro e o último, chegar a um top 3 juntos.",
+   "perg": "Why is that one last on your list?",
+   "pula": "Defenda só o primeiro e pule o top 3."
+  },
+  "descobre": {
+   "obj": "Duas frases corretas: qual soa nativa e por quê; depois regras e armadilhas.",
+   "perg": "Which one would a native say?",
+   "pula": "Três pares e uma armadilha bastam."
+  },
+  "transforma": {
+   "obj": "Frase simples vira nativa com a pista (very cold → bitterly cold).",
+   "perg": "How would a native say that?",
+   "pula": "Quatro frases bastam."
+  },
+  "memoria": {
+   "obj": "Jogo da memória com os pares; cada par vira uma frase do aluno.",
+   "perg": "Can you use that pair in a sentence about you?",
+   "pula": "Quatro pares bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: resenha curta de um lugar visitado, com quatro pares da aula.",
+   "perg": "Which place would you review?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre viagem, rotina e comida usando os pares naturais.",
+   "perg": "How would a native say that?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre viagem e avaliações online, com colocações em cada argumento.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno faz um mini blog de 48 horas na própria cidade, passo a passo.",
+   "perg": "Where would you take a visitor first?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Say it like a native.",
+   "p": "Pick a card. Use at least one pair.",
+   "palavras": [
+    "heavy",
+    "strong",
+    "deeply",
+    "bitterly",
+    "highly",
+    "a quick bite"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR COMMUTE",
+     "q": "How bad is the traffic where you live?",
+     "fup": "What do you do while you wait?",
+     "st": [
+      "The traffic is incredibly heavy …",
+      "To be honest, …"
+     ],
+     "ex": "The traffic is incredibly heavy after six, so I grab a quick bite before I leave."
+    },
+    {
+     "k": "A STRONG OPINION",
+     "q": "What do you have a strong opinion about that most people don’t care about?",
+     "fup": "Why does it matter to you?",
+     "st": [
+      "I have a strong opinion about …",
+      "It drives me mad when …"
+     ],
+     "ex": "I have a strong opinion about pineapple on pizza, and it drives me mad when people defend it."
+    },
+    {
+     "k": "GRATEFUL",
+     "q": "Who are you deeply grateful to, and have you told them?",
+     "fup": "How would you say it?",
+     "st": [
+      "I’m deeply grateful to … for …"
+     ],
+     "ex": "I’m deeply grateful to my first manager for trusting me with real clients."
+    },
+    {
+     "k": "DISAPPOINTED",
+     "q": "When were you bitterly disappointed by a trip or a place?",
+     "fup": "What had you expected?",
+     "st": [
+      "I was bitterly disappointed by …",
+      "It had been highly recommended, but …"
+     ],
+     "ex": "I was bitterly disappointed by a famous restaurant; it had been highly recommended, but the food was cold."
+    },
+    {
+     "k": "WORKLOAD",
+     "q": "How heavy is your workload right now?",
+     "fup": "What would lighten it?",
+     "st": [
+      "My workload is pretty heavy because …",
+      "What would really help is …"
+     ],
+     "ex": "My workload is pretty heavy because two colleagues are on holiday."
+    },
+    {
+     "k": "RECOMMEND",
+     "q": "What place in your city would you highly recommend to a visitor?",
+     "fup": "And what would you avoid?",
+     "st": [
+      "I’d highly recommend …",
+      "I’d steer clear of …"
+     ],
+     "ex": "I’d highly recommend the market on Sunday morning, and I’d steer clear of the beach on holidays."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "The thing is, …",
+    "highly",
+    "heavy"
+   ],
+   "rodadas": [
+    {
+     "q": "A rainy holiday: ruined, or secretly better?",
+     "a": "Ruined",
+     "b": "Secretly better",
+     "fa": [
+      "Ruined. Heavy rain kills every plan.",
+      "You paid for the sun."
+     ],
+     "fb": [
+      "Secretly better. No crowds, strong coffee, long lunches.",
+      "You see the city like a local."
+     ]
+    },
+    {
+     "q": "Trust online reviews, or a friend’s tip?",
+     "a": "Reviews",
+     "b": "A friend",
+     "fa": [
+      "Reviews. A thousand people beat one opinion.",
+      "Highly rated places rarely disappoint."
+     ],
+     "fb": [
+      "A friend. They know your taste.",
+      "Reviews are often bought."
+     ]
+    },
+    {
+     "q": "Travel to see famous sights, or to eat?",
+     "a": "Sights",
+     "b": "Food",
+     "fa": [
+      "Sights. You can eat well at home.",
+      "Some views are deeply moving."
+     ],
+     "fb": [
+      "Food. A quick bite in a market says more than a museum.",
+      "You remember flavors for years."
+     ]
+    },
+    {
+     "q": "Should a travel blog say when a place is bad?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Readers deserve the truth.",
+      "A bitterly honest review saves people money."
+     ],
+     "fb": [
+      "No. Small businesses suffer from one bad post.",
+      "Just leave it out."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Highly recommended, even in heavy rain."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Blog Post",
+   "t": "48 hours in your city.",
+   "p": "One step at a time. Use the pairs.",
+   "prof": "The student’s own city; ask for one collocation per step and recast plain adjectives quietly.",
+   "passos": [
+    {
+     "q": "Start: what’s the weather usually like, and when should people come?",
+     "st": [
+      "It can be bitterly … / incredibly …",
+      "The best time is …"
+     ],
+     "ex": "It can be incredibly humid in summer, so the best time is May."
+    },
+    {
+     "q": "Day one: where should they eat?",
+     "st": [
+      "For a quick bite, …",
+      "I’d highly recommend …"
+     ],
+     "ex": "For a quick bite, try the pastel at the market; for dinner, I’d highly recommend a small place near the port."
+    },
+    {
+     "q": "Day two: what should they see, or avoid?",
+     "st": [
+      "Don’t miss …",
+      "Avoid … because of the heavy …"
+     ],
+     "ex": "Don’t miss the old center, but avoid the bridge at six because of the heavy traffic."
+    },
+    {
+     "q": "Close the post: one honest line.",
+     "st": [
+      "I’m deeply …",
+      "Come with low expectations and …"
+     ],
+     "ex": "Come with low expectations and you’ll be pleasantly surprised."
+    }
+   ],
+   "fim": "Your post is live. Readers are deeply grateful."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

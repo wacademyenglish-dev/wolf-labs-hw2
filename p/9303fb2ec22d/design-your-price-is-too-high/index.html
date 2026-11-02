@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -121,5 +122,261 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Value before price.",
+   "p": "One question. Watch. Then answer."
+  },
+  "cv-juri": {
+   "t": "“Too expensive.” Three designers.",
+   "p": "Give a verdict. Say what they should say."
+  },
+  "separa": {
+   "t": "Which answer keeps your value?",
+   "p": "Read it aloud. Confident or sorry?"
+  },
+  "prova": {
+   "t": "Four clients, four price objections.",
+   "p": "Play the client. Start the clock. Answer."
+  },
+  "pode": {
+   "t": "Lesson 3: what can you do now?",
+   "p": "Read each line aloud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Falar de preço sem pedir desculpas: perguntar pelo problema, dizer o que está incluído, mudar o escopo e não o preço (With a budget of…, I could…).",
+  "armadilha": "O freelancer brasileiro se desculpa (“Sorry, I know it’s expensive”), oferece desconto na hora (“I can do cheaper”), diz “The value is…” para preço e “Is included…” sem sujeito.",
+  "pal": [
+   "What problem does this solve?",
+   "Here’s what’s included:",
+   "With a budget of …, I could …",
+   "That’s a fair question.",
+   "I keep my rates the same …",
+   "scope",
+   "rate"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: a frase que todo designer ouve, “That’s a bit expensive”.",
+   "perg": "Has a client ever said your price was too high?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "video": {
+   "obj": "Role play do The Futur (0:00–1:50): perguntas sobre problema e valor antes do preço.",
+   "perg": "What does he ask before talking price?",
+   "pula": "Assista inteiro; responda uma pergunta."
+  },
+  "cv-juri": {
+   "obj": "Júri da Bia (baixa o preço), do Leo (reduz o escopo e perde) e da Marina (preço cheio para amiga).",
+   "perg": "Was Bia right to drop her price?",
+   "pula": "Um designer só basta."
+  },
+  "separa": {
+   "obj": "Separar respostas confiantes e desculposas, dizendo por quê.",
+   "perg": "Why does this answer lose value?",
+   "pula": "Quatro respostas bastam."
+  },
+  "prova": {
+   "obj": "Quatro clientes gravados com objeções de preço; 40 s com o relógio.",
+   "perg": "What could you do with a smaller budget?",
+   "pula": "Dois clientes bastam."
+  },
+  "pode": {
+   "obj": "Ler as frases “I can” e marcar o que já consegue; escrever o preço real com o que inclui.",
+   "perg": "Can you say your rate without “sorry”?",
+   "pula": "Leia só as que faltam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre preço, clientes e valor no trabalho real do designer.",
+   "perg": "How do you set your prices?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de freelancer: desconto, amigo, escopo, preço no site.",
+   "perg": "Discount for a friend?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o professor é um cliente difícil; o aluno defende o preço com calma.",
+   "perg": "Can you do it for less?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your price, your value.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "My rate is …",
+    "It includes …",
+    "With a budget of …, I could …"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR RATE",
+     "q": "How do you set your prices today?",
+     "fup": "By the hour or by the project?",
+     "st": [
+      "I charge by …",
+      "My rate is …"
+     ],
+     "ex": "I charge by the project. My rate for a logo is 800 dollars."
+    },
+    {
+     "k": "WHAT’S INCLUDED",
+     "q": "What is included in your most common project?",
+     "fup": "What is not included?",
+     "st": [
+      "It includes …",
+      "It doesn’t include …"
+     ],
+     "ex": "It includes three concepts and two rounds of changes. It doesn’t include printing."
+    },
+    {
+     "k": "THE OBJECTION",
+     "q": "What did you say the last time a client said “too expensive”?",
+     "fup": "What would you say now?",
+     "st": [
+      "I said …",
+      "Now I’d say …"
+     ],
+     "ex": "I said sorry and gave a discount. Now I’d say, “Here’s what’s included.”"
+    },
+    {
+     "k": "SMALL BUDGET",
+     "q": "A client has half your price. What could you offer?",
+     "fup": "What would you cut?",
+     "st": [
+      "With a budget of …, I could …"
+     ],
+     "ex": "With a budget of 400, I could do one concept and one round of changes."
+    },
+    {
+     "k": "BEST CLIENT",
+     "q": "Who was your best client ever? Why?",
+     "fup": "Did they question your price?",
+     "st": [
+      "My best client was …",
+      "They …"
+     ],
+     "ex": "My best client was a coffee shop. They never questioned my price because they saw the result."
+    },
+    {
+     "k": "VALUE",
+     "q": "What problem does your design solve for clients?",
+     "fup": "How can you show it?",
+     "st": [
+      "My work helps clients …",
+      "I can show …"
+     ],
+     "ex": "My work helps clients look professional. I can show sales before and after."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Freelancer dilemmas. Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "In my opinion,",
+    "That’s a fair question, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "A friend asks for a logo. Full price or a discount?",
+     "a": "Full price",
+     "b": "A discount",
+     "fa": [
+      "Full price. My work has the same value.",
+      "I can add something extra instead."
+     ],
+     "fb": [
+      "A discount. Friends help friends.",
+      "They will recommend me."
+     ]
+    },
+    {
+     "q": "Show your prices on your website, or not?",
+     "a": "Show them",
+     "b": "Don’t show them",
+     "fa": [
+      "Show them. Clients who call can pay.",
+      "It saves time."
+     ],
+     "fb": [
+      "Don’t. Every project is different.",
+      "I want to talk about value first."
+     ]
+    },
+    {
+     "q": "A big brand offers half your rate. Accept for the portfolio?",
+     "a": "Accept",
+     "b": "Say no",
+     "fa": [
+      "Accept. A big name opens doors."
+     ],
+     "fb": [
+      "Say no. Low prices teach clients to pay less."
+     ]
+    },
+    {
+     "q": "Charge by the hour or by the project?",
+     "a": "By the hour",
+     "b": "By the project",
+     "fa": [
+      "By the hour. Extra changes are paid."
+     ],
+     "fb": [
+      "By the project. Clients pay for results, not hours."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "A client calls about your price.",
+   "p": "Your teacher is the client.",
+   "aluno": "Listen to the client. Answer as the designer: calm, confident, no apologies.",
+   "perguntas": [
+    "Your price is too high. Why so much?",
+    "Can you do it for less?",
+    "What exactly is included?",
+    "Another designer said half your price. Why should I choose you?",
+    "I only have 500 dollars. What can you do?",
+    "Can you give me a discount if I pay now?"
+   ],
+   "st": [
+    "That’s a fair question.",
+    "Here’s what’s included: …",
+    "With a budget of …, I could …"
+   ],
+   "ex": "That’s a fair question. I keep my rates the same for all clients, but with a budget of 500, I could do one concept and one round of changes. Would that work for you?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

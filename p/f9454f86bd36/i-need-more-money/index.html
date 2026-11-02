@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · I Need More Money · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="serie.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Challenge · Episode 6</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season map: London to Edinburgh"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>The Challenge · Episode 6 · I Need More Money</h2>
+    <p>Episode 6. Fran is fine, but Bob and Paula need more money: chef, shop assistant, farmer, receptionist. The language is <b>need</b> + a thing, <b>need to</b> + a verb, and <b>Do you need&hellip;? Yes, I do</b>. (Can is already in &ldquo;Seven Things&rdquo;, so today the target is need.) No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Previously on The Challenge, Jobs and money, What do you need. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Episode 6, in three steps. The video unlocks when the student answers the Before questions.</li>
+      <li><b>Focus</b> &mdash; What do you need, Match the jobs, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; What do you need. It goes to the student&rsquo;s My notes.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>&ldquo;Preciso <i>de</i> dinheiro&rdquo; becomes <i>I need of money</i>. The to disappears before a verb: <i>I need go</i>. And the question loses its Do: <i>You need more money?</i></p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The map on top shows the season; today stop 6 lights up. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* THE CHALLENGE · EPISODE 6 · I NEED MORE MONEY (A1)
+   Vídeo: BBC Learning English, "Work!" (tcNkx0E_nkM, 6:43). AULA NOVA.
+   Alvo NEED (e não CAN, que já é a "Seven Things"). */
+const M = { nome: "I Need More Money", kick: "A1 · NEED, DO YOU NEED" };
+var EP = {
+  n: 6, titulo: 'I Need More Money', video: 'tcNkx0E_nkM', onde: { Fran: 'on a train', Bob: 'at work', Paula: 'on a farm' },
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'Fran is fine. But Bob and Paula need more money. Chef or shop assistant? Farmer or receptionist?',
+      nota: 'Ask: if you need money fast, what job can you do?' },
+    { k: 'cartas', est: 'o', rot: 'previously on', titulo: 'Previously on <em>The Challenge</em>', pt: 'Vire as cartas e lembre o episódio 5.',
+      nota: 'Recap of Episode 5 with like and don\'t like.',
+      cartas: [
+        { frente: 'Fran', sob: 'Episode 5', verso: 'I like healthy food… but the pizza here is good!', dica: 'She likes …', cor: 'var(--fran)', fw: { q: 'What do you like to eat when you travel?', st: ['I like …', 'I don\'t like …', 'Do you like …?'], help: '“When I travel I like street food.”' } },
+        { frente: 'Bob', sob: 'Episode 5', verso: 'Bob has a warm coat now. It was fifty pounds!', dica: 'He has …', cor: 'var(--bob)' },
+        { frente: 'Paula', sob: 'Episode 5', verso: 'Paula is on the bus.', dica: 'She\'s on …', cor: 'var(--paula)' }
+      ] },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Jobs and <em>money</em>', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Every answer with need or need to.',
+      cartas: [
+        { frente: 'Job?', verso: 'Do you have a job? What is it?', dica: 'I\'m a … / I work in …', cor: 'var(--bob)', fw: { q: 'What do you need for your job?', st: ['I need a computer.', 'I need to …', 'I don\'t need …'], help: '“I\'m a teacher. I need a computer and coffee!”' } },
+        { frente: 'Buy?', verso: 'What do you need to buy this week?', dica: 'I need to buy …', cor: 'var(--paula)', fw: { q: 'Is it cheap or expensive?', st: ['It\'s cheap.', 'It\'s expensive.', 'I need more money!'], help: '“I need to buy shoes. They\'re expensive.”' } },
+        { frente: 'Cook?', verso: 'Can you cook?', dica: 'Yes, I can. / No, I can\'t.', cor: 'var(--fran)', fw: { q: 'What do you need to make your favorite food?', st: ['I need …', 'I need to buy …', 'I don\'t need …'], help: '“For a cake I need eggs, flour and sugar.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'Episode 6 · 6:43', titulo: 'Watch <em>Episode 6</em>', pt: 'Responda antes. O vídeo destrava depois.',
+      nota: 'Before: two guesses. After: true or false about the jobs.',
+      antes: [ { q: 'Who needs more money?', ops: [{ t: 'Fran' }, { t: 'Bob and Paula' }, { t: 'nobody' }] }, { q: 'What job is good for Bob?', ops: [{ t: 'chef' }, { t: 'shop assistant' }] } ],
+      durante: 'Listen for need and the four jobs: chef, shop assistant, farmer, receptionist.',
+      depois: [ { f: 'Fran needs more money.', ok: 0 }, { f: 'Bob can\'t do maths.', ok: 1 }, { f: 'Paula loves animals.', ok: 1 }, { f: 'They get seventy-five pounds.', ok: 1 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'What do you <em>need</em>?', pt: 'need + coisa · need to + verbo · Do you need…? Yes, I do.',
+      nota: 'Read each card. The red card is the Portuguese “preciso de”.',
+      cartoes: [ { g: 'I <b>need</b> more money.', p: 'need + a thing.' }, { g: 'I <b>need to</b> go.', p: 'need to + a verb.' }, { g: '<b>Do</b> you need help? Yes, I <b>do</b>.', p: 'Questions with Do. Short answer: Yes, I do.' }, { g: 'I need of money.', p: '“Preciso de dinheiro”: in English, no of.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'the jobs', titulo: 'Match the <em>jobs</em>', pt: 'Toque no trabalho e depois no que ele faz.',
+      nota: 'The four jobs of the episode. Ask: which one do you want?',
+      esq: ['a chef', 'a shop assistant', 'a farmer', 'a receptionist'], dir: ['cooks food', 'sells things in a shop', 'works with animals', 'works at a desk with a computer'], ordem: [2, 0, 3, 1],
+      fw: { q: 'Which job do you want? Why?', st: ['I want to be a …', 'I can …', 'I can\'t …'], help: '“I want to be a farmer. I love animals.”' } },
+    { k: 'cartas', est: 'o', rot: 'the job board', titulo: 'What do you <em>need</em>?', pt: 'Vire as vagas: do que cada trabalho precisa?',
+      nota: 'Each card says what the job needs. The student chooses one and says what they need.',
+      cartas: [
+        { frente: 'Chef', sob: 'job', verso: 'You need to cook. You need to love food.', dica: 'You need to …', cor: 'var(--fran)', fw: { q: 'And your job: what do you need?', st: ['I need …', 'I need to …', 'I don\'t need …'], help: '“In my job I need to speak English!”' } },
+        { frente: 'Shop', sob: 'job', verso: 'You need to like numbers. You need to do maths.', dica: 'Bob can\'t do maths!', cor: 'var(--bob)' },
+        { frente: 'Farm', sob: 'job', verso: 'You need to love animals. You need to work outside.', dica: 'Paula loves animals!', cor: 'var(--paula)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: '“Preciso de”, the missing to, and the question without Do.',
+      itens: [ { erro: 'I need <s>of</s> money.', certo: 'I need money.', por: 'No of after need.' }, { erro: 'I need <s>go</s>.', certo: 'I need <b>to go</b>.', por: 'need + to + verb.' }, { erro: '<s>You need</s> more money?', certo: '<b>Do you need</b> more money?', por: 'Questions start with Do.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the episode. Read each one out loud.',
+      itens: [ { f: 'Bob ___ more money.', ops: ['needs', 'need'], ok: 0 }, { f: 'Do you need more money? Yes, I ___.', ops: ['do', 'need'], ok: 0 }, { f: 'I need ___ go to Edinburgh.', ops: ['to', 'of'], ok: 0 }, { f: 'Paula works ___ a farmer.', ops: ['as', 'like'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'What do <em>you</em> need?', pt: 'Escreva do que você precisa esta semana. Toque nas peças.',
+      ph: 'This week I need …', nota: 'The line under the paper catches “need of” and “need go”. SAVE sends it to My notes.',
+      banco: ['This week', 'I need', 'I need to', 'I don\'t need', 'more money', 'a coffee', 'to sleep', 'to study', 'Do you need'],
+      regras: [['\\bneed of\\b', 'Check: no of after need.'], ['\\bneed (go|buy|study|sleep|work|eat|cook)\\b', 'Check: need to + verb.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'She has a son', tx: 'Fran meets a friend. Brothers, sisters, mums and dads… and a big decision.',
+      ganchos: [['Fran', 'meets a friend'], ['Bob', 'has money now'], ['Paula', 'has money now']], nota: 'Ask: do you have brothers or sisters? That opens Episode 7.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="serie.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "Bob and Paula need more money. What job?"
+  },
+  "c10": {
+   "p": "Fran meets a friend. Family, and a big decision."
+  }
+ },
+ "prep": {
+  "obj": "need + coisa (I need money), need to + verbo (I need to work) e Do you need…? Yes, I do. Episódio 6: Bob e Paula precisam de dinheiro e procuram trabalho.",
+  "armadilha": "“Preciso de dinheiro” vira “I need of money”; o to some antes do verbo (“I need go”); e a pergunta perde o Do (“You need more money?”).",
+  "pal": [
+   "need",
+   "need to",
+   "Do you need…?",
+   "Yes, I do.",
+   "chef",
+   "shop assistant",
+   "farmer",
+   "receptionist",
+   "money"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abre o episódio 6: Fran está bem, mas Bob e Paula precisam de mais dinheiro.",
+   "perg": "If you need money fast, what job can you do?",
+   "pula": "Uma resposta e siga."
+  },
+  "c1": {
+   "obj": "Previously on: revisão do episódio 5 com like e don't like.",
+   "perg": "What does Bob like? What doesn't he like?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Conversa sobre trabalho e dinheiro; toda resposta com need ou need to.",
+   "perg": "What do you need to buy this week?",
+   "pula": "Duas cartas bastam."
+  },
+  "c3": {
+   "obj": "Episódio 6 inteiro: dois palpites, vídeo, verdadeiro ou falso sobre os trabalhos.",
+   "perg": "Who needs more money?",
+   "pula": "Assista uma vez só; o vídeo vai inteiro."
+  },
+  "c4": {
+   "obj": "A regra: need + coisa, need to + verbo, Do you need…?; o cartão vermelho é “preciso de”.",
+   "perg": "Do you need a coffee now?",
+   "pula": "Leia os cartões e peça uma frase de cada."
+  },
+  "c5": {
+   "obj": "Os quatro trabalhos do episódio: chef, shop assistant, farmer, receptionist.",
+   "perg": "Which job do you want? Why?",
+   "pula": "Faça os pares sem comentar."
+  },
+  "c6": {
+   "obj": "O quadro de vagas: cada trabalho diz do que precisa; o aluno escolhe um.",
+   "perg": "What do you need for this job?",
+   "pula": "Duas vagas bastam."
+  },
+  "c7": {
+   "obj": "Corrigir as três armadilhas: need of, need go, pergunta sem Do.",
+   "perg": "Which one is right? Read it out loud.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c8": {
+   "obj": "Prática com falas do episódio; ler cada uma em voz alta.",
+   "perg": "Read the full line out loud, please.",
+   "pula": "Faça duas linhas."
+  },
+  "c9": {
+   "obj": "Escrever do que o aluno precisa (coisas e ações); vai para o My notes.",
+   "perg": "What do you need this month?",
+   "pula": "Duas frases bastam."
+  },
+  "c10": {
+   "obj": "Gancho do episódio 7: família e uma grande decisão.",
+   "perg": "Do you have brothers or sisters?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com need e need to, ligada a trabalho e viagem.",
+   "perg": "What do you need for a trip?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre dois trabalhos ou duas opções e dizer do que precisa.",
+   "perg": "Chef or farmer? What do you need?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta seu plano de dinheiro para a corrida, passo a passo, com need to.",
+   "perg": "What do you need to do first?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "What do you need?",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "need",
+    "need to",
+    "Do you need…?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR MORNING",
+     "q": "What do you need in the morning?",
+     "fup": "Do you need coffee?",
+     "st": [
+      "I need …",
+      "Yes, I do. / No, I don't."
+     ],
+     "ex": "I need coffee. Yes, I do. A big coffee!"
+    },
+    {
+     "k": "YOUR BAG",
+     "q": "What do you need in your bag today?",
+     "fup": "Do you need an umbrella?",
+     "st": [
+      "I need my …",
+      "I don't need …"
+     ],
+     "ex": "I need my phone and my keys. I don't need an umbrella."
+    },
+    {
+     "k": "THIS WEEK",
+     "q": "What do you need to do this week?",
+     "fup": "Do you need to work on Saturday?",
+     "st": [
+      "I need to …",
+      "I don't need to …"
+     ],
+     "ex": "I need to study and I need to go to the bank."
+    },
+    {
+     "k": "A TRIP",
+     "q": "What do you need for five days in the UK?",
+     "fup": "Do you need a coat?",
+     "st": [
+      "I need a …",
+      "I need to buy …"
+     ],
+     "ex": "I need a coat and I need to buy a map."
+    },
+    {
+     "k": "MONEY FAST",
+     "q": "You need money fast. What do you need to do?",
+     "fup": "Do you need to work?",
+     "st": [
+      "I need to work as a …",
+      "I need to sell …"
+     ],
+     "ex": "I need to work as a receptionist."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What do you need for your job?",
+     "fup": "Do you need English?",
+     "st": [
+      "I need a …",
+      "I need to speak …"
+     ],
+     "ex": "I need a computer and I need to speak English."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "need",
+    "need to",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Chef or farmer?",
+     "a": "Chef",
+     "b": "Farmer",
+     "fa": [
+      "Chef. I need to cook, and I can cook."
+     ],
+     "fb": [
+      "Farmer. I need to be outside."
+     ]
+    },
+    {
+     "q": "Shop assistant or receptionist?",
+     "a": "Shop assistant",
+     "b": "Receptionist",
+     "fa": [
+      "Shop assistant. I need to talk to people."
+     ],
+     "fb": [
+      "Receptionist. I need a desk and a chair."
+     ]
+    },
+    {
+     "q": "Work for one day or sell your phone?",
+     "a": "Work",
+     "b": "Sell the phone",
+     "fa": [
+      "Work. I need my phone!"
+     ],
+     "fb": [
+      "Sell it. I don't need to work."
+     ]
+    },
+    {
+     "q": "More money or more time?",
+     "a": "More money",
+     "b": "More time",
+     "fa": [
+      "More money. I need to travel."
+     ],
+     "fb": [
+      "More time. I need to rest."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Plan",
+   "t": "You are in the race now.",
+   "p": "Make your money plan, step by step.",
+   "prof": "Keep every answer with need or need to. Ask: do you need to…? when they stop.",
+   "passos": [
+    {
+     "q": "You have £20. What do you need?",
+     "st": [
+      "I need a …",
+      "I need some …"
+     ],
+     "ex": "I need a sandwich and a ticket."
+    },
+    {
+     "q": "It's not enough. What do you need to do?",
+     "st": [
+      "I need to work as a …"
+     ],
+     "ex": "I need to work as a chef for one day."
+    },
+    {
+     "q": "What do you need for that job?",
+     "st": [
+      "I need …",
+      "I don't need …"
+     ],
+     "ex": "I need an apron. I don't need a computer."
+    },
+    {
+     "q": "You have more money now. What do you need to buy first?",
+     "st": [
+      "First, I need to buy …"
+     ],
+     "ex": "First, I need to buy a train ticket."
+    }
+   ],
+   "fim": "Good plan. You don't need to stop now."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

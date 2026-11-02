@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Little and Often · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 2 · B2</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 2 · Little and Often · B2</h2>
+    <p>Episode 2 of <b>Better Speaking</b>. Korean football coach Park Hang-seo talks about fans who prefer the &ldquo;beer shop&rdquo; to the stadium. Richard shows two things: talking your way around a word you don&rsquo;t know, and <b>stress</b>: sentence stress that changes the meaning (<b>a BIG black cat / a big BLACK cat</b>) and word stress (<b>FOOTball, teLEvision</b>). The title is his advice: practice <b>little and often</b>. The sister lesson for B1 is &ldquo;What Do You Call It?&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; How do you practice, The beer shop trick. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Stress is meaning, Hear the contrast, Fix the traps, Where is the stress.</li>
+      <li><b>Write</b> &mdash; Your little and often plan. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Portuguese word stress carried into English: <i>deve-LOP, comfor-TA-ble, ho-TEL</i> said as Portuguese. Flat sentence stress, where every word weighs the same. And stopping when the word doesn&rsquo;t come, instead of explaining around it.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 2 · LITTLE AND OFTEN (B2)
+   Vídeo: BBC Learning English, Better Speaking (oZY3YP9qZ4U, 11:20), quatro trechos (~4:50).
+   Alvo: o acento que muda o sentido (I've got a BIG black cat / a big BLACK cat) e o acento da palavra (FOOTball, teLEvision). */
+const M = { nome: "Little and Often", kick: "B2 · STRESS THAT CHANGES THE MEANING" };
+var EP = {
+  n: 2, de: 8, nivel: 'B2', titulo: 'Little and Often', video: 'oZY3YP9qZ4U',
+  convidado: 'Park Hang-seo', habilidade: 'use stress to make your meaning clear',
+  trechos: [
+    { ini: 42, fim: 107, rot: 'Park: football in Korea' },
+    { ini: 197, fim: 294, rot: 'Richard: the beer shop' },
+    { ini: 307, fim: 385, rot: 'The big black cat' },
+    { ini: 453, fim: 514, rot: 'Little and often' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'A football coach from Korea speaks to the world with very few words. He gets his meaning across. What could make him even clearer? Where he puts the stress.',
+      nota: 'Ask: what is a word in English you always say “wrong”?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'How do you <em>practice</em>?', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Push for two or three sentences per card.',
+      cartas: [
+        { frente: 'Routine', verso: 'How often do you practice your English outside class? Be honest.', dica: 'To be honest, I…', cor: 'var(--guest)', fw: { q: 'What would be a realistic routine for you?', st: ['Ten minutes a day…', 'On my way to work, I could…', 'Little and often, like…'], help: '“Ten minutes a day on the bus, with a podcast.”' } },
+        { frente: 'Stuck', verso: 'What do you do when you don\'t know a word in the middle of a sentence?', dica: 'I usually…', cor: 'var(--host)', fw: { q: 'Has it ever gone wrong?', st: ['Once, I…', 'People laughed when…', 'It worked when…'], help: '“Once I said “tooth broom” and everybody understood!”' } },
+        { frente: 'Football', verso: 'Do you prefer to watch a match at home or at the stadium?', dica: 'I\'d rather…', cor: 'var(--teacher)', fw: { q: 'And in Brazil, what do most people do?', st: ['Most people…', 'It depends on…', 'At home, because…'], help: '“Most people watch at a bar with friends.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'four clips · about 5 minutes', titulo: 'Listen to <em>Park Hang-seo</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os quatro trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Where do Korean football fans prefer to watch matches, according to Park?', ops: [{ t: 'At the stadium' }, { t: 'At home or with friends' }] }, { q: 'Park says “beer shop”. Is that a problem?', ops: [{ t: 'Yes, nobody understands' }, { t: 'No, we know what he means' }] } ],
+      durante: 'Clip 1 is Park. Clip 2: what to do when you don\'t know a word. Clip 3: listen to the big black cat three times. Clip 4: the advice in the title.',
+      depois: [ { f: 'Richard says “beer shop” is perfectly understandable.', ok: 1 }, { f: 'Park stresses every word the same way.', ok: 1 }, { f: 'Park says FOOTball correctly.', ok: 0 }, { f: 'Richard says: do a lot of pronunciation practice once a week.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Stress is <em>meaning</em>', pt: 'A palavra com mais força é a informação nova ou o contraste.',
+      nota: 'Read each card with exaggerated stress, then ask the student to do the same.',
+      cartoes: [ { g: 'I\'ve got a <b>BIG</b> black cat.', p: 'Not a small one.' }, { g: 'I\'ve got a big <b>BLACK</b> cat.', p: 'Not a white one.' }, { g: 'I\'ve got a big black <b>CAT</b>.', p: 'Not a dog.' }, { g: 'foot-BALL · te-le-VI-sion', p: 'Word stress: FOOTball, TELevision.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'what do I mean?', titulo: 'Hear the <em>contrast</em>', pt: 'Toque na frase e depois no que ela quer dizer.',
+      nota: 'Say each sentence with the stress in capitals; the student matches the meaning.',
+      esq: ['I didn\'t SAY he stole it.', 'I didn\'t say HE stole it.', 'I didn\'t say he STOLE it.', 'I DIDN\'T say he stole it.', 'I didn\'t say he stole IT.'], dir: ['I only thought it.', 'Somebody else did.', 'Maybe he borrowed it.', 'That\'s not true at all.', 'He stole something else.'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Say one sentence about your weekend. I\'ll guess the contrast.', st: ['I went to the BEACH…', 'MY brother…', 'On SATURDAY…'], help: '“I went to the beach on SATURDAY.” (not Sunday)' } },
+    { k: 'cartas', est: 'o', rot: 'talk around it', titulo: 'The <em>beer shop</em> trick', pt: 'Explique a palavra sem dizer a palavra. O professor adivinha.',
+      nota: 'The student explains each word without saying it, like Park and Richard (puncture, toothbrush). You guess.',
+      cartas: [
+        { frente: 'Word 1', sob: 'explain it', verso: 'a corkscrew', dica: 'It\'s a thing you use to…', cor: 'var(--guest)', fw: { q: 'Now explain a word from your job.', st: ['It\'s a thing you use to…', 'It\'s the person who…', 'You know when…'], help: '“It\'s the person who checks the numbers at the end of the year.”' } },
+        { frente: 'Word 2', sob: 'explain it', verso: 'a traffic jam', dica: 'You know when…', cor: 'var(--host)' },
+        { frente: 'Word 3', sob: 'explain it', verso: 'a landlord', dica: 'It\'s the person who…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'Portuguese stress on English words, and flat sentence stress.',
+      itens: [ { erro: 'deve-LOP · comfor-TA-ble', certo: 'de<b>VEL</b>op · <b>COM</b>fortable', por: 'Check the dictionary stress mark.' }, { erro: 'It\'s not a small cat, it\'s <s>a big cat</s>.', certo: 'It\'s not a small cat, it\'s a <b>BIG</b> cat.', por: 'Stress the contrast, not every word.' }, { erro: 'I don\'t know the word, <s>so I stop</s>.', certo: 'I don\'t know the word, <b>so I explain it</b>.', por: 'Talk your way around the word.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Where is the <em>stress</em>?', pt: 'Escolha a sílaba forte. Se errar, tente de novo.',
+      nota: 'Read each word with exaggerated stress, like Richard with “television”.',
+      itens: [ { f: 'football → ___', ops: ['FOOT-ball', 'foot-BALL'], ok: 0 }, { f: 'vocabulary → ___', ops: ['vo-CAB-u-la-ry', 'vo-ca-bu-LA-ry'], ok: 0 }, { f: 'photographer → ___', ops: ['pho-TOG-ra-pher', 'PHO-to-gra-pher'], ok: 0 }, { f: 'hotel → ___', ops: ['ho-TEL', 'HO-tel'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>little and often</em> plan', pt: 'Escreva o seu plano de prática: o quê, quando, por quanto tempo. Marque com MAIÚSCULAS a sílaba forte de três palavras novas.',
+      ph: 'Every day on my way to work, I\'m going to… New words: deVELop, …', nota: 'The line under the paper catches “devel-OP” style marks. SAVE sends it to My notes. Then the student says it with clear stress.',
+      banco: ['Every day', 'for ten minutes', 'on my way to work', 'I\'m going to', 'record myself', 'mark the stress', 'New words:'],
+      regras: [['\\bdeve-lop\\b', 'Check: deVELop.'], ['\\bfoot-ball\\b', 'Check: FOOTball.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'In my opinion', tx: 'A footballer in China, a teacher in London, and a very strong opinion. How do you sound sure of yourself in English?',
+      ganchos: [['Next guest', 'a footballer in China'], ['The skill', 'give your opinion'], ['Your task', 'ten minutes a day']], nota: 'Ask: what is something you have a strong opinion about? That opens Episode 3.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Acento da frase que muda o sentido (a BIG black cat / a big BLACK cat), acento da palavra e explicar ao redor da palavra que falta; Park Hang-seo e os torcedores do “beer shop”.",
+  "armadilha": "Acento do português levado ao inglês: deve-LOP, comfor-TA-ble, ho-TEL dito à brasileira; frase “plana”, com todas as palavras iguais; e travar quando a palavra não vem.",
+  "pal": [
+   "stress",
+   "word stress",
+   "sentence stress",
+   "FOOTball",
+   "teLEvision",
+   "little and often",
+   "talk around it",
+   "the beer shop"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o técnico Park Hang-seo e a habilidade: usar o acento para deixar o sentido claro.",
+   "perg": "What English word do you always say “wrong”?",
+   "pula": "Uma resposta e NEXT."
+  },
+  "c1": {
+   "obj": "Conversa sobre como o aluno pratica inglês; duas ou três frases por carta.",
+   "perg": "When did you last practice speaking?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes do Park em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "Where do the fans prefer to be?",
+   "pula": "Veja os clipes uma vez; pule o durante."
+  },
+  "c3": {
+   "obj": "A regra: o acento da frase muda o sentido; o da palavra muda o reconhecimento.",
+   "perg": "What changes when I stress BLACK?",
+   "pula": "Leia dois cartões com ênfase exagerada."
+  },
+  "c4": {
+   "obj": "O professor diz a frase com o acento marcado; o aluno liga ao sentido.",
+   "perg": "What do I mean when I say it like this?",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "O truque do beer shop: explicar a palavra sem dizê-la; o professor adivinha.",
+   "perg": "How would you explain this word?",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Três armadilhas: acento do português nas palavras e frase sem acento.",
+   "perg": "Where does the stress go in develop?",
+   "pula": "Faça as três, rápido."
+  },
+  "c7": {
+   "obj": "Achar a sílaba forte e ler com ênfase exagerada, como Richard com television.",
+   "perg": "Can you say it louder on the strong part?",
+   "pula": "Metade das palavras basta."
+  },
+  "c8": {
+   "obj": "Escrita: o plano “little and often” do aluno; depois dizer com acento claro.",
+   "perg": "Say your plan with clear stress.",
+   "pula": "Duas frases bastam."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 3: dar opinião com segurança.",
+   "perg": "What do you have a strong opinion about?",
+   "pula": "Só a pergunta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre prática e palavras difíceis, cuidando do acento.",
+   "perg": "Which word gave you trouble this week?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre como praticar e o que importa mais ao falar.",
+   "perg": "I see your point, but why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta o próprio plano de prática para um mês, passo a passo.",
+   "perg": "How little, and how often?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 6,
+   "rot": "More to Talk About",
+   "t": "Little and often, honestly.",
+   "p": "Pick a card. Stress the key word.",
+   "palavras": [
+    "little and often",
+    "stress",
+    "I tend to",
+    "the thing is"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR ROUTINE",
+     "q": "Where could ten minutes of English fit into your day?",
+     "fup": "What would kill that habit?",
+     "st": [
+      "The thing is, …",
+      "I could probably …"
+     ],
+     "ex": "The thing is, my mornings are chaos. I could probably do ten minutes on the bus, though."
+    },
+    {
+     "k": "THE MISSING WORD",
+     "q": "What do you do when a word just won’t come?",
+     "fup": "Has it ever gone badly?",
+     "st": [
+      "I usually …",
+      "Once, I …"
+     ],
+     "ex": "I usually describe it. Once, I said “the thing you open wine with” in a meeting. It worked."
+    },
+    {
+     "k": "FANS",
+     "q": "Would you rather watch a big match at the stadium or in a bar?",
+     "fup": "What’s lost on TV?",
+     "st": [
+      "Honestly, I’d …",
+      "What you miss is …"
+     ],
+     "ex": "Honestly, I’d go to the bar. What you miss is the noise, but you gain a cold beer."
+    },
+    {
+     "k": "ACCENTS",
+     "q": "Whose accent in English is hardest for you to follow?",
+     "fup": "Is it the sounds or the stress?",
+     "st": [
+      "I struggle with …",
+      "It’s more the …"
+     ],
+     "ex": "I struggle with Scottish English. It’s more the rhythm than the words."
+    },
+    {
+     "k": "MEANING",
+     "q": "Have you ever been misunderstood because of one word?",
+     "fup": "How did you fix it?",
+     "st": [
+      "I once said …",
+      "What I meant was …"
+     ],
+     "ex": "I once said “desert” instead of “dessert”. What I meant was cake, not sand."
+    },
+    {
+     "k": "YOUR NAME",
+     "q": "How do English speakers say your name?",
+     "fup": "Do you correct them?",
+     "st": [
+      "They tend to stress …",
+      "I usually let it go."
+     ],
+     "ex": "They tend to stress the first part. I usually let it go, unless it’s a client."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Argue it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but",
+    "the thing is",
+    "on the other hand"
+   ],
+   "rodadas": [
+    {
+     "q": "Ten minutes a day or two hours on Saturday?",
+     "a": "Ten a day",
+     "b": "Two on Saturday",
+     "fa": [
+      "Ten a day. Little and often keeps it alive."
+     ],
+     "fb": [
+      "Two hours on Saturday. You actually go deep, and it’s realistic."
+     ]
+    },
+    {
+     "q": "Clear stress or a good accent?",
+     "a": "Clear stress",
+     "b": "Good accent",
+     "fa": [
+      "Clear stress. People understand you even with a strong accent."
+     ],
+     "fb": [
+      "A good accent. It’s the first thing people notice."
+     ]
+    },
+    {
+     "q": "Stop and find the word, or talk around it?",
+     "a": "Find the word",
+     "b": "Talk around it",
+     "fa": [
+      "Find it. Precision matters at work."
+     ],
+     "fb": [
+      "Talk around it, like Park. The conversation keeps moving."
+     ]
+    },
+    {
+     "q": "Correct your friends’ English, or let it go?",
+     "a": "Correct them",
+     "b": "Let it go",
+     "fa": [
+      "Correct them, kindly. Nobody else will."
+     ],
+     "fb": [
+      "Let it go. Meaning matters more than perfection."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Every point landed on the right word."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your 30-Day Plan",
+   "t": "Build your little-and-often month.",
+   "p": "One step at a time. Say it with stress.",
+   "prof": "Push for a realistic plan, and make the student stress the key word in every answer.",
+   "passos": [
+    {
+     "q": "What will you do every day, and for how long?",
+     "st": [
+      "Every day, I’m going to …",
+      "Just … minutes."
+     ],
+     "ex": "Every day, I’m going to read one news story out loud. Just ten minutes."
+    },
+    {
+     "q": "When exactly? Tie it to something you already do.",
+     "st": [
+      "Right after …",
+      "While I’m …"
+     ],
+     "ex": "Right after my first coffee, before I check email."
+    },
+    {
+     "q": "Which three words will you practice saying right?",
+     "st": [
+      "I always say …",
+      "The stress is on …"
+     ],
+     "ex": "Comfortable, develop and vegetable. The stress is on COM, VEL and VEG."
+    },
+    {
+     "q": "How will you know it’s working after a month?",
+     "st": [
+      "I’ll know because …",
+      "If I can …"
+     ],
+     "ex": "If I can explain my job without stopping, I’ll know it’s working."
+    }
+   ],
+   "fim": "Your plan is ready. Little, often, and stressed in the right place."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

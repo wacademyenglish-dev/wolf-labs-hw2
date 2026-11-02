@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -115,5 +116,266 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "descobre": {
+   "t": "Two answers, one angry patient.",
+   "p": "Compare A and B. Which one calms?"
+  },
+  "separa": {
+   "t": "Twelve reactions.",
+   "p": "Choose A or B. Say why."
+  },
+  "cv-conselho": {
+   "t": "Advise Leo after a hard day.",
+   "p": "Give him real sentences he can use."
+  },
+  "prova": {
+   "t": "Four angry patients.",
+   "p": "Play the patient. Answer calmly in 30 seconds."
+  },
+  "pode": {
+   "t": "Lesson 12: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Acalmar um paciente irritado: ouvir, nomear o sentimento (I can see…), desculpar-se pela experiência (I’m sorry that…), oferecer o que dá (Here’s what I can do…) e pôr limite calmo.",
+  "armadilha": "O brasileiro traduz o “calma” (“Calm down.”), se defende (“It’s not my fault.”, “That’s the policy.”) e fecha a porta (“There’s nothing I can do.”).",
+  "pal": [
+   "I can see you’re really frustrated.",
+   "I’m sorry that…",
+   "Tell me what happened.",
+   "Here’s what I can do…",
+   "I’ll come back to you in…",
+   "I want to help, but…",
+   "de-escalate"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: espera, dor e medo; baixar a temperatura sem dizer “calm down”.",
+   "perg": "What do you usually say to an angry patient?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "descobre": {
+   "obj": "Comparar duas respostas ao mesmo paciente e explicar a diferença (pode ser em português).",
+   "perg": "Why is B better than A?",
+   "pula": "Três pares bastam."
+  },
+  "separa": {
+   "obj": "Doze reações: ajuda ou piora? Dizer por quê antes de tocar.",
+   "perg": "Does this help or make it worse?",
+   "pula": "Oito reações bastam."
+  },
+  "cv-conselho": {
+   "obj": "Momento de conversa: o aluno lidera a recepção e aconselha o Leo, que pensa em desistir.",
+   "perg": "How do you feel after this week, Leo?",
+   "pula": "Duas perguntas do Leo bastam."
+  },
+  "prova": {
+   "obj": "Quatro pacientes gravados, rápidos e altos; o aluno responde devagar e baixo.",
+   "perg": "What do you say first?",
+   "pula": "Dois pacientes bastam."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 12: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you calm an angry patient in English now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre momentos difíceis no trabalho real do aluno, com as frases da aula.",
+   "perg": "What makes patients angry where you work?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de atendimento: firmeza contra flexibilidade.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o professor é um paciente irritado novo; o aluno é a recepcionista.",
+   "perg": "I’ve been waiting for two hours!",
+   "pula": "Quatro falas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Hard moments at work.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I can see…",
+    "I’m sorry that…",
+    "Here’s what I can do…"
+   ],
+   "cartas": [
+    {
+     "k": "WAITING",
+     "q": "What makes patients angry where you work?",
+     "fup": "What can you change?",
+     "st": [
+      "Usually, it’s …",
+      "What I can do is …"
+     ],
+     "ex": "Usually, it’s the wait. What I can do is tell them the real time."
+    },
+    {
+     "k": "YOUR WORDS",
+     "q": "What do you say in Portuguese to an angry person?",
+     "fup": "Does it work?",
+     "st": [
+      "I usually say …",
+      "It works / It doesn’t work, because …"
+     ],
+     "ex": "I usually say “calma”. It doesn’t work, because it sounds like an order."
+    },
+    {
+     "k": "A GOOD SAVE",
+     "q": "Tell me about a time you calmed someone down.",
+     "fup": "What did you say?",
+     "st": [
+      "Once, …",
+      "I said: I can see …"
+     ],
+     "ex": "Once, a father shouted at the desk. I said: I can see you’re worried about your son."
+    },
+    {
+     "k": "SORRY",
+     "q": "Is it hard to say sorry when it’s not your fault?",
+     "fup": "What can you say instead?",
+     "st": [
+      "It’s hard, because …",
+      "I can say: I’m sorry that …"
+     ],
+     "ex": "It’s hard. But I can say: I’m sorry that you had to wait so long."
+    },
+    {
+     "k": "LIMITS",
+     "q": "When should a professional stop a conversation?",
+     "fup": "What do you say?",
+     "st": [
+      "When …",
+      "I want to help, but …"
+     ],
+     "ex": "When someone becomes abusive. I say: I want to help, but I can’t continue if you shout."
+    },
+    {
+     "k": "AFTER WORK",
+     "q": "What do you do after a hard day at work?",
+     "fup": "Does it help?",
+     "st": [
+      "I usually …",
+      "It helps me …"
+     ],
+     "ex": "I usually walk home and listen to a podcast. It helps me leave the day behind."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Firm or flexible?",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "I can see…",
+    "because",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "A patient demands antibiotics. Explain again, or call the doctor?",
+     "a": "Explain again",
+     "b": "Call the doctor",
+     "fa": [
+      "Explain again, slowly. I can see he’s scared.",
+      "A doctor’s time is precious."
+     ],
+     "fb": [
+      "Call the doctor. It’s a medical decision.",
+      "He will trust the doctor more."
+     ]
+    },
+    {
+     "q": "“I want your manager!” Get the manager, or try first?",
+     "a": "Get the manager",
+     "b": "Try first",
+     "fa": [
+      "Get the manager. It shows respect.",
+      "Sometimes a new face helps."
+     ],
+     "fb": [
+      "Try first: Tell me what happened, and here’s what I can do.",
+      "Managers are busy too."
+     ]
+    },
+    {
+     "q": "Tell patients the real waiting time, even if it’s bad?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. A bad truth is better than a nice lie.",
+      "People get angry when they don’t know."
+     ],
+     "fb": [
+      "No. A long number makes them angrier.",
+      "Say “soon” and check often."
+     ]
+    },
+    {
+     "q": "Should a hospital have a security guard at the front desk?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Safety first, for everyone.",
+      "Staff feel calmer too."
+     ],
+     "fb": [
+      "No. It makes the place feel like a prison.",
+      "Good words work better."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are at the front desk.",
+   "p": "Your teacher is an angry patient.",
+   "aluno": "Listen to the patient. Answer as the receptionist: slow, low and kind. Then offer something real.",
+   "perguntas": [
+    "I’ve been waiting for two hours! This is ridiculous!",
+    "Nobody here ever listens to me!",
+    "Why can’t I see the doctor now? I’m in pain!",
+    "This is the worst clinic in the city!",
+    "I want to speak to your manager. Now!",
+    "Fine. So what are you going to do about it?"
+   ],
+   "st": [
+    "I can see you’re …",
+    "I’m sorry that …",
+    "Here’s what I can do: …"
+   ],
+   "ex": "I can see you’re in a lot of pain. I’m sorry that you’ve had to wait. Here’s what I can do: I’ll ask the nurse to see you in ten minutes."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

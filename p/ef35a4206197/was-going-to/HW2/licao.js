@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Life I Was Going to Have",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ef35a4206197/was-going-to/img/live-cozinha.webp",
+  "capa": "../img/live-cozinha.webp",
   "alvo": "the future in the past: was / were going to (the plan), was about to (just before), would (what was said to happen later), was supposed to (the agreement); the plan that did not happen: was going to ... but ...",
   "abrir": "What was a plan you had a year ago that never happened?",
   "fecho": "<b>Was going to</b> = the plan: <i>I was going to start a course.</i> <b>Was about to</b> = just before: <i>I was about to book it.</i> <b>Would</b> = what was said would happen later: <i>He said he would call.</i> <b>Was supposed to</b> = the agreement: <i>We were supposed to meet at six.</i> The plan that failed: <i>was going to … but …</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a trip that did not happen. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/ef35a4206197/was-going-to/img/live-cozinha.webp",
+      "img": "../img/live-cozinha.webp",
       "leg": "A kitchen table, two cups",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I was going to start a course, but the school changed the date.",
-          "img": "https://wolf-labs.pages.dev/p/ef35a4206197/was-going-to/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I was about to book the flight when the email arrived.",
-          "img": "https://wolf-labs.pages.dev/p/ef35a4206197/was-going-to/img/live-beco.webp",
+          "img": "../img/live-beco.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The school said that the course would start in January.",
-          "img": "https://wolf-labs.pages.dev/p/ef35a4206197/was-going-to/img/live-bar.webp",
+          "img": "../img/live-bar.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ef35a4206197/was-going-to/img/live-beco.webp",
+      "img": "../img/live-beco.webp",
       "leg": "An empty street at night",
       "pede": "Look at the picture: an empty street at night. Write 2 or 3 sentences about a plan of yours that did not happen. Use <b>was going to … but</b>, <b>was about to</b> or <b>was supposed to</b>.",
       "ph": "I was going to … but …",

@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -112,5 +113,267 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A doctor asks about chest pain.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "descobre": {
+   "t": "How long have you had…?",
+   "p": "Compare A and B. Which is right? Why?"
+  },
+  "cv-ranking": {
+   "t": "The first minute. What matters most?",
+   "p": "Rank the habits. Compare with your teacher."
+  },
+  "cadeira": {
+   "t": "Your teacher is the patient.",
+   "p": "Ask about each letter of SOCRATES."
+  },
+  "pode": {
+   "t": "Lesson 2: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Anamnese com SOCRATES (local, início, tipo, irradiação, sintomas, evolução, fatores, intensidade) e present perfect de duração: How long have you had…? for / since.",
+  "armadilha": "O presente do português (“há quanto tempo você tem?”) vira “How long do you have…?” e “since two weeks”; também “When has it started?” e “What is your problem?” (frio demais).",
+  "pal": [
+   "What brings you in today?",
+   "Where exactly is the pain?",
+   "When did it start?",
+   "What does it feel like?",
+   "How long have you had …?",
+   "for / since",
+   "On a scale of 0 to 10, …"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a primeira pergunta da consulta em inglês e o SOCRATES.",
+   "perg": "What is the first question you ask a patient in Portuguese?",
+   "pula": "Ache a versão em inglês e vá ao vídeo."
+  },
+  "video": {
+   "obj": "Ver o médico do Geeky Medics fazendo a anamnese de dor no peito (0:00–1:47, inglês britânico).",
+   "perg": "What does the doctor ask first?",
+   "pula": "Assista uma vez só e faça uma pergunta."
+  },
+  "descobre": {
+   "obj": "Comparar pares e fixar How long have you had…? com for e since.",
+   "perg": "Why not ‘How long do you have’?",
+   "pula": "Três pares e a regra."
+  },
+  "cv-ranking": {
+   "obj": "Ranquear cinco hábitos do primeiro minuto da consulta.",
+   "perg": "What matters most in the first minute?",
+   "pula": "Só o primeiro lugar e um porquê."
+  },
+  "cadeira": {
+   "obj": "Você é o paciente (dor no joelho; adapte à profissão do aluno); o aluno pergunta cada letra do SOCRATES.",
+   "perg": "Where exactly is the pain?",
+   "pula": "Cinco letras bastam."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; o resto vai para a lição.",
+   "perg": "Can you take a pain history now?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre a rotina clínica real do aluno, com present perfect de duração.",
+   "perg": "How long have you worked in healthcare?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas da consulta, com argumentos curtos.",
+   "perg": "What would you do with the patient?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play invertido: o aluno é o paciente e responde ao seu SOCRATES.",
+   "perg": "How long have you had this pain?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your work with patients.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "How long have you …?",
+    "for",
+    "since",
+    "When did …?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CAREER",
+     "q": "How long have you worked in healthcare?",
+     "fup": "When did you start?",
+     "st": [
+      "I’ve worked … for …",
+      "I started in …"
+     ],
+     "ex": "I’ve worked as a physio for eight years. I started in 2017."
+    },
+    {
+     "k": "COMMON COMPLAINT",
+     "q": "What’s the most common complaint in your job?",
+     "fup": "What’s your first question about it?",
+     "st": [
+      "The most common is …",
+      "I usually ask …"
+     ],
+     "ex": "The most common is back pain. I usually ask: when did it start?"
+    },
+    {
+     "k": "THE HARD PATIENT",
+     "q": "What makes a patient hard to interview?",
+     "fup": "What helps?",
+     "st": [
+      "It’s hard when …",
+      "What helps is …"
+     ],
+     "ex": "It’s hard when they talk about everything. What helps is asking one clear question."
+    },
+    {
+     "k": "IN ENGLISH",
+     "q": "Have you ever treated a patient in English?",
+     "fup": "How did it go?",
+     "st": [
+      "Yes, once …",
+      "Not yet, but …"
+     ],
+     "ex": "Yes, once. A tourist had a toothache, and I used my hands a lot!"
+    },
+    {
+     "k": "PAIN SCALE",
+     "q": "Do patients in Brazil understand the 0 to 10 pain scale?",
+     "fup": "Do they exaggerate?",
+     "st": [
+      "Most of them …",
+      "Some say 10 when …"
+     ],
+     "ex": "Most of them do. Some say 10 when it’s really a 6."
+    },
+    {
+     "k": "YOUR GOAL",
+     "q": "Why do you need English for your career?",
+     "fup": "Since when have you had this goal?",
+     "st": [
+      "I need it because …",
+      "I’ve wanted it since …"
+     ],
+     "ex": "I need it for a job in Ireland. I’ve wanted it since university."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think",
+    "for / since"
+   ],
+   "rodadas": [
+    {
+     "q": "Take notes during the consultation or after?",
+     "a": "During",
+     "b": "After",
+     "fa": [
+      "During. I don’t forget details.",
+      "Patients understand."
+     ],
+     "fb": [
+      "After. I look at the patient, not the screen.",
+      "Eye contact builds trust."
+     ]
+    },
+    {
+     "q": "Open questions first, or yes/no questions first?",
+     "a": "Open",
+     "b": "Yes/no",
+     "fa": [
+      "Open. Let the patient talk.",
+      "You get more information."
+     ],
+     "fb": [
+      "Yes/no. Time is short.",
+      "Some patients talk for ten minutes."
+     ]
+    },
+    {
+     "q": "First names or titles with patients?",
+     "a": "First names",
+     "b": "Titles",
+     "fa": [
+      "First names. It feels warmer.",
+      "Patients relax."
+     ],
+     "fb": [
+      "Titles, like Mr. Silva. It’s more respectful.",
+      "Especially with older patients."
+     ]
+    },
+    {
+     "q": "The patient searched Google first. Good or bad?",
+     "a": "Good",
+     "b": "Bad",
+     "fa": [
+      "Good. They come with questions.",
+      "They’re interested in their health."
+     ],
+     "fb": [
+      "Bad. They come scared.",
+      "Google always says it’s serious."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the patient now.",
+   "p": "Your teacher takes your history.",
+   "aluno": "Listen to your teacher’s question. Answer as a patient with a headache. Invent the details.",
+   "perguntas": [
+    "What brings you in today?",
+    "Where exactly is the pain?",
+    "When did it start?",
+    "How long have you had it?",
+    "What does it feel like?",
+    "On a scale of 0 to 10, how bad is it?"
+   ],
+   "st": [
+    "I’ve had it for / since …",
+    "It feels like …",
+    "It’s about a …"
+   ],
+   "ex": "I’ve had a headache since Monday. It feels like pressure behind my eyes. It’s about a 6."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

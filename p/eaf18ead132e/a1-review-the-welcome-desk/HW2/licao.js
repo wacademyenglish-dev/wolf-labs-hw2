@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "A1 Review: The Welcome Desk",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/eaf18ead132e/a1-review-the-welcome-desk/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "review of unit 1: my name is / spelling, I'm from / I live in, I'm 34 (age with be), he / she is + a / an + job, his / her, And you?",
   "abrir": "Where are you from? And where do you live?",
   "fecho": "Unit 1 in five lines: <b>My name is</b> … · <b>I'm from</b> … · <b>I live in</b> … · <b>I'm 34</b> (age is <b>be</b>) · <b>She is a nurse</b> (<b>a / an</b> for a job). <b>His</b> = a man, <b>her</b> = a woman. Give the turn back: <b>And you?</b>",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Tom arrives at the hotel desk. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/eaf18ead132e/a1-review-the-welcome-desk/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The hotel desk at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -106,17 +106,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "My name is Tom. I'm 34.",
-          "img": "https://wolf-labs.pages.dev/p/eaf18ead132e/a1-review-the-welcome-desk/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She is a nurse. Her name is Yuki.",
-          "img": "https://wolf-labs.pages.dev/p/eaf18ead132e/a1-review-the-welcome-desk/img/live-chave.webp",
+          "img": "../img/live-chave.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'm from Canada. And you?",
-          "img": "https://wolf-labs.pages.dev/p/eaf18ead132e/a1-review-the-welcome-desk/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/eaf18ead132e/a1-review-the-welcome-desk/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A hotel desk at night",
       "pede": "Look at the picture: a hotel desk at night. You are the guest. Write 3 or 4 short lines: name, from, live in, age, job. Then one line about a friend.",
       "ph": "My name is … I'm from …",

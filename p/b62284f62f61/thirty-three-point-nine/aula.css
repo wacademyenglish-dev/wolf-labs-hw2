@@ -1,0 +1,86 @@
+/* ============================================================
+   THIRTY-THREE POINT NINE · THE TRACKER · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: um caderno de hábitos à
+   noite — grafite quente; a grade de dias em quadradinhos; a marca da
+   estimativa tracejada em azul-gelo, a da realidade em brasa.
+   ============================================================ */
+:root{
+  --noite:#08070a; --noite-rgb:8,7,10; --tinta:#ece9ee;
+  --t1:#f1eef3; --t2:#c9c4cd; --t2-rgb:201,196,205; --t3:#8c8692;
+  --ac:#f08a5d; --ac2:#f8c2a6; --gelo:#9fd0f0; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(236,233,238,.05); --vidro2:rgba(236,233,238,.085); --vidro3:rgba(236,233,238,.12);
+  --fio:rgba(228,224,232,.12); --fio2:rgba(228,224,232,.22); --luz:rgba(236,233,238,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1006}
+.btn.cheio{color:#2a1006}
+.capa{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(56px,5.6vw,108px)/.95 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2c140b;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,20px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.dt-ops{display:grid;gap:6px} .dt-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;margin:0 auto 12px} .dt-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(18px,1.45vw,25px)/1.4 var(--disp)}
+.pede.centro{max-width:900px;margin:0 auto 12px;text-align:center}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1000px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao s{text-decoration-color:var(--erro);color:var(--t3)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.ouve-c{display:grid;gap:8px;padding:10px 14px;border-radius:var(--r2)} .ouve-c .transcricao{margin:0}
+
+/* o rastreador */
+.dt-rastro{display:grid;gap:10px;width:min(100%,560px)}
+.dt-rastro.mini{width:min(100%,300px);margin:0 auto} .dt-rastro.mini .dt-grade{gap:4px}
+.dt-grade{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.dt-grade i{aspect-ratio:1;border-radius:5px;background:#16141a;border:1px solid #24212a;position:relative}
+.dt-grade i.aceso{background:#2e2333;border-color:#4a3550}
+.dt-grade i.est{border:2px dashed var(--gelo);background:rgba(159,208,240,.14)}
+.dt-grade i.real{border:2px solid var(--ac);background:rgba(240,138,93,.3);box-shadow:0 0 14px rgba(240,138,93,.6)}
+.dt-legenda{display:flex;justify-content:space-between;font:800 12px var(--mono);letter-spacing:.1em} .dt-legenda .est{color:var(--gelo)} .dt-legenda .real{color:var(--ac2)}
+.dt-rot{font:800 10px var(--mono);letter-spacing:.14em;color:var(--t3);text-align:center}
+
+/* envelope */
+.dt-item{display:grid;grid-template-columns:28px 1fr;gap:4px 10px;align-items:center;padding:8px 12px;border-radius:14px} .dt-item b{font:800 14px var(--mono);color:var(--ac2)} .dt-item span{font:600 clamp(15px,1.15vw,19px)/1.35 var(--disp)}
+.dt-item.feito{border-color:rgba(240,138,93,.4)}
+.dt-dias{grid-column:2;display:flex;flex-wrap:wrap;gap:4px} .dt-dias .pilula{min-height:32px;padding:0 12px;font:800 13px var(--mono)}
+.dt-total{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 16px;border-radius:var(--r2)} .dt-total small{flex-basis:100%;font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .dt-total span{min-width:64px;padding:8px 10px;border-radius:10px;background:#16141a;text-align:center;font:800 clamp(16px,1.3vw,22px) var(--mono);color:var(--t1)}
+
+/* a sequência */
+.dt-seq{display:grid;justify-items:center;gap:8px;margin:0 0 12px} .dt-seq span{font:800 12px var(--mono);letter-spacing:.14em;color:var(--t3)} .dt-seq b{color:var(--ac2);font-size:16px}
+.dt-cubos{display:flex;gap:8px} .dt-cubos i{width:34px;height:34px;border-radius:8px;background:#16141a;border:1px solid #2a2630;transition:background .3s}
+.dt-cubos i.aceso{background:var(--ac);border-color:var(--ac2);box-shadow:0 0 12px rgba(240,138,93,.5)}
+
+/* for / since */
+.dt-chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:1400px;margin:0 auto 14px}
+.dt-chip{display:grid;gap:8px;justify-items:center;padding:12px;border-radius:14px;text-align:center} .dt-chip b{font:700 clamp(17px,1.35vw,23px) var(--disp)}
+.dt-chip.feito.since{border-color:var(--gelo)} .dt-chip.feito.for{border-color:var(--ac)}
+.dt-fs{display:flex;gap:6px;justify-content:center} .dt-fs .pilula{min-height:34px;padding:0 14px;font:800 12px var(--mono);letter-spacing:.08em}
+
+/* placar, barras, fichas, pessoas */
+.dt-placar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.dt-casa{display:grid;gap:4px;padding:10px;border-radius:12px;text-align:center} .dt-casa small{font:800 10px var(--mono);letter-spacing:.12em;color:var(--t3)} .dt-casa b{font:800 clamp(18px,1.5vw,26px) var(--mono);color:var(--t3)} .dt-casa.feita b{color:var(--ac2)}
+.dt-quiz{display:grid;gap:10px;padding:16px 18px;border-radius:var(--r2)} .dt-quiz small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .dt-quiz h3{margin:0;font:700 clamp(20px,1.6vw,27px)/1.3 var(--disp)} .dt-quiz .btn{justify-self:start}
+.dt-barras{display:grid;gap:10px;max-width:1000px;margin:0 auto 14px}
+.dt-barra{display:grid;grid-template-columns:130px 1fr 70px;gap:12px;align-items:center} .dt-barra small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .dt-barra i{display:block;height:18px;border-radius:5px;background:linear-gradient(90deg,var(--gelo),var(--ac));transition:width .8s} .dt-barra b{font:800 18px var(--mono);color:var(--ac2)}
+.dt-fichas{display:grid;gap:6px} .dt-ficha{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 12px;border-radius:12px} .dt-ficha span{font:600 clamp(15px,1.15vw,19px) var(--disp)} .dt-ficha.certo{border-color:var(--ok)} .dt-ficha.errado{border-color:var(--erro)}
+.dt-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px} .dt-col{display:grid;gap:6px;align-content:start;min-height:160px;padding:12px;border-radius:14px;border:1px dashed var(--gelo)} .dt-col.pago{border-color:var(--ac)}
+.dt-col small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--gelo)} .dt-col.pago small{color:var(--ac2)} .dt-col span{padding:6px 10px;border-radius:8px;background:#16141a;font:600 15px var(--disp)}
+.dt-pessoas{display:grid;gap:10px}
+.dt-pessoa{display:grid;grid-template-columns:70px 1fr 90px;grid-template-rows:auto auto;gap:2px 12px;align-items:center;padding:10px 14px;border-radius:14px;background:#100e13;border:1px solid var(--fio)}
+.dt-pessoa b{font:800 16px var(--mono)} .dt-pessoa small{grid-column:1;font:700 10px var(--mono);color:var(--t3)} .dt-pessoa .dt-trilho{grid-column:2;grid-row:1 / 3;height:16px;border-radius:5px;background:#1a1720;overflow:hidden} .dt-pessoa .dt-trilho i{display:block;height:100%;background:linear-gradient(90deg,var(--gelo),var(--ac));transition:width .8s}
+.dt-pessoa span{grid-column:3;grid-row:1 / 3;font:800 14px var(--mono);color:var(--ac2);text-align:right} .dt-pessoa.agora{border-color:var(--ac)}
+.dt-plano{display:grid;gap:6px;padding:12px 16px;border-radius:var(--r2)} .dt-plano small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .dt-plano span{font:600 18px var(--disp)} .dt-plano b{display:inline-block;width:80px;font:800 12px var(--mono);color:var(--t3)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .dt-chips{grid-template-columns:1fr 1fr} .dt-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .dt-placar{grid-template-columns:1fr 1fr} .dt-cols{grid-template-columns:1fr} .dt-cubos i{width:22px;height:22px} .dt-cubos{gap:4px} .dt-barra{grid-template-columns:90px 1fr 50px} .dt-pessoa{grid-template-columns:56px 1fr 70px} }

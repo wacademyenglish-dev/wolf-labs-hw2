@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · A Good Band Plays Well · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A Good Band Plays Well · The Mixing Desk</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>A Good Band Plays Well · The Mixing Desk</h2>
+    <p>A record shop on a Saturday, and a band plays in the corner. The screen is a mixing desk with two channels: <b>THE THING</b> (who or what something is: the adjective) and <b>THE DOING</b> (how something happens: the adverb). The student pushes the right fader up with a finger, and only the right channel puts the word into the sentence. At the end, they write a short review of a band they know. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>One question decides every sentence: <b>who or what</b> (good) or <b>how</b> (well)? <i>The band is good. They play well.</i> Most adjectives add <b>-ly</b> (slow → slowly, careful → carefully). <b>fast</b> and <b>hard</b> stay the same (<i>hardly</i> means “almost not”). <b>good</b> becomes another word: <b>well</b>. The common mistake is <i>She sings good</i>; the reverse is <i>a well singer</i> (scene VI hides one).</p>
+    <!--conversa--><h4>WOULD YOU RATHER? (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After Feedback!, three choices of two: a band for your party (loudly or quietly), one new talent (sing well or dance well), and a taxi to the show (fast or carefully). There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it). The starters keep well and the -ly words on the doing channel. Recast quietly while they talk (sings good → sings well); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I What Do You Do Well?, VII Would You Rather? (two choices, then well or -ly), VIII The Counter, IX The Talent Show.</li>
+      <li><b>Listen</b>: II The Shop (three cards with audio, then the two words that do the job), IV Listen and Decide.</li>
+      <li><b>Focus</b>: III Two Faders, V The -LY Machine, VI Feedback! (six sentences that squeal).</li>
+      <li><b>Write</b>: X Your Review, with the red wavy line for <i>sings good</i>, <i>played bad</i>, <i>a well singer</i>, <i>I’m well at</i>, <i>fastly</i> and <i>work hardly</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>THE FADERS</h4>
+    <p>The student drags a fader up. Past the top quarter it locks: the right channel drops the word into the sentence; the wrong channel shakes and slides down, with the reason. “Push up” does the same for anyone who prefers to tap. Then play the sentence and have them say it.</p>
+    <h4>THE TALENT SHOW</h4>
+    <p>For each act, look at the stars and judge together: <i>She’s a good singer, but she dances badly.</i> Disagree sometimes. Tap each part you hear; the classic mistake has its own button, MISTAKE HEARD. At the end, the student picks the winner and says why.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The faders move on both screens when the student lets go. You judge the speech (“Answered · show the follow-up”, “Said it · light the pad”). G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* A GOOD BAND PLAYS WELL (Main A1) · pergunta-surpresa · 27/10/2026 · good × well · -ly (máx. 3 no A1) */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'loja', tipo: 'Would you rather', q: 'Music: records or your phone?',
+    opc: ['Records', 'My phone'], st: ['Records. They sound good.', 'My phone. It works well.'],
+    ex: 'My phone. It works well, and it’s small.', push: 'A record shop on Saturday? Yes or no?' },
+  { cena: 'maquina', tipo: 'Opinion', q: 'Fast music or slow music?',
+    opc: ['Fast', 'Slow'], st: ['I like … music.', 'I listen …'],
+    ex: 'Slow music. I listen quietly at night.', push: 'For running? Yes or no?' },
+  { cena: 'erro', tipo: 'And you?', q: 'Who speaks English well in your family?',
+    opc: ['Somebody!', 'Nobody yet!'], st: ['My … speaks English well.', 'Nobody! But I …'],
+    ex: 'My brother speaks English well. He plays games.', push: 'Better than you? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* A GOOD BAND PLAYS WELL (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Would you rather" (2 opções) no lugar de "VII · Nine Pads" (extra; tocar e dizer, prática controlada).
+   No meio da aula, depois do Feedback!: a banda da sua festa (alto ou baixo), um talento novo (cantar bem ou
+   dançar bem), o táxi para o show (rápido ou com cuidado). A1 bem leve: duas opções, frase quase pronta,
+   o professor responde primeiro. A gramática (good × well, -ly, fast) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'prefere', troca: 'nove', est: 'o', min: 6, img: 'palco', rot: 'Would You Rather?', t: 'Two choices. Pick one, three times.',
+    p: 'Choose one. Your teacher answers first. Then say it with well or -ly.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Your party', sit: 'A band for your party.', q: 'Loud or quiet?',
+        opc: ['They play loudly.', 'They play quietly.'],
+        st: ['They play loudly. I love it!', 'They play quietly. We talk.'],
+        ex: 'They play loudly! I love loud music.',
+        push: 'At two in the morning? Yes or no?' },
+      { tag: 'Magic', sit: 'Magic! One new talent.', q: 'Sing well or dance well?',
+        opc: ['Sing well', 'Dance well'],
+        st: ['I want to sing well.', 'I want to dance well.'],
+        ex: 'Dance well! Now I dance very badly.',
+        push: 'On a big stage? Yes or no?' },
+      { tag: 'The taxi', sit: 'A taxi to the show.', q: 'Your driver drives…',
+        opc: ['fast', 'carefully'],
+        st: ['He drives fast.', 'He drives carefully.'],
+        ex: 'He drives carefully. I like slow taxis.',
+        push: 'You’re late! Still carefully?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "Before the music: you.",
+   "p": "Pick a card. Answer out loud."
+  },
+  "loja": {
+   "t": "Saturday, four in the afternoon.",
+   "p": "Listen. Read it out loud. Find the two words."
+  },
+  "fader": {
+   "t": "Each word moves its own fader.",
+   "p": "Push the right fader up. Play it. Say it."
+  },
+  "decide": {
+   "t": "Hear it. Say it. Pick a channel.",
+   "p": "The thing, or the doing?"
+  },
+  "maquina": {
+   "t": "Thing-word in. Doing-word out.",
+   "p": "Pick a word. Say the new form. Choose."
+  },
+  "erro": {
+   "t": "Six sentences. Each one squeals.",
+   "p": "Tap the wrong word. Play it clean. Say it."
+  },
+  "cv-prefere": {
+   "t": "Two choices. Pick one, three times.",
+   "p": "Choose. Teacher first. Say it with well or -ly."
+  },
+  "balcao": {
+   "t": "Closing time. Three questions.",
+   "p": "Play the question. Answer out loud."
+  },
+  "show": {
+   "t": "You two are the judges.",
+   "p": "Read the scores. Say how they do it."
+  },
+  "fim": {
+   "t": "Review a band or a singer.",
+   "p": "Five lines: good, well, -ly. Then My notes."
+  }
+ },
+ "prep": {
+  "obj": "Adjetivo x advérbio (good/well, -ly, fast, hard): numa loja de discos, a mesa de som tem o canal da coisa e o canal do jeito.",
+  "armadilha": "O português usa “bom/bem” mas na fala mistura: She sings good, played bad; e o contrário, a well singer, I’m well at; fastly e work hardly.",
+  "pal": [
+   "good",
+   "well",
+   "slowly",
+   "carefully",
+   "loudly",
+   "quietly",
+   "fast",
+   "hard",
+   "badly"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a mesa de som: o mesmo fato com duas palavras.",
+   "perg": "Is a good band the same as a band that plays well?",
+   "pula": "Só leia o título e ligue a mesa."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal: o que o aluno faz bem.",
+   "perg": "What do you do well?",
+   "pula": "Duas cartas bastam."
+  },
+  "loja": {
+   "obj": "Escuta de três cartas na loja e as duas palavras que fazem o trabalho.",
+   "perg": "How does the band play?",
+   "pula": "Duas cartas bastam."
+  },
+  "fader": {
+   "obj": "Separa os dois canais: a coisa (adjetivo) e o jeito (advérbio).",
+   "perg": "Is it about the thing or the doing?",
+   "pula": "Quatro frases bastam."
+  },
+  "decide": {
+   "obj": "Ouve, repete e manda a palavra para o canal certo.",
+   "perg": "Thing or doing?",
+   "pula": "Metade das palavras basta."
+  },
+  "maquina": {
+   "obj": "Forma o advérbio: -ly, fast/hard iguais, good vira well.",
+   "perg": "What is “careful” on the doing channel?",
+   "pula": "Pule as palavras com -ily."
+  },
+  "erro": {
+   "obj": "Acha o erro (sings good, a well singer) e diz a frase limpa.",
+   "perg": "Which word is on the wrong channel?",
+   "pula": "Três frases bastam."
+  },
+  "cv-prefere": {
+   "obj": "Conversa com duas escolhas, falando com well ou -ly.",
+   "perg": "Would you rather sing well or dance well?",
+   "pula": "Duas escolhas bastam."
+  },
+  "balcao": {
+   "obj": "O dono da loja faz três perguntas; o aluno responde em voz alta.",
+   "perg": "Do you play an instrument well?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "show": {
+   "obj": "Julgar calouros: como a pessoa é e como faz.",
+   "perg": "Is she a good singer? Does she dance well?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: resenha curta de uma banda ou cantor, com a linha vermelha.",
+   "perg": "How does your favorite singer sing?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas sobre música e talentos, com adjetivo e advérbio.",
+   "perg": "Do you sing well?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e explicar com good, well ou -ly.",
+   "perg": "Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é a cantora da banda e responde à entrevista.",
+   "perg": "Do you sing well?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More music questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "good",
+    "well",
+    "loudly",
+    "quietly",
+    "badly"
+   ],
+   "cartas": [
+    {
+     "k": "SINGING",
+     "q": "Do you sing well or badly?",
+     "fup": "Do you sing in the shower?",
+     "st": [
+      "I sing …",
+      "I am a … singer."
+     ],
+     "ex": "I sing badly, but I sing loudly in the shower."
+    },
+    {
+     "k": "YOUR MUSIC",
+     "q": "Do you listen to music loudly or quietly?",
+     "fup": "Where?",
+     "st": [
+      "I listen …",
+      "in the …"
+     ],
+     "ex": "I listen to music loudly in the car."
+    },
+    {
+     "k": "DANCING",
+     "q": "Are you a good dancer or a bad dancer?",
+     "fup": "Who dances well in your family?",
+     "st": [
+      "I am a … dancer.",
+      "My … dances well."
+     ],
+     "ex": "I am a bad dancer. My sister dances well."
+    },
+    {
+     "k": "A CONCERT",
+     "q": "Was the last concert good or bad?",
+     "fup": "Did the band play well?",
+     "st": [
+      "It was …",
+      "They played …"
+     ],
+     "ex": "It was good. They played very well."
+    },
+    {
+     "k": "WORK",
+     "q": "Do you work fast or slowly?",
+     "fup": "Do you work hard?",
+     "st": [
+      "I work …",
+      "I work hard when …"
+     ],
+     "ex": "I work fast, and I work hard on Mondays."
+    },
+    {
+     "k": "ENGLISH",
+     "q": "Do you speak English slowly or fast?",
+     "fup": "Do you read it well?",
+     "st": [
+      "I speak …",
+      "I read …"
+     ],
+     "ex": "I speak slowly, but I read well."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "well",
+    "good",
+    "loudly",
+    "quietly"
+   ],
+   "rodadas": [
+    {
+     "q": "A singer who sings well or a singer who dances well?",
+     "a": "Sings well",
+     "b": "Dances well",
+     "fa": [
+      "Sings well. A good voice is everything."
+     ],
+     "fb": [
+      "Dances well. The show is more fun."
+     ]
+    },
+    {
+     "q": "Music at a party: loudly or quietly?",
+     "a": "Loudly",
+     "b": "Quietly",
+     "fa": [
+      "Loudly. People dance happily."
+     ],
+     "fb": [
+      "Quietly. People talk easily."
+     ]
+    },
+    {
+     "q": "A good old record or a new song online?",
+     "a": "An old record",
+     "b": "A new song",
+     "fa": [
+      "An old record. It sounds good."
+     ],
+     "fb": [
+      "A new song. I find it quickly."
+     ]
+    },
+    {
+     "q": "Learn the guitar slowly or fast?",
+     "a": "Slowly",
+     "b": "Fast",
+     "fa": [
+      "Slowly. You play well later."
+     ],
+     "fb": [
+      "Fast. You play at a party soon."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody played well."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the band’s singer now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the band’s singer.",
+   "perguntas": [
+    "Do you sing well?",
+    "Is your band good?",
+    "How does your guitar player play?",
+    "Do you play loudly or quietly in the shop?",
+    "Do you practice hard?",
+    "Was the show today good or bad?"
+   ],
+   "st": [
+    "I sing …",
+    "We play …",
+    "Our band is …"
+   ],
+   "ex": "I sing well, and our band is good. We play loudly on Saturdays."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

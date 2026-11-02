@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Story Arc",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/005b7cd5af2d/the-story-arc/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "the story inside a talk: It all started when ..., At first, ..., Things got worse when ..., That's when ..., It turned out that ..., Fast forward to ..., Looking back, ..., The lesson I learned was ...; narrative tenses (past simple, past continuous, past perfect); in the end, not at the end",
   "abrir": "What story do you always tell at parties? How does it begin?",
   "fecho": "A story has signposts: <b>It all started when … · At first, … · Things got worse when … · That's when … · It turned out that … · Fast forward to … · Looking back, …</b> Keep the past in the past, with <b>had</b> for what came earlier. <b>In the end</b> = finally; never <i>it turned out what</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia coaches Leo on the story for his talk. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/005b7cd5af2d/the-story-arc/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A campfire at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It all started when I bought a second-hand truck for almost nothing.",
-          "img": "https://wolf-labs.pages.dev/p/005b7cd5af2d/the-story-arc/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Things got worse when the engine broke down on the very first day.",
-          "img": "https://wolf-labs.pages.dev/p/005b7cd5af2d/the-story-arc/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Looking back, the lesson I learned was to ask for help sooner.",
-          "img": "https://wolf-labs.pages.dev/p/005b7cd5af2d/the-story-arc/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/005b7cd5af2d/the-story-arc/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A campfire in the dark",
       "pede": "Look at the picture: a campfire at night, the oldest place for stories. Write 2 or 3 sentences of a story from your life, using signposts such as <b>It all started when …</b>, <b>That's when …</b> or <b>It turned out that …</b>.",
       "ph": "It all started when …",

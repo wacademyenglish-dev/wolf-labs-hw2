@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Level Where You Lose a Life",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/01a7365950cd/the-level-where-you-lose-a-life/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "who (a person), which / that (a thing), where (a place) to join two ideas: the friend who helps, the game that I like, the place where we play; no which for people, no where + extra preposition",
   "abrir": "Who is a person that makes you laugh?",
   "fecho": "<b>who</b> = a person: <i>the friend who helps you.</i> <b>which / that</b> = a thing: <i>the game that I like.</i> <b>where</b> = a place: <i>the level where you lose a life.</i> Not <i>which</i> for people.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia plays a jungle video game. Leo helps from the sofa. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/01a7365950cd/the-level-where-you-lose-a-life/img/live-cartucho.webp",
+      "img": "../img/live-cartucho.webp",
       "leg": "A game on an old TV",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This is the level where you lose a life.",
-          "img": "https://wolf-labs.pages.dev/p/01a7365950cd/the-level-where-you-lose-a-life/img/live-cartucho.webp",
+          "img": "../img/live-cartucho.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "He is the friend who gives you a new life.",
-          "img": "https://wolf-labs.pages.dev/p/01a7365950cd/the-level-where-you-lose-a-life/img/live-tabuleiro.webp",
+          "img": "../img/live-tabuleiro.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I see a vine that closes the path.",
-          "img": "https://wolf-labs.pages.dev/p/01a7365950cd/the-level-where-you-lose-a-life/img/live-selva.webp",
+          "img": "../img/live-selva.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/01a7365950cd/the-level-where-you-lose-a-life/img/live-selva.webp",
+      "img": "../img/live-selva.webp",
       "leg": "A jungle by a quiet river",
       "pede": "Look at the picture: a jungle by a quiet river. Write 2 or 3 sentences about a place, a person or a thing in a game, a book or a film you like. Use <b>who</b>, <b>that</b> or <b>where</b>.",
       "ph": "It is a place where … There is a girl who …",

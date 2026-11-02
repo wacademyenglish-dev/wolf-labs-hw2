@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · We Would Always · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>We Would Always · The Home Movie</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>We Would Always · The Home Movie</h2>
+    <p><b>would</b> carries what you did again and again in the past, and nothing else: not how things were, not the thing that happened once. The screen is a home movie from every summer at a grandmother’s house by the water: a repeated action becomes a filmed frame; a state leaves the frame empty, because you can’t film <i>being</i> or <i>having</i>. Then comes the summer she sold the house, and the past simple closes the story.</p>
+    <h4>THE FILM TEST</h4>
+    <p>When your student is stuck, ask: <i>Could you film it?</i> If yes, WOULD can carry it. If not, only USED TO.</p>
+    <h4>THE PERIOD FIRST</h4>
+    <p><i>When I was ten, we would…</i> Without the period, WOULD sounds like a condition.</p>
+    <h4>ONE TIME KILLS WOULD</h4>
+    <p>Scene IV: <i>one more time, one last time, that summer</i> take the past simple. Watch the two refusals: <i>He wouldn’t come</i> and <i>nobody would talk</i> sound like somebody refused.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I would have long hair</i>, <i>we would be happy</i>, WOULD with no period, <i>she would sell the house that spring</i>, <i>I use to</i>.</p>
+    <!--conversa--><h4>BRING IT BACK? (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Three old summer habits (no internet, the same cake, the long drive). Your student chooses green, yellow or red and says why with WOULD or USED TO. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Every Summer, VI What Replaced It, VII The Best Summer, VIII Bring It Back?.</li>
+      <li><b>Focus</b>: II The Home Movie, III Could You Film It?, IV The Summer It Stopped.</li>
+      <li><b>Listen</b>: V Which Past Was That? (the transcript opens after they listen).</li>
+      <li><b>Write</b>: IX, their summer. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* WE WOULD ALWAYS (Main A2) · pergunta-surpresa · 27/10/2026 · would (ação repetida) × used to (estado) */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'rolo', tipo: 'Would you rather', q: 'Summer as a kid: would you rather spend it at the beach or in the countryside?',
+    opc: ['The beach', 'The countryside'], st: ['I’d rather …, because we would …', 'We used to go to …'],
+    ex: 'The countryside. We would ride bikes all day and nobody would call us home.', push: 'And today, as an adult? The same answer?' },
+  { cena: 'camera', tipo: 'And you?', q: 'What was one thing you would always do after school?',
+    opc: ['Play outside', 'Watch TV', 'Something else'], st: ['After school I would always …', 'I used to …'],
+    ex: 'Play outside. I would always play football in the street until it got dark.', push: 'Who would call you home? What would they shout?' },
+  { cena: 'umavez', tipo: 'What if', q: 'You can go back to one summer for one day. Which one?',
+    opc: ['When I was a kid', 'When I was a teenager', 'Last summer!'], st: ['When I was …, we would …', 'That summer I used to …'],
+    ex: 'When I was a teenager. My friends and I would stay at the beach until midnight.', push: 'You can take one person with you. Who?' },
+  { cena: 'melhor', tipo: 'Opinion', q: 'Were summers better when you were a kid, or are they better now?',
+    opc: ['Better then', 'Better now', 'The same'], st: ['When I was a kid, we would …', 'Now I …, but I used to …'],
+    ex: 'Better then. We used to have three months free, and we would do nothing at all.', push: 'Three months free now. What would you really do?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WE WOULD ALWAYS · THE HOME MOVIE (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Semáforo no lugar de "VIII · Say the Five" (extra; prática controlada de moldes). Depois do
+   "What Replaced It" (VI), o aluno decide quais hábitos de verão voltariam hoje: verde, amarelo,
+   vermelho. A gramática da aula (would + ação repetida × used to + estado) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'semaforo', troca: 'moldes', est: 'o', min: 7, img: 'casa', rot: 'Bring It Back?', t: 'Old summer habits. Which ones come back?',
+    p: 'Green: bring it back. Yellow: maybe, with a change. Red: leave it in the past. Choose, then say why with WOULD or USED TO.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'No internet', sit: 'At the old house there was no internet. Every evening the family would sit outside and talk.',
+        q: 'A whole summer with no internet. Bring it back?',
+        opc: [{ t: 'Yes, bring it back', cor: 'g' }, { t: 'Maybe, one week', cor: 'y' }, { t: 'No way', cor: 'r' }],
+        st: ['We used to …, and it was …', 'Every evening we would …', 'Now I …, so …'],
+        ex: 'Maybe, one week. When I was a kid we would play cards every night. Now I check my phone all the time.',
+        push: 'Your boss needs you on the phone that week. Still green?' },
+      { tag: 'The same cake', sit: 'Every summer the first dinner was the same: the same cake, the same table, the same jokes.',
+        q: 'The same thing every year. A tradition or boring?',
+        opc: [{ t: 'Bring it back', cor: 'g' }, { t: 'Change it a little', cor: 'y' }, { t: 'Leave it', cor: 'r' }],
+        st: ['My family would always …', 'We used to have …', 'I think the same … every year is …'],
+        ex: 'Bring it back! My aunt would always make the same pie, and we would fight for the last piece.',
+        push: 'Okay, you bake it this year. Can you? Yes or no?' },
+      { tag: 'The long drive', sit: 'Every Friday they would drive for six hours, singing.',
+        q: 'Six hours in a car with family?',
+        opc: [{ t: 'Yes, I miss it', cor: 'g' }, { t: 'Only three hours', cor: 'y' }, { t: 'Never again', cor: 'r' }],
+        st: ['We would …, and my brother would …', 'I used to love / hate …', 'Today I would rather …'],
+        ex: 'Only three hours! We would sing in the car, but my brother would always kick my seat.',
+        push: 'Who chooses the music? You or the driver?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Your summers first.",
+   "p": "Answer out loud. The picture opens more."
+  },
+  "rolo": {
+   "t": "When I was ten, every summer…",
+   "p": "Say it with WOULD or USED TO. Then tap."
+  },
+  "camera": {
+   "t": "Could a camera film it?",
+   "p": "Read it out loud. Then tap the verb."
+  },
+  "umavez": {
+   "t": "The last summer. It happened once.",
+   "p": "Read. Pick. Say the sentence out loud."
+  },
+  "ouve": {
+   "t": "Repeated, or once?",
+   "p": "Play the four lines. Then pick."
+  },
+  "depois": {
+   "t": "Every old habit left another one.",
+   "p": "Say it with WOULD. Then: …, but now …"
+  },
+  "melhor": {
+   "t": "Your best summer, with details.",
+   "p": "Answer. Your teacher asks for more."
+  },
+  "cv-semaforo": {
+   "t": "Bring the old habit back?",
+   "p": "Green, yellow or red. Say why with WOULD."
+  },
+  "fim": {
+   "t": "Write your summer.",
+   "p": "Period, two habits, one state, the end. To My notes."
+  }
+ },
+ "prep": {
+  "obj": "Would e used to para hábitos do passado (would só para ações que dá para filmar): os verões na casa da avó à beira do lago, até ela vender a casa.",
+  "armadilha": "O brasileiro usa would para estados (“I would have long hair”), esquece o período antes (“When I was ten”) e escreve “I use to”; para uma vez só, usa would no lugar do past simple.",
+  "pal": [
+   "would",
+   "used to",
+   "every summer",
+   "when I was ten",
+   "the lake",
+   "grandmother",
+   "sold the house",
+   "anymore"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o filme caseiro: todo verão na casa da avó, à beira do lago.",
+   "perg": "Where did you spend your summers as a kid?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: os verões do aluno; cada resposta abre a imagem.",
+   "perg": "What would you do every summer as a kid?",
+   "pula": "Três perguntas bastam."
+  },
+  "rolo": {
+   "obj": "Would ou used to em oito quadros; would com estado deixa o quadro vazio.",
+   "perg": "Can you say it with WOULD?",
+   "pula": "Cinco quadros bastam."
+  },
+  "camera": {
+   "obj": "O teste da câmera: se dá para filmar, would serve; se não, só used to.",
+   "perg": "Could a camera film it?",
+   "pula": "Corte duas frases."
+  },
+  "umavez": {
+   "obj": "O último verão: coisas que aconteceram uma vez pedem past simple.",
+   "perg": "Did it happen once, or again and again?",
+   "pula": "Três situações bastam."
+  },
+  "ouve": {
+   "obj": "Ouvir quatro falas e dizer se é hábito repetido ou uma vez só.",
+   "perg": "Was it a habit, or did it happen once?",
+   "pula": "Duas falas bastam; o texto abre depois."
+  },
+  "depois": {
+   "obj": "Hábito antigo com would e o que ficou no lugar: …, but now …",
+   "perg": "What would you do then, and what do you do now?",
+   "pula": "Dois hábitos bastam."
+  },
+  "melhor": {
+   "obj": "O melhor verão do aluno, com detalhes puxados pelo professor.",
+   "perg": "What was your best summer?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-semaforo": {
+   "obj": "Semáforo: trazer de volta um hábito antigo? Escolher e justificar.",
+   "perg": "Would you bring it back? Why?",
+   "pula": "Dois hábitos bastam; use a linha PUSH."
+  },
+  "fim": {
+   "obj": "Escrita: o verão do aluno com período, dois hábitos, um estado e o fim.",
+   "perg": "When did your summers stop?",
+   "pula": "Quatro frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre hábitos antigos com would e used to.",
+   "perg": "What would you do after school?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre o passado e o presente, com used to e would.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a avó e conta os verões na casa do lago.",
+   "perg": "Why did you sell the house?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about the old days.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "would",
+    "used to",
+    "when I was …",
+    "anymore"
+   ],
+   "cartas": [
+    {
+     "k": "AFTER SCHOOL",
+     "q": "What would you do after school as a kid?",
+     "fup": "Who would you play with?",
+     "st": [
+      "When I was …, I would …",
+      "After school, we would …"
+     ],
+     "ex": "When I was nine, I would play soccer in the street."
+    },
+    {
+     "k": "YOUR HAIR",
+     "q": "How did you use to look as a teenager?",
+     "fup": "Do you have photos?",
+     "st": [
+      "I used to have …",
+      "I used to wear …"
+     ],
+     "ex": "I used to have very long hair."
+    },
+    {
+     "k": "SUNDAYS",
+     "q": "What would your family do on Sundays?",
+     "fup": "Do you still do it?",
+     "st": [
+      "On Sundays, we would …",
+      "We don’t … anymore."
+     ],
+     "ex": "On Sundays, we would eat at my aunt’s house."
+    },
+    {
+     "k": "OLD FOOD",
+     "q": "What food did you use to love?",
+     "fup": "Do you still eat it?",
+     "st": [
+      "I used to love …",
+      "My mom would make …"
+     ],
+     "ex": "My mom would make a chocolate cake every birthday."
+    },
+    {
+     "k": "YOUR TOWN",
+     "q": "What was your town like before?",
+     "fup": "What changed?",
+     "st": [
+      "There used to be …",
+      "People would …"
+     ],
+     "ex": "There used to be a cinema, but now it is a pharmacy."
+    },
+    {
+     "k": "OLD TECH",
+     "q": "How did you use to listen to music?",
+     "fup": "And now?",
+     "st": [
+      "I used to have …",
+      "I would …, but now …"
+     ],
+     "ex": "I would buy CDs, but now I use my phone."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "used to",
+    "would",
+    "but now",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Summers: better then or better now?",
+     "a": "Then",
+     "b": "Now",
+     "fa": [
+      "Then. We would play outside all day."
+     ],
+     "fb": [
+      "Now. I can go anywhere I want."
+     ]
+    },
+    {
+     "q": "Old photos: on paper or on the phone?",
+     "a": "Paper",
+     "b": "Phone",
+     "fa": [
+      "Paper. We would look at them together."
+     ],
+     "fb": [
+      "Phone. I never lose them."
+     ]
+    },
+    {
+     "q": "Grandma’s house: keep it or sell it?",
+     "a": "Keep it",
+     "b": "Sell it",
+     "fa": [
+      "Keep it. The family used to meet there."
+     ],
+     "fb": [
+      "Sell it. Nobody goes there anymore."
+     ]
+    },
+    {
+     "q": "A summer with internet or without?",
+     "a": "With",
+     "b": "Without",
+     "fa": [
+      "With. I can call my friends."
+     ],
+     "fb": [
+      "Without. We would talk more."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the grandmother now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the grandmother.",
+   "perguntas": [
+    "What would the children do every summer?",
+    "What cake would you make?",
+    "What did the house use to look like?",
+    "Who would come on the long drive?",
+    "Why did you sell the house?",
+    "Do you miss the summers by the water?"
+   ],
+   "st": [
+    "Every summer, they would …",
+    "The house used to …",
+    "That year, I …"
+   ],
+   "ex": "Every summer, the children would swim in the lake before breakfast."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

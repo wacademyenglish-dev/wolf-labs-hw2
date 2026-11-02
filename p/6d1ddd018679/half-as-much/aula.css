@@ -1,0 +1,155 @@
+/* ============================================================
+   HALF AS MUCH · THE PHONE WEEK · LIVE CLASS       22/10/2026
+   A base vem do kit (base.css). Identidade: o quarto à noite. Azul-
+   tinta escuro, a luz fria da tela (ciano) contra a luz quente do
+   abajur (âmbar): a semana da Bea é trocar uma pela outra. As
+   engrenagens vêm da irmã B2 (Nine Times Longer): A no âmbar do abajur,
+   B no ciano da tela. Urbanist + Manrope; DM Mono para os números
+   do "screen time". Prefixo hm-. Fotofobia: nada claro grande.
+   ============================================================ */
+:root{
+  --noite:#080a12; --noite-rgb:8,10,18; --tinta:#eaedf5;
+  --t1:#f1f3f9; --t2:#c3c8d8; --t2-rgb:195,200,216; --t3:#8a90a6;
+  --ac:#f2b45a; --ac2:#ffd9a3; --tela:#5fd3e8; --tela2:#b5ecf6;
+  --vidro:rgba(234,237,245,.05); --vidro2:rgba(234,237,245,.085); --vidro3:rgba(234,237,245,.12);
+  --fio:rgba(222,228,242,.12); --fio2:rgba(222,228,242,.22); --luz:rgba(234,237,245,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff7a72; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'DM Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1700}
+.btn.cheio{color:#2a1700}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.hm-foto{margin:0;display:grid;gap:10px}
+.hm-foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r1);border:1px solid var(--fio2);box-shadow:var(--sombra)}
+.hm-foto figcaption{display:flex;align-items:center;gap:12px;font:600 clamp(14px,1vw,17px) var(--ui);color:var(--t3)}
+.pilula.on{border-color:var(--ac);background:#2b1f0d;color:var(--ac2)}
+.pilula.on.b{border-color:var(--tela);background:#0f2930;color:var(--tela2)}
+.lado-l{display:grid;gap:10px;align-content:start;min-width:0}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.hm-linha-ok{display:flex;align-items:center;gap:12px} .hm-linha-ok > span{flex:1}
+.hm-temas{display:flex;flex-wrap:wrap;gap:8px}
+.hm-temas .pilula{cursor:pointer;font:600 15px var(--ui);color:var(--t2)}
+.hm-escolha,.hm-ctl{display:grid;gap:8px}
+.hm-escolha > small,.hm-ctl > small,.hm-gram > small,.hm-nao > small,.hm-caderno > small,.hm-grafico > small,.hm-comp > small,.hm-desafio > small,.hm-app small{font:500 12px var(--mono);letter-spacing:.12em;color:var(--t3);text-transform:uppercase}
+.hm-mini{margin:0;text-align:center;font:600 clamp(17px,1.25vw,21px) var(--disp);color:var(--t2)}
+.hm-nota-prof{margin:0;padding:8px 14px;border-left:3px solid var(--ac);font:500 14px/1.45 var(--ui);color:var(--ac2)}
+html.wl-sala-aluno .hm-nota-prof{display:none}
+
+/* as engrenagens (as da irmã B2, nas cores do quarto) */
+.hm-eng{display:grid;gap:8px;justify-items:center;width:min(100%,520px);padding:14px;border-radius:var(--r2);background:#0b0d16;border:1px solid var(--fio2);margin:0 auto}
+.hm-eng svg{display:block;width:100%;height:auto;max-height:280px}
+.hm-roda rect,.hm-roda circle{fill:#22263a;stroke:#33384f;stroke-width:1.5}
+.hm-roda.a rect,.hm-roda.a circle{fill:#4f3714;stroke:var(--ac)} .hm-roda.b rect,.hm-roda.b circle{fill:#123640;stroke:var(--tela)}
+.hm-roda .hm-furo{fill:#0b0d16!important}
+.hm-roda.gira{animation:gira 5s linear infinite} .hm-roda.gira-rev{animation:gira 5s linear infinite reverse}
+@keyframes gira{to{transform:rotate(360deg)}}
+.hm-correia{fill:none;stroke:#3a3420;stroke-width:10;stroke-dasharray:14 6;animation:corre 1s linear infinite}
+@keyframes corre{to{stroke-dashoffset:-20}}
+.hm-eng text{font:500 14px var(--mono);letter-spacing:.1em;fill:var(--ac2)} .hm-eng text.tb{fill:var(--tela2)}
+.hm-rotulos{display:grid;gap:4px;width:100%;font:600 clamp(15px,1.15vw,19px) var(--disp);color:var(--t2)}
+.hm-rotulos b{display:inline-grid;place-items:center;width:24px;height:24px;margin-right:8px;border-radius:50%;font:500 12px var(--mono);background:#4f3714;color:var(--ac2)} .hm-rotulos span+span b{background:#123640;color:var(--tela2)}
+
+/* o áudio */
+.hm-ouve{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .hm-ouve .transcricao{margin:0} .hm-ouve .transcricao b{color:var(--ac2)}
+.hm-toca{display:flex;align-items:center;gap:12px;font:500 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+
+/* II · o app do screen time e os palpites */
+.hm-app{display:grid;gap:4px;padding:18px 22px;border-radius:var(--r2);border-color:rgba(95,211,232,.35);background:linear-gradient(180deg,#0f1c26,#0a1119)}
+.hm-app b{font:500 clamp(40px,3.6vw,64px) var(--mono);color:var(--tela2);letter-spacing:-.02em}
+.hm-app span{font:600 15px var(--ui);color:var(--t2)}
+.hm-palpites{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hm-palpite{display:grid;gap:2px;text-align:left;padding:11px 14px;border-radius:14px;border:1px solid var(--fio2);background:var(--vidro);color:var(--t1);font:600 clamp(15px,1.1vw,18px) var(--ui);cursor:pointer}
+.hm-palpite.on{border-color:var(--ac);background:#2b1f0d}
+.hm-palpite.veio{border-color:var(--ok)} .hm-palpite.veio small{color:var(--ok)} .hm-palpite.nao{opacity:.55} .hm-palpite.nao small{color:var(--t3)}
+.hm-palpite small{font:500 12px var(--mono)} .hm-palpite[disabled]{cursor:default}
+.hm-palpite:focus-visible,.hm-num:focus-visible,.hm-nota:focus-visible{outline:2px solid var(--tela);outline-offset:2px}
+
+/* III · o comparador e a regra */
+.hm-regra{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:24px;align-items:start}
+.hm-comp{display:grid;gap:12px;padding:16px 20px;border-radius:var(--r2);border-color:var(--ac)}
+.hm-barras{display:grid;gap:8px}
+.hm-barras div{display:grid;grid-template-columns:90px 1fr;align-items:center;gap:10px;font:500 13px var(--mono);color:var(--t3)}
+.hm-barras i{display:block;height:22px;width:calc(var(--v) * 1%);border-radius:6px;background:linear-gradient(90deg,#4f3714,var(--ac));transition:width .5s}
+.hm-barras div:first-child i{background:#2a2f44}
+.hm-frase{margin:0;font:700 clamp(20px,1.7vw,29px)/1.35 var(--disp);color:var(--t1)}
+.hm-c{color:var(--ac2);border-bottom:2px solid var(--ac)} .hm-mod{color:var(--tela2)}
+.hm-gram{display:grid;gap:8px;padding:16px 18px}
+.hm-gl{display:grid;gap:2px;padding:9px 12px;border-radius:12px;border:1px solid var(--fio)}
+.hm-gl b{font:500 12px var(--mono);letter-spacing:.06em;color:var(--ac2);text-transform:uppercase}
+.hm-gl span{font:600 clamp(15px,1.1vw,18px)/1.4 var(--disp);color:var(--t1)}
+.hm-gl em{font:500 13px var(--ui);color:var(--t3);font-style:normal}
+.hm-nao{display:grid;gap:4px;padding:12px 18px}
+.hm-nao p{margin:0;display:flex;flex-wrap:wrap;gap:2px 12px;font:500 clamp(14px,1vw,16px) var(--ui)}
+.hm-nao s{color:#ffadad;text-decoration-thickness:2px} .hm-nao span{color:var(--ok)}
+@media (prefers-reduced-motion:reduce){ .hm-barras i{transition:none} .hm-roda.gira,.hm-roda.gira-rev,.hm-correia{animation:none} }
+
+/* IV · a marca do professor */
+.hm-marca{display:flex;flex-wrap:wrap;align-items:center;gap:8px} .hm-marca span{font:500 12px var(--mono);letter-spacing:.1em;color:var(--t3)}
+.hm-marca .pilula{cursor:pointer;font:600 15px var(--ui);color:var(--t2)}
+
+/* V · o gráfico da Bea */
+.hm-grafico{display:grid;gap:6px;padding:16px 18px;border-radius:var(--r2)}
+.hm-leg{display:inline-block;width:12px;height:12px;border-radius:3px;margin:0 4px 0 10px;vertical-align:-1px} .hm-leg.antes{background:#2a2f44} .hm-leg.depois{background:var(--tela)}
+.hm-num{display:grid;grid-template-columns:76px minmax(0,1fr);grid-template-rows:auto auto auto;gap:4px 12px;text-align:left;padding:10px 12px;border-radius:14px;border:1px solid var(--fio);background:transparent;color:var(--t1);font:inherit;cursor:pointer}
+.hm-num.on{border-color:var(--tela);background:rgba(95,211,232,.06)}
+.hm-num > b{grid-row:span 3;font:700 17px var(--disp);color:var(--t1)}
+.hm-bar{display:block;height:20px;width:max(calc(var(--v) * 1%),26px);border-radius:5px;position:relative}
+.hm-bar.antes{background:#2a2f44} .hm-bar.depois{background:linear-gradient(90deg,#123640,var(--tela))}
+.hm-bar em{position:absolute;right:6px;top:1px;font:500 12px var(--mono);font-style:normal;color:var(--t1)}
+.hm-num small{font:500 12px var(--ui);color:var(--t3)}
+
+/* VI · o debate */
+.hm-claim{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2);border-color:var(--ac)} .hm-claim small{font:500 12px var(--mono);letter-spacing:.12em;color:var(--ac2)} .hm-claim p{margin:0;font:700 clamp(20px,1.65vw,28px)/1.4 var(--disp)}
+.hm-claim.voce{border-color:var(--tela)} .hm-claim.voce small{color:var(--tela2)}
+.hm-carta{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2);border:1px dashed var(--fio2)}
+.hm-carta small{font:500 12px var(--mono);letter-spacing:.12em;color:var(--ac2)} .hm-carta p{margin:0;font:500 15px/1.45 var(--ui);color:var(--t2)}
+
+/* VII · o caderno da Bea */
+.hm-caderno{display:grid;gap:2px;max-width:1000px;margin:0 auto;width:100%;padding:16px 22px;border-radius:var(--r2);background:linear-gradient(180deg,#141827,#0e111c);background-image:repeating-linear-gradient(180deg,transparent 0 53px,rgba(95,211,232,.08) 53px 54px)}
+.hm-nota{display:grid;gap:2px;text-align:left;padding:12px 6px;border:0;background:transparent;color:var(--t1);font:600 clamp(18px,1.4vw,24px)/1.4 'Caveat',var(--disp);font-size:clamp(24px,1.9vw,32px);cursor:pointer}
+.hm-nota s{display:block;font-size:.75em;color:var(--t3);text-decoration-color:var(--erro);text-decoration-thickness:2px}
+.hm-nota ins{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac)}
+.hm-nota small{font:500 14px var(--ui);color:var(--t3)}
+.hm-nota.ok span{color:var(--ok)} .hm-nota[disabled]{cursor:default}
+.hm-fim-n{display:grid;justify-items:center;gap:8px;margin-top:14px}
+
+/* VIII · o desafio */
+.hm-desafio{display:grid;gap:8px;max-width:1200px;margin:0 auto 12px;width:100%}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .hm-eng{width:min(100%,420px);padding:8px}
+
+@media (max-width:1100px){ .mesa-c,.capa,.hm-regra{grid-template-columns:1fr} }
+@media (max-width:620px){ .hm-palpites{grid-template-columns:1fr} .hm-barras div{grid-template-columns:70px 1fr} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb-chips{grid-template-columns:repeat(3,minmax(0,1fr))}
+.deb-chip{cursor:default;opacity:.55;text-align:center;justify-items:center;padding:9px 8px;font-size:clamp(13px,.95vw,16px);transition:opacity .4s,background .4s,border-color .4s}
+.deb-chip small{letter-spacing:.06em}
+.deb-chip.veio{opacity:1;background:#10261a}
+.deb-chip.nao{opacity:.4;border-color:rgba(255,120,120,.5)}
+.deb-chip.nao small{color:var(--erro)}
+.deb-chip.veio.nova{animation:debLiga .8s ease-out}
+@keyframes debLiga{0%{box-shadow:0 0 0 rgba(143,224,168,0);transform:scale(.92)}50%{box-shadow:0 0 22px rgba(143,224,168,.6);transform:scale(1.06)}100%{transform:none}}
+@media (max-width:620px){.deb-chips{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (prefers-reduced-motion:reduce){.deb-chip.nova{animation:none}}

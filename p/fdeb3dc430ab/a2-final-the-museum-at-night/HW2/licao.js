@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Museum at Night",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fdeb3dc430ab/a2-final-the-museum-at-night/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 10 review, closing A2: phrasal verbs with the pronoun in the middle (turn it on, look for it); who / which / that / where; the passive in the present (it is made of, it is kept in); must / might / can't be to guess; never turn on them, never what for things",
   "abrir": "What is something in your house that is made of wood?",
   "fecho": "Phrasal verb + pronoun: <b>turn it on</b>, <b>turn them off</b>. People: <b>who</b>; things: <b>that / which</b>; places: <b>where</b>. Passive: <b>is made of</b>, <b>is kept in</b>. Guess: <b>must be</b>, <b>might be</b>, <b>can't be</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo are night guards in a small museum. A new scene, about 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/fdeb3dc430ab/a2-final-the-museum-at-night/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A dark museum hall with statues",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Please turn the lights on.",
-          "img": "https://wolf-labs.pages.dev/p/fdeb3dc430ab/a2-final-the-museum-at-night/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "This is the room where the statues are.",
-          "img": "https://wolf-labs.pages.dev/p/fdeb3dc430ab/a2-final-the-museum-at-night/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It must be a cat. It can't be the wind.",
-          "img": "https://wolf-labs.pages.dev/p/fdeb3dc430ab/a2-final-the-museum-at-night/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fdeb3dc430ab/a2-final-the-museum-at-night/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A dark museum hall with statues",
       "pede": "Look at the picture: a dark museum hall at night. Write 2 or 3 sentences. Use <b>must</b>, <b>might</b> or <b>can't</b> to guess, and say one thing with <b>is made of</b> or <b>is kept in</b>.",
       "ph": "The statue is made of …",

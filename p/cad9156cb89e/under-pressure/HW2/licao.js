@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Under Pressure",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/cad9156cb89e/under-pressure/img/live-caldeira.webp",
+  "capa": "../img/live-caldeira.webp",
   "alvo": "cause, effect and purpose: because + a sentence, because of + a thing; leads to / results in + a thing or -ing; to / in order to + plain verb; so that + subject + can / could; never because of I was, for + verb, in order to don't",
   "abrir": "Think of one place where you feel pressure. Why does it get to you?",
   "fecho": "<b>Because</b> + a sentence (<i>because I was nervous</i>). <b>Because of</b> + a thing (<i>because of the noise</i>). <b>Leads to / results in</b> + a thing or -ing: <i>stress leads to mistakes</i>. <b>To / in order to</b> + plain verb: <i>I came early to check the screen</i>. <b>So that</b> + subject + can / could. Never <i>for</i> + verb.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before a big presentation. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/cad9156cb89e/under-pressure/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "An empty room with one table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I was nervous because of the exam.",
-          "img": "https://wolf-labs.pages.dev/p/cad9156cb89e/under-pressure/img/live-dominos.webp",
+          "img": "../img/live-dominos.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Too much worry leads to mistakes.",
-          "img": "https://wolf-labs.pages.dev/p/cad9156cb89e/under-pressure/img/live-caldeira.webp",
+          "img": "../img/live-caldeira.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I arrived early in order to find a good seat.",
-          "img": "https://wolf-labs.pages.dev/p/cad9156cb89e/under-pressure/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/cad9156cb89e/under-pressure/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "An empty room with one table",
       "pede": "Look at the picture: an empty room with one table. Imagine a person who feels pressure in a room like this. Write 2 or 3 sentences: why, and what they can do. Use <b>because</b>, <b>because of</b>, <b>to</b> or <b>so that</b>.",
       "ph": "He feels pressure because … He arrives early to …",

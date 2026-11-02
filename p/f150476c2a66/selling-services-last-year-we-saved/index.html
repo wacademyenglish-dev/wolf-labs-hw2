@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -135,5 +136,286 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "How was your weekend?",
+   "p": "Answer in the past. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "The case study: problem, action, result.",
+   "p": "Read it out loud. Then answer."
+  },
+  "dialogo": {
+   "t": "“Do you have a client like us?”",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "Saved, not “save”.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "transforma": {
+   "t": "This year → last year.",
+   "p": "Say it in the past. Then check."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose and say why."
+  },
+  "cartao": {
+   "t": "Your mini case.",
+   "p": "Problem, what you did, result. Say it."
+  },
+  "pode": {
+   "t": "Lesson 11: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 11: past simple (was, were, -ed, had, made, sent, began). Estudo de caso da Atlas Motors e o Leo contando a história à CFO Olivia.",
+  "armadilha": "O brasileiro marca o passado só com a palavra de tempo (“last year we save”), dobra o passado (“we didn’t saved”), diz “It was don’t easy” e regulariza: “we maked”.",
+  "pal": [
+   "we saved",
+   "was / were",
+   "had",
+   "made",
+   "sent",
+   "began",
+   "didn’t need",
+   "case study"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: clientes acreditam em histórias de sucesso contadas no passado.",
+   "perg": "Did you have meetings yesterday?",
+   "pula": "Só leia o título da capa."
+  },
+  "conversa": {
+   "obj": "Small talk no passado sobre o fim de semana, com o “And you?”.",
+   "perg": "How was your weekend?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler o estudo de caso da Atlas Motors e achar os verbos no passado.",
+   "perg": "What was the problem at Atlas Motors?",
+   "pula": "Leia metade e faça duas perguntas."
+  },
+  "dialogo": {
+   "obj": "Ouvir o Leo contando a história à nova CFO da Northway Chemicals.",
+   "perg": "How much did Atlas save?",
+   "pula": "Ouça uma vez e faça só duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar pares e fechar a regra: passado muda o verbo; com didn’t, verbo simples.",
+   "perg": "Is it the past? Then what changes?",
+   "pula": "Três pares e as armadilhas."
+  },
+  "transforma": {
+   "obj": "Passar frases para o passado (só quatro irregulares: had, made, sent, began).",
+   "perg": "This year we send. Last year?",
+   "pula": "Quatro frases bastam."
+  },
+  "escolha": {
+   "obj": "Escolhas leves (A ou B) no passado, com because.",
+   "perg": "A or B? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: mini caso real em três ou quatro frases, com um número, e contar em voz alta.",
+   "perg": "What was the result, in one number?",
+   "pula": "Três frases bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; pedir um número real de um projeto para as próximas aulas.",
+   "perg": "Can you tell a success story in the past?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre projetos e semanas reais do aluno no passado.",
+   "perg": "What did you finish last month?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas opções de venda e de história, com frase pronta.",
+   "perg": "Which one do you choose?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: a professora é a CFO Olivia; o aluno conta um caso de sucesso no passado.",
+   "perg": "Did you have a client like us?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your work, last year.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "was / were",
+    "-ed",
+    "didn’t"
+   ],
+   "cartas": [
+    {
+     "k": "LAST MONTH",
+     "q": "What did you finish at work last month?",
+     "fup": "Was it hard?",
+     "st": [
+      "Last month I finished …",
+      "It was / wasn’t …"
+     ],
+     "ex": "Last month I finished a big report. It wasn’t easy."
+    },
+    {
+     "k": "A GOOD CLIENT",
+     "q": "Who was your best client last year?",
+     "fup": "What did you do for them?",
+     "st": [
+      "My best client was …",
+      "We …"
+     ],
+     "ex": "My best client was a hospital. We organized their payroll."
+    },
+    {
+     "k": "A NUMBER",
+     "q": "What number from last year are you proud of?",
+     "fup": "How did you do it?",
+     "st": [
+      "We saved / sold / made …",
+      "We …"
+     ],
+     "ex": "We saved 15% on costs. We changed our system."
+    },
+    {
+     "k": "YESTERDAY",
+     "q": "Did you have meetings yesterday?",
+     "fup": "Were they useful?",
+     "st": [
+      "Yes, I had … / No, I didn’t.",
+      "They were / weren’t …"
+     ],
+     "ex": "Yes, I had three meetings. Two weren’t useful."
+    },
+    {
+     "k": "YOUR FIRST JOB",
+     "q": "When did you begin your first job?",
+     "fup": "What did you do there?",
+     "st": [
+      "I began in …",
+      "I …"
+     ],
+     "ex": "I began in 2015. I answered phones at an office."
+    },
+    {
+     "k": "AN EMAIL",
+     "q": "What important email did you send this week?",
+     "fup": "Did they answer?",
+     "st": [
+      "I sent …",
+      "They answered / didn’t answer."
+     ],
+     "ex": "I sent a proposal to a client. They didn’t answer yet."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "was",
+    "didn’t"
+   ],
+   "rodadas": [
+    {
+     "q": "Tell the client a story, or show a table of numbers?",
+     "a": "A story",
+     "b": "Numbers",
+     "fa": [
+      "A story. Clients believe stories."
+     ],
+     "fb": [
+      "Numbers. A CFO wants data."
+     ]
+    },
+    {
+     "q": "A case study with the client’s real name, or a fictional name?",
+     "a": "Real name",
+     "b": "Fictional name",
+     "fa": [
+      "Real name. It’s true, so it’s strong."
+     ],
+     "fb": [
+      "Fictional name. The client didn’t say yes."
+     ]
+    },
+    {
+     "q": "A big result that was hard, or a small result that was easy?",
+     "a": "Big and hard",
+     "b": "Small and easy",
+     "fa": [
+      "Big. 20% savings was a great story."
+     ],
+     "fb": [
+      "Small. It wasn’t risky."
+     ]
+    },
+    {
+     "q": "Talk about a project that failed, or only successes?",
+     "a": "Talk about it",
+     "b": "Only successes",
+     "fa": [
+      "Talk about it. We learned a lot."
+     ],
+     "fb": [
+      "Only successes. Clients don’t want problems."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "Your teacher is the CFO.",
+   "p": "Tell a success story.",
+   "aluno": "Listen to your teacher’s question. Answer for Bluepeak, or with a real project.",
+   "perguntas": [
+    "Did you have a client like us?",
+    "What was their problem?",
+    "What did you do?",
+    "How long did it take?",
+    "How much did they save?",
+    "Was it easy?"
+   ],
+   "st": [
+    "Yes, we had a client …",
+    "Their problem was …",
+    "We saved …"
+   ],
+   "ex": "Yes, we had a client like you, Atlas Motors. Their payroll was slow. Last year we saved them 20%."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

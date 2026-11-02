@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -130,5 +131,275 @@ window.WL_CONVERSA = { nivel: 'A2', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Three tips in 48 seconds.",
+   "p": "One question, the video, then the questions."
+  },
+  "transforma": {
+   "t": "Make it kind and clear.",
+   "p": "Read the idea and clue. Say it politely."
+  },
+  "escolha": {
+   "t": "Family A or Family B?",
+   "p": "Choose. Give two reasons."
+  },
+  "cartao": {
+   "t": "Say yes and plan the arrival.",
+   "p": "Five lines: yes, thanks, feelings, plans, questions."
+  },
+  "cv-semaforo": {
+   "t": "Green, yellow or red?",
+   "p": "Choose a color. Answer the family kindly."
+  },
+  "pode": {
+   "t": "Lesson 12: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Responder às famílias no matching: dizer não com gentileza, sim com gratidão, justificar a escolha e planejar a chegada com going to e will.",
+  "armadilha": "O brasileiro responde só “No.” ou some sem responder; e erra o futuro: “I go to arrive”, “I will to bring”.",
+  "pal": [
+   "Thank you so much…, but…",
+   "I don’t think we are the right match",
+   "I would love to…",
+   "Could I have until…?",
+   "I’m going to arrive on…",
+   "I will…",
+   "within 24 hours"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: famílias mandam mensagens; responder rápido e com gentileza.",
+   "perg": "Is it rude not to answer a message?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "video": {
+   "obj": "Ouvir: três dicas de matching da Cultural Care (48 s, tocar duas vezes).",
+   "perg": "How fast should you answer a family?",
+   "pula": "Assista duas vezes e faça uma pergunta."
+  },
+  "transforma": {
+   "obj": "Transformar sim e não secos em respostas educadas e claras.",
+   "perg": "How do you say no kindly?",
+   "pula": "Quatro frases bastam."
+  },
+  "escolha": {
+   "obj": "Escolher entre pares de famílias fictícias e dar dois motivos.",
+   "perg": "Which family, and why?",
+   "pula": "Dois pares bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: a mensagem de match para os Parkers, com going to e will.",
+   "perg": "When are you going to arrive?",
+   "pula": "Três linhas bastam."
+  },
+  "cv-semaforo": {
+   "obj": "Momento de conversa: quatro mensagens novas; verde, amarelo ou vermelho, e a resposta.",
+   "perg": "Would you say yes to a farm far from the city?",
+   "pula": "Duas mensagens bastam."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 12: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you say no kindly in English now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre a família ideal e os planos do aluno, com going to e will.",
+   "perg": "What are you going to do in your first week?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado em dilemas de matching, com respostas educadas.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a mãe dos Parkers e conta o plano da chegada.",
+   "perg": "What are you going to do on the first day?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your match, your plans.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’m going to…",
+    "I will…",
+    "I would love to…"
+   ],
+   "cartas": [
+    {
+     "k": "THE PERFECT FAMILY",
+     "q": "What is your perfect host family like?",
+     "fup": "Big city or small town?",
+     "st": [
+      "I would love a family with …",
+      "I’d prefer …"
+     ],
+     "ex": "I would love a family with two kids in a small town near the sea."
+    },
+    {
+     "k": "SAYING NO",
+     "q": "Is it hard for you to say no?",
+     "fup": "How do you say it in Portuguese?",
+     "st": [
+      "It’s hard, because …",
+      "I usually say …"
+     ],
+     "ex": "It’s hard, because I don’t want to hurt people. I usually say “maybe later”."
+    },
+    {
+     "k": "FIRST WEEK",
+     "q": "What are you going to do in your first week?",
+     "fup": "What will you bring for the kids?",
+     "st": [
+      "I’m going to …",
+      "I will bring …"
+     ],
+     "ex": "I’m going to learn the kids’ routine. I will bring a Brazilian game."
+    },
+    {
+     "k": "QUESTIONS",
+     "q": "What would you ask a family before you say yes?",
+     "fup": "Why that question?",
+     "st": [
+      "I’d ask …",
+      "because …"
+     ],
+     "ex": "I’d ask why the last au pair left, because it says a lot."
+    },
+    {
+     "k": "SNOW OR SUN",
+     "q": "Would you live in a cold place?",
+     "fup": "What will you miss from Brazil?",
+     "st": [
+      "Yes / No, because …",
+      "I will miss …"
+     ],
+     "ex": "Yes, I want to see snow. I will miss Brazilian food."
+    },
+    {
+     "k": "THE GOODBYE",
+     "q": "How are you going to say goodbye to your family in Brazil?",
+     "fup": "Will you call them every day?",
+     "st": [
+      "I’m going to …",
+      "I will call …"
+     ],
+     "ex": "I’m going to have a big lunch with everyone. I will call my mom every Sunday."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "Thank you so much…, but…",
+    "I would love to…",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A family wants an answer in two hours. Answer now or ask for time?",
+     "a": "Answer now",
+     "b": "Ask for time",
+     "fa": [
+      "Answer now. I would love to show I’m fast.",
+      "A good family is rare."
+     ],
+     "fb": [
+      "Ask for time. Could I have until tomorrow? It’s a big decision.",
+      "A rush is a red flag."
+     ]
+    },
+    {
+     "q": "A big house far from the city, or a small flat in a city?",
+     "a": "Big house",
+     "b": "City flat",
+     "fa": [
+      "The big house. It’s calm and the kids have space.",
+      "I will save money."
+     ],
+     "fb": [
+      "The city. I’m going to take classes and meet people.",
+      "I don’t drive."
+     ]
+    },
+    {
+     "q": "First-time parents or experienced parents?",
+     "a": "First-time",
+     "b": "Experienced",
+     "fa": [
+      "First-time. They will need me a lot.",
+      "I can help them learn."
+     ],
+     "fb": [
+      "Experienced. They know the rules already.",
+      "Less stress for everyone."
+     ]
+    },
+    {
+     "q": "A family you like, but not the city you wanted. Yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. The family is more important.",
+      "I will visit my dream city on vacation."
+     ],
+     "fb": [
+      "No, kindly. Thank you so much, but I don’t think we are the right match.",
+      "I’m going to wait."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the Parker mom now.",
+   "p": "Your teacher is the new au pair.",
+   "aluno": "Listen to the au pair’s question. Answer as the mom of the Parker family, with going to and will.",
+   "perguntas": [
+    "Who is going to pick me up at the airport?",
+    "What are we going to do on the first day?",
+    "Will the kids be at school in the morning?",
+    "Are you going to show me the town?",
+    "Will I have my own room?",
+    "What will my schedule be in the first week?"
+   ],
+   "st": [
+    "We’re going to …",
+    "You will …",
+    "The kids will …"
+   ],
+   "ex": "We’re going to pick you up at the airport. The kids will make a sign with your name."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -120,5 +121,288 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "What makes this paragraph work?",
+   "p": "Read it out loud. Find the structure and connectors."
+  },
+  "transforma": {
+   "t": "Same idea, better connector.",
+   "p": "Read the clue. Say it with the new connector."
+  },
+  "cv-dilema": {
+   "t": "Three tech dilemmas.",
+   "p": "Choose or say your idea. Use a connector."
+  },
+  "prova": {
+   "t": "Five minutes, then a follow-up.",
+   "p": "Write about the topic. Then answer the new question."
+  },
+  "pode": {
+   "t": "What can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Interactive Writing do DET: 5 minutos sobre um tema e 3 numa pergunta extra; parágrafo com topic sentence, apoio e fechamento, e conectores variados. Tema: uma tecnologia que facilitou a vida.",
+  "armadilha": "O brasileiro escreve “and… and… and…”, começa toda frase com But, diz “like for example” (tradução de “tipo, por exemplo”), não fecha o parágrafo e fica abaixo de 80 palavras.",
+  "pal": [
+   "topic sentence",
+   "Before, … Now, …",
+   "Moreover,",
+   "However,",
+   "For instance,",
+   "Overall,",
+   "wrap-up",
+   "follow-up"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 13 do DET Prep: Interactive Writing.",
+   "perg": "Which app would you miss most if it disappeared tomorrow?",
+   "pula": "Pergunte e entre: é o tema do dia."
+  },
+  "leitura": {
+   "obj": "Ler o parágrafo modelo (app de banco) e achar estrutura e conectores.",
+   "perg": "Which sentence is the topic sentence?",
+   "pula": "Leia e mostre o padrão direto."
+  },
+  "transforma": {
+   "obj": "Reescrever frases com conectores melhores (Moreover, However, For instance, Overall).",
+   "perg": "Which connector adds one more point?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-dilema": {
+   "obj": "Momento de conversa: três dilemas de tecnologia, com um conector em cada resposta.",
+   "perg": "Would you give your kids a phone at ten?",
+   "pula": "Dois dilemas bastam."
+  },
+  "prova": {
+   "obj": "Escrita com o relógio real: 5 minutos e a pergunta extra de 3; depois, corretor e checklist.",
+   "perg": "How many connectors did you use?",
+   "pula": "Não corte; a pergunta extra pode ficar para casa."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; guarde os dois textos para o Writing Sample da próxima aula.",
+   "perg": "Can you write a wrap-up sentence now?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre tecnologia na vida do aluno, com conectores do parágrafo.",
+   "perg": "How did your life change with that app?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre tecnologia com argumentos estruturados por conectores.",
+   "perg": "Can you give me an example?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve um parágrafo DET sobre outro tema de tecnologia, passo a passo.",
+   "perg": "What is your topic sentence?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Technology and you.",
+   "p": "Pick a card. Answer with two connectors.",
+   "palavras": [
+    "Moreover,",
+    "However,",
+    "For instance,",
+    "Overall,"
+   ],
+   "cartas": [
+    {
+     "k": "BEFORE AND NOW",
+     "q": "How did you pay for things ten years ago, and how now?",
+     "fup": "Is it better?",
+     "st": [
+      "Before, I … Now, I …",
+      "Overall, …"
+     ],
+     "ex": "Before, I paid with cash. Now, I use my phone. Overall, it saves me time."
+    },
+    {
+     "k": "YOUR FAVORITE APP",
+     "q": "Which app do you use most?",
+     "fup": "What does it help you with?",
+     "st": [
+      "I use … the most.",
+      "For instance, …"
+     ],
+     "ex": "I use my maps app the most. For instance, I never get lost in a new city."
+    },
+    {
+     "k": "THE DOWNSIDE",
+     "q": "What’s a disadvantage of your phone?",
+     "fup": "What do you do about it?",
+     "st": [
+      "However, …",
+      "Moreover, …"
+     ],
+     "ex": "It’s useful. However, I check it too much. Moreover, I sleep badly."
+    },
+    {
+     "k": "WORK TOOLS",
+     "q": "What technology helps you most at work?",
+     "fup": "Could you work without it?",
+     "st": [
+      "… helps me most because …",
+      "Without it, …"
+     ],
+     "ex": "Video calls help me most because my team is in three cities. Without it, we’d travel every week."
+    },
+    {
+     "k": "LEARNING",
+     "q": "How does technology help you learn English?",
+     "fup": "Which tool works best?",
+     "st": [
+      "For instance, …",
+      "Overall, …"
+     ],
+     "ex": "For instance, I watch series with subtitles. Overall, my listening is much better."
+    },
+    {
+     "k": "OFFLINE",
+     "q": "When were you last offline for a whole day?",
+     "fup": "How did it feel?",
+     "st": [
+      "The last time was …",
+      "However, …"
+     ],
+     "ex": "The last time was on a beach trip. However, I checked my messages at night."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Structure it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "Moreover,",
+    "However,",
+    "For instance,",
+    "Overall,"
+   ],
+   "rodadas": [
+    {
+     "q": "Does technology make life easier, or just faster?",
+     "a": "Easier",
+     "b": "Just faster",
+     "fa": [
+      "Easier. For instance, banking takes one minute now.",
+      "Moreover, older people can see doctors online."
+     ],
+     "fb": [
+      "Just faster. We do more, so we rest less.",
+      "However fast it is, we feel more stressed."
+     ]
+    },
+    {
+     "q": "Should schools ban phones in class?",
+     "a": "Ban them",
+     "b": "Use them",
+     "fa": [
+      "Ban them. Students can’t focus.",
+      "Moreover, they talk to each other more."
+     ],
+     "fb": [
+      "Use them. Phones are tools for research.",
+      "For instance, a dictionary app helps in English class."
+     ]
+    },
+    {
+     "q": "Cash: keep it or let it disappear?",
+     "a": "Keep it",
+     "b": "Let it go",
+     "fa": [
+      "Keep it. Not everyone has a bank account.",
+      "However modern we are, systems go down."
+     ],
+     "fb": [
+      "Let it go. Digital payments are safer.",
+      "Overall, cash is slow and easy to lose."
+     ]
+    },
+    {
+     "q": "AI writing tools for students: help or cheating?",
+     "a": "Help",
+     "b": "Cheating",
+     "fa": [
+      "Help. They show better connectors, for instance.",
+      "Overall, it’s like a teacher at home."
+     ],
+     "fb": [
+      "Cheating. You don’t learn to think.",
+      "However good the text is, it isn’t yours."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Overall, great arguments."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "One More Paragraph",
+   "t": "Write a new DET paragraph.",
+   "p": "Topic: an invention you can’t live without.",
+   "prof": "Count the connectors at the end; aim for four different ones and over 80 words in total.",
+   "passos": [
+    {
+     "q": "Topic sentence: what invention, and why does it matter?",
+     "st": [
+      "I couldn’t live without … because …"
+     ],
+     "ex": "I couldn’t live without the washing machine because it gives me hours back every week."
+    },
+    {
+     "q": "Support: compare before and now.",
+     "st": [
+      "Before, … Now, …"
+     ],
+     "ex": "Before, my grandmother washed clothes by hand for a whole morning. Now, I press a button."
+    },
+    {
+     "q": "Add one more point and an example.",
+     "st": [
+      "Moreover, …",
+      "For instance, …"
+     ],
+     "ex": "Moreover, it uses less water than washing by hand. For instance, my machine has an eco mode."
+    },
+    {
+     "q": "Wrap up. Then add a disadvantage, like a follow-up.",
+     "st": [
+      "Overall, …",
+      "However, …"
+     ],
+     "ex": "Overall, it changed how families spend their time. However, it uses a lot of electricity."
+    }
+   ],
+   "fim": "Topic, support, wrap-up. That’s a DET paragraph."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

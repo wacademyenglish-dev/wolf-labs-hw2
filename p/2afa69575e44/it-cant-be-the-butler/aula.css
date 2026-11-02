@@ -1,0 +1,122 @@
+/* ============================================================
+   IT CAN'T BE THE BUTLER · THE LANTERNS · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: noite de neblina na
+   montanha e na mansão — verde-petróleo quase preto; a única luz é a
+   das lanternas (âmbar). Chama cheia = must be, meia chama = might /
+   may / could be, apagada com fumaça = can't be. A ponte é desenhada
+   em SVG, cordas de cânhamo escuro. Nenhum campo claro.
+   ============================================================ */
+:root{
+  --noite:#060a0a; --noite-rgb:6,10,10; --tinta:#e8efed;
+  --t1:#edf3f1; --t2:#c2ceca; --t2-rgb:194,206,202; --t3:#84928e;
+  --ac:#ffb54a; --ac2:#ffd79a; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(232,239,237,.05); --vidro2:rgba(232,239,237,.085); --vidro3:rgba(232,239,237,.12);
+  --fio:rgba(222,232,229,.12); --fio2:rgba(222,232,229,.22); --luz:rgba(232,239,237,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'DM Serif Display',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1600}
+.btn.cheio{color:#2a1600}
+.capa{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:400 clamp(58px,5.6vw,108px)/.95 var(--serif);letter-spacing:-.01em}
+.capa h1 b{display:block;font-weight:400;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.4 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+.capa-r{display:flex;justify-content:center;align-items:flex-end;gap:22px}
+.lant-c{display:grid;justify-items:center;gap:8px} .lant-c b{font:800 13px var(--mono);letter-spacing:.12em;color:var(--t2)}
+.capa-r .lanterna{width:clamp(90px,8vw,150px)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:52px;padding:0 22px;font:700 clamp(16px,1.25vw,21px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,19px)}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:700 clamp(17px,1.35vw,23px)/1.4 var(--disp)}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:860px;margin:0 auto 10px;width:100%} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)}
+.balao u{text-decoration:none;color:var(--ac2);border-bottom:3px solid var(--ok)}
+.lacuna-q{display:inline-block;min-width:3.5em;border-bottom:3px solid var(--ac);color:var(--ac)}
+.aberta{position:relative;border-radius:var(--r1);background-size:cover;background-position:center;height:clamp(150px,calc(100vh / var(--zv,1) - 520px),380px);box-shadow:inset 0 0 120px rgba(0,0,0,.8)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(6,10,10,.88);font:700 13px var(--mono);color:var(--ac2)}
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:800 28px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--disp);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* a lanterna */
+.lanterna{display:block;width:90px;height:auto;overflow:visible} .lanterna.mini{width:46px}
+.lanterna .alca{fill:none;stroke:#6b5a3a;stroke-width:4} .lanterna .topo,.lanterna .base{fill:#3a3020;stroke:#6b5a3a;stroke-width:2}
+.lanterna .vidro{fill:rgba(255,200,120,.04);stroke:#6b5a3a;stroke-width:3} .lanterna .grade{stroke:#4a3e28;stroke-width:2}
+.lanterna .halo{fill:rgba(255,181,74,.28);filter:blur(10px)} .lanterna .halo.meia{fill:rgba(255,181,74,.16)}
+.lanterna .chama{fill:#ffb54a;animation:tremula 1.6s ease-in-out infinite;transform-origin:50% 95%} .lanterna .miolo{fill:#fff1c8}
+.lanterna.n1 .chama{fill:#e8933a;opacity:.9}
+.lanterna .fumaca{fill:none;stroke:#6f7a78;stroke-width:3;stroke-linecap:round;opacity:.7;stroke-dasharray:4 6;animation:sobe 3s linear infinite}
+.lanterna .interroga{font:800 30px var(--mono);fill:#5d6a67;text-anchor:middle}
+@keyframes tremula{50%{transform:scale(.94,1.05)}} @keyframes sobe{to{stroke-dashoffset:-40}}
+
+/* a ponte */
+.ponte-c{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:8px 16px;border-radius:var(--r1);margin-bottom:10px}
+.ponte-svg{width:100%;height:auto;max-height:calc(100vh / var(--zv,1) - 690px);min-height:150px}
+.penhasco{fill:#141c1b;stroke:#26312f;stroke-width:2} .corda{fill:none;stroke:#7a6440;stroke-width:3} .tabua{stroke:#5a4a30;stroke-width:6}
+.pessoa circle{fill:#16201f;stroke:var(--t3);stroke-width:2} .pessoa text{font:800 15px var(--mono);fill:var(--t1);text-anchor:middle} .pessoa .min{font-size:12px;fill:var(--ac2)}
+.lampiao circle{fill:#2a1a06;stroke:var(--ac);stroke-width:2;filter:drop-shadow(0 0 8px rgba(255,181,74,.8))} .lampiao text{font:800 12px var(--mono);fill:var(--ac);text-anchor:middle}
+.zumbis{font:800 11px var(--mono);fill:#a05050;letter-spacing:.1em} .safe{font:800 11px var(--mono);fill:var(--ok);letter-spacing:.1em;text-anchor:end}
+.relogio-p{display:grid;justify-items:center;padding:10px 16px;border-radius:16px;border:1px solid #6b5a3a;background:#120e08} .relogio-p b{font:800 40px/1 var(--mono);color:var(--ac2)} .relogio-p small{font:800 10px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.feito-p{margin:0;font:700 15px var(--disp);color:var(--ok)}
+.dica-mod{display:flex;gap:6px;flex-wrap:wrap} .dica-mod span{padding:4px 12px;border-radius:999px;font:800 12px var(--mono);border:1px solid}
+.dica-mod .m2{color:var(--ac2);border-color:var(--ac)} .dica-mod .m1{color:#e8933a;border-color:#8a5a24} .dica-mod .m0{color:var(--t3);border-color:var(--fio2)}
+
+/* as notas */
+.notas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.nota{display:grid;justify-items:center;gap:8px;min-height:130px;padding:14px 10px;border:0;border-radius:4px 4px 14px 4px;cursor:pointer;box-shadow:0 10px 24px rgba(0,0,0,.5);transform:rotate(-2deg)}
+.nota:nth-child(even){transform:rotate(2deg)}
+.nota b{font:800 13px var(--mono);letter-spacing:.1em} .nota i{font:800 34px var(--mono);font-style:normal;opacity:.5}
+.nota.am{background:#3a2f12;color:#f0d68a} .nota.vd{background:#1c3220;color:#a8e0b0} .nota.az{background:#172a3a;color:#a6d2ff} .nota.rs{background:#3a1a28;color:#f0a8c8}
+.nota.on{outline:3px solid var(--ac);outline-offset:3px}
+
+/* regra, caso */
+.tres-l{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:10px 0 6px}
+.lant-r{display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:var(--r2);background:#0e1515;border:1px solid var(--fio)}
+.lant-r small{display:block;font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .lant-r b{font:800 clamp(18px,1.5vw,24px) var(--disp)}
+.lant-r.n2 b{color:var(--ac2)} .lant-r.n1 b{color:#e8933a} .lant-r.n0 b{color:var(--t2)}
+.exemplo-r{margin:4px 0 12px;font:600 clamp(17px,1.35vw,22px)/1.4 var(--disp);color:var(--t2)} .exemplo-r b{color:var(--ac2)}
+.fichas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:6px 0 4px}
+.ficha{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:14px;background:#0e1515;border:1px solid var(--fio)}
+.ficha b{display:block;font:800 14px var(--mono);letter-spacing:.06em} .ficha small{display:block;font:600 13px var(--disp);color:var(--t3)}
+.ficha.n2{border-color:var(--ac);background:#1e1508} .ficha.n0{opacity:.7}
+.selo-f{display:inline-block;margin-top:3px;padding:1px 8px;border-radius:6px;border:2px solid var(--ac);font:800 11px var(--mono);color:var(--ac2)}
+.ficha.n0 .selo-f{border-color:var(--t3);color:var(--t3)} .ficha.n1 .selo-f{border-color:#8a5a24;color:#e8933a}
+.modal-k{margin:0;font:700 13px var(--mono);letter-spacing:.08em;color:var(--t3)} .modal-k b{color:var(--ac2);font-size:16px}
+.tres-l.mini{grid-template-columns:repeat(3,auto);justify-content:center;gap:20px}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .tres-l,.fichas{grid-template-columns:1fr 1fr} .ponte-svg{max-height:none} }
+@media (max-width:620px){ .tres-l,.notas{grid-template-columns:1fr 1fr} .fichas{grid-template-columns:1fr} .ponte-c{grid-template-columns:1fr} .capa-r .lanterna{width:80px} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb .ponte-c{margin-bottom:0;padding:8px 12px}
+.deb .ponte-svg{max-height:none;min-height:0}
+.deb .relogio-p{padding:8px 12px}
+.deb .relogio-p b{font-size:32px}

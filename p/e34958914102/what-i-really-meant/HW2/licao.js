@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What I Really Meant",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e34958914102/what-i-really-meant/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "cleft sentences to correct a misunderstanding: It wasn't X that / who…, it was Y; What I meant was…; All I said was…; The thing I regret is…; It's not that…, it's that…",
   "abrir": "Has anyone ever misunderstood something you said? What did they think?",
   "fecho": "<b>Put the spotlight where you want it.</b> <i>It wasn't the coffee that I criticized; it was the price.</i> <i>It wasn't Leo who wrote the post.</i> <i>What I meant was…</i> <i>All I said was…</i> <i>The thing I regret is…</i> <i>It's not that I dislike her; it's that I can't afford it.</i> Never <i>What I meant it was</i>, never <i>All what I said</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a comment that went viral. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e34958914102/what-i-really-meant/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A laptop and a coffee in a quiet booth",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It wasn't the coffee that I criticized; it was the price.",
-          "img": "https://wolf-labs.pages.dev/p/e34958914102/what-i-really-meant/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "What I meant was that a small cup should cost less.",
-          "img": "https://wolf-labs.pages.dev/p/e34958914102/what-i-really-meant/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The thing I regret is the word ridiculous.",
-          "img": "https://wolf-labs.pages.dev/p/e34958914102/what-i-really-meant/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e34958914102/what-i-really-meant/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A laptop and a coffee in a quiet booth",
       "pede": "Look at the picture: a laptop and a coffee in a quiet booth. Someone misunderstood something you said. Write 2 or 3 sentences to set the record straight. Use <b>It wasn't … that…</b>, <b>What I meant was…</b> or <b>All I said was…</b>",
       "ph": "What I meant was …",

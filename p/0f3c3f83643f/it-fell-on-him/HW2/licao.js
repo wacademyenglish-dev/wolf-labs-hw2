@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "It Fell on Him",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0f3c3f83643f/it-fell-on-him/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "object pronouns after the verb and after to / with: me, you, him, her, it, us, them (helps him, calls me, give it to us); never help I, chases he, to they",
   "abrir": "Who do you call every day?",
   "fecho": "After the verb, use <b>me, you, him, her, it, us, them</b>: <i>The lawyer helps him. Please help me.</i> After <b>to</b> and <b>with</b> too: <i>Give the box to them.</i> Never <i>help I</i>, <i>chases he</i>.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at a funny cartoon coyote. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/0f3c3f83643f/it-fell-on-him/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A box on a canyon road",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The coyote chases him every day.",
-          "img": "https://wolf-labs.pages.dev/p/0f3c3f83643f/it-fell-on-him/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I need help. Can you help me?",
-          "img": "https://wolf-labs.pages.dev/p/0f3c3f83643f/it-fell-on-him/img/live-tribunal.webp",
+          "img": "../img/live-tribunal.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Please give it to us.",
-          "img": "https://wolf-labs.pages.dev/p/0f3c3f83643f/it-fell-on-him/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -164,7 +164,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0f3c3f83643f/it-fell-on-him/img/live-mapa.webp",
+      "img": "../img/live-mapa.webp",
       "leg": "A canyon road",
       "pede": "Look at the picture: a road in a canyon. Write 2 or 3 sentences about a friend. Use <b>him</b>, <b>her</b>, <b>me</b> or <b>them</b> after the verb.",
       "ph": "My friend Ana is funny. I call her …",

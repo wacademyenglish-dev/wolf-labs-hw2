@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Formal or Friendly?",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3b4e22853cc7/formal-or-friendly/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "switching register without changing the message: Dear Ms. Reed / Hi Jo; Kind regards / Talk soon; I am writing to let you know / Just a heads-up; Would it be possible to postpone ...? / Can we put it off?; I apologise for any inconvenience / So sorry!; inform + person + that; never mix registers in one message",
   "abrir": "Do you write to your boss and to your best friend in the same way?",
   "fecho": "Same message, two voices. Formal: <b>Dear Ms. Reed · I am writing to let you know · Would it be possible to postpone ...? · Kind regards</b>. Friendly: <b>Hi Jo · Just a heads-up · Can we put it off? · Talk soon</b>. <b>Inform</b> needs a person: <i>inform you that</i>. And never mix voices: <i>Dear Ms. Reed ... Cheers</i> is a mistake.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia helps Leo with two messages. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/3b4e22853cc7/formal-or-friendly/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A formal jacket, a denim jacket",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I am writing to let you know that I will be unable to attend.",
-          "img": "https://wolf-labs.pages.dev/p/3b4e22853cc7/formal-or-friendly/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Just a heads-up: my train's cancelled, so I can't make it tonight.",
-          "img": "https://wolf-labs.pages.dev/p/3b4e22853cc7/formal-or-friendly/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Would it be possible to postpone it until Thursday?",
-          "img": "https://wolf-labs.pages.dev/p/3b4e22853cc7/formal-or-friendly/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3b4e22853cc7/formal-or-friendly/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A formal jacket next to a denim one",
       "pede": "Look at the picture: a formal jacket and a denim jacket. Write two short messages about the same problem: one to your boss, one to a friend. Use <b>Dear / Hi</b>, <b>Would it be possible to / Can we</b>, <b>Kind regards / Talk soon</b>.",
       "ph": "Dear Mr. Lima, I am writing to … / Hi Bia! Just a heads-up: …",

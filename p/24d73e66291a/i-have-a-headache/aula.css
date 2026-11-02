@@ -1,0 +1,93 @@
+/* ============================================================
+   I HAVE A HEADACHE · MAPLE STREET CLINIC · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Aqui a identidade: a clínica antes do
+   amanhecer, o verde-azulado das paredes, o âmbar dos abajures e o
+   vermelho do painel de senhas.
+   ============================================================ */
+:root{
+  --noite:#071012; --noite-rgb:7,16,18; --tinta:#e6f0ef;
+  --t1:#eef5f4; --t2:#c4d3d1; --t2-rgb:196,211,209; --t3:#839896;
+  --ac:#f2a641; --ac2:#ffd38c; --bt:#3ec1b1; --bt2:#9fe8de;
+  --vidro:rgba(230,240,239,.05); --vidro2:rgba(230,240,239,.085); --vidro3:rgba(230,240,239,.12);
+  --fio:rgba(220,240,238,.12); --fio2:rgba(220,240,238,.22); --luz:rgba(230,240,239,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mao:'Caveat',cursive; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(1,4,5,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1d1404}
+.btn.cheio{color:#1d1404}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(54px,5.6vw,108px)/.95 var(--disp);letter-spacing:-.035em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa .foto{position:relative;border-radius:30px;overflow:hidden;aspect-ratio:16/11;border:1px solid var(--fio);box-shadow:var(--sombra)}
+.capa .foto img{width:100%;height:100%;object-fit:cover}
+.placa-capa{position:absolute;right:6%;bottom:8%;display:grid;padding:12px 22px;border-radius:12px;background:#0d0606;border:1px solid #5a1c18;box-shadow:0 14px 40px rgba(0,0,0,.7);text-align:center}
+.placa-capa small,.placa-capa span{font:700 11px var(--mono);letter-spacing:.16em;color:#b0706a}
+.placa-capa b{font:700 56px/1 var(--mono);color:#ff5a46;text-shadow:0 0 18px rgba(255,90,70,.6)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versoes.linha{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.vaga{color:var(--ac);letter-spacing:.1em}
+.cartoes.quatro{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+/* II · a sala de espera */
+.mesa-sala{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:22px;align-items:start}
+.sala-esq{display:grid;gap:12px}
+.painel-senha{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;border-radius:14px;background:#0d0606!important;border:1px solid #5a1c18!important}
+.painel-senha small{font:700 12px var(--mono);letter-spacing:.16em;color:#b0706a}
+.painel-senha b{font:700 46px/1 var(--mono);color:#ff5a46;text-shadow:0 0 16px rgba(255,90,70,.6)}
+.cadeiras{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cadeira{display:grid;gap:4px;justify-items:center;padding:14px 8px 12px;border-radius:16px 16px 8px 8px;border:1px solid #2a4a4a;background:linear-gradient(180deg,#1a3434,#102222);color:var(--t1);text-align:center;transition:transform .15s}
+.cadeira:hover{transform:translateY(-2px)}
+.cadeira .senha{padding:2px 10px;border-radius:6px;background:#efe6cc;color:#1d1404;font:800 15px var(--mono)}
+.cadeira b{font:800 14px var(--ui);letter-spacing:.04em}
+.cadeira em{font:600 italic 13px var(--disp);color:var(--ok)}
+.cadeira.on{border-color:var(--ac);box-shadow:0 0 0 2px rgba(242,166,65,.45)}
+.cadeira.atendido{opacity:.75} .cadeira.atendido .senha{background:var(--ok)}
+.lado-sala{display:grid;gap:12px} .lado-sala .versoes{display:grid;gap:8px}
+.lado-sala .pergunta h2{font-size:clamp(20px,1.6vw,27px)}
+.rosa-diz{margin:0;font:600 18px var(--disp);color:var(--t2)} .rosa-diz b{color:var(--ac2)}
+
+/* IV · o relógio */
+.mesa-relo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px;align-items:center}
+.relo-box{display:grid;justify-items:center;gap:10px;padding:20px;border-radius:var(--r1)}
+.relo-box small{font:700 13px var(--mono);letter-spacing:.12em;color:var(--ac2)}
+.relo{width:100%;max-width:340px;max-height:calc(100vh / var(--zv,1) - 400px)}
+.relo .aro{fill:#1c2a2a;stroke:#5a7a74;stroke-width:3}
+.relo .face{fill:#1c2422}
+.relo .tk{stroke:#d8d0b8;stroke-width:4}
+.relo .marca-t{fill:#7f9692;font:800 10px var(--mono);text-anchor:middle;letter-spacing:.14em}
+.relo .mao{stroke-linecap:round} .relo .hh{stroke:#f2ecd8;stroke-width:8} .relo .mm{stroke:#ff6a50;stroke-width:4}
+.relo .eixo{fill:var(--ac)}
+.relo g{transition:transform .8s cubic-bezier(.3,1.3,.5,1)}
+.lado-relo{display:grid;gap:12px} .lado-relo .versoes{display:grid;gap:8px}
+.lado-relo .pergunta h2{font-size:clamp(20px,1.7vw,28px)}
+
+/* V · o balcão */
+.ligacao{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:22px;align-items:start}
+.balcao-rosa{display:grid;gap:10px;padding:22px;border-radius:24px}
+.balcao-rosa small{font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.balcao-rosa p{margin:0;font:600 italic clamp(21px,1.7vw,28px)/1.3 var(--disp)}
+.balcao-rosa.resp{border-color:rgba(143,217,162,.45)!important}
+.senha-grande{justify-self:start;padding:4px 16px;border-radius:8px;background:#efe6cc;color:#1d1404;font:800 30px var(--mono)}
+.lado-rosa{display:grid;gap:12px} .lado-rosa .resp-btn,.lado-rosa .resposta{margin:0}
+
+/* VII · a roleta */
+.mesa-roda{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:26px;align-items:center}
+.roda-box{position:relative;display:grid;justify-items:center;gap:16px;padding:24px;border-radius:var(--r1)}
+.ponteiro{width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:26px solid #ff5a46;margin-bottom:-28px;z-index:2}
+.roda-svg{width:min(100%,calc(100vh / var(--zv,1) - 470px));min-width:240px;max-width:380px;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.roda-svg .fatia{stroke:#071012;stroke-width:2} .roda-svg .f0{fill:#1d4a48} .roda-svg .f1{fill:#133232} .roda-svg .fatia.feita{fill:#6a5016}
+.roda-svg text{fill:#e6f0ef;font:800 8.5px var(--ui);letter-spacing:.04em;text-anchor:middle}
+.roda-svg .eixo{fill:var(--ac)}
+.lado-roda{display:grid;gap:12px} .lado-roda .resp-btn,.lado-roda .resposta{margin:0}
+.fim .grande span{font-size:clamp(22px,1.9vw,30px)}
+
+@media (max-width:1100px){ .mesa-sala,.mesa-relo,.ligacao,.mesa-roda{grid-template-columns:1fr} .cartoes.quatro{grid-template-columns:1fr 1fr} }
+@media (max-width:820px){
+  .capa .foto{aspect-ratio:16/12}
+  .cadeiras{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cartoes.quatro{grid-template-columns:1fr}
+  .relo{max-width:240px}
+}

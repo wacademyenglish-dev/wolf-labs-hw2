@@ -4,7 +4,7 @@ window.HW2 = {
   "titulo": "The Debate Night",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c639252515f1/b1-final-the-debate-night/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 10 review: purpose (to, in order to, so that); cause and result (because of, leads to); contrast (however, despite, even though); the emphatic do (I do mean it); explaining a word you don't know",
   "abrir": "Do you prefer to debate or to listen?",
   "fecho": "<b>to / in order to / so that</b> = purpose · <b>because of + noun</b> · <b>leads to</b> = result · <b>however, despite + noun, even though + clause</b> = contrast · <b>I do mean it</b> = emphasis.",
@@ -24,7 +24,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before a debate at the town theater. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c639252515f1/b1-final-the-debate-night/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Two podiums on a stage",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -162,7 +162,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c639252515f1/b1-final-the-debate-night/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Two podiums on a dark stage",
       "pede": "Look at the picture: two podiums on a stage. Choose a topic (phones at school, a four-day week, or working from home) and write 2 or 3 sentences with your opinion. Use <b>because of</b>, <b>however</b> or <b>even though</b>.",
       "ph": "I believe … because of …",

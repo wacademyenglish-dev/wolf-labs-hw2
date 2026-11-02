@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · First, Then, Finally · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>First, Then, Finally · The Wishgranter</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>First, Then, Finally · The Wishgranter</h2>
+    <p>Under a fountain in a park lives a tiny, bored Wishgranter. One day a young man and a young woman throw their coins at the same second, both wishing for love; the machine stops, and the little hero has to go up into the park to bring them together. The student watches the short film (no words) in four sealed chapters, puts eight storyboard panels in order around the fountain, learns the rule, then changes the ending on the Wishgranter’s control panel. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>A story in the <b>past simple</b>, in order: <b>First → Then / After that / Next → Finally / In the end</b>. Regular verbs <b>-ed</b>; irregular ones learned (<i>came, went, threw, fell, met</i>). <b>didn’t</b> + base. The mistakes: <i>After,</i> alone, <i>At the end,</i>, the story slipping into the present, <i>throwed / falled / comed</i>, <i>stoped</i>, <i>didn’t wanted</i>.</p>
+    <h4>THE FILM</h4>
+    <p>An animated short with no words, 4:48, in four chapters that stop by themselves. Every answer is the student’s own narration.</p>
+    <!--conversa--><h4>THE BEST MOMENT (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After the film and the new endings, your student ranks five moments of the film, from the best to the worst. There is no right answer: let them order the list, wait five seconds in silence, then use the PUSH line (only you see it): a moment from their own life, told in order. Then open your own order and agree on one top 3 together. Push for the past (<i>threw, went, fell, met</i>) and <b>First / Then / Finally</b>. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: II The Short Film.</li>
+      <li><b>Out loud</b>: I You and Your Stories, III The Storyboard (before the rule: tap the version you heard), V Change the Ending (eight “what if” cards, fast), VI Your Story, VII Tell a Friend (you are Sam; the big question closes it), VIII The Best Moment (they rank, then you show your order).</li>
+      <li><b>Focus</b>: IV The Rule.</li>
+      <li><b>Write</b>: IX, a real story in four steps, with the red wavy line for <i>After,</i> alone, <i>At the end,</i>, regularized irregular verbs, <i>stoped</i> and <i>did + past</i>. It goes to their My notes.</li>
+    </ul>
+    <p>No audio in this lesson: your voice is Sam’s.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* FIRST, THEN, FINALLY (Main A2) · pergunta-surpresa · 27/10/2026 · past simple em ordem */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'video', tipo: 'Would you rather', q: 'Would you rather have one big wish, or ten small wishes?',
+    opc: ['One big wish', 'Ten small wishes'], st: ['I’d rather …, because …', 'My first wish …'],
+    ex: 'Ten small wishes! A good coffee every day, sun on Saturday, no traffic …', push: 'Say your big wish in three words.' },
+  { cena: 'quadros', tipo: 'And you?', q: 'What did you do last Saturday? Tell it in order.',
+    opc: ['Something fun', 'Something normal', 'Nothing much'], st: ['First, I … Then I …', 'Finally, I …'],
+    ex: 'Something normal. First, I slept late. Then I went to the market. Finally, I watched a film.', push: 'What was the best part?' },
+  { cena: 'regra', tipo: 'Opinion', q: 'The film has no words. Is a film with no words better or worse?',
+    opc: ['Better', 'Worse', 'Just different'], st: ['I think it’s …, because …', 'When I watched it, I …'],
+    ex: 'Better! When I watched it, I didn’t read anything. I only looked at his face.', push: 'Name a film with a lot of words that you love.' },
+  { cena: 'final', tipo: 'What if', q: 'You find a coin on the street. What do you do with it?',
+    opc: ['Make a wish', 'Keep it', 'Give it away'], st: ['First, I’d … Then …', 'I’d keep it, because …'],
+    ex: 'Make a wish! First, I’d find a fountain. Then I’d close my eyes and throw it.', push: 'And if it’s a very old coin, worth $1,000?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* FIRST, THEN, FINALLY (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O ranking entra no lugar de "VIII · Quick Check" (extra, prática controlada de tocar a palavra).
+   O aluno ordena os cinco momentos do curta do melhor ao pior, e o professor mostra a ordem dele.
+   A gramática da aula (past simple em ordem: First / Then / After that / Finally · came, went,
+   threw, fell, met) mora nos itens e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'momentos', troca: 'quiz', est: 'o', min: 7, img: 'fonte', rot: 'The Best Moment', t: 'Five moments from the film. Which one was the best?',
+    p: 'Put them in order: 1 is your favourite. Say why in the past. Then see your teacher’s order.',
+    formato: 'ranking',
+    q: 'Rank the moments: 1 is the best.',
+    itens: ['They threw two coins together', 'The machine stopped', 'He went up into the park', 'He tried again and again', 'Finally, they met'],
+    prof: [3, 0, 4, 2, 1],
+    st: ['Number one was when …', 'I liked it because he …', 'The worst moment was when …'],
+    ex: 'Number one was when he tried again and again. He fell, but he didn’t stop. The worst was when the machine stopped: I was sad.',
+    push: 'Now tell me a moment from YOUR life like your number one. First … then … finally …',
+    dica: 'Tap from your favourite to your least favourite. Tap again to take it out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Your day, and the stories you like.",
+   "p": "Your teacher is the host. Answer out loud."
+  },
+  "video": {
+   "t": "A short film with no words.",
+   "p": "Four chapters. You are the voice of the film."
+  },
+  "quadros": {
+   "t": "Eight panels, all mixed up.",
+   "p": "Say what happened first. Tap the panel. Say it."
+  },
+  "regra": {
+   "t": "A story: in the past, in order.",
+   "p": "Say each wrong line right, out loud. Then tap."
+  },
+  "final": {
+   "t": "Eight “what if” cards.",
+   "p": "Your teacher reads a card. Tell a new ending."
+  },
+  "roda": {
+   "t": "Your real life, in order.",
+   "p": "Pick a card. Tell it in three or four steps."
+  },
+  "sam": {
+   "t": "Sam missed class.",
+   "p": "Your teacher is Sam. Tell the film in order."
+  },
+  "cv-momentos": {
+   "t": "Which moment was the best?",
+   "p": "Rank five moments. Say why, in the past."
+  },
+  "fim": {
+   "t": "Write a real story from your life.",
+   "p": "Four steps, past, in order. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Contar uma história no passado simples e em ordem (First, Then, After that, Finally): o pequeno Wishgranter da fonte junta um casal que jogou moedas ao mesmo tempo.",
+  "armadilha": "O brasileiro usa After sozinho (“Depois, …”) e At the end no lugar de In the end, escorrega para o presente, regulariza (throwed, falled, comed) e diz didn’t wanted.",
+  "pal": [
+   "First",
+   "Then",
+   "After that",
+   "Next",
+   "Finally",
+   "In the end",
+   "threw",
+   "fell",
+   "met"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: o Wishgranter que vive embaixo da fonte do parque.",
+   "perg": "Did you ever throw a coin in a fountain?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o dia do aluno e as histórias de que ele gosta.",
+   "perg": "What did you do first this morning?",
+   "pula": "Duas perguntas bastam."
+  },
+  "video": {
+   "obj": "O curta sem falas em quatro capítulos; o aluno narra cada um.",
+   "perg": "What happened in this chapter?",
+   "pula": "Não corte: o resto da aula depende do filme."
+  },
+  "quadros": {
+   "obj": "Ordenar oito quadros em volta da fonte e dizer cada um numa frase, antes da regra.",
+   "perg": "What happened first? And then?",
+   "pula": "Seis quadros bastam."
+  },
+  "regra": {
+   "obj": "A regra: passado e ordem; corrigir as frases erradas em voz alta.",
+   "perg": "What’s wrong with “At the end,”?",
+   "pula": "Três frases bastam."
+  },
+  "final": {
+   "obj": "Mudar o final: oito cartas “what if”, um novo final em duas frases, rápido.",
+   "perg": "What if the coins fell on the ground?",
+   "pula": "Quatro cartas bastam."
+  },
+  "roda": {
+   "obj": "Histórias reais do aluno contadas em três ou quatro passos.",
+   "perg": "Tell me about your last trip, in order.",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "sam": {
+   "obj": "O professor é o Sam, que faltou; o aluno reconta o filme e o novo final.",
+   "perg": "So what happened in the end?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-momentos": {
+   "obj": "Conversa: ranquear cinco momentos do filme e justificar no passado.",
+   "perg": "Why was that the best moment?",
+   "pula": "Só o top 3 e um porquê."
+  },
+  "fim": {
+   "obj": "Escrita: uma história real em quatro passos, com a linha vermelha.",
+   "perg": "What happened first?",
+   "pula": "Três passos bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais histórias curtas da vida do aluno, no passado e em ordem.",
+   "perg": "What happened first?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre histórias e filmes, no passado quando der.",
+   "perg": "Which side are you on, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Contar o dia em que o aluno conheceu alguém importante, em quatro passos.",
+   "perg": "Where were you first?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More little stories.",
+   "p": "Pick a card. Tell it in order.",
+   "palavras": [
+    "First",
+    "Then",
+    "After that",
+    "Finally",
+    "In the end"
+   ],
+   "cartas": [
+    {
+     "k": "YESTERDAY",
+     "q": "What did you do yesterday, from morning to night?",
+     "fup": "What was the best part?",
+     "st": [
+      "First, I …",
+      "After that, I …",
+      "Finally, I …"
+     ],
+     "ex": "First, I went to work. After that, I met a friend. Finally, I watched a series."
+    },
+    {
+     "k": "A WISH",
+     "q": "Did you ever make a wish? What happened?",
+     "fup": "Did it come true?",
+     "st": [
+      "First, I …",
+      "In the end, …"
+     ],
+     "ex": "I made a wish on my birthday. In the end, it came true."
+    },
+    {
+     "k": "A BAD DAY",
+     "q": "Tell me about a day when everything went wrong.",
+     "fup": "How did it end?",
+     "st": [
+      "First, …",
+      "Then …",
+      "In the end, …"
+     ],
+     "ex": "First, I missed my bus. Then it started to rain. In the end, I laughed."
+    },
+    {
+     "k": "A FIRST MEETING",
+     "q": "How did you meet your best friend?",
+     "fup": "What did you talk about?",
+     "st": [
+      "First, we …",
+      "Then we …"
+     ],
+     "ex": "First, we sat together at school. Then we became friends."
+    },
+    {
+     "k": "A TRIP",
+     "q": "Tell me about a trip you took.",
+     "fup": "What happened on the last day?",
+     "st": [
+      "First, we went …",
+      "After that, …",
+      "Finally, …"
+     ],
+     "ex": "First, we went to the beach. After that, we ate fish. Finally, we came home."
+    },
+    {
+     "k": "A FILM",
+     "q": "Tell me a film you liked, in three steps.",
+     "fup": "Did you like the ending?",
+     "st": [
+      "First, a … met …",
+      "Then …",
+      "In the end, …"
+     ],
+     "ex": "First, a girl met a robot. Then they became friends. In the end, she saved him."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think",
+    "First",
+    "In the end"
+   ],
+   "rodadas": [
+    {
+     "q": "Films with words or films with no words?",
+     "a": "With words",
+     "b": "No words",
+     "fa": [
+      "With words. I understood everything."
+     ],
+     "fb": [
+      "No words. I told the story myself."
+     ]
+    },
+    {
+     "q": "A happy ending or a sad ending?",
+     "a": "Happy",
+     "b": "Sad",
+     "fa": [
+      "Happy. I want to smile in the end."
+     ],
+     "fb": [
+      "Sad. I remembered it for a long time."
+     ]
+    },
+    {
+     "q": "The original ending of the film or your new ending?",
+     "a": "The original",
+     "b": "My ending",
+     "fa": [
+      "The original. In the end, they met. Perfect."
+     ],
+     "fb": [
+      "My ending. It was more surprising."
+     ]
+    },
+    {
+     "q": "Wishes: do they come true or not?",
+     "a": "Yes, they do",
+     "b": "No, they don’t",
+     "fa": [
+      "Yes. My wish came true last year."
+     ],
+     "fb": [
+      "No. I threw a lot of coins, and nothing happened!"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody told a story."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Story",
+   "t": "The day you met someone special.",
+   "p": "Answer each step. Then tell it all.",
+   "prof": "Any person works: a friend, a partner, a colleague. Push for the past and the order words.",
+   "passos": [
+    {
+     "q": "Where were you, and what were you doing?",
+     "st": [
+      "First, I was at …"
+     ],
+     "ex": "First, I was at a friend’s party."
+    },
+    {
+     "q": "What happened then?",
+     "st": [
+      "Then …",
+      "After that, …"
+     ],
+     "ex": "Then a woman dropped her glass, and I helped her."
+    },
+    {
+     "q": "What did you talk about?",
+     "st": [
+      "We talked about …"
+     ],
+     "ex": "We talked about music and travel."
+    },
+    {
+     "q": "How did it end?",
+     "st": [
+      "Finally, …",
+      "In the end, …"
+     ],
+     "ex": "In the end, we became good friends."
+    }
+   ],
+   "fim": "Now tell the whole story, from First to In the end."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The City Survey · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A2 · Unit 1 Review · The City Survey</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The City Survey · A2 Unit 1 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 1 (Habits and right now). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student does a city survey at night. You are three people in the street: a nurse, a student and a taxi driver. Then you are the boss.</p><p style="margin:0 0 6px"><b>About 46 min:</b> I · The Die (8) · II · The City Survey (15) · III · One More Hour? (6) · IV · Your Answers (6) · V · Would You Rather? (7) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Pick a door.” There is no order. One minute per door, no notes.</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>present simple for habits · present continuous for now · simple × continuous · asking for clarification · buying time · too / either, so do I / neither do I</p>
+    <h4>THE DIE</h4>
+    <p>Tap <b>Roll the die</b>: the number chooses one of the six topics (no repeats until all six are done). The student does the challenge from memory.</p>
+    <h4>THE CITY SURVEY</h4>
+    <p>You are each person. Your card (only you see it) has the answers. When the student asks a question, tap it: the survey card fills in. The last line is a reaction: say something and wait for “Me too / Me neither”. Then you are the boss: the student reports on one person with usually and right now. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>YOUR ANSWERS</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>she is usually working (habit)</i>, <i>he buying a pizza</i>, <i>me too (after a negative)</i>, <i>repeat, please</i>, <i>she work</i>, <i>I am agree</i>. A2: one correction per answer is enough.</p>
+    <!--conversa--><h4>ONE MORE HOUR? (III) AND THE SURPRISE QUESTION</h4>
+    <p>A light negotiation right after the survey: it’s 11 PM and you, the boss, want three more people. Your secret limit is on your screen only (two people, or tomorrow morning): don’t say it first. Ask the four questions, let them answer in the role with usually / right now, wait five seconds in silence, then use the PUSH line. They close by choosing a deal. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Die and VI · I Can.</li>
+      <li><b>Out loud</b>: II · The City Survey, III · One More Hour? and V · Would You Rather?.</li>
+      <li><b>Write</b>: IV · Your Answers.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW A2 · UNIT 1 · THE CITY SURVEY · pergunta-surpresa · 27/10/2026 · usually × right now · me too / me neither */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'dado', tipo: 'And you?', q: 'It’s Saturday night. What are you usually doing at ten?',
+    opc: ['Sleeping', 'Going out', 'Watching something'], st: ['On Saturdays I usually …', 'At ten I’m usually …ing.'],
+    ex: 'Watching something. On Saturdays I usually watch a film with my brother.', push: 'And this Saturday? Something different?' },
+  { cena: 'cartao', tipo: 'Would you rather', q: 'Would you rather work at night, like the nurse, or very early, like a baker?',
+    opc: ['At night', 'Very early'], st: ['I’d rather …, because I usually …', 'Me neither / Me too!'],
+    ex: 'Very early. I usually wake up at six, and I never stay up late.', push: 'Even at four in the morning? Yes or no?' },
+  { cena: 'escolha', tipo: 'Opinion', q: 'What are people in your city doing right now, at this hour?',
+    opc: ['Working', 'Sitting in traffic', 'Relaxing'], st: ['Right now people are …ing.', 'They usually …, but today …'],
+    ex: 'Sitting in traffic! People usually leave work at six, and right now they’re all on the same street.', push: 'And you? Are you in traffic every day?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW A2 · UNIT 1 · THE CITY SURVEY · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Revisão curta (40 min, sem cena extra): uma negociação leve ENTRA depois da missão (II), no meio da
+   aula (+6 min). O chefe da pesquisa liga às 11 da noite e quer mais entrevistas; o aluno negocia com
+   usually × right now / these days, e fecha um acordo de 3 opções. Mantém a missão, o Would You
+   Rather e o I Can intactos. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'chefe', apos: 'missao', est: 'o', min: 6, img: 'conversa', rot: 'One More Hour?', t: 'It’s 11 PM. Your boss wants more.',
+    p: 'Your teacher is your boss. Answer the questions in your role: what you usually do, what you are doing right now. Then make a deal.',
+    formato: 'papel',
+    aluno: { quem: 'You, the researcher', quer: 'You are tired. You want to go home.' },
+    prof: { quem: 'Your boss', quer: 'Three more people tonight.', limite: 'Secret: you can accept two people, or tomorrow morning. Don’t say it first.' },
+    rot_perg: 'Your boss asks',
+    perguntas: [
+      { q: 'Great work! Can you do three more people tonight?', ex: 'Sorry, could you say that again? Three more? Right now I’m standing at the bus stop.' },
+      { q: 'What are you doing right now?', ex: 'Right now I’m waiting for the night bus. I’m very tired.' },
+      { q: 'What time do you usually go to bed?', ex: 'I usually go to bed at eleven. It’s eleven now!' },
+      { q: 'The taxi driver is still there. Can you ask him two more questions?', ex: 'Give me a second… Okay, but then I’m going home.' }
+    ],
+    st: ['Right now I’m …ing.', 'I usually …', 'These days I’m …ing, so …', 'Could you say that again?'],
+    push: 'I need this report tomorrow at eight. Can you write it tonight too?',
+    acordo: { tag: 'The deal', q: 'Choose one. Say it to your boss.',
+      opc: ['Two people, then home', 'Three people tomorrow', 'One more, and a taxi'],
+      st: ['Okay, I can …, but …', 'I usually …, so …'],
+      ex: 'Okay, I can ask two more people, but then I’m taking a taxi home.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "dado": {
+   "t": "Roll the die. The number chooses.",
+   "p": "Do the challenge out loud, from memory."
+  },
+  "missao": {
+   "t": "Three people stop to answer.",
+   "p": "Ask each five questions. Then report."
+  },
+  "cv-chefe": {
+   "t": "It’s 11 PM. Your boss wants more.",
+   "p": "Answer in your role. Then make a deal."
+  },
+  "cartao": {
+   "t": "Now you answer the survey.",
+   "p": "Write four lines: usual day, these days, never."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose one. Say why, with because."
+  },
+  "pode": {
+   "t": "Unit 1: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 1: presente simples x contínuo, pedir esclarecimento, ganhar tempo, too / either. O aluno faz uma pesquisa noturna na cidade.",
+  "armadilha": "Contínuo para hábito (“she is usually working”), contínuo sem be (“he buying”), “me too” depois de negativa, “she work” e “I am agree”.",
+  "pal": [
+   "usually",
+   "right now",
+   "these days",
+   "So do I",
+   "Neither do I",
+   "Me neither",
+   "Sorry, can you repeat that?",
+   "Let me think"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: a pesquisa na cidade à noite.",
+   "perg": "Do you answer street surveys?",
+   "pula": "Só leia o título e comece."
+  },
+  "dado": {
+   "obj": "O dado escolhe um dos seis tópicos; o aluno faz o desafio de memória.",
+   "perg": "What do you usually do, and what are you doing now?",
+   "pula": "Três lances bastam."
+  },
+  "missao": {
+   "obj": "Você é enfermeira, estudante e taxista; o aluno pergunta, reage e relata ao chefe.",
+   "perg": "What does she usually do at night?",
+   "pula": "Duas pessoas bastam."
+  },
+  "cv-chefe": {
+   "obj": "Negociação leve: você é o chefe que quer mais três pessoas; o aluno responde e fecha um acordo.",
+   "perg": "What are you doing right now? One more hour?",
+   "pula": "Duas perguntas e o acordo."
+  },
+  "cartao": {
+   "obj": "Escrita curta: dia comum, o que anda fazendo e algo que nunca faz. Uma correção por linha.",
+   "perg": "What are you doing these days?",
+   "pula": "Duas linhas bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather: A ou B com because; você responde e concorda ou não.",
+   "perg": "Which one, and why?",
+   "pula": "Duas perguntas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can” da unidade; linhas abertas vão para a lição de casa.",
+   "perg": "Can you say “Neither do I” in the right place?",
+   "pula": "Leia só as linhas com dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas da pesquisa com a vida do aluno: hábito, agora e reação too / either.",
+   "perg": "What do you usually do at 11 PM?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre trabalho noturno e rotina, com os dois presentes.",
+   "perg": "Night shift or day shift?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o taxista da pesquisa; você entrevista sobre a rotina e a noite.",
+   "perg": "What are you doing right now?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More survey questions.",
+   "p": "Pick a card. Answer. Your teacher reacts.",
+   "palavras": [
+    "usually",
+    "right now",
+    "these days",
+    "So do I",
+    "Neither do I"
+   ],
+   "cartas": [
+    {
+     "k": "LATE NIGHT",
+     "q": "What do you usually do at 11 PM?",
+     "fup": "What are you doing tonight?",
+     "st": [
+      "I usually …",
+      "Tonight, I’m …ing"
+     ],
+     "ex": "I usually sleep at eleven. Tonight I’m watching a game."
+    },
+    {
+     "k": "THESE DAYS",
+     "q": "What are you reading or watching these days?",
+     "fup": "Do you like it?",
+     "st": [
+      "These days, I’m …ing",
+      "I like / don’t like …"
+     ],
+     "ex": "These days I’m watching a Korean series. I love it."
+    },
+    {
+     "k": "WEEKENDS",
+     "q": "What do you never do on weekends?",
+     "fup": "And your family?",
+     "st": [
+      "I never …",
+      "My … never …"
+     ],
+     "ex": "I never work on weekends. Neither does my husband."
+    },
+    {
+     "k": "TRANSPORT",
+     "q": "How do you usually get to work?",
+     "fup": "Is the traffic bad right now?",
+     "st": [
+      "I usually take …",
+      "Right now, …"
+     ],
+     "ex": "I usually take the subway. Right now the traffic is terrible."
+    },
+    {
+     "k": "COFFEE",
+     "q": "Do you drink coffee at night?",
+     "fup": "Me neither / So do I. Why?",
+     "st": [
+      "Yes, I do. / No, I don’t.",
+      "because …"
+     ],
+     "ex": "No, I don’t. I can’t sleep after coffee."
+    },
+    {
+     "k": "SORRY?",
+     "q": "Your teacher says something fast. What do you say?",
+     "fup": "And if you need time to think?",
+     "st": [
+      "Sorry, can you repeat that?",
+      "Let me think…"
+     ],
+     "ex": "Sorry, can you say that again, more slowly?"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "usually",
+    "right now",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Night shift or day shift?",
+     "a": "Night",
+     "b": "Day",
+     "fa": [
+      "Night. The city is quiet and I usually sleep late."
+     ],
+     "fb": [
+      "Day. I usually go to bed at ten."
+     ]
+    },
+    {
+     "q": "Answer a survey on the street or walk past?",
+     "a": "Answer",
+     "b": "Walk past",
+     "fa": [
+      "Answer. I usually like talking to people."
+     ],
+     "fb": [
+      "Walk past. I’m always in a hurry."
+     ]
+    },
+    {
+     "q": "One more hour for the boss or go home now?",
+     "a": "One more hour",
+     "b": "Go home",
+     "fa": [
+      "One more hour. We are doing well right now."
+     ],
+     "fb": [
+      "Go home. I’m working too much these days."
+     ]
+    },
+    {
+     "q": "A city that sleeps or a city that never sleeps?",
+     "a": "Sleeps",
+     "b": "Never sleeps",
+     "fa": [
+      "A city that sleeps. I need quiet nights."
+     ],
+     "fb": [
+      "Never sleeps. Something is always happening."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Survey complete."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the taxi driver now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the taxi driver from the survey.",
+   "perguntas": [
+    "What time do you usually start work?",
+    "Where are you going right now?",
+    "Do you usually work on weekends?",
+    "What are your passengers doing these days? Talking or on the phone?",
+    "What do you never do in your taxi?",
+    "Are you enjoying your job these days?"
+   ],
+   "st": [
+    "I usually …",
+    "Right now, I’m …ing",
+    "I never …"
+   ],
+   "ex": "I usually start at eight p.m. Right now I’m going to the airport."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Backstage Tonight",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/307ced46b53a/a1-review-backstage-tonight/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 8 review: can / can't (plain verb after can, no to, no -s); Could I have ... please? / I'd like ...; present continuous am / is / are + -ing and the -ing spelling (run, running); usually x now",
   "abrir": "What can you do very well?",
   "fecho": "<b>can / can't</b> + plain verb: <i>I can sing.</i> Now = <b>am / is / are + -ing</b>: <i>She is practicing.</i> Spelling: <i>run → running</i>. Ask nicely: <b>Could I have ..., please?</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo backstage at a talent show. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/307ced46b53a/a1-review-backstage-tonight/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The empty stage",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I can sing, but I can't dance.",
-          "img": "https://wolf-labs.pages.dev/p/307ced46b53a/a1-review-backstage-tonight/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She is putting on her shoes.",
-          "img": "https://wolf-labs.pages.dev/p/307ced46b53a/a1-review-backstage-tonight/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Could I have a glass of water, please?",
-          "img": "https://wolf-labs.pages.dev/p/307ced46b53a/a1-review-backstage-tonight/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -164,7 +164,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/307ced46b53a/a1-review-backstage-tonight/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty stage with purple lights",
       "pede": "Look at the picture: an empty stage with purple lights. Write 2 or 3 sentences. What <b>can</b> you do? What <b>can't</b> you do? What are you doing <b>now</b>?",
       "ph": "I can … but I can't …",

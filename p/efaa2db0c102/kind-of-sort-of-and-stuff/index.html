@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Kind Of, Sort Of, and Stuff · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Sora:wght@600;700;800&family=Figtree:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Kind Of, Sort Of, and Stuff · Soft Focus</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Kind Of, Sort Of, and Stuff · Soft Focus</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Friday, 9:12 PM, Denver.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: Vague is not wrong. It depends on who is listening.</p><p style="margin:0 0 6px"><b>Short class (about 51 min):</b> I You and Talking · III Trick Questions · V Voice Memos to Her Sister · VI The Rule · VII Carousel 5 · VIII The Passenger Council · X Two Versions. Skip if you’re short on time: IX (marked EXTRA on your screen). Full lesson: about 58 min.</p><p style="margin:0"><b>Open with:</b> “Voice memos or text messages? Who do you send them to?”</p></div><!--/prep-->
+    <p>Friday, 9:12 PM, Denver. A traveler lands, waits at carousel 5 for forty-seven minutes, and her suitcase never comes out. She tells the same night twice: to her sister in voice memos (<i>I landed at nine-ish, it’s kind of big and bluish, my coat and stuff are in there</i>) and to the lost baggage desk on a claim form (<i>9:12 PM, a navy blue hard-shell suitcase, 28 inches</i>). The grammar: <b>kind of / sort of</b> + adjective or verb, <b>kind of a</b> + noun, <b>and stuff / and things like that / or something (like that)</b>, <b>-ish</b>, <b>a bit</b> + adjective and <b>a bit of a</b> + noun. The point: vague language is not lazy English. It is how people talk to people close to them. What matters is who is listening.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p>Many C1 students avoid vague language and sound stiff, or translate it: <i>a kind of weird</i>, <i>and stuffs</i>, <i>and thing</i>, <i>or something like</i>, <i>nine-ish o’clock</i>, <i>a bit of tired</i>, <i>kind of very</i>. Some give the exact version to the sister too, and sound like a police report: accept it, then ask for a more relaxed memo.</p>
+    <h4>ON SCREEN</h4>
+    <p>Two screens: the voice memo (a wave, and the vague words glowing soft and out of focus) and the claim form (sharp, monospaced fields). Scene V: the student reads the exact fact on the claim form, says the memo out loud and taps Check; the vague words glow on the voice memo. Scene VI: four clues, the student guesses what the lines share, then finds the broken part of five lines. Scene VII: the student taps each answer and then who is listening, the desk or her sister; afterwards say each answer again in the other voice.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III: a street interview in Washington, D.C. (about six minutes), sealed until the first play, in four chapters. Real people, trick questions, no script. Before the video the student chooses how to answer a trick question and slides a ruler. In each chapter the student taps True or Lie (▶ plays the line again); in chapter three the student says how sure each person is. After the video: one more ruler.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>questions</i>, <i>highest</i>, <i>guess</i>, <i>discovered</i> and <i>direction</i>, before the video, in hear it in the video and hot seat. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE PASSENGER COUNCIL (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After Carousel 5, your student sits on the passenger council and votes three proposals about lost bags: yes, propose a change, or no. There is no right answer. Let them say why the casual way (kind of, a bit of a, -ish), wait five seconds in silence, then use the PUSH line (only you see it): it often asks for the exact version, for the minutes. The last word is their own proposal, one minute, casual then exact; you vote against it. Recast quietly while they talk; at the end ask them to fix one or two sentences themselves. This page replaces Your Two Versions.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Talking, V Voice Memos to Her Sister, VII Carousel 5, VIII The Passenger Council and IX Her Sister Calls.</li>
+      <li><b>Listen</b>: II The Words, III Trick Questions and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule.</li>
+      <li><b>Write</b>: X Two Versions.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* KIND OF, SORT OF, AND STUFF (Main C1) · pergunta-surpresa · 28/10/2026 · vague language: kind of, -ish, and stuff, a bit of a */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'A stranger with a microphone stops you on the street. Do you stop and answer?',
+    opc: ['Yes, happily', 'Only if it’s quick', 'I keep walking'], st: ['I’d kind of …', 'It depends: if it’s a bit of a …'],
+    ex: 'Only if it’s quick. I’m kind of shy, so I’d say something vague and run.', push: 'What if the question was about your city? Would you stay longer?' },
+  { cena: 'memos', tipo: 'Would you rather', q: 'Would you rather send a voice memo or type a message?',
+    opc: ['Voice memo', 'Type it'], st: ['I’d rather …, because …', 'Voice memos are a bit of a …'],
+    ex: 'Type it. Voice memos are a bit of a nightmare when you’re on the bus and stuff.', push: 'Who sends you the longest voice memos? How long, more or less?' },
+  { cena: 'regra', tipo: 'Opinion', q: 'Is being vague lazy, or is it just friendly?',
+    opc: ['Lazy', 'Friendly', 'It depends'], st: ['It’s kind of …, because …', 'When you talk to friends, …'],
+    ex: 'Friendly. If I say “around nine-ish” to a friend, I’m giving them some space.', push: 'And with a doctor’s appointment or a job interview?' },
+  { cena: 'esteira', tipo: 'What if', q: 'Your suitcase is lost tonight. What is the one thing you’d miss most?',
+    opc: ['My clothes', 'Something with a story', 'My chargers'], st: ['Probably my … and stuff like that.', 'There’s this sort of …'],
+    ex: 'Something with a story: a bluish jacket I bought on my first trip abroad. It’s kind of old, but I love it.', push: 'Now describe it exactly, for the lost-bag form.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* KIND OF, SORT OF, AND STUFF (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O conselho ENTRA no lugar de "VIII · Your Two Versions" (extra; as perguntas pessoais já estão no I
+   e voltam na pergunta-surpresa). Depois da esteira, o aluno senta no conselho de passageiros do
+   aeroporto de Denver e vota três propostas sobre malas perdidas. A linguagem vaga da aula (kind of,
+   a bit of a, -ish, and stuff) mora nos iniciadores; o PUSH pede a versão exata. Formato: council vote. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'conselho', troca: 'real', est: 'o', min: 7, img: 'balcao', rot: 'The Passenger Council', t: 'Midnight in Denver. The passenger council votes.',
+    p: 'Read each proposal. Vote: yes, propose a change, or no. Say why the way you really talk; then say it again exactly, for the minutes.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Cash', sit: 'Proposal 1: when a bag is lost, the airline pays 100 dollars at the desk, on the spot. No forms, no questions.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['It’s kind of fair, because …', 'A hundred is a bit of a joke when …', 'I’d say yes-ish, but …'],
+        ex: 'Propose a change. A hundred dollars is a bit of a joke when your whole life is in that bag. I’d say two hundred, and they still find the bag.',
+        push: 'Now the exact version for the minutes: the amount, the time limit, and who pays.' },
+      { tag: 'Tags', sit: 'Proposal 2: every bag gets a tracker, and the passenger sees it on the phone. The ticket costs five dollars more.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['It sounds kind of …', 'Five dollars is nothing, but …', 'People would worry about privacy and stuff.'],
+        ex: 'Yes. Five dollars is nothing next to a lost suitcase. It sounds kind of obvious, actually; I’d pay ten.',
+        push: 'A passenger says: “I don’t want the airline to know where my things are.” Answer her.' },
+      { tag: 'Carry-on', sit: 'Proposal 3: on flights under two hours, no checked bags at all. Carry-on only, for everyone.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['That’s sort of extreme, because …', 'For a weekend, it’s fine-ish, but …', 'People with kids and stuff would …'],
+        ex: 'No. For a weekend it’s fine-ish, but people with kids, a wheelchair or a guitar would sort of be left behind.',
+        push: 'Fewer bags means faster flights and no lost suitcases. Is that worth it?' }
+    ],
+    fim: { tag: 'Your proposal', q: 'Your turn: one new rule for lost bags. Say it casually, then exactly, for the minutes.',
+      segundos: 60, nota: 'One minute: the casual version, then the exact one. Then your teacher votes against it.',
+      st: ['So, basically, the airline should kind of …', 'For the minutes: passengers will receive …'],
+      ex: 'Basically, the airline should send you a message every hour or so. For the minutes: passengers will receive an update every sixty minutes until the bag is found.',
+      push: 'I vote no: it costs too much. Convince me in twenty seconds.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "How do you talk, and to whom?",
+   "p": "Tap a card. Tell a real story."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them first. They turn yellow in the video."
+  },
+  "video": {
+   "t": "Trick questions on the street.",
+   "p": "Answer first. Then tap True or Lie per chapter."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line to hear it. Yellow words open the explanation."
+  },
+  "memos": {
+   "t": "Six voice memos to her sister.",
+   "p": "Read the fact. Say the memo. Then tap Check."
+  },
+  "regra": {
+   "t": "Vague is not wrong. It depends who’s listening.",
+   "p": "Guess what the lines share. Then find the broken parts."
+  },
+  "esteira": {
+   "t": "11 PM. The desk, then the sister.",
+   "p": "Tap an answer, then who’s listening. Say it the other way."
+  },
+  "cv-conselho": {
+   "t": "Midnight. The passenger council votes.",
+   "p": "Vote. Say why casually, then exactly."
+  },
+  "irma": {
+   "t": "11:30 PM. Her sister calls.",
+   "p": "Talk casually. Be exact when you quote the desk."
+  },
+  "fim": {
+   "t": "When vague, and when exact?",
+   "p": "One moment, twice: a voice memo, then an email."
+  }
+ },
+ "prep": {
+  "obj": "Linguagem vaga (kind of, sort of, and stuff, or something, -ish, a bit of a): a mala que não chega em Denver, contada à irmã em áudio e ao balcão em formulário.",
+  "armadilha": "O aluno evita o vago e soa duro, ou traduz: “a kind of weird”, “and stuffs”, “or something like”, “nine-ish o’clock”, “a bit of tired”, “kind of very”.",
+  "pal": [
+   "kind of",
+   "sort of",
+   "and stuff",
+   "or something",
+   "-ish",
+   "a bit of a",
+   "carousel",
+   "claim form"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: a mesma noite contada vaga para a irmã e exata para o balcão.",
+   "perg": "Voice memos or text messages?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Conversa pessoal: como o aluno fala, e com quem; o professor responde também.",
+   "perg": "Who do you send voice memos to?",
+   "pula": "Duas cartas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir: questions, highest, guess, discovered, direction.",
+   "perg": "What do you think this word means?",
+   "pula": "Três palavras bastam."
+  },
+  "video": {
+   "obj": "Entrevista de rua em Washington com perguntas-pegadinha, em quatro capítulos; True or Lie.",
+   "perg": "How sure is this person?",
+   "pula": "Dois capítulos bastam."
+  },
+  "falas": {
+   "obj": "Cada fala do vídeo de novo; as amarelas abrem a explicação.",
+   "perg": "What did they actually say here?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "memos": {
+   "obj": "Do fato exato do formulário ao áudio vago para a irmã.",
+   "perg": "How would you really say that to your sister?",
+   "pula": "Três áudios bastam."
+  },
+  "regra": {
+   "obj": "A regra: vago não é errado, depende de quem ouve; achar a parte quebrada em cinco linhas.",
+   "perg": "What do these four lines share?",
+   "pula": "As pistas e três linhas bastam."
+  },
+  "esteira": {
+   "obj": "Para cada resposta, quem está ouvindo: o balcão ou a irmã; depois na outra voz.",
+   "perg": "Who is listening: the desk or her sister?",
+   "pula": "Quatro respostas bastam."
+  },
+  "cv-conselho": {
+   "obj": "Conselho de passageiros: três propostas sobre malas perdidas, voto casual e depois exato para a ata.",
+   "perg": "Now say it exactly, for the minutes.",
+   "pula": "Duas propostas bastam."
+  },
+  "irma": {
+   "obj": "A irmã liga: conversa casual, exata só ao repetir o que disse ao balcão.",
+   "perg": "So what did you tell the desk, exactly?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: um momento da semana como áudio vago e como e-mail exato ao chefe.",
+   "perg": "When is vague better, and when must you be exact?",
+   "pula": "Um momento, duas linhas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa solta com linguagem vaga, sobre a vida do aluno.",
+   "perg": "Roughly how long, -ish?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre o vago e o exato: trabalho, amigos, mensagens.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a viajante e responde à irmã, vago, e ao balcão, exato.",
+   "perg": "What does the suitcase look like?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Talk like you talk to a friend.",
+   "p": "Pick a card. Be vague. Then be exact.",
+   "palavras": [
+    "kind of",
+    "sort of",
+    "and stuff",
+    "or something",
+    "-ish",
+    "a bit of a"
+   ],
+   "cartas": [
+    {
+     "k": "LAST NIGHT",
+     "q": "What did you do last night?",
+     "fup": "Now tell me exactly what time you got home.",
+     "st": [
+      "I kind of …",
+      "… and stuff."
+     ],
+     "ex": "I kind of watched a series and cooked and stuff, went to bed at eleven-ish."
+    },
+    {
+     "k": "YOUR BAG",
+     "q": "Describe the bag you carry every day.",
+     "fup": "Now describe it for a lost property form.",
+     "st": [
+      "It’s sort of …, -ish …"
+     ],
+     "ex": "It’s sort of a brownish backpack, kind of old, with keys and stuff inside."
+    },
+    {
+     "k": "A BAD TRIP",
+     "q": "Tell me about a trip where something went a bit wrong.",
+     "fup": "What exactly happened?",
+     "st": [
+      "It was a bit of a …",
+      "We sort of …"
+     ],
+     "ex": "It was a bit of a disaster. The hotel was kind of nowhere near the beach."
+    },
+    {
+     "k": "YOUR WORK",
+     "q": "What do you do, in the way you’d tell a stranger at a party?",
+     "fup": "And on a CV?",
+     "st": [
+      "I sort of …, or something like that."
+     ],
+     "ex": "I sort of manage projects, IT stuff, or something like that."
+    },
+    {
+     "k": "AN OPINION",
+     "q": "What do you think of the last film you saw?",
+     "fup": "Give it a number from 1 to 10.",
+     "st": [
+      "It was kind of …, but a bit …"
+     ],
+     "ex": "It was kind of beautiful, but a bit too long. A six-ish."
+    },
+    {
+     "k": "THE WRONG VOICE",
+     "q": "Have you ever been too formal with a friend, or too casual at work?",
+     "fup": "How did they react?",
+     "st": [
+      "I once …, and it sounded …"
+     ],
+     "ex": "I once sent my brother a message like a contract. He asked if I was angry."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "kind of",
+    "a bit of a",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Vague language: natural, or lazy?",
+     "a": "Natural",
+     "b": "Lazy",
+     "fa": [
+      "Natural. Nobody says “at 21:12” to their sister.",
+      "It sounds human, sort of warm."
+     ],
+     "fb": [
+      "Lazy. If you know the time, say the time.",
+      "The thing is, vague hides what you don’t know."
+     ]
+    },
+    {
+     "q": "In a work chat: casual, or exact?",
+     "a": "Casual",
+     "b": "Exact",
+     "fa": [
+      "Casual. It’s a chat, not a report.",
+      "Being a bit relaxed builds the team."
+     ],
+     "fb": [
+      "Exact. A vague message costs ten more messages.",
+      "“Around three-ish” is not a meeting time."
+     ]
+    },
+    {
+     "q": "A lost bag: call the airline angry, or calm?",
+     "a": "Angry",
+     "b": "Calm",
+     "fa": [
+      "Angry. Calm people wait forever.",
+      "A bit of pressure gets things moving."
+     ],
+     "fb": [
+      "Calm. The person at the desk didn’t lose your bag.",
+      "I see your point, but kind words get faster help."
+     ]
+    },
+    {
+     "q": "Voice memos: the best invention or a bit of a nightmare?",
+     "a": "Best invention",
+     "b": "A nightmare",
+     "fa": [
+      "Best invention. You hear the person, not just the words.",
+      "It’s kind of like a mini phone call."
+     ],
+     "fb": [
+      "A nightmare. Five minutes to say one thing.",
+      "You can’t search a voice memo."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Sort of a draw, and everybody talked, and stuff."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the traveler now.",
+   "p": "Your teacher asks: the sister, then the desk.",
+   "aluno": "Listen to your teacher’s question. Answer as the traveler: casual for your sister, exact for the desk.",
+   "perguntas": [
+    "Sister: hey, how was the flight?",
+    "Desk: what time did your flight land?",
+    "Sister: what does the suitcase look like?",
+    "Desk: please describe the suitcase.",
+    "Sister: what was in it?",
+    "Desk: how long did you wait at carousel 5?"
+   ],
+   "st": [
+    "It’s kind of …",
+    "At 9:12 PM, …",
+    "… and stuff."
+   ],
+   "ex": "To my sister: it’s kind of big and bluish. To the desk: a navy blue hard-shell suitcase, 28 inches."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

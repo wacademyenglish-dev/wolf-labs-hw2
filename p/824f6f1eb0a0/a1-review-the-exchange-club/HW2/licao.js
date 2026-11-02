@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Exchange Club",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/824f6f1eb0a0/a1-review-the-exchange-club/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 7 review: love / like / hate + -ing; he / she likes + -ing; like it / like them (do not drop it); him / her / them after a verb; me / him / her after with and for",
   "abrir": "What do you love doing on the weekend?",
   "fecho": "<b>love / like / hate + -ing</b>: <i>I love cooking.</i> After a verb or with: <b>him, her, them, me</b>: <i>I call her. Come with me.</i> Do not drop it: <i>I like it. I like them.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a conversation club. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/824f6f1eb0a0/a1-review-the-exchange-club/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two coffees on a night table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I love cooking, and I hate running.",
-          "img": "https://wolf-labs.pages.dev/p/824f6f1eb0a0/a1-review-the-exchange-club/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She likes vegetables. She likes them a lot.",
-          "img": "https://wolf-labs.pages.dev/p/824f6f1eb0a0/a1-review-the-exchange-club/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I call her every night. Come with me.",
-          "img": "https://wolf-labs.pages.dev/p/824f6f1eb0a0/a1-review-the-exchange-club/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -158,7 +158,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/824f6f1eb0a0/a1-review-the-exchange-club/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two coffees on a night table",
       "pede": "Look at the picture: two coffees on a table at night. Write 2 or 3 sentences about a friend. What does your friend love doing? Use <b>love / like / hate + -ing</b>, <b>it</b>, <b>her</b> or <b>him</b>.",
       "ph": "My friend loves … and I love it too.",

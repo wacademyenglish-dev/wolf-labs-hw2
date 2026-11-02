@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Unthinkable Decision",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d7ed1d5fe562/the-unthinkable-decision/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "may not be able to (perhaps I can't); far + comparative (far bigger, far less time); the consequence of not acting: unless + affirmative, otherwise, if we don't",
   "abrir": "What may you not be able to do this year, even if you try?",
   "fecho": "<b>may not be able to</b> + plain verb = perhaps I can't: <i>We may not be able to finish.</i> <b>far</b> + comparative = much: <i>far bigger, far slower</i>, never <i>far more bigger</i>. A consequence: <b>unless</b> + affirmative (<i>Unless we hurry...</i>) or <b>otherwise</b> (<i>Hurry, otherwise we lose time.</i>).",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan for a big storm in the control room. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/d7ed1d5fe562/the-unthinkable-decision/img/live-mapa.webp",
+      "img": "../img/live-mapa.webp",
       "leg": "The map table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We may not be able to cross the city before the storm.",
-          "img": "https://wolf-labs.pages.dev/p/d7ed1d5fe562/the-unthinkable-decision/img/live-ceu.webp",
+          "img": "../img/live-ceu.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "This map is far more detailed than the old one.",
-          "img": "https://wolf-labs.pages.dev/p/d7ed1d5fe562/the-unthinkable-decision/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Choose a plan now, otherwise we will lose the whole evening.",
-          "img": "https://wolf-labs.pages.dev/p/d7ed1d5fe562/the-unthinkable-decision/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d7ed1d5fe562/the-unthinkable-decision/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A dark room with a big map table",
       "pede": "Look at the picture: a dark room with a big map table. Write 2 or 3 sentences about a busy week: something you <b>may not be able to</b> do, something <b>far</b> harder or easier than before, and a consequence with <b>unless</b> or <b>otherwise</b>.",
       "ph": "This week I may not be able to … Unless …",

@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · One Letter Away · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>One Letter Away · The Chat</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>One Letter Away · The Chat</h2>
+    <p>Tom wrote <i>I’m boring</i> to his friend Ana. He meant he was bored. One letter changed what Ana read. Portuguese marks the difference with the verb; English keeps BE the same, so only the ending does the job: <b>-ED</b> is the person who feels it, <b>-ING</b> is the thing that causes it. The screen is a chat: the student picks the ending, and Ana answers, or gets confused.</p>
+    <h4>THE SLOT DECIDES</h4>
+    <p>Person who feels it: -ED. Thing that causes it: -ING. <i>My teacher is interesting</i> is correct: people can cause feelings too.</p>
+    <h4>QUIET ENDINGS</h4>
+    <p>Scene V: five recordings, checked against the audio. -ed and -ing are fast and quiet: play twice, then the 0.75× button. The transcript opens after.</p>
+    <!--conversa--><h4>GREEN, YELLOW, RED (VI) AND THE SURPRISE QUESTION</h4>
+    <p>Scene VI is now a traffic light: three Sunday invitations (a three-hour film, a beach bus at 6 AM, a party with strangers). Your student picks green, yellow or red and says why: the plan is <i>-ing</i>, they are <i>-ed</i>. Wait five seconds in silence, then use the PUSH line (only you see it). If they say <i>I’m boring</i>, smile and ask: <i>Are you, or is the party?</i> Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Weekend, VI Green, Yellow, Red, VIII Rate Your Week.</li>
+      <li><b>Listen</b>: V. <b>Focus</b>: II The Message, III The Chat, IV The Rule, VII Five Messages to Fix.</li>
+      <li><b>Write</b>: IX, a message to a friend: the thing, then you. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* ONE LETTER AWAY (Main A2) · pergunta-surpresa · 27/10/2026 · -ed (a pessoa) × -ing (a coisa) */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'msg', tipo: 'And you?', q: 'What was the most boring thing you did this week?',
+    opc: ['Something at work', 'Something at home', 'A long wait'], st: ['It was boring, so I was …', 'I was bored when …'],
+    ex: 'A long wait. I was at the bank for an hour. It was so boring.', push: 'What did you do while you waited?' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'A boring job with a big salary, or an exciting job with a small one?',
+    opc: ['Boring, big salary', 'Exciting, small salary'], st: ['I’d rather …, because I get …ed'],
+    ex: 'Exciting, small salary. I get bored very fast, and a boring job is tiring.', push: 'How small is too small?' },
+  { cena: 'ouve', tipo: 'Opinion', q: 'What is more relaxing on a Sunday?',
+    opc: ['A long film', 'A walk outside', 'Sleeping all day'], st: ['… is relaxing / tiring', 'I feel …ed when …'],
+    ex: 'A walk outside. Films are relaxing, but I feel tired after three hours on the sofa.', push: 'Where do you walk?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* ONE LETTER AWAY (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O semáforo entra no lugar de "VI · Match the Halves" (prática controlada de juntar metades), no MEIO,
+   depois do áudio. Três convites de domingo, como os do Tom e da Ana: verde, amarelo ou vermelho, e o
+   porquê com a coisa (-ing) e a pessoa (-ed). */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'sinal', troca: 'metades', est: 'o', min: 7, img: 'onibus', rot: 'Green, Yellow, Red', t: 'Three Sunday plans. Green, yellow or red?',
+    p: 'Choose a colour. Say why: the plan is -ing, you are -ed. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The film', sit: 'Ana writes: “A three-hour film at my place on Sunday?”',
+        q: 'Your answer?', opc: [{ t: 'I’m in!', cor: 'g' }, { t: 'Maybe', cor: 'y' }, { t: 'No way', cor: 'r' }],
+        st: ['It sounds …ing, so I’m …ed', 'I get …ed when a film is …', 'Only if it’s …ing'],
+        ex: 'Maybe. Three hours is tiring. I get bored when a film is very long. Only if it’s exciting!',
+        push: 'It’s a black-and-white film. Still yellow?' },
+      { tag: 'The bus', sit: 'Tom writes: “Beach trip! The bus leaves at 6 AM.”',
+        q: 'Your answer?', opc: [{ t: 'I’m in!', cor: 'g' }, { t: 'Maybe', cor: 'y' }, { t: 'No way', cor: 'r' }],
+        st: ['6 AM is …ing', 'I’m …ed, but …', 'The beach is so …ing'],
+        ex: 'I’m in! 6 AM is tiring, but the beach is relaxing. I’m excited.',
+        push: 'The trip is four hours. And no air conditioning.' },
+      { tag: 'The party', sit: 'A friend writes: “Party tonight! You don’t know anybody.”',
+        q: 'Your answer?', opc: [{ t: 'I’m in!', cor: 'g' }, { t: 'Maybe', cor: 'y' }, { t: 'No way', cor: 'r' }],
+        st: ['New people are …ing', 'I feel …ed when …', 'It’s …ing, so I …'],
+        ex: 'No way. Talking to new people is tiring for me. I feel embarrassed when I don’t know anybody.',
+        push: 'Your friend says: “Please, I’m nervous too.” Now?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Before Tom’s chat: your weekend.",
+   "p": "Answer out loud. The picture opens a little more."
+  },
+  "msg": {
+   "t": "Sunday. A long film. Tom writes to Ana.",
+   "p": "Read Tom’s message out loud. Answer two questions."
+  },
+  "chat": {
+   "t": "You choose Tom’s endings.",
+   "p": "Read it with an ending. Tap -ED or -ING."
+  },
+  "regra": {
+   "t": "The slot chooses the ending.",
+   "p": "Say each wrong line right, out loud. Then tap."
+  },
+  "ouve": {
+   "t": "Nobody says -ED or -ING loudly.",
+   "p": "Play. Choose the ending you heard. Say it back."
+  },
+  "cv-sinal": {
+   "t": "Three Sunday plans: green, yellow or red?",
+   "p": "Choose a colour. The plan is -ing, you are -ed."
+  },
+  "conserta": {
+   "t": "Five messages. One has no mistake.",
+   "p": "Read it out loud. Tap the wrong word, or NOTHING."
+  },
+  "semana": {
+   "t": "Rate four things from your week.",
+   "p": "Tap the stars. Say: It was ___ing, so I was ___ed."
+  },
+  "fim": {
+   "t": "Write a message to a friend.",
+   "p": "The thing (-ing), then you (-ed). It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Adjetivos -ed (quem sente) e -ing (o que causa): Tom escreveu I’m boring para a Ana quando queria dizer que estava entediado.",
+  "armadilha": "O brasileiro diz I’m boring / I’m interesting querendo dizer o que sente, porque no português “estou entediado” e “sou chato” mudam o verbo, e no inglês o be fica igual: só a terminação decide.",
+  "pal": [
+   "bored",
+   "boring",
+   "tired",
+   "tiring",
+   "interested",
+   "interesting",
+   "surprised",
+   "surprising",
+   "excited"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: uma letra mudou o que a Ana leu.",
+   "perg": "Was your Sunday boring or relaxing?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o fim de semana do aluno.",
+   "perg": "What did you do on the weekend? How was it?",
+   "pula": "Duas perguntas bastam."
+  },
+  "msg": {
+   "obj": "Ler a mensagem do Tom e perceber o mal-entendido.",
+   "perg": "What did Tom want to say?",
+   "pula": "Uma pergunta basta."
+  },
+  "chat": {
+   "obj": "O aluno escolhe as terminações do Tom e vê a resposta (ou a confusão) da Ana.",
+   "perg": "-ED or -ING here? Why?",
+   "pula": "Três mensagens bastam."
+  },
+  "regra": {
+   "obj": "A regra: quem sente leva -ed, o que causa leva -ing; corrigir em voz alta.",
+   "perg": "Is it the person or the thing?",
+   "pula": "Três frases bastam."
+  },
+  "ouve": {
+   "obj": "Ouvir terminações rápidas e baixas: tocar duas vezes, depois 0.75×.",
+   "perg": "Did you hear -ed or -ing?",
+   "pula": "Três gravações bastam."
+  },
+  "cv-sinal": {
+   "obj": "Conversa: três convites de domingo, verde/amarelo/vermelho, com -ing para o plano e -ed para o aluno.",
+   "perg": "A three-hour film: green, yellow or red?",
+   "pula": "Dois convites bastam."
+  },
+  "conserta": {
+   "obj": "Corrigir cinco mensagens de alunos reais; uma está certa.",
+   "perg": "What’s wrong in this message?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "semana": {
+   "obj": "Dar estrelas a quatro coisas da semana e dizer as duas metades.",
+   "perg": "How was your Monday?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: mensagem a um amigo sobre algo da semana, a coisa (-ing) e o aluno (-ed).",
+   "perg": "What was the most tiring thing this week?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa pessoal com pares -ed/-ing.",
+   "perg": "What’s the most boring part of your day?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e justificar com o plano (-ing) e a pessoa (-ed).",
+   "perg": "Which is more relaxing for you?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Tom e explica o mal-entendido com -ed e -ing.",
+   "perg": "Tom, were you boring or bored?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "The thing, then you.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "boring / bored",
+    "tiring / tired",
+    "interesting / interested",
+    "exciting / excited"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR JOB",
+     "q": "What is the most boring part of your job or studies?",
+     "fup": "When do you feel bored?",
+     "st": [
+      "… is boring.",
+      "I get bored when …"
+     ],
+     "ex": "Meetings are boring. I get bored after twenty minutes."
+    },
+    {
+     "k": "YOUR WEEK",
+     "q": "What was tiring this week?",
+     "fup": "Were you tired on Friday?",
+     "st": [
+      "… was tiring.",
+      "I was tired, so …"
+     ],
+     "ex": "Monday was tiring. I was so tired that I slept at nine."
+    },
+    {
+     "k": "A FILM",
+     "q": "What was the last interesting film you saw?",
+     "fup": "Were you interested from the start?",
+     "st": [
+      "… was interesting.",
+      "I was interested in …"
+     ],
+     "ex": "It was a documentary. It was interesting, and I was surprised at the end."
+    },
+    {
+     "k": "NEWS",
+     "q": "What news was surprising for you this year?",
+     "fup": "Were you shocked?",
+     "st": [
+      "It was surprising that …",
+      "I was surprised when …"
+     ],
+     "ex": "I was surprised when my brother got married."
+    },
+    {
+     "k": "THE WEEKEND",
+     "q": "What are you excited about this weekend?",
+     "fup": "Why is it exciting?",
+     "st": [
+      "I’m excited about …",
+      "It’s exciting because …"
+     ],
+     "ex": "I’m excited about a trip to the beach. The sea is relaxing."
+    },
+    {
+     "k": "ENGLISH",
+     "q": "What is confusing in English for you?",
+     "fup": "When do you feel confused?",
+     "st": [
+      "… is confusing.",
+      "I get confused when …"
+     ],
+     "ex": "Phrasal verbs are confusing. I get confused when people speak fast."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "relaxing",
+    "boring",
+    "exciting",
+    "tired",
+    "bored"
+   ],
+   "rodadas": [
+    {
+     "q": "A Sunday at home or a Sunday out?",
+     "a": "At home",
+     "b": "Out",
+     "fa": [
+      "At home. It’s relaxing, and I’m tired on Sundays."
+     ],
+     "fb": [
+      "Out. A day at home is boring, and I get bored fast."
+     ]
+    },
+    {
+     "q": "A long film or a short series?",
+     "a": "A long film",
+     "b": "A short series",
+     "fa": [
+      "A long film. A good story is never boring."
+     ],
+     "fb": [
+      "A short series. Three hours is tiring."
+     ]
+    },
+    {
+     "q": "A beach bus at 6 AM or a late lunch in town?",
+     "a": "The beach bus",
+     "b": "The late lunch",
+     "fa": [
+      "The beach bus. The trip is exciting."
+     ],
+     "fb": [
+      "The late lunch. I’m not interested in waking up at five."
+     ]
+    },
+    {
+     "q": "A party with strangers or dinner with old friends?",
+     "a": "The party",
+     "b": "Old friends",
+     "fa": [
+      "The party. New people are interesting."
+     ],
+     "fb": [
+      "Old friends. Strangers make me feel embarrassed."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody was bored, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Tom now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Tom.",
+   "perguntas": [
+    "What film were you watching on Sunday?",
+    "Was the film boring, or were you bored?",
+    "What did you write to Ana?",
+    "How did Ana answer? Was she confused?",
+    "Were you embarrassed?",
+    "What do you write to Ana now?"
+   ],
+   "st": [
+    "The film was …ing.",
+    "I was …ed.",
+    "I wanted to say …"
+   ],
+   "ex": "The film was boring, so I was bored. I’m not boring!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

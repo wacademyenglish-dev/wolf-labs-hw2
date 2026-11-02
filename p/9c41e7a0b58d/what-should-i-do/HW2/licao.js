@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What Should I Do?",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/9c41e7a0b58d/what-should-i-do/img/live-mesa.webp",
+  "capa": "../img/live-mesa.webp",
   "alvo": "should / shouldn't + plain verb for advice: What should I do? Should I ...? You should ...; no to, no -s, no do after should",
   "abrir": "What is one small problem you have this week?",
   "fecho": "Advice: <b>should</b> + plain verb, never changes: <i>You should call her. She should call her. You shouldn't go alone.</i> No <i>to</i>, no <i>-s</i>, no <i>don't</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks Leo for advice. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/9c41e7a0b58d/what-should-i-do/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A quiet desk at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
         {
           "t": "You should put your phone away at ten.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/9c41e7a0b58d/what-should-i-do/img/live-estudio.webp"
+          "img": "../img/live-estudio.webp"
         },
         {
           "t": "You shouldn't drink coffee after lunch.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/9c41e7a0b58d/what-should-i-do/img/live-cartas.webp"
+          "img": "../img/live-cartas.webp"
         },
         {
           "t": "What should I say to my boss?",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/9c41e7a0b58d/what-should-i-do/img/live-mesa.webp"
+          "img": "../img/live-mesa.webp"
         }
       ]
     },
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/9c41e7a0b58d/what-should-i-do/img/live-cartas.webp",
+      "img": "../img/live-cartas.webp",
       "leg": "Letters to the radio show",
       "pede": "Look at the picture: letters to a radio show. A listener says: <i>I'm always late for work.</i> Write 2 or 3 sentences of advice: one with <b>should</b> and one with <b>shouldn't</b>.",
       "ph": "You should …",

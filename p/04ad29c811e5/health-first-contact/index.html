@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -125,5 +126,274 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A nurse explains a five-step routine.",
+   "p": "One question, the video, then questions."
+  },
+  "ordem": {
+   "t": "A dentist’s first contact, in pieces.",
+   "p": "Order the five steps. Say it as a dentist."
+  },
+  "transforma": {
+   "t": "Tell the patient what you’ll do.",
+   "p": "Read the clue. Say it to the patient."
+  },
+  "cv-dilema": {
+   "t": "AIDET on a busy day.",
+   "p": "Choose a moment. Say it to the patient."
+  },
+  "prova": {
+   "t": "Your profession, your patient.",
+   "p": "Plan 20 seconds. Then the five steps aloud."
+  },
+  "pode": {
+   "t": "Lesson 1: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Rotina AIDET para o primeiro contato (Acknowledge, Introduce, Duration, Explanation, Thank you) e I’m going to… para o próximo passo. Primeira aula de English for Healthcare.",
+  "armadilha": "Brasileiro diz I will make an exam (I’m going to examine you), It will take ten minutes more or less (about ten minutes) e manda Relax! seco em vez de explicar.",
+  "pal": [
+   "AIDET",
+   "I’m …, your … today.",
+   "This will take about…",
+   "I’m going to…",
+   "You may feel…",
+   "Thank you for your time.",
+   "patient"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta os primeiros trinta segundos com o paciente.",
+   "perg": "What is your profession, and who are your foreign patients?",
+   "pula": "Pergunte a profissão e adapte tudo a ela."
+  },
+  "video": {
+   "obj": "Escuta: uma enfermeira explica o AIDET.",
+   "perg": "What do the five letters mean?",
+   "pula": "Assista uma vez e faça duas perguntas."
+  },
+  "ordem": {
+   "obj": "Ordenar o primeiro contato de um dentista e falar como ele.",
+   "perg": "What does the dentist say first?",
+   "pula": "Ordene e fale uma vez."
+  },
+  "transforma": {
+   "obj": "Dizer ao paciente o que vai fazer com I’m going to…, em cinco profissões.",
+   "perg": "How do you tell a patient you’re going to examine them?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-dilema": {
+   "obj": "Conversa: três momentos reais de dia corrido e a frase ao paciente, em voz alta.",
+   "perg": "You’re late and the patient is angry. What do you say?",
+   "pula": "Dois momentos bastam."
+  },
+  "prova": {
+   "obj": "O AIDET do aluno na profissão dele, com relógio; não ajude com o relógio correndo.",
+   "perg": "Did you say how long it will take?",
+   "pula": "Uma tentativa e o checklist bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; pedir o AIDET do procedimento mais comum do trabalho dele.",
+   "perg": "Can you do a first contact in English now?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre a profissão e os pacientes reais do aluno.",
+   "perg": "What do you usually say to a new patient?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre comunicação com pacientes.",
+   "perg": "Why do you think that’s better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: você é um paciente estrangeiro nervoso; o aluno faz o AIDET na profissão dele.",
+   "perg": "Hello… is this going to hurt?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about your patients.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’m going to…",
+    "This will take about…",
+    "You may feel…"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WORK",
+     "q": "What do you usually do in the first minute with a patient?",
+     "fup": "Do you say your name?",
+     "st": [
+      "First, I …",
+      "Then I’m going to …"
+     ],
+     "ex": "First, I say good morning and my name. Then I explain what I’m going to do."
+    },
+    {
+     "k": "FOREIGN PATIENTS",
+     "q": "Have you ever had a patient who didn’t speak Portuguese?",
+     "fup": "How did you communicate?",
+     "st": [
+      "Yes, once …",
+      "We used …"
+     ],
+     "ex": "Yes, once a tourist from Germany. We used English and gestures."
+    },
+    {
+     "k": "NERVOUS PATIENTS",
+     "q": "What do you say to a nervous patient?",
+     "fup": "Does it help?",
+     "st": [
+      "I say: You may feel …",
+      "It will take about …"
+     ],
+     "ex": "I say: You may feel a little pressure. It will take about two minutes."
+    },
+    {
+     "k": "TIME",
+     "q": "How long does your most common procedure take?",
+     "fup": "Do patients ask about time?",
+     "st": [
+      "It takes about …",
+      "Patients often ask …"
+     ],
+     "ex": "It takes about twenty minutes. Patients often ask if it will hurt."
+    },
+    {
+     "k": "A GOOD DOCTOR",
+     "q": "Think of a good health professional you met. What did they do?",
+     "fup": "What did they say?",
+     "st": [
+      "They …",
+      "They said: …"
+     ],
+     "ex": "She explained everything before she started. She said: I’m going to check your blood pressure first."
+    },
+    {
+     "k": "THANK YOU",
+     "q": "How do you end a visit?",
+     "fup": "Do you say thank you?",
+     "st": [
+      "I usually say …"
+     ],
+     "ex": "I usually say: Thank you for your time. See you next week."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I’m going to…",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Explain every step to the patient, or just do it fast?",
+     "a": "Explain every step",
+     "b": "Do it fast",
+     "fa": [
+      "Explain. The patient feels safe.",
+      "They know what is going to happen."
+     ],
+     "fb": [
+      "Do it fast. Long explanations make some patients more nervous.",
+      "It’s over quickly."
+     ]
+    },
+    {
+     "q": "Tell the patient the real time, or a shorter time?",
+     "a": "The real time",
+     "b": "A shorter time",
+     "fa": [
+      "The real time. Trust is everything.",
+      "I say: This will take about twenty minutes."
+     ],
+     "fb": [
+      "A shorter time. They relax more.",
+      "If it’s longer, I explain then."
+     ]
+    },
+    {
+     "q": "First names or Mr. and Ms. with patients?",
+     "a": "First names",
+     "b": "Mr. and Ms.",
+     "fa": [
+      "First names. It feels warm.",
+      "Patients relax."
+     ],
+     "fb": [
+      "Mr. and Ms. It shows respect.",
+      "Especially with older patients."
+     ]
+    },
+    {
+     "q": "A busy day: skip AIDET, or always do it?",
+     "a": "Skip it",
+     "b": "Always do it",
+     "fa": [
+      "Skip some steps. Time is short.",
+      "The patient wants to be seen fast."
+     ],
+     "fb": [
+      "Always do it. It takes only thirty seconds.",
+      "And it saves time later."
+     ]
+    }
+   ],
+   "fim": "Four rounds, and every patient felt heard."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "Your first contact with a patient.",
+   "p": "Your teacher is a nervous foreign patient.",
+   "aluno": "Listen to your teacher’s question. Answer as yourself, in your profession. Use the five AIDET steps.",
+   "perguntas": [
+    "Hello… who are you?",
+    "What are you going to do?",
+    "How long will it take?",
+    "Is it going to hurt?",
+    "What do I have to do?",
+    "What happens after this?"
+   ],
+   "st": [
+    "I’m …, your … today.",
+    "I’m going to …",
+    "This will take about …"
+   ],
+   "ex": "Good morning, Ms. Brown. I’m Ana, your dentist today. I’m going to check your teeth. This will take about ten minutes. You may feel a little pressure."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

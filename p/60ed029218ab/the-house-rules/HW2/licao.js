@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The House Rules",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/60ed029218ab/the-house-rules/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "must / have to for obligation, mustn't for forbidden, don't have to for not necessary, should for advice; must takes no -s, no to, no do / does",
   "abrir": "What is one rule at your home that everybody must follow?",
   "fecho": "<b>must / have to</b> = obligation. <b>mustn't</b> = forbidden. <b>don't have to</b> = not necessary. <b>should</b> = advice. <i>You mustn't use my food. You don't have to cook.</i> Must takes no -s and no <i>to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo shows Mia around a shared flat. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/60ed029218ab/the-house-rules/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A dark hallway with a trash basket",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "You must wash your dishes the same day.",
-          "img": "https://wolf-labs.pages.dev/p/60ed029218ab/the-house-rules/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "You mustn't use other people's food.",
-          "img": "https://wolf-labs.pages.dev/p/60ed029218ab/the-house-rules/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We have to take out the trash on Tuesdays.",
-          "img": "https://wolf-labs.pages.dev/p/60ed029218ab/the-house-rules/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/60ed029218ab/the-house-rules/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A dark hallway with a trash basket by the door",
       "pede": "Look at the picture: a dark hallway with a trash basket by the door. Write 2 or 3 sentences about the rules in your home: one thing you must do, one thing that is forbidden, and one thing you don't have to do. Use <b>must</b>, <b>mustn't</b> and <b>don't have to</b>.",
       "ph": "In my home, you must …",

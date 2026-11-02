@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · I Think You Should… · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 3 · B1</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 3 · I Think You Should… · B1</h2>
+    <p>Episode 3 of <b>Better Speaking</b>, B1 version. V&aacute;clav N&ecaron;me&ccaron;ek, a Czech footballer in China, says what he thinks in English. The language is opinion and advice with <b>should / shouldn&rsquo;t</b> and <b>I don&rsquo;t think&hellip; should</b>. The sister lesson for B2 is &ldquo;In My Opinion&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; What do you think, What do you think. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; I think you should, Find the advice, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Your advice. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>The to after should: <i>You should to practice</i>. &ldquo;Eu concordo&rdquo; becomes <i>I am agree</i>. And &ldquo;acho que n&atilde;o&rdquo; becomes <i>I think that no</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 3 · I THINK YOU SHOULD… (B1)
+   Vídeo: BBC Learning English, Better Speaking (fF4MrRD8ja8), três trechos (~3:00).
+   Alvo: opinião com should / shouldn't (I think clubs should…, I don't think they should…). Nenhuma B1 ensina should.
+   A aula irmã B2 é a "In My Opinion". */
+const M = { nome: "I Think You Should…", kick: "B1 · SHOULD, SHOULDN'T, I DON'T THINK…" };
+var EP = {
+  n: 3, de: 8, nivel: 'B1', titulo: 'I Think You Should…', video: 'fF4MrRD8ja8',
+  convidado: 'Václav Němeček', habilidade: 'give your opinion with should',
+  trechos: [
+    { ini: 53, fim: 124, rot: 'Václav: football in China' },
+    { ini: 207, fim: 262, rot: 'Richard: “I think” and “I reckon”' },
+    { ini: 567, fim: 608, rot: 'Three learners disagree' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'A Czech footballer moves to China and says what he thinks, in English. Today: how to give your opinion and your advice with should.',
+      nota: 'Ask: do you follow football? Which team?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'What do you <em>think</em>?', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Each answer with I think… because…',
+      cartas: [
+        { frente: 'Abroad', verso: 'Would you like to live and work in another country? Which one?', dica: 'I\'d like to live in…', cor: 'var(--guest)', fw: { q: 'What should you learn before you go?', st: ['I should learn…', 'You should…', 'I think…'], help: '“I should learn the language and the culture.”' } },
+        { frente: 'Players', verso: 'Are there foreign players in your favorite team?', dica: 'Yes, there are… / I don\'t follow football.', cor: 'var(--host)', fw: { q: 'Is that good or bad for the team?', st: ['I think it\'s good because…', 'I don\'t think…'], help: '“I think it\'s good because they bring new ideas.”' } },
+        { frente: 'Advice', verso: 'A friend wants to learn English fast. What do you tell them?', dica: 'You should…', cor: 'var(--teacher)', fw: { q: 'And what shouldn\'t they do?', st: ['You shouldn\'t…', 'Don\'t…'], help: '“You shouldn\'t be afraid of mistakes.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 3 minutes', titulo: 'Listen to <em>Václav</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Václav is a footballer from…', ops: [{ t: 'the Czech Republic' }, { t: 'China' }] }, { q: 'He thinks Chinese football needs…', ops: [{ t: 'foreign players' }, { t: 'a new stadium' }] } ],
+      durante: 'Listen for “I think” and “I feel”. Then listen to three learners who strongly disagree with an idea.',
+      depois: [ { f: 'Václav played football in China.', ok: 1 }, { f: 'He thinks foreign players can teach tactics to Chinese players.', ok: 1 }, { f: '“I reckon” is very formal.', ok: 0 }, { f: 'The three learners agree that women should be paid less.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'I think you <em>should</em>', pt: 'should + verbo (sem to) · I don\'t think + should para dizer que não.',
+      nota: 'Read each card. The red card is the “to” after should.',
+      cartoes: [ { g: 'I think clubs <b>should</b> have foreign players.', p: 'should + verb, no to.' }, { g: 'You <b>shouldn\'t</b> be afraid of mistakes.', p: 'shouldn\'t = it\'s not a good idea.' }, { g: 'I <b>don\'t think</b> we should stop.', p: 'Say “I don\'t think… should”, not “I think… shouldn\'t”.' }, { g: 'You should to practice more.', p: 'No to after should.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'problem and advice', titulo: 'Find the <em>advice</em>', pt: 'Toque no problema e depois no conselho.',
+      nota: 'Say each pair as a mini dialog: problem, then advice.',
+      esq: ['I\'m always tired.', 'I can\'t remember new words.', 'I\'m nervous when I speak English.', 'My team always loses.', 'I spend too much money.'], dir: ['You should sleep earlier.', 'You should write them in a notebook.', 'You shouldn\'t worry about mistakes.', 'They should buy better players.', 'You shouldn\'t buy things online at night.'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Tell me a problem you have. I\'ll give you advice.', st: ['I can\'t…', 'I\'m always…', 'I never have time to…'], help: '“I never have time to study.”' } },
+    { k: 'cartas', est: 'o', rot: 'agree or disagree?', titulo: 'What do <em>you</em> think?', pt: 'Vire a frase e diga se concorda, com should ou shouldn\'t.',
+      nota: 'The student agrees or disagrees with each statement and gives a reason.',
+      cartas: [
+        { frente: 'Idea 1', sob: 'agree?', verso: 'Children should learn English from age three.', dica: 'I think… / I don\'t think…', cor: 'var(--guest)', fw: { q: 'Now you: give me an idea. I agree or disagree.', st: ['I think we should…', 'People shouldn\'t…'], help: '“I think we should work four days a week.”' } },
+        { frente: 'Idea 2', sob: 'agree?', verso: 'Football players shouldn\'t earn so much money.', dica: 'I agree because… / I don\'t agree…', cor: 'var(--host)' },
+        { frente: 'Idea 3', sob: 'agree?', verso: 'Students should use their phones in class.', dica: 'I don\'t think they should…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'The to after should, “eu acho que não”, and “concordo”.',
+      itens: [ { erro: 'You should <s>to practice</s> more.', certo: 'You should <b>practice</b> more.', por: 'No to after should.' }, { erro: 'I <s>am agree</s> with you.', certo: 'I <b>agree</b> with you.', por: 'Agree is a verb: I agree.' }, { erro: 'I think <s>that no</s>.', certo: 'I <b>don\'t think so</b>.', por: '“Acho que não” = I don\'t think so.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Read each one aloud.',
+      itens: [ { f: 'I think Chinese football ___ have foreign players.', ops: ['should', 'should to'], ok: 0 }, { f: 'You ___ be afraid of making mistakes.', ops: ['shouldn\'t', 'don\'t should'], ok: 0 }, { f: 'I ___ think they should stop.', ops: ['don\'t', 'not'], ok: 0 }, { f: 'Everybody is equal. I ___ with you.', ops: ['agree', 'am agree'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>advice</em>', pt: 'Escreva três conselhos para alguém que começa a aprender inglês: dois should e um shouldn\'t.',
+      ph: 'I think you should… You should also… But you shouldn\'t…', nota: 'The line under the paper catches “should to” and “am agree”. SAVE sends it to My notes.',
+      banco: ['I think you should', 'You should also', 'But you shouldn\'t', 'because', 'I don\'t think you should', 'every day'],
+      regras: [['\\bshould(n\'?t)? to\\b', 'Check: no to after should.'], ['\\b(am|is|are) agree\\b', 'Check: I agree (no am).']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'I just had to do it', tx: 'A singer from Iceland makes her first album. It isn\'t perfect, but she just had to do it.',
+      ganchos: [['Next guest', 'a singer from Iceland'], ['The skill', 'talk about what you had to do'], ['Your task', 'give one piece of advice in English']], nota: 'Ask: what is something you had to do, even when you weren\'t ready? That opens Episode 4.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "A Czech footballer in China gives his opinion. Today: should."
+  },
+  "c9": {
+   "p": "A singer's first album isn't perfect. She had to do it."
+  }
+ },
+ "prep": {
+  "obj": "Opinião e conselho com should / shouldn't e I don't think… should. Václav Němeček, jogador tcheco na China, diz o que pensa em inglês.",
+  "armadilha": "O to depois de should (“You should to practice”), “eu concordo” vira “I am agree” e “acho que não” vira “I think that no”.",
+  "pal": [
+   "I think you should…",
+   "You shouldn't…",
+   "I don't think you should…",
+   "I agree.",
+   "I disagree.",
+   "I don't think so.",
+   "because",
+   "in my opinion"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o convidado: Václav, jogador tcheco na China, dá opinião em inglês.",
+   "perg": "Do you follow football? Which team?",
+   "pula": "Uma resposta e siga."
+  },
+  "c1": {
+   "obj": "Conversa de opinião; cada resposta com I think… because…",
+   "perg": "What do you think about working abroad?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes do Václav, em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "What does Václav think young players should do?",
+   "pula": "Assista uma vez só; os clipes vão inteiros."
+  },
+  "c3": {
+   "obj": "A regra: should + verbo base, I don't think you should; o cartão vermelho é o to depois de should.",
+   "perg": "I want to learn English fast. What should I do?",
+   "pula": "Leia os cartões e peça um conselho."
+  },
+  "c4": {
+   "obj": "Ligar problema e conselho e dizer como minidiálogo.",
+   "perg": "Problem, then advice: read it as a dialog.",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "O aluno concorda ou discorda de cada frase e dá um motivo.",
+   "perg": "Do you agree? Why or why not?",
+   "pula": "Duas frases bastam."
+  },
+  "c6": {
+   "obj": "Corrigir as três armadilhas: should to, am agree, I think that no.",
+   "perg": "What's wrong here? Say the right one.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c7": {
+   "obj": "Prática: escolher a palavra e ler cada frase em voz alta.",
+   "perg": "Read it aloud. Why that word?",
+   "pula": "Faça três linhas."
+  },
+  "c8": {
+   "obj": "Escrever um conselho para alguém; vai para o My notes.",
+   "perg": "Who is it for? Why should they do it?",
+   "pula": "Dois conselhos bastam."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 4: uma cantora islandesa grava o primeiro álbum, mesmo imperfeito.",
+   "perg": "What is something you had to do, even when you weren't ready?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conselhos e opiniões com should sobre a vida do aluno.",
+   "perg": "What should I do?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre futebol e carreira, com should e motivos.",
+   "perg": "Which side are you on? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Václav e dá conselhos e opiniões como convidado.",
+   "perg": "Václav, what should young players do?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "What should I do?",
+   "p": "Pick a card. Give your advice.",
+   "palavras": [
+    "should",
+    "shouldn't",
+    "I don't think…",
+    "because"
+   ],
+   "cartas": [
+    {
+     "k": "A NEW CITY",
+     "q": "A friend is moving to another country. What should she do first?",
+     "fup": "What shouldn't she do?",
+     "st": [
+      "I think she should …",
+      "She shouldn't …"
+     ],
+     "ex": "I think she should learn the language. She shouldn't stay home all the time."
+    },
+    {
+     "k": "YOUR ENGLISH",
+     "q": "What should a beginner do to speak better?",
+     "fup": "Should they watch series with subtitles?",
+     "st": [
+      "I think they should …",
+      "I don't think they should …"
+     ],
+     "ex": "I think they should speak every day, even with mistakes."
+    },
+    {
+     "k": "FOOTBALL",
+     "q": "Should a young player go abroad or stay home?",
+     "fup": "At what age?",
+     "st": [
+      "In my opinion, he should …",
+      "He shouldn't … because …"
+     ],
+     "ex": "In my opinion, he should stay home until 20 because he's too young."
+    },
+    {
+     "k": "STRESS",
+     "q": "Your friend works twelve hours a day. What should he do?",
+     "fup": "Should he talk to his boss?",
+     "st": [
+      "He should …",
+      "I don't think he should …"
+     ],
+     "ex": "He should talk to his boss. I don't think he should quit now."
+    },
+    {
+     "k": "MONEY",
+     "q": "Should people save money or enjoy it now?",
+     "fup": "Do you agree with your parents on this?",
+     "st": [
+      "I think people should …",
+      "I agree. / I disagree."
+     ],
+     "ex": "I think people should save a little and enjoy a little."
+    },
+    {
+     "k": "PHONES",
+     "q": "Should kids have a phone at ten?",
+     "fup": "What about at fourteen?",
+     "st": [
+      "I don't think kids should …",
+      "They should …"
+     ],
+     "ex": "I don't think kids should have a phone at ten. They should play outside."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I think",
+    "should",
+    "I agree",
+    "I disagree",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Should good players stay in Brazil or play abroad?",
+     "a": "Stay in Brazil",
+     "b": "Play abroad",
+     "fa": [
+      "They should stay. The fans need them here.",
+      "Our league gets better."
+     ],
+     "fb": [
+      "They should go. The money is better abroad.",
+      "And they learn a new style."
+     ]
+    },
+    {
+     "q": "Should a footballer learn the local language?",
+     "a": "Yes",
+     "b": "Not necessary",
+     "fa": [
+      "Yes, he should. Václav speaks English in China.",
+      "It's easier with the team."
+     ],
+     "fb": [
+      "I don't think he should. Football is the language.",
+      "He has a translator anyway."
+     ]
+    },
+    {
+     "q": "Should you give your opinion at work or stay quiet?",
+     "a": "Give it",
+     "b": "Stay quiet",
+     "fa": [
+      "You should give it. Good ideas need a voice.",
+      "Your boss should know what you think."
+     ],
+     "fb": [
+      "You should stay quiet sometimes. It can cause problems.",
+      "Listen first, talk later."
+     ]
+    },
+    {
+     "q": "Should friends always tell the truth?",
+     "a": "Always",
+     "b": "Not always",
+     "fa": [
+      "Yes, they should. That's what friends are for.",
+      "A lie can hurt more later."
+     ],
+     "fb": [
+      "Not always. Sometimes you shouldn't say everything.",
+      "A small lie can be kind."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Václav now.",
+   "p": "Your teacher interviews you on air.",
+   "aluno": "Listen to your teacher’s question. Answer as Václav, the Czech footballer in China.",
+   "perguntas": [
+    "Should young players move to another country?",
+    "What should they learn first?",
+    "Should players learn English? Why?",
+    "What shouldn't a new player do?",
+    "Do you agree that football is a business?",
+    "What should fans do when the team loses?"
+   ],
+   "st": [
+    "I think they should …",
+    "I don't think they should …",
+    "I agree, because …"
+   ],
+   "ex": "I think they should go, because they learn a lot. But they shouldn't forget their family."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

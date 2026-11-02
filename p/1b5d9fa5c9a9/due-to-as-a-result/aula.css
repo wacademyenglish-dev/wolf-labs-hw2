@@ -1,0 +1,95 @@
+/* ============================================================
+   DUE TO, AS A RESULT · THE DRIFT MAP · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: o laboratório de oceano à
+   noite — azul-abissal quase preto; o giro em linhas de corrente; o
+   patinho amarelo que desbota; a esteira profunda com o trecho quente
+   em âmbar e o frio em azul-gelo.
+   ============================================================ */
+:root{
+  --noite:#04080b; --noite-rgb:4,8,11; --tinta:#e4ecef;
+  --t1:#ecf3f5; --t2:#c0ccd1; --t2-rgb:192,204,209; --t3:#82919a;
+  --ac:#ffd84a; --ac2:#ffe998; --mar:#4fb3c9; --frio:#7fc8f0; --quente:#f0a35a; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(228,236,239,.05); --vidro2:rgba(228,236,239,.085); --vidro3:rgba(228,236,239,.12);
+  --fio:rgba(218,228,232,.12); --fio2:rgba(218,228,232,.22); --luz:rgba(228,236,239,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a2204}
+.btn.cheio{color:#2a2204}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(58px,5.6vw,108px)/.95 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.dk-ops{display:grid;gap:6px} .dk-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;margin:0 auto 12px} .dk-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1000px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+
+/* vídeo selado */
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:800 28px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--disp);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* o mapa da deriva */
+.dk-mapa{display:grid;gap:6px;width:100%;box-sizing:border-box;max-width:860px;padding:10px;border-radius:16px;background:radial-gradient(ellipse at 50% 60%,#0a2230,#06121a);border:1px solid #173444}
+.dk-mapa svg{display:block;width:100%;height:auto}
+.dk-costa{fill:#13202a;stroke:#2c4250;stroke-width:1.5}
+.dk-giro{fill:none;stroke:rgba(79,179,201,.35);stroke-width:2;stroke-dasharray:10 8;animation:gira 30s linear infinite} .dk-giro.b{stroke:rgba(79,179,201,.2);animation-duration:22s}
+@keyframes gira{to{stroke-dashoffset:-360}}
+.dk-rot-g{font:800 12px var(--mono);letter-spacing:.2em;fill:rgba(127,200,240,.45)}
+.dk-est{cursor:pointer} .dk-est circle{fill:#0b1a22;stroke:rgba(127,200,240,.6);stroke-width:2} .dk-est text{font:800 13px var(--mono);fill:var(--frio)}
+.dk-est.ok circle{fill:#2a2508;stroke:var(--ac)} .dk-est.ok text{fill:var(--ac2)} .dk-est.on circle{stroke:#fff;stroke-width:3}
+.dk-pato{transition:transform .9s cubic-bezier(.3,1.2,.5,1);filter:drop-shadow(0 0 8px rgba(255,216,74,.5))}
+.dk-leg{font:800 10px var(--mono);letter-spacing:.14em;color:var(--t3);text-align:center}
+.dk-log{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);border-color:#1d3a48} .dk-log small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--mar)} .dk-log p{margin:0;font:500 clamp(16px,1.25vw,21px)/1.45 var(--disp);color:var(--t2)}
+
+/* a esteira */
+.dk-esteira{display:grid;gap:4px;width:100%;max-width:720px;margin:0 auto 10px;padding:10px;border-radius:16px;background:linear-gradient(180deg,#0d1f29 0%,#0d1f29 45%,#061019 55%,#030810 100%);border:1px solid #173444}
+.dk-esteira svg{display:block;width:100%;height:auto}
+.dk-cam{font:800 13px var(--mono);letter-spacing:.14em} .dk-cam.q{fill:rgba(240,163,90,.6)} .dk-cam.f{fill:rgba(127,200,240,.6)}
+.dk-trecho{fill:none;stroke-width:10;stroke-linecap:round;stroke:#16252e;transition:stroke .5s}
+.dk-trecho.on.q{stroke:var(--quente);filter:drop-shadow(0 0 6px rgba(240,163,90,.5))} .dk-trecho.on.f{stroke:var(--frio);filter:drop-shadow(0 0 6px rgba(127,200,240,.5))}
+.dk-elo{font:800 14px var(--mono);letter-spacing:.06em;fill:#3c4f5a} .dk-elo.on{fill:var(--t1)}
+.dk-usa{display:flex;align-items:baseline;gap:12px;padding:10px 16px;border-radius:12px;background:#1c1a0c;border-color:#4a4520} .dk-usa small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--am)} .dk-usa b{font:800 clamp(20px,1.6vw,28px) var(--disp);color:var(--ac2)}
+
+/* regra */
+.dk-fitas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:1500px;margin:0 auto 12px}
+.dk-fita{display:grid;gap:4px;padding:10px 12px;border-radius:12px} .dk-fita small{font:800 10px var(--mono);letter-spacing:.1em;color:var(--mar)} .dk-fita p{margin:0;font:600 clamp(14px,1.05vw,17px)/1.35 var(--disp)}
+.dk-caminhos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.dk-caminho{display:grid;gap:6px;align-content:start;padding:12px 14px;border-radius:var(--r2)} .dk-caminho small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.dk-caminho p{margin:0;font:600 clamp(15px,1.12vw,19px)/1.4 var(--disp)} .dk-caminho .antes s{color:var(--t3);text-decoration-color:var(--erro)} .dk-caminho .depois b{color:var(--ac2)} .dk-caminho .nota{font-size:14px;color:var(--t3)} .dk-caminho .btn{justify-self:start} .dk-caminho.aberto{border-color:var(--ok)}
+.dk-tel{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2);border-color:var(--mar)} .dk-tel small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--mar)} .dk-tel p{margin:0;font:700 clamp(19px,1.55vw,26px)/1.4 var(--disp)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .dk-caminhos,.dk-fitas{grid-template-columns:1fr 1fr} .dk-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .dk-caminhos,.dk-fitas{grid-template-columns:1fr} .dk-elo{font-size:9px} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb .dk-leg{display:none}
+.deb .dk-mapa{max-width:100%}

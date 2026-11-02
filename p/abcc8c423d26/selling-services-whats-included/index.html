@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -139,5 +140,297 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "How many proposals do you send?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "Bluepeak’s proposal for Oakridge Paper.",
+   "p": "Read it out loud. Answer the questions."
+  },
+  "dialogo": {
+   "t": "Nora has three questions.",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "It includes. Send it.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "separa": {
+   "t": "Included or not included?",
+   "p": "Say “It includes…” Then tap."
+  },
+  "escolha": {
+   "t": "Is a discount a good idea?",
+   "p": "Choose a side. Your teacher takes the other."
+  },
+  "formulario": {
+   "t": "Leo updates the CRM.",
+   "p": "Read the notes. Fill in every field."
+  },
+  "cartao": {
+   "t": "Your proposal, in four lines.",
+   "p": "Write it. Then say it to your teacher."
+  },
+  "pode": {
+   "t": "Lesson 28: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 28: it includes / it doesn’t include e pronomes it / them. A proposta da Bluepeak para a Oakridge Paper (folha de 1.800 funcionários) e as perguntas da Nora Bell.",
+  "armadilha": "Perder o -s (“the price include”, “it don’t include”) e o pronome objeto que o português corta: “I’ll send today” no lugar de “I’ll send it today”; e “we check they” no lugar de “them”.",
+  "pal": [
+   "It includes…",
+   "It doesn’t include…",
+   "Does it include…?",
+   "Is … included?",
+   "I’ll send it today.",
+   "them",
+   "proposal",
+   "discount",
+   "CRM"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 28 de Selling Services: o que está incluído na proposta.",
+   "perg": "What do clients always ask about?",
+   "pula": "Leia o título e siga."
+  },
+  "conversa": {
+   "obj": "Aquecimento: as propostas do aluno; ele devolve “And you?”.",
+   "perg": "How many proposals do you send in a month?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler a proposta de uma página para a Oakridge Paper e responder sobre o sentido.",
+   "perg": "How many employees are in the proposal?",
+   "pula": "Pule o Look closer."
+  },
+  "dialogo": {
+   "obj": "Escuta: a Nora Bell pergunta sobre treinamento, licenças SAP e viagens.",
+   "perg": "Is training included?",
+   "pula": "Ouça uma vez e faça duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar frases sem -s e sem pronome objeto com as certas.",
+   "perg": "I’ll send today, or I’ll send it today?",
+   "pula": "Dois pares bastam."
+  },
+  "separa": {
+   "obj": "Separar oito itens entre incluído e não incluído, dizendo a frase inteira antes.",
+   "perg": "Does it include travel?",
+   "pula": "Cinco itens bastam."
+  },
+  "escolha": {
+   "obj": "Debate curto: desconto é boa ideia? Você pega o outro lado.",
+   "perg": "Is a discount a good idea? Why?",
+   "pula": "Um debate só."
+  },
+  "formulario": {
+   "obj": "Preencher o CRM depois da ligação a partir das notas do Leo.",
+   "perg": "What is the next step?",
+   "pula": "Só os campos principais."
+  },
+  "cartao": {
+   "obj": "Escrever o resumo de quatro linhas de uma proposta real e dizer ao cliente.",
+   "perg": "What does your proposal include?",
+   "pula": "Duas linhas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can” da unidade.",
+   "perg": "Can you say what is included?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Includes / doesn’t include e it / them sobre coisas reais da vida e do trabalho do aluno.",
+   "perg": "What does your service include?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas opções de proposta e dizer o porquê.",
+   "perg": "Which one is better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno vende o próprio serviço e o cliente pergunta o que está incluído.",
+   "perg": "Does it include training?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "What’s included in your life?",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "It includes…",
+    "It doesn’t include…",
+    "it",
+    "them"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR SERVICE",
+     "q": "What does your service include?",
+     "fup": "What doesn’t it include?",
+     "st": [
+      "It includes …",
+      "It doesn’t include …"
+     ],
+     "ex": "It includes two meetings a month. It doesn’t include travel."
+    },
+    {
+     "k": "YOUR PHONE PLAN",
+     "q": "Does your phone plan include internet?",
+     "fup": "Is it enough?",
+     "st": [
+      "Yes, it includes …",
+      "No, it doesn’t include …"
+     ],
+     "ex": "Yes, it includes 20 GB. It’s enough for me."
+    },
+    {
+     "k": "A HOTEL",
+     "q": "Does a good hotel include breakfast?",
+     "fup": "Do you eat it?",
+     "st": [
+      "A good hotel includes …",
+      "I eat it / I don’t eat it."
+     ],
+     "ex": "A good hotel includes breakfast. I always eat it!"
+    },
+    {
+     "k": "YOUR PROPOSALS",
+     "q": "When do you send your proposals?",
+     "fup": "Do clients read them?",
+     "st": [
+      "I send them …",
+      "They read them / don’t read them …"
+     ],
+     "ex": "I send them on the same day. Clients read them fast."
+    },
+    {
+     "k": "YOUR SALARY",
+     "q": "Does your job include benefits?",
+     "fup": "Which one do you like?",
+     "st": [
+      "It includes …",
+      "I like … because …"
+     ],
+     "ex": "It includes health insurance. I like it because it’s good."
+    },
+    {
+     "k": "DISCOUNTS",
+     "q": "Do you give discounts?",
+     "fup": "When?",
+     "st": [
+      "Yes, I give them when …",
+      "No, I don’t give them."
+     ],
+     "ex": "Yes, I give them when a client signs for one year."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "it includes",
+    "it doesn’t include"
+   ],
+   "rodadas": [
+    {
+     "q": "One price that includes everything, or a price with extras?",
+     "a": "Everything included",
+     "b": "Price with extras",
+     "fa": [
+      "Everything included. It’s simple for the client."
+     ],
+     "fb": [
+      "Extras. The first price is lower."
+     ]
+    },
+    {
+     "q": "Include training for free, or charge for it?",
+     "a": "Free",
+     "b": "Charge for it",
+     "fa": [
+      "Free. Clients love it."
+     ],
+     "fb": [
+      "Charge for it. Training takes time."
+     ]
+    },
+    {
+     "q": "A one-page proposal or a ten-page proposal?",
+     "a": "One page",
+     "b": "Ten pages",
+     "fa": [
+      "One page. Clients read it."
+     ],
+     "fb": [
+      "Ten pages. It includes all the details."
+     ]
+    },
+    {
+     "q": "Send the proposal today, or wait one day and check it?",
+     "a": "Send it today",
+     "b": "Check it first",
+     "fa": [
+      "Send it today. The client is waiting."
+     ],
+     "fb": [
+      "Check it first. Mistakes are expensive."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "Sell your own service.",
+   "p": "Your teacher is a new client.",
+   "aluno": "Listen to your teacher’s question. Answer as the seller of your own service.",
+   "perguntas": [
+    "What does your service include?",
+    "Does it include training?",
+    "Is travel included?",
+    "Does the price include support?",
+    "When can you send the proposal?",
+    "Do you check the reports before you send them?"
+   ],
+   "st": [
+    "It includes …",
+    "It doesn’t include …",
+    "I’ll send it …"
+   ],
+   "ex": "It includes support, but it doesn’t include travel. I’ll send it today."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Every Last Cookie · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A2 · Unit 4 · How much and who</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Every Last Cookie · A2 Unit 4 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new A2 lesson on all / every / some / any / none / no, and everybody / nobody / somebody with a singular verb.</p><p style="margin:0 0 6px"><b>The story:</b> The cookie jar in the office kitchen (invented company) was full on Monday and empty on Tuesday. Notes on the fridge, three colleagues to question, and the CEO with crumbs on his desk.</p><p style="margin:0 0 6px"><b>About 45 min:</b> I · Notes on the Fridge (9) · II · Every or All? (9) · III · The Investigation (15) · IV · Place Your Bet (6) · V · Would You Rather? (6).</p><p style="margin:0"><b>Open with:</b> “Is there a kitchen where you work or study? What is in it?”</p></div><!--/prep-->
+    <p>A light office mystery. The key contrasts: every + singular × all + plural; some (+) × any (− ?); nobody = already negative. In the mission, play the CEO a bit guilty, so the student can accuse him at the end.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>all + plural · every + singular · some × any · none / no · everybody / nobody / somebody + singular verb · only one negative</p>
+    <h4>NOTES ON THE FRIDGE</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>EVERY OR ALL?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>THE INVESTIGATION</h4>
+    <p>You are each colleague. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then the student tells the boss what each colleague said. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>every cookies (every cookie)</i>, <i>all the cookie (all the cookies)</i>, <i>I didn’t eat some (any)</i>, <i>Nobody didn’t (Nobody ate)</i>, <i>Everybody are (Everybody is)</i>. A2: one correction per answer is enough.</p>
+    <!--conversa--><h4>PLACE YOUR BET (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the investigation (the CEO did it!), your student bets on the rest of the week: what Mr. Grant does on Wednesday, what the team does, and how many cookies are in the jar on Friday. Let them choose and say why, wait five seconds in silence, use the PUSH line (only you see it), and only then tap <b>Check what happened</b>. Any bet is fine: the point is the reason (every, some, none, nobody). Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 6 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Notes on the Fridge.</li>
+      <li><b>Focus</b>: II · Every or All?.</li>
+      <li><b>Out loud</b>: III · The Investigation, IV · Place Your Bet and V · Would You Rather?.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* EVERY LAST COOKIE (Main A2 · Unit 4) · pergunta-surpresa · 27/10/2026 · all / every / some / any / none */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Is there a snack you eat every day?',
+    opc: ['Yes, every day', 'Some days', 'No, none'], st: ['I eat … every day.', 'I don’t eat any …'],
+    ex: 'Yes. I eat some chocolate every day, after lunch.', push: 'Do you share it? Yes or no?' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Food in the office kitchen: should everybody share?',
+    opc: ['Yes, all of it', 'Some of it', 'No, none of it'], st: ['I think everybody should …', 'Nobody should …'],
+    ex: 'Some of it. Everybody can share cookies, but nobody should eat my lunch!', push: 'Has anybody ever eaten YOUR food?' },
+  { cena: 'missao', tipo: 'What if', q: 'You find out your boss ate all the cookies. What do you do?',
+    opc: ['Tell everybody', 'Tell nobody', 'Talk to the boss'], st: ['I’d tell …', 'I wouldn’t say anything to …'],
+    ex: 'Tell nobody. Some battles aren’t worth it!', push: 'And if it was your best friend at work?' },
+  { cena: 'escolha', tipo: 'Would you rather', q: 'Would you rather have no coffee or no snacks at work for a month?',
+    opc: ['No coffee', 'No snacks'], st: ['I’d rather have no …, because …'],
+    ex: 'No snacks. I can’t do anything without coffee in the morning!', push: 'And for a whole year?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* EVERY LAST COOKIE (Main A2 · Unit 4) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A aposta entra DEPOIS de "III · The Investigation" (nenhuma cena sai: a aula tinha 39 min e nenhuma extra;
+   fica em ~45). A aula já tinha o papel (III, interrogar três colegas) e o would you rather do fim (V, escolhas
+   soltas); faltava apostar no enredo: o caso fechou (foi o CEO), e agora? Três apostas sobre a semana do
+   escritório; o botão Check mostra o que aconteceu. Não antes do III, para não estragar a descoberta.
+   all / every / some / any / none / nobody / everybody nos iniciadores e nas revelações. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'aposta', apos: 'missao', est: 'o', min: 6, img: 'conversa', rot: 'Place Your Bet',
+    t: 'Case closed. What happens next?',
+    p: 'Bet on each part of the story and say why. Then check what happened.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Wednesday', sit: 'Everybody knows: Mr. Grant ate all forty cookies.',
+        q: 'What does Mr. Grant do on Wednesday?', opc: ['Buys a new jar', 'Says nothing', 'Blames the cat'],
+        st: ['I bet he …', 'He didn’t say anything, so …', 'Nobody …'],
+        ex: 'I bet he buys a new jar. Everybody is angry, and he is the CEO: he has money!',
+        push: 'Would YOU say sorry in front of everybody?',
+        rot_revela: 'Check what happened', revela: 'He buys a new jar with forty cookies and a note: “Every cookie is for everybody. Sorry!”' },
+      { tag: 'The team', sit: 'There is a new jar in the kitchen, and a note from the CEO.',
+        q: 'What does the team do?', opc: ['Everybody forgives him', 'Nobody talks to him', 'Some hide their cookies'],
+        st: ['I think everybody …', 'Some people …, but nobody …'],
+        ex: 'Some people hide their cookies. Not everybody believes him!',
+        push: 'Tom from IT eats only two. Does he forgive the CEO? Yes or no?',
+        rot_revela: 'Check what happened', revela: 'Some people forgive him. Tom hides some cookies in his desk… just in case.' },
+      { tag: 'Friday', sit: 'Friday, 5 PM. The jar was full on Wednesday.',
+        q: 'How many cookies are in the jar now?', opc: ['All of them', 'Some', 'None'],
+        st: ['I bet there are …', 'There aren’t any …, because …'],
+        ex: 'None! This is an office. Everybody loves free cookies.',
+        push: 'If you work there, how many do you eat in a week?',
+        rot_revela: 'Check what happened', revela: 'None again! But this time every person ate two, and nobody is angry.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "The jar is empty. The notes are angry.",
+   "p": "Read the notes aloud. Then look closer."
+  },
+  "descobre": {
+   "t": "Small words that count.",
+   "p": "Compare A and B. Which is right? Why?"
+  },
+  "missao": {
+   "t": "Three colleagues. One empty jar.",
+   "p": "Ask each one five questions. Tell the boss."
+  },
+  "cv-aposta": {
+   "t": "Case closed. What happens next?",
+   "p": "Bet on each part. Say why. Then check."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose. Say why with all, every, some or none."
+  }
+ },
+ "prep": {
+  "obj": "All / every / some / any / none / no e everybody / nobody + verbo no singular: o pote de biscoitos do escritório estava cheio na segunda e vazio na terça.",
+  "armadilha": "O português aceita dupla negação e “todo mundo” no plural: “Nobody didn’t eat”, “Everybody are”. Também “every cookies”, “all the cookie” e “I didn’t eat some” (any).",
+  "pal": [
+   "every",
+   "all",
+   "some",
+   "any",
+   "none",
+   "nobody",
+   "everybody",
+   "somebody"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: o mistério do pote de biscoitos do escritório.",
+   "perg": "Is there a kitchen where you work or study?",
+   "pula": "Só leia o título e comece."
+  },
+  "leitura": {
+   "obj": "Leitura dos bilhetes na geladeira em voz alta, perguntas de sentido e o padrão.",
+   "perg": "Who is angry, and why?",
+   "pula": "Leia e pule o Look closer."
+  },
+  "descobre": {
+   "obj": "Every + singular x all + plural, some x any, nobody já negativo; depois as armadilhas.",
+   "perg": "Why “every cookie”, not “every cookies”?",
+   "pula": "Três pares bastam."
+  },
+  "missao": {
+   "obj": "Você é cada colega; o aluno pergunta e conta ao chefe. Faça o CEO meio culpado.",
+   "perg": "Did you eat any cookies on Monday?",
+   "pula": "Dois colegas bastam."
+  },
+  "cv-aposta": {
+   "obj": "O CEO foi pego: o aluno aposta no resto da semana com every, some, none, nobody.",
+   "perg": "How many cookies are in the jar on Friday?",
+   "pula": "Uma aposta basta."
+  },
+  "escolha": {
+   "obj": "Would you rather: A ou B, com porquê e all / every / some / none.",
+   "perg": "Which one, and why?",
+   "pula": "Duas perguntas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre trabalho, casa e comida com all / every / some / any / nobody.",
+   "perg": "Does everybody in your office drink coffee?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre regras de cozinha compartilhada, com quantificadores.",
+   "perg": "A shared jar or nobody’s jar?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o Mr. Grant, o CEO com farelos na mesa; você interroga.",
+   "perg": "Mr. Grant, did you eat every cookie?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about your office.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "every",
+    "all",
+    "some",
+    "any",
+    "nobody",
+    "everybody"
+   ],
+   "cartas": [
+    {
+     "k": "THE OFFICE",
+     "q": "Does everybody at your work drink coffee?",
+     "fup": "Is there anybody who doesn’t?",
+     "st": [
+      "Everybody …",
+      "Nobody …"
+     ],
+     "ex": "Almost everybody drinks coffee. Nobody drinks tea."
+    },
+    {
+     "k": "YOUR FRIDGE",
+     "q": "Is there any food in your fridge right now?",
+     "fup": "Is there any chocolate?",
+     "st": [
+      "There is some …",
+      "There isn’t any …"
+     ],
+     "ex": "There is some cheese, but there isn’t any milk."
+    },
+    {
+     "k": "EVERY DAY",
+     "q": "What do you do every morning?",
+     "fup": "And all weekend?",
+     "st": [
+      "Every morning, I …",
+      "All weekend, I …"
+     ],
+     "ex": "Every morning I walk my dog. All weekend I sleep!"
+    },
+    {
+     "k": "YOUR FRIENDS",
+     "q": "Do all your friends live in your city?",
+     "fup": "Do some live abroad?",
+     "st": [
+      "All of them …",
+      "Some of them …",
+      "None of them …"
+     ],
+     "ex": "Some of them live in São Paulo. None of them live abroad."
+    },
+    {
+     "k": "SHARING",
+     "q": "Do you share your food at work?",
+     "fup": "Does somebody take your food?",
+     "st": [
+      "I share some …",
+      "Nobody takes …",
+      "Somebody always …"
+     ],
+     "ex": "Somebody always eats my yogurt from the fridge!"
+    },
+    {
+     "k": "SECRETS",
+     "q": "Does everybody in your family know your secrets?",
+     "fup": "Does anybody know all of them?",
+     "st": [
+      "Nobody knows …",
+      "Somebody knows …"
+     ],
+     "ex": "Nobody knows all my secrets. My sister knows some."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "every",
+    "all",
+    "some",
+    "nobody",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A cookie jar for everybody or a name on every snack?",
+     "a": "For everybody",
+     "b": "A name on every snack",
+     "fa": [
+      "For everybody. Sharing is nice."
+     ],
+     "fb": [
+      "A name on everything. Then nobody steals."
+     ]
+    },
+    {
+     "q": "Eat all the cookies today or some every day?",
+     "a": "All today",
+     "b": "Some every day",
+     "fa": [
+      "All today. Nobody can stop me!"
+     ],
+     "fb": [
+      "Some every day. Then I always have some."
+     ]
+    },
+    {
+     "q": "The boss eats the cookies: say something or say nothing?",
+     "a": "Say something",
+     "b": "Say nothing",
+     "fa": [
+      "Say something. Every person must follow the rules."
+     ],
+     "fb": [
+      "Say nothing. Nobody wants problems with the boss."
+     ]
+    },
+    {
+     "q": "Angry notes on the fridge: good idea or bad idea?",
+     "a": "Good",
+     "b": "Bad",
+     "fa": [
+      "Good. Everybody reads them."
+     ],
+     "fb": [
+      "Bad. Nobody likes angry notes."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody ate the last cookie."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Mr. Grant now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Mr. Grant, the CEO.",
+   "perguntas": [
+    "Mr. Grant, did you eat any cookies on Monday?",
+    "Why are there crumbs on your desk?",
+    "Did you eat every cookie in the jar?",
+    "Did anybody see you in the kitchen?",
+    "Is everybody in the team angry with you?",
+    "Will you buy some new cookies for everybody?"
+   ],
+   "st": [
+    "I ate some …",
+    "Nobody saw …",
+    "Everybody is …"
+   ],
+   "ex": "OK, I ate some cookies. But I didn’t eat all of them!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

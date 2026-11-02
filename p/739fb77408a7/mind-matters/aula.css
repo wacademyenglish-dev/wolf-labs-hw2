@@ -1,0 +1,79 @@
+/* ============================================================
+   MIND MATTERS · THE CERTAINTY DIAL · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: clínica à noite, verde-azulado
+   frio; o MOSTRADOR de certeza (meia-lua em três faixas: vermelho 0%,
+   âmbar 50%, verde 100%) e a PRANCHETA escura com a ficha. Acento: menta.
+   ============================================================ */
+:root{
+  --noite:#080c0d; --noite-rgb:8,12,13; --tinta:#e6efee;
+  --t1:#ecf3f2; --t2:#c3d0cf; --t2-rgb:195,208,207; --t3:#869896;
+  --ac:#6fd0b4; --ac2:#a8ecd8; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(230,239,238,.05); --vidro2:rgba(230,239,238,.085); --vidro3:rgba(230,239,238,.12);
+  --fio:rgba(200,222,220,.12); --fio2:rgba(200,222,220,.22); --luz:rgba(230,239,238,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#062019}
+.btn.cheio{color:#062019}
+.capa{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(66px,6.4vw,124px)/.92 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+.capa-d{display:grid;justify-items:center}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:48px;padding:0 20px;font:700 clamp(16px,1.2vw,20px) var(--mono)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{text-align:left;padding:10px 14px}
+.versoes.dois-v{grid-template-columns:1fr 1fr;gap:12px} .dois-v .versao{padding:18px 20px;font-size:clamp(20px,1.6vw,26px)}
+.ini{margin:0;font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--ac2)}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .balao p{margin:0;font:700 clamp(20px,1.6vw,26px)/1.4 var(--disp)}
+.sit{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2)} .sit small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .sit b{font:700 clamp(20px,1.6vw,28px)/1.35 var(--disp)}
+.fitas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.fita{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .fita small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .fita b{font:700 clamp(16px,1.25vw,20px)/1.35 var(--disp)}
+.aberta{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center;max-height:calc(100vh / var(--zv,1) - 330px)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(8,12,13,.85);font:700 13px var(--mono);color:var(--ac2)}
+
+/* o mostrador */
+.mostrador{display:block;width:100%;max-width:440px}
+.mostrador text{font:700 11px var(--mono);fill:#8fa0b2;letter-spacing:.08em} .mostrador text.q{font:200 56px var(--disp);fill:#5d6b7a} .mostrador text.pct{font:700 22px var(--mono);fill:#e6efee}
+.agulha{stroke:#e6efee;stroke-width:5;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(111,208,180,.6))}
+.mostrador.grande{max-width:400px} .mostrador.mini{max-width:200px;margin:0 auto}
+.mesa-m{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:22px;align-items:start;margin-top:10px}
+.quadro-m{display:grid;place-items:center;padding:22px;border-radius:var(--r1);background:#0b1213!important}
+.quadro-m .mostrador{max-width:min(460px,calc((100vh / var(--zv,1) - 380px) * 1.58))}
+
+/* a prancheta */
+.prancheta{position:relative;display:grid;gap:10px;justify-items:center;width:min(100%,460px);padding:34px 22px 22px;border-radius:18px;background:linear-gradient(180deg,#16201f,#0f1615);border:1px solid #24312f;box-shadow:0 20px 40px rgba(0,0,0,.6)}
+.prancheta>small{font:700 11px var(--mono);letter-spacing:.16em;color:var(--t3)}
+.clipe{position:absolute;top:-10px;left:50%;width:110px;height:24px;margin-left:-55px;border-radius:8px;background:#3a4646;border:1px solid #556363}
+.linha-f{margin:0;font:700 clamp(20px,1.6vw,26px) var(--disp);color:var(--ac2)}
+.prancheta.ficha{justify-items:stretch;width:100%}
+.linha-c{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:center;padding:10px 12px;border:0;border-bottom:1px dashed #2b3a38;background:none;color:var(--t2);text-align:left;cursor:pointer}
+.linha-c span{font:700 14px var(--mono);color:var(--t3)} .linha-c em{font:600 clamp(15px,1.15vw,19px)/1.35 var(--disp);font-style:normal}
+.linha-c.on{background:rgba(111,208,180,.08);border-radius:10px} .linha-c.on em{color:var(--t1)} .linha-c.feito span{color:var(--ok)}
+.pecas{display:flex;flex-wrap:wrap;gap:8px} .pecas span{padding:8px 14px;border-radius:12px;border:1px dashed var(--fio2);font:700 clamp(16px,1.25vw,20px) var(--mono);color:var(--ac2)}
+
+/* o paciente fala */
+.fala07{display:grid;gap:8px;padding:18px 22px;border-radius:var(--r1)} .fala07 small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)}
+.fala07 p{margin:0;font:600 clamp(18px,1.45vw,24px)/1.4 var(--disp)}
+.notas{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.nota{display:grid;gap:6px;padding:10px 14px;border-radius:16px} .nota b{font:700 clamp(15px,1.15vw,19px)/1.3 var(--disp)} .nota.feito{border-color:rgba(143,217,162,.4)!important}
+.nota .aprova,.nota .recusa{margin:0;font-size:14px}
+
+/* as bolsas */
+.abas-b{display:flex;justify-content:center;gap:8px;margin-bottom:6px}
+.q-bolsa{display:flex;gap:12px;align-items:center;padding:10px 14px;border-radius:14px;font:700 clamp(17px,1.3vw,21px)/1.35 var(--disp)} .q-bolsa span{font:700 14px var(--mono);color:var(--ac)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-c,.mesa-m,.capa{grid-template-columns:1fr} .fitas{grid-template-columns:1fr 1fr} }
+@media (max-width:820px){ .fitas,.notas,.versoes.dois-v{grid-template-columns:1fr} }

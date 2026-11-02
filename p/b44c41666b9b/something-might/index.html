@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Something Might Be in the House · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Something Might Be in the House · The Hallway at Night</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Something Might Be in the House · The Hallway at Night</h2>
+    <p>Halloween night. The student is home alone in an old house, the power is out, and there is only a flashlight. Behind every door there is a noise. What is it? Nobody knows, so we guess: <b>It might be the cat. It may be the rain. It might not be a ghost.</b> The grammar is <b>might / may + verb</b> for a possibility now. Nothing jumps and nothing screams: every noise has a silly answer.</p>
+    <h4>THE HALLWAY · THE SHADOWS</h4>
+    <p>Scene II, before the rule: six doors, six noises; the student guesses in their own words, you tap what you heard, then open the door. Scene IV, after the rule: eight shadows on the wall; two guesses each, fast, with might and might not.</p>
+    <h4>THE MISTAKES</h4>
+    <p><i>It can be the cat</i> (can is ability), <i>It might is</i>, <i>It mights</i>, <i>It might to be</i>, <i>It might don’t</i>, <i>Maybe it might</i>.</p>
+    <h4>NO JUMP SCARES</h4>
+    <p>The lesson is spooky, not scary. If a student doesn’t like fear, they can play the brave one: <i>It might just be the wind.</i></p>
+    <!--conversa--><h4>THE NIGHT JURY (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Scene VII is now a jury with clues: three small mysteries in the house (the open fridge, music at 3 AM, wet footprints on the stairs). Your student reads the clues, chooses a verdict and says why with <i>might</i>, <i>may</i>, <i>might not</i> or <i>maybe</i> + a full sentence. Wait five seconds in silence, then use the PUSH line (only you see it). If you hear <i>It can be the cat</i>, just ask: <i>Can, or might?</i> Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Noises at Night, II Six Doors, IV The Flashlight, V Tonight, Maybe, VI Sam Is Scared, VII The Night Jury.</li>
+      <li><b>Focus</b>: III The Rule.</li>
+      <li><b>Write</b>: VIII, three guesses about their own house. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SOMETHING MIGHT BE IN THE HOUSE (Main A2) · pergunta-surpresa · 27/10/2026 · might / may / maybe */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'portas', tipo: 'And you?', q: 'Are you scared in a dark house?',
+    opc: ['Never', 'A little', 'Yes, very!'], st: ['A little. Something might …', 'Never. It’s maybe just …'],
+    ex: 'A little. I always think something might be behind the door.', push: 'What do you do first: light or phone?' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'Sleep alone in an old house, or in a tent in the forest?',
+    opc: ['The old house', 'The tent'], st: ['I’d rather …, because there might be …'],
+    ex: 'The old house. In the forest there might be animals. In a house there may be only a cat.', push: 'For how much money?' },
+  { cena: 'roda', tipo: 'What if', q: 'The power goes off tonight at home. What might you do?',
+    opc: ['Sleep early', 'Tell stories', 'Look for candles'], st: ['I might …', 'We may …'],
+    ex: 'Tell stories. My brother and I might tell scary stories with a flashlight.', push: 'Tell me a short one, in three sentences.' },
+  { cena: 'sam', tipo: 'Opinion', q: 'Halloween in Brazil: a fun idea or not for us?',
+    opc: ['Fun!', 'Not for us', 'Only for kids'], st: ['It might be …', 'Maybe people …'],
+    ex: 'Only for kids. It might be fun at school, but adults may not like it.', push: 'Would you wear a costume? Which one?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SOMETHING MIGHT BE IN THE HOUSE (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O júri com provas entra no lugar de "VII · Quick Check" (extra, prática controlada: dizer e tocar) e
+   passa a ser do núcleo: a decisão que faltava (I, II, IV e V já são conversa). Três mistérios da
+   mesma casa, sem susto; o aluno dá o veredito com might / may / might not / maybe. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'juri', troca: 'quiz', est: 'o', min: 7, img: 'cozinha', rot: 'The Night Jury', t: 'Three mysteries in the house. You decide.',
+    p: 'Read the clues. Choose a verdict, or say your own. Say why with might or may. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The kitchen', sit: 'The kitchen light is on. The fridge is open.',
+        provas: ['Cat hair on the floor', 'Grandpa can’t sleep', 'A cold pizza is missing'],
+        q: 'Who is in the kitchen?', opc: ['The cat', 'Grandpa', 'Both of them'],
+        st: ['It might be …, because …', 'It may not be the …', 'Maybe it’s …'],
+        ex: 'Both of them. Grandpa might be hungry, and the cat might want the pizza too!',
+        push: 'Grandpa says: “I’m in bed!” Do you believe him?' },
+      { tag: 'Upstairs', sit: 'Music upstairs, very quiet, at 3 AM.',
+        provas: ['An old radio is in the attic', 'The window is open, and it’s windy', 'Your phone isn’t in your pocket'],
+        q: 'What is the music?', opc: ['The old radio', 'Your phone', 'The wind'],
+        st: ['It might be my …', 'It might not be …, because …', 'Maybe the … is …'],
+        ex: 'My phone. It might be under my pillow. It may be my alarm!',
+        push: 'Would you go up the stairs, or stay in bed? Why?' },
+      { tag: 'The stairs', sit: 'Small wet footprints on the stairs.',
+        provas: ['It’s raining outside', 'The dog was in the garden', 'The prints have five little toes'],
+        q: 'Whose footprints are they?', opc: ['The dog’s', 'A child’s', 'A neighbour’s'],
+        st: ['They might be …', 'They may not be the dog’s, because …', 'Maybe a …'],
+        ex: 'A child’s. Five little toes! It might be my little brother. He may want a glass of water.',
+        push: 'Your little brother is at a friend’s house tonight. Now what?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Your house at night. What do you hear?",
+   "p": "Your teacher is the host. Answer out loud."
+  },
+  "portas": {
+   "t": "Six doors, six noises.",
+   "p": "Tap a door. Guess out loud. Then open it."
+  },
+  "regra": {
+   "t": "A guess about now: might or may.",
+   "p": "Say each wrong line right. Then tap it."
+  },
+  "sombra": {
+   "t": "Eight shadows. Two guesses each.",
+   "p": "Listen to the clue. Say might, then might not."
+  },
+  "roda": {
+   "t": "What might happen tonight?",
+   "p": "Spin. Answer with might or might not. Say why."
+  },
+  "sam": {
+   "t": "Sam is alone and scared.",
+   "p": "Your teacher is Sam. Calm Sam down with might."
+  },
+  "cv-juri": {
+   "t": "Three mysteries. You decide.",
+   "p": "Read the clues. Pick a verdict. Say why with might."
+  },
+  "fim": {
+   "t": "What might be in YOUR house tonight?",
+   "p": "Three guesses: might, may, might not. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Might / may + verbo para uma possibilidade agora: noite de Halloween, sem luz, só uma lanterna, e um barulho atrás de cada porta.",
+  "armadilha": "O brasileiro traduz “pode ser o gato” como “It can be the cat”; também diz “It might is”, “It mights”, “It might to be” e junta “Maybe it might”.",
+  "pal": [
+   "might",
+   "may",
+   "might not",
+   "noise",
+   "flashlight",
+   "shadow",
+   "the power is out",
+   "maybe"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a noite: a luz acabou, só uma lanterna e barulhos na casa.",
+   "perg": "Are you scared of the dark?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: os barulhos da casa do aluno à noite.",
+   "perg": "What noises do you hear at home at night?",
+   "pula": "Duas perguntas bastam."
+  },
+  "portas": {
+   "obj": "Seis portas: o aluno chuta com as próprias palavras antes da regra.",
+   "perg": "What is it, do you think?",
+   "pula": "Quatro portas bastam."
+  },
+  "regra": {
+   "obj": "A regra: might/may + verbo; corrigir as frases erradas em voz alta.",
+   "perg": "Can, or might?",
+   "pula": "Corte duas frases; não corte “It might to be”."
+  },
+  "sombra": {
+   "obj": "Oito sombras, dois chutes rápidos: might e might not.",
+   "perg": "What might it be? What might it not be?",
+   "pula": "Cinco sombras bastam."
+  },
+  "roda": {
+   "obj": "Roleta: o que pode acontecer hoje à noite, com might / might not e o porquê.",
+   "perg": "What might happen tonight, and why?",
+   "pula": "Três giros bastam."
+  },
+  "sam": {
+   "obj": "O professor é o Sam com medo; o aluno acalma com might, may, might not.",
+   "perg": "Sam hears a noise. What might it be?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-juri": {
+   "obj": "Júri: três mistérios (geladeira aberta, música às 3h, pegadas molhadas); veredito com might/may.",
+   "perg": "Who opened the fridge, do you think?",
+   "pula": "Dois mistérios bastam."
+  },
+  "fim": {
+   "obj": "Escrita: três palpites sobre a casa do próprio aluno, vai para o My notes.",
+   "perg": "What might be in your house tonight?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com palpites sobre o agora: might, may, might not.",
+   "perg": "Where might your phone be right now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas explicações e defender com might.",
+   "perg": "Which one might be true, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Sam, sozinho em casa, e explica cada barulho com might.",
+   "perg": "Sam, what might that noise be?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More guesses about right now.",
+   "p": "Pick a card. Guess out loud.",
+   "palavras": [
+    "might",
+    "may",
+    "might not"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR NEIGHBOR",
+     "q": "What might your neighbor be doing right now?",
+     "fup": "Might they be asleep?",
+     "st": [
+      "They might be …",
+      "They may not be …"
+     ],
+     "ex": "They might be at work. They may not be home."
+    },
+    {
+     "k": "THE PHONE",
+     "q": "Your phone rings. You don’t know the number. Who might it be?",
+     "fup": "Do you answer?",
+     "st": [
+      "It might be …",
+      "It might not be …"
+     ],
+     "ex": "It might be the bank. It might not be important."
+    },
+    {
+     "k": "THE DOOR",
+     "q": "Someone knocks at 11 PM. Who might it be?",
+     "fup": "Do you open the door?",
+     "st": [
+      "It may be …",
+      "It might not be …"
+     ],
+     "ex": "It may be my brother. It might not be a stranger."
+    },
+    {
+     "k": "THE WEATHER",
+     "q": "Look outside. What might the weather be tonight?",
+     "fup": "Do you need an umbrella?",
+     "st": [
+      "It might …",
+      "It may not …"
+     ],
+     "ex": "It might rain tonight. It may not be cold."
+    },
+    {
+     "k": "YOUR FRIDGE",
+     "q": "What might be in your fridge right now?",
+     "fup": "Is there something old?",
+     "st": [
+      "There might be …",
+      "There may not be …"
+     ],
+     "ex": "There might be some cheese. There may not be any milk."
+    },
+    {
+     "k": "YOUR PET",
+     "q": "Where might your pet, or a friend’s pet, be right now?",
+     "fup": "What might it be doing?",
+     "st": [
+      "It might be …",
+      "It may be …"
+     ],
+     "ex": "My cat might be on the sofa. It may be asleep."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Two answers. Pick one.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "might",
+    "may",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A noise in the kitchen: the cat or the wind?",
+     "a": "The cat",
+     "b": "The wind",
+     "fa": [
+      "It might be the cat, because it is hungry."
+     ],
+     "fb": [
+      "It may be the wind, because the window is open."
+     ]
+    },
+    {
+     "q": "A light in the old house: a ghost or a neighbor?",
+     "a": "A ghost",
+     "b": "A neighbor",
+     "fa": [
+      "It might be a ghost. The house is very old."
+     ],
+     "fb": [
+      "It may be a neighbor with a flashlight."
+     ]
+    },
+    {
+     "q": "Wet footprints on the stairs: the rain or a person?",
+     "a": "The rain",
+     "b": "A person",
+     "fa": [
+      "It might be the rain. The door is open."
+     ],
+     "fb": [
+      "It might be a person, because they are big."
+     ]
+    },
+    {
+     "q": "Music at 3 AM: the radio or the TV?",
+     "a": "The radio",
+     "b": "The TV",
+     "fa": [
+      "It might be the old radio. It turns on alone."
+     ],
+     "fb": [
+      "It may be the TV. Nobody turned it off."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody knows, and that is the fun."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Sam now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Sam.",
+   "perguntas": [
+    "Sam, are you alone in the house tonight?",
+    "You hear a noise upstairs. What might it be?",
+    "There is a shadow on the wall. What might it be?",
+    "The fridge is open. Who might it be?",
+    "Might it be a ghost?",
+    "The power comes back. How do you feel now?"
+   ],
+   "st": [
+    "It might be …",
+    "It may be …",
+    "It might not be …"
+   ],
+   "ex": "It might be the cat. It might not be a ghost."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

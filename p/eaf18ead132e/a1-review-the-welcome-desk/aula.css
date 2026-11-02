@@ -1,0 +1,107 @@
+/* ============================================================
+   AS REVISÕES · o visual comum (kit/revisao)          15/10/2026
+   Verde-petróleo quase preto, latão, fichas pequenas; títulos em Marcellus.
+   A cor de destaque muda por unidade (REV.cor no aula.js). Nada de campo claro grande.
+   ============================================================ */
+:root{
+  --noite:#081312; --noite-rgb:8,19,18; --tinta:#eaf2ef;
+  --t1:#eef5f2; --t2:#bccbc6; --t2-rgb:188,203,198; --t3:#86998f;
+  --ac:#d6a756; --ac2:#f0cf8c; --bt:#b88a3e; --bt2:#f0cf8c; --pet:#1d4a46;
+  --vidro:rgba(234,242,239,.05); --vidro2:rgba(234,242,239,.085); --vidro3:rgba(234,242,239,.12);
+  --fio:rgba(214,167,86,.16); --fio2:rgba(214,167,86,.3); --luz:rgba(234,242,239,.17);
+  --ok:#9bd69f; --am:#f0b866; --erro:#ff7a72; --lil:#c3a6ff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --hotel:'Marcellus',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#241703}
+.btn.cheio{color:#241703}
+.cab h1{font-family:var(--hotel);font-weight:400;letter-spacing:.01em}
+
+/* a capa */
+.capa{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;align-items:center}
+.capa .kick{font-family:var(--ui);letter-spacing:.16em}
+.capa h1{margin:12px 0 16px;font:400 clamp(54px,5.8vw,112px)/.98 var(--hotel);letter-spacing:.01em}
+.capa h1 b{display:block;color:var(--ac2);font-weight:400}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--t1)}
+.capa-r{display:grid;gap:18px;justify-items:center;text-align:center}
+.capa-foto{width:min(360px,100%);aspect-ratio:16/10;border-radius:18px;background-size:cover;background-position:center;box-shadow:0 0 0 1px var(--fio2),0 18px 40px rgba(0,0,0,.6)}
+.capa-nota{margin:0;max-width:20em;font:600 16px/1.5 var(--disp);color:var(--t2)}
+.placa-latao{padding:12px 30px;border-radius:8px;background:linear-gradient(180deg,#e5c27c,#a8792f);box-shadow:0 0 0 3px rgba(214,167,86,.25),0 16px 34px rgba(0,0,0,.6)}
+.placa-latao span{font:400 clamp(22px,2vw,30px) var(--hotel);letter-spacing:.3em;color:#2a1a04}
+
+/* I · as seis portas */
+.portas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.porta{position:relative;display:grid;gap:4px;justify-items:start;align-content:end;min-height:150px;padding:14px 16px;border-radius:16px 16px 6px 6px;border:2px solid var(--fio2);background:linear-gradient(180deg,rgba(29,74,70,.55),rgba(8,19,18,.9));color:var(--t1);cursor:pointer;font:inherit;text-align:left}
+.porta b{font:400 clamp(30px,2.6vw,42px)/1 var(--hotel);color:var(--ac2)}
+.porta span{font:800 12px var(--ui);letter-spacing:.12em;color:var(--t2)}
+.porta i{position:absolute;right:14px;top:50%;width:10px;height:10px;border-radius:50%;background:var(--ac);box-shadow:0 0 10px rgba(214,167,86,.6)}
+.porta.on{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac) inset}
+.porta.ok{border-color:var(--ok);background:linear-gradient(180deg,rgba(155,214,159,.2),rgba(8,19,18,.9))} .porta.ok i{background:var(--ok);box-shadow:0 0 10px rgba(155,214,159,.6)}
+.porta.rev{border-color:var(--am);background:linear-gradient(180deg,rgba(240,184,102,.18),rgba(8,19,18,.9))} .porta.rev i{background:var(--am)}
+.porta:focus-visible{outline:3px solid var(--ac2);outline-offset:3px}
+.mesa-card{display:grid;gap:14px;padding:clamp(18px,2.4vw,28px);border-radius:var(--r1);background:var(--vidro2);border:1px solid var(--fio2)}
+.mesa-card small{font:800 12px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.mesa-card h2{margin:0;font:700 clamp(20px,2vw,28px)/1.3 var(--disp);color:var(--t1)}
+.mesa-card>p{margin:0;color:var(--t2);font-size:18px}
+.para-rev{padding:10px 14px;border-radius:12px;background:rgba(240,184,102,.1);border:1px solid rgba(240,184,102,.35)} .para-rev b{color:var(--am)}
+.pq{margin:0;font:700 clamp(21px,1.9vw,28px)/1.35 var(--disp);color:var(--t1)}
+.pq-f{display:block;margin:0;font:600 clamp(17px,1.4vw,21px)/1.4 var(--disp);color:var(--ok)}
+.pratos-bt{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* II · a recepção: as fichas e as perguntas */
+.hospedes{display:grid;gap:10px}
+.ficha{display:grid;gap:4px;padding:12px 16px;border-radius:12px;border:1px solid var(--fio);background:rgba(234,242,239,.035);opacity:.6}
+.ficha.on{opacity:1;border-color:var(--ac);background:rgba(214,167,86,.07)}
+.ficha.feita{opacity:1;border-color:rgba(155,214,159,.5)}
+.ficha small{font:800 11px var(--ui);letter-spacing:.16em;color:var(--ac2)}
+.ficha-l{display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px;align-items:baseline;border-bottom:1px dashed rgba(214,167,86,.18);padding:3px 0}
+.ficha-l span{font:800 11px var(--ui);letter-spacing:.12em;color:var(--t3)}
+.ficha-l b{min-height:1.3em;font:400 clamp(17px,1.4vw,21px) var(--hotel);color:var(--t1)}
+.perguntas{display:grid;gap:6px}
+.perg-b{display:grid;grid-template-columns:86px minmax(0,1fr);gap:10px;align-items:center;padding:10px 14px;border-radius:12px;border:1px solid var(--fio2);background:var(--vidro);color:var(--t1);font:600 clamp(16px,1.25vw,20px)/1.35 var(--disp);text-align:left;cursor:pointer}
+.perg-b b{font:800 11px var(--ui);letter-spacing:.12em;color:var(--ac2)}
+.perg-b.feita{border-color:var(--ok);background:rgba(155,214,159,.08)} .perg-b.feita b{color:var(--ok)}
+.guest-card{display:grid;gap:6px;padding:12px 16px;border-radius:14px;border:1px dashed var(--fio2);background:rgba(8,19,18,.6)}
+.guest-card small{font:800 11px var(--ui);letter-spacing:.14em;color:var(--ac2)} .guest-card p{margin:0;font-size:15px;color:var(--t2)}
+
+/* IV · a conversa */
+.aberta{position:relative;border-radius:var(--r1);background-size:cover;background-position:center;height:clamp(170px,calc(100vh / var(--zv,1) - 520px),340px);box-shadow:inset 0 0 90px rgba(0,0,0,.6)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(8,19,18,.88);font:800 12px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.pede{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2)} .pede small{font:800 11px var(--ui);letter-spacing:.16em;color:var(--ac2)} .pede b{font:600 clamp(19px,1.5vw,25px)/1.4 var(--disp)}
+
+/* V · I can e o carimbo da unidade */
+.pode-lista{display:grid;gap:8px}
+.pode{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:center;padding:12px 16px;border-radius:14px;border:1px solid var(--fio2);background:var(--vidro);color:var(--t1);font:600 clamp(17px,1.35vw,21px)/1.35 var(--disp);text-align:left;cursor:pointer}
+.pode i{width:26px;height:26px;border-radius:8px;border:2px solid var(--ac)}
+.pode.on{border-color:var(--ok);background:rgba(155,214,159,.08)} .pode.on i{background:var(--ok);border-color:var(--ok)}
+.carimbo-u{display:grid;justify-items:center;gap:4px;width:min(260px,100%);margin:0 auto;padding:22px 18px;border:4px double var(--ac);border-radius:50%;aspect-ratio:1;align-content:center;text-align:center;transform:rotate(-6deg);color:var(--ac2)}
+.carimbo-u small{font:800 12px var(--ui);letter-spacing:.18em}
+.carimbo-u b{font:400 clamp(34px,3vw,48px)/1 var(--hotel)}
+.carimbo-u span{font:600 14px var(--disp);color:var(--t2)}
+.carimbo-u.dado{border-color:var(--ok);color:var(--ok);animation:carimba .4s ease-out}
+@keyframes carimba{from{transform:rotate(-6deg) scale(1.5);opacity:0}}
+
+/* peças comuns */
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:12px;align-content:start;justify-items:stretch}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .capa-r{justify-items:start;text-align:left} }
+@media (max-width:620px){ .portas{grid-template-columns:repeat(2,minmax(0,1fr))} .porta{min-height:110px} .ficha-l,.perg-b{grid-template-columns:70px minmax(0,1fr)} }
+@media (prefers-reduced-motion:reduce){ .carimbo-u.dado{animation:none} }
+
+/* VI · a ponte para o livro seguinte */
+.ponte{display:grid;gap:18px}
+.ponte-cab{display:grid;justify-items:center;gap:2px;text-align:center}
+.ponte-cab small{font:800 12px var(--ui);letter-spacing:.18em;color:var(--ac2)}
+.ponte-cab b{font:400 clamp(64px,7vw,110px)/1 var(--hotel);color:var(--ac2)}
+.ponte-cab span{font:600 clamp(18px,1.5vw,22px) var(--disp);color:var(--t2)}
+.ponte-cartas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ponte-c{display:grid;gap:8px;padding:18px 20px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro2)}
+.ponte-c small{font:800 11px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.ponte-c p{margin:0;font:400 clamp(20px,1.8vw,26px)/1.3 var(--hotel);color:var(--t1)}
+.ponte-c span{font:500 15px/1.45 var(--disp);color:var(--t2)}
+@media (max-width:900px){.ponte-cartas{grid-template-columns:1fr}}

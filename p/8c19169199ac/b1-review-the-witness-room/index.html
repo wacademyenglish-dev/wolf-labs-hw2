@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Witness Room · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B1 · Unit 1 Review · The Witness Room</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Witness Room · B1 Unit 1 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 1 (Telling what happened). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> The winning cake of the town baking contest disappeared at eleven last night. Your student is the detective. You are the three witnesses: the night guard, the other baker and the judge. (The answer: the judge’s dog ate it.)</p><p style="margin:0 0 6px"><b>About 43 min:</b> I · The Ladder (8) · II · The Witness Room (15) · III · The Deal (8) · IV · Your Stories (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Climb the ladder. Six steps, from easy to hard.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>past continuous · past continuous × past simple: when, while · past simple or present perfect · present perfect for experience · present perfect for news · how many times, so far, this week</p>
+    <h4>THE LADDER</h4>
+    <p>Six steps from easy to hard. A good answer: tap <b>Go up</b>. Not yet: <b>Try again</b> on the same step.</p>
+    <h4>THE WITNESS ROOM</h4>
+    <p>You are each witness. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then you are the chief: the student reports with was …ing, when / while and has … since then. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>THE STORY IN ORDER</h4>
+    <p>The events are mixed. The student taps them in order; wrong order shows in red. When it’s right, the student tells the whole story with first, then, after that, finally.</p>
+    <h4>YOUR STORIES</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I was check</i>, <i>I have seen him yesterday</i>, <i>when I was walking, I was hearing a crash</i>, <i>I have went</i>, <i>since two years</i>, <i>did you ever (for have you ever)</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE DEAL (III) AND THE SURPRISE QUESTION</h4>
+    <p>In II your student asks and you answer; in III it is the other way round. They are the baker, you are the embarrassed judge: ask the four questions, then close a deal on the screen. Your secret limit is only on your screen: give in slowly, and only if they use facts from the night. Wait five seconds in silence before each answer and use the PUSH line to make it harder. Recast quietly (was putting, have baked, didn’t see); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Ladder and V · I Can.</li>
+      <li><b>Out loud</b>: II · The Witness Room and III · The Deal and IV · Your Stories.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW B1 · UNIT 1 · THE WITNESS ROOM · pergunta-surpresa · 27/10/2026 · past continuous × past simple × present perfect */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'escada', tipo: 'And you?', q: 'What is the last thing you cooked or baked?',
+    opc: ['Something sweet', 'A real meal', 'I never cook!'], st: ['Last week I made …', 'I’ve never made …', 'I was making … when …'],
+    ex: 'Something sweet. Last Sunday I made a chocolate cake. It was ugly, but everybody ate it.', push: 'Would you enter a contest with it? Yes or no?' },
+  { cena: 'missao', tipo: 'What if', q: 'Your dog eats your neighbour’s birthday cake. What do you say at their door?',
+    opc: ['Say sorry and pay', 'Bake a new one', 'Blame the cat'], st: ['I was …ing when he …', 'I’ve already …', 'I’m so sorry, I didn’t see …'],
+    ex: 'Say sorry and pay. “I was talking on the phone when he jumped on the table. I’ve already ordered a new cake.”', push: 'They are still angry. What else can you do?' },
+  { cena: 'conversa', tipo: 'Opinion', q: 'What is the best excuse for being late?',
+    opc: ['The traffic', 'The alarm', 'The dog'], st: ['I was leaving home when …', 'I’ve used that one …'],
+    ex: 'The dog! I was leaving home when my dog ran away with my shoe. I’ve used it twice.', push: 'Has anyone ever not believed you? What happened?' },
+  { cena: 'pode', tipo: 'Would you rather', q: 'Would you rather win a baking contest or a singing contest?',
+    opc: ['Baking', 'Singing'], st: ['I’d rather …, because I’ve always …', 'I’ve never …, so …'],
+    ex: 'Baking. I’ve never sung in public, and I’ve made good brownies since I was a kid.', push: 'The prize is the same: you sing on TV. Still baking?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW B1 · UNIT 1 · THE WITNESS ROOM · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A negociação entra no lugar de "III · The Story in Order" (tocar os cartões em ordem e contar: prática controlada).
+   Depois do caso fechado (o cachorro do juiz comeu o bolo), a confeiteira negocia com o juiz envergonhado.
+   O II já é papel do professor (testemunha) com o aluno perguntando; aqui é o contrário: o aluno defende o
+   próprio lado e fecha um acordo. A gramática da unidade (was …ing / when / while, did × have done) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'acordo', troca: 'ordem', est: 'o', min: 8, img: 'conversa', rot: 'The Deal', t: 'The judge’s dog ate your cake. Now talk to the judge.',
+    p: 'You are the baker. Your teacher is the judge. Answer his questions in your role, then close a deal. He has a secret limit.',
+    formato: 'papel',
+    aluno: { quem: 'The baker', quer: 'Your prize, or something fair for a week of work.', limite: 'You will bake again, but not for free.' },
+    prof: { quem: 'The judge', quer: 'Close the story fast. The whole town is laughing.', limite: 'Secret: you can pay for a new cake or give a special prize, but the rules say no cake, no first place.' },
+    rot_perg: 'The judge asks',
+    perguntas: [
+      { q: 'So… what were you doing when the cake disappeared?', ex: 'I was putting my things in the car when the guard heard the crash. I wasn’t there!' },
+      { q: 'How long have you been baking? Have you ever won before?', ex: 'I’ve baked cakes since I was twelve. I’ve never won, and this year I was sure I could.' },
+      { q: 'What did you put in that cake? Why was it so special?', ex: 'I used my grandfather’s recipe, and I worked on it for six days.' },
+      { q: 'What have you done since last night?', ex: 'I haven’t slept, I’ve talked to three people, and I’ve thought about this deal!' }
+    ],
+    st: ['I was …ing when …', 'I’ve already …', 'Since last night, I’ve …'],
+    push: 'Play hard: “My dog is just a dog. I didn’t do anything.” Make the baker push back with facts from the night.',
+    acordo: { tag: 'The deal', q: 'What do you both agree on?', opc: ['He pays for a new cake', 'A new judging day', 'A special prize'],
+      st: ['OK, but only if …', 'I’ve lost a week, so …'],
+      ex: 'A new judging day. He pays for the ingredients, and I bake the same cake again next Saturday.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "escada": {
+   "t": "Climb from easy to hard.",
+   "p": "One step at a time. A good answer goes up."
+  },
+  "missao": {
+   "t": "Three witnesses. Who saw what?",
+   "p": "Ask each witness five questions. Then report."
+  },
+  "cv-acordo": {
+   "t": "The judge’s dog ate your cake.",
+   "p": "You are the baker. Talk, then close a deal."
+  },
+  "conversa": {
+   "t": "Real stories, your life.",
+   "p": "Answer. Then ask back: “What about you?”"
+  },
+  "pode": {
+   "t": "Unit 1: what can you do now?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unit 1: past continuous, when/while, past simple x present perfect (experiência, notícia, so far). O bolo campeão sumiu às 23h; o aluno é o detetive.",
+  "armadilha": "O brasileiro diz “I have seen him yesterday” (present perfect com tempo passado), “since two years” (desde = since), “I was hearing a crash” e “did you ever” no lugar de have you ever.",
+  "pal": [
+   "was …ing",
+   "when",
+   "while",
+   "have you ever",
+   "so far",
+   "since",
+   "for",
+   "witness"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: o bolo campeão do concurso sumiu e o aluno investiga.",
+   "perg": "Have you ever entered a contest?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "escada": {
+   "obj": "Seis degraus do fácil ao difícil, puxando a gramática da unidade de memória.",
+   "perg": "What were you doing at eleven last night?",
+   "pula": "Quatro degraus bastam."
+  },
+  "missao": {
+   "obj": "O aluno interroga três testemunhas (guarda, outro confeiteiro, juiz) e relata ao chefe.",
+   "perg": "What were you doing when the cake disappeared?",
+   "pula": "Duas testemunhas e o relatório."
+  },
+  "cv-acordo": {
+   "obj": "Papéis invertidos: o aluno é o confeiteiro e negocia com o juiz envergonhado.",
+   "perg": "What happened to your cake last night?",
+   "pula": "Duas perguntas e o fechamento do acordo."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal com histórias reais e o “What about you?” de volta.",
+   "perg": "Have you ever lost something important?",
+   "pula": "Três perguntas bastam."
+  },
+  "pode": {
+   "obj": "Checklist do I can: o aluno lê, marca o que já sabe; o resto vai para a lição.",
+   "perg": "Which one is still hard for you?",
+   "pula": "Não corte: fecha a unidade. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa misturando past continuous, past simple e present perfect.",
+   "perg": "What has happened to you this week?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre o caso do bolo e sobre contar histórias, com os tempos da unidade.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o juiz e explica a noite do sumiço do bolo.",
+   "perg": "What were you doing at eleven, judge?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your own true stories.",
+   "p": "Pick a card. Tell what happened.",
+   "palavras": [
+    "was …ing",
+    "when",
+    "while",
+    "have you ever",
+    "so far"
+   ],
+   "cartas": [
+    {
+     "k": "A STRANGE NIGHT",
+     "q": "What were you doing at eleven last night?",
+     "fup": "Did anything happen?",
+     "st": [
+      "I was …ing when …"
+     ],
+     "ex": "I was reading when my neighbor’s dog started to bark."
+    },
+    {
+     "k": "EVER?",
+     "q": "Have you ever seen a crime or an accident?",
+     "fup": "What were you doing at the time?",
+     "st": [
+      "I’ve never …",
+      "Once, I was …ing when I saw …"
+     ],
+     "ex": "Once, I was waiting for the bus when I saw a car hit a bike."
+    },
+    {
+     "k": "THIS WEEK",
+     "q": "How many times have you cooked this week?",
+     "fup": "What did you make?",
+     "st": [
+      "I’ve cooked … times so far.",
+      "Yesterday I made …"
+     ],
+     "ex": "I’ve cooked twice so far. Yesterday I made pasta."
+    },
+    {
+     "k": "NEWS",
+     "q": "Has anything new happened at work or at home?",
+     "fup": "When did it happen?",
+     "st": [
+      "… has just …",
+      "It happened on …"
+     ],
+     "ex": "My sister has just had a baby. It happened on Monday."
+    },
+    {
+     "k": "HOW LONG",
+     "q": "How long have you lived in your home?",
+     "fup": "Where did you live before?",
+     "st": [
+      "I’ve lived there for / since …",
+      "Before that, I lived …"
+     ],
+     "ex": "I’ve lived there since 2019. Before that, I lived with my parents."
+    },
+    {
+     "k": "SWEET THINGS",
+     "q": "Have you ever baked a cake?",
+     "fup": "How did it go?",
+     "st": [
+      "I’ve baked …",
+      "While I was baking, …"
+     ],
+     "ex": "I baked one once. While I was baking, I fell asleep, and it burned."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "was …ing",
+    "has …"
+   ],
+   "rodadas": [
+    {
+     "q": "The judge’s dog ate the cake. Is the judge guilty?",
+     "a": "Guilty",
+     "b": "Not guilty",
+     "fa": [
+      "Guilty. He wasn’t watching while his dog was eating.",
+      "It’s his dog, so it’s his problem."
+     ],
+     "fb": [
+      "Not guilty. Dogs eat cakes.",
+      "He didn’t know what was happening."
+     ]
+    },
+    {
+     "q": "Should the baker win the contest anyway?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. The cake has already won once.",
+      "The judges saw it before it disappeared."
+     ],
+     "fb": [
+      "No. There is no cake now.",
+      "Rules are rules."
+     ]
+    },
+    {
+     "q": "A witness: is memory reliable or not?",
+     "a": "Reliable",
+     "b": "Not reliable",
+     "fa": [
+      "Reliable. People remember what they were doing."
+     ],
+     "fb": [
+      "Not reliable. I have forgotten what I did yesterday."
+     ]
+    },
+    {
+     "q": "Tell a story in order, or start with the best part?",
+     "a": "In order",
+     "b": "The best part",
+     "fa": [
+      "In order. First, then, after that. It’s clear."
+     ],
+     "fb": [
+      "The best part. “The cake has disappeared!” Everybody listens."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The case is closed, and so is the unit."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the judge now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the judge.",
+   "perguntas": [
+    "What were you doing at eleven last night?",
+    "Where was your dog at that time?",
+    "When did you find out what happened?",
+    "Has your dog ever done this before?",
+    "Have you talked to the baker since then?",
+    "What have you decided to do now?"
+   ],
+   "st": [
+    "I was …ing when …",
+    "My dog has never …",
+    "I’ve …"
+   ],
+   "ex": "I was talking to the other judges when my dog found the cake."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

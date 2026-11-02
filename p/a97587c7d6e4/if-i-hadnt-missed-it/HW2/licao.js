@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "If I Hadn't Missed It",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a97587c7d6e4/if-i-hadnt-missed-it/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "third conditional (if + had + participle, would have + participle) for a chain of past events, and mixed conditional (past cause, present result: if I hadn't missed it, I wouldn't be here now); never would after if",
   "abrir": "Think of a small accident that changed something in your life. What would be different now?",
   "fecho": "<b>If + had + participle, would have + participle</b>: the past that did not happen. Never <i>would</i> after <i>if</i>. A past cause with a result now: <b>If I hadn't moved here, I wouldn't have this job now</b>. The two parts can swap places: <i>I wouldn't have met her if I hadn't missed it.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the station café. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a97587c7d6e4/if-i-hadnt-missed-it/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The platform clock",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If I hadn't missed the bus, I wouldn't have met her.",
-          "img": "https://wolf-labs.pages.dev/p/a97587c7d6e4/if-i-hadnt-missed-it/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If it hadn't rained, I wouldn't have gone inside.",
-          "img": "https://wolf-labs.pages.dev/p/a97587c7d6e4/if-i-hadnt-missed-it/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If I hadn't missed it, I wouldn't be here now.",
-          "img": "https://wolf-labs.pages.dev/p/a97587c7d6e4/if-i-hadnt-missed-it/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a97587c7d6e4/if-i-hadnt-missed-it/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A train at the platform, at night",
       "pede": "Look at the picture: a train at a night platform. Write 2 or 3 sentences about a small moment that changed your life. Use <b>If I hadn't …, I wouldn't have …</b> and one sentence about now.",
       "ph": "If I hadn't …, I wouldn't have …",

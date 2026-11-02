@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -127,5 +128,272 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A doctor explains a wrong dose.",
+   "p": "One question. Watch. Then answer."
+  },
+  "erros": {
+   "t": "What is wrong with this apology?",
+   "p": "Find a problem. Say it better. Tap."
+  },
+  "ordem": {
+   "t": "A good disclosure, in six steps.",
+   "p": "Tap the steps in order. Say them."
+  },
+  "cv-juri": {
+   "t": "Three apologies at work. Your verdict?",
+   "p": "Read the evidence. Give a verdict. Say why."
+  },
+  "prova": {
+   "t": "Explain a mistake from your profession.",
+   "p": "Plan 30 seconds. Speak up to 90."
+  },
+  "pode": {
+   "t": "Lesson 11: what can you do now?",
+   "p": "Read each line aloud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Comunicar um erro (voz ativa, desculpa sincera, sem culpar colegas, efeito honesto, o que muda): um médico júnior conta ao paciente sobre a superdose de anticoagulante.",
+  "armadilha": "O brasileiro esconde o sujeito na passiva (“Mistakes were made”), culpa “um membro da equipe”, minimiza (“It’s not a big deal”) e promete o impossível: “It will never happen again”.",
+  "pal": [
+   "I need to talk to you about …",
+   "We made a mistake.",
+   "I’m really sorry.",
+   "This may have caused …",
+   "What we’ve done is …",
+   "make a complaint",
+   "disclosure"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: o que o paciente lembra é como contamos o erro.",
+   "perg": "Why is “Mistakes were made” a bad apology?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "video": {
+   "obj": "Estação do Geeky Medics: o paciente se irrita com “one member of the team”.",
+   "perg": "Why does the patient get angry?",
+   "pula": "Assista inteiro; responda uma pergunta."
+  },
+  "erros": {
+   "obj": "Achar os problemas num pedido de desculpas ruim e dizer a versão melhor.",
+   "perg": "What is wrong with this sentence?",
+   "pula": "Três problemas bastam."
+  },
+  "ordem": {
+   "obj": "Pôr os seis passos da comunicação do erro em ordem e dizer como conversa.",
+   "perg": "What comes right after the apology?",
+   "pula": "Ordene e pule a fala completa."
+  },
+  "cv-juri": {
+   "obj": "Júri de três desculpas da rotina: agenda dupla, formulário perdido, cartão cobrado duas vezes.",
+   "perg": "Good, half good or bad? Why?",
+   "pula": "Um caso só basta."
+  },
+  "prova": {
+   "obj": "O aluno explica um erro fictício da profissão dele em 90 s com o relógio; ouvir sem julgar.",
+   "perg": "What have you done, and what will change?",
+   "pula": "Uma tentativa só."
+  },
+  "pode": {
+   "obj": "Ler as frases “I can” e marcar o que já consegue.",
+   "perg": "Can you apologize without blaming anyone?",
+   "pula": "Leia só as que faltam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre desculpas e erros do dia a dia profissional, sem pedir histórias pessoais doloridas.",
+   "perg": "What makes an apology sound sincere?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas profissionais sobre transparência, culpa e promessas.",
+   "perg": "Tell the patient now or after the investigation?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o professor é o paciente irritado; o aluno é o profissional que comunica o erro.",
+   "perg": "Who made the mistake?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Apologies at work.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "We made a mistake.",
+    "I’m really sorry.",
+    "What we’ve done is …",
+    "may have caused"
+   ],
+   "cartas": [
+    {
+     "k": "A GOOD APOLOGY",
+     "q": "What makes an apology sound sincere to you?",
+     "fup": "And what makes it sound fake?",
+     "st": [
+      "A good apology …",
+      "It sounds fake when …"
+     ],
+     "ex": "A good apology says who did it. It sounds fake when people say “mistakes were made”."
+    },
+    {
+     "k": "SMALL ERRORS",
+     "q": "What small mistakes happen often in your workplace?",
+     "fup": "How do you usually explain them?",
+     "st": [
+      "Sometimes we …",
+      "I usually say …"
+     ],
+     "ex": "Sometimes we book two patients at the same time. I usually say, “We made a mistake with your booking.”"
+    },
+    {
+     "k": "BLAME",
+     "q": "Why do people blame a colleague when they apologize?",
+     "fup": "What does the patient hear?",
+     "st": [
+      "I think they …",
+      "The patient hears …"
+     ],
+     "ex": "I think they want to protect themselves. The patient hears that nobody is responsible."
+    },
+    {
+     "k": "PROMISES",
+     "q": "Is “It will never happen again” a good promise?",
+     "fup": "What can you say instead?",
+     "st": [
+      "It isn’t, because …",
+      "Instead, I’d say …"
+     ],
+     "ex": "It isn’t, because nobody is perfect. Instead, I’d say, “What we’ve changed is…”"
+    },
+    {
+     "k": "ANGER",
+     "q": "How do you stay calm when someone is angry with you at work?",
+     "fup": "What do you say first?",
+     "st": [
+      "I try to …",
+      "First, I say …"
+     ],
+     "ex": "I try to listen without interrupting. First, I say, “You’re right to be upset.”"
+    },
+    {
+     "k": "IN ENGLISH",
+     "q": "Which is harder in English: saying sorry or explaining what happened?",
+     "fup": "Why?",
+     "st": [
+      "… is harder because …"
+     ],
+     "ex": "Explaining is harder because I need the right words for the effect."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Honesty dilemmas. Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "In my opinion,",
+    "On the other hand,"
+   ],
+   "rodadas": [
+    {
+     "q": "Tell the patient right away, or wait for all the facts?",
+     "a": "Right away",
+     "b": "Wait for the facts",
+     "fa": [
+      "Right away. Waiting looks like hiding.",
+      "The patient has the right to know."
+     ],
+     "fb": [
+      "Wait. You may say something wrong.",
+      "A clear story is better than a fast one."
+     ]
+    },
+    {
+     "q": "Say who made the mistake, or say “we”?",
+     "a": "Say “we”",
+     "b": "Name the person",
+     "fa": [
+      "Say “we”. The team is responsible together.",
+      "Blaming a colleague destroys trust."
+     ],
+     "fb": [
+      "Name the role. Patients want to know what happened.",
+      "“We” can sound vague."
+     ]
+    },
+    {
+     "q": "Offer the complaint route, even if the patient is calm?",
+     "a": "Always offer it",
+     "b": "Only if they ask",
+     "fa": [
+      "Always. It shows respect and honesty."
+     ],
+     "fb": [
+      "Only if they ask. It can make things bigger."
+     ]
+    },
+    {
+     "q": "A tiny mistake with no effect: tell the patient anyway?",
+     "a": "Tell them",
+     "b": "Don’t mention it",
+     "fa": [
+      "Tell them. Trust is built on small things too."
+     ],
+     "fb": [
+      "Don’t. It only creates worry.",
+      "Follow the policy and record it."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "An angry patient asks you.",
+   "p": "Your teacher is the patient.",
+   "aluno": "Listen to the patient. Answer as the professional: calm, honest, no blame, no promises you can’t keep.",
+   "perguntas": [
+    "What exactly happened?",
+    "Who made the mistake?",
+    "Is my knee bleed because of this?",
+    "What have you done about it?",
+    "How do I know it won’t happen again?",
+    "What if I want to make a complaint?"
+   ],
+   "st": [
+    "We made a mistake …",
+    "This may have caused …",
+    "What we’ve done is …"
+   ],
+   "ex": "We made a mistake with your dose, and I’m really sorry. This may have caused the bleeding in your knee. What we’ve done is stop the medicine and check your blood."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

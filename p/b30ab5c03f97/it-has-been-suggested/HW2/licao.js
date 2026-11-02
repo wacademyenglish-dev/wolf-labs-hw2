@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It Has Been Suggested",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b30ab5c03f97/it-has-been-suggested/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "impersonal reporting in memos and minutes: It has been suggested / proposed that ... · It was agreed / decided that ... · It has come to our attention that ... · It is widely believed / hoped that ... · There is thought to be ...; suggest + that (or -ing), never suggest + to or suggest someone to; formal base form (that the meeting be moved); should + plain verb, never should to",
   "abrir": "Have you ever read a memo or an official email that never says who decided anything?",
   "fecho": "A memo hides the person and keeps the idea: <b>It has been suggested that</b> …, <b>It was agreed that</b> …, <b>It has come to our attention that</b> … (a problem found), <b>It is widely believed / hoped that</b> …, <b>There is thought to be</b> …. After <b>suggest</b>: <b>that</b> + clause, never <i>to</i>. The formal voice uses the base form: <i>that the meeting be moved</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo read a memo in the office kitchen. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/b30ab5c03f97/it-has-been-suggested/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The office kitchen at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It has been suggested that the Friday meeting be moved to Thursday.",
-          "img": "https://wolf-labs.pages.dev/p/b30ab5c03f97/it-has-been-suggested/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It has come to our attention that several mugs are being left in the sink.",
-          "img": "https://wolf-labs.pages.dev/p/b30ab5c03f97/it-has-been-suggested/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "There is thought to be a dishwasher on the way, and it is hoped that everyone will help.",
-          "img": "https://wolf-labs.pages.dev/p/b30ab5c03f97/it-has-been-suggested/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -170,7 +170,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b30ab5c03f97/it-has-been-suggested/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An office kitchen at night, one mug on the counter",
       "pede": "Look at the picture: an office kitchen at night, one mug on the counter. Write 2 or 3 sentences of a short memo to your team, your family or your building. No names! Use <b>It has been suggested that …</b>, <b>It was agreed that …</b> or <b>It has come to our attention that …</b>.",
       "ph": "It has been suggested that …",

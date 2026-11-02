@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Exchange Club · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A1 · Unit 7 Review · The Exchange Club</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Exchange Club · A1 Unit 7 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 7 (What I like). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student runs the club night at a conversation club. You are three new members: Ana, Joe and Mei.</p><p style="margin:0 0 6px"><b>About 46 min:</b> I · Bingo (8) · II · The Exchange Club (15) · III · Club Night (5) · IV · Find the Mistakes (7) · V · Would You Rather? (7) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Pick a door.” There is no order. One minute per door, no notes.</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>love / like / hate + -ing · he / she likes + -ing · like it / like them · object pronouns after the verb (call her) · pronouns after with / for / to · call (no to)</p>
+    <h4>BINGO</h4>
+    <p>A 3×3 card of quick tasks. The student picks a square and does it out loud; tap <b>Done</b>. Three in a line (across, down or diagonal) is a BINGO. Keep going for a second line if there is time.</p>
+    <h4>THE EXCHANGE CLUB</h4>
+    <p>You are each member. Your card (only you see it) has the answers. When the student asks a question, tap it: the member card fills in. If the student freezes, tap <b>Say it easier</b>. Then the student chooses a partner and says why, with loves …ing and it / him / her. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>she loves cook</i>, <i>I like (no it)</i>, <i>I call she</i>, <i>with I</i>, <i>call to me</i>, <i>he like playing</i>. A1: one correction per answer is enough.</p>
+    <!--conversa--><h4>CLUB NIGHT (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the student chooses a partner, a light ranking of the three club activities (cooking, video games, walking). Tap “Show my teacher’s order” to give yours; the student says why with love / hate + -ing, it / them. Answer first yourself, as a model. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk; at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Bingo and IV · Find the Mistakes and VI · I Can.</li>
+      <li><b>Out loud</b>: II · The Exchange Club, III · Club Night and V · Would You Rather?.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* MAIN SERIES · A1 · REVISÃO 07 · THE EXCHANGE CLUB · pergunta-surpresa · 27/10/2026 · like / love / hate + -ing, pronomes objeto */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'bingo', tipo: 'And you?', q: 'Pizza: love it or hate it?',
+    opc: ['I love it!', 'I like it.', 'I hate it.'], st: ['I … it.', 'My friend … it too.'],
+    ex: 'I love it! My brother loves it too.', push: 'Pineapple on pizza? Yes or no?' },
+  { cena: 'erros', tipo: 'What if', q: 'Your friend has a problem.',
+    opc: ['I call him / her.', 'I text him / her.', 'I visit him / her.'], st: ['I call him / her.', 'I talk to him / her.'],
+    ex: 'I call her. We talk for an hour.', push: 'Do you like phone calls? Yes or no?' },
+  { cena: 'escolha', tipo: 'Opinion', q: 'English: what do you love?',
+    opc: ['Watching series', 'Listening to music', 'Talking'], st: ['I love …ing.', 'I don’t like …ing.'],
+    ex: 'I love watching series. I watch them at night.', push: 'With subtitles? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* MAIN SERIES · A1 · REVISÃO 07 · THE EXCHANGE CLUB · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Formato curto: UM momento leve (ranking de 3, com a ordem do professor) no MEIO, depois da missão (II).
+   As três atividades são as dos sócios da missão (Ana, Joe, Mei). A aula já tem o Would You Rather (IV).
+   Gramática da unidade 7 nos iniciadores: love / like / hate + -ing, it / them. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'noite', apos: 'missao', est: 'o', min: 5, img: 'conversa', rot: 'Club Night', t: 'Plan the next club night.',
+    p: 'Your teacher shows their order first. Then tap yours, from 1 to 3, and say why.',
+    formato: 'ranking',
+    q: 'What do you love doing?',
+    itens: ['Cooking together', 'Playing video games', 'Walking in the park'],
+    prof: [2, 0, 1],
+    dica: 'Tap 1, 2, 3. Tap again to take it out.',
+    st: ['Number one! I love …ing.', 'I hate …ing.', 'I love it. / I hate them.'],
+    ex: 'Number one is cooking together. I love it! Number three is video games. I hate them.',
+    push: 'Do you play video games? Yes or no?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "bingo": {
+   "t": "Nine squares. Make a line!",
+   "p": "Pick a square. Do it out loud. Three in a line wins."
+  },
+  "missao": {
+   "t": "Three new members. What do they like?",
+   "p": "Ask each member five questions. Then choose a partner."
+  },
+  "cv-noite": {
+   "t": "Plan the next club night.",
+   "p": "See your teacher’s order. Tap yours. Say why."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say the right form. Then tap."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose one. Say why, with because."
+  },
+  "pode": {
+   "t": "Unit 7: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 7 (What I like): love/like/hate + -ing, he/she likes, like it/them e pronomes objeto. O aluno comanda a noite de um clube de conversação.",
+  "armadilha": "O português puxa “she loves cook”, “I like” sem o it, “I call she”, “with I”, “call to me” (ligar para) e “he like playing” sem o S.",
+  "pal": [
+   "love …ing",
+   "hate …ing",
+   "she likes",
+   "like it / them",
+   "call her",
+   "with me",
+   "for him",
+   "because"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: o aluno comanda a noite do clube de conversação e conhece três membros novos.",
+   "perg": "What do you like doing in your free time?",
+   "pula": "Leia a frase da capa e abra o bingo."
+  },
+  "bingo": {
+   "obj": "Bingo 3×3 de tarefas rápidas da Unidade 7, de memória, sem explicar a gramática antes.",
+   "perg": "Pick a square. What do you love doing?",
+   "pula": "Uma linha de bingo basta."
+  },
+  "missao": {
+   "obj": "O aluno entrevista Ana, Joe e Mei e escolhe um parceiro com loves …ing e him/her.",
+   "perg": "What does Mei like doing? Why is she your partner?",
+   "pula": "Dois membros bastam, mais a escolha do parceiro."
+  },
+  "cv-noite": {
+   "obj": "Ranking leve das atividades do clube (cooking, video games, walking) com love/hate + -ing.",
+   "perg": "Why is cooking your number one?",
+   "pula": "Só o número 1 e um porquê bastam."
+  },
+  "erros": {
+   "obj": "Achar os erros de um bilhete, dizer a forma certa e ler o bilhete inteiro corrigido.",
+   "perg": "What is wrong in “she loves cook”?",
+   "pula": "Três erros bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather: escolher A ou B e dizer por quê com because.",
+   "perg": "Would you rather cook for friends or eat out with them?",
+   "pula": "Duas escolhas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”: o aluno lê, marca o que sabe e você carimba a unidade.",
+   "perg": "Can you say what your best friend likes doing?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre gostos com -ing, it/them e pronomes depois de with/for/to.",
+   "perg": "Who do you like going out with?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre atividades do clube e defender com because.",
+   "perg": "Video games or walking: what is better for a club night?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Entrevista: o aluno é o anfitrião do clube e responde com likes/loves + -ing e pronomes objeto.",
+   "perg": "Do you like running the club?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More club questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "love …ing",
+    "like it",
+    "with me",
+    "call her"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FRIDAY",
+     "q": "What do you love doing on Friday night?",
+     "fup": "Who do you do it with?",
+     "st": [
+      "I love …ing",
+      "I do it with …"
+     ],
+     "ex": "I love watching series. I do it with my wife."
+    },
+    {
+     "k": "YOUR MOTHER",
+     "q": "What does your mother like doing?",
+     "fup": "Do you call her every day?",
+     "st": [
+      "She likes …ing",
+      "I call her …"
+     ],
+     "ex": "She likes gardening. I call her on Sundays."
+    },
+    {
+     "k": "VEGETABLES",
+     "q": "Do you like vegetables?",
+     "fup": "Which ones do you hate?",
+     "st": [
+      "Yes, I like them.",
+      "I hate …"
+     ],
+     "ex": "Yes, I like them. But I hate carrots."
+    },
+    {
+     "k": "MUSIC",
+     "q": "Do you like singing?",
+     "fup": "Who do you sing for?",
+     "st": [
+      "Yes, I love it. / No, I hate it.",
+      "I sing for …"
+     ],
+     "ex": "Yes, I love it. I sing for my kids."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "What does your best friend hate doing?",
+     "fup": "Do you do it for him or her?",
+     "st": [
+      "He hates …ing / She hates …ing",
+      "Yes, I do it for him / her."
+     ],
+     "ex": "She hates driving. I drive for her."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Who do you call the most?",
+     "fup": "What do you talk about with him or her?",
+     "st": [
+      "I call … the most.",
+      "We talk about …"
+     ],
+     "ex": "I call my brother the most. We talk about football."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "love",
+    "hate",
+    "it / them"
+   ],
+   "rodadas": [
+    {
+     "q": "Club night: cooking or video games?",
+     "a": "Cooking",
+     "b": "Video games",
+     "fa": [
+      "Cooking. I love eating with people."
+     ],
+     "fb": [
+      "Video games. Everybody likes playing them."
+     ]
+    },
+    {
+     "q": "A walk in the park or a movie night?",
+     "a": "A walk",
+     "b": "A movie",
+     "fa": [
+      "A walk. I like talking and walking."
+     ],
+     "fb": [
+      "A movie. I love watching films with friends."
+     ]
+    },
+    {
+     "q": "A partner who loves talking or loves listening?",
+     "a": "Talking",
+     "b": "Listening",
+     "fa": [
+      "Talking. I like listening to him or her."
+     ],
+     "fb": [
+      "Listening. I love talking!"
+     ]
+    },
+    {
+     "q": "Call a friend or send a message?",
+     "a": "Call",
+     "b": "Send a message",
+     "fa": [
+      "Call. I like hearing his or her voice."
+     ],
+     "fb": [
+      "Send a message. I hate talking on the phone."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the club had a great night."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the club host now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the club host.",
+   "perguntas": [
+    "Do you like running the club?",
+    "What do the members love doing?",
+    "Who is your partner? What does he or she like doing?",
+    "Do you like video games?",
+    "What do you hate doing at the club?",
+    "Do you call the members before club night?"
+   ],
+   "st": [
+    "I love …ing",
+    "She likes … / He likes …",
+    "Yes, I call them …"
+   ],
+   "ex": "I love running the club. My partner loves cooking, and I love eating with her."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

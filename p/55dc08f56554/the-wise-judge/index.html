@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Wise Judge · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Cinzel:wght@600;800&family=Lora:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Wise Judge · Solomon’s Court</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Wise Judge · Solomon’s Court</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Your student is the wise judge in King Solomon’s court.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Scale: After the verb: TO or -ING?</p><p style="margin:0 0 6px"><b>Short class (about 47 min):</b> I The Two Pans · II The Words · III The Court Is Open · IV Solomon’s Paradox · VI The Scale · VII The Last Scroll · X The Royal Decree. Skip if you’re short on time: V, VIII, IX (marked EXTRA on your screen). Full lesson: about 65 min.</p><p style="margin:0"><b>Open with:</b> “Your friend hates their job. What should they do?” Then: “And you?” Last: “Do you follow your own advice?” Every “No, I don’t” puts a weight on the friend’s side of the scale.</p></div><!--/prep-->
+    <p>Your student is the wise judge in King Solomon’s court. Five cases arrive on scrolls: a man who hates his job, a woman who keeps forgiving a liar, a man afraid of opening his bakery, a girl who keeps putting off the guitar, a man who can’t stop smoking. The judge gives each verdict in seconds. Then the video explains why that was so easy: <b>Solomon’s Paradox</b>, we reason more wisely about other people’s lives than our own. The last scroll has the student’s own name. They write their own case in the third person, judge it like a friend’s case, and sign a decree for themselves. The goal: the student leaves thinking about their own life.</p>
+    <p>The grammar: <b>after a verb, -ING or TO</b>. <i>want, need, decide, try</i> + <b>to</b> (<i>He wants to quit</i>); <i>keep, stop, avoid, enjoy, finish</i> + <b>-ing</b> (<i>She keeps putting it off</i>); after a preposition, always <b>-ing</b> (<i>afraid of failing, instead of practicing</i>); and the two meanings of <b>stop</b>: <i>stop smoking</i> (no more) ≠ <i>stop to smoke</i> (in order to smoke).</p>
+    <h4>THE VIDEO</h4>
+    <p>“I FIXED My Whole Life In 1 Night” (Henry Grey Earls, 2:26, we use 0:00–2:14). Sealed until you press play, in four chapters; each stops by itself: the friends’ problems vs. yours, Solomon’s Paradox (fear, history and ego get tangled up), the writing exercise in the third person, and the question “If this person were my friend, what would I tell them to do?”. After the chapters, the last step is ONE screen: the video stays on the left (tap a time to hear that moment again; the times play only inside the four chapters, and each one stops by itself), with six scrolls under it (CHANGE, DREAM, PARADOX, WISER, TANGLED, STOP); on the right, six True or Lie lines about what the video says. Every right answer seals a scroll (“Scrolls sealed 3 / 6”). On a Lie the student says the true line. When all six are done, the court asks for one last piece of advice: the student taps an answer and says it out loud, with stop + -ing, try + to or afraid of + -ing. Note: the video says “if this person were my friend”. It is not the target today; let the student use it freely.</p>
+    <h4>THE PORTUGUESE TRAP</h4>
+    <p>In Portuguese, “to stop doing something” is built with a preposition and the infinitive, so word for word it becomes <i>stop to smoke</i>, which in English means stopping <i>in order to</i> smoke: the student says the opposite of what they mean. Portuguese also puts the infinitive straight after verbs like “want”, so <i>I want quit</i> (no to) sounds natural; after a preposition Portuguese uses the infinitive too, so <i>afraid of fail</i> (no -ing); and “continue + -ing” comes out as <i>keeps to say</i>.</p>
+    <h4>THE COURT AND THE LAST SCROLL</h4>
+    <p>Scene III comes before the rule: any good verdict counts; tap the version you heard, listening to stop + -ing and need + to. Scene VII: let the student write alone, in the third person (their own name, never “I”). If they write “I”, point to the five scrolls. Scene VIII: read the scroll aloud and judge it, one question at a time. The last question is the one from the video. Take your time there: it is the heart of the lesson.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I want quit</i>, <i>she needs stop</i>, <i>he stopped to smoke</i> (meaning “no more”), <i>she keeps to say</i>, <i>afraid of fail</i>, <i>avoid to talk</i>, <i>instead of practice</i>.</p>
+    <!--conversa--><h4>THE COURT OF OPINIONS (IX) AND THE SURPRISE QUESTION</h4>
+    <p>After your student writes and judges their own scroll, they rate four bold opinions from 1 to 5 and defend the number with TO or -ING. There is no right answer: wait five seconds in silence, then take the opposite number and use the PUSH line (only you see it) to make it harder. Recast quietly while they talk (stop doing, want to do, afraid of failing); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I The Two Pans, III The Court Is Open, VIII The Judge’s Chair and IX The Court of Opinions.</li>
+      <li><b>Listen</b>: II The Words, IV Solomon’s Paradox and V Line by Line.</li>
+      <li><b>Focus</b>: VI The Scale.</li>
+      <li><b>Write</b>: VII The Last Scroll and X The Royal Decree.</li>
+    </ul>
+<!--falas-->
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE WISE JUDGE (Main B1) · pergunta-surpresa · 27/10/2026 · verbo + to / -ing */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'corte', tipo: 'Would you rather', q: 'For one day: would you rather be the judge or the lawyer?',
+    opc: ['The judge', 'The lawyer'], st: ['I’d rather be …, because I enjoy …', 'I’d hate to …'],
+    ex: 'The judge. I enjoy listening to both sides, and I’d hate to defend someone I don’t believe.', push: 'The judge can’t talk to anyone about the case. Still the judge?' },
+  { cena: 'video', tipo: 'And you?', q: 'When you have a problem, who do you ask for advice first?',
+    opc: ['A friend', 'My family', 'Nobody: I decide alone'], st: ['I usually decide to talk to …', 'I avoid asking …'],
+    ex: 'A friend. I avoid asking my family, because they keep telling me the same thing.', push: 'Do you usually follow that advice? Yes or no?' },
+  { cena: 'regra', tipo: 'Opinion', q: 'What is something you enjoy doing that most people find boring?',
+    opc: ['A hobby', 'A job thing', 'A home thing'], st: ['I really enjoy …', 'People avoid …, but I love it.'],
+    ex: 'A home thing. I really enjoy ironing clothes. It helps me stop thinking about work.', push: 'Convince me to try it. Thirty seconds.' },
+  { cena: 'falas', tipo: 'What if', q: 'What if you could ask King Solomon one question about your life?',
+    opc: ['About work', 'About people', 'About the future'], st: ['I’d want to know how to …', 'I’d ask him how to stop …'],
+    ex: 'About work. I’d ask him how to stop saying yes to everything.', push: 'And if he answered: “You already know.” What do you already know?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE WISE JUDGE (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A escala de opiniões impopulares entra no lugar de "IX · Quick Check" (extra; tocar a palavra repete o VI).
+   A aula já tem a decisão (III, os casos) e o papel (VIII, a cadeira do juiz): aqui o juiz dá a própria
+   opinião, de 1 a 5, sobre quatro frases da corte. A gramática (verbo + to / -ing) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'escala', troca: 'quiz', est: 'o', min: 7, img: 'balanca', rot: 'The Court of Opinions', t: 'Four bold opinions. How much do you agree?',
+    p: 'Tap a number from 1 to 5. Then defend it with TO or -ING. Your teacher takes the opposite number.',
+    formato: 'escala', tag: 'Unpopular opinion?',
+    frases: [
+      { f: 'It’s better to stay in a boring job than to risk a new one.',
+        st: ['I’d avoid changing jobs until …', 'People need to …', 'Staying in a boring job stops you from …'],
+        ex: '2 · Disagree. Staying in a boring job stops you from growing. But I’d avoid quitting before I find something new.',
+        push: 'You have a house to pay and two kids. Still the same number?' },
+      { f: 'Good friends give advice even when you don’t ask for it.',
+        st: ['I enjoy getting advice when …', 'Friends should stop …', 'I’d rather they decided to …'],
+        ex: '4 · Agree. I don’t enjoy hearing it, but a good friend needs to tell me the truth.',
+        push: 'Your friend gives you advice about your hair, your money and your partner. Every week. Still a 4?' },
+      { f: 'Being afraid of failing is useful.',
+        st: ['Being afraid of … helps me …', 'Fear keeps people from …', 'I’m not afraid of …'],
+        ex: '3 · Not sure. Being afraid of failing helps me prepare. But too much fear stops me from trying.',
+        push: 'Name one thing you never tried because you were afraid. Was it worth it?' },
+      { f: 'Talking about yourself as “he” or “she” is silly. It doesn’t work.',
+        st: ['I tried writing …', 'I’d like to try …', 'It helps you stop …'],
+        ex: '2 · Disagree. When I tried writing about myself with my name, I stopped feeling so stuck.',
+        push: 'Do it now: one sentence about yourself, with your name, not “I”.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "Advice for a friend, advice for you.",
+   "p": "Advise a friend. Talk about you. Do you follow it?"
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them first. They turn yellow in the video."
+  },
+  "corte": {
+   "t": "Five cases. You are the judge.",
+   "p": "Pick a scroll. Read it. Give a one-sentence verdict."
+  },
+  "video": {
+   "t": "Why was that so easy?",
+   "p": "Answer first. Watch four chapters. Then True or Lie."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line to hear it. Yellow words explain."
+  },
+  "regra": {
+   "t": "After the verb: TO or -ING?",
+   "p": "Read the four cards. Fix the four traps."
+  },
+  "pergaminho": {
+   "t": "One more case. It has your name.",
+   "p": "Write your case with your name, not “I”."
+  },
+  "veredito": {
+   "t": "Judge your scroll like a stranger’s case.",
+   "p": "Your teacher is the court. One question at a time."
+  },
+  "cv-escala": {
+   "t": "Four bold opinions. How much do you agree?",
+   "p": "Tap 1 to 5. Defend it with TO or -ING."
+  },
+  "fim": {
+   "t": "A royal decree for yourself.",
+   "p": "Write: stop…, start…, don’t be afraid of… It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Verbo + to ou + -ing (want/need/decide/try to; keep/stop/avoid/enjoy -ing; preposição + -ing) na corte do rei Salomão: o paradoxo de aconselhar os outros melhor que a si.",
+  "armadilha": "“Parar de fumar” vira “stop to smoke” (= parar para fumar), o contrário do que ele quer dizer. Também “I want quit”, “afraid of fail”, “she keeps to say”, “avoid to talk”.",
+  "pal": [
+   "want to",
+   "need to",
+   "try to",
+   "keep -ing",
+   "stop -ing",
+   "avoid -ing",
+   "afraid of -ing",
+   "instead of -ing",
+   "verdict",
+   "scroll"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a corte: o aluno julga cinco casos em segundos; depois chega um com o nome dele.",
+   "perg": "Are you good at giving advice?",
+   "pula": "Só leia a manchete e entre."
+  },
+  "voce": {
+   "obj": "Aquecimento: conselho para um amigo, a vida do aluno, e ele segue o próprio conselho?",
+   "perg": "Do you follow your own advice?",
+   "pula": "Os três passos com uma resposta cada."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir; o aluno chuta primeiro.",
+   "perg": "What do you think this word means?",
+   "pula": "Só as palavras, sem exemplo."
+  },
+  "corte": {
+   "obj": "Cinco casos em pergaminhos, antes da regra; ouça stop + -ing e need + to.",
+   "perg": "What should he do? One sentence.",
+   "pula": "Três casos bastam."
+  },
+  "video": {
+   "obj": "O paradoxo de Salomão em quatro capítulos, depois seis True or Lie e um último conselho.",
+   "perg": "Why is it easy to judge a friend’s life?",
+   "pula": "Não corte: é o centro da aula."
+  },
+  "falas": {
+   "obj": "Linha a linha do vídeo; as palavras amarelas abrem a explicação.",
+   "perg": "Can you say this line again?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "regra": {
+   "obj": "A balança: to depois de want/need/try, -ing depois de keep/stop/avoid e de preposição; stop -ing × stop to.",
+   "perg": "Stop smoking or stop to smoke: what’s the difference?",
+   "pula": "As quatro cartas e duas armadilhas."
+  },
+  "pergaminho": {
+   "obj": "O aluno escreve o próprio caso na terceira pessoa (o nome dele, nunca “I”).",
+   "perg": "What does [name] keep doing?",
+   "pula": "Três linhas bastam."
+  },
+  "veredito": {
+   "obj": "Julgar o próprio pergaminho como se fosse de um amigo. A última pergunta é a do vídeo: vá devagar.",
+   "perg": "If this person were your friend, what would you tell them?",
+   "pula": "Cena extra: faça só a última pergunta."
+  },
+  "cv-escala": {
+   "obj": "Quatro opiniões fortes de 1 a 5, defendidas com to ou -ing; o professor pega o número oposto. Use a linha PUSH.",
+   "perg": "Why did you choose that number?",
+   "pula": "Duas opiniões bastam."
+  },
+  "fim": {
+   "obj": "O decreto real: três linhas para si mesmo (stop…, start…, don’t be afraid of…).",
+   "perg": "What will you stop doing?",
+   "pula": "Uma linha de cada basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre hábitos e decisões, com to e -ing.",
+   "perg": "What do you keep putting off?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre conselhos e mudanças de vida.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o juiz da corte e explica os veredictos com to e -ing.",
+   "perg": "What did you tell the man who hates his job?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Small cases from your life.",
+   "p": "Pick a card. Answer with TO or -ING.",
+   "palavras": [
+    "want to",
+    "keep -ing",
+    "stop -ing",
+    "afraid of -ing"
+   ],
+   "cartas": [
+    {
+     "k": "PUTTING OFF",
+     "q": "What do you keep putting off?",
+     "fup": "What would help you start?",
+     "st": [
+      "I keep putting off …",
+      "I need to …"
+     ],
+     "ex": "I keep putting off going to the dentist, and I need to book it this week."
+    },
+    {
+     "k": "A NEW HABIT",
+     "q": "What do you want to start doing this year?",
+     "fup": "What stops you?",
+     "st": [
+      "I want to start …",
+      "I’m afraid of …"
+     ],
+     "ex": "I want to start running, but I’m afraid of getting hurt."
+    },
+    {
+     "k": "GIVE UP",
+     "q": "Is there something you stopped doing and you’re glad?",
+     "fup": "How long did it take?",
+     "st": [
+      "I stopped …",
+      "I finally decided to …"
+     ],
+     "ex": "I stopped checking my phone in bed, and I sleep much better."
+    },
+    {
+     "k": "ENJOY",
+     "q": "What do you enjoy doing when nobody is watching?",
+     "fup": "Why don’t you do it in public?",
+     "st": [
+      "I enjoy …",
+      "I avoid … in public"
+     ],
+     "ex": "I enjoy singing in the car, but I avoid doing it at karaoke."
+    },
+    {
+     "k": "BAD ADVICE",
+     "q": "What is a piece of advice you never follow?",
+     "fup": "Who gave it to you?",
+     "st": [
+      "Everybody tells me to …",
+      "I keep …, instead of …"
+     ],
+     "ex": "Everybody tells me to sleep early, but I keep watching series instead of sleeping."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "Think of a friend with a problem. What should they stop doing?",
+     "fup": "Would you tell them?",
+     "st": [
+      "She should stop …",
+      "He needs to …"
+     ],
+     "ex": "My friend should stop working on weekends. She needs to rest."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "want to",
+    "stop -ing",
+    "because",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "The man who hates his job: quit now or wait?",
+     "a": "Quit now",
+     "b": "Wait",
+     "fa": [
+      "Quit now. He can’t keep losing years.",
+      "Fear will always find a reason."
+     ],
+     "fb": [
+      "Wait. He needs to find a new job first.",
+      "Rent doesn’t stop coming."
+     ]
+    },
+    {
+     "q": "Is it OK to give advice nobody asked for?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Friends need to hear the truth.",
+      "Silence can hurt more."
+     ],
+     "fb": [
+      "No. People need to decide for themselves.",
+      "Unasked advice sounds like judging."
+     ]
+    },
+    {
+     "q": "Change a bad habit fast, or little by little?",
+     "a": "Fast",
+     "b": "Little by little",
+     "fa": [
+      "Fast. Stop smoking today, not next month.",
+      "Slow plans never finish."
+     ],
+     "fb": [
+      "Little by little. You avoid failing that way.",
+      "Small steps keep working."
+     ]
+    },
+    {
+     "q": "Are we really wiser about other people’s lives?",
+     "a": "Yes",
+     "b": "Not always",
+     "fa": [
+      "Yes. We don’t feel their fear.",
+      "It’s easy to be brave for someone else."
+     ],
+     "fb": [
+      "Not always. We don’t know their whole story.",
+      "Outside eyes can miss a lot."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The court rests."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the wise judge now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the wise judge of Solomon’s court.",
+   "perguntas": [
+    "What did you tell the man who hates his job?",
+    "Why does the woman keep forgiving a liar?",
+    "What is the baker afraid of?",
+    "How can the girl stop putting off the guitar?",
+    "What does the man need to do to stop smoking?",
+    "Do you follow your own advice, judge?"
+   ],
+   "st": [
+    "He needs to …",
+    "She should stop …",
+    "He’s afraid of …"
+   ],
+   "ex": "The baker is afraid of failing, but he needs to open the bakery instead of dreaming about it."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

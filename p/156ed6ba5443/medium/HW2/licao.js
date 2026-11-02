@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Medium",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/156ed6ba5443/medium/img/live-quatro.webp",
+  "capa": "../img/live-quatro.webp",
   "alvo": "comparatives: short word + -er (bigger, longer, cheaper); long word with more (more expensive, more comfortable); than to compare (never then); better for good",
   "abrir": "Are you taller than someone in your family?",
   "fecho": "Short word + <b>-er</b>: <i>bigger, longer, cheaper</i>. Long word: <b>more</b> + word: <i>more expensive</i>. Then <b>than</b>: <i>bigger than</i>. <b>Than</b> compares; <i>then</i> is about time. <i>Good</i> becomes <b>better</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a shop with four shirts. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/156ed6ba5443/medium/img/live-quatro.webp",
+      "img": "../img/live-quatro.webp",
       "leg": "Four shirts on a table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This shirt is bigger than that shirt.",
-          "img": "https://wolf-labs.pages.dev/p/156ed6ba5443/medium/img/live-quatro.webp",
+          "img": "../img/live-quatro.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The blue shirt is more expensive than the white one.",
-          "img": "https://wolf-labs.pages.dev/p/156ed6ba5443/medium/img/live-caixas.webp",
+          "img": "../img/live-caixas.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "My new shirt is better than my old shirt.",
-          "img": "https://wolf-labs.pages.dev/p/156ed6ba5443/medium/img/live-quatro.webp",
+          "img": "../img/live-quatro.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/156ed6ba5443/medium/img/live-caixas.webp",
+      "img": "../img/live-caixas.webp",
       "leg": "Boxes of clothes on a floor",
       "pede": "Look at the picture: boxes with clothes. Write 2 or 3 sentences comparing two things in your closet. Use <b>-er</b> or <b>more</b>, and <b>than</b>.",
       "ph": "My blue shirt is bigger than …",

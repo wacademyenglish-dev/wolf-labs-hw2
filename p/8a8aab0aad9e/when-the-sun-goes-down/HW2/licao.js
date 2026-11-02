@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "When the Sun Goes Down",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/8a8aab0aad9e/when-the-sun-goes-down/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "zero conditional: if / when + present, present for a rule that is always true (When the sun goes down, the streets get empty); he / she / it takes -s; never will after if or when; never a past tense in a rule",
   "abrir": "What happens in your city when the sun goes down?",
   "fecho": "<b>if / when + present, present</b> = a rule that is always true: <i>When the sun goes down, the streets get empty.</i> No <b>will</b> after <i>if</i> or <i>when</i>. He, she, it, the sun: the <b>-s</b>: <i>goes</i>. The rule stays in the present: never <i>If you opened the door, they come</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia is new in a small town. Leo tells her the rules. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/8a8aab0aad9e/when-the-sun-goes-down/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A small town street at sunset",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "When the sun goes down, the streets get quiet.",
-          "img": "https://wolf-labs.pages.dev/p/8a8aab0aad9e/when-the-sun-goes-down/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If you drive on this road at night, you feel alone.",
-          "img": "https://wolf-labs.pages.dev/p/8a8aab0aad9e/when-the-sun-goes-down/img/live-estrada.webp",
+          "img": "../img/live-estrada.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If the fog comes in, the forest disappears.",
-          "img": "https://wolf-labs.pages.dev/p/8a8aab0aad9e/when-the-sun-goes-down/img/live-floresta.webp",
+          "img": "../img/live-floresta.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/8a8aab0aad9e/when-the-sun-goes-down/img/live-estrada.webp",
+      "img": "../img/live-estrada.webp",
       "leg": "A dark road beside a forest",
       "pede": "Look at the picture: a dark road beside a forest. Write 2 or 3 rules for a place you know (a town, a house, a school). Use <b>if / when + present, present</b>.",
       "ph": "When it …, I … If you …, …",

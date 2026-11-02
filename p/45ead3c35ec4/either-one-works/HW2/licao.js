@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Either One Works",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/45ead3c35ec4/either-one-works/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "both (the two, yes) · either (one or the other, I don't mind) · neither (not the one, not the other) · both ... and / either ... or / neither ... nor · both / either / neither of them · only one negation; never the both, I don't like neither, neither ... or",
   "abrir": "Think of a choice where both options are good. How do you decide?",
   "fecho": "<b>Both</b> = the two, yes: <i>Both keys open the door.</i> <b>Either</b> = one or the other, I don't mind: <i>Either one works.</i> <b>Neither</b> = not the one, not the other: <i>Neither of them is heavy.</i> <b>Both … and</b>, <b>either … or</b>, <b>neither … nor</b>. One negation only: never <i>I don't like neither</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia has two job offers. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/45ead3c35ec4/either-one-works/img/live-janela.webp",
+      "img": "../img/live-janela.webp",
       "leg": "A window over the city at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Both keys open the front door.",
-          "img": "https://wolf-labs.pages.dev/p/45ead3c35ec4/either-one-works/img/live-chaves.webp",
+          "img": "../img/live-chaves.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Neither of the boxes is heavy.",
-          "img": "https://wolf-labs.pages.dev/p/45ead3c35ec4/either-one-works/img/live-caixas.webp",
+          "img": "../img/live-caixas.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We can take either road to the city.",
-          "img": "https://wolf-labs.pages.dev/p/45ead3c35ec4/either-one-works/img/live-estrada.webp",
+          "img": "../img/live-estrada.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -170,7 +170,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/45ead3c35ec4/either-one-works/img/live-moeda.webp",
+      "img": "../img/live-moeda.webp",
       "leg": "A phone on a dark table",
       "pede": "Look at the picture: a phone on a dark table. Write 2 or 3 sentences comparing two choices (two phones, two jobs, two cities). Use <b>both</b>, <b>either</b> or <b>neither</b>.",
       "ph": "Both … Neither of them …",

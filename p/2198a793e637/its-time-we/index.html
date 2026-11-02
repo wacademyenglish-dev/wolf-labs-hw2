@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · It’s Time We Stood Together · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Bungee&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>It’s Time We Stood Together · X-Men ’97 · The Team Vote</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>It’s Time We Stood Together · X-Men ’97 · The Team Vote</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A team without its teacher, and a will nobody expected.</p><p style="margin:0 0 6px"><b>The grammar:</b> I’d Rather, It’s Time: I’d rather stay together. It’s time we stood up.</p><p style="margin:0 0 6px"><b>Short class (about 50 min):</b> I Warm-up and Pick a Side · III The Trailer · IV Who Leads Now? · V Scene by Scene · VI I’d Rather, It’s Time · VII The Team Vote · IX A Message to the Team. Skip if you’re short on time: VIII (marked EXTRA on your screen). Full lesson: about 51 min.</p><p style="margin:0"><b>Open with:</b> “You know the will now. In the trailer, would the team rather follow Magneto or split up? Guess.”</p></div><!--/prep-->
+    <p><i>X-Men ’97</i> (2024), a Marvel animated series on Disney+ that continues the cartoon from the 1990s. Professor X is gone; he leaves a message saying he is proud of his X-Men. Then his will is read, and everything he built goes to Magneto. Cyclops wants the team to stay together; not everybody agrees. The grammar: <b>would rather + base verb</b> (I’d rather stay together than split up), <b>would rather + person + past</b> (I’d rather you listened), <b>I’d rather not</b>, <b>Would you rather…?</b>, and <b>it’s (high) time + person + past</b> (it’s time we fought back) or <b>it’s time to + verb</b>.</p>
+    <p>A note for the teacher: cartoon action, no blood. Lines checked against the official captions (24/09), told in our own words.</p>
+    <p class="aq-guia"><b>Warm-up and Pick a Side (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the show under the photo). Let them talk; don’t correct the grammar yet. <b>2 · Pick a Side:</b> Professor X left everything to Magneto. Stay and follow him, or leave the team? The student taps one side and defends it for thirty seconds. Then tap “The teacher pushes back” and let them answer. Twice. Push for I’d rather… than… and it’s time we….</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>grateful</i>, <i>vigilant</i>, <i>dream</i>, <i>believe</i> and <i>team</i>, before the video, in turn the cards and hot seat. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (V)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <p class="fim-guia"><b>The ending (IX, A Message to the Team)</b>: the student writes to a team of their own (work, school, family, friends): what they would rather do, what they would rather the others did, and what it is time they all did. The corrector marks <i>would rather to</i>, <i>I’d rather you stay</i>, <i>it’s time we go</i>. It goes to My notes.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is the empty training room. I: Warm-up and Pick a Side. III: the trailer in three steps. <b>Before:</b> two sliders (stay together or go alone; alone or in a team), no right answer: the student says why. <b>Watch:</b> True or lie? and Which word did you hear?, each line with a ▶ time: tap it and the video jumps to that moment. <b>After:</b> tap each of the five words as the student uses it to tell the Professor’s goodbye. V: five frames on the film strip. <b>VI, Cyclops’s message:</b> the student reads the letter out loud, taps the words after <i>rather</i> and after <i>it’s time</i>, then finishes the rule. The rule stays in the corner on the next page. <b>VII, The Team Vote:</b> the blue grid of the training room seen from above, six pods in a ring (Cyclops, Storm, Wolverine, Jean, Gambit, Beast). The student reads the clue and says the sentence out loud, then taps Check: the right sentence is written and the pod lights up in yellow. At six, the team stands together. <b>VIII, Would You Rather?</b> six cards to open. IX: writing.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>would rather to stay</i>, <i>would rather staying</i>, <i>I’d rather you listen</i>, <i>I’d rather you to listen</i>, <i>I’d rather he would be here</i>, <i>it’s time we fight / we will fight</i>, <i>it’s time making</i>, <i>it’s time for make</i>, <i>I’d rather don’t</i>, <i>I’d not rather</i>, <i>Do you rather…?</i></p>
+    <!--conversa--><h4>WHO LEADS NOW? (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the trailer, your student ranks five possible leaders for the team, from the one they want most to the one they want least, then defends their number 1 and number 5 with I’d rather … led … and it’s time … took charge. Wait five seconds in silence before they speak, then show your own order and use the PUSH line (only you see it) to make it harder. There is no right order. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up and Pick a Side, IV Who Leads Now?, VII The Team Vote (say it, then Check) and VIII Would You Rather?.</li>
+      <li><b>Listen</b>: II The Words, III The Trailer and V Line by Line.</li>
+      <li><b>Focus</b>: VI I’d Rather, It’s Time.</li>
+      <li><b>Write</b>: IX A Message to the Team.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script src="aquece.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* IT’S TIME WE · X-MEN ’97 (WOLFLIX B2) · pergunta-surpresa · 29/10/2026 · would rather / it’s time */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'palavras', tipo: 'Would you rather', q: 'Would you rather lead a team or be the best player on it?',
+    opc: ['Lead the team', 'Be the best player'], st: ['I’d rather … than …, because …'],
+    ex: 'I’d rather be the best player than lead the team. I hate long meetings!', push: 'Your team chooses you as leader tomorrow. Do you say no?' },
+  { cena: 'falas', tipo: 'And you?', q: 'In your life right now, what is it time you changed?',
+    opc: ['A habit', 'My job', 'Where I live'], st: ['It’s time I …', 'It’s high time I stopped …'],
+    ex: 'A habit. It’s high time I stopped checking my phone in bed.', push: 'Why haven’t you done it yet? Be honest.' },
+  { cena: 'votacao', tipo: 'Opinion', q: 'Is a team better with one strong leader, or with no leader at all?',
+    opc: ['One strong leader', 'Everybody decides', 'It depends'], st: ['I’d rather the team …', 'It’s time teams …'],
+    ex: 'It depends. At work I’d rather someone made the final call, but with friends I’d rather we all decided.', push: 'Think of your best team ever. Who was the leader?' },
+  { cena: 'dilemas', tipo: 'What if', q: 'What if your boss left and gave the company to the person you like least?',
+    opc: ['I’d stay', 'I’d leave', 'I’d start my own team'], st: ['I’d rather … than …', 'It would be time I …'],
+    ex: 'I’d start my own team. I’d rather take a risk than work for someone I don’t trust.', push: 'And if the salary doubled?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* IT’S TIME WE · X-MEN ’97 (WOLFLIX B2) · conversa · 29/10/2026 · regra 3×3 do Carlos
+   O ranking entra DEPOIS do trailer (III), colado nele: quem deve liderar o time agora?
+   Formato trocado: o lote pedia votação de conselho, mas a tela forte da aula JÁ É uma votação
+   (VI · The Team Vote) e a cena I já tem o Pick a Side (ficar ou sair); outro voto repetiria o gesto.
+   O ranking põe o aluno para escolher e defender uma ordem, com a gramática da aula
+   (I’d rather + pessoa + passado, it’s time + pessoa + passado) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'lider', apos: 'video', est: 'o', min: 6, img: 'reuniao', rot: 'Who Leads Now?', t: 'You saw the trailer. Now the team needs a leader.',
+    p: 'Put the five in order: 1 is the leader you want most. Then defend your number 1 and your number 5. Your teacher pushes back.',
+    formato: 'ranking',
+    q: 'Who should lead the X-Men now?', dica: 'Tap 1 to 5. Tap again to undo.',
+    itens: ['Cyclops · the planner', 'Storm · the calm one', 'Jean Grey · the heart', 'Wolverine · the fighter', 'Magneto · the old enemy'],
+    prof: [1, 0, 2, 4, 3],
+    st: ['I’d rather … led the team than …', 'It’s time … took charge, because …', 'I’d rather not follow …'],
+    ex: 'Number 1 is Storm. I’d rather Storm led the team than Cyclops: she listens. Number 5 is Wolverine. It’s time he learned to work with people!',
+    push: 'Magneto has the house, the money and the power. If you’d rather not follow him, where does the team sleep tonight?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "Your choices, then a team without its teacher.",
+   "p": "Answer three questions. Then vote and defend it."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. They turn yellow in the video."
+  },
+  "video": {
+   "t": "X-Men ’97: the trailer.",
+   "p": "Answer first. Watch. Tap ▶ to hear it again."
+  },
+  "cv-lider": {
+   "t": "The team needs a leader.",
+   "p": "Rank the five. Defend your 1 and your 5."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it again."
+  },
+  "regra": {
+   "t": "Cyclops writes to the team.",
+   "p": "Read it aloud. Tap the pattern. Finish the rule."
+  },
+  "votacao": {
+   "t": "Six mutants, one vote.",
+   "p": "Read the clue. Say it aloud. Then tap Check."
+  },
+  "dilemas": {
+   "t": "Six hard choices.",
+   "p": "Answer with I’d rather … than … Then ask back."
+  },
+  "fim": {
+   "t": "A message to your team.",
+   "p": "Use I’d rather and it’s time we. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Would rather + verbo, would rather + pessoa + passado e it’s (high) time + pessoa + passado: o Professor X se vai, deixa tudo para o Magneto, e Ciclope quer o time unido.",
+  "armadilha": "O brasileiro calca o “preferiria que você ficasse” e “já é hora de a gente ir” e diz “I’d rather you stay”, “would rather to go”, “it’s time we go”; o passado ali não é tempo passado, é irreal.",
+  "pal": [
+   "I’d rather",
+   "I’d rather not",
+   "I’d rather you …",
+   "Would you rather …?",
+   "it’s time we …",
+   "it’s high time",
+   "grateful",
+   "team"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a série: um time sem o professor e um testamento que ninguém esperava.",
+   "perg": "Would you rather lead a team or be part of one?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "mundo": {
+   "obj": "Aquecimento com três perguntas e a votação: seguir o Magneto ou sair do time, defendendo a escolha.",
+   "perg": "Would you rather stay or leave? Why?",
+   "pula": "Duas perguntas e uma rodada de defesa."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (grateful, vigilant, dream, believe, team) antes de assistir.",
+   "perg": "What are you grateful for this week?",
+   "pula": "Três palavras bastam."
+  },
+  "video": {
+   "obj": "O trailer inteiro em três passos: duas réguas, escuta das falas, contar a despedida do Professor.",
+   "perg": "Would the team rather follow Magneto or split up?",
+   "pula": "Assista uma vez só e faça só uma tarefa."
+  },
+  "cv-lider": {
+   "obj": "Ordenar cinco líderes possíveis e defender o 1º e o 5º contra o professor.",
+   "perg": "Who would you rather follow, and why?",
+   "pula": "Só o número um."
+  },
+  "falas": {
+   "obj": "Ouvir de novo as falas com palavras amarelas e repetir como o personagem.",
+   "perg": "How would Cyclops say it?",
+   "pula": "Três falas bastam."
+  },
+  "regra": {
+   "obj": "A regra: o que vem depois de rather e de it’s time (verbo base, pessoa + passado).",
+   "perg": "I’d rather you stay, or I’d rather you stayed?",
+   "pula": "Não corte: é a regra."
+  },
+  "votacao": {
+   "obj": "Seis mutantes votam: cada frase certa com would rather / it’s time ganha um voto.",
+   "perg": "What would Wolverine rather do?",
+   "pula": "Quatro votos bastam."
+  },
+  "dilemas": {
+   "obj": "Seis dilemas com Would you rather…? e I’d rather … than …; o aluno pergunta de volta.",
+   "perg": "Would you rather … or …?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: mensagem para um time do aluno com I’d rather, I’d rather you e it’s time we.",
+   "perg": "What is it time your team did?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa adulta sobre times, liderança e mudanças, com would rather e it’s time.",
+   "perg": "What is it high time you changed?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre o dilema do testamento e de liderança, com I’d rather e it’s time we.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Ciclope e responde sobre o time e o Magneto com would rather e it’s time.",
+   "perg": "Would you rather the team followed Magneto, or you?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Teams, leaders and changes.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’d rather",
+    "I’d rather you",
+    "it’s time we",
+    "it’s high time"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR TEAM",
+     "q": "At work, would you rather decide alone or as a team?",
+     "fup": "What happens when the team disagrees?",
+     "st": [
+      "The thing is, I’d rather …",
+      "I’d rather we … than …"
+     ],
+     "ex": "The thing is, I’d rather decide as a team, even if it takes twice as long."
+    },
+    {
+     "k": "THE BOSS",
+     "q": "What would you rather your boss did differently?",
+     "fup": "Have you ever said it to them?",
+     "st": [
+      "I’d rather my boss …",
+      "To be fair, …"
+     ],
+     "ex": "I’d rather my boss told us the plan earlier. To be fair, I’ve never said it."
+    },
+    {
+     "k": "HIGH TIME",
+     "q": "What is it high time you changed in your life?",
+     "fup": "What’s stopping you?",
+     "st": [
+      "It’s high time I …",
+      "What stops me is …"
+     ],
+     "ex": "It’s high time I learned to say no. What stops me is guilt."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What is it time your city did?",
+     "fup": "Who should pay for it?",
+     "st": [
+      "It’s time the city …",
+      "I’d rather they … than …"
+     ],
+     "ex": "It’s time the city built bike lanes. I’d rather they did that than another viaduct."
+    },
+    {
+     "k": "SUPERPOWERS",
+     "q": "Would you rather read minds, like the Professor, or control metal, like Magneto?",
+     "fup": "What would you do first?",
+     "st": [
+      "I’d rather …, because …"
+     ],
+     "ex": "I’d rather read minds, because I’d finally know what my cat thinks."
+    },
+    {
+     "k": "FAMILY PLANS",
+     "q": "Holidays: would you rather your family planned everything, or nothing?",
+     "fup": "Who usually plans?",
+     "st": [
+      "I’d rather they … than …",
+      "Honestly, …"
+     ],
+     "ex": "I’d rather they planned nothing than a schedule every two hours."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Follow Magneto, or split up?",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’d rather",
+    "it’s time we",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "The Professor left everything to Magneto. Should the team follow him?",
+     "a": "Follow him",
+     "b": "Split up",
+     "fa": [
+      "Follow him. It was the Professor’s choice, and I’d rather trust it.",
+      "It’s time we stopped fighting old wars."
+     ],
+     "fb": [
+      "Split up. I’d rather leave than follow an old enemy.",
+      "A will can’t buy loyalty."
+     ]
+    },
+    {
+     "q": "A team in crisis: one strong leader, or decisions together?",
+     "a": "One leader",
+     "b": "Together",
+     "fa": [
+      "One leader. In a crisis, I’d rather someone just decided."
+     ],
+     "fb": [
+      "Together. It’s high time teams stopped waiting for a hero."
+     ]
+    },
+    {
+     "q": "Would you rather be respected or liked as a leader?",
+     "a": "Respected",
+     "b": "Liked",
+     "fa": [
+      "Respected. People follow respect when it gets hard."
+     ],
+     "fb": [
+      "Liked. I’d rather people wanted to follow me than had to."
+     ]
+    },
+    {
+     "q": "When a mentor leaves, is it time to honor their dream, or to find your own?",
+     "a": "Honor it",
+     "b": "Find your own",
+     "fa": [
+      "Honor it. They built everything you have."
+     ],
+     "fb": [
+      "Find your own. It’s time we grew up."
+     ]
+    }
+   ],
+   "fim": "Four rounds. It’s time we called it a draw."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Cyclops now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Cyclops.",
+   "perguntas": [
+    "The Professor left everything to Magneto. Would you rather he hadn’t?",
+    "Would you rather lead the team, or follow someone else?",
+    "What is it time the X-Men did now?",
+    "Wolverine disagrees with you. What would you rather he did?",
+    "Would you rather keep the team together or keep it safe?",
+    "If the team splits up, whose fault is it?"
+   ],
+   "st": [
+    "I’d rather …",
+    "It’s time we …",
+    "I’d rather he …"
+   ],
+   "ex": "I’d rather we stayed together. It’s time we stood up for the Professor’s dream."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

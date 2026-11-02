@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Six Eggs · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Caveat:wght@700&family=Fraunces:ital,wght@0,300;0,500;0,600;0,700;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Six Eggs · The Notebook on the 7:40</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Six Eggs · The Notebook on the 7:40</h2>
+    <p>An easy reader in five chapters. Sofia finds an old notebook on the 7:40 train: no name, no phone number, a shopping list with six eggs, a bad drawing of a cat, and half an address. She works out the other half with <b>because</b>. The grammar of the hour is the four words that join two facts: <b>and</b>, <b>but</b>, <b>so</b>, <b>because</b>. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>One sentence, a comma before <b>and / but / so</b>, a small letter after it. <b>So</b> puts the result second; <b>because</b> puts the reason second: <i>A, so B</i> is <i>B because A</i>. The trap: <i>because</i> where the student means <i>so</i>, and <i>but</i> for any second idea. Scene VII turns every SO sentence into a BECAUSE sentence.</p>
+    <h4>LISTEN FIRST</h4>
+    <p>Every chapter now starts with the recording, text closed (pause and 0.75× on the player). The text opens only after listening; then you read it together, then the questions. The five recordings were checked against the text.</p>
+    <!--conversa--><h4>THE SURPRISE QUESTION</h4>
+    <p>This lesson already has its conversation moments: the bet in III, the dilemma in VIII and the personal scenes in I and XII. So it only gets the <b>Surprise question</b> button (bottom right, only you see it): one short personal question with and, but, so or because, at any moment. Answer first yourself, wait five seconds in silence, then use the PUSH line (a quick yes or no). Use it when the lesson has been only listening and exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: the five chapters (II, IV, VI, IX, XI).</li>
+      <li><b>Out loud</b>: I Your Morning, III What Is Inside?, VIII What Would You Do? (often the first time an A1 student argues in English: give it time), X Tell It Back, XII Your Week.</li>
+      <li><b>Focus</b>: V Four Words (pairs 6 and 7 are the same two facts in the other order), VII Turn It Around (the trap piece is <i>so</i>).</li>
+      <li><b>Write</b>: XIII, a true story, with the red wavy line for a full stop before <i>and / but / so</i>, a capital after the comma, “Because.” alone and <i>because of</i> + a sentence. It goes to their My notes.</li>
+    </ul>
+    <h4>THE DEDUCTION AND THE LAST LINE</h4>
+    <p>In chapter four the student picks the street (only Canal Street goes past 40) and says the sentence with <i>because</i>. In chapter two the list has one line nobody can read; in chapter five the student reveals it: <b>a big box</b>. Don’t say it for them.</p>
+    <h4>IF YOU ARE LATE</h4>
+    <p>Cut two pairs in V and two sentences in VII. Don’t cut I, IX or XII.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SIX EGGS (Main A1) · pergunta-surpresa · 27/10/2026 · and / but / so / because
+   Só as perguntas-surpresa: a aula já tem a aposta (III · What Is Inside?), o dilema (VIII · What Would You Do?)
+   e duas cenas pessoais (I e XII); e a aula cheia já passa de 60 min. */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'cap1', tipo: 'And you?', q: 'Train, bus or car: how do you go?',
+    opc: ['The train', 'The bus', 'The car'], st: ['I take the …, because …'],
+    ex: 'The bus, because it’s cheap.', push: 'Every day? Yes or no?' },
+  { cena: 'cap3', tipo: 'Would you rather', q: 'A cat or a dog?',
+    opc: ['A cat', 'A dog'], st: ['A …, because …', 'I like cats, but …'],
+    ex: 'A cat, because cats are quiet.', push: 'Six eggs a day? Yes or no?' },
+  { cena: 'cap5', tipo: 'And you?', q: 'Do you write lists, like the old man?',
+    opc: ['Yes, always', 'No, never'], st: ['Yes, because I forget things.', 'No, but …'],
+    ex: 'Yes, because I forget things! Bread, milk, coffee.', push: 'On your phone? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "manha": {
+   "t": "Four questions about your morning.",
+   "p": "Your teacher is the host. Answer out loud."
+  },
+  "cap1": {
+   "t": "The 7:40",
+   "p": "Listen first, text closed. Then read. Two questions."
+  },
+  "aposta": {
+   "t": "An old notebook. No name.",
+   "p": "Choose one. Say why, with because."
+  },
+  "cap2": {
+   "t": "Six Eggs",
+   "p": "Listen. Then read. One line nobody can read."
+  },
+  "junta": {
+   "t": "Two facts, one word.",
+   "p": "Read both facts. Pick the word. Say the sentence."
+  },
+  "cap3": {
+   "t": "Page Four",
+   "p": "Listen. Then read. Stop before the questions."
+  },
+  "vira": {
+   "t": "Same facts, other order.",
+   "p": "Read the SO sentence. Tap result, BECAUSE, reason."
+  },
+  "faria": {
+   "t": "No name. No number. A hungry cat.",
+   "p": "Choose one. Say why, with because."
+  },
+  "cap4": {
+   "t": "Seventy-Three",
+   "p": "Listen. Then read. Find the street. Say why."
+  },
+  "ordem": {
+   "t": "First, then, in the end.",
+   "p": "Tap what happens next. Say it."
+  },
+  "cap5": {
+   "t": "In the End",
+   "p": "Listen. Then read. Read the list’s last line."
+  },
+  "semana": {
+   "t": "One true story from your week.",
+   "p": "Five sentences. Use the four words."
+  },
+  "fim": {
+   "t": "Write your true story.",
+   "p": "Use and, but, so, because. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "And, but, so, because para juntar dois fatos: Sofia acha um caderno velho no trem das 7:40, com lista de seis ovos e meio endereço.",
+  "armadilha": "O brasileiro usa because onde quer dizer so (“então”) e but para qualquer segunda ideia; também escreve “Because.” sozinho e esquece a vírgula antes de and/but/so.",
+  "pal": [
+   "and",
+   "but",
+   "so",
+   "because",
+   "notebook",
+   "address",
+   "shopping list",
+   "first",
+   "in the end"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: um caderno sem nome no trem das 7:40.",
+   "perg": "Do you take a train or a bus in the morning?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "manha": {
+   "obj": "Aquecimento pessoal: a manhã do aluno, como convidado de um programa.",
+   "perg": "What do you do first in the morning?",
+   "pula": "Duas perguntas bastam."
+  },
+  "cap1": {
+   "obj": "Capítulo 1: ouvir com o texto fechado, depois ler juntos.",
+   "perg": "What does Sofia find on the train?",
+   "pula": "Uma pergunta basta."
+  },
+  "aposta": {
+   "obj": "Aposta: o que tem no caderno? Escolher e justificar com because.",
+   "perg": "What is inside, and why do you think so?",
+   "pula": "Uma escolha e um because."
+  },
+  "cap2": {
+   "obj": "Capítulo 2: a lista com seis ovos e uma linha que ninguém lê.",
+   "perg": "What is on the list?",
+   "pula": "Cena extra: pode pular; conte em uma frase."
+  },
+  "junta": {
+   "obj": "Juntar dois fatos com a palavra certa (and, but, so, because).",
+   "perg": "Which word joins these two facts?",
+   "pula": "Corte dois pares; não corte o 6 e o 7."
+  },
+  "cap3": {
+   "obj": "Capítulo 3: a página quatro, com uma pausa antes das perguntas.",
+   "perg": "How does Sofia feel now?",
+   "pula": "Uma pergunta basta."
+  },
+  "vira": {
+   "obj": "Virar a frase com so numa frase com because (resultado, depois motivo).",
+   "perg": "Can you say it with because?",
+   "pula": "Cena extra: corte duas frases ou pule."
+  },
+  "faria": {
+   "obj": "Dilema: sem nome, sem número e um gato sem comer. O que fazer?",
+   "perg": "What do you do with the notebook, and why?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cap4": {
+   "obj": "Capítulo 4: deduzir a rua (só a Canal Street passa do 40) e dizer com because.",
+   "perg": "Which street is it, and why?",
+   "pula": "Cena extra, mas não corte se der: é a dedução."
+  },
+  "ordem": {
+   "obj": "Recontar a história em ordem: first, then, in the end.",
+   "perg": "What happens first?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cap5": {
+   "obj": "Capítulo 5: o aluno revela a última linha da lista (a big box).",
+   "perg": "What is the last line of the list?",
+   "pula": "Cena extra: não diga a resposta pelo aluno."
+  },
+  "semana": {
+   "obj": "Uma história verdadeira da semana do aluno, com as quatro palavras.",
+   "perg": "What happened this week?",
+   "pula": "Cena extra: três frases bastam."
+  },
+  "fim": {
+   "obj": "Escrita: a história verdadeira em cinco frases, com a linha vermelha.",
+   "perg": "What happened, and why?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa juntando fatos com and, but, so, because.",
+   "perg": "Why do you like your mornings?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e justificar com because ou so.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Sofia e conta a história do caderno com as quatro palavras.",
+   "perg": "Why do you want to find the owner, Sofia?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Two facts, your life.",
+   "p": "Pick a card. Answer with the four words.",
+   "palavras": [
+    "and",
+    "but",
+    "so",
+    "because"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR TRAIN",
+     "q": "How do you go to work or class?",
+     "fup": "Do you like it?",
+     "st": [
+      "I go by …, because …",
+      "I take …, but …"
+     ],
+     "ex": "I go by bus, but it is always late."
+    },
+    {
+     "k": "YOUR LIST",
+     "q": "What is on your shopping list this week?",
+     "fup": "Why do you need it?",
+     "st": [
+      "I need …, because …",
+      "I have no …, so …"
+     ],
+     "ex": "I have no eggs, so I need six eggs."
+    },
+    {
+     "k": "YOUR BAG",
+     "q": "What is in your bag right now?",
+     "fup": "Is there anything old?",
+     "st": [
+      "There is …, and …",
+      "I have …, but …"
+     ],
+     "ex": "There is a phone, and there is an old notebook."
+    },
+    {
+     "k": "LOST THINGS",
+     "q": "Do you lose things?",
+     "fup": "What do you lose?",
+     "st": [
+      "I lose …, so …",
+      "I don’t lose things, because …"
+     ],
+     "ex": "I lose my keys, so I keep them by the door."
+    },
+    {
+     "k": "YOUR PET",
+     "q": "Do you like cats or dogs?",
+     "fup": "Why?",
+     "st": [
+      "I like …, because …",
+      "I like …, but …"
+     ],
+     "ex": "I like cats, because they are quiet."
+    },
+    {
+     "k": "YOUR WEEKEND",
+     "q": "What do you do on Saturday?",
+     "fup": "And on Sunday?",
+     "st": [
+      "I …, and then …",
+      "I want to …, but …"
+     ],
+     "ex": "I want to sleep, but I go to the market."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "so",
+    "but"
+   ],
+   "rodadas": [
+    {
+     "q": "A found notebook: read it or don’t read it?",
+     "a": "Read it",
+     "b": "Don’t read it",
+     "fa": [
+      "Read it, because there is an address."
+     ],
+     "fb": [
+      "Don’t read it, because it is not my notebook."
+     ]
+    },
+    {
+     "q": "Train or car?",
+     "a": "Train",
+     "b": "Car",
+     "fa": [
+      "Train, because I can read."
+     ],
+     "fb": [
+      "Car, so I can go anywhere."
+     ]
+    },
+    {
+     "q": "A paper list or a list on your phone?",
+     "a": "Paper",
+     "b": "Phone",
+     "fa": [
+      "Paper, because I like to write."
+     ],
+     "fb": [
+      "Phone, so I never lose it."
+     ]
+    },
+    {
+     "q": "Help a stranger or stay out of it?",
+     "a": "Help",
+     "b": "Stay out",
+     "fa": [
+      "Help, because it is a nice thing."
+     ],
+     "fb": [
+      "Stay out, but I call the police."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Sofia now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Sofia.",
+   "perguntas": [
+    "Where are you every morning at 7:40?",
+    "What is in the notebook?",
+    "Why do you want to find the owner?",
+    "There is no name, so what do you do?",
+    "How do you find the street?",
+    "Are you happy in the end? Why?"
+   ],
+   "st": [
+    "I …, because …",
+    "There is no …, so …",
+    "I …, but …"
+   ],
+   "ex": "There is half an address, so I look for the street."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

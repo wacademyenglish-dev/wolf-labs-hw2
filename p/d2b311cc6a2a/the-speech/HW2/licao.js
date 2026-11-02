@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Speech",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d2b311cc6a2a/the-speech/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "rhetorical devices: tricolon (three items, the biggest last) · parallelism (same grammar in every part) · antithesis (not because X, but because Y) · rhetorical question (auxiliary before the subject) · anaphora (the same opening words, on purpose)",
   "abrir": "Which place in your town would you fight to keep?",
   "fecho": "A line that sounds like a speech has a shape. <b>Tricolon</b>: three items, the biggest last. <b>Parallelism</b>: the same grammar each time (<i>to read, to study and to meet</i>). <b>Antithesis</b>: <i>not because it is easy, but because it is right</i>. <b>Question</b>: <i>Why should we…?</i> <b>Anaphora</b>: the same opening, on purpose, never a synonym.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia drafts a ninety-second radio speech with Leo. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/d2b311cc6a2a/the-speech/img/live-radio.webp",
+      "img": "../img/live-radio.webp",
       "leg": "A radio booth, the light on",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We read here, we learn here, we belong here.",
-          "img": "https://wolf-labs.pages.dev/p/d2b311cc6a2a/the-speech/img/live-biblioteca.webp",
+          "img": "../img/live-biblioteca.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It is not a building we lose, but a promise we break.",
-          "img": "https://wolf-labs.pages.dev/p/d2b311cc6a2a/the-speech/img/live-podio.webp",
+          "img": "../img/live-podio.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Why should we close the one door that is always open?",
-          "img": "https://wolf-labs.pages.dev/p/d2b311cc6a2a/the-speech/img/live-radio.webp",
+          "img": "../img/live-radio.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d2b311cc6a2a/the-speech/img/live-podio.webp",
+      "img": "../img/live-podio.webp",
       "leg": "A microphone on a podium",
       "pede": "Look at the picture: a microphone on a podium. Write 2 or 3 lines of a speech to save a place you love (a park, a market, a school). Use a list of three, <b>not because… but because…</b> or a question that starts with <b>Why should we…?</b>",
       "ph": "We come here to …",

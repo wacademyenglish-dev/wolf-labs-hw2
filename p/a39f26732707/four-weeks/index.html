@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Four Weeks · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:ital,wght@0,500;0,600;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Four Weeks · The Two Commas</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Four Weeks · The Two Commas</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> In 2006, surgical residents learned to stitch with the same materials and the same total hours: one group in a single day, the other spread over four weeks.</p><p style="margin:0 0 6px"><b>The grammar:</b> Some, or All: Same words. Two commas decide if the chart shows two groups or everybody.</p><p style="margin:0 0 6px"><b>Short class (about 42 min):</b> I How You Study · II Two Groups · III Some, or All · IV Four Doors · VIII The Source · XII Your Method, Again. Skip if you’re short on time: V, VI, X, XI (marked EXTRA on your screen). Full lesson: about 68 min.</p><p style="margin:0"><b>Open with:</b> “Describe the last thing you learned this way.”</p></div><!--/prep-->
+    <p>In 2006, surgical residents learned to stitch with the same materials and the same total hours: one group in a single day, the other spread over four weeks. A month later, the four-week group did better on a real surgery. Reporting that needs a <b>defining relative clause</b>: <b>The residents who spread their training over four weeks did better.</b> Add two commas and the sentence says <i>all</i> the residents spread it out, and the study disappears. Students add commas where they breathe, use THAT after a comma, say <i>my mother that is a doctor</i> and start sentences with <i>That I need is …</i>. On screen, the sentence has two comma slots and a chart: no commas, two bars (some of them, compared); two commas, one bar (all of them).</p>
+    <h4>SCENE I</h4>
+    <p>Write the third answer exactly; it often comes with <i>the person that learns faster, he …</i>. Don’t correct yet. The method comes back in scene X.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Two readings of the same words (scene V), each with pause and 0.75×. Reading 1 has no pauses; reading 2 has two. After playing, a wave shows the silences. The student reads the other four out loud and you tap SOME or ALL from their pauses.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene VIII: about four minutes (0:20 to 4:33) on the study, the brain and three techniques, sealed until the student guesses one technique. After the video, the last step is ONE screen: the video stays on the left (tap a time to hear that moment again), with the two-group chart from scene II under it; on the right, six True or Lie lines about what the video says. Every right answer lifts the bars and fills a mark (“Evidence found 3 / 6”). On a Lie the student says the true line. When all six are done, a friend with an exam asks one last question (“What should I do?”): the student taps an answer and says the sentence out loud, with a defining relative clause (who, that).</p>
+    <h4>OUTSIDE THE FIELD</h4>
+    <p>Scene X: you are the friend with no science background. After every answer, ask once: “Which ones? All of them?”</p>
+    <p class="pal-guia"><b>The words (VII)</b>: <i>techniques</i>, <i>memorize</i>, <i>flashcards</i>, <i>mistakes</i> and <i>sleep</i>, before the video, in hear it in the video and mystery meaning. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IX, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>YOUR CALL (XI) AND THE SURPRISE QUESTION</h4>
+    <p>After the video and the friend, your student uses what the study showed in three real decisions: a course, a nephew before a test, a study group. There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Every reason says exactly which one (the course that …, my friend, who …, what I need is …). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves. The last word is one minute on big exams, then you take the other side.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I How You Study, II Two Groups, X Outside the Field and XI Your Call.</li>
+      <li><b>Listen</b>: V The Pause You Can Hear, VII The Words, VIII The Source and IX Line by Line.</li>
+      <li><b>Focus</b>: III Some, or All, IV Four Doors and VI Drop It?</li>
+      <li><b>Write</b>: XII Your Method, Again.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* FOUR WEEKS (Main B2) · pergunta-surpresa · 28/10/2026 · relativas (who / which / that, com e sem vírgula; what) */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'grupos', tipo: 'And you?', q: 'Who is the best teacher you ever had? What made them different?',
+    opc: ['A school teacher', 'A boss', 'A friend or family'], st: ['The teacher who … was …', 'What made them different was …'],
+    ex: 'A boss. The person who taught me most was my first manager, who let me make mistakes.', push: 'What did they do that you still do today?' },
+  { cena: 'portas', tipo: 'Would you rather', q: 'Would you rather learn a skill in one hard month, or slowly in one easy year?',
+    opc: ['One hard month', 'One easy year'], st: ['What I prefer is …', 'People who learn slowly …'],
+    ex: 'One easy year. What I forget fast is everything I learned fast.', push: 'And if the skill is driving, for a job next month?' },
+  { cena: 'video', tipo: 'Opinion', q: 'Which technique from the video would you actually use this week?',
+    opc: ['Flashcards', 'Testing myself', 'Better sleep'], st: ['The one that I’d use is …', 'What I never do is …'],
+    ex: 'Testing myself. The technique that I never use is the one that works, apparently.', push: 'When exactly? Give me a day and a time.' },
+  { cena: 'explica', tipo: 'What if', q: 'What if you could download one skill into your brain tonight? Which one?',
+    opc: ['A language', 'An instrument', 'Something practical'], st: ['The skill which I’d choose is …', 'What I’ve always wanted is …'],
+    ex: 'An instrument. What I’ve always wanted is to play the piano, which my sister plays very well.', push: 'Would it feel like yours if you didn’t work for it?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* FOUR WEEKS (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O dilema entra no lugar de "XI · Fix the Report" (extra, achar o erro: III, IV e VI já treinam as
+   vírgulas). Vem depois do vídeo, do Line by Line e do amigo leigo (X): agora o aluno USA o que o estudo
+   e o vídeo mostraram em três decisões reais. A aula já tem o pessoal (I), a previsão (II) e o amigo (X).
+   A gramática (relativas com e sem vírgula; who / which / that; what = a coisa que) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'dilema', troca: 'erros', est: 'o', min: 7, img: 'biblio', rot: 'Your Call', t: 'Three study decisions. The study won’t decide for you.',
+    p: 'Choose, or say your own idea. Say exactly which one: the course that …, my friend, who …, what I need is …',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The course', sit: 'Your company pays for ONE: a one-month course which gives you a certificate, or a teacher who meets you one hour a week for six months.',
+        q: 'Which one do you take?', opc: ['The fast course', 'The weekly teacher', 'Neither'],
+        st: ['The option that works for me is …', 'A teacher who … is …', 'What I really need is …'],
+        ex: 'The weekly teacher. The course that gives a certificate looks good on a CV, but what I need is to remember it in six months.',
+        push: 'Your boss wants the certificate on the wall next month. Still the teacher?' },
+      { tag: 'The nephew', sit: 'Your nephew, who has a big test tomorrow, wants to study all night. His parents ask you to decide.',
+        q: 'What do you tell him?', opc: ['Study all night', 'Go to bed now', 'One hour, then bed'],
+        st: ['The thing that helps the brain is …', 'Students who sleep …', 'What the study showed is …'],
+        ex: 'One hour, then bed. Students who sleep remember more, and what the brain needs tonight is rest.',
+        push: 'He says: “You studied all night in school, and you passed.” Answer him.' },
+      { tag: 'The group', sit: 'A study group meets every Saturday at 8 a.m. Or there is an app which you can use any time, alone.',
+        q: 'Which one do you choose?', opc: ['The Saturday group', 'The app', 'Both'],
+        st: ['People who study in groups …', 'An app, which …, is …', 'What makes me keep going is …'],
+        ex: 'The group. People who wait for me make me show up. An app, which nobody checks, is easy to forget.',
+        push: 'The group is full of people who talk more than they study. Still the group?' }
+    ],
+    fim: { tag: 'The last word', q: 'One minute: should schools stop giving one big exam at the end?',
+      opc: ['Yes, stop it', 'No, keep it'], segundos: 60, nota: 'One minute, with a clause that says which one. Then your teacher takes the other side.',
+      st: ['Exams that … only test …', 'What schools should do is …', 'Students who … would …'],
+      ex: 'Yes. Exams that come once a year only test one night of studying. What schools should do is small tests every week.',
+      push: 'Your doctor passed one big exam. Would you trust a doctor who only did small tests?' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "metodo": {
+   "t": "How do you actually learn?",
+   "p": "Tap your method. Answer three questions out loud."
+  },
+  "grupos": {
+   "t": "2006. Residents learning to stitch.",
+   "p": "Read the facts. Predict, with a reason. Then read."
+  },
+  "virgulas": {
+   "t": "Two commas: two groups, or everybody?",
+   "p": "Add or remove commas. Watch the chart. Say it."
+  },
+  "portas": {
+   "t": "THAT, WHICH, WHO or WHAT?",
+   "p": "Choose the door. Say the whole sentence."
+  },
+  "pausa": {
+   "t": "A comma is a silence.",
+   "p": "Play each reading. Tap SOME or ALL. Read on."
+  },
+  "derruba": {
+   "t": "Drop THAT, or keep it?",
+   "p": "Say both versions. Tap DROP IT or IT STAYS."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them first. They turn yellow in the video."
+  },
+  "video": {
+   "t": "The study, the brain, three techniques.",
+   "p": "Guess first. Watch. Then True or Lie."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again."
+  },
+  "explica": {
+   "t": "A friend asks: “Which ones?”",
+   "p": "Your teacher is the friend. Answer clearly."
+  },
+  "cv-dilema": {
+   "t": "Three study decisions.",
+   "p": "Choose. Say exactly which one, with a clause."
+  },
+  "fim": {
+   "t": "Your method again, exactly.",
+   "p": "Write it, and the finding. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Relativas definidoras x não definidoras (as duas vírgulas mudam o sentido), that/which/who/what: residentes de cirurgia que treinaram em quatro semanas foram melhor que os de um dia só.",
+  "armadilha": "O brasileiro põe vírgula onde respira, usa THAT depois de vírgula, diz “my mother that is a doctor” e começa frase com “That I need is…” (o que = what).",
+  "pal": [
+   "who",
+   "that",
+   "which",
+   "what",
+   "the residents who…",
+   "spaced practice",
+   "techniques",
+   "flashcards",
+   "finding"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o estudo de 2006 e as duas vírgulas que mudam o gráfico.",
+   "perg": "Describe the last thing you learned.",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "metodo": {
+   "obj": "Aquecimento pessoal: o método do aluno. Anote a 3ª resposta exatamente; volta na X e na XII.",
+   "perg": "How do you actually learn something new?",
+   "pula": "Duas perguntas bastam; anote a terceira."
+  },
+  "grupos": {
+   "obj": "Prever qual grupo foi melhor, com motivo, e ler o resultado.",
+   "perg": "Which group did better, do you think?",
+   "pula": "Pule a previsão longa; leia o resultado."
+  },
+  "virgulas": {
+   "obj": "Tirar ou pôr as vírgulas e ver o gráfico: dois grupos (alguns) ou um (todos).",
+   "perg": "Some of them, or all of them?",
+   "pula": "Três frases bastam."
+  },
+  "portas": {
+   "obj": "Quatro portas: THAT escolhe, WHICH acrescenta, WHO é pessoa, WHAT não tem nome antes.",
+   "perg": "Which door does this sentence need?",
+   "pula": "Não corte o WHAT."
+  },
+  "pausa": {
+   "obj": "Ouvir duas leituras iguais e ouvir a vírgula como silêncio.",
+   "perg": "Did you hear a pause?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "derruba": {
+   "obj": "Quando dá para tirar THAT/WHO (novo sujeito depois) e quando fica.",
+   "perg": "Can you drop it here?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (techniques, memorize, flashcards, mistakes, sleep); o aluno chuta antes.",
+   "perg": "Do you use flashcards?",
+   "pula": "Cinco minutos no máximo."
+  },
+  "video": {
+   "obj": "Vídeo (0:20 a 4:33) sobre o estudo e três técnicas; True or Lie e a pergunta do amigo.",
+   "perg": "What should a friend with an exam do?",
+   "pula": "Assista e faça só o True or Lie."
+  },
+  "falas": {
+   "obj": "Linha a linha do vídeo, com explicação das palavras amarelas.",
+   "perg": "Which technique would you try?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "explica": {
+   "obj": "O professor é um amigo leigo que pergunta sempre “Which ones? All of them?”.",
+   "perg": "Which ones? All of them?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-dilema": {
+   "obj": "Três decisões de estudo (curso, sobrinho, grupo); cada razão diz exatamente qual.",
+   "perg": "Which course would you choose, exactly?",
+   "pula": "Dois casos bastam."
+  },
+  "fim": {
+   "obj": "Escrita: o método da cena I com uma relativa precisa, e o resultado do estudo.",
+   "perg": "What is the method that works for you?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa aberta sobre aprender, sempre dizendo exatamente qual.",
+   "perg": "Which teacher taught you the most?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre estudo, provas e métodos.",
+   "perg": "I see your point, but which students?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta um plano de estudo de quatro semanas para algo real.",
+   "perg": "What is the thing that will stop you?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Say exactly which one.",
+   "p": "Pick a card. Use a clause that picks it out.",
+   "palavras": [
+    "who",
+    "that",
+    "which",
+    "what"
+   ],
+   "cartas": [
+    {
+     "k": "A GREAT TEACHER",
+     "q": "Who is the teacher who taught you the most?",
+     "fup": "What did they do differently?",
+     "st": [
+      "The teacher who … was …",
+      "What I remember most is …"
+     ],
+     "ex": "The teacher who taught me the most was my math teacher. What I remember most is her patience."
+    },
+    {
+     "k": "CRAMMING",
+     "q": "Have you ever crammed for an exam the night before?",
+     "fup": "What do you remember from it now?",
+     "st": [
+      "The exams that I crammed for …",
+      "What I learned was …"
+     ],
+     "ex": "The exams that I crammed for are the ones I remember nothing about."
+    },
+    {
+     "k": "A SKILL",
+     "q": "What is a skill that took you years to learn?",
+     "fup": "What finally made it click?",
+     "st": [
+      "The skill that … was …",
+      "My cousin, who …, helped me."
+     ],
+     "ex": "The skill that took me longest was driving. My uncle, who is very calm, finally taught me."
+    },
+    {
+     "k": "WHAT YOU NEED",
+     "q": "What do you need to learn English faster?",
+     "fup": "What stops you?",
+     "st": [
+      "What I need is …",
+      "The thing that stops me is …"
+     ],
+     "ex": "What I need is more time speaking. The thing that stops me is my schedule."
+    },
+    {
+     "k": "APPS AND TOOLS",
+     "q": "Which study tool actually works for you?",
+     "fup": "Which one is a waste of time?",
+     "st": [
+      "The app that works for me is …",
+      "…, which I stopped using, …"
+     ],
+     "ex": "The app that works for me is a flashcard one. Social media, which I use to ‘study’, doesn’t count."
+    },
+    {
+     "k": "SLEEP",
+     "q": "Does sleep change how well you learn?",
+     "fup": "What happens when you sleep badly?",
+     "st": [
+      "The days when I sleep well …",
+      "What happens is …"
+     ],
+     "ex": "The days when I sleep well are the days I remember new words."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Be precise.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "the ones who",
+    "what matters is",
+    "I see your point, but",
+    "The thing is"
+   ],
+   "rodadas": [
+    {
+     "q": "Big final exams: useful or outdated?",
+     "a": "Useful",
+     "b": "Outdated",
+     "fa": [
+      "Useful. Students who know there’s a big test actually review.",
+      "What matters is that they force you to connect everything."
+     ],
+     "fb": [
+      "Outdated. The study shows that cramming works for a day, not a month.",
+      "I see your point, but exams reward memory, not skill."
+     ]
+    },
+    {
+     "q": "Intensive one-month course, or a year of short lessons?",
+     "a": "Intensive",
+     "b": "Spread out",
+     "fa": [
+      "Intensive. People who have no time need fast results.",
+      "You stay focused because nothing else happens."
+     ],
+     "fb": [
+      "Spread out. The residents who trained over four weeks did better.",
+      "The thing is, the brain needs sleep between lessons."
+     ]
+    },
+    {
+     "q": "Study alone or in a group?",
+     "a": "Alone",
+     "b": "In a group",
+     "fa": [
+      "Alone. What I need is silence.",
+      "Groups that meet to study usually end up chatting."
+     ],
+     "fb": [
+      "In a group. Explaining to others is what makes it stick.",
+      "A friend who asks ‘which ones?’ makes you precise."
+     ]
+    },
+    {
+     "q": "Should schools teach how to study, as a subject?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Most people never learn what actually works.",
+      "It’s the skill that helps with every other skill."
+     ],
+     "fb": [
+      "No. Teachers who are good already show you how.",
+      "I see your point, but timetables are already full."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The students who argued best were the ones who said exactly which."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Four Weeks",
+   "t": "Plan four weeks, not one day.",
+   "p": "Four steps. Say exactly which one.",
+   "prof": "Push for one defining clause per step and one sentence starting with “What I …”.",
+   "passos": [
+    {
+     "q": "What is something you want to learn in the next four weeks?",
+     "st": [
+      "The thing that I want to learn is …"
+     ],
+     "ex": "The thing that I want to learn is how to give a short presentation in English."
+    },
+    {
+     "q": "Which technique from the video will you use?",
+     "st": [
+      "The technique that I’ll use is …",
+      "…, which means …"
+     ],
+     "ex": "The technique that I’ll use is spaced practice, which means twenty minutes every other day."
+    },
+    {
+     "q": "Who can help you, and how?",
+     "st": [
+      "My …, who …, can …"
+     ],
+     "ex": "My colleague, who presents every week, can watch me and give feedback."
+    },
+    {
+     "q": "What could stop you, and what will you do about it?",
+     "st": [
+      "What could stop me is …",
+      "The days when …, I’ll …"
+     ],
+     "ex": "What could stop me is work. The days when I’m busy, I’ll do just five minutes."
+    }
+   ],
+   "fim": "Four weeks, not one day: the group that spread it out did better."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

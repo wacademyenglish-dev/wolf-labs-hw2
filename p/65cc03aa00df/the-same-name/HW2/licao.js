@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "The Same Name",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/65cc03aa00df/the-same-name/img/live-balcao.webp",
+  "capa": "../img/live-balcao.webp",
   "alvo": "possessive 's (the owner first: Pedro's jacket) · Whose ...? · mine / yours / his / hers; never the jacket of Pedro, Pedro jacket",
   "abrir": "Whose is the bag near you?",
   "fecho": "The owner comes first, then a small <b>'s</b>, then the thing: <b>Pedro's jacket</b>. Never <i>the jacket of Pedro</i>, never <i>Pedro jacket</i>. <b>Whose</b> bag is this? It is <b>mine</b> · <b>yours</b> · <b>his</b> · <b>hers</b>.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the school lost and found. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/65cc03aa00df/the-same-name/img/live-balcao.webp",
+      "img": "../img/live-balcao.webp",
       "leg": "The lost and found window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This is Pedro's jacket.",
-          "img": "https://wolf-labs.pages.dev/p/65cc03aa00df/the-same-name/img/live-bancada.webp",
+          "img": "../img/live-bancada.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "That bottle is Bruno's.",
-          "img": "https://wolf-labs.pages.dev/p/65cc03aa00df/the-same-name/img/live-caixa.webp",
+          "img": "../img/live-caixa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The cap is not mine. It is Marta's.",
-          "img": "https://wolf-labs.pages.dev/p/65cc03aa00df/the-same-name/img/live-balcao.webp",
+          "img": "../img/live-balcao.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -166,7 +166,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/65cc03aa00df/the-same-name/img/live-bancada.webp",
+      "img": "../img/live-bancada.webp",
       "leg": "Lost things on a table",
       "pede": "Look at the picture: a jacket, a bottle, a glove, a cap and glasses on a table. Write 2 or 3 sentences about whose they are. Use <b>'s</b> (Pedro's jacket) or <b>mine / his / hers</b>.",
       "ph": "The jacket is Pedro's …",

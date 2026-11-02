@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Who Called Who · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Who Called Who · The Round Table</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Who Called Who · The Round Table</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Your student’s first language often asks both questions with no helper verb, so they build Who did call Caio?</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: Doer: ask the sentence. Other one: bring in DID.</p><p style="margin:0 0 6px"><b>Short class (about 47 min):</b> I Ten People, One Bill · II Who Did What · III Two Questions · IV The Rule · V Bea Asks · VI The Question Mark · IX The Message. Skip if you’re short on time: VII, VIII (marked EXTRA on your screen). Full lesson: about 60 min.</p><p style="margin:0"><b>Open with:</b> “The last time you went out with a group: who chose the place?”</p></div><!--/prep-->
+    <p>Your student’s first language often asks both questions with no helper verb, so they build <i>Who did call Caio?</i> and <i>Who Marina called?</i>. English has two shapes. When WHO is the doer, the sentence already is the question: <b>Who called Caio?</b> When WHO is the other person, <b>DID</b> comes in and the verb goes bare: <b>Who did Marina call?</b> Ten friends had dinner, and the bill is still Bea’s. The screen is the round table seen from above, with arrows from the doer to the other person.</p>
+    <h4>THE ARROW</h4>
+    <p>When your student is stuck, point: <i>Are you asking about the start of the arrow, or the end?</i></p>
+    <h4>SAME FACT, TWO ANSWERS</h4>
+    <p>Scene V: <i>Who texted Davi?</i> (Iuri) and <i>Who did Iuri text?</i> (Davi). Let your student feel the difference.</p>
+    <h4>BEA’S NOTEBOOK</h4>
+    <p>Scene VIII: you hold the answers (they are on your screen). Your student asks; you answer and tap Answered, and the arrows appear. Caio never paid.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>Who did call you?</i>, <i>Who you called?</i>, <i>Who did Sara drove home?</i>, <i>What did happen?</i></p>
+    <h4>THE NEW EXERCISES</h4>
+    <p>Scene IV: the student matches each rule to its example, and only then the rule cards open. Scene VI: the table shows an arrow with a question mark; the student says the question out loud and taps Check (the rule stays in the corner). Scene VII: find the broken part of six questions and say the fix.</p>
+    <!--conversa--><h4>THE NEXT DINNER (VI) AND THE SURPRISE QUESTION</h4>
+    <p>Scene VI is now a light negotiation: your student is Bea planning next Friday, and you are Marina. Read each of Marina’s lines; your student answers with the right question (<i>Who ordered…?</i>, <i>Who did you invite?</i>, <i>What happened?</i>). Your secret (only you see it): Marina ordered the three desserts; confess it with the PUSH, then close the deal together. Wait five seconds in silence before they ask. If you hear <i>Who did order…?</i>, just point at the arrow and let them fix it; at the end, ask them to fix one or two questions themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Ten People, One Bill, III Two Questions, VI The Next Dinner, VIII Who Didn’t Pay?</li>
+      <li><b>Listen</b>: V Bea Asks (the transcript opens after they answer).</li>
+      <li><b>Focus</b>: II Who Did What, IV The Rule, VII One Word In, One Word Out.</li>
+      <li><b>Write</b>: IX, a message to Caio. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* WHO CALLED WHO (Main A2) · pergunta-surpresa · 27/10/2026 · pergunta de sujeito × de objeto */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'setas', tipo: 'And you?', q: 'Who did you call or text first today?',
+    opc: ['Family', 'A friend', 'Work'], st: ['I texted …', 'The first person who called me was …'],
+    ex: 'A friend. I texted my friend Lia about lunch. And who called me? Nobody!', push: 'Now ask me the same question.' },
+  { cena: 'regra', tipo: 'Opinion', q: 'At a group dinner, who should pay?',
+    opc: ['Split it equally', 'Everybody pays for theirs', 'The birthday person pays nothing'], st: ['I think everybody …', 'Who ate more? They …'],
+    ex: 'Everybody pays for theirs. Who drank wine? They pay for the wine.', push: 'Who usually pays in your group?' },
+  { cena: 'bea', tipo: 'Would you rather', q: 'Pay the whole bill and wait a week, or ask everybody for money at the table?',
+    opc: ['Pay and wait', 'Ask at the table'], st: ['I’d rather …', 'Who would …?'],
+    ex: 'Ask at the table. Who remembers to pay a week later? Nobody!', push: 'What do you say to ask? Say it.' },
+  { cena: 'conta', tipo: 'What if', q: 'A friend owes you money for a month. What do you do?',
+    opc: ['Send a message', 'Wait', 'Forget it'], st: ['I’d ask: “What happened?”', 'Who would you ask for help?'],
+    ex: 'Send a message. I’d write: “Hi! What happened with the money?”', push: 'And if it’s your boss?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WHO CALLED WHO (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A negociação leve entra no lugar de "VI · The Question Mark" (prática controlada: dizer a pergunta e
+   tocar Check), no MEIO, depois do áudio da Bea. O aluno é a Bea combinando o PRÓXIMO jantar com a
+   Marina (professor): ele PERGUNTA (sujeito × objeto, What happened?) e fecha o acordo. Não fala do
+   Caio, para não estragar o VIII (Who Didn’t Pay?). */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'acordo', troca: 'escolhe', est: 'o', min: 7, img: 'tela', rot: 'The Next Dinner', t: 'Next Friday, ten friends again. Bea won’t pay for everybody.',
+    p: 'You are Bea. Marina tells you things. Ask the right question. Then agree on a deal.',
+    formato: 'papel',
+    aluno: { quem: 'Bea', quer: 'Never pay the whole bill again.' },
+    prof: { quem: 'Marina', quer: 'She wants to split it ten ways. Easy.', limite: 'Secret: she ordered the three desserts.' },
+    rot_perg: 'Marina says · you ask',
+    perguntas: [
+      { q: '“Somebody ordered three desserts last time.”', ex: 'Who ordered three desserts? It wasn’t me!' },
+      { q: '“I invited two new people this time.”', ex: 'Who did you invite? Do they pay too?' },
+      { q: '“Somebody didn’t drink anything.”', ex: 'Who didn’t drink anything? Then they pay less.' },
+      { q: '“Something happened with the waiter.”', ex: 'What happened? Did somebody forget the tip?' }
+    ],
+    st: ['Who ordered …?', 'Who did you …?', 'What happened?'],
+    push: 'Marina: “OK… it was me. The desserts.” Now what does Bea say?',
+    acordo: { tag: 'The deal', q: 'How do you pay next Friday?', opc: ['Split it ten ways', 'Pay for your own food', 'One pays, all send money tonight'],
+      st: ['Who pays for …?', 'Everybody pays for …'], ex: 'Pay for your own food. Who ate three desserts? You did, Marina!' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Ten friends, one dinner, one bill.",
+   "p": "Your teacher is the host. Answer out loud."
+  },
+  "setas": {
+   "t": "Every message is an arrow.",
+   "p": "Read it out loud. Tap the person who DID it."
+  },
+  "duas": {
+   "t": "One arrow, two questions.",
+   "p": "Tap the end you want. Say the question."
+  },
+  "regra": {
+   "t": "Doer: no DID. Other one: DID.",
+   "p": "Tap a rule, then its example. Ask your own."
+  },
+  "bea": {
+   "t": "Bea asks. You point.",
+   "p": "Play it. Say it the same way. Tap the answer."
+  },
+  "cv-acordo": {
+   "t": "Next Friday: Bea won’t pay for all.",
+   "p": "You are Bea. Ask Marina. Then make a deal."
+  },
+  "conserta": {
+   "t": "Six questions are broken.",
+   "p": "Find the broken part. Say the fix. Tap Check."
+  },
+  "conta": {
+   "t": "One friend didn’t pay Bea.",
+   "p": "Ask your teacher. Then name the one."
+  },
+  "fim": {
+   "t": "Your message from scene I comes back.",
+   "p": "Write to Caio: who did what? It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Perguntas com who: quem fez (Who called Caio?, sem did) e quem recebeu (Who did Marina call?). Dez amigos jantaram e a conta ficou com a Bea.",
+  "armadilha": "No português as duas perguntas são iguais (“Quem ligou para o Caio?” / “Quem a Marina ligou?”), então o brasileiro diz Who did call Caio?, Who Marina called?, Who did Sara drove home? e What did happen?.",
+  "pal": [
+   "Who called …?",
+   "Who did … call?",
+   "What happened?",
+   "Who paid?",
+   "the bill",
+   "owe",
+   "the doer"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: dez amigos, um jantar de sexta e a conta que ficou com a Bea.",
+   "perg": "The last time you went out with a group, who chose the place?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal sobre saídas em grupo e quem paga a conta.",
+   "perg": "Who usually pays when you go out with friends?",
+   "pula": "Duas perguntas bastam."
+  },
+  "setas": {
+   "obj": "Cada mensagem é uma seta: tocar quem FEZ a ação.",
+   "perg": "Who did it? Where does the arrow start?",
+   "pula": "Quatro mensagens bastam."
+  },
+  "duas": {
+   "obj": "Uma seta, duas perguntas: sobre o começo ou sobre o fim.",
+   "perg": "Are you asking about the start of the arrow, or the end?",
+   "pula": "Três setas bastam."
+  },
+  "regra": {
+   "obj": "Ligar cada regra ao exemplo e depois fazer uma pergunta própria.",
+   "perg": "Who is the doer here?",
+   "pula": "Ligue as regras e pule a pergunta própria."
+  },
+  "bea": {
+   "obj": "Ouvir as perguntas da Bea, repetir e apontar a resposta na mesa (mesmo fato, duas respostas).",
+   "perg": "Who texted Davi? And who did Iuri text?",
+   "pula": "Três perguntas bastam."
+  },
+  "cv-acordo": {
+   "obj": "Negociação: o aluno é a Bea, o professor a Marina; perguntar certo e fechar o acordo.",
+   "perg": "Who ordered the three desserts?",
+   "pula": "Duas falas da Marina e o acordo."
+  },
+  "conserta": {
+   "obj": "Achar a parte quebrada de seis perguntas e dizer a correção.",
+   "perg": "What’s broken in this question?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "conta": {
+   "obj": "O professor tem o caderno da Bea; o aluno pergunta e descobre quem não pagou (o Caio).",
+   "perg": "Who did Bea lend money to?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: mensagem para o Caio com perguntas de who nas duas formas.",
+   "perg": "What do you want to ask Caio?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais perguntas com who sobre a vida do aluno, nas duas formas.",
+   "perg": "Who called you yesterday?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre dividir contas em grupo.",
+   "perg": "Split the bill or pay for what you ate?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Caio, que nunca pagou, e responde às perguntas com who.",
+   "perg": "Who did you pay, Caio?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Who did what in your week?",
+   "p": "Pick a card. Answer. Then ask it back.",
+   "palavras": [
+    "Who called …?",
+    "Who did you call?",
+    "What happened?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PHONE",
+     "q": "Who called you yesterday?",
+     "fup": "Who did you call?",
+     "st": [
+      "… called me.",
+      "I called …"
+     ],
+     "ex": "My mother called me, and I called my dentist."
+    },
+    {
+     "k": "THE LAST DINNER",
+     "q": "Who paid the last time you ate out?",
+     "fup": "Who did you go with?",
+     "st": [
+      "… paid.",
+      "I went with …"
+     ],
+     "ex": "My friend paid. I went with two people from work."
+    },
+    {
+     "k": "MESSAGES",
+     "q": "Who sent you the funniest message this week?",
+     "fup": "What happened?",
+     "st": [
+      "… sent me …",
+      "What happened was …"
+     ],
+     "ex": "My sister sent me a video of her cat. It fell off the sofa!"
+    },
+    {
+     "k": "YOUR HOUSE",
+     "q": "Who cooks at your house?",
+     "fup": "Who did you cook for last time?",
+     "st": [
+      "… cooks.",
+      "I cooked for …"
+     ],
+     "ex": "I cook. Last time I cooked for my neighbors."
+    },
+    {
+     "k": "HELP",
+     "q": "Who helped you this month?",
+     "fup": "Who did you help?",
+     "st": [
+      "… helped me.",
+      "I helped …"
+     ],
+     "ex": "A colleague helped me with a report. I helped my father with his phone."
+    },
+    {
+     "k": "INVITATIONS",
+     "q": "Who invited you to something recently?",
+     "fup": "Who did you invite?",
+     "st": [
+      "… invited me to …",
+      "I invited …"
+     ],
+     "ex": "A friend invited me to a barbecue. I invited my cousin."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "pay",
+    "split",
+    "owe"
+   ],
+   "rodadas": [
+    {
+     "q": "Split the bill equally or pay for what you ate?",
+     "a": "Split it",
+     "b": "Pay for mine",
+     "fa": [
+      "Split it. It’s faster, and nobody fights."
+     ],
+     "fb": [
+      "Pay for mine. I only ordered a salad!"
+     ]
+    },
+    {
+     "q": "One person pays and the group pays back later, or everyone pays at the table?",
+     "a": "One person pays",
+     "b": "At the table",
+     "fa": [
+      "One person. It’s easier for the waiter."
+     ],
+     "fb": [
+      "At the table. Remember Bea!"
+     ]
+    },
+    {
+     "q": "A friend owes you money: ask or wait?",
+     "a": "Ask",
+     "b": "Wait",
+     "fa": [
+      "Ask. Who did he pay? Not me!"
+     ],
+     "fb": [
+      "Wait. A friend is more important."
+     ]
+    },
+    {
+     "q": "Big group dinners or dinners for two?",
+     "a": "Big groups",
+     "b": "For two",
+     "fa": [
+      "Big groups. More people, more stories."
+     ],
+     "fb": [
+      "For two. You know who ordered what."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and nobody paid for everybody."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Caio now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Caio, the one who never paid.",
+   "perguntas": [
+    "Who paid the bill on Friday?",
+    "Who did you sit next to?",
+    "What did you order?",
+    "Who called you on Monday?",
+    "Who did you pay?",
+    "What happened to your money?"
+   ],
+   "st": [
+    "Bea paid …",
+    "I sat next to …",
+    "Nobody … / I didn’t …"
+   ],
+   "ex": "Bea paid the bill. I didn’t pay anybody. I forgot!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

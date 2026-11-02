@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "In My Time",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f7f8bdcabc5c/in-my-time/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "relative clauses with who (people), which / that (things), where (places) and whose (belonging): the guide who told me, the castle whose tower leans; no pronoun repeated (the castle which we visited it); where needs no extra in",
   "abrir": "Who is a person whose advice you trust?",
   "fecho": "<b>who</b> = a person · <b>which / that</b> = a thing · <b>where</b> = a place · <b>whose</b> = belonging: <i>a man whose dog can sing.</i> Do not repeat the object: <i>the castle that we visited</i>, not <i>that we visited it</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo walk through an old town at sunset. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f7f8bdcabc5c/in-my-time/img/live-ceu.webp",
+      "img": "../img/live-ceu.webp",
       "leg": "A town at sunset",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "A guide who I met this morning told me the story.",
-          "img": "https://wolf-labs.pages.dev/p/f7f8bdcabc5c/in-my-time/img/live-latveria.webp",
+          "img": "../img/live-latveria.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It's the castle whose tower is leaning.",
-          "img": "https://wolf-labs.pages.dev/p/f7f8bdcabc5c/in-my-time/img/live-latveria.webp",
+          "img": "../img/live-latveria.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The town where we are staying is famous for it.",
-          "img": "https://wolf-labs.pages.dev/p/f7f8bdcabc5c/in-my-time/img/live-ceu.webp",
+          "img": "../img/live-ceu.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -157,7 +157,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f7f8bdcabc5c/in-my-time/img/live-ceu.webp",
+      "img": "../img/live-ceu.webp",
       "leg": "A town skyline at sunset",
       "pede": "Look at the picture: a town at sunset. Write 2 or 3 sentences about a place, a person or a thing you know. Use <b>who</b>, <b>which / that</b>, <b>where</b> or <b>whose</b>.",
       "ph": "It is a town where … I know a woman who …",

@@ -1,0 +1,101 @@
+/* ============================================================
+   KIND OF, SORT OF, AND STUFF · SOFT FOCUS · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: aeroporto à noite em foco
+   suave — preto-ameixa, orquídea para a voz vaga (palavras com halo
+   desfocado), branco-gelo e mono nítido para a ficha do balcão; a onda
+   da mensagem de voz; a esteira com malas e etiquetas DESK / SISTER.
+   ============================================================ */
+:root{
+  --noite:#07060a; --noite-rgb:7,6,10; --tinta:#efecf2;
+  --t1:#f6f3f8; --t2:#cbc5d2; --t2-rgb:203,197,210; --t3:#867f92;
+  --ac:#f39ad8; --ac2:#fbd0ee; --gelo:#d9f1ff;
+  --vidro:rgba(239,236,242,.05); --vidro2:rgba(239,236,242,.085); --vidro3:rgba(239,236,242,.12);
+  --fio:rgba(232,226,240,.12); --fio2:rgba(232,226,240,.22); --luz:rgba(239,236,242,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Sora',system-ui,sans-serif; --ui:'Figtree',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  --r1:22px; --r2:14px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2c0a22}
+.btn.cheio{color:#2c0a22}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:700 clamp(44px,3.9vw,74px)/1 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2);text-shadow:0 0 22px rgba(243,154,216,.45)}
+.capa .sub{margin:0 0 24px;font:500 clamp(18px,1.4vw,24px)/1.5 var(--ui);color:var(--t2);max-width:30em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.vg-ops{display:grid;gap:6px} .vg-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:12px auto;width:100%} .vg-ops.linha .versao{text-align:center;min-height:58px;font-weight:600}
+.vg-linha-ok{display:flex;align-items:center;gap:12px} .vg-linha-ok .aprova{flex:1;margin:0} .vg-linha-ok.centro{max-width:1200px;margin:0 auto;width:100%}
+
+/* vídeo selado */
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center;padding:16px}
+.selo-v b{font:700 28px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--ui);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* as duas telas */
+.vg-telas{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:14px;max-width:1200px;margin:0 auto;width:100%;padding:0;background:none;border:0}
+.vg-memo,.vg-ficha{display:grid;gap:10px;align-content:start;padding:18px 20px;border-radius:var(--r1)}
+.vg-memo{background:linear-gradient(160deg,#1c1020,#100a14);border:1px solid #3a2240}
+.vg-memo.on{border-color:rgba(243,154,216,.55);box-shadow:0 0 30px rgba(243,154,216,.12)}
+.vg-memo small,.vg-ficha small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.vg-memo p{margin:0;font:600 clamp(19px,1.55vw,27px)/1.45 var(--disp);color:var(--t1)}
+.vg-vago{color:var(--ac2);text-shadow:0 0 10px rgba(243,154,216,.85),0 0 22px rgba(243,154,216,.45);filter:blur(.3px)}
+.vg-gravando{font:600 15px var(--mono);color:var(--ac);animation:pisca 1.2s infinite}
+@keyframes pisca{50%{opacity:.35}}
+.vg-onda{display:flex;align-items:center;gap:3px;height:46px}
+.vg-onda i{flex:1;border-radius:2px;background:linear-gradient(180deg,var(--ac),#7b3e6c);opacity:.8}
+.vg-ficha{background:#0b0d12;border:1px solid #232733;background-image:repeating-linear-gradient(180deg,transparent 0 33px,rgba(217,241,255,.05) 33px 34px)}
+.vg-campo{display:grid;gap:6px;padding:12px 14px;border-radius:8px;border:1px solid #2a3040;background:#0f121a}
+.vg-campo span{font:700 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.vg-campo b{font:700 clamp(17px,1.35vw,23px)/1.35 var(--mono);color:var(--gelo);letter-spacing:-.01em}
+
+/* a regra */
+.vg-quatro{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 14px}
+.vg-tipo{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .vg-tipo small{font:700 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .vg-tipo p{margin:0;font:600 clamp(16px,1.2vw,20px)/1.35 var(--disp);color:var(--ac2);text-shadow:0 0 12px rgba(243,154,216,.35)}
+.vg-tipo.nitido p{font-family:var(--mono);color:var(--gelo);text-shadow:none}
+
+/* a esteira */
+.vg-esteira{display:grid;gap:8px;max-width:1200px;margin:0 auto 14px;width:100%}
+.vg-esteira small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.vg-correia{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;padding:12px;border-radius:12px;background:repeating-linear-gradient(90deg,#14121a 0 22px,#1a1722 22px 44px);border:1px solid #2a2533;animation:corre 3s linear infinite;background-size:44px 100%}
+@keyframes corre{to{background-position:44px 0}}
+.vg-correia i{position:relative;aspect-ratio:1.7;margin-top:10px;border-radius:10px;background:#211d2a;border:1px solid #2f2a3a;display:grid;place-items:center;transition:all .4s}
+.vg-correia i.foi{background:#1b2b22;border-color:var(--ok);opacity:.65}
+.vg-correia i.agora{transform:translateY(-6px)}
+.vg-correia i.agora.desk{background:#13202b;border-color:var(--gelo);box-shadow:0 0 18px rgba(217,241,255,.25)}
+.vg-correia i.agora.irma{background:#2a1426;border-color:var(--ac);box-shadow:0 0 18px rgba(243,154,216,.35)}
+.vg-correia em{font:700 10px var(--mono);letter-spacing:.12em;font-style:normal;color:var(--t1)}
+.vg-pede{display:grid;gap:6px;padding:14px 20px;border-radius:var(--r2);max-width:1200px;margin:0 auto;width:100%}
+.vg-pede small{font:700 11px var(--mono);letter-spacing:.14em} .vg-pede p{margin:0;font:600 clamp(20px,1.6vw,28px)/1.35 var(--disp)}
+.vg-pede.desk{border-color:rgba(217,241,255,.45)} .vg-pede.desk small{color:var(--gelo)}
+.vg-pede.irma{border-color:rgba(243,154,216,.5)} .vg-pede.irma small{color:var(--ac2)}
+
+/* o telefone */
+.vg-fone{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:1100px;margin:0 auto 12px;width:100%;padding:12px 18px;border-radius:var(--r2);border-color:rgba(243,154,216,.45)}
+.vg-fone b{font:700 13px var(--mono);letter-spacing:.12em;color:var(--ac2)} .vg-fone small{margin-left:auto;font:700 11px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.vg-pulso{width:12px;height:12px;border-radius:50%;background:var(--ac);animation:pulsa 1.4s infinite}
+@keyframes pulsa{0%{box-shadow:0 0 0 0 rgba(243,154,216,.5)}70%{box-shadow:0 0 0 10px rgba(243,154,216,0)}}
+
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .vg-telas{grid-template-columns:1fr} .lado-fim .vg-onda{height:30px}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .vg-ops.linha{grid-template-columns:1fr} .vg-quatro{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .vg-telas{grid-template-columns:1fr} .vg-quatro{grid-template-columns:1fr} .vg-correia{grid-template-columns:repeat(4,1fr);gap:6px;padding:8px} }
+.vg-correia i::before{content:'';position:absolute;top:-10px;left:50%;width:30%;height:10px;margin-left:-15%;border:2px solid #3a3446;border-bottom:0;border-radius:8px 8px 0 0}
+.vg-correia i.agora.desk::before{border-color:var(--gelo)} .vg-correia i.agora.irma::before{border-color:var(--ac)} .vg-correia i.foi::before{border-color:var(--ok)}
+
+/* 22/10/2026 · os formatos novos (formatos.js) */
+
+.pd-um{width:min(1100px,100%);margin:0 auto}
+.c-video .lado-video .fm-folha{padding:14px 16px} .c-video .lado-video .fm-linhas p{font-size:clamp(15px,1.15vw,19px)}
+.c-video .mesa-c .fm-folha{width:100%}
+.c-memos .vg-telas{margin:0 auto;width:min(1100px,100%)}
+.c-regra .fm-folha,.c-esteira .fm-folha{width:min(1000px,100%)}
+.c-esteira .vg-correia{grid-template-columns:repeat(6,1fr)}
+@media (max-width:620px){.c-esteira .vg-correia{grid-template-columns:repeat(3,1fr)}}

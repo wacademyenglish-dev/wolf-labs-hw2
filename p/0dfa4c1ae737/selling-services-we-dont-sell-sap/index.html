@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -134,5 +135,286 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "What do you do on Monday mornings?",
+   "p": "Answer. Then ask back: “And you?”"
+  },
+  "leitura": {
+   "t": "The page clients read first.",
+   "p": "Read it out loud. Then answer."
+  },
+  "dialogo": {
+   "t": "“So, do you sell SAP?”",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "Don’t or isn’t?",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "erros": {
+   "t": "Five mistakes in one email.",
+   "p": "Find a mistake. Say it right. Tap it."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose and say why."
+  },
+  "cartao": {
+   "t": "Your 30-second pitch.",
+   "p": "Two things you do, one you don’t, one you aren’t."
+  },
+  "pode": {
+   "t": "Lesson 3: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 3: don’t / doesn’t + verbo (ação) contra isn’t / aren’t (be). A Bluepeak faz folha de pagamento, mas não vende SAP.",
+  "armadilha": "O português usa “não” para tudo, e sai “We aren’t sell SAP”, “It don’t is cheap”, “The client don’t use SAP”, “We no sell licenses”. O teste: tem ação? don’t; não tem? isn’t.",
+  "pal": [
+   "We do …",
+   "We don’t sell …",
+   "It doesn’t …",
+   "We aren’t a reseller",
+   "It isn’t …",
+   "payroll",
+   "license",
+   "pitch"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: o que a empresa faz, o que não faz e o que não é.",
+   "perg": "What does your company do?",
+   "pula": "Só leia o título da capa."
+  },
+  "conversa": {
+   "obj": "Small talk sobre a semana do aluno, com o “And you?” de volta.",
+   "perg": "Do you work from home on Fridays?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler a página “What we do” da Bluepeak e achar o padrão do do/don’t.",
+   "perg": "What doesn’t Bluepeak do?",
+   "pula": "Leia metade e faça duas perguntas."
+  },
+  "dialogo": {
+   "obj": "Ouvir o gerente de TI perguntando ao Leo se eles vendem SAP.",
+   "perg": "Does Bluepeak sell SAP?",
+   "pula": "Ouça uma vez e faça só duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar pares e fechar o teste: ação = don’t; sem ação = isn’t.",
+   "perg": "Is there an action here?",
+   "pula": "Três pares e as armadilhas."
+  },
+  "erros": {
+   "obj": "Achar os cinco erros no e-mail do colega novo e dizer a forma certa.",
+   "perg": "Don’t or isn’t here?",
+   "pula": "Três erros e a leitura final."
+  },
+  "escolha": {
+   "obj": "Escolhas leves (A ou B) com because.",
+   "perg": "A or B? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: pitch de 30 s com duas coisas que faz, uma que não faz e uma que não é; cronometrar.",
+   "perg": "What do you do, and what don’t you do?",
+   "pula": "Uma tentativa só."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; gravar o pitch no celular antes da próxima aula.",
+   "perg": "Can you say what your company doesn’t do?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre a empresa e o trabalho real do aluno com do/don’t e is/isn’t.",
+   "perg": "What doesn’t your company do?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas opções de venda, com frase pronta.",
+   "perg": "Which one do you choose?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o professor é o cliente confuso; o aluno responde pela empresa.",
+   "perg": "Do you sell software?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your company, your work.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "We do …",
+    "We don’t …",
+    "It isn’t …"
+   ],
+   "cartas": [
+    {
+     "k": "WHAT YOU DO",
+     "q": "What does your company do?",
+     "fup": "Who are your clients?",
+     "st": [
+      "We …",
+      "Our clients are …"
+     ],
+     "ex": "We do accounting for small companies. Our clients are shops and restaurants."
+    },
+    {
+     "k": "WHAT YOU DON’T",
+     "q": "What doesn’t your company do?",
+     "fup": "Do clients ask for it?",
+     "st": [
+      "We don’t …",
+      "Yes, they do. / No, they don’t."
+     ],
+     "ex": "We don’t sell software. Yes, they do. They ask every week."
+    },
+    {
+     "k": "WHAT YOU AREN’T",
+     "q": "What isn’t your company?",
+     "fup": "Is it big or small?",
+     "st": [
+      "We aren’t …",
+      "It isn’t …"
+     ],
+     "ex": "We aren’t a bank. It isn’t big: we are twenty people."
+    },
+    {
+     "k": "MONDAYS",
+     "q": "What do you do on Monday mornings?",
+     "fup": "Do you like Mondays?",
+     "st": [
+      "On Mondays I …",
+      "I don’t …"
+     ],
+     "ex": "On Mondays I read emails. I don’t like Mondays."
+    },
+    {
+     "k": "YOUR TOOLS",
+     "q": "What system do you use at work?",
+     "fup": "Is it easy?",
+     "st": [
+      "We use …",
+      "It isn’t …"
+     ],
+     "ex": "We use TOTVS. It isn’t easy, but it’s OK."
+    },
+    {
+     "k": "FRIDAYS",
+     "q": "Do you work from home on Fridays?",
+     "fup": "Is home quiet?",
+     "st": [
+      "Yes, I do. / No, I don’t.",
+      "My home is / isn’t …"
+     ],
+     "ex": "No, I don’t. My home isn’t quiet. I have two kids."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "We don’t",
+    "It isn’t"
+   ],
+   "rodadas": [
+    {
+     "q": "A client wants SAP. Say “We don’t sell it”, or say “Maybe”?",
+     "a": "We don’t sell it",
+     "b": "Maybe",
+     "fa": [
+      "“We don’t sell it.” It’s honest."
+     ],
+     "fb": [
+      "“Maybe.” I don’t want to lose the client."
+     ]
+    },
+    {
+     "q": "A short pitch or a long pitch?",
+     "a": "Short",
+     "b": "Long",
+     "fa": [
+      "Short. Clients don’t have time."
+     ],
+     "fb": [
+      "Long. The service isn’t simple."
+     ]
+    },
+    {
+     "q": "A monthly fee or a price per hour?",
+     "a": "Monthly fee",
+     "b": "Per hour",
+     "fa": [
+      "A monthly fee. It isn’t a surprise."
+     ],
+     "fb": [
+      "Per hour. Clients don’t pay for nothing."
+     ]
+    },
+    {
+     "q": "First call: video or phone?",
+     "a": "Video",
+     "b": "Phone",
+     "fa": [
+      "Video. The client sees me."
+     ],
+     "fb": [
+      "Phone. It isn’t stressful."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "Your teacher is the client.",
+   "p": "Answer for your company.",
+   "aluno": "Listen to your teacher’s question. Answer for Bluepeak, or for your real company.",
+   "perguntas": [
+    "So, do you sell SAP?",
+    "Do you sell software licenses?",
+    "Are you a reseller?",
+    "What do you do, exactly?",
+    "Is it expensive?",
+    "Does it work with our system?"
+   ],
+   "st": [
+    "No, we don’t. We …",
+    "No, we aren’t. We are …",
+    "Yes, it does."
+   ],
+   "ex": "No, we don’t sell SAP. We do payroll, and we connect it to your SAP."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

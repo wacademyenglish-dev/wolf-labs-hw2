@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Worst Day",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/7a2e4a2bf0c2/worst-day/img/live-dominos.webp",
+  "capa": "../img/live-dominos.webp",
   "alvo": "past simple: didn't + plain verb (I didn't go), Did you ...? + plain verb, wasn't / weren't for be, because (reason) and so (result)",
   "abrir": "What went wrong for you this week?",
   "fecho": "<b>didn't</b> + plain verb: <i>I didn't take a taxi.</i> A question: <b>Did</b> you + plain verb: <i>Did you catch the bus?</i> The verb <b>be</b> is different: <i>It wasn't open.</i> <b>because</b> = the reason: <i>I was late because the alarm didn't ring.</i> <b>so</b> = the result: <i>The alarm didn't ring, so I woke up late.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia meets Leo after a very bad morning. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/7a2e4a2bf0c2/worst-day/img/live-chuva.webp",
+      "img": "../img/live-chuva.webp",
       "leg": "Two umbrellas on a wet street",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "My phone died, so the alarm didn't ring.",
-          "img": "https://wolf-labs.pages.dev/p/7a2e4a2bf0c2/worst-day/img/live-celular.webp",
+          "img": "../img/live-celular.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I didn't take an umbrella, so I walked in the rain.",
-          "img": "https://wolf-labs.pages.dev/p/7a2e4a2bf0c2/worst-day/img/live-chuva.webp",
+          "img": "../img/live-chuva.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The door was closed because it was Sunday.",
-          "img": "https://wolf-labs.pages.dev/p/7a2e4a2bf0c2/worst-day/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/7a2e4a2bf0c2/worst-day/img/live-chuva.webp",
+      "img": "../img/live-chuva.webp",
       "leg": "Two umbrellas on a wet street",
       "pede": "Look at the picture: two umbrellas on a wet street. Write 2 or 3 sentences about a bad morning: one thing you <b>didn't</b> do, and why. Use <b>didn't</b>, <b>because</b> or <b>so</b>.",
       "ph": "I didn't … because …",

@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -119,5 +120,291 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "descobre": {
+   "t": "Real or fake?",
+   "p": "Compare A and B. What changed?"
+  },
+  "palavras": {
+   "t": "Three rounds. Real words only.",
+   "p": "Tap only real words before the clock stops."
+  },
+  "cv-escala": {
+   "t": "Four opinions about words.",
+   "p": "Tap 1 to 5. Then defend it."
+  },
+  "rapido": {
+   "t": "Sixty seconds. How many?",
+   "p": "Answer fast. Then beat your score."
+  },
+  "pode": {
+   "t": "Lesson 2: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Read and Select do DET: tocar só as palavras reais; as falsas usam sufixo certo na palavra errada, prefixo errado, letra faltando, y que vira i.",
+  "armadilha": "O brasileiro confia no “parece certo”: happyness, beautyful, unpossible (o “in-” do português), decidement, knowlege, childs. E toca na dúvida, o que custa pontos.",
+  "pal": [
+   "happiness",
+   "beautiful",
+   "impossible",
+   "decision",
+   "knowledge",
+   "children",
+   "un- / dis- / im-",
+   "-ment / -ness / -ful",
+   "when in doubt, leave it"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a questão: uma grade de palavras, um relógio, real ou falsa.",
+   "perg": "Is ‘happyness’ a word?",
+   "pula": "Faça só a pergunta de abertura e vá à cena I."
+  },
+  "descobre": {
+   "obj": "Comparar pares e descobrir como as palavras falsas são fabricadas (pode explicar em português).",
+   "perg": "What changed between A and B?",
+   "pula": "Três pares e as regras."
+  },
+  "palavras": {
+   "obj": "Três rodadas cronometradas; tocar palavra falsa custa mais que perder uma real.",
+   "perg": "Why did you leave that one?",
+   "pula": "Duas rodadas bastam."
+  },
+  "cv-escala": {
+   "obj": "Opiniões sobre ortografia e listas de palavras: nota de 1 a 5, você pega o oposto.",
+   "perg": "Is English spelling crazy? 1 to 5?",
+   "pula": "Duas opiniões bastam."
+  },
+  "rapido": {
+   "obj": "Rodada de 60 segundos de famílias de palavras.",
+   "perg": "What’s the noun of ‘decide’?",
+   "pula": "Uma rodada só."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; o resto vai para a lição.",
+   "perg": "Can you spot a fake word now?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre o preparo do aluno para o DET e o vocabulário dele.",
+   "perg": "How do you learn new words?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de estratégia de prova, com argumentos.",
+   "perg": "Which strategy is better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno fabrica palavras falsas em passos, para entender a armadilha por dentro.",
+   "perg": "How would you make this one fake?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "You, words, and the test.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "word family",
+    "prefix",
+    "suffix",
+    "spelling"
+   ],
+   "cartas": [
+    {
+     "k": "NEW WORDS",
+     "q": "How do you learn new English words?",
+     "fup": "Does it work?",
+     "st": [
+      "I usually …",
+      "What works for me is …"
+     ],
+     "ex": "I usually write them in a notebook. What works for me is using them the same day."
+    },
+    {
+     "k": "THE TEST",
+     "q": "Why are you taking the Duolingo English Test?",
+     "fup": "What score do you need?",
+     "st": [
+      "I need it for …",
+      "I need a score of …"
+     ],
+     "ex": "I need it for a master’s program in Canada. I need a score of 120."
+    },
+    {
+     "k": "TRICKY WORD",
+     "q": "Which English word do you always spell wrong?",
+     "fup": "Why do you think it happens?",
+     "st": [
+      "I always write …",
+      "Because in Portuguese …"
+     ],
+     "ex": "I always write ‘adress’ with one d, because in Portuguese it’s ‘endereço’."
+    },
+    {
+     "k": "GUESSING",
+     "q": "In a test, do you guess or leave it blank?",
+     "fup": "Has guessing ever helped you?",
+     "st": [
+      "I usually guess because …",
+      "I leave it because …"
+     ],
+     "ex": "I usually guess, but in this test I’ll leave it because fakes cost points."
+    },
+    {
+     "k": "FAVORITE WORD",
+     "q": "What’s your favorite English word?",
+     "fup": "What’s its word family?",
+     "st": [
+      "My favorite word is …",
+      "The noun is …"
+     ],
+     "ex": "My favorite word is ‘comfortable’. The noun is ‘comfort’."
+    },
+    {
+     "k": "PRESSURE",
+     "q": "How do you feel with a clock running?",
+     "fup": "What helps you stay calm?",
+     "st": [
+      "I feel …",
+      "It helps if I …"
+     ],
+     "ex": "I feel nervous. It helps if I take one breath before I start."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think",
+    "accuracy",
+    "speed"
+   ],
+   "rodadas": [
+    {
+     "q": "In Read and Select: fast and risky, or slow and safe?",
+     "a": "Fast",
+     "b": "Slow",
+     "fa": [
+      "Fast. There are many words and little time.",
+      "You can’t think about every one."
+     ],
+     "fb": [
+      "Slow and safe. A fake word costs more than a missed one.",
+      "When in doubt, leave it."
+     ]
+    },
+    {
+     "q": "Learn word lists or read real texts?",
+     "a": "Word lists",
+     "b": "Real texts",
+     "fa": [
+      "Word lists. They’re fast and organized.",
+      "You see the whole word family."
+     ],
+     "fb": [
+      "Real texts. You remember words in context.",
+      "Lists are boring."
+     ]
+    },
+    {
+     "q": "Study a little every day or a lot on weekends?",
+     "a": "Every day",
+     "b": "Weekends",
+     "fa": [
+      "Every day. Twenty minutes is enough.",
+      "The brain needs repetition."
+     ],
+     "fb": [
+      "Weekends. I have more time and energy.",
+      "During the week I’m too tired."
+     ]
+    },
+    {
+     "q": "English spelling should be simpler. Agree or disagree?",
+     "a": "Agree",
+     "b": "Disagree",
+     "fa": [
+      "Agree. Words should look like they sound.",
+      "It would help millions of learners."
+     ],
+     "fb": [
+      "Disagree. Spelling shows the history of the word.",
+      "It would be chaos."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Make the Fakes",
+   "t": "Now you make the fake words.",
+   "p": "Four tricks. Try to fool your teacher.",
+   "prof": "Say a word. The student makes a fake version with each trick. Then say if it fooled you.",
+   "passos": [
+    {
+     "q": "Trick 1: change y to i the wrong way. Start with ‘happy’ or ‘beauty’.",
+     "st": [
+      "The real word is …",
+      "My fake is …"
+     ],
+     "ex": "The real word is ‘happiness’. My fake is ‘happyness’."
+    },
+    {
+     "q": "Trick 2: use the wrong prefix. Start with ‘possible’ or ‘agree’.",
+     "st": [
+      "The real word is …",
+      "My fake is …"
+     ],
+     "ex": "The real word is ‘impossible’. My fake is ‘unpossible’."
+    },
+    {
+     "q": "Trick 3: put a real ending on the wrong word. Start with ‘decide’.",
+     "st": [
+      "The real word is …",
+      "My fake is …"
+     ],
+     "ex": "The real word is ‘decision’. My fake is ‘decidement’."
+    },
+    {
+     "q": "Trick 4: take out one letter. Start with ‘knowledge’ or ‘necessary’.",
+     "st": [
+      "The real word is …",
+      "My fake is …"
+     ],
+     "ex": "The real word is ‘knowledge’. My fake is ‘knowlege’."
+    }
+   ],
+   "fim": "Now you know how fakes are made. They won’t trick you on test day."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

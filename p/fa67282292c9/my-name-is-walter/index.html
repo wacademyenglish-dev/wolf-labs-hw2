@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · My Name Is Walter · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Oswald:wght@400;600&family=Special+Elite&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>My Name Is Walter · Breaking Bad · The Field File</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>My Name Is Walter · Breaking Bad · The Field File</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A chemistry teacher, a sick man, a desert road.</p><p style="margin:0 0 6px"><b>The grammar:</b> How to Ask: A question word, then the verb, then the person.</p><p style="margin:0 0 6px"><b>The class (about 55 min):</b> I Warm-up and The Interview · III The Tape · IV OK or Not OK? · V Scene by Scene · VI How to Ask · VII The Field File · VIII You or He? · IX The Hot Seat. No extra scenes: every scene is part of the class.</p><p style="margin:0"><b>Open with:</b> “You know Walter now. Where is he in the first scene? Why is he there? Guess.”</p></div><!--/prep-->
+    <p>In the first scene of <i>Breaking Bad</i> (AMC, 2008, created by Vince Gilligan), Walter White, a chemistry teacher from Albuquerque played by Bryan Cranston, stands on a desert road and records a message: his name, his address, his family. That is exactly what an A1 student asks and answers. The grammar: <b>question words</b> (who, what, where, how old, how many, why), with <b>be</b> (<b>What is your name? How old are you?</b>) and with <b>do</b> for other verbs (<b>Where do you live? What do you do?</b>), and <b>does</b> for he / she.</p>
+    <p>A note for the teacher: the scene shows a gun at the end, and two men lying in the back of the RV. Watch it once before class; if it is not for your student, stop at 3:15. The video has no captions, so the five frames on the film strip are estimated, and each moment is told in our own words. A1: present simple and <i>be</i> only.</p>
+    <p class="aq-guia"><b>Warm-up and The Interview (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the film under the photo). Let them talk; don’t correct the grammar yet. <b>2 · The Interview:</b> You are Walter White: the card with his facts shows only on your screen (dashed border). The student asks questions (the chips help: What is your name? How old are you? Where do you live?…) and taps each one they ask; answer in short A1 sentences, in character. Then the student guesses who you are and how your life is, and the photo shows the answer. A1: the question order is the point (Where do you live?, not Where you live?). Correct it gently by asking it back the right way.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>family</i>, <i>speaking</i>, <i>love</i>, <i>days</i> and <i>heart</i>, before the video, in match the columns and the missing word. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (V)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <p class="fim-guia"><b>The ending (IX, The Hot Seat)</b>: the student sits in the hot seat as Walter on the road; the teacher is the police officer and asks five questions. Then swap: the student asks. Speaking only.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is an old RV alone on a desert road at dawn, with a video camera on a tripod. I: Warm-up and The Interview. III: the scene in three steps. <b>Before:</b> five clues, one at a time (a desert, an old RV, a man and a video camera, fifty years old, a teacher); the student taps Next clue and guesses who he is. <b>Watch:</b> Which word did you hear? Five lines from the tape (name or game, Lane or Line, love or live…), each with a ▶ time: tap it and the video jumps to that moment. <b>After:</b> five questions (Where does he live? Who is he speaking to now?…); the student taps the right answer, with a ▶ to hear it again. IV: five frames on the film strip. <b>V, How to Ask:</b> six questions on the left (What is your name? How old are you?…) and six answers on the right; the student matches them. When all six are matched, the rule board appears and stays in the corner on the next pages. <b>VI, The Field File:</b> a police file in typewriter letters with six lines (name, age, city, job, wife, why here). On each line the answer is already on the file; the student asks Walter the question out loud, taps Check, and the right question appears. The answer is typed into the file. With all six lines, the stamp: IDENTIFIED. <b>VII, You or He?:</b> six questions about Walter, each with one wrong word (Where do Walter live?); the student says the right one and taps Check. VIII: the hot seat.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>What your name is?</i>, <i>How old you are?</i>, <i>How many years do you have?</i> / <i>I have 25 years</i>, <i>Where you live?</i>, <i>Where does you live?</i>, <i>What are you do?</i>, <i>Who are your wife?</i>, <i>How much children</i>, <i>Where he lives?</i></p>
+    <!--conversa--><h4>OK OR NOT OK? (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the first scene: your student judges three things Walter does on the road. He drives in his underwear, he drives very fast, he says his name and address to a camera. Two colored buttons, OK or Not OK, and an almost-ready sentence with a question word (Who cares? Where are his trousers? How fast is he?). There is no right answer. Answer first yourself, then wait five seconds in silence and use the PUSH line (only you see it). Keep it light: nothing about crime. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa--><!--paren-ok-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up and The Interview, IV OK or Not OK?, VII The Field File and VIII You or He?.</li>
+      <li><b>Listen</b>: II The Words, III The Tape and V Line by Line.</li>
+      <li><b>Focus</b>: VI How to Ask.</li>
+      <li><b>Write</b>: IX The Hot Seat.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script src="aquece.js"></script>
+<script src="final.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* BREAKING BAD · THE FIELD FILE (WOLFLIX A1) · pergunta-surpresa · 29/10/2026 · who / what / where / why (máx. 3 no A1) */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'Walter is a teacher. Your favorite teacher?',
+    opc: ['From school', 'From English', 'From sports'], st: ['My favorite teacher is …', 'Who? Her name is …'],
+    ex: 'My favorite teacher was Ms. Rosa. She was very funny.', push: 'Was it math? Yes or no?' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'A road trip: desert or beach?',
+    opc: ['The desert', 'The beach'], st: ['Where do we go? The beach!', 'The desert. Why? It’s quiet.'],
+    ex: 'The beach! Why? I love the sea.', push: 'In an old RV? Yes or no?' },
+  { cena: 'ele', tipo: 'What if', q: 'Walter calls you. What do you ask?',
+    opc: ['Where are you?', 'Why the mask?', 'Who is with you?'], st: ['Where are you, Walter?', 'Why do you have a mask?', 'Who is with you?'],
+    ex: 'Walter, where are your trousers?', push: 'Do you answer the phone? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* BREAKING BAD · THE FIELD FILE (WOLFLIX A1) · conversa · 29/10/2026 · regra 3×3 do Carlos
+   OK / not OK (semáforo de 2 cores) ENTRA logo depois de "III · The Tape" (apos: colado ao vídeo).
+   A aula abre com a escala (aquece) e fecha com a cadeira quente (VIII): aqui o formato é outro.
+   Três coisas que o Walter faz na primeira cena (de cueca no volante, rápido demais na estrada, nome e
+   endereço para a câmera); o aluno julga e traz para a vida dele. Nada de crime nem da despedida da fita.
+   A1 bem leve: duas opções coloridas, frase quase pronta, o professor responde primeiro.
+   Gramática da aula (who / what / where / why / how) nos iniciadores. 50 → 55 min. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'okay', apos: 'video', est: 'o', min: 5, img: 'cena2-estrada', rot: 'OK or Not OK?', t: 'Walter on the road. You decide.',
+    p: 'Read it. OK or not OK? Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'His clothes', sit: 'He drives in his underwear.', q: 'OK or not OK?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. Who cares?', 'Not OK! Where are his trousers?'],
+        ex: 'Not OK! Where are his trousers? In the sky!',
+        push: 'At home? Yes or no?' },
+      { tag: 'The RV', sit: 'He drives very, very fast.', q: 'OK or not OK?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. Why not? The road is empty.', 'Not OK! How fast is he?'],
+        ex: 'Not OK! How fast is he? It’s dangerous.',
+        push: 'You, on an empty road? Yes or no?' },
+      { tag: 'Your name', sit: 'He says his name and address.', q: 'Your address on a video?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. Who watches it? My friends.', 'Not OK! Who watches it?'],
+        ex: 'Not OK! Who watches the video? I don’t know!',
+        push: 'On Instagram? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "You first. Then a man from the show.",
+   "p": "Answer three questions. Then ask: who is he?"
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. In the video, they turn yellow."
+  },
+  "video": {
+   "t": "Breaking Bad, 2008. The first scene.",
+   "p": "Guess. Watch. Then two short tasks."
+  },
+  "cv-okay": {
+   "t": "Walter on the road. OK or not?",
+   "p": "Read it. Pick OK or Not OK. Say why."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it. Say it."
+  },
+  "regra": {
+   "t": "Match the question and the answer.",
+   "p": "Tap left, then its pair. Read the rule."
+  },
+  "ficha": {
+   "t": "You are the first police officer.",
+   "p": "Read the answer. Ask out loud. Tap Check."
+  },
+  "ele": {
+   "t": "Now ask about Walter: you → he.",
+   "p": "Find the wrong word. Say it right. Tap Check."
+  },
+  "fim": {
+   "t": "The hot seat: Walter on the road.",
+   "p": "Answer as Walter. Then swap: you ask."
+  }
+ },
+ "prep": {
+  "obj": "Palavras de pergunta (who, what, where, how old, how many, why) com be e do/does: Walter White grava sua mensagem numa estrada do deserto.",
+  "armadilha": "O brasileiro mantém a ordem da frase afirmativa (“Where you live?”, “What your name is?”) e diz “How many years do you have?” em vez de “How old are you?”.",
+  "pal": [
+   "What is your name?",
+   "How old are you?",
+   "Where do you live?",
+   "What do you do?",
+   "Where does he live?",
+   "family",
+   "Who",
+   "Why"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a cena: um trailer no deserto, um homem e uma câmera; o aluno vai perguntar.",
+   "perg": "Who is the man on the road? Guess.",
+   "pula": "Só leia o título e abra o arquivo."
+  },
+  "mundo": {
+   "obj": "Três perguntas sobre o aluno e depois a entrevista: o aluno pergunta e descobre que você é Walter.",
+   "perg": "What is your name? Where do you live?",
+   "pula": "Uma pergunta de aquecimento e quatro perguntas na entrevista."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (family, speaking, love, days, heart) antes de assistir.",
+   "perg": "Which word is new for you?",
+   "pula": "Passe rápido: as palavras voltam em Line by Line."
+  },
+  "video": {
+   "obj": "A primeira cena de Breaking Bad: pistas, assistir inteira e duas tarefas curtas de escuta.",
+   "perg": "Where does he live? Who is he speaking to?",
+   "pula": "Assista uma vez só e faça só a tarefa do After. Vídeo sempre inteiro."
+  },
+  "cv-okay": {
+   "obj": "Julgar três coisas que Walter faz na estrada (OK ou Not OK) com uma frase quase pronta.",
+   "perg": "Is it OK? Why?",
+   "pula": "Duas situações bastam."
+  },
+  "falas": {
+   "obj": "Ouvir de novo as falas com palavras amarelas e repetir como o personagem.",
+   "perg": "Can you say it like Walter?",
+   "pula": "Três falas bastam."
+  },
+  "regra": {
+   "obj": "A regra: palavra de pergunta + verbo + pessoa; ligar seis perguntas às respostas.",
+   "perg": "Where does the verb go?",
+   "pula": "Não corte: é a regra. Quatro pares bastam."
+  },
+  "ficha": {
+   "obj": "O aluno é o policial: lê a resposta na ficha e faz a pergunta certa em voz alta.",
+   "perg": "What is the question?",
+   "pula": "Quatro linhas da ficha bastam."
+  },
+  "ele": {
+   "obj": "Passar de you para he/does: corrigir a palavra errada em perguntas sobre Walter.",
+   "perg": "Where does Walter live?",
+   "pula": "Quatro perguntas bastam."
+  },
+  "fim": {
+   "obj": "Fala livre: o aluno é Walter na cadeira; o professor é o policial; depois trocam.",
+   "perg": "Why are you on this road?",
+   "pula": "Só o aluno como Walter, sem trocar. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Perguntas e respostas sobre a vida do aluno e séries, com palavras de pergunta.",
+   "perg": "What is your favorite show?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas opções sobre Walter e séries, com uma frase pronta.",
+   "perg": "Which one, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno cria o próximo episódio: quem, onde, o quê, respondendo perguntas simples.",
+   "perg": "Where is Walter now?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions, more answers.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "what",
+    "where",
+    "who",
+    "how old",
+    "how many"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR SHOW",
+     "q": "What is your favorite TV show?",
+     "fup": "Who is your favorite person in it?",
+     "st": [
+      "My favorite show is …",
+      "I like … , but …"
+     ],
+     "ex": "My favorite show is Friends. I like Joey, but Monica is great too."
+    },
+    {
+     "k": "YOUR FAMILY",
+     "q": "How many people are in your family?",
+     "fup": "Where do they live?",
+     "st": [
+      "There are … people.",
+      "They live in …"
+     ],
+     "ex": "There are four people. They live in Curitiba."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What do you do?",
+     "fup": "Where do you work?",
+     "st": [
+      "I am a …",
+      "I work in …"
+     ],
+     "ex": "I am a nurse. I work in a big hospital."
+    },
+    {
+     "k": "YOUR TEACHER",
+     "q": "Who was your favorite teacher at school?",
+     "fup": "What did he or she teach?",
+     "st": [
+      "My favorite teacher is …",
+      "He / She teaches …"
+     ],
+     "ex": "My favorite teacher is Ana. She teaches math."
+    },
+    {
+     "k": "YOUR CAR",
+     "q": "Do you have a car?",
+     "fup": "What color is it?",
+     "st": [
+      "Yes, I have a … car.",
+      "No, I don’t. I take the …"
+     ],
+     "ex": "No, I don’t. I take the bus."
+    },
+    {
+     "k": "YOUR NIGHT",
+     "q": "When do you watch TV?",
+     "fup": "Who do you watch with?",
+     "st": [
+      "I watch TV at …",
+      "I watch with …"
+     ],
+     "ex": "I watch TV at night. I watch with my wife."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think",
+    "OK",
+    "not OK"
+   ],
+   "rodadas": [
+    {
+     "q": "Walter: a good man or a bad man?",
+     "a": "A good man",
+     "b": "A bad man",
+     "fa": [
+      "A good man. He loves his family."
+     ],
+     "fb": [
+      "A bad man. There is a gun in his hand."
+     ]
+    },
+    {
+     "q": "A video for your family: on a phone or on paper?",
+     "a": "A video",
+     "b": "A letter",
+     "fa": [
+      "A video. They can see my face."
+     ],
+     "fb": [
+      "A letter. It is more personal."
+     ]
+    },
+    {
+     "q": "A long drive: in the city or in the desert?",
+     "a": "The city",
+     "b": "The desert",
+     "fa": [
+      "The city. There are people and cafés."
+     ],
+     "fb": [
+      "The desert. It is quiet and beautiful."
+     ]
+    },
+    {
+     "q": "A chemistry teacher: a boring job or a cool job?",
+     "a": "Boring",
+     "b": "Cool",
+     "fa": [
+      "Boring. Chemistry is difficult."
+     ],
+     "fb": [
+      "Cool. You do experiments every day."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Case closed, for today."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Writers’ Room",
+   "t": "Write the next episode.",
+   "p": "Answer each question. Make the story.",
+   "prof": "You are the studio boss: ask each question and push for one more detail. Listen for the question order.",
+   "passos": [
+    {
+     "q": "The police are here. Where is Walter now?",
+     "st": [
+      "Walter is in …",
+      "He is at …"
+     ],
+     "ex": "Walter is in the RV. He is very scared."
+    },
+    {
+     "q": "Who is with him?",
+     "st": [
+      "… is with him.",
+      "He is with …"
+     ],
+     "ex": "His partner is with him. He is young."
+    },
+    {
+     "q": "What does Walter say to the police?",
+     "st": [
+      "He says: “My name is …”",
+      "He says: “I am …”"
+     ],
+     "ex": "He says: “My name is Walter. I am a teacher.”"
+    },
+    {
+     "q": "How does the episode end?",
+     "st": [
+      "At the end, Walter …",
+      "At the end, the police …"
+     ],
+     "ex": "At the end, Walter goes home to his family."
+    }
+   ],
+   "fim": "The studio loves it. Episode two is yours."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

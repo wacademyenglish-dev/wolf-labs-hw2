@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · This Time Next Year · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>This Time Next Year · The Moment Line</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>This Time Next Year · The Moment Line</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A new year, and everybody is making plans.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: A moment in the future, and something already in progress.</p><p style="margin:0 0 6px"><b>Short class (about 43 min):</b> I You and Next Year · III Earth in 2050 · V The Neon Skyline · VI The Rule · VII The Forecast Orbit · XI See You in 2050. Skip if you’re short on time: VIII, IX, X (marked EXTRA on your screen). Full lesson: about 63 min.</p><p style="margin:0"><b>Open with:</b> “Did you make any plans for this year? Tell me one.”</p></div><!--/prep-->
+    <p>A new year, and everybody is making plans. The grammar: <b>will be + -ing</b> for something that will be <b>in progress</b> at a moment in the future (<i>This time next year, I’ll be living in Lisbon. At 8 AM in 2050, robots will be cooking breakfast.</i>), the negative <b>won’t be + -ing</b>, the polite question <b>Will you be using …?</b>, and where it stops: a decision made now is plain <b>will</b>, and state verbs (<i>know, have, be</i>) don’t take <b>-ing</b>. On screen, a moment line: a pin on the future moment and a moving striped bar crossing it, because the action is already happening there. And a neon skyline of eight towers that light up one by one.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III: a five-minute video about what the Earth could look like in 2050, <b>sealed</b> until you press play, in four chapters that stop by themselves. The questions are open on purpose. The narrator mostly uses plain <b>will</b> and <b>could</b>; the student turns the ideas into <b>will be + -ing</b>. Recast once: <i>So people will be driving electric cars.</i> After the video (page III, step 3): ONE screen. The video stays on the left, with the neon skyline under it; on the right, six True or Lie lines from the video (tap the time to hear that moment again). Every right answer lights a tower. On a Lie the student says the true line, with will be + -ing when it fits. When all six are done, the student’s future self asks one last question (“What will you be doing right now?”): the student taps an answer and says the sentence out loud.</p>
+    <h4>THE SKYLINE</h4>
+    <p>Scene V, before the rule: the student picks a tower and makes a forecast. Tap exactly what you heard; a wrong version explains the missing piece. Most students produce <i>will working</i> (no be) or <i>will be work</i> (no -ing). A good answer in plain <i>will</i> is not wrong: accept it, then recast.</p>
+    <h4>THE TRAPS</h4>
+    <p><i>will working</i> · <i>will be work</i> · <i>in this time next year</i> · <i>I will have 55 years</i> · <i>I’ll be helping you</i> for a decision made right now · <i>I’ll be knowing</i> · <i>will be not</i> · <i>Will be you …?</i> · <i>I’ll be probably</i>.</p>
+    <h4>THE ORBIT AND THE CALL</h4>
+    <p>Scene VII: read the moment and the first words in a lively voice, and stop; the student finishes at once, with their own details. Moments 2, 4 and 6 are where it stops: age with be, know without -ing, and a decision now. Scene VIII: you are the student’s future self, calm and friendly. In the last exchange, the student forms the question.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>emissions</i>, <i>blackouts</i>, <i>droughts</i>, <i>melted</i> and <i>displaced</i>, before the video, in match the columns and mystery meaning. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE ARENA (IX) AND THE SURPRISE QUESTION</h4>
+    <p>The video says many people will be moving to the cities by 2050. Your student picks a side, smart city or small town, and defends it for one minute with will be + -ing; then they swap and defend the other side. There is no right answer: wait five seconds in silence before they start, then use the PUSH line (only you see it) to make the choice harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Next Year, V The Neon Skyline, VII The Forecast Orbit, VIII A Call from 2050, IX The Arena and X Your 2050.</li>
+      <li><b>Listen</b>: II The Words, III Earth in 2050 and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule.</li>
+      <li><b>Write</b>: XI See You in 2050.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* THIS TIME NEXT YEAR (Main B1) · pergunta-surpresa · 27/10/2026 · will be + -ing */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'Tomorrow at this exact time, what will you be doing?',
+    opc: ['Working or studying', 'Relaxing', 'Something unusual'], st: ['Tomorrow at this time, I’ll be …', 'I won’t be … I’ll be …'],
+    ex: 'Working. Tomorrow at this time I’ll be sitting in a meeting, and I’ll be pretending to listen.', push: 'And this time next week? Is it the same, or different?' },
+  { cena: 'torres', tipo: 'Would you rather', q: 'In 2050, would you rather be working with robots or with people only?',
+    opc: ['With robots', 'With people only'], st: ['I’d rather be working with …, because …', 'Robots won’t be …'],
+    ex: 'With robots. They’ll be doing the boring parts, and I’ll be doing the creative parts.', push: 'The robot is better than you at your job. Still happy?' },
+  { cena: 'orbita', tipo: 'What if', q: 'A company offers you a job on the Moon for one year, from next January. Do you go?',
+    opc: ['Yes, I go', 'No way', 'Only with my family'], st: ['This time next year, I’ll be …', 'I won’t be … because …'],
+    ex: 'Yes! This time next year I’ll be looking at the Earth from my window and sending photos to everyone.', push: 'No coffee and no internet for one year. Still yes?' },
+  { cena: 'fim', tipo: 'Opinion', q: 'In 2050, what will most people be doing on a Friday night?',
+    opc: ['Going out', 'Staying home with screens', 'Something we can’t imagine'], st: ['Most people will be …', 'They won’t be … any more.'],
+    ex: 'Staying home. They’ll be meeting friends in virtual rooms, and they won’t be going to bars as much.', push: 'Is that sad, or just different? Why?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THIS TIME NEXT YEAR (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A arena entra no lugar de "IX · Quick Check" (extra; prática controlada repetida depois da regra e da órbita).
+   O vídeo diz que em 2050 muita gente vai estar se mudando para as cidades: o aluno defende um lado,
+   depois troca. A gramática da aula (will be + -ing / won't be + -ing) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'arena', troca: 'quiz', est: 'o', min: 7, img: 'cidade', rot: 'The Arena', t: '2050: a smart city or a small town?',
+    p: 'Pick a side and defend it for one minute with will be + -ing. Then swap and defend the other side.',
+    formato: 'arena', segundos: 60,
+    q: 'In 2050, where will people be living a better life?',
+    lados: [
+      { nome: 'The smart city', arg: 'Jobs, fast transport, everything close' },
+      { nome: 'The small town', arg: 'Space, trees, cooler air, quiet nights' }
+    ],
+    st: ['In 2050, people in the city will be …', 'In a small town, you won’t be …', 'This time in 2050, I’ll be …', 'But will they be …?'],
+    ex: 'The small town. In 2050 the cities will be getting hotter, and people will be spending hours in traffic. In a small town I’ll be working online, and I won’t be breathing smoke all day.',
+    push: 'The video says millions will be moving TO the cities. Are they all wrong? And where will YOU be living?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "You, this year, and next year.",
+   "p": "Tap a card. Answer. Then your teacher answers."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen: they turn yellow."
+  },
+  "video": {
+   "t": "What could Earth look like in 2050?",
+   "p": "Answer first. Four short chapters. Then True or Lie."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again. Say it."
+  },
+  "torres": {
+   "t": "2050, Monday, 8 AM. Eight towers.",
+   "p": "Tap a tower. Forecast in one sentence."
+  },
+  "regra": {
+   "t": "A future moment, an action in progress.",
+   "p": "Say each wrong line right. Then tap SHOW ME."
+  },
+  "orbita": {
+   "t": "Five moments of your future.",
+   "p": "Hear the first words. Finish at once, truly."
+  },
+  "ligacao": {
+   "t": "It’s you, calling from 2050.",
+   "p": "Answer with will be + -ing. Then ask back."
+  },
+  "cv-arena": {
+   "t": "2050: smart city or small town?",
+   "p": "Defend one side for a minute. Then swap."
+  },
+  "roda": {
+   "t": "Your future: next year and 2050.",
+   "p": "Tap five. Answer with will be + -ing."
+  },
+  "fim": {
+   "t": "2050: better or worse than today?",
+   "p": "Write a short letter to 2050. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Will be + -ing para ação em andamento num momento do futuro (This time next year, I’ll be living in Lisbon): ano novo, planos e um vídeo sobre a Terra em 2050.",
+  "armadilha": "O brasileiro diz “will working” ou “will be work”, “in this time next year”, “I will have 55 years”, “I’ll be knowing” (verbo de estado) e “I’ll be probably” (é I’ll probably be).",
+  "pal": [
+   "will be …ing",
+   "won’t be …ing",
+   "Will you be using…?",
+   "this time next year",
+   "in 2050",
+   "emissions",
+   "droughts",
+   "displaced"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o tema: ano novo, planos e como será a vida em 2050.",
+   "perg": "Did you make any plans for this year?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal: este ano e o próximo na vida do aluno.",
+   "perg": "What will you be doing this time next year?",
+   "pula": "Duas cartas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (emissions, blackouts, droughts, melted, displaced) antes de assistir.",
+   "perg": "What is a drought?",
+   "pula": "Deixe o aluno chutar e siga; cinco minutos no máximo."
+  },
+  "video": {
+   "obj": "Vídeo sobre a Terra em 2050 em quatro capítulos; o aluno transforma as ideias em will be + -ing.",
+   "perg": "What will people be doing in 2050?",
+   "pula": "Uma pergunta por capítulo basta."
+  },
+  "falas": {
+   "obj": "Ouvir de novo as falas com palavras amarelas e ver a explicação.",
+   "perg": "Can you say that line again?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "torres": {
+   "obj": "Oito torres em 2050: uma previsão por torre, antes da regra.",
+   "perg": "What will people be doing in this tower?",
+   "pula": "Quatro torres bastam."
+  },
+  "regra": {
+   "obj": "A regra: will be + -ing, o negativo, a pergunta educada e onde não usar (decisão, verbos de estado).",
+   "perg": "Is it will working or will be working?",
+   "pula": "Não corte: é a regra. Três frases bastam."
+  },
+  "orbita": {
+   "obj": "Fala rápida: o aluno termina cinco momentos do futuro dele; 2, 4 e 6 são as armadilhas.",
+   "perg": "At this time tomorrow, what will you be doing?",
+   "pula": "Não corte as armadilhas (2, 4, 6)."
+  },
+  "ligacao": {
+   "obj": "O professor é o eu futuro do aluno, ligando de 2050; o aluno pergunta no fim.",
+   "perg": "Where will you be living?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-arena": {
+   "obj": "Arena: cidade inteligente ou cidadezinha em 2050; defender um lado e depois trocar.",
+   "perg": "Where will you be living in 2050, and why?",
+   "pula": "Um lado só, sem trocar."
+  },
+  "roda": {
+   "obj": "Roleta pessoal: cinco perguntas sobre o futuro do aluno com will be + -ing.",
+   "perg": "Will you be working in 2050?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: uma carta curta para 2050, com o que o aluno estará fazendo.",
+   "perg": "What will you be doing in 2050?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre momentos do futuro com will be + -ing.",
+   "perg": "What will you be doing on Saturday night?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre o futuro: trabalho, carros, robôs, com will be + -ing.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno descreve um dia dele daqui a dez anos, hora por hora.",
+   "perg": "What will you be doing at 8 AM?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Moments in your future.",
+   "p": "Pick a card. Answer with will be + -ing.",
+   "palavras": [
+    "will be …ing",
+    "won’t be …ing",
+    "this time next…"
+   ],
+   "cartas": [
+    {
+     "k": "TOMORROW, 9 AM",
+     "q": "What will you be doing at 9 AM tomorrow?",
+     "fup": "And at 9 PM?",
+     "st": [
+      "At 9 AM, I’ll be …ing.",
+      "I won’t be …ing, because …"
+     ],
+     "ex": "At 9 AM, I’ll be sitting in a meeting. I won’t be enjoying it."
+    },
+    {
+     "k": "NEXT SUMMER",
+     "q": "What will you be doing next summer?",
+     "fup": "Who will you be with?",
+     "st": [
+      "Next summer, I’ll be …ing …"
+     ],
+     "ex": "Next summer, I’ll be traveling with my sister."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "Will you be doing the same job in five years?",
+     "fup": "Why or why not?",
+     "st": [
+      "I think I’ll be …ing.",
+      "I hope I won’t be …ing."
+     ],
+     "ex": "I hope I won’t be working on weekends anymore."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Will you be living in the same city in ten years?",
+     "fup": "Where else?",
+     "st": [
+      "I’ll probably be living in …"
+     ],
+     "ex": "I’ll probably be living near the beach, I hope."
+    },
+    {
+     "k": "SATURDAY NIGHT",
+     "q": "What will you be doing this Saturday night?",
+     "fup": "Will you be using your phone?",
+     "st": [
+      "I’ll be …ing at …"
+     ],
+     "ex": "I’ll be having dinner at my friend’s house, phone in my bag."
+    },
+    {
+     "k": "2050",
+     "q": "How old will you be in 2050? What will you be doing?",
+     "fup": "Will you be working?",
+     "st": [
+      "I’ll be … years old.",
+      "I’ll be …ing."
+     ],
+     "ex": "I’ll be seventy, and I’ll be growing tomatoes in my garden."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "will be …ing",
+    "won’t be …ing",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "In 2050, will people be working fewer hours or more hours?",
+     "a": "Fewer",
+     "b": "More",
+     "fa": [
+      "Fewer. Robots will be doing the boring jobs.",
+      "We’ll be working four days a week."
+     ],
+     "fb": [
+      "More. We’ll be answering messages all day.",
+      "Nobody will be resting."
+     ]
+    },
+    {
+     "q": "In 2050, will people be driving cars?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes, but electric ones.",
+      "Cities will still be using roads."
+     ],
+     "fb": [
+      "No. Cars will be driving themselves.",
+      "People will be sleeping in them."
+     ]
+    },
+    {
+     "q": "Will life in 2050 be better or worse?",
+     "a": "Better",
+     "b": "Worse",
+     "fa": [
+      "Better. We’ll be using clean energy everywhere."
+     ],
+     "fb": [
+      "Worse. Many people will be moving because of droughts."
+     ]
+    },
+    {
+     "q": "Plan next year in detail, or wait and see?",
+     "a": "Plan it",
+     "b": "Wait and see",
+     "fa": [
+      "Plan it. I want to know what I’ll be doing in June."
+     ],
+     "fb": [
+      "Wait and see. Plans change, and that’s fine."
+     ]
+    }
+   ],
+   "fim": "Four rounds. This time next year, you’ll be arguing even better."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Day in 2036",
+   "t": "A day, ten years from now.",
+   "p": "Answer each step. Use will be + -ing.",
+   "prof": "Watch the traps: I’ll be fifty (not having fifty years), I’ll know (not be knowing).",
+   "passos": [
+    {
+     "q": "It’s a Monday, ten years from now, 8 AM. Where will you be?",
+     "st": [
+      "At 8 AM, I’ll be …ing in …"
+     ],
+     "ex": "At 8 AM, I’ll be drinking coffee in my kitchen in Lisbon."
+    },
+    {
+     "q": "And at noon?",
+     "st": [
+      "At noon, I’ll be …ing."
+     ],
+     "ex": "At noon, I’ll be teaching an online class."
+    },
+    {
+     "q": "What won’t you be doing anymore?",
+     "st": [
+      "I won’t be …ing anymore."
+     ],
+     "ex": "I won’t be sitting in traffic anymore."
+    },
+    {
+     "q": "Who will you be having dinner with?",
+     "st": [
+      "I’ll be having dinner with …"
+     ],
+     "ex": "I’ll be having dinner with my family, and nobody will be using a phone."
+    }
+   ],
+   "fim": "Save this day. Check it again in ten years."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

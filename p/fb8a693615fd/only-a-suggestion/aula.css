@@ -1,0 +1,76 @@
+/* ============================================================
+   ONLY A SUGGESTION · THE TASK BOARD · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: a sala de reunião às onze —
+   azul-marinho quase preto; o quadro de tarefas com cartões escuros; o
+   crachá do dono em amarelo-mostarda; "NO OWNER" em vermelho tracejado;
+   as cadeiras dos verbos em verde-água.
+   ============================================================ */
+:root{
+  --noite:#05070c; --noite-rgb:5,7,12; --tinta:#e7eaf1;
+  --t1:#eff2f8; --t2:#c3c8d4; --t2-rgb:195,200,212; --t3:#818899;
+  --ac:#f0c24f; --ac2:#f8e1a0; --cad:#6fd6c8; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(231,234,241,.05); --vidro2:rgba(231,234,241,.085); --vidro3:rgba(231,234,241,.12);
+  --fio:rgba(224,228,238,.12); --fio2:rgba(224,228,238,.22); --luz:rgba(231,234,241,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1e00}
+.btn.cheio{color:#2a1e00}
+.capa{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2a220c;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.sg-ops{display:grid;gap:6px} .sg-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:0 auto 12px;width:100%} .sg-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1100px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao s{text-decoration-color:var(--erro);color:var(--t3)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.sg-linha-ok{display:flex;align-items:center;gap:12px} .sg-linha-ok .aprova{flex:1;margin:0} .sg-linha-ok.centro{max-width:1100px;margin:0 auto;width:100%}
+.sg-temas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 12px}
+.sg-rot{margin:0;font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+
+/* o quadro */
+.sg-board{display:grid;gap:10px;width:100%;max-width:640px;padding:14px;border-radius:var(--r2);background:#0a0d14;border:1px solid var(--fio2)}
+.sg-board-cab{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:6px;border-bottom:1px solid var(--fio)} .sg-board-cab b{font:800 12px var(--mono);letter-spacing:.14em} .sg-board-cab small{font:800 11px var(--mono);color:var(--ac)}
+.sg-cartoes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sg-card{display:grid;gap:8px;align-content:space-between;min-height:84px;padding:10px 12px;border-radius:10px;background:#121725;border:1px solid #232a3c}
+.sg-card p{margin:0;font:700 clamp(14px,1.05vw,18px)/1.3 var(--disp);color:var(--t2)}
+.sg-card.dono{border-color:rgba(240,194,79,.45)} .sg-card.dono p{color:var(--t1)}
+.sg-card.agora{outline:2px solid var(--fio2);outline-offset:2px}
+.sg-cracha{display:inline-flex;align-items:center;gap:6px;justify-self:start;padding:3px 10px 3px 3px;border-radius:999px;background:#2a220c;border:1px solid var(--ac);font:800 11px var(--mono);letter-spacing:.08em;color:var(--ac2);animation:prende .45s ease-out}
+.sg-cracha i{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ac);color:#2a1e00;font-style:normal;font-size:10px}
+.sg-sem{justify-self:start;padding:3px 8px;border-radius:6px;border:1px dashed rgba(255,110,110,.55);font:800 10px var(--mono);letter-spacing:.12em;color:var(--erro)}
+@keyframes prende{from{transform:translateY(-10px) rotate(-6deg);opacity:0}}
+
+/* as cadeiras */
+.sg-verbos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:1500px;margin:0 auto 12px;width:100%}
+.sg-verbo{display:grid;gap:10px;padding:12px 14px;border-radius:14px} .sg-verbo.certo{border-color:var(--ok)} .sg-verbo.errado{border-color:var(--erro)}
+.sg-vfila{display:flex;align-items:center;gap:10px;min-height:40px} .sg-vfila b{font:800 clamp(17px,1.35vw,23px) var(--mono);letter-spacing:.06em} .sg-vfila span{font:600 14px var(--disp);color:var(--t3)}
+.sg-cadeira{width:30px;height:34px;border:3px solid var(--cad);border-top-width:3px;border-radius:4px 4px 0 0;border-bottom:0;position:relative;animation:prende .4s ease-out} .sg-cadeira::after{content:'';position:absolute;left:-6px;right:-6px;bottom:6px;height:3px;background:var(--cad)}
+.sg-sem-cad{width:30px;height:4px;background:var(--erro);border-radius:2px;opacity:.7}
+.sg-vazio{width:30px;height:30px;border:2px dashed var(--fio2);border-radius:6px}
+.sg-fs{display:flex;gap:6px;flex-wrap:wrap} .sg-fs .pilula{min-height:36px;padding:0 14px;font:800 12px var(--mono);letter-spacing:.06em}
+
+/* quatro horas e reunião */
+.sg-relogio{display:flex;align-items:baseline;justify-content:center;gap:16px;max-width:700px;margin:0 auto 12px;padding:10px 18px;border-radius:14px;border-color:rgba(255,110,110,.4)} .sg-relogio b{font:800 clamp(26px,2.2vw,38px) var(--mono);color:var(--erro)} .sg-relogio span{font:700 clamp(18px,1.4vw,24px) var(--disp);font-style:italic;color:var(--t2)}
+.sg-lista{display:grid;gap:8px;max-width:1200px;margin:0 auto 10px;width:100%}
+.sg-tf{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 14px;border-radius:14px} .sg-tf span{font:600 clamp(16px,1.25vw,21px) var(--disp)}
+.sg-tf.certo{border-color:var(--ok)} .sg-tf.errado{border-color:var(--erro)}
+.sg-chefe{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2);border-color:var(--ac)} .sg-chefe small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .sg-chefe p{margin:0;font:700 clamp(19px,1.55vw,26px)/1.4 var(--disp)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .sg-board{max-width:440px}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .sg-ops.linha{grid-template-columns:1fr} .sg-verbos{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .sg-cartoes{grid-template-columns:1fr} .sg-tf{grid-template-columns:1fr} .sg-verbos{grid-template-columns:1fr} }
+
+/* 22/10/2026 · os formatos novos (formatos.js) */
+.sg-sob{width:min(1200px,100%);margin:22px auto 0}
+.c-reuniao .sg-board{margin:0 auto}

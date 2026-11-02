@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Give Me a Second",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/61aef48ceb88/give-me-a-second/img/live-ampulheta.webp",
+  "capa": "../img/live-ampulheta.webp",
   "alvo": "buying time out loud: Hold on, let me think · That's a good question · How do I put it ... · It's a kind of ... (describe the word that won't come); never silence, never switching language",
   "abrir": "What do you say when you need a moment to think?",
   "fecho": "<b>Hold on, let me think.</b> · <b>That's a good question.</b> · <b>How do I put it ...</b> · <b>It's a kind of ...</b> The only mistake is silence. If the word doesn't come, describe it: <i>It's a kind of small bag for coins.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia gets a hard question from Leo. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/61aef48ceb88/give-me-a-second/img/live-porta.webp",
+      "img": "../img/live-porta.webp",
       "leg": "A warm hallway with a coat on the hook",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Hold on, let me think.",
-          "img": "https://wolf-labs.pages.dev/p/61aef48ceb88/give-me-a-second/img/live-ampulheta.webp",
+          "img": "../img/live-ampulheta.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "That's a good question. Give me a second.",
-          "img": "https://wolf-labs.pages.dev/p/61aef48ceb88/give-me-a-second/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "How do I put it? It's a kind of small bag.",
-          "img": "https://wolf-labs.pages.dev/p/61aef48ceb88/give-me-a-second/img/live-ampulheta.webp",
+          "img": "../img/live-ampulheta.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/61aef48ceb88/give-me-a-second/img/live-ampulheta.webp",
+      "img": "../img/live-ampulheta.webp",
       "leg": "An hourglass, the sand running",
       "pede": "Look at the picture: an hourglass, the sand running. A hard question: why do people keep old photos? Write 2 or 3 sentences: start with a move like <b>Hold on</b> or <b>That's a good question</b>, then answer.",
       "ph": "That's a good question …",

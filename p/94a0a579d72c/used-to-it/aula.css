@@ -1,0 +1,75 @@
+/* ============================================================
+   USED TO IT · THE MOVING BOX · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: um apartamento vazio à
+   noite — grafite quente; a caixa de mudança em papelão escuro com
+   fita âmbar; a faixa dos doze meses que vai do laranja de casa ao
+   gelo de Toronto.
+   ============================================================ */
+:root{
+  --noite:#08080a; --noite-rgb:8,8,10; --tinta:#ebe8e4;
+  --t1:#f2efeb; --t2:#cbc5bf; --t2-rgb:203,197,191; --t3:#8d867f;
+  --ac:#d9975a; --ac2:#f2c99d; --gelo:#a9d8f2; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(235,232,228,.05); --vidro2:rgba(235,232,228,.085); --vidro3:rgba(235,232,228,.12);
+  --fio:rgba(228,222,216,.12); --fio2:rgba(228,222,216,.22); --luz:rgba(235,232,228,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1606}
+.btn.cheio{color:#2a1606}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:18px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,20px);text-align:left}
+.versao.on{border-color:var(--ac);background:#2a1c10} .versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.versao.grande-v{min-height:56px;font:800 clamp(13px,1.05vw,17px) var(--mono);letter-spacing:.05em;text-align:center}
+.mv-ops{display:grid;gap:6px} .mv-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;margin:0 auto 12px} .mv-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1000px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+
+/* a caixa */
+.mv-caixa{position:relative;width:min(100%,360px);margin:0 auto} .mv-caixa.mini{width:min(100%,280px)}
+.mv-caixa svg{display:block;width:100%;height:auto}
+.mv-caixa .corpo{fill:#2b2118;stroke:#6b513a;stroke-width:2}
+.mv-caixa .aba{fill:#33281d;stroke:#6b513a;stroke-width:2;transition:transform .6s;transform-box:fill-box}
+.mv-caixa .aba.e{transform-origin:right bottom} .mv-caixa .aba.d{transform-origin:left bottom}
+.mv-caixa.fechada .aba.e{transform:scaleY(-.15)} .mv-caixa.fechada .aba.d{transform:scaleY(-.15)}
+.mv-caixa .fita{fill:rgba(217,151,90,.55)} .mv-caixa.fechada .fita{fill:var(--ac)}
+.mv-caixa .rot{font:800 11px var(--mono);letter-spacing:.14em;fill:#a98a6a}
+.mv-dentro{position:absolute;left:12%;right:12%;top:42%;display:flex;flex-wrap:wrap;gap:4px;justify-content:center} .mv-dentro span{padding:4px 10px;border-radius:6px;background:#1a140e;border:1px solid #5a4430;font:700 clamp(12px,.95vw,15px) var(--disp);color:var(--ac2);transform:rotate(-2deg)}
+.mv-dentro span:nth-child(2n){transform:rotate(3deg)}
+
+/* o ano */
+.mv-ano{display:grid;gap:6px;width:min(100%,640px);margin:0 auto}
+.mv-meses{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}
+.mv-meses i{position:relative;height:46px;border-radius:6px;background:#141217;border:1px solid #2a2630;display:grid;place-items:end center;padding-bottom:4px}
+.mv-meses i b{font:800 10px var(--mono);color:var(--t3)}
+.mv-meses i.on{background:color-mix(in srgb,var(--ac) calc(100% - var(--m) * 8%),var(--gelo));border-color:transparent;box-shadow:0 0 10px color-mix(in srgb,var(--ac) calc(100% - var(--m) * 8%),var(--gelo))} .mv-meses i.on b{color:#121014}
+.mv-leg{display:flex;justify-content:space-between;font:800 10px var(--mono);letter-spacing:.12em;color:var(--t3)} .mv-leg span:nth-child(2){color:var(--ac2)}
+.mv-ana{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:22px;align-items:center;max-width:1300px;margin:0 auto 12px}
+
+/* cenas */
+.mv-linha{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 12px;border-radius:12px} .mv-linha span{font:600 clamp(15px,1.15vw,19px) var(--disp)} .mv-linha.certo{border-color:var(--ok)} .mv-linha.errado{border-color:var(--erro)}
+.mv-fs{display:flex;gap:6px;flex-shrink:0} .mv-fs .pilula{min-height:34px;padding:0 12px;font:800 11px var(--mono);letter-spacing:.06em}
+.mv-mesa{display:flex;flex-wrap:wrap;gap:6px;min-height:80px;padding:12px;border-radius:14px;border:1px dashed var(--gelo)} .mv-mesa small{flex-basis:100%;font:800 11px var(--mono);letter-spacing:.12em;color:var(--gelo)} .mv-mesa span{padding:6px 10px;border-radius:8px;background:#121820;font:600 15px var(--disp)}
+.mv-regra{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:1400px;margin:0 auto 12px}
+.mv-cartao{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);opacity:.55} .mv-cartao.on{opacity:1} .mv-cartao small{font:800 11px var(--mono);letter-spacing:.14em} .mv-cartao p{margin:0;font:700 clamp(19px,1.5vw,25px) var(--disp)} .mv-cartao u{text-decoration:none;border-bottom:2px solid currentColor} .mv-cartao span{font:600 14px var(--disp);color:var(--t3)}
+.mv-cartao.m0{border-color:var(--ac)} .mv-cartao.m0 small,.mv-cartao.m0 u{color:var(--ac2)} .mv-cartao.m1{border-color:var(--gelo)} .mv-cartao.m1 small,.mv-cartao.m1 u{color:var(--gelo)} .mv-cartao.m2{border-color:var(--ok)} .mv-cartao.m2 small,.mv-cartao.m2 u{color:var(--ok)}
+.mv-ouvido{display:grid;justify-items:center;gap:4px;padding:16px;border-radius:var(--r2)} .mv-ouvido small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .mv-ouvido b{font:800 clamp(30px,2.6vw,46px) var(--mono);color:var(--ac2)} .mv-ouvido span{font:600 15px var(--disp);color:var(--t2)}
+.mv-quebras{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;max-width:1300px;margin:0 auto 12px}
+.mv-tempo{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:1300px;margin:0 auto 12px;padding-top:16px;border-top:3px solid;border-image:linear-gradient(90deg,var(--ac),var(--gelo),var(--ok)) 1}
+.mv-ponto{display:grid;gap:6px;align-content:start;min-height:96px;padding:10px 12px;border-radius:14px;background:#100e12;border:1px solid var(--fio)} .mv-ponto b{font:800 12px var(--mono);letter-spacing:.1em} .mv-ponto span{font:600 15px var(--disp);color:var(--t2)}
+.mv-ponto.antes b{color:var(--ac2)} .mv-ponto.durante b{color:var(--gelo)} .mv-ponto.depois b{color:var(--ok)}
+.mv-itens{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;max-width:1400px;margin:0 auto 12px}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mv-ana{grid-template-columns:1fr} .mv-ops.linha,.mv-itens{grid-template-columns:1fr} .mv-quebras{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .mv-regra,.mv-tempo{grid-template-columns:1fr} .mv-linha{flex-direction:column;align-items:flex-start} .mv-meses i{height:34px} .mv-quebras{grid-template-columns:1fr} }

@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Three Hundred Years · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Three Hundred Years · The Two Doors</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Three Hundred Years · The Two Doors</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> In a blind test in Paris in 2014, most of 21 soloists preferred new violins to three-hundred-year-old ones, and the old ones still sell for millions.</p><p style="margin:0 0 6px"><b>The grammar:</b> Two Doors: A sentence goes through the wide door. A thing goes through the narrow one.</p><p style="margin:0 0 6px"><b>Short class (about 46 min):</b> I Nobody Was Watching · II The Blind Test · III Two Doors · IV A Thing or a Sentence? · V The Dealer · VI The Other Door · X Both Are Right. Skip if you’re short on time: VII, VIII, IX (marked EXTRA on your screen). Full lesson: about 65 min.</p><p style="margin:0"><b>Open with:</b> “What exactly did you do?”</p></div><!--/prep-->
+    <p>In a blind test in Paris in 2014, most of 21 soloists preferred new violins to three-hundred-year-old ones, and the old ones still sell for millions. Both things are true. The hour is about holding them in one sentence. The door depends on <b>what comes after it</b>: a sentence takes <b>although / even though</b>; a thing takes <b>despite / in spite of</b>. Students say <i>despite of</i>, <i>although … but</i> and <i>despite it cost</i>. On screen, two doors: a wide one for a sentence and a narrow one for a thing; the piece of the sentence goes through the right one. Six violin cases from the blind test open at the end of scene II.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Twenty recordings, each with pause and 0.75×; the transcript opens after listening. Two soloists (II), Enrico the dealer (V) and one reader with five pairs (VI). Enrico says “four hundred years” in one line; that’s his voice, leave it. Scene II: the student taps True or Lie on what each player said, and the six cases open at the end. Scene VI: the student matches each ALTHOUGH idea to its DESPITE version before hearing the pairs.</p>
+    <h4>THE DEALER</h4>
+    <p>Scene V: Enrico pushes back five times. After each of his lines the student taps how to answer (one reaction concedes and disagrees, and then he answers); don’t rescue the student: at B2, they hold the position. After each turn, push back once more in your own words.</p>
+    <h4>THE DEBATE</h4>
+    <p>Scene IX: every answer concedes first, then disagrees. Watch for students who concede and forget to disagree.</p>
+    <!--conversa--><h4>THE COUNCIL (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After the blind test and Enrico, your student sits on the city music council and votes on three proposals: yes, propose a change, or no. There is no right answer: let them vote, wait five seconds in silence, then use the PUSH line (only you see it) to make the vote harder. Every reason concedes first (although, even though, despite, in spite of). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves. The last word is one minute on old things, then you take the other side.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Nobody Was Watching, V The Dealer, VII The Council, IX Concede, Then Disagree.</li>
+      <li><b>Listen</b>: II The Blind Test, VI The Other Door.</li>
+      <li><b>Focus</b>: III Two Doors, IV A Thing or a Sentence?, VIII It Happened, or It Might.</li>
+      <li><b>Write</b>: X, their story in one sentence with one door. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THREE HUNDRED YEARS (Main B2) · pergunta-surpresa · 28/10/2026 · although / even though / despite / in spite of */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'teste', tipo: 'Would you rather', q: 'Would you rather own a famous old guitar you can’t play, or a cheap one that sounds great?',
+    opc: ['The famous one', 'The cheap one'], st: ['Although …, I’d choose …', 'Despite the price, …'],
+    ex: 'The cheap one. Although the old one is a piece of history, I want to play it, not look at it.', push: 'You could sell the famous one tomorrow. Still the cheap one?' },
+  { cena: 'portas', tipo: 'And you?', q: 'What is something you paid too much for, only because of the brand?',
+    opc: ['Clothes', 'A phone', 'Something else'], st: ['Even though it was …, I bought it.', 'Despite the price, …'],
+    ex: 'Sneakers. Even though the cheap ones were almost the same, I wanted the logo.', push: 'Would you buy them again today?' },
+  { cena: 'enrico', tipo: 'Opinion', q: 'Is an expert’s opinion worth more than a blind test?',
+    opc: ['The expert', 'The blind test', 'It depends'], st: ['Although experts …, …', 'In spite of the test, …'],
+    ex: 'It depends. Although experts know a lot, they often hear what they expect to hear.', push: 'A wine expert or a blind test: whose wine do you buy for a party?' },
+  { cena: 'mesmo', tipo: 'What if', q: 'What if your favourite singer was secretly replaced by an AI? Would you still listen?',
+    opc: ['Yes', 'No', 'Only if nobody told me'], st: ['Even if it sounded the same, …', 'Despite the voice, …'],
+    ex: 'No. Even if it sounded the same, I listen because a real person made those songs.', push: 'You already liked the song before you knew. So what changed?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THREE HUNDRED YEARS (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O conselho entra no lugar de "VII · Despite Of" (extra; achar o erro, prática controlada repetida:
+   III, IV e VI já treinam as portas). A aula já tem o pessoal (I), o Enrico (V) e o debate (IX):
+   aqui é a VOTAÇÃO DO CONSELHO, no meio, logo depois do teste às cegas e do vendedor.
+   A gramática (although / even though + frase; despite / in spite of + coisa) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'conselho', troca: 'erros', est: 'o', min: 7, img: 'salao', rot: 'The Council', t: 'You sit on the city music council. Three proposals.',
+    p: 'Vote: yes, change it, or no. Then concede first and give your reason: although …, despite …',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The old violin', sit: 'The city orchestra owns one old Italian violin, worth three million. The plan: sell it and buy new violins for every public school.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Although it’s …, I vote …', 'Despite its history, …', 'Even though the kids …, …'],
+        ex: 'Yes. Although it is beautiful, three million in a glass box helps nobody. Despite the history, I want a thousand kids playing.',
+        push: 'Your favourite soloist says she will leave the orchestra if you sell it. Same vote?' },
+      { tag: 'The screen', sit: 'From next year, every orchestra job will be decided in a blind test: candidates play behind a screen, no names, no CVs.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Even though it seems fair, …', 'In spite of the screen, …', 'Although a CV …, …'],
+        ex: 'Propose a change: blind for the first round only. Even though the screen is fair, in the end you need to see how people work in a team.',
+        push: 'A great player with a bad attitude wins behind the screen. Do you still hire him?' },
+      { tag: 'The stamp', sit: 'A local shop wants a council stamp on its new violins: “Tested blind. As good as the old ones.” They will double the price.',
+        q: 'How do you vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Despite the test, …', 'Although they won the test, …', 'Even if we say yes, …'],
+        ex: 'No. Although new violins won in Paris, our council did not test these ones. Despite the good story, a stamp is a promise.',
+        push: 'The shop offers ten free violins to the schools if you say yes. Does that change your vote?' }
+    ],
+    fim: { tag: 'The last word', q: 'One minute: is an old thing worth more just because it is old?',
+      opc: ['Yes, it is', 'No, it isn’t'], segundos: 60, nota: 'One minute: concede first, then disagree. Then your teacher takes the other side.',
+      st: ['Although old things …, …', 'Despite the price, …', 'Even though nobody can hear the difference, …'],
+      ex: 'Yes, a little. Even though nobody can hear the difference, people pay for the story, despite the sound.',
+      push: 'Something old you own: would you sell it for the price of a new one?' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "You did it well. Nobody saw.",
+   "p": "Tap what it was. Then answer out loud."
+  },
+  "teste": {
+   "t": "Paris, 2014. Six violins in the dark.",
+   "p": "Play both players. True or Lie. Then join two facts."
+  },
+  "portas": {
+   "t": "A sentence or a thing?",
+   "p": "Tap a piece, then its door. Say it."
+  },
+  "coisa": {
+   "t": "Look at what comes after the door.",
+   "p": "Say a full sentence with each piece."
+  },
+  "enrico": {
+   "t": "Enrico has sold violins for forty years.",
+   "p": "Play his line. Choose your answer. Say it."
+  },
+  "outra": {
+   "t": "Same idea, other door.",
+   "p": "Say each ALTHOUGH idea with DESPITE. Match. Compare."
+  },
+  "cv-conselho": {
+   "t": "The city music council: three proposals.",
+   "p": "Vote. Concede first, then give your reason."
+  },
+  "mesmo": {
+   "t": "EVEN THOUGH is real. EVEN IF is imagined.",
+   "p": "Tap one. Say the whole sentence."
+  },
+  "debate": {
+   "t": "Concede first. Then disagree.",
+   "p": "Tap a card. Use the frame."
+  },
+  "fim": {
+   "t": "It came last. It still costs millions.",
+   "p": "Your story, one sentence, one door. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Concessão: although/even though + frase, despite/in spite of + coisa. Num teste às cegas em Paris (2014), solistas preferiram violinos novos aos de trezentos anos, que ainda valem milhões.",
+  "armadilha": "O brasileiro diz “despite of” (calco de “apesar de”), “although … but” (embora… mas) e “despite it cost” com frase depois; e confunde even though (fato) com even if (hipótese).",
+  "pal": [
+   "although",
+   "even though",
+   "despite",
+   "in spite of",
+   "even if",
+   "blind test",
+   "soloist",
+   "I see your point, but"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: violinos de trezentos anos contra novos, num teste às cegas.",
+   "perg": "Do old things always sound or work better?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: algo que o aluno fez bem mesmo sem ninguém ver; volta no fim.",
+   "perg": "What exactly did you do?",
+   "pula": "Duas perguntas bastam; anote a história."
+  },
+  "teste": {
+   "obj": "Escuta: dois solistas falam do teste; True or Lie e duas verdades numa frase só.",
+   "perg": "Which violins did they prefer?",
+   "pula": "Um solista basta."
+  },
+  "portas": {
+   "obj": "A regra: porta larga para frase (although), estreita para coisa (despite).",
+   "perg": "Is that a sentence or a thing?",
+   "pula": "Não corte: é a regra. Quatro peças bastam."
+  },
+  "coisa": {
+   "obj": "Produção: frases completas com cada peça pela porta certa.",
+   "perg": "Can you say it with despite?",
+   "pula": "Três peças bastam."
+  },
+  "enrico": {
+   "obj": "Enrico, o negociante, discorda cinco vezes; o aluno concede e mantém a posição.",
+   "perg": "Enrico disagrees. What do you say now?",
+   "pula": "Três falas do Enrico bastam."
+  },
+  "outra": {
+   "obj": "A mesma ideia pela outra porta: although vira despite / in spite of; ouvir os pares.",
+   "perg": "How do you say it with in spite of?",
+   "pula": "Três pares bastam."
+  },
+  "cv-conselho": {
+   "obj": "Conselho de música da cidade: votar três propostas concedendo primeiro.",
+   "perg": "Although it’s expensive, would you vote yes?",
+   "pula": "Cena extra: uma proposta e o PUSH."
+  },
+  "mesmo": {
+   "obj": "Even though (fato) x even if (imaginado): escolher e dizer a frase inteira.",
+   "perg": "Did it happen, or might it happen?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "debate": {
+   "obj": "Quatro afirmações: conceder primeiro e depois discordar; o professor rebate uma vez.",
+   "perg": "OK, but do you really agree?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: a história da cena I em uma frase, com uma porta.",
+   "perg": "Nobody saw it. Why did you still do it well?",
+   "pula": "Uma frase basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta com concessão: although, despite, even though.",
+   "perg": "What do you love even though it’s not perfect?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre preço, marca e valor, concedendo antes de discordar.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Enrico e defende o valor dos violinos antigos apesar do teste.",
+   "perg": "Despite the test, why are old violins worth millions?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Both things are true.",
+   "p": "Pick a card. Concede, then say your point.",
+   "palavras": [
+    "although",
+    "even though",
+    "despite",
+    "in spite of"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR OLD THING",
+     "q": "What old thing do you keep, even though a new one is better?",
+     "fup": "Would you sell it?",
+     "st": [
+      "Even though …, I still …",
+      "Despite its age, …"
+     ],
+     "ex": "Even though my car is twenty years old, I still drive it every day."
+    },
+    {
+     "k": "BRANDS",
+     "q": "Do you pay more for a famous brand?",
+     "fup": "Can you really tell the difference?",
+     "st": [
+      "Although …, I …",
+      "In spite of the price, …"
+     ],
+     "ex": "Although I can’t taste the difference, I buy the expensive coffee."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What do you like about your job despite the problems?",
+     "fup": "What would you change?",
+     "st": [
+      "Despite the …, I like …",
+      "Although it’s …, …"
+     ],
+     "ex": "Despite the long hours, I like the people I work with."
+    },
+    {
+     "k": "EXPERTS",
+     "q": "When did experts get something wrong?",
+     "fup": "Do you still trust them?",
+     "st": [
+      "Even though they were experts, …",
+      "I still trust them, although …"
+     ],
+     "ex": "Even though they were experts, the soloists couldn’t tell old from new."
+    },
+    {
+     "k": "A HARD CHOICE",
+     "q": "When did you do something although you were afraid?",
+     "fup": "Was it worth it?",
+     "st": [
+      "Although I was …, I …"
+     ],
+     "ex": "Although I was terrified, I gave the presentation in English."
+    },
+    {
+     "k": "TASTE",
+     "q": "What do you enjoy in spite of what people say?",
+     "fup": "Do you defend it?",
+     "st": [
+      "In spite of …, I love …",
+      "People laugh, but even so, …"
+     ],
+     "ex": "In spite of the jokes, I love old pop music from the eighties."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Concede first. Your teacher takes the other side.",
+   "palavras": [
+    "I see your point, but…",
+    "although",
+    "despite"
+   ],
+   "rodadas": [
+    {
+     "q": "A violin that costs millions: art or madness?",
+     "a": "Art",
+     "b": "Madness",
+     "fa": [
+      "Art. Despite the blind test, its history has value.",
+      "You’re buying three hundred years, not just a sound."
+     ],
+     "fb": [
+      "Madness. Although it’s beautiful, new violins won the test.",
+      "That money could buy a hundred instruments."
+     ]
+    },
+    {
+     "q": "Blind tests: the truth, or unfair to tradition?",
+     "a": "The truth",
+     "b": "Unfair",
+     "fa": [
+      "The truth. Even though experts hate it, the ears don’t lie."
+     ],
+     "fb": [
+      "Unfair. In spite of the result, players need months, not minutes, with a violin."
+     ]
+    },
+    {
+     "q": "Buy the expensive original or the cheaper copy?",
+     "a": "Original",
+     "b": "Copy",
+     "fa": [
+      "Original. Although it costs more, it lasts longer.",
+      "And it keeps its value."
+     ],
+     "fb": [
+      "Copy. Despite the name on the label, it does the same job."
+     ]
+    },
+    {
+     "q": "Do your best work even if nobody will ever see it?",
+     "a": "Always",
+     "b": "Not always",
+     "fa": [
+      "Always. Even if nobody sees it, I know.",
+      "That’s enough for me."
+     ],
+     "fb": [
+      "Not always. Although quality matters, time is limited.",
+      "Good enough is sometimes enough."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Although nobody won, everybody conceded something."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Enrico now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Enrico, the violin dealer.",
+   "perguntas": [
+    "You’ve sold violins for forty years. What has changed?",
+    "The soloists preferred the new violins. How do you answer that?",
+    "Why do old violins still cost millions, despite the test?",
+    "Have you ever been wrong about a violin?",
+    "Would you buy a new violin yourself?",
+    "Even if the next test gives the same result, will you change your mind?"
+   ],
+   "st": [
+    "Although the test …, …",
+    "Despite …, I still believe …",
+    "I see your point, but …"
+   ],
+   "ex": "Although the soloists chose the new ones, a test in the dark is not a life on stage."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

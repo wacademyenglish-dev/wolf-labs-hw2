@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Having Missed the Train · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Having Missed the Train · The 11:52 Night Train</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Having Missed the Train · The 11:52 Night Train</h2>
+    <p>A thriller in short, cinematic sentences. Nora Vane misses the 9:40 and takes the night train. In compartment 12 there is a brown briefcase, left alone. At 2:10 the lights go out for forty seconds, and when they come back the briefcase is gone. The grammar: a <b>participle clause</b> has no subject of its own; it borrows the subject after the comma. <b>Having + past participle</b> happened first; <b>-ing</b> is at the same time or the reason; <b>not</b> goes first; a <b>past participle</b> alone means something was done to the subject. On screen, a departure board with flipping letters, a ticket that gets punched at every shot, and the conductor’s report with every subject under a black bar.</p>
+    <h4>SIX SHOTS</h4>
+    <p>Scene II, before the rule. The student reads each shot like a movie script. Many will say <i>After she missed</i>: that’s fine out loud. The three options show the short version and the two classic mistakes.</p>
+    <h4>THE PORTUGUESE TRAP</h4>
+    <p>In Portuguese, a gerund clause can have its own subject: word for word, <i>Arriving at the station, the rain started</i> is fine there. In English that says the rain arrived at the station. And the Portuguese version of <i>Having missed</i> sounds formal, so students avoid <i>Having missed</i>. In English stories and reports it is normal.</p>
+    <h4>THE CONDUCTOR’S REPORT</h4>
+    <p>Scene IV is the pressure. Read each line as the inspector, a little suspicious. The student puts the real subject after the comma; the black bar lifts and a red stamp lands on that passenger. Ms. Ortiz ends with four. After the last line, ask: “So who took it? Prove it with two lines.”</p>
+    <h4>NO JUMP SCARES</h4>
+    <p>Suspense, not horror: rain, a dark carriage, a missing case. Nothing jumps, nobody gets hurt.</p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (VI) AND THE SURPRISE QUESTION</h4>
+    <p>After the inspector at dawn, your student rates four opinions about Nora’s night from 1 to 5 and defends the number with a participle clause; you take the opposite number. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make it harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves. The rule is practised again in the homework, so nothing is lost by skipping the old quick check.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and the Night, II Six Shots, V The Inspector at Dawn, VI Unpopular Opinions, VII Your Night Shots.</li>
+      <li><b>Listen</b>: no recordings in this lesson; the teacher’s voice is the inspector.</li>
+      <li><b>Focus</b>: III The Rule, IV The Conductor’s Report.</li>
+      <li><b>Write</b>: VIII, their missed train in three short shots. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* HAVING MISSED THE TRAIN (Main B2) · pergunta-surpresa · 27/10/2026 · orações de particípio */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'planos', tipo: 'Would you rather', q: 'Alone in a train compartment at midnight with a strange briefcase: would you open it or call the conductor?',
+    opc: ['Open it', 'Call the conductor'], st: ['Being curious, I’d …', 'Not wanting any trouble, I’d …'],
+    ex: 'Call the conductor. Not wanting any trouble, I’d keep my hands in my pockets the whole night.',
+    push: 'The conductor is asleep and the next station is two hours away. Still not opening it?' },
+  { cena: 'relatorio', tipo: 'Opinion', q: 'Right now, who looks guilty to you?',
+    opc: ['The conductor', 'Another passenger', 'Nora herself'], st: ['Having seen the briefcase, … could …', 'Knowing the train well, …'],
+    ex: 'The conductor. Knowing the train well, she knew exactly when the lights would go off.',
+    push: 'Change sides for twenty seconds: defend that person.' },
+  { cena: 'inspetor', tipo: 'And you?', q: 'What is the last thing you missed: a bus, a call, a party?',
+    opc: ['A bus or a train', 'A call', 'A party'], st: ['Having missed the …, I …', 'Running for the …, I …'],
+    ex: 'A party. Having fallen asleep on the sofa, I woke up at midnight with ten messages from my friends.',
+    push: 'Did it turn out lucky in the end, like Nora’s train?' },
+  { cena: 'bilhete', tipo: 'What if', q: 'The lights go out for forty seconds in your office tomorrow. What disappears from your desk?',
+    opc: ['My phone', 'My lunch', 'Nothing: my desk is empty'], st: ['Left on my desk, my … would …', 'Coming back, I would find …'],
+    ex: 'My lunch. Left on my desk, a chocolate cake doesn’t survive forty seconds in my office.',
+    push: 'Who would you suspect first? Describe them in one participle clause.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* HAVING MISSED THE TRAIN (Main B2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A escala de opiniões impopulares entra no lugar de "VI · Quick Check" (prática controlada repetida depois
+   do relatório da condutora, que já é Focus). Logo depois da madrugada com o inspetor, o aluno dá uma nota
+   a quatro frases sobre a noite da Nora e defende. A gramática da aula (orações de particípio) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'escala', troca: 'quiz', est: 'o', min: 7, img: 'janela', rot: 'Unpopular Opinions', t: 'After the night train: four opinions. How much do you agree?',
+    p: 'Tap a number from 1 to 5. Defend it with a participle clause. Your teacher picks the opposite number.',
+    formato: 'escala', tag: 'Unpopular opinion',
+    frases: [
+      { f: 'Having missed a train once, you should always arrive an hour early.',
+        st: ['Having missed a …, I …', 'Arriving an hour early, you …', 'Not wanting to wait, I …'],
+        ex: '2. Having missed a flight once, I get nervous, sure. But arriving an hour early, you just waste an hour on your phone.',
+        push: 'Nora missed the 9:40 and found a mystery on the 11:52. Is being late sometimes the better plan?' },
+      { f: 'A bag left alone on a train is not your problem.',
+        st: ['Seeing a bag alone, I would …', 'Left alone, a bag can …', 'Not knowing whose it is, …'],
+        ex: '1. Seeing a bag alone, I would tell the conductor at once. Left alone, a bag can cause real trouble.',
+        push: 'Nora sat next to that briefcase for two hours and did nothing. Was she wrong?' },
+      { f: 'Night trains are more exciting than planes.',
+        st: ['Travelling at night, you …', 'Having taken a night train, I …', 'Sitting on a plane, …'],
+        ex: '4. Travelling at night, you see little towns sleeping. Sitting on a plane, you only see clouds and a tiny screen.',
+        push: 'Ten hours on a night train or two hours on a plane, same price. Which ticket do you buy?' },
+      { f: 'Not knowing the ending is the best part of a mystery.',
+        st: ['Not knowing the ending, I …', 'Having read the spoilers, …', 'Watching a thriller, I …'],
+        ex: '5. Not knowing the ending, I watch every face. Having read the spoilers, I just get bored.',
+        push: 'Be honest: have you ever read the last page of a book first?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "noite": {
+   "t": "You, the night, the things you miss.",
+   "p": "One question at a time. Your teacher answers too."
+  },
+  "planos": {
+   "t": "The night in six shots.",
+   "p": "Read it like a script. Join two ideas in one sentence."
+  },
+  "regra": {
+   "t": "No subject. It borrows the next one.",
+   "p": "Read the four kinds. Fix each trap before you tap."
+  },
+  "relatorio": {
+   "t": "3 AM. The report hides who did it.",
+   "p": "Put the real subject after the comma."
+  },
+  "inspetor": {
+   "t": "6 AM, Kessel Station. You are Nora.",
+   "p": "Answer the inspector with one clause. Ask him back."
+  },
+  "cv-escala": {
+   "t": "Four opinions. How much do you agree?",
+   "p": "Pick 1 to 5. Defend it with a clause."
+  },
+  "bilhete": {
+   "t": "Your real life, in short shots.",
+   "p": "Print a ticket. Answer in one cinematic sentence."
+  },
+  "fim": {
+   "t": "A missed thing that turned out lucky.",
+   "p": "Write it as a thriller: three shots. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Participle clauses (Having missed…, -ing, Not knowing…, Left alone…): Nora perde o das 9:40, pega o trem noturno, e a maleta do compartimento 12 some às 2:10.",
+  "armadilha": "Em português o gerúndio pode ter sujeito próprio, então o brasileiro diz “Arriving at the station, the rain started” (a chuva chegou?) e evita Having missed por soar formal demais.",
+  "pal": [
+   "having missed",
+   "having + past participle",
+   "-ing clause",
+   "not knowing",
+   "left alone",
+   "briefcase",
+   "compartment",
+   "conductor",
+   "inspector"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o suspense: o trem noturno, a maleta sozinha e o relatório que esconde quem fez.",
+   "perg": "Have you ever taken a night train or bus?",
+   "pula": "Só leia a capa e embarque."
+  },
+  "noite": {
+   "obj": "Aquecimento pessoal: o aluno, a noite e as coisas que ele já perdeu (trem, voo, show).",
+   "perg": "What’s the last thing you missed by five minutes?",
+   "pula": "Duas perguntas bastam."
+  },
+  "planos": {
+   "obj": "A noite em seis cenas: ler como roteiro e juntar duas ideias numa frase só. After she missed vale em voz alta.",
+   "perg": "Can you say it in one sentence?",
+   "pula": "Quatro cenas bastam."
+  },
+  "regra": {
+   "obj": "Foco: a oração sem sujeito pega o sujeito depois da vírgula; os quatro tipos e as armadilhas.",
+   "perg": "Who arrived at the station here?",
+   "pula": "Os quatro tipos e duas armadilhas."
+  },
+  "relatorio": {
+   "obj": "Pressão: o professor lê como inspetor; o aluno devolve o sujeito real e a tarja preta sai. No fim, quem levou a maleta?",
+   "perg": "So who took it? Prove it with two lines.",
+   "pula": "Não corte; cinco linhas bastam."
+  },
+  "inspetor": {
+   "obj": "O aluno é a Nora às 6 da manhã e reconta a noite de memória ao inspetor.",
+   "perg": "Having missed the 9:40, what did you do?",
+   "pula": "Três perguntas e uma de volta."
+  },
+  "cv-escala": {
+   "obj": "Quatro opiniões sobre a noite da Nora, de 1 a 5, defendidas com participle clause.",
+   "perg": "Why only a two?",
+   "pula": "Duas opiniões bastam."
+  },
+  "bilhete": {
+   "obj": "A vida real do aluno em cenas curtas e cinematográficas.",
+   "perg": "Having finished work yesterday, what did you do?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: algo que o aluno perdeu e acabou dando sorte, em três cenas de thriller.",
+   "perg": "What did you miss that turned out lucky?",
+   "pula": "Duas cenas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa curta e cinematográfica com participle clauses.",
+   "perg": "Having woken up today, what was the first thing you did?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre o mistério e viagens, com orações de particípio nos argumentos.",
+   "perg": "I see your point, but why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno narra o dia de ontem como um trailer, cena a cena.",
+   "perg": "And having done that, what happened next?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your life, in short shots.",
+   "p": "Pick a card. Start with the clause.",
+   "palavras": [
+    "Having …",
+    "-ing",
+    "Not knowing …",
+    "Left …"
+   ],
+   "cartas": [
+    {
+     "k": "THIS MORNING",
+     "q": "Tell me your morning in one sentence. Start with Having.",
+     "fup": "And then?",
+     "st": [
+      "Having woken up late, I …",
+      "Having had breakfast, I …"
+     ],
+     "ex": "Having woken up late, I ran to the bus without coffee."
+    },
+    {
+     "k": "A BIG TRIP",
+     "q": "Tell me about a trip. Start with Arriving.",
+     "fup": "What did you see first?",
+     "st": [
+      "Arriving in …, I …",
+      "Landing at …, we …"
+     ],
+     "ex": "Arriving in Lisbon, I went straight to a bakery."
+    },
+    {
+     "k": "NOT KNOWING",
+     "q": "When did you make a choice not knowing what would happen?",
+     "fup": "Did it go well?",
+     "st": [
+      "Not knowing …, I …"
+     ],
+     "ex": "Not knowing anybody in the city, I joined a running group."
+    },
+    {
+     "k": "LEFT ALONE",
+     "q": "Have you ever found something left alone in a public place?",
+     "fup": "What did you do with it?",
+     "st": [
+      "Left on a …, the … was …",
+      "Seeing it, I …"
+     ],
+     "ex": "Left on a bench, the phone was ringing. Seeing that, I answered it."
+    },
+    {
+     "k": "A MISSED CALL",
+     "q": "Tell me about a call or message you missed.",
+     "fup": "Was it important?",
+     "st": [
+      "Having missed the call, I …",
+      "Not hearing the phone, I …"
+     ],
+     "ex": "Having missed my boss’s call, I spent the night worried."
+    },
+    {
+     "k": "NIGHT OWL",
+     "q": "What do you do late at night? Use a clause.",
+     "fup": "Is it a good habit?",
+     "st": [
+      "Lying in bed, I …",
+      "Having turned off the TV, I …"
+     ],
+     "ex": "Lying in bed, I watch videos until one in the morning."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "The Debate",
+   "t": "Pick a side. Argue it.",
+   "p": "Your teacher argues the other side.",
+   "palavras": [
+    "Having …",
+    "Knowing …",
+    "The thing is, …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "A briefcase left alone on a train: open it or call the conductor?",
+     "a": "Open it",
+     "b": "Call the conductor",
+     "fa": [
+      "Open it. Knowing what’s inside, I can help the owner.",
+      "The thing is, the conductor may never come."
+     ],
+     "fb": [
+      "Call the conductor. Having touched it, you become a suspect.",
+      "It isn’t your case."
+     ]
+    },
+    {
+     "q": "Night train or early flight?",
+     "a": "Night train",
+     "b": "Early flight",
+     "fa": [
+      "Night train. Sleeping on the way, you save a hotel night.",
+      "And it feels like a movie."
+     ],
+     "fb": [
+      "Early flight. Arriving fast, you have the whole day.",
+      "I see your point, but I can’t sleep on trains."
+     ]
+    },
+    {
+     "q": "Missing a train: bad luck or bad planning?",
+     "a": "Bad luck",
+     "b": "Bad planning",
+     "fa": [
+      "Bad luck. Having left on time, you can still be stopped by traffic.",
+      "Some things you can’t control."
+     ],
+     "fb": [
+      "Bad planning. Leaving ten minutes earlier, you never miss it.",
+      "The thing is, luck is usually a choice."
+     ]
+    },
+    {
+     "q": "Should the inspector trust Nora’s story?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Having missed the 9:40, she had no plan.",
+      "She was there by accident."
+     ],
+     "fb": [
+      "No. Having missed the 9:40 is a perfect story.",
+      "I see your point, but accidents can be planned."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody was arrested, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Trailer",
+   "t": "Yesterday, as a movie trailer.",
+   "p": "One short shot per step. Start with a clause.",
+   "prof": "Read each shot back like a trailer voice. If the subject after the comma is wrong, ask “Who did that?”",
+   "passos": [
+    {
+     "q": "Shot one: the morning.",
+     "st": [
+      "Having woken up at …, I …",
+      "Opening my eyes, I …"
+     ],
+     "ex": "Opening my eyes at six, I knew it would be a long day."
+    },
+    {
+     "q": "Shot two: the middle of the day.",
+     "st": [
+      "Arriving at …, I …",
+      "Not knowing …, I …"
+     ],
+     "ex": "Arriving at the office, I found my desk covered in papers."
+    },
+    {
+     "q": "Shot three: something small went wrong.",
+     "st": [
+      "Having forgotten …, I …",
+      "Left …, the … was …"
+     ],
+     "ex": "Having forgotten my charger, I spent the afternoon at 4%."
+    },
+    {
+     "q": "Final shot: the night.",
+     "st": [
+      "Lying on the sofa, I …",
+      "Having survived the day, I …"
+     ],
+     "ex": "Having survived the day, I fell asleep on the sofa."
+    }
+   ],
+   "fim": "Coming soon to a theater near you."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

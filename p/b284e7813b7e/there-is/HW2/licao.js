@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "There Is",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b284e7813b7e/there-is/img/live-fila.webp",
+  "capa": "../img/live-fila.webp",
   "alvo": "there is (one) / there are (more than one) · there isn't / there aren't any · Is there ...? Are there any ...?; never have a park, never is a park",
   "abrir": "What is there on your street?",
   "fecho": "<b>There is</b> + one thing: <i>There is a park.</i> <b>There are</b> + more than one: <i>There are two cinemas.</i> No: <b>there isn't</b> a ..., <b>there aren't any</b> ... Ask: <b>Is there</b> a station? <b>Are there</b> any shops? Never <i>have a park</i>, never <i>is a park</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks Leo about his town. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/b284e7813b7e/there-is/img/live-fila.webp",
+      "img": "../img/live-fila.webp",
       "leg": "Empty seats in a cinema",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "There are lots of museums in London.",
-          "img": "https://wolf-labs.pages.dev/p/b284e7813b7e/there-is/img/live-london.webp",
+          "img": "../img/live-london.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "There is a beach in Brighton.",
-          "img": "https://wolf-labs.pages.dev/p/b284e7813b7e/there-is/img/live-brighton.webp",
+          "img": "../img/live-brighton.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "There is a river in Cambridge.",
-          "img": "https://wolf-labs.pages.dev/p/b284e7813b7e/there-is/img/live-cambridge.webp",
+          "img": "../img/live-cambridge.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b284e7813b7e/there-is/img/live-petworth.webp",
+      "img": "../img/live-petworth.webp",
       "leg": "A quiet street in a small town",
       "pede": "Look at the picture: a quiet street in a small town. Write 2 or 3 sentences about it. Use <b>there is</b>, <b>there are</b> or <b>there isn't</b>.",
       "ph": "There is a street with …",

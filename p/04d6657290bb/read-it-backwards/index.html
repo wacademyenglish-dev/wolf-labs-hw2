@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Read It Backwards · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Spectral:ital,wght@0,500;0,600;0,700;1,600&family=Work+Sans:wght@500;600;700&family=IBM+Plex+Mono:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Read It Backwards · The Reading Lamp</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Read It Backwards · The Reading Lamp</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A woman gave her father’s workshop to a small museum, and every object needs a label: a worn late-Victorian rosewood smoothing plane.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: English builds to the LEFT of the noun, and joins with nothing.</p><p style="margin:0 0 6px"><b>Short class (about 50 min):</b> I An Object of Yours · II Find the Head · III The Drawers · IV The Rule · V The Hyphen · VI The Hot Takes · VII Too Far · IX Your Label. Skip if you’re short on time: VIII (marked EXTRA on your screen). Full lesson: about 57 min.</p><p style="margin:0"><b>Open with:</b> “What is it made of, and what color is it?”</p></div><!--/prep-->
+    <p>A woman gave her father’s workshop to a small museum, and every object needs a label: <b>a worn late-Victorian rosewood smoothing plane</b>. Six words before you find out it’s a plane. Many languages build to the <b>right</b> of the noun and join with a preposition; English builds to the <b>left</b> and joins with nothing. So: find the <b>head</b> (the last word), then read backwards. Modifiers follow an order no native can recite: opinion, size, age, shape, color, origin, material, purpose. Inside the stack, numbers go singular: <b>a two-year-old car</b>. And at C1, the skill is knowing when to stop.</p>
+    <h4>ON SCREEN</h4>
+    <p>The reading lamp: the words sit on a wooden rail; when the student taps the head, the lamp lights it and walks left, and the phrase unpacks in steps below (<i>driver → delivery driver → part-time delivery driver …</i>). The drawers (scene III): nine labeled drawers, OPINION to PURPOSE and the HEAD; every right tap drops a modifier into its drawer. Scene IV: the curator’s letter (the student taps the head of each phrase, then finishes the rule; the rule stays in the corner on the next pages). Scene V: she rewrites five sentences with the number inside (<i>a two-year-old car</i>), says them and taps Check.</p>
+    <h4>DON’T TEACH THE LIST</h4>
+    <p>Scene III: don’t make them memorize the eight slots. After each label, let them say the wrong order on purpose and hear it. In scene VI every stack is grammatical; the question is whether a reader can follow it. There is no single right place to cut: accept a defended answer.</p>
+    <h4>THE SALE</h4>
+    <p>Scene VIII: the customer speaks on the screen; each of the three labels has one mistake and the student says the right one (Check shows it). Then a one-minute timer: she sells her own object. You are the customer: ask “What exactly is it?” and make her unpack it backwards.</p>
+    <!--conversa--><h4>THE HOT TAKES (VI) AND THE SURPRISE QUESTION</h4>
+    <p>Scene VI is new: four unpopular opinions about old things, second-hand objects and online shops. The student taps a number from 1 to 5 and defends it, using at least one long noun phrase with the head last (a solid forty-year-old oak table). There is no right answer. Wait five seconds in silence, then take the opposite number and use the PUSH line (only you see it) to make it harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I An Object of Yours, VI The Hot Takes, VIII Sell It.</li>
+      <li><b>Focus</b>: II Find the Head, III The Drawers, IV The Rule, V The Hyphen, VII Too Far.</li>
+      <li><b>Write</b>: IX, the object from scene I as a museum label, unpacked. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* READ IT BACKWARDS (Main C1) · pergunta-surpresa · 28/10/2026 · sintagma nominal, núcleo no fim */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'cabeca', tipo: 'And you?', q: 'What is the oldest object you still use every day?',
+    opc: ['Something in the kitchen', 'Something I wear', 'A tool or a gadget'], st: ['It’s a … -year-old …', 'I’ve had my … since …'],
+    ex: 'A tool. A heavy twenty-year-old steel bottle opener from a bar in Lisbon. It still works perfectly.', push: 'Would you sell it? For how much?' },
+  { cena: 'ordem', tipo: 'Would you rather', q: 'Would you rather inherit a beautiful old piece of furniture, or get the money for it?',
+    opc: ['The furniture', 'The money'], st: ['I’d rather have the …, because …', 'A … would never fit in my …'],
+    ex: 'The money. A huge dark wooden dining cabinet would never fit in my small city apartment.', push: 'And if it were a small object, like a watch? Same answer?' },
+  { cena: 'longe', tipo: 'Opinion', q: 'Where do you see the longest, most confusing noun phrases?',
+    opc: ['Job titles', 'Product names', 'Government documents'], st: ['Think of a title like “…”', 'The worst one I’ve seen is …'],
+    ex: 'Job titles. My friend is a “senior regional customer experience operations coordinator”, and nobody knows what she does.', push: 'Unpack it backwards: what does that person actually do?' },
+  { cena: 'venda', tipo: 'What if', q: 'You have to sell one thing from your home online today. What do you sell?',
+    opc: ['Clothes', 'Furniture', 'Electronics'], st: ['I’d sell my …', 'The title would be: “a …”'],
+    ex: 'Electronics: my barely used two-year-old wireless gaming headset. I bought it and played twice.', push: 'The buyer offers half. Do you accept?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* READ IT BACKWARDS (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A escala de opiniões impopulares entra DEPOIS de "V · The Hyphen" (no meio da aula; nada é trocado:
+   a aula tinha 50 min e fica em 57). O mundo é a oficina doada ao museu e a lojinha online: objetos,
+   etiquetas, preço. A gramática da aula (sintagma nominal longo, núcleo no fim, two-year-old) mora
+   nos iniciadores e nas próprias frases. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'escala', apos: 'hifen', est: 'o', min: 7, img: 'bandeja', rot: 'The Hot Takes', t: 'Four opinions about old things. How much do you agree?',
+    p: 'Tap a number from 1 to 5. Defend it with a long noun phrase, head last. Your teacher takes the opposite number.',
+    formato: 'escala', tag: 'Hot take',
+    frases: [
+      { f: 'A cheap second-hand wooden table is better than an expensive brand-new designer one.',
+        st: ['A … second-hand … is better, because …', 'I’d rather have a … than a …', 'The problem with a cheap old … is …'],
+        ex: '4. A solid forty-year-old oak kitchen table will outlive any expensive flat-pack designer table. The scratches are part of the story.',
+        push: 'Would you buy a second-hand mattress? A second-hand phone? Where is your line?' },
+      { f: 'Old family tools belong in a museum, not in a drawer at home.',
+        st: ['A … belongs in …, because …', 'Nobody needs a …', 'If it stays in a drawer, …'],
+        ex: '2. A museum is a beautiful idea, but an old hand-made family toolbox should be used. My brother still uses my uncle’s old steel hammer.',
+        push: 'Name one object in your home that should be in a museum. Describe it in one phrase.' },
+      { f: 'Long, detailed product descriptions are a waste of time: people only look at the photos.',
+        st: ['A short three-word description …', 'When I shop online, I …', 'A good product description …'],
+        ex: '3. I look at the photos first, but a two-line honest product description is what makes me buy, especially for a second-hand item.',
+        push: 'Write a five-word product title for the thing you are wearing right now.' },
+      { f: 'A hand-made object is worth three times the price of a factory-made one.',
+        st: ['A hand-made … is worth …', 'I would never pay … for a …', 'The real value of a … is …'],
+        ex: '4. A hand-made Brazilian ceramic coffee mug has a person behind it. Three times the price? Yes, if I can meet the person.',
+        push: 'Your teacher made you a hand-made wooden spoon. Fifty dollars. Do you buy it?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "An object you use every day.",
+   "p": "Tap it. Then describe it out loud."
+  },
+  "cabeca": {
+   "t": "Find the LAST word. Read backwards.",
+   "p": "Tap the head. Then choose the meaning."
+  },
+  "ordem": {
+   "t": "Opinion, size, age … material, purpose.",
+   "p": "Tap in order, left to right. Say the label."
+  },
+  "regra": {
+   "t": "English builds to the LEFT, with nothing.",
+   "p": "Read the letter. Tap each head. Finish the rule."
+  },
+  "hifen": {
+   "t": "Two years old → a two-year-old car.",
+   "p": "Say the phrase before the noun. Then tap Check."
+  },
+  "cv-escala": {
+   "t": "Four hot takes about old things.",
+   "p": "Tap 1 to 5. Defend it, head last."
+  },
+  "longe": {
+   "t": "All grammatical. Some went too far.",
+   "p": "READABLE or TOO FAR? Break it with OF or FOR."
+  },
+  "venda": {
+   "t": "Your online shop. The teacher buys.",
+   "p": "Fix each label. Then sell your own object."
+  },
+  "fim": {
+   "t": "Your object, as a museum label.",
+   "p": "Write one label. Unpack it backwards. To My notes."
+  }
+ },
+ "prep": {
+  "obj": "Sintagma nominal longo, com o núcleo no fim e os modificadores em ordem (a worn late-Victorian rosewood smoothing plane): as etiquetas da oficina de um pai doada a um museu.",
+  "armadilha": "O português põe o núcleo primeiro e liga com “de” (plaina de alisar de jacarandá), então sai “a plane of rosewood” ou a ordem trocada; e o plural dentro da pilha: “a two-years-old car”.",
+  "pal": [
+   "head noun",
+   "smoothing plane",
+   "rosewood",
+   "late-Victorian",
+   "a two-year-old car",
+   "opinion, size, age",
+   "material, purpose",
+   "museum label"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: seis palavras antes de descobrir que é uma plaina; achar o núcleo e ler de trás para frente.",
+   "perg": "What is it made of, and what color is it?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "O aluno escolhe um objeto do dia a dia e descreve; guardar a descrição para a cena IX.",
+   "perg": "What is it made of, and how old is it?",
+   "pula": "Uma descrição basta; guarde para o fim."
+  },
+  "cabeca": {
+   "obj": "Tocar o núcleo (a última palavra) e ver a lâmpada andar para a esquerda, desmontando o sintagma.",
+   "perg": "What is it, actually?",
+   "pula": "Três sintagmas bastam."
+  },
+  "ordem": {
+   "obj": "As gavetas: pôr os modificadores na ordem; o aluno fala a ordem errada de propósito para ouvir.",
+   "perg": "Does it sound right the other way round?",
+   "pula": "Três etiquetas bastam; não decorar a lista."
+  },
+  "regra": {
+   "obj": "Carta da curadora: tocar o núcleo de cada sintagma e completar a regra.",
+   "perg": "Where’s the head of this phrase?",
+   "pula": "Toque três núcleos e complete a regra."
+  },
+  "hifen": {
+   "obj": "Número dentro da pilha fica no singular e com hífen: a two-year-old car.",
+   "perg": "Why not “two-years-old”?",
+   "pula": "Três frases bastam."
+  },
+  "cv-escala": {
+   "obj": "Quatro opiniões sobre coisas velhas, usados e lojas online; nota de 1 a 5 e defesa com sintagma longo; PUSH.",
+   "perg": "Why that number? Describe the object.",
+   "pula": "Duas opiniões bastam."
+  },
+  "longe": {
+   "obj": "Pilhas gramaticais, mas algumas demais: o aluno decide e quebra com OF ou FOR; aceitar resposta defendida.",
+   "perg": "Can a reader follow this one?",
+   "pula": "Três pilhas bastam."
+  },
+  "venda": {
+   "obj": "Loja online: corrigir um erro em cada etiqueta e vender o próprio objeto em um minuto.",
+   "perg": "What exactly is it?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o objeto da cena I como etiqueta de museu, depois desmontado de trás para frente.",
+   "perg": "What is the head of your label?",
+   "pula": "Só a etiqueta, sem desmontar. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre objetos, heranças e compras com sintagmas longos e núcleo no fim.",
+   "perg": "What exactly is it? Describe it in one phrase.",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre objetos antigos, usados e museus, com um sintagma longo por argumento.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a filha que doou a oficina e responde sobre os objetos do pai.",
+   "perg": "Which object will you miss most?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Objects, head last.",
+   "p": "Pick a card. One long phrase, then unpack it.",
+   "palavras": [
+    "opinion",
+    "size",
+    "age",
+    "color",
+    "origin",
+    "material",
+    "purpose"
+   ],
+   "cartas": [
+    {
+     "k": "AN HEIRLOOM",
+     "q": "Is there an object in your family that has a story?",
+     "fup": "Who will keep it next?",
+     "st": [
+      "We have a … that …",
+      "It belonged to …"
+     ],
+     "ex": "We have a heavy old Portuguese silver coffee pot that belonged to my great-grandmother."
+    },
+    {
+     "k": "YOUR DESK",
+     "q": "Describe the most useful thing on your desk, in one phrase.",
+     "fup": "Could you work without it?",
+     "st": [
+      "It’s a … …"
+     ],
+     "ex": "It’s a cheap little black plastic phone stand, and I couldn’t work without it."
+    },
+    {
+     "k": "SECOND-HAND",
+     "q": "What’s the best second-hand thing you ever bought?",
+     "fup": "Where did you find it?",
+     "st": [
+      "I found a … at …"
+     ],
+     "ex": "I found a beautiful 1970s Danish teak armchair at a street market for almost nothing."
+    },
+    {
+     "k": "THE WORST GIFT",
+     "q": "What’s the strangest gift you’ve ever received?",
+     "fup": "Do you still have it?",
+     "st": [
+      "Someone once gave me a …"
+     ],
+     "ex": "Someone once gave me a huge pink ceramic cat-shaped cookie jar."
+    },
+    {
+     "k": "A MUSEUM OF YOU",
+     "q": "If a museum showed one object from your life, what would the label say?",
+     "fup": "Why that one?",
+     "st": [
+      "The label would say: “A …”"
+     ],
+     "ex": "The label would say: “A battered twenty-year-old red leather football.”"
+    },
+    {
+     "k": "TOO FAR",
+     "q": "Do product names online go too far? Give an example.",
+     "fup": "How would you shorten it?",
+     "st": [
+      "I saw a “…”",
+      "I’d break it with “for” …"
+     ],
+     "ex": "I saw a “premium waterproof unisex outdoor hiking travel backpack”; I’d say “a waterproof backpack for hiking”."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "The thing is, …",
+    "a … old …",
+    "made of …"
+   ],
+   "rodadas": [
+    {
+     "q": "Keep a parent’s old tools, or give them to a museum?",
+     "a": "Keep them",
+     "b": "Give them",
+     "fa": [
+      "Keep them. A worn wooden hammer is a memory, not an exhibit.",
+      "Some things should stay in the family."
+     ],
+     "fb": [
+      "Give them. In a museum, they’re seen every day.",
+      "In a drawer, they’re forgotten."
+     ]
+    },
+    {
+     "q": "Old things are better made than new ones. True?",
+     "a": "True",
+     "b": "Nostalgia",
+     "fa": [
+      "True. My forty-year-old German fridge still works.",
+      "Things were built to last."
+     ],
+     "fb": [
+      "Nostalgia. We only remember the old things that survived.",
+      "The broken ones went in the trash."
+     ]
+    },
+    {
+     "q": "Buy second-hand, or buy new?",
+     "a": "Second-hand",
+     "b": "New",
+     "fa": [
+      "Second-hand. A solid old oak table beats a cheap new one.",
+      "It’s better for the planet."
+     ],
+     "fb": [
+      "New. You get a warranty and no surprises.",
+      "Someone else’s problem is now yours."
+     ]
+    },
+    {
+     "q": "Should museums show everyday objects, or only masterpieces?",
+     "a": "Everyday objects",
+     "b": "Masterpieces",
+     "fa": [
+      "Everyday objects. A simple smoothing plane tells a real life.",
+      "That’s history for everyone."
+     ],
+     "fb": [
+      "Masterpieces. People pay to see something extraordinary.",
+      "Everyday things belong in homes."
+     ]
+    }
+   ],
+   "fim": "Four rounds. A long, polite, slightly heated debate."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the woman who gave the workshop.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the daughter, with long noun phrases, head last.",
+   "perguntas": [
+    "What was your father’s workshop like?",
+    "Which object did he use most?",
+    "Describe the smoothing plane for our visitors.",
+    "Which object was the hardest to give away?",
+    "Is there anything you kept for yourself?",
+    "What should the label on the door say?"
+   ],
+   "st": [
+    "It was a small … workshop.",
+    "He always used a …",
+    "I kept a …"
+   ],
+   "ex": "It was a small cold brick workshop, and he always used a worn late-Victorian rosewood smoothing plane."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

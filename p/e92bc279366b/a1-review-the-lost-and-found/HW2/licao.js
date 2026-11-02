@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "A1 Review: The Lost and Found",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e92bc279366b/a1-review-the-lost-and-found/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 2 review: a / an by the sound; the adjective before the thing (a small black bag); this / that / these / those; plurals (keys, boxes, children, people); and / but",
   "abrir": "What is in your bag right now?",
   "fecho": "<b>A / an</b> by the sound: <i>an umbrella</i>. The adjective comes first: <i>a small black bag</i>. <b>This / that</b> = one, <b>these / those</b> = many: <i>These keys are small.</i>",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the lost and found desk. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/e92bc279366b/a1-review-the-lost-and-found/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The waiting room at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -102,17 +102,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This is an old black umbrella.",
-          "img": "https://wolf-labs.pages.dev/p/e92bc279366b/a1-review-the-lost-and-found/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "These are my two small keys.",
-          "img": "https://wolf-labs.pages.dev/p/e92bc279366b/a1-review-the-lost-and-found/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Two people are in the waiting room.",
-          "img": "https://wolf-labs.pages.dev/p/e92bc279366b/a1-review-the-lost-and-found/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -158,7 +158,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e92bc279366b/a1-review-the-lost-and-found/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty waiting room at night",
       "pede": "Look at the picture: an empty waiting room at night. Write 2 or 3 sentences about what you see. Use <b>a / an</b>, a size or a color, and <b>and / but</b>.",
       "ph": "I see a big … and …",

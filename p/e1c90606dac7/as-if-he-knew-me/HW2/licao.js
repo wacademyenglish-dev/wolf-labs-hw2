@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "As If He Knew Me",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e1c90606dac7/as-if-he-knew-me/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "as if / as though: not true = a step back (as if he were my boss, as if she had never seen me); looks true = no step back (it looks as if he is lost); never as he or would after as if",
   "abrir": "Describe someone in a new place, using as if.",
   "fecho": "<b>as if / as though</b> + <b>past</b> when it is not true: <i>He talks as if he were my boss.</i> + <b>past perfect</b> for an earlier moment: <i>as if she had never seen me.</i> When it looks true, no step back: <i>It looks as if he is lost.</i> Never <i>as he is lost</i>, never <i>as if he would be</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo walk through a quiet office on his first day. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e1c90606dac7/as-if-he-knew-me/img/live-corredor.webp",
+      "img": "../img/live-corredor.webp",
       "leg": "A long quiet corridor",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It feels as though nobody works here.",
-          "img": "https://wolf-labs.pages.dev/p/e1c90606dac7/as-if-he-knew-me/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I walked in as if I had been here before.",
-          "img": "https://wolf-labs.pages.dev/p/e1c90606dac7/as-if-he-knew-me/img/live-elevador.webp",
+          "img": "../img/live-elevador.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "You look as if you need a coffee.",
-          "img": "https://wolf-labs.pages.dev/p/e1c90606dac7/as-if-he-knew-me/img/live-mesas.webp",
+          "img": "../img/live-mesas.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e1c90606dac7/as-if-he-knew-me/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A long quiet corridor",
       "pede": "Look at the picture: a long quiet corridor. Write 2 or 3 sentences about how a place or a person feels or looks. Use <b>as if</b> or <b>as though</b>.",
       "ph": "It feels as if … He looks as though …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "One More Week",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/51ec30f874a0/one-more-week/img/live-mesa.webp",
+  "capa": "../img/live-mesa.webp",
   "alvo": "wishes and time: I'd rather + plain verb (about me); I'd rather you + past form (about someone else, now or tomorrow); It's time we + past form; I'd rather you hadn't + participle for something already done",
   "abrir": "What would you rather do this weekend?",
   "fecho": "About you: <b>I'd rather + plain verb</b>: <i>I'd rather stay in.</i> About someone else: <b>I'd rather you + past form</b>: <i>I'd rather you stayed in.</i> <b>It's time we + past form</b>: <i>It's time we left.</i> Already done: <b>I'd rather you hadn't said that.</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo share a flat. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/51ec30f874a0/one-more-week/img/live-corredor.webp",
+      "img": "../img/live-corredor.webp",
       "leg": "The hallway of a shared flat",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'd rather stay at home tonight.",
-          "img": "https://wolf-labs.pages.dev/p/51ec30f874a0/one-more-week/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It's time we cleaned this room.",
-          "img": "https://wolf-labs.pages.dev/p/51ec30f874a0/one-more-week/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'd rather you called me before you come.",
-          "img": "https://wolf-labs.pages.dev/p/51ec30f874a0/one-more-week/img/live-vazio.webp",
+          "img": "../img/live-vazio.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/51ec30f874a0/one-more-week/img/live-vazio.webp",
+      "img": "../img/live-vazio.webp",
       "leg": "A bedroom with a half-open door",
       "pede": "Look at the picture: a quiet room with a half-open door. Write 3 short wishes: one about you, one about someone else, one about time. Use <b>I'd rather</b>, <b>I'd rather you</b> and <b>It's time</b>.",
       "ph": "I'd rather … It's time …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Have You Ever?",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fc64d7004aeb/have-you-ever/img/live-passaporte.webp",
+  "capa": "../img/live-passaporte.webp",
   "alvo": "present perfect for experience: Have you ever + participle? Yes, I have / No, I haven't; I have never + participle; the detail (when, where) goes to the simple past",
   "abrir": "Where has your life taken you?",
   "fecho": "Your whole life, no date: <b>Have you ever + participle</b> (<i>Have you ever been to Japan?</i>). A date or detail goes to the past: <i>I went in 2018.</i> <b>Never</b> goes between <i>have</i> and the participle.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at a passport. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/fc64d7004aeb/have-you-ever/img/live-passaporte.webp",
+      "img": "../img/live-passaporte.webp",
       "leg": "A passport, a key and a lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
         {
           "t": "Have you ever eaten sushi?",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/fc64d7004aeb/have-you-ever/img/live-mapa.webp"
+          "img": "../img/live-mapa.webp"
         },
         {
           "t": "I have never seen snow.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/fc64d7004aeb/have-you-ever/img/live-janela.webp"
+          "img": "../img/live-janela.webp"
         },
         {
           "t": "I went to Japan in 2018.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/fc64d7004aeb/have-you-ever/img/live-casa.webp"
+          "img": "../img/live-casa.webp"
         }
       ]
     },
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fc64d7004aeb/have-you-ever/img/live-mapa.webp",
+      "img": "../img/live-mapa.webp",
       "leg": "A globe and a compass",
       "pede": "Look at the picture: a globe. Write 2 or 3 sentences: one thing you <b>have done</b>, one thing you <b>have never done</b>, and one detail in the <b>past</b>.",
       "ph": "I have …",

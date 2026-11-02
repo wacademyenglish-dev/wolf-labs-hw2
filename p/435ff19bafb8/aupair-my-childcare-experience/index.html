@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -126,5 +127,280 @@ window.WL_CONVERSA = { nivel: 'A2', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "How agencies check you.",
+   "p": "One question, the video, then the questions."
+  },
+  "memoria": {
+   "t": "Find the pairs.",
+   "p": "Open two cards. Then make a sentence."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say the right form. Tap."
+  },
+  "prova": {
+   "t": "A real story with a child.",
+   "p": "Twenty seconds to plan. Then 90 seconds."
+  },
+  "cv-aposta": {
+   "t": "Bet on the ending.",
+   "p": "What did the au pair do? Then check."
+  },
+  "pode": {
+   "t": "Lesson 4: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Contar experiências com crianças no passado simples (took, made, read, taught, fed): a agência confere as 200 horas de experiência, e o aluno conta uma história real.",
+  "armadilha": "O brasileiro usa o presente para contar o passado (“I take care”), põe passado depois de didn’t (“didn’t wanted”) e regulariza irregulares: “readed”, “maked”.",
+  "pal": [
+   "took",
+   "made",
+   "read",
+   "taught",
+   "fed",
+   "didn’t + verb",
+   "One day, …",
+   "In the end, …",
+   "200 hours",
+   "contact person"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: a agência confere as horas com crianças e a família quer histórias.",
+   "perg": "How many hours have you spent with children in your life?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "video": {
+   "obj": "Ouvir: como a Cultural Care seleciona au pairs; o que isso muda na inscrição dela.",
+   "perg": "How many hours of experience do you need?",
+   "pula": "Assista uma vez só e faça duas perguntas."
+  },
+  "memoria": {
+   "obj": "Jogo da memória com verbos no passado; frase com cada par.",
+   "perg": "Can you make a sentence with that pair?",
+   "pula": "Quatro pares bastam."
+  },
+  "erros": {
+   "obj": "A nota da Camila com erros: achar, dizer certo e ler tudo corrigido.",
+   "perg": "What is the past of “read”?",
+   "pula": "Três erros bastam."
+  },
+  "prova": {
+   "obj": "Uma história real com criança, no relógio: 20 s para planejar e até 90 s para contar.",
+   "perg": "What happened, and what did you do?",
+   "pula": "Uma tentativa basta."
+  },
+  "cv-aposta": {
+   "obj": "Momento de conversa: três histórias param no problema; o aluno aposta no final, no passado.",
+   "perg": "What would you do?",
+   "pula": "Uma história basta."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 4: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you tell a childcare story in the past now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais histórias reais com crianças, no passado simples.",
+   "perg": "What did you do with children last month?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado em dilemas de cuidar de criança, com passado e because.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a candidata e o professor é a mãe da família.",
+   "perg": "Tell me about a hard day with a child.",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your stories with children.",
+   "p": "Pick a card. Tell it in the past.",
+   "palavras": [
+    "took",
+    "made",
+    "read",
+    "didn’t",
+    "In the end"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FIRST TIME",
+     "q": "When did you first take care of a child?",
+     "fup": "How old were you?",
+     "st": [
+      "I first took care of …",
+      "I was …"
+     ],
+     "ex": "I first took care of my cousin. I was fifteen."
+    },
+    {
+     "k": "A GAME",
+     "q": "What game did you play with a child last time?",
+     "fup": "Did they like it?",
+     "st": [
+      "We played …",
+      "She loved it, but …"
+     ],
+     "ex": "We played hide and seek. She loved it, but she always hid in the same place."
+    },
+    {
+     "k": "FOOD",
+     "q": "What did you cook for a child once?",
+     "fup": "Did they eat it?",
+     "st": [
+      "I made …",
+      "He didn’t want to …"
+     ],
+     "ex": "I made pasta with vegetables. He didn’t want to eat the green ones."
+    },
+    {
+     "k": "A STORY",
+     "q": "What book did you read to a child?",
+     "fup": "Why that one?",
+     "st": [
+      "I read …",
+      "because …"
+     ],
+     "ex": "I read The Very Hungry Caterpillar, because it’s short and funny."
+    },
+    {
+     "k": "A PROBLEM",
+     "q": "Tell me about a small problem with a child.",
+     "fup": "What did you do?",
+     "st": [
+      "One day, …",
+      "In the end, I …"
+     ],
+     "ex": "One day, she lost her shoe. In the end, I found it in the dog’s bed."
+    },
+    {
+     "k": "YOUR HOURS",
+     "q": "Where did you get your childcare hours?",
+     "fup": "Who is your contact person?",
+     "st": [
+      "I worked at …",
+      "My contact is …"
+     ],
+     "ex": "I helped at my church on Sundays. My contact is the coordinator, Dona Lúcia."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "because",
+    "I think",
+    "didn’t"
+   ],
+   "rodadas": [
+    {
+     "q": "A child doesn’t want to eat. Insist or let it go?",
+     "a": "Insist",
+     "b": "Let it go",
+     "fa": [
+      "Insist, kindly. Food is important.",
+      "My mother always insisted, and it worked."
+     ],
+     "fb": [
+      "Let it go. A fight makes it worse.",
+      "They eat more at the next meal."
+     ]
+    },
+    {
+     "q": "A broken plate: tell the parents or say nothing?",
+     "a": "Tell them",
+     "b": "Say nothing",
+     "fa": [
+      "Tell them. Trust is everything.",
+      "They find out anyway."
+     ],
+     "fb": [
+      "Say nothing. It was an old plate.",
+      "Accidents happen."
+     ]
+    },
+    {
+     "q": "Screen time: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes, a little. It gives everyone a break.",
+      "Some shows teach English."
+     ],
+     "fb": [
+      "No. Kids need to play outside.",
+      "Screens make them tired."
+     ]
+    },
+    {
+     "q": "Babies or school-age kids?",
+     "a": "Babies",
+     "b": "School-age kids",
+     "fa": [
+      "Babies. They are calm and sweet.",
+      "I took care of my niece."
+     ],
+     "fb": [
+      "School-age kids. You can talk and play games.",
+      "Babies cry at night."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the au pair candidate.",
+   "p": "Your teacher is the host mom.",
+   "aluno": "Listen to the host mom. Answer as yourself, the candidate. Use the past simple and real stories.",
+   "perguntas": [
+    "Where did you take care of children before?",
+    "How old were the kids?",
+    "What did you do with them every day?",
+    "Tell me about a hard day. What happened?",
+    "What did you learn from it?",
+    "Who can I call for a reference?"
+   ],
+   "st": [
+    "I took care of …",
+    "One day, …",
+    "In the end, …"
+   ],
+   "ex": "One day, my cousin fell in the park. I cleaned his knee, and in the end we laughed about it."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

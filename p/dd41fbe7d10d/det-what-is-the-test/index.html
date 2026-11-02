@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -113,5 +114,294 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "One hour. One score. How it works.",
+   "p": "Read the fact sheet out loud. Then answer."
+  },
+  "multipla": {
+   "t": "Do you remember the facts?",
+   "p": "Choose one answer. Say why."
+  },
+  "cv-arena": {
+   "t": "At home, or at a test center?",
+   "p": "Defend a side one minute. Then swap."
+  },
+  "palavras": {
+   "t": "First real task: real words only.",
+   "p": "Tap only the real English words."
+  },
+  "prova": {
+   "t": "Second real task: speak with the clock.",
+   "p": "Prepare 20 seconds. Speak until it stops."
+  },
+  "pode": {
+   "t": "Lesson 1: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Primeira aula do DET Prep: como a prova funciona (em casa, cerca de uma hora, adaptativa), a nota de 10 a 160 com quatro subnotas, e duas tarefas reais com o relógio.",
+  "armadilha": "Brasileiro para de falar antes dos 30 segundos, faz pausas longas procurando a palavra perfeita e, no Read and Select, toca palavras inventadas que parecem inglês (e perde pontos).",
+  "pal": [
+   "adaptive",
+   "score",
+   "subscores",
+   "Literacy",
+   "Comprehension",
+   "Conversation",
+   "Production",
+   "the clock"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o curso: a prova, a nota e o plano.",
+   "perg": "What score do you need, and for what?",
+   "pula": "Anote a nota que o aluno precisa e siga."
+  },
+  "leitura": {
+   "obj": "Leitura em voz alta da ficha da prova; perguntas de sentido e depois o padrão.",
+   "perg": "How long is the test, and where do you take it?",
+   "pula": "Leia e faça só três perguntas."
+  },
+  "multipla": {
+   "obj": "Checar os fatos da prova com múltipla escolha e o porquê.",
+   "perg": "Why is that the right answer?",
+   "pula": "Quatro questões bastam."
+  },
+  "cv-arena": {
+   "obj": "Conversa: um minuto defendendo prova em casa ou em centro de testes; depois troca.",
+   "perg": "Where would you feel calmer, and why?",
+   "pula": "Faça só um lado."
+  },
+  "palavras": {
+   "obj": "Primeira tarefa real: Read and Select com o relógio; palavra falsa custa ponto.",
+   "perg": "How did you know that word was fake?",
+   "pula": "Uma tentativa basta."
+  },
+  "prova": {
+   "obj": "Segunda tarefa real: 20 s para preparar e falar até o relógio parar; não ajude com o relógio correndo.",
+   "perg": "Did you speak until the clock stopped?",
+   "pula": "Uma tentativa e o checklist bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; termine com “are we closer?” à nota-alvo.",
+   "perg": "Are we closer to your score?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre o objetivo do aluno com a prova e sobre provas em geral.",
+   "perg": "Why do you need this test?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre como se preparar e como fazer a prova.",
+   "perg": "Why do you think that works better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar o plano de estudo do aluno até o dia da prova.",
+   "perg": "When do you want to take the test?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about you and the test.",
+   "p": "Pick a card. Speak for 30 seconds.",
+   "palavras": [
+    "score",
+    "the clock",
+    "at home",
+    "I need…"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR GOAL",
+     "q": "Why do you need this test?",
+     "fup": "What happens if you get the score?",
+     "st": [
+      "I need it for …",
+      "If I get …, I can …"
+     ],
+     "ex": "I need it for a master’s in Canada. If I get 120, I can apply in March."
+    },
+    {
+     "k": "YOUR NUMBER",
+     "q": "What score do you need?",
+     "fup": "Which subscore worries you most?",
+     "st": [
+      "I need …",
+      "I’m worried about …"
+     ],
+     "ex": "I need 115. I’m worried about Conversation, because I get nervous."
+    },
+    {
+     "k": "OLD TESTS",
+     "q": "What was the hardest test you have ever taken?",
+     "fup": "What helped you?",
+     "st": [
+      "The hardest one was …",
+      "What helped me was …"
+     ],
+     "ex": "The hardest one was my driving test. What helped me was practicing every day."
+    },
+    {
+     "k": "THE CLOCK",
+     "q": "How do you feel with a clock running?",
+     "fup": "What do you do when you get nervous?",
+     "st": [
+      "With a clock, I feel …",
+      "When I’m nervous, I …"
+     ],
+     "ex": "With a clock, I feel fast and a bit confused. When I’m nervous, I breathe and keep talking."
+    },
+    {
+     "k": "YOUR ROOM",
+     "q": "Where in your home could you take the test?",
+     "fup": "Is it quiet?",
+     "st": [
+      "I could use …",
+      "It’s quiet / noisy because …"
+     ],
+     "ex": "I could use my bedroom. It’s quiet in the morning, but my neighbor has a dog."
+    },
+    {
+     "k": "YOUR ENGLISH",
+     "q": "What part of your English is strongest right now?",
+     "fup": "And the weakest?",
+     "st": [
+      "My strongest part is …",
+      "My weakest part is …"
+     ],
+     "ex": "My strongest part is reading. My weakest part is speaking without notes."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think…",
+    "For example,…"
+   ],
+   "rodadas": [
+    {
+     "q": "Take the test soon, or study for months first?",
+     "a": "Soon",
+     "b": "In months",
+     "fa": [
+      "Soon. You learn the test by taking it.",
+      "You can take it again later."
+     ],
+     "fb": [
+      "In months. The test costs money.",
+      "I want to be ready the first time."
+     ]
+    },
+    {
+     "q": "Study a little every day, or a lot on weekends?",
+     "a": "Every day",
+     "b": "Weekends",
+     "fa": [
+      "Every day. Fifteen minutes is enough.",
+      "The clock becomes normal."
+     ],
+     "fb": [
+      "Weekends. I work all week.",
+      "I can do full practice tests."
+     ]
+    },
+    {
+     "q": "Practice with the real clock, or without it at first?",
+     "a": "With the clock",
+     "b": "Without it",
+     "fa": [
+      "With the clock. The test is about time.",
+      "You get used to the pressure."
+     ],
+     "fb": [
+      "Without it first. Learn the task calmly.",
+      "The clock comes later."
+     ]
+    },
+    {
+     "q": "Is a computer test fairer than a human examiner?",
+     "a": "Yes, fairer",
+     "b": "No, a person is fairer",
+     "fa": [
+      "Yes. A computer is never tired or in a bad mood.",
+      "Everybody gets the same treatment."
+     ],
+     "fb": [
+      "No. A person understands what you mean.",
+      "A computer can miss a good idea."
+     ]
+    }
+   ],
+   "fim": "Four rounds, and you spoke without stopping."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Your Plan",
+   "t": "Make your test plan.",
+   "p": "Answer each step. Write one line.",
+   "prof": "You are the coach. After the plan, ask: Is this realistic for your week?",
+   "passos": [
+    {
+     "q": "What score do you need, and for what?",
+     "st": [
+      "I need … for …"
+     ],
+     "ex": "I need 120 for a job in Dublin."
+    },
+    {
+     "q": "When do you want to take the test?",
+     "st": [
+      "I want to take it in …"
+     ],
+     "ex": "I want to take it in February, before the job opens."
+    },
+    {
+     "q": "When will you study each week?",
+     "st": [
+      "I will study on … for …"
+     ],
+     "ex": "I will study on Monday, Wednesday and Saturday for 30 minutes."
+    },
+    {
+     "q": "What will you practice first?",
+     "st": [
+      "First, I will practice …"
+     ],
+     "ex": "First, I will practice speaking with the clock."
+    }
+   ],
+   "fim": "Plan ready. Every lesson ends with one question: are we closer?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

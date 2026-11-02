@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -135,5 +136,298 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "lacunas": {
+   "t": "Three sentences, then a paragraph.",
+   "p": "20 seconds per sentence. 3 minutes for the paragraph."
+  },
+  "multipla": {
+   "t": "A conversation, then a short text.",
+   "p": "Listen once to each line. Read and choose."
+  },
+  "prova": {
+   "t": "Five tasks with the real clock.",
+   "p": "A photo, a topic, two questions, the sample."
+  },
+  "cv-juri": {
+   "t": "Are they ready to book the test?",
+   "p": "Give your verdict. Say why."
+  },
+  "pode": {
+   "t": "Mock test 1: how did it go?",
+   "p": "Tap what went well. Your teacher confirms."
+  }
+ },
+ "prep": {
+  "obj": "Simulado 1 do DET: todos os tipos de questão, em ordem, com o relógio real; sem ensinar durante as tarefas, feedback só no fim de cada parte.",
+  "armadilha": "Tocar em palavra inventada no Read and Select, soletrar errado nas lacunas, perder palavras pequenas no ditado, parar antes do relógio na fala e registro informal na escrita.",
+  "pal": [
+   "Read and Select",
+   "Fill in the Blanks",
+   "Listen and Type",
+   "Interactive Listening",
+   "writing sample",
+   "The main reason is …",
+   "However, …",
+   "As a result, …"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o simulado: prova inteira, com relógio, sem ensino no meio.",
+   "perg": "Water, quiet room, phone away. Ready?",
+   "pula": "Só leia o título da capa."
+  },
+  "palavras": {
+   "obj": "Read and Select: tocar só nas palavras reais em um minuto.",
+   "perg": "Which words did you think were fake?",
+   "pula": "Simulado: não corte; é uma rodada só."
+  },
+  "lacunas": {
+   "obj": "Fill in the Blanks e Read and Complete com o relógio real; ortografia conta.",
+   "perg": "Which gaps were the hardest?",
+   "pula": "Simulado: não corte; anote um ponto a melhorar."
+  },
+  "ditado": {
+   "obj": "Listen and Type: três frases, até três vezes cada, comparação palavra por palavra.",
+   "perg": "Which small words did you miss?",
+   "pula": "Simulado: não corte; feedback rápido no fim."
+  },
+  "multipla": {
+   "obj": "Conversa no Student Services e texto curto: ouvir cada linha uma vez e escolher.",
+   "perg": "Why is this the best reply?",
+   "pula": "Simulado: não corte; discuta só um erro."
+  },
+  "prova": {
+   "obj": "Fala e escrita com o relógio: foto, tema, duas perguntas gravadas e writing sample; checklist depois.",
+   "perg": "Did you speak until the clock stopped?",
+   "pula": "Simulado: não corte; pule o retry se faltar tempo."
+  },
+  "cv-juri": {
+   "obj": "Conversa depois da prova: júri de três candidatos e, por último, veredito sobre si mesmo (45 s).",
+   "perg": "Are you ready to book the test?",
+   "pula": "Dois candidatos e o veredito sobre si."
+  },
+  "pode": {
+   "obj": "Resultados: para cada linha não marcada, escolher uma aula para revisar antes do Simulado 2.",
+   "perg": "Which part do you want to review first?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa calma sobre a experiência do simulado e os planos do aluno.",
+   "perg": "Which part felt the most like the real test?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de dilemas de preparação para a prova, com argumentos prontos.",
+   "perg": "Which side do you take, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar, em passos, o plano de estudo até o Simulado 2.",
+   "perg": "What’s the first thing you’ll practice this week?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "After the mock test.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "The main reason is …",
+    "However, …",
+    "As a result, …"
+   ],
+   "cartas": [
+    {
+     "k": "THE HARDEST PART",
+     "q": "Which part of today’s mock was the hardest?",
+     "fup": "Why do you think so?",
+     "st": [
+      "The hardest part was …",
+      "The main reason is …"
+     ],
+     "ex": "The hardest part was Listen and Type. The main reason is that I missed the small words."
+    },
+    {
+     "k": "A SURPRISE",
+     "q": "What surprised you today?",
+     "fup": "Was it a good or a bad surprise?",
+     "st": [
+      "I was surprised that …",
+      "However, …"
+     ],
+     "ex": "I was surprised that the writing felt easy. However, I ran out of time at the end."
+    },
+    {
+     "k": "THE CLOCK",
+     "q": "How did you feel about the clock?",
+     "fup": "What will you do differently next time?",
+     "st": [
+      "The clock made me …",
+      "Next time, I’ll …"
+     ],
+     "ex": "The clock made me nervous. Next time, I’ll plan my answer in the first ten seconds."
+    },
+    {
+     "k": "TEST DAY",
+     "q": "What will you do on the morning of the real test?",
+     "fup": "What will you avoid?",
+     "st": [
+      "On test day, I’ll …",
+      "I won’t …"
+     ],
+     "ex": "On test day, I’ll eat well and check my internet. I won’t drink too much coffee."
+    },
+    {
+     "k": "THE SCORE",
+     "q": "What will the score open for you?",
+     "fup": "What happens if it’s lower than you need?",
+     "st": [
+      "If I get it, I’ll …",
+      "If not, I’ll …"
+     ],
+     "ex": "If I get it, I’ll apply for a master’s in Ireland. If not, I’ll take it again in a month."
+    },
+    {
+     "k": "ADVICE",
+     "q": "What advice would you give someone taking their first mock test?",
+     "fup": "Did you follow it today?",
+     "st": [
+      "I’d tell them to …",
+      "As a result, …"
+     ],
+     "ex": "I’d tell them to keep talking until the clock stops. I didn’t today, and as a result I lost time."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "The main reason is …",
+    "However, …",
+    "If I were …, I would …"
+   ],
+   "rodadas": [
+    {
+     "q": "Book the test now, or wait until you feel ready?",
+     "a": "Book it now",
+     "b": "Wait",
+     "fa": [
+      "Book it now. A date makes you study.",
+      "You can always take it again."
+     ],
+     "fb": [
+      "Wait. The test isn’t cheap.",
+      "If I were nervous, I would do one more mock first."
+     ]
+    },
+    {
+     "q": "Practice weak parts, or strong parts?",
+     "a": "Weak parts",
+     "b": "Strong parts",
+     "fa": [
+      "Weak parts. That’s where the points are.",
+      "As a result, the score goes up faster."
+     ],
+     "fb": [
+      "Strong parts. They give confidence.",
+      "However, don’t ignore the weak ones completely."
+     ]
+    },
+    {
+     "q": "Memorize templates for speaking, or speak naturally?",
+     "a": "Templates",
+     "b": "Naturally",
+     "fa": [
+      "Templates. They help when the clock starts.",
+      "You never freeze."
+     ],
+     "fb": [
+      "Naturally. Templates sound robotic.",
+      "The main reason is that graders notice."
+     ]
+    },
+    {
+     "q": "The day before the test: study hard, or rest?",
+     "a": "Study hard",
+     "b": "Rest",
+     "fa": [
+      "Study. One more practice can help.",
+      "It keeps my brain in English."
+     ],
+     "fb": [
+      "Rest. A tired brain makes silly mistakes.",
+      "If I were you, I would watch a series in English."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Plan",
+   "t": "Your plan to Mock Test 2.",
+   "p": "Four steps. Say your plan out loud.",
+   "prof": "You are the study coach: push back on one step that sounds unrealistic.",
+   "passos": [
+    {
+     "q": "Which part will you work on first?",
+     "st": [
+      "First, I’ll work on …",
+      "The main reason is …"
+     ],
+     "ex": "First, I’ll work on Listen and Type. The main reason is that I lost the most points there."
+    },
+    {
+     "q": "How will you practice it?",
+     "st": [
+      "Every day, I’ll …",
+      "for … minutes"
+     ],
+     "ex": "Every day, I’ll type three sentences from a podcast for fifteen minutes."
+    },
+    {
+     "q": "What will you do for speaking and writing?",
+     "st": [
+      "For speaking, I’ll …",
+      "For writing, I’ll …"
+     ],
+     "ex": "For speaking, I’ll record one answer a day. For writing, I’ll do one sample every weekend."
+    },
+    {
+     "q": "How will you know you are ready?",
+     "st": [
+      "I’ll know I’m ready when …",
+      "If …, I’ll book the test."
+     ],
+     "ex": "I’ll know I’m ready when I finish every part on time. If that happens in Mock Test 2, I’ll book the test."
+    }
+   ],
+   "fim": "A real plan. Now the clock works for you."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

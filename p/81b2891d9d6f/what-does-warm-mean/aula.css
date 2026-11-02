@@ -1,0 +1,144 @@
+/* ============================================================
+   What Does Warm Mean? · The Dundies · LIVE CLASS 06/10/2026
+   the office awards: cheap gold trophies for extreme adjectives
+   ============================================================ */
+:root{
+  --noite:#0b0a09; --noite-rgb:11,10,9; --tinta:#e6e9ef;
+  --t1:#f1f3f7; --t2:#b3bac7; --t2-rgb:179,186,199; --t3:#7b8394;
+  --ac:#d9b24a; --ac2:#f2d27a; --frio:#e0603a; --coral:#f2837a;
+  --vidro:rgba(230,233,239,.045); --vidro2:rgba(230,233,239,.08); --vidro3:rgba(230,233,239,.11);
+  --fio:rgba(214,220,232,.11); --fio2:rgba(214,220,232,.2);
+  --ok:#9fdcae; --am:#d9b24a; --erro:#f2837a; --lil:#c3a8f0;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Instrument Serif',Georgia,serif; --ui:'Hanken Grotesk',system-ui,sans-serif; --mono:'Hanken Grotesk',system-ui,sans-serif;
+  --r1:12px; --r2:8px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1a1204}
+.btn.cheio{background:var(--ac);border-color:var(--ac);color:#1a1204}
+.cab h1,.pergunta h2,.follow p.q,.carta b,.cr h3,#guia h2,.marca span{font-weight:400;letter-spacing:0}
+.cab h1{font-size:clamp(34px,2.9vw,56px)}
+.pergunta h2{font-size:clamp(24px,1.9vw,34px)}
+.capa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:10px 0 6px;font:400 clamp(58px,5.4vw,104px)/.98 var(--disp);color:var(--t1)}
+.capa .banda{margin:0 0 18px;font:500 clamp(18px,1.3vw,22px) var(--ui);color:var(--ac)}
+.capa .sub{margin:0 0 26px;font:400 clamp(18px,1.3vw,22px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.of-foto{margin:0;display:grid;gap:14px}
+.of-foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r1);border:1px solid #1a1e27;box-shadow:var(--sombra)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.05vw,17px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(159,220,174,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.of-mesa{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.of-ops{display:grid;gap:6px}
+.of-linha-ok{display:flex;align-items:center;gap:12px} .of-linha-ok span{flex:1}
+.of-centro{max-width:1150px;margin:0 auto 14px;width:100%;display:grid;gap:12px}
+
+/* a onda da música: o traço comum */
+.onda{position:relative;display:flex;align-items:center;gap:2px;height:44px}
+.onda i{flex:1;border-radius:2px;background:linear-gradient(180deg,var(--ac),color-mix(in srgb,var(--ac) 40%,#000));opacity:.7}
+.onda .mk{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t1);border:0;padding:0;margin:0}
+.onda.grande{height:84px;max-width:1300px;width:100%;margin:34px auto 40px}
+.onda.grande button.mk:nth-child(even) span{top:auto;bottom:-30px}
+.onda.grande button.mk{width:14px;margin-left:-6px;background:transparent;cursor:pointer}
+.onda.grande button.mk::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--t2)}
+.onda.grande button.mk span{position:absolute;top:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 14px var(--ui);color:var(--t2);padding:3px 10px;border-radius:999px;border:1px solid var(--fio2);background:var(--noite)}
+.onda.grande button.mk.on::before{background:var(--ac2);width:3px}
+.onda.grande button.mk.on span{color:#1a1204;background:var(--ac);border-color:var(--ac)}
+.onda.grande button.mk:focus-visible span{outline:2px solid var(--ac2);outline-offset:2px}
+
+/* o resto: quieto */
+.of-encarte{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:26px;max-width:1300px;margin:0 auto 18px;width:100%;padding:18px;border-radius:var(--r1)}
+.of-capinha{display:grid;gap:10px}
+.of-capinha img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid #20242f}
+.of-capinha small{display:block;font:600 14px var(--ui);color:var(--ac)} .of-capinha b{font:400 clamp(24px,1.9vw,32px)/1.1 var(--disp);color:var(--t1)}
+.of-encarte dl{margin:0;display:grid;gap:14px;align-content:center}
+.of-encarte dt{font:600 14px var(--ui);color:var(--frio)} .of-encarte dd{margin:2px 0 0;font:400 clamp(19px,1.4vw,24px)/1.4 var(--disp);color:var(--t1)}
+.of-selo{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:1px dashed var(--fio2);text-align:center;padding:16px}
+.of-selo b{font:italic 400 clamp(30px,2.4vw,42px) var(--disp);color:var(--ac)} .of-selo small{font:400 15px var(--ui);color:var(--t2)}
+.of-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.of-vcol{display:grid;gap:6px;width:100%;max-width:min(100%,82vh);justify-self:center} .of-cred{font:400 13px var(--ui);color:var(--t3)}
+.of-dica{text-align:center;font:italic 400 22px var(--disp);color:var(--t3)}
+.of-sentido{display:block;font:400 clamp(19px,1.4vw,23px)/1.45 var(--disp);color:var(--t1);margin-bottom:8px}
+.of-gram{display:block;font:400 16px/1.5 var(--ui);color:var(--t2)} .of-gram b{color:var(--ac2)}
+.of-pista{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--ac)}
+.of-pista small{font:600 13px var(--ui);color:var(--ac)} .of-pista p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.of-fala{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--frio)}
+.of-fala small{display:flex;align-items:center;gap:8px;font:600 13px var(--ui);color:var(--frio)} .of-fala p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.of-luz{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px rgba(242,131,122,.7)}
+.of-ar{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px;border-radius:var(--r1)} .of-ar p{margin:0;font:400 30px var(--disp);color:var(--t1)}
+.of-carta{display:grid;gap:4px;padding:10px 14px;border-radius:var(--r2);border:1px solid var(--fio2);background:var(--vidro)}
+.of-carta > small{font:600 13px var(--ui);color:var(--t3)}
+.of-carta p{margin:0;font:400 clamp(14px,1vw,16px)/1.45 var(--ui);color:var(--t1)}
+.of-carta.aluno{border-color:rgba(217,178,74,.45);background:rgba(217,178,74,.05)} .of-carta.aluno > small{color:var(--ac)}
+.of-carta.prof{border-style:dashed}
+.of-carta details{margin-top:4px;display:grid;gap:3px} .of-carta summary{cursor:pointer;font:600 13px var(--ui);color:var(--t3)}
+.so-aluno-c{display:none}
+html.wl-sala-aluno .so-aluno-c{display:grid}
+
+.fim .grande span{font-size:clamp(15px,1.1vw,18px)}
+
+/* a cara de The Office: Bowlby One no título, Work Sans no texto, Special Elite nas placas */
+:root{--disp:'Work Sans',system-ui,sans-serif;--ui:'Work Sans',system-ui,sans-serif}
+.cab h1,.capa h1{font-family:'Bowlby One',Impact,sans-serif;font-weight:400;letter-spacing:0}
+.capa h1{font-size:clamp(44px,4.2vw,80px);line-height:1}
+.cab h1{font-size:clamp(23px,1.9vw,36px);line-height:1.15}
+.pergunta h2{font-family:var(--ui);font-weight:600}
+.of-pista p{font-family:var(--ui)!important;font-weight:700}
+.of-sentido,.of-encarte dd{font-family:var(--ui)!important;font-weight:400}
+/* a estante dos Dundies: o gesto forte */
+.of-estante{display:grid;gap:8px;padding:14px 16px 12px;border-radius:8px;background:linear-gradient(#141210,#0c0b0a);box-shadow:inset 0 0 0 1px #2c2620,0 18px 40px #000c;max-width:clamp(360px,33vw,620px);width:100%;margin:0 auto}
+.of-titulo{font:400 clamp(18px,1.4vw,26px) 'Bowlby One',sans-serif;color:#d9b24a;text-align:center;letter-spacing:.04em}
+.of-prat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px 8px;padding-bottom:6px;background:linear-gradient(transparent calc(50% - 4px),#3a2a1a calc(50% - 4px),#3a2a1a calc(50% + 2px),transparent calc(50% + 2px)),linear-gradient(transparent calc(100% - 6px),#3a2a1a calc(100% - 6px))}
+.of-t{display:grid;justify-items:center;gap:2px}
+.of-t svg{width:clamp(44px,3.6vw,66px);height:auto}
+.of-taca,.of-haste,.of-base{fill:#2a2620;stroke:#4a4136;stroke-width:1.5}
+.of-alca{fill:none;stroke:#4a4136;stroke-width:3}
+.of-t.vez .of-taca{stroke:#e0603a;stroke-width:2.2}
+.of-t.ganho .of-taca,.of-t.ganho .of-haste{fill:#c99a2a;stroke:#f2d27a}
+.of-t.ganho .of-alca{stroke:#c99a2a}
+.of-t.ganho .of-base{fill:#3a2a1a;stroke:#6a5a3a}
+.of-t.novo svg{animation:of-brilha 1.1s ease-out both}
+@keyframes of-brilha{0%{filter:drop-shadow(0 0 16px #f2d27a);transform:translateY(-6px)}100%{filter:none;transform:none}}
+.of-placa{min-height:2.4em;font:400 clamp(11px,.82vw,14.5px)/1.15 'Special Elite',monospace;color:#d8c9a6;text-align:center;padding:0 2px}
+.of-legenda{margin:0;font:italic 500 clamp(13px,1.6vh,16px) 'Work Sans',sans-serif;color:#9a8f7c;text-align:center}
+.of-estante.cheio .of-legenda{color:#f2d27a}
+@media (prefers-reduced-motion:reduce){.of-t.novo svg{animation:none}}
+/* o resto: quieto */
+.of-regra{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1300px;margin:0 auto 16px;width:100%}
+.of-regra > div{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.of-regra small{font:700 13px var(--ui);color:var(--frio)} .of-regra p{margin:0;font:600 clamp(17px,1.2vw,22px)/1.35 var(--ui);color:var(--t1)} .of-regra b{color:var(--ac2)} .of-regra span{font:400 15px var(--ui);color:var(--t2)}
+.of-escalas{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1300px;margin:0 auto;width:100%}
+.of-es{display:grid;gap:6px;align-content:start;padding:14px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.of-es small{font:700 13px var(--ui);color:var(--ac)} .of-es p{margin:0;font:600 clamp(17px,1.2vw,21px)/1.3 var(--ui);color:var(--t1)}
+.of-encarte .of-capinha img{aspect-ratio:16/10;max-height:clamp(150px,23vh,250px)}
+.of-encarte{margin-bottom:6px}.of-encarte dl{gap:8px}.of-encarte dd{font-size:clamp(16px,1.02vw,19px)!important;line-height:1.45}
+@media (max-width:1100px){ .of-regra{grid-template-columns:1fr} .of-escalas{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .of-escalas{grid-template-columns:1fr} .capa h1{font-size:38px} .of-estante{max-width:100%;padding:10px} .of-placa{font-size:9px} .aq-pilha{max-width:calc(100% - 26px)!important;margin-left:0!important} }
+
+@media (max-width:1100px){ .mesa-c,.capa,.of-mesa,.of-video,.of-encarte{grid-template-columns:1fr} .of-regra{grid-template-columns:1fr} }
+@media (max-width:620px){
+  .onda.grande{height:64px;margin-top:40px} .onda.grande button.mk span{font-size:11px;padding:2px 6px}
+  .of-capinha img{aspect-ratio:16/9}
+}
+
+/* a tira de filme (aulas de filme no lugar da onda de som) */
+.tira{border-radius:6px;padding:0 6px;background:#070707;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.tira-furos{height:14px;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,255,255,.13) 9px 19px,transparent 19px 28px);background-size:28px 6px;background-repeat:repeat-x;background-position:0 50%}
+.tira-q{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tq{position:relative;display:grid;align-content:end;gap:1px;aspect-ratio:16/9;min-height:0;padding:6px 8px;border:0;border-radius:2px;overflow:hidden;text-align:left;background:#141414;font:inherit;color:inherit}
+.tq-img{position:absolute;inset:0;background:var(--bg) center/cover;filter:brightness(.42) saturate(.8)}
+.tq b,.tq span{position:relative}
+.tq b{font:600 10px var(--ui);color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.tq span{font:600 11px/1.15 var(--ui);color:var(--t1)}
+.tira.grande{max-width:1300px;width:100%;margin:6px auto 22px}
+.tira.grande .tq{cursor:pointer;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s}
+.tira.grande .tq b{font-size:13px} .tira.grande .tq span{font-size:clamp(14px,1.05vw,18px)}
+.tira.grande .tq:hover .tq-img{filter:brightness(.55)}
+.tira.grande .tq.on{outline-color:var(--ac)} .tira.grande .tq.on .tq-img{filter:brightness(.7) saturate(1)}
+.tira.grande .tq:focus-visible{outline-color:var(--ac2)}
+@media (max-width:620px){.tira.grande .tira-q{grid-template-columns:repeat(3,minmax(0,1fr))} .tira.grande .tq span{font-size:12px} .tira.grande .tq b{font-size:11px} .capa-r .tira{display:none}}
+
+/* 22/10/2026 · formatos novos */
+.fm-obj .of-estante{max-width:min(600px,60vw)}
+.of-prat{grid-template-columns:repeat(6,1fr);background:linear-gradient(transparent calc(100% - 6px),#3a2a1a calc(100% - 6px))}

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Say That Again",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/510e14e195e0/say-that-again/img/live-radio.webp",
+  "capa": "../img/live-radio.webp",
   "alvo": "asking for repetition and clarification: Sorry? · Could you say that again? · Could you speak more slowly? · Do you mean ...? · How do you spell that? · What does ... mean?; never just What? or Repeat",
   "abrir": "What do you do when you don't understand someone?",
   "fecho": "<b>Sorry, could you say that again?</b> · <b>Could you speak more slowly, please?</b> · <b>Do you mean ...?</b> · <b>How do you spell that?</b> · <b>What does ... mean?</b> Never just <i>What?</i> or <i>Repeat.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia arrives at a train station. A man tells her where to go. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/510e14e195e0/say-that-again/img/live-plataforma.webp",
+      "img": "../img/live-plataforma.webp",
       "leg": "A train at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Sorry, could you say that again, please?",
-          "img": "https://wolf-labs.pages.dev/p/510e14e195e0/say-that-again/img/live-radio.webp",
+          "img": "../img/live-radio.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Could you speak more slowly, please?",
-          "img": "https://wolf-labs.pages.dev/p/510e14e195e0/say-that-again/img/live-plataforma.webp",
+          "img": "../img/live-plataforma.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Sorry, do you mean platform nine?",
-          "img": "https://wolf-labs.pages.dev/p/510e14e195e0/say-that-again/img/live-plataforma.webp",
+          "img": "../img/live-plataforma.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -170,7 +170,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/510e14e195e0/say-that-again/img/live-radio.webp",
+      "img": "../img/live-radio.webp",
       "leg": "An old radio with static",
       "pede": "Look at the picture: an old radio full of static. Somebody speaks fast and you can't hear. Write 2 or 3 sentences: what you say to ask for help. Use <b>Could you ...?</b> or <b>Do you mean ...?</b>",
       "ph": "Sorry, could you …",

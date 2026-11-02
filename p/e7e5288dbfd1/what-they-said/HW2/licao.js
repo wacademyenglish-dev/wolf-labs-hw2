@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What They Said",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e7e5288dbfd1/what-they-said/img/live-telefones.webp",
+  "capa": "../img/live-telefones.webp",
   "alvo": "reported speech: said (no person) vs told me (a person); one step back (will -> would, am -> was); yes/no questions with if, no did (asked me if I ...); told me not to + verb",
   "abrir": "What did somebody tell you today?",
   "fecho": "<b>said</b> has no person; <b>told me</b> needs one: <i>She told me she was late.</i> One step back: <i>will</i> becomes <b>would</b>. Questions lose <i>did</i>: <i>He asked me where I lived.</i> Yes/no questions take <b>if</b>. Orders: <b>told me not to</b> + verb.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a busy meeting. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e7e5288dbfd1/what-they-said/img/live-escritorio.webp",
+      "img": "../img/live-escritorio.webp",
       "leg": "An office at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "She told me that the meeting would start at nine.",
-          "img": "https://wolf-labs.pages.dev/p/e7e5288dbfd1/what-they-said/img/live-escritorio.webp",
+          "img": "../img/live-escritorio.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "He asked me if I had finished the report.",
-          "img": "https://wolf-labs.pages.dev/p/e7e5288dbfd1/what-they-said/img/live-telefones.webp",
+          "img": "../img/live-telefones.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He told me not to wait for them.",
-          "img": "https://wolf-labs.pages.dev/p/e7e5288dbfd1/what-they-said/img/live-fita.webp",
+          "img": "../img/live-fita.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e7e5288dbfd1/what-they-said/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "Two empty chairs in a grey room",
       "pede": "Look at the picture: two chairs in an empty room. Imagine a short talk there. Write 2 or 3 sentences that report what somebody said to you. Use <b>told me</b>, <b>asked me if</b> or <b>said they would</b>.",
       "ph": "My friend told me … and asked me if …",

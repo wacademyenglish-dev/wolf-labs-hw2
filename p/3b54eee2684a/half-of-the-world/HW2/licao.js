@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Half of the World",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3b54eee2684a/half-of-the-world/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "quantifiers: all of / most of / half of / some of / none of + the, my, them; most + noun without of (most people); never the most of, never nobody of",
   "abrir": "How many of your friends speak English?",
   "fecho": "From all to none: <b>All of</b> my friends · <b>Most of</b> them · <b>Half of</b> the world · <b>Some of</b> us · <b>None of</b> my family. With a noun alone, no <i>of</i>: <b>Most people</b>. With a person word, <i>them</i>: <i>Most of them</i>. Never <i>the most of</i>, never <i>nobody of</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a class survey. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/3b54eee2684a/half-of-the-world/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A big round hall with a globe in the middle",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "All of my classmates answered the survey.",
-          "img": "https://wolf-labs.pages.dev/p/3b54eee2684a/half-of-the-world/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Half of the people in my office drink coffee.",
-          "img": "https://wolf-labs.pages.dev/p/3b54eee2684a/half-of-the-world/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "None of my friends live downtown, but most of them live close.",
-          "img": "https://wolf-labs.pages.dev/p/3b54eee2684a/half-of-the-world/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3b54eee2684a/half-of-the-world/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A big round hall with a globe in the middle",
       "pede": "Look at the picture: a huge round hall with a globe in the middle, ready for a speech. Write 2 or 3 sentences about the people around you: family, friends or work. Use <b>all of</b>, <b>most of</b>, <b>half of</b>, <b>some of</b> or <b>none of</b>.",
       "ph": "Most of my friends … None of …",

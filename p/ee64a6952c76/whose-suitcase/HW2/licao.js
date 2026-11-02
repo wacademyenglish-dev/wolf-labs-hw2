@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "Whose Suitcase?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ee64a6952c76/whose-suitcase/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "whose + owner: 's (Tom's bag, the twins' bags), his / hers / ours / theirs / mine / yours with no thing after them; Whose is it? It's hers.",
   "abrir": "Whose phone is on your table right now?",
   "fecho": "<b>Whose</b> asks for the owner: <i>Whose bag is this?</i> The owner can be a name with <b>'s</b>: <i>Tom's bag</i>. Then use <b>his / hers / ours / theirs</b> alone: <i>It's his. They're theirs.</i> Look at the owner, not the color.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the lost and found. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/ee64a6952c76/whose-suitcase/img/live-balcao.webp",
+      "img": "../img/live-balcao.webp",
       "leg": "The lost and found room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -100,17 +100,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This red suitcase is Tom's. It's his.",
-          "img": "https://wolf-labs.pages.dev/p/ee64a6952c76/whose-suitcase/img/live-esteira.webp",
+          "img": "../img/live-esteira.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The small bags are the twins'. They're theirs.",
-          "img": "https://wolf-labs.pages.dev/p/ee64a6952c76/whose-suitcase/img/live-mala.webp",
+          "img": "../img/live-mala.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Whose coat is this? It's Rosa's. It's hers.",
-          "img": "https://wolf-labs.pages.dev/p/ee64a6952c76/whose-suitcase/img/live-balcao.webp",
+          "img": "../img/live-balcao.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -154,7 +154,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ee64a6952c76/whose-suitcase/img/live-mala.webp",
+      "img": "../img/live-mala.webp",
       "leg": "An open suitcase",
       "pede": "Look at the picture: an open suitcase. Write 2 or 3 sentences: whose it is and what is inside. Use <b>'s</b>, <b>his / hers</b> or <b>mine</b>.",
       "ph": "The suitcase is …'s. It's …",

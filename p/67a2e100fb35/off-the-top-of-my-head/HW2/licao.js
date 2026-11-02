@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Off the Top of My Head",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/67a2e100fb35/off-the-top-of-my-head/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "idioms in context: the words are fixed (every the, every -s, every preposition); only the verb tense and the possessive change (she spilled the beans, off the top of her head); never translate word by word: spill the beans, off the top of my head, the elephant in the room, a piece of cake, kill two birds with one stone, drop the ball, the last straw, on a roll, cost an arm and a leg",
   "abrir": "When did a secret come out by accident?",
   "fecho": "An idiom is one block: keep <b>every the, every -s, every preposition</b>. Only the verb and the possessive change: <i>she spilled the beans</i> · <i>off the top of her head</i>. <b>The elephant in the room</b> · <b>a piece of cake</b> · <b>kill two birds with one stone</b> · <b>drop the ball</b> · <b>the last straw</b> · <b>on a roll</b> · <b>cost an arm and a leg</b>. Never word by word.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a surprise at their storytelling club. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/67a2e100fb35/off-the-top-of-my-head/img/live-clube.webp",
+      "img": "../img/live-clube.webp",
       "leg": "The club, before Friday",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Off the top of my head, I'd say about thirty people.",
-          "img": "https://wolf-labs.pages.dev/p/67a2e100fb35/off-the-top-of-my-head/img/live-clube.webp",
+          "img": "../img/live-clube.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Dana spilled the beans, so Tom knows about the party.",
-          "img": "https://wolf-labs.pages.dev/p/67a2e100fb35/off-the-top-of-my-head/img/live-i-feijao.webp",
+          "img": "../img/live-i-feijao.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If we split the work, we kill two birds with one stone.",
-          "img": "https://wolf-labs.pages.dev/p/67a2e100fb35/off-the-top-of-my-head/img/live-i-passaros.webp",
+          "img": "../img/live-i-passaros.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/67a2e100fb35/off-the-top-of-my-head/img/live-clube.webp",
+      "img": "../img/live-clube.webp",
       "leg": "A club at night, frames on the wall",
       "pede": "Look at the picture: a small club at night, with frames on the wall. Write 2 or 3 sentences about a surprise, a plan or an event of yours. Use idioms: <b>spill the beans</b>, <b>a piece of cake</b>, <b>drop the ball</b>, <b>the last straw</b> or <b>off the top of my head</b>.",
       "ph": "Off the top of my head …",

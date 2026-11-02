@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "You're Supposed to Bring a Gift",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0784b21b4fb0/youre-supposed-to-bring-a-gift/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "be supposed to: the rule or the plan (we're supposed to reply) · be expected to (more formal) · not supposed to = the etiquette says no (not the same as don't have to) · was / were supposed to = the plan that did not happen; never Is to, We supposed to, supposed bring, suppose to",
   "abrir": "What are you supposed to do at a party, and what are you not supposed to do?",
   "fecho": "<b>A person + BE + supposed to + plain verb</b>: <i>We're supposed to reply by Friday.</i> <b>Not supposed to</b> = the rule says no: <i>Guests aren't supposed to wear white.</i> <b>Was / were supposed to</b> = the plan that did not happen. Never <i>We supposed to</i>, never <i>supposed bring</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a wedding in Kyoto. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/0784b21b4fb0/youre-supposed-to-bring-a-gift/img/live-envelope.webp",
+      "img": "../img/live-envelope.webp",
       "leg": "A black envelope with a ribbon",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We're supposed to reply to the invitation by Friday.",
-          "img": "https://wolf-labs.pages.dev/p/0784b21b4fb0/youre-supposed-to-bring-a-gift/img/live-convite.webp",
+          "img": "../img/live-convite.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Guests aren't supposed to sit at the wrong table.",
-          "img": "https://wolf-labs.pages.dev/p/0784b21b4fb0/youre-supposed-to-bring-a-gift/img/live-mesas.webp",
+          "img": "../img/live-mesas.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I was supposed to bring a gift, but I forgot it.",
-          "img": "https://wolf-labs.pages.dev/p/0784b21b4fb0/youre-supposed-to-bring-a-gift/img/live-presente.webp",
+          "img": "../img/live-presente.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -172,7 +172,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0784b21b4fb0/youre-supposed-to-bring-a-gift/img/live-bolo.webp",
+      "img": "../img/live-bolo.webp",
       "leg": "A black cake with golden candles",
       "pede": "Look at the picture: a cake at a party. Write 2 or 3 sentences about the rules at a party in your country. Use <b>supposed to</b>, <b>not supposed to</b> or <b>expected to</b>.",
       "ph": "At a party, guests are supposed to …",

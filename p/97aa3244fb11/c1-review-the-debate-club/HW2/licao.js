@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Debate Club",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/97aa3244fb11/c1-review-the-debate-club/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "arguing and persuading: In short / The bottom line is, Granted ..., be that as it may, On the contrary vs On the other hand, What if ...? + past, Assuming / Given that / Providing + present, What I liked was ..., It might be worth ...",
   "abrir": "What is an opinion you defend even when people disagree?",
   "fecho": "Open with the point: <b>In short</b>, <b>the bottom line is</b> … Concede, then turn: <b>Granted</b>, … <b>Be that as it may</b>, … <b>On the contrary</b> = no, the opposite. <b>On the other hand</b> = another side. Persuade: <b>What if everyone worked less?</b> (past, not <i>would</i>). Conditions: <b>Assuming</b>, <b>given that</b>, <b>providing</b> + present.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo prepare for a debate. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/97aa3244fb11/c1-review-the-debate-club/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty debating hall",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "In short, a shorter week makes people more productive.",
-          "img": "https://wolf-labs.pages.dev/p/97aa3244fb11/c1-review-the-debate-club/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Granted, it is hard at first. Be that as it may, rested workers make fewer mistakes.",
-          "img": "https://wolf-labs.pages.dev/p/97aa3244fb11/c1-review-the-debate-club/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "What if every Friday belonged to your family?",
-          "img": "https://wolf-labs.pages.dev/p/97aa3244fb11/c1-review-the-debate-club/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/97aa3244fb11/c1-review-the-debate-club/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty debating hall",
       "pede": "Look at the picture: a debating hall. Write 2 or 3 sentences for or against school uniforms. Use <b>Granted</b>, <b>Be that as it may</b> or <b>What if</b>.",
       "ph": "Granted, …",

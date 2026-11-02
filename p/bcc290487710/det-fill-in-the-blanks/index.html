@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -129,5 +130,285 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "descobre": {
+   "t": "Same word, different form. Why?",
+   "p": "Compare A and B. Find the clue."
+  },
+  "multipla": {
+   "t": "What kind of word goes here?",
+   "p": "Choose. Then say the clue."
+  },
+  "cv-conselho": {
+   "t": "Your study group votes on four rules.",
+   "p": "Vote yes, no, or change it. Say why."
+  },
+  "lacunas": {
+   "t": "Eight sentences. Twenty seconds each.",
+   "p": "Tap Start. Read it all. Type the letters."
+  },
+  "pode": {
+   "t": "Lesson 3: what can you do now?",
+   "p": "Read each line aloud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Fill in the Blanks do DET: ler a gramática em volta da lacuna antes de digitar (could + verbo, was + -ed, a lot of + substantivo, how? = advérbio).",
+  "armadilha": "O brasileiro não marca o particípio nem o advérbio: “the museum is close”, “spoke very clear”, “could you reminded”; e diz “looking forward to see” em vez de “to seeing”.",
+  "pal": [
+   "could + base verb",
+   "was + -ed",
+   "a lot of + noun",
+   "adverb -ly",
+   "adjective",
+   "looking forward to + -ing",
+   "spelling",
+   "gap"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a tarefa: uma frase, uma palavra cortada, vinte segundos.",
+   "perg": "The museum is clo___ on Mondays. Close or closed?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "descobre": {
+   "obj": "Comparar pares de frases e achar a pista em volta da lacuna; regra e armadilhas.",
+   "perg": "What word tells you the form here?",
+   "pula": "Dois pares bastam."
+  },
+  "multipla": {
+   "obj": "Nomear o tipo de palavra antes de digitar e dizer a pista.",
+   "perg": "Is it a noun, a verb or an adverb? Why?",
+   "pula": "Três itens bastam."
+  },
+  "cv-conselho": {
+   "obj": "Votar quatro regras do grupo de estudo para o DET; o professor vota contra.",
+   "perg": "Should the group study every day?",
+   "pula": "Duas regras bastam."
+  },
+  "lacunas": {
+   "obj": "Oito frases com relógio; ortografia conta, uma letra errada erra a lacuna.",
+   "perg": "What kind of word was it?",
+   "pula": "Cinco frases bastam."
+  },
+  "pode": {
+   "obj": "Ler as frases “I can” e marcar o que já consegue.",
+   "perg": "Can you find the clue before typing?",
+   "pula": "Leia só as que faltam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre o preparo do aluno para o DET, com as pistas da aula na fala.",
+   "perg": "Why do you need the DET?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de estudo para a prova, com argumentos curtos.",
+   "perg": "Study alone or in a group?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar o plano de estudo real das próximas quatro semanas.",
+   "perg": "When is your test?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "You and the test.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "could + verb",
+    "a lot of",
+    "looking forward to …ing",
+    "-ly"
+   ],
+   "cartas": [
+    {
+     "k": "WHY THE DET",
+     "q": "Why do you need the Duolingo English Test?",
+     "fup": "What score do you need?",
+     "st": [
+      "I need it to …",
+      "I need a score of …"
+     ],
+     "ex": "I need it to apply to a master’s in Canada. I need a score of 120."
+    },
+    {
+     "k": "YOUR WEAK SPOT",
+     "q": "Which question type is the hardest for you?",
+     "fup": "Why?",
+     "st": [
+      "The hardest one is …",
+      "I usually make a lot of …"
+     ],
+     "ex": "The hardest one is Fill in the Blanks. I usually make a lot of spelling mistakes."
+    },
+    {
+     "k": "SPELLING",
+     "q": "Which English words do you always spell wrong?",
+     "fup": "How could you remember them?",
+     "st": [
+      "I always write … wrong.",
+      "I could …"
+     ],
+     "ex": "I always write “necessary” wrong. I could write it ten times a day."
+    },
+    {
+     "k": "UNDER PRESSURE",
+     "q": "How do you feel with a clock running?",
+     "fup": "Do you work quickly or carefully?",
+     "st": [
+      "I feel …",
+      "I work very …ly"
+     ],
+     "ex": "I feel nervous. I work very quickly, so I make silly mistakes."
+    },
+    {
+     "k": "AFTER THE TEST",
+     "q": "What are you looking forward to after the test?",
+     "fup": "Where will you be in one year?",
+     "st": [
+      "I’m looking forward to …ing",
+      "In one year, I …"
+     ],
+     "ex": "I’m looking forward to studying abroad. In one year, I hope to be in Toronto."
+    },
+    {
+     "k": "STUDY HABITS",
+     "q": "When and where do you study best?",
+     "fup": "For how long?",
+     "st": [
+      "I study best …",
+      "I can focus for …"
+     ],
+     "ex": "I study best early in the morning. I can focus for about forty minutes."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Test prep choices. Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "In my opinion,",
+    "It’s better to …"
+   ],
+   "rodadas": [
+    {
+     "q": "Study alone or in a study group?",
+     "a": "Alone",
+     "b": "In a group",
+     "fa": [
+      "Alone. I can focus completely.",
+      "I choose my own speed."
+     ],
+     "fb": [
+      "In a group. Others find mistakes I can’t see.",
+      "It’s more motivating."
+     ]
+    },
+    {
+     "q": "A gap you don’t know: guess quickly or skip it?",
+     "a": "Guess quickly",
+     "b": "Skip it",
+     "fa": [
+      "Guess. A smart guess with the clue is often right.",
+      "An empty gap is always wrong."
+     ],
+     "fb": [
+      "Skip it. Time is better used on the next sentence.",
+      "A wrong guess wastes seconds."
+     ]
+    },
+    {
+     "q": "One practice test every day, or one a week?",
+     "a": "Every day",
+     "b": "Once a week",
+     "fa": [
+      "Every day. The format becomes automatic."
+     ],
+     "fb": [
+      "Once a week. You need time to study your mistakes."
+     ]
+    },
+    {
+     "q": "Learn grammar rules, or just read a lot of English?",
+     "a": "Learn the rules",
+     "b": "Read a lot",
+     "fa": [
+      "Rules. The clue around the gap is grammar.",
+      "You know why, not just what."
+     ],
+     "fb": [
+      "Read a lot. Your eyes learn the right form naturally.",
+      "Reading is more interesting."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Your Study Plan",
+   "t": "Your four-week plan for the DET.",
+   "p": "Answer each step. Then read it aloud.",
+   "prof": "You are a strict study coach. After each step, ask: “Is that realistic?”",
+   "passos": [
+    {
+     "q": "Your goal: what score, and by when?",
+     "st": [
+      "I need … by …"
+     ],
+     "ex": "I need 115 by December 10th."
+    },
+    {
+     "q": "Your time: when could you study every week?",
+     "st": [
+      "I could study on …",
+      "for … minutes"
+     ],
+     "ex": "I could study on weekdays at 7 a.m., for thirty minutes."
+    },
+    {
+     "q": "Your focus: what kind of words do you get wrong a lot?",
+     "st": [
+      "I get a lot of … wrong.",
+      "I need to …"
+     ],
+     "ex": "I get a lot of adverbs wrong. I need to check the -ly ending."
+    },
+    {
+     "q": "Your reward: what are you looking forward to?",
+     "st": [
+      "I’m looking forward to …ing"
+     ],
+     "ex": "I’m looking forward to sending my application in January."
+    }
+   ],
+   "fim": "A goal, a time, a focus, a reward. Now follow it."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

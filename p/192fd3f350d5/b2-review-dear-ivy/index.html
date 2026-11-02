@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Dear Ivy · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B2 · Unit 2 Review · Dear Ivy</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Dear Ivy · B2 Unit 2 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 2 (Likely and imaginary). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Ivy writes the most famous advice column in town, and she is on holiday. This week your student answers the readers’ letters, on a board game. You read each letter in a dramatic voice.</p><p style="margin:0 0 6px"><b>About 48 min:</b> I · Bingo (8) · II · The Letters (15) · III · Unpopular Opinions (7) · IV · This Week’s Answer (7) · V · Would You Rather? (7) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Nine squares. Pick one, answer, and make a line.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>first conditional · unless, provided that, as long as · second conditional: unlikely and imaginary · wish and if only · second × third conditional · third conditional</p>
+    <h4>BINGO</h4>
+    <p>A 3×3 card of quick tasks. The student picks a square and does it out loud; tap <b>Done</b>. Three in a line (across, down or diagonal) is a BINGO. Keep going for a second line if there is time.</p>
+    <h4>THE LETTERS</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>THIS WEEK’S ANSWER</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>if you will tell her</i>, <i>unless you don’t go</i>, <i>if I would be you</i>, <i>I wish I have</i>, <i>if you would have asked</i>, <i>I wish I can</i>. B2: one correction per answer is enough.</p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the letters, three statements from Ivy’s inbox (honest opinions, lending money, whether advice works). The student taps a number from 1 to 5 and defends it with unless, provided that and the conditionals; you take the opposite number and argue back. There is no right answer. Wait five seconds in silence before they start, and use the PUSH line (only you see it) to make it harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Bingo and VI · I Can.</li>
+      <li><b>Out loud</b>: II · The Letters, III · Unpopular Opinions and V · Would You Rather?.</li>
+      <li><b>Write</b>: IV · This Week’s Answer.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW B2 · UNIT 2 · DEAR IVY · pergunta-surpresa · 28/10/2026 · first / second / third conditional, unless, provided that, wish */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'bingo', tipo: 'And you?', q: 'Who do you ask for advice when you have a problem?',
+    opc: ['A friend', 'Someone in my family', 'Nobody: I decide alone'], st: ['If I have a problem, I’ll call …', 'Unless it’s …, I …'],
+    ex: 'A friend. If I have a problem at work, I’ll call Bia, unless it’s after midnight.', push: 'Has their advice ever been completely wrong?' },
+  { cena: 'tabuleiro', tipo: 'What if', q: 'If you wrote an advice column, what would it be about?',
+    opc: ['Love', 'Money', 'Work'], st: ['If I wrote a column, it would be about …', 'People would write to me if …'],
+    ex: 'Work. If I wrote a column, people would ask me about difficult bosses. I’ve had three!', push: 'What would you call your column?' },
+  { cena: 'cartao', tipo: 'Would you rather', q: 'Would you rather get advice from a stranger or from a friend?',
+    opc: ['A stranger', 'A friend'], st: ['I’d rather ask …, because if …, …', 'Unless …, I’d …'],
+    ex: 'A stranger. If I asked a friend, they would just tell me what I want to hear.', push: 'And a stranger on the internet? Still yes?' },
+  { cena: 'pode', tipo: 'And you?', q: 'What’s the best advice you’ve ever ignored?',
+    opc: ['About money', 'About work', 'About people'], st: ['If I had listened, I would have …', 'I wish I had …'],
+    ex: 'About money. My brother told me to save, and I didn’t. If I had listened, I would have a car now.', push: 'Would you listen today?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW B2 · UNIT 2 · DEAR IVY · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A aula já tem um Would You Rather (IV). Formato diferente: a escala de opiniões impopulares ENTRA
+   depois de "II · The Letters" (o tabuleiro), no meio da aula. Revisão sem cena extra nem prática repetida
+   para trocar (Bingo é o aquecimento, Write e I Can ficam): 41 → 48 min. Três frases do mundo da coluna
+   de conselhos; o aluno dá a nota e defende com unless / provided that / second e third conditional. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'opinioes', apos: 'tabuleiro', est: 'o', min: 7, img: 'conversa', rot: 'Unpopular Opinions', t: 'Ivy’s inbox: what do YOU really think?',
+    p: 'Read each statement. Tap a number from 1 to 5, then defend it with a condition. Your teacher takes the opposite number.',
+    formato: 'escala', tag: 'Agree or disagree?',
+    frases: [
+      { f: 'If a friend asks for your honest opinion, you should always give it.',
+        st: ['I’d tell the truth, unless …', 'If I were in that situation, I’d …', 'As long as …, …'],
+        ex: 'Four. I’d tell the truth, provided that I say it kindly. If my friend asked me and I lied, I’d feel terrible later.',
+        push: 'Your friend shows you her wedding dress the day before the wedding. You hate it. Still the truth?' },
+      { f: 'You should never lend money to friends.',
+        st: ['I’d lend it, provided that …', 'If I lent it and …, I’d …', 'Never, unless …'],
+        ex: 'Two. I’d lend a small amount, as long as I could live without it. If I needed it back, I’d just ask.',
+        push: 'Your friend still owes you money from last year. Now he asks again. Yes or no?' },
+      { f: 'Advice is useless: people only do what they already wanted to do.',
+        st: ['If people listened, …', 'I wish I had listened when …', 'If I had followed …, I would have …'],
+        ex: 'Four. My sister told me not to buy my first car, and I bought it anyway. If I had followed her advice, I would have saved a lot of money.',
+        push: 'Then why do thousands of people write to Ivy every week?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "bingo": {
+   "t": "Nine squares. Make a line!",
+   "p": "Pick a square. Do it out loud. Three in a line wins."
+  },
+  "tabuleiro": {
+   "t": "Roll, move, answer the reader.",
+   "p": "Your teacher reads the letter. Answer like Ivy."
+  },
+  "cv-opinioes": {
+   "t": "Ivy’s inbox: what do YOU think?",
+   "p": "Pick 1 to 5. Defend it with a condition."
+  },
+  "cartao": {
+   "t": "Choose a letter. Write Ivy’s answer.",
+   "p": "Four lines: if, provided that, if I were you, if only."
+  },
+  "escolha": {
+   "t": "A or B? Choose and say why.",
+   "p": "Choose one. Say why, with because."
+  },
+  "pode": {
+   "t": "Unit 2: what can you do now?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 2 (provável e imaginário): first/second/third conditional, unless, provided that, as long as, wish e if only; o aluno responde às cartas da coluna da Ivy.",
+  "armadilha": "O brasileiro diz “if you will tell her”, “unless you don’t go” (negação dupla), “if I would be you” e “I wish I have/can”, por calco do subjuntivo português.",
+  "pal": [
+   "if",
+   "unless",
+   "provided that",
+   "as long as",
+   "if I were you",
+   "I wish",
+   "if only",
+   "would have"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: Ivy está de férias e o aluno responde às cartas da coluna.",
+   "perg": "Have you ever asked a stranger for advice?",
+   "pula": "Só leia a capa e abra a primeira porta."
+  },
+  "bingo": {
+   "obj": "Bingo 3×3 de tarefas rápidas com a gramática da unidade, de memória.",
+   "perg": "What will you do if it rains tomorrow?",
+   "pula": "Uma linha basta."
+  },
+  "tabuleiro": {
+   "obj": "Jogo de tabuleiro: o professor lê cada carta com voz dramática e o aluno responde como Ivy.",
+   "perg": "Dear Ivy, what should I do?",
+   "pula": "Pare na metade do tabuleiro."
+  },
+  "cv-opinioes": {
+   "obj": "Três opiniões da caixa da Ivy, de 1 a 5, defendidas com unless e condicionais; o professor pega o oposto.",
+   "perg": "Would you lend money to a friend, provided that…?",
+   "pula": "Duas opiniões bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: a resposta da Ivy a uma carta, com quatro estruturas da unidade.",
+   "perg": "If you were Ivy, what would you say?",
+   "pula": "Duas linhas bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather: escolher A ou B e justificar; o professor também responde.",
+   "perg": "Which one would you rather, and why?",
+   "pula": "Três escolhas bastam."
+  },
+  "pode": {
+   "obj": "Can-do da unidade: ler cada linha e marcar o que já consegue; o resto vai para a lição.",
+   "perg": "Which one is still hard for you?",
+   "pula": "Não corte: é o fechamento da unidade. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa misturando provável, imaginário e arrependimento.",
+   "perg": "If you could change one thing about your week, what would it be?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre conselhos e escolhas, com condicionais e unless.",
+   "perg": "I see your point, but what if…?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve a própria carta para a Ivy e depois se aconselha.",
+   "perg": "If you were Ivy, what would you tell yourself?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Likely, imaginary, and too late.",
+   "p": "Pick a card. Choose the right conditional.",
+   "palavras": [
+    "unless",
+    "provided that",
+    "if I were",
+    "I wish",
+    "if only",
+    "would have"
+   ],
+   "cartas": [
+    {
+     "k": "THIS WEEKEND",
+     "q": "What will you do this weekend, unless something changes?",
+     "fup": "What could change it?",
+     "st": [
+      "I’ll …, unless …",
+      "As long as …, I’ll …"
+     ],
+     "ex": "I’ll go to the beach, unless it rains."
+    },
+    {
+     "k": "A MILLION",
+     "q": "If you had a million dollars tomorrow, what would you do first?",
+     "fup": "Would you tell anybody?",
+     "st": [
+      "If I had …, I would …",
+      "I wouldn’t tell …"
+     ],
+     "ex": "If I had a million dollars, I would pay my parents’ house first."
+    },
+    {
+     "k": "I WISH",
+     "q": "What do you wish were different about your city?",
+     "fup": "Could you change it?",
+     "st": [
+      "I wish my city had …",
+      "I wish people would …"
+     ],
+     "ex": "I wish my city had more trees and fewer cars."
+    },
+    {
+     "k": "IF ONLY",
+     "q": "Tell me about a small “if only” from this year.",
+     "fup": "What would have happened?",
+     "st": [
+      "If only I had …",
+      "If I had …, I would have …"
+     ],
+     "ex": "If only I had bought the tickets earlier. They would have cost half."
+    },
+    {
+     "k": "YOUR RULES",
+     "q": "When would you lend money to a friend?",
+     "fup": "And when never?",
+     "st": [
+      "Provided that …, I would …",
+      "Never, unless …"
+     ],
+     "ex": "Provided that it’s a small amount, I would lend it. Never for a car."
+    },
+    {
+     "k": "DEAR IVY",
+     "q": "If you wrote to Ivy, what would your problem be?",
+     "fup": "What do you think she’d say?",
+     "st": [
+      "I would ask her about …",
+      "She would probably say “If I were you, …”"
+     ],
+     "ex": "I would ask her about my noisy neighbor. She would say “If I were you, I’d talk to him.”"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "The Debate",
+   "t": "Pick a side. Condition everything.",
+   "p": "Your teacher argues the other side.",
+   "palavras": [
+    "unless",
+    "provided that",
+    "if I were you",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Advice from strangers: useful or useless?",
+     "a": "Useful",
+     "b": "Useless",
+     "fa": [
+      "Useful. A stranger tells you the truth, provided that they have no interest.",
+      "Friends only say what you want to hear."
+     ],
+     "fb": [
+      "Useless. If they knew your life, they would answer differently.",
+      "I see your point, but context is everything."
+     ]
+    },
+    {
+     "q": "Honest opinion or a kind lie?",
+     "a": "Honest",
+     "b": "A kind lie",
+     "fa": [
+      "Honest. If I lied, they would make the same mistake again.",
+      "The truth hurts, but it helps."
+     ],
+     "fb": [
+      "A kind lie, unless it’s important.",
+      "If I told the whole truth, I’d have no friends."
+     ]
+    },
+    {
+     "q": "Lend money to family: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes, as long as it’s an amount I can lose.",
+      "Family helps family."
+     ],
+     "fb": [
+      "No, unless it’s an emergency.",
+      "If I had lent it last time, we wouldn’t talk today."
+     ]
+    },
+    {
+     "q": "If you could know your future, would you look?",
+     "a": "I would look",
+     "b": "I wouldn’t",
+     "fa": [
+      "I would. If I knew it, I would plan better.",
+      "No more bad surprises."
+     ],
+     "fb": [
+      "I wouldn’t. If I knew everything, life would be boring.",
+      "I wish I could, but I wouldn’t."
+     ]
+    }
+   ],
+   "fim": "Four rounds. If Ivy had heard you, she would have hired you."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Letter",
+   "t": "Write to Ivy. Then answer yourself.",
+   "p": "Step by step. Use the Unit 2 grammar.",
+   "prof": "Read the student’s letter back in your dramatic Ivy voice before they answer it. Listen for “if I would be you”.",
+   "passos": [
+    {
+     "q": "Dear Ivy: what’s your (small) problem?",
+     "st": [
+      "Dear Ivy, I have a problem: …",
+      "I wish …"
+     ],
+     "ex": "Dear Ivy, my colleague eats my lunch from the fridge. I wish he would stop."
+    },
+    {
+     "q": "What will happen if nothing changes?",
+     "st": [
+      "If nothing changes, I’ll …",
+      "Unless he stops, I …"
+     ],
+     "ex": "If nothing changes, I’ll be hungry every Friday."
+    },
+    {
+     "q": "Now you are Ivy. What’s your advice?",
+     "st": [
+      "If I were you, I would …",
+      "Provided that …, you could …"
+     ],
+     "ex": "If I were you, I would put a funny note on the lunch box."
+    },
+    {
+     "q": "One “if only” to close the column.",
+     "st": [
+      "If only …",
+      "If you had …, you would have …"
+     ],
+     "ex": "If only you had written to me in January!"
+    }
+   ],
+   "fim": "Ivy is back next week. The column is yours."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

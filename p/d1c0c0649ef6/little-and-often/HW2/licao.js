@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Little and Often",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d1c0c0649ef6/little-and-often/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "stress that changes the meaning (a BIG black cat / a big BLACK cat) and talking around a word you don't know; little and often beats a lot, once; relative clauses and comparatives to describe a missing word (a thing that you use to…, like a chair but bigger)",
   "abrir": "How often do you practice English? Is it a little, or a lot, once?",
   "fecho": "Practice <b>little and often</b>: ten minutes every day beats three hours once a month. When a word does not come, do not stop: explain around it. <i>It is a thing that you use to cut paper. It is like a chair, but bigger.</i> And the word with the most stress carries your meaning: <i>a big BLACK cat</i> is not <i>a BIG black cat</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a practice routine. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/d1c0c0649ef6/little-and-often/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A desk at night, ready for tomorrow's practice",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d1c0c0649ef6/little-and-often/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A desk at night, ready for tomorrow's practice",
       "pede": "Look at the picture: a desk at night, with a notebook, headphones and a calendar. Write your own little-and-often plan: what you will do, and when. Use <b>a little every day</b> or <b>little and often</b>.",
       "ph": "Every day I will …",

@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Such a Small Room · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Such a Small Room · The Night Blueprint</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Such a Small Room · The Night Blueprint</h2>
+    <p><b>So</b> + adjective: <b>The room is so small.</b> <b>Such a</b> + adjective + noun: <b>It’s such a small room.</b> No A with plural or uncountable nouns: <b>such loud music</b>, <b>such noisy people</b>. And <b>that</b> opens the result: <b>such a long night that we saw the sun come up.</b> The choice isn’t about meaning; it’s about what comes after. Students say <i>so small room</i> and <i>such small</i>. The story: Room 34, a tiny hotel room next to a party. The screen is the room’s floor plan at night; each correct complaint lights up a problem in its place.</p>
+    <h4>THE ONE QUESTION</h4>
+    <p>Is there a noun after the adjective? Yes: SUCH (A). No: SO. Let your student find it in scene III (the noun comes back at step three), then use it.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Twenty-two short recordings: two versions of each fact (II), four versions of the same room (V), and six sentences with THAT (VII). One guest says “queue”: British for line. Each plays with pause and 0.75×; the words appear only after listening.</p>
+    <h4>YOU ARE THE FRONT DESK</h4>
+    <p>Scene VIII: tap the complaint you heard, answer as the night manager, offer something small, and let your student push. Then swap roles.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>so small room</i>, <i>such small</i>, <i>such a loud music</i>, <i>such a noisy people</i>, <i>such a ugly view</i>, <i>such a long night so…</i></p>
+    <!--conversa--><h4>THE HOT SEAT (IX) AND THE SURPRISE QUESTION</h4>
+<p>Scene IX is now a hot seat, and your student switches sides: in VIII they complained as Room 34; now they threw the party in Room 35. You are the hotel manager with a 200-dollar noise fine (your secret: you forget the fine if the apology is really good). Ask the four questions; they answer in the role with so, such or that. Wait five seconds in silence before you accept anything, and use the PUSH line (only you see it). Recast mistakes quietly (“so small room” → “such a small room”); at the end, ask them to fix one or two sentences themselves.</p>
+<p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I A Place You Stayed, III One Step Up, VI Room 34, VIII Call the Front Desk, IX The Hot Seat.</li>
+      <li><b>Listen</b>: II Whose Version Is Bigger?, V Four Versions, VII That Is Why.</li>
+      <li><b>Focus</b>: IV What Comes After?</li>
+      <li><b>Write</b>: X, their own review. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SUCH A SMALL ROOM (Main B1) · pergunta-surpresa · 27/10/2026 · so / such … that */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'abre', tipo: 'And you?', q: 'What’s the noisiest place you’ve ever tried to sleep?',
+    opc: ['A hotel', 'A bus or plane', 'My own home'], st: ['It was so noisy that …', 'It was such a … that …'],
+    ex: 'My own home. My neighbours had such a big dog that I woke up every night at four.', push: 'What did you do about it? Did you ever complain?' },
+  { cena: 'degrau', tipo: 'Would you rather', q: 'Would you rather stay in a beautiful hotel with thin walls, or an ugly hotel in total silence?',
+    opc: ['Beautiful, thin walls', 'Ugly, silent'], st: ['I’d rather …, because it’s so …', 'Sleep is such an important …'],
+    ex: 'Ugly and silent. Sleep is such an important thing on holiday that I don’t care about the view.', push: 'For one night only, in Paris, with a view of the Eiffel Tower?' },
+  { cena: 'vozes', tipo: 'Opinion', q: 'Online, people make every hotel sound amazing or terrible. Do you believe the stories?',
+    opc: ['Yes, mostly', 'Only the bad ones', 'Not really'], st: ['People are so … that …', 'It’s such a … that …'],
+    ex: 'Only the bad ones. Nobody writes “it was OK”. People are so angry when something goes wrong that they write it the same night.', push: 'And you? Did you ever write a review on the same night?' },
+  { cena: 'ligacao', tipo: 'What if', q: 'It’s 2 a.m. and the party next door is so loud you can’t sleep. Do you knock on the door or call the front desk?',
+    opc: ['Knock on the door', 'Call the front desk', 'Put headphones on'], st: ['I’d …, because it’s so …', 'It’s such a … that …'],
+    ex: 'Knock on the door. It’s such a simple thing to say “please” that I don’t need the manager.', push: 'They open the door and invite you in. Do you go?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SUCH A SMALL ROOM (Main B1 · so / such … that) · conversa · 27/10/2026 · regra 3×3
+   A cadeira quente entra no lugar de "IX · Checkout" (extra, corrigir frases da resenha). Na cena VIII o
+   aluno reclama como o hóspede do 34; aqui ele troca de lado: é quem deu a festa no 35, e o professor, o
+   gerente, faz as perguntas. so / such (a) … that nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'cadeira', troca: 'erros', est: 'o', min: 7, img: 'festa', rot: 'The Hot Seat', t: 'Now switch sides. You threw the party in Room 35.',
+    p: 'Your teacher is the hotel manager. Answer every question in your role, with so, such or that. Don’t pay the fine if you can help it.',
+    formato: 'papel', rot_perg: 'The manager asks',
+    aluno: { quem: 'The guest in Room 35', quer: 'You had the party. You don’t want to pay the fine.' },
+    prof: { quem: 'The hotel manager', quer: 'Wants you to pay a 200-dollar noise fine.', limite: 'Secret: forgets the fine if the apology is really good.' },
+    perguntas: [
+      { q: 'Why was the music so loud at two in the morning?', ex: 'It was such a special night! My best friend got a new job, and we were so happy that we forgot the time.' },
+      { q: 'Room 34 says your friends were such noisy people that he couldn’t sleep. True?', ex: 'They were a bit loud, yes. But the walls are so thin that you can hear a phone in the next room.' },
+      { q: 'How many people were in such a small room?', ex: 'Only eight! OK, eleven. It was such a small room that some of them were in the corridor.' },
+      { q: 'Give me one good reason not to charge you the fine.', ex: 'I’m so sorry about the noise that I’ll buy Room 34 breakfast myself. And it won’t happen again.' }
+    ],
+    st: ['It was such a … that …', 'We were so … that …', 'The walls are so … that …', 'I’m so sorry that …'],
+    push: 'Room 34 is standing next to you now, in his pyjamas. Say sorry to HIM, not to me.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "A place you stayed: amazing or terrible?",
+   "p": "Tap one. Answer three. Keep your big sentence."
+  },
+  "maior": {
+   "t": "Same facts, two stories.",
+   "p": "Play both. Tap the bigger one. Read it out loud."
+  },
+  "degrau": {
+   "t": "The same night, one step bigger.",
+   "p": "Say it. Press. Say the new one. Four times."
+  },
+  "regra": {
+   "t": "Is there a noun after the adjective?",
+   "p": "Choose the word. Then say the sentence."
+  },
+  "vozes": {
+   "t": "Four guests, the same room.",
+   "p": "Play all four. Order them, smallest to biggest."
+  },
+  "planta": {
+   "t": "Room 34. Light up every problem.",
+   "p": "Complain like an angry guest. Your teacher taps."
+  },
+  "that": {
+   "t": "THAT opens the result.",
+   "p": "Choose the ending. Play it. Say the sentence."
+  },
+  "ligacao": {
+   "t": "2 AM. Call the front desk.",
+   "p": "Complain. Your teacher answers. Push for more."
+  },
+  "cv-cadeira": {
+   "t": "Switch sides: you threw the party.",
+   "p": "Answer the manager with so, such or that."
+  },
+  "fim": {
+   "t": "Your place from scene I comes back.",
+   "p": "Review it: so, such, that. To My notes."
+  }
+ },
+ "prep": {
+  "obj": "So + adjetivo, such (a) + adjetivo + substantivo, e that para o resultado: o quarto 34, minúsculo, ao lado de uma festa no quarto 35.",
+  "armadilha": "O brasileiro traduz “tão” sempre por so: “so small room”; diz “such small” sem substantivo e põe a com plural ou incontável: “such a loud music”, “such a noisy people”.",
+  "pal": [
+   "so",
+   "such a",
+   "such",
+   "that",
+   "Room 34",
+   "noise",
+   "front desk",
+   "complaint",
+   "fine"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o quarto 34: o mesmo quarto, e o substantivo decide a palavra.",
+   "perg": "What is the worst room you have ever stayed in?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento: um lugar incrível ou terrível onde o aluno ficou; a frase volta no fim.",
+   "perg": "Was it amazing, or terrible?",
+   "pula": "Duas perguntas bastam; guarde a frase grande."
+  },
+  "maior": {
+   "obj": "Duas versões do mesmo fato: escolher a que deixa a noite maior.",
+   "perg": "Which version sounds bigger?",
+   "pula": "Três fatos bastam."
+  },
+  "degrau": {
+   "obj": "A mesma noite contada quatro vezes, um degrau maior; o substantivo volta no degrau três.",
+   "perg": "What changes when the noun comes back?",
+   "pula": "Duas rodadas bastam."
+  },
+  "regra": {
+   "obj": "A pergunta única: tem substantivo depois do adjetivo? Sim: such (a). Não: so.",
+   "perg": "Is there a noun after the adjective?",
+   "pula": "Corte duas frases."
+  },
+  "vozes": {
+   "obj": "Ouvir quatro hóspedes e ordenar da versão menor para a maior.",
+   "perg": "Which guest made it sound the worst?",
+   "pula": "Ouça uma vez só e ordene juntos."
+  },
+  "planta": {
+   "obj": "Planta do quarto 34: cada reclamação certa acende um problema no lugar.",
+   "perg": "What else was wrong with the room?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "that": {
+   "obj": "That abre o resultado: escolher o final e dizer a frase inteira.",
+   "perg": "What happened because it was so loud?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "ligacao": {
+   "obj": "O professor é o gerente da noite; o aluno reclama e pede mais. Depois trocam.",
+   "perg": "What do you want the hotel to do?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-cadeira": {
+   "obj": "Cadeira quente: o aluno fez a festa no quarto 35 e tenta escapar da multa de 200 dólares.",
+   "perg": "Why was the music so loud?",
+   "pula": "Duas perguntas bastam; use a linha PUSH."
+  },
+  "fim": {
+   "obj": "Escrita: avaliação do lugar da cena I, com so, such e that.",
+   "perg": "Was it such a bad place?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa exagerando com so, such e that, sobre a vida do aluno.",
+   "perg": "What was so good that you can’t forget it?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre viagens e vizinhos, exagerando com so e such.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve em voz alta uma avaliação de cinco estrelas ou de uma estrela.",
+   "perg": "Was it so good, or so bad?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Make it bigger.",
+   "p": "Pick a card. Use so, such or that.",
+   "palavras": [
+    "so",
+    "such a",
+    "such",
+    "that"
+   ],
+   "cartas": [
+    {
+     "k": "A GREAT MEAL",
+     "q": "What is the best meal you have ever had?",
+     "fup": "Where was it?",
+     "st": [
+      "It was such a … meal that …",
+      "The food was so …"
+     ],
+     "ex": "It was such a good meal that I went back the next day."
+    },
+    {
+     "k": "A LONG TRIP",
+     "q": "What was the longest trip of your life?",
+     "fup": "Would you do it again?",
+     "st": [
+      "It was such a long trip that …",
+      "I was so tired that …"
+     ],
+     "ex": "It was such a long trip that I slept for twelve hours after."
+    },
+    {
+     "k": "NEIGHBORS",
+     "q": "Have you ever had noisy neighbors?",
+     "fup": "What did you do?",
+     "st": [
+      "They were so loud that …",
+      "They played such loud music that …"
+     ],
+     "ex": "They played such loud music that the windows shook."
+    },
+    {
+     "k": "A MOVIE",
+     "q": "Which movie was so bad that you left early?",
+     "fup": "Or did you stay?",
+     "st": [
+      "It was so boring that …",
+      "It was such a bad movie that …"
+     ],
+     "ex": "It was so boring that I fell asleep in the cinema."
+    },
+    {
+     "k": "WEATHER",
+     "q": "What was the hottest or coldest day you remember?",
+     "fup": "What did you do?",
+     "st": [
+      "It was so hot that …",
+      "It was such a cold day that …"
+     ],
+     "ex": "It was so hot that we slept on the floor."
+    },
+    {
+     "k": "GOOD PEOPLE",
+     "q": "Who is such a kind person that everybody likes them?",
+     "fup": "Why?",
+     "st": [
+      "… is such a kind person that …",
+      "She is so …"
+     ],
+     "ex": "My aunt is such a kind person that strangers tell her their problems."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "so",
+    "such",
+    "that",
+    "because",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Room 35 should pay the 200-dollar fine?",
+     "a": "Pay",
+     "b": "No fine",
+     "fa": [
+      "Pay. It was such a loud party that nobody slept.",
+      "Rules are rules."
+     ],
+     "fb": [
+      "No fine. A good apology is enough.",
+      "It was just one night."
+     ]
+    },
+    {
+     "q": "A tiny room in the center or a big room far away?",
+     "a": "Tiny, central",
+     "b": "Big, far",
+     "fa": [
+      "Tiny, central. The city is so close that I never stay in the room.",
+      "I only sleep there."
+     ],
+     "fb": [
+      "Big, far. A small room makes me feel so trapped.",
+      "I want space to breathe."
+     ]
+    },
+    {
+     "q": "Complain to the front desk or knock on the party door?",
+     "a": "Front desk",
+     "b": "Knock",
+     "fa": [
+      "The front desk. It’s such an awkward thing to do yourself.",
+      "That’s their job."
+     ],
+     "fb": [
+      "Knock. It’s so much faster.",
+      "Maybe they’ll invite me in."
+     ]
+    },
+    {
+     "q": "Write bad online reviews or keep quiet?",
+     "a": "Write them",
+     "b": "Keep quiet",
+     "fa": [
+      "Write them. Other guests need such information.",
+      "It helps the hotel improve."
+     ],
+     "fb": [
+      "Keep quiet. People are so angry online already.",
+      "I talk to the manager instead."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Five Stars or One",
+   "t": "Review a place out loud.",
+   "p": "Five stars or one. Answer each step.",
+   "prof": "Let the student exaggerate; recast “so nice place” to “such a nice place”.",
+   "passos": [
+    {
+     "q": "Choose a place: a hotel, a restaurant or a shop. Five stars or one?",
+     "st": [
+      "I’m giving … five stars.",
+      "… gets one star."
+     ],
+     "ex": "I’m giving the little hotel in Paraty five stars."
+    },
+    {
+     "q": "What was the place like?",
+     "st": [
+      "It was such a … place.",
+      "The room was so …"
+     ],
+     "ex": "It was such a quiet place, and the room was so clean."
+    },
+    {
+     "q": "What happened because of it?",
+     "st": [
+      "It was so … that …",
+      "It was such a … that …"
+     ],
+     "ex": "The bed was so comfortable that I didn’t want to get up."
+    },
+    {
+     "q": "One last line for other guests.",
+     "st": [
+      "Go! It’s such …",
+      "Don’t go! It’s so …"
+     ],
+     "ex": "Go! It’s such a beautiful view that you’ll forget your phone."
+    }
+   ],
+   "fim": "Your review is done. Read it again, bigger."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

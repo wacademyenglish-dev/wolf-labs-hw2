@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Done in the Morning",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0ec57d2f5135/done-in-the-morning/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "passive voice: be + past participle (is / are / was / were), irregular participles (written, taken, done), the question Was it done? with no did, by + who only when it matters",
   "abrir": "What is done at your work or school that nobody explains?",
   "fecho": "<b>be + past participle</b>: <i>the files are sorted, the memo was found, lunch will be served.</i> Irregular: <i>write → written, take → taken, do → done.</i> The question: <b>Was</b> the door closed? Never <i>Did the door was closed?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a strange morning at the office. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/0ec57d2f5135/done-in-the-morning/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "An office at night, green screens",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The memo was found on a desk at seven.",
-          "img": "https://wolf-labs.pages.dev/p/0ec57d2f5135/done-in-the-morning/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The files are sorted every night.",
-          "img": "https://wolf-labs.pages.dev/p/0ec57d2f5135/done-in-the-morning/img/live-estatua.webp",
+          "img": "../img/live-estatua.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Lunch is served at noon.",
-          "img": "https://wolf-labs.pages.dev/p/0ec57d2f5135/done-in-the-morning/img/live-neve.webp",
+          "img": "../img/live-neve.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -166,7 +166,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0ec57d2f5135/done-in-the-morning/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "An office at night, green screens",
       "pede": "Look at the picture: an office at night, with old computers. Write 2 or 3 sentences about things that are done there. Use the passive: <b>is / are / was / were + past participle</b>.",
       "ph": "The files are … Lunch was …",

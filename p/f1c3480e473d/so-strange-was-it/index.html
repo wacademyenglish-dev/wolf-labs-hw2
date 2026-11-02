@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · So Strange Was It · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 4 · Inversion</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>So Strange Was It · C1 Unit 4 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on so / such + inversion: So bright was the light that…; So quickly did it happen that…; Such was the noise that…, compared with the normal forms (so… that, such a… that).</p><p style="margin:0 0 6px"><b>The story:</b> The Valley Gazette (invented local paper): a blue light over Pine Forest, a farmer’s scared dogs, a circle of burnt grass, and a disappointing explanation: a weather balloon.</p><p style="margin:0 0 6px"><b>About 42 min:</b> I · The Gazette (10) · II · Normal or Dramatic? (9) · III · The Interview (8) · IV · The Mystery Board (15).</p><p style="margin:0"><b>Open with:</b> “Is there a strange story or legend in your town or family?”</p></div><!--/prep-->
+    <p>Students know “so… that”. Today the intensity moves to the front. Read the article with a dramatic voice. Three patterns: So + adjective + be + subject; So + adverb + did + subject + verb; Such + be + the noun. The bingo practises the form fast; the board lets the student tell real strange stories.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>So + adjective + be + subject + that · So + adverb + did + subject + verb + that · Such + be + the noun + that · the normal way: so… that / such a… that · result after that · where it lives: stories, news, speeches</p>
+    <h4>THE GAZETTE</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>NORMAL OR DRAMATIC?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>THE MYSTERY BOARD</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>So strange the light was that</i>, <i>So fast it happened that</i>, <i>Such the noise was that</i>, <i>Such was a noise that</i>, <i>So quickly happened it that</i>, <i>So bright the light was</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE INTERVIEW (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the rule, your student is Farmer Joe Lane and you are a TV reporter from the city. Ask the four questions in character; the student answers with drama (So bright was the light that…, Such was the noise that…). Your secret plan (only you see it) is to make him say “aliens” on camera. Wait five seconds in silence before each answer, and use the PUSH line for a follow-up he can’t prepare for. At the end, the student chooses Joe’s last line on camera. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Gazette.</li>
+      <li><b>Focus</b>: II · Normal or Dramatic?.</li>
+      <li><b>Out loud</b>: III · The Interview and IV · The Mystery Board.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SO STRANGE WAS IT (Main C1) · pergunta-surpresa · 28/10/2026 · so / such + inversão */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'Opinion', q: 'A blue light over the forest at 2 AM: what do you think it really was?',
+    opc: ['A balloon', 'Something we can’t explain', 'Someone’s joke'], st: ['So … was it that I think …', 'Such was … that …'],
+    ex: 'Someone’s joke. So perfect was that circle in the grass that it looks like a person made it.', push: 'If it WAS a joke, who in the town did it? Give me a name and a reason.' },
+  { cena: 'descobre', tipo: 'And you?', q: 'What is the strangest thing you have ever seen with your own eyes?',
+    opc: ['In the sky', 'On the street', 'At home'], st: ['So strange was it that …', 'Such was my surprise that …'],
+    ex: 'On the street. A man was walking a pig on a lead. Such was my surprise that I walked into a lamp post.', push: 'Did anybody believe you? Tell it again, bigger.' },
+  { cena: 'tabuleiro', tipo: 'Would you rather', q: 'Would you rather see a real UFO with no camera, or have a perfect video of something boring?',
+    opc: ['A real UFO', 'A perfect video'], st: ['So amazing would it be that …', 'Such would be … that …'],
+    ex: 'A real UFO. So incredible would it be that I wouldn’t need anybody to believe me.', push: 'Nobody believes you, not even your best friend. Still worth it?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SO STRANGE WAS IT (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A cadeira quente TROCA "III · Bingo" (lacunas, prática controlada; a mesma forma volta no tabuleiro do IV).
+   No meio da aula, o aluno vira o fazendeiro Joe Lane, entrevistado por uma repórter da cidade (o
+   professor). No fim, ele escolhe a última frase para a câmera: alienígenas, balão ou "não sei".
+   O alvo (So bright was … that…, Such was … that…, So quickly did … that…) mora nos iniciadores.
+   Formato: hot seat (papel + uma escolha final). */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'fazendeiro', troca: 'bingo', est: 'o', min: 8, img: 'conversa', rot: 'The Interview', t: 'You are Joe Lane. The cameras are on.',
+    p: 'Your teacher is a TV reporter from the city. Answer in character, with drama: So… was… that…, Such was… that…',
+    formato: 'papel', rot_perg: 'The reporter asks',
+    aluno: { quem: 'Joe Lane, the farmer', quer: 'You saw the light. You don’t believe the balloon story.' },
+    prof: { quem: 'A TV reporter', quer: 'A funny two-minute story for the evening news.', limite: 'Secret plan: make him say “aliens” on camera.' },
+    perguntas: [
+      { q: '“Mr. Lane, what exactly did you see at 2 AM?”', ex: 'So bright was the light that I thought it was morning. I went out to feed the cows!' },
+      { q: '“And your dogs? We heard they hid under the bed.”', ex: 'Such was the noise that they didn’t come out until lunchtime. They still won’t go near the forest.' },
+      { q: '“The scientists say it was a weather balloon. Do you believe them?”', ex: 'So quickly did they decide that I don’t think they even looked. A balloon doesn’t burn a circle in the grass.' },
+      { q: '“Some people say you’re selling tickets to see the circle. Is that true?”', ex: 'Such was the interest that I had to do something! Five dollars, and you get a slice of Alien Cake.' }
+    ],
+    st: ['So bright was … that …', 'Such was … that …'],
+    push: 'Surprise him: “Isn’t it true that YOU own the café that sells Alien Cake?”',
+    acordo: { tag: 'Your last line on camera', q: 'What does Joe say at the end?', opc: ['Aliens', 'A balloon', 'Nobody knows'],
+      st: ['So strange was it that …'],
+      ex: 'Nobody knows. So strange was that night that I’ll be telling the story until I’m a hundred.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "The night the valley woke up.",
+   "p": "Read it like a radio reporter. Then look closer."
+  },
+  "descobre": {
+   "t": "Same story, two styles.",
+   "p": "Compare A and B. What moves to the front?"
+  },
+  "cv-fazendeiro": {
+   "t": "You are Joe Lane. Cameras on.",
+   "p": "Answer the reporter with drama: So… was… that…"
+  },
+  "tabuleiro": {
+   "t": "Roll, move, make it dramatic.",
+   "p": "Tell your square’s strange event with So or Such."
+  }
+ },
+ "prep": {
+  "obj": "So/such com inversão (So bright was the light that…, So quickly did it happen that…, Such was the noise that…): a luz azul sobre Pine Forest no jornal do vale.",
+  "armadilha": "O português mantém a ordem normal: “So strange the light was that”, “So fast it happened that”, “Such the noise was that”, e “Such was a noise” com artigo.",
+  "pal": [
+   "So bright was … that",
+   "So quickly did … that",
+   "Such was the … that",
+   "so … that",
+   "such a … that",
+   "a circle of burnt grass",
+   "a weather balloon"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: a intensidade vai para a frente da frase, como em notícias e lendas.",
+   "perg": "Is there a strange story in your town or family?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Artigo da Valley Gazette lido com voz dramática: a luz azul, os cães, a grama queimada e o balão.",
+   "perg": "What was the disappointing explanation?",
+   "pula": "Leia e faça duas perguntas de sentido."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: forma normal x dramática; os três padrões e as armadilhas.",
+   "perg": "What moved to the front, and what came after?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "cv-fazendeiro": {
+   "obj": "O aluno é o fazendeiro Joe Lane; o repórter da cidade quer que ele diga “aliens” na câmera.",
+   "perg": "Joe, what did you see that night?",
+   "pula": "Duas perguntas e a fala final de Joe."
+  },
+  "tabuleiro": {
+   "obj": "Tabuleiro: cada casa traz um evento estranho para contar com So ou Such na frente.",
+   "perg": "How strange was it?",
+   "pula": "Pare na metade do tabuleiro. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Momentos intensos da vida do aluno contados com so/such invertidos.",
+   "perg": "So … was it that what happened?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre mistérios, explicações e mídia, com so/such na frente.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta uma lenda ou história estranha de sua cidade como manchete de jornal.",
+   "perg": "What’s the strangest story where you live?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Put the drama up front.",
+   "p": "Pick a card. Start with So or Such.",
+   "palavras": [
+    "So … was … that",
+    "So … did … that",
+    "Such was the … that",
+    "so … that",
+    "such a … that"
+   ],
+   "cartas": [
+    {
+     "k": "THE STORM",
+     "q": "Tell me about the worst storm or heat you remember.",
+     "fup": "What did you do?",
+     "st": [
+      "So strong was the … that …",
+      "Such was the heat that …"
+     ],
+     "ex": "Such was the heat that summer that we slept on the kitchen floor."
+    },
+    {
+     "k": "A FAST DAY",
+     "q": "When did something happen so fast you couldn’t react?",
+     "fup": "What did you feel after?",
+     "st": [
+      "So quickly did it happen that …"
+     ],
+     "ex": "So quickly did it happen that I only screamed after the car had gone."
+    },
+    {
+     "k": "THE CROWD",
+     "q": "What’s the biggest crowd you’ve ever been in?",
+     "fup": "Would you go again?",
+     "st": [
+      "Such was the crowd that …",
+      "So loud was it that …"
+     ],
+     "ex": "Such was the crowd at the final that we couldn’t move for an hour."
+    },
+    {
+     "k": "A GOOD MEAL",
+     "q": "Describe a meal you still remember years later.",
+     "fup": "Where was it?",
+     "st": [
+      "So good was the … that …"
+     ],
+     "ex": "So good was my aunt’s fish stew that I asked for the recipe three times."
+    },
+    {
+     "k": "SURPRISED",
+     "q": "When were you so surprised that you couldn’t speak?",
+     "fup": "What did you say in the end?",
+     "st": [
+      "Such was my surprise that …",
+      "So shocked was I that …"
+     ],
+     "ex": "Such was my surprise that I just laughed when they offered me the job."
+    },
+    {
+     "k": "THE EXPLANATION",
+     "q": "Have you ever been disappointed by the real explanation for something?",
+     "fup": "Did you prefer the mystery?",
+     "st": [
+      "So boring was the truth that …"
+     ],
+     "ex": "So boring was the truth that I kept telling the ghost version anyway."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "So … was … that …",
+    "Such was … that …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "A weather balloon: do you believe the official explanation?",
+     "a": "Believe it",
+     "b": "Doubt it",
+     "fa": [
+      "Believe it. So common are balloons that it’s the obvious answer.",
+      "Simple explanations are usually right."
+     ],
+     "fb": [
+      "Doubt it. So bright was the light that a balloon can’t explain it.",
+      "Why were the dogs so scared?"
+     ]
+    },
+    {
+     "q": "Local newspapers: should they print strange stories?",
+     "a": "Print them",
+     "b": "Stick to facts",
+     "fa": [
+      "Print them. Such is the fun that people buy the paper.",
+      "Small towns need stories."
+     ],
+     "fb": [
+      "Stick to facts. Fear spreads faster than truth.",
+      "A newspaper isn’t a campfire."
+     ]
+    },
+    {
+     "q": "Should the reporter push Joe to say “aliens”?",
+     "a": "It’s fair",
+     "b": "It’s wrong",
+     "fa": [
+      "It’s fair. He’s an adult; he can say no.",
+      "TV needs a headline."
+     ],
+     "fb": [
+      "It’s wrong. So easy is it to make a man look silly.",
+      "Joe has to live in that valley tomorrow."
+     ]
+    },
+    {
+     "q": "Mystery or explanation: which do you prefer?",
+     "a": "Mystery",
+     "b": "Explanation",
+     "fa": [
+      "Mystery. Such is the magic of not knowing.",
+      "Life needs a little wonder."
+     ],
+     "fb": [
+      "Explanation. So satisfying is the truth that I sleep better.",
+      "Mysteries are just questions nobody checked."
+     ]
+    }
+   ],
+   "fim": "Four rounds. So good was the debate that nobody noticed the time."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Strange Story",
+   "t": "A strange story from your town.",
+   "p": "One step at a time. Tell it like the Gazette.",
+   "prof": "Any legend or odd local event works; keep it light. Push for one So … and one Such … inversion.",
+   "passos": [
+    {
+     "q": "Write the headline. Where and when did it happen?",
+     "st": [
+      "The night …",
+      "In … , …"
+     ],
+     "ex": "The night the bells rang by themselves: Ouro Preto, 1999."
+    },
+    {
+     "q": "What happened? Put the intensity up front.",
+     "st": [
+      "So … was the … that …"
+     ],
+     "ex": "So loud were the bells that the whole town came out in pajamas."
+    },
+    {
+     "q": "How did people react?",
+     "st": [
+      "Such was the … that …",
+      "So quickly did … that …"
+     ],
+     "ex": "Such was the panic that the priest called the fire brigade."
+    },
+    {
+     "q": "What was the explanation, real or rumoured?",
+     "st": [
+      "It turned out that …",
+      "Nobody ever …"
+     ],
+     "ex": "It turned out that a cat was trapped in the tower. Nobody believes it, of course."
+    }
+   ],
+   "fim": "Front page done. So good was it that the Gazette wants more."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

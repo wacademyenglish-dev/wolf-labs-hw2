@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Absolutely Exhausted · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:ital,wght@0,300;0,500;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Absolutely Exhausted · The Thermometer</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Absolutely Exhausted · The Thermometer</h2>
+    <p>Normal adjectives have degrees: <b>a bit / quite / very tired</b>. Extreme adjectives already mean “very, very”: <b>absolutely exhausted</b>, never <i>very exhausted</i>. And never <i>absolutely good</i>. <b>Really</b> works with both. Lena reads the review queue at night and deletes the reviews nobody can understand. The screen is a thermometer: very takes the mercury up to three; absolutely takes it to five.</p>
+    <h4>DOES IT ALREADY MEAN “VERY, VERY”?</h4>
+    <p>When your student is stuck, ask that one question. Yes: absolutely. No: very.</p>
+    <h4>REALLY IS NEVER WRONG</h4>
+    <p>If your student says <i>really exhausted</i>, accept it and praise it, then ask for the other word too.</p>
+    <h4>SCENE I COMES BACK</h4>
+    <p>Write down the two words your student uses for their best and worst movies. They come back in scene X, stronger.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>very exhausted</i>, <i>very amazing</i>, <i>very huge</i>, <i>absolutely good</i>, <i>absolutely tired</i>, and <i>the movie is bored</i>.</p>
+    <!--conversa--><h4>THE REVIEW JURY (VII) AND THE SURPRISE QUESTION</h4>
+<p>Scene VII is now a jury. Three reviews arrive in Lena’s queue with evidence (a one-star review because of cold popcorn, a café owner’s review of her own café, a hotel guest who says the room was absolutely filthy). Your student reads the evidence, gives a verdict and says why with very, absolutely or really. There is no right answer. Wait five seconds in silence, defend the other side, and use the PUSH line (only you see it). Recast mistakes quietly (“very exhausted” → “absolutely exhausted”); at the end, ask them to fix one or two sentences themselves.</p>
+<p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Best and Worst, VI Lena’s Queue, VII The Review Jury, VIII Your Review.</li>
+      <li><b>Listen</b>: IV Six Reviewers (the transcript opens after they answer).</li>
+      <li><b>Focus</b>: II Normal and Extreme, III The Thermometer, V Very Exhausted, IX The Deleted Review.</li>
+      <li><b>Write</b>: X, reviews of their best and worst movies. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* ABSOLUTELY EXHAUSTED (Main B1) · pergunta-surpresa · 27/10/2026 · gradable × extreme adjectives */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'abre', tipo: 'And you?', q: 'Do you read reviews before you watch a movie, or do you just go?',
+    opc: ['I always read them', 'Sometimes', 'I just go'], st: ['I’m really …, so I …', 'Reviews are very …', 'It’s absolutely …'],
+    ex: 'I just go. If I read reviews, I know too much, and it’s a bit boring.', push: 'Was there a movie that everybody loved and you hated?' },
+  { cena: 'termo', tipo: 'Would you rather', q: 'Would you rather watch an absolutely terrible movie with friends, or a very good movie alone?',
+    opc: ['Terrible, with friends', 'Good, alone'], st: ['I’d rather …, because …', 'It would be absolutely …'],
+    ex: 'Terrible with friends. It would be absolutely hilarious. We would laugh at every scene.', push: 'Which terrible movie would you choose? Name one.' },
+  { cena: 'fila', tipo: 'Opinion', q: 'Should people be paid to write reviews?',
+    opc: ['Yes', 'No', 'Only if they say it'], st: ['It’s really important that …', 'Paid reviews are a bit …', 'It would be absolutely …'],
+    ex: 'Only if they say it. A paid review can be very useful, but it’s absolutely wrong to hide it.', push: 'Would YOU trust a review if you knew it was paid?' },
+  { cena: 'lugares', tipo: 'What if', q: 'A restaurant was really bad, and the owner is your neighbour. Do you write the review?',
+    opc: ['Yes, the truth', 'Yes, but kind', 'No review'], st: ['The food was quite …, but …', 'I wouldn’t say “absolutely …”', 'I’d tell him first.'],
+    ex: 'Yes, but kind. I’d say the food was quite cold, not absolutely terrible. And I’d tell him first.', push: 'He reads it the next morning and knocks on your door. What do you say?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* ABSOLUTELY EXHAUSTED (Main B1 · gradable × extreme adjectives) · conversa · 27/10/2026 · regra 3×3
+   O júri entra no lugar de "VII · Climb the Scale" (extra, subir as escalas em voz alta, prática controlada).
+   Lena não só apaga resenhas confusas: três casos chegam com provas, e o aluno decide se a resenha fica,
+   volta para edição ou sai. very / absolutely / really nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'juri', troca: 'escala', est: 'o', min: 7, img: 'mesa', rot: 'The Review Jury', t: 'Three reviews, three complaints. You are the jury.',
+    p: 'Read the evidence. Choose a verdict, or say your own. Say why with very, absolutely or really. Your teacher defends the other side.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The popcorn', sit: 'A one-star review of a new movie: “Absolutely terrible night.”',
+        provas: ['Everybody else gave the movie four or five stars.', 'He stayed until the end.', 'He wrote: “The popcorn was absolutely freezing.”'],
+        q: 'Is the one-star review fair?', opc: ['Keep it', 'Ask him to edit it', 'Delete it'],
+        st: ['The popcorn was …, but the movie …', 'It’s really unfair, because …', 'He was very …, so …'],
+        ex: 'Ask him to edit it. Cold popcorn is very annoying, but it isn’t the movie. One star for the cinema, not for the film.',
+        push: 'He paid twenty dollars for that night. Isn’t the whole night the review?' },
+      { tag: 'The café', sit: 'A five-star review: “Absolutely amazing coffee. The best in the city.”',
+        provas: ['The name on the review is “Mia”.', 'The café owner’s name is Mia.', 'The coffee really is good: forty other people say so.'],
+        q: 'What do you do with Mia’s review?', opc: ['Keep it', 'Keep it with a note', 'Delete it'],
+        st: ['It’s absolutely wrong to …', 'The coffee is really good, but …', 'It’s a bit …, not …'],
+        ex: 'Delete it. The coffee is really good, but writing your own review is absolutely wrong. Let the forty people speak.',
+        push: 'Her café is very small and very new. Nobody knows it. Still delete?' },
+      { tag: 'The hotel', sit: 'A two-star review of a hotel: “The room was absolutely filthy.”',
+        provas: ['The guest sent no photos.', 'The hotel sent photos of a clean room.', 'Three other guests that month said “quite clean”.'],
+        q: 'Who do you believe?', opc: ['The guest', 'The hotel', 'Need more evidence'],
+        st: ['“Filthy” is very strong, so …', 'Quite clean isn’t absolutely …', 'I really need …'],
+        ex: 'Need more evidence. “Absolutely filthy” is very strong, and “quite clean” is not “absolutely spotless”. I’d ask the guest for one photo.',
+        push: 'The hotel paid for those photos. The guest is just a guest. Does that change your verdict?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Your best and worst movies.",
+   "p": "Your teacher is the host. Answer out loud."
+  },
+  "pares": {
+   "t": "Every normal word has an extreme partner.",
+   "p": "Find the partner. Say both: very tired, absolutely exhausted."
+  },
+  "termo": {
+   "t": "Very to three. Absolutely to five.",
+   "p": "Pick the word that fits. Say a full sentence."
+  },
+  "ouve": {
+   "t": "Six reviewers left voice notes.",
+   "p": "Play each one. Which word fits the adjective?"
+  },
+  "erros": {
+   "t": "Five sentences have a problem.",
+   "p": "Pick the fix. Then say the whole sentence."
+  },
+  "fila": {
+   "t": "The words must match the stars.",
+   "p": "Read the stars. Pick the words. Read it with feeling."
+  },
+  "cv-juri": {
+   "t": "Three reviews. You are the jury.",
+   "p": "Read the evidence. Give a verdict. Say why."
+  },
+  "lugares": {
+   "t": "Three places. Review each one.",
+   "p": "Tap the stars. Review it out loud."
+  },
+  "apagada": {
+   "t": "“This movie is bored.” What did they mean?",
+   "p": "Rewrite it in three clear sentences."
+  },
+  "fim": {
+   "t": "Your two movies come back.",
+   "p": "Review your best and worst movie. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Adjetivos normais (very tired) e extremos (absolutely exhausted), e really com os dois: Lena lê a fila de resenhas à noite e apaga as que ninguém entende.",
+  "armadilha": "O português aceita “muito exausto” e “muito enorme”, então sai “very exhausted”, “very huge”; também “absolutely good” e “the movie is bored” (aborrecido = boring).",
+  "pal": [
+   "very",
+   "absolutely",
+   "really",
+   "exhausted",
+   "amazing",
+   "awful",
+   "huge",
+   "boring / bored",
+   "review"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a Lena e a fila de resenhas da madrugada.",
+   "perg": "Do you read reviews before you watch a movie?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o melhor e o pior filme do aluno. Anote as duas palavras: voltam na cena X.",
+   "perg": "What is the worst movie you have ever seen?",
+   "pula": "Duas perguntas bastam, mas anote as palavras."
+  },
+  "pares": {
+   "obj": "Ligar cada adjetivo normal ao seu par extremo e dizer os dois.",
+   "perg": "Does it already mean “very, very”?",
+   "pula": "Quatro pares bastam."
+  },
+  "termo": {
+   "obj": "O termômetro: very vai até três, absolutely até cinco, really serve para os dois.",
+   "perg": "Very or absolutely?",
+   "pula": "Corte metade; não corte a pergunta do “very, very”."
+  },
+  "ouve": {
+   "obj": "Ouvir seis recados de voz e decidir que palavra cabe antes do adjetivo.",
+   "perg": "Which word could go before that adjective?",
+   "pula": "Três recados bastam."
+  },
+  "erros": {
+   "obj": "Corrigir very exhausted, absolutely good e companhia; uma frase já está certa.",
+   "perg": "What is wrong with this sentence?",
+   "pula": "Três frases bastam."
+  },
+  "fila": {
+   "obj": "Ajustar as palavras às estrelas e ler a resenha com emoção.",
+   "perg": "Two stars or five? Which words match?",
+   "pula": "Duas resenhas bastam."
+  },
+  "cv-juri": {
+   "obj": "Júri: pipoca fria, dona elogiando o próprio café, hotel imundo; veredito com very/absolutely/really.",
+   "perg": "Is this review fair? Why?",
+   "pula": "Dois casos bastam."
+  },
+  "lugares": {
+   "obj": "O aluno avalia três lugares em voz alta, com as palavras certas para as estrelas.",
+   "perg": "How many stars, and why?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "apagada": {
+   "obj": "Reescrever “This movie is bored” em três frases claras (bored x boring).",
+   "perg": "Was the movie bored, or boring?",
+   "pula": "Cena extra: uma frase basta."
+  },
+  "fim": {
+   "obj": "Escrita: resenha do melhor e do pior filme, com as palavras da cena I mais fortes.",
+   "perg": "How would you rate your worst movie now?",
+   "pula": "Uma resenha basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa pessoal com adjetivos normais e extremos.",
+   "perg": "When were you absolutely exhausted?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate curto sobre resenhas e notas, com argumentos.",
+   "perg": "Which side are you on, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve e fala uma resenha completa de um lugar real, passo a passo.",
+   "perg": "What was absolutely amazing about it?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Very, really or absolutely?",
+   "p": "Pick a card. Answer with the right word.",
+   "palavras": [
+    "very",
+    "really",
+    "absolutely"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WEEK",
+     "q": "When were you absolutely exhausted this month?",
+     "fup": "What did you do about it?",
+     "st": [
+      "I was absolutely exhausted after …",
+      "I was really tired, so …"
+     ],
+     "ex": "I was absolutely exhausted after a twelve-hour day, so I went straight to bed."
+    },
+    {
+     "k": "A GREAT MEAL",
+     "q": "Tell me about a meal that was absolutely delicious.",
+     "fup": "Would you go back there?",
+     "st": [
+      "The … was absolutely delicious.",
+      "It was very good, but …"
+     ],
+     "ex": "The fish was absolutely delicious, but the dessert was only quite good."
+    },
+    {
+     "k": "A BAD TRIP",
+     "q": "Have you ever had a trip that was awful?",
+     "fup": "What went wrong?",
+     "st": [
+      "It was absolutely awful because …",
+      "The hotel was really …"
+     ],
+     "ex": "It was absolutely awful because it rained every day."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Is your city big, or absolutely huge?",
+     "fup": "What do you like about it?",
+     "st": [
+      "It’s very big, but …",
+      "It’s absolutely huge, and …"
+     ],
+     "ex": "It’s absolutely huge, and the traffic is really terrible."
+    },
+    {
+     "k": "BORING THINGS",
+     "q": "What is the most boring thing you have to do every week?",
+     "fup": "How do you make it less boring?",
+     "st": [
+      "… is really boring.",
+      "I get bored when …"
+     ],
+     "ex": "Paying bills is really boring. I get bored after five minutes."
+    },
+    {
+     "k": "ONLINE REVIEWS",
+     "q": "Do you trust five-star reviews?",
+     "fup": "Have you ever written one?",
+     "st": [
+      "I don’t trust them because …",
+      "I once wrote …"
+     ],
+     "ex": "I don’t trust them because some owners write their own reviews."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Defend it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "absolutely",
+    "really",
+    "because",
+    "I mean"
+   ],
+   "rodadas": [
+    {
+     "q": "Read reviews before a movie, or go in blind?",
+     "a": "Read reviews",
+     "b": "Go in blind",
+     "fa": [
+      "Read them. Two hours is a lot of time.",
+      "Why waste a night on an absolutely awful movie?"
+     ],
+     "fb": [
+      "Go in blind. Reviews spoil the surprise.",
+      "A movie critics hate can be really good."
+     ]
+    },
+    {
+     "q": "Should an owner be allowed to review her own café?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. She knows the place better than anyone.",
+      "People can see who wrote it."
+     ],
+     "fb": [
+      "No. It isn’t fair to the customers.",
+      "Of course she thinks it’s absolutely amazing."
+     ]
+    },
+    {
+     "q": "One star for cold popcorn: fair or unfair?",
+     "a": "Fair",
+     "b": "Unfair",
+     "fa": [
+      "Fair. You paid for it, so it should be hot.",
+      "Small things matter in a good cinema."
+     ],
+     "fb": [
+      "Unfair. The movie itself was really good.",
+      "One star is for an absolutely terrible night."
+     ]
+    },
+    {
+     "q": "Honest bad reviews: helpful or cruel?",
+     "a": "Helpful",
+     "b": "Cruel",
+     "fa": [
+      "Helpful. Other people save their money.",
+      "The owner can fix the problem."
+     ],
+     "fb": [
+      "Cruel. A small business can close.",
+      "Talk to the owner first, not the internet."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Absolutely nobody won, and that’s fine."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Review",
+   "t": "Review a real place.",
+   "p": "Four steps. Match the words to the stars.",
+   "prof": "Push for one extreme adjective per step, and catch any very + extreme.",
+   "passos": [
+    {
+     "q": "Pick a place you know: a restaurant, a hotel or a shop. How many stars?",
+     "st": [
+      "I give … stars to …"
+     ],
+     "ex": "I give four stars to the little Italian place near my office."
+    },
+    {
+     "q": "What was really good about it?",
+     "st": [
+      "The … was absolutely …",
+      "The … was really …"
+     ],
+     "ex": "The pasta was absolutely delicious and the staff were really friendly."
+    },
+    {
+     "q": "What was not so good?",
+     "st": [
+      "The only problem was …",
+      "It was a bit …"
+     ],
+     "ex": "The only problem was the noise. It was a bit loud on Friday night."
+    },
+    {
+     "q": "Would you tell a friend to go? Why?",
+     "st": [
+      "I’d tell a friend to go because …",
+      "I wouldn’t go back because …"
+     ],
+     "ex": "I’d tell a friend to go because the food is absolutely amazing for the price."
+    }
+   ],
+   "fim": "Lena reads your review and approves it. Four stars, clear words."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

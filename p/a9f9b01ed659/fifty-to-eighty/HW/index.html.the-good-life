@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOLF LABS | Homework App</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { bgDark: '#1A1110', panelDark: '#2A1C1A', panelHover: '#3D2A27', textLight: '#FDFBF7', textMuted: '#A69B97', accentGold: '#D4AF37', accentBlue: '#3B82F6', dangerRed: '#E11D48' },
+                    fontFamily: { heading: ['Playfair Display', 'serif'], body: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: #0F0A09; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: 'Inter', sans-serif; }
+        #phone-frame { width: 375px; height: 812px; background: #1A1110; border-radius: 40px; border: 12px solid #000; overflow: hidden; position: relative; box-shadow: 0 20px 60px rgba(212,175,55,0.15); }
+        .notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 150px; height: 30px; background: #000; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; z-index: 50; }
+        .fade-in { animation: fadeIn 0.3s ease-in forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateX(10px); } to { opacity: 1; transform: translateX(0); } }
+        /* Confetti */
+        .confetti { position: absolute; width: 8px; height: 8px; background-color: #D4AF37; opacity: 0; }
+        @keyframes fall { 0% { opacity: 1; transform: translateY(-50px) rotate(0deg); } 100% { opacity: 0; transform: translateY(800px) rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <div id="phone-frame">
+        <div class="notch"></div>
+        
+        <!-- UI Header -->
+        <header class="pt-12 pb-4 px-6 bg-panelDark border-b border-panelHover flex justify-between items-center z-40 relative">
+            <div class="font-heading italic font-bold text-accentGold text-lg tracking-widest">WOLF<span class="text-textLight">HW</span></div>
+            <div class="text-xs font-mono text-textMuted" id="q-counter">Q 1/15</div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="h-1 bg-bgDark w-full">
+            <div id="progress-bar" class="h-full bg-accentGold transition-all duration-300 shadow-[0_0_8px_rgba(212,175,55,0.5)]" style="width: 0%"></div>
+        </div>
+
+        <!-- Main Content -->
+        <main id="app-content" class="p-6 h-[calc(100%-100px)] overflow-y-auto relative text-textLight">
+            <!-- Start Screen -->
+            <div id="screen-start" class="flex flex-col items-center justify-center h-full text-center fade-in">
+                <i class="fa-solid fa-scale-balanced text-7xl text-accentGold mb-6" style="text-shadow: 0 0 20px rgba(212,175,55,0.5);"></i>
+                <h1 class="font-heading italic text-4xl font-black mb-2 tracking-widest">The Good Life</h1>
+                <p class="text-textMuted mb-10 text-sm">Homework Module B2<br>3rd & Mixed Conditionals</p>
+                <button onclick="startQuiz()" class="bg-accentGold/20 text-accentGold border border-accentGold w-full py-4 rounded-xl font-bold font-body tracking-widest uppercase text-lg shadow-lg hover:bg-accentGold hover:text-bgDark transition-colors">START ARCHIVE</button>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="screen-quiz" class="hidden flex-col h-full fade-in">
+                <div class="flex-1 flex flex-col justify-center">
+                    <p id="question-text" class="font-body text-2xl font-bold mb-8 text-center leading-snug"></p>
+                    <div id="options-container" class="flex flex-col gap-4">
+                        <!-- Options injected here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Screen -->
+            <div id="screen-result" class="hidden flex-col items-center justify-center h-full text-center fade-in z-10 relative">
+                <div id="rank-icon" class="text-7xl mb-4 text-accentGold" style="text-shadow: 0 0 20px rgba(212,175,55,0.4);"></div>
+                <h2 class="font-heading italic text-5xl font-black mb-2 text-textLight" id="final-score"></h2>
+                <p class="text-textMuted font-mono mb-8 uppercase tracking-widest text-sm" id="rank-title"></p>
+                <div class="bg-panelDark p-5 rounded-2xl w-full border border-panelHover mb-8 shadow-inner text-left">
+                    <p class="text-sm text-textLight leading-relaxed"><span class="text-accentGold font-bold">3rd Cond (Past Result):</span><br>Would have + V3.<br><span class="text-accentBlue font-bold">Mixed (Present Result):</span><br>Would + V1.</p>
+                </div>
+                <button onclick="location.reload()" class="bg-panelHover border border-textMuted text-textMuted w-full py-4 rounded-xl font-bold font-body tracking-widest uppercase">RESTART STUDY</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const questions = [
+            { q: "If she had worked less, she _____ happier now.", o: ["would have been", "would be", "will be"], a: 1 },
+            { q: "If they had invested the money, they _____ rich today.", o: ["would be", "would have been", "were"], a: 0 },
+            { q: "He crashed his car yesterday. If he had driven carefully, he _____.", o: ["wouldn't have crashed", "wouldn't crash", "didn't crash"], a: 0 },
+            { q: "I have a headache today because I didn't sleep. If I had slept, I _____ a headache.", o: ["wouldn't have had", "wouldn't have", "won't have"], a: 1 },
+            { q: "If I _____ known you were coming, I would have baked a cake.", o: ["have", "had", "would"], a: 1 },
+            { q: "They wouldn't have got divorced if they _____ day in and day out.", o: ["didn't bicker", "hadn't bickered", "wouldn't bicker"], a: 1 },
+            { q: "If he had leaned into his relationships, he _____ lonely right now.", o: ["wouldn't have been", "won't be", "wouldn't be"], a: 2 },
+            { q: "Working 80 hours a week took a _____ on his health.", o: ["toll", "tax", "fee"], a: 0 },
+            { q: "Hindsight is _____. It's easy to know what to do after it happens.", o: ["10/10", "20/20", "perfect"], a: 1 },
+            { q: "If I had bought Bitcoin in 2010, I _____ a millionaire today.", o: ["would have been", "will be", "would be"], a: 2 },
+            { q: "There is no quick _____ for a broken marriage.", o: ["fix", "repair", "solution"], a: 0 },
+            { q: "If we _____ studied harder last year, we would have passed the exam.", o: ["had", "have", "were"], a: 0 },
+            { q: "I wouldn't be so tired today if I _____ stayed up late last night.", o: ["haven't", "didn't", "hadn't"], a: 2 },
+            { q: "If she had taken the job, she _____ living in New York now.", o: ["would be", "would have been", "is"], a: 0 },
+            { q: "If they had left earlier, they _____ the train yesterday.", o: ["wouldn't miss", "wouldn't have missed", "didn't miss"], a: 1 }
+        ];
+
+        let currentQ = 0;
+        let score = 0;
+
+        function startQuiz() {
+            document.getElementById('screen-start').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+            document.getElementById('screen-quiz').style.display = 'flex';
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const q = questions[currentQ];
+            document.getElementById('q-counter').innerText = `Q ${currentQ + 1}/${questions.length}`;
+            document.getElementById('progress-bar').style.width = `${((currentQ) / questions.length) * 100}%`;
+            document.getElementById('question-text').innerText = q.q;
+            
+            const optsContainer = document.getElementById('options-container');
+            optsContainer.innerHTML = '';
+            
+            q.o.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'w-full bg-panelDark border border-panelHover text-left p-5 rounded-xl text-lg hover:border-accentGold transition-colors';
+                btn.innerText = opt;
+                btn.onclick = () => handleAnswer(idx, q.a, btn, optsContainer);
+                optsContainer.appendChild(btn);
+            });
+        }
+
+        function handleAnswer(selected, correct, btn, container) {
+            Array.from(container.children).forEach(b => b.disabled = true);
+            
+            if (selected === correct) {
+                btn.classList.add('bg-accentGold', 'border-accentGold', 'text-bgDark', 'font-bold');
+                score++;
+            } else {
+                btn.classList.add('bg-dangerRed', 'border-dangerRed', 'text-textLight');
+                container.children[correct].classList.add('border-accentGold', 'text-accentGold');
+            }
+
+            setTimeout(() => {
+                currentQ++;
+                if (currentQ < questions.length) {
+                    document.getElementById('screen-quiz').classList.remove('fade-in');
+                    void document.getElementById('screen-quiz').offsetWidth; 
+                    document.getElementById('screen-quiz').classList.add('fade-in');
+                    loadQuestion();
+                } else {
+                    showResults();
+                }
+            }, 1200);
+        }
+
+        function showResults() {
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+            document.getElementById('screen-result').style.display = 'flex';
+            document.getElementById('progress-bar').style.width = '100%';
+            
+            document.getElementById('final-score').innerText = `${score} / ${questions.length}`;
+            
+            let rank, icon;
+            if (score === 15) { rank = 'HEAD PROFESSOR'; icon = '<i class="fa-solid fa-graduation-cap"></i>'; spawnConfetti(); }
+            else if (score >= 10) { rank = 'RESEARCHER'; icon = '<i class="fa-solid fa-book-open text-accentGold"></i>'; }
+            else { rank = 'STUDENT'; icon = '<i class="fa-solid fa-pen text-textMuted"></i>'; }
+            
+            document.getElementById('rank-title').innerText = rank;
+            document.getElementById('rank-icon').innerHTML = icon;
+        }
+
+        function spawnConfetti() {
+            const container = document.getElementById('screen-result');
+            const colors = ['#D4AF37', '#3B82F6', '#FDFBF7'];
+            for(let i=0; i<40; i++) {
+                let conf = document.createElement('div');
+                conf.className = 'confetti';
+                conf.style.left = Math.random() * 100 + '%';
+                conf.style.animation = `fall ${Math.random() * 2 + 1}s linear forwards`;
+                conf.style.animationDelay = Math.random() * 2 + 's';
+                conf.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+                container.appendChild(conf);
+            }
+        }
+    </script>
+</body>
+</html>

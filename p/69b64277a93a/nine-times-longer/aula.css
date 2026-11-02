@@ -1,0 +1,188 @@
+/* ============================================================
+   NINE TIMES LONGER · THE GEARS · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: a oficina à noite — ferro
+   quase preto; a engrenagem A em cobre, a B em aço; a correia em couro
+   escuro; os blocos que multiplicam em cobre.
+   ============================================================ */
+:root{
+  --noite:#07060a; --noite-rgb:7,6,10; --tinta:#ebe8ec;
+  --t1:#f2eff2; --t2:#c9c4cb; --t2-rgb:201,196,203; --t3:#888290;
+  --ac:#e8925c; --ac2:#ffcaa6; --aco:#9fb3c8; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(235,232,236,.05); --vidro2:rgba(235,232,236,.085); --vidro3:rgba(235,232,236,.12);
+  --fio:rgba(228,224,230,.12); --fio2:rgba(228,224,230,.22); --luz:rgba(235,232,236,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1100}
+.btn.cheio{color:#2a1100}
+.capa{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2c1a0e;color:var(--ac2)}
+.lado-l{display:grid;gap:10px;align-content:start}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.tm-ops{display:grid;gap:6px} .tm-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:0 auto 12px;width:100%} .tm-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.tm-ops.col{max-width:900px;margin:0 auto 12px;width:100%} .tm-ops.col .versao{font-size:clamp(18px,1.5vw,26px);font-weight:700;min-height:64px;text-align:center}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1100px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao s{text-decoration-color:var(--erro);color:var(--t3)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.tm-ouve{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .tm-ouve .transcricao{margin:0}
+.tm-linha-ok{display:flex;align-items:center;gap:12px} .tm-linha-ok .aprova{flex:1;margin:0} .tm-linha-ok.centro{max-width:1100px;margin:0 auto;width:100%}
+.tm-temas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 12px}
+.tm-rot{margin:0;font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.tm-the{color:var(--ac2);border-bottom:2px solid var(--ac)}
+
+/* vídeo selado */
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:800 28px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--disp);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.tm-depois{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+
+/* as engrenagens */
+.tm-eng{display:grid;gap:8px;justify-items:center;width:min(100%,560px);padding:14px;border-radius:var(--r2);background:#0b0a0e;border:1px solid var(--fio2);margin:0 auto}
+.tm-eng svg{display:block;width:100%;height:auto;max-height:300px}
+.tm-roda rect,.tm-roda circle{fill:#2a2730;stroke:#3a3642;stroke-width:1.5}
+.tm-roda.a rect,.tm-roda.a circle{fill:#5a3420;stroke:var(--ac)} .tm-roda.b rect,.tm-roda.b circle{fill:#26303c;stroke:var(--aco)}
+.tm-roda .tm-furo{fill:#0b0a0e!important}
+.tm-roda.gira{animation:gira 5s linear infinite} .tm-roda.gira-rev{animation:gira 5s linear infinite reverse}
+@keyframes gira{to{transform:rotate(360deg)}}
+.tm-correia{fill:none;stroke:#4a3a2c;stroke-width:10;stroke-dasharray:14 6;animation:corre 1s linear infinite}
+@keyframes corre{to{stroke-dashoffset:-20}}
+.tm-eng text{font:800 14px var(--mono);letter-spacing:.1em;fill:var(--ac2)} .tm-eng text.tb{fill:var(--aco)}
+.tm-rotulos{display:grid;gap:4px;width:100%;font:600 clamp(15px,1.15vw,19px) var(--disp);color:var(--t2)} .tm-rotulos b{display:inline-grid;place-items:center;width:24px;height:24px;margin-right:8px;border-radius:50%;font:800 12px var(--mono);background:#5a3420;color:var(--ac2)} .tm-rotulos span+span b{background:#26303c;color:var(--aco)}
+
+/* a sonda */
+.tm-sonda{display:grid;gap:6px;padding:18px 22px;border-radius:var(--r2);border-color:rgba(255,110,110,.4)} .tm-sonda small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .tm-sonda b{font:800 clamp(26px,2.2vw,38px) var(--mono);letter-spacing:.12em;color:var(--erro)} .tm-sonda span{font:700 13px var(--mono);color:var(--t2)}
+
+/* os blocos */
+.tm-blocos{display:grid;gap:10px;max-width:900px;margin:0 auto 12px;width:100%;padding:14px 18px;border-radius:var(--r2);background:#0b0a0e;border:1px solid var(--fio2)}
+.tm-linha-b{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:center} .tm-linha-b small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.tm-linha-b span{display:flex;flex-wrap:wrap;gap:6px} .tm-linha-b i{display:block;width:44px;height:26px;border-radius:5px;background:#3a3642} .tm-linha-b i.q{background:var(--ac);animation:cai .4s ease-out backwards} .tm-linha-b i.q:nth-child(2){animation-delay:.05s} .tm-linha-b i.q:nth-child(3){animation-delay:.1s} .tm-linha-b i.q:nth-child(n+4){animation-delay:.15s} .tm-linha-b i.vazio{background:none;border:2px dashed var(--fio2)}
+@keyframes cai{from{transform:translateY(-12px);opacity:0}}
+
+/* debate */
+.tm-claim{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2);border-color:var(--ac)} .tm-claim small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .tm-claim p{margin:0;font:700 clamp(20px,1.65vw,28px)/1.4 var(--disp)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .tm-eng{width:min(100%,420px);padding:8px}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video,.tm-depois{grid-template-columns:1fr} .tm-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .tm-linha-b{grid-template-columns:1fr} .tm-linha-b i{width:30px;height:20px} }
+.tm-eng.mini{width:min(100%,380px);padding:8px} .tm-eng.mini svg{max-height:170px}
+
+/* ============================================================
+   2.0 · 22/10/2026: a aula conversada (as peças novas)
+   ============================================================ */
+.tm-escolha{display:grid;gap:8px}
+.tm-escolha > small,.tm-gram > small,.tm-nao > small,.tm-lab > small,.tm-montada > small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.tm-escolha .tm-temas{justify-content:flex-start;margin:0 0 6px}
+.tm-temas .pilula{cursor:pointer;font:600 15px var(--ui);color:var(--t2)}
+.pilula.on.b{border-color:var(--aco);background:#1b2430;color:var(--bt2)}
+.tm-mini-frase{margin:0;text-align:center;font:600 clamp(17px,1.25vw,21px) var(--disp);color:var(--t2)}
+.tm-nota-prof{margin:0;padding:8px 14px;border-left:3px solid var(--ac);font:500 14px/1.45 var(--ui);color:var(--ac2)}
+html.wl-sala-aluno .tm-nota-prof{display:none}
+
+/* II · as teorias */
+.tm-teorias{display:grid;gap:8px}
+.tm-teoria{display:grid;gap:4px;text-align:left;padding:12px 16px;border-radius:var(--r2);border:1px solid var(--fio2);background:var(--vidro);color:var(--t1);font:600 clamp(16px,1.2vw,20px)/1.4 var(--disp);cursor:pointer}
+.tm-teoria small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.tm-teoria.on{border-color:var(--ac);background:#2c1a0e}
+.tm-teoria.certa{border-color:var(--ok);background:rgba(143,217,162,.1)} .tm-teoria.fora{opacity:.5} .tm-teoria[disabled]{cursor:default}
+
+/* III · o montador e a regra */
+.tm-regra{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:24px;align-items:start}
+.tm-montada{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2);border-color:var(--ac)}
+.tm-montada p{margin:0;font:700 clamp(22px,1.9vw,32px)/1.35 var(--disp);color:var(--t1)}
+.tm-virg{color:var(--ac);font-weight:800;padding:0 2px}
+.tm-montador{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tm-lado-m{display:grid;gap:8px;margin-top:6px}
+.tm-dir{display:flex;gap:6px} .tm-dir .pilula{cursor:pointer;font:700 14px var(--ui);color:var(--t2)}
+.tm-pecas{display:grid;gap:6px}
+.tm-peca{text-align:left;padding:9px 12px;border-radius:12px;border:1px solid var(--fio2);background:var(--vidro);color:var(--t1);font:600 clamp(14px,1.05vw,17px) var(--ui);cursor:pointer}
+.tm-peca.on{border-color:var(--ac);background:#2c1a0e;color:var(--ac2)}
+.tm-peca:focus-visible,.tm-teoria:focus-visible,.tm-achado:focus-visible{outline:2px solid var(--bt2);outline-offset:2px}
+.tm-gram{display:grid;gap:8px;padding:16px 18px}
+.tm-forma{margin:0;padding:10px 12px;border-radius:12px;background:#0b0a0e;font:700 clamp(18px,1.4vw,24px) var(--disp);color:var(--t1);text-align:center}
+.tm-gl{display:grid;gap:2px;padding:9px 12px;border-radius:12px;border:1px solid var(--fio)}
+.tm-gl b{font:800 12px var(--mono);letter-spacing:.06em;color:var(--ac2);text-transform:uppercase}
+.tm-gl span{font:600 clamp(15px,1.1vw,18px)/1.4 var(--disp);color:var(--t1)}
+.tm-gl-nota{margin:0;font:500 14px var(--ui);color:var(--t3)}
+.tm-nao{display:grid;gap:4px;padding:12px 18px}
+.tm-nao p{margin:0;display:flex;flex-wrap:wrap;gap:2px 12px;font:500 clamp(14px,1vw,16px) var(--ui)}
+.tm-nao s{color:#ffadad;text-decoration-thickness:2px} .tm-nao span{color:var(--ok)}
+
+/* IV e VIII · a marca do professor e a carta */
+.tm-marca{display:flex;flex-wrap:wrap;align-items:center;gap:8px} .tm-marca span{font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.tm-marca .pilula{cursor:pointer;font:600 15px var(--ui);color:var(--t2)}
+.tm-carta{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2);border:1px dashed var(--fio2)}
+.tm-carta small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .tm-carta p{margin:0;font:500 15px/1.45 var(--ui);color:var(--t2)}
+.tm-claim.voce{border-color:var(--bt)} .tm-claim.voce small{color:var(--bt2)}
+
+/* IX · os números */
+.tm-vx{display:flex;flex-wrap:wrap;align-items:center;gap:6px;justify-content:center} .tm-vx span{font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.tm-vx .pilula{cursor:pointer;font:800 15px var(--mono);color:var(--t2)}
+.tm-mult{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2);text-align:center}
+.tm-mult p{margin:0;font:600 clamp(16px,1.2vw,20px) var(--disp);color:var(--t1)} .tm-mult b{color:var(--ac2)}
+.tm-mult p.nao{font-size:14px;color:var(--t3)} .tm-mult s{color:#ffadad}
+
+/* X · o laboratório */
+.tm-lab{display:grid;gap:2px;max-width:1100px;margin:0 auto;width:100%;padding:16px 20px;border-radius:var(--r2)}
+.tm-achado{display:grid;grid-template-columns:34px minmax(0,1fr);gap:2px 12px;align-items:baseline;text-align:left;padding:12px 6px;border:0;border-top:1px solid var(--fio);background:transparent;color:var(--t1);font:600 clamp(18px,1.4vw,24px)/1.4 var(--disp);cursor:pointer}
+.tm-achado i{font:800 13px var(--mono);font-style:normal;color:var(--t3)}
+.tm-achado s{display:block;font-size:.8em;color:var(--t3);text-decoration-color:var(--erro);text-decoration-thickness:2px}
+.tm-achado ins{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac)}
+.tm-achado small{grid-column:2;font:500 14px var(--ui);color:var(--t3)}
+.tm-achado.ok span{color:var(--ok)} .tm-achado[disabled]{cursor:default}
+.tm-fim-ac{display:grid;justify-items:center;gap:8px;margin-top:14px}
+
+@media (max-width:1100px){ .tm-regra{grid-template-columns:1fr} }
+@media (max-width:620px){ .tm-montador{grid-template-columns:1fr} .tm-achado{grid-template-columns:24px minmax(0,1fr)} }
+
+
+/* 22/10 · III · ligar as colunas (no lugar do montador) */
+.tm-lc{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px 64px}
+.tm-lc-fios{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.tm-lc-fios path{fill:none;stroke:var(--ac);stroke-width:2.5;stroke-linecap:round}
+.tm-lc-fios circle{fill:var(--ac)}
+.tm-lc-col{display:grid;gap:8px;align-content:start}
+.tm-lc-item{position:relative;z-index:1;text-align:left;padding:11px 14px;border-radius:12px;border:1px solid var(--fio2);background:#100e14;color:var(--t1);font:600 clamp(15px,1.1vw,18px)/1.35 var(--disp);cursor:pointer}
+.tm-lc-item.on{border-color:var(--ac);background:#2c1a0e;color:var(--ac2)}
+.tm-lc-item.feita{border-color:rgba(143,217,162,.5);color:var(--t2);cursor:default}
+.tm-lc-item.errada{border-color:var(--erro);animation:treme .35s}
+.tm-lc-item:focus-visible{outline:2px solid var(--bt2);outline-offset:2px}
+.tm-lc-dica{font:500 clamp(16px,1.2vw,19px)/1.4 var(--ui)!important;color:var(--t2)!important}
+@media (max-width:620px){ .tm-lc{gap:8px 22px} .tm-lc-item{font-size:14px;padding:9px 10px} }
+@media (prefers-reduced-motion:reduce){ .tm-lc-item.errada{animation:none} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb-blocos{margin-top:2px}
+.deb-blocos .tm-linha-b{grid-template-columns:70px 1fr}
+.deb-blocos i{width:38px!important;height:24px!important}
+.deb-blocos i.q{animation:none!important}
+.deb-blocos i.q.nova{animation:cai .5s ease-out!important}
+.deb-blocos i.perdida{background:#4a2a2a;border:1px solid rgba(255,110,110,.5)}
+.deb .tm-eng.mini{margin:0 auto}
+@media (prefers-reduced-motion:reduce){.deb-blocos i.q.nova{animation:none!important}}

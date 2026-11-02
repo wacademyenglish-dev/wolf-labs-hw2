@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -136,5 +137,286 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "Can you work from home this week?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "Some numbers yes, some no.",
+   "p": "Read it aloud. Answer the questions."
+  },
+  "dialogo": {
+   "t": "Leo asks a CFO for data.",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "Can, not “can to”.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "ordem": {
+   "t": "Five parts of a good data request.",
+   "p": "Tap them in order. Read it aloud."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose. Say why."
+  },
+  "cartao": {
+   "t": "Ask a client for three numbers.",
+   "p": "Thanks, request, offer, next step. Read it."
+  },
+  "pode": {
+   "t": "Lesson 7: what can you do now?",
+   "p": "Read each line aloud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão: can, can’t, Can you…?, Could you…, please?: o Daniel Price (Serra Steel) manda alguns números e não outros; o Leo liga para a Karen Wells (Lumen Logistics) pedindo dados.",
+  "armadilha": "O brasileiro diz “We can to send” (traduz “poder enviar”), pergunta sem inverter (“You can send me…?”) e pede como ordem: “Send me the numbers.” no lugar de “Could you…, please?”.",
+  "pal": [
+   "We can send …",
+   "I can’t meet …",
+   "Can you send me …?",
+   "Could you …, please?",
+   "headcount",
+   "data request",
+   "NDA",
+   "export"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: sem números, sem proposta; pedir dados ao cliente com educação.",
+   "perg": "What numbers do you need from clients?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "conversa": {
+   "obj": "Aquecimento: a semana do aluno com can/can’t, devolvendo “And you?”.",
+   "perg": "Can you work from home this week?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler a resposta do Daniel Price: o que ele pode e não pode mandar (os salários não).",
+   "perg": "What can’t Daniel send? Why?",
+   "pula": "Leia e faça duas perguntas."
+  },
+  "dialogo": {
+   "obj": "Ouvir a ligação do Leo para a Karen Wells; perceber can × can’t na pronúncia.",
+   "perg": "What can Karen send by Friday?",
+   "pula": "Ouça uma vez e faça uma pergunta."
+  },
+  "descobre": {
+   "obj": "Foco: can + verbo sem to; pergunta com can na frente; respostas curtas.",
+   "perg": "Is it “can to send” or “can send”?",
+   "pula": "Dois pares bastam."
+  },
+  "ordem": {
+   "obj": "Pôr as cinco partes de um bom pedido de dados em ordem e ler.",
+   "perg": "What comes first in the e-mail?",
+   "pula": "Ordene e pule a leitura."
+  },
+  "escolha": {
+   "obj": "Escolhas A ou B com because; o professor responde primeiro.",
+   "perg": "Call or e-mail the client? Why?",
+   "pula": "Uma escolha só basta."
+  },
+  "cartao": {
+   "obj": "Escrita: o pedido de três números a um cliente, com educação.",
+   "perg": "Which three numbers do you need?",
+   "pula": "Pedido e próximo passo bastam."
+  },
+  "pode": {
+   "obj": "Ler as frases “I can” e marcar o que já consegue.",
+   "perg": "Can you ask a client for data now?",
+   "pula": "Leia só as que faltam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre o trabalho real de vendas do aluno, com can/can’t e Could you…?",
+   "perg": "What can your company do for clients?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas leves de vendedor, com can e please.",
+   "perg": "Call or e-mail?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play invertido: o aluno é a Karen Wells e responde aos pedidos do Leo.",
+   "perg": "Can you send me the headcount?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your clients, your numbers.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "can",
+    "can’t",
+    "Can you …?",
+    "Could you …, please?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR SERVICE",
+     "q": "What can your company do for a client?",
+     "fup": "What can’t it do?",
+     "st": [
+      "We can …",
+      "We can’t …"
+     ],
+     "ex": "We can run the payroll. We can’t change the ERP."
+    },
+    {
+     "k": "DATA",
+     "q": "What numbers do you need from a new client?",
+     "fup": "Can they send them easily?",
+     "st": [
+      "I need the …",
+      "They can / can’t …"
+     ],
+     "ex": "I need the headcount. They can send it in one day."
+    },
+    {
+     "k": "SECRETS",
+     "q": "What can’t a client send you?",
+     "fup": "Why not?",
+     "st": [
+      "They can’t send …",
+      "It’s confidential."
+     ],
+     "ex": "They can’t send the salaries. It’s confidential."
+    },
+    {
+     "k": "THIS WEEK",
+     "q": "Can you meet a client this week?",
+     "fup": "What day?",
+     "st": [
+      "Yes, I can. On …",
+      "No, I can’t. I …"
+     ],
+     "ex": "Yes, I can. On Thursday at ten."
+    },
+    {
+     "k": "EXCEL",
+     "q": "What can you do in Excel?",
+     "fup": "Can you make a chart?",
+     "st": [
+      "I can …",
+      "I can’t …"
+     ],
+     "ex": "I can make tables. I can’t make good charts."
+    },
+    {
+     "k": "POLITE",
+     "q": "How do you ask a client for something in Portuguese?",
+     "fup": "Say it in English now.",
+     "st": [
+      "Could you …, please?"
+     ],
+     "ex": "Could you send me the number of invoices, please?"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Seller choices. Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I can",
+    "Could you …?"
+   ],
+   "rodadas": [
+    {
+     "q": "Ask for data by phone or by e-mail?",
+     "a": "By phone",
+     "b": "By e-mail",
+     "fa": [
+      "By phone. I can explain fast."
+     ],
+     "fb": [
+      "By e-mail. The client can read it again."
+     ]
+    },
+    {
+     "q": "Ask for five numbers or only three?",
+     "a": "Five numbers",
+     "b": "Only three",
+     "fa": [
+      "Five. I can make a better proposal."
+     ],
+     "fb": [
+      "Three. The client can send them fast."
+     ]
+    },
+    {
+     "q": "The client can’t send the salaries. Accept or ask again?",
+     "a": "Accept",
+     "b": "Ask again",
+     "fa": [
+      "Accept. I don’t need the salaries, only the headcount."
+     ],
+     "fb": [
+      "Ask again, after the NDA."
+     ]
+    },
+    {
+     "q": "Meet on Monday or on Friday?",
+     "a": "Monday",
+     "b": "Friday",
+     "fa": [
+      "Monday. We can start the week with a plan."
+     ],
+     "fb": [
+      "Friday. The client can relax and talk."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Karen Wells now.",
+   "p": "Your teacher is Leo.",
+   "aluno": "Listen to Leo. Answer as Karen Wells, CFO of Lumen Logistics. Some things you can send, some you can’t.",
+   "perguntas": [
+    "Can you send me the headcount?",
+    "Could you send me the payroll report, please?",
+    "Can you export the data from the ERP?",
+    "Can we meet on Monday?",
+    "Could you sign the NDA this week?",
+    "Can I call you on Thursday?"
+   ],
+   "st": [
+    "Yes, I can. / No, I can’t.",
+    "I can send … by …",
+    "Sorry, I can’t … It’s confidential."
+   ],
+   "ex": "Yes, I can send the headcount by Friday. Sorry, I can’t send the salaries. It’s confidential."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

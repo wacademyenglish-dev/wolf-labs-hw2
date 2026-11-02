@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Kind of, Sort of, and Stuff",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/efaa2db0c102/kind-of-sort-of-and-stuff/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "vague language: kind of / sort of + adjective or verb (kind of weird, sort of agree), and stuff / and things like that / or something, -ish (nine-ish, bluish), a bit + adjective, a bit of a + noun; the register: vague with a friend, exact on paper; never and stuffs, a bit of tired, nine-ish o'clock",
   "abrir": "Think of a friend you talk to every day. How do you describe your week to that person?",
   "fecho": "<b>Kind of / sort of</b> + adjective or verb: <i>kind of tense, sort of agree</i>. <b>And stuff</b> (never <i>stuffs</i>), <b>or something</b>, <b>-ish</b> on a number: <i>nine-ish</i>. <b>A bit</b> + adjective (<i>a bit tired</i>) but <b>a bit of a</b> + noun (<i>a bit of a mess</i>). Vague is fine with a friend; in writing, be exact.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo catch up about his new job. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/efaa2db0c102/kind-of-sort-of-and-stuff/img/live-balcao.webp",
+      "img": "../img/live-balcao.webp",
       "leg": "A desk, a lamp and some papers",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'll meet you around nine-ish, or something like that.",
-          "img": "https://wolf-labs.pages.dev/p/efaa2db0c102/kind-of-sort-of-and-stuff/img/live-fone.webp",
+          "img": "../img/live-fone.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We talked about budgets and stuff, but nothing was decided.",
-          "img": "https://wolf-labs.pages.dev/p/efaa2db0c102/kind-of-sort-of-and-stuff/img/live-esteira.webp",
+          "img": "../img/live-esteira.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The meeting was kind of tense, but the results were fine.",
-          "img": "https://wolf-labs.pages.dev/p/efaa2db0c102/kind-of-sort-of-and-stuff/img/live-estudio.webp",
+          "img": "../img/live-estudio.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -177,7 +177,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/efaa2db0c102/kind-of-sort-of-and-stuff/img/live-balcao.webp",
+      "img": "../img/live-balcao.webp",
       "leg": "A desk, a lamp and some papers",
       "pede": "Look at the picture: a desk with a lamp, a screen and some papers. Write 2 or 3 sentences about your day: first the way you would tell a friend (vague), then one exact sentence for an email. Use <b>kind of</b>, <b>sort of</b>, <b>and stuff</b> or <b>-ish</b>.",
       "ph": "Honestly, my day was kind of …",

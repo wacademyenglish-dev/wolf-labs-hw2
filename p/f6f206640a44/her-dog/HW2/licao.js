@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "Her Dog",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f6f206640a44/her-dog/img/live-porta.webp",
+  "capa": "../img/live-porta.webp",
   "alvo": "his / her / their / its: the OWNER chooses the word, never the thing; no S on the word (her books); its has no apostrophe; Whose ... is this? when you do not know the owner",
   "abrir": "Think of a woman you know. What is her name?",
   "fecho": "The owner chooses: <b>his</b> (a man), <b>her</b> (a woman), <b>their</b> (two or more), <b>its</b> (an animal, a place). <i>Rita has a dog. It is her dog. Its name is Max.</i> No S: <i>her books</i>. <b>Its</b> has no apostrophe. Don't know the owner? <i>Whose dog is this?</i>",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a waiting room. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/f6f206640a44/her-dog/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "A waiting room, a dog on the floor",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -111,12 +111,12 @@ window.HW2 = {
         {
           "t": "Its name is on the tag.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/f6f206640a44/her-dog/img/live-tag.webp"
+          "img": "../img/live-tag.webp"
         },
         {
           "t": "The dog is quiet. Its leash is on the floor.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/f6f206640a44/her-dog/img/live-sala.webp"
+          "img": "../img/live-sala.webp"
         },
         {
           "t": "Their cat is in her bag.",
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f6f206640a44/her-dog/img/live-porta.webp",
+      "img": "../img/live-porta.webp",
       "leg": "A dark door, a leash on the floor",
       "pede": "Look at the picture: a dark door and a leash on the floor. Write 2 or 3 sentences about a dog and its owner. Use <b>his</b>, <b>her</b>, <b>their</b> or <b>its</b>.",
       "ph": "It is Rita's dog. Her dog is …",

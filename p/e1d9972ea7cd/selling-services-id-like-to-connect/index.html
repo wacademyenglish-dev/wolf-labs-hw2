@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -117,5 +118,292 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "Do you use LinkedIn for work?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "dialogo": {
+   "t": "The client calls Leo back.",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "I’d like to, not “I like to”.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "erros": {
+   "t": "A LinkedIn message, five mistakes.",
+   "p": "Find one. Say it right. Tap it."
+  },
+  "cadeira": {
+   "t": "Your teacher is a client. You write first.",
+   "p": "Invite, offer, and get a call."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose and say why."
+  },
+  "cartao": {
+   "t": "Three LinkedIn messages for a real client.",
+   "p": "Connect, follow up, invite. Read them aloud."
+  },
+  "pode": {
+   "t": "Lesson 21: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da unidade 21: I’d like to… / Would you like to…? Emma Lee, diretora de RH da Brightline Retail, liga para o Leo depois da mensagem no LinkedIn.",
+  "armadilha": "Brasileiro diz I’d like connect (sem to), I like to meet you para desejo (gosto ≠ gostaria), Do you would like…? e Yes, I like. como resposta; e “I want to sell you…” soa insistente.",
+  "pal": [
+   "I’d like to connect",
+   "Would you like to…?",
+   "Yes, I’d love to.",
+   "I’d like to, but…",
+   "case study",
+   "follow up",
+   "LinkedIn"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a mensagem de LinkedIn curta, educada e com uma pergunta.",
+   "perg": "Do clients answer your messages?",
+   "pula": "Leia a capa e siga."
+  },
+  "conversa": {
+   "obj": "Small talk sobre LinkedIn e desejos do ano; o aluno pergunta And you?",
+   "perg": "What would you like to learn this year?",
+   "pula": "Três perguntas bastam."
+  },
+  "dialogo": {
+   "obj": "Escuta: Emma está ocupada e Leo oferece um case e uma call em duas semanas; pode usar 0.75×.",
+   "perg": "What does Leo offer Emma?",
+   "pula": "Ouça uma vez e faça três perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar I like to × I’d like to; depois regras e armadilhas.",
+   "perg": "What’s the difference between “I like” and “I’d like”?",
+   "pula": "Três pares bastam."
+  },
+  "erros": {
+   "obj": "Corrigir a mensagem insistente de um vendedor novo.",
+   "perg": "Why does “I want to sell you” sound bad?",
+   "pula": "Três erros bastam."
+  },
+  "cadeira": {
+   "obj": "Você é a Emma num chat; diga I’d like to, but… pelo menos uma vez para ele oferecer outro horário.",
+   "perg": "I’d like to, but I’m busy this week.",
+   "pula": "Três tarefas bastam."
+  },
+  "escolha": {
+   "obj": "Escolher A ou B com because; você responde também.",
+   "perg": "A message or a call? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: três mensagens reais (conectar, follow-up, convite) e leitura em voz alta.",
+   "perg": "Who would you like to connect with?",
+   "pula": "Duas mensagens bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; você confirma e carimba.",
+   "perg": "Can you invite a client politely now?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa simples sobre desejos e convites no trabalho do aluno.",
+   "perg": "Who would you like to meet this year?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre mensagens e convites.",
+   "perg": "Which one do you choose?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play invertido: o aluno é a Emma e responde aos convites do vendedor.",
+   "perg": "Emma, would you like to have a call?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about wishes and invitations.",
+   "p": "Pick a card. Answer. Then “And you?”",
+   "palavras": [
+    "I’d like to …",
+    "Would you like to …?",
+    "Yes, I’d love to.",
+    "I’d like to, but …"
+   ],
+   "cartas": [
+    {
+     "k": "THIS YEAR",
+     "q": "What would you like to do this year?",
+     "fup": "Why?",
+     "st": [
+      "I’d like to …"
+     ],
+     "ex": "I’d like to find three new clients."
+    },
+    {
+     "k": "A DREAM CLIENT",
+     "q": "Which company would you like to work with?",
+     "fup": "Why that company?",
+     "st": [
+      "I’d like to work with …",
+      "because …"
+     ],
+     "ex": "I’d like to work with a big retail company, because they have many employees."
+    },
+    {
+     "k": "COFFEE",
+     "q": "Would you like to have coffee with a client?",
+     "fup": "Where?",
+     "st": [
+      "Yes, I’d love to.",
+      "I’d like to, but …"
+     ],
+     "ex": "Yes, I’d love to. In a quiet café near the office."
+    },
+    {
+     "k": "LIKE OR WOULD LIKE",
+     "q": "What do you like doing after work?",
+     "fup": "And what would you like to do tonight?",
+     "st": [
+      "I like …ing.",
+      "Tonight I’d like to …"
+     ],
+     "ex": "I like running. Tonight I’d like to watch a movie."
+    },
+    {
+     "k": "LINKEDIN",
+     "q": "Would you like to have more contacts on LinkedIn?",
+     "fup": "Who?",
+     "st": [
+      "Yes, I’d like to connect with …"
+     ],
+     "ex": "Yes, I’d like to connect with HR directors."
+    },
+    {
+     "k": "SAYING NO",
+     "q": "A client invites you on Saturday. What do you say?",
+     "fup": "Do you offer another day?",
+     "st": [
+      "I’d like to, but …",
+      "Would you like to … on …?"
+     ],
+     "ex": "I’d like to, but I’m busy. Would you like to meet on Monday?"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’d like to …",
+    "because",
+    "Would you like …?"
+   ],
+   "rodadas": [
+    {
+     "q": "First contact: a LinkedIn message or an email?",
+     "a": "LinkedIn",
+     "b": "Email",
+     "fa": [
+      "LinkedIn.",
+      "The client can see my profile."
+     ],
+     "fb": [
+      "Email.",
+      "It’s more professional."
+     ]
+    },
+    {
+     "q": "A short message or a long message?",
+     "a": "Short",
+     "b": "Long",
+     "fa": [
+      "Short.",
+      "One question is enough."
+     ],
+     "fb": [
+      "Long.",
+      "I’d like to explain everything."
+     ]
+    },
+    {
+     "q": "Offer a call or a case study?",
+     "a": "A call",
+     "b": "A case study",
+     "fa": [
+      "A call.",
+      "I’d like to hear the client."
+     ],
+     "fb": [
+      "A case study.",
+      "The client can read it later."
+     ]
+    },
+    {
+     "q": "Follow up after one week or two weeks?",
+     "a": "One week",
+     "b": "Two weeks",
+     "fa": [
+      "One week.",
+      "The client remembers me."
+     ],
+     "fb": [
+      "Two weeks.",
+      "The client is busy."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Your messages are ready."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Emma Lee now.",
+   "p": "Your teacher is the seller.",
+   "aluno": "Listen to your teacher’s question. Answer as Emma Lee, HR director at Brightline Retail.",
+   "perguntas": [
+    "Hi Emma! I’d like to connect with you. Is that OK?",
+    "Would you like to see a case study?",
+    "Would you like to have a call this week?",
+    "Would you like to meet in person?",
+    "What would you like to change in HR this year?",
+    "Would you like me to send a proposal?"
+   ],
+   "st": [
+    "Yes, I’d love to.",
+    "I’d like to, but …",
+    "I’d like to …"
+   ],
+   "ex": "I’d like to, but I’m very busy this week. Would you like to call me in two weeks?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

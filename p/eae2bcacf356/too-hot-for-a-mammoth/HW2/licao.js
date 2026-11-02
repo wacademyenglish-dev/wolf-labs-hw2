@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at a world of lava. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/eae2bcacf356/too-hot-for-a-mammoth/img/live-lava.webp",
+      "img": "../img/live-lava.webp",
       "leg": "A river of lava in a cave",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -104,7 +104,7 @@ window.HW2 = {
       "frases": [
         {
           "t": "The lava is too hot to touch.",
-          "img": "https://wolf-labs.pages.dev/p/eae2bcacf356/too-hot-for-a-mammoth/img/live-lava.webp",
+          "img": "../img/live-lava.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -160,7 +160,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/eae2bcacf356/too-hot-for-a-mammoth/img/live-lava.webp",
+      "img": "../img/live-lava.webp",
       "leg": "A world of lava",
       "pede": "Look at the picture: a world of lava. Write 2 or 3 sentences about a place that is too hot or too cold for you. Use <b>too hot</b> and <b>too … to</b>.",
       "ph": "My … is too hot. It is too hot to …",

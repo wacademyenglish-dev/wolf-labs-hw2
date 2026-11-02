@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Under Pressure · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Under Pressure · The Attention Target</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Under Pressure · The Attention Target</h2>
+    <p>The student already knows what happened to them under pressure. What they can’t do is explain it, because the three links of an explanation get mixed up: <b>because / because of</b> (cause), <b>leads to / results in</b> (effect), <b>to / in order to / so that</b> (purpose). On screen, an attention target with three rings: the center is the body, the middle ring is the task, the outer ring is the room. A point of light shows where attention is. And a chain of three links: cause, effect, and the purpose that opens the valve.</p>
+    <h4>DON’T CORRECT SCENE I</h4>
+    <p>The student picks one arena and keeps it all hour. The first answers will contain <i>because of I was nervous</i> and <i>for not fail</i>. Write them down; they come back at the end.</p>
+    <h4>THE STUDY</h4>
+    <p>Scene II: students with the best memory for numbers lost the most under pressure. The recordings describe real findings; they don’t quote anybody. Most students guess the opposite: let them guess wrong out loud.</p>
+    <h4>THE PROFILE IS A MOMENT</h4>
+    <p>Fourteen questions (scene III) give two numbers (scene VI): the Worrier (attention leaves for the room) and the Watcher (attention goes into the body). The remedies are opposite. If the student uses it as a label for who they are, bring it back to the arena.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Four recordings with pause and 0.75×: the lab (II), the golfer and the speaker (VIII, they are meant to sound alike), the coach (XI, only after the six markers).</p>
+    <h4>THE CHAIN</h4>
+    <p>Scene IX: the parts come shuffled; the student taps cause, effect, purpose in order, and says the whole sentence before the last link. If you’re behind, cut chains from IX and rounds from VII. Never cut I, V, IX or XII.</p>
+    <!--conversa--><h4>YOU’RE THE COACH (IX) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the two cases, your student becomes the coach and decides what to do in three situations: a friend the night before an interview, a penalty in a final, a presentation in English. There is no right answer. Let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk (because <b>of</b> + a thing, leads to <b>-ing</b>, in order <b>not to</b>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Arena, III Fourteen Questions, VI The Profile, IX You’re the Coach, X Your Own Chain.</li>
+      <li><b>Listen</b>: II The Lab, VIII Two Cases, XI The Report.</li>
+      <li><b>Focus</b>: IV Because, or Because Of?, V The Three Links, VII To, For, or So That?</li>
+      <li><b>Write</b>: XII, their arena in one chain. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* UNDER PRESSURE (Main B1) · pergunta-surpresa · 27/10/2026 · because / because of / leads to / to / so that */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'lab', tipo: 'Would you rather', q: 'Would you rather take a test alone in silence, or on camera with a prize?',
+    opc: ['Alone, in silence', 'On camera, with a prize'], st: ['I’d rather …, because …', 'A camera leads to …'],
+    ex: 'Alone, in silence. A camera leads to me thinking about my face, not the test.', push: 'And if the prize was a whole year’s salary?' },
+  { cena: 'porque', tipo: 'And you?', q: 'What do you do just before something important, so that you feel calm?',
+    opc: ['Music', 'Breathing', 'Nothing, I just go'], st: ['I … in order to …', 'I … so that I can …'],
+    ex: 'Music. I listen to the same song in order to stop thinking about the result.', push: 'Does it really work, or is it just a habit?' },
+  { cena: 'perfil', tipo: 'Opinion', q: 'Is a little pressure good for you?',
+    opc: ['Yes, it helps me', 'Only a little', 'No, never'], st: ['A little pressure leads to …', 'Because of pressure, I …'],
+    ex: 'Only a little. Because of deadlines, I finish things. But too much leads to bad sleep.', push: 'Give me one day when pressure made you better.' },
+  { cena: 'sua', tipo: 'What if', q: 'You could remove one kind of pressure from your life forever. Which one?',
+    opc: ['Time', 'Money', 'What other people think'], st: ['I’d remove …, because …', 'That leads to …, so …'],
+    ex: 'What other people think. It leads to bad decisions, because I try to please everybody.', push: 'And what would you do first, without that pressure?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* UNDER PRESSURE (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A aula não tinha dilema (só arena pessoal, perfil e relato). O dilema entra no lugar de
+   "IX · The Chain" (extra, tocar os elos em ordem: prática controlada; os elos continuam no V e no X).
+   Logo depois dos dois casos (VIII, listening): o aluno vira o treinador e decide.
+   Gramática (because / because of · leads to · to / in order to · so that) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'dilema', troca: 'corrente', est: 'o', min: 7, img: 'sala', rot: 'You’re the Coach', t: 'Three people under pressure. You’re the coach. What do you do?',
+    p: 'Read the situation. Choose an option, or say your own idea. Explain it with because and so that. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The night before', sit: 'Your friend has a big job interview tomorrow. It’s 11 PM and she’s still practising answers, very nervous.',
+        q: 'What do you tell her?', opc: ['Go to sleep now', 'Practise one more time with me', 'Plan one small first step'],
+        st: ['I’d tell her to …, because …', 'Practising now leads to …', '… so that she can …'],
+        ex: 'Plan one small first step. A routine helps her start without thinking, so that the worry has less space.',
+        push: 'She says: “If I stop now, I’ll worry all night.” Now what?' },
+      { tag: 'The penalty', sit: 'Last minute of the final. Your best player is shaking. Your second player is weaker, but very calm.',
+        q: 'Who takes the penalty?', opc: ['The best player', 'The calm player', 'I ask them to decide'],
+        st: ['The calm player, because of …', 'Shaking leads to …', 'I’d choose …, in order to …'],
+        ex: 'The calm player. The best player is thinking about his body, and that leads to a bad kick.',
+        push: 'He misses, and everybody blames you. Still the right choice?' },
+      { tag: 'The presentation', sit: 'Your manager asks you to present in English tomorrow, to the whole company. You can say no.',
+        q: 'What do you do?', opc: ['Say yes', 'Say no', 'Ask for a smaller group first'],
+        st: ['I’d say yes / no, because …', 'Saying no leads to …', 'I’d ask for …, so that I can …'],
+        ex: 'Say yes. I’d practise with a friend tonight in order to have the pressure in the room before tomorrow.',
+        push: 'Be honest: what’s the real reason you said that?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "arena": {
+   "t": "Where does pressure matter to you?",
+   "p": "Pick one arena. Answer three questions out loud."
+  },
+  "lab": {
+   "t": "Silence, or money and a camera?",
+   "p": "Listen once. Choose. Say your reason first."
+  },
+  "lista": {
+   "t": "Fourteen questions about your arena.",
+   "p": "Read each one aloud. Tap the true ones."
+  },
+  "porque": {
+   "t": "A sentence takes BECAUSE. A thing, BECAUSE OF.",
+   "p": "Is there a verb after the gap? Choose. Say it."
+  },
+  "regra": {
+   "t": "Cause, effect, purpose.",
+   "p": "Tap a link. Read the rule. Make one from your arena."
+  },
+  "perfil": {
+   "t": "Two numbers. Opposite cures.",
+   "p": "Read your result out loud, with the advice."
+  },
+  "para": {
+   "t": "To, for, or so that?",
+   "p": "Choose. Then say the whole sentence."
+  },
+  "casos": {
+   "t": "Two bad days. They aren’t the same.",
+   "p": "Listen. Which type? Say why, with BECAUSE."
+  },
+  "cv-dilema": {
+   "t": "Three people under pressure. You coach.",
+   "p": "Choose an option. Explain with because and so that."
+  },
+  "sua": {
+   "t": "Three links: you, then someone else.",
+   "p": "Answer about yourself. Then about another person."
+  },
+  "relato": {
+   "t": "Explain your arena. Six markers.",
+   "p": "One marker at a time. Then listen to the coach."
+  },
+  "fim": {
+   "t": "Your scene I sentences come back.",
+   "p": "Write your arena in one chain. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Causa (because / because of), efeito (leads to / results in) e propósito (to / in order to / so that): o aluno explica o que acontece com ele sob pressão, num alvo de atenção.",
+  "armadilha": "Do português “por causa de eu estava nervoso” e “para não falhar”: sai “because of I was nervous”, “for not fail”, “for to win” e “leads to fail” sem -ing.",
+  "pal": [
+   "because",
+   "because of",
+   "leads to",
+   "results in",
+   "in order to",
+   "so that",
+   "under pressure",
+   "choke",
+   "attention"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o alvo de atenção: corpo, tarefa, sala.",
+   "perg": "When do you feel pressure?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "arena": {
+   "obj": "O aluno escolhe uma arena e fica nela a aula toda. Não corrija; anote as frases.",
+   "perg": "What happens to you under pressure there?",
+   "pula": "Nunca corte esta cena; duas perguntas bastam."
+  },
+  "lab": {
+   "obj": "Ouvir o estudo: quem tinha melhor memória para números perdeu mais sob pressão.",
+   "perg": "Which group did worse, and why?",
+   "pula": "Ouça uma vez só."
+  },
+  "lista": {
+   "obj": "Catorze perguntas sobre a arena do aluno, para montar o perfil.",
+   "perg": "Is this true in your arena?",
+   "pula": "Leia rápido; o aluno só toca."
+  },
+  "porque": {
+   "obj": "Because + oração, because of + coisa: tem verbo depois?",
+   "perg": "Is there a verb after the gap?",
+   "pula": "Quatro frases bastam."
+  },
+  "regra": {
+   "obj": "Os três elos da explicação: causa, efeito, propósito, com um exemplo da arena.",
+   "perg": "What is the cause, the effect and the purpose?",
+   "pula": "Nunca corte esta cena."
+  },
+  "perfil": {
+   "obj": "Resultado: o Worrier (atenção vai para a sala) e o Watcher (atenção vai para o corpo).",
+   "perg": "Does this sound like you in your arena?",
+   "pula": "Leia só o resultado e um conselho."
+  },
+  "para": {
+   "obj": "To + verbo, for + coisa, so that + novo sujeito.",
+   "perg": "To, for, or so that?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "casos": {
+   "obj": "Ouvir o golfista e a palestrante: parecem iguais, mas são tipos diferentes.",
+   "perg": "Which type is the golfer, and why?",
+   "pula": "Cena extra: um caso basta."
+  },
+  "cv-dilema": {
+   "obj": "O aluno é o técnico: entrevista, pênalti numa final, apresentação em inglês.",
+   "perg": "What do you tell them, and why?",
+   "pula": "Dois casos bastam; corte elos da IX antes."
+  },
+  "sua": {
+   "obj": "A mesma corrente de três elos sobre o aluno e sobre outra pessoa.",
+   "perg": "What does pressure lead to for you?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "relato": {
+   "obj": "Explicar a arena para um leigo em seis marcadores, depois ouvir o técnico.",
+   "perg": "Can you explain it without stopping?",
+   "pula": "Cena extra: três marcadores bastam."
+  },
+  "fim": {
+   "obj": "Escrita: as frases da cena I voltam com os elos certos, numa corrente só.",
+   "perg": "What causes it, what does it lead to, and what do you do?",
+   "pula": "Nunca corte; uma corrente basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa pessoal sobre pressão com causa, efeito e propósito.",
+   "perg": "What do you do so that you stay calm?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre pressão: ajuda ou atrapalha, com argumentos.",
+   "perg": "Does pressure help you, or hurt you?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta um plano para o próximo momento de pressão, elo por elo.",
+   "perg": "What will you do so that it goes better?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More pressure, more links.",
+   "p": "Pick a card. Use cause, effect, purpose.",
+   "palavras": [
+    "because of",
+    "leads to",
+    "so that",
+    "in order to"
+   ],
+   "cartas": [
+    {
+     "k": "THE NIGHT BEFORE",
+     "q": "What do you do the night before something important?",
+     "fup": "Does it work?",
+     "st": [
+      "I … so that I …",
+      "I go to bed early in order to …"
+     ],
+     "ex": "I go to bed early so that my head is clear in the morning."
+    },
+    {
+     "k": "BAD SLEEP",
+     "q": "What does a bad night’s sleep lead to for you?",
+     "fup": "What do you do about it?",
+     "st": [
+      "A bad night leads to …",
+      "Because of …, I …"
+     ],
+     "ex": "A bad night leads to mistakes, because of how tired my eyes get."
+    },
+    {
+     "k": "SPEAKING ENGLISH",
+     "q": "When do you feel pressure speaking English?",
+     "fup": "What helps?",
+     "st": [
+      "I get nervous because …",
+      "I … in order not to …"
+     ],
+     "ex": "I get nervous because people are waiting. I slow down in order not to panic."
+    },
+    {
+     "k": "TIME LIMITS",
+     "q": "Do you work better with a deadline or without one?",
+     "fup": "Why?",
+     "st": [
+      "A deadline results in …",
+      "Without one, I …"
+     ],
+     "ex": "A deadline results in better work for me, because I stop thinking too much."
+    },
+    {
+     "k": "AN AUDIENCE",
+     "q": "Is it harder when people are watching?",
+     "fup": "Where does your attention go?",
+     "st": [
+      "When people watch, my attention goes to …",
+      "Because of the audience, …"
+     ],
+     "ex": "When people watch, my attention goes to my hands, so they shake."
+    },
+    {
+     "k": "YOUR RITUAL",
+     "q": "Do you have a small ritual before pressure?",
+     "fup": "Where did you learn it?",
+     "st": [
+      "I always … to …",
+      "I … so that …"
+     ],
+     "ex": "I always breathe out slowly three times to calm my body down."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Explain the chain.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "leads to",
+    "so that",
+    "results in"
+   ],
+   "rodadas": [
+    {
+     "q": "Does a little pressure help or hurt?",
+     "a": "It helps",
+     "b": "It hurts",
+     "fa": [
+      "It helps. A little stress leads to more focus.",
+      "Without it, I don’t start."
+     ],
+     "fb": [
+      "It hurts. Pressure results in silly mistakes.",
+      "My attention leaves the task."
+     ]
+    },
+    {
+     "q": "Before a big test: practice more, or rest?",
+     "a": "Practice",
+     "b": "Rest",
+     "fa": [
+      "Practice, so that nothing is new on the day.",
+      "Confidence comes from repetition."
+     ],
+     "fb": [
+      "Rest, in order to have a clear head.",
+      "Too much practice leads to more worry."
+     ]
+    },
+    {
+     "q": "Money for good results: smart or a bad idea?",
+     "a": "Smart",
+     "b": "Bad idea",
+     "fa": [
+      "Smart. People work harder because of the reward.",
+      "It’s fair to pay for results."
+     ],
+     "fb": [
+      "A bad idea. The lab showed money leads to choking.",
+      "Attention goes to the prize, not the task."
+     ]
+    },
+    {
+     "q": "Penalty in a final: your best player or your calmest?",
+     "a": "Best player",
+     "b": "Calmest",
+     "fa": [
+      "The best player, because skill wins in the end.",
+      "They trained for this moment."
+     ],
+     "fb": [
+      "The calmest, so that the pressure doesn’t win.",
+      "Skill disappears when the body takes over."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The pressure was on, and nobody choked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Game Plan",
+   "t": "Your next pressure moment.",
+   "p": "Four steps. One link at a time.",
+   "prof": "Keep it in the student’s arena; one correction per step (because of + thing, so that + subject).",
+   "passos": [
+    {
+     "q": "What is your next pressure moment?",
+     "st": [
+      "Next … I have to …"
+     ],
+     "ex": "Next month I have to present a project to my boss, in English."
+    },
+    {
+     "q": "What usually goes wrong, and why?",
+     "st": [
+      "Because of …, I usually …"
+     ],
+     "ex": "Because of the silence in the room, I usually speak too fast."
+    },
+    {
+     "q": "What does that lead to?",
+     "st": [
+      "That leads to …",
+      "It results in …"
+     ],
+     "ex": "That leads to forgetting my best points."
+    },
+    {
+     "q": "What will you do this time, and for what purpose?",
+     "st": [
+      "I’ll … so that …",
+      "I’ll … in order to …"
+     ],
+     "ex": "I’ll pause after each slide so that my attention stays on the task."
+    }
+   ],
+   "fim": "Cause, effect, purpose: one chain, and a plan for next time."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

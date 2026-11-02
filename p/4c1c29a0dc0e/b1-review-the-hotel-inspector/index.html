@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Hotel Inspector · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B1 · Unit 4 Review · The Hotel Inspector</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Hotel Inspector · B1 Unit 4 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 4 (How much, how, what kind). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student is a secret hotel inspector at the Hotel Marlow (invented). You are three guests in the lobby: a businesswoman, a family of five and a travel blogger. In the end the student gives the hotel its stars.</p><p style="margin:0 0 6px"><b>About 42 min:</b> I · Bingo (8) · II · The Secret Inspector (15) · III · Your Review (7) · IV · The Complaints Desk (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Nine squares. Pick one, answer, and make a line.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>too much, too many, not enough · few or a few, little or a little · both, either, neither · -ed or -ing · strong adjectives: absolutely exhausted</p>
+    <h4>BINGO</h4>
+    <p>A 3×3 card of quick tasks. The student picks a square and does it out loud; tap <b>Done</b>. Three in a line (across, down or diagonal) is a BINGO. Keep going for a second line if there is time.</p>
+    <h4>THE SECRET INSPECTOR</h4>
+    <p>You are each guest. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then the student gives the stars and explains, with too much / not enough and both / neither. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>YOUR REVIEW</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>too much people</i>, <i>not enough hot (word order)</i>, <i>I was very boring (for bored)</i>, <i>very exhausted (for absolutely exhausted)</i>, <i>both of them didn’t (for neither)</i>, <i>a little friends</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE COMPLAINTS DESK (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After the stars, your student decides three complaints at the Hotel Marlow with the evidence on the table: the noisy room, the family and the blogger. There is no right answer: let them choose, wait five seconds in silence, then defend the other side and use the PUSH line (only you see it). Recast quietly (too much noise, not enough towels, absolutely exhausting); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Bingo and V · I Can.</li>
+      <li><b>Out loud</b>: II · The Secret Inspector and IV · The Complaints Desk.</li>
+      <li><b>Write</b>: III · Your Review.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW B1 · UNIT 4 · THE HOTEL INSPECTOR · pergunta-surpresa · 27/10/2026 · too much / many · enough · a few / a little · both / neither · -ed / -ing */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'bingo', tipo: 'Would you rather', q: 'For one week: a hotel with no Wi-Fi, or a hotel with very little hot water?',
+    opc: ['No Wi-Fi', 'Little hot water'], st: ['I couldn’t live with too little …', 'Neither is good, but …'],
+    ex: 'No Wi-Fi. Very little hot water is absolutely terrible in winter.', push: 'You have to work online that week. Still no Wi-Fi?' },
+  { cena: 'missao', tipo: 'And you?', q: 'What do you always pack too much of when you travel?',
+    opc: ['Clothes', 'Shoes', 'Snacks'], st: ['I always take too many …', 'I never have enough …'],
+    ex: 'Clothes! I always take too many T-shirts and not enough socks.', push: 'And what did you forget last time?' },
+  { cena: 'cartao', tipo: 'Opinion', q: 'Online reviews of hotels and restaurants: do you believe them?',
+    opc: ['Most of them', 'Only a few', 'Not at all'], st: ['I only believe a few …', 'There are too many fake …'],
+    ex: 'Only a few. There are too many fake reviews, so I read the bad ones first.', push: 'Have you ever written a bad review? What happened?' },
+  { cena: 'pode', tipo: 'What if', q: 'What if someone offered you a job as a secret hotel inspector for one year?',
+    opc: ['Yes, today!', 'Maybe', 'No, thanks'], st: ['It sounds absolutely …', 'I’d get bored / tired of …'],
+    ex: 'Yes, today! It sounds absolutely amazing. Maybe I’d get tired of hotel breakfasts after a few months.', push: 'You can’t go home for a year. Still yes?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW B1 · UNIT 4 · THE HOTEL INSPECTOR · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O júri entra no lugar de "IV · Would You Rather?" (quatro escolhas A/B soltas): depois das estrelas, o
+   inspetor decide três reclamações do Hotel Marlow com as provas na mesa. O would you rather vira pergunta-
+   surpresa. O I (Bingo) fica: é o aquecimento da gramática. A gramática da unidade (too much / many,
+   not enough, a few / a little, both / neither, -ed / -ing, absolutely) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'juri', troca: 'escolha', est: 'o', min: 8, img: 'capa', rot: 'The Complaints Desk', t: 'Three complaints. You decide what is fair.',
+    p: 'Read the evidence. Choose a decision, or say your own. Say why. Your teacher defends the other side.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Room 12', sit: 'The businesswoman wants her money back for one night.',
+        provas: ['She didn’t sleep: too much noise from the street.', 'The website says “quiet rooms”.', 'She didn’t ask to change rooms.'],
+        q: 'Does she get her money back?', opc: ['All of it', 'Half', 'Nothing'],
+        st: ['There was too much …, so …', 'She didn’t ask …, so …', 'Neither side is …'],
+        ex: 'Half. There was too much noise, and the website wasn’t honest. But she didn’t ask for another room.',
+        push: 'The hotel had no other free rooms that night. Does that change your decision?' },
+      { tag: 'The family', sit: 'The family of five wants something for the towels and the stairs.',
+        provas: ['The elevator was broken for three days.', 'There were only a few towels for five people.', 'They loved the pizza and the sea view.'],
+        q: 'What should the hotel give them?', opc: ['A free night', 'A free dinner', 'Just an apology'],
+        st: ['There weren’t enough …', 'Both … and …', 'Three days of stairs is absolutely …'],
+        ex: 'A free dinner. There weren’t enough towels, and three days of stairs is absolutely exhausting. But they loved the place.',
+        push: 'They gave the hotel four stars anyway. Do they still deserve something?' },
+      { tag: 'The blogger', sit: '“Give me a free week, or I’ll write a terrible review.”',
+        provas: ['The Wi-Fi was really terrible.', 'There was very little hot water.', 'He has 200,000 followers.'],
+        q: 'What should the manager do?', opc: ['Give him the week', 'Fix it and say no', 'Ignore him'],
+        st: ['There was too little …, but …', 'I’d be annoyed if …', 'Neither option is …'],
+        ex: 'Fix it and say no. The Wi-Fi was terrible, but a free week for a good review isn’t honest.',
+        push: '200,000 people will read it tomorrow morning. Still say no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "bingo": {
+   "t": "Nine squares. Make a line!",
+   "p": "Do a square out loud. Three in a line: BINGO."
+  },
+  "missao": {
+   "t": "Three guests. How was the stay?",
+   "p": "Ask each guest five questions. Then give stars."
+  },
+  "cartao": {
+   "t": "Review a place you stayed.",
+   "p": "Four lines: too much, both, -ed and -ing."
+  },
+  "cv-juri": {
+   "t": "Three complaints. What is fair?",
+   "p": "Read the evidence. Decide. Say why."
+  },
+  "pode": {
+   "t": "Unit 4: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 4 (too much/not enough, few/a few, both/either/neither, -ed/-ing, adjetivos fortes): o aluno é inspetor secreto do Hotel Marlow.",
+  "armadilha": "O brasileiro diz “too much people”, “not enough hot” (ordem), “I was very boring” no lugar de bored, “very exhausted” e “both of them didn’t” no lugar de neither.",
+  "pal": [
+   "too much",
+   "too many",
+   "not enough",
+   "a few",
+   "a little",
+   "both",
+   "neither",
+   "bored / boring",
+   "absolutely exhausted"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a missão: inspetor secreto no Hotel Marlow, três hóspedes no saguão.",
+   "perg": "What makes a hotel good for you?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "bingo": {
+   "obj": "Bingo de tarefas rápidas misturando a gramática da unidade, de memória.",
+   "perg": "Which square do you want?",
+   "pula": "Uma linha basta."
+  },
+  "missao": {
+   "obj": "O aluno entrevista três hóspedes (o professor) e dá estrelas ao hotel.",
+   "perg": "How many stars, and why?",
+   "pula": "Dois hóspedes bastam; não corte as estrelas."
+  },
+  "cartao": {
+   "obj": "Escrita: uma avaliação curta de um lugar onde o aluno se hospedou.",
+   "perg": "Was there anything you didn’t have enough of?",
+   "pula": "Três linhas bastam; uma correção por linha."
+  },
+  "cv-juri": {
+   "obj": "Balcão de reclamações: decidir três queixas com as provas na mesa.",
+   "perg": "Is this complaint fair? Why?",
+   "pula": "Duas queixas bastam; use a linha PUSH."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê cada linha e marca o que já consegue; o professor confirma.",
+   "perg": "Can you use both and neither now?",
+   "pula": "Não pule: o que ficar aberto vai para a lição. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre viagens e hotéis com a gramática da unidade.",
+   "perg": "What was there too much of on your last trip?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre jeitos de viajar, com too much, both e neither.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a blogueira de viagem do Hotel Marlow e é entrevistado.",
+   "perg": "Was the room absolutely amazing or just OK?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about your trips.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "too much",
+    "not enough",
+    "both",
+    "neither",
+    "-ed / -ing"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR LAST TRIP",
+     "q": "What was there too much of on your last trip?",
+     "fup": "And not enough of?",
+     "st": [
+      "There was too much …",
+      "There weren’t enough …"
+     ],
+     "ex": "There was too much traffic, and there weren’t enough beaches."
+    },
+    {
+     "k": "TWO HOTELS",
+     "q": "Think of two places you stayed. What did they have in common?",
+     "fup": "Which one was better?",
+     "st": [
+      "Both of them had …",
+      "Neither of them …"
+     ],
+     "ex": "Both of them had a pool, but neither of them had good Wi-Fi."
+    },
+    {
+     "k": "BORING OR BORED",
+     "q": "What was the most boring part of a trip you took?",
+     "fup": "Were you bored or tired?",
+     "st": [
+      "The most boring part was …",
+      "I was so bored when …"
+     ],
+     "ex": "The most boring part was the bus. I was bored for six hours."
+    },
+    {
+     "k": "STRONG WORDS",
+     "q": "Tell me about a place that was absolutely amazing.",
+     "fup": "What made it so special?",
+     "st": [
+      "It was absolutely …",
+      "I was absolutely …"
+     ],
+     "ex": "The view was absolutely amazing, and I was absolutely exhausted."
+    },
+    {
+     "k": "A FEW FRIENDS",
+     "q": "Do you travel with a lot of friends or a few?",
+     "fup": "Why?",
+     "st": [
+      "I travel with a few …",
+      "Too many people …"
+     ],
+     "ex": "I travel with a few close friends. Too many people is a problem."
+    },
+    {
+     "k": "BREAKFAST",
+     "q": "What makes a hotel breakfast good?",
+     "fup": "Have you ever had a bad one?",
+     "st": [
+      "There has to be enough …",
+      "Either … or … is fine."
+     ],
+     "ex": "There has to be enough coffee. Either eggs or fruit is fine."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "too many",
+    "not enough",
+    "both",
+    "neither"
+   ],
+   "rodadas": [
+    {
+     "q": "A big hotel or a small guesthouse?",
+     "a": "Big hotel",
+     "b": "Guesthouse",
+     "fa": [
+      "A big hotel. There are enough services for everything.",
+      "I like a pool and a gym."
+     ],
+     "fb": [
+      "A guesthouse. Big hotels have too many people.",
+      "The owner knows your name."
+     ]
+    },
+    {
+     "q": "Trust online reviews or not?",
+     "a": "Trust them",
+     "b": "Don’t trust them",
+     "fa": [
+      "Trust them. A few bad reviews tell you a lot.",
+      "I always read them."
+     ],
+     "fb": [
+      "Don’t trust them. Too many are fake.",
+      "Neither the good ones nor the bad ones are real."
+     ]
+    },
+    {
+     "q": "A trip with a full plan or no plan?",
+     "a": "Full plan",
+     "b": "No plan",
+     "fa": [
+      "A full plan. I get stressed with too little to do.",
+      "I don’t want to waste a day."
+     ],
+     "fb": [
+      "No plan. Too much planning is boring.",
+      "The best days are surprises."
+     ]
+    },
+    {
+     "q": "Beach or city?",
+     "a": "Beach",
+     "b": "City",
+     "fa": [
+      "Beach. I come back relaxed, not exhausted.",
+      "A little sun, a little sea."
+     ],
+     "fb": [
+      "City. Beaches are boring after two days.",
+      "There is never enough time in a city."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the travel blogger now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the travel blogger at the Hotel Marlow.",
+   "perguntas": [
+    "Was there anything you had too much of at the Hotel Marlow?",
+    "What wasn’t there enough of?",
+    "Was the room absolutely amazing or just OK?",
+    "Were you bored at any moment? What was boring?",
+    "Would you recommend the pool or the restaurant? Both? Neither?",
+    "How many stars are you giving it on your blog?"
+   ],
+   "st": [
+    "There was too much …",
+    "There weren’t enough …",
+    "Both … and …"
+   ],
+   "ex": "There was too much noise at night, but the breakfast was absolutely fantastic."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Crack Two Eggs",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/28aa8448495c/crack-two-eggs/img/live-panquecas.webp",
+  "capa": "../img/live-panquecas.webp",
   "alvo": "imperative for instructions: the verb alone (Crack two eggs.) · Don't + verb (Don't touch it.) · first, then, next, finally · please; not You crack, not Cracking, not To crack, not No touch",
   "abrir": "What do you eat for breakfast? How do you make it?",
   "fecho": "An order is the <b>verb alone</b>: <i>Crack two eggs. Pour the milk.</i> No <i>you</i>, no <i>-ing</i>, no <i>to</i>, no <i>-s</i>. A warning: <b>Don't</b> + verb: <i>Don't touch the pan!</i> Use <b>first, then, next, finally</b> to put the steps in order.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo helps Mia make pancakes over the phone. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/28aa8448495c/crack-two-eggs/img/live-leite.webp",
+      "img": "../img/live-leite.webp",
       "leg": "Milk and a bowl on a dark table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "First, crack two eggs in a bowl.",
-          "img": "https://wolf-labs.pages.dev/p/28aa8448495c/crack-two-eggs/img/live-ovos.webp",
+          "img": "../img/live-ovos.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Heat the pan, but don't touch it.",
-          "img": "https://wolf-labs.pages.dev/p/28aa8448495c/crack-two-eggs/img/live-fogo.webp",
+          "img": "../img/live-fogo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Pour the milk and mix it well.",
-          "img": "https://wolf-labs.pages.dev/p/28aa8448495c/crack-two-eggs/img/live-leite.webp",
+          "img": "../img/live-leite.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/28aa8448495c/crack-two-eggs/img/live-panquecas.webp",
+      "img": "../img/live-panquecas.webp",
       "leg": "A stack of pancakes with strawberries",
       "pede": "Look at the picture: pancakes with strawberries. Write 3 short orders to help a friend make them. Use <b>First</b>, <b>Then</b>, <b>Next</b> or <b>Finally</b>, and one <b>Don't</b>.",
       "ph": "First, … Then, … Don't …",

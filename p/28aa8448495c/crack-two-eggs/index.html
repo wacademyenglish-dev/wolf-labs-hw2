@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Crack Two Eggs · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Crack Two Eggs · The Silent Kitchen</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Crack Two Eggs · The Silent Kitchen</h2>
+    <p>A famous recipe video (Tasty, “Perfect Fluffy Pancake”) has <b>no voice</b>: only hands, a bowl and a pan. The student is the voice of the chef. First the eight recipe cards (every right order goes on the recipe card), then the rule, then the video in six chapters: after each one, the student gives the orders like a TV chef. Then the kitchen dangers (every right warning puts up a sign), the house rules wheel, and Sam, who can’t cook. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>An order is the <b>verb alone</b>: <i>Crack two eggs. Mix.</i> No <i>you</i>, no <i>-ing</i>, no <i>to</i>, no <i>-s</i>. NO is <b>Don’t + verb</b>: <i>Don’t touch the pan!</i> (not <i>No touch</i>, <i>Not touch</i>, <i>Don’t to touch</i>). Steps: <b>first, then, next, finally</b>. For a person, not a recipe: <b>Please</b> pass the salt.</p>
+    <!--conversa--><h4>YOUR KITCHEN, YOUR CALL (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>The pancakes from the video are ready: the student chooses what goes on top, then what to tell a friend whose pancakes are black. Answer first, then let them choose; wait five seconds in silence and let them say the whole order (the verb alone, <i>Don’t …</i>). The PUSH line (only you see it) is a quick yes or no or one word. Recast quietly while they talk; at the end, ask them to fix one or two orders themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one light personal question. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Kitchen, II The Recipe Cards, V Kitchen Dangers, VI House Rules, VII Sam Can’t Cook, VIII Your Kitchen, Your Call (the student chooses, then says the order).</li>
+      <li><b>Listen</b>: IV The Silent Video. It has no voice: the student watches and gives the voice. The video opens chapter by chapter and stops by itself.</li>
+      <li><b>Focus</b>: III The Rule.</li>
+      <li><b>Write</b>: IX Your Recipe, with the red wavy line for <i>you crack</i>, <i>mixing</i>, <i>to pour</i>, <i>flips</i>, <i>no touch</i> and <i>don’t to</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>THE VIDEO</h4>
+    <p>Pick a chapter; it plays and stops by itself. Ingredient names appear in English on the video: use them. When the student has watched, tap “Watched · show the options”; they say the orders first, then tap what they said. The wrong options are the real mistakes (you, -ing, to, -s, no, don’t to).</p>
+    <h4>SAM</h4>
+    <p>You are Sam, a little panicked. Read his line, wait for the orders and a question back, then tap “Answered · Sam replies”.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>Everything the student taps moves on both screens: the recipe card, the signs, the wheel. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* CRACK TWO EGGS (Main A1) · pergunta-surpresa · 27/10/2026 · imperativo · Don’t + verbo */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'regra', tipo: 'And you?', q: 'Who cooks in your home?',
+    opc: ['Me', 'My family', 'Nobody!'], st: ['… cooks.', 'I make …'],
+    ex: 'My brother cooks. I wash the dishes!', push: 'Every day?' },
+  { cena: 'video', tipo: 'Would you rather', q: 'Cook or wash the dishes?',
+    opc: ['Cook', 'Wash the dishes'], st: ['I cook. You …!', 'Don’t …!'],
+    ex: 'Cook! You wash the dishes, please!', push: 'Today?' },
+  { cena: 'perigo', tipo: 'What if', q: 'Your friend cooks with a phone. Say it!',
+    opc: ['“Don’t use your phone!”', '“Be careful!”', 'Nothing'], st: ['Don’t …!', 'Put … down, please.'],
+    ex: '“Don’t use your phone! Put it down, please.”', push: 'Angry?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* CRACK TWO EGGS · THE SILENT KITCHEN (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A1 bem leve: escolher 1 de 3, frase quase pronta, o professor responde primeiro.
+   Entra no lugar de "VIII · Quick Check" (extra, tocar-depois-dizer). As panquecas do vídeo estão
+   prontas: o aluno decide o que vai em cima e o que dizer ao amigo que queimou tudo. A gramática
+   (o verbo sozinho, Don’t + verbo, first / then) mora nas opções e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'chef', troca: 'quiz', est: 'o', min: 5, img: 'panquecas', rot: 'Your Kitchen, Your Call', t: 'The pancakes are ready. You decide.',
+    p: 'Your teacher answers first. Then choose one and say the order.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'On top', sit: 'Ten hot pancakes on a plate.',
+        q: 'What goes on them?', opc: ['Put honey on them.', 'Put fruit on them.', 'Put chocolate on them.'],
+        st: ['First, put …', 'Then, put …', 'Don’t put …!'],
+        ex: 'Put chocolate on them. Then put fruit. Don’t put salt!',
+        push: 'Every Sunday? Yes or no?' },
+      { tag: 'Black pancakes', sit: 'Your friend’s pancakes are black!',
+        q: 'What do you tell him?', opc: ['Order a pizza!', 'Try again!', 'Eat them!'],
+        st: ['…, please!', 'Don’t …!', 'First …, then …'],
+        ex: 'Try again! First, turn the fire down. Don’t use your phone!',
+        push: 'Pizza or pancakes?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "Do you cook?",
+   "p": "Pick a card. Answer out loud."
+  },
+  "fichas": {
+   "t": "Eight recipe cards. Say the order.",
+   "p": "Pick a card. Say it. Then tap your sentence."
+  },
+  "regra": {
+   "t": "An order is the verb alone.",
+   "p": "Read the cards. Then fix the four traps."
+  },
+  "video": {
+   "t": "No voice. You are the chef.",
+   "p": "Play a chapter. Give the orders. Tap your sentence."
+  },
+  "perigo": {
+   "t": "Five kitchen dangers. Warn your friend.",
+   "p": "Pick a danger. Say the warning with DON’T."
+  },
+  "roda": {
+   "t": "Every house has rules.",
+   "p": "Spin. Say one DO and one DON’T."
+  },
+  "sam": {
+   "t": "Sam has a date. He can’t cook.",
+   "p": "Your teacher is Sam. Give orders, then ask."
+  },
+  "cv-chef": {
+   "t": "The pancakes are ready. You decide.",
+   "p": "Your teacher answers first. Then say the order."
+  },
+  "fim": {
+   "t": "Your favorite easy recipe.",
+   "p": "Write: First, Then, Next, Finally. And one Don’t."
+  }
+ },
+ "prep": {
+  "obj": "Imperativo (o verbo sozinho, Don’t + verbo, first / then / next / finally): o aluno é a voz do chef num vídeo de panqueca sem som.",
+  "armadilha": "O brasileiro põe sujeito ou forma errada na ordem: “You crack the eggs”, “Mixing”, “To pour”. E o negativo vira “No touch” ou “Don’t to touch”.",
+  "pal": [
+   "crack",
+   "mix",
+   "pour",
+   "flip",
+   "Don’t touch",
+   "first",
+   "then",
+   "next",
+   "finally"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: uma cozinha sem voz, e o aluno vira o chef.",
+   "perg": "Can you make pancakes?",
+   "pula": "Só leia o título e comece."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal sobre cozinhar, com cartas e perguntas de seguimento.",
+   "perg": "Do you cook? What do you make?",
+   "pula": "Duas cartas bastam."
+  },
+  "fichas": {
+   "obj": "Oito fichas de receita: o aluno diz a ordem olhando a figura e monta a receita.",
+   "perg": "What is the order on this card?",
+   "pula": "Cinco fichas bastam."
+  },
+  "regra": {
+   "obj": "A regra: verbo sozinho, sem you, -ing, to ou -s; o aluno conserta quatro armadilhas.",
+   "perg": "What is wrong with “You crack the eggs”?",
+   "pula": "Corrija duas armadilhas e siga."
+  },
+  "video": {
+   "obj": "Vídeo de panqueca sem voz, em capítulos: o aluno dá as ordens como chef de TV.",
+   "perg": "What is the next order?",
+   "pula": "Quatro capítulos bastam."
+  },
+  "perigo": {
+   "obj": "Cinco perigos na cozinha: avisos com Don’t + verbo.",
+   "perg": "What do you say to your friend here?",
+   "pula": "Três perigos bastam."
+  },
+  "roda": {
+   "obj": "Roda das regras da casa: um DO e um DON’T, depois os seus.",
+   "perg": "What is one rule in your house?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "sam": {
+   "obj": "Você é o Sam, em pânico antes do encontro: o aluno dá as ordens e pergunta de volta.",
+   "perg": "Sam is panicking. What does he do first?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-chef": {
+   "obj": "Escolhas sobre as panquecas prontas; o aluno decide e diz a ordem.",
+   "perg": "Honey or fruit? Tell me what to do.",
+   "pula": "Uma escolha basta."
+  },
+  "fim": {
+   "obj": "Escrita: a receita fácil favorita do aluno, com sequência e um Don’t; vai para o My notes.",
+   "perg": "What is your favorite easy recipe?",
+   "pula": "Quatro ordens bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas de conversa sobre cozinha, casa e conselhos, com imperativo.",
+   "perg": "What do you tell a new cook?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado em dilemas de cozinha e defender com ordens.",
+   "perg": "Recipe or no recipe? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno ensina, passo a passo, a fazer algo simples do dia a dia dele.",
+   "perg": "What is the first step?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More kitchen talk.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "first",
+    "then",
+    "don’t",
+    "please"
+   ],
+   "cartas": [
+    {
+     "k": "COFFEE",
+     "q": "How do you make your coffee or tea?",
+     "fup": "Sugar or no sugar?",
+     "st": [
+      "First, … Then, …",
+      "Don’t …"
+     ],
+     "ex": "First, boil the water. Then add the coffee. Don’t use sugar."
+    },
+    {
+     "k": "A NEW COOK",
+     "q": "Your friend can’t cook. Give one good tip.",
+     "fup": "And one thing not to do?",
+     "st": [
+      "Always …",
+      "Don’t …"
+     ],
+     "ex": "Always read the recipe. Don’t leave the pan alone."
+    },
+    {
+     "k": "AT THE TABLE",
+     "q": "What do you say at dinner with family?",
+     "fup": "Is there a rule at your table?",
+     "st": [
+      "Please pass …",
+      "Don’t …"
+     ],
+     "ex": "Please pass the salt. Don’t use your phone at the table."
+    },
+    {
+     "k": "BREAKFAST",
+     "q": "Tell me how to make your breakfast.",
+     "fup": "What do you drink?",
+     "st": [
+      "First, …",
+      "Next, …"
+     ],
+     "ex": "First, cut the bread. Next, put some butter on it."
+    },
+    {
+     "k": "THE FRIDGE",
+     "q": "Someone is visiting. What is the rule for your fridge?",
+     "fup": "What is there in it now?",
+     "st": [
+      "Take …",
+      "Don’t eat …"
+     ],
+     "ex": "Take the juice. Don’t eat my chocolate!"
+    },
+    {
+     "k": "CLEANING UP",
+     "q": "Dinner is over. What are the orders?",
+     "fup": "Who washes the dishes?",
+     "st": [
+      "Wash …",
+      "Don’t …"
+     ],
+     "ex": "Wash the pan. Don’t put it in the dishwasher."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "don’t",
+    "always"
+   ],
+   "rodadas": [
+    {
+     "q": "Follow the recipe or cook your way?",
+     "a": "The recipe",
+     "b": "My way",
+     "fa": [
+      "The recipe. Read every step."
+     ],
+     "fb": [
+      "My way. Don’t be afraid. Try new things."
+     ]
+    },
+    {
+     "q": "Pancakes: sweet or salty?",
+     "a": "Sweet",
+     "b": "Salty",
+     "fa": [
+      "Sweet. Put honey on top."
+     ],
+     "fb": [
+      "Salty. Add cheese and ham."
+     ]
+    },
+    {
+     "q": "Cook for a date or go to a restaurant?",
+     "a": "Cook",
+     "b": "Restaurant",
+     "fa": [
+      "Cook. Make something easy."
+     ],
+     "fb": [
+      "Restaurant. Don’t cook on a first date!"
+     ]
+    },
+    {
+     "q": "Clean while you cook or after dinner?",
+     "a": "While I cook",
+     "b": "After dinner",
+     "fa": [
+      "While you cook. Wash the bowl right away."
+     ],
+     "fb": [
+      "After dinner. Eat first, then clean."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody burned the pancakes."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Teach Me",
+   "t": "Teach your teacher something easy.",
+   "p": "Give the orders, one step at a time.",
+   "prof": "Do exactly what the student says, and act confused if a verb is missing.",
+   "passos": [
+    {
+     "q": "Choose something easy: a sandwich, a juice, a cup of tea.",
+     "st": [
+      "Today I teach you …"
+     ],
+     "ex": "Today I teach you a cheese sandwich."
+    },
+    {
+     "q": "What do I need? Give me the first order.",
+     "st": [
+      "First, take …",
+      "First, get …"
+     ],
+     "ex": "First, take two pieces of bread."
+    },
+    {
+     "q": "Now the middle steps.",
+     "st": [
+      "Then …",
+      "Next, …"
+     ],
+     "ex": "Then put the cheese on the bread. Next, close it."
+    },
+    {
+     "q": "The last step, and one warning.",
+     "st": [
+      "Finally, …",
+      "Don’t …"
+     ],
+     "ex": "Finally, eat it. Don’t burn it in the pan!"
+    }
+   ],
+   "fim": "Now you can teach a recipe in English."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Unless Somebody Goes",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5296ae9c65f3/unless-somebody-goes/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "first conditional: if + present, will + verb; unless = if ... not, with a positive verb; when / as soon as + present for the future; never will after if / unless / when",
   "abrir": "What will you do if you have a free day tomorrow?",
   "fecho": "<b>If</b> + present, <b>will</b> + verb: <i>If it rains, we will wait.</i> <b>Unless</b> = if not, with a positive verb: <i>Unless you hurry, you will be late.</i> <b>When / as soon as</b> + present: <i>When I arrive, I will call.</i> Never <i>will</i> after if, unless or when.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a long trip. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/5296ae9c65f3/unless-somebody-goes/img/live-mapa.webp",
+      "img": "../img/live-mapa.webp",
       "leg": "A map of a winding road",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If nobody goes, the box will stay here.",
-          "img": "https://wolf-labs.pages.dev/p/5296ae9c65f3/unless-somebody-goes/img/live-condado.webp",
+          "img": "../img/live-condado.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Unless it rains, the bridge will be open.",
-          "img": "https://wolf-labs.pages.dev/p/5296ae9c65f3/unless-somebody-goes/img/live-fogo.webp",
+          "img": "../img/live-fogo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "When the sun comes out, you will cross.",
-          "img": "https://wolf-labs.pages.dev/p/5296ae9c65f3/unless-somebody-goes/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5296ae9c65f3/unless-somebody-goes/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A house by a waterfall",
       "pede": "Look at the picture: a house by a waterfall, far away. Write 2 or 3 sentences about a trip you will take. Use <b>if</b>, <b>unless</b> or <b>when</b>.",
       "ph": "If the weather is good, I will …",

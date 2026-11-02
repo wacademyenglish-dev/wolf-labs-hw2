@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Whose Idea Was It?",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b58a8d3a6f99/b2-review-whose-idea-was-it/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "reporting verbs with -ing (denied choosing, admitted making, insisted on blaming, suggested moving, refused to listen); extreme adjectives (absolutely furious, never very furious); compound adjectives, singular (a three-hour meeting); double comparative (the more ..., the less ...)",
   "abrir": "Think of a meeting or a plan that went badly. Who got the blame?",
   "fecho": "Each reporting verb has its pattern: <b>denied / admitted / suggested + -ing</b>, <b>insisted on + -ing</b>, <b>refused + to</b>. Strong adjectives take <b>absolutely / really</b>, never <i>very</i>: <i>absolutely furious</i>. A compound adjective stays singular: <b>a three-hour meeting</b>. <b>The more …, the less …</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a disastrous product launch. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/b58a8d3a6f99/b2-review-whose-idea-was-it/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The meeting room, after the meeting",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Dan denied choosing the date, and Priya admitted making the call.",
-          "img": "https://wolf-labs.pages.dev/p/b58a8d3a6f99/b2-review-whose-idea-was-it/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It was a three-hour meeting, and the director refused to listen.",
-          "img": "https://wolf-labs.pages.dev/p/b58a8d3a6f99/b2-review-whose-idea-was-it/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The more they talked, the less they agreed.",
-          "img": "https://wolf-labs.pages.dev/p/b58a8d3a6f99/b2-review-whose-idea-was-it/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b58a8d3a6f99/b2-review-whose-idea-was-it/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A meeting table with cold mugs",
       "pede": "Look at the picture: a meeting table with cold mugs after a long meeting. Report what two people said or did in a meeting of yours. Use <b>denied, admitted, suggested, insisted on</b> or <b>refused to</b>.",
       "ph": "My boss suggested …",

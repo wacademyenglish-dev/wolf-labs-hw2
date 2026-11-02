@@ -1,0 +1,98 @@
+/* ============================================================
+   THE EMPTY CHAIR · THE CALENDAR · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: a sala de reunião depois do
+   expediente — carvão azulado; o calendário de mesa em papel escuro com
+   o carimbo MOVED em ferrugem; a porta de madeira; as gavetas em três
+   cores: DUTY ferrugem, CHANCE azul-ardósia, IMPOSSIBLE cinza.
+   ============================================================ */
+:root{
+  --noite:#06070a; --noite-rgb:6,7,10; --tinta:#e9e8ec;
+  --t1:#f1f0f4; --t2:#c8c6cf; --t2-rgb:200,198,207; --t3:#868491;
+  --ac:#e08a5c; --ac2:#f6c6a8; --ard:#7fa6d6; --cin:#a7a9b4; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(233,232,236,.05); --vidro2:rgba(233,232,236,.085); --vidro3:rgba(233,232,236,.12);
+  --fio:rgba(226,225,232,.12); --fio2:rgba(226,225,232,.22); --luz:rgba(233,232,236,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1206}
+.btn.cheio{color:#2a1206}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2c170c;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.versao.grande-v{min-height:60px;font:800 clamp(14px,1.1vw,18px) var(--mono);letter-spacing:.06em;text-align:center}
+.ec-ops{display:grid;gap:6px}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1100px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.ec-ouve{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .ec-ouve .transcricao{margin:0}
+.ec-linha-ok{display:flex;align-items:center;gap:12px} .ec-linha-ok .aprova{flex:1;margin:0}
+.ec-rot{margin:0;font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.ec-dois{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+/* o calendário */
+.ec-cal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;width:100%;max-width:720px;padding:14px;border-radius:var(--r2);background:#0c0d12;border:1px solid var(--fio2)}
+.ec-mes{display:grid;gap:6px;align-content:start;padding:10px;border-radius:10px;background:#14151c;border-top:4px solid #3a3b47} .ec-mes>b{font:800 12px var(--mono);letter-spacing:.14em;color:var(--t2)}
+.ec-mes.on{border-top-color:var(--ac)}
+.ec-dia{position:relative;display:grid;gap:2px;padding:6px 8px;border-radius:6px;background:#1b1c25} .ec-dia i{font:800 15px var(--mono);font-style:normal;color:var(--t1)} .ec-dia span{font:600 12px var(--disp);color:var(--t2)}
+.ec-dia.moved span{text-decoration:line-through;text-decoration-color:var(--ac);color:var(--t3)}
+.ec-dia em{position:absolute;right:4px;top:4px;padding:1px 5px;border:2px solid var(--ac);border-radius:3px;font:800 9px var(--mono);font-style:normal;letter-spacing:.1em;color:var(--ac);transform:rotate(-8deg)}
+.ec-dia.aviso{background:#2a1610;border:1px solid var(--ac)} .ec-dia.aviso span{color:var(--ac2);font-weight:800}
+.ec-dia.vazio span{color:var(--t3);font-style:italic} .ec-dia.nota span{color:var(--ard)}
+
+/* a porta */
+.ec-porta{display:grid;justify-items:center;gap:8px;padding:14px;border-radius:var(--r2);background:#0c0d12;border:1px solid var(--fio2)}
+.ec-porta svg{width:min(100%,220px);height:auto}
+.ec-batente{fill:#2b2018;stroke:#5a4330;stroke-width:3} .ec-luz{fill:rgba(240,190,120,.18)}
+.ec-folha{transform-origin:46px 130px;transform:perspective(400px) rotateY(-70deg);transition:transform .8s ease} .ec-folha rect{fill:#4a3424;stroke:#7a5a3e;stroke-width:2} .ec-folha circle{fill:#c9a46c}
+.ec-porta.fechada .ec-folha{transform:none} .ec-porta.fechada .ec-luz{fill:rgba(0,0,0,.4)}
+.ec-porta b{font:800 12px var(--mono);letter-spacing:.14em;color:var(--t2)} .ec-porta.fechada b{color:var(--ac2)}
+.ec-sit{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2)} .ec-sit small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .ec-sit p{margin:0;font:700 clamp(19px,1.55vw,26px) var(--disp)} .ec-sit.passado{border-color:var(--ac)} .ec-sit.passado small{color:var(--ac)}
+
+/* as gavetas */
+.ec-arq{display:grid;gap:8px;padding:12px;border-radius:12px;background:#15161d;border:1px solid #2c2d38}
+.ec-gaveta{position:relative;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:14px;align-items:center;padding:14px 18px;border-radius:8px;border:1px solid #33343f;background:linear-gradient(180deg,#22232c,#1a1b22);color:var(--t1);text-align:left;cursor:pointer;font:inherit;transition:transform .35s}
+.ec-gaveta i{grid-row:1 / 3;width:40px;height:10px;border-radius:5px;background:#4a4b57}
+.ec-gaveta b{font:800 clamp(16px,1.2vw,20px) var(--mono);letter-spacing:.1em} .ec-gaveta small{font:600 13px var(--disp);color:var(--t3)}
+.ec-gaveta.should b{color:var(--ac)} .ec-gaveta.could b{color:var(--ard)} .ec-gaveta.couldnt b{color:var(--cin)} .ec-gaveta.shouldnt b{color:var(--erro)}
+.ec-gaveta.aberta{transform:translateX(24px);box-shadow:-24px 0 0 #0c0d12 inset} .ec-gaveta.should.aberta{border-color:var(--ac)} .ec-gaveta.could.aberta{border-color:var(--ard)} .ec-gaveta.couldnt.aberta{border-color:var(--cin)} .ec-gaveta.shouldnt.aberta{border-color:var(--erro)}
+.ec-fato{display:grid;gap:8px;padding:14px 18px;border-radius:var(--r2)} .ec-fato small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .ec-fato p{margin:0;font:700 clamp(19px,1.55vw,26px)/1.4 var(--disp)}
+
+/* listas, rascunho, cadeiras, tribunal */
+.ec-lista{display:grid;gap:8px;max-width:1300px;margin:0 auto 10px;width:100%}
+.ec-tf{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 14px;border-radius:14px} .ec-tf span{font:600 clamp(16px,1.25vw,21px) var(--disp)} .ec-tf span b{color:var(--ac2)}
+.ec-tf.certo{border-color:var(--ok)} .ec-tf.errado{border-color:var(--erro)}
+.ec-fs{display:flex;gap:6px;flex-wrap:wrap} .ec-fs .pilula{min-height:36px;padding:0 12px;font:800 12px var(--mono);letter-spacing:.06em}
+.ec-mail{display:grid;gap:6px;padding:16px 18px;border-radius:10px;background:#0f1016}
+.ec-mail-cab{display:flex;flex-wrap:wrap;gap:4px 16px;padding-bottom:8px;margin-bottom:4px;border-bottom:1px solid var(--fio);font:700 12px var(--mono);color:var(--t2)} .ec-mail-cab small{margin-left:auto;color:var(--ac)}
+.ec-mail p{margin:0;padding:4px 6px;border-radius:6px;font:500 clamp(15px,1.15vw,19px)/1.45 var(--disp);color:var(--t3)} .ec-mail s{text-decoration-color:var(--ac)}
+.ec-mail p.volta{color:var(--t1);animation:volta .5s ease-out} .ec-mail p.agora{background:rgba(224,138,92,.08);outline:1px solid rgba(224,138,92,.35)}
+@keyframes volta{from{opacity:0;transform:translateX(-10px)}}
+.ec-cadeiras{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ec-cad{display:grid;justify-items:center;gap:4px;padding:16px;border-radius:14px;border:1px solid var(--fio2);background:#101118} .ec-cad i{width:54px;height:60px;border:5px solid #5a4a3e;border-bottom:0;border-radius:6px 6px 0 0;position:relative} .ec-cad i::after{content:'';position:absolute;left:-12px;right:-12px;bottom:12px;height:6px;background:#5a4a3e;border-radius:3px}
+.ec-cad b{font:800 14px var(--mono);letter-spacing:.12em} .ec-cad small{font:700 11px var(--mono);letter-spacing:.1em;color:var(--t3)}
+.ec-cad.voce{border-color:var(--ac);box-shadow:0 0 0 2px rgba(224,138,92,.25)} .ec-cad.voce i,.ec-cad.voce i::after{border-color:var(--ac)} .ec-cad.voce i::after{background:var(--ac)}
+.ec-cad.vazia{opacity:.6}
+.ec-troca{display:grid;gap:6px;padding:20px;border-radius:var(--r2);border:2px solid var(--ac);text-align:center} .ec-troca b{font:800 clamp(26px,2.2vw,38px) var(--mono);letter-spacing:.14em;color:var(--ac)} .ec-troca p{margin:0;font:700 clamp(18px,1.4vw,24px) var(--disp)}
+.ec-caso{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2)} .ec-caso small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .ec-caso p{margin:0;font:600 clamp(16px,1.3vw,22px)/1.5 var(--disp)}
+.ec-papel{display:grid;gap:8px;padding:12px 16px;border-radius:14px} .ec-papel>b{font:800 13px var(--mono);letter-spacing:.12em} .ec-papel p{margin:0;font:700 clamp(16px,1.25vw,21px) var(--disp);color:var(--ac2)} .ec-papel.certo{border-color:var(--ok)} .ec-papel.errado{border-color:var(--erro)}
+.ec-martelo{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);border-color:var(--ok)} .ec-martelo b{font:800 13px var(--mono);letter-spacing:.14em;color:var(--ok)} .ec-martelo p{margin:0;font:700 clamp(18px,1.4vw,24px) var(--disp)}
+.ec-conta{display:grid;gap:6px;max-width:1100px;margin:12px auto 0;width:100%} .ec-conta small{font:800 10px var(--mono);letter-spacing:.12em;color:var(--t3)} .ec-conta div{display:flex;flex-wrap:wrap;gap:6px} .ec-conta .pilula{font:800 11px var(--mono);letter-spacing:.06em}
+.ec-volta{display:grid;gap:6px;padding:12px 16px;border-radius:14px} .ec-volta small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .ec-volta p{display:grid;gap:2px;margin:0;font:600 14px var(--mono);color:var(--t2)} .ec-volta b{color:var(--t1)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .ec-porta svg{width:140px}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .ec-cal{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .ec-tf{grid-template-columns:1fr} .ec-dois{grid-template-columns:1fr} }
+.ec-arq{padding-right:34px;overflow:hidden} .ec-gaveta.aberta{transform:translateX(22px)}
+.ec-conta{margin:0 auto 10px;grid-template-columns:auto 1fr;align-items:center;gap:10px} .ec-conta .pilula{min-height:30px;padding:0 10px}

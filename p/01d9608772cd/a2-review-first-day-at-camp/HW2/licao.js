@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "First Day at Camp",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/01d9608772cd/a2-review-first-day-at-camp/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 7 review, rules and advice: should / shouldn't + plain verb; have to / has to / don't have to, Do I have to ...?, had to (past of must); must / mustn't (no to, no past); never must to, never she have to",
   "abrir": "What do you have to do every morning?",
   "fecho": "Advice: <b>should / shouldn't</b>. Rule: <b>must</b>, <b>have to</b>. Not allowed: <b>mustn't</b>. Not necessary: <b>don't have to</b>. Past: <b>had to</b>. After them the plain verb, never <i>to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a lake camp on the first night. A new scene, about 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/01d9608772cd/a2-review-first-day-at-camp/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The pier at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "You must wear a life jacket in the boat.",
-          "img": "https://wolf-labs.pages.dev/p/01d9608772cd/a2-review-first-day-at-camp/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "You mustn't swim at night.",
-          "img": "https://wolf-labs.pages.dev/p/01d9608772cd/a2-review-first-day-at-camp/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Campers don't have to cook, but they have to help.",
-          "img": "https://wolf-labs.pages.dev/p/01d9608772cd/a2-review-first-day-at-camp/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/01d9608772cd/a2-review-first-day-at-camp/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A wooden pier by the lake at night",
       "pede": "Look at the picture: a pier by the lake at night. Write 2 or 3 sentences: one rule with <b>must</b> or <b>mustn't</b>, one thing campers <b>don't have to</b> do, and one piece of advice with <b>should</b>.",
       "ph": "At the camp, you must …",

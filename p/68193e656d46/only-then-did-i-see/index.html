@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Only Then Did I See · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 4 · Inversion</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Only Then Did I See · C1 Unit 4 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on only + inversion: Only then / Only later did I…; Only when / Only after + clause, then inversion in the main clause; Only by + -ing did I…; Only if…, will you…</p><p style="margin:0 0 6px"><b>The story:</b> An actress (invented) writes about ten years of stage fright, the night she froze on stage, and the grandmother’s diary she found in the attic.</p><p style="margin:0 0 6px"><b>About 41 min:</b> I · How Do You Learn? (6) · II · The Memoir (10) · III · Where’s the Verb? (9) · IV · The Night She Froze (8) · V · Your Turning Point (8).</p><p style="margin:0"><b>Open with:</b> “How do you learn best? Let’s choose.”</p></div><!--/prep-->
+    <p>This structure marks the turning point of a story. Students usually invert in the wrong clause: show that with only when / after / if, the first part is normal and the MAIN clause inverts. The memoir is emotional; read it slowly. The writing card is the student’s own turning point: let it be personal.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>Only then did I… · Only later did I… · Only when + clause, did I… · Only after + noun / clause, did I… · Only by + -ing did I… · Only if…, will you…</p>
+    <h4>HOW DO YOU LEARN?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>THE MEMOIR</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>WHERE’S THE VERB?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>YOUR TURNING POINT</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>Only then I understood</i>, <i>Only when did the lights go down I froze</i>, <i>Only by practise I improved</i>, <i>Only if you rehearse you will succeed</i>, <i>Only after did I finish I relaxed</i>, <i>Only later I realized</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE NIGHT SHE FROZE (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After the rule, your student is the jury for three people from the night the actress froze: the director, the woman who posted the video, and the stage manager on his phone. They read the evidence and give a verdict, starting with Only (Only if… will…, Only when… did…). There is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it) to make the verdict harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · How Do You Learn? and IV · The Night She Froze.</li>
+      <li><b>Listen</b>: II · The Memoir.</li>
+      <li><b>Focus</b>: III · Where’s the Verb?.</li>
+      <li><b>Write</b>: V · Your Turning Point.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* ONLY THEN DID I SEE (Main C1) · pergunta-surpresa · 28/10/2026 · only + inversão */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'escolha', tipo: 'And you?', q: 'What is something you only learned to enjoy as an adult?',
+    opc: ['A food', 'A kind of music', 'Something else'], st: ['Only when I was … did I start to …', 'Only later did I …'],
+    ex: 'A food: coffee. Only when I started working did I need it, and only later did I really love it.', push: 'And something you loved as a child and can’t stand now?' },
+  { cena: 'leitura', tipo: 'Would you rather', q: 'Would you rather forget your first line on a stage, or forget a friend’s name at a party?',
+    opc: ['My first line', 'A friend’s name'], st: ['Only if … would I …', 'Never would I …'],
+    ex: 'My first line. Only the audience would laugh. Forgetting a friend’s name, that’s a story they tell for ten years.', push: 'It’s your best friend’s new partner, and you’ve met them three times. Still the same?' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Is being nervous before something important a good sign?',
+    opc: ['Yes, it means you care', 'No, it just gets in the way'], st: ['Only when I’m nervous do I …', 'Only by … can you …'],
+    ex: 'Yes. Only when I’m a little nervous do I prepare properly. When I’m relaxed, I forget things.', push: 'What do you do with your hands when you’re nervous? Show me.' },
+  { cena: 'cartao', tipo: 'What if', q: 'You could go back to one moment and do it again, knowing what you know now. Which one?',
+    opc: ['A school moment', 'A work moment', 'Something funny'], st: ['Only now do I see that …', 'Only if I could go back would I …'],
+    ex: 'A work moment: my first job interview. Only now do I see that they wanted me to talk more, not less.', push: 'And one moment you would never change, even if you could?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* ONLY THEN DID I SEE (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O júri TROCA "IV · Memory" (pares, prática controlada; a forma já está no III e volta no V).
+   A noite em que a atriz congelou no palco tem três pessoas para julgar: o diretor, a pessoa da plateia
+   que postou o vídeo e o contrarregra que não soprou a fala. O aluno lê as provas e dá o veredito.
+   A inversão com only (Only when … did …, Only later did …, Only if … will …) mora nos iniciadores.
+   Formato: jury with evidence (escolha com provas). */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'juri', troca: 'memoria', est: 'o', min: 8, img: 'capa', rot: 'The Night She Froze', t: 'Three people, one bad night. You decide.',
+    p: 'Read the evidence for each person. Give a verdict, or say your own. Then say why, starting with Only.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The director', sit: 'After the show, the director wants to replace her.',
+        provas: ['In ten years, she never missed a show.', 'The audience laughed, but most thought it was part of the play.', 'The theatre got three complaints.'],
+        q: 'What should the director do?', opc: ['Replace her', 'A second chance', 'Talk to her first'],
+        st: ['Only if she … will the theatre …', 'Only after … should he …', 'Only then would I …'],
+        ex: 'A second chance. Only after ten perfect years did she make one mistake. Only if it happens again should he think about it.',
+        push: 'It happens again next week, on the opening night of a new play. Same verdict?' },
+      { tag: 'The video', sit: 'A woman in the audience filmed the moment and posted it online, without asking.',
+        provas: ['The video has two million views.', 'Ticket sales went up by forty per cent.', 'The actress says she cried when she saw it.'],
+        q: 'Was it OK to post it?', opc: ['Guilty', 'Not guilty', 'It depends'],
+        st: ['Only when she asked … would it be OK.', 'Only later did she …', 'Only by … could she …'],
+        ex: 'Guilty. Only if the actress says yes should anyone post a video like that. The ticket sales don’t change it.',
+        push: 'The actress later says: “That video changed my career.” Do you change your verdict?' },
+      { tag: 'The stage manager', sit: 'His job was to whisper the first line if she forgot. That night, he was checking his phone.',
+        provas: ['He has worked with her for ten years.', 'He says the phone call was from his son’s school.', 'Only when the audience laughed did he look up.'],
+        q: 'What happens to him?', opc: ['A warning', 'Nothing', 'He loses his job'],
+        st: ['Only when … did he …', 'Only if … will he …', 'Only after … should …'],
+        ex: 'A warning. Only when the audience laughed did he look up: that’s his whole job. But only once in ten years.',
+        push: 'Your boss saw you on your phone in an important meeting. What verdict would YOU want?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "escolha": {
+   "t": "How do you learn?",
+   "p": "Choose A or B. Say why, with an example."
+  },
+  "leitura": {
+   "t": "Chapter 7: the night I stopped shaking.",
+   "p": "Read it out loud. Answer. Then look closer."
+  },
+  "descobre": {
+   "t": "Only… and then what?",
+   "p": "Compare A and B. Where does the inversion go?"
+  },
+  "cv-juri": {
+   "t": "Three people, one bad night.",
+   "p": "Give a verdict. Say why, starting with Only."
+  },
+  "cartao": {
+   "t": "The moment everything changed.",
+   "p": "Four lines. Only + inversion at least twice."
+  }
+ },
+ "prep": {
+  "obj": "Only + inversão (Only then did I…, Only when…, did I…, Only by + -ing did I…, Only if…, will you…): uma atriz escreve sobre dez anos de medo de palco e a noite em que travou.",
+  "armadilha": "O português não inverte, então sai “Only then I understood”; e, quando inverte, inverte na oração errada: “Only when did the lights go down I froze”. Com when/after/if, a primeira parte fica normal e a principal inverte.",
+  "pal": [
+   "Only then did I …",
+   "Only later did I …",
+   "Only when …, did I …",
+   "Only after …, did I …",
+   "Only by + -ing did I …",
+   "Only if …, will you …",
+   "stage fright",
+   "turning point"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: a inversão com only marca o ponto de virada de uma história.",
+   "perg": "How do you learn best?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "escolha": {
+   "obj": "A ou B sobre como o aluno aprende; ele explica com exemplo e o professor também responde.",
+   "perg": "Why that one? Give me an example.",
+   "pula": "Duas escolhas bastam."
+  },
+  "leitura": {
+   "obj": "Leitura lenta do capítulo 7 da memória da atriz; perguntas de sentido e depois achar as inversões.",
+   "perg": "When did she finally stop shaking?",
+   "pula": "Leia metade e mostre o padrão."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: em qual oração vai a inversão; depois regras e armadilhas.",
+   "perg": "Which clause inverts here?",
+   "pula": "Três pares e uma armadilha bastam."
+  },
+  "cv-juri": {
+   "obj": "Júri da noite em que ela travou (diretor, quem postou o vídeo, contrarregra no celular), veredito com Only; PUSH.",
+   "perg": "Who is most responsible, and why?",
+   "pula": "Uma pessoa basta."
+  },
+  "cartao": {
+   "obj": "Escrita: o ponto de virada do próprio aluno, com Only + inversão duas vezes; deixar ser pessoal.",
+   "perg": "What was your turning point?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre momentos de virada, medo e aprendizado, com Only + inversão.",
+   "perg": "Only when … did you …?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre medo de palco, vídeos virais e aprender errando, com Only nos argumentos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a atriz e responde a uma entrevista sobre o medo de palco e a volta ao teatro.",
+   "perg": "When did you finally feel ready?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Turning points, with Only.",
+   "p": "Pick a card. Start your answer with Only.",
+   "palavras": [
+    "Only then did I …",
+    "Only later did I …",
+    "Only when …, did I …",
+    "Only by + -ing …",
+    "Only if …, will …"
+   ],
+   "cartas": [
+    {
+     "k": "NERVES",
+     "q": "When were you most nervous in public, and when did it pass?",
+     "fup": "What helped?",
+     "st": [
+      "Only when …, did I …"
+     ],
+     "ex": "Only when I saw a friendly face in the audience did my hands stop shaking."
+    },
+    {
+     "k": "LATER",
+     "q": "What advice did you ignore, and understand only later?",
+     "fup": "Who gave it to you?",
+     "st": [
+      "Only later did I realize …"
+     ],
+     "ex": "Only later did I realize my father was right about saving money."
+    },
+    {
+     "k": "BY DOING",
+     "q": "What skill did you learn only by doing it badly first?",
+     "fup": "How long did it take?",
+     "st": [
+      "Only by + -ing did I …"
+     ],
+     "ex": "Only by burning a lot of rice did I learn to cook it."
+    },
+    {
+     "k": "A CONDITION",
+     "q": "What would make you change jobs or cities?",
+     "fup": "Is it likely?",
+     "st": [
+      "Only if …, would I …"
+     ],
+     "ex": "Only if the offer were really good would I leave this city."
+    },
+    {
+     "k": "AFTER",
+     "q": "Tell me about something you only appreciated after it ended.",
+     "fup": "Would you go back?",
+     "st": [
+      "Only after … did I …"
+     ],
+     "ex": "Only after I graduated did I appreciate how free college was."
+    },
+    {
+     "k": "A FREEZE",
+     "q": "Have you ever frozen at an important moment?",
+     "fup": "What did you do next?",
+     "st": [
+      "I froze when …",
+      "Only then did I …"
+     ],
+     "ex": "I froze in a job interview, and only then did I learn to prepare three stories in advance."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "Only if …",
+    "Only when …",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Stage fright: can you get rid of it, or only live with it?",
+     "a": "Get rid of it",
+     "b": "Live with it",
+     "fa": [
+      "Get rid of it. Only by practicing every week did she beat it.",
+      "Fear is a habit, and habits change."
+     ],
+     "fb": [
+      "Live with it. Only when you accept it does it get smaller.",
+      "Even great actors feel it."
+     ]
+    },
+    {
+     "q": "Posting a video of someone failing: fair game or cruel?",
+     "a": "Fair game",
+     "b": "Cruel",
+     "fa": [
+      "Fair game. Only if it’s a public show, of course.",
+      "Famous people accept being filmed."
+     ],
+     "fb": [
+      "Cruel. Only later do you see the damage.",
+      "A bad night shouldn’t follow you forever."
+     ]
+    },
+    {
+     "q": "Do we learn more from failure or from success?",
+     "a": "Failure",
+     "b": "Success",
+     "fa": [
+      "Failure. Only after falling do you really pay attention.",
+      "Success teaches you nothing new."
+     ],
+     "fb": [
+      "Success. Only when something works do you know what to repeat.",
+      "Failure often just teaches fear."
+     ]
+    },
+    {
+     "q": "Should the actress go back to the stage?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Only by going back will she know she’s free.",
+      "The stage is her life."
+     ],
+     "fb": [
+      "No. Only if she wants to, not to prove something.",
+      "There are other ways to act."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Only now do we know where you stand."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the actress now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the actress, with Only + inversion when you can.",
+   "perguntas": [
+    "When did you first feel stage fright?",
+    "What happened the night you froze?",
+    "When did you finally understand your fear?",
+    "What did you find in the attic?",
+    "How did you learn to stop shaking?",
+    "Under what condition would you play that role again?"
+   ],
+   "st": [
+    "Only then did I …",
+    "Only when …, did I …",
+    "Only if …, will I …"
+   ],
+   "ex": "Only when I read the diary did I understand the fear, and only by going back on stage did I beat it."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

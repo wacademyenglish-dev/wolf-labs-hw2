@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Me Neither",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/176400c036da/me-neither/img/live-cozinha.webp",
+  "capa": "../img/live-cozinha.webp",
   "alvo": "agreeing: a yes echoes with too / So do I / Me too; a no echoes with either / Neither do I / Me neither; the little verb comes from the first sentence (so am I, neither can I, so did I); disagreeing short: I do / I don't; never I don't ... too, never Me too for a no",
   "abrir": "Your friend says: I love pizza. Do you agree?",
   "fecho": "A yes: <b>too</b> · <b>So do I</b> · <b>Me too</b>. A no: <b>either</b> · <b>Neither do I</b> · <b>Me neither</b>. The little verb comes from the first sentence: <i>I can't swim. Neither can I.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at a flat. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/176400c036da/me-neither/img/live-flat1.webp",
+      "img": "../img/live-flat1.webp",
       "leg": "A door with warm light",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I love the big window. So do I.",
-          "img": "https://wolf-labs.pages.dev/p/176400c036da/me-neither/img/live-flat2.webp",
+          "img": "../img/live-flat2.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I don't like the stairs. Neither do I.",
-          "img": "https://wolf-labs.pages.dev/p/176400c036da/me-neither/img/live-flat1.webp",
+          "img": "../img/live-flat1.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I can't decide. Me neither.",
-          "img": "https://wolf-labs.pages.dev/p/176400c036da/me-neither/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/176400c036da/me-neither/img/live-flat2.webp",
+      "img": "../img/live-flat2.webp",
       "leg": "A bright empty room at night",
       "pede": "Look at the picture: an empty room. Write a short talk with a friend, 2 or 3 lines. Your friend says something, you agree with <b>So do I</b> or <b>Neither do I</b>.",
       "ph": "I love … So do I.",

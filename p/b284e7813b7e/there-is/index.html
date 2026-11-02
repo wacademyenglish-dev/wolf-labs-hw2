@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · There Is · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>There Is · The Front Seat</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>There Is · The Front Seat</h2>
+    <p>A street, and then four real towns: Brighton, Petworth, London and Cambridge. The idea of the hour: an English sentence can’t start with an empty front, so English hires a word that means nothing (<i>there</i>) just to sit there. On screen, every sentence is a row of cinema seats, and the front seat is empty until the right word sits in it. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>There is</b> (one) / <b>there are</b> (more): the front never changes, so the number is at the back. <b>There isn’t a… / there aren’t any…</b> To ask, swap the two words: <b>Is there…? Are there any…?</b> The mistakes: <i>In my town has a park</i>, <i>Is a park near here</i> (empty front), <i>there is two</i>, <i>There is a station?</i> as a question, <i>aren’t no</i>.</p>
+    <h4>THE AUDIO</h4>
+    <p>Real answers from four towns (pause and 0.75×; the transcript after listening; checked against the audio). Note: Cambridge says <i>two universities, lots of churches, no water park</i>.</p>
+    <!--conversa--><h4>ONE NEW THING (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After the four towns, your student’s own town gets one new thing: a beach, a big park or a new cinema. They put the three in order. There is no right answer. Say your own order first, then let them tap 1, 2, 3, wait five seconds in silence, and use the PUSH line (only you see it). The starters keep there isn’t a … in my town in their mouth. Then show your order and agree on one top 3. Recast quietly while they talk (have a beach → there is a beach); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: II Five Sentences, V Six Things in Brighton (ears only), VI Four Towns.</li>
+      <li><b>Out loud</b>: I Your Street, VIII One New Thing (three things in order, with there isn’t), IX You Decide (both halves: there is and there isn’t), X Your Town (only true sentences count).</li>
+      <li><b>Focus</b>: III The Front Seat, IV The Back of the Sentence (cover the front), VII Is There…?.</li>
+      <li><b>Write</b>: XI, their own town, with the red wavy line for <i>has / have</i> for a place, an empty front, <i>there is two</i>, <i>there are a</i>, <i>There is…?</i> and <i>aren’t no</i>. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THERE IS (Main A1) · pergunta-surpresa · 27/10/2026 · there is / are · isn't / aren't (máx. 3 no A1) */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'escuta', tipo: 'And you?', q: 'Is there a park near your house?',
+    opc: ['Yes, there is.', 'No, there isn’t.'], st: ['Yes, there is. It’s …', 'No, there isn’t.'],
+    ex: 'Yes, there is. It’s small, but nice.', push: 'Do you go there? Yes or no?' },
+  { cena: 'lista', tipo: 'Would you rather', q: 'A town with a beach or lots of shops?',
+    opc: ['A beach', 'Lots of shops'], st: ['There is a beach!', 'There are lots of shops!'],
+    ex: 'A beach! There is a beach, so I’m happy.', push: 'And no shops? OK?' },
+  { cena: 'fundo', tipo: 'And you?', q: 'Cinemas in your town?',
+    opc: ['None', 'One', 'Lots!'], st: ['There is one cinema.', 'There are … cinemas.', 'There aren’t any.'],
+    ex: 'There are two cinemas, but they’re small.', push: 'Do you go? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THERE IS (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Ranking leve (3 itens, ordem do professor) no lugar de "VIII · What Is Not There" (extra; preencher
+   there isn't / aren't, prática controlada — o negativo já aparece no I, no II e nas quatro cidades).
+   Depois das quatro cidades: a cidade do aluno ganha UMA coisa nova — praia, parque grande ou cinema?
+   (O IX, You Decide, é escolher entre cidades; aqui é a cidade dele.) A1 bem leve: três itens curtos,
+   frase quase pronta, o professor mostra a ordem dele. A gramática (there is / there isn't) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'nova', troca: 'nao', est: 'o', min: 6, img: 'rua', rot: 'One New Thing', t: 'Your town gets one new thing.',
+    p: 'Put them in order: 1 is the top. Then say it with there is / there isn’t.',
+    formato: 'ranking',
+    q: 'Your town. What first?',
+    itens: ['a beach', 'a big park', 'a new cinema'],
+    st: ['There isn’t a … in my town.', 'Number one: a …'],
+    ex: 'Number one: a beach! There isn’t a beach in my town.',
+    push: 'Is there a park now? Yes or no?',
+    prof: [0, 2, 1],
+    dica: 'Tap 1, 2, 3. Your teacher answers first.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Two true things about your street.",
+   "p": "You are on a live show. Answer out loud."
+  },
+  "escuta": {
+   "t": "Five sentences. Same first word.",
+   "p": "Listen first. Say it. Then see the words."
+  },
+  "frente": {
+   "t": "Somebody has to sit at the front.",
+   "p": "Say the sentence. Then fill the front seat."
+  },
+  "fundo": {
+   "t": "Is or are? Look at the back.",
+   "p": "Cover the front. One thing: is. More: are."
+  },
+  "lista": {
+   "t": "Six things in Brighton. One isn’t there.",
+   "p": "Ears only. Tap each word you hear."
+  },
+  "cidades": {
+   "t": "What is there in your town?",
+   "p": "Tap a town. Listen. Read the lines out loud."
+  },
+  "pergunta": {
+   "t": "To ask, the two words swap.",
+   "p": "Turn the sentence around. Say both."
+  },
+  "cv-nova": {
+   "t": "Your town gets one new thing.",
+   "p": "Put them in order. Say it with there is."
+  },
+  "portas": {
+   "t": "No town has everything. Where do you move?",
+   "p": "Pick a town. Say the good and the bad."
+  },
+  "cidade": {
+   "t": "Now your real town.",
+   "p": "One true sentence for each card."
+  },
+  "fim": {
+   "t": "Write about your town.",
+   "p": "There is, there are, there isn’t, and Is there…?"
+  }
+ },
+ "prep": {
+  "obj": "There is / there are, there isn’t / aren’t any e Is there…? / Are there any…?. Uma rua e quatro cidades reais: Brighton, Petworth, London e Cambridge.",
+  "armadilha": "O português usa “tem”: sai “In my town has a park” ou frente vazia (“Is a park near here”). E “there is two”, “There is a station?” como pergunta, “aren’t no”.",
+  "pal": [
+   "there is",
+   "there are",
+   "there isn’t a",
+   "there aren’t any",
+   "Is there a…?",
+   "Are there any…?",
+   "town",
+   "near here"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: a frase inglesa não começa vazia, então o there senta na frente.",
+   "perg": "What is there near your home?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "abre": {
+   "obj": "Aquecimento em formato de programa ao vivo: duas verdades sobre a rua do aluno.",
+   "perg": "What is there on your street?",
+   "pula": "Duas respostas bastam."
+  },
+  "escuta": {
+   "obj": "Escuta de cinco frases que começam com There; ouvir antes de ler.",
+   "perg": "What is the first word in every sentence?",
+   "pula": "Três frases bastam."
+  },
+  "frente": {
+   "obj": "O assento da frente não pode ficar vazio: there entra no lugar do “tem”.",
+   "perg": "Who sits in the front seat?",
+   "pula": "Quatro frases bastam."
+  },
+  "fundo": {
+   "obj": "Is ou are: o número está no fim da frase, não na frente.",
+   "perg": "One thing or more? Is or are?",
+   "pula": "Quatro frases bastam."
+  },
+  "lista": {
+   "obj": "Escuta só de ouvido: cinco das seis coisas estão mesmo em Brighton.",
+   "perg": "Which one is not in Brighton?",
+   "pula": "Ouça uma vez só."
+  },
+  "cidades": {
+   "obj": "Respostas reais de quatro cidades; ler em voz alta (Cambridge: duas universidades, sem parque aquático).",
+   "perg": "What is there in Cambridge?",
+   "pula": "Duas cidades bastam."
+  },
+  "pergunta": {
+   "obj": "Pergunta invertendo: Is there…? Are there any…?",
+   "perg": "Is there a cinema near here?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-nova": {
+   "obj": "O aluno ordena três coisas novas para a cidade e fala com there is / there isn’t.",
+   "perg": "Is there a beach in your town?",
+   "pula": "Só o primeiro lugar e o porquê."
+  },
+  "portas": {
+   "obj": "Escolher uma cidade dizendo o lado bom (there is) e o ruim (there isn’t).",
+   "perg": "What isn’t there in this town?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cidade": {
+   "obj": "Frases verdadeiras sobre a cidade real do aluno; só vale o que é verdade.",
+   "perg": "Are there any good restaurants in your town?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita sobre a cidade do aluno com as quatro formas e uma pergunta; vai para o My notes.",
+   "perg": "Is there a park in your town?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra sobre lugares da vida do aluno, com there is / are.",
+   "perg": "What is there in your kitchen right now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois lugares, justificando com there is / there isn’t.",
+   "perg": "A big city or a small town?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno inventa a cidade perfeita em passos curtos.",
+   "perg": "What is there in your perfect town?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions about places.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "there is",
+    "there are",
+    "there isn’t",
+    "there aren’t any"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR KITCHEN",
+     "q": "What is there in your kitchen right now?",
+     "fup": "Is there any fruit?",
+     "st": [
+      "There is some …",
+      "There are some …"
+     ],
+     "ex": "There is some bread and there are some apples."
+    },
+    {
+     "k": "YOUR BEDROOM",
+     "q": "What is there in your bedroom?",
+     "fup": "Is there a TV?",
+     "st": [
+      "There is a …",
+      "There isn’t a …"
+     ],
+     "ex": "There is a big bed. There isn’t a TV."
+    },
+    {
+     "k": "YOUR WORK",
+     "q": "What is there near your work?",
+     "fup": "Are there any good cafés?",
+     "st": [
+      "There is a … near my work.",
+      "There aren’t any …"
+     ],
+     "ex": "There is a gym near my work. There aren’t any good cafés."
+    },
+    {
+     "k": "YOUR BAG",
+     "q": "What is there in your bag?",
+     "fup": "Is there any money?",
+     "st": [
+      "There is …",
+      "There are …"
+     ],
+     "ex": "There are two pens and there is a bottle of water."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Is there a beach in your city?",
+     "fup": "What is there for tourists?",
+     "st": [
+      "Yes, there is.",
+      "No, there isn’t. But there is …"
+     ],
+     "ex": "No, there isn’t. But there are a lot of good museums."
+    },
+    {
+     "k": "YOUR WEEKEND",
+     "q": "Is there a good place for Sunday near you?",
+     "fup": "Are there many people there?",
+     "st": [
+      "There is a …",
+      "There are a lot of …"
+     ],
+     "ex": "There is a big park. There are a lot of dogs on Sunday."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "there is",
+    "there isn’t",
+    "there are"
+   ],
+   "rodadas": [
+    {
+     "q": "A big city or a small town?",
+     "a": "A big city",
+     "b": "A small town",
+     "fa": [
+      "A big city. There are a lot of restaurants."
+     ],
+     "fb": [
+      "A small town. There isn’t any traffic."
+     ]
+    },
+    {
+     "q": "Brighton or Cambridge?",
+     "a": "Brighton",
+     "b": "Cambridge",
+     "fa": [
+      "Brighton. There is a beach."
+     ],
+     "fb": [
+      "Cambridge. There are two universities."
+     ]
+    },
+    {
+     "q": "A house near the beach or near a park?",
+     "a": "The beach",
+     "b": "A park",
+     "fa": [
+      "The beach. There is sun every day."
+     ],
+     "fb": [
+      "A park. There are trees and birds."
+     ]
+    },
+    {
+     "q": "A street with shops or a quiet street?",
+     "a": "With shops",
+     "b": "Quiet",
+     "fa": [
+      "With shops. There is everything near me."
+     ],
+     "fb": [
+      "Quiet. There isn’t any noise at night."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Perfect Town",
+   "t": "Build your perfect town.",
+   "p": "One step at a time. Say it out loud.",
+   "prof": "Ask Is there…? after each step. Listen for the front seat: no “has a park”.",
+   "passos": [
+    {
+     "q": "Where is your town? Is there a beach or mountains?",
+     "st": [
+      "There is a …",
+      "There are …"
+     ],
+     "ex": "My town is in the south. There are mountains and there is a lake."
+    },
+    {
+     "q": "What is there in the center?",
+     "st": [
+      "In the center there is …",
+      "There are some …"
+     ],
+     "ex": "In the center there is a big square and there are some cafés."
+    },
+    {
+     "q": "What isn’t there? Nothing bad!",
+     "st": [
+      "There isn’t any …",
+      "There aren’t any …"
+     ],
+     "ex": "There isn’t any traffic and there aren’t any big buildings."
+    },
+    {
+     "q": "Is there one special thing?",
+     "st": [
+      "Yes, there is. There is a …"
+     ],
+     "ex": "Yes, there is. There is a cinema on a boat."
+    }
+   ],
+   "fim": "Your town is ready. Can your teacher move there?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

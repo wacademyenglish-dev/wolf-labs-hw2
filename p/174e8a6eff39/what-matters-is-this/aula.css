@@ -1,0 +1,77 @@
+/* ============================================================
+   WHAT MATTERS IS THIS · ONE LIGHT · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: uma casa de espetáculos
+   apagada. Azul-plateia profundo, cinzas frios, e UMA luz: o cone de
+   tungstênio que cai sobre a palavra que importa. Gloock nos títulos,
+   Manrope no texto; rótulos em caixa normal.
+   ============================================================ */
+:root{
+  --noite:#070a14; --noite-rgb:7,10,20; --tinta:#e9ecf3;
+  --t1:#eef1f7; --t2:#b8bfcf; --t2-rgb:184,191,207; --t3:#7a8299;
+  --ac:#f3d9a4; --ac2:#fff1d2; --azul:#3b4a78;
+  --vidro:rgba(233,236,243,.045); --vidro2:rgba(233,236,243,.08); --vidro3:rgba(233,236,243,.11);
+  --fio:rgba(220,226,240,.11); --fio2:rgba(220,226,240,.2); --luz:rgba(233,236,243,.16);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Gloock',Georgia,serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Manrope',system-ui,sans-serif;
+  --r1:14px; --r2:10px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1d05}
+.btn.cheio{color:#2a1d05}
+.capa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:56px;align-items:center}
+.capa h1{margin:14px 0 18px;font:400 clamp(48px,4.6vw,88px)/1 var(--disp);letter-spacing:-.01em;color:var(--t1)}
+.capa .sub{margin:0 0 26px;font:500 clamp(18px,1.35vw,23px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.capa-r{width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.1vw,18px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.wm-ops{display:grid;gap:6px} .wm-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1240px;margin:12px auto;width:100%} .wm-ops.linha .versao{text-align:center;min-height:58px;font-weight:600}
+.wm-rot{max-width:1240px;margin:0 auto 8px;width:100%;font:600 15px var(--ui);color:var(--t3)}
+.wm-linha-ok{display:flex;align-items:center;gap:12px} .wm-linha-ok .aprova{flex:1;margin:0} .wm-linha-ok.centro{max-width:1240px;margin:0 auto;width:100%}
+
+/* vídeo selado */
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:1px dashed var(--fio2);text-align:center;padding:16px}
+.selo-v b{font:400 32px var(--disp);color:var(--ac)} .selo-v small{font:600 15px var(--ui);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:600 13px var(--ui);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* o palco e o holofote: o único gesto forte da aula */
+.wm-palco{position:relative;display:grid;gap:14px;padding:34px 36px 30px;border-radius:var(--r1);max-width:1240px;margin:0 auto;width:100%;background:linear-gradient(180deg,#0b1020 0%,#080b16 100%);border:1px solid #1b2238;overflow:hidden}
+.wm-palco::after{content:'';position:absolute;left:0;right:0;bottom:0;height:10px;background:#141a2c;border-top:1px solid #222a44}
+.wm-plano{margin:0;font:500 clamp(17px,1.3vw,22px)/1.5 var(--ui);color:var(--t2)}
+.wm-palco.escuro .wm-plano{color:var(--t3);filter:blur(.2px)}
+.wm-plano.velho{font-size:clamp(14px,1vw,16px);color:#525a72;text-decoration:line-through;text-decoration-color:#3a425c}
+.wm-clivada{position:relative;margin:0;font:400 clamp(26px,2.3vw,40px)/1.35 var(--disp);color:#9aa2b8}
+.wm-alvo{position:relative;color:var(--ac2);text-shadow:0 0 22px rgba(243,217,164,.45);white-space:normal}
+.wm-cone{position:absolute;left:50%;bottom:-.25em;width:min(26em,240%);height:12em;transform:translateX(-50%);pointer-events:none;background:radial-gradient(ellipse 45% 30% at 50% 100%,rgba(243,217,164,.30),rgba(243,217,164,.08) 55%,transparent 75%),linear-gradient(180deg,transparent 0%,rgba(243,217,164,.07) 100%);clip-path:polygon(42% 0,58% 0,100% 100%,0 100%);z-index:-1;animation:varre .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes varre{from{transform:translateX(-160%);opacity:0}to{transform:translateX(-50%);opacity:1}}
+@media (prefers-reduced-motion:reduce){.wm-cone{animation:none}}
+
+/* a regra */
+.wm-quatro{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 14px}
+.wm-tipo{display:grid;gap:6px;padding:12px 16px;border-radius:var(--r2)} .wm-tipo small{font:700 14px var(--ui);color:var(--ac)} .wm-tipo p{margin:0;font:500 clamp(15px,1.1vw,18px)/1.45 var(--ui);color:var(--t2)}
+
+/* a plateia */
+.wm-plateia{display:grid;justify-items:center;gap:6px;max-width:1240px;margin:0 auto 10px}
+.wm-plateia div{display:grid;gap:5px;width:min(520px,90%)}
+.wm-plateia i{display:block;height:7px;margin:0 calc(var(--r) * 2.2%);border-radius:4px;background:#161c30;transition:background .6s,box-shadow .6s}
+.wm-plateia i.on{background:linear-gradient(90deg,transparent,rgba(243,217,164,.75),transparent);box-shadow:0 0 10px rgba(243,217,164,.25)}
+.wm-plateia p{margin:0;font:600 14px var(--ui);color:var(--t3)}
+
+.fim .grande span{font-size:clamp(16px,1.2vw,19px)}
+.lado-fim .wm-palco{padding:20px 22px} .lado-fim .wm-clivada{font-size:clamp(20px,1.6vw,28px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .wm-ops.linha{grid-template-columns:1fr} .wm-quatro{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .wm-quatro{grid-template-columns:1fr} .wm-palco{padding:22px 18px 24px} }
+.wm-plateia div{gap:3px;width:min(420px,80%)} .wm-plateia i{height:5px}
+.wm-plateia + .wm-rot + .wm-palco{padding:22px 30px 22px}
+.wm-plateia + .wm-rot + .wm-palco .wm-clivada{font-size:clamp(24px,2vw,34px)}
+
+/* 22/10/2026 · os formatos novos (formatos.js) */
+.lado-video .fm-folha{padding:16px 18px}
+.lado-video .fm-linhas p{font-size:clamp(15px,1.15vw,19px)}
+.lado-video .fm-pista{font-size:clamp(20px,1.6vw,28px)}
+.c-desmonte .wm-palco,.c-sessenta .wm-palco{max-width:1200px;margin-left:auto;margin-right:auto}

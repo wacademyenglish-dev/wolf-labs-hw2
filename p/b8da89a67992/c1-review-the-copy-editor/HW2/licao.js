@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Copy Editor",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b8da89a67992/c1-review-the-copy-editor/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "review of precise wording: adverb + adjective (eerily quiet, painfully slow), collocations (heavy rain, strong coffee), formal verb + noun (raise a concern, draw a conclusion, make a complaint, carry out a review), idioms (move the needle, off the beaten track), cutting vague talk (and stuff, kind of)",
   "abrir": "Which word do you use too often when you write?",
   "fecho": "Precision is choosing the word that fits. <b>Adverb + adjective</b>: <i>eerily quiet</i>, <i>painfully slow</i>. <b>Collocations</b>: <i>heavy rain</i>, <i>strong coffee</i>, never <i>strong rain</i>. <b>Verb + noun</b>: <i>draw a conclusion</i>, <i>make a complaint</i>, <i>raise a concern</i>, <i>carry out a review</i>. <b>Idioms</b>: <i>move the needle</i>, <i>off the beaten track</i>. And cut <i>and stuff</i> from anything you print.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia is the editor of a magazine and Leo is a writer. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/b8da89a67992/c1-review-the-copy-editor/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The editorial office at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The village was eerily quiet after the festival.",
-          "img": "https://wolf-labs.pages.dev/p/b8da89a67992/c1-review-the-copy-editor/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Heavy rain fell on the narrow streets all night.",
-          "img": "https://wolf-labs.pages.dev/p/b8da89a67992/c1-review-the-copy-editor/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The new bus line could really move the needle.",
-          "img": "https://wolf-labs.pages.dev/p/b8da89a67992/c1-review-the-copy-editor/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -172,7 +172,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b8da89a67992/c1-review-the-copy-editor/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The editorial office at night",
       "pede": "Look at the picture: an empty editorial office at night, with green lamps on the desks. Write 2 or 3 precise sentences about a place you know. Use word pairs like <b>eerily quiet</b>, <b>heavy rain</b> or <b>draw a conclusion</b>.",
       "ph": "My street is … at night.",

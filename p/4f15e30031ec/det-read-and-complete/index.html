@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -120,5 +121,287 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Four steps for three minutes.",
+   "p": "Read the note out loud. Then answer."
+  },
+  "lacunas": {
+   "t": "Two paragraphs, three minutes each.",
+   "p": "Tap Start. Read everything before the first gap."
+  },
+  "cv-negocia": {
+   "t": "Negotiate a quiet Saturday.",
+   "p": "Answer your flatmate. Then close a deal."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say the right form. Tap."
+  },
+  "pode": {
+   "t": "Lesson 4: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Read and Complete do Duolingo English Test: parágrafo com palavras cortadas, três minutos; método de quatro passos (ler tudo, pensar gramática, digitar, conferir).",
+  "armadilha": "O brasileiro começa pela primeira lacuna sem ler o texto e perde pontos nas terminações (-s, -ed, plural) e na grafia: “peoples”, “withought”, “more hard”, “helps the brain stores”.",
+  "pal": [
+   "read the whole paragraph first",
+   "-s",
+   "-ed",
+   "plural",
+   "small words first",
+   "check spelling",
+   "American spelling",
+   "topic sentence"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a tarefa: um parágrafo com palavras cortadas e três minutos.",
+   "perg": "Three minutes, ten gaps: where do you start?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Ler a nota do coach em voz alta e entender o método de quatro passos.",
+   "perg": "Why read everything before the first gap?",
+   "pula": "Leia e faça uma pergunta."
+  },
+  "lacunas": {
+   "obj": "Dois parágrafos cronometrados; conferir terminações e grafia nos últimos 30 segundos.",
+   "perg": "Is this word singular or plural?",
+   "pula": "Um parágrafo basta."
+  },
+  "cv-negocia": {
+   "obj": "Momento de conversa: negociar uma manhã silenciosa com o Leo, o colega de casa da banda.",
+   "perg": "What can you offer Leo in return?",
+   "pula": "Duas perguntas e feche o acordo."
+  },
+  "erros": {
+   "obj": "Achar os erros da nota, dizer a forma certa e ler tudo corrigido no fim.",
+   "perg": "What is wrong with this word?",
+   "pula": "Três erros bastam."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 4: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you use the method in three minutes now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre a preparação do aluno para a prova e hábitos de leitura.",
+   "perg": "Why are you taking the DET?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre estratégias de prova, com because e so.",
+   "perg": "Which strategy, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta o próprio plano para o dia da prova, passo a passo.",
+   "perg": "What will you do the night before?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "You, the test and reading.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "first",
+    "then",
+    "because",
+    "so"
+   ],
+   "cartas": [
+    {
+     "k": "WHY THE DET",
+     "q": "Why are you taking the Duolingo English Test?",
+     "fup": "What score do you need?",
+     "st": [
+      "I need it for …",
+      "I need a score of …"
+     ],
+     "ex": "I need it for a master’s program in Canada. I need a score of 120."
+    },
+    {
+     "k": "READING",
+     "q": "What do you read in English?",
+     "fup": "How often?",
+     "st": [
+      "I usually read …",
+      "about … times a week"
+     ],
+     "ex": "I usually read news on my phone, about four times a week."
+    },
+    {
+     "k": "SPELLING",
+     "q": "Which English words do you always spell wrong?",
+     "fup": "Why do you think that is?",
+     "st": [
+      "I always write …",
+      "It’s because in Portuguese …"
+     ],
+     "ex": "I always write “adress”. It’s because in Portuguese it has one d."
+    },
+    {
+     "k": "UNDER PRESSURE",
+     "q": "Do you work well with a clock running?",
+     "fup": "What helps you?",
+     "st": [
+      "I get nervous, so …",
+      "What helps me is …"
+     ],
+     "ex": "I get nervous, so I breathe and read the first sentence slowly."
+    },
+    {
+     "k": "TEST DAY",
+     "q": "Where will you take the test?",
+     "fup": "Is it quiet there?",
+     "st": [
+      "I’ll take it at …",
+      "It’s quiet, but …"
+     ],
+     "ex": "I’ll take it at home. It’s quiet, but my neighbor has a dog."
+    },
+    {
+     "k": "AMERICAN OR BRITISH",
+     "q": "Do you know American and British spelling?",
+     "fup": "Give me an example.",
+     "st": [
+      "In American English, …",
+      "In British English, …"
+     ],
+     "ex": "In American English, it’s “color”. In British English, it’s “colour”."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Which strategy wins?",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "because",
+    "so",
+    "I think"
+   ],
+   "rodadas": [
+    {
+     "q": "Read the whole paragraph first, or start typing right away?",
+     "a": "Read first",
+     "b": "Start typing",
+     "fa": [
+      "Read first. The topic helps with every gap.",
+      "Twenty seconds is enough."
+     ],
+     "fb": [
+      "Start typing. Three minutes is short.",
+      "The words come as you go."
+     ]
+    },
+    {
+     "q": "Study a little every day, or a lot on the weekend?",
+     "a": "Every day",
+     "b": "On the weekend",
+     "fa": [
+      "Every day. My brain remembers more.",
+      "It becomes a habit."
+     ],
+     "fb": [
+      "On the weekend. I have more time and energy.",
+      "Weekdays are too busy."
+     ]
+    },
+    {
+     "q": "Take the test at home, or wait for a better place?",
+     "a": "At home",
+     "b": "A better place",
+     "fa": [
+      "At home. I know the room and the computer.",
+      "I can choose the time."
+     ],
+     "fb": [
+      "A better place. Home has noise and people.",
+      "One problem can cancel the test."
+     ]
+    },
+    {
+     "q": "Guess when you don’t know, or leave it empty?",
+     "a": "Guess",
+     "b": "Leave it",
+     "fa": [
+      "Guess. An empty gap is always wrong.",
+      "Grammar gives a clue."
+     ],
+     "fb": [
+      "Leave it. Use the time for the gaps you know.",
+      "Check spelling instead."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Test Day",
+   "t": "Plan your test day.",
+   "p": "Answer each step. Use first, then.",
+   "prof": "Be a coach: after each step, ask one practical question (What time? What if…?).",
+   "passos": [
+    {
+     "q": "What will you do the night before the test?",
+     "st": [
+      "The night before, I’ll …"
+     ],
+     "ex": "The night before, I’ll sleep early and check my camera."
+    },
+    {
+     "q": "What will you do one hour before?",
+     "st": [
+      "First, I’ll …",
+      "Then, I’ll …"
+     ],
+     "ex": "First, I’ll close the door. Then, I’ll turn off my phone."
+    },
+    {
+     "q": "In Read and Complete, what is your plan?",
+     "st": [
+      "First, I read …",
+      "In the last 30 seconds, I …"
+     ],
+     "ex": "First, I read the whole paragraph. In the last 30 seconds, I check -s and -ed."
+    },
+    {
+     "q": "What will you do if you get nervous?",
+     "st": [
+      "If I get nervous, I’ll …"
+     ],
+     "ex": "If I get nervous, I’ll breathe and read the first sentence again."
+    }
+   ],
+   "fim": "Your plan is ready. Say it again in under one minute."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

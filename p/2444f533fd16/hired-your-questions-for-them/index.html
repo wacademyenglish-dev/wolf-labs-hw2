@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -118,5 +119,266 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Five questions from a coach.",
+   "p": "One question, the video, then the questions."
+  },
+  "transforma": {
+   "t": "Make every question professional.",
+   "p": "Read the question and clue. Say it politely."
+  },
+  "cadeira": {
+   "t": "Now you interview them.",
+   "p": "Ask each question politely. React to answers."
+  },
+  "cv-mentor": {
+   "t": "Coach your friend Leo.",
+   "p": "Answer him. Give him the exact words."
+  },
+  "pode": {
+   "t": "Lesson 8: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Perguntas indiretas com ordem de afirmação (Could you tell me what the team is like?), I was wondering…, I’d love to know…: as perguntas do candidato no fim da entrevista.",
+  "armadilha": "O brasileiro mantém a ordem da pergunta direta dentro da indireta (“Could you tell me what is the team like?”, “I was wondering how do you measure”) e responde “No, you covered everything”.",
+  "pal": [
+   "Could you tell me what… is?",
+   "Could you tell me if…?",
+   "I was wondering…",
+   "I’d love to know…",
+   "How would you measure success?",
+   "What are the next steps?",
+   "challenges"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: nunca dizer “no questions” no fim da entrevista.",
+   "perg": "In your last interview, did you ask any questions at the end?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "video": {
+   "obj": "Ouvir: cinco perguntas de um coach de entrevista (0:00–2:55).",
+   "perg": "Which question did you like most?",
+   "pula": "Assista uma vez só e faça duas perguntas."
+  },
+  "transforma": {
+   "obj": "Transformar perguntas diretas em indiretas e educadas, com a ordem certa.",
+   "perg": "How do you say it politely?",
+   "pula": "Seis frases bastam."
+  },
+  "cadeira": {
+   "obj": "Cadeira: o aluno entrevista o professor, que responde de verdade; reagir e seguir.",
+   "perg": "What would you like to know about the team?",
+   "pula": "Quatro cartas bastam."
+  },
+  "cv-mentor": {
+   "obj": "Momento de conversa: o professor é o Leo (só quer falar de dinheiro e férias); o aluno o orienta.",
+   "perg": "What should Leo ask instead?",
+   "pula": "Duas falas do Leo bastam."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 8: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you ask three smart questions now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre entrevistas e carreira, com perguntas indiretas.",
+   "perg": "What would you love to know about a new company?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre o que perguntar e quando, com perguntas indiretas.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é o entrevistador e responde às perguntas indiretas do professor.",
+   "perg": "Could you tell me what a typical day is like?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your questions, your career.",
+   "p": "Pick a card. Answer, then ask one back.",
+   "palavras": [
+    "Could you tell me…?",
+    "I was wondering…",
+    "I’d love to know…"
+   ],
+   "cartas": [
+    {
+     "k": "DREAM COMPANY",
+     "q": "What would you love to know about your dream company?",
+     "fup": "How would you ask it in an interview?",
+     "st": [
+      "I’d love to know …",
+      "I’d ask: Could you tell me …?"
+     ],
+     "ex": "I’d love to know how they train new people. I’d ask: Could you tell me what the first month looks like?"
+    },
+    {
+     "k": "MONEY",
+     "q": "When is the right time to ask about salary?",
+     "fup": "How would you ask it politely?",
+     "st": [
+      "I think …",
+      "I was wondering what …"
+     ],
+     "ex": "Not in the first interview. Later I’d say: I was wondering what the salary range is."
+    },
+    {
+     "k": "BAD SIGNS",
+     "q": "What answer from an interviewer would worry you?",
+     "fup": "Why?",
+     "st": [
+      "If they said …, I’d …",
+      "It would show that …"
+     ],
+     "ex": "If they said “we’re like a family”, I’d worry. It would show that they don’t respect hours."
+    },
+    {
+     "k": "YOUR BOSS",
+     "q": "What would you like to know about your future boss?",
+     "fup": "Can you ask it in an interview?",
+     "st": [
+      "I’d love to know how …",
+      "Could you tell me how …?"
+     ],
+     "ex": "Could you tell me how you give feedback to your team?"
+    },
+    {
+     "k": "LAST INTERVIEW",
+     "q": "What did you ask at the end of your last interview?",
+     "fup": "What would you ask now?",
+     "st": [
+      "I asked …",
+      "Now I’d ask …"
+     ],
+     "ex": "I asked nothing. Now I’d ask what the next steps are."
+    },
+    {
+     "k": "SUCCESS",
+     "q": "How do you measure success in your job today?",
+     "fup": "Does your boss agree?",
+     "st": [
+      "I measure it by …",
+      "I’m not sure if …"
+     ],
+     "ex": "I measure it by happy clients. I’m not sure if my boss agrees."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "What should you ask?",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "Could you tell me…?",
+    "I was wondering…",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Ask about salary in the first interview, or wait?",
+     "a": "Ask now",
+     "b": "Wait",
+     "fa": [
+      "Ask now. I was wondering if it’s in my range; it saves time for everyone.",
+      "Why go to three interviews for the wrong salary?"
+     ],
+     "fb": [
+      "Wait. It can look like money is all I care about.",
+      "First they need to want me."
+     ]
+    },
+    {
+     "q": "Three questions at the end, or just one good one?",
+     "a": "Three",
+     "b": "One good one",
+     "fa": [
+      "Three. It shows real interest.",
+      "Interviewers remember curious people."
+     ],
+     "fb": [
+      "One. Quality beats quantity.",
+      "Long interviews make people tired."
+     ]
+    },
+    {
+     "q": "Ask about challenges, or keep it positive?",
+     "a": "Ask about challenges",
+     "b": "Keep it positive",
+     "fa": [
+      "Challenges. Could you tell me what the hardest part is? It shows I’m serious.",
+      "Every job has problems."
+     ],
+     "fb": [
+      "Positive. Ending on a good note is better.",
+      "Problems can wait for the offer."
+     ]
+    },
+    {
+     "q": "Prepare questions before, or ask what comes up?",
+     "a": "Prepare",
+     "b": "What comes up",
+     "fa": [
+      "Prepare. Nerves erase good ideas.",
+      "The indirect form needs practice."
+     ],
+     "fb": [
+      "What comes up. Prepared questions sound fake.",
+      "Real reactions show listening."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the interviewer now.",
+   "p": "Your teacher is the candidate.",
+   "aluno": "Listen to the candidate’s question. Answer as the interviewer: short and real.",
+   "perguntas": [
+    "Could you tell me what a typical day is like?",
+    "I was wondering how you measure success in this role.",
+    "Could you tell me if there is training for new people?",
+    "I’d love to know what the team is like.",
+    "Could you tell me what the biggest challenge is right now?",
+    "Could you tell me what the next steps are?"
+   ],
+   "st": [
+    "Sure. A typical day …",
+    "Good question. We …",
+    "The next step is …"
+   ],
+   "ex": "Good question. We measure success by how many clients renew after the first year."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

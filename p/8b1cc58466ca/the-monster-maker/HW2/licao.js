@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "The Monster Maker",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/8b1cc58466ca/the-monster-maker/img/live-abobora.webp",
+  "capa": "../img/live-abobora.webp",
   "alvo": "has / has got to describe (It has two small yellow eyes) · hasn't got / doesn't have · Has it got...? · order: number + size + color + thing; never It have, never two eyes yellow",
   "abrir": "Do you wear a costume at Halloween?",
   "fecho": "<b>It has</b> / <b>It's got</b> two small yellow eyes. <b>It hasn't got</b> a nose. <b>Has it got</b> a tail? Order: number, size, color, thing.",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at a drawing for a film. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/8b1cc58466ca/the-monster-maker/img/live-abobora.webp",
+      "img": "../img/live-abobora.webp",
       "leg": "Two glowing pumpkins",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -98,17 +98,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It has two small yellow eyes.",
-          "img": "https://wolf-labs.pages.dev/p/8b1cc58466ca/the-monster-maker/img/live-abobora.webp",
+          "img": "../img/live-abobora.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It hasn't got a nose, but it has a big mouth.",
-          "img": "https://wolf-labs.pages.dev/p/8b1cc58466ca/the-monster-maker/img/live-abobora.webp",
+          "img": "../img/live-abobora.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Has your monster got long green hair?",
-          "img": "https://wolf-labs.pages.dev/p/8b1cc58466ca/the-monster-maker/img/live-abobora.webp",
+          "img": "../img/live-abobora.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -158,7 +158,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/8b1cc58466ca/the-monster-maker/img/live-abobora.webp",
+      "img": "../img/live-abobora.webp",
       "leg": "Two glowing pumpkins",
       "pede": "Look at the picture: two glowing pumpkins. Write 2 or 3 sentences about your own friendly monster. Use <b>has</b> or <b>has got</b>, and a color word.",
       "ph": "My monster has …",

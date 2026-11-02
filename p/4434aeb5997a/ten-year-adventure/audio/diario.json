@@ -1,0 +1,12 @@
+{ "vozes": { "F": "en-US-JennyNeural", "S": "en-GB-RyanNeural" }, "pausa": 0.55, "rate": "-6%",
+  "falas": [
+    ["F", "Day one. Frieren says we have a long road ahead. The walk to the next town takes three days."],
+    ["S", "Three days? And she calls that short."],
+    ["F", "For her, it is. She waited fifty years to see the meteors with her old friends."],
+    ["S", "Fifty years. My village is only twenty years old!"],
+    ["F", "Tonight we stop at an inn. We sleep for eight hours, and then we walk again."],
+    ["S", "Eisen trained me for five years. Five long years."],
+    ["F", "The old party traveled for ten years. Now we walk the same road."],
+    ["S", "And the trip north takes two months on foot."],
+    ["F", "Two months. Then she can talk to Himmel one more time."]
+  ] }

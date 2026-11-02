@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Crimson Diamond",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3b5c4131edda/crimson-diamond/img/live-vitrine-a.webp",
+  "capa": "../img/live-vitrine-a.webp",
   "alvo": "past continuous in alibis and questions: What were you doing at ten? · I was + -ing · I wasn't ... · Were you ...? Yes, I was; never What you were doing, I was sleep, He working",
   "abrir": "What were you doing yesterday at 10 PM?",
   "fecho": "<b>was / were + -ing</b>: <i>I was sleeping. They were closing the doors.</i> No: <b>wasn't / weren't</b> + -ing. The question: <b>What were you doing?</b> <b>Were you working?</b> Never <i>I was sleep</i>, never <i>He working</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the museum. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/3b5c4131edda/crimson-diamond/img/live-galeria.webp",
+      "img": "../img/live-galeria.webp",
       "leg": "A dark gallery at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "What were you doing at ten o'clock?",
-          "img": "https://wolf-labs.pages.dev/p/3b5c4131edda/crimson-diamond/img/live-vitrine-a.webp",
+          "img": "../img/live-vitrine-a.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I was looking at the paintings in the gallery.",
-          "img": "https://wolf-labs.pages.dev/p/3b5c4131edda/crimson-diamond/img/live-galeria.webp",
+          "img": "../img/live-galeria.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She wasn't sleeping when the alarm rang.",
-          "img": "https://wolf-labs.pages.dev/p/3b5c4131edda/crimson-diamond/img/live-vitrine-b.webp",
+          "img": "../img/live-vitrine-b.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3b5c4131edda/crimson-diamond/img/live-galeria.webp",
+      "img": "../img/live-galeria.webp",
       "leg": "A dark gallery at night",
       "pede": "Look at the picture: a dark gallery at night. Write 2 or 3 sentences about what you and other people were doing yesterday at 10 PM. Use <b>was / were + -ing</b>.",
       "ph": "At ten, I was …",

@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · That’s a Great Question · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 10 · The talk</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>That’s a Great Question · C1 Unit 10 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on Q&A: buying time (Let me think about that for a second), checking (If I understand you correctly…), not knowing (I don’t have the figures with me, but…), hostile questions (I can see why you’d think that. However…), off-topic questions (That’s a bit outside the scope…), parking (Can I come back to that at the end?) and closing (Does that answer your question?).</p><p style="margin:0 0 6px"><b>The story:</b> Dr. Oko (invented) gave a talk about bees in the city. Now four people ask questions: an exact number, a worried mother, a student with a giant question, and a man who thinks it’s a waste of money.</p><p style="margin:0 0 6px"><b>About 49 min:</b> I · The Q&A (10) · II · Panic or Professional? (9) · III · Keep Calm (7) · IV · The Press Conference (8) · V · Questions from the Floor (15).</p><p style="margin:0"><b>Open with:</b> “What’s the scariest part of a presentation: the talk or the questions?”</p></div><!--/prep-->
+    <p>Students fear the Q&A more than the talk. Show that not knowing is fine: what matters is the next sentence. On the board, ask about the student’s OWN talk topic (from the previous lessons), and play the hostile, the expert, the never-ending questioner. Stop the student if they say “good question” every time.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>Let me think about that for a second · If I understand you correctly, you’re asking… · I don’t have the figures with me, but… · I can see why you’d think that. However, … · That’s a bit outside the scope of today’s talk · Can I come back to that at the end? / Does that answer your question?</p>
+    <h4>THE Q&A</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>PANIC OR PROFESSIONAL?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>KEEP CALM</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>QUESTIONS FROM THE FLOOR</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I don’t know. (dry)</i>, <i>good question (every time)</i>, <i>you are wrong (to the audience)</i>, <i>inventing a precise number</i>, <i>that’s not my topic</i>, <i>um… uh… (instead of asking for a second)</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE PRESS CONFERENCE (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Before the board, your student becomes Dr. Oko: a swarm of bees closed the city park for an hour this morning (nobody was hurt), and you are a journalist who wants a headline. Your secret (only you see it): you want her to say “It was our mistake.” Ask the five questions one by one, wait five seconds in silence, and let them buy time, check, admit what they don’t know and park the hard question. Use the PUSH line to interrupt once. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Q&A.</li>
+      <li><b>Focus</b>: II · Panic or Professional? and III · Keep Calm.</li>
+      <li><b>Out loud</b>: IV · The Press Conference and V · Questions from the Floor.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THAT’S A GREAT QUESTION (Main C1) · pergunta-surpresa · 28/10/2026 · Q&A phrases: buy time / check / not knowing / park / close */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Do you ask questions at the end of talks and meetings?',
+    opc: ['Always', 'Only if it’s small', 'Never'], st: ['I usually …, because …', 'To be honest, I …'],
+    ex: 'Only if it’s small. In a big room I prefer to wait and ask the speaker after the talk.', push: 'Why do you think so many people never ask anything?' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Is “I don’t know” a sign of weakness from a speaker?',
+    opc: ['Yes, a bit', 'No, it’s honest', 'It depends how you say it'], st: ['If you say “I’d have to check”, …', 'I respect a speaker who …'],
+    ex: 'It depends how you say it. A dry “I don’t know” sounds weak, but “I’d have to check, I’ll send it to you” sounds professional.', push: 'Would you trust a doctor who said “I’d have to check”?' },
+  { cena: 'cv-coletiva', tipo: 'Would you rather', q: 'Would you rather answer a hostile question in front of 300 people, or a very easy question you don’t know the answer to?',
+    opc: ['The hostile one', 'The easy one I don’t know'], st: ['I’d rather …, because …', 'With a hostile one, I could say …'],
+    ex: 'The hostile one. I can say “I can see why you’d think that. However…”. Not knowing an easy answer is more embarrassing.', push: 'The hostile person is your boss. Still?' },
+  { cena: 'tabuleiro', tipo: 'What if', q: 'What if someone asked you a question in English that you didn’t understand at all? What would you say first?',
+    opc: ['Ask them to repeat', 'Check what I understood', 'Answer something anyway'], st: ['Sorry, could you …?', 'If I understand you correctly, …'],
+    ex: 'Check what I understood: “If I understand you correctly, you’re asking about the price?” If I’m wrong, they explain again.', push: 'They repeat it, exactly the same, and you still don’t understand. Now what?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THAT’S A GREAT QUESTION (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A cadeira quente ENTRA depois de "III · Keep Calm" (a aula tinha 41 min e nenhuma cena extra: somar 8 min cabe;
+   o tabuleiro IV continua o último, com a lição de casa). A aula não tinha nenhum momento de decisão nem de papel.
+   Diferente do tabuleiro (perguntas sobre o tema do PRÓPRIO aluno): aqui o aluno É a Dra. Oko, numa entrevista
+   coletiva depois que um enxame de abelhas fechou o parque por uma hora (ninguém se machucou). O professor é a
+   jornalista, com um objetivo secreto. O aluno responde com as frases da aula: ganhar tempo, checar, não saber, adiar. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'coletiva', apos: 'transforma', est: 'o', min: 8, img: 'conversa', rot: 'The Press Conference', t: 'Bees in the park. The cameras are on.',
+    p: 'A swarm of bees closed the city park for an hour this morning. Nobody was hurt. You are Dr. Oko. Answer the journalist calmly.',
+    formato: 'papel',
+    aluno: { quem: 'Dr. Oko, the city bee expert', quer: 'Keep people calm and keep the hives in the park.', limite: 'You can’t promise it will never happen again.' },
+    prof: { quem: 'A journalist from City News', quer: 'A strong headline for the evening news.', limite: 'Secret: you want her to say “It was our mistake.”' },
+    rot_perg: 'The journalist asks',
+    perguntas: [
+      { q: 'Dr. Oko, how many bees were in that swarm?', ex: 'That’s a great question. I don’t have the exact figures with me, but our team thinks it was around ten thousand. I’d be happy to send you the report.' },
+      { q: 'So you’re saying the park is not safe for children?', ex: 'If I understand you correctly, you’re asking if families should stay away. I can see why you’d think that. However, a swarm is calm: the bees are just looking for a new home.' },
+      { q: 'Who will pay the café that had to close this morning?', ex: 'That’s a bit outside the scope of my work, but I’ll pass the question to the city council today.' },
+      { q: 'Why should the city pay for bees at all?', ex: 'Let me think about that for a second. … Because every third bite we eat needs a bee. Does that answer your question?' },
+      { q: 'One last thing: was this your team’s mistake?', ex: 'I’d have to check what happened with the hive before I answer that. Can I come back to you this afternoon?' }
+    ],
+    st: ['That’s a great question.', 'If I understand you correctly, …', 'I don’t have the figures with me, but …', 'Can I come back to that later?'],
+    push: 'Interrupt her answer: “Yes or no, Dr. Oko? Yes or no?” Does she stay calm?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Four questions after a talk on city bees.",
+   "p": "Read the Q&A with your teacher. Then look closer."
+  },
+  "descobre": {
+   "t": "Two ways to answer.",
+   "p": "Compare A and B. Who keeps control?"
+  },
+  "transforma": {
+   "t": "Panic → professional.",
+   "p": "Read the weak answer. Use the clue. Say it better."
+  },
+  "cv-coletiva": {
+   "t": "Bees in the park. Cameras on.",
+   "p": "You are Dr. Oko. Answer the journalist calmly."
+  },
+  "tabuleiro": {
+   "t": "Roll, move, answer the question.",
+   "p": "Your teacher asks about YOUR topic. Handle it."
+  }
+ },
+ "prep": {
+  "obj": "Perguntas e respostas depois de uma palestra: ganhar tempo, checar, admitir, adiar e fechar. A Dra. Oko e as abelhas na cidade enfrentam quatro perguntas difíceis.",
+  "armadilha": "“I don’t know.” seco, “good question” toda vez, “that’s not my topic”, inventar número exato e “um… uh…” em vez de pedir um segundo; e “you are wrong” para a plateia.",
+  "pal": [
+   "Let me think about that for a second",
+   "If I understand you correctly, …",
+   "I don’t have the figures with me, but …",
+   "I can see why you’d think that. However, …",
+   "outside the scope",
+   "Can I come back to that?",
+   "Does that answer your question?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: não saber é normal; o que importa é a frase seguinte.",
+   "perg": "What’s scarier: the talk or the questions?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Leitura do Q&A da Dra. Oko: número exato, mãe preocupada, pergunta gigante, crítico do dinheiro.",
+   "perg": "Which question was the hardest for her?",
+   "pula": "Leia duas perguntas e as respostas."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: resposta em pânico x resposta profissional; regras e armadilhas.",
+   "perg": "Which speaker keeps control, and how?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "transforma": {
+   "obj": "Resposta fraca vira profissional com a pista; aceitar variações naturais.",
+   "perg": "How would a professional say that?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-coletiva": {
+   "obj": "Coletiva de imprensa: o aluno é a Dra. Oko; o jornalista quer ouvir “It was our mistake.”",
+   "perg": "Dr. Oko, whose fault was it?",
+   "pula": "Três perguntas bastam."
+  },
+  "tabuleiro": {
+   "obj": "Tabuleiro: perguntas sobre o tema da palestra do próprio aluno; o professor faz o hostil e o especialista.",
+   "perg": "How would you handle that question?",
+   "pula": "Pare na metade do tabuleiro. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais situações de perguntas difíceis no trabalho e na vida, com as ferramentas de Q&A.",
+   "perg": "What do you say when you don’t know?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre honestidade, controle e improviso em perguntas difíceis.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno enfrenta, em quatro passos, a pergunta mais difícil sobre o próprio tema.",
+   "perg": "What’s the question you fear most?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Tough questions, real life.",
+   "p": "Pick a card. Keep control of your answer.",
+   "palavras": [
+    "Let me think about that",
+    "If I understand you correctly",
+    "I don’t have the figures, but",
+    "I can see why you’d think that",
+    "Can I come back to that?"
+   ],
+   "cartas": [
+    {
+     "k": "THE JOB INTERVIEW",
+     "q": "What’s the hardest question you’ve been asked in a job interview?",
+     "fup": "How would you answer it today?",
+     "st": [
+      "Let me think about that for a second.",
+      "What I can say is …"
+     ],
+     "ex": "They asked about my biggest failure. Today I’d say: let me think about that for a second."
+    },
+    {
+     "k": "THE BOSS",
+     "q": "Your boss asks for a number you don’t have. What do you say?",
+     "fup": "Have you ever invented one?",
+     "st": [
+      "I don’t have the figures with me, but …",
+      "I’ll get back to you by …"
+     ],
+     "ex": "I don’t have the figures with me, but I’ll get back to you by lunch."
+    },
+    {
+     "k": "THE CRITIC",
+     "q": "Someone says your project is a waste of money. How do you respond?",
+     "fup": "Do you stay calm in that moment?",
+     "st": [
+      "I can see why you’d think that. However, …"
+     ],
+     "ex": "I can see why you’d think that. However, it saved us two months last year."
+    },
+    {
+     "k": "THE RAMBLER",
+     "q": "How do you deal with someone who asks a never-ending question?",
+     "fup": "Is it ever rude to interrupt?",
+     "st": [
+      "If I understand you correctly, you’re asking …"
+     ],
+     "ex": "If I understand you correctly, you’re asking whether it works for small companies."
+    },
+    {
+     "k": "OFF TOPIC",
+     "q": "At family lunches, which question do you always avoid?",
+     "fup": "What do you say to change the subject?",
+     "st": [
+      "That’s a bit outside the scope of …",
+      "Can I come back to that?"
+     ],
+     "ex": "When they ask about my salary, I say it’s a bit outside the scope of lunch."
+    },
+    {
+     "k": "KIDS ASK",
+     "q": "What question from a child left you with no answer?",
+     "fup": "What did you finally say?",
+     "st": [
+      "That’s a great question.",
+      "To be honest, I’m not sure, but …"
+     ],
+     "ex": "My nephew asked why the sky ends. To be honest, I’m not sure, but I said I’d find out."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I can see why you’d think that. However, …",
+    "If I understand you correctly, …",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "In a Q&A, is saying “I don’t know” a weakness?",
+     "a": "A weakness",
+     "b": "A strength",
+     "fa": [
+      "A weakness. You’re supposed to be the expert.",
+      "Say it too often and they stop listening."
+     ],
+     "fb": [
+      "A strength. Honesty builds trust.",
+      "It’s inventing a number that destroys you."
+     ]
+    },
+    {
+     "q": "Should Dr. Oko have said “It was our mistake”?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Admitting it ends the story fast.",
+      "People forgive honesty."
+     ],
+     "fb": [
+      "No. Nobody was hurt, and bees are nature.",
+      "That sentence becomes tomorrow’s headline."
+     ]
+    },
+    {
+     "q": "Prepare answers to every possible question, or improvise?",
+     "a": "Prepare",
+     "b": "Improvise",
+     "fa": [
+      "Prepare. The hostile question always comes.",
+      "Ten minutes of preparation saves the talk."
+     ],
+     "fb": [
+      "Improvise. Prepared answers sound robotic.",
+      "You can’t predict every question anyway."
+     ]
+    },
+    {
+     "q": "Hostile questions: answer them, or park them?",
+     "a": "Answer them",
+     "b": "Park them",
+     "fa": [
+      "Answer them. Parking looks like running away.",
+      "The audience wants to see you handle it."
+     ],
+     "fb": [
+      "Park them. Can I come back to that? buys you calm.",
+      "One angry person shouldn’t steal the room."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Does that answer your question?"
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Worst Question",
+   "t": "Face your worst question.",
+   "p": "One step at a time. Stay in control.",
+   "prof": "Use the student’s own talk topic; ask the hostile question for real and let them use one tool per step.",
+   "passos": [
+    {
+     "q": "What’s the question you fear most about your topic? Ask it to yourself.",
+     "st": [
+      "The question I dread is …"
+     ],
+     "ex": "The question I dread is: why should anyone pay for this?"
+    },
+    {
+     "q": "Buy time and check you understood it.",
+     "st": [
+      "Let me think about that for a second.",
+      "If I understand you correctly, …"
+     ],
+     "ex": "Let me think about that for a second. If I understand you correctly, you’re asking about the price."
+    },
+    {
+     "q": "Acknowledge the doubt, then answer.",
+     "st": [
+      "I can see why you’d think that. However, …"
+     ],
+     "ex": "I can see why you’d think that. However, it pays for itself in six months."
+    },
+    {
+     "q": "Close the answer and move on.",
+     "st": [
+      "Does that answer your question?",
+      "Can I come back to the details at the end?"
+     ],
+     "ex": "Does that answer your question? I can come back to the numbers at the end."
+    }
+   ],
+   "fim": "Question handled. No panic, no “um”."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

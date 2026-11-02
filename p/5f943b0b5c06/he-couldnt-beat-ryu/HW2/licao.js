@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "He Couldn't Beat Ryu",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5f943b0b5c06/he-couldnt-beat-ryu/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "could / couldn't + plain verb for ability in the past; was able to for one single time; Could you ...?; never could to, didn't could, could + -ed",
   "abrir": "What game could you play for hours as a child?",
   "fecho": "<b>could / couldn't</b> + plain verb = ability in the past: <i>I could run fast. I couldn't win.</i> One single time: <b>was able to</b>: <i>I was able to win that day.</i> Question: <b>Could you</b> play? Never <i>could to, didn't could</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo remember the arcade near their old school. A new scene, about 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/5f943b0b5c06/he-couldnt-beat-ryu/img/live-fliperama.webp",
+      "img": "../img/live-fliperama.webp",
       "leg": "An arcade at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I could play for hours at the arcade.",
-          "img": "https://wolf-labs.pages.dev/p/5f943b0b5c06/he-couldnt-beat-ryu/img/live-fliperama.webp",
+          "img": "../img/live-fliperama.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I couldn't beat him, not even once.",
-          "img": "https://wolf-labs.pages.dev/p/5f943b0b5c06/he-couldnt-beat-ryu/img/live-dojo.webp",
+          "img": "../img/live-dojo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She was able to win in the last round.",
-          "img": "https://wolf-labs.pages.dev/p/5f943b0b5c06/he-couldnt-beat-ryu/img/live-rua.webp",
+          "img": "../img/live-rua.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5f943b0b5c06/he-couldnt-beat-ryu/img/live-rua.webp",
+      "img": "../img/live-rua.webp",
       "leg": "A city rooftop at night",
       "pede": "Look at the picture: a city at night. Write 2 or 3 sentences about a game or sport from your childhood. Use <b>could</b>, <b>couldn't</b> or <b>was able to</b>.",
       "ph": "As a child, I could … I couldn't …",

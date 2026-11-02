@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "Or in the Building",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4271416ef021/or-in-the-building/img/corredor.webp",
+  "capa": "../img/corredor.webp",
   "alvo": "articles with places: at school (student) vs at the school (visitor) · in bed vs in the bed · at work, at home, go home, by bus (no the)",
   "abrir": "Where are you on Monday at 8 AM, and how do you get there?",
   "fecho": "<b>The person decides.</b> A student is <i>at school</i>, a parent is <i>at the school</i>. Sick? <i>in bed</i>. Never THE with <i>at work, at home, go home, by bus</i>.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo send voice messages. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/4271416ef021/or-in-the-building/img/live-mapa.webp",
+      "img": "../img/live-mapa.webp",
       "leg": "The map of the day",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'm at the school, but Ben is at school.",
-          "img": "https://wolf-labs.pages.dev/p/4271416ef021/or-in-the-building/img/corredor.webp",
+          "img": "../img/corredor.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Dad is in bed because he is sick.",
-          "img": "https://wolf-labs.pages.dev/p/4271416ef021/or-in-the-building/img/mensagem.webp",
+          "img": "../img/mensagem.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I go to work by bus, and I go home by train.",
-          "img": "https://wolf-labs.pages.dev/p/4271416ef021/or-in-the-building/img/live-mapa2.webp",
+          "img": "../img/live-mapa2.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -166,7 +166,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4271416ef021/or-in-the-building/img/mensagem.webp",
+      "img": "../img/mensagem.webp",
       "leg": "A quiet morning, a message",
       "pede": "Look at the picture. Write 3 short lines about your week: where you are in the morning, how you go there, and where you rest. Use <b>at work / at school / at home / by bus / in bed</b>.",
       "ph": "On Monday I am at … I go by …",

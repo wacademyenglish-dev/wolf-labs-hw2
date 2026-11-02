@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de I Can’t Do It... Yet (11/10/2026): cinco falas do trailer de Naruto Shippuden
+   que carregam a aula (can / can’t / yet, e o que ele consegue fazer agora). Forma: o termômetro —
+   o aluno mede a emoção da fala e diz por quê. Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [2, 3, 4], k: 'Back home', quem: 'Naruto, at the village gate',
+    contexto: 'After two and a half years of training far away, Naruto is back. He is older, and he wants everybody to know.',
+    frase: 'I’m home, everyone! Naruto Uzumaki <b>has returned</b> to the Hidden Leaf Village!',
+    explica: '<i>I’m home!</i> is what we say when we arrive at our house. Naruto says it to the whole village: for him, the village is home.',
+    formula: '<b>I’m home!</b> · <b>I’m back!</b> · Welcome home!',
+    tente: 'What do you say when you get home? Who is there?',
+    ex: 'I say “I’m home!” and my dog runs to the door.',
+    sente: { q: 'How does Naruto feel here?', de: 'nervous', a: 'super happy', st: 'He’s … because he can … now.' } },
+  { i: [7, 8], k: 'All grown up', quem: 'An old friend',
+    contexto: 'His friends look at Naruto. He is taller now, and they want to see what he can do.',
+    frase: 'You went and got all grown up. <b>Impressive.</b>',
+    explica: '<i>Grown up</i> = older, almost an adult. They are surprised: Naruto can do things now that he couldn’t do before.',
+    formula: 'Before, he <b>couldn’t</b> … · Now he <b>can</b> …',
+    tente: 'What can you do now that you couldn’t do five years ago?',
+    ex: 'Five years ago I couldn’t drive. Now I can!',
+    sente: { q: 'How surprised is the friend?', de: 'not surprised', a: 'very surprised', st: 'The friend is … because Naruto …' } },
+  { i: [9, 10, 11], k: 'Monster strength', quem: 'Their teacher, watching Sakura',
+    contexto: 'Sakura trained with Tsunade, a very strong ninja. Now Sakura can break the ground with one hand.',
+    frase: 'The same quick temper and <b>monster strength</b>.',
+    explica: '<i>Strength</i> is the noun of <i>strong</i>. Monster strength = she is very, very strong. She can break rocks, but she can’t stay calm!',
+    formula: 'strong → <b>strength</b> · She <b>can</b> break rocks. She <b>can’t</b> stay calm.',
+    tente: 'What is your strength? What can you do very well?',
+    ex: 'My strength is cooking. I can cook for twenty people!',
+    sente: { q: 'How scary is Sakura here?', de: 'sweet', a: 'scary', st: 'She’s … because she can …' } },
+  { i: [20, 21], k: 'My turn', quem: 'Naruto, before the fight',
+    contexto: 'A friend is in danger. Before, other ninjas saved Naruto. Now he wants to save them.',
+    frase: 'This time, it’s <b>my turn</b> to save them!',
+    explica: '<i>It’s my turn</i> = now it is me, not you. Naruto can fight now, so he can help his friends.',
+    formula: 'It’s <b>my turn</b> to + verb · I <b>can</b> save them!',
+    tente: 'In your house, whose turn is it to wash the dishes today?',
+    ex: 'It’s my turn today. I can’t say no!',
+    sente: { q: 'How strong does Naruto feel?', de: 'weak', a: 'unstoppable', st: 'He feels … because …' } },
+  { i: [26, 27], k: 'Get him back', quem: 'The team',
+    contexto: 'The enemy takes their friend away. The team can’t save him now, but they don’t give up.',
+    frase: '<b>Get him back!</b> · Right!',
+    explica: '<i>Get back</i> = bring back. They can’t save him now... yet. <i>Yet</i> says it is not now, but one day it will happen.',
+    formula: 'I <b>can’t</b> do it... <b>yet</b>. = not now, but one day',
+    tente: 'What can’t you do yet? When do you think you can?',
+    ex: 'I can’t speak English very well yet, but I can in two years!',
+    sente: { q: 'How ready is the team?', de: 'tired', a: 'ready to fight', st: 'They are … because their friend …' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#f08a3c', titulo: 'Five lines. How do they feel?', sub: 'Tap a moment, hear the line, and put it on the thermometer. Then say why.', rot: { por: 'WHAT IT MEANS', padrao: 'CAN · CAN’T · YET', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

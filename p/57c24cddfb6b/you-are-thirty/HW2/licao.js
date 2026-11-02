@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "You Are Thirty",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/57c24cddfb6b/you-are-thirty/img/hw-capa.webp",
+  "capa": "../img/hw-capa.webp",
   "alvo": "be for age and feelings: I am thirty, I am hungry / cold / afraid (not I have); How old are you?; thirty x thirteen",
   "abrir": "How old is your best friend?",
   "fecho": "In English you don't <i>have</i> your age: you <b>are</b> your age. <b>I'm thirty.</b> Same for feelings: <b>I'm hungry, I'm cold</b>. Use <b>have</b> for things: <i>I have a phone.</i> And listen to the beat: <b>THIR</b>ty, thir<b>TEEN</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a birthday party. A new scene, about 30 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/57c24cddfb6b/you-are-thirty/img/live-bolo.webp",
+      "img": "../img/live-bolo.webp",
       "leg": "The cake and the candles",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'm thirty, and my brother is thirteen.",
-          "img": "https://wolf-labs.pages.dev/p/57c24cddfb6b/you-are-thirty/img/live-bolo.webp",
+          "img": "../img/live-bolo.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Leo is hungry and cold.",
-          "img": "https://wolf-labs.pages.dev/p/57c24cddfb6b/you-are-thirty/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "How old are you? I'm twenty-nine.",
-          "img": "https://wolf-labs.pages.dev/p/57c24cddfb6b/you-are-thirty/img/live-bolo.webp",
+          "img": "../img/live-bolo.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -166,7 +166,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/57c24cddfb6b/you-are-thirty/img/live-bolo.webp",
+      "img": "../img/live-bolo.webp",
       "leg": "A birthday cake",
       "pede": "Look at the picture: a birthday cake with candles. Write 2 or 3 sentences about you or your family: ages and one feeling (hungry, tired, happy). Use <b>am, is</b> or <b>are</b>.",
       "ph": "I am … My mother is …",

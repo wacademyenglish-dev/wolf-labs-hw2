@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Thirty-Three Point Nine · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Thirty-Three Point Nine · The Tracker</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Thirty-Three Point Nine · The Tracker</h2>
+    <p>Something that started in the past and is still going takes <b>have / has been + -ing</b>: <b>I’ve been meaning to call her for a week.</b> <b>Since</b> + a point (since March), <b>for</b> + a piece of time (for five months). Students say <i>I’m doing it since March</i> and <i>I have been work</i>. The story is a 1994 study: students guessed 33.9 days for their own paper; it took 55.5. On screen, a habit tracker: sixty squares, one per day, with the estimate marked in ice blue and the reality in ember.</p>
+    <h4>NOT A DIAGNOSIS</h4>
+    <p>The hour measures a prediction error in a group of students, not your student. Keep the questions about the recordings. Scene VIII is a finding about other people, not advice.</p>
+    <h4>THE STREAK</h4>
+    <p>Scene II: each right sentence lights a square; a wrong tap resets the streak to zero. That’s part of the fun. After a wrong tap, the student can still tap the right one and say it.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Three recordings with pause and 0.75×; the questions and the transcript open after listening: the 1994 study (IV), a man describing the relief of putting something off (VI), and the one practical finding, when and where (VIII).</p>
+    <h4>BOTH FORMS WORK</h4>
+    <p>With live, work and study, <i>I’ve lived here since 2019</i> and <i>I’ve been living here since 2019</i> are both correct (scene IX, line 6).</p>
+    <h4>THE LAST SCENE</h4>
+    <p>The student’s five numbers from scene I come back next to 33.9 and 55.5.</p>
+    <!--conversa--><h4>THE DEADLINE (IX) AND THE SURPRISE QUESTION</h4>
+<p>Scene IX is now a negotiation. Your student is a web designer who promised thirty days and needs twenty more; you are the client. Your secret limit (fifteen days) shows only on your screen. Ask the four questions in the role and let them answer with have / has been + -ing and for / since; wait five seconds in silence before you accept anything, and use the PUSH line (only you see it). Then close the deal on the screen. Recast mistakes quietly (“I’m doing it since March” → “I’ve been doing it since March”); at the end, ask them to fix one or two sentences themselves.</p>
+<p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I The Envelope, V The Worst Case, VII Who’s Been Doing It Longest, IX The Deadline.</li>
+      <li><b>Listen</b>: IV Their Own Number, VI Thursday’s Bill, VIII When and Where.</li>
+      <li><b>Focus</b>: II The Streak, III For or Since.</li>
+      <li><b>Write</b>: X, their tracker. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THIRTY-THREE POINT NINE (Main B1) · pergunta-surpresa · 27/10/2026 · present perfect continuous */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'envelope', tipo: 'And you?', q: 'What is something you’ve been putting off for weeks?',
+    opc: ['Something at home', 'Something at work', 'A call or a message'], st: ['I’ve been putting off … for …', 'I’ve been meaning to … since …'],
+    ex: 'A message. I’ve been meaning to answer an old friend since August, and every day it gets harder.', push: 'Do it today? Give me a time and a place.' },
+  { cena: 'forsince', tipo: 'Opinion', q: 'What have you been doing for the longest time: a hobby, a job, a habit?',
+    opc: ['A hobby', 'A job', 'A habit'], st: ['I’ve been … for … years.', 'I’ve been … since I was …'],
+    ex: 'A hobby. I’ve been playing the guitar since I was fourteen, but only three songs!', push: 'Is it still fun, or only a habit now?' },
+  { cena: 'quinta', tipo: 'Would you rather', q: 'Would you rather do the boring job now, or enjoy tonight and pay on Thursday?',
+    opc: ['Do it now', 'Enjoy tonight'], st: ['I’d rather … now, because …', 'I’ve been doing that for …'],
+    ex: 'Enjoy tonight. I know it’s bad, but I’ve been working all week.', push: 'And on Thursday, when the bill arrives? Honestly.' },
+  { cena: 'quando', tipo: 'What if', q: 'A friend says: “I’ve been planning to start running since January.” What do you tell them?',
+    opc: ['Pick a day and a place', 'Find a partner', 'Forget it, it’s fine'], st: ['You’ve been saying that for …', 'Why don’t you …?'],
+    ex: 'Pick a day and a place: Tuesday, seven a.m., the park. You’ve been saying “soon” for ten months!', push: 'And what are YOU going to start? When and where?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THIRTY-THREE POINT NINE (Main B1 · present perfect continuous) · conversa · 27/10/2026 · regra 3×3
+   A negociação entra no lugar de "IX · Still Going" (extra, correção controlada). Depois do estudo
+   (33,9 dias prometidos, 55,5 reais), o aluno vive o outro lado: o prazo estourou e ele precisa pedir
+   mais dias a um cliente que tem um limite secreto. have / has been + -ing, for / since nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'prazo', troca: 'erros', est: 'o', min: 8, img: 'mesa', rot: 'The Deadline', t: 'Day thirty. The website isn’t ready.',
+    p: 'You are the designer, your teacher is the client. Answer each question in your role, with have been + -ing. Then close the deal.',
+    formato: 'papel', rot_perg: 'The client asks',
+    aluno: { quem: 'A web designer', quer: 'You need 20 more days to finish it.', limite: 'Your limit: at least 12 more days.' },
+    prof: { quem: 'The client', quer: 'Wants it in 5 days: the launch party is booked.', limite: 'Secret limit: can wait 15 days, not one more.' },
+    perguntas: [
+      { q: 'Thirty days! What have you been doing all this time?', ex: 'I’ve been building the shop pages since Monday, and I’ve been waiting for your photos for two weeks.' },
+      { q: 'How long have you been working on the payment page?', ex: 'I’ve been working on it for six days. It’s the hardest part, and I don’t want it to break.' },
+      { q: 'Your first date was wrong. Why should I believe your new one?', ex: 'Because this time I’ve been counting every day, and I added a worst case.' },
+      { q: 'What can you give me in five days, for the party?', ex: 'In five days I can give you the home page and the shop. The payment page needs more time.' }
+    ],
+    st: ['I’ve been working on … since …', 'We’ve been waiting for … for …', 'I can give you … if …', 'What if we …?'],
+    push: 'Get angry (kindly): “I’ve been telling my boss it’s ready!” Make them offer something.',
+    acordo: { tag: 'The deal', q: 'What do you both agree?', opc: ['10 days · full site', '5 days · home page', '15 days · discount'],
+      st: ['OK, so we agree on …', 'Deal, but …'], ex: 'OK, so we agree on ten more days for the full site. I’ll send you an update every Friday.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "envelope": {
+   "t": "Five things. How many days each?",
+   "p": "Say your number first. Then tap the closest."
+  },
+  "streak": {
+   "t": "Have been + -ing keeps the streak alive.",
+   "p": "Choose the right form. Say the whole sentence."
+  },
+  "forsince": {
+   "t": "SINCE is the point. FOR is the piece.",
+   "p": "Tap FOR or SINCE. Then say a sentence."
+  },
+  "estudo": {
+   "t": "1994. Students guess their own number.",
+   "p": "Play the researcher once. Guess each number."
+  },
+  "caixa": {
+   "t": "Everything goes wrong. How long then?",
+   "p": "Match each line to its number."
+  },
+  "quinta": {
+   "t": "A man puts something off.",
+   "p": "Listen once. Sort tonight from Thursday."
+  },
+  "quanto": {
+   "t": "Four trackers. Who has been going longest?",
+   "p": "Ask how long. Then add you and your teacher."
+  },
+  "quando": {
+   "t": "The one practical finding.",
+   "p": "Listen once. Three questions. Then make your plan."
+  },
+  "cv-prazo": {
+   "t": "Day thirty. The website isn’t ready.",
+   "p": "You’re the designer. Answer with have been + -ing."
+  },
+  "fim": {
+   "t": "Your five numbers, next to theirs.",
+   "p": "Write what you’ve been putting off. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Present perfect continuous (have/has been + -ing) com for e since: o estudo de 1994 em que os alunos previram 33,9 dias e levaram 55,5.",
+  "armadilha": "O português usa presente para algo que começou antes e continua: “I’m doing it since March”. Também sai “I have been work” sem o -ing, e for/since trocados.",
+  "pal": [
+   "have been + -ing",
+   "for",
+   "since",
+   "put off",
+   "deadline",
+   "estimate",
+   "worst case",
+   "habit tracker",
+   "I’ve been meaning to"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o número: 33,9 dias previstos, 55,5 reais, e um envelope parado desde março.",
+   "perg": "What have you been putting off?",
+   "pula": "Só leia a manchete e entre."
+  },
+  "envelope": {
+   "obj": "O aluno estima quantos dias levaria para cinco tarefas. Ninguém confere.",
+   "perg": "How many days would that take you?",
+   "pula": "Três itens bastam."
+  },
+  "streak": {
+   "obj": "Formar have/has been + -ing; o erro zera a sequência (faz parte da graça).",
+   "perg": "How long have you been doing it?",
+   "pula": "Seis frases bastam."
+  },
+  "forsince": {
+   "obj": "Since + ponto no tempo, for + pedaço de tempo.",
+   "perg": "For or since: March?",
+   "pula": "Corte metade dos itens."
+  },
+  "estudo": {
+   "obj": "Ouvir o estudo de 1994 e adivinhar os números. É sobre um grupo, não sobre o aluno.",
+   "perg": "How many days did they guess?",
+   "pula": "Uma escuta e duas perguntas."
+  },
+  "caixa": {
+   "obj": "Realista, pior caso e o que aconteceu: os números crescem.",
+   "perg": "What happened in the worst case?",
+   "pula": "Corte a discussão; só ligue os números."
+  },
+  "quinta": {
+   "obj": "Ouvir um homem que adia algo: o alívio de hoje e a conta de quinta.",
+   "perg": "What did he pay on Thursday?",
+   "pula": "Uma escuta, sem a transcrição."
+  },
+  "quanto": {
+   "obj": "Perguntar How long have you been…? e descobrir quem está há mais tempo.",
+   "perg": "How long have you been doing it?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "quando": {
+   "obj": "A descoberta prática: decidir quando e onde começar. Não é conselho ao aluno.",
+   "perg": "When and where will you start?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-prazo": {
+   "obj": "Negociação: o aluno é o designer atrasado, o professor é o cliente (limite secreto: 15 dias).",
+   "perg": "What have you been doing for thirty days?",
+   "pula": "Duas perguntas e feche o acordo."
+  },
+  "fim": {
+   "obj": "Os cinco números da cena I ao lado dos do estudo; escrita sobre o que vem adiando.",
+   "perg": "How long have you been putting it off?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com How long have you been…? e for/since.",
+   "perg": "How long have you been living there?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre prazos e hábitos, com argumentos prontos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o designer do prazo e responde a entrevista com have been + -ing.",
+   "perg": "What have you been working on all month?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "How long has it been going?",
+   "p": "Pick a card. Answer with for or since.",
+   "palavras": [
+    "have been + -ing",
+    "for",
+    "since",
+    "How long…?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR HOME",
+     "q": "How long have you been living where you live now?",
+     "fup": "Why did you move there?",
+     "st": [
+      "I’ve been living there for …",
+      "… since …"
+     ],
+     "ex": "I’ve been living in this flat since 2021, because it’s close to work."
+    },
+    {
+     "k": "YOUR ENGLISH",
+     "q": "How long have you been studying English?",
+     "fup": "What has changed since you started?",
+     "st": [
+      "I’ve been studying it for …",
+      "Since …, I …"
+     ],
+     "ex": "I’ve been studying English for three years, and since last year I watch series without subtitles."
+    },
+    {
+     "k": "A HABIT",
+     "q": "What is a good habit you have been keeping?",
+     "fup": "What made you start?",
+     "st": [
+      "I’ve been … every day since …"
+     ],
+     "ex": "I’ve been walking every morning since January."
+    },
+    {
+     "k": "PUT OFF",
+     "q": "What have you been meaning to do for a long time?",
+     "fup": "What is stopping you?",
+     "st": [
+      "I’ve been meaning to … for …",
+      "The problem is …"
+     ],
+     "ex": "I’ve been meaning to clean the garage for months, but it’s always too hot."
+    },
+    {
+     "k": "YOUR WORK",
+     "q": "What have you been working on this month?",
+     "fup": "Is it on time?",
+     "st": [
+      "I’ve been working on …",
+      "It’s been taking …"
+     ],
+     "ex": "I’ve been working on a big report, and it’s been taking longer than I thought."
+    },
+    {
+     "k": "THIS SERIES",
+     "q": "What have you been watching or reading lately?",
+     "fup": "Would you recommend it? Why?",
+     "st": [
+      "I’ve been watching …",
+      "I’ve been reading … since …"
+     ],
+     "ex": "I’ve been reading a mystery novel since last week, and I can’t stop."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I’ve been…",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Give a deadline you can’t keep, or say no to the job?",
+     "a": "Give the deadline",
+     "b": "Say no",
+     "fa": [
+      "Give it. You can explain later.",
+      "Clients want an answer, not a doubt."
+     ],
+     "fb": [
+      "Say no. A broken promise costs more.",
+      "Your name is all you have."
+     ]
+    },
+    {
+     "q": "Plan everything, or just start?",
+     "a": "Plan",
+     "b": "Just start",
+     "fa": [
+      "Plan. Then you know where you are.",
+      "The study shows we guess badly without one."
+     ],
+     "fb": [
+      "Just start. Planning is often putting it off.",
+      "You learn what it takes by doing it."
+     ]
+    },
+    {
+     "q": "Habit trackers: helpful or stressful?",
+     "a": "Helpful",
+     "b": "Stressful",
+     "fa": [
+      "Helpful. You see the streak and keep going.",
+      "Numbers don’t lie."
+     ],
+     "fb": [
+      "Stressful. One bad day and you give up.",
+      "Life isn’t a row of squares."
+     ]
+    },
+    {
+     "q": "Putting something off: always bad?",
+     "a": "Always bad",
+     "b": "Sometimes fine",
+     "fa": [
+      "Always bad. Thursday’s bill always comes.",
+      "The task only gets bigger."
+     ],
+     "fb": [
+      "Sometimes fine. Tonight you need to rest.",
+      "Some things solve themselves."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You’ve been talking for six minutes."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the designer now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the web designer.",
+   "perguntas": [
+    "How long have you been working on this website?",
+    "What have you been doing all month?",
+    "Since when have you known it was late?",
+    "Have you been working on other projects too?",
+    "How many more days do you really need?",
+    "What will you do differently next time?"
+   ],
+   "st": [
+    "I’ve been … for …",
+    "Since …, I’ve been …",
+    "Honestly, …"
+   ],
+   "ex": "I’ve been working on it for thirty days, and I’ve been fixing the payment page since Monday."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

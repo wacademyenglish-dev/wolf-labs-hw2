@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Won!",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ab3fd6903ae8/i-won/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "past simple: regular verbs + -ed (worked, wanted, watched), irregular verbs change (go-went, win-won); yesterday / last week need the past; never goed, never yesterday I work",
   "abrir": "What did you do last weekend?",
   "fecho": "<b>Yesterday</b> and <b>last week</b> need the past. Regular verbs: <b>+ -ed</b> (<i>I worked</i>). Some verbs change: <b>go → went</b>, <b>win → won</b>. Never <i>goed</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a race. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/ab3fd6903ae8/i-won/img/live-prox.jpg",
+      "img": "../img/live-prox.jpg",
       "leg": "A finish line at a castle gate",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Yesterday I worked at the shop.",
-          "img": "https://wolf-labs.pages.dev/p/ab3fd6903ae8/i-won/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I went to the gate and I won.",
-          "img": "https://wolf-labs.pages.dev/p/ab3fd6903ae8/i-won/img/live-prox.jpg",
+          "img": "../img/live-prox.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I wanted to stop, but I didn't stop.",
-          "img": "https://wolf-labs.pages.dev/p/ab3fd6903ae8/i-won/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ab3fd6903ae8/i-won/img/live-prox.jpg",
+      "img": "../img/live-prox.jpg",
       "leg": "A red ribbon at the finish",
       "pede": "Look at the picture: a red ribbon at the finish line. Write 2 or 3 sentences about a day you did something big or won something. Use <b>went</b>, <b>worked</b>, <b>wanted</b> or <b>won</b>.",
       "ph": "Last week I went …",

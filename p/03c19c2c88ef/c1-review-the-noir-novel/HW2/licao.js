@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Noir Novel",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/03c19c2c88ef/c1-review-the-noir-novel/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "inversion after negative and limiting adverbs: No sooner had ... than ..., Hardly had ... when ..., Not only did ..., Little did ... know, Not until ... did ..., Only then did ..., So ... was ... that ..., Had I known, ...",
   "abrir": "Think of a story you love. What is the moment everything changes?",
   "fecho": "Drama starts with a negative: the helper comes before the subject. <b>No sooner had</b> she arrived <b>than</b> it rained. <b>Little did</b> she know. <b>Not until</b> midnight <b>did</b> she see it. <b>Only then did</b> she understand. <b>Never have I</b> felt so alone. <b>Had I known</b>, I would have called.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about his mystery novel. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/03c19c2c88ef/c1-review-the-noir-novel/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A foggy harbour",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "No sooner had she arrived than the fog came down.",
-          "img": "https://wolf-labs.pages.dev/p/03c19c2c88ef/c1-review-the-noir-novel/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Little did she know that the ship had gone.",
-          "img": "https://wolf-labs.pages.dev/p/03c19c2c88ef/c1-review-the-noir-novel/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Not until midnight did she find the note.",
-          "img": "https://wolf-labs.pages.dev/p/03c19c2c88ef/c1-review-the-noir-novel/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/03c19c2c88ef/c1-review-the-noir-novel/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A typewriter by a rainy window",
       "pede": "Look at the picture: a typewriter by a rainy window. Write 2 or 3 sentences for a mystery story. Use <b>No sooner had</b>, <b>Little did</b> or <b>Never have</b>.",
       "ph": "No sooner had I … than …",

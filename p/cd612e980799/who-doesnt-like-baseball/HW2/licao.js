@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Who Doesn't Like Baseball?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/cd612e980799/who-doesnt-like-baseball/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "like / love / hate + verb-ing; he / she likes, loves, hates (-s); doesn't like + -ing; Do you like ...ing? Does he like ...ing?; never likes to writing, doesn't likes",
   "abrir": "What do you love doing on the weekend?",
   "fecho": "<b>like / love / hate</b> + verb-<b>ing</b>: <i>I love playing baseball.</i> With he / she: <b>-s</b>: <i>He likes reading.</i> No: <b>doesn't like</b>: <i>She doesn't like cooking.</i> Question: <i>Do you like reading? Does he like it?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at a family fridge. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/cd612e980799/who-doesnt-like-baseball/img/live-geladeira.webp",
+      "img": "../img/live-geladeira.webp",
       "leg": "A family fridge door",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "He loves playing baseball.",
-          "img": "https://wolf-labs.pages.dev/p/cd612e980799/who-doesnt-like-baseball/img/live-cena4-estadio.webp",
+          "img": "../img/live-cena4-estadio.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She doesn't like washing the dishes.",
-          "img": "https://wolf-labs.pages.dev/p/cd612e980799/who-doesnt-like-baseball/img/live-geladeira.webp",
+          "img": "../img/live-geladeira.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Do you like reading at night?",
-          "img": "https://wolf-labs.pages.dev/p/cd612e980799/who-doesnt-like-baseball/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/cd612e980799/who-doesnt-like-baseball/img/live-geladeira.webp",
+      "img": "../img/live-geladeira.webp",
       "leg": "A family fridge door",
       "pede": "Look at the picture: a fridge door with notes and photos. Write 2 or 3 sentences about a person in your family. Use <b>likes</b>, <b>loves</b> or <b>hates</b> + -ing.",
       "ph": "My brother likes … He hates …",

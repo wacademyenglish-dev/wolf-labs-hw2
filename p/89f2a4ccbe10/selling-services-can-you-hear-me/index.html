@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -139,5 +140,291 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "How many video calls this week?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "dialogo": {
+   "t": "Leo’s video call goes wrong.",
+   "p": "One question. Listen. Then answer."
+  },
+  "multipla": {
+   "t": "Six moments from real video calls.",
+   "p": "Listen. Choose. Say it out loud."
+  },
+  "descobre": {
+   "t": "You’re breaking up, not “you breaking up”.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "escolha": {
+   "t": "Camera on or off?",
+   "p": "Choose a side. Say why."
+  },
+  "leitura": {
+   "t": "Chapter 7: The Airport Call.",
+   "p": "Read it out loud. Then answer."
+  },
+  "cadeira": {
+   "t": "Save the call.",
+   "p": "Your teacher is the client. Say what’s happening. Fix it."
+  },
+  "cartao": {
+   "t": "Your video call kit.",
+   "p": "Start, problems, fix, end. Read it out loud."
+  },
+  "pode": {
+   "t": "Lesson 26: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 26: presente contínuo para o que acontece AGORA na chamada de vídeo. O Leo apresenta a proposta ao Mark (Costa Retail) e tudo dá errado.",
+  "armadilha": "Brasileiro tira o be (“You breaking up”), esquece o -ing (“I’m share my screen”), diz “Are you hearing me?” (é Can you hear me?) e “My camera don’t working”.",
+  "pal": [
+   "Can you hear me?",
+   "Can you see my screen?",
+   "You’re breaking up.",
+   "You’re on mute.",
+   "I’m sharing my screen.",
+   "I’m moving to another room.",
+   "My camera isn’t working.",
+   "Is it better now?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 26 de Selling Services: salvar uma chamada de vídeo cheia de problemas.",
+   "perg": "Where are you right now? What’s happening around you?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal sobre chamadas de vídeo; o aluno pergunta “And you?”.",
+   "perg": "How many video calls do you have this week?",
+   "pula": "Três perguntas bastam."
+  },
+  "dialogo": {
+   "obj": "Áudio: Leo e Mark numa chamada com problemas (corte, tela errada, outro telefone).",
+   "perg": "What’s happening to Leo’s screen?",
+   "pula": "Ouça uma vez e faça duas perguntas."
+  },
+  "multipla": {
+   "obj": "Seis momentos de chamadas reais: ouvir, escolher e dizer como numa chamada.",
+   "perg": "What do you say now?",
+   "pula": "Quatro momentos bastam."
+  },
+  "descobre": {
+   "obj": "Pares: you’re breaking up x you breaking up; can you hear x are you hearing; regras e armadilhas.",
+   "perg": "Are you hearing me or can you hear me?",
+   "pula": "Três pares + as armadilhas bastam."
+  },
+  "escolha": {
+   "obj": "Três debates curtos sobre chamadas; o professor sempre do outro lado.",
+   "perg": "Camera on or off? Why?",
+   "pula": "Um debate basta."
+  },
+  "leitura": {
+   "obj": "Easy Reader, capítulo 7: a chamada do aeroporto com o Mr. Duarte.",
+   "perg": "Where is Leo, and what’s happening?",
+   "pula": "Leia metade e faça uma pergunta."
+  },
+  "cadeira": {
+   "obj": "O professor é o cliente e encena os problemas de verdade (sem som, rosto congelado); o aluno reage e conserta.",
+   "perg": "Hello? Hello? Can you hear me?",
+   "pula": "Três problemas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: o kit de frases para chamadas reais (começo, problema, conserto, fim).",
+   "perg": "What do you say when the client freezes?",
+   "pula": "Problema + conserto bastam."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; o que ficar aberto vai para a lição.",
+   "perg": "Can you save a bad call now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa leve sobre chamadas de vídeo reais, com presente contínuo pronto.",
+   "perg": "What’s happening around you right now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre chamadas de vídeo, com because.",
+   "perg": "Headphones or speakers?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Troca de papel: o aluno é o Mark, o cliente da Costa Retail, numa chamada ruim.",
+   "perg": "Mark, can you hear me now?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Video calls in your life.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’m …ing",
+    "Can you hear me?",
+    "isn’t working"
+   ],
+   "cartas": [
+    {
+     "k": "RIGHT NOW",
+     "q": "What’s happening around you right now?",
+     "fup": "Is it noisy?",
+     "st": [
+      "Right now, … is …ing."
+     ],
+     "ex": "Right now, my neighbor is cutting the grass. It’s very noisy!"
+    },
+    {
+     "k": "YOUR SETUP",
+     "q": "Where do you usually take video calls?",
+     "fup": "Is it a good place?",
+     "st": [
+      "I usually take them in …"
+     ],
+     "ex": "I usually take them in my bedroom. The light is good."
+    },
+    {
+     "k": "WORST CALL",
+     "q": "What was your worst video call?",
+     "fup": "What happened?",
+     "st": [
+      "My worst call was …",
+      "The … wasn’t working."
+     ],
+     "ex": "My worst call was with a client. My camera wasn’t working."
+    },
+    {
+     "k": "ON MUTE",
+     "q": "Have you ever talked on mute for a long time?",
+     "fup": "What did people say?",
+     "st": [
+      "Yes! I was …"
+     ],
+     "ex": "Yes! I was talking for two minutes. They said: you’re on mute!"
+    },
+    {
+     "k": "THIS WEEK",
+     "q": "Who are you meeting on video this week?",
+     "fup": "Why?",
+     "st": [
+      "I’m meeting …"
+     ],
+     "ex": "I’m meeting a new client on Thursday. We’re talking about prices."
+    },
+    {
+     "k": "BACKGROUND",
+     "q": "Do you use a virtual background?",
+     "fup": "Why or why not?",
+     "st": [
+      "I use …",
+      "I don’t use …, because …"
+     ],
+     "ex": "I don’t use one, because my hair disappears!"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I’m …ing",
+    "isn’t working"
+   ],
+   "rodadas": [
+    {
+     "q": "Headphones or speakers?",
+     "a": "Headphones",
+     "b": "Speakers",
+     "fa": [
+      "Headphones. The client isn’t hearing my dog."
+     ],
+     "fb": [
+      "Speakers. My ears get tired."
+     ]
+    },
+    {
+     "q": "Bad internet: switch to the phone or try again?",
+     "a": "The phone",
+     "b": "Try again",
+     "fa": [
+      "The phone. The client is waiting."
+     ],
+     "fb": [
+      "Try again. The screen is important."
+     ]
+    },
+    {
+     "q": "Share your screen or send the file?",
+     "a": "Share the screen",
+     "b": "Send the file",
+     "fa": [
+      "Share the screen. I’m showing the important part."
+     ],
+     "fb": [
+      "Send the file. Sharing isn’t always working."
+     ]
+    },
+    {
+     "q": "A video call from home or from a café?",
+     "a": "Home",
+     "b": "A café",
+     "fa": [
+      "Home. It’s quiet."
+     ],
+     "fb": [
+      "A café. The coffee is better!"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Can you hear me now? Great."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Mark now.",
+   "p": "Your teacher is Leo, on a bad call.",
+   "aluno": "Listen to Leo’s question. Answer as Mark, the client at Costa Retail.",
+   "perguntas": [
+    "Mark, can you hear me now?",
+    "Can you see my screen?",
+    "Where are you right now?",
+    "What’s that noise? What’s happening?",
+    "Is your camera working?",
+    "Is it better now?"
+   ],
+   "st": [
+    "Yes, I can …",
+    "Sorry, you’re breaking up.",
+    "I’m …ing"
+   ],
+   "ex": "Sorry, you’re breaking up. I’m moving to another room. Is it better now?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

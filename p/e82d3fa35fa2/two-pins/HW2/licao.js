@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Two Pins",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e82d3fa35fa2/two-pins/img/live-cortica.webp",
+  "capa": "../img/live-cortica.webp",
   "alvo": "I'm from (the old city) · I live in (the city now) · I was born in · a house / an apartment · with my family / on my own · Where are you from? Where do you live?",
   "abrir": "Where are you from? And where do you live now?",
   "fecho": "<b>I'm from</b> = the old city. <b>I live in</b> = the city now (never <i>live from</i>). <b>I was born in</b> = the first pin. At home: <b>in a house</b> or <b>in an apartment</b>, <b>with my family</b> or <b>on my own</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about home. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/e82d3fa35fa2/two-pins/img/live-cidade-nova.webp",
+      "img": "../img/live-cidade-nova.webp",
       "leg": "A big city at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -99,17 +99,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'm from Boston, and I live in Chicago.",
-          "img": "https://wolf-labs.pages.dev/p/e82d3fa35fa2/two-pins/img/live-cidade-velha.webp",
+          "img": "../img/live-cidade-velha.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I live in an apartment with my roommate.",
-          "img": "https://wolf-labs.pages.dev/p/e82d3fa35fa2/two-pins/img/live-cidade-nova.webp",
+          "img": "../img/live-cidade-nova.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I was born in Portland.",
-          "img": "https://wolf-labs.pages.dev/p/e82d3fa35fa2/two-pins/img/live-cortica.webp",
+          "img": "../img/live-cortica.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -153,7 +153,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e82d3fa35fa2/two-pins/img/live-cortica.webp",
+      "img": "../img/live-cortica.webp",
       "leg": "Two pins and a string",
       "pede": "Look at the picture: two pins and a string. Write 2 or 3 sentences: where you are from and where you live now. Use <b>I'm from</b> and <b>I live in</b>.",
       "ph": "I'm from … and I live in …",

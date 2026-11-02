@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Someone Must Have · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B2 · Unit 4 · Wishes and what could have been</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Someone Must Have · B2 Unit 4 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new B2 lesson on past modals for deduction (must have, might / could / may have, can’t have) and for criticism (should / shouldn’t have), with the form modal + have + past participle.</p><p style="margin:0 0 6px"><b>The story:</b> The town’s cake competition at Miller’s Bakery (invented). At 6 a.m. the winning cake has a small bite missing. The back door is open, there are tiny round prints in the flour, and Biscotti, the baker’s cat, is not in his basket.</p><p style="margin:0 0 6px"><b>About 42 min:</b> I · The Clues (10) · II · How Sure Are You? (9) · III · Three Suspects (15) · IV · The Deal (8).</p><p style="margin:0"><b>Open with:</b> “You find your chocolate gone from the fridge. How do you decide who ate it?”</p></div><!--/prep-->
+    <p>A light mystery with a funny ending. Two traps: the form (“must saw”) and the meaning of impossible (English uses can’t have, not mustn’t have). In the mission, play each suspect seriously: the student should feel like a detective.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>must have (almost sure) · might / could / may have (possible) · can’t / couldn’t have (impossible) · should / shouldn’t have (criticism) · modal + have + past participle · irregular participles: seen, gone, been</p>
+    <h4>THE CLUES</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>HOW SURE ARE YOU?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>THREE SUSPECTS</h4>
+    <p>You are each suspect. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then the owner asks about each suspect and the student gives a deduction with must have / might have / can’t have. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>must saw (must have seen)</i>, <i>mustn’t have for impossible (can’t have)</i>, <i>might have went (gone)</i>, <i>must have for criticism (should have)</i>, <i>could had (could have)</i>. B2: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE DEAL (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Case closed: the cat did it. Now your student is Mr. Miller and you are Mrs. Hale, the judge. Ask the four questions in role; the student answers with must have, should have and can’t have. Your secret limit is only on your screen: he keeps the title only if he gives half the prize to the second baker. Don’t give in fast. Wait five seconds in silence after each question, and use the PUSH line to make it harder. Then close the deal together on the screen. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Clues.</li>
+      <li><b>Focus</b>: II · How Sure Are You?.</li>
+      <li><b>Out loud</b>: III · Three Suspects and IV · The Deal.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SOMEONE MUST HAVE (Main B2 · Unit 4) · pergunta-surpresa · 28/10/2026 · must / might / can’t / should have */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Has food ever disappeared from your fridge? Who must have taken it?',
+    opc: ['Someone in my family', 'A flatmate', 'A pet', 'Nobody: I live alone'], st: ['It must have been …', 'It can’t have been …, because …'],
+    ex: 'Someone in my family: my brother. It must have been him, because there were crumbs on his desk. It can’t have been the dog: he can’t open the fridge!', push: 'Did he say sorry? What should he have done?' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Is it ever OK to eat someone else’s food without asking?',
+    opc: ['Never', 'Only with family', 'Only if it’s old'], st: ['You should have asked …', 'It might be OK if …'],
+    ex: 'Only with family. With a flatmate, you should always ask first, or buy it again the same day.', push: 'Last slice of pizza, and your friend is asleep. Do you eat it?' },
+  { cena: 'missao', tipo: 'Would you rather', q: 'Would you rather judge a cake competition or bake for one?',
+    opc: ['Judge', 'Bake'], st: ['I’d rather …, because …', 'Once I must have …'],
+    ex: 'Judge, definitely. Once I must have forgotten the sugar, because my cake tasted like bread.', push: 'What’s the best cake you have ever eaten?' },
+  { cena: 'cv-acordo', tipo: 'What if', q: 'Your pet ruins something important at a friend’s house. What do you do?',
+    opc: ['Pay for it', 'Say sorry with a gift', 'Blame the open door'], st: ['I should have …', 'I would …, because …'],
+    ex: 'Pay for it. I should have watched him, so it’s my fault, not the cat’s.', push: 'And if it cost a month’s salary?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SOMEONE MUST HAVE (Main B2 · Unit 4) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A negociação com limite secreto entra no lugar de "IV · Would You Rather?" (A ou B com because, a última cena:
+   hw: 1 leva o link da lição de casa). Depois do caso fechado (foi o gato), o aluno é o Mr. Miller e negocia
+   com a juíza o que acontece com o prêmio. A gramática da aula (must / might / can’t / should have) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'acordo', troca: 'escolha', hw: 1, est: 'o', min: 8, img: 'capa', rot: 'The Deal', t: 'The cat did it. Who gets the prize?',
+    p: 'You are the baker. Your teacher is the judge. Answer her questions in role, then close a deal.',
+    formato: 'papel',
+    aluno: { quem: 'Mr. Miller, the baker', quer: 'Keep the title “Best Cake in Town”.', limite: 'Your limit: you can give up money, but not the title.' },
+    prof: { quem: 'Mrs. Hale, the judge', quer: 'The rules say a damaged cake can’t win.', limite: 'Secret limit: he keeps the title only if he gives half the prize to the second baker.' },
+    rot_perg: 'The judge asks',
+    perguntas: [
+      { q: 'The rules are clear. Why should a bitten cake still win?', ex: 'It must have been the best cake in the room: even the cat chose it! Nobody touched it before the judges tasted it.' },
+      { q: 'Who should have locked the back door last night?', ex: 'I should have locked it, I know. I must have forgotten because I was so tired after the final.' },
+      { q: 'How do I know the cat didn’t do it before the judging?', ex: 'He can’t have done it before: at nine Tom saw the cake and it was perfect.' },
+      { q: 'What can you offer the baker who came second?', ex: 'I might give her part of the prize, and she could bake with me for a week.' }
+    ],
+    st: ['The cat must have …', 'I should have …', 'He can’t have …, because …', 'I could accept … if …'],
+    push: 'The second baker is in the room now, and she is angry. Say something to her, right now.',
+    acordo: { tag: 'The deal', q: 'What do you both agree on?',
+      opc: ['Title kept, prize shared', 'A new final next week', 'Second place wins'],
+      st: ['We should …, so …', 'I can accept that if …'],
+      ex: 'Title kept, prize shared. I should have locked the door, so half the money goes to the second baker.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "The detective’s notebook.",
+   "p": "Read the notes out loud. Then look closer."
+  },
+  "descobre": {
+   "t": "How sure is the speaker?",
+   "p": "Compare A and B. Say the difference."
+  },
+  "missao": {
+   "t": "Three suspects. Who took a bite?",
+   "p": "Ask each suspect five questions. Then deduce."
+  },
+  "cv-acordo": {
+   "t": "The cat did it. Who gets the prize?",
+   "p": "You are the baker. Answer the judge. Close a deal."
+  }
+ },
+ "prep": {
+  "obj": "Modais no passado para dedução (must/might/can’t have) e crítica (should have): o bolo vencedor da Miller’s Bakery amanhece mordido, e o culpado é o gato Biscotti.",
+  "armadilha": "O brasileiro diz “must saw” e “might have went” (sem particípio), usa “mustn’t have” para o impossível (é can’t have) e must have para criticar (é should have).",
+  "pal": [
+   "must have",
+   "might have",
+   "could have",
+   "can’t have",
+   "should have",
+   "shouldn’t have",
+   "clue",
+   "suspect"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o mistério: a final do concurso de bolos e uma mordida no bolo vencedor.",
+   "perg": "Your chocolate is gone from the fridge. How do you decide who ate it?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Ler as notas do detetive: porta aberta, pegadas redondas na farinha, cesto vazio.",
+   "perg": "What must have happened at 6 a.m.?",
+   "pula": "Leia e faça duas perguntas; pule o “look closer” se faltar tempo."
+  },
+  "descobre": {
+   "obj": "Comparar pares: quão certo está quem fala? Depois regras e armadilhas.",
+   "perg": "How sure is the speaker in A? And in B?",
+   "pula": "Três pares bastam."
+  },
+  "missao": {
+   "obj": "O aluno interroga três suspeitos e dá a dedução com must/might/can’t have.",
+   "perg": "Who can’t have taken the bite, and why?",
+   "pula": "Dois suspeitos; mantenha a dedução final."
+  },
+  "cv-acordo": {
+   "obj": "O aluno é o Mr. Miller; o professor é a juíza Mrs. Hale. Negociar o título.",
+   "perg": "Why should you keep the title, Mr. Miller?",
+   "pula": "Duas perguntas e feche o acordo. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Deduções e críticas sobre a vida real com modal + have + particípio.",
+   "perg": "What must have happened?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas sobre o concurso e culpa, argumentando com should have e must have.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o gato Biscotti e se defende do crime.",
+   "perg": "Where were you at 6 a.m., Biscotti?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Small mysteries, big deductions.",
+   "p": "Pick a card. Deduce, or criticize.",
+   "palavras": [
+    "must have",
+    "might have",
+    "can’t have",
+    "should have",
+    "shouldn’t have"
+   ],
+   "cartas": [
+    {
+     "k": "THE FRIDGE",
+     "q": "Your chocolate is gone from the fridge. Who must have eaten it?",
+     "fup": "Who can’t have?",
+     "st": [
+      "It must have been …",
+      "It can’t have been …, because …"
+     ],
+     "ex": "It must have been my brother. It can’t have been my mother: she hates chocolate."
+    },
+    {
+     "k": "A BAD DECISION",
+     "q": "What’s a decision you should have made differently?",
+     "fup": "What might have happened?",
+     "st": [
+      "I should have …",
+      "If I had, I might have …"
+     ],
+     "ex": "I should have taken that job in Porto. I might have learned Portuguese from Portugal."
+    },
+    {
+     "k": "A SILENT FRIEND",
+     "q": "A friend hasn’t answered for three days. What might have happened?",
+     "fup": "What should you do?",
+     "st": [
+      "She might have …",
+      "She can’t have …"
+     ],
+     "ex": "She might have lost her phone. She can’t have forgotten me."
+    },
+    {
+     "k": "A FAMOUS CASE",
+     "q": "Think of a famous unsolved mystery. What must have happened?",
+     "fup": "How sure are you?",
+     "st": [
+      "They must have …",
+      "I’m not sure, but it could have …"
+     ],
+     "ex": "The ship could have hit a storm. Pirates can’t have done it: there was no sign of a fight."
+    },
+    {
+     "k": "AT WORK",
+     "q": "Who at work should have done something differently this month?",
+     "fup": "Did you say anything?",
+     "st": [
+      "… shouldn’t have …",
+      "They should have …"
+     ],
+     "ex": "Our manager shouldn’t have changed the deadline on Friday night."
+    },
+    {
+     "k": "YOUR PET",
+     "q": "Have you or a friend had a pet that caused trouble?",
+     "fup": "What must it have done?",
+     "st": [
+      "The cat must have …",
+      "Nobody saw it, but it might have …"
+     ],
+     "ex": "Our dog must have opened the door. Nobody saw it, but there was mud everywhere."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "should have",
+    "shouldn’t have",
+    "must have",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "The cat bit the cake. Should Mr. Miller lose the title?",
+     "a": "Lose it",
+     "b": "Keep it",
+     "fa": [
+      "Lose it. He should have locked the back door.",
+      "Rules are rules."
+     ],
+     "fb": [
+      "Keep it. The cake was still the best.",
+      "A cat can’t have planned it."
+     ]
+    },
+    {
+     "q": "Should pets be allowed in bakeries and restaurants?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. A bakery cat is part of the charm.",
+      "It keeps the mice away."
+     ],
+     "fb": [
+      "No. Biscotti shows exactly why.",
+      "Hygiene should come first."
+     ]
+    },
+    {
+     "q": "Accuse someone with good clues, or wait for proof?",
+     "a": "Accuse",
+     "b": "Wait",
+     "fa": [
+      "Accuse. With the prints in the flour, it must have been the cat.",
+      "Waiting changes nothing."
+     ],
+     "fb": [
+      "Wait. The prints might have been from something else.",
+      "A wrong accusation can’t be taken back."
+     ]
+    },
+    {
+     "q": "Is it fair to blame people for what they should have known?",
+     "a": "Fair",
+     "b": "Unfair",
+     "fa": [
+      "Fair. Adults should have checked.",
+      "Not knowing is no excuse."
+     ],
+     "fb": [
+      "Unfair. Nobody can see everything.",
+      "It’s easy to say should have later."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The cat must have enjoyed every one."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Biscotti, the cat.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Biscotti.",
+   "perguntas": [
+    "Where were you at 6 a.m.?",
+    "Who might have opened the back door?",
+    "The prints in the flour are small and round. Whose can’t they be?",
+    "Was the cake good?",
+    "Should you have stayed in your basket?",
+    "What should Mr. Miller have done to stop you?"
+   ],
+   "st": [
+    "It can’t have been me, because …",
+    "Someone must have …",
+    "He should have …"
+   ],
+   "ex": "It can’t have been me. I was asleep. Someone must have left the door open, which is not my fault."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

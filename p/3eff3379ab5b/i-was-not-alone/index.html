@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · I Was Not Alone · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>I Was Not Alone · The Floor Plan</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>I Was Not Alone · The Floor Plan</h2>
+    <p>Your student looks after Mrs. Reed’s house and her dog Rex for one night. In the morning she comes back: four cups, one still warm, a coat on the hook, an open window, and a dog that didn’t bark. She lives alone and nobody has a key. The house is a blue plan in the dark: every room lights up only when the sentence with <b>was</b> or <b>were</b> is right. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>was</b> for I, he, she, it and one thing; <b>were</b> for you, we, they and more than one. <b>There was / there were</b> follow the thing after them. <b>wasn’t / weren’t</b>. The question puts the verb first: <b>Were you alone?</b> A feeling is one word: <b>I was scared</b> (not <i>I was with fear</i>). In scene II the student says seven sentences in the present; in scene III the night is over and the same seven go into the past.</p>
+    <!--conversa--><h4>THE STRANGEST THING (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After the night card and the morning card, your student ranks three clues: the four cups, the black coat, the quiet dog. Which one was the strangest? Answer first yourself, as a model; then let them tap their order, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. “Show my teacher’s order” shows yours. Recast quietly while they talk (<i>they was</i> → <i>they were</i>); at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Five Snapshots, V Four Cups, VI Night Card, Morning Card, VIII The Strangest Thing (ranking), IX Three in the Morning.</li>
+      <li><b>Listen</b>: II Nine O’Clock (the opening line), VII Short and Long (was not / wasn’t), X Mrs. Reed Asks (her questions are recorded; the transcript opens after the audio).</li>
+      <li><b>Focus</b>: III She Is Back (the plan lights up), IV The Rule.</li>
+      <li><b>Write</b>: XI Your Night, with the red wavy line for <i>they was</i>, <i>there was four</i>, <i>You were alone?</i>, <i>with fear</i> and <i>not was</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>THE INFORMATION GAP (SCENE VI)</h4>
+    <p>The student has the night card. Your morning card appears only on your side, after the student asks. Wait for a real question with Was…? or Were…?, tap “Asked”, read the morning line, then tap “Answered · show it”. Rooms that changed light up on the plan. Don’t show your card.</p>
+    <h4>THE ENDING</h4>
+    <p>The hour ends without an answer. Mrs. Reed says: “I live alone. Nobody has a key.” The last sentence is four words: <i>I wasn’t alone.</i> Stop there.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The plan, the cups and the cards move on both screens. Every audio plays and pauses; 0.75× makes it slower. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* I WAS NOT ALONE (Main A1) · pergunta-surpresa · 27/10/2026 · was / were */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'volta', tipo: 'And you?', q: 'Were you at home last night?',
+    opc: ['Yes, I was.', 'No, I wasn’t.'], st: ['Yes, I was. I was in …', 'No, I wasn’t. I was at …'],
+    ex: 'No, I wasn’t. I was at my friend’s house.', push: 'Were you tired? Yes or no?' },
+  { cena: 'gap', tipo: 'Would you rather', q: 'Stay in the house or go home?',
+    opc: ['Stay', 'Go home'], st: ['I stay. I’m not scared.', 'I go home!'],
+    ex: 'I go home! The house is very strange.', push: 'With Rex? Yes or no?' },
+  { cena: 'sustos', tipo: 'And you?', q: 'Were you scared of the dark as a child?',
+    opc: ['Yes, I was.', 'No, I wasn’t.'], st: ['Yes, I was. I was …', 'No, I wasn’t.'],
+    ex: 'Yes, I was! The light was always on.', push: 'And now? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* I WAS NOT ALONE (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Ranking leve de 3 no lugar de "VIII · No, It Wasn’t" (extra, prática controlada: corrigir a Mrs. Reed).
+   Depois do information gap (VI), o aluno decide qual pista foi a mais estranha; o professor mostra a ordem dele.
+   A1 bem leve: três itens, frase quase pronta, o professor responde primeiro.
+   A gramática da aula (was / were · there was / there were) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'estranho', troca: 'nao', est: 'o', min: 5, img: 'hall-manha', rot: 'The Strangest Thing', t: 'Three clues. Which one was the strangest?',
+    p: 'Tap them in order: 1 is the strangest. Your teacher answers first.',
+    formato: 'ranking',
+    itens: ['The four cups', 'The black coat', 'The quiet dog'],
+    q: 'What was the strangest?',
+    dica: 'Tap the strangest first. Tap again to take it out.',
+    st: ['Number one was the …', 'There were four cups!', 'The dog was quiet, and …'],
+    ex: 'Number one was the dog. Rex was quiet all night. That was strange!',
+    push: 'Were you scared? Yes or no?',
+    prof: [2, 1, 0] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "nove": {
+   "t": "Nine o’clock. Seven things, in the present.",
+   "p": "Play the house. Say one sentence for each."
+  },
+  "volta": {
+   "t": "7:40 AM. Mrs. Reed is back.",
+   "p": "Pick WAS or WERE. Say the whole sentence."
+  },
+  "xicaras": {
+   "t": "The kitchen, in the morning.",
+   "p": "Say There was… or There were… Then tap."
+  },
+  "gap": {
+   "t": "Your NIGHT card. Their MORNING card.",
+   "p": "Ask Was…? or Were…? Find what changed."
+  },
+  "curtas": {
+   "t": "Was not, wasn’t. Were not, weren’t.",
+   "p": "Play it. Long or short? Say both ways."
+  },
+  "cv-estranho": {
+   "t": "Which clue was the strangest?",
+   "p": "Tap your order. Your teacher answers first."
+  },
+  "sustos": {
+   "t": "3:00 AM. Four sounds. How were you?",
+   "p": "Pick a feeling. Say it: I was scared."
+  },
+  "entrevista": {
+   "t": "Mrs. Reed asks you questions.",
+   "p": "Play her question. Answer out loud."
+  },
+  "fim": {
+   "t": "Your night: yesterday, at home.",
+   "p": "Write five lines with was or were, plus one feeling."
+  }
+ },
+ "prep": {
+  "obj": "Was/were e there was/there were: o aluno cuida da casa da Mrs. Reed por uma noite e de manhã encontra quatro xícaras e um casaco que não eram dele.",
+  "armadilha": "O português usa “estava/estavam” e “tinha” para tudo: sai “they was”, “there was four cups”, “You were alone?” sem inverter e “I was with fear” no lugar de “I was scared”.",
+  "pal": [
+   "was",
+   "were",
+   "wasn’t",
+   "weren’t",
+   "there was",
+   "there were",
+   "Were you alone?",
+   "scared",
+   "strange"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: uma noite sozinho na casa da Mrs. Reed, com o cachorro Rex.",
+   "perg": "Do you like to be alone in a house at night?",
+   "pula": "Só leia a frase da capa e abra a porta."
+  },
+  "fotos": {
+   "obj": "Aquecimento pessoal: o dia de ontem do aluno, já puxando was/were sem corrigir.",
+   "perg": "Where were you yesterday at nine o’clock?",
+   "pula": "Três mensagens bastam."
+  },
+  "nove": {
+   "obj": "As sete coisas da casa às nove da noite, ainda no presente, para comparar depois.",
+   "perg": "Is the window open or closed?",
+   "pula": "Quatro coisas bastam; o resto você lê."
+  },
+  "volta": {
+   "obj": "As mesmas sete coisas no passado: escolher was ou were e dizer a frase inteira.",
+   "perg": "Was the dog quiet? Were the cups on the table?",
+   "pula": "Cinco salas acesas bastam."
+  },
+  "regra": {
+   "obj": "A regra: was para um, were para mais de um; there was/there were seguem a coisa.",
+   "perg": "Why is it “there were four cups”, not “there was”?",
+   "pula": "Leia a tabela e corrija só duas armadilhas."
+  },
+  "xicaras": {
+   "obj": "A cozinha de manhã: there was / there were com as coisas que aparecem na mesa.",
+   "perg": "What was there on the table in the morning?",
+   "pula": "Quatro objetos bastam."
+  },
+  "gap": {
+   "obj": "Lacuna de informação: o aluno pergunta Was…?/Were…? e descobre o que mudou à noite.",
+   "perg": "Ask me: Was the window open in the morning?",
+   "pula": "Três perguntas bastam."
+  },
+  "curtas": {
+   "obj": "Ouvir e dizer as formas longa e curta: was not/wasn’t, were not/weren’t.",
+   "perg": "Did you hear “was not” or “wasn’t”?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-estranho": {
+   "obj": "Conversa: o aluno ordena as três pistas e defende a mais estranha com was/were.",
+   "perg": "Which clue was the strangest for you? Why?",
+   "pula": "Uma ordem e uma pergunta PUSH bastam."
+  },
+  "sustos": {
+   "obj": "Sentimentos no passado com uma palavra só: I was scared, I was calm.",
+   "perg": "How were you at three in the morning?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "entrevista": {
+   "obj": "A Mrs. Reed faz perguntas gravadas; o aluno responde com was/were.",
+   "perg": "Were you alone in the house?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: cinco linhas sobre a noite de ontem do aluno, com was, were e um sentimento.",
+   "perg": "Where were you last night, and how were you?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa pessoal com was/were e there was/there were.",
+   "perg": "Where were you last Saturday night?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e defender com was/were e because.",
+   "perg": "Was it a good idea to stay in the house?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Entrevista: o aluno é quem cuidou da casa e responde no passado.",
+   "perg": "Were you scared that night?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions about the past.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "was",
+    "were",
+    "there was",
+    "there were"
+   ],
+   "cartas": [
+    {
+     "k": "LAST NIGHT",
+     "q": "Where were you last night at ten?",
+     "fup": "Were you alone?",
+     "st": [
+      "I was at …",
+      "I was with …"
+     ],
+     "ex": "I was at home. I was with my sister."
+    },
+    {
+     "k": "YOUR OLD HOUSE",
+     "q": "What was there in your house when you were a child?",
+     "fup": "Was there a garden?",
+     "st": [
+      "There was a …",
+      "There were some …"
+     ],
+     "ex": "There was a small garden and there were two cats."
+    },
+    {
+     "k": "A DARK NIGHT",
+     "q": "Was there a night with no lights in your city?",
+     "fup": "Were you scared?",
+     "st": [
+      "Yes, there was …",
+      "I was …"
+     ],
+     "ex": "Yes, there was a storm. I was a little scared."
+    },
+    {
+     "k": "A PET",
+     "q": "Was there a dog or a cat in your family?",
+     "fup": "What was its name?",
+     "st": [
+      "There was a …",
+      "Its name was …"
+     ],
+     "ex": "There was a dog. Its name was Bob."
+    },
+    {
+     "k": "YOUR WEEKEND",
+     "q": "How was your weekend?",
+     "fup": "Who was with you?",
+     "st": [
+      "It was …",
+      "My … was there."
+     ],
+     "ex": "It was quiet. My mother was there."
+    },
+    {
+     "k": "A STRANGE THING",
+     "q": "Was there a strange thing in your week?",
+     "fup": "Where was it?",
+     "st": [
+      "There was a …",
+      "It was in …"
+     ],
+     "ex": "There was a strange car. It was in front of my house."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "was",
+    "were"
+   ],
+   "rodadas": [
+    {
+     "q": "The four cups: was it a friend or a stranger?",
+     "a": "A friend",
+     "b": "A stranger",
+     "fa": [
+      "A friend. The cups were on the table, nice and clean."
+     ],
+     "fb": [
+      "A stranger. The dog was quiet, and that was strange."
+     ]
+    },
+    {
+     "q": "Rex didn’t bark. Was he asleep or happy?",
+     "a": "Asleep",
+     "b": "Happy",
+     "fa": [
+      "Asleep. It was very late."
+     ],
+     "fb": [
+      "Happy. The person was a friend of Rex."
+     ]
+    },
+    {
+     "q": "The black coat: was it a man’s or a woman’s?",
+     "a": "A man’s",
+     "b": "A woman’s",
+     "fa": [
+      "A man’s. It was very big."
+     ],
+     "fb": [
+      "A woman’s. It was next to Mrs. Reed’s coat."
+     ]
+    },
+    {
+     "q": "A night alone in a big house: fun or scary?",
+     "a": "Fun",
+     "b": "Scary",
+     "fa": [
+      "Fun. There was a dog with me."
+     ],
+     "fb": [
+      "Scary. There were strange sounds."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody knows who was there, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the house-sitter now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the house-sitter.",
+   "perguntas": [
+    "Where were you at nine o’clock?",
+    "Was Rex with you all night?",
+    "Were the doors closed?",
+    "Was there a sound at three in the morning?",
+    "How were you in the morning?",
+    "Were you alone in the house?"
+   ],
+   "st": [
+    "I was …",
+    "There was …",
+    "No, I wasn’t …"
+   ],
+   "ex": "I was in the living room. Rex was with me, and the doors were closed."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

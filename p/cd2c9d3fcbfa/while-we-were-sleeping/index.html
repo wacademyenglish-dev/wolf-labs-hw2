@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · While We Were Sleeping · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Familjen+Grotesk:wght@600;700&family=Red+Hat+Text:wght@400;500;600;700&family=Red+Hat+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>While We Were Sleeping · Invasion · The Night Feeds</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>While We Were Sleeping · Invasion · The Night Feeds</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> One night, four ordinary people, four corners of the world.</p><p style="margin:0 0 6px"><b>The grammar:</b> Was Doing, When It Happened: She was cooking when the lights went out.</p><p style="margin:0 0 6px"><b>The class (about 45 min):</b> I Warm-up and In the Dark · III The Trailer · VI Was Doing, When It Happened · VII The Night Feeds · VIII Your Alibi · IX The Interview. II The Words and V Line by Line are short listening scenes. No extra scenes: every scene is part of the class.</p><p style="margin:0"><b>Open with:</b> “You know the four people now. In the trailer, what was each person doing when it happened? Guess.”</p></div><!--/prep-->
+    <p><i>Invasion</i> (Apple TV, 2021) follows ordinary people in different countries on the night something arrives on Earth: a sheriff in Oklahoma on his last day at work, a mother in New York, a young woman in Tokyo, a soldier in the desert. Strange things happen everywhere at the same moment, and every one of them remembers what they were doing when it happened. The grammar: the <b>past continuous</b> (<b>was / were + -ing</b>, the long action) cut by the <b>past simple</b> (<b>when</b> + the sudden moment), <b>while + -ing</b>, and the question <b>What were you doing when…?</b></p>
+    <p>A note for the teacher: the trailer is tense but not graphic (gunfire in a desert patrol, a family running from home, someone shouting for help); watch it once before class. Nothing scary is on the lesson screens. The trailer has no timed captions now, so the five frames are estimated, and each moment is told in our own words.</p>
+    <p class="aq-guia"><b>Warm-up and In the Dark (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the show under the photo). Let them talk; don’t correct the grammar yet. <b>2 · In the Dark:</b> the screen is covered and only the sound plays, from 0:18 to 0:34: a leader speaks to the whole world (“My fellow citizens of the world…”). The student says who is talking, to whom and how he sounds, and imagines what people were doing while they listened; then take off the cover.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>prepared</i>, <i>incidents</i>, <i>connected</i>, <i>safe</i> and <i>encounter</i>, before the video, in hear it in the video and mystery meaning. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (V)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <p class="fim-guia"><b>The ending (IX, The Interview)</b>: the teacher is the sheriff on his last day; the student asks what he and the town were doing when it happened. Then swap: the student is themselves on that night. Speaking only.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is a dark suburban street with all the lights out. I: Warm-up and In the Dark. III: the trailer in three steps. <b>Before:</b> a 30-second clock: the student tells the last time the power went out (I was … when …). <b>Watch:</b> three taps (who is speaking? what are the incidents? what does he say about them?), each with a ▶ time: tap it and the video jumps to that moment. <b>After:</b> One word is wrong, three lines from the speech, each with a ▶ time; the student says the right word. V: five frames on the film strip. <b>VI, Was Doing, When It Happened:</b> six clues to sort into two boxes: the long action (was / were + -ing) and the moment that cut it (past simple). Then the student says them together: “The sheriff was finishing his last day when the lights went out.” <b>VII, The Night Feeds:</b> six lanes, one per place (Tokyo, Oklahoma, Long Island, a school bus, Paris, you), each with its local time. The student matches each moment (“Tokyo · the signal stopped”) to what people were doing (“Mitsuki was watching a launch”); every right pair fills the lane with a long teal bar that stops at the red line (the moment). The rule stays in the corner. At the end, all the bars meet the red line: it happened everywhere at once. <b>VIII, Your Alibi:</b> Ask Me: the student builds five questions (What were you doing…?), asks the teacher and listens to the alibi. IX: the interview.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>was watch</i>, <i>I sleeping</i>, <i>the sheriff were</i>, <i>people was / the kids wasn’t</i>, <i>when the lights were going out</i> (the moment: went out), <i>while she cooked</i>, <i>didn’t sleeping</i>, <i>What you were doing?</i>, <i>What did you doing?</i>, <i>is patrolling … when they heard</i>.</p>
+    <!--conversa--><h4>THE TOWN COUNCIL (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the trailer, the town meets the morning after the invasion. Three motions: your student votes Yes, No or Propose a change, and says why with was / were + -ing and when. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the vote harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up and In the Dark, IV The Town Council, VII The Night Feeds, VIII Your Alibi and IX The Interview.</li>
+      <li><b>Listen</b>: II The Words, III The Trailer and V Line by Line.</li>
+      <li><b>Focus</b>: VI Was Doing, When It Happened.</li>
+      <li><b>Write</b>: the homework (the lesson ends speaking).</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script src="aquece.js"></script>
+<script src="final.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* WHILE WE WERE SLEEPING · INVASION (WOLFLIX B1) · pergunta-surpresa · 29/10/2026 · was / were + -ing, when, while */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'What were you doing at this time yesterday?',
+    opc: ['Working or studying', 'Relaxing', 'On the move'], st: ['At this time yesterday, I was …', 'I wasn’t … I was …'],
+    ex: 'On the move. At this time yesterday I was sitting on a bus, and the man next to me was eating a sandwich.',
+    push: 'Was anything strange happening around you? One detail.' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'On the night of the invasion, would you rather be in a big city or a tiny village?',
+    opc: ['A big city', 'A tiny village'], st: ['I’d rather be in …, because …', 'In the trailer, people were … when …'],
+    ex: 'A tiny village. In the trailer, people in the city were running when the lights went out. In a village, I know everybody.',
+    push: 'The village has no shop and no internet. Still the village?' },
+  { cena: 'feeds', tipo: 'And you?', q: 'Tell me about a time something surprised you while you were doing something normal.',
+    opc: ['At home', 'At work or school', 'In the street'], st: ['I was … when …', 'While I was …, …'],
+    ex: 'At home. I was cooking pasta when my friend called with big news. The pasta burned.',
+    push: 'And what did you do next?' },
+  { cena: 'alibi', tipo: 'Opinion', q: 'On a night like that, who would you trust first?',
+    opc: ['A police officer', 'A neighbour', 'Nobody'], st: ['I would trust …, because …', 'While everybody was …, …'],
+    ex: 'A neighbour. While the police were driving everywhere, my neighbour was at home, and she knows me.',
+    push: 'Your neighbour says: “Get in my car, now.” Do you go?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WHILE WE WERE SLEEPING · INVASION (WOLFLIX B1) · conversa · 29/10/2026 · regra 3×3 do Carlos
+   O conselho da cidade ENTRA logo depois de "III · The Trailer" (colado ao trailer). A aula já tem o pessoal
+   (I, VII Your Alibi) e o papel no fim (VIII, a entrevista com o xerife); faltava o aluno DECIDIR no meio da aula.
+   Depois da noite da invasão, a cidade se reúne: três propostas, o aluno vota Yes / Propose a change / No.
+   Gramática da aula (was / were + -ing cortado por when + passado; while + -ing) nos iniciadores.
+   As faixas da noite (VII) ficam. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'conselho', apos: 'video', est: 'o', min: 7, img: 'deserto', rot: 'The Town Council', t: 'The morning after. You have a vote.',
+    p: 'Read each motion. Vote, or propose a change. Say why with was / were + -ing and when. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Motion 1', sit: 'Last night the lights went out while the whole town was sleeping. Nobody saw what happened.',
+        q: 'From tonight, two people stay awake and watch the sky.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I vote yes. While we were sleeping, …', 'I vote no. When it happened, people were …', 'I propose a change: …'],
+        ex: 'I propose a change: one person, and only for a week. Everybody was sleeping when it happened, so we need eyes, but people also need to work.',
+        push: 'You are on the list for tonight, from 2 to 5 a.m. Still yes?' },
+      { tag: 'Motion 2', sit: 'A family was driving out of town when the roads closed. Now they sleep at the school.',
+        q: 'Every house takes in one family until the roads open.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I vote yes. They were driving when …', 'I vote no, because while they were …', 'I propose a change: …'],
+        ex: 'Yes. They were trying to get home when the roads closed. It could be us next time.',
+        push: 'The family has three kids and a very big dog. Your house. Still yes?' },
+      { tag: 'Motion 3', sit: 'A boy was filming the sky when the light came. His video is everywhere now.',
+        q: 'Phones off in town for a week. No more videos online.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I vote yes. While people were filming, …', 'I vote no. When the light came, he was …', 'I propose a change: …'],
+        ex: 'No. He was filming when the light came, and now the world knows. That video is the only proof we have.',
+        push: 'Your phone, off, for a whole week. Still no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "Where you were. Then a voice.",
+   "p": "Answer three questions. Close your eyes. Listen."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn the words. In the video, they turn yellow."
+  },
+  "video": {
+   "t": "Invasion. The official trailer.",
+   "p": "Talk for 30 seconds. Watch. Then two tasks."
+  },
+  "cv-conselho": {
+   "t": "The morning after. You have a vote.",
+   "p": "Read each motion. Vote. Say why with when."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it. Say it."
+  },
+  "regra": {
+   "t": "The long action, or the moment?",
+   "p": "Tap a clue, then its box. Say both together."
+  },
+  "feeds": {
+   "t": "Six places, one moment.",
+   "p": "Match each moment. Say the whole sentence."
+  },
+  "alibi": {
+   "t": "What were you doing when…?",
+   "p": "Build the question. Tap Check. Ask your teacher."
+  },
+  "fim": {
+   "t": "Interview the small-town sheriff.",
+   "p": "Ask what he was doing. Then swap: your night."
+  }
+ },
+ "prep": {
+  "obj": "Past continuous (was/were + -ing) cortado pelo past simple (when), while + -ing e What were you doing when…?: na noite da invasão, quatro pessoas comuns em quatro cantos do mundo.",
+  "armadilha": "O brasileiro tira o be (“I sleeping”), erra a concordância (“people was”), põe o momento no contínuo (“when the lights were going out”) e pergunta “What you were doing?” ou “What did you doing?”.",
+  "pal": [
+   "was …ing",
+   "were …ing",
+   "when",
+   "while",
+   "What were you doing when…?",
+   "went out",
+   "safe",
+   "connected"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a série: uma rua escura com todas as luzes apagadas.",
+   "perg": "Where were you the last time the power went out?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "mundo": {
+   "obj": "Três perguntas sobre a vida do aluno e o som do trailer no escuro.",
+   "perg": "What were they doing when it happened?",
+   "pula": "Duas perguntas bastam; o som no escuro fica."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (prepared, incidents, connected, safe, encounter) antes de assistir.",
+   "perg": "Where do you feel safe?",
+   "pula": "Deixe o aluno chutar e siga rápido."
+  },
+  "video": {
+   "obj": "O trailer inteiro: 30 segundos sobre um apagão antes e duas tarefas curtas depois.",
+   "perg": "What was each person doing when it happened?",
+   "pula": "Assista uma vez só; faça só uma das duas tarefas."
+  },
+  "cv-conselho": {
+   "obj": "Conselho da cidade na manhã seguinte: três propostas, votar e justificar com was/were + -ing e when.",
+   "perg": "What were people doing when it started?",
+   "pula": "Duas propostas bastam."
+  },
+  "falas": {
+   "obj": "Fala por fala do trailer: ouvir de novo e repetir como o personagem.",
+   "perg": "Can you say it like the sheriff?",
+   "pula": "Duas falas bastam."
+  },
+  "regra": {
+   "obj": "A regra: a ação longa (was/were + -ing) e o momento que corta (passado simples), em seis pistas.",
+   "perg": "Which is the long action?",
+   "pula": "Não corte: é a regra. Quatro pistas bastam."
+  },
+  "feeds": {
+   "obj": "Seis lugares (Tóquio, Oklahoma, Long Island, o ônibus, Paris, o aluno) no mesmo momento.",
+   "perg": "What was Mitsuki doing when the signal stopped?",
+   "pula": "Quatro lugares bastam."
+  },
+  "alibi": {
+   "obj": "O aluno monta perguntas com What were you doing…? e ouve o álibi do professor.",
+   "perg": "What were you doing at 8 last night?",
+   "pula": "Três perguntas bastam."
+  },
+  "fim": {
+   "obj": "Entrevista com o xerife no último dia de trabalho; depois o aluno naquela noite.",
+   "perg": "What were you doing when the lights went out?",
+   "pula": "Só a entrevista com o xerife basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre momentos marcantes e interrupções na vida do aluno com past continuous + when.",
+   "perg": "What were you doing when you heard the big news?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre dilemas da noite da invasão, com was/were + -ing e when.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o xerife e conta a noite com was/were + -ing e when.",
+   "perg": "What were you doing when it happened?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Moments you remember.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "was …ing",
+    "were …ing",
+    "when",
+    "while"
+   ],
+   "cartas": [
+    {
+     "k": "BLACKOUT",
+     "q": "What were you doing the last time the power went out?",
+     "fup": "What did you do next?",
+     "st": [
+      "I was …ing when …",
+      "We were …ing, so …"
+     ],
+     "ex": "I was taking a shower when the lights went out. I finished in the dark."
+    },
+    {
+     "k": "BIG NEWS",
+     "q": "What were you doing when you heard some big news?",
+     "fup": "Who told you?",
+     "st": [
+      "I was …ing when I heard …",
+      "My friend called while I was …"
+     ],
+     "ex": "I was driving to work when I heard it on the radio."
+    },
+    {
+     "k": "A STORM",
+     "q": "Where were you during the last big storm?",
+     "fup": "What were people doing?",
+     "st": [
+      "I was … when the storm …",
+      "People were …ing."
+     ],
+     "ex": "I was at the office when the storm started. Everybody was looking out the window."
+    },
+    {
+     "k": "THE PHONE",
+     "q": "What were you doing when your phone last died?",
+     "fup": "Was it a problem?",
+     "st": [
+      "I was …ing when my phone …",
+      "While I was …, it …"
+     ],
+     "ex": "I was using the map when my phone died. I got lost, of course."
+    },
+    {
+     "k": "MEETING",
+     "q": "What were you doing when you met your best friend?",
+     "fup": "What was he or she doing?",
+     "st": [
+      "I was …ing when I met …",
+      "She was …ing."
+     ],
+     "ex": "I was working at a bar when I met her. She was ordering a coffee at midnight."
+    },
+    {
+     "k": "LAST NIGHT",
+     "q": "What were you doing at ten o’clock last night?",
+     "fup": "And your neighbors?",
+     "st": [
+      "At ten I was …ing.",
+      "My neighbors were …ing."
+     ],
+     "ex": "At ten I was watching a series. My neighbors were having a party, as always."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "was …ing",
+    "when",
+    "while",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Strange things are happening outside. Do you stay home or go out to see?",
+     "a": "Stay home",
+     "b": "Go out",
+     "fa": [
+      "Stay home. Last time I was looking out, the lights went out.",
+      "Inside, my family is safe."
+     ],
+     "fb": [
+      "Go out. I was sleeping when everything started, so I need to see it.",
+      "Information keeps people safe."
+     ]
+    },
+    {
+     "q": "The sheriff was finishing his last day when it happened. Should he stay on the job?",
+     "a": "Stay",
+     "b": "Retire",
+     "fa": [
+      "Stay. The town was depending on him.",
+      "A good sheriff doesn’t leave in a crisis."
+     ],
+     "fb": [
+      "Retire. He was planning a new life.",
+      "Someone younger can take the job."
+     ]
+    },
+    {
+     "q": "The government knew something while people were sleeping. Should they tell everyone now?",
+     "a": "Tell now",
+     "b": "Wait",
+     "fa": [
+      "Tell now. People were living normal lives while the danger was growing.",
+      "Everyone has a right to know."
+     ],
+     "fb": [
+      "Wait. When people panic, it gets worse.",
+      "First they need a plan."
+     ]
+    },
+    {
+     "q": "In a crisis, do you trust strangers or only your family?",
+     "a": "Strangers too",
+     "b": "Only family",
+     "fa": [
+      "Strangers too. When the bus stopped, strangers were helping the kids.",
+      "We are all connected."
+     ],
+     "fb": [
+      "Only family. While everyone was running, nobody was thinking of others.",
+      "In chaos, people change."
+     ]
+    }
+   ],
+   "fim": "Four rounds. While you were arguing, the lights came back on."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the sheriff now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the sheriff, with was / were + -ing and when.",
+   "perguntas": [
+    "What were you doing when it happened?",
+    "Where were you driving that night?",
+    "What were the people in town doing?",
+    "What did you see while you were patrolling?",
+    "Who were you talking to when the radio stopped?",
+    "What were you planning to do after your last day?"
+   ],
+   "st": [
+    "I was …ing when …",
+    "People were …ing.",
+    "While I was …, …"
+   ],
+   "ex": "I was finishing my last day when the lights went out. Everybody was looking at the sky."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

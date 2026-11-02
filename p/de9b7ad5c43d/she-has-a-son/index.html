@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · She Has a Son · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="serie.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Challenge · Episode 7</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season map: London to Edinburgh"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>The Challenge · Episode 7 · She Has a Son</h2>
+    <p>Episode 7. Fran meets an old friend: family pictures, brothers, sisters, sons and daughters, and Fran wants to stop. The language is <b>has</b> with he and she, the <b>family words</b>, and <b>&rsquo;s</b> for possession (Fran&rsquo;s brother). No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Previously on The Challenge, Your family, Family pictures. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Episode 7, in three steps. The video unlocks when the student answers the Before questions.</li>
+      <li><b>Focus</b> &mdash; She has a son, Find the pair, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Your family. It goes to the student&rsquo;s My notes.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>&ldquo;Ela tem&rdquo; becomes <i>she have</i>. &ldquo;O irm&atilde;o da Fran&rdquo; becomes <i>the brother of Fran</i>. And the plural s goes missing: <i>two brother</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The map on top shows the season; today stop 7 lights up. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* THE CHALLENGE · EPISODE 7 · SHE HAS A SON (A1)
+   Vídeo: BBC Learning English, "Friends and family" (WA6HIMHX5Z8, 4:58). AULA NOVA. */
+const M = { nome: "She Has a Son", kick: "A1 · HAS, FAMILY WORDS, 'S" };
+var EP = {
+  n: 7, titulo: 'She Has a Son', video: 'WA6HIMHX5Z8', onde: { Fran: 'with a friend', Bob: 'on the road', Paula: 'on the road' },
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'Fran meets an old friend. Family pictures, brothers and sisters, mums and dads… and Fran is very tired.',
+      nota: 'Ask: who in your family do you talk to every day?' },
+    { k: 'cartas', est: 'o', rot: 'previously on', titulo: 'Previously on <em>The Challenge</em>', pt: 'Vire as cartas e lembre o episódio 6.',
+      nota: 'Recap of Episode 6 with need.',
+      cartas: [
+        { frente: 'Bob', sob: 'Episode 6', verso: 'Today, I\'m a chef. I can\'t cook. This is horrible.', dica: 'He needs money.', cor: 'var(--bob)', fw: { q: 'Which job is horrible for you?', st: ['… is horrible.', 'I can\'t …', 'I don\'t like …'], help: '“A farmer! I don\'t like animals.”' } },
+        { frente: 'Paula', sob: 'Episode 6', verso: 'I like animals, but I don\'t like this.', dica: 'She works on a farm.', cor: 'var(--paula)' },
+        { frente: 'Fran', sob: 'Episode 6', verso: 'Do you need more money? No, thank you!', dica: 'She doesn\'t need money.', cor: 'var(--fran)' }
+      ] },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Your <em>family</em>', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Every answer with have or has.',
+      cartas: [
+        { frente: 'Bro?', verso: 'Do you have brothers or sisters?', dica: 'I have … / I don\'t have …', cor: 'var(--fran)', fw: { q: 'What does your brother or sister do?', st: ['He\'s a …', 'She\'s a …', 'She has …'], help: '“My sister is a nurse. She has two kids.”' } },
+        { frente: '♥', verso: 'Who is your favorite person in your family?', dica: 'My … is my favorite.', cor: 'var(--paula)', fw: { q: 'Why?', st: ['She\'s funny.', 'He\'s kind.', 'She has …'], help: '“My grandma. She\'s funny and she has a big garden.”' } },
+        { frente: 'Big?', verso: 'Is your family big or small?', dica: 'It\'s big. / It\'s small.', cor: 'var(--bob)', fw: { q: 'How many cousins do you have?', st: ['I have … cousins.', 'I don\'t have cousins.', 'A lot!'], help: '“I have twelve cousins!”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'Episode 7 · 4:58', titulo: 'Watch <em>Episode 7</em>', pt: 'Responda antes. O vídeo destrava depois.',
+      nota: 'Before: two guesses. After: true or false about the families.',
+      antes: [ { q: 'Fran meets a friend. What do they look at?', ops: [{ t: 'family pictures' }, { t: 'a map' }, { t: 'a menu' }] }, { q: 'Fran is tired. Does she want to stop?', ops: [{ t: 'yes' }, { t: 'no' }] } ],
+      durante: 'Listen for family words: brother, sister, mum, dad, son, daughter.',
+      depois: [ { f: 'Fran\'s brother is a doctor.', ok: 1 }, { f: 'The friend\'s sister has two sons.', ok: 0 }, { f: 'Fran wants to stop.', ok: 1 }, { f: 'Fran stops the challenge.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'She <em>has</em> a son', pt: 'he / she + has · I / you / we / they + have · \'s = de (o irmão da Fran).',
+      nota: 'Read each card. The red card: “ela tem” becomes “she have”.',
+      cartoes: [ { g: 'She <b>has</b> a son.', p: 'he / she + has.' }, { g: 'I <b>have</b> a sister.', p: 'I / you / we / they + have.' }, { g: '<b>Fran\'s</b> brother', p: '\'s = of: o irmão da Fran.' }, { g: 'She have a son.', p: 'He / she: has.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'family words', titulo: 'Find the <em>pair</em>', pt: 'Toque numa palavra e depois no par dela.', grande: 1,
+      nota: 'Family words in pairs. Say both: mum and dad.',
+      esq: ['mum', 'brother', 'son', 'grandma', 'aunt'], dir: ['dad', 'sister', 'daughter', 'grandpa', 'uncle'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Tell me about one person in your family.', st: ['My … is …', 'She has …', 'He has …'], help: '“My uncle is a chef. He has a restaurant.”' } },
+    { k: 'cartas', est: 'o', rot: 'the photo wall', titulo: 'Family <em>pictures</em>', pt: 'Vire as fotos e descreva quem é quem.',
+      nota: 'The pictures from the episode. The student describes each one with has and \'s.',
+      cartas: [
+        { frente: 'Photo 1', sob: 'Fran\'s family', verso: 'Fran\'s brother. He\'s a doctor.', dica: 'Fran\'s brother is …', cor: 'var(--fran)', fw: { q: 'Now tell me about a picture of your family.', st: ['This is my …', 'He\'s a …', 'She has …'], help: '“This is my dad. He has a big moustache!”' } },
+        { frente: 'Photo 2', sob: 'the friend\'s family', verso: 'My brother. He\'s a doctor too!', dica: 'Her brother is …', cor: 'var(--paula)' },
+        { frente: 'Photo 3', sob: 'the friend\'s family', verso: 'My sister. She has a son and a daughter.', dica: 'She has …', cor: 'var(--bob)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'has after she, \'s instead of “of”, and the plural.',
+      itens: [ { erro: 'She <s>have</s> a son.', certo: 'She <b>has</b> a son.', por: 'He / she: has.' }, { erro: 'The brother <s>of Fran</s> is a doctor.', certo: '<b>Fran\'s</b> brother is a doctor.', por: 'People use \'s: Fran\'s brother.' }, { erro: 'I have two <s>brother</s>.', certo: 'I have two <b>brothers</b>.', por: 'Two: add s.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the episode. Read each one out loud.',
+      itens: [ { f: 'She ___ a son and a daughter.', ops: ['has', 'have'], ok: 0 }, { f: 'I ___ a brother.', ops: ['have', 'has'], ok: 0 }, { f: '___ brother is a doctor.', ops: ['Fran\'s', 'Fran'], ok: 0 }, { f: 'How are your ___? They\'re good.', ops: ['parents', 'parent'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>family</em>', pt: 'Escreva sobre a sua família. Toque nas peças.',
+      ph: 'I have one brother. He\'s …', nota: 'The line under the paper catches “she have” and “two brother”. SAVE sends it to My notes.',
+      banco: ['I have', 'He has', 'She has', 'My mum', 'My dad', 'brother', 'sister', 'He\'s a', 'She\'s a'],
+      regras: [['\\b(she|he) have\\b', 'Check: she has / he has.'], ['\\b(two|three|four) (brother|sister|son|daughter|cousin)\\b', 'Check: plural with s: two brothers.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Turn left!', tx: 'They\'re in Edinburgh! But where is Holyrood? Turn left, go up the hill…',
+      ganchos: [['Paula', 'in Edinburgh'], ['Fran', 'in Edinburgh'], ['Bob', 'in Edinburgh']], nota: 'Ask: are you good with directions? That opens Episode 8.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="serie.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Has com he/she, as palavras de família e o ’s de posse (Fran’s brother): no episódio 7, Fran encontra uma velha amiga e as duas olham fotos de família.",
+  "armadilha": "“Ela tem” vira she have; “o irmão da Fran” vira the brother of Fran; e o plural some: two brother.",
+  "pal": [
+   "has",
+   "have",
+   "Fran’s brother",
+   "son",
+   "daughter",
+   "brother",
+   "sister",
+   "mum and dad"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abre o episódio 7: a amiga antiga, as fotos de família e a Fran cansada.",
+   "perg": "Who in your family do you talk to every day?",
+   "pula": "Uma resposta curta basta; vá para o NEXT."
+  },
+  "c1": {
+   "obj": "Recapitula o episódio 6 (os trabalhos) com need.",
+   "perg": "What does Bob need?",
+   "pula": "Vire só uma carta."
+  },
+  "c2": {
+   "obj": "Conversa sobre a família do aluno, sempre com have ou has.",
+   "perg": "Do you have brothers or sisters?",
+   "pula": "Duas cartas bastam."
+  },
+  "c3": {
+   "obj": "Assistir ao episódio 7: palpites antes, verdadeiro ou falso sobre as famílias.",
+   "perg": "What does Fran’s brother do?",
+   "pula": "Pule o durante; faça antes e depois."
+  },
+  "c4": {
+   "obj": "A regra: he/she + has, I/you/we/they + have, e o ’s de posse.",
+   "perg": "She have or she has?",
+   "pula": "Leia os quatro cartões; sem frases extras."
+  },
+  "c5": {
+   "obj": "Pares de palavras de família, dizendo as duas em voz alta.",
+   "perg": "Tell me about one person in your family.",
+   "pula": "Pule a pergunta do post-it."
+  },
+  "c6": {
+   "obj": "As fotos do episódio: descrever cada uma com has e ’s.",
+   "perg": "Who is this? What does she have?",
+   "pula": "Duas fotos bastam."
+  },
+  "c7": {
+   "obj": "Três armadilhas: she have, the brother of Fran, two brother.",
+   "perg": "How do you say “o irmão da Fran”?",
+   "pula": "Faça as três, rápido; não explique de novo."
+  },
+  "c8": {
+   "obj": "Quatro frases do episódio: has/have, Fran’s, parents.",
+   "perg": "Has or have here?",
+   "pula": "Duas frases bastam."
+  },
+  "c9": {
+   "obj": "Escrita: a família do aluno, com has e plural; vai para o My notes.",
+   "perg": "Who is in your family?",
+   "pula": "Três frases bastam."
+  },
+  "c10": {
+   "obj": "Gancho do episódio 8: Edimburgo e as direções para Holyrood.",
+   "perg": "Are you good with directions?",
+   "pula": "Só a pergunta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre família e amigos, com has e ’s.",
+   "perg": "What does your best friend have?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre família grande ou pequena, irmãos, fotos.",
+   "perg": "Big family or small family? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é a Fran e responde sobre a família e a amiga.",
+   "perg": "Fran, what does your brother do?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about the people you know.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "has",
+    "have",
+    "’s",
+    "brother",
+    "sister",
+    "friend"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FRIEND",
+     "q": "Do you have a best friend?",
+     "fup": "Does she have a pet?",
+     "st": [
+      "My best friend is …",
+      "She has …",
+      "He has …"
+     ],
+     "ex": "My best friend is Ana. She has two cats."
+    },
+    {
+     "k": "YOUR NEIGHBOR",
+     "q": "Does your neighbor have a dog?",
+     "fup": "Is it big or small?",
+     "st": [
+      "My neighbor has …",
+      "He doesn’t have …"
+     ],
+     "ex": "My neighbor has a big dog. It’s noisy!"
+    },
+    {
+     "k": "A PHOTO",
+     "q": "Do you have a family photo on your phone?",
+     "fup": "Who is in it?",
+     "st": [
+      "This is my …",
+      "My …’s …"
+     ],
+     "ex": "Yes. This is my sister and her son."
+    },
+    {
+     "k": "NAMES",
+     "q": "What’s your mum’s name? And your dad’s?",
+     "fup": "Is it a common name?",
+     "st": [
+      "My mum’s name is …",
+      "My dad’s name is …"
+     ],
+     "ex": "My mum’s name is Rosa. My dad’s name is João."
+    },
+    {
+     "k": "OLD FRIENDS",
+     "q": "Do you have an old friend from school?",
+     "fup": "What does he or she do now?",
+     "st": [
+      "I have a friend from …",
+      "She’s a …",
+      "He has …"
+     ],
+     "ex": "I have a friend from school. He’s a chef. He has a restaurant."
+    },
+    {
+     "k": "YOUR HOUSE",
+     "q": "Does your house have a garden?",
+     "fup": "Who has the biggest room?",
+     "st": [
+      "My house has …",
+      "My …’s room is …"
+     ],
+     "ex": "My house has a small garden. My brother’s room is big."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "has",
+    "have",
+    "big",
+    "small",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A big family or a small family?",
+     "a": "Big",
+     "b": "Small",
+     "fa": [
+      "Big. A big family has a lot of parties."
+     ],
+     "fb": [
+      "Small. A small family has more time together."
+     ]
+    },
+    {
+     "q": "A brother or a sister?",
+     "a": "A brother",
+     "b": "A sister",
+     "fa": [
+      "A brother. He has cool friends."
+     ],
+     "fb": [
+      "A sister. She has good ideas."
+     ]
+    },
+    {
+     "q": "Photos on the wall or on the phone?",
+     "a": "On the wall",
+     "b": "On the phone",
+     "fa": [
+      "On the wall. Everybody sees them."
+     ],
+     "fb": [
+      "On the phone. I have them with me."
+     ]
+    },
+    {
+     "q": "A cat or a dog?",
+     "a": "A cat",
+     "b": "A dog",
+     "fa": [
+      "A cat. It’s quiet and it’s easy."
+     ],
+     "fb": [
+      "A dog. It’s a friend, and it’s fun."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Big or small, every family has a story."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Fran now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Fran.",
+   "perguntas": [
+    "Fran, what does your brother do?",
+    "Does your friend’s sister have kids?",
+    "What’s your friend’s name?",
+    "Does your friend have a big family?",
+    "Do you have a picture of your mum and dad?",
+    "You’re very tired. Do you want to stop?"
+   ],
+   "st": [
+    "My brother is …",
+    "She has …",
+    "My friend’s …"
+   ],
+   "ex": "My brother is a doctor. My friend’s brother is a doctor too!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

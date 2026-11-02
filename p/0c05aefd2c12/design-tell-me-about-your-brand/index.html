@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -122,5 +123,286 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Ten questions for a new client.",
+   "p": "One question, the video, then questions."
+  },
+  "descobre": {
+   "t": "Questions that make the client talk.",
+   "p": "A or B: which gets a better answer?"
+  },
+  "cv-dilema": {
+   "t": "Three tricky first meetings.",
+   "p": "Choose what you’d do. Say your first question."
+  },
+  "cadeira": {
+   "t": "Your teacher is the client. You ask.",
+   "p": "Ask. Listen, take notes, react."
+  },
+  "pode": {
+   "t": "Lesson 1: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Primeira reunião com cliente: perguntas abertas (Can you tell me about…?), objetivo, público, o que já existe, gosto, orçamento, prazo. Cliente fictício: a cafeteria Bloom & Bean.",
+  "armadilha": "Brasileiro diz What you want? (sem do), For who is it? (Who is it for?), What are you hoping achieve? (sem to) e How much is your money? para orçamento.",
+  "pal": [
+   "Can you tell me about…?",
+   "What are you hoping to achieve?",
+   "Who is it for?",
+   "What exists already?",
+   "Do you have a budget in mind?",
+   "brief",
+   "deadline"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o primeiro encontro com o cliente e o brief em branco.",
+   "perg": "What do you design? Tell me about your last project.",
+   "pula": "Pergunte a área do aluno e adapte o cliente."
+  },
+  "video": {
+   "obj": "Escuta: dez perguntas de agência antes do brief.",
+   "perg": "Which question surprised you?",
+   "pula": "Assista uma vez e faça duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar perguntas fechadas e abertas; depois regras e armadilhas.",
+   "perg": "Which question gets a better answer, and why?",
+   "pula": "Três pares bastam."
+  },
+  "cv-dilema": {
+   "obj": "Conversa: três começos de projeto complicados e a primeira pergunta ao cliente.",
+   "perg": "A client wants three free logos. What do you do?",
+   "pula": "Dois dilemas bastam."
+  },
+  "cadeira": {
+   "obj": "Você é o cliente da Bloom & Bean e responde curto, para o aluno fazer follow-up.",
+   "perg": "So, what do you need to know?",
+   "pula": "Quatro cartas bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; pedir um cliente real ou imaginário para o curso todo.",
+   "perg": "Can you run a first client meeting in English?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre o trabalho real de design do aluno e seus clientes.",
+   "perg": "Who is your ideal client?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre dilemas de designer com cliente.",
+   "perg": "Why would you do that?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Escrever o brief da Bloom & Bean a partir da call.",
+   "perg": "What is the client hoping to achieve?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about your design work.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "Can you tell me about…?",
+    "Who is it for?",
+    "What are you hoping to…?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CLIENTS",
+     "q": "Who is your ideal client?",
+     "fup": "Why?",
+     "st": [
+      "My ideal client is …",
+      "because …"
+     ],
+     "ex": "My ideal client is a small brand with a clear story, because they trust the process."
+    },
+    {
+     "k": "VAGUE BRIEFS",
+     "q": "What’s the vaguest brief you have ever received?",
+     "fup": "What did you ask?",
+     "st": [
+      "A client once said: …",
+      "I asked: …"
+     ],
+     "ex": "A client once said: “Something modern.” I asked: Can you tell me about a brand you love?"
+    },
+    {
+     "k": "YOUR PROCESS",
+     "q": "What do you ask in the first meeting?",
+     "fup": "What do you never forget?",
+     "st": [
+      "First, I ask …",
+      "I never forget …"
+     ],
+     "ex": "First, I ask who it is for. I never forget the deadline and the budget."
+    },
+    {
+     "k": "MONEY",
+     "q": "Is it hard to ask about budget?",
+     "fup": "How do you ask?",
+     "st": [
+      "It’s … for me.",
+      "I say: Do you have a budget in mind?"
+     ],
+     "ex": "It’s awkward for me. I say: Do you have a budget in mind, so I can plan the scope?"
+    },
+    {
+     "k": "A PROJECT YOU LOVED",
+     "q": "Tell me about a project you loved.",
+     "fup": "What was the client hoping to achieve?",
+     "st": [
+      "I loved …",
+      "They were hoping to …"
+     ],
+     "ex": "I loved a bakery rebrand. They were hoping to look less old-fashioned."
+    },
+    {
+     "k": "COFFEE SHOPS",
+     "q": "What makes a coffee shop brand memorable?",
+     "fup": "Which one do you remember?",
+     "st": [
+      "For me, it’s …",
+      "I remember … because …"
+     ],
+     "ex": "For me, it’s the cups. I remember one café because the cups had little drawings."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I see your point, but…",
+    "What are you hoping to…?"
+   ],
+   "rodadas": [
+    {
+     "q": "A client wants three free logo ideas. Say yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes, one small idea. It can win the project.",
+      "Clients like to see something."
+     ],
+     "fb": [
+      "No. Free work makes design look cheap.",
+      "I offer a paid first round."
+     ]
+    },
+    {
+     "q": "First meeting: video call, or in person?",
+     "a": "Video call",
+     "b": "In person",
+     "fa": [
+      "Video. It’s fast and easy to record.",
+      "I can share examples on screen."
+     ],
+     "fb": [
+      "In person. You see the shop and the people.",
+      "You understand the brand better."
+     ]
+    },
+    {
+     "q": "Ask about budget in the first meeting, or later?",
+     "a": "First meeting",
+     "b": "Later",
+     "fa": [
+      "First meeting. It saves time for both of us.",
+      "Who is it for, and how much?"
+     ],
+     "fb": [
+      "Later. First, show you understand the project.",
+      "Then talk about money."
+     ]
+    },
+    {
+     "q": "A website for next week that needs four. Accept or decline?",
+     "a": "Accept",
+     "b": "Decline",
+     "fa": [
+      "Accept, with a smaller scope.",
+      "The client is happy, and so am I."
+     ],
+     "fb": [
+      "Decline, politely.",
+      "Rushed work hurts my portfolio."
+     ]
+    }
+   ],
+   "fim": "Four rounds, and every client was heard."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Write the Brief",
+   "t": "Write the Bloom & Bean brief.",
+   "p": "One line for each step.",
+   "prof": "You are the owner of Bloom & Bean. After the brief, say one thing the designer got wrong.",
+   "passos": [
+    {
+     "q": "Who is the client, and what do they need?",
+     "st": [
+      "Bloom & Bean is …",
+      "They need …"
+     ],
+     "ex": "Bloom & Bean is a small coffee shop. They need a new logo and menu."
+    },
+    {
+     "q": "What are they hoping to achieve?",
+     "st": [
+      "They are hoping to …"
+     ],
+     "ex": "They are hoping to attract young people from the university."
+    },
+    {
+     "q": "Who is it for, and what don’t they like?",
+     "st": [
+      "It’s for …",
+      "They don’t like …"
+     ],
+     "ex": "It’s for students and remote workers. They don’t like the old brown logo."
+    },
+    {
+     "q": "Budget and deadline?",
+     "st": [
+      "The budget is …",
+      "The deadline is …"
+     ],
+     "ex": "The budget is small. The deadline is the end of next month."
+    }
+   ],
+   "fim": "Brief ready. Now you can actually design."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Empty Chair",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b830f5a6ac8e/the-empty-chair/img/live-sala.webp",
+  "capa": "../img/live-sala.webp",
   "alvo": "should have / could have / couldn't have + past participle: should have = it was somebody's duty, could have = the chance was open, couldn't have = it was impossible; never should of, never should have went",
   "abrir": "Think of a meeting where one person was missing. What went wrong?",
   "fecho": "<b>should have</b> + past participle: it was somebody's duty (<i>she should have told him</i>). <b>could have</b>: the chance was open (<i>she could have called</i>). <b>couldn't have</b>: it was impossible (<i>he couldn't have known</i>). Never <i>should of</i>; the participle stays a participle: <i>should have gone</i>, not <i>went</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a meeting with an empty chair. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/b830f5a6ac8e/the-empty-chair/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "The meeting room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Somebody should have told him about the new time.",
-          "img": "https://wolf-labs.pages.dev/p/b830f5a6ac8e/the-empty-chair/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She could have called him, but she didn't.",
-          "img": "https://wolf-labs.pages.dev/p/b830f5a6ac8e/the-empty-chair/img/live-carta.webp",
+          "img": "../img/live-carta.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He couldn't have known about the change.",
-          "img": "https://wolf-labs.pages.dev/p/b830f5a6ac8e/the-empty-chair/img/live-trem.webp",
+          "img": "../img/live-trem.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b830f5a6ac8e/the-empty-chair/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "A meeting room with one empty chair",
       "pede": "Look at the picture: a meeting room with one empty chair. Write 2 or 3 sentences about a time someone missed a meeting, a class or a chance. Use <b>should have, could have</b> or <b>couldn't have</b>.",
       "ph": "Somebody should have …",

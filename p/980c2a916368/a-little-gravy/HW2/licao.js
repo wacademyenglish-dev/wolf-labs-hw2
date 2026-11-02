@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "A Little Gravy, a Few Beans",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/980c2a916368/a-little-gravy/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "countable x uncountable: a few / many / not many with countable, a little / much / not much with uncountable, a lot of with both; How many / How much; no 'a few of'",
   "abrir": "What is the biggest family meal of the year for you?",
   "fecho": "Can you count it? <b>A few, many</b> (beans, chairs) · <b>a little, much</b> (gravy, time) · <b>a lot of</b> with both. Questions: <i>How many chairs? How much time?</i> No <i>of</i> after <i>a few</i> / <i>a little</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a big dinner. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/980c2a916368/a-little-gravy/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Food for a big dinner",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
         {
           "t": "We need a few more chairs.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/980c2a916368/a-little-gravy/img/live-capa.webp"
+          "img": "../img/live-capa.webp"
         },
         {
           "t": "I don't have much time.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/980c2a916368/a-little-gravy/img/live-despensa.webp"
+          "img": "../img/live-despensa.webp"
         },
         {
           "t": "How many potatoes do you need?",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/980c2a916368/a-little-gravy/img/live-capa.webp"
+          "img": "../img/live-capa.webp"
         }
       ]
     },
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/980c2a916368/a-little-gravy/img/live-despensa.webp",
+      "img": "../img/live-despensa.webp",
       "leg": "A pantry shelf",
       "pede": "Look at the picture: a pantry. Write 2 or 3 sentences about food at your house: one with <b>a lot of</b>, one with <b>a few</b> or <b>a little</b>, and one with <b>not much</b> or <b>not many</b>.",
       "ph": "At my house there is a lot of …",

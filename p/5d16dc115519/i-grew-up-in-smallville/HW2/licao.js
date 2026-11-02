@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Grew Up in Smallville",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5d16dc115519/i-grew-up-in-smallville/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "past simple: regular -ed (moved), irregular (grew up, came, met, had, went, got), didn't + base verb, Did he ...? + base verb; never comed, growed, didn't went, Did he moved",
   "abrir": "Where did you grow up?",
   "fecho": "<b>Past simple</b>: regular verbs take <b>-ed</b> (<i>moved</i>); irregular ones change (<i>grew, came, met, had, went</i>). No: <b>didn't</b> + the plain verb: <i>He didn't stay.</i> Question: <b>Did he</b> + the plain verb: <i>Did he move?</i> Never <i>comed, growed, didn't went, Did he moved</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at an old photo from a barn. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/5d16dc115519/i-grew-up-in-smallville/img/live-celeiro.webp",
+      "img": "../img/live-celeiro.webp",
       "leg": "An old barn with string lights",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Clark grew up on a farm in Kansas.",
-          "img": "https://wolf-labs.pages.dev/p/5d16dc115519/i-grew-up-in-smallville/img/live-celeiro.webp",
+          "img": "../img/live-celeiro.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "He moved to the city and met Lois.",
-          "img": "https://wolf-labs.pages.dev/p/5d16dc115519/i-grew-up-in-smallville/img/live-metropole.webp",
+          "img": "../img/live-metropole.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "They didn't stay in the city.",
-          "img": "https://wolf-labs.pages.dev/p/5d16dc115519/i-grew-up-in-smallville/img/live-estrada.webp",
+          "img": "../img/live-estrada.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5d16dc115519/i-grew-up-in-smallville/img/live-estrada.webp",
+      "img": "../img/live-estrada.webp",
       "leg": "A road to the city at night",
       "pede": "Look at the picture: a road to the city at night. Write 2 or 3 sentences about a place you lived in or moved from. Use <b>grew up</b>, <b>moved</b> and <b>didn't</b>.",
       "ph": "I grew up in … I moved to … I didn't …",

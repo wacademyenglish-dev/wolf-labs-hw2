@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Wrapping It Up",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/eafdb577d6ee/wrapping-it-up/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "ellipsis and substitution: so / not after think, hope, suppose, be afraid; So do I / Neither can I / Nor have I with the helper of their sentence; the verb drops after to (I'd love to); one / ones",
   "abrir": "What is a big night like at your family table?",
   "fecho": "After <b>think, hope, suppose, be afraid</b>: <b>so</b> or <b>not</b> (<i>I think so. I hope not.</i>). Agree with <b>So do I</b> / <b>Neither can I</b>: the helper comes from their sentence. After <b>to</b> the verb drops: <i>I'd love to.</i> <b>One / ones</b> replace a noun: <i>the green one</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on Christmas Eve. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/eafdb577d6ee/wrapping-it-up/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A long table set for Christmas Eve",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Is it cold outside? I'm afraid so.",
-          "img": "https://wolf-labs.pages.dev/p/eafdb577d6ee/wrapping-it-up/img/live-lareira.webp",
+          "img": "../img/live-lareira.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Will you open a cracker with me? I'd love to.",
-          "img": "https://wolf-labs.pages.dev/p/eafdb577d6ee/wrapping-it-up/img/live-crackers.webp",
+          "img": "../img/live-crackers.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I can't see the road. Neither can I.",
-          "img": "https://wolf-labs.pages.dev/p/eafdb577d6ee/wrapping-it-up/img/live-janela.webp",
+          "img": "../img/live-janela.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/eafdb577d6ee/wrapping-it-up/img/live-guirlanda.webp",
+      "img": "../img/live-guirlanda.webp",
       "leg": "A wreath with red berries and small lights on a dark door",
       "pede": "Look at the picture: a wreath on a door. Write 2 or 3 short exchanges from a family table: what someone says, and your short answer. Use <b>so / not</b>, <b>So do I / Neither can I</b>, <b>to</b> or <b>one / ones</b>.",
       "ph": "Will it snow tomorrow? I hope …",

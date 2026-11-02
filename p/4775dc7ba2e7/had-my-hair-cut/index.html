@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · I Had My Hair Cut · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>I Had My Hair Cut · The Claim Tags</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>I Had My Hair Cut · The Claim Tags</h2>
+    <p>Lena gets married on Saturday, and she does <b>nothing</b> herself. She has her hair cut, her dress shortened, her car washed. The grammar is the <b>causative</b>: <b>have + the thing + participle</b> (<i>She had her hair cut</i>), with <b>get</b> as the everyday version. Every job is a claim tag on a shop rail: the photo stays grey until your student says the right sentence, then the tag is stamped READY. The big question: <b>is it better to do things yourself, or to pay someone?</b></p>
+    <h4>WHO HELD THE SCISSORS?</h4>
+    <p>Scene II: <i>She cut her hair</i> is not wrong English. It is a different story: she did it herself. The tag gets a DIY? stamp and the screen says so. Laugh about it, then ask for the salon version.</p>
+    <h4>THE WEDDING WEEK</h4>
+    <p>Scene IV: you are the planner. Ask each day’s question fast; your student answers with the right tense of HAVE. After each answer, ask “Which HAVE was that?”</p>
+    <h4>DIY OR PAY?</h4>
+    <p>Scene V: your student picks a side on each card; the score shows how DIY they are. Take the other side on purpose.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I cut my hair at the salon</i>, <i>had her car wash</i>, <i>had washed her car</i> (= she washed it), <i>got fixed my phone</i>, <i>cutted</i>, <i>maked</i>.</p>
+    <!--conversa--><h4>THE RUSH JOB (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Two days before the wedding, your student is Lena and negotiates a rush job with the dressmaker: you. Your secret limit is only on your screen. Ask the three questions, let them argue, then close a deal on the screen. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make it harder. Recast quietly while they talk (“I cut my dress” → “I had my dress shortened”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Services, II The Claim Tags, IV The Wedding Week, V DIY or Pay?, VI The Planner Calls, VII The Rush Job.</li>
+      <li><b>Focus</b>: III Who Held the Scissors?</li>
+      <li><b>Write</b>: VIII, their own services. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* I HAD MY HAIR CUT (Main B1) · pergunta-surpresa · 27/10/2026 · have / get something done */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'trilho', tipo: 'Would you rather', q: 'Would you rather have your hair cut by a friend for free, or pay a salon?',
+    opc: ['A friend, free', 'The salon'], st: ['I’d rather have it cut by …, because …'],
+    ex: 'The salon. I had my hair cut by a friend once, and I wore a hat for a month.', push: 'And if the salon costs R$ 200?' },
+  { cena: 'regra', tipo: 'And you?', q: 'What is the last thing you had done, not by yourself?',
+    opc: ['My hair', 'My car or bike', 'My phone or computer', 'Something at home'], st: ['Last …, I had my … done.', 'I got my … fixed at …'],
+    ex: 'My phone. Last month I had the screen changed at a little shop near my work. It was cheap!', push: 'Were you happy with the job? Would you go back?' },
+  { cena: 'semana', tipo: 'What if', q: 'Your friend is getting married and asks you to organize one thing. What do you choose?',
+    opc: ['The food', 'The music', 'The photos'], st: ['I’d have the … done by …', 'I’d get a friend to …'],
+    ex: 'The music. I’d have a playlist made by my brother, and I’d get a good speaker rented.', push: 'And the one thing you would NEVER organize?' },
+  { cena: 'marco', tipo: 'Opinion', q: 'What is one job you will never pay someone to do?',
+    opc: ['Cooking', 'Cleaning', 'Painting a wall', 'Something else'], st: ['I’ll never have my … done, because …'],
+    ex: 'Cooking. I’ll never have my meals made by someone else. Cooking is my favourite part of the day.', push: 'Not even on your birthday?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* I HAD MY HAIR CUT (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A negociação com limite secreto entra no lugar de "VII · Quick Check" (extra, prática controlada).
+   Dois dias antes do casamento, o vestido da Lena ainda está longo: o aluno é a Lena e negocia um
+   serviço de última hora com a costureira (o professor), que tem um limite que só ele vê. A gramática
+   da aula (have / get + coisa + particípio) mora nos iniciadores. O V já é o debate DIY or Pay. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'pressa', troca: 'quiz', est: 'o', min: 7, img: 'vestido', rot: 'The Rush Job', t: 'Two days to go, and the dress is still too long.',
+    p: 'You are Lena. Get the best deal for the dress and the shoes. Your teacher is the dressmaker, with a secret limit.',
+    formato: 'papel',
+    aluno: { quem: 'Lena, the bride', quer: 'Dress shortened and shoes dyed by Friday.', limite: 'Your limit: R$ 300 extra. Not one real more.' },
+    prof: { quem: 'Dona Rita, the dressmaker', quer: 'Rush job: R$ 500 for both.', limite: 'Secret: R$ 250 for the dress only, if she gets the shoes done somewhere else.' },
+    rot_perg: 'The dressmaker asks',
+    perguntas: [
+      { q: 'When do you need it?', ex: 'I need to have it shortened by Friday morning. The wedding is on Saturday.' },
+      { q: 'Why didn’t you bring it last month?', ex: 'I had it made in another city, and they sent it late.' },
+      { q: 'And the shoes? I don’t usually do shoes.', ex: 'I want to get them dyed to match the dress. Can you have it done by a friend?' }
+    ],
+    st: ['I need to have it … by …', 'Can I get it … for less?', 'If you have the shoes …, I’ll …'],
+    push: 'Close the door: “Sorry, I’m very busy this week. Maybe next week?” Make her stay.',
+    acordo: { tag: 'The deal', q: 'What do you close?', opc: ['Dress only, R$ 250', 'Both, R$ 400', 'No deal: DIY'],
+      st: ['We agreed: I’ll have … and get …'],
+      ex: 'Dress only, R$ 250. I’ll have it shortened here, and I’ll get the shoes dyed at the shop on the corner.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "Who does things for you?",
+   "p": "Pick a card. Answer. Then your teacher answers."
+  },
+  "trilho": {
+   "t": "Eight jobs. Lena did none of them.",
+   "p": "Pick a tag. Say what Lena had done."
+  },
+  "regra": {
+   "t": "Somebody else did the work.",
+   "p": "Read the three parts. Fix the four mistakes."
+  },
+  "semana": {
+   "t": "The planner calls. One question a day.",
+   "p": "Answer with the right tense of HAVE. Fast."
+  },
+  "diy": {
+   "t": "Do it yourself, or have it done?",
+   "p": "Pick a card. Defend a side."
+  },
+  "marco": {
+   "t": "Marco checks everything. You are Lena.",
+   "p": "Answer with have it done. Ask one back."
+  },
+  "cv-pressa": {
+   "t": "Two days to go. The dress is too long.",
+   "p": "You are Lena. Get the best deal."
+  },
+  "fim": {
+   "t": "Do it yourself, or pay someone?",
+   "p": "Write what you had done. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Causativo: have/get + coisa + particípio (She had her hair cut): Lena casa no sábado e não faz nada sozinha; cada serviço é uma etiqueta na arara.",
+  "armadilha": "O brasileiro diz “I cut my hair at the salon” (em português “cortei o cabelo” serve para os dois), erra a ordem (“got fixed my phone”) e o particípio (“had her car wash”, cutted).",
+  "pal": [
+   "have something done",
+   "get something done",
+   "had my hair cut",
+   "shortened",
+   "fixed",
+   "DIY",
+   "rush job",
+   "dressmaker"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: a semana do casamento da Lena, que paga para fazerem tudo.",
+   "perg": "When did you last have your hair cut?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal: que serviços o aluno paga para fazerem por ele.",
+   "perg": "Who cuts your hair?",
+   "pula": "Duas cartas bastam."
+  },
+  "trilho": {
+   "obj": "Oito etiquetas: o aluno diz o que a Lena mandou fazer (had + coisa + particípio).",
+   "perg": "What did Lena have done?",
+   "pula": "Cinco etiquetas bastam."
+  },
+  "regra": {
+   "obj": "A regra: quem segurou a tesoura? Cut x had it cut, e quatro erros para corrigir.",
+   "perg": "Did she cut it herself?",
+   "pula": "Não corte: é a regra. Dois erros bastam."
+  },
+  "semana": {
+   "obj": "O professor é o organizador; o aluno responde rápido com o tempo certo de have.",
+   "perg": "Which HAVE was that?",
+   "pula": "Quatro dias bastam."
+  },
+  "diy": {
+   "obj": "Faço eu ou pago alguém? O aluno defende um lado e o professor pega o outro.",
+   "perg": "Would you paint your house yourself?",
+   "pula": "Três cartas bastam."
+  },
+  "marco": {
+   "obj": "O professor é o Marco; o aluno, como Lena, confirma serviços e pergunta de volta.",
+   "perg": "Have you had the flowers delivered?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-pressa": {
+   "obj": "Negociação: a Lena pede serviço urgente na costureira, que tem um limite secreto.",
+   "perg": "Can you have it shortened by Friday?",
+   "pula": "Uma pergunta e o fechamento do negócio."
+  },
+  "fim": {
+   "obj": "Escrita: a última coisa que o aluno mandou fazer e uma que precisa mandar fazer.",
+   "perg": "What do you need to have done?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre serviços da vida do aluno com have/get something done.",
+   "perg": "What do you get done every month?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate: fazer você mesmo ou pagar alguém, com o causativo nos argumentos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Lena depois do casamento e conta o que mandou fazer.",
+   "perg": "What did you have done before the wedding?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Who does it for you?",
+   "p": "Pick a card. Use have or get it done.",
+   "palavras": [
+    "have … done",
+    "get … done",
+    "myself"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR HAIR",
+     "q": "Where do you have your hair cut?",
+     "fup": "Have you ever cut it yourself?",
+     "st": [
+      "I have my hair cut at …",
+      "Once, I cut it myself, and …"
+     ],
+     "ex": "I have my hair cut at a small place near my house."
+    },
+    {
+     "k": "YOUR CAR",
+     "q": "Do you wash your car or have it washed?",
+     "fup": "How often?",
+     "st": [
+      "I have it washed …",
+      "I wash it myself, because …"
+     ],
+     "ex": "I have it washed once a month, because I’m lazy."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Have you ever had your phone fixed?",
+     "fup": "What happened to it?",
+     "st": [
+      "I had the screen fixed …",
+      "I got it fixed at …"
+     ],
+     "ex": "I had the screen fixed last year. I dropped it in the bus."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "What did you last have done at home?",
+     "fup": "Was it expensive?",
+     "st": [
+      "I had … painted / fixed / cleaned."
+     ],
+     "ex": "I had the kitchen painted. It cost too much."
+    },
+    {
+     "k": "YOUR CLOTHES",
+     "q": "Do you ever have clothes shortened or fixed?",
+     "fup": "Who does it?",
+     "st": [
+      "I get my … shortened at …"
+     ],
+     "ex": "I get my trousers shortened, because I’m not very tall."
+    },
+    {
+     "k": "NEXT MONTH",
+     "q": "What do you need to have done soon?",
+     "fup": "Why haven’t you done it yet?",
+     "st": [
+      "I need to have my … checked.",
+      "I need to get … done."
+     ],
+     "ex": "I need to have my eyes checked. I keep forgetting."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "have it done",
+    "myself",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A wedding: do it all yourself, or have it all done?",
+     "a": "Myself",
+     "b": "Have it done",
+     "fa": [
+      "Myself. It’s more personal.",
+      "And I save a lot of money."
+     ],
+     "fb": [
+      "Have it done. It’s your day.",
+      "You don’t want to clean tables."
+     ]
+    },
+    {
+     "q": "Your hair: cut it at home or have it cut at a salon?",
+     "a": "At home",
+     "b": "At a salon",
+     "fa": [
+      "At home. It’s free and fast."
+     ],
+     "fb": [
+      "At a salon. I had it cut at home once. Never again."
+     ]
+    },
+    {
+     "q": "A broken chair: fix it yourself or have it fixed?",
+     "a": "Myself",
+     "b": "Have it fixed",
+     "fa": [
+      "Myself. There are videos for everything."
+     ],
+     "fb": [
+      "Have it fixed. A professional does it right the first time."
+     ]
+    },
+    {
+     "q": "Cleaning the house: do it yourself or have it cleaned?",
+     "a": "Myself",
+     "b": "Have it cleaned",
+     "fa": [
+      "Myself. It’s good exercise.",
+      "And I know where everything is."
+     ],
+     "fb": [
+      "Have it cleaned. My time is worth more.",
+      "I’d rather rest."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Your teacher had their argument checked, and it still lost."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Lena now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Lena.",
+   "perguntas": [
+    "Congratulations! What did you have done before the wedding?",
+    "Did you cut your hair yourself?",
+    "What happened with the dress?",
+    "Was there anything you did yourself?",
+    "What was the most expensive thing you had done?",
+    "Would you have everything done again, or do more yourself?"
+   ],
+   "st": [
+    "I had my … done.",
+    "I got the … fixed.",
+    "I did … myself."
+   ],
+   "ex": "I had my hair cut and my dress shortened, two days before the wedding."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Only a Suggestion · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Only a Suggestion · The Task Board</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Only a Suggestion · The Task Board</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> At four o’clock somebody says “nobody told me to”, and the board proves them right.</p><p style="margin:0 0 6px"><b>The grammar:</b> Ada’s minutes first (scene II): the student taps each verb with its person, then finishes the rule. Every form found pins a badge on the task board.</p><p style="margin:0 0 6px"><b>Short class (about 49 min):</b> I Ten to Eleven · II Ada’s Minutes · III Who Has a Chair? · IV Keep the Person · V The -s Comes Off · VI Four O’Clock · VII Eleven O’Clock · X On the Record. Skip if you’re short on time: VIII and IX Your Advice (marked EXTRA on your screen). Full lesson: about 61 min.</p><p style="margin:0"><b>Open with:</b> “What exactly would you suggest?”</p></div><!--/prep-->
+    <p>At four o’clock somebody says “nobody told me to”, and the board proves them right. Some verbs have a chair for a person right after them: <b>tell, ask, remind, advise</b> (<b>I asked Marina to send it</b>). Others refuse: <b>suggest, recommend, insist, explain, mention</b>. With those, the person goes into a <b>that</b> clause with a plain verb (<b>I suggest that Marina send it</b>), the idea takes <b>-ING</b> (<b>I suggest sending it</b>), or the person goes to the end (<b>explain the delay to Ada</b>). Students say <i>I suggest you to</i>, <i>recommend me to</i>, <i>explained me</i>. On screen, a task board: the right line pins the owner’s badge on the card; a line with no room for the person leaves the card with NO OWNER.</p>
+    <h4>RECOMMEND IN THE UK</h4>
+    <p><i>recommend + person + to</i> (I recommend Marina to …) is also used in British English. This lesson trains the international form, <b>recommend that + person + plain verb</b>. If the student says the British form, accept it and show the other. <i>suggest + person + to</i> is always wrong.</p>
+    <h4>THE PLAIN VERB</h4>
+    <p>After suggest / recommend / insist that, the verb is plain: <b>she take</b>, <b>he be</b>. <i>That she is there</i> is heard in speech; <i>be</i> is the formal target.</p>
+    <h4>THE NEW PAGES</h4>
+    <ul>
+      <li><b>II Ada’s Minutes</b>: read the minutes, tap the six verb + person forms, finish the rule (five lines). The rule then stays in the corner.</li>
+      <li><b>III</b>: six verbs, CHAIR or NO CHAIR.</li>
+      <li><b>IV Keep the Person</b>: build each line from the pieces out loud, then Check. Then the -ING version.</li>
+      <li><b>V The -s Comes Off</b>: one word is wrong in each line; the student says the plain verb, then Check.</li>
+      <li><b>VII Eleven O’Clock</b>: you read the boss line; the student says the decision first, then Check; ask the question under it.</li>
+    </ul>
+    <h4>THE MEETING</h4>
+    <p>Scene VII: you chair. Every decision the student makes must name a person; after each line ask “Who exactly?”. Then swap: they chair, you make vague suggestions.</p>
+    <!--conversa--><h4>THE HOT SEAT (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After the meeting, your student is a work advisor and you are Mr. Costa, the owner of a small company. Ask the four questions, wait five seconds in silence, and only accept advice with a name and a day on it (I suggest that Ada send …, I’d advise you to …). Your limit is on your screen only: vague answers get the PUSH line. Recast mistakes quietly while they talk (watch for “suggest you to”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Ten to Eleven, VII Eleven O’Clock, VIII The Hot Seat, IX Your Advice.</li>
+      <li><b>Listen</b>: no recordings in this lesson; your voice chairs the meeting.</li>
+      <li><b>Focus</b>: II Ada’s Minutes, III Who Has a Chair?, IV Keep the Person, V The -s Comes Off, VI Four O’Clock.</li>
+      <li><b>Write</b>: X, their suggestion with a real name. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* ONLY A SUGGESTION (Main B2) · pergunta-surpresa · 28/10/2026 · suggest / recommend / insist on / advise */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'quadro', tipo: 'And you?', q: 'What is the best piece of advice someone gave you at work or school?',
+    opc: ['At work', 'At school', 'From a friend'], st: ['They advised me to …', 'They suggested that I …'],
+    ex: 'At work. My first boss advised me to write everything down, and she suggested that I read it every Friday.', push: 'Do you still follow it?' },
+  { cena: 'cadeiras', tipo: 'Would you rather', q: 'Would you rather have a boss who tells you exactly what to do, or one who only suggests?',
+    opc: ['Tells me exactly', 'Only suggests'], st: ['I’d rather have a boss who …', 'A boss who suggests …ing …'],
+    ex: 'Only suggests. A boss who tells me to do everything makes me stop thinking.', push: 'And in your first week in a new job?' },
+  { cena: 'quatro', tipo: 'Opinion', q: 'Are most work meetings useful, or could they be an email?',
+    opc: ['Useful', 'An email', 'Half and half'], st: ['I’d suggest that meetings …', 'I recommend …ing'],
+    ex: 'Half and half. I’d suggest that every meeting end with names on the board, or it should be an email.', push: 'What was your last meeting that should have been an email?' },
+  { cena: 'vida', tipo: 'What if', q: 'What if your company let you change one rule tomorrow? What would you suggest?',
+    opc: ['Hours', 'Meetings', 'Something else'], st: ['I’d suggest that we …', 'I’d insist on …ing'],
+    ex: 'Hours. I’d suggest that we start at ten on Fridays, and I’d insist on no meetings after four.', push: 'Your boss says no. How do you sell it in one sentence?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* ONLY A SUGGESTION (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A cadeira quente entra no lugar de "VIII · No Owner" (extra, Correct or Wrong: II a VI já treinam a
+   forma). Depois da reunião das onze (VII), o aluno vira consultor e o professor, o dono de uma empresa
+   pequena, faz quatro perguntas difíceis. A aula já tem o pessoal (I), a reunião (VII) e os conselhos (IX).
+   A gramática (suggest / recommend that + pessoa + verbo puro, suggest + -ing, insist on + -ing;
+   advise / tell + pessoa + to) mora nos iniciadores e nas respostas. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'cadeira', troca: 'erros', est: 'o', min: 7, img: 'caderno', rot: 'The Hot Seat', t: 'You are the advisor. The owner has questions.',
+    p: 'Your teacher asks. Answer in role, with a name and a day on every suggestion.',
+    formato: 'papel',
+    aluno: { quem: 'You · work advisor', quer: 'Give advice the owner can use on Monday.' },
+    prof: { quem: 'Mr. Costa · company owner', quer: 'His team of ten has small problems everywhere.', limite: 'He hates vague advice. He accepts it only with a name and a day.' },
+    rot_perg: 'Mr. Costa asks',
+    perguntas: [
+      { q: '“My team is always late for meetings. What do you suggest?”', ex: 'I suggest starting at 11:10, not 11. And I recommend that the last person to arrive take the minutes.' },
+      { q: '“Nobody reads my long emails. What do you recommend?”', ex: 'I recommend that you send three lines only, every Monday. And I’d advise Ada to put one name next to each line.' },
+      { q: '“Two people want the same holiday week. What should I do?”', ex: 'I’d advise you to ask them to decide together by Friday. If they can’t, I suggest that the person who chose first last year choose second.' },
+      { q: '“Should I insist on cameras on in online meetings?”', ex: 'I wouldn’t insist on it every day. I suggest asking for cameras only on Mondays, when the team plans the week.' }
+    ],
+    st: ['I suggest that … + plain verb', 'I’d recommend …ing', 'I’d advise you to …'],
+    push: 'Mr. Costa: “That’s vague. Who does it, and on which day?”' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "What would you suggest at work?",
+   "p": "Tap the topic. Then answer out loud."
+  },
+  "quadro": {
+   "t": "Every decision has a name on it.",
+   "p": "Read the minutes. Tap verb and person. Finish the rule."
+  },
+  "cadeiras": {
+   "t": "Does the verb have a chair?",
+   "p": "Say the verb with a name. CHAIR or NO CHAIR?"
+  },
+  "conserta": {
+   "t": "No chair? Keep the person anyway.",
+   "p": "Build each line out loud. Check. Then the -ING."
+  },
+  "tira": {
+   "t": "After suggest that, the -s comes off.",
+   "p": "Say the right word out loud. Then tap Check."
+  },
+  "quatro": {
+   "t": "Who knew it was their job?",
+   "p": "Read it out loud. A NAME or NOBODY?"
+  },
+  "reuniao": {
+   "t": "Four items. Every decision, a name.",
+   "p": "Say your line. Check. Then decide your way."
+  },
+  "cv-cadeira": {
+   "t": "You are the advisor.",
+   "p": "Answer in role: a name and a day, always."
+  },
+  "vida": {
+   "t": "Three cards. Real advice.",
+   "p": "Tap a card. Use the frame. Add a reason."
+  },
+  "fim": {
+   "t": "Your suggestion, with a name on it.",
+   "p": "Write it for the board. To My notes."
+  }
+ },
+ "prep": {
+  "obj": "Suggest/recommend/insist que não aceitam pessoa logo depois (that + pessoa + verbo base, -ing, ou to + pessoa no fim) x tell/ask/remind/advise que aceitam: às quatro, “nobody told me to”.",
+  "armadilha": "Do português “sugeri a ele que”, o brasileiro diz “I suggest you to”, “recommend me to”, “explained me”; e põe -s depois de suggest that: “I suggest that she takes”.",
+  "pal": [
+   "suggest that",
+   "recommend that",
+   "insist that",
+   "suggest + -ing",
+   "explain it to",
+   "tell someone to",
+   "remind",
+   "advise",
+   "minutes"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o quadro de tarefas: sem nome no cartão, ninguém é dono da tarefa.",
+   "perg": "Have you ever heard “nobody told me to” at work?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento: o que o aluno sugeriria para melhorar o próprio trabalho.",
+   "perg": "What exactly would you suggest?",
+   "pula": "Dois temas bastam."
+  },
+  "quadro": {
+   "obj": "A ata da Ada: achar os seis verbos com a pessoa e completar a regra.",
+   "perg": "Who has to do this task?",
+   "pula": "Quatro formas bastam; complete a regra."
+  },
+  "cadeiras": {
+   "obj": "Verbos com cadeira para a pessoa (tell, ask) e sem (suggest, explain); o sentido não ajuda.",
+   "perg": "Does this verb have a chair for a person?",
+   "pula": "Quatro verbos bastam."
+  },
+  "conserta": {
+   "obj": "Sem cadeira, manter a pessoa: that + pessoa + verbo base, ou to + pessoa no fim; depois a forma -ing.",
+   "perg": "Where does the person go now?",
+   "pula": "Três linhas bastam."
+  },
+  "tira": {
+   "obj": "Depois de suggest/recommend/insist that, o verbo volta à forma base, até com he/she/it.",
+   "perg": "What happens to the -s?",
+   "pula": "Três linhas bastam."
+  },
+  "quatro": {
+   "obj": "Cinco falas da reunião: quem saiu sabendo que a tarefa era dele?",
+   "perg": "Did anybody get the job here?",
+   "pula": "Três falas bastam."
+  },
+  "reuniao": {
+   "obj": "O professor preside a reunião; cada decisão do aluno precisa de um nome. Depois trocam.",
+   "perg": "Who exactly?",
+   "pula": "Dois itens bastam; não pule a troca."
+  },
+  "cv-cadeira": {
+   "obj": "Cadeira quente: o professor é o Mr. Costa; só aceita conselho com nome e dia.",
+   "perg": "What do you suggest I do on Monday?",
+   "pula": "Duas perguntas bastam; use a linha PUSH."
+  },
+  "vida": {
+   "obj": "Três cartas de conselho real, com a estrutura certa e um motivo.",
+   "perg": "What would you advise them to do?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: a sugestão da cena I com um nome de verdade, pronta para o quadro.",
+   "perg": "Who will do it, and when?",
+   "pula": "Uma linha basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta com suggest, recommend, insist e explain, sobre vida e trabalho.",
+   "perg": "What would you recommend to a new colleague?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre reuniões e responsabilidade, com sugestões que têm dono.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Ada, que escreve a ata, e defende o jeito dela de trabalhar.",
+   "perg": "Why do you insist that every task has a name?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Put a name on it.",
+   "p": "Pick a card. Keep the person in.",
+   "palavras": [
+    "suggest that",
+    "recommend that",
+    "insist that",
+    "explain it to"
+   ],
+   "cartas": [
+    {
+     "k": "NEW COLLEAGUE",
+     "q": "A new person joins your team. What would you recommend?",
+     "fup": "What would you warn them about?",
+     "st": [
+      "I’d recommend that she …",
+      "I’d suggest asking …"
+     ],
+     "ex": "I’d recommend that she talk to Ana first. Ana knows where everything is."
+    },
+    {
+     "k": "A FRIEND’S TRIP",
+     "q": "A friend is visiting your city for three days. What do you suggest?",
+     "fup": "What should they avoid?",
+     "st": [
+      "I suggest that he …",
+      "I’d suggest going to …"
+     ],
+     "ex": "I suggest that he go to the market on Saturday morning, before the crowds."
+    },
+    {
+     "k": "THE DOCTOR",
+     "q": "What did a doctor or a dentist once insist on?",
+     "fup": "Did you do it?",
+     "st": [
+      "She insisted that I …",
+      "He recommended that I …"
+     ],
+     "ex": "My dentist insisted that I floss every night. I did, for a week."
+    },
+    {
+     "k": "A BAD MEETING",
+     "q": "How would you fix the worst meeting at your job?",
+     "fup": "Who would you put in charge?",
+     "st": [
+      "I’d suggest that … chair it.",
+      "I’d insist that everyone …"
+     ],
+     "ex": "I’d insist that every meeting end with a name on every task."
+    },
+    {
+     "k": "EXPLAIN IT",
+     "q": "What is something hard to explain to your family about your job?",
+     "fup": "Have you tried?",
+     "st": [
+      "It’s hard to explain … to my …",
+      "I once explained to my mom that …"
+     ],
+     "ex": "It’s hard to explain my job to my grandmother. She thinks I fix computers."
+    },
+    {
+     "k": "YOUR HABITS",
+     "q": "What would you suggest to someone who wants to sleep better?",
+     "fup": "Do you follow your own advice?",
+     "st": [
+      "I’d suggest leaving …",
+      "I’d recommend that they …"
+     ],
+     "ex": "I’d suggest leaving the phone in another room. I’d recommend that they try it for a week."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Argue it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "The thing is, …",
+    "I’d suggest that …",
+    "I insist that …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Every task needs one name, or the whole team owns it?",
+     "a": "One name",
+     "b": "The team",
+     "fa": [
+      "One name. When everyone owns it, nobody does.",
+      "I suggest that one person answer for it."
+     ],
+     "fb": [
+      "The team. A name creates blame.",
+      "I’d recommend that people help each other freely."
+     ]
+    },
+    {
+     "q": "Meeting minutes: essential or a waste of time?",
+     "a": "Essential",
+     "b": "A waste",
+     "fa": [
+      "Essential. Ada’s minutes proved who forgot.",
+      "Without them, it’s my word against yours."
+     ],
+     "fb": [
+      "A waste. I’d suggest a quick message instead.",
+      "Nobody reads them anyway."
+     ]
+    },
+    {
+     "q": "A boss who insists, or a boss who only suggests?",
+     "a": "Insists",
+     "b": "Suggests",
+     "fa": [
+      "Insists. Clear orders save time.",
+      "I want to know exactly what to do."
+     ],
+     "fb": [
+      "Suggests. Adults don’t need orders.",
+      "I’d rather the boss explain the goal to me."
+     ]
+    },
+    {
+     "q": "“Nobody told me to.” Fair excuse, or not?",
+     "a": "Fair",
+     "b": "Not fair",
+     "fa": [
+      "Fair. If no name was on the task, it wasn’t his job.",
+      "The problem is the meeting, not him."
+     ],
+     "fb": [
+      "Not fair. Professionals ask.",
+      "I’d insist that he take some responsibility."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Every point has an owner, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Ada now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Ada, the person who writes the minutes.",
+   "perguntas": [
+    "Why do you insist that every task has a name?",
+    "What happened at four o’clock?",
+    "What would you suggest that Paulo do next time?",
+    "Did anybody explain the problem to the boss?",
+    "What do you recommend for shorter meetings?",
+    "Who reminded you to send the minutes?"
+   ],
+   "st": [
+    "I insist that …",
+    "I’d suggest that he …",
+    "Nobody explained it to …"
+   ],
+   "ex": "I insist that every task have a name, because at four o’clock nobody remembers anything."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

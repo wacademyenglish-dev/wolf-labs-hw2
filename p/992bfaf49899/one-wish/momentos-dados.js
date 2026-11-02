@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de If I Had One Wish (11/10/2026): cinco falas do trailer de Obsession.
+   Forma: o corte do diretor — o aluno decide o que o personagem diz antes de ouvir.
+   Alvo: second conditional (If I had…, I would…; If I were you; If I could). Lidos pela cena Line by Line (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [10, 11, 12], k: 'One wish', cena: 'INT. STRANGE LITTLE SHOP · NIGHT', quem: 'The young man',
+    contexto: 'In a strange shop, he buys one wish, only one. He breaks a willow branch and says it out loud.',
+    diretor: 'You can buy one wish, only one. He is in love with Nikki. What does he wish for?',
+    frase: 'One wish, Willow. <b>I wish Nikki Freeman loved me</b> more than anyone in the entire world.',
+    explica: 'After <i>I wish</i>, English uses the past form to talk about now: I wish she <b>loved</b> me (but she doesn’t).',
+    formula: 'If I <b>had</b> one wish, I <b>would</b>… · I wish she <b>loved</b> me. (unreal now)',
+    tente: 'If you had one wish, what would you wish for?',
+    ex: 'If I had one wish, I would travel around the world for a year.' },
+  { i: [13, 14], k: 'So much', cena: 'INT. SCHOOL HALLWAY · DAY', quem: 'Nikki',
+    contexto: 'The wish works. Nikki loves him now. A lot. Maybe too much.',
+    diretor: 'The wish worked. What does Nikki say to him now, again and again?',
+    frase: 'I love you so, so, so, so, <b>so much</b>.',
+    explica: 'Too many <i>so</i>s: it isn’t romantic anymore, it’s scary. The dream became a horror movie.',
+    formula: 'If she <b>loved</b> me, I <b>would be</b> happy... would I?',
+    tente: 'If someone loved you this much, how would you feel?',
+    ex: 'If someone said that every minute, I would run away!' },
+  { i: [17, 18, 19], k: 'Super dating', cena: 'INT. CAFETERIA · DAY', quem: 'A friend',
+    contexto: 'Suddenly they are always together, and their friends think it is very strange.',
+    diretor: 'Their friends see them together all the time, all of a sudden. What do the friends say?',
+    frase: 'It’s weird how you two are dating <b>all of a sudden</b>. Like, super dating.',
+    explica: '<i>All of a sudden</i> = suddenly, with no warning. The friends are worried.',
+    formula: 'If I <b>were</b> her friend, I <b>would</b> worry. · If I <b>were</b> you, I <b>would</b> talk to her.',
+    tente: 'Your best friend changes completely in one week. What would you do? Start with If I were you…',
+    ex: 'If I were you, I would ask her family what happened.' },
+  { i: [25], k: 'The spell', cena: 'INT. HALLWAY · DAY', quem: 'A friend',
+    contexto: 'Someone starts to suspect it isn’t normal love. It looks like magic.',
+    diretor: 'Someone thinks there is magic in this. What do they ask him?',
+    frase: 'Jeez, <b>what kind of spell</b> did you put on her?',
+    explica: '<i>Put a spell on someone</i> = use magic to control them. It is a joke for the friend, and the truth for us.',
+    formula: 'What <b>would</b> you <b>do</b> if your friend <b>changed</b> overnight?',
+    tente: 'What would you do if you found out a friend used magic on you?',
+    ex: 'I would be very angry, and I would never speak to him again.' },
+  { i: [26, 27, 28, 29], k: 'No cancellations', cena: 'INT. BEDROOM · NIGHT', quem: 'The young man, on the phone',
+    contexto: 'He calls the shop to cancel the wish. The answer is no.',
+    diretor: 'He wants to cancel the wish. He calls the shop. What does he ask? What do they answer?',
+    frase: 'I was calling to see if there’s a way I can <b>cancel a wish</b>. — So she’s just stuck like this forever? — As long as I live.',
+    explica: '<i>Stuck</i> = she can’t change. It lasts as long as he lives. He can’t cancel it.',
+    formula: 'If he <b>could</b> cancel it, he <b>would</b>. (could = was able to, unreal)',
+    tente: 'If you could change one decision in your life, which one would it be?',
+    ex: 'If I could, I would study music. But I don’t regret my job!' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'diretor', cor: '#d65b8a', titulo: 'What would you do?', sub: 'Read the moment, say the line your way, then hear what really happens.', rot: { por: 'WHAT IT MEANS', padrao: 'IF + PAST, WOULD', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

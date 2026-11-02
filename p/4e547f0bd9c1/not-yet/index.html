@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Not Yet · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Not Yet · The Goal Board</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Not Yet · The Goal Board</h2>
+    <p><i>Tomorrow I travel</i> is correct English: it just sounds like a habit or a timetable, not a plan. This hour builds <b>am / is / are going to</b> for plans and for things you can see coming. The screen is a goal board with three lanes (<b>this week, this month, this year</b>) and dark sticky notes. The student fills it by speaking; then you become the coach and ask about the goals. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>am / is / are + going to + the plain verb</b>, with any subject. A plan (<i>I’m going to call her</i>) and evidence (<i>It’s going to rain</i>) use the same form. Negative and question: only the first word moves (<i>isn’t going to</i>, <i>Are you going to…?</i>). Say <i>gonna</i>, write <i>going to</i>. The mistakes: <i>Tomorrow I travel</i> (the habit trap) and <i>I going to</i> (the missing partner).</p>
+    <!--conversa--><h4>YOUR SATURDAY (VII) AND THE SURPRISE QUESTION</h4>
+    <p>A free Saturday and three plans: sleep late, go to the beach, clean the house. Your student taps them in order and says it with going to; then they open your order and you agree on one together. There is no right order. Say your order first, then wait five seconds in silence while they choose, and use the PUSH line (only you see it) for one more question. The starters keep I’m going to and I’m not going to in their mouth. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I This Weekend, IV Look Again (six numbers on the photo of an empty room), VI Gonna, VII Your Saturday (a light ranking), VIII The Goal Board, IX The Coach, X Certain, or Maybe?</li>
+      <li><b>Focus</b>: II The Missing Piece, III Every Week, or One Day? (two calendars: every Saturday marked, or one day marked), V Tomorrow I Travel</li>
+      <li><b>Write</b>: XI Not Yet, the goal board in writing, with the red wavy line for <i>I going to</i>, <i>Tomorrow I travel</i>, <i>going to traveling</i>, <i>I’m go to</i>, <i>amn’t</i> and <i>gonna</i> in writing. It goes to their My notes.</li>
+    </ul>
+    <h4>YOU ARE THE COACH</h4>
+    <p>Scene IX takes the first three notes from the student’s board (or three spares if the board is short). For each goal, ask two of the four questions. Push for reasons and dates. Strong students: <i>What is going to happen if you don’t?</i></p>
+    <h4>SCENE I</h4>
+    <p>Don’t correct. Tap what you hear; the two classic mistakes have their own buttons. Scene XI brings them back.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The board, the notes, the room and the calendars move on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* NOT YET (Main A1) · pergunta-surpresa · 27/10/2026 · am / is / are going to */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'peca', tipo: 'And you?', q: 'Are you going to cook tonight?',
+    opc: ['Yes, I am.', 'No, I’m not.'], st: ['Yes, I’m going to cook …', 'No. … is going to cook.'],
+    ex: 'No, I’m not. My brother is going to cook pasta.', push: 'Is it going to be good? Yes or no?' },
+  { cena: 'sala', tipo: 'What if', q: 'Dark clouds now. Your plan?',
+    opc: ['Stay home', 'Take an umbrella', 'Run!'], st: ['I’m going to …'],
+    ex: 'I’m going to stay home and watch a film.', push: 'Is it going to rain tomorrow too?' },
+  { cena: 'gonna', tipo: 'Would you rather', q: 'Next summer: the beach or the mountains?',
+    opc: ['The beach', 'The mountains'], st: ['I’m gonna go to the …'],
+    ex: 'I’m gonna go to the beach. Sun and sea!', push: 'With friends? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* NOT YET (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Ranking leve" no lugar de "VII · Not, and Are You?" (extra, prática controlada; o not e a pergunta
+   continuam no I (cartão NOT), nos iniciadores e no PUSH daqui, e na escrita do XI).
+   Sábado livre, três planos: o aluno põe em ordem e diz com going to; depois vê a ordem do professor.
+   O quadro de metas (VIII, a tela forte), o coach (IX) e o Certain, or Maybe? (X) ficam. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'sabado', troca: 'nao', est: 'o', min: 5, img: 'sala', rot: 'Your Saturday', t: 'A free Saturday. Three plans.',
+    p: 'Put them in order. Your teacher answers first. Then say it with going to.',
+    formato: 'ranking',
+    q: 'What are you going to do first?',
+    itens: ['Sleep late', 'Go to the beach', 'Clean the house'],
+    prof: [1, 0, 2],
+    dica: 'Tap 1, 2, 3. Tap again to take it out.',
+    st: ['First, I’m going to …', 'Then I’m going to …', 'I’m not going to …'],
+    ex: 'First, I’m going to sleep late. Then I’m going to go to the beach. I’m not going to clean the house!',
+    push: 'Is a friend going to come? Yes or no?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Your plans this weekend?",
+   "p": "You are the guest. Answer out loud."
+  },
+  "peca": {
+   "t": "Going to needs am, is or are.",
+   "p": "Choose the piece. Say the sentence."
+  },
+  "duas": {
+   "t": "A habit, or one plan?",
+   "p": "Read it aloud. Pick the calendar."
+  },
+  "sala": {
+   "t": "Nothing has happened here. Yet.",
+   "p": "Tap a thing. Choose the verb. Say it."
+  },
+  "armadilha": {
+   "t": "Both look right. One is a plan.",
+   "p": "Read it. Choose. Say it out loud."
+  },
+  "gonna": {
+   "t": "Nobody says all four words.",
+   "p": "Listen. Say it fast, four times."
+  },
+  "cv-sabado": {
+   "t": "A free Saturday. Three plans.",
+   "p": "Put them in order. Say it with going to."
+  },
+  "quadro": {
+   "t": "Three lanes. Two goals each.",
+   "p": "Pick a goal. Say it. It goes up."
+  },
+  "coach": {
+   "t": "Your teacher is your coach now.",
+   "p": "Answer about three goals. Defend each one."
+  },
+  "aposta": {
+   "t": "What happens next?",
+   "p": "Say it. Then say how sure you are."
+  },
+  "fim": {
+   "t": "Write your goal board.",
+   "p": "Five I’m going to, one I’m not going to."
+  }
+ },
+ "prep": {
+  "obj": "Am / is / are going to para planos e para o que se vê chegando; o aluno monta um quadro de metas e você vira o coach.",
+  "armadilha": "Falar do futuro com o presente, como no português: “Tomorrow I travel” (soa hábito). E esquecer o be: “I going to”. Também: “going to traveling”, “I’m go to”.",
+  "pal": [
+   "I’m going to",
+   "She’s going to",
+   "Are you going to…?",
+   "I’m not going to",
+   "gonna",
+   "this weekend",
+   "next year",
+   "It’s going to rain"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: Not Yet, o quadro de metas ainda vazio.",
+   "perg": "Have you got a big goal this year?",
+   "pula": "Só leia o título e comece."
+  },
+  "abre": {
+   "obj": "Aquecimento no programa ao vivo: planos do fim de semana. Não corrija; marque os erros.",
+   "perg": "What are you going to do this weekend?",
+   "pula": "Três respostas bastam."
+  },
+  "peca": {
+   "obj": "A peça que falta: am, is ou are antes de going to.",
+   "perg": "Which piece goes here: am, is or are?",
+   "pula": "Quatro frases bastam."
+  },
+  "duas": {
+   "obj": "Hábito (todo sábado) ou um plano (um dia só): dois calendários.",
+   "perg": "Is this every week, or one day?",
+   "pula": "Quatro frases bastam."
+  },
+  "sala": {
+   "obj": "Evidência numa sala vazia: o aluno vê o que vai acontecer e diz com going to.",
+   "perg": "Look at this. What is going to happen?",
+   "pula": "Três objetos bastam."
+  },
+  "armadilha": {
+   "obj": "Tomorrow I travel x I’m going to travel: escolher a que diz plano.",
+   "perg": "Which one is a plan?",
+   "pula": "Três situações bastam."
+  },
+  "gonna": {
+   "obj": "Pronúncia: falar gonna rápido, escrever going to.",
+   "perg": "Can you say it fast, four times?",
+   "pula": "Duas frases bastam."
+  },
+  "cv-sabado": {
+   "obj": "Ordenar três planos do sábado e combinar um com você.",
+   "perg": "What are you going to do first?",
+   "pula": "Uma ordem basta."
+  },
+  "quadro": {
+   "obj": "O quadro de metas: semana, mês e ano, uma meta falada vira post-it.",
+   "perg": "What are you going to do this month?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "coach": {
+   "obj": "Você é o coach: duas perguntas por meta, peça motivo e data.",
+   "perg": "When are you going to start?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "aposta": {
+   "obj": "Três situações: o aluno prevê com going to e diz o quanto tem certeza.",
+   "perg": "What is going to happen? Are you sure?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o quadro de metas com cinco planos e um não; vai para o My notes.",
+   "perg": "When are you going to start?",
+   "pula": "Três metas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre planos próximos e distantes, com going to.",
+   "perg": "What are you going to do tonight?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre planos e metas, com going to e porquê.",
+   "perg": "Plan everything or decide on the day?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta, em passos, o plano de uma meta real.",
+   "perg": "What is your first step?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More plans.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’m going to",
+    "I’m not going to",
+    "Are you going to…?"
+   ],
+   "cartas": [
+    {
+     "k": "TONIGHT",
+     "q": "What are you going to do tonight?",
+     "fup": "Are you going to cook?",
+     "st": [
+      "I’m going to …",
+      "I’m not going to …"
+     ],
+     "ex": "I’m going to watch a series. I’m not going to cook."
+    },
+    {
+     "k": "NEXT VACATION",
+     "q": "Where are you going to go on your next vacation?",
+     "fup": "Who is going to go with you?",
+     "st": [
+      "I’m going to go to …",
+      "My … is going to …"
+     ],
+     "ex": "I’m going to go to the beach with my wife."
+    },
+    {
+     "k": "THIS YEAR",
+     "q": "What are you going to learn this year?",
+     "fup": "When are you going to start?",
+     "st": [
+      "I’m going to learn …",
+      "I’m going to start …"
+     ],
+     "ex": "I’m going to learn to swim. I’m going to start in March."
+    },
+    {
+     "k": "THE SKY",
+     "q": "Look at the sky. Is it going to rain?",
+     "fup": "Are you going to take an umbrella?",
+     "st": [
+      "It’s going to …",
+      "It isn’t going to …"
+     ],
+     "ex": "It’s going to rain. I’m going to take an umbrella."
+    },
+    {
+     "k": "YOUR FAMILY",
+     "q": "What is your family going to do this weekend?",
+     "fup": "Are they going to visit you?",
+     "st": [
+      "They’re going to …",
+      "My … is going to …"
+     ],
+     "ex": "My parents are going to visit us on Sunday."
+    },
+    {
+     "k": "NOT THIS TIME",
+     "q": "What are you NOT going to do this week?",
+     "fup": "Why not?",
+     "st": [
+      "I’m not going to …",
+      "because …"
+     ],
+     "ex": "I’m not going to eat fast food. It’s bad for me."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I’m going to",
+    "I’m not going to"
+   ],
+   "rodadas": [
+    {
+     "q": "Plan the weekend or decide on the day?",
+     "a": "Plan it",
+     "b": "Decide on the day",
+     "fa": [
+      "Plan it. I’m going to write a list."
+     ],
+     "fb": [
+      "On the day. I’m not going to make plans."
+     ]
+    },
+    {
+     "q": "One big goal or three small goals?",
+     "a": "One big goal",
+     "b": "Three small goals",
+     "fa": [
+      "One big goal. I’m going to run a marathon."
+     ],
+     "fb": [
+      "Three small ones. I’m going to read, walk and sleep more."
+     ]
+    },
+    {
+     "q": "Tell people your goals or keep them secret?",
+     "a": "Tell people",
+     "b": "Keep them secret",
+     "fa": [
+      "Tell people. They’re going to help me."
+     ],
+     "fb": [
+      "Secret. Nobody is going to laugh at me."
+     ]
+    },
+    {
+     "q": "Start on Monday or start today?",
+     "a": "Monday",
+     "b": "Today",
+     "fa": [
+      "Monday. It’s a new week."
+     ],
+     "fb": [
+      "Today. I’m going to start right now!"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Now go and start one."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Goal",
+   "t": "One goal, step by step.",
+   "p": "Choose a real goal. Plan it.",
+   "prof": "Play the coach: push for a date and one real first step.",
+   "passos": [
+    {
+     "q": "What is your goal?",
+     "st": [
+      "I’m going to …"
+     ],
+     "ex": "I’m going to speak English on my trip."
+    },
+    {
+     "q": "When are you going to start?",
+     "st": [
+      "I’m going to start …"
+     ],
+     "ex": "I’m going to start next Monday."
+    },
+    {
+     "q": "What are you going to do every week?",
+     "st": [
+      "Every week, I’m going to …"
+     ],
+     "ex": "Every week, I’m going to watch two videos in English."
+    },
+    {
+     "q": "What are you not going to do?",
+     "st": [
+      "I’m not going to …"
+     ],
+     "ex": "I’m not going to stop in the middle!"
+    }
+   ],
+   "fim": "Your goal is on the board. Not yet, but soon."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

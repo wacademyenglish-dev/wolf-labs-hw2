@@ -1,0 +1,82 @@
+/* ============================================================
+   WHAT ARE THEY DOING? · AFTERNOON CLASS · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Identidade: a escola ao entardecer; a
+   fachada é CSS (tijolo escuro, telhado com o relógio das 2:00), as
+   janelas são as cenas, acesas por dentro. Acento: laranja do sol baixo.
+   ============================================================ */
+:root{
+  --noite:#0c0a10; --noite-rgb:12,10,16; --tinta:#efe9f2;
+  --t1:#f4eff6; --t2:#d0c8d6; --t2-rgb:208,200,214; --t3:#968c9e;
+  --ac:#f2965a; --ac2:#ffc08f; --bt:#4aa3e8; --bt2:#a6d2ff; --tijolo:#2a1c22;
+  --vidro:rgba(239,233,242,.05); --vidro2:rgba(239,233,242,.085); --vidro3:rgba(239,233,242,.12);
+  --fio:rgba(226,218,234,.12); --fio2:rgba(226,218,234,.22); --luz:rgba(239,233,242,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#22100a}
+.btn.cheio{color:#22100a}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(58px,5.6vw,108px)/.95 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande{min-height:58px;padding:0 26px;font:800 clamp(20px,1.6vw,26px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{text-align:left;padding:10px 14px}
+.ini{margin:0;font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--ac2)}
+.acoes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+
+/* a fachada */
+.fachada{display:grid;gap:10px;padding:14px 18px 0;border-radius:16px 16px 6px 6px;background:linear-gradient(180deg,#2e2028,#1e151b);box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+.telhado{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;border-radius:10px;background:#160f14}
+.telhado span{font:700 15px var(--mono);letter-spacing:.3em;color:var(--t3)}
+.relogio{font:700 20px var(--mono);color:var(--ac2);padding:2px 10px;border-radius:999px;border:2px solid #4a3540}
+.janelas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.janela{position:relative;aspect-ratio:4/3;border-radius:6px;border:5px solid #3a2a32;background-size:cover;background-position:center;filter:brightness(.55) saturate(.8);transition:filter .3s,transform .2s;cursor:pointer;padding:0}
+.janela::after{content:'';position:absolute;left:50%;top:0;bottom:0;width:4px;margin-left:-2px;background:#3a2a32}
+.janela span{position:absolute;left:6px;top:4px;z-index:1;font:700 12px var(--mono);color:var(--ac2)}
+.janela.on{filter:none;border-color:var(--ac);transform:translateY(-2px)} .janela.feito{filter:brightness(.85);border-color:#4f7a5f}
+.porta{justify-self:center;width:16%;height:22px;border-radius:10px 10px 0 0;background:#3a2a32}
+.fach-box,.capa-f{padding:10px;border-radius:var(--r1)}
+.mesa-jan{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:22px;align-items:start}
+.aberta{position:relative;aspect-ratio:16/9;border-radius:var(--r1);background-size:cover;background-position:center;max-height:clamp(130px,calc(100vh / var(--zv,1) - 720px),320px);min-height:130px;width:100%;aspect-ratio:auto}
+.mesa-jan .lado-l>.aberta{height:clamp(130px,calc(100vh / var(--zv,1) - 720px),320px)}
+.aberta.grande{max-height:none}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(12,10,16,.85);font:700 13px var(--mono);color:var(--ac2)}
+
+.fitas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.fita{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .fita small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .fita b{font:700 clamp(17px,1.3vw,21px)/1.35 var(--disp)}
+
+.quadro-ing{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px}
+.quadro-ing span{display:grid;gap:2px;padding:10px;border-radius:14px;border:1px solid var(--fio);background:var(--vidro);text-align:center}
+.quadro-ing b{font:800 18px var(--disp);color:var(--t2)} .quadro-ing i{font:700 15px var(--mono);font-style:normal;color:var(--t3)}
+.quadro-ing .feito{border-color:rgba(143,217,162,.4)} .quadro-ing .feito i{color:var(--ok)} .quadro-ing .agora{border-color:var(--ac)}
+
+.tres-tempos{display:flex;justify-content:center}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip{text-transform:capitalize} .caps .chip.feito{border-color:var(--ok)}
+
+.zoom-box{position:relative;overflow:hidden;aspect-ratio:16/10;border-radius:var(--r1);max-height:calc(100vh / var(--zv,1) - 330px);width:100%}
+.zoom-img{position:absolute;inset:0;background-size:cover;transition:transform .6s ease,filter .6s ease}
+
+.quiz{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q-linha{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .q-linha.feito{border-color:rgba(143,217,162,.4)!important}
+.q-linha p{margin:0;font:700 clamp(17px,1.3vw,21px)/1.4 var(--disp)} .q-linha .recusa{margin:0;font-size:15px}
+.gap{display:inline-block;min-width:3em;padding:0 6px;border-bottom:2px solid var(--ac);color:var(--ac2);text-align:center}
+.balao{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .balao p{margin:0;font:600 clamp(18px,1.4vw,22px)/1.4 var(--disp)}
+.balao.achou{border-color:rgba(143,217,162,.45)!important} .balao.resp{border-color:rgba(242,150,90,.4)!important}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .pede b{font:800 clamp(20px,1.6vw,26px) var(--disp)}
+.fim .grande span{font-size:clamp(18px,1.4vw,23px)}
+
+@media (max-width:1100px){ .mesa-jan,.mesa-video,.capa,.fitas,.quiz{grid-template-columns:1fr} .quadro-ing{grid-template-columns:repeat(4,minmax(0,1fr))} .aberta{max-height:none} }
+@media (max-width:820px){ .janelas{grid-template-columns:repeat(2,minmax(0,1fr))} }

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Two Hundred and Twenty Words",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/62fddd2f0390/two-hundred-and-twenty-words/img/live-predio.webp",
+  "capa": "../img/live-predio.webp",
   "alvo": "nominalization: turn a verb into a noun to shorten a report (-tion, -ment, -al, -ance, zero form: a cut, a rise); stack modifiers before the noun instead of chains of of; keep the person who disappeared",
   "abrir": "Think of a long email you wrote. What could you cut?",
   "fecho": "A verb can become a noun: <b>decide → decision</b>, <b>improve → improvement</b>, <b>refuse → refusal</b>, <b>perform → performance</b>, and the zero form: <b>a cut, a rise, a delay</b>. Stack before the noun, don't chain <i>of</i>: <b>transport cost reduction</b>. And ask who disappeared: <i>A decision was made</i> hides the person.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo cut a long report down to one page. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/62fddd2f0390/two-hundred-and-twenty-words/img/live-predio.webp",
+      "img": "../img/live-predio.webp",
       "leg": "The office building at dusk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The office relocation led to many staff resignations.",
-          "img": "https://wolf-labs.pages.dev/p/62fddd2f0390/two-hundred-and-twenty-words/img/live-predio.webp",
+          "img": "../img/live-predio.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "A sharp price rise reduced demand across the region.",
-          "img": "https://wolf-labs.pages.dev/p/62fddd2f0390/two-hundred-and-twenty-words/img/live-predio.webp",
+          "img": "../img/live-predio.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The board's refusal to approve the plan caused a delay.",
-          "img": "https://wolf-labs.pages.dev/p/62fddd2f0390/two-hundred-and-twenty-words/img/live-predio.webp",
+          "img": "../img/live-predio.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/62fddd2f0390/two-hundred-and-twenty-words/img/live-predio.webp",
+      "img": "../img/live-predio.webp",
       "leg": "A grey office building at dusk",
       "pede": "Look at the picture: an office building at dusk. Take one long sentence from an email of yours and make it shorter with nouns. Keep the person in it. Use a form such as <b>-tion, -ment, -al</b> or a zero noun.",
       "ph": "The team's decision to …",

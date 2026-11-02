@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Hook Them in Ten Seconds",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ac9f329dfac8/hook-them-in-ten-seconds/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "openings for a talk: Have you ever wondered why ...? (indirect question, no do), Did you know that ...?, Imagine + present, Raise your hand if ..., Last year, I ..., By the end of this talk, you'll ...; never open with an apology or your name",
   "abrir": "Think of a talk or a class you loved. How did it begin?",
   "fecho": "Five ways in: <b>Have you ever wondered why we dream?</b> (indirect question: no <i>do</i>) · <b>Did you know that …?</b> · <b>Imagine you're on a plane</b> (present, not future) · <b>Raise your hand if …</b> · <b>By the end of this talk, you'll …</b> (<i>by</i>, not <i>in</i>). Never open with an apology.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo rehearses a talk and Mia coaches him. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/ac9f329dfac8/hook-them-in-ten-seconds/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The green room before the talk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Have you ever wondered why a short journey can feel so long?",
-          "img": "https://wolf-labs.pages.dev/p/ac9f329dfac8/hook-them-in-ten-seconds/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Raise your hand if you have ever stared at the ceiling at three in the morning.",
-          "img": "https://wolf-labs.pages.dev/p/ac9f329dfac8/hook-them-in-ten-seconds/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "By the end of this talk, you'll know how to win back an hour of your day.",
-          "img": "https://wolf-labs.pages.dev/p/ac9f329dfac8/hook-them-in-ten-seconds/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ac9f329dfac8/hook-them-in-ten-seconds/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty stage and a microphone",
       "pede": "Look at the picture: an empty stage and a microphone. Write the first ten seconds of a talk on a topic you love: a hook, a short bridge and a promise. Use <b>Have you ever wondered why …</b>, <b>Imagine …</b> or <b>By the end of this talk, you'll …</b>.",
       "ph": "Have you ever wondered why …?",

@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -120,5 +121,283 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A host family learns the rules.",
+   "p": "One question, then the video, then the questions."
+  },
+  "leitura": {
+   "t": "The rules and your rights.",
+   "p": "Read the card out loud. Then answer."
+  },
+  "multipla": {
+   "t": "Six weeks. Inside the rules or not?",
+   "p": "Count. Choose. Then say why."
+  },
+  "cv-cadeira": {
+   "t": "You are the coordinator now.",
+   "p": "Your teacher is Bia. Answer with the rules."
+  },
+  "pode": {
+   "t": "What can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "As regras do programa e os direitos da au pair: até 10 horas por dia e 45 por semana, 1,5 dia de folga, um fim de semana por mês, duas semanas de férias pagas, quarto próprio, passaporte com ela e a linha de ajuda.",
+  "armadilha": "A au pair acha que horas da semana passada “acumulam”, que pagar extra libera horas extras, que criança dormindo não conta e que viagem com a família é férias.",
+  "pal": [
+   "up to 10 hours a day",
+   "up to 45 hours a week",
+   "a day and a half off",
+   "a full weekend off",
+   "paid vacation",
+   "private bedroom",
+   "coordinator",
+   "help line"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 13 do Au Pair: conhecer os direitos.",
+   "perg": "How many hours can an au pair work per week?",
+   "pula": "Ouça o chute do aluno e entre."
+  },
+  "video": {
+   "obj": "Assistir o trecho 0:44–6:06 em que uma família aprende os cinco números.",
+   "perg": "What are the five numbers?",
+   "pula": "O trecho é inteiro; duas perguntas depois bastam."
+  },
+  "leitura": {
+   "obj": "Ler o cartão de direitos em voz alta e responder sobre o sentido.",
+   "perg": "Who keeps the passport?",
+   "pula": "Leia e responda três perguntas."
+  },
+  "multipla": {
+   "obj": "Contar as horas de seis semanas reais e dizer se estão dentro da regra; perguntar por quê.",
+   "perg": "Does sleeping time count? Why?",
+   "pula": "Três semanas bastam."
+  },
+  "cv-cadeira": {
+   "obj": "Momento de conversa: o aluno é a coordenadora e responde à Bia, au pair nova, com as regras.",
+   "perg": "What should Bia do first?",
+   "pula": "Duas perguntas e o primeiro passo."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; pedir que salve hoje a linha de ajuda no celular.",
+   "perg": "Can you say your weekly hours limit?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre rotina, limites e direitos na vida de au pair.",
+   "perg": "What would you do on your day off?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de horas e folgas com a família anfitriã, com argumentos.",
+   "perg": "Is it inside the rules? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno planeja uma semana de trabalho dentro das regras, passo a passo.",
+   "perg": "How many hours is that?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your rights, your routine.",
+   "p": "Pick a card. Use the numbers.",
+   "palavras": [
+    "up to",
+    "hours a week",
+    "day off",
+    "paid vacation"
+   ],
+   "cartas": [
+    {
+     "k": "DAY OFF",
+     "q": "What would you do on your day and a half off?",
+     "fup": "Alone or with friends?",
+     "st": [
+      "On my day off, I’d …",
+      "I’d go with …"
+     ],
+     "ex": "On my day off, I’d visit a museum. I’d go with other au pairs."
+    },
+    {
+     "k": "VACATION",
+     "q": "Where would you go on your two weeks of paid vacation?",
+     "fup": "Why there?",
+     "st": [
+      "I’d go to …",
+      "because …"
+     ],
+     "ex": "I’d go to New York because I want to see Broadway."
+    },
+    {
+     "k": "YOUR ROOM",
+     "q": "What do you need in your private bedroom to feel at home?",
+     "fup": "What would you bring from Brazil?",
+     "st": [
+      "I need …",
+      "I’d bring …"
+     ],
+     "ex": "I need a desk and good light. I’d bring photos and a Brazilian flag."
+    },
+    {
+     "k": "CLASSES",
+     "q": "What would you study with the $500 for classes?",
+     "fup": "Why?",
+     "st": [
+      "I’d study …",
+      "It would help me …"
+     ],
+     "ex": "I’d study photography. It would help me find a job back home."
+    },
+    {
+     "k": "LIMITS",
+     "q": "Is it easy for you to say “That’s more than 45 hours”?",
+     "fup": "How would you say it kindly?",
+     "st": [
+      "It’s hard / easy because …",
+      "I’d say …"
+     ],
+     "ex": "It’s hard because I want them to like me. I’d say, “Could we check the hours together?”"
+    },
+    {
+     "k": "HELP",
+     "q": "Who would you call first if something felt wrong?",
+     "fup": "Is the number in your phone?",
+     "st": [
+      "I’d call my …",
+      "Yes, I saved …"
+     ],
+     "ex": "I’d call my coordinator first. Yes, I saved the help line today."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Use the rules.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "inside the rules",
+    "because",
+    "up to"
+   ],
+   "rodadas": [
+    {
+     "q": "The family pays extra for 50 hours this week. Accept or say no?",
+     "a": "Accept",
+     "b": "Say no",
+     "fa": [
+      "Accept. It’s only one week, and I need money.",
+      "They asked nicely."
+     ],
+     "fb": [
+      "Say no. Extra pay doesn’t allow extra hours.",
+      "The limit is 45, and it’s the law of the program."
+     ]
+    },
+    {
+     "q": "A family trip to Florida: is it your vacation?",
+     "a": "Vacation",
+     "b": "Work",
+     "fa": [
+      "Vacation. I’m at the beach!"
+     ],
+     "fb": [
+      "Work. If I take care of the kids, it’s not my vacation."
+     ]
+    },
+    {
+     "q": "The kids sleep from 8 to 10. Does that time count?",
+     "a": "It counts",
+     "b": "It doesn’t",
+     "fa": [
+      "It counts. I’m on duty and I can’t leave.",
+      "If they wake up, I’m there."
+     ],
+     "fb": [
+      "It doesn’t. I can rest and watch TV.",
+      "But I should check with my coordinator."
+     ]
+    },
+    {
+     "q": "A problem with the family: talk to them first, or call the coordinator first?",
+     "a": "Talk first",
+     "b": "Coordinator first",
+     "fa": [
+      "Talk first. Most problems are just misunderstandings.",
+      "Could we write the schedule down?"
+     ],
+     "fb": [
+      "Coordinator first. She knows the rules.",
+      "It’s her job to help."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You know your numbers."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Plan the Week",
+   "t": "Plan a fair au pair week.",
+   "p": "Four steps. Count the hours.",
+   "prof": "Keep a running total on screen; stop the student if a day goes over 10 hours or the week over 45.",
+   "passos": [
+    {
+     "q": "Monday to Friday: how many hours a day?",
+     "st": [
+      "From Monday to Friday, I work … hours a day."
+     ],
+     "ex": "From Monday to Friday, I work eight hours a day, from 7 to 3."
+    },
+    {
+     "q": "Saturday: how many hours, if any?",
+     "st": [
+      "On Saturday, I work …"
+     ],
+     "ex": "On Saturday, I work five hours in the morning."
+    },
+    {
+     "q": "When is your day and a half off?",
+     "st": [
+      "My day and a half off is …"
+     ],
+     "ex": "My day and a half off is Saturday afternoon and all of Sunday."
+    },
+    {
+     "q": "Total the week. Is it inside the rules?",
+     "st": [
+      "That’s … hours a week, so …"
+     ],
+     "ex": "That’s forty-five hours a week, so it’s inside the rules."
+    }
+   ],
+   "fim": "A fair week, inside the rules. Show it to your host family."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

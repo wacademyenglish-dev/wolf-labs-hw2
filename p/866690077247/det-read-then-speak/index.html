@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -110,5 +111,284 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "ordem": {
+   "t": "What happened first?",
+   "p": "Order the cards. Tell it with connectors."
+  },
+  "dado": {
+   "t": "Roll the die. The number chooses.",
+   "p": "Do the challenge out loud, from memory."
+  },
+  "cv-arena": {
+   "t": "Computer or person: who scores speaking?",
+   "p": "Answer, reason, example, wrap-up. Then swap."
+  },
+  "prova": {
+   "t": "The real thing: 20 seconds, then speak.",
+   "p": "Read the topic. Follow the guide questions."
+  },
+  "pode": {
+   "t": "Lesson 9: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Read, Then Speak do DET: um tema escrito, 20 s para preparar e 30 a 90 s de fala, com a forma resposta → motivo → exemplo → fechamento.",
+  "armadilha": "Brasileiro começa devagar (“Well… so… this topic is about…”), não dá exemplo, para nos 30 s, diz I would like learn e the reason is because.",
+  "pal": [
+   "The main reason is…",
+   "For example,…",
+   "That’s why…",
+   "On the other hand,…",
+   "I would like to…",
+   "guide questions",
+   "wrap-up"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a forma de qualquer resposta: answer, reason, example, wrap-up.",
+   "perg": "What is your favorite season?",
+   "pula": "Deixe o aluno responder livre e siga."
+  },
+  "ordem": {
+   "obj": "Ordenar uma resposta modelo em pedaços e contar com first, then, finally.",
+   "perg": "What comes first in a good answer?",
+   "pula": "Ordene e conte uma vez só."
+  },
+  "dado": {
+   "obj": "Seis temas rápidos sorteados pelo dado, de memória, com a forma da aula.",
+   "perg": "What’s your first sentence?",
+   "pula": "Três números bastam."
+  },
+  "cv-arena": {
+   "obj": "Conversa: um minuto defendendo computador ou pessoa corrigindo a fala, na forma da aula; depois troca.",
+   "perg": "Who should score your speaking, and why?",
+   "pula": "Faça só um lado."
+  },
+  "prova": {
+   "obj": "Três temas com o relógio real; não ajude com o relógio correndo; grave o tema 1 e o 3 se ele deixar.",
+   "perg": "Did you answer in your first sentence?",
+   "pula": "Dois temas bastam."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; você confirma e carimba.",
+   "perg": "Can you answer any topic in four pieces?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais temas no estilo da prova, ligados à vida do aluno, com a forma da aula.",
+   "perg": "What’s the main reason?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate curto na forma resposta, motivo, exemplo, fechamento.",
+   "perg": "Can you give me an example?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar uma resposta completa em quatro passos e depois falar com o relógio.",
+   "perg": "Now say it all in 60 seconds.",
+   "pula": "Faça os quatro passos sem o relógio."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More Topics",
+   "t": "More test-style topics.",
+   "p": "Pick a card. Speak for 60 seconds.",
+   "palavras": [
+    "The main reason is…",
+    "For example,…",
+    "That’s why…",
+    "On the other hand,…"
+   ],
+   "cartas": [
+    {
+     "k": "A SKILL",
+     "q": "Describe a skill you would like to learn.",
+     "fup": "Why now?",
+     "st": [
+      "I would like to learn …",
+      "The main reason is …"
+     ],
+     "ex": "I would like to learn to cook. The main reason is I eat out too much. For example, last week I ordered food five times."
+    },
+    {
+     "k": "A PLACE",
+     "q": "Talk about a place where you feel relaxed.",
+     "fup": "When do you go there?",
+     "st": [
+      "A place where I feel relaxed is …",
+      "That’s why …"
+     ],
+     "ex": "A place where I feel relaxed is my grandmother’s garden. It’s quiet, and that’s why I go there on Sundays."
+    },
+    {
+     "k": "TECHNOLOGY",
+     "q": "Has technology made life easier or harder?",
+     "fup": "Give one example.",
+     "st": [
+      "I think it has made life …",
+      "For example, …"
+     ],
+     "ex": "I think it has made life easier. For example, I pay bills in one minute on my phone."
+    },
+    {
+     "k": "A PERSON",
+     "q": "Describe a person who taught you something important.",
+     "fup": "What did they teach you?",
+     "st": [
+      "One person who taught me … is …",
+      "That’s why …"
+     ],
+     "ex": "One person who taught me patience is my first boss. That’s why I listen before I answer."
+    },
+    {
+     "k": "CITY OR COUNTRY",
+     "q": "Would you rather live in a city or in the countryside?",
+     "fup": "What would you miss?",
+     "st": [
+      "I would rather …",
+      "On the other hand, …"
+     ],
+     "ex": "I would rather live in a city. On the other hand, I would miss clean air."
+    },
+    {
+     "k": "WEEKENDS",
+     "q": "What is the best way to spend a weekend?",
+     "fup": "Is that what you do?",
+     "st": [
+      "In my opinion, the best way is …",
+      "To sum up, …"
+     ],
+     "ex": "In my opinion, the best way is with friends and no phone. To sum up, rest is people, not screens."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Answer, reason, example, wrap-up.",
+   "palavras": [
+    "The main reason is…",
+    "For example,…",
+    "That’s why…"
+   ],
+   "rodadas": [
+    {
+     "q": "Should students wear uniforms?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. The main reason is it’s fair for everyone.",
+      "Nobody worries about clothes."
+     ],
+     "fb": [
+      "No. Young people need to express themselves.",
+      "For example, colors show who you are."
+     ]
+    },
+    {
+     "q": "Is it better to work from home or at an office?",
+     "a": "From home",
+     "b": "At an office",
+     "fa": [
+      "From home. The main reason is no traffic.",
+      "That’s why people are happier."
+     ],
+     "fb": [
+      "At an office. You learn from colleagues.",
+      "For example, quick questions at the coffee machine."
+     ]
+    },
+    {
+     "q": "Should children have phones before age twelve?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. The main reason is safety.",
+      "Parents can call them anytime."
+     ],
+     "fb": [
+      "No. Children need to play outside.",
+      "That’s why they should wait."
+     ]
+    },
+    {
+     "q": "Is it better to travel alone or with friends?",
+     "a": "Alone",
+     "b": "With friends",
+     "fa": [
+      "Alone. You choose everything.",
+      "For example, you can change plans at any time."
+     ],
+     "fb": [
+      "With friends. You share the memories.",
+      "That’s why it’s more fun."
+     ]
+    }
+   ],
+   "fim": "Four rounds, four complete answers."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Build an Answer",
+   "t": "Build one answer, piece by piece.",
+   "p": "One piece per step. Then say it all.",
+   "prof": "Topic: “Describe a goal you have for next year.” After step 4, start the 60-second clock.",
+   "passos": [
+    {
+     "q": "Answer the question in your first sentence.",
+     "st": [
+      "One goal I have for next year is …"
+     ],
+     "ex": "One goal I have for next year is to get my test score."
+    },
+    {
+     "q": "Give the main reason.",
+     "st": [
+      "The main reason is …"
+     ],
+     "ex": "The main reason is I want to study in Canada."
+    },
+    {
+     "q": "Give an example.",
+     "st": [
+      "For example, …"
+     ],
+     "ex": "For example, I already chose a university in Toronto."
+    },
+    {
+     "q": "Wrap it up.",
+     "st": [
+      "That’s why …"
+     ],
+     "ex": "That’s why this goal is the most important for me."
+    }
+   ],
+   "fim": "Four pieces, one strong answer. Now say it with the clock."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

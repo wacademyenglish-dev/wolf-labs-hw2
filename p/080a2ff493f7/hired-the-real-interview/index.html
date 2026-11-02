@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -122,5 +123,282 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A mock interview with feedback.",
+   "p": "One question, then the video, then questions."
+  },
+  "cadeira": {
+   "t": "The full interview.",
+   "p": "Your teacher asks. Use what you practiced."
+  },
+  "prova": {
+   "t": "Three final recorded questions.",
+   "p": "Play the question, start the clock, answer."
+  },
+  "cv-oferta": {
+   "t": "You got the job. Now, the offer.",
+   "p": "Answer HR. Then agree salary, start date, home days."
+  },
+  "pode": {
+   "t": "Lesson 12: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "A entrevista completa (pitch, CV, STAR, fraqueza, why us, salário, perguntas, fechamento) e três perguntas finais gravadas. Última aula do WOLF HIRED.",
+  "armadilha": "“I have experience in customers” (with customers), “In five years I see me” (myself) e ler o CV em ordem em vez de contar a própria história.",
+  "pal": [
+   "I’m a … with … years of experience",
+   "What drew me to … is…",
+   "I tend to…, so I’ve started…",
+   "Could you tell me what … is?",
+   "salary expectations",
+   "start date",
+   "Thank you so much for your time"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula final: a entrevista real do começo ao fim.",
+   "perg": "How do you feel about interviewing in English now?",
+   "pula": "Leia o título e siga."
+  },
+  "video": {
+   "obj": "Escuta: entrevista simulada com feedback de um coach (0:03–2:55).",
+   "perg": "What did the coach tell her to change?",
+   "pula": "O vídeo é inteiro; faça só a pergunta de antes."
+  },
+  "cadeira": {
+   "obj": "Entrevista completa; não corrigir durante, anotar e dar três feedbacks no fim.",
+   "perg": "Why are you leaving your current job?",
+   "pula": "Pule small talk e why us; mantenha STAR e salário."
+  },
+  "prova": {
+   "obj": "Três perguntas gravadas no relógio real (why hire you, um erro, cinco anos).",
+   "perg": "Why should we hire you?",
+   "pula": "Duas perguntas bastam."
+  },
+  "cv-oferta": {
+   "obj": "Ligação da oferta com a Laura, do RH: negociar salário, início e dias em casa.",
+   "perg": "What salary were you expecting?",
+   "pula": "Negocie só o salário e feche."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can” e celebração do fim do curso; peça para marcar a entrevista real.",
+   "perg": "When is your real interview?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Perguntas difíceis e inesperadas de entrevista, com começos prontos.",
+   "perg": "What would your last manager say about you?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre decisões de oferta e carreira, com argumentos prontos.",
+   "perg": "Which offer would you take?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Escrever o e-mail de agradecimento depois da entrevista.",
+   "perg": "What will you thank them for?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "The questions nobody expects.",
+   "p": "Pick a card. Answer like it’s real.",
+   "palavras": [
+    "I tend to…",
+    "What drew me to…",
+    "I’d say…",
+    "In five years, I see myself…"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR MANAGER",
+     "q": "What would your last manager say about you?",
+     "fup": "And what would they want you to improve?",
+     "st": [
+      "I think she would say …",
+      "She’d probably want me to …"
+     ],
+     "ex": "I think she would say I’m reliable. She’d probably want me to delegate more."
+    },
+    {
+     "k": "WHY NOW",
+     "q": "Why are you looking for a job right now?",
+     "fup": "What’s missing in your current job?",
+     "st": [
+      "I’m looking for …",
+      "What I miss is …"
+     ],
+     "ex": "I’m looking for a bigger challenge. What I miss is working with international clients."
+    },
+    {
+     "k": "A WEAKNESS",
+     "q": "What’s a real weakness, and what are you doing about it?",
+     "fup": "Has it improved?",
+     "st": [
+      "I tend to …, so I’ve started …"
+     ],
+     "ex": "I tend to say yes to everything, so I’ve started blocking time in my calendar."
+    },
+    {
+     "k": "OUR COMPANY",
+     "q": "What do you know about us?",
+     "fup": "What drew you to us?",
+     "st": [
+      "What drew me to … is …"
+     ],
+     "ex": "What drew me to your company is your work in Latin America."
+    },
+    {
+     "k": "SURPRISE",
+     "q": "Tell me something that isn’t on your CV.",
+     "fup": "How does it help at work?",
+     "st": [
+      "Something you won’t see on my CV is …"
+     ],
+     "ex": "Something you won’t see on my CV is that I coach a kids’ football team. It taught me patience."
+    },
+    {
+     "k": "YOUR QUESTION",
+     "q": "Do you have any questions for us?",
+     "fup": "Why that question?",
+     "st": [
+      "Could you tell me what … is?",
+      "I’d love to know …"
+     ],
+     "ex": "Could you tell me what a typical first month looks like?"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "The offer is on the table.",
+   "p": "Pick a side. Your teacher takes the other.",
+   "palavras": [
+    "I’d rather…",
+    "because",
+    "on the other hand"
+   ],
+   "rodadas": [
+    {
+     "q": "Negotiate the first offer, or accept it right away?",
+     "a": "Negotiate",
+     "b": "Accept it",
+     "fa": [
+      "Negotiate. They expect it, and it’s the best moment.",
+      "A polite counteroffer never hurts."
+     ],
+     "fb": [
+      "Accept it. I don’t want to start with tension.",
+      "If the offer is fair, say yes and say thank you."
+     ]
+    },
+    {
+     "q": "More salary, or more days working from home?",
+     "a": "More salary",
+     "b": "More home days",
+     "fa": [
+      "More salary. Money is easier to measure.",
+      "Home days can change with a new boss."
+     ],
+     "fb": [
+      "More home days. Two hours less in traffic every day.",
+      "That’s worth more than a raise."
+     ]
+    },
+    {
+     "q": "Tell your current boss you’re interviewing, or keep it secret?",
+     "a": "Tell the boss",
+     "b": "Keep it secret",
+     "fa": [
+      "Tell the boss. Maybe they’ll make a better offer.",
+      "Honesty keeps the relationship good."
+     ],
+     "fb": [
+      "Keep it secret. Nothing is certain until you sign.",
+      "You can tell them when you have the offer."
+     ]
+    },
+    {
+     "q": "A famous company, or a small company with a better role?",
+     "a": "Famous company",
+     "b": "Better role",
+     "fa": [
+      "The famous company. The name opens doors later.",
+      "Big companies have more training."
+     ],
+     "fb": [
+      "The better role. You learn more when you do more.",
+      "A title is more than a logo."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Now go get that offer."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "The Thank-You Email",
+   "t": "Write the thank-you email.",
+   "p": "Step by step. Say it, then write it.",
+   "prof": "The course ends here: the student will send this after the real interview. Keep it short, warm and specific.",
+   "passos": [
+    {
+     "q": "Who are you writing to, and what for?",
+     "st": [
+      "Dear …, thank you so much for …"
+     ],
+     "ex": "Dear Laura, thank you so much for your time yesterday."
+    },
+    {
+     "q": "Mention one thing you enjoyed in the conversation.",
+     "st": [
+      "I really enjoyed hearing about …"
+     ],
+     "ex": "I really enjoyed hearing about the new project in Chile."
+    },
+    {
+     "q": "Remind them, in one line, why you’re a good fit.",
+     "st": [
+      "With my experience in …, I’m confident I could …"
+     ],
+     "ex": "With my experience in logistics, I’m confident I could help the team from day one."
+    },
+    {
+     "q": "Close politely.",
+     "st": [
+      "I look forward to hearing from you.",
+      "Best regards, …"
+     ],
+     "ex": "I look forward to hearing from you. Best regards, Carla."
+    }
+   ],
+   "fim": "Send it within 24 hours of the real interview. Course complete."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

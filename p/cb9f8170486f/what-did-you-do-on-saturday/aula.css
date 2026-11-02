@@ -1,0 +1,87 @@
+/* ============================================================
+   WHAT DID YOU DO ON SATURDAY? · THE MONDAY MIC · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Identidade: redação à noite; o jornal
+   de segunda impresso em papel ESCURO (grafite) com tinta creme, serifa
+   na manchete, carimbos YES (verde) e NO (vermelho). Acento: vermelho
+   de microfone ON AIR.
+   ============================================================ */
+:root{
+  --noite:#0b0c0e; --noite-rgb:11,12,14; --tinta:#ece7dc;
+  --t1:#f2eee6; --t2:#cfc8bb; --t2-rgb:207,200,187; --t3:#918a7e;
+  --ac:#ef6a5a; --ac2:#ffb2a6; --bt:#4aa3e8; --bt2:#a6d2ff; --papel:#1a1b1e;
+  --vidro:rgba(236,231,220,.05); --vidro2:rgba(236,231,220,.085); --vidro3:rgba(236,231,220,.12);
+  --fio:rgba(226,220,206,.12); --fio2:rgba(226,220,206,.22); --luz:rgba(236,231,220,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'Fraunces',Georgia,serif;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#220806}
+.btn.cheio{color:#220806}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(54px,5vw,98px)/.96 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{text-align:left;padding:10px 14px}
+.ini{margin:0;font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--ac2)}
+.acoes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.nota-br{margin:0;padding:10px 14px;border-radius:14px;border:1px dashed var(--fio2);font:600 15px/1.45 var(--disp);color:var(--t2)} .nota-br b{color:var(--ac2)}
+
+/* o jornal */
+.jornal{display:grid;gap:10px;padding:18px 20px;border-radius:6px;background:var(--papel);border:1px solid #2c2d31;box-shadow:var(--sombra);color:var(--tinta)}
+.cabeca-j{display:grid;justify-items:center;gap:2px;padding-bottom:8px;border-bottom:3px double #4a4842}
+.cabeca-j b{font:800 clamp(28px,2.6vw,44px)/1 var(--serif);letter-spacing:-.01em}
+.cabeca-j small{font:700 11px var(--mono);letter-spacing:.16em;color:var(--t3)} .cabeca-j .col{color:var(--ac2)}
+.manchete{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--serif);text-align:center}
+.foto-j{aspect-ratio:16/8;border-radius:4px;background-size:cover;background-position:center;filter:grayscale(.4)}
+.lead-j{margin:0;font:600 italic 17px/1.4 var(--serif);color:var(--t2);text-align:center}
+.capa-j{padding:10px;border-radius:var(--r1)}
+.pistas{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 14px}
+.pistas li{position:relative;display:flex;gap:10px;align-items:center;padding:8px 10px;border-bottom:1px solid #2c2d31;font:600 16px var(--serif);color:var(--t3)}
+.pistas li span{font:700 12px var(--mono);color:var(--t3)}
+.pistas li.agora{color:var(--t1);background:rgba(239,106,90,.08);border-radius:6px} .pistas li.feita{color:var(--t1)}
+.pistas li i{margin-left:auto;padding:1px 8px;border:2px solid;border-radius:6px;font:700 13px var(--mono);font-style:normal;transform:rotate(-8deg)}
+.carimbo-sim{color:var(--ok)} .carimbo-nao{color:var(--erro)}
+.mesa-g{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px;align-items:start}
+.g-box{padding:8px;border-radius:var(--r1)}
+
+.tres-tempos{display:flex;justify-content:center}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+.mesa-p{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+.gente{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.pessoa{display:grid;justify-items:center;gap:4px;padding:12px 8px;border-radius:var(--r2);color:var(--t1)}
+.pessoa span{font-size:28px} .pessoa b{font:800 13px var(--mono);letter-spacing:.06em;text-align:center}
+.pessoa.on{border-color:var(--ac)!important} .pessoa.feito{border-color:rgba(143,217,162,.45)!important}
+.caderno{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-radius:var(--r2)} .caderno small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .caderno b{font:800 20px var(--disp);color:var(--ac2)}
+.balao{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .balao p{margin:0;font:600 clamp(18px,1.4vw,22px)/1.4 var(--disp)}
+.balao.resp{border-color:rgba(239,106,90,.35)!important}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .pede b{font:800 clamp(20px,1.6vw,26px) var(--disp)}
+
+.fitas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.fita{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .fita small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .fita b{font:700 clamp(17px,1.3vw,21px)/1.35 var(--disp)}
+.aberta{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(11,12,14,.85);font:700 13px var(--mono);color:var(--ac2)}
+.quiz{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q-linha{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .q-linha.feito{border-color:rgba(143,217,162,.4)!important}
+.q-linha p{margin:0;font:700 clamp(17px,1.3vw,21px)/1.4 var(--disp)} .q-linha .recusa{margin:0;font-size:15px}
+.gap{display:inline-block;min-width:3em;padding:0 6px;border-bottom:2px solid var(--ac);color:var(--ac2);text-align:center}
+.cartoes-c{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.cartao-c{display:grid;gap:4px;padding:16px;border-radius:var(--r2);border:1px solid var(--fio2);background:#141518;color:var(--t1);text-align:left}
+.cartao-c small{font:800 11px var(--mono);color:var(--t3)} .cartao-c b{font:800 20px var(--disp);color:var(--ac2)}
+.cartao-c.on{border-color:var(--ac)} .cartao-c.feito{border-color:rgba(143,217,162,.45)}
+.fim .grande span{font-size:clamp(18px,1.4vw,23px)}
+
+@media (max-width:1100px){ .mesa-g,.mesa-video,.mesa-p,.capa,.fitas,.quiz{grid-template-columns:1fr} }
+@media (max-width:820px){ .gente{grid-template-columns:repeat(2,minmax(0,1fr))} .pistas{grid-template-columns:1fr} }

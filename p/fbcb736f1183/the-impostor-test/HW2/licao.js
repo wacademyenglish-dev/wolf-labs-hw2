@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Impostor Test",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fbcb736f1183/the-impostor-test/img/live-cracha.webp",
+  "capa": "../img/live-cracha.webp",
   "alvo": "question tags: the auxiliary + the person, with the sign flipped (You did it, didn't you?); falling voice confirms, rising voice asks; aren't I? · shall we? · isn't there? · nobody ... did they?",
   "abrir": "What is something you did well this week?",
   "fecho": "<b>Tag</b> = the auxiliary + the person, with the sign flipped: <i>You did the work, didn't you?</i> A positive sentence takes a negative tag, a negative sentence takes a positive one. Voice down: you are telling. Voice up: you are asking. Special ones: <i>aren't I? · shall we? · isn't there?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a conference. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/fbcb736f1183/the-impostor-test/img/live-corredor.webp",
+      "img": "../img/live-corredor.webp",
       "leg": "A quiet corridor after the talk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "You did the work, didn't you?",
-          "img": "https://wolf-labs.pages.dev/p/fbcb736f1183/the-impostor-test/img/live-cracha.webp",
+          "img": "../img/live-cracha.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It wasn't luck, was it?",
-          "img": "https://wolf-labs.pages.dev/p/fbcb736f1183/the-impostor-test/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Let's take a break, shall we?",
-          "img": "https://wolf-labs.pages.dev/p/fbcb736f1183/the-impostor-test/img/live-saida.webp",
+          "img": "../img/live-saida.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fbcb736f1183/the-impostor-test/img/live-cadeiras.webp",
+      "img": "../img/live-cadeiras.webp",
       "leg": "An empty table with two chairs",
       "pede": "Look at the picture: an empty table with two chairs. Write 2 or 3 sentences with question tags: one that confirms something you know, and one that asks something you are not sure about.",
       "ph": "You came early, didn't you? …",

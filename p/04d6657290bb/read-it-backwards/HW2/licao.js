@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Read It Backwards",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/04d6657290bb/read-it-backwards/img/live-bancada.webp",
+  "capa": "../img/live-bancada.webp",
   "alvo": "complex noun phrases: the head is the last word, read it backwards; modifier order (opinion, size, age, shape, colour, origin, material, purpose); a two-year-old car, no S inside; stop before the reader is lost",
   "abrir": "Pick one object you use every day. Describe it in one phrase.",
   "fecho": "The head of a noun phrase is its <b>last</b> word: read it <b>backwards</b>. Order: <b>opinion, size, age, shape, colour, origin, material, purpose</b>: <i>a lovely little old French clock</i>. A number inside the stack is singular and hyphenated: <b>a two-year-old car</b>. And stop before the reader gets lost.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo label the tools of a small museum. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/04d6657290bb/read-it-backwards/img/live-bancada.webp",
+      "img": "../img/live-bancada.webp",
       "leg": "A dim workshop bench",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "A Victorian rosewood smoothing plane.",
-          "img": "https://wolf-labs.pages.dev/p/04d6657290bb/read-it-backwards/img/live-bancada.webp",
+          "img": "../img/live-bancada.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "A heavy black cast-iron cooking pot.",
-          "img": "https://wolf-labs.pages.dev/p/04d6657290bb/read-it-backwards/img/live-bandeja.webp",
+          "img": "../img/live-bandeja.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "A two-year-old delivery driver's coat.",
-          "img": "https://wolf-labs.pages.dev/p/04d6657290bb/read-it-backwards/img/live-bancada.webp",
+          "img": "../img/live-bancada.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/04d6657290bb/read-it-backwards/img/live-bandeja.webp",
+      "img": "../img/live-bandeja.webp",
       "leg": "A tray of small old objects",
       "pede": "Look at the picture: a tray of small old objects. Choose three and write a museum label for each. Put the head last. Use a stack of modifiers and at least one number with a hyphen.",
       "ph": "A worn …",

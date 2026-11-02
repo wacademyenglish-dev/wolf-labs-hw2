@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "I Need More Money",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f9454f86bd36/i-need-more-money/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "need + a thing (I need money, never need of) · need to + verb (I need to buy) · Do you need ...? Yes, I do. · he/she needs",
   "abrir": "What do you need this week?",
   "fecho": "<b>need</b> + a thing, no <i>of</i>. <b>need to</b> + a verb. <b>Do you need…? Yes, I do.</b> With he or she: <b>needs</b>.",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about money and jobs. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/f9454f86bd36/i-need-more-money/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A chef's hat in a kitchen",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -98,17 +98,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I need to buy new shoes.",
-          "img": "https://wolf-labs.pages.dev/p/f9454f86bd36/i-need-more-money/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Do you need the phone right now?",
-          "img": "https://wolf-labs.pages.dev/p/f9454f86bd36/i-need-more-money/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He needs a helper at the restaurant.",
-          "img": "https://wolf-labs.pages.dev/p/f9454f86bd36/i-need-more-money/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -152,7 +152,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f9454f86bd36/i-need-more-money/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A chef's hat in a kitchen",
       "pede": "Look at the picture: a chef's hat in a kitchen. Write 2 or 3 sentences about what you need this week. Use <b>need</b> or <b>need to</b>.",
       "ph": "This week I need …",

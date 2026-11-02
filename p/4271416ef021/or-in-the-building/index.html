@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Or in the Building · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Or in the Building · The City Map</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Or in the Building · The City Map</h2>
+    <p>Taking THE out doesn’t make a sentence shorter. It makes you somebody else. <b>At school</b> is a student in class; <b>at the school</b> is a parent at the gate. The same goes for <b>in prison / at the prison</b> and <b>in bed / in the bed</b>. And a few never take THE: <b>at work, at home, go home, go to bed, by bus</b>. The screen is a city map: nobody in the voice messages says where they are, and the student drops a pin, INSIDE (one of them, no THE) or AT THE DOOR (only there, THE).</p>
+    <!--conversa--><h4>THE JURY (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the wrong door, your student is the jury for three small cases where one article changed the place: the hour at the gate, Leo and his card, Sam “at home” but in bed. They read the evidence and give a verdict; there is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it) to make the verdict harder. Recast quietly while they talk (<i>at work</i>, <i>at home</i>, never <i>at the work</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> — I Where Are They Now? (their people, right now), VII The Jury (three small cases, after the wrong door), VIII Monday, 8 AM (their places).</li>
+      <li><b>Listen</b> — III The Map: the nine voice messages of the old lesson. The speaker is British on purpose: one message says <i>in hospital</i> (in the US: <i>in the hospital</i>). Tell the student.</li>
+      <li><b>Focus</b> — II Two Messages, IV The Person Decides (four cards, four traps), V Station Signs (∅ or THE), VI The Wrong Door (every line is correct English; one sends him to the wrong place).</li>
+      <li><b>Write</b> — IX Your Week. The red wavy line marks <i>at the work</i>, <i>at the home</i>, <i>go to home</i>, <i>by the bus</i> and <i>go to the bed</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student plays, pins, taps and writes. Only you open the follow-ups (“Answered”). Every question has a Show answer. Arrows move the scenes; G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* OR IN THE BUILDING (Main A2) · pergunta-surpresa · 27/10/2026 · artigo zero: at school / at home / at work / in bed / by bus */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'mapa', tipo: 'Would you rather', q: 'Would you rather work at home or at work, with other people?',
+    opc: ['At home', 'At work'], st: ['I’d rather work at home, because …', 'I’d rather be at work, because …'],
+    ex: 'At home! I don’t have to go by bus for an hour.', push: 'Where in your home? On the sofa? In bed?' },
+  { cena: 'regra', tipo: 'Opinion', q: 'Is it OK to read your phone in bed?',
+    opc: ['Yes, it’s fine', 'Only ten minutes', 'No, never'], st: ['I read in bed …', 'In bed, I …'],
+    ex: 'Only ten minutes. If I read in bed for an hour, I go to sleep at one!', push: 'What was the last thing you read in bed?' },
+  { cena: 'placas', tipo: 'And you?', q: 'How did you get to school when you were a kid?',
+    opc: ['By bus', 'On foot', 'By car', 'Another way'], st: ['I went to school by …', 'I walked to school with …'],
+    ex: 'By bus. It took forty minutes, and I slept on the bus every day!', push: 'Who sat next to you?' },
+  { cena: 'vida', tipo: 'What if', q: 'Tomorrow: no work, no school. Where are you at 8 AM?',
+    opc: ['In bed', 'At the beach', 'At the gym'], st: ['At eight, I’m …', 'I’d stay in bed until …'],
+    ex: 'In bed! I’d stay in bed until ten, then go to the beach by bus.', push: 'And at 8 PM?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* OR IN THE BUILDING (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A aula é curta (51 min): o júri entra DEPOIS de "VI · The Wrong Door" sem trocar nada (fica 58 min).
+   Três casos pequenos de "lugar certo, artigo errado"; o aluno dá o veredito com as provas.
+   at school × at the school · at home / at work / in bed (a gramática) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'juri', apos: 'porta', est: 'o', min: 7, img: 'escola', rot: 'The Jury', t: 'Three small cases. Who is to blame?',
+    p: 'Read the evidence. Choose a verdict, or say your own. Say why with at school, at the school, at home, in bed.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The gate', provas: ['Her message: “I’m at school until four. Come and get me.”', 'He went inside, to her classroom.', 'She waited at the gate for one hour.'],
+        q: 'Whose fault was the hour?', opc: ['Hers: the article', 'His: he didn’t call', 'Nobody’s'],
+        st: ['It was her fault. She wrote “at school”, so …', 'He was at the school, but …', 'Nobody’s, because …'],
+        ex: 'Hers. She wrote “at school”, so he thought she was in class. She meant “at the school”.',
+        push: 'He had a phone. Why didn’t he call her? Do you change your verdict?' },
+      { tag: 'The card', provas: ['Leo’s message at 8:10: “I’m at the school.”', 'He forgot his card. He couldn’t go in.', 'The teacher marked him absent.'],
+        q: 'Absent, or not?', opc: ['Absent', 'Late, not absent', 'Not his fault'],
+        st: ['He was at the school, but not at school, so …', 'He wasn’t in class, so …'],
+        ex: 'Late, not absent. He was at the school, at the gate. He wasn’t in class yet.',
+        push: 'He forgets his card every week. Same verdict?' },
+      { tag: 'The boss', provas: ['Sam to his boss: “I can work at home today.”', 'The boss called at eleven. Nobody answered.', 'Sam was in bed, phone off, until twelve.'],
+        q: 'Is Sam in trouble?', opc: ['Big trouble', 'A small warning', 'No problem'],
+        st: ['He was at home, but he was in bed, so …', 'He said he was …, but …'],
+        ex: 'A small warning. He was at home, yes, but he was in bed, not working!',
+        push: 'Would YOU answer your boss at eleven, in bed? Honestly?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "agora": {
+   "t": "Where are your people right now?",
+   "p": "Answer out loud. The picture opens."
+  },
+  "duas": {
+   "t": "Same girl, same time, one week apart.",
+   "p": "Read both messages. What changed?"
+  },
+  "mapa": {
+   "t": "Nine messages. Nobody says where.",
+   "p": "Play one. Drop the pin: inside or at the door."
+  },
+  "regra": {
+   "t": "The person decides the article.",
+   "p": "Read the cards. Fix the four mistakes."
+  },
+  "placas": {
+   "t": "Eight station signs. THE or nothing?",
+   "p": "Tap ∅ or THE. Read it out loud."
+  },
+  "porta": {
+   "t": "Correct English. The wrong place.",
+   "p": "Tap the line with the mistake. Say it right."
+  },
+  "cv-juri": {
+   "t": "Three small cases. Who is to blame?",
+   "p": "Read the evidence. Give a verdict. Say why."
+  },
+  "vida": {
+   "t": "No map now. Your places.",
+   "p": "Answer out loud. Another question comes."
+  },
+  "fim": {
+   "t": "Where are you this week?",
+   "p": "Write four lines about your week."
+  }
+ },
+ "prep": {
+  "obj": "Artigo zero x THE com lugares (at school x at the school, in bed x in the bed; at work, go home): no mapa da cidade, o aluno descobre onde cada um está.",
+  "armadilha": "O português põe artigo em tudo (“na escola”, “no trabalho”, “em casa”): sai “at the work”, “at the home”, “go to home”, “by the bus”, “go to the bed”.",
+  "pal": [
+   "at school",
+   "at the school",
+   "in bed",
+   "in hospital",
+   "at work",
+   "at home",
+   "go home",
+   "go to bed",
+   "by bus"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: tirar o THE muda quem você é (aluno na aula x pai no portão).",
+   "perg": "Where were you at three o’clock yesterday?",
+   "pula": "Leia só o título e entre."
+  },
+  "agora": {
+   "obj": "Aquecimento pessoal: onde estão as pessoas do aluno agora.",
+   "perg": "Where is your mother right now?",
+   "pula": "Duas pessoas bastam."
+  },
+  "duas": {
+   "obj": "Duas mensagens da mesma menina: at school x at the school mudam o sentido.",
+   "perg": "Is she a student or a visitor here?",
+   "pula": "Leia as duas e decida, sem mais exemplos."
+  },
+  "mapa": {
+   "obj": "Nove mensagens de voz (britânicas: in hospital); o aluno põe o alfinete dentro ou na porta.",
+   "perg": "Is he one of them, or only at the door?",
+   "pula": "Cinco mensagens bastam."
+  },
+  "regra": {
+   "obj": "Fixa a regra: o artigo depende da pessoa, não do lugar; alguns nunca levam THE.",
+   "perg": "Why “at work” and not “at the work”?",
+   "pula": "Leia as cartas e corrija duas armadilhas."
+  },
+  "placas": {
+   "obj": "Oito placas da estação: ∅ ou THE.",
+   "perg": "THE or nothing here?",
+   "pula": "Cinco placas bastam."
+  },
+  "porta": {
+   "obj": "Frases corretas, mas uma manda a pessoa ao lugar errado.",
+   "perg": "Which line sent him to the wrong place?",
+   "pula": "Três linhas bastam."
+  },
+  "cv-juri": {
+   "obj": "Júri de três casos em que um artigo mudou o lugar; veredito com at school/at the school.",
+   "perg": "Who is to blame here? Why?",
+   "pula": "Dois casos bastam."
+  },
+  "vida": {
+   "obj": "Perguntas pessoais sobre os lugares da semana do aluno.",
+   "perg": "Where are you on Monday at 8 AM?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita final: quatro linhas sobre a semana do aluno, com e sem THE; vai para o My notes.",
+   "perg": "Where are you on Friday night?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre lugares da rotina, com e sem THE.",
+   "perg": "How do you get to work?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhe entre dois lugares e justifica com o artigo certo.",
+   "perg": "Which one do you pick?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta um dia inteiro em passos, do acordar ao dormir.",
+   "perg": "Where are you at noon?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More of your places.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "at work",
+    "at home",
+    "go home",
+    "in bed",
+    "by bus"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR COMMUTE",
+     "q": "How do you get to work or school?",
+     "fup": "How long does it take?",
+     "st": [
+      "I go by …",
+      "I walk to …"
+     ],
+     "ex": "I go to work by bus. It takes forty minutes."
+    },
+    {
+     "k": "SUNDAY",
+     "q": "Do you stay at home on Sunday, or go out?",
+     "fup": "What time do you go home?",
+     "st": [
+      "I stay at home and …",
+      "I go out, and I go home at …"
+     ],
+     "ex": "I go out for lunch, and I go home at five."
+    },
+    {
+     "k": "AT THE DOOR",
+     "q": "When were you at a school, but not as a student?",
+     "fup": "Why were you there?",
+     "st": [
+      "I was at the school because …"
+     ],
+     "ex": "I was at the school because I picked up my nephew."
+    },
+    {
+     "k": "BEDTIME",
+     "q": "What do you do in bed before you sleep?",
+     "fup": "What time do you go to bed?",
+     "st": [
+      "In bed, I …",
+      "I go to bed at …"
+     ],
+     "ex": "In bed, I read the news. I go to bed at eleven."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What’s the first thing you do at work?",
+     "fup": "Do you like it?",
+     "st": [
+      "At work, I first …"
+     ],
+     "ex": "At work, I first check my email and make coffee."
+    },
+    {
+     "k": "OLD SCHOOL",
+     "q": "What did you love at school as a child?",
+     "fup": "Do you visit the school now?",
+     "st": [
+      "At school, I loved …"
+     ],
+     "ex": "At school, I loved art class. I never visit the school now."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "at home",
+    "at work",
+    "by bus",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Work at home or work at the office?",
+     "a": "At home",
+     "b": "At the office",
+     "fa": [
+      "At home. I can work in my pajamas."
+     ],
+     "fb": [
+      "At the office. I see people."
+     ]
+    },
+    {
+     "q": "Go by bus or go by car?",
+     "a": "By bus",
+     "b": "By car",
+     "fa": [
+      "By bus. I can read."
+     ],
+     "fb": [
+      "By car. It is faster."
+     ]
+    },
+    {
+     "q": "Saturday morning: in bed or at the gym?",
+     "a": "In bed",
+     "b": "At the gym",
+     "fa": [
+      "In bed. I need my sleep."
+     ],
+     "fb": [
+      "At the gym. I feel better all day."
+     ]
+    },
+    {
+     "q": "A free night: go home early or go out late?",
+     "a": "Go home",
+     "b": "Go out",
+     "fa": [
+      "Go home early. I like my sofa."
+     ],
+     "fb": [
+      "Go out late. Life is short."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Everybody knows where you are."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Day on the Map",
+   "t": "Put your day on the map.",
+   "p": "Answer each step. Watch THE.",
+   "prof": "Drop an imaginary pin for each answer: inside (no THE) or at the door (THE).",
+   "passos": [
+    {
+     "q": "Where are you at 7 AM?",
+     "st": [
+      "At 7 AM, I’m …"
+     ],
+     "ex": "At 7 AM, I’m still in bed."
+    },
+    {
+     "q": "Where are you at noon?",
+     "st": [
+      "At noon, I’m …"
+     ],
+     "ex": "At noon, I’m at work, in the kitchen."
+    },
+    {
+     "q": "Where do you go after work?",
+     "st": [
+      "After work, I go …"
+     ],
+     "ex": "After work, I go to the supermarket, and then I go home."
+    },
+    {
+     "q": "Where are you at 11 PM?",
+     "st": [
+      "At 11 PM, I’m …"
+     ],
+     "ex": "At 11 PM, I’m at home. I go to bed at midnight."
+    }
+   ],
+   "fim": "Four pins. Your day is on the map."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

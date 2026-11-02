@@ -1,0 +1,75 @@
+/* ============================================================
+   NOT YOUR SHOE SIZE · THE BALANCE · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: o laboratório à noite —
+   verde-garrafa quase preto; a balança de latão escuro; o prato da
+   afirmação em magenta, os pesos da evidência em verde-menta; a régua de
+   0 a 10 em blocos.
+   ============================================================ */
+:root{
+  --noite:#040807; --noite-rgb:4,8,7; --tinta:#e6ece9;
+  --t1:#eef3f0; --t2:#c1ccc6; --t2-rgb:193,204,198; --t3:#7f8d86;
+  --ac:#7be0b0; --ac2:#bff3d9; --claim:#f07ab4; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(230,236,233,.05); --vidro2:rgba(230,236,233,.085); --vidro3:rgba(230,236,233,.12);
+  --fio:rgba(220,230,225,.12); --fio2:rgba(220,230,225,.22); --luz:rgba(230,236,233,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#062417}
+.btn.cheio{color:#062417}
+.capa{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#0b2a1d;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.sh-ops{display:grid;gap:6px} .sh-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:0 auto 12px;width:100%} .sh-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1100px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao s{text-decoration-color:var(--erro);color:var(--t3)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.sh-ouve{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .sh-ouve .transcricao{margin:0}
+.sh-linha-ok{display:flex;align-items:center;gap:12px} .sh-linha-ok .aprova{flex:1;margin:0} .sh-linha-ok.centro{max-width:1100px;margin:0 auto;width:100%}
+.sh-rot{margin:0;font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+
+/* a balança */
+.sh-bal{display:grid;gap:6px;justify-items:center;width:min(100%,520px);padding:12px 14px;border-radius:var(--r2);background:#08100d;border:1px solid var(--fio2);margin:0 auto}
+.sh-bal svg{display:block;width:100%;height:auto}
+.sh-braco{transition:transform .9s cubic-bezier(.3,1.5,.5,1)} .sh-braco line{stroke:#8a7a52;stroke-width:6;stroke-linecap:round} .sh-braco .sh-fio{stroke:#5f5640;stroke-width:2}
+.sh-poste{stroke:#6d6044;stroke-width:8} .sh-pe{fill:#4a4230} .sh-eixo{fill:#c9b37a}
+.sh-prato{stroke-width:2} .sh-prato.a{fill:rgba(240,122,180,.3);stroke:var(--claim)} .sh-prato.b{fill:rgba(123,224,176,.18);stroke:var(--ac)}
+.sh-peso{fill:var(--ac);opacity:.9}
+.sh-t{font:800 13px var(--mono);letter-spacing:.12em} .sh-t.a{fill:var(--claim)}
+.sh-bal.treme svg{animation:treme .25s 3}
+.sh-bal.nivel{border-color:rgba(123,224,176,.55);box-shadow:0 0 0 1px rgba(123,224,176,.2)}
+.sh-leg{display:flex;gap:18px;font:800 11px var(--mono);letter-spacing:.1em} .sh-leg .a{color:var(--claim)} .sh-leg .b{color:var(--ac)}
+.sh-bal.mini{width:min(100%,340px);padding:8px}
+.sh-cartas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sh-c{display:grid;gap:6px;padding:12px 16px;border-radius:14px} .sh-c small{font:800 11px var(--mono);letter-spacing:.12em} .sh-c p{margin:0;font:700 clamp(16px,1.3vw,22px)/1.35 var(--disp)}
+.sh-c.a{border-color:rgba(240,122,180,.5)} .sh-c.a small{color:var(--claim)} .sh-c.b{border-color:rgba(123,224,176,.45)} .sh-c.b small{color:var(--ac)} .sh-c.b p{font-weight:600;color:var(--t2)}
+.sh-frase{padding:10px 18px;border-radius:12px;font:700 clamp(20px,1.6vw,28px) var(--disp)} .sh-frase s{text-decoration-color:var(--claim)}
+
+/* a régua */
+.sh-regua{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:6px;max-width:1100px;margin:0 auto 14px;width:100%}
+.sh-num{min-height:64px;border-radius:10px;border:1px solid var(--fio2);background:var(--vidro);font:800 clamp(20px,1.7vw,30px) var(--mono);color:var(--t1);cursor:pointer}
+.sh-num.on{background:var(--ac);border-color:var(--ac);color:#062417}
+
+/* listas */
+.sh-tf{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 14px;border-radius:14px} .sh-tf span{font:600 clamp(16px,1.25vw,21px) var(--disp)}
+.sh-tf.certo{border-color:var(--ok)} .sh-tf.errado{border-color:var(--erro)}
+.sh-fs{display:flex;gap:6px} .sh-fs .pilula{min-height:36px;padding:0 14px;font:800 12px var(--mono);letter-spacing:.06em}
+.sh-lista{display:grid;gap:8px;max-width:1200px;margin:0 auto 10px;width:100%}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .sh-bal{width:min(100%,360px);padding:8px}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .sh-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .sh-regua{grid-template-columns:repeat(6,1fr)} .sh-cartas{grid-template-columns:1fr} .sh-tf{grid-template-columns:1fr} }
+.mesa-c .sh-bal{width:min(100%,400px);padding:8px 10px}
+.sh-c{padding:10px 14px} .sh-c p{font-size:clamp(15px,1.1vw,19px)}
+.sh-num{min-height:50px}

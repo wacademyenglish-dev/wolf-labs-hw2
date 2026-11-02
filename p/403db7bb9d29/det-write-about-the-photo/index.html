@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -118,5 +119,284 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "transforma": {
+   "t": "From flat to rich.",
+   "p": "Read the clue. Say the richer sentence. Write it."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say the right form. Tap."
+  },
+  "prova": {
+   "t": "Three photos. One minute each.",
+   "p": "Start the clock. Write two rich sentences."
+  },
+  "cv-anuncio": {
+   "t": "Write the ad. Close the deal.",
+   "p": "Answer Rita. Agree on the first sentence."
+  },
+  "pode": {
+   "t": "Lesson 12: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Write About the Photo do DET: um minuto por foto; frase rica com lugar, detalhes, dois adjetivos e with / which / where (barraca no lago, marcenaria, parque no outono).",
+  "armadilha": "O brasileiro traduz o “tem” (“in this photo have”), diz “near of”, “there is two”, usa what no lugar de which, “very much dark” e “must to be”.",
+  "pal": [
+   "there is / there are",
+   "by",
+   "near",
+   "in front of",
+   "with",
+   "which",
+   "where",
+   "two adjectives"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a tarefa: uma foto, um minuto, uma frase rica.",
+   "perg": "Look at the photo. Give me one sentence.",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "transforma": {
+   "obj": "Enriquecer frases passo a passo: lugar, adjetivos, with, which, where.",
+   "perg": "How can you make it richer?",
+   "pula": "Quatro frases bastam."
+  },
+  "erros": {
+   "obj": "Achar os erros da nota, dizer a forma certa e ler tudo corrigido.",
+   "perg": "What is wrong here?",
+   "pula": "Três erros bastam."
+  },
+  "prova": {
+   "obj": "Três fotos com o relógio real da prova; checklist e modelo depois de cada uma.",
+   "perg": "How many adjectives did you use?",
+   "pula": "Duas fotos bastam."
+  },
+  "cv-anuncio": {
+   "obj": "Momento de conversa: anúncio do camping; negociar com a Rita, a dona, a primeira frase.",
+   "perg": "Why not say “luxury”?",
+   "pula": "Duas perguntas e feche a frase."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 12: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you write a rich sentence in one minute now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Descrever lugares da vida do aluno com frases ricas.",
+   "perg": "What is your favorite place, and what is it like?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre dois lugares e defender com frases ricas.",
+   "perg": "Which place, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Descrever uma foto imaginária em passos, até virar uma frase rica de prova.",
+   "perg": "Where is it, and what is there?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your places, rich sentences.",
+   "p": "Pick a card. Use which or where.",
+   "palavras": [
+    "there is",
+    "with",
+    "which",
+    "where"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR ROOM",
+     "q": "Describe the room where you study.",
+     "fup": "What is next to the window?",
+     "st": [
+      "It’s a … room with …",
+      "There is a … which …"
+     ],
+     "ex": "It’s a small, bright room with a wooden desk which faces the window."
+    },
+    {
+     "k": "A PARK",
+     "q": "Is there a park near your home?",
+     "fup": "What do people do there?",
+     "st": [
+      "There is a … park where …"
+     ],
+     "ex": "There is a big, green park where people run in the morning."
+    },
+    {
+     "k": "YOUR STREET",
+     "q": "What is your street like?",
+     "fup": "Is it quiet or noisy?",
+     "st": [
+      "It’s a … street with …"
+     ],
+     "ex": "It’s a long, noisy street with a bakery on the corner."
+    },
+    {
+     "k": "A TRIP",
+     "q": "Describe a place from your last trip.",
+     "fup": "What was there?",
+     "st": [
+      "It was a … place where …",
+      "There were …"
+     ],
+     "ex": "It was a quiet, sandy beach where there were only fishing boats."
+    },
+    {
+     "k": "YOUR KITCHEN",
+     "q": "What is in your kitchen right now?",
+     "fup": "What is on the table?",
+     "st": [
+      "There is a … with …",
+      "There are …"
+     ],
+     "ex": "There is an old, white table with three red cups on it."
+    },
+    {
+     "k": "A PHOTO",
+     "q": "What is the last photo on your phone?",
+     "fup": "Describe it in one rich sentence.",
+     "st": [
+      "It’s a photo of …",
+      "…, which …"
+     ],
+     "ex": "It’s a photo of my cat on a gray sofa, which is his favorite place."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Which place would you choose?",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "with",
+    "where",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A tent by a lake or a hotel in the city?",
+     "a": "A tent by a lake",
+     "b": "A city hotel",
+     "fa": [
+      "A tent. It’s a calm place where you can hear the water.",
+      "And the campfire!"
+     ],
+     "fb": [
+      "A hotel. It’s a comfortable room with a real bed.",
+      "No mosquitoes."
+     ]
+    },
+    {
+     "q": "A park in autumn or a beach in summer?",
+     "a": "Autumn park",
+     "b": "Summer beach",
+     "fa": [
+      "The park. It has orange trees which look like a painting.",
+      "It’s not too hot."
+     ],
+     "fb": [
+      "The beach. It’s a sunny place where everybody is happy.",
+      "The water is warm."
+     ]
+    },
+    {
+     "q": "Work in a workshop or in an office?",
+     "a": "A workshop",
+     "b": "An office",
+     "fa": [
+      "A workshop. It’s a real place where you make things with your hands.",
+      "It smells of wood."
+     ],
+     "fb": [
+      "An office. It’s a clean room with air conditioning.",
+      "My hands stay safe."
+     ]
+    },
+    {
+     "q": "In the test: one perfect sentence, or four simple ones?",
+     "a": "One perfect",
+     "b": "Four simple",
+     "fa": [
+      "One perfect. Quality beats quantity.",
+      "Fewer words, fewer mistakes."
+     ],
+     "fb": [
+      "Four simple. They show more ideas.",
+      "One sentence looks lazy."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Build the Photo",
+   "t": "One photo, step by step.",
+   "p": "Imagine a photo. Add one thing each step.",
+   "prof": "Be the examiner: at the end, count adjectives and joining words out loud.",
+   "passos": [
+    {
+     "q": "Where is it? Say the place.",
+     "st": [
+      "It’s a … in / by / near …"
+     ],
+     "ex": "It’s a small café near a train station."
+    },
+    {
+     "q": "Add two adjectives.",
+     "st": [
+      "It’s a … , … café …"
+     ],
+     "ex": "It’s a small, busy café near a train station."
+    },
+    {
+     "q": "Add a detail with with.",
+     "st": [
+      "… with …"
+     ],
+     "ex": "It’s a small, busy café with green chairs near a train station."
+    },
+    {
+     "q": "Finish with which or where.",
+     "st": [
+      "…, where …",
+      "…, which …"
+     ],
+     "ex": "It’s a small, busy café with green chairs near a train station, where people wait for their trains."
+    }
+   ],
+   "fim": "One rich sentence, in under a minute. Now try a new photo."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Eight Doors · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Eight Doors · The Octagon</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Eight Doors · The Octagon</h2>
+    <p>Tonight your student takes a real <b>self-assessment</b>: a testing room with eight doors, one for each kind of intelligence. <b>No number comes from a click.</b> Your student gives gut numbers first; then each door is scored by what they <b>prove out loud</b>. The screen draws their shape on an octagon (solid: proved; dashed: guessed) and fills a one-page report. The language is how to talk about your abilities without boasting and without putting yourself down: <b>good at, I’d say I’m quite…, although, haven’t … yet</b>.</p>
+    <h4>THE GUT NUMBERS COME BACK</h4>
+    <p>Scene I: three questions, then a quick guess for each door (tap the step you heard), and one number for everything. Don’t comment. Scene VII draws the guesses as a dashed line; scene XI puts the two numbers side by side.</p>
+    <h4>THREE WAYS OF SCORING</h4>
+    <p>Doors 1–3: <b>proof</b>. Fill one bubble for each thing you hear (an example, a detail, a careful sentence); move the number only if your student says why; lock it. Doors 4–6: <b>evidence</b>, the true line sets the number. Doors 7–8: a <b>scale</b>, with a reason before every tap.</p>
+    <h4>THE TWO RECORDINGS</h4>
+    <p>Scene II: the idea (intelligence is not one thing, and it can change). Scene VIII: the other side (talents, not intelligences; the word may be wrong). Each plays with pause and 0.75×; the transcript opens after listening. Nobody says the abilities are fake: the argument is about one word.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>good in music</i>, <i>intelligent in math</i>, <i>I didn’t try yet</i>, <i>I’m the best in everything</i>, <i>I’m not good in nothing</i>. In scene IV there is a dashed button for “good in”.</p>
+    <!--conversa--><h4>THE ARENA (IX) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the critic’s recording, your student picks a side: can practice make anybody good at anything, or does talent decide? There is no right answer. Let them choose, wait five seconds in silence, then start the one-minute clock. Use the PUSH line (only you see it) to make it personal, then tap <b>Swap sides</b> and they defend the other side. Recast quietly while they talk (good <b>at</b>, haven’t … <b>yet</b>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Before the Test, IV–VI the doors, VII Your Shape, IX The Arena, X The Job Interview.</li>
+      <li><b>Listen</b>: II The Idea, VIII The Other Side.</li>
+      <li><b>Focus</b>: III How to Say It.</li>
+      <li><b>Write</b>: XI, their report. It goes to their My notes. PRINT opens the printer.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE EIGHT DOORS (Main B1) · pergunta-surpresa · 27/10/2026 · good at / I'd say / although / haven't … yet */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'ideia', tipo: 'Opinion', q: 'Your school: did it care about all eight doors, or only two of them?',
+    opc: ['Only words and numbers', 'A few more', 'All of them'], st: ['I’d say my school was good at …, although …', 'To be honest, nobody asked if I was good at …'],
+    ex: 'Only words and numbers. I was quite good at sports, although nobody gave me a grade for it.', push: 'If you ran a school tomorrow, which door would you add first?' },
+  { cena: 'evid', tipo: 'Would you rather', q: 'Would you rather be brilliant at one thing, or quite good at everything?',
+    opc: ['Brilliant at one thing', 'Quite good at everything'], st: ['I’d rather be …, because …', 'Being really good at … would …'],
+    ex: 'Quite good at everything. I get bored easily, and I’d say that’s more useful at work.', push: 'Name the one thing. If you could choose it right now, what would it be?' },
+  { cena: 'forma', tipo: 'And you?', q: 'What is one thing you haven’t done yet, but you really want to learn?',
+    opc: ['Something practical', 'Something creative', 'Something with people'], st: ['I haven’t … yet, but …', 'I’d say I’m not very good at … , although …'],
+    ex: 'Something creative. I haven’t learned to draw yet, but I want to take a class this year.', push: 'What is stopping you? Give me the honest reason.' },
+  { cena: 'entrevista', tipo: 'What if', q: 'A friend says: “You’re amazing at this!” What do you usually say?',
+    opc: ['Thank you!', 'No, I’m not!', 'I change the subject'], st: ['To be honest, I usually say …', 'I’d say I’m quite good at it, although …'],
+    ex: 'No, I’m not! To be honest, I never know what to say. Now I can say: “Thank you. It’s one of the things I’m good at.”', push: 'Try it now: I give you a compliment, and you take it well.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE EIGHT DOORS (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A arena entra no lugar de "IX · Can't or Not Yet?" (extra, prática controlada; o "haven't … yet"
+   continua na regra III, nos iniciadores daqui e no laudo XI). Logo depois da crítica (VIII):
+   talento ou prática? Gramática da aula (good at · I'd say I'm quite… · although · haven't … yet)
+   nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'arena', troca: 'yet', est: 'o', min: 7, img: 'jardim', rot: 'The Arena', t: 'Talent or practice? Pick a side and defend it.',
+    p: 'Choose a side. One minute to defend it, with an example from your life. Then swap and defend the other side.',
+    formato: 'arena', segundos: 60,
+    q: 'Can anybody get really good at anything, with enough practice?',
+    lados: [
+      { nome: 'Practice wins', arg: 'Most “talent” is just hours. If you haven’t got good at something, you haven’t practised it enough yet.' },
+      { nome: 'Talent matters', arg: 'Some people start ahead. You can get better, but you can’t become brilliant at everything.' }
+    ],
+    st: ['I’d say practice / talent matters more, because …', 'To be honest, I’m not very good at …, although I …', 'I haven’t … yet, but …', 'I know someone who is really good at …'],
+    ex: 'I’d say practice wins. I was terrible at English at school, and now I’m quite good at it, although I’m not an expert. To be honest, I haven’t tried singing yet, so I can’t say I have no talent for it.',
+    push: 'Then why aren’t you brilliant at your shortest door yet? Be honest: is it time, or is it talent?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "chute": {
+   "t": "The examiner wants to know you.",
+   "p": "Answer three questions. Then one sentence per door."
+  },
+  "ideia": {
+   "t": "The idea behind the test.",
+   "p": "Listen once. Choose the three things you heard."
+  },
+  "lingua": {
+   "t": "Good AT. Soften it. Be honest.",
+   "p": "Read the ladder out loud. Then fix four traps."
+  },
+  "prova": {
+   "t": "Doors 1–3: show your proof.",
+   "p": "Answer. Give examples. Then the door locks."
+  },
+  "evid": {
+   "t": "Doors 4–6: choose the true line.",
+   "p": "Pick the line. Say it with a date or place."
+  },
+  "escala": {
+   "t": "Doors 7–8: how true is it?",
+   "p": "Read each sentence. Say why. Then tap."
+  },
+  "forma": {
+   "t": "Solid is proved. Dashed is guessed.",
+   "p": "Look for fifteen seconds. Then answer three questions."
+  },
+  "critica": {
+   "t": "The other side.",
+   "p": "Listen. Say how much you believe it."
+  },
+  "cv-arena": {
+   "t": "Talent or practice?",
+   "p": "Defend one side for a minute. Then swap."
+  },
+  "entrevista": {
+   "t": "A job interview. Use your report.",
+   "p": "Not too humble, not too proud. Give evidence."
+  },
+  "laudo": {
+   "t": "Form 8-D is ready.",
+   "p": "Read it out loud. Then write it. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Falar das próprias habilidades sem se gabar nem se diminuir (good at, I’d say I’m quite…, although, haven’t… yet) num teste de oito portas da inteligência.",
+  "armadilha": "O português usa “bom EM”, então sai “good in music”; “ainda não tentei” vira “I didn’t try yet”; e a dupla negação “I’m not good in nothing”.",
+  "pal": [
+   "good at",
+   "I’d say I’m quite …",
+   "although",
+   "haven’t … yet",
+   "not very good at",
+   "evidence",
+   "talent",
+   "practice"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a sala de teste: oito portas e um examinador com prancheta.",
+   "perg": "What are you good at?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "chute": {
+   "obj": "Chutes iniciais: três perguntas e um número rápido para cada porta, sem comentar.",
+   "perg": "How good are you with numbers, from one to ten?",
+   "pula": "Não corte: os chutes voltam em VII e XI."
+  },
+  "ideia": {
+   "obj": "Áudio: a inteligência não é uma coisa só, e pode mudar.",
+   "perg": "What did the examiner say about intelligence?",
+   "pula": "Ouça uma vez e marque as três ideias."
+  },
+  "lingua": {
+   "obj": "A língua: a escada de good at, suavizar e ser honesto; corrigir quatro armadilhas.",
+   "perg": "Good in or good at?",
+   "pula": "Corrija duas armadilhas, não quatro."
+  },
+  "prova": {
+   "obj": "Portas 1–3: o número só sobe com prova falada (exemplo, detalhe, frase cuidadosa).",
+   "perg": "Can you give me an example?",
+   "pula": "Duas portas bastam."
+  },
+  "evid": {
+   "obj": "Portas 4–6: a linha verdadeira dá o número; dizer com data ou lugar.",
+   "perg": "When did you last do that?",
+   "pula": "Duas portas bastam."
+  },
+  "escala": {
+   "obj": "Portas 7–8: uma escala com motivo antes de cada toque.",
+   "perg": "How true is this for you, and why?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "forma": {
+   "obj": "O octógono: linha cheia (provado) contra tracejada (chutado).",
+   "perg": "Where is the biggest difference, and why?",
+   "pula": "Cena extra: uma pergunta basta."
+  },
+  "critica": {
+   "obj": "Áudio do outro lado: talentos, não inteligências; a briga é sobre uma palavra.",
+   "perg": "How much do you believe the idea now?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-arena": {
+   "obj": "Arena: talento ou prática? Defender um lado um minuto e depois trocar.",
+   "perg": "Can practice make anybody good at anything?",
+   "pula": "Um lado só, sem trocar."
+  },
+  "entrevista": {
+   "obj": "Entrevista de emprego usando o laudo: nem humilde demais, nem orgulhoso demais.",
+   "perg": "What are you really good at?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "laudo": {
+   "obj": "Escrita: o laudo do aluno, lido em voz alta e reescrito com as palavras dele.",
+   "perg": "What did the test show about you?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre habilidades, com good at, quite, although e yet.",
+   "perg": "What haven’t you learned yet?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre talento, notas e testes, com argumentos prontos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o examinador e defende o teste das oito portas.",
+   "perg": "Why don’t you trust a click?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Honest about your skills.",
+   "p": "Pick a card. Not too humble, not too proud.",
+   "palavras": [
+    "good at",
+    "quite",
+    "although",
+    "haven’t … yet"
+   ],
+   "cartas": [
+    {
+     "k": "A HIDDEN SKILL",
+     "q": "What are you good at that people don’t know?",
+     "fup": "How did you learn it?",
+     "st": [
+      "I’d say I’m quite good at …",
+      "Not many people know, but …"
+     ],
+     "ex": "I’d say I’m quite good at fixing things, although I never studied it."
+    },
+    {
+     "k": "NOT YET",
+     "q": "What haven’t you learned yet but want to?",
+     "fup": "What stops you?",
+     "st": [
+      "I haven’t learned … yet.",
+      "I’d like to, but …"
+     ],
+     "ex": "I haven’t learned to swim yet. I’m a bit scared of deep water."
+    },
+    {
+     "k": "AT SCHOOL",
+     "q": "What were you good at in school?",
+     "fup": "Are you still good at it?",
+     "st": [
+      "I was good at …",
+      "These days I’m …"
+     ],
+     "ex": "I was good at history. These days I’m not very good at dates."
+    },
+    {
+     "k": "AT WORK",
+     "q": "What would your boss say you’re good at?",
+     "fup": "Would they be right?",
+     "st": [
+      "My boss would say …",
+      "I’d say I’m …, although …"
+     ],
+     "ex": "My boss would say I’m good at people, although I’m slow with reports."
+    },
+    {
+     "k": "PRACTICE",
+     "q": "What got better only with practice?",
+     "fup": "How long did it take?",
+     "st": [
+      "I wasn’t good at … at first.",
+      "After …, I got better."
+     ],
+     "ex": "I wasn’t good at cooking at first. After a year, I got much better."
+    },
+    {
+     "k": "YOUR FAMILY",
+     "q": "Who in your family is good at something surprising?",
+     "fup": "Is it talent or practice?",
+     "st": [
+      "My … is really good at …",
+      "I think it’s …"
+     ],
+     "ex": "My grandmother is really good at math. I think it’s practice: she ran a shop."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’d say",
+    "although",
+    "evidence",
+    "practice"
+   ],
+   "rodadas": [
+    {
+     "q": "Can a test really measure intelligence?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes, if it asks for evidence.",
+      "A good test is better than a guess."
+     ],
+     "fb": [
+      "No. People are more than a number.",
+      "A bad day changes everything."
+     ]
+    },
+    {
+     "q": "Should you say you’re great at something in a job interview?",
+     "a": "Yes, say it",
+     "b": "No, be modest",
+     "fa": [
+      "Yes. Nobody else will say it for you.",
+      "Just give an example."
+     ],
+     "fb": [
+      "No. Modest people seem more honest.",
+      "Let your work show it."
+     ]
+    },
+    {
+     "q": "Is it better to be good at one thing or quite good at many?",
+     "a": "One thing",
+     "b": "Many things",
+     "fa": [
+      "One thing. Experts get the best jobs.",
+      "You can go really deep."
+     ],
+     "fb": [
+      "Many things. The world changes fast.",
+      "You can connect ideas."
+     ]
+    },
+    {
+     "q": "Should kids get grades in school?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Grades show where to improve.",
+      "Kids need clear goals."
+     ],
+     "fb": [
+      "No. Grades make kids afraid of mistakes.",
+      "A written comment says more."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Two sides, and plenty of evidence."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the examiner now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the examiner.",
+   "perguntas": [
+    "Why does your test have eight doors?",
+    "Why don’t you trust a click?",
+    "What do people usually say they’re good at?",
+    "What is the most common mistake people make in your room?",
+    "What do you say to somebody who says, “I’m not good at anything”?",
+    "Is intelligence talent or practice, in your opinion?"
+   ],
+   "st": [
+    "I’d say …",
+    "Most people …, although …",
+    "They haven’t … yet."
+   ],
+   "ex": "Most people say they’re bad at math, although their evidence says they’re quite good."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

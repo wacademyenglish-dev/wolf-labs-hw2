@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Other Track",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fa2a9e89d955/the-door-that-closed/img/live-estacao.webp",
+  "capa": "../img/live-estacao.webp",
   "alvo": "third conditional: if + had + past participle, would have + past participle; both halves go back in time; never if + would have; an open door (still possible) is second conditional, not third",
   "abrir": "What is one choice that changed your life?",
   "fecho": "A past that did not happen: both halves go back. <b>If + had + third form</b>, <b>would have + third form</b>: <i>If I had left earlier, I would have caught the train.</i> Never <i>if I would have</i>. Still possible now? That is the second conditional: <i>If I had time, I would help.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about choices. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/fa2a9e89d955/the-door-that-closed/img/live-estacao.webp",
+      "img": "../img/live-estacao.webp",
       "leg": "A station at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -114,7 +114,7 @@ window.HW2 = {
         {
           "t": "If I had left earlier, I would have caught the train.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/fa2a9e89d955/the-door-that-closed/img/live-estacao.webp"
+          "img": "../img/live-estacao.webp"
         },
         {
           "t": "If she hadn't taken that job, she wouldn't have met him.",
@@ -123,7 +123,7 @@ window.HW2 = {
         {
           "t": "If he had pulled the lever, the train would have taken the other track.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/fa2a9e89d955/the-door-that-closed/img/live-alavanca.webp"
+          "img": "../img/live-alavanca.webp"
         }
       ]
     },
@@ -172,7 +172,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fa2a9e89d955/the-door-that-closed/img/live-agulha.webp",
+      "img": "../img/live-agulha.webp",
       "leg": "Two tracks at night, one train",
       "pede": "Look at the picture: two tracks at night, and one train choosing a way. Write 2 or 3 sentences about a choice you made, and the other track. Use <b>if + had</b> and <b>would have</b>.",
       "ph": "If I had …, I would have …",

@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · While I Am Away · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>While I Am Away · The Live Cameras</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>While I Am Away · The Live Cameras</h2>
+    <p>Marta leaves her farm for a week, and the student looks after it. On the fridge, a page of routines (<b>every day</b>). On the screen, four LIVE cameras (<b>now</b>): the red dot blinks, the clock runs, the rain falls. On day three, the other house-sitter’s answers give him away: he copied the page and was never there. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>I feed / he feeds</b> = every day (one piece). <b>I am / he is / they are + -ing</b> = now (two pieces). The verbs a camera can’t film take no -ing: <b>want, need, know, see, understand</b>. Two questions: <i>What do you do?</i> (job) × <i>What are you doing?</i> (this minute). Portuguese pushes <i>He feeding</i> and <i>I am work every day</i>.</p>
+    <!--conversa--><h4>OK OR NOT OK? (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Day Three, your student judges the other house-sitter three times: green OK or red Not OK (sleeping at noon, watching TV inside, not there on day three). There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it) for a yes/no follow-up. The starters keep both presents in their mouth (<i>He works at six / Nobody is feeding the horses</i>). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> — I You, Live; VII OK or Not OK? (judge the other house-sitter); VIII The Video Call (first you are the owner and ask; then swap).</li>
+      <li><b>Listen</b> — V The First Reports and VI Day Three (voice messages: NOW or EVERY DAY; THERE or NOT THERE). Play Marta first.</li>
+      <li><b>Focus</b> — II Four Cameras, One Page; III Two Presents; IV The Live Caption (BE, then the -ing form).</li>
+      <li><b>Write</b> — IX Your Report to Marta, with the red wavy line for <i>He feeding</i>, <i>I am work</i>, <i>I am wanting</i>, <i>-ing + every day</i> and <i>he feed</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>THE MYSTERY</h4>
+    <p>In Day Three, messages 3 and 5 are live with no -ing (<i>I see a fox</i>, <i>I need more hay</i>): that’s the stative rule doing its job. Let the student notice the routines before you say it. Then the page and the full buckets close the case.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps and writes on their own screen; the camera clock shows each person’s own time. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* WHILE I AM AWAY (Main A1) · pergunta-surpresa · 27/10/2026 · I feed × I am feeding */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'cameras', tipo: 'And you?', q: 'Is it raining now, where you are?',
+    opc: ['Yes, it is.', 'No, it isn’t.'], st: ['Yes, it is raining.', 'No. It is …'],
+    ex: 'No, it isn’t. It is sunny and hot!', push: 'Is it cold? Yes or no?' },
+  { cena: 'monta', tipo: 'Would you rather', q: 'Feed the horses or the chickens?',
+    opc: ['The horses', 'The chickens'], st: ['The horses. They are …', 'The chickens. They are …'],
+    ex: 'The chickens! They are small and funny.', push: 'At six in the morning? Yes or no?' },
+  { cena: 'relatos', tipo: 'What if', q: 'A farm for one week?',
+    opc: ['Yes!', 'No, thanks.'], st: ['Yes! Every day I …', 'No. I usually …'],
+    ex: 'Yes! Every day I walk with the horses.', push: 'No internet. Still yes?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WHILE I AM AWAY (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   OK / not OK (semáforo de 2 cores) ENTRA depois de "VI · Day Three" (apos: a aula tem 52 min e nenhuma
+   cena de prática repetida para trocar; o VII Video Call é o papel/role-play e fica). Total: 57 min.
+   Depois de descobrir que o outro caseiro nunca esteve lá, o aluno julga três coisas que ele faz.
+   A1 bem leve: duas opções coloridas, frase quase pronta, o professor responde primeiro.
+   Gramática da aula (I feed × I am feeding · be + -ing) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'okay', apos: 'dia3', est: 'o', min: 5, img: 'chuva', rot: 'OK or Not OK?', t: 'The other house-sitter. You decide.',
+    p: 'Read it. OK or not OK? Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Noon', sit: 'Noon. He is sleeping.', q: 'OK or not OK?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. He works at six.', 'Not OK. The horses are waiting!'],
+        ex: 'OK! He feeds the horses at six. Now he is resting.',
+        push: 'Every day? Yes or no?' },
+      { tag: 'The sofa', sit: 'He is watching TV inside.', q: 'OK or not OK?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. He is relaxing.', 'Not OK. It is Marta’s house.'],
+        ex: 'Not OK. It is raining, and the chickens are in the yard.',
+        push: 'With Marta’s snacks? Yes or no?' },
+      { tag: 'Day three', sit: 'Day three. He isn’t there.', q: 'OK or not OK?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['Not OK. Nobody is feeding …', 'OK. The animals are …'],
+        ex: 'Not OK! Nobody is feeding the horses.',
+        push: 'Does he get the money? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "You: every day and right now.",
+   "p": "Pick a card. Answer out loud."
+  },
+  "cameras": {
+   "t": "The page or the camera?",
+   "p": "Play Marta. Send each line to NOW or EVERY DAY."
+  },
+  "monta": {
+   "t": "A live caption: BE and -ing.",
+   "p": "Pick BE, then the verb. Read it out loud."
+  },
+  "relatos": {
+   "t": "Marta is on the train. Messages arrive.",
+   "p": "Play a message. NOW or EVERY DAY? Say it back."
+  },
+  "dia3": {
+   "t": "Day three. Six answers.",
+   "p": "Play his answer. Is he really there?"
+  },
+  "cv-okay": {
+   "t": "The other house-sitter. OK or not?",
+   "p": "Your teacher answers first. Then you say it."
+  },
+  "chamada": {
+   "t": "A video call with the owner.",
+   "p": "Be the house-sitter, then the owner. Talk out loud."
+  },
+  "fim": {
+   "t": "Your report to Marta, live.",
+   "p": "Write five lines: now and every day."
+  }
+ },
+ "prep": {
+  "obj": "Present simple (rotina, a página da geladeira) x present continuous (agora, as câmeras ao vivo): o aluno cuida da fazenda da Marta por uma semana.",
+  "armadilha": "O português leva a “He feeding” (sem BE) e a “I am work every day” (BE na rotina). Também “I am wanting/needing”: verbos de estado não levam -ing.",
+  "pal": [
+   "every day",
+   "right now",
+   "feed",
+   "is feeding",
+   "What do you do?",
+   "What are you doing?",
+   "want",
+   "need",
+   "know"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a missão: a Marta viaja e o aluno cuida da fazenda; página = rotina, câmera = agora.",
+   "perg": "Do you have a pet or a plant at home?",
+   "pula": "Leia só o título e o subtítulo e entre."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal com as duas formas: o que o aluno faz todo dia e o que está fazendo agora.",
+   "perg": "What do you do every morning? What are you doing now?",
+   "pula": "Duas cartas bastam."
+  },
+  "cameras": {
+   "obj": "Separa rotina (página) de agora (câmera) com as falas da Marta e das quatro câmeras.",
+   "perg": "Is this every day, or right now?",
+   "pula": "Abra duas câmeras, não as quatro."
+  },
+  "regra": {
+   "obj": "Fixa a regra: rotina = uma peça; agora = duas peças (BE + -ing); verbos de estado sem -ing.",
+   "perg": "How many pieces does “now” need?",
+   "pula": "Leia as cartas e corrija só duas armadilhas."
+  },
+  "monta": {
+   "obj": "Monta legendas ao vivo escolhendo o BE certo e o verbo com -ing.",
+   "perg": "Which BE goes with “the horses”?",
+   "pula": "Três legendas bastam."
+  },
+  "relatos": {
+   "obj": "Escuta as primeiras mensagens de voz e classifica: agora ou todo dia.",
+   "perg": "Is he talking about now or every day?",
+   "pula": "Três mensagens bastam."
+  },
+  "dia3": {
+   "obj": "O mistério do dia 3: as respostas mostram que o outro cuidador copiou a página e não estava lá.",
+   "perg": "Is he really at the farm? How do you know?",
+   "pula": "Ouça quatro respostas e feche o caso."
+  },
+  "cv-okay": {
+   "obj": "Conversa de opinião: o aluno julga o outro cuidador (OK ou não) usando os dois presentes.",
+   "perg": "He is sleeping at noon. Is that OK?",
+   "pula": "Dois julgamentos bastam."
+  },
+  "chamada": {
+   "obj": "Role-play da chamada de vídeo com a dona; depois troca de papéis para o aluno perguntar.",
+   "perg": "What are the horses doing right now?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita final: relatório de cinco linhas para a Marta, com agora e rotina; vai para o My notes.",
+   "perg": "What is happening on the farm right now?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa pessoal com as duas formas do presente.",
+   "perg": "What are you doing this week that is different?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois lados com justificativa curta no presente simples.",
+   "perg": "Which side do you pick, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o outro cuidador e responde às perguntas do professor nos dois presentes.",
+   "perg": "What are you doing right now?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your week, live.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "every day",
+    "right now",
+    "usually",
+    "this week"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR MORNING",
+     "q": "What do you do every morning?",
+     "fup": "Do you have coffee or tea?",
+     "st": [
+      "Every morning I …",
+      "I usually …"
+     ],
+     "ex": "Every morning I make coffee and I check my phone."
+    },
+    {
+     "k": "RIGHT NOW",
+     "q": "What are you doing right now, apart from English?",
+     "fup": "Is anyone at home with you?",
+     "st": [
+      "Right now I am …",
+      "My … is …"
+     ],
+     "ex": "Right now I am sitting in my kitchen. My dog is sleeping."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "Who looks after your home when you travel?",
+     "fup": "Do you call them every day?",
+     "st": [
+      "My … looks after …",
+      "Nobody …"
+     ],
+     "ex": "My sister looks after my cat. I call her every day."
+    },
+    {
+     "k": "THIS WEEK",
+     "q": "What are you doing this week that is different?",
+     "fup": "Do you like it?",
+     "st": [
+      "This week I am …",
+      "Usually I …, but this week …"
+     ],
+     "ex": "Usually I work at the office, but this week I am working at home."
+    },
+    {
+     "k": "YOUR STREET",
+     "q": "Look out of the window. What is happening outside?",
+     "fup": "Is it raining?",
+     "st": [
+      "A man is …",
+      "The cars are …"
+     ],
+     "ex": "A man is walking his dog. Two cars are waiting at the light."
+    },
+    {
+     "k": "ANIMALS",
+     "q": "Do you like farm animals? Which ones?",
+     "fup": "What do they eat?",
+     "st": [
+      "I like …",
+      "They eat …"
+     ],
+     "ex": "I like horses. They eat hay every day."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Farm or city?",
+   "p": "Pick a side. Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "every day",
+    "I like",
+    "I need"
+   ],
+   "rodadas": [
+    {
+     "q": "A week on a farm or a week in a big city?",
+     "a": "On a farm",
+     "b": "In a city",
+     "fa": [
+      "On a farm. It is quiet.",
+      "I like animals."
+     ],
+     "fb": [
+      "In a city. There is a lot to do.",
+      "I need noise."
+     ]
+    },
+    {
+     "q": "Feed the horses or feed the chickens?",
+     "a": "The horses",
+     "b": "The chickens",
+     "fa": [
+      "The horses. They are big and calm."
+     ],
+     "fb": [
+      "The chickens. They are small and funny."
+     ]
+    },
+    {
+     "q": "Get up at six or get up at nine?",
+     "a": "At six",
+     "b": "At nine",
+     "fa": [
+      "At six. I like the morning."
+     ],
+     "fb": [
+      "At nine. I need my sleep."
+     ]
+    },
+    {
+     "q": "A message every day or a video call every day?",
+     "a": "A message",
+     "b": "A video call",
+     "fa": [
+      "A message. It is fast."
+     ],
+     "fb": [
+      "A video call. I can see the animals."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the other house-sitter now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the other house-sitter.",
+   "perguntas": [
+    "Where are you right now?",
+    "What are you doing at this moment?",
+    "What do you do every morning on the farm?",
+    "What time do you feed the horses?",
+    "Why are you watching TV inside?",
+    "Do you really live on the farm this week?"
+   ],
+   "st": [
+    "Right now I am …",
+    "Every morning I …",
+    "I …, but I am not …"
+   ],
+   "ex": "Every morning I feed the horses at six. Right now I am sitting in the kitchen."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

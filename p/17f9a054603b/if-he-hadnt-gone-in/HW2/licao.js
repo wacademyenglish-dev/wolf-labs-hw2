@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "If He Hadn’t Gone In",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/17f9a054603b/if-he-hadnt-gone-in/img/live-livro.webp",
+  "capa": "../img/live-livro.webp",
   "alvo": "third conditional: if + had + past participle, would / could / might have + past participle (a past that did not happen); never would after if, never would + base without have, never had + past simple (had went)",
   "abrir": "What would have happened if you had missed your bus this morning?",
   "fecho": "<b>If + had + past participle, would have + past participle</b>: <i>If I hadn't opened the door, I wouldn't have found it.</i> It is about a past that did not happen. Never <i>would</i> after <i>if</i>. <b>Might have</b> and <b>could have</b> = less sure.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a late-night series. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/17f9a054603b/if-he-hadnt-gone-in/img/live-livro.webp",
+      "img": "../img/live-livro.webp",
       "leg": "A phone and a cup on a dark desk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If I hadn't read the first page, I would have stopped.",
-          "img": "https://wolf-labs.pages.dev/p/17f9a054603b/if-he-hadnt-gone-in/img/live-livro.webp",
+          "img": "../img/live-livro.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If we hadn't opened that door, we wouldn't have found the hall.",
-          "img": "https://wolf-labs.pages.dev/p/17f9a054603b/if-he-hadnt-gone-in/img/live-estatua.webp",
+          "img": "../img/live-estatua.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If she had known, she would have waited.",
-          "img": "https://wolf-labs.pages.dev/p/17f9a054603b/if-he-hadnt-gone-in/img/live-livro.webp",
+          "img": "../img/live-livro.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -155,7 +155,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/17f9a054603b/if-he-hadnt-gone-in/img/live-livro.webp",
+      "img": "../img/live-livro.webp",
       "leg": "A phone and a cup on a desk at night",
       "pede": "Look at the picture: a phone and a cup on a desk at night. Write 2 or 3 sentences about a small choice that changed something. Use <b>If + had + past participle, would have + past participle</b>.",
       "ph": "If I hadn't …, I wouldn't have …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "A Good Band Plays Well",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/704d1ab301c3/a-good-band-plays-well/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "good (the thing: a good band, she is good) versus well (the doing: she sings well); -ly for how (slowly, badly, carefully); fast and hard stay the same; never sings good, never a well singer",
   "abrir": "What do you do well?",
   "fecho": "<b>Good</b> = about the thing: <i>a good band, she is good.</i> <b>Well</b> = about the doing: <i>she sings well.</i> Many words add <b>-ly</b>: <i>slowly, badly, carefully.</i> <b>Fast</b> and <b>hard</b> stay the same.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a record shop. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/704d1ab301c3/a-good-band-plays-well/img/live-palco.webp",
+      "img": "../img/live-palco.webp",
       "leg": "Guitars in a small music room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The singer sings very well.",
-          "img": "https://wolf-labs.pages.dev/p/704d1ab301c3/a-good-band-plays-well/img/live-palco.webp",
+          "img": "../img/live-palco.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It is a good band, and they play loudly.",
-          "img": "https://wolf-labs.pages.dev/p/704d1ab301c3/a-good-band-plays-well/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He plays the drums badly, but he works hard.",
-          "img": "https://wolf-labs.pages.dev/p/704d1ab301c3/a-good-band-plays-well/img/live-vitrola.webp",
+          "img": "../img/live-vitrola.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/704d1ab301c3/a-good-band-plays-well/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A guitar in its case in a record shop",
       "pede": "Look at the picture: a guitar in its case in a record shop. Write 2 or 3 sentences about a band or a singer you know: what they are like (<b>good</b>) and how they play or sing (<b>well</b>, <b>-ly</b>).",
       "ph": "My favorite band is a good band. They play …",

@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Oldest Toy in the Box · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Fredoka:wght@500;600;700&family=Atkinson+Hyperlegible:wght@400;700&family=Gochi+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>The Oldest Toy in the Box · Toy Story 5 · The Thrift Shelf</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Oldest Toy in the Box · Toy Story 5 · The Thrift Shelf</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Thirty years of toys that come alive.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Oldest, the Best: The oldest, the funniest, the most useful, the best.</p><p style="margin:0 0 6px"><b>The class (about 50 min):</b> I Warm-up and The Toy Box · III The Trailer · IV Scene by Scene · V The Best Toy Friend · VI The Oldest, the Best · VII The Thrift Shelf · VIII The Best and the Worst · IX Your Toy Box Awards. No extra scenes: every scene is part of the class.</p><p style="margin:0"><b>Open with:</b> “You know the toys now. In the trailer, who is the newest toy in the house? Guess.”</p></div><!--/prep-->
+    <p><i>Toy Story</i> (Pixar, 1995) was the first film made all with computers: the toys are alive, but only when people don’t look. Woody and Buzz now live with Bonnie, with Jessie, Rex the dinosaur and Forky, a spork. In <i>Toy Story 5</i> (2026) a tablet arrives, Lilypad, who talks, listens and does everything, and the old toys feel forgotten. The grammar: <b>superlatives</b>: <b>the + -est</b> (the oldest, the biggest), <b>y → -iest</b> (the funniest, the shiniest), <b>the most</b> + long adjectives (the most useful, the most modern), irregular <b>the best / the worst</b>, and <b>in</b> + a place (in the box, in the world) / <b>of</b> + a time (of my life).</p>
+    <p>A note for the teacher: the trailer is family animation, nothing to worry about. The times follow its captions (24/09), and each moment is told in our own words. The toys on the shelf are objects (a hat, a helmet, a dinosaur…), drawn simply, not the film’s characters.</p>
+    <p class="aq-guia"><b>Warm-up and The Toy Box (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the film under the photo). Let them talk; don’t correct the grammar yet. <b>2 · The Toy Box:</b> five things come out of the box, one at a time: Andy’s room, the toys, the box for Bonnie, Forky, and the new tablet. With each, the student answers a short question with a superlative (the oldest, the funniest, the most modern). At the end, they say which toy is the most important and why.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>package</i>, <i>device</i>, <i>abandoned</i>, <i>century</i> and <i>mission</i>, before the video, in mixed letters and match the columns. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <p class="fim-guia"><b>The ending (IX, Your Toy Box Awards)</b>: the student writes three awards for the things and people in their life: one with -est, one with the most, one with best or worst. The corrector marks <i>the most old</i>, <i>the goodest</i>, <i>the funniest of the house</i>. It goes to My notes.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is a child’s bedroom at night with an open toy box and a glowing tablet. I: Warm-up and The Toy Box. III: the trailer in three steps. <b>Before:</b> a ruler from Disagree to Agree (“Old toys are the best toys. Tablets are boring.”): the student moves the pin and says why. <b>Watch:</b> One word is wrong. Five lines, each with a ▶ time: tap it, hear the line, say the right word (the video jumps to that moment). <b>After:</b> five lines from the trailer to match with what they mean. IV: five frames on the film strip. V: The Best Toy Friend, a ranking of five toys. <b>VI, The Oldest, the Best:</b> six words to sort into three boxes (the … -est, the most …, special). When all six are in the right box, the rule appears under the boxes. The rule board stays in the corner on the next pages. <b>VII, The Thrift Shelf:</b> two shelves with six forgotten toys, grey under the lamp. For each toy the student reads the clue, taps the tag that fits (the oldest, the shiniest, the most nervous, the most modern, the most useful, the best), and says the whole sentence; the toy comes back to color and a handwritten tag hangs on it. <b>VIII, The Best and the Worst:</b> a wheel with six questions (the best restaurant, the worst trip, the oldest thing, the funniest person, the most useful app, the happiest day). The student spins, answers with a superlative and spins again. IX: the awards.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>the most old</i>, <i>the older toy</i> (comparative), <i>the shinyest / the funnyest</i>, <i>the nervousest / the usefulest</i>, <i>the most modernest</i>, <i>is most nervous</i> (no the), <i>the more modern</i>, <i>the goodest / the most good</i>, <i>the baddest / the most bad</i>, <i>the funniest toy of the house</i> (in).</p>
+    <!--conversa--><h4>THE BEST TOY FRIEND (V) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Line by Line, the trailer’s big fight (old toys or the tablet?) becomes a ranking: the student puts Woody, Buzz, Jessie, Forky and Lilypad in order, from the best friend for a child to the worst, and explains the top one and the last one with the -est / the most / the best / the worst. There is no right answer: wait five seconds in silence, use the PUSH line (only you see it), then tap “Show my teacher’s order” and agree on one top 3 together. Recast mistakes quietly (the most old, the goodest); at the end, ask them to fix one or two sentences themselves. About six minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up and The Toy Box, V The Best Toy Friend, VII The Thrift Shelf and VIII The Best and the Worst.</li>
+      <li><b>Listen</b>: II The Words, III The Trailer and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Oldest, the Best.</li>
+      <li><b>Write</b>: IX Your Toy Box Awards.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script src="aquece.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE OLDEST TOY · TOY STORY 5 (WOLFLIX A2) · pergunta-surpresa · 29/10/2026 · superlativos (the oldest, the most useful, the best) */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'What is the oldest thing in your bedroom?',
+    opc: ['A toy', 'A book', 'Some clothes'], st: ['The oldest thing in my room is …', 'It’s from …'],
+    ex: 'A book. It’s the oldest thing in my room: it’s from 1998.', push: 'Why do you keep it?' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'For one weekend: would you rather have no phone or no TV?',
+    opc: ['No phone', 'No TV'], st: ['I’d rather have no …', 'My phone is the most … thing I have.'],
+    ex: 'No TV. My phone is the most useful thing I have.', push: 'What is the most useful app on your phone?' },
+  { cena: 'prateleira', tipo: 'Opinion', q: 'What is the best age for a child’s first phone?',
+    opc: ['Eight', 'Twelve', 'Sixteen'], st: ['The best age is …, because …', '… is the worst age, because …'],
+    ex: 'Twelve. Eight is the worst age: they are the youngest in the school.', push: 'Who had the first phone in your family?' },
+  { cena: 'premio', tipo: 'What if', q: 'You can bring back one toy from your childhood. Which one?',
+    opc: ['A doll or a toy figure', 'A ball or a bike', 'A video game'], st: ['The best toy was …', 'It was the most … toy I had.'],
+    ex: 'A video game! My Super Nintendo was the best present of my life.', push: 'Who gave it to you?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE OLDEST TOY · TOY STORY 5, THE THRIFT SHELF (WOLFLIX A2) · conversa · 29/10/2026 · regra 3×3 do Carlos
+   Ranking colado no trailer: entra logo depois de IV · Line by Line. O trailer é a briga brinquedo velho ×
+   tablet (Lilypad); o aluno põe cinco amigos de criança em ordem e defende o primeiro e o último com
+   superlativos (the oldest, the most modern, the best, the worst). A aula fecha escrevendo (VIII): esta é a
+   decisão do meio. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'ranking', apos: 'falas', est: 'o', min: 6, img: 'brinquedos', rot: 'The Best Toy Friend', t: 'Who is the best friend for a child?',
+    p: 'Put the five in order, from the best friend to the worst. Then say why with the -est / the most. Your teacher pushes back.',
+    formato: 'ranking',
+    q: 'The best friend for a child today?',
+    itens: ['Woody, the old cowboy', 'Buzz, the space ranger', 'Jessie, the cowgirl', 'Forky, the fork toy', 'Lilypad, the tablet'],
+    dica: 'Tap from the best friend to the worst. Tap again to take it out.',
+    st: ['Number one is …, because he / she is the …', '… is the most …', 'The worst friend is …, because …'],
+    ex: 'Number one is Jessie: she is the bravest and the funniest. Lilypad is the last. She is the most modern, but she is the most boring friend.',
+    push: 'Your child wants Lilypad, not Woody. Do you say yes?',
+    prof: [0, 2, 1, 4, 3] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "Your oldest things, then thirty years of toys.",
+   "p": "Answer three questions. Then open the toy box."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn the words. Listen for them in yellow."
+  },
+  "video": {
+   "t": "Toy Story 5. The trailer.",
+   "p": "Say where you stand. Watch. Then two tasks."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it. Say it like the character."
+  },
+  "cv-ranking": {
+   "t": "Who is the best friend for a child?",
+   "p": "Rank the five. Say why with the -est."
+  },
+  "regra": {
+   "t": "Which tag does the word take?",
+   "p": "Tap a word, then its box. Read the rule."
+  },
+  "prateleira": {
+   "t": "Six forgotten toys need a tag.",
+   "p": "Read the clue. Tap the tag. Say the sentence."
+  },
+  "premio": {
+   "t": "The best and the worst of your life.",
+   "p": "Spin. Answer with a superlative. Spin again."
+  },
+  "fim": {
+   "t": "Three awards for your life.",
+   "p": "Write three superlatives. They go to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Superlativos (the oldest, the funniest, the most useful, the best / the worst): em Toy Story 5 chega Lilypad, um tablet que faz tudo, e os brinquedos velhos se sentem esquecidos.",
+  "armadilha": "Do “o mais” do português: “the most old”, “the most good”, “the most modernest”; e “is most nervous” sem the, “the funnyest”, “the goodest”, e “of the house” no lugar de “in the house”.",
+  "pal": [
+   "the oldest",
+   "the funniest",
+   "the most useful",
+   "the best",
+   "the worst",
+   "device",
+   "abandoned",
+   "mission"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o filme: trinta anos de brinquedos que ganham vida.",
+   "perg": "Who is the newest toy in the house? Guess.",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "mundo": {
+   "obj": "Três perguntas sobre as coisas mais antigas do aluno; depois a caixa de brinquedos, uma coisa por vez, com superlativos.",
+   "perg": "What is the oldest thing in your house?",
+   "pula": "Duas perguntas bastam; a caixa fica."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do trailer (package, device, abandoned, century, mission) antes de assistir.",
+   "perg": "What is the most useful device in your house?",
+   "pula": "Faça as letras misturadas e pule ligar as colunas."
+  },
+  "video": {
+   "obj": "O trailer inteiro em três passos: régua de opinião, palavra errada com ▶ e falas para ligar ao sentido.",
+   "perg": "Old toys or tablets: which are the best?",
+   "pula": "Assista uma vez só e faça uma tarefa só; o trailer é sempre inteiro."
+  },
+  "falas": {
+   "obj": "As falas com palavras amarelas, uma a uma; o aluno repete como o personagem.",
+   "perg": "Who says it?",
+   "pula": "Duas falas bastam."
+  },
+  "cv-ranking": {
+   "obj": "Ranking de cinco brinquedos como melhor amigo de uma criança, com the -est / the most.",
+   "perg": "Who is the best friend for a child, and why?",
+   "pula": "Só o primeiro e o último lugar, com o PUSH."
+  },
+  "regra": {
+   "obj": "Separar seis palavras em -est, the most e especiais; a regra aparece embaixo.",
+   "perg": "The most old, or the oldest?",
+   "pula": "Não corte: é a regra. Quatro palavras bastam."
+  },
+  "prateleira": {
+   "obj": "Seis brinquedos esquecidos: ler a pista, escolher a etiqueta e dizer a frase inteira.",
+   "perg": "Which toy is the shiniest?",
+   "pula": "Quatro brinquedos bastam."
+  },
+  "premio": {
+   "obj": "Roda com seis perguntas da vida (o melhor restaurante, a pior viagem) respondidas com superlativo.",
+   "perg": "What was the worst trip of your life?",
+   "pula": "Três giros bastam."
+  },
+  "fim": {
+   "obj": "Escrita: três prêmios para coisas e pessoas da vida do aluno (-est, the most, best / worst).",
+   "perg": "Who is the funniest person in your family?",
+   "pula": "Dois prêmios bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com superlativos sobre infância, objetos e tecnologia.",
+   "perg": "What was your favorite toy?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate: brinquedos velhos ou telas, com superlativos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira Woody e responde ao professor com superlativos.",
+   "perg": "Who is the best toy in the box?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "The best toy of your life.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "the oldest",
+    "the most",
+    "the best",
+    "the worst"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CHILDHOOD",
+     "q": "What was the best toy of your childhood?",
+     "fup": "Where is it now?",
+     "st": [
+      "The best toy was …",
+      "Now it’s …"
+     ],
+     "ex": "The best toy was my red bike. Now it’s at my mother’s house."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "What is the most useful app on your phone?",
+     "fup": "And the most useless?",
+     "st": [
+      "The most useful app is …",
+      "The most useless is …"
+     ],
+     "ex": "The most useful app is the map. The most useless is a game I never play."
+    },
+    {
+     "k": "OLD THINGS",
+     "q": "What is the oldest thing you still use?",
+     "fup": "Why do you keep it?",
+     "st": [
+      "The oldest thing is …",
+      "I keep it because …"
+     ],
+     "ex": "The oldest thing is my watch. I keep it because it was my dad’s."
+    },
+    {
+     "k": "YOUR FRIENDS",
+     "q": "Who is the funniest person you know?",
+     "fup": "What does he or she do?",
+     "st": [
+      "The funniest person is …",
+      "He / She always …"
+     ],
+     "ex": "The funniest person is my cousin. She always tells crazy stories."
+    },
+    {
+     "k": "MOVIES",
+     "q": "What is the best animated film for you?",
+     "fup": "And the saddest?",
+     "st": [
+      "The best is …",
+      "The saddest is …"
+     ],
+     "ex": "The best is Toy Story. The saddest is Up."
+    },
+    {
+     "k": "FORGOTTEN",
+     "q": "What is the most forgotten thing in your house?",
+     "fup": "Where is it?",
+     "st": [
+      "The most forgotten thing is …",
+      "It’s in the …"
+     ],
+     "ex": "The most forgotten thing is my guitar. It’s in the closet."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "the best",
+    "the most",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "For a child: an old toy or a tablet?",
+     "a": "An old toy",
+     "b": "A tablet",
+     "fa": [
+      "An old toy. It’s the best for imagination."
+     ],
+     "fb": [
+      "A tablet. It’s the most useful thing for learning."
+     ]
+    },
+    {
+     "q": "The best gift: something new or something old with a story?",
+     "a": "New",
+     "b": "Old",
+     "fa": [
+      "New. It’s the most exciting."
+     ],
+     "fb": [
+      "Old. The best gifts have a story."
+     ]
+    },
+    {
+     "q": "Keep your oldest things or give them away?",
+     "a": "Keep",
+     "b": "Give away",
+     "fa": [
+      "Keep them. They are the most important memories."
+     ],
+     "fb": [
+      "Give them away. The best place for a toy is with a child."
+     ]
+    },
+    {
+     "q": "The best age: being a child or being an adult?",
+     "a": "A child",
+     "b": "An adult",
+     "fa": [
+      "A child. It’s the happiest time."
+     ],
+     "fb": [
+      "An adult. It’s the most free time."
+     ]
+    }
+   ],
+   "fim": "Four rounds. That was the best debate of the day."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Woody now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Woody.",
+   "perguntas": [
+    "Who is the oldest toy in the box?",
+    "Who is your best friend?",
+    "What is the funniest thing about Forky?",
+    "Is Lilypad the most useful toy in the house?",
+    "What was the best day of your life?",
+    "What is the worst thing for a toy?"
+   ],
+   "st": [
+    "The oldest is …",
+    "The best … is …",
+    "The worst thing is …"
+   ],
+   "ex": "The worst thing for a toy is a closed box. Nobody plays with you."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Seven Nights · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Seven Nights · The Sleep Curve</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Seven Nights · The Sleep Curve</h2>
+    <p>Tonight is about your student’s own sleep. There is no story: there are real voices from a sleep lab, and a <b>sleep curve</b> on the screen that changes with every rule they say about themselves. The grammar is the grammar of habits and facts: <b>if + present, present</b> (<i>If I drink coffee late, I wake up at night.</i>). They discover the pattern from the voices before they see the rule.</p>
+    <h4>THEIR NUMBERS COME BACK</h4>
+    <p>Scene I asks for three numbers from last night (hours of sleep, cups of coffee, minutes on a screen in bed). They shape the curve in scene IV and come back in the last scene.</p>
+    <h4>THE CURVE</h4>
+    <p>Scene IV is the heart. Six evening habits. For each one, the student says their own rule and you tap what it does to their sleep. If they say <i>will</i>, tap HEARD “WILL”: the curve doesn’t move, because a habit is not a prediction.</p>
+    <h4>THE AUDIO · THE MISTAKES</h4>
+    <p>Six recordings, checked against the voices on 06/10: they match. Listen for <i>If I drink coffee, I will wake up</i> (for a habit), <i>if he drink</i>, and <i>when</i> for something that doesn’t always happen.</p>
+    <!--conversa--><h4>THE WORST WAKE-UP (VI) AND THE SURPRISE QUESTION</h4>
+    <p>Scene VI is now a ranking: five ways to wake up, from the alarm at 5 AM to a work call at seven. Your student puts them in order (1 is the worst) and says what happens with <i>if</i> or <i>when</i>: <i>when</i> for what always happens, <i>if</i> for what may happen. Wait five seconds in silence, then use the PUSH line (only you see it). Show your order and agree on one top 3 together. Recast mistakes quietly while they talk (the -s of he/she, no <i>will</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Last Night in Numbers, IV Your Curve, V The Domino, VI The Worst Wake-Up, IX The Sleep Coach.</li>
+      <li><b>Listen</b>: II, VII, VIII. <b>Focus</b>: III The Rule of the Body.</li>
+      <li><b>Write</b>: X, their rules for a good night. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SEVEN NIGHTS (Main A2) · pergunta-surpresa · 27/10/2026 · zero conditional (if / when + presente) */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'vozes', tipo: 'And you?', q: 'What do you do when you can’t sleep?',
+    opc: ['I read', 'I look at my phone', 'I count something'], st: ['When I can’t sleep, I …', 'If it’s very late, I …'],
+    ex: 'I look at my phone. When I can’t sleep, I watch videos, and then I sleep even less!', push: 'Does it work?' },
+  { cena: 'curva', tipo: 'Would you rather', q: 'Would you rather sleep early and wake up early, or sleep late and wake up late?',
+    opc: ['Early bird', 'Night owl'], st: ['If I sleep late, I …', 'I’d rather …, because …'],
+    ex: 'Night owl. If I wake up before seven, I don’t speak to anybody.', push: 'What time is perfect for you?' },
+  { cena: 'domino', tipo: 'Opinion', q: 'Is a nap in the afternoon a good idea?',
+    opc: ['Yes, always', 'Only 20 minutes', 'No, never'], st: ['If I take a nap, I …', 'When people nap, they …'],
+    ex: 'Only twenty minutes. If I sleep for an hour, I wake up angry.', push: 'Where do you nap: bed, sofa, or office chair?' },
+  { cena: 'coach', tipo: 'What if', q: 'You stay in a hotel. The room is next to the lift. What do you do?',
+    opc: ['Ask for a new room', 'Use earplugs', 'Nothing, I sleep anywhere'], st: ['If the room is noisy, I …', 'When I travel, I always …'],
+    ex: 'Ask for a new room. If I hear the lift all night, I don’t sleep at all.', push: 'They say: no other room. Now?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SEVEN NIGHTS (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O ranking entra no lugar de "VI · If or When?" (extra, prática controlada de tocar a palavra).
+   Agora é cena do núcleo: a decisão no MEIO da aula. As frases-iniciadoras guardam a diferença
+   if × when (when = sempre; if = às vezes) e o zero conditional (if + presente, presente). */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'acorda', troca: 'ifwhen', est: 'o', min: 7, img: 'telefone', rot: 'The Worst Wake-Up', t: 'Five ways to wake up. Which one is the worst?',
+    p: 'Put them in order, 1 is the worst. Say what happens with if or when. Then compare with your teacher.',
+    formato: 'ranking',
+    q: 'Which is the worst way to wake up?',
+    itens: ['The alarm at 5 AM', 'A neighbour with a drill', 'The cat on your face', 'A work call at 7', 'Sun in your eyes'],
+    st: ['If my neighbour uses a drill, I …', 'When the alarm rings at five, I always …', 'If the cat jumps on me, I …'],
+    ex: 'Number 1 is the work call. If my boss calls at seven, I feel stressed all day. The sun is my last one: when the sun is in my eyes, I just turn around.',
+    push: 'Which one happened to you this month? What did you do?',
+    prof: [3, 1, 0, 2, 4],
+    dica: 'Tap from the worst to the least bad. Tap again to take it out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "numeros": {
+   "t": "Your last night, in three numbers.",
+   "p": "Answer each message out loud."
+  },
+  "vozes": {
+   "t": "Three sleepers, three rules.",
+   "p": "Play the voice. Say the rule you heard."
+  },
+  "regra": {
+   "t": "Two halves, both in the present.",
+   "p": "Say the sentence. Tap the second half."
+  },
+  "curva": {
+   "t": "Six habits. What do they do?",
+   "p": "Say your rule with if. Watch the curve."
+  },
+  "domino": {
+   "t": "A bad night is a chain.",
+   "p": "Say each rule. Then break the chain."
+  },
+  "cv-acorda": {
+   "t": "Which wake-up is the worst?",
+   "p": "Rank them, 1 is the worst. Say why."
+  },
+  "irmaos": {
+   "t": "Same house, two different bodies.",
+   "p": "Play each one. Say the rule. Mind the -s."
+  },
+  "lab": {
+   "t": "A real sleep study.",
+   "p": "Play it. Answer, then argue."
+  },
+  "coach": {
+   "t": "You are the sleep coach.",
+   "p": "Hear the problem. Give a rule with if."
+  },
+  "fim": {
+   "t": "Your numbers are back.",
+   "p": "Write your rules for a good night. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Zero conditional (if + presente, presente) para hábitos e fatos do corpo: o sono do próprio aluno, com vozes de um laboratório e uma curva que muda.",
+  "armadilha": "O brasileiro põe will no hábito (“If I drink coffee, I will wake up”), por influência do futuro em português, e esquece o -s de he/she (“if he drink”).",
+  "pal": [
+   "if",
+   "when",
+   "wake up",
+   "fall asleep",
+   "go to bed",
+   "coffee",
+   "screen",
+   "alarm",
+   "tired"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o tema: o corpo tem regras, e hoje o aluno descobre as dele.",
+   "perg": "How did you sleep last night?",
+   "pula": "Só leia a frase da capa e comece."
+  },
+  "numeros": {
+   "obj": "Aquecimento pessoal: horas de sono, xícaras de café e minutos de tela na cama.",
+   "perg": "How many hours did you sleep last night?",
+   "pula": "Os três números bastam; não aprofunde."
+  },
+  "vozes": {
+   "obj": "Ouvir três pessoas do laboratório e descobrir o padrão if + presente.",
+   "perg": "What is her rule?",
+   "pula": "Duas vozes bastam."
+  },
+  "regra": {
+   "obj": "Foco: as duas metades no presente, sem will.",
+   "perg": "What happens if you drink coffee late?",
+   "pula": "Quatro frases bastam."
+  },
+  "curva": {
+   "obj": "Coração da aula: o aluno diz a própria regra para seis hábitos e a curva muda.",
+   "perg": "What happens to your sleep if you watch TV in bed?",
+   "pula": "Quatro hábitos bastam; não corte a cena."
+  },
+  "domino": {
+   "obj": "Encadear regras: o fim de uma é o começo da próxima.",
+   "perg": "And if you wake up at three, what happens?",
+   "pula": "Uma corrente curta basta."
+  },
+  "cv-acorda": {
+   "obj": "Ranking dos cinco piores jeitos de acordar, com if e when, e comparar com o professor.",
+   "perg": "Which one is the worst for you, and why?",
+   "pula": "Só o top 3."
+  },
+  "irmaos": {
+   "obj": "Irmã e irmão com corpos diferentes: regra na 3ª pessoa, com o -s.",
+   "perg": "What happens if he drinks coffee?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "lab": {
+   "obj": "Um estudo real de sono: ouvir a regra e discutir se vale para o aluno.",
+   "perg": "Is that true for you?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "coach": {
+   "obj": "O aluno vira coach de sono e dá regras com if para o paciente (o professor).",
+   "perg": "What should I do if I can’t sleep?",
+   "pula": "Cena extra: dois problemas bastam."
+  },
+  "fim": {
+   "obj": "Escrita: as regras do aluno para uma boa noite, com os números da cena I.",
+   "perg": "What is your number one rule?",
+   "pula": "Três regras bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre hábitos e o corpo com if + presente.",
+   "perg": "What happens if you skip breakfast?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre sono e hábitos e justificar com if.",
+   "perg": "Which side, and what happens if you do it?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta a própria noite perfeita, passo a passo, com if e when.",
+   "perg": "What do you do when you get home?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More rules about your body.",
+   "p": "Pick a card. Answer with if.",
+   "palavras": [
+    "if",
+    "when",
+    "usually",
+    "always"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR MORNING",
+     "q": "What happens if you skip breakfast?",
+     "fup": "And when you eat a big breakfast?",
+     "st": [
+      "If I skip breakfast, I …",
+      "When I eat a lot, I …"
+     ],
+     "ex": "If I skip breakfast, I get hungry at ten."
+    },
+    {
+     "k": "YOUR NAPS",
+     "q": "Do you take naps? What happens if you sleep in the afternoon?",
+     "fup": "Is it the same on Sunday?",
+     "st": [
+      "If I take a nap, I …",
+      "When I don’t nap, I …"
+     ],
+     "ex": "If I take a long nap, I can’t sleep at night."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "What happens if you look at your phone in bed?",
+     "fup": "Where is your phone at night?",
+     "st": [
+      "If I look at my phone, I …",
+      "When the phone is far, I …"
+     ],
+     "ex": "If I look at my phone in bed, I fall asleep at one."
+    },
+    {
+     "k": "THE WEEKEND",
+     "q": "What happens if you go to bed late on Saturday?",
+     "fup": "How do you feel on Monday?",
+     "st": [
+      "If I go to bed late, I …",
+      "On Monday, I …"
+     ],
+     "ex": "If I go to bed late on Saturday, I am tired on Monday."
+    },
+    {
+     "k": "STRESS",
+     "q": "What happens to your sleep when you are worried?",
+     "fup": "What helps you?",
+     "st": [
+      "When I am worried, I …",
+      "If I …, I feel better."
+     ],
+     "ex": "When I am worried, I wake up at four."
+    },
+    {
+     "k": "HOT NIGHTS",
+     "q": "What happens if it is very hot at night?",
+     "fup": "Do you use a fan?",
+     "st": [
+      "If it is hot, I …",
+      "When I use a fan, I …"
+     ],
+     "ex": "If it is very hot, I sleep with the window open."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "if",
+    "when",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "One alarm or five alarms?",
+     "a": "One alarm",
+     "b": "Five alarms",
+     "fa": [
+      "One alarm. If I have five, I sleep through all of them."
+     ],
+     "fb": [
+      "Five alarms. If I have one, I don’t wake up."
+     ]
+    },
+    {
+     "q": "Coffee after 4 PM: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. If I drink coffee, I work better."
+     ],
+     "fb": [
+      "No. If I drink coffee late, I wake up at three."
+     ]
+    },
+    {
+     "q": "Sleep in on Sunday or wake up early?",
+     "a": "Sleep in",
+     "b": "Wake up early",
+     "fa": [
+      "Sleep in. If I sleep more, I feel great."
+     ],
+     "fb": [
+      "Wake up early. If I sleep in, I lose the day."
+     ]
+    },
+    {
+     "q": "Phone in the bedroom or in the kitchen?",
+     "a": "Bedroom",
+     "b": "Kitchen",
+     "fa": [
+      "Bedroom. If there is a problem, I hear it."
+     ],
+     "fb": [
+      "Kitchen. If it is far, I sleep better."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Perfect Night",
+   "t": "Build your perfect night.",
+   "p": "Answer step by step. Use if or when.",
+   "prof": "Push for the present in both halves: no will. Ask “always?” to check if or when.",
+   "passos": [
+    {
+     "q": "It’s 7 PM. What do you do when you get home?",
+     "st": [
+      "When I get home, I …",
+      "If I am tired, I …"
+     ],
+     "ex": "When I get home, I take a shower."
+    },
+    {
+     "q": "Dinner. What happens if you eat late?",
+     "st": [
+      "If I eat late, I …",
+      "When I eat early, I …"
+     ],
+     "ex": "If I eat late, I can’t sleep."
+    },
+    {
+     "q": "The hour before bed. What do you do, and what happens?",
+     "st": [
+      "If I read a book, I …",
+      "When I turn off the TV, I …"
+     ],
+     "ex": "If I read a book, I fall asleep fast."
+    },
+    {
+     "q": "Morning. What happens when the night is perfect?",
+     "st": [
+      "When I sleep eight hours, I …",
+      "If the night is good, I …"
+     ],
+     "ex": "When I sleep eight hours, I am happy all day."
+    }
+   ],
+   "fim": "That’s your perfect night. Now try it tonight."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

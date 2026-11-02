@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Neither Yes nor No",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c1a137c2e213/neither-yes-nor-no/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "polite distance: the agentless passive (was moved, has been decided, have been passed on) and neither … nor / either … or / not only … but also; distance that protects people versus distance that hides (Mistakes were made)",
   "abrir": "Think of a complaint you made or received. Was a person named, or only the problem?",
   "fecho": "Distance can protect people or hide them. <b>Was moved</b>, <b>it has been decided</b>, <b>have been passed on</b>: the agent disappears, so the restaurant keeps the responsibility. <b>Neither … nor</b> rejects both elegantly (<i>neither the error nor the wait is acceptable</i>). But a real apology needs a person: <i>I apologize</i>, not <i>mistakes were made</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo draft a public reply to a one-star review. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c1a137c2e213/neither-yes-nor-no/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The restaurant kitchen after service",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -106,17 +106,17 @@ window.HW2 = {
         {
           "t": "Your booking was moved to the late list by a system error.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/c1a137c2e213/neither-yes-nor-no/img/live-capa.webp"
+          "img": "../img/live-capa.webp"
         },
         {
           "t": "Neither the error nor the wait is acceptable.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/c1a137c2e213/neither-yes-nor-no/img/live-conversa.webp"
+          "img": "../img/live-conversa.webp"
         },
         {
           "t": "It has been decided that every booking will be confirmed by phone.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/c1a137c2e213/neither-yes-nor-no/img/live-capa.webp"
+          "img": "../img/live-capa.webp"
         }
       ]
     },
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c1a137c2e213/neither-yes-nor-no/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A restaurant kitchen after service",
       "pede": "Look at the picture: a kitchen after service. Write 2 or 3 sentences you could use in a public reply to a complaint. Use the passive without naming a person, or <b>neither … nor</b>.",
       "ph": "Your order was … Neither the … nor the …",

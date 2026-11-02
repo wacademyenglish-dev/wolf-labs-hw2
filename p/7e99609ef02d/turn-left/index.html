@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Turn Left · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="serie.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Challenge · Episode 8</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season map: London to Edinburgh"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>The Challenge · Episode 8 · Turn Left</h2>
+    <p>Episode 8. They&rsquo;re in Edinburgh! First Holyrood, at the end of the Royal Mile; then the castle, at the top of the hill. The language is <b>directions</b>: turn left, turn right, go up, go down, at the end of. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Previously on The Challenge, Where is it, From the station. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Episode 8, in three steps. The video unlocks when the student answers the Before questions.</li>
+      <li><b>Focus</b> &mdash; Start with the verb, Match the arrows, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Directions to your place. It goes to the student&rsquo;s My notes.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Word by word from Portuguese: &ldquo;vire <i>&agrave;</i> esquerda&rdquo; becomes <i>turn to the left</i>, &ldquo;<i>no</i> fim da rua&rdquo; becomes <i>in the end of the road</i>, and &ldquo;subir&rdquo; becomes <i>go to up</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The map on top shows the season; today stop 8 lights up. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* THE CHALLENGE · EPISODE 8 · TURN LEFT (A1)
+   Vídeo: BBC Learning English, "Get to Holyrood" (Igl06X0Sj44, 4:40). AULA NOVA. */
+const M = { nome: "Turn Left", kick: "A1 · DIRECTIONS: TURN LEFT, GO UP" };
+var EP = {
+  n: 8, titulo: 'Turn Left', video: 'Igl06X0Sj44', onde: { Fran: 'in Edinburgh', Bob: 'in Edinburgh', Paula: 'in Edinburgh' },
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'They\'re in Edinburgh! First stop: Holyrood, at the end of the Royal Mile. Then… the castle, at the top of the hill.',
+      nota: 'Ask: when you are lost, do you ask people or use your phone?' },
+    { k: 'cartas', est: 'o', rot: 'previously on', titulo: 'Previously on <em>The Challenge</em>', pt: 'Vire as cartas e lembre o episódio 7.',
+      nota: 'Recap of Episode 7 with has and want.',
+      cartas: [
+        { frente: 'Fran', sob: 'Episode 7', verso: 'I need to go to Edinburgh, but I want to stop. It\'s so difficult.', dica: 'She wants to stop.', cor: 'var(--fran)', fw: { q: 'When something is difficult, what do you do?', st: ['I stop.', 'I can do this!', 'I need help.'], help: '“I call my mum!”' } },
+        { frente: 'Friend', sob: 'Episode 7', verso: 'So, Edinburgh. Can you still do it?', dica: 'She helps Fran.', cor: 'var(--paula)' },
+        { frente: 'Fran', sob: 'Episode 7', verso: 'Yes, I can. I can do this. Let\'s do it!', dica: 'She doesn\'t stop.', cor: 'var(--fran)' }
+      ] },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Where is <em>it</em>?', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. The student can point and use left and right.',
+      cartas: [
+        { frente: 'Bread?', verso: 'Where is the bakery near your home?', dica: 'It\'s near … / It\'s on …', cor: 'var(--paula)', fw: { q: 'How do you go there from your home?', st: ['Go out of my house.', 'Turn left.', 'Turn right.'], help: 'Start with the verb: “Go out. Turn left.”' } },
+        { frente: 'Map?', verso: 'Do you use a map on your phone?', dica: 'Yes, I do. / No, I don\'t.', cor: 'var(--bob)', fw: { q: 'Are you good with directions?', st: ['Yes, I am.', 'No, I\'m not.', 'I get lost!'], help: '“No, I\'m not. I get lost all the time!”' } },
+        { frente: 'Lost?', verso: 'Where do you get lost in your city?', dica: 'In the center. / In the mall.', cor: 'var(--fran)', fw: { q: 'What do you do?', st: ['I ask people.', 'I use my phone.', 'I call a friend.'], help: '“I ask people: Excuse me, where is…?”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'Episode 8 · 4:40', titulo: 'Watch <em>Episode 8</em>', pt: 'Responda antes. O vídeo destrava depois.',
+      nota: 'Before: two guesses. After: true or false about the way.',
+      antes: [ { q: 'Where do they go first?', ops: [{ t: 'Holyrood' }, { t: 'the castle' }, { t: 'the station' }] }, { q: 'Edinburgh Castle is…', ops: [{ t: 'at the top of a hill' }, { t: 'next to the sea' }] } ],
+      durante: 'Listen for left, right, up and at the end of.',
+      depois: [ { f: 'When you come out of the station, turn right.', ok: 0 }, { f: 'Holyrood is at the end of the Royal Mile.', ok: 1 }, { f: 'To win, go to Edinburgh Castle.', ok: 1 }, { f: 'The castle is at the bottom of the hill.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Start with the <em>verb</em>', pt: 'Direções começam com o verbo: Turn left. Go up. · no fim de = at the end of.',
+      nota: 'Read each card. The red card: “vire à esquerda no fim” translated word by word.',
+      cartoes: [ { g: '<b>Turn left</b>. <b>Turn right</b>.', p: 'Turn = vire.' }, { g: '<b>Go up</b> the hill.', p: 'Go up / go down.' }, { g: '<b>At the end of</b> the road', p: 'No fim da rua.' }, { g: 'Turn to the left in the end.', p: 'Say: turn left at the end.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'directions', titulo: 'Match the <em>arrows</em>', pt: 'Toque na direção e depois na seta.', grande: 1,
+      nota: 'Say each direction out loud and point.',
+      esq: ['turn left', 'turn right', 'go up the hill', 'go down the hill', 'go straight on'], dir: ['⟵', '⟶', '⬈', '⬊', '⬆'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'From this room to the kitchen: give me directions.', st: ['Go out of the room.', 'Turn left.', 'It\'s at the end of …'], help: '“Go out. Turn right. The kitchen is at the end.”' } },
+    { k: 'cartas', est: 'o', rot: 'the way to Holyrood', titulo: 'From the <em>station</em>', pt: 'Vire os passos na ordem: é o caminho até Holyrood.',
+      nota: 'The four steps from the episode, in order. The student reads them and then gives directions in their own city.',
+      cartas: [
+        { frente: '1', sob: 'step', verso: 'Come out of the station.', dica: 'Come out of …', cor: 'var(--bob)', fw: { q: 'Now you: from your home to a café. Give me directions.', st: ['Go out of my house.', 'Turn left.', 'At the end of the road, …'], help: '“Go out of my house. Turn left. The café is at the end of the road.”' } },
+        { frente: '2', sob: 'step', verso: 'Turn left. Go up the hill to the left.', dica: 'Turn …', cor: 'var(--paula)' },
+        { frente: '3', sob: 'step', verso: 'At the end of the road, turn left on to the Royal Mile.', dica: 'At the end of …', cor: 'var(--fran)' },
+        { frente: '4', sob: 'step', verso: 'At the end of the Royal Mile is Holyrood!', dica: 'Well done!', cor: 'var(--ok)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'Word by word from Portuguese: “à esquerda”, “no fim”, “subir para”.',
+      itens: [ { erro: 'Turn <s>to the</s> left.', certo: 'Turn <b>left</b>.', por: 'Just: turn left.' }, { erro: '<s>In</s> the end of the road', certo: '<b>At</b> the end of the road', por: '“No fim da rua”: at the end of.' }, { erro: 'Go <s>to up</s> the hill.', certo: 'Go <b>up</b> the hill.', por: 'Go up: no to.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the episode. Read each one out loud.',
+      itens: [ { f: '___ left.', ops: ['Turn', 'Turns'], ok: 0 }, { f: 'Go ___ the hill.', ops: ['up', 'on'], ok: 0 }, { f: 'Holyrood is ___ the end of the Royal Mile.', ops: ['at', 'in'], ok: 0 }, { f: 'The castle is at the ___ of the hill.', ops: ['top', 'end'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Directions to your <em>place</em>', pt: 'Escreva o caminho da sua casa até um lugar de que você gosta.',
+      ph: 'Go out of my house. Turn left…', nota: 'The line under the paper catches “turn to the left” and “in the end of”. SAVE sends it to My notes.',
+      banco: ['Go out of', 'Turn left.', 'Turn right.', 'Go up the hill.', 'Go down the road.', 'At the end of the road,', 'It\'s on the left.'],
+      regras: [['\\bturn to the (left|right)\\b', 'Check: just turn left / turn right.'], ['\\bin the end of\\b', 'Check: at the end of.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Who\'s running?', tx: 'A taxi? Running? Cycling again? Everybody wants the castle.',
+      ganchos: [['Paula', 'a taxi?'], ['Bob', 'running!'], ['Fran', 'her bike again']], nota: 'Ask: who do you think arrives first? That opens Episode 9.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="serie.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "Edinburgh! First Holyrood. Then the castle, up the hill."
+  },
+  "c10": {
+   "p": "A taxi? Running? Everybody wants the castle."
+  }
+ },
+ "prep": {
+  "obj": "Direções com o verbo no começo: turn left, turn right, go up, go down, at the end of. Episódio 8: em Edimburgo, primeiro Holyrood, depois o castelo.",
+  "armadilha": "Tradução palavra por palavra: “vire à esquerda” vira “turn to the left”, “no fim da rua” vira “in the end of the road” e “subir” vira “go to up”.",
+  "pal": [
+   "turn left",
+   "turn right",
+   "go up",
+   "go down",
+   "go straight on",
+   "at the end of",
+   "the Royal Mile",
+   "the castle",
+   "Holyrood"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abre o episódio 8: chegaram a Edimburgo; Holyrood e depois o castelo.",
+   "perg": "When you are lost, do you ask people or use your phone?",
+   "pula": "Uma resposta e siga."
+  },
+  "c1": {
+   "obj": "Previously on: revisão do episódio 7 com has e want.",
+   "perg": "What does Fran want?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Conversa sobre lugares; o aluno aponta e usa left e right.",
+   "perg": "Where is the bathroom in your house?",
+   "pula": "Duas cartas bastam."
+  },
+  "c3": {
+   "obj": "Episódio 8 inteiro: dois palpites, vídeo, verdadeiro ou falso sobre o caminho.",
+   "perg": "Where do they go first?",
+   "pula": "Assista uma vez só; o vídeo vai inteiro."
+  },
+  "c4": {
+   "obj": "A regra: a frase começa pelo verbo; o cartão vermelho é “vire à esquerda no fim”.",
+   "perg": "How do you say it? Start with the verb.",
+   "pula": "Leia os cartões e peça uma direção."
+  },
+  "c5": {
+   "obj": "Ligar cada direção à seta, dizendo em voz alta e apontando.",
+   "perg": "Turn left: show me!",
+   "pula": "Faça os pares sem repetir."
+  },
+  "c6": {
+   "obj": "Os quatro passos da estação até Holyrood; depois o aluno dá direções na cidade dele.",
+   "perg": "How do I get from the station to your house?",
+   "pula": "Leia os passos e pule a parte da cidade."
+  },
+  "c7": {
+   "obj": "Corrigir as três armadilhas: to the left, in the end of, go to up.",
+   "perg": "Which one is right? Read it out loud.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c8": {
+   "obj": "Prática com falas do episódio; ler cada uma em voz alta.",
+   "perg": "Read the full line out loud, please.",
+   "pula": "Faça duas linhas."
+  },
+  "c9": {
+   "obj": "Escrever o caminho até a casa do aluno ou um lugar favorito; vai para o My notes.",
+   "perg": "How do I get to your favorite café?",
+   "pula": "Três passos bastam."
+  },
+  "c10": {
+   "obj": "Gancho do episódio 9: táxi, corrida ou bicicleta até o castelo.",
+   "perg": "Who do you think arrives first?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com direções, na cidade do aluno.",
+   "perg": "How do I get there from here?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas formas de se achar ou de chegar, com um motivo.",
+   "perg": "Phone or people? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Paula em Edimburgo e dá direções ao professor.",
+   "perg": "Paula, how do I get to the castle?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Directions in your city.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "turn left",
+    "turn right",
+    "go up",
+    "at the end of"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR STREET",
+     "q": "What is at the end of your street?",
+     "fup": "Is it a shop or a house?",
+     "st": [
+      "At the end of my street, there is …"
+     ],
+     "ex": "At the end of my street, there is a bakery."
+    },
+    {
+     "k": "THE BAKERY",
+     "q": "How do I get from your house to a bakery?",
+     "fup": "Is it far?",
+     "st": [
+      "Go …",
+      "Turn …",
+      "It's at the end of …"
+     ],
+     "ex": "Go straight on. Turn left. It's at the end of the road."
+    },
+    {
+     "k": "YOUR KITCHEN",
+     "q": "How do I get from your door to your kitchen?",
+     "fup": "Is it on the left or on the right?",
+     "st": [
+      "Go straight on.",
+      "Turn …",
+      "It's on the …"
+     ],
+     "ex": "Go straight on and turn right. It's on the left."
+    },
+    {
+     "k": "LOST",
+     "q": "You are lost. Do you ask people or use your phone?",
+     "fup": "What do you say?",
+     "st": [
+      "I ask people.",
+      "I use my phone.",
+      "Excuse me, where is …?"
+     ],
+     "ex": "I ask people: Excuse me, where is the station?"
+    },
+    {
+     "k": "A HILL",
+     "q": "Is there a hill in your city?",
+     "fup": "Do you go up by car or on foot?",
+     "st": [
+      "Yes, there is …",
+      "I go up by …"
+     ],
+     "ex": "Yes, there is. I go up by car!"
+    },
+    {
+     "k": "THE CASTLE",
+     "q": "Edinburgh Castle is at the top of the hill. Do you want to go?",
+     "fup": "Taxi or on foot?",
+     "st": [
+      "Yes, I want to …",
+      "By taxi. / On foot."
+     ],
+     "ex": "Yes, I want to go. On foot!"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "left",
+    "right",
+    "up",
+    "down",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Ask people or use your phone?",
+     "a": "Ask people",
+     "b": "Use my phone",
+     "fa": [
+      "Ask people. They know the way."
+     ],
+     "fb": [
+      "My phone. It says turn left, turn right."
+     ]
+    },
+    {
+     "q": "Go up the hill on foot or by taxi?",
+     "a": "On foot",
+     "b": "By taxi",
+     "fa": [
+      "On foot. It's cheap."
+     ],
+     "fb": [
+      "By taxi. The hill is big!"
+     ]
+    },
+    {
+     "q": "Holyrood or the castle first?",
+     "a": "Holyrood",
+     "b": "The castle",
+     "fa": [
+      "Holyrood. It's at the end of the Royal Mile."
+     ],
+     "fb": [
+      "The castle. It's at the top of the hill."
+     ]
+    },
+    {
+     "q": "A map on paper or a map on the phone?",
+     "a": "Paper",
+     "b": "Phone",
+     "fa": [
+      "Paper. No battery problem."
+     ],
+     "fb": [
+      "Phone. It's fast."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Paula now.",
+   "p": "Your teacher asks for directions.",
+   "aluno": "Listen to your teacher’s question. Answer as Paula, in Edinburgh.",
+   "perguntas": [
+    "Excuse me, where is Holyrood?",
+    "Do I turn left or right here?",
+    "Where is the Royal Mile?",
+    "How do I get to the castle?",
+    "Do I go up or down?",
+    "Is the station near here?"
+   ],
+   "st": [
+    "Turn …",
+    "Go up / Go down …",
+    "It's at the end of …"
+   ],
+   "ex": "Go up the Royal Mile. The castle is at the top of the hill."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

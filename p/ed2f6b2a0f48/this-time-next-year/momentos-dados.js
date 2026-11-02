@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de This Time Next Year (11/10/2026): o mundo em 2050 se nada mudar (vídeo sobre o clima).
+   Forma: o termômetro (a preocupação). Alvo: future continuous (will be + -ing), won’t be + -ing, Will you be using…?
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [5, 6, 7], k: 'The question', quem: 'The narrator',
+    contexto: 'The video imagines the world in 30 to 80 years, if we change nothing.',
+    frase: 'So, <b>what will our world look like</b> in the next 30 to 80 years if we continue on the current path?',
+    explica: 'A big question about the future. To describe a scene in progress at a future moment, use <i>will be + -ing</i>.',
+    formula: 'In 2050 we <b>will be living</b> in a hotter world.',
+    tente: 'Imagine 2050. What will you be doing?',
+    ex: 'In 2050 I’ll be living on a farm. I’ll be growing my own food!',
+    sente: { q: 'How worried is the narrator?', de: 'relaxed', a: 'very worried', st: 'It’s … because in 2050 we will be…' } },
+  { i: [12, 13, 14], k: 'Still time', quem: 'The narrator',
+    contexto: 'Before the scary part, a message of hope.',
+    frase: 'This future we’re about to describe is bleak. But remember, <b>there’s still time</b> to ensure it doesn’t become our reality.',
+    explica: '<i>Bleak</i> = very dark, without hope. But the future is not decided yet.',
+    formula: 'We <b>won’t be living</b> like this if we act now. · <b>Will</b> you <b>be using</b> your car less? (polite)',
+    tente: 'Ask your teacher a polite question about next week: Will you be…?',
+    ex: 'Will you be working on Saturday? Will you be using the car tomorrow?',
+    sente: { q: 'How hopeful is this moment?', de: 'hopeless', a: 'hopeful', st: 'It’s … because there is still time…' } },
+  { i: [15, 16, 17, 18], k: 'It’s 2050', quem: 'The narrator',
+    contexto: 'The video jumps to 2050. The world did not reach its goal.',
+    frase: 'It’s 2050. <b>We’ve blown past</b> the 1.5 degree target that world leaders promised to stick to.',
+    explica: '<i>Blow past</i> = go much higher than a limit. The Earth will be getting hotter every year.',
+    formula: 'In 2050, the planet <b>will be getting</b> hotter every year.',
+    tente: 'This time next year, what will your city be doing differently?',
+    ex: 'This time next year, they’ll be building a new metro line.',
+    sente: { q: 'How serious is this news?', de: 'not serious', a: 'very serious', st: 'It’s … because the world will be…' } },
+  { i: [23, 24, 25], k: 'The heat', quem: 'The narrator',
+    contexto: 'Summers in Europe and India become extreme. (The numbers are in Celsius.)',
+    frase: 'Summer days <b>exceed 40 degrees</b> in London and 45 degrees in Delhi, as extreme heat waves are now eight to nine times more common.',
+    explica: '<i>Exceed</i> = go over. 40 °C is about 104 °F. Imagine a normal summer afternoon in 2050.',
+    formula: 'At 3 PM, people <b>will be looking</b> for shade. They <b>won’t be walking</b> outside.',
+    tente: 'Next summer at 3 PM, what will you be doing?',
+    ex: 'I’ll be sitting in front of the fan, drinking ice water!',
+    sente: { q: 'How dangerous is the heat?', de: 'comfortable', a: 'deadly', st: 'It’s … because people will be…' } },
+  { i: [30, 31, 32], k: 'The night', quem: 'The narrator',
+    contexto: 'Even the nights are hard. Hospitals are full.',
+    frase: 'Ambulance sirens <b>blare through the night</b>, carrying patients suffering from heat stroke, dehydration, and exhaustion.',
+    explica: '<i>Blare</i> = make a very loud noise. A whole city awake at night.',
+    formula: 'At midnight, ambulances <b>will be driving</b> through the city.',
+    tente: 'Imagine your street at midnight in 2050. What will be happening?',
+    ex: 'People will be sleeping on their balconies, because it’ll be too hot inside.',
+    sente: { q: 'How scary is this picture?', de: 'not scary', a: 'very scary', st: 'It’s … because at night people will be…' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#e2683a', titulo: 'This time in 2050.', sub: 'Hear the line, measure the worry, then picture the future in progress: will be + -ing.', rot: { por: 'WHAT IT MEANS', padrao: 'WILL BE + -ING', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

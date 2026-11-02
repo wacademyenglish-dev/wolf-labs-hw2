@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "No Pressure",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/78f0fc26297c/no-pressure/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "want / expect / ask / tell + person + to + verb (She wants me to go); the negative: doesn't want me to go, told me not to go; object pronouns (him, her, them); never want that I go, never I want he to",
   "abrir": "Who expects a lot from you?",
   "fecho": "<b>want / expect / ask / tell + person + to + verb</b>: <i>She wants me to come.</i> Use the object: <i>me, him, her, us, them</i>. The negative: <i>He doesn't want me to go. She told me not to be late.</i> Never <i>wants that I go</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia gets a letter from a school. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/78f0fc26297c/no-pressure/img/live-corujas.webp",
+      "img": "../img/live-corujas.webp",
       "leg": "A tower full of owls",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "He wants me to come on Monday.",
-          "img": "https://wolf-labs.pages.dev/p/78f0fc26297c/no-pressure/img/live-chapeu.webp",
+          "img": "../img/live-chapeu.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "They expect us to bring a warm coat.",
-          "img": "https://wolf-labs.pages.dev/p/78f0fc26297c/no-pressure/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She told him not to bring his phone.",
-          "img": "https://wolf-labs.pages.dev/p/78f0fc26297c/no-pressure/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/78f0fc26297c/no-pressure/img/live-lareira.webp",
+      "img": "../img/live-lareira.webp",
       "leg": "Letters flying out of a fireplace",
       "pede": "Look at the picture: letters flying out of a fireplace. Write 2 or 3 sentences about people who want you to do something. Use <b>want, expect, ask</b> or <b>tell</b> + person + <b>to</b>.",
       "ph": "My … wants me to …",

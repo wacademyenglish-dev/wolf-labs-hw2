@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Eight-ish · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 8 · B1</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 8 · Eight-ish · B1</h2>
+    <p>Episode 8, the last one of <b>Better Speaking</b>, B1 version. ABBA: &ldquo;We sold like eight or nine golden records.&rdquo; The language is <b>approximate numbers and times</b>: <b>about, around, -ish (eight-ish), more or less</b>. It closes the season. The sister lesson for B2 is &ldquo;Sort Of, Kind Of&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; More or less, How much? How long. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Not exact, Say it another way, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Your week, more or less. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>&ldquo;Mais ou menos de&rdquo; becomes <i>more or less of 20 minutes</i>. Times without at: <i>meet in the eight-ish</i>. And age with have: <i>she has around of 30 years</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 8 · EIGHT-ISH (B1)
+   Vídeo: BBC Learning English, Better Speaking (RLmqHjh6D5A), três trechos (~2:50).
+   Alvo: números e horas aproximados (about, around, -ish, more or less). Nenhuma B1 ensina.
+   A aula irmã B2 é a "Sort Of, Kind Of". */
+const M = { nome: "Eight-ish", kick: "B1 · ABOUT, AROUND, -ISH, MORE OR LESS" };
+var EP = {
+  n: 8, de: 8, nivel: 'B1', titulo: 'Eight-ish', video: 'RLmqHjh6D5A',
+  convidado: 'ABBA', habilidade: 'about, around, -ish',
+  trechos: [
+    { ini: 0, fim: 23, rot: 'Where the name ABBA comes from' },
+    { ini: 97, fim: 131, rot: 'Why Swedes speak English' },
+    { ini: 334, fim: 426, rot: 'Ten-ish, reddish, about 30' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'The last episode: ABBA. “We sold like eight or nine golden records.” Today: how to say a time, a number or an age when you aren\'t sure.',
+      nota: 'Ask: what time do you usually have dinner?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'More or <em>less</em>', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Help with about / around / -ish.',
+      cartas: [
+        { frente: 'ABBA', verso: 'Do you know any ABBA songs? Which one?', dica: 'Yes, I know… / No, I don\'t.', cor: 'var(--guest)', fw: { q: 'What music did your parents listen to?', st: ['They listened to…', 'My mom loved…'], help: '“My mom loved ABBA! She sang Dancing Queen in the kitchen.”' } },
+        { frente: 'TV', verso: 'Do you watch series in English? With subtitles?', dica: 'Yes, with… subtitles.', cor: 'var(--host)', fw: { q: 'How many hours a week, more or less?', st: ['About… hours.', 'Around…', 'Maybe five-ish.'], help: '“About five hours a week, more or less.”' } },
+        { frente: 'Dinner', verso: 'What time do you usually have dinner?', dica: 'Around… / At eight-ish.', cor: 'var(--teacher)', fw: { q: 'And what time do you go to bed?', st: ['At about…', 'Eleven-ish.', 'It depends.'], help: '“Eleven-ish. Sometimes later!”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 3 minutes', titulo: 'Listen to <em>ABBA</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'ABBA is from…', ops: [{ t: 'Sweden' }, { t: 'England' }] }, { q: 'The name ABBA comes from…', ops: [{ t: 'their names' }, { t: 'a song' }] } ],
+      durante: 'Listen for: “about the same time”, “like eight or nine”, “ten-ish”, “about 30”.',
+      depois: [ { f: 'ABBA = Anni-Frid, Benny, Björn and Agnetha.', ok: 1 }, { f: 'In Sweden, English TV programs are dubbed.', ok: 0 }, { f: 'Richard says it\'s “ten-ish” because he has no watch.', ok: 1 }, { f: 'Callum says his girlfriend is exactly 30.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Not <em>exact</em>', pt: 'about / around + número · número + -ish · more or less no fim.',
+      nota: 'Read each card. The red card is “more or less” in the middle.',
+      cartoes: [ { g: 'She\'s <b>about</b> 30. · <b>around</b> eight o\'clock', p: 'about / around + number.' }, { g: 'Let\'s meet at <b>eight-ish</b>.', p: 'number + -ish = more or less.' }, { g: 'It takes 20 minutes, <b>more or less</b>.', p: 'more or less at the end.' }, { g: 'It takes more or less of 20 minutes.', p: 'No of: about 20 minutes.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'same meaning', titulo: 'Say it <em>another way</em>', pt: 'Toque na frase e depois na que significa o mesmo.',
+      nota: 'Read both aloud each time.',
+      esq: ['at eight-ish', 'about 30 years old', 'like eight or nine', 'twenty minutes, more or less', 'around noon'], dir: ['at about eight', 'thirty-ish', 'eight or nine, I\'m not sure', 'about twenty minutes', 'twelve-ish'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Invite me to dinner at your house, with a time-ish.', st: ['Come at…-ish.', 'Around…', 'It takes about…'], help: '“Come at seven-ish. It takes about 30 minutes from your house.”' } },
+    { k: 'cartas', est: 'o', rot: 'guess it', titulo: 'How <em>much</em>? How <em>long</em>?', pt: 'Vire a carta e responda com about, around ou -ish.',
+      nota: 'There is no exact answer; the student must use an approximator.',
+      cartas: [
+        { frente: 'Time', sob: 'guess', verso: 'How long does it take from your home to the city center?', dica: 'About… minutes.', cor: 'var(--guest)', fw: { q: 'Now ask me a “how long” question.', st: ['How long does it take to…?', 'How much is…?'], help: '“How much is a coffee in your city?”' } },
+        { frente: 'Money', sob: 'guess', verso: 'How much is a pizza in your city?', dica: 'Around… reais.', cor: 'var(--host)' },
+        { frente: 'Age', sob: 'guess', verso: 'How old is your oldest friend?', dica: 'Fifty-ish.', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: '“Mais ou menos”, “por volta de” and -ish.',
+      itens: [ { erro: 'It takes <s>more or less of</s> 20 minutes.', certo: 'It takes <b>about</b> 20 minutes.', por: 'About + number (or “20 minutes, more or less”).' }, { erro: 'Let\'s meet <s>in the eight-ish</s>.', certo: 'Let\'s meet <b>at eight-ish</b>.', por: 'At + time.' }, { erro: 'She has <s>around of</s> 30 years.', certo: 'She\'s <b>about</b> 30.', por: 'Age: she\'s 30 (not has); no of.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Read each one aloud.',
+      itens: [ { f: 'We sold ___ eight or nine golden records.', ops: ['like', 'as'], ok: 0 }, { f: 'I think it\'s ten-___.', ops: ['ish', 'more'], ok: 0 }, { f: 'She\'s ___ 30.', ops: ['about', 'about of'], ok: 0 }, { f: 'She\'s one meter seventy-five, more or ___.', ops: ['less', 'minus'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>week</em>, more or less', pt: 'Escreva sobre a sua semana com números aproximados: horas, minutos, dinheiro.',
+      ph: 'I wake up at about… I work around… hours a day. I go to bed at eleven-ish…', nota: 'The line under the paper catches “more or less of” and “has … years”. SAVE sends it to My notes. Close the season with the student\'s favorite episode.',
+      banco: ['I wake up at about', 'around', '-ish', 'more or less', 'hours a day', 'minutes', 'My favorite episode was'],
+      regras: [['\\bmore or less of\\b', 'Check: ABOUT 20 minutes (no of).'], ['\\b(has|have) (about |around )?\\d+ years\\b', 'Check: age with BE: she\'s 30.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'You made it', tx: 'Eight guests, eight skills. Now it\'s your voice on air: a little English, every day.',
+      ganchos: [['Season', '8 episodes'], ['Your favorite', 'which one?'], ['Your task', 'a little English every day']], nota: 'Close the season: which episode was your favorite? Which tip will you use this week?' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "The last episode: ABBA. Say a number when you aren't sure."
+  },
+  "c9": {
+   "p": "Eight guests, eight skills. Now it's your voice on air."
+  }
+ },
+ "prep": {
+  "obj": "Números e horas aproximados: about, around, -ish (eight-ish), more or less. ABBA: “We sold like eight or nine golden records.” Fecha a temporada.",
+  "armadilha": "“Mais ou menos de” vira “more or less of 20 minutes”, hora sem at (“meet in the eight-ish”) e idade com have (“she has around of 30 years”).",
+  "pal": [
+   "about",
+   "around",
+   "-ish",
+   "eight-ish",
+   "more or less",
+   "like eight or nine",
+   "at around…",
+   "She's around 30."
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o último convidado: ABBA e os números “mais ou menos”.",
+   "perg": "What time do you usually have dinner?",
+   "pula": "Uma resposta e siga."
+  },
+  "c1": {
+   "obj": "Conversa sobre horas e quantidades; ajude com about / around / -ish.",
+   "perg": "How long does it take you to get to work?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes do ABBA, em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "How many golden records did they sell?",
+   "pula": "Assista uma vez só; os clipes vão inteiros."
+  },
+  "c3": {
+   "obj": "A regra: about, around, -ish, more or less; o cartão vermelho é more or less no meio.",
+   "perg": "What time do you wake up, more or less?",
+   "pula": "Leia os cartões e peça uma hora com -ish."
+  },
+  "c4": {
+   "obj": "Dizer a mesma ideia de outro jeito; as duas frases em voz alta.",
+   "perg": "Say it another way.",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "Adivinhar quanto custa / quanto dura; sem resposta exata, sempre com aproximador.",
+   "perg": "How much is it? More or less?",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Corrigir as três armadilhas: more or less of, hora sem at, idade com have.",
+   "perg": "What's wrong here? Say the right one.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c7": {
+   "obj": "Prática: escolher a palavra e ler cada frase em voz alta.",
+   "perg": "Read it aloud. Why that word?",
+   "pula": "Faça três linhas."
+  },
+  "c8": {
+   "obj": "Escrever a semana do aluno, mais ou menos; vai para o My notes. Feche com o episódio favorito.",
+   "perg": "How many hours do you sleep, more or less?",
+   "pula": "Três frases bastam."
+  },
+  "c9": {
+   "obj": "Fecha a temporada: episódio favorito e a dica que o aluno vai usar.",
+   "perg": "Which tip will you use this week?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais números aproximados sobre a rotina e a vida do aluno.",
+   "perg": "About how many? Around what time?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate: ser exato ou aproximado, e outros dilemas com números.",
+   "perg": "Which side are you on? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno faz o próprio programa de rádio de fim de temporada, passo a passo.",
+   "perg": "What's your show about?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More or less?",
+   "p": "Pick a card. Don't be exact.",
+   "palavras": [
+    "about",
+    "around",
+    "-ish",
+    "more or less"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR DAY",
+     "q": "What time do you usually go to bed?",
+     "fup": "And on Saturdays?",
+     "st": [
+      "At around …",
+      "Eleven-ish."
+     ],
+     "ex": "At around eleven. On Saturdays, one-ish!"
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "How many apps do you have on your phone?",
+     "fup": "How many do you really use?",
+     "st": [
+      "About …",
+      "Like …"
+     ],
+     "ex": "About eighty. I really use like ten."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "How many people live in your city?",
+     "fup": "Is it growing?",
+     "st": [
+      "Around … million.",
+      "More or less …"
+     ],
+     "ex": "Around two million, more or less."
+    },
+    {
+     "k": "YOUR MUSIC",
+     "q": "How many songs are on your favorite playlist?",
+     "fup": "How long is it?",
+     "st": [
+      "About … songs.",
+      "It's around … hours."
+     ],
+     "ex": "About a hundred songs. It's around six hours."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "Think of a good friend. How old is she or he?",
+     "fup": "How long have you known each other?",
+     "st": [
+      "She's around …",
+      "He's thirty-ish."
+     ],
+     "ex": "She's around forty. We met about fifteen years ago."
+    },
+    {
+     "k": "THE SEASON",
+     "q": "How many new words did you learn this season?",
+     "fup": "Which one do you use most?",
+     "st": [
+      "About … words.",
+      "More or less …"
+     ],
+     "ex": "About fifty words, more or less. I use 'nothing to lose' a lot!"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "about",
+    "around",
+    "-ish",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "“Let's meet at eight-ish”: OK or rude?",
+     "a": "OK",
+     "b": "Rude",
+     "fa": [
+      "It's OK. Life isn't a train timetable.",
+      "Eight-ish means around eight, no stress."
+     ],
+     "fb": [
+      "It's rude. My time is important too.",
+      "Eight-ish can mean nine in Brazil!"
+     ]
+    },
+    {
+     "q": "At work: exact numbers or round numbers?",
+     "a": "Exact",
+     "b": "Round",
+     "fa": [
+      "Exact. Clients want the real number.",
+      "'About' sounds like you don't know."
+     ],
+     "fb": [
+      "Round numbers. 'About two thousand' is easy to remember.",
+      "Nobody remembers 1,987."
+     ]
+    },
+    {
+     "q": "Ask someone's age or never ask?",
+     "a": "Ask",
+     "b": "Never ask",
+     "fa": [
+      "Ask. It's just a number.",
+      "And they can say 'around forty'."
+     ],
+     "fb": [
+      "Never ask. It's personal.",
+      "Just guess: thirty-ish."
+     ]
+    },
+    {
+     "q": "A season of eight episodes: too short or perfect?",
+     "a": "Too short",
+     "b": "Perfect",
+     "fa": [
+      "Too short. I want about twenty more.",
+      "I liked most of the guests."
+     ],
+     "fb": [
+      "Perfect. Eight is enough to learn and remember.",
+      "More episodes, more homework!"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Show",
+   "t": "Now it's your voice on air.",
+   "p": "Plan your own radio show, step by step.",
+   "prof": "You are the station boss. Ask for approximate numbers in every answer: about, around, -ish.",
+   "passos": [
+    {
+     "q": "What is your show about? Who is your first guest?",
+     "st": [
+      "My show is about …",
+      "My first guest is …"
+     ],
+     "ex": "My show is about food. My first guest is a chef from Bahia."
+    },
+    {
+     "q": "How long is the show, more or less? What time is it on?",
+     "st": [
+      "It's about … minutes.",
+      "It's on at around …"
+     ],
+     "ex": "It's about thirty minutes. It's on at around seven-ish."
+    },
+    {
+     "q": "How many people listen, do you think?",
+     "st": [
+      "About … people.",
+      "Around …"
+     ],
+     "ex": "About five hundred people, more or less. My family is half of them!"
+    },
+    {
+     "q": "What tip from this season do you use on your show?",
+     "st": [
+      "I use the tip about …",
+      "I ask the question, then answer it."
+     ],
+     "ex": "I use the tip about explaining a word I don't know."
+    }
+   ],
+   "fim": "On air. Eight episodes, and now your own voice."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

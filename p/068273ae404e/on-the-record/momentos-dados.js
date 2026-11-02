@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de On the Record (11/10/2026): a entrevista de Lois com o Superman (e o Lex no fim).
+   Forma: o termômetro (a tensão sobe). Alvo: reported speech (said / told / asked if, o passo para trás no tempo).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [1, 2], k: 'The interview', quem: 'Lois',
+    contexto: 'Lois is a reporter, and she is dating Clark. She asks if she can interview him as Superman.',
+    frase: 'You’d let me <b>interview you</b> as Superman? — Sure. Ready.',
+    explica: 'It starts as a game between a couple, very formal and funny. It won’t stay funny.',
+    formula: 'She <b>asked if</b> he <b>would</b> let her interview him. (will → would)',
+    tente: 'Report a question someone asked you this week.',
+    ex: 'My boss asked if I could work on Saturday.',
+    sente: { q: 'How serious is the interview now?', de: 'just a game', a: 'very serious', st: 'It’s … because she asked if …' } },
+  { i: [7, 8, 9, 10, 11], k: 'My actions', quem: 'Superman',
+    contexto: 'Lois says the government wants to look into what he did. Superman doesn’t like the word “actions”.',
+    frase: 'The Secretary of Defense said he was gonna look into your actions. — That’s funny. My actions. <b>I stopped a war.</b>',
+    explica: 'Look at Lois’s line: it is already reported speech (said he <b>was gonna</b>). Superman is getting annoyed.',
+    formula: 'He <b>said</b> he <b>had stopped</b> a war. (stopped → had stopped)',
+    tente: 'Report something a famous person said this week.',
+    ex: 'The president said he would visit Brazil next year.',
+    sente: { q: 'How annoyed is Superman?', de: 'relaxed', a: 'very annoyed', st: 'He’s … because she said …' } },
+  { i: [14, 18, 19], k: 'The President', quem: 'Lois',
+    contexto: 'Now Lois asks the hard reporter question.',
+    frase: 'In effect, you illegally entered a country. <b>Did you consult with the President?</b> — No.',
+    explica: 'In reported questions, the order is normal (subject + verb) and there is no <i>did</i>.',
+    formula: 'She <b>asked if</b> he <b>had consulted</b> the President. · ✗ She asked did he consult',
+    tente: 'Report a question your teacher asked you today.',
+    ex: 'My teacher asked if I had done my homework. She asked where I had been.',
+    sente: { q: 'How tough is Lois here?', de: 'gentle', a: 'very tough', st: 'She’s … because she asked if …' } },
+  { i: [27], k: 'People would die', quem: 'Superman',
+    contexto: 'Superman explodes. For him, the answer is obvious.',
+    frase: '<b>People were going to die!</b>',
+    explica: 'Going to also goes back in time: <i>are going to</i> becomes <i>were going to</i>.',
+    formula: 'He <b>told</b> Lois people <b>were going to</b> die. (tell + person)',
+    tente: 'Report something a friend told you that surprised you.',
+    ex: 'My friend told me she was going to move to Portugal!',
+    sente: { q: 'How angry is Superman now?', de: 'calm', a: 'furious', st: 'He’s … because he told her …' } },
+  { i: [31, 32], k: 'Not a man', quem: 'Lex Luthor',
+    contexto: 'Lex Luthor speaks about Superman. He doesn’t even call him “he”.',
+    frase: 'He’s not a man. <b>He’s an it.</b>',
+    explica: 'Calling a person <i>it</i> is cruel: it makes him a thing. That is exactly what Lex wants.',
+    formula: 'Lex <b>said</b> he <b>wasn’t</b> a man. (is → was)',
+    tente: 'Report something mean or funny someone said about a famous person.',
+    ex: 'A comedian said the singer was a robot!',
+    sente: { q: 'How dangerous is Lex?', de: 'harmless', a: 'very dangerous', st: 'He’s … because he said Superman …' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#3f7fd9', titulo: 'On the record: five lines.', sub: 'Hear the line, measure the tension, then report what they said.', rot: { por: 'WHAT IT MEANS', padrao: 'REPORTED SPEECH', voce: 'REPORT IT', ex: 'LIKE THIS' } };

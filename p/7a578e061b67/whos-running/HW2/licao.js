@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Who's Running?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/7a578e061b67/whos-running/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "present continuous: am / is / are + verb-ing for what is happening right now; never she walking (no be), never I'm run (no -ing), never they is running",
   "abrir": "What are you doing right now?",
   "fecho": "<b>Right now</b> = <b>am / is / are</b> + verb-ing: <i>I'm running. She's cycling. They're waiting.</i> Two pieces, always: the <b>be</b> and the <b>-ing</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia calls Leo in the morning. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/7a578e061b67/whos-running/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A castle on a hill",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I am running to the bus.",
-          "img": "https://wolf-labs.pages.dev/p/7a578e061b67/whos-running/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She is cycling next to me.",
-          "img": "https://wolf-labs.pages.dev/p/7a578e061b67/whos-running/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "They are watching the fireworks.",
-          "img": "https://wolf-labs.pages.dev/p/7a578e061b67/whos-running/img/live-prox.jpg",
+          "img": "../img/live-prox.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/7a578e061b67/whos-running/img/live-prox.jpg",
+      "img": "../img/live-prox.jpg",
       "leg": "Fireworks over a castle",
       "pede": "Look at the picture: fireworks over a castle. Write 2 or 3 sentences about what people are doing now. Use <b>I am</b>, <b>he is</b> or <b>they are</b> + -ing.",
       "ph": "People are watching …",

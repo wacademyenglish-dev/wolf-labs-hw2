@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Copy Editor · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 1 Review · The Copy Editor</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Copy Editor · C1 Unit 1 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 1 (Precision: the right word). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student is the copy editor at a magazine (invented). You are three writers with weak drafts: a travel writer, a business writer and a food writer. Then the student writes an editor’s note.</p><p style="margin:0 0 6px"><b>About 49 min:</b> I · Memory (8) · II · The Writers (15) · III · The Editorial Board (7) · IV · Find the Mistakes (7) · V · The Editor’s Note (8) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Open two cards. Find the pair, then make the sentence.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>adverb + adjective (eerily quiet) · adjective + noun collocations · formal verb + noun · idioms in context · business idioms · vague language: kind of, and stuff</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>THE WRITERS</h4>
+    <p>You are each writer. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then the student gives editing advice: change … to … Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>THE EDITOR’S NOTE</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>strong rain</i>, <i>took conclusions</i>, <i>did a review (formal: carried out)</i>, <i>very very cold</i>, <i>and stuff (in writing)</i>, <i>I’m very thankful (deeply grateful)</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE EDITORIAL BOARD (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the three writers, your student joins the Monday meeting and votes on three proposals for the magazine (yes, no, or propose a change), then has one minute of last word on AI editing. You are the editor-in-chief. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the vote harder. Listen for the Unit 1 precision (raise a concern, draw a conclusion, strongly / deeply / highly, move the needle), recast quietly while they talk, and at the end ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Memory.</li>
+      <li><b>Out loud</b>: II · The Writers and III · The Editorial Board.</li>
+      <li><b>Focus</b>: IV · Find the Mistakes and VI · I Can.</li>
+      <li><b>Write</b>: V · The Editor’s Note.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW C1 · UNIT 1 · THE COPY EDITOR · pergunta-surpresa · 28/10/2026 · precise collocations, idioms, vague language */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'memoria', tipo: 'And you?', q: 'Describe the place where you live right now in three precise words.',
+    opc: ['Eerily quiet', 'Painfully busy', 'Something else'], st: ['It’s eerily / painfully / surprisingly …', 'Off the beaten track, …'],
+    ex: 'Something else: surprisingly green. My street is off the beaten track, so at night it’s almost eerily quiet.', push: 'Would a tourist agree with your three words?' },
+  { cena: 'missao', tipo: 'Would you rather', q: 'Would you rather be edited by a strict editor or a kind one?',
+    opc: ['A strict one', 'A kind one'], st: ['I’d rather …, because …', 'I’m deeply grateful when …'],
+    ex: 'A strict one. I’m deeply grateful when someone tells me the truth: “strong rain” is wrong, full stop.', push: 'The strict editor cuts half of your favourite paragraph. Still grateful?' },
+  { cena: 'erros', tipo: 'Opinion', q: 'Is “kind of” always lazy, or can it be useful?',
+    opc: ['Always lazy', 'Sometimes useful', 'It depends on who says it'], st: ['I’d raise a concern about …', 'In speech, … but in print, …'],
+    ex: 'Sometimes useful. In speech, it softens a strong opinion, but in print it just sounds vague.', push: 'Say your last sentence again, but kind of vaguer. Then precise.' },
+  { cena: 'cartao', tipo: 'What if', q: 'What if you had to write a review of the last restaurant you went to, for a magazine?',
+    opc: ['Highly recommended', 'Painfully average', 'I’d need to go back'], st: ['It was highly / painfully …', 'I’d draw the conclusion that …'],
+    ex: 'Painfully average. The coffee was strong, the bread was stale, and I’d draw the conclusion that the chef was on holiday.', push: 'Your friend owns it. Do you publish the review?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW C1 · UNIT 1 · THE COPY EDITOR · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O conselho ENTRA depois de "II · The Writers" (a aula tinha 42 min e nenhuma cena extra: somar 7 min cabe).
+   O aluno acabou de conversar com os três redatores; agora senta na reunião de pauta e vota três
+   propostas da revista (Yes / Propose a change / No), com a precisão da Unidade 1 nos iniciadores:
+   raise a concern, draw a conclusion, deeply / highly / strongly, move the needle. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'conselho', apos: 'missao', est: 'o', min: 7, img: 'capa', rot: 'The Editorial Board', t: 'Monday meeting. Three proposals. You vote.',
+    p: 'Read each proposal. Vote: yes, no, or propose a change. Say why, with precise words. Your teacher is the editor-in-chief.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The ban', sit: 'The editor-in-chief wants a new rule for Issue 49: no “kind of”, “sort of” or “and stuff” anywhere in the magazine, not even in interviews.',
+        q: 'Do you vote for the ban?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I’d like to raise a concern about …', 'I’m strongly in favour of …', 'I’d propose that …'],
+        ex: 'Propose a change. I’m strongly in favour of the ban in articles, but I’d like to raise a concern about interviews: that’s how people really talk.',
+        push: 'A famous actor says “kind of” twelve times in one interview. Do you edit her words?' },
+      { tag: 'The cover', sit: 'Two pieces want the cover: the business story about the company that doubled its sales, or the food writer’s soup kitchen open every winter night.',
+        q: 'Should the soup kitchen go on the cover?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['It would really move the needle if …', 'It’s too early to draw a conclusion, but …', 'I’m deeply convinced that …'],
+        ex: 'Yes. I’m deeply convinced that readers want a human story. The business piece is strong, but a cover with real faces would really move the needle.',
+        push: 'Sales of the last “human” cover went down 20%. Still yes?' },
+      { tag: 'The headlines', sit: 'Marketing wants every headline to use a business idiom: “Moving the needle on rent”, “Low-hanging fruit in your kitchen”.',
+        q: 'Do you vote for idioms in every headline?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I’d strongly advise against …', 'That idiom works well when …', 'We should carry out a test first.'],
+        ex: 'No. I’d strongly advise against it: an idiom works well once, but twelve on one page sound like an advert. We could carry out a test with one issue first.',
+        push: 'Give the editor ONE idiom headline you would accept.' }
+    ],
+    fim: { tag: 'The last word', q: 'The owner wants AI to edit every draft from next month, and fewer human editors. One minute: your position.',
+      opc: ['I support it', 'Only with a human check', 'I oppose it'], segundos: 60, nota: 'One minute. Then your teacher speaks for the owner.',
+      st: ['I’d like to raise a serious concern about …', 'Before we draw any conclusions, …', 'AI can …, but it can’t …'],
+      ex: 'Only with a human check. Before we draw any conclusions, let’s carry out a trial. AI can fix “heavy rain”, but it can’t tell a writer her piece is beautiful.',
+      push: 'The owner says: “It saves 40% of the budget.” Answer him in two precise sentences.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "memoria": {
+   "t": "Find the pairs.",
+   "p": "Open two cards. Then make a sentence with the pair."
+  },
+  "missao": {
+   "t": "Three writers. Three weak drafts.",
+   "p": "Ask each writer five questions. Then give editing advice."
+  },
+  "cv-conselho": {
+   "t": "Monday meeting. Three proposals.",
+   "p": "Vote yes, no, or change. Say why, precisely."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say the right form. Then tap."
+  },
+  "cartao": {
+   "t": "A short note to one writer.",
+   "p": "Four lines. Four precise word pairs from the unit."
+  },
+  "pode": {
+   "t": "Unit 1: what can you do now?",
+   "p": "Read each line aloud. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 1 (precisão): advérbio + adjetivo, colocações, verbo formal + substantivo, expressões idiomáticas e de negócios, linguagem vaga; o aluno é o revisor de uma revista.",
+  "armadilha": "Colocação traduzida do português: “strong rain” (heavy rain), “took conclusions” (drew), “did a review” (carried out), “very very cold”, “I’m very thankful” (deeply grateful), e “and stuff” na escrita.",
+  "pal": [
+   "eerily quiet",
+   "heavy rain",
+   "draw a conclusion",
+   "raise a concern",
+   "carry out",
+   "deeply grateful",
+   "highly unlikely",
+   "move the needle",
+   "kind of"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: nada de gramática nova, tudo de memória.",
+   "perg": "Ready to be the editor today?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "memoria": {
+   "obj": "Jogo da memória com colocações da unidade; uma frase com cada par.",
+   "perg": "Can you use that pair in a sentence?",
+   "pula": "Quatro pares bastam."
+  },
+  "missao": {
+   "obj": "O professor é três escritores (viagem, negócios, comida); o aluno pergunta e aconselha: change … to …",
+   "perg": "What would you change, and to what?",
+   "pula": "Dois escritores bastam."
+  },
+  "cv-conselho": {
+   "obj": "Reunião de segunda: três propostas para a revista e um minuto final sobre edição por IA.",
+   "perg": "Would you vote yes, and on what grounds?",
+   "pula": "Duas propostas bastam."
+  },
+  "erros": {
+   "obj": "Um texto com erros de precisão; o aluno corrige falando antes de tocar.",
+   "perg": "Which word is more precise here?",
+   "pula": "Três erros bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: nota do revisor a um escritor, com quatro pares precisos da unidade.",
+   "perg": "What will you tell the writer first?",
+   "pula": "Duas linhas bastam."
+  },
+  "pode": {
+   "obj": "Checklist “I can” da unidade; o que ficar aberto vai para a lição de casa.",
+   "perg": "Which line is still hard for you?",
+   "pula": "Leia só as linhas em aberto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa pessoal usando a precisão da unidade: colocações, intensificadores, idiomas.",
+   "perg": "Can you say that more precisely?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre revistas, edição e IA, com palavras precisas.",
+   "perg": "Which side, and why exactly?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno edita uma frase vaga em quatro passos até ficar precisa.",
+   "perg": "Which word is doing no work here?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "The right word, about you.",
+   "p": "Pick a card. Choose the precise word.",
+   "palavras": [
+    "eerily quiet",
+    "deeply grateful",
+    "highly unlikely",
+    "raise a concern",
+    "draw a conclusion",
+    "move the needle"
+   ],
+   "cartas": [
+    {
+     "k": "A PLACE",
+     "q": "Describe a place that felt strange, with one precise adverb + adjective.",
+     "fup": "Why did it feel like that?",
+     "st": [
+      "It was eerily …",
+      "It felt strangely …"
+     ],
+     "ex": "The office was eerily quiet on the day after the layoffs."
+    },
+    {
+     "k": "GRATEFUL",
+     "q": "Who are you deeply grateful to, and why?",
+     "fup": "Did you ever tell them?",
+     "st": [
+      "I’m deeply grateful to … for …"
+     ],
+     "ex": "I’m deeply grateful to my first boss for trusting me with real clients."
+    },
+    {
+     "k": "AT WORK",
+     "q": "When did you last raise a concern at work? What happened?",
+     "fup": "Did it move the needle?",
+     "st": [
+      "I raised a concern about …",
+      "It didn’t really move the needle."
+     ],
+     "ex": "I raised a concern about the deadline. Nobody listened, and we missed it."
+    },
+    {
+     "k": "UNLIKELY",
+     "q": "What is highly unlikely to happen in your life this year?",
+     "fup": "And what is fairly likely?",
+     "st": [
+      "It’s highly unlikely that …"
+     ],
+     "ex": "It’s highly unlikely that I’ll run a marathon, but fairly likely that I’ll buy shoes for one."
+    },
+    {
+     "k": "A CONCLUSION",
+     "q": "What conclusion did you draw from your last big mistake?",
+     "fup": "Would you make it again?",
+     "st": [
+      "I drew the conclusion that …"
+     ],
+     "ex": "I drew the conclusion that cheap flights are rarely cheap."
+    },
+    {
+     "k": "WEATHER TALK",
+     "q": "Describe the weather today, precisely, like a writer.",
+     "fup": "And how do you usually say it?",
+     "st": [
+      "There’s heavy …",
+      "It’s bitterly …"
+     ],
+     "ex": "There’s heavy rain and a bitterly cold wind. Usually I’d just say it’s ugly."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "highly",
+    "deeply",
+    "raise a concern",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Should magazines let AI edit their writers?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. It’s highly efficient for commas and typos.",
+      "Editors can focus on ideas."
+     ],
+     "fb": [
+      "No. I’d raise a serious concern about every writer sounding the same.",
+      "The thing is, style is the product."
+     ]
+    },
+    {
+     "q": "A good editor: kind, or brutally honest?",
+     "a": "Kind",
+     "b": "Brutally honest",
+     "fa": [
+      "Kind. Writers are deeply sensitive about their drafts.",
+      "Kind notes get rewritten; harsh ones get ignored."
+     ],
+     "fb": [
+      "Brutally honest. A weak draft won’t move the needle.",
+      "I see your point, but readers don’t care about feelings."
+     ]
+    },
+    {
+     "q": "Precise words or simple words for a general audience?",
+     "a": "Precise",
+     "b": "Simple",
+     "fa": [
+      "Precise. “Heavy rain” is still simple, just right.",
+      "Precision is respect for the reader."
+     ],
+     "fb": [
+      "Simple. Readers skim; fancy words slow them down.",
+      "The thing is, nobody reads a magazine with a dictionary."
+     ]
+    },
+    {
+     "q": "Print magazines: dying, or coming back?",
+     "a": "Dying",
+     "b": "Coming back",
+     "fa": [
+      "Dying. It’s highly unlikely young people will pay for paper.",
+      "Phones won that war."
+     ],
+     "fb": [
+      "Coming back. People are deeply tired of screens.",
+      "Paper feels like a small luxury now."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Precisely four, and highly convincing."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "The Red Pen",
+   "t": "Edit one weak sentence.",
+   "p": "One step at a time. Make it precise.",
+   "prof": "Start from a weak sentence of the student’s own (or: “The food was very very good and stuff”); each step replaces one weak word.",
+   "passos": [
+    {
+     "q": "Write one weak sentence about a restaurant you know.",
+     "st": [
+      "The food was very …",
+      "It was a nice …"
+     ],
+     "ex": "The food was very very good and the place was nice and stuff."
+    },
+    {
+     "q": "Replace “very very” with a precise adverb + adjective.",
+     "st": [
+      "The food was remarkably …",
+      "… was surprisingly …"
+     ],
+     "ex": "The food was remarkably fresh."
+    },
+    {
+     "q": "Replace “nice” with a precise collocation.",
+     "st": [
+      "The place had a … atmosphere."
+     ],
+     "ex": "The place had a warm, relaxed atmosphere."
+    },
+    {
+     "q": "Cut “and stuff”: end with one exact detail.",
+     "st": [
+      "… especially the …"
+     ],
+     "ex": "The food was remarkably fresh, especially the grilled fish, and the place had a warm, relaxed atmosphere."
+    }
+   ],
+   "fim": "From “very very good and stuff” to a sentence a magazine would print."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

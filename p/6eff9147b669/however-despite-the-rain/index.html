@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · However, Despite the Rain · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Fraunces:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>However, Despite the Rain · The Torn Ticket</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>However, Despite the Rain · The Torn Ticket</h2>
+    <p>Everything at Lanternfield went wrong and everything was still good: rain, mud, a band two hours late, a power cut. Each problem is a torn ticket: the bad half, the good half, and the word that stitches them. The question is always the same: after the word, a <b>clause</b> (although, even though) or a <b>noun / -ing</b> (despite, in spite of)? And <b>However</b> starts a new sentence. Students say <i>despite of</i>, <i>despite it was</i>, <i>although… but</i>, and <i>, however we</i>.</p>
+    <h4>LET THEM SAY BUT FIRST</h4>
+    <p>Scene II: the eight tickets come before the rule. Most students join them with but, and that is right. The stitches arrive in Scene III as more options, not as corrections.</p>
+    <h4>THE DEADLINE HAS A WORD</h4>
+    <p>Scene IV: each line has its word on the wristband. Read the notes, your student says the full line with that word, you tap what you heard. The review fills up as the clock moves to midnight.</p>
+    <h4>YOU ARE ROSA</h4>
+    <p>Scene V: you play the festival organizer the morning after. Be a little hurt about the mud. Push once: “So it was bad?” Your student has to defend the night with despite or however.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>despite of the rain</i>, <i>despite it was raining</i>, <i>although it rained, but…</i>, <i>it rained, however we…</i>, <i>in spite the mud</i>, <i>although the rain</i>.</p>
+    <!--conversa--><h4>THE HOT SEAT (VI) AND THE SURPRISE QUESTION</h4>
+    <p>After Rosa’s call, your student changes sides: now they are the singer of The Northern Hum, two hours late, and you are a journalist with a secret (only on your screen). Ask the three questions, then they choose what to give the fans. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make it harder. Recast quietly while they talk (“despite of the rain” → “despite the rain”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Big Nights Out, II Eight Torn Tickets, IV The Midnight Deadline, V The Organizer Calls, VI The Hot Seat, VII Despite Everything.</li>
+      <li><b>Focus</b>: III The Stitch.</li>
+      <li><b>Write</b>: VIII, their own review of a night out. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* HOWEVER, DESPITE THE RAIN (Main B1) · pergunta-surpresa · 27/10/2026 · although / despite / however */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'mapa', tipo: 'Would you rather', q: 'Would you rather see your favourite band in the rain, or a band you don’t know in the sun?',
+    opc: ['My band, in the rain', 'A new band, in the sun'], st: ['I’d rather …, despite …', 'Even though …, I’d …'],
+    ex: 'My band, in the rain. Despite the mud, I’d be in the front row.', push: 'And if it’s raining AND they are two hours late?' },
+  { cena: 'regra', tipo: 'And you?', q: 'Tell me about a night out that went wrong, but was still good.',
+    opc: ['A party', 'A trip', 'A concert or game'], st: ['Although …, it was …', 'Despite …, we …'],
+    ex: 'A trip. Although we got lost for three hours, we found a tiny restaurant with the best pizza of my life.', push: 'Would you do it again exactly the same?' },
+  { cena: 'prazo', tipo: 'Opinion', q: 'Is a festival with no rules and no phones a good idea?',
+    opc: ['Great idea', 'Only for one day', 'No way'], st: ['Even though …, I think …', 'It sounds fun. However, …'],
+    ex: 'Only for one day. It sounds fun. However, I want my photos!', push: 'Would you pay double for it?' },
+  { cena: 'tudo', tipo: 'What if', q: 'Your friend’s birthday is outside, and it starts to rain. What do you do?',
+    opc: ['Stay and dance', 'Move it inside', 'Go home'], st: ['Despite the rain, I’d …', 'Although …, we’d …'],
+    ex: 'Stay and dance. Despite the rain, it’s her birthday. We can dry tomorrow.', push: 'And if you have a job interview the next morning?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* HOWEVER, DESPITE THE RAIN (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A cadeira quente entra no lugar de "VI · Quick Check" (extra, prática controlada). Depois da
+   ligação da Rosa (V, onde o aluno é o crítico), o aluno troca de lado: agora é o vocalista do The
+   Northern Hum, duas horas atrasado, e um jornalista (o professor) pergunta; no fim ele decide o que
+   oferecer aos fãs. A gramática da aula (although / even though, despite / in spite of, however)
+   mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'cadeira', troca: 'quiz', est: 'o', min: 7, img: 'palco', rot: 'The Hot Seat', t: 'Now you are the band. The press wants answers.',
+    p: 'You are the singer of The Northern Hum. Answer the journalist in your own words. Then choose what you give the fans.',
+    formato: 'papel',
+    aluno: { quem: 'The singer, The Northern Hum', quer: 'Keep the fans on your side.', limite: 'The truth: you missed the first flight.' },
+    prof: { quem: 'A music journalist', quer: 'A real answer: why two hours late?', limite: 'Secret: you have a photo of the band at the airport café at 6 PM.' },
+    rot_perg: 'The journalist asks',
+    perguntas: [
+      { q: 'Why were you two hours late?', ex: 'Although we left the hotel early, our flight was delayed. However, we played every song on the list.' },
+      { q: 'It rained all night. Why didn’t anybody go home?', ex: 'Despite the mud, they were dancing. Even though they were wet, they sang every chorus with us.' },
+      { q: 'The lights went out in the middle of the show. What did you do?', ex: 'In spite of the dark, we kept playing. Everybody turned on their phone lights. It was beautiful.' }
+    ],
+    st: ['Although …, we …', 'Despite the …, …', '… However, …'],
+    push: '“I have a photo of you in the airport café at six. Explain that.”',
+    acordo: { tag: 'Your offer', q: 'What do you give the fans?', opc: ['A free show', 'Half-price tickets', 'Just a sorry'],
+      st: ['Even though it wasn’t …, we’ll …'],
+      ex: 'A free show. Even though it wasn’t all our fault, they waited in the rain for two hours.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "You, music and plans that go wrong.",
+   "p": "Pick a card. Answer out loud."
+  },
+  "mapa": {
+   "t": "Eight things went wrong. Something went right.",
+   "p": "Pick a ticket. Join both halves in ONE sentence."
+  },
+  "regra": {
+   "t": "After the word: a clause, or a noun?",
+   "p": "Read the three stitches aloud. Fix the four traps."
+  },
+  "prazo": {
+   "t": "Midnight deadline. Eight lines.",
+   "p": "Listen to the notes. Say the line with its word."
+  },
+  "rosa": {
+   "t": "The organizer read your review.",
+   "p": "Your teacher is Rosa. Use despite, although, however."
+  },
+  "cv-cadeira": {
+   "t": "Now you are the band.",
+   "p": "Answer the journalist. Then choose what fans get."
+  },
+  "tudo": {
+   "t": "Your life: good and bad together.",
+   "p": "Pick five cards. Join the two halves."
+  },
+  "fim": {
+   "t": "The festival is over. Your review is out.",
+   "p": "Review a night out with despite, although, however. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Although / even though + oração, despite / in spite of + nome ou -ing, e However abrindo frase nova: no festival Lanternfield deu tudo errado e mesmo assim foi bom.",
+  "armadilha": "O brasileiro diz “despite of” (de “apesar de”), “despite it was raining”, “although… but” (embora… mas) e cola “, however we…” na mesma frase.",
+  "pal": [
+   "although",
+   "even though",
+   "despite",
+   "in spite of",
+   "however",
+   "torn ticket",
+   "mud",
+   "power cut",
+   "review"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o festival Lanternfield: chuva, lama e uma noite boa mesmo assim.",
+   "perg": "Have you ever been to a music festival?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal: música, saídas à noite e planos que dão errado.",
+   "perg": "Tell me about a night out that went wrong.",
+   "pula": "Duas cartas bastam."
+  },
+  "mapa": {
+   "obj": "Oito ingressos rasgados: juntar o lado ruim e o bom; aceitar but antes da regra.",
+   "perg": "What went wrong, and what went right?",
+   "pula": "Quatro ingressos bastam."
+  },
+  "regra": {
+   "obj": "A costura: oração depois de although, nome/-ing depois de despite; However abre frase.",
+   "perg": "After the word: a clause or a noun?",
+   "pula": "Não corte “despite of”."
+  },
+  "prazo": {
+   "obj": "Prazo da meia-noite: cada linha da resenha com a palavra do ingresso.",
+   "perg": "Can you say it with despite?",
+   "pula": "Cinco linhas bastam."
+  },
+  "rosa": {
+   "obj": "O professor é a Rosa, organizadora magoada; o aluno defende a noite.",
+   "perg": "So it was bad?",
+   "pula": "Três perguntas da Rosa bastam."
+  },
+  "cv-cadeira": {
+   "obj": "O aluno é o vocalista da The Northern Hum, duas horas atrasado; o professor é jornalista.",
+   "perg": "Why were you two hours late?",
+   "pula": "Duas perguntas e a escolha final."
+  },
+  "tudo": {
+   "obj": "A vida do aluno: o bom e o ruim na mesma frase, com as cinco palavras.",
+   "perg": "What was good about it, despite everything?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: resenha de uma noite do aluno, com despite, although e however.",
+   "perg": "Five stars or one, and why?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa pessoal com contraste: algo bom apesar de algo ruim.",
+   "perg": "What did you enjoy despite the problems?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate com argumentos e concessão (although, however).",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta uma viagem ou evento que deu errado e terminou bem.",
+   "perg": "What went right in the end?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Bad half, good half.",
+   "p": "Pick a card. Stitch the two halves.",
+   "palavras": [
+    "although",
+    "even though",
+    "despite",
+    "however"
+   ],
+   "cartas": [
+    {
+     "k": "A RAINY DAY",
+     "q": "Tell me about a day when the weather ruined your plans.",
+     "fup": "Did anything good happen?",
+     "st": [
+      "Despite the rain, we …",
+      "Although it rained, …"
+     ],
+     "ex": "Although it rained all day, we found a great little bar."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What is hard about your job?",
+     "fup": "Why do you stay?",
+     "st": [
+      "Even though it’s …, I …",
+      "It’s stressful. However, …"
+     ],
+     "ex": "It’s stressful. However, I really like my team."
+    },
+    {
+     "k": "A LATE FRIEND",
+     "q": "Do you have a friend who is always late?",
+     "fup": "Why are you still friends?",
+     "st": [
+      "In spite of …, I …",
+      "Even though he’s always late, …"
+     ],
+     "ex": "Even though he’s always late, he’s the first to help."
+    },
+    {
+     "k": "A CHEAP TRIP",
+     "q": "Have you ever stayed in a terrible hotel?",
+     "fup": "Was the trip still good?",
+     "st": [
+      "Despite the hotel, …",
+      "The room was awful. However, …"
+     ],
+     "ex": "The room was awful. However, the view from the window was amazing."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What is the worst thing about your city?",
+     "fup": "And the best?",
+     "st": [
+      "Despite the traffic, …",
+      "Although it’s …, I love …"
+     ],
+     "ex": "Despite the traffic, I love the food and the people."
+    },
+    {
+     "k": "A LIVE SHOW",
+     "q": "What is the best concert or show you have seen?",
+     "fup": "Was anything bad about it?",
+     "st": [
+      "Despite being …, it was …",
+      "Although the tickets were …, …"
+     ],
+     "ex": "Although the tickets were expensive, it was the best night of the year."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Admit one thing.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "although",
+    "despite",
+    "however",
+    "even though"
+   ],
+   "rodadas": [
+    {
+     "q": "Festivals or small concerts?",
+     "a": "Festivals",
+     "b": "Small concerts",
+     "fa": [
+      "Festivals, despite the mud and the lines.",
+      "You see ten bands in one weekend."
+     ],
+     "fb": [
+      "Small concerts. Although they’re short, you can really hear the music.",
+      "And you can actually see the band."
+     ]
+    },
+    {
+     "q": "A band two hours late: give the fans their money back?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Even though the show was good, people waited in the rain.",
+      "Respect is part of the ticket."
+     ],
+     "fb": [
+      "No. Despite the delay, they played the full show.",
+      "However, a free song online would be nice."
+     ]
+    },
+    {
+     "q": "Honest review or kind review for a small event?",
+     "a": "Honest",
+     "b": "Kind",
+     "fa": [
+      "Honest. Although it hurts, it helps them next year.",
+      "Readers deserve the truth."
+     ],
+     "fb": [
+      "Kind. They worked hard in spite of the power cut.",
+      "However, I’d still mention the mud."
+     ]
+    },
+    {
+     "q": "Go out in the rain, or stay home?",
+     "a": "Go out",
+     "b": "Stay home",
+     "fa": [
+      "Go out. The best nights happen despite the weather.",
+      "Nobody remembers dry nights."
+     ],
+     "fb": [
+      "Stay home. Although I love music, I hate wet shoes.",
+      "There’s always next weekend."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Despite the arguments, everybody had a good night."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Torn Ticket",
+   "t": "A day that went wrong, then right.",
+   "p": "Four steps. Stitch each half.",
+   "prof": "One stitch per step; catch “despite of” and “although… but” and let them fix it.",
+   "passos": [
+    {
+     "q": "Where were you, and what was the plan?",
+     "st": [
+      "I was in … and the plan was to …"
+     ],
+     "ex": "I was in Rio and the plan was to watch the sunset on the beach."
+    },
+    {
+     "q": "What went wrong?",
+     "st": [
+      "Everything was fine. However, …"
+     ],
+     "ex": "Everything was fine. However, a huge storm arrived at five."
+    },
+    {
+     "q": "What went right, despite the problem?",
+     "st": [
+      "Despite …, we …",
+      "Although …, we …"
+     ],
+     "ex": "Despite the storm, we found a tiny restaurant with live samba."
+    },
+    {
+     "q": "Five stars or one? Why?",
+     "st": [
+      "Even though …, I give it …"
+     ],
+     "ex": "Even though we never saw the sunset, I give it five stars."
+    }
+   ],
+   "fim": "A torn ticket, stitched: the bad half, the good half, one word."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

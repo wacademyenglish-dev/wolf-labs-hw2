@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Like, You Know",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/16b6556fdb26/like-you-know/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "buying time to think: small fillers (you know, I mean, sort of), That's a good question + repeating the question, If I were you, I would ... (never If I was you, I will); one filler is enough",
   "abrir": "What do you say when you need a second to think?",
   "fecho": "<b>Buy time, don't stop.</b> Praise the question and repeat it: <i>That's a good question. What would I change?</i> One small filler is enough: <b>you know</b>, <b>I mean</b>, <b>sort of</b>. For advice, the set phrase: <b>If I were you, I would ...</b>, never <i>If I was you, I will</i>.",
@@ -162,7 +162,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/16b6556fdb26/like-you-know/img/live-capa.jpg",
+      "img": "../img/live-capa.jpg",
       "leg": "A racket and a ball against a wall",
       "pede": "Look at the picture: a racket and a ball against a wall, like a champion practicing alone. Write 2 or 3 sentences answering a hard question: <i>What would you do with a free year?</i> Buy time with <b>That's a good question</b> and one small filler.",
       "ph": "That's a good question. What would I do? I mean, ...",

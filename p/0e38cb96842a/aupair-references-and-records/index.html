@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -114,5 +115,258 @@ window.WL_CONVERSA = { nivel: 'A2', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "What does a good reference say?",
+   "p": "Read the letter out loud. Then answer."
+  },
+  "transforma": {
+   "t": "Say it the way a form asks.",
+   "p": "Read the idea and the clue. Say it in English."
+  },
+  "formulario": {
+   "t": "Fill in Mariana’s health form.",
+   "p": "Read the doctor’s notes. Fill every field. Check."
+  },
+  "cv-referencia": {
+   "t": "A host mom calls about Mariana.",
+   "p": "You wrote the reference. Say only what you saw."
+  },
+  "pode": {
+   "t": "Lesson 6: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Referências (cartas de quem viu o aluno com crianças) e a ficha de saúde (alergias, vacinas, remédios). Carta da diretora de uma creche fictícia em Recife sobre a Mariana.",
+  "armadilha": "Do português sai “I have allergy of”, “my vaccines are in day” (é up to date), “I take remedy” (é medication) e campo vazio no lugar de “none”.",
+  "pal": [
+   "To whom it may concern,",
+   "I recommend her without hesitation",
+   "I’m allergic to…",
+   "I don’t have any allergies",
+   "My vaccinations are up to date",
+   "medication",
+   "none",
+   "reference"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 6 do Au Pair: referências e a ficha de saúde.",
+   "perg": "Who could a family call to ask about you with children?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "leitura": {
+   "obj": "Leitura da carta de referência: pergunta antes, sentido, depois o padrão.",
+   "perg": "How does the director know Mariana?",
+   "pula": "Leia metade e faça duas perguntas."
+  },
+  "transforma": {
+   "obj": "Palavras de saúde do jeito que o formulário pede, a partir da ideia em português.",
+   "perg": "How does the form say “estou com a vacina em dia”?",
+   "pula": "Quatro frases bastam."
+  },
+  "formulario": {
+   "obj": "Formulário com dados FICTÍCIOS da Mariana (nunca os documentos reais do aluno na aula).",
+   "perg": "What do you write when there’s nothing? “None.”",
+   "pula": "Metade dos campos basta."
+  },
+  "cv-referencia": {
+   "obj": "Papéis trocados: o aluno é a Ms. Souza, que escreveu a carta; o professor é a Mrs. Parker, que liga.",
+   "perg": "How often did Mariana work with babies?",
+   "pula": "Duas perguntas bastam."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; lição: listar duas referências reais e pedir antes.",
+   "perg": "Can you fill in a health form now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre experiência com crianças e referências (saúde só se o aluno quiser).",
+   "perg": "What do you do best with children?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas sobre referências e a candidatura, com frases prontas.",
+   "perg": "A reference from a boss or from a teacher?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a Mariana numa entrevista com a família, com os dados do formulário.",
+   "perg": "Mariana, do you have any allergies?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "You and children.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I recommend",
+    "experience",
+    "I’m good with",
+    "reference"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR KIDS",
+     "q": "Which children have you looked after?",
+     "fup": "How old were they?",
+     "st": [
+      "I looked after …",
+      "They were … years old."
+     ],
+     "ex": "I looked after my cousins. They were two and five years old."
+    },
+    {
+     "k": "YOUR REFERENCE",
+     "q": "Who could write a reference for you?",
+     "fup": "How does this person know you?",
+     "st": [
+      "… could write one.",
+      "She / He knows me from …"
+     ],
+     "ex": "My old boss could write one. She knows me from the school where I worked."
+    },
+    {
+     "k": "THREE WORDS",
+     "q": "What three words would a family use to describe you?",
+     "fup": "Give an example of one.",
+     "st": [
+      "They would say I’m …"
+     ],
+     "ex": "They would say I’m patient, fun and responsible. Once I calmed a baby in five minutes."
+    },
+    {
+     "k": "BABIES",
+     "q": "Do you have experience with babies?",
+     "fup": "What is the hardest part?",
+     "st": [
+      "Yes, I have …",
+      "Not yet, but …"
+     ],
+     "ex": "Not yet, but I have experience with toddlers and I want to learn."
+    },
+    {
+     "k": "THE DAY",
+     "q": "Describe a good day with a child.",
+     "fup": "What did you do together?",
+     "st": [
+      "We …",
+      "It was a good day because …"
+     ],
+     "ex": "We went to the park and made a cake. It was a good day because nobody cried."
+    },
+    {
+     "k": "FORMS",
+     "q": "Is it easy for you to fill in forms in English?",
+     "fup": "Which part is difficult?",
+     "st": [
+      "It’s … for me.",
+      "The hard part is …"
+     ],
+     "ex": "It’s OK for me. The hard part is the medical words."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think"
+   ],
+   "rodadas": [
+    {
+     "q": "A reference from a daycare boss or from a family you babysat for?",
+     "a": "The daycare boss",
+     "b": "The family",
+     "fa": [
+      "The daycare boss. It’s more professional."
+     ],
+     "fb": [
+      "The family. They saw me at home with their kids."
+     ]
+    },
+    {
+     "q": "A long reference letter or a short one?",
+     "a": "Long",
+     "b": "Short",
+     "fa": [
+      "Long. It has examples and details."
+     ],
+     "fb": [
+      "Short. Families are busy."
+     ]
+    },
+    {
+     "q": "Talk about health in the first call or wait?",
+     "a": "First call",
+     "b": "Wait",
+     "fa": [
+      "First call. It’s important for the family."
+     ],
+     "fb": [
+      "Wait. It’s on the form already."
+     ]
+    },
+    {
+     "q": "A family with one baby or with three kids?",
+     "a": "One baby",
+     "b": "Three kids",
+     "fa": [
+      "One baby. It’s calmer."
+     ],
+     "fb": [
+      "Three kids. It’s more fun."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Your application is getting stronger."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Mariana now.",
+   "p": "Your teacher is the host mom.",
+   "aluno": "Listen to the host mom’s question. Answer as Mariana. Use her form and her reference.",
+   "perguntas": [
+    "Who wrote your reference, and how does she know you?",
+    "How long did you work at the daycare?",
+    "What ages did you work with?",
+    "Do you have any allergies?",
+    "Are your vaccinations up to date?",
+    "Why do you want to be an au pair?"
+   ],
+   "st": [
+    "Ms. Souza wrote it. She …",
+    "I worked there for …",
+    "My vaccinations are …"
+   ],
+   "ex": "Ms. Souza wrote it. She was my director at the daycare in Recife. My vaccinations are up to date."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

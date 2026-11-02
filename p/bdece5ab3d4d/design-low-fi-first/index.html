@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -117,5 +118,268 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Show sketches to your boss?",
+   "p": "One question. Then the video. Then the questions."
+  },
+  "transforma": {
+   "t": "Finished, or not yet?",
+   "p": "Read the line and clue. Say it as work in progress."
+  },
+  "cv-escala": {
+   "t": "Sketches and “not ready yet”.",
+   "p": "Tap 1 to 5. Defend it with still, might, going to."
+  },
+  "prova": {
+   "t": "Two early designs. You present them.",
+   "p": "Read the card, prepare, start the clock, present."
+  },
+  "pode": {
+   "t": "Lesson 6: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Apresentar trabalho inacabado: still, for now, just a first sketch, haven’t … yet; o futuro do projeto (will, might, going to) e pedir um feedback específico. Wireframe de clínica pet e planta de apartamento.",
+  "armadilha": "Do português sai “This is the final?”, “We will to test”, “Maybe the sofa will can go” (é might go) e o vago “You like it?” no lugar de “Does the order make sense?”.",
+  "pal": [
+   "This is still a rough version of…",
+   "Please ignore … for now.",
+   "might …, depending on…",
+   "What we’re testing here is…",
+   "We haven’t … yet",
+   "Next week, we’re going to…",
+   "Does … make sense?",
+   "wireframe"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 6 de English for Designers: mostrar o rascunho cedo, sem parecer inseguro.",
+   "perg": "What’s the messiest sketch you ever made? Did the client see it?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "video": {
+   "obj": "NN/g (0:00–1:22): apresentar protótipos de baixa fidelidade para líderes.",
+   "perg": "Why show a sketch early?",
+   "pula": "O vídeo vai inteiro; duas perguntas depois bastam."
+  },
+  "transforma": {
+   "obj": "Frases que parecem finais viram “ainda em andamento” com still, for now, might, yet.",
+   "perg": "How do you say it’s not final yet?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-escala": {
+   "obj": "Três opiniões que designers pensam e não dizem, de 1 a 5, defendidas com a gramática da aula.",
+   "perg": "Does “this might change” sound insecure?",
+   "pula": "Uma opinião basta."
+  },
+  "prova": {
+   "obj": "Tarefa com relógio: o aluno apresenta os dois rascunhos; o professor-gerente comenta as cores e o aluno redireciona.",
+   "perg": "I don’t like the gray. Can it be blue?",
+   "pula": "Um rascunho só."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; lição: trazer um rascunho próprio para as aulas de feedback.",
+   "perg": "Can you ask for specific feedback now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre o processo de design do aluno e clientes, com still / yet / might.",
+   "perg": "When do you show your first sketch?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre dilemas de processo de design, com argumentos.",
+   "perg": "Paper sketch or digital wireframe?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é o designer da clínica pet e responde às perguntas do cliente sobre o rascunho.",
+   "perg": "Is this the final version?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your design process.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "still",
+    "for now",
+    "might",
+    "haven’t … yet"
+   ],
+   "cartas": [
+    {
+     "k": "FIRST SKETCH",
+     "q": "When do you show your first sketch to a client?",
+     "fup": "Has it ever gone wrong?",
+     "st": [
+      "I usually show it …",
+      "Once, …"
+     ],
+     "ex": "I usually show it after two days. Once, the client thought it was final and hated it."
+    },
+    {
+     "k": "YOUR TOOLS",
+     "q": "Do you sketch on paper or go straight to the computer?",
+     "fup": "Why?",
+     "st": [
+      "I usually …",
+      "because …"
+     ],
+     "ex": "I usually sketch on paper first, because it’s faster and nobody worries about colors."
+    },
+    {
+     "k": "NOW",
+     "q": "What are you working on right now?",
+     "fup": "What haven’t you decided yet?",
+     "st": [
+      "I’m working on …",
+      "I haven’t decided … yet."
+     ],
+     "ex": "I’m working on a café menu. I haven’t decided the fonts yet."
+    },
+    {
+     "k": "BAD FEEDBACK",
+     "q": "What’s the least useful feedback you’ve received?",
+     "fup": "What question would get better feedback?",
+     "st": [
+      "Someone said …",
+      "A better question is “Does … make sense?”"
+     ],
+     "ex": "Someone said “Make it pop.” A better question is “Does the order make sense?”"
+    },
+    {
+     "k": "CHANGES",
+     "q": "What part of a project changes most often?",
+     "fup": "How do you warn the client?",
+     "st": [
+      "… often changes.",
+      "I say “This might change, depending on …”"
+     ],
+     "ex": "The colors often change. I say “This might change, depending on the logo.”"
+    },
+    {
+     "k": "NEXT WEEK",
+     "q": "What are you going to do next on your project?",
+     "fup": "What do you need from the client?",
+     "st": [
+      "Next week, I’m going to …",
+      "I need …"
+     ],
+     "ex": "Next week, I’m going to test the layout. I need the real photos from the client."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "might",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Show the client a messy sketch, or only polished work?",
+     "a": "Messy sketch",
+     "b": "Polished work",
+     "fa": [
+      "Messy sketch. Big problems are cheap to fix early.",
+      "The client feels part of the process."
+     ],
+     "fb": [
+      "Polished work. Clients judge what they see.",
+      "A sketch might look unprofessional."
+     ]
+    },
+    {
+     "q": "Paper sketch or digital wireframe?",
+     "a": "Paper",
+     "b": "Digital",
+     "fa": [
+      "Paper. Nobody comments on colors.",
+      "It’s fast and you can throw it away."
+     ],
+     "fb": [
+      "Digital. It’s easy to share and change.",
+      "Remote clients can’t see your paper."
+     ]
+    },
+    {
+     "q": "Sketch together with the client, or alone?",
+     "a": "Together",
+     "b": "Alone",
+     "fa": [
+      "Together. You understand what they really want.",
+      "Fewer surprises later."
+     ],
+     "fb": [
+      "Alone. Design by committee is bad design.",
+      "The client might push their own ideas too much."
+     ]
+    },
+    {
+     "q": "Say “this might change”, or sound sure?",
+     "a": "Might change",
+     "b": "Sound sure",
+     "fa": [
+      "Might change. It’s honest and invites feedback.",
+      "Nothing is final in week one."
+     ],
+     "fb": [
+      "Sound sure. Clients trust confident designers.",
+      "Too many “maybes” sound insecure."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nothing is final yet."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the designer now.",
+   "p": "Your teacher is the pet clinic owner.",
+   "aluno": "Listen to the client’s question. Answer as the designer of the pet clinic wireframe.",
+   "perguntas": [
+    "Is this the final version?",
+    "Why is everything gray?",
+    "Where will the photos of the animals go?",
+    "Can we add a booking button?",
+    "When will it be ready?",
+    "What do you need from me?"
+   ],
+   "st": [
+    "This is still …",
+    "Please ignore … for now.",
+    "Next week, we’re going to …"
+   ],
+   "ex": "This is still a rough version. Please ignore the colors for now. What we’re testing here is the order of the pages."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

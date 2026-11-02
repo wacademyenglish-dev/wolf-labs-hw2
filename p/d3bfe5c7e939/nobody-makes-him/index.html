@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Nobody Makes Him · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Nobody Makes Him · The Training Board</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Nobody Makes Him · The Training Board</h2>
+    <p>One of the best-paid football players alive fries his own eggs at seven in the morning. Nobody makes him. Portuguese says one thing for <i>have to</i> and another for <i>don’t need to</i>, and the student builds <i>I must to</i>, <i>I don’t must</i>, <i>I haven’t to</i>. English treats <b>have to</b> as a normal verb: <b>don’t have to</b>, <b>do you have to</b>, <b>had to</b>. The screen is a training board: every task gets a stamp.</p>
+    <h4>THE VIDEO STAYS</h4>
+    <p>The same video as the old lesson, in sealed clips: A (his morning, scene II), then B and C (sixteen, alone, scene VIII, right after the bet in VII). Each clip stops by itself. Answer before, talk after.</p>
+    <h4>A NORMAL VERB · MUST HAS NO PAST</h4>
+    <p>HAVE TO takes DO / DOES / DID in questions and negatives, and the S sits on HAS. The past of both <i>must</i> and <i>have to</i> is <b>had to</b>. And <b>don’t have to</b> (free) is the opposite of <b>mustn’t</b> (forbidden): scene VI.</p>
+    <!--conversa--><h4>PLACE YOUR BET (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Right before the video of his sixteen-year-old self, your student bets on what happened: how long his father stayed, the hardest thing he had to do, what he says about it now. Let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to bring it to their own life. Bet too, so there is something to win. Recast mistakes quietly while they talk (<i>had to</i>, never <i>musted</i>); at the end, ask them to fix one or two sentences themselves. Then go to VIII and skip its first guess: play the clips and press Check to see who won. Short on time? Press Check without the video.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Week, VII Place Your Bet, IX Would You Swap? (let it get personal, briefly).</li>
+      <li><b>Listen</b>: II and VIII (the video). <b>Focus</b>: III The Training Board, IV A Normal Verb, V The Rule, VI Free, or Forbidden?</li>
+      <li><b>Write</b>: X, their board for next week. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* NOBODY MAKES HIM (Main A2) · pergunta-surpresa · 27/10/2026 · have to / don't have to / had to / mustn't */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'videoA', tipo: 'Would you rather', q: 'Would you rather cook your own breakfast or have a cook?',
+    opc: ['Cook it myself', 'Have a cook'], st: ['I’d rather …, because I don’t have to …'],
+    ex: 'Have a cook! Then I don’t have to wake up early.', push: 'What would your cook make for you every day?' },
+  { cena: 'quadro', tipo: 'And you?', q: 'What is one thing you have to do every day, and you hate it?',
+    opc: ['Wake up early', 'Cook', 'Clean the house', 'Something else'], st: ['I have to … every day.', 'Nobody makes me …, but …'],
+    ex: 'Wake up early. I have to get up at six, and I hate it.', push: 'Who makes you do it? Can you stop?' },
+  { cena: 'proibido', tipo: 'What if', q: 'You are the boss of your house for one week. What mustn’t people do?',
+    opc: ['Use phones at dinner', 'Leave dishes in the sink', 'Wake me up early'], st: ['In my house, you mustn’t …', 'You don’t have to …, but you mustn’t …'],
+    ex: 'You mustn’t use your phone at dinner. You don’t have to talk, but no phones!', push: 'And you? Do you follow that rule?' },
+  { cena: 'troca', tipo: 'Opinion', q: 'Rich people: do they have to work hard, or is life easy for them?',
+    opc: ['They have to work hard', 'It’s easy for them', 'It depends'], st: ['I think they have to …', 'They don’t have to …'],
+    ex: 'It depends. A football player has to train every day, but his children don’t have to work.', push: 'Would you still work if you were rich?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* NOBODY MAKES HIM (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A aposta entra DEPOIS de "VI · Free, or Forbidden?", colada no vídeo dos dezesseis anos (VII extra vira VIII).
+   O aluno aposta o que aconteceu; o Check mostra o que os cortes B e C contam. Gramática da aula
+   (have to / has to / don't have to / had to) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'aposta', apos: 'proibido', est: 'o', min: 6, img: 'vazio', rot: 'Place Your Bet', t: 'Sixteen, alone, in a new city. Place your bet.',
+    p: 'Choose one, then say why with had to. Your teacher bets too. Check after the video.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'His father', sit: 'He was sixteen. He moved to a new city to play football. His father came with him to an empty apartment.',
+        q: 'How long did his father stay?', opc: ['Two days', 'Two weeks', 'Two months'],
+        st: ['I bet his father had to …', 'I think he stayed …, because …'],
+        ex: 'Two weeks. I think his father had to go back to work.',
+        push: 'You are sixteen and alone in a new city. What do you have to do first?',
+        revela: 'Two days. Then his father went home, and he had to do everything himself.' },
+      { tag: 'The first weeks', q: 'What was the hardest thing he had to do?', opc: ['Cook his food', 'Wash his clothes', 'Clean the apartment'],
+        st: ['I bet he had to …', 'He didn’t have to …, but …'],
+        ex: 'Cook his food! At sixteen I couldn’t cook. He had to learn fast.',
+        push: 'Which one did YOU have to learn first? Who taught you?',
+        revela: 'All three. He had to wash his clothes, cook his food and clean the apartment himself.' },
+      { tag: 'Today', sit: 'Today he is rich. He doesn’t have to do any of that.',
+        q: 'What does he say about those years now?', opc: ['They were terrible', 'He learned a lot', 'He never talks about them'],
+        st: ['I bet he says …', 'He had to …, so now he …'],
+        ex: 'He learned a lot. He had to do everything alone, so now he isn’t afraid of anything.',
+        push: 'Is it good for a teenager to live alone? Yes or no?',
+        revela: 'He learned a lot. That is why he still cooks his own eggs: nobody makes him.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "videoA": {
+   "t": "A star player’s morning.",
+   "p": "Answer first. Then watch the clip once."
+  },
+  "quadro": {
+   "t": "His board. Stamp every task.",
+   "p": "Say the whole sentence. Then stamp it."
+  },
+  "forma": {
+   "t": "HAVE TO is a normal verb.",
+   "p": "Say the right one. Then tap it."
+  },
+  "regra": {
+   "t": "Three stamps, one verb.",
+   "p": "Say each wrong line right. Then tap it."
+  },
+  "proibido": {
+   "t": "Two negatives. Opposites.",
+   "p": "Read it. Free choice, or not allowed?"
+  },
+  "cv-aposta": {
+   "t": "Sixteen, alone. Place your bet.",
+   "p": "Choose one. Say why with had to."
+  },
+  "videoB": {
+   "t": "Now go a long way back.",
+   "p": "Answer first. Watch each chapter once."
+  },
+  "troca": {
+   "t": "Would you swap lives?",
+   "p": "Answer about you. Then compare with him."
+  },
+  "fim": {
+   "t": "Your board for next week.",
+   "p": "Write what you have to and don’t have to do."
+  }
+ },
+ "prep": {
+  "obj": "have to / don’t have to / had to (e mustn’t): um dos jogadores mais bem pagos do mundo frita os próprios ovos às sete da manhã. Ninguém o obriga.",
+  "armadilha": "O português leva a “I must to”, “I don’t must”, “I haven’t to” e “musted”. Have to é verbo normal (do/does/did); e don’t have to (livre) é o oposto de mustn’t (proibido).",
+  "pal": [
+   "have to",
+   "has to",
+   "don’t have to",
+   "Do you have to…?",
+   "had to",
+   "mustn’t",
+   "nobody makes him",
+   "training"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o jogador que pode pagar alguém para tudo e ainda frita os próprios ovos.",
+   "perg": "Do you cook your own breakfast?",
+   "pula": "Leia só o título e entre."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: obrigações da semana do aluno.",
+   "perg": "What do you have to do this week?",
+   "pula": "Duas perguntas bastam."
+  },
+  "videoA": {
+   "obj": "Clipe A: a manhã do jogador; responde antes, conversa depois.",
+   "perg": "Does he have to cook his eggs?",
+   "pula": "Assista uma vez e responda uma pergunta."
+  },
+  "quadro": {
+   "obj": "Quadro de treino: cada tarefa ganha o carimbo has to / doesn’t have to.",
+   "perg": "Does he have to train every day?",
+   "pula": "Quatro tarefas bastam."
+  },
+  "forma": {
+   "obj": "Have to como verbo normal: do/does/did em perguntas e negativas, S em has.",
+   "perg": "“He doesn’t have to” or “He hasn’t to”?",
+   "pula": "Quatro frases bastam."
+  },
+  "regra": {
+   "obj": "Fixa os três carimbos e o passado had to (must não tem passado).",
+   "perg": "What is the past of must?",
+   "pula": "Corrija três linhas."
+  },
+  "proibido": {
+   "obj": "Don’t have to (escolha livre) x mustn’t (proibido).",
+   "perg": "Is it free, or not allowed?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-aposta": {
+   "obj": "Aposta sobre os 16 anos dele, sozinho numa cidade nova, com had to; o professor aposta também.",
+   "perg": "What was the hardest thing he had to do?",
+   "pula": "Uma aposta basta; confira sem o vídeo."
+  },
+  "videoB": {
+   "obj": "Clipes B e C: os 16 anos, sozinho; confere as apostas.",
+   "perg": "Who won the bet?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "troca": {
+   "obj": "O aluno compara a vida dele com a do jogador; pessoal, mas breve.",
+   "perg": "Would you swap lives with him?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita final: quadro da próxima semana com have to, don’t have to e had to; vai para o My notes.",
+   "perg": "What did you have to do as a teenager?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa pessoal com have to / don’t have to / had to.",
+   "perg": "What do you have to do at work that you don’t like?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhe um lado e justifica com have to / don’t have to.",
+   "perg": "Which life do you pick?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o jogador e responde sobre a rotina e o passado com have to e had to.",
+   "perg": "Do you have to cook your own eggs?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your board, more questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "have to",
+    "don’t have to",
+    "had to"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR JOB",
+     "q": "What do you have to do at work that you don’t like?",
+     "fup": "Does anybody help you?",
+     "st": [
+      "I have to …",
+      "Nobody …"
+     ],
+     "ex": "I have to answer a lot of emails. Nobody helps me."
+    },
+    {
+     "k": "WEEKENDS",
+     "q": "What don’t you have to do on Sundays?",
+     "fup": "What do you do instead?",
+     "st": [
+      "On Sundays, I don’t have to …"
+     ],
+     "ex": "On Sundays, I don’t have to wake up early. I sleep until ten."
+    },
+    {
+     "k": "AS A KID",
+     "q": "What did you have to do at home as a kid?",
+     "fup": "Did you like it?",
+     "st": [
+      "I had to …"
+     ],
+     "ex": "I had to wash the dishes every night. I hated it."
+    },
+    {
+     "k": "NOBODY MAKES YOU",
+     "q": "What do you do even when you don’t have to?",
+     "fup": "Why?",
+     "st": [
+      "I don’t have to …, but I …"
+     ],
+     "ex": "I don’t have to make my bed, but I do it every day."
+    },
+    {
+     "k": "A RICH LIFE",
+     "q": "If you were rich, what wouldn’t you have to do?",
+     "fup": "What would you still do?",
+     "st": [
+      "I wouldn’t have to …"
+     ],
+     "ex": "I wouldn’t have to clean the house. I would still cook."
+    },
+    {
+     "k": "RULES",
+     "q": "What mustn’t you do at your job or school?",
+     "fup": "Is it a good rule?",
+     "st": [
+      "We mustn’t …",
+      "We don’t have to …"
+     ],
+     "ex": "We mustn’t use our phones in meetings. We don’t have to wear a suit."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "have to",
+    "don’t have to",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A star’s life or a normal life?",
+     "a": "A star’s life",
+     "b": "A normal life",
+     "fa": [
+      "A star’s life. You don’t have to worry about money."
+     ],
+     "fb": [
+      "A normal life. You don’t have to train every day."
+     ]
+    },
+    {
+     "q": "Cook your own food or pay a chef?",
+     "a": "Cook",
+     "b": "Pay a chef",
+     "fa": [
+      "Cook. Nobody has to do it for me."
+     ],
+     "fb": [
+      "Pay a chef. I don’t have to wash the dishes."
+     ]
+    },
+    {
+     "q": "Leave home at sixteen or stay with family?",
+     "a": "Leave at sixteen",
+     "b": "Stay",
+     "fa": [
+      "Leave. You have to learn fast."
+     ],
+     "fb": [
+      "Stay. You don’t have to grow up so fast."
+     ]
+    },
+    {
+     "q": "A job with strict rules or a job with no rules?",
+     "a": "Strict rules",
+     "b": "No rules",
+     "fa": [
+      "Strict rules. I know what I have to do."
+     ],
+     "fb": [
+      "No rules. I don’t have to ask anybody."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody had to win."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the football player now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the football player.",
+   "perguntas": [
+    "Do you have to cook your own eggs?",
+    "What do you have to do every morning?",
+    "What don’t you have to do anymore?",
+    "What did you have to do at sixteen?",
+    "What mustn’t you eat before a game?",
+    "Does anybody make you train so hard?"
+   ],
+   "st": [
+    "I have to …",
+    "I don’t have to …",
+    "I had to …"
+   ],
+   "ex": "I don’t have to cook. I do it because I want to. At sixteen, I had to do everything alone."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

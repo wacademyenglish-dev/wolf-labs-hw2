@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · You Never Do the Dishes · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>You Never Do the Dishes · Seven Squares</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>You Never Do the Dishes · Seven Squares</h2>
+    <p>Two people, one small apartment, one bad week. Marco and Bea argue with <b>two words</b>: <i>never</i> and <i>always</i>. Then somebody opens the week and counts. Nobody was right. The hour teaches the four words in the middle as the words you need to be <b>fair</b>. On screen, the week is graph paper: seven squares you can count. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>always</b> 7 · <b>usually</b> 5–6 · <b>often</b> 3–4 · <b>sometimes</b> 1–2 · <b>rarely</b> &lt;1 · <b>never</b> 0 (a guide, not a rule). The place: <b>before</b> a normal verb (<i>she always makes</i>), <b>after</b> am / is / are (<i>he is never late</i>). <b>never</b> and <b>rarely</b> are already negative. The mistakes: <i>she makes always</i>, <i>he never is</i>, <i>I don’t never</i>, <i>sometime</i>.</p>
+    <h4>THE AUDIO</h4>
+    <p>The fight (four lines) and the fair sentences (four lines) are real recordings, with pause and 0.75×; the words appear after listening. The speakers are British: they say <i>rubbish</i>; the American word is <i>trash</i>.</p>
+    <!--conversa--><h4>YOUR CALL (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After the evidence, three light choices, one of three each: who does the dishes in your student’s home, who is more right in the fight (Marco, Bea or nobody), and one rule for their fridge door. There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it) for a yes/no follow-up. The starters keep the word before the verb (<i>I usually wash</i>) and after BE (<i>They are never fair</i>). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Week (numbers only; write them down, they come back in IX), III Seven Squares (count out loud before each sentence), VI The Evidence (let the silence happen after the first one), VIII Your Call (choose one of three, three times).</li>
+      <li><b>Listen</b>: II The Argument (say it back with the same angry face), VII Say It Fairly.</li>
+      <li><b>Focus</b>: IV Before the Verb and V Except With BE (don’t merge them).</li>
+      <li><b>Write</b>: IX, their own week, with the red wavy line for the wrong place, <i>don’t never</i> and <i>sometime</i>. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* YOU NEVER DO THE DISHES (Main A1) · pergunta-surpresa · 27/10/2026 · advérbios de frequência */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'regua', tipo: 'And you?', q: 'How often are you late?',
+    opc: ['Never', 'Sometimes', 'Often'], st: ['I am never late.', 'I am sometimes late.', 'I am often late.'],
+    ex: 'I am often late. Sorry!', push: 'For class too? Yes or no?' },
+  { cena: 'antes', tipo: 'Would you rather', q: 'Cook or do the dishes?',
+    opc: ['Cook', 'Do the dishes'], st: ['Cook. I usually cook …', 'The dishes. I always …'],
+    ex: 'Cook! I often cook pasta.', push: 'Every day? Yes or no?' },
+  { cena: 'provas', tipo: 'Opinion', q: 'A good roommate: Bea or Marco?',
+    opc: ['Bea', 'Marco'], st: ['Bea. She often does the dishes.', 'Marco. He is usually …'],
+    ex: 'Bea. She often does the dishes!', push: 'And you? A good roommate? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* YOU NEVER DO THE DISHES (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Escolha 1 de 3" + frase quase pronta no lugar de "VIII · The Note" (extra; três linhas guiadas).
+   O VII (as frases justas em áudio) fica. Depois das provas (VI), o aluno escolhe: a louça na casa dele,
+   quem tem mais razão na briga, e uma regra para a casa do Marco e da Bea.
+   A1 bem leve: três opções curtas, o professor responde primeiro.
+   Gramática da aula (always / usually / often / sometimes / rarely / never, antes do verbo; depois de BE) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'casa', troca: 'bilhete', est: 'o', min: 6, img: 'cozinha', rot: 'Your Call', t: 'Your home, their home. Choose one.',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Your home', sit: 'Your home. The dishes.', q: 'Who does them?',
+        opc: ['Me', 'We share', 'Someone else'],
+        st: ['I always do the dishes.', 'We share. I usually …', 'I never do the dishes!'],
+        ex: 'We share. I usually wash, and my sister often dries.',
+        push: 'Every day? Yes or no?' },
+      { tag: 'The fight', sit: 'Marco and Bea, again.', q: 'Who is more right?',
+        opc: ['Marco', 'Bea', 'Nobody'],
+        st: ['Marco. Bea often …', 'Bea. Marco rarely …', 'Nobody. They are never fair.'],
+        ex: 'Nobody! Bea often does the dishes. Marco sometimes leaves the light on.',
+        push: 'Is “never” OK in a fight? Yes or no?' },
+      { tag: 'One rule', sit: 'A rule for their fridge door.', q: 'Which rule?',
+        opc: ['Dishes after dinner', 'Trash out on Mondays', 'No phones at dinner'],
+        st: ['We always …', 'We never …', 'We usually …'],
+        ex: 'Dishes after dinner. We always do the dishes after dinner, together!',
+        push: 'Your home has this rule? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Three numbers about your week.",
+   "p": "Read each message. Answer out loud."
+  },
+  "briga": {
+   "t": "Four things, out loud.",
+   "p": "Listen. Say it back, angry. Then see it."
+  },
+  "regua": {
+   "t": "Six words. Each one is a number.",
+   "p": "Tap a word. Count. Say one true sentence."
+  },
+  "antes": {
+   "t": "Where does the word go?",
+   "p": "Say the sentence. Tap the gap before the verb."
+  },
+  "depois": {
+   "t": "One verb changes the rule.",
+   "p": "With am, is, are: the word goes after."
+  },
+  "provas": {
+   "t": "Open the week and count.",
+   "p": "Count the full squares. Who is right?"
+  },
+  "justa": {
+   "t": "Same complaint, the right number.",
+   "p": "Choose the true word. Then listen."
+  },
+  "cv-casa": {
+   "t": "Your home, their home.",
+   "p": "Choose one. Teacher first. Say the sentence."
+  },
+  "fim": {
+   "t": "Your own week, in six sentences.",
+   "p": "One sentence per word. Then My notes."
+  }
+ },
+ "prep": {
+  "obj": "Advérbios de frequência (always, usually, often, sometimes, rarely, never) e o lugar deles: Marco e Bea brigam com never e always, e ninguém tem razão.",
+  "armadilha": "Colocar depois do verbo como em português (she makes always), antes do be (he never is), dupla negação (I don’t never) e “sometime” sem -s.",
+  "pal": [
+   "always",
+   "usually",
+   "often",
+   "sometimes",
+   "rarely",
+   "never",
+   "do the dishes",
+   "take out the trash"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a briga: um apartamento, uma semana ruim, duas palavras erradas.",
+   "perg": "Who does the dishes in your home?",
+   "pula": "Só leia o título e abra a semana."
+  },
+  "abre": {
+   "obj": "Aquecimento com três números da semana do aluno; anote, voltam na cena IX.",
+   "perg": "How many days do you cook?",
+   "pula": "Não pule: os números voltam no fim."
+  },
+  "briga": {
+   "obj": "Escuta da briga (áudio britânico, rubbish = trash) e repetição com a mesma cara.",
+   "perg": "What does Bea say?",
+   "pula": "Duas falas bastam."
+  },
+  "regua": {
+   "obj": "Cada palavra vira um número de quadradinhos; uma frase verdadeira por palavra.",
+   "perg": "How often do you cook?",
+   "pula": "Faça quatro palavras."
+  },
+  "antes": {
+   "obj": "Lugar da palavra: antes do verbo normal.",
+   "perg": "Where does “always” go?",
+   "pula": "Três frases bastam."
+  },
+  "depois": {
+   "obj": "Exceção: depois de am, is, are. Não junte com a cena IV.",
+   "perg": "“He is never late” or “he never is late”?",
+   "pula": "Três frases bastam."
+  },
+  "provas": {
+   "obj": "Contar os quadradinhos da semana e ver que ninguém estava certo.",
+   "perg": "Who is right?",
+   "pula": "Abra só duas semanas."
+  },
+  "justa": {
+   "obj": "A mesma reclamação com a palavra justa, e ouvir a versão justa.",
+   "perg": "Is it “never” or “sometimes”?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-casa": {
+   "obj": "Três escolhas: quem lava a louça, quem tem razão, uma regra para a geladeira.",
+   "perg": "Who is more right: Marco or Bea?",
+   "pula": "Duas escolhas bastam."
+  },
+  "fim": {
+   "obj": "Escrita: a semana do aluno com os números da cena I, com a linha vermelha.",
+   "perg": "How often do you exercise?",
+   "pula": "Quatro frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas sobre a rotina, com a palavra no lugar certo.",
+   "perg": "How often do you cook?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre tarefas de casa, com frequência.",
+   "perg": "Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve as regras justas da própria casa, em passos.",
+   "perg": "Who usually cooks?",
+   "pula": "Faça os dois primeiros passos."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions about your week.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "always",
+    "usually",
+    "often",
+    "sometimes",
+    "never"
+   ],
+   "cartas": [
+    {
+     "k": "THE DISHES",
+     "q": "Do you always do the dishes, or sometimes?",
+     "fup": "Who never does them?",
+     "st": [
+      "I … do the dishes.",
+      "My … never …"
+     ],
+     "ex": "I usually do the dishes. My brother never does them."
+    },
+    {
+     "k": "BREAKFAST",
+     "q": "Do you often eat breakfast, or rarely?",
+     "fup": "Are you hungry in the morning?",
+     "st": [
+      "I … eat breakfast.",
+      "I am … hungry."
+     ],
+     "ex": "I rarely eat breakfast. I am never hungry at 7."
+    },
+    {
+     "k": "WEEKENDS",
+     "q": "Are you usually at home on Sundays, or out?",
+     "fup": "Do you sometimes cook?",
+     "st": [
+      "I am usually …",
+      "I sometimes …"
+     ],
+     "ex": "I am usually at home on Sundays. I sometimes cook pasta."
+    },
+    {
+     "k": "THE TRASH",
+     "q": "Who usually takes out the trash: you or another person?",
+     "fup": "How often?",
+     "st": [
+      "… usually takes out …",
+      "… times a week."
+     ],
+     "ex": "I usually take out the trash, three times a week."
+    },
+    {
+     "k": "LATE",
+     "q": "Are you always on time, or sometimes late?",
+     "fup": "Are you late for class?",
+     "st": [
+      "I am always …",
+      "I am sometimes …"
+     ],
+     "ex": "I am sometimes late, but I am never late for class."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Do you often check your phone at dinner, or never?",
+     "fup": "Is that fair?",
+     "st": [
+      "I … check my phone.",
+      "It is …"
+     ],
+     "ex": "I often check my phone at dinner. It is not fair."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "always",
+    "usually",
+    "never"
+   ],
+   "rodadas": [
+    {
+     "q": "Do the dishes now or tomorrow morning?",
+     "a": "Now",
+     "b": "Tomorrow",
+     "fa": [
+      "Now. I always wash them after dinner."
+     ],
+     "fb": [
+      "Tomorrow. I am usually tired at night."
+     ]
+    },
+    {
+     "q": "One person cooks always, or two people take turns?",
+     "a": "One person",
+     "b": "Two people",
+     "fa": [
+      "One person. The food is always good."
+     ],
+     "fb": [
+      "Two people. It is always fair."
+     ]
+    },
+    {
+     "q": "A list on the fridge or no list?",
+     "a": "A list",
+     "b": "No list",
+     "fa": [
+      "A list. People never forget."
+     ],
+     "fb": [
+      "No list. People usually know."
+     ]
+    },
+    {
+     "q": "Live alone or live with a friend?",
+     "a": "Alone",
+     "b": "With a friend",
+     "fa": [
+      "Alone. There is never a fight."
+     ],
+     "fb": [
+      "With a friend. It is never boring."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and nobody was always right."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Fair Rules",
+   "t": "Write the rules for your home.",
+   "p": "Answer each step. Put the word before the verb.",
+   "prof": "Check the place of the word in every rule: before a normal verb, after am/is/are.",
+   "passos": [
+    {
+     "q": "Who usually cooks in your home?",
+     "st": [
+      "… usually cooks.",
+      "I sometimes …"
+     ],
+     "ex": "My mother usually cooks. I sometimes make the salad."
+    },
+    {
+     "q": "Who always does the dishes?",
+     "st": [
+      "… always …",
+      "Nobody always …"
+     ],
+     "ex": "Nobody always does the dishes. We take turns."
+    },
+    {
+     "q": "What do you rarely or never do at home?",
+     "st": [
+      "We never …",
+      "We rarely …"
+     ],
+     "ex": "We rarely clean the windows."
+    },
+    {
+     "q": "Write one new rule for the fridge door.",
+     "st": [
+      "We always …",
+      "We never …"
+     ],
+     "ex": "We always wash our own cup."
+    }
+   ],
+   "fim": "Four rules. Now your home is a little more fair."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

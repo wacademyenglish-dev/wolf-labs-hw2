@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "In About Ten Minutes",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/8c485e438547/in-about-ten-minutes/img/live-relogio.webp",
+  "capa": "../img/live-relogio.webp",
   "alvo": "at / on / in for time: at + clock time and at night; on + day and date; in + month, year, morning / afternoon and in ten minutes (from now); never in Friday, on March, after ten minutes",
   "abrir": "What time do you usually have lunch?",
   "fecho": "<b>at</b> five · at night. <b>on</b> Friday · on March 5th. <b>in</b> March · in 2026 · in the morning. From now: <b>in ten minutes</b> (not <i>after</i>).",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at a clock in an office. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/8c485e438547/in-about-ten-minutes/img/live-relogio.webp",
+      "img": "../img/live-relogio.webp",
       "leg": "An office clock, almost five",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,7 +109,7 @@ window.HW2 = {
       "frases": [
         {
           "t": "The office closes at five on Friday.",
-          "img": "https://wolf-labs.pages.dev/p/8c485e438547/in-about-ten-minutes/img/live-relogio.webp",
+          "img": "../img/live-relogio.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/8c485e438547/in-about-ten-minutes/img/live-relogio.webp",
+      "img": "../img/live-relogio.webp",
       "leg": "A clock on the wall",
       "pede": "Look at the picture: a clock. Write 2 or 3 sentences about your week. Use <b>at</b> + a time, <b>on</b> + a day and <b>in</b> + a part of the day.",
       "ph": "I wake up at … On … I … In the evening, …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Expensive but Fast",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f59c197ae893/expensive-but-fast/img/live-estacao.webp",
+  "capa": "../img/live-estacao.webp",
   "alvo": "opposite adjectives (expensive / cheap, fast / slow); but joins a good side and a bad side, and joins two good sides; the adjective goes before the noun (a cheap train)",
   "abrir": "How do you go to work or school? Is it fast or slow?",
   "fecho": "<b>Expensive / cheap</b>, <b>fast / slow</b>. Good side + bad side: <b>but</b> (<i>It is fast, but it is expensive.</i>). Two good sides: <b>and</b> (<i>It is cheap and healthy.</i>). The adjective goes before the noun: <i>a cheap train</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a trip to Edinburgh. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/f59c197ae893/expensive-but-fast/img/live-trem.webp",
+      "img": "../img/live-trem.webp",
       "leg": "An empty train",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The train is fast, but it is expensive.",
-          "img": "https://wolf-labs.pages.dev/p/f59c197ae893/expensive-but-fast/img/live-estacao.webp",
+          "img": "../img/live-estacao.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The bus is cheap, but it is slow.",
-          "img": "https://wolf-labs.pages.dev/p/f59c197ae893/expensive-but-fast/img/live-trem.webp",
+          "img": "../img/live-trem.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I want a cheap and fast train.",
-          "img": "https://wolf-labs.pages.dev/p/f59c197ae893/expensive-but-fast/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f59c197ae893/expensive-but-fast/img/live-trem.webp",
+      "img": "../img/live-trem.webp",
       "leg": "An empty train",
       "pede": "Look at the picture: a train with empty seats. Write 2 or 3 sentences about how you go to work or school. Use <b>cheap</b>, <b>expensive</b>, <b>fast</b> or <b>slow</b>, and <b>but</b> or <b>and</b>.",
       "ph": "I go by bus. It is cheap, but …",

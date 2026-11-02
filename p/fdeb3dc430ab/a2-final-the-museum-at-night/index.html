@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Museum at Night · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A2 · Unit 10 Review · The A2 Final</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Museum at Night · A2 Unit 10 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 10 (Closing Book A2). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> The last review of Book A2. Your student is the night guard at a small museum, and the round happens on a board game. Something strange is happening… it’s the museum cat.</p><p style="margin:0 0 6px"><b>About 51 min:</b> I · Memory (8) · II · The Night Round (15) · III · The Crown Jury (7) · IV · Find the Mistakes (7) · V · The Hot Seat (8) · VI · I Can (3) · VII · The Next Book (3).</p><p style="margin:0"><b>Open with:</b> “Open two cards. Find the pair, then make the sentence.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>phrasal verbs (turn it on, look for it) · who / that / which / where · the passive in the present · must / might / can’t be</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>THE NIGHT ROUND</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. This is the last review of Book A2. After I Can there is one more short scene, VI The Next Book, with what Book B1 brings.</p>
+    <h4>THE NEXT BOOK</h4>
+    <p>The last scene of the book: three cards with what the next book brings. Read them together and ask which one the student wants first.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>turn on it</i>, <i>look it for</i>, <i>the room where … there</i>, <i>it must not be (for can’t be)</i>, <i>it made of gold</i>, <i>the cat what lives here</i>. A2: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE CROWN JURY (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the night round, the morning: the crown is not in its glass box, it’s in the café (nothing was stolen, it only moved). Your student reads the evidence on Rosa, Mr. Hale and Max the cat and gives a verdict with must, might or can’t be. There is no single right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk (it was found, the man who…); at the end, ask them to fix one or two sentences themselves. The last word is one minute for the final verdict, then you defend that person. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Memory and VII · The Next Book.</li>
+      <li><b>Out loud</b>: II · The Night Round, III · The Crown Jury and V · The Hot Seat.</li>
+      <li><b>Focus</b>: IV · Find the Mistakes and VI · I Can.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW A2 · UNIT 10 · THE MUSEUM AT NIGHT · pergunta-surpresa · 27/10/2026 · phrasal verbs, who / which / where, passive, must / might / can’t */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'memoria', tipo: 'Would you rather', q: 'Would you rather work as a night guard or as a museum guide?',
+    opc: ['A night guard', 'A guide'], st: ['I’d rather be a person who …', 'because …'],
+    ex: 'A guide. I’d rather be a person who talks to people, not to statues!', push: 'And for double the money? Night guard?' },
+  { cena: 'tabuleiro', tipo: 'And you?', q: 'What is something which is made in your city or country?',
+    opc: ['Food', 'Clothes', 'Something else'], st: ['… is made in …', 'It’s made of …'],
+    ex: 'Food. Very good cheese is made in my state. It’s made with fresh milk.', push: 'Have you ever tried it? Do you like it?' },
+  { cena: 'erros', tipo: 'What if', q: 'You hear a strange noise at home at 3 AM. What is it?',
+    opc: ['The wind', 'A neighbor', 'A cat'], st: ['It might be …', 'It can’t be …, because …'],
+    ex: 'It might be my neighbor. He comes home very late. It can’t be the wind: the windows are closed.', push: 'Do you get up and look, or stay in bed?' },
+  { cena: 'cadeira', tipo: 'Opinion', q: 'Is a museum a good place for a first date?',
+    opc: ['Yes, perfect', 'Maybe', 'No, boring'], st: ['A museum is a place where …', 'It might be …'],
+    ex: 'Yes, perfect. A museum is a place where you always have something to talk about.', push: 'Then what is the best place for a first date?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW A2 · UNIT 10 · THE MUSEUM AT NIGHT · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O júri com provas entra DEPOIS de "II · The Night Round", no meio (nenhuma cena sai: a revisão tinha 44 min
+   e nenhuma extra; fica em ~51). A aula já tinha o papel (IV, cadeira quente) e o "qual livro primeiro" (VI);
+   faltava a DECISÃO: de manhã a coroa amanheceu fora da caixa, na cafeteria. Três suspeitos, provas com a
+   gramática da unidade (relativas, passiva, phrasal verbs) e o veredito com must / might / can’t be. Leve:
+   ninguém roubou nada, a coroa só mudou de sala. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'coroa', apos: 'tabuleiro', est: 'o', min: 7, img: 'capa', rot: 'The Crown Jury',
+    t: '7 AM. The crown is in the café!',
+    p: 'Read the evidence for each person. Give your verdict with must, might or can’t. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Rosa, the cleaner', sit: 'Rosa is the woman who cleans the museum before it opens.',
+        provas: ['Her keys were found in the crown room.', 'She starts work at 5 AM, not at night.'],
+        q: 'Did Rosa move the crown?', opc: ['It must be her', 'It might be her', 'It can’t be her'],
+        st: ['It must be her, because …', 'It can’t be her: she …', 'Her keys were found …, so …'],
+        ex: 'It might be her. Her keys were found in the room, but she starts at five. Maybe she lost them yesterday.',
+        push: 'The café is the room where Rosa has her coffee every morning. Does that change your verdict?' },
+      { tag: 'Mr. Hale, the director', sit: 'Mr. Hale is the man who bought the crown for the museum.',
+        provas: ['The glass box can only be opened with his code.', 'He was seen in the café at 11 PM, with a camera.'],
+        q: 'Did Mr. Hale move the crown?', opc: ['It must be him', 'It might be him', 'It can’t be him'],
+        st: ['It must be him, because …', 'The box is opened with …', 'He might want to …'],
+        ex: 'It must be him. The box is opened with his code, and he was seen in the café. He might want a photo for the website.',
+        push: 'He says: “I was looking for my glasses.” Do you believe him?' },
+      { tag: 'Max, the museum cat', sit: 'Max is the cat that lives in the museum. He loves shiny things.',
+        provas: ['Cat hair was found on the crown.', 'The crown is made of gold and it’s heavy: 2 kilos.'],
+        q: 'Did Max move the crown?', opc: ['It must be Max', 'It might be Max', 'It can’t be Max'],
+        st: ['It can’t be Max: the crown is …', 'Cat hair was found …, so …', 'He might …'],
+        ex: 'It can’t be Max. The crown is made of gold and it’s too heavy for a cat. He might sleep next to it, that’s all.',
+        push: 'Max is a very big cat. Still impossible?' }
+    ],
+    fim: { tag: 'The verdict', q: 'The museum owner calls you: who moved the crown?', opc: ['Rosa', 'Mr. Hale', 'Max'],
+      segundos: 60, nota: 'One minute for your verdict. Then your teacher defends that person.',
+      st: ['It must be …, because …', 'It can’t be …, because …'],
+      ex: 'It must be Mr. Hale. The box is opened only with his code. It can’t be Max: he’s a cat!',
+      push: 'New evidence: Mr. Hale was at home at midnight. Change your verdict?' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "memoria": {
+   "t": "Find the pairs.",
+   "p": "Open two cards. Make a sentence with the pair."
+  },
+  "tabuleiro": {
+   "t": "The night round. Check every room.",
+   "p": "Do the task in your room, out loud."
+  },
+  "cv-coroa": {
+   "t": "7 AM. The crown is in the café!",
+   "p": "Read the evidence. Verdict: must, might or can’t."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find each mistake. Say the right form. Tap."
+  },
+  "cadeira": {
+   "t": "Now YOU ask the questions.",
+   "p": "Ask your teacher. Listen. React."
+  },
+  "pode": {
+   "t": "Unit 10: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  },
+  "ponte": {
+   "t": "Book A2 is done. Next: B1.",
+   "p": "Read the three cards. Which one first?"
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 10 (fecha o livro A2): phrasal verbs, who/that/which/where, passiva no presente, must/might/can’t be. O aluno é o vigia de um museu à noite.",
+  "armadilha": "“Turn on it” / “look it for” (ordem do phrasal), “the room where … there”, “it must not be” no lugar de can’t be, passiva sem o be (“it made of gold”) e “the cat what lives here”.",
+  "pal": [
+   "turn it on",
+   "look for it",
+   "who",
+   "which",
+   "where",
+   "is made of",
+   "must be",
+   "might be",
+   "can’t be"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abre a última revisão do livro A2: a ronda noturna no museu e algo estranho (é o gato).",
+   "perg": "Have you ever been to a museum at night?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "memoria": {
+   "obj": "Jogo da memória: cada par vira uma frase com a gramática da unidade.",
+   "perg": "Can you make a sentence with this pair?",
+   "pula": "Três pares bastam."
+  },
+  "tabuleiro": {
+   "obj": "Ronda em tabuleiro: cada sala traz uma tarefa que mistura os tópicos da unidade.",
+   "perg": "What is this room used for?",
+   "pula": "Pare na metade do tabuleiro."
+  },
+  "cv-coroa": {
+   "obj": "Júri da coroa no café: Rosa, Mr. Hale ou Max, o gato; veredito com must / might / can’t be.",
+   "perg": "Who must have moved it? Why?",
+   "pula": "Dois suspeitos e o veredito final."
+  },
+  "erros": {
+   "obj": "Bilhete com erros: o aluno diz a forma certa antes de tocar.",
+   "perg": "What is wrong in this line?",
+   "pula": "Três erros bastam."
+  },
+  "cadeira": {
+   "obj": "Agora o aluno pergunta e o professor responde curto; reação e uma pergunta extra.",
+   "perg": "What do you want to ask me?",
+   "pula": "Três cartas bastam."
+  },
+  "pode": {
+   "obj": "Checklist “I can” da unidade; o que ficar aberto vai para a lição de casa.",
+   "perg": "Can you use must, might and can’t now?",
+   "pula": "Leia só as linhas abertas."
+  },
+  "ponte": {
+   "obj": "Fecha o livro A2 com três cartões do que o B1 traz; o aluno escolhe o primeiro.",
+   "perg": "Which one do you want first?",
+   "pula": "Leia só o cartão escolhido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra com relativas, passiva, phrasal verbs e dedução, sobre a vida do aluno.",
+   "perg": "What is a place where you feel calm?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre museus e mistérios, com must / might / can’t be.",
+   "perg": "A museum by day or by night?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o vigia noturno e o professor interroga sobre a noite no museu.",
+   "perg": "What did you hear last night?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions to close the book.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "who",
+    "which",
+    "where",
+    "is made",
+    "must be",
+    "might be",
+    "can’t be"
+   ],
+   "cartas": [
+    {
+     "k": "A PLACE",
+     "q": "What is a place where you feel calm?",
+     "fup": "When do you go there?",
+     "st": [
+      "It’s a place where …",
+      "I go there when …"
+     ],
+     "ex": "It’s a small park where nobody talks. I go there when I’m tired."
+    },
+    {
+     "k": "A PERSON",
+     "q": "Who is a person who helps you a lot?",
+     "fup": "How does he or she help?",
+     "st": [
+      "It’s my … who …"
+     ],
+     "ex": "It’s my aunt, who always looks after my kids."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What is your city known for?",
+     "fup": "What is made there?",
+     "st": [
+      "It’s known for …",
+      "… is made there."
+     ],
+     "ex": "It’s known for its beaches. Good cheese is made there too."
+    },
+    {
+     "k": "A MYSTERY",
+     "q": "Your neighbor’s lights are on at 4 AM. Why?",
+     "fup": "Can it be a party?",
+     "st": [
+      "He must be …",
+      "He might be …",
+      "It can’t be …"
+     ],
+     "ex": "He might be working. It can’t be a party: there’s no music."
+    },
+    {
+     "k": "YOUR MORNING",
+     "q": "What do you turn on first in the morning?",
+     "fup": "What do you look for every day?",
+     "st": [
+      "I turn on …",
+      "I always look for …"
+     ],
+     "ex": "I turn on the coffee machine. I always look for my keys."
+    },
+    {
+     "k": "A1 TO B1",
+     "q": "What is something that was hard in this book and is easy now?",
+     "fup": "What might be hard in B1?",
+     "st": [
+      "… was hard. Now it’s easy.",
+      "… might be hard."
+     ],
+     "ex": "Phrasal verbs were hard. Now they’re easy. Listening might be hard in B1."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "must be",
+    "might be",
+    "can’t be"
+   ],
+   "rodadas": [
+    {
+     "q": "A museum by day or by night?",
+     "a": "By day",
+     "b": "By night",
+     "fa": [
+      "By day. It must be scary at night."
+     ],
+     "fb": [
+      "By night. It must be magic with no people."
+     ]
+    },
+    {
+     "q": "The crown moved. Was it Max the cat?",
+     "a": "Yes, the cat",
+     "b": "No, a person",
+     "fa": [
+      "It must be the cat. Cats move everything."
+     ],
+     "fb": [
+      "It can’t be the cat. A crown is too heavy."
+     ]
+    },
+    {
+     "q": "Night guard: a good job or a bad job?",
+     "a": "Good",
+     "b": "Bad",
+     "fa": [
+      "Good. It must be quiet."
+     ],
+     "fb": [
+      "Bad. It might be lonely."
+     ]
+    },
+    {
+     "q": "Old things or new things in a museum?",
+     "a": "Old",
+     "b": "New",
+     "fa": [
+      "Old things, which have a story."
+     ],
+     "fb": [
+      "New things, which show the future."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the night guard.",
+   "p": "Your teacher, the museum director, interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the night guard of the museum.",
+   "perguntas": [
+    "Which room did you check first?",
+    "Who was in the museum after closing time?",
+    "Where is the crown usually kept?",
+    "What is the crown made of?",
+    "The crown was in the café. Who must have moved it?",
+    "Did you turn off all the lights?"
+   ],
+   "st": [
+    "It must be …",
+    "It might be …",
+    "It can’t be …",
+    "The room where …"
+   ],
+   "ex": "It can’t be Rosa: she left at six. It might be Max, the cat who lives here."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

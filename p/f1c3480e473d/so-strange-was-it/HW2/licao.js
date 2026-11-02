@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "So Strange Was It",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f1c3480e473d/so-strange-was-it/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "so / such + inversion for result and intensity: So strange was the light that ...; So quickly did it happen that ...; Such was the noise that ...; compared with the normal forms It was so strange that / It was such a strange light that",
   "abrir": "Have you ever seen or heard something you could not explain?",
   "fecho": "Put the feeling first and the result after <b>that</b>: <b>So strange was the light that nobody slept.</b> <b>Such was the noise that the windows shook.</b> <b>So quickly did it happen that nobody ran.</b> After <b>so + adverb</b>, the auxiliary comes before the subject. Never <i>So strange the light was</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo, the morning after a strange night. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f1c3480e473d/so-strange-was-it/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A foggy road with two street lamps",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "So thick was the fog that we could barely see the road.",
-          "img": "https://wolf-labs.pages.dev/p/f1c3480e473d/so-strange-was-it/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Such was the silence that I could hear my own heartbeat.",
-          "img": "https://wolf-labs.pages.dev/p/f1c3480e473d/so-strange-was-it/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "So suddenly did the light appear that everybody froze.",
-          "img": "https://wolf-labs.pages.dev/p/f1c3480e473d/so-strange-was-it/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f1c3480e473d/so-strange-was-it/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A strange blue glow in a dark forest",
       "pede": "Look at the picture: a strange blue glow between the trees at night. Write 2 or 3 sentences about what happens, using <b>So ... was ... that</b>, <b>Such was the ... that</b> or <b>So quickly did it ... that</b>.",
       "ph": "So strange was the glow that …",

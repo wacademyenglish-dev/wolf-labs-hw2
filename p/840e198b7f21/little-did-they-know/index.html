@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Little Did They Know · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 4 · Inversion</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Little Did They Know · C1 Unit 4 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on inversion after negative expressions of manner and rule: Little did they know…, At no time did…, Never before had…, In no way was…, Under no circumstances should…, On no account must…</p><p style="margin:0 0 6px"><b>The story:</b> The audio guide of a lighthouse museum (invented): in 1911 the keeper Thomas Bell saved six fishermen in a storm. At the end, the museum’s safety sign.</p><p style="margin:0 0 6px"><b>About 42 min:</b> I · The Audio Guide (10) · II · Story or Sign? (9) · III · The Loneliest Jobs (8) · IV · Find the Mistakes (7) · V · The Hot Seat (8).</p><p style="margin:0"><b>Open with:</b> “What do you imagine the life of a lighthouse keeper was like, a hundred years ago?”</p></div><!--/prep-->
+    <p>Inversion lives in two places: stories with a twist and very strict rules. The audio guide gives both in one text. Read it as a museum guide. The sign with mistakes makes the student fix the order; the hot seat lets the student hear YOU use it about your own life.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>Little did they know… · At no time did… · Never before had… · In no way was… · Under no circumstances should… · On no account must…</p>
+    <h4>THE AUDIO GUIDE</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>STORY OR SIGN?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>Little they knew</i>, <i>Under no circumstances you should</i>, <i>At no time he said</i>, <i>Never before I had seen</i>, <i>On no account visitors must</i>, <i>In no way it was easy</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE LONELIEST JOBS (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the rule, your student ranks five lonely jobs, from the one they would never do to the one they might enjoy, and explains the top and the last with inversion (Under no circumstances would I…, In no way could I…). There is no right order. Wait five seconds in silence, then use the PUSH line (only you see it). Tap <b>Show my teacher’s order</b> and agree on one top 3 together. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Audio Guide.</li>
+      <li><b>Focus</b>: II · Story or Sign? and IV · Find the Mistakes.</li>
+      <li><b>Out loud</b>: III · The Loneliest Jobs and V · The Hot Seat.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* LITTLE DID THEY KNOW (Main C1) · pergunta-surpresa · 28/10/2026 · inversão de modo e regra */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'Would you rather', q: 'Would you rather spend a week alone in a lighthouse, or a week in a house with twenty people?',
+    opc: ['The lighthouse', 'Twenty people'], st: ['Under no circumstances would I …', 'Never before have I …'],
+    ex: 'The lighthouse! Never before have I had a whole week of silence. Under no circumstances would I share a bathroom with twenty people.', push: 'No phone signal in the lighthouse. Still your choice?' },
+  { cena: 'descobre', tipo: 'And you?', q: 'Tell me about a day that started normal and ended in a surprise.',
+    opc: ['A good surprise', 'A funny surprise', 'A bad surprise'], st: ['Little did I know that …', 'Never before had I …'],
+    ex: 'A good surprise. I went to a friend’s house for coffee. Little did I know that twenty people were hiding in the kitchen for my birthday.', push: 'Now tell it again like a movie trailer. Start with “Little did she know…”.' },
+  { cena: 'erros', tipo: 'Opinion', q: 'Which rule at work, school or home should never, ever be broken?',
+    opc: ['Never be late', 'Never lie', 'Something else'], st: ['Under no circumstances should anyone …', 'On no account must you …'],
+    ex: 'Never lie. Under no circumstances should anyone lie to their team: in no way can you work together after that.', push: 'A small lie to protect a friend’s feelings. Still never?' },
+  { cena: 'cadeira', tipo: 'What if', q: 'You can put one sign on the door of your home. What does it say?',
+    opc: ['A funny rule', 'A serious rule', 'A warning'], st: ['Under no circumstances should visitors …', 'On no account must …'],
+    ex: 'A funny rule: “Under no circumstances should visitors talk to me before my first coffee.”', push: 'Who in your life would break that rule first?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* LITTLE DID THEY KNOW (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O ranking TROCA "III · Speed Round" (prática controlada de lacunas; a mesma forma volta no IV, Find the Mistakes).
+   Depois de ouvir o faroleiro Thomas Bell, o aluno ordena cinco trabalhos solitários, do que ele NUNCA
+   faria ao que ele até toparia, e compara com a ordem do professor. A inversão da aula (Under no
+   circumstances would I…, In no way could I…, Never before have I…, Little do people know…) mora nos
+   iniciadores. Formato: ranking with teacher order. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'ranking', troca: 'rapido', est: 'o', min: 8, img: 'conversa', rot: 'The Loneliest Jobs', t: 'Could you be Thomas Bell?',
+    p: 'Put the five jobs in order: 1 is the job you would never do. Explain your top one and your last one. Then see your teacher’s order.',
+    formato: 'ranking',
+    q: 'Which job could you NEVER do?',
+    itens: ['Lighthouse keeper, alone on an island', 'Scientist in Antarctica for six months', 'Astronaut on a space station', 'Night guard in an empty museum', 'Long-distance truck driver'],
+    dica: 'Tap from the job you would never do to the one you might enjoy. Tap again to take it out.',
+    st: ['Under no circumstances would I …', 'In no way could I …', 'Never before have I …', 'Little do people know that …'],
+    ex: '1 is the astronaut. Under no circumstances would I live in a metal box in space. Last is the truck driver: little do people know how beautiful the roads are at night.',
+    push: 'Double the salary for your number 1. One year only. Do you go now?',
+    prof: [2, 1, 0, 3, 4] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Room 3: the night of 1911.",
+   "p": "Read it like a museum guide. Then look closer."
+  },
+  "descobre": {
+   "t": "Where does the verb go?",
+   "p": "Compare A and B. A story, or a law?"
+  },
+  "cv-ranking": {
+   "t": "Could you be Thomas Bell?",
+   "p": "Rank five lonely jobs. Explain your first and last."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say the right form, then tap."
+  },
+  "cadeira": {
+   "t": "Now YOU ask me about my life.",
+   "p": "Ask your teacher. Then react and follow up."
+  }
+ },
+ "prep": {
+  "obj": "Inversão depois de expressões negativas (Little did they know, At no time did, Under no circumstances should): o farol de 1911, Thomas Bell e a placa de segurança do museu.",
+  "armadilha": "O português mantém sujeito + verbo, então sai “Little they knew”, “Under no circumstances you should”, “At no time he said”, “Never before I had seen”.",
+  "pal": [
+   "Little did they know …",
+   "At no time did …",
+   "Never before had …",
+   "In no way was …",
+   "Under no circumstances should …",
+   "On no account must …",
+   "lighthouse keeper",
+   "storm"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: a inversão vive em histórias com reviravolta e em regras muito rígidas.",
+   "perg": "What was a lighthouse keeper’s life like?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Áudio-guia do museu: Thomas Bell salva seis pescadores em 1911; no fim, a placa de segurança.",
+   "perg": "What did the fishermen not know?",
+   "pula": "Leia e faça duas perguntas de sentido."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: inversão de história x inversão de regra; armadilhas de ordem.",
+   "perg": "Does this sound like a story or a law?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "cv-ranking": {
+   "obj": "Ranking de cinco trabalhos solitários; explicar o primeiro e o último com inversão.",
+   "perg": "Which job would you never do, under any circumstances?",
+   "pula": "Explique só o primeiro e o último."
+  },
+  "erros": {
+   "obj": "Placa com erros de ordem; o aluno diz a forma certa antes de tocar e lê tudo certo.",
+   "perg": "Where should the verb go here?",
+   "pula": "Ache três erros e leia a placa certa."
+  },
+  "cadeira": {
+   "obj": "Inversão de papéis: o aluno pergunta e o professor responde sobre a própria vida, com drama e inversão.",
+   "perg": "What would you like to ask me?",
+   "pula": "Três perguntas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com inversões de história e de regra, sobre a vida do aluno.",
+   "perg": "Little did you know … what?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre solidão, regras e heroísmo, com uma inversão por lado.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve em voz alta o áudio-guia de um lugar que conhece, com história e regra invertidas.",
+   "perg": "What place would you guide me through?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Twists and strict rules.",
+   "p": "Pick a card. Answer with one inversion.",
+   "palavras": [
+    "Little did I know …",
+    "At no time did …",
+    "Never before had I …",
+    "Under no circumstances …",
+    "On no account …"
+   ],
+   "cartas": [
+    {
+     "k": "A TWIST",
+     "q": "Tell me about a day that started normally and ended very differently.",
+     "fup": "When did you realize?",
+     "st": [
+      "Little did I know that …",
+      "The thing is, …"
+     ],
+     "ex": "I went to a friend’s birthday. Little did I know that I would meet my future boss there."
+    },
+    {
+     "k": "HOUSE RULES",
+     "q": "What is the one rule nobody breaks in your home?",
+     "fup": "Who made that rule?",
+     "st": [
+      "Under no circumstances should anyone …",
+      "On no account …"
+     ],
+     "ex": "Under no circumstances should anyone sit in my father’s chair."
+    },
+    {
+     "k": "FIRST TIME",
+     "q": "When did you feel something you had never felt before?",
+     "fup": "Has it happened again?",
+     "st": [
+      "Never before had I …"
+     ],
+     "ex": "Never before had I felt so small as when I first saw the ocean."
+    },
+    {
+     "k": "SOLITUDE",
+     "q": "Could you live alone for a month, like Thomas Bell?",
+     "fup": "What would you miss most?",
+     "st": [
+      "In no way could I …",
+      "I suppose I could …"
+     ],
+     "ex": "In no way could I live without people. I’d be talking to the seagulls by day three."
+    },
+    {
+     "k": "AT WORK",
+     "q": "What should a new colleague never do in your workplace?",
+     "fup": "Has anyone done it?",
+     "st": [
+      "On no account must you …",
+      "At no time should …"
+     ],
+     "ex": "On no account must you reply-all to the company newsletter."
+    },
+    {
+     "k": "QUIET HEROES",
+     "q": "Do you know a quiet hero, someone who never asks for credit?",
+     "fup": "Does anyone thank them?",
+     "st": [
+      "At no time did he/she …",
+      "In no way was it …"
+     ],
+     "ex": "My aunt fed half the street during the pandemic. At no time did she ask for anything."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "Under no circumstances …",
+    "In no way …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Was Thomas Bell a hero, or just doing his job?",
+     "a": "A hero",
+     "b": "His job",
+     "fa": [
+      "A hero. At no time was he obliged to risk his life.",
+      "Six men are alive because of him."
+     ],
+     "fb": [
+      "His job. Saving people was the point of a lighthouse.",
+      "In no way does that make it less brave, though."
+     ]
+    },
+    {
+     "q": "Strict museum rules: necessary or excessive?",
+     "a": "Necessary",
+     "b": "Excessive",
+     "fa": [
+      "Necessary. Under no circumstances should people touch history.",
+      "One careless visitor can ruin it."
+     ],
+     "fb": [
+      "Excessive. People learn by getting close.",
+      "A museum isn’t a prison."
+     ]
+    },
+    {
+     "q": "Solitude: a luxury or a punishment?",
+     "a": "A luxury",
+     "b": "A punishment",
+     "fa": [
+      "A luxury. Rarely do we get real silence today.",
+      "Some people need it to think."
+     ],
+     "fb": [
+      "A punishment. In no way are humans made for it.",
+      "Prisons use it for a reason."
+     ]
+    },
+    {
+     "q": "Should rules ever be broken to save someone?",
+     "a": "Yes",
+     "b": "Never",
+     "fa": [
+      "Yes. Rules exist to protect people, not the other way round.",
+      "Little would a rule matter if someone drowned."
+     ],
+     "fb": [
+      "Never. Once you break one, where do you stop?",
+      "The rule usually saves more people than it hurts."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Never before had a lighthouse caused so much debate."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Audio Guide",
+   "t": "Guide me through a place you know.",
+   "p": "One step at a time. Speak like a guide.",
+   "prof": "Any place works: a house, an office, a city square. Push for one story inversion and one rule inversion.",
+   "passos": [
+    {
+     "q": "Where are we, and what’s special about this place?",
+     "st": [
+      "Welcome to …",
+      "This is where …"
+     ],
+     "ex": "Welcome to my grandmother’s kitchen. This is where every family decision was made."
+    },
+    {
+     "q": "Tell one moment from its history, with a twist.",
+     "st": [
+      "Little did they know …",
+      "Never before had …"
+     ],
+     "ex": "In 1998, my uncle announced he was moving to Japan. Little did he know that he would stay for twenty years."
+    },
+    {
+     "q": "What did the main character never do?",
+     "st": [
+      "At no time did …",
+      "In no way was …"
+     ],
+     "ex": "At no time did my grandmother raise her voice. In no way was that a sign of weakness."
+    },
+    {
+     "q": "Finish with the safety sign: the strict rule.",
+     "st": [
+      "Under no circumstances should visitors …",
+      "On no account must …"
+     ],
+     "ex": "Under no circumstances should visitors open the oven before the cake is ready."
+    }
+   ],
+   "fim": "Tour over. Little did your teacher know how good a guide you are."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

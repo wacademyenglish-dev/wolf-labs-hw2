@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Shouldn’t Have Wished",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/04b2bae356cc/i-shouldnt-have/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "past modals: should have + past participle (a better choice), shouldn't have (a mistake), could have (it was possible), needn't have (it was not necessary); never should have + past simple (went), never didn't should have, never could + past participle without have",
   "abrir": "What is something you shouldn't have bought?",
   "fecho": "<b>should have</b> + past participle = a better choice in the past: <i>I should have called.</i> <b>shouldn't have</b> = it was a mistake. <b>could have</b> = it was possible. <b>needn't have</b> = it was not necessary. Never <i>should have went</i>, never <i>didn't should have</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a bad night. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/04b2bae356cc/i-shouldnt-have/img/live-telefone.webp",
+      "img": "../img/live-telefone.webp",
       "leg": "A phone on a bedside table at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I shouldn't have stayed up so late.",
-          "img": "https://wolf-labs.pages.dev/p/04b2bae356cc/i-shouldnt-have/img/live-quarto.webp",
+          "img": "../img/live-quarto.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "You should have called me earlier.",
-          "img": "https://wolf-labs.pages.dev/p/04b2bae356cc/i-shouldnt-have/img/live-telefone.webp",
+          "img": "../img/live-telefone.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We could have left this old thing in the shop.",
-          "img": "https://wolf-labs.pages.dev/p/04b2bae356cc/i-shouldnt-have/img/live-galho.webp",
+          "img": "../img/live-galho.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/04b2bae356cc/i-shouldnt-have/img/live-loja.webp",
+      "img": "../img/live-loja.webp",
       "leg": "A little shop full of old things",
       "pede": "Look at the picture: a little shop full of old things. Write 2 or 3 sentences about a small mistake in your week. Use <b>should have</b>, <b>shouldn't have</b>, <b>could have</b> or <b>needn't have</b>.",
       "ph": "I should have … I shouldn't have …",

@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · So That They Don’t Float Away · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Literata:ital,opsz,wght@0,7..72,500;0,7..72,700;1,7..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>So That They Don’t Float Away · The Tethers</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>So That They Don’t Float Away · The Tethers</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Two hundred and fifty miles above us, a small crew lives in a station that goes around the planet sixteen times a day, and nothing stays where you put it.</p><p style="margin:0 0 6px"><b>The grammar:</b> Who Does the Second Part?: Same person: to. Its own subject: so that. What you avoid: so as not to.</p><p style="margin:0 0 6px"><b>Short class (about 43 min):</b> I You and Your Day · III Life in Space · V A Day on the Station · VI Who Does the Second Part? · VII The Docking Ring · XI Good Night, Station. Skip if you’re short on time: VIII, IX, X (marked EXTRA on your screen). Full lesson: about 63 min.</p><p style="margin:0"><b>Open with:</b> “What time does your alarm ring? Do you get up at once, or do you stay in bed?”</p></div><!--/prep-->
+    <p>Two hundred and fifty miles above us, a small crew lives in a station that goes around the planet sixteen times a day, and nothing stays where you put it. Every strange thing they do has a reason, and the grammar of purpose does the explaining: <b>to / in order to</b> for the same person, <b>so that + can / won’t / could</b> when something else does the second part, and the negative: <b>so as not to / in order not to</b>. The screen is a row of dark portholes: each thing floats, and the right “why” clips a tether to it. The big question: <b>would you live on the station for six months?</b></p>
+    <h4>A REVIEW LESSON</h4>
+    <p>It works as a follow-up to a lesson on purpose. To / in order to come back quickly; the center of the hour is so that with its own subject and a modal, the past (could / wouldn’t) and the negative. Don’t mention any other lesson to your student.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III: a short video about living in space (5:26), sealed until you press play, in four chapters; each stops by itself. The questions before and during are open. The last step is ONE screen: the whole video stays on the left (tap a time to hear that moment again), with six portholes under it; on the right, six True or Lie lines about what the astronaut says. Every right answer clips a tether to one porthole. On a Lie the student says the true line. When all six are done, Alex (the school on the radio) asks one last question (“What do you take to the station, and why?”): the student taps an answer and says the sentence out loud, with to, so that or so as not to.</p>
+    <h4>THE READER</h4>
+    <p>Scene V, before the rule: six short chapters (a made-up crew, Mia and Ken; the facts are real). Your student reads out loud, picks the true sentence, then explains why. Tap exactly what you heard; a correct answer in another shape (“because…”) is fine.</p>
+    <h4>THE PORTUGUESE TRAP</h4>
+    <p>One little word does all the work in Portuguese: purpose before a verb comes out as <i>for keep</i> or <i>for to keep</i>; with a new subject, <i>for it don’t float</i>; the negative, <i>for not</i> or <i>to don’t</i>. After so that, many drop the real verb (<i>so that the glass not break</i>) or keep can in a past story.</p>
+    <h4>THE DOCKING RING</h4>
+    <p>Scene VII: read the moment and the first words, then stop. Moments 2 and 3 are in the past (wouldn’t / could). Moments 1 and 7: not goes before to.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>gigantic</i>, <i>narrow</i>, <i>survived</i>, <i>homesick</i> and <i>barriers</i>, before the video, in match the columns and hot seat. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (X) AND THE SURPRISE QUESTION</h4>
+    <p>Four opinions about life on the station and on Earth. Your student taps a number from 1 to 5 and defends it with to, so that or so as not to; then you take the opposite number. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast mistakes quietly while they talk (watch for “for keep” and “to don’t”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Your Day, V A Day on the Station, VII The Docking Ring, VIII The School Radio Call and X Unpopular Opinions.</li>
+      <li><b>Listen</b>: II The Words, III Life in Space and IV Line by Line.</li>
+      <li><b>Focus</b>: VI Who Does the Second Part? and IX Quick Check.</li>
+      <li><b>Write</b>: XI Good Night, Station.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* SO THAT THEY DON'T FLOAT AWAY (Main B1) · pergunta-surpresa · 27/10/2026 · to / so that / so as not to */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'What do you always do before you leave home, and why?',
+    opc: ['Check something', 'Take something', 'Tell somebody'], st: ['I always … so that …', 'I … so as not to …'],
+    ex: 'I always check the stove twice so as not to leave it on. I also take a jacket so that I don’t get cold.', push: 'Have you ever forgotten it? What happened?' },
+  { cena: 'leitor', tipo: 'Would you rather', q: 'On the station for six months: would you rather take a guitar or a big box of books?',
+    opc: ['A guitar', 'Books'], st: ['I’d take … in order to …', '… so that I don’t get bored.'],
+    ex: 'Books. I’d take them so that I could finally read everything I bought and never opened.', push: 'You can play the guitar for the whole crew. Still the books?' },
+  { cena: 'doca', tipo: 'What if', q: 'You can bring one smell from Earth to the station. Which one?',
+    opc: ['Coffee', 'Rain', 'Fresh bread'], st: ['I’d bring … so that …', 'I’d want it to …'],
+    ex: 'Rain. I’d bring it so that I don’t forget what home feels like.', push: 'The crew hates that smell. Do you keep it or give it up?' },
+  { cena: 'fim', tipo: 'Opinion', q: 'What is one small thing people should do every day to have a better day?',
+    opc: ['Go outside', 'Turn off the phone', 'Talk to a friend'], st: ['People should … in order to …', 'You need … so that …'],
+    ex: 'Turn off the phone for an hour, so as not to read bad news before breakfast.', push: 'Do you do it? Be honest.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SO THAT THEY DON'T FLOAT AWAY (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A escala de opiniões impopulares entra no lugar de "X · What For?" (extra; repetia as cartas pessoais do I).
+   Quatro frases sobre a vida na estação e na Terra: o aluno dá um número de 1 a 5 e defende.
+   A gramática da aula (to / in order to / so that / so as not to) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'escala', troca: 'roda', est: 'o', min: 7, img: 'cupula', rot: 'Unpopular Opinions', t: 'Four opinions from the station. How much do you agree?',
+    p: 'Tap a number from 1 to 5. Defend it with to, so that or so as not to. Your teacher takes the other side.',
+    formato: 'escala', tag: 'Agree or disagree?',
+    frases: [
+      { f: 'We should send robots to space, not people, so that nobody takes the risk.',
+        st: ['We need people there to …', 'Robots can go so that people don’t …', 'I disagree, because …'],
+        ex: '2, disagree. Robots are useful, but we need people there to make quick decisions and to tell us what it feels like.',
+        push: 'A robot costs ten times less. Is a human story worth all that money?' },
+      { f: 'Astronauts should take a pet to the station so that they don’t feel lonely.',
+        st: ['They should take a pet so that …', 'Pets would need … in order to …', 'So as not to …, they should …'],
+        ex: '4, agree. A small fish, maybe! They could look at it so that they don’t feel so far from home.',
+        push: 'A cat floating around the kitchen for six months. Who cleans up? Still a 4?' },
+      { f: 'Everyone on Earth should exercise two hours a day, like astronauts, in order to stay strong.',
+        st: ['Two hours is too much: people need time to …', 'You only need … in order to …', 'I’d do it so that …'],
+        ex: '2. Thirty minutes is enough to stay strong. Two hours is for astronauts, so that their bones don’t get weak in space.',
+        push: 'Your company gives you two paid hours a day to exercise. Do you say no?' },
+      { f: 'Sleeping in a small bag on the wall sounds better than sleeping in a big bed.',
+        st: ['I’d use the bag so that …', 'I need a big bed to …', 'I close the door so as not to …'],
+        ex: '3, not sure. The bag is quiet and nobody moves, so you sleep well. But I need space to turn around.',
+        push: 'No pillow, no window, and an alarm in your ear. Still interested?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "Your day, and the reasons.",
+   "p": "Pick a card. Answer out loud, with the reason."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them first. They turn yellow in the video."
+  },
+  "video": {
+   "t": "Sleeping, eating, staying healthy in space.",
+   "p": "Answer first. Watch four chapters. Then True or Lie."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again."
+  },
+  "leitor": {
+   "t": "A day on the station, in six chapters.",
+   "p": "Read aloud. Pick the true sentence. Explain why."
+  },
+  "regra": {
+   "t": "Who does the second part?",
+   "p": "Read the four lines aloud. Fix the four traps."
+  },
+  "doca": {
+   "t": "Five moments. Finish each one fast.",
+   "p": "Listen to the first words. Finish at once."
+  },
+  "radio": {
+   "t": "A school calls by radio. You are Mia.",
+   "p": "Your teacher is Alex, 11. Tell them your day."
+  },
+  "quiz": {
+   "t": "Five lines from the station log.",
+   "p": "Say the whole sentence. Then tap the word."
+  },
+  "cv-escala": {
+   "t": "Four opinions. How much do you agree?",
+   "p": "Tap 1 to 5. Defend it with to or so that."
+  },
+  "fim": {
+   "t": "Six months on the station?",
+   "p": "Write your day with a reason for everything. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Propósito: to / in order to (mesma pessoa), so that + can / won’t / could (outro sujeito) e so as not to: a vida numa estação espacial onde nada fica parado.",
+  "armadilha": "O “para” do português vira “for keep”, “for to keep”, “for it don’t float”, “to don’t”; depois de so that some o verbo (“so that the glass not break”) ou fica can no passado.",
+  "pal": [
+   "to",
+   "in order to",
+   "so that",
+   "so as not to",
+   "in order not to",
+   "float",
+   "tether",
+   "homesick",
+   "narrow"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a estação: 400 km acima, dezesseis voltas por dia, nada fica no lugar.",
+   "perg": "Would you like to go to space?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal: o dia do aluno e as pequenas coisas que ele faz por um motivo.",
+   "perg": "Why do you do that every morning?",
+   "pula": "Duas cartas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (gigantic, narrow, survived, homesick, barriers); o aluno chuta antes.",
+   "perg": "What do you think “homesick” means?",
+   "pula": "Cinco minutos no máximo."
+  },
+  "video": {
+   "obj": "Vídeo em quatro capítulos e tela de True or Lie; no fim a pergunta do Alex.",
+   "perg": "Why do astronauts sleep in bags?",
+   "pula": "Dois capítulos e o True or Lie."
+  },
+  "falas": {
+   "obj": "Linha a linha do vídeo, com explicação das palavras amarelas.",
+   "perg": "Which line was hard to hear?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "leitor": {
+   "obj": "Leitura em seis capítulos (Mia e Ken): escolher a frase verdadeira e explicar o porquê.",
+   "perg": "Why does Mia do that?",
+   "pula": "Quatro capítulos bastam."
+  },
+  "regra": {
+   "obj": "A regra: mesma pessoa to, outro sujeito so that, negativo so as not to.",
+   "perg": "Who does the second part?",
+   "pula": "Não corte “so that it doesn’t float”."
+  },
+  "doca": {
+   "obj": "Cinco momentos rápidos; os momentos 2 e 3 no passado (wouldn’t / could).",
+   "perg": "Why did Ken tie the bag?",
+   "pula": "Três momentos bastam."
+  },
+  "radio": {
+   "obj": "O professor é o Alex, 11 anos; o aluno, como Mia, conta o dia com propósito.",
+   "perg": "Why do you exercise every day, Mia?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "quiz": {
+   "obj": "Checagem rápida: cinco linhas do diário da estação.",
+   "perg": "To, so that, or so as not to?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-escala": {
+   "obj": "Quatro opiniões impopulares sobre a vida na estação; nota de 1 a 5 e defesa.",
+   "perg": "Why did you choose that number?",
+   "pula": "Duas opiniões bastam."
+  },
+  "fim": {
+   "obj": "Escrita: o dia do aluno com um motivo para tudo; e a grande pergunta dos seis meses.",
+   "perg": "Would you live on the station for six months?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa pessoal com propósito: para quê, e para não acontecer o quê.",
+   "perg": "What do you do so as not to forget things?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre o espaço e a vida isolada, com argumentos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Mia, de volta à Terra, e explica os hábitos da estação.",
+   "perg": "Why did you tie everything down, Mia?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Everything has a reason.",
+   "p": "Pick a card. Give the purpose.",
+   "palavras": [
+    "to",
+    "so that",
+    "so as not to",
+    "in order not to"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PHONE",
+     "q": "What apps do you use every day, and why?",
+     "fup": "Which one could you live without?",
+     "st": [
+      "I use … to …",
+      "I use … so that I can …"
+     ],
+     "ex": "I use a map app so that I don’t get lost in new places."
+    },
+    {
+     "k": "FORGETTING",
+     "q": "What do you do so as not to forget things?",
+     "fup": "Does it work?",
+     "st": [
+      "I write … so as not to …",
+      "I put my keys … so that …"
+     ],
+     "ex": "I put my keys by the door so that I never leave without them."
+    },
+    {
+     "k": "SLEEP",
+     "q": "What do you do at night to sleep well?",
+     "fup": "Would an eye mask help?",
+     "st": [
+      "I … in order to …",
+      "I turn off … so that …"
+     ],
+     "ex": "I turn off my phone at ten so that I can fall asleep faster."
+    },
+    {
+     "k": "HOMESICK",
+     "q": "When you are far from home, what do you do so as not to feel homesick?",
+     "fup": "What do you miss most?",
+     "st": [
+      "I call … so that …",
+      "I take … to …"
+     ],
+     "ex": "I call my family every night so that I don’t feel so far away."
+    },
+    {
+     "k": "SAVING",
+     "q": "Are you saving money for something?",
+     "fup": "What do you stop buying?",
+     "st": [
+      "I’m saving to …",
+      "I cook at home so that …"
+     ],
+     "ex": "I cook at home so that I can save for a trip next year."
+    },
+    {
+     "k": "SMALL SPACES",
+     "q": "How do you organize a small space?",
+     "fup": "Is your home tidy?",
+     "st": [
+      "I use boxes so that …",
+      "I … in order not to …"
+     ],
+     "ex": "I use boxes under the bed so that the room doesn’t look full."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Give the purpose.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "to",
+    "so that",
+    "so as not to",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Should countries spend billions to send people to space?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. We go to space to learn things we can use on Earth.",
+      "Many inventions started on the station."
+     ],
+     "fb": [
+      "No. That money should stay here so that people can eat and study.",
+      "Robots can do the work for less."
+     ]
+    },
+    {
+     "q": "Six months on the station: amazing or terrible?",
+     "a": "Amazing",
+     "b": "Terrible",
+     "fa": [
+      "Amazing. I’d go to see the planet from above.",
+      "Sixteen sunrises a day!"
+     ],
+     "fb": [
+      "Terrible. I’d need to call home every day so as not to feel homesick.",
+      "Narrow rooms and no fresh air."
+     ]
+    },
+    {
+     "q": "Space tourism for rich people: good or bad?",
+     "a": "Good",
+     "b": "Bad",
+     "fa": [
+      "Good. Their money pays for research so that tickets get cheaper.",
+      "One day normal people will go."
+     ],
+     "fb": [
+      "Bad. It’s a toy for millionaires.",
+      "Rockets pollute so that ten people can take photos."
+     ]
+    },
+    {
+     "q": "Send humans to Mars, or keep exploring with robots?",
+     "a": "Humans",
+     "b": "Robots",
+     "fa": [
+      "Humans. We explore to understand who we are.",
+      "A robot can’t feel the moment."
+     ],
+     "fb": [
+      "Robots, so that nobody risks their life.",
+      "They don’t need food or air."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Everybody tied their arguments down so that nothing floated away."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Mia now.",
+   "p": "Your teacher interviews you. You’re back on Earth.",
+   "aluno": "Listen to your teacher’s question. Answer as Mia, back on Earth after six months.",
+   "perguntas": [
+    "Why did you sleep in a bag on the wall?",
+    "What did you do so as not to lose your things?",
+    "Why did you exercise two hours a day?",
+    "What did you do so that your family didn’t worry?",
+    "What did you take to the station, and why?",
+    "Would you go back? Why?"
+   ],
+   "st": [
+    "I … to …",
+    "I … so that …",
+    "I … so as not to …"
+   ],
+   "ex": "I tied my spoon to the table so that it wouldn’t float away."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

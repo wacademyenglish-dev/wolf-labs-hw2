@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Noun Does the Work",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b72bffdcdda4/the-noun-does-the-work/img/live-gavetas.webp",
+  "capa": "../img/live-gavetas.webp",
   "alvo": "make / do / take / have + noun: the noun picks the verb (make a mistake, a decision, a call; do the dishes, a favor, the shopping; take a photo, a break, notes; have a good time, lunch, a meeting)",
   "abrir": "Think of yesterday. What did you do, and what did you make?",
   "fecho": "The noun picks the verb. <b>make</b> = you produce it: <i>a mistake, a decision, a call, dinner</i>. <b>do</b> = a task: <i>the dishes, a favor, the shopping, homework</i>. <b>take</b>: <i>a photo, a break, notes, a risk</i>. <b>have</b>: <i>lunch, a meeting, a good time</i>. Never <i>do a mistake</i>, <i>make a favor</i>, <i>make a photo</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the end of a long day. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/b72bffdcdda4/the-noun-does-the-work/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A desk at the end of the day",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I made a mistake in the report, so I took another look.",
-          "img": "https://wolf-labs.pages.dev/p/b72bffdcdda4/the-noun-does-the-work/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We did the shopping, and then we had lunch together.",
-          "img": "https://wolf-labs.pages.dev/p/b72bffdcdda4/the-noun-does-the-work/img/live-pia.webp",
+          "img": "../img/live-pia.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Can you do me a favor and take a photo of this table?",
-          "img": "https://wolf-labs.pages.dev/p/b72bffdcdda4/the-noun-does-the-work/img/live-gavetas.webp",
+          "img": "../img/live-gavetas.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b72bffdcdda4/the-noun-does-the-work/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A desk: a closed laptop, a notebook, a cup of coffee",
       "pede": "Look at the picture: a desk with a laptop, a notebook and a cup of coffee. Write 2 or 3 sentences about your last working day or study day. Use <b>make, do, take</b> or <b>have</b> with the right noun.",
       "ph": "Yesterday I made …",

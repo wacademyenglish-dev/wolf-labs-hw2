@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · How Much Is Too Much · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>How Much Is Too Much · The Gauge</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>How Much Is Too Much · The Gauge</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Too much goes with things you don’t count (time, coffee, sleep, noise); too many with things you count (hours, cups, people).</p><p style="margin:0 0 6px"><b>The grammar:</b> Count It First: Before you pick much or many, ask one question: can I count it?</p><p style="margin:0 0 6px"><b>Short class (about 48 min):</b> I Your Week, Guessed · II Guess the Number · III The Gauge · V Count It First · VI Eighty Against a Third · VIII The Council Vote · X Your Gauge Again. Skip if you’re short on time: IV, VII, IX (marked EXTRA on your screen). Full lesson: about 68 min.</p><p style="margin:0"><b>Open with:</b> “Hours a day on a screen, not counting work.”</p></div><!--/prep-->
+    <p><b>Too much</b> goes with things you don’t count (time, coffee, sleep, noise); <b>too many</b> with things you count (hours, cups, people). <b>Enough</b> goes before a noun and after an adjective: <b>enough time</b>, <b>big enough</b>. <b>Not enough</b> is the complaint. Students say <i>too much people</i> and <i>enough big</i>. The theme is screens and the week; every amount becomes a dashboard gauge: not enough, enough, too much.</p>
+    <h4>NOBODY CHECKS THE GUESSES</h4>
+    <p>Scene I: five numbers about your student’s own week (scene II is the same game with a recording that answers after each guess). They are not corrected. Scene X gives them back.</p>
+    <h4>THE GAUGE IS PERSONAL</h4>
+    <p>Scene III: the green zone is a suggestion, not a rule. If your student disagrees, that disagreement is the conversation.</p>
+    <h4>YOU ARE FOUR FRIENDS</h4>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>too much people</i>, <i>too many coffee</i>, <i>enough big</i>, <i>I have not enough</i>, <i>too much tired</i>. Scene V: the student finds the broken part of five sentences and says the fix (the rule stays in the corner). Scene IX: sort six words by where ENOUGH goes.</p>
+    <!--conversa--><h4>THE COUNCIL VOTE (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Your student is on the town council. Three proposals for teenagers and phones (the school, the parents, the teenagers): for each one they vote yes, no, or <i>propose a change</i>, and say why with too much, too many and enough. There is no right answer. Wait five seconds in silence after each proposal, then use the PUSH line (only you see it) to make the vote harder. Recast quietly while they talk (<i>too much people</i> → <i>too many people</i>); at the end, ask them to fix one or two sentences themselves. The last step is one minute for their own rule; then you play a 15-year-old who thinks it is unfair.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Week, Guessed, III The Gauge, IV Same Number, Two People, VI Eighty Against a Third, VII The Screen Goes Dark, VIII The Council Vote.</li>
+      <li><b>Listen</b>: II Guess the Number (five recordings).</li>
+      <li><b>Focus</b>: V Count It First, IX What Isn’t Enough.</li>
+      <li><b>Write</b>: X, their own gauge. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* HOW MUCH IS TOO MUCH (Main B1) · pergunta-surpresa · 26/10/2026 · too much / too many / enough */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'numero', tipo: 'And you?', q: 'What do you have too many of at home?',
+    opc: ['Clothes', 'Chargers and cables', 'Mugs', 'Something else'], st: ['I have too many …', 'I don’t have enough …'],
+    ex: 'Chargers! I have too many chargers and not enough places to put them.', push: 'Which one would you throw away today?' },
+  { cena: 'gauge', tipo: 'Would you rather', q: 'Would you rather have too much work or not enough to do?',
+    opc: ['Too much work', 'Not enough to do'], st: ['I’d rather have too much …, because …', 'Not enough … makes me …'],
+    ex: 'Too much work. When I don’t have enough to do, I get bored and I look at my phone all day.', push: 'Think of your last month: which one was it?' },
+  { cena: 'post', tipo: 'Opinion', q: 'Do people post too much about their lives?',
+    opc: ['Yes, too much', 'It’s enough', 'I want more!'], st: ['People post too many …', 'There isn’t enough …'],
+    ex: 'Yes, too much. I see too many photos of food and not enough real news from my friends.', push: 'And you: what was the last thing you posted?' },
+  { cena: 'falta', tipo: 'What if', q: 'Your phone breaks and you can’t get a new one for a week. What is the hardest part?',
+    opc: ['Work', 'Friends and family', 'Getting around the city'], st: ['I wouldn’t have enough …', 'I’d have too much time to …'],
+    ex: 'Getting around. I don’t know the city well enough without the map. But I’d have enough time to read again.', push: 'Would you secretly enjoy it? Be honest.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* HOW MUCH IS TOO MUCH (Main B1) · conversa · 26/10/2026 · regra 3×3 do Carlos
+   "The Council Vote" entra no lugar de "VIII · A Tired Friend" (extra; ligar amigo ao problema
+   repetia a prática controlada). O aluno é do conselho da cidade: três propostas de limite de
+   tela para adolescentes, três votos (sim / não / propor uma mudança), e no fim ele escreve a
+   regra dele em voz alta. Os números da aula (205 vezes, quatro horas e meia) viram provas.
+   A gramática da aula (too much / too many / enough / not enough) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'conselho', troca: 'amigo', est: 'o', min: 8, img: 'bolso', rot: 'The Council Vote',
+    t: 'A phone rule for teenagers. You have one vote.',
+    p: 'You are on the town council. Vote, or propose a change. Say why with too much, too many, enough.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The school', sit: 'Proposal 1, from the school: no phones from 8 to 3. Phones stay in a box at the door.',
+        provas: ['A person picks up their phone about 205 times a day.', 'Teachers: “They can’t listen for ten minutes.”', 'Parents: “I need to call my kid after a test.”'],
+        q: 'How do you vote?', opc: [{ t: 'Yes', cor: 'g' }, { t: 'Propose a change', cor: 'y' }, { t: 'No', cor: 'r' }],
+        st: ['I vote yes: they pick it up too many times …', 'I’d change it: … is too much, but …', 'I vote no: a box isn’t enough to …'],
+        ex: 'Propose a change. Seven hours with no phone is too much for a parent who needs to call. Phones in the box during class, but they can use them at lunch.',
+        push: 'Your own phone in a box from 8 to 3, every day. Could you do it?' },
+      { tag: 'The parents', sit: 'Proposal 2, from a parents’ group: under 16, two hours of screen time a day, not more. Every phone locks at 10 PM.',
+        provas: ['The average adult spends about four and a half hours a day on the phone.', 'A teenager: “All my homework is online.”'],
+        q: 'How do you vote?', opc: [{ t: 'Yes', cor: 'g' }, { t: 'Propose a change', cor: 'y' }, { t: 'No', cor: 'r' }],
+        st: ['Two hours isn’t enough for …', '… is too much screen time for a kid.', 'I’d change it: not enough sleep is the real problem, so …'],
+        ex: 'Yes, with a change. Two hours isn’t enough if the homework is online, so homework doesn’t count. But the 10 PM lock is perfect: they don’t get enough sleep.',
+        push: 'The adults spend four and a half hours. Is a rule only for teenagers fair?' },
+      { tag: 'The teenagers', sit: 'Proposal 3, from the teenagers: no time limit. But no phones at dinner, and no phones in the bedroom after 11.',
+        q: 'How do you vote?', opc: [{ t: 'Yes', cor: 'g' }, { t: 'Propose a change', cor: 'y' }, { t: 'No', cor: 'r' }],
+        st: ['No limit is too much freedom, because …', 'This is enough: …', 'I’d add one thing: …'],
+        ex: 'Yes. It’s their rule, so they will follow it. No limit sounds like too much, but dinner and the bedroom are the places that matter.',
+        push: 'Would this rule work in YOUR house, for the adults too?' }
+    ],
+    fim: { tag: 'Your rule', q: 'Now write the council’s rule in one sentence. Say it out loud.', segundos: 60,
+      nota: 'One minute. Then your teacher, a 15-year-old, says why it’s unfair.',
+      st: ['Teenagers can use their phones …, but not …', '… hours is enough, so …', 'Nobody should have too many …'],
+      ex: 'Phones stay in the box during class, and every phone sleeps outside the bedroom after 11. Two hours of games is enough on a school day.',
+      push: 'Swap: now YOU are the 15-year-old. Thirty seconds: what is too much in your own rule?' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "chute": {
+   "t": "Five numbers about your week.",
+   "p": "Say the number first. Then tap. Just guess."
+  },
+  "numero": {
+   "t": "Phones and people: guess the number.",
+   "p": "Guess out loud. Tap. Play the answer."
+  },
+  "gauge": {
+   "t": "When does good become too much?",
+   "p": "Tap your number. Read the whole sentence."
+  },
+  "dois": {
+   "t": "Same number, two people.",
+   "p": "Read each person. Pick a label. Say why."
+  },
+  "erros": {
+   "t": "Can I count it?",
+   "p": "Find the broken part. Say the fix. Tap Check."
+  },
+  "post": {
+   "t": "Online, it’s all about us.",
+   "p": "Tell each story as a post, then face to face."
+  },
+  "escuro": {
+   "t": "The screen goes dark.",
+   "p": "Look away and talk."
+  },
+  "cv-conselho": {
+   "t": "A phone rule for teenagers.",
+   "p": "Vote or change it. Say why with too much."
+  },
+  "falta": {
+   "t": "Not enough is a complaint.",
+   "p": "Tap a word, then its box. Then complain."
+  },
+  "fim": {
+   "t": "Your five guesses come back.",
+   "p": "Write your gauge. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Too much (incontável), too many (contável) e enough (antes do substantivo, depois do adjetivo): telas, café e sono da semana viram um medidor no painel.",
+  "armadilha": "O brasileiro diz “too much people” (muito = much para tudo), “enough big” (ordem do português) e “I have not enough”; confunde também too much com very (“too much tired”).",
+  "pal": [
+   "too much",
+   "too many",
+   "enough",
+   "not enough",
+   "big enough",
+   "screen time",
+   "can I count it?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o tema: quanto é demais? Telas, café, sono.",
+   "perg": "How many hours a day are you on a screen, not counting work?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "chute": {
+   "obj": "Chutar cinco números da própria semana; ninguém confere, voltam no fim.",
+   "perg": "How many cups of coffee do you drink a day?",
+   "pula": "Três números bastam."
+  },
+  "numero": {
+   "obj": "Chutar números sobre celulares e pessoas; a gravação responde (escuta).",
+   "perg": "What’s your guess?",
+   "pula": "Três gravações bastam."
+  },
+  "gauge": {
+   "obj": "Seis medidores do dia do aluno: onde o bom vira too much / too many.",
+   "perg": "Is that enough, or too much?",
+   "pula": "Quatro medidores bastam; discordar é a conversa."
+  },
+  "dois": {
+   "obj": "O mesmo número em duas pessoas: as palavras mudam, a opinião também.",
+   "perg": "Is it too much for her, or just enough?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "erros": {
+   "obj": "A regra: contável ou não? Achar o erro em cinco frases e dizer a correção.",
+   "perg": "Can you count it?",
+   "pula": "Não corte: é a regra. Três frases bastam."
+  },
+  "post": {
+   "obj": "Contar a mesma história como post e como conversa (80% x um terço sobre nós).",
+   "perg": "How do you tell it face to face?",
+   "pula": "Duas histórias bastam."
+  },
+  "escuro": {
+   "obj": "Tela apagada: conversa livre olhando para o professor, sem ler nada.",
+   "perg": "Do you spend too much time on your phone?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-conselho": {
+   "obj": "Conselho da cidade: votar regras de celular para adolescentes com too much/many/enough.",
+   "perg": "Do teenagers have too much screen time?",
+   "pula": "Duas propostas bastam, com o PUSH."
+  },
+  "falta": {
+   "obj": "Onde vai o enough (antes do substantivo, depois do adjetivo) e reclamar com not enough.",
+   "perg": "Is it enough time or time enough?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o medidor do aluno, com too much, too many, not enough e just enough.",
+   "perg": "What do you have too much of?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre quantidades da vida com too much, too many e enough.",
+   "perg": "Do you get enough sleep?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre telas e hábitos, argumentando com too much e enough.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta uma semana ideal, ajustando o que é demais e o que falta.",
+   "perg": "What do you need more of?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Too much, or not enough?",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "too much",
+    "too many",
+    "enough",
+    "not enough"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR SLEEP",
+     "q": "Do you get enough sleep?",
+     "fup": "What keeps you awake?",
+     "st": [
+      "I don’t get enough …, because …",
+      "I sleep enough, but …"
+     ],
+     "ex": "I don’t get enough sleep, because I watch too many videos at night."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What is there too much of in your city?",
+     "fup": "And what isn’t there enough of?",
+     "st": [
+      "There’s too much …",
+      "There aren’t enough …"
+     ],
+     "ex": "There’s too much traffic, and there aren’t enough parks."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "How many apps do you really use?",
+     "fup": "Do you have too many?",
+     "st": [
+      "I have too many …",
+      "… is enough for me."
+     ],
+     "ex": "I have too many apps. Ten is enough for me."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "Do you have enough time at work?",
+     "fup": "What takes too much time?",
+     "st": [
+      "There are too many …",
+      "… takes too much time."
+     ],
+     "ex": "There are too many meetings, so I never have enough time."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "Is your home big enough?",
+     "fup": "What do you have too much of?",
+     "st": [
+      "It’s … enough, but …",
+      "I have too many …"
+     ],
+     "ex": "It’s big enough, but I have too many shoes."
+    },
+    {
+     "k": "MONEY",
+     "q": "What do people spend too much money on?",
+     "fup": "And you?",
+     "st": [
+      "People spend too much on …",
+      "I spend too much on …"
+     ],
+     "ex": "People spend too much on delivery. I do too, honestly."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "too much",
+    "too many",
+    "enough",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Phones at the dinner table: OK or not OK?",
+     "a": "OK",
+     "b": "Not OK",
+     "fa": [
+      "OK. Sometimes there isn’t enough to talk about.",
+      "A quick look is fine."
+     ],
+     "fb": [
+      "Not OK. We spend too much time on screens.",
+      "Dinner is for people."
+     ]
+    },
+    {
+     "q": "Is two hours of screen time a day enough for a teenager?",
+     "a": "Enough",
+     "b": "Not enough",
+     "fa": [
+      "It’s enough. More is too much for a young brain."
+     ],
+     "fb": [
+      "Not enough. School, friends and music are all on the phone now."
+     ]
+    },
+    {
+     "q": "Social media: too many friends, or not enough real ones?",
+     "a": "Too many",
+     "b": "Not enough",
+     "fa": [
+      "Too many. Nobody has 800 real friends."
+     ],
+     "fb": [
+      "Not enough real ones. We talk a lot, but we don’t meet."
+     ]
+    },
+    {
+     "q": "Coffee: three cups a day is fine, or too many?",
+     "a": "Fine",
+     "b": "Too many",
+     "fa": [
+      "Fine. Three cups is enough to work well."
+     ],
+     "fb": [
+      "Too many. Too much coffee and you can’t sleep."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Enough arguing for today."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Gauge",
+   "t": "Fix your week.",
+   "p": "Answer each step. Use too much and enough.",
+   "prof": "Listen for too much people and enough big; recast quietly.",
+   "passos": [
+    {
+     "q": "What do you have too much of in your week?",
+     "st": [
+      "I have too much …",
+      "I spend too many hours …"
+     ],
+     "ex": "I spend too many hours on my phone."
+    },
+    {
+     "q": "What don’t you have enough of?",
+     "st": [
+      "I don’t have enough …"
+     ],
+     "ex": "I don’t have enough time for exercise."
+    },
+    {
+     "q": "What is just enough, and you don’t want to change it?",
+     "st": [
+      "… is just enough."
+     ],
+     "ex": "Two coffees a day is just enough."
+    },
+    {
+     "q": "What one change will you make?",
+     "st": [
+      "I’ll cut …",
+      "I want more …"
+     ],
+     "ex": "I’ll cut one hour of phone and walk instead."
+    }
+   ],
+   "fim": "Your gauge is in the green zone, at least on paper."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

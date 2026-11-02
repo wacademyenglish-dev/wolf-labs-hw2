@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Final: The Closing Ceremony",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/6c60f51c05f9/c1-final-the-closing-ceremony/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Book C1 final review: emphasis (It was never about…, All I ask is…), inversion (Never had I…), grateful for, speech structure: hook, story, tricolon (I came… I stayed… I left…), antithesis (not X but Y), call to action",
   "abrir": "What is one thing you can do in English now that you could not do a year ago?",
   "fecho": "<b>A speech has a shape</b>: hook, story, three parallel parts, a contrast, a close. <i>I came for grammar. I stayed for the people. I left with a voice.</i> <i>It was never about being perfect; it was about being brave.</i> <i>All I ask is this: keep talking.</i> Inversion for drama: <i>Never had I felt so calm.</i> Be grateful <b>for</b> something, <b>to</b> someone.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo backstage, five minutes before the closing speech. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/6c60f51c05f9/c1-final-the-closing-ceremony/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty theatre before the ceremony",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I came for grammar, I stayed for the people, and I left with a voice.",
-          "img": "https://wolf-labs.pages.dev/p/6c60f51c05f9/c1-final-the-closing-ceremony/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It was never about being perfect; it was about being brave.",
-          "img": "https://wolf-labs.pages.dev/p/6c60f51c05f9/c1-final-the-closing-ceremony/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "All I ask is this: keep talking.",
-          "img": "https://wolf-labs.pages.dev/p/6c60f51c05f9/c1-final-the-closing-ceremony/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/6c60f51c05f9/c1-final-the-closing-ceremony/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An empty theatre before the ceremony",
       "pede": "Look at the picture: an empty theatre before a ceremony. Write 2 or 3 sentences of your own closing speech: a contrast and a close. Use <b>I came… I stayed…</b>, <b>It was never about…</b> or <b>All I ask is…</b>",
       "ph": "I came for … I stayed for … All I ask is …",

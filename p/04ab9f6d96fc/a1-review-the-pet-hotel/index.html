@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Pet Hotel · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A1 · Unit 3 Review · The Pet Hotel</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Pet Hotel · A1 Unit 3 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 3 (Whose is it? What have you got?). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student works at the desk of a hotel for pets. You are the three owners: Maria, Ken and the twins.</p><p style="margin:0 0 6px"><b>About 48 min:</b> I · The Die (8) · II · The Pet Hotel (15) · III · Your Favorite Guest (5) · IV · Memory (8) · V · The Hot Seat (8) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Pick a door.” There is no order. One minute per door, no notes.</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>his / her / their / its · the possessive ’s · whose, mine / yours / hers · have got + short answers · have / has · has got to describe</p>
+    <h4>THE DIE</h4>
+    <p>Tap <b>Roll the die</b>: the number chooses one of the six topics (no repeats until all six are done). The student does the challenge from memory.</p>
+    <h4>THE PET HOTEL</h4>
+    <p>You are each owner. Your card (only you see it) has the answers. When the student asks a question, tap it: the room card fills in. If the student freezes, tap <b>Say it easier</b>. Then the owners come back: the student says whose pet it is (Maria’s dog, the twins’ rabbit) and describes it with has got. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>the dog of Maria</i>, <i>his dog (for a woman)</i>, <i>it have big ears</i>, <i>she have</i>, <i>Yes, I have got</i>, <i>it’s my (for mine)</i>. A1: one correction per answer is enough.</p>
+    <!--conversa--><h4>YOUR FAVORITE GUEST (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the pets go home, a light ranking: Bolt, Miso and Pip from 1 to 3. Tap “Show my teacher’s order” to give yours; the student taps theirs and says why (Ken’s cat, it has got…). Answer first yourself, as a model. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk; at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Die and VI · I Can.</li>
+      <li><b>Out loud</b>: II · The Pet Hotel, III · Your Favorite Guest and V · The Hot Seat.</li>
+      <li><b>Listen</b>: IV · Memory.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* MAIN SERIES · A1 · REVISÃO 03 · THE PET HOTEL · pergunta-surpresa · 27/10/2026 · have got, whose, mine / yours */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'dado', tipo: 'And you?', q: 'Have you got a pet?',
+    opc: ['Yes, I have.', 'No, I haven’t.'], st: ['Yes, I have. Its name is …', 'No, I haven’t, but my … has.'],
+    ex: 'No, I haven’t, but my sister has got a dog.', push: 'Do you want a pet? Yes or no?' },
+  { cena: 'memoria', tipo: 'What if', q: 'A pen on your desk. Not yours!',
+    opc: ['Whose pen is this?', 'Is it yours?'], st: ['Excuse me! Whose … is this?', 'Is it yours?'],
+    ex: 'Excuse me! Whose pen is this? Is it yours?', push: 'Is it mine? Yes or no?' },
+  { cena: 'cadeira', tipo: 'Would you rather', q: 'Your dream house has got…',
+    opc: ['a big garden', 'a big kitchen', 'a pool'], st: ['My dream house has got …', 'It hasn’t got …'],
+    ex: 'My dream house has got a pool. It hasn’t got stairs!', push: 'Has your house got a garden? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* MAIN SERIES · A1 · REVISÃO 03 · THE PET HOTEL · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Formato curto: UM momento leve (ranking de 3, com a ordem do professor) no MEIO, depois da missão (II).
+   Os três hóspedes da missão, com o 's no nome. Gramática da unidade 3 nos iniciadores: 's, its, has got. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'favorito', apos: 'missao', est: 'o', min: 5, img: 'conversa', rot: 'Your Favorite Guest', t: 'Three pets. Who is your favorite?',
+    p: 'Your teacher shows their order first. Then tap yours, from 1 to 3, and say why.',
+    formato: 'ranking',
+    q: 'Your favorite pet tonight?',
+    itens: ['Bolt, Maria’s dog', 'Miso, Ken’s cat', 'Pip, the twins’ rabbit'],
+    prof: [1, 2, 0],
+    dica: 'Tap 1, 2, 3. Tap again to take it out.',
+    st: ['Number one is …’s … ', 'It has got …', 'Its name is …'],
+    ex: 'Number one is Ken’s cat. Its name is Miso. It has got green eyes!',
+    push: 'Have you got a cat? Yes or no?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "dado": {
+   "t": "Roll the die. The number chooses.",
+   "p": "Do the challenge out loud, from memory."
+  },
+  "missao": {
+   "t": "Three pets check in tonight.",
+   "p": "Ask each owner five questions. Then give the pets back."
+  },
+  "cv-favorito": {
+   "t": "Who is your favorite guest?",
+   "p": "Tap your order, 1 to 3. Say why."
+  },
+  "memoria": {
+   "t": "Find the pairs.",
+   "p": "Open two cards. Make a sentence with the pair."
+  },
+  "cadeira": {
+   "t": "Now YOU ask the questions.",
+   "p": "Ask your teacher. Listen. React."
+  },
+  "pode": {
+   "t": "Unit 3: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 3: his/her/their/its, ’s possessivo, whose e mine/yours/hers, have got e has got. O aluno trabalha num hotel para pets.",
+  "armadilha": "“The dog of Maria” no lugar de Maria’s dog, his/her pelo gênero do objeto (e não do dono), “she have”, “it’s my” no lugar de mine e “Yes, I have got”.",
+  "pal": [
+   "Maria’s dog",
+   "the twins’ rabbit",
+   "whose",
+   "mine",
+   "hers",
+   "has got",
+   "Have you got…?",
+   "Yes, I have."
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abre a revisão: hotel para pets, o professor faz os três donos.",
+   "perg": "Do you have a pet?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "dado": {
+   "obj": "O dado escolhe um dos seis tópicos da unidade; o aluno faz de memória.",
+   "perg": "Whose phone is this?",
+   "pula": "Três lançamentos bastam."
+  },
+  "missao": {
+   "obj": "O aluno pergunta aos donos (Maria, Ken e os gêmeos) e devolve cada pet com ’s e has got.",
+   "perg": "Whose pet is it? What has it got?",
+   "pula": "Dois donos bastam."
+  },
+  "cv-favorito": {
+   "obj": "Ranking leve dos três pets; o aluno justifica com ’s e has got.",
+   "perg": "Why is it your favorite?",
+   "pula": "Só o primeiro lugar e o porquê."
+  },
+  "memoria": {
+   "obj": "Jogo da memória: cada par vira uma frase com a gramática da unidade.",
+   "perg": "Can you make a sentence with this pair?",
+   "pula": "Três pares bastam."
+  },
+  "cadeira": {
+   "obj": "Agora o aluno pergunta e o professor responde curto; reação e uma pergunta extra.",
+   "perg": "What do you want to ask me?",
+   "pula": "Três cartas bastam."
+  },
+  "pode": {
+   "obj": "Checklist “I can” da unidade; o que ficar aberto vai para a lição de casa.",
+   "perg": "Can you use whose and mine now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra com possessivos e have got sobre a vida do aluno.",
+   "perg": "Have you got any brothers or sisters?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre pets, com has got e possessivos.",
+   "perg": "A cat or a dog?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno descreve o pet dos sonhos e a família, com has got e ’s.",
+   "perg": "What has your dream pet got?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions about you.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "’s",
+    "his",
+    "her",
+    "their",
+    "mine",
+    "have got",
+    "has got"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FAMILY",
+     "q": "Have you got any brothers or sisters?",
+     "fup": "What’s his or her name?",
+     "st": [
+      "Yes, I have. I’ve got …",
+      "No, I haven’t."
+     ],
+     "ex": "Yes, I have. I’ve got one sister. Her name is Ana."
+    },
+    {
+     "k": "YOUR FRIEND",
+     "q": "Has your best friend got a pet?",
+     "fup": "What’s its name?",
+     "st": [
+      "Yes, he / she has. He’s / She’s got …",
+      "No, he / she hasn’t."
+     ],
+     "ex": "Yes, she has. She’s got a dog. Its name is Toby."
+    },
+    {
+     "k": "YOUR DESK",
+     "q": "What have you got on your desk?",
+     "fup": "Whose is the cup?",
+     "st": [
+      "I’ve got …",
+      "It’s mine. / It’s my …’s."
+     ],
+     "ex": "I’ve got a laptop and a cup. The cup is mine."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "Whose room is the biggest in your home?",
+     "fup": "What has it got?",
+     "st": [
+      "My …’s room is …",
+      "It’s got …"
+     ],
+     "ex": "My parents’ room is the biggest. It’s got a big window."
+    },
+    {
+     "k": "YOUR CAR",
+     "q": "Have you got a car?",
+     "fup": "Whose car do you use?",
+     "st": [
+      "Yes, I have.",
+      "No, I haven’t. I use my …’s car."
+     ],
+     "ex": "No, I haven’t. I use my brother’s car."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Is your phone new or old?",
+     "fup": "Has it got a case?",
+     "st": [
+      "Mine is …",
+      "It’s got …"
+     ],
+     "ex": "Mine is old. It’s got a blue case."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "has got",
+    "its",
+    "their"
+   ],
+   "rodadas": [
+    {
+     "q": "A cat or a dog?",
+     "a": "A cat",
+     "b": "A dog",
+     "fa": [
+      "A cat. It’s got soft fur."
+     ],
+     "fb": [
+      "A dog. It’s got a lot of energy."
+     ]
+    },
+    {
+     "q": "A pet hotel or your friend’s house?",
+     "a": "A pet hotel",
+     "b": "My friend’s house",
+     "fa": [
+      "A pet hotel. It’s got a vet."
+     ],
+     "fb": [
+      "My friend’s house. My friend loves dogs."
+     ]
+    },
+    {
+     "q": "A big dog or a small dog?",
+     "a": "A big dog",
+     "b": "A small dog",
+     "fa": [
+      "A big dog. It’s got a big heart."
+     ],
+     "fb": [
+      "A small dog. My home is small."
+     ]
+    },
+    {
+     "q": "A pet with its own bed or a pet in your bed?",
+     "a": "Its own bed",
+     "b": "My bed",
+     "fa": [
+      "Its own bed. My bed is mine."
+     ],
+     "fb": [
+      "My bed. It’s warm."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Dream Pet",
+   "t": "Check in your dream pet.",
+   "p": "One step at a time. Say it out loud.",
+   "prof": "You are the hotel desk now: push for has got and ’s in every answer.",
+   "passos": [
+    {
+     "q": "What is your pet? What’s its name?",
+     "st": [
+      "It’s a …",
+      "Its name is …"
+     ],
+     "ex": "It’s a rabbit. Its name is Cookie."
+    },
+    {
+     "q": "What has it got?",
+     "st": [
+      "It’s got …",
+      "It hasn’t got …"
+     ],
+     "ex": "It’s got long ears and white fur."
+    },
+    {
+     "q": "Whose pet is it? Yours or your family’s?",
+     "st": [
+      "It’s mine.",
+      "It’s my …’s."
+     ],
+     "ex": "It’s mine, but my son’s friends love it."
+    },
+    {
+     "q": "What has it got in its bag for the hotel?",
+     "st": [
+      "It’s got …",
+      "Its … is in the bag."
+     ],
+     "ex": "It’s got carrots and its favorite toy."
+    }
+   ],
+   "fim": "Your pet is checked in. Enjoy your trip!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

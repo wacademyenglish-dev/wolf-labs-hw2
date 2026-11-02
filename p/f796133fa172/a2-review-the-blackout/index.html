@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Blackout · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A2 · Unit 3 Review · The Blackout</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Blackout · A2 Unit 3 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 3 (What was happening). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Last night at nine the lights went out in your student’s building. Your student is the building manager. You are three neighbors, then the electric company.</p><p style="margin:0 0 6px"><b>About 48 min:</b> I · Memory (8) · II · The Blackout (14) · III · The Building Meeting (7) · IV · Find the Mistakes (7) · V · Small Talk (8) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Open two cards. Find the pair, then make the sentence.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>past continuous: was / were + -ing · the question: What were you doing? · when / while: past continuous × past simple · used to / didn’t use to · would for old habits</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>THE BLACKOUT</h4>
+    <p>You are each neighbor. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then you are the electric company: the student says what was happening in one apartment at nine. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>SMALL TALK</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>she were cooking</i>, <i>I was cook</i>, <i>when the lights go out</i>, <i>I use to (past)</i>, <i>did you used to</i>, <i>what you were doing?</i>. A2: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE BUILDING MEETING (III) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the interviews, your student is the judge at the building meeting: three complaints from the blackout, each with three facts. There is no right answer: let them choose a verdict, wait five seconds in silence, then use the PUSH line (only you see it) to make it harder. Listen for was / were + -ing and when / while. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Memory.</li>
+      <li><b>Out loud</b>: II · The Blackout, III · The Building Meeting and V · Small Talk.</li>
+      <li><b>Focus</b>: IV · Find the Mistakes and VI · I Can.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW A2 · UNIT 3 · THE BLACKOUT · pergunta-surpresa · 27/10/2026 · was / were + -ing · when / while · used to · would */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'memoria', tipo: 'What if', q: 'The lights go out right now, for two hours. What do you do first?',
+    opc: ['Find candles', 'Go to sleep', 'Go out'], st: ['Last time, I was …ing when …', 'I would …'],
+    ex: 'Find candles. Last time I was taking a shower when the lights went out!', push: 'Your phone has 5% battery. Who do you call?' },
+  { cena: 'erros', tipo: 'Would you rather', q: 'Would you rather be stuck in an elevator alone, or with a stranger who talks all the time?',
+    opc: ['Alone', 'With the talker'], st: ['I’d rather be …, because …', 'Once I was …ing when …'],
+    ex: 'With the talker. Once I was waiting in a lift alone, and twenty minutes felt like two hours.', push: 'The stranger is your ex. Same answer?' },
+  { cena: 'conversa', tipo: 'And you?', q: 'What did you use to do without electricity as a kid: a game, a story, a song?',
+    opc: ['A game', 'A story', 'Nothing!'], st: ['We used to …', 'We would …'],
+    ex: 'A game. We would play cards with a candle on the table, and my cousin would always cheat.', push: 'Can you teach me that game in one minute?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW A2 · UNIT 3 · THE BLACKOUT · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Revisão curta (41 min, sem cena extra e sem escolha/debate): um júri com provas ENTRA depois da missão
+   (II), no meio (+7 min). A reunião do prédio: o aluno, síndico, decide três queixas da noite do apagão.
+   Past continuous + when / while e used to moram nos iniciadores. Missão, erros, Small Talk e I Can ficam. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'reuniao', apos: 'missao', est: 'o', min: 7, img: 'capa', rot: 'The Building Meeting', t: 'Three complaints. You are the judge.',
+    p: 'Read the facts. Choose a verdict, or say your own. Say why with was / were + -ing. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The elevator', sit: '5A was late for work this morning. He wants the building to pay for his taxi.',
+        provas: ['He was going up when the lights went out.', 'He was waiting in the dark for 20 minutes.', 'He used to take the stairs.'],
+        q: 'Does the building pay?', opc: ['Yes, pay', 'Pay half', 'No, bad luck'],
+        st: ['He was …ing when …', 'He used to …, so …', 'I think the building …'],
+        ex: 'Pay half. He was waiting alone for twenty minutes, but he used to take the stairs!',
+        push: 'Next week three more neighbors want a taxi too. Still yes?' },
+      { tag: 'The noise', sit: '2B is angry with 7C. The lights came back at 10:30 and 7C was very loud.',
+        provas: ['7C and friends were watching the big game.', 'They were shouting when the lights came back.', '2B’s son was sleeping.'],
+        q: 'Is 7C guilty?', opc: ['Guilty', 'Just a warning', 'Not guilty'],
+        st: ['They were …ing when …', 'While her son was …ing, …', 'It was only …'],
+        ex: 'Just a warning. They were watching a big game, but her son was sleeping.',
+        push: 'It was the final, and their team won. Change your verdict?' },
+      { tag: 'The cause', sit: 'Somebody used too much power at nine.',
+        provas: ['4D was using a heater and the oven.', 'Her kids were drying their hair.', 'She used to have a small heater.'],
+        q: 'Is 4D guilty?', opc: ['Guilty', 'Not guilty', 'More facts!'],
+        st: ['She was …ing, and …', 'While her kids were …ing, …', 'Before, she used to …'],
+        ex: 'We need more facts. She was using the oven, but everybody was cooking at nine!',
+        push: 'And at your home: what were you using at nine last night?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "memoria": {
+   "t": "Find the pairs.",
+   "p": "Open two cards. Find the pair. Make a sentence."
+  },
+  "missao": {
+   "t": "Where were the neighbors at nine?",
+   "p": "Ask each neighbor five questions. Then call the company."
+  },
+  "cv-reuniao": {
+   "t": "Three complaints. You are the judge.",
+   "p": "Read the facts. Choose a verdict. Say why."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say the right form. Then tap."
+  },
+  "conversa": {
+   "t": "Old photos on the shelf. Let’s talk.",
+   "p": "Answer, then ask it back: “And you?”"
+  },
+  "pode": {
+   "t": "Unit 3: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 3: was/were + -ing, What were you doing?, when/while, used to e would para hábitos antigos. Apagão às nove; o aluno é o síndico.",
+  "armadilha": "O brasileiro diz she were cooking, I was cook, when the lights go out (presente), I use to no passado, did you used to e what you were doing? sem inverter.",
+  "pal": [
+   "was …ing",
+   "were …ing",
+   "What were you doing?",
+   "when",
+   "while",
+   "used to",
+   "didn’t use to",
+   "would"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: o apagão das nove no prédio do aluno.",
+   "perg": "What were you doing last night at nine?",
+   "pula": "Só leia o título e diga: “Open two cards.”"
+  },
+  "memoria": {
+   "obj": "Jogo da memória com os pares da unidade; cada par vira uma frase.",
+   "perg": "Can you make a sentence with this pair?",
+   "pula": "Quatro pares bastam."
+  },
+  "missao": {
+   "obj": "O professor é cada vizinho; o aluno pergunta e depois conta à companhia elétrica o que acontecia às nove.",
+   "perg": "What were you doing when the lights went out?",
+   "pula": "Dois vizinhos bastam; não pule a ligação."
+  },
+  "cv-reuniao": {
+   "obj": "Conversa: o aluno julga três reclamações do apagão com was/were + -ing e when/while.",
+   "perg": "Who is right, and why?",
+   "pula": "Duas reclamações bastam."
+  },
+  "erros": {
+   "obj": "Achar os erros num bilhete e dizer a forma certa antes de tocar.",
+   "perg": "What is wrong in this line?",
+   "pula": "Três erros bastam; leia o bilhete certo no fim."
+  },
+  "conversa": {
+   "obj": "Small talk sobre fotos antigas, com used to e would; o aluno devolve com And you?.",
+   "perg": "What did you use to do as a kid?",
+   "pula": "Três perguntas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”: ler, marcar e o professor confirma o selo da unidade.",
+   "perg": "Can you tell a story with when and while now?",
+   "pula": "Não pule: é o fechamento. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com o passado contínuo e os hábitos antigos do aluno.",
+   "perg": "What were you doing at this time yesterday?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado entre antes e hoje, com used to.",
+   "perg": "Was life better before? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira um vizinho do prédio e responde sobre a noite do apagão.",
+   "perg": "What were you doing at nine?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Then and back then.",
+   "p": "Pick a card. Answer. Then ask it back.",
+   "palavras": [
+    "was …ing",
+    "were …ing",
+    "when",
+    "while",
+    "used to"
+   ],
+   "cartas": [
+    {
+     "k": "YESTERDAY AT 8",
+     "q": "What were you doing at eight last night?",
+     "fup": "Who were you with?",
+     "st": [
+      "I was …ing",
+      "We were …ing"
+     ],
+     "ex": "I was cooking dinner, and my son was doing homework."
+    },
+    {
+     "k": "THE NEWS",
+     "q": "What were you doing when you heard some big news?",
+     "fup": "What happened next?",
+     "st": [
+      "I was …ing when …"
+     ],
+     "ex": "I was driving to work when I heard it on the radio."
+    },
+    {
+     "k": "AS A KID",
+     "q": "What did you use to do after school?",
+     "fup": "Do you still do it?",
+     "st": [
+      "I used to …",
+      "I didn’t use to …"
+     ],
+     "ex": "I used to play football in the street. I don’t play now."
+    },
+    {
+     "k": "SUNDAYS",
+     "q": "What would your family do on Sundays?",
+     "fup": "Who cooked?",
+     "st": [
+      "We would …",
+      "My … would …"
+     ],
+     "ex": "We would have lunch at my grandmother’s house."
+    },
+    {
+     "k": "A BLACKOUT",
+     "q": "Was there ever a blackout where you live?",
+     "fup": "What were people doing?",
+     "st": [
+      "While the lights were off, …",
+      "When the lights came back, …"
+     ],
+     "ex": "Yes. While the lights were off, we were playing cards."
+    },
+    {
+     "k": "YOUR OLD PHONE",
+     "q": "What phone did you use to have?",
+     "fup": "What did you use it for?",
+     "st": [
+      "I used to have …",
+      "I would …"
+     ],
+     "ex": "I used to have a small phone. I would only text."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "used to",
+    "while",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A blackout at night: candles and talk, or straight to bed?",
+     "a": "Candles and talk",
+     "b": "Bed",
+     "fa": [
+      "Candles. While the lights were off, we used to tell stories."
+     ],
+     "fb": [
+      "Bed. When it’s dark, I sleep."
+     ]
+    },
+    {
+     "q": "Life before cell phones: better or worse?",
+     "a": "Better",
+     "b": "Worse",
+     "fa": [
+      "Better. People used to talk more."
+     ],
+     "fb": [
+      "Worse. We used to get lost all the time."
+     ]
+    },
+    {
+     "q": "Old photos: on paper or on the phone?",
+     "a": "On paper",
+     "b": "On the phone",
+     "fa": [
+      "On paper. My grandmother used to keep them in a box."
+     ],
+     "fb": [
+      "On the phone. I never lose them."
+     ]
+    },
+    {
+     "q": "Neighbors: know them all or keep to yourself?",
+     "a": "Know them",
+     "b": "Keep to myself",
+     "fa": [
+      "Know them. We used to help each other."
+     ],
+     "fb": [
+      "Keep to myself. It’s quieter."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the lights stayed on."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are a neighbor now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as a neighbor in the building. Invent your night.",
+   "perguntas": [
+    "What were you doing at nine when the lights went out?",
+    "Who were you with?",
+    "What were your neighbors doing?",
+    "What did you do while the lights were off?",
+    "Did you use to have blackouts as a kid?",
+    "What did you do when the lights came back?"
+   ],
+   "st": [
+    "I was …ing when …",
+    "While …, I …",
+    "I used to …"
+   ],
+   "ex": "I was taking a shower when the lights went out!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

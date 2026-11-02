@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1315">
+<title>Four Point Eight</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e1315; --surface:rgba(230,235,233,.055); --bar:rgba(2,5,7,.94); --accent:#57c9a4; --accent2:#7f9fb5; --ok:#7fbf6a; --no:#e0707a; --text:#e6ebe9; --dim:#939e9b; --line:rgba(230,235,233,.20); --btntx:#020507; --disp:'Playfair Display',Georgia,serif; --body:'Outfit',system-ui,sans-serif; --mono:'Fira Code',monospace; --ease:cubic-bezier(.16,1,.3,1); --r:12px}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--text);font-family:var(--body);
+ min-height:100dvh;display:flex;flex-direction:column;
+ padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);overflow-x:hidden}
+.glow{position:fixed;border-radius:50%;filter:blur(140px);opacity:.24;z-index:0;pointer-events:none}
+.g1{width:80vw;height:80vw;background:#0f3830;top:-25%;left:-30%}
+.g2{width:65vw;height:65vw;background:#16242e;bottom:-18%;right:-25%}
+.grade{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
+ background-image:linear-gradient(rgba(87,201,164,.030) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(87,201,164,.030) 1px, transparent 1px);
+ background-size:32px 32px, 32px 32px}
+
+.top{position:sticky;top:0;z-index:20;background:var(--bar);backdrop-filter:blur(20px);
+ border-bottom:1px solid var(--line);padding:12px 18px calc(12px + env(safe-area-inset-top))}
+.top .row{display:flex;align-items:center;gap:12px;max-width:560px;margin:0 auto}
+.track{flex:1;height:7px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden}
+.fill{height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .45s var(--ease)}
+.cnt{font-family:var(--mono);font-size:.82rem;color:var(--accent);white-space:nowrap;
+ font-variant-numeric:tabular-nums}
+
+.wrap{position:relative;z-index:5;flex:1;width:100%;max-width:560px;margin:0 auto;
+ padding:22px 18px 40px;display:flex;flex-direction:column}
+header{text-align:center;margin-bottom:26px}
+.kick{font-family:var(--mono);font-size:.75rem;letter-spacing:2.2px;color:var(--accent);
+ text-transform:uppercase;display:inline-block;padding:5px 14px;border:1px solid var(--line);
+ border-radius:99px}
+h1{font-family:var(--disp);font-size:clamp(1.7rem,7vw,2.3rem);margin:14px 0 8px;line-height:1.12}
+.sub{color:var(--dim);font-size:1rem;line-height:1.6}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+ padding:24px 20px;margin-bottom:14px;animation:in .5s var(--ease) both}
+@keyframes in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.n{font-family:var(--mono);font-size:.75rem;letter-spacing:2px;color:var(--accent2);
+ text-transform:uppercase;margin-bottom:12px}
+.q{font-size:1.18rem;line-height:1.5;margin-bottom:6px;font-weight:500}
+.hint{color:var(--dim);font-size:.94rem;line-height:1.5;margin-bottom:18px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.o{display:flex;align-items:center;gap:13px;padding:16px 16px;border-radius:calc(var(--r) - 6px);
+ border:1px solid var(--line);background:rgba(255,255,255,.03);cursor:pointer;
+ font-size:1.04rem;line-height:1.35;transition:.22s var(--ease);min-height:56px;text-align:left}
+.o .ltr{width:27px;height:27px;flex-shrink:0;border-radius:50%;border:1px solid var(--line);
+ display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.78rem;
+ color:var(--dim);transition:.22s}
+.o:active{transform:scale(.985)}
+.o.right{border-color:var(--ok);background:rgba(127,191,106,.15)}
+.o.right .ltr{background:var(--ok);border-color:var(--ok);color:#050806}
+.o.wrong{border-color:var(--no);background:rgba(224,112,122,.13);animation:sh .32s}
+@keyframes sh{0%,100%{transform:none}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.o.dead{opacity:.4;pointer-events:none}
+.fb{margin-top:14px;font-size:.98rem;line-height:1.55;padding:13px 15px;border-radius:10px;
+ display:none}
+.fb.on{display:block}
+.fb.ok{background:rgba(127,191,106,.13);color:var(--ok)}
+.fb.no{background:rgba(224,112,122,.11);color:var(--no)}
+
+.done{text-align:center;padding:34px 22px;display:none}
+.done.on{display:block;animation:in .6s var(--ease) both}
+.score{font-family:var(--disp);font-size:4rem;line-height:1;margin:12px 0 4px}
+.bar2{height:9px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden;margin:20px 0 8px}
+.bar2 i{display:block;height:100%;background:var(--accent);width:0;transition:width 1.1s var(--ease)}
+.msg{color:var(--dim);line-height:1.6;margin:14px 0 24px;font-size:1rem}
+.btn{display:block;width:100%;background:var(--accent);color:var(--btntx);border:none;
+ padding:17px 22px;border-radius:calc(var(--r) - 4px);font-family:var(--body);font-weight:700;
+ font-size:1.04rem;cursor:pointer;transition:.22s var(--ease);margin-bottom:10px}
+.btn:active{transform:scale(.98)}
+.btn.ghost{background:none;color:var(--accent);border:1px solid var(--line);font-weight:500}
+.nameIn{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line);
+ border-radius:calc(var(--r) - 6px);padding:15px 16px;color:var(--text);font-family:var(--body);
+ font-size:1.04rem;margin-bottom:12px;outline:none}
+.nameIn:focus{border-color:var(--accent)}
+.nameIn::placeholder{color:var(--dim)}
+.rep{text-align:left;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:10px;
+ padding:15px;font-family:var(--mono);font-size:.8rem;line-height:1.6;color:var(--dim);
+ white-space:pre-wrap;word-break:break-word;max-height:210px;overflow:auto;margin-bottom:14px;display:none}
+.rep.on{display:block}
+.foot{text-align:center;color:var(--dim);font-family:var(--mono);font-size:.75rem;
+ letter-spacing:1.8px;text-transform:uppercase;padding:26px 0 8px}
+@media(min-width:620px){.wrap{padding-top:34px}}
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div><div class="grade"></div>
+
+<div class="top"><div class="row">
+  <span class="cnt" id="cnt">1 / 12</span>
+  <div class="track"><div class="fill" id="fill"></div></div>
+  <span class="cnt" id="sc">0</span>
+</div></div>
+
+<div class="wrap">
+  <header>
+    <span class="kick">Wolf Labs &middot; B2</span>
+    <h1>Four Point Eight</h1>
+    <p class="sub">I wish &middot; if only &middot; one step back<br>12 questions. About seven minutes.</p>
+  </header>
+  <div id="app"></div>
+
+  <div class="done card" id="done">
+    <div class="n">Homework complete</div>
+    <div class="score" id="final">0/12</div>
+    <div class="bar2"><i id="b2"></i></div>
+    <p class="msg" id="msg"></p>
+    <input class="nameIn" id="who" placeholder="Your name" autocomplete="name">
+    <button class="btn" id="send">Send my result to my teacher</button>
+    <button class="btn ghost" id="copy">Copy the result instead</button>
+    <div class="rep" id="rep"></div>
+    <button class="btn ghost" id="again">Try the wrong ones again</button>
+  </div>
+
+  <p class="foot">Wolf Labs Originals</p>
+</div>
+
+<script>
+const Q=[
+ {
+  "q": "I do not have her number. &mdash; I wish I ___ her number.",
+  "h": "The wish is about right now, and right now is still open.",
+  "o": ["had","have","would have","had had"],
+  "a": 0,
+  "w": "HAD. About now, the verb takes one step back: HAVE becomes HAD. Nothing more."
+ },
+ {
+  "q": "I did not have her number that night. &mdash; I wish I ___ her number.",
+  "h": "That night is closed. One more step.",
+  "o": ["had had","had","have","would have"],
+  "a": 0,
+  "w": "HAD HAD. A closed day takes the past perfect. It looks strange written down and it is exactly right."
+ },
+ {
+  "q": "I am not there. &mdash; I wish I ___ there.",
+  "h": "One verb in English keeps an old form after WISH.",
+  "o": ["were","am","would be","had been"],
+  "a": 0,
+  "w": "WERE. Plenty of people say I WISH I WAS and nobody will stop you. WERE is simply the one that never costs you anything, anywhere."
+ },
+ {
+  "q": "He talks over people in every meeting. &mdash; I wish he ___.",
+  "h": "Somebody else, and it is still going on.",
+  "o": ["would stop","stopped","had stopped","stops"],
+  "a": 0,
+  "w": "WOULD STOP. WISH + WOULD is about somebody else changing something they could change. It is also usually a little annoyed, and that is worth knowing."
+ },
+ {
+  "q": "I check my phone at dinner and I hate it. Which one is English?",
+  "h": "Who decides whether you stop?",
+  "o": ["I wish I could stop.","I wish I would stop.","I wish I will stop.","I wish I stop."],
+  "a": 0,
+  "w": "I WISH I COULD STOP. You cannot wish yourself WOULD. WOULD after WISH points at a will you do not control, and you control your own."
+ },
+ {
+  "q": "I said nothing in that meeting and I regret it. Which one is English?",
+  "h": "You will hear one of these often. It is still the one to avoid.",
+  "o": ["I wish I had said something.","I wish I would have said something.","I wish I said something.","I wish I say something."],
+  "a": 0,
+  "w": "I WISH I HAD SAID SOMETHING. I WISH I WOULD HAVE is common in speech and it is the version that gets marked wrong everywhere it matters."
+ },
+ {
+  "q": "The result comes out tomorrow and I want it to be good. Which one is English?",
+  "h": "One of these two verbs cannot talk about the future at all.",
+  "o": ["I hope it goes well.","I wish it goes well.","I wish it will go well.","I wish it went well tomorrow."],
+  "a": 0,
+  "w": "I HOPE IT GOES WELL. WISH is for what is not true. HOPE is for what is not decided. Nothing after WISH can point forward."
+ },
+ {
+  "q": "I wish I had kept going. / If only I had kept going. Which is correct?",
+  "h": "Say both out loud first.",
+  "o": ["Both are correct.","Only the first.","Only the second.","Neither is correct."],
+  "a": 0,
+  "w": "BOTH. Same grammar, different weight &mdash; IF ONLY is heavier and usually comes out when the gap was small. Choosing between them is yours to do."
+ },
+ {
+  "q": "Which of these says that you regret NOT going?",
+  "h": "Two of them are perfectly good English sentences about something else.",
+  "o": ["I wish I had gone.","I wanted to go.","I would want to go.","I was wanting to go."],
+  "a": 0,
+  "w": "I WISH I HAD GONE. I WANTED TO GO is flawless English and it means you felt like going at some point. The regret disappears, and nobody corrects it, because there is nothing to correct."
+ },
+ {
+  "q": "At the 1992 Games, on a scale from 1 to 10, silver medalists scored 4.8. Bronze medalists scored ___.",
+  "h": "The one who did worse felt better.",
+  "o": ["7.1","4.9","3.2","5.0"],
+  "a": 0,
+  "w": "7.1. More than two points higher than silver, seconds after the same event on the same day."
+ },
+ {
+  "q": "988 people named the one regret of their life. What share named something they did NOT do?",
+  "h": "It is not close.",
+  "o": ["62.6%","50.1%","37.4%","81.0%"],
+  "a": 0,
+  "w": "62.6% against 37.4%. Looking back at a whole life, the regret that survives is almost twice as likely to be about the thing that never happened."
+ },
+ {
+  "q": "What does that 62.6% NOT tell you?",
+  "h": "A count of what people say is not an instruction.",
+  "o": ["That you should say yes to everything.","That inaction regrets are more common.","That people were asked to name one regret.","That the sample was 988 people."],
+  "a": 0,
+  "w": "THAT YOU SHOULD SAY YES TO EVERYTHING. It counts what people name. Anybody who turns it into advice has added something that is not in the data."
+ }
+]
+/* REGRA 92. O gabarito nao mora no arquivo. O botao "Try the wrong ones
+   again" existe, e na segunda passada o aluno nao le as opcoes: ele
+   lembra de onde clicou. Fisher-Yates sobre uma COPIA — o Q nao se
+   mexe, porque o "again" o le de novo. E o certo viaja como OPCAO,
+   nunca como indice: embaralhar sem remapear troca o gabarito.
+   REGRA 33: nenhuma palavra de portugues aqui dentro, nem nas dicas. */
+const SORTE=(a)=>{const c=(a||[]).slice();
+  for(let i=c.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));
+    const t=c[i];c[i]=c[j];c[j]=t;} return c;};
+
+const KEY='hw-four-point-eight';
+const app=document.getElementById('app'), done=document.getElementById('done');
+let idx=0, score=0, errados=[], respostas=[];
+/* A segunda volta reescrevia o relatorio inteiro: um aluno de 8/12
+   apertava "Try the wrong ones again", acertava as quatro, e o
+   professor recebia "4/4 first try — No mistakes". O `base` guarda a
+   primeira volta, que e a unica que diz alguma coisa sobre o aluno. */
+let base=null;
+
+function draw(){
+  if(idx>=Q.length){ finish(); return; }
+  const it=Q[idx];
+  const certa=it.o[it.a], ops=SORTE(it.o), ia=ops.indexOf(certa);
+  document.getElementById('cnt').textContent=(idx+1)+' / '+Q.length;
+  document.getElementById('fill').style.width=(100*idx/Q.length)+'%';
+  const c=document.createElement('div');
+  c.className='card';
+  c.innerHTML='<div class="n">Question '+(idx+1)+'</div>'
+    +'<div class="q">'+it.q+'</div>'
+    +(it.h?'<div class="hint">'+it.h+'</div>':'')
+    +'<div class="opts">'+ops.map((t,k)=>
+      '<div class="o" data-k="'+k+'"><span class="ltr">'+'ABCD'[k]+'</span><span>'+t+'</span></div>').join('')
+    +'</div><div class="fb"></div>';
+  app.innerHTML='';
+  app.appendChild(c);
+  const fb=c.querySelector('.fb');
+  let tentou=false;
+  c.querySelectorAll('.o').forEach(b=>b.onclick=()=>{
+    const k=+b.dataset.k;
+    if(k===ia){
+      b.classList.add('right');
+      c.querySelectorAll('.o').forEach(x=>{if(x!==b)x.classList.add('dead')});
+      if(!tentou){score++;}else{errados.push(idx);}
+      respostas.push({i:idx,ok:!tentou});
+      document.getElementById('sc').textContent=score;
+      fb.className='fb ok on'; fb.innerHTML=it.w;
+      setTimeout(()=>{idx++;draw();},1250);
+    } else {
+      tentou=true;
+      b.classList.add('wrong');
+      setTimeout(()=>b.classList.remove('wrong'),340);
+      fb.className='fb no on'; fb.innerHTML=it.h||'Not that one. Read it again.';
+    }
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function texto(){
+  const nome=(document.getElementById('who').value||'').trim();
+  const erradas=respostas.filter(r=>!r.ok).map(r=>r.i+1);
+  return "Four Point Eight — homework\n"
+    +(nome?'Student: '+nome+'\n':'')
+    +'Date: '+new Date().toLocaleDateString()+'\n'
+    +(base
+      ? 'Score: '+base.s+'/'+base.t+' first try\n'
+        +'Went back over the '+base.e+' missed and got '+score+' of them.\n'
+      : 'Score: '+score+'/'+Q.length+' first try\n'
+        +(erradas.length?'Needed a second try on: '+erradas.join(', '):'No mistakes.')+'\n');
+}
+
+function finish(){
+  document.getElementById('cnt').textContent=Q.length+' / '+Q.length;
+  document.getElementById('fill').style.width='100%';
+  app.innerHTML='';
+  done.classList.add('on');
+  document.getElementById('final').textContent=score+'/'+Q.length;
+  setTimeout(()=>{document.getElementById('b2').style.width=(100*score/Q.length)+'%';},120);
+  const p=score/Q.length;
+  document.getElementById('msg').textContent =
+    base ? 'You went back over the ones you missed. Send the whole thing — your teacher wants both numbers.'
+    : p===1 ? 'Every single one on the first try. Send this to your teacher.'
+    : p>=.8 ? 'Strong work. Send it over and go through the ones you missed in class.'
+    : p>=.6 ? 'Good. The ones you missed are the ones worth talking about next lesson.'
+    : 'This one was hard. Send it anyway — that is exactly what your teacher needs to see.';
+  try{localStorage.setItem(KEY,JSON.stringify({s:score,t:Date.now()}));}catch(e){}
+}
+
+document.getElementById('send').onclick=function(){
+  const body=encodeURIComponent(texto());
+  const sub=encodeURIComponent('Four Point Eight — homework result');
+  const wa='https://wa.me/?text='+body;
+  window.location.href='mailto:?subject='+sub+'&body='+body;
+  setTimeout(()=>{
+    const r=document.getElementById('rep');
+    r.textContent=texto(); r.classList.add('on');
+    this.textContent='Or send it on WhatsApp';
+    this.onclick=()=>window.open(wa,'_blank');
+  },900);
+};
+document.getElementById('copy').onclick=function(){
+  const t=texto();
+  const r=document.getElementById('rep'); r.textContent=t; r.classList.add('on');
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(()=>{
+    this.textContent='Copied'; setTimeout(()=>this.textContent='Copy the result instead',1800);
+  }).catch(()=>{});}
+};
+document.getElementById('again').onclick=()=>{
+  if(!errados.length){location.reload();return;}
+  if(base===null) base={s:score, t:Q.length, e:errados.length};
+  const so=errados.slice(); errados=[]; respostas=[];
+  const novas=so.map(i=>Q[i]);
+  Q.length=0; novas.forEach(x=>Q.push(x));
+  idx=0; score=0; done.classList.remove('on');
+  document.getElementById('sc').textContent='0';
+  draw();
+};
+draw();
+</script>
+</body>
+</html>

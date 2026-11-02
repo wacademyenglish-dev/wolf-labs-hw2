@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de How Will It Change Us? (11/10/2026): cinco falas do trailer de Disclosure Day.
+   Forma: o termômetro (medo, urgência, esperança). Alvo: will / won’t, I think … will.
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [4, 5, 6], k: 'The secret', quem: 'A woman, under arrest',
+    contexto: 'Somebody stole secret files. She doesn’t say sorry. For her, the truth belongs to everybody.',
+    frase: 'What did you steal? — Secrets. — I have <b>a right to know</b> the truth.',
+    explica: '<i>A right to</i> = something that is yours, that nobody can take. She thinks soon people will know everything.',
+    formula: 'People <b>will</b> know the truth. · They <b>won’t</b> stop her.',
+    tente: 'Do you think people will know all the secrets of the government one day?',
+    ex: 'I don’t think they will. Some secrets will stay secret.',
+    sente: { q: 'How sure is she?', de: 'not sure', a: 'totally sure', st: 'She’s … sure because she thinks people …' } },
+  { i: [12, 13, 14], k: 'Frightened', quem: 'The TV weather woman',
+    contexto: 'A TV weather woman says good morning to Kansas City. Then something strange happens to her, live.',
+    frase: 'What’s happening to me? <b>I’m frightened.</b> I’m frightened out of my wits.',
+    explica: '<i>Frightened</i> = very scared. <i>Out of my wits</i> = so scared I can’t think.',
+    formula: 'Will I be OK? · I <b>don’t think</b> it <b>will</b> stop. (not: I think it won’t)',
+    tente: 'What will you do if something strange happens on live TV today?',
+    ex: 'I’ll call my mother. I don’t think I’ll go out!',
+    sente: { q: 'How scared is she?', de: 'calm', a: 'terrified', st: 'She’s … because she doesn’t know …' } },
+  { i: [19, 20, 21, 22], k: 'Don’t go home', quem: 'A stranger, on the phone',
+    contexto: 'A stranger calls her. Some people found her, and her house is not safe now.',
+    frase: '<b>Do not go back</b> to the house. They found you.',
+    explica: 'It is a warning, and it changes her plans. Her prediction now: she won’t go home tonight.',
+    formula: 'She <b>won’t</b> go back to her house. · <b>Will</b> they find her? I think they <b>will</b>.',
+    tente: 'Where will you go tonight? Where won’t you go?',
+    ex: 'I’ll go home after class. I won’t go to the gym, I’m too tired.',
+    sente: { q: 'How urgent is the call?', de: 'relaxed', a: 'very urgent', st: 'It’s … because they …' } },
+  { i: [32, 33, 34, 35, 36], k: 'For the better', quem: 'A voice on TV',
+    contexto: 'The news asks the big question of the film. The answer is not afraid.',
+    frase: 'How <b>will</b> disclosure <b>change</b> us? — I believe for the better.',
+    explica: '<i>Disclosure</i> = telling the secret to everybody. <i>For the better</i> = it will make us better people.',
+    formula: 'How <b>will</b> it change us? · I think it <b>will</b> make us better.',
+    tente: 'How will the internet change us in ten years? Better or worse?',
+    ex: 'I think it will make us lazier, but we will learn faster.',
+    sente: { q: 'How hopeful is the voice?', de: 'worried', a: 'very hopeful', st: 'It’s … because it thinks we will …' } },
+  { i: [40, 41, 42], k: 'Wonderful', quem: 'Steven Spielberg, the director',
+    contexto: 'The director talks about his old film, Close Encounters, and what he thinks now.',
+    frase: 'I’m now thinking, wouldn’t it be wonderful for people <b>to know</b> all of this is true.',
+    explica: 'He imagines the future: everybody knows, and the world is different. There will be big changes.',
+    formula: 'There <b>will be</b> big changes. · <b>Will</b> they come? Yes, they <b>will</b>.',
+    tente: 'Do you think we will meet aliens one day? What will happen?',
+    ex: 'I think we will. There will be a big party, and then a big problem!',
+    sente: { q: 'How excited is Spielberg?', de: 'bored', a: 'very excited', st: 'He’s … because he thinks people will …' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#5fc3d9', titulo: 'Five lines. Take their temperature.', sub: 'Hear the line, put it on the thermometer, then make your own prediction.', rot: { por: 'WHAT IT MEANS', padrao: 'WILL · WON’T', voce: 'YOUR PREDICTION', ex: 'LIKE THIS' } };

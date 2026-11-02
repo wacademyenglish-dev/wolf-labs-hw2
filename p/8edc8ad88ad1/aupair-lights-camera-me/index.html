@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -112,5 +113,269 @@ window.WL_CONVERSA = { nivel: 'A2', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Watch a real application video.",
+   "p": "One question. Watch. Then answer."
+  },
+  "descobre": {
+   "t": "Life experience or a past moment?",
+   "p": "Compare A and B. When do we use each?"
+  },
+  "escada": {
+   "t": "Climb from easy to hard.",
+   "p": "Step by step. Answer well, go up."
+  },
+  "prova": {
+   "t": "Record your video, live.",
+   "p": "Plan 30 seconds. Look at the camera. Smile."
+  },
+  "cv-ranking": {
+   "t": "What makes a family say “Call her!”?",
+   "p": "Order the five things. Compare with your teacher."
+  },
+  "pode": {
+   "t": "Lesson 3: what can you do now?",
+   "p": "Read each line aloud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Present perfect para experiência (I have babysat, Have you ever…?) × passado com tempo: o vídeo de candidatura de au pair, de cerca de dois minutos.",
+  "armadilha": "O brasileiro esquece o particípio (“I have work”), usa present perfect com data (“I have traveled in 2022”), inventa “I have teached” e pergunta “Did you ever…?”.",
+  "pal": [
+   "I have …",
+   "Have you ever …?",
+   "I have never …",
+   "been",
+   "taught",
+   "babysat",
+   "taken care of",
+   "application video"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: as famílias assistem ao vídeo antes de ligar.",
+   "perg": "What would you show a family in two minutes?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "video": {
+   "obj": "Vídeo real de uma candidata (Austrália, AIFS); comentar com respeito.",
+   "perg": "What did she show first?",
+   "pula": "Assista inteiro; responda uma pergunta."
+  },
+  "descobre": {
+   "obj": "Comparar I have… (experiência) e I …ed (momento com data); regra e armadilhas.",
+   "perg": "Why “I have worked” but “I worked in 2022”?",
+   "pula": "Dois pares bastam."
+  },
+  "escada": {
+   "obj": "Seis degraus de perguntas de experiência, do fácil ao difícil.",
+   "perg": "Have you ever taken care of a baby?",
+   "pula": "Quatro degraus bastam."
+  },
+  "prova": {
+   "obj": "A primeira gravação ao vivo com o relógio; checklist depois.",
+   "perg": "What will you say in the first ten seconds?",
+   "pula": "Uma tentativa só."
+  },
+  "cv-ranking": {
+   "obj": "Ordenar cinco coisas que as famílias olham no vídeo e comparar com o professor.",
+   "perg": "What is number one for a family?",
+   "pula": "Diga só o primeiro e o último."
+  },
+  "pode": {
+   "obj": "Ler as frases “I can” e marcar o que já consegue; gravar o vídeo real em casa.",
+   "perg": "Can you talk about your experience now?",
+   "pula": "Leia só as que faltam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas sobre a experiência real do aluno com crianças, casa e viagem.",
+   "perg": "Have you ever babysat?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas leves sobre o vídeo e a vida de au pair, com present perfect.",
+   "perg": "Smile or serious?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o professor é a mãe da família anfitriã e faz perguntas de experiência.",
+   "perg": "Have you ever cooked for children?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your experience with children.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I have …",
+    "Have you ever …?",
+    "I have never …",
+    "last year"
+   ],
+   "cartas": [
+    {
+     "k": "BABYSITTING",
+     "q": "Have you ever babysat?",
+     "fup": "When was the last time?",
+     "st": [
+      "Yes, I have. I …",
+      "No, I have never …"
+     ],
+     "ex": "Yes, I have. I babysat my neighbor’s son last month."
+    },
+    {
+     "k": "BABIES",
+     "q": "Have you ever taken care of a baby?",
+     "fup": "Was it easy?",
+     "st": [
+      "Yes, I have …",
+      "It was …"
+     ],
+     "ex": "Yes, I have taken care of my niece. It was hard at night!"
+    },
+    {
+     "k": "COOKING",
+     "q": "Have you ever cooked for a child?",
+     "fup": "What did you make?",
+     "st": [
+      "I have cooked …",
+      "I made …"
+     ],
+     "ex": "I have cooked for my little brother. Last week I made pancakes."
+    },
+    {
+     "k": "TRAVEL",
+     "q": "Have you ever been abroad?",
+     "fup": "Where did you go?",
+     "st": [
+      "I have been to …",
+      "I have never been abroad."
+     ],
+     "ex": "I have been to Argentina. I went there in 2023."
+    },
+    {
+     "k": "TEACHING",
+     "q": "Have you ever taught something to a child?",
+     "fup": "What was it?",
+     "st": [
+      "I have taught …",
+      "I taught … to …"
+     ],
+     "ex": "I have taught swimming. I taught my cousin to swim last summer."
+    },
+    {
+     "k": "DRIVING",
+     "q": "Have you ever driven kids to school?",
+     "fup": "Do you have a license?",
+     "st": [
+      "Yes, I have. / No, I haven’t.",
+      "I got my license in …"
+     ],
+     "ex": "No, I haven’t. But I got my license in 2024."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Your video. Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "Families have …",
+    "I have …"
+   ],
+   "rodadas": [
+    {
+     "q": "Film at home or outside?",
+     "a": "At home",
+     "b": "Outside",
+     "fa": [
+      "At home. Families want to see my home and family."
+     ],
+     "fb": [
+      "Outside. The light is better, and I look happy."
+     ]
+    },
+    {
+     "q": "Show photos with children or only talk?",
+     "a": "Photos",
+     "b": "Only talk",
+     "fa": [
+      "Photos. Families have seen many videos with only talk."
+     ],
+     "fb": [
+      "Only talk. They want to hear my English."
+     ]
+    },
+    {
+     "q": "A big family with four kids or a small family with one baby?",
+     "a": "Four kids",
+     "b": "One baby",
+     "fa": [
+      "Four kids. I have always loved a busy house."
+     ],
+     "fb": [
+      "One baby. I have taken care of babies before."
+     ]
+    },
+    {
+     "q": "A family in a big city or in a small town?",
+     "a": "A big city",
+     "b": "A small town",
+     "fa": [
+      "A big city. I have never lived in one."
+     ],
+     "fb": [
+      "A small town. It’s safe and quiet."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "The host family calls you.",
+   "p": "Your teacher is the host mom.",
+   "aluno": "Listen to the host mom’s question. Answer as yourself, the au pair candidate.",
+   "perguntas": [
+    "Have you ever lived away from home?",
+    "Have you ever taken care of two kids at the same time?",
+    "Have you ever cooked for a family?",
+    "When did you last babysit?",
+    "Have you ever been to the USA?",
+    "What have you done with children that you loved?"
+   ],
+   "st": [
+    "Yes, I have. I …",
+    "No, I haven’t, but …",
+    "Last …, I …"
+   ],
+   "ex": "Yes, I have. I took care of my two cousins every Saturday last year."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -122,5 +123,292 @@ window.WL_CONVERSA = { nivel: 'A2', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "An au pair’s interview tips.",
+   "p": "One question, the video, then questions."
+  },
+  "descobre": {
+   "t": "Two questions. Which one is right?",
+   "p": "Compare A and B. See the patterns."
+  },
+  "prova": {
+   "t": "Mrs. Parker asks. You answer.",
+   "p": "Play the question. Answer in 45 seconds."
+  },
+  "cadeira": {
+   "t": "Now you ask Mrs. Parker.",
+   "p": "Ask about the kids, a day, the family."
+  },
+  "cv-juri": {
+   "t": "Two families want you. You choose.",
+   "p": "Read the evidence. Choose one. Say why."
+  },
+  "pode": {
+   "t": "Lesson 9: what can you do now?",
+   "p": "Read each line out loud. Tap yours."
+  }
+ },
+ "prep": {
+  "obj": "Formas de pergunta (do/does, How old are…?, What does… look like?, will I…?) na entrevista por vídeo com a família Parker (Emma, 6, e Leo, 3).",
+  "armadilha": "Brasileiro diz What the kids like? (sem do), How many years has she? (idade com have), When I will start? (sem inverter) e responde com uma palavra só.",
+  "pal": [
+   "What do the kids like?",
+   "How old are they?",
+   "What does a typical day look like?",
+   "How many hours will I work?",
+   "I have taken care of…",
+   "host family"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a call com a família: responder e perguntar.",
+   "perg": "If you could ask a family one question, which one?",
+   "pula": "Leia a capa e siga."
+  },
+  "video": {
+   "obj": "Escuta: dicas de uma au pair sobre o que perguntar à família.",
+   "perg": "Which tip is the most important?",
+   "pula": "Assista uma vez e faça duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar perguntas A e B, explicar a diferença e ver os padrões.",
+   "perg": "Why is “What the kids like?” wrong?",
+   "pula": "Três pares bastam."
+  },
+  "prova": {
+   "obj": "Perguntas gravadas da Mrs. Parker com relógio; não ajude com o relógio correndo.",
+   "perg": "Have you taken care of children before?",
+   "pula": "Duas perguntas bastam."
+  },
+  "cadeira": {
+   "obj": "Inversão: você é a Mrs. Parker e o aluno pergunta sobre as crianças, o dia e a família.",
+   "perg": "What would you like to know about us?",
+   "pula": "Três cartas bastam."
+  },
+  "cv-juri": {
+   "obj": "Conversa: júri entre duas famílias com evidências das calls; lembre que ela também escolhe.",
+   "perg": "Which family would you choose, and why?",
+   "pula": "Uma rodada basta."
+  },
+  "pode": {
+   "obj": "I can: o aluno lê e marca; pedir as cinco melhores perguntas para calls reais.",
+   "perg": "Can you ask a family five good questions?",
+   "pula": "Leia as linhas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais perguntas de entrevista sobre a vida e a experiência do aluno.",
+   "perg": "Have you taken care of children before?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas leves sobre escolher uma família.",
+   "perg": "Which one is better for you, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Escrever as cinco melhores perguntas para uma call real.",
+   "perg": "What do you really want to know?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More interview questions.",
+   "p": "Pick a card. Answer with details.",
+   "palavras": [
+    "I have taken care of…",
+    "I would…",
+    "What do…?",
+    "How many…?"
+   ],
+   "cartas": [
+    {
+     "k": "EXPERIENCE",
+     "q": "Have you taken care of children before?",
+     "fup": "How old were they?",
+     "st": [
+      "Yes, I have taken care of …",
+      "They were …"
+     ],
+     "ex": "Yes, I have taken care of my nephews. They were four and seven."
+    },
+    {
+     "k": "A HARD MOMENT",
+     "q": "What would you do if a child cried for mom?",
+     "fup": "Have you seen that happen?",
+     "st": [
+      "I would …",
+      "Then I would …"
+     ],
+     "ex": "I would hug him and give him something to play with. Then I would call mom if he didn’t stop."
+    },
+    {
+     "k": "YOUR WEEKEND",
+     "q": "What do you like doing on your days off?",
+     "fup": "Alone or with friends?",
+     "st": [
+      "On my days off, I like …"
+     ],
+     "ex": "On my days off, I like walking in parks and taking photos."
+    },
+    {
+     "k": "WHY",
+     "q": "Why do you want to be an au pair?",
+     "fup": "Why the United States?",
+     "st": [
+      "I want to …",
+      "because …"
+     ],
+     "ex": "I want to improve my English and live with a family, because I love kids."
+    },
+    {
+     "k": "YOUR QUESTION",
+     "q": "What is the first thing you would ask a family?",
+     "fup": "Why that question?",
+     "st": [
+      "I would ask: …?"
+     ],
+     "ex": "I would ask: What does a typical day look like?"
+    },
+    {
+     "k": "RULES",
+     "q": "What rules do you think a family has?",
+     "fup": "Which rule would be hard for you?",
+     "st": [
+      "Maybe they have …",
+      "… would be hard for me."
+     ],
+     "ex": "Maybe they have a rule about phones. A curfew would be hard for me."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I would…",
+    "because",
+    "What does…?"
+   ],
+   "rodadas": [
+    {
+     "q": "Ask about hours in the first call, or wait?",
+     "a": "Ask now",
+     "b": "Wait",
+     "fa": [
+      "Ask now.",
+      "I need to know how many hours I will work."
+     ],
+     "fb": [
+      "Wait.",
+      "The first call is to know the family."
+     ]
+    },
+    {
+     "q": "Two kids near a big city, or one baby on a farm?",
+     "a": "Near the city",
+     "b": "On the farm",
+     "fa": [
+      "Near the city.",
+      "I would love to see museums on weekends."
+     ],
+     "fb": [
+      "On the farm.",
+      "I would love quiet days with a baby."
+     ]
+    },
+    {
+     "q": "Talk to the last au pair before you say yes?",
+     "a": "Yes, always",
+     "b": "Not necessary",
+     "fa": [
+      "Yes, always.",
+      "She knows how the family really is."
+     ],
+     "fb": [
+      "Not necessary.",
+      "Every au pair is different."
+     ]
+    },
+    {
+     "q": "A family with many rules, or a family with few rules?",
+     "a": "Many rules",
+     "b": "Few rules",
+     "fa": [
+      "Many rules.",
+      "I know what they expect."
+     ],
+     "fb": [
+      "Few rules.",
+      "I would feel more free."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You’re choosing the family, too."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Your Questions",
+   "t": "Your best questions for a family.",
+   "p": "Write one question for each step.",
+   "prof": "You are Mrs. Parker. After each question, answer it as her, and let the student react.",
+   "passos": [
+    {
+     "q": "Ask about the kids.",
+     "st": [
+      "What do the kids …?",
+      "How old …?"
+     ],
+     "ex": "What do the kids like to do after school?"
+    },
+    {
+     "q": "Ask about a typical day.",
+     "st": [
+      "What does a typical … look like?"
+     ],
+     "ex": "What does a typical morning look like in your house?"
+    },
+    {
+     "q": "Ask about your work.",
+     "st": [
+      "How many hours will I …?"
+     ],
+     "ex": "How many hours will I work on weekends?"
+    },
+    {
+     "q": "Ask about your free time.",
+     "st": [
+      "Will I have …?",
+      "Can I …?"
+     ],
+     "ex": "Will I have time to take an English class?"
+    }
+   ],
+   "fim": "Questions ready for your real family calls."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "No Sooner Had We Arrived",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/cb40af35d982/no-sooner/img/live-tenda.webp",
+  "capa": "../img/live-tenda.webp",
   "alvo": "inversion for time: No sooner had we ... than; Hardly / Scarcely had we ... when; Not until / Only when ... did; had before the subject, and the second clause has normal order after than / when",
   "abrir": "Tell me about a trip where everything went wrong, one thing after another.",
   "fecho": "<b>No sooner had we</b> arrived <b>than</b> it rained. <b>Hardly / Scarcely had we</b> arrived <b>when</b> it rained. Both mean <i>at once</i>, and <b>had</b> goes before the subject. <b>Not until / Only when</b> the rain stopped <b>did we</b> see the valley: <i>only then</i>, with <b>did</b> in the second part.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a winter camping trip. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/cb40af35d982/no-sooner/img/live-tenda.webp",
+      "img": "../img/live-tenda.webp",
       "leg": "A lit tent in the snow",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "No sooner had we put up the tent than the wind tore it down.",
-          "img": "https://wolf-labs.pages.dev/p/cb40af35d982/no-sooner/img/live-tenda.webp",
+          "img": "../img/live-tenda.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Hardly had we finished when it started to snow.",
-          "img": "https://wolf-labs.pages.dev/p/cb40af35d982/no-sooner/img/live-diario.webp",
+          "img": "../img/live-diario.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Only when we counted the food did we understand the danger.",
-          "img": "https://wolf-labs.pages.dev/p/cb40af35d982/no-sooner/img/live-diario.webp",
+          "img": "../img/live-diario.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/cb40af35d982/no-sooner/img/live-diario.webp",
+      "img": "../img/live-diario.webp",
       "leg": "A journal, a compass and a lantern",
       "pede": "Look at the picture: a journal, a compass and a lantern. Write three dramatic sentences about a day when everything went wrong. Use <b>No sooner had … than</b>, <b>Hardly had … when</b> and <b>Not until … did</b>.",
       "ph": "No sooner had I …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Town Hall",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3db100b30277/b2-review-the-town-hall/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "connect, contrast and explain: although / despite + noun, granted / having said that / even so, no matter how, whereas / while / in contrast, due to + noun / as a result, so that; never despite of, never due to + a full sentence",
   "abrir": "Think of a small decision in your town. Who was for it, and who was against?",
   "fecho": "<b>Although</b> + a full sentence; <b>despite</b> + a noun, never <i>despite of</i>. <b>Granted… having said that…</b> concedes, then turns. <b>Whereas / while</b> join two contrasting ideas. <b>Due to</b> + a noun (<i>due to the roadworks</i>); <b>as a result</b> starts a new sentence. <b>So that</b> + subject + verb gives the purpose.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a council meeting. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/3db100b30277/b2-review-the-town-hall/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The fountain square at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Despite the rain, the square was full of people.",
-          "img": "https://wolf-labs.pages.dev/p/3db100b30277/b2-review-the-town-hall/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The cafe wants tables outside so that people can stay longer.",
-          "img": "https://wolf-labs.pages.dev/p/3db100b30277/b2-review-the-town-hall/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Due to the roadworks, the vote was postponed until May.",
-          "img": "https://wolf-labs.pages.dev/p/3db100b30277/b2-review-the-town-hall/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -176,7 +176,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3db100b30277/b2-review-the-town-hall/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The empty council chamber",
       "pede": "Look at the picture: an empty council chamber. Write 2 or 3 sentences about a decision in your town or workplace. Use <b>although, despite, whereas, due to, as a result</b> or <b>so that</b>.",
       "ph": "Although the plan is … ",

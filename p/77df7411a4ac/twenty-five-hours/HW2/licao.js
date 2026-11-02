@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Twenty-Five Hours",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/77df7411a4ac/twenty-five-hours/img/live-estacao.webp",
+  "capa": "../img/live-estacao.webp",
   "alvo": "telling the time: o'clock, half past, quarter past, quarter to, AM / PM; What time ...? and at + time",
   "abrir": "What time do you wake up on Sundays?",
   "fecho": "<b>o'clock</b> for the full hour · <b>half past</b> eight = 8:30 · <b>quarter past</b> nine = 9:15 · <b>quarter to</b> nine = 8:45 (the hour that is coming). <b>AM</b> before noon, <b>PM</b> after.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the station in the morning. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/77df7411a4ac/twenty-five-hours/img/live-estacao.webp",
+      "img": "../img/live-estacao.webp",
       "leg": "The station clock",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,7 +109,7 @@ window.HW2 = {
       "frases": [
         {
           "t": "My class starts at nine o'clock.",
-          "img": "https://wolf-labs.pages.dev/p/77df7411a4ac/twenty-five-hours/img/live-estacao.webp",
+          "img": "../img/live-estacao.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/77df7411a4ac/twenty-five-hours/img/live-estacao.webp",
+      "img": "../img/live-estacao.webp",
       "leg": "A big clock on a station platform",
       "pede": "Look at the picture: a big clock on a station platform. Write 2 or 3 sentences: what time you do three things today. Use <b>o'clock</b>, <b>half past</b>, <b>quarter past</b> or <b>quarter to</b>.",
       "ph": "Today I wake up at …",

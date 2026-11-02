@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Hold Their Attention · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 5 · B2</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 5 · Hold Their Attention · B2</h2>
+    <p>Episode 5 of <b>Better Speaking</b>. Kofi Annan speaks to the world about globalization. Richard shows how he <b>holds attention</b>: he invites the listener (<b>Try to imagine&hellip;</b>), makes points stronger (<b>The simple fact of the matter is this</b>), uses contrast (<b>all / none</b>) and varies his words (<b>human beings / humanity</b>). Plus: prepare the words for topics you know will come up. The sister lesson for B1 is &ldquo;Half of the World&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Who holds your attention, Your opening line. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Make them listen, Match the move, Fix the traps, Choose the phrase.</li>
+      <li><b>Write</b> &mdash; Your speech opening. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>&ldquo;Imagine voc&ecirc;&rdquo; becomes <i>Imagine you a world&hellip;</i>. &ldquo;Menos de&rdquo; becomes <i>less of two dollars</i>. And the /s/&ndash;/z/ pair from the episode: <i>advice</i> (noun) and <i>advise</i> (verb).</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 5 · HOLD THEIR ATTENTION (B2)
+   Vídeo: BBC Learning English, Better Speaking (fn0ns3BEflM, 12:10), três trechos (~4:30).
+   Alvo: prender a atenção: convidar o ouvinte (Try to imagine…, Picture this…), reforçar (The simple fact of the matter is…),
+   contrastar (all / none) e variar as palavras (human beings / humanity). */
+const M = { nome: "Hold Their Attention", kick: "B2 · TRY TO IMAGINE, THE SIMPLE FACT OF THE MATTER IS" };
+var EP = {
+  n: 5, de: 8, nivel: 'B2', titulo: 'Hold Their Attention', video: 'fn0ns3BEflM',
+  convidado: 'Kofi Annan', habilidade: 'keep people listening',
+  trechos: [
+    { ini: 66, fim: 130, rot: 'Kofi Annan on globalization' },
+    { ini: 180, fim: 289, rot: 'Richard: “try to imagine”' },
+    { ini: 289, fim: 358, rot: 'Prepare your words' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'A speech to the world, in English, from a man born in Ghana. He doesn\'t just inform you. He asks you to imagine. Today: the phrases that make people want to listen.',
+      nota: 'Ask: what was the best talk, class or speech you ever heard? What did the speaker do?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Who holds <em>your</em> attention?', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Push for specific examples.',
+      cartas: [
+        { frente: 'Speech', verso: 'Have you ever had to speak in front of a group? How did it go?', dica: 'The last time I…', cor: 'var(--guest)', fw: { q: 'What would you do differently now?', st: ['I would start with…', 'I\'d ask them to…', 'I\'d prepare…'], help: '“I\'d start with a question instead of a list of numbers.”' } },
+        { frente: 'Bored', verso: 'What makes you stop listening in a meeting or a class?', dica: 'I switch off when…', cor: 'var(--host)', fw: { q: 'And what brings you back?', st: ['A good story.', 'A question.', 'When they…'], help: '“When they ask us to picture something.”' } },
+        { frente: 'Phone', verso: 'Can you imagine a day without your phone? What would change?', dica: 'Honestly…', cor: 'var(--teacher)', fw: { q: 'Half of humanity had never made a phone call when Annan spoke. What does that tell you?', st: ['It shows that…', 'The simple fact is…'], help: '“It shows how unequal the world was, and still is.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 4½ minutes', titulo: 'Listen to <em>Kofi Annan</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Kofi Annan asks his audience to…', ops: [{ t: 'imagine something' }, { t: 'buy something' }] }, { q: 'How do you get ready to talk about a topic?', ops: [{ t: 'Review the words you\'ll need' }, { t: 'Learn the whole speech by heart' }] } ],
+      durante: 'Clip 1 is the speech. Listen for “try to imagine” and “the simple fact of the matter is”. Clip 2: why it works. Clip 3: Richard prepares football words before visiting a friend.',
+      depois: [ { f: 'Annan says “humanity” instead of repeating “human beings”.', ok: 1 }, { f: '“The simple fact of the matter is” is weaker than “the fact is”.', ok: 0 }, { f: 'Richard reviewed football words before he met his Spanish friend.', ok: 1 }, { f: 'Richard says you can script a conversation.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Make them <em>listen</em>', pt: 'Convide, reforce, contraste e varie as palavras.',
+      nota: 'Read each card dramatically, like a speech.',
+      cartoes: [ { g: '<b>Try to imagine</b>… · <b>Picture this:</b>…', p: 'Invite the listener in.' }, { g: '<b>The simple fact of the matter is this:</b>…', p: 'Stronger than “the fact is”.' }, { g: 'work for <b>all</b> … work for <b>none</b>', p: 'Contrast makes it memorable. Vary your words: human beings, humanity.' }, { g: 'Imagine you that…', p: 'Imperative: Imagine that… (no you).', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'what does it do?', titulo: 'Match the <em>move</em>', pt: 'Toque na frase e depois no que ela faz com o ouvinte.',
+      nota: 'Say each phrase as if you were opening a talk.',
+      esq: ['Try to imagine…', 'The simple fact of the matter is…', 'If it doesn\'t work for all, it will work for none.', 'Let me ask you something.', 'Half of humanity… half of our fellow human beings…'], dir: ['puts the listener in the picture', 'makes the point stronger', 'contrast you remember', 'involves them with a question', 'variety instead of repetition'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Open a 30-second talk about your city with one of them.', st: ['Try to imagine…', 'Picture this:…', 'Let me ask you something.'], help: '“Try to imagine a city where the beach is ten minutes from the office.”' } },
+    { k: 'cartas', est: 'o', rot: 'the 30-second speech', titulo: 'Your <em>opening line</em>', pt: 'Vire o tema e abra uma fala de 30 segundos que prenda a atenção.',
+      nota: 'The student gives a 30-second opening for each topic using at least two moves. Your GOT IT is for the one that made you want to hear more.',
+      cartas: [
+        { frente: 'Topic 1', sob: 'open it', verso: 'Why everybody should learn to cook', dica: 'Try to imagine…', cor: 'var(--guest)', fw: { q: 'Now choose your own topic and open it.', st: ['Picture this:…', 'The simple fact of the matter is…', 'Let me ask you something.'], help: '“Let me ask you something: when did you last eat something you made yourself?”' } },
+        { frente: 'Topic 2', sob: 'open it', verso: 'Why cities need more trees', dica: 'Picture this:…', cor: 'var(--host)' },
+        { frente: 'Topic 3', sob: 'open it', verso: 'Why kids should learn about money at school', dica: 'The simple fact of the matter is…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'Speech phrases translated from Portuguese, and the /s/–/z/ point from the episode.',
+      itens: [ { erro: '<s>Imagine you</s> a world without phones.', certo: '<b>Imagine</b> a world without phones.', por: 'Imperative: no you.' }, { erro: 'People live with <s>less of</s> two dollars a day.', certo: 'People live on <b>less than</b> two dollars a day.', por: 'Less than; live on (money).' }, { erro: 'Can I give you some <s>advise</s>?', certo: 'Can I give you some <b>advice</b>?', por: 'Advice /s/ is the noun; advise /z/ is the verb.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>phrase</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the speech and close to it. Read each one like a speaker.',
+      itens: [ { f: 'Try to ___ what globalization can mean to half of humanity.', ops: ['imagine', 'imagining'], ok: 0 }, { f: 'The simple fact of the ___ is this.', ops: ['matter', 'thing'], ok: 0 }, { f: 'If it doesn\'t work for all, in the end it will work for ___.', ops: ['none', 'nobody of them'], ok: 0 }, { f: 'They struggle to survive on less ___ two dollars a day.', ops: ['than', 'of'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>speech opening</em>', pt: 'Escreva a abertura de uma fala sobre algo que importa para você: convide, reforce, contraste.',
+      ph: 'Try to imagine… The simple fact of the matter is this:… If we don\'t…, in the end…', nota: 'The line under the paper catches “imagine you” and “less of”. SAVE sends it to My notes. Then the student delivers it standing up, if they can.',
+      banco: ['Try to imagine', 'Picture this:', 'The simple fact of the matter is this:', 'Let me ask you something.', 'If we don\'t', 'in the end', 'for all', 'for none'],
+      regras: [['\\bimagine you\\b', 'Check: Imagine… (no you).'], ['\\bless of\\b', 'Check: LESS THAN.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Like, you know', tx: 'A Wimbledon champion, a ball against a wall, and the little words that buy you time to think.',
+      ganchos: [['Next guest', 'a tennis champion'], ['The skill', 'sound fluent while you think'], ['Your task', 'open one meeting with “Picture this”']], nota: 'Ask: what do you say in Portuguese when you need time to think? That opens Episode 6.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Prender a atenção: convidar o ouvinte (Try to imagine…), reforçar (The simple fact of the matter is this), contrastar (all / none) e variar as palavras; o discurso de Kofi Annan sobre globalização.",
+  "armadilha": "“Imagine você” vira Imagine you a world…; “menos de” vira less of two dollars; e advice (substantivo, /s/) confundido com advise (verbo, /z/).",
+  "pal": [
+   "Try to imagine…",
+   "The simple fact of the matter is this",
+   "all / none",
+   "human beings / humanity",
+   "less than",
+   "advice / advise",
+   "hold their attention"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta Kofi Annan e a habilidade: frases que fazem as pessoas quererem ouvir.",
+   "perg": "What was the best talk you ever heard?",
+   "pula": "Uma resposta e NEXT."
+  },
+  "c1": {
+   "obj": "Conversa sobre quem prende a atenção do aluno, com exemplos concretos.",
+   "perg": "What exactly did that speaker do?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes do discurso em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "What does he ask us to imagine?",
+   "pula": "Veja os clipes uma vez; pule o durante."
+  },
+  "c3": {
+   "obj": "A regra: convidar, reforçar, contrastar e variar, lido como discurso.",
+   "perg": "Which move would you use in a meeting?",
+   "pula": "Leia os cartões; o vermelho é obrigatório."
+  },
+  "c4": {
+   "obj": "Ligar cada frase à sua função, dita como abertura de palestra.",
+   "perg": "What does this phrase do to the listener?",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "Abertura de 30 segundos para cada tema, com pelo menos dois movimentos.",
+   "perg": "Did that make me want to hear more?",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Três armadilhas: imagine you a world, less of, advice/advise.",
+   "perg": "Advice or advise here?",
+   "pula": "Faça as três, rápido."
+  },
+  "c7": {
+   "obj": "Escolher a frase certa em falas do discurso, lidas como orador.",
+   "perg": "Can you read it like a speaker?",
+   "pula": "Metade das frases basta."
+  },
+  "c8": {
+   "obj": "Escrita: a abertura de discurso do aluno; depois falar de pé, se der.",
+   "perg": "Can you deliver it standing up?",
+   "pula": "Escreva; a apresentação fica curta."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 6: as palavrinhas que compram tempo para pensar.",
+   "perg": "What do you say in Portuguese to buy time?",
+   "pula": "Só a pergunta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre falar em público e ouvir, usando os movimentos da aula.",
+   "perg": "Try to imagine… and then?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre discursos, emoção e dados.",
+   "perg": "But isn’t the simple fact of the matter…?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o convidado que acabou de dar uma palestra e responde à imprensa.",
+   "perg": "What did you want people to feel?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 6,
+   "rot": "More to Talk About",
+   "t": "Make me want to listen.",
+   "p": "Pick a card. Open with a move.",
+   "palavras": [
+    "Try to imagine…",
+    "The simple fact of the matter is…",
+    "all / none",
+    "less than"
+   ],
+   "cartas": [
+    {
+     "k": "BORING TALKS",
+     "q": "What makes you stop listening in a presentation?",
+     "fup": "Have you ever done it yourself?",
+     "st": [
+      "The simple fact of the matter is …",
+      "I lose interest when …"
+     ],
+     "ex": "The simple fact of the matter is this: slides full of text. And yes, I’ve done it."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Sell your city to a tourist in thirty seconds.",
+     "fup": "What would you hide?",
+     "st": [
+      "Try to imagine …",
+      "All you need is …"
+     ],
+     "ex": "Try to imagine a beach at sunset, live music, and a cold drink for less than ten reais."
+    },
+    {
+     "k": "BIG IDEAS",
+     "q": "What one change would make your country better?",
+     "fup": "Who would fight it?",
+     "st": [
+      "Imagine a country where …",
+      "None of us …"
+     ],
+     "ex": "Imagine a country where every kid learns English at school. None of us would need courses later."
+    },
+    {
+     "k": "ADVICE",
+     "q": "What advice would you give a nervous first-time speaker?",
+     "fup": "What did you do the first time?",
+     "st": [
+      "My advice is …",
+      "I’d advise them to …"
+     ],
+     "ex": "I’d advise them to tell one story, not ten. My first time, I read everything."
+    },
+    {
+     "k": "NUMBERS",
+     "q": "Is a number or a story more powerful in a speech?",
+     "fup": "Give me an example.",
+     "st": [
+      "A story, because …",
+      "A number, as long as …"
+     ],
+     "ex": "A story. Less than two dollars a day means nothing until you meet the family."
+    },
+    {
+     "k": "LEADERS",
+     "q": "Which public figure really holds a room?",
+     "fup": "What do they do with their voice?",
+     "st": [
+      "… holds a room because …",
+      "They tend to …"
+     ],
+     "ex": "A local radio host. She tends to pause before the important word."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Hold the room.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "The simple fact of the matter is",
+    "I see your point, but",
+    "Try to imagine"
+   ],
+   "rodadas": [
+    {
+     "q": "Facts or feelings in a speech?",
+     "a": "Facts",
+     "b": "Feelings",
+     "fa": [
+      "Facts. Feelings fade by the next morning; numbers stay."
+     ],
+     "fb": [
+      "Feelings. Nobody ever changed their mind because of a chart."
+     ]
+    },
+    {
+     "q": "Has globalization done more good than harm?",
+     "a": "More good",
+     "b": "More harm",
+     "fa": [
+      "More good. Billions of people have left poverty."
+     ],
+     "fb": [
+      "More harm. The gains went to all of the few and none of the many."
+     ]
+    },
+    {
+     "q": "Read a speech, or speak without notes?",
+     "a": "Read it",
+     "b": "No notes",
+     "fa": [
+      "Read it. Every word is chosen, and nothing important is lost."
+     ],
+     "fb": [
+      "No notes. Eye contact is worth more than perfect words."
+     ]
+    },
+    {
+     "q": "Short and simple, or long and complete?",
+     "a": "Short",
+     "b": "Complete",
+     "fa": [
+      "Short. Attention is the rarest thing in any room."
+     ],
+     "fb": [
+      "Complete. A short speech on a big topic is just a slogan."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Try to imagine a debate where nobody looked at their phone."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You just gave a big speech.",
+   "p": "Your teacher is the press.",
+   "aluno": "Listen to your teacher’s question. Answer as the guest speaker, with the moves from today.",
+   "perguntas": [
+    "What was your speech about, in one sentence?",
+    "Why did you open with “try to imagine”?",
+    "What is the simple fact of the matter for you?",
+    "Some people say your ideas are naive. What do you say?",
+    "What advice would you give young speakers?",
+    "What do you want people to remember tomorrow?"
+   ],
+   "st": [
+    "The simple fact of the matter is …",
+    "Try to imagine …",
+    "My advice is …"
+   ],
+   "ex": "The simple fact of the matter is this: all of us use the internet, and none of us control it."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

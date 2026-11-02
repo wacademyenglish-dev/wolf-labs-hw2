@@ -1,0 +1,18 @@
+{
+ "it is nine oclock the house is quiet rex is at the door you are alone here or you are not": "abre.mp3",
+ "it was nine oclock the house was quiet rex was at the door you were alone here you were not": "fecha.mp3",
+ "the door was not open": "r1.mp3",
+ "the door wasnt open": "r2.mp3",
+ "the lights were not on": "r3.mp3",
+ "the lights werent on": "r4.mp3",
+ "i was not alone": "r5.mp3",
+ "i wasnt alone": "r6.mp3",
+ "they were not asleep": "r7.mp3",
+ "they werent asleep": "r8.mp3",
+ "were you alone": "q1.mp3",
+ "was the door open": "q2.mp3",
+ "were you scared": "q3.mp3",
+ "was rex quiet": "q4.mp3",
+ "were the windows shut": "q5.mp3",
+ "was it cold in there": "q6.mp3"
+}

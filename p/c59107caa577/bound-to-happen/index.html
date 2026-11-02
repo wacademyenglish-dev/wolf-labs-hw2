@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Bound to Happen · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 2 · Modals with nuance</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Bound to Happen · C1 Unit 2 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on the future with nuance: be bound to, be set to, be due to, be likely / unlikely to, be about to, be on the verge of + -ing.</p><p style="margin:0 0 6px"><b>The story:</b> City Radio’s 7 AM bulletin (invented city): a new bridge, the mayor’s speech, a bus strike and a storm. Then a prediction board about the student’s own life.</p><p style="margin:0 0 6px"><b>About 52 min:</b> I · Your Next Week (6) · II · The Morning News (9) · III · On Air (7) · IV · How Sure? (9) · V · Speed Round (6) · VI · The Prediction Board (15).</p><p style="margin:0"><b>Open with:</b> “What’s coming up for you in the next few days?”</p></div><!--/prep-->
+    <p>The student already says will and going to. Today is about precision: how sure, and why. The radio bulletin shows the phrases in their natural home (news); the comparison makes the nuance clear; the board makes the student choose the right one again and again.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>be bound to (almost certain) · be set to (planned, news) · be due to (timetable) · be likely / unlikely to · be about to · be on the verge of + -ing</p>
+    <h4>YOUR NEXT WEEK</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>THE MORNING NEWS</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>HOW SURE?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>SPEED ROUND</h4>
+    <p>A 60-second speed round. Tap <b>Start the clock</b>, then <b>Right</b> or <b>Pass</b> for each item; the answer is on your screen. At the end of class, play again and beat the score.</p>
+    <h4>THE PREDICTION BOARD</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>prices must rise (sounds like an obligation)</i>, <i>on the verge to quit</i>, <i>it is probable to rain</i>, <i>the train is due leaving</i>, <i>I’m about of leaving</i>, <i>it is bound that it rains</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>ON AIR (III) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the bulletin: your student is the chief engineer of the new bridge, live on City Radio, with a secret on screen (the lights failed a test last night). You are the reporter who heard a rumour. Ask the four questions in character, wait five seconds in silence after each, and use the PUSH line (only you see it) to corner them: tell the truth, or protect the opening? There is no right answer. Listen for how sure they sound (set to, bound to, unlikely to); recast quietly, and at the end ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · Your Next Week, III · On Air and VI · The Prediction Board.</li>
+      <li><b>Listen</b>: II · The Morning News.</li>
+      <li><b>Focus</b>: IV · How Sure? and V · Speed Round.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* BOUND TO HAPPEN (Main C1, unit 2) · pergunta-surpresa · 28/10/2026 · future with nuance: bound / set / due / likely / about to / on the verge of */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'Opinion', q: 'Do you trust the news to predict anything correctly?',
+    opc: ['Usually', 'Only the weather', 'Not really'], st: ['They’re bound to …', 'It’s unlikely that …'],
+    ex: 'Only the weather, and not even that. When they say it’s unlikely to rain, I take an umbrella.', push: 'Which prediction in the news was the most wrong you remember?' },
+  { cena: 'descobre', tipo: 'And you?', q: 'What are you on the verge of doing, but haven’t done yet?',
+    opc: ['Changing something at work', 'Starting a hobby', 'Moving somewhere'], st: ['I’m on the verge of …', 'It’s likely to happen …'],
+    ex: 'Starting a hobby. I’m on the verge of buying a guitar, but it’s likely to end up in the corner like my bike.', push: 'What is stopping you? Name one thing.' },
+  { cena: 'rapido', tipo: 'Would you rather', q: 'Would you rather know exactly what is bound to happen next year, or be surprised?',
+    opc: ['Know it all', 'Be surprised'], st: ['I’d rather …, because …', 'If I knew it was bound to …'],
+    ex: 'Be surprised. If I knew something bad was bound to happen, I’d spend the whole year waiting for it.', push: 'And if you could know only the good things?' },
+  { cena: 'tabuleiro', tipo: 'What if', q: 'A new bridge, metro line or road is set to open in your city tomorrow. Would you go on the first day?',
+    opc: ['Yes, first in line', 'Maybe next week', 'No, it’s bound to be chaos'], st: ['It’s bound to be …', 'I’m likely to …'],
+    ex: 'No, it’s bound to be chaos. I’m likely to try it a month later, when the photos are over.', push: 'There’s a free coffee for the first hundred people. Now?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* BOUND TO HAPPEN (Main C1, unit 2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A cadeira quente ENTRA depois do II (o boletim da City Radio), colada na notícia: a aula tem 45 min,
+   sem extra, e vai a ~52. O tabuleiro de previsões (V, a tela forte) fica e já é o momento livre; aqui
+   o aluno é a engenheira-chefe da ponte nova, ao vivo na rádio, e o professor é o repórter que quer
+   uma manchete. A pessoa no ar é inventada (nada de político). O futuro com nuance (bound to, set to,
+   due to, likely to, about to, on the verge of) mora nos iniciadores. Formato: hot seat (papel). */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'cadeira', apos: 'leitura', est: 'o', min: 7, img: 'conversa', rot: 'On Air', t: '7:15 AM. City Radio calls you, live.',
+    p: 'You are the bridge’s chief engineer. Your teacher is the reporter. Answer every question in character, and say exactly how sure you are.',
+    formato: 'papel', rot_perg: 'The reporter asks',
+    aluno: { quem: 'The bridge’s chief engineer', quer: 'A calm, confident opening on Monday.', limite: 'Your secret: the bridge lights failed a test last night.' },
+    prof: { quem: 'A City Radio reporter', quer: 'A headline for the eight o’clock news.', limite: 'You heard a rumour about a problem with the lights.' },
+    perguntas: [
+      { q: '“Is the bridge really set to open on Monday?”', ex: 'Yes, it’s set to open at ten, right after the opening speech. The last checks are due to finish on Saturday.' },
+      { q: '“Will traffic really fall by a third?”', ex: 'It’s likely to fall, yes. But on Monday morning, the roads are bound to be busy: everyone wants to see it.' },
+      { q: '“I hear the lights have a problem. True?”', ex: 'We’re about to finish the final tests. Small problems are bound to happen with any new bridge, but it’s highly unlikely to change the date.' },
+      { q: '“Would you drive across it first?”', ex: 'Of course. I’m on the verge of booking the first place in the queue.' }
+    ],
+    st: ['It’s set to …', 'It’s bound to …, but …', 'That’s unlikely to …', 'We’re on the verge of …'],
+    push: 'Press harder: “So you ARE hiding something. Yes or no?” Make the engineer choose: tell the truth or protect the opening.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "What’s coming up for you?",
+   "p": "Answer with detail. Then ask it back."
+  },
+  "leitura": {
+   "t": "City Radio, 7 AM.",
+   "p": "Read it like a presenter. Then look closer."
+  },
+  "cv-cadeira": {
+   "t": "7:15 AM. City Radio calls you, live.",
+   "p": "You’re the bridge engineer. Say how sure you are."
+  },
+  "descobre": {
+   "t": "Same event, different certainty.",
+   "p": "Compare A and B. What’s the difference?"
+  },
+  "rapido": {
+   "t": "Sixty seconds. How many?",
+   "p": "Answer fast. Then try to beat your score."
+  },
+  "tabuleiro": {
+   "t": "Roll, move, predict.",
+   "p": "Make a prediction for your square."
+  }
+ },
+ "prep": {
+  "obj": "Futuro com nuance (be bound to, set to, due to, likely/unlikely to, about to, on the verge of + -ing): o boletim das 7h da City Radio, a ponte nova e previsões da vida do aluno.",
+  "armadilha": "O brasileiro traduz “deve subir” como “prices must rise” (soa obrigação), diz “it is probable to rain” e erra a preposição: “on the verge to quit”, “about of leaving”, “due leaving”.",
+  "pal": [
+   "be bound to",
+   "be set to",
+   "be due to",
+   "be likely to",
+   "be unlikely to",
+   "be about to",
+   "on the verge of + -ing",
+   "bulletin"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: will serve, mas o C1 diz o quanto tem certeza e por quê.",
+   "perg": "What’s coming up for you this week?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "conversa": {
+   "obj": "Bate-papo sobre a próxima semana; o aluno devolve a pergunta. Anotar frases com will para depois.",
+   "perg": "What’s coming up for you in the next few days?",
+   "pula": "Duas perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Leitura do boletim (ponte, prefeito, greve, tempestade) como apresentador; depois achar as expressões.",
+   "perg": "Which news is almost certain, and which is just planned?",
+   "pula": "Leia duas notícias e mostre o padrão."
+  },
+  "cv-cadeira": {
+   "obj": "O aluno é o engenheiro-chefe ao vivo, com um segredo (as luzes falharam); o professor-repórter aperta com o PUSH.",
+   "perg": "Is the bridge set to open on time, or not?",
+   "pula": "Duas perguntas do repórter bastam."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: o aluno explica a diferença de certeza; depois regras e armadilhas.",
+   "perg": "How sure is the speaker in A, and in B?",
+   "pula": "Três pares e uma armadilha bastam."
+  },
+  "rapido": {
+   "obj": "Rodada de 60 segundos para automatizar as formas.",
+   "perg": "Bound to or likely to here?",
+   "pula": "Uma rodada só, sem revanche."
+  },
+  "tabuleiro": {
+   "obj": "Jogo de tabuleiro: cada casa pede uma previsão com a expressão certa sobre a vida do aluno.",
+   "perg": "How sure are you about that?",
+   "pula": "Pare na metade do tabuleiro. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Previsões pessoais e do mundo, com o grau de certeza explícito.",
+   "perg": "How sure are you, really?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre o futuro (trabalho, cidades, IA), com cada lado marcando a certeza.",
+   "perg": "Is that bound to happen, or just likely?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o prefeito da cidade e responde ao repórter sobre ponte, greve e tempestade.",
+   "perg": "Is the strike likely to end soon?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "How sure are you?",
+   "p": "Pick a card. Predict, then say why.",
+   "palavras": [
+    "bound to",
+    "set to",
+    "due to",
+    "likely / unlikely to",
+    "about to",
+    "on the verge of"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CITY",
+     "q": "What is your city bound to look like in ten years?",
+     "fup": "Is that good news?",
+     "st": [
+      "It’s bound to …",
+      "Then again, …"
+     ],
+     "ex": "It’s bound to be hotter and more crowded, but the metro is set to reach my area."
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "What change is your industry on the verge of?",
+     "fup": "Are you ready for it?",
+     "st": [
+      "My field is on the verge of …",
+      "Whether we like it or not, …"
+     ],
+     "ex": "My field is on the verge of losing half its routine work to software."
+    },
+    {
+     "k": "THIS YEAR",
+     "q": "What are you unlikely to do this year, even though you should?",
+     "fup": "What’s stopping you?",
+     "st": [
+      "I’m unlikely to …, to be honest.",
+      "The thing is, …"
+     ],
+     "ex": "I’m unlikely to take a real holiday, to be honest; there’s a launch due in March."
+    },
+    {
+     "k": "DUE SOON",
+     "q": "What’s due to happen in your life soon, on a fixed date?",
+     "fup": "How do you feel about it?",
+     "st": [
+      "… is due to … on …"
+     ],
+     "ex": "My lease is due to end in February, so I’ll have to decide where to live."
+    },
+    {
+     "k": "THE FORECAST",
+     "q": "Which prediction do people make about Brazil that you think is wrong?",
+     "fup": "What’s likely instead?",
+     "st": [
+      "People say it’s bound to …, but I’d say it’s more likely to …"
+     ],
+     "ex": "People say the economy is bound to collapse, but I’d say it’s more likely to limp along."
+    },
+    {
+     "k": "ABOUT TO",
+     "q": "Tell me about a time you were just about to give up, and didn’t.",
+     "fup": "What changed your mind?",
+     "st": [
+      "I was about to …, when …"
+     ],
+     "ex": "I was about to quit the gym when a friend signed up with me."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "It’s bound to …",
+    "It’s unlikely to …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Will most offices disappear in twenty years?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Remote work is bound to win; it’s cheaper.",
+      "Companies are already on the verge of selling buildings."
+     ],
+     "fb": [
+      "No. People are unlikely to give up meeting in person.",
+      "Ideas happen at the coffee machine."
+     ]
+    },
+    {
+     "q": "A news bulletin: should it predict, or only report facts?",
+     "a": "Predict",
+     "b": "Only facts",
+     "fa": [
+      "Predict. People need to know what’s set to happen.",
+      "A storm warning saves lives."
+     ],
+     "fb": [
+      "Only facts. “Bound to” is often a guess dressed as news.",
+      "Predictions sell fear."
+     ]
+    },
+    {
+     "q": "Should the engineer open the bridge after the failed light test?",
+     "a": "Open it",
+     "b": "Delay it",
+     "fa": [
+      "Open it. The lights are likely to be fixed by tonight.",
+      "The city has waited years."
+     ],
+     "fb": [
+      "Delay it. An accident is bound to happen in the dark.",
+      "One week is nothing compared to a scandal."
+     ]
+    },
+    {
+     "q": "Is AI likely to make language learning pointless?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Translation is bound to become instant.",
+      "Most people only need to get by."
+     ],
+     "fb": [
+      "No. Nobody falls in love through an app.",
+      "Real conversation is unlikely to be replaced."
+     ]
+    }
+   ],
+   "fim": "Four rounds. One prediction is bound to be wrong; we’ll see whose."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the mayor now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the mayor, and say how sure you are.",
+   "perguntas": [
+    "Mayor, is the new bridge set to open on time?",
+    "The bus strike starts tomorrow. Is it likely to last long?",
+    "The storm is due tonight. Are the schools set to close?",
+    "Are you on the verge of raising bus fares?",
+    "Your opponents say you’re bound to lose the next election. Are they right?",
+    "What is the city unlikely to see while you’re mayor?"
+   ],
+   "st": [
+    "We’re set to …",
+    "That’s unlikely to …",
+    "I’d say it’s bound to …"
+   ],
+   "ex": "The bridge is set to open on Friday, and the strike is unlikely to last more than two days."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

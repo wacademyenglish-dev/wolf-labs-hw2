@@ -1,0 +1,81 @@
+/* ============================================================
+   YOU NEEDN'T HAVE BOTHERED · DID YOU DO IT? · LIVE CLASS 06/10/2026
+   A base vem do kit (base.css). Identidade: noite de pinheiro na
+   montanha. Um gesto forte: o painel "Did you do it?" com a raia âmbar
+   (a janela da cabana: o que fizeram à toa), a raia branco-neve (o que
+   não precisou) e a raia tracejada (a chance que passou). O resto quieto.
+   ============================================================ */
+:root{
+  --noite:#071012; --noite-rgb:7,16,18; --tinta:#e8f0f0;
+  --t1:#eef5f5; --t2:#b9c8c9; --t2-rgb:185,200,201; --t3:#7b8f91;
+  --ac:#f2b45c; --ac2:#ffd9a3; --neve:#dceaf0;
+  --vidro:rgba(232,240,240,.045); --vidro2:rgba(232,240,240,.08); --vidro3:rgba(232,240,240,.11);
+  --fio:rgba(220,234,236,.11); --fio2:rgba(220,234,236,.2); --luz:rgba(232,240,240,.16);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Young Serif',Georgia,serif; --ui:'Instrument Sans',system-ui,sans-serif; --mono:'Instrument Sans',system-ui,sans-serif;
+  --r1:16px; --r2:10px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2b1a02}
+.btn.cheio{color:#2b1a02}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;align-items:center}
+.capa h1{margin:14px 0 18px;font:400 clamp(40px,3.6vw,68px)/1.02 var(--disp);color:var(--t1)}
+.capa .sub{margin:0 0 26px;font:500 clamp(18px,1.35vw,23px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.capa-r{width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.1vw,18px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;align-items:start;margin-top:10px}
+.nd-ops{display:grid;gap:6px}
+.nd-linha-ok{display:flex;align-items:center;gap:12px} .nd-linha-ok .aprova{flex:1;margin:0}
+
+/* o item da checklist e o momento */
+.nd-item,.nd-momento{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2)}
+.nd-item s{font:400 clamp(22px,1.8vw,30px) var(--disp);color:var(--t1);text-decoration:none}
+.nd-item s.riscado{text-decoration:line-through;text-decoration-color:var(--ac);text-decoration-thickness:3px;color:var(--t3)}
+.nd-item p,.nd-momento p{margin:0;font:500 clamp(16px,1.2vw,20px)/1.5 var(--ui);color:var(--t2)}
+.nd-momento small{font:600 15px var(--ui);color:var(--ac)}
+
+/* o painel: o único gesto forte */
+.nd-painel{display:grid;gap:10px;padding:18px;border-radius:var(--r1);background:#0a1518;border:1px solid #1c2e31}
+.nd-topo{font:400 clamp(26px,2.2vw,38px)/1 var(--disp);color:var(--t1);padding:2px 4px 8px}
+.nd-duas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.nd-raia{display:grid;align-content:start;gap:6px;padding:14px 16px;border-radius:12px;min-height:150px}
+.nd-raia h3{margin:0;font:700 16px var(--ui)} .nd-raia > p{margin:0;font:500 13px var(--ui);color:var(--t3)}
+.nd-raia ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:5px}
+.nd-raia li{font:500 clamp(14px,1.02vw,16px)/1.4 var(--ui);padding:6px 10px;border-radius:7px}
+.nd-raia li.vazio{color:var(--t3);font-style:italic;background:none;padding-left:0}
+.nd-raia li.chega{animation:chega .55s cubic-bezier(.2,.8,.2,1)}
+@keyframes chega{from{opacity:0;transform:translateY(-14px)}}
+@media (prefers-reduced-motion:reduce){.nd-raia li.chega{animation:none}}
+.nd-raia.fez{background:linear-gradient(180deg,rgba(242,180,92,.16),rgba(242,180,92,.05));border:1px solid rgba(242,180,92,.45)} .nd-raia.fez h3{color:var(--ac2)} .nd-raia.fez li{background:rgba(242,180,92,.1);color:var(--t1)}
+.nd-raia.nao{background:rgba(220,234,240,.06);border:1px solid rgba(220,234,240,.3)} .nd-raia.nao h3{color:var(--neve)} .nd-raia.nao li{background:rgba(220,234,240,.07);color:var(--t1)}
+.nd-raia.chance{min-height:0;border:1px dashed rgba(185,200,201,.4)} .nd-raia.chance h3{color:var(--t2)} .nd-raia.chance li{color:var(--t2);font-style:italic}
+
+/* a regra */
+.nd-lei{display:grid;gap:10px;padding:18px 22px;border-radius:var(--r1);max-width:1100px;margin:0 auto 14px;width:100%}
+.nd-lei p{margin:0;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;align-items:baseline;font:500 clamp(16px,1.2vw,20px)/1.45 var(--ui);color:var(--t2)}
+.nd-lei b{font:400 clamp(20px,1.6vw,27px) var(--disp)} .nd-lei b.a{color:var(--ac2)} .nd-lei b.b{color:var(--neve)} .nd-lei b.c{color:var(--t2);font-style:italic}
+
+/* o telefone */
+.nd-fone{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;max-width:1100px;margin:0 auto 12px;width:100%;padding:12px 18px;border-radius:var(--r2);border-color:rgba(242,180,92,.4)}
+.nd-fone b{font:400 22px var(--disp);color:var(--ac2)} .nd-fone span{margin-left:auto;font:600 14px var(--ui);color:var(--t3)}
+
+.fim .grande span{font-size:clamp(16px,1.2vw,19px)}
+.lado-fim .nd-raia{min-height:0}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} }
+@media (max-width:620px){ .nd-duas{grid-template-columns:1fr} .nd-lei p{grid-template-columns:1fr;gap:4px} .nd-raia{min-height:0} }
+
+.nd-duas.tres{grid-template-columns:repeat(3,minmax(0,1fr))}
+.nd-duas.tres .nd-raia{min-height:0;padding:12px}
+.nd-duas.tres .nd-raia li{font-size:clamp(13px,.95vw,15px);padding:5px 8px}
+.mesa-c .nd-painel{padding:14px} .mesa-c .nd-topo{font-size:clamp(22px,1.8vw,30px)}
+@media (max-width:620px){ .nd-duas.tres{grid-template-columns:1fr} }
+
+/* 22/10/2026 · os formatos novos (formatos.js) */
+.nd-sob{width:min(1200px,100%);margin:22px auto 0}
+.nd-lado{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);gap:18px;width:min(1200px,100%);margin:0 auto;align-items:start}
+.nd-lado .nd-momento p{margin:0}
+@media (max-width:900px){.nd-lado{grid-template-columns:minmax(0,1fr)}}

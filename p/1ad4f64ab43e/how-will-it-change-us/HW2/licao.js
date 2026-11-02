@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "How Will It Change Us?",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/1ad4f64ab43e/how-will-it-change-us/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "will / won't + plain verb for predictions; Will they ...? + Yes, they will / No, they won't; I think ... will / I don't think ... will; never will to, will goes, They will come?",
   "abrir": "What will you do tomorrow?",
   "fecho": "<b>will / won't</b> + the plain verb: <i>People will stay home. Schools won't open.</i> Question: <b>Will</b> + person + verb: <i>Will they come?</i> <b>I think … will</b> · <b>I don't think … will</b>. Never <i>will to, will goes</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at the night sky near the big antennas. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/1ad4f64ab43e/how-will-it-change-us/img/live-ceu.webp",
+      "img": "../img/live-ceu.webp",
       "leg": "Big antennas under the stars",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I think they will hear something soon.",
-          "img": "https://wolf-labs.pages.dev/p/1ad4f64ab43e/how-will-it-change-us/img/live-ceu.webp",
+          "img": "../img/live-ceu.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The news will talk about it all day.",
-          "img": "https://wolf-labs.pages.dev/p/1ad4f64ab43e/how-will-it-change-us/img/live-estudio.webp",
+          "img": "../img/live-estudio.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I won't go to work tomorrow.",
-          "img": "https://wolf-labs.pages.dev/p/1ad4f64ab43e/how-will-it-change-us/img/live-deserto.webp",
+          "img": "../img/live-deserto.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/1ad4f64ab43e/how-will-it-change-us/img/live-mapa.webp",
+      "img": "../img/live-mapa.webp",
       "leg": "A glowing world map",
       "pede": "Look at the picture: a glowing world map. Write 2 or 3 sentences: after big news, what will happen in your city? Use <b>will</b> and <b>won't</b>.",
       "ph": "People will … Schools won't …",

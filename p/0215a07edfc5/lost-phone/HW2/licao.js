@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Lost Phone",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0215a07edfc5/lost-phone/img/live-bandeja.webp",
+  "capa": "../img/live-bandeja.webp",
   "alvo": "like / love / hate + verb-ing; short answers with it / them (Yes, I like it; Yes, I like them); doesn't like + verb-ing",
   "abrir": "What do you like doing on your phone?",
   "fecho": "<b>like, love, hate</b> + verb + <b>-ing</b>: <i>I like cooking. She loves dancing.</i> The short answer needs the end: <i>Yes, I like it. Yes, I like them.</i> No: <b>doesn't like</b> + -ing: <i>She doesn't like running.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo find a phone on the bus. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/0215a07edfc5/lost-phone/img/live-bandeja.webp",
+      "img": "../img/live-bandeja.webp",
       "leg": "A phone on a grey tray",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I like listening to music on the bus.",
-          "img": "https://wolf-labs.pages.dev/p/0215a07edfc5/lost-phone/img/live-bandeja.webp",
+          "img": "../img/live-bandeja.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She loves walking with her dogs.",
-          "img": "https://wolf-labs.pages.dev/p/0215a07edfc5/lost-phone/img/live-coleiras.webp",
+          "img": "../img/live-coleiras.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I don't like waiting for the bus.",
-          "img": "https://wolf-labs.pages.dev/p/0215a07edfc5/lost-phone/img/live-balcao.webp",
+          "img": "../img/live-balcao.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0215a07edfc5/lost-phone/img/live-bandeja.webp",
+      "img": "../img/live-bandeja.webp",
       "leg": "A phone on a grey tray",
       "pede": "Look at the picture: a phone on a tray. Write 2 or 3 sentences about its owner. What does she like? What does she hate? Use <b>like / love / hate</b> + -ing.",
       "ph": "She likes … She loves …",

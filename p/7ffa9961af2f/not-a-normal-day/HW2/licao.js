@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Not a Normal Day",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/7ffa9961af2f/not-a-normal-day/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "present simple for habits (usually, every evening, never) x present continuous for now (right now, tonight); state verbs never take -ing (I know, not I'm knowing); never I'm usually cooking",
   "abrir": "What do you usually do in the evening?",
   "fecho": "A habit: <b>present simple</b> (<i>I usually cook.</i>). Right now: <b>am / is / are + -ing</b> (<i>I'm eating bread.</i>). State verbs (know, like, want) never take <b>-ing</b>: <i>I know</i>, not <i>I'm knowing</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo text during a power cut. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/7ffa9961af2f/not-a-normal-day/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two candles and a card game",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I usually watch a series every evening.",
-          "img": "https://wolf-labs.pages.dev/p/7ffa9961af2f/not-a-normal-day/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Right now I'm sitting in the dark.",
-          "img": "https://wolf-labs.pages.dev/p/7ffa9961af2f/not-a-normal-day/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Tonight the kids are playing cards.",
-          "img": "https://wolf-labs.pages.dev/p/7ffa9961af2f/not-a-normal-day/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -157,7 +157,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/7ffa9961af2f/not-a-normal-day/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Two candles and a card game on a table",
       "pede": "Look at the picture: two candles and a card game on a table. Write 2 or 3 sentences: one thing you <b>usually</b> do in the evening, and what you <b>are doing</b> tonight.",
       "ph": "I usually … but tonight I'm …",

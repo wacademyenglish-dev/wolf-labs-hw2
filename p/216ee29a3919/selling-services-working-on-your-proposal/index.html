@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -135,5 +136,282 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "What are you working on this week?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "Leo tells a client what’s happening.",
+   "p": "Read it out loud. Then answer."
+  },
+  "dialogo": {
+   "t": "The client calls for news.",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "Now or every week?",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "transforma": {
+   "t": "Change the time word. Change the verb.",
+   "p": "Read the sentence and clue. Say it. Check."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Your teacher goes first. Choose. Say why."
+  },
+  "cartao": {
+   "t": "A status e-mail to a client.",
+   "p": "Now, your team, one routine. Then read it."
+  },
+  "pode": {
+   "t": "Lesson 10: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 10: presente contínuo (agora) x presente simples (rotina). O Leo manda status para a Karen Wells (Lumen Logistics), e ela liga porque o CEO pergunta todo dia.",
+  "armadilha": "Brasileiro tira o be (“we working”), deixa o verbo base (“I am work”) ou usa -ing para rotina (“we are send every month”). Palavra de agora = am/is/are + -ing; de rotina = presente simples.",
+  "pal": [
+   "We’re working on …",
+   "She’s checking …",
+   "We aren’t waiting for …",
+   "We usually send …",
+   "every Monday",
+   "this week",
+   "right now",
+   "It’s on time."
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 10 de Selling Services: o e-mail de status da proposta.",
+   "perg": "What are you working on this week?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal sobre a semana e a rotina; o aluno pergunta “And you?”.",
+   "perg": "What do you usually do on Friday afternoons?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "O e-mail de status do Leo para a Karen: ler, entender, depois achar o padrão.",
+   "perg": "What is the team doing right now?",
+   "pula": "Leia metade e faça duas perguntas."
+  },
+  "dialogo": {
+   "obj": "Áudio curto: a Karen liga pedindo notícias; ouvir uma vez (0,75× ok), perguntas, transcrição.",
+   "perg": "Why does Karen call?",
+   "pula": "Ouça uma vez e faça duas perguntas."
+  },
+  "descobre": {
+   "obj": "Pares: agora x rotina; depois regras e armadilhas.",
+   "perg": "We working or we’re working?",
+   "pula": "Três pares + as armadilhas bastam."
+  },
+  "transforma": {
+   "obj": "Muda a palavra de tempo, muda o verbo: de rotina para agora e vice-versa.",
+   "perg": "Every Monday or this week: which verb?",
+   "pula": "Quatro frases bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather leve: A ou B, com because; o professor responde também.",
+   "perg": "A or B? Why?",
+   "pula": "Uma escolha basta."
+  },
+  "cartao": {
+   "obj": "Escrita: e-mail de status a um cliente real, com uma frase de rotina obrigatória.",
+   "perg": "What do you usually send every week?",
+   "pula": "Três linhas bastam."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; o que ficar aberto vai para a lição.",
+   "perg": "Can you give a client a status update now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa leve sobre agora x rotina no trabalho do aluno.",
+   "perg": "What are you doing at work this month?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre como dar notícias ao cliente.",
+   "perg": "An e-mail or a call for news?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é o Leo; o professor é a Karen pedindo notícias da proposta.",
+   "perg": "Leo, how is the proposal going?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Now and every week.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’m working on",
+    "I usually",
+    "this week",
+    "every Monday"
+   ],
+   "cartas": [
+    {
+     "k": "THIS MONTH",
+     "q": "What are you working on this month?",
+     "fup": "Is it difficult?",
+     "st": [
+      "I’m working on …"
+     ],
+     "ex": "I’m working on a new website. It’s difficult, but fun."
+    },
+    {
+     "k": "MONDAYS",
+     "q": "What do you usually do on Monday morning?",
+     "fup": "Do you like Mondays?",
+     "st": [
+      "I usually …"
+     ],
+     "ex": "I usually read my e-mails and plan the week."
+    },
+    {
+     "k": "YOUR TEAM",
+     "q": "What is your team doing right now?",
+     "fup": "Are they busy?",
+     "st": [
+      "They’re …ing …"
+     ],
+     "ex": "They’re preparing a proposal. They’re very busy."
+    },
+    {
+     "k": "YOUR CLIENTS",
+     "q": "How often do you talk to your clients?",
+     "fup": "By e-mail or phone?",
+     "st": [
+      "I talk to them every …"
+     ],
+     "ex": "I talk to them every week, usually by e-mail."
+    },
+    {
+     "k": "TODAY",
+     "q": "What are you doing after this class?",
+     "fup": "Is that your routine?",
+     "st": [
+      "After class, I’m …ing"
+     ],
+     "ex": "After class, I’m meeting a client. It’s not my routine."
+    },
+    {
+     "k": "FRIDAYS",
+     "q": "What do you always do on Friday afternoons?",
+     "fup": "And this Friday?",
+     "st": [
+      "I always …",
+      "This Friday I’m …"
+     ],
+     "ex": "I always send a report. This Friday I’m traveling."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "usually",
+    "right now"
+   ],
+   "rodadas": [
+    {
+     "q": "News for a client: an e-mail or a call?",
+     "a": "An e-mail",
+     "b": "A call",
+     "fa": [
+      "An e-mail. The client usually forwards it to the CEO."
+     ],
+     "fb": [
+      "A call. The client is waiting right now."
+     ]
+    },
+    {
+     "q": "A status update every week or only with news?",
+     "a": "Every week",
+     "b": "Only with news",
+     "fa": [
+      "Every week. The client knows we’re working."
+     ],
+     "fb": [
+      "Only with news. Clients are busy."
+     ]
+    },
+    {
+     "q": "Work on one client or many clients at the same time?",
+     "a": "One client",
+     "b": "Many clients",
+     "fa": [
+      "One client. I usually do better work."
+     ],
+     "fb": [
+      "Many clients. I’m never bored."
+     ]
+    },
+    {
+     "q": "Answer e-mails right now or at 5 PM?",
+     "a": "Right now",
+     "b": "At 5 PM",
+     "fa": [
+      "Right now. Clients like fast answers."
+     ],
+     "fb": [
+      "At 5 PM. I usually focus in the day."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The proposal is on time."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Leo now.",
+   "p": "Your teacher is Karen, the client.",
+   "aluno": "Listen to Karen’s question. Answer as Leo, the seller.",
+   "perguntas": [
+    "Hi Leo! How is the proposal going?",
+    "What is your team doing right now?",
+    "Are you waiting for anything from us?",
+    "When do you usually send updates?",
+    "My CEO asks every day. Is it on time?",
+    "What are you doing this Friday?"
+   ],
+   "st": [
+    "We’re working on …",
+    "We usually …",
+    "It’s on time."
+   ],
+   "ex": "We’re working on the prices right now. It’s on time. We usually send an update every Monday."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

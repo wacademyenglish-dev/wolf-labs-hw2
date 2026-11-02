@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · And You? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>And You? · Keep the Ball in Play</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>And You? · Keep the Ball in Play</h2>
+    <p>Your student can answer questions. The problem: the conversation stops on their answer, every time. This hour is a table-tennis match: every answer must send the ball back. When it comes back, the ball crosses the table; when it doesn’t, it falls and the rally starts again. No timer, no points: the rally only shows how long the conversation lived.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>They <b>asked</b> you: answer, then <b>And you?</b> / <b>What about you?</b> (the same). They <b>told</b> you: the echo copies their verb or its helper: <i>I’m tired → Are you? · I work at night → Do you? · I’ve got a dog → Have you? · I can swim → Can you? · I lived in Lisbon → Did you?</i> The voice goes UP.</p>
+    <!--conversa--><h4>YOUR TOP 3 (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After the strangers, your student ranks three small-talk topics: the weather, food, your job. There is no right order. They tap 1, 2, 3, say their number one and send the ball back to you; answer it, then show your own order and agree on one top 3 together. Wait five seconds in silence before helping; the PUSH line (only you see it) is a quick yes or no. Recast quietly; at the end, ask them to fix one sentence themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Every answer should end with a return: And you?</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> — I Four Seconds (don’t fill the silence: it is the argument of the hour), IV The Echo, VI Rally with Strangers, VII Your Top 3, VIII The Café Queue. Almost the whole hour is talk.</li>
+      <li><b>Listen</b> — V Did It Come Back? (the same answer twice: dead, then alive).</li>
+      <li><b>Focus</b> — II Four Holes, III Two Ways to Send It Back.</li>
+      <li><b>Write</b> — IX Your Small Talk, with the red wavy line for <i>Am you?</i>, <i>Work you?</i> and <i>And you.</i> without the question mark. It goes to their My notes.</li>
+    </ul>
+    <h4>THE RALLY</h4>
+    <p>In VI and VIII you judge: “hit” = an answer plus a return; “ball dropped” = an answer alone (the rally starts again). In VIII you open each topic with the line on the card, answer their returns naturally and ask again. Four hits close a topic.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The ball moves on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* AND YOU? (Main A1) · pergunta-surpresa · 27/10/2026 · And you? / What about you? / o eco */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'silencio', tipo: 'And you?', q: 'Do you talk to strangers?',
+    opc: ['Yes, a lot', 'No, never'], st: ['Yes, I do. Do you?', 'No, I don’t. Do you?'],
+    ex: 'Yes, I do. At the bus stop! Do you?', push: 'In the elevator? Yes or no?' },
+  { cena: 'eco', tipo: 'Would you rather', q: 'At the bus stop: talk or music?',
+    opc: ['Talk', 'My music'], st: ['I talk. And you?', 'I listen to music. What about you?'],
+    ex: 'My music! I love my headphones. What about you?', push: 'A nice stranger talks. Talk back?' },
+  { cena: 'fila', tipo: 'And you?', q: 'Your order at a café?',
+    opc: ['Coffee', 'Tea', 'Juice'], st: ['I always get … And you?'],
+    ex: 'Coffee with milk. And you?', push: 'With sugar? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* AND YOU? (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Ranking leve de 3 itens ENTRA depois de "VI · Rally with Strangers" (a aula é quase só fala e não tem
+   repetição para trocar: a única extra é a fila do café, que já é o momento livre). Aula cheia: 53 → 58 min.
+   O aluno põe em ordem os assuntos para puxar conversa com um estranho e devolve a bola ao professor.
+   A1 bem leve: três itens, frase quase pronta, o professor mostra a ordem dele.
+   A gramática da aula (And you? / What about you? · o eco Do you? Are you?) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'top3', apos: 'rally', est: 'o', min: 5, img: 'sala', rot: 'Your Top 3', t: 'Small talk with a stranger. What comes first?',
+    p: 'Tap your number 1, 2 and 3. Say your number 1. Then send the ball back.',
+    formato: 'ranking',
+    q: 'The best small talk with a stranger?',
+    itens: ['The weather', 'Food', 'Your job'],
+    st: ['Number one is …', 'I love food. Do you?', 'What about you?'],
+    ex: 'Number one is food. I love cheese bread. Do you?',
+    push: 'Your job first? Yes or no?',
+    prof: [0, 1, 2],
+    dica: 'Tap 1, then 2, then 3. Tap again to take it out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "silencio": {
+   "t": "Answer. Then do nothing.",
+   "p": "Answer out loud. Then watch the ball."
+  },
+  "buracos": {
+   "t": "Right English, dead conversation.",
+   "p": "Read both lines. Pick what sends the ball back."
+  },
+  "regra": {
+   "t": "A question or a sentence?",
+   "p": "Read the cards out loud. Fix the four traps."
+  },
+  "eco": {
+   "t": "The echo: their verb, as a question.",
+   "p": "Pick the echo and the voice. Then say it."
+  },
+  "voltou": {
+   "t": "The same answer: dead or alive?",
+   "p": "Listen to the end. Is there a question back?"
+  },
+  "rally": {
+   "t": "Eight strangers. Keep the ball in play.",
+   "p": "Answer, then send it back."
+  },
+  "cv-top3": {
+   "t": "Small talk: what comes first?",
+   "p": "Tap 1, 2, 3. Say your number 1. Send it back."
+  },
+  "fila": {
+   "t": "The café queue: four topics.",
+   "p": "Your teacher opens a topic. Keep it for four hits."
+  },
+  "fim": {
+   "t": "Write a small talk that never stops.",
+   "p": "Six lines. Every answer sends it back. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Devolver a conversa: responder e mandar de volta com And you? / What about you? ou com o eco (Are you? Do you? Can you?), como num jogo de pingue-pongue.",
+  "armadilha": "O brasileiro responde e para (a conversa morre), ou faz o eco errado: Am you?, Work you?, ou diz And you. sem subir a voz no fim.",
+  "pal": [
+   "And you?",
+   "What about you?",
+   "Are you?",
+   "Do you?",
+   "Have you?",
+   "Can you?",
+   "Did you?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: toda resposta tem que devolver a bola.",
+   "perg": "Do you ask questions back in a conversation?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "silencio": {
+   "obj": "Mostrar o problema: o aluno responde e o professor não preenche o silêncio de quatro segundos.",
+   "perg": "Where are you from?",
+   "pula": "Duas perguntas bastam; não preencha o silêncio."
+  },
+  "buracos": {
+   "obj": "Ver quatro conversas que morrem e escolher o que devolve a bola.",
+   "perg": "What sends the ball back here?",
+   "pula": "Duas conversas bastam."
+  },
+  "regra": {
+   "obj": "A regra: pergunta pede And you?; frase pede o eco com o verbo dela.",
+   "perg": "Was it a question or a sentence?",
+   "pula": "Corrija duas armadilhas e siga."
+  },
+  "eco": {
+   "obj": "Treinar o eco (I’m tired → Are you?) com a voz subindo.",
+   "perg": "I work at night. What’s the echo?",
+   "pula": "Quatro ecos bastam."
+  },
+  "voltou": {
+   "obj": "Ouvir a mesma resposta morta e viva: perceber o retorno.",
+   "perg": "Did the ball come back?",
+   "pula": "Três gravações bastam."
+  },
+  "rally": {
+   "obj": "Rali com oito desconhecidos: responder e devolver; o professor julga cada rebatida.",
+   "perg": "Nice weather today, isn’t it?",
+   "pula": "Quatro desconhecidos bastam."
+  },
+  "cv-top3": {
+   "obj": "Conversa: ranquear três temas de small talk e devolver a bola ao professor.",
+   "perg": "What’s your number one, and what about me?",
+   "pula": "Só o número 1 e um retorno."
+  },
+  "fila": {
+   "obj": "Fila do café: o professor abre um tema e o aluno mantém quatro rebatidas.",
+   "perg": "Long queue today, isn’t it?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: um small talk de seis linhas em que toda resposta devolve a bola.",
+   "perg": "How does your stranger start the talk?",
+   "pula": "Quatro linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais small talk: responder e sempre devolver com And you? ou o eco.",
+   "perg": "Do you like coffee? And you?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e devolver a pergunta ao professor no fim de cada rodada.",
+   "perg": "Which side are you on? What about me?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar um papo com um desconhecido em quatro passos, sempre devolvendo a bola.",
+   "perg": "What do you say next?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More small talk.",
+   "p": "Pick a card. Answer, then send it back.",
+   "palavras": [
+    "And you?",
+    "What about you?",
+    "Do you?",
+    "Are you?",
+    "Can you?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR COFFEE",
+     "q": "Do you drink coffee in the morning?",
+     "fup": "How many cups?",
+     "st": [
+      "Yes, I do. And you?",
+      "No, I don’t. What about you?"
+     ],
+     "ex": "Yes, I do. Two cups. And you?"
+    },
+    {
+     "k": "YOUR JOB",
+     "q": "Do you work on Saturdays?",
+     "fup": "Do you like your job?",
+     "st": [
+      "I work … . Do you?",
+      "I don’t … . And you?"
+     ],
+     "ex": "No, I don’t. I work Monday to Friday. And you?"
+    },
+    {
+     "k": "THE WEATHER",
+     "q": "Do you like the cold?",
+     "fup": "What’s the weather like today?",
+     "st": [
+      "I like … . And you?",
+      "I don’t like … . Do you?"
+     ],
+     "ex": "No, I don’t. I like the sun. What about you?"
+    },
+    {
+     "k": "YOUR WEEKEND",
+     "q": "Are you busy this weekend?",
+     "fup": "What are your plans?",
+     "st": [
+      "Yes, I am. Are you?",
+      "No, I’m not. What about you?"
+     ],
+     "ex": "No, I’m not. I’m at home. Are you busy?"
+    },
+    {
+     "k": "YOUR TALENT",
+     "q": "Can you cook?",
+     "fup": "What can you make?",
+     "st": [
+      "Yes, I can. Can you?",
+      "No, I can’t. And you?"
+     ],
+     "ex": "Yes, I can. I make good rice. Can you cook?"
+    },
+    {
+     "k": "YOUR PET",
+     "q": "Have you got a pet?",
+     "fup": "What’s its name?",
+     "st": [
+      "Yes, I have. Have you?",
+      "No, I haven’t. And you?"
+     ],
+     "ex": "Yes, I have. I’ve got a cat. Have you got a pet?"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Send it back.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "And you?",
+    "What about you?"
+   ],
+   "rodadas": [
+    {
+     "q": "Talk to strangers or stay quiet?",
+     "a": "Talk",
+     "b": "Stay quiet",
+     "fa": [
+      "Talk. It is fun. And you?"
+     ],
+     "fb": [
+      "Stay quiet. I’m shy. What about you?"
+     ]
+    },
+    {
+     "q": "Coffee or tea?",
+     "a": "Coffee",
+     "b": "Tea",
+     "fa": [
+      "Coffee. I need energy. And you?"
+     ],
+     "fb": [
+      "Tea. It is calm. What about you?"
+     ]
+    },
+    {
+     "q": "Talk about the weather or about food?",
+     "a": "The weather",
+     "b": "Food",
+     "fa": [
+      "The weather. It is easy. And you?"
+     ],
+     "fb": [
+      "Food. Everybody eats! What about you?"
+     ]
+    },
+    {
+     "q": "Text or call?",
+     "a": "Text",
+     "b": "Call",
+     "fa": [
+      "Text. It is fast. And you?"
+     ],
+     "fb": [
+      "Call. I like to hear the voice. What about you?"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the ball never fell."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Small Talk",
+   "t": "A stranger at the bus stop.",
+   "p": "Answer each step. Then send it back.",
+   "prof": "You are the stranger: answer every return and ask again, so the rally keeps going.",
+   "passos": [
+    {
+     "q": "The stranger says: “Cold today, isn’t it?”",
+     "st": [
+      "Yes, it is. Are you …?",
+      "I don’t like … . Do you?"
+     ],
+     "ex": "Yes, it is. I don’t like the cold. Do you?"
+    },
+    {
+     "q": "The stranger says: “I’m going to work.”",
+     "st": [
+      "Are you? I’m going to …",
+      "Me too. Where do you …?"
+     ],
+     "ex": "Are you? I’m going to work too. Where do you work?"
+    },
+    {
+     "q": "The stranger says: “I work at a hospital.”",
+     "st": [
+      "Do you? I work …",
+      "Do you like it?"
+     ],
+     "ex": "Do you? I work in an office. Do you like it?"
+    },
+    {
+     "q": "The bus is here. Say goodbye.",
+     "st": [
+      "Nice to meet you. …",
+      "Have a good …"
+     ],
+     "ex": "Nice to meet you. Have a good day!"
+    }
+   ],
+   "fim": "The bus came, and the ball never fell."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

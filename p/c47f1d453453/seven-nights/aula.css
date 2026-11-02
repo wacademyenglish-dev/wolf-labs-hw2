@@ -1,0 +1,84 @@
+/* ============================================================
+   SEVEN NIGHTS · THE SLEEP CURVE · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: laboratório do sono às 3 da
+   manhã — monitor escuro com o HIPNOGRAMA em linha lilás e área
+   translúcida; números em mono verde-água de aparelho; dominós de marfim
+   escurecido. Acento: lilás da curva.
+   ============================================================ */
+:root{
+  --noite:#07080f; --noite-rgb:7,8,15; --tinta:#e7e8f4;
+  --t1:#eeeff8; --t2:#c6c8dc; --t2-rgb:198,200,220; --t3:#8a8ca6;
+  --ac:#a99bff; --ac2:#d3cbff; --bt:#4aa3e8; --bt2:#a6d2ff; --vd:#6fe0c8;
+  --vidro:rgba(231,232,244,.05); --vidro2:rgba(231,232,244,.085); --vidro3:rgba(231,232,244,.12);
+  --fio:rgba(212,214,236,.12); --fio2:rgba(212,214,236,.22); --luz:rgba(231,232,244,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#14093a}
+.btn.cheio{color:#14093a}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(66px,6.4vw,124px)/.92 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+.capa-d{display:grid}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{text-align:left;padding:10px 14px} .versoes.centro{max-width:720px;margin:0 auto}
+.balao{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .balao p{margin:0;font:700 clamp(18px,1.4vw,23px)/1.4 var(--disp)}
+.balao.paciente p{font-size:clamp(22px,1.8vw,30px)}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .pede b{font:700 clamp(18px,1.4vw,22px)/1.4 var(--disp)}
+.gap{display:inline-block;min-width:3em;padding:0 6px;border-bottom:2px solid var(--ac);color:var(--ac2);text-align:center}
+.toca-linha{display:flex;align-items:center;gap:12px;font:600 clamp(15px,1.15vw,19px)/1.45 var(--disp)} .toca-linha .transcricao{margin:0}
+.aberta{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center;max-height:calc(100vh / var(--zv,1) - 470px)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(7,8,15,.85);font:700 13px var(--mono);color:var(--ac2)}
+.mesa-s{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:22px;align-items:start;margin-top:10px}
+
+/* o monitor e o hipnograma */
+.monitor{display:grid;gap:8px;padding:16px;border-radius:18px;background:#05060c;border:1px solid #1d2036;box-shadow:inset 0 0 30px rgba(169,155,255,.08),0 20px 40px rgba(0,0,0,.6)}
+.monitor small{font:700 12px var(--mono);letter-spacing:.14em;color:var(--vd)}
+.hipno{display:block;width:100%;max-height:calc(100vh / var(--zv,1) - 420px)}
+.capa-d .hipno{max-height:calc(100vh / var(--zv,1) - 300px)}
+.hipno .niveis line{stroke:#1d2036;stroke-width:1;stroke-dasharray:4 6}
+.hipno text{font:700 11px var(--mono);fill:#5f6488}
+.hipno .linha{fill:none;stroke:var(--ac2);stroke-width:3;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(169,155,255,.6))}
+.hipno .area{fill:rgba(169,155,255,.12)}
+.monitor.mini{padding:10px} .monitor.mini .hipno{max-height:140px}
+
+/* números, vozes, regra */
+.mostradores{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:10px}
+.mostra-n{display:grid;gap:8px;padding:12px 14px;border-radius:16px} .mostra-n small{font:700 14px/1.35 var(--disp);color:var(--t2)} .mostra-n>b{font:700 18px var(--mono);color:var(--vd)}
+.num{min-width:44px;min-height:40px;border-radius:10px;border:1px solid var(--fio2);background:#0c0e18;color:var(--t1);font:700 16px var(--mono);cursor:pointer} .num.on{border-color:var(--vd);color:var(--vd);background:#0c1a1a}
+.vozes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px} .vozes.dois{grid-template-columns:1fr 1fr;margin-bottom:12px}
+.voz{display:grid;gap:10px;align-content:start;padding:16px;border-radius:var(--r2)} .voz>small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)}
+.voz .q{margin:0;font:700 clamp(17px,1.3vw,21px)/1.35 var(--disp)} .voz .transcricao{margin:0;font-size:clamp(15px,1.1vw,18px)}
+.pecas-p{margin:0;font:700 15px var(--mono);color:var(--ac2)}
+.regra-r{display:grid;gap:8px;padding:20px 24px;border-radius:var(--r2);text-align:center} .regra-r small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .regra-r p{margin:0;font:700 clamp(24px,2.1vw,36px)/1.35 var(--disp)}
+.habitos{display:flex;flex-wrap:wrap;gap:6px} .habitos .chip.feito{border-color:var(--ok)}
+
+/* dominó */
+.dominos{display:flex;justify-content:center;align-items:flex-end;gap:clamp(8px,1.2vw,18px);margin:16px 0;perspective:900px}
+.peca{position:relative;display:grid;align-content:space-between;gap:8px;width:clamp(150px,13vw,230px);height:clamp(190px,calc(100vh / var(--zv,1) - 560px),300px);padding:14px;border-radius:14px;border:2px solid #3a3550;background:linear-gradient(180deg,#24213a,#17152a);color:var(--t1);text-align:left;cursor:pointer;transform-origin:bottom right;transition:transform .6s}
+.peca::after{content:'';position:absolute;left:12px;right:12px;top:50%;height:2px;background:#3a3550}
+.peca small{font:700 12px var(--mono);color:var(--t3)} .peca span{font:600 clamp(15px,1.15vw,19px)/1.35 var(--disp);color:var(--t2)} .peca b{font:800 clamp(17px,1.3vw,22px)/1.3 var(--disp);color:var(--ac2)}
+.peca.agora{border-color:var(--ac);box-shadow:0 0 20px rgba(169,155,255,.35)}
+.peca.caiu{transform:rotate(14deg) translateY(10px);opacity:.75;border-color:#5a3a4a}
+.peca:disabled{cursor:default}
+
+/* if / when */
+.iw{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q-linha{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .q-linha.feito{border-color:rgba(143,217,162,.4)!important}
+.q-linha p{margin:0;font:700 clamp(17px,1.3vw,21px)/1.4 var(--disp)} .q-linha .aprova,.q-linha .recusa{margin:0;font-size:15px}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-s,.capa,.vozes,.vozes.dois,.mostradores{grid-template-columns:1fr} .dominos{flex-wrap:wrap} }
+@media (max-width:820px){ .iw{grid-template-columns:1fr} .peca{width:46%;height:170px} }
+.dominos.todos .peca{height:clamp(130px,calc(100vh / var(--zv,1) - 720px),200px)}
+.iw .q-linha{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px 12px;padding:10px 14px}
+.iw .q-linha .aprova,.iw .q-linha .recusa{grid-column:1/-1}
+@media (max-width:820px){ .iw .q-linha{grid-template-columns:1fr} }

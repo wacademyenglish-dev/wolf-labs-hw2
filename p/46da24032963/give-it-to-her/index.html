@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Give It to Her · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Give It to Her · The Birthday Table</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Give It to Her · The Birthday Table</h2>
+    <p>It’s Grandma Rosa’s 80th birthday. The table is ready, but every name tag is wrong. The student fixes the table one present at a time: each right sentence turns the tag to the right name. Then the doorbell: eight guests, eight fast answers. Then the presents wheel and Grandma’s phone call the next day. At the end, the student writes thank-you notes. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>Object pronouns: <b>me, you, him, her, it, us, them</b>, after a verb or after <i>to / for / with</i>. A thing is <b>it</b> or <b>them</b>, never <i>him</i>. And English never drops the thing: <i>Yes, I like <b>it</b></i>, not <i>Yes, I like.</i> The errors are in the wrong options: <i>to she</i>, <i>give to her</i>, <i>for your</i>, <i>I love him</i> for a hat.</p>
+    <p>The same target as Call Me, in another world: here the stress is on the thing (<b>it</b>) and on <i>to / for / with</i>.</p>
+    <!--conversa--><h4>THE BEST PRESENT (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After the party, the student puts three presents for their best friend in order. Say your order first (the button shows it), then let them tap 1, 2, 3; wait five seconds in silence and let them explain number one with a pronoun: <i>I give it to her</i>. The PUSH line (only you see it) is a quick yes or no. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one light personal question. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Presents, II The Wrong Tags, IV Ding Dong!, V Presents for Everyone, VI Thank You, Dear, VII The Best Present (a ranking: your order first).</li>
+      <li><b>Focus</b>: III The Rule.</li>
+      <li><b>Write</b>: VIII Thank-You Notes, with the red wavy line for <i>to she</i>, <i>for we</i>, <i>I love.</i>, <i>give to her</i> and <i>for your.</i> It goes to their My notes.</li>
+    </ul>
+    <h4>YOU ARE THE VOICES</h4>
+    <p>No recording in this lesson. At the door, the student taps the bell; you read the guest’s line in their voice and wait for a fast answer. Grandma calls the next day: read her question, wait for the answer, then tap “Answered · Grandma replies”.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The tags, the door and the wheel move on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* GIVE IT TO HER (Main A1) · pergunta-surpresa · 27/10/2026 · me, you, him, her, it, us, them */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'mesa', tipo: 'And you?', q: 'Your favorite present: who is it from?',
+    opc: ['My family', 'A friend', 'Me!'], st: ['It’s from …', 'I love it.'],
+    ex: 'A watch. It’s from my brother. I love it!', push: 'Every day?' },
+  { cena: 'porta', tipo: 'Would you rather', q: 'A party for you: big or small?',
+    opc: ['Big', 'Small'], st: ['I invite them.', 'I cook for them.'],
+    ex: 'Small! I invite my friends and I cook for them.', push: 'Cake?' },
+  { cena: 'roda', tipo: 'What if', q: 'You don’t like a present. What do you say?',
+    opc: ['“I love it!”', '“Thank you for it.”', 'The truth'], st: ['I love it!', 'Thank you for it.'],
+    ex: '“Thank you for it!” And a big smile.', push: 'Really?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* GIVE IT TO HER · THE BIRTHDAY TABLE (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A1 bem leve: ranking de 3 itens, o professor mostra a ordem dele.
+   Entra no lugar de "VII · Quick Check" (extra, tocar-depois-dizer). Depois da festa da Grandma
+   Rosa, o aluno escolhe o presente para o melhor amigo. A gramática (pronomes objeto depois do
+   verbo: give her, buy him, love it / them) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'presente', troca: 'quiz', est: 'o', min: 5, img: 'presentes', rot: 'The Best Present', t: 'Your best friend’s birthday. You choose.',
+    p: 'Your teacher answers first. Put the presents in order and say why.',
+    formato: 'ranking',
+    q: 'A present for your best friend?',
+    itens: ['Flowers', 'A book', 'Chocolate'],
+    dica: 'Tap 1, 2, 3. Number 1 is the best.',
+    st: ['Number one: …', 'I give her …', 'I buy him …', 'She loves it!'],
+    ex: 'Number one: chocolate. I give it to her, and we eat it together!',
+    push: 'Expensive? Yes or no?',
+    prof: [2, 1, 0] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "mesa": {
+   "t": "Six presents, six wrong tags.",
+   "p": "Say who it’s for. Tap your sentence."
+  },
+  "porta": {
+   "t": "Eight guests. Answer fast, with a pronoun.",
+   "p": "Open the door. Answer at once. Tap your sentence."
+  },
+  "roda": {
+   "t": "A present for everybody.",
+   "p": "Spin the wheel. Say: I give her…"
+  },
+  "avo": {
+   "t": "The next day, Grandma calls.",
+   "p": "Answer Grandma with pronouns."
+  },
+  "cv-presente": {
+   "t": "Your best friend’s birthday.",
+   "p": "Put the presents in order. Say why."
+  },
+  "fim": {
+   "t": "Write the thank-you notes.",
+   "p": "Five notes, a pronoun in every line."
+  }
+ },
+ "prep": {
+  "obj": "Pronomes objeto (me, you, him, her, it, us, them) depois do verbo e de to/for/with: o aluno arruma as etiquetas dos presentes nos 80 anos da vó Rosa.",
+  "armadilha": "O português leva a “to she”, “give to her” (sem o it) e “Yes, I like” (sem o objeto). Coisa é it/them, nunca him: “I love it”, não “I love him” para um chapéu.",
+  "pal": [
+   "me",
+   "him",
+   "her",
+   "it",
+   "us",
+   "them",
+   "give it to her",
+   "for",
+   "with"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a festa dos 80 anos da vó Rosa e as etiquetas trocadas.",
+   "perg": "Do you like birthday parties?",
+   "pula": "Leia só o título e entre."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal sobre presentes, já puxando os pronomes objeto.",
+   "perg": "What is the best present you got? Who gave it to you?",
+   "pula": "Duas cartas bastam."
+  },
+  "mesa": {
+   "obj": "Arruma as etiquetas: cada frase certa com pronome vira o nome no presente.",
+   "perg": "Who is this present for?",
+   "pula": "Quatro presentes bastam."
+  },
+  "regra": {
+   "obj": "Fixa as duas listas: pronome antes do verbo (she) e depois (her); it/them para coisas.",
+   "perg": "Is it “to she” or “to her”?",
+   "pula": "Leia as cartas e corrija duas armadilhas."
+  },
+  "porta": {
+   "obj": "Respostas rápidas aos convidados na porta, com pronome objeto.",
+   "perg": "Is this cake for Grandma?",
+   "pula": "Quatro convidados bastam."
+  },
+  "roda": {
+   "obj": "Roleta: o aluno escolhe presentes para pessoas da vida dele (I give her…, I buy him…).",
+   "perg": "What do you give your brother?",
+   "pula": "Três giros bastam."
+  },
+  "avo": {
+   "obj": "Ligação da vó no dia seguinte; o professor faz a vó e o aluno responde com pronomes.",
+   "perg": "Do you like the scarf, dear?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-presente": {
+   "obj": "Ranking de três presentes para o melhor amigo, justificando com pronome.",
+   "perg": "Why is that one number one?",
+   "pula": "Só o número um com o motivo basta."
+  },
+  "fim": {
+   "obj": "Escrita final: cinco bilhetes de agradecimento com pronome em toda linha; vai para o My notes.",
+   "perg": "Who gave you the watch? Do you like it?",
+   "pula": "Três bilhetes bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre presentes e pessoas, com pronomes objeto.",
+   "perg": "Who do you call every week?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhe entre dois presentes e justifica com it/them.",
+   "perg": "Which one do you like? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a vó Rosa e responde sobre a festa com pronomes objeto.",
+   "perg": "Do you like your presents?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about presents and people.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "him",
+    "her",
+    "it",
+    "them",
+    "us"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR MOM",
+     "q": "What do you usually give your mom?",
+     "fup": "Does she like it?",
+     "st": [
+      "I give her …",
+      "She likes it because …"
+     ],
+     "ex": "I give her flowers. She loves them."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Who do you call every week?",
+     "fup": "Do you call them or send messages?",
+     "st": [
+      "I call him …",
+      "I call her …"
+     ],
+     "ex": "I call my brother. I call him every Sunday."
+    },
+    {
+     "k": "BAD PRESENT",
+     "q": "A bad present: do you say thank you?",
+     "fup": "Do you keep it?",
+     "st": [
+      "I say thank you, but …",
+      "I give it to …"
+     ],
+     "ex": "I say thank you, but I give it to my cousin."
+    },
+    {
+     "k": "YOUR FRIENDS",
+     "q": "Where do you meet your friends?",
+     "fup": "Do they visit you at home?",
+     "st": [
+      "I meet them at …",
+      "They visit us …"
+     ],
+     "ex": "I meet them at a bar. Sometimes they visit us at home."
+    },
+    {
+     "k": "A CAKE",
+     "q": "You bake a cake. Who is it for?",
+     "fup": "Do you eat it with them?",
+     "st": [
+      "It is for …",
+      "I eat it with …"
+     ],
+     "ex": "It is for my dad. I eat it with him."
+    },
+    {
+     "k": "NEXT BIRTHDAY",
+     "q": "What do you want for your birthday?",
+     "fup": "Who can buy it for you?",
+     "st": [
+      "I want …",
+      "My … can buy it for me."
+     ],
+     "ex": "I want new headphones. My sister can buy them for me."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "it",
+    "them",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Flowers or chocolates for Grandma Rosa?",
+     "a": "Flowers",
+     "b": "Chocolates",
+     "fa": [
+      "Flowers. She can look at them every day."
+     ],
+     "fb": [
+      "Chocolates. She can eat them with us."
+     ]
+    },
+    {
+     "q": "Open presents at the party or at home?",
+     "a": "At the party",
+     "b": "At home",
+     "fa": [
+      "At the party. Everybody can see them."
+     ],
+     "fb": [
+      "At home. I can open them slowly."
+     ]
+    },
+    {
+     "q": "Buy a present or make it?",
+     "a": "Buy it",
+     "b": "Make it",
+     "fa": [
+      "Buy it. It is fast."
+     ],
+     "fb": [
+      "Make it. People love it."
+     ]
+    },
+    {
+     "q": "Call Grandma or send her a message?",
+     "a": "Call her",
+     "b": "Send her a message",
+     "fa": [
+      "Call her. She loves my voice."
+     ],
+     "fb": [
+      "Send her a message. She can read it again."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and every present found its person."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Grandma Rosa now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Grandma Rosa.",
+   "perguntas": [
+    "Happy birthday! Do you like the party?",
+    "Who gave you the scarf? Do you like it?",
+    "Do you like your grandchildren’s presents?",
+    "Who do you want to dance with?",
+    "Who made the cake for you?",
+    "Do you want to call your friends after the party?"
+   ],
+   "st": [
+    "Yes, I love it.",
+    "My grandson gave it to me.",
+    "I want to dance with …"
+   ],
+   "ex": "My granddaughter gave it to me. I love it, and I love her."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

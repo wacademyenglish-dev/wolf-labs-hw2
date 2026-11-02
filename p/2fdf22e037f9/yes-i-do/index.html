@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Yes, I Do · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Yes, I Do · The Café Tray</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Yes, I Do · The Café Tray</h2>
+    <p>Day five of the race. Fran is in Edinburgh, hot and hungry. A man in a café asks her: <i>Do you like soup?</i> She answers with two words: <b>Yes, I do.</b> On screen, a dark café counter and a slate tray: <i>Yes, I do</i> puts the food on the tray, <i>No, I don’t</i> sends it back, and <i>Yes, I like</i> is refused. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>I like / I don’t like</b> + a thing. <b>Do you like …?</b> The short answer sends back <b>do</b>: <b>Yes, I do. / No, I don’t.</b> Ordering: <i>Water, please.</i> The mistakes: <i>Yes, I like.</i> · <i>No, I don’t like.</i> · <i>I no like pizza.</i> · <i>I like of soup.</i> · <i>You like coffee?</i></p>
+    <h4>THE VIDEO</h4>
+    <p>The real video in two parts: 1:03–1:38 (hot and hungry) and 1:46–2:07 (the question). There is no audio in this lesson: your voice is the model and the waiter.</p>
+    <!--conversa--><h4>OK OR NOT OK? (VI) AND THE SURPRISE QUESTION</h4>
+    <p>Between the tray and the counter, three café rules, green or red: pizza for breakfast, hot soup on a 35-degree day (like Fran), a friend who eats your fries. There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it). The starters keep I like / I don’t like in their mouth. Recast quietly while they talk (I no like → I don’t like); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Every Week, Never, VI OK or Not OK? (green or red, then like / don’t like), VII At the Counter (be a real waiter; tap each part you hear), VIII Your Survey (the student asks you).</li>
+      <li><b>Listen</b>: II Hot and Hungry, IV The Question.</li>
+      <li><b>Focus</b>: III Two Plates (the sentence comes before the food moves), V The Short Answer (go fast; don’t explain <i>Yes, I like</i> twice).</li>
+      <li><b>Write</b>: IX, their café, with the red wavy line for <i>Yes, I like.</i>, <i>No, I don’t like.</i>, <i>I no like</i>, <i>like of</i>, <i>You like …?</i>, <i>Do you likes</i>. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* YES, I DO (Main A1) · pergunta-surpresa · 27/10/2026 · I like / I don't like · Yes, I do / No, I don't (máx. 3 no A1) */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'video1', tipo: 'What if', q: 'Hot and hungry. Soup or ice cream?',
+    opc: ['Soup', 'Ice cream'], st: ['I like …', 'I don’t like …'],
+    ex: 'Ice cream! I don’t like hot soup.', push: 'Chocolate? Yes or no?' },
+  { cena: 'pratos', tipo: 'And you?', q: 'Do you like vegetables?',
+    opc: ['Yes, I do.', 'No, I don’t.'], st: ['Yes, I do. I like …', 'No, I don’t.'],
+    ex: 'Yes, I do. I like carrots.', push: 'Onions? Yes or no?' },
+  { cena: 'balcao', tipo: 'Would you rather', q: 'Breakfast: coffee or tea?',
+    opc: ['Coffee', 'Tea'], st: ['Coffee, please.', 'Tea, please.', 'I don’t like …'],
+    ex: 'Tea, please. I don’t like coffee.', push: 'With milk? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* YES, I DO (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   OK / Not OK (duas opções coloridas) ENTRA depois de "V · The Short Answer" (a aula tinha 53 min; fica em 59).
+   No meio da aula, antes do balcão: regras de comida do café — pizza no café da manhã, sopa num dia quente
+   (a Fran está com calor e o homem oferece sopa), um amigo come suas batatas. A1 bem leve: duas opções,
+   frase quase pronta, o professor responde primeiro. A gramática (I like / I don't like · Yes, I do / No, I don't)
+   mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'regras', apos: 'bandeja', est: 'o', min: 6, img: 'mesa', rot: 'OK or Not OK?', t: 'Café rules. You decide.',
+    p: 'Choose one. Your teacher answers first. Then say it with like or don’t like.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Breakfast', sit: 'Pizza for breakfast.', q: 'OK or not OK?',
+        opc: [{ t: 'OK!', cor: 'g' }, { t: 'Not OK!', cor: 'r' }],
+        st: ['OK! I like …', 'Not OK! I don’t like …'],
+        ex: 'Not OK! I don’t like pizza in the morning.',
+        push: 'Cold pizza? Yes or no?' },
+      { tag: 'Hot day', sit: 'It’s 35 degrees. Hot soup.', q: 'OK or not OK?',
+        opc: [{ t: 'OK!', cor: 'g' }, { t: 'Not OK!', cor: 'r' }],
+        st: ['OK! I like soup.', 'Not OK! I don’t like …'],
+        ex: 'OK! I like soup. Every day!',
+        push: 'Like Fran? Yes or no?' },
+      { tag: 'Your fries', sit: 'Your friend eats your fries.', q: 'OK or not OK?',
+        opc: [{ t: 'OK!', cor: 'g' }, { t: 'Not OK!', cor: 'r' }],
+        st: ['OK! I don’t like fries.', 'Not OK! I like my fries!'],
+        ex: 'Not OK! I like my fries!',
+        push: 'Your brother? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Before Fran: you and food.",
+   "p": "Pick a card. Answer out loud."
+  },
+  "pratos": {
+   "t": "Everything goes on one plate.",
+   "p": "Say I like … or I don’t like … first."
+  },
+  "bandeja": {
+   "t": "The tray takes short answers only.",
+   "p": "Yes, I do: tray. No, I don’t: counter."
+  },
+  "cv-regras": {
+   "t": "Café rules. You decide.",
+   "p": "Choose one. Then say it with like."
+  },
+  "balcao": {
+   "t": "You’re in the café. I’m the waiter.",
+   "p": "Answer short, then order with please."
+  },
+  "pesquisa": {
+   "t": "Your turn to ask.",
+   "p": "Ask Do you like …? Listen to the answer."
+  },
+  "fim": {
+   "t": "Write your café.",
+   "p": "Likes, don’ts, two short answers. Then My notes."
+  }
+ },
+ "prep": {
+  "obj": "I like / I don’t like, Do you like …? e a resposta curta Yes, I do / No, I don’t: no quinto dia, Fran chega com calor e fome a um café de Edimburgo.",
+  "armadilha": "O português responde repetindo o verbo (“Gosto!”): Yes, I like. / No, I don’t like. E ainda I no like pizza, I like of soup e a pergunta sem do: You like coffee?",
+  "pal": [
+   "I like",
+   "I don’t like",
+   "Do you like …?",
+   "Yes, I do.",
+   "No, I don’t.",
+   "…, please.",
+   "soup",
+   "café"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o café: uma pergunta, duas palavras de resposta.",
+   "perg": "Are you hungry right now?",
+   "pula": "Só leia o título e abra o café."
+  },
+  "abre": {
+   "obj": "Aquecimento: comidas de toda semana e as que o aluno nunca come; ninguém é corrigido.",
+   "perg": "What food do you eat every week?",
+   "pula": "Duas cartas bastam."
+  },
+  "video1": {
+   "obj": "Vídeo 1:03–1:38: Fran em Edimburgo, com calor e com fome.",
+   "perg": "Is Fran hot or cold?",
+   "pula": "Assista uma vez só; seis palavras bastam."
+  },
+  "pratos": {
+   "obj": "Dois pratos: o aluno diz a frase inteira com like/don’t like antes de mover a comida.",
+   "perg": "Do you like fish?",
+   "pula": "Quatro comidas bastam."
+  },
+  "video2": {
+   "obj": "Vídeo 1:46–2:07: o homem pergunta Do you like soup? e Fran responde Yes, I do.",
+   "perg": "What does Fran say? Two words.",
+   "pula": "Assista uma vez só."
+  },
+  "bandeja": {
+   "obj": "A bandeja: só a resposta curta Yes, I do / No, I don’t; Yes, I like é recusado.",
+   "perg": "Do you like cake?",
+   "pula": "Vá rápido; não explique Yes, I like duas vezes."
+  },
+  "cv-regras": {
+   "obj": "Três regras do café, verde ou vermelho; o professor responde primeiro, depois o aluno com like.",
+   "perg": "Pizza for breakfast: OK or not OK?",
+   "pula": "Uma regra basta."
+  },
+  "balcao": {
+   "obj": "O professor é o garçom: almoço, bebida, sobremesa; resposta curta e please.",
+   "perg": "Do you like soup? We have vegetable soup.",
+   "pula": "Só o almoço e a bebida."
+  },
+  "pesquisa": {
+   "obj": "O aluno pergunta Do you like …? e o professor responde curto e com mais uma frase.",
+   "perg": "What do you want to ask me?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o café do aluno, com like, don’t like e duas respostas curtas; vai para o My notes.",
+   "perg": "What do you like in a café?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais perguntas Do you like …? sobre coisas do dia a dia, com resposta curta e uma frase a mais.",
+   "perg": "Do you like Mondays?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas comidas ou dois lugares, com I like / I don’t like.",
+   "perg": "Coffee or tea? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta o próprio café, passo a passo: o que tem e o que não tem.",
+   "perg": "Do you like your café?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More Do you like questions.",
+   "p": "Pick a card. Answer short, then one more.",
+   "palavras": [
+    "Yes, I do.",
+    "No, I don’t.",
+    "I like",
+    "I don’t like"
+   ],
+   "cartas": [
+    {
+     "k": "MONDAYS",
+     "q": "Do you like Mondays?",
+     "fup": "And Fridays?",
+     "st": [
+      "Yes, I do. I like …",
+      "No, I don’t. I don’t like …"
+     ],
+     "ex": "No, I don’t. I don’t like early mornings."
+    },
+    {
+     "k": "RAIN",
+     "q": "Do you like rain?",
+     "fup": "Do you like hot days?",
+     "st": [
+      "Yes, I do. …",
+      "No, I don’t. …"
+     ],
+     "ex": "Yes, I do. I like rain and a hot coffee."
+    },
+    {
+     "k": "BREAKFAST",
+     "q": "Do you like a big breakfast?",
+     "fup": "What do you eat?",
+     "st": [
+      "Yes, I do. I eat …",
+      "No, I don’t. I eat …"
+     ],
+     "ex": "No, I don’t. I eat bread and coffee."
+    },
+    {
+     "k": "SPICY FOOD",
+     "q": "Do you like spicy food?",
+     "fup": "Do you like Brazilian food?",
+     "st": [
+      "Yes, I do!",
+      "No, I don’t. It’s …"
+     ],
+     "ex": "Yes, I do! I like spicy food a lot."
+    },
+    {
+     "k": "COOKING",
+     "q": "Do you like cooking?",
+     "fup": "Who cooks in your house?",
+     "st": [
+      "Yes, I do. I cook …",
+      "No, I don’t. My … cooks."
+     ],
+     "ex": "No, I don’t. My husband cooks. I wash the dishes!"
+    },
+    {
+     "k": "CAFÉS",
+     "q": "Do you like cafés?",
+     "fup": "What do you order?",
+     "st": [
+      "Yes, I do. I order …",
+      "No, I don’t. I like …"
+     ],
+     "ex": "Yes, I do. A coffee and a cake, please!"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I like",
+    "I don’t like",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Coffee or tea?",
+     "a": "Coffee",
+     "b": "Tea",
+     "fa": [
+      "Coffee. I like it in the morning."
+     ],
+     "fb": [
+      "Tea. I don’t like coffee."
+     ]
+    },
+    {
+     "q": "Soup or salad on a hot day?",
+     "a": "Soup",
+     "b": "Salad",
+     "fa": [
+      "Soup, like Fran. I like it every day."
+     ],
+     "fb": [
+      "Salad. I don’t like hot food on a hot day."
+     ]
+    },
+    {
+     "q": "Chocolate cake or carrot cake?",
+     "a": "Chocolate",
+     "b": "Carrot",
+     "fa": [
+      "Chocolate. I like chocolate a lot."
+     ],
+     "fb": [
+      "Carrot. I don’t like very sweet cake."
+     ]
+    },
+    {
+     "q": "Eat at home or in a café?",
+     "a": "At home",
+     "b": "In a café",
+     "fa": [
+      "At home. I like my kitchen."
+     ],
+     "fb": [
+      "In a café. I don’t like washing dishes."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Everybody likes something on the menu."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Café",
+   "t": "Open your own café.",
+   "p": "Answer each step. Say it out loud.",
+   "prof": "The student plans a café; you are the first customer. Ask Do you like …? and wait for the short answer.",
+   "passos": [
+    {
+     "q": "What is the name of your café?",
+     "st": [
+      "My café is …",
+      "It’s called …"
+     ],
+     "ex": "My café is called Fran’s Kitchen."
+    },
+    {
+     "q": "What food is on the menu? What isn’t?",
+     "st": [
+      "We have …",
+      "I don’t like …, so …"
+     ],
+     "ex": "We have soup and cake. I don’t like fish, so no fish!"
+    },
+    {
+     "q": "Your teacher asks: Do you like coffee?",
+     "st": [
+      "Yes, I do.",
+      "No, I don’t."
+     ],
+     "ex": "Yes, I do. We have very good coffee."
+    },
+    {
+     "q": "A customer wants lunch. What do they say?",
+     "st": [
+      "…, please.",
+      "Do you have …?"
+     ],
+     "ex": "Soup, please. Do you have bread?"
+    }
+   ],
+   "fim": "Your café is open. Fran is hungry: she likes it."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

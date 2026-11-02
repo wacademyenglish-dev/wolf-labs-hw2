@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What's the Weather Like?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fae07e104a66/whats-the-weather-like/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "weather with It's: It's sunny / cloudy / windy / hot / cold, It's raining / snowing, in winter / in July, What's the weather like?; never Is raining, never makes cold",
   "abrir": "What's the weather like where you are today?",
   "fecho": "The weather starts with <b>It's</b>: <i>It's sunny. It's cold.</i> Right now: <b>It's raining. It's snowing.</b> When: <b>in winter, in July</b>. The question: <b>What's the weather like?</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk on the phone from two cities. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/fae07e104a66/whats-the-weather-like/img/live-estudio.webp",
+      "img": "../img/live-estudio.webp",
       "leg": "A weather studio at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -95,17 +95,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It's raining in the park.",
-          "img": "https://wolf-labs.pages.dev/p/fae07e104a66/whats-the-weather-like/img/live-chuva.webp",
+          "img": "../img/live-chuva.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It's snowing, and it's very cold.",
-          "img": "https://wolf-labs.pages.dev/p/fae07e104a66/whats-the-weather-like/img/live-neve.webp",
+          "img": "../img/live-neve.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "In July it's warm and sunny.",
-          "img": "https://wolf-labs.pages.dev/p/fae07e104a66/whats-the-weather-like/img/live-estudio.webp",
+          "img": "../img/live-estudio.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -151,7 +151,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fae07e104a66/whats-the-weather-like/img/live-neve.webp",
+      "img": "../img/live-neve.webp",
       "leg": "A snowy park at night",
       "pede": "Look at the picture: a snowy park at night. Write 2 or 3 sentences about the weather there. Use <b>It's ...</b> and one more word like <b>cold</b> or <b>snowing</b>.",
       "ph": "It's snowing and it's …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "If Only",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/538be2c0a802/if-only/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "wish / if only: wish + past simple (an unreal now), wish + had + past participle (a past regret), wish + would (annoyance); hope + present for what is possible; never wish + would have",
   "abrir": "What do you wish were different in your life right now?",
   "fecho": "<b>wish / if only + past</b> = unreal now: <i>I wish I had more time.</i> <b>wish + had + participle</b> = a past regret: <i>I wish I had kept it.</i> <b>wish + would</b> = annoyance: <i>I wish you would stop.</i> Never <i>wish I would have</i>. <b>Hope</b> is for what is possible: <i>I hope it stops.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo find an old toy box in the attic. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/538be2c0a802/if-only/img/live-sotao.webp",
+      "img": "../img/live-sotao.webp",
       "leg": "The attic and the toy box",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I wish I had kept my old teddy bear.",
-          "img": "https://wolf-labs.pages.dev/p/538be2c0a802/if-only/img/live-caixa.webp",
+          "img": "../img/live-caixa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I wish my room were a little bigger.",
-          "img": "https://wolf-labs.pages.dev/p/538be2c0a802/if-only/img/live-quarto.webp",
+          "img": "../img/live-quarto.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I wish you would put the tablet away.",
-          "img": "https://wolf-labs.pages.dev/p/538be2c0a802/if-only/img/live-tablet.webp",
+          "img": "../img/live-tablet.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/538be2c0a802/if-only/img/live-sotao.webp",
+      "img": "../img/live-sotao.webp",
       "leg": "An old toy box in the attic",
       "pede": "Look at the picture: an old toy box in the attic. Write 2 or 3 sentences: one small thing you <b>wish</b> were different now, and one small thing you <b>wish</b> you <b>had</b> done.",
       "ph": "I wish … I wish I had …",

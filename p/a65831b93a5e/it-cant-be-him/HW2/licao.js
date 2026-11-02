@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It Can't Be Him",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a65831b93a5e/it-cant-be-him/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "deduction: must be (sure it is), might / may / could be (maybe), can't be (sure it isn't); plain verb after the modal, no to; never mustn't for can't, never can be for maybe",
   "abrir": "Your phone rings at night and the number is new. Who could it be?",
   "fecho": "<b>must be</b> = I am sure it is. <b>might / may / could be</b> = maybe. <b>can't be</b> = I am sure it isn't. After them, the plain verb, no <i>to</i>: <i>It must be Rui.</i> Never <i>mustn't be</i> for a guess: use <b>can't be</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo find a strange card on a rainy night. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a65831b93a5e/it-cant-be-him/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "Cards on a dark table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It must be a game.",
-          "img": "https://wolf-labs.pages.dev/p/a65831b93a5e/it-cant-be-him/img/live-cartao.webp",
+          "img": "../img/live-cartao.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It can't be Rita. She is on holiday.",
-          "img": "https://wolf-labs.pages.dev/p/a65831b93a5e/it-cant-be-him/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It might be the cleaner in the hall.",
-          "img": "https://wolf-labs.pages.dev/p/a65831b93a5e/it-cant-be-him/img/live-salao.webp",
+          "img": "../img/live-salao.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -170,7 +170,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a65831b93a5e/it-cant-be-him/img/live-gotham.webp",
+      "img": "../img/live-gotham.webp",
       "leg": "A city at night, red lights",
       "pede": "Look at the picture: a city at night with red lights. Write 2 or 3 sentences about what you see. How sure are you? Use <b>must be</b>, <b>might be</b> or <b>can't be</b>.",
       "ph": "That light must be …",

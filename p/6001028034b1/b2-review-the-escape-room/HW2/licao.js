@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Escape Room",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/6001028034b1/b2-review-the-escape-room/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "I wish / if only + had + participle (regret about the past); shouldn't have + participle; speculating about the past: must have (sure), might / could have (maybe), can't have (sure it did not happen) + participle",
   "abrir": "Think of a mystery you never solved. What do you think happened?",
   "fecho": "<b>Must have</b> = sure it happened. <b>Might / could have</b> = maybe. <b>Can't have</b> = sure it did not happen. Always + the past participle: <i>He must have gone.</i> A regret: <b>I wish I had</b> + participle, <b>if only I had</b> + participle. <b>Shouldn't have</b> + participle: it was a mistake.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in an escape room. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/6001028034b1/b2-review-the-escape-room/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The captain's cabin",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "He must have left in a hurry, because his coat is still here.",
-          "img": "https://wolf-labs.pages.dev/p/6001028034b1/b2-review-the-escape-room/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "He might have sailed away alone in the small boat.",
-          "img": "https://wolf-labs.pages.dev/p/6001028034b1/b2-review-the-escape-room/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I wish I had counted the clues earlier.",
-          "img": "https://wolf-labs.pages.dev/p/6001028034b1/b2-review-the-escape-room/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/6001028034b1/b2-review-the-escape-room/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty boat on a dark beach",
       "pede": "Look at the picture: an empty boat on a dark beach at night. Write 2 or 3 sentences about what might have happened to its owner. Use <b>must have</b>, <b>might have</b> or <b>can't have</b>.",
       "ph": "The owner might have …",

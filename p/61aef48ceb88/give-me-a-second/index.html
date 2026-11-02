@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Give Me a Second · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Give Me a Second · The Hourglass</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Give Me a Second · The Hourglass</h2>
+    <p>The silence is the mistake: not the wrong word, the empty second. When a word doesn’t come, the student stops, or switches language. This hour gives them four moves that buy time. The screen is an hourglass that drains during ten seconds of silence; every move said out loud flips it. No points, but the scoreboard counts moves against silences.</p>
+    <h4>THE MOVES</h4>
+    <p><b>Hold on, let me think</b> (a little time) · <b>That’s a good question</b> (a lot) · <b>How do I put it…</b> (a lot: you’re searching) · <b>It’s a kind of… / It’s the thing you use for…</b> (no word? describe it).</p>
+    <h4>THE HOURGLASS</h4>
+    <p>In scene IV, you start the sand (button under the hourglass). Every move the student says and taps flips it; if it runs out, it counts as a silence. Ask hard questions on purpose, and don’t rescue them. If they switch language, point at the hourglass: describe, don’t translate.</p>
+    <h4>THE AUDIO</h4>
+    <p>Two recordings (<i>That’s a good question, actually</i> and <i>How do I put it…</i>). The other two lines in scene V are in your voice: say them as you would in real life.</p>
+    <!--conversa--><h4>PLACE YOUR BET (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Three people hit a hard second: Ana in a job interview, Leo without the word <i>ladder</i>, Mia on a call with her boss. Your student bets on what each one does and says why; bet too. Wait five seconds in silence, then use the PUSH line (only you see it): it turns the story into their own hard second, so the hourglass rule still holds. Then press Check: every ending is one of the four moves. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Where You Stop (count the silences), IV The Hourglass, VI Say It Without the Word, VII Six About You, VIII Place Your Bet.</li>
+      <li><b>Focus</b>: II Four Moves, III Keep the Floor. <b>Listen</b>: V.</li>
+      <li><b>Write</b>: IX, a hard answer with a move and “it’s a kind of”. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* GIVE ME A SECOND (Main A2) · pergunta-surpresa · 27/10/2026 · os movimentos para ganhar tempo */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'regra', tipo: 'And you?', q: 'In your language, what do you say when you need a second?',
+    opc: ['A word', 'A sound, like “hmm”', 'Nothing!'], st: ['In my language, I say …', 'In English, I’ll say …'],
+    ex: 'A sound. I say “é…”, and now in English I’ll say “Hold on.”', push: 'Say your English move three times, fast.' },
+  { cena: 'pratel', tipo: 'Would you rather', q: 'Would you rather answer fast with mistakes, or slow and correct?',
+    opc: ['Fast, with mistakes', 'Slow and correct'], st: ['I’d rather …, because …', 'Hold on… I’d rather …'],
+    ex: 'Fast, with mistakes. Silence is worse!', push: 'And in a job interview?' },
+  { cena: 'ouve', tipo: 'Opinion', q: 'Which is worse in a conversation: silence, or the wrong word?',
+    opc: ['Silence', 'The wrong word', 'Both are OK'], st: ['That’s a good question. I think …'],
+    ex: 'That’s a good question. I think silence is worse. With the wrong word, you’re still talking!', push: 'When did you last stop in the middle of a sentence?' },
+  { cena: 'vida', tipo: 'What if', q: 'A tourist asks you the way, in English, right now. What do you say first?',
+    opc: ['Hold on', 'Let me think', 'Sorry, no English'], st: ['I’d say: “…”', 'First, I’d …'],
+    ex: '“Hold on, let me think.” Then: it’s a kind of big square, near the church.', push: 'Tell me the way to your favorite café. Go!' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* GIVE ME A SECOND (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A aposta entra no lugar de "VIII · Eight Cold Questions" (extra, repete a ampulheta da IV).
+   Três pessoas num segundo difícil; o aluno aposta no que elas fazem e o Check mostra o fim da
+   história, sempre com um dos movimentos da aula (Hold on · Good question · How do I put it · It's a kind of). */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'aposta', troca: 'cartas', est: 'o', min: 7, img: 'cafe', rot: 'Place Your Bet', t: 'Three hard seconds. What happens next?',
+    p: 'Bet, and say why. Your teacher bets too. Then check what happened.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The interview', sit: 'A job interview in English. They ask Ana: “What’s your biggest weakness?” Her head is empty.',
+        q: 'What does Ana do?', opc: ['She says nothing', 'She switches language', 'She buys a second'],
+        st: ['I bet she …', 'She’ll say: “…”', 'I’d say: “…”'],
+        ex: 'I bet she buys a second: “That’s a good question.” Then she has time to think.',
+        push: 'Your turn: what’s YOUR biggest weakness? Buy a second first.',
+        rot_revela: 'Check what happened', revela: '“That’s a good question. Let me think…” Three seconds later she had an answer, and the interviewer smiled.' },
+      { tag: 'The word', sit: 'Leo is in a shop in London. He needs a ladder, but the word doesn’t come.',
+        q: 'What does Leo do?', opc: ['Leaves the shop', 'Uses his phone', 'Describes it'],
+        st: ['I bet he …', 'He’ll say: “It’s a kind of …”'],
+        ex: 'I bet he uses his phone. That’s what I do!',
+        push: 'Describe a ladder in ten seconds. No hands!',
+        rot_revela: 'Check what happened', revela: '“It’s a kind of… small stairs you carry.” The man said: “A ladder? Aisle six.”' },
+      { tag: 'The call', sit: 'Mia’s boss calls: “Can you explain the problem with the order?” It’s complicated.',
+        q: 'What does Mia say first?', opc: ['Hold on', 'How do I put it…', 'Can I call you back?'],
+        st: ['I bet she says …, because …', 'If it’s complicated, …'],
+        ex: 'I bet she says “How do I put it…”, because it’s complicated.',
+        push: 'Is “Can I call you back?” a good move, or is it running away?',
+        rot_revela: 'Check what happened', revela: '“Hold on, let me open the file.” She got ten seconds, and nobody noticed.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Four questions. One will stop you.",
+   "p": "Read each message. Answer out loud."
+  },
+  "regra": {
+   "t": "The problem is the silence.",
+   "p": "Read each move out loud. Then open it."
+  },
+  "pratel": {
+   "t": "Keep the conversation, or hand it away?",
+   "p": "Read it out loud. Waiting or talking?"
+  },
+  "amp": {
+   "t": "Six hard questions. The sand runs.",
+   "p": "Say a move and tap it. Then answer."
+  },
+  "ouve": {
+   "t": "Four moves, each one a breath.",
+   "p": "Listen. A little time, or a lot?"
+  },
+  "desvio": {
+   "t": "Six things. Don’t say the word.",
+   "p": "Peek at the card. Describe it. Teacher guesses."
+  },
+  "vida": {
+   "t": "The moves are yours now.",
+   "p": "Answer out loud. Then the follow-up."
+  },
+  "cv-aposta": {
+   "t": "Three hard seconds. What happens next?",
+   "p": "Bet and say why. Then check."
+  },
+  "fim": {
+   "t": "Write it the way you’d say it.",
+   "p": "Answer in writing: one move, one “it’s a kind of”."
+  }
+ },
+ "prep": {
+  "obj": "Frases para ganhar tempo (Hold on, let me think; That’s a good question; How do I put it…; It’s a kind of…): a ampulheta vira a cada uma.",
+  "armadilha": "O brasileiro trava em silêncio ou volta para o português (“como é que fala…”); e traduz “é um tipo de” como “is a type of” sem o “it’s”.",
+  "pal": [
+   "Hold on, let me think",
+   "That’s a good question",
+   "How do I put it",
+   "It’s a kind of",
+   "It’s the thing you use for",
+   "actually",
+   "a second"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: ninguém liga para resposta lenta; todos notam o segundo vazio.",
+   "perg": "What do you do when a word doesn’t come?",
+   "pula": "Só leia o título e a frase."
+  },
+  "abre": {
+   "obj": "Diagnóstico: quatro perguntas; conte os silêncios e veja onde o aluno trava.",
+   "perg": "Where did you stop?",
+   "pula": "Três perguntas bastam; não corrija aqui."
+  },
+  "regra": {
+   "obj": "As quatro frases e quando usar cada uma (pouco tempo, muito tempo, sem a palavra).",
+   "perg": "Which move gives you a lot of time?",
+   "pula": "Leia as quatro; abra só duas."
+  },
+  "pratel": {
+   "obj": "Frases que mantêm a vez de falar e frases que entregam a vez ao outro.",
+   "perg": "Is the other person waiting or talking now?",
+   "pula": "Quatro frases bastam."
+  },
+  "amp": {
+   "obj": "Núcleo: perguntas difíceis com a ampulheta correndo; cada frase dita vira a areia.",
+   "perg": "If you could live anywhere, where would it be?",
+   "pula": "Quatro perguntas bastam; não resgate o aluno."
+  },
+  "ouve": {
+   "obj": "Escuta as frases em voz natural: curtas, do tamanho de um respiro.",
+   "perg": "Does she need a little time or a lot?",
+   "pula": "Ouça só os dois áudios gravados."
+  },
+  "desvio": {
+   "obj": "Descrever sem a palavra: It’s a kind of… / It’s the thing you use for…",
+   "perg": "What is it? Describe it.",
+   "pula": "Quatro cartas bastam."
+  },
+  "vida": {
+   "obj": "Perguntas pessoais usando as frases de ganhar tempo.",
+   "perg": "What’s the hardest thing about your job?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-aposta": {
+   "obj": "Apostas sobre Ana, Leo e Mia num segundo difícil; o aluno diz por quê.",
+   "perg": "What do you think Leo says?",
+   "pula": "Duas pessoas bastam; pule o PUSH."
+  },
+  "fim": {
+   "obj": "Escrita: uma resposta difícil com uma frase de ganhar tempo e um “it’s a kind of”.",
+   "perg": "How would you say that out loud?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas difíceis; o aluno começa cada resposta com uma frase de ganhar tempo.",
+   "perg": "Which move did you use?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e defender, ganhando tempo antes de responder.",
+   "perg": "Why that side?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta, em passos, um momento em que ficou sem palavras.",
+   "perg": "What happened next?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More hard questions.",
+   "p": "Pick a card. Start with a move.",
+   "palavras": [
+    "Hold on, let me think",
+    "That’s a good question",
+    "How do I put it",
+    "It’s a kind of"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR JOB",
+     "q": "How would you explain your job to a child?",
+     "fup": "Is it a kind of…?",
+     "st": [
+      "How do I put it… It’s a kind of …"
+     ],
+     "ex": "How do I put it… It’s a kind of job where I help people with money."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What is your city famous for?",
+     "fup": "Is that a good thing?",
+     "st": [
+      "That’s a good question. I think …"
+     ],
+     "ex": "That’s a good question. I think it’s famous for its food."
+    },
+    {
+     "k": "A FOOD",
+     "q": "Describe a Brazilian food without its name.",
+     "fup": "When do people eat it?",
+     "st": [
+      "It’s a kind of …",
+      "It’s the thing you eat when …"
+     ],
+     "ex": "It’s a kind of bread with cheese inside. People eat it for breakfast."
+    },
+    {
+     "k": "A CHANGE",
+     "q": "What would you change in your life?",
+     "fup": "Why haven’t you changed it?",
+     "st": [
+      "Hold on, let me think. Maybe …"
+     ],
+     "ex": "Hold on, let me think. Maybe I’d work less."
+    },
+    {
+     "k": "A TOOL",
+     "q": "What object do you use every day?",
+     "fup": "Can you live without it?",
+     "st": [
+      "It’s the thing you use for …"
+     ],
+     "ex": "It’s the thing you use for making coffee in the morning."
+    },
+    {
+     "k": "A HARD SECOND",
+     "q": "When did a word not come to you?",
+     "fup": "What did you do?",
+     "st": [
+      "That’s a good question. Once …"
+     ],
+     "ex": "That’s a good question. Once, at a hotel, I forgot the word for towel."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Start with a move. Then defend it.",
+   "palavras": [
+    "because",
+    "Hold on, let me think",
+    "That’s a good question"
+   ],
+   "rodadas": [
+    {
+     "q": "A slow answer or a fast wrong answer?",
+     "a": "Slow",
+     "b": "Fast",
+     "fa": [
+      "Hold on, let me think. Slow, because it’s correct."
+     ],
+     "fb": [
+      "Fast. People don’t like waiting."
+     ]
+    },
+    {
+     "q": "Switch to Portuguese or describe the word?",
+     "a": "Switch",
+     "b": "Describe",
+     "fa": [
+      "Switch. It’s faster."
+     ],
+     "fb": [
+      "Describe. It’s a kind of practice."
+     ]
+    },
+    {
+     "q": "Job interview in person or on video?",
+     "a": "In person",
+     "b": "On video",
+     "fa": [
+      "That’s a good question. In person, because I can see faces."
+     ],
+     "fb": [
+      "On video. I can have notes next to me."
+     ]
+    },
+    {
+     "q": "Silence in a conversation: OK or awkward?",
+     "a": "OK",
+     "b": "Awkward",
+     "fa": [
+      "OK. Everybody needs a second."
+     ],
+     "fb": [
+      "Awkward. I always try to say something."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and nobody stayed silent."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Story",
+   "t": "Your own hard second.",
+   "p": "Tell it step by step. Use a move.",
+   "prof": "If they go silent, point at the moves; don’t give the word.",
+   "passos": [
+    {
+     "q": "Where were you, and who were you talking to?",
+     "st": [
+      "I was at …",
+      "I was talking to …"
+     ],
+     "ex": "I was at the airport, talking to a man at the desk."
+    },
+    {
+     "q": "What word didn’t come?",
+     "st": [
+      "I couldn’t remember the word for …"
+     ],
+     "ex": "I couldn’t remember the word for luggage."
+    },
+    {
+     "q": "What did you do or say?",
+     "st": [
+      "I said, “It’s a kind of …”",
+      "I said, “Hold on, let me think.”"
+     ],
+     "ex": "I said, “It’s the thing you put your clothes in.”"
+    },
+    {
+     "q": "What would you say now?",
+     "st": [
+      "Now I’d say …"
+     ],
+     "ex": "Now I’d say, “How do I put it… my bag, my suitcase.”"
+    }
+   ],
+   "fim": "One hard second, and no empty silence."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

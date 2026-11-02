@@ -1,0 +1,42 @@
+/* OS MOMENTOS-CHAVE de Expensive but Fast (11/10/2026): a corrida de Londres a Edimburgo com £100.
+   Forma: a linha do tempo. Alvo: adjetivos opostos (expensive / cheap, fast / slow) + but / and; o adjetivo antes do nome.
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [0, 1, 2, 3, 4], k: 'The challenge', quem: 'The presenter',
+    contexto: 'A TV show. Three people, one trip, very little money.',
+    frase: 'London to Edinburgh, three people, 100 pounds, five days. <b>This is the London to Edinburgh challenge.</b>',
+    explica: '<i>A challenge</i> = a difficult test. £100 is not a lot of money!',
+    formula: 'a <b>long</b> trip · a <b>big</b> challenge · ✗ a trip long',
+    tente: 'Describe a trip you remember with one adjective.',
+    ex: 'I took a long trip to the beach in 2020.' },
+  { i: [8, 9, 10, 11], k: 'Train, bus, bike', quem: 'The presenter',
+    contexto: 'Three people, three ways to travel.',
+    frase: 'So, London to Edinburgh. <b>Train, bus, bike.</b>',
+    explica: 'Each person chooses one way. Which one is fast? Which one is cheap?',
+    formula: 'The train is <b>fast</b>. The bike is <b>slow</b>. (opposites)',
+    tente: 'How do you go to work or school? Is it fast or slow?',
+    ex: 'I go by bus. It is slow.' },
+  { i: [16, 17], k: 'Expensive', quem: 'Bob',
+    contexto: 'Bob looks at the price of the train ticket.',
+    frase: '<b>The train is expensive.</b> — Yes, it’s expensive.',
+    explica: 'The ticket costs a lot of money.',
+    formula: 'It <b>is</b> expensive. · ✗ It expensive. · an <b>expensive</b> ticket',
+    tente: 'Say one thing that is expensive in your city.',
+    ex: 'Coffee is expensive in my city.' },
+  { i: [18, 19, 20], k: 'Cheap', quem: 'Fran',
+    contexto: 'Fran has a different idea.',
+    frase: '<b>But cycling is cheap.</b> Cycling to Edinburgh. It is cheap.',
+    explica: '<i>Cheap</i> = it costs very little money. The opposite of expensive.',
+    formula: 'The train is expensive, <b>but</b> the bike is cheap. (but = a contrast)',
+    tente: 'Compare two things with but.',
+    ex: 'My phone is old, but it is fast.' },
+  { i: [24, 25, 26, 27], k: 'Expensive but fast', quem: 'The presenter',
+    contexto: 'Every way has a good side and a bad side.',
+    frase: '<b>It’s expensive, but it’s fast.</b> They can cycle. It’s cheap.',
+    explica: 'Good and bad in one sentence: <i>but</i>. Two good things: <i>and</i>.',
+    formula: 'expensive <b>but</b> fast (good + bad) · cheap <b>and</b> green (good + good)',
+    tente: 'Describe your car, bike or phone: … but … / … and …',
+    ex: 'My car is old but fast. My bike is cheap and light.' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'linha', cor: '#5ab87a', titulo: 'London to Edinburgh: five marks.', sub: 'Tap a mark on the line, hear it, then compare: expensive but fast, cheap and slow.', rot: { por: 'WHAT IT MEANS', padrao: 'OPPOSITES · BUT · AND', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

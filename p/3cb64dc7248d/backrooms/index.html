@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Backrooms · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=VT323&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>Backrooms · Level 0 · The Map</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Backrooms · Level 0 · The Map</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A photo on the internet that became a film.</p><p style="margin:0 0 6px"><b>The grammar:</b> Someone Has Been Here: I have been here every night since I found it.</p><p style="margin:0 0 6px"><b>The class (about 50 min):</b> I Warm-up and In the Dark · III The Trailer · V The Door · VI Someone Has Been Here · VII The Map · VIII Since and For · IX The Hot Seat. No extra scenes: every scene is part of the class.</p><p style="margin:0"><b>Open with:</b> “You know Clark now. In the trailer, how long has he been there? Guess.”</p></div><!--/prep-->
+    <p><i>Backrooms</i> (2026), an A24 horror film by Kane Parsons, from his own YouTube series. Behind a small door in a furniture store there is a place that shouldn’t exist: empty rooms of old yellow wallpaper and damp carpet, forever. Clark found it; he has been there every night since, filming, and someone has been there before him. The grammar: the <b>present perfect</b>: <b>have / has + past participle</b> for things that started in the past and go on until now (someone has been here, I have been here every night since I found it), <b>since</b> (a point) × <b>for</b> (a period), <b>never / just / ever</b> between have and the participle, and <b>How long have you…?</b></p>
+    <p>A note for the teacher: horror, but no blood (empty corridors, a voice on a loudspeaker, one short scream near the end). The times come from the trailer’s captions (07/10), told in our own words. The yellow on screen is kept dim on purpose.</p>
+    <p class="aq-guia"><b>Warm-up and In the Dark (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the film under the photo). Let them talk; don’t correct the grammar yet. <b>2 · In the Dark:</b> the screen is covered and only the sound of the first 14 seconds of the trailer plays (a man: “I found something. In the store… The place.”). The student says who is talking, where he is and how he sounds; then take off the cover. Horror without scares: nothing is on the screen.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>store</i>, <i>believe</i>, <i>proof</i>, <i>slow</i> and <i>scared</i>, before the video, in match the columns and mixed letters. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <p class="fim-guia"><b>The ending (IX, The Hot Seat)</b>: the student is Clark, back from the Backrooms; the teacher asks five questions (how long, what you have seen, have you ever met anyone, have you told your family, why you have gone back). Then swap. Speaking only.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is a dark corridor of yellow wallpaper with the lights off. I: Warm-up and In the Dark. III: the trailer in three steps. <b>Before:</b> a 30-second clock: the student talks about empty buildings and scary places. <b>Watch:</b> One word is wrong (say the right one) and What does he say?, each line with a ▶ time: tap it and the video jumps to that moment. <b>After:</b> four polaroids of the trailer to put in order, then a slider (would you go through that door?) and the student says why. IV: line by line. V, The Door: the arena (open the door to the world, or close it forever?), one minute each side, then swap. <b>VI, Someone Has Been Here:</b> the student sorts six times (Monday, three hours, 2019, a long time, I found it, two weeks) into two boxes, since and for. When all six are right, the rule appears and stays in the corner on the next pages. <b>VII, The Map:</b> the floor plan of Level 0 on a dark grid, almost empty. For each of six rooms the student reads the clue, says the sentence out loud, then taps Check: the sentence is written and the room is drawn in dim yellow, with footprints and the dashed path from room to room. At the end, a door. <b>VIII, Since and For:</b> a die shows three things from the student’s life (your home, your job, English, your phone, an old friend, a place you have never been to); the student says a sentence for each, then a 45-second clock for a minute of talk. IX: the hot seat.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>I have find</i>, <i>I have never saw</i>, <i>I am here since…</i> (Portuguese “estou aqui desde”), <i>since three hours</i>, <i>for 2019</i>, <i>someone have</i>, <i>was been</i>, <i>I never have seen</i>, <i>How long are you here?</i>, <i>How long you have been…?</i></p>
+    <!--conversa--><h4>THE DOOR (V) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Line by Line, the student has seen Clark and the door in the store. The arena: open the door to the world, or close it forever? The student picks a side and defends it for one minute with the present perfect (nobody has found the end, millions have watched his videos, someone has been there before him); then tap Swap sides and they defend the other side. There is no right answer: wait five seconds in silence before they start, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk (have find, I am here since, has went); at the end, ask them to fix one or two sentences themselves. About six minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up and In the Dark, V The Door, VII The Map, VIII Since and For and IX The Hot Seat.</li>
+      <li><b>Listen</b>: II The Words, III The Trailer and IV Line by Line.</li>
+      <li><b>Focus</b>: VI Someone Has Been Here.</li>
+      <li><b>Write</b>: the homework (the lesson ends speaking).</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script src="aquece.js"></script>
+<script src="final.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* BACKROOMS (WOLFLIX B1) · pergunta-surpresa · 29/10/2026 · present perfect, since / for, ever / never / just */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'What is the strangest place you have ever found by accident?',
+    opc: ['A shop or a café', 'A street or a building', 'A place online'], st: ['I have never told anyone, but …', 'I found it … and I have been back …'],
+    ex: 'A café behind a bookshop in my city. I found it by accident in 2022, and I have been back maybe twenty times since then.', push: 'Have you ever taken a friend there? Why or why not?' },
+  { cena: 'video', tipo: 'Would you rather', q: 'Would you rather spend one night in the Backrooms or one week with no phone?',
+    opc: ['One night in the Backrooms', 'One week with no phone'], st: ['I’d rather …, because I have never …', 'I have already …, so …'],
+    ex: 'One week with no phone. I have never been away from my phone for more than a day, but the Backrooms? No way.', push: 'And if the night in the Backrooms paid your rent for a year?' },
+  { cena: 'regra', tipo: 'And you?', q: 'What have you done for a long time, every day or every week?',
+    opc: ['A sport or a hobby', 'A job or a course', 'A habit'], st: ['I have … for … years.', 'I have … since …'],
+    ex: 'I have played the guitar since I was fifteen. So, for almost twenty years now, but I have never played in front of people.', push: 'Have you ever wanted to stop? When?' },
+  { cena: 'mapa', tipo: 'What if', q: 'What if you found a secret door in your home tonight? What would you do first?',
+    opc: ['Open it alone', 'Call a friend', 'Film it, like Clark'], st: ['First, I would …', 'I have never …, so I …'],
+    ex: 'Call a friend. I have seen too many horror films. I would never open it alone!', push: 'Which friend? Why that one?' },
+  { cena: 'desde', tipo: 'Opinion', q: 'Are scary films good for you, or a waste of time?',
+    opc: ['Good for you', 'A waste of time', 'It depends'], st: ['I have watched … since …, and …', 'I have never understood why …'],
+    ex: 'It depends. I have watched horror films since I was a kid, and they make me less scared of real things. But never before bed!', push: 'What is the scariest film you have ever seen? Did you sleep that night?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* BACKROOMS · THE MAP (WOLFLIX B1) · conversa · 29/10/2026 · regra 3×3 do Carlos
+   Arena colada no trailer: entra logo depois de IV · Line by Line, antes da regra since / for. O trailer
+   mostrou a porta da loja e o Clark que vai lá toda noite; o aluno escolhe um lado (abrir a porta para o
+   mundo ou fechar para sempre), defende 60 s com o present perfect e depois troca de lado. A cadeira
+   quente (fim) pergunta se ele contou à família: aqui a decisão é sobre a porta, sem repetir. Sem susto. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'arena', apos: 'falas', est: 'o', min: 6, img: 'corredor', rot: 'The Door', t: 'Open the door to the world, or close it forever?',
+    p: 'Pick a side and defend it for one minute with have / has + participle. Then swap and defend the other side.',
+    formato: 'arena',
+    q: 'Clark has found the door. What should happen now?',
+    lados: [
+      { nome: 'Open it to the world', arg: 'Millions of people have watched his videos. They have the right to see it.' },
+      { nome: 'Close it forever', arg: 'Nobody has found the end, and someone has been there before him.' }
+    ],
+    st: ['Nobody has ever …, so …', 'He has already …, and …', 'Since he found it, he has …', 'People have never …'],
+    ex: 'Close it forever. Clark has been there every night for weeks, and he still hasn’t found the end. Someone has been there before him, and we don’t know who. Nobody has come back with proof that it’s safe.',
+    push: 'And if the store paid you a million to open it? Have you ever changed your mind for money?',
+    segundos: 60 }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "Strange places, then a voice in the dark.",
+   "p": "Answer three questions. Then close your eyes and listen."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. They turn yellow in the video."
+  },
+  "video": {
+   "t": "Backrooms: the trailer.",
+   "p": "Talk for a minute. Watch. Tap ▶ to hear it again."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it again."
+  },
+  "cv-arena": {
+   "t": "Open the door, or close it forever?",
+   "p": "Defend one side for a minute. Then swap."
+  },
+  "regra": {
+   "t": "Since or for?",
+   "p": "Tap a time, then its box."
+  },
+  "mapa": {
+   "t": "Draw Level 0, room by room.",
+   "p": "Read the clue. Say it aloud. Then tap Check."
+  },
+  "desde": {
+   "t": "Three things, from the past until now.",
+   "p": "Roll. Say one sentence for each word."
+  },
+  "fim": {
+   "t": "The hot seat: Clark is back.",
+   "p": "You are Clark. Answer the teacher. Then swap."
+  }
+ },
+ "prep": {
+  "obj": "Present perfect (have/has + particípio) para o que começou no passado e continua, com since x for e How long…?: Clark achou uma porta numa loja e vai aos Backrooms toda noite.",
+  "armadilha": "O brasileiro usa o presente (“I am here since Monday”, “How long are you here?”), troca since e for (“since three hours”) e põe o passado simples com since (“I have been here since I have found it”).",
+  "pal": [
+   "has been",
+   "have seen",
+   "since",
+   "for",
+   "How long have you …?",
+   "ever",
+   "never",
+   "just",
+   "proof"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o filme: uma foto da internet que virou filme de terror.",
+   "perg": "Have you ever been somewhere that felt wrong?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "mundo": {
+   "obj": "Aquecimento com três perguntas e 14 segundos só de som: quem fala, onde está, como soa.",
+   "perg": "Who is talking, and where is he?",
+   "pula": "Duas perguntas bastam; o som vai inteiro."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (store, believe, proof, slow, scared) antes de assistir.",
+   "perg": "What proof would make you believe it?",
+   "pula": "Três palavras bastam."
+  },
+  "video": {
+   "obj": "O trailer inteiro em três passos: um minuto de fala, escuta das falas, polaroides e régua.",
+   "perg": "How long has he been there?",
+   "pula": "Assista uma vez só e faça só uma tarefa."
+  },
+  "falas": {
+   "obj": "Ouvir de novo as falas com palavras amarelas e repetir como o personagem.",
+   "perg": "How does Clark sound here?",
+   "pula": "Três falas bastam."
+  },
+  "cv-arena": {
+   "obj": "Arena: abrir a porta para o mundo ou fechar para sempre, um minuto cada lado, com present perfect.",
+   "perg": "Has anyone ever come back the same?",
+   "pula": "Um lado só, sem trocar."
+  },
+  "regra": {
+   "obj": "A regra: since (um ponto) x for (um período); separar seis tempos nas caixas.",
+   "perg": "Since Monday or for Monday?",
+   "pula": "Não corte: é a regra."
+  },
+  "mapa": {
+   "obj": "O mapa do Level 0: cada frase certa com present perfect desenha uma sala.",
+   "perg": "How long has the light been on?",
+   "pula": "Quatro salas bastam."
+  },
+  "desde": {
+   "obj": "Três coisas da vida do aluno do passado até agora, com since e for, no dado.",
+   "perg": "How long have you lived in your home?",
+   "pula": "Duas rodadas bastam."
+  },
+  "fim": {
+   "obj": "Cadeira quente: o aluno é o Clark de volta dos Backrooms e responde com present perfect.",
+   "perg": "What have you seen in there?",
+   "pula": "Três perguntas, sem trocar. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre lugares estranhos, internet e hábitos de longa data, com present perfect.",
+   "perg": "How long have you had that habit?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre dilemas do filme e de lugares assustadores, com present perfect.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve o próximo filme: um ano depois, o que mudou nos Backrooms.",
+   "perg": "What has happened since the first film?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Strange places and old habits.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "have been",
+    "since",
+    "for",
+    "ever",
+    "never"
+   ],
+   "cartas": [
+    {
+     "k": "EMPTY PLACES",
+     "q": "Have you ever been alone in an empty building?",
+     "fup": "How did it feel?",
+     "st": [
+      "I’ve been alone in …",
+      "I’ve never …, because …"
+     ],
+     "ex": "I’ve been alone in my office at night. It felt much bigger than in the day."
+    },
+    {
+     "k": "INTERNET MYSTERIES",
+     "q": "Have you ever believed a story from the internet?",
+     "fup": "When did you find out the truth?",
+     "st": [
+      "I’ve believed …",
+      "I found out when …"
+     ],
+     "ex": "I’ve believed a fake news story about a shark. I found out when my son laughed at me."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "How long have you lived in your home?",
+     "fup": "What has changed since you moved in?",
+     "st": [
+      "I’ve lived there for / since …",
+      "Since I moved in, …"
+     ],
+     "ex": "I’ve lived there for six years. Since I moved in, the street has become very noisy."
+    },
+    {
+     "k": "A HOBBY",
+     "q": "What have you done for a long time?",
+     "fup": "Why haven’t you stopped?",
+     "st": [
+      "I’ve … since …",
+      "I haven’t stopped because …"
+     ],
+     "ex": "I’ve played the guitar since I was fifteen. I haven’t stopped because it relaxes me."
+    },
+    {
+     "k": "HORROR",
+     "q": "What is the scariest film you have ever seen?",
+     "fup": "Have you watched it again?",
+     "st": [
+      "The scariest film I’ve ever seen is …",
+      "I’ve never watched it again because …"
+     ],
+     "ex": "The scariest film I’ve ever seen is The Ring. I’ve never watched it again."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "Who have you known for the longest time?",
+     "fup": "How have they changed?",
+     "st": [
+      "I’ve known … for …",
+      "They have become …"
+     ],
+     "ex": "I’ve known Paula for thirty years. She has become calmer, and I haven’t."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Would you go through the door?",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "have been",
+    "has seen",
+    "since",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Clark has filmed the Backrooms every night. Brave, or obsessed?",
+     "a": "Brave",
+     "b": "Obsessed",
+     "fa": [
+      "Brave. Nobody has ever filmed it before.",
+      "He wants proof, and he has found it."
+     ],
+     "fb": [
+      "Obsessed. He has gone back every night since he found it.",
+      "He hasn’t told anyone. That is not normal."
+     ]
+    },
+    {
+     "q": "You have found a strange door at work. Do you open it?",
+     "a": "Open it",
+     "b": "Leave it",
+     "fa": [
+      "Open it. I’ve always wanted an adventure."
+     ],
+     "fb": [
+      "Leave it. I’ve seen too many horror films."
+     ]
+    },
+    {
+     "q": "Horror films: fun, or a waste of a good night?",
+     "a": "Fun",
+     "b": "A waste",
+     "fa": [
+      "Fun. I’ve loved them since I was a kid."
+     ],
+     "fb": [
+      "A waste. I’ve never slept well after one."
+     ]
+    },
+    {
+     "q": "Has the internet made people more curious, or more scared?",
+     "a": "More curious",
+     "b": "More scared",
+     "fa": [
+      "More curious. We’ve learned a lot of strange things."
+     ],
+     "fb": [
+      "More scared. Every story online has become a monster."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody has opened the door yet."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "The Writers’ Room",
+   "t": "Write Backrooms 2.",
+   "p": "Plan it in steps. Use the present perfect.",
+   "prof": "You are the studio boss: ask “How long?” and “Since when?” Listen for I am here since.",
+   "passos": [
+    {
+     "q": "The next film starts one year later. What has happened to Clark since the first film?",
+     "st": [
+      "Since the first film, Clark has …"
+     ],
+     "ex": "Since the first film, Clark has disappeared. Nobody has seen him for a year."
+    },
+    {
+     "q": "Who goes in to find him?",
+     "st": [
+      "… has decided to …, because …"
+     ],
+     "ex": "His sister has decided to go in, because she has found his old camera."
+    },
+    {
+     "q": "What has changed in the Backrooms?",
+     "st": [
+      "The Backrooms have become …",
+      "Someone has …"
+     ],
+     "ex": "The Backrooms have become bigger. Someone has written names on the walls."
+    },
+    {
+     "q": "How does it end?",
+     "st": [
+      "In the end, …"
+     ],
+     "ex": "In the end, she finds Clark. He says, “I’ve been here for one day.”"
+    }
+   ],
+   "fim": "The studio has said yes. It has never happened this fast."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

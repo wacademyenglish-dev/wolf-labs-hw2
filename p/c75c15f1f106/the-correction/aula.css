@@ -1,0 +1,85 @@
+/* ============================================================
+   THE CORRECTION · THE MISSING "A" · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: a gráfica do jornal à
+   noite — preto-tinta; a manchete em tipos móveis de chumbo (cinza
+   metálico, letras em relevo); o tipo "A" solto, cobre; a mesa
+   telefônica com linhas que piscam âmbar. Acima de zero: verde; abaixo:
+   vermelho. Nenhum papel claro: o recorte de jornal é cinza-escuro.
+   ============================================================ */
+:root{
+  --noite:#080807; --noite-rgb:8,8,7; --tinta:#ecebe7;
+  --t1:#f0efeb; --t2:#cac7bf; --t2-rgb:202,199,191; --t3:#8e8a80;
+  --ac:#e8a23a; --ac2:#f7d08e; --cobre:#d18a52; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(236,235,231,.05); --vidro2:rgba(236,235,231,.085); --vidro3:rgba(236,235,231,.12);
+  --fio:rgba(230,228,222,.12); --fio2:rgba(230,228,222,.22); --luz:rgba(236,235,231,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'Playfair Display',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1700}
+.btn.cheio{color:#2a1700}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:700 clamp(60px,6vw,118px)/.92 var(--serif);letter-spacing:-.01em}
+.capa h1 b{display:block;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(18px,1.45vw,25px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--t1)}
+.capa-r{display:grid;place-items:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:52px;padding:0 22px;font:700 clamp(15px,1.15vw,20px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versoes.duas-v{max-width:860px;margin:0 auto;width:100%} .versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.on{border-color:var(--ac);background:#251a0a} .versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(17px,1.35vw,23px)/1.45 var(--disp)}
+.pede.chamador b{font-family:var(--serif);font-style:italic;font-weight:600} .pede.centro-t{max-width:860px;margin:0 auto 10px;text-align:center}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:900px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)}
+.balao u{text-decoration:none;color:var(--ac2);border-bottom:3px solid var(--ok)}
+.lacuna-q{display:inline-block;min-width:3.5em;border-bottom:3px solid var(--ac);color:var(--ac)}
+
+/* tipos móveis */
+.caixa-tipo{position:relative;display:grid;justify-items:center;gap:12px;padding:30px 24px 18px;border-radius:14px;background:#141412;border:2px solid #2a2925;box-shadow:inset 0 0 40px rgba(0,0,0,.7)}
+.tipos{display:flex;flex-wrap:wrap;gap:12px 18px;justify-content:center;max-width:620px}
+.palavra-t{display:flex;gap:3px}
+.palavra-t i{display:grid;place-items:center;width:clamp(22px,1.8vw,34px);height:clamp(30px,2.5vw,46px);border-radius:3px;background:linear-gradient(160deg,#5a5b5e,#2d2e30);box-shadow:inset 0 2px 0 rgba(255,255,255,.15),0 3px 0 #111;font:700 clamp(16px,1.4vw,26px) var(--serif);font-style:normal;color:#d9d9db}
+.tipos.sem .palavra-t:first-child i{box-shadow:inset 0 2px 0 rgba(255,255,255,.15),0 3px 0 #111,0 0 0 2px rgba(255,110,110,.5)}
+.tipos.com .palavra-t:first-child i{box-shadow:inset 0 2px 0 rgba(255,255,255,.15),0 3px 0 #111,0 0 0 2px rgba(143,217,162,.6)}
+.tipos.mini .palavra-t i{width:20px;height:28px;font-size:15px}
+.tipo-a{display:grid;place-items:center;width:52px;height:68px;border-radius:5px;background:linear-gradient(160deg,#e3a06a,#8a4f22);box-shadow:inset 0 2px 0 rgba(255,255,255,.3),0 6px 0 #3a1f0a,0 10px 24px rgba(0,0,0,.6);font:700 40px var(--serif);color:#2a1408;transform:rotate(-14deg);position:absolute;top:-22px;left:-14px}
+.tipo-a.dentro{transform:none;box-shadow:inset 0 2px 0 rgba(255,255,255,.3),0 4px 0 #3a1f0a,0 0 18px rgba(209,138,82,.6)}
+.rodape-t{margin:0;font:700 11px var(--mono);letter-spacing:.16em;color:var(--t3)}
+
+/* mesa telefônica */
+.mesa-tel{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:4px 0 10px}
+.linha-tel{display:grid;justify-items:center;gap:4px;padding:10px 6px;border-radius:12px;border:1px solid #33302a;background:#14130f;color:var(--t2);cursor:pointer}
+.linha-tel i{width:14px;height:14px;border-radius:50%;background:#3a3020}
+.linha-tel.pisca i{background:var(--ac);box-shadow:0 0 10px rgba(232,162,58,.8);animation:piscar 1s steps(2) infinite} @keyframes piscar{50%{opacity:.25}}
+.linha-tel.feita i{background:#2d4a36;box-shadow:none} .linha-tel.feita{color:var(--t3)}
+.linha-tel b{font:800 11px var(--mono);letter-spacing:.1em} .linha-tel small{font:700 10px var(--mono);letter-spacing:.06em;text-align:center}
+.linha-tel.sel{border-color:var(--ac);background:#251a0a}
+
+/* cenas */
+.quatro-vida{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:8px 0 12px}
+.vida-c{display:grid;gap:8px;align-content:start;padding:12px 14px;border-radius:var(--r2)} .vida-c small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac2)}
+.legenda-v{margin:0;font:700 13px var(--mono)} .legenda-v.cima{color:var(--ok)} .legenda-v.baixo{color:#ffb0a8}
+.recorte{display:grid;gap:8px;padding:16px 20px;border-radius:6px;background:#1a1a17} .recorte small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .recorte p{margin:0;font:700 clamp(20px,1.6vw,27px)/1.35 var(--serif)}
+.recorte.jor{background:#1d1c18;border-color:#3a382f} .recorte.jor p{font-variant:small-caps}
+.zero-q{display:grid;gap:8px} .lado-z{display:grid;gap:6px;min-height:110px;padding:12px;border-radius:14px} .lado-z small{font:800 11px var(--mono);letter-spacing:.12em}
+.lado-z.cima{background:rgba(143,217,162,.06);border:1px solid rgba(143,217,162,.3)} .lado-z.cima small{color:var(--ok)} .lado-z.baixo{background:rgba(255,110,110,.06);border:1px solid rgba(255,110,110,.3)} .lado-z.baixo small{color:#ffb0a8}
+.lado-z span{padding:6px 10px;border-radius:8px;background:#141412;font:600 15px var(--disp)}
+.linha-zero{position:relative;height:2px;background:var(--fio2)} .linha-zero b{position:absolute;left:50%;top:-12px;padding:0 10px;background:var(--noite);font:800 16px var(--mono);color:var(--t2);transform:translateX(-50%)}
+.formas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:4px 0 10px} .formas span{display:grid;gap:2px;padding:8px 14px;border-radius:12px;border:1px solid var(--fio2);font:500 14px var(--disp);color:var(--t2)} .formas b{font:800 15px var(--mono);color:var(--ac2)}
+.quem-p{margin:0 0 10px;text-align:center;font:800 13px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.frase-tok{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:1000px;margin:0 auto 12px}
+.tok{min-height:52px;padding:0 14px;border-radius:10px;border:1px solid var(--fio2);background:#141412;color:var(--t1);font:700 clamp(18px,1.5vw,26px) var(--serif);cursor:pointer}
+.tok.gap{min-width:44px;border-style:dashed;color:var(--t3)} .tok.certo{border-color:var(--ok);background:rgba(143,217,162,.14)} .tok.errado{border-color:var(--erro);animation:treme .35s}
+.banidas{display:flex;gap:14px;justify-content:center;margin:4px 0 10px} .banidas s{padding:6px 16px;border-radius:999px;border:2px solid rgba(255,110,110,.5);font:800 15px var(--mono);color:#ff9a90;text-decoration-thickness:3px}
+.fatos{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2)} .fatos small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .fatos span{padding:6px 10px;border-radius:8px;background:#141412;font:600 16px var(--disp)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .quatro-vida{grid-template-columns:1fr 1fr} .mesa-tel{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:620px){ .quatro-vida{grid-template-columns:1fr} .palavra-t i{width:18px;height:26px;font-size:14px} .tipo-a{width:40px;height:52px;font-size:30px} }

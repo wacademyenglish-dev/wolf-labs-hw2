@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -135,5 +136,284 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "Is this week busier than last week?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "In-house or Bluepeak?",
+   "p": "Read it out loud. Answer the questions."
+  },
+  "dialogo": {
+   "t": "“Why not a new team?”",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "Cheaper, not “more cheap”.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "multipla": {
+   "t": "Six lines from proposals.",
+   "p": "Read it. Choose. Say why."
+  },
+  "escolha": {
+   "t": "A or B? Compare.",
+   "p": "Your teacher answers first. Then you."
+  },
+  "cartao": {
+   "t": "In-house or your company?",
+   "p": "Cost, time, quality, one number. Say it."
+  },
+  "pode": {
+   "t": "Lesson 12: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 12: comparativos (cheaper, more efficient, better, worse, than). A Bluepeak compara terceirizar a folha com montar um time; a Rachel Moore pergunta “Why not a new team?”.",
+  "armadilha": "O português usa “mais” para tudo: “more cheap”, “more better” e “cheaper that” (que → that). Regra: palavra curta -er, longa more, good → better, bad → worse, e sempre than.",
+  "pal": [
+   "cheaper than",
+   "faster than",
+   "easier than",
+   "more efficient than",
+   "more expensive than",
+   "better",
+   "worse",
+   "30% less per year"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 12 de Selling Services: comparar a proposta com um time próprio.",
+   "perg": "What is faster for you: email or WhatsApp?",
+   "pula": "Leia o título e siga."
+  },
+  "conversa": {
+   "obj": "Aquecimento: comparações da semana do aluno; ele devolve “And you?”.",
+   "perg": "Is this week busier than last week?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler a página 2 da proposta da Bluepeak e responder sobre o sentido.",
+   "perg": "Which option is cheaper?",
+   "pula": "Pule o Look closer."
+  },
+  "dialogo": {
+   "obj": "Escuta: a Rachel Moore quer cinco pessoas novas e o Leo compara.",
+   "perg": "Why is Bluepeak faster?",
+   "pula": "Ouça uma vez e faça duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar “more cheap” e “cheaper” e ver a regra em uma linha.",
+   "perg": "Cheaper or more cheap?",
+   "pula": "Dois pares bastam."
+  },
+  "multipla": {
+   "obj": "Escolher a palavra certa em seis linhas de proposta e dizer por quê.",
+   "perg": "Better or more good?",
+   "pula": "Quatro linhas bastam."
+  },
+  "escolha": {
+   "obj": "Conversa A ou B comparando com because.",
+   "perg": "Which is better for you? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "cartao": {
+   "obj": "Escrever três frases comparando o serviço do aluno com um time próprio; admitir um ponto fraco.",
+   "perg": "Is your service cheaper than a new team?",
+   "pula": "Duas frases bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can” da unidade.",
+   "perg": "Can you compare two options for a client?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Comparações sobre o trabalho real do aluno, com frase quase pronta.",
+   "perg": "Is your job easier than last year?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas opções de trabalho e comparar com than.",
+   "perg": "Which one is better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a Rachel Moore e compara as opções.",
+   "perg": "Is a new team better than Bluepeak?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Compare your work.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "cheaper",
+    "faster",
+    "easier",
+    "better",
+    "than"
+   ],
+   "cartas": [
+    {
+     "k": "THIS YEAR",
+     "q": "Is your job easier or harder than last year?",
+     "fup": "Why?",
+     "st": [
+      "It’s easier / harder than …"
+     ],
+     "ex": "It’s harder than last year. I have more clients."
+    },
+    {
+     "k": "EMAIL OR CHAT",
+     "q": "Is email faster than WhatsApp for you?",
+     "fup": "Which is better for clients?",
+     "st": [
+      "… is faster than …"
+     ],
+     "ex": "WhatsApp is faster than email, but email is better for clients."
+    },
+    {
+     "k": "HOME OR OFFICE",
+     "q": "Is working at home better than at the office?",
+     "fup": "Is it cheaper?",
+     "st": [
+      "Home is … than the office."
+     ],
+     "ex": "Home is cheaper than the office, but it’s more boring."
+    },
+    {
+     "k": "YOUR SERVICE",
+     "q": "Is your service cheaper than your competitors?",
+     "fup": "Is it better?",
+     "st": [
+      "It’s … than …",
+      "It’s more … than …"
+     ],
+     "ex": "It’s more expensive than my competitors, but it’s faster."
+    },
+    {
+     "k": "BIG OR SMALL",
+     "q": "Are small clients easier than big clients?",
+     "fup": "Which pay better?",
+     "st": [
+      "Small clients are …",
+      "Big clients pay …"
+     ],
+     "ex": "Small clients are easier. Big clients pay better."
+    },
+    {
+     "k": "MONDAY",
+     "q": "Is Monday worse than Friday for you?",
+     "fup": "Why?",
+     "st": [
+      "Monday is worse / better than …"
+     ],
+     "ex": "Monday is worse than Friday. I have more meetings."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "cheaper than",
+    "better than",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A new team or an outside company?",
+     "a": "A new team",
+     "b": "An outside company",
+     "fa": [
+      "A new team. It’s easier to talk to them."
+     ],
+     "fb": [
+      "An outside company. It’s cheaper than five new people."
+     ]
+    },
+    {
+     "q": "Cheaper service or faster service?",
+     "a": "Cheaper",
+     "b": "Faster",
+     "fa": [
+      "Cheaper. Money is important."
+     ],
+     "fb": [
+      "Faster. Time is more important than money."
+     ]
+    },
+    {
+     "q": "A call or a proposal by email?",
+     "a": "A call",
+     "b": "Email",
+     "fa": [
+      "A call. It’s faster than email."
+     ],
+     "fb": [
+      "Email. It’s clearer than a call."
+     ]
+    },
+    {
+     "q": "One big client or ten small clients?",
+     "a": "One big",
+     "b": "Ten small",
+     "fa": [
+      "One big client. It’s easier."
+     ],
+     "fb": [
+      "Ten small clients. It’s safer than one."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Rachel Moore now.",
+   "p": "Your teacher is the salesperson.",
+   "aluno": "Listen to your teacher’s question. Answer as Rachel, HR director of Harbor Paper.",
+   "perguntas": [
+    "Is a new team better than Bluepeak?",
+    "Is Bluepeak cheaper than five new people?",
+    "Is a new team faster to start?",
+    "Which option is easier for you?",
+    "Is the old system worse than the new one?",
+    "So, which option is better for Harbor Paper?"
+   ],
+   "st": [
+    "It’s … than …",
+    "It’s more … than …",
+    "I think … is better."
+   ],
+   "ex": "A new team is easier to manage, but Bluepeak is cheaper and faster."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

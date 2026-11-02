@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Yes, I Do",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2fdf22e037f9/yes-i-do/img/live-capa.jpg",
+  "capa": "../img/live-capa.jpg",
   "alvo": "I like / I don't like · Do you like ...? · short answers: Yes, I do. / No, I don't. (not Yes, I like; not I no like; after do: like, no -s)",
   "abrir": "What food do you like? What food don't you like?",
   "fecho": "<b>I like</b> soup. <b>I don't like</b> onions. A question starts with <b>Do</b>: <i>Do you like tea?</i> The short answer sends <b>do</b> back: <i>Yes, I do. / No, I don't.</i> Never <i>Yes, I like</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a café. A new scene, about 30 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/2fdf22e037f9/yes-i-do/img/live-balcao.webp",
+      "img": "../img/live-balcao.webp",
       "leg": "A café counter",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Do you like soup? Yes, I do.",
-          "img": "https://wolf-labs.pages.dev/p/2fdf22e037f9/yes-i-do/img/live-balcao.webp",
+          "img": "../img/live-balcao.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I don't like onions in my soup.",
-          "img": "https://wolf-labs.pages.dev/p/2fdf22e037f9/yes-i-do/img/live-capa.jpg",
+          "img": "../img/live-capa.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Do you like tea? No, I don't.",
-          "img": "https://wolf-labs.pages.dev/p/2fdf22e037f9/yes-i-do/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2fdf22e037f9/yes-i-do/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "Soup, tea, cake and coffee on a table",
       "pede": "Look at the picture: food on a wooden table. Write 2 or 3 sentences: what you like and what you don't like. Use <b>I like</b> and <b>I don't like</b>.",
       "ph": "I like … but I don't like …",

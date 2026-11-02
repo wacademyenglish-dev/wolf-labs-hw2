@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WOLF LABS · How to Be Funny · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Neonderthaw&family=Gloock&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+<style>
+/* Open Mic Night · B1 · Main Series. Marque (violeta editorial, letra geométrica, acento lima)
+   dentro de um clube de comédia: parede escura, um cone de luz, o letreiro de neon. Sempre noite (fotofobia). */
+:root{
+  color-scheme:dark;
+  --palco:#140d2b; --tijolo:#1c1238; --violeta:#3b22b8; --camada:#261a55; --lavanda:#cbbcff; --tinta:#f2edff; --apoio:#b4a8dc;
+  --lima:#c6f36b; --luz:#ffd9a8; --riso:#ff7eb6; --erro:#ff8fa0;
+  --g:"Space Grotesk",system-ui,sans-serif; --neon:"Neonderthaw",cursive; --serif:"Gloock",Georgia,serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:#0d0820;color:var(--tinta);font:15px/1.5 var(--g)}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible{outline:2px solid var(--lima);outline-offset:3px}
+.wrap{padding:0}
+.tela{margin-top:0!important;border-radius:0!important;width:100%}
+@media (min-width:761px){html,body{height:100%}body{display:grid;place-items:center;overflow:hidden}.wrap{width:min(100vw,177.78vh)}}
+.cab{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between}
+.cab h1{margin:0;font:400 clamp(26px,4vw,36px)/1.1 var(--serif)}
+.cab p{margin:4px 0 0;color:var(--apoio);max-width:640px;font-size:14px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12.5px;font-weight:600;padding:4px 11px;border-radius:999px;background:var(--camada);color:var(--lavanda)}
+.chip.l{background:var(--lima);color:#1a1238}
+
+/* ===== o palco (a aula, 16:9, medida pela largura) ===== */
+.tela{container-type:inline-size;position:relative;margin-top:16px;aspect-ratio:16/9;border-radius:22px;overflow:hidden;isolation:isolate;background:var(--palco);
+  box-shadow:0 40px 80px -40px rgba(0,0,0,.9),0 0 0 1px rgba(203,188,255,.08)}
+.tela::before{content:"";position:absolute;inset:0;z-index:-2;opacity:.55;
+  background:linear-gradient(var(--palco) 0 0) padding-box,repeating-linear-gradient(0deg,transparent 0 3.4cqw,rgba(0,0,0,.35) 3.4cqw 3.6cqw),repeating-linear-gradient(90deg,transparent 0 7cqw,rgba(0,0,0,.28) 7cqw 7.2cqw);
+  background:repeating-linear-gradient(0deg,var(--tijolo) 0 3.4cqw,#150d2e 3.4cqw 3.6cqw)}
+.tela::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(38% 80% at 50% -10%,rgba(255,217,168,.16),transparent 70%),linear-gradient(180deg,transparent 60%,rgba(13,8,32,.9))}
+.cena{position:absolute;inset:0;padding:7.4cqw 4cqw 6.8cqw;display:none}
+/* a barra da aula, com o Método WOLF no meio (W #f0b866 · O #ec6a52 · L #86c9f0 · F #b9e27a) */
+.topo-aula{position:absolute;left:0;right:0;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:1.4cqw;padding:1.2cqw 1.8cqw}
+.marca-aula{display:flex;align-items:center;gap:.8cqw;font-size:max(11px,1.05cqw);min-width:0}
+.marca-aula i{width:1cqw;min-width:8px;aspect-ratio:1;border-radius:50%;background:#7fd6a8;box-shadow:0 0 1cqw #7fd6a8}
+.marca-aula b{letter-spacing:.06em}
+.marca-aula span{color:var(--apoio);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wolf{display:flex;align-items:center;gap:.3cqw;padding:.35cqw;border-radius:999px;background:rgba(13,8,32,.55);border:1px solid rgba(203,188,255,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.wolf span{--c:#fff;display:inline-flex;align-items:center;gap:.5cqw;height:2.8cqw;min-height:28px;padding:0 1cqw 0 .35cqw;border-radius:999px;font:700 max(11px,1.05cqw) var(--g);color:var(--apoio);transition:background .25s,color .25s}
+.wolf span b{display:grid;place-items:center;width:2.1cqw;min-width:22px;aspect-ratio:1;border-radius:50%;font:800 max(11px,1cqw) var(--g);background:rgba(242,237,255,.08);color:var(--lavanda);transition:background .25s,color .25s}
+.wolf span em{font-style:normal}
+.wolf span.feita b{background:color-mix(in srgb,var(--c) 30%,transparent);color:var(--tinta)}
+.wolf span.agora{background:rgba(242,237,255,.1);color:var(--tinta);box-shadow:inset 0 0 0 1.5px var(--c)}
+.wolf span.agora b{background:var(--c);color:#1a1238}
+.wolf .w{--c:#f0b866}.wolf .o{--c:#ec6a52}.wolf .l{--c:#86c9f0}.wolf .f{--c:#b9e27a}
+.ferr{display:flex;gap:.5cqw}
+.pil{border:1px solid rgba(203,188,255,.2);background:rgba(13,8,32,.45);border-radius:999px;padding:.45cqw 1.1cqw;font:700 max(11px,1cqw) var(--g);color:var(--lavanda)}
+.tela.zoom{font-size:1.12em}
+/* write: papel pautado escuro e letra à mão */
+.c-escrita{grid-template-columns:1fr 1.1fr;gap:3cqw;align-items:center}
+.banco{display:flex;flex-wrap:wrap;gap:.6cqw;margin-top:1.4cqw}
+.pc{border:1px solid rgba(240,184,102,.4);background:rgba(240,184,102,.08);border-radius:999px;padding:.6cqw 1.2cqw;font:600 max(12px,1.25cqw) var(--g);color:#ffe2b3;transition:transform .2s cubic-bezier(.3,1.4,.5,1),background .2s}
+.pc:hover{transform:translateY(-2px);background:rgba(240,184,102,.16)}
+.pc.ajuda{border-style:dashed}
+.papel{position:relative;display:block;border-radius:1.6cqw;padding:2cqw 2.4cqw 3cqw 4.4cqw;background:linear-gradient(90deg,transparent 3.2cqw,rgba(236,106,82,.35) 3.2cqw 3.35cqw,transparent 3.35cqw),repeating-linear-gradient(180deg,#1d1540 0 3.2cqw,rgba(203,188,255,.16) 3.2cqw 3.3cqw),#1d1540;box-shadow:inset 0 0 0 1px rgba(240,184,102,.25),0 2cqw 4cqw -2cqw rgba(0,0,0,.8)}
+.papel textarea{width:100%;min-height:22cqw;border:0;background:transparent;resize:none;outline:none;color:#fff3dc;font:500 max(20px,2.4cqw)/3.3cqw "Caveat",cursive}
+.papel textarea::placeholder{color:rgba(255,243,220,.35)}
+.papel small{position:absolute;right:1.6cqw;bottom:1cqw;font-size:max(11px,1cqw);color:#f0b866;opacity:0;transition:opacity .3s}
+.papel small.on{opacity:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.cena.on{display:grid;animation:entra .5s cubic-bezier(.3,1.2,.5,1)}
+@keyframes entra{from{opacity:0;transform:translateY(1.2cqw)}}
+.rot{font:600 max(11px,1.05cqw) var(--g);color:var(--lavanda);letter-spacing:.04em}
+.tt{margin:.4cqw 0 0;font:700 max(22px,3.6cqw)/1.02 var(--g);letter-spacing:-.03em}
+.tx{margin:0;font-size:max(13px,1.55cqw);color:var(--apoio);max-width:62cqw}
+
+/* a barra de baixo: BACK, os pontinhos das cenas, NEXT */
+.pe{position:absolute;left:0;right:0;bottom:0;height:6cqw;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:2cqw;padding:0 2.4cqw;z-index:4}
+.pe .pts{display:flex;gap:.6cqw}
+.pe .pts{align-items:center}
+.pe .pts i{display:block;width:8px;height:8px;border-radius:99px;background:rgba(203,188,255,.25);transition:width .3s,background .3s}
+.pe .pts i.on{width:22px;background:var(--lima)}
+.bt{border:0;border-radius:999px;padding:.9cqw 2.2cqw;min-height:36px;font:700 max(12px,1.25cqw) var(--g);letter-spacing:.06em;background:var(--camada);color:var(--tinta);transition:transform .12s,background .2s}
+.bt:active{transform:scale(.95)}
+.bt.cheio{background:var(--lima);color:#1a1238}
+.bt:disabled{opacity:.35;cursor:default}
+
+/* ===== 0 · capa: o letreiro de neon (o elemento forte da aula) ===== */
+.c-capa{grid-template-columns:1fr;align-items:center}
+.neon{font:400 max(46px,9.4cqw)/.9 var(--neon);color:#fff;text-shadow:0 0 .4cqw #fff,0 0 1.2cqw var(--riso),0 0 2.6cqw var(--riso),0 0 5cqw rgba(255,126,182,.6);animation:liga 2.4s ease-out}
+.neon b{display:block;font-weight:400;color:#f7ffe6;text-shadow:0 0 .4cqw #fff,0 0 1.2cqw var(--lima),0 0 3cqw var(--lima),0 0 5cqw rgba(198,243,107,.55);margin-left:6cqw}
+@keyframes liga{0%,8%,12%,20%{opacity:.15}10%,14%,100%{opacity:1}}
+.capa-tx{display:grid;gap:1.4cqw;justify-items:start}
+.capa-tx h2{margin:0;font:700 max(24px,4.4cqw)/1 var(--g);letter-spacing:-.04em}
+.capa-tx h2 span{color:var(--lima)}
+/* a foto do palco (ComfyUI, flux schnell) sangra pela direita e se apaga para a esquerda */
+.capa-foto{position:absolute;top:0;right:0;bottom:0;width:52%;z-index:-1;background:url(img/live-mic.jpg) center 35%/cover;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%);animation:respira 9s ease-in-out infinite alternate}
+@keyframes respira{to{transform:scale(1.05)}}
+.c-capa .capa-tx{position:relative;z-index:1;max-width:56cqw}
+
+/* ===== 1 · warm-up: o microfone passa a pergunta ===== */
+/* warm-up: tudo no centro, cartas de vidro (nada de campo branco) */
+.c-warm{align-content:center;justify-items:center;gap:2.4cqw;text-align:center}
+.c-warm .tx{margin-top:.6cqw}
+.warm-grade{display:grid;grid-template-columns:repeat(3,minmax(0,22cqw));gap:1.8cqw;justify-content:center}
+.carta{perspective:900px;border:0;background:none;padding:0;height:22cqw;min-height:150px}
+.carta .in{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,1.3,.5,1)}
+.carta:not(.vira):hover .in{transform:translateY(-.4cqw)}
+.carta.vira .in{transform:rotateY(180deg)}
+.carta .f,.carta .v{position:absolute;inset:0;border-radius:2cqw;padding:2cqw;display:grid;place-items:center;align-content:center;gap:1cqw;text-align:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%)}
+.carta .f{background:linear-gradient(160deg,rgba(91,46,230,.55),rgba(59,34,184,.25));border:1px solid rgba(203,188,255,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 2cqw 4cqw -2cqw rgba(0,0,0,.8)}
+.carta .f b{font:700 max(32px,5.6cqw)/1 var(--g);color:var(--lima);text-shadow:0 0 2cqw rgba(198,243,107,.45)}
+.carta .f span{font-size:max(12px,1.15cqw);color:var(--lavanda)}
+.carta .v{transform:rotateY(180deg);background:rgba(20,13,43,.6);border:1px solid rgba(198,243,107,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 0 3cqw -1cqw rgba(198,243,107,.35)}
+.carta .v p{margin:0;font:600 max(14px,1.7cqw)/1.3 var(--g);color:var(--tinta)}
+.carta .v small{font-size:max(11px,1.05cqw);color:var(--lima)}
+
+/* ===== 2 · o vídeo em três tempos ===== */
+.c-video{grid-template-columns:1fr 1fr;gap:3cqw;align-items:center}
+.player{position:relative;aspect-ratio:16/9;border-radius:1.6cqw;overflow:hidden;background:radial-gradient(60% 80% at 30% 40%,#5a3ad8,transparent 70%),radial-gradient(50% 60% at 80% 70%,#c24d8a,transparent 70%),#1a1238;display:grid;place-items:center;text-decoration:none;color:#fff}
+.player .play{width:7cqw;min-width:48px;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;transition:transform .2s}
+.player:hover .play{transform:scale(1.08)}
+.player small{position:absolute;left:1.4cqw;bottom:1.2cqw;font-size:max(11px,1.1cqw);font-weight:600;background:rgba(13,8,32,.6);padding:.3cqw .9cqw;border-radius:99px}
+/* os três tempos numa chave líquida (a mesma peça da plataforma) */
+.tempos{position:relative;display:inline-grid;grid-template-columns:repeat(3,1fr);margin:1cqw 0;padding:.35cqw;border-radius:999px;background:rgba(203,188,255,.08);border:1px solid rgba(203,188,255,.18);min-width:min(100%,330px)}
+.tempos i{position:absolute;top:.35cqw;bottom:.35cqw;left:.35cqw;width:calc((100% - .7cqw)/3);border-radius:999px;background:var(--tinta);transition:transform .45s cubic-bezier(.3,1.4,.5,1)}
+.tempo{position:relative;z-index:1;border:0;background:none;border-radius:999px;padding:.6cqw 1.4cqw;font:700 max(12px,1.2cqw) var(--g);color:var(--apoio);transition:color .3s}
+.tempo[aria-selected="true"]{color:#1a1238}
+.tempo:disabled{opacity:.4;cursor:not-allowed}
+/* o vídeo fica trancado até as perguntas do Before */
+.player-caixa{position:relative;border-radius:1.6cqw;overflow:hidden}
+.player-caixa .player{filter:blur(10px) saturate(.6);transform:scale(1.05);transition:filter .8s,transform .8s}
+.player-caixa.solto .player{filter:none;transform:none}
+.cadeado{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:.8cqw;text-align:center;padding:2cqw;background:rgba(20,13,43,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:opacity .6s,transform .6s}
+.cadeado b{font-size:max(15px,1.8cqw)}
+.cadeado span{font-size:max(12px,1.2cqw);color:var(--lavanda)}
+.player-caixa.solto .cadeado{opacity:0;transform:scale(1.08);pointer-events:none}
+.anel-mini{position:relative;width:6cqw;min-width:46px;aspect-ratio:1;display:grid;place-items:center}
+.anel-mini svg:first-child{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.anel-mini circle{fill:none;stroke-width:3.5;stroke-linecap:round}
+.anel-mini .tr{stroke:rgba(203,188,255,.2)}
+.anel-mini .vl{stroke:var(--lima);stroke-dasharray:113;stroke-dashoffset:113;transition:stroke-dashoffset .6s cubic-bezier(.3,1.2,.5,1)}
+.anel-mini .lock{width:45%;height:45%;fill:none;stroke:var(--tinta);stroke-width:1.8;stroke-linecap:round}
+.perg-video .ops{gap:.6cqw}
+.perg-video .op{padding:.8cqw 1.3cqw}
+/* o aviso com mola (a mesma peça da plataforma) */
+.avisos{position:absolute;left:50%;bottom:8cqw;transform:translateX(-50%);z-index:8;display:grid;gap:.6cqw;pointer-events:none;width:max-content;max-width:90%}
+.aviso{position:relative;overflow:hidden;display:flex;align-items:center;gap:1cqw;padding:1cqw 1.6cqw;border-radius:1.2cqw;background:rgba(242,237,255,.12);border:1px solid rgba(242,237,255,.25);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font:700 max(12px,1.3cqw) var(--g);box-shadow:0 1.6cqw 3cqw -1.6cqw rgba(0,0,0,.8);animation:mola .5s cubic-bezier(.3,1.4,.5,1)}
+.aviso .ok{width:2.2cqw;min-width:20px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:var(--lima);color:#1a1238;font-size:.8em}
+.aviso .t{position:absolute;left:0;bottom:0;height:3px;background:var(--lima);animation:esvazia 3s linear forwards}
+@keyframes mola{from{opacity:0;transform:translateY(-1cqw) scale(.94)}}
+@keyframes esvazia{from{width:100%}to{width:0}}
+.ops{display:grid;gap:.8cqw}
+.op{display:flex;align-items:center;gap:1.2cqw;text-align:left;border:1px solid rgba(203,188,255,.2);background:rgba(203,188,255,.05);border-radius:1.2cqw;padding:1cqw 1.4cqw;font:500 max(13px,1.45cqw) var(--g);transition:border-color .2s,background .2s}
+.op .vt{margin-left:auto;font-weight:700;color:var(--lima);font-size:.9em}
+.op[aria-pressed="true"]{border-color:var(--lima);background:rgba(198,243,107,.08)}
+.op.certa{border-color:var(--lima);background:rgba(198,243,107,.14)}
+.op.errada{border-color:var(--erro);background:rgba(255,143,160,.1)}
+
+/* ===== 3 · o decodificador de knock-knock ===== */
+.c-knock{grid-template-columns:.9fr 1.1fr;gap:3cqw;align-items:center}
+.abas{display:flex;flex-wrap:wrap;gap:.6cqw;margin-top:1.4cqw}
+.aba{border:0;border-radius:999px;padding:.6cqw 1.4cqw;background:var(--camada);color:var(--lavanda);font:600 max(12px,1.2cqw) var(--g)}
+.aba[aria-selected="true"]{background:var(--lavanda);color:#1a1238}
+.porta{position:relative;border-radius:1.8cqw;background:var(--violeta);padding:2.4cqw;display:grid;gap:1.2cqw;min-height:28cqw;align-content:start;overflow:hidden}
+.porta::after{content:"";position:absolute;right:2.4cqw;top:50%;width:1.4cqw;aspect-ratio:1;border-radius:50%;background:var(--luz);box-shadow:0 0 1.4cqw rgba(255,217,168,.6)}
+.fala{max-width:80%;padding:1cqw 1.6cqw;border-radius:1.4cqw;font:600 max(14px,1.8cqw)/1.25 var(--g);animation:fala .4s cubic-bezier(.3,1.4,.5,1) both}
+.fala.a{background:var(--tinta);color:#1a1238;border-bottom-left-radius:.3cqw}
+.fala.b{background:#1a1238;color:var(--tinta);justify-self:end;border-bottom-right-radius:.3cqw}
+@keyframes fala{from{opacity:0;transform:scale(.8)}}
+.parte{display:inline-flex;gap:.3em}
+.parte span{display:inline-block;transition:transform .6s cubic-bezier(.3,1.5,.5,1),color .3s}
+.parte.abre span{color:var(--lima);background:#1a1238;border-radius:.3em;padding:0 .2em}
+.som{font:500 max(12px,1.2cqw) var(--g);color:var(--lavanda)}
+.trocadilho{display:flex;align-items:center;gap:1cqw;flex-wrap:wrap}
+.medidor{flex:1;min-width:120px;height:1cqw;min-height:8px;border-radius:99px;background:rgba(203,188,255,.15);overflow:hidden}
+.medidor i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--lavanda),var(--riso),var(--lima));transition:width 1s cubic-bezier(.3,1.2,.5,1)}
+
+/* ===== 4 · o gráfico do seu humor (radar) ===== */
+.c-radar{grid-template-columns:1fr 1fr;gap:3cqw;align-items:center}
+.radar{width:100%;max-width:34cqw;justify-self:center}
+.radar svg{width:100%;height:auto;overflow:visible}
+.radar .grade-r{fill:none;stroke:rgba(203,188,255,.18)}
+.radar .eixo{stroke:rgba(203,188,255,.18)}
+.radar .forma{fill:rgba(198,243,107,.22);stroke:var(--lima);stroke-width:2;transition:all .6s cubic-bezier(.3,1.3,.5,1)}
+.radar .rotr{fill:var(--tinta);font:600 13px var(--g)}
+.radar .pt{fill:var(--lima)}
+.estilos{display:grid;gap:.9cqw}
+.est{display:grid;grid-template-columns:1fr auto;gap:.3cqw 1cqw;align-items:center;border-radius:1.2cqw;padding:1cqw 1.4cqw;background:rgba(203,188,255,.06)}
+.est b{font-size:max(14px,1.55cqw)}
+.est small{grid-column:1/-1;color:var(--apoio);font-size:max(12px,1.15cqw);font-style:italic}
+.niv{display:flex;gap:.4cqw}
+.niv button{width:2.4cqw;min-width:22px;aspect-ratio:1;border-radius:50%;border:1px solid rgba(203,188,255,.35);background:transparent;padding:0}
+.niv button.on{background:var(--lima);border-color:var(--lima)}
+.voce{font:700 max(14px,1.6cqw) var(--g);color:var(--lima);min-height:1.4em}
+
+/* ===== 5 · gramática: even if / whether... or ===== */
+.c-gram{grid-template-columns:.95fr 1.05fr;gap:3cqw;align-items:center}
+.regra{border-radius:1.8cqw;background:var(--violeta);padding:2.4cqw;display:grid;gap:1.4cqw}
+.regra h3{margin:0;font:700 max(20px,3cqw)/1 var(--g);letter-spacing:-.03em}
+.regra .l{display:grid;grid-template-columns:auto 1fr;gap:1.2cqw;align-items:baseline}
+.regra .l b{font-size:max(14px,1.6cqw);color:var(--lima);white-space:nowrap}
+.regra .l span{font-size:max(13px,1.4cqw);color:#e3dcff}
+.montar{display:grid;gap:1.2cqw}
+.frase{min-height:6cqw;border-radius:1.4cqw;border:2px dashed rgba(203,188,255,.3);padding:1cqw 1.2cqw;display:flex;flex-wrap:wrap;gap:.6cqw;align-items:center;font-size:max(14px,1.6cqw)}
+.frase.ok{border-style:solid;border-color:var(--lima);background:rgba(198,243,107,.08)}
+.frase:empty::before{content:"Tap the pieces in order";color:var(--apoio);font-size:.85em}
+.pecas{display:flex;flex-wrap:wrap;gap:.6cqw}
+.peca{border:0;border-radius:.9cqw;padding:.8cqw 1.3cqw;background:var(--tinta);color:#1a1238;font:600 max(13px,1.5cqw) var(--g);transition:transform .25s cubic-bezier(.3,1.4,.5,1)}
+.peca:hover{transform:translateY(-2px)}
+.frase .peca{background:var(--lavanda)}
+
+/* ===== 6 · prática ===== */
+.c-pratica{grid-template-rows:auto 1fr;gap:1.6cqw}
+.itens{display:grid;gap:1cqw;align-content:start}
+.it{display:flex;flex-wrap:wrap;align-items:center;gap:.8cqw 1.2cqw;border-radius:1.2cqw;padding:1cqw 1.4cqw;background:rgba(203,188,255,.06);font-size:max(13px,1.55cqw)}
+.it .n{font-weight:700;color:var(--lavanda);width:2cqw}
+.lac{display:inline-block;min-width:8cqw;border-bottom:2px solid var(--lavanda);text-align:center;font-weight:700;color:var(--lima);padding:0 .4cqw}
+.lac.errada{color:var(--erro);border-color:var(--erro)}
+.esc{display:flex;gap:.5cqw;margin-left:auto}
+.esc button{border:1px solid rgba(203,188,255,.3);background:transparent;border-radius:999px;padding:.4cqw 1.1cqw;font:600 max(12px,1.2cqw) var(--g);color:var(--tinta)}
+.esc button:hover{border-color:var(--lima)}
+.it.ok{box-shadow:inset 3px 0 0 var(--lima)}
+
+/* ===== 7 · a caixa de ferramentas do engraçado ===== */
+.c-kit{grid-template-rows:auto 1fr;gap:1.6cqw}
+.kit{display:grid;grid-template-columns:repeat(5,1fr);gap:1.2cqw}
+.kt{perspective:900px;border:0;background:none;padding:0;min-height:20cqw}
+.kt .in{position:relative;display:block;width:100%;height:100%;min-height:inherit;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,1.3,.5,1)}
+.kt.vira .in{transform:rotateY(180deg)}
+.kt .f,.kt .v{position:absolute;inset:0;border-radius:1.6cqw;padding:1.4cqw;display:grid;align-content:space-between;justify-items:start;text-align:left;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+/* a caixa de ferramentas em vidro: o ícone num disco que brilha; o verso escuro com um fio lima */
+.kt .f,.kt .v{backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%)}
+.kt .f{background:linear-gradient(170deg,rgba(242,237,255,.1),rgba(242,237,255,.03));border:1px solid rgba(203,188,255,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 2cqw 3cqw -2cqw rgba(0,0,0,.8);align-content:center;justify-items:center;text-align:center;gap:1.4cqw}
+.kt .f .disco{width:6cqw;min-width:44px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,rgba(198,243,107,.35),rgba(91,46,230,.35) 70%);box-shadow:0 0 2.4cqw rgba(198,243,107,.25),inset 0 1px 0 rgba(255,255,255,.35)}
+.kt .f svg{width:55%;height:auto;stroke:#f7ffe6;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.kt .f b{font-size:max(13px,1.5cqw);line-height:1.15}
+.kt .f small{font-size:max(10.5px,.95cqw);color:var(--lavanda)}
+.kt:not(.vira):hover .in{transform:translateY(-.4cqw)}
+.kt .v{transform:rotateY(180deg);background:rgba(20,13,43,.72);border:1px solid rgba(198,243,107,.4);box-shadow:inset 0 3px 0 var(--lima),0 0 3cqw -1cqw rgba(198,243,107,.4);color:var(--tinta)}
+.kt .v b{font-size:max(11px,1.05cqw);letter-spacing:.04em;color:var(--lima)}
+.kt .v p{margin:0;font:600 max(12.5px,1.35cqw)/1.3 var(--g)}
+
+/* ===== 8 · palco aberto: o aplausômetro ===== */
+.c-mic{grid-template-columns:1fr 1fr;gap:3cqw;align-items:center}
+/* o palco de verdade atrás (ComfyUI), apagado à esquerda para o texto */
+.c-mic::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,13,43,.94) 25%,rgba(20,13,43,.55) 60%,rgba(20,13,43,.35)),url(img/live-palco.jpg) 70% center/cover}
+.onair{display:inline-flex;align-items:center;gap:.8cqw;font:400 max(30px,5cqw)/1 var(--neon);color:#fff;text-shadow:0 0 1cqw #ff4d6d,0 0 2.4cqw #ff4d6d}
+.onair i{width:1.2cqw;min-width:9px;aspect-ratio:1;border-radius:50%;background:#ff4d6d;box-shadow:0 0 1cqw #ff4d6d;animation:pisca 1.1s infinite}
+@keyframes pisca{50%{opacity:.25}}
+.aplauso{display:grid;gap:1.4cqw;justify-items:center}
+.barras{display:flex;align-items:end;gap:.6cqw;height:16cqw;min-height:110px}
+.barras i{width:2.2cqw;min-width:14px;border-radius:.6cqw .6cqw .2cqw .2cqw;background:rgba(203,188,255,.15);height:12%;transition:height .35s cubic-bezier(.3,1.5,.5,1),background .3s}
+.barras i.on{background:linear-gradient(180deg,var(--lima),var(--riso))}
+.palmas{border:0;border-radius:999px;padding:1.2cqw 3cqw;font:700 max(14px,1.6cqw) var(--g);background:var(--riso);color:#2a0d1c;box-shadow:0 .5cqw 0 #b24a7c;transition:transform .1s,box-shadow .1s}
+.palmas:active{transform:translateY(.4cqw);box-shadow:0 .1cqw 0 #b24a7c}
+.ovacao{font:700 max(16px,2cqw) var(--g);color:var(--lima);min-height:1.3em;text-align:center}
+.vivas{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:6}
+.confete{position:absolute;width:.9cqw;min-width:7px;height:1.3cqw;min-height:10px;border-radius:2px;animation:cai 1.4s ease-out forwards}
+@keyframes cai{to{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
+
+/* ===== as cenas embaixo + o guia do professor ===== */
+.baixo{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px;margin-top:16px;align-items:start}
+.lista{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.mini{flex:none;width:132px;border:1px solid rgba(203,188,255,.14);background:#160f30;border-radius:14px;padding:10px;text-align:left;display:grid;gap:3px;transition:border-color .2s,transform .2s}
+.mini:hover{transform:translateY(-2px)}
+.mini[aria-current="true"]{border-color:var(--lima)}
+.mini b{font-size:13px}
+.mini small{font-size:11.5px;color:var(--apoio)}
+.guia{border-radius:16px;background:#160f30;border:1px solid rgba(203,188,255,.14);padding:14px 16px;display:grid;gap:6px}
+.guia h3{margin:0;font:400 19px var(--serif)}
+.guia p{margin:0;font-size:14px;color:#ddd5f7}
+.guia small{color:var(--apoio);font-size:12.5px}
+
+@media (max-width:760px){
+  .tela{aspect-ratio:auto;min-height:620px}
+  .cena{position:relative;inset:auto;padding:22px 18px 74px}
+  .cena.on{min-height:620px;align-content:start;align-items:start;gap:20px}
+  .porta{min-height:0}
+  .c-capa,.c-video,.c-knock,.c-radar,.c-gram,.c-mic{grid-template-columns:1fr}
+  .warm-grade{grid-template-columns:1fr}.carta{min-height:120px}
+  .kit{grid-template-columns:1fr 1fr}.kt{min-height:130px}
+  .mic{width:120px}.radar{max-width:280px}
+  .baixo{grid-template-columns:1fr}
+  .tx{max-width:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* ===== o método das Live Lessons ===== */
+/* a faixa da capa: fora da sala, a aula pede o Live Lesson */
+.faixa-live{display:inline-flex;align-items:center;gap:.8cqw;margin-top:.6cqw;padding:.7cqw 1.4cqw;border-radius:999px;background:rgba(198,243,107,.12);border:1px solid rgba(198,243,107,.4);font:700 max(11px,1.1cqw) var(--g);color:#e9ffc4}
+.faixa-live i{width:.9cqw;min-width:7px;aspect-ratio:1;border-radius:50%;background:var(--lima);animation:pisca 1.4s infinite}
+/* o follow-up NO MEIO, logo abaixo da pergunta: o post-it com fita (escuro, nada de campo claro) */
+.slot{justify-self:center;width:min(100%,62cqw)}
+.postit{position:relative;margin-top:1.2cqw;padding:2cqw 2.2cqw 1.6cqw;border-radius:.6cqw 1.6cqw 1.6cqw 1.6cqw;background:linear-gradient(170deg,#3a2c12,#2a2010);border:1px solid rgba(240,184,102,.35);box-shadow:0 2cqw 3cqw -1.6cqw rgba(0,0,0,.8);transform:rotate(-.6deg);animation:cola .5s cubic-bezier(.3,1.4,.5,1);text-align:left}
+.postit::before{content:"";position:absolute;top:-1.1cqw;left:50%;width:9cqw;height:2cqw;margin-left:-4.5cqw;background:rgba(242,237,255,.22);backdrop-filter:blur(4px);transform:rotate(2deg);border-radius:.2cqw}
+@keyframes cola{from{opacity:0;transform:rotate(-4deg) translateY(1.4cqw) scale(.95)}}
+.postit p{margin:0 0 1cqw;font:500 max(18px,2.3cqw)/1.15 "Caveat",cursive;color:#ffe2b3}
+.starters{display:flex;flex-wrap:wrap;gap:.6cqw;align-items:center}
+.starters .pc[aria-pressed="true"]{background:#f0b866;color:#2a1c05;border-color:#f0b866}
+.help{border:0;background:none;color:var(--lavanda);font:700 max(12px,1.15cqw) var(--g);text-decoration:underline dotted;padding:.4cqw}
+.dica-help{display:block;margin-top:.8cqw;font-size:max(12px,1.2cqw);color:var(--lavanda)}
+/* o veredito do professor: só ele vê (.so-prof some do lado do aluno na sala) */
+.so-prof{display:flex;flex-wrap:wrap;align-items:center;gap:.6cqw 1.2cqw;margin-top:1.2cqw;padding:1cqw 1.4cqw;border-radius:1.2cqw;background:rgba(13,8,32,.6);border:1px dashed rgba(203,188,255,.35)}
+.so-prof .quem{font:700 max(10px,.95cqw) var(--g);letter-spacing:.06em;color:var(--lavanda);text-transform:uppercase}
+.so-prof b{font-size:max(12px,1.25cqw)}
+.so-prof .tapped{font:700 max(11px,1.05cqw) var(--g);color:#f0b866}
+.so-prof .bts{display:flex;gap:.6cqw;margin-left:auto}
+.so-prof .bt{padding:.6cqw 1.4cqw;min-height:30px}
+/* o vídeo: na hora de assistir, grande e no centro */
+.c-video.assistir{grid-template-columns:1fr;justify-items:center;align-content:center;gap:1.4cqw}
+.c-video.assistir .player-caixa{order:2;width:min(100%,64cqw)}
+.c-video.assistir > div:last-child{order:1;display:grid;justify-items:center;text-align:center}
+.c-video.assistir .rot{display:none}
+/* as três armadilhas */
+.c-arm{grid-template-rows:auto 1fr;gap:1.6cqw;align-content:start}
+.armas{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4cqw;align-content:center}
+.arma{perspective:900px;border:0;background:none;padding:0;min-height:20cqw}
+.arma .in{position:relative;display:block;width:100%;height:100%;min-height:inherit;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,1.3,.5,1)}
+.arma.vira .in{transform:rotateY(180deg)}
+.arma .f,.arma .v{position:absolute;inset:0;border-radius:1.6cqw;padding:1.8cqw;display:grid;align-content:center;gap:1cqw;text-align:left;backface-visibility:hidden;-webkit-backface-visibility:hidden;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.arma .f{background:rgba(255,143,160,.08);border:1px solid rgba(255,143,160,.4)}
+.arma .f small{font:700 max(10px,1cqw) var(--g);color:var(--erro);letter-spacing:.06em}
+.arma .f p{margin:0;font:600 max(14px,1.65cqw)/1.3 var(--g)}
+.arma .f p s{text-decoration-color:var(--erro);text-decoration-thickness:2px}
+.arma .v{transform:rotateY(180deg);background:rgba(20,13,43,.7);border:1px solid rgba(198,243,107,.45);box-shadow:inset 0 3px 0 var(--lima)}
+.arma .v p{margin:0;font:600 max(14px,1.65cqw)/1.3 var(--g)}
+.arma .v p b{color:var(--lima)}
+.arma .v small{font-size:max(11.5px,1.1cqw);color:var(--apoio)}
+/* write: o corretor nível 1 (a regra da aula) */
+.corretor{display:block;min-height:1.4em;margin-top:.6cqw;font:600 max(12px,1.2cqw) var(--g);color:#f0b866}
+/* o guia: WOLF nesta aula */
+.wolf-guia{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:6px;font-size:13px;color:#ddd5f7}
+.wolf-guia li{display:flex;gap:8px;align-items:baseline}
+.wolf-guia b{flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#1a1238;font-size:11px}
+@media (max-width:760px){
+  .topo-aula{position:relative;flex-wrap:wrap;justify-content:center;padding:12px 14px 0}
+  .marca-aula,.ferr{display:none}
+  .wolf span{padding:0 4px}.wolf span em{display:none}.wolf span.agora em{display:inline}
+  .c-escrita,.armas{grid-template-columns:1fr}
+  .arma{min-height:140px}
+  .slot{width:100%}
+  .c-video.assistir .player-caixa{width:100%}
+}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.player{position:relative}
+.salvar-nota{position:absolute;right:1.6cqw;bottom:1.2cqw}
+.papel small{bottom:4.8cqw}
+.guia-dlg{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:16px;background:rgba(13,8,32,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.guia-dlg[hidden]{display:none}
+.guia-dlg .caixa{width:min(680px,100%);max-height:88vh;overflow:auto;border-radius:20px;padding:22px 24px;background:#1a1238;border:1px solid rgba(203,188,255,.2);color:#ece6ff;font-size:14.5px;line-height:1.55}
+.guia-dlg h2{margin:0 0 8px;font:400 24px var(--serif)}
+.guia-dlg h4{margin:16px 0 6px;font:700 12px var(--g);letter-spacing:.08em;color:var(--lima)}
+.guia-dlg p{margin:0}
+.guia-dlg ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.guia-dlg b{color:#fff}
+
+.escrita-col{display:grid;gap:0;min-width:0;align-content:start}
+/* 10/10 · o corretor das Live Classes no papel pautado: o espelho por baixo do texto, com o sublinhado ondulado */
+.papel{padding:0}
+.papel textarea,.papel .espelho{margin:0;padding:2cqw 2.4cqw 3cqw 4.4cqw;border:0;font:500 max(20px,2.4cqw)/3.3cqw "Caveat",cursive;letter-spacing:0;white-space:pre-wrap;overflow-wrap:break-word;word-break:normal}
+.papel textarea{position:relative;z-index:1;display:block;overflow:hidden}
+.papel .espelho{position:absolute;inset:0;z-index:0;color:transparent;pointer-events:none;overflow:hidden}
+.papel .espelho mark{background:rgba(255,154,168,.1);color:transparent;border-radius:4px;text-decoration:underline wavy #ff9aa8;text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-skip-ink:none}
+.papel .salvar-nota,.papel small{z-index:2}
+.corretor{display:flex;gap:12px;align-items:baseline;margin-top:.8cqw;padding:12px 16px;border-radius:14px;background:rgba(245,241,251,.05);border:1px solid rgba(245,241,251,.12);font:600 max(13px,1.2cqw) var(--g);color:#cfc7e6}
+.corretor b{flex:none;font:800 12px var(--g);letter-spacing:.12em;color:#9a91b8}
+.corretor i{font-style:normal;font-weight:700;color:#ffdde1;text-decoration:underline wavy #ff9aa8;text-underline-offset:4px}
+.corretor em{font-style:normal;color:#9a91b8}
+.corretor.tem{background:rgba(240,184,102,.1);border-color:rgba(240,184,102,.4);color:#fff}.corretor.tem b{color:#f0b866}
+.corretor.bom{background:rgba(127,214,168,.08);border-color:rgba(127,214,168,.35)}.corretor.bom b{color:#7fd6a8}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="tela" id="tela">
+    <!-- a barra da aula: a marca, as estações do Método WOLF e as ferramentas do professor -->
+    <header class="topo-aula top">
+      <div class="marca-aula"><i></i><b>MAIN SERIES</b><span>Open Mic Night</span></div>
+      <nav class="wolf" aria-label="Wolf method stations">
+        <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+        <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+        <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+        <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+      </nav>
+      <div class="ferr zm"><button type="button" class="pil" id="bguia" aria-label="Teacher guide">Guide</button><button type="button" class="pil" id="bZoom" aria-label="Bigger text">A+</button><button type="button" class="pil" id="bTela">Full screen</button></div>
+    </header>
+    <!-- 0 capa -->
+    <section class="cena c-capa on" data-nome="Cover" data-guia="Start with the title question and let the student laugh before you explain anything. Ask: in which language are you funnier?">
+      <div class="capa-tx">
+        <div class="neon" aria-hidden="true">Open mic<b>night</b></div>
+        <h2>How to be <span>funny</span> in English</h2>
+        <p class="tx">Get the joke, tell the joke, and stay yourself while you do it.</p>
+        <span class="faixa-live"><i></i>This lesson is made for Live Lesson · Open it with your student</span>
+      </div>
+      <span class="capa-foto" aria-hidden="true"></span>
+    </section>
+
+    <!-- 1 warm-up -->
+    <section class="cena c-warm" data-k="o" data-nome="Warm-up" data-guia="Talk only. Tap a card, read the question out loud and pass the &ldquo;mic&rdquo;. The follow-up post-it appears in the middle, with starters.">
+      <div><span class="rot">Warm-up · talk, don't write</span><h2 class="tt">Pass the mic</h2><p class="tx">Open a card, read it out loud, then pass the mic.</p></div>
+      <div class="warm-grade">
+        <button type="button" class="carta" data-f="0"><span class="in"><span class="f"><b>01</b><span>Tap to open</span></span><span class="v"><p>Who is the funniest person you know? What do they do that makes you laugh?</p><small>Talk for 30 seconds</small></span></span></button>
+        <button type="button" class="carta" data-f="1"><span class="in"><span class="f"><b>02</b><span>Tap to open</span></span><span class="v"><p>Have you ever laughed at a joke you didn't understand? What happened?</p><small>Tell the story</small></span></span></button>
+        <button type="button" class="carta" data-f="2"><span class="in"><span class="f"><b>03</b><span>Tap to open</span></span><span class="v"><p>Is your sense of humor the same in Portuguese and in English?</p><small>Give an example</small></span></span></button>
+      </div>
+      <div class="slot" id="slotWarm"></div>
+    </section>
+
+    <!-- 2 vídeo -->
+    <section class="cena c-video" data-k="l" data-nome="The video" data-guia="Three steps: the student answers the two Before questions (the video unlocks), you watch together, then True or false. The screen never shows the transcript.">
+      <div class="player-caixa">
+        <div class="player" id="player" aria-hidden="true"><span class="play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M7 4.5v15l12-7.5z"/></svg></span><small>BBC Learning English · 3:25</small></div>
+        <div class="cadeado" id="cadeado">
+          <span class="anel-mini"><svg viewBox="0 0 44 44" aria-hidden="true"><circle class="tr" cx="22" cy="22" r="18"/><circle class="vl" id="cadAnel" cx="22" cy="22" r="18"/></svg>
+            <svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+          <b>The video is locked</b>
+          <span id="cadTx">Answer the two questions to unlock it · 0 of 2</span>
+        </div>
+      </div>
+      <div>
+        <span class="rot">Watch in three steps</span>
+        <div class="tempos" role="tablist" id="tempos"><i aria-hidden="true"></i><button type="button" class="tempo" role="tab" aria-selected="true" data-t="0">Before</button><button type="button" class="tempo" role="tab" aria-selected="false" data-t="1" disabled>Watch</button><button type="button" class="tempo" role="tab" aria-selected="false" data-t="2" disabled>After</button></div>
+        <div id="tempo0" class="perg-video">
+          <h2 class="tt" style="font-size:max(16px,2cqw)">1 · Why is humor hard in another language?</h2>
+          <div class="ops" id="voto"><button type="button" class="op" data-v="54">Jokes play with spelling and sounds<span class="vt"></span></button><button type="button" class="op" data-v="31">Different cultures laugh at different things<span class="vt"></span></button><button type="button" class="op" data-v="15">People speak too fast<span class="vt"></span></button></div>
+          <h2 class="tt" style="font-size:max(16px,2cqw);margin-top:1.4cqw">2 · Everyone laughs and you don't get it. You…</h2>
+          <div class="ops" id="voto2"><button type="button" class="op" data-v="40">laugh anyway<span class="vt"></span></button><button type="button" class="op" data-v="35">ask "Sorry, what's funny?"<span class="vt"></span></button><button type="button" class="op" data-v="25">stay quiet and smile<span class="vt"></span></button></div></div>
+        <div id="tempo1" hidden><h2 class="tt" style="font-size:max(16px,2cqw)">Listen for two jokes. Who is at the door?</h2></div>
+        <div id="tempo2" hidden><h2 class="tt" style="font-size:max(18px,2.4cqw)">True or false?</h2>
+          <div class="ops" id="vf"><button type="button" class="op" data-ok="0">You must change your humor to fit in.</button><button type="button" class="op" data-ok="1">You can be funny with simple English.</button><button type="button" class="op" data-ok="1">Laughing at yourself relaxes the room.</button></div></div>
+      </div>
+    </section>
+
+    <!-- 3 knock knock -->
+    <section class="cena c-knock" data-k="o" data-nome="Knock, knock" data-guia="You say &ldquo;Knock, knock&rdquo; and the student answers &ldquo;Who&rsquo;s there?&rdquo;. At the punchline the name splits: that is how a pun works. Then the student tells it back to you.">
+      <div>
+        <span class="rot">Wordplay decoder</span><h2 class="tt">Who's there?</h2>
+        <p class="tx">A pun is a joke that plays with how a word sounds. Open the door, then split the name.</p>
+        <div class="abas" role="tablist" id="abasK"></div>
+        <div class="trocadilho" style="margin-top:1.6cqw"><span class="som">Pun power</span><span class="medidor"><i id="medidor"></i></span></div>
+      </div>
+      <div style="display:grid;gap:1.2cqw"><div class="porta" id="porta" aria-live="polite"></div><div class="slot" id="slotKnock"></div></div>
+    </section>
+
+    <!-- 4 radar -->
+    <section class="cena c-radar" data-k="o" data-nome="Your humor" data-guia="The test: four situations, the student picks a reaction. Each answer adds a point to one of the four styles from the video, and the chart grows. At the end, ask for a true story that proves the style.">
+      <div class="radar"><svg viewBox="-150 -150 300 300" id="radar" role="img" aria-label="Your humor chart"></svg></div>
+      <div>
+        <span class="rot">Humor test · <span id="qNum">situation 1 of 4</span></span>
+        <h2 class="tt" id="qTit">What's your style?</h2>
+        <div class="ops" id="qOps" style="margin-top:1.2cqw"></div>
+        <p class="voce" id="voce" style="margin-top:1.2cqw"></p>
+        <button type="button" class="bt" id="qDe" hidden>TRY AGAIN</button>
+      </div>
+    </section>
+
+    <!-- 5 gramática -->
+    <section class="cena c-gram" data-k="f" data-nome="Grammar" data-guia="Even if = it doesn&rsquo;t matter if this is true. Whether&hellip; or = it doesn&rsquo;t matter which one. Build the sentence together, then ask for one of their own.">
+      <div class="regra">
+        <span class="rot">From the video</span>
+        <h3>Even if · whether… or</h3>
+        <div class="l"><b>even if</b><span>it doesn't matter if this is true: the result is the same.</span></div>
+        <div class="l"><b>whether… or</b><span>it doesn't matter which one: the result is the same.</span></div>
+        <p class="tx" style="color:#e3dcff">"Even if the humor varies across cultures, you don't have to change."</p>
+      </div>
+      <div class="montar">
+        <span class="rot">Build the sentence</span>
+        <div class="frase" id="frase"></div>
+        <div class="pecas" id="pecas"></div>
+        <div style="display:flex;gap:.8cqw;flex-wrap:wrap"><button type="button" class="bt" id="limpa">CLEAR</button><button type="button" class="bt cheio" id="confere">CHECK</button></div>
+      </div>
+    </section>
+
+    <!-- 5b armadilhas -->
+    <section class="cena c-arm" data-k="f" data-nome="Three traps" data-guia="The three Portuguese traps: &ldquo;even that&rdquo;, whether without &ldquo;or&rdquo;, and the past after &ldquo;don&rsquo;t&rdquo;. The student taps the wrong sentence and it fixes itself; ask them to read the right one out loud.">
+      <div><span class="rot">Focus · tap the mistake to fix it</span><h2 class="tt">Three traps</h2></div>
+      <div class="armas" id="armas"></div>
+    </section>
+
+    <!-- 6 prática -->
+    <section class="cena c-pratica" data-k="f" data-nome="Practice" data-guia="Four sentences. A wrong gap turns pink and the student tries again. Ask them to read each sentence out loud once it is right.">
+      <div><span class="rot">Practice · the student taps, you hear the sentence</span><h2 class="tt">Choose the right words</h2></div>
+      <div class="itens" id="itens"></div>
+    </section>
+
+    <!-- 7 kit -->
+    <section class="cena c-kit" data-k="o" data-nome="Funny toolkit" data-guia="Each card is a tip from the video with a challenge on the back. The student flips it and does the challenge right there, with you.">
+      <div><span class="rot">Five tips from the video</span><h2 class="tt">Your funny toolkit</h2></div>
+      <div class="kit" id="kit"></div>
+      <div class="slot" id="slotKit"></div>
+    </section>
+
+    <!-- 8 write -->
+    <section class="cena c-escrita" data-k="w" data-nome="Write your joke" data-guia="The student writes their own knock-knock joke. Pieces from the bank go in with one tap; the line under the paper checks &ldquo;even that&rdquo; and whether without &ldquo;or&rdquo;.">
+      <div>
+        <span class="rot">Write · it goes to your My notes</span>
+        <h2 class="tt">Write your own knock-knock joke</h2>
+        <p class="tx">Find a name that sounds like other words. Tap a piece to add it, then finish it your way.</p>
+        <div class="banco" id="banco">
+          <button type="button" class="pc">Knock, knock.</button><button type="button" class="pc">Who's there?</button>
+          <button type="button" class="pc">Ice cream.</button><button type="button" class="pc">Ice cream who?</button>
+          <button type="button" class="pc">Ice cream every time I see a ghost!</button>
+          <button type="button" class="pc ajuda">Even if…</button><button type="button" class="pc ajuda">Whether… or…</button>
+        </div>
+      </div>
+      <div class="escrita-col"><div class="papel" data-papel><div class="espelho" aria-hidden="true"></div><textarea id="piada" data-campo="piada" spellcheck="true" lang="en" autocapitalize="sentences" autocomplete="off" placeholder="Knock, knock…" aria-label="Your joke"></textarea><button type="button" class="bt cheio salvar-nota" id="bNota">SAVE TO MY NOTES</button><small id="nota">Saved to My notes</small></div><div class="corretor" id="corretor" aria-live="polite"></div></div>
+    </section>
+
+    <!-- 9 palco aberto -->
+    <section class="cena c-mic" data-k="o" data-nome="Open mic" data-guia="The student tells their joke with timing and a smile. You clap until the standing ovation, then use GOT IT or ONE MORE TIME.">
+      <div>
+        <span class="onair"><i></i>On air</span>
+        <h2 class="tt" style="margin-top:1cqw">Your turn on stage</h2>
+        <p class="tx" style="margin-top:1cqw">Tell your joke from the last scene, or one from today. Pause before the punchline. Smile. Even if nobody laughs, laugh with them.</p>
+        <div class="so-prof" style="margin-top:1.4cqw"><span class="quem">Only you see this</span><b>How was the timing?</b><span class="bts"><button type="button" class="bt cheio" data-av="Great timing!">GOT IT</button><button type="button" class="bt" data-av="One more time, with a pause">ONE MORE TIME</button></span></div>
+      </div>
+      <div class="aplauso">
+        <div class="barras" id="barras"></div>
+        <button type="button" class="palmas" id="palmas">CLAP</button>
+        <div class="ovacao" id="ovacao" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <footer class="pe foot">
+      <button type="button" class="bt" id="ant">BACK</button>
+      <span class="pts" id="pts" aria-hidden="true"></span>
+      <button type="button" class="bt cheio" id="prox">NEXT</button>
+    </footer>
+    <div class="vivas" id="vivas"></div>
+    <div class="avisos" id="avisos" aria-live="polite"></div>
+  </div>
+
+</div>
+
+
+<div id="guia" class="guia-dlg" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Open Mic Night · How to be funny in English</h2>
+    <p>Based on the BBC Learning English video about not getting the joke. The screen is a small comedy club: a neon sign, one microphone, one spotlight. The grammar comes from the video itself: <b>even if</b> (it doesn&rsquo;t matter if this is true) and <b>whether&hellip; or</b> (it doesn&rsquo;t matter which one). No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaTx"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Warm-up, Knock knock, Your humor, Funny toolkit, Open mic. After each answer a follow-up appears in the middle, with starters the student can tap and a Help.</li>
+      <li><b>Listen</b> &mdash; The video, in three steps. It stays locked until the student answers the two Before questions.</li>
+      <li><b>Focus</b> &mdash; Grammar, Three traps, Practice.</li>
+      <li><b>Write</b> &mdash; Write your joke. The student writes on their device; you see every letter; SAVE sends it to their My notes.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Portuguese &ldquo;mesmo que&rdquo; becomes <i>even that</i>. &ldquo;Seja&hellip; ou&hellip;&rdquo; loses the <i>or</i>: <i>whether you&rsquo;re playful, be yourself</i>. And after <i>don&rsquo;t</i> the past sneaks in: <i>I don&rsquo;t understood</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, votes and writes. The boxes marked &ldquo;Only you see this&rdquo; are yours: GOT IT when the answer works, ONE MORE when you want another question. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script>
+/* a ficha da aula: o site.mjs lê o nome e o kick (nível · gramática) daqui */
+const M = { nome: "How to Be Funny", kick: "B1 · EVEN IF, WHETHER… OR" };
+/* o contrato com o fio da sala ao vivo (05-sala.js): S.i é a cena, vai(n) troca */
+window.__wlModoAlunoProprio = true;
+var S = { i: 0 };
+var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return [].slice.call((c||document).querySelectorAll(s))};
+var reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var sem=7;function rnd(){sem=(sem*9301+49297)%233280;return sem/233280}
+function festa(n){if(reduz)return;var v=$('#vivas'),w=v.clientWidth,cores=['#c6f36b','#ff7eb6','#cbbcff','#ffd9a8'];for(var i=0;i<(n||26);i++){var f=document.createElement('span');f.className='confete';f.style.left=(w/2)+'px';f.style.top='45%';f.style.background=cores[i%4];f.style.setProperty('--dx',(rnd()*w*.8-w*.4)+'px');f.style.setProperty('--dy',(rnd()*260-200)+'px');f.style.setProperty('--r',(rnd()*720)+'deg');v.appendChild(f);setTimeout(f.remove.bind(f),1500)}}
+
+/* navegação */
+var cenas=$$('.cena'),ci=0;
+$('#pts').innerHTML=cenas.map(function(){return '<i></i>'}).join('');
+function vai(i){ci=Math.max(0,Math.min(cenas.length-1,i));S.i=ci;cenas.forEach(function(c,k){c.classList.toggle('on',k===ci)});$$('#pts i').forEach(function(p,k){p.classList.toggle('on',k===ci)});var k=cenas[ci].dataset.k||'';$$('.wolf span').forEach(function(s){var antes=cenas.slice(0,ci).some(function(c){return c.dataset.k===s.dataset.k});s.classList.toggle('agora',s.dataset.k===k);s.classList.toggle('feita',antes&&s.dataset.k!==k)});
+  $('#ant').disabled=ci===0;$('#prox').textContent=ci===cenas.length-1?'FINISH':'NEXT';$('#guiaTx').textContent=cenas[ci].dataset.guia;window.scrollTo(0,0)}
+$('#prox').onclick=function(){if(ci===cenas.length-1){festa(40);return}vai(ci+1)};$('#ant').onclick=function(){vai(ci-1)};
+document.addEventListener('keydown',function(e){if(e.target.closest('input,textarea'))return;if(e.key==='ArrowRight')vai(ci+1);if(e.key==='ArrowLeft')vai(ci-1)});
+vai(0);
+
+/* 1 cartas */
+$$('.carta').forEach(function(c){c.onclick=function(){c.classList.toggle('vira')}});
+
+/* 2 vídeo: três tempos, voto e V/F */
+function aviso(m){var a=document.createElement('div');a.className='aviso';a.setAttribute('role','status');a.innerHTML='<span class="ok">✓</span><span></span><span class="t"></span>';a.children[1].textContent=m;$('#avisos').appendChild(a);setTimeout(function(){a.remove()},3100)}
+function tempo(k){$$('#tempos .tempo').forEach(function(x){x.setAttribute('aria-selected',String(x.dataset.t===String(k)))});$('#tempos i').style.transform='translateX('+(k*100)+'%)';[0,1,2].forEach(function(n){$('#tempo'+n).hidden=n!==k})}
+$$('#tempos .tempo').forEach(function(t){t.onclick=function(){if(!t.disabled)tempo(+t.dataset.t)}});
+/* o vídeo destranca quando as duas perguntas do Before têm resposta */
+var respondidas={};
+function destranca(){var n=Object.keys(respondidas).length;$('#cadAnel').style.strokeDashoffset=113*(1-n/2);$('#cadTx').textContent=n<2?'Answer the two questions to unlock it · '+n+' of 2':'Unlocked!';
+  if(n===2&&!$('.player-caixa').classList.contains('solto')){$('.player-caixa').classList.add('solto');var p=$('#player');p.removeAttribute('aria-hidden');p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/wDFV1sZo1gY?rel=0&modestbranding=1&playsinline=1" title="BBC Learning English: getting the joke" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';$$('#tempos .tempo').forEach(function(x){x.disabled=false});aviso('Video unlocked · teacher, press play');setTimeout(function(){tempo(1)},900)}}
+['#voto','#voto2'].forEach(function(g){$$(g+' .op').forEach(function(o){o.onclick=function(){$$(g+' .op').forEach(function(x){x.setAttribute('aria-pressed',String(x===o));$('.vt',x).textContent=x.dataset.v+'%'});respondidas[g]=1;destranca()}})});
+$$('#vf .op').forEach(function(o){o.onclick=function(){o.classList.remove('certa','errada');void o.offsetWidth;o.classList.add(o.dataset.ok==='1'?'certa':'errada')}});
+
+/* 3 knock knock */
+var PIADAS=[
+  {n:'Isabelle',q:'Is a bell really necessary on a bicycle?',parte:['Is','a','bell'],som:'/ˈɪzəbel/ → /ɪz ə bel/',pw:70},
+  {n:'Lettuce',q:"Let us in. It's cold out here!",parte:['Let','us'],som:'/ˈletɪs/ → /let əs/',pw:80},
+  {n:'Olive',q:'Olive you! (I love you!)',parte:['I','love'],som:'/ˈɒlɪv/ → /aɪ lʌv/',pw:90},
+  {n:'Boo',q:"Don't cry, it's only a joke!",parte:['Boo-hoo'],som:'"boo-hoo" = the sound of crying',pw:60}
+];
+var pk=0,passo=0;
+$('#abasK').innerHTML=PIADAS.map(function(p,i){return '<button type="button" class="aba" role="tab" data-i="'+i+'">'+p.n+'</button>'}).join('');
+$$('#abasK .aba').forEach(function(a){a.onclick=function(){pk=+a.dataset.i;passo=0;porta()}});
+function porta(){var p=PIADAS[pk],h='';$$('#abasK .aba').forEach(function(a,i){a.setAttribute('aria-selected',String(i===pk))});
+  var falas=[['a','Knock, knock.'],['b',"Who's there?"],['a',p.n+'.'],['b',p.n+' who?']];
+  for(var i=0;i<Math.min(passo,4);i++)h+='<div class="fala '+falas[i][0]+'">'+falas[i][1]+'</div>';
+  if(passo>=5)h+='<div class="fala a">'+p.q+'</div><div class="fala b" style="background:transparent;padding:0"><span class="parte abre">'+p.parte.map(function(x){return '<span>'+x+'</span>'}).join('')+'</span> <span class="som">'+p.som+'</span></div>';
+  var rot=passo<4?'Next line':passo===4?'Punchline!':'Again';
+  $('#porta').innerHTML=h+'<button type="button" class="bt cheio" id="bk" style="justify-self:start;margin-top:auto">'+rot+'</button>';
+  $('#medidor').style.width=passo>=5?p.pw+'%':'0';
+  $('#bk').onclick=function(){if(passo>=5){passo=0}else passo++;porta();if(passo===5)festa(16)}}
+porta();
+
+/* 4 radar */
+/* o teste: cada reação soma um ponto num estilo; o gráfico nasce vazio e cresce com as respostas */
+var EST=['Playful','Sarcastic','Dry','Goofy'],niv=[0,0,0,0],qi=0;
+var SIT=[
+  ['Your friend falls asleep in a meeting. You…',[['wake him up with a joke',0],['say "Great meeting, huh?"',1],['say "Nice nap" later, with a straight face',2],['take a selfie making a silly face next to him',3]]],
+  ['It rains on your beach day. You say…',[['"Beach party in the living room!"',0],['"Oh, perfect weather for a tan."',1],['"Well, the sea is wet anyway."',2],['nothing. You dance in the rain.',3]]],
+  ['"How are you?" on a Monday morning. You answer…',[['"Ask me again on Friday!"',0],['"Never better. I love Mondays."',1],['"Living the dream."',2],['with a slow zombie walk',3]]],
+  ['You make a mistake in English and everybody laughs. You…',[['laugh: "My English is on holiday!"',0],['say "Wow, I\'m sooo good at English."',1],['say "Yes. I just invented a word."',2],['take a bow, like it was on purpose',3]]]
+];
+function radar(){var R=110,n=4,pts=[],h='',max=4;for(var a=1;a<=4;a++){var g=[];for(var i=0;i<n;i++){var t=-Math.PI/2+i*2*Math.PI/n;g.push((Math.cos(t)*R*a/4).toFixed(1)+','+(Math.sin(t)*R*a/4).toFixed(1))}h+='<polygon class="grade-r" points="'+g.join(' ')+'"/>'}
+  for(var i=0;i<n;i++){var t=-Math.PI/2+i*2*Math.PI/n,x=Math.cos(t),y=Math.sin(t),r=R*(.08+.92*niv[i]/max);h+='<line class="eixo" x1="0" y1="0" x2="'+(x*R)+'" y2="'+(y*R)+'"/>';pts.push([x*r,y*r]);h+='<text class="rotr" x="'+(x*(R+20))+'" y="'+(y*(R+20)+4)+'" text-anchor="'+(Math.abs(x)<.1?'middle':x>0?'start':'end')+'">'+EST[i]+' '+niv[i]+'</text>'}
+  h+='<polygon class="forma" points="'+pts.map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1)}).join(' ')+'"/>'+pts.map(function(p){return '<circle class="pt" r="5" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'"/>'}).join('');
+  $('#radar').innerHTML=h}
+function pergunta(){if(qi>=SIT.length){var mx=Math.max.apply(null,niv),quem=EST.filter(function(e,i){return niv[i]===mx});
+    $('#qNum').textContent='your result';$('#qTit').textContent='You are mostly '+quem.join(' and ').toLowerCase()+'!';$('#qOps').innerHTML='';
+    $('#voce').textContent='Do you agree? Tell a true story that proves it.';$('#qDe').hidden=false;festa(24);return}
+  var s=SIT[qi];$('#qNum').textContent='situation '+(qi+1)+' of '+SIT.length;$('#qTit').textContent=s[0];$('#voce').textContent='';$('#qDe').hidden=true;
+  $('#qOps').innerHTML=s[1].map(function(o){return '<button type="button" class="op" data-e="'+o[1]+'">'+o[0]+'</button>'}).join('');
+  $$('#qOps .op').forEach(function(b){b.onclick=function(){niv[+b.dataset.e]++;b.setAttribute('aria-pressed','true');radar();qi++;setTimeout(pergunta,450)}})}
+$('#qDe').onclick=function(){niv=[0,0,0,0];qi=0;radar();pergunta()};
+radar();pergunta();
+
+/* 5 montar a frase */
+var CERTA=['Even if','your English','isn\'t perfect,','you can','make people laugh.'];
+/* rodízio fixo, nunca sorteio: o aluno e o professor veem a mesma ordem */
+function embaralha(a){return [2,4,0,3,1].map(function(i){return a[i]})}
+function montaPecas(){$('#frase').innerHTML='';$('#frase').classList.remove('ok');$('#pecas').innerHTML='';embaralha(CERTA).forEach(function(p){var b=document.createElement('button');b.type='button';b.className='peca';b.textContent=p;b.onclick=function(){(b.parentNode.id==='pecas'?$('#frase'):$('#pecas')).appendChild(b)};$('#pecas').appendChild(b)})}
+montaPecas();$('#limpa').onclick=montaPecas;
+$('#confere').onclick=function(){var f=$$('#frase .peca').map(function(b){return b.textContent});var ok=f.join(' ')===CERTA.join(' ');$('#frase').classList.toggle('ok',ok);if(ok)festa(20);else{$('#frase').animate([{transform:'translateX(0)'},{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'translateX(0)'}],{duration:300})}};
+
+/* 6 prática */
+var IT=[['___ you don\'t get the joke, smile and ask.',['Even if','Whether'],0],['Notice what makes you laugh, ___ it\'s a sitcom or a YouTube video.',['even if','whether'],1],['You don\'t have to change, ___ the humor is different here.',['even if','whether'],0],['Be yourself, whether you\'re playful ___ sarcastic.',['or','if'],0]];
+var acertos=0;
+$('#itens').innerHTML=IT.map(function(it,i){return '<div class="it" data-i="'+i+'"><span class="n">'+(i+1)+'</span><span>'+it[0].replace('___','<span class="lac">____</span>')+'</span><span class="esc">'+it[1].map(function(o,k){return '<button type="button" data-k="'+k+'">'+o+'</button>'}).join('')+'</span></div>'}).join('');
+$$('#itens .it').forEach(function(l){var it=IT[+l.dataset.i],feito=false;$$('.esc button',l).forEach(function(b){b.onclick=function(){var lac=$('.lac',l);lac.textContent=b.textContent;var ok=+b.dataset.k===it[2];lac.classList.toggle('errada',!ok);if(ok&&!feito){feito=true;acertos++;l.classList.add('ok');if(acertos===4){festa(30);aviso('GOT IT · now read them out loud')}}}})});
+
+/* 7 kit */
+var ICO={rosto:'<circle cx="12" cy="12" r="9"/><path d="M8.5 14.5s1.3 2 3.5 2 3.5-2 3.5-2M9 9.5h.01M15 9.5h.01"/>',mao:'<path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v2M10 10.5V6a2 2 0 0 0-4 0v8M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/>',voz:'<path d="M2 12h2M6 8v8M10 5v14M14 8v8M18 10v4M22 12h0"/>',riso:'<circle cx="12" cy="12" r="9"/><path d="M7 13a5 5 0 0 0 10 0zM9 9h.01M15 9h.01"/>',olho:'<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>'};
+var KIT=[['rosto','Use your face','Say "I love homework" with a serious face. Then with a big smile.'],['mao','Use gestures','Tell your partner about a terrible date, using only hands and 5 words.'],['voz','Play with your voice','Say "Oh, wonderful" three ways: happy, bored, sarcastic.'],['riso','Laugh at yourself','Share one funny mistake you made in English.'],['olho','Notice what works','Name a funny scene from a sitcom. Was it timing, a face, or a phrase?']];
+$('#kit').innerHTML=KIT.map(function(k){return '<button type="button" class="kt"><span class="in"><span class="f"><span class="disco"><svg viewBox="0 0 24 24" aria-hidden="true">'+ICO[k[0]]+'</svg></span><b>'+k[1]+'</b><small>Tap for the challenge</small></span><span class="v"><b>Try it now</b><p>'+k[2]+'</p></span></span></button>'}).join('');
+$$('.kt').forEach(function(k){k.onclick=function(){k.classList.toggle('vira')}});
+
+/* 8 aplauso */
+var N=12,palmas=0;$('#barras').innerHTML=Array(N).join('<i></i>')+'<i></i>';
+$('#palmas').onclick=function(){palmas=Math.min(N,palmas+1);$$('#barras i').forEach(function(b,i){var on=i<palmas;b.classList.toggle('on',on);b.style.height=on?(30+Math.sin(i*1.3)*14+i*5)+'%':'12%'});$('#ovacao').textContent=palmas>=N?'Standing ovation!':palmas>8?'The room is laughing!':palmas>4?'Getting louder…':'';if(palmas===N){festa(46);setTimeout(function(){palmas=0},1600)}};
+
+/* ===== o método das Live Lessons ===== */
+/* o follow-up no meio: o post-it com a pergunta seguinte, os starters que o aluno toca e o Help */
+function postit(slot,f){var el=$(slot);el.innerHTML='<div class="postit"><p>'+f.q+'</p><div class="starters">'+f.st.map(function(x,i){return '<button type="button" class="pc" aria-pressed="false" data-i="'+i+'">'+x+'</button>'}).join('')+'<button type="button" class="help">Help</button></div><span class="dica-help" hidden>'+f.help+'</span>'+
+  '<div class="so-prof"><span class="quem">Only you see this</span><span class="tapped">Waiting for the student…</span><span class="bts"><button type="button" class="bt cheio" data-av="GOT IT · great answer">GOT IT</button><button type="button" class="bt" data-av="Ask one more question">ONE MORE</button></span></div></div>';
+  $$('.starters .pc',el).forEach(function(b){b.onclick=function(){$$('.starters .pc',el).forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});$('.tapped',el).textContent='STUDENT TAPPED: "'+b.textContent+'"'}});
+  $('.help',el).onclick=function(){$('.dica-help',el).hidden=false};
+  ligaProf(el)}
+function ligaProf(el){$$('.so-prof [data-av]',el).forEach(function(b){b.onclick=function(){aviso(b.dataset.av)}})}
+ligaProf(document);
+var FW=[
+  {q:'Why are they funny? Is it what they say, or how they say it?',st:['It\'s the way they…','They always…','Even if…'],help:'Think of one moment. Where were you? What did they do?'},
+  {q:'How did you feel? What did you do next?',st:['I felt…','I just laughed because…','Next time, I\'ll…'],help:'Use the past: "I laughed", "I didn\'t understand".'},
+  {q:'Which language is easier for jokes? Why?',st:['In Portuguese, I…','In English, it\'s harder because…','Whether I\'m… or…, I…'],help:'Try "whether... or" to compare the two languages.'}
+];
+$$('.carta').forEach(function(c){var velho=c.onclick;c.onclick=function(){velho&&velho();if(c.classList.contains('vira'))postit('#slotWarm',FW[+c.dataset.f])}});
+var FK=[
+  {q:'Now you! Tell this joke to me. Pause before the punchline.',st:['Knock, knock.','…who?','Ha! I get it!'],help:'Say the name slowly first, then fast: "Is-a-bell… Isabelle".'}
+];
+var bkVelho=null;(function(){var obs=new MutationObserver(function(){if($('#porta .parte'))postit('#slotKnock',FK[0]);else $('#slotKnock').innerHTML=''});obs.observe($('#porta'),{childList:true})})();
+var FT=[
+  {q:'Do the challenge now. Then: which tip will you use this week?',st:['I\'ll try…','Even if I feel shy, I\'ll…','My favorite tip is…'],help:'Pick one card and say when you will use it.'}
+];
+$$('.kt').forEach(function(k){var v=k.onclick;k.onclick=function(){v&&v();if(k.classList.contains('vira'))postit('#slotKit',FT[0])}});
+
+/* o vídeo grande e no centro na hora de assistir */
+var tempoVelho=tempo;tempo=function(k){tempoVelho(k);$('.c-video').classList.toggle('assistir',k===1)};
+$$('#tempos .tempo').forEach(function(t){t.onclick=function(){if(!t.disabled)tempo(+t.dataset.t)}});
+
+/* as três armadilhas */
+var ARM=[
+  ['<s>Even that</s> my English isn\'t perfect, I tell jokes.','<b>Even if</b> my English isn\'t perfect, I tell jokes.','"Mesmo que" is even if (or even though). Never "even that".'],
+  ['Whether you\'re playful, be yourself.','Whether you\'re playful <b>or serious</b>, be yourself.','Whether needs two options: this or that.'],
+  ['Even if I don\'t <s>understood</s> the joke, I laugh.','Even if I don\'t <b>understand</b> the joke, I laugh.','After don\'t / doesn\'t, the verb stays in the base form.']
+];
+$('#armas').innerHTML=ARM.map(function(a,i){return '<button type="button" class="arma"><span class="in"><span class="f"><small>TRAP '+(i+1)+' · TAP TO FIX</small><p>'+a[0]+'</p></span><span class="v"><p>'+a[1]+'</p><small>'+a[2]+'</small></span></span></button>'}).join('');
+$$('.arma').forEach(function(a){a.onclick=function(){a.classList.toggle('vira');if($$('.arma.vira').length===3)aviso('GOT IT · all three traps fixed')}});
+
+/* write: as peças entram onde está o cursor; o corretor nível 1 vê a regra da aula */
+var piada=$('#piada'),tNota;
+/* 10/10 · o corretor das Live Classes: sublinhado ondulado e "Help" com a regra da aula */
+if(window.WolfCorretor){WolfCorretor.regras=function(frase,minusc){return WolfCorretor.acha(/even that/g,minusc,0,'Check: "even that" → try "even if".').concat(/whether\b/.test(minusc)&&!/\bor\b/.test(minusc)&&/[.!?]\s*$/.test(minusc)?WolfCorretor.acha(/whether/g,minusc,0,'Check: "whether" needs "or".'):[])};WolfCorretor.liga(document)}
+$$('#banco .pc').forEach(function(b){b.onclick=function(){var t=b.textContent.replace('…',' '),a=piada.selectionStart||piada.value.length,v=piada.value,antes=v.slice(0,a),sep=antes&&!/\s$/.test(antes)?(/[.?!]$/.test(antes)?'\n':' '):'';piada.value=antes+sep+t+v.slice(a);piada.focus();var q=(antes+sep+t).length;piada.setSelectionRange(q,q);salva()}});
+function salva(){clearTimeout(tNota);$('#nota').classList.remove('on');var v=piada.value;
+  $('#corretor').textContent=/even that/i.test(v)?'Check: "even that" → try "even if".':/whether\b(?![^.!?]*\bor\b)/i.test(v)&&/[.!?]\s*$/.test(v)?'Check: "whether" needs "or".':'';
+  }
+piada.addEventListener('input',salva);
+$('#bNota').onclick=function(){var v=piada.value.trim();if(!v)return;try{if(window.__wlSalaNota)window.__wlSalaNota(v)}catch(e){}$('#nota').classList.add('on');aviso('Saved to My notes')};
+
+/* as ferramentas do professor */
+function guia(on){$('#guia').hidden=!on}
+$('#bguia').onclick=function(){guia(true)};$('#fguia').onclick=function(){guia(false)};$('#guia').onclick=function(e){if(e.target===this)guia(false)};
+document.addEventListener('keydown',function(e){if(e.target.closest('input,textarea'))return;if(e.key==='g'||e.key==='G')guia($('#guia').hidden);if(e.key==='Escape')guia(false)});
+$('#bZoom').onclick=function(){$('#tela').classList.toggle('zoom')};
+$('#bTela').onclick=function(){var t=$('#tela');try{(document.fullscreenElement?document.exitFullscreen():t.requestFullscreen()).catch(function(){})}catch(e){}};
+</script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Even if (não importa se é verdade) e whether… or (não importa qual), num clube de comédia: humor em inglês, trocadilho e timing.",
+  "armadilha": "“Mesmo que” vira “even that”; “seja… ou” perde o or (“whether you’re playful, be yourself”); e depois de don’t entra o passado: “I don’t understood”.",
+  "pal": [
+   "even if",
+   "whether … or",
+   "pun",
+   "punchline",
+   "timing",
+   "sarcastic",
+   "dry humor",
+   "goofy"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abrir rindo, antes de explicar qualquer coisa.",
+   "perg": "In which language are you funnier?",
+   "pula": "Leia o título e vá direto ao warm-up."
+  },
+  "c1": {
+   "obj": "Aquecer falando de humor na vida dele; o follow-up aparece no meio.",
+   "perg": "Who is the funniest person you know?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "O vídeo em três passos: antes, assistir juntos, verdadeiro ou falso.",
+   "perg": "Why didn’t she get the joke?",
+   "pula": "Assista uma vez e faça só o True or false."
+  },
+  "c3": {
+   "obj": "O trocadilho do knock-knock: o nome se divide e vira a piada.",
+   "perg": "Can you tell it back to me?",
+   "pula": "Uma piada só, e ele conta de volta."
+  },
+  "c4": {
+   "obj": "O teste dos quatro estilos de humor; o gráfico cresce a cada resposta.",
+   "perg": "Are you more playful or more sarcastic?",
+   "pula": "Duas situações e o resultado."
+  },
+  "c5": {
+   "obj": "Even if e whether… or: montar a frase juntos e pedir uma dele.",
+   "perg": "Whether you laugh or not, …?",
+   "pula": "Uma frase de cada."
+  },
+  "c6": {
+   "obj": "As três armadilhas do português: even that, whether sem or, passado depois de don’t.",
+   "perg": "What’s wrong with “even that”?",
+   "pula": "Só a primeira armadilha."
+  },
+  "c7": {
+   "obj": "Quatro frases para completar; depois ler cada uma em voz alta.",
+   "perg": "Read it out loud, please.",
+   "pula": "Duas frases bastam."
+  },
+  "c8": {
+   "obj": "As dicas do vídeo, com um desafio atrás de cada carta.",
+   "perg": "Can you try it right now?",
+   "pula": "Uma carta e o desafio dela."
+  },
+  "c9": {
+   "obj": "Ele escreve o próprio knock-knock; o corretor marca even that e whether sem or.",
+   "perg": "Who’s there in your joke?",
+   "pula": "A piada pode ser curta: quatro falas."
+  },
+  "c10": {
+   "obj": "Ele conta a piada com timing; você aplaude até a ovação.",
+   "perg": "Ready? Knock, knock!",
+   "pula": "Uma piada só. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Fast finisher: mais conversa sobre humor, com even if e whether… or.",
+   "perg": "Do you laugh at a joke even if you don’t get it?",
+   "pula": "Uma carta e o follow-up."
+  },
+  "ff-lados": {
+   "obj": "Fast finisher: debate de humor. Ele escolhe um lado; você defende o outro.",
+   "perg": "Is sarcasm funny or rude?",
+   "pula": "Uma rodada já vale."
+  },
+  "ff-passos": {
+   "obj": "Fast finisher: ele monta um minuto de stand-up em três passos.",
+   "perg": "What’s your opening line?",
+   "pula": "Só os passos 1 e 2."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More from the open mic.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "even if",
+    "whether … or",
+    "funny",
+    "joke",
+    "laugh"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR LAUGH",
+     "q": "Do you laugh at a joke even if you don’t get it?",
+     "fup": "What do you say then?",
+     "st": [
+      "Yes, even if I don’t…",
+      "No, I always ask…"
+     ],
+     "ex": "Yes! I laugh even if I don’t get it, and then I ask my friend later."
+    },
+    {
+     "k": "YOUR FAMILY",
+     "q": "Who is the funniest person in your family?",
+     "fup": "What kind of humor do they have?",
+     "st": [
+      "My … is the funniest.",
+      "Whether … or …, he always…"
+     ],
+     "ex": "My uncle. Whether he’s happy or tired, he always has a joke."
+    },
+    {
+     "k": "YOUR SHOWS",
+     "q": "What do you watch when you want to laugh?",
+     "fup": "Do you watch it in English?",
+     "st": [
+      "I watch…",
+      "Even if it’s old, …"
+     ],
+     "ex": "I watch The Office. Even if I know the jokes, I still laugh."
+    },
+    {
+     "k": "YOUR LANGUAGE",
+     "q": "Is it harder to be funny in English or in Portuguese?",
+     "fup": "Why?",
+     "st": [
+      "It’s harder in…, because…"
+     ],
+     "ex": "In English, because the jokes are about words, and I need time."
+    },
+    {
+     "k": "YOUR BAD DAY",
+     "q": "Do you make jokes even if your day is bad?",
+     "fup": "Does it help?",
+     "st": [
+      "I do, even if…",
+      "No, when I’m…"
+     ],
+     "ex": "I do, even if I’m tired. It helps me and my friends."
+    },
+    {
+     "k": "YOUR STYLE",
+     "q": "Playful, sarcastic, dry or goofy: which one are you?",
+     "fup": "And your best friend?",
+     "st": [
+      "I’m more…",
+      "Whether at work or at home, I’m…"
+     ],
+     "ex": "I’m more dry. Whether at work or at home, I say funny things with a straight face."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "even if",
+    "whether … or",
+    "because",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Is sarcasm funny or rude?",
+     "a": "Funny",
+     "b": "Rude",
+     "fa": [
+      "It’s funny. Even if it’s a bit mean, good friends understand it."
+     ],
+     "fb": [
+      "It’s rude. Even if you’re joking, people can feel bad."
+     ]
+    },
+    {
+     "q": "Jokes at work: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Whether the day is good or bad, a joke helps the team."
+     ],
+     "fb": [
+      "No. Even if it’s funny, someone may not like it."
+     ]
+    },
+    {
+     "q": "Funny or smart: what is more important on a first date?",
+     "a": "Funny",
+     "b": "Smart",
+     "fa": [
+      "Funny. Even if the food is bad, you have a good night."
+     ],
+     "fb": [
+      "Smart. A good talk lasts, whether it’s funny or not."
+     ]
+    },
+    {
+     "q": "Can you learn to be funny?",
+     "a": "Yes, you can",
+     "b": "No, it’s natural",
+     "fa": [
+      "Yes. Timing is a skill, whether you’re shy or not."
+     ],
+     "fb": [
+      "No. Even if you study jokes, some people are just funny."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Even if nobody won, everybody laughed."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "One Minute on Stage",
+   "t": "Your one-minute set.",
+   "p": "Three steps. Then perform it.",
+   "prof": "You are the audience. Laugh, clap, and ask one question after each step.",
+   "passos": [
+    {
+     "q": "Start with a true thing about your life.",
+     "st": [
+      "My name is…, and I…",
+      "Every morning, I…"
+     ],
+     "ex": "Every morning, I tell myself I’ll go to the gym. Every morning, I lie."
+    },
+    {
+     "q": "Add a surprise with even if.",
+     "st": [
+      "Even if…, I still…"
+     ],
+     "ex": "Even if my alarm rings five times, I still think I have ten more minutes."
+    },
+    {
+     "q": "End with whether… or.",
+     "st": [
+      "Whether… or…, I always…"
+     ],
+     "ex": "Whether it’s Monday or Friday, I always arrive with coffee and no ideas."
+    }
+   ],
+   "fim": "Set done. Now tell it with timing and a smile."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

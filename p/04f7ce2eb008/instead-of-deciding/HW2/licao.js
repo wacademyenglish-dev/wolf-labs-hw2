@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Instead of Deciding",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/04f7ce2eb008/instead-of-deciding/img/live-celular.webp",
+  "capa": "../img/live-celular.webp",
   "alvo": "preposition + -ing: instead of / without / after / before + -ing; verb + preposition + -ing (insist on, succeed in, give up); TO as a preposition (look forward to, be used to, object to): if IT can follow, use -ing",
   "abrir": "What did you do this week instead of making a decision?",
   "fecho": "After a preposition, the verb takes <b>-ing</b>: <i>instead of deciding, without answering, after reading, before going</i>. Some verbs bring their own preposition: <i>insist on cooking, succeed in changing</i>. Some <b>to</b> are prepositions: <i>look forward to seeing, be used to working</i>. The test: if <b>it</b> can follow the <b>to</b>, use <b>-ing</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about their phones. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/04f7ce2eb008/instead-of-deciding/img/live-quarto.webp",
+      "img": "../img/live-quarto.webp",
       "leg": "A dark bedroom",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Instead of answering her, I watched videos for two hours.",
-          "img": "https://wolf-labs.pages.dev/p/04f7ce2eb008/instead-of-deciding/img/live-celular.webp",
+          "img": "../img/live-celular.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I'm looking forward to leaving my phone in the kitchen.",
-          "img": "https://wolf-labs.pages.dev/p/04f7ce2eb008/instead-of-deciding/img/live-quarto.webp",
+          "img": "../img/live-quarto.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She succeeded in changing the habit.",
-          "img": "https://wolf-labs.pages.dev/p/04f7ce2eb008/instead-of-deciding/img/live-poltrona.webp",
+          "img": "../img/live-poltrona.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/04f7ce2eb008/instead-of-deciding/img/live-poltrona.webp",
+      "img": "../img/live-poltrona.webp",
       "leg": "An armchair by the window at dusk",
       "pede": "Look at the picture: an armchair by the window in the evening. Write 2 or 3 sentences about your evening habits. Use <b>instead of, without, after, before</b> or <b>looking forward to</b> with <b>-ing</b>.",
       "ph": "Instead of …ing, I …",

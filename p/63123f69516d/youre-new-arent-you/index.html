@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · You’re New, Aren’t You? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B1 · Unit 9 · Asking nicely and reporting</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>You’re New, Aren’t You? · B1 Unit 9 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new B1 lesson on question tags: positive sentence → negative tag, negative → positive, the right auxiliary (do / does / did, can, have, will), the special ones (I’m…, aren’t I? Let’s…, shall we?) and falling intonation for small talk.</p><p style="margin:0 0 6px"><b>The story:</b> The student’s first night at a cooking class (invented school). Maya, at the same station, has done the class three times. The teacher looks serious but tells jokes all night.</p><p style="margin:0 0 6px"><b>About 45 min:</b> I · Breaking the Ice (9) · II · The English “né?” (10) · III · Add the Tag (8) · IV · The Arena (8) · V · Your Turn to Break the Ice (10).</p><p style="margin:0"><b>Open with:</b> “How do you start a conversation with a stranger at a party or a class?”</p></div><!--/prep-->
+    <p>Brazilians use “né?” for everything, and in English it often becomes “no?” or “right?”. Tags sound friendly and natural in small talk. Model the falling intonation (you’re almost sure) and the rising one (you really ask). In the hot seat, be a friendly stranger at the class.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>+ sentence, − tag · − sentence, + tag · do / does / did when there is no auxiliary · can / have / will in the tag · I’m…, aren’t I? Let’s…, shall we? · falling × rising intonation</p>
+    <h4>BREAKING THE ICE</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>THE ENGLISH “NÉ?”</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>ADD THE TAG</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>YOUR TURN TO BREAK THE ICE</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>It’s hot, no? (isn’t it?)</i>, <i>You’re new, are you? (aren’t you?)</i>, <i>He likes it, isn’t he? (doesn’t he?)</i>, <i>You went, don’t you? (didn’t you?)</i>, <i>I’m late, amn’t I? (aren’t I?)</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE ARENA (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Before the student breaks the ice with you, they defend a side: a cooking class full of strangers, or videos at home alone. One minute on their side, with question tags on the starters; then <b>Swap sides</b> and one minute for the other side. There is no right answer: wait five seconds in silence before they start, and use the PUSH line (only you see it) to make it harder. Recast quietly (“doesn’t he?” for “isn’t he?”) and listen for falling intonation; at the end, ask them to fix one or two tags themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Breaking the Ice.</li>
+      <li><b>Focus</b>: II · The English “né?” and III · Add the Tag.</li>
+      <li><b>Out loud</b>: IV · The Arena and V · Your Turn to Break the Ice.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* YOU'RE NEW, AREN'T YOU? (Main B1 · Unit 9) · pergunta-surpresa · 27/10/2026 · question tags */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'When did you last talk to a stranger? Where were you?',
+    opc: ['This week', 'This month', 'I can’t remember!'], st: ['It was at …, wasn’t it?', 'I said “…”, and they …'],
+    ex: 'This week, at the bus stop. I said, “It’s cold today, isn’t it?” and we talked for ten minutes.', push: 'Did you start the conversation, or did they? Why?' },
+  { cena: 'descobre', tipo: 'Would you rather', q: 'At a party where you know nobody: would you rather start the conversation or wait for someone?',
+    opc: ['Start it', 'Wait'], st: ['I’d rather …, because …', 'It’s easier to …, isn’t it?'],
+    ex: 'Wait. I’m shy at first, but I always answer with a question back.', push: 'Nobody comes for twenty minutes. What do you say first?' },
+  { cena: 'transforma', tipo: 'Opinion', q: 'Is small talk about the weather boring or useful?',
+    opc: ['Boring', 'Useful', 'It depends'], st: ['It’s a safe topic, isn’t it?', 'Nobody really cares about …, do they?'],
+    ex: 'Useful. Everybody has an opinion about the weather, don’t they? It opens the door.', push: 'Give me a better first topic than the weather. Go.' },
+  { cena: 'cadeira', tipo: 'What if', q: 'Your new colleague doesn’t talk to anybody on the first day. What do you do?',
+    opc: ['Say hi', 'Invite them to lunch', 'Leave them alone'], st: ['You’re new, aren’t you?', 'Let’s …, shall we?'],
+    ex: 'Invite them to lunch: “You’re new, aren’t you? Let’s get lunch together, shall we?”', push: 'They say no, politely. Do you try again tomorrow?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* YOU'RE NEW, AREN'T YOU? (Main B1 · Unit 9) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A arena entra DEPOIS de "III · Add the Tag" (a aula tem 37 min e nenhuma cena extra; a leitura, a regra,
+   a prática e a cadeira quente final são o coração). A aula já tinha o "And you?" (a pergunta antes da
+   leitura) e o papel (IV, o professor é um estranho na turma); faltava a DECISÃO no meio: aula de culinária
+   com estranhos × aprender sozinho em casa pelo vídeo. Question tags nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'arena', apos: 'transforma', est: 'o', min: 8, img: 'conversa', rot: 'The Arena', t: 'A class full of strangers, or a video at home?',
+    p: 'Pick a side and defend it for one minute, with question tags. Then swap.',
+    formato: 'arena',
+    q: 'To learn to cook: a class with strangers, or videos at home alone?',
+    lados: [
+      { nome: 'The class', arg: 'People make it fun, and you can ask questions.' },
+      { nome: 'Videos at home', arg: 'No stress, no strangers, and it’s free.' }
+    ],
+    segundos: 60,
+    st: ['It’s more fun with people, isn’t it?', 'You can’t ask a video a question, can you?', 'Nobody likes cooking with strangers, do they?', 'It’s free at home, isn’t it?'],
+    ex: 'The class. You learn faster with a real teacher, don’t you? And you meet people like Maya. A video can’t taste your sauce, can it?',
+    push: 'The class costs a lot, and your partner talks all night. Still worth it, isn’t it?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Two strangers, one onion.",
+   "p": "Read it out loud with your teacher. Look closer."
+  },
+  "descobre": {
+   "t": "How does the tag change?",
+   "p": "Compare A and B. Which is right? Why?"
+  },
+  "transforma": {
+   "t": "Make it a friendly question.",
+   "p": "Add the right tag. Say it with a falling voice."
+  },
+  "cv-arena": {
+   "t": "A class of strangers, or a video at home?",
+   "p": "Defend a side for one minute, with tags. Then swap."
+  },
+  "cadeira": {
+   "t": "Your teacher is a stranger in the class.",
+   "p": "Start a conversation with tags. React. Continue."
+  }
+ },
+ "prep": {
+  "obj": "Question tags (afirmativa → tag negativa e vice-versa; do/does/did; I’m…, aren’t I?; Let’s…, shall we?) na primeira noite do aluno numa aula de culinária.",
+  "armadilha": "O “né?” do português vira “no?” ou “right?” em tudo, e o auxiliar não acompanha: “He likes it, isn’t he?”, “You’re new, are you?”, “I’m late, amn’t I?”.",
+  "pal": [
+   "isn’t it?",
+   "aren’t you?",
+   "doesn’t he?",
+   "didn’t you?",
+   "aren’t I?",
+   "shall we?",
+   "small talk",
+   "falling intonation"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a situação: primeira noite numa aula de culinária, sem conhecer ninguém.",
+   "perg": "How do you start a conversation with a stranger?",
+   "pula": "Só leia o título e entre."
+  },
+  "leitura": {
+   "obj": "Ler o diálogo entre dois estranhos e uma cebola; depois achar o padrão das tags.",
+   "perg": "How does Maya start the conversation?",
+   "pula": "Uma pergunta antes e uma depois."
+  },
+  "descobre": {
+   "obj": "O “né?” em inglês: comparar A e B e o aluno explica a regra (pode ser em português).",
+   "perg": "Why is B right?",
+   "pula": "Três pares bastam; mostre as armadilhas."
+  },
+  "transforma": {
+   "obj": "Transformar frases em perguntas simpáticas com a tag certa e entonação descendente.",
+   "perg": "What’s the tag for this one?",
+   "pula": "Seis frases bastam."
+  },
+  "cv-arena": {
+   "obj": "Arena: aula com estranhos ou vídeo em casa? Um minuto de cada lado, com tags. Use a linha PUSH.",
+   "perg": "It’s more fun with people, isn’t it?",
+   "pula": "Só um lado, sem trocar."
+  },
+  "cadeira": {
+   "obj": "O aluno puxa conversa com o professor (um estranho na aula) usando tags e reagindo.",
+   "perg": "You’ve done this class before, haven’t you?",
+   "pula": "Três cartões bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais small talk com tags, em situações do dia a dia.",
+   "perg": "It’s a nice day, isn’t it?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e convencer o professor usando tags.",
+   "perg": "You agree, don’t you?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar uma conversa inteira com um estranho, passo a passo, com tags.",
+   "perg": "How would you start it?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Break the ice again.",
+   "p": "Pick a card. Start with a tag.",
+   "palavras": [
+    "isn’t it?",
+    "aren’t you?",
+    "don’t you?",
+    "didn’t you?"
+   ],
+   "cartas": [
+    {
+     "k": "THE ELEVATOR",
+     "q": "You’re in an elevator with a neighbor you never talk to. Start with a tag.",
+     "fup": "What do you say next?",
+     "st": [
+      "It’s …, isn’t it?",
+      "You live on the …, don’t you?"
+     ],
+     "ex": "You live on the fifth floor, don’t you? I always see your dog."
+    },
+    {
+     "k": "THE GYM",
+     "q": "Someone new is next to you at the gym. Break the ice.",
+     "fup": "How would they answer?",
+     "st": [
+      "You’re new here, aren’t you?",
+      "This is …, isn’t it?"
+     ],
+     "ex": "You’re new here, aren’t you? This machine is terrible, isn’t it?"
+    },
+    {
+     "k": "THE WEDDING",
+     "q": "At a wedding, you sit next to a stranger. What do you say?",
+     "fup": "How do they know the couple?",
+     "st": [
+      "You know the …, don’t you?",
+      "The food was …, wasn’t it?"
+     ],
+     "ex": "You work with the bride, don’t you? The ceremony was beautiful, wasn’t it?"
+    },
+    {
+     "k": "THE LINE",
+     "q": "A long line at the bank. Start some small talk.",
+     "fup": "How long would you wait?",
+     "st": [
+      "It’s always like this, isn’t it?",
+      "They should …, shouldn’t they?"
+     ],
+     "ex": "It’s always like this on Mondays, isn’t it?"
+    },
+    {
+     "k": "THE TRIP",
+     "q": "You meet another tourist at a museum. Break the ice.",
+     "fup": "Where are they from?",
+     "st": [
+      "You’re not from here, are you?",
+      "You came yesterday, didn’t you?"
+     ],
+     "ex": "You’re not from here, are you? I heard your accent."
+    },
+    {
+     "k": "YOUR STYLE",
+     "q": "Are you good at small talk with strangers?",
+     "fup": "Who in your family is the best at it?",
+     "st": [
+      "I’m …, aren’t I?",
+      "My … can talk to anybody, can’t she?"
+     ],
+     "ex": "I’m a bit shy at first, but my mother can talk to anybody."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "isn’t it?",
+    "don’t you?",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Small talk: important or a waste of time?",
+     "a": "Important",
+     "b": "A waste of time",
+     "fa": [
+      "Important. Every friendship starts with it, doesn’t it?",
+      "It makes people relax."
+     ],
+     "fb": [
+      "A waste of time. The weather is boring, isn’t it?",
+      "I prefer real conversations."
+     ]
+    },
+    {
+     "q": "Talk to the person next to you on a plane?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. It makes the flight shorter, doesn’t it?",
+      "You might meet someone great."
+     ],
+     "fb": [
+      "No. People want to sleep, don’t they?",
+      "Headphones mean “don’t talk.”"
+     ]
+    },
+    {
+     "q": "Learn to cook in a class or with your family?",
+     "a": "A class",
+     "b": "Family",
+     "fa": [
+      "A class. You meet new people, don’t you?",
+      "The teacher knows the technique."
+     ],
+     "fb": [
+      "Family. The recipes are better, aren’t they?",
+      "It’s free and full of stories."
+     ]
+    },
+    {
+     "q": "A stranger starts talking to you on the street. Nice or strange?",
+     "a": "Nice",
+     "b": "Strange",
+     "fa": [
+      "Nice. The world needs more of that, doesn’t it?",
+      "In Brazil, it happens all the time."
+     ],
+     "fb": [
+      "Strange. They want something, don’t they?",
+      "I keep walking."
+     ]
+    }
+   ],
+   "fim": "Four rounds. That was fun, wasn’t it?"
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Turn",
+   "t": "Build a real conversation.",
+   "p": "Choose a place. Go step by step.",
+   "prof": "Play the stranger; answer short so the student has to keep it going. Listen for falling intonation.",
+   "passos": [
+    {
+     "q": "Where are you, and who is the stranger?",
+     "st": [
+      "I’m at … and the person next to me is …"
+     ],
+     "ex": "I’m at a cooking class, and the person next to me is cutting onions."
+    },
+    {
+     "q": "Start the conversation with a tag.",
+     "st": [
+      "It’s …, isn’t it?",
+      "You’ve …, haven’t you?"
+     ],
+     "ex": "You’ve done this before, haven’t you? You’re so fast."
+    },
+    {
+     "q": "Ask a follow-up question.",
+     "st": [
+      "So, how long have you …?",
+      "Do you …?"
+     ],
+     "ex": "So, do you cook at home every day?"
+    },
+    {
+     "q": "Close the conversation in a friendly way.",
+     "st": [
+      "Let’s …, shall we?",
+      "It was nice to …, wasn’t it?"
+     ],
+     "ex": "Let’s sit together next week, shall we?"
+    }
+   ],
+   "fim": "One stranger, and now a friend."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

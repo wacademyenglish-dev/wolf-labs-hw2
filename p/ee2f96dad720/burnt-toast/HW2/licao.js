@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Burnt Toast",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ee2f96dad720/burnt-toast/img/hw-capa.webp",
+  "capa": "../img/hw-capa.webp",
   "alvo": "past simple: regular -ed (opened, watched, called), irregular (went, saw, made, ate); First, Then, Finally",
   "abrir": "What did you do last night?",
   "fecho": "Regular verbs take <b>-ed</b>: <i>watched, opened, called</i>. Some verbs change: <i>go → went, see → saw, make → made, eat → ate</i>. Put the story in order with <b>First, Then, Finally</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in the hall after the alarm. A new scene, about 30 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/ee2f96dad720/burnt-toast/img/live-predio.webp",
+      "img": "../img/live-predio.webp",
       "leg": "The building, 11:40 PM",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "First, I opened my door, and then I went outside.",
-          "img": "https://wolf-labs.pages.dev/p/ee2f96dad720/burnt-toast/img/alarme.webp",
+          "img": "../img/alarme.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She made toast, but she forgot it.",
-          "img": "https://wolf-labs.pages.dev/p/ee2f96dad720/burnt-toast/img/live-predio.webp",
+          "img": "../img/live-predio.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Finally, she called the building and ate cereal.",
-          "img": "https://wolf-labs.pages.dev/p/ee2f96dad720/burnt-toast/img/live-predio.webp",
+          "img": "../img/live-predio.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ee2f96dad720/burnt-toast/img/live-predio.webp",
+      "img": "../img/live-predio.webp",
       "leg": "The building after the alarm",
       "pede": "Look at the picture: the building after the alarm. Write 2 or 3 sentences about your night last night. Use <b>First, Then</b> or <b>Finally</b>.",
       "ph": "First, I …",

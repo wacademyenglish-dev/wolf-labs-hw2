@@ -1,0 +1,136 @@
+/* ============================================================
+   THE OFFICE · THE MEMO WALL · LIVE CLASS 06/10/2026
+   WOLFLIX Live (catálogo 07/10): família sitcom, modo correio. Escritório de noite, azul de persiana, memorandos em papel pardo escuro; Archivo Narrow + Courier Prime. Aquecimento escala, final minuto. Prefixo du-.
+   ============================================================ */
+:root{
+  --noite:#0b0c0e; --noite-rgb:11,12,14; --tinta:#e6e9ef;
+  --t1:#f1f3f7; --t2:#b3bac7; --t2-rgb:179,186,199; --t3:#7b8394;
+  --ac:#6fb2e8; --ac2:#cfe6fa; --frio:#f0c24b; --coral:#f2837a;
+  --vidro:rgba(230,233,239,.045); --vidro2:rgba(230,233,239,.08); --vidro3:rgba(230,233,239,.11);
+  --fio:rgba(214,220,232,.11); --fio2:rgba(214,220,232,.2);
+  --ok:#9fdcae; --am:#6fb2e8; --erro:#f2837a; --lil:#c3a8f0;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Instrument Serif',Georgia,serif; --ui:'Hanken Grotesk',system-ui,sans-serif; --mono:'Hanken Grotesk',system-ui,sans-serif;
+  --r1:12px; --r2:8px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#08233a}
+.btn.cheio{background:var(--ac);border-color:var(--ac);color:#08233a}
+.cab h1,.pergunta h2,.follow p.q,.carta b,.cr h3,#guia h2,.marca span{font-weight:400;letter-spacing:0}
+.cab h1{font-size:clamp(34px,2.9vw,56px)}
+.pergunta h2{font-size:clamp(24px,1.9vw,34px)}
+.capa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:10px 0 6px;font:400 clamp(58px,5.4vw,104px)/.98 var(--disp);color:var(--t1)}
+.capa .banda{margin:0 0 18px;font:500 clamp(18px,1.3vw,22px) var(--ui);color:var(--ac)}
+.capa .sub{margin:0 0 26px;font:400 clamp(18px,1.3vw,22px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.du-foto{margin:0;display:grid;gap:14px}
+.du-foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r1);border:1px solid #1a1e27;box-shadow:var(--sombra)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.05vw,17px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(159,220,174,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.du-mesa{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.du-ops{display:grid;gap:6px}
+.du-linha-ok{display:flex;align-items:center;gap:12px} .du-linha-ok span{flex:1}
+.du-centro{max-width:1150px;margin:0 auto 14px;width:100%;display:grid;gap:12px}
+
+/* a onda da música: o traço comum */
+.onda{position:relative;display:flex;align-items:center;gap:2px;height:44px}
+.onda i{flex:1;border-radius:2px;background:linear-gradient(180deg,var(--ac),color-mix(in srgb,var(--ac) 40%,#000));opacity:.7}
+.onda .mk{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t1);border:0;padding:0;margin:0}
+.onda.grande{height:84px;max-width:1300px;width:100%;margin:34px auto 40px}
+.onda.grande button.mk:nth-child(even) span{top:auto;bottom:-30px}
+.onda.grande button.mk{width:14px;margin-left:-6px;background:transparent;cursor:pointer}
+.onda.grande button.mk::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--t2)}
+.onda.grande button.mk span{position:absolute;top:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 14px var(--ui);color:var(--t2);padding:3px 10px;border-radius:999px;border:1px solid var(--fio2);background:var(--noite)}
+.onda.grande button.mk.on::before{background:var(--ac2);width:3px}
+.onda.grande button.mk.on span{color:#08233a;background:var(--ac);border-color:var(--ac)}
+.onda.grande button.mk:focus-visible span{outline:2px solid var(--ac2);outline-offset:2px}
+
+/* o resto: quieto */
+.du-encarte{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:26px;max-width:1300px;margin:0 auto 18px;width:100%;padding:18px;border-radius:var(--r1)}
+.du-capinha{display:grid;gap:10px}
+.du-capinha img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid #20242f}
+.du-capinha small{display:block;font:600 14px var(--ui);color:var(--ac)} .du-capinha b{font:400 clamp(24px,1.9vw,32px)/1.1 var(--disp);color:var(--t1)}
+.du-encarte dl{margin:0;display:grid;gap:14px;align-content:center}
+.du-encarte dt{font:600 14px var(--ui);color:var(--frio)} .du-encarte dd{margin:2px 0 0;font:400 clamp(19px,1.4vw,24px)/1.4 var(--disp);color:var(--t1)}
+.du-selo{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:1px dashed var(--fio2);text-align:center;padding:16px}
+.du-selo b{font:italic 400 clamp(30px,2.4vw,42px) var(--disp);color:var(--ac)} .du-selo small{font:400 15px var(--ui);color:var(--t2)}
+.du-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.du-vcol{display:grid;gap:6px;width:100%;max-width:min(100%,82vh);justify-self:center} .du-cred{font:400 13px var(--ui);color:var(--t3)}
+.du-dica{text-align:center;font:italic 400 22px var(--disp);color:var(--t3)}
+.du-sentido{display:block;font:400 clamp(19px,1.4vw,23px)/1.45 var(--disp);color:var(--t1);margin-bottom:8px}
+.du-gram{display:block;font:400 16px/1.5 var(--ui);color:var(--t2)} .du-gram b{color:var(--ac2)}
+.du-pista{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--ac)}
+.du-pista small{font:600 13px var(--ui);color:var(--ac)} .du-pista p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.du-fala{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--frio)}
+.du-fala small{display:flex;align-items:center;gap:8px;font:600 13px var(--ui);color:var(--frio)} .du-fala p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.du-luz{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px rgba(242,131,122,.7)}
+.du-ar{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px;border-radius:var(--r1)} .du-ar p{margin:0;font:400 30px var(--disp);color:var(--t1)}
+.du-carta{display:grid;gap:4px;padding:10px 14px;border-radius:var(--r2);border:1px solid var(--fio2);background:var(--vidro)}
+.du-carta > small{font:600 13px var(--ui);color:var(--t3)}
+.du-carta p{margin:0;font:400 clamp(14px,1vw,16px)/1.45 var(--ui);color:var(--t1)}
+.du-carta.aluno{border-color:rgba(111,178,232,.45);background:rgba(111,178,232,.05)} .du-carta.aluno > small{color:var(--ac)}
+.du-carta.prof{border-style:dashed}
+.du-carta details{margin-top:4px;display:grid;gap:3px} .du-carta summary{cursor:pointer;font:600 13px var(--ui);color:var(--t3)}
+.so-aluno-c{display:none}
+html.wl-sala-aluno .so-aluno-c{display:grid}
+
+.fim .grande span{font-size:clamp(15px,1.1vw,18px)}
+
+/* a cara do escritório: Archivo Narrow nos títulos, Courier Prime nos memorandos */
+:root{--disp:'Archivo Narrow',system-ui,sans-serif;--ui:'Work Sans',system-ui,sans-serif;--tipo:'Courier Prime','Courier New',monospace}
+.cab h1,.capa h1{font-weight:700;letter-spacing:-.01em}
+.capa h1{font-size:clamp(54px,5vw,96px);line-height:.98}
+.pergunta h2{font-family:var(--ui);font-weight:600}
+.du-sentido,.du-encarte dd{font-family:var(--ui)!important;font-weight:500}
+/* a parede de memorandos: o gesto forte */
+.du-parede{padding:18px 18px 10px;border-radius:8px;background:linear-gradient(180deg,#1b1f24,#14171b);box-shadow:inset 0 0 0 1px #2a3038,inset 0 -40px 60px -30px #000,0 18px 40px #0009}
+.du-memos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 12px}
+.du-memo{position:relative;display:grid;gap:6px;align-content:start;min-height:clamp(84px,11.5vh,118px);padding:14px 10px 10px;border-radius:1px;background:repeating-linear-gradient(180deg,transparent 0 21px,rgba(255,255,255,.035) 21px 22px),#26231c;transform:rotate(var(--r));box-shadow:0 5px 12px #0009;opacity:.28}
+.du-fita{position:absolute;left:50%;top:-7px;width:44px;height:14px;margin-left:-22px;background:rgba(210,200,170,.28);transform:rotate(-3deg)}
+.du-memo small{font:600 11px var(--ui);color:#9a9178;text-transform:uppercase;letter-spacing:.04em}
+.du-memo span{font:700 clamp(14px,1vw,17px)/1.3 var(--tipo);color:#efe6cc}
+.du-memo.vez{opacity:1;box-shadow:0 0 0 2px var(--ac),0 6px 14px #000a}
+.du-memo.preso{opacity:1}
+.du-memo.novo{animation:imprime .7s ease-out both}
+@keyframes imprime{from{clip-path:inset(0 0 100% 0);transform:rotate(var(--r)) translateY(-14px)}to{clip-path:inset(0 0 0 0)}}
+.du-rodape{margin:10px 0 0;text-align:center;font:400 13px var(--tipo);color:#5f6670}
+@media (prefers-reduced-motion:reduce){.du-memo.novo{animation:none}}
+/* o resto: quieto */
+.du-regra{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1300px;margin:0 auto 16px;width:100%}
+.du-regra > div{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.du-regra small{font:700 13px var(--ui);color:var(--frio)} .du-regra p{margin:0;font:600 clamp(19px,1.4vw,24px)/1.35 var(--ui);color:var(--t1)} .du-regra b{color:var(--ac2)} .du-regra span{font:500 14px var(--ui);color:var(--t2)}
+.du-casas{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1300px;margin:0 auto;width:100%}
+.du-cs{display:grid;gap:6px;align-content:start;padding:14px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.du-cs small{font:700 13px var(--ui);color:var(--ac)} .du-cs p{margin:0;font:600 clamp(19px,1.4vw,24px)/1.3 var(--ui);color:var(--t1)}
+@media (max-width:1100px){ .du-regra{grid-template-columns:1fr} .du-casas{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .du-memos{grid-template-columns:1fr 1fr} .du-casas{grid-template-columns:1fr} }
+
+@media (max-width:1100px){ .mesa-c,.capa,.du-mesa,.du-video,.du-encarte{grid-template-columns:1fr} .du-regra{grid-template-columns:1fr} }
+@media (max-width:620px){
+  .onda.grande{height:64px;margin-top:40px} .onda.grande button.mk span{font-size:11px;padding:2px 6px}
+  .du-capinha img{aspect-ratio:16/9}
+}
+
+/* a tira de filme (aulas de filme no lugar da onda de som) */
+.tira{border-radius:6px;padding:0 6px;background:#070707;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.tira-furos{height:14px;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,255,255,.13) 9px 19px,transparent 19px 28px);background-size:28px 6px;background-repeat:repeat-x;background-position:0 50%}
+.tira-q{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tq{position:relative;display:grid;align-content:end;gap:1px;aspect-ratio:16/9;min-height:0;padding:6px 8px;border:0;border-radius:2px;overflow:hidden;text-align:left;background:#141414;font:inherit;color:inherit}
+.tq-img{position:absolute;inset:0;background:var(--bg) center/cover;filter:brightness(.42) saturate(.8)}
+.tq b,.tq span{position:relative}
+.tq b{font:600 10px var(--ui);color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.tq span{font:600 11px/1.15 var(--ui);color:var(--t1)}
+.tira.grande{max-width:1300px;width:100%;margin:6px auto 22px}
+.tira.grande .tq{cursor:pointer;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s}
+.tira.grande .tq b{font-size:13px} .tira.grande .tq span{font-size:clamp(14px,1.05vw,18px)}
+.tira.grande .tq:hover .tq-img{filter:brightness(.55)}
+.tira.grande .tq.on{outline-color:var(--ac)} .tira.grande .tq.on .tq-img{filter:brightness(.7) saturate(1)}
+.tira.grande .tq:focus-visible{outline-color:var(--ac2)}
+@media (max-width:620px){.tira.grande .tira-q{grid-template-columns:repeat(3,minmax(0,1fr))} .tira.grande .tq span{font-size:12px} .tira.grande .tq b{font-size:11px} .capa-r .tira{display:none}}
+
+
+/* 23/10/2026 · formatos novos: a parede com seis memorandos (3 + 3) */
+.du-memos{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:620px){.du-memos{grid-template-columns:1fr 1fr}}

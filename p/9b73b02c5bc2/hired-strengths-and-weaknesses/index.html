@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -128,5 +129,266 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A recruiter answers the weakness question.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "separa": {
+   "t": "Good answer or red flag?",
+   "p": "Read each answer out loud. Then choose."
+  },
+  "transforma": {
+   "t": "Turn a weakness into a strong answer.",
+   "p": "Read the clue. Say the full answer."
+  },
+  "cv-conselho": {
+   "t": "Three new team rules. Your vote?",
+   "p": "Vote on each one. Explain with an example."
+  },
+  "pode": {
+   "t": "Lesson 3: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Pontos fortes e fracos na entrevista: I tend to…, I used to… / Now I…, I’m working on… by…, força com prova (For example…). Fuga dos clichês.",
+  "armadilha": "O “sou perfeccionista” vira “I am perfectionist” (sem artigo e clichê); também “I tend to stressed”, “working in my English” e “organizated”.",
+  "pal": [
+   "I tend to …",
+   "I used to … Now I …",
+   "I’m working on … by …",
+   "One of my strengths is …",
+   "For example, …",
+   "red flag",
+   "I pick things up quickly"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 3 do WOLF HIRED: pontos fortes e fracos sem clichê.",
+   "perg": "What would your last boss say is your best quality?",
+   "pula": "Só leia o título da capa."
+  },
+  "video": {
+   "obj": "Assistir à recrutadora respondendo a pergunta da fraqueza (0:28–2:30).",
+   "perg": "What formula does she use?",
+   "pula": "O vídeo é inteiro; faça só uma pergunta depois."
+  },
+  "separa": {
+   "obj": "Separar respostas em boa ou red flag e dizer por quê.",
+   "perg": "Why would this answer worry an interviewer?",
+   "pula": "Quatro respostas bastam."
+  },
+  "transforma": {
+   "obj": "Transformar fraquezas em resposta fraqueza + ação + resultado; buscar a fraqueza real do aluno.",
+   "perg": "What’s a real weakness that you’re working on?",
+   "pula": "Quatro frases e a do próprio aluno."
+  },
+  "cv-conselho": {
+   "obj": "Conversa: votar três regras de equipe com exemplo pessoal; o aluno propõe uma regra.",
+   "perg": "Would you vote yes to five minutes of feedback every Friday?",
+   "pula": "Duas propostas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; pedir por escrito a resposta da fraqueza e uma força com prova.",
+   "perg": "Can you answer the weakness question now?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre forças, fraquezas e mudanças reais da carreira do aluno.",
+   "perg": "What used to be hard for you at work?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de dilemas de entrevista (honestidade, clichê, modéstia).",
+   "perg": "Which side do you take, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: entrevista real; o professor é o entrevistador e o aluno responde por si.",
+   "perg": "What is your greatest weakness?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about you at work.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I tend to …",
+    "I used to …",
+    "For example, …"
+   ],
+   "cartas": [
+    {
+     "k": "USED TO",
+     "q": "What used to be hard for you at work, and isn’t now?",
+     "fup": "What changed?",
+     "st": [
+      "I used to …",
+      "Now I …"
+     ],
+     "ex": "I used to hate presentations. Now I practice twice the day before, and it’s much easier."
+    },
+    {
+     "k": "YOUR TENDENCY",
+     "q": "What do you tend to do when you’re under pressure?",
+     "fup": "Is it good or bad?",
+     "st": [
+      "I tend to …",
+      "It’s good because … / It’s a problem when …"
+     ],
+     "ex": "I tend to work late. It’s good for deadlines, but it’s a problem when I’m tired the next day."
+    },
+    {
+     "k": "PROOF",
+     "q": "Pick one strength. Can you prove it with a story?",
+     "fup": "Who saw it?",
+     "st": [
+      "One of my strengths is …",
+      "For example, …"
+     ],
+     "ex": "One of my strengths is calm. For example, when our system went down, I organized the calls."
+    },
+    {
+     "k": "LEARNING",
+     "q": "What are you working on right now, besides English?",
+     "fup": "How are you doing it?",
+     "st": [
+      "I’m working on …",
+      "by …"
+     ],
+     "ex": "I’m working on my Excel skills by doing one short course a week."
+    },
+    {
+     "k": "FEEDBACK",
+     "q": "What’s the best feedback you’ve ever received?",
+     "fup": "Did you agree with it?",
+     "st": [
+      "A manager once told me …",
+      "At first I …, but …"
+     ],
+     "ex": "A manager once told me I should talk less in meetings. At first I was angry, but she was right."
+    },
+    {
+     "k": "NEW THINGS",
+     "q": "How fast do you pick things up?",
+     "fup": "Give an example.",
+     "st": [
+      "I pick things up …",
+      "For example, …"
+     ],
+     "ex": "I pick things up quickly. For example, I learned our new system in two days."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I think",
+    "because",
+    "in my experience"
+   ],
+   "rodadas": [
+    {
+     "q": "“I’m a perfectionist” in an interview: smart or a cliché?",
+     "a": "Smart",
+     "b": "A cliché",
+     "fa": [
+      "Smart. It sounds like a weakness, but it’s a strength.",
+      "Interviewers like careful people."
+     ],
+     "fb": [
+      "A cliché. Every candidate says it.",
+      "It sounds like you’re hiding a real weakness."
+     ]
+    },
+    {
+     "q": "Tell a real weakness, or a safe one?",
+     "a": "A real one",
+     "b": "A safe one",
+     "fa": [
+      "A real one, with what you’re doing about it.",
+      "Honesty is memorable."
+     ],
+     "fb": [
+      "A safe one. An interview isn’t therapy.",
+      "Why give them a reason to say no?"
+     ]
+    },
+    {
+     "q": "Should interviewers stop asking the weakness question?",
+     "a": "Stop it",
+     "b": "Keep it",
+     "fa": [
+      "Stop it. Everybody prepares a fake answer.",
+      "Ask for a real story instead."
+     ],
+     "fb": [
+      "Keep it. It shows self-awareness.",
+      "How you answer says a lot about you."
+     ]
+    },
+    {
+     "q": "Talk about your strengths a lot, or let your CV speak?",
+     "a": "Talk a lot",
+     "b": "Let the CV speak",
+     "fa": [
+      "Talk a lot, with examples. Nobody reads the whole CV.",
+      "You need to sell yourself."
+     ],
+     "fb": [
+      "Let the CV speak. Too much sounds arrogant.",
+      "One good example is enough."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Interview",
+   "t": "You are the candidate now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as yourself, for your target job.",
+   "perguntas": [
+    "What is your greatest weakness?",
+    "What are you doing to improve it?",
+    "What is one of your strengths? Can you give an example?",
+    "What did you use to do differently at the start of your career?",
+    "How do you tend to react to criticism?",
+    "What would your colleagues say you should improve?"
+   ],
+   "st": [
+    "I tend to …, so I’ve started …",
+    "One of my strengths is … For example, …",
+    "I used to … Now I …"
+   ],
+   "ex": "I tend to say yes to everything, so I’ve started checking my calendar before I accept new tasks."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

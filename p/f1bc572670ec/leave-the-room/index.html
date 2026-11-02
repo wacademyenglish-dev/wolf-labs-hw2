@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Leave the Room · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Leave the Room · The Two Doors</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Leave the Room · The Two Doors</h2>
+    <p>One night, and a woman called Nadia writing to a machine at three in the morning after a fight with her sister. The grammar is the mechanic: the door your student takes happens (warm light), and the door they didn’t take can only be said with <b>WOULD</b> (cold glass). <b>If + a past form, would + the plain verb.</b> The past form doesn’t mean finished; it means <b>not real</b>. Students say <i>If I would have…</i> and <i>If I was… I will…</i>.</p>
+    <h4>THE HOUR IS ABOUT THE MACHINE</h4>
+    <p>Every case belongs to Nadia, an invented person. Scene I and scene XII are the only places your student speaks as themselves, and both are light.</p>
+    <h4>THE DOORS ARE THE GRAMMAR</h4>
+    <p>Scene VI: before every tap, your student predicts (“If I sent that one, she would…”). After the tap, the blue door shows the other world; make them read it out loud. There is no right door: one opens the conversation, one closes it.</p>
+    <h4>THE THREE RECORDINGS</h4>
+    <p>The programmer (1966), a therapist, a psychologist. Each plays with pause and 0.75×; the transcript opens only after listening.</p>
+    <h4>IF YOU ARE BEHIND</h4>
+    <p>Cut scene III and two items from V. Don’t cut II, VI or XI.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>If she would ask…</i>, <i>If I was you, I will…</i>, <i>I would to go</i>, <i>I would asked</i>, <i>If I had time, I would have read</i>.</p>
+    <!--conversa--><h4>AT 3 A.M. (VII) AND THE SURPRISE QUESTION</h4>
+<p>Scene VII is now a ranking. Like Nadia, your student can’t sleep after a fight with a friend: they put four options in order (a brother or sister, another friend, an AI app, nobody) and explain the top and the last with IF + past and WOULD. There is no right answer. Wait five seconds in silence, use the PUSH line (only you see it), then show your own order and agree on one top 3 together. Recast mistakes quietly (“If I would call her” → “If I called her”); at the end, ask them to fix one or two sentences themselves.</p>
+<p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I If You Could Leave, II The Two Windows, VI The Other Door, VII At 3 A.M., X Four Dilemmas, XI Make It Disagree.</li>
+      <li><b>Listen</b>: IV Nineteen Sixty-Six, VIII It Answers, She Asks, IX What It’s Good For.</li>
+      <li><b>Focus</b>: III Why She Went There, V If, Past, Would.</li>
+      <li><b>Write</b>: XII, their own other world. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* LEAVE THE ROOM (Main B1) · pergunta-surpresa · 27/10/2026 · second conditional */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'janelas', tipo: 'And you?', q: 'Have you ever asked an AI app for advice about something personal?',
+    opc: ['Yes, sometimes', 'Only about work', 'Never'], st: ['If I had a problem, I would …', 'I would never ask it about …'],
+    ex: 'Only about work. If I had a personal problem, I would call a friend, not a machine.', push: 'If nobody answered your call at 3 A.M., would you try it?' },
+  { cena: 'r1966', tipo: 'What if', q: 'If you could go back to 1966 for one day, what would you do first?',
+    opc: ['Go to a concert', 'Visit my family', 'Buy a famous company'], st: ['If I went back to 1966, I would …', 'I might …'],
+    ex: 'I would buy a ticket to a concert. If I saw a famous band live, I would never stop talking about it.', push: 'You can bring one thing from today. What would it be?' },
+  { cena: 'portas', tipo: 'Would you rather', q: 'Would you rather get advice that is always kind, or advice that is always honest?',
+    opc: ['Always kind', 'Always honest'], st: ['I’d rather …, because if …', 'If my friends were always …, I would …'],
+    ex: 'Always honest. If my friends only said nice things, I would never change anything.', push: 'Honest about your new haircut, the day of a party? Still?' },
+  { cena: 'discorda', tipo: 'Opinion', q: 'Should an AI app say “I disagree” to its users?',
+    opc: ['Yes, sometimes', 'No, never', 'Only if they ask'], st: ['If it never disagreed, people would …', 'If it said no, I would …'],
+    ex: 'Yes, sometimes. If it agreed with everything, people would believe every bad idea they have.', push: 'And if it disagreed with YOU about something important?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* LEAVE THE ROOM (Main B1 · second conditional) · conversa · 27/10/2026 · regra 3×3
+   A aula já tem dilemas (X) e a outra porta (VI). O momento novo é OUTRO formato: um ranking com a ordem
+   do professor, no lugar de "VII · Forty-Seven" (extra, cartões do estudo para pôr em colunas). Depois de
+   a Nadia escrever para a máquina às 3h, o aluno ordena para quem ELE escreveria. If + passado, would nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'ranking', troca: 'colunas', est: 'o', min: 7, img: 'quarto', rot: 'At 3 A.M.', t: 'Like Nadia, 3 A.M. Who would you tell?',
+    p: 'Put them in order: 1 is the first one you’d go to. Explain your top and your last with IF and WOULD. Then see your teacher’s order.',
+    formato: 'ranking',
+    q: 'After a fight with a friend, who would you go to first?',
+    itens: ['A brother or a sister', 'Another friend', 'An AI chat app', 'Nobody: I’d sleep on it'],
+    st: ['If I wrote to …, they would …', 'I wouldn’t go to … because …', 'If it were 3 P.M., not 3 A.M., I would …'],
+    ex: '1 is my sister: if I called her, she would listen and then tell me the truth. Last is the app: if I wrote to it, it would just agree with me.',
+    push: 'Your sister is asleep and your friend is the one you fought with. Now what? Change your top?',
+    prof: [0, 3, 1, 2], dica: 'Tap from your first choice to your last. Tap again to take one out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "sair": {
+   "t": "A long meeting. You could leave now.",
+   "p": "Pick a door. Say two more sentences with WOULD."
+  },
+  "janelas": {
+   "t": "11:40 PM. Two windows. One is a machine.",
+   "p": "Read both. Which would you rather get? Which is the machine?"
+  },
+  "razoes": {
+   "t": "Nobody was awake. Not the whole reason.",
+   "p": "Read it out loud. Choose what it means."
+  },
+  "r1966": {
+   "t": "1966: four pages of code.",
+   "p": "Listen once. Tap the four events in order."
+  },
+  "regra": {
+   "t": "The past form means imagined, not past.",
+   "p": "Say the whole sentence before you tap."
+  },
+  "portas": {
+   "t": "Now YOU are the other window.",
+   "p": "Predict with “If I sent that…”. Then read the other door."
+  },
+  "cv-ranking": {
+   "t": "3 A.M. Who would you tell?",
+   "p": "Rank them. Explain your top and last with IF and WOULD."
+  },
+  "pergunta": {
+   "t": "A therapist. Then both replies ask.",
+   "p": "Listen once. Find the machine by what it asks."
+  },
+  "ensaio": {
+   "t": "One more voice, on its side.",
+   "p": "Listen once. Then answer."
+  },
+  "dilemas": {
+   "t": "Four unreal situations. Choose your door.",
+   "p": "Say it with WOULD. Defend it."
+  },
+  "discorda": {
+   "t": "4:12 AM. Five tries. Two worked.",
+   "p": "Guess: AGREED or PUSHED BACK. Then tap."
+  },
+  "fim": {
+   "t": "Morning. Your sentence from scene I is back.",
+   "p": "Fix three sentences. Write your other world. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Second conditional (if + passado, would + verbo) para o que não é real: Nadia escreve para uma máquina às 3 da manhã, e a porta não escolhida só existe com would.",
+  "armadilha": "O brasileiro põe would no if (“If she would ask”), mistura tempos (“If I was you, I will…”), e diz “I would to go” por calco do infinitivo.",
+  "pal": [
+   "if I were",
+   "would",
+   "wouldn’t",
+   "If I sent…, she would…",
+   "machine",
+   "reply",
+   "push back",
+   "the other door"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: 1966, uma secretária pede ao programador para sair da sala e falar com a máquina.",
+   "perg": "Do you ever talk to an AI app?",
+   "pula": "Só leia a frase da capa e abra a porta."
+  },
+  "sair": {
+   "obj": "Aquecimento pessoal e leve: se pudesse sair da reunião agora, para onde iria? Anote a frase.",
+   "perg": "If you could leave right now, where would you go?",
+   "pula": "Uma porta e duas frases; anote a frase, ela volta."
+  },
+  "janelas": {
+   "obj": "Duas respostas para a mesma mensagem da Nadia: qual o aluno preferiria e qual é a máquina.",
+   "perg": "Which reply would you rather get tonight?",
+   "pula": "Não corte esta cena; dois pares bastam."
+  },
+  "razoes": {
+   "obj": "Entender por que Nadia foi falar com a máquina: o sentido real da frase.",
+   "perg": "Why did she really go there?",
+   "pula": "Se estiver atrasado, corte esta cena inteira."
+  },
+  "r1966": {
+   "obj": "Ouvir o programador de 1966 e ordenar os quatro fatos.",
+   "perg": "What did the secretary ask him to do?",
+   "pula": "Uma escuta e a ordem; pule a transcrição."
+  },
+  "regra": {
+   "obj": "Foco: if + passado, would + verbo; o passado marca o imaginado.",
+   "perg": "Is it real, or imagined?",
+   "pula": "Se estiver atrasado, corte dois itens."
+  },
+  "portas": {
+   "obj": "O aluno é a outra janela: prevê com If I sent…, she would… e lê a outra porta.",
+   "perg": "If you sent that one, what would she do?",
+   "pula": "Não corte esta cena; duas mensagens bastam."
+  },
+  "cv-ranking": {
+   "obj": "Ranking às 3 da manhã: para quem o aluno contaria depois de brigar com um amigo, com if e would.",
+   "perg": "Who would you go to first, and why?",
+   "pula": "Só o primeiro e o último."
+  },
+  "pergunta": {
+   "obj": "Uma terapeuta explica o trabalho; achar a máquina pelo que cada resposta pergunta.",
+   "perg": "What does the machine ask about?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "ensaio": {
+   "obj": "Uma psicóloga defende a máquina: ouvir e responder.",
+   "perg": "Would you agree with her?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "dilemas": {
+   "obj": "Quatro dilemas irreais: escolher a porta e defender com would; o professor rebate.",
+   "perg": "What would you do, and why?",
+   "pula": "Cena extra: dois dilemas bastam."
+  },
+  "discorda": {
+   "obj": "Cinco tentativas da Nadia para a máquina discordar: adivinhar quais funcionaram.",
+   "perg": "Do you think it agreed?",
+   "pula": "Não corte se der: é o fecho da história."
+  },
+  "fim": {
+   "obj": "Escrita: corrigir as frases da cena I e escrever o outro mundo do aluno.",
+   "perg": "If your life were different, what would you do?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre mundos imaginados com o second conditional.",
+   "perg": "If you had a free year, what would you do?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre máquinas e pessoas, com if + passado e would.",
+   "perg": "Would that really be better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Nadia e responde sobre a noite e as duas portas.",
+   "perg": "Nadia, if your sister were awake, would you call her?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More other worlds.",
+   "p": "Pick a card. Answer with if and would.",
+   "palavras": [
+    "if",
+    "would",
+    "wouldn’t",
+    "could"
+   ],
+   "cartas": [
+    {
+     "k": "A FREE YEAR",
+     "q": "If you had a year with no work, what would you do?",
+     "fup": "Where would you live?",
+     "st": [
+      "If I had a free year, I would …",
+      "I wouldn’t …"
+     ],
+     "ex": "If I had a free year, I would live in Portugal and learn to cook."
+    },
+    {
+     "k": "AN AI FRIEND",
+     "q": "Would you talk to an AI about a problem?",
+     "fup": "What wouldn’t you tell it?",
+     "st": [
+      "I would, if …",
+      "I wouldn’t, because …"
+     ],
+     "ex": "I would, if it was a small problem. I wouldn’t tell it family things."
+    },
+    {
+     "k": "ANOTHER JOB",
+     "q": "If you could do any job for one week, what would it be?",
+     "fup": "What would be the hardest part?",
+     "st": [
+      "If I could, I would be a …",
+      "The hardest part would be …"
+     ],
+     "ex": "I would be a pilot. The hardest part would be the landing."
+    },
+    {
+     "k": "NO PHONE",
+     "q": "What would happen if you had no phone for a month?",
+     "fup": "What would you miss?",
+     "st": [
+      "If I had no phone, I would …",
+      "I would miss …"
+     ],
+     "ex": "If I had no phone, I would read more, but I would miss my group chats."
+    },
+    {
+     "k": "1966",
+     "q": "If you lived in 1966, what would your life be like?",
+     "fup": "Would you like it?",
+     "st": [
+      "If I lived in 1966, I would …",
+      "I wouldn’t have …"
+     ],
+     "ex": "If I lived in 1966, I would write letters, and I wouldn’t have a computer."
+    },
+    {
+     "k": "LEAVE THE ROOM",
+     "q": "If you could leave any room in your life forever, which would it be?",
+     "fup": "Where would you go instead?",
+     "st": [
+      "I would leave …",
+      "I would go to …"
+     ],
+     "ex": "I would leave the Monday meeting room and go to a café."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "The Debate",
+   "t": "Pick a side. Defend your door.",
+   "p": "Your teacher argues the other side.",
+   "palavras": [
+    "if",
+    "would",
+    "I’d rather",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "At 3 A.M., would you rather talk to a machine or to nobody?",
+     "a": "A machine",
+     "b": "Nobody",
+     "fa": [
+      "A machine. If I talked to nobody, I wouldn’t sleep.",
+      "It would help me think."
+     ],
+     "fb": [
+      "Nobody. If I talked to a machine, I would feel stranger.",
+      "I would wait for the morning."
+     ]
+    },
+    {
+     "q": "Should a machine always agree with you?",
+     "a": "Yes, agree",
+     "b": "No, push back",
+     "fa": [
+      "Yes. If it argued, I would close the app.",
+      "At night, I need support."
+     ],
+     "fb": [
+      "No. If it always agreed, it would be useless.",
+      "A real friend would say no sometimes."
+     ]
+    },
+    {
+     "q": "Would you let an AI write your apology to a friend?",
+     "a": "I would",
+     "b": "I wouldn’t",
+     "fa": [
+      "I would. If I wrote it alone, I would say the wrong thing.",
+      "Then I would change a few words."
+     ],
+     "fb": [
+      "I wouldn’t. If my friend found out, it would be worse.",
+      "An apology should sound like me."
+     ]
+    },
+    {
+     "q": "If machines were as good as therapists, would we need therapists?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. A machine wouldn’t understand a silence.",
+      "People would still want people."
+     ],
+     "fb": [
+      "No, not for everybody. It would be cheaper.",
+      "More people would get help."
+     ]
+    }
+   ],
+   "fim": "Four rounds, four doors. The other ones only would."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Nadia now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Nadia, the morning after.",
+   "perguntas": [
+    "Nadia, why did you write to a machine at 11:40?",
+    "If your sister were awake, would you call her?",
+    "If a friend wrote that reply, would you feel different?",
+    "What would you do if the machine said you were wrong?",
+    "If you could go back to last night, what would you change?",
+    "Would you do it again tonight?"
+   ],
+   "st": [
+    "If she were awake, I would …",
+    "I wouldn’t …, because …",
+    "If I could go back, I would …"
+   ],
+   "ex": "If my sister were awake, I would call her. But at 3 A.M., the machine was the only window open."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Let Me Rephrase",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fa29bde7e68b/let-me-rephrase/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "rephrasing and clarifying: In other words, ... / That is to say, ... / What I mean is ... / To put it another way, ... / Let me rephrase that / or rather, ...; asking for clarity: What exactly do you mean by ...? / Are you saying that ...? / So, if I understand correctly, ...",
   "abrir": "When did someone's explanation leave you more confused than before?",
   "fecho": "Say it again, better: <b>In other words, ... · That is to say, ... · To put it another way, ...</b> Correct yourself: <b>What I mean is ... · or rather, ... · Let me rephrase that.</b> Ask for clarity: <b>What exactly do you mean by ...? · Are you saying that ...?</b> It is <b>mean by</b>, never <i>mean with</i>, and <i>or be</i> and <i>want to say</i> are not English.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a difficult meeting. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/fa29bde7e68b/let-me-rephrase/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Two armchairs, one difficult conversation",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I told them it was slightly behind. Or rather, a lot behind.",
-          "img": "https://wolf-labs.pages.dev/p/fa29bde7e68b/let-me-rephrase/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Sorry, what exactly do you mean by a mess?",
-          "img": "https://wolf-labs.pages.dev/p/fa29bde7e68b/let-me-rephrase/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "So, if I understand correctly, you'd like me to help.",
-          "img": "https://wolf-labs.pages.dev/p/fa29bde7e68b/let-me-rephrase/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -172,7 +172,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fa29bde7e68b/let-me-rephrase/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Two armchairs in a quiet room",
       "pede": "Look at the picture: two armchairs, where an expert explains something difficult. Write 2 or 3 sentences: say something about your job in a complicated way, then rephrase it. Use <b>In other words</b>, <b>To put it simply</b> or <b>What I mean is</b>.",
       "ph": "In my job I … To put it simply, …",

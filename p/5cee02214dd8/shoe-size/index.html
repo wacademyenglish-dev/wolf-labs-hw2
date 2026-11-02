@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Not Your Shoe Size · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Not Your Shoe Size · The Balance</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Not Your Shoe Size · The Balance</h2>
+    <p>A claim about intelligence at 100% is almost always wrong. Fluent speakers bring it down with a small set of tools: <b>tend to</b> (a pattern), <b>seem to</b> (what the evidence suggests), <b>arguably</b> (strong, but open to debate) and <b>to some extent</b> (partly true). Students state things as facts (<i>Intelligence is genetic</i>) or break the form (<i>tend to being</i>, <i>seems be</i>). On screen, a balance: the claim on one pan, the evidence as weights on the other. A sentence that is too sure tips the scale; a broken form makes it shake; the right sentence leaves it level.</p>
+    <h4>THE NUMBER</h4>
+    <p>Scene I: the student rates their own intelligence from 0 to 10, with no scale. Write the first defense exactly; the number comes back at the end.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Two recordings, each with pause and 0.75×; the transcript opens after listening: the claim (scene II) and the critic (scene VI). The invented lines are the ones people quote; the critic is more careful than students expect.</p>
+    <h4>THE BALANCE</h4>
+    <p>Scene III: read the evidence first. The right hedge is the one that matches it, not the weakest one. Watch for students who pick maximum doubt every time.</p>
+    <h4>THE DEBATE</h4>
+    <p>Scene VII: state each claim at 100%. Push the student to answer below 100%, then take the opposite side once.</p>
+    <!--conversa--><h4>THE PANEL (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>After the critic, your student makes three real decisions with incomplete evidence: a job, a scholarship, a label for children. There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Every reason must be hedged (tend to, seem to, arguably, to some extent). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves. The last word is one minute on IQ or habits, then you take the other side.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Out of Ten, III The Balance, VII Three Claims, VIII The Panel, IX About You.</li>
+      <li><b>Listen</b>: II The Claim, VI The Critic.</li>
+      <li><b>Focus</b>: IV The Form, V Claim or Evidence?.</li>
+      <li><b>Write</b>: X, their number defended below 100%. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* NOT YOUR SHOE SIZE (Main B2) · pergunta-surpresa · 27/10/2026 · tend to / seem to · arguably · to some extent */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'afirma', tipo: 'And you?', q: 'What is something you seem to be naturally good at, without practice?',
+    opc: ['Something useful', 'Something useless', 'Nothing, honestly'], st: ['I seem to be good at …', 'I tend to … without trying.'],
+    ex: 'Something useless. I seem to remember every phone number I see, but I forget names.', push: 'Is it really natural, or did you practise without noticing?' },
+  { cena: 'balanca', tipo: 'Would you rather', q: 'Would you rather be very smart or very lucky?',
+    opc: ['Very smart', 'Very lucky'], st: ['Arguably, …', 'Lucky people tend to …', 'Smart people seem to …'],
+    ex: 'Very lucky. Smart people tend to worry more, and lucky people seem to enjoy life.', push: 'Lucky until 40, then nothing. Still lucky?' },
+  { cena: 'critico', tipo: 'What if', q: 'A pill adds 10 IQ points, but you lose your sense of humour. Do you take it?',
+    opc: ['Yes', 'No way'], st: ['To some extent, …', 'People without humour tend to …'],
+    ex: 'No way. Funny people tend to have more friends, and friends are arguably more useful than ten points.', push: 'Twenty points?' },
+  { cena: 'vida', tipo: 'Opinion', q: 'Who is the smartest person you know? What makes them smart?',
+    opc: ['A friend', 'Someone in my family', 'A teacher or boss'], st: ['They seem to …', 'They tend to …, which is arguably …'],
+    ex: 'My sister. She tends to ask the question nobody else asks.', push: 'Would they say you are smart? Why?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* NOT YOUR SHOE SIZE (Main B2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O painel entra no lugar de "VIII · Too Sure" (extra, prática controlada repetida da forma).
+   A aula já tem um quase-debate (VII · Three Claims) e o pessoal (I, IX): por isso aqui é um
+   DILEMA de decisões reais, não uma arena. Depois do crítico (VI), o aluno decide com evidência
+   incompleta — e a gramática da aula (tend to / seem to, arguably, to some extent) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'painel', troca: 'erros', est: 'o', min: 7, img: 'palco', rot: 'The Panel', t: 'Three decisions. The evidence is never complete.',
+    p: 'Read the case. Choose, or say your own idea. Hedge your reason: tend to, seem to, arguably, to some extent.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The job', sit: 'One job, two finalists. Ana scored 140 on an IQ test. Bruno scored 105, but every team he joins seems to work better.',
+        q: 'Who gets the job?', opc: ['Ana', 'Bruno', 'Neither yet'],
+        st: ['Ana seems to …, so …', 'People like Bruno tend to …', 'To some extent, the test …'],
+        ex: 'Bruno. Ana is arguably smarter on paper, but teams tend to fail because of people, not puzzles.',
+        push: 'Six months later the project fails, and your boss says: “You chose the nice guy.” Defend your choice.' },
+      { tag: 'The scholarship', sit: 'One scholarship. Carla has the best grades in the city. Davi has average grades, but he builds and sells his own apps.',
+        q: 'Who should get it?', opc: ['Carla', 'Davi', 'Split it in two'],
+        st: ['Grades tend to show …', 'Davi seems to be …', 'Arguably, the fairest choice is …'],
+        ex: 'Davi. Grades tend to show who follows instructions. He seems to learn by doing, and that is arguably rarer.',
+        push: 'Carla studied ten hours a day for this. Look at her and say “no”.' },
+      { tag: 'The label', sit: 'A primary school wants to give every child a card: “Your main intelligence is ___.” Parents will see it.',
+        q: 'Should the school do it?', opc: ['Yes, it helps', 'Yes, but no label', 'No, never'],
+        st: ['Labels tend to …', 'It seems to help, to some extent, but …', 'Arguably, a child …'],
+        ex: 'No, never. Labels tend to stick. A child who reads “music” at eight seems to stop trying at math.',
+        push: 'You at eight years old: what would your card say? Would you have believed it?' }
+    ],
+    fim: { tag: 'The last word', q: 'One minute: what matters more for success, a high IQ or good habits?',
+      opc: ['A high IQ', 'Good habits'], segundos: 60, nota: 'One minute, never at 100%. Then your teacher takes the other side.',
+      st: ['People with … tend to …', 'To some extent, …', 'Arguably, the bigger factor is …'],
+      ex: 'Good habits, to some extent. Smart people seem to start faster, but people with habits tend to finish.',
+      push: 'Name one person you know who proves you wrong.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "numero": {
+   "t": "How intelligent are you, 0 to 10?",
+   "p": "Tap your number. Defend it out loud."
+  },
+  "afirma": {
+   "t": "People remember only half a claim.",
+   "p": "Play it. Each line: SAID or NOT SAID."
+  },
+  "balanca": {
+   "t": "Make the claim and evidence balance.",
+   "p": "Read both. Choose the balancing sentence. Say it."
+  },
+  "forma": {
+   "t": "tend to, seem to, arguably, to some extent.",
+   "p": "Choose the word. Say the whole sentence."
+  },
+  "evid": {
+   "t": "Claim or evidence?",
+   "p": "Read it. Tap CLAIM or EVIDENCE. Hedge every claim."
+  },
+  "critico": {
+   "t": "The critic takes it apart.",
+   "p": "Play it. Each line: SAID or NOT SAID."
+  },
+  "debate": {
+   "t": "Three claims at 100%.",
+   "p": "Answer below 100%, with a reason."
+  },
+  "cv-painel": {
+   "t": "Three decisions. Incomplete evidence.",
+   "p": "Choose. Hedge your reason."
+  },
+  "vida": {
+   "t": "How does your mind work?",
+   "p": "Tap a card. Answer, then add evidence."
+  },
+  "fim": {
+   "t": "Intelligence isn’t your shoe size.",
+   "p": "Defend your number again, below 100%. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Hedging para baixar uma afirmação de 100%: tend to, seem to, arguably, to some extent. A balança da aula: a afirmação sobre inteligência de um lado, as evidências do outro.",
+  "armadilha": "O brasileiro afirma como fato (“Intelligence is genetic”), quebra a forma (“tend to being”, “seems be”, “to some extend”) e, depois de aprender, exagera na dúvida em tudo.",
+  "pal": [
+   "tend to",
+   "seem to",
+   "arguably",
+   "to some extent",
+   "evidence",
+   "claim",
+   "IQ",
+   "it depends"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o tema: inteligência não é número de sapato, e certeza também não.",
+   "perg": "Can you measure intelligence?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "numero": {
+   "obj": "O aluno dá uma nota de 0 a 10 à própria inteligência e defende; a nota volta no fim.",
+   "perg": "Why that number?",
+   "pula": "Não corte: anote a defesa exata."
+  },
+  "afirma": {
+   "obj": "Escuta: o palestrante faz a afirmação; SAID ou NOT SAID (as frases inventadas são as citadas).",
+   "perg": "What did the speaker actually say?",
+   "pula": "Metade das linhas basta."
+  },
+  "balanca": {
+   "obj": "Equilibrar afirmação e evidência: o hedge certo é o que combina com a evidência.",
+   "perg": "Is that too sure for this evidence?",
+   "pula": "Três casos bastam."
+  },
+  "forma": {
+   "obj": "A forma: tend to / seem to + verbo, arguably antes da afirmação, to some extent.",
+   "perg": "Is it tend to be or tend to being?",
+   "pula": "Não corte: é a regra. Quatro frases bastam."
+  },
+  "evid": {
+   "obj": "Separar afirmação de evidência e suavizar cada afirmação.",
+   "perg": "Is this a claim or evidence?",
+   "pula": "Quatro frases bastam."
+  },
+  "critico": {
+   "obj": "Escuta: o crítico desmonta a teoria com mais cuidado do que o aluno espera.",
+   "perg": "What does the critic really say?",
+   "pula": "Metade das linhas basta."
+  },
+  "debate": {
+   "obj": "O professor afirma a 100% e o aluno responde abaixo de 100%, com motivo.",
+   "perg": "Is that always true?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-painel": {
+   "obj": "Painel: três decisões com evidência incompleta (vaga, bolsa, rótulo para crianças).",
+   "perg": "Who gets the scholarship, and why?",
+   "pula": "Uma decisão basta, com o PUSH."
+  },
+  "vida": {
+   "obj": "Quatro cartas sobre como a mente do aluno funciona, com hedge e uma evidência.",
+   "perg": "Do you tend to remember faces or names?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: defender a nota da cena I de novo, abaixo de 100%.",
+   "perg": "Would you change your number now?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta sobre mente, talento e hábito, sempre com hedge.",
+   "perg": "Are some people born smarter?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre inteligência e testes, com argumentos abaixo de 100%.",
+   "perg": "Which side, and how sure are you?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno constrói um argumento passo a passo: afirmação, evidência, hedge, exceção.",
+   "perg": "What is your evidence?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Below 100%, please.",
+   "p": "Pick a card. Hedge your answer.",
+   "palavras": [
+    "tend to",
+    "seem to",
+    "arguably",
+    "to some extent"
+   ],
+   "cartas": [
+    {
+     "k": "BORN OR MADE",
+     "q": "Are some people simply born smarter?",
+     "fup": "What about effort?",
+     "st": [
+      "To some extent, …",
+      "Effort seems to …"
+     ],
+     "ex": "To some extent, yes, but effort seems to matter more over time."
+    },
+    {
+     "k": "SCHOOL",
+     "q": "Do school grades show how intelligent someone is?",
+     "fup": "Did yours show it?",
+     "st": [
+      "Grades tend to show …, but …"
+     ],
+     "ex": "Grades tend to show who is good at school, not who is smart."
+    },
+    {
+     "k": "YOUR MEMORY",
+     "q": "Do you remember faces or names better?",
+     "fup": "Any evidence?",
+     "st": [
+      "I tend to remember …",
+      "Last week, for example, …"
+     ],
+     "ex": "I tend to remember faces. Last week I met a client and forgot his name in seconds."
+    },
+    {
+     "k": "TECHNOLOGY",
+     "q": "Are phones making us less intelligent?",
+     "fup": "Or just different?",
+     "st": [
+      "Arguably, …",
+      "It seems to …, but …"
+     ],
+     "ex": "Arguably, we remember less, but we seem to find information faster."
+    },
+    {
+     "k": "LANGUAGES",
+     "q": "Do people who speak two languages think better?",
+     "fup": "Do you feel it?",
+     "st": [
+      "Bilingual people seem to …",
+      "In my case, …"
+     ],
+     "ex": "Bilingual people seem to switch tasks more easily. In my case, I’m not so sure."
+    },
+    {
+     "k": "GENIUS",
+     "q": "Who is the most intelligent person you know?",
+     "fup": "What makes you say so?",
+     "st": [
+      "She is arguably …",
+      "She tends to …"
+     ],
+     "ex": "My aunt is arguably the smartest person I know. She tends to solve problems nobody else sees."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Stay below 100%. Your teacher takes the other side.",
+   "palavras": [
+    "to some extent",
+    "arguably",
+    "The thing is, …",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Should companies use IQ tests to hire people?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes, to some extent. Tests tend to be fairer than a nice smile.",
+      "At least they measure something."
+     ],
+     "fb": [
+      "No. IQ seems to say little about teamwork.",
+      "The thing is, the best workers aren’t always the fastest thinkers."
+     ]
+    },
+    {
+     "q": "Intelligence: mostly genes or mostly environment?",
+     "a": "Genes",
+     "b": "Environment",
+     "fa": [
+      "Genes, arguably. Twins raised apart tend to have similar scores."
+     ],
+     "fb": [
+      "Environment. Children with books and time seem to do better, whatever their genes."
+     ]
+    },
+    {
+     "q": "Should children be labeled “gifted” at school?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Gifted kids tend to get bored without a challenge.",
+      "A label opens doors."
+     ],
+     "fb": [
+      "No. Labels seem to stick for life.",
+      "And the other kids feel the opposite label."
+     ]
+    },
+    {
+     "q": "Is it smarter to be certain or to doubt?",
+     "a": "Be certain",
+     "b": "Doubt",
+     "fa": [
+      "Be certain. Leaders who doubt tend to lose people.",
+      "Someone has to decide."
+     ],
+     "fb": [
+      "Doubt. Arguably, the smartest people are the ones who say “I might be wrong.”"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Arguably, everybody won, to some extent."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Build an Argument",
+   "t": "One claim, built carefully.",
+   "p": "Answer each step. Keep it below 100%.",
+   "prof": "Push back after step 2; the student defends without going to 100% or to zero.",
+   "passos": [
+    {
+     "q": "Make a claim about people and learning.",
+     "st": [
+      "People who … tend to …"
+     ],
+     "ex": "People who read a lot tend to learn languages faster."
+    },
+    {
+     "q": "What is your evidence?",
+     "st": [
+      "In my experience, …",
+      "Studies seem to show …"
+     ],
+     "ex": "In my experience, my friends who read in English speak better."
+    },
+    {
+     "q": "Where is your claim not true?",
+     "st": [
+      "To some extent, but …",
+      "It doesn’t seem to work when …"
+     ],
+     "ex": "It doesn’t seem to work when people never speak out loud."
+    },
+    {
+     "q": "Now say your final claim, balanced.",
+     "st": [
+      "Arguably, …, although …"
+     ],
+     "ex": "Arguably, reading helps a lot, although speaking practice is just as important."
+    }
+   ],
+   "fim": "The balance is level. That is what a careful mind sounds like."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

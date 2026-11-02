@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Half as Much · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Half as Much · The Phone Week</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Half as Much · The Phone Week</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Bea, a designer, used her phone six hours a day: longer than her sleep. For one week she tries half as much. Day one and day seven are audio diaries.</p><p style="margin:0 0 6px"><b>The grammar:</b> calmer than / more relaxed than · a bit / much / far + comparative · (not) as … as · twice / half as … as · “the less I check it, the less I want it” as a ready chunk.</p><p style="margin:0 0 6px"><b>The lesson (about 50 min, ~45 without the extra):</b> I Your Gears · II Bea’s Week · III Bigger, Better, Half As Much · IV Five Voices · V Before and After · VI The Debate · VII Fix Bea’s Notes (extra) · VIII Your Challenge.</p><p style="margin:0"><b>Open with:</b> “How many hours a day do you think you spend on your phone?”</p></div><!--/prep-->
+    <h4>A CONVERSATION LESSON</h4>
+    <p>The student talks most of the time. Nothing is multiple choice. Ask the follow-up, take the other side, and listen for <i>more better</i>, <i>more calm</i> and <i>as … than</i>. This is the B1 sister of <i>Nine Times Longer</i> (B2, same gears, harder grammar).</p>
+    <h4>WHAT EACH SCENE DOES</h4>
+    <ul>
+      <li><b>I · Your Gears</b> (talk, 6 min). Gear A = what they do on the phone, gear B = what changes (sleep, mood…). Up or down? Three questions follow.</li>
+      <li><b>II · Bea’s Week</b> (listen and predict, 7 min). Play day one. The student taps every prediction they believe and says why. Play day seven: the last step is ONE screen. The audio and its transcript stay on the left; on the right, six True or Lie lines about Bea’s week (sleep, books, evenings, calm, the phone, her rule). Every right answer confirms a card; on a Lie the student says the true line. When all six are done, Bea asks what she should use less: the student taps an answer and says the sentence out loud (half as much, much calmer, the less … the less …).</li>
+      <li><b>III · Bigger, Better, Half As Much</b> (rule, 8 min). The grammar stays on screen. In the comparer, pick a word (calm, tired, bored…) and how big the change is (a bit, much, far): the same fact appears in two sentences, “calmer than” and “not as … as”. Ask: “Is it true for you this week?”</li>
+      <li><b>IV · Five Voices</b> (listen and retell, 7 min). The student retells with one comparison; you tap “Good comparison” or “Not yet” (only you see it). Then a question about them.</li>
+      <li><b>V · Before and After</b> (speaking, 7 min). Bea’s chart: phone, sleep, books, steps, coffee. The student describes each change (half as much, twice as much, as much as), then gives their own number.</li>
+      <li><b>VI · The Debate</b> (8 min). Read each idea and take the other side (your card says how). The last one: they say an idea and you answer.</li>
+      <li><b>VII · Fix Bea’s Notes</b> (extra, 5 min). Six lines; five wrong, “The less I check it, the less I want it” is right.</li>
+      <li><b>VIII · Your Challenge</b> (6 min). They choose one thing to do half as much next week and write what will change. Ask about it in the next class.</li>
+    </ul>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>more better</i> · <i>more calm / more happy</i> · <i>not as good than</i> · <i>two times more</i> · <i>the double</i> · <i>calmer that</i>.</p>
+    <!--conversa--><h4>THE SURPRISE QUESTION</h4>
+    <p>This lesson already has its conversation moments (I Your Gears, VI The Debate, VIII Your Challenge). The <b>Surprise question</b> button (bottom right, only you see it) adds one personal question at any moment: wait five seconds in silence, let them choose, then use the PUSH line (only you see it). Recast quietly (much better, twice as much, not as … as); at the end, ask them to fix one sentence themselves.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Gears · V Before and After · VI The Debate.</li>
+      <li><b>Listen</b>: II Bea’s Week · IV Five Voices.</li>
+      <li><b>Focus</b>: III Bigger, Better, Half As Much · VII Fix Bea’s Notes.</li>
+      <li><b>Write</b>: VIII Your Challenge (and the homework).</li>
+    </ul>
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* HALF AS MUCH (Main B1) · pergunta-surpresa · 27/10/2026 · comparativos: much / far + -er, (not) as … as, twice / half as … as
+   Sem momento novo: a aula já tem o pessoal (I), a decisão (VI The Debate, seis ideias com o professor do outro lado)
+   e a única cena extra é o VII (a única correção além do III). Só as perguntas-surpresa. */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'bea', tipo: 'Would you rather', q: 'For one week: would you rather use your phone half as much, or drink half as much coffee?',
+    opc: ['Half the phone', 'Half the coffee'], st: ['Half as much … would be much easier than …', 'I’d be far more … without …'],
+    ex: 'Half the phone. Without coffee I’d be twice as tired and half as nice!', push: 'And half as much sleep? Which one is the worst?' },
+  { cena: 'regra', tipo: 'And you?', q: 'What is one thing in your life that is much better than five years ago?',
+    opc: ['My work', 'My home', 'My English'], st: ['My … is much better than …', 'I’m far more … than before.', 'I’m not as … as I was.'],
+    ex: 'My English! I understand twice as much as five years ago, and I’m not as shy as before.', push: 'And one thing that is a bit worse? Just one.' },
+  { cena: 'vozes', tipo: 'What if', q: 'What if your boss paid you twice as much to work with no phone at all?',
+    opc: ['Deal!', 'No way', 'It depends'], st: ['If I earned twice as much, …', 'It wouldn’t be as easy as …'],
+    ex: 'Deal! Work would be a bit more boring, but twice as much money? Easy.', push: 'No phone after work, too. Still a deal?' },
+  { cena: 'numeros', tipo: 'Opinion', q: 'Who in your family or group of friends uses the phone the most?',
+    opc: ['Someone in my family', 'A friend', 'Me!'], st: ['… uses it far more than …', '… is on the phone twice as much as me.'],
+    ex: 'My brother. He uses it twice as much as me, even at lunch.', push: 'Have you ever told them? What did they say?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Your phone is gear A. What turns?",
+   "p": "Pick a phone habit. Then what changes with it."
+  },
+  "bea": {
+   "t": "Bea’s week: half as much phone.",
+   "p": "Listen to day one. Predict. Then day seven."
+  },
+  "regra": {
+   "t": "Calmer than, or not as stressed as.",
+   "p": "Pick a word and a size. Say both sentences."
+  },
+  "vozes": {
+   "t": "Five people and their phones.",
+   "p": "Listen. Retell with a comparison. Then answer."
+  },
+  "numeros": {
+   "t": "Bea’s numbers, before and after.",
+   "p": "Tap a line. Describe the change. Then yours."
+  },
+  "debate": {
+   "t": "Six ideas about phones.",
+   "p": "Your teacher takes the other side. Answer back."
+  },
+  "notas": {
+   "t": "Five lines have a problem.",
+   "p": "Read each line the right way. Then tap it."
+  },
+  "fim": {
+   "t": "Your week: one thing, half as much.",
+   "p": "Choose it. Write what will change. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Comparativos (calmer than, not as… as, twice/half as much, a bit/much/far): a Bea usava o celular seis horas por dia e tenta usar a metade por uma semana.",
+  "armadilha": "O brasileiro diz “more better” e “more calm” (mais calmo), “not as good than” (misturando com than), “two times more” e “the double” no lugar de twice as much.",
+  "pal": [
+   "calmer than",
+   "not as … as",
+   "half as much",
+   "twice as much",
+   "much better",
+   "a bit",
+   "far more",
+   "the less …, the less …"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a semana da Bea: seis horas por dia no celular, mais que o sono.",
+   "perg": "How many hours a day do you spend on your phone?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Engrenagens: o que o aluno faz no celular e o que muda junto (sono, humor).",
+   "perg": "When your phone time goes up, what goes down?",
+   "pula": "Duas engrenagens bastam."
+  },
+  "bea": {
+   "obj": "Diário em áudio: dia um, previsões, dia sete e True or Lie sobre a semana.",
+   "perg": "Is Bea calmer than last week? Why?",
+   "pula": "Corte as previsões; faça o True or Lie."
+  },
+  "regra": {
+   "obj": "A regra: o mesmo fato com calmer than e not as… as, com a bit/much/far.",
+   "perg": "Is it true for you this week?",
+   "pula": "Três palavras bastam."
+  },
+  "vozes": {
+   "obj": "Cinco vozes: recontar cada uma com uma comparação.",
+   "perg": "What does she mean, with a comparison?",
+   "pula": "Três vozes bastam."
+  },
+  "numeros": {
+   "obj": "O gráfico da Bea: descrever cada mudança com half/twice as much e dar o próprio número.",
+   "perg": "How much coffee do you drink compared to last year?",
+   "pula": "Três linhas bastam."
+  },
+  "debate": {
+   "obj": "Debate: o professor pega o lado contrário de seis ideias sobre telas.",
+   "perg": "Do you agree? Why not?",
+   "pula": "Três ideias; deixe a última, que o aluno propõe."
+  },
+  "notas": {
+   "obj": "Corrigir as notas da Bea: cinco linhas erradas, uma certa.",
+   "perg": "What’s wrong with this line?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o desafio do aluno para a próxima semana e o que vai mudar.",
+   "perg": "What will you do half as much next week?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa comparando a vida do aluno antes e agora.",
+   "perg": "Are you busier than five years ago?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate com comparações: dois lados e argumentos prontos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Bea e conta a semana com metade do celular.",
+   "perg": "Are you happier than before, Bea?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Then and now.",
+   "p": "Pick a card. Answer with a comparison.",
+   "palavras": [
+    "much more … than",
+    "not as … as",
+    "twice as much",
+    "half as much"
+   ],
+   "cartas": [
+    {
+     "k": "FIVE YEARS AGO",
+     "q": "Are you busier now than five years ago?",
+     "fup": "Is that a good thing?",
+     "st": [
+      "I’m much busier than …",
+      "I’m not as busy as …"
+     ],
+     "ex": "I’m far busier than five years ago, but I’m not as stressed."
+    },
+    {
+     "k": "YOUR SLEEP",
+     "q": "Do you sleep as much as you want?",
+     "fup": "What would change with one more hour?",
+     "st": [
+      "I sleep half as much as …",
+      "I don’t sleep as much as …"
+     ],
+     "ex": "I don’t sleep as much as I want. With one more hour I’d be much calmer."
+    },
+    {
+     "k": "WEEKENDS",
+     "q": "Are weekends better than weekdays for you?",
+     "fup": "Why?",
+     "st": [
+      "Weekends are a bit …",
+      "They’re not as … as …"
+     ],
+     "ex": "Weekends are much better, but they’re twice as short."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Is your city louder or quieter than it was?",
+     "fup": "What made it change?",
+     "st": [
+      "It’s far louder than …",
+      "It isn’t as … as it was."
+     ],
+     "ex": "It’s far louder than ten years ago. There are twice as many cars."
+    },
+    {
+     "k": "BOOKS AND SCREENS",
+     "q": "Do you read as much as you watch?",
+     "fup": "Do you want to change that?",
+     "st": [
+      "I watch twice as much as I read.",
+      "I read more than …"
+     ],
+     "ex": "I watch about three times as much as I read."
+    },
+    {
+     "k": "THE LESS, THE LESS",
+     "q": "What is true for you: “the less I …, the less I want it”?",
+     "fup": "When did you notice that?",
+     "st": [
+      "The less I …, the less I …",
+      "The more I …, the more I …"
+     ],
+     "ex": "The less I eat sugar, the less I want it."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "much better",
+    "not as … as",
+    "twice as",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Phones at the dinner table: allowed or not?",
+     "a": "Allowed",
+     "b": "Not allowed",
+     "fa": [
+      "Allowed. It’s not as bad as people say.",
+      "Sometimes you need to check a message."
+     ],
+     "fb": [
+      "Not allowed. Dinner is much nicer without them.",
+      "People talk twice as much."
+     ]
+    },
+    {
+     "q": "Is life better now than before smartphones?",
+     "a": "Better now",
+     "b": "Better before",
+     "fa": [
+      "Better now. Everything is far easier.",
+      "Maps alone changed my life."
+     ],
+     "fb": [
+      "Better before. People were calmer.",
+      "Life wasn’t as fast as now."
+     ]
+    },
+    {
+     "q": "Half the screen time for a week: easy or hard?",
+     "a": "Easy",
+     "b": "Hard",
+     "fa": [
+      "Easy. I just need a rule.",
+      "After two days, you want it much less."
+     ],
+     "fb": [
+      "Hard. My work is on my phone.",
+      "It’s not as simple as turning it off."
+     ]
+    },
+    {
+     "q": "A simple phone with no apps: would you try one?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. I’d be far less distracted.",
+      "I’d read twice as much."
+     ],
+     "fb": [
+      "No. I’d be much less connected.",
+      "Banking and maps are on my phone."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Twice as much talking as usual."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Bea now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Bea.",
+   "perguntas": [
+    "How many hours did you use your phone before the week?",
+    "Was day one harder than you expected?",
+    "Do you sleep more than before?",
+    "Are you calmer, or just more bored?",
+    "What did you do twice as much this week?",
+    "What is your rule now?"
+   ],
+   "st": [
+    "I’m much … than …",
+    "It wasn’t as … as …",
+    "The less I …, the less I …"
+   ],
+   "ex": "I’m much calmer than last week, and the less I check it, the less I want it."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Buzzer",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/8d21c0f4b7a3/the-buzzer/img/live-fundo.webp",
+  "capa": "../img/live-fundo.webp",
   "alvo": "will x going to: going to for a plan or proof you can see; will / won't for a decision, offer or promise made now; Will you ...? asks for help, Are you going to ...? asks about a plan; never will to",
   "abrir": "What are you going to do this weekend?",
   "fecho": "Plan or proof already there: <b>going to</b> (<i>My bag is packed. I'm going to leave.</i>). Born while you speak (offer, promise): <b>will / won't</b> (<i>I'll help you. I won't tell.</i>). Never <i>will to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before a game show. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/8d21c0f4b7a3/the-buzzer/img/live-ceu.webp",
+      "img": "../img/live-ceu.webp",
       "leg": "Black clouds over the stage",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Look at the clouds. It's going to rain soon.",
-          "img": "https://wolf-labs.pages.dev/p/8d21c0f4b7a3/the-buzzer/img/live-ceu.webp",
+          "img": "../img/live-ceu.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "My bag is packed. I'm going to leave at six.",
-          "img": "https://wolf-labs.pages.dev/p/8d21c0f4b7a3/the-buzzer/img/live-mala.webp",
+          "img": "../img/live-mala.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The glass is on the edge. It's going to fall.",
-          "img": "https://wolf-labs.pages.dev/p/8d21c0f4b7a3/the-buzzer/img/live-copo.webp",
+          "img": "../img/live-copo.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/8d21c0f4b7a3/the-buzzer/img/live-mala.webp",
+      "img": "../img/live-mala.webp",
       "leg": "A packed bag, ready to go",
       "pede": "Look at the picture: a packed bag. Write 2 or 3 sentences: one plan with <b>going to</b> and one decision or promise with <b>I'll</b> or <b>I won't</b>.",
       "ph": "I'm going to …",

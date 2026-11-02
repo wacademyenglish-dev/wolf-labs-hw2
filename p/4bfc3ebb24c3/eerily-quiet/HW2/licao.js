@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Eerily Quiet",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4bfc3ebb24c3/eerily-quiet/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "adverb + adjective collocations: the adverb chooses the adjective (eerily quiet, bitterly cold, dimly lit, faintly familiar, painfully slow, perfectly still); extreme adjectives take absolutely / utterly / completely (utterly exhausted), never very; gradable ones take very / extremely / deeply / highly (deeply sorry, highly unlikely), never absolutely; never eerie quiet, strongly cold, highly sorry",
   "abrir": "Think of a place that feels different at night. What changes?",
   "fecho": "The adverb chooses the adjective: <b>eerily quiet, bitterly cold, dimly lit, faintly familiar, painfully slow</b>. Extreme adjectives (<i>exhausted, freezing</i>) take <b>absolutely / utterly / completely</b>, never <i>very</i>. Gradable ones take <b>very / extremely / deeply / highly</b>: <i>deeply sorry, highly unlikely</i>. And the adverb needs <b>-ly</b>: <i>eerily</i>, not <i>eerie</i> quiet.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a cottage during a storm. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/4bfc3ebb24c3/eerily-quiet/img/live-quarto.webp",
+      "img": "../img/live-quarto.webp",
       "leg": "A dark doorway and one small light",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The village was eerily quiet after the storm.",
-          "img": "https://wolf-labs.pages.dev/p/4bfc3ebb24c3/eerily-quiet/img/live-tempestade.webp",
+          "img": "../img/live-tempestade.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The hall was dimly lit by a single candle.",
-          "img": "https://wolf-labs.pages.dev/p/4bfc3ebb24c3/eerily-quiet/img/live-vela.webp",
+          "img": "../img/live-vela.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'm utterly exhausted, and it's absolutely freezing.",
-          "img": "https://wolf-labs.pages.dev/p/4bfc3ebb24c3/eerily-quiet/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4bfc3ebb24c3/eerily-quiet/img/live-pagina.webp",
+      "img": "../img/live-pagina.webp",
       "leg": "A typewriter and two candles",
       "pede": "Look at the picture: a typewriter and two candles. Write 2 or 3 sentences opening a spooky but gentle story. Use adverb + adjective pairs such as <b>eerily quiet</b>, <b>dimly lit</b>, <b>bitterly cold</b> or <b>utterly alone</b>.",
       "ph": "The old library was eerily …",

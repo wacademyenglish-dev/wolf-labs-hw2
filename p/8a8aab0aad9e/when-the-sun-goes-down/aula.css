@@ -1,0 +1,156 @@
+/* ============================================================
+   When the Sun Goes Down · The Town Rules · LIVE CLASS 06/10/2026
+   the town rules on a wooden board, and the sun going down a step every round
+   ============================================================ */
+:root{
+  --noite:#0a0908; --noite-rgb:10,9,8; --tinta:#e6e9ef;
+  --t1:#f1f3f7; --t2:#b3bac7; --t2-rgb:179,186,199; --t3:#7b8394;
+  --ac:#d9824a; --ac2:#f3c9a0; --frio:#6f8fa8; --coral:#f2837a;
+  --vidro:rgba(230,233,239,.045); --vidro2:rgba(230,233,239,.08); --vidro3:rgba(230,233,239,.11);
+  --fio:rgba(214,220,232,.11); --fio2:rgba(214,220,232,.2);
+  --ok:#9fdcae; --am:#d9824a; --erro:#f2837a; --lil:#c3a8f0;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Instrument Serif',Georgia,serif; --ui:'Hanken Grotesk',system-ui,sans-serif; --mono:'Hanken Grotesk',system-ui,sans-serif;
+  --r1:12px; --r2:8px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1a0b04}
+.btn.cheio{background:var(--ac);border-color:var(--ac);color:#1a0b04}
+.cab h1,.pergunta h2,.follow p.q,.carta b,.cr h3,#guia h2,.marca span{font-weight:400;letter-spacing:0}
+.cab h1{font-size:clamp(34px,2.9vw,56px)}
+.pergunta h2{font-size:clamp(24px,1.9vw,34px)}
+.capa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:10px 0 6px;font:400 clamp(58px,5.4vw,104px)/.98 var(--disp);color:var(--t1)}
+.capa .banda{margin:0 0 18px;font:500 clamp(18px,1.3vw,22px) var(--ui);color:var(--ac)}
+.capa .sub{margin:0 0 26px;font:400 clamp(18px,1.3vw,22px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.fr-foto{margin:0;display:grid;gap:14px}
+.fr-foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r1);border:1px solid #1a1e27;box-shadow:var(--sombra)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.05vw,17px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(159,220,174,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.fr-mesa{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.fr-ops{display:grid;gap:6px}
+.fr-linha-ok{display:flex;align-items:center;gap:12px} .fr-linha-ok span{flex:1}
+.fr-centro{max-width:1150px;margin:0 auto 14px;width:100%;display:grid;gap:12px}
+
+/* a onda da música: o traço comum */
+.onda{position:relative;display:flex;align-items:center;gap:2px;height:44px}
+.onda i{flex:1;border-radius:2px;background:linear-gradient(180deg,var(--ac),color-mix(in srgb,var(--ac) 40%,#000));opacity:.7}
+.onda .mk{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t1);border:0;padding:0;margin:0}
+.onda.grande{height:84px;max-width:1300px;width:100%;margin:34px auto 40px}
+.onda.grande button.mk:nth-child(even) span{top:auto;bottom:-30px}
+.onda.grande button.mk{width:14px;margin-left:-6px;background:transparent;cursor:pointer}
+.onda.grande button.mk::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--t2)}
+.onda.grande button.mk span{position:absolute;top:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 14px var(--ui);color:var(--t2);padding:3px 10px;border-radius:999px;border:1px solid var(--fio2);background:var(--noite)}
+.onda.grande button.mk.on::before{background:var(--ac2);width:3px}
+.onda.grande button.mk.on span{color:#1a0b04;background:var(--ac);border-color:var(--ac)}
+.onda.grande button.mk:focus-visible span{outline:2px solid var(--ac2);outline-offset:2px}
+
+/* o resto: quieto */
+.fr-encarte{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:26px;max-width:1300px;margin:0 auto 18px;width:100%;padding:18px;border-radius:var(--r1)}
+.fr-capinha{display:grid;gap:10px}
+.fr-capinha img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid #20242f}
+.fr-capinha small{display:block;font:600 14px var(--ui);color:var(--ac)} .fr-capinha b{font:400 clamp(24px,1.9vw,32px)/1.1 var(--disp);color:var(--t1)}
+.fr-encarte dl{margin:0;display:grid;gap:14px;align-content:center}
+.fr-encarte dt{font:600 14px var(--ui);color:var(--frio)} .fr-encarte dd{margin:2px 0 0;font:400 clamp(19px,1.4vw,24px)/1.4 var(--disp);color:var(--t1)}
+.fr-selo{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:1px dashed var(--fio2);text-align:center;padding:16px}
+.fr-selo b{font:italic 400 clamp(30px,2.4vw,42px) var(--disp);color:var(--ac)} .fr-selo small{font:400 15px var(--ui);color:var(--t2)}
+.fr-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.fr-vcol{display:grid;gap:6px;width:100%;max-width:min(100%,82vh);justify-self:center} .fr-cred{font:400 13px var(--ui);color:var(--t3)}
+.fr-dica{text-align:center;font:italic 400 22px var(--disp);color:var(--t3)}
+.fr-sentido{display:block;font:400 clamp(19px,1.4vw,23px)/1.45 var(--disp);color:var(--t1);margin-bottom:8px}
+.fr-gram{display:block;font:400 16px/1.5 var(--ui);color:var(--t2)} .fr-gram b{color:var(--ac2)}
+.fr-pista{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--ac)}
+.fr-pista small{font:600 13px var(--ui);color:var(--ac)} .fr-pista p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.fr-fala{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--frio)}
+.fr-fala small{display:flex;align-items:center;gap:8px;font:600 13px var(--ui);color:var(--frio)} .fr-fala p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.fr-luz{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px rgba(242,131,122,.7)}
+.fr-ar{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px;border-radius:var(--r1)} .fr-ar p{margin:0;font:400 30px var(--disp);color:var(--t1)}
+.fr-carta{display:grid;gap:4px;padding:10px 14px;border-radius:var(--r2);border:1px solid var(--fio2);background:var(--vidro)}
+.fr-carta > small{font:600 13px var(--ui);color:var(--t3)}
+.fr-carta p{margin:0;font:400 clamp(14px,1vw,16px)/1.45 var(--ui);color:var(--t1)}
+.fr-carta.aluno{border-color:rgba(217,130,74,.45);background:rgba(217,130,74,.05)} .fr-carta.aluno > small{color:var(--ac)}
+.fr-carta.prof{border-style:dashed}
+.fr-carta details{margin-top:4px;display:grid;gap:3px} .fr-carta summary{cursor:pointer;font:600 13px var(--ui);color:var(--t3)}
+.so-aluno-c{display:none}
+html.wl-sala-aluno .so-aluno-c{display:grid}
+
+.fim .grande span{font-size:clamp(15px,1.1vw,18px)}
+
+/* a cara de From: Alfa Slab One no título e na placa, Bitter no texto */
+:root{--disp:'Bitter',Georgia,serif;--ui:'Bitter',Georgia,serif}
+.cab h1,.capa h1{font-family:'Alfa Slab One',Georgia,serif;font-weight:400;letter-spacing:.005em}
+.capa h1{font-size:clamp(46px,4.4vw,84px);line-height:1}
+.cab h1{font-size:clamp(25px,2.1vw,40px);line-height:1.15}
+.pergunta h2{font-family:var(--ui);font-weight:600}
+.fr-pista p{font-family:var(--ui)!important;font-weight:700}
+.fr-sentido,.fr-encarte dd{font-family:var(--ui)!important;font-weight:400}
+/* o horizonte e a placa: o gesto forte */
+.fr-quadro{display:grid;gap:0;border-radius:10px;overflow:hidden;background:#0d0b09;box-shadow:inset 0 0 0 1px #2a231b,0 18px 40px #000c;max-width:clamp(340px,27vw,520px);width:100%;margin:0 auto}
+.fr-ceu{display:block;width:100%;height:auto}
+.fr-ceu rect{transition:fill 1s}
+.fr-sol{fill:#d9824a;filter:drop-shadow(0 0 10px #d9824a88)}
+.fr-sol.desce{animation:fr-desce 1.2s ease-out both}
+@keyframes fr-desce{from{transform:translateY(-8px)}to{transform:none}}
+.fr-mata{fill:#070605}
+.fr-talisma{fill:none;stroke:#e9c48a;stroke-width:2;filter:drop-shadow(0 0 6px #e9c48a)}
+.fr-tabua{padding:8px 16px 8px;background:repeating-linear-gradient(0deg,#1d1610 0 26px,#1a130d 26px 27px);border-top:2px solid #070605}
+.fr-titulo{margin:0 0 6px;font:400 clamp(18px,1.3vw,24px) 'Alfa Slab One',serif;color:#d9b48a;letter-spacing:.04em;text-align:center}
+.fr-lista{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.fr-linha{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:baseline;min-height:clamp(19px,2.2vh,25px);padding:1px 4px;border-radius:3px}
+.fr-linha b{font:400 14px 'Alfa Slab One',serif;color:#5d4a36}
+.fr-linha span{font:600 clamp(13px,.95vw,16.5px)/1.3 'Bitter',serif;color:#e8d3b4}
+.fr-linha.ok b{color:#d9824a}
+.fr-linha.vez{box-shadow:inset 2px 0 0 #d9824a;background:#d9824a12}
+.fr-linha.vez span{color:#8a7357}
+.fr-linha.novo span{animation:fr-pinta 1s ease-out both}
+@keyframes fr-pinta{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.fr-legenda{margin:0;padding:6px 10px 8px;font:italic 500 clamp(13px,1.6vh,16px) 'Bitter',serif;color:#8a7a68;text-align:center;background:#0d0b09}
+.fr-quadro.cheio .fr-legenda{color:#e9c48a}
+@media (prefers-reduced-motion:reduce){.fr-sol.desce,.fr-linha.novo span{animation:none}.fr-ceu rect{transition:none}}
+/* o resto: quieto */
+.fr-regra{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1300px;margin:0 auto 16px;width:100%}
+.fr-regra > div{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.fr-regra small{font:700 13px var(--ui);color:var(--frio)} .fr-regra p{margin:0;font:600 clamp(18px,1.3vw,23px)/1.35 var(--ui);color:var(--t1)} .fr-regra b{color:var(--ac2)} .fr-regra span{font:500 15px var(--ui);color:var(--t2)}
+.fr-suas{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1300px;margin:0 auto;width:100%}
+.fr-su{display:grid;gap:6px;align-content:start;padding:14px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.fr-su small{font:700 13px var(--ui);color:var(--ac)} .fr-su p{margin:0;font:600 clamp(17px,1.2vw,21px)/1.3 var(--ui);color:var(--t1)}
+.fr-encarte .fr-capinha img{aspect-ratio:16/10;max-height:clamp(150px,23vh,250px)}
+.fr-encarte{margin-bottom:6px}.fr-encarte dl{gap:8px}.fr-encarte dd{font-size:clamp(16px,1.02vw,19px)!important;line-height:1.45}
+@media (max-width:1100px){ .fr-regra{grid-template-columns:1fr} .fr-suas{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .fr-suas{grid-template-columns:1fr} .capa h1{font-size:40px} .aq-pilha{max-width:calc(100% - 26px)!important;margin-left:0!important} }
+
+@media (max-width:1100px){ .mesa-c,.capa,.fr-mesa,.fr-video,.fr-encarte{grid-template-columns:1fr} .fr-regra{grid-template-columns:1fr} }
+@media (max-width:620px){
+  .onda.grande{height:64px;margin-top:40px} .onda.grande button.mk span{font-size:11px;padding:2px 6px}
+  .fr-capinha img{aspect-ratio:16/9}
+}
+
+/* a tira de filme (aulas de filme no lugar da onda de som) */
+.tira{border-radius:6px;padding:0 6px;background:#070707;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.tira-furos{height:14px;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,255,255,.13) 9px 19px,transparent 19px 28px);background-size:28px 6px;background-repeat:repeat-x;background-position:0 50%}
+.tira-q{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tq{position:relative;display:grid;align-content:end;gap:1px;aspect-ratio:16/9;min-height:0;padding:6px 8px;border:0;border-radius:2px;overflow:hidden;text-align:left;background:#141414;font:inherit;color:inherit}
+.tq-img{position:absolute;inset:0;background:var(--bg) center/cover;filter:brightness(.42) saturate(.8)}
+.tq b,.tq span{position:relative}
+.tq b{font:600 10px var(--ui);color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.tq span{font:600 11px/1.15 var(--ui);color:var(--t1)}
+.tira.grande{max-width:1300px;width:100%;margin:6px auto 22px}
+.tira.grande .tq{cursor:pointer;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s}
+.tira.grande .tq b{font-size:13px} .tira.grande .tq span{font-size:clamp(14px,1.05vw,18px)}
+.tira.grande .tq:hover .tq-img{filter:brightness(.55)}
+.tira.grande .tq.on{outline-color:var(--ac)} .tira.grande .tq.on .tq-img{filter:brightness(.7) saturate(1)}
+.tira.grande .tq:focus-visible{outline-color:var(--ac2)}
+@media (max-width:620px){.tira.grande .tira-q{grid-template-columns:repeat(3,minmax(0,1fr))} .tira.grande .tq span{font-size:12px} .tira.grande .tq b{font-size:11px} .capa-r .tira{display:none}}
+
+
+/* 22/10/2026 · formatos novos: a placa e o sol em cima do cartão de cena (deitada: céu à esquerda, tábua à direita) */
+.fm-obj .fr-quadro{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);max-width:min(760px,100%)}
+.fm-obj .fr-ceu{grid-column:1;grid-row:1;height:100%;min-height:150px}
+.fm-obj .fr-tabua{grid-column:2;grid-row:1;padding:4px 14px 4px}
+.fm-obj .fr-legenda{grid-column:1/-1;padding:3px 10px 5px;font-size:13px}
+.fm-obj .fr-titulo{margin:0 0 2px;font-size:clamp(15px,1.1vw,19px)}
+.fm-obj .fr-linha{min-height:20px}
+.fm-obj .fr-linha span{font-size:clamp(12px,.85vw,14.5px)}
+@media (max-width:620px){.fm-obj .fr-quadro{grid-template-columns:minmax(0,1fr)}.fm-obj .fr-ceu,.fm-obj .fr-tabua,.fm-obj .fr-legenda{grid-column:1}.fm-obj .fr-ceu{grid-row:1;min-height:0;height:70px}.fm-obj .fr-tabua{grid-row:2}.fm-obj .fr-legenda{grid-row:3}}

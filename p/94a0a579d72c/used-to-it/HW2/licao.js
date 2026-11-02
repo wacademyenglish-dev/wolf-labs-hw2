@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Used to It",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/94a0a579d72c/used-to-it/img/live-neve.webp",
+  "capa": "../img/live-neve.webp",
   "alvo": "used to + verb (a habit that ended); be used to + -ing or a noun (normal now); get used to + -ing (the road in between); that TO is a preposition, so -ing; never used to + -ing, be used to + plain verb",
   "abrir": "What did you have to get used to recently?",
   "fecho": "<b>used to</b> + verb: it is over (<i>I used to walk to work.</i>). <b>be used to</b> + -ing: it is normal now (<i>I'm used to walking.</i>). <b>get used to</b>: the road in between (<i>I'm getting used to it.</i>). That <b>to</b> is a preposition, so: <b>-ing</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a cold new city. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/94a0a579d72c/used-to-it/img/live-neve.webp",
+      "img": "../img/live-neve.webp",
       "leg": "A snowy street at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'm not used to the cold yet.",
-          "img": "https://wolf-labs.pages.dev/p/94a0a579d72c/used-to-it/img/live-neve.webp",
+          "img": "../img/live-neve.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I used to live near the sea.",
-          "img": "https://wolf-labs.pages.dev/p/94a0a579d72c/used-to-it/img/live-mala.webp",
+          "img": "../img/live-mala.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'm getting used to waking up in the dark.",
-          "img": "https://wolf-labs.pages.dev/p/94a0a579d72c/used-to-it/img/live-neve.webp",
+          "img": "../img/live-neve.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/94a0a579d72c/used-to-it/img/live-neve.webp",
+      "img": "../img/live-neve.webp",
       "leg": "A snowy street at night",
       "pede": "Look at the picture: a snowy street at night. Write 2 or 3 sentences about a change in your life. Use <b>used to</b>, <b>I'm used to</b> or <b>I'm getting used to</b>.",
       "ph": "I used to … Now I'm getting used to …",

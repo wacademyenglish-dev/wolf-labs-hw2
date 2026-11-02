@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Final Talk",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ba4516d93d6d/the-final-talk/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the five-minute talk toolkit: hook (Raise your hand if), story arc (It all started when ... That's when ...), nuance (It could be argued that, bound to), concession and contrast (Granted, ... On the other hand, ...), rephrase (In other words), close (All I ask is ...); afraid to speak, On the other hand vs On the contrary",
   "abrir": "What would you talk about if you had five minutes on a stage?",
   "fecho": "A good talk has a shape. <b>Hook</b>: <i>Raise your hand if…</i> <b>Story</b>: <i>It all started when…</i> <i>That's when…</i> <b>Nuance</b>: <i>It could be argued that…</i> <b>Contrast</b>: <i>Granted, … On the other hand, …</i> <b>Rephrase</b>: <i>In other words, …</i> <b>Close</b>: <i>All I ask is this: …</i> Two sides that are both true use <b>on the other hand</b>, never <i>on the contrary</i>. <b>Afraid to speak</b>, not <i>afraid of speak</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on the night before the final talk. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/ba4516d93d6d/the-final-talk/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A rooftop at dawn",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -121,17 +121,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It all started when I froze in a meeting.",
-          "img": "https://wolf-labs.pages.dev/p/ba4516d93d6d/the-final-talk/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Granted, grammar matters. On the other hand, courage matters more.",
-          "img": "https://wolf-labs.pages.dev/p/ba4516d93d6d/the-final-talk/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "All I ask is this: speak first, and fix it later.",
-          "img": "https://wolf-labs.pages.dev/p/ba4516d93d6d/the-final-talk/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -177,7 +177,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ba4516d93d6d/the-final-talk/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A rooftop at dawn",
       "pede": "Look at the picture: a rooftop at dawn, after a long night. Write 2 or 3 sentences for the end of your own talk: a rephrase and a close. Use <b>In other words</b> and <b>All I ask is</b>.",
       "ph": "In other words, …",

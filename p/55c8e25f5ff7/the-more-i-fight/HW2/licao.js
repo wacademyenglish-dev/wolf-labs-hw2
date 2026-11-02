@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The More I Fight",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/55c8e25f5ff7/the-more-i-fight/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the + comparative, the + comparative (The more I practice, the better I get); comparative and comparative (stronger and stronger); never the more early, more good",
   "abrir": "What do you get better at the more you practice?",
   "fecho": "<b>The + comparative, the + comparative</b>: <i>The more I practice, the better I get.</i> Short adjectives take <b>-er</b>: <i>The earlier I start, the sooner I finish.</i> <b>Comparative and comparative</b> = it keeps growing: <i>stronger and stronger</i>. Not <i>the more early</i> or <i>more good</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about training for a job. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/55c8e25f5ff7/the-more-i-fight/img/live-portal.webp",
+      "img": "../img/live-portal.webp",
       "leg": "A bright gate in a city street",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The more I practice, the better I get.",
-          "img": "https://wolf-labs.pages.dev/p/55c8e25f5ff7/the-more-i-fight/img/live-teto.webp",
+          "img": "../img/live-teto.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The harder I study the map, the easier it gets.",
-          "img": "https://wolf-labs.pages.dev/p/55c8e25f5ff7/the-more-i-fight/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The sooner we start, the sooner we finish.",
-          "img": "https://wolf-labs.pages.dev/p/55c8e25f5ff7/the-more-i-fight/img/live-portal.webp",
+          "img": "../img/live-portal.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/55c8e25f5ff7/the-more-i-fight/img/live-teto.webp",
+      "img": "../img/live-teto.webp",
       "leg": "A rainy city at night",
       "pede": "Look at the picture: a rainy city at night. Write 2 or 3 sentences about something you are learning. Use <b>the more …, the more …</b> or <b>better and better</b>.",
       "ph": "The more I …, the … I get.",

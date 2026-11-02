@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · It Needn’t Be Perfect · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 2 · Modals with nuance</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>It Needn’t Be Perfect · C1 Unit 2 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on the present: needn’t / don’t need to / don’t have to / there’s no need to (not necessary) versus mustn’t / aren’t allowed to (forbidden). The past (needn’t have) is in another lesson of the unit.</p><p style="margin:0 0 6px"><b>The story:</b> Marta (invented) leaves a welcome note on the kitchen table of the Blue House, a holiday home by the beach. At the end, the student writes house rules for a guest.</p><p style="margin:0 0 6px"><b>About 47 min:</b> I · Your Rules (6) · II · The Welcome Note (9) · III · Kind or Strict? (9) · IV · The Beach Council (8) · V · Find the Mistakes (7) · VI · Your House Rules (8).</p><p style="margin:0"><b>Open with:</b> “At your job or school, what do you have to do that you don’t like?”</p></div><!--/prep-->
+    <p>Even advanced Brazilian students say “you mustn’t pay, it’s free”. That sounds like a law. Focus on the feeling of each sentence: kind host or strict guard? The welcome note shows the contrast; the bingo and the party message make the student choose fast.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>needn’t + verb (no to) · don’t have to / don’t need to · there’s no need to · mustn’t · aren’t allowed to · kind host or strict guard: the tone</p>
+    <h4>YOUR RULES</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>THE WELCOME NOTE</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>KIND OR STRICT?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>YOUR HOUSE RULES</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>you mustn’t pay, it’s free</i>, <i>you needn’t to worry</i>, <i>you don’t must</i>, <i>you don’t need bring</i>, <i>there’s no need bring</i>, <i>you don’t allowed to</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE BEACH COUNCIL (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After the rule, your student sits on the beach council and votes on three new rules for the Blue House: Yes, Propose a change, or No. There is no right answer; a good vote says what is necessary and what is forbidden (needn’t, mustn’t, aren’t allowed to). Wait five seconds in silence, then use the PUSH line (only you see it) to make the vote harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · Your Rules and IV · The Beach Council.</li>
+      <li><b>Listen</b>: II · The Welcome Note.</li>
+      <li><b>Focus</b>: III · Kind or Strict? and V · Find the Mistakes.</li>
+      <li><b>Write</b>: VI · Your House Rules.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* IT NEEDN’T BE PERFECT (Main C1) · pergunta-surpresa · 28/10/2026 · needn’t × mustn’t */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'Would you rather', q: 'Would you rather stay in a house with a host like Marta, or in a hotel where nobody talks to you?',
+    opc: ['Marta’s house', 'The silent hotel'], st: ['I’d rather …, because you needn’t …', 'In a hotel, you don’t have to …'],
+    ex: 'Marta’s house. You needn’t talk to anyone, but it feels like a home, not a room.', push: 'Marta leaves a note every morning with “ideas for your day”. Still her house?' },
+  { cena: 'descobre', tipo: 'And you?', q: 'What is one rule in your home that a guest would find strange?',
+    opc: ['Shoes off', 'A kitchen rule', 'Something unusual'], st: ['At my place, you mustn’t …', 'You needn’t …, but …'],
+    ex: 'Shoes off. You mustn’t walk on my sofa with shoes. You needn’t bring slippers, though: I have ten pairs.', push: 'Do you follow your own rule when nobody is watching?' },
+  { cena: 'erros', tipo: 'Opinion', q: 'At work, which rule is completely unnecessary, in your opinion?',
+    opc: ['A dress code', 'Fixed hours', 'Too many meetings'], st: ['We have to …, but there’s no need to …', 'People needn’t …'],
+    ex: 'Fixed hours. We have to be online at nine, but there’s no need to: half of our clients answer at night.', push: 'You’re the boss tomorrow. Which rule do you delete first, and which one stays?' },
+  { cena: 'cartao', tipo: 'What if', q: 'A friend stays at your place for a week. What is the one thing they absolutely mustn’t do?',
+    opc: ['Touch my food', 'Wake me up', 'Something else'], st: ['They mustn’t …, but they needn’t …', 'They aren’t allowed to …'],
+    ex: 'Wake me up. They can eat anything, they needn’t ask, but they mustn’t wake me up before nine on a Saturday.', push: 'And what would you forgive, even if they did it twice?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* IT NEEDN’T BE PERFECT (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O conselho TROCA "IV · Bingo" (prática controlada; a mesma forma volta no V e no VI).
+   No meio da aula, o aluno vira membro do conselho das casas de temporada da praia e vota três regras
+   novas para a Blue House: Yes / Propose a change / No. O alvo (needn’t / don’t have to / there’s no
+   need to × mustn’t / aren’t allowed to) mora nos iniciadores. Formato: council vote (escolha). */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'conselho', troca: 'bingo', est: 'o', min: 8, img: 'capa', rot: 'The Beach Council', t: 'Three new rules for the Blue House. You vote.',
+    p: 'You sit on the beach council. Read each proposal and vote. Say why: what is necessary, and what is forbidden?',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Checkout', sit: 'Marta wants to change the note: “On Sundays, guests needn’t leave until 4 p.m. There’s no need to ask.”',
+        q: 'Do you vote for it?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Guests needn’t …, because …', 'There’s no need to …, but …', 'I’d change it: guests don’t have to …, unless …'],
+        ex: 'Propose a change. Guests needn’t leave at 11, fine, but 4 p.m. is too late for the cleaner. Let’s say 2 p.m., and they don’t have to ask.',
+        push: 'New guests arrive at 3. Do you still vote yes?' },
+      { tag: 'Quiet hours', sit: 'The neighbours propose: “After 10 p.m., guests mustn’t play music, even inside the house.”',
+        q: 'Do you vote for it?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Guests mustn’t …, because …', 'They aren’t allowed to …, but they don’t have to …', 'It’s a holiday: there’s no need to …'],
+        ex: 'Yes. People on holiday needn’t go to bed early, but they mustn’t keep the whole street awake. Headphones exist.',
+        push: 'It’s a birthday, the music is low, and it’s 10:15. Does the rule still apply?' },
+      { tag: 'Phones', sit: 'Marta has a new idea: “The Blue House is a no-Wi-Fi house. Guests aren’t allowed to ask for the password.”',
+        q: 'Do you vote for it?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['On holiday, you needn’t …', 'Guests aren’t allowed to …? That’s …', 'You don’t have to …, but you mustn’t …'],
+        ex: 'No. You needn’t check your email on holiday, but some guests have to work, and they mustn’t lose their job because of a beach house.',
+        push: 'A guest says: “I came here to escape my phone. Please keep the rule.” Do you change your vote?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "Rules in your life.",
+   "p": "Answer with detail. Then ask it back."
+  },
+  "leitura": {
+   "t": "Marta’s note on the kitchen table.",
+   "p": "Read it aloud. Answer. Then look closer."
+  },
+  "descobre": {
+   "t": "Not necessary, or not allowed?",
+   "p": "Compare A and B. How does the guest feel?"
+  },
+  "cv-conselho": {
+   "t": "Three new rules for the Blue House.",
+   "p": "Vote on each. Necessary, or forbidden? Say why."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say the right form. Then tap."
+  },
+  "cartao": {
+   "t": "A guest is coming to your home.",
+   "p": "Four rules: must, mustn’t, two needn’t."
+  }
+ },
+ "prep": {
+  "obj": "Não é preciso (needn’t, don’t have to, don’t need to, there’s no need to) × proibido (mustn’t, aren’t allowed to), no bilhete de boas-vindas da Marta na Blue House, casa de praia.",
+  "armadilha": "O brasileiro diz “you mustn’t pay, it’s free”: soa como lei, não como gentileza. E a forma: “you needn’t to worry”, “you don’t must”, “you don’t need bring”, “you don’t allowed to”.",
+  "pal": [
+   "needn’t",
+   "don’t have to",
+   "don’t need to",
+   "there’s no need to",
+   "mustn’t",
+   "aren’t allowed to",
+   "kind host",
+   "strict guard"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: o tom de cada regra, anfitrião gentil ou guarda rígido.",
+   "perg": "What do you have to do that you don’t like?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal sobre regras no trabalho, na escola e em casa; o aluno devolve a pergunta.",
+   "perg": "What rules do you follow at work?",
+   "pula": "Duas perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Leitura do bilhete da Marta: o que o hóspede não precisa fazer e o que não pode.",
+   "perg": "What needn’t the guests worry about?",
+   "pula": "Leia e faça só as perguntas de sentido."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: o sentimento do hóspede com needn’t e com mustn’t.",
+   "perg": "Kind host or strict guard?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "cv-conselho": {
+   "obj": "Conselho da praia: três regras novas para a Blue House; voto dizendo o que é preciso e o que é proibido.",
+   "perg": "Is that necessary, or should it be forbidden?",
+   "pula": "Duas propostas bastam."
+  },
+  "erros": {
+   "obj": "Um bilhete com erros de needn’t/mustn’t; o aluno corrige falando antes de tocar.",
+   "perg": "What’s wrong with this line?",
+   "pula": "Três erros bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: quatro regras para um hóspede na casa do aluno.",
+   "perg": "What does your guest needn’t worry about?",
+   "pula": "Duas regras bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre regras, obrigações e liberdades na vida do aluno.",
+   "perg": "Do you have to, or needn’t you?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre regras de casa, trabalho e convivência.",
+   "perg": "Should that be forbidden, or just optional?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Marta e responde às perguntas de um hóspede.",
+   "perg": "Marta, do we have to clean before we leave?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Necessary, or just optional?",
+   "p": "Pick a card. Kind host or strict guard?",
+   "palavras": [
+    "needn’t",
+    "don’t have to",
+    "there’s no need to",
+    "mustn’t",
+    "aren’t allowed to"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR OFFICE",
+     "q": "What don’t you have to do at work that people think you do?",
+     "fup": "And what are you not allowed to do?",
+     "st": [
+      "I don’t have to …",
+      "We aren’t allowed to …"
+     ],
+     "ex": "I don’t have to wear a suit, but we aren’t allowed to wear shorts."
+    },
+    {
+     "k": "AT DINNER",
+     "q": "When friends come for dinner, what needn’t they bring?",
+     "fup": "What mustn’t they do?",
+     "st": [
+      "You needn’t bring …",
+      "There’s no need to …"
+     ],
+     "ex": "You needn’t bring anything. There’s no need to arrive on time, either."
+    },
+    {
+     "k": "AS A CHILD",
+     "q": "What were you not allowed to do as a child that you do now?",
+     "fup": "Was the rule fair?",
+     "st": [
+      "I wasn’t allowed to …",
+      "Now I …"
+     ],
+     "ex": "I wasn’t allowed to drink coffee. Now I drink four a day."
+    },
+    {
+     "k": "WEEKEND",
+     "q": "What don’t you need to do on a Sunday?",
+     "fup": "Do you feel guilty about it?",
+     "st": [
+      "On Sundays, I don’t need to …"
+     ],
+     "ex": "On Sundays, I don’t need to set an alarm, and I never do."
+    },
+    {
+     "k": "YOUR BUILDING",
+     "q": "What are the strangest rules in your building or street?",
+     "fup": "Do people follow them?",
+     "st": [
+      "Residents mustn’t …",
+      "You aren’t allowed to …"
+     ],
+     "ex": "Residents mustn’t hang towels on the balcony. Everybody does."
+    },
+    {
+     "k": "LANGUAGE",
+     "q": "In English class, what needn’t you worry about at C1?",
+     "fup": "And what must you still watch?",
+     "st": [
+      "I needn’t worry about …, but I must …"
+     ],
+     "ex": "I needn’t worry about the basics anymore, but I must watch my prepositions."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "needn’t",
+    "mustn’t",
+    "aren’t allowed to",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Holiday homes: lots of house rules, or almost none?",
+     "a": "Lots of rules",
+     "b": "Almost none",
+     "fa": [
+      "Lots. Guests mustn’t treat a home like a hotel.",
+      "Clear rules avoid arguments later."
+     ],
+     "fb": [
+      "Almost none. Guests needn’t feel watched on holiday.",
+      "The thing is, ten rules feel like a prison."
+     ]
+    },
+    {
+     "q": "Shoes off at the door: polite request or strict rule?",
+     "a": "Strict rule",
+     "b": "Polite request",
+     "fa": [
+      "Strict rule. You aren’t allowed to bring the street in.",
+      "My floor, my rules."
+     ],
+     "fb": [
+      "Polite request. Guests needn’t take them off if they’re uncomfortable.",
+      "I see your point, but nobody wants cold feet."
+     ]
+    },
+    {
+     "q": "Should phones be banned at the dinner table?",
+     "a": "Banned",
+     "b": "Allowed",
+     "fa": [
+      "Banned. You mustn’t text while someone is talking to you.",
+      "Dinner is the last place we talk."
+     ],
+     "fb": [
+      "Allowed. There’s no need to make it a law.",
+      "Sometimes you need to check a fact."
+     ]
+    },
+    {
+     "q": "Should guests have to clean before they leave?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. You don’t have to scrub, but you mustn’t leave a mess.",
+      "It’s basic respect."
+     ],
+     "fb": [
+      "No. Guests needn’t clean; that’s what the fee is for.",
+      "Hosts should enjoy cleaning after happy guests."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You needn’t agree, and nobody had to."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Marta now.",
+   "p": "Your teacher, a guest, has questions.",
+   "aluno": "Listen to your teacher’s question. Answer as Marta, the kind host of the Blue House.",
+   "perguntas": [
+    "Do we have to clean the house before we leave?",
+    "Can we bring our dog?",
+    "Do we need to take the towels to the beach?",
+    "Are we allowed to have a small party on Saturday?",
+    "Is there anything we mustn’t touch?",
+    "Do we need to call you when we arrive?"
+   ],
+   "st": [
+    "You needn’t …",
+    "There’s no need to …",
+    "Please, you mustn’t …"
+   ],
+   "ex": "You needn’t clean the whole house, but please don’t leave food in the fridge."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

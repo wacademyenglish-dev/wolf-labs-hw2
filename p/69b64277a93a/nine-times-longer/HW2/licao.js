@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Nine Times Longer",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/69b64277a93a/nine-times-longer/img/hw-capa.webp",
+  "capa": "../img/hw-capa.webp",
   "alvo": "double comparatives: The more X, the more/less/fewer Y · The -er X, the -er Y (two THEs, one comma); multipliers: twice as long as, three times longer than, half as many as",
   "abrir": "What takes you longer than it should? Why?",
   "fecho": "<b>The more …, the less …</b>: two THEs tie two amounts, with one comma between them: <i>The more you check, the less you finish.</i> For numbers: <i>twice as long <b>as</b></i>, <i>three times longer <b>than</b></i>, <i>half as many <b>as</b></i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the office. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/69b64277a93a/nine-times-longer/img/envelopes.webp",
+      "img": "../img/envelopes.webp",
       "leg": "The inbox that never ends",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The more messages we answer, the less real work we finish.",
-          "img": "https://wolf-labs.pages.dev/p/69b64277a93a/nine-times-longer/img/monitor.webp",
+          "img": "../img/monitor.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The longer the queue, the worse the replies.",
-          "img": "https://wolf-labs.pages.dev/p/69b64277a93a/nine-times-longer/img/envelopes.webp",
+          "img": "../img/envelopes.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Fixing it took three times longer than writing it.",
-          "img": "https://wolf-labs.pages.dev/p/69b64277a93a/nine-times-longer/img/marte.webp",
+          "img": "../img/marte.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/69b64277a93a/nine-times-longer/img/marte.webp",
+      "img": "../img/marte.webp",
       "leg": "A machine, busy and silent",
       "pede": "Look at the picture: a machine that was busy all day and finished nothing. Write 2 or 3 sentences about it, or about your own week. Use <b>The more …, the less …</b> or a multiplier.",
       "ph": "The more tasks it did, the less …",

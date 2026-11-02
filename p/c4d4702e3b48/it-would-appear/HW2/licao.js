@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It Would Appear That",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c4d4702e3b48/it-would-appear/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "careful written English: it would appear that / appear to; may have + past participle (may have been caused by); suggest and be linked to instead of prove and cause; the empty IT stays, never 'would appear that' alone",
   "abrir": "Where do you read the news?",
   "fecho": "A careful writer says less than the proof. <b>It would appear that</b> + clause · <b>appears to</b> + verb · <b>may have</b> + past participle (<i>may have been caused by</i>) · <b>suggests</b>, not <i>proves</i> · <b>is linked to</b>, not <i>causes</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the night desk. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c4d4702e3b48/it-would-appear/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A newsroom at night, lamps on the desks",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The new press appears to be running faster than before.",
-          "img": "https://wolf-labs.pages.dev/p/c4d4702e3b48/it-would-appear/img/live-prensa.webp",
+          "img": "../img/live-prensa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The old files may have been moved last year.",
-          "img": "https://wolf-labs.pages.dev/p/c4d4702e3b48/it-would-appear/img/live-arquivo.webp",
+          "img": "../img/live-arquivo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It would appear that it has been raining all night.",
-          "img": "https://wolf-labs.pages.dev/p/c4d4702e3b48/it-would-appear/img/live-janela.webp",
+          "img": "../img/live-janela.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c4d4702e3b48/it-would-appear/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A blank sheet of paper and a pencil under a lamp",
       "pede": "Look at the picture: a blank sheet and a pencil under a lamp. Write 2 or 3 careful sentences about something in your city or work that you are not sure about. Use <b>It would appear that</b>, <b>appears to</b> and <b>may have</b> + participle.",
       "ph": "It would appear that …",

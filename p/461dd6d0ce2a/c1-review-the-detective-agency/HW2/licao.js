@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Detective Agency",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/461dd6d0ce2a/c1-review-the-detective-agency/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "review of modals with nuance: needn't have + past participle, needn't vs mustn't vs don't have to, softened requests (Could we possibly...? Would you be willing to...?), bound to / due to, will / would for typical behaviour, will have + past participle for deduction (That'll be...); no to after needn't or a modal, due to + verb",
   "abrir": "Have you ever solved a small mystery at home? What was it?",
   "fecho": "Modals add nuance. <b>Deduction</b>: <i>That'll be the client.</i> <i>Someone will have had a key.</i> <b>Certainty and schedule</b>: <i>bound to</i>, <i>due to arrive</i>. <b>Softened request</b>: <i>Could we possibly…? Would you be willing to…?</i> <b>Unnecessary</b>: <i>I needn't have brought an umbrella.</i> <b>Not necessary</b> is <b>needn't</b>; <b>not allowed</b> is <b>mustn't</b>. No <i>to</i> after <i>needn't</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo run a small detective agency. A light case, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/461dd6d0ce2a/c1-review-the-detective-agency/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The detective's desk, a hat and a lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "That'll be the client at the door.",
-          "img": "https://wolf-labs.pages.dev/p/461dd6d0ce2a/c1-review-the-detective-agency/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The cleaner is bound to have a spare key.",
-          "img": "https://wolf-labs.pages.dev/p/461dd6d0ce2a/c1-review-the-detective-agency/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I needn't have brought my umbrella.",
-          "img": "https://wolf-labs.pages.dev/p/461dd6d0ce2a/c1-review-the-detective-agency/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -168,7 +168,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/461dd6d0ce2a/c1-review-the-detective-agency/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "Rain and warm lights in the dark",
       "pede": "Look at the picture: rain and warm lights in the dark. Write 2 or 3 sentences about a small mystery in your life. Use <b>bound to</b>, <b>will have</b> or <b>needn't have</b>.",
       "ph": "My keys have gone. They will have …",

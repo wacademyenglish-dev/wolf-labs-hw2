@@ -1,0 +1,111 @@
+/* ============================================================
+   FOUR WEEKS · THE TWO COMMAS · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: a sala de leitura à noite —
+   azul-tinta quase preto; a luz de abajur em âmbar; a frase do estudo
+   com dois encaixes que acendem em âmbar quando a vírgula entra; o
+   gráfico de barras em ciano frio (alguns) ou âmbar (todos); a onda da
+   pausa com os silêncios marcados.
+   ============================================================ */
+:root{
+  --noite:#05070c; --noite-rgb:5,7,12; --tinta:#e6e9f0;
+  --t1:#eef1f7; --t2:#c3c9d6; --t2-rgb:195,201,214; --t3:#838b9c;
+  --ac:#f2b45c; --ac2:#ffd9a3; --frio:#7cc8e6; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(230,233,240,.05); --vidro2:rgba(230,233,240,.085); --vidro3:rgba(230,233,240,.12);
+  --fio:rgba(220,226,238,.12); --fio2:rgba(220,226,238,.22); --luz:rgba(230,233,240,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'Fraunces',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1700}
+.btn.cheio{color:#2a1700}
+.capa{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,6vw,118px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2a1d0c;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.versao.grande-v{min-height:58px;font:800 clamp(14px,1.1vw,18px) var(--mono);letter-spacing:.06em;text-align:center}
+.sw-ops{display:grid;gap:6px} .sw-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:0 auto 12px;width:100%} .sw-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1100px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao s{text-decoration-color:var(--erro);color:var(--t3)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+
+/* vídeo selado */
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:800 28px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--disp);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.sw-depois{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+
+/* a frase do estudo com os dois encaixes */
+.sw-frase{display:block;text-align:center;padding:18px 22px;border-radius:var(--r1);border:1px solid var(--fio2);background:#0b0f18;font:600 clamp(20px,1.65vw,30px)/1.45 var(--serif);width:100%}
+.sw-v{display:inline-block;min-width:14px;margin:0 3px 0 1px;line-height:1;border-bottom:2px dashed var(--t3);font-style:normal;color:var(--ac);font-weight:900;text-align:center}
+.sw-frase.com .sw-v{border-bottom-color:transparent;text-shadow:0 0 10px rgba(242,180,92,.6)}
+.sw-cl{color:var(--frio)} .sw-frase.com .sw-cl{color:var(--ac2);font-style:italic}
+/* o gráfico */
+.sw-graf{display:grid;gap:4px;justify-items:center;width:min(100%,460px);padding:12px;border-radius:var(--r2);border:1px solid var(--fio);background:#090c14}
+.sw-graf svg{display:block;width:100%;height:auto}
+.sw-graf text{font:800 11px var(--mono);letter-spacing:.1em;fill:var(--t2)} .sw-graf .sw-vazio{fill:var(--t3)}
+.sw-graf small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3);min-height:14px}
+.sw-eixo{stroke:var(--fio2);stroke-width:2;fill:none}
+.sw-barra{animation:sobe .6s ease-out;transform-box:fill-box;transform-origin:bottom}
+.sw-barra.a{fill:rgba(124,200,230,.7)} .sw-barra.b{fill:rgba(124,200,230,.3)} .sw-barra.c{fill:rgba(242,180,92,.65)}
+@keyframes sobe{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.sw-dois{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sw-quer{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2);max-width:1100px;margin:0 auto 8px;width:100%;text-align:center;border-color:rgba(242,180,92,.45)} .sw-quer small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .sw-quer b{font:700 clamp(17px,1.35vw,23px) var(--disp)}
+/* a onda */
+.sw-onda{display:flex;align-items:center;gap:2px;height:34px} .sw-onda i{flex:1;max-width:5px;border-radius:2px;background:var(--frio);opacity:.7} .sw-onda i.sil{background:var(--ac);opacity:1}
+
+/* cenas */
+.sw-linha-ok{display:flex;align-items:center;gap:12px} .sw-linha-ok .aprova{flex:1;margin:0} .sw-linha-ok.centro{max-width:1100px;margin:0 auto}
+.sw-temas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 12px}
+.sw-fatos{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2)} .sw-fatos span{font:600 clamp(16px,1.3vw,22px) var(--disp);padding-left:12px;border-left:3px solid var(--fio2)} .sw-fatos .g1{border-left-color:var(--t3)} .sw-fatos .g2{border-left-color:var(--frio);color:var(--frio)}
+.sw-portas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:1100px;margin:0 auto 12px;width:100%}
+.sw-porta{display:grid;gap:2px;padding:10px 12px;border-radius:14px 14px 4px 4px;border:1px solid var(--fio2);border-bottom:3px solid var(--ac);background:#0c1019;text-align:center} .sw-porta b{font:800 clamp(16px,1.3vw,21px) var(--mono);color:var(--ac2)} .sw-porta small{font:600 13px var(--disp);color:var(--t3)}
+.sw-pausas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:1500px;margin:0 auto 10px;width:100%}
+.sw-pausa{display:grid;gap:8px;align-content:start;padding:12px 14px;border-radius:14px} .sw-pausa p{margin:0;font:600 clamp(15px,1.15vw,19px)/1.4 var(--disp)} .sw-pausa .sw-ler{font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.sw-pausa.certo,.sw-dr.certo{border-color:var(--ok)} .sw-pausa.errado,.sw-dr.errado{border-color:var(--erro)}
+.sw-fs{display:flex;gap:6px;flex-wrap:wrap} .sw-fs .pilula{min-height:36px;padding:0 14px;font:800 12px var(--mono);letter-spacing:.06em}
+.sw-derruba{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:1400px;margin:0 auto 10px;width:100%}
+.sw-dr{display:grid;gap:8px;align-content:start;padding:12px 14px;border-radius:14px} .sw-dr p{margin:0;font:600 clamp(16px,1.25vw,21px) var(--serif)} .sw-dr b{color:var(--ac2)} .sw-dr .sw-curta{color:var(--frio);font-style:italic}
+.sw-amigo{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2);border-color:var(--ac)} .sw-amigo small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .sw-amigo p{margin:0;font:700 clamp(19px,1.55vw,26px)/1.4 var(--disp)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video,.sw-depois{grid-template-columns:1fr} .sw-ops.linha{grid-template-columns:1fr} .sw-pausas,.sw-derruba{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .sw-portas{grid-template-columns:1fr 1fr} .sw-pausas,.sw-derruba{grid-template-columns:1fr} }
+.sw-graf.mini{width:min(100%,340px);padding:8px} .sw-frase.com .sw-v{min-width:0;margin:0}
+.lado-fim .sw-graf.mini{width:min(100%,300px)}
+.lado-fim .sw-graf small{display:none}
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb-graf{width:min(100%,360px);padding:8px}
+.deb-graf .sw-barra{animation:none;transform:scaleY(calc(.12 + var(--p,0)*.88));transition:transform .8s ease-out}
+.deb-graf small{display:none}
+.deb-pips{display:flex;gap:8px;width:min(100%,360px)}
+.deb-pips i{flex:1;height:10px;border-radius:5px;background:rgba(255,255,255,.1);transition:background .5s}
+.deb-pips i.q{background:var(--ac)}
+.deb-pips i.perdida{background:#5a2f2f}
+@media (prefers-reduced-motion:reduce){.deb-graf .sw-barra{transition:none}}

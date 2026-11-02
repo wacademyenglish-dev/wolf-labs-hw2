@@ -1,0 +1,139 @@
+/* ============================================================
+   LOOK AT MY PICTURES · THREE FRAMES · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Aqui a identidade: o álbum na mesa de
+   madeira à noite; três molduras com cor própria: AT coral (alfinete),
+   IN verde (caixa), ON azul (superfície). Polaroids escuras.
+   ============================================================ */
+:root{
+  --noite:#0c0a08; --noite-rgb:12,10,8; --tinta:#f0e8dc;
+  --t1:#f4eee6; --t2:#d4cbbe; --t2-rgb:212,203,190; --t3:#978c7e;
+  --ac:#e8a24a; --ac2:#ffd292; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --cat:#ff7a59; --cin:#5ec58a; --con:#5aa2ff;
+  --vidro:rgba(240,232,220,.05); --vidro2:rgba(240,232,220,.085); --vidro3:rgba(240,232,220,.12);
+  --fio:rgba(240,228,210,.12); --fio2:rgba(240,228,210,.22); --luz:rgba(240,232,220,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mao:'Caveat',cursive; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(3,2,1,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1d1404}
+.btn.cheio{color:#1d1404}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(54px,5.6vw,108px)/.95 var(--disp);letter-spacing:-.035em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa .foto{position:relative;border-radius:30px;overflow:hidden;aspect-ratio:16/11;border:1px solid var(--fio);box-shadow:var(--sombra)}
+.capa .foto img{width:100%;height:100%;object-fit:cover;filter:brightness(.85)}
+.placa-capa{position:absolute;right:6%;bottom:8%;display:grid;padding:14px 20px 18px;border-radius:4px;background:#1c1814;border:1px solid #4a3e30;box-shadow:0 14px 40px rgba(0,0,0,.7);transform:rotate(3deg)}
+.placa-capa small,.placa-capa span{font:700 11px var(--mono);letter-spacing:.14em;color:#b09a7a}
+.placa-capa b{font:700 44px/1.05 var(--mao);color:var(--ac2)}
+.toca-linha{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:var(--r2);font:600 clamp(18px,1.4vw,22px)/1.35 var(--disp)}
+.toca-linha.centro{justify-content:center;max-width:820px;margin:0 auto;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.vaga{color:var(--ac);letter-spacing:.1em}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3);text-align:center}
+.erro-ouvido.on{border-color:var(--erro);background:rgba(255,110,110,.14)}
+
+/* II · a corrida */
+.cartoes-c{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.corrida-c{display:grid;gap:10px;align-content:start;padding:16px 18px;border-radius:var(--r2)}
+.corrida-c>small{font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.corrida-c .toca-linha{padding:0}
+
+/* vídeos */
+.tres-tempos{display:flex;justify-content:center}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .cred{color:var(--t3);font-size:13px}
+.lado-video{display:grid;gap:12px}
+.lado-video h5{margin:0;font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.ouvidos{display:flex;flex-wrap:wrap;gap:10px}
+.ouvido{min-height:52px;padding:0 20px;border-radius:999px;border:1px solid var(--fio2);background:var(--vidro);font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--t1)}
+.ouvido.on{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.post-trans{display:grid;gap:6px;padding:16px 20px;border-radius:var(--r2);max-width:900px;margin:0 auto;width:100%}
+.post-trans small{font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+
+/* IV · ouvir */
+.vezes{display:flex;justify-content:center;gap:10px}
+.vez{width:54px;height:54px;border-radius:50%;border:1px solid var(--fio2);background:var(--vidro);font:800 18px var(--ui);color:var(--t2)}
+.vez.on{background:var(--ac);border-color:var(--ac);color:#1d1404}
+.tres-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:1000px;margin:0 auto;width:100%}
+.mini-m{display:grid;gap:6px;align-content:start;min-height:90px;padding:12px 14px;border-radius:16px;border:2px solid;background:var(--vidro)}
+.mini-m b{font:800 18px var(--mono)} .mini-m span{font:600 16px var(--disp)}
+.mini-m.m-at{border-color:var(--cat)} .mini-m.m-at b{color:var(--cat)}
+.mini-m.m-in{border-color:var(--cin)} .mini-m.m-in b{color:var(--cin)}
+.mini-m.m-on{border-color:var(--con)} .mini-m.m-on b{color:var(--con)}
+
+/* V · as molduras */
+.pilha{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;min-height:60px}
+.polaroid{display:grid;justify-items:center;gap:2px;width:118px;padding:10px 10px 12px;border-radius:4px;border:0;background:#24201b;box-shadow:0 8px 18px rgba(0,0,0,.5);color:var(--t1);transition:transform .2s}
+.polaroid i{display:grid;place-items:center;width:100%;aspect-ratio:1;border-radius:2px;background:#0e0c0a;font-style:normal;font-size:40px}
+.polaroid span{font:700 18px var(--mao)}
+.polaroid:nth-child(odd){transform:rotate(-3deg)} .polaroid:nth-child(even){transform:rotate(2deg)}
+.polaroid:hover{transform:rotate(0) translateY(-4px)}
+.polaroid.on{box-shadow:0 0 0 3px var(--ac),0 8px 18px rgba(0,0,0,.5);transform:rotate(0) scale(1.06)}
+.polaroid.cai{animation:cai3 .6s ease}
+@keyframes cai3{30%{transform:translateY(30px) rotate(12deg)}100%{transform:none}}
+.molduras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.moldura{display:grid;grid-template-rows:auto 1fr;gap:10px;min-height:clamp(160px,calc(100vh / var(--zv,1) - 640px),280px);padding:14px;border-radius:var(--r2);border:3px solid;background:var(--vidro);text-align:left;color:var(--t1);transition:transform .15s}
+.moldura:hover{transform:translateY(-2px)}
+.moldura.m-at{border-color:var(--cat)} .moldura.m-in{border-color:var(--cin)} .moldura.m-on{border-color:var(--con)}
+.moldura.errada{animation:treme .35s;background:rgba(255,110,110,.1)}
+.topo-m{display:grid;grid-template-columns:44px 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center}
+.topo-m svg{grid-row:1/3;width:44px;height:44px}
+.topo-m b{font:800 26px var(--mono)} .topo-m small{color:var(--t3);font-weight:600}
+.m-at .topo-m b{color:var(--cat)} .m-in .topo-m b{color:var(--cin)} .m-on .topo-m b{color:var(--con)}
+.sim-at path{fill:var(--cat)} .sim-at circle{fill:#0c0a08}
+.sim-in path{fill:none;stroke:var(--cin);stroke-width:4} .sim-in circle{fill:var(--cin)}
+.sim-on rect{fill:var(--con)} .sim-on circle{fill:var(--con)}
+.dentro-m{display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px}
+.colada{display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.08);font:700 15px var(--disp);animation:cola .5s cubic-bezier(.2,.8,.2,1)}
+.colada i{font-style:normal}
+@keyframes cola{from{transform:scale(.4);opacity:0}}
+
+/* VI · very */
+.mesa-very{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:22px;align-items:center}
+.foto-zoom{position:relative;min-height:clamp(260px,calc(100vh / var(--zv,1) - 420px),460px);border-radius:var(--r1);background-color:#000!important;background-size:100%!important;background-position:center!important;overflow:hidden;display:grid;align-content:end;padding:18px;transition:background-size 1s ease}
+.foto-zoom::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,10,8,.1),rgba(12,10,8,.85))}
+.foto-zoom.zoom{background-size:150%!important}
+.foto-zoom .leg{position:relative;font:700 clamp(26px,2.4vw,40px) var(--disp);transition:font-size .6s}
+.foto-zoom.zoom .leg{font-size:clamp(34px,3.2vw,56px)} .foto-zoom .leg b{color:var(--ac2)}
+.lado-very{display:grid;gap:12px}
+.grande-v{border-color:var(--ac)!important;font-size:clamp(22px,1.8vw,30px)}
+
+/* VII · as páginas do álbum */
+.paginas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pagina-a{display:grid;gap:10px;align-content:start;padding:14px;border-radius:var(--r2)}
+.pagina-a.feita{border-color:rgba(143,217,162,.5)!important}
+.foto-a{height:clamp(150px,calc(100vh / var(--zv,1) - 760px),340px);border-radius:8px;background:#000 center/cover;display:grid;align-content:start;padding:8px;filter:brightness(.85)}
+.foto-a small{justify-self:start;padding:2px 8px;border-radius:4px;background:rgba(12,10,8,.75);font:800 11px var(--mono);letter-spacing:.12em}
+.pagina-a .toca-linha{padding:0}
+.legenda{margin:0;font:700 clamp(24px,2vw,32px) var(--mao)} .legenda b{color:var(--ok)}
+.tres-b{display:flex;gap:8px} .tres-b .pilula{min-width:64px;font:800 18px var(--mono)} .tres-b .pilula.errado{border-color:var(--erro);animation:treme .35s}
+
+/* IX · colunas */
+.ficha-l{min-height:52px;padding:0 20px;border-radius:12px;border:1px solid var(--fio2);background:#1e1a16;font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--t1)}
+.ficha-l.on{border-color:var(--ac);box-shadow:0 0 0 2px rgba(232,162,74,.4)}
+.colunas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.coluna{display:grid;align-content:start;gap:6px;min-height:200px;padding:14px;border-radius:var(--r2);border:2px dashed var(--fio2);background:var(--vidro);text-align:left;color:var(--t1)}
+.coluna b{font:800 22px var(--mono);color:var(--ac2)}
+.coluna span{font:600 16px var(--disp);padding:4px 8px;border-radius:8px;background:rgba(255,255,255,.06)}
+.coluna.errado{border-color:var(--erro);animation:treme .35s}
+
+/* X · suas fotos */
+.mesa-suas{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:22px;align-items:start}
+.polaroid-grande{display:grid;justify-items:center;gap:8px;padding:24px;border-radius:6px;transform:rotate(-2deg)}
+.polaroid-grande span{font-size:64px} .polaroid-grande small{font:800 12px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.polaroid-grande p{margin:0;color:var(--t2);text-align:center}
+.lado-suas{display:grid;gap:10px} .lado-suas .partes{justify-content:flex-start} .lado-suas .partes h5{text-align:left}
+.q-suas{margin:0;font:700 clamp(20px,1.6vw,26px) var(--disp)}
+.lado-suas .resp-btn,.lado-suas .resposta{margin:0}
+.fim .grande span{font-size:clamp(22px,1.9vw,30px)}
+
+@media (max-width:1100px){ .mesa-video,.mesa-very,.mesa-suas{grid-template-columns:1fr} .cartoes-c,.paginas{grid-template-columns:1fr} .colunas{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:820px){
+  .capa .foto{aspect-ratio:16/12}
+  .molduras,.tres-mini{grid-template-columns:1fr}
+  .moldura{min-height:110px}
+  .polaroid{width:96px}
+}

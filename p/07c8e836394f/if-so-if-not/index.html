@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · If So, If Not · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 8 · Explain and report</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>If So, If Not · C1 Unit 8 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on advanced ellipsis and substitution: if so, if not, if anything, if necessary, if possible, if any; I’m afraid so / not; I suppose so; not that I know of; so I hear / gather; I’d rather not; I don’t see why not.</p><p style="margin:0 0 6px"><b>The story:</b> Sara (invented) books a cabin by a lake by email. The owner, Mr. Holt, answers with short, polite forms, and takes credit for his wife’s bread.</p><p style="margin:0 0 6px"><b>About 49 min:</b> I · The Emails (10) · II · Long or Short? (9) · III · Bingo (8) · IV · The Jury (8) · V · Would You? (7) · VI · Quick Answers (7).</p><p style="margin:0"><b>Open with:</b> “When you book a holiday rental, what questions do you usually ask the owner?”</p></div><!--/prep-->
+    <p>These short forms make the student sound fluent and polite, especially in emails. The Brazilian traps: “if yes / if no”, “I think no”, “no that I know”. The emails show them in a real booking; the bingo practises the forms; the conversation asks the student to answer short first, then add a sentence.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>if so / if not · I’m afraid so / not · I suppose so / I hope not / I don’t think so · not that I know of · so I hear / so I gather · if anything, if necessary, if possible, if any</p>
+    <h4>THE EMAILS</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>LONG OR SHORT?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>BINGO</h4>
+    <p>A 3×3 card of quick tasks. The student picks a square and does it out loud; tap <b>Done</b>. Three in a line (across, down or diagonal) is a BINGO. Keep going for a second line if there is time.</p>
+    <h4>WOULD YOU?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>QUICK ANSWERS</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>if yes</i>, <i>if no</i>, <i>I think no</i>, <i>no that I know</i>, <i>I’m afraid no</i>, <i>if something (for if anything)</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE JURY (IV) AND THE SURPRISE QUESTION</h4>
+    <p>In the middle of the lesson, your student is the jury after Sara’s holiday at the lake cabin: two cases (the $80 dog deposit and her 1-star review), each with three pieces of evidence. They give a verdict and defend it with the short forms (if so, if not, if anything, I’m afraid not). There is no right answer. Wait five seconds in silence, take the other side, and use the PUSH line (only you see it) to make the verdict harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Emails.</li>
+      <li><b>Focus</b>: II · Long or Short? and III · Bingo.</li>
+      <li><b>Out loud</b>: IV · The Jury, V · Would You? and VI · Quick Answers.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* IF SO, IF NOT (Main C1) · pergunta-surpresa · 28/10/2026 · elipse: if so / if not / I’m afraid so / not that I know of */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Have you ever stayed somewhere that was very different from the photos?',
+    opc: ['Yes, worse', 'Yes, better', 'Not that I remember'], st: ['I’m afraid so: …', 'Not that I know of.', 'If anything, it was …'],
+    ex: 'I’m afraid so. The “sea view” was a wall. If anything, it was worse than the photos.', push: 'Did you complain? If not, why not?' },
+  { cena: 'descobre', tipo: 'Would you rather', q: 'Would you rather have a cabin by a cold lake or a flat by a noisy beach?',
+    opc: ['Cold lake', 'Noisy beach'], st: ['I’d rather …', 'If possible, …', 'I suppose so, but …'],
+    ex: 'Cold lake. If possible, with a fireplace. The beach is nice, but if anything, I need silence.', push: 'No Wi-Fi at the lake. Still the lake?' },
+  { cena: 'escolha', tipo: 'What if', q: 'A neighbour asks you to look after their cat for two weeks. What do you say?',
+    opc: ['I don’t see why not', 'If necessary…', 'I’d rather not'], st: ['I don’t see why not, if …', 'I’d rather not, because …'],
+    ex: 'I don’t see why not, if they leave clear instructions. If not, I’d be texting them ten times a day.', push: 'The cat hates people and you’re allergic. Still yes?' },
+  { cena: 'conversa', tipo: 'Opinion', q: 'Is it rude to answer a message with just “Not that I know of” or “I suppose so”?',
+    opc: ['Not rude', 'A bit cold', 'Rude'], st: ['If so, …', 'I suppose not, because …'],
+    ex: 'A bit cold. In an email to a client, I’d add one friendly sentence. If not, they might think I’m annoyed.', push: 'Your boss answers you like that all the time. How do you feel?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* IF SO, IF NOT (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O júri ENTRA depois de "III · Bingo" (a aula tinha 41 min e nenhuma cena extra: somar 8 min cabe).
+   A aula já tem o "Would You?" (A ou B) e as respostas rápidas: o formato novo é outro — júri com provas,
+   continuando a história do chalé: o depósito do cachorro e a avaliação de 1 estrela. O alvo (if so, if not,
+   if anything, I’m afraid so/not, not that I know of, I suppose so) mora nos iniciadores. Formato: jury with evidence (escolha). */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'juri', apos: 'bingo', est: 'o', min: 8, img: 'capa', rot: 'The Jury', t: 'After the holiday: who is right?',
+    p: 'Read the evidence. Give your verdict, then defend it. Your teacher defends the other side.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The deposit', sit: 'Mr. Holt keeps $80 of the deposit for “dog scratches” on the door.',
+        provas: ['His email said: a fee “if any damage is found”.', 'Sara took no photos when she arrived.', 'The listing photos are three years old.'],
+        q: 'Who gets the $80?', opc: ['Sara gets it back', 'Split it', 'Mr. Holt keeps it'],
+        st: ['If so, he should …', 'If not, Sara …', 'If anything, …', 'I’m afraid …'],
+        ex: 'Split it. Were the scratches there before? Not that I know of. But if anything, the old photos help Sara.',
+        push: 'Sara’s dog is a big young Labrador. Does that change your verdict?' },
+      { tag: 'The review', sit: 'Sara gives the cabin 1 star: “No shop, freezing lake.” Mr. Holt asks the website to delete it.',
+        provas: ['He wrote “I’m afraid not” about the shop.', 'He said the lake was, if anything, too cold.', 'Sara’s review also says the bread was “amazing”.'],
+        q: 'Should the website delete the review?', opc: ['Delete it', 'Keep it', 'Ask Sara to edit it'],
+        st: ['I suppose so, because …', 'I’m afraid not: …', 'I don’t see why not …'],
+        ex: 'Keep it. Did he lie? I’m afraid not: he said there was no shop and the lake was cold. The review is a bit unfair, but deleting it is worse.',
+        push: 'One star means his family can lose the summer bookings. Still keep it?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Booking a cabin by the lake.",
+   "p": "Read the emails out loud. Answer. Then look closer."
+  },
+  "descobre": {
+   "t": "Same meaning, fewer words.",
+   "p": "Compare A and B. Which sounds natural?"
+  },
+  "bingo": {
+   "t": "Nine squares. Make a line!",
+   "p": "Pick a square. Do it out loud. Three in a line wins."
+  },
+  "cv-juri": {
+   "t": "After the holiday: who is right?",
+   "p": "Read the evidence. Give your verdict. Defend it."
+  },
+  "escolha": {
+   "t": "Answer short, then explain.",
+   "p": "Choose A or B. Start short: I suppose so…"
+  },
+  "conversa": {
+   "t": "Answer short and smart.",
+   "p": "Short form first. Then add one sentence."
+  }
+ },
+ "prep": {
+  "obj": "Elipse e substituição (if so, if not, if anything, I’m afraid not, not that I know of, I’d rather not): Sara reserva um chalé no lago por e-mail com o Sr. Holt.",
+  "armadilha": "Tradução direta do português: “if yes / if no”, “I think no”, “I’m afraid no”, “no that I know” e “if something” no lugar de “if anything”.",
+  "pal": [
+   "if so",
+   "if not",
+   "if anything",
+   "if necessary",
+   "I’m afraid so / not",
+   "I suppose so",
+   "not that I know of",
+   "so I gather",
+   "I don’t see why not"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: respostas curtas e educadas que soam fluentes, principalmente em e-mail.",
+   "perg": "What do you ask before booking a holiday rental?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Leitura em voz alta dos e-mails de Sara e do Sr. Holt; achar as formas curtas.",
+   "perg": "What did Mr. Holt really mean?",
+   "pula": "Leia dois e-mails e faça duas perguntas."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: a versão longa e a curta natural; regras e armadilhas.",
+   "perg": "Why “if so” and not “if yes”?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "bingo": {
+   "obj": "Cartela 3×3 de tarefas rápidas com as formas curtas, em voz alta, até fazer uma linha.",
+   "perg": "Can you answer that in three words?",
+   "pula": "Uma linha basta."
+  },
+  "cv-juri": {
+   "obj": "Júri depois das férias: o depósito de US$ 80 do cachorro e a avaliação de 1 estrela de Sara.",
+   "perg": "Who is right, and if not Sara, who?",
+   "pula": "Um caso basta."
+  },
+  "escolha": {
+   "obj": "Would you rather: resposta curta primeiro (I suppose so, I’d rather not), depois o porquê.",
+   "perg": "Would you? Short answer first.",
+   "pula": "Três escolhas bastam."
+  },
+  "conversa": {
+   "obj": "Perguntas pessoais respondidas com forma curta e mais uma frase; o aluno devolve.",
+   "perg": "Are you going away this year?",
+   "pula": "Três perguntas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais perguntas do dia a dia respondidas com forma curta e um complemento.",
+   "perg": "Short answer first, then tell me more.",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre aluguel por temporada, avaliações e anfitriões, abrindo com forma curta.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Sr. Holt e responde ao professor com formas curtas, educadas e evasivas.",
+   "perg": "Mr. Holt, did you bake that bread yourself?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Short first, then smart.",
+   "p": "Pick a card. Short answer, then one more sentence.",
+   "palavras": [
+    "I suppose so",
+    "I’m afraid not",
+    "not that I know of",
+    "if anything",
+    "if so"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR NEIGHBORS",
+     "q": "Do your neighbors ever complain about noise?",
+     "fup": "And do you ever complain about theirs?",
+     "st": [
+      "Not that I know of.",
+      "If anything, …"
+     ],
+     "ex": "Not that I know of. If anything, I’m the one who complains."
+    },
+    {
+     "k": "WORK EMAILS",
+     "q": "Do you answer work emails on holiday?",
+     "fup": "Does your boss expect it?",
+     "st": [
+      "I’m afraid so.",
+      "I’d rather not, but …"
+     ],
+     "ex": "I’m afraid so. I’d rather not, but if I don’t, the inbox explodes."
+    },
+    {
+     "k": "A BAD REVIEW",
+     "q": "Have you ever written a bad review online?",
+     "fup": "If so, did the owner reply?",
+     "st": [
+      "I suppose so.",
+      "If so, …"
+     ],
+     "ex": "I suppose so, once. The owner replied, and if anything, he was ruder than me."
+    },
+    {
+     "k": "PETS",
+     "q": "Should hotels and cabins accept dogs?",
+     "fup": "If not, where should people leave them?",
+     "st": [
+      "I don’t see why not.",
+      "If necessary, …"
+     ],
+     "ex": "I don’t see why not. If necessary, they can charge a small fee."
+    },
+    {
+     "k": "GOSSIP",
+     "q": "Is anyone at your work changing jobs soon?",
+     "fup": "How did you hear?",
+     "st": [
+      "So I hear.",
+      "So I gather."
+     ],
+     "ex": "So I gather. Nobody said it, but she’s been taking very long lunches."
+    },
+    {
+     "k": "TAKING CREDIT",
+     "q": "Has anyone ever taken credit for your work?",
+     "fup": "If so, what did you do?",
+     "st": [
+      "I’m afraid so.",
+      "If so, …",
+      "If not, …"
+     ],
+     "ex": "I’m afraid so. A colleague presented my report as hers, and I said nothing."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I suppose so, but …",
+    "If anything, …",
+    "I’m afraid not.",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "A 1-star review for one bad detail: fair or cruel?",
+     "a": "Fair",
+     "b": "Cruel",
+     "fa": [
+      "Fair. If so, it was a detail that ruined the stay.",
+      "Reviews exist to warn others."
+     ],
+     "fb": [
+      "Cruel. If anything, it should be three stars.",
+      "One detail doesn’t define a holiday."
+     ]
+    },
+    {
+     "q": "Hotel or private rental for a holiday?",
+     "a": "Hotel",
+     "b": "Private rental",
+     "fa": [
+      "Hotel. If necessary, there’s someone at the desk.",
+      "No surprise deposits."
+     ],
+     "fb": [
+      "Private rental. More space, more privacy.",
+      "If possible, I want a kitchen."
+     ]
+    },
+    {
+     "q": "Should owners charge an extra deposit for pets?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. If not, who pays for the damage?",
+      "A dog can ruin a sofa."
+     ],
+     "fb": [
+      "No. Not that I know of a dog that broke anything.",
+      "If anything, kids do more damage."
+     ]
+    },
+    {
+     "q": "Short emails: efficient or rude?",
+     "a": "Efficient",
+     "b": "Rude",
+     "fa": [
+      "Efficient. Nobody reads long emails.",
+      "If so, why write them?"
+     ],
+     "fb": [
+      "Rude. A few extra words cost nothing.",
+      "I’m afraid short can sound cold."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Did anyone win? Not that I know of."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Mr. Holt now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Mr. Holt: short, polite, a little evasive.",
+   "perguntas": [
+    "Mr. Holt, did you bake the famous bread yourself?",
+    "Is your wife happy that you take the credit?",
+    "Did Sara break any rules with her dog?",
+    "Will you give her the $80 back?",
+    "Did her 1-star review hurt your business?",
+    "Would you rent the cabin to Sara again?"
+   ],
+   "st": [
+    "I suppose so.",
+    "I’m afraid not.",
+    "If anything, …"
+   ],
+   "ex": "I’m afraid not. If anything, she should pay a little more for the sofa."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

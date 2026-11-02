@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -116,5 +117,286 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Listen and repeat: admission phrases.",
+   "p": "Repeat each phrase in the pause. Then answer."
+  },
+  "transforma": {
+   "t": "From your notes to a question.",
+   "p": "Read the note and clue. Ask it out loud."
+  },
+  "cv-cadeira": {
+   "t": "You are the head nurse.",
+   "p": "Answer the trainee with real questions."
+  },
+  "formulario": {
+   "t": "Fill in Mrs. Harper’s form.",
+   "p": "Read what she said. Fill in. Then check."
+  },
+  "pode": {
+   "t": "Lesson 4: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Perguntas de histórico e admissão: Do you…? (hábitos), Are you taking…? (agora), Have you ever had…? (vida); alergias, remédios, cirurgias, hábitos, com a paciente fictícia Joan Harper.",
+  "armadilha": "O brasileiro pergunta “Do you take medicine now?” (em vez de Are you taking any medication at the moment?), “Did you ever have surgery?” e “Are you allergic of…?” (o certo é allergic to).",
+  "pal": [
+   "Do you have any allergies?",
+   "What happens when…?",
+   "Are you taking any medication at the moment?",
+   "Have you ever had an operation?",
+   "Do you smoke?",
+   "allergic to",
+   "admission form",
+   "date of birth"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: as perguntas que se faz a todo paciente novo.",
+   "perg": "Which question do you ask every patient, no matter what?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "video": {
+   "obj": "Ouvir e repetir: frases de admissão de uma enfermeira (0:00–1:52), com a mesma entonação.",
+   "perg": "How does she ask about allergies?",
+   "pula": "Assista uma vez só e repita metade das frases."
+  },
+  "transforma": {
+   "obj": "Montar perguntas completas a partir de anotações, com o tempo verbal certo.",
+   "perg": "How do you ask about medication now?",
+   "pula": "Quatro perguntas bastam."
+  },
+  "cv-cadeira": {
+   "obj": "Momento de conversa: o aluno é a enfermeira-chefe; o professor é o Theo, estagiário tímido.",
+   "perg": "How do I ask about alcohol without being rude?",
+   "pula": "Duas perguntas do Theo bastam."
+  },
+  "formulario": {
+   "obj": "Escrita: preencher o formulário de admissão da Mrs. Harper (dados fictícios).",
+   "perg": "What is she allergic to, and what happens?",
+   "pula": "Preencha só alergias e remédios."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 4: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you take a medical history in English now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre o trabalho real do aluno na saúde, com os três tipos de pergunta.",
+   "perg": "Have you ever had a patient who didn’t speak Portuguese?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas da admissão, com Do you / Are you / Have you ever.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta a sequência de perguntas de admissão do serviço dele.",
+   "perg": "What do you ask first, and why?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your patients, your questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "Do you…?",
+    "Are you taking…?",
+    "Have you ever had…?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR SERVICE",
+     "q": "Where do you work, and who are your patients?",
+     "fup": "How many do you see a day?",
+     "st": [
+      "I work at …",
+      "I see about …"
+     ],
+     "ex": "I work at a clinic in Campinas. I see about twenty patients a day."
+    },
+    {
+     "k": "FOREIGN PATIENTS",
+     "q": "Have you ever had a patient who didn’t speak Portuguese?",
+     "fup": "What did you do?",
+     "st": [
+      "Yes, once …",
+      "No, but …"
+     ],
+     "ex": "Yes, once a tourist from Germany. We used gestures and an app."
+    },
+    {
+     "k": "ALLERGIES",
+     "q": "Why is the allergy question so important?",
+     "fup": "What else do you ask after it?",
+     "st": [
+      "Because …",
+      "Then I ask: What happens when …?"
+     ],
+     "ex": "Because a reaction can be serious. Then I ask: What happens when you take it?"
+    },
+    {
+     "k": "HARD QUESTIONS",
+     "q": "Which admission question is uncomfortable to ask?",
+     "fup": "How do you ask it kindly?",
+     "st": [
+      "For me, it’s …",
+      "I usually say …"
+     ],
+     "ex": "For me, it’s alcohol. I usually say: I ask everyone this. How much do you drink in a week?"
+    },
+    {
+     "k": "HABITS",
+     "q": "Which habit do patients usually lie about?",
+     "fup": "How do you know?",
+     "st": [
+      "They often …",
+      "You can see …"
+     ],
+     "ex": "They often say they don’t smoke. You can see it on their fingers."
+    },
+    {
+     "k": "THE FORM",
+     "q": "Is your admission form on paper or on a computer?",
+     "fup": "What would you change in it?",
+     "st": [
+      "It’s on …",
+      "I would add …"
+     ],
+     "ex": "It’s on a tablet. I would add a field for the reaction, not only the allergy."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "because",
+    "Do you…?",
+    "Have you ever…?"
+   ],
+   "rodadas": [
+    {
+     "q": "A patient says “No allergies… I think.” Accept it or ask again?",
+     "a": "Accept it",
+     "b": "Ask again",
+     "fa": [
+      "Accept it, but write “not sure”.",
+      "We can check the records."
+     ],
+     "fb": [
+      "Ask again: Have you ever had a reaction to any medicine?",
+      "“I think” is not an answer."
+     ]
+    },
+    {
+     "q": "Admission questions: patient alone, or with family in the room?",
+     "a": "Alone",
+     "b": "With family",
+     "fa": [
+      "Alone. People answer more honestly.",
+      "Some questions are private."
+     ],
+     "fb": [
+      "With family. They remember the medicines.",
+      "Older patients feel safer."
+     ]
+    },
+    {
+     "q": "A long form, or only the essential questions?",
+     "a": "Long form",
+     "b": "Essential only",
+     "fa": [
+      "The long form. Details save lives.",
+      "You never know what matters."
+     ],
+     "fb": [
+      "Essential only. Tired patients stop listening.",
+      "We can ask more later."
+     ]
+    },
+    {
+     "q": "A famous patient in a hurry: skip the questions or ask them all?",
+     "a": "Skip some",
+     "b": "Ask them all",
+     "fa": [
+      "Skip some. We can ask after the exam.",
+      "He’s not a new patient."
+     ],
+     "fb": [
+      "Ask them all. Rules are the same for everyone.",
+      "An allergy doesn’t care who you are."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Admission",
+   "t": "Your own admission, in order.",
+   "p": "Answer each step. Ask the real question.",
+   "prof": "You are the patient. Answer each question briefly, then ask: Why do you need to know that?",
+   "passos": [
+    {
+     "q": "How do you start? Say the first question.",
+     "st": [
+      "Can you tell me your …?"
+     ],
+     "ex": "Can you tell me your full name and date of birth?"
+    },
+    {
+     "q": "Ask about allergies and the reaction.",
+     "st": [
+      "Do you have any …?",
+      "What happens when …?"
+     ],
+     "ex": "Do you have any allergies? What happens when you take penicillin?"
+    },
+    {
+     "q": "Ask about medication now.",
+     "st": [
+      "Are you taking …?"
+     ],
+     "ex": "Are you taking any medication at the moment?"
+    },
+    {
+     "q": "Ask about operations and habits.",
+     "st": [
+      "Have you ever had …?",
+      "Do you …?"
+     ],
+     "ex": "Have you ever had an operation? Do you smoke?"
+    }
+   ],
+   "fim": "Your admission is ready. Do it again, faster and kinder."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

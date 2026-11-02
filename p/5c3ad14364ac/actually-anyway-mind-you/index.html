@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Actually, Anyway, Mind You · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Actually, Anyway, Mind You · The Mixing Desk</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Actually, Anyway, Mind You · The Mixing Desk</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Real people don’t talk in straight lines.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: Six little words, six jobs.</p><p style="margin:0 0 6px"><b>Short class (about 50 min):</b> I You and Conversation · III A Real Conversation · V The Mixing Desk · VI The Rule · VII On Air · X The Listeners’ Poll · XI Off Air. Skip if you’re short on time: VIII, IX (marked EXTRA on your screen). Full lesson: about 64 min.</p><p style="margin:0"><b>Open with:</b> “Do you listen to podcasts or watch talk shows? Which kind, and when?”</p></div><!--/prep-->
+    <p>Real people don’t talk in straight lines. They correct each other, jump to a side topic, get interrupted, come back, and say what they really think. Six little words do that steering, each with one job: <b>actually</b> (fix a fact, or surprise), <b>by the way</b> (a quick side topic), <b>anyway</b> (back to the topic, or close it), <b>mind you</b> (the other side, a small <i>but</i>), <b>as I was saying</b> (back after an interruption), <b>to be honest</b> (the honest truth). On screen, a mixing desk with six faders, one per marker: the right line pushes the fader up and lights the channel. On air, eight seats in the audience light up, one per good cue.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III: a real, unscripted conversation about mistakes (5:46), <b>sealed</b> until you press play, in four chapters that stop by themselves. The questions are about listening: who talks, what about, and which little words they use to start, turn and finish. Accept any marker they really heard (<i>so, well, actually, anyway, I mean</i>). After the four chapters, the last step of scene III is ONE screen: the whole video stays on the left (tap a time to hear that moment again), with the same six-fader mixing desk as scene V under it; on the right, six True or Lie lines about what Neil and Beth say. Every right answer pushes a fader up. On a Lie the student says the true line. When all six are done, Jo asks one last question (“Do you make many mistakes?”): the student taps an answer and says the sentence out loud, with a marker (to be honest, mind you, actually, anyway, by the way).</p>
+    <h4>THE TRAP</h4>
+    <p><b>actually</b> looks almost the same as a Portuguese word that means <i>currently, these days</i>, so students say <i>Actually, I live in Boston</i> to mean <i>now</i>. In English it means <i>in fact</i>. One Portuguese word covers both <b>by the way</b> and <b>anyway</b>, so students mix them. They also say <i>in the way</i>, <i>to be sincere</i>, <i>as I said you</i>, and <i>mind</i> without <i>you</i>. The red line catches the forms; the <i>actually = now</i> meaning is yours to catch.</p>
+    <h4>ON AIR AND THE COUCH</h4>
+    <p>Scene VII: be Rosa, big and warm. Read her line, point at the producer’s card, and wait. Watch <i>anyway</i> used to correct (cues 1 and 7) and <i>by the way</i> used to go back or close (cues 3 and 8). Scene VIII: on A MISTAKE, really interrupt them so they need <i>As I was saying</i>. Scene IX: you are Sam, the guest.</p>
+    <h4>MIND YOU</h4>
+    <p><b>mind you</b> is more British; American English also says <i>then again</i> or <i>that said</i>.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>tired</i>, <i>mistakes</i>, <i>suitcase</i>, <i>lucky</i> and <i>resigned</i>, before the video, in memory and hot seat. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE LISTENERS’ POLL (X) AND THE SURPRISE QUESTION</h4>
+    <p>Before the last page, a ranking for the next episode: four annoying things people do in a conversation. The student puts them in order and explains the worst and the least annoying with a marker (to be honest, mind you, actually). There is no right order. Wait five seconds in silence, then use the PUSH line (only you see it). Then tap “Show my teacher’s order”, give your reasons, and agree on one top 3 together. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. It prepares XI (is it rude to change the subject?). About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Conversation, V The Mixing Desk, VII On Air, VIII Hot Topics, IX Your Talk Show and X The Listeners’ Poll.</li>
+      <li><b>Listen</b>: II The Words, III A Real Conversation and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule.</li>
+      <li><b>Write</b>: XI Off Air.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* ACTUALLY, ANYWAY, MIND YOU (Main B2) · pergunta-surpresa · 28/10/2026 · discourse markers */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'What’s a mistake you made that taught you something?',
+    opc: ['At work', 'On a trip', 'With English!'], st: ['To be honest, …', 'Actually, it was a good thing, because …'],
+    ex: 'With English! I told my boss “I pretend to travel in July” when I meant “I intend to”. To be honest, I never forgot the difference again.',
+    push: 'Would you make the same mistake again to learn the same thing?' },
+  { cena: 'mesa', tipo: 'Would you rather', q: 'Would you rather host a podcast or be the guest every week?',
+    opc: ['Host', 'Guest'], st: ['I’d rather be the …, because …', 'Mind you, …'],
+    ex: 'The guest. I love telling stories. Mind you, I’d hate the hard questions.',
+    push: 'Your first guest is someone you really don’t like. Still host?' },
+  { cena: 'aovivo', tipo: 'Opinion', q: 'Is it OK to tell a friend the truth about their cooking?',
+    opc: ['Yes, always', 'Only if they ask', 'Never!'], st: ['To be honest, …', 'Mind you, it depends on …'],
+    ex: 'Only if they ask. To be honest, I once told my friend her cake was dry, and she didn’t speak to me for a week.',
+    push: 'They’re opening a restaurant next month with that recipe. Now do you tell them?' },
+  { cena: 'roda', tipo: 'What if', q: 'You’re at a party and someone talks about their diet for twenty minutes. How do you change the subject?',
+    opc: ['By the way, …', 'Anyway, …', 'I go and get a drink'], st: ['By the way, did you …', 'Anyway, I have to …'],
+    ex: 'By the way, did you see the game last night? It works every time.',
+    push: 'They come back to the diet after one minute. Now what?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* ACTUALLY, ANYWAY, MIND YOU (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O ranking entra no lugar de "X · Quick Check" (extra, prática controlada; a regra VI e a mesa de som V
+   ficam). O episódio da semana do Off Script: o que mais irrita numa conversa. O aluno ordena, depois
+   compara com a ordem do professor e os dois fecham um top 3. Os marcadores da aula (actually, to be
+   honest, mind you, anyway, by the way) moram nos iniciadores; o fim (XI) pergunta se mudar de assunto
+   é falta de educação, e este ranking prepara a resposta. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'ranking', troca: 'quiz', est: 'o', min: 7, img: 'plateia', rot: 'The Listeners’ Poll', t: 'Next episode: what annoys you in a conversation?',
+    p: 'Put them in order: 1 is the worst. Explain your top one and your last one with a marker. Then see your teacher’s order and agree on one top 3.',
+    formato: 'ranking',
+    q: 'What annoys you most?',
+    itens: ['Checking their phone while you talk', 'Interrupting with their own story', 'Changing the subject out of nowhere', 'Correcting every tiny fact'],
+    st: ['To be honest, the worst is …', 'Mind you, … isn’t that bad, because …', 'Actually, I do that myself!', 'Anyway, my number one is …'],
+    ex: 'To be honest, the worst is the phone: you feel invisible. Correcting tiny facts is my last one. Actually, I do that myself! Mind you, only with my brother.',
+    push: 'Which one of the four do YOU do? You have to choose one.',
+    prof: [1, 0, 2, 3],
+    dica: 'Tap from the worst (1). Tap again to undo.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "You, podcasts, and how you talk.",
+   "p": "Tap a card. Answer out loud."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them first. They turn yellow in the video."
+  },
+  "video": {
+   "t": "Two people, one topic: mistakes.",
+   "p": "Answer first. Watch four chapters. Then True or Lie."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again."
+  },
+  "mesa": {
+   "t": "“The Worst Trip Ever”. You steer.",
+   "p": "Tap a channel. Read the card. Say the line."
+  },
+  "regra": {
+   "t": "Six little words, six jobs.",
+   "p": "Say each wrong line right. Then tap SHOW ME."
+  },
+  "aovivo": {
+   "t": "Live with Chef Rosa Lind.",
+   "p": "Your teacher is Rosa. Read the cue. React at once."
+  },
+  "roda": {
+   "t": "Tonight’s hot topics are about you.",
+   "p": "Tap five. Use a marker. Expect interruptions."
+  },
+  "sofa": {
+   "t": "You host. Sam Park is on the couch.",
+   "p": "Your teacher is Sam. Steer with a marker."
+  },
+  "cv-ranking": {
+   "t": "What annoys you in a conversation?",
+   "p": "Rank them. Explain the top and last with a marker."
+  },
+  "fim": {
+   "t": "Is it rude to change the subject?",
+   "p": "Write your own mini talk show. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Seis marcadores de conversa com um trabalho cada (actually, by the way, anyway, mind you, as I was saying, to be honest), numa mesa de som de um podcast.",
+  "armadilha": "“Actually” como “atualmente” (Actually, I live in Boston = now); “de qualquer forma / a propósito” misturam anyway e by the way; também “in the way”, “to be sincere”, “as I said you”.",
+  "pal": [
+   "actually",
+   "by the way",
+   "anyway",
+   "mind you",
+   "as I was saying",
+   "to be honest",
+   "then again",
+   "that said"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a mesa de som: gente real não fala em linha reta.",
+   "perg": "Do you listen to podcasts or talk shows?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal: podcasts, conversas e o jeito do aluno falar.",
+   "perg": "Do you interrupt people, or do people interrupt you?",
+   "pula": "Duas cartas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (tired, mistakes, suitcase, lucky, resigned); o aluno chuta antes.",
+   "perg": "What do you think “resigned” means here?",
+   "pula": "Cinco minutos no máximo."
+  },
+  "video": {
+   "obj": "Conversa real sobre erros em quatro capítulos; ouvir os marcadores; True or Lie no fim.",
+   "perg": "Which little words did they use to change topic?",
+   "pula": "Dois capítulos e o True or Lie."
+  },
+  "falas": {
+   "obj": "Linha a linha do vídeo, com explicação das palavras amarelas.",
+   "perg": "Which line surprised you?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "mesa": {
+   "obj": "Episódio 41: seis momentos, um canal por marcador; o aluno diz a linha pedida.",
+   "perg": "Which marker does this moment need?",
+   "pula": "Quatro canais bastam."
+  },
+  "regra": {
+   "obj": "A regra: seis palavras, seis trabalhos; corrigir as linhas erradas.",
+   "perg": "What is the job of this word here?",
+   "pula": "Não corte actually = in fact."
+  },
+  "aovivo": {
+   "obj": "O professor é a Rosa, chef animada; cada cartão pede um trabalho; reação na hora.",
+   "perg": "The card says “back to the topic”. What do you say?",
+   "pula": "Três cartões bastam."
+  },
+  "roda": {
+   "obj": "Temas quentes sobre o aluno; o professor interrompe de propósito para “As I was saying”.",
+   "perg": "Where were you before I interrupted?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "sofa": {
+   "obj": "O aluno é o apresentador; o professor é o Sam, vlogger de viagem.",
+   "perg": "Can you bring the show back on topic?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-ranking": {
+   "obj": "Ranking de quatro manias irritantes na conversa; explicar com marcador; top 3 juntos.",
+   "perg": "What is the most annoying thing, to be honest?",
+   "pula": "Só o primeiro e o último."
+  },
+  "fim": {
+   "obj": "Escrita: um mini talk show com o aluno de apresentador, usando os marcadores.",
+   "perg": "Is it rude to change the subject?",
+   "pula": "Seis falas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa aberta em que o aluno precisa guiar com os marcadores.",
+   "perg": "To be honest, what do you really think?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre conversa, honestidade e interrupções.",
+   "perg": "Mind you, isn’t there another side?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta uma história de verdade com desvios, voltas e um fim honesto.",
+   "perg": "Anyway, how did it end?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Steer the conversation.",
+   "p": "Pick a card. Use at least two markers.",
+   "palavras": [
+    "actually",
+    "by the way",
+    "anyway",
+    "mind you",
+    "to be honest"
+   ],
+   "cartas": [
+    {
+     "k": "SMALL TALK",
+     "q": "Do you enjoy small talk, or does it drain you?",
+     "fup": "What do you do to escape it?",
+     "st": [
+      "To be honest, …",
+      "Mind you, …"
+     ],
+     "ex": "To be honest, it drains me. Mind you, some of my best friends started as small talk."
+    },
+    {
+     "k": "A MYTH",
+     "q": "What is something most people believe that isn’t actually true?",
+     "fup": "How did you find out?",
+     "st": [
+      "People think … Actually, …"
+     ],
+     "ex": "People think we only use ten percent of our brain. Actually, we use all of it."
+    },
+    {
+     "k": "YOUR WORST TRIP",
+     "q": "What was your worst trip ever?",
+     "fup": "Would you go back?",
+     "st": [
+      "The flight was … By the way, …",
+      "Anyway, in the end …"
+     ],
+     "ex": "The hotel lost our booking. By the way, it was my birthday. Anyway, we slept on a boat."
+    },
+    {
+     "k": "AN HONEST OPINION",
+     "q": "What popular thing do you secretly not like?",
+     "fup": "Do you say it out loud?",
+     "st": [
+      "To be honest, I can’t stand …",
+      "Mind you, …"
+     ],
+     "ex": "To be honest, I can’t stand brunch. Mind you, I love the coffee."
+    },
+    {
+     "k": "INTERRUPTIONS",
+     "q": "Who interrupts you the most, and how do you get back?",
+     "fup": "Do you interrupt people too?",
+     "st": [
+      "As I was saying, …",
+      "Actually, I …"
+     ],
+     "ex": "My uncle. I just smile and say, “As I was saying…”. Actually, I do it too."
+    },
+    {
+     "k": "MISTAKES",
+     "q": "Do you make many mistakes at work, or in English?",
+     "fup": "Which one taught you most?",
+     "st": [
+      "Actually, …",
+      "Anyway, the lesson was …"
+     ],
+     "ex": "Actually, more than I admit. Anyway, the worst one taught me to read emails twice."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Steer it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "to be honest",
+    "mind you",
+    "actually",
+    "anyway"
+   ],
+   "rodadas": [
+    {
+     "q": "Is it rude to change the subject?",
+     "a": "Rude",
+     "b": "Not rude",
+     "fa": [
+      "Rude. It tells the other person their story doesn’t matter.",
+      "To be honest, I notice every time."
+     ],
+     "fb": [
+      "Not at all. Conversations die without it.",
+      "Mind you, there’s a polite way: “By the way…”."
+     ]
+    },
+    {
+     "q": "Total honesty with friends, or kind white lies?",
+     "a": "Total honesty",
+     "b": "White lies",
+     "fa": [
+      "Honesty. Friends deserve the truth, even when it stings.",
+      "Lies build up over time."
+     ],
+     "fb": [
+      "White lies. Not every truth needs saying.",
+      "Actually, kindness is the point of friendship."
+     ]
+    },
+    {
+     "q": "Scripted podcasts or unscripted conversation?",
+     "a": "Scripted",
+     "b": "Unscripted",
+     "fa": [
+      "Scripted. They respect my time.",
+      "No long side trips about the host’s cat."
+     ],
+     "fb": [
+      "Unscripted. The side trips are the best part.",
+      "Real people don’t talk in straight lines."
+     ]
+    },
+    {
+     "q": "Interrupting: always rude, or sometimes necessary?",
+     "a": "Always rude",
+     "b": "Sometimes needed",
+     "fa": [
+      "Always rude. Wait your turn.",
+      "Anyway, you can say it later."
+     ],
+     "fb": [
+      "Sometimes needed. Some people never stop.",
+      "Mind you, it depends on how you do it."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Anyway, nobody changed the subject."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Story, Off Script",
+   "t": "Tell it like a podcast host.",
+   "p": "Four steps. One marker in each.",
+   "prof": "Interrupt once on purpose in step 3 so they need “As I was saying”.",
+   "passos": [
+    {
+     "q": "Start a real story: a day that went strangely wrong.",
+     "st": [
+      "So, this was actually …",
+      "It started when …"
+     ],
+     "ex": "So, this was actually my first day at a new job."
+    },
+    {
+     "q": "Add a side detail nobody asked for.",
+     "st": [
+      "By the way, …"
+     ],
+     "ex": "By the way, I was wearing my brother’s shoes, two sizes too big."
+    },
+    {
+     "q": "Get back on track after the interruption.",
+     "st": [
+      "As I was saying, …",
+      "Anyway, …"
+     ],
+     "ex": "As I was saying, I walked into the wrong meeting and nobody stopped me."
+    },
+    {
+     "q": "End it honestly: what do you really think now?",
+     "st": [
+      "To be honest, …",
+      "Mind you, …"
+     ],
+     "ex": "To be honest, it was a disaster. Mind you, I got the job."
+    }
+   ],
+   "fim": "Off air. A real story, with every turn signposted."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

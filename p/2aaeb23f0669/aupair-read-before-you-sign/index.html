@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -117,5 +118,267 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Read the Millers’ agreement.",
+   "p": "Read it out loud. Then answer."
+  },
+  "separa": {
+   "t": "OK to sign, or ask first?",
+   "p": "Read each line. Choose. Say why."
+  },
+  "cadeira": {
+   "t": "Ask before you sign.",
+   "p": "Your teacher is the host mom. Ask politely."
+  },
+  "cv-acordo": {
+   "t": "Saturday night: one more line.",
+   "p": "You want the car. Answer, then close the deal."
+  },
+  "pode": {
+   "t": "Lesson 7: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Ler o acordo com a família anfitriã (up to, per week, no more than, must / must not, curfew) e perguntar antes de assinar; a família Miller é fictícia.",
+  "armadilha": "Assinar sem ler, aceitar mais de 45 horas por dinheiro extra, entregar o passaporte e ter medo de perguntar; em inglês, confundir “must not” (proibido) com “don’t have to”.",
+  "pal": [
+   "up to 45 hours per week",
+   "no more than 10 hours per day",
+   "must / must not",
+   "curfew",
+   "day off",
+   "Could you explain …?",
+   "coordinator",
+   "passport"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o acordo com a família antes do embarque.",
+   "perg": "Would you sign a contract in English without reading it?",
+   "pula": "Só leia o título da capa."
+  },
+  "leitura": {
+   "obj": "Ler o acordo dos Miller em voz alta e responder sobre o sentido; depois achar o padrão.",
+   "perg": "How many hours per week can you work?",
+   "pula": "Leia metade e faça duas perguntas."
+  },
+  "separa": {
+   "obj": "Separar dez linhas de acordos em “OK” ou “perguntar antes” e dizer por quê.",
+   "perg": "Is it OK to give your passport to the family?",
+   "pula": "Seis linhas bastam."
+  },
+  "cadeira": {
+   "obj": "O aluno pergunta à mãe anfitriã (o professor) sobre as linhas que não entendeu.",
+   "perg": "Could you explain the curfew?",
+   "pula": "Três perguntas bastam."
+  },
+  "cv-acordo": {
+   "obj": "Negociação com a Sra. Miller: o carro para um show no sábado (limite secreto: meia-noite, mensagem às 23h, sem rodovia).",
+   "perg": "What if I texted you at 11?",
+   "pula": "Duas perguntas e o fechamento."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; lembrar que linha duvidosa vai ao coordenador antes de assinar.",
+   "perg": "Can you find the lines to ask about?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre regras, contratos e limites na vida do aluno.",
+   "perg": "What rules did you have at home as a teenager?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de dilemas do acordo com a família, com frase pronta.",
+   "perg": "Which side do you take?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno vira a Sra. Miller e explica as regras; o professor é o au pair.",
+   "perg": "Mrs. Miller, why do you have a curfew?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Rules and you.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "must",
+    "must not",
+    "up to"
+   ],
+   "cartas": [
+    {
+     "k": "HOUSE RULES",
+     "q": "What rules did you have at home as a teenager?",
+     "fup": "Did you follow them?",
+     "st": [
+      "I had to be home by …",
+      "I must not …"
+     ],
+     "ex": "I had to be home by ten. I followed it, most of the time."
+    },
+    {
+     "k": "CONTRACTS",
+     "q": "Have you ever signed something without reading it?",
+     "fup": "What happened?",
+     "st": [
+      "Yes, once I signed …",
+      "Later, I found out …"
+     ],
+     "ex": "Yes, once I signed a gym contract. Later, I found out I couldn’t cancel for a year."
+    },
+    {
+     "k": "YOUR LIMITS",
+     "q": "What would you never accept in a job agreement?",
+     "fup": "Why not?",
+     "st": [
+      "I would never accept …",
+      "because …"
+     ],
+     "ex": "I would never accept working on all my days off, because I need time to rest."
+    },
+    {
+     "k": "DAYS OFF",
+     "q": "What would you do on your first day off in the USA?",
+     "fup": "Would you go alone?",
+     "st": [
+      "On my first day off, I’d …",
+      "I’d go with …"
+     ],
+     "ex": "On my first day off, I’d visit a big city nearby. I’d go with another au pair."
+    },
+    {
+     "k": "ASKING",
+     "q": "Is it easy for you to ask questions when you don’t understand?",
+     "fup": "How can you ask politely?",
+     "st": [
+      "It’s easy / hard for me because …",
+      "I can say: “Could you explain …?”"
+     ],
+     "ex": "It’s hard for me because I’m shy. I can say: “Could you explain this line?”"
+    },
+    {
+     "k": "CURFEW",
+     "q": "Is a curfew for an adult au pair fair?",
+     "fup": "What time would be fair?",
+     "st": [
+      "I think it’s fair because …",
+      "Up to … is OK."
+     ],
+     "ex": "I think it’s fair on school nights. Up to midnight on weekends is OK."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "must",
+    "I think",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "The family offers extra pay for 50 hours a week. Accept or say no?",
+     "a": "Accept",
+     "b": "Say no",
+     "fa": [
+      "Accept. I need the money.",
+      "It’s only five more hours."
+     ],
+     "fb": [
+      "Say no. The rule is up to 45 hours.",
+      "Extra pay doesn’t allow extra hours."
+     ]
+    },
+    {
+     "q": "An unclear line in the agreement: ask the family or ask the coordinator?",
+     "a": "The family",
+     "b": "The coordinator",
+     "fa": [
+      "The family. They wrote it.",
+      "It’s a good way to start talking."
+     ],
+     "fb": [
+      "The coordinator. She knows the rules.",
+      "It’s safer before I sign."
+     ]
+    },
+    {
+     "q": "A family with many rules or a family with few rules?",
+     "a": "Many rules",
+     "b": "Few rules",
+     "fa": [
+      "Many rules. I know what they expect.",
+      "No surprises later."
+     ],
+     "fb": [
+      "Few rules. I’m an adult.",
+      "It feels more like a family."
+     ]
+    },
+    {
+     "q": "Use the family car, or use public transport?",
+     "a": "The car",
+     "b": "Public transport",
+     "fa": [
+      "The car. In the suburbs, there are no buses.",
+      "It’s faster."
+     ],
+     "fb": [
+      "Public transport. Less responsibility.",
+      "No problem if something happens to the car."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Mrs. Miller now.",
+   "p": "Your teacher is the au pair.",
+   "aluno": "Listen to your teacher’s question. Answer as Mrs. Miller, the host mom.",
+   "perguntas": [
+    "Mrs. Miller, why do you have a curfew?",
+    "How many hours per week will I work?",
+    "Must I clean the whole house?",
+    "Can I use the car on my day off?",
+    "What must the kids not do when you’re away?",
+    "Can I keep my passport with me?"
+   ],
+   "st": [
+    "You must …",
+    "You must not …",
+    "Up to …"
+   ],
+   "ex": "You must be home by 11 on school nights. The kids have school early, and the house is quiet after that."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

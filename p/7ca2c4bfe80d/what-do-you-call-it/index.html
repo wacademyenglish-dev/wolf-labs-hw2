@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · What Do You Call It? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 2 · B1</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 2 · What Do You Call It? · B1</h2>
+    <p>Episode 2 of <b>Better Speaking</b>, B1 version. Park Hang-seo doesn&rsquo;t know the word for a bar, so he says &ldquo;beer shop&rdquo;, and everybody understands. The language is how to explain a word you don&rsquo;t know: <b>a thing you use to&hellip;, a place where&hellip;, a person who&hellip;, you know, when&hellip;</b>. The sister lesson for B2 is &ldquo;Little and Often&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; When the word doesn&rsquo;t come, Don&rsquo;t say the word. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Explain it with other words, What is it, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Three secret words. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>&ldquo;Uma coisa que serve para&rdquo; becomes <i>a thing that serves for</i>. People get <i>which</i>: <i>a person which fixes cars</i>. And places get <i>that</i> with no preposition: <i>a place that you buy bread</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 2 · WHAT DO YOU CALL IT? (B1)
+   Vídeo: BBC Learning English, Better Speaking (oZY3YP9qZ4U), três trechos (~3:30).
+   Alvo: explicar a palavra que você não sabe (a thing you use to…, a place where…, a person who…). Nenhuma B1 ensina.
+   A aula irmã B2 é a "Little and Often". */
+const M = { nome: "What Do You Call It?", kick: "B1 · A THING YOU USE TO…, A PLACE WHERE…" };
+var EP = {
+  n: 2, de: 8, nivel: 'B1', titulo: 'What Do You Call It?', video: 'oZY3YP9qZ4U',
+  convidado: 'Park Hang-seo', habilidade: 'explain a word you don\'t know',
+  trechos: [
+    { ini: 42, fim: 107, rot: 'Park: football in Korea' },
+    { ini: 197, fim: 294, rot: 'Richard: the beer shop' },
+    { ini: 541, fim: 587, rot: 'Raphael: use your hands' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'He doesn\'t know the word “bar”. So he says “beer shop”. And everybody understands. Today: what to do when the word doesn\'t come.',
+      nota: 'Ask: when did you last forget a word in English? What did you do?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'When the word <em>doesn\'t come</em>', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Each answer with an example.',
+      cartas: [
+        { frente: 'Forget', verso: 'Do you forget words when you speak English? Which ones?', dica: 'Yes, I always forget…', cor: 'var(--guest)', fw: { q: 'What do you do then?', st: ['I stop.', 'I use my hands.', 'I say it in Portuguese.'], help: '“I use my hands a lot!”' } },
+        { frente: 'Match', verso: 'Do you watch football matches? Where?', dica: 'I watch them at…', cor: 'var(--host)', fw: { q: 'Who do you watch with?', st: ['With my family.', 'With friends at a bar.', 'I don\'t watch football.'], help: '“With my friends at a bar near my house.”' } },
+        { frente: 'Hands', verso: 'Do Brazilians talk with their hands? Do you?', dica: 'Yes, a lot! / Not really.', cor: 'var(--teacher)', fw: { q: 'Show me a gesture and tell me what it means.', st: ['This means…', 'We use it when…'], help: '“This means: wait a minute.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 3½ minutes', titulo: 'Listen to <em>Park Hang-seo</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Do Korean fans like to go to the stadium?', ops: [{ t: 'Yes, a lot' }, { t: 'Not really' }] }, { q: 'Park doesn\'t know a word. What do you think he does?', ops: [{ t: 'He stops talking' }, { t: 'He uses other words' }] } ],
+      durante: 'Listen for “beer shop”. Then listen to Richard explain a word without saying it: “you know, when the air comes out of the tire…”',
+      depois: [ { f: 'Korean people like football more than baseball.', ok: 1 }, { f: 'They prefer to watch at the stadium.', ok: 0 }, { f: 'Richard says “beer shop” is perfectly understandable.', ok: 1 }, { f: 'Raphael says Spanish speakers never use their hands.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Explain it with <em>other words</em>', pt: 'Uma coisa: a thing you use to + verbo. Um lugar: a place where… Uma pessoa: a person who…',
+      nota: 'Read each card. The red card is the Portuguese “uma coisa que serve para”.',
+      cartoes: [ { g: 'It\'s <b>a thing you use to</b> clean your teeth.', p: 'An object: a toothbrush.' }, { g: 'It\'s <b>a place where</b> you buy beer.', p: 'A place: a liquor store, a bar.' }, { g: 'It\'s <b>a person who</b> fixes cars.', p: 'A person: a mechanic.' }, { g: 'It\'s a thing that serves for cut paper.', p: 'Say: a thing you use to cut paper.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'guess the word', titulo: 'What is <em>it</em>?', pt: 'Toque na explicação e depois na palavra.',
+      nota: 'The student reads the explanation aloud, then finds the word.',
+      esq: ['a thing you use to clean your teeth', 'a place where you see a doctor', 'a person who teaches', 'a thing you use to open a door', 'a place where you buy bread'], dir: ['a toothbrush', 'a clinic', 'a teacher', 'a key', 'a bakery'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Now you: explain a word, I guess.', st: ['It\'s a thing you use to…', 'It\'s a place where…', 'It\'s a person who…'], help: '“It\'s a place where you watch films.” (a cinema)' } },
+    { k: 'cartas', est: 'o', rot: 'the guessing game', titulo: 'Don\'t say the <em>word</em>', pt: 'Vire a carta e explique a palavra sem dizer a palavra.',
+      nota: 'The student explains each secret word; you guess. Then swap.',
+      cartas: [
+        { frente: 'Secret 1', sob: 'explain it', verso: 'an umbrella', dica: 'It\'s a thing you use to…', cor: 'var(--guest)', fw: { q: 'Your turn to guess. Ready?', st: ['Is it a…?', 'I think it\'s…', 'One more clue, please!'], help: 'Teacher: “It\'s a place where you sleep when you travel.”' } },
+        { frente: 'Secret 2', sob: 'explain it', verso: 'a dentist', dica: 'It\'s a person who…', cor: 'var(--host)' },
+        { frente: 'Secret 3', sob: 'explain it', verso: 'a gym', dica: 'It\'s a place where…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: '“Serve para”, “que” for people, and the missing preposition.',
+      itens: [ { erro: 'It\'s a thing that <s>serves for</s> cut paper.', certo: 'It\'s a thing you <b>use to</b> cut paper.', por: '“Serve para” = you use it to.' }, { erro: 'It\'s a person <s>which</s> fixes cars.', certo: 'It\'s a person <b>who</b> fixes cars.', por: 'People: who.' }, { erro: 'It\'s a place <s>that</s> you buy bread.', certo: 'It\'s a place <b>where</b> you buy bread.', por: 'Places: where.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Read each line aloud and say the word it describes.',
+      itens: [ { f: 'It\'s a person ___ cuts your hair.', ops: ['who', 'where'], ok: 0 }, { f: 'It\'s a place ___ you watch football.', ops: ['where', 'who'], ok: 0 }, { f: 'It\'s a thing you use ___ cook rice.', ops: ['to', 'for'], ok: 0 }, { f: 'You know, ___ the air comes out of the tire…', ops: ['when', 'who'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Three <em>secret words</em>', pt: 'Escreva a explicação de três palavras do seu dia a dia, sem dizer a palavra.',
+      ph: '1. It\'s a thing you use to… 2. It\'s a place where… 3. It\'s a person who…', nota: 'The line under the paper catches “serves for” and “person which”. SAVE sends it to My notes. Then you guess the three words.',
+      banco: ['It\'s a thing you use to', 'It\'s a place where', 'It\'s a person who', 'You know, when', 'You find it in'],
+      regras: [['\\bserves? for\\b', 'Check: a thing you USE TO…'], ['\\bperson which\\b', 'Check: a person WHO…']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'I think you should…', tx: 'A footballer in China gives his opinion in English. He sounds very sure. How?',
+      ganchos: [['Next guest', 'a footballer in China'], ['The skill', 'give your opinion'], ['Your task', 'explain one word you forget']], nota: 'Ask: what do you think about foreign players in Brazilian football? That opens Episode 3.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "No word for “bar”? He says “beer shop”. It works."
+  },
+  "c9": {
+   "p": "A footballer in China gives his opinion. He sounds sure. How?"
+  }
+ },
+ "prep": {
+  "obj": "Explicar uma palavra que você não sabe: a thing you use to…, a place where…, a person who…, you know, when… Park Hang-seo diz “beer shop” e todo mundo entende.",
+  "armadilha": "“Uma coisa que serve para” vira “a thing that serves for”; pessoa ganha which (“a person which fixes cars”); lugar perde a preposição (“a place that you buy bread”).",
+  "pal": [
+   "a thing you use to…",
+   "a place where…",
+   "a person who…",
+   "you know, when…",
+   "It's like a…",
+   "beer shop",
+   "What do you call it?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o convidado: Park Hang-seo não sabe a palavra “bar” e diz “beer shop”.",
+   "perg": "When did you last forget a word in English? What did you do?",
+   "pula": "Uma resposta e siga."
+  },
+  "c1": {
+   "obj": "Conversa sobre quando a palavra não vem; cada resposta com um exemplo.",
+   "perg": "What do you do when a word doesn't come?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes do Park Hang-seo, em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "What does he say for “bar”?",
+   "pula": "Assista uma vez só; os clipes vão inteiros."
+  },
+  "c3": {
+   "obj": "A regra: a thing you use to, a place where, a person who; o cartão vermelho é “serve para”.",
+   "perg": "What's a fridge? Explain it, don't translate.",
+   "pula": "Leia os cartões e peça uma explicação."
+  },
+  "c4": {
+   "obj": "O aluno lê a explicação em voz alta e acha a palavra.",
+   "perg": "What is it? How do you know?",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "Jogo de adivinhar: o aluno explica a palavra secreta, o professor adivinha; depois troca.",
+   "perg": "Don't say the word. What is it like?",
+   "pula": "Duas palavras de cada lado bastam."
+  },
+  "c6": {
+   "obj": "Corrigir as três armadilhas: serves for, person which, place that sem preposição.",
+   "perg": "What's wrong here? Say the right one.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c7": {
+   "obj": "Prática: ler cada linha em voz alta e dizer qual palavra ela descreve.",
+   "perg": "Read it aloud. What's the word?",
+   "pula": "Faça três linhas."
+  },
+  "c8": {
+   "obj": "Escrever três palavras secretas explicadas; vai para o My notes e o professor adivinha.",
+   "perg": "Read one. I'll guess.",
+   "pula": "Duas palavras bastam."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 3: um jogador na China dá opinião em inglês, bem seguro.",
+   "perg": "What do you think about foreign players in Brazilian football?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa explicando coisas, lugares e pessoas sem a palavra exata.",
+   "perg": "What do you call it? Explain it.",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre estratégias quando falta a palavra.",
+   "perg": "Which side are you on? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno vive uma viagem em que faltam palavras e resolve cada problema explicando.",
+   "perg": "What do you say to the pharmacist?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Explain it your way.",
+   "p": "Pick a card. Don't say the word.",
+   "palavras": [
+    "a thing you use to…",
+    "a place where…",
+    "a person who…"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR KITCHEN",
+     "q": "Explain something in your kitchen. Don't say the word.",
+     "fup": "Do you use it every day?",
+     "st": [
+      "It's a thing you use to …",
+      "It's like a …"
+     ],
+     "ex": "It's a thing you use to make coffee. You know, with water and a filter."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Explain a place in your city that tourists don't know.",
+     "fup": "Why do you go there?",
+     "st": [
+      "It's a place where …",
+      "People go there when …"
+     ],
+     "ex": "It's a place where you buy fruit and pastel on Sunday mornings."
+    },
+    {
+     "k": "A JOB",
+     "q": "Explain a job that is hard to translate.",
+     "fup": "Do you know someone who does it?",
+     "st": [
+      "It's a person who …"
+     ],
+     "ex": "It's a person who helps you with papers at the office. A despachante!"
+    },
+    {
+     "k": "A BRAZILIAN WORD",
+     "q": "Explain “saudade” or “cafuné” in English.",
+     "fup": "Is there a word in English?",
+     "st": [
+      "It's when you …",
+      "It's a feeling you have when …"
+     ],
+     "ex": "It's a feeling you have when you miss a person or a place."
+    },
+    {
+     "k": "LAST TIME",
+     "q": "Tell me about a time a word didn't come. What did you say?",
+     "fup": "Did they understand you?",
+     "st": [
+      "I didn't know the word for …",
+      "So I said …"
+     ],
+     "ex": "I didn't know the word for 'tomada', so I said 'the thing in the wall for electricity'."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Explain an app on your phone. Don't say its name.",
+     "fup": "How often do you use it?",
+     "st": [
+      "It's a thing you use to …",
+      "You open it when …"
+     ],
+     "ex": "It's a thing you use to call a car. You open it when it's late."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I think",
+    "because",
+    "you know",
+    "I see, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "The word doesn't come: explain it or use the translator?",
+     "a": "Explain it",
+     "b": "Translator",
+     "fa": [
+      "Explain it. People understand, like with 'beer shop'.",
+      "And you don't stop the conversation."
+     ],
+     "fb": [
+      "Use the translator. It's fast and exact.",
+      "Nobody gets confused."
+     ]
+    },
+    {
+     "q": "Invent a word or say it in Portuguese?",
+     "a": "Invent a word",
+     "b": "Portuguese",
+     "fa": [
+      "Invent one. 'Beer shop' was perfect.",
+      "It's creative, and people remember it."
+     ],
+     "fb": [
+      "Say it in Portuguese. Some people understand.",
+      "Then they teach you the English word."
+     ]
+    },
+    {
+     "q": "Learn new words from lists or from conversations?",
+     "a": "Lists",
+     "b": "Conversations",
+     "fa": [
+      "From lists. You see the word and you study it.",
+      "It's organized."
+     ],
+     "fb": [
+      "From conversations. You remember the moment.",
+      "And you learn how people really say it."
+     ]
+    },
+    {
+     "q": "Speak with mistakes or wait until it's perfect?",
+     "a": "With mistakes",
+     "b": "Wait",
+     "fa": [
+      "With mistakes. That's how you improve.",
+      "Park Hang-seo didn't wait."
+     ],
+     "fb": [
+      "Wait. Mistakes can be embarrassing.",
+      "It's better to be ready first."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Lost for Words",
+   "t": "A trip with no dictionary.",
+   "p": "Solve each problem. Explain the word.",
+   "prof": "Play the person in each place. Don't help with the word: wait for the explanation.",
+   "passos": [
+    {
+     "q": "You are at a pharmacy. You need something for a mosquito bite. You don't know the word.",
+     "st": [
+      "I need a thing you use to …",
+      "You know, when …"
+     ],
+     "ex": "I need a cream you use when a mosquito bites you. You know, when it itches."
+    },
+    {
+     "q": "At the hotel, you need an adapter for your phone charger.",
+     "st": [
+      "It's a thing you use to …",
+      "It's like a …"
+     ],
+     "ex": "It's a thing you use to connect your charger to the wall."
+    },
+    {
+     "q": "You want to find a place to eat cheap local food.",
+     "st": [
+      "I'm looking for a place where …"
+     ],
+     "ex": "I'm looking for a place where local people eat, and it isn't expensive."
+    },
+    {
+     "q": "You need help. Who can fix your broken suitcase?",
+     "st": [
+      "Is there a person who …?"
+     ],
+     "ex": "Is there a person who fixes bags near here?"
+    }
+   ],
+   "fim": "No dictionary, no problem. You explained everything."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

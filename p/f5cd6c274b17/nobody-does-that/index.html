@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Nobody Does That Anymore · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Nobody Does That Anymore · The Museum</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Nobody Does That Anymore · The Museum</h2>
+    <p>The whole hour is two questions: <b>Did it happen many times? Is it over?</b> If both answers are yes, the sentence can say USED TO; if either is no, it can’t. Portuguese has one past shape for all of this, so the difference isn’t in the student’s head yet. The screen is a small museum: eight cases of ordinary things everybody used to use. The student engraves each plaque.</p>
+    <h4>THE TWO DOORS ARE THE HOUR</h4>
+    <p>Scenes III and IV. Make the student say each door out loud before tapping. The door people walk through: <i>I used to like pizza</i>, and they still do. Don’t explain; ask <b>and now?</b> and wait.</p>
+    <h4>THE D NOBODY HEARS</h4>
+    <p><i>used to</i> and <i>use to</i> sound the same. On paper, <i>didn’t used to</i> is the mistake. And <i>I use to</i> for the present is <b>usually</b>.</p>
+    <h4>THE AUDIO</h4>
+    <p>Nine plaques (eight cases and the Sunday call), checked against the recordings. Play first; the text opens after.</p>
+    <!--conversa--><h4>BET ON THE PAST (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the Two Doors, your student bets how people used to do three things before phones and the internet: meet friends, send a document fast, hear a song again. Let them choose, wait five seconds in silence, and ask why, with <b>used to</b>. Then press <b>Check what happened</b> and use the PUSH line (only you see it) to bring it to their life. Recast quietly (<i>didn’t use to</i>, not <i>didn’t used to</i>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I When You Were Ten, IV Bet on the Past, VI Turn It Over, VIII Interview a Grandparent (you are 75), IX Your Case.</li>
+      <li><b>Listen</b>: II Eight Cases, VII Case Nine. <b>Focus</b>: III Two Doors, V The D.</li>
+      <li><b>Write</b>: X, their own plaque. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* NOBODY DOES THAT ANYMORE (Main A2) · pergunta-surpresa · 27/10/2026 · used to · didn’t use to · did you use to */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'vitrine', tipo: 'Would you rather', q: 'For one week: would you rather have no phone or no TV?',
+    opc: ['No phone', 'No TV'], st: ['I’d rather have no …, because …'],
+    ex: 'No TV. I used to watch TV every night, but now I watch everything on my phone.', push: 'No phone for one MONTH. Still OK?' },
+  { cena: 'd', tipo: 'And you?', q: 'What did you use to love as a teenager that you don’t like now?',
+    opc: ['A kind of music', 'A food', 'A TV show'], st: ['I used to love …, but now …', 'I didn’t use to …'],
+    ex: 'A kind of music. I used to love heavy metal. Now I listen to jazz!', push: 'Do you still have a T-shirt from that time?' },
+  { cena: 'tres', tipo: 'Opinion', q: 'Was life better before smartphones?',
+    opc: ['Yes, better', 'No, worse', 'Just different'], st: ['People used to …, so …', 'People didn’t use to …'],
+    ex: 'Just different. People used to talk more at dinner, but now I can call my brother in Canada for free.', push: 'Would you go back to 1995 for one year? Yes or no?' },
+  { cena: 'caixa', tipo: 'What if', q: 'In 30 years, what will kids say: “People used to …”?',
+    opc: ['… drive their own cars', '… type on phones', '… go to the office'], st: ['They’ll say: “People used to …”', 'Because …'],
+    ex: '“People used to drive their own cars!” I think cars will drive themselves.', push: 'And what will they say about you?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* NOBODY DOES THAT ANYMORE (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A aposta entra no lugar de "IV · The Door Test" (prática controlada que repete as Two Doors do III), no MEIO:
+   logo depois da regra, o aluno aposta como as pessoas faziam as coisas antes, e o botão Check mostra o que
+   acontecia. A gramática da aula (used to · didn’t use to · did you use to) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'aposta', troca: 'teste', est: 'o', min: 7, img: 'museu', rot: 'Bet on the Past', t: 'Bet: how did people use to do it?',
+    p: 'Choose your bet, or say your own idea, with used to. Then check what happened.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Meeting friends', sit: 'No mobile phones. You want to meet a friend in the city on Saturday.',
+        q: 'How did people use to do it?', opc: ['They called from a payphone', 'They agreed on a time and place days before', 'They just walked around and hoped'],
+        st: ['I bet they used to …', 'They didn’t use to …, because …'],
+        ex: 'I bet they used to agree on a place, like the door of a cinema, and just wait.',
+        revela: 'They used to agree on a time and a place days before. If your friend was late, you just waited.', rot_revela: 'Check what happened',
+        push: 'Your friend is forty minutes late. Do you wait or go home?' },
+      { tag: 'A document, fast', sit: 'An office in São Paulo needs to send a signed contract to Rio. Today. No email.',
+        q: 'How did offices use to do it?', opc: ['By fax', 'By post', 'Somebody took a plane'],
+        st: ['I think they used to …', 'Offices used to have …'],
+        ex: 'By fax! I think every office used to have a fax machine.',
+        revela: 'By fax. You put the paper in the machine, and a copy came out in Rio a few minutes later.', rot_revela: 'Check what happened',
+        push: 'Did your parents use to have a fax at work? Ask them tonight!' },
+      { tag: 'Your favourite song', sit: 'No streaming. A great new song is on the radio. You want it again.',
+        q: 'What did young people use to do?', opc: ['Buy the CD', 'Record it from the radio', 'Wait for the radio to play it again'],
+        st: ['They used to …', 'I used to …, but now I …'],
+        ex: 'Buy the CD, but it was expensive. So I think they used to wait for the radio.',
+        revela: 'Many used to record it from the radio onto a cassette. And the DJ always talked over the start!', rot_revela: 'Check what happened',
+        push: 'Did you use to have a favourite radio station? Which one?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Before the museum: your own life.",
+   "p": "You are the guest. Answer out loud."
+  },
+  "vitrine": {
+   "t": "Eight ordinary things. Everybody stopped.",
+   "p": "Open a case. Play it. Engrave the verb."
+  },
+  "portas": {
+   "t": "USED TO needs two open doors.",
+   "p": "Answer each door out loud. Then tap."
+  },
+  "cv-aposta": {
+   "t": "How did people use to do it?",
+   "p": "Bet with used to. Then check."
+  },
+  "d": {
+   "t": "Nobody hears the D. Paper does.",
+   "p": "Say it right, twice. Then tap it."
+  },
+  "tres": {
+   "t": "One sentence, three faces.",
+   "p": "Say the negative, then the question."
+  },
+  "placa": {
+   "t": "Case Nine: the Sunday phone call.",
+   "p": "Listen first. Then five questions."
+  },
+  "entrevista": {
+   "t": "Your teacher is seventy-five now.",
+   "p": "Build the question. Ask it. Listen."
+  },
+  "caixa": {
+   "t": "One empty case. Your name is on it.",
+   "p": "Say the plaque. Then say when it stopped."
+  },
+  "fim": {
+   "t": "Closing time. Write your plaque.",
+   "p": "Three things you used to do, one you didn’t like."
+  }
+ },
+ "prep": {
+  "obj": "Used to para hábitos repetidos que acabaram (duas portas: aconteceu muitas vezes? acabou?): um museu de coisas comuns que todo mundo fazia e parou.",
+  "armadilha": "O português usa um só passado (“eu jogava”), então o aluno não sente a diferença; no papel, didn’t used to e I use to no presente (no lugar de usually).",
+  "pal": [
+   "used to",
+   "didn’t use to",
+   "Did you use to…?",
+   "anymore",
+   "not … anymore",
+   "usually",
+   "payphone",
+   "video store",
+   "paper map"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o museu: coisas comuns que todo mundo fazia e parou de fazer.",
+   "perg": "What did people do before phones?",
+   "pula": "Só leia o título e entre no museu."
+  },
+  "abre": {
+   "obj": "Aquecimento: a vida do aluno aos dez anos.",
+   "perg": "What did you do after school when you were ten?",
+   "pula": "Três perguntas bastam."
+  },
+  "vitrine": {
+   "obj": "Oito vitrines com áudio: gravar o verbo na placa e responder.",
+   "perg": "Did people use to do this?",
+   "pula": "Quatro vitrines bastam."
+  },
+  "portas": {
+   "obj": "As duas portas: muitas vezes? acabou? Só com as duas abertas vale used to.",
+   "perg": "And now?",
+   "pula": "Não pule: é o coração da aula."
+  },
+  "cv-aposta": {
+   "obj": "Aposta: como as pessoas faziam antes do celular e da internet.",
+   "perg": "How did people use to meet friends?",
+   "pula": "Duas apostas bastam."
+  },
+  "d": {
+   "obj": "O D que ninguém ouve: used to x use to, didn’t use to.",
+   "perg": "Didn’t use to or didn’t used to?",
+   "pula": "Três frases bastam."
+  },
+  "tres": {
+   "obj": "Uma frase, três formas: afirmativa, negativa e pergunta.",
+   "perg": "Did you use to…?",
+   "pula": "Duas frases bastam."
+  },
+  "placa": {
+   "obj": "Nona vitrine: a ligação de domingo, em áudio, e cinco perguntas.",
+   "perg": "Who did people use to call on Sundays?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "entrevista": {
+   "obj": "O professor tem 75 anos; o aluno monta e faz as perguntas.",
+   "perg": "Did you use to write letters?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "caixa": {
+   "obj": "A vitrine do aluno: um hábito dele que acabou, e quando parou.",
+   "perg": "When did you stop?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: a placa do aluno, três hábitos e um que ele não gostava.",
+   "perg": "What didn’t you use to like?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas sobre hábitos antigos do aluno.",
+   "perg": "Did you use to watch cartoons?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado entre antes e agora, com used to.",
+   "perg": "Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Papel invertido: o aluno tem 75 anos e o professor entrevista.",
+   "perg": "Did you use to have a phone at home?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More things you used to do.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "used to",
+    "didn’t use to",
+    "Did you use to…?",
+    "anymore"
+   ],
+   "cartas": [
+    {
+     "k": "CARTOONS",
+     "q": "Did you use to watch cartoons in the morning or in the afternoon?",
+     "fup": "Do you still watch them?",
+     "st": [
+      "I used to watch …",
+      "I don’t … anymore."
+     ],
+     "ex": "I used to watch them in the morning. I don’t watch them anymore."
+    },
+    {
+     "k": "MUSIC",
+     "q": "Did you use to listen to CDs or the radio?",
+     "fup": "How do you listen now?",
+     "st": [
+      "I used to listen to …",
+      "Now I usually …"
+     ],
+     "ex": "I used to listen to the radio. Now I usually use my phone."
+    },
+    {
+     "k": "FOOD",
+     "q": "What food didn’t you use to like?",
+     "fup": "Do you like it now?",
+     "st": [
+      "I didn’t use to like …",
+      "Now I …"
+     ],
+     "ex": "I didn’t use to like fish. Now I love it."
+    },
+    {
+     "k": "SCHOOL",
+     "q": "Did you use to walk to school or take a bus?",
+     "fup": "Who used to go with you?",
+     "st": [
+      "I used to …",
+      "My … used to …"
+     ],
+     "ex": "I used to walk. My brother used to go with me."
+    },
+    {
+     "k": "GAMES",
+     "q": "What game did you use to play with friends?",
+     "fup": "Where did you use to play?",
+     "st": [
+      "We used to play …",
+      "We used to play in …"
+     ],
+     "ex": "We used to play soccer in the street."
+    },
+    {
+     "k": "PHONES",
+     "q": "Did you use to remember phone numbers?",
+     "fup": "How many do you know now?",
+     "st": [
+      "I used to remember …",
+      "I don’t … anymore."
+     ],
+     "ex": "I used to remember twenty numbers. Now I only remember two."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "used to",
+    "didn’t use to",
+    "anymore"
+   ],
+   "rodadas": [
+    {
+     "q": "Paper maps or phone maps?",
+     "a": "Paper maps",
+     "b": "Phone maps",
+     "fa": [
+      "Paper maps. People used to know the city better."
+     ],
+     "fb": [
+      "Phone maps. We don’t get lost anymore."
+     ]
+    },
+    {
+     "q": "Letters or messages?",
+     "a": "Letters",
+     "b": "Messages",
+     "fa": [
+      "Letters. People used to write with more care."
+     ],
+     "fb": [
+      "Messages. We didn’t use to talk every day."
+     ]
+    },
+    {
+     "q": "Photos on paper or photos on the phone?",
+     "a": "On paper",
+     "b": "On the phone",
+     "fa": [
+      "On paper. We used to look at albums together."
+     ],
+     "fb": [
+      "On the phone. We didn’t use to take so many."
+     ]
+    },
+    {
+     "q": "TV at 8 PM or series any time?",
+     "a": "TV at 8 PM",
+     "b": "Any time",
+     "fa": [
+      "TV at 8. The family used to watch together."
+     ],
+     "fb": [
+      "Any time. I don’t wait for a show anymore."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the museum is full."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are seventy-five now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as you, at seventy-five, about life fifty years ago.",
+   "perguntas": [
+    "What did you use to do on Sundays?",
+    "Did you use to have a phone at home?",
+    "How did you use to listen to music?",
+    "What did you use to eat for breakfast?",
+    "What didn’t you use to like?",
+    "What do people not do anymore?"
+   ],
+   "st": [
+    "I used to …",
+    "We didn’t use to …",
+    "People don’t … anymore."
+   ],
+   "ex": "We used to call my grandmother every Sunday. People don’t call like that anymore."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Plan B · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Plan B · The Radar</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Plan B · The Radar</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> The first conditional is for a real possibility: If it rains, we’ll move inside.</p><p style="margin:0 0 6px"><b>The grammar:</b> if + present, will + verb · when (sure) × if (maybe) · unless · as soon as · until · in case.</p><p style="margin:0 0 6px"><b>Short class (about 46 min):</b> I Your Weekend · II Sam’s Message · III The Radar · IV Maybe or Sure? · V The Same Sentence, Twice · VI Ask Me · X Back to Your Weekend. Skip if you’re short on time: VII, VIII The Concert in the Park and IX The Chain (marked EXTRA on your screen). On every practice page the student speaks first and taps Check on their own screen. Full lesson: about 66 min.</p></div><!--/prep-->
+    <p>The first conditional is for a real possibility: <b>If it rains, we’ll move inside.</b> <b>If + present</b>, <b>will + verb</b>, never <i>If it will rain</i>. The same machine runs with other doors: <b>when</b> (sure), <b>unless</b> (if not), <b>as soon as</b>, <b>until</b>, and <b>in case</b> (a precaution you take now). The screen is a weather radar at night: every checked plan locks a blip in green.</p>
+    <h4>SCENE I IS NOT CORRECTED</h4>
+    <p>Your student will say <i>If it will rain</i>. Write it down. It comes back in scene X.</p>
+    <h4>THE PAGES</h4>
+    <p><b>Sam’s Message (II)</b>: Sam, the manager of Saturday’s concert in the park, writes to the crew. The student reads it out loud and taps the IF half of each plan (<i>If it rains</i>, <i>When the band arrives</i>, <i>unless the field is dry</i>…; every word can be tapped, wrong taps go red). Then they finish the rule by choosing inside each line. A small copy of the rule stays in the corner on the next pages.</p>
+    <p><b>The Radar (III)</b>: six places. The student reads the forecast and the prompt, says the plan B out loud, then taps Check: the right sentence appears and the blip locks. Under it, one question to ask you.</p>
+    <p><b>Maybe or Sure? (IV)</b>: six situations. The student says the sentence with IF or WHEN, then taps Check.</p>
+    <p><b>The Same Sentence, Twice (V)</b>: four recordings. The student plays each line and taps the small word they hear (if / when, unless / until, in case / if). Then they tell you which line is sure, and when the coat leaves the house.</p>
+    <p><b>Ask Me (VI)</b>: the student builds each question out loud (what · you · do · if · it rains…), taps Check, then asks you. Answer for real, and compare.</p>
+    <p><b>If It Will Rain (VII, extra)</b>: six sentences, one wrong part in each. The student says the whole sentence right, then taps Check.</p>
+    <p><b>The Concert in the Park (VIII)</b>: you are Sam, the nervous manager. Four risks: the student says the plan B, taps Check, then you ask the “And what if…?” on the screen, and they answer with a new first conditional. Under pressure, WILL sneaks into the IF half.</p>
+    <p><b>The Chain (IX)</b>: five links, shuffled. The student taps them in order and taps Check; then says the whole chain and makes one of their own.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Four short lines: IF and WHEN in the same sentence, UNLESS, and IN CASE. Lines 1 and 2 sound almost the same; that’s the point. Each plays with pause and 0.75×.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>If it will rain</i>, <i>when I will arrive</i>, <i>unless it doesn’t rain</i>, <i>if she call</i>, <i>we’ll still to have</i>.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Weekend, III The Radar, VI Ask Me, VIII The Concert in the Park, IX The Chain.</li>
+      <li><b>Listen</b>: V The Same Sentence, Twice (four recordings).</li>
+      <li><b>Focus</b>: II Sam’s Message, IV Maybe or Sure?, VII If It Will Rain.</li>
+      <li><b>Write</b>: X, their own plan B. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js" data-pele="revista"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "fds": {
+   "t": "Your weekend. What if the weather changes?",
+   "p": "Tap your plan and the weather. Say your plan B."
+  },
+  "carta": {
+   "t": "A concert in the park. Rain coming.",
+   "p": "Read Sam’s message. Tap each IF half. Finish the rule."
+  },
+  "radar": {
+   "t": "Six places, six forecasts.",
+   "p": "Say the plan B out loud. Then tap Check."
+  },
+  "quando": {
+   "t": "IF is maybe. WHEN is sure.",
+   "p": "Say it with IF or WHEN. Then tap Check."
+  },
+  "voz": {
+   "t": "Two lines, one word changed.",
+   "p": "Tap the word you hear. Which speaker is sure?"
+  },
+  "pergunta": {
+   "t": "What will your teacher do if…?",
+   "p": "Build the question. Tap Check. Then ask."
+  },
+  "erros": {
+   "t": "Six sentences, six mistakes.",
+   "p": "Say each one right. Then tap Check."
+  },
+  "evento": {
+   "t": "Your teacher is Sam, the nervous manager.",
+   "p": "Say a plan B for each risk. Tap Check. Answer Sam."
+  },
+  "cadeia": {
+   "t": "Each result becomes the next IF.",
+   "p": "Tap the links in order. Check. Make your own."
+  },
+  "fim": {
+   "t": "Your weekend plan is back.",
+   "p": "Write plan B: if, in case, unless. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "First conditional (if + presente, will + verbo) com when, unless, as soon as, until e in case: Sam organiza um show no parque e o radar diz chuva.",
+  "armadilha": "O brasileiro põe will depois do if (“If it will rain”), calco do futuro do subjuntivo (“se chover”); também “when I will arrive” e “unless it doesn’t rain”.",
+  "pal": [
+   "if",
+   "when",
+   "unless",
+   "as soon as",
+   "until",
+   "in case",
+   "plan B",
+   "forecast",
+   "move inside"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: Sam tem um plano B para tudo no show de sábado.",
+   "perg": "Do you always have a plan B?",
+   "pula": "Só leia a frase da capa e comece."
+  },
+  "fds": {
+   "obj": "Aquecimento pessoal: o plano do fim de semana e o plano B. Não corrija; anote o “If it will rain”.",
+   "perg": "What will you do if it rains on Saturday?",
+   "pula": "Um plano e um plano B bastam; anote a frase."
+  },
+  "carta": {
+   "obj": "Ler a mensagem do Sam, achar a metade do IF e completar a regra.",
+   "perg": "Which half is the IF half?",
+   "pula": "Três planos e a regra."
+  },
+  "radar": {
+   "obj": "Seis lugares, seis previsões: dizer o plano B e travar o ponto no radar.",
+   "perg": "What will they do if the wind gets stronger?",
+   "pula": "Quatro lugares bastam."
+  },
+  "quando": {
+   "obj": "Foco: if para possibilidade, when para o que é certo.",
+   "perg": "Is it maybe or sure?",
+   "pula": "Quatro situações bastam."
+  },
+  "voz": {
+   "obj": "Ouvir a palavrinha que muda tudo: if/when, unless/until, in case/if.",
+   "perg": "In which line is the speaker sure?",
+   "pula": "As linhas 1 e 2 bastam."
+  },
+  "pergunta": {
+   "obj": "O aluno monta perguntas com o first conditional e pergunta ao professor.",
+   "perg": "What will you do if…?",
+   "pula": "Três perguntas bastam."
+  },
+  "erros": {
+   "obj": "Corrigir seis frases com um erro cada (will no if, -s, unless com negação).",
+   "perg": "What’s wrong with this one?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "evento": {
+   "obj": "O professor é o Sam, nervoso: quatro riscos, plano B e o “E se…?”.",
+   "perg": "And what if the band is late?",
+   "pula": "Cena extra: dois riscos bastam."
+  },
+  "cadeia": {
+   "obj": "Corrente de condicionais: cada resultado vira o próximo if.",
+   "perg": "And if that happens, what then?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o plano B do fim de semana do aluno, com if, in case e unless; volta a frase da cena I.",
+   "perg": "What will you do if your plan fails?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre possibilidades reais com o first conditional.",
+   "perg": "What will you do if you get a raise?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate com consequências: o aluno defende um lado com if + will.",
+   "perg": "What will happen if we do it your way?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Sam e responde sobre o show com planos B.",
+   "perg": "Sam, what will you do if nobody comes?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More real possibilities.",
+   "p": "Pick a card. Answer with if and will.",
+   "palavras": [
+    "if",
+    "when",
+    "unless",
+    "as soon as",
+    "in case"
+   ],
+   "cartas": [
+    {
+     "k": "TOMORROW",
+     "q": "What will you do if you wake up late tomorrow?",
+     "fup": "Will you skip breakfast?",
+     "st": [
+      "If I wake up late, I’ll …",
+      "I’ll … unless …"
+     ],
+     "ex": "If I wake up late, I’ll take a taxi and eat at work."
+    },
+    {
+     "k": "YOUR NEXT TRIP",
+     "q": "What do you always pack in case something goes wrong?",
+     "fup": "Has it ever saved you?",
+     "st": [
+      "I always pack … in case …"
+     ],
+     "ex": "I always pack a charger in case my phone dies."
+    },
+    {
+     "k": "MONEY",
+     "q": "What will you do if you get some extra money this month?",
+     "fup": "Will you save it or spend it?",
+     "st": [
+      "If I get extra money, I’ll …",
+      "I won’t … unless …"
+     ],
+     "ex": "If I get extra money, I’ll save half and buy new shoes."
+    },
+    {
+     "k": "HOME TONIGHT",
+     "q": "What’s the first thing you’ll do as soon as you get home?",
+     "fup": "And then?",
+     "st": [
+      "As soon as I get home, I’ll …",
+      "I won’t relax until …"
+     ],
+     "ex": "As soon as I get home, I’ll take a shower."
+    },
+    {
+     "k": "YOUR ENGLISH",
+     "q": "What will happen if you practice every day for three months?",
+     "fup": "Is that realistic?",
+     "st": [
+      "If I practice every day, I’ll …",
+      "When I finish this level, I’ll …"
+     ],
+     "ex": "If I practice every day, I’ll understand series without subtitles."
+    },
+    {
+     "k": "BAD WEATHER",
+     "q": "What will you do this weekend if it rains all day?",
+     "fup": "And if it’s very hot?",
+     "st": [
+      "If it rains, I’ll …",
+      "If it’s hot, I’ll …"
+     ],
+     "ex": "If it rains all day, I’ll stay home and watch a series."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "The Debate",
+   "t": "Pick a side. Say what will happen.",
+   "p": "Your teacher argues the other side.",
+   "palavras": [
+    "if",
+    "will",
+    "unless",
+    "in case"
+   ],
+   "rodadas": [
+    {
+     "q": "Rain is coming. Cancel the concert or move it inside?",
+     "a": "Cancel it",
+     "b": "Move inside",
+     "fa": [
+      "Cancel it. If people get wet, they’ll be angry.",
+      "And if the sound system gets wet, it will break."
+     ],
+     "fb": [
+      "Move inside. If we cancel, we’ll lose all the money.",
+      "People will come unless it’s a storm."
+     ]
+    },
+    {
+     "q": "Always carry an umbrella, or only when the app says rain?",
+     "a": "Always",
+     "b": "Only with the app",
+     "fa": [
+      "Always. If it rains, I’ll be ready.",
+      "Apps are wrong all the time."
+     ],
+     "fb": [
+      "Only with the app. If I carry it every day, I’ll lose it.",
+      "The forecast is good enough."
+     ]
+    },
+    {
+     "q": "Plan every detail of a trip, or improvise?",
+     "a": "Plan it",
+     "b": "Improvise",
+     "fa": [
+      "Plan it. If something goes wrong, I’ll have a plan B.",
+      "I won’t waste time on the trip."
+     ],
+     "fb": [
+      "Improvise. If you plan everything, you won’t have surprises.",
+      "The best moments are never on the plan."
+     ]
+    },
+    {
+     "q": "Save money first, or travel while you’re young?",
+     "a": "Save first",
+     "b": "Travel now",
+     "fa": [
+      "Save first. If I save now, I’ll travel better later.",
+      "And I’ll sleep well at night."
+     ],
+     "fb": [
+      "Travel now. If I wait, I’ll never go.",
+      "I’ll make money again, but I won’t get the time back."
+     ]
+    }
+   ],
+   "fim": "Four rounds. If you keep talking like this, you’ll win the next one."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Sam now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Sam, the manager of the concert.",
+   "perguntas": [
+    "Sam, what will you do if it rains on Saturday?",
+    "What will happen if the band arrives late?",
+    "Will you cancel the concert unless the field is dry?",
+    "What will you do as soon as the concert ends?",
+    "What do you have in your bag in case something goes wrong?",
+    "What will you do if the concert is a big success?"
+   ],
+   "st": [
+    "If it rains, we’ll …",
+    "I’ll … as soon as …",
+    "I have … in case …"
+   ],
+   "ex": "If it rains, we’ll move inside. I have extra cables in case something breaks."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

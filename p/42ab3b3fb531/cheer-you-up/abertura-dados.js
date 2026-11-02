@@ -1,0 +1,2 @@
+/* a abertura desta aula (kit/abertura.js) · modo mural · gravado por kit/abertura_grava.py */
+window.WL_ABERTURA = {"modo": "mural", "rot": "One Word", "t": "What cheers you up?", "p": "Each of you writes one word. Then talk about it.", "q": "One word: what cheers you up on a bad day?", "extras": ["music", "coffee", "friends"], "de": "film", "fup": "Why that word? Who cheers you up? How do they do it?", "fst": ["… cheers me up", "It picks me up", "I turn it on"], "fex": "Music. When I’m sad, I turn it on and it cheers me up."};

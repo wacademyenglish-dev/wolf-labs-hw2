@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Want the Chicken",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3d992089114e/i-want-the-chicken/img/live-frango.webp",
+  "capa": "../img/live-frango.webp",
   "alvo": "polite requests: I'd like ...; Could I have ...?; Can you bring ...?; please; I want is correct but sounds rude; no to or have after the helper",
   "abrir": "What do you order in a restaurant? Say it politely.",
   "fecho": "<b>I want the chicken</b> is correct but rude. Softer: <b>I'd like the chicken, please.</b> <b>Could I have</b> the menu? <b>Can you bring</b> some water? After <i>could I</i> and <i>can you</i>, the plain verb: never <i>to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia orders dinner and Leo is the waiter. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/3d992089114e/i-want-the-chicken/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A table for two",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'd like the chicken, please.",
-          "img": "https://wolf-labs.pages.dev/p/3d992089114e/i-want-the-chicken/img/live-frango.webp",
+          "img": "../img/live-frango.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Could I have a glass of water, please?",
-          "img": "https://wolf-labs.pages.dev/p/3d992089114e/i-want-the-chicken/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Can you bring some bread, please?",
-          "img": "https://wolf-labs.pages.dev/p/3d992089114e/i-want-the-chicken/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -172,7 +172,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3d992089114e/i-want-the-chicken/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A table for two with a candle",
       "pede": "Look at the picture: a restaurant table. Write 2 or 3 polite sentences to order food or drink. Use <b>I'd like</b>, <b>Could I have</b> or <b>Can you bring</b>.",
       "ph": "I'd like … Could I have … ?",

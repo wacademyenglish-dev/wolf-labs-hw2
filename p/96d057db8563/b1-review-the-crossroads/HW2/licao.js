@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "The Crossroads",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/96d057db8563/b1-review-the-crossroads/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 5 review: zero conditional (when / if + present); first conditional (if + present, will; unless); second conditional (if I were you, I would); third conditional (if I had known, I would have)",
   "abrir": "What big decision are you thinking about?",
   "fecho": "<b>When / if + present, present</b> = always true. <b>If + present, will</b> = real possibility; <b>unless</b> = if not. <b>If + past, would</b> = imaginary now: <i>If I were you, I'd go.</i> <b>If + had + participle, would have</b> = imaginary past.",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia has a big decision to make. Leo gives his advice. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/96d057db8563/b1-review-the-crossroads/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A lonely tree by a dark road",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -108,12 +108,12 @@ window.HW2 = {
       "frases": [
         {
           "t": "When water reaches one hundred degrees, it boils.",
-          "img": "https://wolf-labs.pages.dev/p/96d057db8563/b1-review-the-crossroads/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I won't go unless you come with me.",
-          "img": "https://wolf-labs.pages.dev/p/96d057db8563/b1-review-the-crossroads/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/96d057db8563/b1-review-the-crossroads/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A lonely tree by a dark road",
       "pede": "Look at the picture: a lonely tree by a dark road. Write 2 or 3 sentences about a big decision: what will happen if you say yes, and what you would do if you could do anything. Use <b>if</b>, <b>unless</b> and <b>would</b>.",
       "ph": "If I say yes, I'll …",

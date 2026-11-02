@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Sort Of, Kind Of · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 8 · B2</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 8 · Sort Of, Kind Of · B2</h2>
+    <p>Episode 8, the last one of <b>Better Speaking</b>. ABBA explain their name and why Swedes speak such good English. Richard shows <b>vague language</b>: <b>sort of, kind of, -ish (reddish, ten-ish, &ldquo;Ish.&rdquo;), about, like, more or less, or something, and stuff</b>. It closes the season, so leave time for the student&rsquo;s favorite tip. The sister lesson for B1 is &ldquo;Eight-ish&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; More or less, Describe it, vaguely. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Be vague on purpose, Match the meaning, Fix the traps, Choose the vague word.</li>
+      <li><b>Write</b> &mdash; The end of the season. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Portuguese vagueness word by word: <i>more or less of</i>, <i>a type of shy</i> (&ldquo;meio t&iacute;mido&rdquo;), and stacked approximators: <i>like some fifty people</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 8 · SORT OF, KIND OF (B2)
+   Vídeo: BBC Learning English, Better Speaking (RLmqHjh6D5A, 12:05), três trechos (~4:20).
+   Alvo: linguagem vaga (sort of, kind of, -ish, about, like, more or less, or something, and stuff). */
+const M = { nome: "Sort Of, Kind Of", kick: "B2 · VAGUE LANGUAGE: -ISH, SORT OF, MORE OR LESS" };
+var EP = {
+  n: 8, de: 8, nivel: 'B2', titulo: 'Sort Of, Kind Of', video: 'RLmqHjh6D5A',
+  convidado: 'ABBA', habilidade: 'be vague on purpose, and sound natural',
+  trechos: [
+    { ini: 0, fim: 23, rot: 'Where the name ABBA comes from' },
+    { ini: 243, fim: 334, rot: 'Richard: vague language' },
+    { ini: 334, fim: 446, rot: 'Reddish, ten-ish, tallish' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'Four Swedes, an accordion, and “like, eight or nine golden records”. The last episode: why not being exact can make you sound more natural.',
+      nota: 'Ask: what time do you usually get home, more or less?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'More or <em>less</em>', pt: 'Abra uma carta e responda em voz alta, sem ser exato.',
+      nota: 'Talk only. The point is NOT to be precise. Reward natural vagueness.',
+      cartas: [
+        { frente: 'Music', verso: 'What kind of music were you into as a teenager?', dica: 'I was into sort of…', cor: 'var(--guest)', fw: { q: 'And now? Has it changed?', st: ['Kind of…', 'More or less the same…', 'It\'s more…ish now.'], help: '“Kind of. I still like rock, but softer stuff now.”' } },
+        { frente: 'Screen', verso: 'How much English do you hear every week: series, music, podcasts?', dica: 'About… hours, more or less.', cor: 'var(--host)', fw: { q: 'Subtitles in English, in Portuguese, or none?', st: ['Usually in…', 'It depends…', 'I sort of switch…'], help: '“I sort of switch. Portuguese for drama, English for comedy.”' } },
+        { frente: 'Person', verso: 'Describe someone you met recently without being too exact.', dica: 'She\'s tallish, about…', cor: 'var(--teacher)', fw: { q: 'What were they like as a person?', st: ['Sort of shy…', 'Kind of funny…', '…or something like that.'], help: '“Kind of shy at first, then really funny.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 4½ minutes', titulo: 'Listen to <em>ABBA</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Where does the name ABBA come from?', ops: [{ t: 'The first letters of their names' }, { t: 'A Swedish word' }] }, { q: 'Why do Swedes speak good English, according to ABBA?', ops: [{ t: 'Subtitled TV and English music' }, { t: 'They all lived in London' }] } ],
+      durante: 'Clip 1: the name. Clip 2: “about the same time”, “like eight or nine”. Clip 3: Callum describes Richard\'s shirt and his new girlfriend.',
+      depois: [ { f: 'Benny got an accordion from his grandfather at six.', ok: 1 }, { f: 'Richard says vague language makes you sound less natural.', ok: 0 }, { f: '“Ten-ish” means about ten o\'clock.', ok: 1 }, { f: '“Ish” can never be used alone.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Be <em>vague</em> on purpose', pt: 'Quando não precisa (ou não quer) ser exato.',
+      nota: 'Read each card. Ask: which do you use in Portuguese? (tipo, mais ou menos, -inho…)',
+      cartoes: [ { g: 'It\'s <b>sort of</b> red. · a <b>kind of</b> adventure film', p: 'Not exactly this, but close.' }, { g: '<b>reddish</b> · <b>tallish</b> · <b>ten-ish</b> · “Did you like it?” “<b>Ish.</b>”', p: '-ish: more or less.' }, { g: '<b>about</b> 30 · <b>like</b> eight or nine · <b>more or less</b> · <b>or something</b> · <b>and stuff</b>', p: 'Numbers and lists, not exact.' }, { g: 'It\'s more or less red-ish-ish.', p: 'One vague word is enough.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'what does it mean?', titulo: 'Match the <em>meaning</em>', pt: 'Toque na frase e depois no que ela significa.',
+      nota: 'Say each phrase in a sentence about your week.',
+      esq: ['ten-ish', 'reddish-brown', 'Ish.', 'like eight or nine', 'or something'], dir: ['around ten o\'clock', 'between red and brown', 'not good, not bad', 'I\'m not sure of the number', 'or a similar thing'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Invite me to something, vaguely.', st: ['Come over at eight-ish…', 'We\'ll have pizza or something…', '…and stuff.'], help: '“Come over at eight-ish. We\'ll have pizza or something.”' } },
+    { k: 'cartas', est: 'o', rot: 'the vague detective', titulo: 'Describe it, <em>vaguely</em>', pt: 'Vire a carta e descreva usando pelo menos três palavras vagas.',
+      nota: 'The student describes each thing with at least three vague words. You can ask follow-up questions like Callum.',
+      cartas: [
+        { frente: 'Thing 1', sob: 'describe', verso: 'the shirt or top you\'re wearing now', dica: 'It\'s sort of… It\'s …ish.', cor: 'var(--guest)', fw: { q: 'Now describe a film without saying its name. I\'ll guess.', st: ['It\'s a kind of…', 'There\'s a guy who sort of…', '…and stuff.'], help: '“It\'s a kind of space adventure, with a sort of old guy with a light sword and stuff.”' } },
+        { frente: 'Thing 2', sob: 'describe', verso: 'your favorite neighbor or colleague', dica: 'She\'s about… tallish…', cor: 'var(--host)' },
+        { frente: 'Thing 3', sob: 'describe', verso: 'your last birthday party', dica: 'Like twenty people, more or less…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'Portuguese vagueness word by word.',
+      itens: [ { erro: 'It starts at eight, <s>more or less of</s>.', certo: 'It starts at eight, <b>more or less</b>.', por: 'No of.' }, { erro: 'He\'s <s>a type of</s> shy.', certo: 'He\'s <b>kind of</b> shy.', por: '“Meio tímido” = kind of / sort of shy.' }, { erro: 'There were <s>like some</s> fifty people.', certo: 'There were <b>like fifty</b> people. / <b>about fifty</b> people.', por: 'One approximator is enough.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>vague word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the episode and close to it. Read each one naturally.',
+      itens: [ { f: 'We sold, ___, eight or nine golden records in Sweden.', ops: ['like', 'such'], ok: 0 }, { f: 'It was ___ the same time The Beatles became popular.', ops: ['about', 'about of'], ok: 0 }, { f: 'She\'s about one meter seventy-five, more or ___.', ops: ['less', 'minus'], ok: 0 }, { f: 'I\'m not wearing my watch, but it\'s ten-___.', ops: ['ish', 'like'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'The end of the <em>season</em>', pt: 'Escreva o que você vai levar da série Better Speaking, com três palavras vagas. Depois fale sem ler.',
+      ph: 'From the whole series, I sort of… My favorite episode was, more or less,… I\'ll practice about ten-ish minutes a day…', nota: 'The line under the paper catches “more or less of” and “a type of”. SAVE sends it to My notes. Close the season with the student\'s favorite tip.',
+      banco: ['sort of', 'kind of', 'more or less', 'about', 'or something', 'and stuff', '-ish', 'My favorite episode was'],
+      regras: [['\\bmore or less of\\b', 'Check: MORE OR LESS (no of).'], ['\\ba type of (shy|tired|happy|sad|funny|weird)\\b', 'Check: KIND OF shy.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'You made it', tx: 'Eight guests, eight skills: organize, stress, opinions, chunks, attention, fillers, time and vagueness. Now it\'s your voice on air.',
+      ganchos: [['Season', '8 episodes'], ['Your model', 'choose one and copy'], ['Your task', 'speak English every day, a little']], nota: 'Close the season: which episode helped you most? Which tip will you use this week?' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Linguagem vaga de propósito (sort of, kind of, -ish, about, like, more or less, or something, and stuff); ABBA explica o nome e o bom inglês dos suecos. Fecha a temporada.",
+  "armadilha": "Vagueza do português palavra por palavra: more or less of, a type of shy (“meio tímido”), e aproximadores empilhados: like some fifty people.",
+  "pal": [
+   "sort of",
+   "kind of",
+   "-ish",
+   "about",
+   "like",
+   "more or less",
+   "or something",
+   "and stuff"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta ABBA e a habilidade: não ser exato soa mais natural.",
+   "perg": "What time do you get home, more or less?",
+   "pula": "Uma resposta e NEXT."
+  },
+  "c1": {
+   "obj": "Conversa em que a precisão não importa; premiar a vagueza natural.",
+   "perg": "Roughly how many?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes do ABBA em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "Why do Swedes speak such good English?",
+   "pula": "Veja os clipes uma vez; pule o durante."
+  },
+  "c3": {
+   "obj": "A regra: sort of, kind of, -ish, about, like, or something, and stuff.",
+   "perg": "Which do you use in Portuguese?",
+   "pula": "Leia os cartões; o vermelho é obrigatório."
+  },
+  "c4": {
+   "obj": "Ligar cada expressão vaga ao seu sentido, numa frase sobre a semana.",
+   "perg": "What does ten-ish mean?",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "O detetive vago: descrever cada coisa com pelo menos três palavras vagas.",
+   "perg": "What is it like, kind of?",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Três armadilhas: more or less of, a type of shy, aproximadores empilhados.",
+   "perg": "How do you say “meio tímido”?",
+   "pula": "Faça as três, rápido."
+  },
+  "c7": {
+   "obj": "Escolher a palavra vaga em falas do episódio, lidas com naturalidade.",
+   "perg": "Which vague word sounds natural here?",
+   "pula": "Metade das frases basta."
+  },
+  "c8": {
+   "obj": "Escrita do fim de temporada, com a dica favorita do aluno; vai para o My notes.",
+   "perg": "Which tip from the season is your favorite?",
+   "pula": "Três frases bastam."
+  },
+  "c9": {
+   "obj": "Fecha a temporada: oito convidados, oito habilidades.",
+   "perg": "Which episode helped you most?",
+   "pula": "Só a pergunta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa vaga e natural sobre a rotina e os gostos do aluno.",
+   "perg": "More or less how long?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre precisão e vagueza, e sobre a temporada inteira.",
+   "perg": "Kind of, or definitely?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno grava o seu próprio episódio de rádio, usando as habilidades da temporada.",
+   "perg": "What is your episode about, roughly?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 6,
+   "rot": "More to Talk About",
+   "t": "Roughly speaking.",
+   "p": "Pick a card. Be vague, on purpose.",
+   "palavras": [
+    "sort of",
+    "kind of",
+    "-ish",
+    "about",
+    "more or less",
+    "or something",
+    "and stuff"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WEEKEND",
+     "q": "What did you do last weekend, roughly?",
+     "fup": "What time did you get up?",
+     "st": [
+      "I sort of …",
+      "Ten-ish, I think."
+     ],
+     "ex": "I sort of stayed home and watched series and stuff. Got up at ten-ish."
+    },
+    {
+     "k": "YOUR STREET",
+     "q": "How many people live in your building?",
+     "fup": "Do you know any of them?",
+     "st": [
+      "About …",
+      "… or something."
+     ],
+     "ex": "About fifty, or something. I know, like, three of them."
+    },
+    {
+     "k": "A COLOR",
+     "q": "What color is your front door?",
+     "fup": "And your favorite mug?",
+     "st": [
+      "It’s kind of …",
+      "…-ish."
+     ],
+     "ex": "It’s kind of greenish. My mug is sort of grey-blue."
+    },
+    {
+     "k": "YOUR STYLE",
+     "q": "How would you describe your style?",
+     "fup": "Has it changed?",
+     "st": [
+      "I’m sort of …",
+      "Kind of … and stuff."
+     ],
+     "ex": "I’m sort of casual. Jeans, sneakers and stuff."
+    },
+    {
+     "k": "YOUR COMMUTE",
+     "q": "How long does it take you to get to work?",
+     "fup": "On a bad day?",
+     "st": [
+      "More or less …",
+      "About …"
+     ],
+     "ex": "More or less forty minutes. On a bad day, like, an hour and a half."
+    },
+    {
+     "k": "SWEDISH ENGLISH",
+     "q": "Why do some countries speak English so well?",
+     "fup": "What could Brazil copy?",
+     "st": [
+      "I guess it’s kind of …",
+      "… and stuff like that."
+     ],
+     "ex": "I guess it’s kind of the TV. Films without dubbing and stuff like that."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Sort of.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "kind of",
+    "more or less",
+    "I see your point, but",
+    "the thing is"
+   ],
+   "rodadas": [
+    {
+     "q": "Vague language: natural or lazy?",
+     "a": "Natural",
+     "b": "Lazy",
+     "fa": [
+      "Natural. Nobody says “at 7:52 p.m.” about dinner."
+     ],
+     "fb": [
+      "Lazy. At work, “ten-ish” is how deadlines get missed."
+     ]
+    },
+    {
+     "q": "Subtitles or dubbing?",
+     "a": "Subtitles",
+     "b": "Dubbing",
+     "fa": [
+      "Subtitles. That’s kind of why Swedes speak such good English."
+     ],
+     "fb": [
+      "Dubbing. After a long day, I just want to relax."
+     ]
+    },
+    {
+     "q": "A band name from your initials: genius or lazy?",
+     "a": "Genius",
+     "b": "Lazy",
+     "fa": [
+      "Genius. It worked for ABBA, and everyone remembers it."
+     ],
+     "fb": [
+      "Lazy. A name should tell you something about the music."
+     ]
+    },
+    {
+     "q": "Best skill of the season: fluency or accuracy?",
+     "a": "Fluency",
+     "b": "Accuracy",
+     "fa": [
+      "Fluency. Fillers, chunks, vague words: they keep you talking."
+     ],
+     "fb": [
+      "Accuracy. Stress and signposts are what make you clear."
+     ]
+    }
+   ],
+   "fim": "Four rounds, more or less. That’s the season."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Episode",
+   "t": "Now it’s your voice on air.",
+   "p": "Plan your episode. Use the season.",
+   "prof": "The student plans a short radio segment of their own; push for one skill from the season in each step.",
+   "passos": [
+    {
+     "q": "What is your episode about, roughly?",
+     "st": [
+      "It’s sort of about …",
+      "More or less …"
+     ],
+     "ex": "It’s sort of about learning English after thirty."
+    },
+    {
+     "q": "Who is your guest, and why them?",
+     "st": [
+      "My guest is …",
+      "The thing is, …"
+     ],
+     "ex": "My guest is my old teacher. The thing is, she changed how I see languages."
+    },
+    {
+     "q": "Open the show. Make us want to listen.",
+     "st": [
+      "Try to imagine …",
+      "An interesting question is …"
+     ],
+     "ex": "Try to imagine learning a language at forty, with two kids and a full-time job."
+    },
+    {
+     "q": "Close the show with your one big tip.",
+     "st": [
+      "If I were you, I’d …",
+      "At the end of the day, …"
+     ],
+     "ex": "If I were you, I’d practice little and often, and stop worrying about mistakes."
+    }
+   ],
+   "fim": "That’s a wrap. Eight episodes, and now one of your own."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

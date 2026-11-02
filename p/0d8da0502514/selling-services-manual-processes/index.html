@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -135,5 +136,303 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "How many meetings are there this week?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "The notes about a new client.",
+   "p": "Read them out loud. Then answer."
+  },
+  "dialogo": {
+   "t": "Leo tells his manager about the client.",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "There is or there are?",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "multipla": {
+   "t": "Six lines from client notes.",
+   "p": "Read it out loud. Choose. Say why."
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Your teacher goes first. Choose. Say why."
+  },
+  "cartao": {
+   "t": "Your client x-ray.",
+   "p": "Size, teams, systems, one problem. Read it."
+  },
+  "pode": {
+   "t": "Lesson 2: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 2: there is / there are (sem gramática nova). O Leo lê as notas do CRM sobre a Brava Foods e prepara a ligação com a gerente.",
+  "armadilha": "O “tem” do português vira “have”: “have two ERPs” (é there are). E “there is three systems”: olhe a palavra DEPOIS, um = is, dois ou mais = are.",
+  "pal": [
+   "There is a …",
+   "There are a lot of …",
+   "There isn’t a …",
+   "There aren’t any …",
+   "Is there …?",
+   "How many … are there?",
+   "manual processes",
+   "client notes"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 2 de Selling Services: descrever um cliente com there is / there are.",
+   "perg": "How many meetings are there in your week?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal sobre a semana; depois de cada resposta o aluno pergunta “And you?”.",
+   "perg": "How many people are there on your team?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "As notas do CRM sobre a Brava Foods: ler, entender, depois achar o padrão.",
+   "perg": "How many systems are there at Brava?",
+   "pula": "Leia metade e faça duas perguntas."
+  },
+  "dialogo": {
+   "obj": "Áudio curto: o Leo prepara a ligação com a gerente; ouvir uma vez (0,75× ok), perguntas, transcrição.",
+   "perg": "What’s the big problem at Brava?",
+   "pula": "Ouça uma vez e faça duas perguntas."
+  },
+  "descobre": {
+   "obj": "Pares: there is x there are x have; depois regras e armadilhas.",
+   "perg": "Have two ERPs or there are two ERPs?",
+   "pula": "Três pares + as armadilhas bastam."
+  },
+  "multipla": {
+   "obj": "Seis linhas de notas de cliente: is ou are, e por quê.",
+   "perg": "Why “are” here?",
+   "pula": "Quatro linhas bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather leve: A ou B, com because; o professor responde também.",
+   "perg": "A or B? Why?",
+   "pula": "Uma escolha basta."
+  },
+  "cartao": {
+   "obj": "Escrita: raio-x de um cliente real (sem nome) ou da Brava em cinco linhas.",
+   "perg": "Is there one big problem?",
+   "pula": "Três linhas bastam."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; o que ficar aberto vai para a lição.",
+   "perg": "Can you describe a client now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa leve sobre a empresa e os clientes do aluno, com there is / are prontos.",
+   "perg": "How many clients are there in your portfolio?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois sobre o trabalho de vendas.",
+   "perg": "A big client or many small clients?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno prepara as perguntas da primeira ligação com um cliente novo.",
+   "perg": "What do you ask first?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your company, your clients.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "there is",
+    "there are",
+    "How many…?",
+    "a lot of"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR TEAM",
+     "q": "How many people are there on your team?",
+     "fup": "Is there a manager?",
+     "st": [
+      "There are … people.",
+      "There is …"
+     ],
+     "ex": "There are six people. There is one manager."
+    },
+    {
+     "k": "YOUR CLIENTS",
+     "q": "How many clients are there in your portfolio?",
+     "fup": "Is there a big one?",
+     "st": [
+      "There are about …"
+     ],
+     "ex": "There are about twenty. There is one very big client."
+    },
+    {
+     "k": "YOUR OFFICE",
+     "q": "What is there in your office?",
+     "fup": "Is there a coffee machine?",
+     "st": [
+      "There is a …",
+      "There are some …"
+     ],
+     "ex": "There are ten desks and there is a small kitchen."
+    },
+    {
+     "k": "YOUR SYSTEMS",
+     "q": "How many systems are there at your work?",
+     "fup": "Is there one you hate?",
+     "st": [
+      "There are … systems."
+     ],
+     "ex": "There are three systems. There is one old system I hate."
+    },
+    {
+     "k": "A PROBLEM",
+     "q": "Is there a problem at your work this week?",
+     "fup": "Is there a solution?",
+     "st": [
+      "Yes, there is …",
+      "No, there isn’t …"
+     ],
+     "ex": "Yes, there is a problem with a client. There isn’t a solution yet."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Are there many tech companies in your city?",
+     "fup": "Is there a famous one?",
+     "st": [
+      "There are a lot of …",
+      "There aren’t many …"
+     ],
+     "ex": "There are a lot of startups. There is one famous bank."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "there is",
+    "there are"
+   ],
+   "rodadas": [
+    {
+     "q": "One big client or many small clients?",
+     "a": "One big client",
+     "b": "Many small clients",
+     "fa": [
+      "One big client. There is more money."
+     ],
+     "fb": [
+      "Many small clients. There is less risk."
+     ]
+    },
+    {
+     "q": "A call or a meeting in person?",
+     "a": "A call",
+     "b": "In person",
+     "fa": [
+      "A call. There isn’t any traffic."
+     ],
+     "fb": [
+      "In person. There is more trust."
+     ]
+    },
+    {
+     "q": "Read the client notes before or improvise?",
+     "a": "Read before",
+     "b": "Improvise",
+     "fa": [
+      "Read before. There are important details."
+     ],
+     "fb": [
+      "Improvise. There isn’t time."
+     ]
+    },
+    {
+     "q": "A client with many problems: good or bad?",
+     "a": "Good",
+     "b": "Bad",
+     "fa": [
+      "Good. There are many things to sell."
+     ],
+     "fb": [
+      "Bad. There are too many meetings."
+     ]
+    }
+   ],
+   "fim": "Four rounds. There are two good sellers here."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your First Call",
+   "t": "Prepare your first client call.",
+   "p": "One question at a time. Say it out loud.",
+   "prof": "EN: You are the client from Brava Foods. Answer each question in one short line.",
+   "passos": [
+    {
+     "q": "Ask about the people.",
+     "st": [
+      "How many people are there in …?"
+     ],
+     "ex": "How many people are there in your finance team?"
+    },
+    {
+     "q": "Ask about the systems.",
+     "st": [
+      "Is there a …?",
+      "How many … are there?"
+     ],
+     "ex": "Is there an ERP? How many systems are there?"
+    },
+    {
+     "q": "Ask about the problem.",
+     "st": [
+      "Are there any …?"
+     ],
+     "ex": "Are there a lot of manual processes?"
+    },
+    {
+     "q": "Say what you understood.",
+     "st": [
+      "So, there are … and there is …"
+     ],
+     "ex": "So, there are two ERPs and there is a lot of manual work."
+    }
+   ],
+   "fim": "Your call is ready. Write it in the CRM."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

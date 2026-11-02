@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "The Hotel Inspector",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4c1c29a0dc0e/b1-review-the-hotel-inspector/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 4 review: too much / too many / not enough; a few x few, a little x little; both / either / neither; -ed x -ing adjectives; strong adjectives (absolutely exhausted)",
   "abrir": "Think of a place you stayed in. What was too much?",
   "fecho": "<b>too much</b> + uncountable, <b>too many</b> + countable, <b>enough</b> after an adjective. <b>a few / a little</b> = some. <b>Both / either / neither</b> for two things. <b>-ed</b> = how I feel (<i>bored</i>), <b>-ing</b> = what causes it (<i>boring</i>).",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo, the hotel inspector, about her stay at the Hotel Marlow. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/4c1c29a0dc0e/b1-review-the-hotel-inspector/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A hotel lobby at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -108,12 +108,12 @@ window.HW2 = {
       "frases": [
         {
           "t": "There were too many people and not enough chairs.",
-          "img": "https://wolf-labs.pages.dev/p/4c1c29a0dc0e/b1-review-the-hotel-inspector/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I only have a little time, but a few good ideas.",
-          "img": "https://wolf-labs.pages.dev/p/4c1c29a0dc0e/b1-review-the-hotel-inspector/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4c1c29a0dc0e/b1-review-the-hotel-inspector/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A hotel lobby at night",
       "pede": "Look at the picture: a hotel lobby at night. Write 2 or 3 sentences about a hotel or a place you stayed in: what was too much, what was not enough, and how you felt. Use <b>too much / too many</b>, <b>not enough</b> and <b>-ed / -ing</b>.",
       "ph": "The room was … but there was too …",

@@ -1,0 +1,72 @@
+/* ============================================================
+   FOUR SONGS · THE RECORD PLAYER · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: sala escura com toca-discos;
+   o disco é vinil preto com rótulo rosa, a agulha desce e o disco gira.
+   Acento: rosa de rótulo.
+   ============================================================ */
+:root{
+  --noite:#0d0a0d; --noite-rgb:13,10,13; --tinta:#f0e9ee;
+  --t1:#f5eff3; --t2:#d4c8d0; --t2-rgb:212,200,208; --t3:#978a93;
+  --ac:#e57aa5; --ac2:#f8b8d2; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(240,233,238,.05); --vidro2:rgba(240,233,238,.085); --vidro3:rgba(240,233,238,.12);
+  --fio:rgba(234,222,230,.12); --fio2:rgba(234,222,230,.22); --luz:rgba(240,233,238,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a0d1a}
+.btn.cheio{color:#2a0d1a}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(72px,7vw,136px)/.92 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa-t{padding:16px;border-radius:var(--r1)}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.versoes{display:grid;gap:6px} .versao{text-align:left;padding:10px 14px}
+.toca-linha{display:flex;align-items:center;gap:12px;padding:8px 14px;border-radius:var(--r2);font:600 clamp(16px,1.2vw,20px)/1.4 var(--disp)}
+.toca-linha .transcricao{margin:0}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .pede b{font:700 clamp(18px,1.4vw,23px)/1.4 var(--disp)}
+.mesa-m{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:22px;align-items:start}
+
+/* o toca-discos */
+.toca{position:relative;width:100%;max-width:440px;aspect-ratio:1.25;margin:0 auto;border-radius:18px;background:linear-gradient(160deg,#2a1e1a,#17100e);border:2px solid #3a2a24;box-shadow:inset 0 0 30px rgba(0,0,0,.6);max-height:calc(100vh / var(--zv,1) - 380px);overflow:hidden}
+.prato-t{position:absolute;left:6%;top:8%;width:68%;aspect-ratio:1;border-radius:50%;background:#0c0a0b;box-shadow:0 8px 20px rgba(0,0,0,.6)}
+.disco{position:absolute;inset:3%;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#1a1a1c 2px 4px);display:grid;place-items:center}
+.rotulo{display:grid;place-items:center;width:34%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#0c0a0b 6%,var(--ac) 7%,#b04e78);font:800 clamp(9px,.7vw,12px) var(--mono);color:#2a0d1a;text-align:center;letter-spacing:.06em}
+.gira .disco{animation:roda 2.4s linear infinite} @keyframes roda{to{transform:rotate(360deg)}}
+.braco{position:absolute;right:8%;top:10%;width:6%;height:62%;transform-origin:50% 6%;transform:rotate(var(--a));transition:transform .6s ease}
+.braco::before{content:'';position:absolute;left:50%;top:0;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:#7a6a5a}
+.braco i{position:absolute;left:50%;top:6%;bottom:0;width:5px;margin-left:-2.5px;border-radius:3px;background:#b8a890}
+.braco i::after{content:'';position:absolute;left:-6px;bottom:-4px;width:16px;height:12px;border-radius:2px;background:#d8c8b0}
+.leds{position:absolute;right:6%;bottom:7%;display:flex;gap:6px} .leds span{width:12px;height:12px;border-radius:50%;background:#3a2a24} .leds span.on{background:var(--ac);box-shadow:0 0 8px var(--ac)}
+
+.vozes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.voz{display:grid;justify-items:center;gap:8px;padding:16px;border-radius:var(--r2);color:var(--t1)}
+.voz b{font:800 13px var(--mono);letter-spacing:.1em} .voz.on{border-color:var(--ac)!important} .voz.feito{border-color:rgba(143,217,162,.4)!important}
+.mini-disco{width:64px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#0c0a0b 7%,var(--ac) 8%,var(--ac) 22%,#141214 23%)}
+.capas{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:6px}
+.capa-d{padding:6px 14px;border-radius:999px;border:1px solid var(--fio2);font:700 13px var(--mono);color:var(--t3)} .capa-d.on{border-color:var(--ac);color:var(--ac2)} .capa-d.feito{border-color:var(--ok);color:var(--ok)}
+.fitas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.fita{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .fita small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .fita b{font:700 clamp(16px,1.25vw,20px)/1.35 var(--disp)}
+.duas-c{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.q-linha{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .q-linha.feito{border-color:rgba(143,217,162,.4)!important}
+.q-linha p{margin:0;font:700 clamp(17px,1.3vw,21px)/1.4 var(--disp)} .q-linha .aprova,.q-linha .recusa{margin:0;font-size:15px}
+.gap{display:inline-block;min-width:3em;padding:0 6px;border-bottom:2px solid var(--ac);color:var(--ac2);text-align:center}
+.picos{display:flex;justify-content:center;align-items:flex-end;gap:40px;height:150px;padding:12px;border-radius:var(--r2)}
+.pico{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px;height:100%;width:120px} .pico i{display:block;width:60%;border-radius:8px 8px 0 0;background:linear-gradient(180deg,var(--ac),#6a2a48);transition:height .6s} .pico small{font:700 11px var(--mono);color:var(--t3);text-align:center}
+.casos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.caso{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .caso small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .caso .toca-linha{padding:0} .caso .q{font-weight:700} .caso .aprova{margin:0}
+.faixas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:8px}
+.faixa-t{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:12px;border:1px solid var(--fio2);font:700 14px var(--mono);color:var(--t3)} .faixa-t i{font-style:normal;color:var(--ac2)}
+.faixa-t.on{border-color:var(--ac);color:var(--t1)} .faixa-t.feito{border-color:var(--ok)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)} .lado-fim .toca{max-width:300px}
+
+@media (max-width:1100px){ .mesa-m,.capa,.duas-c,.casos,.fitas{grid-template-columns:1fr} .toca{max-height:none} }

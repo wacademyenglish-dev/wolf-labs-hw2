@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Nobody Had Been Living There",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/21d4254224ff/nobody-had-been-living-there/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "past perfect continuous: had been + -ing for what was going on up to a moment in the past (with for / since / how long); past perfect simple (had + participle) for finished things, counted things and states (had known, never had been knowing); never was ... since, since two hours",
   "abrir": "Is there a house near you where nobody lives?",
   "fecho": "<b>Had been + -ing</b> = what was going on up to a moment in the past: <i>She had been living there for nine years.</i> <b>Had + participle</b> = finished or counted: <i>She had written three letters.</i> A state stays simple: <i>had known</i>, never <i>had been knowing</i>. <b>For</b> + length, <b>since</b> + starting point.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a small-town archive. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/21d4254224ff/nobody-had-been-living-there/img/live-arquivo.webp",
+      "img": "../img/live-arquivo.webp",
       "leg": "An old archive at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The town had been telling the story for years.",
-          "img": "https://wolf-labs.pages.dev/p/21d4254224ff/nobody-had-been-living-there/img/live-cidade.webp",
+          "img": "../img/live-cidade.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She had been living in the house for nine years.",
-          "img": "https://wolf-labs.pages.dev/p/21d4254224ff/nobody-had-been-living-there/img/live-casa.webp",
+          "img": "../img/live-casa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She had been watering the roses every evening.",
-          "img": "https://wolf-labs.pages.dev/p/21d4254224ff/nobody-had-been-living-there/img/live-casa.webp",
+          "img": "../img/live-casa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/21d4254224ff/nobody-had-been-living-there/img/live-casa.webp",
+      "img": "../img/live-casa.webp",
       "leg": "A house in the fog, one window lit",
       "pede": "Look at the picture: a house in the fog with one lit window. Write 2 or 3 sentences about who had been living there and what they had been doing. Use <b>had been + -ing</b> with <b>for</b> or <b>since</b>.",
       "ph": "Someone had been living there …",

@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · You’d Better Not Volunteer · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus+SC&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>You’d Better Not Volunteer · The Hunger Games · The Sponsors</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>You’d Better Not Volunteer · The Hunger Games · The Sponsors</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Twelve districts, one Capitol, and a boy from the poorest place.</p><p style="margin:0 0 6px"><b>The grammar:</b> Should or Had Better: You should find water. You’d better not run.</p><p style="margin:0 0 6px"><b>The class (about 51 min):</b> I Warm-up and The Rules of Panem · III The Trailer · IV Scene by Scene · V Should or Had Better · VI The Sponsors · VII The Capitol Court · VIII Your Advice · IX Questions. No extra scenes: every scene is part of the class.</p><p style="margin:0"><b>Open with:</b> “You know the Games now. In the trailer, what should the boy from District 12 do first? Guess.”</p></div><!--/prep-->
+    <p><i>The Hunger Games: Sunrise on the Reaping</i> (2026), a prequel set 24 years before Katniss, at the 50th Games, the Second Quarter Quell, with twice the number of tributes. Haymitch Abernathy, from poor District 12, is one of them; mentors tell him what he should do and what he had better not do, and in the arena sponsors can send gifts by parachute. The grammar: <b>advice and warnings</b>: <b>should / ought to + verb</b> (advice), <b>had better / ’d better (not) + verb</b> (a warning with a danger: or else…), and <b>Should I…?</b> No to after should or had better; only ought takes to.</p>
+    <p>A note for the teacher: the film is about a deadly game. The lesson stays on advice and survival, never on how anybody dies. The lesson plays the whole trailer (2:24), countdown included. Lines checked against the official subtitles (25/09), told in our own words.</p>
+    <p class="aq-guia"><b>Warm-up and The Rules of Panem (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the film under the photo). Let them talk; don’t correct the grammar yet. <b>2 · The Rules of Panem:</b> four rules of the country appear one at a time (the districts work for the Capitol, the Reaping, the Games, the special rule of the 50th Games). For each, the student taps Yes / No way / Only if… and gives advice (you should…, you’d better…). The lesson stays on advice and survival, never on how anybody dies.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>bet</i>, <i>glory</i>, <i>confess</i>, <i>power</i> and <i>broken</i>, before the video, in hear it in the video and turn the cards. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <p class="fim-guia"><b>The ending (IX, Questions)</b>: five questions about advice (a first day at a new job, your city at night, what to visit, your younger self, tourists in your country). Then the student gives the teacher two pieces of advice, one with should and one with had better. Speaking only.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is a misty clearing at dawn with the golden horn in the middle. I: Warm-up and The Rules of Panem. III: the whole trailer in three steps. <b>Before:</b> a wheel (a tribute, a mentor, a sponsor, a Gamemaker, a friend at home, a reporter): the student says who they are in the Games. <b>Watch:</b> True or lie? Five sentences, each with a ▶ time before 1:30; if it is a lie, the student says the truth. <b>After:</b> five questions about the trailer; the student taps the right answer, with a ▶ to hear it again. IV: five frames on the film strip. <b>V, Should or Had Better:</b> a letter from your mentor on a dark card. The student taps the advice and the warnings (should, ought to, had better), then finishes the rule board. The board stays in the corner on the next pages. <b>VI, The Sponsors:</b> the arena seen from above like a relief map (contour lines, the river, the Cornucopia, the force field). Six pieces of advice to build from words (“Water · you · find water · first”): the student builds it, says it, taps Check, and a silver parachute drops on one spot of the map with its gift (water, a warning, rope, bread, medicine, a pin). The next spot pulses in ember red. <b>VIII, Your Advice:</b> two conversations; the teacher picks A (a friend’s new job) or B (a tourist in your city) and the student gives advice. IX: questions.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>should to find</i>, <i>had better to smile</i>, <i>should finding</i>, <i>should sleeps</i>, <i>you’d better don’t run</i>, <i>ought find</i>, <i>you’d better smiled</i> (had better looks past but means now), <i>had not better</i>, <i>Do I should…?</i>, <i>I should trust her?</i></p>
+    <!--conversa--><h4>THE CAPITOL COURT (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After the Sponsors, your student is the jury in three light cases: a mentor who hid a note in the bread, a sponsor who stopped paying, a TV host who made a tribute cry on live TV. They read the evidence, choose a verdict and say why with should, ought to or had better. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up and The Rules of Panem, VI The Sponsors, VII The Capitol Court, VIII Your Advice and IX Questions.</li>
+      <li><b>Listen</b>: II The Words, III The Trailer and IV Line by Line.</li>
+      <li><b>Focus</b>: V Should or Had Better.</li>
+      <li><b>Write</b>: the homework (the lesson ends speaking).</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script src="aquece.js"></script>
+<script src="final.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* YOU’D BETTER NOT VOLUNTEER · THE HUNGER GAMES (WOLFLIX B1) · pergunta-surpresa · 29/10/2026 · should / ought to / had better */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'Have you ever volunteered for something at school or at work?',
+    opc: ['Yes, something fun', 'Yes, something hard', 'Never! I don’t volunteer'], st: ['Once I volunteered to …', 'You’d better not volunteer for …'],
+    ex: 'Yes, something hard. Once I volunteered to organise a party for forty people. You’d better not do that alone!',
+    push: 'Would you do it again? Why or why not?' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'Would you rather get advice from a strict mentor or a funny one?',
+    opc: ['A strict mentor', 'A funny mentor'], st: ['I’d rather have …, because a mentor should …'],
+    ex: 'A funny one. A mentor should help you relax. When I’m nervous, I forget everything.',
+    push: 'The funny one never tells you the hard truth. Still funny?' },
+  { cena: 'arena', tipo: 'What if', q: 'You are lost in a forest for one night. Which gift do you want from a sponsor?',
+    opc: ['A tent', 'A map', 'A phone with battery'], st: ['I’d want …, because I should …', 'I’d better …'],
+    ex: 'A map. I should find the road before dark, and I’d better not walk in circles.',
+    push: 'The map is in a language you don’t know. Now what?' },
+  { cena: 'fim', tipo: 'Opinion', q: 'Should young people always listen to older people’s advice?',
+    opc: ['Yes, always', 'Sometimes', 'No'], st: ['Young people should …', 'They’d better …, or …'],
+    ex: 'Sometimes. Young people should listen, but they ought to decide for themselves.',
+    push: 'Tell me one piece of advice you ignored, and you were right.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* YOU’D BETTER NOT VOLUNTEER · THE HUNGER GAMES (WOLFLIX B1) · conversa · 29/10/2026 · regra 3×3 do Carlos
+   O júri com provas ENTRA logo depois de "VI · The Sponsors" (o mapa da arena fica). Não foi colado ao trailer
+   de propósito: o trailer (III) já tem a roleta e as escolhas, e o VII já é "o professor escolhe A ou B";
+   aqui o formato é outro e o lugar é o MEIO da aula. Três casos no tribunal da Capital, todos leves e sem
+   ninguém se machucar: o mentor que mandou um bilhete no pão, a patrocinadora que parou de pagar, o
+   apresentador que fez uma tributo chorar ao vivo. Gramática da aula (should / ought to / ’d better) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'juri', apos: 'arena', est: 'o', min: 7, img: 'capitolio', rot: 'The Capitol Court', t: 'Three cases. You are the jury.',
+    p: 'Read the evidence. Choose a verdict, or say your own. Say why with should, ought to or had better. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The mentor', sit: 'A mentor is on trial. The charge: helping his tribute too much.',
+        provas: ['He sent bread with a secret note inside.', 'The note said: “You’d better stay near the river.”', 'The sponsors paid for the bread, not for the note.'],
+        q: 'Your verdict?', opc: ['Guilty', 'Not guilty', 'We need more evidence'],
+        st: ['He shouldn’t …, but …', 'A mentor ought to …', 'The Capitol had better …'],
+        ex: 'Not guilty. A mentor ought to help his tribute: that’s his job. The Capitol should change the rule.',
+        push: 'If he goes free, every mentor sends notes tomorrow. Still not guilty?' },
+      { tag: 'The sponsor', sit: 'A sponsor stopped paying halfway. Her tribute gets no more gifts.',
+        provas: ['She promised gifts for the whole Games.', 'She stopped after one bad interview on TV.', 'Her contract says: “I can stop at any time.”'],
+        q: 'Your verdict?', opc: ['Guilty', 'Not guilty', 'We need more evidence'],
+        st: ['She should …', 'You’d better not promise …', 'She ought to …'],
+        ex: 'Guilty, a little. She doesn’t have to pay, but she shouldn’t promise. You’d better not promise if you can change your mind.',
+        push: 'Have you ever promised something and then stopped? Be honest.' },
+      { tag: 'The TV host', sit: 'A TV host made a tribute cry on live TV to get more viewers.',
+        provas: ['He asked about her family three times.', 'The show had its best night ever.', 'He says: “It’s my job to show emotions.”'],
+        q: 'Your verdict?', opc: ['Guilty', 'Not guilty', 'We need more evidence'],
+        st: ['He shouldn’t ask …', 'A host ought to …', 'TV shows had better …'],
+        ex: 'Guilty. A host ought to respect people. He shouldn’t ask the same question three times just for viewers.',
+        push: 'Reality shows today do the same. Should they stop? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "Your advice, then the rules of the Games.",
+   "p": "Answer three questions. Then read the rules of Panem."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. In the video, they turn yellow."
+  },
+  "video": {
+   "t": "Sunrise on the Reaping. The trailer.",
+   "p": "Spin the wheel. Watch. Then two short tasks."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it. Say it."
+  },
+  "regra": {
+   "t": "A letter from your mentor.",
+   "p": "Tap the advice and warnings. Finish the rule."
+  },
+  "arena": {
+   "t": "Six pieces of advice, six parachutes.",
+   "p": "Read the words. Say the advice. Tap Check."
+  },
+  "cv-juri": {
+   "t": "Three cases. You are the jury.",
+   "p": "Choose a verdict. Say why with should or had better."
+  },
+  "conselhos": {
+   "t": "Two people need your advice.",
+   "p": "The teacher picks A or B. Give advice."
+  },
+  "fim": {
+   "t": "Questions about advice.",
+   "p": "Answer with should or had better. Then advise the teacher."
+  }
+ },
+ "prep": {
+  "obj": "Conselho (should / ought to) e aviso com perigo (had better / ’d better not): no 50º Jogos Vorazes, Haymitch ouve dos mentores o que deve e o que é melhor não fazer.",
+  "armadilha": "O brasileiro põe to onde não vai (“You should to go”, “You’d better to run”), nega errado (“You hadn’t better”, “You’d better don’t”) e usa had better para conselho leve.",
+  "pal": [
+   "should",
+   "shouldn’t",
+   "ought to",
+   "had better",
+   "’d better not",
+   "Should I…?",
+   "or else",
+   "sponsor"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta os Jogos: o dobro de tributos e um garoto do Distrito 12 sem chance.",
+   "perg": "What should a tribute do first?",
+   "pula": "Só leia o título e entre em Panem."
+  },
+  "mundo": {
+   "obj": "Três perguntas sobre conselhos na vida do aluno e as regras de Panem, com should / ’d better.",
+   "perg": "Could you live with these rules?",
+   "pula": "Uma pergunta de aquecimento e duas regras."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do trailer (bet, glory, confess, power, broken) antes de assistir.",
+   "perg": "Is glory worth a big risk?",
+   "pula": "Passe rápido: as palavras voltam em Line by Line."
+  },
+  "video": {
+   "obj": "O trailer inteiro: a roleta (quem você é nos Jogos), assistir e tarefas de escuta.",
+   "perg": "What should Haymitch do first?",
+   "pula": "Assista uma vez só e faça só o True or lie. Trailer sempre inteiro."
+  },
+  "falas": {
+   "obj": "Ouvir de novo as falas com palavras amarelas e repetir como o personagem.",
+   "perg": "Can you say it like Haymitch?",
+   "pula": "Três falas bastam."
+  },
+  "regra": {
+   "obj": "A regra: na carta do mentor, separar conselho (should) de aviso (had better) e completar.",
+   "perg": "Is it advice or a warning?",
+   "pula": "Não corte: é a regra."
+  },
+  "arena": {
+   "obj": "Montar seis conselhos e avisos; cada um traz um paraquedas de patrocinador.",
+   "perg": "What should he do to find water?",
+   "pula": "Quatro paraquedas bastam."
+  },
+  "cv-juri": {
+   "obj": "Júri da Capital: três casos, veredito com should / ought to / had better.",
+   "perg": "What should they have done?",
+   "pula": "Dois casos bastam, com o PUSH."
+  },
+  "conselhos": {
+   "obj": "Duas pessoas pedem conselho; o professor escolhe A ou B e o aluno aconselha.",
+   "perg": "What should she do?",
+   "pula": "Só um pedido de conselho."
+  },
+  "fim": {
+   "obj": "Fala livre: perguntas sobre conselhos da vida real; depois o aluno aconselha o professor.",
+   "perg": "What should a tourist never do in your city?",
+   "pula": "Três perguntas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre conselhos para trabalho, viagem e vida, com should e had better.",
+   "perg": "What advice would you give your younger self?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre os dilemas dos Jogos: aliança, fama e sobreviver.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve o próximo filme como mentor: conselhos e avisos para o novo tributo.",
+   "perg": "What should the new tribute do?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Advice for real life.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "should",
+    "ought to",
+    "had better",
+    "’d better not"
+   ],
+   "cartas": [
+    {
+     "k": "FIRST DAY",
+     "q": "What should someone do on their first day at a new job?",
+     "fup": "And what had they better not do?",
+     "st": [
+      "You should …",
+      "You’d better not …, or else …"
+     ],
+     "ex": "You should learn everyone’s name. You’d better not complain about the coffee, or else they’ll remember."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What should a tourist see in your city?",
+     "fup": "Any warnings?",
+     "st": [
+      "They ought to visit …",
+      "They’d better not …"
+     ],
+     "ex": "They ought to visit the old market. They’d better not take a taxi without checking the price."
+    },
+    {
+     "k": "YOUNGER YOU",
+     "q": "What advice would you give yourself at eighteen?",
+     "fup": "Would you have listened?",
+     "st": [
+      "You should …",
+      "You’d better …"
+     ],
+     "ex": "You should save some money. You’d better start English early."
+    },
+    {
+     "k": "A TRIP",
+     "q": "Your friend is going camping for the first time. What should they take?",
+     "fup": "What’s the biggest danger?",
+     "st": [
+      "You should take …",
+      "You’d better not … at night."
+     ],
+     "ex": "You should take extra water. You’d better not walk alone at night."
+    },
+    {
+     "k": "MONEY",
+     "q": "What should people never spend money on?",
+     "fup": "Do you follow your own advice?",
+     "st": [
+      "People shouldn’t …",
+      "Honestly, I …"
+     ],
+     "ex": "People shouldn’t buy expensive phones every year. Honestly, I just did."
+    },
+    {
+     "k": "ASK ME",
+     "q": "What’s something you need advice on right now?",
+     "fup": "What should you do, do you think?",
+     "st": [
+      "Should I …?",
+      "Maybe I ought to …"
+     ],
+     "ex": "Should I change apartments? Maybe I ought to wait until next year."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "What should Haymitch do?",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "should",
+    "had better",
+    "because",
+    "or else"
+   ],
+   "rodadas": [
+    {
+     "q": "In the arena: work alone or join a team?",
+     "a": "Alone",
+     "b": "A team",
+     "fa": [
+      "Alone. You’d better not trust anybody in the Games.",
+      "A team always breaks in the end."
+     ],
+     "fb": [
+      "A team. You should share food and watch each other’s backs.",
+      "Alone, you can’t sleep."
+     ]
+    },
+    {
+     "q": "Should a tribute smile for the cameras to get sponsors?",
+     "a": "Yes, smile",
+     "b": "No, be real",
+     "fa": [
+      "Yes. Sponsors send parachutes, so you’d better be charming.",
+      "It’s a show, play the game."
+     ],
+     "fb": [
+      "No. You shouldn’t sell yourself to the Capitol.",
+      "Being real is a kind of power."
+     ]
+    },
+    {
+     "q": "Should a mentor tell the hard truth or give hope?",
+     "a": "The truth",
+     "b": "Hope",
+     "fa": [
+      "The truth. A tribute ought to know the real danger.",
+      "Hope without a plan is useless."
+     ],
+     "fb": [
+      "Hope. If you don’t believe, you give up.",
+      "Fear makes people slow."
+     ]
+    },
+    {
+     "q": "Should people watch something they think is wrong, like the Games?",
+     "a": "Watch",
+     "b": "Don’t watch",
+     "fa": [
+      "Watch. You should know what your country does.",
+      "Closing your eyes doesn’t help."
+     ],
+     "fb": [
+      "Don’t watch. Every viewer makes the show stronger.",
+      "We ought to stop giving them attention."
+     ]
+    }
+   ],
+   "fim": "Four rounds. May the odds be ever in your favor."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Writers’ Room",
+   "t": "You are the mentor now.",
+   "p": "Write the next film. One step at a time.",
+   "prof": "You are the studio boss: you want drama, not violence. Ask “Should she? Or had she better not?” and keep it on advice and survival.",
+   "passos": [
+    {
+     "q": "Years later, Haymitch is a mentor. A new tribute comes from District 12. Who is she?",
+     "st": [
+      "She is …",
+      "She should …"
+     ],
+     "ex": "She is a quiet girl who is good with a bow. She should show it at training."
+    },
+    {
+     "q": "What is Haymitch’s first piece of advice?",
+     "st": [
+      "He tells her: “You should …”",
+      "“You ought to …”"
+     ],
+     "ex": "He tells her: “You should find water first, not food.”"
+    },
+    {
+     "q": "What is his biggest warning?",
+     "st": [
+      "“You’d better not …, or else …”"
+     ],
+     "ex": "“You’d better not run to the golden horn, or else you won’t have a chance.”"
+    },
+    {
+     "q": "How does the film end?",
+     "st": [
+      "In the end, she …",
+      "She listened because …"
+     ],
+     "ex": "In the end, she gets a parachute with water. She listened because Haymitch was right."
+    }
+   ],
+   "fim": "The Capitol approves. You’d better start filming."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

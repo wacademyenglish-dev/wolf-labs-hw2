@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Letting Go",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b71a2a452299/letting-go/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "-ing as a noun: as the subject (Leaving a job is hard) and after a preposition (afraid of starting, tired of waiting, instead of scrolling); an -ing subject takes a singular verb; never a plain verb or to + verb after a preposition",
   "abrir": "What is one old habit you want to leave behind?",
   "fecho": "<b>-ing</b> can be the subject: <i>Leaving a job is hard.</i> It takes a <b>singular</b> verb: <i>is</i>, <i>was</i>. After a preposition, use <b>-ing</b> too: <i>afraid of starting</i>, <i>tired of waiting</i>, <i>instead of scrolling</i>. Never <i>afraid of start</i>, never <i>tired of to wait</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo about a big change. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/b71a2a452299/letting-go/img/live-tatooine.webp",
+      "img": "../img/live-tatooine.webp",
       "leg": "A quiet desert at sunset",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Leaving a place is never easy.",
-          "img": "https://wolf-labs.pages.dev/p/b71a2a452299/letting-go/img/live-tatooine.webp",
+          "img": "../img/live-tatooine.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Learning a new job takes time.",
-          "img": "https://wolf-labs.pages.dev/p/b71a2a452299/letting-go/img/live-nave.webp",
+          "img": "../img/live-nave.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Instead of scrolling, I go for a walk.",
-          "img": "https://wolf-labs.pages.dev/p/b71a2a452299/letting-go/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b71a2a452299/letting-go/img/live-tatooine.webp",
+      "img": "../img/live-tatooine.webp",
       "leg": "A quiet place at sunset",
       "pede": "Look at the picture: a quiet place at sunset. Write 2 or 3 sentences about leaving a habit, a place or a job. Use an <b>-ing</b> subject or <b>preposition + -ing</b> (tired of, afraid of, instead of).",
       "ph": "Leaving … is … I'm tired of …",

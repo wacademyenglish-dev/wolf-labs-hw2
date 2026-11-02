@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Four Weeks",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/a39f26732707/four-weeks/img/live-biblio.webp",
+  "capa": "../img/live-biblio.webp",
   "alvo": "relative clauses: no commas = defining (picks WHICH ones: the students who come every week); two commas = extra information about all of them (Ana, who lives next door); who for people, which for things, never that in the commas; what = the thing that (What we need is ...)",
   "abrir": "How do you really study? Who or what helps you?",
   "fecho": "No commas: the clause says <b>which</b> ones: <i>the students who come every week do better</i>. Two commas: extra information about <b>all</b> of them: <i>Ana, who lives next door, never misses a session</i>. <b>Who</b> for people, <b>which</b> for things; never <i>that</i> between commas. <b>What</b> = the thing that: <i>What we need is a bigger room.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a study group. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/a39f26732707/four-weeks/img/live-biblio.webp",
+      "img": "../img/live-biblio.webp",
       "leg": "A library table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The students who come every week do better.",
-          "img": "https://wolf-labs.pages.dev/p/a39f26732707/four-weeks/img/live-biblio.webp",
+          "img": "../img/live-biblio.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Ana, who lives next door, never misses a session.",
-          "img": "https://wolf-labs.pages.dev/p/a39f26732707/four-weeks/img/live-lampada.webp",
+          "img": "../img/live-lampada.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "What we need is a bigger room.",
-          "img": "https://wolf-labs.pages.dev/p/a39f26732707/four-weeks/img/live-biblio.webp",
+          "img": "../img/live-biblio.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/a39f26732707/four-weeks/img/live-lampada.webp",
+      "img": "../img/live-lampada.webp",
       "leg": "A desk and a lamp, late at night",
       "pede": "Look at the picture: a desk with a lamp, late at night. Write 2 or 3 sentences about the people you study or work with. Use <b>who</b>, <b>which</b> or <b>what</b>, with or without commas.",
       "ph": "The people who help me most …",

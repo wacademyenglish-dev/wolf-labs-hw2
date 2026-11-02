@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de What Matters Is This (11/10/2026): o perigo do silêncio (palestra TED de Clint Smith).
+   Forma: o termômetro. Alvo: clivadas e ênfase (What matters is…, It isn’t X that… it’s Y, The thing is…, The reason… is that…, do enfático).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [1, 2, 3, 4, 5, 6, 7], k: 'The silence of friends', quem: 'Clint Smith, quoting Dr. King',
+    contexto: 'A teacher opens his talk with a line from Martin Luther King Jr., 1968.',
+    frase: 'In the end, we will remember <b>not the words of our enemies, but the silence of our friends</b>.',
+    explica: 'The contrast puts all the weight on the second part. An it-cleft does the same.',
+    formula: '<b>It isn’t</b> the words of our enemies <b>that</b> hurt most; <b>it’s</b> the silence of our friends.',
+    tente: 'Say something about friendship with It isn’t… that…; it’s…',
+    ex: 'It isn’t the big gifts that I remember; it’s the small phone calls.',
+    sente: { q: 'How strong is this idea?', de: 'light', a: 'very powerful', st: 'It’s … because it isn’t… that…' } },
+  { i: [28, 29, 30], k: 'Four principles', quem: 'Clint Smith',
+    contexto: 'In his classroom, four rules are on the board. Every student signs them.',
+    frase: '<b>Read critically, write consciously, speak clearly, tell your truth.</b>',
+    explica: 'Three skills and one value. The last one is the heart of the talk.',
+    formula: '<b>What matters</b> is telling your truth. (What-cleft: What + clause + is…)',
+    tente: 'What matters most to you in a job? Start with What matters is…',
+    ex: 'What matters to me is learning something new every week.',
+    sente: { q: 'How serious is he?', de: 'joking', a: 'very serious', st: 'He’s … because what matters is…' } },
+  { i: [48, 49, 50, 51, 52], k: 'Giving up speaking', quem: 'Clint Smith',
+    contexto: 'As a Catholic kid, he gave something up every year for Lent. One year, he gave up speaking.',
+    frase: 'But one year, I gave up speaking, figured the most valuable thing I could sacrifice was my own voice, but <b>it was like I hadn’t realized that I had given that up a long time ago</b>.',
+    explica: 'The real confession: he had been silent for years without noticing.',
+    formula: '<b>The thing is</b>, he had already given up his voice. (The thing is = here’s the real point)',
+    tente: 'Tell me something honest about yourself, starting with The thing is…',
+    ex: 'The thing is, I don’t really like big parties. I prefer small dinners.',
+    sente: { q: 'How painful is this memory?', de: 'not painful', a: 'very painful', st: 'It’s … because the thing is…' } },
+  { i: [79, 80, 81, 82], k: 'What people don’t say', quem: 'Clint Smith',
+    contexto: 'A simple observation about listening.',
+    frase: 'We spend so much time listening to the things people are saying <b>that we rarely pay attention to the things they don’t</b>.',
+    explica: 'We listen to words, and we miss the silences. A what-cleft makes the point stronger.',
+    formula: '<b>What we rarely notice is</b> what people don’t say.',
+    tente: 'What do people rarely notice about you? Start with What people rarely notice is…',
+    ex: 'What people rarely notice is that I’m nervous when I speak in meetings.',
+    sente: { q: 'How true does this feel?', de: 'not true', a: 'very true', st: 'It feels … because what we rarely notice is…' } },
+  { i: [83], k: 'The residue', quem: 'Clint Smith',
+    contexto: 'Then the strongest line of the talk.',
+    frase: '<b>Silence is the residue of fear.</b>',
+    explica: '<i>Residue</i> = what stays after something is gone. Silence is what fear leaves behind.',
+    formula: 'Silence <b>does</b> hurt. (emphatic do + base verb) · <b>The reason</b> we stay quiet <b>is that</b> we’re afraid.',
+    tente: 'Make a strong claim with emphatic do: I do believe… / It does matter…',
+    ex: 'I do believe that small kindnesses change the world.',
+    sente: { q: 'How strong is this line?', de: 'soft', a: 'very strong', st: 'It’s … because silence does…' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#d9a35a', titulo: 'One light: five lines.', sub: 'Hear the line, feel its weight, then put the emphasis where it belongs.', rot: { por: 'WHAT IT MEANS', padrao: 'WHAT MATTERS IS · IT’S X THAT', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

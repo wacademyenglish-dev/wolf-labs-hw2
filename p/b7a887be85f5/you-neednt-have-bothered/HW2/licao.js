@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "You Needn't Have Bothered",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b7a887be85f5/you-neednt-have-bothered/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "needn't have + past participle (you did it, for nothing) versus didn't need to + plain verb (it wasn't necessary, and usually you didn't do it) versus could have + past participle (the chance that passed)",
   "abrir": "What did you prepare too much for, and not need in the end?",
   "fecho": "<b>Needn't have + past participle</b> = you did it, and it wasn't necessary: <i>We needn't have brought the soup.</i> <b>Didn't need to + verb</b> = it wasn't necessary, and usually you didn't do it: <i>We didn't need to buy snacks.</i> <b>Could have + past participle</b> = the chance that passed: <i>We could have bought chains.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia tells Leo about a mountain cabin weekend. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/b7a887be85f5/you-neednt-have-bothered/img/live-portamalas.webp",
+      "img": "../img/live-portamalas.webp",
       "leg": "A car packed to the roof",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "We needn't have brought twelve cans of soup.",
-          "img": "https://wolf-labs.pages.dev/p/b7a887be85f5/you-neednt-have-bothered/img/live-portamalas.webp",
+          "img": "../img/live-portamalas.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We didn't need to buy snacks, so we didn't.",
-          "img": "https://wolf-labs.pages.dev/p/b7a887be85f5/you-neednt-have-bothered/img/live-estrada.webp",
+          "img": "../img/live-estrada.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We could have bought snow chains in town.",
-          "img": "https://wolf-labs.pages.dev/p/b7a887be85f5/you-neednt-have-bothered/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -173,7 +173,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b7a887be85f5/you-neednt-have-bothered/img/live-lareira.webp",
+      "img": "../img/live-lareira.webp",
       "leg": "A cabin room with a fire",
       "pede": "Look at the picture: a warm cabin room. Think of a trip, a party or a move you prepared a lot for. Write 2 or 3 sentences: something you did for nothing (<b>needn't have</b>), something you <b>didn't need to</b> do, and a chance you missed (<b>could have</b>).",
       "ph": "I needn't have …",

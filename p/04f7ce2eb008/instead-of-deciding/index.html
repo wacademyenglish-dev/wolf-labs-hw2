@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Instead of Deciding · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Instead of Deciding · The -ING Gate</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Instead of Deciding · The -ING Gate</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> After a preposition, English turns a verb into a noun: -ING.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Gate: after a preposition, only a noun gets through. -ING is how a verb becomes one.</p><p style="margin:0 0 6px"><b>Short class (about 47 min):</b> I Instead Of · II Who Could Have Told You · III The Gate · IV Two Kinds of TO · V Six Voices · VI The Evening Plan · IX What Gets Through. Skip if you’re short on time: VII and VIII About You (marked EXTRA on your screen). Full lesson: about 60 min.</p><p style="margin:0"><b>Open with:</b> “What were you supposed to decide?”</p></div><!--/prep-->
+    <p>After a preposition, English turns a verb into a noun: <b>-ING</b>. <b>I scrolled instead of deciding.</b> <b>She left without saying goodbye.</b> Portuguese puts the infinitive after every preposition, so students say <i>instead of decide</i> and <i>without to know</i>. The trap: some TOs are prepositions too: <b>look forward to seeing</b>, <b>be used to getting up</b>. The test: can IT follow the TO? On screen, a gate: the verb arrives as a block, and only gets through with an -ING tag. Later, an evening clock from 7 to 10 PM lights up hour by hour.</p>
+    <h4>NOT THERAPY</h4>
+    <p>This hour is about the grammar of habits, not about health or mood. If the talk goes there, bring it back to objects and times.</p>
+    <h4>THE GATE</h4>
+    <p>Scene III: Nina’s note to herself. The student reads it out loud and taps every verb that comes right after a preposition (eight of them). Every word can be tapped; “looking” in “really looking forward” is the trap: it is not after a preposition. Then the student completes the rule by choosing inside it. From scene IV to VI the rule stays pinned in the corner.</p>
+    <p>Scene IV: six sentences with TO. The student says each one from the clue (a verb, or -ING?), taps Check, and the IT test lights up: “I’m used to it” works, so -ING; “I want to it” doesn’t, so a verb. Then they ask you the question under the answer.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Scene V: the six voices on one sheet, each with play, pause and 0.75×; a voice’s transcript appears after it plays to the end. The student builds the question to that person from the clue, says it, taps Check, then asks it. You answer in character and let them ask one follow-up.</p>
+    <h4>THE EVENING</h4>
+    <p>Scene VI: for each hour the student says the plan from the clue, taps Check, and the clock lights up. Then ask the question under the plan. Push once: “What will stop you from doing it?”</p>
+    <!--conversa--><h4>THE PHONE JURY (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After the evening plan, your student is the jury in three small phone cases, with the evidence on screen. There is no right verdict: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the verdict harder. Every reason goes through the gate (instead of …ing, without …ing, be used to …ing). Keep it about objects and times, not health or mood. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves. The last word is one minute on phones at dinner, then you take the other side.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Instead Of, II Who Could Have Told You, VI The Evening Plan, VII The Phone Jury, VIII About You.</li>
+      <li><b>Listen</b>: V Six Voices.</li>
+      <li><b>Focus</b>: III The Gate, IV Two Kinds of TO.</li>
+      <li><b>Write</b>: IX, their sentence from scene I and tonight’s plan. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* INSTEAD OF DECIDING (Main B2) · pergunta-surpresa · 28/10/2026 · preposição + -ing */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'alcance', tipo: 'Would you rather', q: 'Would you rather get all the news one day late, or every piece of news the second it happens?',
+    opc: ['One day late', 'The second it happens'], st: ['Instead of hearing it …, I’d …', 'I’m used to …ing'],
+    ex: 'One day late. Instead of reacting all day, I’d read it calmly in the morning.', push: 'And news about your own city?' },
+  { cena: 'portao', tipo: 'And you?', q: 'What do you usually do in the first ten minutes after waking up?',
+    opc: ['Check my phone', 'Something else', 'It depends'], st: ['Before getting up, I …', 'Instead of …ing, I …'],
+    ex: 'Check my phone. Before getting up, I read every message, instead of drinking water.', push: 'Could you do one morning without it? Which day?' },
+  { cena: 'vozes', tipo: 'What if', q: 'What if your phone showed your screen time to all your friends every Sunday?',
+    opc: ['No problem', 'I’d be embarrassed', 'I’d change my habits'], st: ['I’d insist on …ing', 'After seeing it, I’d …'],
+    ex: 'I’d change my habits. After seeing my number, I’d think about reading more instead of scrolling.', push: 'Guess your number for last week. Out loud.' },
+  { cena: 'vida', tipo: 'Opinion', q: 'Should kids under twelve have their own phone?',
+    opc: ['Yes', 'No', 'A simple one, without apps'], st: ['Without having …, kids …', 'Instead of giving them …, parents could …'],
+    ex: 'A simple one, without apps. Instead of giving them a smartphone, parents could start with calls and messages.', push: 'And if all their friends already have one?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* INSTEAD OF DECIDING (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O júri entra no lugar de "VII · Stuck at the Gate" (extra, prática controlada repetida da forma:
+   III e IV já treinam o portão). Depois do plano da noite (VI), o aluno julga três casos pequenos de
+   celular, com as provas na tela. A aula já tem o pessoal (I, VIII) e o NEAR/FAR (II). Como pede o
+   NOT THERAPY do guia: objetos e horários, nada de saúde ou humor. A gramática (preposição + -ing:
+   instead of, without, after, before, insist on, succeed in, be used to, object to) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'juri', troca: 'erros', est: 'o', min: 7, img: 'celular', rot: 'The Phone Jury', t: 'Three small phone crimes. You are the jury.',
+    p: 'Read the evidence. Give a verdict, or say your own. Every reason goes through the gate: instead of …ing, without …ing.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The dinner', provas: ['Leo checked his phone 14 times at his friend’s birthday dinner.', 'He was waiting for a message from work.', 'He said sorry after dessert.'],
+        q: 'Is Leo guilty of being rude?', opc: ['Guilty', 'Not guilty', 'Guilty, with a reason'],
+        st: ['Instead of checking it, he could have …', 'He checked it without …', 'After saying sorry, …'],
+        ex: 'Guilty, with a reason. Instead of checking it fourteen times, he could have told his friend about the message before eating.',
+        push: 'Leo is you, and the message is about a new job. Still guilty?' },
+      { tag: 'The flatmate', provas: ['Bia watches videos on the sofa until 1 a.m., without headphones.', 'She pays a bigger part of the rent.', 'Nobody has ever asked her to stop.'],
+        q: 'Is Bia guilty?', opc: ['Guilty', 'Not guilty', 'The flatmates are guilty'],
+        st: ['Without asking her, …', 'She’s used to …', 'Instead of complaining, they should …'],
+        ex: 'The flatmates are guilty. Instead of complaining to each other, they should talk to her. She is probably used to living alone.',
+        push: 'Your flatmate does this tonight. Say the exact sentence you use at 1 a.m.' },
+      { tag: 'The manager', provas: ['Marco sends work messages at 11 p.m.', 'He always writes: “Answer tomorrow.”', 'His team answers at night anyway.'],
+        q: 'Is Marco guilty?', opc: ['Guilty', 'Not guilty', 'Half guilty'],
+        st: ['He insists on …', 'Instead of sending them at night, he could …', 'Before writing to his team, …'],
+        ex: 'Half guilty. He could schedule the messages instead of sending them at 11. The team should get used to answering in the morning.',
+        push: 'Your boss is Marco. Would you object to it, or just answer?' }
+    ],
+    fim: { tag: 'The last word', q: 'One minute: should phones stay in a box during dinner at home?',
+      opc: ['Yes, in the box', 'No, that’s too much'], segundos: 60, nota: 'One minute, through the gate. Then your teacher takes the other side.',
+      st: ['Instead of …ing, we could …', 'I object to …ing', 'After …ing, …'],
+      ex: 'Yes, in the box. Instead of looking at screens, we could actually talk. After eating, everybody can have it back.',
+      push: 'And the TV in the living room? Does it go in the box too?' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "What did you do instead of deciding?",
+   "p": "Tap what you did. Answer out loud."
+  },
+  "alcance": {
+   "t": "Six bad news. Who could reach you?",
+   "p": "Read it aloud. Tap NEAR or FAR."
+  },
+  "portao": {
+   "t": "Tuesday, 11:40 PM. Nina’s note.",
+   "p": "Read it aloud. Tap verbs after prepositions. Finish the rule."
+  },
+  "dois": {
+   "t": "Two kinds of TO.",
+   "p": "Verb or -ING? Say it. Tap Check. Try the IT test."
+  },
+  "vozes": {
+   "t": "Six voices. One thing each.",
+   "p": "Play a voice. Build your question. Ask it."
+  },
+  "noite": {
+   "t": "7 to 10 PM, without endless scrolling.",
+   "p": "Say each hour’s plan. Tap Check. Then answer."
+  },
+  "cv-juri": {
+   "t": "Three small phone crimes.",
+   "p": "Give a verdict. Every reason goes through the gate."
+  },
+  "vida": {
+   "t": "Four cards about your habits.",
+   "p": "Use the frame. Then add a detail."
+  },
+  "fim": {
+   "t": "Your scene I sentence, and tonight.",
+   "p": "Write it through the gate. Goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Depois de preposição, verbo vira -ING (instead of deciding, without saying), e o TO que é preposição (look forward to seeing): Nina rola o celular em vez de decidir.",
+  "armadilha": "O português põe infinitivo depois de qualquer preposição: “instead of decide”, “without to know”, “before to sleep”; e “I’m used to get up”, “I look forward to see you”.",
+  "pal": [
+   "instead of …ing",
+   "without …ing",
+   "before / after …ing",
+   "look forward to …ing",
+   "be used to …ing",
+   "stop … from …ing",
+   "scrolling",
+   "the IT test"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o portão: depois de preposição, só passa nome; -ING é o crachá do verbo.",
+   "perg": "What were you supposed to decide this week?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o que o aluno fez em vez de decidir algo. Anote a frase: volta na IX.",
+   "perg": "What did you do instead of deciding?",
+   "pula": "Uma frase basta; anote-a."
+  },
+  "alcance": {
+   "obj": "Seis notícias ruins: perto (alguém vinha contar) ou longe (ninguém podia).",
+   "perg": "Could anyone have told you this in 1800?",
+   "pula": "Três itens bastam."
+  },
+  "portao": {
+   "obj": "O bilhete da Nina: tocar os oito verbos depois de preposição (cuidado com “looking”) e fechar a regra.",
+   "perg": "Is this verb right after a preposition?",
+   "pula": "Leia o bilhete; não corte a regra."
+  },
+  "dois": {
+   "obj": "Dois tipos de TO: o teste do IT decide entre verbo e -ING.",
+   "perg": "Can IT follow this TO?",
+   "pula": "Quatro frases bastam."
+  },
+  "vozes": {
+   "obj": "Seis gravações sobre o celular; o aluno monta a pergunta e o professor responde no papel.",
+   "perg": "What would you ask this person?",
+   "pula": "Três vozes bastam."
+  },
+  "noite": {
+   "obj": "Plano da noite, das 19h às 22h, hora a hora com -ING depois de preposição.",
+   "perg": "What will stop you from doing it?",
+   "pula": "Duas horas do relógio bastam."
+  },
+  "cv-juri": {
+   "obj": "Júri de três pequenos “crimes” com celular; razões pelo portão. Objetos e horários, não saúde.",
+   "perg": "Guilty or not guilty, and why?",
+   "pula": "Dois casos bastam."
+  },
+  "vida": {
+   "obj": "Quatro cartas sobre os hábitos do aluno, com a moldura e um detalhe.",
+   "perg": "What are you used to doing at night?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: a frase da cena I e o plano de hoje à noite, pelo portão.",
+   "perg": "What will you do tonight instead of scrolling?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa aberta sobre hábitos e escolhas, sempre com -ING depois de preposição.",
+   "perg": "What are you looking forward to doing?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre celulares e atenção, com argumentos e concessão.",
+   "perg": "I see your point, but what about…?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Nina na manhã seguinte e explica a noite e o plano novo.",
+   "perg": "Nina, what did you do instead of deciding?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Everything through the gate.",
+   "p": "Pick a card. Argue it. Use -ING.",
+   "palavras": [
+    "instead of",
+    "without",
+    "be used to",
+    "look forward to"
+   ],
+   "cartas": [
+    {
+     "k": "DECISIONS",
+     "q": "Is there a decision you keep putting off? What do you do instead of making it?",
+     "fup": "What would it take to decide?",
+     "st": [
+      "Instead of deciding, I …",
+      "The thing is, …"
+     ],
+     "ex": "Instead of choosing a new course, I keep reading reviews. The thing is, I’m scared of picking wrong."
+    },
+    {
+     "k": "MORNINGS",
+     "q": "What are you used to doing before work that others find strange?",
+     "fup": "How did it start?",
+     "st": [
+      "I’m used to …ing",
+      "I can’t start the day without …ing"
+     ],
+     "ex": "I’m used to reading the paper version of the news. I can’t start the day without turning pages."
+    },
+    {
+     "k": "NEXT MONTH",
+     "q": "What are you genuinely looking forward to doing next month?",
+     "fup": "What could get in the way?",
+     "st": [
+      "I’m looking forward to …ing",
+      "Nothing will stop me from …ing"
+     ],
+     "ex": "I’m looking forward to spending a weekend without checking email."
+    },
+    {
+     "k": "OLD HABITS",
+     "q": "Is there something you used to do that you stopped?",
+     "fup": "What did you do instead?",
+     "st": [
+      "I gave up …ing",
+      "Instead of …ing, I now …"
+     ],
+     "ex": "I gave up watching TV at dinner. Instead of that, we actually talk."
+    },
+    {
+     "k": "BEFORE BED",
+     "q": "What do you do in the last hour before sleeping?",
+     "fup": "Would you change anything?",
+     "st": [
+      "Before going to bed, I …",
+      "I’d like to try …ing"
+     ],
+     "ex": "Before going to bed, I check tomorrow’s weather. I’d like to try reading instead."
+    },
+    {
+     "k": "WITHOUT YOUR PHONE",
+     "q": "Could you spend a day without using your phone?",
+     "fup": "What would you miss first?",
+     "st": [
+      "I couldn’t go a day without …ing",
+      "I’d miss …ing"
+     ],
+     "ex": "I couldn’t go a day without checking the bus times. I’d miss that more than social media."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Argue it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "instead of",
+    "without",
+    "I see your point, but",
+    "The thing is"
+   ],
+   "rodadas": [
+    {
+     "q": "Phones at the dinner table: fine or off-limits?",
+     "a": "Fine",
+     "b": "Off-limits",
+     "fa": [
+      "Fine. Looking something up is part of the conversation.",
+      "Banning them just makes people nervous about missing things."
+     ],
+     "fb": [
+      "Off-limits. You can’t really listen without looking at someone.",
+      "The thing is, one notification kills a whole conversation."
+     ]
+    },
+    {
+     "q": "Scrolling at night: harmless habit or stolen time?",
+     "a": "Harmless",
+     "b": "Stolen time",
+     "fa": [
+      "Harmless. Some people relax by doing nothing important.",
+      "Not every hour has to be useful."
+     ],
+     "fb": [
+      "Stolen time. Instead of resting, you end up wired at 1 AM.",
+      "I see your point, but nobody plans to scroll for two hours."
+     ]
+    },
+    {
+     "q": "Should apps be designed to stop people from scrolling forever?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Companies profit from people losing track of time.",
+      "A simple stop sign after an hour would help."
+     ],
+     "fb": [
+      "No. Adults can decide without being told.",
+      "The thing is, it’s our job to set limits, not theirs."
+     ]
+    },
+    {
+     "q": "Hard decisions: decide fast, or wait until you’re sure?",
+     "a": "Decide fast",
+     "b": "Wait",
+     "fa": [
+      "Fast. Waiting usually means scrolling instead of thinking.",
+      "Most choices can be fixed later."
+     ],
+     "fb": [
+      "Wait. Deciding without thinking is how mistakes happen.",
+      "I see your point, but sleep on it at least once."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, but nobody scrolled either."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Nina now.",
+   "p": "Your teacher interviews you. It’s Wednesday morning.",
+   "aluno": "Listen to your teacher’s question. Answer as Nina, the morning after the note.",
+   "perguntas": [
+    "What did you do last night instead of deciding?",
+    "Why did you write a note to yourself?",
+    "Can you go to sleep without checking your phone?",
+    "What are you looking forward to doing this weekend?",
+    "What will stop you from scrolling tonight?",
+    "So, are you going to decide today?"
+   ],
+   "st": [
+    "Instead of …ing, I …",
+    "I’m not used to …ing",
+    "I’m looking forward to …ing"
+   ],
+   "ex": "Instead of deciding, I watched videos until midnight. Tonight I’ll leave my phone in the kitchen before going to bed."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

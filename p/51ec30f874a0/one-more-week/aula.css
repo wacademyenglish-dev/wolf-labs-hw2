@@ -1,0 +1,84 @@
+/* ============================================================
+   ONE MORE WEEK · THE HOURGLASS · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: o escritório depois do
+   expediente — verde-garrafa quase preto; a ampulheta de latão e vidro,
+   areia cor de mel (a única luz quente). Quando a frase certa entra, a
+   ampulheta gira e o dia da sexta-feira muda. Nenhum campo claro.
+   ============================================================ */
+:root{
+  --noite:#070a09; --noite-rgb:7,10,9; --tinta:#ebefed;
+  --t1:#eef2f0; --t2:#c5cdc9; --t2-rgb:197,205,201; --t3:#88938e;
+  --ac:#e2ad55; --ac2:#f5d398; --mel:#d9a14a; --verde:#6fbf8e; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(235,239,237,.05); --vidro2:rgba(235,239,237,.085); --vidro3:rgba(235,239,237,.12);
+  --fio:rgba(225,232,229,.12); --fio2:rgba(225,232,229,.22); --luz:rgba(235,239,237,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'Libre Caslon Text',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1800}
+.btn.cheio{color:#2a1800}
+.capa{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:400 clamp(58px,5.6vw,108px)/.95 var(--serif);letter-spacing:-.02em}
+.capa h1 b{display:block;font-weight:400;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--t1)}
+.capa-r{display:grid;place-items:center} .capa-r .ampulheta{width:min(100%,280px)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2a1d0a;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:52px;padding:0 22px;font:700 clamp(15px,1.2vw,20px) var(--disp)}
+.pilula[disabled]{opacity:.45}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start} .lado-l.centro{justify-items:center}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versoes.duas-v{max-width:860px;margin:0 auto;width:100%} .versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(17px,1.35vw,23px)/1.4 var(--disp)}
+.pede.chefe b{font-family:var(--serif);font-weight:400}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:900px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao s{text-decoration-color:var(--erro);color:var(--t3)}
+.balao u{text-decoration:none;color:var(--ac2);border-bottom:3px solid var(--ok)}
+.lacuna-q{display:inline-block;min-width:3.5em;border-bottom:3px solid var(--ac);color:var(--ac)}
+.aberta{position:relative;border-radius:var(--r1);background-size:cover;background-position:center;height:clamp(150px,calc(100vh / var(--zv,1) - 520px),360px);box-shadow:inset 0 0 120px rgba(0,0,0,.8)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(7,10,9,.88);font:700 13px var(--mono);color:var(--ac2)}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.ouve-c{display:grid;gap:8px;padding:12px 14px;border-radius:var(--r2)} .ouve-c .transcricao{margin:0}
+
+/* a ampulheta */
+.ampulheta{display:block;width:min(100%,240px);height:auto;max-height:calc(100vh / var(--zv,1) - 400px);min-height:200px;transition:transform .9s cubic-bezier(.5,0,.3,1)}
+.ampulheta.mini{width:150px;min-height:0;max-height:none}
+.ampulheta.gira{animation:gira-a 1s cubic-bezier(.5,0,.3,1)}
+@keyframes gira-a{from{transform:rotate(180deg)}}
+.ampulheta .moldura,.ampulheta .poste{fill:#3a2e1c;stroke:#6b5530;stroke-width:2}
+.ampulheta .vidro-a{fill:rgba(200,230,215,.04);stroke:rgba(200,230,215,.35);stroke-width:2.5}
+.ampulheta .areia{fill:var(--mel)} .ampulheta .fio-areia{fill:var(--mel);opacity:.8}
+.ampulheta .dia{font:800 15px var(--mono);letter-spacing:.08em;fill:var(--ac2);text-anchor:middle}
+.placar-d{font:800 clamp(16px,1.3vw,22px) var(--mono);letter-spacing:.06em;color:var(--t2)} .placar-d s{color:var(--t3);text-decoration-color:var(--erro)} .placar-d b{color:var(--ac2)}
+
+/* cenas */
+.quem{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:6px 0 12px}
+.quem-faz{display:grid;justify-items:center;gap:4px;margin:4px auto 14px;padding:12px 26px;border-radius:999px;width:max-content;max-width:100%;border:2px solid}
+.quem-faz small{font:800 11px var(--mono);letter-spacing:.16em} .quem-faz b{font:700 clamp(19px,1.6vw,26px) var(--disp);text-align:center}
+.quem-faz.eu{border-color:var(--verde);background:#0f1f16} .quem-faz.eu small{color:var(--verde)}
+.quem-faz.outro{border-color:var(--ac);background:#221808} .quem-faz.outro small{color:var(--ac2)}
+.degraus{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:end;margin-top:10px}
+.degrau{display:grid;gap:10px;align-content:start;padding:14px 16px;border-radius:var(--r2)} .degrau small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.degrau.d1{margin-top:40px} .degrau.d2{margin-top:80px} .degrau .transcricao{margin:0}
+.turnos{display:grid;gap:6px}
+.turno{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;padding:7px 12px;border-radius:12px;background:#0f1412;border:1px solid var(--fio)}
+.turno b{font:800 12px var(--mono);letter-spacing:.1em} .turno span{font:600 clamp(14px,1.05vw,17px)/1.35 var(--disp)} .turno i{font:800 10px var(--mono);font-style:normal;letter-spacing:.1em;color:var(--t3)}
+.turno.anna b{color:var(--ac2)} .turno.mark b{color:var(--verde)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)} .lado-fim .ampulheta{margin:0 auto}
+
+@media (max-width:1100px){ .mesa-c,.capa,.degraus{grid-template-columns:1fr} .degrau.d1,.degrau.d2{margin-top:0} .ampulheta{max-height:none} }
+@media (max-width:620px){ .turno{grid-template-columns:1fr} .ampulheta{width:min(100%,200px)} .quem-faz{width:auto;border-radius:18px} }
+
+/* 22/10/2026 · os formatos novos (formatos.js) */
+
+.c-dois .fm-corpo{font-size:clamp(17px,1.3vw,21px)}
+.c-hora .fm-folha{width:100%} .c-hora .f2-liga .f2-bt{font-size:clamp(14.5px,1.1vw,18px)}
+.c-prazo .fm-folha{width:100%}
+.pd-chefe{margin-top:8px;padding:10px 14px;border-radius:12px;border:1px dashed var(--fio2);font:500 14px/1.5 var(--ui);color:var(--t2)} .pd-chefe summary{cursor:pointer;font-weight:700} .pd-chefe p{margin:6px 0 0}
+.c-erros .fm-folha{width:100%}

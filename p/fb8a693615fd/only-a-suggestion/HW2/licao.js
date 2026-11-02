@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Only a Suggestion",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fb8a693615fd/only-a-suggestion/img/live-sala.webp",
+  "capa": "../img/live-sala.webp",
   "alvo": "suggest / recommend / insist and their patterns: no person right after suggest or recommend (that + person + plain verb, or -ing); insist on + -ing; explain / mention + thing + to + person; tell / ask / remind / advise + person + to + verb",
   "abrir": "What would you suggest to improve a meeting?",
   "fecho": "<b>suggest / recommend</b> have no seat for a person: <i>I suggest that Paulo send it</i> (plain verb, no -s) or <i>I suggest sending it.</i> <b>insist on</b> + -ing. <b>explain / mention</b> + thing + <b>to</b> + person: <i>I explained the delay to him.</i> <b>tell / ask / remind / advise</b> take the person at once: <i>I asked Marina to send it.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo sort out a problem at the office. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/fb8a693615fd/only-a-suggestion/img/live-corredor.webp",
+      "img": "../img/live-corredor.webp",
       "leg": "An office corridor",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I suggest that Paulo look at the printer after lunch.",
-          "img": "https://wolf-labs.pages.dev/p/fb8a693615fd/only-a-suggestion/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Marina explained the delay to the client.",
-          "img": "https://wolf-labs.pages.dev/p/fb8a693615fd/only-a-suggestion/img/live-caderno.webp",
+          "img": "../img/live-caderno.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'd recommend sending the report before five.",
-          "img": "https://wolf-labs.pages.dev/p/fb8a693615fd/only-a-suggestion/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -158,7 +158,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fb8a693615fd/only-a-suggestion/img/live-ata.webp",
+      "img": "../img/live-ata.webp",
       "leg": "The minutes of a meeting",
       "pede": "Look at the picture: the minutes of a meeting. Write 2 or 3 sentences for the minutes: one suggestion with a person, one idea with no owner, and one thing somebody insisted on. Use <b>suggest that</b>, <b>suggest + -ing</b> and <b>insist on</b>.",
       "ph": "Marina suggested that … / We suggested …ing …",

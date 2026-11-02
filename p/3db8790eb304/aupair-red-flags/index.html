@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -134,5 +135,266 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Warning signs when you look for a family.",
+   "p": "One question. Then the video. Then the questions."
+  },
+  "separa": {
+   "t": "OK or red flag?",
+   "p": "Choose the side. Say why."
+  },
+  "erros": {
+   "t": "A message from a “family”.",
+   "p": "Tap every red flag. Say why it’s dangerous."
+  },
+  "cv-semaforo": {
+   "t": "Five moments in the house.",
+   "p": "Green, yellow or red? Say what you’d do."
+  },
+  "pode": {
+   "t": "Lesson 14: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Sinais de alerta antes do match (segredo, contato fora da agência, pedido de dinheiro/documento, promessa boa demais) e na casa (passaporte, horas extras, isolamento). Plano, não medo.",
+  "armadilha": "A aluna acha que o sinal de alerta é culpa dela, guarda segredo do coordenador por educação e manda documento para estranho. Na fala: “I’d like to keep my passport with me”, não “Give me my passport”.",
+  "pal": [
+   "red flag",
+   "warning sign",
+   "scam",
+   "never send money",
+   "I’d like to keep my passport with me.",
+   "talk to my coordinator",
+   "isolation",
+   "45 hours a week"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 14 do Au Pair: sinais de alerta; tom calmo, a maioria das famílias é ótima.",
+   "perg": "Have you ever received a message too good to be true?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "video": {
+   "obj": "AuPairWorld: cinco sinais de alerta (4 min); no fim, a diferença dos EUA: limite de 45 h por semana.",
+   "perg": "Which red flag surprised you?",
+   "pula": "O vídeo vai inteiro; duas perguntas depois bastam."
+  },
+  "separa": {
+   "obj": "Doze situações, antes e depois de chegar: OK ou alerta, e por quê; o quadro vira foto no fim.",
+   "perg": "Is that OK or a red flag? Why?",
+   "pula": "Seis situações bastam."
+  },
+  "erros": {
+   "obj": "Uma mensagem de golpe (fictícia): o aluno marca cada alerta e explica o perigo.",
+   "perg": "Why is this line dangerous?",
+   "pula": "Três alertas bastam."
+  },
+  "cv-semaforo": {
+   "obj": "Cinco momentos cinzentos na casa: verde, amarelo (conversar) ou vermelho (coordenador); o professor rebate.",
+   "perg": "Extra hours on Saturday: green, yellow or red?",
+   "pula": "Dois momentos bastam."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; diga que ele pode te escrever se algo parecer errado.",
+   "perg": "Can you spot a scam message now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre confiança, limites e segurança no intercâmbio, com frases prontas.",
+   "perg": "How do you know you can trust a family?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre dilemas de convivência na casa, com argumentos.",
+   "perg": "Talk to the family first, or to the coordinator?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Troca de papel: o aluno é a coordenadora local e orienta uma au pair (professor) com dúvidas.",
+   "perg": "The family kept my passport. What should I do?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Trust and limits.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "red flag",
+    "I’d like to…",
+    "talk to my coordinator",
+    "I would…"
+   ],
+   "cartas": [
+    {
+     "k": "TRUST",
+     "q": "How do you know you can trust a new family?",
+     "fup": "What questions would you ask on the first call?",
+     "st": [
+      "I would ask …",
+      "A good sign is when …"
+     ],
+     "ex": "I would ask to talk to their last au pair. A good sign is when they say yes fast."
+    },
+    {
+     "k": "TOO GOOD",
+     "q": "What job offer would sound too good to be true?",
+     "fup": "What would you do?",
+     "st": [
+      "If they offered …, I would …"
+     ],
+     "ex": "If they offered a car and double pay, I would check with the agency first."
+    },
+    {
+     "k": "SAYING NO",
+     "q": "Is it easy for you to say no politely?",
+     "fup": "How do you say it in English?",
+     "st": [
+      "It is … for me.",
+      "I usually say “I’d prefer not to …”"
+     ],
+     "ex": "It is hard for me. I usually say “I’m sorry, I’d prefer not to.”"
+    },
+    {
+     "k": "DAYS OFF",
+     "q": "What would you do on your days off?",
+     "fup": "Who would you meet?",
+     "st": [
+      "On my days off, I would …"
+     ],
+     "ex": "On my days off, I would meet other au pairs and explore the city."
+    },
+    {
+     "k": "HELP",
+     "q": "Who would you call first if something felt wrong?",
+     "fup": "Do you have that number saved?",
+     "st": [
+      "I would call …",
+      "I’m going to save …"
+     ],
+     "ex": "I would call my coordinator. I’m going to save her number today."
+    },
+    {
+     "k": "GOOD SIGNS",
+     "q": "What are green flags in a host family?",
+     "fup": "Which one is the most important for you?",
+     "st": [
+      "A green flag is …",
+      "The most important one is …"
+     ],
+     "ex": "A green flag is a clear schedule. The most important one is respect for my free time."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "A small problem in the house: talk to the family first, or to the coordinator?",
+     "a": "The family first",
+     "b": "The coordinator",
+     "fa": [
+      "The family first. Many problems are just misunderstandings.",
+      "It shows respect."
+     ],
+     "fb": [
+      "The coordinator. She knows the rules.",
+      "She can help you say it the right way."
+     ]
+    },
+    {
+     "q": "The family asks you to walk the dog: OK or not?",
+     "a": "OK",
+     "b": "Not OK",
+     "fa": [
+      "OK, if the kids come too. It’s part of family life.",
+      "It’s a small thing."
+     ],
+     "fb": [
+      "Not OK. The job is childcare, not pets.",
+      "Small things become big things."
+     ]
+    },
+    {
+     "q": "Phone in the bedroom at night: the family’s rule or your choice?",
+     "a": "The family’s rule",
+     "b": "My choice",
+     "fa": [
+      "The family’s rule. It’s their house.",
+      "Maybe the kids sleep near you."
+     ],
+     "fb": [
+      "My choice. My night is my free time.",
+      "I need to call my family in Brazil."
+     ]
+    },
+    {
+     "q": "Choose a family fast, or wait for the perfect match?",
+     "a": "Fast",
+     "b": "Wait",
+     "fa": [
+      "Fast. Good families get matched quickly.",
+      "No family is perfect."
+     ],
+     "fb": [
+      "Wait. It’s a whole year of your life.",
+      "Rushing is how scams work."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Your plan is clear: talk, then ask for help."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the coordinator now.",
+   "p": "Your teacher is a worried au pair.",
+   "aluno": "Listen to the au pair’s question. Answer as her local coordinator: calm and clear.",
+   "perguntas": [
+    "A family wants to talk only on WhatsApp, not with the agency. Is that OK?",
+    "They asked me to send money for the ticket. What should I do?",
+    "My host mom keeps my passport in her room. Is that normal?",
+    "I worked 50 hours this week. What can I do?",
+    "I never have a day off. Who should I talk to?",
+    "How do I know a family is good?"
+   ],
+   "st": [
+    "That’s a red flag because …",
+    "You should …",
+    "Never …"
+   ],
+   "ex": "That’s a red flag. Never send money. Talk to me first, and keep all messages inside the agency."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

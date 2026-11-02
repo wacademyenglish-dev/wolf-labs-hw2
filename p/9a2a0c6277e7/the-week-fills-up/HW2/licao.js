@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Week Fills Up",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/9a2a0c6277e7/the-week-fills-up/img/live-agenda.webp",
+  "capa": "../img/live-agenda.webp",
   "alvo": "present continuous for arrangements (I'm meeting ... on Thursday; What are you doing on Saturday?); I'll for a decision made now; will for a guess",
   "abrir": "What are you doing this weekend?",
   "fecho": "Already in the calendar: <b>I'm + -ing</b> and the day: <i>I'm meeting Ana on Thursday.</i> Ask: <i>What <b>are you doing</b> on Saturday?</i> Decided right now: <b>I'll</b>. A guess: <b>it will rain</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan the week. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/9a2a0c6277e7/the-week-fills-up/img/live-cafe.webp",
+      "img": "../img/live-cafe.webp",
       "leg": "A table for Thursday",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'm meeting my sister at the café on Thursday.",
-          "img": "https://wolf-labs.pages.dev/p/9a2a0c6277e7/the-week-fills-up/img/live-cafe.webp",
+          "img": "../img/live-cafe.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "What are you doing on Saturday?",
-          "img": "https://wolf-labs.pages.dev/p/9a2a0c6277e7/the-week-fills-up/img/live-agenda.webp",
+          "img": "../img/live-agenda.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I'm leaving on Friday, so I'll take my coat.",
-          "img": "https://wolf-labs.pages.dev/p/9a2a0c6277e7/the-week-fills-up/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/9a2a0c6277e7/the-week-fills-up/img/live-agenda.webp",
+      "img": "../img/live-agenda.webp",
       "leg": "A planner, a phone and a coffee",
       "pede": "Look at the picture: a planner, a phone and a coffee. Write 2 or 3 sentences about next week: what you <b>are doing</b> and one thing you <b>will</b> do.",
       "ph": "Next week I'm …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Hollywood Fixer",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/7d2e9a4c8f61/the-hollywood-fixer/img/live-fundo.webp",
+  "capa": "../img/live-fundo.webp",
   "alvo": "want / ask / tell + person + to + plain verb (the person in the gap does the second verb); an empty gap sends the verb back to the subject (she asked to leave); never wants that you go, told me do, or said me",
   "abrir": "What does your family want you to do this year?",
   "fecho": "English puts a <b>person in the gap</b>: <b>want / ask / tell + person + to</b>: <i>The producer wants her to sign it.</i> The person in the gap does the second verb. An empty gap sends it back: <i>she asked to leave</i> = she leaves. No <b>that</b>, never lose the <b>to</b>, and <b>say</b> never takes a person: <i>he told me</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on a long day on a film set. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/7d2e9a4c8f61/the-hollywood-fixer/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A desk with a lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "My boss asked me to close the door.",
-          "img": "https://wolf-labs.pages.dev/p/7d2e9a4c8f61/the-hollywood-fixer/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I told Sam to wait in the car.",
-          "img": "https://wolf-labs.pages.dev/p/7d2e9a4c8f61/the-hollywood-fixer/img/live-garagem.webp",
+          "img": "../img/live-garagem.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The studio wants her to say nothing.",
-          "img": "https://wolf-labs.pages.dev/p/7d2e9a4c8f61/the-hollywood-fixer/img/live-espera.webp",
+          "img": "../img/live-espera.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -155,7 +155,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/7d2e9a4c8f61/the-hollywood-fixer/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A desk with a lamp and notes",
       "pede": "Look at the picture: a desk with a lamp and notes at night. Imagine you are the boss. Write 2 or 3 sentences: what you want people to do, who you asked, who you told.",
       "ph": "I want my team to …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What You Really Need",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/dd26f1c92410/what-you-really-need/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "cleft sentences for advice: What you need is + noun · What you need to do is + plain verb · All you have to do is + plain verb · The thing you should ... is · The problem is (that) ...; never all what you need, is calling, What do you need is",
   "abrir": "Who do you call when you have a problem?",
   "fecho": "Put the important part last. <b>What you need is</b> + noun: <i>What you need is a plan.</i> <b>What you need to do is</b> + plain verb: <i>What you need to do is call her.</i> <b>All you have to do is</b> + plain verb. <b>The problem is (that)</b> + a full clause. Never <i>all what</i>, never <i>What do you need is</i>, never <i>is calling</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia gives Leo advice. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/dd26f1c92410/what-you-really-need/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A radio studio at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "What you need is a clear list, not more opinions.",
-          "img": "https://wolf-labs.pages.dev/p/dd26f1c92410/what-you-really-need/img/live-cartas.webp",
+          "img": "../img/live-cartas.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "All you have to do is decide by Friday.",
-          "img": "https://wolf-labs.pages.dev/p/dd26f1c92410/what-you-really-need/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The problem is that I keep changing my mind.",
-          "img": "https://wolf-labs.pages.dev/p/dd26f1c92410/what-you-really-need/img/live-linhas.webp",
+          "img": "../img/live-linhas.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/dd26f1c92410/what-you-really-need/img/live-cartas.webp",
+      "img": "../img/live-cartas.webp",
       "leg": "Letters on a dark table",
       "pede": "Look at the picture: letters on a dark table. Imagine a friend wrote you one. Write 2 or 3 pieces of advice for them. Use <b>What you need is</b>, <b>All you have to do is</b> or <b>The problem is that</b>.",
       "ph": "What you need is …",

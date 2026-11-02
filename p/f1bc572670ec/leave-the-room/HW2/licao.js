@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Leave the Room",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f1bc572670ec/leave-the-room/img/live-porta.webp",
+  "capa": "../img/live-porta.webp",
   "alvo": "second conditional: if + past simple, would + base verb (If I had time, I would travel); were for everyone; could / might instead of would; never would in the if half, never would have",
   "abrir": "If you could leave work right now, where would you go?",
   "fecho": "<b>If</b> + past simple, <b>would</b> + base verb: <i>If I had more time, I would learn the guitar.</i> The past form is not about the past: it marks an imagined situation. <b>Would</b> never goes in the <i>if</i> half. <i>If I were you</i> works for every person.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo imagine another life. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f1bc572670ec/leave-the-room/img/live-cozinha.webp",
+      "img": "../img/live-cozinha.webp",
       "leg": "A kitchen at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If I could leave now, I would go home.",
-          "img": "https://wolf-labs.pages.dev/p/f1bc572670ec/leave-the-room/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If she were here, she would make some coffee.",
-          "img": "https://wolf-labs.pages.dev/p/f1bc572670ec/leave-the-room/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I wouldn't say that if I were you.",
-          "img": "https://wolf-labs.pages.dev/p/f1bc572670ec/leave-the-room/img/live-amanhecer.webp",
+          "img": "../img/live-amanhecer.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f1bc572670ec/leave-the-room/img/live-porta.webp",
+      "img": "../img/live-porta.webp",
       "leg": "An open door with warm light",
       "pede": "Look at the picture: a door open to warm light. Imagine you could walk through it into another life. Write 2 or 3 sentences with <b>If</b> + past simple and <b>would</b>.",
       "ph": "If I could walk through that door, I would …",

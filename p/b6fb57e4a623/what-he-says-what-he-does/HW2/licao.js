@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What He Says, What He Does",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b6fb57e4a623/what-he-says-what-he-does/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "present simple (what he usually does, what he says) versus present continuous (what he is doing now: is + -ing); he / she + -s; no -ing with want, know, like",
   "abrir": "What do you usually do on Saturdays, and what are you doing now?",
   "fecho": "<b>Usually</b> = one piece: <i>He works at a bank.</i> With he / she, add <b>-s</b>. <b>Now</b> = two pieces: <i>He is looking at the bridge.</i> Some verbs stay in one piece, even now: <i>want, know, like</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo watch a man by a bridge. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/b6fb57e4a623/what-he-says-what-he-does/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A bridge at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "He says he works at a bank.",
-          "img": "https://wolf-labs.pages.dev/p/b6fb57e4a623/what-he-says-what-he-does/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Right now he is looking at the bridge.",
-          "img": "https://wolf-labs.pages.dev/p/b6fb57e4a623/what-he-says-what-he-does/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He usually reads, but tonight he is writing notes.",
-          "img": "https://wolf-labs.pages.dev/p/b6fb57e4a623/what-he-says-what-he-does/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b6fb57e4a623/what-he-says-what-he-does/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A desk with binoculars and a notebook",
       "pede": "Look at the picture: a desk with binoculars and a notebook. Write 2 or 3 sentences about a person: what they <b>usually do</b>, and what they <b>are doing</b> now.",
       "ph": "He usually … but now he is …ing.",

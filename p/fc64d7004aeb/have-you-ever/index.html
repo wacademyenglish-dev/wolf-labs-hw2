@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Have You Ever? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Have You Ever? · Far From Home</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Have You Ever? · Far From Home</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A street in Toronto.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: The experience has no date. The detail goes to the past.</p><p style="margin:0 0 6px"><b>Short class (about 43 min):</b> I Your Travels · II Experience Bingo · IV The Street Interview · VI The Rule · VII The Passport · X Far From Home · XI Home. Skip if you’re short on time: VIII, IX (marked EXTRA on your screen). Full lesson: about 63 min.</p><p style="margin:0"><b>Open with:</b> “Where were you born? Do you still live there?”</p></div><!--/prep-->
+    <p>A street in Toronto. People from everywhere answer one question: <i>have you ever lived in another country?</i> The grammar is the present perfect for life experiences (<b>Have you ever + participle?</b>) and the switch: the experience has no date, the <b>detail</b> goes to the past (<i>Yes, I have. I went in 2018.</i>). The screen is a passport: every right question inks a stamp.</p>
+    <h4>THE BINGO</h4>
+    <p>Scene II. The student asks, you answer about your real life. Tap the question you heard (the wrong versions are the classic ones: <i>Did you ever…</i>, <i>eated</i>). Then stamp YES or NO. Four in a line is BINGO; the target is eight stamps. Be honest: the fun is in your stories.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III. A real street interview, sealed in five chapters (each one stops by itself). Talk before you play the next one.</p>
+    <h4>THE PASSPORT</h4>
+    <p>Scene V. You are the traveler. The student asks <i>Have you ever…?</i>; you say yes, then they ask the detail. Tap the detail question you heard: <b>When did you go?</b>, never <s>When have you gone?</s></p>
+    <p class="pal-guia"><b>The words (III)</b>: <i>abroad</i>, <i>culture</i>, <i>weather</i>, <i>homesick</i> and <i>community</i>, before the video, in match the columns and hot seat. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (V, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>FAR FROM HOME (X) AND THE SURPRISE QUESTION</h4>
+    <p>Scene X is now a dilemma in three rounds, from the street interview: a free trip (been there, never been, surprise), one year abroad (Toronto, Lisbon or Tokyo) and the boss who says “stay forever”. Your student chooses and says why with an experience (<i>I’ve never…</i>, <i>I’ve been to … twice</i>) and the detail in the past (<i>I went in 2019</i>). Wait five seconds in silence, then use the PUSH line (only you see it). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Travels, II Experience Bingo, VII The Passport, VIII Never Have I Ever, IX On the Street and X Far From Home.</li>
+      <li><b>Listen</b>: III The Words, IV The Street Interview and V Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule.</li>
+      <li><b>Write</b>: XI Home.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* HAVE YOU EVER? (Main A2) · pergunta-surpresa · 27/10/2026 · present perfect de experiência */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'bingo', tipo: 'And you?', q: 'Have you ever eaten something really strange?',
+    opc: ['Yes, I have', 'No, never', 'I don’t want to!'], st: ['Yes, I have. I ate … in …', 'No, I’ve never …'],
+    ex: 'Yes, I have. I ate frog in a restaurant in 2019. It was like chicken!', push: 'Would you eat it again?' },
+  { cena: 'video', tipo: 'Opinion', q: 'Is it easy to make friends in a new city?',
+    opc: ['Yes, easy', 'No, it’s hard', 'It depends'], st: ['I’ve never …', 'When I moved to …, I …'],
+    ex: 'It depends. I’ve moved twice. The first time, I made friends at work in one week.', push: 'Where do you meet new people?' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'Visit ten countries for one week each, or live in one country for ten weeks?',
+    opc: ['Ten countries', 'One country'], st: ['I’d rather …', 'I’ve never …, so …'],
+    ex: 'One country. I’ve never lived abroad, so I want to feel like a local.', push: 'Which country?' },
+  { cena: 'pass', tipo: 'What if', q: 'One year abroad, and only one bag. What goes in first?',
+    opc: ['Clothes', 'Photos and gifts', 'My laptop'], st: ['I’ve always taken … with me', 'I’ve never travelled without …'],
+    ex: 'My laptop. I’ve never travelled without it. Clothes I can buy there.', push: 'And one thing from your kitchen?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* HAVE YOU EVER? (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O dilema entra no lugar de "X · Quick Check" (extra, prática controlada: dizer e tocar) e passa a ser
+   do núcleo: a decisão que faltava. O vídeo já tem o seu momento colado (a pergunta antes da entrevista
+   de rua, no IV); o bingo (II) e o passaporte (VII) são as conversas do meio. O tema é o do vídeo:
+   morar longe de casa. Gramática: Have you ever…? / I’ve never… / I’ve been … twice, e o detalhe no
+   passado. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'dilema', troca: 'quiz', est: 'o', min: 7, img: 'mala', rot: 'Far From Home', t: 'Three choices about leaving home. No right answer.',
+    p: 'Choose one, or say your own idea. Say why with your experience. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The trip', sit: 'You win a free trip. You choose the kind.',
+        q: 'Which trip do you take?', opc: ['A place I’ve been to', 'A place I’ve never been', 'A surprise'],
+        st: ['I’ve been to … twice, and …', 'I’ve never been to …, so …', 'Have you ever …?'],
+        ex: 'A place I’ve never been. I’ve been to Rio three times. I’ve never seen snow, so… Canada!',
+        push: 'The surprise is a 20-hour flight. Do you still say no?' },
+      { tag: 'One year', sit: 'Your company can send you abroad for one year.',
+        q: 'Where do you go?', opc: ['Toronto: big and cold', 'Lisbon: small and sunny', 'Tokyo: very different'],
+        st: ['I’ve always wanted to …', 'I’ve never lived …', 'I went to … in …, and …'],
+        ex: 'Lisbon. I’ve never lived in another country, and in Lisbon I can speak Portuguese when I’m tired!',
+        push: 'Everything is in English or Japanese at work. Do you change your answer?' },
+      { tag: 'Home', sit: 'After one year, your boss says: “Stay. Forever.”',
+        q: 'What do you say?', opc: ['Yes, I stay', 'One more year', 'No, I go home'],
+        st: ['I’ve never been so …', 'I’ve missed …', 'Home is where I …'],
+        ex: 'One more year. I’ve learned a lot, but I’ve missed my friends and real Brazilian coffee.',
+        push: 'What is one thing you’d miss from home? Only one.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Where has your life taken you?",
+   "p": "Answer out loud. The picture opens."
+  },
+  "bingo": {
+   "t": "You ask. Your teacher tells the truth.",
+   "p": "Tap a square. Ask: Have you ever…? Four is BINGO."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen: they turn yellow."
+  },
+  "video": {
+   "t": "Toronto: have you ever lived abroad?",
+   "p": "Answer first. Then watch five short chapters."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again."
+  },
+  "regra": {
+   "t": "No date for the experience. Details go past.",
+   "p": "Fix each wrong line out loud. Then tap it."
+  },
+  "pass": {
+   "t": "Your teacher’s passport. Six stamps.",
+   "p": "Ask Have you ever…? Then ask the detail."
+  },
+  "nunca": {
+   "t": "Never have I ever.",
+   "p": "Spin. Say one thing you’ve never done."
+  },
+  "rua": {
+   "t": "Street interview. The camera is on you.",
+   "p": "Answer about your life. Then ask back."
+  },
+  "cv-dilema": {
+   "t": "Three choices about leaving home.",
+   "p": "Choose. Say why with your experience."
+  },
+  "fim": {
+   "t": "What does home mean to you?",
+   "p": "Write it, with one experience."
+  }
+ },
+ "prep": {
+  "obj": "Present perfect para experiências (Have you ever…? I’ve been…) e a virada: a experiência não tem data, o detalhe vai para o passado. Entrevista de rua em Toronto.",
+  "armadilha": "O português usa o passado para tudo (“você já morou fora?”): sai “Did you ever…?”, “I have gone in 2018” e “When have you gone?”. E particípio errado: “eated”.",
+  "pal": [
+   "Have you ever…?",
+   "I’ve been to",
+   "I’ve never",
+   "twice",
+   "abroad",
+   "homesick",
+   "culture",
+   "community"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a rua de Toronto e o passaporte: cada pergunta certa carimba.",
+   "perg": "Where were you born? Do you still live there?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal sobre os lugares da vida do aluno.",
+   "perg": "Have you ever lived in another city?",
+   "pula": "Três respostas bastam."
+  },
+  "bingo": {
+   "obj": "O aluno pergunta Have you ever…? e o professor responde a verdade; carimbo YES ou NO.",
+   "perg": "Have you ever eaten something strange?",
+   "pula": "Pare no primeiro BINGO."
+  },
+  "palavras": {
+   "obj": "Pré-ensina abroad, culture, weather, homesick e community antes do vídeo.",
+   "perg": "Have you ever felt homesick?",
+   "pula": "Só o match das colunas."
+  },
+  "video": {
+   "obj": "Entrevista de rua real em cinco capítulos; conversar entre um e outro.",
+   "perg": "Where has this person lived?",
+   "pula": "Três capítulos bastam."
+  },
+  "falas": {
+   "obj": "Fala por fala do vídeo; as linhas amarelas explicam as palavras novas.",
+   "perg": "Can you say this line with me?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "regra": {
+   "obj": "A regra: experiência sem data no present perfect, o detalhe no past simple.",
+   "perg": "Have you been or did you go?",
+   "pula": "Quatro linhas bastam."
+  },
+  "pass": {
+   "obj": "Professor é o viajante: Have you ever…? e depois a pergunta do detalhe no passado.",
+   "perg": "When did you go?",
+   "pula": "Quatro carimbos bastam."
+  },
+  "nunca": {
+   "obj": "Never have I ever: coisas que nunca fez, com I’ve never…",
+   "perg": "Why have you never done it?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "rua": {
+   "obj": "O professor entrevista o aluno na rua; ele responde e devolve a pergunta.",
+   "perg": "Have you ever lived abroad?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-dilema": {
+   "obj": "Dilema em três rodadas (viagem grátis, um ano fora, ficar para sempre), justificando com experiência.",
+   "perg": "Toronto, Lisbon or Tokyo? Have you been there?",
+   "pula": "Duas rodadas bastam."
+  },
+  "fim": {
+   "obj": "Escrita: o que é casa para o aluno, com uma experiência; vai para o My notes.",
+   "perg": "What does home mean to you?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra sobre experiências de vida, com o detalhe no passado.",
+   "perg": "Have you ever met someone famous?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois, justificando com uma experiência real.",
+   "perg": "Beach or mountains?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira alguém da entrevista de Toronto que mora longe de casa.",
+   "perg": "Have you ever felt homesick?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More experience questions.",
+   "p": "Pick a card. Answer, then add the detail.",
+   "palavras": [
+    "Have you ever…?",
+    "I’ve …",
+    "I’ve never …",
+    "I went …"
+   ],
+   "cartas": [
+    {
+     "k": "FOOD",
+     "q": "Have you ever eaten something very strange?",
+     "fup": "Where did you eat it?",
+     "st": [
+      "Yes, I have. I ate …",
+      "No, I’ve never …"
+     ],
+     "ex": "Yes, I have. I ate a fried ant in Colombia in 2019."
+    },
+    {
+     "k": "FAMOUS PEOPLE",
+     "q": "Have you ever met someone famous?",
+     "fup": "What did you say?",
+     "st": [
+      "Yes, I have. I met …",
+      "No, never."
+     ],
+     "ex": "Yes, I have. I met a soccer player at the airport. I said nothing!"
+    },
+    {
+     "k": "PLANES",
+     "q": "Have you ever missed a flight?",
+     "fup": "What happened?",
+     "st": [
+      "Yes, once. I …",
+      "No, I’ve never missed one."
+     ],
+     "ex": "Yes, once. I was in the wrong terminal."
+    },
+    {
+     "k": "LANGUAGES",
+     "q": "Have you ever spoken English on a trip?",
+     "fup": "Where were you?",
+     "st": [
+      "Yes, I have. I was in …",
+      "Not yet."
+     ],
+     "ex": "Yes, I have. I was in Orlando, and I ordered dinner in English."
+    },
+    {
+     "k": "MOVING",
+     "q": "Have you ever moved to a new city?",
+     "fup": "How old were you?",
+     "st": [
+      "Yes, I have. I moved to … when …"
+     ],
+     "ex": "Yes, I have. I moved to Curitiba when I was twenty."
+    },
+    {
+     "k": "NEW THINGS",
+     "q": "What have you never done, but want to do?",
+     "fup": "Why haven’t you done it yet?",
+     "st": [
+      "I’ve never …, but I want to.",
+      "Because …"
+     ],
+     "ex": "I’ve never seen snow, but I want to. Because I’ve never had the money."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I’ve been",
+    "I’ve never",
+    "I went"
+   ],
+   "rodadas": [
+    {
+     "q": "A trip to a place you’ve been or a new place?",
+     "a": "A place I’ve been",
+     "b": "A new place",
+     "fa": [
+      "A place I’ve been. I loved it the first time."
+     ],
+     "fb": [
+      "A new place. I’ve never been to Asia."
+     ]
+    },
+    {
+     "q": "Live abroad for one year: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. I’ve always wanted it."
+     ],
+     "fb": [
+      "No. I’ve never felt so far from home."
+     ]
+    },
+    {
+     "q": "Beach or mountains?",
+     "a": "Beach",
+     "b": "Mountains",
+     "fa": [
+      "Beach. I went to Bahia last year and loved it."
+     ],
+     "fb": [
+      "Mountains. I’ve never liked the sun."
+     ]
+    },
+    {
+     "q": "Travel alone or with friends?",
+     "a": "Alone",
+     "b": "With friends",
+     "fa": [
+      "Alone. I’ve done it twice. It’s great."
+     ],
+     "fb": [
+      "With friends. I’ve never traveled alone."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You live far from home now.",
+   "p": "Your teacher interviews you on the street.",
+   "aluno": "Listen to your teacher’s question. Answer as a person from the Toronto interview: you moved there from another country.",
+   "perguntas": [
+    "Have you ever lived in another country before?",
+    "When did you come to Toronto?",
+    "Have you ever felt homesick?",
+    "What have you learned about the culture here?",
+    "Have you ever thought about going back?",
+    "What does home mean to you now?"
+   ],
+   "st": [
+    "Yes, I have. / No, I haven’t.",
+    "I came here in …",
+    "I’ve never …"
+   ],
+   "ex": "No, I haven’t. I came here in 2020. I’ve felt homesick, but I’ve found a community here."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

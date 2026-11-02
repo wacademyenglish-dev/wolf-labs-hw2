@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Fridge Door · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Caveat:wght@600;700&family=Fraunces:ital,wght@0,300;0,500;0,600;0,700;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Fridge Door · Seven Days of Notes</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Fridge Door · Seven Days of Notes</h2>
+    <p>An easy reader in five chapters, and the whole story happens on one door. Marco is on the night shift all week: he gets home at 8:00 AM and Bea leaves for work at 7:30 AM, so for seven days everything they say to each other is written on a note under a magnet. Notes go up and come down on the screen, day by day, except one, from Monday, under the red magnet. In chapter four you read it: <b>ARE YOU STILL HAPPY HERE?</b> In chapter five it is off the door, turned over: <b>I AM STILL HERE.</b> No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>Already</b> in a yes, for something that happened <b>sooner than expected</b> (say that second half once, early: it answers half the questions of the hour). <b>Not … yet</b> in a no and in a question, with yet at the <b>end</b>. <b>Still</b> for no change, in a yes and in a no. The place: already and still in the middle (in front of a normal verb, after am / is / are), and still <b>in front of the not</b>: <i>he is still not home</i>. Present simple and be only; no present perfect.</p>
+    <h4>THE TRAP</h4>
+    <p>In many languages one word does the work of both <i>already</i> and <i>yet</i>, so learners say <i>he is not already home</i> and <i>is he already home?</i> when they are waiting. Scene IX is only this. Round 2 is the one almost everyone gets wrong: let it happen, then read the explanation out loud.</p>
+    <!--conversa--><h4>THREE NOTES (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Friday, after Chapter Three: three notes are still on the door (the bread, the window and the one under the red magnet). Your student lives there: which one first? They tap 1, 2, 3 and say why with the starters (<i>It is still… / It isn’t… yet</i>). There is no right order. Answer first yourself, then wait five seconds in silence and use the PUSH line (only you see it). At the end, open <i>Show my teacher’s order</i> and agree on one order together. Recast mistakes quietly; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Read</b>: the five chapters (no audio: read together, line by line).</li>
+      <li><b>Out loud</b>: I Before the Door (write down what you hear, say nothing), VII Three Notes (your student ranks the three notes left on Friday), XI Your Own Door (six real sentences; a sentence about nobody and nothing doesn’t count).</li>
+      <li><b>Focus</b>: III and V (the door moves with each right answer), IX Yes, or No?</li>
+      <li><b>Write</b>: XII, their own fridge door, with the red wavy line for <i>not already</i>, <i>already?</i> when waiting, <i>yet</i> in a yes, <i>not still</i>, and the word in the wrong place. It goes to their My notes.</li>
+    </ul>
+    <h4>CHAPTER FOUR</h4>
+    <p>Somebody will ask what the Monday note says before chapter four. Don’t tell. Say it is five words and move on: the wait is half of what makes it work.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE FRIDGE DOOR (Main A1) · pergunta-surpresa · 27/10/2026 · still / already / not … yet */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'cap1', tipo: 'And you?', q: 'At midnight, are you still awake?',
+    opc: ['Yes', 'No'], st: ['Yes. I am still awake.', 'No. I am already in bed.'],
+    ex: 'No. At midnight I am already in bed!', push: 'On Saturday too? Yes or no?' },
+  { cena: 'porta2', tipo: 'Would you rather', q: 'Fridge notes or phone messages?',
+    opc: ['Fridge notes', 'Phone messages'], st: ['Fridge notes. I still …', 'Phone messages. I already …'],
+    ex: 'Phone messages! My phone is already in my hand.', push: 'Paper notes at home? Yes or no?' },
+  { cena: 'cap4', tipo: 'Your bet', q: 'Does Marco answer the note?',
+    opc: ['Yes', 'No'], st: ['Yes. He is still happy.', 'No. He isn’t ready yet.'],
+    ex: 'Yes. He is still happy there!', push: 'Today? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE FRIDGE DOOR (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Ranking leve (3 itens, ordem do professor) no lugar de "VII · Where the Word Goes" (extra; escolher a frase certa).
+   Sexta, depois do capítulo três: três bilhetes ainda na porta (o pão, a janela, o bilhete do ímã vermelho).
+   O aluno decide o que resolver primeiro. A1 bem leve: frase quase pronta, o professor mostra a ordem dele.
+   Gramática da aula (still / already / not … yet) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'bilhetes', troca: 'lugar', est: 'o', min: 6, img: 'sala', rot: 'Three Notes', t: 'Friday. Three notes are still up.',
+    p: 'You live there. Which note first? Tap 1, 2, 3. Your teacher answers first.',
+    formato: 'ranking',
+    q: 'Which note first?',
+    itens: ['The bread', 'The window', 'The red magnet note'],
+    dica: 'Tap your number one first. Tap again to take it out.',
+    st: ['Number one: the … It is still …', 'The … can wait. It isn’t … yet.'],
+    ex: 'Number one: the red magnet note. It is still on the door! The bread can wait.',
+    push: 'You are Marco. Answer the note today? Yes or no?',
+    prof: [2, 1, 0] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Four short answers about today.",
+   "p": "Read each message. Answer out loud."
+  },
+  "cap1": {
+   "t": "Thirty Minutes",
+   "p": "Read it together, line by line."
+  },
+  "porta1": {
+   "t": "Read the door before you choose.",
+   "p": "One round at a time. The door moves."
+  },
+  "porta2": {
+   "t": "Read the day on the door.",
+   "p": "Already, still or yet. Say the sentence."
+  },
+  "cv-bilhetes": {
+   "t": "Friday. Three notes are still up.",
+   "p": "Which note first? Tap 1, 2, 3."
+  },
+  "cap4": {
+   "t": "Five Words",
+   "p": "Read it together. Then open the note."
+  },
+  "dois": {
+   "t": "One word in Portuguese. Two in English.",
+   "p": "Yes takes already. No or a question: yet."
+  },
+  "cap5": {
+   "t": "The Empty Door",
+   "p": "Read it together. Turn the note over."
+  },
+  "sua": {
+   "t": "Your kitchen now. Six true notes.",
+   "p": "One real sentence each. Say it out loud."
+  },
+  "fim": {
+   "t": "Write your own fridge door.",
+   "p": "Six notes: already, yet, still. Then My notes."
+  }
+ },
+ "prep": {
+  "obj": "Already, still e not … yet no presente: Marco (turno da noite) e Bea só se falam por bilhetes na porta da geladeira por sete dias.",
+  "armadilha": "O “já” do português faz o papel de already e de yet: he is not already home, is he already home? (esperando); e still depois do not.",
+  "pal": [
+   "already",
+   "still",
+   "not … yet",
+   "yet?",
+   "still not",
+   "note",
+   "fridge door",
+   "night shift"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: sete dias de bilhetes numa porta de geladeira.",
+   "perg": "Do you leave notes on your fridge?",
+   "pula": "Só leia o título e abra a cozinha."
+  },
+  "abre": {
+   "obj": "Aquecimento: quatro respostas curtas sobre hoje; o professor só anota.",
+   "perg": "Are you still at work?",
+   "pula": "Duas mensagens bastam."
+  },
+  "cap1": {
+   "obj": "Leitura do capítulo 1: Marco chega 8:00, Bea sai 7:30.",
+   "perg": "Why do they write notes?",
+   "pula": "Leia sem as perguntas extras."
+  },
+  "porta1": {
+   "obj": "Primeiras escolhas: already, still ou yet, lendo a porta.",
+   "perg": "Is Marco home yet?",
+   "pula": "Três rodadas bastam."
+  },
+  "cap2": {
+   "obj": "Leitura do capítulo 2: a porta cheia de bilhetes.",
+   "perg": "Which notes are still on the door?",
+   "pula": "Leia; uma pergunta basta."
+  },
+  "porta2": {
+   "obj": "Sete dias: escolher a palavra e dizer a frase inteira.",
+   "perg": "Is the bread still there?",
+   "pula": "Faça quatro dias."
+  },
+  "cap3": {
+   "obj": "Leitura do capítulo 3: a porta quase vazia, menos o bilhete do ímã vermelho.",
+   "perg": "Is the red note still up?",
+   "pula": "Leia; uma pergunta basta."
+  },
+  "cv-bilhetes": {
+   "obj": "O aluno ordena três bilhetes e explica com It is still… / It isn’t… yet.",
+   "perg": "Which note comes first for you?",
+   "pula": "Ordenem sem justificar todos."
+  },
+  "cap4": {
+   "obj": "Capítulo 4: o bilhete de segunda é lido: ARE YOU STILL HAPPY HERE?",
+   "perg": "What does the Monday note say?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "dois": {
+   "obj": "A armadilha do “já”: already numa frase sim, yet no não e na pergunta.",
+   "perg": "Already or yet here?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cap5": {
+   "obj": "Capítulo 5: o bilhete virado, I AM STILL HERE.",
+   "perg": "What is on the back of the note?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "sua": {
+   "obj": "Seis frases reais sobre a cozinha do aluno.",
+   "perg": "Is there still milk in your fridge?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: a porta da geladeira do aluno, com a linha vermelha.",
+   "perg": "What is still on your fridge door?",
+   "pula": "Quatro bilhetes bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas sobre o dia do aluno, com already, still e yet.",
+   "perg": "Are you still tired?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre bilhetes e mensagens.",
+   "perg": "Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é Marco e responde à entrevista sobre a semana.",
+   "perg": "Are you still on the night shift?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More questions about today.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "already",
+    "still",
+    "not … yet",
+    "yet?"
+   ],
+   "cartas": [
+    {
+     "k": "BREAKFAST",
+     "q": "Is it lunchtime yet, or is it still morning?",
+     "fup": "Are you already hungry?",
+     "st": [
+      "It is still …",
+      "It isn’t … yet."
+     ],
+     "ex": "It is still morning. I am not hungry yet."
+    },
+    {
+     "k": "YOUR FRIDGE",
+     "q": "Is there still milk in your fridge?",
+     "fup": "Is the bread already old?",
+     "st": [
+      "There is still …",
+      "The … is already …"
+     ],
+     "ex": "There is still milk, but the bread is already old."
+    },
+    {
+     "k": "THE WEEK",
+     "q": "Is it Friday yet?",
+     "fup": "Are you already tired?",
+     "st": [
+      "It isn’t … yet.",
+      "I am already …"
+     ],
+     "ex": "It isn’t Friday yet, but I am already tired."
+    },
+    {
+     "k": "YOUR HOME",
+     "q": "Do you still live in the same house?",
+     "fup": "Is it still your favorite place?",
+     "st": [
+      "I still live …",
+      "I don’t … yet."
+     ],
+     "ex": "I still live in the same apartment. It is still my favorite place."
+    },
+    {
+     "k": "ENGLISH",
+     "q": "Do you already read English books, or not yet?",
+     "fup": "Do you still use a dictionary?",
+     "st": [
+      "I already …",
+      "I don’t … yet."
+     ],
+     "ex": "I don’t read books yet, but I still use my dictionary."
+    },
+    {
+     "k": "THIS MONTH",
+     "q": "Is your birthday still far, or is it already close?",
+     "fup": "Do you have a plan yet?",
+     "st": [
+      "It is still …",
+      "I don’t have … yet."
+     ],
+     "ex": "It is still far. I don’t have a plan yet."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "already",
+    "still",
+    "yet"
+   ],
+   "rodadas": [
+    {
+     "q": "A note on the fridge or a message on the phone?",
+     "a": "A note",
+     "b": "A message",
+     "fa": [
+      "A note. It is still there in the morning."
+     ],
+     "fb": [
+      "A message. It is already in your pocket."
+     ]
+    },
+    {
+     "q": "Work at night or work in the day?",
+     "a": "At night",
+     "b": "In the day",
+     "fa": [
+      "At night. The city is still quiet."
+     ],
+     "fb": [
+      "In the day. At 8:00 I am already awake."
+     ]
+    },
+    {
+     "q": "Breakfast at home or breakfast at work?",
+     "a": "At home",
+     "b": "At work",
+     "fa": [
+      "At home. My coffee is already ready."
+     ],
+     "fb": [
+      "At work. At home I am still sleepy."
+     ]
+    },
+    {
+     "q": "Answer the note now or answer it later?",
+     "a": "Now",
+     "b": "Later",
+     "fa": [
+      "Now. It is already on the door."
+     ],
+     "fb": [
+      "Later. I am not ready yet."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the door is still full."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Marco now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Marco.",
+   "perguntas": [
+    "Are you still on the night shift?",
+    "Is Bea already at work when you get home?",
+    "Are you tired yet at 8:00 AM?",
+    "Is the bread still on the door?",
+    "Is the red note still up?",
+    "Are you still happy here?"
+   ],
+   "st": [
+    "I am still …",
+    "She is already …",
+    "It isn’t … yet."
+   ],
+   "ex": "Yes, I am still on the night shift. At 8:00 Bea is already at work."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

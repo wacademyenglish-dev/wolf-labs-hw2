@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -117,5 +118,284 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "descobre": {
+   "t": "Which sentence works better?",
+   "p": "Compare A and B. Then see the four steps."
+  },
+  "transforma": {
+   "t": "A flat sentence. Make it richer.",
+   "p": "Read the clue. Say it with more detail."
+  },
+  "prova": {
+   "t": "Twenty seconds to prepare. Then speak.",
+   "p": "Big picture, places, details, a guess."
+  },
+  "cv-cadeira": {
+   "t": "You took these photos.",
+   "p": "Your teacher is the editor. Answer, then pick a cover."
+  },
+  "pode": {
+   "t": "Lesson 8: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Speak About the Photo do DET: a rota de quatro paradas (visão geral, lugares, detalhes, um palpite com motivo) para falar 30 a 90 segundos sem travar.",
+  "armadilha": "“There is many people” (tem muita gente), “on the background” no lugar de “in the background”, “it might is” e parar aos 20 segundos.",
+  "pal": [
+   "This photo shows…",
+   "It looks like…",
+   "in the foreground",
+   "in the background",
+   "on the left",
+   "next to",
+   "It might be… because…"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 8 do DET Prep: a tarefa de falar sobre uma foto.",
+   "perg": "What do you remember from the photo?",
+   "pula": "Mostre a foto 1 por cinco segundos e siga."
+  },
+  "descobre": {
+   "obj": "Comparar frases A e B e conhecer a rota de quatro paradas.",
+   "perg": "Why is B better?",
+   "pula": "Dois pares bastam; mostre a rota."
+  },
+  "transforma": {
+   "obj": "Enriquecer frases planas com lugar, detalhe e palpite.",
+   "perg": "Can you say it with a place and a detail?",
+   "pula": "Quatro frases bastam."
+  },
+  "prova": {
+   "obj": "Três fotos no relógio real; checklist e segunda tentativa da mesma foto.",
+   "perg": "What might this place be, and why?",
+   "pula": "Duas fotos, com segunda tentativa."
+  },
+  "cv-cadeira": {
+   "obj": "Hot seat: o aluno é o fotógrafo e defende as fotos para a Nina, editora.",
+   "perg": "Why did you take this photo?",
+   "pula": "Duas perguntas e escolha da capa."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; cronometre uma segunda tentativa se der.",
+   "perg": "Can you speak for 90 seconds about a photo?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Falar de fotos e lugares da vida do aluno com a linguagem da rota.",
+   "perg": "What is the last photo on your phone?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre dois lugares das fotos e justificar com palpites.",
+   "perg": "Which place would you rather be?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Descrever uma foto do celular do aluno seguindo as quatro paradas.",
+   "perg": "What might happen there later?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Photos and places in your life.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "It looks like…",
+    "in the background",
+    "next to",
+    "It might be… because…"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PHONE",
+     "q": "What is the last photo on your phone?",
+     "fup": "What is in the background?",
+     "st": [
+      "It shows …",
+      "In the background, there is …"
+     ],
+     "ex": "It shows my dog on the sofa. In the background, there is a window."
+    },
+    {
+     "k": "A MARKET",
+     "q": "Is there a market near your home?",
+     "fup": "What does it look like?",
+     "st": [
+      "There is a … near …",
+      "It looks like …"
+     ],
+     "ex": "There is a street market on Sundays. It looks like a big colorful party."
+    },
+    {
+     "k": "YOUR KITCHEN",
+     "q": "Describe your kitchen in three details.",
+     "fup": "What is next to the fridge?",
+     "st": [
+      "On the left, there is …",
+      "Next to …, there are some …"
+     ],
+     "ex": "On the left, there is a small table. Next to the fridge, there are some plants."
+    },
+    {
+     "k": "A STATION",
+     "q": "What is a station or airport near you like at night?",
+     "fup": "Is it busy or empty?",
+     "st": [
+      "It might be … because …"
+     ],
+     "ex": "It might be empty after midnight because the last train leaves at eleven."
+    },
+    {
+     "k": "A GOOD PHOTO",
+     "q": "What makes a photo good, for you?",
+     "fup": "Do you take many photos?",
+     "st": [
+      "A good photo has …",
+      "I take …"
+     ],
+     "ex": "A good photo has a story. I take a lot of photos of food."
+    },
+    {
+     "k": "A GUESS",
+     "q": "Look around your room. Guess what a stranger would think of you.",
+     "fup": "Why?",
+     "st": [
+      "They might think I … because …"
+     ],
+     "ex": "They might think I love reading because there are books everywhere."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Which photo would you step into?",
+   "p": "Pick a side. Your teacher takes the other.",
+   "palavras": [
+    "It looks…",
+    "It might be…",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "The market at dusk, or the quiet train station at night?",
+     "a": "The market",
+     "b": "The station",
+     "fa": [
+      "The market. It looks warm and full of food.",
+      "It might be the best time to buy fruit."
+     ],
+     "fb": [
+      "The station. It looks calm and a little mysterious.",
+      "It might be the start of a trip."
+     ]
+    },
+    {
+     "q": "Photos with people, or photos of places only?",
+     "a": "With people",
+     "b": "Places only",
+     "fa": [
+      "With people. Faces tell a story.",
+      "A place without people looks sad."
+     ],
+     "fb": [
+      "Places only. You can imagine the story yourself.",
+      "That’s why the test uses them."
+     ]
+    },
+    {
+     "q": "Describe a photo with many details, or a few strong ideas?",
+     "a": "Many details",
+     "b": "A few strong ideas",
+     "fa": [
+      "Many details. Ninety seconds is a long time.",
+      "Details show vocabulary."
+     ],
+     "fb": [
+      "A few strong ideas. The guess with a reason is the best part.",
+      "Too many details sound like a list."
+     ]
+    },
+    {
+     "q": "A home kitchen or a restaurant kitchen?",
+     "a": "Home kitchen",
+     "b": "Restaurant kitchen",
+     "fa": [
+      "A home kitchen. It looks cozy and real.",
+      "It might have a family story."
+     ],
+     "fb": [
+      "A restaurant kitchen. It looks busy and exciting.",
+      "There are more things to describe."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Photo",
+   "t": "Describe a photo from your phone.",
+   "p": "Follow the route. One stop at a time.",
+   "prof": "Ask the student to open a photo on their phone (no people is easier). Time the whole thing at the end: aim for 60 seconds or more.",
+   "passos": [
+    {
+     "q": "Big picture: what does the photo show?",
+     "st": [
+      "This photo shows …"
+     ],
+     "ex": "This photo shows a small beach on a cloudy afternoon."
+    },
+    {
+     "q": "Places: what is on the left, on the right, in the background?",
+     "st": [
+      "On the left, …",
+      "In the background, …"
+     ],
+     "ex": "On the left, there are some boats. In the background, there are green hills."
+    },
+    {
+     "q": "Details: two small things you can see.",
+     "st": [
+      "Next to …, there is …",
+      "There are some …"
+     ],
+     "ex": "Next to the boats, there is an old red chair. There are some shells on the sand."
+    },
+    {
+     "q": "A guess with a reason.",
+     "st": [
+      "It might be … because …"
+     ],
+     "ex": "It might be winter because the beach is empty and the sky is grey."
+    }
+   ],
+   "fim": "Now say it all again without stopping. That’s your 90 seconds."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

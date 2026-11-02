@@ -1,0 +1,98 @@
+/* ============================================================
+   HAD I KNOWN · THE INVERT SWITCH · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: painel de cabine à noite —
+   preto-azulado, fósforo ciano dos instrumentos, letra condensada de
+   painel; a chave INVERT que liga; a peça IF cai em laranja de alerta e
+   o auxiliar sobe em ciano; a rota com o caminho real cheio e o outro
+   tracejado que acende.
+   ============================================================ */
+:root{
+  --noite:#04070b; --noite-rgb:4,7,11; --tinta:#e9f0f2;
+  --t1:#f1f6f7; --t2:#c2ccd0; --t2-rgb:194,204,208; --t3:#7f8c93;
+  --ac:#5fe0d2; --ac2:#b5f3ec; --alerta:#ff9f5a;
+  --vidro:rgba(233,240,242,.05); --vidro2:rgba(233,240,242,.085); --vidro3:rgba(233,240,242,.12);
+  --fio:rgba(222,234,238,.12); --fio2:rgba(222,234,238,.22); --luz:rgba(233,240,242,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Barlow Condensed',system-ui,sans-serif; --ui:'Barlow',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:18px; --r2:12px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#03211e}
+.btn.cheio{color:#03211e}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:700 clamp(64px,6.4vw,124px)/.88 var(--disp);letter-spacing:-.01em;text-transform:uppercase}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.45vw,25px)/1.45 var(--ui);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.hk-ops{display:grid;gap:6px} .hk-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:10px auto;width:100%} .hk-ops.linha .versao{text-align:center;min-height:56px;font-weight:700}
+.hk-rot{margin:0;font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.hk-linha-ok{display:flex;align-items:center;gap:12px} .hk-linha-ok .aprova{flex:1;margin:0} .hk-linha-ok.centro{max-width:1200px;margin:0 auto;width:100%}
+
+/* vídeo selado */
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center;padding:16px}
+.selo-v b{font:800 30px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--ui);color:var(--t2);max-width:28em}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* o painel e a chave INVERT */
+.hk-painel{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center;padding:20px 22px;border-radius:var(--r1);background:linear-gradient(180deg,#0b1218,#070c11);border:1px solid #1c2a33;box-shadow:inset 0 1px 0 rgba(255,255,255,.04);max-width:1200px;margin:0 auto;width:100%}
+.hk-chave{display:grid;justify-items:center;gap:8px;padding:12px 10px;border-radius:10px;background:#0a1015;border:1px solid #22323c}
+.hk-chave i{position:relative;width:34px;height:64px;border-radius:18px;background:#141e25;border:2px solid #2b3c47}
+.hk-chave i::after{content:'';position:absolute;left:3px;right:3px;bottom:4px;height:26px;border-radius:14px;background:#4a5a63;transition:all .35s cubic-bezier(.3,1.4,.5,1)}
+.hk-chave.on i{border-color:var(--ac)} .hk-chave.on i::after{bottom:30px;background:var(--ac);box-shadow:0 0 14px rgba(95,224,210,.55)}
+.hk-chave small{font:800 10px var(--mono);letter-spacing:.14em;color:var(--t3)} .hk-chave.on small{color:var(--ac2)}
+.hk-linhas{display:grid;gap:10px}
+.hk-linha{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;align-items:center}
+.hk-linha small{font:800 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.hk-linha div{display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-height:44px}
+.hk-peca{padding:6px 12px;border-radius:6px;background:#121b22;border:1px solid #26353f;font:700 clamp(17px,1.35vw,23px) var(--disp);letter-spacing:.02em;color:var(--t2);animation:entra .45s both}
+.hk-peca.se{border-color:var(--alerta);color:var(--alerta)}
+.hk-peca.se.cai{transform:translateY(10px) rotate(-8deg);opacity:.35;text-decoration:line-through;animation:none;transition:all .5s}
+.hk-peca.some{opacity:.4;animation:none}
+.hk-peca.aux{background:var(--ac);border-color:var(--ac2);color:#03211e;box-shadow:0 0 16px rgba(95,224,210,.35)}
+.hk-peca.nao{border-color:var(--ac);color:var(--ac2)}
+@keyframes entra{from{transform:translateX(-14px);opacity:0}}
+.hk-vazio{font:700 12px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.hk-virg{margin-left:2px;font:800 1em var(--disp);color:var(--ac)}
+.hk-resto{margin:4px 0 0;font:500 clamp(16px,1.2vw,20px) var(--ui);color:var(--t3)}
+.hk-faixa{margin:0 auto 10px;max-width:1200px;font:700 13px/1.5 var(--mono);letter-spacing:.04em;color:var(--t2)}
+
+/* a rota */
+.hk-rota{display:grid;gap:12px;padding:16px 18px;border-radius:var(--r1);background:#070c11;border:1px solid #1c2a33}
+.hk-rota svg{width:100%;height:auto}
+.hk-r-real{fill:none;stroke:var(--t2);stroke-width:4;stroke-linecap:round}
+.hk-r-outro{fill:none;stroke:#2b3c47;stroke-width:3;stroke-dasharray:8 8;transition:stroke .6s}
+.hk-r-outro.on{stroke:var(--ac);filter:drop-shadow(0 0 6px rgba(95,224,210,.6))}
+.hk-r-no{fill:var(--alerta)} .hk-r-fim{fill:var(--t3)} .hk-r-fim.on{fill:var(--ac)}
+.hk-r-txt{display:grid;gap:8px}
+.hk-r-txt p{margin:0;display:grid;gap:4px;padding:10px 14px;border-radius:10px;font:600 clamp(17px,1.3vw,22px)/1.35 var(--ui)}
+.hk-r-txt small{font:800 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.hk-real{background:#0e161c;border-left:3px solid var(--t2)}
+.hk-outro{border:1px dashed #2b3c47;color:var(--t3)} .hk-outro.on{border:1px solid var(--ac);color:var(--t1);background:rgba(95,224,210,.06)} .hk-outro.on small{color:var(--ac2)}
+
+/* a regra */
+.hk-tres{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 12px}
+.hk-tipo{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .hk-tipo small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .hk-tipo p{margin:0;font:700 clamp(20px,1.6vw,28px) var(--disp);color:var(--ac2)}
+.hk-lei{margin:0 0 12px;text-align:center;font:500 clamp(16px,1.2vw,20px)/1.5 var(--ui);color:var(--t2)} .hk-lei b{color:var(--ac2)}
+
+/* o café */
+.hk-cafe{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:1100px;margin:0 auto 12px;width:100%;padding:12px 18px;border-radius:var(--r2);border-color:rgba(95,224,210,.35)}
+.hk-cafe b{font:800 13px var(--mono);letter-spacing:.12em;color:var(--ac2)} .hk-cafe small{margin-left:auto;font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)}
+
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .hk-painel{padding:14px;gap:14px} .lado-fim .hk-linha{grid-template-columns:1fr} .lado-fim .hk-resto{display:none}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .hk-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .hk-tres{grid-template-columns:1fr} .hk-painel{grid-template-columns:1fr;padding:14px} .hk-chave{grid-auto-flow:column;align-items:center;justify-content:start} .hk-chave i{width:56px;height:30px} .hk-chave i::after{top:3px;bottom:3px;left:3px;right:auto;width:22px;height:auto} .hk-chave.on i::after{left:28px;bottom:3px} .hk-linha{grid-template-columns:1fr;gap:4px} .hk-peca{font-size:15px;padding:4px 8px} }
+
+/* 22/10/2026 · os formatos novos (formatos.js) */
+.c-video .fm-folha,.c-rota .fm-folha{width:100%}
+.c-video .fm-linhas li{padding:9px 0 9px 36px}
+.c-rota .f2-liga{gap:10px}
+.c-caixa .hk-painel{margin:0 auto 12px}

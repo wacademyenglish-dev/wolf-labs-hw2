@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Speech · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,500;1,6..96,700&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Speech · The Shape of a Line</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Speech · The Shape of a Line</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Two speeches.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: Rhetoric is grammar you can hear: the same shape, again and again.</p><p style="margin:0 0 6px"><b>Short class (about 51 min):</b> I You and the Microphone · III Why the Moon? · V The Sleeping Hall · VI The Rule · VII Ninety Seconds · IX The Town Jury · X The Lamp Stays On. Skip if you’re short on time: VIII (marked EXTRA on your screen). Full lesson: about 58 min.</p><p style="margin:0"><b>Open with:</b> “When was the last time you spoke in front of a group? What did your body do?”</p></div><!--/prep-->
+    <p>Two speeches. The real one: September 12, 1962, a stadium in Texas. A president has eighteen minutes to convince a hot crowd that going to the moon is worth the money, and he does it with pure rhetoric: three-part lists, opposites in the same frame, questions nobody answers, the same words again and again. The invented one: Harlow Falls, a small town where the Lantern Library, open until midnight under a glass dome since 1923, will become a parking garage if the council votes yes on Friday. The student gets ninety seconds at the podium, live on the town radio. Five devices: <b>tricolon</b>, <b>parallelism</b>, <b>antithesis</b>, <b>rhetorical question</b>, <b>anaphora</b>.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p>School essays punish repetition, so students swap a repeated word for a synonym and kill the anaphora (<i>It opened its doors to me. It welcomed my sister.</i>). Say it clearly: in writing, variety; on a stage, repetition. Also: <i>because is easy</i> (no subject), <i>Why we should…?</i> (no inversion), mixed forms in a list (<i>to read, studying, for meeting</i>), and <i>etc.</i> at the end of a tricolon. Scene V: the student reads the flat line, says it out loud and taps Check (six seats); scene VI: find the broken part of five lines, with the five devices in the corner.</p>
+    <h4>ON SCREEN</h4>
+    <p>When the line comes out right, it draws its shape on the stage: a tricolon as three steps that grow, an anaphora with the repeated start aligned in gold, an antithesis or parallelism as two mirrored halves, a question with the auxiliary lit and a big “?” that nobody answers. In scene VII, the ON AIR meter rises as the student taps each of the six devices while the 90-second clock runs.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III: four short chapters from the 1962 moon speech (public domain), sealed until the first play. Before it, the student chooses how to open the speech and slides a ruler; in each chapter the student taps True or Lie (the ▶ replays the line); afterwards the student matches each device to a line of the speech. The speech is about space, not about a party: keep the focus on HOW he speaks.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>delighted</i>, <i>progress</i>, <i>challenge</i>, <i>ignorance</i> and <i>available</i>, before the video, in mystery meaning and the word in your life. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE TOWN JURY (IX) AND THE SURPRISE QUESTION</h4>
+    <p>Scene IX is now a jury with evidence: after the five-to-two vote, the student decides who pays for the glass dome, whether Councillor Reyes’ no vote was reasonable, and, back to the video, whether the moon was worth the money. They read the evidence, choose a verdict and say why with one device (an antithesis, a rhetorical question, a three-part list). There is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it) to make it harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and the Microphone, V The Sleeping Hall, VII Ninety Seconds, VIII Night Line and IX The Town Jury.</li>
+      <li><b>Listen</b>: II The Words, III Why the Moon? and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule.</li>
+      <li><b>Write</b>: X The Lamp Stays On.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE SPEECH (Main C1) · pergunta-surpresa · 28/10/2026 · recursos retóricos */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'video', tipo: 'Would you rather', q: 'Would you rather walk on the moon, or go to the bottom of the ocean?',
+    opc: ['The moon', 'The ocean'], st: ['I’d rather …, not because …, but because …', 'Who wouldn’t want to …?'],
+    ex: 'The ocean. Not because the moon is boring, but because the ocean is ours, and we still haven’t seen most of it.', push: 'Only one ticket, and it’s today. Do you go?' },
+  { cena: 'sala', tipo: 'And you?', q: 'Is there a place in your city you would fight to save?',
+    opc: ['A park or a square', 'A shop or a café', 'A school or a library'], st: ['It’s where I …, where I …, and where I …', 'What would the city be without …?'],
+    ex: 'A small bakery near my old school. It’s where I met my friends, where I did my homework, and where I still go on Sundays.', push: 'A big company wants to buy it tomorrow. What would you do?' },
+  { cena: 'regra', tipo: 'Opinion', q: 'Which speakers use the most rhetoric today?',
+    opc: ['Influencers', 'Coaches and gurus', 'Advertisements'], st: ['They don’t …; they …', 'Haven’t you noticed that …?'],
+    ex: 'Coaches and gurus. They don’t give information; they give energy. Haven’t you noticed that every video has three steps?', push: 'Is that manipulation, or just good communication?' },
+  { cena: 'radio', tipo: 'What if', q: 'You have ninety seconds on national radio tomorrow. What is your topic?',
+    opc: ['Something about my city', 'Something about my job', 'Something about young people'], st: ['My message is not …, but …', 'We need …, we need …, and we need …'],
+    ex: 'Young people. My message is not “work harder”, but “rest better”. We need sleep, we need time, and we need each other.', push: 'Say your first line now, with a rhetorical question.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE SPEECH (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O júri entra no lugar de "IX · Your Cause" (extra; cartões soltos de causas, repetidos pelo X · The Lamp
+   Stays On). A aula tem o pessoal (I) e o papel na rádio (VIII); faltava uma DECISÃO. Depois do 5 a 2, o
+   aluno é jurado em três casos com provas: quem paga a cúpula, o voto contra, e a pergunta do vídeo
+   (a Lua valeu o dinheiro?). A gramática (tricolon, antítese, pergunta retórica, anáfora) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'juri', troca: 'causa', est: 'o', min: 7, img: 'sala', rot: 'The Town Jury', t: 'Five to two: the library stays. Now three hard verdicts.',
+    p: 'Read the evidence, choose a verdict, and say why with one device.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The glass dome', sit: 'The Lantern stays open, but its 1923 glass dome needs repairs.',
+        provas: ['The repair costs $400,000.', 'A coffee company will pay it all, if its logo goes on the dome.', 'Without the sponsor, every family pays $12 more in tax next year.'],
+        q: 'Who should pay for the dome?', opc: ['The town, with taxes', 'The coffee company', 'Readers, with a small fee'],
+        st: ['Not because …, but because …', 'Who would want …?', 'It’s our …, our …, and our …'],
+        ex: 'The town. Not because the coffee company is bad, but because the dome belongs to everyone. Who wants to read under a logo?',
+        push: 'Twelve dollars is a lot for some families. Would you say that to their faces?' },
+      { tag: 'The no vote', sit: 'Councillor Reyes voted for the garage: shops on Main Street are closing because nobody can park.',
+        provas: ['Three shops closed this year.', 'The library has 400 visitors a week.', 'Reyes owns no shop on Main Street.'],
+        q: 'Her vote: reasonable or wrong?', opc: ['Reasonable', 'Wrong', 'Fair, but she lost'],
+        st: ['She voted not for …, but for …', 'Can a town live without …?', 'She was thinking about …'],
+        ex: 'Fair, but she lost. She voted not against books, but for the shops. Can a town live without shops? No. Can it live without a library? Also no.',
+        push: 'Next year she proposes a garage behind the library, smaller. Do you vote yes?' },
+      { tag: 'The moon', sit: 'Back to the stadium in Texas, 1962: the speech in the video.',
+        provas: ['The moon program cost billions of dollars.', 'It brought new technology that we still use.', 'Many people said the money was needed at home.'],
+        q: 'Was the moon worth the money?', opc: ['Worth it', 'Not worth it', 'Worth it, but not so fast'],
+        st: ['We went not because …, but because …', 'Why would a country …?', 'It was …, it was …, and it was …'],
+        ex: 'Worth it. It was expensive, it was risky, and it was the best advertisement for science in history. Why else would kids still dream about rockets?',
+        push: 'Today someone wants your country to pay for a trip to Mars. Same verdict?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "You, words, and a room full of people.",
+   "p": "Tap a card. Answer. Then your teacher answers."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen: they turn yellow."
+  },
+  "video": {
+   "t": "Texas, 1962. Why the moon?",
+   "p": "Answer first. Then tap True or Lie in each chapter."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again."
+  },
+  "sala": {
+   "t": "Tomorrow the council votes on the library.",
+   "p": "Say the flat line so nobody sleeps. Then tap Check."
+  },
+  "regra": {
+   "t": "Rhetoric is grammar you can hear.",
+   "p": "Find the broken part. Say the fix. Tap Check."
+  },
+  "foco": {
+   "t": "Live on the town radio. Ninety seconds.",
+   "p": "Start the clock. Deliver each beat. Tap each device."
+  },
+  "radio": {
+   "t": "After the vote, the radio calls.",
+   "p": "Answer each question with the device shown."
+  },
+  "cv-juri": {
+   "t": "Five to two: the library stays.",
+   "p": "Choose a verdict. Say why with one device."
+  },
+  "fim": {
+   "t": "What would you stand up to save?",
+   "p": "Three lines: a question, an antithesis, a repeat."
+  }
+ },
+ "prep": {
+  "obj": "Retórica como gramática que se ouve (tricolon, paralelismo, antítese, pergunta retórica, anáfora): o discurso da Lua de 1962 e a Lantern Library de Harlow Falls.",
+  "armadilha": "A escola ensina a trocar a palavra repetida por sinônimo e isso mata a anáfora; também listas com formas misturadas (to read, studying), “Why we should…?” sem inversão e “etc.” no fim do tricolon.",
+  "pal": [
+   "tricolon",
+   "parallelism",
+   "antithesis",
+   "rhetorical question",
+   "anaphora",
+   "challenge",
+   "progress",
+   "podium"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: dois discursos e cinco recursos que dão forma à frase.",
+   "perg": "When did you last speak in front of a group?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "O aluno, as palavras e uma sala cheia; o professor responde também. Guardar o lugar que o aluno defenderia.",
+   "perg": "What did your body do the last time you spoke in public?",
+   "pula": "Duas cartas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (delighted, progress, challenge, ignorance, available) antes de assistir.",
+   "perg": "What do you think “challenge” means here?",
+   "pula": "Mostre as cinco e siga para o vídeo."
+  },
+  "video": {
+   "obj": "O discurso da Lua em quatro capítulos com True or Lie; foco em COMO ele fala, depois ligar recurso e fala.",
+   "perg": "How does he make an expensive idea sound necessary?",
+   "pula": "Assista e faça só dois capítulos de tarefas."
+  },
+  "falas": {
+   "obj": "Cada fala do vídeo, uma por uma; as palavras amarelas abrem a explicação.",
+   "perg": "Which device is in this line?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "sala": {
+   "obj": "Salão vazio na véspera da votação: frase sem graça vira frase que ninguém dorme ouvindo.",
+   "perg": "How would you say it so nobody falls asleep?",
+   "pula": "Quatro cadeiras bastam."
+  },
+  "regra": {
+   "obj": "Cinco frases com uma parte quebrada; o aluno diz o conserto com os cinco recursos no canto.",
+   "perg": "What’s broken in this line?",
+   "pula": "Três frases bastam."
+  },
+  "foco": {
+   "obj": "Noventa segundos ao vivo na rádio: seis batidas, um recurso por linha, medidor ON AIR.",
+   "perg": "Which device will you use now?",
+   "pula": "Quatro batidas bastam."
+  },
+  "radio": {
+   "obj": "Depois da votação, o apresentador da madrugada liga; cada resposta com o recurso indicado.",
+   "perg": "Why did the town vote to keep it?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-juri": {
+   "obj": "A biblioteca fica, cinco a dois; agora três vereditos difíceis, cada um com um recurso.",
+   "perg": "What’s your verdict, and why?",
+   "pula": "Um veredito basta."
+  },
+  "fim": {
+   "obj": "Escrita: o lugar da cena I em três linhas, pergunta, antítese e anáfora; vai para My notes.",
+   "perg": "What would you stand at a podium to save?",
+   "pula": "Uma linha basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre falar em público, com um recurso retórico por resposta.",
+   "perg": "Can you say that with three parts?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre retórica, cidade e espaço, usando antítese e pergunta retórica.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Desafio: o aluno defende o OUTRO lado, o estacionamento, num discurso curto com os recursos.",
+   "perg": "Can you make the parking garage sound noble?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Give your answer a shape.",
+   "p": "Pick a card. Use one device.",
+   "palavras": [
+    "tricolon",
+    "antithesis",
+    "anaphora",
+    "rhetorical question",
+    "parallelism"
+   ],
+   "cartas": [
+    {
+     "k": "A GREAT SPEAKER",
+     "q": "Who is the best speaker you have ever heard live?",
+     "fup": "What did they do with their voice?",
+     "st": [
+      "They didn’t just …, they …",
+      "Clear, calm and …"
+     ],
+     "ex": "She didn’t just talk to the room, she talked to each of us. Clear, calm and completely sure."
+    },
+    {
+     "k": "YOUR TOWN",
+     "q": "What place in your city should never be closed?",
+     "fup": "Who would fight for it?",
+     "st": [
+      "It’s where … It’s where … It’s where …"
+     ],
+     "ex": "The square. It’s where I learned to ride a bike. It’s where I had my first date. It’s where I still go to think."
+    },
+    {
+     "k": "WHY NOT?",
+     "q": "What should your city spend money on, and why?",
+     "fup": "Who would disagree?",
+     "st": [
+      "Why should we …? Because …",
+      "Not because …, but because …"
+     ],
+     "ex": "Why should we pay for bike lanes? Not because they’re easy, but because they’re safe."
+    },
+    {
+     "k": "SPEND OR SAVE",
+     "q": "Is a big public project ever worth its price?",
+     "fup": "Can you name one?",
+     "st": [
+      "We choose … not because …, but because …"
+     ],
+     "ex": "We choose the new hospital not because it’s cheap, but because it’s needed."
+    },
+    {
+     "k": "REPETITION",
+     "q": "Were you taught at school never to repeat a word?",
+     "fup": "Do you agree now?",
+     "st": [
+      "In writing, …; on a stage, …"
+     ],
+     "ex": "In writing, I was taught variety; on a stage, I now see repetition is power."
+    },
+    {
+     "k": "STAGE FRIGHT",
+     "q": "What would help you most before a big speech?",
+     "fup": "Have you tried it?",
+     "st": [
+      "I need …, …, and …",
+      "Less …, more …"
+     ],
+     "ex": "I need water, silence and one friendly face. Less coffee, more breathing."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "Not because …, but because …",
+    "Why should we …?",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Rhetoric: a tool for truth or a tool for manipulation?",
+     "a": "For truth",
+     "b": "Manipulation",
+     "fa": [
+      "For truth. A good idea deserves a good shape.",
+      "Why should the truth sound boring?"
+     ],
+     "fb": [
+      "Manipulation. A beautiful line can sell a bad idea.",
+      "Shape is not proof."
+     ]
+    },
+    {
+     "q": "A library open until midnight or a new parking garage?",
+     "a": "The library",
+     "b": "The garage",
+     "fa": [
+      "The library. We don’t need more cars; we need more readers.",
+      "A town without a library is a town without a memory."
+     ],
+     "fb": [
+      "The garage. People need to park to reach the shops.",
+      "Nostalgia doesn’t pay the town’s bills."
+     ]
+    },
+    {
+     "q": "Space exploration: worth the money, or should we fix Earth first?",
+     "a": "Worth it",
+     "b": "Earth first",
+     "fa": [
+      "Worth it. Progress here often starts up there.",
+      "Not because it is easy, but because it is hard."
+     ],
+     "fb": [
+      "Earth first. Why go to the moon when people go hungry?",
+      "The challenge is right here."
+     ]
+    },
+    {
+     "q": "Speeches: read from paper or from memory?",
+     "a": "From paper",
+     "b": "From memory",
+     "fa": [
+      "From paper. The words are too important to lose.",
+      "Presidents read too."
+     ],
+     "fb": [
+      "From memory. Eye contact is half the speech.",
+      "Paper is a wall between you and the room."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Four questions, two sides, one room still awake."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Other Side",
+   "t": "Now defend the parking garage.",
+   "p": "One step, one device. Make it convincing.",
+   "prof": "A rhetoric drill, not a belief: praise any device used well, even for the side they voted against.",
+   "passos": [
+    {
+     "q": "Open with a rhetorical question.",
+     "st": [
+      "How many times have we …?",
+      "Why should …?"
+     ],
+     "ex": "How many times have we driven around the square for twenty minutes, looking for a space?"
+    },
+    {
+     "q": "Give three reasons: a tricolon.",
+     "st": [
+      "It will bring …, …, and …"
+     ],
+     "ex": "It will bring shoppers, jobs, and life back to Main Street."
+    },
+    {
+     "q": "Use an antithesis.",
+     "st": [
+      "We don’t need …; we need …",
+      "Not …, but …"
+     ],
+     "ex": "We don’t need a museum of the past; we need a town that works today."
+    },
+    {
+     "q": "Close with anaphora: the same start, three times.",
+     "st": [
+      "Vote for … Vote for … Vote for …"
+     ],
+     "ex": "Vote for space. Vote for business. Vote for a Harlow Falls that moves forward."
+    }
+   ],
+   "fim": "Speech over. Still five to two, but what a speech."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

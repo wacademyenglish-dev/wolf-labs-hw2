@@ -1,0 +1,47 @@
+{
+ "yt": "OHZIHsXD5q8",
+ "de": 2112,
+ "ate": 2342,
+ "alvo": {
+  "w0": {
+   "palavras": [
+    "boring"
+   ],
+   "junto": 0,
+   "titulo": "boring",
+   "texto": "<b>boring</b>: not interesting at all. You learned it before the video."
+  },
+  "w1": {
+   "palavras": [
+    "procedure"
+   ],
+   "junto": 0,
+   "titulo": "procedure",
+   "texto": "<b>procedure</b>: the official steps to do something. You learned it before the video."
+  },
+  "w2": {
+   "palavras": [
+    "warm"
+   ],
+   "junto": 0,
+   "titulo": "warm",
+   "texto": "<b>warm</b>: a little hot, not very hot. You learned it before the video."
+  },
+  "w3": {
+   "palavras": [
+    "trapped"
+   ],
+   "junto": 0,
+   "titulo": "trapped",
+   "texto": "<b>trapped</b>: in a place you can’t get out of. You learned it before the video."
+  },
+  "w4": {
+   "palavras": [
+    "simulation"
+   ],
+   "junto": 0,
+   "titulo": "simulation",
+   "texto": "<b>simulation</b>: a practice that looks real, but isn’t. You learned it before the video."
+  }
+ }
+}

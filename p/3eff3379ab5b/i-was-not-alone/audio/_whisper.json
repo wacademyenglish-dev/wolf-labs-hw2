@@ -1,0 +1,18 @@
+{
+ "abre.mp3": "It is nine o'clock. The house is quiet. Rex is at the door. You are alone here. Or you are not.",
+ "fecha.mp3": "It was nine o'clock. The house was quiet. Rex was at the door. You were alone here. You were not.",
+ "q1.mp3": "Were you alone?",
+ "q2.mp3": "Was the door open?",
+ "q3.mp3": "Were you scared?",
+ "q4.mp3": "Was Rex quiet?",
+ "q5.mp3": "with a Windows shot.",
+ "q6.mp3": "Was it cold in there?",
+ "r1.mp3": "The door was not open.",
+ "r2.mp3": "The door wasn't open.",
+ "r3.mp3": "The lights were not on.",
+ "r4.mp3": "The lights weren't on.",
+ "r5.mp3": "I was not alone.",
+ "r6.mp3": "I wasn't alone.",
+ "r7.mp3": "They were not asleep.",
+ "r8.mp3": "They weren't asleep."
+}

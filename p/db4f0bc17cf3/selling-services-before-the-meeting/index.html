@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -117,5 +118,285 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "cliente": {
+   "t": "Two minutes of small talk.",
+   "p": "Ask about her life. Then say “And you?”"
+  },
+  "leitura": {
+   "t": "Leo’s First Big Client · Chapter 1.",
+   "p": "Read it out loud. Then answer."
+  },
+  "multipla": {
+   "t": "Six small talk questions.",
+   "p": "Listen. Choose the best answer. Say it."
+  },
+  "descobre": {
+   "t": "Which one is English?",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "cadeira": {
+   "t": "The meeting starts in two minutes.",
+   "p": "You ask. Listen, react, say “And you?”"
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose. Say why."
+  },
+  "cartao": {
+   "t": "Five icebreakers for your next meeting.",
+   "p": "Write them. Then use them, one by one."
+  },
+  "pode": {
+   "t": "Lesson 16: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 16: small talk com like / love + -ing e respostas curtas no passado (It was great, Yes, I did); a Janet Moore, da Pine Hill Foods, e o Leo no elevador com o CEO.",
+  "armadilha": "O brasileiro diz “I like play tennis” (sem -ing), “Was great.” (sem sujeito), “Did you went…?” e “What you did?”.",
+  "pal": [
+   "How was your weekend?",
+   "It was great, thanks.",
+   "And yours?",
+   "I love + -ing",
+   "Do you like…?",
+   "Yes, I did.",
+   "icebreaker",
+   "Shall we start?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: os dois primeiros minutos decidem o clima da reunião.",
+   "perg": "Good morning! You’re early. How are you?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "cliente": {
+   "obj": "Arena do cliente: o professor é a Janet e responde só o que for perguntado.",
+   "perg": "How was your weekend?",
+   "pula": "Quatro fatos bastam."
+  },
+  "leitura": {
+   "obj": "Ler o capítulo 1: o Leo faz small talk no elevador com o CEO.",
+   "perg": "What did Leo say about long meetings?",
+   "pula": "Leia e faça uma pergunta."
+  },
+  "multipla": {
+   "obj": "Ouvir seis perguntas de small talk, escolher a resposta e dizê-la.",
+   "perg": "What is the best answer here?",
+   "pula": "Quatro perguntas bastam."
+  },
+  "descobre": {
+   "obj": "Comparar pares e achar as regras: like + -ing, sujeito, did + verbo base.",
+   "perg": "Why “playing”, not “play”?",
+   "pula": "Três pares bastam."
+  },
+  "cadeira": {
+   "obj": "Cadeira: o aluno faz o small talk e o professor responde como cliente.",
+   "perg": "Do you like traveling for work?",
+   "pula": "Quatro cartas bastam."
+  },
+  "escolha": {
+   "obj": "Escolher entre A e B e dizer por quê, com because.",
+   "perg": "A or B? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: cinco quebra-gelos para a próxima reunião real, usados com o professor.",
+   "perg": "Which one will you use first?",
+   "pula": "Três quebra-gelos bastam."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 16: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you make small talk with a client now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais small talk real do aluno, com like + -ing e passado curto.",
+   "perg": "What do you love doing on weekends?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre dois lados sobre small talk e reuniões, com frase pronta.",
+   "perg": "Which one, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é o cliente e o professor puxa o small talk.",
+   "perg": "How was your weekend?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More small talk.",
+   "p": "Pick a card. Answer, then say “And you?”",
+   "palavras": [
+    "I like + -ing",
+    "It was …",
+    "Yes, I did. / No, I didn’t."
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WEEKEND",
+     "q": "How was your weekend?",
+     "fup": "What did you do?",
+     "st": [
+      "It was great, thanks.",
+      "I …"
+     ],
+     "ex": "It was great, thanks. I watched a soccer game. And yours?"
+    },
+    {
+     "k": "FREE TIME",
+     "q": "What do you like doing after work?",
+     "fup": "Every day?",
+     "st": [
+      "I like …ing.",
+      "I love …ing."
+     ],
+     "ex": "I love cooking. I cook every night."
+    },
+    {
+     "k": "TRAVEL",
+     "q": "Do you like traveling for work?",
+     "fup": "Where did you go last time?",
+     "st": [
+      "Yes, I do. / No, I don’t.",
+      "I went to …"
+     ],
+     "ex": "Yes, I do. I went to Recife last month."
+    },
+    {
+     "k": "THE TRAFFIC",
+     "q": "How was the traffic today?",
+     "fup": "How did you come?",
+     "st": [
+      "It was terrible / OK.",
+      "I came by …"
+     ],
+     "ex": "It was terrible. I came by car, and it took an hour."
+    },
+    {
+     "k": "SPORTS",
+     "q": "Do you like watching sports?",
+     "fup": "Did you watch the game on Sunday?",
+     "st": [
+      "I love watching …",
+      "Yes, I did. / No, I didn’t."
+     ],
+     "ex": "I love watching soccer. No, I didn’t watch it. I was tired."
+    },
+    {
+     "k": "FOOD",
+     "q": "Do you like trying new restaurants?",
+     "fup": "Did you try one this month?",
+     "st": [
+      "Yes, I do.",
+      "I tried …"
+     ],
+     "ex": "Yes, I do. I tried a Japanese place near my office."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I like …ing",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Small talk: two minutes or no minutes?",
+     "a": "Two minutes",
+     "b": "No minutes",
+     "fa": [
+      "Two minutes. The client relaxes."
+     ],
+     "fb": [
+      "No minutes. The client is busy."
+     ]
+    },
+    {
+     "q": "Talk about soccer or the weather?",
+     "a": "Soccer",
+     "b": "The weather",
+     "fa": [
+      "Soccer. I love talking about it."
+     ],
+     "fb": [
+      "The weather. It’s safe."
+     ]
+    },
+    {
+     "q": "Arrive early or arrive on time?",
+     "a": "Early",
+     "b": "On time",
+     "fa": [
+      "Early. I like having time for small talk."
+     ],
+     "fb": [
+      "On time. I don’t like waiting."
+     ]
+    },
+    {
+     "q": "Meetings online or in person?",
+     "a": "Online",
+     "b": "In person",
+     "fa": [
+      "Online. I don’t like driving."
+     ],
+     "fb": [
+      "In person. Small talk is better."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the client now.",
+   "p": "Your teacher is the seller.",
+   "aluno": "Listen to the seller. Answer as the client, short and friendly. Then ask: And you?",
+   "perguntas": [
+    "Good morning! How are you?",
+    "How was your weekend?",
+    "Did you do anything fun?",
+    "Do you like working here?",
+    "What do you like doing on vacation?",
+    "Shall we start?"
+   ],
+   "st": [
+    "It was …, thanks.",
+    "I love …ing.",
+    "Yes, let’s start."
+   ],
+   "ex": "It was great, thanks. I love walking on the beach. And yours?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

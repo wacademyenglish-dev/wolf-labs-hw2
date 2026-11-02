@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Café Where We Met",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/17e1c58d1ef5/the-cafe-where-we-met/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "relative clauses: where for a place (the café where we met), which / that for a thing, who for a person; the pronoun is not repeated (no where ... there, no which ... it); the little word stays at the end (the song we danced to)",
   "abrir": "What is your favorite place in your city?",
   "fecho": "<b>where</b> = a place (<i>the café where we met</i>). <b>which / that</b> = a thing. <b>who</b> = a person. Say it once: never <i>where we met there</i>. The little word stays at the end: <i>the song we danced to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo walk down his street. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/17e1c58d1ef5/the-cafe-where-we-met/img/live-rua.webp",
+      "img": "../img/live-rua.webp",
       "leg": "A wet street at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This is the café where I work.",
-          "img": "https://wolf-labs.pages.dev/p/17e1c58d1ef5/the-cafe-where-we-met/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "He is the man who owns the bookstore.",
-          "img": "https://wolf-labs.pages.dev/p/17e1c58d1ef5/the-cafe-where-we-met/img/live-rua.webp",
+          "img": "../img/live-rua.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "That is the bridge we walked across.",
-          "img": "https://wolf-labs.pages.dev/p/17e1c58d1ef5/the-cafe-where-we-met/img/live-ponte.webp",
+          "img": "../img/live-ponte.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/17e1c58d1ef5/the-cafe-where-we-met/img/live-guia.webp",
+      "img": "../img/live-guia.webp",
       "leg": "A little map in a notebook",
       "pede": "Look at the picture: a little map in a guidebook. Write 2 or 3 sentences about places and people in your city. Use <b>where</b>, <b>which / that</b> or <b>who</b>.",
       "ph": "This is the place where …",

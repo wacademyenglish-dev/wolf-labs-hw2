@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Three Out of Three",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0bc6cbfc37a7/three-out-of-three/img/live-corredor.webp",
+  "capa": "../img/live-corredor.webp",
   "alvo": "the passive voice: be + third form, the thing that suffers the action in front; by only when the doer matters; happen, arrive, come, die have no passive; never was stole, was happened",
   "abrir": "What was done for you this week by someone else?",
   "fecho": "<b>Passive</b> = <b>was / were</b> + third form, and the thing the action happens to goes first: <i>The stage was cleaned.</i> Add <b>by</b> only when the doer matters: <i>The play was written by a student.</i> <b>Happen, arrive, come, die</b> never go into the passive: <i>It happened</i>, never <i>it was happened</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before opening night. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/0bc6cbfc37a7/three-out-of-three/img/live-microfone.webp",
+      "img": "../img/live-microfone.webp",
       "leg": "A microphone on an empty stage",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The stage was cleaned this morning.",
-          "img": "https://wolf-labs.pages.dev/p/0bc6cbfc37a7/three-out-of-three/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "A new microphone was bought yesterday.",
-          "img": "https://wolf-labs.pages.dev/p/0bc6cbfc37a7/three-out-of-three/img/live-microfone.webp",
+          "img": "../img/live-microfone.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The tickets were sold in two days.",
-          "img": "https://wolf-labs.pages.dev/p/0bc6cbfc37a7/three-out-of-three/img/live-respiro.webp",
+          "img": "../img/live-respiro.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0bc6cbfc37a7/three-out-of-three/img/live-corredor.webp",
+      "img": "../img/live-corredor.webp",
       "leg": "An empty corridor at night",
       "pede": "Look at the picture: an empty corridor in a building at night. Write 2 or 3 sentences about what was done here today. Use the passive: <b>was / were</b> + third form.",
       "ph": "The floor was … The lights were …",

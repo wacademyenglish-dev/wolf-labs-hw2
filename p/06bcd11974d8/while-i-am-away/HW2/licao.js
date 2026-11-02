@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "While I Am Away",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/06bcd11974d8/while-i-am-away/img/live-cozinha.webp",
+  "capa": "../img/live-cozinha.webp",
   "alvo": "present simple (every day: I feed) versus present continuous (now: I am feeding = am / is / are + -ing); he / she / it + -s",
   "abrir": "What are you doing right now?",
   "fecho": "<b>Every day</b> = one piece: <i>I feed the horses.</i> <b>Now</b> = two pieces: <i>I am feeding the horses.</i> With he, she, it, every day: add <b>-s</b>: <i>She feeds the chickens.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia calls Leo at the farm. A new scene, about 30 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/06bcd11974d8/while-i-am-away/img/live-chuva.webp",
+      "img": "../img/live-chuva.webp",
       "leg": "The farm, in the rain",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -91,17 +91,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The horses are eating hay now.",
-          "img": "https://wolf-labs.pages.dev/p/06bcd11974d8/while-i-am-away/img/live-cavalos.webp",
+          "img": "../img/live-cavalos.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I clean the stable every morning.",
-          "img": "https://wolf-labs.pages.dev/p/06bcd11974d8/while-i-am-away/img/live-estabulo.webp",
+          "img": "../img/live-estabulo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "It is raining, so I am drinking coffee.",
-          "img": "https://wolf-labs.pages.dev/p/06bcd11974d8/while-i-am-away/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -151,7 +151,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/06bcd11974d8/while-i-am-away/img/live-chuva.webp",
+      "img": "../img/live-chuva.webp",
       "leg": "A farm yard in the rain",
       "pede": "Look at the picture: a farm yard in the rain. Write 2 or 3 sentences: what is happening <b>now</b>, and what you do <b>every day</b> on a farm.",
       "ph": "It is raining now. I …",

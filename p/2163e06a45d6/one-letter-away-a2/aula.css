@@ -1,0 +1,75 @@
+/* ============================================================
+   ONE LETTER AWAY · THE CHAT · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: domingo à noite no sofá; uma
+   TELA DE CHAT escura (sem marca): balões do Tom à direita em azul-ardósia,
+   da Ana à esquerda em grafite; o slot da terminação pisca; quando a Ana
+   não entende, o balão dela fica rosado. Acento: azul de notificação.
+   ============================================================ */
+:root{
+  --noite:#08090d; --noite-rgb:8,9,13; --tinta:#e8eaf2;
+  --t1:#eef0f7; --t2:#c5c9d8; --t2-rgb:197,201,216; --t3:#8a8fa2;
+  --ac:#5fa8ff; --ac2:#a9cfff; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(232,234,242,.05); --vidro2:rgba(232,234,242,.085); --vidro3:rgba(232,234,242,.12);
+  --fio:rgba(214,218,232,.12); --fio2:rgba(214,218,232,.22); --luz:rgba(232,234,242,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#05172e}
+.btn.cheio{color:#05172e}
+.capa{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(66px,6.4vw,124px)/.92 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+.capa-d{display:grid;justify-items:center}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:46px;padding:0 20px;font:700 clamp(17px,1.3vw,21px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:start;margin-top:10px}
+.fitas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px} .fitas.mini{grid-template-columns:1fr 1fr}
+.fita{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .fita small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .fita b{font:700 clamp(16px,1.25vw,20px)/1.35 var(--disp)}
+.q-linha{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .q-linha.feito{border-color:rgba(143,217,162,.4)!important}
+.q-linha p{margin:0;font:700 clamp(18px,1.4vw,22px)/1.35 var(--disp)} .q-linha .aprova,.q-linha .recusa,.q-linha .dica-aluno{margin:0;font-size:15px}
+.toca-linha{display:flex;align-items:center;gap:12px;font:600 clamp(16px,1.2vw,20px)/1.4 var(--disp)} .toca-linha .transcricao{margin:0}
+
+/* o telefone */
+.fone{display:grid;grid-template-rows:auto 1fr auto;width:min(100%,460px);height:clamp(360px,calc(100vh / var(--zv,1) - 420px),620px);border-radius:34px;background:#0f1117;border:10px solid #1b1e27;box-shadow:0 30px 60px rgba(0,0,0,.7);overflow:hidden;justify-self:center}
+.topo-f{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid #1f2330;background:#12141c}
+.topo-f b{display:block;font:700 16px var(--disp)} .topo-f small{font:600 12px var(--disp);color:var(--ok)} .topo-f em{margin-left:auto;font:700 11px var(--mono);font-style:normal;color:var(--t3)}
+.avatar{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#2a2f40;font:800 16px var(--disp);color:var(--ac2)}
+.conversa{display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:14px;overflow:hidden}
+.bolha{display:flex} .bolha span{max-width:82%;padding:10px 14px;border-radius:18px;font:600 clamp(16px,1.25vw,20px)/1.35 var(--disp)}
+.bolha.tom{justify-content:flex-end} .bolha.tom span{background:#23406a;border-bottom-right-radius:6px}
+.bolha.ana span{background:#1f222c;border-bottom-left-radius:6px}
+.bolha.grita span{font-size:clamp(22px,1.8vw,30px);font-weight:800}
+.bolha.confusa span{background:#3a1f28;color:#ffd6dc}
+.slot{padding:0 4px;border-bottom:2px dashed var(--ac2);color:var(--ac2)} .slot.bom{border-bottom-style:solid;color:#bff0cc;border-color:var(--ok)} .slot.mau{color:#ffb3bd;border-color:var(--erro)}
+.rodape-f{display:flex;gap:8px;justify-content:center;padding:12px;border-top:1px solid #1f2330;background:#12141c}
+.digita{font:600 13px var(--disp);color:var(--t3);font-style:italic}
+.tecla{flex:1;min-height:52px;border-radius:14px;border:1px solid #2a3042;background:#1a1d27;color:var(--t2);font:600 19px var(--disp);cursor:pointer} .tecla b{color:var(--ac2);font-weight:800}
+.fone.mini{height:auto;width:min(100%,320px);border-width:6px} .fone.mini .bolha span{font-size:15px}
+
+/* ouvir · metades · conserta · semana */
+.audios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.metades{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:10px}
+.col-m{display:grid;gap:8px;align-content:start}
+.meia{min-height:56px;padding:10px 16px;border-radius:16px;border:1px solid var(--fio2);background:#12141b;color:var(--t1);text-align:left;font:700 clamp(17px,1.3vw,21px)/1.35 var(--disp);cursor:pointer}
+.meia.a{background:#162238} .meia.on{border-color:var(--ac);box-shadow:0 0 0 2px rgba(95,168,255,.3)} .meia.feito{border-color:rgba(143,217,162,.5);opacity:.7} .meia.errado{border-color:var(--erro);animation:treme .35s}
+.conserta{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.frase-w{display:flex;flex-wrap:wrap;gap:4px}
+.pal{padding:4px 8px;border-radius:8px;border:1px dashed transparent;background:none;color:var(--t1);font:700 clamp(18px,1.4vw,23px) var(--disp);cursor:pointer} .pal:hover{border-color:var(--fio2)}
+.pal.errado{border-color:var(--erro);animation:treme .35s} .pal s{color:var(--t3)} .pal b{color:var(--ok)}
+.palavras-s{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:10px}
+.semana{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.estrelas{display:flex;gap:4px} .estrela{width:38px;height:38px;border:0;background:none;font-size:28px;color:#33384a;cursor:pointer} .estrela.on{color:#f0c060}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .fitas{grid-template-columns:1fr 1fr} }
+@media (max-width:820px){ .fitas,.audios,.metades,.conserta,.semana{grid-template-columns:1fr} .fone{height:auto;min-height:360px} }

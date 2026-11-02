@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Extra Day · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Extra Day · The Family Calendar</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Extra Day · The Family Calendar</h2>
+    <p>A number isn’t a date until it becomes another word: <b>twelve → the twelfth</b>. The screen is the family’s kitchen calendar. You read the birthdays; the student drags each sticker to the right day (or taps the sticker, then the day). Then their own dates, and the extra day of February. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p>Ordinals: three new words (<b>first, second, third</b>), everything else <b>-th</b>, with bends (<i>fifth, twelfth, ninth, twentieth</i>). Big numbers: look at the last one (<i>twenty-first, twenty-third</i>). Two ways: <i>the third of May / May the third</i>. <b>on</b> a day, <b>in</b> a month or a year; <i>next/last</i> take nothing. The classic: <i>the twelve of May</i>, <i>May two</i>.</p>
+    <!--conversa--><h4>WOULD YOU RATHER (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After on and in, three light choices about your student’s own dates: a birthday in summer or winter, a party on Friday or Sunday, Christmas or New Year’s Eve. Answer first yourself, then let your student choose and say it with a date. Wait five seconds in silence, then use the PUSH line (only you see it): a quick yes or no. Recast the ordinals quietly while they talk; at the end, ask them to fix one date themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> — I Three Birthdays, VII Would You Rather, VIII The Extra Day.</li>
+      <li><b>Listen</b> — IV The Family Calendar (only YOU see the dictation; read one line at a time, and answer “Sorry, which day?”), V Fourteenth or Fortieth? (one play each).</li>
+      <li><b>Focus</b> — II The Number Changes (the number turns into the ordinal on screen), III The Last Number, VI On, In.</li>
+      <li><b>Write</b> — IX Your Calendar, with the red wavy line for <i>the twelve of</i>, <i>May two</i>, <i>twenty-oneth</i>, <i>in the 21st</i>, <i>on June</i> and <i>on next Monday</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>THE RECORDINGS</h4>
+    <p>All ten recordings are the same British speaker; the screen spelling stays American.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The stickers land on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE EXTRA DAY (Main A1) · pergunta-surpresa · 27/10/2026 · ordinais · on / in */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'numero', tipo: 'And you?', q: 'What floor do you live on?',
+    opc: ['The first', 'The second', 'Higher!'], st: ['I live on the … floor.'],
+    ex: 'The fifth floor. No elevator!', push: 'Stairs every day? Yes or no?' },
+  { cena: 'adesivos', tipo: 'And you?', q: 'Whose birthday do you never forget?',
+    opc: ['My sister’s', 'My best friend’s', 'My own!'], st: ['It’s on the … of …'],
+    ex: 'My best friend’s. It’s on the twelfth of May.', push: 'A present every year? Yes or no?' },
+  { cena: 'onin', tipo: 'Would you rather', q: 'Travel in July or in December?',
+    opc: ['In July', 'In December'], st: ['I travel in …', 'On the … of …'],
+    ex: 'In December. On the twentieth!', push: 'To the beach? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE EXTRA DAY (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O "would you rather" entra no lugar de "VII · Ten Days Later" (extra, pista → dia: prática controlada;
+   on / in fica no VI). Três escolhas de datas da vida do aluno: o aniversário dos sonhos, o dia da festa, o fim de ano.
+   A1 bem leve: duas opções, frase quase pronta, o professor responde primeiro.
+   A gramática da aula (ordinais · the … of … · on + dia, in + mês) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'prefere', troca: 'volta', est: 'o', min: 5, img: 'calendario', rot: 'Would You Rather', t: 'Your dates, your choice. Three times.',
+    p: 'Choose one. Your teacher answers first. Then say it with the date.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Birthday', q: 'A birthday in summer or winter?', opc: ['In summer', 'In winter'],
+        st: ['In summer! In January.', 'In winter! In July.'],
+        ex: 'In summer. A beach party in January!',
+        push: 'On a Monday? Yes or no?' },
+      { tag: 'The party', q: 'Your party: Friday or Sunday?', opc: ['On Friday', 'On Sunday'],
+        st: ['On Friday the …', 'On Sunday the …'],
+        ex: 'On Friday the thirteenth! Ha!',
+        push: 'At home? Yes or no?' },
+      { tag: 'December', q: 'Christmas or New Year’s Eve?', opc: ['Christmas', 'New Year’s Eve'],
+        st: ['Christmas, on the twenty-fifth.', 'New Year’s Eve, on the thirty-first.'],
+        ex: 'New Year’s Eve, on the thirty-first. Fireworks!',
+        push: 'With friends? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "numero": {
+   "t": "Twelve is a number. The twelfth is a date.",
+   "p": "Say the number. Pick the change. Watch the date."
+  },
+  "adesivos": {
+   "t": "Your teacher says the birthdays.",
+   "p": "Listen. Drag each sticker to its day."
+  },
+  "ouve": {
+   "t": "Fourteenth or fortieth? Six messages.",
+   "p": "Play it once. Say the date. Then pick it."
+  },
+  "onin": {
+   "t": "A day: ON. A month or a year: IN.",
+   "p": "Read each line with the right word."
+  },
+  "cv-prefere": {
+   "t": "Your dates, your choice.",
+   "p": "Choose one. Then say it with the date."
+  },
+  "extra": {
+   "t": "Every four years, February gets one more day.",
+   "p": "Play her messages. Answer. Plan your extra day."
+  },
+  "fim": {
+   "t": "Five dates that matter to you.",
+   "p": "Write five lines with a date and ON or IN."
+  }
+ },
+ "prep": {
+  "obj": "Números ordinais e datas com on/in: o calendário da família na cozinha, os aniversários de cada um e o dia extra de fevereiro.",
+  "armadilha": "Em português a data usa o número comum (“doze de maio”): sai “the twelve of May”, “May two”, “twenty-oneth”, “in June 5th” e “on next Monday”.",
+  "pal": [
+   "first",
+   "second",
+   "third",
+   "twelfth",
+   "twentieth",
+   "twenty-first",
+   "on Monday",
+   "in May",
+   "the third of May"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: um número só vira data quando muda de palavra; e o dia extra de fevereiro.",
+   "perg": "What is the date today?",
+   "pula": "Leia a frase da capa e vire a página."
+  },
+  "datas": {
+   "obj": "Aquecimento pessoal: as datas do aluno (aniversários), sem corrigir ainda.",
+   "perg": "When is your birthday?",
+   "pula": "Três mensagens bastam."
+  },
+  "numero": {
+   "obj": "Ver o número virar ordinal: first, second, third e o resto com -th, com as mudanças de grafia.",
+   "perg": "Twelve becomes… what?",
+   "pula": "Seis números bastam."
+  },
+  "regra": {
+   "obj": "Números grandes: só o último muda (twenty-first, thirty-third); corrigir quatro armadilhas.",
+   "perg": "Is it twenty-oneth or twenty-first?",
+   "pula": "Leia os cartões e corrija só duas armadilhas."
+  },
+  "adesivos": {
+   "obj": "Ditado: o professor lê os aniversários, o aluno arrasta os adesivos para o dia certo.",
+   "perg": "Sorry, which day? Can you say it again?",
+   "pula": "Quatro adesivos bastam."
+  },
+  "ouve": {
+   "obj": "Ouvir números parecidos (fourteenth/fortieth) e repetir a data.",
+   "perg": "Was it the fourteenth or the fortieth?",
+   "pula": "Quatro mensagens bastam."
+  },
+  "onin": {
+   "obj": "On para dia, in para mês e ano; next e last sem preposição.",
+   "perg": "Do we say on May or in May?",
+   "pula": "Quatro linhas bastam."
+  },
+  "cv-prefere": {
+   "obj": "Conversa leve: três escolhas sobre as datas do aluno, dizendo a data em voz alta.",
+   "perg": "Would you like a birthday in summer or in winter?",
+   "pula": "Duas escolhas bastam."
+  },
+  "extra": {
+   "obj": "O dia 29 de fevereiro: responder às mensagens e planejar o próprio dia extra.",
+   "perg": "What would you do on the twenty-ninth of February?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: cinco datas importantes do aluno com ordinal e on/in.",
+   "perg": "Which date is very important to you?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre datas da vida do aluno, com ordinais e on/in.",
+   "perg": "When is your favorite holiday?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas datas e defender com because.",
+   "perg": "Is a birthday in December good or bad?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta o próprio ano em quatro datas, passo a passo.",
+   "perg": "What is the first big date in your year?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More dates, more questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "on",
+    "in",
+    "the first",
+    "the twelfth"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR MOTHER",
+     "q": "When is your mother’s birthday?",
+     "fup": "Is it in summer or in winter?",
+     "st": [
+      "It is on the …",
+      "It is in …"
+     ],
+     "ex": "It is on the third of March. It is in summer here."
+    },
+    {
+     "k": "HOLIDAYS",
+     "q": "What is your favorite holiday?",
+     "fup": "Is it on the same day every year?",
+     "st": [
+      "My favorite is …",
+      "It is on …"
+     ],
+     "ex": "My favorite is Christmas. It is on the twenty-fifth of December."
+    },
+    {
+     "k": "THE FIRST DAY",
+     "q": "When was your first day at work or school?",
+     "fup": "Was it in January?",
+     "st": [
+      "It was on …",
+      "It was in …"
+     ],
+     "ex": "It was in February, on the tenth."
+    },
+    {
+     "k": "NEXT MONTH",
+     "q": "Is there a special day next month?",
+     "fup": "What day of the week is it?",
+     "st": [
+      "Yes, on the …",
+      "No, there isn’t …"
+     ],
+     "ex": "Yes, on the twentieth. It is a Friday."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "When is your city’s birthday?",
+     "fup": "Is there a party?",
+     "st": [
+      "It is on …",
+      "I don’t know. Maybe in …"
+     ],
+     "ex": "It is on the twenty-fifth of January. There is a big party."
+    },
+    {
+     "k": "PAYDAY",
+     "q": "What day do you get paid?",
+     "fup": "Is it the same every month?",
+     "st": [
+      "On the …",
+      "It is on the …"
+     ],
+     "ex": "On the fifth. It is the same every month."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "on",
+    "in"
+   ],
+   "rodadas": [
+    {
+     "q": "A birthday on the twenty-ninth of February: good or bad?",
+     "a": "Good",
+     "b": "Bad",
+     "fa": [
+      "Good. It is very special."
+     ],
+     "fb": [
+      "Bad. The party is only every four years."
+     ]
+    },
+    {
+     "q": "A birthday party on Friday or on Sunday?",
+     "a": "On Friday",
+     "b": "On Sunday",
+     "fa": [
+      "On Friday. There is no work the next day."
+     ],
+     "fb": [
+      "On Sunday. The family can come for lunch."
+     ]
+    },
+    {
+     "q": "Vacation in January or in July?",
+     "a": "In January",
+     "b": "In July",
+     "fa": [
+      "In January. It is summer and the sun is out."
+     ],
+     "fb": [
+      "In July. The beaches are quiet."
+     ]
+    },
+    {
+     "q": "A birthday on the twenty-fifth of December: lucky or unlucky?",
+     "a": "Lucky",
+     "b": "Unlucky",
+     "fa": [
+      "Lucky. Everybody is at home."
+     ],
+     "fb": [
+      "Unlucky. You get only one present."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and every date had a reason."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Year",
+   "t": "Your year in four dates.",
+   "p": "One date at a time. Say it out loud.",
+   "prof": "Listen for the ordinal and on/in; recast quietly, then ask for one date again at the end.",
+   "passos": [
+    {
+     "q": "What is the first big day of your year?",
+     "st": [
+      "It is on the …"
+     ],
+     "ex": "It is on the first of January."
+    },
+    {
+     "q": "When is a birthday in your family?",
+     "st": [
+      "My … birthday is on the …"
+     ],
+     "ex": "My brother’s birthday is on the twelfth of April."
+    },
+    {
+     "q": "Which month is your favorite?",
+     "st": [
+      "My favorite month is …, because in … I …"
+     ],
+     "ex": "My favorite month is July, because in July I travel."
+    },
+    {
+     "q": "What is the last big day of your year?",
+     "st": [
+      "It is on the …"
+     ],
+     "ex": "It is on the thirty-first of December."
+    }
+   ],
+   "fim": "Four dates. That is your year."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

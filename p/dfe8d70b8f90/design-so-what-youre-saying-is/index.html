@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -112,5 +113,264 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A designer’s questions about the look.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "transforma": {
+   "t": "Vague word, clear question.",
+   "p": "Read what the client said. Ask the question."
+  },
+  "cv-palavras": {
+   "t": "Which word causes the most revisions?",
+   "p": "Rank the five words. Compare with your teacher."
+  },
+  "formulario": {
+   "t": "Turn the email into a brief.",
+   "p": "Read the email. Fill in the brief."
+  },
+  "pode": {
+   "t": "Lesson 2: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Esclarecer palavras vagas do cliente (When you say “modern”, do you mean…?), pedir exemplo, confirmar (So what you’re saying is…) e escrever o brief do estúdio Northwind Yoga.",
+  "armadilha": "Tradução direta de “o que significa moderno?”: “What means modern?”; também “You can show me an example?” sem inversão e “I didn’t understand nothing” (dupla negação).",
+  "pal": [
+   "When you say …, do you mean …?",
+   "Could you show me an example of …?",
+   "Just to clarify, …",
+   "So what you’re saying is …, right?",
+   "brief",
+   "deadline",
+   "revision",
+   "make it pop"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: transformar o vago do cliente em perguntas claras.",
+   "perg": "What’s the most confusing thing a client has ever asked you?",
+   "pula": "Faça a pergunta de abertura e vá ao vídeo."
+  },
+  "video": {
+   "obj": "Ver a designer Abi Connick sobre as perguntas de direção criativa (3:58–5:53).",
+   "perg": "What does she ask about the look?",
+   "pula": "Assista uma vez só e faça uma pergunta."
+  },
+  "transforma": {
+   "obj": "Transformar cada palavra vaga do cliente numa pergunta de esclarecimento.",
+   "perg": "What would you ask about ‘clean’?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-palavras": {
+   "obj": "Ranquear cinco palavras perigosas (modern, clean, fun, premium, make it pop) com a pergunta que faria.",
+   "perg": "Which word is the most dangerous, and why?",
+   "pula": "Só a primeira e a pergunta."
+  },
+  "formulario": {
+   "obj": "Preencher o brief a partir do e-mail; depois o aluno lê de volta com So what you’re saying is… e você corrige um detalhe.",
+   "perg": "So what you’re saying is…?",
+   "pula": "Preencha e pule a leitura de volta."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; o resto vai para a lição.",
+   "perg": "Can you clarify a vague brief now?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre clientes e briefs reais do aluno designer.",
+   "perg": "What’s the vaguest brief you’ve ever got?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de relação com cliente, com argumentos e frases prontas.",
+   "perg": "Would you ask or just design?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a cliente do Northwind Yoga; você faz as perguntas de esclarecimento.",
+   "perg": "When you say ‘calm’, do you mean…?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your clients, your briefs.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "When you say …",
+    "Just to clarify",
+    "So what you’re saying is …"
+   ],
+   "cartas": [
+    {
+     "k": "THE WORST BRIEF",
+     "q": "What’s the vaguest brief you’ve ever received?",
+     "fup": "What did you ask the client?",
+     "st": [
+      "The client said …",
+      "I asked: when you say …, do you mean …?"
+     ],
+     "ex": "The client said ‘make it fresh’. I asked: when you say fresh, do you mean colors or the layout?"
+    },
+    {
+     "k": "REVISIONS",
+     "q": "How many revisions is normal for you?",
+     "fup": "What happens after that?",
+     "st": [
+      "Usually …",
+      "After that, I …"
+     ],
+     "ex": "Usually two. After that, I charge for each new round."
+    },
+    {
+     "k": "EXAMPLES",
+     "q": "Do you ask clients for examples they like?",
+     "fup": "Do they send good ones?",
+     "st": [
+      "Always. I ask: could you show me …?"
+     ],
+     "ex": "Always. I ask: could you show me three brands you love?"
+    },
+    {
+     "k": "YOUR STYLE",
+     "q": "How would you describe your design style in three words?",
+     "fup": "What do clients mean when they say they like it?",
+     "st": [
+      "I’d say it’s …"
+     ],
+     "ex": "I’d say it’s clean, warm and simple."
+    },
+    {
+     "k": "A MISUNDERSTANDING",
+     "q": "Tell me about a time you and a client misunderstood each other.",
+     "fup": "How did you fix it?",
+     "st": [
+      "They wanted …, but I thought …"
+     ],
+     "ex": "They wanted ‘bright’ colors, but I thought they meant light colors. We fixed it with a mood board."
+    },
+    {
+     "k": "INTERNATIONAL",
+     "q": "Would you like clients from other countries?",
+     "fup": "What scares you about it?",
+     "st": [
+      "I’d love to … because …",
+      "What scares me is …"
+     ],
+     "ex": "I’d love to, because they pay in dollars. What scares me is calls in English."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "Just to clarify",
+    "I think"
+   ],
+   "rodadas": [
+    {
+     "q": "A vague brief: ask many questions, or design something and show it?",
+     "a": "Ask first",
+     "b": "Design first",
+     "fa": [
+      "Ask first. It saves revisions.",
+      "One call saves a week."
+     ],
+     "fb": [
+      "Design first. Clients understand when they see it.",
+      "Questions can sound unprofessional."
+     ]
+    },
+    {
+     "q": "Brief by email or by video call?",
+     "a": "Email",
+     "b": "Video call",
+     "fa": [
+      "Email. Everything is in writing.",
+      "No one can say ‘I didn’t say that’."
+     ],
+     "fb": [
+      "Video call. You see their reactions.",
+      "Then send a summary by email."
+     ]
+    },
+    {
+     "q": "The client wants ‘make it pop’ for the fifth time. Say no or try again?",
+     "a": "Say no",
+     "b": "Try again",
+     "fa": [
+      "Say no, politely. Explain the revision limit.",
+      "It’s in the contract."
+     ],
+     "fb": [
+      "Try again, but ask for an example.",
+      "A happy client brings new clients."
+     ]
+    },
+    {
+     "q": "Show one strong option or three options?",
+     "a": "One option",
+     "b": "Three options",
+     "fa": [
+      "One. You are the expert.",
+      "Three options confuse the client."
+     ],
+     "fb": [
+      "Three. Clients like to choose.",
+      "It’s faster to find what they want."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the client now.",
+   "p": "Your teacher is the designer.",
+   "aluno": "You own a small coffee shop. Answer your teacher’s questions. Be a little vague on purpose.",
+   "perguntas": [
+    "What do you want the new logo to feel like?",
+    "When you say ‘modern’, do you mean simple, or colorful?",
+    "Could you show me an example of a brand you like?",
+    "Which part of the old logo do you want to keep?",
+    "What date do you have in mind?",
+    "So what you’re saying is: warm, simple, and green, right?"
+   ],
+   "st": [
+    "I want it to feel …",
+    "I mean …",
+    "Yes, exactly. / Not really, …"
+   ],
+   "ex": "I want it to feel modern. I mean simple, with a lot of white space. Not really green, more brown."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

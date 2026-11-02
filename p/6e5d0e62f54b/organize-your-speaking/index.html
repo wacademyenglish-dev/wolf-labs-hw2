@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Organize Your Speaking · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 1 · B2</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 1 · Organize Your Speaking · B2</h2>
+    <p>Episode 1 of the BBC Learning English podcast <b>Better Speaking</b>. Stelios Haji-Ioannou, the Greek founder of a British airline, explains why he started in London; teacher Richard Hallows shows why he is so easy to follow. The language is <b>signposting</b>: phrases that tell the listener what is coming (<b>An interesting question is&hellip; Let me tell you about&hellip; on top of that, and another thing is, but in fact, on the other hand</b>), and the Stelios move: ask the listener&rsquo;s question, then answer it. The sister lesson for B1 is &ldquo;Why Didn&rsquo;t You Start in Greece?&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Are you easy to follow, Ask it, then answer it. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Tell them what&rsquo;s coming, Match the signal, Fix the traps, Choose the marker.</li>
+      <li><b>Write</b> &mdash; Your one-minute answer. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Portuguese markers translated word by word: &ldquo;na verdade&rdquo; becomes <i>in the truth</i>, &ldquo;al&eacute;m disso&rdquo; becomes <i>beyond that</i>, &ldquo;por outro lado&rdquo; becomes <i>for other side</i>. And Brazilian learners love idioms; Stelios&rsquo;s advice is to keep it simple with non-native speakers.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 1 · ORGANIZE YOUR SPEAKING (B2)
+   Vídeo: BBC Learning English, Better Speaking (hsAPJRWHu4U, 11:10), quatro trechos (~4:50).
+   Alvo: os marcadores que avisam o que vem (An interesting question is… · Let me tell you about…
+   · on top of that · and another thing is · but in fact · on the other hand). Nenhuma B2 ensina. */
+const M = { nome: "Organize Your Speaking", kick: "B2 · SIGNPOSTING: ON TOP OF THAT, BUT IN FACT" };
+var EP = {
+  n: 1, de: 8, nivel: 'B2', titulo: 'Organize Your Speaking', video: 'hsAPJRWHu4U',
+  convidado: 'Stelios Haji-Ioannou', habilidade: 'organize what you say',
+  trechos: [
+    { ini: 41, fim: 77, rot: 'Stelios: why London?' },
+    { ini: 155, fim: 232, rot: 'Richard: ask, then answer' },
+    { ini: 280, fim: 370, rot: 'Add and contrast' },
+    { ini: 374, fim: 460, rot: 'Stelios: keep it simple' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'He started an airline in a country that wasn\'t his. In English. What makes him easy to follow? Today: the small phrases that tell your listener what is coming.',
+      nota: 'Ask: who is the clearest speaker you know, in any language? What do they do?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Are you easy to <em>follow</em>?', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Push for full answers of two or three sentences.',
+      cartas: [
+        { frente: 'Lost?', verso: 'When was the last time you got lost in someone\'s explanation?', dica: 'It happened when…', cor: 'var(--guest)', fw: { q: 'What did the speaker do wrong?', st: ['They jumped from…', 'There was no…', 'I couldn\'t tell what was coming next.'], help: '“My boss explained a new system, but she jumped from one idea to another.”' } },
+        { frente: 'Clear', verso: 'Who explains things really well? A teacher, a YouTuber, a colleague?', dica: 'The clearest person I know is…', cor: 'var(--host)', fw: { q: 'What exactly makes them clear?', st: ['They always start with…', 'They give examples.', 'They tell you what is coming.'], help: '“My old physics teacher. He always told us the question first.”' } },
+        { frente: 'Jokes', verso: 'Do you use idioms and jokes when you speak English? Do they work?', dica: 'Sometimes… / Never, because…', cor: 'var(--teacher)', fw: { q: 'And with people who aren\'t native speakers?', st: ['They don\'t always get it.', 'I keep it simple.', 'It depends on…'], help: '“With my Argentinian colleague I keep it simple. My idioms go over her head.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'four clips · about 5 minutes', titulo: 'Listen to <em>Stelios</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os quatro trechos.',
+      nota: 'Before: two predictions. Watch: play the clips in order. After: true or false.',
+      antes: [ { q: 'Stelios is Greek. Why do you think he started his airline in London?', ops: [{ t: 'The market was bigger' }, { t: 'He loved British food' }, { t: 'Taxes were lower' }] }, { q: 'What makes a speaker easy to follow?', ops: [{ t: 'Perfect grammar' }, { t: 'A clear structure' }, { t: 'A native accent' }] } ],
+      durante: 'Clip 1 is the interview; clips 2 and 3 are the analysis; clip 4 is Stelios\'s own advice. Listen for: “one of the things I say is”, “on top of that”, “but in fact”.',
+      depois: [ { f: 'Stelios says Greece is too small and in the wrong end of Europe.', ok: 1 }, { f: 'Richard says Stelios asks himself a question and then answers it.', ok: 1 }, { f: 'Richard says idioms always help you with non-native speakers.', ok: 0 }, { f: 'The bus trip took much longer than Richard expected.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Tell them what\'s <em>coming</em>', pt: 'Marcadores avisam o ouvinte: vem uma ideia nova, vem mais informação, vem um contraste.',
+      nota: 'Read each card aloud. The red card is the Portuguese “além disso / na verdade” translated word by word.',
+      cartoes: [ { g: '<b>An interesting question is</b>… <b>Let me tell you about</b>…', p: 'A new idea is coming.' }, { g: '<b>On top of that</b>, … · <b>And another thing is</b>, …', p: 'More information is coming.' }, { g: '<b>But in fact</b>, … · <b>On the other hand</b>, …', p: 'Something different, or the opposite, is coming.' }, { g: 'In the truth, it took twenty minutes.', p: '“Na verdade” is IN FACT, or ACTUALLY.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'what is coming?', titulo: 'Match the <em>signal</em>', pt: 'Toque no marcador e depois no que ele avisa.',
+      nota: 'Say a real sentence with each marker before moving on.',
+      esq: ['On top of that,', 'But in fact,', 'Let me tell you about', 'On the other hand,', 'An interesting question is'], dir: ['more information', 'the real situation, a surprise', 'a new topic', 'the opposite side', 'a question you will answer'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Use two of them to talk about your city.', st: ['Let me tell you about…', 'On top of that,…', 'But in fact,…'], help: '“Let me tell you about São Paulo. It\'s huge. On top of that, the traffic is crazy. But in fact, the subway is great.”' } },
+    { k: 'cartas', est: 'o', rot: 'the Stelios move', titulo: 'Ask it, then <em>answer</em> it', pt: 'Faça a pergunta que o ouvinte faria, e responda você mesmo.',
+      nota: 'The student copies Stelios: they ask the question their listener would ask, then answer it. One topic per card.',
+      cartas: [
+        { frente: 'Job', sob: 'topic', verso: 'People always ask me, “Why did you choose your job?” And one of the things I say is…', dica: 'Finish it.', cor: 'var(--guest)', fw: { q: 'Now add one more reason with a marker.', st: ['On top of that,…', 'And another thing is,…', 'But in fact,…'], help: '“…I like solving problems. On top of that, the hours are flexible.”' } },
+        { frente: 'English', sob: 'topic', verso: 'An interesting question is: why am I learning English now, and not ten years ago?', dica: 'Answer it.', cor: 'var(--host)' },
+        { frente: 'City', sob: 'topic', verso: 'You might ask, “Why don\'t you move to a bigger city?” Well…', dica: 'Answer it.', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'Word-by-word Portuguese: “na verdade”, “além disso”, “por outro lado”.',
+      itens: [ { erro: '<s>In the truth</s>, it took twenty minutes.', certo: '<b>In fact</b>, it took twenty minutes.', por: '“Na verdade” = in fact / actually.' }, { erro: '<s>Beyond that</s>, the traffic is terrible.', certo: '<b>On top of that</b>, the traffic is terrible.', por: '“Além disso” = on top of that / besides / what\'s more.' }, { erro: '<s>For other side</s>, it\'s cheap.', certo: '<b>On the other hand</b>, it\'s cheap.', por: '“Por outro lado” = on the other hand.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>marker</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the episode and close to it. Read each one aloud, stressing the marker.',
+      itens: [ { f: 'I thought it would take a long time, ___ it took me 20 minutes.', ops: ['but in fact', 'on top of that'], ok: 0 }, { f: 'Learning English is about having enough language, and ___, making your speaking clear.', ops: ['on top of that', 'on the other hand'], ok: 0 }, { f: 'Greece is too small. ___, it\'s in the wrong end of Europe.', ops: ['And another thing is', 'But in fact'], ok: 0 }, { f: 'Idioms are fun. ___, other non-native speakers may not get them.', ops: ['On the other hand', 'On top of that'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>one-minute answer</em>', pt: 'Responda à pergunta como o Stelios: pergunta, resposta e dois marcadores.',
+      ph: 'People often ask me why… One of the things I say is… On top of that,… But in fact,…', nota: 'The line under the paper catches “in the truth” and “beyond that”. SAVE sends it to My notes. Then the student says it out loud, without reading.',
+      banco: ['People often ask me', 'One of the things I say is', 'An interesting question is', 'Let me tell you about', 'On top of that,', 'And another thing is', 'But in fact,', 'On the other hand,'],
+      regras: [['\\bin the truth\\b', 'Check: “na verdade” is IN FACT or ACTUALLY.'], ['\\bbeyond that\\b', 'Check: “além disso” is ON TOP OF THAT.'], ['\\bfor (the )?other side\\b', 'Check: ON THE OTHER HAND.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Little and often', tx: 'How do you practice speaking when you have no time? A football coach and a teacher answer: a little, every day.',
+      ganchos: [['Next guest', 'a football coach'], ['The skill', 'practice that sticks'], ['Your task', 'use two markers this week']], nota: 'Ask: how often do you speak English outside class? That opens Episode 2.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Signposting (on top of that, but in fact, on the other hand) e o “movimento Stelios”: fazer a pergunta do ouvinte e respondê-la; Stelios explica por que abriu a companhia aérea em Londres.",
+  "armadilha": "Marcadores traduzidos palavra por palavra: “na verdade” vira in the truth, “além disso” vira beyond that, “por outro lado” vira for other side. E o excesso de idioms com quem não é nativo.",
+  "pal": [
+   "An interesting question is…",
+   "Let me tell you about…",
+   "on top of that",
+   "another thing is",
+   "but in fact",
+   "on the other hand",
+   "signposting"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o convidado e a habilidade: avisar o ouvinte do que vem a seguir.",
+   "perg": "Who is the clearest speaker you know?",
+   "pula": "Uma resposta e NEXT."
+  },
+  "c1": {
+   "obj": "Conversa aberta sobre ser fácil (ou não) de acompanhar; respostas de duas ou três frases.",
+   "perg": "Do people ever get lost when you explain something?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes do Stelios em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "Why did he start in London, not in Greece?",
+   "pula": "Veja os clipes uma vez; pule o durante."
+  },
+  "c3": {
+   "obj": "A regra: frases que sinalizam o que vem (adição, contraste, correção, tema novo).",
+   "perg": "Which of these do you already use?",
+   "pula": "Leia os cartões; o vermelho é obrigatório."
+  },
+  "c4": {
+   "obj": "Ligar cada marcador à sua função, dizendo uma frase real com cada um.",
+   "perg": "Give me a sentence with but in fact.",
+   "pula": "Três pares com frase bastam."
+  },
+  "c5": {
+   "obj": "O movimento Stelios: o aluno faz a pergunta do ouvinte e responde, um tema por carta.",
+   "perg": "What would your listener ask here?",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Três armadilhas: in the truth, beyond that, for other side.",
+   "perg": "How do you say “na verdade” here?",
+   "pula": "Faça as três, rápido."
+  },
+  "c7": {
+   "obj": "Escolher o marcador certo em frases do episódio, lendo com ênfase no marcador.",
+   "perg": "Why that marker and not the other?",
+   "pula": "Metade das frases basta."
+  },
+  "c8": {
+   "obj": "Escrita: uma resposta de um minuto organizada com marcadores; depois dizer sem ler.",
+   "perg": "Can you say it now without reading?",
+   "pula": "Escreva; a fala sem ler fica para a próxima."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 2: praticar pouco e sempre.",
+   "perg": "How often do you speak English outside class?",
+   "pula": "Só a pergunta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Perguntas abertas que pedem respostas organizadas, com dois marcadores por resposta.",
+   "perg": "And on top of that?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre clareza e estilo ao falar; argumentar com marcadores.",
+   "perg": "But in fact, isn’t that the opposite?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o convidado do programa e responde organizando a fala com marcadores.",
+   "perg": "Why did you choose your career?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 6,
+   "rot": "More to Talk About",
+   "t": "Answers with a map.",
+   "p": "Pick a card. Use two signposts.",
+   "palavras": [
+    "An interesting question is…",
+    "on top of that",
+    "but in fact",
+    "on the other hand",
+    "another thing is"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CITY",
+     "q": "Would you recommend your city to a foreign entrepreneur?",
+     "fup": "What’s the catch, though?",
+     "st": [
+      "An interesting question is …",
+      "On top of that, …",
+      "On the other hand, …"
+     ],
+     "ex": "An interesting question is why anyone would start a business here. The market is huge. On the other hand, the bureaucracy is brutal."
+    },
+    {
+     "k": "YOUR WORK",
+     "q": "What do people misunderstand about your job?",
+     "fup": "Where does that idea come from?",
+     "st": [
+      "People think …, but in fact …",
+      "Another thing is …"
+     ],
+     "ex": "People think it’s all meetings, but in fact most of my day is solving small problems."
+    },
+    {
+     "k": "A BIG DECISION",
+     "q": "Tell me about a decision you made against the odds.",
+     "fup": "Would you make it again?",
+     "st": [
+      "Let me tell you about …",
+      "You might ask why. Well, …"
+     ],
+     "ex": "Let me tell you about my move to São Paulo. You might ask why. Well, the job was there."
+    },
+    {
+     "k": "MEETINGS",
+     "q": "What makes a meeting easy to follow?",
+     "fup": "And what kills it?",
+     "st": [
+      "First of all, …",
+      "On top of that, …"
+     ],
+     "ex": "First of all, someone says what the meeting is for. On top of that, it ends on time."
+    },
+    {
+     "k": "ENGLISH AT WORK",
+     "q": "When is your English at its best?",
+     "fup": "And when does it fall apart?",
+     "st": [
+      "The thing is, …",
+      "But in fact, …"
+     ],
+     "ex": "The thing is, I’m fine with clients. But in fact, small talk at lunch is harder for me."
+    },
+    {
+     "k": "THE NON-NATIVE ROOM",
+     "q": "Do you speak differently with non-native speakers?",
+     "fup": "Do you cut the idioms?",
+     "st": [
+      "I tend to …",
+      "Another thing is …"
+     ],
+     "ex": "I tend to slow down. Another thing is, I drop the idioms; they just confuse people."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Argue it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "on top of that",
+    "but in fact",
+    "on the other hand",
+    "I see your point, but"
+   ],
+   "rodadas": [
+    {
+     "q": "Simple English or impressive English?",
+     "a": "Simple",
+     "b": "Impressive",
+     "fa": [
+      "Simple, every time. If they can’t follow you, nothing else matters."
+     ],
+     "fb": [
+      "Impressive. People judge you by your vocabulary, like it or not."
+     ]
+    },
+    {
+     "q": "Start a business at home or abroad?",
+     "a": "At home",
+     "b": "Abroad",
+     "fa": [
+      "At home. You know the rules and the people. On top of that, it’s cheaper."
+     ],
+     "fb": [
+      "Abroad, like Stelios. The bigger market can be worth the risk."
+     ]
+    },
+    {
+     "q": "Plan what you say or improvise?",
+     "a": "Plan it",
+     "b": "Improvise",
+     "fa": [
+      "Plan it. A clear structure makes you sound confident."
+     ],
+     "fb": [
+      "Improvise. A script makes you sound like a robot."
+     ]
+    },
+    {
+     "q": "Idioms with non-native speakers: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. They make your English sound alive, and people learn them."
+     ],
+     "fb": [
+      "No. Stelios is right: keep it simple, or you lose the room."
+     ]
+    }
+   ],
+   "fim": "Four rounds. On top of that, every argument had a signpost."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are today’s guest.",
+   "p": "Your teacher interviews you on air.",
+   "aluno": "Listen to your teacher’s question. Answer as the guest, and signpost what is coming.",
+   "perguntas": [
+    "Why did you choose the work you do?",
+    "What was the hardest part at the beginning?",
+    "An interesting question is: would you start again from zero?",
+    "What do people get wrong about your field?",
+    "What’s your advice for someone starting out?",
+    "And on the other hand, what would you never do again?"
+   ],
+   "st": [
+    "Let me tell you about …",
+    "But in fact, …",
+    "On top of that, …"
+   ],
+   "ex": "Let me tell you about my first year. It was chaos. But in fact, that chaos taught me everything."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

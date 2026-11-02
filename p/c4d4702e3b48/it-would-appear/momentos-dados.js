@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de It Would Appear That… (11/10/2026): a ilusão do fim da história (palestra TED de Dan Gilbert).
+   Forma: o termômetro da certeza. Alvo: cautela (appear to / it would appear that, it could be argued, may have been + particípio, suggest × prove).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [7, 8, 9], k: 'Tattoos', quem: 'Dan Gilbert',
+    contexto: 'The psychologist starts with funny examples of how we change our minds over a lifetime.',
+    frase: 'So young people pay good money to get tattoos removed <b>that teenagers paid good money to get</b>.',
+    explica: 'The same person pays twice: once for the tattoo, once to remove it. A careful writer would not say “people are stupid”.',
+    formula: 'It <b>would appear that</b> we often regret our old decisions. (cautious, not absolute)',
+    tente: 'Describe a common regret, cautiously: It would appear that many people…',
+    ex: 'It would appear that many people regret buying a car too early.',
+    sente: { q: 'How sure is the speaker here?', de: 'not sure', a: 'totally sure', st: 'He’s … because it would appear that…' } },
+  { i: [15, 16, 17], k: 'The question', quem: 'Dan Gilbert',
+    contexto: 'Then he asks the question of the talk.',
+    frase: 'The question is, as a psychologist, that fascinates me, is <b>why do we make decisions that our future selves so often regret</b>?',
+    explica: '<i>Our future selves</i> = the people we will be. A debate question, so the answer starts carefully.',
+    formula: 'It <b>could be argued that</b> we don’t really know our future selves.',
+    tente: 'Give a careful opinion: It could be argued that social media…',
+    ex: 'It could be argued that social media makes us less patient.',
+    sente: { q: 'How curious is the speaker?', de: 'bored', a: 'fascinated', st: 'He’s … because it could be argued that…' } },
+  { i: [33, 34, 35], k: 'Now', quem: 'Dan Gilbert',
+    contexto: 'When do people stop changing? Most people answer the same thing.',
+    frase: 'The answer, it turns out, for most people is <b>Now</b>. Wherever now happens to be.',
+    explica: '<i>It turns out</i> = surprisingly, the answer is. Everyone thinks they have just stopped changing.',
+    formula: 'People <b>appear to</b> believe that they will stop changing. (appear to + verb)',
+    tente: 'Describe a friend’s habit cautiously: She appears to…',
+    ex: 'My friend appears to love her new job. She seems calmer.',
+    sente: { q: 'How surprising is the answer?', de: 'expected', a: 'very surprising', st: 'It’s … because people appear to…' } },
+  { i: [66, 67, 68, 69, 70, 71], k: 'The data', quem: 'Dan Gilbert',
+    contexto: 'His team asked thousands of people about their values, past and future.',
+    frase: 'Here’s what we found. First of all, you’re right, change does slow down as we age. But second, you’re wrong, because <b>it doesn’t slow nearly as much as we think</b>.',
+    explica: 'Careful with verbs: a study <i>suggests</i> or <i>indicates</i>; it rarely <i>proves</i>.',
+    formula: 'The data <b>suggest</b> that we keep changing. · ✗ The data prove that… (too strong)',
+    tente: 'Report a study you know with suggests or indicates.',
+    ex: 'Research suggests that walking after lunch helps digestion.',
+    sente: { q: 'How strong is the evidence?', de: 'weak', a: 'very strong', st: 'It’s … because the data suggest…' } },
+  { i: [72, 73, 74, 75], k: 'The illusion', quem: 'Dan Gilbert',
+    contexto: 'At every age, people make the same mistake. The mistake has a name.',
+    frase: 'At every age from 18 to 68 in our data set, people <b>vastly underestimated</b> how much change they would experience over the next 10 years. We call this the end of history illusion.',
+    explica: '<i>Vastly underestimate</i> = think something is much smaller than it is. Why? Maybe an illusion.',
+    formula: 'The mistake <b>may have been caused by</b> an illusion. (may have + been + participle)',
+    tente: 'Explain a past problem cautiously with may have been caused by…',
+    ex: 'The delay may have been caused by the storm.',
+    sente: { q: 'How important is this idea?', de: 'small', a: 'huge', st: 'It’s … because the mistake may have been…' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#5f8fd9', titulo: 'The night desk: five careful claims.', sub: 'Hear the line, measure it, then say it the careful way: it would appear that…', rot: { por: 'WHAT IT MEANS', padrao: 'APPEAR TO · MAY HAVE BEEN · SUGGEST', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

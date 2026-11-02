@@ -1,0 +1,104 @@
+/* ============================================================
+   SCIENTISTS HAVE FOUND… · THE FLAP BOARD · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: a redação de ciência à
+   noite — azul-petróleo quase preto; o painel de letras que viram
+   (split-flap) com letras âmbar em células pretas, a linha do meio
+   marcada; manchete certa acende, a do site rival pisca vermelho.
+   ============================================================ */
+:root{
+  --noite:#05090b; --noite-rgb:5,9,11; --tinta:#e8eff2;
+  --t1:#ecf3f6; --t2:#c0ccd2; --t2-rgb:192,204,210; --t3:#82939b;
+  --ac:#ffb648; --ac2:#ffd896; --ciano:#3fd0c8; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(232,239,242,.05); --vidro2:rgba(232,239,242,.085); --vidro3:rgba(232,239,242,.12);
+  --fio:rgba(220,232,238,.12); --fio2:rgba(220,232,238,.22); --luz:rgba(232,239,242,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'IBM Plex Mono','Space Mono',ui-monospace,monospace; --cond:'Oswald',system-ui,sans-serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1800}
+.btn.cheio{color:#2a1800}
+.capa{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:600 clamp(58px,5.6vw,108px)/.95 var(--cond);letter-spacing:-.01em;text-transform:uppercase}
+.capa h1 b{display:block;font-weight:700;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--t1)}
+.capa-r{display:grid;gap:16px;justify-items:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:52px;padding:0 22px;font:700 clamp(15px,1.2vw,20px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,19px);text-align:left}
+.versao.errado{border-color:var(--erro);animation:treme .35s}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(17px,1.35vw,23px)/1.4 var(--disp)}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:900px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)}
+.balao u{text-decoration:none;color:var(--ac2);border-bottom:3px solid var(--ok)}
+.lacuna-q{display:inline-block;min-width:3.5em;border-bottom:3px solid var(--ac);color:var(--ac)}
+.aberta{position:relative;border-radius:var(--r1);background-size:cover;background-position:center;height:clamp(150px,calc(100vh / var(--zv,1) - 520px),360px);box-shadow:inset 0 0 120px rgba(0,0,0,.8)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(5,9,11,.88);font:700 13px var(--mono);color:var(--ac2)}
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:800 28px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--disp);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* o painel de letras que viram */
+.flap{display:grid;gap:6px;padding:14px;border-radius:14px;background:#0a0d0f;border:2px solid #1d252a;box-shadow:inset 0 0 40px rgba(0,0,0,.8);width:max-content;max-width:100%}
+.flap-l{display:flex;gap:3px;flex-wrap:nowrap}
+.flap span{position:relative;display:grid;place-items:center;width:clamp(18px,1.4vw,28px);height:clamp(28px,2.1vw,42px);border-radius:4px;background:linear-gradient(180deg,#181d21 50%,#12161a 50%);font:600 clamp(16px,1.3vw,25px) var(--mono);color:#7d8a90;animation:vira .5s backwards}
+.flap span::after{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:#05070a}
+.flap.ok span{color:var(--ac2);text-shadow:0 0 8px rgba(255,182,72,.45)}
+.flap.rival span{color:#ff8a7a;animation:vira .5s backwards,pisca 1.4s 1s infinite}
+.flap.mini span{width:16px;height:24px;font-size:14px}
+@keyframes vira{from{transform:rotateX(90deg);color:transparent}}
+@keyframes pisca{50%{color:#7a3a34;text-shadow:none}}
+.rival-t{margin:0;font:800 12px var(--mono);letter-spacing:.14em;color:var(--erro)}
+.relogio-n{justify-self:center;margin:0 auto 6px;width:max-content;padding:6px 18px;border-radius:8px;border:1px solid #3a2a12;background:#140e06;font:700 clamp(16px,1.3vw,22px) var(--mono);letter-spacing:.1em;color:var(--ac2)}
+.modal-k{margin:0;font:700 13px var(--mono);letter-spacing:.08em;color:var(--t3)} .modal-k b{color:var(--ac2);font-size:16px}
+
+/* bancada */
+.tubos{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:4px 0 10px}
+.tubo{display:grid;justify-items:center;gap:6px;padding:8px 12px 10px;border-radius:14px;border:1px solid var(--fio);background:#0a1114;color:var(--t2);cursor:pointer}
+.tubo i{width:22px;height:46px;border-radius:4px 4px 11px 11px;border:2px solid rgba(63,208,200,.5);background:linear-gradient(180deg,transparent 30%,rgba(63,208,200,.25) 30%)}
+.tubo b{font:700 12px var(--mono);letter-spacing:.1em}
+.tubo.on{border-color:var(--ac);color:var(--ac2)} .tubo.on i{border-color:var(--ac);background:linear-gradient(180deg,transparent 30%,rgba(255,182,72,.35) 30%)}
+.tubo.feito i{border-color:var(--ok);background:linear-gradient(180deg,transparent 30%,rgba(143,217,162,.35) 30%);box-shadow:0 0 12px rgba(143,217,162,.3)}
+.nota-lab{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--ciano)} .nota-lab small{font:700 11px var(--mono);letter-spacing:.12em;color:var(--ciano)} .nota-lab p{margin:0;font:500 clamp(16px,1.25vw,20px)/1.5 var(--mono);color:var(--t1)}
+.fitas4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:10px 0 14px}
+.fita4{display:grid;gap:6px;padding:12px 16px;border-radius:var(--r2);background:#0a1114;border:1px solid var(--fio);border-top:4px solid var(--ac)}
+.fita4 small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .fita4 b{font:600 clamp(16px,1.25vw,20px)/1.4 var(--disp)}
+.fita4.f1{border-top-color:var(--ciano)} .fita4.f2{border-top-color:var(--erro)} .fita4.f3{border-top-color:var(--lil)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)} .lado-fim .flap{margin:0 auto}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .fitas4{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .fitas4{grid-template-columns:1fr} .flap span{width:13px;height:22px;font-size:12px} .flap-l{gap:2px} .flap{padding:10px} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb-tubos{justify-content:flex-start;margin:0}
+.deb-tubo{cursor:default;padding:6px 10px 8px}
+.deb-tubo i{height:36px}
+.deb-tubo b{font-size:10px}
+.deb-tubo.perdido i{border-color:var(--erro);box-shadow:none}
+.deb-tubo.feito.nova i{animation:debEnche .7s ease-out}
+@keyframes debEnche{0%{background:linear-gradient(180deg,transparent 95%,rgba(143,217,162,.35) 95%)}100%{background:linear-gradient(180deg,transparent 30%,rgba(143,217,162,.35) 30%)}}
+@media (prefers-reduced-motion:reduce){.deb-tubo.nova i{animation:none}}

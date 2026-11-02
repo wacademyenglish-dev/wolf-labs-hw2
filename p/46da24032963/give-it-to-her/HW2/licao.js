@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "Give It to Her",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/46da24032963/give-it-to-her/img/live-presentes.webp",
+  "capa": "../img/live-presentes.webp",
   "alvo": "object pronouns (me, you, him, her, it, us, them) after a verb and after to / for / with: Give it to her · Call him · I love it (do not drop IT; not give it to she, not for we, not for your)",
   "abrir": "Who do you give presents to?",
   "fecho": "After a verb or <b>to / for / with</b>, the pronoun changes: <b>I → me · he → him · she → her · we → us · they → them</b>: <i>Give it to her. Call him. Pick them up.</i> A thing is <b>it</b>: <i>I love it</i>, never <i>I love</i>.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo get ready for Grandma Rosa's birthday. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/46da24032963/give-it-to-her/img/live-bolo.webp",
+      "img": "../img/live-bolo.webp",
       "leg": "A chocolate cake with candles",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Give it to her at the party.",
-          "img": "https://wolf-labs.pages.dev/p/46da24032963/give-it-to-her/img/live-presentes.webp",
+          "img": "../img/live-presentes.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Call him, please. He never answers me.",
-          "img": "https://wolf-labs.pages.dev/p/46da24032963/give-it-to-her/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Pick them up at the station.",
-          "img": "https://wolf-labs.pages.dev/p/46da24032963/give-it-to-her/img/live-bolo.webp",
+          "img": "../img/live-bolo.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -166,7 +166,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/46da24032963/give-it-to-her/img/live-presentes.webp",
+      "img": "../img/live-presentes.webp",
       "leg": "Presents with paper tags",
       "pede": "Look at the picture: presents with paper tags. Write 2 or 3 sentences about who the presents are for. Use <b>her, him, them, us, you</b> or <b>me</b>.",
       "ph": "This present is for … I give it to …",

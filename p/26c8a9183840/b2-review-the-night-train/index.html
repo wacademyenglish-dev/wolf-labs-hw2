@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Night Train · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B2 · Unit 9 Review · The Night Train</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Night Train · B2 Unit 9 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 9 (More elaborate sentences). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> On the night train to the coast, a diamond necklace disappeared from the safe at 3:10 AM. Your student is the inspector. You are three passengers: the pianist, the young lawyer and the guard. (The answer: the guard hid it in the pianist’s flower box and opened a window to confuse everyone.)</p><p style="margin:0 0 6px"><b>About 40 min:</b> I · Speed Round (6) · II · Carriage 7 (15) · III · The Arena (8) · IV · In the Fog (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Sixty seconds. Ready? Start the clock.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>must have, can’t have, might have · participle clauses: having done, not knowing · cleft sentences: it was… who, what I need is · inversion: never have I, not only did · had I known</p>
+    <h4>SPEED ROUND</h4>
+    <p>A 60-second speed round. Tap <b>Start the clock</b>, then <b>Right</b> or <b>Pass</b> for each item; the answer is on your screen. At the end of class, play again and beat the score.</p>
+    <h4>CARRIAGE 7</h4>
+    <p>You are each passenger. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then the student sums up the case with participle clauses, clefts and inversion. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>IN THE FOG</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>having finish</i>, <i>never I have seen</i>, <i>had I known, I would locked</i>, <i>it was the guard which found it</i>, <i>what I need it is a holiday</i>, <i>not only he saw it</i>. B2: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE ARENA (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the case is closed, your student decides who is to blame: only the guard, or the train company that gave him the only key. They pick a side and defend it for one minute with Unit 9 sentences (Having…, It was… who…, Not only did…, Had they…), then tap <b>Swap sides</b> and defend the other one. Wait five seconds in silence before they start, and use the PUSH line (only you see it) to make it harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Speed Round and V · I Can.</li>
+      <li><b>Out loud</b>: II · Carriage 7, III · The Arena and IV · In the Fog.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE NIGHT TRAIN (Main B2 · Unit 9 review) · pergunta-surpresa · 27/10/2026 · participle clauses, cleft, inversion, must have */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'rapido', tipo: 'Would you rather', q: 'For a long trip: would you rather take a night train or a plane?',
+    opc: ['A night train', 'A plane'], st: ['What I’d choose is …, because …', 'Never have I …'],
+    ex: 'A night train. What I love is waking up in a new city. Never have I slept well on a plane.', push: 'Twelve hours on the train or two on the plane. Still the train?' },
+  { cena: 'missao', tipo: 'What if', q: 'You are in carriage 7 at 3:10 and you hear a door closing. What do you do?',
+    opc: ['Open my door', 'Stay in bed', 'Call the guard'], st: ['Not knowing who it was, I would …', 'What I would do is …'],
+    ex: 'Call the guard. Not knowing who it was, I wouldn’t open my door. What I would do is ring the bell.', push: 'But the guard is the thief! Who do you call now?' },
+  { cena: 'conversa', tipo: 'Opinion', q: 'Some people can always tell when someone is lying. Can you?',
+    opc: ['Yes, always', 'Sometimes', 'Never'], st: ['What gives people away is …', 'It’s the … that …', 'I must have been fooled …'],
+    ex: 'Sometimes. What gives people away is the voice, not the eyes. But I must have been fooled many times without knowing.', push: 'Tell me about one time you caught someone lying.' },
+  { cena: 'pode', tipo: 'And you?', q: 'What’s the best trip you’ve ever taken, and how did you get there?',
+    opc: ['By train', 'By car', 'By plane', 'By bus'], st: ['Never have I enjoyed …', 'It was … that made it special.', 'Having arrived, …'],
+    ex: 'By car. It was the road along the coast that made it special. Having arrived at night, we only saw the sea the next morning.', push: 'Would you do that trip again, exactly the same way?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE NIGHT TRAIN (Main B2 · Unit 9 review) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A arena entra no lugar de "III · The Story in Order" (tocar os cartões em ordem: prática controlada;
+   o fim da missão II já revela o guarda). Depois de pegar o guarda, o aluno decide quem tem a culpa.
+   A gramática da unidade (participle clauses, cleft, inversion, must have, had I known) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'arena', troca: 'ordem', est: 'o', min: 8, img: 'conversa', rot: 'The Arena', t: 'Case closed. Now: who is to blame?',
+    p: 'Pick a side and defend it for one minute with the sentences of Unit 9. Then swap and defend the other side.',
+    formato: 'arena', segundos: 60,
+    q: 'The guard took the necklace. Is he the only one to blame?',
+    lados: [
+      { nome: 'Only the guard', arg: 'He had the key, he took it and he lied. It was his choice.' },
+      { nome: 'The company too', arg: 'They gave one man the only key and never checked him.' }
+    ],
+    st: ['It was the guard who …', 'Having given him the key, the company …', 'Not only did he …, but he also …', 'Had they …, nobody would have …', 'He must have …'],
+    ex: 'The company too. Having given one man the only key, they should have checked him. Not only did they trust him, but they also had no camera. Had they installed one, nobody would have tried.',
+    push: 'Thirty years without a single problem. Should the company really have checked him every night?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "rapido": {
+   "t": "Sixty seconds. How many can you do?",
+   "p": "Answer fast. Then try to beat your score."
+  },
+  "missao": {
+   "t": "Carriage 7: three passengers. Nobody got off.",
+   "p": "Ask each passenger five questions. Then sum up."
+  },
+  "cv-arena": {
+   "t": "Case closed. Who is to blame?",
+   "p": "Defend one side for a minute. Then swap."
+  },
+  "conversa": {
+   "t": "Your stories, said with style.",
+   "p": "One elaborate sentence. Then turn it back."
+  },
+  "pode": {
+   "t": "Unit 9: what can you do now?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unit 9: must/can’t/might have, orações de particípio (having done), clivadas (it was… who), inversão (never have I, had I known). Um colar some no trem noturno às 3:10.",
+  "armadilha": "O brasileiro diz “having finish”, “never I have seen” (ordem do português na inversão), “it was the guard which”, “what I need it is a holiday” e “not only he saw it”.",
+  "pal": [
+   "must have",
+   "can’t have",
+   "might have",
+   "having…",
+   "it was… who",
+   "what I need is",
+   "never have I",
+   "had I known"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: um colar de diamantes some do cofre do trem noturno.",
+   "perg": "Have you ever traveled on a night train?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "rapido": {
+   "obj": "Rodada de 60 segundos com a gramática da unidade; jogar de novo no fim e bater o placar.",
+   "perg": "Ready? Start the clock.",
+   "pula": "Uma rodada só, sem a revanche."
+  },
+  "missao": {
+   "obj": "O aluno interroga a pianista, o jovem advogado e o guarda, e resume o caso com estilo.",
+   "perg": "Who must have taken the necklace?",
+   "pula": "Dois passageiros e o resumo."
+  },
+  "cv-arena": {
+   "obj": "Arena: culpa só do guarda ou da empresa que deu a ele a única chave? Defender e trocar.",
+   "perg": "Who is really to blame?",
+   "pula": "Um lado só, sem trocar."
+  },
+  "conversa": {
+   "obj": "Conversa pessoal com uma frase elaborada por resposta e a pergunta de volta.",
+   "perg": "What is it that you need most right now?",
+   "pula": "Três perguntas bastam."
+  },
+  "pode": {
+   "obj": "Checklist do I can: o aluno lê e marca o que já sabe; o resto vai para a lição.",
+   "perg": "Which one is still hard for you?",
+   "pula": "Não corte: fecha a unidade. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta com frases elaboradas: dedução, clivadas, inversão.",
+   "perg": "What is it that you love about traveling?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre o caso e sobre confiança, com as frases da Unit 9.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o guarda e tenta se defender com frases elaboradas.",
+   "perg": "Where were you at 3:10?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your life, with style.",
+   "p": "Pick a card. One elaborate sentence.",
+   "palavras": [
+    "must have",
+    "having…",
+    "it was… who",
+    "what I…is",
+    "never have I"
+   ],
+   "cartas": [
+    {
+     "k": "NIGHT TRAVEL",
+     "q": "What is the strangest trip you have ever taken?",
+     "fup": "What made it strange?",
+     "st": [
+      "Never have I …",
+      "What made it strange was …"
+     ],
+     "ex": "Never have I slept so badly. What made it strange was a man singing all night."
+    },
+    {
+     "k": "LOST THINGS",
+     "q": "Have you ever lost something and found it in a weird place?",
+     "fup": "How did it get there?",
+     "st": [
+      "It must have …",
+      "Having looked everywhere, I …"
+     ],
+     "ex": "Having looked everywhere, I found my keys in the fridge. I must have been very tired."
+    },
+    {
+     "k": "YOUR WEEK",
+     "q": "What do you need most this week?",
+     "fup": "Will you get it?",
+     "st": [
+      "What I need is …",
+      "It’s … that I need, not …"
+     ],
+     "ex": "What I need is a quiet weekend, not another party."
+    },
+    {
+     "k": "A PERSON",
+     "q": "Who has helped you most in your career?",
+     "fup": "How?",
+     "st": [
+      "It was … who …",
+      "Not only did she …, but she also …"
+     ],
+     "ex": "It was my first boss who taught me to say no. Not only did she explain, she showed me."
+    },
+    {
+     "k": "HINDSIGHT",
+     "q": "What do you wish you had known earlier?",
+     "fup": "What would you have done?",
+     "st": [
+      "Had I known …, I would have …"
+     ],
+     "ex": "Had I known how hard it was, I would have started English as a child."
+    },
+    {
+     "k": "MYSTERIES",
+     "q": "Is there a small mystery in your life?",
+     "fup": "What might have happened?",
+     "st": [
+      "Someone might have …",
+      "It can’t have been …"
+     ],
+     "ex": "My plant died last week. My cat might have eaten it; it can’t have been the sun."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "it was… who",
+    "not only…",
+    "had they…",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Should the guard go to prison, or get a second chance?",
+     "a": "Prison",
+     "b": "Second chance",
+     "fa": [
+      "Prison. Not only did he steal, he tried to blame the pianist.",
+      "That’s two crimes."
+     ],
+     "fb": [
+      "Second chance. It was the company that tempted him.",
+      "Had they paid him better, this might not have happened."
+     ]
+    },
+    {
+     "q": "Should one person ever have the only key?",
+     "a": "Yes",
+     "b": "Never",
+     "fa": [
+      "Yes. What a company needs is one person who is responsible."
+     ],
+     "fb": [
+      "Never. Had there been two keys, the guard couldn’t have done it alone."
+     ]
+    },
+    {
+     "q": "Trust first, or check everyone?",
+     "a": "Trust first",
+     "b": "Check everyone",
+     "fa": [
+      "Trust first. Never have I worked well with someone who watched me all day."
+     ],
+     "fb": [
+      "Check everyone. It was trust that opened that safe at 3:10."
+     ]
+    },
+    {
+     "q": "Night trains: romantic or uncomfortable?",
+     "a": "Romantic",
+     "b": "Uncomfortable",
+     "fa": [
+      "Romantic. What I love is waking up in a new place."
+     ],
+     "fb": [
+      "Uncomfortable. Having slept on one, I’ll take a plane, thanks."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Not only did you argue, you argued with style."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the guard now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the guard, and try to defend yourself.",
+   "perguntas": [
+    "Where were you at 3:10 AM?",
+    "Who might have taken the necklace, in your opinion?",
+    "Why was the window open?",
+    "How did the necklace end up in the pianist’s flower box?",
+    "You had the only key. Who else could have opened the safe?",
+    "Had you known the inspector was on the train, would you have done it?"
+   ],
+   "st": [
+    "It must have been …",
+    "It wasn’t me who …",
+    "Had I known …"
+   ],
+   "ex": "It wasn’t me who opened the safe. Someone must have copied my key."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

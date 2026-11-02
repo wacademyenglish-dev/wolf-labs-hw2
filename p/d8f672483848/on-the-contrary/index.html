@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · On the Contrary · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 7 · Argue and persuade</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>On the Contrary · C1 Unit 7 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on contrast with precision: on the contrary (no, the opposite is true) × on the other hand (both sides are true) × conversely / in contrast to (two different things compared) × far from it / quite the opposite.</p><p style="margin:0 0 6px"><b>The story:</b> Lia Morel (invented) writes an opinion column: “Are big cities bad for us?” She denies myths, shows two sides and compares cities and towns.</p><p style="margin:0 0 6px"><b>About 51 min:</b> I · The Column (10) · II · Opposite or Other Side? (9) · III · Bingo (8) · IV · Hot Takes (8) · V · City or Village? (8) · VI · Your Column (8).</p><p style="margin:0"><b>Open with:</b> “Big city or small town: where would you rather live? Why?”</p></div><!--/prep-->
+    <p>Brazilian speakers often use on the contrary for “por outro lado”. The key test: are you DENYING the first idea (on the contrary) or ADDING another side (on the other hand)? The column shows both; the bingo and the would-you-rather make the student choose fast; the column at the end is real argumentative writing.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>on the contrary: no, the opposite · on the one hand… on the other hand · conversely · in contrast to / with · far from it, far from + adjective · quite the opposite</p>
+    <h4>THE COLUMN</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>OPPOSITE OR OTHER SIDE?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>BINGO</h4>
+    <p>A 3×3 card of quick tasks. The student picks a square and does it out loud; tap <b>Done</b>. Three in a line (across, down or diagonal) is a BINGO. Keep going for a second line if there is time.</p>
+    <h4>CITY OR VILLAGE?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>YOUR COLUMN</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>it’s expensive; on the contrary, it’s beautiful</i>, <i>was it easy? on the other hand, it was hard</i>, <i>in contrast of</i>, <i>far from it is cheap</i>, <i>in the other hand</i>, <i>at the contrary</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>HOT TAKES (IV) AND THE SURPRISE QUESTION</h4>
+    <p>In the middle of the lesson, your student rates four unpopular opinions (boredom, eating alone, learning after 30, holidays with no plan) from 1 to 5 and defends the number: deny with <i>on the contrary / far from it</i>, or weigh both sides with <i>on the one hand / on the other hand</i>. There is no right answer. Wait five seconds in silence, then take the opposite number and use the PUSH line (only you see it) to make it harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Column.</li>
+      <li><b>Focus</b>: II · Opposite or Other Side? and III · Bingo.</li>
+      <li><b>Out loud</b>: IV · Hot Takes and V · City or Village?.</li>
+      <li><b>Write</b>: VI · Your Column.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* ON THE CONTRARY (Main C1) · pergunta-surpresa · 28/10/2026 · on the contrary × on the other hand × conversely */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'What is one thing people say about your city that is simply not true?',
+    opc: ['It’s dangerous', 'It’s boring', 'Something else'], st: ['People say … On the contrary, …', 'Far from it: …'],
+    ex: 'People say it’s boring. On the contrary, there’s a concert or a fair every weekend.', push: 'OK, and what is one thing they say that is completely true?' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Is your job (or your studies) better or worse than people imagine?',
+    opc: ['Better', 'Worse', 'Both'], st: ['On the one hand, … On the other hand, …', 'Is it easy? On the contrary, …'],
+    ex: 'Both. On the one hand, the salary is good. On the other hand, people think it’s easy. On the contrary, it’s very stressful.', push: 'Would you recommend it to a younger friend?' },
+  { cena: 'escolha', tipo: 'Would you rather', q: 'Would you rather have a famous friend or a friend who is a great cook?',
+    opc: ['Famous friend', 'Great cook'], st: ['On the other hand, …', 'In contrast to …, …'],
+    ex: 'A great cook. A famous friend is never free. Conversely, a cook invites you every Sunday.', push: 'The famous friend gets you into any concert for free. Still the cook?' },
+  { cena: 'cartao', tipo: 'What if', q: 'You can write one column in a big newspaper. Which myth do you destroy?',
+    opc: ['A myth about Brazil', 'A myth about my job', 'A myth about my age group'], st: ['People think … On the contrary, …', 'Far from …, we …'],
+    ex: 'A myth about Brazil: that we are always late. Far from it: in São Paulo, meetings start on time.', push: 'Be honest: were you on time today?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* ON THE CONTRARY (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A escala ENTRA depois de "III · Bingo" (a aula tinha 43 min e nenhuma cena extra: somar 8 min cabe).
+   No meio da aula, o aluno dá nota a quatro opiniões impopulares do dia a dia (temas fora da cidade/casa/carro/
+   redes do IV, para não repetir) e defende o número negando com on the contrary / far from it ou pesando os
+   dois lados com on the one hand / on the other hand. Formato: unpopular-opinion scale (escala). */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'opinioes', apos: 'bingo', est: 'o', min: 8, img: 'conversa', rot: 'Hot Takes', t: 'Four hot takes. How much do you agree?',
+    p: 'Read each opinion. Tap a number from 1 to 5 and defend it. Your teacher takes the opposite number.',
+    formato: 'escala', tag: 'Unpopular opinion',
+    frases: [
+      { f: 'Being bored is a waste of time. Always have something to do.',
+        st: ['On the contrary, being bored …', 'Far from it: …', 'On the one hand, … On the other hand, …'],
+        ex: '1, totally disagree. On the contrary, my best ideas come when I’m bored, on the bus, with no phone.',
+        push: 'Then why do you pick up your phone in every queue?' },
+      { f: 'Eating alone in a restaurant is sad.',
+        st: ['Is it sad? Quite the opposite: …', 'Far from being sad, it’s …', 'On the other hand, …'],
+        ex: '2, disagree. Far from being sad, it’s relaxing. On the other hand, I wouldn’t do it on a Saturday night.',
+        push: 'A table for one on Valentine’s Day. Still not sad?' },
+      { f: 'Learning a language after 30 is much harder than at 10.',
+        st: ['On the contrary, adults …', 'In contrast to children, adults …', 'On the one hand, … On the other hand, …'],
+        ex: '3, not sure. On the one hand, kids copy sounds better. On the other hand, adults know why they are learning, and that helps a lot.',
+        push: 'So why does your accent stay, even after years?' },
+      { f: 'The best holidays are the ones with no plan at all.',
+        st: ['Far from it: without a plan, …', 'On the contrary, a plan …', 'Conversely, people who plan …'],
+        ex: '4, agree. Planned trips feel like work. Conversely, with no plan you find the little places nobody talks about.',
+        push: 'You arrive at 11 PM, and every hotel is full. Still the best holiday?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Lia’s column: are big cities bad for us?",
+   "p": "Read it aloud. Answer. Then look closer."
+  },
+  "descobre": {
+   "t": "They look similar. They are not.",
+   "p": "Compare A and B. Which one says “no”?"
+  },
+  "bingo": {
+   "t": "Nine squares. Make a line!",
+   "p": "Pick a square. Do it out loud. Three in a line."
+  },
+  "cv-opinioes": {
+   "t": "Four hot takes. How much do you agree?",
+   "p": "Tap 1 to 5. Defend it. Your teacher disagrees."
+  },
+  "escolha": {
+   "t": "City or village? Choose and contrast.",
+   "p": "Choose A or B. Deny it, or show the other side."
+  },
+  "cartao": {
+   "t": "Write a short opinion column.",
+   "p": "Four lines: a myth, a denial, two sides, a contrast."
+  }
+ },
+ "prep": {
+  "obj": "Contraste preciso: on the contrary (nego: o oposto é verdade) × on the other hand (os dois lados valem) × conversely / in contrast to, na coluna da Lia Morel sobre cidades grandes.",
+  "armadilha": "O “por outro lado” vira on the contrary: “it’s expensive; on the contrary, it’s beautiful”. Também “in contrast of”, “at the contrary”, “in the other hand” e “far from it is cheap”.",
+  "pal": [
+   "on the contrary",
+   "on the one hand",
+   "on the other hand",
+   "conversely",
+   "in contrast to",
+   "far from it",
+   "quite the opposite",
+   "myth"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: negar uma ideia ou acrescentar o outro lado.",
+   "perg": "Big city or small town: where would you rather live?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Leitura da coluna da Lia: ela nega mitos, mostra dois lados e compara cidade e interior.",
+   "perg": "Which myth does Lia deny?",
+   "pula": "Leia e faça só as perguntas de sentido."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: negar (on the contrary) ou somar outro lado (on the other hand).",
+   "perg": "Are you denying it, or adding another side?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "bingo": {
+   "obj": "Tarefas rápidas que obrigam a escolher o conector certo na hora.",
+   "perg": "Which one: on the contrary or on the other hand?",
+   "pula": "Uma linha de bingo basta."
+  },
+  "cv-opinioes": {
+   "obj": "Quatro opiniões impopulares (tédio, comer sozinho, aprender depois dos 30, férias sem plano) de 1 a 5.",
+   "perg": "Why that number, and not the opposite?",
+   "pula": "Duas opiniões bastam."
+  },
+  "escolha": {
+   "obj": "Escolha cidade ou interior e contraste com o conector certo.",
+   "perg": "Which would you choose, and what’s the other side?",
+   "pula": "Três escolhas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: uma minicoluna de opinião com mito, negação, outro lado e contraste.",
+   "perg": "What’s the myth you want to deny?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre mitos e meias-verdades da vida do aluno, negando ou pesando os dois lados.",
+   "perg": "Is that true, or quite the opposite?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre cidade, trabalho e estilo de vida, com contraste preciso.",
+   "perg": "Which side, and what’s the other hand?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Lia Morel e defende a coluna diante de um leitor irritado.",
+   "perg": "Lia, do you really think cities are good for us?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Deny it, or weigh it?",
+   "p": "Pick a card. Choose your connector.",
+   "palavras": [
+    "on the contrary",
+    "on the other hand",
+    "conversely",
+    "far from it",
+    "quite the opposite"
+   ],
+   "cartas": [
+    {
+     "k": "A MYTH",
+     "q": "What do people believe about your job that isn’t true at all?",
+     "fup": "Where does the myth come from?",
+     "st": [
+      "People think … On the contrary, …",
+      "Far from it."
+     ],
+     "ex": "People think teachers have long holidays. On the contrary, we plan most of them away."
+    },
+    {
+     "k": "YOUR TOWN",
+     "q": "What’s good and bad about the place where you live?",
+     "fup": "Would a tourist notice the bad part?",
+     "st": [
+      "On the one hand, … On the other hand, …"
+     ],
+     "ex": "On the one hand, it’s safe; on the other hand, nothing opens after ten."
+    },
+    {
+     "k": "YOU THEN, YOU NOW",
+     "q": "How are you different from the person you were ten years ago?",
+     "fup": "Which version would your friends prefer?",
+     "st": [
+      "Back then, … In contrast, now …",
+      "Conversely, …"
+     ],
+     "ex": "Back then I said yes to everything; in contrast, now I protect my weekends."
+    },
+    {
+     "k": "LAZY?",
+     "q": "Is doing nothing on a Sunday lazy?",
+     "fup": "What did you do last Sunday?",
+     "st": [
+      "Far from it. …",
+      "Quite the opposite: …"
+     ],
+     "ex": "Far from it. A quiet Sunday is what keeps me sane on Monday."
+    },
+    {
+     "k": "TWO FRIENDS",
+     "q": "Think of two friends who are completely different. Compare them.",
+     "fup": "Which one do you call in a crisis?",
+     "st": [
+      "… is …, whereas …",
+      "Conversely, …"
+     ],
+     "ex": "Ana plans every minute; conversely, Bia decides where to go in the car."
+    },
+    {
+     "k": "TECHNOLOGY",
+     "q": "Has your phone made your life easier?",
+     "fup": "What would you lose without it?",
+     "st": [
+      "In some ways, yes. On the other hand, …",
+      "Not really. On the contrary, …"
+     ],
+     "ex": "In some ways, yes. On the other hand, I haven’t read a whole book in months."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "on the contrary",
+    "on the other hand",
+    "far from it",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Big cities: bad for our health, or good for it?",
+     "a": "Bad",
+     "b": "Good",
+     "fa": [
+      "Bad. The noise and the traffic never stop.",
+      "On the other hand, nobody walks to work in a village either."
+     ],
+     "fb": [
+      "Good. On the contrary, city people walk more and see doctors sooner.",
+      "Far from it: loneliness is worse in the countryside."
+     ]
+    },
+    {
+     "q": "Working from home: freedom or isolation?",
+     "a": "Freedom",
+     "b": "Isolation",
+     "fa": [
+      "Freedom. Two hours a day back from the commute.",
+      "I see your point, but I choose my own company."
+     ],
+     "fb": [
+      "Isolation. Far from free, you never leave the office.",
+      "The thing is, a screen is not a colleague."
+     ]
+    },
+    {
+     "q": "Holidays with no plan: adventure or chaos?",
+     "a": "Adventure",
+     "b": "Chaos",
+     "fa": [
+      "Adventure. The best days are the ones nobody planned.",
+      "On the contrary, plans kill curiosity."
+     ],
+     "fb": [
+      "Chaos. You spend half the trip looking for a bed.",
+      "On the other hand, a loose plan is fine."
+     ]
+    },
+    {
+     "q": "Learning a language after 30: harder or easier?",
+     "a": "Harder",
+     "b": "Easier",
+     "fa": [
+      "Harder. Kids just absorb it; adults translate everything.",
+      "The thing is, we have less time."
+     ],
+     "fb": [
+      "Easier. Quite the opposite: adults know why they’re learning.",
+      "Conversely, kids don’t understand grammar at all."
+     ]
+    }
+   ],
+   "fim": "Four rounds. On the one hand, nobody won; on the other hand, everybody argued well."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Lia Morel now.",
+   "p": "Your teacher, an angry reader, interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Lia, the columnist, with precise contrast.",
+   "perguntas": [
+    "Lia, aren’t big cities simply too stressful?",
+    "Is it true that city people are lonelier?",
+    "What’s better about small towns, then?",
+    "Isn’t city life far too expensive for most people?",
+    "How is living in a city different from living in a village, in one sentence?",
+    "Would you ever move to the countryside yourself?"
+   ],
+   "st": [
+    "On the contrary, …",
+    "On the one hand, …; on the other hand, …",
+    "Far from it: …"
+   ],
+   "ex": "On the contrary, city people often have more friends nearby; they just see them less."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

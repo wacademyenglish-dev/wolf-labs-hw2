@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · I Have a Headache · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>I Have a Headache · Maple Street Clinic</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>I Have a Headache · Maple Street Clinic</h2>
+    <p>Monday, 8 AM. It’s still dark outside, and the waiting room of the Maple Street Clinic is full. Nurse Rosa calls the tickets; the red panel lights each number, and the student gives each patient a voice. The twist: the first patient says <i>I am with a headache</i>, and Rosa looks around: “With who? Is Mr. Headache here too?” Then the clinic clock runs from 9 AM to noon (the hands move with every answer), and the last ticket is Rosa’s own. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>I have a</b> + problem (a headache, a cold, a fever, a cough, a sore throat). <b>I feel</b> + how (tired, sick, dizzy). <b>My</b> + body part + <b>hurts</b>. A first taste of advice: <b>You should</b> + verb (no questions or negatives yet).</p>
+    <p>The Portuguese trap: “estou com” becomes <i>I am with a headache</i>; “tenho febre” drops the article; “dói minha cabeça” puts the verb first; “me sinto” brings <i>I feel me</i>; “fico tonto” becomes <i>I stay dizzy</i>. The worst: “estou resfriado” comes out as <i>I am cold</i>, which is only the temperature. Also <i>a pain of throat</i>, <i>toss</i> for cough, <i>You should to rest</i>. All of them are the wrong options in the scenes.</p>
+    <!--conversa--><h4>WOULD YOU RATHER (VI) AND THE SURPRISE QUESTION</h4>
+    <p>After ticket 21, three light choices about everyday care: tired, a cold, advice for a friend. Answer first yourself, then let your student choose. Wait five seconds in silence, then use the PUSH line (only you see it): a quick yes or no. Recast quietly while they talk; at the end, ask them to fix one sentence themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and Your Health, II The Waiting Room, IV Nine to Noon, V Your Ticket, VI Would You Rather, VII Your Health.</li>
+      <li><b>Focus</b>: III The Rule.</li>
+      <li><b>Write</b>: VIII A Note to the Doctor, with the red wavy line for every trap above. It goes to their My notes.</li>
+    </ul>
+    <h4>YOU ARE THE VOICES</h4>
+    <p>No recording in this lesson. In the waiting room and on the clock you read what happens; the student answers at once, then taps what they said. In scene V you are Nurse Rosa at the front desk.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The tickets, the clock and the wheel move on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* I HAVE A HEADACHE (Main A1) · pergunta-surpresa · 27/10/2026 · I feel … / my … hurts / You should … */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'sala', tipo: 'And you?', q: 'Monday, 8 AM. How do you feel?',
+    opc: ['I feel great', 'I feel tired'], st: ['On Mondays, I feel …'],
+    ex: 'I feel tired. I need coffee!', push: 'Fridays too? Yes or no?' },
+  { cena: 'relogio', tipo: 'Would you rather', q: 'After work: the sofa or a walk?',
+    opc: ['The sofa', 'A walk'], st: ['The sofa. My legs hurt.', 'A walk. I feel good.'],
+    ex: 'The sofa! My back hurts after work.', push: 'Every day? Yes or no?' },
+  { cena: 'roda', tipo: 'And you?', q: 'Your friend is stressed. Your advice?',
+    opc: ['You should sleep.', 'You should dance!', 'You should call me.'], st: ['You should …'],
+    ex: 'You should call me. We can talk!', push: 'Good advice? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* I HAVE A HEADACHE (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O "would you rather" entra no lugar de "VI · Quick Check" (extra, completar lacuna; a regra fica no III).
+   Depois da senha 21 (V), escolhas leves de cuidado do dia a dia: cansaço, chá, conselho para um amigo.
+   Nada de doença séria: só cansaço, resfriado e descanso, como a própria aula.
+   A1 bem leve: duas opções, frase quase pronta, o professor responde primeiro.
+   A gramática da aula (I have a … · I feel … · my … hurts · You should + verbo) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'prefere', troca: 'quiz', est: 'o', min: 5, img: 'cha', rot: 'Would You Rather', t: 'After the clinic. Two choices, three times.',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Tired', q: 'You feel tired. You…', opc: ['Sleep early', 'Drink coffee'],
+        st: ['I feel tired. I sleep early.', 'I feel tired. I drink coffee.'],
+        ex: 'Sleep early. I feel tired on Mondays!',
+        push: 'Coffee at 10 PM? Yes or no?' },
+      { tag: 'A cold', q: 'You have a cold. You want…', opc: ['Hot tea', 'Hot soup'],
+        st: ['I have a cold. I want hot tea.', 'I have a cold. I want soup.'],
+        ex: 'Hot tea. With honey and lemon!',
+        push: 'Ice cream too? Yes or no?' },
+      { tag: 'Advice', sit: 'Your friend feels very tired.', q: 'Your advice?', opc: ['You should rest.', 'You should walk.'],
+        st: ['You should rest at home.', 'You should take a walk.'],
+        ex: 'You should take a walk. In the park!',
+        push: 'And you? Do you rest on Sundays?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "Before the clinic: you.",
+   "p": "Pick a card. Answer out loud."
+  },
+  "sala": {
+   "t": "Eight chairs. Nurse Rosa calls a number.",
+   "p": "Call a ticket. Say what’s wrong. Tap it."
+  },
+  "regra": {
+   "t": "Have a problem. Feel. Something hurts.",
+   "p": "Read the cards out loud. Fix the traps."
+  },
+  "relogio": {
+   "t": "9 AM to noon. Eight moments.",
+   "p": "Listen to the moment. Answer at once."
+  },
+  "rosa": {
+   "t": "Tuesday, 8 AM. Your ticket now.",
+   "p": "Your teacher is Rosa. Say your problem."
+  },
+  "cv-prefere": {
+   "t": "Two choices, three times.",
+   "p": "Choose. Teacher first. Then say the sentence."
+  },
+  "roda": {
+   "t": "Your real life: colds and advice.",
+   "p": "Spin the wheel. Answer out loud."
+  },
+  "fim": {
+   "t": "You feel sick. Write the doctor.",
+   "p": "Have, feel, hurts, should. Then My notes."
+  }
+ },
+ "prep": {
+  "obj": "I have a + problema, I feel + como, my … hurts e you should: na Maple Street Clinic, a enfermeira Rosa chama oito pacientes.",
+  "armadilha": "“Estou com dor de cabeça” vira I am with a headache; “estou resfriado” vira I am cold; I feel me, I stay dizzy, my head hurts virando hurts my head, you should to rest.",
+  "pal": [
+   "I have a headache",
+   "a cold",
+   "a fever",
+   "a sore throat",
+   "a cough",
+   "I feel tired",
+   "my back hurts",
+   "you should"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a clínica: segunda, 8 da manhã, oito senhas e uma enfermeira com dor de cabeça.",
+   "perg": "Do you go to the doctor often?",
+   "pula": "Só leia o título e pegue a senha."
+  },
+  "voce": {
+   "obj": "Aquecimento pessoal sobre saúde, resfriado, médico e sono.",
+   "perg": "How do you feel today?",
+   "pula": "Duas cartas bastam."
+  },
+  "sala": {
+   "obj": "O aluno dá voz aos pacientes: I have a…, I feel…, my … hurts.",
+   "perg": "What’s wrong?",
+   "pula": "Quatro senhas bastam."
+  },
+  "regra": {
+   "obj": "A regra: have um problema, feel um estado, uma parte hurts; corrige as armadilhas.",
+   "perg": "Is “I am with a headache” OK?",
+   "pula": "Duas armadilhas bastam."
+  },
+  "relogio": {
+   "obj": "Respostas rápidas, como paciente ou médico, das 9 ao meio-dia.",
+   "perg": "What should he do?",
+   "pula": "Quatro momentos bastam."
+  },
+  "rosa": {
+   "obj": "Role-play: o professor é a Rosa; o aluno é paciente com um problema que escolhe.",
+   "perg": "What’s the problem today?",
+   "pula": "Uma consulta curta basta."
+  },
+  "cv-prefere": {
+   "obj": "Três escolhas leves sobre cuidar da saúde.",
+   "perg": "Would you rather sleep or go to work with a cold?",
+   "pula": "Duas escolhas bastam."
+  },
+  "roda": {
+   "obj": "Roleta com perguntas da vida real do aluno sobre saúde e conselhos.",
+   "perg": "What do you do when you have a cold?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: bilhete ao médico com have, feel, hurts e um conselho, com a linha vermelha.",
+   "perg": "What hurts today?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas sobre saúde do dia a dia, com frases prontas.",
+   "perg": "What do you do for a headache?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e dar conselho com you should.",
+   "perg": "What should I do?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é a enfermeira Rosa, com a própria dor de cabeça.",
+   "perg": "Do you have a headache, Rosa?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More health questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I have a",
+    "I feel",
+    "hurts",
+    "you should"
+   ],
+   "cartas": [
+    {
+     "k": "MONDAYS",
+     "q": "Do you feel tired or happy on Monday mornings?",
+     "fup": "What should you do on Sunday night?",
+     "st": [
+      "I feel …",
+      "I should …"
+     ],
+     "ex": "I feel tired on Monday mornings. I should sleep early on Sunday."
+    },
+    {
+     "k": "A COLD",
+     "q": "Do you have a cold today, or not?",
+     "fup": "Do you have a sore throat?",
+     "st": [
+      "I have a …",
+      "I don’t have a …"
+     ],
+     "ex": "I don’t have a cold now, but I have a sore throat."
+    },
+    {
+     "k": "YOUR BACK",
+     "q": "Does your back hurt after work, or not?",
+     "fup": "What should you do?",
+     "st": [
+      "My back hurts …",
+      "I should …"
+     ],
+     "ex": "My back hurts after work. I should walk more."
+    },
+    {
+     "k": "HEADACHES",
+     "q": "Tea or a pill for a headache?",
+     "fup": "Do you have a headache now?",
+     "st": [
+      "For a headache, I …",
+      "I have a …"
+     ],
+     "ex": "For a headache, I drink tea. I don’t have a headache now."
+    },
+    {
+     "k": "THE DOCTOR",
+     "q": "Do you go to the doctor fast, or do you wait?",
+     "fup": "Is that a good idea?",
+     "st": [
+      "I go …",
+      "I wait. I should …"
+     ],
+     "ex": "I wait. I should go fast."
+    },
+    {
+     "k": "A FRIEND",
+     "q": "Your friend feels sick. Tea or soup?",
+     "fup": "Should he stay home?",
+     "st": [
+      "You should have …",
+      "You should stay …"
+     ],
+     "ex": "You should have soup, and you should stay home."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "you should",
+    "I feel",
+    "I have a"
+   ],
+   "rodadas": [
+    {
+     "q": "You have a cold. Stay home or go to work?",
+     "a": "Stay home",
+     "b": "Go to work",
+     "fa": [
+      "Stay home. You should rest."
+     ],
+     "fb": [
+      "Go to work. I feel OK with a cold."
+     ]
+    },
+    {
+     "q": "You feel tired. Coffee or a nap?",
+     "a": "Coffee",
+     "b": "A nap",
+     "fa": [
+      "Coffee. It is fast."
+     ],
+     "fb": [
+      "A nap. You should sleep a little."
+     ]
+    },
+    {
+     "q": "Your back hurts. Walk or lie down?",
+     "a": "Walk",
+     "b": "Lie down",
+     "fa": [
+      "Walk. You should move."
+     ],
+     "fb": [
+      "Lie down. My back hurts less."
+     ]
+    },
+    {
+     "q": "A sore throat. Hot tea or ice cream?",
+     "a": "Hot tea",
+     "b": "Ice cream",
+     "fa": [
+      "Hot tea. It feels good."
+     ],
+     "fb": [
+      "Ice cream. It is cold and soft."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody feels better."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Nurse Rosa now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Nurse Rosa.",
+   "perguntas": [
+    "How do you feel at 8 AM on Monday?",
+    "What’s wrong with the first patient?",
+    "Is Mr. Headache here too?",
+    "Do you have a headache too?",
+    "Does your head hurt a lot?",
+    "What should you do after work?"
+   ],
+   "st": [
+    "I feel …",
+    "I have a …",
+    "I should …"
+   ],
+   "ex": "I feel tired. I have a headache too, and I should go home and sleep."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

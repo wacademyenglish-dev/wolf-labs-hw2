@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · I Want the Chicken · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>I Want the Chicken · The Order Pad</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>I Want the Chicken · The Order Pad</h2>
+    <p><i>I want the chicken</i> has no grammar mistake, and that’s why it survives. Table 4, 8:15 PM. Next to every choice there is a thermometer: the waiter’s mood. Every polite request warms it up; every order that sounds like a command cools it down. The order pad only fills with a polite request. At the end, the student’s first order comes back. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>I’d like / I’ll have</b>; a request is a question: <b>Could I have…? Can you bring…?</b> Order for others: <b>She’d like the fish.</b> Complain without a fight: <b>Sorry, I think I ordered the fish.</b> In Portuguese “me dá a conta” is friendly; in English <i>Give me the bill</i> is an order, and nothing in the student’s grammar warns them. <b>Please</b> helps, but it doesn’t turn an order into a request (scene VI).</p>
+    <!--conversa--><h4>YOUR PICK (IX) AND THE SURPRISE QUESTION</h4>
+    <p>After dinner goes wrong, three real choices: the main dish, the dessert, and a coffee the next morning. Answer first yourself, as a model. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk (<i>I want…</i> → <i>I’d like…</i>); at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Order It Now (a diagnosis: tap what you hear, don’t correct), IV The Order Pad, V Say It Softer, VII The Whole Table, IX Your Pick (choose one), X Your Own Table.</li>
+      <li><b>Listen</b>: VIII When It Goes Wrong. Play the waiter first; the line opens after the audio.</li>
+      <li><b>Focus</b>: II Both Are Correct, III Asking Is Softer, VI Please Is Not Enough.</li>
+      <li><b>Write</b>: XI One Hour Ago, with the red wavy line for <i>I want the…</i>, <i>Give me…</i> and commands like <i>Bring water</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>YOU ARE THE AUDIO IN SCENE V</h4>
+    <p>Say each line flat and short, then warm (a smile, the voice going up and down). The student says both; tap each version.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The thermometer, the pad and the bill move on both screens. Every audio plays and pauses; 0.75× makes it slower. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* I WANT THE CHICKEN (Main A1) · pergunta-surpresa · 27/10/2026 · pedir com educação */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'pares', tipo: 'Would you rather', q: 'Cook at home or eat out?',
+    opc: ['Cook at home', 'Eat out'], st: ['I’d like to cook at home.', 'I’d like to eat out.'],
+    ex: 'Eat out! I can’t cook.', push: 'Tonight? Yes or no?' },
+  { cena: 'voz', tipo: 'And you?', q: 'What do you always order?',
+    opc: ['Pizza', 'A burger', 'A salad'], st: ['I always order …', 'I’ll have a …, please.'],
+    ex: 'Pizza. I’ll have a pizza with cheese, please!', push: 'Every week? Yes or no?' },
+  { cena: 'problema', tipo: 'What if', q: 'Your food is cold. What do you do?',
+    opc: ['I say something.', 'I eat it.'], st: ['Excuse me, could you …?', 'I eat it. No problem.'],
+    ex: 'Excuse me, could you heat it up, please?', push: 'And a tip? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* I WANT THE CHICKEN (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Escolha 1 de 3" no lugar de "IX · Not Only Restaurants" (extra, prática controlada: situação → pedir → conferir).
+   O aluno escolhe o que quer de verdade: o prato, a sobremesa, o café da manhã seguinte.
+   A1 bem leve: três opções, frase quase pronta, o professor responde primeiro.
+   A gramática da aula (I’d like · I’ll have · Could I have…? · Can I have…?) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'pedido', troca: 'fora', est: 'o', min: 5, img: 'frango', rot: 'Your Pick', t: 'Your real order. Choose one, three times.',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Dinner', sit: 'Table 4. You are hungry.', q: 'What would you like?',
+        opc: ['The chicken', 'The fish', 'The pasta'],
+        st: ['I’d like the chicken, please.', 'I’ll have the fish, please.', 'Could I have the pasta, please?'],
+        ex: 'I’ll have the pasta, please. And a juice.',
+        push: 'No chicken tonight. Fish? Yes or no?' },
+      { tag: 'Dessert', q: 'And for dessert?',
+        opc: ['Ice cream', 'Chocolate cake', 'No, thank you'],
+        st: ['I’d like the ice cream, please.', 'Could I have the cake?', 'No dessert, thank you.'],
+        ex: 'Could I have the chocolate cake, please?',
+        push: 'Two desserts? Yes or no?' },
+      { tag: 'The café', sit: 'Next morning. A café.', q: 'What do you order?',
+        opc: ['A coffee', 'A tea', 'A juice'],
+        st: ['Can I have a coffee, please?', 'I’d like a tea, please.', 'I’ll have a juice, please.'],
+        ex: 'Can I have a big coffee, please? With milk.',
+        push: 'With sugar? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Your first English tonight: an order.",
+   "p": "Read the menu. Order out loud."
+  },
+  "pares": {
+   "t": "Both are correct. One is rude.",
+   "p": "Read both out loud. Tap the one the waiter likes."
+  },
+  "menu": {
+   "t": "Order the whole meal.",
+   "p": "Pick an opening, tap a dish, say it all."
+  },
+  "voz": {
+   "t": "The voice does half the work.",
+   "p": "Your teacher says it flat, then warm. You say both."
+  },
+  "please": {
+   "t": "Both say please. Only one asks.",
+   "p": "Read both. Tap the request. Say it."
+  },
+  "problema": {
+   "t": "Dinner goes wrong.",
+   "p": "Play the waiter. Choose your line. Say it softly."
+  },
+  "cv-pedido": {
+   "t": "Your real order. Choose one.",
+   "p": "Your teacher answers first. Then you say it."
+  },
+  "fim": {
+   "t": "Your first order comes back.",
+   "p": "Write five polite requests. Then tap Check."
+  }
+ },
+ "prep": {
+  "obj": "Pedidos educados (I’d like / I’ll have / Could I have…?) num restaurante, mesa 4, 20h15: o termômetro do garçom esquenta com pedido e esfria com ordem.",
+  "armadilha": "“Me dá a conta” é simpático em português; “Give me the bill” e “I want the chicken” soam como ordem em inglês. E please sozinho não transforma ordem em pedido.",
+  "pal": [
+   "I’d like",
+   "I’ll have",
+   "Could I have…?",
+   "Can you bring…?",
+   "She’d like",
+   "the bill",
+   "Sorry, I think…",
+   "please"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a mesa 4 e a ideia: inglês correto que ainda soa mal-educado.",
+   "perg": "What do you usually order in a restaurant?",
+   "pula": "Leia só o título e entre."
+  },
+  "abre": {
+   "obj": "Diagnóstico: o aluno faz o pedido do jeito dele; o professor anota sem corrigir.",
+   "perg": "What would you like tonight?",
+   "pula": "Um pedido basta; guarde o que ele disse para o fim."
+  },
+  "pares": {
+   "obj": "Compara pares corretos, um rude e um educado, com o termômetro do garçom.",
+   "perg": "Which one does the waiter like? Why?",
+   "pula": "Três pares bastam."
+  },
+  "pergunta": {
+   "obj": "Transforma ordem em pergunta: Could I have…? Can you bring…?",
+   "perg": "How do you ask for water, politely?",
+   "pula": "Três situações bastam."
+  },
+  "menu": {
+   "obj": "Monta o pedido completo na comanda, que só enche com pedido educado.",
+   "perg": "What would you like for a main dish?",
+   "pula": "Três linhas na comanda bastam."
+  },
+  "voz": {
+   "obj": "Entonação: a mesma frase dita seca e dita calorosa; o aluno repete as duas.",
+   "perg": "Which one sounds kind?",
+   "pula": "Duas frases bastam."
+  },
+  "please": {
+   "obj": "Mostra que please não salva uma ordem; só a pergunta vira pedido.",
+   "perg": "Is “Bring me water, please” a request?",
+   "pula": "Dois pares bastam."
+  },
+  "mesa": {
+   "obj": "Pede pelos outros: She’d like the fish. He’ll have…",
+   "perg": "What would your friend like?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "problema": {
+   "obj": "Escuta o garçom e reclama sem briga: Sorry, I think I ordered the fish.",
+   "perg": "The food is wrong. What do you say?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-pedido": {
+   "obj": "Conversa de escolha: prato, sobremesa e café do dia seguinte, com pedido educado.",
+   "perg": "Which dessert would you like?",
+   "pula": "Duas escolhas bastam."
+  },
+  "ficha": {
+   "obj": "Respostas reais sobre os hábitos do aluno em restaurantes.",
+   "perg": "What do you order at your favorite place?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita final: o primeiro pedido volta e o aluno reescreve em cinco pedidos educados; vai para o My notes.",
+   "perg": "How do you ask for the bill now?",
+   "pula": "Três pedidos bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre comida e pedidos, sempre com I’d like / Could I…",
+   "perg": "What would you like for dinner tonight?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhe um lado e justifica com pedido educado.",
+   "perg": "Which one would you like? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Monta em passos um pedido completo num lugar real (café, padaria, loja).",
+   "perg": "What do you say first?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More table talk.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’d like",
+    "I’ll have",
+    "Could I have…?"
+   ],
+   "cartas": [
+    {
+     "k": "TONIGHT",
+     "q": "What would you like for dinner tonight?",
+     "fup": "Do you cook it or order it?",
+     "st": [
+      "I’d like …",
+      "I’ll have …"
+     ],
+     "ex": "I’d like some pasta. I’ll cook it at home."
+    },
+    {
+     "k": "THE CAFÉ",
+     "q": "You are at a café. What do you say?",
+     "fup": "Hot or iced?",
+     "st": [
+      "Could I have …?",
+      "I’ll have …"
+     ],
+     "ex": "Could I have a cappuccino, please?"
+    },
+    {
+     "k": "THE BILL",
+     "q": "How do you ask for the bill now?",
+     "fup": "Do you pay by card or in cash?",
+     "st": [
+      "Could we have …?",
+      "Can you bring …?"
+     ],
+     "ex": "Could we have the bill, please?"
+    },
+    {
+     "k": "YOUR FRIEND",
+     "q": "Your friend doesn’t speak English. Order for them.",
+     "fup": "What would they like to drink?",
+     "st": [
+      "She’d like …",
+      "He’ll have …"
+     ],
+     "ex": "She’d like the chicken, and she’ll have an orange juice."
+    },
+    {
+     "k": "AT WORK",
+     "q": "You need help at work. How do you ask?",
+     "fup": "Who do you ask?",
+     "st": [
+      "Could you …?",
+      "Can you …?"
+     ],
+     "ex": "Could you send me the file, please?"
+    },
+    {
+     "k": "DESSERT",
+     "q": "Dessert or coffee after dinner?",
+     "fup": "What is your favorite dessert?",
+     "st": [
+      "I’d like …",
+      "I’ll have …"
+     ],
+     "ex": "I’ll have a coffee. I’d like a piece of cake too."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’d like",
+    "because",
+    "I’ll have"
+   ],
+   "rodadas": [
+    {
+     "q": "The chicken or the fish?",
+     "a": "The chicken",
+     "b": "The fish",
+     "fa": [
+      "I’d like the chicken. It is warm and simple."
+     ],
+     "fb": [
+      "I’ll have the fish. It is light."
+     ]
+    },
+    {
+     "q": "Water or juice?",
+     "a": "Water",
+     "b": "Juice",
+     "fa": [
+      "Could I have some water, please?"
+     ],
+     "fb": [
+      "I’d like an orange juice, please."
+     ]
+    },
+    {
+     "q": "A table inside or a table outside?",
+     "a": "Inside",
+     "b": "Outside",
+     "fa": [
+      "Inside, please. It is cold."
+     ],
+     "fb": [
+      "Outside, please. It is a nice night."
+     ]
+    },
+    {
+     "q": "Order at the table or order on the app?",
+     "a": "At the table",
+     "b": "On the app",
+     "fa": [
+      "At the table. I like to talk to the waiter."
+     ],
+     "fb": [
+      "On the app. It is fast."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody ordered politely."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Order",
+   "t": "Your favorite place, step by step.",
+   "p": "Answer each step. Use the starters.",
+   "prof": "Play the waiter or the clerk. Warm up only when the request is polite.",
+   "passos": [
+    {
+     "q": "Where are you? A café, a bakery or a restaurant?",
+     "st": [
+      "I’m at …"
+     ],
+     "ex": "I’m at my favorite bakery."
+    },
+    {
+     "q": "Ask for something to eat.",
+     "st": [
+      "Could I have …?",
+      "I’d like …"
+     ],
+     "ex": "Could I have two pieces of cheese bread, please?"
+    },
+    {
+     "q": "Ask for something for a friend.",
+     "st": [
+      "She’d like …",
+      "He’ll have …"
+     ],
+     "ex": "My friend would like a coffee with milk."
+    },
+    {
+     "q": "Ask for the bill.",
+     "st": [
+      "Could we have …?",
+      "Can you bring …?"
+     ],
+     "ex": "Could we have the bill, please?"
+    }
+   ],
+   "fim": "Four steps, zero orders. The waiter is smiling."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

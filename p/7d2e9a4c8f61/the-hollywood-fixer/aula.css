@@ -1,0 +1,95 @@
+/* ============================================================
+   THE HOLLYWOOD FIXER · THE SPOTLIGHT · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: asfalto molhado à noite —
+   preto-azulado, magenta de letreiro como acento, dourado pálido de
+   estatueta como segunda cor. O tapete vermelho em SVG, o holofote que
+   varre até a placa, bilhete de set que rasga, recibo em papel térmico
+   escuro (nunca papel branco: fotofobia).
+   ============================================================ */
+:root{
+  --noite:#08090d; --noite-rgb:8,9,13; --tinta:#eceaf2;
+  --t1:#f1eff6; --t2:#c9c6d4; --t2-rgb:201,198,212; --t3:#8d8a9b;
+  --ac:#e0438f; --ac2:#ff9cc9; --ouro:#e6cf8f; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(236,234,242,.05); --vidro2:rgba(236,234,242,.085); --vidro3:rgba(236,234,242,.12);
+  --fio:rgba(226,222,238,.12); --fio2:rgba(226,222,238,.22); --luz:rgba(236,234,242,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'Playfair Display',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn.cheio{color:#fff}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:400 clamp(60px,5.6vw,108px)/.96 var(--serif);letter-spacing:-.02em}
+.capa h1 b{font-style:italic;color:var(--ouro)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--ac2)}
+.capa-d{display:grid}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:48px;padding:0 20px;font:700 clamp(17px,1.3vw,21px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{text-align:left;padding:12px 16px;font-size:clamp(17px,1.3vw,21px)}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:700 clamp(18px,1.4vw,23px)/1.4 var(--disp)}
+.balao{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);text-align:center} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(22px,1.9vw,32px)/1.4 var(--disp)}
+.toca-linha{display:flex;align-items:center;gap:12px;font:600 clamp(16px,1.2vw,20px)/1.45 var(--disp)} .toca-linha .transcricao{margin:0}
+.aberta{position:relative;aspect-ratio:16/9;border-radius:var(--r1);background-size:cover;background-position:center;max-height:calc(100vh / var(--zv,1) - 600px)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(8,9,13,.88);font:700 13px var(--mono);color:var(--ouro)}
+
+/* o tapete e o holofote */
+.tapete{display:block;width:100%;max-height:calc(100vh / var(--zv,1) - 400px);border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.6)}
+.capa-d .tapete{max-height:calc(100vh / var(--zv,1) - 260px)}
+.ceu{fill:#0d0e15} .carpete{fill:#5a1426} .faixa-c line{stroke:#2a2b38;stroke-width:3} .faixa-c path{fill:none;stroke:#3a3b4c;stroke-width:3}
+.luz.anda{animation:varre .9s cubic-bezier(.3,.7,.3,1)}
+@keyframes varre{from{transform:translateX(0)}}
+.placa rect{fill:#16161e;stroke:#3a3a4a} .placa text{font:700 13px var(--mono);letter-spacing:.12em;fill:#a9a6b8}
+.placa.acesa rect{fill:#2a2418;stroke:var(--ouro)} .placa.acesa text{fill:var(--ouro)}
+.lacuna-h{display:inline-block;min-width:3.4em;padding:0 8px;border-bottom:3px dashed var(--ac2);color:var(--ac2)} .lacuna-h.cheia{border-bottom-style:solid}
+
+/* recados */
+.caixa-voz{display:grid;gap:8px;padding:14px;border-radius:var(--r1);background:#101119;border:1px solid var(--fio2)}
+.caixa-voz h5{margin:0 0 4px;font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.vm{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:10px;padding:12px 14px;border-radius:12px;border:1px solid var(--fio);background:#14151e;color:var(--t1);text-align:left;cursor:pointer}
+.vm b{font:800 clamp(17px,1.3vw,21px) var(--disp)} .vm small{font:700 11px var(--mono);color:var(--t3)} .vm em{font:700 13px var(--mono);font-style:normal;color:var(--ouro)}
+.vm.on{border-color:var(--ac);background:#1d1220} .vm.feito b::after{content:' ✓';color:var(--ok)}
+
+/* a pessoa que falta */
+.par-l{display:grid;gap:10px;max-width:760px;margin:0 auto 14px}
+.linha-l{display:flex;align-items:center;gap:14px;padding:14px 20px;border-radius:var(--r2);font:700 clamp(22px,1.9vw,32px) var(--disp)}
+.linha-l small{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:#fff;font:800 15px var(--mono)}
+
+/* bilhetes de set */
+.bilhete{position:relative;display:grid;gap:10px;align-content:start;padding:26px 26px 30px;border-radius:6px;background:#1c1a14;border:1px solid #3a3526;box-shadow:0 16px 36px rgba(0,0,0,.6);transform:rotate(-1.5deg)}
+.bilhete small{font:700 12px var(--mono);letter-spacing:.12em;color:var(--ouro)} .bilhete p{margin:0;font:400 clamp(26px,2.3vw,40px)/1.25 var(--serif);font-style:italic;color:var(--t1)}
+.bilhete.rasgado{clip-path:polygon(0 0,100% 0,100% 72%,92% 80%,84% 70%,74% 82%,63% 71%,52% 84%,41% 72%,30% 83%,19% 70%,9% 81%,0 72%);animation:treme .35s}
+.carimbo{position:absolute;top:14px;right:16px;padding:4px 12px;border:2px solid var(--ok);border-radius:6px;font:800 14px var(--mono);letter-spacing:.14em;color:var(--ok);transform:rotate(-6deg)} .carimbo.mau{border-color:var(--erro);color:var(--erro)}
+
+/* quem pediu a quem */
+.msg-c{display:grid;gap:6px;padding:16px 18px;border-radius:18px 18px 18px 4px;background:#1a1d2b;border:1px solid #2c3046}
+.msg-c small{font:700 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .msg-c p{margin:0;font:600 clamp(19px,1.5vw,25px)/1.4 var(--disp)}
+.msg-c.oficial{border-radius:12px;background:#1d1a12;border-color:#3a3526} .msg-c.oficial small{color:var(--ouro)}
+.recibo{display:grid;gap:4px;justify-items:center;width:min(100%,300px);justify-self:center;padding:18px 16px 22px;background:#22211d;border:1px dashed #4a4738;font:700 15px var(--mono);color:#d9d3bd;clip-path:polygon(0 0,100% 0,100% 94%,94% 100%,88% 94%,82% 100%,76% 94%,70% 100%,64% 94%,58% 100%,52% 94%,46% 100%,40% 94%,34% 100%,28% 94%,22% 100%,16% 94%,10% 100%,4% 94%,0 100%)}
+.recibo small{color:var(--t3);letter-spacing:.14em} .recibo b{font-size:18px} .recibo .marca-r{color:var(--ac2);text-decoration:underline wavy var(--ac)}
+
+/* crises */
+.lista-cr{margin:0;padding:12px 16px 12px 40px;display:grid;gap:8px} .lista-cr li{font:700 clamp(17px,1.3vw,21px)/1.35 var(--disp)} .lista-cr li::marker{color:var(--ac2);font-family:var(--mono)}
+.lado-l .pede small+b{margin-top:-2px} .crise-p .pede{padding:8px 14px} .crise-p .pede b{font-size:clamp(16px,1.2vw,20px)}
+.crise-p .aberta{max-height:calc(100vh / var(--zv,1) - 560px)}
+.claquete{display:grid;gap:6px;padding:18px 20px;border-radius:12px;background:repeating-linear-gradient(-45deg,#15151c 0 18px,#1c1c25 18px 36px);border:1px solid var(--fio2)}
+.claquete small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .claquete b{font:400 clamp(30px,2.6vw,46px)/1 var(--serif);color:var(--ouro)} .claquete p{margin:0;font:600 clamp(17px,1.3vw,21px)/1.45 var(--disp);color:var(--t2)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} }
+
+/* 22/10/2026 · os formatos novos (formatos.js) */
+.hw-um{max-width:1000px;margin:10px auto 0}
+.hw-tres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:8px}
+.hw-tres .fm-folha{width:100%;padding:16px 18px} .hw-tres .f2-cartas{grid-template-columns:1fr} .hw-tres .f2-carta{min-height:0} .hw-tres .fm-certa{font-size:clamp(17px,1.35vw,21px)}
+@media (max-width:1100px){.hw-tres{grid-template-columns:1fr}}

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Small Print",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/1a0b46a14d3a/the-small-print/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "contract language read and explained in plain English: shall = must (an obligation, not the future); shall not; prior to + noun / -ing; subject to = only if; be liable for; upon + -ing; provided that; notwithstanding",
   "abrir": "Think of the last contract or terms you accepted. Did you read every line?",
   "fecho": "Read it like a lawyer, explain it like a friend. <b>shall</b> = <i>must</i>: an obligation, never a prediction, and no <i>to</i> after it. <b>Prior to</b> + noun or <b>-ing</b>: <i>prior to signing</i>. <b>Subject to</b> = only if. <b>Liable for</b> = responsible for paying.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia helps Leo read a tenancy agreement. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/1a0b46a14d3a/the-small-print/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A quiet waiting room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The tenant shall give written notice prior to leaving the flat.",
-          "img": "https://wolf-labs.pages.dev/p/1a0b46a14d3a/the-small-print/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The deposit will be returned, subject to a satisfactory inspection.",
-          "img": "https://wolf-labs.pages.dev/p/1a0b46a14d3a/the-small-print/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The landlord shall not be liable for damage caused by the tenant.",
-          "img": "https://wolf-labs.pages.dev/p/1a0b46a14d3a/the-small-print/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -171,7 +171,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/1a0b46a14d3a/the-small-print/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A sealed document and an old key",
       "pede": "Look at the picture: a sealed document and an old key. Write 2 or 3 sentences: explain in plain English one rule you have agreed to (a lease, a phone plan, a gym). Use <b>shall</b>, <b>prior to</b> or <b>subject to</b> for the legal version, then say it simply.",
       "ph": "The contract says I must … prior to …",

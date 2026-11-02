@@ -1,0 +1,126 @@
+/* ============================================================
+   HAVE YOU GOT A MINUTE? · THE COAT POCKETS · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Aqui a identidade: o corredor à luz de
+   fim de tarde, o casaco escuro e o vermelho do cachecol.
+   ============================================================ */
+:root{
+  --noite:#0c0b0b; --noite-rgb:12,11,11; --tinta:#efe6dc;
+  --t1:#f4eee8; --t2:#d3cac1; --t2-rgb:211,202,193; --t3:#978d85;
+  --ac:#e2553a; --ac2:#ffab95; --bt:#e8a23c; --bt2:#ffd08a;
+  --vidro:rgba(239,230,220,.05); --vidro2:rgba(239,230,220,.085); --vidro3:rgba(239,230,220,.12);
+  --fio:rgba(239,225,210,.12); --fio2:rgba(239,225,210,.22); --luz:rgba(239,230,220,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mao:'Caveat',cursive; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(3,2,2,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn.cheio{color:#fff;background:var(--ac);border-color:var(--ac)}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(50px,5.2vw,100px)/.95 var(--disp);letter-spacing:-.035em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa .foto{position:relative;border-radius:30px;overflow:hidden;aspect-ratio:16/11;border:1px solid var(--fio);box-shadow:var(--sombra)}
+.capa .foto img{width:100%;height:100%;object-fit:cover;filter:brightness(.8)}
+.placa-capa{position:absolute;right:6%;bottom:8%;display:grid;padding:12px 20px;border-radius:12px;background:#140d0c;border:1px solid #5a2a20;box-shadow:0 14px 40px rgba(0,0,0,.7)}
+.placa-capa small,.placa-capa span{font:700 11px var(--mono);letter-spacing:.14em;color:#b07a6a}
+.placa-capa b{font:800 34px/1.1 var(--disp);color:var(--ac2)}
+.toca-linha{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:var(--r2);font:600 clamp(18px,1.4vw,22px)/1.35 var(--disp)}
+.toca-linha.centro{justify-content:center;max-width:820px;margin:0 auto;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versoes.duas-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:900px;margin:0 auto;width:100%}
+.dois-b{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.escolha-b{flex:1;min-width:160px;max-width:340px;min-height:64px;border-radius:16px;border:2px solid var(--fio2);background:var(--vidro);font:800 clamp(18px,1.5vw,24px) var(--disp);color:var(--t1);transition:transform .15s}
+.escolha-b:hover:not(:disabled){transform:translateY(-2px)}
+.escolha-b.certo{border-color:var(--ok);background:rgba(143,217,162,.14)} .escolha-b.errado{border-color:var(--erro);animation:treme .35s}
+
+/* II · prateleiras */
+.linhas-d{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.linha-d{min-height:60px;padding:0 16px;border-radius:14px;border:1px solid var(--fio2);background:var(--vidro);font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--t1);transition:transform .15s,opacity .2s}
+.linha-d:hover:not(:disabled){transform:translateY(-2px)} .linha-d.on{border-color:var(--ac);box-shadow:0 0 0 2px rgba(226,85,58,.4)} .linha-d.feito{opacity:.25}
+.prateleiras{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.prateleira{display:grid;gap:10px;align-content:start;min-height:150px;padding:16px 18px 22px;border-radius:var(--r2);border:1px solid var(--fio);background:var(--vidro);text-align:left;position:relative}
+.prateleira::after{content:'';position:absolute;left:14px;right:14px;bottom:10px;height:8px;border-radius:4px;background:linear-gradient(180deg,#7a5434,#4a321e)}
+.prateleira small{font:800 12px var(--ui);letter-spacing:.14em}
+.p-a small{color:var(--ok)} .p-b small{color:var(--ac2)}
+.prateleira .dentro{display:flex;flex-wrap:wrap;gap:6px}
+.prateleira .dentro span{padding:6px 12px;border-radius:10px;background:rgba(255,255,255,.07);font:700 16px var(--disp)}
+.p-b .dentro span{text-decoration:line-through;text-decoration-color:rgba(255,110,110,.7)}
+.prateleira.errado{border-color:var(--erro);animation:treme .35s}
+
+/* VI · o casaco */
+.mesa-bolsos{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px;align-items:center}
+.casaco-box{display:grid;place-items:center;padding:16px;border-radius:var(--r1)}
+.casaco-svg{width:100%;max-width:340px;max-height:calc(100vh / var(--zv,1) - 360px)}
+.casaco-svg .gancho,.casaco-svg .cabide{fill:none;stroke:#b9a988;stroke-width:4;stroke-linecap:round}
+.casaco-svg .corpo{fill:#262a33;stroke:#0c0b0b;stroke-width:2}
+.casaco-svg .gola{fill:#1a1d24}
+.casaco-svg .costura{stroke:rgba(0,0,0,.4);stroke-width:2}
+.bolso{cursor:pointer}
+.bolso .fundo{fill:#1b1e26;stroke:#3a3f4c;stroke-width:2}
+.bolso .aba{fill:#2f3440;stroke:#454b59;stroke-width:2;transition:all .4s}
+.bolso .botao{fill:#c9b089}
+.bolso .num{fill:#8b93a3;font:800 13px var(--ui);text-anchor:middle}
+.bolso .item{font-size:28px;text-anchor:middle}
+.bolso:hover .fundo{stroke:var(--bt)}
+.bolso.on .fundo{stroke:var(--ac);stroke-width:3}
+.bolso.aberto .fundo{fill:#2a2216;stroke:var(--ok)}
+.lado-bolsos{display:grid;gap:12px}
+.palpites{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.palpite{display:grid;justify-items:center;gap:4px;padding:10px 6px;border-radius:14px;border:1px solid var(--fio2);background:var(--vidro);font:700 15px var(--ui);color:var(--t1);transition:transform .15s}
+.palpite i{font-style:normal;font-size:26px}
+.palpite:hover:not(:disabled){transform:translateY(-2px)}
+.palpite.nao{opacity:.3;text-decoration:line-through}
+.resposta-bolso{display:grid;gap:4px;padding:16px 20px;border-radius:var(--r2)}
+.resposta-bolso small{font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.resposta-bolso b{font:800 clamp(26px,2.2vw,36px) var(--disp)}
+.resposta-bolso p{margin:0;font:600 18px var(--disp);color:var(--t2)}
+.resposta-bolso.sim{border-color:rgba(143,217,162,.5)!important} .resposta-bolso.sim b{color:var(--ok)}
+.resposta-bolso.nao b{color:var(--ac2)}
+
+/* VII · a peça que sobra */
+.montada{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;min-height:76px;padding:16px 20px;border-radius:var(--r2);max-width:900px;margin:0 auto;width:100%}
+.montada span{font:800 clamp(24px,2vw,32px) var(--disp)} .montada em{color:var(--t3)}
+.montada.pronta{border-color:var(--ok)!important}
+.pecas-o{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.peca-o{min-height:56px;padding:0 22px;border-radius:14px;border:1px solid var(--fio2);background:var(--vidro);font:800 clamp(19px,1.5vw,24px) var(--disp);color:var(--t1);transition:transform .15s}
+.peca-o:hover{transform:translateY(-2px)} .peca-o.treme{border-color:var(--erro);animation:treme .35s}
+
+/* VIII · a mala */
+.mesa-mala{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:22px;align-items:start}
+.mala{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:18px;border-radius:var(--r1);background:linear-gradient(180deg,#3a2a20,#241a14)!important;border:2px solid #5a4030!important}
+.item-m{position:relative;display:grid;justify-items:center;gap:4px;padding:12px 6px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.25);font:700 14px var(--ui);color:var(--t1);transition:transform .15s}
+.item-m i{font-style:normal;font-size:30px}
+.item-m b{position:absolute;right:8px;top:6px;font-size:16px}
+.item-m.on{border-color:var(--bt);box-shadow:0 0 0 2px rgba(232,162,60,.45)}
+.item-m.sim b{color:var(--ok)} .item-m.nao b{color:var(--erro)} .item-m.nao{opacity:.55}
+.lado-mala{display:grid;gap:12px}
+.perg-aluno{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3);text-align:center}
+
+/* IX · não é só coisa */
+.mesa-coisa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+.frases-c{display:grid;gap:8px}
+.frase-c{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid var(--fio2);background:var(--vidro);font:700 clamp(17px,1.3vw,21px) var(--disp);color:var(--t1);text-align:left}
+.frase-c small{padding:3px 10px;border-radius:999px;background:rgba(143,217,162,.16);color:var(--ok);font:800 12px var(--ui)}
+.frase-c.on{border-color:var(--ac)} .frase-c.feito{opacity:.6}
+.lado-coisa{display:grid;gap:12px}
+.rotulos{display:flex;flex-wrap:wrap;gap:8px}
+.chip.errado{border-color:var(--erro);animation:treme .35s}
+.fim .grande span{font-size:clamp(24px,2.1vw,34px)}
+
+@media (max-width:1100px){ .mesa-bolsos,.mesa-mala,.mesa-coisa{grid-template-columns:1fr} .linhas-d{grid-template-columns:1fr 1fr} }
+@media (max-width:820px){
+  .capa .foto{aspect-ratio:16/12}
+  .linhas-d,.prateleiras,.versoes.duas-col{grid-template-columns:1fr}
+  .palpites{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mala{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .casaco-svg{max-width:280px}
+}
+
+
+/* 23/10/2026 · os formatos novos */
+.c-duas .fm-folha,.c-curta .fm-folha{width:min(980px,100%)}
+.c-regra .fm-folha{margin-top:16px}
+.c-duas .f2-liga .f2-bt{font-size:15px}

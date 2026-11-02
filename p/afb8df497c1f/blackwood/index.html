@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Blackwood · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Blackwood · The Recorder</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Blackwood · The Recorder</h2>
+    <p>Tonight your student is the voice of <b>Blackwood Night Radio, 88.1</b>. A hiker left a voice recorder at the station; it was found in an empty cabin in the forest. On the tapes: a couple lost in the rain, something outside that <b>copies what it hears</b> and <b>cannot open a door</b>, and the notebook of a man called Halloran (1961). While the tapes play, the town starts hearing voices, and the last call of the night comes from the other side of the studio door. Every sentence has two tracks: something <b>was happening</b> when something <b>happened</b>.</p>
+    <h4>THE TAPE WITH TWO TRACKS</h4>
+    <p>Scene V is the heart of the lesson. The long action is a blue track; the short event is a red pin. Your student says the sentence, you tap what you heard, the pin drops into the track, and your student says it again starting with <b>While</b>.</p>
+    <h4>THE TAPES ARE REAL AUDIO</h4>
+    <p>Scenes II, IV, VI, VIII and IX have recordings: the narrator, Ana, four men from 1961, and sounds. The transcript opens only after each track is played.</p>
+    <h4>SCENE IX IS THE PHYSICAL ONE</h4>
+    <p>If you can, dim the light in your room. Read slowly. In part 3, say “It’s me. Open the door.” in your student’s way of speaking. Then your student decides: open the studio door, or keep it closed. The ending changes.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>It rained when we arrived</i> (background in the simple past), <i>while the engine stopped</i>, <i>I was walk</i>, <i>they was</i>, <i>What you were doing?</i>, <i>What did you doing?</i></p>
+    <h4>THERE IS NO SCORE</h4>
+    <p>No points, no timer, no lives. A wrong tap shows what happened, and your student says it again.</p>
+    <!--conversa--><h4>YOUR FIRST MOVE (III) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Tape 1, your student is in the car when the engine stops: forest, rain, no other cars. They put four moves in order, from first to last. There is no right order. Let them choose, wait five seconds in silence, then ask them to explain their top one and their last one. Use the PUSH line (only you see it) to make it harder, then show your own order and agree on a top 3 together. Recast quietly while they talk (I <b>was driving</b> when it <b>stopped</b>); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Four Candles, III Your First Move, V The Tape, VII The Call Board, IX The Last Call, X Your Strangest Night, XI On Air.</li>
+      <li><b>Listen</b>: II Tape 1, VI Tape 2, VIII Tape 3.</li>
+      <li><b>Focus</b>: IV The Rule on the Door.</li>
+      <li><b>Write</b>: XII, the next call to the station. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* BLACKWOOD (Main B1) · pergunta-surpresa · 27/10/2026 · past continuous + past simple, while / when */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'regra', tipo: 'And you?', q: 'What were you doing at midnight last Friday?',
+    opc: ['Sleeping', 'Watching something', 'Out with friends'], st: ['At midnight, I was …', 'I was … when …'],
+    ex: 'Watching something. I was watching a series when my phone died, so I went to bed.', push: 'What was the series? Was it scary?' },
+  { cena: 'homens', tipo: 'Would you rather', q: 'Would you rather spend a night in that cabin, or present that radio show alone?',
+    opc: ['The cabin', 'The radio show'], st: ['I’d rather …, because …', 'While I was …, I’d …'],
+    ex: 'The radio show. While I was talking, I’d keep all the lights on and the door locked.', push: 'Who would you take with you? Only one person.' },
+  { cena: 'linhas', tipo: 'Opinion', q: 'What is the scariest sound at night?',
+    opc: ['Knocks on the door', 'Footsteps', 'Your name, very quietly'], st: ['… is the scariest, because …', 'Once, I was … when I heard …'],
+    ex: 'Footsteps. Once, I was sleeping at my friend’s house when I heard footsteps on the roof. It was a cat!', push: 'And during the day? Is it still scary?' },
+  { cena: 'fala', tipo: 'What if', q: 'The lights go out in your building right now. What do you do first?',
+    opc: ['Find a torch', 'Call a neighbour', 'Go to sleep'], st: ['I’d …, because …', 'Last time the lights went out, I was …'],
+    ex: 'Find a torch. Last time the lights went out, I was cooking dinner, and I couldn’t find anything.', push: 'Your phone is at 3%. Who do you call?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* BLACKWOOD (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O ranking entra no lugar de "III · Two Tracks" (ler e responder qual parte é a trilha longa: prática
+   controlada; a regra continua no IV, os pinos no V). Colado na Fita 1 (II): o carro parou na floresta,
+   à noite, na chuva — o que VOCÊ faria primeiro? Depois a ordem do professor.
+   Gramática (was / were + -ing de fundo + past simple; while / when) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'ordem', troca: 'duas', est: 'o', min: 7, img: 'estrada', rot: 'Your First Move', t: 'The engine stops in the forest. What now?',
+    p: 'Put the four moves in order: what would you do first? Explain your top one and your last one. Then see your teacher’s order.',
+    formato: 'ranking',
+    q: 'Night, rain, no other cars. Your first move?',
+    itens: ['Stay in the car and wait', 'Call someone for help', 'Walk back to the main road', 'Find a cabin and make a fire'],
+    prof: [1, 0, 3, 2],
+    st: ['First, I’d …, because …', 'Once, I was driving / walking … when …', 'While I was waiting, I’d …', 'I’d never …'],
+    ex: 'First, I’d call someone. Once, I was driving home at night when my car stopped, and my brother came in twenty minutes. And I’d never walk in the forest at night. Never.',
+    push: 'Your phone has no signal. Now what is your first move? And if somebody knocks on the car window?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "velas": {
+   "t": "Four candles. Four questions about your nights.",
+   "p": "Answer out loud. Then the follow-up."
+  },
+  "fita1": {
+   "t": "A recorder, found in an empty cabin.",
+   "p": "Play it track by track. Retell with six words."
+  },
+  "cv-ordem": {
+   "t": "The engine stops in the forest.",
+   "p": "Order four moves. Explain your first and last."
+  },
+  "regra": {
+   "t": "Two rules carved into the door.",
+   "p": "Play the door. Read the rule. Fix four traps."
+  },
+  "pinos": {
+   "t": "Five moments. Two tracks each.",
+   "p": "Say it. The pin drops. Say it again with While."
+  },
+  "homens": {
+   "t": "A metal box and a 1961 notebook.",
+   "p": "What was each man doing? Did he open the door?"
+  },
+  "linhas": {
+   "t": "The tapes are on air. Phones ring.",
+   "p": "Ask the caller: what were you doing? What did you do?"
+  },
+  "fita3": {
+   "t": "The last tape. 4 AM.",
+   "p": "Play six tracks in order. Tell it with two tracks."
+  },
+  "ultima": {
+   "t": "5:40 AM. Line 6 has no name.",
+   "p": "Listen to each part. Answer. Then decide."
+  },
+  "seu": {
+   "t": "Your strangest night.",
+   "p": "A long track, a pin with when, and a while."
+  },
+  "fala": {
+   "t": "Four last messages.",
+   "p": "Answer each one. The last: ask your teacher."
+  },
+  "fim": {
+   "t": "6:00 AM. Write the next call.",
+   "p": "Your strange night, two tracks. To My notes."
+  }
+ },
+ "prep": {
+  "obj": "Past continuous (a ação longa) + past simple (o evento curto), com when e while: as fitas de um gravador achado numa cabana vazia, na Blackwood Night Radio 88.1.",
+  "armadilha": "O brasileiro põe o fundo no past simple (“It rained when we arrived”), usa while com a ação curta (“while the engine stopped”) e erra a forma: “I was walk”, “What you were doing?”.",
+  "pal": [
+   "was …ing",
+   "were …ing",
+   "when",
+   "while",
+   "the engine stopped",
+   "cabin",
+   "recorder",
+   "open the door"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a Blackwood Night Radio: “We were driving north when the engine stopped.”",
+   "perg": "Do you like scary stories at night?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "velas": {
+   "obj": "Aquecimento: quatro perguntas sobre as noites do próprio aluno.",
+   "perg": "What were you doing at midnight last night?",
+   "pula": "Duas velas bastam."
+  },
+  "fita1": {
+   "obj": "Fita 1: o casal na estrada; ouvir faixa a faixa e recontar com as seis palavras.",
+   "perg": "What were they doing when the engine stopped?",
+   "pula": "Reconte com três palavras, não seis."
+  },
+  "cv-ordem": {
+   "obj": "O motor para na floresta: ordenar quatro atitudes e explicar a primeira e a última.",
+   "perg": "What would you do first?",
+   "pula": "Só a primeira e a última; use a linha PUSH."
+  },
+  "regra": {
+   "obj": "A regra na porta da cabana: ação longa no past continuous, evento curto no past simple.",
+   "perg": "Which action was the long one?",
+   "pula": "Duas armadilhas bastam."
+  },
+  "pinos": {
+   "obj": "O coração da aula: trilha azul (longa) e pino vermelho (curto); repetir começando com While.",
+   "perg": "Can you say it again with While?",
+   "pula": "Três momentos bastam; não pule a cena."
+  },
+  "homens": {
+   "obj": "Fita 2: quatro homens de 1961; o que cada um fazia quando aconteceu.",
+   "perg": "What was he doing when it happened?",
+   "pula": "Dois homens bastam."
+  },
+  "linhas": {
+   "obj": "O professor é o ouvinte que liga; o aluno pergunta o que fazia e o que fez.",
+   "perg": "What were you doing when you heard it?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fita3": {
+   "obj": "Fita 3: a última, às 4 da manhã; recontar com as duas trilhas.",
+   "perg": "What was happening when the voice spoke?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "ultima": {
+   "obj": "A última ligação, lida devagar; o aluno decide se abre a porta do estúdio.",
+   "perg": "Do you open the door?",
+   "pula": "Cena extra: pode pular, mas é o clímax."
+  },
+  "seu": {
+   "obj": "O aluno liga e conta a noite mais estranha da vida dele.",
+   "perg": "What were you doing when it happened?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fala": {
+   "obj": "Quatro mensagens dos ouvintes ao amanhecer; a última o aluno pergunta ao professor.",
+   "perg": "What were you doing at 6 AM?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: a próxima ligação para a rádio, a noite estranha do aluno com duas trilhas.",
+   "perg": "What were you doing when it started?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com was …ing + when/while sobre momentos da vida do aluno.",
+   "perg": "What were you doing when you got the news?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre a história e o medo, com as duas trilhas.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Ana, da fita, e conta a noite na floresta.",
+   "perg": "What were you doing when the knocks came?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Two tracks, your life.",
+   "p": "Pick a card. Long action, short event.",
+   "palavras": [
+    "was …ing",
+    "when",
+    "while"
+   ],
+   "cartas": [
+    {
+     "k": "BIG NEWS",
+     "q": "What were you doing when you got some big news?",
+     "fup": "Who told you?",
+     "st": [
+      "I was …ing when …",
+      "While I was …, my phone …"
+     ],
+     "ex": "I was cooking dinner when my sister called with the news."
+    },
+    {
+     "k": "A BLACKOUT",
+     "q": "Have you ever been in a blackout? What were you doing?",
+     "fup": "What did you do then?",
+     "st": [
+      "I was …ing when the lights …",
+      "While we were …, everything …"
+     ],
+     "ex": "I was watching a movie when the lights went out."
+    },
+    {
+     "k": "ON THE ROAD",
+     "q": "Has your car or bus ever stopped in the middle of a trip?",
+     "fup": "Where were you going?",
+     "st": [
+      "We were driving to … when …",
+      "While we were waiting, …"
+     ],
+     "ex": "We were driving to the beach when a tire exploded."
+    },
+    {
+     "k": "A FUNNY MOMENT",
+     "q": "What were you doing the last time you laughed really hard?",
+     "fup": "Who was with you?",
+     "st": [
+      "We were …ing when someone …",
+      "While I was …, my friend …"
+     ],
+     "ex": "We were eating when my friend fell off his chair."
+    },
+    {
+     "k": "A STRANGE NOISE",
+     "q": "Have you ever heard a strange noise at night?",
+     "fup": "What was it really?",
+     "st": [
+      "I was sleeping when I heard …",
+      "While I was …, something …"
+     ],
+     "ex": "I was sleeping when I heard someone knocking. It was the wind."
+    },
+    {
+     "k": "MEETING SOMEONE",
+     "q": "What were you doing when you met your best friend?",
+     "fup": "What did you think of them?",
+     "st": [
+      "I was …ing when I met …",
+      "We were both … when …"
+     ],
+     "ex": "We were both waiting for a bus when it started to rain."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "while",
+    "when",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "The voice says “It’s me. Open the door.” Open it or not?",
+     "a": "Open",
+     "b": "Keep it closed",
+     "fa": [
+      "Open. Maybe a real person was waiting outside.",
+      "I can’t leave someone in the cold."
+     ],
+     "fb": [
+      "Keep it closed. The thing copies what it hears.",
+      "And it can’t open a door."
+     ]
+    },
+    {
+     "q": "The engine stops in the forest: stay in the car or walk?",
+     "a": "Stay",
+     "b": "Walk",
+     "fa": [
+      "Stay. It was raining, and the car is safe.",
+      "Someone will drive by."
+     ],
+     "fb": [
+      "Walk. While I wait, nothing changes.",
+      "Maybe there is a cabin near the road."
+     ]
+    },
+    {
+     "q": "Play the tapes on air or give them to the police?",
+     "a": "On air",
+     "b": "Police",
+     "fa": [
+      "On air. The town has a right to know.",
+      "Maybe a listener knows something."
+     ],
+     "fb": [
+      "Police. While the tapes were playing, people started hearing voices.",
+      "It’s too dangerous."
+     ]
+    },
+    {
+     "q": "Scary stories: better at night or in the day?",
+     "a": "At night",
+     "b": "In the day",
+     "fa": [
+      "At night. I was listening in the dark when I felt it.",
+      "Darkness makes it real."
+     ],
+     "fb": [
+      "In the day. I want to sleep tonight.",
+      "Fear in the sun is still fun."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Ana now.",
+   "p": "Your teacher interviews you on air.",
+   "aluno": "Listen to your teacher’s question. Answer as Ana, from the tapes.",
+   "perguntas": [
+    "Where were you going when the engine stopped?",
+    "What was the weather doing?",
+    "What were you doing when the knocks came?",
+    "Where were you while the voice was calling his name?",
+    "What did you think when you heard your own voice on the tape?",
+    "What were you doing when the sun came up?"
+   ],
+   "st": [
+    "We were …ing when …",
+    "While I was …, somebody …",
+    "I was sleeping, so …"
+   ],
+   "ex": "I was laughing at my phone when somebody knocked three times."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

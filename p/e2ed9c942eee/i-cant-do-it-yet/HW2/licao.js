@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Can't Do It Yet",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e2ed9c942eee/i-cant-do-it-yet/img/live-vila.webp",
+  "capa": "../img/live-vila.webp",
   "alvo": "can / can't for ability + yet (I can't swim yet); the question Can you ...? Yes, I can / No, I can't; plain verb after can, no -s, no to, no don't can, no Do you can",
   "abrir": "What can you do very well?",
   "fecho": "After <b>can</b>, the plain verb: <i>He can run.</i> No: <b>can't</b>: <i>I can't swim yet.</i> <b>Yet</b> = not now, but later. Question: <b>Can</b> comes first: <i>Can you cook?</i> Never <i>can to</i>, <i>don't can</i>, <i>Do you can</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a boy at ninja school. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/e2ed9c942eee/i-cant-do-it-yet/img/live-academia.webp",
+      "img": "../img/live-academia.webp",
       "leg": "A classroom at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "He can't do it yet.",
-          "img": "https://wolf-labs.pages.dev/p/e2ed9c942eee/i-cant-do-it-yet/img/live-academia.webp",
+          "img": "../img/live-academia.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Can you run fast?",
-          "img": "https://wolf-labs.pages.dev/p/e2ed9c942eee/i-cant-do-it-yet/img/live-vila.webp",
+          "img": "../img/live-vila.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I can cook, but I can't make cake yet.",
-          "img": "https://wolf-labs.pages.dev/p/e2ed9c942eee/i-cant-do-it-yet/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -166,7 +166,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e2ed9c942eee/i-cant-do-it-yet/img/live-academia.webp",
+      "img": "../img/live-academia.webp",
       "leg": "A classroom at night",
       "pede": "Look at the picture: a classroom at night. Write 2 or 3 sentences: what you <b>can</b> do, and what you <b>can't</b> do <b>yet</b>.",
       "ph": "I can … but I can't … yet.",

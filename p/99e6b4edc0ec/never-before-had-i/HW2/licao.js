@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Never Before Had I",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/99e6b4edc0ec/never-before-had-i/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "inversion after negative and restrictive adverbs (Never before had I…, Not once did…, Rarely do…, Hardly had… when…, Only later did I…, Little did I…) and fronting for effect (Above us danced…)",
   "abrir": "What is the most beautiful thing you have ever seen in nature?",
   "fecho": "<b>Inversion for drama</b>: after a negative or restrictive adverb, the helper verb goes before the subject. <i>Never before had I seen it.</i> <i>Not once did anybody complain.</i> <i>Rarely do you see a sky so clear.</i> <i>Hardly had I arrived when it started.</i> <i>Only later did I realize.</i> Use it once, at the right moment.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia asks Leo about his trip to Finland. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/99e6b4edc0ec/never-before-had-i/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The northern lights over a frozen lake",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Never before had I seen anything like it.",
-          "img": "https://wolf-labs.pages.dev/p/99e6b4edc0ec/never-before-had-i/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Not once did anybody complain about the cold.",
-          "img": "https://wolf-labs.pages.dev/p/99e6b4edc0ec/never-before-had-i/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Hardly had I lifted my camera when the colors changed.",
-          "img": "https://wolf-labs.pages.dev/p/99e6b4edc0ec/never-before-had-i/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/99e6b4edc0ec/never-before-had-i/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A typewriter and a notebook by a dark window",
       "pede": "Look at the picture: a typewriter and a notebook by a dark window. Write 2 or 3 sentences: the opening of a moment you will never forget. Use <b>Never before had I…</b>, <b>Not once did…</b>, <b>Only later did I…</b> or <b>Above us…</b>",
       "ph": "Never before had I …",

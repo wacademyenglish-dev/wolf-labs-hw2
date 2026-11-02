@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Eight Doors",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/27d40a7d1ab9/eight-doors/img/live-corredor.webp",
+  "capa": "../img/live-corredor.webp",
   "alvo": "talking about your own abilities: good at / better at / not very good at (always AT, never in); soften a claim with I'd say I'm quite...; be honest with to be honest and although; can't (a real limit) versus haven't ... yet (still open)",
   "abrir": "What are you good at, and how do you know?",
   "fecho": "Ability takes <b>at</b>: <i>good at, better at, not very good at</i>. Soften a claim: <b>I’d say I’m quite…</b>. Be honest: <b>to be honest, although</b>. <b>Can’t</b> closes a door; <b>haven’t … yet</b> leaves it open.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo fill in a volunteer form. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/27d40a7d1ab9/eight-doors/img/live-porta.webp",
+      "img": "../img/live-porta.webp",
       "leg": "An open door in a dark room",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'd say I'm quite good at planning trips.",
-          "img": "https://wolf-labs.pages.dev/p/27d40a7d1ab9/eight-doors/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "To be honest, I'm not very good at singing, although I like it.",
-          "img": "https://wolf-labs.pages.dev/p/27d40a7d1ab9/eight-doors/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I haven't learned to play the guitar yet.",
-          "img": "https://wolf-labs.pages.dev/p/27d40a7d1ab9/eight-doors/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -175,7 +175,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/27d40a7d1ab9/eight-doors/img/live-corredor.webp",
+      "img": "../img/live-corredor.webp",
       "leg": "A long corridor with many doors",
       "pede": "Look at the picture: a corridor with many doors. Imagine each door is a skill. Write 2 or 3 sentences: one thing you are good at and one thing you haven't tried yet. Use <b>good at</b>, <b>I'd say I'm quite…</b> or <b>haven't … yet</b>.",
       "ph": "I'd say I'm quite good at …",

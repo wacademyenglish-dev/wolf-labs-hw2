@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "What Did You Do on Saturday?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/cb9f8170486f/what-did-you-do-on-saturday/img/live-estudio.webp",
+  "capa": "../img/live-estudio.webp",
   "alvo": "past questions with did: Did you ...? What / Where did you ...?; short answers Yes, I did / No, I didn't; the plain verb after did (Did you go?, never Did you went?)",
   "abrir": "What did you do last Saturday?",
   "fecho": "<b>Did you</b> + the plain verb: <i>Did you go out? Where did you go?</i> The short answer: <b>Yes, I did.</b> / <b>No, I didn't.</b> <b>did</b> already carries the past, so never <i>Did you went</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on Monday morning. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/cb9f8170486f/what-did-you-do-on-saturday/img/live-estudio.webp",
+      "img": "../img/live-estudio.webp",
       "leg": "A quiet room on Monday",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -95,17 +95,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Where did you go on Saturday?",
-          "img": "https://wolf-labs.pages.dev/p/cb9f8170486f/what-did-you-do-on-saturday/img/live-rua.webp",
+          "img": "../img/live-rua.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Yes, I did. We played frisbee in the park.",
-          "img": "https://wolf-labs.pages.dev/p/cb9f8170486f/what-did-you-do-on-saturday/img/live-parque.webp",
+          "img": "../img/live-parque.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "No, I didn't. I stayed home.",
-          "img": "https://wolf-labs.pages.dev/p/cb9f8170486f/what-did-you-do-on-saturday/img/live-estudio.webp",
+          "img": "../img/live-estudio.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -152,7 +152,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/cb9f8170486f/what-did-you-do-on-saturday/img/live-parque.webp",
+      "img": "../img/live-parque.webp",
       "leg": "A picnic in the park",
       "pede": "Look at the picture: a picnic blanket in the park. Write 2 or 3 sentences about last Saturday. Use a past verb, <b>didn't</b> or a question with <b>Did you ...?</b>",
       "ph": "Last Saturday I … I didn't …",

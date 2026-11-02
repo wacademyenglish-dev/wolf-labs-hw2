@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · As If He Knew Me · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Gloock&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>As If He Knew Me · Severance · The Wellness Room</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>As If He Knew Me · Severance · The Wellness Room</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Two people in one body, and a door between them.</p><p style="margin:0 0 6px"><b>The grammar:</b> As If, As Though: He looks at me as if he knew me.</p><p style="margin:0 0 6px"><b>The class (about 50 min):</b> I Warm-up and The Interview · III The Trailer · IV Scene by Scene · V The Board Vote · VI As If, As Though · VII The Wellness Session · VIII As If · IX The Interview. No extra scenes: every scene is part of the class.</p><p style="margin:0"><b>Open with:</b> “You know the procedure now. In the trailer, how does Mark look at his own life? Guess.”</p></div><!--/prep-->
+    <p><i>Severance</i> (Apple TV, 2022), directed by Ben Stiller, with Adam Scott as Mark. At Lumon, some workers have a chip that separates their memories: at work they remember nothing of home, at home nothing of work. When an “innie” is upset, he goes to the wellness room, where a calm voice reads him nice facts about his “outie”. The grammar: <b>as if / as though</b>: what is NOT true goes one step back (<b>as if he knew</b> him, <b>as though she were</b> his friend, <b>as if she had never been</b> here); what is probably true, because you can see it, stays in the present (it looks <b>as if</b> the elevator <b>is</b> stuck). No would after as if.</p>
+    <p>A note for the teacher: strange, not violent. Lines checked against the trailer’s subtitles (23/09), told in our own words. Lesson 294 (macrodata, the numbers) is also Severance; this one is the other room on the floor.</p>
+    <p class="aq-guia"><b>Warm-up and The Interview (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the show under the photo). Let them talk; don’t correct the grammar yet. <b>2 · The Interview:</b> you are Mark at work, his “innie”: the card with his facts shows only on your screen (dashed border). You don’t remember anything about your life outside, so answer as if you had never left the building. The student asks questions and taps each one; then guesses who you are, and the photo shows the answer.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>procedure</i>, <i>consent</i>, <i>memories</i>, <i>retain</i> and <i>forbids</i>, before the video, in predict the story and mystery meaning. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <p class="fim-guia"><b>The ending (IX, The Interview)</b>: the teacher is Mark S., the innie. The student asks five questions (how he feels when work starts, how Ms. Cobel looks at him, Petey, the outside world, acting happy). Then they swap: the student is an innie on the first day. Speaking only.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is a long dim Lumon corridor. I: Warm-up and The Interview. III: the trailer in three steps. <b>Before:</b> the wellness counselor says something kind; the student taps how they answer (say thank you, ask a question, say nothing) and the conversation appears. <b>Watch:</b> Which word did you hear? Five lines, each with a ▶ time: tap it and the video jumps to that moment. <b>After:</b> One word is wrong. Five lines with a ▶; the student says the right word. IV: five frames on the film strip. <b>V, The Board Vote:</b> three proposals (the chip, the wellness room, phones in a locker); the student votes Yes, Propose a change or No and defends it. <b>VI, As If, As Though:</b> five true facts on the left (Mark does not know Petey…) and five sentences with as if on the right; the student matches them. When all five are matched, the rule board appears and stays in the corner on the next pages. <b>VII, The Wellness Session:</b> a dark room with an armchair, a painting of hills and a floor lamp. For each of six facts the student reads the clue, says the sentence softly, then taps Check: the right sentence appears, the lamp warms from cold green to amber, the painting gets its color back and the fact appears on the session card (six dots for six facts). <b>VIII, As If:</b> six cards (your boss, a neighbor, a child, the sky, a tourist, you); the student taps a card and says how they look, with as if or as though. IX: the interview.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>as if he knows him</i> (when it is false), <i>as if he would know</i>, <i>as though she will be</i>, <i>as if I knew her for years</i> (had known), <i>like as if / like if</i>, <i>as if you be happy</i>, <i>had readed</i>, <i>as if the elevator stuck</i> (is stuck). The corrector does not mark the present for false things (sometimes it is true); the lesson teaches the step back.</p>
+    <!--conversa--><h4>THE BOARD VOTE (V) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Line by Line, the student sits on the board of a company like Lumon and votes on three proposals from the trailer: the chip for every worker (optional, free), a wellness room on every floor, and phones in a locker during work hours. For each one they tap Yes, Propose a change or No, and defend the vote with as if / as though (they talk about it as if it were a gift…). There is no right answer. Wait five seconds in silence before they start, then use the PUSH line (only you see it) to make the vote harder. Recast quietly while they talk (as if he knows, like if, as if it would be); at the end, ask them to fix one or two sentences themselves. About six minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up and The Interview, V The Board Vote, VII The Wellness Session, VIII As If and IX The Interview.</li>
+      <li><b>Listen</b>: II The Words, III The Trailer and IV Line by Line.</li>
+      <li><b>Focus</b>: VI As If, As Though.</li>
+      <li><b>Write</b>: the homework (the lesson ends speaking).</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script src="aquece.js"></script>
+<script src="final.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* SEVERANCE · THE WELLNESS ROOM (WOLFLIX B2) · pergunta-surpresa · 29/10/2026 · as if / as though */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'Have you ever met someone who talked to you as if they knew you, but you didn’t remember them?',
+    opc: ['Yes, and I pretended!', 'Yes, and I asked', 'Never'], st: ['They talked as if we …', 'I acted as though I …'],
+    ex: 'Yes, and I pretended! A man hugged me at a party as if we were old friends. I smiled as though I remembered him.', push: 'Did you ever find out who it was?' },
+  { cena: 'regra', tipo: 'Would you rather', q: 'Would you rather forget your work every evening, or remember every single day of your life?',
+    opc: ['Forget my work', 'Remember every day'], st: ['I’d rather …, as if …', 'It would feel as though …'],
+    ex: 'Forget my work. I would come home as if I had a free day, every day.', push: 'And the good days at work? You would lose those too.' },
+  { cena: 'sessao', tipo: 'Opinion', q: 'Is a little “happy talk” at work good, or is it fake?',
+    opc: ['Good for the team', 'Fake', 'It depends who says it'], st: ['It sounds as if …', 'They act as though …'],
+    ex: 'It depends who says it. When my boss says “we are a family”, it sounds as if he wanted something from me.', push: 'What is one sentence a boss says that you never believe?' },
+  { cena: 'parece', tipo: 'What if', q: 'What if your “work you” met your “home you” for coffee? Would they like each other?',
+    opc: ['Best friends', 'Polite strangers', 'They’d argue'], st: ['They would talk as if …', 'Home me would act as though …'],
+    ex: 'They’d argue. Work me would act as if he were the boss, and home me would just want to watch a series.', push: 'Which one is the real you?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SEVERANCE · THE WELLNESS ROOM (WOLFLIX B2) · conversa · 29/10/2026 · regra 3×3 do Carlos
+   Voto do conselho, colado no trailer (logo depois de IV · Line by Line). O aluno é do conselho de uma
+   empresa como a Lumon e vota três propostas tiradas do trailer (o chip opcional, a sala de bem-estar,
+   o celular no armário): Yes / Propose a change / No, e defende com as if / as though.
+   A abertura e a cena I já perguntam sobre trabalho × casa; aqui é decisão, não pergunta pessoal. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'conselho', apos: 'falas', est: 'o', min: 6, img: 'mesas', rot: 'The Board Vote', t: 'You are on the board. How do you vote?',
+    p: 'Read the proposal. Vote Yes, Propose a change or No. Then defend your vote with as if or as though.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The chip', sit: 'Proposal 1 · Every worker can have the chip, for free. At work you forget home; at home you forget work. It is optional.',
+        q: 'How do you vote?',
+        opc: [{ t: 'Yes', cor: 'g' }, { t: 'Propose a change', cor: 'y' }, { t: 'No', cor: 'r' }],
+        st: ['It sounds as if …', 'They treat workers as though they were …', 'It feels as if nobody …'],
+        ex: 'No. They talk about it as if it were a gift, but it isn’t. Your outie would live as though half of his life didn’t exist.',
+        push: 'And if it were only for one stressful month, then the chip comes out? Would you change your vote?' },
+      { tag: 'The room', sit: 'Proposal 2 · A wellness room on every floor: ten minutes, a calm voice, nice facts about your life outside.',
+        q: 'How do you vote?',
+        opc: [{ t: 'Yes', cor: 'g' }, { t: 'Propose a change', cor: 'y' }, { t: 'No', cor: 'r' }],
+        st: ['It looks as if …', 'I would change it, as though …', 'They act as if ten minutes …'],
+        ex: 'Propose a change. A quiet room is a good idea, but no strange voice. People should rest as if they were at home, with their own music.',
+        push: 'Where do YOU go at work or school when you need ten minutes alone?' },
+      { tag: 'The phones', sit: 'Proposal 3 · Phones stay in a locker during work hours. Nobody can text you, and you can’t text home.',
+        q: 'How do you vote?',
+        opc: [{ t: 'Yes', cor: 'g' }, { t: 'Propose a change', cor: 'y' }, { t: 'No', cor: 'r' }],
+        st: ['They act as though we were …', 'It would feel as if …', 'I’d vote yes, as long as …'],
+        ex: 'Yes, but only in meetings. Sometimes we look at our phones as if the room were empty. That is rude.',
+        push: 'Could you work eight hours with no phone? Be honest: how many times do you check it?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "Your two worlds, then a man with two lives.",
+   "p": "Answer three questions. Then find out who he is."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn the words. Listen for them in yellow."
+  },
+  "video": {
+   "t": "Severance. The trailer.",
+   "p": "Answer first. Watch. Then two tasks. Tap ▶ to replay."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it. Say it like the character."
+  },
+  "cv-conselho": {
+   "t": "You are on the board. Vote.",
+   "p": "Vote, change it, or no. Defend it with as if."
+  },
+  "regra": {
+   "t": "What is true? Match the sentence.",
+   "p": "Tap left, then its pair. Then read the rule."
+  },
+  "sessao": {
+   "t": "Six calm facts warm the room.",
+   "p": "Read the clue. Say it softly. Tap Check."
+  },
+  "parece": {
+   "t": "Six people. How do they look?",
+   "p": "Tap a card. Use as if or as though."
+  },
+  "fim": {
+   "t": "Interview Mark S., the innie.",
+   "p": "Ask how the world feels to him. Then swap."
+  }
+ },
+ "prep": {
+  "obj": "As if / as though: o que não é verdade recua um tempo (as if he knew him), o provável fica no presente. Na Lumon, um chip separa as memórias do trabalho e de casa.",
+  "armadilha": "O brasileiro traduz “como se” com would ou presente (“as if he would know”, “as if he knows him” para algo falso), diz “like if” / “like as if” e esquece o past perfect (“as if I knew her for years”).",
+  "pal": [
+   "as if",
+   "as though",
+   "as if he knew",
+   "as though she were",
+   "procedure",
+   "consent",
+   "memories",
+   "retain"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a série: duas pessoas num corpo e uma porta entre elas.",
+   "perg": "How does Mark look at his own life? Guess.",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "mundo": {
+   "obj": "Três perguntas sobre os dois mundos do aluno (trabalho e casa); depois ele entrevista o professor como o innie Mark.",
+   "perg": "Are you a different person at work?",
+   "pula": "Duas perguntas bastam; a entrevista fica."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do trailer (procedure, consent, memories, retain, forbids) antes de assistir.",
+   "perg": "Would you give consent to the procedure?",
+   "pula": "Faça uma das duas atividades."
+  },
+  "video": {
+   "obj": "O trailer inteiro em três passos: a fala gentil da conselheira, escuta com ▶ e palavra errada.",
+   "perg": "How does Mark look when he hears about his outie?",
+   "pula": "Assista uma vez só e faça uma tarefa só; o trailer é sempre inteiro."
+  },
+  "falas": {
+   "obj": "As falas com palavras amarelas, uma a uma; o aluno repete como o personagem.",
+   "perg": "How does he say it: as if he meant it?",
+   "pula": "Duas falas bastam."
+  },
+  "cv-conselho": {
+   "obj": "Conselho da empresa: votar o chip, a sala de bem-estar e celulares no armário, defendendo com as if.",
+   "perg": "Would you vote yes to the chip?",
+   "pula": "Duas propostas bastam, com o PUSH."
+  },
+  "regra": {
+   "obj": "Ligar cinco fatos verdadeiros a frases com as if; a regra do passo atrás aparece no fim.",
+   "perg": "Does Mark know Petey? So: as if he knows, or knew?",
+   "pula": "Não corte: é a regra. Três pares bastam."
+  },
+  "sessao": {
+   "obj": "A sessão de bem-estar: seis fatos ditos com calma e as if / as though; a sala esquenta a cada um.",
+   "perg": "How do you say it softly, as if you meant it?",
+   "pula": "Quatro fatos bastam."
+  },
+  "parece": {
+   "obj": "Seis cartas (o chefe, um vizinho, uma criança, o céu): dizer como parecem com as if / as though.",
+   "perg": "How does your boss look on Monday?",
+   "pula": "Três cartas bastam."
+  },
+  "fim": {
+   "obj": "Entrevista: o professor é Mark S., que nunca viu o mundo lá fora; depois o aluno vira um innie no primeiro dia.",
+   "perg": "How does Ms. Cobel look at you?",
+   "pula": "Três perguntas e sem troca. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com as if / as though sobre trabalho, rotina e aparências.",
+   "perg": "Do you ever act as if everything were fine?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate adulto sobre separar trabalho e vida, com argumentos e as if.",
+   "perg": "Where do you stand, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Sala dos roteiristas: o aluno escreve o próximo episódio, descrevendo cenas com as if / as though.",
+   "perg": "How does the outie react, as if what?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Acting as if.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "as if",
+    "as though",
+    "acts as if",
+    "looks as though"
+   ],
+   "cartas": [
+    {
+     "k": "MONDAY FACE",
+     "q": "Do you ever act at work as if everything were fine?",
+     "fup": "Does anyone notice?",
+     "st": [
+      "The thing is, I sometimes act as if …",
+      "Nobody notices, as though …"
+     ],
+     "ex": "The thing is, I sometimes act as if I had slept eight hours, and nobody notices."
+    },
+    {
+     "k": "TWO SELVES",
+     "q": "Are you a different person at work and at home?",
+     "fup": "Which one is the real you?",
+     "st": [
+      "At work, I talk as if …",
+      "At home, I feel as though …"
+     ],
+     "ex": "At work, I talk as if I were always sure. At home, I feel as though I can finally relax."
+    },
+    {
+     "k": "DÉJÀ VU",
+     "q": "Have you ever met someone and felt as if you had known them for years?",
+     "fup": "What happened next?",
+     "st": [
+      "It felt as if we had …",
+      "Funnily enough, …"
+     ],
+     "ex": "It felt as if we had known each other since school. Funnily enough, she’s my wife now."
+    },
+    {
+     "k": "A BOSS",
+     "q": "Have you ever had a boss who treated you as if you were a machine?",
+     "fup": "How did you deal with it?",
+     "st": [
+      "He treated us as if …",
+      "Looking back, …"
+     ],
+     "ex": "He treated us as if we didn’t have families. Looking back, I should have left sooner."
+    },
+    {
+     "k": "FORGETTING",
+     "q": "Is there a memory you would erase, as if it had never happened?",
+     "fup": "Would you really do it?",
+     "st": [
+      "I’d love to act as if …",
+      "Then again, …"
+     ],
+     "ex": "I’d love to act as if my worst job interview had never happened. Then again, I learned a lot."
+    },
+    {
+     "k": "THE OFFICE",
+     "q": "What does your workplace look like on a bad day?",
+     "fup": "And on a good day?",
+     "st": [
+      "It looks as though …",
+      "Everyone moves as if …"
+     ],
+     "ex": "It looks as though a storm has passed. Everyone moves as if they were underwater."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "as if",
+    "as though",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "If the chip were real and safe, would you get it?",
+     "a": "Yes",
+     "b": "Never",
+     "fa": [
+      "Yes. I could go home as if work didn’t exist.",
+      "Eight hours of stress would simply disappear."
+     ],
+     "fb": [
+      "Never. My innie would live as if he were a prisoner.",
+      "Someone would be paying the price, and it would still be me."
+     ]
+    },
+    {
+     "q": "Is the innie a real person?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. He thinks and feels as though he were alive, because he is.",
+      "Memories don’t make a person; feelings do."
+     ],
+     "fb": [
+      "No. He’s just a part of Mark acting as if he were whole.",
+      "Without a past, there is no real self."
+     ]
+    },
+    {
+     "q": "Should we always leave work problems at the office?",
+     "a": "Always",
+     "b": "Not always",
+     "fa": [
+      "Always. Taking them home is as if you never left.",
+      "Your family deserves the whole you."
+     ],
+     "fb": [
+      "Not always. Pretending is acting as if you were two people.",
+      "Sharing problems is healthy."
+     ]
+    },
+    {
+     "q": "Is it OK to act happy at work when you are not?",
+     "a": "OK",
+     "b": "Not OK",
+     "fa": [
+      "It’s OK. Professionals act as though things were fine.",
+      "Nobody wants your bad mood."
+     ],
+     "fb": [
+      "Not OK. Acting as if is exhausting.",
+      "Honest teams are stronger."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The board thanks you for your contribution."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Writers’ Room",
+   "t": "Write the next episode.",
+   "p": "Answer each step. Describe it with as if.",
+   "prof": "You are the studio boss: ask “How does it look?” after each step and push for the step back (as if he knew, not knows).",
+   "passos": [
+    {
+     "q": "The episode opens with Mark’s outie at home. Something feels wrong. What?",
+     "st": [
+      "He feels as if …",
+      "It looks as though …"
+     ],
+     "ex": "He feels as if someone had been in his house while he was at work."
+    },
+    {
+     "q": "His innie finds a note from outside. What does it say?",
+     "st": [
+      "The note reads as if …"
+     ],
+     "ex": "The note reads as if it were written by a friend he has never met."
+    },
+    {
+     "q": "Ms. Cobel notices. How does she react?",
+     "st": [
+      "She smiles as though …",
+      "She acts as if …"
+     ],
+     "ex": "She smiles as though nothing had happened, but she takes the note."
+    },
+    {
+     "q": "What is the final shot?",
+     "st": [
+      "The camera … as if …"
+     ],
+     "ex": "The elevator doors close, and Mark looks at the camera as if he knew we were watching."
+    }
+   ],
+   "fim": "The studio greenlit it. Act as if you weren’t surprised."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

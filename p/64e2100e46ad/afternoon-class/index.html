@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · What Are They Doing? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>What Are They Doing? · Afternoon Class</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>What Are They Doing? · Afternoon Class</h2>
+    <p>A lesson about <b>right now</b>. It is two o’clock, the school is warm, and everybody is falling asleep. On screen, the school building at dusk: eight lit windows, something happening in each. The heart of the hour is <b>Afternoon Class</b>, an animated short film with <b>no dialogue</b>: the student is the voice of the film. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>am / is / are + verb-ing</b>: <i>The cat is sleeping.</i> The spelling: <b>+ing</b> (eating), drop the <b>e</b> (writing), <b>double</b> the short ones (running). No: <b>isn’t / aren’t / I’m not</b> (never <i>I amn’t</i>). Question: <b>Is it raining? — Yes, it is.</b> The mistakes: <i>The cat sleeping</i>, <i>I am sleep</i>, <i>writeing</i>, <i>runing</i>, <i>You are studying?</i></p>
+    <h4>THE FILM</h4>
+    <p>Seven short chapters, each one stops by itself. After each chapter, the student says what is happening; open Show answer only if they need it. If the video doesn’t play in your call, open it on YouTube and share that tab.</p>
+    <!--conversa--><h4>WOULD YOU RATHER? (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After the film, the student is in the sleepy two o’clock class: coffee or the desk, go home or wake the teacher up. Answer first, then let them choose; wait five seconds in silence and let them say the whole sentence with <i>I’m …ing</i>. The PUSH line (only you see it) is a quick yes or no. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one light personal question. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Two O’Clock, II The School Windows (tap the version you heard), VI Zoom In (the student asks <i>Is it …ing?</i>; every no opens the photo), VIII The Phone Call (you are Maya), VII Would You Rather? (the student chooses, with <i>I’m …ing</i>), and the big question: is a nap OK?</li>
+      <li><b>Listen</b>: V The Film (no words: the student narrates).</li>
+      <li><b>Focus</b>: III The Rule, IV Spell the -ing.</li>
+      <li><b>Write</b>: IX, what is happening in their home right now, with the red wavy line for a missing <i>is</i>, a missing <i>-ing</i>, <i>writeing</i>, <i>runing</i>, <i>amn’t</i> and the question without the swap. It goes to their My notes.</li>
+    </ul>
+    <p>No audio in this lesson: your voice is Maya’s.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* WHAT ARE THEY DOING? · AFTERNOON CLASS (Main A1) · pergunta-surpresa · 27/10/2026 · am / is / are + -ing */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'janelas', tipo: 'And you?', q: 'Right now, what is your family doing?',
+    opc: ['Working', 'Sleeping', 'I don’t know!'], st: ['My … is …ing.', 'They’re …ing.'],
+    ex: 'My sister is working. My cat is sleeping!', push: 'And your friends?' },
+  { cena: 'filme', tipo: 'Opinion', q: 'The boy is sleeping in class. Is it OK?',
+    opc: ['Yes, it’s OK.', 'No, it isn’t.'], st: ['He’s …ing, so …', 'He isn’t …ing.'],
+    ex: 'Yes, it’s OK. He’s dreaming about his family!', push: 'Every day?' },
+  { cena: 'fim', tipo: 'What if', q: 'Your boss is calling now. What are you doing?',
+    opc: ['I’m working.', 'I’m eating.', 'I’m sleeping!'], st: ['I’m …ing.', 'I’m not …ing.'],
+    ex: 'I’m eating… but I say: “I’m working!”', push: 'Really?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* WHAT ARE THEY DOING? · AFTERNOON CLASS (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A1 bem leve: would you rather (2 opções), frase quase pronta, o professor responde primeiro.
+   Entra no lugar de "VII · Quick Check" (extra, tocar-depois-dizer). Depois do filme e do zoom,
+   o aluno entra na sala das duas da tarde: o que ele estaria fazendo? A gramática (am / is / are +
+   -ing, I’m not …ing) mora nas opções e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'sono', troca: 'quiz', est: 'o', min: 5, img: 'travesseiro', rot: 'Would You Rather?', t: 'You are in the film. You choose.',
+    p: 'Your teacher answers first. Then choose one and say it with I’m …ing.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'In class', sit: 'Two o’clock. Your head is heavy.',
+        q: 'Would you rather be…', opc: ['drinking coffee', 'sleeping on the desk'],
+        st: ['I’m …ing.', 'I’m not …ing!'],
+        ex: 'Drinking coffee! I’m drinking coffee. I’m not sleeping!',
+        push: 'Every afternoon? Yes or no?' },
+      { tag: 'The teacher', sit: 'Look! The teacher is sleeping too.',
+        q: 'Would you rather be…', opc: ['going home', 'waking him up'],
+        st: ['I’m …ing.', 'He’s …ing, so I’m …'],
+        ex: 'Going home! He’s sleeping, so I’m going home.',
+        push: 'Really? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Your afternoon, right now.",
+   "p": "Answer out loud. The picture opens."
+  },
+  "janelas": {
+   "t": "Eight windows. What is happening?",
+   "p": "Open a window. Say what is happening."
+  },
+  "regra": {
+   "t": "Right now: two pieces, always.",
+   "p": "Say each line the right way. Then tap it."
+  },
+  "ing": {
+   "t": "Add -ing. Sometimes the verb changes.",
+   "p": "Say it, then tap the right spelling."
+  },
+  "filme": {
+   "t": "A short film with no words.",
+   "p": "Watch a chapter. Then you are the voice."
+  },
+  "zoom": {
+   "t": "Very close. What is happening?",
+   "p": "Ask: Is it …ing? Every no opens the photo."
+  },
+  "cv-sono": {
+   "t": "You are in the film. You choose.",
+   "p": "Your teacher answers first. Then say: I’m …ing."
+  },
+  "maya": {
+   "t": "Maya is calling from her class!",
+   "p": "Your teacher is Maya. Answer, then ask her."
+  },
+  "fim": {
+   "t": "Right now, in your home.",
+   "p": "Write five things happening now, and one that isn’t."
+  }
+ },
+ "prep": {
+  "obj": "Present continuous (am / is / are + -ing) para o que acontece agora: duas da tarde, a escola com calor e todo mundo pegando no sono.",
+  "armadilha": "O português não tem o “to be” separado no gerúndio: sai “The cat sleeping” ou “I am sleep”. E a pergunta sem inverter: “You are studying?”. Ortografia: writeing, runing.",
+  "pal": [
+   "right now",
+   "is sleeping",
+   "are talking",
+   "I’m not",
+   "Is it raining?",
+   "Yes, it is.",
+   "falling asleep",
+   "writing",
+   "running"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: duas da tarde, o relógio batendo, todo mundo caindo no sono.",
+   "perg": "Are you sleepy right now?",
+   "pula": "Só leia o título e comece."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o aluno fala da tarde dele agora, já com am / is / are + -ing.",
+   "perg": "What are you doing right now?",
+   "pula": "Três respostas bastam."
+  },
+  "janelas": {
+   "obj": "Oito janelas da escola: o aluno descreve o que acontece em cada uma.",
+   "perg": "What is happening in this window?",
+   "pula": "Cinco janelas bastam."
+  },
+  "regra": {
+   "obj": "A regra: duas peças sempre (am / is / are + -ing); o aluno corrige as frases erradas.",
+   "perg": "What piece is missing here?",
+   "pula": "Corrija três frases e siga."
+  },
+  "ing": {
+   "obj": "Ortografia do -ing: só somar, tirar o e, dobrar a consoante curta.",
+   "perg": "How do you spell running?",
+   "pula": "Quatro verbos bastam."
+  },
+  "filme": {
+   "obj": "Curta sem falas em capítulos: o aluno narra o que acontece depois de cada um.",
+   "perg": "What is happening in this chapter?",
+   "pula": "Quatro capítulos bastam."
+  },
+  "zoom": {
+   "obj": "Foto ampliada e borrada: o aluno pergunta Is it …ing? até descobrir.",
+   "perg": "Is it sleeping? Are they eating?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-sono": {
+   "obj": "Escolhas na aula sonolenta; o aluno responde com I’m …ing depois de você.",
+   "perg": "Coffee or the desk? What are you doing?",
+   "pula": "Duas escolhas bastam."
+  },
+  "maya": {
+   "obj": "Você é a Maya ao telefone: o aluno responde sobre a vida real e pergunta de volta.",
+   "perg": "What are you doing right now? And me?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: cinco coisas acontecendo agora na casa do aluno e uma que não; vai para o My notes.",
+   "perg": "What is happening in your home right now?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas de conversa sobre o agora e a tarde, com am / is / are + -ing.",
+   "perg": "What is your family doing right now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre a soneca e a tarde, com o presente contínuo.",
+   "perg": "Nap or coffee? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é a Maya na aula da tarde; você entrevista com perguntas no contínuo.",
+   "perg": "What is your teacher doing right now?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More right-now questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "right now",
+    "am / is / are",
+    "-ing",
+    "isn’t",
+    "aren’t"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR HOME",
+     "q": "Who is at home right now? What are they doing?",
+     "fup": "Is anybody sleeping?",
+     "st": [
+      "My … is …ing.",
+      "Nobody is …ing."
+     ],
+     "ex": "My mother is cooking and my cat is sleeping."
+    },
+    {
+     "k": "OUTSIDE",
+     "q": "Look outside. What is happening?",
+     "fup": "Is it raining?",
+     "st": [
+      "It is …ing.",
+      "People are …ing."
+     ],
+     "ex": "It isn’t raining. Some kids are playing."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "What is happening on your phone right now?",
+     "fup": "Is anybody calling you?",
+     "st": [
+      "My friends are …ing.",
+      "Nobody is …ing."
+     ],
+     "ex": "My friends are talking in the group."
+    },
+    {
+     "k": "YOUR BODY",
+     "q": "How are you sitting right now?",
+     "fup": "Are you drinking anything?",
+     "st": [
+      "I’m …ing.",
+      "I’m not …ing."
+     ],
+     "ex": "I’m sitting on the sofa and I’m drinking water."
+    },
+    {
+     "k": "YOUR TOWN",
+     "q": "What is happening in your town today?",
+     "fup": "Is the traffic moving?",
+     "st": [
+      "People are …ing.",
+      "The … is …ing."
+     ],
+     "ex": "People are going home and the traffic isn’t moving."
+    },
+    {
+     "k": "AT WORK",
+     "q": "Think of your office or school. What are people doing now?",
+     "fup": "Is your boss working?",
+     "st": [
+      "My boss is …ing.",
+      "They are …ing."
+     ],
+     "ex": "My boss is having a meeting and my friends are eating."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I’m …ing",
+    "is …ing",
+    "right now"
+   ],
+   "rodadas": [
+    {
+     "q": "Two o’clock and you are sleepy. Nap or coffee?",
+     "a": "A nap",
+     "b": "A coffee",
+     "fa": [
+      "A nap. My body is asking for it."
+     ],
+     "fb": [
+      "A coffee. My boss is watching me."
+     ]
+    },
+    {
+     "q": "The teacher is sleeping. Wake him up or leave?",
+     "a": "Wake him up",
+     "b": "Leave",
+     "fa": [
+      "Wake him up. We are wasting time."
+     ],
+     "fb": [
+      "Leave. Everybody is going home."
+     ]
+    },
+    {
+     "q": "Your friend is calling in class. Answer or not?",
+     "a": "Answer",
+     "b": "Not answer",
+     "fa": [
+      "Answer. Maybe she is having a problem."
+     ],
+     "fb": [
+      "Not now. I’m studying."
+     ]
+    },
+    {
+     "q": "Rainy afternoon. Stay in or go out?",
+     "a": "Stay in",
+     "b": "Go out",
+     "fa": [
+      "Stay in. It is raining a lot."
+     ],
+     "fb": [
+      "Go out. My friends are waiting for me."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody is sleeping now."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Maya now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Maya.",
+   "perguntas": [
+    "Where are you sitting right now?",
+    "What is your teacher doing?",
+    "Are your friends listening?",
+    "Is anybody sleeping in your class?",
+    "What are you eating?",
+    "Why are you calling me now?"
+   ],
+   "st": [
+    "I’m …ing.",
+    "My teacher is …ing.",
+    "They aren’t …ing."
+   ],
+   "ex": "I’m sitting at the back and my teacher is sleeping!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

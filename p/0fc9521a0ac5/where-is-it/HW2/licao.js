@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Where Is It?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0fc9521a0ac5/where-is-it/img/live-casa.webp",
+  "capa": "../img/live-casa.webp",
   "alvo": "position words: on, under, above, behind, next to, in front of, between ... and ...; Where is the ...? It's ...; never in the table, between of, in front the",
   "abrir": "Where is your phone right now?",
   "fecho": "<b>on</b> the table · <b>under</b> · <b>above</b> · <b>behind</b> · <b>next to</b> · <b>in front of</b> · <b>between</b> A <b>and</b> B. A flat thing = <b>on</b>. Never <i>in the table</i>, never <i>between of</i>, never <i>in front the</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo look at a little house. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/0fc9521a0ac5/where-is-it/img/live-casa.webp",
+      "img": "../img/live-casa.webp",
       "leg": "A little house, lit inside",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The wooden man is next to the box.",
-          "img": "https://wolf-labs.pages.dev/p/0fc9521a0ac5/where-is-it/img/live-pos-nextto.webp",
+          "img": "../img/live-pos-nextto.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The wooden man is behind the box.",
-          "img": "https://wolf-labs.pages.dev/p/0fc9521a0ac5/where-is-it/img/live-pos-behind.webp",
+          "img": "../img/live-pos-behind.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The wooden man is between the chair and the box.",
-          "img": "https://wolf-labs.pages.dev/p/0fc9521a0ac5/where-is-it/img/live-pos-between.webp",
+          "img": "../img/live-pos-between.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0fc9521a0ac5/where-is-it/img/live-quarto.webp",
+      "img": "../img/live-quarto.webp",
       "leg": "A dark bedroom with a lamp",
       "pede": "Look at the picture: a dark bedroom with a small lamp. Write 2 or 3 sentences: where are things in a room? Use <b>on</b>, <b>next to</b>, <b>under</b> or <b>between</b>.",
       "ph": "The lamp is on …",

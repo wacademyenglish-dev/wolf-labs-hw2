@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Neither Here Nor There",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/43522857a15a/neither-here-nor-there/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "opinions with nuance: I'm all for it, I'm in two minds about, I have mixed feelings, I'm sitting on the fence, it's not my cup of tea, I couldn't care less, it's neither here nor there, if you ask me, the way I see it, for what it's worth, to be fair",
   "abrir": "What is a topic you have a very clear opinion about? And one you do not?",
   "fecho": "An opinion has a temperature. <b>I'm all for it</b> · <b>I'm in two minds about it</b> · <b>I couldn't care less</b> (zero interest) · <b>It's neither here nor there</b> (irrelevant). Introduce it: <b>If you ask me · The way I see it · For what it's worth · To be fair</b>. Never <i>I'm agree</i>, never <i>in two minds of</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a new rule at a restaurant. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/43522857a15a/neither-here-nor-there/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A glass and a candle on a dark table",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If you ask me, a meal is for conversation, not for scrolling.",
-          "img": "https://wolf-labs.pages.dev/p/43522857a15a/neither-here-nor-there/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I'm in two minds about it, but I'm leaning towards yes.",
-          "img": "https://wolf-labs.pages.dev/p/43522857a15a/neither-here-nor-there/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "To be fair, the price is neither here nor there.",
-          "img": "https://wolf-labs.pages.dev/p/43522857a15a/neither-here-nor-there/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/43522857a15a/neither-here-nor-there/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A glass and a candle on a table",
       "pede": "Look at the picture: a glass and a candle on an empty table. Write 2 or 3 sentences: give your opinion on a topic (working from home, school uniforms, a four-day week) with a nuanced phrase. Use <b>I'm all for it</b>, <b>I'm in two minds</b> or <b>it's not my cup of tea</b>.",
       "ph": "I'm all for … The way I see it, …",

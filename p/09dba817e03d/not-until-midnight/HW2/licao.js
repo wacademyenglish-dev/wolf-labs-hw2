@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Not Until Midnight",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/09dba817e03d/not-until-midnight/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "inversion after negative time and place expressions: Not until midnight did they arrive; Not until I saw the map did I understand; Not once did we stop; Not since 1990 has it snowed here; Nowhere have I seen such stars; the inversion goes in the main clause",
   "abrir": "Tell me about a night you will never forget.",
   "fecho": "After a negative time or place expression, the auxiliary comes first: <b>Not until midnight did they arrive.</b> <b>Not since 1990 has it snowed here.</b> <b>Nowhere have I seen such stars.</b> With <b>not until I saw the map</b>, the inversion goes in the second part: <i>did I understand</i>. And the main verb goes back to its base form: <i>did they arrive</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo, after a weekend in the mountains. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/09dba817e03d/not-until-midnight/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A ridge under the stars",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Not until the fog lifted did we see how close we were to the road.",
-          "img": "https://wolf-labs.pages.dev/p/09dba817e03d/not-until-midnight/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Nowhere in the valley have I seen a sky so clear.",
-          "img": "https://wolf-labs.pages.dev/p/09dba817e03d/not-until-midnight/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Not once during the whole night did the wind stop.",
-          "img": "https://wolf-labs.pages.dev/p/09dba817e03d/not-until-midnight/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/09dba817e03d/not-until-midnight/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A mountain ridge under the stars",
       "pede": "Look at the picture: a mountain ridge under a sky full of stars. Imagine a night you spent outdoors. Write 2 or 3 sentences using <b>Not until ... did</b>, <b>Not once did</b>, <b>Nowhere have I</b> or <b>Not since ... have</b>.",
       "ph": "Not until … did we …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Nobody Makes Him",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d3bfe5c7e939/nobody-makes-him/img/live-campo.webp",
+  "capa": "../img/live-campo.webp",
   "alvo": "have to / has to for what you must do; don't / doesn't have to for what is not necessary (your choice); had to for the past (must has no past); mustn't for what is forbidden; plain verb after them, never must to, haven't to, he have to",
   "abrir": "What do you have to do tomorrow?",
   "fecho": "<b>Have to / has to</b>: somebody makes you. <b>Don't have to</b>: it is your choice. <b>Had to</b>: the past. <b>Mustn't</b>: not allowed. With he, she: <b>has to</b>, <b>doesn't have to</b>. Never <i>must to</i>, never <i>musted</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a kitchen early in the morning. A new scene, about 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/d3bfe5c7e939/nobody-makes-him/img/live-cozinha.webp",
+      "img": "../img/live-cozinha.webp",
       "leg": "A kitchen at seven in the morning",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I don't have to cook, but I like it.",
-          "img": "https://wolf-labs.pages.dev/p/d3bfe5c7e939/nobody-makes-him/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "At sixteen I had to wash my own clothes.",
-          "img": "https://wolf-labs.pages.dev/p/d3bfe5c7e939/nobody-makes-him/img/live-vazio.webp",
+          "img": "../img/live-vazio.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "You mustn't be late for training.",
-          "img": "https://wolf-labs.pages.dev/p/d3bfe5c7e939/nobody-makes-him/img/live-campo.webp",
+          "img": "../img/live-campo.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d3bfe5c7e939/nobody-makes-him/img/live-vazio.webp",
+      "img": "../img/live-vazio.webp",
       "leg": "A small empty room with a mattress",
       "pede": "Look at the picture: a small empty room. Imagine you move here alone at sixteen. Write 2 or 3 sentences: what you <b>had to</b> do, and one thing you <b>didn't have to</b> do.",
       "ph": "At sixteen I had to …",

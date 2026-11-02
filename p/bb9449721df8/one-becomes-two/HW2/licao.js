@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "One Becomes Two",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/bb9449721df8/one-becomes-two/img/live-barraca.webp",
+  "capa": "../img/live-barraca.webp",
   "alvo": "the plural: +s, +es after s / x / ch / sh, consonant + y becomes -ies, f becomes -ves, irregular man / men, child / children, person / people, foot / feet; two or more needs the plural; never two tomato, childs, peoples",
   "abrir": "What do you buy every week at the market?",
   "fecho": "<b>One</b> thing: <i>an apple</i>. <b>Two or more</b>: <b>-s</b>: <i>apples</i>. After a hiss (s, x, ch, sh): <b>-es</b>: <i>peaches</i>. Consonant + y: <b>-ies</b>: <i>cherries</i>. Odd ones: <i>children, people</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia buys fruit at a Saturday market. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/bb9449721df8/one-becomes-two/img/live-barraca.webp",
+      "img": "../img/live-barraca.webp",
       "leg": "A market stall with crates of fruit",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -102,17 +102,17 @@ window.HW2 = {
         {
           "t": "There are many boxes of fruit at this stall.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/bb9449721df8/one-becomes-two/img/live-barraca.webp"
+          "img": "../img/live-barraca.webp"
         },
         {
           "t": "The basket has apples, bananas and bread.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/bb9449721df8/one-becomes-two/img/live-cesta.webp"
+          "img": "../img/live-cesta.webp"
         },
         {
           "t": "There are five signs and two pens on the table.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/bb9449721df8/one-becomes-two/img/live-placas.webp"
+          "img": "../img/live-placas.webp"
         }
       ]
     },
@@ -155,7 +155,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/bb9449721df8/one-becomes-two/img/live-cesta.webp",
+      "img": "../img/live-cesta.webp",
       "leg": "A basket with fruit and bread",
       "pede": "Look at the picture: a basket with fruit and bread. Write 2 or 3 sentences about your shopping list. Use numbers and plurals: <b>six eggs</b>, <b>two loaves</b>, <b>ten cherries</b>.",
       "ph": "I buy six eggs, two …",

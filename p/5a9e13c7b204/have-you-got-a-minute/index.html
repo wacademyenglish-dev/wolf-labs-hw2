@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Have You Got a Minute? · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Have You Got a Minute? · The Coat Pockets</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Have You Got a Minute? · The Coat Pockets</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> Have got is have, said the way people say it, and it brings its own helper, so the question needs no DO.</p><p style="margin:0 0 6px"><b>The grammar:</b> One Helper: HAVE GOT is HAVE, said the way people say it.</p><p style="margin:0 0 6px"><b>Short class (about 51 min):</b> I Your Bag · II What People Say · III One Helper · IV The Short Way · V Two Words or Three · VI The Coat · VII Your Pick · XI My Bag. Skip if you’re short on time: VIII, IX, X (marked EXTRA on your screen). Full lesson: about 71 min.</p><p style="margin:0"><b>Open with:</b> “What’s in your bag right now? Three things.”</p></div><!--/prep-->
+    <p><b>Have got</b> is <b>have</b>, said the way people say it, and it brings its own helper, so the question needs no DO. The screen is a coat with six closed pockets: a pocket opens only with the right question, and answers the short way. Then the word left over, the travel check (you check the student’s bag, then the student checks yours) and “not only things”. II: the student matches six situations to what people really say (Have you got a car? I haven’t got time. Yes, I have…) and says each line out loud. III: the three cards, then four lines with a broken part (<i>Do you have got</i>, <i>I don’t have got</i>, <i>Yes, I got</i>, <i>I have got not</i>): the student says the fix and taps Check. IV: the student sorts six people into ’VE got or ’S got (she, they, my brother, I, my parents, the dog), then says them fast. At the end, the student writes about their bag and their life. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>I’ve got / she’s got</b>. <b>Have you got…?</b> (never <i>Do you have got…?</i>). <b>I haven’t got</b> (never <i>I don’t have got</i>, <i>I have got not</i>). Short answers repeat the helper: <b>Yes, I have. / No, she hasn’t.</b> (never <i>Yes, I got</i>). Have got is also for family, illness, plans, time and trouble.</p>
+    <!--conversa--><h4>YOUR PICK (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After the coat, three light choices with have got: a magic pocket, one new thing for the house, and the question of the title, “Have you got a minute?”. Answer first yourself, then let your student choose. Wait five seconds in silence, then use the PUSH line (only you see it): a quick yes or no, answered the short way. Recast quietly while they talk; at the end, ask them to fix one sentence themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Bag, IV The Short Way, VI The Coat, VII Your Pick, VIII The Travel Check, X About You.</li>
+      <li><b>Listen</b>: V Two Words or Three. HAVE or HAVE GOT: the clue is the T of <i>got</i>. The line appears after the right answer.</li>
+      <li><b>Focus</b>: II What People Say, III One Helper, IX Not Only Things.</li>
+      <li><b>Write</b>: XI My Bag, with the red wavy line for two helpers, <i>got not</i>, <i>Yes, I got</i> and the wrong ’s / ’ve. It goes to their My notes.</li>
+    </ul>
+    <h4>THE COAT</h4>
+    <p>The student picks a pocket and asks out loud: <i>Have you got keys in this pocket?</i> You tap the thing they asked about. The pocket answers: <i>No, I haven’t.</i> (the guess is crossed out) or opens: <i>Yes, I have.</i> What is in each pocket never changes.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The pockets, the bag and the shelves move on both screens. Every audio plays and pauses; 0.75× makes it slower. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* HAVE YOU GOT A MINUTE? (Main A1) · pergunta-surpresa · 27/10/2026 · have got */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'duas', tipo: 'And you?', q: 'Have you got a pet?',
+    opc: ['Yes, I have.', 'No, I haven’t.'], st: ['Yes, I have. I’ve got a …', 'No, I haven’t.'],
+    ex: 'Yes, I have. I’ve got a dog, Bolinha.', push: 'Has it got a bed? Yes or no?' },
+  { cena: 'ouve', tipo: 'Would you rather', q: 'A big family or a small family?',
+    opc: ['A big family', 'A small family'], st: ['I’ve got a … family.', 'I want a … family.'],
+    ex: 'I’ve got a small family. I want a big one!', push: 'Have you got cousins? Yes or no?' },
+  { cena: 'bolsos', tipo: 'And you?', q: 'What have you got in your fridge?',
+    opc: ['Lots!', 'Not much', 'Only milk'], st: ['I’ve got …', 'I haven’t got …'],
+    ex: 'Not much. I’ve got eggs and cheese. I haven’t got bread!', push: 'Have you got chocolate? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* HAVE YOU GOT A MINUTE? (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "Escolha 1 de 3" no lugar de "VII · The Word Left Over" (extra, montar a frase tocando: prática controlada).
+   Logo depois do casaco (VI): o bolso mágico, uma coisa nova para a casa, e a pergunta do título.
+   A1 bem leve: três opções curtas, frase quase pronta nos iniciadores, o professor responde primeiro.
+   A gramática da aula (I’ve got / I haven’t got · Have you got…? · Yes, I have / No, I haven’t) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'escolha', troca: 'sobra', est: 'o', min: 5, img: 'casaco', rot: 'Your Pick', t: 'One magic pocket. Choose one, three times.',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The pocket', sit: 'A magic pocket. One thing inside.', q: 'What have you got?',
+        opc: ['A ticket to Paris', 'A puppy', 'A golden key'],
+        st: ['I’ve got a ticket to Paris!', 'I’ve got a puppy!', 'I’ve got a golden key!'],
+        ex: 'I’ve got a ticket to Paris! But I haven’t got a passport.',
+        push: 'Have you got a passport? Yes or no?' },
+      { tag: 'Your house', q: 'One new thing for your house?',
+        opc: ['A big TV', 'A garden', 'A pool'],
+        st: ['I haven’t got a … now.', 'I’ve got a … now!'],
+        ex: 'A garden! I haven’t got a garden now.',
+        push: 'Has your best friend got one? Yes or no?' },
+      { tag: 'A minute', sit: 'A friend asks: “Have you got a minute?”', q: 'You answer…',
+        opc: ['Yes, I have.', 'No, I haven’t.', 'Only one!'],
+        st: ['Yes, I have. What’s up?', 'No, I haven’t. I’ve got …'],
+        ex: 'No, I haven’t. I’ve got a class now!',
+        push: 'It’s your best friend. Change? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "bolsa": {
+   "t": "Before the coat: your bag.",
+   "p": "Pick a card. Answer out loud."
+  },
+  "duas": {
+   "t": "What do people really say?",
+   "p": "Tap a situation, then the line. Say it."
+  },
+  "regra": {
+   "t": "HAVE GOT is HAVE, in everyday English.",
+   "p": "Find the broken part. Say the fix. Tap Check."
+  },
+  "curta": {
+   "t": "’VE or ’S?",
+   "p": "Tap a person, then its box. Say it fast."
+  },
+  "ouve": {
+   "t": "Four lines at normal speed.",
+   "p": "Play it. HAVE or HAVE GOT?"
+  },
+  "bolsos": {
+   "t": "Six pockets. What is inside?",
+   "p": "Ask: Have you got … in this pocket?"
+  },
+  "cv-escolha": {
+   "t": "One magic pocket. Choose three times.",
+   "p": "Your teacher answers first. Then say it."
+  },
+  "mala": {
+   "t": "Tomorrow you travel. Check the bag.",
+   "p": "Answer the short way. Then check your teacher’s."
+  },
+  "coisa": {
+   "t": "A brother, a headache, no time.",
+   "p": "Read it out loud. What kind of thing?"
+  },
+  "voce": {
+   "t": "Five questions, one start.",
+   "p": "Answer the short way first. Then say more."
+  },
+  "fim": {
+   "t": "What have you got?",
+   "p": "Write five lines: I’ve got, I haven’t got."
+  }
+ },
+ "prep": {
+  "obj": "Have got = have no inglês do dia a dia, com o próprio auxiliar (sem DO); o casaco tem seis bolsos que só abrem com a pergunta certa.",
+  "armadilha": "Misturar os dois sistemas: “Do you have got…?”, “I don’t have got”, “I have got not”. E a resposta curta “Yes, I got” em vez de “Yes, I have.”",
+  "pal": [
+   "I’ve got",
+   "she’s got",
+   "Have you got…?",
+   "I haven’t got",
+   "Yes, I have.",
+   "No, she hasn’t.",
+   "a headache",
+   "a minute"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: “Have you got a minute?” e o casaco de bolsos.",
+   "perg": "Have you got a minute?",
+   "pula": "Só leia o título e comece."
+  },
+  "bolsa": {
+   "obj": "Aquecimento pessoal: o que tem na bolsa do aluno agora.",
+   "perg": "What’s in your bag right now? Three things.",
+   "pula": "Duas cartas bastam."
+  },
+  "duas": {
+   "obj": "Seis situações ligadas ao que as pessoas realmente dizem com have got.",
+   "perg": "What do people really say here?",
+   "pula": "Quatro situações bastam."
+  },
+  "regra": {
+   "obj": "Um auxiliar só: o aluno acha a parte quebrada em quatro frases e diz o conserto.",
+   "perg": "Why is “Do you have got” wrong?",
+   "pula": "Duas frases bastam."
+  },
+  "curta": {
+   "obj": "Separar seis pessoas em ’ve got ou ’s got e dizer rápido.",
+   "perg": "My brother: ’ve or ’s?",
+   "pula": "Quatro pessoas bastam."
+  },
+  "ouve": {
+   "obj": "Escuta em velocidade normal: have ou have got? A pista é o T de got.",
+   "perg": "Did you hear the T of got?",
+   "pula": "Duas falas bastam."
+  },
+  "bolsos": {
+   "obj": "O casaco: o aluno pergunta Have you got…? e cada bolso responde do jeito curto.",
+   "perg": "What do you ask about this pocket?",
+   "pula": "Quatro bolsos bastam."
+  },
+  "cv-escolha": {
+   "obj": "Três escolhas leves com have got, inclusive a pergunta do título.",
+   "perg": "What has the magic pocket got?",
+   "pula": "Duas escolhas bastam."
+  },
+  "mala": {
+   "obj": "Conferência de viagem: você pergunta, o aluno responde curto; depois inverte.",
+   "perg": "Have you got your passport?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "coisa": {
+   "obj": "Have got também para família, doença, planos, tempo e problema.",
+   "perg": "Is a headache a thing you can hold?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "voce": {
+   "obj": "Cinco perguntas pessoais com Have you got…? e resposta curta mais detalhe.",
+   "perg": "Have you got any brothers or sisters?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: a bolsa, os bolsos e a vida do aluno com I’ve got / I haven’t got; vai para o My notes.",
+   "perg": "What have you got, and what haven’t you got?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Cartas de conversa sobre o que o aluno tem, com have got e resposta curta.",
+   "perg": "Have you got a pet?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre objetos e tempo, sempre com have got.",
+   "perg": "A big bag or a small bag? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o casaco de seis bolsos; você entrevista com Have you got…?",
+   "perg": "Have you got keys in your pocket?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More have-got questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’ve got",
+    "she’s got",
+    "I haven’t got",
+    "Yes, I have."
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PHONE",
+     "q": "Have you got a lot of apps on your phone?",
+     "fup": "Have you got a favorite one?",
+     "st": [
+      "Yes, I have. I’ve got …",
+      "No, I haven’t."
+     ],
+     "ex": "Yes, I have. I’ve got about fifty apps."
+    },
+    {
+     "k": "YOUR FAMILY",
+     "q": "Have you got any brothers or sisters?",
+     "fup": "Has she got children?",
+     "st": [
+      "I’ve got …",
+      "She’s got …"
+     ],
+     "ex": "I’ve got one sister. She’s got two kids."
+    },
+    {
+     "k": "PETS",
+     "q": "Have you got a pet?",
+     "fup": "Has it got a funny name?",
+     "st": [
+      "Yes, I have. It’s got …",
+      "No, I haven’t."
+     ],
+     "ex": "Yes, I have. I’ve got a dog. He’s got a big nose."
+    },
+    {
+     "k": "THIS WEEK",
+     "q": "Have you got plans this weekend?",
+     "fup": "Have you got time for a coffee?",
+     "st": [
+      "I’ve got …",
+      "I haven’t got …"
+     ],
+     "ex": "I’ve got a party on Saturday, but I haven’t got a present."
+    },
+    {
+     "k": "YOUR CAR",
+     "q": "Have you got a car or a bike?",
+     "fup": "Has your best friend got one?",
+     "st": [
+      "I’ve got …",
+      "He’s got …"
+     ],
+     "ex": "I haven’t got a car. I’ve got a bike."
+    },
+    {
+     "k": "TODAY",
+     "q": "Have you got a problem today?",
+     "fup": "Have you got a headache now?",
+     "st": [
+      "I’ve got …",
+      "No, I haven’t."
+     ],
+     "ex": "I’ve got a lot of work, but I haven’t got a headache."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I’ve got",
+    "I haven’t got"
+   ],
+   "rodadas": [
+    {
+     "q": "A big bag or a small bag?",
+     "a": "Big",
+     "b": "Small",
+     "fa": [
+      "A big bag. I’ve got a lot of things."
+     ],
+     "fb": [
+      "A small bag. I’ve only got keys and a phone."
+     ]
+    },
+    {
+     "q": "A coat with many pockets or no pockets?",
+     "a": "Many pockets",
+     "b": "No pockets",
+     "fa": [
+      "Many pockets. I haven’t got a bag."
+     ],
+     "fb": [
+      "No pockets. I’ve got a good bag."
+     ]
+    },
+    {
+     "q": "More money or more time?",
+     "a": "Money",
+     "b": "Time",
+     "fa": [
+      "Money. I haven’t got a car."
+     ],
+     "fb": [
+      "Time. I’ve got money, but I haven’t got a minute."
+     ]
+    },
+    {
+     "q": "A big family or a small family?",
+     "a": "Big",
+     "b": "Small",
+     "fa": [
+      "Big. My friend has got six cousins. So fun!"
+     ],
+     "fb": [
+      "Small. I’ve got one brother, and it’s perfect."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You’ve got opinions!"
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the coat now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the coat with six pockets.",
+   "perguntas": [
+    "Have you got keys in your pockets?",
+    "Have you got any money?",
+    "Has your owner got a phone in you?",
+    "Have you got a hole in a pocket?",
+    "Have you got a secret?",
+    "Have you got a favorite pocket?"
+   ],
+   "st": [
+    "Yes, I have. I’ve got …",
+    "No, I haven’t.",
+    "My owner has got …"
+   ],
+   "ex": "No, I haven’t got money. But I’ve got an old ticket!"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

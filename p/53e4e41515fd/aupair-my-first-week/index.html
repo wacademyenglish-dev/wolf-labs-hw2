@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -124,5 +125,288 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Your coordinator writes on day one.",
+   "p": "Read it out loud. Answer the questions."
+  },
+  "prova": {
+   "t": "Mrs. Parker welcomes you.",
+   "p": "Play each line. Answer in about 30 seconds."
+  },
+  "cv-juri": {
+   "t": "Ana’s first week. You are the jury.",
+   "p": "Read the evidence. Choose. Say why."
+  },
+  "cartao": {
+   "t": "Write your Safety Card.",
+   "p": "Contacts, rights, phrases. Save it twice."
+  },
+  "pode": {
+   "t": "The course is done.",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Projeto final do Au Pair: a mensagem da coordenadora Karen, a chegada na casa dos Parker com a Mrs. Parker (gravada) e o Safety Card completo do aluno.",
+  "armadilha": "Pedidos diretos demais (“I want my schedule”) em vez de “Could we write my schedule down?”; e o erro prático: esquecer o endereço da casa e ter contatos só no celular.",
+  "pal": [
+   "Thank you so much!",
+   "I’m so happy to be here.",
+   "Could I have…?",
+   "Could we write my schedule down?",
+   "allergies",
+   "Honestly, I’m…",
+   "Safety Card",
+   "local coordinator"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula final: a primeira semana da Ana com os Parker em Illinois.",
+   "perg": "You are at the door of your host family’s house. What do you feel?",
+   "pula": "Leia o título e siga."
+  },
+  "leitura": {
+   "obj": "Ler a mensagem da Karen em voz alta e responder sobre o sentido.",
+   "perg": "When will Karen meet you in person?",
+   "pula": "Pule o Look closer."
+  },
+  "prova": {
+   "obj": "Chegada com a Mrs. Parker: respostas de 30 segundos no relógio real.",
+   "perg": "Do you have any allergies?",
+   "pula": "Três falas bastam."
+  },
+  "cv-juri": {
+   "obj": "Conversa: o aluno é o júri da primeira semana da Ana e decide o que ela deve fazer.",
+   "perg": "What should Ana do? Why?",
+   "pula": "Um caso só."
+  },
+  "cartao": {
+   "obj": "Escrever o Safety Card com contatos REAIS (agência, coordenadora, consulado, alguém no Brasil).",
+   "perg": "Who is your contact in Brazil?",
+   "pula": "Contatos primeiro; frases depois da aula."
+  },
+  "pode": {
+   "obj": "Autoavaliação final e carimbo do curso; peça a foto do Safety Card no papel.",
+   "perg": "Are you ready for your first week?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre expectativas e sentimentos da primeira semana, com frases educadas.",
+   "perg": "What are you most excited about?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre escolhas da primeira semana como au pair.",
+   "perg": "What would you do in week one?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Planejar, em passos, a primeira semana real do aluno na casa da família.",
+   "perg": "What will you ask on day one?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your first week, before it happens.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "Could I…?",
+    "Could we…?",
+    "Honestly, I’m…",
+    "I’m so happy to…"
+   ],
+   "cartas": [
+    {
+     "k": "EXCITED",
+     "q": "What are you most excited about?",
+     "fup": "And a little nervous about?",
+     "st": [
+      "I’m so excited about …",
+      "Honestly, I’m a bit nervous about …"
+     ],
+     "ex": "I’m so excited about the kids. Honestly, I’m a bit nervous about driving."
+    },
+    {
+     "k": "YOUR ROOM",
+     "q": "What do you need in your room to feel at home?",
+     "fup": "How would you ask for it?",
+     "st": [
+      "I need …",
+      "Could I have …?"
+     ],
+     "ex": "I need a small desk. I’d ask: “Could I have a desk for my studies?”"
+    },
+    {
+     "k": "BRAZIL",
+     "q": "When will you talk to your family in Brazil?",
+     "fup": "Why a fixed time?",
+     "st": [
+      "Every …, at …",
+      "A fixed time helps because …"
+     ],
+     "ex": "Every Sunday at eight. A fixed time helps because everyone is ready."
+    },
+    {
+     "k": "THE KIDS",
+     "q": "What will you do on your first afternoon with the kids?",
+     "fup": "What game will you teach them?",
+     "st": [
+      "I’d like to …",
+      "I’ll teach them …"
+     ],
+     "ex": "I’d like to play outside. I’ll teach them a Brazilian game."
+    },
+    {
+     "k": "FOOD",
+     "q": "What food will you miss most?",
+     "fup": "Will you cook it for the family?",
+     "st": [
+      "I’ll miss …",
+      "I’d love to cook …"
+     ],
+     "ex": "I’ll miss rice and beans. I’d love to cook it for the Parkers."
+    },
+    {
+     "k": "YOUR SCHEDULE",
+     "q": "Why is it important to write the schedule down?",
+     "fup": "How will you ask?",
+     "st": [
+      "Because …",
+      "Could we write my schedule down?"
+     ],
+     "ex": "Because then nobody forgets the hours. I’ll ask: “Could we write my schedule down?”"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "First-week choices.",
+   "p": "Pick a side. Your teacher takes the other.",
+   "palavras": [
+    "I think",
+    "because",
+    "honestly"
+   ],
+   "rodadas": [
+    {
+     "q": "Call Brazil every day, or only on weekends?",
+     "a": "Every day",
+     "b": "Weekends",
+     "fa": [
+      "Every day. My family needs to know I’m OK.",
+      "It helps when I feel homesick."
+     ],
+     "fb": [
+      "Weekends. I need to live the new life.",
+      "Every day makes homesickness worse."
+     ]
+    },
+    {
+     "q": "Talk about a problem with the family on day three, or wait for the coordinator?",
+     "a": "Talk on day three",
+     "b": "Wait for Karen",
+     "fa": [
+      "Day three. Small problems grow.",
+      "A polite talk is better early."
+     ],
+     "fb": [
+      "Wait for Karen. She calls within 48 hours.",
+      "She knows how to help both sides."
+     ]
+    },
+    {
+     "q": "Explore the town alone, or wait for someone to show you?",
+     "a": "Alone",
+     "b": "Wait",
+     "fa": [
+      "Alone. I’ll learn faster.",
+      "With my phone charged and the address on paper."
+     ],
+     "fb": [
+      "Wait. In the first week, it’s safer.",
+      "The family knows the best places."
+     ]
+    },
+    {
+     "q": "Bring gifts from Brazil, or bring nothing?",
+     "a": "Gifts",
+     "b": "Nothing",
+     "fa": [
+      "Gifts. It’s a nice first moment.",
+      "Kids love new things."
+     ],
+     "fb": [
+      "Nothing. The bag is already heavy.",
+      "A good attitude is the best gift."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your First Week",
+   "t": "Plan your real first week.",
+   "p": "Day by day. Say it out loud.",
+   "prof": "Last fast finisher of the course. Keep it on the student’s real family and city if she knows them; celebrate at the end.",
+   "passos": [
+    {
+     "q": "Day one: what will you say at the door?",
+     "st": [
+      "Thank you so much! I’m so happy to …"
+     ],
+     "ex": "Thank you so much! I’m so happy to be here with you."
+    },
+    {
+     "q": "Day two: what will you ask about your schedule?",
+     "st": [
+      "Could we …?",
+      "Could I …?"
+     ],
+     "ex": "Could we write my schedule down? Could I have Sundays free?"
+    },
+    {
+     "q": "Day three: what will you check for your safety?",
+     "st": [
+      "I’ll check …",
+      "I’ll save …"
+     ],
+     "ex": "I’ll check the address and save Karen’s number on paper."
+    },
+    {
+     "q": "End of the week: what will you tell your family in Brazil?",
+     "st": [
+      "Honestly, I’m …",
+      "The best part was …"
+     ],
+     "ex": "Honestly, I’m tired, but the best part was the kids’ big hug."
+    }
+   ],
+   "fim": "Course complete. Your Safety Card goes with you."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

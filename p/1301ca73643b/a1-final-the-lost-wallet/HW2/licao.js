@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Lost Wallet",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/1301ca73643b/a1-final-the-lost-wallet/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 10 review: was / were; there was; past simple (irregulars: went, had); didn't + plain verb; am / is / are going to for plans; already / not yet",
   "abrir": "Where were you yesterday at 8 PM?",
   "fecho": "<b>I / he / she was</b>, <b>you / we / they were</b>. <b>didn't</b> + plain verb: <i>She didn't see it.</i> Plans: <b>am / is / are going to</b> + verb. <b>Already</b> in the middle: <i>I already had lunch.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the café. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/1301ca73643b/a1-final-the-lost-wallet/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A dark café with warm lamps",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I was at the café at six o'clock.",
-          "img": "https://wolf-labs.pages.dev/p/1301ca73643b/a1-final-the-lost-wallet/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She didn't see the wallet.",
-          "img": "https://wolf-labs.pages.dev/p/1301ca73643b/a1-final-the-lost-wallet/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I am going to call you tomorrow.",
-          "img": "https://wolf-labs.pages.dev/p/1301ca73643b/a1-final-the-lost-wallet/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/1301ca73643b/a1-final-the-lost-wallet/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A dark café at night",
       "pede": "Look at the picture: a dark café at night. Write 2 or 3 sentences about last night. Use <b>was / were</b>, <b>there was</b> or a verb in the past.",
       "ph": "Last night I was …",

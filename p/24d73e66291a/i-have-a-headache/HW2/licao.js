@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Have a Headache",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/24d73e66291a/i-have-a-headache/img/remedios.webp",
+  "capa": "../img/remedios.webp",
   "alvo": "I have a + small problem (a headache, a cold) · I feel + how (tired) · my ... hurts · you should + plain verb: no to, no -s",
   "abrir": "How do you feel today?",
   "fecho": "<b>I have a</b> cold. <b>I feel</b> tired. <b>My</b> head <b>hurts</b>. <b>You should</b> + the plain verb: <i>you should drink water</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a bad morning. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/24d73e66291a/i-have-a-headache/img/remedios.webp",
+      "img": "../img/remedios.webp",
       "leg": "A small cupboard at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -99,17 +99,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I have a headache, so I drink some water.",
-          "img": "https://wolf-labs.pages.dev/p/24d73e66291a/i-have-a-headache/img/cha.webp",
+          "img": "../img/cha.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "My stomach hurts, but I feel better with tea.",
-          "img": "https://wolf-labs.pages.dev/p/24d73e66291a/i-have-a-headache/img/cha.webp",
+          "img": "../img/cha.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "You should go to the pharmacy and ask for advice.",
-          "img": "https://wolf-labs.pages.dev/p/24d73e66291a/i-have-a-headache/img/remedios.webp",
+          "img": "../img/remedios.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -158,7 +158,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/24d73e66291a/i-have-a-headache/img/cha.webp",
+      "img": "../img/cha.webp",
       "leg": "Tea and honey at night",
       "pede": "Look at the picture: tea and honey on a cold night. Write 2 or 3 sentences: what you have, how you feel, and one piece of advice. Use <b>I have a</b>, <b>I feel</b> or <b>you should</b>.",
       "ph": "I have a cold. I feel …",

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Before Paris · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 7 · B2</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 7 · Before Paris · B2</h2>
+    <p>Episode 7 of <b>Better Speaking</b>. Steffi Graf, after an injury, wins in Paris and reaches another Wimbledon final. Richard shows how she makes the order of events clear, and adds the words for <b>exact timing</b>: <b>as soon as, just as, while, by the time, afterwards</b>. And a strong message: her small mistakes don&rsquo;t change her meaning. The sister lesson for B1 is &ldquo;First of All&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; What happened first, Put it in order. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Put time in its place, Match the ending, Fix the traps, Choose the time word.</li>
+      <li><b>Write</b> &mdash; Your comeback story. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Future after as soon as: <i>As soon as I will arrive</i>. &ldquo;Quando cheguei, j&aacute;&hellip;&rdquo; becomes <i>Until I got there&hellip;</i>. And Steffi&rsquo;s own small slips (word order, prepositions), which are worth noticing but not worth stopping for.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 7 · BEFORE PARIS (B2)
+   Vídeo: BBC Learning English, Better Speaking (Fq_kvS7RcAM, 11:30), quatro trechos (~5:00).
+   Alvo: contar na ordem e com o tempo exato (as soon as, just as, while, by the time, afterwards) e errar sem medo. */
+const M = { nome: "Before Paris", kick: "B2 · AS SOON AS, JUST AS, BY THE TIME" };
+var EP = {
+  n: 7, de: 8, nivel: 'B2', titulo: 'Before Paris', video: 'Fq_kvS7RcAM',
+  convidado: 'Steffi Graf', habilidade: 'tell events in a clear order',
+  trechos: [
+    { ini: 81, fim: 140, rot: 'Steffi: Paris, then Wimbledon' },
+    { ini: 162, fim: 254, rot: 'Richard: sequencing' },
+    { ini: 314, fim: 386, rot: '“As soon as”, “just as”' },
+    { ini: 393, fim: 456, rot: 'Mistakes that don\'t matter' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'An injury, a surprise win in Paris, and one more Wimbledon final. Steffi Graf tells it in order, and you never get lost. Today: the words that put time in its place.',
+      nota: 'Ask: what was the busiest month of your year so far? Tell it in order.' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'What <em>happened</em> first?', pt: 'Abra uma carta e conte em voz alta, na ordem.',
+      nota: 'Talk only. Stop the student if the order gets confusing; ask “and then?”.',
+      cartas: [
+        { frente: 'Comeback', verso: 'Tell me about a time you came back after a bad moment: an injury, a failure, a bad job.', dica: 'At first,… then…', cor: 'var(--guest)', fw: { q: 'What kept you going?', st: ['What really kept me going was…', 'As soon as I…', 'By the time…'], help: '“What really kept me going was my sister calling every day.”' } },
+        { frente: 'Morning', verso: 'Walk me through this morning, minute by minute.', dica: 'As soon as I woke up,…', cor: 'var(--host)', fw: { q: 'Did two things happen at the same time?', st: ['While I was…, …', 'Just as I was leaving,…'], help: '“Just as I was leaving, my boss called.”' } },
+        { frente: 'Mistakes', verso: 'Are you afraid of making mistakes when you speak English?', dica: 'To be honest…', cor: 'var(--teacher)', fw: { q: 'Which mistakes really matter, and which don\'t?', st: ['The ones that change the meaning…', 'Small ones like…'], help: '“The ones that change the meaning. Prepositions, not so much.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'four clips · about 5 minutes', titulo: 'Listen to <em>Steffi Graf</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os quatro trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Before Paris, Steffi was…', ops: [{ t: 'not sure she could play' }, { t: 'the favorite to win' }] }, { q: 'Her small mistakes in English…', ops: [{ t: 'change her message' }, { t: 'don\'t change her message' }] } ],
+      durante: 'Clip 1: Steffi. Clip 2: first, then, after that. Clip 3: “as soon as” and “just as”. Clip 4: her mistakes, and why they don\'t matter.',
+      depois: [ { f: 'Steffi\'s back was hurting before Paris.', ok: 1 }, { f: 'Richard went to the pub after he came to the BBC.', ok: 0 }, { f: '“As soon as” means immediately after.', ok: 1 }, { f: 'Richard says Steffi should stop talking until her English is perfect.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Put time in its <em>place</em>', pt: 'Ordem, simultâneo, imediato, até um ponto.',
+      nota: 'Read each card, then make one sentence about your day with each.',
+      cartoes: [ { g: '<b>First of all</b> · <b>then</b> · <b>afterwards</b> · <b>finally</b>', p: 'The order of events.' }, { g: '<b>While</b> you were in the pub, … · <b>Just as</b> I was arriving, …', p: 'At the same time · at exactly the same time.' }, { g: '<b>As soon as</b> I arrived, I got a coffee. · <b>By the time</b> I got there, it had started.', p: 'Immediately after · before that moment.' }, { g: 'As soon as I will arrive, I\'ll call you.', p: 'Future meaning, present tense: as soon as I ARRIVE.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'finish the story', titulo: 'Match the <em>ending</em>', pt: 'Toque no começo e depois no fim que faz sentido.',
+      nota: 'Read each full sentence aloud with natural linking.',
+      esq: ['As soon as I arrived,', 'Just as I was arriving,', 'While I was in the pub,', 'By the time I got to the station,', 'First of all I got up, and afterwards'], dir: ['I got myself a cup of coffee.', 'I saw a colleague leaving.', 'I bumped into a friend.', 'the train had already left.', 'I went to work.'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Tell me about your last trip with two of these.', st: ['As soon as we landed,…', 'By the time we…', 'While we were…'], help: '“As soon as we landed, it started raining. By the time we got to the hotel, we were soaked.”' } },
+    { k: 'cartas', est: 'o', rot: 'the scrambled day', titulo: 'Put it in <em>order</em>', pt: 'Como o Callum: vire a carta, ponha as ações na ordem e conte com as palavras de tempo.',
+      nota: 'Each card has a scrambled day. The student retells it in order using at least three sequencers.',
+      cartas: [
+        { frente: 'Day 1', sob: 'reorder', verso: 'met a client · missed the bus · got up late · had lunch with the client · took a taxi', dica: 'First of all,… As soon as…', cor: 'var(--guest)', fw: { q: 'Now scramble your own yesterday. I\'ll put it in order.', st: ['I…, I…, I…', 'Ready? Here\'s my day:'], help: 'Give five actions in random order.' } },
+        { frente: 'Day 2', sob: 'reorder', verso: 'landed in Paris · lost my bag · found it at the hotel · went to the airport · cried a little', dica: 'Just as… By the time…', cor: 'var(--host)' },
+        { frente: 'Day 3', sob: 'reorder', verso: 'the power went off · I was cooking · I ordered a pizza · the guests arrived · I lit candles', dica: 'While… Then… Finally…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: '“Assim que” with future, “até” for by the time, and Steffi\'s own mistakes.',
+      itens: [ { erro: 'As soon as I <s>will arrive</s>, I\'ll call you.', certo: 'As soon as I <b>arrive</b>, I\'ll call you.', por: 'No will after as soon as.' }, { erro: '<s>Until</s> I got there, the show had started.', certo: '<b>By the time</b> I got there, the show had started.', por: '“Quando cheguei, já…” = by the time.' }, { erro: 'It kept me <s>really going</s>. I can\'t ask <s>of</s> anything else.', certo: 'It <b>really kept me going</b>. I can\'t ask <b>for</b> anything else.', por: 'Steffi\'s small mistakes: word order and preposition.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>time word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the episode and close to it. Read each one aloud.',
+      itens: [ { f: '___ I arrived here today, I got myself a cup of coffee.', ops: ['As soon as', 'While'], ok: 0 }, { f: '___ I was arriving, I saw a colleague leaving.', ops: ['Just as', 'By the time'], ok: 0 }, { f: '___ you were in the pub, you bumped into a friend.', ops: ['While', 'As soon as'], ok: 0 }, { f: '___ Paris, I wasn\'t even sure I could play.', ops: ['Before', 'Since'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>comeback story</em>', pt: 'Escreva uma história de volta por cima, na ordem, com quatro palavras de tempo.',
+      ph: 'A year ago,… At first,… As soon as… By the time… Finally,…', nota: 'The line under the paper catches “as soon as I will” and “until I got there”. SAVE sends it to My notes. Then the student tells it without reading.',
+      banco: ['At first,', 'Then', 'As soon as', 'Just as', 'While', 'By the time', 'Afterwards,', 'Finally,'],
+      regras: [['\\bas soon as (i|you|he|she|we|they) will\\b', 'Check: as soon as I ARRIVE (no will).'], ['\\buntil i got there\\b', 'Check: BY THE TIME I got there.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Sort of, kind of', tx: 'The last episode: ABBA. Four Swedes, an accordion, and the art of not being exact.',
+      ganchos: [['Next guest', 'ABBA'], ['The skill', 'vague language'], ['Your task', 'tell one story in order']], nota: 'Ask: what time do you usually have dinner, more or less? That opens Episode 8.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Palavras de tempo exato (as soon as, just as, while, by the time, afterwards) para deixar a ordem clara; Steffi Graf, depois de uma lesão, vence em Paris e chega a mais uma final de Wimbledon.",
+  "armadilha": "Futuro depois de as soon as: As soon as I will arrive; “quando cheguei, já…” vira Until I got there…; e travar em pequenos erros que não mudam o sentido.",
+  "pal": [
+   "as soon as",
+   "just as",
+   "while",
+   "by the time",
+   "afterwards",
+   "first",
+   "then",
+   "comeback"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta Steffi Graf e a habilidade: pôr cada fato no seu lugar no tempo.",
+   "perg": "What was the busiest month of your year?",
+   "pula": "Uma resposta e NEXT."
+  },
+  "c1": {
+   "obj": "Conversa sobre o que aconteceu primeiro; o professor pede “and then?”.",
+   "perg": "And then what happened?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes da Steffi em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "What happened before Paris?",
+   "pula": "Veja os clipes uma vez; pule o durante."
+  },
+  "c3": {
+   "obj": "A regra: as soon as, just as, while, by the time, afterwards, com uma frase sobre o dia.",
+   "perg": "What did you do as soon as you woke up?",
+   "pula": "Leia os cartões; o vermelho é obrigatório."
+  },
+  "c4": {
+   "obj": "Completar a história ligando o começo ao final certo, lido com ligação natural.",
+   "perg": "Does by the time fit here?",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "Um dia embaralhado: o aluno reconta em ordem com pelo menos três sequenciadores.",
+   "perg": "What happened first?",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Três armadilhas: as soon as I will, until no lugar de by the time, e os deslizes da Steffi.",
+   "perg": "Until or by the time here?",
+   "pula": "Faça as três, rápido."
+  },
+  "c7": {
+   "obj": "Escolher a palavra de tempo em falas do episódio, lidas em voz alta.",
+   "perg": "Which time word makes the order clear?",
+   "pula": "Metade das frases basta."
+  },
+  "c8": {
+   "obj": "Escrita: a história de virada do aluno; depois contar sem ler.",
+   "perg": "Tell it now, without reading.",
+   "pula": "Quatro frases bastam."
+  },
+  "c9": {
+   "obj": "Gancho do último episódio: ABBA e a arte de não ser exato.",
+   "perg": "What time do you have dinner, more or less?",
+   "pula": "Só a pergunta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Histórias curtas da vida do aluno com a ordem clara.",
+   "perg": "And by the time you got there?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre voltar depois de um tropeço, pressão e ritmo.",
+   "perg": "Afterwards, would you regret it?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno é o convidado contando a própria virada, com as palavras de tempo.",
+   "perg": "What did you do as soon as you won?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 6,
+   "rot": "More to Talk About",
+   "t": "Tell it in order.",
+   "p": "Pick a card. Use two time words.",
+   "palavras": [
+    "as soon as",
+    "just as",
+    "while",
+    "by the time",
+    "afterwards"
+   ],
+   "cartas": [
+    {
+     "k": "A BAD MORNING",
+     "q": "Tell me about a morning when everything went wrong.",
+     "fup": "How did it end?",
+     "st": [
+      "Just as I was leaving, …",
+      "By the time I got to …"
+     ],
+     "ex": "Just as I was leaving, it started to pour. By the time I got to work, the meeting was over."
+    },
+    {
+     "k": "A TRIP",
+     "q": "What happened as soon as you arrived on your last trip?",
+     "fup": "And afterwards?",
+     "st": [
+      "As soon as I arrived, …",
+      "Afterwards, …"
+     ],
+     "ex": "As soon as I arrived, I lost my charger. Afterwards, I bought the most expensive one in Lisbon."
+    },
+    {
+     "k": "A COMEBACK",
+     "q": "Have you ever come back stronger after a setback?",
+     "fup": "What changed?",
+     "st": [
+      "While I was …, I …",
+      "By the time …, I had …"
+     ],
+     "ex": "While I was out of work, I studied English every day. By the time I found a job, I was ready."
+    },
+    {
+     "k": "TODAY",
+     "q": "What did you do today while you were waiting for something?",
+     "fup": "Was it a good use of time?",
+     "st": [
+      "While I was waiting for …",
+      "Just as …"
+     ],
+     "ex": "While I was waiting for the bus, I listened to a podcast. Just as it got good, the bus came."
+    },
+    {
+     "k": "SPORT",
+     "q": "Do you remember a match you watched from start to finish?",
+     "fup": "When did you know who would win?",
+     "st": [
+      "As soon as …, I knew …",
+      "By the end, …"
+     ],
+     "ex": "As soon as Brazil scored the second goal, I knew it was over."
+    },
+    {
+     "k": "YOUR CAREER",
+     "q": "Tell me your career in three moments.",
+     "fup": "Which one changed everything?",
+     "st": [
+      "First, …",
+      "Then, just as …",
+      "Afterwards, …"
+     ],
+     "ex": "First, I worked in a bank. Then, just as I got promoted, I quit. Afterwards, I started teaching."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Argue it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "as soon as",
+    "by the time",
+    "I see your point, but",
+    "the thing is"
+   ],
+   "rodadas": [
+    {
+     "q": "After an injury: come back fast or take your time?",
+     "a": "Come back fast",
+     "b": "Take your time",
+     "fa": [
+      "Fast. By the time you’re perfect, the season is over."
+     ],
+     "fb": [
+      "Take your time. Come back too soon, and you’re out for a year."
+     ]
+    },
+    {
+     "q": "Small mistakes in English: fix them or ignore them?",
+     "a": "Fix them",
+     "b": "Ignore them",
+     "fa": [
+      "Fix them. Small mistakes become habits."
+     ],
+     "fb": [
+      "Ignore them, like Steffi. The meaning is clear, so keep going."
+     ]
+    },
+    {
+     "q": "Tell a story in order, or start with the ending?",
+     "a": "In order",
+     "b": "The ending",
+     "fa": [
+      "In order. The listener never gets lost."
+     ],
+     "fb": [
+      "The ending. As soon as they know the result, they want the how."
+     ]
+    },
+    {
+     "q": "Retire at the top, or keep going while you can?",
+     "a": "At the top",
+     "b": "Keep going",
+     "fa": [
+      "At the top. People remember you at your best."
+     ],
+     "fb": [
+      "Keep going. You only get one career, so use all of it."
+     ]
+    }
+   ],
+   "fim": "Four rounds. By the time we finished, everyone had a side."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are today’s guest.",
+   "p": "Tell your comeback story on air.",
+   "aluno": "Listen to your teacher’s question. Answer as the guest, and keep the order crystal clear.",
+   "perguntas": [
+    "What was the setback, and when did it happen?",
+    "What did you do as soon as you heard the news?",
+    "What were you doing while you were recovering?",
+    "By the time you came back, what had changed?",
+    "What happened just as things got better?",
+    "And afterwards, how did it feel?"
+   ],
+   "st": [
+    "As soon as …",
+    "While I was …",
+    "By the time …"
+   ],
+   "ex": "As soon as I heard the news, I called my coach. While I was recovering, I watched every match."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

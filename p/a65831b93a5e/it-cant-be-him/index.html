@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · It Can’t Be Him · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Big+Shoulders+Display:wght@700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>WOLFLIX</b><span>It Can’t Be Him · The Batman · The Riddler’s Cards</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>It Can’t Be Him · The Batman · The Riddler’s Cards</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A rainy city, a killer who leaves cards, and a detective in a mask.</p><p style="margin:0 0 6px"><b>The grammar:</b> Must, Might, Can’t: It must be him. It might be him. It can’t be him.</p><p style="margin:0 0 6px"><b>The class (about 50 min):</b> I Warm-up and The Evidence · III The Trailer · IV Scene by Scene · V The Jury · VI Must, Might, Can’t · VII The Riddler’s Cards · VIII Your Deductions · IX The Hot Seat. No extra scenes: every scene is part of the class.</p><p style="margin:0"><b>Open with:</b> “You know the case now. In the trailer, who might the Riddler be? Guess.”</p></div><!--/prep-->
+    <p><i>The Batman</i> (2022), with Robert Pattinson: more a detective story than a superhero film. Somebody is killing the people who run Gotham and leaves a card for the Batman at every crime scene, with a riddle. Lieutenant Gordon brings the masked man to the crime scenes because he is the only one who reads the riddles. The grammar: <b>modals of deduction</b>: <b>must be</b> (sure yes, about 90%), <b>might / may / could be</b> (maybe, 50%), <b>can’t be</b> (sure no, 0%). No to after the modal, always be, and <i>mustn’t be</i> is not deduction (it means “not allowed”).</p>
+    <p>A note for the teacher: a PG-13 trailer, tense from start to finish (guns drawn, a fight, fire, a car chase). Nothing graphic. Lines checked against the official subtitles; the chase (1:46 to 2:15) is ESTIMATED, and each moment is told in our own words.</p>
+    <p class="aq-guia"><b>Warm-up and The Evidence Bag (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the film under the photo). Let them talk; don’t correct the grammar yet. <b>2 · The Evidence Bag:</b> Five pieces of evidence open one at a time: a card with a question mark, a desk full of notes, a board with red strings, a police station, a rainy street. With each one, the student deduces out loud (it must be…, it might be…, it can’t be…) and changes their story if they need to. At the end, a short text says whose case it is, and the student tells the whole story. Don’t correct the modal yet: let them use it, the rule comes later.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>long</i>, <i>care</i>, <i>worse</i>, <i>different</i> and <i>under</i>, before the video, in mystery meaning and hot seat. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <p class="fim-guia"><b>The ending (IX, The Hot Seat)</b>: the student is the Batman, after the third card; the teacher is Gordon and asks five questions about the case (who the Riddler is, could it be a cop, Selina, why he writes to the Batman, where he might go next). Then swap. Speaking only.</p>
+    <h4>ON SCREEN</h4>
+    <p>The cover is a rainy Gotham street with red lights. I: Warm-up and The Evidence. III: the trailer in three steps. <b>Before:</b> a wheel of suspects (Gordon, Selina, the mayor…): the student says who might be the Riddler and who can’t be. <b>Watch:</b> Which word did you hear? Five lines, each with a ▶ time: tap it and the video jumps to that moment. <b>After:</b> True or lie? Five sentences, each with a ▶; if it is a lie, the student says the truth. IV: five frames on the film strip. <b>V, The Jury:</b> a new card on Gordon’s desk; the student reads the evidence and gives a verdict with must / might / can’t, in two rounds. <b>VI, Must, Might, Can’t:</b> a note from the Riddler on a dark card. The student taps the words that show how sure he is, then finishes the rule board (must / might / can’t, and never “to be”). The board stays in the corner on the next pages. <b>VII, The Riddler’s Cards:</b> six cards face down on the table. For each clue the student reads it, says the sentence out loud, then taps Check: the card turns over with a stamp (MUST 90%, MIGHT / COULD 50%, CAN’T 0%) and the right sentence appears. VIII: five strange things in daily life (the neighbor’s lights, an unknown number, a box at the door…): the student matches each with a deduction and says why. IX: the hot seat.</p>
+    <h4>THE COMMON ERRORS</h4>
+    <p><i>must to be</i>, <i>might is</i>, <i>must being</i>, <i>mustn’t be Gordon</i> (can’t be), <i>the killer can be a cop</i> (might / could: a maybe about now), <i>don’t can</i>, <i>Who he could be?</i>, and the wrong level for the clue (must when there is only one small clue).</p>
+    <!--conversa--><h4>THE JURY (V) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Line by Line, the student is the jury in a small new case: this morning a green card with a riddle was on Gordon’s desk, inside the police station (nobody is hurt). Round 1: read three pieces of evidence and say who left the card (the night cleaner, the reporter, a City Hall worker). Round 2: some officers think the Batman himself might be the Riddler: verdict? The student answers with must / might / can’t + be and gives the reason from the evidence. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to add a new fact that makes the verdict harder. Recast quietly while they talk (must to be, can be for maybe, mustn’t be for can’t be); at the end, ask them to fix one or two sentences themselves. About six minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up and The Evidence, V The Jury, VII The Riddler’s Cards, VIII Your Deductions and IX The Hot Seat.</li>
+      <li><b>Listen</b>: II The Words, III The Trailer and IV Line by Line.</li>
+      <li><b>Focus</b>: VI Must, Might, Can’t.</li>
+      <li><b>Write</b>: the homework (the lesson ends speaking).</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="mundo-dados.js"></script>
+<script src="/kit/mundo.js"></script>
+<script src="aquece.js"></script>
+<script src="final.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* IT CAN’T BE HIM · THE BATMAN (WOLFLIX B1) · pergunta-surpresa · 29/10/2026 · must be / might be / could be / can’t be */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'palavras', tipo: 'And you?', q: 'Your phone rings: an unknown number at 11 p.m. Who might it be?',
+    opc: ['A friend', 'A company selling something', 'Something important'], st: ['It might be …, because …', 'It can’t be …, because …'],
+    ex: 'It must be a company. It can’t be my friends: they only send messages, nobody calls anymore!', push: 'Do you answer it, or not? Why?' },
+  { cena: 'video', tipo: 'Would you rather', q: 'Would you rather be the detective who solves the riddles or the person who writes them?',
+    opc: ['The detective', 'The person who writes them'], st: ['I’d rather be …, because …', 'It must be fun to …'],
+    ex: 'The person who writes them. It must be fun to watch everybody try. But I would write funny riddles, not scary ones!', push: 'Give me one riddle now. Your teacher has to answer.' },
+  { cena: 'cartas', tipo: 'Opinion', q: 'Is it better to see a mystery film alone or with friends?',
+    opc: ['Alone', 'With friends', 'With one person'], st: ['With friends, it might be …', 'Alone, it can’t be …'],
+    ex: 'With one person. With friends it might be fun, but they talk all the time. Alone, it can’t be as fun: I need someone to say “I knew it!” to.', push: 'Who in your life always guesses the end first?' },
+  { cena: 'deduz', tipo: 'What if', q: 'What if you found a card with a riddle in your bag this morning? What must it be?',
+    opc: ['A joke', 'A message from someone', 'Something strange'], st: ['It must be …', 'It could be from …, because …'],
+    ex: 'It must be a joke. It could be from my brother: he loves games, and he was at my house last night.', push: 'And if the riddle had your address on it?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* IT CAN’T BE HIM · THE BATMAN, THE RIDDLER’S CARDS (WOLFLIX B1) · conversa · 29/10/2026 · regra 3×3 do Carlos
+   Júri com provas colado no trailer: entra logo depois de IV · Line by Line. O caso é leve de propósito: um
+   cartão verde com charada apareceu na mesa do Gordon, dentro da delegacia, à noite (ninguém se machuca).
+   Rodada 1: quem deixou o cartão (três suspeitos que NÃO são policiais, para não repetir o "Could it be a
+   cop?" da cadeira quente). Rodada 2: o próprio Batman pode ser o Charada? Veredito com must / might / can’t,
+   a gramática da aula. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'juri', apos: 'falas', est: 'o', min: 6, img: 'delegacia', rot: 'The Jury', t: 'A new card. You are the jury.',
+    p: 'Read the evidence. Your verdict: must, might or can’t? Then say why.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The card on the desk', sit: 'A green riddle card was on Gordon’s desk this morning.',
+        provas: ['The cameras stopped at 2 a.m. for ten minutes.', 'The night cleaner has the keys to every office.', 'A reporter was there yesterday, asking about the cards.'],
+        q: 'Who left the card?',
+        opc: ['The night cleaner', 'The reporter', 'A City Hall worker'],
+        st: ['It must be …, because …', 'It might be …, but …', 'It can’t be …, because …'],
+        ex: 'It must be the cleaner. He has the keys, and he works at night. It can’t be the reporter: she was there in the afternoon, not at night.',
+        push: 'The cleaner says he was at home with his family all night. Does that change your verdict?' },
+      { tag: 'The man in the mask', sit: 'Some police officers have a new idea about the case.',
+        provas: ['The Batman always arrives first, before the police.', 'Every card is written to him.', 'Nobody knows who is under the mask.'],
+        q: 'Is the Batman the Riddler?',
+        opc: ['He must be', 'He might be', 'He can’t be'],
+        st: ['He must be …, because …', 'He might be …, but …', 'He can’t be …, because …'],
+        ex: 'He can’t be the Riddler. The cards are written to him, so the Riddler must be someone who wants to talk to him. Why would he write to himself?',
+        push: 'And Gordon: he lets the Batman in every time. Might Gordon know something?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "wolflix",
+ "ffNome": "After the credits",
+ "cortes": {
+  "mundo": {
+   "t": "You, then five pieces of evidence.",
+   "p": "Answer three questions. Then deduce from each piece."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. They turn yellow in the video."
+  },
+  "video": {
+   "t": "The Batman: the trailer.",
+   "p": "Spin the wheel. Watch. Tap ▶ to hear it again."
+  },
+  "falas": {
+   "t": "Every line, one by one.",
+   "p": "Tap a line. Hear it again."
+  },
+  "cv-juri": {
+   "t": "A new card. You are the jury.",
+   "p": "Must, might or can’t? Then say why."
+  },
+  "regra": {
+   "t": "How sure is the Riddler?",
+   "p": "Tap the sure words. Then finish the rule."
+  },
+  "cartas": {
+   "t": "Six cards. Turn them over.",
+   "p": "Read the clue. Say it aloud. Then tap Check."
+  },
+  "deduz": {
+   "t": "Five strange things. What’s going on?",
+   "p": "Tap a thing, then its deduction. Say why."
+  },
+  "fim": {
+   "t": "The hot seat: the Batman.",
+   "p": "You are the Batman. Gordon asks. Then swap."
+  }
+ },
+ "prep": {
+  "obj": "Modais de dedução: must be (quase certeza), might/may/could be (talvez), can’t be (impossível): o Charada deixa cartas para o Batman, e ele e Gordon deduzem quem é.",
+  "armadilha": "O brasileiro diz “must to be”, “can’t to be”, usa “mustn’t be” como “não pode ser” (mustn’t é proibição) e “maybe is him” no lugar de “it might be him”.",
+  "pal": [
+   "must be",
+   "might be",
+   "may be",
+   "could be",
+   "can’t be",
+   "clue",
+   "riddle",
+   "evidence"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o filme: uma cidade chuvosa, um assassino que deixa cartas e um detetive mascarado.",
+   "perg": "Do you like detective stories?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "mundo": {
+   "obj": "Aquecimento com três perguntas e cinco provas abertas uma a uma; o aluno deduz em voz alta.",
+   "perg": "What must it be? What can’t it be?",
+   "pula": "Duas perguntas bastam; as provas vão inteiras."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (long, care, worse, different, under) antes de assistir.",
+   "perg": "What could be worse than this?",
+   "pula": "Três palavras bastam."
+  },
+  "video": {
+   "obj": "O trailer inteiro em três passos: roda de suspeitos, escuta das falas, verdadeiro ou mentira.",
+   "perg": "Who might the Riddler be?",
+   "pula": "Assista uma vez só e faça só uma tarefa."
+  },
+  "falas": {
+   "obj": "Ouvir de novo as falas com palavras amarelas e repetir como o personagem.",
+   "perg": "How would the Batman say it?",
+   "pula": "Três falas bastam."
+  },
+  "cv-juri": {
+   "obj": "Júri: uma carta nova na mesa do Gordon; veredito com must / might / can’t em duas rodadas.",
+   "perg": "Is it must, might or can’t? Why?",
+   "pula": "Uma rodada basta."
+  },
+  "regra": {
+   "obj": "A regra: quanto de certeza (90%, 50%, 0%), sem to e sempre com be; mustn’t não é dedução.",
+   "perg": "How sure is he: must or might?",
+   "pula": "Não corte: é a regra."
+  },
+  "cartas": {
+   "obj": "As cartas do Charada: cada dedução certa dita em voz alta vira uma carta.",
+   "perg": "Who could have written this card?",
+   "pula": "Quatro cartas bastam."
+  },
+  "deduz": {
+   "obj": "Cinco coisas estranhas do dia a dia: ligar à dedução e explicar por quê.",
+   "perg": "What might be going on?",
+   "pula": "Três coisas bastam."
+  },
+  "fim": {
+   "obj": "Cadeira quente: o aluno é o Batman, o professor é o Gordon; responde com must, might, can’t.",
+   "perg": "Could the Riddler be a cop?",
+   "pula": "Três perguntas, sem trocar. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre mistérios e deduções do dia a dia, com must, might e can’t.",
+   "perg": "Who might that be at the door?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre o Batman e a justiça, deduzindo e argumentando com os modais.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve o próximo filme: um novo caso, com deduções em must / might / can’t.",
+   "perg": "Who might the new villain be?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Small mysteries, everyday detectives.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "must be",
+    "might be",
+    "could be",
+    "can’t be"
+   ],
+   "cartas": [
+    {
+     "k": "THE DOORBELL",
+     "q": "The doorbell rings at 11 p.m. Who might it be?",
+     "fup": "Who can’t it be?",
+     "st": [
+      "It might be …",
+      "It can’t be … because …"
+     ],
+     "ex": "It might be my neighbor. It can’t be a delivery, because I didn’t order anything."
+    },
+    {
+     "k": "THE OFFICE",
+     "q": "Your boss is smiling a lot today. What could it mean?",
+     "fup": "Is that good or bad news?",
+     "st": [
+      "She must be …",
+      "It could mean …"
+     ],
+     "ex": "She must be happy about the numbers. Or it could mean bad news is coming."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "Ten missed calls from the same number. What must have happened?",
+     "fup": "Do you call back?",
+     "st": [
+      "It must be …",
+      "It might be … , so I …"
+     ],
+     "ex": "It must be the bank, or it might be a scam, so I don’t call back."
+    },
+    {
+     "k": "DETECTIVE STORIES",
+     "q": "Do you guess the ending of detective films?",
+     "fup": "Which one surprised you?",
+     "st": [
+      "I usually think it must be …",
+      "I was sure it couldn’t be …"
+     ],
+     "ex": "I usually think it must be the quiet one. In The Batman, I was wrong."
+    },
+    {
+     "k": "PEOPLE",
+     "q": "A stranger on the bus is reading your book. What might they be like?",
+     "fup": "Would you talk to them?",
+     "st": [
+      "They must be …",
+      "They can’t be …"
+     ],
+     "ex": "They must be a nice person. They can’t be boring, not with that book."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Your city in the rain: which place must be the most like Gotham?",
+     "fup": "Why?",
+     "st": [
+      "… must be the most …",
+      "It might be … because …"
+     ],
+     "ex": "The old downtown must be the most like Gotham. It’s dark, wet and full of secrets."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Is the Batman a hero?",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "must be",
+    "might be",
+    "can’t be",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "The Batman works with the police. Is that a good idea?",
+     "a": "Good idea",
+     "b": "Bad idea",
+     "fa": [
+      "Good idea. He must be the only one who reads the riddles.",
+      "Gordon trusts him, and Gordon is smart."
+     ],
+     "fb": [
+      "Bad idea. He might be dangerous too.",
+      "A man in a mask can’t be the law."
+     ]
+    },
+    {
+     "q": "The Riddler writes to the Batman. Is he a fan, or an enemy?",
+     "a": "A fan",
+     "b": "An enemy",
+     "fa": [
+      "A fan. He must admire him in a strange way."
+     ],
+     "fb": [
+      "An enemy. He can’t be a fan. He wants to beat him."
+     ]
+    },
+    {
+     "q": "A detective: more instinct, or more evidence?",
+     "a": "Instinct",
+     "b": "Evidence",
+     "fa": [
+      "Instinct. A good detective must feel the truth first."
+     ],
+     "fb": [
+      "Evidence. A feeling might be wrong. A clue can’t lie."
+     ]
+    },
+    {
+     "q": "Superhero films: is darker better?",
+     "a": "Darker is better",
+     "b": "Not always",
+     "fa": [
+      "Darker is better. It feels more real."
+     ],
+     "fb": [
+      "Not always. A film might be dark and still boring."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The case is still open."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "The Writers’ Room",
+   "t": "Write the next case.",
+   "p": "Plan it in steps. Use must, might, can’t.",
+   "prof": "You are the studio boss: push with “Are you sure? Must, or might?” Listen for must to be.",
+   "passos": [
+    {
+     "q": "A new card arrives on Gordon’s desk. What does it say?",
+     "st": [
+      "The card says …"
+     ],
+     "ex": "The card says, “I am everywhere, but you never see me.”"
+    },
+    {
+     "q": "Who might the new villain be? Give two ideas.",
+     "st": [
+      "It might be …, or it could be …"
+     ],
+     "ex": "It might be a hacker, or it could be someone inside the police."
+    },
+    {
+     "q": "The Batman finds a clue. Who can’t it be now?",
+     "st": [
+      "It can’t be …, because …"
+     ],
+     "ex": "It can’t be the hacker, because he was in prison that night."
+    },
+    {
+     "q": "The final answer: who must it be?",
+     "st": [
+      "It must be …, because …"
+     ],
+     "ex": "It must be the mayor’s assistant, because only she had the keys."
+    }
+   ],
+   "fim": "The studio loves it. It must be a hit."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

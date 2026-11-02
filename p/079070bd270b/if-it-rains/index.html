@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · If It Rains, Take This · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A2 · Unit 9 · If… and verb + verb</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>If It Rains, Take This · A2 Unit 9 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new A2 lesson on if + present simple with an imperative (If it rains, close the door. If he barks, don’t worry.), the comma when if comes first, and no will after if.</p><p style="margin:0 0 6px"><b>The story:</b> Nina (invented) is away for a week. The student looks after her flat, her plants and her dog, Biscuit. She left a note with if instructions and a cake in the fridge.</p><p style="margin:0 0 6px"><b>About 40 min:</b> I · Nina’s Instructions (9) · II · Problem → Instruction (9) · III · Day 3: The Call (7) · IV · Your Instructions (9) · V · Would You Rather? (6).</p><p style="margin:0"><b>Open with:</b> “Do you have a pet or plants? Who looks after them when you travel?”</p></div><!--/prep-->
+    <p>Real instructions for house-sitting: very useful for travel and for students who have pets. The big trap is “If it will rain”. Keep the student’s own home in the writing card: it is more fun and personal.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>if + present simple · then an instruction (imperative) · don’t worry if… · the comma when if comes first · no will after if · giving clear instructions</p>
+    <h4>NINA’S INSTRUCTIONS</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>PROBLEM → INSTRUCTION</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>YOUR INSTRUCTIONS</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>If it will rain (If it rains)</i>, <i>If the dog bark (barks)</i>, <i>If you are hungry eat (comma: If you’re hungry, eat)</i>, <i>No worry (Don’t worry)</i>, <i>If he will call (If he calls)</i>. A2: one correction per answer is enough.</p>
+    <!--conversa--><h4>DAY 3: THE CALL (III) AND THE SURPRISE QUESTION</h4>
+    <p>A short hot seat in the middle of the lesson, with the roles turned around: your student is Nina, on holiday, and you are the house-sitter calling on day 3. Ask the four questions (Biscuit on your bed, water on the floor, a “cousin” at the door, sad plants); the student answers on the spot with if + present and an instruction. Wait five seconds in silence after each question, then use the PUSH line (only you see it). Your secret: a birthday on Saturday; the student decides about the party on screen. No right answer. Recast quietly while they talk (If it will… → If it…); at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Nina’s Instructions.</li>
+      <li><b>Focus</b>: II · Problem → Instruction.</li>
+      <li><b>Write</b>: IV · Your Instructions.</li>
+      <li><b>Out loud</b>: III · Day 3: The Call and V · Would You Rather?.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* IF IT RAINS, TAKE THIS (Main A2 · Unit 9) · pergunta-surpresa · 27/10/2026 · if + present, imperative */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'leitura', tipo: 'Would you rather', q: 'Would you rather look after a friend’s dog or a friend’s baby for a day?',
+    opc: ['The dog', 'The baby'], st: ['I’d rather look after the …, because …'],
+    ex: 'The dog! If a dog is sad, you give him a ball. Easy.', push: 'And for a whole week?' },
+  { cena: 'transforma', tipo: 'And you?', q: 'Give me your best tip for a rainy day.',
+    opc: ['Stay home', 'Go out anyway', 'Something else'], st: ['If it rains, …', 'Don’t … if it rains.'],
+    ex: 'Stay home. If it rains, make hot chocolate and watch a film.', push: 'And if you have to go to work?' },
+  { cena: 'cartao', tipo: 'Opinion', q: 'Is it OK to read your friend’s books and use their things when you stay in their home?',
+    opc: ['Yes, of course', 'Only if they say yes', 'No, never'], st: ['If they …, it’s OK.', 'Don’t … if …'],
+    ex: 'Only if they say yes. If they don’t say anything, don’t touch it.', push: 'And the food in the fridge?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* IF IT RAINS, TAKE THIS (Main A2 · Unit 9) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A cadeira quente entra DEPOIS de "II · Problem → Instruction", no meio (nenhuma cena sai: a aula tinha 33 min
+   e nenhuma extra; fica em ~40). A aula já tinha a pergunta pessoal antes da leitura (pet / plantas), o cartão
+   escrito (III) e o would you rather do fim (IV); faltava o papel livre: os papéis se invertem. O aluno é a
+   Nina, de férias; o professor é quem cuida do apartamento e liga no terceiro dia com problemas de verdade.
+   O aluno resolve ao vivo com if + presente, imperativo, e fecha decidindo o pedido da festa.
+   Nada de will depois do if nos iniciadores (o alvo da aula). */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'ligacao', apos: 'transforma', est: 'o', min: 7, img: 'conversa', rot: 'Day 3: The Call',
+    t: 'Day 3. Your house-sitter is calling!',
+    p: 'Now YOU are Nina, on holiday. Your teacher is in your flat. Answer with if, then decide.',
+    formato: 'papel',
+    aluno: { quem: 'You · Nina, on holiday', quer: 'Help fast. You’re at the beach!', limite: 'Your rule: no parties in the flat.' },
+    prof: { quem: 'Your house-sitter', quer: 'Things are going wrong in your flat.', limite: 'Secret: a birthday on Saturday. Six friends.' },
+    rot_perg: 'The house-sitter asks',
+    perguntas: [
+      { q: '“Biscuit wants to sleep on your bed. Is that OK?”', ex: 'Yes, but if he sleeps on the bed, put a towel on it first.' },
+      { q: '“There’s water on the bathroom floor!”', ex: 'If there’s water on the floor, close the tap under the sink and call Leo in Flat 2.' },
+      { q: '“A man is at the door. He says he’s your cousin.”', ex: 'Don’t open the door! If he’s my cousin, he has my phone number.' },
+      { q: '“Your plants look sad. And it’s very hot.”', ex: 'If it’s very hot, water them at night. Don’t put them in the sun.' }
+    ],
+    st: ['If he …, put / give …', 'If there’s …, call …', 'Don’t worry if … / Don’t open …'],
+    push: 'The house-sitter: “Biscuit ran into Flat 2 and he’s on Leo’s sofa!”',
+    acordo: { tag: 'Your call', q: 'A small birthday party on Saturday?',
+      opc: ['Yes, if it’s small', 'Yes, if you clean', 'No, sorry'],
+      st: ['Yes, if you …', 'If the neighbors complain, …'],
+      ex: 'Yes, if it’s small. If the neighbors complain, stop the music at ten.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "A note on the kitchen table.",
+   "p": "Read it out loud together. Then look closer."
+  },
+  "transforma": {
+   "t": "A problem, and what to do.",
+   "p": "Read the problem and the clue. Say it with if."
+  },
+  "cv-ligacao": {
+   "t": "Day 3. Your house-sitter is calling!",
+   "p": "You are Nina. Answer with if. Then decide."
+  },
+  "cartao": {
+   "t": "A friend is staying in YOUR home.",
+   "p": "Write four if sentences for your friend."
+  },
+  "escolha": {
+   "t": "A or B? Choose and say why.",
+   "p": "Choose one. Say why, with if."
+  }
+ },
+ "prep": {
+  "obj": "If + presente simples com imperativo (If it rains, close the door; don’t worry if…): Nina viajou e deixou instruções para quem cuida do apartamento e do cachorro Biscuit.",
+  "armadilha": "O futuro do subjuntivo do português (“se chover”) puxa o will: If it will rain, If he will call; também If the dog bark, No worry e a vírgula esquecida quando o if vem antes.",
+  "pal": [
+   "If it rains, …",
+   "If he barks, …",
+   "Don’t worry if…",
+   "take",
+   "water the plants",
+   "feed",
+   "house-sitter",
+   "look after"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: Nina viaja uma semana; o aluno cuida do apartamento, das plantas e do Biscuit.",
+   "perg": "Who looks after your plants when you travel?",
+   "pula": "Só leia o título e abra o bilhete."
+  },
+  "leitura": {
+   "obj": "Leitura do bilhete da Nina em voz alta; perguntas de sentido; depois achar o padrão.",
+   "perg": "What should you do if Biscuit barks?",
+   "pula": "Pule as perguntas extras; vá ao padrão."
+  },
+  "transforma": {
+   "obj": "Transformar problema + pista numa frase com if e imperativo.",
+   "perg": "The plants look sad. What do you say?",
+   "pula": "Quatro frases bastam."
+  },
+  "cv-ligacao": {
+   "obj": "Hot seat invertido: o aluno é a Nina e responde ao house-sitter; decide sobre a festa.",
+   "perg": "Biscuit is on your bed. What do I do?",
+   "pula": "Três perguntas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: quatro instruções com if para um amigo na casa do aluno.",
+   "perg": "What should your friend do if it rains?",
+   "pula": "Duas frases bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather: A ou B, com if e because; o professor responde também.",
+   "perg": "Why?",
+   "pula": "Duas perguntas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com cartas sobre casa, viagem e imprevistos, com if + imperativo.",
+   "perg": "What should I do if I get lost?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e dar a instrução com if.",
+   "perg": "Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve instruções de viagem para quem vai visitar a cidade dele.",
+   "perg": "What should I do if it’s hot?",
+   "pula": "Faça os dois primeiros passos."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "If this happens, do that.",
+   "p": "Pick a card. Give an instruction out loud.",
+   "palavras": [
+    "if",
+    "don’t worry if",
+    "take",
+    "call",
+    "don’t"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PLANTS",
+     "q": "I’m looking after your plants. What do I do if they look sad?",
+     "fup": "And if it rains?",
+     "st": [
+      "If they look sad, …",
+      "If it rains, …"
+     ],
+     "ex": "If they look sad, give them water. If it rains, don’t water them."
+    },
+    {
+     "k": "YOUR DOOR",
+     "q": "I’m staying at your place. What do I do if the door doesn’t open?",
+     "fup": "Who do I call?",
+     "st": [
+      "If it doesn’t open, …",
+      "Call …"
+     ],
+     "ex": "If it doesn’t open, push it hard. If that doesn’t work, call my neighbor."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "I’m visiting your city. What do I do if I get lost?",
+     "fup": "What app do I use?",
+     "st": [
+      "If you get lost, …",
+      "Don’t …"
+     ],
+     "ex": "If you get lost, ask at a bakery. Don’t take a taxi from the street."
+    },
+    {
+     "k": "YOUR KITCHEN",
+     "q": "What do I do if I’m hungry at night in your home?",
+     "fup": "Is there any cake?",
+     "st": [
+      "If you’re hungry, …",
+      "Don’t eat …"
+     ],
+     "ex": "If you’re hungry, eat the bread. Don’t eat my chocolate!"
+    },
+    {
+     "k": "A PET",
+     "q": "A pet or a plant: what do I do if it’s alone all day?",
+     "fup": "What if it’s hot?",
+     "st": [
+      "If it’s alone, …",
+      "If it’s hot, …"
+     ],
+     "ex": "If the cat is alone, leave the radio on. If it’s hot, open a window."
+    },
+    {
+     "k": "THE WIFI",
+     "q": "What do I do if the Wi-Fi stops working?",
+     "fup": "Where is the password?",
+     "st": [
+      "If it stops, …",
+      "Don’t worry if …"
+     ],
+     "ex": "If it stops, turn the router off and on. Don’t worry if it’s slow at night."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "if",
+    "don’t worry if"
+   ],
+   "rodadas": [
+    {
+     "q": "A house-sitter: a friend or a stranger from an app?",
+     "a": "A friend",
+     "b": "A stranger",
+     "fa": [
+      "A friend. If there is a problem, I know them."
+     ],
+     "fb": [
+      "A stranger. If there is a problem, the app helps."
+     ]
+    },
+    {
+     "q": "Leave a long note or a short note?",
+     "a": "A long note",
+     "b": "A short note",
+     "fa": [
+      "Long. If it’s on paper, they don’t need to call."
+     ],
+     "fb": [
+      "Short. If it’s long, nobody reads it."
+     ]
+    },
+    {
+     "q": "The dog sleeps on the bed or on the floor?",
+     "a": "The bed",
+     "b": "The floor",
+     "fa": [
+      "The bed. If he’s happy, I’m happy."
+     ],
+     "fb": [
+      "The floor. If he sleeps on the bed, he sleeps there forever."
+     ]
+    },
+    {
+     "q": "A party at Nina’s apartment: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. If you clean everything, it’s OK."
+     ],
+     "fb": [
+      "No. If she finds out, she gets very angry."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and Biscuit is fine."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Visiting My City",
+   "t": "A visitor is coming to your city.",
+   "p": "Write one if instruction for each step.",
+   "prof": "Check the comma when if comes first, and no will after if.",
+   "passos": [
+    {
+     "q": "The weather: what do they do if it rains or if it’s hot?",
+     "st": [
+      "If it rains, …",
+      "If it’s hot, …"
+     ],
+     "ex": "If it rains, take an umbrella. If it’s hot, drink a lot of water."
+    },
+    {
+     "q": "Food: what do they do if they’re hungry late at night?",
+     "st": [
+      "If you’re hungry, …"
+     ],
+     "ex": "If you’re hungry at night, go to the bakery on the corner."
+    },
+    {
+     "q": "Problems: what do they do if they get lost?",
+     "st": [
+      "If you get lost, …"
+     ],
+     "ex": "If you get lost, call me. Don’t worry if I don’t answer fast."
+    },
+    {
+     "q": "Fun: what do they do if they have a free afternoon?",
+     "st": [
+      "If you have time, …"
+     ],
+     "ex": "If you have a free afternoon, visit the old market."
+    }
+   ],
+   "fim": "Your note is ready. Leave it on the kitchen table."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

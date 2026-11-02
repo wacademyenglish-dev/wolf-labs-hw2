@@ -5,7 +5,7 @@ window.HW2 = {
   "titulo": "Where Are You From?",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/00d2d207a4a4/where-are-you-from/img/estudio.webp",
+  "capa": "../img/estudio.webp",
   "alvo": "wh-questions: Where / What / Who / When + do or does + person + plain verb (Where do you live? Where does she work?); with be, no do (Where are you from?); never Where you live, never From where are you",
   "abrir": "Where is your family from?",
   "fecho": "Question word first: <b>Where do you live?</b> With <b>be</b>, no do: <b>Where are you from?</b> With he or she: <b>does</b> + the plain verb.",
@@ -25,7 +25,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia is a street reporter. She talks to Leo. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/00d2d207a4a4/where-are-you-from/img/estudio.webp",
+      "img": "../img/estudio.webp",
       "leg": "An empty studio with two stools",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -102,17 +102,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Where does your sister live?",
-          "img": "https://wolf-labs.pages.dev/p/00d2d207a4a4/where-are-you-from/img/rua.webp",
+          "img": "../img/rua.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "What do you do in the shop?",
-          "img": "https://wolf-labs.pages.dev/p/00d2d207a4a4/where-are-you-from/img/estudio.webp",
+          "img": "../img/estudio.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Who do you call on Sunday?",
-          "img": "https://wolf-labs.pages.dev/p/00d2d207a4a4/where-are-you-from/img/rua.webp",
+          "img": "../img/rua.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -156,7 +156,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/00d2d207a4a4/where-are-you-from/img/rua.webp",
+      "img": "../img/rua.webp",
       "leg": "A quiet street at night",
       "pede": "Look at the picture: a quiet street at night. Write 2 or 3 questions you want to ask a person you meet. Use <b>Where</b>, <b>What</b>, <b>Who</b> or <b>When</b>.",
       "ph": "Where do you …?",

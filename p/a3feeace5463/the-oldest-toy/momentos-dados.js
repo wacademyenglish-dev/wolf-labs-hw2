@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de The Oldest Toy in the Box (11/10/2026): cinco falas do trailer de Toy Story 5.
+   Forma: quem disse — Woody, Jessie, Lilypad ou Rex? Alvo: superlativos (the oldest, the most…, the best / the worst).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [7, 8], k: 'Hello, Lilypad', quem: 'Lilypad',
+    contexto: 'Bonnie opens a package. Inside there is a happy tablet, and she wants to play.',
+    frase: 'Hi there, I’m Lilypad. <b>Let’s play!</b>',
+    quemOps: ['Woody', 'Jessie', 'Lilypad', 'Rex'],
+    explica: 'Lilypad is not a toy. She is a device, and she is the newest thing in Bonnie’s room.',
+    formula: 'Lilypad is <b>the newest</b> thing in the room. (new → the new<b>est</b>)',
+    tente: 'What is the newest thing in your house? And the oldest?',
+    ex: 'The newest thing is my phone. The oldest is my grandmother’s clock.' },
+  { i: [9], k: 'Extinction', quem: 'Rex',
+    contexto: 'The toys are shocked. Rex, the dinosaur, thinks it is the end of the world.',
+    frase: 'Ah, <b>extinction</b>, not again!',
+    quemOps: ['Woody', 'Jessie', 'Lilypad', 'Rex'],
+    explica: 'The joke: Rex is a dinosaur, and dinosaurs know about extinction. For him, this is the worst day ever.',
+    formula: 'It’s <b>the worst</b> day of his life! (bad → <b>the worst</b>, good → <b>the best</b>)',
+    tente: 'What was the best day of your year? And the worst?',
+    ex: 'The best day was my birthday. The worst was when my car broke.' },
+  { i: [28], k: 'Losing Bonnie', quem: 'Jessie',
+    contexto: 'Every day, Bonnie plays more with the tablet and less with her toys. Jessie is worried.',
+    frase: 'I’m <b>losing Bonnie</b> to this device.',
+    quemOps: ['Woody', 'Jessie', 'Lilypad', 'Rex'],
+    explica: '<i>Lose someone to</i> = another thing takes that person away from you. For toys, screens are the biggest problem.',
+    formula: 'It is <b>the biggest</b> problem for toys. (big → bi<b>gg</b>est)',
+    tente: 'What is the biggest problem with phones for kids today?',
+    ex: 'The biggest problem is that they don’t play outside.' },
+  { i: [30, 31, 32, 33], k: 'The poncho', quem: 'Woody',
+    contexto: 'Woody arrives in new clothes, and Forky has questions.',
+    frase: 'Why are you wearing a dress, Woody? — It’s called <b>a poncho</b>, Forky.',
+    quemOps: ['Woody', 'Jessie', 'Lilypad', 'Rex'],
+    explica: 'Woody is an old cowboy toy. Soon someone calls him an “old man toy”. With a place, the superlative uses <i>in</i>.',
+    formula: 'Woody is <b>the oldest</b> toy <b>in</b> the box. · ✗ the oldest toy of the box',
+    tente: 'Who is the oldest person in your family? The youngest?',
+    ex: 'My grandfather is the oldest in my family. He is ninety-one!' },
+  { i: [48, 49, 50], k: 'The mission', quem: 'Woody',
+    contexto: 'Woody remembers why toys exist. Bonnie still needs them.',
+    frase: 'The mission on this planet is <b>to make a child happy</b>. Bonnie still needs us.',
+    quemOps: ['Woody', 'Jessie', 'Lilypad', 'Rex'],
+    explica: 'For Woody, nothing is more important. With long adjectives, we use <i>the most</i>.',
+    formula: 'It is <b>the most important</b> job in the world. · ✗ the importantest',
+    tente: 'What is the most important thing in your life right now?',
+    ex: 'The most important thing is my family. My health is next!' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'quem', cor: '#e8b33c', titulo: 'Who said it?', sub: 'Woody, Jessie, Lilypad or Rex? Hear the line, choose, and then compare things with the superlative.', rot: { por: 'WHAT IT MEANS', padrao: 'THE SUPERLATIVE', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

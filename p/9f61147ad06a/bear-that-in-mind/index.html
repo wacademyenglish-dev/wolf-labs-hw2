@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Bear That in Mind · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 1 · Precision</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Bear That in Mind · C1 Unit 1 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on formal collocations: carry out a review, raise a concern, address an issue, draw a conclusion, reach an agreement, meet a deadline, pose a risk, bear in mind, take into account.</p><p style="margin:0 0 6px"><b>The story:</b> Ana Reyes (invented) emails her teams before the review of the Atlas project. Then the student chairs the meeting: you are Finance (Carla), Engineering (Dev) and Marketing (Sam).</p><p style="margin:0 0 6px"><b>About 55 min:</b> I · The Email (10) · II · Which Verb? (9) · III · Make It Formal (7) · IV · Find the Mistakes (7) · V · The Atlas Jury (7) · VI · The Meeting (15).</p><p style="margin:0"><b>Open with:</b> “Before an important meeting, what do you usually send or read?”</p></div><!--/prep-->
+    <p>The student knows the nouns. The problem is the verb: Portuguese gives “take conclusions”, “reach the deadline”, “lift a concern”. Let the email show the pairs, let the student notice them, then the meeting makes them use the verbs under a little pressure.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>carry out a review / a survey · raise a concern, address an issue · draw a conclusion, reach an agreement · meet a deadline · pose a risk · bear in mind, take into account</p>
+    <h4>THE EMAIL</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>WHICH VERB?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>MAKE IT FORMAL</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>FIND THE MISTAKES</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>THE MEETING</h4>
+    <p>You are each team. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then you are the director: the student sums up each team with the formal verbs. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>take conclusions</i>, <i>reach the deadline</i>, <i>lift a concern</i>, <i>do a review (too informal)</i>, <i>have in mind</i>, <i>take in consideration</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE ATLAS JURY (V) AND THE SURPRISE QUESTION</h4>
+    <p>Before the meeting, three small cases from the Atlas project, each with evidence: the missed deadline (Dev or Ana?), Sam’s posters printed before the date was agreed, and Carla’s business-class trip. Your student gives a verdict and defends it in formal English (Bearing in mind that…, I’ve drawn the conclusion that…). There is no right verdict. Wait five seconds in silence, then use the PUSH line (only you see it). Recast quietly while they talk (raise a concern, not lift); at the end ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. This lesson has no personal opening, so use one early, during the email.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Email.</li>
+      <li><b>Focus</b>: II · Which Verb? and III · Make It Formal and IV · Find the Mistakes.</li>
+      <li><b>Out loud</b>: V · The Atlas Jury and VI · The Meeting.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* BEAR THAT IN MIND (Main C1, unit 1) · pergunta-surpresa · 28/10/2026 · formal verb + noun collocations */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'What is the most useless meeting you have ever been to?',
+    opc: ['At work', 'At school or university', 'In my building'], st: ['We never reached an agreement on …', 'Nobody addressed …'],
+    ex: 'A building meeting. Two hours, and we never reached an agreement on the colour of the front door.', push: 'What would you have done as the chair?' },
+  { cena: 'descobre', tipo: 'Would you rather', q: 'Would you rather miss a deadline and do great work, or meet it with average work?',
+    opc: ['Miss it, great work', 'Meet it, average work'], st: ['I’d rather …, because …', 'Bearing in mind …'],
+    ex: 'Meet it. Bearing in mind that other people depend on my part, a late deadline poses a bigger risk than average work.', push: 'And if it’s your wedding speech?' },
+  { cena: 'transforma', tipo: 'Opinion', q: 'Is formal English at work just a show, or does it really help?',
+    opc: ['It’s a show', 'It really helps', 'It depends on the company'], st: ['Taking into account …', 'I’ve drawn the conclusion that …'],
+    ex: 'It depends on the company. In a bank it helps; in a start-up, people would think you’re a robot.', push: 'Say “we’re late” in your most formal English. Now in your most casual.' },
+  { cena: 'missao', tipo: 'What if', q: 'Tomorrow you chair a meeting at your work. What is the one rule you announce first?',
+    opc: ['Phones off', 'Thirty minutes, maximum', 'Everyone speaks once'], st: ['Please bear in mind that …', 'I’d like us to …'],
+    ex: 'Thirty minutes, maximum. Please bear in mind that if we can’t reach an agreement by then, I’ll make a recommendation myself.', push: 'Your boss talks for twenty minutes. Do you stop her?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* BEAR THAT IN MIND (Main C1, unit 1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O júri ENTRA depois do IV (Find the Mistakes), antes da reunião (V, a tela forte, fica): a aula tem
+   48 min, sem extra, e vai a ~55. Três casos pequenos do projeto Atlas, com provas, sem vilão de
+   verdade: o prazo do Dev, os cartazes do Sam, a viagem da Carla. As colocações formais da aula
+   (bear in mind, take into account, draw a conclusion, pose a risk) moram nos iniciadores. Os fatos
+   não contradizem o e-mail (I) nem a reunião (V). Formato: jury with evidence (escolha + provas). */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'juri', apos: 'erros', est: 'o', min: 7, img: 'conversa', rot: 'The Atlas Jury', t: 'Before the meeting: three small cases. You are the jury.',
+    p: 'Read the evidence. Give your verdict, or your own idea. Defend it in formal English. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The deadline', sit: 'Engineering will probably miss 1 March. Whose fault is it?',
+        provas: ['December: Dev raised a concern about the testing time.', 'Nobody addressed the issue.', 'Last week, Dev said March was unrealistic.'],
+        q: 'Your verdict?', opc: ['Dev’s fault', 'Ana’s fault', 'Shared'],
+        st: ['Bearing in mind that …, I …', 'Taking into account …', 'I’ve drawn the conclusion that …'],
+        ex: 'Shared. Dev raised a concern, so Ana should have addressed the issue. But bearing in mind how serious it was, he should have raised it again before last week.',
+        push: 'Dev raised it once, in a short email, on 23 December. Does that change your verdict?' },
+      { tag: 'The posters', sit: 'Sam printed 500 posters: “Launch: 1 March”. The date was never agreed.',
+        provas: ['The posters cost 8,000 dollars.', 'Sam says customers are waiting.', 'Ana wanted to reach an agreement at this meeting.'],
+        q: 'Did Sam act too fast?', opc: ['Too fast', 'Fair: he had a plan', 'More information'],
+        st: ['Taking into account the cost, …', 'This poses a risk to …', 'He should have …'],
+        ex: 'Too fast. Taking into account that the date was never agreed, printing it poses a real risk: now the posters may go in the bin.',
+        push: 'If the launch is on 1 March after all, Sam saved two weeks. Is he a hero then?' },
+      { tag: 'The trip', sit: 'Carla raised a concern about travel costs. Then she booked business class to Asia for the cost review.',
+        provas: ['The ticket costs 6,000 dollars.', 'Carla says some problems are only visible on site.'],
+        q: 'Is Carla’s trip justified?', opc: ['Justified', 'Not justified', 'Only in economy'],
+        st: ['I would make a recommendation: …', 'It’s hard to reach a conclusion without …', 'Bear in mind that …'],
+        ex: 'Only in economy. I understand that some issues are only visible on site, but bear in mind she raised the concern about travel costs herself.',
+        push: 'Would you fly business class if the company paid? Be honest.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "An email before the big meeting.",
+   "p": "Read it out loud. Then find the verb + noun pairs."
+  },
+  "descobre": {
+   "t": "Same noun. Which verb?",
+   "p": "Compare A and B. Pick the right verb."
+  },
+  "transforma": {
+   "t": "From the kitchen to the boardroom.",
+   "p": "Read it. Use the clue. Say it formally."
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say the right form, then tap."
+  },
+  "cv-juri": {
+   "t": "Three small cases. You are the jury.",
+   "p": "Read the evidence. Defend your verdict formally."
+  },
+  "missao": {
+   "t": "You chair the meeting.",
+   "p": "Ask each team five questions. Then sum up."
+  }
+ },
+ "prep": {
+  "obj": "Colocações formais (carry out a review, raise a concern, draw a conclusion, meet a deadline, bear in mind): o e-mail de Ana Reyes e a reunião do projeto Atlas.",
+  "armadilha": "O português empurra o verbo errado: “take conclusions”, “reach the deadline”, “lift a concern”, “take in consideration”, “have in mind”; e “do a review” soa informal demais.",
+  "pal": [
+   "carry out a review",
+   "raise a concern",
+   "address an issue",
+   "draw a conclusion",
+   "reach an agreement",
+   "meet a deadline",
+   "pose a risk",
+   "bear in mind",
+   "take into account"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: o aluno conhece os substantivos; o problema é o verbo que os acompanha.",
+   "perg": "Before a big meeting, what do you read or send?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Leitura em voz alta do e-mail de Ana; achar os pares verbo + substantivo. Sem abertura pessoal: use a Surprise question aqui.",
+   "perg": "What is Ana worried about?",
+   "pula": "Leia e ache quatro pares."
+  },
+  "descobre": {
+   "obj": "Mesmo substantivo, verbos diferentes: só um é o natural no inglês formal.",
+   "perg": "Why “draw” and not “take” a conclusion?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "transforma": {
+   "obj": "Frase informal vira formal com a colocação certa, usando a pista.",
+   "perg": "How would you say that to a director?",
+   "pula": "Quatro frases bastam."
+  },
+  "erros": {
+   "obj": "Bilhete com erros de colocação; o aluno diz a forma certa antes de tocar.",
+   "perg": "What’s the right verb here?",
+   "pula": "Ache três erros e leia o bilhete certo."
+  },
+  "cv-juri": {
+   "obj": "Três casos do Atlas (prazo perdido, cartazes, viagem de executiva); veredito em inglês formal.",
+   "perg": "Who is responsible, bearing in mind the evidence?",
+   "pula": "Um caso basta."
+  },
+  "missao": {
+   "obj": "O aluno preside a reunião: cinco perguntas por equipe e resumo para a diretora com os verbos formais.",
+   "perg": "What did Finance raise, and what did you conclude?",
+   "pula": "Duas equipes bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "As colocações formais aplicadas ao trabalho e à vida do aluno.",
+   "perg": "Have you ever had to raise a concern at work?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre reuniões, prazos e e-mails, defendendo o lado em registro formal.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira Ana Reyes depois da reunião e responde ao professor com as colocações.",
+   "perg": "Ana, what conclusion did you draw?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Formal partners, real life.",
+   "p": "Pick a card. Use the right verb.",
+   "palavras": [
+    "raise a concern",
+    "draw a conclusion",
+    "meet a deadline",
+    "bear in mind",
+    "take into account"
+   ],
+   "cartas": [
+    {
+     "k": "A CONCERN",
+     "q": "Tell me about a time you raised a concern that nobody wanted to hear.",
+     "fup": "Was it addressed in the end?",
+     "st": [
+      "I raised a concern about …",
+      "The thing is, …"
+     ],
+     "ex": "I raised a concern about the budget, but it wasn’t addressed until the project was late."
+    },
+    {
+     "k": "DEADLINES",
+     "q": "Which deadline in your career was the hardest to meet?",
+     "fup": "What did you sacrifice to meet it?",
+     "st": [
+      "We had to meet a deadline for …",
+      "In the end, we …"
+     ],
+     "ex": "We had to meet a deadline for an audit, and we worked two weekends in a row."
+    },
+    {
+     "k": "CONCLUSIONS",
+     "q": "Have you ever drawn the wrong conclusion about a colleague?",
+     "fup": "What made you change your mind?",
+     "st": [
+      "I drew the conclusion that …",
+      "It turned out that …"
+     ],
+     "ex": "I drew the conclusion that he was lazy. It turned out that he was covering for two people."
+    },
+    {
+     "k": "BEAR IN MIND",
+     "q": "What should a new person in your job bear in mind on day one?",
+     "fup": "Who told you that, or did you learn it the hard way?",
+     "st": [
+      "Bear in mind that …",
+      "Take into account …"
+     ],
+     "ex": "Bear in mind that the boss reads every email, even the ones she’s only copied on."
+    },
+    {
+     "k": "AGREEMENT",
+     "q": "When was it hardest to reach an agreement with someone?",
+     "fup": "Who gave in first?",
+     "st": [
+      "We couldn’t reach an agreement on …",
+      "Eventually, …"
+     ],
+     "ex": "We couldn’t reach an agreement on the price, so eventually we split the difference."
+    },
+    {
+     "k": "RISK",
+     "q": "What poses the biggest risk to your industry right now?",
+     "fup": "Is anyone addressing it?",
+     "st": [
+      "… poses a serious risk to …",
+      "Nobody is addressing …"
+     ],
+     "ex": "AI poses a serious risk to small translation agencies, and nobody is addressing it yet."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I take your point, but …",
+    "Bearing in mind that …",
+    "I’d draw a different conclusion.",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Meetings: necessary, or mostly a waste of time?",
+     "a": "Necessary",
+     "b": "A waste",
+     "fa": [
+      "Necessary. You can’t reach an agreement by email.",
+      "Faces raise concerns that emails hide."
+     ],
+     "fb": [
+      "A waste. Most could be one clear email.",
+      "Bearing in mind the cost per hour, they’re a luxury."
+     ]
+    },
+    {
+     "q": "Missing a deadline to do better work: acceptable or not?",
+     "a": "Acceptable",
+     "b": "Not acceptable",
+     "fa": [
+      "Acceptable. A rushed product poses a bigger risk.",
+      "Quality is what people remember."
+     ],
+     "fb": [
+      "Not acceptable. Other teams depend on that date.",
+      "If you can’t meet it, raise the concern early."
+     ]
+    },
+    {
+     "q": "Should the person who raises a problem also have to solve it?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Otherwise people just complain.",
+      "Raising a concern should come with a proposal."
+     ],
+     "fb": [
+      "No. Then nobody will raise anything.",
+      "Spotting a risk is already a contribution."
+     ]
+    },
+    {
+     "q": "Formal English at work: respectful or distant?",
+     "a": "Respectful",
+     "b": "Distant",
+     "fa": [
+      "Respectful. It shows you take the matter seriously.",
+      "Clients expect it."
+     ],
+     "fb": [
+      "Distant. It puts a wall between people.",
+      "Clear and simple beats formal."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Agreement reached: we agreed to disagree."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Ana Reyes now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Ana Reyes, in formal English.",
+   "perguntas": [
+    "Ana, why did you carry out a review of Atlas now?",
+    "Which concern raised in the meeting worried you most?",
+    "What conclusion did you draw about the missed deadline?",
+    "Did the teams reach an agreement on the new date?",
+    "What poses the biggest risk to the project now?",
+    "What should the director bear in mind before she decides?"
+   ],
+   "st": [
+    "Bearing in mind that …",
+    "I’ve drawn the conclusion that …",
+    "The main concern raised was …"
+   ],
+   "ex": "Bearing in mind the budget, I’ve drawn the conclusion that we need one more month."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

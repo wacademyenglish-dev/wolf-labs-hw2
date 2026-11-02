@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "All I Want Is Time",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e545f6d6e48e/all-i-want-is-time/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "cleft sentences that put one thing in the spotlight: All I want is ..., The only thing I need is ..., The reason (why) ... is that ..., The last thing I need is ...; never 'all what', 'the reason is because'",
   "abrir": "If you could have one thing right now, what would it be?",
   "fecho": "Put one thing in the spotlight: <b>All I want is time.</b> <b>The only thing I need is a quiet evening.</b> <b>The reason I said no is that</b> ... (never <i>the reason is because</i>). And never <i>all what</i>: <i>all <b>I</b> want</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo, the day after a big decision. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e545f6d6e48e/all-i-want-is-time/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty bench under a street lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "All I really want after a long week is a quiet evening.",
-          "img": "https://wolf-labs.pages.dev/p/e545f6d6e48e/all-i-want-is-time/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The only thing I miss about my old job is the people.",
-          "img": "https://wolf-labs.pages.dev/p/e545f6d6e48e/all-i-want-is-time/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The reason I left the city is that I needed more space.",
-          "img": "https://wolf-labs.pages.dev/p/e545f6d6e48e/all-i-want-is-time/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e545f6d6e48e/all-i-want-is-time/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An hourglass and a candle in the dark",
       "pede": "Look at the picture: an hourglass and a candle, and time running out. Write 2 or 3 sentences about what really matters to you. Use two of these: <b>All I want is ...</b>, <b>The only thing I need is ...</b>, <b>The reason why ... is that ...</b>, <b>The last thing I need is ...</b>.",
       "ph": "All I want is …",

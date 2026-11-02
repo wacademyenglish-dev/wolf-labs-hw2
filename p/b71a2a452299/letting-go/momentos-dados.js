@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de Learning the Ways of the Force (11/10/2026): a conversa de Luke e Obi-Wan em Star Wars.
+   Forma: quem disse — Luke ou Obi-Wan? Alvo: -ing como substantivo (sujeito e depois de preposição).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [0, 1], k: 'The navigator', quem: 'Luke',
+    contexto: 'Luke believes the story his uncle told him about his father.',
+    frase: 'No, my father didn’t fight in the wars. He was <b>a navigator on a spice freighter</b>.',
+    quemOps: ['Luke', 'Obi-Wan'],
+    explica: 'A navigator on a cargo ship: a quiet job. It is not true, and finding out will change everything.',
+    formula: '<b>Knowing</b> the truth changes everything. (-ing as the subject)',
+    tente: 'What is something that changed your life? Start with an -ing word.',
+    ex: 'Moving to a new city changed my life. Learning English opened doors.' },
+  { i: [9, 10, 11], k: 'The best pilot', quem: 'Obi-Wan',
+    contexto: 'Obi-Wan tells Luke who his father really was.',
+    frase: 'He was <b>the best star pilot</b> in the galaxy, and a cunning warrior.',
+    quemOps: ['Luke', 'Obi-Wan'],
+    explica: '<i>Cunning</i> = smart, clever in a fight. And Luke is a good pilot too: it runs in the family.',
+    formula: 'Luke is good <b>at flying</b>. (preposition + <b>-ing</b>) · ✗ good at fly',
+    tente: 'What are you good at? What are you bad at? Use -ing.',
+    ex: 'I’m good at cooking, but I’m terrible at singing.' },
+  { i: [27, 28, 29, 30], k: 'The saber', quem: 'Obi-Wan',
+    contexto: 'Obi-Wan gives Luke his father’s lightsaber.',
+    frase: 'This is the weapon of a Jedi Knight. Not as clumsy or random as a blaster. <b>An elegant weapon for a more civilized age.</b>',
+    quemOps: ['Luke', 'Obi-Wan'],
+    explica: 'A blaster is a gun: fast and messy. A lightsaber needs skill. A Jedi fights instead of just shooting.',
+    formula: '<b>Holding</b> it feels strange. · instead <b>of shooting</b> · before <b>leaving</b>',
+    tente: 'What do you do instead of sleeping when you can’t sleep?',
+    ex: 'Instead of sleeping, I watch videos. Before going to bed, I read.' },
+  { i: [36], k: 'The question', quem: 'Luke',
+    contexto: 'Luke asks the question he has been afraid to ask.',
+    frase: '<b>How did my father die?</b>',
+    quemOps: ['Luke', 'Obi-Wan'],
+    explica: 'A short question, and a very hard one. He wants to know, and he is afraid of the answer.',
+    formula: 'He is afraid <b>of hearing</b> the answer. (afraid of + -ing)',
+    tente: 'What are you afraid of doing? What are you excited about doing?',
+    ex: 'I’m afraid of speaking in public. I’m excited about traveling in December.' },
+  { i: [47, 48, 49, 50, 51], k: 'The Force', quem: 'Obi-Wan',
+    contexto: 'Obi-Wan explains the Force for the first time.',
+    frase: 'The Force is <b>what gives a Jedi his power</b>. It’s an energy field created by all living things.',
+    quemOps: ['Luke', 'Obi-Wan'],
+    explica: 'An energy from everything alive. It takes many years to learn it.',
+    formula: '<b>Learning</b> the Force takes years. · by <b>closing</b> your eyes',
+    tente: 'What takes years to learn? Start your sentence with -ing.',
+    ex: 'Playing the piano takes years. Speaking a language takes years too!' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'quem', cor: '#e0b44a', titulo: 'Luke, or Obi-Wan?', sub: 'Hear the line, say who says it, then use the -ing word in your own sentence.', rot: { por: 'WHAT IT MEANS', padrao: '-ING AS A NOUN', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

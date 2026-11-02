@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -123,5 +124,287 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Three ingredients of a thank-you email.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "erros": {
+   "t": "Five problems in one email.",
+   "p": "Find each problem. Say it better. Then tap."
+  },
+  "cv-conselho": {
+   "t": "Three rules for after the interview.",
+   "p": "Vote on each rule. Say why."
+  },
+  "formulario": {
+   "t": "Write your email from the notes.",
+   "p": "Read the notes. Write each part simply."
+  },
+  "pode": {
+   "t": "Lesson 11: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "O e-mail de agradecimento em até 24 h: gratidão, personalização, entusiasmo e próximos passos; assunto, P.S. e o follow-up depois de uma semana.",
+  "armadilha": "Tradução de “fico no aguardo”: “I stay waiting your answer”; “Thanks for the opportunity of the interview”, “I look forward to hear” (sem -ing) e “Hey!!!” informal demais.",
+  "pal": [
+   "Thank you for taking the time to …",
+   "I really enjoyed hearing about …",
+   "I’m very excited about …",
+   "I look forward to hearing …",
+   "I wanted to follow up on …",
+   "P.S.",
+   "subject line"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 11: o e-mail curto e pessoal que mantém o candidato na memória.",
+   "perg": "After your last interview, did you send any message?",
+   "pula": "Só leia o título da capa."
+  },
+  "video": {
+   "obj": "Assistir à líder de RH mostrando o modelo e dois e-mails reais (1:44–4:43).",
+   "perg": "What are the three ingredients?",
+   "pula": "O vídeo é inteiro; faça só uma pergunta depois."
+  },
+  "erros": {
+   "obj": "Achar os cinco problemas de um e-mail fictício e dizer a versão certa antes de tocar.",
+   "perg": "What’s wrong with “I stay waiting your answer”?",
+   "pula": "Três problemas e a leitura final."
+  },
+  "cv-conselho": {
+   "obj": "Conversa: votar três regras do clube de busca de emprego e justificar.",
+   "perg": "Would you follow up every two days?",
+   "pula": "Duas regras bastam."
+  },
+  "formulario": {
+   "obj": "Escrita: montar o e-mail a partir de anotações fictícias; depois ler em voz alta.",
+   "perg": "What will you personalize in this email?",
+   "pula": "Só gratidão, personalização e próximos passos."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; ensinar a linha do follow-up de uma semana.",
+   "perg": "Can you write a follow-up after one week?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre entrevistas, e-mails e follow-ups reais do aluno.",
+   "perg": "What do you usually write after an interview?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de dilemas do pós-entrevista (canal, tom, insistência).",
+   "perg": "Which side do you take, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Escrever, em passos, o e-mail de follow-up uma semana depois.",
+   "perg": "How do you start a follow-up without sounding pushy?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "After the interview.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "Thank you for …",
+    "I really enjoyed …",
+    "I look forward to …"
+   ],
+   "cartas": [
+    {
+     "k": "LAST INTERVIEW",
+     "q": "What did you do right after your last interview?",
+     "fup": "Would you do it differently now?",
+     "st": [
+      "Right after, I …",
+      "Now I would …"
+     ],
+     "ex": "Right after, I went home and waited. Now I would send a thank-you email that day."
+    },
+    {
+     "k": "THANK YOU",
+     "q": "Who was the last person you thanked by email at work?",
+     "fup": "What did you thank them for?",
+     "st": [
+      "I thanked …",
+      "for …"
+     ],
+     "ex": "I thanked a colleague for helping me with a report on Sunday."
+    },
+    {
+     "k": "WAITING",
+     "q": "How do you feel while you wait for an answer after an interview?",
+     "fup": "What do you do to stay calm?",
+     "st": [
+      "I usually feel …",
+      "To stay calm, I …"
+     ],
+     "ex": "I usually feel anxious. To stay calm, I keep applying to other jobs."
+    },
+    {
+     "k": "THE DETAIL",
+     "q": "What’s a detail from an interview that you could mention in the email?",
+     "fup": "Why would it help?",
+     "st": [
+      "I really enjoyed hearing about …",
+      "It shows that …"
+     ],
+     "ex": "I really enjoyed hearing about their new office in Lisbon. It shows that I was listening."
+    },
+    {
+     "k": "NO ANSWER",
+     "q": "A company never answered you. What do you think about that?",
+     "fup": "Would you apply there again?",
+     "st": [
+      "Honestly, …",
+      "I would / wouldn’t … because …"
+     ],
+     "ex": "Honestly, it’s disrespectful. I wouldn’t apply again because it shows how they treat people."
+    },
+    {
+     "k": "FORMAL",
+     "q": "How formal are emails at your job?",
+     "fup": "How do you start them?",
+     "st": [
+      "They’re quite …",
+      "I usually start with …"
+     ],
+     "ex": "They’re quite informal. I usually start with “Hi” and the person’s name."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I think",
+    "because",
+    "it shows"
+   ],
+   "rodadas": [
+    {
+     "q": "Send the thank-you email from the elevator, or the next morning?",
+     "a": "The elevator",
+     "b": "The next morning",
+     "fa": [
+      "The elevator. They still remember you.",
+      "Fast shows enthusiasm."
+     ],
+     "fb": [
+      "The next morning. You can write it calmly.",
+      "Too fast looks like a template."
+     ]
+    },
+    {
+     "q": "Follow up after one week, or wait for them?",
+     "a": "Follow up",
+     "b": "Wait",
+     "fa": [
+      "Follow up. It shows I’m still interested.",
+      "One short email isn’t pushy."
+     ],
+     "fb": [
+      "Wait. They know my email.",
+      "Too many messages can hurt my chances."
+     ]
+    },
+    {
+     "q": "Connect with the interviewer on LinkedIn, or not?",
+     "a": "Connect",
+     "b": "Don’t",
+     "fa": [
+      "Connect. It’s normal and professional.",
+      "It keeps me in their network."
+     ],
+     "fb": [
+      "Don’t, before the decision.",
+      "It can look like pressure."
+     ]
+    },
+    {
+     "q": "A thank-you email: short and simple, or long and detailed?",
+     "a": "Short",
+     "b": "Detailed",
+     "fa": [
+      "Short. Recruiters read hundreds of emails.",
+      "Four lines are enough."
+     ],
+     "fb": [
+      "Detailed. It’s one more chance to sell myself.",
+      "I can add something I forgot to say."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Write the Follow-up",
+   "t": "One week later, no answer.",
+   "p": "Four steps. Polite and short.",
+   "prof": "You are the recruiter: read the email and say if you would answer it today.",
+   "passos": [
+    {
+     "q": "Write a clear subject line.",
+     "st": [
+      "Subject: Following up on …",
+      "Subject: …"
+     ],
+     "ex": "Subject: Following up on my interview for the Marketing Analyst role"
+    },
+    {
+     "q": "Say why you are writing.",
+     "st": [
+      "Hi …, I wanted to follow up on …",
+      "We met on …"
+     ],
+     "ex": "Hi Laura, I wanted to follow up on my interview last Tuesday for the Marketing Analyst role."
+    },
+    {
+     "q": "Show you are still interested.",
+     "st": [
+      "I’m still very excited about …",
+      "I really enjoyed …"
+     ],
+     "ex": "I’m still very excited about this opportunity, especially the new campaign you mentioned."
+    },
+    {
+     "q": "Close politely.",
+     "st": [
+      "I look forward to hearing …",
+      "Best regards, …"
+     ],
+     "ex": "I look forward to hearing about next steps. Best regards, Pedro"
+    }
+   ],
+   "fim": "Short, polite, and personal. Would you answer it?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

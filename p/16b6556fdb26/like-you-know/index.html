@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Like, You Know · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 6 · B2</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 6 · Like, You Know · B2</h2>
+    <p>Episode 6 of <b>Better Speaking</b>. Conchita Mart&iacute;nez, before the Wimbledon final against her childhood hero, speaks with lots of <b>like</b> and <b>you know</b>, and sounds fluent. Richard shows how to buy thinking time without stopping: <b>fillers</b> (you know, I mean, sort of), <b>That&rsquo;s a good question</b> plus repeating the question, <b>If I were you, I&rsquo;d, er&hellip;</b>, and the weak /&schwa;/ (<i>taller thun</i>). The sister lesson for B1 is &ldquo;Nothing to Lose&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Give me a second, Don&rsquo;t stop. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Buy time, Match the filler, Fix the traps, Choose the phrase.</li>
+      <li><b>Write</b> &mdash; Your time-buyers. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Portuguese fillers in English: <i>tipo, n&eacute;, ent&atilde;o</i>. Too many fillers in a row. And the set phrase with the wrong verbs: <i>If I was you, I will&hellip;</i></p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 6 · LIKE, YOU KNOW (B2)
+   Vídeo: BBC Learning English, Better Speaking (ovNeXtkYrMI, 11:50), três trechos (~5:00).
+   Alvo: ganhar tempo para pensar (like, you know, sort of, I mean · That's a good question · repetir a pergunta ·
+   If I were you, I'd, er…) e o som fraco /ə/ (taller thun). */
+const M = { nome: "Like, You Know", kick: "B2 · FILLERS: YOU KNOW, SORT OF, THAT'S A GOOD QUESTION" };
+var EP = {
+  n: 6, de: 8, nivel: 'B2', titulo: 'Like, You Know', video: 'ovNeXtkYrMI',
+  convidado: 'Conchita Martínez', habilidade: 'buy time to think and still sound fluent',
+  trechos: [
+    { ini: 50, fim: 94, rot: 'Conchita: playing against the wall' },
+    { ini: 141, fim: 264, rot: 'Richard: fillers and “er”' },
+    { ini: 480, fim: 632, rot: 'Shakespeare and the suit' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'A Wimbledon champion talks to the press before the biggest match of her life. Her English is full of “like” and “you know”, and she sounds fluent. Today: how to think out loud without stopping.',
+      nota: 'Ask: what do you say in Portuguese when you need a second to think? (tipo, né, então…)' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Give me a <em>second</em>', pt: 'Abra uma carta e responda em voz alta, sem parar.',
+      nota: 'Talk only. These questions need thinking time on purpose; let the student fill the silence.',
+      cartas: [
+        { frente: 'Hero', verso: 'Who was your hero when you were ten or eleven?', dica: 'Hmm, I\'d say…', cor: 'var(--guest)', fw: { q: 'Did you ever meet them, or something like that?', st: ['Well, sort of…', 'Not really, but…', 'You know, once…'], help: '“Well, sort of. I saw him at an airport once!”' } },
+        { frente: 'Pressure', verso: 'How do you deal with pressure before something big?', dica: 'That\'s a good question…', cor: 'var(--host)', fw: { q: 'What would you tell someone before a job interview?', st: ['If I were you, I\'d, er…', 'I mean,…', 'You know,…'], help: '“If I were you, I\'d, er, just breathe and tell a real story.”' } },
+        { frente: 'Silence', verso: 'Is silence in a conversation uncomfortable for you?', dica: 'I mean…', cor: 'var(--teacher)', fw: { q: 'Is it different in English and in Portuguese?', st: ['In Portuguese, we…', 'In English, I feel…', 'Sort of, yeah…'], help: '“In Portuguese we never stop talking. In English I panic!”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 5 minutes', titulo: 'Listen to <em>Conchita</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Words like “you know” and “like”…', ops: [{ t: 'make you sound less fluent' }, { t: 'can make you sound more fluent' }] }, { q: 'How did Conchita practice as a child?', ops: [{ t: 'Against a wall' }, { t: 'With a coach every day' }] } ],
+      durante: 'Clip 1: count the fillers. Clip 2: where to put “er”. Clip 3: listen to the man who needs time to answer.',
+      depois: [ { f: 'Conchita imagined she was playing against her hero.', ok: 1 }, { f: 'Richard says: use as many fillers as possible.', ok: 0 }, { f: 'The man repeats the question to give himself time.', ok: 1 }, { f: 'Richard says the weak “uh” sound is lazy speech.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Buy <em>time</em>', pt: 'Preencha o silêncio com frases curtas, sem exagerar.',
+      nota: 'Read each card and model the tone: relaxed, not nervous.',
+      cartoes: [ { g: '<b>you know</b> · <b>I mean</b> · <b>sort of</b> · <b>like</b>', p: 'Small fillers, not too many.' }, { g: '<b>That\'s a good question.</b> What does a suit… mean?', p: 'Praise it, then repeat the question.' }, { g: '<b>If I were you, I\'d, er…</b> · <b>I think, er…</b>', p: 'Put the “er” after a set phrase.' }, { g: 'Ehhh… é… então… tipo…', p: 'Portuguese fillers sound strange in English.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'when to use it', titulo: 'Match the <em>filler</em>', pt: 'Toque na frase e depois em quando ela serve.',
+      nota: 'Say each one in a sentence of your own.',
+      esq: ['That\'s a good question.', 'I mean,…', 'sort of', 'Let me think…', 'If I were you, I\'d, er…'], dir: ['when the question is hard', 'when you explain again', 'when you aren\'t exact', 'when you need a moment', 'when you start advice'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Answer this, using two of them: what does a suit say about a person?', st: ['That\'s a good question…', 'I mean,…', 'Sort of…'], help: '“That\'s a good question. What does a suit say? I mean, it sort of says: take me seriously.”' } },
+    { k: 'cartas', est: 'o', rot: 'hard questions', titulo: 'Don\'t <em>stop</em>', pt: 'Vire a pergunta difícil. Ganhe tempo com uma frase e responda sem parar.',
+      nota: 'You read each question; the student must start speaking within two seconds, using a time-buying phrase. GOT IT if there was no dead silence.',
+      cartas: [
+        { frente: 'Hard 1', sob: 'answer it', verso: 'What does your favorite color say about you?', dica: 'That\'s a good question…', cor: 'var(--guest)', fw: { q: 'Now ask me a hard question.', st: ['What does… say about…?', 'Why do people…?'], help: '“Why do people love bad movies?”' } },
+        { frente: 'Hard 2', sob: 'answer it', verso: 'If you could change one thing about your city, what would it be?', dica: 'Hmm, let me think…', cor: 'var(--host)' },
+        { frente: 'Hard 3', sob: 'answer it', verso: 'Are you interested in Shakespeare?', dica: 'Er, yeah, I suppose I\'m sort of…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'Portuguese fillers, too many fillers, and the conditional with were.',
+      itens: [ { erro: '<s>Tipo,</s> I think it\'s good.', certo: '<b>I mean,</b> I think it\'s good.', por: 'Use English fillers.' }, { erro: 'I, like, you know, like, sort of, like it.', certo: 'I <b>sort of</b> like it.', por: 'One filler is enough.' }, { erro: 'If I <s>was</s> you, I <s>will</s> call her.', certo: 'If I <b>were</b> you, I<b>\'d</b> call her.', por: 'The set phrase: If I were you, I\'d…' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>phrase</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Lines from the episode and close to it. Read each one with natural fillers.',
+      itens: [ { f: 'I don\'t have anything to lose, ___. I just have to play loose.', ops: ['you know', 'you knew'], ok: 0 }, { f: 'If I ___ you, I\'d, er, take a break.', ops: ['were', 'am'], ok: 0 }, { f: 'That\'s a very good ___. What does a suit define?', ops: ['question', 'ask'], ok: 0 }, { f: 'Yes, I suppose I\'m ___ of interested.', ops: ['sort', 'like'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>time-buyers</em>', pt: 'Escreva a sua resposta para uma pergunta difícil, com duas frases para ganhar tempo. Depois fale sem ler.',
+      ph: 'Question: What would you do with a free year? Answer: That\'s a good question. What would I do? I mean,…', nota: 'The line under the paper catches “If I was you” and Portuguese “tipo”. SAVE sends it to My notes.',
+      banco: ['That\'s a good question.', 'Let me think…', 'I mean,', 'you know,', 'sort of', 'If I were you, I\'d, er…'],
+      regras: [['\\bif i was you\\b', 'Check: If I WERE you, I\'d…'], ['\\btipo\\b', 'Check: use an English filler: I mean, you know.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Before Paris', tx: 'Steffi Graf, one injury, two finals in a month. How do you tell a story so the order is crystal clear?',
+      ganchos: [['Next guest', 'Steffi Graf'], ['The skill', 'tell events in order'], ['Your task', 'one “That\'s a good question” today']], nota: 'Ask: what happened in your life last month, in order? That opens Episode 7.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Ganhar tempo sem parar: fillers (you know, I mean, sort of), That’s a good question + repetir a pergunta, If I were you, I’d… e o schwa; Conchita Martínez antes da final de Wimbledon.",
+  "armadilha": "Fillers do português no inglês (tipo, né, então); fillers demais seguidos; e a frase pronta com verbos errados: If I was you, I will…",
+  "pal": [
+   "you know",
+   "I mean",
+   "sort of",
+   "That’s a good question.",
+   "Let me think.",
+   "If I were you, I’d…",
+   "er…",
+   "buy time"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta Conchita e a habilidade: pensar em voz alta sem parar.",
+   "perg": "What do you say in Portuguese to buy a second?",
+   "pula": "Uma resposta e NEXT."
+  },
+  "c1": {
+   "obj": "Perguntas que exigem tempo para pensar; o aluno preenche o silêncio.",
+   "perg": "Give me a second… what would you say?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes da Conchita em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "Who is she playing in the final?",
+   "pula": "Veja os clipes uma vez; pule o durante."
+  },
+  "c3": {
+   "obj": "A regra: fillers, repetir a pergunta, If I were you, I’d, e o tom relaxado.",
+   "perg": "Which filler do you already use?",
+   "pula": "Leia os cartões; o vermelho é obrigatório."
+  },
+  "c4": {
+   "obj": "Ligar cada filler ao momento de uso e dizê-lo numa frase própria.",
+   "perg": "When would you say “I mean”?",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "Perguntas difíceis: o aluno começa a falar em até dois segundos, comprando tempo.",
+   "perg": "No dead silence. Go!",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Três armadilhas: fillers do português, fillers demais e If I was you, I will.",
+   "perg": "If I was you or If I were you?",
+   "pula": "Faça as três, rápido."
+  },
+  "c7": {
+   "obj": "Escolher a frase certa em falas do episódio, lidas com fillers naturais.",
+   "perg": "Which phrase buys you time here?",
+   "pula": "Metade das frases basta."
+  },
+  "c8": {
+   "obj": "Escrita: os time-buyers favoritos do aluno; vai para o My notes.",
+   "perg": "Which one will you use tomorrow?",
+   "pula": "Três frases bastam."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 7: contar uma história com a ordem clara.",
+   "perg": "What happened last month, in order?",
+   "pula": "Só a pergunta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Perguntas inesperadas: começar a responder rápido, com um time-buyer.",
+   "perg": "That’s a good question, isn’t it?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre fillers, silêncio e fluência.",
+   "perg": "I mean, are you sure?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno se prepara para uma coletiva de imprensa difícil, passo a passo.",
+   "perg": "If you were her, what would you say?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 6,
+   "rot": "More to Talk About",
+   "t": "No dead silence.",
+   "p": "Pick a card. Start talking in two seconds.",
+   "palavras": [
+    "you know",
+    "I mean",
+    "sort of",
+    "That’s a good question.",
+    "If I were you, I’d…"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR HERO",
+     "q": "If you met your childhood hero tomorrow, what would you say?",
+     "fup": "And what would you never say?",
+     "st": [
+      "That’s a good question. I’d …",
+      "I mean, …"
+     ],
+     "ex": "That’s a good question. I’d probably, you know, just say thank you. I mean, what else?"
+    },
+    {
+     "k": "PRESSURE",
+     "q": "How do you handle the night before something big?",
+     "fup": "Does it work?",
+     "st": [
+      "I sort of …",
+      "You know, …"
+     ],
+     "ex": "I sort of pretend it’s a normal night. You know, dinner, series, bed. It half works."
+    },
+    {
+     "k": "A FRIEND’S PROBLEM",
+     "q": "A friend hates her job but loves the money. Your advice?",
+     "fup": "Would you follow it yourself?",
+     "st": [
+      "If I were her, I’d …",
+      "I mean, …"
+     ],
+     "ex": "If I were her, I’d start looking quietly. I mean, money isn’t everything, but it isn’t nothing."
+    },
+    {
+     "k": "THE BEST AGE",
+     "q": "What’s the best age to be?",
+     "fup": "Why not now?",
+     "st": [
+      "Hmm, let me think. …",
+      "That’s a tough one. …"
+     ],
+     "ex": "Hmm, let me think. Thirty-five, sort of. You know who you are, but you still have energy."
+    },
+    {
+     "k": "THE TALLER ONE",
+     "q": "Who is taller than you in your family?",
+     "fup": "Does it matter?",
+     "st": [
+      "My … is taller than …",
+      "I mean, …"
+     ],
+     "ex": "My brother is taller than me. I mean, by a lot. He never lets me forget it."
+    },
+    {
+     "k": "ONE WISH",
+     "q": "If you could change one thing about your week, what would it be?",
+     "fup": "What stops you?",
+     "st": [
+      "Well, you know, …",
+      "If I could, I’d …"
+     ],
+     "ex": "Well, you know, if I could, I’d have Friday afternoons off. What stops me? My boss."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Don’t stop.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I mean",
+    "you know",
+    "I see your point, but",
+    "If I were you, I’d"
+   ],
+   "rodadas": [
+    {
+     "q": "Fillers: a sign of fluency or of weakness?",
+     "a": "Fluency",
+     "b": "Weakness",
+     "fa": [
+      "Fluency. Native speakers use them all the time; Conchita sounds natural."
+     ],
+     "fb": [
+      "Weakness. In a job interview, every “you know” costs you."
+     ]
+    },
+    {
+     "q": "Silence while thinking: fine or awkward?",
+     "a": "Fine",
+     "b": "Awkward",
+     "fa": [
+      "Fine. A pause shows you’re actually thinking."
+     ],
+     "fb": [
+      "Awkward. In English, three seconds of silence feels like a minute."
+     ]
+    },
+    {
+     "q": "Play your hero in a final: dream or nightmare?",
+     "a": "Dream",
+     "b": "Nightmare",
+     "fa": [
+      "A dream. You’d play the best tennis of your life."
+     ],
+     "fb": [
+      "A nightmare. You’d be too nervous to hit the ball."
+     ]
+    },
+    {
+     "q": "Prepare answers for the press, or stay spontaneous?",
+     "a": "Prepare",
+     "b": "Spontaneous",
+     "fa": [
+      "Prepare. One bad sentence can follow you for years."
+     ],
+     "fb": [
+      "Spontaneous. Prepared answers sound fake, and people notice."
+     ]
+    }
+   ],
+   "fim": "Four rounds. I mean, you know, nobody stopped."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Press Room",
+   "t": "Your big day is tomorrow.",
+   "p": "Answer each step. Buy time, don’t stop.",
+   "prof": "You are the journalist. Ask each step fast; the student must start within two seconds, with a time-buyer.",
+   "passos": [
+    {
+     "q": "What is your big day? A final, an interview, a presentation?",
+     "st": [
+      "Well, you know, it’s …",
+      "It’s sort of …"
+     ],
+     "ex": "Well, you know, it’s a job interview. It’s sort of my dream job."
+    },
+    {
+     "q": "The journalist asks: are you nervous?",
+     "st": [
+      "That’s a good question. …",
+      "I mean, …"
+     ],
+     "ex": "That’s a good question. I mean, a little, but nervous is good."
+    },
+    {
+     "q": "Who would you like to have in your corner?",
+     "st": [
+      "If I could choose, I’d …",
+      "Someone who …"
+     ],
+     "ex": "If I could choose, I’d have my old coach. Someone who keeps me calm."
+    },
+    {
+     "q": "Last question: any advice for someone in your place?",
+     "st": [
+      "If I were them, I’d …",
+      "You know, …"
+     ],
+     "ex": "If I were them, I’d sleep well and, you know, enjoy it."
+    }
+   ],
+   "fim": "Press conference over. Not one dead silence."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

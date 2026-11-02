@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -125,5 +126,266 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Three candidates, one room.",
+   "p": "One question. Then the video. Then the questions."
+  },
+  "descobre": {
+   "t": "Build, don’t interrupt.",
+   "p": "Compare A and B. Which works better? Why?"
+  },
+  "prova": {
+   "t": "Your teacher plays the other candidates.",
+   "p": "Read, prepare, start the clock, discuss."
+  },
+  "cv-escala": {
+   "t": "Four teamwork hot takes.",
+   "p": "Tap 1 to 5. Defend it politely."
+  },
+  "pode": {
+   "t": "Lesson 10: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Entrevista em grupo: concordar, construir sobre a ideia do outro, discordar com educação, gerenciar a vez, convidar quem está quieto e fechar a decisão. Tarefa de hotel com Leo e Mia.",
+  "armadilha": "O português direto vira grosseria: “I don’t agree with you”, “Wait, I want to talk”. E “Like Chloe said” no lugar de “Building on what Chloe said”.",
+  "pal": [
+   "That’s a great point.",
+   "Building on what … said,",
+   "To add to that,",
+   "I see it slightly differently, because…",
+   "Sorry, go ahead.",
+   "Can I add something?",
+   "What do you think, …?",
+   "So, do we all agree on…?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 10 do WOLF HIRED: a entrevista em grupo.",
+   "perg": "Have you ever done a group interview? How did you feel?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "video": {
+   "obj": "Indeed (0:49–4:50): entrevista em grupo simulada com comentários.",
+   "perg": "Which candidate would you hire, and why?",
+   "pula": "O vídeo vai inteiro; duas perguntas depois bastam."
+  },
+  "descobre": {
+   "obj": "Pares A/B: a frase que trabalha em grupo e a que atropela; depois regras e armadilhas.",
+   "perg": "Which one sounds like a team player?",
+   "pula": "Três pares + as armadilhas bastam."
+  },
+  "prova": {
+   "obj": "A tarefa em grupo com relógio: o professor é o Leo (insistente) e a Mia (calada); interrompa de propósito uma vez.",
+   "perg": "Mia hasn’t spoken yet. What do you do?",
+   "pula": "Uma rodada, sem a segunda tentativa."
+  },
+  "cv-escala": {
+   "obj": "Quatro opiniões sobre trabalho em equipe, de 1 a 5, defendidas com educação.",
+   "perg": "Should the leader speak last?",
+   "pula": "Duas opiniões bastam."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; perguntar qual frase soou natural e qual precisa treinar.",
+   "perg": "Which phrase felt most natural today?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre trabalho em equipe real do aluno, com as frases de grupo prontas.",
+   "perg": "Are you the talker or the listener in meetings?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre dinâmica de grupo; o aluno constrói e discorda com educação.",
+   "perg": "Speak first or speak last?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Troca de papel: o aluno é o recrutador que observou a dinâmica e explica a escolha.",
+   "perg": "Who did you hire, and why?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "You in a team.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "Building on…",
+    "I see it slightly differently",
+    "Can I add something?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR ROLE",
+     "q": "In meetings, are you the talker or the listener?",
+     "fup": "Would your team agree?",
+     "st": [
+      "I’m usually the …",
+      "My team would say …"
+     ],
+     "ex": "I’m usually the listener. My team would say I speak at the end, but I speak well."
+    },
+    {
+     "k": "INTERRUPTIONS",
+     "q": "What do you do when someone interrupts you?",
+     "fup": "Is it different in English?",
+     "st": [
+      "I usually say …",
+      "In English, it’s harder because …"
+     ],
+     "ex": "I usually say “Can I finish?” In English, it’s harder because I need more time to think."
+    },
+    {
+     "k": "QUIET PEOPLE",
+     "q": "How do you bring a quiet colleague into the conversation?",
+     "fup": "Has anyone done that for you?",
+     "st": [
+      "I ask: “What do you think, …?”"
+     ],
+     "ex": "I ask: “What do you think, Ana?” A manager once did that for me, and I never forgot."
+    },
+    {
+     "k": "BEST TEAM",
+     "q": "What was the best team you’ve worked on?",
+     "fup": "What made it work?",
+     "st": [
+      "The best team was …",
+      "It worked because …"
+     ],
+     "ex": "The best team was a small project team. It worked because we built on each other’s ideas."
+    },
+    {
+     "k": "DISAGREEING",
+     "q": "How do you disagree with a colleague in a meeting?",
+     "fup": "Do you ever stay quiet instead?",
+     "st": [
+      "I say …",
+      "Sometimes I …"
+     ],
+     "ex": "I say “I see it slightly differently.” Sometimes I just send a message later."
+    },
+    {
+     "k": "DECISIONS",
+     "q": "How does your team make decisions?",
+     "fup": "Is it fast or slow?",
+     "st": [
+      "Usually, …",
+      "So, we all agree on …"
+     ],
+     "ex": "Usually, the manager decides after listening. It’s slow, but people feel heard."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "That’s a great point, but…",
+    "Building on that,",
+    "I see it slightly differently"
+   ],
+   "rodadas": [
+    {
+     "q": "In a group interview: speak first or speak last?",
+     "a": "Speak first",
+     "b": "Speak last",
+     "fa": [
+      "Speak first. You set the direction.",
+      "Recruiters notice who starts."
+     ],
+     "fb": [
+      "Speak last. You can build on everyone’s ideas.",
+      "The best summary usually wins."
+     ]
+    },
+    {
+     "q": "Are group interviews fair?",
+     "a": "Fair",
+     "b": "Unfair",
+     "fa": [
+      "Fair. The job is in a team, so test the team.",
+      "You see real behavior, not prepared answers."
+     ],
+     "fb": [
+      "Unfair. Quiet people lose, even when they’re great.",
+      "It tests confidence, not skill."
+     ]
+    },
+    {
+     "q": "Is interrupting always rude?",
+     "a": "Always rude",
+     "b": "Sometimes necessary",
+     "fa": [
+      "Always rude. Wait for a pause.",
+      "It shows you don’t listen."
+     ],
+     "fb": [
+      "Sometimes necessary. Some people never stop.",
+      "A polite “Can I add something?” is OK."
+     ]
+    },
+    {
+     "q": "Consensus or one person decides?",
+     "a": "Consensus",
+     "b": "One person",
+     "fa": [
+      "Consensus. Everyone commits to the plan.",
+      "Better ideas come from the group."
+     ],
+     "fb": [
+      "One person. Consensus takes forever.",
+      "Someone needs to own the decision."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody interrupted, almost."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the recruiter now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the hotel recruiter who watched the group task.",
+   "perguntas": [
+    "What were you looking for in the group task?",
+    "What did you think of Leo?",
+    "Mia was quiet. Is that a problem?",
+    "Who built on other people’s ideas?",
+    "Who would you hire, and why?",
+    "What advice would you give the other candidates?"
+   ],
+   "st": [
+    "I was looking for someone who …",
+    "Leo had good ideas, but …",
+    "I’d hire … because …"
+   ],
+   "ex": "Leo had good ideas, but he interrupted twice. I’d hire the candidate who asked Mia what she thought."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

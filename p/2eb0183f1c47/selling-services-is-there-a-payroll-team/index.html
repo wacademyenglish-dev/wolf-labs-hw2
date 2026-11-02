@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -135,5 +136,286 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "Do you have calls today?",
+   "p": "Give a short answer. Then ask your teacher."
+  },
+  "leitura": {
+   "t": "A CFO says yes to a call.",
+   "p": "Read it out loud. Answer the questions."
+  },
+  "dialogo": {
+   "t": "Leo asks. The CFO answers, short.",
+   "p": "One question. Listen. Then answer."
+  },
+  "descobre": {
+   "t": "Two questions. Which one is English?",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "transforma": {
+   "t": "Turn the notes into questions.",
+   "p": "Read the note. Say the question. Check."
+  },
+  "escolha": {
+   "t": "A or B? Say why.",
+   "p": "Your teacher answers first. Then you."
+  },
+  "cartao": {
+   "t": "Six questions for your next call.",
+   "p": "Write them. Ask them: your teacher is the CFO."
+  },
+  "pode": {
+   "t": "Lesson 4: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 4: perguntas (Is there / Are there / Do you / Does it) e respostas curtas. A CFO Karen Wells, da Lumen Logistics, aceita uma discovery call.",
+  "armadilha": "Perguntar só com entonação: “You use SAP?” e responder “Yes, I use”. Treine o auxiliar primeiro e a resposta curta que o repete: “Yes, we do.”",
+  "pal": [
+   "Is there a…?",
+   "Are there any…?",
+   "Do you use…?",
+   "Does your team…?",
+   "Yes, there is.",
+   "No, there aren’t.",
+   "Yes, we do.",
+   "discovery call"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 4 de Selling Services: a discovery call com a CFO da Lumen Logistics.",
+   "perg": "Do you call clients in English?",
+   "pula": "Leia o título e siga."
+  },
+  "conversa": {
+   "obj": "Aquecimento: perguntas pessoais com resposta curta; o aluno devolve “And you?”.",
+   "perg": "Do you have calls today?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler o e-mail da Karen Wells em voz alta e responder sobre o sentido.",
+   "perg": "What does Karen want before the call?",
+   "pula": "Pule o Look closer."
+  },
+  "dialogo": {
+   "obj": "Escuta: a discovery call do Leo com a CFO (0.75× é ok).",
+   "perg": "Is there a payroll team?",
+   "pula": "Ouça uma vez e faça duas perguntas."
+  },
+  "descobre": {
+   "obj": "Comparar a pergunta só com entonação e a pergunta com auxiliar.",
+   "perg": "Which question is English? Why?",
+   "pula": "Dois pares bastam."
+  },
+  "transforma": {
+   "obj": "Transformar anotações em perguntas reais com o auxiliar certo.",
+   "perg": "How do you ask about the software?",
+   "pula": "Quatro notas bastam."
+  },
+  "escolha": {
+   "obj": "Conversa A ou B com because; você responde primeiro.",
+   "perg": "Call or email? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "cartao": {
+   "obj": "Escrever seis perguntas de discovery e fazê-las; você é a CFO, curta e ocupada.",
+   "perg": "What is your first question?",
+   "pula": "Quatro perguntas bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can” da unidade.",
+   "perg": "Can you ask a client six questions?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Perguntas e respostas curtas sobre o trabalho real do aluno.",
+   "perg": "Do you use a CRM?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre dois jeitos de vender e dizer o porquê.",
+   "perg": "Which one is better for you?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a Karen Wells e responde curto às perguntas do vendedor.",
+   "perg": "Is there a payroll team?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Questions about your work.",
+   "p": "Pick a card. Give a short answer.",
+   "palavras": [
+    "Is there…?",
+    "Do you…?",
+    "Yes, I do.",
+    "No, there isn’t."
+   ],
+   "cartas": [
+    {
+     "k": "YOUR CLIENTS",
+     "q": "Do you have clients in other countries?",
+     "fup": "Where?",
+     "st": [
+      "Yes, I do. They are in …",
+      "No, I don’t."
+     ],
+     "ex": "Yes, I do. They are in Portugal."
+    },
+    {
+     "k": "YOUR TEAM",
+     "q": "Is there a sales team at your company?",
+     "fup": "How many people are there?",
+     "st": [
+      "Yes, there is. There are …",
+      "No, there isn’t."
+     ],
+     "ex": "Yes, there is. There are four people."
+    },
+    {
+     "k": "YOUR TOOLS",
+     "q": "Do you use a CRM?",
+     "fup": "Is it easy?",
+     "st": [
+      "Yes, I do. It’s …",
+      "No, I don’t. I use …"
+     ],
+     "ex": "No, I don’t. I use a spreadsheet."
+    },
+    {
+     "k": "YOUR CALLS",
+     "q": "Do you have calls every day?",
+     "fup": "Are they in English?",
+     "st": [
+      "Yes, I do.",
+      "No, I don’t. I have …"
+     ],
+     "ex": "No, I don’t. I have calls on Mondays and Thursdays."
+    },
+    {
+     "k": "YOUR OFFICE",
+     "q": "Is there a meeting room in your office?",
+     "fup": "Is it free now?",
+     "st": [
+      "Yes, there is.",
+      "No, there isn’t. I work …"
+     ],
+     "ex": "No, there isn’t. I work from home."
+    },
+    {
+     "k": "YOUR SERVICE",
+     "q": "Does your service help small companies?",
+     "fup": "How?",
+     "st": [
+      "Yes, it does. It …"
+     ],
+     "ex": "Yes, it does. It saves time on payroll."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "short",
+    "fast"
+   ],
+   "rodadas": [
+    {
+     "q": "Send the questions before the call, or not?",
+     "a": "Before",
+     "b": "Not before",
+     "fa": [
+      "Before. The client is ready."
+     ],
+     "fb": [
+      "Not before. The call is more natural."
+     ]
+    },
+    {
+     "q": "A video call or a phone call?",
+     "a": "Video call",
+     "b": "Phone call",
+     "fa": [
+      "Video. I can see the client."
+     ],
+     "fb": [
+      "Phone. It is easy and fast."
+     ]
+    },
+    {
+     "q": "Six questions or three questions?",
+     "a": "Six",
+     "b": "Three",
+     "fa": [
+      "Six. I learn a lot."
+     ],
+     "fb": [
+      "Three. The CFO is busy."
+     ]
+    },
+    {
+     "q": "Call in the morning or in the afternoon?",
+     "a": "Morning",
+     "b": "Afternoon",
+     "fa": [
+      "Morning. People have energy."
+     ],
+     "fb": [
+      "Afternoon. People have time."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Karen Wells now.",
+   "p": "Your teacher is the salesperson.",
+   "aluno": "Listen to your teacher’s question. Answer as Karen, the CFO. Short answers!",
+   "perguntas": [
+    "Is there a payroll team at Lumen?",
+    "Are there any problems with payroll?",
+    "Do you use SAP?",
+    "Does your team work on Saturdays?",
+    "Is there a budget for new software?",
+    "Do you have time for a second call?"
+   ],
+   "st": [
+    "Yes, there is.",
+    "No, we don’t.",
+    "Yes, it does."
+   ],
+   "ex": "Yes, there is. There are three people. No, we don’t use SAP."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

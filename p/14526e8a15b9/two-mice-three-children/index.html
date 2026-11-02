@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Two Mice, Three Children · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Two Mice, Three Children · The Meadow Notebook</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Two Mice, Three Children · The Meadow Notebook</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A naturalist builds a tiny wheat field for one harvest mouse. Day 1: one mouse. Day 80: seventeen mice.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Labels: one mouse, two mice. The plural of nouns, and the words that change.</p><p style="margin:0 0 6px"><b>Short class (about 52 min):</b> I My Home in Numbers · II The Words · III Count Them · IV Day 1 to Day 80 · V The Labels · VI My Notebook · VII OK or Not OK? · VIII Your Pet Shop. Every scene is core; if you’re short on time, keep VII to one round. Full lesson: about 52 min.</p><p style="margin:0"><b>Open with:</b> “How many people live in your house?” The student says a number; you tap + or −. The word changes by itself: 1 person, 3 people.</p></div><!--/prep-->
+    <p><b>A sister lesson.</b> Another A1 lesson in the library teaches the plural too. Use this one as the review of the plural in your course, or as a second lesson for a student who needs more practice.</p>
+    <p>This is an A1 lesson for the nervous beginner. Every question is short and uses only <i>be, have, can</i> and <i>do you…?</i>. A number alone is a good answer. If the student freezes, tap <b>Say it easier</b>: it is help, not a mistake.</p>
+    <p>The grammar: <b>the plural of nouns</b>. Most words take <b>+ s</b> or <b>+ es</b> (<i>cats, boxes</i>); words ending in a consonant + y change to <b>-ies</b> (<i>babies</i>); some words are a new word (<i>man → men, woman → women, child → children, person → people, mouse → mice</i>); some change oo to ee (<i>tooth → teeth, foot → feet, goose → geese</i>); and some don’t change at all (<i>fish, sheep</i>).</p>
+    <h4>THE VIDEO</h4>
+    <p>“I Raised a Family of Tiny Mice (In 80 Days)” (Worcester Terrariums, 12:22). We use four short parts, sealed until you press play; each stops by itself: Day 1 (0:00–0:30, Bernard, a tiny mouse), Day 5 (1:06–1:48, Bianca and Gus arrive: three mice), Day 50 (8:39–9:30, the babies leave the nest) and Day 80 (10:41–11:00, seventeen mice). The narrator speaks fast and with a British accent: don’t ask the student to understand everything. Ask only the counting question on the screen. After the last part, the lesson ends with ONE screen: the video stays on the left (tap a time to see that part again, with no sound), with a specimen label under it; on the right, six True or Lie lines about the four parts. Every right answer adds one mouse to the label (“1 mouse, 2 mice, 3 mice…”). On a Lie the student says the true line (a short answer is fine). When all six are done, the naturalist asks one last question (“Is a mouse a good pet now?”): the student taps an answer and says the sentence out loud. Line by Line covers the first two minutes.</p>
+    <h4>THE PORTUGUESE TRAP</h4>
+    <p>In Portuguese, almost every plural ends in -s, so the student adds -s to everything: <i>two childrens, five peoples, my foots, three mouses, five sheeps</i>. And Portuguese “gente” is singular, so <i>one people</i> sounds natural: in English it is <i>one person</i>, two people.</p>
+    <h4>COUNT THEM AND THE PET SHOP</h4>
+    <p>Scene III comes before the rule: the student counts the animals in each photo and says the sentence. Any number they count is fine; listen to the word after the number, and tap the version you heard. In the last scene the student opens a pet shop: they choose how many mice, fish, puppies, rabbits and geese; the sign shows the right word. Then ask the three questions. The last one is a joke from the video: the mice have babies!</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>two childrens</i>, <i>five peoples</i>, <i>one people</i>, <i>my foots</i>, <i>three mouses</i>, <i>five sheeps</i>, <i>babys</i>, and a number with a singular word: <i>three child</i>. A1: one correction per answer is enough.</p>
+    <!--conversa--><h4>OK OR NOT OK? (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Before the pet shop, three light choices about animals at home: cats on the kitchen table, three dogs in the bed, two mice in the office. Green is OK, red is not OK; there is no right answer. Answer first yourself, then let your student choose and say it with the plural. Wait five seconds in silence, then use the PUSH line (only you see it): one word. Recast the plurals quietly while they talk; at the end, ask them to fix one sentence themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I My Home in Numbers, III Count Them, VII OK or Not OK? and VIII Your Pet Shop.</li>
+      <li><b>Listen</b>: II The Words, IV Day 1 to Day 80.</li>
+      <li><b>Focus</b>: V The Labels.</li>
+      <li><b>Write</b>: VI My Notebook.</li>
+    </ul>
+<!--falas-->
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* TWO MICE, THREE CHILDREN (Main A1) · pergunta-surpresa · 27/10/2026 · os plurais */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'conta', tipo: 'And you?', q: 'How many pillows are on your bed?',
+    opc: ['One', 'Two', 'Lots!'], st: ['I have … pillows.', 'I have one pillow.'],
+    ex: 'Four pillows! I love pillows.', push: 'And blankets? One?' },
+  { cena: 'video', tipo: 'Would you rather', q: 'Two mice or two fish?',
+    opc: ['Two mice', 'Two fish'], st: ['Two mice. They are cute.', 'Two fish. They are quiet.'],
+    ex: 'Two fish. Fish are quiet!', push: 'Seventeen fish? Yes or no?' },
+  { cena: 'regra', tipo: 'And you?', q: 'Children on your street: many?',
+    opc: ['A lot', 'A few', 'No children'], st: ['There are … children.'],
+    ex: 'A lot! There are ten children on my street.', push: 'Noisy? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* TWO MICE, THREE CHILDREN (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "OK / Not OK" (semáforo de 2 cores) no lugar de "VIII · Quick Check" (extra, completar lacuna; a regra fica no VI).
+   Bichos em casa, no dia a dia: gatos na mesa, cachorros na cama, ratinhos no escritório. Nada de certo ou errado.
+   A1 bem leve: duas opções, frase quase pronta, o professor responde primeiro.
+   A gramática da aula (os plurais: cats, mice, feet, people, children) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'okounao', troca: 'quiz', est: 'o', min: 5, img: 'caixa', rot: 'OK or Not OK?', t: 'Animals at home. OK, or not OK?',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The kitchen', sit: 'Your friend has two cats.', q: 'Cats on the kitchen table?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. Cats are clean.', 'Not OK! Cats on the table!'],
+        ex: 'Not OK! Two cats on the table? No!',
+        push: 'One small fish? OK?' },
+      { tag: 'The bed', q: 'Three dogs in your bed?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK! Three dogs, one bed.', 'Not OK. Dogs have big feet!'],
+        ex: 'Not OK! Three dogs have twelve feet!',
+        push: 'One puppy? OK?' },
+      { tag: 'The office', q: 'Two mice in the office?',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. Mice are small.', 'Not OK! People don’t like mice.'],
+        ex: 'OK, in a box. Mice are cute!',
+        push: 'Seventeen mice? OK?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "How many? Count your life.",
+   "p": "Answer with a number. Does the word change?"
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen: they turn yellow."
+  },
+  "conta": {
+   "t": "Five photos. Count the animals.",
+   "p": "Count out loud. Say: “There are … mice.”"
+  },
+  "video": {
+   "t": "Day 1: one mouse. Day 80?",
+   "p": "Answer first. Watch four parts. Then True or Lie."
+  },
+  "regra": {
+   "t": "One mouse, two mice.",
+   "p": "Read the labels. Then fix the four traps."
+  },
+  "escreve": {
+   "t": "Your home, in numbers.",
+   "p": "Write three short lines. People? Pets? Rooms?"
+  },
+  "cv-okounao": {
+   "t": "Animals at home. OK or not OK?",
+   "p": "Choose. Your teacher goes first. Then say it."
+  },
+  "fim": {
+   "t": "Open your own pet shop.",
+   "p": "Choose your animals. Say: “I have three mice …”"
+  }
+ },
+ "prep": {
+  "obj": "Plural dos substantivos, inclusive os que mudam (mouse/mice, child/children, person/people, foot/feet). Um naturalista e seu ratinho: dia 1, um; dia 80, dezessete.",
+  "armadilha": "O português põe -s em tudo: “childrens”, “mouses”, “foots”, “sheeps”. E “gente” é singular, então “one people” soa natural: é one person, two people.",
+  "pal": [
+   "mouse / mice",
+   "child / children",
+   "person / people",
+   "foot / feet",
+   "tooth / teeth",
+   "fish",
+   "sheep",
+   "babies"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o caderno do naturalista: um ratinho que vira uma família em 80 dias.",
+   "perg": "Do you like small animals?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "voce": {
+   "obj": "Aquecimento com números da casa do aluno; a palavra muda sozinha no plural.",
+   "perg": "How many people live in your house?",
+   "pula": "Três perguntas bastam."
+  },
+  "palavras": {
+   "obj": "Pré-ensina cinco palavras do vídeo antes de assistir.",
+   "perg": "Which word is new for you?",
+   "pula": "Só o match das colunas."
+  },
+  "conta": {
+   "obj": "Contar os animais das fotos antes da regra; ouvir a palavra depois do número.",
+   "perg": "How many mice are there?",
+   "pula": "Três fotos bastam."
+  },
+  "video": {
+   "obj": "Quatro trechos do vídeo (dia 1 ao 80); só a pergunta de contar, depois True or Lie.",
+   "perg": "How many mice are there on day 80?",
+   "pula": "Quatro linhas do True or Lie bastam."
+  },
+  "regra": {
+   "obj": "As etiquetas da regra: -s, -es, -ies, palavras novas e as que não mudam.",
+   "perg": "One child, two …?",
+   "pula": "Corrija duas armadilhas."
+  },
+  "escreve": {
+   "obj": "Escrita curta: a casa do aluno em números, com plurais certos.",
+   "perg": "How many rooms are there in your home?",
+   "pula": "Duas linhas bastam."
+  },
+  "cv-okounao": {
+   "obj": "Três situações com animais em casa; o aluno escolhe e fala com o plural.",
+   "perg": "Two mice in the office: OK or not OK?",
+   "pula": "Uma rodada basta."
+  },
+  "fim": {
+   "obj": "O aluno monta um pet shop e diz quantos animais tem; a placa mostra a palavra certa.",
+   "perg": "How many mice and fish do you have?",
+   "pula": "Pule as perguntas finais. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra com números e plurais da vida do aluno.",
+   "perg": "How many children are there in your family?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois animais, sempre no plural.",
+   "perg": "Cats or dogs?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o naturalista e responde sobre os ratos com plurais.",
+   "perg": "How many mice do you have now?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More numbers in your life.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "people",
+    "children",
+    "mice",
+    "feet",
+    "teeth"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FAMILY",
+     "q": "How many people are there in your family?",
+     "fup": "How many children?",
+     "st": [
+      "There are … people.",
+      "There are … children."
+     ],
+     "ex": "There are six people in my family. There are two children."
+    },
+    {
+     "k": "YOUR PETS",
+     "q": "Do you have pets?",
+     "fup": "How many?",
+     "st": [
+      "I have two …",
+      "I don’t have pets."
+     ],
+     "ex": "I have two cats and three fish."
+    },
+    {
+     "k": "YOUR STREET",
+     "q": "Are there animals on your street?",
+     "fup": "Are there mice?",
+     "st": [
+      "There are some …",
+      "There are no …"
+     ],
+     "ex": "There are some dogs. There are no mice, I hope."
+    },
+    {
+     "k": "YOUR WORK",
+     "q": "How many people work with you?",
+     "fup": "Are there men and women?",
+     "st": [
+      "… people work with me.",
+      "There are … men and … women."
+     ],
+     "ex": "Ten people work with me. There are four men and six women."
+    },
+    {
+     "k": "YOUR SHOES",
+     "q": "How many pairs of shoes do you have?",
+     "fup": "Are your feet big or small?",
+     "st": [
+      "I have … pairs.",
+      "My feet are …"
+     ],
+     "ex": "I have five pairs. My feet are big."
+    },
+    {
+     "k": "THE FARM",
+     "q": "Do you know a farm? What animals are there?",
+     "fup": "Are there sheep?",
+     "st": [
+      "There are …",
+      "There are no …"
+     ],
+     "ex": "My uncle has a farm. There are sheep, geese and two horses."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "mice",
+    "children",
+    "people"
+   ],
+   "rodadas": [
+    {
+     "q": "Two cats or two dogs?",
+     "a": "Two cats",
+     "b": "Two dogs",
+     "fa": [
+      "Two cats. They are quiet."
+     ],
+     "fb": [
+      "Two dogs. They love people."
+     ]
+    },
+    {
+     "q": "Mice: cute or scary?",
+     "a": "Cute",
+     "b": "Scary",
+     "fa": [
+      "Cute. Their feet are tiny."
+     ],
+     "fb": [
+      "Scary. They have big teeth."
+     ]
+    },
+    {
+     "q": "A house with children or a quiet house?",
+     "a": "With children",
+     "b": "Quiet",
+     "fa": [
+      "With children. It is happy."
+     ],
+     "fb": [
+      "Quiet. I can read."
+     ]
+    },
+    {
+     "q": "Fish in a tank or birds in a cage?",
+     "a": "Fish",
+     "b": "Birds",
+     "fa": [
+      "Fish. They are easy."
+     ],
+     "fb": [
+      "Birds. They sing."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the naturalist now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the naturalist.",
+   "perguntas": [
+    "How many mice are there on day one?",
+    "How many mice are there on day eighty?",
+    "What are the names of the first mice?",
+    "Where do the babies live?",
+    "Do the mice have big teeth?",
+    "Is a mouse a good pet?"
+   ],
+   "st": [
+    "There is one …",
+    "There are … mice.",
+    "They have …"
+   ],
+   "ex": "On day one there is one mouse, Bernard. On day eighty there are seventeen mice."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

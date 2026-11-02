@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -120,5 +121,316 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "Who signs the contracts at your company?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "A client’s “Our team” page.",
+   "p": "Read it out loud. Answer the questions."
+  },
+  "separa": {
+   "t": "Decides or influences?",
+   "p": "Say why. Then tap."
+  },
+  "descobre": {
+   "t": "“Who signs?”, not “Who does sign?”",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "multipla": {
+   "t": "Six people talk about their job.",
+   "p": "Listen. Who is it? Say “She’s the …”."
+  },
+  "cliente": {
+   "t": "But who decides?",
+   "p": "Ask who, what, where, when. Find the boss."
+  },
+  "conta": {
+   "t": "Fill in one client’s board.",
+   "p": "Real or invented client. Then present it."
+  },
+  "cartao": {
+   "t": "A real client’s team, in sentences.",
+   "p": "Who decides, influences, uses. Say it."
+  },
+  "pode": {
+   "t": "Lesson 20: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 20: has / have, perguntas com who sujeito (Who signs?), What / Where + does e cargos. Achar quem decide na Cobalt e na Fenwick (o Sam é só o controller).",
+  "armadilha": "“Who does sign?” (who sujeito não leva do), “she have”, “Where she works?” e “Does she has…?”.",
+  "pal": [
+   "Who signs the contract?",
+   "Who has the budget?",
+   "What does he do?",
+   "Where does she work?",
+   "Who else is in the decision?",
+   "CFO",
+   "controller",
+   "procurement",
+   "decision maker"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 20 de Selling Services: achar quem decide no cliente.",
+   "perg": "Who signs the contracts at your company?",
+   "pula": "Leia o título e siga."
+  },
+  "conversa": {
+   "obj": "Aquecimento: quem decide na empresa do aluno; ele devolve “And you?”.",
+   "perg": "Does your boss have a big team?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler a página “Our team” da Cobalt Home Goods e responder sobre o sentido.",
+   "perg": "Who has the budget?",
+   "pula": "Pule o Look closer."
+  },
+  "separa": {
+   "obj": "Separar oito pessoas e fatos entre quem decide e quem influencia.",
+   "perg": "Does this person decide or influence?",
+   "pula": "Cinco itens bastam."
+  },
+  "descobre": {
+   "obj": "Comparar “Who does sign?” e “Who signs?” e ver a regra.",
+   "perg": "Who signs, or who does sign?",
+   "pula": "Dois pares bastam."
+  },
+  "multipla": {
+   "obj": "Escuta: seis pessoas falam do trabalho; adivinhar o cargo.",
+   "perg": "What does she do?",
+   "pula": "Quatro áudios bastam."
+  },
+  "cliente": {
+   "obj": "O cliente misterioso: você é o Sam Porter, empolgado, mas só o controller.",
+   "perg": "What do you do, Sam?",
+   "pula": "Garanta a pergunta “What do you do?”."
+  },
+  "conta": {
+   "obj": "Preencher o quadro de um cliente real (sem dados secretos) ou inventado.",
+   "perg": "Who uses the system?",
+   "pula": "Só quem decide e quem paga."
+  },
+  "cartao": {
+   "obj": "Escrever o time do cliente em frases e apresentar em voz alta.",
+   "perg": "Who decides at your client?",
+   "pula": "Três frases bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can” da unidade.",
+   "perg": "Can you find the decision maker?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Perguntas com who / what / where sobre a empresa real do aluno.",
+   "perg": "Who has the budget at your company?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas estratégias de venda e dizer o porquê.",
+   "perg": "Which one would you do?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Planejar, em passos, a reunião com quem decide.",
+   "perg": "Who will you invite?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Who is who at your company?",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "Who…?",
+    "has",
+    "What does … do?",
+    "Where does … work?"
+   ],
+   "cartas": [
+    {
+     "k": "THE BOSS",
+     "q": "Who is your boss? What does he or she do?",
+     "fup": "Does he or she have a big team?",
+     "st": [
+      "My boss is …",
+      "She has …"
+     ],
+     "ex": "My boss is Paula. She’s the sales manager. She has a team of eight."
+    },
+    {
+     "k": "THE BUDGET",
+     "q": "Who has the budget at your company?",
+     "fup": "Is it the CEO or the CFO?",
+     "st": [
+      "The … has the budget."
+     ],
+     "ex": "The CFO has the budget."
+    },
+    {
+     "k": "SIGNING",
+     "q": "Who signs the contracts?",
+     "fup": "Do you sign anything?",
+     "st": [
+      "The … signs them.",
+      "I sign …"
+     ],
+     "ex": "The CEO signs them. I sign small orders."
+    },
+    {
+     "k": "A COLLEAGUE",
+     "q": "Where does your best colleague work?",
+     "fup": "What does she or he do?",
+     "st": [
+      "She works in …",
+      "He’s a / an …"
+     ],
+     "ex": "She works in the finance team. She’s a controller."
+    },
+    {
+     "k": "YOUR CLIENT",
+     "q": "Who is your favorite client contact?",
+     "fup": "Does that person decide?",
+     "st": [
+      "My favorite contact is …",
+      "He decides / He doesn’t decide."
+     ],
+     "ex": "My favorite contact is Mark. He doesn’t decide, but he helps me."
+    },
+    {
+     "k": "YOUR TOOLS",
+     "q": "Who uses the system at your company?",
+     "fup": "Who chose it?",
+     "st": [
+      "The … team uses it.",
+      "… chose it."
+     ],
+     "ex": "The sales team uses it. The IT manager chose it."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "decides",
+    "has"
+   ],
+   "rodadas": [
+    {
+     "q": "Talk to the friendly contact, or go to the boss?",
+     "a": "The friendly contact",
+     "b": "The boss",
+     "fa": [
+      "The friendly contact. He helps me."
+     ],
+     "fb": [
+      "The boss. The boss signs."
+     ]
+    },
+    {
+     "q": "Ask “What do you do?” in the first call, or later?",
+     "a": "First call",
+     "b": "Later",
+     "fa": [
+      "First call. I need to know who decides."
+     ],
+     "fb": [
+      "Later. It’s more polite."
+     ]
+    },
+    {
+     "q": "Send the proposal to one person or to the whole team?",
+     "a": "One person",
+     "b": "The whole team",
+     "fa": [
+      "One person. It’s simple."
+     ],
+     "fb": [
+      "The whole team. Everybody sees it."
+     ]
+    },
+    {
+     "q": "Meet the CFO or the IT manager first?",
+     "a": "The CFO",
+     "b": "The IT manager",
+     "fa": [
+      "The CFO. She has the budget."
+     ],
+     "fb": [
+      "The IT manager. He uses the system."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Plan the Meeting",
+   "t": "Plan a meeting with the decision maker.",
+   "p": "One step at a time. Say it out loud.",
+   "prof": "Use the client from the Account Board or Fenwick Packaging. Short sentences with has, who, where and when.",
+   "passos": [
+    {
+     "q": "Who signs at this client?",
+     "st": [
+      "The … signs.",
+      "Her name is …"
+     ],
+     "ex": "The CFO signs. Her name is Linda."
+    },
+    {
+     "q": "Who else is in the decision?",
+     "st": [
+      "The … has …",
+      "… uses …"
+     ],
+     "ex": "The IT manager uses the system, so he is in the decision too."
+    },
+    {
+     "q": "Where and when is the meeting?",
+     "st": [
+      "The meeting is at … on …"
+     ],
+     "ex": "The meeting is at their office on Tuesday at ten."
+    },
+    {
+     "q": "What is your first question?",
+     "st": [
+      "Who …?",
+      "What does …?"
+     ],
+     "ex": "Who has the final word on the budget?"
+    }
+   ],
+   "fim": "Now you talk to the right person."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "They Might Have Left by Boat",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c8feb6da74ab/they-might-have-left-by-boat/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "guessing about the past: must have (almost sure), may / might / could have (possible), can't / couldn't have (impossible) + past participle; never must to have, might have went, mustn't have",
   "abrir": "Think of something that went missing at home. What do you think happened to it?",
   "fecho": "Guess about the past with <b>have + past participle</b>. <b>Must have gone</b>: almost sure. <b>Might / may / could have gone</b>: possible. <b>Can't have gone</b>: impossible. Never <i>must to have</i>, never <i>might have went</i>, and never <i>mustn't have</i> for impossible.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the lake house. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c8feb6da74ab/they-might-have-left-by-boat/img/live-barco.webp",
+      "img": "../img/live-barco.webp",
       "leg": "The boathouse",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -114,17 +114,17 @@ window.HW2 = {
         {
           "t": "Somebody must have taken the boat early.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/c8feb6da74ab/they-might-have-left-by-boat/img/live-barco.webp"
+          "img": "../img/live-barco.webp"
         },
         {
           "t": "Tom can't have borrowed it. He is in Chicago.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/c8feb6da74ab/they-might-have-left-by-boat/img/live-cabana.webp"
+          "img": "../img/live-cabana.webp"
         },
         {
           "t": "They may have rowed to the island.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/c8feb6da74ab/they-might-have-left-by-boat/img/live-ilha.webp"
+          "img": "../img/live-ilha.webp"
         }
       ]
     },
@@ -174,7 +174,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c8feb6da74ab/they-might-have-left-by-boat/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "The dock at dawn",
       "pede": "Look at the picture: a quiet dock at dawn. Something is missing from your home, your street or your work. Say what must have, might have or can't have happened.",
       "ph": "Somebody might have …",

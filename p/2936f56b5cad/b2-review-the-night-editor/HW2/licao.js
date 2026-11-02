@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Night Editor",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2936f56b5cad/b2-review-the-night-editor/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the passive that reports: is said / thought / believed / expected to + verb (to have + participle for the past), it is believed that; modal passives (must be approved, could have been avoided); have / get something done (a service, with the participle)",
   "abrir": "What is your city or town said to be famous for?",
   "fecho": "<b>Is said / thought / believed / expected to</b> + verb. For the past: <b>to have + participle</b> (<i>is said to have stopped</i>). <b>It is believed that</b> + a full clause. A modal passive: <b>must be approved</b>, <b>could have been avoided</b>. <b>Have / get</b> something + participle: <i>get the story checked</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a newspaper, ten minutes before midnight. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2936f56b5cad/b2-review-the-night-editor/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The rooftop",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The clock is said to have stopped at midnight.",
-          "img": "https://wolf-labs.pages.dev/p/2936f56b5cad/b2-review-the-night-editor/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The tower is thought to be two hundred years old.",
-          "img": "https://wolf-labs.pages.dev/p/2936f56b5cad/b2-review-the-night-editor/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The repairs must be approved by the council on Friday.",
-          "img": "https://wolf-labs.pages.dev/p/2936f56b5cad/b2-review-the-night-editor/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2936f56b5cad/b2-review-the-night-editor/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A city at night, from a rooftop",
       "pede": "Look at the picture: a city at night, seen from a rooftop. You are the night editor. Write a headline and one or two lines about something in a city. Use <b>is said to</b>, <b>is thought to</b>, <b>is expected to</b> or <b>it is believed that</b>.",
       "ph": "Old Bridge Is Said to …",

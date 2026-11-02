@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Somebody Took My Bag · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Somebody Took My Bag · The Halloween Party</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Somebody Took My Bag · The Halloween Party</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> The Halloween party in Mia’s building is over, and her bag (with her keys) is gone.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: Somebody, anybody, nobody, everybody.</p><p style="margin:0 0 6px"><b>Short class (about 43 min):</b> I Party Talk · II Do Not Disturb · III The Rule · IV The Search · V Six Guests · VIII The Group Chat. Skip if you’re short on time: VI, VII (marked EXTRA on your screen). Full lesson: about 56 min.</p><p style="margin:0"><b>Open with:</b> “Do you like big parties or small ones?”</p></div><!--/prep-->
+    <p>The Halloween party in Mia’s building is over, and her bag (with her keys) is gone. Everybody was wearing a costume and nobody saw anything. The student searches the apartment and questions the guests. The grammar is <b>some- / any- / no- + -body, -thing, -where</b>: <b>some-</b> in positive sentences, <b>any-</b> in questions and with <i>not</i>, <b>no-</b> is already negative (one negative is enough), and <b>everybody / somebody</b> take a singular verb. The twist: <i>Nobody took it</i>. The bag was under the candy in the cauldron all the time.</p>
+    <h4>THE TRAILER</h4>
+    <p>Scene II: <i>Hotel Transylvania</i> (2012). Before, during and after. During the trailer, the student listens for Dracula’s line: <i>It’s just a normal hotel, nothing going on here.</i> After it, the last step is ONE screen: the trailer stays on the left (tap a time to hear that moment again), with six lesson photos under it (the hotel rooms); on the right, six True or Lie lines (three have a time button: 0:42, 1:13 and 1:28, the only lines checked in the trailer). Every right answer opens a room. On a Lie the student says the true line. When all six are done, Dracula asks one last question (“Did you see anybody?”): the student taps an answer and says the sentence out loud, with somebody, anybody, nobody or something.</p>
+    <h4>THE SEARCH · THE GUESTS</h4>
+    <p>Scene IV: six rooms on the floor plan. The student taps a room, reads what’s there and says it (<i>There isn’t anything in the kitchen</i>); you tap the version you heard. The hall is the last clue. Scene V: the student asks each guest a question (<i>Did you see anybody near the bag?</i>) and you answer as the guest.</p>
+    <h4>TRICK OR TREAT</h4>
+    <p>Scene VI: a short story about where trick-or-treating comes from (the Scottish and Irish “guising”). Read it out loud, then the four questions.</p>
+    <h4>THE MISTAKES</h4>
+    <p><i>There isn’t nothing</i>, <i>Nobody didn’t see</i>, <i>There’s anybody in the bathroom</i>, <i>Everybody are</i>, <i>Somebodies</i>, <i>Every people</i>.</p>
+    <!--conversa--><h4>THE MORNING AFTER (VII) AND THE SURPRISE QUESTION</h4>
+    <p>A short hot seat after the twist: your student is Mia, and you are Mrs. Park from 2B, a little annoyed because everybody looked for an hour. Ask the four questions (Next question), let them answer in the role with somebody / anything / nobody, wait five seconds in silence, then use the PUSH line (only you see it). They close by choosing how Mia says sorry. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Party Talk, IV The Search, V Six Guests.</li>
+      <li><b>Listen</b>: II Do Not Disturb, VI Trick or Treat?</li>
+      <li><b>Focus</b>: III The Rule, VII The Morning After.</li>
+      <li><b>Write</b>: VIII, a message to the building’s group chat. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="chat"></script>
+<script src="focus.js"></script>
+<script src="capa.js" data-capa="jornal"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* SOMEBODY TOOK MY BAG (Main A2) · pergunta-surpresa · 27/10/2026 · some- / any- / no- / every- */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'video', tipo: 'Would you rather', q: 'A weekend in a hotel only for monsters: would you rather be a guest or work there?',
+    opc: ['A guest', 'Work there'], st: ['I’d rather …, because nobody …', 'Everybody there is …'],
+    ex: 'A guest! Everybody there is strange, but nobody asks you to work.', push: 'Which monster do you want as your roommate?' },
+  { cena: 'busca', tipo: 'And you?', q: 'Is there anything in your bag right now that nobody knows about?',
+    opc: ['Yes, something strange', 'No, nothing special', 'I don’t have a bag!'], st: ['There’s something …', 'There isn’t anything …'],
+    ex: 'Yes, something strange: there’s a tiny screwdriver. I don’t know why!', push: 'Open your bag now. Is there anything you forgot?' },
+  { cena: 'convidados', tipo: 'Opinion', q: 'Before the end: who do you think took the bag?',
+    opc: ['The Pirate', 'The Witch', 'Nobody!'], st: ['I think somebody …', 'I think nobody …'],
+    ex: 'I think nobody took it. Somebody put it somewhere and forgot.', push: 'Bet one chocolate. Still the same answer?' },
+  { cena: 'historia', tipo: 'What if', q: 'Children knock on your door tonight: “Trick or treat!” You have no candy. What do you give them?',
+    opc: ['Something from the kitchen', 'A song', 'Nothing: I hide!'], st: ['I give them something …', 'I don’t have anything, so …'],
+    ex: 'Something from the kitchen. I don’t have any candy, but I have some bananas!', push: 'They don’t want bananas. What now?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SOMEBODY TOOK MY BAG (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Cadeira quente curta no lugar de "VII · Quick Check" (extra; prática controlada de tocar a palavra).
+   Depois da virada (a bolsa estava no caldeirão, ninguém a pegou), o aluno é a Mia na manhã seguinte
+   e responde à síndica do prédio. Gramática da aula nos iniciadores: some- / any- / no- / every-. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'cadeira', troca: 'quiz', est: 'o', min: 7, img: 'corredor', rot: 'The Morning After', t: 'You are Mia. The building has questions.',
+    p: 'Your teacher is Mrs. Park, from the building. Answer in your role with somebody, anything, nobody… Then choose how you say sorry.',
+    formato: 'papel',
+    aluno: { quem: 'Mia, the host', quer: 'Explain what happened and say sorry, nicely.' },
+    prof: { quem: 'Mrs. Park, from 2B', quer: 'She wants the whole story.', limite: 'Play a little annoyed: everybody looked for an hour. Smile at the end if the sorry is good.' },
+    rot_perg: 'Mrs. Park asks',
+    perguntas: [
+      { q: 'So, Mia. Where was the bag the whole time?', ex: 'In the cauldron, under the candy. Nobody took it. I put it there!' },
+      { q: 'Did you look anywhere before you called everybody?', ex: 'No, I didn’t look anywhere. I was nervous, and I didn’t think.' },
+      { q: 'Is anything missing from the bag?', ex: 'No, nothing is missing. Everything is there: my keys, my phone and some candy.' },
+      { q: 'Will you have another party next year?', ex: 'Yes! But this time nobody puts anything in the cauldron. Only candy.' }
+    ],
+    st: ['Nobody …', 'I didn’t … anything / anywhere.', 'Everybody was …', 'I’m sorry. Next time I’ll …'],
+    push: 'Everybody looked for an hour. Is “sorry” enough? What else will you do?',
+    acordo: { tag: 'How Mia says sorry', q: 'Choose one. Say it to Mrs. Park.',
+      opc: ['A cake for everybody', 'Free candy at my door', 'I clean the hall'],
+      st: ['I can make something for everybody.', 'Nobody has to …'],
+      ex: 'I can bake a cake for everybody, and nobody has to bring anything.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "You and parties.",
+   "p": "Read each message. Answer out loud."
+  },
+  "video": {
+   "t": "A hotel only for monsters.",
+   "p": "Watch the trailer. Then True or Lie."
+  },
+  "regra": {
+   "t": "Somebody, anybody, nobody, everybody.",
+   "p": "Say each trap the right way. Then tap it."
+  },
+  "busca": {
+   "t": "Six rooms. Where is the bag?",
+   "p": "Tap a room. Say what you see."
+  },
+  "convidados": {
+   "t": "Six guests in costumes.",
+   "p": "Ask each guest. Your teacher answers."
+  },
+  "historia": {
+   "t": "Where does trick-or-treating come from?",
+   "p": "Listen to the story. Then answer."
+  },
+  "cv-cadeira": {
+   "t": "You are Mia. Mrs. Park has questions.",
+   "p": "Answer as Mia. Then choose how to say sorry."
+  },
+  "fim": {
+   "t": "Tell the building what happened.",
+   "p": "Write four or five sentences. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Some-/any-/no-/every- + body/thing/where: a festa de Halloween acabou e a bolsa da Mia sumiu; todo mundo estava fantasiado e ninguém viu nada.",
+  "armadilha": "O português aceita negação dupla (“ninguém não viu”), então sai “Nobody didn’t see” e “There isn’t nothing”; e “todo mundo são” vira “Everybody are”.",
+  "pal": [
+   "somebody",
+   "anybody",
+   "nobody",
+   "everybody",
+   "something",
+   "anything",
+   "nothing",
+   "costume",
+   "bag"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: a festa acabou e a bolsa da Mia, com as chaves, sumiu.",
+   "perg": "Do you like big parties or small ones?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o aluno e as festas, por mensagens.",
+   "perg": "Do you like big parties or small ones?",
+   "pula": "Duas mensagens bastam."
+  },
+  "video": {
+   "obj": "Trailer de Hotel Transylvania antes, durante e depois; True or Lie com a fala do Drácula.",
+   "perg": "Did you see anybody strange in the hotel?",
+   "pula": "Corte o antes; faça só o True or Lie."
+  },
+  "regra": {
+   "obj": "A regra: some- no positivo, any- na pergunta e com not, no- já é negativo.",
+   "perg": "Is it anybody or nobody here? Why?",
+   "pula": "Três armadilhas bastam."
+  },
+  "busca": {
+   "obj": "Procurar a bolsa em seis cômodos e dizer o que há (There isn’t anything…).",
+   "perg": "Is there anything in the kitchen?",
+   "pula": "Quatro cômodos; não corte o hall (última pista)."
+  },
+  "convidados": {
+   "obj": "Interrogar os convidados com perguntas de anybody/anything.",
+   "perg": "Did you see anybody near the bag?",
+   "pula": "Três convidados bastam."
+  },
+  "historia": {
+   "obj": "Leitura: a origem do trick-or-treating (o guising escocês e irlandês).",
+   "perg": "Where does trick-or-treating come from?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-cadeira": {
+   "obj": "Hot seat: o aluno é a Mia e responde à Mrs. Park, um pouco irritada.",
+   "perg": "Did anybody take your bag, Mia?",
+   "pula": "Cena extra: duas perguntas e o pedido de desculpas."
+  },
+  "fim": {
+   "obj": "Escrita: mensagem para o grupo do prédio contando o que aconteceu.",
+   "perg": "Where was the bag all the time?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com somebody, anything, nobody, everywhere sobre a vida do aluno.",
+   "perg": "Did you lose anything this year?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre festas e objetos perdidos, com as palavras da aula.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta, em passos, uma vez em que perdeu algo, com some-/any-/no-.",
+   "perg": "What did you lose, and where was it?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Somebody, anything, nobody: your life.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "somebody",
+    "anybody",
+    "nobody",
+    "everybody",
+    "something",
+    "anything",
+    "nothing"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR PARTIES",
+     "q": "Is there anybody in your family who loves parties?",
+     "fup": "What does that person do at parties?",
+     "st": [
+      "Yes, somebody …",
+      "No, nobody …"
+     ],
+     "ex": "Yes, my cousin. She dances with everybody."
+    },
+    {
+     "k": "YOUR BAG",
+     "q": "Is there anything strange in your bag today?",
+     "fup": "Why is it there?",
+     "st": [
+      "There is something …",
+      "There isn’t anything …"
+     ],
+     "ex": "There is something strange: an old candy from last week."
+    },
+    {
+     "k": "LOST THINGS",
+     "q": "Did you lose anything last year?",
+     "fup": "Did anybody find it?",
+     "st": [
+      "I lost …",
+      "Nobody found it.",
+      "Somebody found it in …"
+     ],
+     "ex": "I lost my keys, and somebody found them in the car."
+    },
+    {
+     "k": "COSTUMES",
+     "q": "Did you ever wear a costume?",
+     "fup": "Did anybody know it was you?",
+     "st": [
+      "Yes, I was …",
+      "No, I never …"
+     ],
+     "ex": "Yes, I was a vampire, and nobody knew it was me."
+    },
+    {
+     "k": "YOUR BUILDING",
+     "q": "Do you know anybody in your building or street?",
+     "fup": "Who is the most interesting?",
+     "st": [
+      "I know everybody …",
+      "I don’t know anybody …"
+     ],
+     "ex": "I don’t know anybody, but everybody says hello."
+    },
+    {
+     "k": "YOUR WEEKEND",
+     "q": "Do you want to go anywhere this weekend?",
+     "fup": "With somebody, or alone?",
+     "st": [
+      "I want to go somewhere …",
+      "I don’t want to go anywhere."
+     ],
+     "ex": "I don’t want to go anywhere. I want to sleep."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "everybody",
+    "nobody",
+    "something"
+   ],
+   "rodadas": [
+    {
+     "q": "A big party or a small party?",
+     "a": "Big",
+     "b": "Small",
+     "fa": [
+      "Big, because everybody can come."
+     ],
+     "fb": [
+      "Small, because I know everybody there."
+     ]
+    },
+    {
+     "q": "A costume party: wear a costume or go as you are?",
+     "a": "Costume",
+     "b": "As I am",
+     "fa": [
+      "A costume, because nobody knows me."
+     ],
+     "fb": [
+      "As I am. I don’t want to wear anything strange."
+     ]
+    },
+    {
+     "q": "You lose your bag at a party. Ask everybody or look alone?",
+     "a": "Ask everybody",
+     "b": "Look alone",
+     "fa": [
+      "Ask everybody. Somebody saw something."
+     ],
+     "fb": [
+      "Look alone. I don’t want to bother anybody."
+     ]
+    },
+    {
+     "q": "Halloween in Brazil: yes or no?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Everybody likes candy."
+     ],
+     "fb": [
+      "No. We have something better: Festa Junina."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Story",
+   "t": "The day you lost something.",
+   "p": "Answer each step. Tell it like Mia.",
+   "prof": "Push for some-/any-/no- in every answer; recast double negatives quietly.",
+   "passos": [
+    {
+     "q": "What did you lose, and where were you?",
+     "st": [
+      "I lost my … at …"
+     ],
+     "ex": "I lost my phone at a restaurant."
+    },
+    {
+     "q": "Did you ask anybody? What did they say?",
+     "st": [
+      "I asked …, but nobody …",
+      "Somebody said …"
+     ],
+     "ex": "I asked the waiter, but nobody saw anything."
+    },
+    {
+     "q": "Where did you look?",
+     "st": [
+      "I looked everywhere: …",
+      "I didn’t look anywhere …"
+     ],
+     "ex": "I looked everywhere: under the table, in the bathroom, in my car."
+    },
+    {
+     "q": "Where was it in the end?",
+     "st": [
+      "It was … all the time.",
+      "I never found it."
+     ],
+     "ex": "It was in my jacket all the time."
+    }
+   ],
+   "fim": "Like Mia’s bag: it was somewhere close all the time."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

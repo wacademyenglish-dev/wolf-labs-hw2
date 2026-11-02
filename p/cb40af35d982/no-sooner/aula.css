@@ -1,0 +1,83 @@
+/* ============================================================
+   NO SOONER HAD WE ARRIVED · THE TIME GAP · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: noite polar — preto-azul
+   profundo, azul-gelo nos acentos, verde de aurora no "ONLY THEN"; o
+   diário em couro escuro com tinta em IM Fell English; a linha do
+   tempo onde os dois pontos colidem; o mapa do gelo com a trilha.
+   ============================================================ */
+:root{
+  --noite:#04070c; --noite-rgb:4,7,12; --tinta:#eaf1f6;
+  --t1:#f2f7fa; --t2:#c2cfd8; --t2-rgb:194,207,216; --t3:#7d8b97;
+  --ac:#9fd4ff; --ac2:#d8efff; --aurora:#8ff5c4;
+  --vidro:rgba(234,241,246,.05); --vidro2:rgba(234,241,246,.085); --vidro3:rgba(234,241,246,.12);
+  --fio:rgba(224,234,242,.12); --fio2:rgba(224,234,242,.22); --luz:rgba(234,241,246,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'IM Fell English',Georgia,serif; --ui:'Source Sans 3',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:18px; --r2:12px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#06203a}
+.btn.cheio{color:#06203a}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:400 clamp(44px,4vw,78px)/.98 var(--disp);letter-spacing:-.01em}
+.capa h1 b{display:block;font-style:italic;font-weight:400;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(18px,1.4vw,24px)/1.5 var(--ui);color:var(--t2);max-width:30em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:stretch;margin-top:10px}
+.ns-ops{display:grid;gap:6px} .ns-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1300px;margin:12px auto;width:100%} .ns-ops.linha .versao{text-align:center;min-height:58px;font-weight:600}
+.ns-rot{margin:0;font:700 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.ns-linha-ok{display:flex;align-items:center;gap:12px} .ns-linha-ok .aprova{flex:1;margin:0} .ns-linha-ok.centro{max-width:1300px;margin:0 auto;width:100%}
+
+/* o intervalo de tempo */
+.ns-tempo{display:grid;gap:12px;padding:16px 20px;border-radius:var(--r1);background:#081019;border:1px solid #1b2a38}
+.ns-tempo small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.ns-linha{position:relative;height:46px;margin:0 14px}
+.ns-linha::before{content:'';position:absolute;left:0;right:0;top:50%;height:2px;background:repeating-linear-gradient(90deg,#2b3b4b 0 8px,transparent 8px 14px)}
+.ns-linha i{position:absolute;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;transition:left .8s cubic-bezier(.3,1.3,.5,1)}
+.ns-a{left:12%;background:var(--ac);box-shadow:0 0 14px rgba(159,212,255,.5)}
+.ns-b{left:88%;background:#e8eef3;border:2px solid var(--ac2)}
+.ns-linha.ja .ns-b{left:calc(12% + 20px);background:var(--ac2);box-shadow:0 0 18px rgba(216,239,255,.7)}
+.ns-linha.espera::after{content:'';position:absolute;left:12%;right:12%;top:50%;height:8px;margin-top:-4px;border-radius:4px;background:linear-gradient(90deg,rgba(143,245,196,.15),var(--aurora));animation:espera 1s ease-out}
+@keyframes espera{from{transform:scaleX(0);transform-origin:left}}
+.ns-linha.espera .ns-b{background:var(--aurora);border-color:var(--aurora)}
+.ns-ja,.ns-espera{position:absolute;top:-6px;font:700 11px var(--mono);letter-spacing:.14em}
+.ns-ja{left:calc(12% + 46px);color:var(--ac2)} .ns-espera{left:46%;color:var(--aurora)}
+.ns-fatos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ns-fatos p{margin:0;display:flex;gap:10px;align-items:baseline;font:600 clamp(16px,1.2vw,20px)/1.4 var(--ui);color:var(--t2)}
+.ns-fatos b{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#14212e;font:700 12px var(--mono);color:var(--ac)}
+
+/* o diário */
+.ns-pagina{display:grid;align-content:center;gap:10px;padding:20px 24px;border-radius:6px var(--r1) var(--r1) 6px;background:repeating-linear-gradient(180deg,transparent 0 39px,rgba(159,212,255,.07) 39px 40px),#0c1118;border:1px solid #233140;border-left:6px solid #2a3a4a}
+.ns-pagina small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.ns-tinta{margin:0;font:400 clamp(22px,1.85vw,32px)/1.4 var(--disp);font-style:italic;color:var(--ac2);animation:escreve .9s ease-out both}
+@keyframes escreve{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.ns-branco{margin:0;font:400 clamp(22px,1.85vw,32px) var(--disp);color:var(--t3)}
+
+/* a regra */
+.ns-tres{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 12px}
+.ns-tipo{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .ns-tipo small{font:700 11px var(--mono);letter-spacing:.1em;color:var(--ac2)} .ns-tipo p{margin:0;font:400 clamp(18px,1.4vw,24px) var(--disp)}
+.ns-tipo.espera small{color:var(--aurora)}
+
+/* o mapa do gelo */
+.ns-mapa{display:grid;gap:6px;padding:12px 16px;border-radius:var(--r1);background:radial-gradient(ellipse at 70% 30%,#0e1c28,#070c12 70%);border:1px solid #1b2a38}
+.ns-mapa svg{width:100%;height:auto}
+.ns-trilha{fill:none;stroke:#2c3e50;stroke-width:3;stroke-dasharray:6 6}
+.ns-mapa circle{fill:#16222e;stroke:#2c3e50;stroke-width:2;transition:all .5s}
+.ns-mapa circle.feito{fill:var(--ac);stroke:var(--ac2)}
+.ns-mapa circle.agora{fill:var(--aurora);stroke:#d6ffee;filter:drop-shadow(0 0 8px rgba(143,245,196,.7))}
+.ns-navio{font:700 12px var(--mono);letter-spacing:.14em;fill:var(--t3);text-anchor:middle}
+.ns-mapa small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+
+/* o porto */
+.ns-porto{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:1100px;margin:0 auto 12px;width:100%;padding:12px 18px;border-radius:var(--r2);border-color:rgba(159,212,255,.35)}
+.ns-porto b{font:700 13px var(--mono);letter-spacing:.12em;color:var(--ac2)} .ns-porto small{margin-left:auto;font:700 11px var(--mono);letter-spacing:.12em;color:var(--t3)}
+
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .ns-mapa{padding:8px 12px}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .ns-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .ns-tres{grid-template-columns:1fr} .ns-fatos{grid-template-columns:1fr} .ns-ja{left:calc(12% + 36px)} }

@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · It Wasn’t the Time · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>It Wasn’t the Time · Rack Focus</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>It Wasn’t the Time · Rack Focus</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A fact-checking hour about focus and multitasking.</p><p style="margin:0 0 6px"><b>The grammar:</b> Two Shapes: English has two ways to put the focus on one part of a sentence.</p><p style="margin:0 0 6px"><b>Short class (about 46 min):</b> I Interrupted · II Two Shapes · III Rack Focus · IV Sixty-Three · V Five out of Two Hundred · VI The Missing It · X What You Lost. Skip if you’re short on time: VII, VIII, IX (marked EXTRA on your screen). Full lesson: about 67 min.</p><p style="margin:0"><b>Open with:</b> “The average self-rating, on a scale where fifty is average, was …”</p></div><!--/prep-->
+    <p>A fact-checking hour about focus and multitasking. The student tests famous sentences (<i>every interruption costs you 23 minutes</i>, <i>our attention span is shorter than a goldfish’s</i>) against what the studies really show. The language is the language of correction and emphasis: <b>cleft sentences</b>. <b>It was the conversation that slowed the drivers.</b> <b>What they got wrong was themselves.</b> On screen, a camera viewfinder: the student pulls the focus to one part of a sentence, that part goes sharp, the rest goes soft, and the sentence rebuilds itself as a cleft. The hour doesn’t teach that multitasking is bad; it teaches the difference between backed, not shown and misquoted.</p>
+    <h4>THE EMPTY IT</h4>
+    <p>In <b>It was X that …</b>, IT means nothing; it only holds the place of the subject. Many students drop it: <i>Was the conversation that …</i> Ask: what is the subject of this sentence? Scene II: the student reads a fact-checker’s note, taps the words that move the focus and finishes the rule (the rule stays in view). IV: sort six lines into SHE SAID IT / SHE DID NOT. V: match each question to its number. VI: find the broken part of six headlines and say the fix. VII: tap the stamp, then say the correction.</p>
+    <h4>RACK FOCUS</h4>
+    <p>Scene III is the heart of the grammar. Each part the student focuses makes a different cleft and a different correction. Ask every time: so what was it NOT?</p>
+    <h4>THE FACTS</h4>
+    <p><b>23 minutes 15 seconds</b>: said in interviews, not in the paper it is credited to. <b>Supertaskers</b>: 5 of 200 drivers lost nothing while talking on a phone (2.5%). <b>Self-rating</b>: 277 people, average 63 where 50 is average. <b>2009 media-multitasking study</b>: later teams could not find the effect again. <b>Goldfish</b>: the 8-second number came from a statistics website quoted in a marketing report, not from brain research.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Two recordings, each with pause and 0.75×; the transcript opens after listening. Scene VIII: the student taps KEEP or STRIKE on each line; don’t play the speaker as a joke; the scene only works if the voice sounds convincing.</p>
+    <h4>THE DEBATE</h4>
+    <p>Scene IX: you and the student take opposite sides (a 45-second clock for each round), and after round two you swap. Tap each shape you hear; the dashed buttons are the classic mistakes, and the student says it again.</p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (VI) AND THE SURPRISE QUESTION</h4>
+    <p>After the simulator numbers, your student rates four unpopular opinions about focus from 1 to 5 and defends the number with a cleft. There is no right answer: wait five seconds in silence, then take the opposite number and use the PUSH line (only you see it) to make it harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Interrupted, III Rack Focus, VI Unpopular Opinions, VII The Claims Court, IX The Debate.</li>
+      <li><b>Listen</b>: IV Sixty-Three, VIII The Confident Voice.</li>
+      <li><b>Focus</b>: II Two Shapes, V Five out of Two Hundred.</li>
+      <li><b>Write</b>: X, what they lost in scene I, as a cleft. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* IT WASN'T THE TIME (Main B2) · pergunta-surpresa · 28/10/2026 · cleft sentences */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'moldes', tipo: 'And you?', q: 'What is the thing that distracts you most when you study?',
+    opc: ['My phone', 'People around me', 'My own thoughts'], st: ['What distracts me most is …', 'It’s … that …'],
+    ex: 'My own thoughts. What distracts me most is remembering things I have to do.', push: 'What did you do about it the last time?' },
+  { cena: 'foco', tipo: 'Would you rather', q: 'One work day: would you rather have no phone or no coffee?',
+    opc: ['No phone', 'No coffee'], st: ['What I couldn’t live without is …', 'It’s the … that I need.'],
+    ex: 'No phone. It’s the coffee that keeps me awake, not the messages.', push: 'A whole week?' },
+  { cena: 'placar', tipo: 'What if', q: 'What if new cars stopped when the driver touched a phone? Good idea?',
+    opc: ['Great idea', 'Too much', 'Only for young drivers'], st: ['What worries me is …', 'It’s not the phone that …'],
+    ex: 'Great idea. What causes accidents is the attention, so the car should help.', push: 'And GPS on the phone? Does that stop the car too?' },
+  { cena: 'voz', tipo: 'Opinion', q: 'Who do you trust more: a speaker who sounds very sure, or one who says “maybe”?',
+    opc: ['The sure one', 'The “maybe” one'], st: ['What makes me trust someone is …', 'It’s the ones who … that …'],
+    ex: 'The “maybe” one. It’s people who admit doubts that usually check their facts.', push: 'And in a job interview? Would you say “maybe”?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* IT WASN'T THE TIME (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A escala de opiniões impopulares entra no lugar de "VI · The Missing It" (prática controlada repetida
+   da forma: II e III já treinam o cleft). A aula já tem o debate (IX) e o pessoal (I): aqui é outro
+   formato, no MEIO, logo depois dos números do simulador (V). A gramática (cleft: It is … that / What … is)
+   mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'escala', troca: 'falta', est: 'o', min: 7, img: 'mesa', rot: 'Unpopular Opinions', t: 'Four opinions about focus. How much do you agree?',
+    p: 'Tap a number. Defend it with a cleft: What I think is … / It isn’t … that …, it’s …',
+    formato: 'escala', tag: 'Unpopular opinion',
+    frases: [
+      { f: 'Checking your phone in a meeting is fine, if you are still listening.',
+        st: ['What really matters is …', 'It isn’t the phone that …, it’s …', 'The thing that annoys people is …'],
+        ex: 'Two. It isn’t the phone that bothers people, it’s the message: what they see is that you don’t care.',
+        push: 'Your boss checks her phone while you present your project. Still fine?' },
+      { f: 'Music with lyrics helps people work better.',
+        st: ['What helps me is …', 'It’s the … that distracts me, not …', 'It was … that changed my mind.'],
+        ex: 'Four. What helps me is music I already know. It’s new songs that distract me, not old ones.',
+        push: 'Would you let a surgeon listen to loud music during your operation?' },
+      { f: 'Open offices are the reason nobody can focus at work.',
+        st: ['It’s not the office that …, it’s …', 'What people really need is …', 'Where I focus best is …'],
+        ex: 'Three. It’s not the office that kills focus, it’s the meetings. What people need is two quiet hours a day.',
+        push: 'You get a private office, but nobody talks to you all day. Deal?' },
+      { f: 'Answering WhatsApp at 10 p.m. is part of a good job today.',
+        st: ['What a good job needs is …', 'It’s the … who should …', 'The thing that worries me is …'],
+        ex: 'One. What a good job needs is good planning. It’s the manager who should solve it before 6.',
+        push: 'Your client pays double for night answers. Do you change your number?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "corte": {
+   "t": "Talk about your day. You’ll be stopped.",
+   "p": "Three rounds. Go back to your sentence."
+  },
+  "moldes": {
+   "t": "Two ways to move the focus.",
+   "p": "Read the note. Tap the focus words. Finish the rule."
+  },
+  "foco": {
+   "t": "Pull the focus to one part.",
+   "p": "Tap each part. Say the cleft, and what it was NOT."
+  },
+  "ouvir": {
+   "t": "Sixty-three: how good we think we are.",
+   "p": "Listen once. Did she say it? Then say a cleft."
+  },
+  "placar": {
+   "t": "Two hundred drivers on the phone.",
+   "p": "Guess each number. Match question and number."
+  },
+  "cv-escala": {
+   "t": "Four opinions about focus.",
+   "p": "Tap a number. Defend it with a cleft."
+  },
+  "tribunal": {
+   "t": "Six famous claims about focus.",
+   "p": "Stamp each claim. Then correct it."
+  },
+  "voz": {
+   "t": "Total confidence on stage.",
+   "p": "Listen once. KEEP or STRIKE every line."
+  },
+  "debate": {
+   "t": "Motion: multitasking is a myth.",
+   "p": "Every answer needs a cleft. Start the clock."
+  },
+  "fim": {
+   "t": "Back to the first scene.",
+   "p": "Write what you lost, and what it was NOT."
+  }
+ },
+ "prep": {
+  "obj": "Clivadas para foco e correção (It was the conversation that slowed the drivers; What they got wrong was…): uma hora de checagem de fatos sobre foco e multitarefa.",
+  "armadilha": "O brasileiro derruba o IT vazio (“Was the conversation that…”, calco de “Foi a conversa que…”), diz “What I need it is” e usa which para pessoas (“it was the guard which”).",
+  "pal": [
+   "It was… that…",
+   "It wasn’t… that…, it was…",
+   "What… is…",
+   "multitasking",
+   "supertaskers",
+   "misquoted",
+   "backed",
+   "attention span"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o tema: checar frases famosas sobre foco contra o que os estudos mostram.",
+   "perg": "Are you good at multitasking?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "corte": {
+   "obj": "O aluno fala do dia e a tela interrompe; nada é corrigido, volta na escrita final.",
+   "perg": "Where were you before the interruption?",
+   "pula": "Duas rodadas bastam."
+  },
+  "moldes": {
+   "obj": "A regra: as duas formas de foco (it was… that / what… is) numa nota de checador.",
+   "perg": "What is the subject of this sentence?",
+   "pula": "Não corte: é a regra. Leia a nota e complete."
+  },
+  "foco": {
+   "obj": "O coração da gramática: puxar o foco para cada parte e dizer o que NÃO foi.",
+   "perg": "So what was it NOT?",
+   "pula": "Três partes bastam."
+  },
+  "ouvir": {
+   "obj": "Escuta: a pesquisadora fala dos 63 (nota média de si mesmo); separar o que ela disse.",
+   "perg": "What did she actually find?",
+   "pula": "Quatro linhas bastam."
+  },
+  "placar": {
+   "obj": "Chutar números do simulador (5 de 200 supertaskers) e montar o placar.",
+   "perg": "How many drivers lost nothing?",
+   "pula": "Três números bastam."
+  },
+  "cv-escala": {
+   "obj": "Opiniões impopulares de 1 a 5 sobre foco, defendidas com clivada; o professor pega o oposto.",
+   "perg": "What is it that really breaks your focus?",
+   "pula": "Duas opiniões bastam, com o PUSH."
+  },
+  "tribunal": {
+   "obj": "Carimbar seis afirmações famosas (backed, not shown, misquoted) e corrigir cada uma.",
+   "perg": "Is it backed, not shown or misquoted?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "voz": {
+   "obj": "Escuta crítica: um palestrante confiante demais; KEEP ou STRIKE em cada linha.",
+   "perg": "Would you keep that line?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "debate": {
+   "obj": "Debate cronometrado: multitarefa é mito? Lados opostos, troca no meio, clivada sempre.",
+   "perg": "What is it that the studies really show?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: o que o aluno perdeu na cena I, como clivada, com o que NÃO foi.",
+   "perg": "What was it that you lost?",
+   "pula": "Uma frase basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta sobre foco e distração, com clivadas para dar ênfase.",
+   "perg": "What is it that distracts you most?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre celular, trabalho e atenção, argumentando com clivadas.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno checa um “fato” que ele já repetiu, passo a passo, e corrige com clivada.",
+   "perg": "Where did that number come from?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Focus on the focus.",
+   "p": "Pick a card. Answer with a cleft.",
+   "palavras": [
+    "It was… that…",
+    "It isn’t… that…, it’s…",
+    "What I… is…"
+   ],
+   "cartas": [
+    {
+     "k": "DISTRACTIONS",
+     "q": "What really breaks your focus at work?",
+     "fup": "Is it the same at home?",
+     "st": [
+      "It isn’t … that distracts me, it’s …",
+      "What breaks my focus is …"
+     ],
+     "ex": "It isn’t my phone that distracts me, it’s my own thoughts."
+    },
+    {
+     "k": "YOUR BEST HOUR",
+     "q": "When do you focus best?",
+     "fup": "Why then?",
+     "st": [
+      "It’s in the … that I …",
+      "What helps me is …"
+     ],
+     "ex": "It’s early in the morning that I do my best work. What helps is the silence."
+    },
+    {
+     "k": "MYTHS",
+     "q": "What “fact” did you believe for years?",
+     "fup": "Who told you?",
+     "st": [
+      "What I believed was …",
+      "It was … who told me."
+     ],
+     "ex": "What I believed was the goldfish story. It was a teacher who told me."
+    },
+    {
+     "k": "MULTITASKING",
+     "q": "Do you really do two things at once?",
+     "fup": "Which one suffers?",
+     "st": [
+      "What I actually do is …",
+      "It’s the … that suffers."
+     ],
+     "ex": "What I actually do is switch fast. It’s the second task that suffers."
+    },
+    {
+     "k": "MEETINGS",
+     "q": "What do people do on their laptops in meetings?",
+     "fup": "Do you do it too?",
+     "st": [
+      "What most people do is …",
+      "It isn’t me who …"
+     ],
+     "ex": "What most people do is answer emails. And yes, it’s sometimes me."
+    },
+    {
+     "k": "A BIG MISTAKE",
+     "q": "What caused a mistake you made recently?",
+     "fup": "What have you changed since?",
+     "st": [
+      "It wasn’t … that caused it, it was …"
+     ],
+     "ex": "It wasn’t a lack of time that caused it, it was a message I read while writing."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "What matters is…",
+    "It’s… that…",
+    "The thing is, …",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Should talking on a phone while driving be banned, even hands-free?",
+     "a": "Ban it",
+     "b": "Allow hands-free",
+     "fa": [
+      "Ban it. It’s the conversation that slows drivers, not the hands.",
+      "The simulator showed it."
+     ],
+     "fb": [
+      "Allow it. What matters is the road, and some people manage.",
+      "Five out of two hundred lost nothing."
+     ]
+    },
+    {
+     "q": "Phones in the office: in a drawer, or on the desk?",
+     "a": "In a drawer",
+     "b": "On the desk",
+     "fa": [
+      "In a drawer. What steals our time is the little checks.",
+      "Out of sight, out of mind."
+     ],
+     "fb": [
+      "On the desk. It’s the boss who should trust us, not the drawer."
+     ]
+    },
+    {
+     "q": "Famous numbers like “23 minutes”: harmless or harmful?",
+     "a": "Harmless",
+     "b": "Harmful",
+     "fa": [
+      "Harmless. What matters is the message: interruptions cost time."
+     ],
+     "fb": [
+      "Harmful. It’s exactly these numbers that people stop checking.",
+      "Then the myth becomes a fact."
+     ]
+    },
+    {
+     "q": "Are we really worse at focus than our parents?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. What has changed is the number of notifications."
+     ],
+     "fb": [
+      "No. It isn’t our brains that changed, it’s our environment."
+     ]
+    }
+   ],
+   "fim": "Four rounds. What you won was practice, and plenty of it."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Fact-Check Yourself",
+   "t": "Check one thing you believed.",
+   "p": "Answer each step. Use a cleft to correct it.",
+   "prof": "Push for the empty IT: “It was … that …”, never “Was … that …”.",
+   "passos": [
+    {
+     "q": "Think of a “fact” you have repeated to people. What is it?",
+     "st": [
+      "What I used to say was …"
+     ],
+     "ex": "What I used to say was that we only use 10% of our brain."
+    },
+    {
+     "q": "Where did you hear it?",
+     "st": [
+      "It was … who / where I heard it."
+     ],
+     "ex": "It was in a movie that I first heard it."
+    },
+    {
+     "q": "Is it backed, not shown, or misquoted?",
+     "st": [
+      "I think it’s …, because …"
+     ],
+     "ex": "I think it’s not shown, because no study has ever measured that."
+    },
+    {
+     "q": "Correct it in one sentence.",
+     "st": [
+      "It isn’t …, it’s …",
+      "What the evidence says is …"
+     ],
+     "ex": "It isn’t 10% that we use; what the evidence says is that we use almost all of it."
+    }
+   ],
+   "fim": "Fact checked. What you have now is a better sentence."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

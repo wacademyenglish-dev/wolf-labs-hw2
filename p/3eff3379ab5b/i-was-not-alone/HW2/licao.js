@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "I Was Not Alone",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3eff3379ab5b/i-was-not-alone/img/live-hall-noite.webp",
+  "capa": "../img/live-hall-noite.webp",
   "alvo": "was / were: I, he, she, it, one thing = was; you, we, they, more than one = were; there was (one) / there were (more); wasn't / weren't; Was it ...? Were you ...?",
   "abrir": "Where were you at nine o'clock last night?",
   "fecho": "<b>was</b>: I, he, she, it, one thing. <b>were</b>: you, we, they, more than one. <i>There was a cup. There were two cups.</i> No: <b>wasn't</b> / <b>weren't</b> (<i>I wasn't alone.</i>). The question: <i>Were you alone? Was it quiet?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a night in a house. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/3eff3379ab5b/i-was-not-alone/img/live-cozinha-noite.webp",
+      "img": "../img/live-cozinha-noite.webp",
       "leg": "A kitchen at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
         {
           "t": "The windows were closed all night.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/3eff3379ab5b/i-was-not-alone/img/live-janelas.webp"
+          "img": "../img/live-janelas.webp"
         },
         {
           "t": "There were cups on the shelf in the kitchen.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/3eff3379ab5b/i-was-not-alone/img/live-cozinha-noite.webp"
+          "img": "../img/live-cozinha-noite.webp"
         },
         {
           "t": "Rex was on his bed. He wasn't loud.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/3eff3379ab5b/i-was-not-alone/img/live-rex.webp"
+          "img": "../img/live-rex.webp"
         }
       ]
     },
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3eff3379ab5b/i-was-not-alone/img/live-hall-noite.webp",
+      "img": "../img/live-hall-noite.webp",
       "leg": "A dark hall with a coat stand",
       "pede": "Look at the picture: a dark hall at night. Write 2 or 3 sentences about it. Use <b>was</b>, <b>were</b>, <b>wasn't</b> or <b>weren't</b>.",
       "ph": "The door was … There were …",

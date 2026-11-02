@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>WOLF LABS | Executive Suite Homework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* === THE TED STAGE VARIABLES === */
+        :root {
+            --stage-black: #0A0A0A;
+            --panel-dark: #1A1A1A;
+            --ted-red: #E62B1E;
+            --ted-red-hover: #ff3b2e;
+            --text-main: #FFFFFF;
+            --text-muted: #9CA3AF;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #020202; /* Fundo escuro fora do telemóvel */
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* === MOBILE PHONE WRAPPER === */
+        .phone-mockup {
+            width: 375px;
+            height: 812px; /* iPhone X/11/12/13 proportions */
+            background-color: var(--stage-black);
+            border-radius: 40px;
+            border: 12px solid #222;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9), inset 0 0 0 2px #000;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-image: radial-gradient(circle at 50% -20%, rgba(230, 43, 30, 0.1), transparent 50%);
+        }
+
+        /* Fake Notch/Dynamic Island */
+        .phone-notch {
+            position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+            width: 150px; height: 30px; background-color: #222;
+            border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; z-index: 50;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            height: 44px; display: flex; justify-content: space-between; align-items: center;
+            padding: 0 20px; font-size: 12px; font-weight: 600; z-index: 40; position: relative; color: white;
+        }
+
+        /* Bottom Home Bar */
+        .home-indicator {
+            position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
+            width: 120px; height: 4px; background-color: rgba(255,255,255,0.4); border-radius: 100px; z-index: 50;
+        }
+
+        /* APP CONTENT SCROLL AREA */
+        .app-content {
+            flex-grow: 1; overflow-y: auto; overflow-x: hidden;
+            padding-bottom: 80px; display: flex; flex-direction: column;
+        }
+        .app-content::-webkit-scrollbar { display: none; } 
+
+        /* APP BOTTOM NAV */
+        .app-nav {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 80px;
+            background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(15px);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            display: flex; justify-content: space-around; align-items: center;
+            padding-bottom: 15px; z-index: 40;
+        }
+        .nav-item {
+            display: flex; flex-direction: column; align-items: center;
+            color: #555; font-size: 10px; gap: 4px; transition: all 0.2s; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .nav-item.active { color: var(--text-main); }
+
+        /* SCREENS */
+        .screen {
+            display: none; flex-direction: column; height: 100%; width: 100%; padding: 20px;
+            animation: slideIn 0.3s ease forwards;
+        }
+        .screen.active { display: flex; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* COMPONENTS */
+        .mobile-card {
+            background-color: var(--panel-dark);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 20px; padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); width: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--ted-red); color: white; border-radius: 12px; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 1px; padding: 16px; width: 100%; text-align: center; border: none;
+            box-shadow: 0 4px 15px rgba(230, 43, 30, 0.3); cursor: pointer; transition: all 0.2s;
+        }
+        .btn-primary:active { transform: scale(0.96); }
+
+        .mcq-option {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px; padding: 16px; margin-bottom: 12px; cursor: pointer;
+            transition: all 0.2s; display: flex; align-items: center; font-weight: 600;
+        }
+        .mcq-option:active { transform: scale(0.98); }
+        .mcq-option.correct { background: rgba(230, 43, 30, 0.15); border-color: var(--ted-red); color: var(--ted-red); }
+        .mcq-option.wrong { background: rgba(255, 255, 255, 0.1); border-color: #555; color: #555; }
+
+        /* CHAT BUBBLES */
+        .chat-bubble-left { background: #222; padding: 14px 16px; border-radius: 16px 16px 16px 4px; align-self: flex-start; max-width: 85%; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.05);}
+        .chat-bubble-right { background: var(--ted-red); color: white; padding: 14px 16px; border-radius: 16px 16px 4px 16px; align-self: flex-end; max-width: 85%; margin-bottom: 16px; box-shadow: 0 4px 10px rgba(230,43,30,0.2);}
+
+        /* PROGRESS BAR */
+        .hw-progress-bg { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; margin-bottom: 24px;}
+        .hw-progress-fill { height: 100%; background: var(--ted-red); width: 0%; transition: width 0.4s ease; box-shadow: 0 0 10px var(--ted-red);}
+
+        /* EFEITOS ESPECIAIS */
+        #confetti-canvas { position: absolute; inset: 0; pointer-events: none; z-index: 999; }
+        .shake { animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both; }
+        @keyframes shake { 10%, 90% { transform: translate3d(-2px, 0, 0); } 20%, 80% { transform: translate3d(3px, 0, 0); } 30%, 50%, 70% { transform: translate3d(-5px, 0, 0); } 40%, 60% { transform: translate3d(5px, 0, 0); } }
+    </style>
+</head>
+<body>
+
+    <!-- MOCKUP DO TELEMÓVEL -->
+    <div class="phone-mockup">
+        <canvas id="confetti-canvas"></canvas>
+        <div class="phone-notch"></div>
+        
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span id="clock">09:41</span>
+            <div class="flex items-center gap-2">
+                <i class="fas fa-signal text-[10px]"></i>
+                <i class="fas fa-wifi text-[10px]"></i>
+                <i class="fas fa-battery-full text-xs"></i>
+            </div>
+        </div>
+
+        <!-- APP CONTENT -->
+        <div class="app-content" id="app-screens">
+            
+            <!-- SCREEN 0: DASHBOARD -->
+            <div class="screen active" id="screen-0">
+                <div class="flex items-center gap-4 mb-10 mt-6">
+                    <div class="w-12 h-12 rounded-full bg-[var(--ted-red)] flex items-center justify-center text-white shadow-[0_0_15px_rgba(230,43,30,0.5)]">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Wolf Labs Mobile</p>
+                        <h1 class="text-2xl font-black uppercase tracking-tight">Executive App</h1>
+                    </div>
+                </div>
+
+                <div class="mobile-card mb-6 border-t-4 border-t-[var(--ted-red)]">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-[var(--ted-red)] border border-[var(--ted-red)] px-2 py-1 rounded">Pending</span>
+                        <i class="fas fa-clock text-gray-500"></i>
+                    </div>
+                    <h2 class="text-2xl font-black mb-2 uppercase">The Executive Suite</h2>
+                    <p class="text-sm text-gray-400 mb-8 leading-relaxed">Review the Hot Shot Rule, Past Modals of regret, and Phrasal Verbs.</p>
+                    
+                    <div class="hw-progress-bg"><div class="hw-progress-fill" id="main-progress"></div></div>
+                    <div class="flex justify-between text-xs font-bold text-gray-500 mb-8 uppercase tracking-widest">
+                        <span>Progress</span>
+                        <span id="main-progress-text">0%</span>
+                    </div>
+
+                    <button class="btn-primary" onclick="goToScreen(1)">Start Assignment</button>
+                </div>
+
+                <div class="mobile-card opacity-50 border border-gray-800">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Completed</span>
+                    </div>
+                    <h2 class="text-lg font-bold text-gray-400 uppercase">The Zen Garden</h2>
+                </div>
+            </div>
+
+            <!-- SCREEN 1: EMAIL TASK (PAST MODALS) -->
+            <div class="screen" id="screen-1">
+                <div class="flex justify-between items-center mb-8 mt-4">
+                    <button onclick="goToScreen(0)" class="text-gray-400 hover:text-white"><i class="fas fa-chevron-left text-xl"></i></button>
+                    <span class="text-[10px] font-bold text-white uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full">Task 1/4</span>
+                    <div class="w-6"></div> <!-- spacer -->
+                </div>
+
+                <h2 class="text-2xl font-black mb-6 uppercase">Draft Email</h2>
+                
+                <div class="mobile-card flex-grow flex flex-col p-5 mb-6 bg-[#111]">
+                    <div class="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
+                        <div class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-xs font-bold">C</div>
+                        <div><p class="font-bold text-sm leading-none">CEO</p><p class="text-[10px] text-gray-500 mt-1">Drafts</p></div>
+                    </div>
+                    
+                    <div class="text-sm font-medium leading-relaxed text-gray-300">
+                        Team, the strategy failed yesterday.<br><br>
+                        I <span id="blank-1" class="text-[var(--ted-red)] border-b border-[var(--ted-red)] font-bold">______</span> listened to your warnings. I am sorry.
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mb-4 text-center font-bold">Select the correct grammar for REGRET</p>
+                    <div class="mcq-option" onclick="checkAnswer(this, 1, false, 'should')">
+                        A) should
+                    </div>
+                    <div class="mcq-option" onclick="checkAnswer(this, 1, false, 'should to')">
+                        B) should to
+                    </div>
+                    <div class="mcq-option" onclick="checkAnswer(this, 1, true, 'should have')">
+                        C) should have
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCREEN 2: CHAT (PHRASAL VERBS) -->
+            <div class="screen" id="screen-2">
+                <div class="flex justify-between items-center mb-8 mt-4">
+                    <div class="w-6"></div>
+                    <span class="text-[10px] font-bold text-white uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full">Task 2/4</span>
+                    <div class="w-6"></div>
+                </div>
+
+                <h2 class="text-2xl font-black mb-6 uppercase text-center">Executive Chat</h2>
+                
+                <div class="mobile-card flex-grow flex flex-col p-4 mb-6">
+                    <div class="chat-bubble-left text-sm font-medium">
+                        The team is making too many excuses for the delay. What do we do?
+                    </div>
+
+                    <div id="reply-container-2" class="hidden chat-bubble-right text-sm font-bold"></div>
+                </div>
+
+                <div>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mb-4 text-center font-bold">Complete with the correct Phrasal Verb</p>
+                    <div class="mcq-option" onclick="checkAnswer(this, 2, false, 'We need to show up the excuses and act.')">
+                        A) show up
+                    </div>
+                    <div class="mcq-option" onclick="checkAnswer(this, 2, true, 'We need to cut through the excuses and act.')">
+                        B) cut through
+                    </div>
+                    <div class="mcq-option" onclick="checkAnswer(this, 2, false, 'We need to put in motion the excuses.')">
+                        C) put in motion
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCREEN 3: FORM FOCUS (PAST PARTICIPLE) -->
+            <div class="screen" id="screen-3">
+                <div class="flex justify-between items-center mb-8 mt-4">
+                    <div class="w-6"></div>
+                    <span class="text-[10px] font-bold text-[var(--ted-red)] uppercase tracking-widest border border-[var(--ted-red)] px-3 py-1 rounded-full">Task 3/4</span>
+                    <div class="w-6"></div>
+                </div>
+
+                <h2 class="text-2xl font-black mb-2 text-center uppercase">Form Focus</h2>
+                <p class="text-xs text-gray-400 text-center mb-10">Complete the sentence.</p>
+
+                <div class="mobile-card text-center mb-10 border-t-4 border-[var(--ted-red)] py-10">
+                    <p class="text-xl font-bold leading-relaxed">
+                        I had a ticket, but I didn't go. <br><br>
+                        "I could have <span id="blank-3" class="inline-block min-w-[60px] border-b-2 border-dashed border-gray-500 text-[var(--ted-red)] pb-1 px-2 mx-1">&nbsp;&nbsp;&nbsp;</span> to the party."
+                    </p>
+                </div>
+
+                <div class="mt-auto space-y-3">
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mb-4 text-center font-bold">Which form comes after "have"?</p>
+                    <div class="mcq-option justify-center" onclick="checkAnswer(this, 3, false, 'go')">go</div>
+                    <div class="mcq-option justify-center" onclick="checkAnswer(this, 3, false, 'went')">went</div>
+                    <div class="mcq-option justify-center" onclick="checkAnswer(this, 3, true, 'gone')">gone</div>
+                </div>
+            </div>
+
+            <!-- SCREEN 4: FACT OR MYTH -->
+            <div class="screen" id="screen-4">
+                <div class="flex justify-between items-center mb-8 mt-4">
+                    <div class="w-6"></div>
+                    <span class="text-[10px] font-bold text-white uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full">Task 4/4</span>
+                    <div class="w-6"></div>
+                </div>
+
+                <h2 class="text-2xl font-black mb-2 text-center uppercase">Fact or Myth?</h2>
+                <p class="text-xs text-gray-400 text-center mb-10">Analyze the concept from the TED Talk.</p>
+
+                <div class="mobile-card text-center mb-12 shadow-[0_0_20px_rgba(230,43,30,0.1)]">
+                    <p class="text-xl font-bold leading-relaxed py-6">
+                        "The <strong class="text-[var(--ted-red)]">Hot Shot Rule</strong> means making excuses and blaming your team when things go wrong."
+                    </p>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-1 mcq-option justify-center flex-col gap-3 h-32" onclick="checkAnswer(this, 4, false, '')">
+                        <i class="fas fa-check-circle text-2xl opacity-80"></i>
+                        <span class="font-bold tracking-widest uppercase">FACT</span>
+                    </div>
+                    <div class="flex-1 mcq-option justify-center flex-col gap-3 h-32" onclick="checkAnswer(this, 4, true, 'myth')">
+                        <i class="fas fa-times-circle text-2xl opacity-80"></i>
+                        <span class="font-bold tracking-widest uppercase">MYTH</span>
+                    </div>
+                </div>
+                <p id="myth-fb-4" class="hidden text-center text-xs text-white mt-6 font-bold leading-relaxed bg-[var(--ted-red)]/20 p-4 rounded border border-[var(--ted-red)]/50">Correct! The Hot Shot Rule is about taking accountability and fixing the problem within 24 hours.</p>
+            </div>
+
+            <!-- SCREEN 5: SUCCESS -->
+            <div class="screen" id="screen-5">
+                <div class="flex-1 flex flex-col items-center justify-center text-center">
+                    <div class="w-24 h-24 rounded-full bg-[var(--ted-red)] flex items-center justify-center text-4xl text-white mb-8 shadow-[0_0_40px_rgba(230,43,30,0.5)]" style="animation: popIn 0.5s ease forwards;">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h1 class="text-4xl font-black text-white mb-3 uppercase tracking-tight">Assignment Complete</h1>
+                    <p class="text-gray-400 mb-12 text-sm leading-relaxed max-w-[250px]">You have successfully applied the leadership protocols.</p>
+                    
+                    <div class="mobile-card mb-12 border-t-2 border-white">
+                        <div class="flex justify-between items-center mb-5 border-b border-white/10 pb-5">
+                            <span class="text-sm font-bold text-gray-400">Grammar Score</span>
+                            <span class="text-sm font-black text-[var(--ted-red)]">100%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-bold text-gray-400">Accountability</span>
+                            <span class="text-sm font-black text-white">MAX</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" onclick="resetApp()">Return to Dashboard</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- APP BOTTOM NAV -->
+        <div class="app-nav">
+            <div class="nav-item active cursor-pointer" onclick="goToScreen(0)">
+                <i class="fas fa-home text-lg mb-1"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item cursor-pointer">
+                <i class="fas fa-book text-lg mb-1"></i>
+                <span>Glossary</span>
+            </div>
+            <div class="nav-item cursor-pointer">
+                <i class="fas fa-user-tie text-lg mb-1"></i>
+                <span>Profile</span>
+            </div>
+        </div>
+
+        <!-- Home Indicator -->
+        <div class="home-indicator"></div>
+    </div>
+
+    <script>
+        // -- Mobile Clock Logic --
+        function updateClock() {
+            const now = new Date();
+            let h = now.getHours();
+            let m = now.getMinutes();
+            h = h < 10 ? '0'+h : h;
+            m = m < 10 ? '0'+m : m;
+            document.getElementById('clock').innerText = `${h}:${m}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // -- Navigation Logic --
+        let progress = 0;
+
+        function goToScreen(num) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById(`screen-${num}`).classList.add('active');
+            
+            // Update Dashboard Progress if going home
+            if(num === 0) {
+                document.getElementById('main-progress').style.width = `${progress}%`;
+                document.getElementById('main-progress-text').innerText = `${progress}%`;
+                if(progress === 100) {
+                    const btn = document.querySelector('#screen-0 .btn-primary');
+                    btn.innerText = "Review Assignment";
+                    btn.style.backgroundColor = "transparent";
+                    btn.style.border = "2px solid white";
+                    btn.style.boxShadow = "none";
+                }
+            }
+        }
+
+        // -- Minigame Logic --
+        function checkAnswer(element, taskNum, isCorrect, textValue) {
+            if (element.parentElement.classList.contains('locked')) return;
+            element.parentElement.classList.add('locked');
+            
+            if (isCorrect) {
+                element.classList.add('correct');
+                progress += 25; // 4 tasks = 25% each
+                
+                // Specific task animations & UI updates
+                if(taskNum === 1) {
+                    const blank = document.getElementById('blank-1');
+                    blank.innerText = textValue;
+                    blank.classList.remove('border-b');
+                }
+                if(taskNum === 2) {
+                    const reply = document.getElementById('reply-container-2');
+                    reply.innerText = textValue;
+                    reply.classList.remove('hidden');
+                    reply.style.animation = "popIn 0.3s forwards";
+                }
+                if(taskNum === 3) {
+                    const blank = document.getElementById('blank-3');
+                    blank.innerText = textValue;
+                    blank.classList.remove('border-dashed', 'border-gray-500');
+                    blank.classList.add('border-solid', 'border-[var(--ted-red)]', 'text-[var(--ted-red)]');
+                }
+                if(taskNum === 4 && textValue === 'myth') {
+                    document.getElementById('myth-fb-4').classList.remove('hidden');
+                }
+                
+                shootConfetti();
+                
+                setTimeout(() => {
+                    goToScreen(taskNum + 1);
+                }, 1800);
+
+            } else {
+                element.classList.add('wrong', 'shake');
+                setTimeout(() => {
+                    element.classList.remove('shake');
+                    element.parentElement.classList.remove('locked');
+                }, 500);
+            }
+        }
+
+        function resetApp() {
+            // Clean classes
+            document.querySelectorAll('.mcq-option').forEach(el => {
+                el.classList.remove('correct', 'wrong');
+            });
+            document.querySelectorAll('.locked').forEach(el => el.classList.remove('locked'));
+            
+            // Reset task 1
+            const blank1 = document.getElementById('blank-1');
+            blank1.innerHTML = "______";
+            blank1.classList.add('border-b');
+            
+            // Reset task 2
+            document.getElementById('reply-container-2').classList.add('hidden');
+            
+            // Reset task 3
+            const blank3 = document.getElementById('blank-3');
+            blank3.innerHTML = "&nbsp;&nbsp;&nbsp;";
+            blank3.className = "inline-block min-w-[60px] border-b-2 border-dashed border-gray-500 text-[var(--ted-red)] pb-1 px-2 mx-1 transition-all";
+            
+            // Reset task 4
+            document.getElementById('myth-fb-4').classList.add('hidden');
+            
+            goToScreen(0);
+        }
+
+        // -- Confetti Canvas (Formal/TED style) --
+        function shootConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            const parent = canvas.parentElement;
+            canvas.width = parent.clientWidth;
+            canvas.height = parent.clientHeight;
+            
+            const pieces = [];
+            const colors = ['#E62B1E', '#FFFFFF', '#1A1A1A'];
+            
+            for(let i=0; i<50; i++) {
+                pieces.push({
+                    x: canvas.width / 2,
+                    y: canvas.height / 2,
+                    vx: (Math.random() - 0.5) * 15,
+                    vy: (Math.random() - 1) * 15 - 2,
+                    size: Math.random() * 6 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    rot: Math.random() * 360,
+                    rotSpeed: (Math.random() - 0.5) * 10
+                });
+            }
+            
+            let animationId;
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let active = false;
+                
+                pieces.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vy += 0.4; // gravity
+                    p.rot += p.rotSpeed;
+                    
+                    if(p.y < canvas.height) active = true;
+                    
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.rot * Math.PI / 180);
+                    ctx.fillStyle = p.color;
+                    
+                    // Square confetti
+                    ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size);
+                    
+                    ctx.restore();
+                });
+                
+                if(active) animationId = requestAnimationFrame(animate);
+                else ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+            animate();
+        }
+    </script>
+</body>
+</html>

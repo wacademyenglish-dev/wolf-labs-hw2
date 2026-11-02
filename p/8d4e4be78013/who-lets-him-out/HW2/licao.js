@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Who Lets Him Out?",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/8d4e4be78013/who-lets-him-out/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "make, let, be made to, be allowed to: make / let + person + plain verb; be made to / be allowed to + verb; never make me to, let me to, I don't allowed",
   "abrir": "What do your parents or your boss not let you do?",
   "fecho": "<b>make</b> = force, <b>let</b> = allow, both + person + <b>plain verb</b>: <i>He made us clean. He let us leave.</i> In the passive, <b>to</b> comes back: <i>I was made to clean. We are allowed to leave.</i> Never <i>made me to</i>, <i>let me to</i> or <i>I don't allowed</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about the rules at their school. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/8d4e4be78013/who-lets-him-out/img/live-caixa.webp",
+      "img": "../img/live-caixa.webp",
       "leg": "An old box with paper seals",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The teacher made us clean the whole library.",
-          "img": "https://wolf-labs.pages.dev/p/8d4e4be78013/who-lets-him-out/img/live-caixa.webp",
+          "img": "../img/live-caixa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "He lets us stay on the roof after class.",
-          "img": "https://wolf-labs.pages.dev/p/8d4e4be78013/who-lets-him-out/img/live-rua.webp",
+          "img": "../img/live-rua.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We aren't allowed to leave the school area at night.",
-          "img": "https://wolf-labs.pages.dev/p/8d4e4be78013/who-lets-him-out/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/8d4e4be78013/who-lets-him-out/img/live-caixa.webp",
+      "img": "../img/live-caixa.webp",
       "leg": "An old box on a shelf",
       "pede": "Look at the picture: an old box on a shelf. Write 2 or 3 sentences about rules at your school or workplace. Use <b>make</b>, <b>let</b>, <b>be allowed to</b> or <b>be made to</b>.",
       "ph": "My boss lets us … We aren't allowed to …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Two Mice, Three Children",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/14526e8a15b9/two-mice-three-children/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "plurals: + s / + es (cats, boxes), y to ies (baby, babies), words that change (mouse-mice, child-children, person-people, goose-geese), words that do not change (fish, sheep); never childrens, peoples, mouses, sheeps",
   "abrir": "How many people live in your house?",
   "fecho": "<b>+ s</b>: cat → cats. <b>y → ies</b>: baby → babies. <b>New word</b>: mouse → <b>mice</b>, child → <b>children</b>, person → <b>people</b>, goose → <b>geese</b>. <b>No change</b>: fish, sheep. Never <i>childrens</i>, never <i>peoples</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo count animals in a meadow. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/14526e8a15b9/two-mice-three-children/img/live-ovelhas.webp",
+      "img": "../img/live-ovelhas.webp",
       "leg": "Sheep in a field at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "There are three mice in the nest.",
-          "img": "https://wolf-labs.pages.dev/p/14526e8a15b9/two-mice-three-children/img/live-ninho.webp",
+          "img": "../img/live-ninho.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I see five sheep in the field.",
-          "img": "https://wolf-labs.pages.dev/p/14526e8a15b9/two-mice-three-children/img/live-ovelhas.webp",
+          "img": "../img/live-ovelhas.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Six geese are on the road.",
-          "img": "https://wolf-labs.pages.dev/p/14526e8a15b9/two-mice-three-children/img/live-gansos.webp",
+          "img": "../img/live-gansos.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/14526e8a15b9/two-mice-three-children/img/live-ninho.webp",
+      "img": "../img/live-ninho.webp",
       "leg": "Three small mice in a nest",
       "pede": "Look at the picture: three small mice in a nest. Write 2 or 3 sentences about your home in numbers. How many people? How many children or pets? Use <b>people</b>, <b>children</b>, <b>mice</b> or <b>fish</b>.",
       "ph": "Three people live in my house …",

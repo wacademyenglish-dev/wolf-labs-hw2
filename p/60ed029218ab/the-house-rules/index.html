@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The House Rules · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B1 · Unit 6 · Must, can, deduce</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The House Rules · B1 Unit 6 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new B1 lesson on obligation (must, have to), prohibition (mustn’t), no obligation (don’t have to) and advice (should). The big point: mustn’t ≠ don’t have to.</p><p style="margin:0 0 6px"><b>The story:</b> The student is moving into Flat 3 (invented) with two strangers. There are rules on the fridge, Leo ate somebody’s cheese, and Ana left an angry note about her yogurt.</p><p style="margin:0 0 6px"><b>About 42 min:</b> I · The Rules on the Fridge (9) · II · Mustn’t or Don’t Have To? (10) · III · The Angry Note (7) · IV · Leo in the Hot Seat (7) · V · Your House Rules (9).</p><p style="margin:0"><b>Open with:</b> “Have you ever shared a house or a room? What was the hardest part?”</p></div><!--/prep-->
+    <p>Brazilians often use “mustn’t” to mean “não precisa”. Spend time on that pair in Notice. Keep it light: shared flats and fridge notes are funny. The writing card is about the student’s real home.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>must (obligation, often your own rule) · have to (obligation, often an outside rule) · mustn’t (forbidden) · don’t have to (not necessary) · should (advice) · he has to / he doesn’t have to</p>
+    <h4>THE RULES ON THE FRIDGE</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>MUSTN’T OR DON’T HAVE TO?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>THE ANGRY NOTE</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>YOUR HOUSE RULES</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>must to (must + verb)</i>, <i>mustn’t for “não precisa” (don’t have to)</i>, <i>he have to (he has to)</i>, <i>don’t must (mustn’t / don’t have to)</i>, <i>he musts (he must)</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>LEO IN THE HOT SEAT (IV) AND THE SURPRISE QUESTION</h4>
+    <p>After the angry note, a kitchen meeting: the student is Leo, and you are Ana, the yogurt owner. Ask the four questions on the screen; the student answers in character with must, have to, mustn’t, don’t have to and should, and decides whether to defend himself or say sorry. Wait five seconds in silence after each question, and use the PUSH line (only you see it) to make Ana harder to please. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Rules on the Fridge.</li>
+      <li><b>Focus</b>: II · Mustn’t or Don’t Have To? and III · The Angry Note.</li>
+      <li><b>Out loud</b>: IV · Leo in the Hot Seat.</li>
+      <li><b>Write</b>: V · Your House Rules.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE HOUSE RULES (Main B1 · Unit 6) · pergunta-surpresa · 27/10/2026 · must / have to, mustn't × don't have to, should */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'leitura', tipo: 'Would you rather', q: 'Would you rather share a flat with a messy friend or a very clean stranger?',
+    opc: ['A messy friend', 'A clean stranger'], st: ['I’d rather live with …, because …', 'With a friend, you don’t have to …'],
+    ex: 'A clean stranger! With a messy friend, I’d have to wash everything, and we’d fight.', push: 'The stranger has a rule list of fifty rules. Still?' },
+  { cena: 'descobre', tipo: 'And you?', q: 'What’s one thing you don’t have to do anymore, and you’re happy about it?',
+    opc: ['Something at school', 'Something at work', 'Something at home'], st: ['I don’t have to … anymore.', 'Before, I had to …'],
+    ex: 'Something at work. I don’t have to wear a suit anymore. Before, I had to wear one every day!', push: 'Is there something you miss from that time?' },
+  { cena: 'erros', tipo: 'Opinion', q: 'Notes on the fridge: good idea or passive-aggressive?',
+    opc: ['Good idea', 'Passive-aggressive', 'Depends on the note'], st: ['You should …, not …', 'People mustn’t …'],
+    ex: 'Depends on the note. A funny note is fine, but you should talk to people, not write to them.', push: 'Your flatmate leaves you a note today. What does it say?' },
+  { cena: 'cartao', tipo: 'What if', q: 'A friend stays in your home for a week. What’s the one rule they must follow?',
+    opc: ['About the bathroom', 'About the kitchen', 'About noise'], st: ['You must …', 'You mustn’t …, but you don’t have to …'],
+    ex: 'About noise. You mustn’t play music after ten, but you don’t have to whisper all day.', push: 'They break it on the first night. What do you do?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE HOUSE RULES (Main B1 · Unit 6) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A cadeira quente entra DEPOIS de "III · The Angry Note" (o bilhete da Ana), no meio da aula: o aluno é o Leo,
+   o do queijo e do iogurte, e responde às perguntas da Ana na reunião da cozinha. Era a única aula do lote
+   sem nenhuma cena falada além da leitura; 35 → 42 min (não havia cena extra). O IV (Your House Rules)
+   fica no fim. Gramática da aula nos iniciadores: must / have to, mustn't × don't have to, should. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'cadeira', apos: 'erros', est: 'o', min: 7, img: 'conversa', rot: 'Leo in the Hot Seat', t: 'Kitchen meeting. You are Leo.',
+    p: 'Ana has questions about her yogurt. Answer in character: defend yourself, or say sorry.',
+    formato: 'papel',
+    aluno: { quem: 'Leo, the new flatmate', quer: 'To stay friends with everybody in Flat 3.', limite: 'You ate the yogurt. You were really hungry at 2 a.m.' },
+    prof: { quem: 'Ana, the yogurt owner', quer: 'An apology and two new yogurts.' },
+    rot_perg: 'Ana asks',
+    perguntas: [
+      { q: 'Did you eat my strawberry yogurt, Leo?', ex: 'Yes, I did. I’m sorry. I came home at two and the fridge was empty… except for your yogurt.' },
+      { q: 'Why didn’t you ask first? You know the rule.', ex: 'You were asleep. I know I must ask first, but I didn’t want to wake you up.' },
+      { q: 'Do you think you have to buy me two yogurts, or just one?', ex: 'I think I have to buy you two. One for the yogurt and one for the note!' },
+      { q: 'So what should we write on the fridge for the next flatmate?', ex: 'You mustn’t eat other people’s food, but you don’t have to go hungry: there’s a shelf for everybody.' }
+    ],
+    st: ['I know I must …, but …', 'I didn’t have to …', 'You’re right. I mustn’t …', 'Maybe we should …'],
+    push: 'Be a hard Ana: “And the cheese last week? That was you too, wasn’t it?”' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Welcome to Flat 3.",
+   "p": "Read the rules out loud. Then look closer."
+  },
+  "descobre": {
+   "t": "One word, a big difference.",
+   "p": "Compare A and B. What changes?"
+  },
+  "erros": {
+   "t": "An angry note. Five mistakes.",
+   "p": "Find one. Say the right form. Then tap."
+  },
+  "cv-cadeira": {
+   "t": "Kitchen meeting. You are Leo.",
+   "p": "Answer Ana in character. Defend yourself, or say sorry."
+  },
+  "cartao": {
+   "t": "The rules of YOUR home.",
+   "p": "Five rules: must, mustn’t, don’t have to, should."
+  }
+ },
+ "prep": {
+  "obj": "Obrigação, proibição, ausência de obrigação e conselho (must, have to, mustn’t, don’t have to, should): o aluno se muda para o Flat 3 com dois desconhecidos.",
+  "armadilha": "O brasileiro usa mustn’t para “não precisa” (é don’t have to); também “must to go”, “he have to”, “don’t must” e “he musts”.",
+  "pal": [
+   "must",
+   "have to",
+   "mustn’t",
+   "don’t have to",
+   "should",
+   "flatmate",
+   "house rules",
+   "fridge",
+   "share"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a casa nova: regras na geladeira e dois colegas desconhecidos.",
+   "perg": "Have you ever shared a house or a room?",
+   "pula": "Só leia o título e entre."
+  },
+  "leitura": {
+   "obj": "Ler as regras da geladeira em voz alta; depois achar o padrão dos modais.",
+   "perg": "What do you have to do on Sundays?",
+   "pula": "Uma pergunta antes e uma depois."
+  },
+  "descobre": {
+   "obj": "Mustn’t × don’t have to: o aluno explica a diferença (pode ser em português). Gaste tempo aqui.",
+   "perg": "What’s the difference between A and B?",
+   "pula": "Três pares bastam; não corte mustn’t × don’t have to."
+  },
+  "erros": {
+   "obj": "O bilhete bravo da Ana com cinco erros; o aluno diz a forma certa antes de tocar.",
+   "perg": "What’s wrong in this line?",
+   "pula": "Três erros bastam; leia o bilhete certo no fim."
+  },
+  "cv-cadeira": {
+   "obj": "Reunião na cozinha: o aluno é o Leo e responde à Ana sobre o iogurte. Use a linha PUSH.",
+   "perg": "Did you eat my yogurt, Leo?",
+   "pula": "Duas perguntas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: cinco regras da casa real do aluno, com o modelo ao lado.",
+   "perg": "What is one rule in your home?",
+   "pula": "Três regras bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre regras na vida real: trabalho, família, cidade.",
+   "perg": "What do you have to do every day?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre regras de convivência, com argumentos e modais.",
+   "perg": "Should there be a rule for that?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar o contrato de convivência de uma casa dividida, passo a passo.",
+   "perg": "What mustn’t your flatmates do?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Rules everywhere.",
+   "p": "Pick a card. Answer with the five words.",
+   "palavras": [
+    "must",
+    "have to",
+    "mustn’t",
+    "don’t have to",
+    "should"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WORK",
+     "q": "What do you have to do at work that you don’t like?",
+     "fup": "What don’t you have to do, luckily?",
+     "st": [
+      "I have to …",
+      "Luckily, I don’t have to …"
+     ],
+     "ex": "I have to answer emails all day, but luckily I don’t have to wear a suit."
+    },
+    {
+     "k": "AS A CHILD",
+     "q": "What rules did you have at home as a child?",
+     "fup": "Were they fair?",
+     "st": [
+      "I had to …",
+      "I couldn’t …"
+     ],
+     "ex": "I had to be home before dark, and I couldn’t eat in my room."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What mustn’t people do in your city?",
+     "fup": "Do people follow that rule?",
+     "st": [
+      "You mustn’t …",
+      "People shouldn’t …, but …"
+     ],
+     "ex": "You mustn’t smoke on the beach, but some people still do."
+    },
+    {
+     "k": "ON VACATION",
+     "q": "What don’t you have to do on vacation?",
+     "fup": "What do you still do anyway?",
+     "st": [
+      "On vacation, I don’t have to …",
+      "I still …"
+     ],
+     "ex": "On vacation, I don’t have to wake up early, but I still do."
+    },
+    {
+     "k": "ADVICE",
+     "q": "Someone is moving into a shared flat. What should they do first?",
+     "fup": "What mustn’t they do?",
+     "st": [
+      "They should …",
+      "They mustn’t …"
+     ],
+     "ex": "They should label their food, and they mustn’t touch the cheese."
+    },
+    {
+     "k": "YOUR RULE",
+     "q": "What is a rule you made for yourself?",
+     "fup": "Do you always follow it?",
+     "st": [
+      "I must …",
+      "I try not to …"
+     ],
+     "ex": "I must drink water before coffee. I break it every Monday."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "should",
+    "have to",
+    "because",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Shared food in a shared flat: yes or no?",
+     "a": "Share it",
+     "b": "Label it",
+     "fa": [
+      "Share it. You don’t have to count every egg.",
+      "It feels like a family."
+     ],
+     "fb": [
+      "Label it. Nobody should touch my yogurt.",
+      "Clear rules mean fewer fights."
+     ]
+    },
+    {
+     "q": "Leo ate the cheese. Should he say sorry or buy new cheese?",
+     "a": "Say sorry",
+     "b": "Buy new cheese",
+     "fa": [
+      "Say sorry. Words matter more.",
+      "Cheese doesn’t fix trust."
+     ],
+     "fb": [
+      "Buy new cheese. Ana has to eat tomorrow.",
+      "Sorry without cheese is empty."
+     ]
+    },
+    {
+     "q": "A notes-on-the-fridge house, or a talk-about-it house?",
+     "a": "Notes",
+     "b": "Talk",
+     "fa": [
+      "Notes. You don’t have to see a fight.",
+      "Everybody can read the rule."
+     ],
+     "fb": [
+      "Talk. A note sounds angry.",
+      "You should say it to their face."
+     ]
+    },
+    {
+     "q": "Visitors after 11 p.m.: allowed or not?",
+     "a": "Allowed",
+     "b": "Not allowed",
+     "fa": [
+      "Allowed. You don’t have to ask permission at home.",
+      "We are adults."
+     ],
+     "fb": [
+      "Not allowed. Others have to sleep.",
+      "There must be some quiet hours."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody has to win."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Flat Contract",
+   "t": "Write a contract for your flat.",
+   "p": "Build it step by step. Say it out loud.",
+   "prof": "You are the new flatmate: push back on one rule (“Do I really have to…?”) so they defend it.",
+   "passos": [
+    {
+     "q": "What must everybody do every week?",
+     "st": [
+      "Everybody must …",
+      "Every week, we have to …"
+     ],
+     "ex": "Everybody must clean the bathroom once a week."
+    },
+    {
+     "q": "What mustn’t anybody do?",
+     "st": [
+      "You mustn’t …",
+      "Please don’t …"
+     ],
+     "ex": "You mustn’t eat food that isn’t yours."
+    },
+    {
+     "q": "What don’t people have to do?",
+     "st": [
+      "You don’t have to …"
+     ],
+     "ex": "You don’t have to cook for everybody, but you can."
+    },
+    {
+     "q": "What is your one piece of advice for a new flatmate?",
+     "st": [
+      "You should …",
+      "If I were you, I’d …"
+     ],
+     "ex": "You should talk to Ana before you open the fridge."
+    }
+   ],
+   "fim": "One contract, four rules, and no angry notes."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

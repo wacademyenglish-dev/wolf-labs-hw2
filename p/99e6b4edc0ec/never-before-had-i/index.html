@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Never Before Had I · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 3 · Emphasis</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Never Before Had I · C1 Unit 3 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on inversion after negative and restrictive adverbials (Never before had I…, Not once did…, Rarely does…, Hardly had… when…, Little did I…, Only later did I…) and fronting for effect (Above us danced the lights; Cold it was).</p><p style="margin:0 0 6px"><b>The story:</b> A travel writer (invented) has 100 words to describe the northern lights over Lake Inari, Finland, at 1:40 a.m. Then an intern’s flat draft about a desert night needs editing.</p><p style="margin:0 0 6px"><b>About 44 min:</b> I · The Opening (10) · II · Make It Land (9) · III · The Editor’s Pen (8) · IV · The Best Opening (7) · V · Your Opening (10).</p><p style="margin:0"><b>Open with:</b> “What is the most beautiful thing you have ever seen in nature? Describe it in one sentence.”</p></div><!--/prep-->
+    <p>Other lessons of this unit drill inversion; this one uses it for a purpose: a dramatic opening in travel writing. Remind the student that inversion is for writing and speeches. The writing card is the student’s real trip: that’s the best part of the lesson.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>Never before had I… · Not once did… · Rarely does / do… · Hardly had… when… · Little did I know… · Only later did I… · fronting: Above us danced…</p>
+    <h4>THE OPENING</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>MAKE IT LAND</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>THE EDITOR’S PEN</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>YOUR OPENING</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>Never before I had seen (had I seen)</i>, <i>Not once anybody spoke (did anybody speak)</i>, <i>Rarely the desert is (is the desert)</i>, <i>Hardly had… then (when)</i>, <i>Little I knew (Little did I know)</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE BEST OPENING (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Before writing their own opening, your student ranks five travel moments by how dramatic they would be as the first line of a story, then defends the top one and the last one with inversion and fronting (Never before had I…, Rarely does…, Not once did…, Above us danced…). Your order is hidden behind a button: show it after they explain, and agree on one top 3 together. Wait five seconds in silence, use the PUSH line (only you see it), recast quietly while they talk, and at the end ask for one or two self-corrections. Their number 1 can become the topic of “Your Opening”.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Opening.</li>
+      <li><b>Focus</b>: II · Make It Land and III · The Editor’s Pen.</li>
+      <li><b>Out loud</b>: IV · The Best Opening.</li>
+      <li><b>Write</b>: V · Your Opening.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* NEVER BEFORE HAD I · C1 · UNIT 3 · pergunta-surpresa · 29/10/2026 · inversion and fronting */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Where is the coldest, or the hottest, place you have ever been?',
+    opc: ['The coldest', 'The hottest', 'Both in one trip'], st: ['Never before had I felt so …', 'Cold it was, …'],
+    ex: 'The hottest: Cuiabá in October. Never before had I felt so slow. Hot it was, brutally hot.', push: 'Would you go back? Why, or why not?' },
+  { cena: 'transforma', tipo: 'Would you rather', q: 'Would you rather see the northern lights or a total eclipse of the sun?',
+    opc: ['The northern lights', 'A total eclipse'], st: ['Rarely does anyone get to …', 'Not once have I …'],
+    ex: 'A total eclipse. Rarely does anyone get to see the day turn into night in two minutes.', push: 'It costs a year of savings. Still yes?' },
+  { cena: 'erros', tipo: 'Opinion', q: 'Do photos make us remember a trip better, or worse?',
+    opc: ['Better', 'Worse', 'It depends how many'], st: ['Hardly had I … when …', 'Little did I know that …'],
+    ex: 'Worse. Hardly had I taken the photo when the moment was gone. Little did I know I’d never look at it again.', push: 'How many photos are on your phone right now? Be honest.' },
+  { cena: 'cartao', tipo: 'What if', q: 'What if you could only travel without a phone for your next trip?',
+    opc: ['Dream trip', 'Nightmare', 'Only with a paper map'], st: ['Not only would I …, but I’d also …', 'Never again would I …'],
+    ex: 'Dream trip. Not only would I see more, but I’d also talk to people. Never again would I eat at a place just because of reviews.', push: 'You miss your train and nobody speaks your language. Still a dream?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* NEVER BEFORE HAD I · C1 · UNIT 3 · conversa · 29/10/2026 · regra 3×3 do Carlos
+   O ranking ENTRA depois de "III · The Editor’s Pen" (37 min, nenhuma cena extra: +7 min cabe), antes do
+   cartão de escrita: o aluno ordena cinco momentos de viagem pelo poder de abrir uma história e defende o
+   1º e o último com inversão e fronting. Depois compara com a ordem do professor. Ajuda a escolher o tema
+   do "Your Opening". */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'ranking', apos: 'erros', est: 'o', min: 7, img: 'conversa', rot: 'The Best Opening', t: 'Which moment opens the best story?',
+    p: 'Five travel moments. Put them in order: 1 is the most dramatic opening for a travel story. Defend your top one and your last one.',
+    formato: 'ranking',
+    q: 'Which moment would make the most dramatic opening?',
+    itens: ['The northern lights over a frozen lake', 'Your first sight of the sea', 'Getting lost in a city at night', 'A night train across the mountains', 'A storm over the campsite'],
+    st: ['Never before had I …', 'Rarely does a traveller …', 'Not once did I …', 'Above us / Below us + verb …'],
+    ex: 'Number 1: the storm. Never before had I heard thunder that close, and not once did the tent stop shaking. Last: the night train. Rarely does a reader stay awake for a train that only moves.',
+    push: 'Open your number 1 right now, out loud, in one sentence. Then make it better.',
+    prof: [2, 0, 4, 3, 1],
+    dica: 'Tap from the most to the least dramatic. Tap again to take it out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "One hundred words of light.",
+   "p": "Read it slowly with your teacher. Then look closer."
+  },
+  "transforma": {
+   "t": "Plain sentence → dramatic sentence.",
+   "p": "Use the clue. Say it with inversion or fronting."
+  },
+  "erros": {
+   "t": "The intern’s draft has five problems.",
+   "p": "Find one. Say the right form. Then tap."
+  },
+  "cv-ranking": {
+   "t": "Which moment opens the best story?",
+   "p": "Rank five travel moments. Defend first and last."
+  },
+  "cartao": {
+   "t": "The first lines of your best trip.",
+   "p": "Four or five lines. One inversion, one fronting."
+  }
+ },
+ "prep": {
+  "obj": "Inversão depois de advérbio negativo/restritivo (Never before had I…, Little did I know…, Only later did I…) e fronting (Above us danced the lights) para abrir um texto de viagem: auroras no lago Inari.",
+  "armadilha": "O português não inverte: sai “Never before I had seen”, “Not once anybody spoke”, “Little I knew”, “Rarely the desert is”; e “Hardly had… then” no lugar de when.",
+  "pal": [
+   "Never before had I …",
+   "Not once did …",
+   "Rarely does …",
+   "Hardly had … when",
+   "Little did I know",
+   "Only later did I …",
+   "Above us danced …",
+   "northern lights"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: inversão com propósito, uma abertura dramática de viagem.",
+   "perg": "What’s the most beautiful thing you’ve seen in nature?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Leitura lenta da abertura: auroras sobre o lago Inari, Finlândia, à 1h40.",
+   "perg": "Which sentence makes you feel the cold?",
+   "pula": "Leia e ache só duas inversões."
+  },
+  "transforma": {
+   "obj": "Da frase simples à dramática, com inversão ou fronting.",
+   "perg": "Where does the weight go now?",
+   "pula": "Quatro frases bastam."
+  },
+  "erros": {
+   "obj": "O rascunho chato do estagiário sobre uma noite no deserto: cinco problemas.",
+   "perg": "How would the editor fix this line?",
+   "pula": "Três problemas bastam."
+  },
+  "cv-ranking": {
+   "obj": "Ranking de cinco momentos de viagem como primeira linha; defender o 1º e o último.",
+   "perg": "Which moment would you open with, and why?",
+   "pula": "Só o primeiro e o último."
+  },
+  "cartao": {
+   "obj": "Escrita: a abertura da melhor viagem real do aluno, com uma inversão e um fronting.",
+   "perg": "Which trip deserves this opening?",
+   "pula": "Duas linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais momentos marcantes da vida do aluno, contados com inversão.",
+   "perg": "Never before had you…? Tell me.",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre viagem e escrita de viagem, com uma inversão por lado.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o autor do texto de viagem e conta a noite das auroras.",
+   "perg": "What did you see at 1:40 a.m.?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your moments, with weight.",
+   "p": "Pick a card. One inversion, then plainly.",
+   "palavras": [
+    "Never before had I …",
+    "Little did I know",
+    "Only later did I …",
+    "Not once did …"
+   ],
+   "cartas": [
+    {
+     "k": "FIRST TIME ABROAD",
+     "q": "What surprised you the first time you traveled abroad?",
+     "fup": "Tell it plainly now.",
+     "st": [
+      "Never before had I …",
+      "The thing is, …"
+     ],
+     "ex": "Never before had I seen snow falling on a city street."
+    },
+    {
+     "k": "LITTLE DID I KNOW",
+     "q": "Tell me about a day that changed your life without you noticing.",
+     "fup": "When did you realize?",
+     "st": [
+      "Little did I know that …"
+     ],
+     "ex": "Little did I know that the stranger on the bus would become my business partner."
+    },
+    {
+     "k": "ONLY LATER",
+     "q": "What did you understand only years later?",
+     "fup": "Who taught you?",
+     "st": [
+      "Only later did I understand …"
+     ],
+     "ex": "Only later did I understand why my father worked on Saturdays."
+    },
+    {
+     "k": "NOT ONCE",
+     "q": "Tell me about a trip where something never happened as planned.",
+     "fup": "Would you go back?",
+     "st": [
+      "Not once did …"
+     ],
+     "ex": "Not once did the sun come out in our week in London."
+    },
+    {
+     "k": "HARDLY",
+     "q": "Tell a moment when two things happened almost at once.",
+     "fup": "How did you feel?",
+     "st": [
+      "Hardly had I … when …"
+     ],
+     "ex": "Hardly had we reached the top when the clouds opened."
+    },
+    {
+     "k": "THE VIEW",
+     "q": "Describe the best view you’ve ever had, with fronting.",
+     "fup": "Where were you standing?",
+     "st": [
+      "Below us lay …",
+      "Above us …"
+     ],
+     "ex": "Below us lay the whole of Rio, lit up like a map."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "Rarely does …",
+    "Never before …",
+    "I see your point, but …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Travel writing: dramatic or plain?",
+     "a": "Dramatic",
+     "b": "Plain",
+     "fa": [
+      "Dramatic. Rarely does a plain sentence make me book a flight.",
+      "Readers want to feel it."
+     ],
+     "fb": [
+      "Plain. Too much drama sounds like an ad.",
+      "The thing is, good facts don’t need costumes."
+     ]
+    },
+    {
+     "q": "Northern lights or a desert at night?",
+     "a": "Northern lights",
+     "b": "Desert",
+     "fa": [
+      "Northern lights. Never before had the sky moved for me.",
+      "It’s color you can’t imagine."
+     ],
+     "fb": [
+      "Desert. Not once in a city have I seen so many stars.",
+      "Silence is the real show."
+     ]
+    },
+    {
+     "q": "Photos or no photos on a once-in-a-lifetime night?",
+     "a": "Photos",
+     "b": "No photos",
+     "fa": [
+      "Photos. Only later do you realize what you saw.",
+      "Memory fades; pictures don’t."
+     ],
+     "fb": [
+      "No photos. Rarely does a phone see what you see.",
+      "I see your point, but I want to be there, not filming."
+     ]
+    },
+    {
+     "q": "Plan a trip around one big moment, or let it find you?",
+     "a": "Plan it",
+     "b": "Let it find you",
+     "fa": [
+      "Plan it. The lights don’t wait for you.",
+      "Without a plan, you miss them."
+     ],
+     "fb": [
+      "Let it find you. Little did I know my best night would be unplanned.",
+      "Planned magic feels like a ticket."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Never before had a debate been so dramatic."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the travel writer now.",
+   "p": "Your teacher interviews you about Lake Inari.",
+   "aluno": "Listen to your teacher’s question. Answer as the travel writer, with inversion when it matters.",
+   "perguntas": [
+    "What did you see over Lake Inari at 1:40 a.m.?",
+    "Had you ever seen the northern lights before?",
+    "Did you expect them that night?",
+    "Why did you only have a hundred words?",
+    "What did you tell the intern about the desert draft?",
+    "When did you understand what that night meant to you?"
+   ],
+   "st": [
+    "Never before had I …",
+    "Little did I know …",
+    "Only later did I …"
+   ],
+   "ex": "Never before had I seen the sky move. Above the lake danced green light, and not once did anyone speak."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

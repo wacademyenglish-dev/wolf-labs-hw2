@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Nobody Does That Anymore",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f5cd6c274b17/nobody-does-that/img/live-museu.webp",
+  "capa": "../img/live-museu.webp",
   "alvo": "used to + plain verb for a habit or state that is over; didn't use to; Did you use to ...?; Where did you use to ...?; with did the D goes away; still true now = usually",
   "abrir": "What did you use to do when you were ten?",
   "fecho": "Habit that is over: <b>used to</b> + plain verb: <i>People used to carry coins.</i> With <b>did</b>, the D goes: <i>I didn't use to · Did you use to ...?</i> Still true now? <b>usually</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a museum of old things. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/f5cd6c274b17/nobody-does-that/img/live-payphone.webp",
+      "img": "../img/live-payphone.webp",
       "leg": "An old phone in the museum",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "People used to put coins in the phone.",
-          "img": "https://wolf-labs.pages.dev/p/f5cd6c274b17/nobody-does-that/img/live-payphone.webp",
+          "img": "../img/live-payphone.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "They used to look for numbers in a big book.",
-          "img": "https://wolf-labs.pages.dev/p/f5cd6c274b17/nobody-does-that/img/live-phonebook.webp",
+          "img": "../img/live-phonebook.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Did you use to rent movies at the video store?",
-          "img": "https://wolf-labs.pages.dev/p/f5cd6c274b17/nobody-does-that/img/live-videostore.webp",
+          "img": "../img/live-videostore.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f5cd6c274b17/nobody-does-that/img/live-museu.webp",
+      "img": "../img/live-museu.webp",
       "leg": "A dark museum with old things",
       "pede": "Look at the picture: a dark museum with old things. Write 2 or 3 sentences about something people <b>used to</b> do, and what they do now.",
       "ph": "People used to …",

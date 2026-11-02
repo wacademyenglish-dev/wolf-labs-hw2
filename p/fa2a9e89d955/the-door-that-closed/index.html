@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Other Track · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Other Track · The Railway Switch</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Other Track · The Railway Switch</h2>
+    <p>The third conditional is for a past that didn’t happen: <b>If I had known, I would have told you.</b> Both halves move back: <b>if + had + third form</b>, <b>would have + third form</b>. Students say <i>If I would have known</i>. In speech, both HAD and WOULD become <b>’d</b>. On screen, a track map: the main track is what happened; when both halves are right, the switch flips and the train runs down the other track to a place that never existed.</p>
+    <h4>SCENE I IS NOT CORRECTED</h4>
+    <p>Write down the student’s third answer word for word. It will probably come out as <i>If I would have</i>. It comes back in scene X.</p>
+    <h4>OPEN OR SHUT</h4>
+    <p>Scene II: the tense follows the door, not the feeling. A door is shut when the moment is gone. In scene IV, item 5 is an open door on purpose.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Scene V: four short lines with two ’d each, with pause and 0.75×. The student taps what each ’d stands for: the one next to IF is HAD. Line 2 has HAD HAD, and that’s correct English. Then you both say each line at normal speed.</p>
+    <h4>THE CHAIN</h4>
+    <p>Scene VIII: after each choice, ask “And then what would have happened?” and tap ONE MORE STOP for each link; the train goes further down the other track. The chain drifts into the simple past: pull it back to <i>would have</i>.</p>
+    <h4>KEEP IT KIND</h4>
+    <p>Regret can be heavy. If a choice is painful, let the student pick a lighter one.</p>
+    <!--conversa--><h4>THE BIGGEST SWITCH (IX) AND THE SURPRISE QUESTION</h4>
+    <p>The five stories from Flip the Switch come back. Your student ranks them from the biggest change to the smallest and explains the top one and the last one with if + had + participle, would have + participle. Then open your order and agree on one top three together. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast mistakes quietly while they talk (watch for “If I would have”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I A Choice That Changed Things, III Flip the Switch, VII No IF Needed, VIII Three of Your Choices, IX The Biggest Switch.</li>
+      <li><b>Listen</b>: V Two ’d, Two Words.</li>
+      <li><b>Focus</b>: II Open or Shut?, IV Both Halves Move Back, VI If I Would Have.</li>
+      <li><b>Write</b>: X, their choice on the other track. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE OTHER TRACK (Main B1) · pergunta-surpresa · 27/10/2026 · third conditional */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'portas', tipo: 'And you?', q: 'What is one small thing you did this week that you would do differently now?',
+    opc: ['Something I said', 'Something I bought', 'Something I ate'], st: ['If I had …, I would have …', 'I wouldn’t have … if I had known …'],
+    ex: 'Something I ate. If I had known the pizza was so big, I wouldn’t have ordered the dessert too.', push: 'And would that week have been better? Really?' },
+  { cena: 'voz', tipo: 'Would you rather', q: 'Would you rather know the result of every choice before you make it, or never know the other track?',
+    opc: ['Know everything', 'Never know'], st: ['I’d rather …, because if I had known …', 'If I had always known …, I would have …'],
+    ex: 'Never know. If I had known everything, I would never have tried anything new.', push: 'Even before a big exam or a big job decision?' },
+  { cena: 'semif', tipo: 'Opinion', q: 'Is it useful to think about “what would have happened”, or is it a waste of time?',
+    opc: ['Useful', 'A waste of time', 'It depends'], st: ['It’s useful, because if I hadn’t …', 'It’s a waste of time: …'],
+    ex: 'It depends. If I hadn’t thought about my first job, I wouldn’t have learned anything. But not every day!', push: 'How many times a week do you do it? Be honest.' },
+  { cena: 'fim', tipo: 'What if', q: 'If you had been born in another country, which one would you have liked it to be?',
+    opc: ['Somewhere cold', 'Somewhere hot', 'Somewhere far'], st: ['I would have liked …', 'If I had been born in …, I would have …'],
+    ex: 'Somewhere cold: Norway. If I had been born there, I would have learned to ski before I could walk.', push: 'Would you have learned English, then? Would we have met?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE OTHER TRACK (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O ranking entra no lugar de "IX · Quick Switches" (extra; perguntas rápidas que repetiam as do VII e VIII).
+   As cinco histórias do trilho principal (III) voltam: qual agulha teria mudado mais a vida?
+   O aluno ordena, defende o 1º e o último, e compara com a ordem do professor.
+   A gramática (if + had + particípio, would have + particípio) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'ranking', troca: 'cartas', est: 'o', min: 7, img: 'agulha', rot: 'The Biggest Switch', t: 'Five stories from the main track. Rank them.',
+    p: 'Number 1 is the biggest change. Explain your top one and your last one.',
+    formato: 'ranking',
+    q: 'Which switch would have changed the most?',
+    itens: ['He missed the train', 'She took the job in Lisbon', 'They didn’t check the weather', 'He didn’t know about the party', 'I said yes to the course'],
+    prof: [1, 4, 3, 0, 2],
+    st: ['Number one is …, because if …, … would never have …', 'If they had …, they would only have …', '… is last, because …'],
+    ex: '1 is Lisbon: if she hadn’t taken the job, she would never have met her husband. The weather is last: if they had checked it, they would only have stayed dry.',
+    push: 'What if his job interview was on that train? Does it move up? And what if he met somebody at the party?',
+    dica: 'Tap from the biggest change to the smallest. Tap again to take one out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "escolha": {
+   "t": "A choice that changed your life.",
+   "p": "Tap the kind of choice. Answer three questions."
+  },
+  "portas": {
+   "t": "Can it still happen?",
+   "p": "Read it. Say why. Tap OPEN or SHUT."
+  },
+  "agulha": {
+   "t": "Flip the switch. Take the other track.",
+   "p": "Tap the IF half, then WOULD HAVE. Say it."
+  },
+  "regra": {
+   "t": "Both halves move back.",
+   "p": "Say it before you tap. One door is open."
+  },
+  "voz": {
+   "t": "Two ’d, two different words.",
+   "p": "Play it. Tap what each ’d means. Say it."
+  },
+  "erros": {
+   "t": "Five have a problem. One is right.",
+   "p": "Choose the fix. Say the whole sentence."
+  },
+  "semif": {
+   "t": "Sometimes the IF is in the situation.",
+   "p": "Answer with “I would have…” and say why."
+  },
+  "tres": {
+   "t": "Three of your own choices.",
+   "p": "Say your sentence. Then: and then what?"
+  },
+  "cv-ranking": {
+   "t": "Five stories. Which switch was biggest?",
+   "p": "Rank them. Explain your top and your last."
+  },
+  "fim": {
+   "t": "Your choice, on the other track.",
+   "p": "Write it in three sentences. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Third conditional (if + had + particípio, would have + particípio) para um passado que não aconteceu: um mapa de trilhos, e a agulha manda o trem para o outro caminho.",
+  "armadilha": "O brasileiro diz “If I would have known” (calco de “se eu teria”/“se eu tivesse”) e escorrega para o simple past na corrente; também confunde os dois ’d (had e would).",
+  "pal": [
+   "if I had known",
+   "would have",
+   "wouldn’t have",
+   "’d",
+   "had had",
+   "missed",
+   "the other track",
+   "regret"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: perdi o trem; se tivesse saído às seis, teria pego.",
+   "perg": "Have you ever missed a train or a plane?",
+   "pula": "Só leia a frase da capa e vá para a agulha."
+  },
+  "escolha": {
+   "obj": "Aquecimento pessoal: uma escolha que mudou a vida. Não corrija; anote a 3ª resposta palavra por palavra.",
+   "perg": "What would have happened if you hadn’t done it?",
+   "pula": "Duas perguntas; anote a frase, ela volta. Se pesar, escolha mais leve."
+  },
+  "portas": {
+   "obj": "Porta aberta ou fechada: o tempo verbal segue a porta, não o sentimento.",
+   "perg": "Can it still happen?",
+   "pula": "Três situações bastam."
+  },
+  "agulha": {
+   "obj": "Montar o third conditional em duas metades e ver o trem mudar de trilho.",
+   "perg": "If she had taken the job, what would have happened?",
+   "pula": "Três histórias bastam."
+  },
+  "regra": {
+   "obj": "Foco: as duas metades voltam; o item 5 é porta aberta de propósito.",
+   "perg": "Is this door open or shut?",
+   "pula": "Três frases, mas mantenha o item 5."
+  },
+  "voz": {
+   "obj": "Ouvir os dois ’d: o do if é had, o outro é would; had had é correto.",
+   "perg": "What does this ’d mean?",
+   "pula": "Duas linhas bastam; inclua a linha 2."
+  },
+  "erros": {
+   "obj": "Corrigir If I would have e outros erros; uma frase está certa.",
+   "perg": "What’s the problem here?",
+   "pula": "Três frases bastam."
+  },
+  "semif": {
+   "obj": "O if escondido na situação: responder com I would have / wouldn’t have.",
+   "perg": "Would you have done the same?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "tres": {
+   "obj": "Três escolhas do aluno e a corrente: e então, o que teria acontecido?",
+   "perg": "And then what would have happened?",
+   "pula": "Cena extra: uma escolha basta."
+  },
+  "cv-ranking": {
+   "obj": "Ranking das cinco histórias: qual agulha mudou mais; comparar com o top 3 do professor.",
+   "perg": "Which one changed the most, and why?",
+   "pula": "Só o primeiro e o último."
+  },
+  "fim": {
+   "obj": "Escrita: a escolha da cena I, agora no outro trilho, em três frases.",
+   "perg": "If you hadn’t made that choice, where would you be?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa leve sobre o passado que não aconteceu.",
+   "perg": "What would have happened if you had stayed home?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre arrependimento e sorte com o third conditional.",
+   "perg": "Would it really have been better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta um acaso feliz e segue a corrente para o outro trilho.",
+   "perg": "And if that hadn’t happened?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Small switches, other tracks.",
+   "p": "Pick a card. Both halves move back.",
+   "palavras": [
+    "if I had",
+    "I would have",
+    "I wouldn’t have",
+    "I could have"
+   ],
+   "cartas": [
+    {
+     "k": "THIS MORNING",
+     "q": "What would have happened if you had woken up an hour later today?",
+     "fup": "Would anybody have noticed?",
+     "st": [
+      "If I had woken up later, I would have …"
+     ],
+     "ex": "If I had woken up later, I would have missed my first meeting."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "If you had been born in another city, who would you have become?",
+     "fup": "Would you have learned English?",
+     "st": [
+      "If I had been born in …, I would have …"
+     ],
+     "ex": "If I had been born in Recife, I would have learned to surf."
+    },
+    {
+     "k": "A GOOD MISTAKE",
+     "q": "Tell me about a mistake that ended well.",
+     "fup": "What if you hadn’t made it?",
+     "st": [
+      "If I hadn’t …, I wouldn’t have …"
+     ],
+     "ex": "If I hadn’t taken the wrong bus, I wouldn’t have found my favorite café."
+    },
+    {
+     "k": "SCHOOL",
+     "q": "What would you have studied if you had had no pressure?",
+     "fup": "Would you be happier now?",
+     "st": [
+      "If I had had a choice, I would have studied …"
+     ],
+     "ex": "If I had had a choice, I would have studied music."
+    },
+    {
+     "k": "THE INTERNET",
+     "q": "If the internet hadn’t existed in your twenties, what would have changed?",
+     "fup": "Better or worse?",
+     "st": [
+      "I would have …",
+      "I wouldn’t have met …"
+     ],
+     "ex": "I would have read more books, but I wouldn’t have met my best friend."
+    },
+    {
+     "k": "A MOVIE",
+     "q": "Think of a movie. What would have happened if the hero had made another choice?",
+     "fup": "Would it be a better movie?",
+     "st": [
+      "If he had …, the movie would have …"
+     ],
+     "ex": "If Cinderella hadn’t lost her shoe, the prince wouldn’t have found her."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "The Debate",
+   "t": "Pick a side. Defend your track.",
+   "p": "Your teacher argues the other side.",
+   "palavras": [
+    "if I had",
+    "would have",
+    "wouldn’t have",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Is it good to think about the other track?",
+     "a": "Yes, it teaches",
+     "b": "No, it hurts",
+     "fa": [
+      "Yes. If I hadn’t thought about my mistakes, I wouldn’t have changed.",
+      "Regret is a teacher."
+     ],
+     "fb": [
+      "No. The other track doesn’t exist.",
+      "Thinking about it only steals today."
+     ]
+    },
+    {
+     "q": "Luck or choices: what made your life?",
+     "a": "Luck",
+     "b": "Choices",
+     "fa": [
+      "Luck. If I hadn’t met the right people, I wouldn’t have had a chance.",
+      "Timing is everything."
+     ],
+     "fb": [
+      "Choices. If I hadn’t studied, luck wouldn’t have helped.",
+      "You make your own track."
+     ]
+    },
+    {
+     "q": "If you had known your future at 18, would you have changed anything?",
+     "a": "Yes, a lot",
+     "b": "No, nothing",
+     "fa": [
+      "Yes. I would have saved more money.",
+      "And I would have traveled earlier."
+     ],
+     "fb": [
+      "No. If I had changed one thing, I wouldn’t be here.",
+      "My mistakes made me."
+     ]
+    },
+    {
+     "q": "Should you tell a friend “If you had listened to me…”?",
+     "a": "Yes, be honest",
+     "b": "Never",
+     "fa": [
+      "Yes. If I had stayed quiet, they would have done it again.",
+      "Friends tell the truth."
+     ],
+     "fb": [
+      "Never. It doesn’t help now.",
+      "It only makes them feel worse."
+     ]
+    }
+   ],
+   "fim": "Four rounds, four switches. You stayed on your track."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "A Lucky Accident",
+   "t": "A small accident, a big change.",
+   "p": "Step by step. Follow the other track.",
+   "prof": "Keep it light: a happy accident. Each step, ask “And then?”. Pull the simple past back to would have.",
+   "passos": [
+    {
+     "q": "Tell me about a small, lucky accident in your life.",
+     "st": [
+      "One day, I …",
+      "By accident, I …"
+     ],
+     "ex": "One day, I sat in the wrong classroom at university."
+    },
+    {
+     "q": "What happened because of it?",
+     "st": [
+      "Because of that, I …"
+     ],
+     "ex": "Because of that, I met my best friend."
+    },
+    {
+     "q": "Now flip the switch. If it hadn’t happened…",
+     "st": [
+      "If I hadn’t …, I wouldn’t have …"
+     ],
+     "ex": "If I hadn’t sat in the wrong room, I wouldn’t have met her."
+    },
+    {
+     "q": "And then? Go one more stop down the other track.",
+     "st": [
+      "And I would have …",
+      "I would never have …"
+     ],
+     "ex": "And I would never have moved to São Paulo with her."
+    }
+   ],
+   "fim": "One small accident, and the whole map changed."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

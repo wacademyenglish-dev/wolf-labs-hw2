@@ -1,0 +1,88 @@
+/* ============================================================
+   SINCE MARCH · KEYS AND A CONTRACT · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: corredor de prédio à noite; o
+   CONTRATO em papel grafite com linhas de máquina de escrever, carimbo
+   verde STILL VALID e a chave; a RÉGUA com o bloco NOW âmbar — SINCE é um
+   pino, FOR é uma chave de colchete. Acento: âmbar de lâmpada de corredor.
+   ============================================================ */
+:root{
+  --noite:#0a0a0b; --noite-rgb:10,10,11; --tinta:#eceae6;
+  --t1:#f1efeb; --t2:#cbc7c0; --t2-rgb:203,199,192; --t3:#908b83;
+  --ac:#e8b25a; --ac2:#ffd79a; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(236,234,230,.05); --vidro2:rgba(236,234,230,.085); --vidro3:rgba(236,234,230,.12);
+  --fio:rgba(226,222,214,.12); --fio2:rgba(226,222,214,.22); --luz:rgba(236,234,230,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#271803}
+.btn.cheio{color:#271803}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(66px,6.4vw,124px)/.92 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+.capa-d{display:grid;gap:16px}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:48px;padding:0 22px;font:700 clamp(17px,1.3vw,21px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start}
+.versoes{display:grid;gap:6px} .versao{text-align:left;padding:10px 14px}
+.versoes.dois-v{grid-template-columns:1fr 1fr;gap:12px} .dois-v .versao{padding:20px 22px;font-size:clamp(20px,1.6vw,26px)}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start;margin-top:10px}
+.sit{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2);text-align:center} .sit small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .sit b{font:700 clamp(21px,1.7vw,29px)/1.35 var(--disp)}
+.fitas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.fita{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .fita small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .fita b{font:700 clamp(16px,1.25vw,20px)/1.35 var(--disp)}
+.aberta{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center;max-height:calc(100vh / var(--zv,1) - 380px)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(10,10,11,.85);font:700 13px var(--mono);color:var(--ac2)}
+
+/* contrato e régua */
+.contrato{position:relative;display:grid;gap:10px;padding:22px 24px;border-radius:10px;background:repeating-linear-gradient(180deg,#1a1917 0 34px,#1d1c1a 34px 35px);border:1px solid #33302b;box-shadow:0 20px 40px rgba(0,0,0,.6);font-family:var(--mono)}
+.contrato>small{font:700 12px var(--mono);letter-spacing:.16em;color:var(--ac)}
+.linha-c{display:flex;justify-content:space-between;gap:12px;padding:4px 0;border-bottom:1px dashed #3a3630} .linha-c span{font:700 13px var(--mono);color:var(--t3)} .linha-c b{font:700 clamp(15px,1.15vw,19px) var(--mono);color:var(--t1)} .linha-c .atraso{color:var(--o)}
+.carimbo-c{position:absolute;right:18px;bottom:16px;padding:4px 10px;border:3px double #6fcf86;border-radius:8px;font:700 13px var(--mono);color:#6fcf86;transform:rotate(-10deg)}
+.chave-c{position:absolute;right:20px;top:14px;font-size:30px;color:var(--ac)}
+.contrato.vazio .linha-c b{color:var(--t3)}
+.regua{display:block;width:100%}
+.regua .base{stroke:#5a554c;stroke-width:3} .regua line{stroke:#5a554c;stroke-width:2} .regua text{font:700 13px var(--mono);fill:#8f897e}
+.regua .faixa{stroke:var(--ac);stroke-width:8;stroke-linecap:round;opacity:.75} .regua .pino{fill:var(--ac2);stroke:#271803;stroke-width:2} .regua .haste{stroke:var(--ac2);stroke-width:2}
+.regua .chave{fill:none;stroke:var(--ac2);stroke-width:3} .regua .rot-p{font:700 15px var(--mono);fill:var(--ac2)}
+.regua .now{fill:#3a2a10;stroke:var(--ac);stroke-width:2} .regua .now-t{font:700 15px var(--mono);fill:var(--ac2)}
+.quadro-r{padding:14px 18px;border-radius:var(--r1)}
+.palavra-r{display:grid;gap:4px;justify-items:center;padding:10px;border-radius:var(--r2)} .palavra-r small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .palavra-r b{font:800 clamp(30px,2.6vw,46px) var(--disp);color:var(--ac2)}
+.clausula{display:grid;gap:6px;padding:14px 20px;border-radius:var(--r2);border-left:4px solid var(--ac)!important} .clausula small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .clausula b{font:700 clamp(20px,1.6vw,27px)/1.35 var(--disp)} .clausula em{font:600 16px var(--disp);color:var(--t2);font-style:normal}
+.par-c{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center}
+
+/* fatos, geladeira, calendário */
+.fatos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q-linha{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .q-linha.feito{border-color:rgba(143,217,162,.4)!important} .q-linha.feito.fim{border-color:rgba(232,178,90,.4)!important}
+.q-linha p{margin:0;font:700 clamp(17px,1.3vw,21px)/1.35 var(--disp)} .q-linha .aprova,.q-linha .recusa{margin:0;font-size:15px}
+.etiqueta{display:inline-block;padding:2px 8px;border-radius:6px;background:#2b2722;font:700 13px var(--mono);color:var(--ac2)}
+.calendario{display:grid;gap:6px;padding:18px;border-radius:14px;background:#151412;border:1px solid #2e2b27}
+.mes{font:800 clamp(22px,1.8vw,30px) var(--mono);letter-spacing:.2em;color:var(--t2);text-align:center}
+.semana-c,.dias-c{display:grid;grid-template-columns:repeat(7,1fr);gap:4px} .semana-c span{font:700 11px var(--mono);color:var(--t3);text-align:center}
+.dia{position:relative;display:grid;align-content:start;min-height:clamp(40px,calc((100vh / var(--zv,1) - 480px) / 5),70px);padding:4px 6px;border-radius:6px;background:#1c1a17}
+.dia b{font:700 14px var(--mono);color:var(--t2)} .dia small{font:600 11px var(--disp);color:var(--ac2)}
+.dia.x::after{content:'';position:absolute;inset:6px;background:linear-gradient(45deg,transparent 46%,#c0453a 47% 53%,transparent 54%),linear-gradient(-45deg,transparent 46%,#c0453a 47% 53%,transparent 54%);opacity:.8}
+.dia.hoje{outline:2px solid var(--ac)}
+.fim-s{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start;margin:10px 0}
+.hospital{max-height:calc(100vh / var(--zv,1) - 420px)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.fim-s{grid-template-columns:1fr} .fitas{grid-template-columns:1fr 1fr} }
+@media (max-width:820px){ .fitas,.fatos,.versoes.dois-v,.par-c{grid-template-columns:1fr} }
+.compacto .q-linha{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 12px;padding:9px 14px}
+.compacto .q-linha .aprova,.compacto .q-linha .recusa{grid-column:1/-1}
+.compacto .q-linha .pilula{min-height:34px;font-size:13px;padding:0 12px}
+.mesa-g{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)}
+.regua{max-height:clamp(90px,calc(100vh / var(--zv,1) - 720px),150px)}
+.palavra-r{padding:6px} .palavra-r b{font-size:clamp(26px,2.1vw,38px)}
+.recap{margin:6px 0 12px}
+@media (max-width:1100px){ .mesa-g{grid-template-columns:1fr} }
+@media (max-width:820px){ .compacto .q-linha{grid-template-columns:1fr} }
+.recap{padding:8px 16px} .recap b{font-size:clamp(17px,1.3vw,21px)}

@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · I Just Had to Do It · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 4 · B1</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 4 · I Just Had to Do It · B1</h2>
+    <p>Episode 4 of <b>Better Speaking</b>, B1 version. Bj&ouml;rk thought about her first album for ten years; it wasn&rsquo;t perfect, but she &ldquo;just had to do it anyway&rdquo;. The language is obligation in the past: <b>had to / didn&rsquo;t have to / Did you have to&hellip;?</b>. The sister lesson for B2 is &ldquo;Sound Like Someone&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; When you had to, Then and now. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; I had to, Find the reason, Fix the traps, Choose the right words.</li>
+      <li><b>Write</b> &mdash; A hard week. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Must in the past: <i>I musted study</i>. &ldquo;Tive que&rdquo; becomes <i>I had that work</i>. And the question without did: <i>You had to wear a uniform?</i></p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 4 · I JUST HAD TO DO IT (B1)
+   Vídeo: BBC Learning English, Better Speaking (p4X2IVigD1c), três trechos (~3:40).
+   Alvo: had to / didn't have to (obrigação no passado). Nenhuma B1 ensina. A aula irmã B2 é a "Sound Like Someone". */
+const M = { nome: "I Just Had to Do It", kick: "B1 · HAD TO, DIDN'T HAVE TO" };
+var EP = {
+  n: 4, de: 8, nivel: 'B1', titulo: 'I Just Had to Do It', video: 'p4X2IVigD1c',
+  convidado: 'Björk', habilidade: 'talk about what you had to do',
+  trechos: [
+    { ini: 89, fim: 174, rot: 'Björk: Debut and Post' },
+    { ini: 353, fim: 427, rot: 'Richard: words in groups' },
+    { ini: 548, fim: 599, rot: 'Copy one person' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'Björk thought about her first album for ten years. It wasn\'t perfect, but she just had to do it. Today: what you had to do, and what you didn\'t have to do.',
+      nota: 'Ask: what is something you did even when you weren\'t ready?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'When you <em>had to</em>', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Help with had to when it is needed.',
+      cartas: [
+        { frente: 'Music', verso: 'Do you know Björk? What music do you like?', dica: 'I like… / I don\'t know her.', cor: 'var(--guest)', fw: { q: 'Which singer\'s English would you like to have?', st: ['I\'d like to speak like…', 'I love the voice of…'], help: '“I\'d like to speak like Taylor Swift. She speaks so clearly.”' } },
+        { frente: 'First', verso: 'What was your first job? Was it easy?', dica: 'My first job was…', cor: 'var(--host)', fw: { q: 'What did you have to do there?', st: ['I had to…', 'I didn\'t have to…'], help: '“I had to wake up at five. I didn\'t have to wear a uniform.”' } },
+        { frente: 'School', verso: 'What rules did you have at school?', dica: 'We had to…', cor: 'var(--teacher)', fw: { q: 'Which rule was the worst?', st: ['We had to…', 'We couldn\'t…'], help: '“We had to stand up when the teacher came in.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'three clips · about 4 minutes', titulo: 'Listen to <em>Björk</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os três trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Björk is from…', ops: [{ t: 'Iceland' }, { t: 'Sweden' }] }, { q: 'Was her first album perfect, in her opinion?', ops: [{ t: 'Yes' }, { t: 'No' }] } ],
+      durante: 'Listen for: “I just had to do it anyway”. Then Richard talks about learning words in groups.',
+      depois: [ { f: 'Björk thought about her first album for about ten years.', ok: 1 }, { f: 'She says her second album was worse.', ok: 0 }, { f: 'She says you can\'t plan your life.', ok: 1 }, { f: 'Richard says: choose ten people to copy.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'I <em>had to</em>', pt: 'had to + verbo = era obrigatório · didn\'t have to = não era preciso.',
+      nota: 'Read each card. The red card is “must” in the past.',
+      cartoes: [ { g: 'I just <b>had to</b> do it anyway.', p: 'It was necessary.' }, { g: 'We <b>didn\'t have to</b> wear a uniform.', p: 'It wasn\'t necessary.' }, { g: '<b>Did</b> you <b>have to</b> work on Saturday?', p: 'Question: did + have to.' }, { g: 'I musted study yesterday.', p: 'Must has no past: I had to study.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'why?', titulo: 'Find the <em>reason</em>', pt: 'Toque na frase e depois no motivo dela.',
+      nota: 'Say each pair as one sentence with because.',
+      esq: ['I had to take a taxi', 'I didn\'t have to cook', 'She had to study all night', 'We didn\'t have to pay', 'He had to wear a suit'], dir: ['because I missed the bus.', 'because we ate at a restaurant.', 'because she had a test.', 'because it was free.', 'because it was a wedding.'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Tell me one thing you had to do yesterday.', st: ['Yesterday I had to…', 'I didn\'t have to…'], help: '“Yesterday I had to go to the bank.”' } },
+    { k: 'cartas', est: 'o', rot: 'then and now', titulo: 'Then and <em>now</em>', pt: 'Vire a carta e compare: o que você tinha que fazer antes, e agora?',
+      nota: 'The student compares past and present: had to / have to / didn\'t have to.',
+      cartas: [
+        { frente: 'Child', sob: 'compare', verso: 'When you were a child: what did you have to do at home?', dica: 'I had to… Now I…', cor: 'var(--guest)', fw: { q: 'And what didn\'t you have to do?', st: ['I didn\'t have to…', 'My parents did it.'], help: '“I didn\'t have to pay any bills!”' } },
+        { frente: 'Covid', sob: 'compare', verso: 'In 2020: what did you have to do differently?', dica: 'We had to…', cor: 'var(--host)' },
+        { frente: 'English', sob: 'compare', verso: 'Your first English class: what did you have to do?', dica: 'I had to…', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: '“Tive que”, the past of must, and the question.',
+      itens: [ { erro: 'I <s>musted</s> study yesterday.', certo: 'I <b>had to</b> study yesterday.', por: 'Must has no past.' }, { erro: 'I <s>had that</s> work on Sunday.', certo: 'I <b>had to</b> work on Sunday.', por: '“Tive que” = had to.' }, { erro: '<s>You had to</s> wear a uniform?', certo: '<b>Did you have to</b> wear a uniform?', por: 'Question: did you have to…?' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right words</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Read each one aloud.',
+      itens: [ { f: 'It wasn\'t perfect, but I just ___ do it.', ops: ['had to', 'must'], ok: 0 }, { f: 'We ___ wear a uniform. It was optional.', ops: ['didn\'t have to', 'hadn\'t to'], ok: 0 }, { f: 'Did you ___ work last weekend?', ops: ['have to', 'had to'], ok: 0 }, { f: 'She thought about it ___ ten years.', ops: ['for', 'during'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'A <em>hard week</em>', pt: 'Escreva sobre uma semana difícil: o que você teve que fazer, e o que não precisou.',
+      ph: 'Last month I had a hard week. I had to… I didn\'t have to…', nota: 'The line under the paper catches “musted” and “hadn\'t to”. SAVE sends it to My notes.',
+      banco: ['Last month', 'I had to', 'I didn\'t have to', 'because', 'but in the end', 'It wasn\'t perfect, but'],
+      regras: [['\\bmusted\\b', 'Check: must has no past, use HAD TO.'], ['\\bhadn\'?t to\\b', 'Check: DIDN\'T HAVE TO.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Half of the world', tx: 'Kofi Annan speaks to the world: half of humanity has never made a phone call. Big ideas, simple words.',
+      ganchos: [['Next guest', 'Kofi Annan'], ['The skill', 'talk about how many'], ['Your task', 'tell one “had to” story']], nota: 'Ask: have you ever given a speech? How did you feel? That opens Episode 5.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "Ten years thinking. Not perfect. She just had to do it."
+  },
+  "c9": {
+   "p": "Kofi Annan speaks to the world. Big ideas, simple words."
+  }
+ },
+ "prep": {
+  "obj": "Obrigação no passado: had to / didn't have to / Did you have to…? Björk pensou dez anos no primeiro álbum; não era perfeito, mas ela “just had to do it”.",
+  "armadilha": "Must no passado (“I musted study”), “tive que” vira “I had that work” e a pergunta sem did (“You had to wear a uniform?”).",
+  "pal": [
+   "had to",
+   "didn't have to",
+   "Did you have to…?",
+   "have to",
+   "I just had to do it",
+   "album",
+   "ready",
+   "anyway"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a convidada: Björk e o primeiro álbum, imperfeito, mas feito.",
+   "perg": "What is something you did even when you weren't ready?",
+   "pula": "Uma resposta e siga."
+  },
+  "c1": {
+   "obj": "Conversa sobre o que o aluno teve que fazer; ajude com had to quando precisar.",
+   "perg": "What did you have to do last week?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os clipes da Björk, em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "How long did she think about the album?",
+   "pula": "Assista uma vez só; os clipes vão inteiros."
+  },
+  "c3": {
+   "obj": "A regra: had to, didn't have to, Did you have to…?; o cartão vermelho é must no passado.",
+   "perg": "Did you have to wear a uniform at school?",
+   "pula": "Leia os cartões e peça uma frase com had to."
+  },
+  "c4": {
+   "obj": "Ligar a ação ao motivo e dizer como uma frase com because.",
+   "perg": "Why did she have to do it?",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "Antes e agora: comparar had to / have to / didn't have to.",
+   "perg": "As a child you had to… and now?",
+   "pula": "Duas cartas bastam."
+  },
+  "c6": {
+   "obj": "Corrigir as três armadilhas: musted, had that, pergunta sem did.",
+   "perg": "What's wrong here? Say the right one.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c7": {
+   "obj": "Prática: escolher as palavras e ler cada frase em voz alta.",
+   "perg": "Read it aloud. Why that word?",
+   "pula": "Faça três linhas."
+  },
+  "c8": {
+   "obj": "Escrever sobre uma semana difícil: o que teve e o que não teve que fazer; vai para o My notes.",
+   "perg": "What was the hardest thing you had to do?",
+   "pula": "Três frases bastam."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 5: Kofi Annan fala ao mundo com palavras simples.",
+   "perg": "Have you ever given a speech? How did you feel?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre obrigações no passado, na vida do aluno.",
+   "perg": "Did you have to do it?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre esperar estar pronto ou fazer mesmo assim.",
+   "perg": "Which side are you on? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta um projeto que fez mesmo sem estar pronto, passo a passo, com had to.",
+   "perg": "What did you have to do first?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "What did you have to do?",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "had to",
+    "didn't have to",
+    "Did you have to…?"
+   ],
+   "cartas": [
+    {
+     "k": "SCHOOL",
+     "q": "What did you have to do at school that you hated?",
+     "fup": "Did you have to wear a uniform?",
+     "st": [
+      "I had to …",
+      "I didn't have to …"
+     ],
+     "ex": "I had to wake up at six. I didn't have to wear a uniform."
+    },
+    {
+     "k": "YOUR FIRST JOB",
+     "q": "What did you have to do in your first job?",
+     "fup": "Did you have to work weekends?",
+     "st": [
+      "I had to …",
+      "Yes, I did. / No, I didn't."
+     ],
+     "ex": "I had to answer the phone all day. No, I didn't work weekends."
+    },
+    {
+     "k": "NOT READY",
+     "q": "When did you have to do something before you were ready?",
+     "fup": "How did it go?",
+     "st": [
+      "I had to … before I was ready.",
+      "It wasn't perfect, but …"
+     ],
+     "ex": "I had to give a presentation in English. It wasn't perfect, but I did it."
+    },
+    {
+     "k": "AT HOME",
+     "q": "What did you have to do at home as a kid?",
+     "fup": "And now? Do you still have to?",
+     "st": [
+      "I had to …",
+      "Now I have to …"
+     ],
+     "ex": "I had to wash the dishes. Now I have to cook too!"
+    },
+    {
+     "k": "LAST WEEK",
+     "q": "What didn't you have to do last week? Lucky you!",
+     "fup": "Why not?",
+     "st": [
+      "I didn't have to …",
+      "because …"
+     ],
+     "ex": "I didn't have to drive, because my sister took me."
+    },
+    {
+     "k": "A DREAM",
+     "q": "Is there a dream you thought about for years, like Björk?",
+     "fup": "What did you have to change?",
+     "st": [
+      "I thought about … for …",
+      "I had to …"
+     ],
+     "ex": "I thought about learning guitar for five years. I had to buy one first!"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "had to",
+    "have to",
+    "because",
+    "I see, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Do it now, not perfect, or wait until it's perfect?",
+     "a": "Do it now",
+     "b": "Wait",
+     "fa": [
+      "Do it now. Björk just had to do it.",
+      "Perfect never comes."
+     ],
+     "fb": [
+      "Wait. People remember a bad first try.",
+      "You only have one first chance."
+     ]
+    },
+    {
+     "q": "School rules: kids had to do too much or too little?",
+     "a": "Too much",
+     "b": "Too little",
+     "fa": [
+      "Too much. We had to memorize everything.",
+      "There was no time to play."
+     ],
+     "fb": [
+      "Too little. Now kids don't have to do anything.",
+      "Rules teach responsibility."
+     ]
+    },
+    {
+     "q": "A job you love with low pay or a boring job with high pay?",
+     "a": "Love",
+     "b": "High pay",
+     "fa": [
+      "A job I love. I don't want to work only for money.",
+      "You spend most of your life at work."
+     ],
+     "fb": [
+      "High pay. I have to pay my bills.",
+      "You can enjoy your free time."
+     ]
+    },
+    {
+     "q": "Learn English as a kid or as an adult?",
+     "a": "As a kid",
+     "b": "As an adult",
+     "fa": [
+      "As a kid. It's easier, and you don't have to try.",
+      "The accent is better too."
+     ],
+     "fb": [
+      "As an adult. You know why you're learning.",
+      "Nobody has to tell you to study."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your First Album",
+   "t": "Your own “first album”.",
+   "p": "A project you just had to do.",
+   "prof": "Any project works: a trip, a business, a move. Keep had to / didn't have to in every step.",
+   "passos": [
+    {
+     "q": "What was the project? How long did you think about it?",
+     "st": [
+      "I thought about … for …"
+     ],
+     "ex": "I thought about opening my own studio for three years."
+    },
+    {
+     "q": "What did you have to do first?",
+     "st": [
+      "First, I had to …"
+     ],
+     "ex": "First, I had to save money and find a place."
+    },
+    {
+     "q": "What didn't you have to do? What was easy?",
+     "st": [
+      "I didn't have to …"
+     ],
+     "ex": "I didn't have to find clients. My friends came first."
+    },
+    {
+     "q": "Was it perfect? Why did you do it anyway?",
+     "st": [
+      "It wasn't perfect, but …",
+      "I just had to …"
+     ],
+     "ex": "It wasn't perfect, but I just had to do it."
+    }
+   ],
+   "fim": "Not perfect, but done. That's your first album."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

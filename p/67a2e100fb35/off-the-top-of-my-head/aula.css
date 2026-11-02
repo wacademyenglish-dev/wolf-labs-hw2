@@ -1,0 +1,84 @@
+/* ============================================================
+   OFF THE TOP OF MY HEAD · THE GALLERY · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: clube de histórias à noite
+   — veludo violeta quase preto, molduras escuras com placas de latão
+   (gravadas quando a expressão sai certa), serifa de cartaz (DM Serif
+   Display); o cadeado das palavras fixas; a placa OPEN MIC com
+   lâmpadas de latão na borda.
+   ============================================================ */
+:root{
+  --noite:#08060c; --noite-rgb:8,6,12; --tinta:#eeeaf3;
+  --t1:#f5f2f8; --t2:#cbc4d6; --t2-rgb:203,196,214; --t3:#857d94;
+  --ac:#c9a2ff; --ac2:#e6d6ff; --latao:#e5c07b;
+  --vidro:rgba(238,234,243,.05); --vidro2:rgba(238,234,243,.085); --vidro3:rgba(238,234,243,.12);
+  --fio:rgba(230,224,240,.12); --fio2:rgba(230,224,240,.22); --luz:rgba(238,234,243,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'DM Serif Display',Georgia,serif; --ui:'Karla',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:18px; --r2:12px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1d0b38}
+.btn.cheio{color:#1d0b38}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:400 clamp(50px,4.6vw,88px)/.98 var(--disp);letter-spacing:-.01em}
+.capa h1 b{display:block;font-weight:400;font-style:italic;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(18px,1.4vw,24px)/1.5 var(--ui);color:var(--t2);max-width:30em} .capa .sub b{color:var(--latao)}
+.capa-r{display:grid;gap:14px;width:100%;max-width:560px;justify-self:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:start;margin-top:10px}
+.ot-ops{display:grid;gap:6px} .ot-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;margin:12px auto;width:100%} .ot-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.ot-linha-ok{display:flex;align-items:center;gap:12px} .ot-linha-ok .aprova{flex:1;margin:0} .ot-linha-ok.centro{max-width:1200px;margin:0 auto;width:100%}
+
+/* vídeo selado e a caçada */
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center;padding:16px}
+.selo-v b{font:700 28px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--ui);color:var(--t2);max-width:28em}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+.ot-caca{display:grid;gap:6px} .ot-caca small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--latao)}
+.ot-presa-v{display:grid;gap:4px;padding:10px 14px;border-radius:10px;border:1px dashed rgba(229,192,123,.45);background:none;color:var(--t2);text-align:left;cursor:pointer;font:600 15px var(--ui)}
+.ot-presa-v em{font:600 12px var(--mono);color:var(--t3);font-style:normal}
+.ot-presa-v.pegou{border-style:solid;border-color:var(--latao);background:rgba(229,192,123,.08)} .ot-presa-v b{font:400 22px var(--disp);color:var(--latao)}
+
+/* a moldura e a placa de latão */
+.ot-moldura{margin:0;display:grid;gap:0;padding:14px;border-radius:6px;background:linear-gradient(145deg,#1d1424,#0d0912);border:1px solid #33263f;box-shadow:inset 0 0 0 6px #140e1a,0 20px 40px rgba(0,0,0,.55)}
+.ot-tela{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:2px;border:1px solid #2a1f33}
+.ot-tela img{width:100%;height:100%;object-fit:cover;display:block}
+.ot-tela::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 60px rgba(0,0,0,.65)}
+.ot-placa{justify-self:center;display:grid;justify-items:center;gap:2px;margin-top:12px;padding:8px 22px;min-width:60%;border-radius:4px;background:linear-gradient(180deg,#2a2218,#1a150f);border:1px solid #4a3c26;text-align:center}
+.ot-placa b{font:400 clamp(18px,1.4vw,24px) var(--disp);color:#7c6a4c} .ot-placa small{font:700 11px var(--mono);letter-spacing:.08em;color:#6a5c44}
+.ot-placa.gravada{background:linear-gradient(180deg,#e9c987,#b8914c);border-color:#f3dba8;box-shadow:0 0 18px rgba(229,192,123,.3);animation:grava .6s ease-out}
+.ot-placa.gravada b{color:#2a1c06} .ot-placa.gravada small{color:#4a3510}
+@keyframes grava{from{filter:brightness(2)}}
+.ot-moldura.mini{padding:8px} .ot-moldura.mini .ot-placa{padding:4px 10px;margin-top:8px} .ot-moldura.mini .ot-placa b{font-size:15px} .ot-moldura.mini .ot-placa small{display:none}
+.ot-galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1300px;margin:0 auto;width:100%}
+.ot-ver{display:grid;gap:6px;padding:12px 16px;border-radius:var(--r2)} .ot-ver small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)} .ot-ver p{margin:0;font:600 clamp(16px,1.25vw,21px)/1.4 var(--ui)}
+.ot-ver.sit{border-color:rgba(201,162,255,.4)} .ot-ver.sit small{color:var(--ac2)}
+
+/* a regra e o cadeado */
+.ot-tres{display:grid;gap:6px}
+.ot-tipo{display:grid;gap:2px;padding:7px 14px;border-radius:var(--r2)} .ot-tipo small{font:700 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .ot-tipo p{margin:0;font:400 clamp(16px,1.15vw,19px) var(--disp);color:var(--ac2)}
+.ot-trava{display:grid;gap:8px;padding:14px 16px;border-radius:var(--r2)} .ot-trava small{font:700 10px var(--mono);letter-spacing:.14em;color:var(--t3)}
+.ot-trava div{display:flex;flex-wrap:wrap;gap:6px}
+.ot-presa{position:relative;padding:6px 12px 6px 28px;border-radius:6px;background:#17121d;border:1px solid #33283d;font:700 clamp(16px,1.2vw,20px) var(--ui);color:var(--t2)}
+.ot-presa::before{content:'';position:absolute;left:9px;top:50%;width:10px;height:8px;margin-top:-2px;border-radius:2px;background:var(--t3)}
+.ot-presa::after{content:'';position:absolute;left:10px;top:50%;width:8px;height:8px;margin-top:-9px;border:2px solid var(--t3);border-bottom:0;border-radius:5px 5px 0 0;box-sizing:border-box}
+.ot-solta{padding:6px 12px;border-radius:6px;background:var(--ac);color:#1d0b38;font:800 clamp(16px,1.2vw,20px) var(--ui);animation:solta 1.6s ease-in-out infinite}
+.ot-solta s{opacity:.55;font-weight:600}
+@keyframes solta{50%{transform:translateY(-3px)}}
+
+/* o microfone */
+.ot-mic{display:grid;justify-items:center;gap:4px;max-width:720px;margin:0 auto 14px;padding:10px 20px;border-radius:12px;background:#120c18;border:2px solid #3b2d44}
+.ot-mic b{font:400 clamp(30px,2.6vw,46px)/1 var(--disp);letter-spacing:.08em;color:var(--t1)} .ot-mic small{font:700 10px var(--mono);letter-spacing:.16em;color:var(--t3)}
+.ot-lamp{display:flex;gap:16px} .ot-lamp i{width:12px;height:12px;border-radius:50%;background:#2c2433;transition:all .4s}
+.ot-lamp i.acesa{background:var(--latao);box-shadow:0 0 10px rgba(229,192,123,.7)}
+.ot-historia{display:grid;gap:6px;padding:14px 20px;border-radius:var(--r2);max-width:1200px;margin:0 auto;width:100%;border-color:rgba(201,162,255,.4)} .ot-historia small{font:700 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .ot-historia p{margin:0;font:400 clamp(20px,1.7vw,29px)/1.35 var(--disp)}
+
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.ot-galeria.fim-g{grid-template-columns:repeat(4,1fr);gap:8px}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .ot-ops.linha{grid-template-columns:1fr} .ot-galeria{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:620px){ .ot-lamp{gap:8px} .ot-galeria.fim-g{grid-template-columns:repeat(2,1fr)} }

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Tidy Story",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/76aa2736154d/the-tidy-story/img/live-sala.webp",
+  "capa": "../img/live-sala.webp",
   "alvo": "reporting passive: X is said / thought / believed / reported / known + to + verb; to have + past participle for the earlier time; It is said that + clause when there is no topic; the name goes first, never 'He is said that he ...'",
   "abrir": "What does everybody say about your town that nobody has checked?",
   "fecho": "<b>X is said / thought / believed / reported / known to</b> + verb. Earlier time: <b>to have</b> + past participle: <i>He is said to have left in 2010.</i> No topic: <b>It is said that</b> + clause. One door, not both: never <i>He is said that he ...</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a newsroom. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/76aa2736154d/the-tidy-story/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "A quiet archive room, lamps on the tables",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The cabinet is said to hold ten thousand cards.",
-          "img": "https://wolf-labs.pages.dev/p/76aa2736154d/the-tidy-story/img/live-gavetas.webp",
+          "img": "../img/live-gavetas.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The top drawer is believed to have been empty for years.",
-          "img": "https://wolf-labs.pages.dev/p/76aa2736154d/the-tidy-story/img/live-gaveta.webp",
+          "img": "../img/live-gaveta.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The archive is known to have opened in 1950.",
-          "img": "https://wolf-labs.pages.dev/p/76aa2736154d/the-tidy-story/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/76aa2736154d/the-tidy-story/img/live-ficha.webp",
+      "img": "../img/live-ficha.webp",
       "leg": "A blank file card with a paper clip",
       "pede": "Look at the picture: a blank file card. Write 2 or 3 sentences about a rumor in your town or at your work. Use <b>is said to</b>, <b>is thought to have</b> + participle, and <b>It is said that</b>.",
       "ph": "My town is said to …",

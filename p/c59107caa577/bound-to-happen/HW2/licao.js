@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Bound to Happen",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c59107caa577/bound-to-happen/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the future with nuance: be bound to (almost certain), be set to (planned, news), be due to (timetable), be likely / unlikely to, be about to (in a moment), be on the verge of + -ing; never 'probable to', 'on the verge to', 'about to leaving'",
   "abrir": "What is something in your city that is bound to happen every year?",
   "fecho": "How sure are you, and how soon? <b>Bound to</b> = almost certain · <b>set to / due to</b> = planned, on the schedule · <b>likely / unlikely to</b> = probably (not) · <b>about to</b> = in a moment · <b>on the verge of</b> + -ing = very close to doing it. Never <i>probable to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a new tram line. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/c59107caa577/bound-to-happen/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An airport at night, seen through a window",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The new bridge is set to open next week, and the roads are bound to be busy.",
-          "img": "https://wolf-labs.pages.dev/p/c59107caa577/bound-to-happen/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The strike is unlikely to end before Friday, but both sides are on the verge of an agreement.",
-          "img": "https://wolf-labs.pages.dev/p/c59107caa577/bound-to-happen/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The minister is due to speak at noon, and a storm is about to hit the coast.",
-          "img": "https://wolf-labs.pages.dev/p/c59107caa577/bound-to-happen/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c59107caa577/bound-to-happen/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "An airport at night, seen through a window",
       "pede": "Look at the picture: an airport at night. Write 2 or 3 sentences about what is going to happen soon in your life or your city. Use <b>bound to</b>, <b>set to</b>, <b>due to</b>, <b>likely to</b> or <b>about to</b>.",
       "ph": "My flight is due to … and the airport is bound to …",

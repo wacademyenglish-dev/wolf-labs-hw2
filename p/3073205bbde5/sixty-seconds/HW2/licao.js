@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Sixty Seconds",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3073205bbde5/sixty-seconds/img/live-elevador.webp",
+  "capa": "../img/live-elevador.webp",
   "alvo": "connectors in a short answer: and (one more thing), but (the surprise), so (the result), because (the reason), after that (the next step); so x because: cause, SO, result / result, BECAUSE, cause; never loose short sentences",
   "abrir": "How would you answer: tell me about yourself?",
   "fecho": "<b>and</b> = one more thing · <b>but</b> = the surprise · <b>so</b> = the result · <b>because</b> = the reason · <b>after that</b> = the next step. <i>I liked numbers, so I studied economics.</i> <i>I moved because my company opened an office here.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia gets ready for a job interview. Leo helps her. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/3073205bbde5/sixty-seconds/img/live-janela.webp",
+      "img": "../img/live-janela.webp",
       "leg": "A city window at dusk",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I work in an office and I study English at night.",
-          "img": "https://wolf-labs.pages.dev/p/3073205bbde5/sixty-seconds/img/live-janela.webp",
+          "img": "../img/live-janela.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I liked numbers, so I studied economics.",
-          "img": "https://wolf-labs.pages.dev/p/3073205bbde5/sixty-seconds/img/live-elevador.webp",
+          "img": "../img/live-elevador.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I moved here because my company opened an office.",
-          "img": "https://wolf-labs.pages.dev/p/3073205bbde5/sixty-seconds/img/live-janela.webp",
+          "img": "../img/live-janela.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3073205bbde5/sixty-seconds/img/live-elevador.webp",
+      "img": "../img/live-elevador.webp",
       "leg": "An elevator going up",
       "pede": "Look at the picture: an elevator going up, one floor at a time. Write 2 or 3 sentences about you. Use <b>and</b>, <b>but</b>, <b>so</b> or <b>because</b>.",
       "ph": "I work in … and …",

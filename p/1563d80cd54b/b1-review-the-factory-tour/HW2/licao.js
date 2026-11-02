@@ -4,7 +4,7 @@ window.HW2 = {
   "titulo": "The Factory Tour",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/1563d80cd54b/b1-review-the-factory-tour/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 7 review: the passive in the present and the past (is made, was built), by + the doer, present perfect passive for news (has been found), have / get something done",
   "abrir": "What is made in your city?",
   "fecho": "<b>be + participle</b>: <i>is made</i>, <i>was built</i> · <b>by</b> = who did it (only when it matters) · <b>has been + participle</b> = news · <b>have / get + something + participle</b> = someone else does it for you.",
@@ -24,7 +24,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on a tour of a small chocolate factory. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/1563d80cd54b/b1-review-the-factory-tour/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A chocolate line in a factory",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -160,7 +160,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/1563d80cd54b/b1-review-the-factory-tour/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "Chocolate bars on a line",
       "pede": "Look at the picture: chocolate bars on a factory line. Write 2 or 3 sentences about how chocolate, or another thing you like, is made. Use <b>is / are + participle</b> or <b>by</b>.",
       "ph": "The chocolate is …",

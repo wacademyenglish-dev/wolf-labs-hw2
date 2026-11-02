@@ -1,0 +1,79 @@
+/* ============================================================
+   THREE HUNDRED YEARS · THE TWO DOORS · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: a sala de concerto às
+   escuras — vinho quase preto; madeira de violino em âmbar escuro; a
+   porta larga (frase) em âmbar, a estreita (coisa) em azul-gelo; os
+   estojos de veludo que se abrem: OLD em âmbar, NEW em gelo.
+   ============================================================ */
+:root{
+  --noite:#080506; --noite-rgb:8,5,6; --tinta:#ede7e8;
+  --t1:#f3eeef; --t2:#cdc3c5; --t2-rgb:205,195,197; --t3:#8b8083;
+  --ac:#d9964a; --ac2:#f3cc9c; --gelo:#8ec5e8; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(237,231,232,.05); --vidro2:rgba(237,231,232,.085); --vidro3:rgba(237,231,232,.12);
+  --fio:rgba(230,222,224,.12); --fio2:rgba(230,222,224,.22); --luz:rgba(237,231,232,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1504}
+.btn.cheio{color:#2a1504}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(56px,5.6vw,108px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2c1b0a;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)} .pilula.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.cv-ops{display:grid;gap:6px} .cv-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;margin:0 auto 12px;width:100%} .cv-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.cv-ops.linha3{grid-template-columns:repeat(3,1fr)} .cv-ops.linha3 .versao{text-align:center;font:800 clamp(15px,1.15vw,19px) var(--mono);letter-spacing:.04em;min-height:56px}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1100px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao s{text-decoration-color:var(--erro);color:var(--t3)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.cv-ouve{display:grid;gap:8px;padding:10px 14px;border-radius:var(--r2)} .cv-ouve .transcricao{margin:0}
+.cv-linha-ok{display:flex;align-items:center;gap:12px} .cv-linha-ok .aprova{flex:1;margin:0} .cv-linha-ok.centro{max-width:1100px;margin:0 auto;width:100%}
+.cv-temas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 12px}
+.cv-rot{margin:0;font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)}
+
+/* as portas */
+.cv-portas{display:grid;grid-template-columns:1.4fr 1fr;gap:20px;align-items:end;width:100%;max-width:620px;padding:20px;border-radius:var(--r2);background:#0e0809;border:1px solid var(--fio2)}
+.cv-porta{display:grid;justify-items:center;gap:6px}
+.cv-vao{display:grid;place-items:center;width:100%;border:4px solid;border-bottom:0;border-radius:110px 110px 0 0;background:linear-gradient(180deg,#140c0e,#0a0607);padding:10px;transition:box-shadow .4s}
+.cv-porta.larga .cv-vao{height:220px;border-color:#7a5428} .cv-porta.estreita .cv-vao{height:220px;width:62%;border-color:#3d5c74}
+.cv-porta b{font:800 13px var(--mono);letter-spacing:.14em} .cv-porta small{font:600 12px var(--disp);color:var(--t3)}
+.cv-porta.larga b{color:var(--ac2)} .cv-porta.estreita b{color:var(--gelo)}
+.cv-porta.larga.on .cv-vao{border-color:var(--ac);box-shadow:0 0 30px rgba(217,150,74,.25) inset} .cv-porta.estreita.on .cv-vao{border-color:var(--gelo);box-shadow:0 0 30px rgba(142,197,232,.25) inset}
+.cv-peca{padding:6px 10px;border-radius:8px;background:#1d1416;border:1px solid var(--fio2);font:700 clamp(14px,1.05vw,18px) var(--disp);text-align:center;animation:entra .5s ease-out}
+@keyframes entra{from{transform:translateY(40px);opacity:0}}
+
+/* os estojos */
+.cv-estojos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;width:100%;max-width:620px}
+.cv-estojo{position:relative;display:grid;justify-items:center;gap:4px;padding:10px 4px;border-radius:40px 40px 14px 14px;background:linear-gradient(180deg,#1b1012,#0f090a);border:1px solid #2d1d21}
+.cv-estojo i{width:26px;height:64px;border-radius:12px 12px 8px 8px;background:#2a1a1d}
+.cv-estojo b{font:800 14px var(--mono);color:var(--t2)} .cv-estojo small{font:800 10px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.cv-estojo.aberto.old i{background:linear-gradient(180deg,#8a5424,#5a3214)} .cv-estojo.aberto.old small{color:var(--ac2)}
+.cv-estojo.aberto.new i{background:linear-gradient(180deg,#b97a3c,#83511f)} .cv-estojo.aberto.new small{color:var(--gelo)}
+
+/* listas e loja */
+.cv-lista{display:grid;gap:8px;max-width:1200px;margin:0 auto 10px;width:100%}
+.cv-tf{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:10px 14px;border-radius:14px} .cv-tf span{font:600 clamp(16px,1.3vw,22px) var(--disp)} .cv-tf span b{color:var(--ac2)}
+.cv-tf.certo{border-color:var(--ok)} .cv-tf.errado{border-color:var(--erro)}
+.cv-fs{display:flex;gap:6px} .cv-fs .pilula{min-height:36px;padding:0 14px;font:800 12px var(--mono);letter-spacing:.06em}
+.cv-loja{display:grid;gap:8px;padding:14px;border-radius:var(--r2);border-color:var(--ac)} .cv-loja>small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+.lado-fim .cv-portas{max-width:420px;padding:12px} .lado-fim .cv-vao{height:130px!important}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .cv-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .cv-tf{grid-template-columns:1fr} .cv-ops.linha3{grid-template-columns:1fr} .cv-vao{height:150px!important} .cv-estojos{grid-template-columns:repeat(3,1fr)} }
+.capa h1{font-size:clamp(50px,4.6vw,92px)} .capa .sub{font-size:clamp(17px,1.3vw,23px)}
+
+/* 22/10/2026 · os formatos novos (formatos.js) */
+
+.c-enrico .f2-conversa p{font-size:clamp(15px,1.15vw,19px)}
+.c-outra .fm-folha,.c-teste .fm-folha{width:100%}
+.c-outra .cv-ouve{margin-bottom:8px}

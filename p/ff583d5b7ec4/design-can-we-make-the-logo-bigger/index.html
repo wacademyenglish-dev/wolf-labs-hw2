@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -117,5 +118,284 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "multipla": {
+   "t": "Five client comments.",
+   "p": "Play the comment. Choose the best answer."
+  },
+  "transforma": {
+   "t": "Same opinion, better words.",
+   "p": "Read the clue. Say it the professional way."
+  },
+  "prova": {
+   "t": "Say no, kindly.",
+   "p": "Read the card, prepare, start the clock, answer."
+  },
+  "cv-cliente": {
+   "t": "Educate or obey?",
+   "p": "Your teacher is the client. Agree on three points."
+  },
+  "pode": {
+   "t": "Lesson 8: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Receber feedback do cliente: perguntar a preocupação real, discordar com educação (I see where you’re coming from, but…), propor alternativa (What if we…?) e falar de escopo.",
+  "armadilha": "“You are wrong” direto demais, “I see where are you coming from” (ordem de pergunta), “It’s out of the scope” no lugar de “outside the scope”.",
+  "pal": [
+   "Can I ask what worries you about…?",
+   "I see where you’re coming from, but…",
+   "My only concern is…",
+   "What if we…?",
+   "That way,…",
+   "side by side",
+   "outside the scope we agreed"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 8 de Designers: o cliente pede “o logo maior”.",
+   "perg": "What change do your clients ask for most?",
+   "pula": "Leia o título e siga."
+  },
+  "multipla": {
+   "obj": "Escuta: cinco comentários de clientes com sotaques diferentes; escolher a melhor resposta.",
+   "perg": "Why is that the best answer?",
+   "pula": "Três comentários bastam."
+  },
+  "transforma": {
+   "obj": "Transformar respostas diretas demais em respostas profissionais.",
+   "perg": "How can you say that more politely?",
+   "pula": "Quatro frases bastam."
+  },
+  "prova": {
+   "obj": "Dizer não com gentileza a dois clientes (padaria, apartamento) no relógio real.",
+   "perg": "What alternative can you offer?",
+   "pula": "Um cliente só, com segunda tentativa."
+  },
+  "cv-cliente": {
+   "obj": "Negociar com a Carla, do café: logo, cor e foto.",
+   "perg": "What worries you about the logo size?",
+   "pula": "Negocie só o logo e feche."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; peça um pedido real de cliente e a resposta nova.",
+   "perg": "Can you say no without saying no?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre clientes reais do aluno e feedback, com a linguagem da aula.",
+   "perg": "What was the strangest request from a client?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre a relação designer-cliente, com argumentos prontos.",
+   "perg": "Educate the client or do what they want?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Escrever, em passos, o e-mail que recusa com gentileza um pedido real e propõe outra saída.",
+   "perg": "What will you offer instead?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "You and your clients.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I see where you’re coming from, but…",
+    "My only concern is…",
+    "What if we…?"
+   ],
+   "cartas": [
+    {
+     "k": "STRANGE REQUEST",
+     "q": "What was the strangest request from a client?",
+     "fup": "What did you say?",
+     "st": [
+      "A client once asked me to …",
+      "I said …"
+     ],
+     "ex": "A client once asked me to use eight fonts. I said my only concern was readability."
+    },
+    {
+     "k": "BIGGER LOGO",
+     "q": "Why do you think clients always want a bigger logo?",
+     "fup": "How do you answer?",
+     "st": [
+      "I think they …",
+      "What if we …?"
+     ],
+     "ex": "I think they want to feel seen. I ask: what if we keep it small but give it more space?"
+    },
+    {
+     "k": "FREE CHANGES",
+     "q": "How many free changes do you include?",
+     "fup": "What happens after that?",
+     "st": [
+      "I include …",
+      "After that, it’s outside the scope we agreed."
+     ],
+     "ex": "I include two rounds. After that, it’s outside the scope we agreed, so I send a new quote."
+    },
+    {
+     "k": "A GOOD CLIENT",
+     "q": "What makes a client great to work with?",
+     "fup": "Do you have one now?",
+     "st": [
+      "A great client …"
+     ],
+     "ex": "A great client explains the problem, not the solution."
+    },
+    {
+     "k": "SIDE BY SIDE",
+     "q": "Do you show options side by side?",
+     "fup": "Does it help the client decide?",
+     "st": [
+      "Yes, I usually show …",
+      "Let me show you … side by side."
+     ],
+     "ex": "Yes, I usually show two versions side by side. It makes the choice easy."
+    },
+    {
+     "k": "SAYING NO",
+     "q": "Is it hard for you to say no to a client?",
+     "fup": "Is it harder in English?",
+     "st": [
+      "It’s hard when …",
+      "In English, I …"
+     ],
+     "ex": "It’s hard when the client is paying a lot. In English, I use softer phrases now."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Designer versus client.",
+   "p": "Pick a side. Your teacher takes the other.",
+   "palavras": [
+    "I see where you’re coming from, but…",
+    "That way,…",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Educate the client, or just do what they want?",
+     "a": "Educate",
+     "b": "Do what they want",
+     "fa": [
+      "Educate. They pay for my expertise.",
+      "A bad design has my name on it."
+     ],
+     "fb": [
+      "Do what they want. It’s their business.",
+      "A happy client sends more work."
+     ]
+    },
+    {
+     "q": "Charge for every extra change, or be flexible?",
+     "a": "Charge",
+     "b": "Be flexible",
+     "fa": [
+      "Charge. Changes take time.",
+      "Clear rules protect both sides."
+     ],
+     "fb": [
+      "Be flexible. Small changes build loyalty.",
+      "Charging for everything feels cold."
+     ]
+    },
+    {
+     "q": "Show one strong option, or three options?",
+     "a": "One option",
+     "b": "Three options",
+     "fa": [
+      "One. I show my best idea with confidence.",
+      "Three options make clients mix them."
+     ],
+     "fb": [
+      "Three. Clients like to choose.",
+      "That way, they feel part of the process."
+     ]
+    },
+    {
+     "q": "Feedback in a call, or in writing?",
+     "a": "In a call",
+     "b": "In writing",
+     "fa": [
+      "A call. I can ask about the real worry.",
+      "Tone is easier to read."
+     ],
+     "fb": [
+      "Writing. Every change is recorded.",
+      "Nobody can say “I never asked for that.”"
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Write the Email",
+   "t": "Say no kindly, in writing.",
+   "p": "Step by step. Say it, then write it.",
+   "prof": "Use a real change request the student received. Push for thanks, the real worry, a polite concern and an alternative.",
+   "passos": [
+    {
+     "q": "Thank the client and show you understand.",
+     "st": [
+      "Thank you for …",
+      "I see where you’re coming from."
+     ],
+     "ex": "Thank you for your feedback. I see where you’re coming from."
+    },
+    {
+     "q": "Say your concern politely.",
+     "st": [
+      "My only concern is …"
+     ],
+     "ex": "My only concern is that a bigger logo will hide the photo."
+    },
+    {
+     "q": "Offer an alternative and its benefit.",
+     "st": [
+      "What if we …? That way, …"
+     ],
+     "ex": "What if we move the logo to the top? That way, it’s more visible and the photo stays."
+    },
+    {
+     "q": "Close with a next step.",
+     "st": [
+      "Let me show you … side by side.",
+      "I can send …"
+     ],
+     "ex": "Let me show you both versions side by side tomorrow."
+    }
+   ],
+   "fim": "Polite, clear, and you still get the design you believe in."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

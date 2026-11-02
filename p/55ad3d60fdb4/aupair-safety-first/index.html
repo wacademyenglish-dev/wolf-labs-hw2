@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -112,5 +113,283 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "How an agency keeps you safe.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "descobre": {
+   "t": "Three small words, three rules.",
+   "p": "Compare A and B. What’s the difference?"
+  },
+  "separa": {
+   "t": "Twelve safety rules.",
+   "p": "Choose the side. Say the full rule."
+  },
+  "cv-ranking": {
+   "t": "Day one. What do you ask first?",
+   "p": "Rank the questions. Explain first and last."
+  },
+  "pode": {
+   "t": "Lesson 18: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Regras de segurança infantil com must/have to (necessário), mustn’t (proibido) e don’t have to (não precisa): água, cadeirinha, remédios, sono seguro, escadas, estranhos.",
+  "armadilha": "O “não precisa” do português vira mustn’t (que é proibido); também “must to”, “she musts” e “Do I must…?” em vez de Do I have to…?",
+  "pal": [
+   "must",
+   "have to",
+   "mustn’t",
+   "don’t have to",
+   "out of reach",
+   "car seat",
+   "Do I have to …?",
+   "safe sleep"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula de segurança: regras e os modais para dizê-las.",
+   "perg": "What is the most dangerous place in a house for a three-year-old?",
+   "pula": "Faça a pergunta de abertura e vá ao vídeo."
+  },
+  "video": {
+   "obj": "Ver a diretora da AuPairCare sobre o apoio da agência (1 minuto; pode tocar duas vezes).",
+   "perg": "Who can you call if you have a problem?",
+   "pula": "Uma vez só e uma pergunta."
+  },
+  "descobre": {
+   "obj": "Comparar pares e separar must, mustn’t e don’t have to.",
+   "perg": "Is ‘mustn’t’ the same as ‘don’t have to’?",
+   "pula": "Dois pares e a regra."
+  },
+  "separa": {
+   "obj": "Classificar doze regras e dizer cada uma inteira, com o porquê. Não é curso de primeiros socorros.",
+   "perg": "Why must you do that?",
+   "pula": "Oito regras bastam."
+  },
+  "cv-ranking": {
+   "obj": "Ranquear as cinco perguntas para a família na primeira hora.",
+   "perg": "What would you ask first, and why?",
+   "pula": "Só a primeira e um porquê."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; o resto vai para a lição.",
+   "perg": "Can you explain a safety rule now?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre regras de casa e segurança na vida real do aluno.",
+   "perg": "What rules did you have as a kid?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de regra e liberdade com crianças, usando os modais.",
+   "perg": "Must they, or don’t they have to?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Escrever, em passos, as perguntas de segurança para a família na primeira semana.",
+   "perg": "Do I have to …?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Rules, at home and away.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "must",
+    "have to",
+    "mustn’t",
+    "don’t have to"
+   ],
+   "cartas": [
+    {
+     "k": "AS A KID",
+     "q": "What rules did you have to follow as a kid?",
+     "fup": "Was there a rule you hated?",
+     "st": [
+      "I had to …",
+      "I couldn’t …"
+     ],
+     "ex": "I had to be home before dark. I hated it!"
+    },
+    {
+     "k": "YOUR HOUSE",
+     "q": "What must visitors never do in your house?",
+     "fup": "Why?",
+     "st": [
+      "They mustn’t …"
+     ],
+     "ex": "They mustn’t open the door, because my cat runs out."
+    },
+    {
+     "k": "AT THE POOL",
+     "q": "What are the most important rules at a pool?",
+     "fup": "Who must watch the kids?",
+     "st": [
+      "You must …",
+      "Kids mustn’t …"
+     ],
+     "ex": "You must watch the kids all the time. Kids mustn’t run."
+    },
+    {
+     "k": "IN THE CAR",
+     "q": "What do you have to do before you drive with kids?",
+     "fup": "Is it the same in Brazil?",
+     "st": [
+      "You have to …"
+     ],
+     "ex": "You have to check the car seat every time."
+    },
+    {
+     "k": "FREE TIME",
+     "q": "What don’t you have to do on your day off?",
+     "fup": "What do you like doing?",
+     "st": [
+      "I don’t have to …"
+     ],
+     "ex": "I don’t have to wake up early, so I sleep until ten."
+    },
+    {
+     "k": "THE PHONE",
+     "q": "Should au pairs use the phone when they are with the kids?",
+     "fup": "When is it OK?",
+     "st": [
+      "They mustn’t …, but they can …"
+     ],
+     "ex": "They mustn’t use it at the pool, but they can answer the parents."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "must",
+    "mustn’t",
+    "don’t have to",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A ten-year-old walks to school alone. OK or not OK?",
+     "a": "OK",
+     "b": "Not OK",
+     "fa": [
+      "OK. Kids have to learn to be independent.",
+      "If the street is safe, the au pair doesn’t have to go."
+     ],
+     "fb": [
+      "Not OK. An adult must go with them.",
+      "There are too many cars."
+     ]
+    },
+    {
+     "q": "Kids and screens: strict rules or free time?",
+     "a": "Strict rules",
+     "b": "Free time",
+     "fa": [
+      "Strict rules. Kids mustn’t use tablets all day.",
+      "One hour is enough."
+     ],
+     "fb": [
+      "Free time on weekends. They don’t have to follow rules every day.",
+      "They have to relax too."
+     ]
+    },
+    {
+     "q": "The family’s rule seems unsafe to you. Follow it or talk first?",
+     "a": "Follow it",
+     "b": "Talk first",
+     "fa": [
+      "Follow it. It’s their house and their kids.",
+      "You must respect the parents."
+     ],
+     "fb": [
+      "Talk first. Safety must come before rules.",
+      "You have to say what you think, kindly."
+     ]
+    },
+    {
+     "q": "Learn first aid before you go, or after you arrive?",
+     "a": "Before",
+     "b": "After",
+     "fa": [
+      "Before. You must be ready on day one.",
+      "Accidents don’t wait."
+     ],
+     "fb": [
+      "After. The family may have special rules.",
+      "You don’t have to learn everything at once."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Your First Week",
+   "t": "Your safety questions for the family.",
+   "p": "Four steps. Say it, then write it.",
+   "prof": "You are the host mom. Answer each question briefly and add one house rule.",
+   "passos": [
+    {
+     "q": "Ask about emergencies.",
+     "st": [
+      "Who do I have to call if …?"
+     ],
+     "ex": "Who do I have to call if there is an emergency?"
+    },
+    {
+     "q": "Ask about medicines and cleaning products.",
+     "st": [
+      "Where must I keep …?"
+     ],
+     "ex": "Where must I keep the medicines?"
+    },
+    {
+     "q": "Ask about the car or the pool.",
+     "st": [
+      "Do I have to …?",
+      "Must the kids …?"
+     ],
+     "ex": "Do I have to drive the kids to school every day?"
+    },
+    {
+     "q": "Ask what you don’t have to do.",
+     "st": [
+      "Do I have to … too, or don’t I?"
+     ],
+     "ex": "Do I have to cook dinner for the family, or only for the kids?"
+    }
+   ],
+   "fim": "Five good questions. Your host family will feel safe with you."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

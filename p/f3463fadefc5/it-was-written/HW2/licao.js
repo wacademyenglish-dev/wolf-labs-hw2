@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It Was Written",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/f3463fadefc5/it-was-written/img/live-chani.webp",
+  "capa": "../img/live-chani.webp",
   "alvo": "the future in the past: was to / was never to (destiny), was supposed to (the plan that failed), would (a promise, told later), it was written that ... (the passive)",
   "abrir": "Do you believe some things are written in advance?",
   "fecho": "<b>It was written that</b> … = it was said long before: <i>It was written that rain would come.</i> <b>Was to</b> + verb = destiny: <i>She was to cross the desert.</i> <b>Was supposed to</b> = the plan that failed. <b>Would</b> = the promise, told later: <i>He promised that he would return.</i> Never <i>it was wrote</i>, never <i>promised that he will</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about an old story book. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/f3463fadefc5/it-was-written/img/live-chani.webp",
+      "img": "../img/live-chani.webp",
       "leg": "A fire in the desert, under the moon",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It was written that the stars would show the way.",
-          "img": "https://wolf-labs.pages.dev/p/f3463fadefc5/it-was-written/img/live-chani.webp",
+          "img": "../img/live-chani.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She was supposed to stay in the village.",
-          "img": "https://wolf-labs.pages.dev/p/f3463fadefc5/it-was-written/img/live-sietch.webp",
+          "img": "../img/live-sietch.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The guide promised that he would take her to the mountains.",
-          "img": "https://wolf-labs.pages.dev/p/f3463fadefc5/it-was-written/img/live-palacio.webp",
+          "img": "../img/live-palacio.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f3463fadefc5/it-was-written/img/live-sietch.webp",
+      "img": "../img/live-sietch.webp",
       "leg": "A glowing cave",
       "pede": "Look at the picture: a glowing cave. Write 2 or 3 sentences about a story, a family tradition or a plan that was told in advance. Use <b>it was written that</b>, <b>was supposed to</b> or <b>promised that … would</b>.",
       "ph": "It was said that …",

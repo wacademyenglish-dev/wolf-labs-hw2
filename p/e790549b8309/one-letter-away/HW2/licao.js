@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Absolutely Exhausted",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e790549b8309/one-letter-away/img/cinema.webp",
+  "capa": "../img/cinema.webp",
   "alvo": "gradable vs extreme adjectives: very / quite / a bit + normal (tired, good) · absolutely + extreme (exhausted, amazing, awful); really works with both",
   "abrir": "What was the best thing you ate this year? How was it?",
   "fecho": "Normal adjectives have degrees: <b>a bit / quite / very</b> tired. Extreme adjectives already mean very, very: <b>absolutely</b> exhausted, awful, amazing. Never <i>very exhausted</i>, never <i>absolutely good</i>. <b>Really</b> works with both.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo write reviews. A new scene, about 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/e790549b8309/one-letter-away/img/fones.webp",
+      "img": "../img/fones.webp",
       "leg": "Reviews after midnight",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The service was absolutely terrible, but the coffee was quite good.",
-          "img": "https://wolf-labs.pages.dev/p/e790549b8309/one-letter-away/img/cafe.webp",
+          "img": "../img/cafe.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I was absolutely exhausted after the trip.",
-          "img": "https://wolf-labs.pages.dev/p/e790549b8309/one-letter-away/img/fones.webp",
+          "img": "../img/fones.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The breakfast was really good, and the view was absolutely amazing.",
-          "img": "https://wolf-labs.pages.dev/p/e790549b8309/one-letter-away/img/hotel.webp",
+          "img": "../img/hotel.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -175,7 +175,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e790549b8309/one-letter-away/img/hotel.webp",
+      "img": "../img/hotel.webp",
       "leg": "Room 12, late checkout",
       "pede": "Look at the picture. Write a short review of this room in 2 or 3 sentences. Use <b>very / quite</b> with normal adjectives and <b>absolutely</b> with extreme ones.",
       "ph": "The room was quite … and the bed was absolutely …",

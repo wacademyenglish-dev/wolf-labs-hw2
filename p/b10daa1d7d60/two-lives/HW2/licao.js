@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Two Lives",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b10daa1d7d60/two-lives/img/live-cidade.webp",
+  "capa": "../img/live-cidade.webp",
   "alvo": "as ... as (equal) · not as ... as (less, without saying worse) · just as ... as · twice / half as ... as · the same as · different from; if AS opens it, AS closes it: never as ... than, the same that, different of",
   "abrir": "How is your life now different from five years ago?",
   "fecho": "<b>as … as</b> = equal: <i>as cold as</i>. <b>not as … as</b> = less: <i>not as loud as</i>. A number in front: <b>twice / half as … as</b>. <b>The same as</b> · <b>different from</b>. If AS opens it, AS closes it: never <i>as big than</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about her move to a small town. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/b10daa1d7d60/two-lives/img/live-cidade.webp",
+      "img": "../img/live-cidade.webp",
       "leg": "A city window at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "This street is not as loud as my old street.",
-          "img": "https://wolf-labs.pages.dev/p/b10daa1d7d60/two-lives/img/live-cidade.webp",
+          "img": "../img/live-cidade.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The coffee here is just as good as at home.",
-          "img": "https://wolf-labs.pages.dev/p/b10daa1d7d60/two-lives/img/live-campo.webp",
+          "img": "../img/live-campo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The rent here is half as expensive as in the city.",
-          "img": "https://wolf-labs.pages.dev/p/b10daa1d7d60/two-lives/img/live-fundo.webp",
+          "img": "../img/live-fundo.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b10daa1d7d60/two-lives/img/live-fundo.webp",
+      "img": "../img/live-fundo.webp",
       "leg": "Boxes in an empty room",
       "pede": "Look at the picture: moving boxes in an empty room. Write 2 or 3 sentences about a place you moved to, or a place you know. Use <b>not as … as</b>, <b>just as … as</b> or <b>different from</b>.",
       "ph": "My new place is not as … as …",

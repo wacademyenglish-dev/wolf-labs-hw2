@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "You Never Do the Dishes",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/831cba75f8e1/never-dishes/img/live-cozinha.webp",
+  "capa": "../img/live-cozinha.webp",
   "alvo": "adverbs of frequency: always, usually, often, sometimes, rarely, never; before a normal verb (she always makes), after am / is / are (he is never late); never and rarely are already negative",
   "abrir": "How often do you cook at home?",
   "fecho": "Count first: seven days = <b>always</b>, zero = <b>never</b>, and in the middle <b>usually, often, sometimes, rarely</b>. Before a normal verb: <i>she always makes</i>. After am, is, are: <i>he is never late</i>. <b>Never</b> is already negative: <i>I never eat meat</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about chores at home. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/831cba75f8e1/never-dishes/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A table with two cups",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "I usually eat lunch at home.",
-          "img": "https://wolf-labs.pages.dev/p/831cba75f8e1/never-dishes/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She never takes the trash out.",
-          "img": "https://wolf-labs.pages.dev/p/831cba75f8e1/never-dishes/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "He is often late on Monday.",
-          "img": "https://wolf-labs.pages.dev/p/831cba75f8e1/never-dishes/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -161,7 +161,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/831cba75f8e1/never-dishes/img/live-cozinha.webp",
+      "img": "../img/live-cozinha.webp",
       "leg": "A kitchen with dishes in the sink",
       "pede": "Look at the picture: a kitchen with dishes in the sink. Write 2 or 3 sentences about your week at home. Use <b>always</b>, <b>usually</b>, <b>often</b>, <b>sometimes</b>, <b>rarely</b> or <b>never</b>.",
       "ph": "I usually …",

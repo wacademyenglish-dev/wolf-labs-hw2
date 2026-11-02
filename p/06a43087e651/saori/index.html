@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Before You · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Before You · The Clothesline</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Before You · The Clothesline</h2>
+    <p>Every word in <i>Before to go out</i> looks correct; the shape is what doesn’t exist. The screen is a clothesline: the student hangs six photos of one real day in order, then ties each pair with <b>before</b>, <b>after</b> or <b>when</b>. The day belongs to Meaty, a shelter dog (a real video, 2013). No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>before / after</b> + a whole sentence (<i>before he went out</i>) or -ing (<i>before going out</i>), never <i>to</i>. No <i>will</i> after the knot: <i>I’ll call you after I get home</i>. <b>when</b> keeps both halves in the same tense: <i>When I was a child, we had a dog</i>.</p>
+    <h4>THE VIDEO AND THE AUDIO</h4>
+    <p>Scene II plays the whole video. If it doesn’t play, use the story audio under it (pause and 0.75×; checked against the audio). The six-sentence audio closes scene III.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Before You Sleep, III Hang the Day (the sentence before the tap), VI Two Ways, VII The Other End, VIII The Day That Divides, IX How You Met.</li>
+      <li><b>Listen</b>: II One Day, Filmed.</li>
+      <li><b>Focus</b>: IV Tie the Knots, V Before To, After Will.</li>
+      <li><b>Saori</b>: the second-to-last scene is a tribute to a dog called Saori (2013–2026). It isn’t an exercise. Let the student read the line once, and tap the button together.</li>
+      <li><b>Write</b>: X, a day that divides their life, with the red wavy line for <i>before / after to</i>, <i>will</i> after the knot, mixed tenses with <i>when</i>. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="noar"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "Your own day, first.",
+   "p": "You are the guest. Answer out loud."
+  },
+  "video": {
+   "t": "One real day, filmed.",
+   "p": "Watch the whole video. Then three questions."
+  },
+  "varal": {
+   "t": "Six photos. One line.",
+   "p": "Say the next photo’s sentence. Tap it."
+  },
+  "nos": {
+   "t": "Before, after or when?",
+   "p": "Choose the knot. Say the whole sentence."
+  },
+  "armadilha": {
+   "t": "Two shapes that don’t exist.",
+   "p": "Tap the one that exists. Say it twice."
+  },
+  "duas": {
+   "t": "A whole sentence, or -ing.",
+   "p": "Say both out loud. Then open the note."
+  },
+  "outro": {
+   "t": "Same facts. The other word.",
+   "p": "Say it with the other word. Then check."
+  },
+  "dia": {
+   "t": "A day that divides a life.",
+   "p": "Open three cards. Say your before and after."
+  },
+  "conta": {
+   "t": "Somebody important. How did you meet?",
+   "p": "Five steps in order: before, when, after."
+  },
+  "fim": {
+   "t": "A day that divides your life.",
+   "p": "Write it with before, after and when."
+  }
+ },
+ "prep": {
+  "obj": "Before/after + frase inteira ou -ing (nunca to), sem will depois do nó, e when com os dois lados no mesmo tempo: um dia real de Meaty, um cão de abrigo (vídeo de 2013).",
+  "armadilha": "O português diz “antes de sair” e “quando eu chegar”: sai “before to go out”, “after I will get home” e when com tempos misturados (“When I was a child, we have a dog”).",
+  "pal": [
+   "before",
+   "after",
+   "when",
+   "before going out",
+   "after he ate",
+   "I’ll call you after I get home",
+   "shelter",
+   "clothesline"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o varal: seis fotos de um dia real para pendurar em ordem e amarrar com before, after e when.",
+   "perg": "What do you do before you sleep?",
+   "pula": "Leia a frase da capa e abra o varal."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o dia do aluno, puxando before/after sem corrigir.",
+   "perg": "What do you do after you get home?",
+   "pula": "Três perguntas bastam."
+  },
+  "video": {
+   "obj": "O vídeo inteiro do dia de Meaty; se não tocar, use o áudio da história.",
+   "perg": "What happened to Meaty that day?",
+   "pula": "Assista uma vez e faça só uma pergunta."
+  },
+  "varal": {
+   "obj": "Pendurar as seis fotos em ordem, dizendo a frase antes de tocar.",
+   "perg": "What happened next? Say it first.",
+   "pula": "Quatro fotos bastam; o áudio fecha a cena."
+  },
+  "nos": {
+   "obj": "Amarrar duas fotos com before, after ou when e dizer a frase inteira.",
+   "perg": "Before or after? Say the whole sentence.",
+   "pula": "Três nós bastam."
+  },
+  "armadilha": {
+   "obj": "As duas formas que não existem: before to e will depois do nó.",
+   "perg": "Is “before to go” possible in English?",
+   "pula": "Dois pares bastam."
+  },
+  "duas": {
+   "obj": "Dois jeitos certos: before he went out / before going out.",
+   "perg": "Can you say it with -ing?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "outro": {
+   "obj": "Os mesmos fatos com a palavra oposta: trocar before por after e vice-versa.",
+   "perg": "Now say it with after.",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "dia": {
+   "obj": "Todo mundo tem um dia que divide a vida, como o de Meaty: o antes e o depois do aluno.",
+   "perg": "What was your life like before that day?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "conta": {
+   "obj": "Como o aluno conheceu alguém importante, em cinco passos com before, when, after.",
+   "perg": "What happened when you met?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "saori": {
+   "obj": "Homenagem à Saori (2013–2026). Não é exercício: o aluno lê a linha uma vez e vocês tocam o botão juntos.",
+   "perg": "No question here. Read the line together.",
+   "pula": "Não pule: é curta e faz parte da aula."
+  },
+  "fim": {
+   "obj": "Escrita: um dia que divide a vida do aluno, com before, after, when e frase inteira depois de cada nó.",
+   "perg": "What changed after that day?",
+   "pula": "Três frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre rotina e momentos da vida com before, after e when.",
+   "perg": "What do you do before you leave home?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre hábitos do dia e defender com before/after + -ing ou frase.",
+   "perg": "Coffee before breakfast or after breakfast?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta o próprio amanhã em quatro passos, sem will depois do nó.",
+   "perg": "What will you do after you get home tomorrow?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More befores and afters.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "before",
+    "after",
+    "when",
+    "-ing"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR MORNING",
+     "q": "What do you do before you leave home?",
+     "fup": "And what do you never forget?",
+     "st": [
+      "Before I leave, I …",
+      "Before leaving, I …"
+     ],
+     "ex": "Before I leave, I drink coffee and check the weather."
+    },
+    {
+     "k": "AFTER WORK",
+     "q": "What do you do after you get home?",
+     "fup": "Is it the same every day?",
+     "st": [
+      "After I get home, I …",
+      "After getting home, I …"
+     ],
+     "ex": "After I get home, I take a shower and cook dinner."
+    },
+    {
+     "k": "AS A CHILD",
+     "q": "When you were a child, did you have a pet?",
+     "fup": "What was its name?",
+     "st": [
+      "When I was a child, we had …",
+      "When I was …, I …"
+     ],
+     "ex": "When I was a child, we had a black dog called Pipoca."
+    },
+    {
+     "k": "A BIG DAY",
+     "q": "What did you do before your first day at work?",
+     "fup": "Were you nervous?",
+     "st": [
+      "Before my first day, I …",
+      "When I arrived, I …"
+     ],
+     "ex": "Before my first day, I couldn’t sleep. When I arrived, I was fine."
+    },
+    {
+     "k": "TONIGHT",
+     "q": "What will you do after this class?",
+     "fup": "And before you go to bed?",
+     "st": [
+      "After the class, I’ll …",
+      "Before I go to bed, I’ll …"
+     ],
+     "ex": "After the class, I’ll have dinner. Before I go to bed, I’ll read."
+    },
+    {
+     "k": "A NEW PET",
+     "q": "What should people do before they adopt a dog?",
+     "fup": "And after the dog arrives?",
+     "st": [
+      "Before adopting a dog, you should …",
+      "After it arrives, …"
+     ],
+     "ex": "Before adopting a dog, you should visit the shelter twice."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "before",
+    "after"
+   ],
+   "rodadas": [
+    {
+     "q": "Exercise before work or after work?",
+     "a": "Before work",
+     "b": "After work",
+     "fa": [
+      "Before work. After I exercise, I feel awake all day."
+     ],
+     "fb": [
+      "After work. Before I relax, I need to move."
+     ]
+    },
+    {
+     "q": "Check your phone before breakfast or after breakfast?",
+     "a": "Before",
+     "b": "After",
+     "fa": [
+      "Before. I read the news before eating."
+     ],
+     "fb": [
+      "After. I eat first, then I check the world."
+     ]
+    },
+    {
+     "q": "Adopt an old dog or a puppy?",
+     "a": "An old dog",
+     "b": "A puppy",
+     "fa": [
+      "An old dog. When a dog is old, nobody wants it."
+     ],
+     "fb": [
+      "A puppy. I want it with me before it grows."
+     ]
+    },
+    {
+     "q": "Shower in the morning or before bed?",
+     "a": "Morning",
+     "b": "Before bed",
+     "fa": [
+      "In the morning. After I shower, I wake up."
+     ],
+     "fb": [
+      "Before bed. I sleep better after a shower."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and every knot held."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Tomorrow",
+   "t": "Hang tomorrow on the line.",
+   "p": "Four steps. No will after the knot.",
+   "prof": "The trap is will after before/after/when: I’ll call you after I get home, not after I will get home.",
+   "passos": [
+    {
+     "q": "What will you do before you leave home tomorrow?",
+     "st": [
+      "Before I leave, I’ll …"
+     ],
+     "ex": "Before I leave, I’ll walk the dog."
+    },
+    {
+     "q": "What will you do when you arrive at work or school?",
+     "st": [
+      "When I arrive, I’ll …"
+     ],
+     "ex": "When I arrive, I’ll open my emails."
+    },
+    {
+     "q": "What will you do after you have lunch?",
+     "st": [
+      "After I have lunch, I’ll …",
+      "After having lunch, I’ll …"
+     ],
+     "ex": "After having lunch, I’ll call my mother."
+    },
+    {
+     "q": "What will you do before you go to bed?",
+     "st": [
+      "Before I go to bed, I’ll …"
+     ],
+     "ex": "Before I go to bed, I’ll watch one episode."
+    }
+   ],
+   "fim": "Four photos on the line. That is your tomorrow."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

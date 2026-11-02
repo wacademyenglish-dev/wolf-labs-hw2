@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Since March",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b3e0e2edc6da/since-march/img/live-porta.webp",
+  "capa": "../img/live-porta.webp",
   "alvo": "present perfect with for / since: have / has + past participle for something that started in the past and is still true; since + a point (March, 2020, Monday), for + a length (two months, six years); a finished date (in March) takes the simple past; never I live here since March, since three years, I know him since",
   "abrir": "How long have you lived where you live now?",
   "fecho": "<b>have / has + past participle</b>: it started before and it is still true. <b>Since</b> + a point: <i>since March</i>. <b>For</b> + a length: <i>for two months</i>. A finished date (<i>in March</i>) takes the past: <i>He left in March.</i> Never <i>I live here since March</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a quiet neighbor. A new scene, about 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/b3e0e2edc6da/since-march/img/live-porta.webp",
+      "img": "../img/live-porta.webp",
       "leg": "A door in a dark hallway with mail on the floor",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -106,17 +106,17 @@ window.HW2 = {
         {
           "t": "The milk has been in the fridge for three weeks.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/b3e0e2edc6da/since-march/img/live-geladeira.webp"
+          "img": "../img/live-geladeira.webp"
         },
         {
           "t": "The mail has been at the door since Monday.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/b3e0e2edc6da/since-march/img/live-porta.webp"
+          "img": "../img/live-porta.webp"
         },
         {
           "t": "The blanket has been on the sofa since March.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/b3e0e2edc6da/since-march/img/live-sala.webp"
+          "img": "../img/live-sala.webp"
         }
       ]
     },
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b3e0e2edc6da/since-march/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "A living room with a sofa and a blanket",
       "pede": "Look at the picture: a living room with a sofa and a blanket. Write 2 or 3 sentences about how long things have been in your home or in your life. Use <b>have / has</b> with <b>since</b> or <b>for</b>.",
       "ph": "I have lived in … for …",

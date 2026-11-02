@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "A Knock at the Door",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/68991204baba/a-knock-at-the-door/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "a / an for something new, the when we know which one (a box ... the box), no article for things in general (I love music), a / an with jobs (a musician)",
   "abrir": "What is in your bag right now?",
   "fecho": "<b>A / an</b> the first time: <i>a box</i>. <b>The</b> when we know which one: <i>the box</i>, <i>the door of my flat</i>. No article for things in general: <i>I love music</i>. <b>A / an</b> with jobs: <i>I'm a musician</i>.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in the hallway. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/68991204baba/a-knock-at-the-door/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A box at the door",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -106,17 +106,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "There was a knock at the door.",
-          "img": "https://wolf-labs.pages.dev/p/68991204baba/a-knock-at-the-door/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "In the box there was an old key and a note.",
-          "img": "https://wolf-labs.pages.dev/p/68991204baba/a-knock-at-the-door/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "My neighbor is a musician, and the key is for the roof.",
-          "img": "https://wolf-labs.pages.dev/p/68991204baba/a-knock-at-the-door/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -162,7 +162,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/68991204baba/a-knock-at-the-door/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A brass door knocker in the dark",
       "pede": "Look at the picture: a door knocker in the dark. Write 2 or 3 sentences about a knock at the door. Use <b>a / an</b> for new things and <b>the</b> for things we know.",
       "ph": "Last night there was a …",

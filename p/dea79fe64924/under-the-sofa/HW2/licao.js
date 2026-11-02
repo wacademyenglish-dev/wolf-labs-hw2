@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Under the Sofa",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/dea79fe64924/under-the-sofa/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "in / on / under / next to / behind / between + Where is ...? / Where are ...?; in = inside a room or box, on = a surface; next to (two words); is / are",
   "abrir": "Where is your phone right now?",
   "fecho": "<b>in</b> = inside (in the kitchen) · <b>on</b> = a surface (on the shelf) · <b>under</b> · <b>next to</b> · <b>behind</b> · <b>between</b>. One thing: <b>is</b>. Two or more: <b>are</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia looks for a lost cat. A new scene, about 35 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/dea79fe64924/under-the-sofa/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A plant and keys on a shelf",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The cat is under the sofa.",
-          "img": "https://wolf-labs.pages.dev/p/dea79fe64924/under-the-sofa/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The keys are on the shelf, next to the plant.",
-          "img": "https://wolf-labs.pages.dev/p/dea79fe64924/under-the-sofa/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "My phone is in the bathroom, behind the door.",
-          "img": "https://wolf-labs.pages.dev/p/dea79fe64924/under-the-sofa/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/dea79fe64924/under-the-sofa/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A sofa in a dark room",
       "pede": "Look at the picture: a sofa in a dark living room. Write 2 or 3 sentences about where things are. Use <b>in, on, under, next to, behind</b> or <b>between</b>.",
       "ph": "The sofa is in the … The lamp is …",

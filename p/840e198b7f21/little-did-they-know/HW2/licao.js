@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Little Did They Know",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/840e198b7f21/little-did-they-know/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "inversion after negative expressions of manner and rule: Little did they know ...; Never before had I seen ...; At no time did ...; Under no circumstances should you ...; On no account must ...; In no way is ...",
   "abrir": "What is the strictest rule you have ever had to follow?",
   "fecho": "Two moods, one structure. In a story: <b>Little did they know ...</b>, <b>Never before had I seen ...</b>. In a strict rule: <b>Under no circumstances should you ...</b>, <b>On no account must ...</b>, <b>At no time did ...</b>. The auxiliary comes before the subject: never <i>Little they knew</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at a lighthouse museum. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/840e198b7f21/little-did-they-know/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A lamp, a book and a round window onto the sea",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Little did the crew know that the weather was about to change.",
-          "img": "https://wolf-labs.pages.dev/p/840e198b7f21/little-did-they-know/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Under no circumstances should the lamp room be left unlocked.",
-          "img": "https://wolf-labs.pages.dev/p/840e198b7f21/little-did-they-know/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "At no time did the keeper leave his post during the storm.",
-          "img": "https://wolf-labs.pages.dev/p/840e198b7f21/little-did-they-know/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/840e198b7f21/little-did-they-know/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A small boat with a light on a dark sea",
       "pede": "Look at the picture: a small boat with a light on a dark sea. Write 2 or 3 sentences: one story sentence with <b>Little did ...</b> or <b>Never before had ...</b>, and one strict rule with <b>Under no circumstances</b>, <b>On no account</b> or <b>At no time</b>.",
       "ph": "Little did the crew know that …",

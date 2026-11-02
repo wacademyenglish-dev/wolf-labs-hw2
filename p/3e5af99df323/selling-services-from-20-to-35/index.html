@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -118,5 +119,282 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "What number matters in your job?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "leitura": {
+   "t": "Leo’s First Big Client, Chapter 4.",
+   "p": "Read it out loud. Answer the questions."
+  },
+  "ditado": {
+   "t": "Six results, six numbers.",
+   "p": "Listen up to three times. Type in digits."
+  },
+  "descobre": {
+   "t": "By, from, to.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "slides": {
+   "t": "Your 3-slide pitch.",
+   "p": "A title and a number per slide. Present it."
+  },
+  "escolha": {
+   "t": "Three numbers or ten?",
+   "p": "Choose a side. Say “I think … because …”."
+  },
+  "cartao": {
+   "t": "Your slide: three real numbers.",
+   "p": "Write three sentences. Present in one minute."
+  },
+  "pode": {
+   "t": "Lesson 22: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Números num slide: increase/decrease, go up/go down, from… to (início e fim) e by (a diferença); no capítulo 4, Leo responde ao concorrente mais barato com três números.",
+  "armadilha": "“increased in 15%” (o “em” do português), “from 20% for 35%”, a vírgula decimal (1,5 milhão; em inglês 1.5), “grew up 20%” e fifteen × fifty.",
+  "pal": [
+   "increased from … to …",
+   "went down by …%",
+   "grew by",
+   "decreased",
+   "1.5 = one point five",
+   "1,500",
+   "fifteen / fifty",
+   "Would you like the same results?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: apresentar resultados com três números num slide.",
+   "perg": "Did your sales go up or go down this year?",
+   "pula": "Faça a pergunta de abertura e vá à cena I."
+  },
+  "conversa": {
+   "obj": "Small talk sobre números do trabalho; o aluno pergunta “And you?”.",
+   "perg": "What number is important in your job?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler o capítulo 4 (Brava Foods, Rita da Orla Beverages, a mensagem da Sara) e responder pelo sentido.",
+   "perg": "What does Rita say at the end?",
+   "pula": "Leia e responda duas perguntas."
+  },
+  "ditado": {
+   "obj": "Ouvir seis resultados e digitar com números em dígitos.",
+   "perg": "Fifteen or fifty?",
+   "pula": "Quatro resultados bastam."
+  },
+  "descobre": {
+   "obj": "Comparar pares e fixar from… to e by, sem o “in”.",
+   "perg": "Why ‘by 15%’ and not ‘in 15%’?",
+   "pula": "Três pares e a regra."
+  },
+  "slides": {
+   "obj": "Montar três slides com um número cada e apresentar; você é o CFO e pergunta sobre cada número.",
+   "perg": "In how many months?",
+   "pula": "Dois slides bastam."
+  },
+  "escolha": {
+   "obj": "Minidebate: três ou dez números? Você fica com o outro lado.",
+   "perg": "Why three and not ten?",
+   "pula": "Um argumento de cada lado."
+  },
+  "cartao": {
+   "obj": "Escrever o próprio slide com três números reais e apresentar em um minuto.",
+   "perg": "What’s your best number?",
+   "pula": "Duas frases bastam."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; o resto vai para a lição.",
+   "perg": "Can you present a number now?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre números reais do trabalho e da vida do aluno.",
+   "perg": "What went up this year?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas simples de apresentação e venda, com motivo.",
+   "perg": "Which one is better?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a Rita, CFO da Orla Beverages, e você apresenta os números.",
+   "perg": "From what to what?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your numbers.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "went up",
+    "went down",
+    "from … to",
+    "by"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR SALES",
+     "q": "Did your sales go up or go down this year?",
+     "fup": "By how much?",
+     "st": [
+      "They went up / down by …"
+     ],
+     "ex": "They went up by 10%, from 50 to 55 clients."
+    },
+    {
+     "k": "PRICES",
+     "q": "What price went up a lot in your city?",
+     "fup": "From how much to how much?",
+     "st": [
+      "… went up from … to …"
+     ],
+     "ex": "Coffee went up from 5 to 8 reais."
+    },
+    {
+     "k": "YOUR TIME",
+     "q": "How many hours do you work a week?",
+     "fup": "Did it go up or down?",
+     "st": [
+      "I work …",
+      "It went down from … to …"
+     ],
+     "ex": "I work 40 hours. It went down from 50 to 40."
+    },
+    {
+     "k": "CLIENTS",
+     "q": "How many clients do you have now?",
+     "fup": "And last year?",
+     "st": [
+      "I have …",
+      "Last year I had …"
+     ],
+     "ex": "I have 12 clients. Last year I had 8."
+    },
+    {
+     "k": "A BIG NUMBER",
+     "q": "Say a big number from your job, the English way.",
+     "fup": "Is it a good number?",
+     "st": [
+      "It’s … million / thousand."
+     ],
+     "ex": "It’s 1.5 million: one point five million reais."
+    },
+    {
+     "k": "A GOAL",
+     "q": "What number do you want next year?",
+     "fup": "Is it possible?",
+     "st": [
+      "I want to go from … to …"
+     ],
+     "ex": "I want to go from 12 to 20 clients."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I think … because …",
+    "I agree",
+    "I don’t agree"
+   ],
+   "rodadas": [
+    {
+     "q": "A pitch with numbers or a pitch with a client story?",
+     "a": "Numbers",
+     "b": "A story",
+     "fa": [
+      "Numbers. CFOs love numbers."
+     ],
+     "fb": [
+      "A story. People remember stories."
+     ]
+    },
+    {
+     "q": "Your price is higher. Talk about price first or results first?",
+     "a": "Price first",
+     "b": "Results first",
+     "fa": [
+      "Price first. It’s honest."
+     ],
+     "fb": [
+      "Results first. Then the price looks small."
+     ]
+    },
+    {
+     "q": "Slides with a lot of text or only big numbers?",
+     "a": "Text",
+     "b": "Big numbers",
+     "fa": [
+      "Text. The client can read it later."
+     ],
+     "fb": [
+      "Big numbers. The client sees them fast."
+     ]
+    },
+    {
+     "q": "Show a bad number or only the good ones?",
+     "a": "Show it",
+     "b": "Only good",
+     "fa": [
+      "Show it. The client trusts me more."
+     ],
+     "fb": [
+      "Only good ones. It’s a sales meeting."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Rita, the CFO.",
+   "p": "Your teacher is Leo. Ask about the numbers.",
+   "aluno": "You are Rita, CFO of Orla Beverages. Read each question to your teacher. Listen for from, to and by.",
+   "perguntas": [
+    "What did your service do for Brava Foods?",
+    "Their sales went up from what to what?",
+    "By how much did the costs go down?",
+    "In how many months?",
+    "Why are you more expensive than Kestrel?",
+    "Can I have the same results?"
+   ],
+   "st": [
+    "Interesting. And …?",
+    "In how many months?"
+   ],
+   "ex": "Interesting. And the costs went down by how much?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

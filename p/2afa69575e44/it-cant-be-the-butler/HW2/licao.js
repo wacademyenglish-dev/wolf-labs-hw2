@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It Can't Be the Butler",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2afa69575e44/it-cant-be-the-butler/img/live-mansao.webp",
+  "capa": "../img/live-mansao.webp",
   "alvo": "deduction in the present: must be (sure it is), might / may / could be (maybe), can't be (sure it isn't); plain be after the modal, no to, no doesn't can; must be + -ing for an action now",
   "abrir": "Are you good at solving small mysteries?",
   "fecho": "<b>must be</b> = I'm sure it is. <b>might / could be</b> = maybe. <b>can't be</b> = I'm sure it isn't. After them, the plain <b>be</b>: <i>It must be her key.</i> Never <i>must to be</i>, never <i>doesn't can be</i>. An action now: <i>She must be working.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo play detectives in an old house. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/2afa69575e44/it-cant-be-the-butler/img/live-mansao.webp",
+      "img": "../img/live-mansao.webp",
       "leg": "A dark window in an old house",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It can't be the butler. He was in the kitchen.",
-          "img": "https://wolf-labs.pages.dev/p/2afa69575e44/it-cant-be-the-butler/img/live-mansao.webp",
+          "img": "../img/live-mansao.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It must be Lady Rose's note. It smells of roses.",
-          "img": "https://wolf-labs.pages.dev/p/2afa69575e44/it-cant-be-the-butler/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The light is on, so somebody must be home.",
-          "img": "https://wolf-labs.pages.dev/p/2afa69575e44/it-cant-be-the-butler/img/live-porta.webp",
+          "img": "../img/live-porta.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -164,7 +164,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2afa69575e44/it-cant-be-the-butler/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A magnifying glass, a key and a cup on a desk",
       "pede": "Look at the picture: a magnifying glass, a key and a cup on a desk. Write 2 or 3 guesses about whose they are. Use <b>must be</b>, <b>might be</b> or <b>can't be</b>.",
       "ph": "It must be … It might be …",

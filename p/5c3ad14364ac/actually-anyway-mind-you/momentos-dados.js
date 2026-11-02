@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de Actually, Anyway, Mind You (11/10/2026): o Neil e a Beth falam de erros (Real Easy English).
+   Forma: quem disse — Neil ou Beth? Alvo: discourse markers (actually, so, anyway, mind you, by the way), cada um com um trabalho.
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [9, 10], k: 'A little tired', quem: 'Beth',
+    contexto: 'The podcast starts with a simple “how are you?”, and an honest answer.',
+    frase: 'I’m OK, Neil. <b>I’m a little bit tired</b>.',
+    quemOps: ['Neil', 'Beth'],
+    explica: 'She corrects the polite “I’m OK” with the real fact. That is the job of <i>actually</i>.',
+    formula: '<b>Actually</b>, I’m a bit tired. (actually = the real fact · ✗ actually = “now”)',
+    tente: 'How are you today, honestly? Start with “Actually…”',
+    ex: 'Actually, I’m quite stressed. I have a deadline tomorrow.' },
+  { i: [34, 35], k: 'The suitcase', quem: 'Beth',
+    contexto: 'Neil asks about a recent mistake. Beth has a good story.',
+    frase: 'So, I recently <b>left my suitcase</b> on a train by mistake.',
+    quemOps: ['Neil', 'Beth'],
+    explica: '<i>So</i> opens the story. After the details, <i>anyway</i> brings us back to the point.',
+    formula: '<b>So</b>, … (start the story) · <b>Anyway</b>, I got it back. (back to the point)',
+    tente: 'Tell me about a small mistake. Start with So… and finish with Anyway…',
+    ex: 'So, I sent a message to the wrong person… Anyway, she laughed!' },
+  { i: [57, 58, 59], k: 'Never again', quem: 'Neil',
+    contexto: 'Beth promises she will never do it again. Neil is not so sure.',
+    frase: 'That was a big mistake and I will not make that mistake again. — <b>Everybody says that.</b>',
+    quemOps: ['Neil', 'Beth'],
+    explica: 'Neil adds the other side of the story. A natural way to do that: <i>mind you</i>.',
+    formula: '<b>Mind you</b>, everybody says that. (mind you = but also consider this)',
+    tente: 'Say something good about your city, then add “mind you…”.',
+    ex: 'The food is amazing. Mind you, it’s very expensive.' },
+  { i: [74, 75, 76, 77, 78, 79], k: 'The job', quem: 'Neil',
+    contexto: 'Neil’s big mistake: he left a job he loved in Prague.',
+    frase: 'And so I resigned. But then about a week or so later, I realized that I really, really didn’t want to leave that school. So I went back to the boss and I said, <b>I’ve changed my mind</b>, I want to stay.',
+    quemOps: ['Neil', 'Beth'],
+    explica: '<i>Resign</i> = leave your job. Too late: the boss gave the job to someone else. <i>Anyway</i> moves the story on.',
+    formula: '<b>Anyway</b>, it was too late. (moving on) · <b>By the way</b>, I still speak some Czech. (a side topic)',
+    tente: 'Tell me about a time you changed your mind. Use anyway to finish.',
+    ex: 'I bought a ticket to Rome, then I changed my mind. Anyway, I went to Lisbon instead.' },
+  { i: [85, 86], k: 'Actually', quem: 'Neil',
+    contexto: 'Beth thinks the story ends badly. Neil surprises her.',
+    frase: 'No, <b>actually</b>, a bit like your suitcase, Beth.',
+    quemOps: ['Neil', 'Beth'],
+    explica: 'Here <i>actually</i> corrects what she expected: the story ended well.',
+    formula: '“So you left Prague?” — “No, <b>actually</b>, it ended up OK.” (a surprising correction)',
+    tente: 'Correct a common idea about you with “No, actually…”.',
+    ex: 'People think I’m shy. No, actually, I love talking to strangers!' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'quem', cor: '#c97bd9', titulo: 'Neil, or Beth?', sub: 'Hear the line, say who says it, then use the little word that does the job.', rot: { por: 'WHAT IT MEANS', padrao: 'ACTUALLY · ANYWAY · MIND YOU', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

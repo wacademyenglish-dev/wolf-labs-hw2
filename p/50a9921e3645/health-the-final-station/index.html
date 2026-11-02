@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -121,5 +122,284 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "Finding the patient’s real fear.",
+   "p": "One question, then the video, then questions."
+  },
+  "cadeira": {
+   "t": "The full consultation. You lead.",
+   "p": "Ask, listen, react. Your teacher is the patient."
+  },
+  "prova": {
+   "t": "Explain the plan. Then hand over.",
+   "p": "Read the card, prepare, start the clock."
+  },
+  "cv-sabados": {
+   "t": "Your manager wants your Saturdays.",
+   "p": "Ask about her worries. Then agree on December."
+  },
+  "pode": {
+   "t": "Lesson 16: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Consulta completa: abertura, história, red flags, ICE (ideias, preocupações, expectativas), empatia, resumo, plano simples com safety-netting e passagem SBAR. Última aula de Healthcare.",
+  "armadilha": "“What is your worry?” no lugar de “Is anything worrying you?”, perguntas fechadas que conduzem (“Do you want a scan?”), jargão no plano e esquecer o safety-netting.",
+  "pal": [
+   "What do you think could be causing it?",
+   "Is there anything you’re worried about?",
+   "What were you hoping I could do today?",
+   "I’m sorry to hear that.",
+   "Let me summarize…",
+   "Come back straight away if…",
+   "handover",
+   "SBAR"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula final: uma consulta inteira, do começo à passagem de plantão.",
+   "perg": "Think about a very worried patient. What were they really afraid of?",
+   "pula": "Leia o título e siga."
+  },
+  "video": {
+   "obj": "Escuta: OSCE do Geeky Medics (2:33–4:22) com perguntas ICE e resumo.",
+   "perg": "What was the patient really afraid of?",
+   "pula": "O trecho é inteiro; faça só a pergunta de antes."
+  },
+  "cadeira": {
+   "obj": "Consulta completa com o aluno no comando; você é o paciente com dor de cabeça tensional.",
+   "perg": "Is there anything you’re worried about?",
+   "pula": "Garanta ICE, resumo e plano; pule a história detalhada."
+  },
+  "prova": {
+   "obj": "Explicar o plano em inglês simples e fazer a passagem SBAR no relógio real.",
+   "perg": "When should the patient come back straight away?",
+   "pula": "Só a passagem SBAR."
+  },
+  "cv-sabados": {
+   "obj": "Negociar os sábados de dezembro com a gerente, ouvindo as preocupações dela primeiro.",
+   "perg": "What is worrying you about December?",
+   "pula": "Uma preocupação e feche o acordo."
+  },
+  "pode": {
+   "obj": "Autoavaliação final e celebração; pergunte que frase o aluno já usa no trabalho.",
+   "perg": "Which phrase from the course do you use at work now?",
+   "pula": "Leia só as linhas difíceis. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre o trabalho real do aluno na saúde: escuta, empatia e passagem de plantão.",
+   "perg": "What is the hardest part of a consultation for you?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre dilemas da prática clínica, com argumentos prontos.",
+   "perg": "What would you do, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar, em passos, uma passagem SBAR de um paciente fictício.",
+   "perg": "What do you recommend?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your real consultations.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "Is anything worrying you?",
+    "Let me summarize…",
+    "Come back straight away if…"
+   ],
+   "cartas": [
+    {
+     "k": "HARDEST PART",
+     "q": "What is the hardest part of a consultation for you?",
+     "fup": "Is it harder in English?",
+     "st": [
+      "For me, the hardest part is …"
+     ],
+     "ex": "For me, the hardest part is the end. I always forget the safety-netting."
+    },
+    {
+     "k": "LISTENING",
+     "q": "How do you show a patient you are listening?",
+     "fup": "What do you say?",
+     "st": [
+      "I usually …",
+      "I say: “I’m sorry to hear that.”"
+     ],
+     "ex": "I usually stop typing and look at them. I say: “That sounds really hard.”"
+    },
+    {
+     "k": "BUSY DAYS",
+     "q": "How many patients do you see on a busy day?",
+     "fup": "How do you stay calm?",
+     "st": [
+      "On a busy day, I see about …"
+     ],
+     "ex": "On a busy day, I see about thirty. I stay calm with short breaks."
+    },
+    {
+     "k": "HANDOVER",
+     "q": "How do handovers work at your workplace?",
+     "fup": "What usually goes wrong?",
+     "st": [
+      "We usually …",
+      "What goes wrong is …"
+     ],
+     "ex": "We usually do it on paper. What goes wrong is people forget the recommendation."
+    },
+    {
+     "k": "YOUR ENGLISH",
+     "q": "Which phrase from the course will you use first?",
+     "fup": "With whom?",
+     "st": [
+      "I’ll use “…” with …"
+     ],
+     "ex": "I’ll use “What were you hoping I could do today?” with my international patients."
+    },
+    {
+     "k": "WORK-LIFE",
+     "q": "Do you work weekends?",
+     "fup": "How do you make it fair?",
+     "st": [
+      "Yes, I work …",
+      "We share …"
+     ],
+     "ex": "Yes, I work one Saturday a month. We share them on a calendar."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Clinic dilemmas.",
+   "p": "Pick a side. Your teacher takes the other.",
+   "palavras": [
+    "because",
+    "I think",
+    "on the other hand"
+   ],
+   "rodadas": [
+    {
+     "q": "A patient wants a scan you don’t think they need. Order it, or explain why not?",
+     "a": "Order it",
+     "b": "Explain why not",
+     "fa": [
+      "Order it. It calms the fear.",
+      "A worried patient comes back again and again."
+     ],
+     "fb": [
+      "Explain why not. Unneeded scans have costs and risks.",
+      "Good safety-netting is better than a scan."
+     ]
+    },
+    {
+     "q": "Ask the ICE questions every time, or only when you have time?",
+     "a": "Every time",
+     "b": "Only with time",
+     "fa": [
+      "Every time. The real fear is often hidden.",
+      "It saves time later."
+     ],
+     "fb": [
+      "Only with time. On a busy day it’s impossible.",
+      "Some cases are very simple."
+     ]
+    },
+    {
+     "q": "Handover on paper or face to face?",
+     "a": "On paper",
+     "b": "Face to face",
+     "fa": [
+      "On paper. Nothing is forgotten.",
+      "Anyone can read it later."
+     ],
+     "fb": [
+      "Face to face. You can ask questions.",
+      "The tone tells you how serious it is."
+     ]
+    },
+    {
+     "q": "Work Saturdays in December for extra pay, or protect your weekends?",
+     "a": "Extra pay",
+     "b": "Protect weekends",
+     "fa": [
+      "Extra pay. December is expensive.",
+      "The clinic really needs people."
+     ],
+     "fb": [
+      "Protect weekends. Rest makes better professionals.",
+      "Patients need you fresh."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "The Handover",
+   "t": "One more handover, step by step.",
+   "p": "Situation, background, assessment, recommendation.",
+   "prof": "Fictional patient: Mr. Costa, 68, two days after hip surgery, now with a fever. Let the student build the SBAR; accept any reasonable plan.",
+   "passos": [
+    {
+     "q": "Situation: who is the patient and what’s happening now?",
+     "st": [
+      "I’m calling about …",
+      "Right now, he …"
+     ],
+     "ex": "I’m calling about Mr. Costa in bed 4. Right now, he has a fever of 38.9."
+    },
+    {
+     "q": "Background: what do we know?",
+     "st": [
+      "He’s … years old and …"
+     ],
+     "ex": "He’s 68 and he had hip surgery two days ago."
+    },
+    {
+     "q": "Assessment: what do you think is going on?",
+     "st": [
+      "I think it could be …",
+      "I’m worried about …"
+     ],
+     "ex": "I think it could be an infection. I’m worried about the wound."
+    },
+    {
+     "q": "Recommendation: what do you need from your colleague?",
+     "st": [
+      "Could you please …?",
+      "I’d like you to …"
+     ],
+     "ex": "Could you please see him in the next thirty minutes?"
+    }
+   ],
+   "fim": "Clear, short, safe. Course complete."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "On the Contrary",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/d8f672483848/on-the-contrary/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "on the contrary (no, the opposite is true) · on the other hand (the other side of the SAME thing: both true) · conversely / in contrast to (two different things compared) · far from it / far from + adjective or -ing / quite the opposite; never 'on the contrary' to add a second side, 'in contrast of', 'far of'",
   "abrir": "What is something people say that you think is simply not true?",
   "fecho": "<b>On the contrary</b> = no, the opposite is true: <i>Lazy? On the contrary, she works twelve hours.</i> <b>On the other hand</b> = another side of the same thing, and both are true: <i>It's small. On the other hand, it's cheap.</i> <b>Conversely</b> and <b>in contrast to</b> compare two different things. <b>Far from it</b> and <b>quite the opposite</b> deny strongly: <i>far from cheap</i>, never <i>far of</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo argue about a newspaper column. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/d8f672483848/on-the-contrary/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A chessboard between two empty chairs",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Lazy? On the contrary, I work longer hours at home.",
-          "img": "https://wolf-labs.pages.dev/p/d8f672483848/on-the-contrary/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "On the one hand, I save time. On the other hand, I miss my colleagues.",
-          "img": "https://wolf-labs.pages.dev/p/d8f672483848/on-the-contrary/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "In contrast to me, my brother can't stand working from home.",
-          "img": "https://wolf-labs.pages.dev/p/d8f672483848/on-the-contrary/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/d8f672483848/on-the-contrary/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A chessboard between two empty chairs: two sides",
       "pede": "Look at the picture: a chessboard between two empty chairs, two sides of one game. Think of a myth people believe (about cities, social media, gyms, video games…). Write 2 or 3 sentences: deny it with <b>on the contrary</b> or <b>far from it</b>, then show two sides with <b>on the one hand … on the other hand …</b>.",
       "ph": "People say … On the contrary, …",

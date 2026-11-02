@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -123,5 +124,262 @@ window.WL_CONVERSA = { nivel: 'A2', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "An agency’s tips for your letter.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "transforma": {
+   "t": "Two sentences. Make one.",
+   "p": "Read the clue. Say it as one sentence."
+  },
+  "ordem": {
+   "t": "What happened first?",
+   "p": "Tap the cards in order. Tell the story."
+  },
+  "cartao": {
+   "t": "Write your letter.",
+   "p": "Six lines. One unique detail. One memory."
+  },
+  "cv-juri": {
+   "t": "You are the family. Who gets the call?",
+   "p": "Read the evidence. Choose one. Say why."
+  },
+  "pode": {
+   "t": "Lesson 2: what can you do now?",
+   "p": "Read each line. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "A carta para a família anfitriã: um detalhe único, experiência com crianças e por que os EUA, ligando ideias com and, because e so.",
+  "armadilha": "Começar de novo com nome, idade e cidade; because no começo de toda frase; so usado como “então” no sentido de tempo; frases longas demais, como no português.",
+  "pal": [
+   "Dear Host Family,",
+   "something unique",
+   "and",
+   "because",
+   "so",
+   "experience with children",
+   "I can’t wait to meet you!"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a carta: é assim que a família conhece o aluno.",
+   "perg": "What is one thing about you that nobody forgets?",
+   "pula": "Anote a resposta de abertura e vá ao vídeo."
+  },
+  "video": {
+   "obj": "Ver as dicas da Cultural Care para a carta (1 minuto; pode tocar duas vezes).",
+   "perg": "What do families want to read?",
+   "pula": "Uma vez só e uma pergunta."
+  },
+  "transforma": {
+   "obj": "Juntar duas frases curtas em uma com and, because ou so.",
+   "perg": "Because or so here?",
+   "pula": "Quatro frases bastam."
+  },
+  "ordem": {
+   "obj": "Pôr a história da Beatriz em ordem e contar com first, then, after that, finally.",
+   "perg": "What happened first?",
+   "pula": "Ordene e conte só o começo."
+  },
+  "cartao": {
+   "obj": "Escrever a própria carta: seis linhas, um detalhe único, uma memória com crianças. Sempre verdade.",
+   "perg": "What’s your unique detail?",
+   "pula": "Quatro linhas bastam; termine na lição."
+  },
+  "cv-juri": {
+   "obj": "Papéis invertidos: o aluno é a família e escolhe entre Julia, Bruna e Carol; fatos novos na rodada 2.",
+   "perg": "Who gets the call, and why?",
+   "pula": "Só a rodada 1."
+  },
+  "pode": {
+   "obj": "O aluno lê os I can e marca; guarde a carta, ela vai para o perfil real.",
+   "perg": "Can you write your letter now?",
+   "pula": "Leia todas rápido. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre crianças, família e o sonho de ser au pair, com and/because/so.",
+   "perg": "Why do you want to be an au pair?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas de au pair com motivo curto (because/so).",
+   "perg": "Which one, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: a mãe da família anfitriã liga; o aluno responde como candidato.",
+   "perg": "Why the USA?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "You, kids and the USA.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "and",
+    "because",
+    "so"
+   ],
+   "cartas": [
+    {
+     "k": "WHY AU PAIR",
+     "q": "Why do you want to be an au pair?",
+     "fup": "What scares you a little?",
+     "st": [
+      "I want to … because …"
+     ],
+     "ex": "I want to be an au pair because I love kids and I want to speak English every day."
+    },
+    {
+     "k": "KIDS",
+     "q": "Do you have experience with children?",
+     "fup": "What age?",
+     "st": [
+      "I take care of my …",
+      "I babysit …"
+     ],
+     "ex": "I take care of my two cousins, so I know how to play and cook for kids."
+    },
+    {
+     "k": "YOUR TALENT",
+     "q": "What can you teach a child?",
+     "fup": "How?",
+     "st": [
+      "I can teach … because …"
+     ],
+     "ex": "I can teach swimming because I was a swimmer for ten years."
+    },
+    {
+     "k": "THE USA",
+     "q": "Why the USA?",
+     "fup": "Which state do you want?",
+     "st": [
+      "I want to go to … because …"
+     ],
+     "ex": "I want to go to California because I love the beach and nature."
+    },
+    {
+     "k": "A KIDS’ MEMORY",
+     "q": "Tell me a funny memory with a child.",
+     "fup": "What did you learn?",
+     "st": [
+      "One day, … and …"
+     ],
+     "ex": "One day, my nephew painted the wall, so we painted it together!"
+    },
+    {
+     "k": "HOMESICK",
+     "q": "What will you miss from Brazil?",
+     "fup": "What will you do about it?",
+     "st": [
+      "I will miss … so I …"
+     ],
+     "ex": "I will miss my mom’s food, so I will learn her recipes before I go."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "so",
+    "and"
+   ],
+   "rodadas": [
+    {
+     "q": "A family with a baby or with school-age kids?",
+     "a": "A baby",
+     "b": "School kids",
+     "fa": [
+      "A baby, because I love babies."
+     ],
+     "fb": [
+      "School kids, so I have free time in the morning."
+     ]
+    },
+    {
+     "q": "A big city or a small town?",
+     "a": "Big city",
+     "b": "Small town",
+     "fa": [
+      "A big city, because there is a lot to do."
+     ],
+     "fb": [
+      "A small town, so I can save money."
+     ]
+    },
+    {
+     "q": "Your letter: short and fun, or long and detailed?",
+     "a": "Short",
+     "b": "Long",
+     "fa": [
+      "Short, because families read a lot of letters."
+     ],
+     "fb": [
+      "Long, so they know me well."
+     ]
+    },
+    {
+     "q": "A family with pets or without pets?",
+     "a": "With pets",
+     "b": "Without",
+     "fa": [
+      "With pets, because I love dogs."
+     ],
+     "fb": [
+      "Without pets, because I have an allergy."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "The host family calls you.",
+   "p": "Your teacher is the host mom.",
+   "aluno": "Listen to the host mom’s question. Answer as yourself, the au pair. Use and, because, so.",
+   "perguntas": [
+    "Tell me something unique about you.",
+    "Do you have experience with children?",
+    "Why do you want to come to the USA?",
+    "Can you drive?",
+    "What do you like to do with kids?",
+    "What will you do on your free days?"
+   ],
+   "st": [
+    "I … and I …",
+    "… because …",
+    "… so …"
+   ],
+   "ex": "I was a swimming teacher, so I can teach the kids to swim, and I love it because they are fearless."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

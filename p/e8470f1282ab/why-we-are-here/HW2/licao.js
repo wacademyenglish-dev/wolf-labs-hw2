@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Why We Are Here",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e8470f1282ab/why-we-are-here/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "indirect questions: Do you know / Can you tell me / I wonder / I don't know + question word + statement order (where the elevator is, why they closed it); if / whether for yes-no; no do / does / did",
   "abrir": "What is something you always wonder about?",
   "fecho": "<b>Do you know / Can you tell me / I wonder + question word + normal order</b>: <i>Do you know where the elevator is?</i> No <i>do / does / did</i> inside: <i>I wonder why they closed it.</i> Yes-no: <b>if / whether</b>: <i>I wonder if the door is open.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo go down a long staircase. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e8470f1282ab/why-we-are-here/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A spiral stairway going down",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Do you know how many steps there are?",
-          "img": "https://wolf-labs.pages.dev/p/e8470f1282ab/why-we-are-here/img/live-escadaria.webp",
+          "img": "../img/live-escadaria.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "I wonder why there is no elevator.",
-          "img": "https://wolf-labs.pages.dev/p/e8470f1282ab/why-we-are-here/img/live-oficina.webp",
+          "img": "../img/live-oficina.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Can you tell me where the elevator is?",
-          "img": "https://wolf-labs.pages.dev/p/e8470f1282ab/why-we-are-here/img/live-reliquia.webp",
+          "img": "../img/live-reliquia.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -157,7 +157,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e8470f1282ab/why-we-are-here/img/live-tela.webp",
+      "img": "../img/live-tela.webp",
       "leg": "A big screen in a dark room",
       "pede": "Look at the picture: a big screen in a dark room. Write 2 or 3 sentences or polite questions about it. Use <b>Do you know …</b>, <b>Can you tell me …</b> or <b>I wonder …</b>",
       "ph": "Do you know why …",

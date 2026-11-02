@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It Is Thought to Have Been",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/ee77794bd895/it-is-thought-to-have-been/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "advanced passive reporting: is thought / said / believed + to have been + participle (an earlier event); is being + participle (in progress); never 'is thought to be made' for the past or an active 'to have destroyed'",
   "abrir": "Think of an old place near you. What is it said to have been in the past?",
   "fecho": "<b>Is thought / said / believed to have been</b> + participle: the belief is now, the event is before now. <i>The pot is thought to have been made in the hills.</i> For something in progress, use <b>is being</b> + participle: <i>The site is being mapped.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in the dig tent. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/ee77794bd895/it-is-thought-to-have-been/img/live-barraca.webp",
+      "img": "../img/live-barraca.webp",
       "leg": "The dig tent",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -118,17 +118,17 @@ window.HW2 = {
         {
           "t": "The pot is thought to have been made in the hills.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/ee77794bd895/it-is-thought-to-have-been/img/live-achados.webp"
+          "img": "../img/live-achados.webp"
         },
         {
           "t": "The village is believed to have been a market town.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/ee77794bd895/it-is-thought-to-have-been/img/live-trincheira.webp"
+          "img": "../img/live-trincheira.webp"
         },
         {
           "t": "The samples are being tested in a lab.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/ee77794bd895/it-is-thought-to-have-been/img/live-biblioteca.webp"
+          "img": "../img/live-biblioteca.webp"
         }
       ]
     },
@@ -177,7 +177,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/ee77794bd895/it-is-thought-to-have-been/img/live-barraca.webp",
+      "img": "../img/live-barraca.webp",
       "leg": "The dig tent",
       "pede": "Look at the picture: a dig tent with notes on the ground. Write two or three report sentences about an old place or object you know. Use <b>is said / thought / believed to have been</b>.",
       "ph": "The old tower is said to have been …",

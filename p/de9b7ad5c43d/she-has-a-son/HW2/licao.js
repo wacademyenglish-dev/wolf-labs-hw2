@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "She Has a Son",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/de9b7ad5c43d/she-has-a-son/img/live-prox.jpg",
+  "capa": "../img/live-prox.jpg",
   "alvo": "he / she HAS, I / you / we / they HAVE · family words (brother, sister, son, daughter) · 's for owners (Clara's dog) · plural -s (two brothers); never she have, never the brother of Mia",
   "abrir": "Do you have brothers or sisters?",
   "fecho": "<b>She has</b> a son. <b>I have</b> a sister. <b>Clara's</b> dog = the dog of Clara. Two brother<b>s</b>: plural with -s.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia shows Leo a family photo. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/de9b7ad5c43d/she-has-a-son/img/live-prox.jpg",
+      "img": "../img/live-prox.jpg",
       "leg": "A quiet street in the evening",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -99,17 +99,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "She has a son and a daughter.",
-          "img": "https://wolf-labs.pages.dev/p/de9b7ad5c43d/she-has-a-son/img/live-prox.jpg",
+          "img": "../img/live-prox.jpg",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Daniel's sons are Tom and Max.",
-          "img": "https://wolf-labs.pages.dev/p/de9b7ad5c43d/she-has-a-son/img/live-prox.jpg",
+          "img": "../img/live-prox.jpg",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I have two brothers and one sister.",
-          "img": "https://wolf-labs.pages.dev/p/de9b7ad5c43d/she-has-a-son/img/live-prox.jpg",
+          "img": "../img/live-prox.jpg",
           "au": "audio/say3.mp3"
         }
       ]
@@ -153,7 +153,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/de9b7ad5c43d/she-has-a-son/img/live-prox.jpg",
+      "img": "../img/live-prox.jpg",
       "leg": "A quiet street in the evening",
       "pede": "Look at the picture: a quiet street in the evening. Write 2 or 3 sentences about people in your family. Use <b>has</b>, <b>have</b> or <b>'s</b>.",
       "ph": "My sister has …",

@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de Do I Have to Pull the Lever? (11/10/2026): o problema do bonde de The Good Place.
+   Forma: quem disse — Michael ou Chidi? Alvo: have to / has to / don’t have to, had to, there have to be.
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [5, 6, 7, 8], k: 'Make a choice', quem: 'Michael',
+    contexto: 'Chidi teaches ethics. Suddenly he is driving a real trolley, with five workers on one track and one on the other.',
+    frase: 'There are five workers on this track and one over there. Here are the levers to switch the tracks. <b>Make a choice.</b>',
+    quemOps: ['Michael', 'Chidi'],
+    explica: 'It is not a class question now. He has to choose, now.',
+    formula: 'He <b>has to</b> choose a track. (he / she / it → <b>has to</b>)',
+    tente: 'What do you have to do every day? What does your best friend have to do?',
+    ex: 'I have to take the bus at seven. My friend has to walk her dog.' },
+  { i: [10, 11], k: 'No time', quem: 'Michael',
+    contexto: 'Chidi starts a long answer. Michael doesn’t want to hear it.',
+    frase: 'No time, dude! <b>Make a decision!</b>',
+    quemOps: ['Michael', 'Chidi'],
+    explica: 'For Chidi, every decision is very hard. Here he has to decide in two seconds.',
+    formula: '<b>Do I have to</b> decide now? — Yes, you <b>do</b>. · <b>Does</b> he <b>have to</b>?',
+    tente: 'Ask your teacher three questions with Do you have to…?',
+    ex: 'Do you have to work on Saturdays? Do you have to wear a uniform?' },
+  { i: [24, 25, 26], k: 'Fake people', quem: 'Chidi',
+    contexto: 'Michael explains that it was only a simulation. Chidi is not happy about it.',
+    frase: 'Oh, well, that’s reassuring, because some of the parts of the fake people <b>flew into my mouth</b>!',
+    quemOps: ['Michael', 'Chidi'],
+    explica: 'He didn’t have to hurt real people. But he had to watch it, and it was horrible (and very funny).',
+    formula: 'He <b>doesn’t have to</b> hurt real people. · He <b>had to</b> watch it. (past)',
+    tente: 'Tell me something you had to do last week that you didn’t want to do.',
+    ex: 'I had to go to the dentist. I didn’t have to pay, but it hurt!' },
+  { i: [37, 38], k: 'Stakes', quem: 'Michael',
+    contexto: 'They never left the classroom. Michael explains why he made the problem feel real.',
+    frase: '<b>There have to be stakes</b>, or it’s just another thought experiment.',
+    quemOps: ['Michael', 'Chidi'],
+    explica: '<i>Stakes</i> = something real to lose. For Michael, a test without risk is not a real test.',
+    formula: '<b>There have to be</b> stakes. · <b>There has to be</b> a better way!',
+    tente: 'A good game: what does there have to be in it?',
+    ex: 'There have to be rules, and there has to be a winner.' },
+  { i: [53, 54, 55], k: 'Switch tracks', quem: 'Chidi',
+    contexto: 'They try again. This time Chidi is ready, or he thinks he is.',
+    frase: 'Okay, okay, <b>I can do this</b>. I am choosing to switch tracks, so that way I only kill one person.',
+    quemOps: ['Michael', 'Chidi'],
+    explica: 'He makes a choice at last. Then Michael tells him the one person is his friend Henry.',
+    formula: 'I <b>have to</b> switch tracks. · I <b>don’t have to</b> like it.',
+    tente: 'Would you pull the lever? Say why: I have to… / I don’t have to…',
+    ex: 'Yes. I have to save five people, but I don’t have to feel good about it.' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'quem', cor: '#4fb38a', titulo: 'Michael, or Chidi?', sub: 'Hear the line, say who says it, then decide what you have to do.', rot: { por: 'WHAT IT MEANS', padrao: 'HAVE TO · HAS TO · HAD TO', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

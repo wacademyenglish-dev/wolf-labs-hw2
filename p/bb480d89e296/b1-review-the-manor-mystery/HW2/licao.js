@@ -4,7 +4,7 @@ window.HW2 = {
   "titulo": "The Manor Mystery",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/bb480d89e296/b1-review-the-manor-mystery/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "Unit 6 review: must / have to / mustn't / don't have to; be supposed to; could / managed to / was able to; deduction in the past: must have, might have, can't have + participle",
   "abrir": "What rules do you have to follow in your home?",
   "fecho": "<b>mustn't</b> = forbidden · <b>don't have to</b> = not necessary · <b>be supposed to</b> = the rule · <b>managed to</b> = one difficult success · Guessing the past: <b>must have</b> (sure), <b>might have</b> (maybe), <b>can't have</b> (impossible) + participle.",
@@ -24,7 +24,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at an old manor house. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/bb480d89e296/b1-review-the-manor-mystery/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A quiet room with a fire",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -162,7 +162,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/bb480d89e296/b1-review-the-manor-mystery/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An old room with a fire",
       "pede": "Look at the picture: an old room with a fire and two armchairs. Write 2 or 3 sentences: who must have sat there, and one rule for guests in an old house. Use <b>must have</b>, <b>mustn't</b> or <b>don't have to</b>.",
       "ph": "Someone must have …",

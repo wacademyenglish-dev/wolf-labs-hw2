@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -123,5 +124,276 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "What a local coordinator does.",
+   "p": "One question. Then the video. Then talk."
+  },
+  "multipla": {
+   "t": "Eight situations. Who do you call?",
+   "p": "Choose. Then say why."
+  },
+  "cv-sabado": {
+   "t": "Talk to the family first.",
+   "p": "Your teacher is the host mom. Close a deal."
+  },
+  "ordem": {
+   "t": "A clear 911 call, in order.",
+   "p": "Tap the sentences in order. Say the call slowly."
+  },
+  "cartao": {
+   "t": "Your safety contacts.",
+   "p": "Who, what for, and the number."
+  },
+  "pode": {
+   "t": "Lesson 15: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "A rede de segurança do au pair: coordenador local, agência, linha do Departamento de Estado, 911, linha contra tráfico humano e consulado; e como fazer uma ligação clara ao 911.",
+  "armadilha": "Ligar para os pais no Brasil antes do 911 numa emergência médica, não saber o endereço da casa e achar que rematch é “fugir”; na fala, sequência confusa sem first, then, finally.",
+  "pal": [
+   "local coordinator",
+   "the agency",
+   "911, what is your emergency?",
+   "rematch",
+   "help line",
+   "address",
+   "first, then, finally",
+   "consulate"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a rede de segurança: o au pair nunca está sozinho no programa.",
+   "perg": "If something went wrong tonight in the USA, who would you call?",
+   "pula": "Só leia o título da capa."
+  },
+  "video": {
+   "obj": "Assistir aos coordenadores da InterExchange explicando o trabalho (1:33–3:05).",
+   "perg": "When does the coordinator first contact you?",
+   "pula": "O vídeo é inteiro; faça só uma pergunta depois."
+  },
+  "multipla": {
+   "obj": "Oito situações: escolher para quem ligar e dizer por quê.",
+   "perg": "Who do you call first, and why?",
+   "pula": "Cinco situações bastam."
+  },
+  "cv-sabado": {
+   "obj": "Negociação com a Jen (futebol da Emma aos sábados); limite secreto: sexta à tarde livre e o pai leva dois sábados.",
+   "perg": "Could we change my day off?",
+   "pula": "Duas perguntas e o fechamento."
+  },
+  "ordem": {
+   "obj": "Ordenar uma ligação ao 911 e contá-la com first, then, after that, finally.",
+   "perg": "What do you say first on a 911 call?",
+   "pula": "Ordene e diga uma vez só."
+  },
+  "cartao": {
+   "obj": "Escrita: cartão com contatos de segurança (termina na aula 24).",
+   "perg": "Who is on your contact card?",
+   "pula": "Três contatos bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; tarefa: salvar os números e anotar o endereço no papel.",
+   "perg": "Do you know who to call in each situation?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre segurança, ajuda e pedir apoio na vida do aluno.",
+   "perg": "Who do you call first when you have a problem?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de dilemas do au pair: falar com a família ou com o coordenador.",
+   "perg": "Which side do you take?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno vira o coordenador local; o professor é um au pair com um problema.",
+   "perg": "What should I do if the family asks for more hours?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Help and safety.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I’d call …",
+    "first",
+    "then"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FIRST CALL",
+     "q": "When you have a problem, who do you call first?",
+     "fup": "Why that person?",
+     "st": [
+      "I call … first.",
+      "because …"
+     ],
+     "ex": "I call my sister first, because she always stays calm."
+    },
+    {
+     "k": "YOUR ADDRESS",
+     "q": "Can you say your full address in English right now?",
+     "fup": "Is it easy to spell?",
+     "st": [
+      "My address is …",
+      "It’s easy / hard because …"
+     ],
+     "ex": "My address is 45 Flores Street. It’s hard because the street name is long."
+    },
+    {
+     "k": "ASKING FOR HELP",
+     "q": "Is it easy for you to ask for help?",
+     "fup": "When was the last time you asked?",
+     "st": [
+      "It’s … for me.",
+      "The last time, I …"
+     ],
+     "ex": "It’s hard for me. The last time, I asked a neighbor to help with my car."
+    },
+    {
+     "k": "FAR FROM HOME",
+     "q": "What would you miss most in the USA?",
+     "fup": "How would you stay in touch?",
+     "st": [
+      "I’d miss …",
+      "I’d call / text …"
+     ],
+     "ex": "I’d miss the food. I’d text my friends every day."
+    },
+    {
+     "k": "THE COORDINATOR",
+     "q": "What would you like to ask your coordinator at the first meeting?",
+     "fup": "What do you hope she says?",
+     "st": [
+      "I’d ask …",
+      "I hope she …"
+     ],
+     "ex": "I’d ask how often we can meet. I hope she says every month."
+    },
+    {
+     "k": "EMERGENCY",
+     "q": "Do you know the emergency number in Brazil?",
+     "fup": "Have you ever called it?",
+     "st": [
+      "In Brazil, it’s …",
+      "Yes, once … / No, never."
+     ],
+     "ex": "In Brazil, it’s 192 for an ambulance. No, never, thank God."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’d …",
+    "because",
+    "first"
+   ],
+   "rodadas": [
+    {
+     "q": "A small problem with the family: talk to them first, or call the coordinator?",
+     "a": "The family",
+     "b": "The coordinator",
+     "fa": [
+      "The family. Most problems are small.",
+      "Talking first shows respect."
+     ],
+     "fb": [
+      "The coordinator. She knows the rules.",
+      "She can help me say it the right way."
+     ]
+    },
+    {
+     "q": "Save numbers in your phone, or write them on paper too?",
+     "a": "Phone only",
+     "b": "Paper too",
+     "fa": [
+      "Phone only. I always have it.",
+      "Paper gets lost."
+     ],
+     "fb": [
+      "Paper too. Phones die.",
+      "In an emergency, you can’t look for a charger."
+     ]
+    },
+    {
+     "q": "Rematch after one bad week, or try for one more month?",
+     "a": "Rematch",
+     "b": "One more month",
+     "fa": [
+      "Rematch. A bad start is a sign.",
+      "A year is long."
+     ],
+     "fb": [
+      "One more month. Everybody needs time to adapt.",
+      "The first weeks are always hard."
+     ]
+    },
+    {
+     "q": "Tell your parents in Brazil about every problem, or not?",
+     "a": "Tell them",
+     "b": "Don’t",
+     "fa": [
+      "Tell them. They want to know.",
+      "They can give good advice."
+     ],
+     "fb": [
+      "Don’t. They will only worry.",
+      "The coordinator is there to help."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the local coordinator now.",
+   "p": "Your teacher is a new au pair.",
+   "aluno": "Listen to your teacher’s question. Answer as the local coordinator.",
+   "perguntas": [
+    "When will we meet for the first time?",
+    "What should I do if the family asks for more hours?",
+    "Who do I call in a medical emergency?",
+    "What is a rematch, exactly?",
+    "Can I call you at night?",
+    "What do new au pairs usually find hard?"
+   ],
+   "st": [
+    "First, you should …",
+    "Then, call …",
+    "In an emergency, …"
+   ],
+   "ex": "First, you should talk to the family. Then, call me if the problem doesn’t stop."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

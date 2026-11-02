@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "Six Eggs",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/7d9feb514f3d/six-eggs/img/capa.jpg",
+  "capa": "../img/capa.jpg",
   "alvo": "and / but / so / because to join two ideas in ONE sentence: a comma before and, but, so; so + result; because + reason",
   "abrir": "What did you buy this week, and why?",
   "fecho": "<b>So</b> puts the result second; <b>because</b> puts the reason second: <i>It was cold, so I took a coat</i> = <i>I took a coat because it was cold</i>.",
@@ -19,7 +19,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on the train. A new scene, about 30 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/7d9feb514f3d/six-eggs/img/cap1.jpg",
+      "img": "../img/cap1.jpg",
       "leg": "On the train, after work",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -42,9 +42,9 @@ window.HW2 = {
     "out": {
       "sub": "Three sentences from the story. Hear it, then say it.",
       "frases": [
-        { "t": "Nobody comes back, so she puts it in her bag.", "img": "https://wolf-labs.pages.dev/p/7d9feb514f3d/six-eggs/img/cap1.jpg", "au": "audio/say1.mp3" },
-        { "t": "She reads the list, and she sees six eggs.", "img": "https://wolf-labs.pages.dev/p/7d9feb514f3d/six-eggs/img/cap2.jpg", "au": "audio/say2.mp3" },
-        { "t": "He buys six eggs because his cat loves eggs.", "img": "https://wolf-labs.pages.dev/p/7d9feb514f3d/six-eggs/img/cap5.jpg", "au": "audio/say3.mp3" }
+        { "t": "Nobody comes back, so she puts it in her bag.", "img": "../img/cap1.jpg", "au": "audio/say1.mp3" },
+        { "t": "She reads the list, and she sees six eggs.", "img": "../img/cap2.jpg", "au": "audio/say2.mp3" },
+        { "t": "He buys six eggs because his cat loves eggs.", "img": "../img/cap5.jpg", "au": "audio/say3.mp3" }
       ]
     },
     "focus": {
@@ -59,7 +59,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/7d9feb514f3d/six-eggs/img/cap5.jpg",
+      "img": "../img/cap5.jpg",
       "leg": "The cat in the box",
       "pede": "Look at the picture. Write 2 or 3 sentences about the cat. Use <b>and, but, so</b> or <b>because</b>.",
       "ph": "The cat is in a box because…",

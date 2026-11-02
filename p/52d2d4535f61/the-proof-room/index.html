@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Proof Room · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Proof Room · The Six Padlocks</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Proof Room · The Six Padlocks</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> an escape room. Every lock needs the right key.</p><p style="margin:0 0 6px"><b>The grammar:</b> could = years (a skill) · was able to / managed to = one moment (you did it; managed to when it was hard) · couldn’t = both.</p><p style="margin:0 0 6px"><b>The lesson (about 61 min):</b> I Warm-up · II The Jar · III The Four Keys · IV The Escape Call (listening) · V The Players’ Council · VI The Six Locks · VII The Trap · VIII The Interview · IX Your Escape Story · X Your Three Sentences.</p><p style="margin:0"><b>Open with:</b> “Could you swim when you were six?”</p></div><!--/prep-->
+    <p>“I could open the jar last night” is broken English. Make it negative, “I couldn’t open the jar last night”, and it’s perfect. That’s why nobody ever corrected it. One question decides it: <b>years</b> (a skill, a childhood) take <b>could</b>; <b>one moment</b> (you did it, once) takes <b>was able to</b>, or <b>managed to</b> when it was hard. In Portuguese: <i>conseguia</i> (sempre) = could · <i>consegui</i> (uma vez) = managed to / was able to.</p>
+    <h4>I · WARM-UP</h4>
+    <p>Three questions about their life. Write down the third answer word for word: most students say “I could” for one moment (“Last year I could pass my test”). Don’t correct it. It comes back in X.</p>
+    <h4>II · THE JAR</h4>
+    <p>Four pictures, one at a time: the student reads each line out loud. At the end, “I could open it” is crossed out and “I managed to open it” appears. Ask the one question: years, or one moment? Show answer explains it. The Portuguese bridge is there for the click; you don’t need to read it.</p>
+    <h4>III · THE FOUR KEYS</h4>
+    <p>All four rules are open on the screen, with the time ruler (a long bar is years, a short mark is one moment). Tap a key: the student makes one sentence about their life with it. Four keys, four sentences.</p>
+    <h4>IV · THE ESCAPE CALL (LISTENING)</h4>
+    <p>A 1-minute phone call: Mia (American) and Tom (British), who just got out of an escape room. 1) Listen once for the story (three questions; the transcript opens only after they listen). 2) Line by line: each line has its own play button; the student says which key Tom or Mia used, then taps. 0.75× slows it down. 3) Two talk questions about them.</p>
+    <h4>V · YEARS OR ONE MOMENT?</h4>
+    <p>Six pairs. The four keys stay on screen as a legend. The student says why before tapping.</p>
+    <h4>VI · THE SIX LOCKS</h4>
+    <p>Locks 2 and 5 open with two keys (was able to / managed to): ask what changes. Every open lock brings a quick question about their life with the same key. Don’t skip them: that’s the speaking.</p>
+    <h4>VII · THE TRAP</h4>
+    <p>Three of five are fine as they are; the two that break are positive. If they’re stuck, cover the NOT and read it again.</p>
+    <h4>VIII · THE INTERVIEW</h4>
+    <p>Question cards with the four keys. First the student interviews you (answer for real); then swap. After every answer, “When exactly?”: it decides the key.</p>
+    <h4>IX · YOUR ESCAPE STORY</h4>
+    <p>A real problem they solved, in six steps. After each step, tap to read the push-back. Listen for <i>I could solve it</i> about one moment: that is the mistake.</p>
+    <h4>X · YOUR THREE SENTENCES</h4>
+    <p>Read back the warm-up answers you wrote down. The student rewrites them with the right keys. It goes to their My notes.</p>
+    <!--conversa--><h4>THE PLAYERS’ COUNCIL (V) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Tom’s call, the escape room owner wants three new rules, and your student votes: yes, no, or propose a change. There is no right answer. Let them choose, wait five seconds in silence, then vote against them and use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk (one moment: <b>managed to / was able to</b>, not “could”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Warm-up, V The Players’ Council, VI The Six Locks, VIII The Interview, IX Your Escape Story.</li>
+      <li><b>Listen</b>: IV The Escape Call.</li>
+      <li><b>Focus</b>: II The Jar, III The Four Keys, VII The Trap.</li>
+      <li><b>Write</b>: X, the three warm-up answers again, with the right keys.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE PROOF ROOM (Main B1) · pergunta-surpresa · 27/10/2026 · could / was able to / managed to / couldn't */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'pote', tipo: 'And you?', q: 'What is the last thing you couldn’t open, find or fix?',
+    opc: ['Something in the kitchen', 'Something on my computer', 'My keys!'], st: ['Last …, I couldn’t …', 'In the end, I managed to …'],
+    ex: 'Something on my computer. Last week I couldn’t open a file for work. In the end, I managed to open it on my phone.', push: 'Who did you call for help? Or did you do it alone?' },
+  { cena: 'chaves', tipo: 'Would you rather', q: 'Would you rather be able to speak every language, or play every instrument?',
+    opc: ['Every language', 'Every instrument'], st: ['I’d rather be able to …, because …', 'When I was a kid, I could …'],
+    ex: 'Every language. When I was a kid, I could play the guitar a little, but I never managed to sing at the same time.', push: 'Which language or instrument first? Why that one?' },
+  { cena: 'cadeados', tipo: 'Opinion', q: 'Who is the best person to take to an escape room?',
+    opc: ['The smart one', 'The calm one', 'The fun one'], st: ['I’d take …, because once she / he was able to …', 'My friend could always …'],
+    ex: 'The calm one. My brother was able to fix our car on a dark road once, and he didn’t panic.', push: 'And who would you NEVER take? Why?' },
+  { cena: 'historia', tipo: 'What if', q: 'You’re locked in a room with only your phone at 5%. What do you do first?',
+    opc: ['Call someone', 'Look for clues', 'Wait calmly'], st: ['First, I’d …', 'Last time my phone died, I couldn’t …'],
+    ex: 'Look for clues. Last time my phone died, I couldn’t call anyone, but I managed to find a café with a charger.', push: 'Five percent is about two minutes. Who do you call?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE PROOF ROOM (Main B1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O conselho entra no lugar de "V · Years or One Moment?" (A/B toca-e-fala; a mesma distinção
+   continua nos cadeados VI e na armadilha VII). Logo depois da ligação do Tom (IV): o dono da
+   escape room pede três regras novas e o aluno vota. Gramática (could · was able to · managed to ·
+   couldn't) nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'conselho', troca: 'fitas', est: 'o', min: 7, img: 'saida', rot: 'The Players’ Council', t: 'The escape room wants three new rules. You vote.',
+    p: 'Read the rule. Vote yes, no, or propose a change. Say why with an example. Your teacher votes against you.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Phones', sit: 'Tom’s team couldn’t find the first key for twenty minutes. The owner thinks phones are the problem.',
+        q: 'New rule: everybody leaves their phone at the door.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I vote yes, because last time I couldn’t …', 'Without a phone, players wouldn’t be able to …', 'I’d change it: players could …'],
+        ex: 'I vote yes. Last time I played a game with friends, I couldn’t concentrate because everybody was checking messages.',
+        push: 'And in an emergency? How would they call for help?' },
+      { tag: 'Second try', sit: 'Some teams don’t manage to get out in sixty minutes. They leave angry.',
+        q: 'New rule: if your team doesn’t get out, you can come back free next week.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['I vote …, because if they didn’t manage to …', 'Teams that were able to … would …', 'I’d change it: they could come back, but …'],
+        ex: 'Propose a change. They could come back, but at half price. Tom’s team managed to get out with forty seconds left: that’s the fun part.',
+        push: 'Would you go back? Or would you be too embarrassed?' },
+      { tag: 'Kids', sit: 'Families ask for a room for children. The owner isn’t sure.',
+        q: 'New rule: children from ten can play alone, without an adult.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['When I was ten, I could …', 'At that age, I couldn’t …', 'Kids are able to … , but …'],
+        ex: 'No. When I was ten, I could solve puzzles, but I couldn’t stay calm in a locked room for an hour.',
+        push: 'At ten, what could YOU do alone that kids can’t do today?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "claims": {
+   "t": "Things you could do.",
+   "p": "Answer in full sentences. Your teacher keeps them."
+  },
+  "pote": {
+   "t": "Last night, a jar. Why not COULD?",
+   "p": "Read each picture out loud. Years, or one moment?"
+  },
+  "chaves": {
+   "t": "Four keys, four kinds of lock.",
+   "p": "Read each key. Make one sentence about your life."
+  },
+  "ligacao": {
+   "t": "Tom just got out. Listen.",
+   "p": "Listen for the story. Then: which key, line by line?"
+  },
+  "cv-conselho": {
+   "t": "Three new rules. You vote.",
+   "p": "Yes, no, or a change. Say why, with an example."
+  },
+  "cadeados": {
+   "t": "Six locks between you and the door.",
+   "p": "Choose a key. Say it. Answer the quick question."
+  },
+  "contra": {
+   "t": "Three are fine. Two are broken.",
+   "p": "Fine, or another key? Say the fixed one."
+  },
+  "entrevista": {
+   "t": "Ask your teacher. Then swap.",
+   "p": "Pick a card. Always add: “When exactly?”"
+  },
+  "historia": {
+   "t": "A real problem you solved.",
+   "p": "One step at a time. Then: when, exactly?"
+  },
+  "fim": {
+   "t": "Your warm-up answers come back.",
+   "p": "Write them again with the right keys. To My notes."
+  }
+ },
+ "prep": {
+  "obj": "Could (anos, habilidade) x was able to / managed to (um momento; managed to quando foi difícil) x couldn’t (os dois): uma escape room com seis cadeados.",
+  "armadilha": "O brasileiro traduz “consegui” por could: “Last night I could open the jar”, “I could pass my test”. Conseguia = could; consegui (uma vez) = managed to / was able to.",
+  "pal": [
+   "could",
+   "couldn’t",
+   "was able to",
+   "managed to",
+   "escape room",
+   "lock",
+   "key",
+   "when exactly?"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a escape room: cada cadeado pede a chave certa.",
+   "perg": "Could you swim when you were six?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "claims": {
+   "obj": "Aquecimento: três perguntas; anote a terceira resposta palavra por palavra, sem corrigir.",
+   "perg": "What did you manage to do last year?",
+   "pula": "Não pule a terceira pergunta: ela volta na X."
+  },
+  "pote": {
+   "obj": "O pote: “I could open it” é riscado e vira “I managed to open it”. Anos ou um momento?",
+   "perg": "Years, or one moment?",
+   "pula": "Leia as quatro imagens rápido."
+  },
+  "chaves": {
+   "obj": "As quatro chaves com a régua do tempo; uma frase da vida do aluno com cada.",
+   "perg": "Can you make a sentence with managed to?",
+   "pula": "Duas chaves bastam se o aluno já entendeu."
+  },
+  "ligacao": {
+   "obj": "Ouvir Mia e Tom saindo da escape room; dizer a chave de cada fala.",
+   "perg": "Which key did Tom use here?",
+   "pula": "Corte as duas perguntas de conversa no fim."
+  },
+  "cv-conselho": {
+   "obj": "Conselho de jogadores: votar três regras novas e justificar com exemplo.",
+   "perg": "Do you vote yes or no? Why?",
+   "pula": "Duas regras bastam; vote contra e use a linha PUSH."
+  },
+  "cadeados": {
+   "obj": "Seis cadeados; os 2 e 5 abrem com duas chaves. Cada um traz uma pergunta pessoal.",
+   "perg": "What changes with managed to?",
+   "pula": "Quatro cadeados bastam, mas não corte as perguntas pessoais."
+  },
+  "contra": {
+   "obj": "A armadilha: três frases certas, duas quebradas (as positivas).",
+   "perg": "Is this fine, or does it need another key?",
+   "pula": "Pode fazer só as duas quebradas."
+  },
+  "entrevista": {
+   "obj": "Entrevista com as quatro chaves: o aluno pergunta, o professor responde, depois troca.",
+   "perg": "When exactly?",
+   "pula": "Três cartas de cada lado bastam."
+  },
+  "historia": {
+   "obj": "Um problema real que o aluno resolveu, em passos; ouvir “I could solve it” para um momento.",
+   "perg": "How did you manage to solve it?",
+   "pula": "Quatro passos bastam."
+  },
+  "fim": {
+   "obj": "Escrita: as três respostas do aquecimento reescritas com as chaves certas.",
+   "perg": "Which key does this sentence need?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre habilidades antigas e conquistas de um momento.",
+   "perg": "What could you do as a kid that you can’t do now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e justificar com could, couldn’t, managed to.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Tom e conta como o grupo saiu da escape room.",
+   "perg": "How did you manage to open the last lock?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Years, or one moment?",
+   "p": "Pick a card. Choose the right key.",
+   "palavras": [
+    "could",
+    "couldn’t",
+    "was able to",
+    "managed to"
+   ],
+   "cartas": [
+    {
+     "k": "AS A KID",
+     "q": "What could you do as a kid that you can’t do now?",
+     "fup": "When did you stop?",
+     "st": [
+      "When I was …, I could …",
+      "I couldn’t … until I was …"
+     ],
+     "ex": "When I was ten, I could do a cartwheel. Now I can’t."
+    },
+    {
+     "k": "A HARD DAY",
+     "q": "What did you manage to do on a really hard day?",
+     "fup": "How did you feel after?",
+     "st": [
+      "I managed to …, even though …",
+      "In the end, I was able to …"
+     ],
+     "ex": "I managed to finish a report even though the internet was down."
+    },
+    {
+     "k": "TECH TROUBLE",
+     "q": "Tell me about a time your phone or computer stopped working.",
+     "fup": "Were you able to fix it?",
+     "st": [
+      "I couldn’t …",
+      "In the end, I managed to …"
+     ],
+     "ex": "I couldn’t turn it on, but I managed to fix it with a video."
+    },
+    {
+     "k": "A LANGUAGE",
+     "q": "When were you first able to understand a whole movie in English?",
+     "fup": "Which movie was it?",
+     "st": [
+      "I was able to … when …",
+      "I couldn’t understand … at first."
+     ],
+     "ex": "I was able to understand a whole movie last year: it was a comedy."
+    },
+    {
+     "k": "A TICKET",
+     "q": "Have you ever got a ticket that was almost sold out?",
+     "fup": "How did you manage it?",
+     "st": [
+      "I managed to get …",
+      "I couldn’t get …, so …"
+     ],
+     "ex": "I managed to get two tickets for a show five minutes before it sold out."
+    },
+    {
+     "k": "A LOST THING",
+     "q": "Did you ever lose something important and find it again?",
+     "fup": "Where were you able to find it?",
+     "st": [
+      "I lost …, but I managed to …",
+      "I couldn’t find it for …"
+     ],
+     "ex": "I lost my passport, but I managed to find it in the car."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I managed to …",
+    "I couldn’t …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "In an escape room: ask for a hint or never ask?",
+     "a": "Ask",
+     "b": "Never",
+     "fa": [
+      "Ask. We managed to get out because of one hint.",
+      "The goal is to have fun."
+     ],
+     "fb": [
+      "Never. If you couldn’t do it alone, you didn’t win.",
+      "A hint kills the game."
+     ]
+    },
+    {
+     "q": "Is it better to be able to do many things or one thing very well?",
+     "a": "Many things",
+     "b": "One thing",
+     "fa": [
+      "Many things. As a kid I could play three sports.",
+      "Life changes all the time."
+     ],
+     "fb": [
+      "One thing. Experts are able to earn more.",
+      "You go deeper."
+     ]
+    },
+    {
+     "q": "Solve a problem alone or with a team?",
+     "a": "Alone",
+     "b": "A team",
+     "fa": [
+      "Alone. I can think better in silence.",
+      "I managed to fix my car alone once."
+     ],
+     "fb": [
+      "A team. Tom and Mia were able to get out together.",
+      "Four eyes see more."
+     ]
+    },
+    {
+     "q": "A skill you learned as a kid: does it ever really go away?",
+     "a": "It stays",
+     "b": "It goes",
+     "fa": [
+      "It stays. I couldn’t ride a bike for years, but I still can.",
+      "Your body remembers."
+     ],
+     "fb": [
+      "It goes. I could play the piano, but not anymore.",
+      "If you stop, you lose it."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Tom now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Tom, just out of the escape room.",
+   "perguntas": [
+    "Were you able to get out in time?",
+    "What couldn’t you open at first?",
+    "How did you manage to find the last key?",
+    "What did Mia manage to do that you couldn’t?",
+    "Could you do puzzles like this as a kid?",
+    "Would you go back? Why?"
+   ],
+   "st": [
+    "We managed to …",
+    "At first, I couldn’t …",
+    "As a kid, I could …"
+   ],
+   "ex": "At first, I couldn’t open the box, but Mia managed to find the code."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

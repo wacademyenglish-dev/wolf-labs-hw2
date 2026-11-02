@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Three People · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="serie.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Challenge · Episode 1</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season map: London to Edinburgh"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>The Challenge · Episode 1 · Three People</h2>
+    <p>The first episode of the BBC Learning English series <b>The London to Edinburgh Challenge</b>: three people, one hundred pounds, five days. Today the contestants meet, get their phones, money and maps, and the race starts. The language is the first thing anyone says to a stranger: <b>I&rsquo;m + name</b>, <b>I&rsquo;m + age</b>, <b>I&rsquo;m from + city</b>, and the numbers 10 to 100. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Say hello, Meet the contestants, Count the money. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Episode 1, in three steps. The video unlocks when the student answers the two Before questions.</li>
+      <li><b>Focus</b> &mdash; I&rsquo;m, Ten to one hundred, Three traps, Practice.</li>
+      <li><b>Write</b> &mdash; Your contestant badge. It goes to the student&rsquo;s My notes.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>Portuguese says &ldquo;eu <i>tenho</i> 25 anos&rdquo;, so students say <i>I have 25</i>. &ldquo;Sou <i>de</i> Curitiba&rdquo; becomes <i>I&rsquo;m of Curitiba</i>. And the d of &ldquo;I&rsquo;m&rdquo; disappears in writing: <i>I from York</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, votes and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The map on top shows the season; today the first stop lights up. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   THE CHALLENGE · EPISODE 1 · THREE PEOPLE (A1)
+   Vídeo: BBC Learning English, "Hello and welcome!" (O43nLSRMqHU, 6:36).
+   Substitui a "Three People, Five Days" no MESMO endereço
+   (p/e9df8a3d124f/three-people). Kit: _WOLF/challenge-kit.
+   ============================================================ */
+const M = { nome: "Three People", kick: "A1 · I'M, I'M FROM, NUMBERS TO 100" };
+var EP = {
+  n: 1, titulo: 'Three People', video: 'O43nLSRMqHU', dia: 1,
+  dinheiro: { Fran: 100, Bob: 100, Paula: 100 },
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg',
+      tx: 'Three people. One hundred pounds. Five days. London to Edinburgh. Today they meet, and the race starts.',
+      nota: 'Read the line on the cover together. Ask: London to Edinburgh, is it far? (It is about 650 km.) Then NEXT.' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Say <em>hello</em>', pt: 'Toque numa carta, leia a pergunta em voz alta e responda.',
+      img: 'img/live-capa.jpg',
+      nota: 'Talk only. Open one card at a time. The post-it brings a follow-up with starters the student can tap.',
+      cartas: [
+        { frente: 'Hi!', verso: 'What\'s your name?', dica: 'I\'m …', cor: 'var(--fran)', fw: { q: 'Nice to meet you! Who in your family has a short name?', st: ['I\'m …', 'My name is …', 'Nice to meet you!'], help: 'Say: “I\'m (your name). Nice to meet you!”' } },
+        { frente: '25?', verso: 'How old are you?', dica: 'I\'m … (not “I have”)', cor: 'var(--bob)', fw: { q: 'How old is your best friend?', st: ['I\'m …', 'She\'s …', 'He\'s …'], help: 'In English we use I\'m for age: “I\'m 30.”' } },
+        { frente: 'From?', verso: 'Where are you from?', dica: 'I\'m from …', cor: 'var(--paula)', fw: { q: 'Is your city big or small?', st: ['I\'m from …', 'It\'s big.', 'It\'s small.'], help: 'Use from + city: “I\'m from Recife.”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'Episode 1 · 6:36', titulo: 'Watch <em>Episode 1</em>', pt: 'Responda antes. O vídeo destrava depois.',
+      nota: 'Before: the student answers two questions (a guess, no wrong answer). The video unlocks after both answers. Watch the whole episode. After: true or false.',
+      antes: [
+        { q: 'How many people are in the challenge?', ops: [{ t: 'two' }, { t: 'three' }, { t: 'five' }] },
+        { q: 'How much money do they get?', ops: [{ t: '£10' }, { t: '£100' }, { t: '£1,000' }] }
+      ],
+      durante: 'Listen for three names, three ages and three cities.',
+      depois: [
+        { f: 'Fran is from Cambridge.', ok: 1 },
+        { f: 'Bob is twenty-five.', ok: 0 },
+        { f: 'Paula is from Rochester.', ok: 1 },
+        { f: 'They have seven days.', ok: 0 }
+      ] },
+    { k: 'cartas', est: 'o', rot: 'the contestants', titulo: 'Meet the <em>contestants</em>', pt: 'Vire a carta e apresente a pessoa: “She\'s Fran. She\'s 25.”',
+      nota: 'The student flips a card and presents the person in the third person: She\'s / He\'s. Then the post-it asks about someone they know.',
+      cartas: [
+        { frente: 'Fran', sob: 'bike', verso: 'I\'m Fran. I\'m 25. I\'m from Cambridge.', dica: 'She\'s … · She\'s from …', cor: 'var(--fran)', fw: { q: 'Present Fran to me: name, age, city.', st: ['She\'s Fran.', 'She\'s twenty-five.', 'She\'s from Cambridge.'], help: 'Fran is a woman: she. Bob is a man: he.' } },
+        { frente: 'Bob', sob: 'train', verso: 'Hello, I\'m Bob. I\'m 20. I\'m from York.', dica: 'He\'s … · He\'s from …', cor: 'var(--bob)', fw: { q: 'Now Bob. How old is Bob?', st: ['He\'s Bob.', 'He\'s twenty.', 'He\'s from York.'], help: 'Older = mais velho, younger = mais novo.' } },
+        { frente: 'Paula', sob: 'bus', verso: 'Hi. I\'m Paula and I\'m from Rochester.', dica: 'She\'s … · She\'s from …', cor: 'var(--paula)', fw: { q: 'Now present a friend of yours like a contestant.', st: ['This is …', 'She\'s …', 'He\'s from …'], help: '“This is Ana. She\'s 31. She\'s from Natal.”' } }
+      ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: '<em>I\'m</em> does three jobs', pt: 'I\'m = I am. Para nome, idade e cidade.',
+      nota: 'Read each card out loud. The red card is the Portuguese trap: “eu tenho 25 anos”. Ask for one sentence of each kind.',
+      cartoes: [
+        { g: 'I\'m <b>Fran</b>.', p: 'Your name.' },
+        { g: 'I\'m <b>25</b>.', p: 'Your age. Not “I have”.' },
+        { g: 'I\'m <b>from</b> York.', p: 'Your city or country.' },
+        { g: 'I have 25.', p: 'In Portuguese “tenho 25 anos”, in English I\'m 25.', nao: 1 }
+      ] },
+    { k: 'pares', est: 'f', rot: 'ten to one hundred', titulo: 'Match the <em>numbers</em>', pt: 'Toque na palavra e depois no número. Diga em voz alta.', grande: 1,
+      nota: 'Tap the word, then the number. The student says each one out loud. Watch thirteen/thirty: the stress moves (thirTEEN, THIRty).',
+      esq: ['thirty', 'fifty', 'eighty', 'thirteen', 'one hundred'], dir: ['30', '50', '80', '13', '100'], ordem: [3, 0, 4, 1, 2],
+      fw: { q: 'How much is a coffee in your city?', st: ['It\'s … reais.', 'About …', 'It\'s cheap.'], help: 'Use a number: “It\'s eight reais.”' } },
+    { k: 'contar', est: 'o', rot: 'the money', titulo: 'Count the <em>£100</em>', pt: 'Toque em cada nota e conte junto: ten, twenty, thirty…',
+      img: 'img/live-mesa.jpg',
+      nota: 'Like the presenter in the video: one note, one number, out loud. At one hundred the post-it asks a question about money.',
+      fw: { q: 'One hundred pounds for five days. Is it a lot of money?', st: ['Yes, it\'s a lot.', 'No, it isn\'t.', 'It\'s twenty pounds a day.'], help: '100 ÷ 5 = 20. “It\'s twenty pounds a day.”' } },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'The three traps of Portuguese speakers. The student taps, the sentence fixes itself; ask them to read the right one out loud.',
+      itens: [
+        { erro: 'I <s>have</s> 25.', certo: 'I\'m <b>25</b>.', por: 'Age uses I\'m, not have.' },
+        { erro: 'I\'m <s>of</s> Cambridge.', certo: 'I\'m <b>from</b> Cambridge.', por: '“Sou de” is I\'m from.' },
+        { erro: 'I <s>from</s> York.', certo: 'I<b>\'m</b> from York.', por: 'Don\'t forget the \'m.' }
+      ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha a palavra certa. Se errar, tente de novo.',
+      nota: 'Four lines from the episode. A wrong choice turns pink; the student tries again and reads the line out loud.',
+      itens: [
+        { f: 'Hi. ___ Fran.', ops: ['I\'m', 'I have'], ok: 0 },
+        { f: 'I\'m 20 and I\'m ___ York.', ops: ['of', 'from'], ok: 1 },
+        { f: 'Here ___ your money. One hundred pounds.', ops: ['is', 'are'], ok: 0 },
+        { f: 'You have ___ days.', ops: ['five', 'fifteen'], ok: 0 }
+      ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your contestant <em>badge</em>', pt: 'Escreva o seu crachá do desafio. Toque nas peças para começar.',
+      ph: 'Hi! I\'m …',
+      nota: 'The student writes on their device; you see every letter. The line under the paper catches “I have 25” and “I\'m of”. SAVE sends it to My notes.',
+      banco: ['Hi!', 'I\'m', 'I\'m from', 'Nice to meet you!', 'years old'],
+      regras: [['\\bI have \\d+', 'Check: age is I\'m 25, not I have 25.'], ['\\bI\'?m of\\b', 'Check: I\'m from (city), not I\'m of.'], ['\\bI from\\b', 'Check: I\'m from, with the \'m.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Bus, train, or bike?',
+      tx: 'The train is fast, but it\'s expensive. The bike is cheap, but it\'s slow. Who chooses what?',
+      ganchos: [['Fran', 'a bike?'], ['Bob', 'the train?'], ['Paula', 'still in London?']],
+      nota: 'Ask: and you? Train, bus or bike? Why? That is the start of Episode 2.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="serie.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "Three people. £100. London to Edinburgh."
+  },
+  "c10": {
+   "p": "Fast or cheap? Who chooses what?"
+  }
+ },
+ "prep": {
+  "obj": "I'm + nome, idade e cidade (I'm Fran, I'm 30, I'm from York) e os números de 10 a 100, no episódio 1: três pessoas, £100, Londres a Edimburgo.",
+  "armadilha": "O português leva a “I have 25” (eu tenho 25 anos) e “I'm of Curitiba” (sou de); na escrita o 'm some: “I from York”.",
+  "pal": [
+   "I'm",
+   "I'm from",
+   "years old",
+   "thirteen / thirty",
+   "one hundred",
+   "pounds",
+   "contestant",
+   "London",
+   "Edinburgh"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a corrida: três pessoas, £100, cinco dias, Londres a Edimburgo.",
+   "perg": "London to Edinburgh: is it far?",
+   "pula": "Leia a frase da capa e siga."
+  },
+  "c1": {
+   "obj": "Primeiro contato: o aluno se apresenta com I'm + nome, idade e cidade.",
+   "perg": "Hello! Who are you? Where are you from?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Episódio 1 inteiro: palpites antes, vídeo, verdadeiro ou falso depois.",
+   "perg": "Who do you like: Fran, Bob or Paula?",
+   "pula": "Assista uma vez só; o vídeo vai inteiro."
+  },
+  "c3": {
+   "obj": "Apresentar os competidores na 3ª pessoa: She's / He's + nome, idade, cidade.",
+   "perg": "Who is she? How old is she?",
+   "pula": "Dois competidores bastam."
+  },
+  "c4": {
+   "obj": "A regra: I'm faz três trabalhos (nome, idade, origem); o cartão vermelho é “eu tenho 25 anos”.",
+   "perg": "How old are you? Say it with I'm.",
+   "pula": "Leia os cartões e peça só a frase da idade."
+  },
+  "c5": {
+   "obj": "Números de 10 a 100, com atenção à tônica de thirTEEN e THIRty.",
+   "perg": "Thirteen or thirty? Say it again.",
+   "pula": "Faça só os pares -teen / -ty."
+  },
+  "c6": {
+   "obj": "Contar as £100 em voz alta, nota por nota, como o apresentador.",
+   "perg": "What can you buy with one hundred pounds?",
+   "pula": "Conte até 50 e pule para o fim."
+  },
+  "c7": {
+   "obj": "Corrigir as três armadilhas: I have 25, I'm of, I from.",
+   "perg": "Which one is right? Read it out loud.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c8": {
+   "obj": "Prática: escolher a palavra certa em falas do episódio e ler em voz alta.",
+   "perg": "Read the full line out loud, please.",
+   "pula": "Faça duas linhas."
+  },
+  "c9": {
+   "obj": "Escrever o crachá de competidor (nome, idade, cidade); vai para o My notes.",
+   "perg": "Tell me about you: name, age, city.",
+   "pula": "Nome e idade bastam."
+  },
+  "c10": {
+   "obj": "Gancho do episódio 2: ônibus, trem ou bicicleta, e por quê.",
+   "perg": "And you? Train, bus or bike? Why?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com I'm e números, ligada à corrida.",
+   "perg": "How old are you? Where are you from?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre duas opções da corrida e dar um motivo simples.",
+   "perg": "Train or bike? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o Bob e responde com I'm e números.",
+   "perg": "Are you Bob? How old are you?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Meet the next contestant: you.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "I'm",
+    "I'm from",
+    "years old",
+    "pounds"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR NAME",
+     "q": "What's your name? And your nickname?",
+     "fup": "Do you like your name?",
+     "st": [
+      "I'm …",
+      "My nickname is …"
+     ],
+     "ex": "I'm Rafael. My nickname is Rafa."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Where are you from?",
+     "fup": "Is it big or small?",
+     "st": [
+      "I'm from …",
+      "It's big. / It's small."
+     ],
+     "ex": "I'm from Recife. It's big."
+    },
+    {
+     "k": "YOUR AGE",
+     "q": "How old are you?",
+     "fup": "And your best friend?",
+     "st": [
+      "I'm … years old.",
+      "She's … / He's …"
+     ],
+     "ex": "I'm 34. My best friend is 36."
+    },
+    {
+     "k": "£100",
+     "q": "You have one hundred pounds. Is it a lot?",
+     "fup": "Is it a lot for five days?",
+     "st": [
+      "Yes, it's a lot.",
+      "No, it's not a lot."
+     ],
+     "ex": "No, it's not a lot for five days."
+    },
+    {
+     "k": "YOUR NUMBERS",
+     "q": "Say three numbers: your age, your house and your lucky number.",
+     "fup": "Thirteen or thirty?",
+     "st": [
+      "I'm …",
+      "My house is number …",
+      "My lucky number is …"
+     ],
+     "ex": "I'm 40. My house is number 15. My lucky number is 7."
+    },
+    {
+     "k": "THE RACE",
+     "q": "London to Edinburgh: are you in?",
+     "fup": "Who is with you?",
+     "st": [
+      "Yes, I'm in!",
+      "No, I'm tired!"
+     ],
+     "ex": "Yes, I'm in! My sister is with me."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I'm",
+    "it's",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "London or Edinburgh?",
+     "a": "London",
+     "b": "Edinburgh",
+     "fa": [
+      "London. It's big and fun."
+     ],
+     "fb": [
+      "Edinburgh. It's old and beautiful."
+     ]
+    },
+    {
+     "q": "The train or the bike?",
+     "a": "The train",
+     "b": "The bike",
+     "fa": [
+      "The train. It's fast."
+     ],
+     "fb": [
+      "The bike. It's cheap."
+     ]
+    },
+    {
+     "q": "Five days with Fran or with Bob?",
+     "a": "Fran",
+     "b": "Bob",
+     "fa": [
+      "Fran. She's fun."
+     ],
+     "fb": [
+      "Bob. He's nice."
+     ]
+    },
+    {
+     "q": "One hundred pounds: a lot or not a lot?",
+     "a": "A lot",
+     "b": "Not a lot",
+     "fa": [
+      "A lot. I'm careful with money."
+     ],
+     "fb": [
+      "Not a lot. London is expensive."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Bob now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Bob.",
+   "perguntas": [
+    "Hello! What's your name?",
+    "How old are you, Bob?",
+    "Where are you from?",
+    "How much money have you got?",
+    "Are you happy today?",
+    "Train or bike for you?"
+   ],
+   "st": [
+    "I'm …",
+    "I'm from …",
+    "I've got … pounds."
+   ],
+   "ex": "Hello, I'm Bob. I'm happy today. I've got one hundred pounds."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

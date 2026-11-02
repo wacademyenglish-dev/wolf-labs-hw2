@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Detective Agency · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 2 Review · The Detective Agency</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Detective Agency · C1 Unit 2 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 2 (Modals with nuance). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> A rainy night at a detective agency (invented). Mrs. Vane’s pearl necklace has gone from the safe. The case is a board game of twelve clues; each clue needs a modal with nuance. Suggested answer: the nephew knew the code.</p><p style="margin:0 0 6px"><b>About 43 min:</b> I · The Die (8) · II · The Case Board (16) · III · The Fee (7) · IV · The Hot Seat (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Roll the die. The number chooses the challenge.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>needn’t have × didn’t need to · softened requests: could we possibly… · bound to / set to / due to · will / would for typical behaviour · will / would for deduction · needn’t × mustn’t</p>
+    <h4>THE DIE</h4>
+    <p>Tap <b>Roll the die</b>: the number chooses one of the six topics (no repeats until all six are done). The student does the challenge from memory.</p>
+    <h4>THE CASE BOARD</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I needn’t have to</i>, <i>he will left (will have left)</i>, <i>could we possible</i>, <i>prices must rise (for bound to)</i>, <i>would have a car (state: used to)</i>, <i>you mustn’t pay, it’s free</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE FEE (III) AND THE SURPRISE QUESTION</h4>
+    <p>Case closed: now your student, the detective, negotiates the fee with Mrs. Vane (you). They want £3,000 and will not go below £2,000. Your secret (only you see it): you will go up to £2,500 if they promise the press never hears about the nephew. Ask the four questions in role, wait five seconds in silence after each, and use the PUSH line to make it harder. Listen for Unit 2 (Could we possibly…?, Would you be willing to…?, needn’t have, bound to, needn’t × mustn’t); recast quietly while they talk, close the deal on the screen, and at the end ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Die and V · I Can.</li>
+      <li><b>Out loud</b>: II · The Case Board and III · The Fee and IV · The Hot Seat.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW C1 · UNIT 2 · THE DETECTIVE AGENCY · pergunta-surpresa · 28/10/2026 · modals with nuance */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'dado', tipo: 'And you?', q: 'What’s something you did last month that you needn’t have done?',
+    opc: ['Something I bought', 'Something I worried about', 'Something I prepared'], st: ['I needn’t have …', 'It turned out that I didn’t need to …'],
+    ex: 'Something I worried about. I needn’t have stressed about my presentation: half the team was on holiday.', push: 'Would you do it again anyway?' },
+  { cena: 'tabuleiro', tipo: 'Would you rather', q: 'Would you rather be the detective who solves it, or the one who writes the book about it?',
+    opc: ['Solve it', 'Write the book'], st: ['I’d rather …. It’s bound to be …', 'The writer would …'],
+    ex: 'Write the book. The detective is bound to get tired of rain and suspects; the writer would sit in a warm café.', push: 'The book earns ten times more. Does that change your answer, or your reason?' },
+  { cena: 'cadeira', tipo: 'What if', q: 'Your phone rings at 3 AM. Who will that be?',
+    opc: ['Family', 'Work', 'A wrong number'], st: ['That’ll be …', 'They’ll have …'],
+    ex: 'That’ll be my brother. He’ll have lost his keys again.', push: 'You don’t answer. What will they have done by morning?' },
+  { cena: 'pode', tipo: 'Opinion', q: 'Which is more useful in a negotiation: being polite or being direct?',
+    opc: ['Polite', 'Direct', 'Polite first, direct later'], st: ['Could we possibly …? works because …', 'You mustn’t …, but you needn’t …'],
+    ex: 'Polite first, direct later. “Could we possibly…?” opens the door; you needn’t be rude, but you mustn’t be vague about the number.', push: 'Ask me for a 10% discount on this lesson. Polite, then direct.' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW C1 · UNIT 2 · THE DETECTIVE AGENCY · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A negociação ENTRA depois de "II · The Case Board" (a aula tinha 36 min e nenhuma cena extra: somar 7 min cabe).
+   Caso resolvido; agora o detetive (aluno) cobra os honorários da sra. Vane (professor), que tem um teto
+   secreto e uma condição. A Unidade 2 mora nos iniciadores: Could we possibly…?, Would you be willing to…?,
+   needn’t have / didn’t need to, bound to / due to, needn’t × mustn’t. A cadeira quente do III continua igual. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'honorarios', apos: 'tabuleiro', est: 'o', min: 7, img: 'conversa', rot: 'The Fee', t: 'Case closed. Now get paid.',
+    p: 'You are the detective. Your teacher is Mrs. Vane. Answer her questions in role, softly but firmly. Then close the deal.',
+    formato: 'papel',
+    aluno: { quem: 'The detective', quer: 'Your fee: £3,000 for two days and twelve clues.', limite: 'Your secret limit: not less than £2,000.' },
+    prof: { quem: 'Mrs. Vane', quer: 'She wants to pay £1,500, and only after Friday’s auction.', limite: 'Secret: she’ll go up to £2,500 if the detective promises the press will never hear about her nephew.' },
+    rot_perg: 'Mrs. Vane asks',
+    perguntas: [
+      { q: 'Three thousand pounds? Surely you needn’t have spent two whole days on this.',
+        ex: 'I take your point, Mrs. Vane. I didn’t need to search the garden, but I did need to check every clue, and that took time.' },
+      { q: 'Could you possibly wait for your money until after the auction?',
+        ex: 'Would you be willing to pay half today? The auction is due to take place on Friday, and I’m bound to have expenses before then.' },
+      { q: 'My nephew’s name mustn’t appear anywhere. Can you promise me that?',
+        ex: 'You needn’t worry about the press. But I mustn’t lie to the police if they ask me directly.' },
+      { q: 'And if I simply say no to your fee?',
+        ex: 'Then I’ll send my invoice tomorrow. My lawyer will have read it by Monday, I’m sure.' }
+    ],
+    st: ['Could we possibly …?', 'Would you be willing to …?', 'You needn’t …, but I mustn’t …', 'It’s bound to …'],
+    push: 'Mrs. Vane stands up: “Fine. I’ll find a cheaper detective.” Stop her, in one soft sentence.',
+    acordo: { tag: 'The deal', q: 'What do you agree on?',
+      opc: ['£2,500 + total silence', '£3,000 after Friday', 'Half now, half later'],
+      st: ['Could we possibly agree on …?', 'I’d be willing to …, provided that …'],
+      ex: '£2,500 and total silence. Could we possibly agree on half today? You needn’t pay the rest until the pearls are back.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "dado": {
+   "t": "Roll the die. The number chooses.",
+   "p": "Do the challenge out loud, from memory."
+  },
+  "tabuleiro": {
+   "t": "Twelve clues. Roll and deduce.",
+   "p": "Read the clue. Deduce out loud with a modal."
+  },
+  "cv-honorarios": {
+   "t": "Case closed. Now get paid.",
+   "p": "You are the detective. Be soft but firm."
+  },
+  "cadeira": {
+   "t": "Now YOU ask the questions.",
+   "p": "Your teacher is in the hot seat. Ask and react."
+  },
+  "pode": {
+   "t": "Unit 2: what can you do now?",
+   "p": "Read each line out loud. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 2 (modais com nuance): needn’t have, could we possibly, bound to, will/would de hábito e dedução. O colar de pérolas de Mrs. Vane sumiu do cofre.",
+  "armadilha": "“I needn’t have to”, “he will left”, “could we possible”, “prices must rise” no lugar de bound to, “would have a car” para estado e “you mustn’t pay” quando é grátis (needn’t).",
+  "pal": [
+   "needn’t have",
+   "didn’t need to",
+   "Could we possibly …?",
+   "bound to",
+   "set to",
+   "due to",
+   "he’ll have …",
+   "needn’t × mustn’t"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: noite de chuva na agência de detetives; nada de gramática nova, tudo de memória.",
+   "perg": "Ready to be a detective tonight?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "dado": {
+   "obj": "O dado escolhe um dos seis temas da unidade; desafio de memória para ver o que revisar.",
+   "perg": "Can you do it without looking?",
+   "pula": "Três rolagens bastam."
+  },
+  "tabuleiro": {
+   "obj": "Doze pistas do caso do colar; cada uma pede um modal com nuance. Resposta sugerida: o sobrinho sabia o código.",
+   "perg": "What must have happened here?",
+   "pula": "Seis pistas bastam; feche o caso."
+  },
+  "cv-honorarios": {
+   "obj": "Honorários com Mrs. Vane: pedem £3.000, mínimo £2.000; segredo: ela vai a £2.500 se a imprensa não souber do sobrinho.",
+   "perg": "Could we possibly agree on a fee?",
+   "pula": "Duas perguntas e feche o acordo."
+  },
+  "cadeira": {
+   "obj": "Inversão de papéis: o aluno pergunta e o professor responde curto, como ele mesmo.",
+   "perg": "What would you like to ask me?",
+   "pula": "Três perguntas bastam."
+  },
+  "pode": {
+   "obj": "O aluno lê cada “I can” da Unidade 2 e marca; linhas abertas vão para a lição de casa.",
+   "perg": "Which line still feels shaky?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa com os modais da unidade aplicados à vida do aluno.",
+   "perg": "Which modal fits here?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre o caso e sobre dinheiro, discrição e família, com modais de nuance.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o sobrinho de Mrs. Vane e se defende com dedução, needn’t have e bound to.",
+   "perg": "You knew the code, didn’t you?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Modals with nuance, your life.",
+   "p": "Pick a card. Choose the modal carefully.",
+   "palavras": [
+    "needn’t have",
+    "Could we possibly …?",
+    "bound to",
+    "he’ll have …",
+    "would always"
+   ],
+   "cartas": [
+    {
+     "k": "WASTED EFFORT",
+     "q": "What did you prepare for recently that you needn’t have?",
+     "fup": "Did you feel silly or relieved?",
+     "st": [
+      "I needn’t have …",
+      "I didn’t need to …, so I …"
+     ],
+     "ex": "I needn’t have printed the slides. Nobody looked at them."
+    },
+    {
+     "k": "OLD HABITS",
+     "q": "What would your grandparents always do on Sundays?",
+     "fup": "Do you still do it?",
+     "st": [
+      "My grandmother would always …",
+      "She’ll still …, even now."
+     ],
+     "ex": "My grandfather would always buy the paper and read it aloud to everyone."
+    },
+    {
+     "k": "PREDICTIONS",
+     "q": "What is bound to happen in your city this year?",
+     "fup": "Is that good or bad news?",
+     "st": [
+      "… is bound to …",
+      "… is set to …"
+     ],
+     "ex": "Rent is bound to go up again, and a new metro line is set to open in June."
+    },
+    {
+     "k": "A SOFT ASK",
+     "q": "How would you ask your boss for a Friday off, very softly?",
+     "fup": "Would it work?",
+     "st": [
+      "Could I possibly …?",
+      "Would you be willing to …?"
+     ],
+     "ex": "Could I possibly take Friday off? I’d be happy to finish the report on Thursday."
+    },
+    {
+     "k": "DEDUCTION",
+     "q": "Your colleague arrived late and smiling. What will have happened?",
+     "fup": "Would you ask?",
+     "st": [
+      "She’ll have …",
+      "That’ll be because …"
+     ],
+     "ex": "She’ll have had good news. That’ll be the promotion she was waiting for."
+    },
+    {
+     "k": "RULES",
+     "q": "What is free where you work, and what is forbidden?",
+     "fup": "Did anyone ever break the rule?",
+     "st": [
+      "You needn’t pay for …",
+      "You mustn’t …"
+     ],
+     "ex": "You needn’t pay for coffee, but you mustn’t take the cups home."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "He must have …",
+    "She needn’t have …",
+    "The thing is, …"
+   ],
+   "rodadas": [
+    {
+     "q": "Should Mrs. Vane call the police about her nephew?",
+     "a": "Call them",
+     "b": "Keep it in the family",
+     "fa": [
+      "Call them. A crime is bound to happen again if nobody acts.",
+      "Family isn’t an excuse."
+     ],
+     "fb": [
+      "Keep it in the family. She needn’t destroy his life.",
+      "A quiet talk could work better."
+     ]
+    },
+    {
+     "q": "Accept £2,500 to keep the press away: fair deal or bribe?",
+     "a": "Fair deal",
+     "b": "A bribe",
+     "fa": [
+      "Fair deal. Discretion is part of the service.",
+      "Detectives would always protect their clients."
+     ],
+     "fb": [
+      "A bribe. You’re paid to find the truth, not hide it.",
+      "It’s bound to come out anyway."
+     ]
+    },
+    {
+     "q": "A safe at home: smart or asking for trouble?",
+     "a": "Smart",
+     "b": "Trouble",
+     "fa": [
+      "Smart. Thieves will look elsewhere first.",
+      "Valuables need a place."
+     ],
+     "fb": [
+      "Trouble. Everyone in the house will know the code.",
+      "A bank would be safer."
+     ]
+    },
+    {
+     "q": "Soft English when you ask for money: polite or weak?",
+     "a": "Polite",
+     "b": "Weak",
+     "fa": [
+      "Polite. Could we possibly… still gets you paid.",
+      "Clients pay people they like."
+     ],
+     "fb": [
+      "Weak. Say the number and stop.",
+      "Too soft, and they’ll offer less."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Case closed. The fee is bound to be paid."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Mrs. Vane’s nephew now.",
+   "p": "Your teacher, the detective, interviews you.",
+   "aluno": "Listen to the detective’s question. Answer as the nephew. Defend yourself, or confess.",
+   "perguntas": [
+    "Where were you on the night the necklace went from the safe?",
+    "Your aunt says you knew the code. How will you have learned it?",
+    "Why would you visit your aunt so often last month?",
+    "You needn’t have lied about the taxi. Why did you?",
+    "What is your aunt bound to do now?",
+    "Could we possibly agree that you return the necklace tomorrow?"
+   ],
+   "st": [
+    "I needn’t have …",
+    "She’ll have …",
+    "Could we possibly …?"
+   ],
+   "ex": "My aunt will have told you about the code, but anyone could have seen her open the safe."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

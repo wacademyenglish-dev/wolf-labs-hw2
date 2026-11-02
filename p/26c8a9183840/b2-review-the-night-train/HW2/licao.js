@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Night Train",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/26c8a9183840/b2-review-the-night-train/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "deduction in the past (must have, can't have, might have + participle), participle clauses (Having checked...), cleft sentences (It was the porter who...), inversion (Never have I..., Had we known...); never must saw, never Never I have",
   "abrir": "Think of something that went missing at home or at work. How did you work out what happened?",
   "fecho": "<b>Must have / can't have / might have</b> + participle: how sure you are about the past. <b>Having checked…</b> joins two actions. <b>It was the porter who…</b> puts the focus on one person. After <b>Never</b> the order flips: <i>Never have I seen…</i> And <b>Had we known</b> = <i>If we had known</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on a stopped night train. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/26c8a9183840/b2-review-the-night-train/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "The foggy line",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It was the porter who found the safe open.",
-          "img": "https://wolf-labs.pages.dev/p/26c8a9183840/b2-review-the-night-train/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Having checked every ticket, she knew the three names.",
-          "img": "https://wolf-labs.pages.dev/p/26c8a9183840/b2-review-the-night-train/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Never have I seen such a quiet night.",
-          "img": "https://wolf-labs.pages.dev/p/26c8a9183840/b2-review-the-night-train/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/26c8a9183840/b2-review-the-night-train/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A red light in the fog",
       "pede": "Look at the picture: a red light far away in the fog. Write 2 or 3 sentences about a small mystery from your life. Use <b>must have, can't have, might have</b>, or <b>It was … who</b>.",
       "ph": "Someone must have …",

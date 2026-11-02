@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Book You Keep",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/0e1c54e7a772/the-book-you-keep/img/live-estante.webp",
+  "capa": "../img/live-estante.webp",
   "alvo": "defining relative clauses: who for people, that for things, where for places; that can drop before a new subject (the book you keep) but where stays; never the book what, the place that I live, a man which writes",
   "abrir": "Is there a book you have kept for years? What is it about?",
   "fecho": "<b>who</b> = person · <b>that</b> = thing · <b>where</b> = place. <i>the book (that) you keep</i>: that can go before a new subject. <b>Where</b> stays. Never <i>the book what</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a favorite book. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/0e1c54e7a772/the-book-you-keep/img/live-livro.webp",
+      "img": "../img/live-livro.webp",
       "leg": "A book under a lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It's a book that I keep by my bed.",
-          "img": "https://wolf-labs.pages.dev/p/0e1c54e7a772/the-book-you-keep/img/live-livro.webp",
+          "img": "../img/live-livro.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "She is a friend who loves old books.",
-          "img": "https://wolf-labs.pages.dev/p/0e1c54e7a772/the-book-you-keep/img/live-fundo.webp",
+          "img": "../img/live-fundo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "This is the shop where I found it.",
-          "img": "https://wolf-labs.pages.dev/p/0e1c54e7a772/the-book-you-keep/img/live-estante.webp",
+          "img": "../img/live-estante.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -155,7 +155,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/0e1c54e7a772/the-book-you-keep/img/live-estante.webp",
+      "img": "../img/live-estante.webp",
       "leg": "A shelf full of books",
       "pede": "Look at the picture: a shelf of books. Write 2 or 3 sentences about a book you know, without its name. Use <b>that</b>, <b>who</b> or <b>where</b>.",
       "ph": "It's a book that …",

@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -139,5 +140,295 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "How many leads do you have?",
+   "p": "Answer. Then ask: “And you?”"
+  },
+  "dialogo": {
+   "t": "Sara asks about every lead.",
+   "p": "One question. Listen. Then the questions."
+  },
+  "descobre": {
+   "t": "Which one is English?",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "separa": {
+   "t": "Eight leads. Ready or not yet?",
+   "p": "Choose a side. Say “OK, I’ll…”"
+  },
+  "escolha": {
+   "t": "A or B?",
+   "p": "Choose. Say why."
+  },
+  "leitura": {
+   "t": "Leo’s First Big Client · Chapter 6.",
+   "p": "Read it out loud. Then answer."
+  },
+  "transforma": {
+   "t": "A problem. Decide now!",
+   "p": "Use the clue. Say it with I’ll."
+  },
+  "cartao": {
+   "t": "Four leads, four next steps.",
+   "p": "Write them. Present them to Sara."
+  },
+  "pode": {
+   "t": "Lesson 24: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 24: will para decisão na hora (OK, I’ll call him on Monday) e o próximo passo; reunião de pipeline de sexta com a Sara e o capítulo 6 do Leo.",
+  "armadilha": "O brasileiro usa o presente para decidir (“OK, I call him tomorrow”), põe to depois de will (“I’ll to send it”), diz “I’ll calling” e “I don’t will” (o certo é I won’t).",
+  "pal": [
+   "OK, I’ll…",
+   "I won’t…",
+   "Will you…?",
+   "next step",
+   "lead",
+   "pipeline",
+   "move forward",
+   "not yet",
+   "demo"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: oito leads no quadro e decisões rápidas.",
+   "perg": "Is there a client you need to call next week?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "conversa": {
+   "obj": "Small talk sobre o pipeline real do aluno; ele devolve com And you?",
+   "perg": "How many leads do you have right now?",
+   "pula": "Três perguntas bastam."
+  },
+  "dialogo": {
+   "obj": "Ouvir: a reunião de sexta; o Leo decide o próximo passo de cada lead.",
+   "perg": "What will Leo do on Monday?",
+   "pula": "Ouça uma vez só (0.75× pode)."
+  },
+  "descobre": {
+   "obj": "Comparar pares e achar a regra: I’ll + verbo para decisão na hora.",
+   "perg": "Why “I’ll call”, not “I call”?",
+   "pula": "Três pares bastam."
+  },
+  "separa": {
+   "obj": "Oito leads: avançar ou ainda não, e a decisão com I’ll.",
+   "perg": "So, what’s the next step?",
+   "pula": "Cinco leads bastam."
+  },
+  "escolha": {
+   "obj": "Escolher entre A e B e dizer por quê, com because.",
+   "perg": "A or B? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "leitura": {
+   "obj": "Ler o capítulo 6: três slides e uma reunião no aeroporto.",
+   "perg": "What will Leo do at the airport?",
+   "pula": "Leia e faça uma pergunta."
+  },
+  "transforma": {
+   "obj": "Transformar problemas em decisões com I’ll / I won’t.",
+   "perg": "The client is angry. What will you do?",
+   "pula": "Quatro problemas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: o próximo passo de quatro leads reais; o professor é a Sara e pergunta de cada um.",
+   "perg": "And Costa Retail? What’s the next step?",
+   "pula": "Dois leads bastam."
+  },
+  "pode": {
+   "obj": "Checklist I can da Lição 24: o aluno marca, o professor confirma e carimba.",
+   "perg": "Can you say the next step for a lead now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais decisões rápidas sobre o trabalho e a semana do aluno, com I’ll.",
+   "perg": "What will you do first on Monday?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher entre dois lados de venda e dizer a decisão com I’ll.",
+   "perg": "Which one? What will you do?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é o Leo na reunião de sexta; o professor é a Sara.",
+   "perg": "And Pine Hill Foods? What’s the next step?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Decide now!",
+   "p": "Pick a card. Decide with I’ll.",
+   "palavras": [
+    "I’ll…",
+    "I won’t…",
+    "Will you…?"
+   ],
+   "cartas": [
+    {
+     "k": "MONDAY",
+     "q": "What will you do first on Monday?",
+     "fup": "And after that?",
+     "st": [
+      "I’ll …",
+      "Then I’ll …"
+     ],
+     "ex": "I’ll read my emails. Then I’ll call two clients."
+    },
+    {
+     "k": "A HOT LEAD",
+     "q": "A client says “Send me a proposal.” What will you do?",
+     "fup": "When?",
+     "st": [
+      "OK, I’ll …",
+      "I’ll send it on …"
+     ],
+     "ex": "OK, I’ll write it today. I’ll send it on Tuesday."
+    },
+    {
+     "k": "NO ANSWER",
+     "q": "A lead doesn’t answer your emails. What will you do?",
+     "fup": "Will you call?",
+     "st": [
+      "I’ll …",
+      "I won’t …"
+     ],
+     "ex": "I’ll call him on Friday. I won’t send another email."
+    },
+    {
+     "k": "YOUR BOSS",
+     "q": "Your boss asks about your best lead. What will you say?",
+     "fup": "What’s the next step?",
+     "st": [
+      "I’ll say …",
+      "The next step is …"
+     ],
+     "ex": "I’ll say it’s Costa Retail. The next step is a demo."
+    },
+    {
+     "k": "THIS WEEKEND",
+     "q": "It’s Friday night. What will you do this weekend?",
+     "fup": "Will you check emails?",
+     "st": [
+      "I’ll …",
+      "No, I won’t …"
+     ],
+     "ex": "I’ll go to the beach. No, I won’t check emails."
+    },
+    {
+     "k": "A PROBLEM",
+     "q": "The demo isn’t ready. The client comes tomorrow. What will you do?",
+     "fup": "Who will you call?",
+     "st": [
+      "OK, I’ll …",
+      "I’ll ask …"
+     ],
+     "ex": "OK, I’ll call the client and move it to Thursday."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I’ll…",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "A lead is not ready. Call again or wait?",
+     "a": "Call again",
+     "b": "Wait",
+     "fa": [
+      "Call again. I’ll call on Monday."
+     ],
+     "fb": [
+      "Wait. I’ll call next month."
+     ]
+    },
+    {
+     "q": "Ten small leads or one big lead?",
+     "a": "Ten small",
+     "b": "One big",
+     "fa": [
+      "Ten small. Less risk."
+     ],
+     "fb": [
+      "One big. Big money."
+     ]
+    },
+    {
+     "q": "Write next steps in a CRM or on paper?",
+     "a": "A CRM",
+     "b": "Paper",
+     "fa": [
+      "A CRM. My boss can see it."
+     ],
+     "fb": [
+      "Paper. It’s fast."
+     ]
+    },
+    {
+     "q": "A demo by video or in person?",
+     "a": "Video",
+     "b": "In person",
+     "fa": [
+      "Video. I’ll do it today."
+     ],
+     "fb": [
+      "In person. I’ll travel on Tuesday."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Leo now.",
+   "p": "Your teacher is Sara, your manager.",
+   "aluno": "Listen to Sara’s question. Answer as Leo. Decide now, with I’ll or I won’t.",
+   "perguntas": [
+    "And Pine Hill Foods? What’s the next step?",
+    "Will you call Mark this week?",
+    "The client wants a discount. What will you do?",
+    "Costa Retail is not ready. Will you count it this quarter?",
+    "Who will do the demo?",
+    "What will you do on Monday morning?"
+   ],
+   "st": [
+    "OK, I’ll …",
+    "I won’t …",
+    "The next step is …"
+   ],
+   "ex": "OK, I’ll call Mark on Monday. I won’t count Costa Retail this quarter."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

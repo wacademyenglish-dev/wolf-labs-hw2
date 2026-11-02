@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · It Would Appear That… · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Playfair+Display:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>It Would Appear That… · The Night Desk</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>It Would Appear That… · The Night Desk</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> A psychologist on stage says we all believe we are “finished”, and we are wrong.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: An editor never prints more than the evidence. Four careful tools.</p><p style="margin:0 0 6px"><b>Short class (about 57 min):</b> I You and the News · III The Talk · V The Claim Meter · VI The Rule · VII The Press · IX The Reporter Calls · X The Editorial Board · XI To Print. Skip if you’re short on time: VIII Your Headlines (marked EXTRA on your screen). Full lesson: about 64 min.</p><p style="margin:0"><b>Open with:</b> “Where do you read the news? A site, an app, social media, TV?”</p></div><!--/prep-->
+    <p>A psychologist on stage says we all believe we are “finished”, and we are wrong. By morning, a news site has turned his talk into loud headlines. The student is the night editor: before the page goes to print, every headline that says more than the evidence gets rewritten, carefully. <i>People <b>appear to</b> underestimate change. <b>It could be argued that</b> teenagers choose for a stranger. The bees <b>may have been killed by</b> the heat. The study <b>suggests</b>; it does not <b>prove</b>.</i> On screen, a claim meter: a red needle shows how much each headline claims, a green mark shows how much the evidence supports, and the careful version brings the needle down to the mark. Then the article is set in type, line by line, as the press roller moves.</p>
+    <h4>THE VIDEO</h4>
+    <p>Scene III: the talk (about seven minutes), sealed in five chapters. Near the end he hedges on purpose: “not entirely sure, but it probably has to do with …”. The student hears a scientist being careful. No speaker, stage or university name is on the screen.</p>
+    <h4>THE PORTUGUESE TRAP</h4>
+    <p>Portuguese has no empty subject, so the IT disappears (<i>Would appear that …</i>), and the Portuguese for “may have been” comes out as <i>can have been</i>. The passive loses <i>been</i>. Hunt all three all hour.</p>
+    <h4>A NOTE</h4>
+    <p><i>tend to, seem to, arguably, to some extent</i> are taught in another live B2 lesson. They may come up as known words, but they are not the target here.</p>
+    <h4>THE PAGES</h4>
+    <ul>
+      <li><b>III The Talk</b>: before the video, two sliders (have you changed? will you?). In each of the five chapters the student reads two lines BEFORE pressing play and answers by tapping; tap the time to hear that moment again. After the talk: “proving or suggesting?”.</li>
+      <li><b>V The Claim Meter</b>: six headlines. The student reads the headline and what the study found, says it again carefully out loud, then taps Check: the needle comes down and the careful version appears. Before the rule, any careful version is fine; collect “proves” and “causes”.</li>
+      <li><b>VI The Rule</b>: the night editor’s note. The student reads it out loud, taps the careful tools, then finishes the five-line rule. It stays in the corner afterwards.</li>
+      <li><b>VII The Press</b>: six lines go too far. For each, the student says it again out loud with the tool in the margin, then taps the tool: the line is set in lead. You can read the sentence with too much confidence first.</li>
+      <li><b>VIII Your Headlines</b>: story cards about the student’s life and a dice with three tools. The student answers using at least one of them; you push back: “Is that proven?”</li>
+      <li><b>IX The Reporter Calls</b>: four phone calls. You are the reporter. The student chooses how to answer, says it out loud, and sees what she says. Only the careful answer saves the page.</li>
+    </ul>
+    <p class="pal-guia"><b>The words (II)</b>: <i>regret</i>, <i>illusion</i>, <i>predict</i>, <i>underestimated</i> and <i>claim</i>, before the video, in mystery meaning and the word in your life. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV, extra)</b>: every line of the video; tap one to hear it again, and the lines with yellow words open the explanation.</p>
+    <!--conversa--><h4>THE EDITORIAL BOARD (X) AND THE SURPRISE QUESTION</h4>
+    <p>After the reporter’s call, a midnight meeting: three proposals for the site (a rule against “proves”, going back to the click headline, a claim meter next to every headline). The student votes Yes, No, or proposes a change, and says why with the careful tools. There is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. The last word is one minute on the talk: will their opinions change in ten years? Then you take the other side. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and the News, V The Claim Meter, VIII Your Headlines, IX The Reporter Calls and X The Editorial Board.</li>
+      <li><b>Listen</b>: II The Words, III The Talk and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule and VII The Press.</li>
+      <li><b>Write</b>: XI To Print.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura-dados.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* IT WOULD APPEAR THAT… (Main B2) · pergunta-surpresa · 28/10/2026 · cautela: appear to, it would appear that, may have been */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'What is one thing about you that has changed a lot in the last ten years?',
+    opc: ['My taste', 'My habits', 'My opinions'], st: ['It would appear that I …', 'The change may have been caused by …'],
+    ex: 'My taste. Ten years ago I only listened to rock. The change may have been caused by my sister’s playlists.',
+    push: 'Would the person you were ten years ago like you today? Yes or no?' },
+  { cena: 'manchetes', tipo: 'Opinion', q: 'Where do you see the most exaggerated headlines?',
+    opc: ['Social media', 'News sites', 'TV'], st: ['… appear to …', 'It could be argued that …'],
+    ex: 'Social media. Some pages appear to invent half the story, and it could be argued that the algorithm rewards them.',
+    push: 'Have you ever shared a headline without reading the article? Be honest.' },
+  { cena: 'chapa', tipo: 'Would you rather', q: 'Would you rather read one careful article a day, or ten quick headlines?',
+    opc: ['One careful article', 'Ten headlines'], st: ['I’d rather …, because it would appear that …'],
+    ex: 'Ten headlines, honestly. It would appear that I have no time in the morning.',
+    push: 'Then how do you know which of the ten is true?' },
+  { cena: 'reporter', tipo: 'What if', q: 'A news site writes a headline about YOU tomorrow. What would it say, carefully?',
+    opc: ['Something about work', 'Something about my habits', 'Something funny'], st: ['Local student appears to …', 'It would appear that …'],
+    ex: 'Something funny: “Local Student Appears to Drink Five Coffees a Day. Doctors Say It May Have Been Caused by English Lessons.”',
+    push: 'Now write the exaggerated version. Which one gets more clicks?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* IT WOULD APPEAR THAT… (Main B2) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O conselho de redação entra no lugar de "X · Quick Check" (extra, prática controlada; a regra VI e a
+   chapa VII ficam). Depois que a repórter liga (IX), o editor da noite vota três propostas para o site.
+   A gramática da aula (it would appear that, appear to, it could be argued that, may have been +
+   particípio, suggests × proves) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'conselho', troca: 'quiz', est: 'o', min: 7, img: 'mesa', rot: 'The Editorial Board', t: 'Midnight meeting. Three proposals, three votes.',
+    p: 'Read the proposal. Vote, or propose a change. Say why, carefully: no claim bigger than your evidence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The rule', sit: 'The editor-in-chief proposes a new rule: a headline about a study can never say “proves”. Only “suggests”, “may” or “is linked to”.',
+        q: 'Your vote?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['It could be argued that …', 'Most studies appear to …', 'It would appear that readers …'],
+        ex: 'Yes. Most studies appear to show a link, not a cause, so “proves” is almost always too strong. It could be argued that it is boring, but it is honest.',
+        push: 'Twenty years of studies, millions of people, the same result every time. Still not “proves”?' },
+      { tag: 'The clicks', sit: 'The old headline, “Science Proves You Will Never Change”, got two million clicks. The careful one got two hundred thousand. Clicks pay the salaries.',
+        q: 'Do we go back to the old headline?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['The drop may have been caused by …', 'It would appear that people …', 'It could be argued that clicks …'],
+        ex: 'Propose a change. The drop may have been caused by the boring words, not by the honesty. It would appear that a question works: “Will You Still Be You in Ten Years?”',
+        push: 'If clicks fall again next month, two people on your team lose their jobs. Still the careful headline?' },
+      { tag: 'The meter', sit: 'The designer wants to show a small claim meter next to every headline: how much the article claims, and how much the evidence supports.',
+        q: 'Do we put the meter on the site?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Readers appear to …', 'It would appear that a meter …', 'This suggests, but doesn’t prove, …'],
+        ex: 'Yes, but only on science stories. Readers appear to trust sites that show their sources, and it would appear that young readers like it.',
+        push: 'Our competitors don’t have a meter, and their articles look stronger. Who reads the cautious site?' }
+    ],
+    fim: { tag: 'The last word', q: 'The talk says we all think we’re finished. Is your opinion on the news today the one you’ll have in ten years?',
+      opc: ['Yes, the same', 'No, it will change'], segundos: 60, nota: 'One minute. Then your teacher takes the other side.',
+      st: ['It would appear that I …', 'My opinion may have been shaped by …', 'It could be argued that …'],
+      ex: 'No, it will change. Ten years ago I believed everything on TV. My opinion may have been shaped by my parents, and it would appear that I’m still changing.',
+      push: 'Name one thing you’re sure you will NEVER change your mind about.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "voce": {
+   "t": "You, the news, the person you were.",
+   "p": "Tap a card. Answer. Then your teacher answers."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them first. They turn yellow in the video."
+  },
+  "video": {
+   "t": "We all think we are finished.",
+   "p": "Answer first. Read two lines, then play each chapter."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line to hear it. Yellow words explain."
+  },
+  "manchetes": {
+   "t": "Six headlines claim too much.",
+   "p": "Say it carefully out loud. Then tap Check."
+  },
+  "regra": {
+   "t": "Never print more than the evidence.",
+   "p": "Read the note. Tap the tools. Finish the rule."
+  },
+  "chapa": {
+   "t": "Six sentences go too far.",
+   "p": "Say each one with the margin tool. Then tap it."
+  },
+  "pauta": {
+   "t": "Your life, your news.",
+   "p": "Tap a card. Roll. Use a tool. Is it proven?"
+  },
+  "reporter": {
+   "t": "The reporter calls. You changed six lines.",
+   "p": "Pick your answer. Say it. See what she says."
+  },
+  "cv-conselho": {
+   "t": "Midnight meeting. Three votes.",
+   "p": "Vote or change it. Say why, carefully."
+  },
+  "fim": {
+   "t": "The same person in ten years?",
+   "p": "Write three careful headlines about your life."
+  }
+ },
+ "prep": {
+  "obj": "Hedging na escrita (It would appear that, appear to, It could be argued that, may have been + particípio, suggest): o aluno é editor da noite e suaviza manchetes sobre uma palestra.",
+  "armadilha": "Sem sujeito vazio no português, o IT some (“Would appear that…”); “pode ter sido” vira “can have been”; e a passiva perde o been (“may have killed” por “may have been killed”).",
+  "pal": [
+   "It would appear that …",
+   "appear to",
+   "It could be argued that …",
+   "may have been",
+   "the study suggests",
+   "prove",
+   "evidence",
+   "headline",
+   "underestimate"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a redação: o estudo sugere, não prova; nada sai mais alto que a evidência.",
+   "perg": "Where do you read the news?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "voce": {
+   "obj": "Aquecimento: o aluno, as notícias que lê e a pessoa que ele era; o professor responde também.",
+   "perg": "How different were you ten years ago?",
+   "pula": "Duas cartas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo antes de assistir: regret, illusion, predict, underestimated, claim.",
+   "perg": "What is something people often underestimate?",
+   "pula": "Deixe o aluno adivinhar; não explique tudo."
+  },
+  "video": {
+   "obj": "A palestra em cinco capítulos; perto do fim, o cientista é cauteloso de propósito.",
+   "perg": "Is he proving it, or suggesting it?",
+   "pula": "Não corte capítulos; corte os sliders se precisar."
+  },
+  "falas": {
+   "obj": "Cada fala do vídeo de novo; as palavras amarelas abrem a explicação.",
+   "perg": "Can you say that line again?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "manchetes": {
+   "obj": "Antes da regra: reescrever seis manchetes com cuidado; anotar “proves” e “causes” que aparecerem.",
+   "perg": "Does the study really prove that?",
+   "pula": "Quatro manchetes bastam."
+  },
+  "regra": {
+   "obj": "A nota do editor: as ferramentas cautelosas e a regra de cinco linhas.",
+   "perg": "Which tool is the most careful?",
+   "pula": "Leia a nota e complete a regra juntos."
+  },
+  "chapa": {
+   "obj": "A prensa: seis frases exageradas ditas de novo com a ferramenta da margem.",
+   "perg": "How would an editor say it?",
+   "pula": "Quatro linhas bastam."
+  },
+  "pauta": {
+   "obj": "Cartas da vida do aluno e um dado com três ferramentas; o professor pergunta se está provado.",
+   "perg": "Is that proven?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "reporter": {
+   "obj": "O professor é a repórter que escreveu o artigo; só a resposta cautelosa salva a página.",
+   "perg": "Why did you change my headline?",
+   "pula": "Duas ligações bastam."
+  },
+  "cv-conselho": {
+   "obj": "Conselho editorial: votar três propostas com as ferramentas; fechar com um minuto sobre a palestra.",
+   "perg": "Will your opinions change in ten years?",
+   "pula": "Duas propostas bastam; use a linha PUSH."
+  },
+  "fim": {
+   "obj": "Escrita: três manchetes cautelosas sobre a própria vida do aluno.",
+   "perg": "Will you be the same person in ten years?",
+   "pula": "Uma manchete basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta com hedging sobre notícias, mudança pessoal e certezas.",
+   "perg": "Is that a fact, or does it just appear to be?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre jornalismo e mudança pessoal, argumentando com cuidado.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve em voz alta uma notícia cautelosa sobre algo que mudou na vida dele.",
+   "perg": "What does the evidence really show?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Say it, carefully.",
+   "p": "Pick a card. Use a careful tool.",
+   "palavras": [
+    "It would appear that …",
+    "appear to",
+    "It could be argued that …",
+    "may have been"
+   ],
+   "cartas": [
+    {
+     "k": "THE OLD YOU",
+     "q": "What opinion have you completely changed in the last ten years?",
+     "fup": "What changed it?",
+     "st": [
+      "It would appear that I …",
+      "It could be argued that I was …"
+     ],
+     "ex": "It would appear that I’ve become a morning person. Ten years ago, I would have laughed."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Is your city getting better or worse to live in?",
+     "fup": "What is your evidence?",
+     "st": [
+      "The city appears to be …",
+      "It could be argued that …"
+     ],
+     "ex": "The city appears to be getting safer, but it could be argued that it’s just better lighting."
+    },
+    {
+     "k": "A RUMOR",
+     "q": "Tell me about a rumor at work or in your family that turned out to be wrong.",
+     "fup": "How did it start?",
+     "st": [
+      "It may have been started by …",
+      "It would appear that nobody …"
+     ],
+     "ex": "It may have been started by a joke in a meeting. It would appear that nobody checked."
+    },
+    {
+     "k": "HEALTH NEWS",
+     "q": "What health headline have you believed, and later doubted?",
+     "fup": "Do you still follow it?",
+     "st": [
+      "The study suggests that …, but it doesn’t prove …",
+      "It could be argued that …"
+     ],
+     "ex": "The study suggests coffee is good for you, but it doesn’t prove it."
+    },
+    {
+     "k": "SOCIAL MEDIA",
+     "q": "Has social media changed the way you think?",
+     "fup": "How do you know?",
+     "st": [
+      "It would appear that …",
+      "My habits appear to have …"
+     ],
+     "ex": "My attention appears to have got shorter. It would appear that I can’t read a long article anymore."
+    },
+    {
+     "k": "TEN YEARS",
+     "q": "What do you think you’ll still love in ten years?",
+     "fup": "Are you sure?",
+     "st": [
+      "It could be argued that I’ll …",
+      "The evidence suggests that …"
+     ],
+     "ex": "The evidence suggests that I’ll still love football. I’ve loved it for thirty years."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Argue carefully.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "The thing is, …",
+    "It could be argued that …",
+    "The evidence suggests …",
+    "I see your point, but …"
+   ],
+   "rodadas": [
+    {
+     "q": "Click headlines: harmless marketing or a real problem?",
+     "a": "Harmless",
+     "b": "A problem",
+     "fa": [
+      "Harmless. It could be argued that readers know it’s just a hook.",
+      "Nobody reads a boring title."
+     ],
+     "fb": [
+      "A problem. It would appear that most people only read the headline.",
+      "The claim is all they keep."
+     ]
+    },
+    {
+     "q": "Do people really change, or just get older?",
+     "a": "They change",
+     "b": "Just older",
+     "fa": [
+      "They change. The talk suggests we underestimate how much.",
+      "I’m not who I was at twenty."
+     ],
+     "fb": [
+      "Just older. Our core appears to stay the same.",
+      "My grandmother has the same humor at ninety."
+     ]
+    },
+    {
+     "q": "Should news sites be fined for headlines that overclaim?",
+     "a": "Yes, fine them",
+     "b": "No",
+     "fa": [
+      "Yes. Wrong health news may have been harmful to real people.",
+      "Words have consequences."
+     ],
+     "fb": [
+      "No. It could be argued that it’s a threat to free press.",
+      "Who decides what goes too far?"
+     ]
+    },
+    {
+     "q": "Trust a scientist who says “I’m not entirely sure”?",
+     "a": "Trust them more",
+     "b": "Trust them less",
+     "fa": [
+      "More. It would appear that honest doubt is a sign of good science.",
+      "Certainty is often marketing."
+     ],
+     "fb": [
+      "Less. People want answers, not maybes.",
+      "It could be argued that doubt sounds weak."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The page is set, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "Your Front Page",
+   "t": "One careful story about you.",
+   "p": "Answer each step. Then read the story.",
+   "prof": "Push the empty IT and “may have been”; ask “Is that proven?” at least once.",
+   "passos": [
+    {
+     "q": "What has changed in your life in the last five years?",
+     "st": [
+      "It would appear that I …",
+      "I appear to have …"
+     ],
+     "ex": "It would appear that I have become calmer at work."
+    },
+    {
+     "q": "What may have caused it?",
+     "st": [
+      "It may have been caused by …",
+      "It might have been …"
+     ],
+     "ex": "It may have been caused by my new job, or by having a dog."
+    },
+    {
+     "q": "What is the other side of the story?",
+     "st": [
+      "It could be argued that …",
+      "On the other hand, …"
+     ],
+     "ex": "It could be argued that I’m just tired, not calm."
+    },
+    {
+     "q": "Write the careful headline.",
+     "st": [
+      "Evidence Suggests …",
+      "Man Appears to …"
+     ],
+     "ex": "Evidence Suggests Local Student Has Finally Learned to Relax."
+    }
+   ],
+   "fim": "Front page ready. Nothing louder than the evidence."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

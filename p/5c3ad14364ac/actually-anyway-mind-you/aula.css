@@ -1,0 +1,99 @@
+/* ============================================================
+   ACTUALLY, ANYWAY, MIND YOU · THE MIXING DESK · LIVE CLASS
+   A base vem do kit (base.css). Identidade: estúdio de podcast à noite
+   — preto-espuma acústica; a mesa de som em alumínio escuro com faders
+   e LEDs; a placa ON AIR vermelha contida; as poltronas da plateia que
+   acendem em âmbar.
+   ============================================================ */
+:root{
+  --noite:#060607; --noite-rgb:6,6,7; --tinta:#ebe9e6;
+  --t1:#f2f0ed; --t2:#c9c5c0; --t2-rgb:201,197,192; --t3:#8b8680;
+  --ac:#ff8a5c; --ac2:#ffc3a8; --led:#7ef0b0; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(235,233,230,.05); --vidro2:rgba(235,233,230,.085); --vidro3:rgba(235,233,230,.12);
+  --fio:rgba(230,226,220,.12); --fio2:rgba(230,226,220,.22); --luz:rgba(235,233,230,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a0f04}
+.btn.cheio{color:#2a0f04}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(54px,5.2vw,100px)/.95 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,20px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.mk-ops{display:grid;gap:6px} .mk-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;margin:0 auto 12px} .mk-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1000px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.pista{margin:0;font:600 italic 16px var(--disp);color:var(--t3)}
+
+/* vídeo selado */
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:800 28px var(--mono);letter-spacing:.2em;color:var(--ac2)} .selo-v small{font:600 15px var(--disp);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--mono);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* a mesa de som */
+.mk-mesa{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;width:100%;max-width:760px;padding:16px;border-radius:16px;background:linear-gradient(170deg,#1a1b1d,#0e0f10);border:1px solid #2c2e31;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 18px 40px rgba(0,0,0,.6)}
+.mk-mesa.mini{max-width:620px;padding:12px}
+.mk-canal{display:grid;justify-items:center;gap:6px;padding:8px 4px;border:1px solid transparent;border-radius:10px;background:none;color:var(--t2);cursor:pointer}
+.mk-canal.on{border-color:var(--ac);background:rgba(255,138,92,.06)}
+.mk-led{width:10px;height:10px;border-radius:50%;background:#2a2c2f;box-shadow:inset 0 1px 2px rgba(0,0,0,.8)}
+.mk-canal.up .mk-led{background:var(--led);box-shadow:0 0 10px var(--led)}
+.mk-trilho{position:relative;width:8px;height:130px;border-radius:4px;background:#050505;border:1px solid #2a2c2f}
+.mk-mesa.mini .mk-trilho{height:96px}
+.mk-fader{position:absolute;left:50%;bottom:4px;width:36px;height:18px;margin-left:-18px;border-radius:4px;background:linear-gradient(180deg,#6a6e73,#3a3d41);border:1px solid #7a7e83;transition:bottom .6s cubic-bezier(.3,1.4,.5,1)}
+.mk-fader::after{content:'';position:absolute;left:4px;right:4px;top:8px;height:2px;background:#e8e8e8}
+.mk-canal.up .mk-fader{bottom:calc(100% - 24px);background:linear-gradient(180deg,#ffb08f,#c96a45);border-color:var(--ac2)}
+.mk-canal b{font:800 12px var(--mono);letter-spacing:.06em} .mk-canal small{font:800 9px var(--mono);letter-spacing:.06em;color:var(--t3);text-align:center;line-height:1.3}
+.mk-canal.up b{color:var(--ac2)}
+.mk-jo{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2)} .mk-jo small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--t3)} .mk-jo p{margin:0;font:700 clamp(19px,1.55vw,26px)/1.4 var(--disp)}
+.mk-jo.rosa{border-color:var(--ac)}
+.mk-card{display:grid;gap:6px;padding:12px 16px;border-radius:12px;background:#1c1a14;border-color:#4a4228} .mk-card small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--am)} .mk-card b{font:600 clamp(16px,1.25vw,21px)/1.4 var(--disp)}
+
+/* a plateia */
+.mk-plateia{display:grid;justify-items:center;gap:8px;margin:0 0 10px}
+.mk-onair{padding:4px 16px;border-radius:6px;border:2px solid #ff5a5a;color:#ff8a8a;font:800 14px var(--mono);letter-spacing:.3em;box-shadow:0 0 18px rgba(255,90,90,.35)}
+.mk-poltronas{display:flex;gap:10px} .mk-poltronas i{width:40px;height:28px;border-radius:10px 10px 4px 4px;background:#17171a;border:1px solid #2c2c31;transition:all .4s}
+.mk-poltronas i.acesa{background:#3a2a14;border-color:var(--am);box-shadow:0 0 14px rgba(240,184,102,.45)}
+
+/* regra */
+.mk-fitas{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;max-width:1500px;margin:0 auto 12px}
+.mk-fita{display:grid;gap:4px;padding:10px 12px;border-radius:12px} .mk-fita small{font:800 10px var(--mono);letter-spacing:.1em;color:var(--led)} .mk-fita p{margin:0;font:600 clamp(14px,1.05vw,17px)/1.35 var(--disp)}
+.mk-caminhos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.mk-caminho{display:grid;gap:6px;align-content:start;padding:12px 14px;border-radius:var(--r2)} .mk-caminho small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.mk-caminho p{margin:0;font:600 clamp(15px,1.12vw,19px)/1.4 var(--disp)} .mk-caminho .antes s{color:var(--t3);text-decoration-color:var(--erro)} .mk-caminho .depois b{color:var(--ac2)} .mk-caminho .nota{font-size:14px;color:var(--t3)} .mk-caminho .btn{justify-self:start} .mk-caminho.aberto{border-color:var(--ok)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video{grid-template-columns:1fr} .mk-fitas{grid-template-columns:1fr 1fr 1fr} .mk-caminhos{grid-template-columns:1fr 1fr} .mk-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .mk-mesa{grid-template-columns:repeat(3,1fr)} .mk-caminhos,.mk-fitas{grid-template-columns:1fr} .mk-poltronas{gap:4px} .mk-poltronas i{width:30px} .mk-trilho{height:70px} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb .mk-mesa{pointer-events:none;padding:10px;max-width:none}
+.deb .mk-trilho{height:70px}
+.deb .mk-canal{cursor:default}
+.deb .mk-canal small{font-size:8.5px}

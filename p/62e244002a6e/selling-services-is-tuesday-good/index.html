@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -135,5 +136,288 @@ window.WL_FAISCA = {
 };
 </script><!--/faisca-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/faisca.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "conversa": {
+   "t": "What time do you start work?",
+   "p": "Answer. Then ask your teacher: “And you?”"
+  },
+  "leitura": {
+   "t": "Leo and a client look for a time.",
+   "p": "Read it out loud. Then answer."
+  },
+  "dialogo": {
+   "t": "She can’t do Thursday.",
+   "p": "One question. Listen. Then the questions."
+  },
+  "descobre": {
+   "t": "On Monday, at 10, in the morning.",
+   "p": "Compare. Say the difference. See the rule."
+  },
+  "erros": {
+   "t": "Five mistakes in one message.",
+   "p": "Find a mistake. Say it right. Then tap."
+  },
+  "escolha": {
+   "t": "A or B? Say why.",
+   "p": "Your teacher answers first. Then you."
+  },
+  "cartao": {
+   "t": "Move a real meeting.",
+   "p": "Sorry + two new options. Read it out loud."
+  },
+  "pode": {
+   "t": "What can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão de on / at / in com tempo e a.m. / p.m.: o Leo marca uma demo no Teams com a Karen Wells (Lumen Logistics) e a Rachel Kim (Atlas Motors) remarca uma reunião, duas vezes.",
+  "armadilha": "O português usa “na segunda, de manhã, às 10h, em março”, então sai “in Monday”, “at the morning”, “on 10 a.m.”; e “15h” no e-mail confunde americano: escreva 3 p.m.",
+  "pal": [
+   "on Monday",
+   "on March 12",
+   "at 10 a.m.",
+   "at 3 p.m.",
+   "in the morning",
+   "in March",
+   "Is … at … good for you?",
+   "Sorry, I can’t …"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 9: marcar e remarcar reuniões com clientes.",
+   "perg": "What time do you start work? What is your busy day?",
+   "pula": "Pergunte e entre."
+  },
+  "conversa": {
+   "obj": "Aquecimento: small talk sobre horários; o aluno devolve “And you?”.",
+   "perg": "What is your busy day?",
+   "pula": "Três perguntas bastam."
+  },
+  "leitura": {
+   "obj": "Ler o chat entre o Leo e a Karen marcando a demo e responder.",
+   "perg": "When is the demo?",
+   "pula": "Leia e responda duas perguntas."
+  },
+  "dialogo": {
+   "obj": "Ouvir a Rachel remarcar a reunião (0,75× vale) e responder.",
+   "perg": "Why can’t she do Thursday?",
+   "pula": "Uma escuta e duas perguntas."
+  },
+  "descobre": {
+   "obj": "As três caixas: ON dia/data, AT hora, IN parte do dia/mês/ano (exceção: at night).",
+   "perg": "On, at or in the morning?",
+   "pula": "Não corte: é a regra da aula."
+  },
+  "erros": {
+   "obj": "Achar e corrigir cinco erros numa mensagem de remarcação; depois ler inteira.",
+   "perg": "What is wrong here?",
+   "pula": "Três erros bastam."
+  },
+  "escolha": {
+   "obj": "Escolhas A ou B com because; o professor responde primeiro.",
+   "perg": "A or B? Why?",
+   "pula": "Duas escolhas bastam."
+  },
+  "cartao": {
+   "obj": "Escrita: mensagem para remarcar uma reunião real com desculpa e duas opções.",
+   "perg": "What are your two new options?",
+   "pula": "Uma opção basta."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; praticar datas (March 12 = March twelfth).",
+   "perg": "Can you say today’s date in English?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre a agenda real do aluno com on / at / in.",
+   "perg": "When is your next client meeting?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas de horário e reunião entre dois, com frase pronta.",
+   "perg": "Which one is better for you?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a Rachel Kim, da Atlas Motors, e remarca com o professor (Leo).",
+   "perg": "Is Thursday at 2 p.m. good for you?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your calendar.",
+   "p": "Pick a card. Use on, at or in.",
+   "palavras": [
+    "on",
+    "at",
+    "in",
+    "a.m. / p.m."
+   ],
+   "cartas": [
+    {
+     "k": "NEXT MEETING",
+     "q": "When is your next client meeting?",
+     "fup": "Is it online?",
+     "st": [
+      "It’s on … at …",
+      "Yes, it is. / No, it isn’t."
+     ],
+     "ex": "It’s on Tuesday at 10 a.m. Yes, it’s on Teams."
+    },
+    {
+     "k": "BUSY DAY",
+     "q": "What is your busiest day?",
+     "fup": "What time do you finish?",
+     "st": [
+      "My busiest day is …",
+      "I finish at …"
+     ],
+     "ex": "My busiest day is Monday. I finish at 7 p.m."
+    },
+    {
+     "k": "BEST TIME",
+     "q": "Do you like meetings in the morning or in the afternoon?",
+     "fup": "Why?",
+     "st": [
+      "I like meetings in the …",
+      "because …"
+     ],
+     "ex": "I like meetings in the morning because I have energy."
+    },
+    {
+     "k": "VACATION",
+     "q": "When is your next vacation?",
+     "fup": "Where do you go?",
+     "st": [
+      "It’s in …",
+      "I go to …"
+     ],
+     "ex": "It’s in December. I go to the beach."
+    },
+    {
+     "k": "MOVED",
+     "q": "Do clients often move meetings?",
+     "fup": "What do you say?",
+     "st": [
+      "Yes, they do. / No, they don’t.",
+      "I say …"
+     ],
+     "ex": "Yes, they do. I say, “No problem. Is Friday at 3 p.m. good for you?”"
+    },
+    {
+     "k": "BIRTHDAY",
+     "q": "When is your birthday?",
+     "fup": "Do you work on your birthday?",
+     "st": [
+      "It’s on …",
+      "Yes, I do. / No, I don’t."
+     ],
+     "ex": "It’s on May twentieth. No, I don’t work on my birthday!"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "on",
+    "at",
+    "in"
+   ],
+   "rodadas": [
+    {
+     "q": "A demo on Monday or on Friday?",
+     "a": "Monday",
+     "b": "Friday",
+     "fa": [
+      "On Monday. Clients are fresh."
+     ],
+     "fb": [
+      "On Friday. Clients are relaxed."
+     ]
+    },
+    {
+     "q": "A meeting at 9 a.m. or at 4 p.m.?",
+     "a": "9 a.m.",
+     "b": "4 p.m.",
+     "fa": [
+      "At 9 a.m. The day is still free."
+     ],
+     "fb": [
+      "At 4 p.m. The work is done."
+     ]
+    },
+    {
+     "q": "Move a meeting by e-mail or by phone?",
+     "a": "E-mail",
+     "b": "Phone",
+     "fa": [
+      "By e-mail. The new time is in writing."
+     ],
+     "fb": [
+      "By phone. It is more polite."
+     ]
+    },
+    {
+     "q": "In the e-mail, write 15h or 3 p.m.?",
+     "a": "15h",
+     "b": "3 p.m.",
+     "fa": [
+      "15h. It is clear in Brazil."
+     ],
+     "fb": [
+      "3 p.m. My client is American."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Your calendar is ready."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are Rachel Kim now.",
+   "p": "Your teacher is Leo.",
+   "aluno": "Listen to Leo. Answer as Rachel Kim from Atlas Motors. You need to move the meeting.",
+   "perguntas": [
+    "Hi Rachel! Is Thursday at 2 p.m. still good for you?",
+    "Oh, OK. Is Friday good for you?",
+    "Is Friday in the morning or in the afternoon better?",
+    "Is 10 a.m. OK?",
+    "Is it on Teams or at your office?",
+    "Great. When is your next free week in March?"
+   ],
+   "st": [
+    "Sorry, I can’t …",
+    "Is … at … good for you?",
+    "On … / At … / In …"
+   ],
+   "ex": "Sorry, I can’t do Thursday. Is Friday at 10 a.m. good for you? On Teams, please."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

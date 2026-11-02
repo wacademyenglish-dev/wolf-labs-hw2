@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -109,5 +110,285 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "descobre": {
+   "t": "A text to a friend, or to a university?",
+   "p": "Compare A and B. Which fits the Writing Sample?"
+  },
+  "erros": {
+   "t": "Something is wrong here.",
+   "p": "Find a mistake. Say it right. Then tap."
+  },
+  "cv-metas": {
+   "t": "Your next five years: five goals.",
+   "p": "Rank them. Explain the top and the last, formally."
+  },
+  "prova": {
+   "t": "30 seconds to plan. Five minutes to write.",
+   "p": "Plan three parts. Write. Save 30 seconds to check."
+  },
+  "pode": {
+   "t": "Lesson 14: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Writing Sample do DET: registro formal (going to, não gonna), plano em três partes, conectores (In addition, Finally) e uma última frase forte. Tema: uma meta para cinco anos.",
+  "armadilha": "O aluno escreve como fala no WhatsApp: “gonna”, “u”, “super cool”, “stuff”, “thats”. E o “also” repetido do “também”, em vez de In addition / Moreover.",
+  "pal": [
+   "going to",
+   "In addition,",
+   "Finally,",
+   "I believe",
+   "In my view,",
+   "For these reasons,",
+   "challenging",
+   "practical"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 14 do DET Prep: o Writing Sample, lido pelas universidades.",
+   "perg": "Would you write “gonna” in an email to a university?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "descobre": {
+   "obj": "Pares A/B: registro de mensagem x registro de universidade; depois regras e armadilhas.",
+   "perg": "Which one would an admissions team like?",
+   "pula": "Três pares + as armadilhas bastam."
+  },
+  "erros": {
+   "obj": "O texto de um candidato com boas ideias e registro errado; o aluno corrige falando.",
+   "perg": "How do you say “super cool” formally?",
+   "pula": "Quatro erros bastam."
+  },
+  "cv-metas": {
+   "obj": "Ranking de cinco metas de vida para cinco anos; explicar a primeira e a última em voz formal.",
+   "perg": "Why is that goal number one for you?",
+   "pula": "Só a primeira meta."
+  },
+  "prova": {
+   "obj": "A tarefa real com relógio: 30 s para planejar, 5 min para escrever; corrigir com o checklist e salvar.",
+   "perg": "What are your three parts?",
+   "pula": "Uma tentativa, sem reescrever."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; guardar o texto para o simulado da próxima aula.",
+   "perg": "Can you write five formal minutes now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre metas, estudo fora e escrita formal, com conectores prontos.",
+   "perg": "Where do you see yourself in five years?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre estudar e trabalhar no exterior, em voz formal.",
+   "perg": "Study abroad or online from home?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve um segundo Writing Sample curto, parte por parte.",
+   "perg": "What’s your strong last sentence?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Goals, studies, and register.",
+   "p": "Pick a card. Answer in a formal voice.",
+   "palavras": [
+    "In my view,",
+    "I believe",
+    "In addition,",
+    "For these reasons,"
+   ],
+   "cartas": [
+    {
+     "k": "FIVE YEARS",
+     "q": "Where do you see yourself in five years?",
+     "fup": "What is the first step?",
+     "st": [
+      "In five years, I hope to …",
+      "The first step is …"
+     ],
+     "ex": "In five years, I hope to work in Canada. The first step is a good DET score."
+    },
+    {
+     "k": "THE DEGREE",
+     "q": "Why would you like to study abroad?",
+     "fup": "What would be the most challenging part?",
+     "st": [
+      "I believe that …",
+      "The most challenging part would be …"
+     ],
+     "ex": "I believe that studying abroad opens doors. The most challenging part would be the cost."
+    },
+    {
+     "k": "REGISTER",
+     "q": "When do you write formally in your life?",
+     "fup": "Is it easier in Portuguese?",
+     "st": [
+      "I usually write formally when …"
+     ],
+     "ex": "I usually write formally when I email clients. It is easier in Portuguese, of course."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Describe your city to a university that has never heard of it.",
+     "fup": "What is one thing they should know?",
+     "st": [
+      "My city is …",
+      "In addition, …"
+     ],
+     "ex": "My city is a growing tech center. In addition, it has a strong university culture."
+    },
+    {
+     "k": "A SKILL",
+     "q": "What practical skill would you like to learn in the next year?",
+     "fup": "Why that one?",
+     "st": [
+      "I would like to learn …",
+      "For these reasons, …"
+     ],
+     "ex": "I would like to learn data analysis, because it is useful in every field."
+    },
+    {
+     "k": "SLANG",
+     "q": "Which informal words do you use too much in English?",
+     "fup": "What could you use instead?",
+     "st": [
+      "I use … too much.",
+      "Instead, I could say …"
+     ],
+     "ex": "I use “stuff” too much. Instead, I could say “materials” or “things like…”."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one. Stay formal.",
+   "palavras": [
+    "In my view,",
+    "On the other hand,",
+    "For these reasons,"
+   ],
+   "rodadas": [
+    {
+     "q": "Study abroad, or study online from home?",
+     "a": "Abroad",
+     "b": "Online",
+     "fa": [
+      "Abroad. In my view, the experience is as valuable as the degree.",
+      "You improve your English every day."
+     ],
+     "fb": [
+      "Online. It is far more affordable.",
+      "You can keep your job while you study."
+     ]
+    },
+    {
+     "q": "A degree first, or work experience first?",
+     "a": "Degree first",
+     "b": "Work first",
+     "fa": [
+      "Degree first. It opens better jobs later.",
+      "It is easier to study when you are young."
+     ],
+     "fb": [
+      "Work first. You discover what you really want to study.",
+      "Universities value real experience."
+     ]
+    },
+    {
+     "q": "Should the Writing Sample be scored?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Writing is an essential academic skill.",
+      "A score would make it fairer."
+     ],
+     "fb": [
+      "No. It shows the real student, without pressure.",
+      "Universities can judge it themselves."
+     ]
+    },
+    {
+     "q": "Is informal English ever acceptable in academic writing?",
+     "a": "Sometimes",
+     "b": "Never",
+     "fa": [
+      "Sometimes. A personal story can sound natural.",
+      "Too formal can sound robotic."
+     ],
+     "fb": [
+      "Never. Readers judge the register first.",
+      "Formal language shows respect for the institution."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Not one “gonna”."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "w",
+   "min": 6,
+   "rot": "One More Sample",
+   "t": "A short sample: your dream job.",
+   "p": "Write one part at a time. Stay formal.",
+   "prof": "EN: You are the admissions reader. After each part, point out one word to make more formal.",
+   "passos": [
+    {
+     "q": "Opening: what is your dream job?",
+     "st": [
+      "In my view, the ideal job is …"
+     ],
+     "ex": "In my view, the ideal job is one that combines technology and education."
+    },
+    {
+     "q": "First reason, with an example.",
+     "st": [
+      "First, …",
+      "For example, …"
+     ],
+     "ex": "First, it would allow me to help people learn. For example, I could design online courses."
+    },
+    {
+     "q": "Second reason.",
+     "st": [
+      "In addition, …"
+     ],
+     "ex": "In addition, it is a field with many opportunities abroad."
+    },
+    {
+     "q": "A strong last sentence.",
+     "st": [
+      "For these reasons, …"
+     ],
+     "ex": "For these reasons, I am going to pursue this career with dedication."
+    }
+   ],
+   "fim": "Read it once more. Every word is formal now."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

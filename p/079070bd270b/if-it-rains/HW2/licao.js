@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "If It Rains",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/079070bd270b/if-it-rains/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "if + present simple, then the instruction (If it rains, close the door); comma when if comes first; never will after if",
   "abrir": "What do you do if it rains on the weekend?",
   "fecho": "<b>If + present</b>, then the instruction: <i>If it rains, close the door.</i> Never <i>will</i> after if: not <i>if it will rain</i>. When if comes first, use a comma.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a friend's flat. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/079070bd270b/if-it-rains/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A balcony and an umbrella at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If it rains, close the balcony door.",
-          "img": "https://wolf-labs.pages.dev/p/079070bd270b/if-it-rains/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If the dog barks, don't worry.",
-          "img": "https://wolf-labs.pages.dev/p/079070bd270b/if-it-rains/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If you are hungry, eat the cake.",
-          "img": "https://wolf-labs.pages.dev/p/079070bd270b/if-it-rains/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/079070bd270b/if-it-rains/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A watering can, a leash and keys",
       "pede": "Look at the picture: a watering can, a leash and keys. A friend stays in your home. Write 2 or 3 sentences with <b>if</b>: what should your friend do?",
       "ph": "If you are cold, …",

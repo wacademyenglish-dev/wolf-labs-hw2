@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · A Knock at the Door · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A2 · Unit 4 · How much and who</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>A Knock at the Door · A2 Unit 4 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new A2 lesson on articles: a / an the first time, the when we know which one or there is only one, no article for things in general (I love music), and a / an with jobs.</p><p style="margin:0 0 6px"><b>The story:</b> At 10 p.m. somebody knocked at the student’s door (Flat 9, invented) and left a box with an old key and a note: “Thank you for the music. The key is for the roof.” The student plays the piano every evening; the neighbor is a musician.</p><p style="margin:0 0 6px"><b>About 40 min:</b> I · The Box (9) · II · A or The? (9) · III · Green, Yellow, Red (6) · IV · The Message to the Neighbor (7) · V · The Hot Seat (9).</p><p style="margin:0"><b>Open with:</b> “Somebody knocks at your door at 10 p.m. What do you do?”</p></div><!--/prep-->
+    <p>Portuguese uses the article a lot more (“eu amo a música”), so watch for “I love the music” in general meaning, and for missing a with jobs (“she is teacher”). The story makes the a → the change visible: first a box, then the box.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>a / an: the first time · the: we know which one · the: only one (the sun, the roof) · an before a vowel sound · a / an with jobs · no article for things in general</p>
+    <h4>THE BOX</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>A OR THE?</h4>
+    <p>One situation at a time. The student says which side it goes on and WHY, then taps. The color confirms and one line explains. The two columns build a board the student can photograph at the end.</p>
+    <h4>THE MESSAGE TO THE NEIGHBOR</h4>
+    <p>A short note with mistakes. The student finds a mistake and SAYS the right form first; then tap it to show the correction and the reason. At the end, the student reads the whole note correctly.</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I love the music (in general: I love music)</i>, <i>she is teacher (a teacher)</i>, <i>a old key (an old key)</i>, <i>the box (first time: a box)</i>, <i>a sun (the sun)</i>. A2: one correction per answer is enough.</p>
+    <!--conversa--><h4>GREEN, YELLOW, RED (III) AND THE SURPRISE QUESTION</h4>
+    <p>A traffic light in the middle of the lesson, between the two practice screens: now it’s your student’s door. Three choices: open the box? go up to the roof tonight? say yes to the musician’s invitation? Green, yellow or red, then why. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast articles quietly while they talk (a box… the box, a musician); at the end, ask them to fix one or two sentences themselves. About 6 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · The Box.</li>
+      <li><b>Focus</b>: II · A or The? and IV · The Message to the Neighbor.</li>
+      <li><b>Out loud</b>: III · Green, Yellow, Red and V · The Hot Seat.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* A KNOCK AT THE DOOR (Main A2 · Unit 4) · pergunta-surpresa · 27/10/2026 · a / an / the / nothing */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'Do you know your neighbors?',
+    opc: ['Yes, all of them', 'Only one or two', 'No, nobody'], st: ['My neighbor is a …', 'The woman / man next door …'],
+    ex: 'Only one or two. The woman next door is a nurse. She has a big dog.', push: 'Have you ever asked a neighbor for help?' },
+  { cena: 'erros', tipo: 'Would you rather', q: 'A gift at your door: would you rather get a mystery box or a letter?',
+    opc: ['A mystery box', 'A letter'], st: ['I’d rather get a …, because …'],
+    ex: 'A letter. A letter is personal. A box can be anything!', push: 'What is the best gift you have ever got?' },
+  { cena: 'cadeira', tipo: 'Opinion', q: 'What is the best place in a building to make friends?',
+    opc: ['The elevator', 'The roof', 'The garage'], st: ['The best place is the …, because …'],
+    ex: 'The elevator! You see the same people every day.', push: 'Do you talk in the elevator, or look at your phone?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* A KNOCK AT THE DOOR (Main A2 · Unit 4) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O semáforo entra DEPOIS de "II · A or The?", no meio, entre as duas cenas de prática controlada (nenhuma
+   cena sai: a aula tinha 34 min e nenhuma extra; fica em ~40). A aula já tinha a pergunta pessoal antes da
+   leitura (alguém bate às dez: o que você faz?) e a cadeira quente do fim (IV, o professor é o misterioso);
+   faltava a DECISÃO: e você, abriria a caixa? subiria ao terraço? Verde / amarelo / vermelho, três vezes.
+   a / an na primeira vez, the depois, nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'sinal', apos: 'separa', est: 'o', min: 6, img: 'conversa', rot: 'Green, Yellow, Red',
+    t: 'It’s YOUR door. What do you do?',
+    p: 'Green, yellow or red? Choose, then say why. Use a and the.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The box', sit: 'There’s a box at your door. There’s no name on the box.',
+        q: 'Do you open it?', opc: [{ t: 'Yes, right now', cor: 'g' }, { t: 'Maybe, carefully', cor: 'y' }, { t: 'No way', cor: 'r' }],
+        st: ['There’s a box, so I …', 'I open the box, but …', 'I don’t touch the box, because …'],
+        ex: 'Maybe, carefully. First I look at the box. If the box is light, I open it.',
+        push: 'The box is moving a little. Still yellow?' },
+      { tag: 'The key', sit: 'In the box there’s an old key. A note says: “The key is for the roof.” It’s 10:30 PM.',
+        q: 'Do you go up to the roof tonight?', opc: [{ t: 'Yes, tonight', cor: 'g' }, { t: 'Tomorrow, in the day', cor: 'y' }, { t: 'Never', cor: 'r' }],
+        st: ['I take the key and …', 'I go up with a friend / a flashlight.', 'The roof is …, so …'],
+        ex: 'Tomorrow, in the day. I take the key and a friend. The roof is dark at night!',
+        push: 'You hear music on the roof right now. Do you go?' },
+      { tag: 'The invitation', sit: 'The man next door is a musician. He invites you to play music on the roof on Saturday.',
+        q: 'Do you say yes?', opc: [{ t: 'Yes, great!', cor: 'g' }, { t: 'Yes, with a friend', cor: 'y' }, { t: 'No, thanks', cor: 'r' }],
+        st: ['He’s a musician, so …', 'I play the … / I don’t play an instrument.', 'The roof is …'],
+        ex: 'Yes, great! I play the guitar a little, and the roof is a perfect place for music.',
+        push: 'You don’t play an instrument. Do you still go?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "A knock, a box, a note.",
+   "p": "Read the story out loud. Then look closer."
+  },
+  "separa": {
+   "t": "New, or we know which one?",
+   "p": "A / AN or THE? Say why, then tap."
+  },
+  "cv-sinal": {
+   "t": "It’s YOUR door. What do you do?",
+   "p": "Green, yellow or red? Say why with a and the."
+  },
+  "erros": {
+   "t": "Your message has five mistakes.",
+   "p": "Find one. Say the right form. Then tap."
+  },
+  "cadeira": {
+   "t": "Your teacher left the box. Ask!",
+   "p": "Ask, listen, react. One follow-up each time."
+  }
+ },
+ "prep": {
+  "obj": "Artigos: a/an na primeira vez, the quando sabemos qual ou só existe um, nada para coisas em geral e a/an com profissões. Às 22h alguém deixa uma caixa com uma chave velha na porta.",
+  "armadilha": "O português usa artigo demais (“eu amo a música”) e nenhum com profissão: sai “I love the music” em geral, “she is teacher”, “a old key”, “the box” na primeira vez e “a sun”.",
+  "pal": [
+   "a box",
+   "the box",
+   "an old key",
+   "the roof",
+   "the sun",
+   "a musician",
+   "I love music",
+   "knock"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta o mistério: às 22h alguém bate à porta e deixa uma caixa com um bilhete e uma chave.",
+   "perg": "Somebody knocks at your door at 10 p.m. What do you do?",
+   "pula": "Leia a frase da capa e comece."
+  },
+  "leitura": {
+   "obj": "Ler a história em voz alta, responder sobre o sentido e só depois achar o padrão a → the.",
+   "perg": "First it’s “a box”. Then it’s “the box”. Why?",
+   "pula": "Leia você metade do texto; faça só duas perguntas."
+  },
+  "separa": {
+   "obj": "Separar a/an e the: novo ou já sabemos qual; o aluno diz o porquê antes de tocar.",
+   "perg": "Do we know which one? So a or the?",
+   "pula": "Seis situações bastam."
+  },
+  "cv-sinal": {
+   "obj": "Conversa: abrir a caixa, subir ao terraço hoje, aceitar o convite do músico; verde, amarelo ou vermelho.",
+   "perg": "Do you go up to the roof tonight? Why?",
+   "pula": "Duas situações bastam."
+  },
+  "erros": {
+   "obj": "Achar os cinco erros de artigo na mensagem ao vizinho e ler a mensagem inteira corrigida.",
+   "perg": "What is wrong in “she is teacher”?",
+   "pula": "Três erros bastam."
+  },
+  "cadeira": {
+   "obj": "Cadeira quente invertida: o aluno pergunta, você responde como quem deixou a caixa.",
+   "perg": "Ask me: Why did you leave a key?",
+   "pula": "Quatro cartas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa pessoal com a/an, the e sem artigo para coisas em geral.",
+   "perg": "Do you love music or the music?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre a caixa e os vizinhos e defender com artigos certos.",
+   "perg": "Would you open the box or call the police?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno escreve a resposta ao vizinho em quatro passos, com a → the.",
+   "perg": "What do you say to the neighbor about the key?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More about you and your building.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "a / an",
+    "the",
+    "no article"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR NEIGHBORS",
+     "q": "Who lives next to you?",
+     "fup": "What does he or she do?",
+     "st": [
+      "A … lives next to me.",
+      "He’s a … / She’s an …"
+     ],
+     "ex": "A young couple lives next to me. She’s an engineer."
+    },
+    {
+     "k": "MUSIC",
+     "q": "Do you love music? What kind?",
+     "fup": "Do you play an instrument?",
+     "st": [
+      "I love …",
+      "I play the … / I don’t play an instrument."
+     ],
+     "ex": "I love jazz. I play the guitar, but not very well."
+    },
+    {
+     "k": "A GIFT",
+     "q": "What is the best gift you got from a neighbor or a friend?",
+     "fup": "Do you still have it?",
+     "st": [
+      "I got a …",
+      "The … is still …"
+     ],
+     "ex": "I got a plant. The plant is still in my kitchen."
+    },
+    {
+     "k": "THE ROOF",
+     "q": "Have you ever been on the roof of a building?",
+     "fup": "What was there?",
+     "st": [
+      "Yes, I went up to the roof of …",
+      "There was a …"
+     ],
+     "ex": "Yes, the roof of my office. There was a small garden."
+    },
+    {
+     "k": "A NOISE",
+     "q": "Is there a noise in your building at night?",
+     "fup": "Who makes it?",
+     "st": [
+      "There is a …",
+      "The … makes it."
+     ],
+     "ex": "There is a dog upstairs. The dog barks at midnight."
+    },
+    {
+     "k": "YOUR STREET",
+     "q": "What is there on your street?",
+     "fup": "Which one do you go to most?",
+     "st": [
+      "There is a … and an …",
+      "I go to the … most."
+     ],
+     "ex": "There is a bakery and an old cinema. I go to the bakery most."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "a",
+    "the"
+   ],
+   "rodadas": [
+    {
+     "q": "A box at your door at 10 p.m.: open it or leave it?",
+     "a": "Open it",
+     "b": "Leave it",
+     "fa": [
+      "Open it. Maybe it’s a gift."
+     ],
+     "fb": [
+      "Leave it. The box is not from a friend."
+     ]
+    },
+    {
+     "q": "The key is for the roof. Go up tonight or tomorrow?",
+     "a": "Tonight",
+     "b": "Tomorrow",
+     "fa": [
+      "Tonight. The moon is out and the city is quiet."
+     ],
+     "fb": [
+      "Tomorrow. The roof is dark at night."
+     ]
+    },
+    {
+     "q": "A neighbor who plays music every evening: nice or annoying?",
+     "a": "Nice",
+     "b": "Annoying",
+     "fa": [
+      "Nice. I love music."
+     ],
+     "fb": [
+      "Annoying. I need a quiet evening."
+     ]
+    },
+    {
+     "q": "Write a note back or knock at the musician’s door?",
+     "a": "A note",
+     "b": "Knock",
+     "fa": [
+      "A note. The musician started with a note too."
+     ],
+     "fb": [
+      "Knock. I want to see the face behind the music."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the box is still a mystery."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Note Back",
+   "t": "Write a note to the musician.",
+   "p": "Four steps. Say each line out loud.",
+   "prof": "Watch the a → the change: a box, then the box; a musician; music in general takes no article.",
+   "passos": [
+    {
+     "q": "Thank the musician for the box.",
+     "st": [
+      "Thank you for the …"
+     ],
+     "ex": "Thank you for the box and the old key."
+    },
+    {
+     "q": "Say something about music.",
+     "st": [
+      "I love …",
+      "I play the …"
+     ],
+     "ex": "I love music. I play the piano every evening."
+    },
+    {
+     "q": "Ask a question about the key.",
+     "st": [
+      "Is the key for …?",
+      "Why did you give me a …?"
+     ],
+     "ex": "Is the key for the roof door?"
+    },
+    {
+     "q": "Invite the musician.",
+     "st": [
+      "Do you want to …?",
+      "There is a … on …"
+     ],
+     "ex": "Do you want to play on the roof on Saturday? I can bring a cake."
+    }
+   ],
+   "fim": "Four lines. The note is ready for the door."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

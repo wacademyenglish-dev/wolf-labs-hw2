@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "One Letter Away",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/2163e06a45d6/one-letter-away-a2/img/sofa.webp",
+  "capa": "../img/sofa.webp",
   "alvo": "-ed for the person who feels (bored, tired, interested, surprised) and -ing for the thing that causes it (boring, tiring, interesting, surprising)",
   "abrir": "What was boring or interesting this week?",
   "fecho": "<b>-ed</b> is the person who feels it: <i>I was bored.</i> <b>-ing</b> is the thing that causes it: <i>The film was boring.</i> One letter changes the meaning.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo after a long Sunday. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/2163e06a45d6/one-letter-away-a2/img/sofa.webp",
+      "img": "../img/sofa.webp",
       "leg": "Sunday night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The film was boring, so I was bored.",
-          "img": "https://wolf-labs.pages.dev/p/2163e06a45d6/one-letter-away-a2/img/sofa.webp",
+          "img": "../img/sofa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The end was surprising, and I was surprised.",
-          "img": "https://wolf-labs.pages.dev/p/2163e06a45d6/one-letter-away-a2/img/sofa.webp",
+          "img": "../img/sofa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The trip was tiring, so we were tired.",
-          "img": "https://wolf-labs.pages.dev/p/2163e06a45d6/one-letter-away-a2/img/onibus.webp",
+          "img": "../img/onibus.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/2163e06a45d6/one-letter-away-a2/img/onibus.webp",
+      "img": "../img/onibus.webp",
       "leg": "The long ride home",
       "pede": "Look at the picture. Write 2 or 3 sentences about a trip or a long day. Say what was <b>-ing</b> and how you felt (<b>-ed</b>).",
       "ph": "The trip was … so I was …",

@@ -7,7 +7,7 @@ window.HW2 = {
   "titulo": "Such a Small Room",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e313853f369a/such-a-small-room/img/live-quarto.webp",
+  "capa": "../img/live-quarto.webp",
   "alvo": "so + adjective (nothing after it) versus such a / such an + adjective + noun; such without a before plurals and uncountables (such loud music, such noisy people); so / such ... that + the result",
   "abrir": "Think of a place you stayed in. Was it amazing, or terrible?",
   "fecho": "<b>So</b> + adjective, with no noun after it: <i>so small</i>. <b>Such a / such an</b> + adjective + noun: <i>such a small room</i>, <i>such an awful night</i>. Plural or uncountable: <b>such</b>, no <i>a</i>: <i>such loud music</i>. <b>That</b> opens the result.",
@@ -27,7 +27,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a bad hotel. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e313853f369a/such-a-small-room/img/live-corredor.webp",
+      "img": "../img/live-corredor.webp",
       "leg": "A hotel corridor at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -110,17 +110,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It was such a small room that the door touched the bed.",
-          "img": "https://wolf-labs.pages.dev/p/e313853f369a/such-a-small-room/img/live-quarto.webp",
+          "img": "../img/live-quarto.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The music was so loud that nobody could sleep.",
-          "img": "https://wolf-labs.pages.dev/p/e313853f369a/such-a-small-room/img/live-festa.webp",
+          "img": "../img/live-festa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We had such an awful night that we left at six.",
-          "img": "https://wolf-labs.pages.dev/p/e313853f369a/such-a-small-room/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -164,7 +164,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e313853f369a/such-a-small-room/img/live-janela.webp",
+      "img": "../img/live-janela.webp",
       "leg": "A small room with a green window",
       "pede": "Look at the picture: a small room at night. Write 2 or 3 sentences about a place you stayed in. Use <b>so</b>, <b>such a / such an</b> or <b>such</b> + plural, and <b>that</b> for the result.",
       "ph": "It was such a … that …",

@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Out of Line",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/bfb714799cf2/out-of-line/img/live-pulpito.webp",
+  "capa": "../img/live-pulpito.webp",
   "alvo": "negative inversion: a negative word in front + the helper before the subject (Never have I seen..., Rarely does she call...); no helper: do / does / did + plain verb; Hardly ... when, No sooner ... than; never Never I have seen, Rarely she calls, No sooner ... when",
   "abrir": "What is something you had never seen before, until that day?",
   "fecho": "Put the negative word first and the helper before the subject: <i>Never have I seen…</i> No helper? Borrow <b>do / does / did</b> and keep the verb plain: <i>Rarely does she call.</i> <b>Hardly … when</b>, <b>No sooner … than</b>. Never <i>Never I have seen</i>, never <i>Rarely she calls</i>. Use it twice in a speech, not ten times.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo write a farewell speech. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/bfb714799cf2/out-of-line/img/live-pulpito.webp",
+      "img": "../img/live-pulpito.webp",
       "leg": "A lectern on an empty stage",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Never have I worked with anyone so calm.",
-          "img": "https://wolf-labs.pages.dev/p/bfb714799cf2/out-of-line/img/live-pulpito.webp",
+          "img": "../img/live-pulpito.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Rarely does a manager listen the way she does.",
-          "img": "https://wolf-labs.pages.dev/p/bfb714799cf2/out-of-line/img/live-microfone.webp",
+          "img": "../img/live-microfone.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "No sooner had she arrived than she started working.",
-          "img": "https://wolf-labs.pages.dev/p/bfb714799cf2/out-of-line/img/live-plateia.webp",
+          "img": "../img/live-plateia.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/bfb714799cf2/out-of-line/img/live-pulpito.webp",
+      "img": "../img/live-pulpito.webp",
       "leg": "A lectern on an empty stage",
       "pede": "Look at the picture: a lectern on an empty stage. Imagine you give a short speech there. Write 2 or 3 sentences with <b>Never have I …</b>, <b>Rarely do I …</b> or <b>No sooner had I … than …</b>.",
       "ph": "Never have I …",

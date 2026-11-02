@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -120,5 +121,267 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "A model pitch.",
+   "p": "Read it like a presenter. Then answer."
+  },
+  "cadeira": {
+   "t": "Present your project to the client.",
+   "p": "Follow the steps. Your teacher reacts."
+  },
+  "cv-juri": {
+   "t": "Three pitches, one bakery.",
+   "p": "Give your verdict. Say what they should do."
+  },
+  "prova": {
+   "t": "Three minutes. Then the questions.",
+   "p": "Prepare. Start the clock. Pitch it all."
+  },
+  "pode": {
+   "t": "Lesson 12: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "O pitch final do curso: um projeto contado como história (cliente, problema, decisões com motivo, discordância educada, entrega, resultado, reflexão) e as perguntas do cliente.",
+  "armadilha": "O brasileiro diz “I will show you now my project”, “The client wanted that I make” (o certo é wanted me to make), “on the time” e “If I did again” (sem o it).",
+  "pal": [
+   "I’d like to show you…",
+   "The client was… My role was…",
+   "The problem was that…",
+   "We chose… because…",
+   "My only concern was…",
+   "As a result,…",
+   "wanted me to…",
+   "on time"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a última aula: um projeto do briefing à entrega, e as perguntas.",
+   "perg": "Which project did you choose for today? Why that one?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Ler o pitch modelo (home office de uma enfermeira da noite) e achar a estrutura.",
+   "perg": "What was the client’s problem?",
+   "pula": "Leia e faça uma pergunta."
+  },
+  "cadeira": {
+   "obj": "O aluno apresenta o projeto em passos; o professor é o cliente e dá uma opinião honesta.",
+   "perg": "Why did you choose that? I’m not sure I like it.",
+   "pula": "Quatro passos bastam."
+  },
+  "cv-juri": {
+   "obj": "Momento de conversa: júri de três pitches para uma padaria (Nina, Rafa, Joana).",
+   "perg": "Would you hire Joana? Why?",
+   "pula": "Dois designers bastam."
+  },
+  "prova": {
+   "obj": "O pitch final de três minutos, no relógio, e duas perguntas não preparadas.",
+   "perg": "If you did it again, what would you change?",
+   "pula": "Não corte: é o fechamento do curso."
+  },
+  "pode": {
+   "obj": "Checklist I can do curso: o aluno marca, o professor confirma e celebra.",
+   "perg": "Which phrase will you use with your next client?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa de fechamento: a carreira do aluno como designer depois do curso.",
+   "perg": "What kind of client do you want next?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dilemas de pitch e de carreira em design, com motivos.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é a dona da padaria e avalia o pitch do professor.",
+   "perg": "Why should I choose you?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Your next clients.",
+   "p": "Pick a card. Tell it like a story.",
+   "palavras": [
+    "The problem was that…",
+    "We chose… because…",
+    "As a result,…"
+   ],
+   "cartas": [
+    {
+     "k": "DREAM CLIENT",
+     "q": "Who is your dream client?",
+     "fup": "What would you design for them?",
+     "st": [
+      "My dream client is …",
+      "I’d like to design …"
+     ],
+     "ex": "My dream client is a small coffee brand. I’d like to design their whole identity."
+    },
+    {
+     "k": "HARDEST PROJECT",
+     "q": "What was your hardest project?",
+     "fup": "What was the problem?",
+     "st": [
+      "The problem was that …",
+      "In the end, …"
+     ],
+     "ex": "The problem was that the client changed the brief three times. In the end, we delivered on time."
+    },
+    {
+     "k": "ENGLISH CLIENTS",
+     "q": "Have you worked with clients who speak English?",
+     "fup": "What was hard?",
+     "st": [
+      "Yes, I …",
+      "Not yet, but I’d like to …"
+     ],
+     "ex": "Not yet, but I’d like to work with clients in Portugal and Canada."
+    },
+    {
+     "k": "CONCERNS",
+     "q": "When do you disagree with a client?",
+     "fup": "How do you say it now?",
+     "st": [
+      "When they want …",
+      "My only concern is …, so …"
+     ],
+     "ex": "When they want too much text. Now I say: My only concern is that people won’t read it, so let’s keep three lines."
+    },
+    {
+     "k": "REFLECTION",
+     "q": "If you did your last project again, what would you change?",
+     "fup": "Why?",
+     "st": [
+      "If I did it again, I’d …",
+      "because …"
+     ],
+     "ex": "If I did it again, I’d ask more questions in the brief, because the first idea was wrong."
+    },
+    {
+     "k": "THIS COURSE",
+     "q": "Which situation still feels hard in English?",
+     "fup": "What will you practice?",
+     "st": [
+      "… still feels hard.",
+      "I’ll practice …"
+     ],
+     "ex": "Answering questions I didn’t prepare still feels hard. I’ll practice with short pitches."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "How do you win the client?",
+   "p": "Your teacher takes the other side.",
+   "palavras": [
+    "because",
+    "My only concern is…",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Start the pitch with research, or with the idea?",
+     "a": "Research",
+     "b": "The idea",
+     "fa": [
+      "Research. It shows I understood the problem.",
+      "Clients trust data."
+     ],
+     "fb": [
+      "The idea. Nina showed 25 slides before it, and the client got bored.",
+      "Show the solution, then the why."
+     ]
+    },
+    {
+     "q": "Beautiful images or clear reasons?",
+     "a": "Beautiful images",
+     "b": "Clear reasons",
+     "fa": [
+      "Images. Clients buy with their eyes.",
+      "Design is visual."
+     ],
+     "fb": [
+      "Reasons. “They’re trendy” is not a reason.",
+      "Joana’s images were great, but she couldn’t explain them."
+     ]
+    },
+    {
+     "q": "A question you can’t answer: say “I’ll send it Friday,” or try now?",
+     "a": "Send it Friday",
+     "b": "Try now",
+     "fa": [
+      "Friday. A wrong answer is worse.",
+      "It shows I take it seriously."
+     ],
+     "fb": [
+      "Try now. Rafa said Friday, and it sounded unprepared.",
+      "Show how you think."
+     ]
+    },
+    {
+     "q": "Charge by project, or by hour?",
+     "a": "By project",
+     "b": "By hour",
+     "fa": [
+      "By project. The client knows the price.",
+      "I’m paid for value, not time."
+     ],
+     "fb": [
+      "By hour. Revisions are paid.",
+      "It’s fairer when the brief changes."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You own the bakery now.",
+   "p": "Your teacher pitches to you.",
+   "aluno": "Listen to the designer’s pitch. Answer as the bakery owner: friendly, careful with money, and honest.",
+   "perguntas": [
+    "What is the biggest problem with your bakery’s look today?",
+    "What do your customers say about it?",
+    "What did you like in my idea?",
+    "What is your only concern?",
+    "How much did you want to spend?",
+    "So, would you hire me?"
+   ],
+   "st": [
+    "The problem is that …",
+    "My only concern is …",
+    "I’d like you to …"
+   ],
+   "ex": "I like the colors. My only concern is the price, so I’d like you to start with the menu."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

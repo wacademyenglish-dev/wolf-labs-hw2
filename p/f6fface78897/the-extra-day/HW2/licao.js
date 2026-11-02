@@ -162,7 +162,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/f6fface78897/the-extra-day/img/calendario.webp",
+      "img": "../img/calendario.webp",
       "leg": "A calendar in a kitchen",
       "pede": "Look at the picture: a calendar on a kitchen wall. Write 2 or 3 sentences about two birthdays. Use the <b>ordinal</b> (the fifth, the twelfth) and <b>on</b> or <b>in</b>.",
       "ph": "My birthday is on the … of …",

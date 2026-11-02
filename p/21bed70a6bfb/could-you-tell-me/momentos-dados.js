@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de Could You Tell Me Why…? (11/10/2026): a entrevista de emprego no banco.
+   Forma: quem disse — Mrs. Clark ou Mr. Wang? Alvo: perguntas indiretas (Could you tell me… / I was wondering… + ordem de frase).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [9, 10, 11], k: 'About yourself', quem: 'Mrs. Clark',
+    contexto: 'A job interview at a bank. The manager starts with a classic request.',
+    frase: 'So <b>tell me a little bit about yourself</b>, Mr. Wang.',
+    quemOps: ['Mrs. Clark', 'Mr. Wang'],
+    explica: 'It is not a question, it is a polite request. The indirect version keeps the order of a statement.',
+    formula: 'Could you tell me <b>where you studied</b>? · ✗ where did you study',
+    tente: 'Ask your teacher about his or her life politely: Could you tell me…?',
+    ex: 'Could you tell me where you grew up? Could you tell me why you became a teacher?' },
+  { i: [21, 22, 23], k: 'Strengths', quem: 'Mrs. Clark',
+    contexto: 'The next question is the one every candidate expects.',
+    frase: '<b>What would you say are some of your strengths</b> or skills that might help you succeed in this job?',
+    quemOps: ['Mrs. Clark', 'Mr. Wang'],
+    explica: '<i>Strengths</i> = what you are good at. A softer way: I was wondering what your strengths are.',
+    formula: 'I was wondering <b>what your strengths are</b>. · ✗ what are your strengths',
+    tente: 'What are your biggest strengths at work or at school?',
+    ex: 'My biggest strength is that I’m very organized.' },
+  { i: [32, 33, 34], k: 'Weaknesses', quem: 'Mr. Wang',
+    contexto: 'Then the hard one: weaknesses. Mr. Wang is honest.',
+    frase: 'One of my biggest weaknesses is <b>asking for help</b> when I need it. I’d like to do better at that.',
+    quemOps: ['Mrs. Clark', 'Mr. Wang'],
+    explica: 'A smart answer: a real weakness, and a plan to improve.',
+    formula: 'Do you know <b>how I can</b> improve? · ✗ how can I improve',
+    tente: 'What is one of your weaknesses? What are you doing about it?',
+    ex: 'I talk too fast when I’m nervous. I’m practicing with a timer.' },
+  { i: [46, 47], k: 'Salary', quem: 'Mrs. Clark',
+    contexto: 'The money question, asked very carefully.',
+    frase: 'I also want to ask you <b>what salary range you’d be most comfortable with</b>.',
+    quemOps: ['Mrs. Clark', 'Mr. Wang'],
+    explica: 'A perfect indirect question: <i>ask you</i> + question word + subject + verb. No <i>do</i>, no inversion.',
+    formula: 'ask you <b>what</b> salary <b>you’d be</b> comfortable with · ✗ what salary would you be',
+    tente: 'Ask your teacher a delicate question in an indirect way.',
+    ex: 'Can I ask how much you pay for rent in your city?' },
+  { i: [55, 56, 57], k: 'Working hours', quem: 'Mr. Wang',
+    contexto: 'At the end, the candidate asks his own questions.',
+    frase: '<b>Can you tell me about the working hours</b>? — We’d like whoever fills the position to work 9 to 5 each weekday.',
+    quemOps: ['Mrs. Clark', 'Mr. Wang'],
+    explica: 'He uses <i>about</i> + a noun. With a question word, the order changes: what the hours are.',
+    formula: 'Could you tell me <b>what the working hours are</b>? · Would you mind telling me <b>when</b> you’ll decide?',
+    tente: 'You are at a job interview. Ask two polite questions.',
+    ex: 'Could you tell me when I would start? Would you mind telling me how big the team is?' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'quem', cor: '#4f8fd9', titulo: 'The interview: who said it?', sub: 'Mrs. Clark or Mr. Wang? Hear the line, choose, then ask it the polite way.', rot: { por: 'WHAT IT MEANS', padrao: 'COULD YOU TELL ME…?', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

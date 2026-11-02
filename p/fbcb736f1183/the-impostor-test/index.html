@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Impostor Test · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>The Impostor Test · The Voice Line</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Impostor Test · The Voice Line</h2>
+    <p>A question tag copies the auxiliary and the person from the sentence and flips the sign: <b>You did the work, didn’t you?</b> · <b>It wasn’t luck, was it?</b> Then the voice decides: a <b>falling</b> tag tells and asks for agreement; a <b>rising</b> tag really asks. Students put <i>isn’t it?</i> on everything, or <i>don’t you?</i> after BE. The theme is the feeling of being an impostor at work: the tags we hang on our own achievements. On screen, every tag sentence gets a neon voice line that falls or rises at the end; with the tag off, the line goes flat.</p>
+    <h4>SAY IT TWICE</h4>
+    <p>Every tag sentence gets said twice: once falling, once rising. Exaggerate the melody. The corrector can check the tag; only your ear can check the direction.</p>
+    <h4>NOT A DIAGNOSIS</h4>
+    <p>The situations in scene V and the compliments in scene VI are conversation, not a test of personality. In scene VI you pay the compliment; your student answers without thinking; you tap the shape.</p>
+    <h4>THE RECORDINGS</h4>
+    <p>Three short parts about a 2019 review (62 studies, 14,000 people): the number of people who feel like impostors went from 9 to 82 in 100, because every study used a different test. Each plays with pause and 0.75×; the transcript opens after listening.</p>
+    <h4>YOU ARE THREE PEOPLE</h4>
+    <p>Scene VIII: a falling tag gets “Yes, that’s right.”; a rising one gets real, new information.</p>
+    <!--conversa--><h4>THE ARENA (IX) AND THE SURPRISE QUESTION</h4>
+<p>Scene IX is now an arena. The biggest part of a project was your student’s: do they say it flat, or keep a tag at the end? They pick a side and defend it for one minute with tags (“Nobody will say it for you, will they?”); then they tap Swap sides and defend the other one. There is no right answer. Wait five seconds in silence before they start, and use the PUSH line (only you see it) to make it harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+<p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Write Your Badge, III Up or Down?, V Four Situations, VI Somebody Said You Were Good, VIII The Networking Event, IX The Arena.</li>
+      <li><b>Listen</b>: VII Nine to Eighty-Two.</li>
+      <li><b>Focus</b>: II The Tag Machine, IV Not Isn’t It for Everything.</li>
+      <li><b>Write</b>: X, their badge. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE IMPOSTOR TEST (Main B1) · pergunta-surpresa · 27/10/2026 · question tags */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'cracha', tipo: 'And you?', q: 'When people ask what you do, do you say the small version or the big one?',
+    opc: ['The small version', 'The big version', 'It depends who asks'], st: ['I usually say …', 'It sounds better, doesn’t it?', 'With my friends I …'],
+    ex: 'The small version. I say “I help out with the design”, but I’m the only designer, aren’t I?', push: 'Say it now, the big version, to me. How does it feel?' },
+  { cena: 'curva', tipo: 'Would you rather', q: 'In a new job, would you rather ask too many questions or too few?',
+    opc: ['Too many', 'Too few'], st: ['I’d rather ask too many, because …', 'You can always ask, can’t you?', 'Nobody likes …, do they?'],
+    ex: 'Too many. You can always ask, can’t you? A silly question is better than a big mistake.', push: 'Your boss sighs every time you ask. Still too many?' },
+  { cena: 'elogio', tipo: 'Opinion', q: 'What is harder for you: to give a compliment, or to receive one?',
+    opc: ['To give one', 'To receive one', 'Both are easy'], st: ['It’s harder to …, because …', 'It’s strange, isn’t it?', 'When somebody says I’m good, I …'],
+    ex: 'To receive one. When somebody says I’m good, I say “it was nothing”. It’s strange, isn’t it?', push: 'Give me a compliment now, a real one. Then I give you one, and you just say “thank you”.' },
+  { cena: 'evento', tipo: 'What if', q: 'At a conference, a stranger smiles: “You’re the speaker, aren’t you?” You’re not. What do you do?',
+    opc: ['Tell the truth', 'Play along for a minute', 'Run to the coffee'], st: ['I’d say “No, I’m not, …”', 'I’d play along, wouldn’t I?', 'It would be funny if …'],
+    ex: 'Tell the truth, but with a joke: “No, I’m not. But I could be, couldn’t I?”', push: 'Ten minutes later the real speaker doesn’t come. They ask YOU to go on stage. Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE IMPOSTOR TEST (Main B1 · question tags) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A arena entra no lugar de "IX · Take the Tag Off" (extra, prática controlada de tirar a tag).
+   A ideia da cena continua, agora como escolha do aluno: dizer "That part was mine" sem tag, ou
+   deixar a dúvida no fim? A linha reta continua no X (o crachá sem tag). A gramática mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'arena', troca: 'semtag', est: 'o', min: 7, img: 'saida', rot: 'The Arena', t: '“That part was mine.” Do you say it flat, or with a tag?',
+    p: 'Pick a side and defend it for one minute. Use tags to pull your teacher in. Then swap and defend the other side.',
+    formato: 'arena', segundos: 60,
+    q: 'Your team finished a big project, and the biggest part was yours. In the meeting, do you say it?',
+    lados: [
+      { nome: 'Say it flat', arg: 'If you don’t name your part, nobody will. “That part was mine.” Full stop.' },
+      { nome: 'Keep the tag', arg: 'A little doubt sounds friendly. “It was mostly my part, wasn’t it?” keeps the team close.' }
+    ],
+    st: ['Nobody will say it for you, will they?', 'It sounds a bit arrogant, doesn’t it?', 'If you take the tag off, people …', 'You worked hard for it, didn’t you?'],
+    ex: 'Say it flat. You worked hard for it, didn’t you? If you add “wasn’t it?”, people hear a question, and somebody else answers it for you.',
+    push: 'Your manager is the kind of person who takes the credit. Does that change your side?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "cracha": {
+   "t": "An empty badge. Two ways to say it.",
+   "p": "Pick a side for each line. Confirm three things with a tag."
+  },
+  "maquina": {
+   "t": "Auxiliary, person, sign: they travel.",
+   "p": "Choose the tag. Say the whole thing."
+  },
+  "curva": {
+   "t": "Same words, two meanings.",
+   "p": "Choose the line. Say it falling, then rising."
+  },
+  "erros": {
+   "t": "“Isn’t it?” only fits IS and IT.",
+   "p": "Choose the right tag. Say the sentence."
+  },
+  "situacoes": {
+   "t": "Four work situations. No wrong answer.",
+   "p": "Pick a side. Say the inner voice with a tag."
+  },
+  "elogio": {
+   "t": "A compliment. Answer without thinking.",
+   "p": "Answer out loud. Your teacher taps the shape."
+  },
+  "estudo": {
+   "t": "Sixty-two studies on feeling like a fraud.",
+   "p": "Play all three parts. Then take a side."
+  },
+  "evento": {
+   "t": "Three badges. You’re not sure of everything.",
+   "p": "Confirm with a tag. Sure? Falling. Not sure? Rising."
+  },
+  "cv-arena": {
+   "t": "“That part was mine.” Flat, or with a tag?",
+   "p": "Defend a side for one minute, with tags. Then swap."
+  },
+  "fim": {
+   "t": "Your badge from scene I comes back.",
+   "p": "Write your badge and three tag sentences. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Question tags (o auxiliar e a pessoa viajam, o sinal inverte) e a entonação (descendo = confirma, subindo = pergunta), com o tema da síndrome do impostor no trabalho.",
+  "armadilha": "Com o “né?” do português, o brasileiro põe isn’t it? em tudo e erra o auxiliar: “You work here, aren’t you?”, “You’re tired, don’t you?”. E a entonação sai sempre igual.",
+  "pal": [
+   "didn’t you?",
+   "wasn’t it?",
+   "isn’t it?",
+   "aren’t you?",
+   "falling tag",
+   "rising tag",
+   "impostor",
+   "badge",
+   "achievement"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: a mesma tag descendo é fato, subindo é dúvida.",
+   "perg": "Do you ever feel you don’t deserve your success?",
+   "pula": "Só leia a manchete e entre."
+  },
+  "cracha": {
+   "obj": "O crachá vazio: duas formas de dizer a mesma verdade; o aluno confirma três coisas do professor com tag.",
+   "perg": "You live in São Paulo, don’t you?",
+   "pula": "Três linhas e uma confirmação."
+  },
+  "maquina": {
+   "obj": "A máquina da tag: auxiliar, pessoa e sinal. O aluno escolhe e diz a frase toda.",
+   "perg": "Which auxiliary goes into the tag?",
+   "pula": "Seis frases bastam."
+  },
+  "curva": {
+   "obj": "Mesma frase, duas melodias. Exagere a curva; só seu ouvido confere a direção.",
+   "perg": "Are you telling or really asking?",
+   "pula": "Três situações bastam."
+  },
+  "erros": {
+   "obj": "Corrigir o isn’t it? usado em tudo; dizer a frase inteira com a tag certa.",
+   "perg": "Does this sentence have IS and IT?",
+   "pula": "Quatro frases bastam."
+  },
+  "situacoes": {
+   "obj": "Quatro situações de trabalho; a voz interior com tag descendente. É conversa, não diagnóstico.",
+   "perg": "What does your inner voice say?",
+   "pula": "Duas situações bastam."
+  },
+  "elogio": {
+   "obj": "O professor faz um elogio; o aluno responde sem pensar e o professor marca a forma da resposta.",
+   "perg": "You did a great job, didn’t you?",
+   "pula": "Três elogios bastam."
+  },
+  "estudo": {
+   "obj": "A revisão de 2019 (62 estudos, 14 mil pessoas): de 9 a 82 em 100, porque cada estudo usou um teste diferente.",
+   "perg": "Why didn’t the studies agree?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "evento": {
+   "obj": "Evento de networking: confirmar fatos dos crachás com tag; descendo recebe sim, subindo recebe informação nova.",
+   "perg": "You’re the designer, aren’t you?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-arena": {
+   "obj": "Arena: dizer “essa parte foi minha” seco ou com tag? Um minuto de cada lado. Use a linha PUSH.",
+   "perg": "Nobody will say it for you, will they?",
+   "pula": "Só um lado, sem trocar."
+  },
+  "fim": {
+   "obj": "O crachá da cena I volta: escrever sem tag no fim e três frases com tag sobre conhecidos.",
+   "perg": "What did you really do, without a tag?",
+   "pula": "O crachá e uma frase bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa confirmando fatos com tags, descendo e subindo.",
+   "perg": "You like your job, don’t you?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre mérito, modéstia e reconhecimento no trabalho.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta uma conquista real, passo a passo, sem diminuir com tag.",
+   "perg": "What exactly did you do?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Confirm it, or really ask.",
+   "p": "Pick a card. Answer. Then add a tag.",
+   "palavras": [
+    "didn’t you?",
+    "wasn’t it?",
+    "aren’t you?",
+    "falling",
+    "rising"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR WIN",
+     "q": "What is something at work or school you are proud of?",
+     "fup": "Did anybody notice?",
+     "st": [
+      "I …, didn’t I?",
+      "That was mine, wasn’t it?"
+     ],
+     "ex": "I organized the whole event, didn’t I? Falling: it’s a fact."
+    },
+    {
+     "k": "LUCK OR WORK",
+     "q": "Think of a good thing in your life. Was it luck or work?",
+     "fup": "What would your best friend say?",
+     "st": [
+      "It wasn’t luck, was it?",
+      "I worked for it, …"
+     ],
+     "ex": "It wasn’t luck, was it? I studied for two years."
+    },
+    {
+     "k": "YOUR TEAM",
+     "q": "Who in your team never gets enough credit?",
+     "fup": "What do they do?",
+     "st": [
+      "She does …, doesn’t she?",
+      "Nobody sees …, do they?"
+     ],
+     "ex": "Paula fixes every problem, doesn’t she? And nobody thanks her."
+    },
+    {
+     "k": "COMPLIMENTS",
+     "q": "How do you answer when someone says you did great?",
+     "fup": "Is it a Brazilian thing?",
+     "st": [
+      "I usually say …",
+      "It was nothing, was it? → No!"
+     ],
+     "ex": "I usually say “It was nothing,” but I’m trying to say “Thank you.”"
+    },
+    {
+     "k": "A NEW ROLE",
+     "q": "Remember your first day in a new job or role. How did you feel?",
+     "fup": "When did it get better?",
+     "st": [
+      "I felt …, so …",
+      "I wasn’t ready, was I?"
+     ],
+     "ex": "I felt like a fraud for months, but my boss trusted me."
+    },
+    {
+     "k": "SMALL TALK",
+     "q": "Confirm three things you think you know about your teacher.",
+     "fup": "Which one were you not sure about?",
+     "st": [
+      "You …, don’t you?",
+      "You aren’t …, are you?"
+     ],
+     "ex": "You don’t drink coffee at night, do you? Rising: I really don’t know."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "The thing is, …",
+    "I see your point, but …",
+    "isn’t it?"
+   ],
+   "rodadas": [
+    {
+     "q": "At work, talk about your wins or let the work speak?",
+     "a": "Talk about them",
+     "b": "Let the work speak",
+     "fa": [
+      "Talk about them. Nobody will do it for you, will they?",
+      "Quiet people get forgotten."
+     ],
+     "fb": [
+      "Let the work speak. Good work is obvious, isn’t it?",
+      "Bragging makes people tired."
+     ]
+    },
+    {
+     "q": "Feeling like an impostor: a problem or a good sign?",
+     "a": "A problem",
+     "b": "A good sign",
+     "fa": [
+      "A problem. It stops you from trying new things.",
+      "You say no to chances."
+     ],
+     "fb": [
+      "A good sign. It means you care.",
+      "Only people who are learning feel it."
+     ]
+    },
+    {
+     "q": "A modest colleague or a confident one?",
+     "a": "Modest",
+     "b": "Confident",
+     "fa": [
+      "Modest. They listen more, don’t they?",
+      "They’re easier to work with."
+     ],
+     "fb": [
+      "Confident. They make decisions, don’t they?",
+      "Teams need someone to lead."
+     ]
+    },
+    {
+     "q": "Can a test measure a feeling?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes, if the questions are good.",
+      "Science needs numbers."
+     ],
+     "fb": [
+      "No. Sixty-two studies didn’t agree, did they?",
+      "Feelings change every day."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You argued well, didn’t you?"
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Story",
+   "t": "Something you did. No discount.",
+   "p": "Tell it step by step. Say it flat.",
+   "prof": "If they shrink it (“it was nothing”, “I was lucky”), ask the question again and wait for a flat, proud sentence.",
+   "passos": [
+    {
+     "q": "What did you do, and when?",
+     "st": [
+      "Last year, I …",
+      "In my old job, I …"
+     ],
+     "ex": "Last year, I trained six new people at my company."
+    },
+    {
+     "q": "What was hard about it?",
+     "st": [
+      "The hard part was …",
+      "Nobody knew …, did they?"
+     ],
+     "ex": "The hard part was that nobody had a manual, did they?"
+    },
+    {
+     "q": "What did you do that someone else couldn’t?",
+     "st": [
+      "I was the one who …"
+     ],
+     "ex": "I was the one who wrote the manual from zero."
+    },
+    {
+     "q": "Now say it flat, with no tag and no “just”.",
+     "st": [
+      "I …"
+     ],
+     "ex": "I trained six people and wrote the manual."
+    }
+   ],
+   "fim": "No tag at the end. It’s a fact."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

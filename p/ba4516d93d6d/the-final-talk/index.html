@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Final Talk · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 10 · The final project</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Final Talk · C1 Unit 10 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the final project of Book C1: the student plans and gives a five-minute talk using the tools of the book (hook, story arc, nuance, contrast, rephrasing, close), then answers questions and marks what they can do.</p><p style="margin:0 0 6px"><b>The story:</b> Graduation night (invented): the student is the last speaker of the evening. The model talk is by a speaker who froze in a meeting in 2022 and decided to change.</p><p style="margin:0 0 6px"><b>About 51 min:</b> I · The Die (8) · II · A Model Talk (10) · III · Unpopular Opinions (7) · IV · Your Talk Plan (12) · V · Questions from the Floor (10) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “If you had five minutes on a stage tonight, what topic would you choose?”</p></div><!--/prep-->
+    <p>This is a celebration, not a test. The die warms up the six tools. The model talk shows them all in five minutes (each part is labelled). Give the student real time to write the plan, then let them speak for five minutes WITHOUT interrupting: take notes for later. In the Q&A, ask the questions on your screen about THEIR talk. Finish with I can, and congratulate: Book C1 is complete.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>the hook · the story arc · nuance: hedging and modals · contrast and concession · rephrasing · the close: clefts and a call to action</p>
+    <h4>THE DIE</h4>
+    <p>Tap <b>Roll the die</b>: the number chooses one of the six topics (no repeats until all six are done). The student does the challenge from memory.</p>
+    <h4>A MODEL TALK</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>YOUR TALK PLAN</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>QUESTIONS FROM THE FLOOR</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. This is the last lesson of Book C1. After the student stamps it, congratulate them: the whole book is complete.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>starting with my name / an apology</i>, <i>telling the story in the present by mistake</i>, <i>on the contrary (for on the other hand)</i>, <i>I don’t know. (dry, in the Q&A)</i>, <i>in conclusion, to conclude</i>, <i>no call to action at the end</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>UNPOPULAR OPINIONS (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the model talk and before your student writes their own, four unpopular opinions about speaking in public (slides, nerves, reading from paper, accents). They tap a number from 1 to 5 and defend it with the tools of the book (It could be argued that…, Granted… On the other hand…, The way I see it…, In other words…). There is no right answer: wait five seconds in silence, then take the opposite number and use the PUSH line (only you see it). Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. A strong opinion here is often a good topic for their talk in IV.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Die and VI · I Can.</li>
+      <li><b>Listen</b>: II · A Model Talk.</li>
+      <li><b>Write</b>: IV · Your Talk Plan.</li>
+      <li><b>Out loud</b>: III · Unpopular Opinions and V · Questions from the Floor.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* THE FINAL TALK (Main C1, Unit 10) · pergunta-surpresa · 28/10/2026 · hook, story, nuance, contrast, close */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'dado', tipo: 'And you?', q: 'When did you last speak in front of a group? How did it go?',
+    opc: ['Better than I expected', 'Worse than I expected', 'I avoid it'], st: ['It all started when …', 'That’s when …', 'Looking back, …'],
+    ex: 'Better than I expected. It all started when my manager got stuck in traffic, and that’s when I had to present alone. Looking back, it was a gift.', push: 'If they asked you again tomorrow, would you say yes immediately?' },
+  { cena: 'leitura', tipo: 'Would you rather', q: 'Would you rather give a five-minute talk to 500 strangers or to 10 people you know?',
+    opc: ['500 strangers', '10 people I know'], st: ['I’d rather …. The way I see it, …', 'Granted, …'],
+    ex: '500 strangers. The way I see it, strangers forget you. Granted, it’s a bigger room, but my friends would remember every mistake.', push: 'The 10 people include your boss. Same answer?' },
+  { cena: 'cartao', tipo: 'Opinion', q: 'Is it better to be funny or to be clear in a talk?',
+    opc: ['Funny', 'Clear', 'Both, or nothing'], st: ['It could be argued that …', 'On the other hand, …'],
+    ex: 'Clear. It could be argued that jokes keep people awake. On the other hand, nobody leaves a talk saying “I loved the jokes, but what was it about?”', push: 'Open YOUR talk with a joke now. Ten seconds.' },
+  { cena: 'pode', tipo: 'What if', q: 'What if your next job interview were a five-minute talk instead of questions?',
+    opc: ['I’d love it', 'I’d panic', 'It depends on the topic'], st: ['If that happened, I’d …', 'All I’d ask is …'],
+    ex: 'I’d love it. If that happened, I’d talk about the day I learned English was a door, not a test. All I’d ask is a microphone that works.', push: 'What would your first sentence be?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* THE FINAL TALK (Main C1, Unit 10) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A escala ENTRA depois de "II · A Model Talk" (a aula tinha 44 min e nenhuma cena extra: somar 7 min cabe).
+   A aula já tem o Q&A no IV (papel: o professor pergunta sobre a fala do aluno), mas nenhum momento em
+   que o aluno toma posição. Quatro opiniões impopulares sobre falar em público, antes de ele escrever a
+   própria fala; os iniciadores são as ferramentas do livro: It could be argued that…, The way I see it,
+   Granted… On the other hand…, In other words. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'opinioes', apos: 'leitura', est: 'o', min: 7, img: 'conversa', rot: 'Unpopular Opinions', t: 'How much do you agree?',
+    p: 'Read the opinion. Tap a number from 1 to 5. Then defend it with the tools of the book: nuance, contrast, rephrase.',
+    formato: 'escala', tag: 'Unpopular opinion',
+    frases: [
+      { f: 'A great talk needs no slides at all.',
+        st: ['It could be argued that …', 'Granted, …. On the other hand, …', 'The way I see it, …'],
+        ex: '4. Agree. Granted, a chart can help. On the other hand, the best talks I remember were just a person and a story.',
+        push: 'Your boss says: “Ten slides, minimum, or don’t come.” What do you do?' },
+      { f: 'Nervous speakers are more convincing than confident ones.',
+        st: ['The way I see it, …', 'In other words, …', 'It could be argued that …, but …'],
+        ex: '3. Not sure. It could be argued that nerves look honest. In other words, we trust people who care. But too nervous, and nobody listens.',
+        push: 'Think of the most confident speaker you know. Do you trust them?' },
+      { f: 'Reading your speech from paper is perfectly fine.',
+        st: ['Granted, …', 'On the other hand, …', 'All I ask is …'],
+        ex: '2. Disagree. Granted, paper keeps you safe. On the other hand, the audience loses your eyes. All I ask is: use notes, not a script.',
+        push: 'A wedding speech, read from your phone. Still fine?' },
+      { f: 'Your accent doesn’t matter. Only your message does.',
+        st: ['It could be argued that …', 'The way I see it, …', 'In other words, …'],
+        ex: '5. Totally agree. The way I see it, an accent is just a map of where you’ve been. In other words, clarity matters, not sounding American.',
+        push: 'Would you pay for a course to lose your accent completely? Yes or no.' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "dado": {
+   "t": "Roll the die. The number chooses.",
+   "p": "Do the challenge out loud, from memory."
+  },
+  "leitura": {
+   "t": "Five minutes, from hook to close.",
+   "p": "Read it out loud. Find every tool. Then plan."
+  },
+  "cv-opinioes": {
+   "t": "How much do you agree?",
+   "p": "Tap 1 to 5. Defend it with nuance and contrast."
+  },
+  "cartao": {
+   "t": "The skeleton of your five minutes.",
+   "p": "Hook, story, point, other side, close. Then speak!"
+  },
+  "conversa": {
+   "t": "Your talk is over. Questions now.",
+   "p": "Answer about your talk. Buy time, check, admit, close."
+  },
+  "pode": {
+   "t": "Book C1: what can you do now?",
+   "p": "Read each line out loud. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Projeto final do Livro C1: noite de formatura, o aluno é o último orador; planeja e dá uma palestra de cinco minutos com gancho, arco, nuance, contraste e fecho.",
+  "armadilha": "Começar com o nome ou pedindo desculpas, “on the contrary” no lugar de “on the other hand”, “in conclusion” seco no fim, “I don’t know.” cru no Q&A e nenhuma chamada para ação.",
+  "pal": [
+   "the hook",
+   "the story arc",
+   "It could be argued that …",
+   "Granted, … On the other hand, …",
+   "In other words, …",
+   "What I’d like you to remember is …",
+   "That’s a great question.",
+   "call to action"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a ideia: é uma celebração, não uma prova; o aluno fecha o livro falando cinco minutos.",
+   "perg": "If you had five minutes on a stage, what topic would you choose?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "dado": {
+   "obj": "O dado escolhe uma das seis ferramentas; o aluno faz o desafio de memória para aquecer.",
+   "perg": "Can you do it without looking?",
+   "pula": "Três rolagens bastam."
+  },
+  "leitura": {
+   "obj": "Palestra-modelo do orador que travou numa reunião em 2022; achar cada ferramenta e cada parte.",
+   "perg": "Where is the hook, and where does the story turn?",
+   "pula": "Leia e ache gancho, arco e fecho."
+  },
+  "cv-opinioes": {
+   "obj": "Quatro opiniões impopulares sobre falar em público; nota de 1 a 5 com nuance e contraste.",
+   "perg": "Why that number, and what’s the other side?",
+   "pula": "Duas opiniões bastam; uma pode virar o tema da palestra."
+  },
+  "cartao": {
+   "obj": "O aluno escreve o esqueleto e dá a palestra de cinco minutos sem interrupção; o professor anota.",
+   "perg": "What do you want them to remember?",
+   "pula": "Encurte para três minutos, mas não interrompa."
+  },
+  "conversa": {
+   "obj": "Perguntas da plateia sobre a palestra do aluno, com as ferramentas de Q&A.",
+   "perg": "What would you say to someone who disagrees?",
+   "pula": "Três perguntas bastam."
+  },
+  "pode": {
+   "obj": "O aluno lê cada “I can”, marca o que já sabe; o professor confirma e parabeniza: Livro C1 completo.",
+   "perg": "Which line are you proudest of?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa de fechamento: falar em público, o caminho até o C1 e o que vem depois.",
+   "perg": "What changed in the way you speak?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre palestras e fluência, usando concessão e contraste.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno faz um discurso curto de formatura para si mesmo: de onde veio, o que leva, o que vem.",
+   "perg": "What comes after Book C1?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "After the applause.",
+   "p": "Pick a card. Use one tool from the book.",
+   "palavras": [
+    "Granted, …",
+    "On the other hand, …",
+    "In other words, …",
+    "Looking back, …",
+    "What struck me was …"
+   ],
+   "cartas": [
+    {
+     "k": "THE NERVES",
+     "q": "How did it feel to speak for five minutes without stopping?",
+     "fup": "Which minute was the hardest?",
+     "st": [
+      "To be honest, …",
+      "What surprised me was …"
+     ],
+     "ex": "To be honest, the first minute was awful. What surprised me was how fast the rest went."
+    },
+    {
+     "k": "A GREAT TALK",
+     "q": "What’s the best talk or speech you’ve ever seen live?",
+     "fup": "What made it work?",
+     "st": [
+      "What made it work was …",
+      "It wasn’t so much … as …"
+     ],
+     "ex": "What made it work wasn’t so much the content as the way she paused."
+    },
+    {
+     "k": "LOOKING BACK",
+     "q": "Think of your English two years ago. What could you not do then?",
+     "fup": "What finally made the difference?",
+     "st": [
+      "Looking back, …",
+      "Back then, I couldn’t …"
+     ],
+     "ex": "Looking back, I couldn’t follow a meeting without subtitles in my head."
+    },
+    {
+     "k": "ACCENTS",
+     "q": "Should a C1 speaker still worry about their accent?",
+     "fup": "Has an accent ever cost you anything?",
+     "st": [
+      "It could be argued that …",
+      "The way I see it, …"
+     ],
+     "ex": "It could be argued that clarity matters. The way I see it, the accent is part of who I am."
+    },
+    {
+     "k": "THE NEXT STAGE",
+     "q": "Where would you like to give a talk in English one day?",
+     "fup": "What would the topic be?",
+     "st": [
+      "I’d love to …",
+      "Ideally, …"
+     ],
+     "ex": "Ideally, I’d love to speak at a conference in my field, maybe in Lisbon."
+    },
+    {
+     "k": "ONE TOOL",
+     "q": "Which tool from this book will you actually use at work?",
+     "fup": "When will you use it first?",
+     "st": [
+      "The one I’ll use most is …",
+      "In other words, …"
+     ],
+     "ex": "The one I’ll use most is buying time in Q&A. In other words, no more “I don’t know.”"
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "Granted, …",
+    "On the other hand, …",
+    "I see your point, but …",
+    "The way I see it, …"
+   ],
+   "rodadas": [
+    {
+     "q": "A talk with slides, or without?",
+     "a": "With slides",
+     "b": "Without",
+     "fa": [
+      "With slides. People remember what they see.",
+      "Granted, bad slides are worse than none."
+     ],
+     "fb": [
+      "Without. The audience looks at you, not the screen.",
+      "Slides are a crutch for nervous speakers."
+     ]
+    },
+    {
+     "q": "Memorize the talk, or speak from notes?",
+     "a": "Memorize it",
+     "b": "From notes",
+     "fa": [
+      "Memorize it. Then you can focus on the room.",
+      "Notes make you look down."
+     ],
+     "fb": [
+      "From notes. A memorized talk sounds like a recording.",
+      "If you forget one line, you lose everything."
+     ]
+    },
+    {
+     "q": "Is fluency more about confidence than grammar?",
+     "a": "Confidence",
+     "b": "Grammar",
+     "fa": [
+      "Confidence. Nobody counts your mistakes if you sound sure.",
+      "The way I see it, fear is the real enemy."
+     ],
+     "fb": [
+      "Grammar. Confidence with mistakes sounds careless.",
+      "At C1, people expect precision."
+     ]
+    },
+    {
+     "q": "End a talk with a joke, or with a challenge?",
+     "a": "A joke",
+     "b": "A challenge",
+     "fa": [
+      "A joke. People leave smiling and remember you.",
+      "It releases the tension."
+     ],
+     "fb": [
+      "A challenge. A talk should change something.",
+      "A call to action is what people take home."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Granted, nobody won. On the other hand, everybody spoke."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Graduation Toast",
+   "t": "A toast to your own journey.",
+   "p": "One step at a time. One tool each.",
+   "prof": "Keep it celebratory; this closes Book C1. Let them speak without interruption and praise one tool they used well.",
+   "passos": [
+    {
+     "q": "Open with a hook: one surprising fact about your English journey.",
+     "st": [
+      "Here’s something nobody knows: …",
+      "Picture this: …"
+     ],
+     "ex": "Here’s something nobody knows: I failed my first English test at fourteen."
+    },
+    {
+     "q": "Tell the turning point, briefly.",
+     "st": [
+      "That’s when …",
+      "It turned out that …"
+     ],
+     "ex": "That’s when I started watching series without subtitles. It turned out that I understood more than I thought."
+    },
+    {
+     "q": "Add nuance: what is still hard?",
+     "st": [
+      "Granted, …",
+      "I’d say … is still …"
+     ],
+     "ex": "Granted, phone calls are still hard. I’d say they’re my last boss level."
+    },
+    {
+     "q": "Close with a call to action for yourself.",
+     "st": [
+      "What I’d like to remember is …",
+      "So, from tomorrow, …"
+     ],
+     "ex": "What I’d like to remember is this: speak first, polish later. So, from tomorrow, I’ll lead one meeting a week in English."
+    }
+   ],
+   "fim": "Glasses up. Book C1 is complete."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

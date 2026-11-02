@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de So That They Don’t Float Away (11/10/2026): perguntas rápidas a um astronauta da NASA.
+   Forma: quem disse — o entrevistador ou o astronauta? Alvo: propósito (to / in order to; so that + can / won’t; so as not to; nunca for + verbo).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [11, 12], k: 'Training', quem: 'Reid Wiseman',
+    contexto: 'They are in a huge building in Houston where astronauts practice.',
+    frase: 'And this is where astronauts spend the bulk of their time <b>training for spaceflight</b>.',
+    quemOps: ['The interviewer', 'Reid Wiseman'],
+    explica: '<i>The bulk of</i> = most of. Why do they come here? To train.',
+    formula: 'They come here <b>to train</b>. · ✗ They come here for train.',
+    tente: 'Why do you study English? Answer with to…',
+    ex: 'I study English to travel, and to get a better job.' },
+  { i: [52, 53, 54, 55, 56], k: 'Calling Houston', quem: 'Reid Wiseman',
+    contexto: 'How do astronauts talk to people on the ground?',
+    frase: 'It’s basically a radio or a walkie-talkie, and we just call on this <b>and say hi to Houston</b>.',
+    quemOps: ['The interviewer', 'Reid Wiseman'],
+    explica: 'With a new subject or with <i>can</i>, use <i>so that</i>.',
+    formula: 'They use a radio <b>so that</b> they <b>can</b> talk to Houston.',
+    tente: 'Why do you have your phone with you all the time? Use so that.',
+    ex: 'I have my phone with me so that my kids can call me.' },
+  { i: [78, 79], k: 'Strapped', quem: 'The interviewer',
+    contexto: 'There are no beds in space. The interviewer heard something strange.',
+    frase: '<b>I heard you have to be strapped to a wall</b>. — You do.',
+    quemOps: ['The interviewer', 'Reid Wiseman'],
+    explica: '<i>Strapped</i> = held with straps. Why? So that they don’t float around while they sleep.',
+    formula: 'They sleep strapped to a wall <b>so that</b> they <b>don’t</b> float away.',
+    tente: 'What do you do so that you don’t forget important things?',
+    ex: 'I write notes on my phone so that I don’t forget birthdays.' },
+  { i: [108, 109, 110], k: 'Cooking', quem: 'Reid Wiseman',
+    contexto: 'Space food is not like a restaurant. There are two ways to prepare it.',
+    frase: 'You can either <b>inject it with hot water</b> or put it in a food warmer.',
+    quemOps: ['The interviewer', 'Reid Wiseman'],
+    explica: '<i>In order to</i> is the formal version of <i>to</i>. Same meaning.',
+    formula: 'You add hot water <b>in order to</b> cook it. = <b>to</b> cook it',
+    tente: 'What do you do in order to sleep well?',
+    ex: 'I turn off my phone in order to sleep better.' },
+  { i: [124, 125, 126], k: 'The treadmill', quem: 'Reid Wiseman',
+    contexto: 'Astronauts run every day. But how, with no gravity?',
+    frase: 'So how do you stay on the treadmill without floating away? — <b>Bungee cords.</b>',
+    quemOps: ['The interviewer', 'Reid Wiseman'],
+    explica: '<i>Bungee cords</i> = elastic cords that hold them down. The negative purpose: so as not to.',
+    formula: 'They use bungee cords <b>so as not to</b> float away. · <b>in order not to</b> · ✗ for not float',
+    tente: 'What do you do so as not to be late?',
+    ex: 'I prepare my clothes the night before so as not to be late.' }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'quem', cor: '#4f8fd9', titulo: 'Life in space: who said it?', sub: 'The interviewer or the astronaut? Hear it, choose, then explain why with so that.', rot: { por: 'WHAT IT MEANS', padrao: 'TO · SO THAT · SO AS NOT TO', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

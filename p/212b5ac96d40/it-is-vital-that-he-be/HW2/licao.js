@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "It Is Vital That He Be",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/212b5ac96d40/it-is-vital-that-he-be/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "the formal subjunctive after vital / essential / important and recommend / insist / propose / demand / require + that: the plain base form for every subject (that he be, that she take), not + base for the negative (that the board not accept), be + participle for the passive; a fact (insisted that he was) is not a demand (insisted that he be)",
   "abrir": "Think of a rule where you work or study. What does it require that people do?",
   "fecho": "After <b>vital, essential, important</b> and <b>recommend, insist, propose, demand, require</b> + <b>that</b>, the verb is the plain base form for every subject: <i>that he be, that she take</i>. The negative is <b>not</b> + base: <i>that the board not accept</i>. A fact is different: <i>insisted that he was</i> (it was true) versus <i>insisted that he be</i> (a demand).",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo before a board meeting. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/212b5ac96d40/it-is-vital-that-he-be/img/live-ata.webp",
+      "img": "../img/live-ata.webp",
       "leg": "The minutes book",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "It is vital that the minutes be accurate.",
-          "img": "https://wolf-labs.pages.dev/p/212b5ac96d40/it-is-vital-that-he-be/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The treasurer recommended that the board not sign the offer.",
-          "img": "https://wolf-labs.pages.dev/p/212b5ac96d40/it-is-vital-that-he-be/img/live-arquivo.webp",
+          "img": "../img/live-arquivo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She insisted that every member be present on Thursday.",
-          "img": "https://wolf-labs.pages.dev/p/212b5ac96d40/it-is-vital-that-he-be/img/live-farol.webp",
+          "img": "../img/live-farol.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -175,7 +175,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/212b5ac96d40/it-is-vital-that-he-be/img/live-janela.webp",
+      "img": "../img/live-janela.webp",
       "leg": "A lighthouse window at night",
       "pede": "Look at the picture: a lighthouse window at night. You are the secretary of a small board. Write 2 or 3 sentences for the minutes: what someone insisted, recommended or required. Use the base form after <b>that</b>.",
       "ph": "The board insisted that …",

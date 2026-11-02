@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Not Yet",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4e547f0bd9c1/not-yet/img/live-sala.webp",
+  "capa": "../img/live-sala.webp",
   "alvo": "going to for plans and for things you can see coming: am / is / are + going to + plain verb; isn't / aren't / I'm not going to; Are you going to ...? Is she going to ...?",
   "abrir": "What are you going to do this weekend?",
   "fecho": "<b>I'm</b> going to · <b>she's</b> going to · <b>they're</b> going to + the plain verb. Never drop <b>am / is / are</b>. No: <b>isn't going to</b>. Question: <b>Are</b> you going to ...?",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo in a quiet room at night. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/4e547f0bd9c1/not-yet/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "A quiet room at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,7 +109,7 @@ window.HW2 = {
       "frases": [
         {
           "t": "I'm going to clean my room on Saturday.",
-          "img": "https://wolf-labs.pages.dev/p/4e547f0bd9c1/not-yet/img/live-sala.webp",
+          "img": "../img/live-sala.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4e547f0bd9c1/not-yet/img/live-sala.webp",
+      "img": "../img/live-sala.webp",
       "leg": "A quiet room at night",
       "pede": "Look at the picture: a quiet room at night. Write 2 or 3 sentences about your weekend: two things you <b>are going to</b> do and one thing you <b>aren't going to</b> do.",
       "ph": "This weekend I'm going to …",

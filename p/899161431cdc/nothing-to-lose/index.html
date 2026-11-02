@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Nothing to Lose · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@500;600;700;800&family=Urbanist:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radio.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Better Speaking · Episode 6 · B1</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <div class="mapa" id="mapa" aria-label="The season: eight episodes"></div>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa" role="dialog" aria-label="Teacher guide">
+    <h2>Better Speaking · Episode 6 · Nothing to Lose · B1</h2>
+    <p>Episode 6 of <b>Better Speaking</b>, B1 version. Conchita Mart&iacute;nez practiced against a wall at ten; years later she played her hero at Wimbledon. &ldquo;I don&rsquo;t have anything to lose.&rdquo; The language is <b>something, anything, nothing</b>. The sister lesson for B2 is &ldquo;Like, You Know&rdquo;. No points, no timer.</p>
+    <h4>THIS SCENE</h4>
+    <p id="guiaCena"></p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b> &mdash; Your dream, What&rsquo;s in the bag. After each answer a post-it comes up in the middle with starters and a Help.</li>
+      <li><b>Listen</b> &mdash; Only the clips of the episode, in three steps. The video unlocks when the student answers the Before questions; in Watch, play the clips in order.</li>
+      <li><b>Focus</b> &mdash; Nothing, anything, Say it another way, Fix the traps, Choose the right word.</li>
+      <li><b>Write</b> &mdash; Nothing to lose. It goes to the student&rsquo;s My notes; then the student says it without reading.</li>
+    </ul>
+    <h4>THE TRAP</h4>
+    <p>The Portuguese double negative: <i>I don&rsquo;t have nothing</i>. <i>Something</i> in every question. And &ldquo;nada a perder&rdquo; becomes <i>nothing for lose</i>.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The student taps, matches and writes. &ldquo;Only you see this&rdquo; is yours: GOT IT when the answer works, ONE MORE when you want another question. The bar on top shows the season: eight episodes, today&rsquo;s one lit. Arrows move the scenes; G opens this guide.</p>
+    <p style="margin-top:16px"><button type="button" class="bt cheio" id="fguia">Close</button></p>
+  </div>
+</div>
+
+<script>
+/* BETTER SPEAKING · EPISODE 6 · NOTHING TO LOSE (B1)
+   Vídeo: BBC Learning English, Better Speaking (ovNeXtkYrMI), dois trechos (~2:50).
+   Alvo: something, anything, nothing (I don't have anything to lose = I have nothing to lose). Nenhuma B1 ensina.
+   A aula irmã B2 é a "Like, You Know". */
+const M = { nome: "Nothing to Lose", kick: "B1 · SOMETHING, ANYTHING, NOTHING" };
+var EP = {
+  n: 6, de: 8, nivel: 'B1', titulo: 'Nothing to Lose', video: 'ovNeXtkYrMI',
+  convidado: 'Conchita Martínez', habilidade: 'something, anything, nothing',
+  trechos: [
+    { ini: 50, fim: 94, rot: 'Conchita: playing against the wall' },
+    { ini: 141, fim: 264, rot: 'Richard: “you know” and “er”' }
+  ],
+  cenas: [
+    { k: 'capa', img: 'img/live-capa.jpg', tx: 'At ten years old, she played tennis against a wall. Years later, at Wimbledon, she played her hero. “I don\'t have anything to lose,” she said. Today: something, anything, nothing.',
+      nota: 'Ask: did you have a hero when you were a child? Who?' },
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Your <em>dream</em>', pt: 'Abra uma carta e responda em voz alta.',
+      nota: 'Talk only. Help with something / anything / nothing when it is natural.',
+      cartas: [
+        { frente: 'Hero', verso: 'Who was your hero when you were ten?', dica: 'My hero was…', cor: 'var(--guest)', fw: { q: 'Did you want to be like them?', st: ['Yes, I wanted to…', 'Not really.', 'I wanted to do something…'], help: '“Yes. I wanted to be a singer, like her.”' } },
+        { frente: 'Sport', verso: 'Do you play a sport? Did you play one as a child?', dica: 'I play… / I played…', cor: 'var(--host)', fw: { q: 'Is there anything you want to try?', st: ['I want to try…', 'There\'s nothing I want to…'], help: '“I want to try surfing!”' } },
+        { frente: 'Risk', verso: 'When did you try something new, with nothing to lose?', dica: 'Once I…', cor: 'var(--teacher)', fw: { q: 'What happened?', st: ['It was…', 'Nothing happened.', 'Something amazing…'], help: '“I sent my CV to a big company, and they called me!”' } }
+      ] },
+    { k: 'video', est: 'l', rot: 'two clips · about 3 minutes', titulo: 'Listen to <em>Conchita</em>', pt: 'Responda antes. O vídeo destrava depois. A aula toca só os dois trechos.',
+      nota: 'Before: two predictions. Watch: the clips in order. After: true or false.',
+      antes: [ { q: 'Conchita Martínez is from…', ops: [{ t: 'Spain' }, { t: 'Mexico' }] }, { q: 'How did she practice as a child?', ops: [{ t: 'Against a wall' }, { t: 'With her father' }] } ],
+      durante: 'Listen for: “I don\'t have anything to lose.” Then Richard explains “you know” and “like”.',
+      depois: [ { f: 'Conchita practiced against a wall when she was 10 or 11.', ok: 1 }, { f: 'She says she has a lot to lose.', ok: 0 }, { f: 'Richard says “you know” doesn\'t have a meaning.', ok: 1 }, { f: 'Richard says: never use “er” in English.', ok: 0 } ] },
+    { k: 'regra', est: 'f', rot: 'the rule', titulo: 'Nothing, <em>anything</em>', pt: 'Frase positiva: something · Negativa e pergunta: anything · Sozinho, sem not: nothing.',
+      nota: 'Read each card. The red card is the double negative from Portuguese.',
+      cartoes: [ { g: 'I want to try <b>something</b> new.', p: 'Positive: something.' }, { g: 'I don\'t have <b>anything</b> to lose. · Is there <b>anything</b> to eat?', p: 'Negative and questions: anything.' }, { g: 'I have <b>nothing</b> to lose.', p: 'nothing = not + anything.' }, { g: 'I don\'t have nothing to lose.', p: 'One negative only: I don\'t have ANYTHING.', nao: 1 } ] },
+    { k: 'pares', est: 'f', rot: 'same meaning', titulo: 'Say it <em>another way</em>', pt: 'Toque na frase e depois na que quer dizer a mesma coisa.',
+      nota: 'Say both sentences aloud each time.',
+      esq: ['I don\'t have anything to lose.', 'There isn\'t anything in the fridge.', 'She didn\'t say anything.', 'I don\'t know anything about it.', 'We didn\'t buy anything.'], dir: ['I have nothing to lose.', 'There\'s nothing in the fridge.', 'She said nothing.', 'I know nothing about it.', 'We bought nothing.'], ordem: [2, 0, 4, 1, 3],
+      fw: { q: 'Tell me something you know nothing about.', st: ['I know nothing about…', 'I don\'t know anything about…'], help: '“I know nothing about cars.”' } },
+    { k: 'cartas', est: 'o', rot: 'the bag game', titulo: 'What\'s in the <em>bag</em>?', pt: 'Vire a carta e responda com something, anything ou nothing.',
+      nota: 'Quick questions; the student answers in full sentences.',
+      cartas: [
+        { frente: 'Bag', sob: 'answer', verso: 'Is there anything in your bag right now? What?', dica: 'There\'s something… / There\'s nothing…', cor: 'var(--guest)', fw: { q: 'Now ask me: is there anything in your…?', st: ['Is there anything in your…?', 'Did you buy anything…?'], help: '“Is there anything in your fridge right now?”' } },
+        { frente: 'Today', sob: 'answer', verso: 'Did you eat anything this morning?', dica: 'Yes, I ate… / No, I didn\'t eat anything.', cor: 'var(--host)' },
+        { frente: 'Plans', sob: 'answer', verso: 'Are you doing anything special this weekend?', dica: 'Yes, something… / No, nothing special.', cor: 'var(--teacher)' }
+      ] },
+    { k: 'armadilhas', est: 'f', rot: 'three traps', titulo: 'Fix the <em>traps</em>', pt: 'Toque na frase errada para consertar.',
+      nota: 'The double negative, “alguma coisa” in questions, and “nada a perder”.',
+      itens: [ { erro: 'I don\'t have <s>nothing</s> to lose.', certo: 'I don\'t have <b>anything</b> to lose.', por: 'One negative only.' }, { erro: 'Do you want <s>something</s> to drink?', certo: 'Do you want <b>anything</b> to drink?', por: 'Questions: anything (something is OK when you offer).' }, { erro: 'I have nothing <s>for</s> lose.', certo: 'I have nothing <b>to</b> lose.', por: 'nothing to + verb.' } ] },
+    { k: 'pratica', est: 'f', rot: 'practice', titulo: 'Choose the <em>right word</em>', pt: 'Escolha. Se errar, tente de novo.',
+      nota: 'Read each one aloud.',
+      itens: [ { f: 'I don\'t have ___ to lose.', ops: ['anything', 'nothing'], ok: 0 }, { f: 'I have ___ to lose.', ops: ['nothing', 'anything'], ok: 0 }, { f: 'I want to try ___ new this year.', ops: ['something', 'anything'], ok: 0 }, { f: 'Is there ___ I can do to help?', ops: ['anything', 'nothing'], ok: 0 } ] },
+    { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Nothing to <em>lose</em>', pt: 'Escreva sobre algo que você quer tentar este ano, “sem nada a perder”.',
+      ph: 'This year I want to try something new: … I don\'t have anything to lose, because…', nota: 'The line under the paper catches “don\'t have nothing”. SAVE sends it to My notes.',
+      banco: ['This year', 'I want to try something new:', 'I don\'t have anything to lose', 'I have nothing to lose', 'because', 'Is there anything'],
+      regras: [['\\b(don\'?t|doesn\'?t|didn\'?t|can\'?t|won\'?t) \\w* ?nothing\\b', 'Check: one negative only: don\'t … ANYTHING.']] },
+    { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'First of all', tx: 'A tennis star tells her month: first Paris, then Wimbledon. How do you tell a story in order?',
+      ganchos: [['Next guest', 'Steffi Graf'], ['The skill', 'first, then, after that'], ['Your task', 'try something new this week']], nota: 'Ask: what did you do last Saturday, from morning to night? That opens Episode 7.' }
+  ]
+};
+</script>
+<script src="corretor.js"></script>
+<script src="radio.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "capa": {
+   "p": "A wall at ten. Her hero at Wimbledon. “Nothing to lose.”"
+  },
+  "c9": {
+   "p": "First Paris, then Wimbledon. How do you tell a story in order?"
+  }
+ },
+ "prep": {
+  "obj": "something, anything, nothing. Conchita Martínez treinava contra o muro aos dez anos; anos depois jogou com seu ídolo em Wimbledon: “I don't have anything to lose.”",
+  "armadilha": "A dupla negação do português (“I don't have nothing”), something em toda pergunta e “nada a perder” vira “nothing for lose”.",
+  "pal": [
+   "something",
+   "anything",
+   "nothing",
+   "I don't have anything to lose",
+   "Is there anything…?",
+   "hero",
+   "Wimbledon",
+   "a wall"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a convidada: Conchita, do muro aos dez anos a Wimbledon contra o ídolo.",
+   "perg": "Did you have a hero when you were a child? Who?",
+   "pula": "Uma resposta e siga."
+  },
+  "c1": {
+   "obj": "Conversa sobre sonhos; ajude com something / anything / nothing quando for natural.",
+   "perg": "What did you dream about as a kid?",
+   "pula": "Duas cartas bastam."
+  },
+  "c2": {
+   "obj": "Os dois clipes da Conchita, em ordem: previsões antes, verdadeiro ou falso depois.",
+   "perg": "What did she say before the game?",
+   "pula": "Assista uma vez só; os clipes vão inteiros."
+  },
+  "c3": {
+   "obj": "A regra: nothing = not anything; o cartão vermelho é a dupla negação.",
+   "perg": "Do you have anything in your pocket?",
+   "pula": "Leia os cartões e peça uma frase com nothing."
+  },
+  "c4": {
+   "obj": "Dizer a mesma ideia de outro jeito: nothing / not anything; as duas frases em voz alta.",
+   "perg": "Say it another way.",
+   "pula": "Três pares bastam."
+  },
+  "c5": {
+   "obj": "Jogo da bolsa: perguntas rápidas, respostas com frase completa.",
+   "perg": "Is there anything in the bag?",
+   "pula": "Quatro perguntas bastam."
+  },
+  "c6": {
+   "obj": "Corrigir as três armadilhas: dupla negação, something na pergunta, nothing for lose.",
+   "perg": "What's wrong here? Say the right one.",
+   "pula": "Duas armadilhas bastam."
+  },
+  "c7": {
+   "obj": "Prática: escolher a palavra e ler cada frase em voz alta.",
+   "perg": "Read it aloud. Why that word?",
+   "pula": "Faça três linhas."
+  },
+  "c8": {
+   "obj": "Escrever sobre um momento “nada a perder”; vai para o My notes.",
+   "perg": "When did you feel you had nothing to lose?",
+   "pula": "Três frases bastam."
+  },
+  "c9": {
+   "obj": "Gancho do episódio 7: uma tenista conta o mês em ordem, Paris e depois Wimbledon.",
+   "perg": "What did you do last Saturday, from morning to night?",
+   "pula": "Uma pergunta e pronto. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais something / anything / nothing sobre a vida e os sonhos do aluno.",
+   "perg": "Is there anything you want to try?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre arriscar ou jogar seguro, com something / nothing.",
+   "perg": "Which side are you on? Why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno conta, passo a passo, um desafio em que não tinha nada a perder.",
+   "perg": "Was there anything you were afraid of?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Something, anything, nothing.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "something",
+    "anything",
+    "nothing"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR HERO",
+     "q": "Is there anything you want to ask your childhood hero?",
+     "fup": "What would you say first?",
+     "st": [
+      "I want to ask something about …",
+      "There's nothing I …"
+     ],
+     "ex": "I want to ask something about her first game."
+    },
+    {
+     "k": "YOUR WEEKEND",
+     "q": "Did you do anything special last weekend?",
+     "fup": "Or nothing at all?",
+     "st": [
+      "I did something …",
+      "I didn't do anything. / I did nothing."
+     ],
+     "ex": "I didn't do anything special. I just slept!"
+    },
+    {
+     "k": "YOUR FRIDGE",
+     "q": "Is there anything good in your fridge right now?",
+     "fup": "Is there anything to drink?",
+     "st": [
+      "There's something …",
+      "There's nothing …"
+     ],
+     "ex": "There's nothing good. Only some old cheese."
+    },
+    {
+     "k": "PRACTICE",
+     "q": "Is there something you practiced alone for years, like Conchita?",
+     "fup": "Did anybody help you?",
+     "st": [
+      "I practiced something …",
+      "Nobody helped me with anything."
+     ],
+     "ex": "I practiced guitar alone. Nobody taught me anything."
+    },
+    {
+     "k": "NEW THINGS",
+     "q": "Is there anything you never tried but want to?",
+     "fup": "What stops you?",
+     "st": [
+      "I never tried …",
+      "Nothing stops me, I just …"
+     ],
+     "ex": "I never tried surfing. Nothing stops me, I'm just lazy!"
+    },
+    {
+     "k": "NOTHING TO LOSE",
+     "q": "When do you feel you have nothing to lose?",
+     "fup": "Do you take more risks then?",
+     "st": [
+      "I feel I have nothing to lose when …"
+     ],
+     "ex": "I feel I have nothing to lose when I'm on vacation."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "something",
+    "anything",
+    "nothing",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Play your hero: win or just enjoy it?",
+     "a": "Win",
+     "b": "Enjoy it",
+     "fa": [
+      "Win. There's nothing better.",
+      "You don't get that chance twice."
+     ],
+     "fb": [
+      "Enjoy it. You have nothing to lose.",
+      "Just being there is something special."
+     ]
+    },
+    {
+     "q": "Practice alone, like against a wall, or with a coach?",
+     "a": "Alone",
+     "b": "With a coach",
+     "fa": [
+      "Alone. Nobody tells you anything, so you learn by yourself.",
+      "It's free, and you can do it every day."
+     ],
+     "fb": [
+      "With a coach. You can't see everything alone.",
+      "A coach always finds something to fix."
+     ]
+    },
+    {
+     "q": "A big risk with nothing to lose, or a safe plan?",
+     "a": "Big risk",
+     "b": "Safe plan",
+     "fa": [
+      "A big risk. If it goes wrong, you lose nothing.",
+      "And maybe you win something big."
+     ],
+     "fb": [
+      "A safe plan. There's always something to lose.",
+      "Small steps are better."
+     ]
+    },
+    {
+     "q": "Meet your hero or never meet them?",
+     "a": "Meet them",
+     "b": "Never meet them",
+     "fa": [
+      "Meet them. It's something you never forget.",
+      "I want to ask them something."
+     ],
+     "fb": [
+      "Never. They can be nothing like you think.",
+      "Keep the dream."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Wall",
+   "t": "Your wall, your Wimbledon.",
+   "p": "Tell your story, step by step.",
+   "prof": "Any challenge works: a test, a job interview, a race. Push for anything / nothing in negatives and questions.",
+   "passos": [
+    {
+     "q": "What was your “wall”? Something you practiced again and again.",
+     "st": [
+      "I practiced something …"
+     ],
+     "ex": "I practiced presentations in English in front of the mirror."
+    },
+    {
+     "q": "Was there anything difficult at the start?",
+     "st": [
+      "At the start, I didn't know anything about …"
+     ],
+     "ex": "At the start, I didn't know anything about speaking in public."
+    },
+    {
+     "q": "What was your “Wimbledon”? The big day.",
+     "st": [
+      "The big day was …"
+     ],
+     "ex": "The big day was a meeting with clients from the US."
+    },
+    {
+     "q": "Did you feel you had anything to lose?",
+     "st": [
+      "I had nothing to lose, so …",
+      "I didn't have anything to lose."
+     ],
+     "ex": "I didn't have anything to lose, so I just did my best."
+    }
+   ],
+   "fim": "Nothing to lose, and something to tell."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

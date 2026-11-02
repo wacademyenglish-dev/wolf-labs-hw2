@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Who Called Who",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/43493abd3295/who-called-who/img/live-mesa.webp",
+  "capa": "../img/live-mesa.webp",
   "alvo": "questions with Who and What: the doer needs no did (Who called Caio? What happened?); the other one needs did + the plain verb (Who did Marina call? What did you eat?); never both: no Who did call, no did ... called",
   "abrir": "Think of your last dinner with friends. Who paid?",
   "fecho": "<b>Who</b> is the doer: the sentence is already the question, no <b>did</b>: <i>Who called Caio? What happened?</i> <b>Who</b> is the other one: <b>did</b> comes in and the verb stays plain: <i>Who did Marina call? What did you eat?</i> Never both: no <i>Who did call</i>, no <i>did … called</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a party. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/43493abd3295/who-called-who/img/live-tela.webp",
+      "img": "../img/live-tela.webp",
       "leg": "A phone with a group chat",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Who paid for the dinner on Friday?",
-          "img": "https://wolf-labs.pages.dev/p/43493abd3295/who-called-who/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Who did you sit next to at the table?",
-          "img": "https://wolf-labs.pages.dev/p/43493abd3295/who-called-who/img/live-tela.webp",
+          "img": "../img/live-tela.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "What happened after the dinner?",
-          "img": "https://wolf-labs.pages.dev/p/43493abd3295/who-called-who/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/43493abd3295/who-called-who/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A table after dinner",
       "pede": "Look at the picture: a table after a dinner with friends. Write 2 or 3 questions about that night. Ask about the doer (<b>Who paid …?</b>), the other person (<b>Who did you …?</b>) or use <b>What</b>.",
       "ph": "Who paid …? Who did you …?",

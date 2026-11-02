@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Big Party · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>A2 · Unit 4 Review · The Big Party</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Big Party · A2 Unit 4 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 4 (How much, how many, and who). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Your student is in charge of a friend’s birthday party tonight. The plan happens on a board game around the table.</p><p style="margin:0 0 6px"><b>About 44 min:</b> I · Speed Round (6) · II · The Party Board (15) · III · What Makes a Party? (6) · IV · The Invitation (6) · V · Would You Rather? (7) · VI · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Sixty seconds. Ready? Start the clock.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>a few / many (count) × a little / much (don’t count) · a lot of · too much / too many, enough · some / any / every / none · somebody / anybody / nobody, something / anything / nothing · a / an / the</p>
+    <h4>SPEED ROUND</h4>
+    <p>A 60-second speed round. Tap <b>Start the clock</b>, then <b>Right</b> or <b>Pass</b> for each item; the answer is on your screen. At the end of class, play again and beat the score.</p>
+    <h4>THE PARTY BOARD</h4>
+    <p>A board game around the table. Tap <b>Roll the die</b>: the token moves and the square shows a task that mixes the grammar of the unit. The student does it out loud; tap <b>Done</b> and roll again until the end of the board.</p>
+    <h4>THE INVITATION</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>how much cups</i>, <i>a few ice</i>, <i>many juice</i>, <i>there isn’t nothing</i>, <i>everybody are</i>, <i>a apple</i>. A2: one correction per answer is enough.</p>
+    <!--conversa--><h4>WHAT MAKES A PARTY? (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the board, your student ranks five things a great party needs and defends their first and last with a lot of / a few / enough / nobody. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it). Then open your own order and agree on one top 3 together. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · Speed Round and VI · I Can.</li>
+      <li><b>Out loud</b>: II · The Party Board, III · What Makes a Party? and V · Would You Rather?.</li>
+      <li><b>Write</b>: IV · The Invitation.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW A2 · UNIT 4 · THE BIG PARTY · pergunta-surpresa · 27/10/2026 · a few / a little / much / many · enough · somebody / nothing */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'rapido', tipo: 'And you?', q: 'Your last birthday: how many people were there?',
+    opc: ['A few', 'A lot of people', 'Nobody, just me'], st: ['There were a few / a lot of …', 'Nobody came, because …'],
+    ex: 'A few. Only five friends came, but there was a lot of cake.', push: 'Was it enough? Did you want more people?' },
+  { cena: 'cartao', tipo: 'What if', q: 'Ten guests arrive, and there’s only a little food. What do you do?',
+    opc: ['Order pizza', 'Cook something fast', 'Say nothing'], st: ['There isn’t enough …, so …', 'I’d order some …'],
+    ex: 'Order pizza! There isn’t enough food, so I’d order some big pizzas.', push: 'The pizza place is closed. Now what?' },
+  { cena: 'escolha', tipo: 'Opinion', q: 'What do people bring too much of to a party?',
+    opc: ['Drinks', 'Snacks', 'Friends nobody invited!'], st: ['People bring too much / too many …', 'Nobody brings any …'],
+    ex: 'Snacks! People bring too many chips, and nobody brings any vegetables.', push: 'What do YOU usually bring?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW A2 · UNIT 4 · THE BIG PARTY · conversa · 27/10/2026 · regra 3×3 do Carlos
+   Revisão curta (38 min, sem cena extra): um ranking ENTRA depois do tabuleiro (II), no meio (+6 min).
+   O que faz uma festa boa de verdade? O aluno ordena 5 coisas, defende o 1º e o último com a few / a
+   little / a lot of / enough / nobody, e compara com a ordem do professor. Tabuleiro, convite, Would You
+   Rather e I Can ficam intactos. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'festa', apos: 'tabuleiro', est: 'o', min: 6, img: 'conversa', rot: 'What Makes a Party?', t: 'Lia’s party is ready. What matters most?',
+    p: 'Put the five things in order: 1 is the most important. Then say why with a lot of, a few, enough, nobody…',
+    formato: 'ranking',
+    q: 'A great party needs…',
+    itens: ['A lot of good food', 'Enough chairs for everybody', 'Somebody who plays music', 'A few close friends', 'A little surprise'],
+    st: ['For me, number one is …, because …', 'You don’t need much / many …', 'Nobody cares about …'],
+    ex: 'Number one is a few close friends. You don’t need a lot of people. Last is enough chairs: everybody can sit on the floor!',
+    push: 'Okay: you can only have TWO of them. Which two?',
+    prof: [3, 0, 2, 4, 1],
+    dica: 'Tap from the most to the least important. Tap again to take it out.' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "rapido": {
+   "t": "Sixty seconds. How many?",
+   "p": "Answer fast. Then try to beat your score."
+  },
+  "tabuleiro": {
+   "t": "Roll, move, plan the party.",
+   "p": "Do the task on your square, out loud."
+  },
+  "cv-festa": {
+   "t": "What makes a great party?",
+   "p": "Put five things in order. Say why."
+  },
+  "cartao": {
+   "t": "The invitation and the shopping list.",
+   "p": "Four lines: when, where, what, how much."
+  },
+  "escolha": {
+   "t": "A or B? Say why.",
+   "p": "Choose one. Say why, with because."
+  },
+  "pode": {
+   "t": "Unit 4: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 4: a few/many × a little/much, a lot of, too much/many, enough, some/any/every/none, somebody/nobody/nothing, a/an/the. O aluno organiza a festa de aniversário de uma amiga.",
+  "armadilha": "“How much cups”, “a few ice”, “many juice” (contável × incontável), a dupla negação do português (“there isn’t nothing”), “everybody are” e “a apple”.",
+  "pal": [
+   "how many",
+   "how much",
+   "a few",
+   "a little",
+   "a lot of",
+   "too many",
+   "enough",
+   "nobody",
+   "anything"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abre a revisão: a festa da amiga hoje à noite, planejada num jogo de tabuleiro.",
+   "perg": "Do you like to organize parties?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "rapido": {
+   "obj": "Rodada de 60 segundos com os tópicos da unidade; no fim da aula, bater o placar.",
+   "perg": "How many glasses do we need?",
+   "pula": "Pule a revanche do fim."
+  },
+  "tabuleiro": {
+   "obj": "Jogo de tabuleiro: cada casa traz uma tarefa que mistura a gramática da unidade.",
+   "perg": "How much cake is there?",
+   "pula": "Pare na metade do tabuleiro."
+  },
+  "cv-festa": {
+   "obj": "Ranking de cinco coisas da festa, defendendo o primeiro e o último com quantificadores.",
+   "perg": "Is a lot of food more important than music?",
+   "pula": "Só o primeiro e o último lugar."
+  },
+  "cartao": {
+   "obj": "Escrita do convite e da lista de compras com how much / how many.",
+   "perg": "What should people bring?",
+   "pula": "Duas linhas bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather: A ou B com because; o professor concorda ou discorda.",
+   "perg": "Why? Because…?",
+   "pula": "Três perguntas bastam."
+  },
+  "pode": {
+   "obj": "Checklist “I can” da unidade; o que ficar aberto vai para a lição de casa.",
+   "perg": "Can you use much and many now?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra sobre festas e a casa do aluno com quantificadores.",
+   "perg": "How many people came to your last birthday?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois tipos de festa, com a lot of / a few / enough / nobody.",
+   "perg": "A big party or a small dinner?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno planeja a própria festa em passos, com how much / how many e somebody / nothing.",
+   "perg": "How many people are you going to invite?",
+   "pula": "Dois passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More party questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "a few",
+    "a little",
+    "a lot of",
+    "too much",
+    "enough",
+    "nobody"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR BIRTHDAY",
+     "q": "How many people came to your last birthday?",
+     "fup": "Was there enough food?",
+     "st": [
+      "A few / A lot of people came.",
+      "There was / wasn’t enough …"
+     ],
+     "ex": "A lot of people came. There wasn’t enough cake for everybody."
+    },
+    {
+     "k": "YOUR FRIDGE",
+     "q": "How much food is there in your fridge now?",
+     "fup": "Is there any juice?",
+     "st": [
+      "There is a little …",
+      "There isn’t any …"
+     ],
+     "ex": "There is a little cheese and a few eggs. There isn’t any juice."
+    },
+    {
+     "k": "YOUR WEEK",
+     "q": "Do you have too much work this week?",
+     "fup": "How many free evenings do you have?",
+     "st": [
+      "Yes, I have too much …",
+      "I have a few / no …"
+     ],
+     "ex": "Yes, I have too much work. I have only one free evening."
+    },
+    {
+     "k": "A BAD PARTY",
+     "q": "What makes a party boring?",
+     "fup": "Has that happened to you?",
+     "st": [
+      "When nobody …",
+      "When there is too much / too little …"
+     ],
+     "ex": "When nobody dances and there is too little music."
+    },
+    {
+     "k": "YOUR PHONE",
+     "q": "How many apps do you use every day?",
+     "fup": "Is there anything you never use?",
+     "st": [
+      "I use a few / a lot of …",
+      "There are some apps I never …"
+     ],
+     "ex": "I use a lot of apps. There are some games I never open."
+    },
+    {
+     "k": "SHOPPING",
+     "q": "How much money do you spend on a party?",
+     "fup": "Is it ever too much?",
+     "st": [
+      "I spend a little / a lot.",
+      "Sometimes it’s too much."
+     ],
+     "ex": "I spend a little. I ask everybody to bring something."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "a lot of",
+    "a few",
+    "enough"
+   ],
+   "rodadas": [
+    {
+     "q": "A big party or a small dinner?",
+     "a": "Big party",
+     "b": "Small dinner",
+     "fa": [
+      "A big party. I want a lot of people."
+     ],
+     "fb": [
+      "A small dinner. A few good friends are enough."
+     ]
+    },
+    {
+     "q": "Music: loud or quiet?",
+     "a": "Loud",
+     "b": "Quiet",
+     "fa": [
+      "Loud. Nobody dances to quiet music."
+     ],
+     "fb": [
+      "Quiet. People want to talk."
+     ]
+    },
+    {
+     "q": "Everybody brings something, or the host pays for everything?",
+     "a": "Everybody brings",
+     "b": "The host pays",
+     "fa": [
+      "Everybody brings something. There is always enough food."
+     ],
+     "fb": [
+      "The host pays. Guests shouldn’t bring anything."
+     ]
+    },
+    {
+     "q": "A surprise party or a planned party?",
+     "a": "Surprise",
+     "b": "Planned",
+     "fa": [
+      "A surprise. Nobody knows, and it’s fun."
+     ],
+     "fb": [
+      "Planned. I want to choose everything."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Party",
+   "t": "Plan your own party.",
+   "p": "One step at a time. Say it out loud.",
+   "prof": "Ask How many…? / How much…? after each step. Listen for much vs many and the double negative.",
+   "passos": [
+    {
+     "q": "How many people are you going to invite?",
+     "st": [
+      "I’m going to invite a few / a lot of …"
+     ],
+     "ex": "I’m going to invite a few close friends, about ten people."
+    },
+    {
+     "q": "How much food and drink do you need?",
+     "st": [
+      "We need a lot of …",
+      "We need a little …"
+     ],
+     "ex": "We need a lot of pizza and a little wine."
+    },
+    {
+     "q": "Does somebody help you? Is there anything you don’t do?",
+     "st": [
+      "Somebody …",
+      "I don’t do anything …"
+     ],
+     "ex": "My brother helps me. I don’t do anything in the kitchen."
+    },
+    {
+     "q": "What does nobody know about the party?",
+     "st": [
+      "Nobody knows …"
+     ],
+     "ex": "Nobody knows there is a karaoke machine."
+    }
+   ],
+   "fim": "The party is ready. Enough food, enough music, a lot of friends."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

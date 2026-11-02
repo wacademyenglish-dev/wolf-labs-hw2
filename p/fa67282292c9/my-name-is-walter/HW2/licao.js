@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "My Name Is Walter",
   "nivel": "A1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/fa67282292c9/my-name-is-walter/img/live-cena3-cozinha.webp",
+  "capa": "../img/live-cena3-cozinha.webp",
   "alvo": "question words with be and do: What is your name? Where do you live? How old are you? Who is in your family?; never Where you live?, How many years do you have?",
   "abrir": "Who is in your family?",
   "fecho": "<b>What / Where / Who / How old</b> + the little verb first: <i>What is your name? How old are you?</i> Other verbs need <b>do / does</b>: <i>Where do you live? Where does he live?</i> Age is <b>be</b>: never <i>How many years do you have?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo see a teacher in a kitchen. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/fa67282292c9/my-name-is-walter/img/live-cena3-cozinha.webp",
+      "img": "../img/live-cena3-cozinha.webp",
       "leg": "A birthday cake in a kitchen",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "What is your name?",
-          "img": "https://wolf-labs.pages.dev/p/fa67282292c9/my-name-is-walter/img/live-cena3-cozinha.webp",
+          "img": "../img/live-cena3-cozinha.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Where do you live?",
-          "img": "https://wolf-labs.pages.dev/p/fa67282292c9/my-name-is-walter/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "How old is your brother?",
-          "img": "https://wolf-labs.pages.dev/p/fa67282292c9/my-name-is-walter/img/live-cena3-cozinha.webp",
+          "img": "../img/live-cena3-cozinha.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/fa67282292c9/my-name-is-walter/img/live-cena3-cozinha.webp",
+      "img": "../img/live-cena3-cozinha.webp",
       "leg": "A birthday cake in a kitchen",
       "pede": "Look at the picture: a birthday cake in a kitchen. Write 2 or 3 questions for a new friend. Use <b>What</b>, <b>Where</b>, <b>Who</b> or <b>How old</b>.",
       "ph": "What … ? Where … ?",

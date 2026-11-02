@@ -1,0 +1,81 @@
+/* ============================================================
+   FIRST, THEN, FINALLY · THE WISHGRANTER · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Identidade: parque à noite; a fonte é um
+   anel de água escura (CSS) com oito quadros de storyboard em volta; o
+   painel de controle do Wishgranter é latão escuro com moedas que caem.
+   Acento: ouro de moeda.
+   ============================================================ */
+:root{
+  --noite:#070b0e; --noite-rgb:7,11,14; --tinta:#e7eef0;
+  --t1:#eef4f5; --t2:#c5d1d4; --t2-rgb:197,209,212; --t3:#8697a0;
+  --ac:#e8b44a; --ac2:#ffd98c; --bt:#4aa3e8; --bt2:#a6d2ff; --agua:#14404a;
+  --vidro:rgba(231,238,240,.05); --vidro2:rgba(231,238,240,.085); --vidro3:rgba(231,238,240,.12);
+  --fio:rgba(210,226,230,.12); --fio2:rgba(210,226,230,.22); --luz:rgba(231,238,240,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#211804}
+.btn.cheio{color:#211804}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,5.8vw,112px)/.95 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+.capa-f,.fonte-box{padding:10px;border-radius:var(--r1)}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{text-align:left;padding:10px 14px}
+.ini{margin:0;font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--ac2)}
+.acoes{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.mesa-q{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px;align-items:start}
+
+/* a fonte e o storyboard */
+.fonte-a{position:relative;width:100%;max-width:620px;aspect-ratio:1.15;margin:0 auto;max-height:calc(100vh / var(--zv,1) - 380px)}
+.agua{position:absolute;left:30%;top:30%;width:40%;height:40%;border-radius:50%;background:radial-gradient(circle,#1e5a66,var(--agua) 60%,#0b2228);border:6px solid #2a3a40;display:grid;place-items:center;box-shadow:inset 0 0 30px rgba(0,0,0,.6)}
+.agua span{font-size:clamp(30px,3vw,50px)}
+.painel-q{position:absolute;transform:translate(-50%,-50%);display:grid;justify-items:center;gap:1px;width:22%;padding:6px;border-radius:10px;background:#121a1e;border:2px solid #2a3a40;color:var(--t1)}
+.painel-q .ic{font-size:clamp(18px,1.6vw,28px)} .painel-q b{font:700 14px var(--mono);color:var(--t3)} .painel-q small{font:700 clamp(9px,.65vw,11px) var(--mono);letter-spacing:.04em;color:var(--t3);text-align:center}
+.painel-q.feito{border-color:var(--ac);background:#1d1a10} .painel-q.feito b{color:var(--ac2)}
+.painel-q.on{box-shadow:0 0 0 3px rgba(232,180,74,.4)} .painel-q.errado{border-color:var(--erro);animation:treme .35s}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .pede b{font:700 clamp(18px,1.4vw,22px)/1.4 var(--disp)}
+.balao{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .balao p{margin:0;font:600 clamp(18px,1.4vw,22px)/1.4 var(--disp)}
+.balao.resp{border-color:rgba(232,180,74,.35)!important}
+.notas-f{margin:0;font:700 15px var(--mono);color:var(--t3)}
+
+/* o painel de controle */
+.painel-c{display:grid;justify-items:center;gap:14px;padding:22px;border-radius:22px;background:linear-gradient(160deg,#3a2c14,#1e170c);border:3px solid #5a4422;box-shadow:inset 0 0 30px rgba(0,0,0,.6)}
+.moedas-c{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.moeda{width:clamp(40px,3.6vw,60px);aspect-ratio:1;border-radius:50%;border:3px dashed #6a5228;background:#15100a}
+.moeda.caiu{border:3px solid #b8892e;background:radial-gradient(circle at 35% 35%,#ffe2a0,#d8a040 60%,#8a6020);animation:cai .45s ease-out both}
+@keyframes cai{from{transform:translateY(-30px);opacity:0}to{transform:none;opacity:1}}
+.botoes-c{display:flex;gap:12px} .botoes-c i{width:26px;height:26px;border-radius:50%;background:#4a3a20;box-shadow:inset 0 -3px 0 rgba(0,0,0,.5)} .botoes-c i.vermelho{background:#8a2a22} .botoes-c i.verde{background:#2a6a3a}
+.painel-c small{font:700 13px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+
+.fitas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.fita{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .fita small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .fita b{font:700 clamp(17px,1.3vw,21px)/1.35 var(--disp)}
+.tres-tempos{display:flex;justify-content:center}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+.aberta{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(7,11,14,.85);font:700 13px var(--mono);color:var(--ac2)}
+.quiz{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q-linha{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .q-linha.feito{border-color:rgba(143,217,162,.4)!important}
+.q-linha p{margin:0;font:700 clamp(17px,1.3vw,21px)/1.4 var(--disp)} .q-linha .recusa{margin:0;font-size:15px}
+.gap{display:inline-block;min-width:3em;padding:0 6px;border-bottom:2px solid var(--ac);color:var(--ac2);text-align:center}
+.cartoes-c{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.cartao-c{display:grid;gap:4px;padding:16px;border-radius:var(--r2);border:1px solid var(--fio2);background:#0f1619;color:var(--t1);text-align:left}
+.cartao-c small{font:800 11px var(--mono);color:var(--t3)} .cartao-c b{font:800 20px var(--disp);color:var(--ac2)}
+.cartao-c.on{border-color:var(--ac)} .cartao-c.feito{border-color:rgba(143,217,162,.45)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-q,.mesa-video,.capa,.quiz,.fitas{grid-template-columns:1fr} .fonte-a{max-height:none} }
+@media (max-width:820px){ .painel-q small{display:none} .painel-q{width:18%} }

@@ -1,0 +1,47 @@
+/* OS MOMENTOS-CHAVE de When the Sun Goes Down (11/10/2026): cinco falas do trailer de From.
+   Forma: o termômetro do medo. Alvo: zero conditional (if / when + presente, presente: a regra sempre verdadeira).
+   Lidos pela cena Line by Line do kit (kit/legenda.js). */
+window.WL_MOMENTOS = [
+  { i: [12, 13, 14], k: 'Stay on the road', quem: 'A man in the town',
+    contexto: 'Trees block the highway, so the family takes a detour. They stop and ask a local man for directions.',
+    frase: 'I was wondering if you could point me in the direction of the highway. — Not a problem. <b>Stay on the road.</b>',
+    explica: 'A normal answer, but it sounds like a warning. In this town, the road has its own rules.',
+    formula: 'If you <b>leave</b> the highway, you <b>get</b> lost. (if + present, present)',
+    tente: 'What happens in your city if you drive downtown at six PM?',
+    ex: 'If you drive downtown at six, you get stuck in traffic for an hour.',
+    sente: { q: 'How safe does this feel?', de: 'totally safe', a: 'very creepy', st: 'It feels … because when people …' } },
+  { i: [15, 16, 17], k: 'In circles', quem: 'The family in the car',
+    contexto: 'They drive and drive, and the road brings them back to the same place.',
+    frase: 'We’re driving in circles. You drove out this way. — <b>How did we get back here?</b>',
+    explica: '<i>Driving in circles</i> = going round and round. It happens every time: it is a rule of the place.',
+    formula: 'When they <b>drive</b> out, the road <b>brings</b> them back. · ✗ the road bring',
+    tente: 'Tell me something that always happens when you take the bus or the subway.',
+    ex: 'When I take the subway at eight, I never get a seat.',
+    sente: { q: 'How scared is the family now?', de: 'just confused', a: 'terrified', st: 'They’re … because when they drive …' } },
+  { i: [22, 23, 24, 25], k: 'Everyone sees the tree', quem: 'A woman in the town',
+    contexto: 'A woman explains: everybody in the town arrived the same way.',
+    frase: 'I know none of this makes sense yet. Everyone in this town has been exactly where you are right now. <b>Everyone sees the tree.</b>',
+    explica: 'It happens to everyone, always. A general truth is in the present, not with <i>will</i>.',
+    formula: 'If you <b>arrive</b> here, you <b>stay</b>. · ✗ you will stay (for a rule)',
+    tente: 'Tell me a rule that is always true in your family.',
+    ex: 'If my grandmother visits, we eat too much. Always!',
+    sente: { q: 'How hopeless is this moment?', de: 'hopeful', a: 'hopeless', st: 'It’s … because if you arrive here …' } },
+  { i: [36, 37, 38, 39, 40, 41], k: 'After dark', quem: 'The sheriff',
+    contexto: 'The sheriff explains the most important rule of the town.',
+    frase: 'It’s important for you to understand what happens after dark. <b>Lock your door, nail your window shut.</b> You do these things, your family’s gonna be safe.',
+    explica: '<i>Nail shut</i> = close with nails, so nobody can open it. These are not suggestions: they are survival rules.',
+    formula: 'When it <b>gets</b> dark, everybody <b>stays</b> inside. · If you <b>lock</b> the door, you <b>are</b> safe.',
+    tente: 'What do you always do when you get home at night?',
+    ex: 'When I get home, I lock the door and I turn on all the lights.',
+    sente: { q: 'How serious is the sheriff?', de: 'relaxed', a: 'deadly serious', st: 'He’s … because when it gets dark …' } },
+  { i: [46, 47], k: 'Break the rules', quem: 'A voice in the town',
+    contexto: 'A familiar voice at the window asks to come in. Someone opens the door.',
+    frase: '<b>This is what happens</b> when you break the rules.',
+    explica: 'The rule is always true, and so is the consequence. Present + present.',
+    formula: 'If you <b>open</b> the door, they <b>come</b> in. · when the sun <b>goes</b> down (✗ go down)',
+    tente: 'What happens when you break a rule at your work or school?',
+    ex: 'When you arrive late, you lose your break.',
+    sente: { q: 'How scary is this moment?', de: 'a little', a: 'terrifying', st: 'It’s … because if you open the door …' } }
+];
+
+window.WL_MOMENTOS_ESTILO = { forma: 'termometro', cor: '#8fb35a', titulo: 'The rules of the town.', sub: 'Hear the line, say how scared you are, then say the rule: if / when + present.', rot: { por: 'WHAT IT MEANS', padrao: 'IF / WHEN + PRESENT', voce: 'YOUR TURN', ex: 'LIKE THIS' } };

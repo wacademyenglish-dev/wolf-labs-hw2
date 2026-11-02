@@ -1,0 +1,149 @@
+/* ============================================================
+   He Wouldn’t Be Here · The Vought Ranking · LIVE CLASS 06/10/2026
+   the Vought hero ranking: PR changes the story, and the board moves
+   ============================================================ */
+:root{
+  --noite:#07090e; --noite-rgb:7,9,14; --tinta:#e6e9ef;
+  --t1:#f1f3f7; --t2:#b3bac7; --t2-rgb:179,186,199; --t3:#7b8394;
+  --ac:#d8b34a; --ac2:#f0d27a; --frio:#e04a3c; --coral:#f2837a;
+  --vidro:rgba(230,233,239,.045); --vidro2:rgba(230,233,239,.08); --vidro3:rgba(230,233,239,.11);
+  --fio:rgba(214,220,232,.11); --fio2:rgba(214,220,232,.2);
+  --ok:#9fdcae; --am:#d8b34a; --erro:#f2837a; --lil:#c3a8f0;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Instrument Serif',Georgia,serif; --ui:'Hanken Grotesk',system-ui,sans-serif; --mono:'Hanken Grotesk',system-ui,sans-serif;
+  --r1:12px; --r2:8px; --sombra:0 24px 60px rgba(0,0,0,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#141005}
+.btn.cheio{background:var(--ac);border-color:var(--ac);color:#141005}
+.cab h1,.pergunta h2,.follow p.q,.carta b,.cr h3,#guia h2,.marca span{font-weight:400;letter-spacing:0}
+.cab h1{font-size:clamp(34px,2.9vw,56px)}
+.pergunta h2{font-size:clamp(24px,1.9vw,34px)}
+.capa{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:10px 0 6px;font:400 clamp(58px,5.4vw,104px)/.98 var(--disp);color:var(--t1)}
+.capa .banda{margin:0 0 18px;font:500 clamp(18px,1.3vw,22px) var(--ui);color:var(--ac)}
+.capa .sub{margin:0 0 26px;font:400 clamp(18px,1.3vw,22px)/1.55 var(--ui);color:var(--t2);max-width:32em}
+.tb-foto{margin:0;display:grid;gap:14px}
+.tb-foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r1);border:1px solid #1a1e27;box-shadow:var(--sombra)}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.versao{min-height:0;padding:11px 15px;font-size:clamp(15px,1.05vw,17px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(159,220,174,.1)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.lado-l{display:grid;gap:10px;align-content:start}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.tb-mesa{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.tb-ops{display:grid;gap:6px}
+.tb-linha-ok{display:flex;align-items:center;gap:12px} .tb-linha-ok span{flex:1}
+.tb-centro{max-width:1150px;margin:0 auto 14px;width:100%;display:grid;gap:12px}
+
+/* a onda da música: o traço comum */
+.onda{position:relative;display:flex;align-items:center;gap:2px;height:44px}
+.onda i{flex:1;border-radius:2px;background:linear-gradient(180deg,var(--ac),color-mix(in srgb,var(--ac) 40%,#000));opacity:.7}
+.onda .mk{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--t1);border:0;padding:0;margin:0}
+.onda.grande{height:84px;max-width:1300px;width:100%;margin:34px auto 40px}
+.onda.grande button.mk:nth-child(even) span{top:auto;bottom:-30px}
+.onda.grande button.mk{width:14px;margin-left:-6px;background:transparent;cursor:pointer}
+.onda.grande button.mk::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--t2)}
+.onda.grande button.mk span{position:absolute;top:-30px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 14px var(--ui);color:var(--t2);padding:3px 10px;border-radius:999px;border:1px solid var(--fio2);background:var(--noite)}
+.onda.grande button.mk.on::before{background:var(--ac2);width:3px}
+.onda.grande button.mk.on span{color:#141005;background:var(--ac);border-color:var(--ac)}
+.onda.grande button.mk:focus-visible span{outline:2px solid var(--ac2);outline-offset:2px}
+
+/* o resto: quieto */
+.tb-encarte{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:26px;max-width:1300px;margin:0 auto 18px;width:100%;padding:18px;border-radius:var(--r1)}
+.tb-capinha{display:grid;gap:10px}
+.tb-capinha img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid #20242f}
+.tb-capinha small{display:block;font:600 14px var(--ui);color:var(--ac)} .tb-capinha b{font:400 clamp(24px,1.9vw,32px)/1.1 var(--disp);color:var(--t1)}
+.tb-encarte dl{margin:0;display:grid;gap:14px;align-content:center}
+.tb-encarte dt{font:600 14px var(--ui);color:var(--frio)} .tb-encarte dd{margin:2px 0 0;font:400 clamp(19px,1.4vw,24px)/1.4 var(--disp);color:var(--t1)}
+.tb-selo{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:1px dashed var(--fio2);text-align:center;padding:16px}
+.tb-selo b{font:italic 400 clamp(30px,2.4vw,42px) var(--disp);color:var(--ac)} .tb-selo small{font:400 15px var(--ui);color:var(--t2)}
+.tb-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.tb-vcol{display:grid;gap:6px;width:100%;max-width:min(100%,82vh);justify-self:center} .tb-cred{font:400 13px var(--ui);color:var(--t3)}
+.tb-dica{text-align:center;font:italic 400 22px var(--disp);color:var(--t3)}
+.tb-sentido{display:block;font:400 clamp(19px,1.4vw,23px)/1.45 var(--disp);color:var(--t1);margin-bottom:8px}
+.tb-gram{display:block;font:400 16px/1.5 var(--ui);color:var(--t2)} .tb-gram b{color:var(--ac2)}
+.tb-pista{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--ac)}
+.tb-pista small{font:600 13px var(--ui);color:var(--ac)} .tb-pista p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.tb-fala{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r2);border-left:4px solid var(--frio)}
+.tb-fala small{display:flex;align-items:center;gap:8px;font:600 13px var(--ui);color:var(--frio)} .tb-fala p{margin:0;font:400 clamp(22px,1.7vw,30px)/1.3 var(--disp);color:var(--t1)}
+.tb-luz{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 10px rgba(242,131,122,.7)}
+.tb-ar{display:flex;align-items:center;justify-content:center;gap:12px;padding:22px;border-radius:var(--r1)} .tb-ar p{margin:0;font:400 30px var(--disp);color:var(--t1)}
+.tb-carta{display:grid;gap:4px;padding:10px 14px;border-radius:var(--r2);border:1px solid var(--fio2);background:var(--vidro)}
+.tb-carta > small{font:600 13px var(--ui);color:var(--t3)}
+.tb-carta p{margin:0;font:400 clamp(14px,1vw,16px)/1.45 var(--ui);color:var(--t1)}
+.tb-carta.aluno{border-color:rgba(216,179,74,.45);background:rgba(216,179,74,.05)} .tb-carta.aluno > small{color:var(--ac)}
+.tb-carta.prof{border-style:dashed}
+.tb-carta details{margin-top:4px;display:grid;gap:3px} .tb-carta summary{cursor:pointer;font:600 13px var(--ui);color:var(--t3)}
+.so-aluno-c{display:none}
+html.wl-sala-aluno .so-aluno-c{display:grid}
+
+.fim .grande span{font-size:clamp(15px,1.1vw,18px)}
+
+/* a cara de The Boys: Archivo Black no título, Inter Tight no texto, JetBrains Mono no painel */
+:root{--disp:'Inter Tight',system-ui,sans-serif;--ui:'Inter Tight',system-ui,sans-serif}
+.cab h1,.capa h1{font-family:'Archivo Black',Impact,sans-serif;font-weight:400;letter-spacing:-.01em}
+.capa h1{font-size:clamp(50px,4.8vw,92px);line-height:.98}
+.cab h1{font-size:clamp(25px,2.1vw,40px);line-height:1.12}
+.pergunta h2{font-family:var(--ui);font-weight:600}
+.tb-pista p{font-family:var(--ui)!important;font-weight:700}
+.tb-sentido,.tb-encarte dd{font-family:var(--ui)!important;font-weight:400}
+/* o painel do ranking: o gesto forte */
+.tb-painel{display:grid;gap:6px;padding:12px 16px;border-radius:8px;background:linear-gradient(#0c1420,#080c14);box-shadow:inset 0 0 0 1px #1d2c40,0 18px 40px #000c;max-width:clamp(360px,33vw,620px);width:100%;margin:0 auto;font-family:'JetBrains Mono',ui-monospace,monospace}
+.tb-topo{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #1d2c40;padding-bottom:6px}
+.tb-topo b{font:700 clamp(12px,.9vw,15px) 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#d8b34a}
+.tb-topo small{font:600 11px 'JetBrains Mono',monospace;color:#e04a3c;text-transform:uppercase;letter-spacing:.1em}
+.tb-painel ol{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.tb-l{display:grid;grid-template-columns:20px minmax(90px,1.1fr) 1fr 30px 46px;gap:8px;align-items:center;min-height:clamp(22px,2.7vh,29px);padding:0 4px;border-radius:3px}
+.tb-pos{font:600 12px 'JetBrains Mono',monospace;color:#5d7392}
+.tb-l b{font:600 clamp(12px,.88vw,15px) 'Inter Tight',sans-serif;color:#d9e4f2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-barra{display:block;height:8px;border-radius:4px;background:#132033;overflow:hidden}
+.tb-barra i{display:block;height:100%;background:linear-gradient(90deg,#9c7d2a,#d8b34a);transition:width .8s}
+.tb-nota{font:700 13px 'JetBrains Mono',monospace;color:#d8b34a;text-align:right}
+.tb-seta{font:700 11px 'JetBrains Mono',monospace}
+.tb-l.sobe .tb-seta{color:#5fcf8e}.tb-l.desce .tb-seta{color:#e04a3c}
+.tb-l.desce .tb-barra i{background:linear-gradient(90deg,#7a2a22,#c7473a)}
+.tb-l.novo{background:#d8b34a1a;animation:tb-mexe .9s ease-out both}
+@keyframes tb-mexe{0%{transform:translateX(-8px);background:#d8b34a44}100%{transform:none}}
+.tb-fato{margin:4px 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:baseline;border-top:1px dashed #1d2c40;padding-top:6px;font:400 clamp(13px,.95vw,16px)/1.3 'Inter Tight',sans-serif;color:#a9b8cc}
+.tb-fato span{font:700 10px 'JetBrains Mono',monospace;color:#e04a3c;text-transform:uppercase;letter-spacing:.08em}
+.tb-painel.cheio .tb-topo b{color:#f0d27a}
+@media (prefers-reduced-motion:reduce){.tb-l.novo{animation:none}.tb-barra i{transition:none}}
+/* o resto: quieto */
+.tb-regra{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;max-width:1300px;margin:0 auto 16px;width:100%}
+.tb-regra > div{display:grid;gap:4px;padding:14px 18px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.tb-regra small{font:700 13px var(--ui);color:var(--frio)} .tb-regra p{margin:0;font:600 clamp(18px,1.3vw,23px)/1.35 var(--ui);color:var(--t1)} .tb-regra b{color:var(--ac2)} .tb-regra span{font:400 15px var(--ui);color:var(--t2)}
+.tb-mistos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1300px;margin:0 auto;width:100%}
+.tb-mi{display:grid;gap:6px;align-content:start;padding:14px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background:var(--vidro)}
+.tb-mi small{font:700 13px var(--ui);color:var(--ac)} .tb-mi p{margin:0;font:600 clamp(17px,1.2vw,21px)/1.3 var(--ui);color:var(--t1)}
+.tb-encarte .tb-capinha img{aspect-ratio:16/10;max-height:clamp(150px,23vh,250px)}
+.tb-encarte{margin-bottom:6px}.tb-encarte dl{gap:8px}.tb-encarte dd{font-size:clamp(16px,1.02vw,19px)!important;line-height:1.45}
+@media (max-width:1100px){ .tb-regra{grid-template-columns:1fr} .tb-mistos{grid-template-columns:1fr 1fr} }
+@media (max-width:620px){ .tb-mistos{grid-template-columns:1fr} .capa h1{font-size:44px} .tb-painel{max-width:100%;padding:10px} .tb-l{grid-template-columns:16px 1fr 50px 26px 38px;gap:5px} .aq-pilha{max-width:calc(100% - 26px)!important;margin-left:0!important} }
+
+@media (max-width:1100px){ .mesa-c,.capa,.tb-mesa,.tb-video,.tb-encarte{grid-template-columns:1fr} .tb-regra{grid-template-columns:1fr} }
+@media (max-width:620px){
+  .onda.grande{height:64px;margin-top:40px} .onda.grande button.mk span{font-size:11px;padding:2px 6px}
+  .tb-capinha img{aspect-ratio:16/9}
+}
+
+/* a tira de filme (aulas de filme no lugar da onda de som) */
+.tira{border-radius:6px;padding:0 6px;background:#070707;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.tira-furos{height:14px;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(255,255,255,.13) 9px 19px,transparent 19px 28px);background-size:28px 6px;background-repeat:repeat-x;background-position:0 50%}
+.tira-q{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.tq{position:relative;display:grid;align-content:end;gap:1px;aspect-ratio:16/9;min-height:0;padding:6px 8px;border:0;border-radius:2px;overflow:hidden;text-align:left;background:#141414;font:inherit;color:inherit}
+.tq-img{position:absolute;inset:0;background:var(--bg) center/cover;filter:brightness(.42) saturate(.8)}
+.tq b,.tq span{position:relative}
+.tq b{font:600 10px var(--ui);color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums}
+.tq span{font:600 11px/1.15 var(--ui);color:var(--t1)}
+.tira.grande{max-width:1300px;width:100%;margin:6px auto 22px}
+.tira.grande .tq{cursor:pointer;outline:3px solid transparent;outline-offset:-3px;transition:outline-color .2s}
+.tira.grande .tq b{font-size:13px} .tira.grande .tq span{font-size:clamp(14px,1.05vw,18px)}
+.tira.grande .tq:hover .tq-img{filter:brightness(.55)}
+.tira.grande .tq.on{outline-color:var(--ac)} .tira.grande .tq.on .tq-img{filter:brightness(.7) saturate(1)}
+.tira.grande .tq:focus-visible{outline-color:var(--ac2)}
+@media (max-width:620px){.tira.grande .tira-q{grid-template-columns:repeat(3,minmax(0,1fr))} .tira.grande .tq span{font-size:12px} .tira.grande .tq b{font-size:11px} .capa-r .tira{display:none}}
+
+
+/* 23/10/2026 · formatos novos: o painel com seis heróis ao lado do cartão */
+.fm-lado2{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);gap:22px;align-items:start;width:min(1500px,100%);margin:0 auto}
+.fm-lado2>.fm-gap{display:none}
+@media (max-width:1100px){.fm-lado2{grid-template-columns:minmax(0,1fr)}}

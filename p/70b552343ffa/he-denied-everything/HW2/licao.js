@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "He Denied Everything",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/70b552343ffa/he-denied-everything/img/live-podio.webp",
+  "capa": "../img/live-podio.webp",
   "alvo": "reporting verbs and the pattern after each: deny / admit + -ing; promise / refuse + to + verb; accuse someone of + -ing; apologize for + -ing",
   "abrir": "When did someone last promise you something, at work or at school?",
   "fecho": "<b>Deny / admit</b> + -ing: <i>He denied taking it.</i> <b>Promise / refuse</b> + to: <i>She promised to bring it back.</i> <b>Accuse someone of</b> + -ing: <i>They accused him of hiding it.</i> <b>Apologize for</b> + -ing: <i>He apologized for being late.</i> Never <i>denied to take</i>, never <i>promised bringing</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a small office mix-up. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/70b552343ffa/he-denied-everything/img/live-podio.webp",
+      "img": "../img/live-podio.webp",
       "leg": "Microphones at a staff meeting",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Bruno denied taking the stapler.",
-          "img": "https://wolf-labs.pages.dev/p/70b552343ffa/he-denied-everything/img/live-podio.webp",
+          "img": "../img/live-podio.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Carla apologized for saying that.",
-          "img": "https://wolf-labs.pages.dev/p/70b552343ffa/he-denied-everything/img/live-arquivo.webp",
+          "img": "../img/live-arquivo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "She promised to bring it back.",
-          "img": "https://wolf-labs.pages.dev/p/70b552343ffa/he-denied-everything/img/live-torre.webp",
+          "img": "../img/live-torre.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/70b552343ffa/he-denied-everything/img/live-arquivo.webp",
+      "img": "../img/live-arquivo.webp",
       "leg": "Papers on a dark desk",
       "pede": "Look at the picture: papers on a desk. Write 2 or 3 sentences about something small that went missing or went wrong at home, work or class. Report what people said. Use <b>denied, admitted, promised, refused, apologized for</b> or <b>accused … of</b>.",
       "ph": "My brother denied …",

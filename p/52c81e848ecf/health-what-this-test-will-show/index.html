@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -123,5 +124,267 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A doctor explains anemia and next steps.",
+   "p": "One question. Then the video. Then the questions."
+  },
+  "ordem": {
+   "t": "Explaining a dental filling.",
+   "p": "Tap the steps in order. Then explain them."
+  },
+  "cv-escala": {
+   "t": "Four opinions about explaining.",
+   "p": "Tap 1 to 5. Defend it."
+  },
+  "prova": {
+   "t": "Explain a test from your job.",
+   "p": "Thirty seconds to plan. Then explain, step by step."
+  },
+  "pode": {
+   "t": "Lesson 6: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Explicar exames, resultados e procedimentos: agenda, resultado no contexto (faixa normal), palavras simples, passos em ordem, will / won’t e checar o entendimento.",
+  "armadilha": "“Exam” do português vira “The exam will show” (é test). E “You will feel nothing pain” (won’t feel any pain) e o seco “Did you understand?” (é Does that make sense?).",
+  "pal": [
+   "I’m going to explain…",
+   "This test will show…",
+   "normal range",
+   "First, … Then… After that… Finally…",
+   "You won’t feel any pain",
+   "The results will be ready…",
+   "Does that make sense so far?",
+   "test"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 6 de English for Healthcare: explicar o que um exame vai mostrar.",
+   "perg": "What test or procedure do you explain most often?",
+   "pula": "Leia a frase da capa e abra."
+  },
+  "video": {
+   "obj": "Nottingham (só 0:47–5:30): o médico explica anemia; apontar agenda, faixa normal, tranquilizar, palavras simples.",
+   "perg": "How does the doctor make the patient feel safe?",
+   "pula": "O trecho vai inteiro; duas perguntas depois bastam."
+  },
+  "ordem": {
+   "obj": "Uma obturação em passos embaralhados; o aluno ordena e conta com first, then, after that, finally.",
+   "perg": "What happens first? And after that?",
+   "pula": "Ordene e conte só uma vez."
+  },
+  "cv-escala": {
+   "obj": "Quatro opiniões sobre COMO explicar, de 1 a 5; o professor fica do outro lado.",
+   "perg": "Do patients only need to trust you?",
+   "pula": "Duas opiniões bastam."
+  },
+  "prova": {
+   "obj": "Tarefa com relógio: o aluno explica um exame do próprio trabalho; checklist e modelo depois.",
+   "perg": "What will this test show?",
+   "pula": "Uma tentativa, sem repetir."
+  },
+  "pode": {
+   "obj": "Can-do: o aluno lê e marca; lição: escrever a explicação do procedimento mais comum (vira roteiro).",
+   "perg": "Can you check that the patient understood?",
+   "pula": "Leia só as linhas abertas. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre o trabalho em saúde do aluno e como ele explica as coisas (nunca casos pessoais de doença).",
+   "perg": "What’s the hardest thing to explain at work?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre dilemas de comunicação com paciente.",
+   "perg": "Simple words or the real medical term?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno é o médico e responde às perguntas de um paciente sobre o exame de sangue.",
+   "perg": "Doctor, what will this blood test show?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Explaining at work.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "will / won’t",
+    "First, … then…",
+    "Does that make sense?"
+   ],
+   "cartas": [
+    {
+     "k": "HARDEST",
+     "q": "What’s the hardest thing to explain to a patient?",
+     "fup": "How do you make it simple?",
+     "st": [
+      "The hardest thing is …",
+      "I usually …"
+     ],
+     "ex": "The hardest thing is a long treatment. I usually draw it on paper."
+    },
+    {
+     "k": "NERVOUS",
+     "q": "What do you say to a nervous patient before a procedure?",
+     "fup": "Does it work?",
+     "st": [
+      "I tell them …",
+      "You won’t …"
+     ],
+     "ex": "I tell them it will take ten minutes and they won’t feel any pain."
+    },
+    {
+     "k": "WORDS",
+     "q": "Which medical words do patients often not understand?",
+     "fup": "What do you say instead?",
+     "st": [
+      "Many patients don’t know …",
+      "Instead, I say …"
+     ],
+     "ex": "Many patients don’t know “inflammation”. Instead, I say “the area is swollen and red”."
+    },
+    {
+     "k": "RESULTS",
+     "q": "How do your patients get their results?",
+     "fup": "Is that a good system?",
+     "st": [
+      "They get them …",
+      "I think …"
+     ],
+     "ex": "They get them on an app. I think they should hear it from us first."
+    },
+    {
+     "k": "CHECKING",
+     "q": "How do you check that a patient understood?",
+     "fup": "What happens when they didn’t?",
+     "st": [
+      "I ask …",
+      "If not, I …"
+     ],
+     "ex": "I ask them to explain it back to me. If not, I try again with simpler words."
+    },
+    {
+     "k": "ENGLISH",
+     "q": "Have you ever explained something to a patient in English?",
+     "fup": "How did it go?",
+     "st": [
+      "Yes, once …",
+      "Not yet, but I will …"
+     ],
+     "ex": "Not yet, but I will soon. Many tourists come to our clinic."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "In my experience,",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "Simple words, or the real medical term?",
+     "a": "Simple words",
+     "b": "The real term",
+     "fa": [
+      "Simple words. The patient needs to understand.",
+      "Big words can scare people."
+     ],
+     "fb": [
+      "The real term. Patients will search for it online anyway.",
+      "Say it, then explain it."
+     ]
+    },
+    {
+     "q": "Results on the phone first, or the explanation first?",
+     "a": "Phone first",
+     "b": "Explanation first",
+     "fa": [
+      "Phone first. Patients want their results fast.",
+      "It’s their information."
+     ],
+     "fb": [
+      "Explanation first. A number without context causes panic.",
+      "The doctor can show the normal range."
+     ]
+    },
+    {
+     "q": "Explain everything, or only what the patient asks?",
+     "a": "Everything",
+     "b": "Only what they ask",
+     "fa": [
+      "Everything. Informed patients make better choices.",
+      "They might not know what to ask."
+     ],
+     "fb": [
+      "Only what they ask. Too much information is confusing.",
+      "Each patient wants a different level of detail."
+     ]
+    },
+    {
+     "q": "A drawing or a video to explain a procedure?",
+     "a": "A drawing",
+     "b": "A video",
+     "fa": [
+      "A drawing. It’s personal and fast.",
+      "You can adapt it to the patient."
+     ],
+     "fb": [
+      "A video. It’s clear and the patient can watch it again.",
+      "It saves time for the team."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Does that make sense?"
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "You are the doctor now.",
+   "p": "Your teacher is the patient.",
+   "aluno": "Listen to the patient’s question. Answer as the doctor: simple words, steps in order, will / won’t.",
+   "perguntas": [
+    "What will this blood test show?",
+    "Will it hurt?",
+    "What happens first, and then?",
+    "When will the results be ready?",
+    "My result is a bit low. Is that serious?",
+    "What will happen after that?"
+   ],
+   "st": [
+    "This test will show …",
+    "First, … Then …",
+    "You won’t …"
+   ],
+   "ex": "This test will show your iron level. First, the nurse will take a little blood. You won’t feel much, just a small pinch."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

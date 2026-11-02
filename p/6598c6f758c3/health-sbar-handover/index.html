@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -114,5 +115,267 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "video": {
+   "t": "A night nurse calls a doctor.",
+   "p": "One question, then the video, then the questions."
+  },
+  "ordem": {
+   "t": "A physio calls the doctor.",
+   "p": "Tap the eight sentences in order: S, B, A, R."
+  },
+  "cv-arena": {
+   "t": "Handover: face to face, or in the app?",
+   "p": "One minute for your side. Then swap."
+  },
+  "prova": {
+   "t": "Two cases. Give the SBAR.",
+   "p": "45 seconds to read. Then speak about 75."
+  },
+  "pode": {
+   "t": "What can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Passagem de plantão e escalonamento com SBAR (Situation, Background, Assessment, Recommendation): quem é e o problema, só o histórico relevante, números, preocupação clara e pedido claro.",
+  "armadilha": "O brasileiro conta a história inteira antes do problema, fala sem números e termina sem pedido; ou é vago demais (“I think maybe perhaps…”) em vez de “I’m worried that…” + “Could you…?”.",
+  "pal": [
+   "This is … from …",
+   "I’m calling about …",
+   "was admitted with …",
+   "I’m worried that …",
+   "Could you …?",
+   "Would you consider …?",
+   "one hundred and ten over sixty",
+   "handover"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 13 do English for Healthcare: SBAR.",
+   "perg": "How do you call a doctor at 3 a.m.? What do you say first?",
+   "pula": "Pergunte e entre."
+  },
+  "video": {
+   "obj": "Assistir o vídeo oficial da AHRQ: uma enfermeira liga para o médico sobre paciente de 82 anos confusa.",
+   "perg": "What was the nurse worried about?",
+   "pula": "O vídeo é inteiro; duas perguntas depois bastam."
+  },
+  "ordem": {
+   "obj": "Ordenar o SBAR de um fisioterapeuta (suspeita de trombo) e dizer em voz alta.",
+   "perg": "Is this background or assessment?",
+   "pula": "Ordene e pule a leitura completa."
+  },
+  "cv-arena": {
+   "obj": "Momento de conversa: passagem de plantão cara a cara ou pelo app; um minuto de cada lado.",
+   "perg": "What gets lost in a written handover?",
+   "pula": "Um lado só basta."
+  },
+  "prova": {
+   "obj": "Dois casos fictícios: 45 s para ler e cerca de 75 s de SBAR; checklist e nova tentativa.",
+   "perg": "What exactly are you asking the doctor to do?",
+   "pula": "Um caso basta."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; pedir um SBAR de um caso real anonimizado do trabalho.",
+   "perg": "Can you say a blood pressure clearly?",
+   "pula": "Três linhas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre comunicação na equipe de saúde e plantões reais do aluno.",
+   "perg": "What’s the hardest part of a handover for you?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre comunicação e segurança do paciente, com argumentos.",
+   "perg": "Why do you think that?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno faz a ligação SBAR e o professor é o médico de plantão que questiona.",
+   "perg": "What do you want me to do?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Handovers in your work.",
+   "p": "Pick a card. Be clear and specific.",
+   "palavras": [
+    "I’m calling about",
+    "I’m worried that",
+    "Could you …?"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR SHIFT",
+     "q": "How does a handover work in your workplace?",
+     "fup": "How long does it take?",
+     "st": [
+      "In my workplace, …",
+      "It usually takes …"
+     ],
+     "ex": "In my workplace, we do it at the bedside. It usually takes about twenty minutes."
+    },
+    {
+     "k": "NIGHT CALLS",
+     "q": "Is it hard to call a doctor at night?",
+     "fup": "What makes it easier?",
+     "st": [
+      "It’s hard because …",
+      "What helps is …"
+     ],
+     "ex": "It’s hard because they’re tired. What helps is having the numbers ready."
+    },
+    {
+     "k": "NUMBERS",
+     "q": "Say three numbers you use every day at work, clearly.",
+     "fup": "Which one is hardest in English?",
+     "st": [
+      "The first is …",
+      "The hardest is …"
+     ],
+     "ex": "The first is one hundred and twenty over eighty. The hardest is oxygen: ninety-four percent."
+    },
+    {
+     "k": "A GOOD COLLEAGUE",
+     "q": "Who gives the best handovers on your team? What do they do?",
+     "fup": "What can you copy?",
+     "st": [
+      "… always …",
+      "I can copy …"
+     ],
+     "ex": "Ana always starts with the main problem. I can copy her first sentence."
+    },
+    {
+     "k": "CONCERN",
+     "q": "How do you say you’re worried without sounding panicked?",
+     "fup": "Can you give an example?",
+     "st": [
+      "I’d say …",
+      "For example, …"
+     ],
+     "ex": "I’d say “I’m worried that she’s getting worse.” For example, her pressure is dropping."
+    },
+    {
+     "k": "ABROAD",
+     "q": "Would you like to work in healthcare in another country?",
+     "fup": "Where, and why?",
+     "st": [
+      "I’d like to work in …",
+      "because …"
+     ],
+     "ex": "I’d like to work in Ireland because they need nurses, and I love the culture."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side. Defend it.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "I think",
+    "patient safety"
+   ],
+   "rodadas": [
+    {
+     "q": "Handover at the bedside, or in the staff room?",
+     "a": "Bedside",
+     "b": "Staff room",
+     "fa": [
+      "Bedside. The patient can correct mistakes.",
+      "You see the patient, not just the notes."
+     ],
+     "fb": [
+      "Staff room. You can talk openly.",
+      "It’s faster and more private."
+     ]
+    },
+    {
+     "q": "SBAR for every call, or only for emergencies?",
+     "a": "Every call",
+     "b": "Only emergencies",
+     "fa": [
+      "Every call. It becomes a habit.",
+      "Habits save lives in emergencies."
+     ],
+     "fb": [
+      "Only emergencies. Simple questions don’t need four parts.",
+      "Too much structure wastes time."
+     ]
+    },
+    {
+     "q": "The doctor says “Just watch her.” Accept it, or ask again?",
+     "a": "Accept it",
+     "b": "Ask again",
+     "fa": [
+      "Accept it. The doctor has the final decision.",
+      "Document it and keep watching."
+     ],
+     "fb": [
+      "Ask again. “Would you consider coming to see her?”",
+      "If I’m worried, I should say it twice."
+     ]
+    },
+    {
+     "q": "Should patients hear the handover?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. It’s their health.",
+      "They often add important details."
+     ],
+     "fb": [
+      "No. Some information can scare them.",
+      "The team needs to talk freely first."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Clear, specific, safe."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "Call the doctor on duty.",
+   "p": "Your teacher is the tired doctor.",
+   "aluno": "You are calling about a patient (invent a simple case). Answer the doctor’s questions with SBAR and numbers.",
+   "perguntas": [
+    "Who is this, and why are you calling?",
+    "When was the patient admitted, and why?",
+    "What are the vital signs now?",
+    "What do you think is happening?",
+    "What do you want me to do?",
+    "Can it wait until the morning?"
+   ],
+   "st": [
+    "This is … from …",
+    "I’m worried that …",
+    "Could you … / Would you consider …?"
+   ],
+   "ex": "This is Paula, the night nurse on Ward 4. I’m calling about Mr. Silva. His pressure is ninety over fifty. I’m worried that he’s bleeding. Could you come and see him now?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

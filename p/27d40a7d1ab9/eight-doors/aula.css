@@ -1,0 +1,75 @@
+/* ============================================================
+   THE EIGHT DOORS · THE OCTAGON · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: a sala de testes à noite —
+   verde-garrafa quase preto; o octógono em traço fino com a forma
+   medida em âmbar cheio e o palpite em tracejado lilás; as portas como
+   etiquetas de pasta; o laudo uma ficha de prova escura com bolhas.
+   ============================================================ */
+:root{
+  --noite:#060a08; --noite-rgb:6,10,8; --tinta:#e9f0ec;
+  --t1:#edf4f0; --t2:#c3d0c9; --t2-rgb:195,208,201; --t3:#85968d;
+  --ac:#f0b04a; --ac2:#ffd794; --lil:#b69cff; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(233,240,236,.05); --vidro2:rgba(233,240,236,.085); --vidro3:rgba(233,240,236,.12);
+  --fio:rgba(222,236,228,.12); --fio2:rgba(222,236,228,.22); --luz:rgba(233,240,236,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1800}
+.btn.cheio{color:#2a1800}
+.capa{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(62px,6.2vw,120px)/.92 var(--disp);letter-spacing:-.04em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--t1)}
+.capa-r{display:grid;place-items:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.on{border-color:var(--ac);background:#2a1e0a;color:var(--ac2)}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande-p{min-height:50px;padding:0 20px;font:700 clamp(14px,1.1vw,19px) var(--disp)} .pilula[disabled]{opacity:.45}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start} .lado-l.centro{justify-items:center}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.12vw,19px);text-align:left}
+.versao.on{border-color:var(--ac);background:#2a1e0a} .versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s} .versao[disabled]{opacity:.45}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .pede b{font:600 clamp(17px,1.35vw,23px)/1.4 var(--disp)}
+.pede.centro-t{max-width:860px;margin:0 auto 10px;text-align:center}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:900px;margin:0 auto 10px;width:100%} .balao p{margin:0;font:700 clamp(19px,1.6vw,27px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)}
+.aberta{position:relative;border-radius:var(--r1);background-size:cover;background-position:center;height:clamp(150px,calc(100vh / var(--zv,1) - 520px),360px);box-shadow:inset 0 0 120px rgba(0,0,0,.8)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(6,10,8,.88);font:700 13px var(--mono);color:var(--ac2)}
+.toca-linha{display:flex;align-items:center;gap:12px;font:700 13px var(--mono);letter-spacing:.1em;color:var(--t2)}
+.ouve-c{display:grid;gap:8px;padding:12px 14px;border-radius:var(--r2)} .ouve-c .transcricao{margin:0}
+
+/* o octógono */
+.octo{display:block;width:min(100%,460px);height:auto;max-height:calc(100vh / var(--zv,1) - 340px);min-height:220px}
+.octo.mini{width:min(100%,220px);min-height:0;max-height:none;margin:0 auto}
+.octo .anel-o{fill:none;stroke:rgba(222,236,228,.12);stroke-width:1} .octo .raio-o{stroke:rgba(222,236,228,.08);stroke-width:1}
+.octo .med-o{fill:rgba(240,176,74,.22);stroke:var(--ac);stroke-width:3;filter:drop-shadow(0 0 8px rgba(240,176,74,.45))}
+.octo .chute-o{fill:none;stroke:var(--lil);stroke-width:2;stroke-dasharray:6 5}
+.octo .rot-o{font:800 10px var(--mono);letter-spacing:.08em;fill:var(--t2);text-anchor:middle}
+.legenda-o{display:flex;gap:14px;font:700 12px var(--mono)} .legenda-o .med{color:var(--ac2)} .legenda-o .gut{color:var(--lil)}
+
+/* portas, escada, prova */
+.portas-l{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin:4px 0 10px} .portas-l.tres{grid-template-columns:repeat(3,minmax(0,1fr));max-width:900px;margin:4px auto 10px}
+.porta-b{min-height:44px;padding:6px 8px;border-radius:10px 10px 4px 4px;border:1px solid var(--fio2);background:#0e1511;color:var(--t2);font:800 12px var(--mono);letter-spacing:.06em;cursor:pointer}
+.porta-b i{font-style:normal;color:var(--ac2)} .porta-b.sel{border-color:var(--ac);background:#2a1e0a;color:var(--ac2)} .porta-b.feita{border-bottom:3px solid var(--ok)}
+.escada-b{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px} .escada-b .pilula.grande-p{padding:0 8px;font-size:clamp(12px,.9vw,16px)}
+.numeros{display:flex;flex-wrap:wrap;gap:5px} .num{width:40px;height:40px;border-radius:10px;border:1px solid var(--fio2);background:#0e1511;color:var(--t1);font:800 15px var(--mono);cursor:pointer} .num.on{border-color:var(--ac);background:#2a1e0a;color:var(--ac2)} .num[disabled]{opacity:.4}
+.escada-l{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:6px 0 12px} .degrau-l{padding:8px 14px;border-radius:999px;border:1px solid var(--fio2);font:700 15px var(--disp)}
+.degrau-l.d0{color:var(--ok);border-color:var(--ok)} .degrau-l.d1{color:#b9e27a} .degrau-l.d2{color:var(--ac2)} .degrau-l.d3{color:var(--t2)} .degrau-l.d4{color:#ffb0a8} .degrau-l.d5{color:var(--erro);border-color:rgba(255,110,110,.5)}
+.bolhas{display:grid;gap:6px} .bolha{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:12px;border:1px solid var(--fio2);background:#0e1511;color:var(--t1);font:700 14px var(--mono);letter-spacing:.06em;cursor:pointer;text-align:left}
+.bolha i{width:22px;height:22px;border-radius:50%;border:2px solid var(--t3);flex:none} .bolha.on{border-color:var(--ac)} .bolha.on i{background:var(--ac);border-color:var(--ac);box-shadow:0 0 8px rgba(240,176,74,.6)} .bolha[disabled]{opacity:.6}
+.nota-l{display:flex;align-items:center;gap:12px;flex-wrap:wrap} .nota-l b{display:grid;place-items:center;width:64px;height:64px;border-radius:14px;border:2px solid var(--ac);font:800 30px var(--mono);color:var(--ac2)} .nota-l small{font:600 13px var(--disp);color:var(--t3)}
+.erro-b{border-style:dashed}
+.itens-esc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:10px} .item-esc{display:grid;gap:10px;padding:12px 14px;border-radius:var(--r2)} .item-esc p{margin:0;font:600 clamp(16px,1.25vw,20px)/1.4 var(--disp)}
+.linha-c{display:grid;gap:6px} .linha-c small{font:800 10px var(--mono);letter-spacing:.12em;color:var(--t3)}
+.ficha{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2)} .ficha small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .ficha span{display:flex;justify-content:space-between;gap:10px;font:600 15px var(--disp);color:var(--t2)} .ficha b{color:var(--t1);text-align:right}
+.ficha .yet-l{display:block;color:var(--ok)} .ficha .imprimir{justify-self:start}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+@media print{ body{background:#fff!important} }
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .portas-l{grid-template-columns:repeat(4,minmax(0,1fr))} .itens-esc{grid-template-columns:1fr} .octo{max-height:none} }
+@media (max-width:620px){ .escada-b{grid-template-columns:1fr} .portas-l,.portas-l.tres{grid-template-columns:1fr 1fr} .num{width:34px;height:34px} }

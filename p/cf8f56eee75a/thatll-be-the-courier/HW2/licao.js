@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "That'll Be the Courier",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/cf8f56eee75a/thatll-be-the-courier/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "will and would for confident deductions: That'll be the courier (now); She'll be at work now; He'll have left by now / won't have read it yet (past); That would be about 1998, he'd be about ten (past time); age with be, never have",
   "abrir": "When the doorbell rings and you aren't expecting anyone, who do you guess it is?",
   "fecho": "A confident guess, not the future: <b>That'll be</b> the courier (now) · <b>She'll be</b> at work (now) · <b>He'll have left</b> by now (past) · <b>That would be</b> about 1998 · <b>He'd be</b> about ten there. Age: <b>be</b>, never <i>have</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo wait for a parcel and a friend. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/cf8f56eee75a/thatll-be-the-courier/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A dark front door",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Is that the bell? That'll be the courier with my parcel.",
-          "img": "https://wolf-labs.pages.dev/p/cf8f56eee75a/thatll-be-the-courier/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It's eight already, so she'll have left for work by now.",
-          "img": "https://wolf-labs.pages.dev/p/cf8f56eee75a/thatll-be-the-courier/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "That photo would be about 1998, and my father would be about forty there.",
-          "img": "https://wolf-labs.pages.dev/p/cf8f56eee75a/thatll-be-the-courier/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/cf8f56eee75a/thatll-be-the-courier/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A dark front door",
       "pede": "Look at the picture: a front door at night, and someone has just rung the bell. Write 2 or 3 sentences: who you think it is, and where somebody else will be right now. Use <b>that'll be</b>, <b>he'll / she'll be</b> or <b>will have</b>.",
       "ph": "That'll be … and my sister will be …",

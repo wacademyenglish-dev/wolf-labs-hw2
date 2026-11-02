@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
 </head>
 <body>
 <div id="fundo" aria-hidden="true"></div>
@@ -123,5 +124,266 @@ window.WL_CONVERSA = { nivel: 'B1', cenas: [
 ] };
 </script><!--/conversa-dados.js-->
 <script src="https://wolf-labs.pages.dev/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "multipla": {
+   "t": "What would you say next?",
+   "p": "Listen to each line. Choose. Say it out loud."
+  },
+  "lacunas": {
+   "t": "A voice message. Complete the notes.",
+   "p": "Play the message. Type the missing letters."
+  },
+  "cv-juri": {
+   "t": "Three study group cases. You judge.",
+   "p": "Give your verdict. Say why in the past."
+  },
+  "prova": {
+   "t": "Write what happened.",
+   "p": "75 seconds. Who, the problem, the solution."
+  },
+  "pode": {
+   "t": "Lesson 7: what can you do?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Interactive Listening do DET: escolher a melhor resposta linha a linha no campus (Prof. Hayes, Sophie), completar notas da mensagem da Maya e resumir.",
+  "armadilha": "Escolher a resposta “verdadeira” que não responde, repetir a pergunta, resumir no presente e esquecer o prazo; e soletrar mal nas lacunas.",
+  "pal": [
+   "I’d love to, but …",
+   "answer + move on",
+   "a useful question back",
+   "Perfect, see you then!",
+   "deadline",
+   "extension",
+   "who, problem, solution"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula 7 do DET Prep: responder como uma pessoa real no campus.",
+   "perg": "A professor asks: “What happened?” What do you say?",
+   "pula": "Só leia o título da capa."
+  },
+  "multipla": {
+   "obj": "Duas conversas no campus: ouvir cada linha uma vez, escolher a melhor resposta e dizê-la em voz alta.",
+   "perg": "Why is this answer better than the others?",
+   "pula": "Uma conversa inteira basta."
+  },
+  "lacunas": {
+   "obj": "Listen and Complete: completar as notas da mensagem da Maya só com as letras que faltam.",
+   "perg": "What day and time did Maya say?",
+   "pula": "Faça a mensagem uma vez, sem repetir."
+  },
+  "cv-juri": {
+   "obj": "Conversa: júri de três casos do grupo de estudo, veredito no passado.",
+   "perg": "Who was to blame for the missed meeting?",
+   "pula": "Dois casos bastam."
+  },
+  "prova": {
+   "obj": "Resumo com o relógio real (75 s): quem, problema, solução; checklist e modelo depois.",
+   "perg": "Who had the problem, and how was it solved?",
+   "pula": "Uma tentativa só, sem o retry."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”; o que ficar aberto vai para a lição de casa.",
+   "perg": "Can you keep a conversation going?",
+   "pula": "Leia só as linhas em dúvida. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa sobre estudos, campus e planos do aluno, com respostas que mantêm a conversa.",
+   "perg": "Why are you taking the DET?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de dilemas da vida acadêmica, com frase pronta.",
+   "perg": "Which side do you take?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: o aluno vira o Prof. Hayes e responde; o professor é o aluno que pede prazo.",
+   "perg": "Professor, can I have more time for the essay?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "Campus life, your life.",
+   "p": "Pick a card. Answer, then ask back.",
+   "palavras": [
+    "I’d love to, but …",
+    "What about you?",
+    "Sounds good!"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR GOAL",
+     "q": "Why are you taking the Duolingo English Test?",
+     "fup": "What score do you need?",
+     "st": [
+      "I’m taking it because …",
+      "I need …"
+     ],
+     "ex": "I’m taking it because I want to study in Canada. I need a 115."
+    },
+    {
+     "k": "STUDY GROUPS",
+     "q": "Do you prefer to study alone or in a group?",
+     "fup": "Why?",
+     "st": [
+      "I prefer …",
+      "because …"
+     ],
+     "ex": "I prefer to study alone because groups always talk about other things."
+    },
+    {
+     "k": "DEADLINES",
+     "q": "Have you ever asked for more time on a deadline?",
+     "fup": "What did you say?",
+     "st": [
+      "Yes, once I …",
+      "I said …"
+     ],
+     "ex": "Yes, once I asked my boss for one more day. I said my computer had crashed."
+    },
+    {
+     "k": "SAYING NO",
+     "q": "How do you say no to an invitation politely?",
+     "fup": "Is it easy for you?",
+     "st": [
+      "I usually say: “I’d love to, but …”",
+      "It’s …"
+     ],
+     "ex": "I usually say: “I’d love to, but I have class.” It’s hard for me."
+    },
+    {
+     "k": "THE DREAM",
+     "q": "Which university or city would you love to study in?",
+     "fup": "What would you study there?",
+     "st": [
+      "I’d love to study in …",
+      "I’d study …"
+     ],
+     "ex": "I’d love to study in Toronto. I’d study data science."
+    },
+    {
+     "k": "VOICE MESSAGES",
+     "q": "Do you like voice messages or text messages?",
+     "fup": "Who sends you the longest ones?",
+     "st": [
+      "I like … better.",
+      "My … sends …"
+     ],
+     "ex": "I like text messages better. My mother sends five-minute voice messages."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I think",
+    "because",
+    "The main reason is"
+   ],
+   "rodadas": [
+    {
+     "q": "A late essay: should the professor give extra days?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. Students have real problems sometimes.",
+      "One extra day doesn’t hurt anyone."
+     ],
+     "fb": [
+      "No. Deadlines are the same for everyone.",
+      "It isn’t fair to the students who finished."
+     ]
+    },
+    {
+     "q": "A friend always says “I’d love to, but…”. Keep inviting, or stop?",
+     "a": "Keep inviting",
+     "b": "Stop",
+     "fa": [
+      "Keep inviting. Maybe she’s just busy.",
+      "One day she’ll say yes."
+     ],
+     "fb": [
+      "Stop. She’s telling you something.",
+      "It’s her turn to invite."
+     ]
+    },
+    {
+     "q": "Study for the test every day for 20 minutes, or twice a week for two hours?",
+     "a": "Every day",
+     "b": "Twice a week",
+     "fa": [
+      "Every day. It becomes a habit.",
+      "Short sessions are easier."
+     ],
+     "fb": [
+      "Twice a week. You can do a full mock test.",
+      "Twenty minutes is too short."
+     ]
+    },
+    {
+     "q": "Online classes or classes on campus?",
+     "a": "Online",
+     "b": "On campus",
+     "fa": [
+      "Online. No traffic, more time to study.",
+      "You can watch the class again."
+     ],
+     "fb": [
+      "On campus. You meet people.",
+      "It’s easier to ask questions."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Professor Hayes now.",
+   "p": "Your teacher is the student.",
+   "aluno": "Listen to your teacher’s question. Answer as Professor Hayes, and keep the conversation going.",
+   "perguntas": [
+    "Professor, can I have more time for my essay?",
+    "What happens if I submit it two days late?",
+    "Can I come to your office this week?",
+    "What time are your office hours?",
+    "Is it OK if I change my essay topic?",
+    "Do you have any advice for the final exam?"
+   ],
+   "st": [
+    "I can give you …, but …",
+    "Why don’t you …?",
+    "Perfect, see you then!"
+   ],
+   "ex": "I can give you two more days, but I need it by Friday. Why don’t you come to my office on Wednesday?"
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
 </body>
 </html>

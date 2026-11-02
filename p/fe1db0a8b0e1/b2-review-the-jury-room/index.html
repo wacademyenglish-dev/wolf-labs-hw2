@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Jury Room · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B2 · Unit 3 Review · The Jury Room</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Jury Room · B2 Unit 3 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 3 (The past that didn’t happen). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> A wedding cake arrived three hours late and the couple went to court. Your student leads the jury. You are three witnesses: the baker, the driver (two churches with the same name!) and the intern who wrote half the address.</p><p style="margin:0 0 6px"><b>About 42 min:</b> I · The Die (8) · II · The Witnesses (15) · III · The Council Vote (7) · IV · The Hot Seat (8) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “Roll the die. The number chooses the challenge.”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>third conditional · mixed: past cause, present result · mixed: present fact, past result · should have · could have · turning points: I wouldn’t be here</p>
+    <h4>THE DIE</h4>
+    <p>Tap <b>Roll the die</b>: the number chooses one of the six topics (no repeats until all six are done). The student does the challenge from memory.</p>
+    <h4>THE WITNESSES</h4>
+    <p>You are each witness. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then you are the judge: the student gives the verdict with should have / if … had … Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>THE HOT SEAT</h4>
+    <p>The hot seat: now the STUDENT asks and you answer, as yourself, short. Each card says what to ask about; <b>Help me ask</b> shows a model question. Encourage reactions and one follow-up.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>if he would have called</i>, <i>she should had checked</i>, <i>if I had moved, I would have been there now (for would be)</i>, <i>could called</i>, <i>if I didn’t choose (for hadn’t chosen)</i>, <i>if I wasn’t shy, I would asked</i>. B2: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE COUNCIL VOTE (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the verdict, the student votes on three proposals: a refund for the couple, a second chance for the driver, a new rule for interns. Yes, No, or propose a change; then they say why with should have, could have and if … had. There is no right answer. Wait five seconds in silence, then use the PUSH line (only you see it) to make the vote harder. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves. About 7 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the review has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Focus</b>: I · The Die and V · I Can.</li>
+      <li><b>Out loud</b>: II · The Witnesses, III · The Council Vote and IV · The Hot Seat.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW B2 · UNIT 3 · THE JURY ROOM · pergunta-surpresa · 28/10/2026 · third / mixed conditionals, should have, could have */
+window.WL_FAISCA = { nivel: 'B2', qs: [
+  { cena: 'dado', tipo: 'And you?', q: 'Have you ever been really late for something important?',
+    opc: ['Yes, terribly', 'A little', 'Never!'], st: ['If I had left earlier, I would have …', 'I should have …'],
+    ex: 'Yes, terribly. I was late for a job interview. If I had checked the traffic, I would have taken the metro.', push: 'Did you get the job anyway?' },
+  { cena: 'missao', tipo: 'Opinion', q: 'So far, who looks most guilty to you?',
+    opc: ['The baker', 'The driver', 'The intern'], st: ['He / She should have …', 'If … had …, the cake wouldn’t have …'],
+    ex: 'The driver. He should have called the bakery when he got lost. If he had called, the cake would have arrived in ten minutes.', push: 'Now defend that person for twenty seconds.' },
+  { cena: 'cadeira', tipo: 'What if', q: 'You order a cake for a big party and it doesn’t arrive. What do you do?',
+    opc: ['Call and complain', 'Buy one at the supermarket', 'Laugh and order pizza'], st: ['I’d call them and say they should have …', 'If it happened to me, I’d …'],
+    ex: 'Laugh and order pizza. If I got angry, I would ruin my own party.', push: 'And the next day? Do you ask for your money back?' },
+  { cena: 'pode', tipo: 'Would you rather', q: 'Would you rather be on a jury or be a witness in court?',
+    opc: ['On the jury', 'A witness'], st: ['I’d rather be …, because if I were …, I would …'],
+    ex: 'On the jury. If I were a witness, I would be too nervous to remember anything.', push: 'The case lasts three months. Still the jury?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW B2 · UNIT 3 · THE JURY ROOM · conversa · 28/10/2026 · regra 3×3 do Carlos
+   A votação do conselho entra no lugar de "III · Find the Mistakes" (achar o erro e tocar: prática controlada;
+   o Focus continua no I · The Die e no I Can). O veredito já saiu na missão (II); aqui o aluno vota as
+   três propostas que vêm DEPOIS do caso: Yes / Propose a change / No. A gramática da unidade (third e
+   mixed conditionals, should have, could have) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B2', cenas: [
+  { id: 'conselho', troca: 'erros', est: 'o', min: 7, img: 'conversa', rot: 'The Council Vote', t: 'Case closed. Now vote on what happens next.',
+    p: 'Three proposals after the verdict. Vote Yes, No, or propose a change. Say why with should have, could have or if … had.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The couple', sit: 'Proposal: the bakery gives the couple all their money back AND a free cake for their first anniversary.',
+        q: 'Is that a fair deal?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['Yes, because if the cake had …, they would have …', 'I’d change one thing: …', 'No. The bakery should have …, but …'],
+        ex: 'Yes. If the cake had arrived on time, they would have cut it with their guests. They can’t have that moment back, so a free cake is the minimum.',
+        push: 'It’s a tiny bakery. A full refund means no salaries this month. Still yes?' },
+      { tag: 'The driver', sit: 'Proposal: the driver gets his job back if he takes a two-day course on using the GPS.',
+        q: 'Should he get his job back?', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['He should have …, but …', 'If he hadn’t been fired, he would …', 'He could have …'],
+        ex: 'Yes, with the course. He should have called the bakery, but if the intern had written the street, he wouldn’t have got lost.',
+        push: 'He got lost twice last year too. Does that change your vote?' },
+      { tag: 'The intern', sit: 'Proposal: new interns can’t take orders alone in their first month.',
+        q: 'Vote on the new rule.', opc: ['Yes', 'Propose a change', 'No'],
+        st: ['If someone had checked …, …', 'He shouldn’t have been …', 'If he weren’t so new, he would have …'],
+        ex: 'Yes. He shouldn’t have been alone on his second day. If someone had checked the order, none of this would have happened.',
+        push: 'The bakery has only three people. Who checks the orders at four in the morning?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "dado": {
+   "t": "Roll the die. The number chooses.",
+   "p": "Do the challenge out loud, from memory."
+  },
+  "missao": {
+   "t": "Three witnesses. One very late cake.",
+   "p": "Ask each witness five questions. Then the verdict."
+  },
+  "cv-conselho": {
+   "t": "Case closed. What happens next?",
+   "p": "Vote, or change it. Say why with should have."
+  },
+  "cadeira": {
+   "t": "Now YOU ask the questions.",
+   "p": "Your teacher is in the hot seat. Ask and react."
+  },
+  "pode": {
+   "t": "Unit 3: what can you do now?",
+   "p": "Read each line. Tap the ones you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unit 3: terceira condicional, mistas, should have e could have. O bolo de casamento chegou três horas atrasado; o aluno preside o júri.",
+  "armadilha": "O brasileiro diz “if he would have called”, “she should had checked”, “could called” e “if I didn’t choose” por hadn’t chosen; na mista, “I would have been there now” por would be.",
+  "pal": [
+   "should have",
+   "could have",
+   "if … had",
+   "would have",
+   "wouldn’t be",
+   "verdict",
+   "witness",
+   "to blame"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: um bolo de casamento três horas atrasado vai parar no tribunal.",
+   "perg": "Have you ever been to a wedding where something went wrong?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "dado": {
+   "obj": "O dado escolhe um dos seis tópicos da unidade; o aluno faz o desafio de memória.",
+   "perg": "What should you have done?",
+   "pula": "Quatro rodadas do dado bastam."
+  },
+  "missao": {
+   "obj": "O aluno interroga a confeiteira, o motorista e o estagiário, e dá o veredito com should have / if … had.",
+   "perg": "Who should have checked the address?",
+   "pula": "Duas testemunhas e o veredito."
+  },
+  "cv-conselho": {
+   "obj": "Votar três propostas depois do veredito: reembolso, segunda chance, regra para estagiários.",
+   "perg": "Should the driver get a second chance?",
+   "pula": "Duas propostas bastam, com o PUSH."
+  },
+  "cadeira": {
+   "obj": "Papéis invertidos: o aluno pergunta e o professor responde como ele mesmo.",
+   "perg": "What should you have done differently?",
+   "pula": "Três cartas bastam."
+  },
+  "pode": {
+   "obj": "Checklist do I can: o aluno lê e marca o que já sabe; o resto vai para a lição.",
+   "perg": "Which one is still hard for you?",
+   "pula": "Não corte: fecha a unidade. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa adulta sobre o passado que não aconteceu: should have, could have, if … had.",
+   "perg": "What should you have done differently last year?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate de verdade sobre culpa e responsabilidade, com should have e condicionais.",
+   "perg": "Who is to blame, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira o motorista das duas igrejas com o mesmo nome e se defende.",
+   "perg": "What should you have checked?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "The past that didn’t happen.",
+   "p": "Pick a card. Look back honestly.",
+   "palavras": [
+    "should have",
+    "could have",
+    "if … had",
+    "wouldn’t be"
+   ],
+   "cartas": [
+    {
+     "k": "A LATE ARRIVAL",
+     "q": "When were you very late for something important?",
+     "fup": "What should you have done?",
+     "st": [
+      "I should have …",
+      "If I had …, I would have …"
+     ],
+     "ex": "I should have left earlier. If I had, I wouldn’t have missed the first hour."
+    },
+    {
+     "k": "WRONG ADDRESS",
+     "q": "Have you ever gone to the wrong place?",
+     "fup": "How could you have avoided it?",
+     "st": [
+      "I could have …",
+      "If I had checked …"
+     ],
+     "ex": "I could have checked the map. If I had, I wouldn’t have ended up at the wrong church."
+    },
+    {
+     "k": "A PURCHASE",
+     "q": "What did you buy that you shouldn’t have bought?",
+     "fup": "What would you have done with the money?",
+     "st": [
+      "I shouldn’t have bought …",
+      "I would have …"
+     ],
+     "ex": "I shouldn’t have bought that coffee machine. I would have traveled instead."
+    },
+    {
+     "k": "A MESSAGE",
+     "q": "Have you ever sent a message to the wrong person?",
+     "fup": "What happened next?",
+     "st": [
+      "If I had looked …, I wouldn’t have …"
+     ],
+     "ex": "If I had looked at the name, I wouldn’t have sent my boss a joke."
+    },
+    {
+     "k": "YOUR TEENS",
+     "q": "What could you have done better as a teenager?",
+     "fup": "Would your life be different now?",
+     "st": [
+      "I could have …",
+      "If I had …, I would be … now."
+     ],
+     "ex": "I could have studied harder. If I had, I would be speaking three languages now."
+    },
+    {
+     "k": "A GOOD DECISION",
+     "q": "What is a decision you are glad you made?",
+     "fup": "What if you hadn’t?",
+     "st": [
+      "If I hadn’t …, I wouldn’t be …"
+     ],
+     "ex": "If I hadn’t changed jobs, I wouldn’t be this happy now."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "should have",
+    "if … had",
+    "The thing is, …",
+    "I see your point, but…"
+   ],
+   "rodadas": [
+    {
+     "q": "The intern wrote half the address. Is he the one to blame?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. He should have written the whole address.",
+      "One line, and the cake would have arrived."
+     ],
+     "fb": [
+      "No. Someone should have checked his work.",
+      "Interns are there to learn."
+     ]
+    },
+    {
+     "q": "Should the couple get all their money back?",
+     "a": "All of it",
+     "b": "Part of it",
+     "fa": [
+      "All of it. If the cake had arrived on time, nobody would have complained.",
+      "A wedding happens once."
+     ],
+     "fb": [
+      "Part of it. The cake did arrive, and it was eaten.",
+      "The thing is, it wasn’t a total loss."
+     ]
+    },
+    {
+     "q": "The driver went to the wrong church. Should he have called?",
+     "a": "He should have",
+     "b": "Not his fault",
+     "fa": [
+      "He should have called. A phone call would have saved three hours."
+     ],
+     "fb": [
+      "Not his fault. Two churches had the same name. Anyone could have made that mistake."
+     ]
+    },
+    {
+     "q": "Is “I should have…” useful, or just regret?",
+     "a": "Useful",
+     "b": "Just regret",
+     "fa": [
+      "Useful. If I hadn’t learned from my mistakes, I’d repeat them.",
+      "It’s how we grow."
+     ],
+     "fb": [
+      "Just regret. The past can’t be changed.",
+      "What matters is the next decision."
+     ]
+    }
+   ],
+   "fim": "Four rounds. The jury has spoken, twice."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the driver now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the driver who went to the wrong church.",
+   "perguntas": [
+    "Why did you go to the wrong church?",
+    "What should you have checked before you left?",
+    "Could you have called someone?",
+    "If the address had been complete, would you have arrived on time?",
+    "You lost your job. Was that fair?",
+    "If you could go back to that morning, what would you do?"
+   ],
+   "st": [
+    "I should have …",
+    "I could have …",
+    "If the address had …, I would have …"
+   ],
+   "ex": "If the address had been complete, I would have arrived three hours earlier."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

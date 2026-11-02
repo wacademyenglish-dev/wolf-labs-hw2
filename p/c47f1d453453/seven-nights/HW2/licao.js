@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Seven Nights",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/c47f1d453453/seven-nights/img/live-quarto.webp",
+  "capa": "../img/live-quarto.webp",
   "alvo": "zero conditional: if + present, present for habits and facts (no will); he / she / it takes -s; if = maybe, when = always",
   "abrir": "What happens to you if you sleep badly?",
   "fecho": "The rules of your body: <b>if + present, present</b>. A habit, not a prediction: no <i>will</i>. He, she, it: the <b>-s</b>: <i>If she drinks coffee, she stays awake.</i> <b>When</b> = it always happens. <b>If</b> = it may happen, or not.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about sleep. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/c47f1d453453/seven-nights/img/live-quarto.webp",
+      "img": "../img/live-quarto.webp",
       "leg": "A bedroom with a purple light",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "If I drink coffee at night, I can't sleep.",
-          "img": "https://wolf-labs.pages.dev/p/c47f1d453453/seven-nights/img/live-xicara.webp",
+          "img": "../img/live-xicara.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "If she looks at her phone, she stays awake.",
-          "img": "https://wolf-labs.pages.dev/p/c47f1d453453/seven-nights/img/live-telefone.webp",
+          "img": "../img/live-telefone.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "If the room is dark, I sleep like a stone.",
-          "img": "https://wolf-labs.pages.dev/p/c47f1d453453/seven-nights/img/live-quarto.webp",
+          "img": "../img/live-quarto.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/c47f1d453453/seven-nights/img/live-telefone.webp",
+      "img": "../img/live-telefone.webp",
       "leg": "A phone glowing on a dark bed",
       "pede": "Look at the picture: a phone glowing on a bed at night. Write 2 or 3 rules about your sleep. Use <b>If + present, present</b>.",
       "ph": "If I …, I …",

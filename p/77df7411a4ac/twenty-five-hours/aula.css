@@ -1,0 +1,154 @@
+/* ============================================================
+   TWENTY-FIVE HOURS · THE STATION CLOCK · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Aqui a identidade: a estação à noite,
+   o âmbar do quadro de partidas e o verde do sinal de saída.
+   ============================================================ */
+:root{
+  --noite:#090b0a; --noite-rgb:9,11,10; --tinta:#f3e6c8;
+  --t1:#f4efe4; --t2:#d0c9b8; --t2-rgb:208,201,184; --t3:#988f7e;
+  --ac:#f2b33d; --ac2:#ffd98a; --bt:#3fb68b; --bt2:#8fe0bf;
+  --vidro:rgba(243,230,200,.05); --vidro2:rgba(243,230,200,.085); --vidro3:rgba(243,230,200,.12);
+  --fio:rgba(243,225,190,.12); --fio2:rgba(243,225,190,.22); --luz:rgba(243,230,200,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mao:'Caveat',cursive; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(2,3,2,.7); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#1d1404}
+.btn.cheio{color:#1d1404}
+
+/* capa */
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(52px,5.4vw,104px)/.95 var(--disp);letter-spacing:-.035em}
+.capa h1 b{display:block;font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa .foto{position:relative;border-radius:30px;overflow:hidden;aspect-ratio:16/11;border:1px solid var(--fio);box-shadow:var(--sombra)}
+.capa .foto img{width:100%;height:100%;object-fit:cover;filter:brightness(.82)}
+.placa-capa{position:absolute;right:6%;bottom:8%;display:grid;padding:12px 20px;border-radius:12px;background:#0d0f0d;border:1px solid #3a3426;box-shadow:0 14px 40px rgba(0,0,0,.7)}
+.placa-capa small,.placa-capa span{font:700 11px var(--mono);letter-spacing:.16em;color:#a6966f}
+.placa-capa b{font:700 44px/1.05 var(--mono);color:var(--ac);text-shadow:0 0 18px rgba(242,179,61,.45)}
+
+/* o relógio */
+.relo{display:block;width:100%;height:auto;max-height:min(42vh,380px);margin:0 auto}
+.relo .aro{fill:#1b1a16;stroke:#6b5a33;stroke-width:3}
+.relo .face{fill:#14130f}
+.relo .tk{stroke:#5d564a;stroke-width:1.4} .relo .tk.g{stroke:#e9dcc0;stroke-width:3.2}
+.relo .nums text{fill:#efe3c6;font:700 19px var(--disp);text-anchor:middle}
+.relo .mao{stroke-linecap:round}
+.relo .hh{stroke:#f4efe4;stroke-width:8}
+.relo .mm{stroke:var(--ac);stroke-width:4.5}
+.relo .eixo{fill:var(--ac);stroke:#14130f;stroke-width:2}
+.relo .pega{stroke:transparent;stroke-width:30;stroke-linecap:round;pointer-events:stroke;cursor:grab}
+.relo.arrasta{touch-action:none;user-select:none}
+.relo.arrasta .ph .hh,.relo.arrasta .pm .mm{filter:drop-shadow(0 0 6px rgba(242,179,61,.55))}
+.relo.mexe .pega{cursor:grabbing}
+.janela rect{stroke:#4a4234;stroke-width:1.5}
+.janela.dia rect{fill:#3c5a74} .janela.dia .astro{fill:#f5c45a}
+.janela.noite rect{fill:#0b1226} .janela.noite .astro{fill:#e7e2cf} .janela.noite .corta{fill:#0b1226}
+.relo-box{padding:18px;border-radius:var(--r1);display:grid;gap:12px}
+.mesa-relo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:24px;align-items:center}
+.mesa-relo.larga{align-items:start}
+.lado-relo{display:grid;gap:14px}
+.lado-relo .versoes{display:grid;gap:10px}
+.toca-linha{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:var(--r2);font:600 clamp(18px,1.4vw,22px)/1.35 var(--disp)}
+.toca-linha.centro{justify-content:center;max-width:760px;margin:0 auto;width:100%}
+.giros{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.giros .pilula{min-height:40px}
+
+/* IV · o anúncio e o painel de trens */
+.anuncio{padding:18px 22px;border-radius:var(--r2);display:grid;gap:12px}
+.anuncio>small{font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.anuncio h3{margin:0;font:700 clamp(22px,1.8vw,30px)/1.3 var(--disp)}
+.diga-prof{margin:0;padding:10px 14px;border-radius:12px;border:1px dashed var(--fio2);color:var(--t2)}
+
+.painel-trem{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.linha-trem{display:grid;gap:1px;padding:7px 10px;border-radius:10px;background:#0d0f0d;border:1px solid #2c2a22;font:700 12px var(--mono);color:#7d745f}
+.linha-trem b{font:700 18px var(--mono)}
+.linha-trem.agora{border-color:rgba(242,179,61,.6);color:var(--ac2)}
+.linha-trem.feito{color:var(--ac)}
+
+/* V · o quadro de partidas */
+.quadro{border-radius:20px;background:#0b0c0b;border:1px solid #2c2a22;box-shadow:var(--sombra);padding:14px 16px;display:grid;gap:6px}
+.topo-q{display:flex;justify-content:space-between;align-items:baseline;padding:0 4px 6px;border-bottom:1px solid #26241d}
+.topo-q b{font:700 18px var(--mono);letter-spacing:.2em;color:var(--ac)} .topo-q small{font:700 11px var(--mono);letter-spacing:.16em;color:#6f6754}
+.linha-q{display:grid;grid-template-columns:66px 104px minmax(0,1fr);gap:10px;align-items:center;padding:3px 4px;border-radius:10px}
+.linha-q .dig{font:700 20px var(--mono);color:var(--ac)}
+.linha-q .dest{font:700 14px var(--mono);letter-spacing:.08em;color:#bfb293;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.flaps{display:flex;flex-wrap:wrap;gap:2px}
+.flaps i{display:inline-grid;place-items:center;width:clamp(17px,1.35vw,24px);height:clamp(26px,2vw,34px);border-radius:4px;background:#191a17;border-top:1px solid #2a2b26;font:700 clamp(14px,1.1vw,19px) var(--mono);font-style:normal;color:var(--ac2);position:relative}
+.flaps i::after{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:#0b0c0b}
+.linha-q.agora{background:rgba(242,179,61,.08);outline:1px solid rgba(242,179,61,.35)}
+.linha-q.errado .flaps i{color:var(--erro)}
+.flaps i.flip{animation:flip .5s both}
+@keyframes flip{0%{transform:rotateX(90deg);color:transparent}60%{transform:rotateX(-12deg)}100%{transform:none}}
+.pecas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.peca{min-height:54px;padding:0 20px;border-radius:12px;border:1px solid #3d3626;background:#15140f;font:700 clamp(17px,1.3vw,21px) var(--mono);color:var(--ac2);transition:transform .15s,opacity .2s}
+.peca:hover{transform:translateY(-2px);border-color:var(--ac)}
+.peca.gasta{opacity:.25}
+.acoes-q{text-align:center}
+
+/* V · lado a lado */
+.mesa-q{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:20px;align-items:start}
+.lado-q{display:grid;gap:12px}
+.lado-q .resp-btn,.lado-q .resposta{margin:0}
+/* VI · dois trens */
+.mesa-ap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;align-items:center}
+.lado-ap{display:grid;gap:12px}
+.lado-ap .follow{width:100%;margin:0}
+.duas-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.duas-col .follow{width:100%;margin:0}
+.trens{display:grid;grid-template-columns:1fr 1fr;gap:18px;width:100%}
+.trem{display:grid;gap:8px;justify-items:center;padding:16px;border-radius:var(--r1);border:1px solid var(--fio);background:var(--vidro);transition:border-color .2s,transform .2s}
+.trem:hover{transform:translateY(-2px)}
+.trem small{font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.trem .relo{max-height:min(27vh,230px)}
+.trem b{font:600 17px var(--disp);color:var(--t2)}
+.trem.certo{border-color:var(--ok);box-shadow:0 0 0 2px rgba(143,217,162,.45)} .trem.errado{border-color:var(--erro)}
+
+/* VII · as 25 horas */
+.fita{padding:16px 18px;border-radius:var(--r1);display:grid;gap:8px}
+.regua{display:flex;justify-content:space-between;font:700 11.5px var(--mono);color:var(--t3)}
+.pista{position:relative;height:74px;border-radius:12px;background:repeating-linear-gradient(90deg,rgba(243,230,200,.05) 0 1px,transparent 1px calc(100%/24)),#0d0e0c;overflow:hidden}
+.bl{position:absolute;top:36px;height:32px;border-radius:7px;background:rgba(242,179,61,.28);border:1px solid rgba(242,179,61,.6);display:grid;place-items:center;overflow:hidden;animation:entra .4s both}
+.bl.cima{top:6px;overflow:visible;background:rgba(63,182,139,.3);border-color:rgba(63,182,139,.8)}
+.bl.bate{background:rgba(255,110,110,.35);border-color:var(--erro);box-shadow:0 0 18px rgba(255,110,110,.5)}
+.bl span{font:700 11.5px var(--ui);white-space:nowrap;padding:0 6px;color:var(--t1);overflow:hidden;text-overflow:ellipsis;max-width:100%}
+@keyframes entra{from{opacity:0;transform:scaleX(.3)}to{opacity:1;transform:none}}
+.soma{display:flex;align-items:baseline;gap:10px;justify-content:flex-end}
+.soma b{font:800 clamp(34px,2.8vw,48px) var(--mono);color:var(--ac)} .soma span{color:var(--t3);font-size:14px}
+.soma.passou b{color:var(--erro);text-shadow:0 0 20px rgba(255,110,110,.5)}
+.blocos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.bloco{display:grid;gap:3px;text-align:left;padding:12px 14px;border-radius:16px;border:1px solid var(--fio);background:var(--vidro);transition:transform .2s,border-color .2s}
+.bloco:hover{transform:translateY(-2px);border-color:var(--ac)}
+.bloco small{font:700 11.5px var(--mono);color:var(--ac2)} .bloco b{font:700 18px var(--disp)} .bloco span{font-size:14px;color:var(--t2)}
+.bloco.on{opacity:.35}
+.post-dela{padding:18px 22px;border-radius:var(--r2);border-left:4px solid var(--bt)}
+.post-dela small{font:800 11.5px var(--ui);letter-spacing:.14em;color:var(--bt2)}
+.post-dela p{margin:6px 0 0;font:600 italic clamp(20px,1.6vw,27px)/1.35 var(--disp)}
+
+@media (max-width:1100px){ .mesa-relo,.mesa-q,.mesa-ap,.duas-col{grid-template-columns:1fr} .blocos{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:820px){
+  .capa .foto{aspect-ratio:16/12}
+  .relo{max-height:none;max-width:340px}
+  .trens{gap:10px}
+  .trem{padding:10px}
+  .linha-q{grid-template-columns:54px minmax(0,1fr);gap:4px 10px}
+  .linha-q .flaps{grid-column:1/-1}
+  .linha-q .dig{font-size:16px}
+  .linha-trem b{font-size:15px}
+  .pista{height:64px} .bl{top:32px;height:26px} .bl.cima{top:4px} .bl span{font-size:9.5px;padding:0 2px}
+  .regua span:nth-child(even){visibility:hidden}
+}
+@media (max-width:460px){ .blocos{grid-template-columns:1fr} .trem b{font-size:14px} .trem small{font-size:9.5px;letter-spacing:.08em} }
+
+/* 22/10/2026 · os formatos novos (formatos.js) */
+
+.c-face .f2-liga{grid-template-columns:minmax(0,.4fr) minmax(0,1fr)}
+.c-face .f2-liga>div{gap:6px}
+.c-face .f2-liga .f2-bt{display:flex;align-items:center;justify-content:center;gap:12px;min-height:84px;font-size:clamp(17px,1.35vw,22px)}
+.c-face .f2-liga>div:last-child .f2-bt{justify-content:flex-start;padding-left:22px}
+.c-face .f2-liga svg.relo{width:76px;height:76px;flex:none}
+.c-face .fc-m{display:grid;place-items:center}
+.c-face .fm-folha,.c-regra .fm-folha{width:min(1000px,100%)}
+.fc-vozes{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:8px;width:min(1100px,100%);margin:14px auto 0}
+.c-regra .cartoes{margin-top:16px}

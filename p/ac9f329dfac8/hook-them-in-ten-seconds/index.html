@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Hook Them in Ten Seconds · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>C1 · Unit 10 · The talk</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Hook Them in Ten Seconds · C1 Unit 10 Lesson</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> a new C1 lesson on openings: the rhetorical question (Have you ever wondered why…?), the surprising fact (Did you know that…?), Imagine…, the mini-story (Last year, I…), Raise your hand if…, and the promise (By the end of this talk, you’ll…). Plus what not to do: name first, apologizing, “I’m nervous”.</p><p style="margin:0 0 6px"><b>The story:</b> A speaking contest (invented): three speakers open the same talk about sleep in three very different ways.</p><p style="margin:0 0 6px"><b>About 44 min:</b> I · Three Openings (10) · II · Which One Hooks You? (9) · III · Fix the Opening (8) · IV · The Tough Room (8) · V · Your First Ten Seconds (9).</p><p style="margin:0"><b>Open with:</b> “Think of a talk or a class you loved. How did it start?”</p></div><!--/prep-->
+    <p>This is the first lesson of the unit that ends with the student’s own talk. Today is only the first ten seconds. Read the three openings like a speaker; Speaker 1 should sound flat on purpose. Grammar watch: “wondered why do we” (indirect question) and Imagine + present. The writing card is the opening of the student’s real talk: keep it for the final lesson.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>Have you ever wondered why…? (no do) · Did you know that…? · Imagine… (present) · Raise your hand if… · Last year, I… Here’s what changed. · By the end of this talk, you’ll…</p>
+    <h4>THREE OPENINGS</h4>
+    <p>Read: the student reads the text out loud. First one question before reading, then questions about the MEANING. Only then <b>Look closer</b>: let the student find the pattern, and tap <b>Show the pattern</b> to highlight it.</p>
+    <h4>WHICH ONE HOOKS YOU?</h4>
+    <p>Notice: two sentences side by side. The student explains the difference in their own words (Portuguese is fine here). Then <b>Show answer</b>. After the pairs come the rule cards and the traps: the student says the right form before you tap.</p>
+    <h4>FIX THE OPENING</h4>
+    <p>Use: the student reads a sentence and the clue, and says it the new way. Show the answer after the attempt; accept natural variations. Tap <b>Right</b> for each good one.</p>
+    <h4>BINGO</h4>
+    <p>A 3×3 card of quick tasks. The student picks a square and does it out loud; tap <b>Done</b>. Three in a line (across, down or diagonal) is a BINGO. Keep going for a second line if there is time.</p>
+    <h4>YOUR FIRST TEN SECONDS</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>my name is… as the first sentence</i>, <i>sorry for my English</i>, <i>have you ever wondered why do we</i>, <i>imagine that you will be</i>, <i>today I will talk about… (flat)</i>, <i>I’m very nervous (don’t say it)</i>. C1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE TOUGH ROOM (IV) AND THE SURPRISE QUESTION</h4>
+    <p>This scene replaces the Bingo. Your student’s talk on sleep is at 9 AM, for two hundred tired engineers: they put five hooks from best to worst for this audience, then defend their first and their last. There is no right answer. Wait five seconds in silence while they order, then use the PUSH line (only you see it): the audience changes, does the order change? Then tap <b>Show my teacher’s order</b> and agree on one top 3 together. Recast quietly while they talk (watch for <i>why do we</i> after “Have you ever wondered”); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: I · Three Openings.</li>
+      <li><b>Focus</b>: II · Which One Hooks You? and III · Fix the Opening.</li>
+      <li><b>Out loud</b>: IV · The Tough Room.</li>
+      <li><b>Write</b>: V · Your First Ten Seconds.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* HOOK THEM IN TEN SECONDS (Main C1) · pergunta-surpresa · 28/10/2026 · openings: Have you ever wondered / Did you know / Imagine / Raise your hand / Last year, I / By the end */
+window.WL_FAISCA = { nivel: 'C1', qs: [
+  { cena: 'leitura', tipo: 'And you?', q: 'When was the last time you spoke in front of a group?',
+    opc: ['This month', 'This year', 'I avoid it!'], st: ['Last year, I …', 'The last time was when …'],
+    ex: 'This month. I presented a project to my team, and I started with “Hello, my name is…”. Now I know why they looked at their phones!', push: 'What would you change in your first sentence now?' },
+  { cena: 'descobre', tipo: 'Opinion', q: 'Is it OK to start a talk with a joke?',
+    opc: ['Always', 'Only if you’re funny', 'Never'], st: ['A joke works if …', 'I’d rather start with …'],
+    ex: 'Only if you’re funny. If the joke fails, the first ten seconds are gone. I’d rather start with “Did you know that…?”.', push: 'Tell me a one-line joke that could open a talk about Mondays.' },
+  { cena: 'transforma', tipo: 'Would you rather', q: 'Would you rather give a talk to 500 strangers, or to 10 people you know?',
+    opc: ['500 strangers', '10 people I know'], st: ['I’d rather …, because …', 'Imagine …'],
+    ex: '500 strangers. Imagine making a mistake in front of your boss and your best friend. Strangers forget you.', push: 'And if one of the 500 is filming it for social media?' },
+  { cena: 'cartao', tipo: 'What if', q: 'What if you had ten seconds in a lift with your dream employer? What would your first sentence be?',
+    opc: ['A question', 'A surprising fact', 'A short story'], st: ['Have you ever wondered why …?', 'Did you know that …?', 'Last year, I …'],
+    ex: 'A question: “Have you ever wondered why your best clients leave after one year?” Then I’d stop and wait.', push: 'The lift doors open after your first sentence. Was it enough to get a meeting?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* HOOK THEM IN TEN SECONDS (Main C1) · conversa · 28/10/2026 · regra 3×3 do Carlos
+   O ranking TROCA "IV · Bingo" (prática controlada: fazer cada abertura em voz alta, que o III já pede;
+   a aula fica com os mesmos 44 min). A aula não tinha nenhum momento de decisão.
+   Uma plateia difícil (200 engenheiros cansados, 9 da manhã, depois do café): o aluno ordena as cinco aberturas
+   da aula, defende a primeira e a última, e compara com a ordem do professor. Formato: ranking com a ordem do professor. */
+window.WL_CONVERSA = { nivel: 'C1', cenas: [
+  { id: 'ranking', troca: 'bingo', est: 'o', min: 8, img: 'conversa', rot: 'The Tough Room', t: '9 AM. Two hundred tired engineers.',
+    p: 'Your talk is about sleep. Which of the five hooks works best for THIS audience? Put them in order. Then defend your first and your last.',
+    formato: 'ranking',
+    q: 'Which hook would wake up this room?',
+    itens: ['Have you ever wondered why…?', 'Did you know that…?', 'Imagine…', 'Raise your hand if…', 'Last year, I…'],
+    prof: [3, 1, 4, 0, 2],
+    dica: 'Tap from the best to the worst for this audience. Tap again to take it out.',
+    st: ['For engineers, I’d start with …, because …', '“Imagine…” is risky here, because …'],
+    ex: 'Number one: “Did you know that…?”. Engineers love numbers: “Did you know that one in three of you didn’t sleep enough last night?” Last: “Imagine…”: at 9 AM, they’ll close their eyes and really sleep!',
+    push: 'Now it’s thirty teenagers on a school trip. Same number one?' }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "leitura": {
+   "t": "Same talk. Three first sentences.",
+   "p": "Read them like a speaker. Then look closer."
+  },
+  "descobre": {
+   "t": "Boring or brilliant?",
+   "p": "Compare A and B. Which one hooks you? Why?"
+  },
+  "transforma": {
+   "t": "Boring → hook.",
+   "p": "Read the opening. Use the clue. Say a hook."
+  },
+  "cv-ranking": {
+   "t": "9 AM. Two hundred tired engineers.",
+   "p": "Rank the five hooks for them. Defend first and last."
+  },
+  "cartao": {
+   "t": "The first ten seconds of your talk.",
+   "p": "Pick a topic you love. Hook, bridge, promise."
+  }
+ },
+ "prep": {
+  "obj": "Aberturas que prendem (pergunta retórica, fato surpreendente, Imagine…, mini-história, Raise your hand if…, a promessa): três oradores abrem a mesma palestra sobre sono.",
+  "armadilha": "Começar com “My name is…”, “Sorry for my English” ou “I’m very nervous”; e na pergunta indireta, a ordem do português: “Have you ever wondered why do we sleep?”. Imagine + futuro: “imagine that you will be”.",
+  "pal": [
+   "Have you ever wondered why …?",
+   "Did you know that …?",
+   "Imagine …",
+   "Raise your hand if …",
+   "Last year, I …",
+   "Here’s what changed.",
+   "By the end of this talk, you’ll …"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: só os primeiros dez segundos de uma palestra.",
+   "perg": "Think of a talk you loved. How did it start?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "leitura": {
+   "obj": "Três aberturas da mesma palestra sobre sono; o orador 1 soa chato de propósito.",
+   "perg": "Which speaker would you keep listening to?",
+   "pula": "Leia as três e faça uma pergunta."
+  },
+  "descobre": {
+   "obj": "Pares lado a lado: abertura chata × gancho; atenção a wondered why we (sem do).",
+   "perg": "What makes B work?",
+   "pula": "Três pares e as armadilhas bastam."
+  },
+  "transforma": {
+   "obj": "Transformar aberturas chatas em ganchos, com a pista.",
+   "perg": "Which hook would you use here?",
+   "pula": "Quatro aberturas bastam."
+  },
+  "cv-ranking": {
+   "obj": "Ranking: cinco ganchos para 200 engenheiros cansados às 9h; defender o primeiro e o último.",
+   "perg": "Which hook works for THIS audience?",
+   "pula": "Só o primeiro e o último."
+  },
+  "cartao": {
+   "obj": "Escrita: gancho, ponte e promessa da palestra real do aluno; guardar para a última aula.",
+   "perg": "What’s your talk about, and why should we care?",
+   "pula": "Só o gancho basta. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais aberturas, sobre temas variados, em voz alta.",
+   "perg": "How would you open that?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Debate sobre como abrir uma palestra: humor, dado, história.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O aluno monta uma abertura completa para outra plateia, em quatro passos.",
+   "perg": "Who is your audience?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More Openings",
+   "t": "Ten seconds. Hook me.",
+   "p": "Pick a card. Open the talk out loud.",
+   "palavras": [
+    "Have you ever wondered why …?",
+    "Did you know that …?",
+    "Imagine …",
+    "Raise your hand if …"
+   ],
+   "cartas": [
+    {
+     "k": "COFFEE",
+     "q": "Open a talk about coffee for people who hate mornings.",
+     "fup": "Which hook did you choose, and why?",
+     "st": [
+      "Raise your hand if …",
+      "Did you know that …?"
+     ],
+     "ex": "Raise your hand if you’ve had a coffee before talking to anyone today."
+    },
+    {
+     "k": "SAVING MONEY",
+     "q": "Open a talk about saving money for twenty-year-olds.",
+     "fup": "Would a number work better?",
+     "st": [
+      "Imagine …",
+      "Did you know that …?"
+     ],
+     "ex": "Imagine you’re thirty-five and your rent is paid for the rest of your life."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "Open a talk about your city for tourists who’ve never heard of it.",
+     "fup": "What’s the promise at the end?",
+     "st": [
+      "Have you ever wondered why …?",
+      "By the end of this talk, you’ll …"
+     ],
+     "ex": "Have you ever wondered why nobody talks about the best beach in Brazil?"
+    },
+    {
+     "k": "A FAILURE",
+     "q": "Open a talk with a mini-story about a mistake you made.",
+     "fup": "What changed after that?",
+     "st": [
+      "Last year, I … Here’s what changed."
+     ],
+     "ex": "Last year, I sent a client an email meant for my sister. Here’s what changed."
+    },
+    {
+     "k": "PHONES",
+     "q": "Open a talk about phone addiction for teenagers who don’t want to be there.",
+     "fup": "How do you avoid sounding like a parent?",
+     "st": [
+      "Raise your hand if …",
+      "Here’s the thing: …"
+     ],
+     "ex": "Raise your hand if you checked your phone while I was walking up here."
+    },
+    {
+     "k": "THE WORST",
+     "q": "What’s the worst opening you’ve ever heard at work or school?",
+     "fup": "How would you fix it?",
+     "st": [
+      "It started with … Instead, I’d say …"
+     ],
+     "ex": "It started with “Can you hear me at the back?” Instead, I’d start with a question."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I see your point, but …",
+    "The thing is, …",
+    "Imagine …",
+    "Did you know that …?"
+   ],
+   "rodadas": [
+    {
+     "q": "Open with a joke, or with a fact?",
+     "a": "A joke",
+     "b": "A fact",
+     "fa": [
+      "A joke. A laughing room is a listening room.",
+      "Once they laugh, they trust you."
+     ],
+     "fb": [
+      "A fact. A joke that fails ruins the first minute.",
+      "The thing is, a good number surprises everyone."
+     ]
+    },
+    {
+     "q": "Say your name first, or hook first?",
+     "a": "Name first",
+     "b": "Hook first",
+     "fa": [
+      "Name first. People want to know who’s talking.",
+      "It’s polite, especially at work."
+     ],
+     "fb": [
+      "Hook first. Your name is on the slide already.",
+      "Nobody remembers a name before they care."
+     ]
+    },
+    {
+     "q": "Admit you’re nervous, or hide it?",
+     "a": "Admit it",
+     "b": "Hide it",
+     "fa": [
+      "Admit it. The audience relaxes with you.",
+      "Being human is a hook too."
+     ],
+     "fb": [
+      "Hide it. They came for the topic, not your feelings.",
+      "I see your point, but it sounds like an apology."
+     ]
+    },
+    {
+     "q": "Open with a story, or with a question?",
+     "a": "A story",
+     "b": "A question",
+     "fa": [
+      "A story. Everyone wants to know what happens next.",
+      "Last year, I… beats any slide."
+     ],
+     "fb": [
+      "A question. It makes the audience think from second one.",
+      "Have you ever wondered why… works every time."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Did you know that nobody won? Everybody hooked."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "A New Room",
+   "t": "Same talk, new audience.",
+   "p": "One step at a time. Then say it all.",
+   "prof": "The student keeps the topic from Your First Ten Seconds but opens it for a very different audience; watch for “why do we” after wondered.",
+   "passos": [
+    {
+     "q": "Who is your new audience, and what time is it?",
+     "st": [
+      "My audience is …, at …"
+     ],
+     "ex": "My audience is thirty retired teachers, at 4 PM, after lunch."
+    },
+    {
+     "q": "Your hook for them.",
+     "st": [
+      "Have you ever wondered why …?",
+      "Imagine …"
+     ],
+     "ex": "Have you ever wondered why your grandchildren learn faster than you?"
+    },
+    {
+     "q": "The bridge: why this matters to them.",
+     "st": [
+      "Here’s the thing: …"
+     ],
+     "ex": "Here’s the thing: they don’t. They’re just less afraid of mistakes."
+    },
+    {
+     "q": "The promise.",
+     "st": [
+      "By the end of this talk, you’ll …"
+     ],
+     "ex": "By the end of this talk, you’ll know three ways to learn like a ten-year-old."
+    }
+   ],
+   "fim": "Ten seconds, a new room, and they’re listening."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

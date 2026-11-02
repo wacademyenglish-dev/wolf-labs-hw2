@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · One Becomes Two · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>One Becomes Two · The Market Stall</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>One Becomes Two · The Market Stall</h2>
+    <p>Vera sells fruit and bread at the Saturday market, and she shouts what she has. The screen is her stall in dark wood: the <b>/s/ crate</b>, the <b>/z/ crate</b>, the <b>-ES drawer</b>, the <b>-IES drawer</b> and the <b>odd basket</b> for the stubborn ones. You are Vera’s voice. At the end, the student opens a stall and shouts. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>-s</b> and <b>-es</b> (a hiss at the end, s · x · ch · sh, needs an extra beat). The two sounds of -S: <b>books /s/, dogs /z/</b>, and most plurals buzz. <b>-y</b> after a consonant: <b>cherries</b> (but <b>days</b>). The F family: <b>knives, loaves</b>. The stubborn ones: <b>children, people, men, women, feet, teeth</b>. The mistakes: the dropped S in fast speech (<i>two tomato</i>) and the plural of a plural (<i>childrens, peoples</i>).</p>
+    <!--conversa--><h4>OK OR NOT OK? (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>At Vera’s stall, your student judges three customers: two cherries before buying, ten bags for three apples, two children touching all the peaches. Green or red, no right answer. Answer first yourself, as a model. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk (<i>two cherry</i> → <i>two cherries</i>, <i>childs</i> → <i>children</i>); at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I Your Market, III Your Throat Knows (both of you, hand on the throat; don’t explain voicing), V The Knife Drawer, VI The Stubborn Ones, IX Your Own Stall.</li>
+      <li><b>Focus</b>: II One Becomes Two (clap the beats), IV The Y Fork (look at the letter before the Y), VII Vera Shouts (spelling first; only a plain +S goes by sound), VIII OK or Not OK? (out loud).</li>
+      <li><b>Write</b>: X Market Closed, a shopping list, with the red wavy line for <i>two tomato</i>, <i>childs</i>, <i>peoples</i>, <i>knifes</i>, <i>cherrys</i>, <i>peachs</i>. It goes to their My notes.</li>
+    </ul>
+    <h4>YOU ARE VERA</h4>
+    <p>In scene VII shout each item loud and fast, like a real market: “Three peaches!” The student says the plural first, then sends it. Strong students: let them shout for you.</p>
+    <h4>SCENE I</h4>
+    <p>Don’t correct. Tap what you hear; the two classic mistakes have their own buttons. Scene X brings them back.</p>
+    <h4>IN THE LIVE ROOM</h4>
+    <p>The crates, the drawers, the signs and the stall move on both screens. G opens this guide.</p>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* ONE BECOMES TWO (Main A1) · pergunta-surpresa · 27/10/2026 · plural */
+window.WL_FAISCA = { nivel: 'A1', qs: [
+  { cena: 'caixa', tipo: 'And you?', q: 'Do you go to the market?',
+    opc: ['Yes, I do.', 'No, I don’t.'], st: ['Yes. I buy …', 'No. I buy my vegetables at …'],
+    ex: 'Yes! I buy bananas and tomatoes every Saturday.', push: 'Every week? Yes or no?' },
+  { cena: 'garfo', tipo: 'Would you rather', q: 'Strawberries or cherries?',
+    opc: ['Strawberries', 'Cherries'], st: ['Strawberries! They are …', 'Cherries. I love cherries.'],
+    ex: 'Strawberries, with chocolate!', push: 'Every day? Yes or no?' },
+  { cena: 'teimosos', tipo: 'And you?', q: 'How many people live in your house?',
+    opc: ['One or two', 'Three or four', 'Five or more'], st: ['Two people live in my house.', 'There are … people.'],
+    ex: 'Three people: my two brothers and me.', push: 'And pets? Yes or no?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* ONE BECOMES TWO (Main A1) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   "OK / not OK" (semáforo de duas cores) no lugar de "VIII · The Signs" (extra, prática controlada: consertar placas).
+   Na barraca da Vera, o aluno julga três coisas que os clientes fazem. Sem resposta certa.
+   A1 bem leve: duas opções, frase quase pronta, o professor responde primeiro.
+   A gramática da aula (plural: -s, -es, -ies, irregulares) mora nas situações e nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A1', cenas: [
+  { id: 'banca', troca: 'placas', est: 'o', min: 5, img: 'barraca', rot: 'OK or Not OK?', t: 'Saturday at Vera’s stall. Is it OK?',
+    p: 'Choose OK or Not OK. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The cherries', sit: 'A man is at the stall.', q: 'He eats two cherries.',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. Two cherries are fine.', 'Not OK. Ask Vera first!'],
+        ex: 'OK! Two cherries are fine. Ten cherries, not OK!',
+        push: 'Five cherries? Yes or no?' },
+      { tag: 'The bags', sit: 'A woman buys three apples.', q: 'She takes ten bags.',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. The bags are free.', 'Not OK. One bag is fine.'],
+        ex: 'Not OK! Ten bags for three apples? One bag is fine.',
+        push: 'Do you bring your bag? Yes or no?' },
+      { tag: 'The peaches', sit: 'Two children are at the stall.', q: 'They touch all the peaches.',
+        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
+        st: ['OK. Children are children.', 'Not OK. The peaches are soft.'],
+        ex: 'Not OK. The peaches are soft! But children are children.',
+        push: 'Do you touch the fruit? Yes or no?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "caixa": {
+   "t": "Twelve words. Some need a beat.",
+   "p": "Say the plural. Clap. Tap + S or + ES."
+  },
+  "garganta": {
+   "t": "Hand on your throat. Does it buzz?",
+   "p": "No buzz: /s/ crate. Buzz: /z/ crate."
+  },
+  "garfo": {
+   "t": "Look at the letter before the Y.",
+   "p": "Consonant: -IES. Vowel: just + S."
+  },
+  "facas": {
+   "t": "The F turns into V.",
+   "p": "Say the plural first. Then the sentence."
+  },
+  "teimosos": {
+   "t": "No rule. Your mouth remembers.",
+   "p": "Say the plural. Find the two fake words."
+  },
+  "grito": {
+   "t": "Vera shouts. Put each one in place.",
+   "p": "Say the plural. Then send it."
+  },
+  "cv-banca": {
+   "t": "Vera’s stall. Is it OK?",
+   "p": "Choose. Your teacher goes first. Then say it."
+  },
+  "barraca": {
+   "t": "Your own stall. Shout what you sell.",
+   "p": "Shout five things with numbers."
+  },
+  "fim": {
+   "t": "Write your shopping list.",
+   "p": "Six things with numbers. Watch every ending."
+  }
+ },
+ "prep": {
+  "obj": "Plural: -s/-es, os dois sons do S (/s/ e /z/), -y vira -ies, F vira V e os irregulares. Na feira da Vera, que grita o que vende.",
+  "armadilha": "Na fala rápida o brasileiro engole o S (“two tomato”) e pluraliza o que já é plural (“childrens”, “peoples”).",
+  "pal": [
+   "tomatoes",
+   "peaches",
+   "cherries",
+   "knives",
+   "loaves",
+   "children",
+   "people",
+   "feet",
+   "teeth"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a barraca da Vera na feira de sábado e os quatro finais do plural.",
+   "perg": "Do you go to a street market?",
+   "pula": "Só leia a frase da capa e abra."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: o que o aluno compra toda semana. Não corrija ainda.",
+   "perg": "What do you buy every week?",
+   "pula": "Três respostas bastam."
+  },
+  "caixa": {
+   "obj": "Plural com + S ou + ES: palavra que termina em chiado ganha uma batida a mais.",
+   "perg": "How many beats in “peaches”?",
+   "pula": "Seis palavras bastam."
+  },
+  "garganta": {
+   "obj": "Os dois sons do S final: /s/ (books) e /z/ (dogs), sentindo na garganta.",
+   "perg": "Does it buzz?",
+   "pula": "Seis palavras bastam."
+  },
+  "garfo": {
+   "obj": "Y depois de consoante vira -IES (cherries); depois de vogal, só + S (days).",
+   "perg": "What letter is before the Y?",
+   "pula": "Quatro palavras bastam."
+  },
+  "facas": {
+   "obj": "A família do F que vira V: knife/knives, loaf/loaves.",
+   "perg": "One knife, two …?",
+   "pula": "Três palavras bastam."
+  },
+  "teimosos": {
+   "obj": "Os irregulares (children, people, men, women, feet, teeth) e os falsos (childs, peoples).",
+   "perg": "One child, two …?",
+   "pula": "Quatro palavras bastam."
+  },
+  "grito": {
+   "obj": "Professor grita como a Vera; aluno diz o plural e põe no lugar certo.",
+   "perg": "Three peach … ?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-banca": {
+   "obj": "Três clientes na barraca: o aluno julga OK ou não OK e justifica com plurais.",
+   "perg": "Is it OK to taste two cherries?",
+   "pula": "Duas situações bastam."
+  },
+  "barraca": {
+   "obj": "O aluno abre a própria barraca e grita cinco coisas com números.",
+   "perg": "What do you sell? How many?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "fim": {
+   "obj": "Escrita: lista de compras com seis coisas e números; a linha vermelha vigia os finais.",
+   "perg": "What is on your shopping list?",
+   "pula": "Quatro itens bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Conversa extra sobre comida e compras, cuidando do S final.",
+   "perg": "How many apples do you eat in a week?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolhas entre dois, sempre com plural certo.",
+   "perg": "Cherries or peaches?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a Vera e responde sobre a barraca, com muitos plurais.",
+   "perg": "What do you sell today, Vera?",
+   "pula": "Três perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More market questions.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "tomatoes",
+    "peaches",
+    "cherries",
+    "children",
+    "people"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR FRUIT",
+     "q": "What fruit do you eat every week?",
+     "fup": "How many?",
+     "st": [
+      "I eat …",
+      "I buy … every week."
+     ],
+     "ex": "I eat bananas. I buy ten bananas every week."
+    },
+    {
+     "k": "YOUR FRIDGE",
+     "q": "What is in your fridge right now?",
+     "fup": "How many eggs are there?",
+     "st": [
+      "There are …",
+      "There are two …"
+     ],
+     "ex": "There are some tomatoes and there are six eggs."
+    },
+    {
+     "k": "YOUR KITCHEN",
+     "q": "How many knives and glasses are in your kitchen?",
+     "fup": "Do you need more?",
+     "st": [
+      "I have … knives.",
+      "I have … glasses."
+     ],
+     "ex": "I have four knives and twelve glasses."
+    },
+    {
+     "k": "YOUR STREET",
+     "q": "Are there many people on your street?",
+     "fup": "Are there children?",
+     "st": [
+      "There are a lot of …",
+      "There are some …"
+     ],
+     "ex": "There are a lot of people. There are some children too."
+    },
+    {
+     "k": "YOUR MARKET",
+     "q": "Where do you buy vegetables?",
+     "fup": "Are they cheap there?",
+     "st": [
+      "I buy … at …",
+      "The … are …"
+     ],
+     "ex": "I buy potatoes at the market. The potatoes are cheap there."
+    },
+    {
+     "k": "YOUR BAG",
+     "q": "What is in your bag after the market?",
+     "fup": "Is it heavy?",
+     "st": [
+      "There are …",
+      "I have three …"
+     ],
+     "ex": "There are two loaves of bread and three peaches."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "-s",
+    "-es",
+    "-ies"
+   ],
+   "rodadas": [
+    {
+     "q": "Cherries or peaches?",
+     "a": "Cherries",
+     "b": "Peaches",
+     "fa": [
+      "Cherries. They are small and sweet."
+     ],
+     "fb": [
+      "Peaches. They are big and soft."
+     ]
+    },
+    {
+     "q": "The street market or the supermarket?",
+     "a": "The street market",
+     "b": "The supermarket",
+     "fa": [
+      "The street market. The tomatoes are fresh."
+     ],
+     "fb": [
+      "The supermarket. There are no lines."
+     ]
+    },
+    {
+     "q": "A market with children or a quiet market?",
+     "a": "With children",
+     "b": "Quiet",
+     "fa": [
+      "With children. They make it happy."
+     ],
+     "fb": [
+      "Quiet. I can think."
+     ]
+    },
+    {
+     "q": "Potatoes or sandwiches for lunch?",
+     "a": "Potatoes",
+     "b": "Sandwiches",
+     "fa": [
+      "Potatoes. I love them."
+     ],
+     "fb": [
+      "Sandwiches. They are fast."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and everybody talked."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are Vera now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as Vera.",
+   "perguntas": [
+    "What do you sell at your stall?",
+    "How many peaches do you have today?",
+    "Do children come to your stall?",
+    "Are your tomatoes cheap?",
+    "How many loaves of bread do you sell?",
+    "What do people buy the most?"
+   ],
+   "st": [
+    "I sell …",
+    "I have … today.",
+    "People buy …"
+   ],
+   "ex": "I sell apples, peaches and cherries. I have twenty peaches today."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

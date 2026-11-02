@@ -1,0 +1,77 @@
+/* ============================================================
+   AS SOON AS I WAKE UP · THE 5:30 ALARM · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Identidade: madrugada em Chicago; o
+   despertador digital (dígitos âmbar num visor preto) e o horizonte em
+   SVG com o sol que sobe — o céu continua escuro. Acento: âmbar do visor.
+   ============================================================ */
+:root{
+  --noite:#080a10; --noite-rgb:8,10,16; --tinta:#e8ebf4;
+  --t1:#eef1f8; --t2:#c6ccdc; --t2-rgb:198,204,220; --t3:#8a91a4;
+  --ac:#f3a845; --ac2:#ffd08c; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(232,235,244,.05); --vidro2:rgba(232,235,244,.085); --vidro3:rgba(232,235,244,.12);
+  --fio:rgba(212,218,236,.12); --fio2:rgba(212,218,236,.22); --luz:rgba(232,235,244,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#221404}
+.btn.cheio{color:#221404}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(60px,5.8vw,112px)/.95 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em} .capa .sub b{color:var(--t1)}
+.capa-d{display:grid;justify-items:center;gap:16px;padding:18px;border-radius:var(--r1)}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{text-align:left;padding:10px 14px}
+.ini{margin:0;font:700 clamp(18px,1.4vw,22px) var(--disp);color:var(--ac2)}
+.acoes{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start;margin-top:10px}
+
+/* o despertador */
+.despertador{display:grid;justify-items:center;justify-self:start}
+.visor{display:flex;align-items:baseline;gap:6px;padding:10px 20px;border-radius:16px;background:#050608;border:3px solid #1d222e;box-shadow:inset 0 0 18px rgba(0,0,0,.9),0 10px 20px rgba(0,0,0,.6)}
+.visor b{font:700 clamp(30px,2.6vw,46px) var(--mono);color:var(--ac);text-shadow:0 0 12px rgba(243,168,69,.55);letter-spacing:.04em}
+.visor small{font:700 12px var(--mono);color:#8a5a22}
+.pes{display:flex;justify-content:space-between;width:70%} .pes i{width:12px;height:8px;border-radius:0 0 4px 4px;background:#1d222e}
+.despertador.grande .visor b{font-size:clamp(56px,5.4vw,96px)} .despertador.grande{justify-self:center}
+.horas{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.hora-b{display:grid;gap:2px;padding:10px;border-radius:14px;background:#06080c;border:2px solid #1d222e;color:var(--t1)}
+.hora-b b{font:700 22px var(--mono);color:var(--ac)} .hora-b small{font:700 12px var(--disp);color:var(--t3)}
+.hora-b.on{border-color:var(--ac)} .hora-b.feito b{color:var(--ok)}
+.capitulo{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .capitulo small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)}
+.capitulo p{margin:0;font:500 clamp(16px,1.2vw,20px)/1.5 var(--disp)}
+
+/* o nascer do sol */
+.nascer{display:block;width:100%;border-radius:14px}
+.capa-d .nascer{max-width:480px}
+.sol-box{padding:10px;border-radius:var(--r1)}
+.nascer circle{transition:cy .8s ease,opacity .8s}
+
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .pede b{font:700 clamp(18px,1.4vw,22px)/1.4 var(--disp)}
+.balao{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .balao p{margin:0;font:600 clamp(18px,1.4vw,22px)/1.4 var(--disp)}
+.balao.resp{border-color:rgba(243,168,69,.35)!important}
+.fitas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.fita{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2)} .fita small{font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)} .fita b{font:700 clamp(16px,1.25vw,20px)/1.35 var(--disp)}
+.tres-tempos{display:flex;justify-content:center}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+.aberta{position:relative;aspect-ratio:16/10;border-radius:var(--r1);background-size:cover;background-position:center}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(8,10,16,.85);font:700 13px var(--mono);color:var(--ac2)}
+.quiz{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q-linha{display:grid;gap:8px;padding:12px 16px;border-radius:var(--r2)} .q-linha.feito{border-color:rgba(143,217,162,.4)!important}
+.q-linha p{margin:0;font:700 clamp(17px,1.3vw,21px)/1.4 var(--disp)} .q-linha .recusa{margin:0;font-size:15px}
+.gap{display:inline-block;min-width:3em;padding:0 6px;border-bottom:2px solid var(--ac);color:var(--ac2);text-align:center}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)} .lado-fim .despertador{justify-self:center}
+
+@media (max-width:1100px){ .mesa-c,.mesa-video,.capa,.quiz{grid-template-columns:1fr} .fitas{grid-template-columns:1fr 1fr} .horas{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:820px){ .fitas{grid-template-columns:1fr} }

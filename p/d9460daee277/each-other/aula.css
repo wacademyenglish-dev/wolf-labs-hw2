@@ -1,0 +1,68 @@
+/* ============================================================
+   EACH OTHER · TWO BROTHERS, TWO STORIES · LIVE CLASS  05/10/2026
+   A base vem do kit (base.css). Identidade: ilha de edição à noite; os
+   dois irmãos são nós num SVG escuro; a seta que volta é âmbar, as que se
+   cruzam são azul-petróleo. Acento: farinha morna.
+   ============================================================ */
+:root{
+  --noite:#0b0b0c; --noite-rgb:11,11,12; --tinta:#ecebe7;
+  --t1:#f2f1ed; --t2:#cecbc3; --t2-rgb:206,203,195; --t3:#918d84;
+  --ac:#e6b25a; --ac2:#f7d69a; --bt:#4aa3e8; --bt2:#a6d2ff; --cruza:#5ec2c8;
+  --vidro:rgba(236,235,231,.05); --vidro2:rgba(236,235,231,.085); --vidro3:rgba(236,235,231,.12);
+  --fio:rgba(226,224,216,.12); --fio2:rgba(226,224,216,.22); --luz:rgba(236,235,231,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  --r1:28px; --r2:20px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#22180a}
+.btn.cheio{color:#22180a}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:200 clamp(72px,7vw,136px)/.92 var(--disp);letter-spacing:-.035em}
+.capa h1 b{font-weight:800;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(20px,1.6vw,28px)/1.35 var(--disp);color:var(--t2);max-width:24em}
+.capa-s{display:grid;gap:10px;padding:20px;border-radius:var(--r1)} .sussurro{margin:0;font:600 italic 17px var(--disp);color:var(--t3);text-align:center}
+.partes{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partes h5{width:100%;margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.so-prof.partes{justify-content:center} .so-prof.partes h5{text-align:center}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(143,217,162,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,110,110,.12);animation:treme .35s}
+.pilula.grande{min-height:54px;padding:0 22px;font:800 clamp(18px,1.4vw,22px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:10px;align-content:start}
+.pede{display:grid;gap:4px;padding:12px 16px;border-radius:var(--r2);max-width:900px;margin:0 auto;width:100%} .pede small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--o)} .pede b{font:700 clamp(18px,1.4vw,23px)/1.4 var(--disp)}
+.balao{display:grid;gap:4px;padding:10px 16px;border-radius:var(--r2)} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac)} .balao p{margin:0;font:700 clamp(19px,1.5vw,25px)/1.35 var(--disp)}
+.balao.resp{border-color:rgba(230,178,90,.35)!important}
+
+/* as setas */
+.setas{display:block;width:100%;max-height:calc(100vh / var(--zv,1) - 380px);margin:0 auto}
+.setas .no circle{fill:#1a1a1e;stroke:#3a3a42;stroke-width:2} .setas .no text{fill:var(--t1);font:800 13px var(--mono);text-anchor:middle;letter-spacing:.06em}
+.seta{fill:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:300;animation:traca .6s ease-out both}
+.seta.volta{stroke:var(--ac);color:var(--ac)} .seta.cruza{stroke:var(--cruza);color:var(--cruza)}
+@keyframes traca{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
+.setas.mini{max-height:160px}
+.sv-box{padding:12px;border-radius:var(--r1)}
+.mesa-s{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+
+.mics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mic{display:grid;gap:6px;padding:10px 14px;border-radius:var(--r2)} .mic.feito{border-color:rgba(143,217,162,.35)!important}
+.duas-l{display:grid;grid-template-columns:1fr 1fr;gap:10px} .duas-l p{margin:0;font:600 clamp(15px,1.1vw,18px)/1.4 var(--disp)} .duas-l small{display:block;font:800 11px var(--mono);letter-spacing:.12em;color:var(--ac)}
+.duas-l p+p small{color:var(--cruza)}
+.mic .aprova,.mic .recusa{margin:0;font-size:15px}
+
+.frase-t{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.palavra{min-height:58px;padding:0 18px;border-radius:12px;border:1px solid var(--fio2);background:#151518;font:800 clamp(22px,2vw,32px) var(--disp);color:var(--t1)}
+.palavra.tirada{text-decoration:line-through;text-decoration-color:var(--erro);color:var(--t3);border-color:var(--ok)} .palavra.errado{border-color:var(--erro);animation:treme .35s}
+.gente-s{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;min-height:44px;align-items:center} .gente-s i{width:22px;height:34px;border-radius:11px 11px 6px 6px;background:var(--ac);opacity:.8} .gente-s span{color:var(--t3);font:600 16px var(--disp)}
+.versoes-c{display:grid;gap:10px}
+.versao-c{display:grid;gap:6px;padding:16px;border-radius:var(--r2);text-align:left;color:var(--t1);cursor:pointer}
+.versao-c small{font:800 12px var(--mono);letter-spacing:.12em;color:var(--ac)} .versao-c p{margin:0;font:700 clamp(17px,1.3vw,21px)/1.4 var(--disp)} .versao-c em{font:600 15px var(--disp);color:var(--t3)}
+.versao-c.on{border-color:var(--ac)!important}
+.frase-n{padding:12px 18px;border-radius:var(--r2);font:700 clamp(20px,1.6vw,27px)/1.4 var(--disp);text-align:center;max-width:900px;margin:0 auto}
+.gap{display:inline-block;min-width:3em;padding:0 6px;border-bottom:2px solid var(--ac);color:var(--ac2);text-align:center}
+.creditos{display:grid;gap:6px;padding:20px;border-radius:var(--r2);text-align:center} .creditos p{margin:0;font:600 clamp(16px,1.2vw,20px) var(--disp);color:var(--t2)} .creditos b{color:var(--ac2)}
+.fim .grande span{font-size:clamp(17px,1.3vw,21px)}
+
+@media (max-width:1100px){ .mesa-s,.capa,.mics{grid-template-columns:1fr} .setas{max-height:none} }
+@media (max-width:820px){ .duas-l{grid-template-columns:1fr} }

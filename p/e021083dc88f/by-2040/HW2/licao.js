@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "By 2040 We Will Have",
   "nivel": "B2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e021083dc88f/by-2040/img/live-capsula.webp",
+  "capa": "../img/live-capsula.webp",
   "alvo": "future perfect (will have + past participle: finished before a future moment) and future continuous (will be + -ing: in progress at that moment); by (deadline) not until; by the time + present simple",
   "abrir": "Where will you be in 2040?",
   "fecho": "<b>By 2040 + will have + participle</b>: finished before then. <b>In 2040 / this time in 2040 + will be + -ing</b>: in progress at that moment. <b>By</b> = a deadline, not <i>until</i>. After <b>by the time</b>: the present simple, never <i>will</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo bury a time capsule. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e021083dc88f/by-2040/img/live-capsula.webp",
+      "img": "../img/live-capsula.webp",
       "leg": "A small time capsule in the dark soil",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "By 2040 the city will have finished the new train line.",
-          "img": "https://wolf-labs.pages.dev/p/e021083dc88f/by-2040/img/live-trem.webp",
+          "img": "../img/live-trem.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "In 2040 people will be growing vegetables on the roofs.",
-          "img": "https://wolf-labs.pages.dev/p/e021083dc88f/by-2040/img/live-telhado.webp",
+          "img": "../img/live-telhado.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "By 2040 this highway will have become a park.",
-          "img": "https://wolf-labs.pages.dev/p/e021083dc88f/by-2040/img/live-ponte.webp",
+          "img": "../img/live-ponte.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e021083dc88f/by-2040/img/live-estudio.webp",
+      "img": "../img/live-estudio.webp",
       "leg": "An empty studio with one microphone",
       "pede": "Look at the picture: an empty studio with one microphone. Write 2 or 3 sentences, a radio message to 2040: one thing you will have done, and one thing you will be doing. Use <b>will have</b> + participle and <b>will be</b> + -ing.",
       "ph": "By 2040 I will have …",

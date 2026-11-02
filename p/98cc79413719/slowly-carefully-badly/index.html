@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Slowly, Carefully, Badly · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Slowly, Carefully, Badly · The Kitchen Grand Prix</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Slowly, Carefully, Badly · The Kitchen Grand Prix</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> An old fridge thinks its owner wants a new one, so it stands up and leaves the kitchen.</p><p style="margin:0 0 6px"><b>The grammar:</b> The Rule: How? Adjective + -ly. Four words break the rule.</p><p style="margin:0 0 6px"><b>Short class (about 43 min):</b> I You and How You Do Things · III The Film · V The Grand Prix · VI The Rule · VII Live on Air · X The Fridge Shop · XI After the Race. Skip if you’re short on time: VIII, IX (marked EXTRA on your screen). Full lesson: about 64 min.</p><p style="margin:0"><b>Open with:</b> “Do you eat fast or slowly? What about your family?”</p></div><!--/prep-->
+    <p>An old fridge thinks its owner wants a new one, so it stands up and leaves the kitchen. The student watches the short film (no words, only music) in four sealed chapters and tells <b>how</b> each character does things. Then the kitchen goes crazy: eight appliances run the Kitchen Grand Prix, and the student is the commentator.</p>
+    <h4>THE PORTUGUESE TRAP</h4>
+    <p>Portuguese often uses the adjective as an adverb, so the student says <i>runs quick, plays good</i>. It also puts the adverb before the object: <i>speaks very well English</i>. <i>work hardly</i> means almost not working; <i>lately</i> means recently; <i>fastly</i> doesn’t exist. After <b>look / feel / be</b>: the adjective (<i>looks sad</i>).</p>
+    <h4>THE FILM · THE GRAND PRIX · LIVE ON AIR</h4>
+    <p>Scene III: the same film as the old lesson, sealed in four chapters; there are no words, so every answer is the student’s own narration. Scene V, before the rule: each racer gives a clue word; tap exactly what you heard. Scene VII, after the rule: you read the replay; the student says it at once; the applause meter fills.</p>
+    <p class="pal-guia"><b>The words (II)</b>: <i>fridge</i>, <i>excuse</i>, <i>jump</i>, <i>knew</i> and <i>replace</i>, before the video, in match the columns and the word in your life. Five minutes: let the student guess first. In the video (with CC on), these words turn yellow; the explanation comes after the video, in Line by Line. <b>Line by Line (IV)</b> lists the lines with the yellow words: tap a line, hear it again, and the student says it like the character.</p>
+    <!--conversa--><h4>THE FRIDGE SHOP (X) AND THE SURPRISE QUESTION</h4>
+    <p>Back to the film: your student owns an old fridge that works badly but they love it, and you are the salesperson. Ask the three questions, then try to sell (only you see your secret limit: 30% off, or a repair for $150). There is no right answer: wait five seconds in silence after each question, then use the PUSH line to make the choice harder, and close with the deal box. Push for <b>adjective + -ly</b>, <b>well / fast / hard</b> and <b>looks + adjective</b>. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I You and How You Do Things, V The Grand Prix, VII Live on Air, VIII How Do You Do It?, IX The Radio Interview and X The Fridge Shop (you are the salesperson).</li>
+      <li><b>Listen</b>: II The Words, III The Film and IV Line by Line.</li>
+      <li><b>Focus</b>: VI The Rule.</li>
+      <li><b>Write</b>: XI After the Race.</li>
+    </ul>
+<!--falas-->
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script src="legenda-dados.js"></script>
+<script src="momentos-dados.js"></script>
+<script src="/kit/legenda.js"></script>
+<script src="palavras-dados.js"></script>
+<script src="/kit/palavras.js"></script>
+<script data-wl="faisca-dados.js">
+/* SLOWLY, CAREFULLY, BADLY (Main A2) · pergunta-surpresa · 27/10/2026 · advérbios de modo */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'video', tipo: 'And you?', q: 'Do you have an old thing at home that you love?',
+    opc: ['Yes', 'No', 'Many things!'], st: ['Yes, my old … It works …', 'No, I change things quickly.'],
+    ex: 'Yes, my old phone. It works slowly, but I keep it carefully in a box.', push: 'Would you sell it for $100?' },
+  { cena: 'pista', tipo: 'Would you rather', q: 'Would you rather do things fast and badly, or slowly and well?',
+    opc: ['Fast and badly', 'Slowly and well'], st: ['I’d rather …, because …', 'At work, I …'],
+    ex: 'Slowly and well. When I work fast, I make a lot of mistakes.', push: 'And when you cook? The same answer?' },
+  { cena: 'regra', tipo: 'Opinion', q: 'Who speaks English really well, in your opinion?',
+    opc: ['An actor', 'A singer', 'Someone I know'], st: ['… speaks English really well.', 'He / She talks …'],
+    ex: 'My friend Ana. She speaks English really well, and she talks slowly and clearly.', push: 'How did she learn? Fast or slowly?' },
+  { cena: 'aovivo', tipo: 'What if', q: 'You’re a sports commentator for one day. Which sport do you choose?',
+    opc: ['Soccer', 'Volleyball', 'Something else'], st: ['I’d choose …', 'I’d talk …'],
+    ex: 'Volleyball! I’d talk very fast and loudly, and I’d shout happily at every point.', push: 'Do it now: ten seconds, live!' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* SLOWLY, CAREFULLY, BADLY (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   A negociação leve entra no lugar de "X · Quick Check" (extra, prática controlada de tocar a palavra).
+   Volta ao filme: o aluno é o dono de uma geladeira velha e barulhenta que ele ama; o professor é
+   o vendedor que quer vender uma nova. A gramática da aula (advérbios de modo: -ly, well, fast,
+   hard, late · look / feel + adjetivo) mora nos iniciadores e no acordo. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'loja', troca: 'quiz', est: 'o', min: 7, img: 'cozinha', rot: 'The Fridge Shop', t: 'Your old fridge works badly. But you love it.',
+    p: 'You are the owner, like the man in the film. Your teacher sells new fridges. Answer, then close the deal.',
+    formato: 'papel',
+    aluno: { quem: 'The owner of an old fridge', quer: 'You love your old fridge. You don’t want to spend a lot.', limite: 'Your limit: $300' },
+    prof: { quem: 'A fridge salesperson', quer: 'Sell the new Super Cool 3000 ($900).', limite: 'Secret: you can give 30% off, or repair the old one for $150.' },
+    rot_perg: 'The salesperson asks',
+    perguntas: [
+      { q: 'Tell me about your fridge. How does it work?', ex: 'It works badly. It makes noise loudly at night, and it closes very slowly.' },
+      { q: 'Why do you want to keep an old fridge?', ex: 'Because it works hard every day. And it looks really nice in my kitchen.' },
+      { q: 'This one cools fast and works quietly. Why not buy it today?', ex: 'It looks great, but it’s very expensive. I want to think carefully.' }
+    ],
+    st: ['My fridge works …', 'It makes noise …, but …', 'Can you repair it fast?'],
+    push: 'Smile and say: “Only today, $700!” Do they change their mind?',
+    acordo: { tag: 'The deal', q: 'What do you take home?', opc: ['Repair it', 'A new one, cheaper', 'Nothing today'],
+      st: ['I’ll take …, because …', 'It works …'],
+      ex: 'Repair the old one, please. It works badly now, but after the repair it’s going to work well. And it’s only $150.' } }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "You, and how you do things.",
+   "p": "Answer out loud. The picture opens more."
+  },
+  "palavras": {
+   "t": "Five words from the video.",
+   "p": "Learn them. Then listen: they turn yellow."
+  },
+  "video": {
+   "t": "An old fridge and the man who loves it.",
+   "p": "Four short chapters, no words. Tell the story, and HOW."
+  },
+  "falas": {
+   "t": "Every line of the video.",
+   "p": "Tap a line. Hear it again. Say it."
+  },
+  "pista": {
+   "t": "Eight racers. You are the commentator.",
+   "p": "Tap a racer. Say the line with the clue word."
+  },
+  "regra": {
+   "t": "Adjective + -ly. Four words break it.",
+   "p": "Say each wrong line right. Then tap it."
+  },
+  "aovivo": {
+   "t": "Live on air: eight replays.",
+   "p": "Your teacher reads. You say it in one sentence."
+  },
+  "roda": {
+   "t": "How do you do things?",
+   "p": "Spin. Answer with -ly, well, fast, hard or late."
+  },
+  "radio": {
+   "t": "The radio interviews you.",
+   "p": "Your teacher is the reporter. Use an adverb."
+  },
+  "cv-loja": {
+   "t": "Your old fridge works badly. You love it.",
+   "p": "Your teacher sells fridges. Answer, then close the deal."
+  },
+  "fim": {
+   "t": "Fast, or well?",
+   "p": "Write three things: fast, well, badly. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Advérbios de modo (slowly, carefully, well, fast, hard): uma geladeira velha sai da cozinha e oito eletrodomésticos correm o Kitchen Grand Prix.",
+  "armadilha": "O brasileiro usa o adjetivo como advérbio (runs quick, plays good), põe o advérbio antes do objeto (speaks very well English) e inventa fastly; acha que hardly é “com força”.",
+  "pal": [
+   "slowly",
+   "carefully",
+   "badly",
+   "well",
+   "fast",
+   "hard",
+   "fridge",
+   "replace",
+   "looks sad"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a história: uma geladeira velha sai da cozinha devagar e depois corre.",
+   "perg": "Do you eat fast or slowly?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento pessoal: como o aluno faz as coisas do dia a dia.",
+   "perg": "Do you drive carefully or fast?",
+   "pula": "Duas perguntas bastam."
+  },
+  "palavras": {
+   "obj": "Cinco palavras do vídeo (fridge, excuse, jump, knew, replace) antes de assistir.",
+   "perg": "What does replace mean?",
+   "pula": "Deixe o aluno chutar e siga; cinco minutos no máximo."
+  },
+  "video": {
+   "obj": "Filme sem falas em quatro capítulos: o aluno narra o que acontece e como.",
+   "perg": "How does the fridge leave the kitchen?",
+   "pula": "Uma pergunta por capítulo basta."
+  },
+  "falas": {
+   "obj": "Ouvir de novo as falas com palavras amarelas e repetir como o personagem.",
+   "perg": "Can you say it like the character?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "pista": {
+   "obj": "O aluno narra a corrida usando a palavra-pista de cada corredor, antes da regra.",
+   "perg": "How does the toaster run?",
+   "pula": "Quatro corredores bastam."
+  },
+  "regra": {
+   "obj": "A regra: adjetivo + -ly, e as quatro exceções (well, fast, hard, late).",
+   "perg": "Is it good or well here?",
+   "pula": "Não corte: é a regra. Corte só duas frases."
+  },
+  "aovivo": {
+   "obj": "Fala rápida: o professor lê o replay e o aluno diz em uma frase com advérbio.",
+   "perg": "How did the kettle finish the race?",
+   "pula": "Quatro replays bastam."
+  },
+  "roda": {
+   "obj": "Roleta pessoal: o aluno fala da vida dele com advérbios de modo.",
+   "perg": "How do you sing?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "radio": {
+   "obj": "Entrevista de rádio: o aluno, como narrador, responde com advérbios.",
+   "perg": "How did the fridge run today?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-loja": {
+   "obj": "Conversa: o aluno defende a geladeira velha e o professor tenta vender uma nova.",
+   "perg": "Your fridge works badly. Why do you keep it?",
+   "pula": "Uma pergunta e o fechamento do negócio."
+  },
+  "fim": {
+   "obj": "Escrita: três coisas reais que o aluno faz rápido, bem e mal.",
+   "perg": "What do you do well?",
+   "pula": "Duas frases bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre como o aluno faz as coisas, com advérbios de modo.",
+   "perg": "What do you do slowly?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado e justificar com advérbios de modo.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-cadeira": {
+   "obj": "O aluno vira a geladeira velha e conta a fuga com advérbios.",
+   "perg": "How did you leave the kitchen?",
+   "pula": "Quatro perguntas bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "How do you do it?",
+   "p": "Pick a card. Answer with an adverb.",
+   "palavras": [
+    "slowly",
+    "carefully",
+    "well",
+    "fast",
+    "badly"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR KITCHEN",
+     "q": "Do you cook well or badly?",
+     "fup": "What do you cook best?",
+     "st": [
+      "I cook …",
+      "I make … really well."
+     ],
+     "ex": "I cook badly, but I make eggs really well."
+    },
+    {
+     "k": "YOUR MORNING",
+     "q": "Do you get up quickly or slowly?",
+     "fup": "Why?",
+     "st": [
+      "I get up …, because …"
+     ],
+     "ex": "I get up slowly, because I hate my alarm."
+    },
+    {
+     "k": "YOUR WORK",
+     "q": "Do you work hard or do you work fast?",
+     "fup": "Which is better?",
+     "st": [
+      "I work …",
+      "I think working … is better."
+     ],
+     "ex": "I work hard, but not always fast."
+    },
+    {
+     "k": "YOUR CAR",
+     "q": "Do you drive carefully?",
+     "fup": "Who drives badly in your family?",
+     "st": [
+      "I drive …",
+      "My … drives …"
+     ],
+     "ex": "I drive carefully, but my brother drives too fast."
+    },
+    {
+     "k": "YOUR ENGLISH",
+     "q": "What do you do well in English?",
+     "fup": "And what do you do badly?",
+     "st": [
+      "I … well.",
+      "I … badly."
+     ],
+     "ex": "I read well, but I speak slowly."
+    },
+    {
+     "k": "OLD THINGS",
+     "q": "Do you have an old thing that works badly?",
+     "fup": "Why do you keep it?",
+     "st": [
+      "My old … works …, but …"
+     ],
+     "ex": "My old phone works badly, but I love it."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "because",
+    "fast",
+    "well",
+    "carefully"
+   ],
+   "rodadas": [
+    {
+     "q": "An old fridge: fix it or replace it?",
+     "a": "Fix it",
+     "b": "Replace it",
+     "fa": [
+      "Fix it. It worked well for years."
+     ],
+     "fb": [
+      "Replace it. A new one works quietly and well."
+     ]
+    },
+    {
+     "q": "Do things fast or do things well?",
+     "a": "Fast",
+     "b": "Well",
+     "fa": [
+      "Fast. I have no time."
+     ],
+     "fb": [
+      "Well. Then I do it only once."
+     ]
+    },
+    {
+     "q": "Eat fast or eat slowly?",
+     "a": "Fast",
+     "b": "Slowly",
+     "fa": [
+      "Fast. I eat quickly at work."
+     ],
+     "fb": [
+      "Slowly. Food tastes better that way."
+     ]
+    },
+    {
+     "q": "Learn English slowly and carefully, or quickly with mistakes?",
+     "a": "Slowly",
+     "b": "Quickly",
+     "fa": [
+      "Slowly and carefully. I want to speak correctly."
+     ],
+     "fb": [
+      "Quickly. Mistakes are fine."
+     ]
+    }
+   ],
+   "fim": "Four rounds. You argued well, and your teacher argued badly."
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "The Hot Seat",
+   "t": "You are the old fridge now.",
+   "p": "Your teacher interviews you.",
+   "aluno": "Listen to your teacher’s question. Answer as the old fridge.",
+   "perguntas": [
+    "How did you leave the kitchen?",
+    "Why did you leave?",
+    "You left quietly. Then how did you run?",
+    "Do you work well or badly now?",
+    "How does your owner treat you?",
+    "How do you feel now? Do you look happy or sad?"
+   ],
+   "st": [
+    "I left …ly, because …",
+    "I work …, but …",
+    "I look …"
+   ],
+   "ex": "I left quietly, because I thought he wanted a new fridge."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

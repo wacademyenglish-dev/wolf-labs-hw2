@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Inside the Walls",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/8bdc24bf4257/inside-the-walls/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "can / can't (now) and could / couldn't (past); be allowed to / not allowed to; plain verb after them; never don't can, can to, allowed + verb without to, can't for the past",
   "abrir": "What aren't you allowed to do at home?",
   "fecho": "<b>can / can't</b> + plain verb, now: <i>We can read.</i> <b>could / couldn't</b>, the past: <i>I couldn't go out.</i> <b>Allowed to</b> = the rule says yes: <i>We are allowed to walk.</i> <i>We aren't allowed to climb.</i> Never <i>don't can, allowed climb</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo stand at the gate of an old walled city. A new scene, about 50 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/8bdc24bf4257/inside-the-walls/img/live-portao.webp",
+      "img": "../img/live-portao.webp",
       "leg": "The big gate of the city",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Only the guards are allowed to go out.",
-          "img": "https://wolf-labs.pages.dev/p/8bdc24bf4257/inside-the-walls/img/live-portao.webp",
+          "img": "../img/live-portao.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "We can read in the library.",
-          "img": "https://wolf-labs.pages.dev/p/8bdc24bf4257/inside-the-walls/img/live-livro.webp",
+          "img": "../img/live-livro.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "We can't stay in the street at night.",
-          "img": "https://wolf-labs.pages.dev/p/8bdc24bf4257/inside-the-walls/img/live-cidade.webp",
+          "img": "../img/live-cidade.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/8bdc24bf4257/inside-the-walls/img/live-cidade.webp",
+      "img": "../img/live-cidade.webp",
       "leg": "A narrow street in an old city",
       "pede": "Look at the picture: a narrow street in an old city. Write 2 or 3 sentences about rules in a place you know (school, work, home). Use <b>can</b>, <b>can't</b> or <b>allowed to</b>.",
       "ph": "At my school, we can … We aren't allowed to …",

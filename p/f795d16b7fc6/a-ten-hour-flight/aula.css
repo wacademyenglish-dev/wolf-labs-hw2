@@ -1,0 +1,71 @@
+/* ============================================================
+   A TEN-HOUR FLIGHT · THE BOARDING PASS · LIVE CLASS  06/10/2026
+   A base vem do kit (base.css). Identidade: portão de embarque à noite
+   — azul-petróleo quase preto; cartões de embarque em grafite com
+   picote e canhoto; o adjetivo composto em letra grande no canhoto; o
+   blog da Tess em papel-jornal escuro.
+   ============================================================ */
+:root{
+  --noite:#05080a; --noite-rgb:5,8,10; --tinta:#e6ecee;
+  --t1:#eef3f4; --t2:#c2cbce; --t2-rgb:194,203,206; --t3:#848f93;
+  --ac:#f3a65a; --ac2:#f9d1a6; --mar:#5fc6c1; --bt:#4aa3e8; --bt2:#a6d2ff;
+  --vidro:rgba(230,236,238,.05); --vidro2:rgba(230,236,238,.085); --vidro3:rgba(230,236,238,.12);
+  --fio:rgba(220,228,230,.12); --fio2:rgba(220,228,230,.22); --luz:rgba(230,236,238,.17);
+  --ok:#8fd9a2; --am:#f0b866; --erro:#ff6e6e; --lil:#b69cff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace; --serif:'DM Serif Display',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#2a1606}
+.btn.cheio{color:#2a1606}
+.capa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px;align-items:center}
+.capa h1{margin:12px 0 16px;font:400 clamp(58px,5.6vw,108px)/.95 var(--serif);letter-spacing:-.01em}
+.capa h1 b{display:block;font-style:italic;font-weight:400;color:var(--ac2)}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:26em} .capa .sub b{color:var(--ac2)}
+.capa-r{display:grid;gap:14px;justify-items:center;width:100%}
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.lado-l{display:grid;gap:10px;align-content:start}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versao{min-height:0;padding:10px 14px;font-size:clamp(15px,1.15vw,20px);text-align:left}
+.versao.certo{border-color:var(--ok);background:rgba(143,217,162,.12)} .versao.errado{border-color:var(--erro);animation:treme .35s}
+.tf-ops{display:grid;gap:6px} .tf-ops.linha{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;margin:0 auto 12px} .tf-ops.linha .versao{text-align:center;min-height:58px;font-weight:700}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:1000px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(20px,1.7vw,28px)/1.4 var(--disp)}
+.balao.ok-b{border-color:var(--ok)} .balao u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac);padding:0 4px}
+.pista{margin:0;font:600 italic 16px var(--disp);color:var(--t3)}
+
+/* o cartão de embarque */
+.tf-pass{display:grid;grid-template-columns:1fr 190px;width:100%;max-width:760px;border-radius:16px;background:#11171b;border:1px solid #26333a;box-shadow:0 18px 40px rgba(0,0,0,.55);overflow:hidden}
+.tf-pass.best{background:#121a17;border-color:#2a3a33}
+.tf-corpo{display:grid;gap:8px;padding:16px 18px;border-right:2px dashed #33434a}
+.tf-topo{display:flex;align-items:center;gap:12px} .tf-topo b{font:800 15px var(--mono);letter-spacing:.08em;color:var(--t1)} .tf-topo span{font:800 15px var(--mono);color:var(--mar)} .tf-topo i{margin-left:auto;font:800 11px var(--mono);font-style:normal;letter-spacing:.14em;padding:3px 8px;border-radius:6px;background:#2a1d14;color:var(--ac2)}
+.tf-pass.best .tf-topo i{background:#13261c;color:var(--ok)}
+.tf-nota{margin:0;font:500 clamp(15px,1.15vw,19px)/1.45 var(--disp);color:var(--t2)}
+.tf-longo{margin:0;font:700 clamp(15px,1.15vw,18px) var(--mono);color:var(--t3)} .tf-longo s{text-decoration-color:var(--erro)}
+.tf-canhoto{position:relative;display:grid;align-content:center;justify-items:center;gap:8px;padding:14px 10px;background:#0c1114;transition:transform .7s cubic-bezier(.3,1.4,.5,1)}
+.tf-canhoto small{font:800 10px var(--mono);letter-spacing:.16em;color:var(--t3)} .tf-canhoto b{font:400 clamp(20px,1.7vw,28px)/1.1 var(--serif);color:var(--t3);text-align:center;word-break:break-word}
+.tf-barras{width:80%;height:30px;background:repeating-linear-gradient(90deg,#3a464c 0 2px,transparent 2px 5px,#3a464c 5px 6px,transparent 6px 9px)}
+.tf-pass.destacou .tf-canhoto{transform:translateX(10px) rotate(3deg);background:#1f170e} .tf-pass.destacou .tf-canhoto b{color:var(--ac2)} .tf-pass.destacou .tf-canhoto small{color:var(--ac)}
+.tf-pass.best.destacou .tf-canhoto{background:#10221a} .tf-pass.best.destacou .tf-canhoto b{color:var(--ok)}
+.tf-fila{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:0 0 10px}
+.tf-mini{display:grid;gap:1px;padding:8px 12px;border-radius:10px;border:1px solid var(--fio2);background:#0f1518;color:var(--t2);cursor:pointer;text-align:center} .tf-mini b{font:800 13px var(--mono)} .tf-mini small{font:800 9px var(--mono);letter-spacing:.12em;color:var(--ac)} .tf-mini.best small{color:var(--ok)}
+.tf-mini.on{border-color:var(--ac);color:var(--t1)} .tf-mini.feito{background:#1a1a12;border-color:#5a4a2a}
+
+/* o blog */
+.tf-blog{display:grid;gap:8px;padding:14px 16px;border-radius:var(--r2);background:#121212;border-color:#2a2a2a}
+.tf-blog-topo{display:flex;align-items:baseline;justify-content:space-between} .tf-blog-topo b{font:italic 400 clamp(20px,1.6vw,26px) var(--serif);color:var(--t1)} .tf-blog-topo small{font:800 10px var(--mono);letter-spacing:.14em;color:var(--mar)}
+.tf-posts{display:grid;gap:4px} .tf-posts span{padding:6px 10px;border-left:3px solid var(--ac);background:#191919;font:400 clamp(16px,1.25vw,20px) var(--serif);color:var(--ac2)} .tf-posts em{font:600 14px var(--disp);color:var(--t3)}
+.tf-com{display:grid;gap:6px;padding:14px 18px;border-radius:var(--r2)} .tf-com small{font:800 11px var(--mono);letter-spacing:.1em;color:var(--mar)} .tf-com p{margin:0;font:700 clamp(19px,1.55vw,26px)/1.4 var(--disp)}
+
+/* regra */
+.tf-fitas{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;max-width:1500px;margin:0 auto 12px}
+.tf-fita{display:grid;gap:4px;padding:10px 12px;border-radius:12px} .tf-fita small{font:800 10px var(--mono);letter-spacing:.12em;color:var(--mar)} .tf-fita p{margin:0;font:600 clamp(14px,1.05vw,17px)/1.35 var(--disp)}
+.tf-caminhos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.tf-caminho{display:grid;gap:6px;align-content:start;padding:12px 14px;border-radius:var(--r2)} .tf-caminho small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--ac2)}
+.tf-caminho p{margin:0;font:600 clamp(15px,1.12vw,19px)/1.4 var(--disp)} .tf-caminho .antes s{color:var(--t3);text-decoration-color:var(--erro)} .tf-caminho .depois b{color:var(--ac2)} .tf-caminho .nota{font-size:14px;color:var(--t3)} .tf-caminho .btn{justify-self:start} .tf-caminho.aberto{border-color:var(--ok)}
+.armas{margin-top:6px} .arma{min-height:0;padding:12px 14px}
+.tf-onair{display:grid;gap:8px;padding:16px 20px;border-radius:var(--r2)} .tf-onair small{font:800 11px var(--mono);letter-spacing:.14em;color:var(--t3)} .tf-onair.on small{color:var(--erro)} .tf-onair p{margin:0;font:700 clamp(19px,1.55vw,26px)/1.4 var(--disp)} .tf-onair b{font:700 24px var(--disp)}
+.fim .grande span{font-size:clamp(16px,1.25vw,20px)}
+
+@media (max-width:1100px){ .mesa-c,.capa{grid-template-columns:1fr} .tf-fitas{grid-template-columns:1fr 1fr} .tf-caminhos{grid-template-columns:1fr 1fr} .tf-ops.linha{grid-template-columns:1fr} }
+@media (max-width:620px){ .tf-pass{grid-template-columns:1fr} .tf-corpo{border-right:0;border-bottom:2px dashed #33434a} .tf-caminhos,.tf-fitas{grid-template-columns:1fr} .tf-pass.destacou .tf-canhoto{transform:translateY(6px)} }

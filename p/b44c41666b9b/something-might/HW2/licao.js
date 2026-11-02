@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Something Might Be in the House",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/b44c41666b9b/something-might/img/live-lanterna.webp",
+  "capa": "../img/live-lanterna.webp",
   "alvo": "might / may + plain verb for a guess about now; might not / may not; no can for guesses, no -s, no to, no don't",
   "abrir": "What noises do you hear in your house at night?",
   "fecho": "A guess about now: <b>might / may</b> + plain verb: <i>It might be the cat. It may not be a ghost.</i> No <i>can</i>, no <i>-s</i>, no <i>to</i>, no <i>don't</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia hears noises when the power goes out. A new scene, about 45 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/b44c41666b9b/something-might/img/live-escada.webp",
+      "img": "../img/live-escada.webp",
       "leg": "A dark staircase, a small lamp",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -106,17 +106,17 @@ window.HW2 = {
         {
           "t": "It might be the cat.",
           "au": "audio/say1.mp3",
-          "img": "https://wolf-labs.pages.dev/p/b44c41666b9b/something-might/img/live-cozinha.webp"
+          "img": "../img/live-cozinha.webp"
         },
         {
           "t": "It may rain tonight.",
           "au": "audio/say2.mp3",
-          "img": "https://wolf-labs.pages.dev/p/b44c41666b9b/something-might/img/live-janela.webp"
+          "img": "../img/live-janela.webp"
         },
         {
           "t": "It might not be a ghost.",
           "au": "audio/say3.mp3",
-          "img": "https://wolf-labs.pages.dev/p/b44c41666b9b/something-might/img/live-escada.webp"
+          "img": "../img/live-escada.webp"
         }
       ]
     },
@@ -165,7 +165,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/b44c41666b9b/something-might/img/live-lanterna.webp",
+      "img": "../img/live-lanterna.webp",
       "leg": "A flashlight on the floor",
       "pede": "Look at the picture: a flashlight in a dark room. Write 2 or 3 guesses about what is there: one with <b>might</b>, one with <b>may</b> and one with <b>might not</b>.",
       "ph": "It might be …",

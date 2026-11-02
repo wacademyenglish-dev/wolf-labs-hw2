@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "If So, If Not",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/07c8e836394f/if-so-if-not/img/live-conversa.webp",
+  "capa": "../img/live-conversa.webp",
   "alvo": "ellipsis and short replies: if so / if not / if anything / if necessary / if possible; I'm afraid so / not; I don't think so; not that I know of; so I gather; I suppose so; I'd rather not; I don't see why not; never if yes, I think no, I'm afraid no",
   "abrir": "Think of a trip you are planning. What do you still need to find out?",
   "fecho": "Say more with fewer words: <b>If so</b> (if the answer is yes) and <b>If not</b>, never <i>if yes</i>. Short, polite answers: <b>I'm afraid not · I don't think so · I suppose so · I'd rather not</b>, never <i>I think no</i> or <i>I'm afraid no</i>. <b>Not that I know of</b> is a soft no. <b>If anything</b> means the opposite is closer to the truth.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo plan a weekend by a lake. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/07c8e836394f/if-so-if-not/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A wooden pier in the dark",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Is there a shop nearby? If not, we'll need to stock up.",
-          "img": "https://wolf-labs.pages.dev/p/07c8e836394f/if-so-if-not/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Not that I know of. If anything, it's meant to be warm.",
-          "img": "https://wolf-labs.pages.dev/p/07c8e836394f/if-so-if-not/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Can we arrive late? If so, I'll ask him to leave the key out.",
-          "img": "https://wolf-labs.pages.dev/p/07c8e836394f/if-so-if-not/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/07c8e836394f/if-so-if-not/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A pier leading into the dark",
       "pede": "Look at the picture: a wooden pier by a lake at night. Write 2 or 3 sentences about a weekend you could spend there. Use <b>If so</b>, <b>If not</b>, <b>If possible</b>, <b>If necessary</b> or <b>I'm afraid not</b>.",
       "ph": "Is it free? If so, …",

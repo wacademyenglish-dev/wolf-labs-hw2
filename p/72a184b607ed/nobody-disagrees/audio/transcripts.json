@@ -1,0 +1,107 @@
+{
+ "j1.mp3": {
+  "text": "The deadline is too early, isn't it?",
+  "seconds": 1.96,
+  "chars_per_sec": 18.4,
+  "scene": "II · one fact, three ways · INVITES",
+  "voice": "Callum"
+ },
+ "j2.mp3": {
+  "text": "The deadline isn't too early, is it?",
+  "seconds": 1.96,
+  "chars_per_sec": 18.4,
+  "scene": "II · one fact, three ways · PRESSES",
+  "voice": "Callum"
+ },
+ "j3.mp3": {
+  "text": "Nobody thinks the deadline works, do they?",
+  "seconds": 2.27,
+  "chars_per_sec": 18.5,
+  "scene": "II · one fact, three ways · CLOSES",
+  "voice": "Callum"
+ },
+ "v1up.mp3": {
+  "text": "You're coming to the review, aren't you?",
+  "seconds": 2.17,
+  "chars_per_sec": 18.4,
+  "scene": "VI · line 1 · rising",
+  "voice": "Callum"
+ },
+ "v1down.mp3": {
+  "text": "You're coming to the review, aren't you.",
+  "seconds": 2.17,
+  "chars_per_sec": 18.4,
+  "scene": "VI · line 1 · falling",
+  "voice": "Callum"
+ },
+ "v2up.mp3": {
+  "text": "We can't change it now, can we?",
+  "seconds": 2.12,
+  "chars_per_sec": 14.6,
+  "scene": "VI · line 2 · rising",
+  "voice": "Callum"
+ },
+ "v2down.mp3": {
+  "text": "We can't change it now, can we.",
+  "seconds": 1.72,
+  "chars_per_sec": 18.0,
+  "scene": "VI · line 2 · falling",
+  "voice": "Callum"
+ },
+ "v3up.mp3": {
+  "text": "That was the last one, wasn't it?",
+  "seconds": 1.78,
+  "chars_per_sec": 18.5,
+  "scene": "VI · line 3 · rising",
+  "voice": "Callum"
+ },
+ "v3down.mp3": {
+  "text": "That was the last one, wasn't it.",
+  "seconds": 1.72,
+  "chars_per_sec": 19.2,
+  "scene": "VI · line 3 · falling",
+  "voice": "Callum"
+ },
+ "r1.mp3": {
+  "text": "So we're all agreed on the March date, aren't we.",
+  "seconds": 3.08,
+  "chars_per_sec": 15.9,
+  "scene": "VII · turn 1 · ANNA",
+  "voice": "Sienna"
+ },
+ "r2.mp3": {
+  "text": "We haven't heard from the design team yet, have we?",
+  "seconds": 2.8,
+  "chars_per_sec": 18.2,
+  "scene": "VII · turn 2 · MARK",
+  "voice": "Callum"
+ },
+ "r3.mp3": {
+  "text": "They sent it on Friday, didn't they.",
+  "seconds": 2.12,
+  "chars_per_sec": 17.0,
+  "scene": "VII · turn 3 · ANNA",
+  "voice": "Sienna"
+ },
+ "r4.mp3": {
+  "text": "I haven't seen it, and I'm the only one who signs it off, aren't I?",
+  "seconds": 3.71,
+  "chars_per_sec": 18.1,
+  "scene": "VII · turn 4 · MARK",
+  "voice": "Callum"
+ },
+ "r5.mp3": {
+  "text": "Let's push it a week, shall we.",
+  "seconds": 1.65,
+  "chars_per_sec": 18.8,
+  "scene": "VII · turn 5 · ANNA",
+  "voice": "Sienna"
+ },
+ "r6.mp3": {
+  "text": "Nobody minds losing the week, do they?",
+  "seconds": 1.96,
+  "chars_per_sec": 19.4,
+  "scene": "VII · turn 6 · ANNA",
+  "voice": "Sienna"
+ }
+}

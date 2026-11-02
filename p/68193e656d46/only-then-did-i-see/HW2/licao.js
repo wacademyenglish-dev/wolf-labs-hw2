@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Only Then Did I See",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/68193e656d46/only-then-did-i-see/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "only + expression + inversion for the turning point of a story: Only then did I see ...; Only later did I realize ...; Only after the show did I relax; Only by practising did I improve; Only when the lights went down did I ...; the inversion goes in the main clause",
   "abrir": "Tell me about a moment when you finally understood something.",
   "fecho": "Every story has a turning point. Mark it with <b>only</b>: <b>Only then did I see ...</b>, <b>Only later did I realize ...</b>, <b>Only by practising did I improve.</b> The auxiliary comes before the subject, in the main clause: <b>Only when the lights went down did I relax.</b>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo, after a big presentation. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/68193e656d46/only-then-did-i-see/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "An empty theatre with rows of red seats",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Only then did I understand how much the job meant to me.",
-          "img": "https://wolf-labs.pages.dev/p/68193e656d46/only-then-did-i-see/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Only after the lights went down did the audience go quiet.",
-          "img": "https://wolf-labs.pages.dev/p/68193e656d46/only-then-did-i-see/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Only by making mistakes did she learn to trust her voice.",
-          "img": "https://wolf-labs.pages.dev/p/68193e656d46/only-then-did-i-see/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/68193e656d46/only-then-did-i-see/img/live-capa.webp",
+      "img": "../img/live-capa.webp",
       "leg": "A dressing-room mirror with warm bulbs",
       "pede": "Look at the picture: a dressing-room mirror lit by warm bulbs, just before a performance. Write 2 or 3 sentences about a turning point in your life, using <b>Only then did I ...</b>, <b>Only later did I ...</b> or <b>Only by ...ing did I ...</b>.",
       "ph": "Only then did I …",

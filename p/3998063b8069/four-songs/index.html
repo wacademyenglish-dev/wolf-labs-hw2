@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Four Songs · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>Four Songs · The Record Player</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Four Songs · The Record Player</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>The story:</b> English has three small shapes for what music does: it reminds me of + a noun, it sounds like + a noun (or sounds + an adjective), and I feel like + -ing.</p><p style="margin:0 0 6px"><b>The grammar:</b> It reminds me of school. It sounds like a party. It sounds sad. I feel like dancing.</p><p style="margin:0 0 6px"><b>Short class (about 58 min):</b> I The First Song · II Four Voices · III The Note · IV Six Tracks · V Sounds, or Sounds Like? · VI Remember or Remind · VIII Your Call, DJ · IX Your Soundtrack · X Side B. Skip if you’re short on time: VII (marked EXTRA on your screen). On the practice pages the student speaks first and taps on their own screen. Full lesson: about 65 min.</p><p style="margin:0"><b>Open with:</b> “Name a song that reminds you of someone. Who?”</p></div><!--/prep-->
+    <p>English has three small shapes for what music does: <b>it reminds me of</b> + a noun, <b>it sounds like</b> + a noun (or <b>sounds</b> + an adjective), and <b>I feel like</b> + -ing. The screen is a record player: in IV, every two right sentences bring the needle closer, and on the sixth the record spins. At the end the student builds the soundtrack of their life in four tracks. No timer, no points.</p>
+    <h4>THE GRAMMAR</h4>
+    <p><b>reminds me of</b> (of never leaves); <b>remember</b> is what you do, <b>remind</b> is what the song does; <b>sounds like</b> + noun, <b>sounds</b> + adjective; <b>feel like</b> + -ing or a noun. The mistakes: <i>it reminds me my father</i>, <i>it remembers me</i>, <i>it sounds like good</i>, <i>I feel like dance</i>.</p>
+    <h4>THE AUDIO</h4>
+    <p>Seven real-sounding stories (four voices, two more people and a lab result), with pause and 0.75×; the words appear after listening. The voices sometimes say <i>it makes me</i>; that’s fine, this hour doesn’t ask for it.</p>
+    <h4>THE PAGES</h4>
+    <p><b>Four Voices (II)</b>: tap a voice and play it. After listening, two questions about the meaning (when, what, who, why), with three different answers to tap. The second answer shows the model sentence: the student says it out loud (<i>It reminds her of the kitchen.</i>). The voices first, the rule after.</p>
+    <p><b>The Note (III)</b>: a note a daughter left inside her father’s old record. The student reads it out loud and taps the words about songs and feelings (reminds me of, remember, sounds like, sounds, feel like calling, feel like). Every word can be tapped; wrong taps go red. Then they finish the rule on the right by choosing inside each line. The rule then stays in the corner of IV and VI.</p>
+    <p><b>Six Tracks (IV)</b>: six clues, each with the verb to use (<i>Slow piano, a soft voice · sound</i>). The student says the sentence, then taps Check: the model sentence appears and the needle comes down. Under it, one question to ask you.</p>
+    <p><b>Sounds, or Sounds Like? (V)</b>: six lines. The student reads each one out loud and taps Right or Wrong; if it’s wrong, they say it right (the screen shows the fix).</p>
+    <p><b>Remember or Remind (VI)</b>: five questions to build from the words in brackets (<i>what song · remind you · your childhood</i>). The student says the question, taps Check, then asks you. Answer for real, and ask back.</p>
+    <!--conversa--><h4>YOUR CALL, DJ (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Before their own soundtrack, your student makes three real music choices: the first song at a friend’s wedding, who chooses the music on a long road trip, a concert or a birthday party. There is no right answer: let them choose, wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Push for <b>reminds me of</b>, <b>sounds (like)</b> and <b>feel like</b> + -ing. Recast quietly; at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Listen</b>: II Four Voices, VII The Lab (ask about their parents’ songs).</li>
+      <li><b>Out loud</b>: I The First Song (don’t correct; write their lines down), VIII Your Call, DJ, IX Your Soundtrack (no longer extra).</li>
+      <li><b>Focus</b>: III The Note, IV Six Tracks, V Sounds, or Sounds Like?, VI Remember or Remind.</li>
+      <li><b>Write</b>: X, their four tracks, with the red wavy line for a missing <i>of</i>, <i>remembers me</i>, <i>sounds like</i> + adjective and <i>feel like</i> + base verb. It goes to their My notes.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="formatos.js"></script>
+<script src="pele.js"></script>
+<script src="aquece2.js" data-forma="foto"></script>
+<script src="focus.js"></script>
+<script src="capa.js"></script>
+<script src="abertura.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* FOUR SONGS (Main A2) · pergunta-surpresa · 27/10/2026 · reminds me of · sounds (like) · feel like + -ing */
+window.WL_FAISCA = { nivel: 'A2', qs: [
+  { cena: 'vozes', tipo: 'Would you rather', q: 'Would you rather lose all your music or all your photos?',
+    opc: ['My music', 'My photos'], st: ['I’d rather lose …, because …'],
+    ex: 'My music. I can find songs again, but my photos remind me of my whole life.', push: 'Only for one year. Does it change?' },
+  { cena: 'discos', tipo: 'And you?', q: 'What do you feel like listening to on a Monday morning?',
+    opc: ['Something fast', 'Something calm', 'Nothing: silence!'], st: ['On Monday I feel like …', 'It sounds …'],
+    ex: 'Something fast. On Monday I feel like sleeping, so I need loud drums!', push: 'And on Friday night?' },
+  { cena: 'lembra', tipo: 'Opinion', q: 'Was the music better when your parents were young?',
+    opc: ['Yes, better', 'No, it’s better now', 'Just different'], st: ['Their music sounds …', 'Today’s music sounds like …'],
+    ex: 'Just different. Their music sounds slower, but I love some of their old songs.', push: 'Name one old song you secretly love.' },
+  { cena: 'lab', tipo: 'What if', q: 'A film is made about your life. What kind of music plays at the start?',
+    opc: ['Rock', 'Something calm, with piano', 'Samba or pagode'], st: ['It sounds like …', 'I’d choose it because it reminds me of …'],
+    ex: 'Samba. My life sounds like a Sunday lunch with my family: loud and happy.', push: 'And at the end of the film?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* FOUR SONGS (Main A2) · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O dilema entra no lugar de "VIII · Two More Stories" (extra; a escuta principal é a II e fica), logo antes da
+   trilha sonora do aluno (IX): três escolhas de música da vida real. Nenhuma letra de música na tela.
+   A gramática (it reminds me of · sounds like + noun · sounds + adjective · I feel like + -ing) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'A2', cenas: [
+  { id: 'dilema', troca: 'ela', est: 'o', min: 7, img: 'carro', rot: 'Your Call, DJ', t: 'Three music problems. You choose.',
+    p: 'Read the situation. Choose one, or say your own idea. Say why with the song words. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The wedding', sit: 'Your friend’s wedding party. You are the DJ for the first song.',
+        q: 'What do you play first?', opc: ['An old song everybody knows', 'A new hit', 'The couple’s favourite song'],
+        st: ['I’d play …, because it sounds like …', 'It reminds everybody of …'],
+        ex: 'The couple’s favourite song. It reminds them of their first date, and it sounds romantic.',
+        push: 'The grandparents ask for samba, now. Do you change it?' },
+      { tag: 'The road trip', sit: 'Six hours in the car with a friend. Only one person chooses the music.',
+        q: 'Who chooses?', opc: ['Me: my car, my music', 'My friend', 'Half and half'],
+        st: ['I feel like …', 'Their music sounds …', 'My music sounds like …'],
+        ex: 'Half and half. My friend’s music sounds terrible, but I don’t feel like fighting for six hours!',
+        push: 'Your friend only listens to heavy metal. Still half and half?' },
+      { tag: 'Saturday night', sit: 'Your favourite band plays in your city on Saturday. It’s also your best friend’s birthday party.',
+        q: 'What do you do?', opc: ['Go to the concert', 'Go to the party', 'Take my friend to the concert'],
+        st: ['I feel like going to …', 'A concert sounds …', 'It reminds me of …'],
+        ex: 'Take my friend to the concert! It sounds like a better birthday than a party.',
+        push: 'You only have one ticket. Now what?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "abre": {
+   "t": "One song you know by heart.",
+   "p": "Answer out loud. The picture opens a little more."
+  },
+  "vozes": {
+   "t": "Four people, four songs.",
+   "p": "Tap a voice. Listen. Tap the answers. Say it."
+  },
+  "regra": {
+   "t": "A note inside an old record.",
+   "p": "Read it out loud. Tap the song words. Finish the rule."
+  },
+  "discos": {
+   "t": "Right sentences bring the needle down.",
+   "p": "Read the clue. Say it out loud. Then tap Check."
+  },
+  "som": {
+   "t": "Adjective or noun?",
+   "p": "Read each line. Right or wrong? Say it right."
+  },
+  "lembra": {
+   "t": "The song reminds. You remember.",
+   "p": "Build the question. Tap Check. Then ask your teacher."
+  },
+  "lab": {
+   "t": "Some of your songs are not yours.",
+   "p": "Listen. Which result surprised the scientists?"
+  },
+  "cv-dilema": {
+   "t": "Three music problems. You choose.",
+   "p": "Choose one. Say why with the song words."
+  },
+  "trilha": {
+   "t": "Your life in four tracks.",
+   "p": "Name a song. Answer. Then the follow-up."
+  },
+  "fim": {
+   "t": "Write your four tracks.",
+   "p": "Reminds me of, sounds like, feel like. It goes to My notes."
+  }
+ },
+ "prep": {
+  "obj": "Três formas para o que a música faz: it reminds me of + nome, it sounds (like) + adjetivo/nome, I feel like + -ing. Uma vitrola e a trilha sonora da vida do aluno.",
+  "armadilha": "O brasileiro diz it remembers me (do “me lembra”), it reminds me my father (sem of), it sounds like good e I feel like dance, copiando a estrutura do português.",
+  "pal": [
+   "it reminds me of",
+   "remember",
+   "it sounds like",
+   "it sounds sad",
+   "I feel like dancing",
+   "song",
+   "record",
+   "soundtrack"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a aula: a vitrola e a trilha sonora da vida do aluno.",
+   "perg": "Name a song that reminds you of someone. Who?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "abre": {
+   "obj": "Aquecimento: uma música que o aluno sabe de cor; não corrigir, anotar as falas.",
+   "perg": "What song do you know by heart?",
+   "pula": "Duas perguntas bastam."
+  },
+  "vozes": {
+   "obj": "Ouvir quatro pessoas falando de músicas e dizer a frase-modelo em voz alta.",
+   "perg": "What does the song remind her of?",
+   "pula": "Duas vozes bastam."
+  },
+  "regra": {
+   "obj": "O bilhete da filha no disco do pai: tocar as palavras de música e completar a regra.",
+   "perg": "Which words talk about feelings?",
+   "pula": "Leia o bilhete e vá direto à regra."
+  },
+  "discos": {
+   "obj": "Seis pistas: dizer a frase com o verbo certo e baixar a agulha.",
+   "perg": "Slow piano, a soft voice. How does it sound?",
+   "pula": "Quatro faixas bastam."
+  },
+  "som": {
+   "obj": "Sounds + adjetivo ou sounds like + nome: certo ou errado, e corrigir.",
+   "perg": "Sounds or sounds like?",
+   "pula": "Quatro linhas bastam."
+  },
+  "lembra": {
+   "obj": "Remember × remind: montar a pergunta e fazer ao professor, que responde de verdade.",
+   "perg": "What song reminds you of your childhood?",
+   "pula": "Três perguntas bastam."
+  },
+  "lab": {
+   "obj": "Ouvir o resultado do laboratório sobre músicas que “não são nossas”.",
+   "perg": "What songs did your parents listen to?",
+   "pula": "Cena extra: pode pular inteira."
+  },
+  "cv-dilema": {
+   "obj": "Conversa: três escolhas reais de música, com reminds me of, sounds (like) e feel like.",
+   "perg": "Who chooses the music on a long road trip?",
+   "pula": "Dois dilemas bastam."
+  },
+  "trilha": {
+   "obj": "A trilha da vida do aluno em quatro faixas, com pergunta de seguimento.",
+   "perg": "What does this song remind you of?",
+   "pula": "Três faixas bastam."
+  },
+  "fim": {
+   "obj": "Escrita: as quatro faixas, com a linha vermelha nas palavrinhas.",
+   "perg": "Which track is the most important?",
+   "pula": "Duas faixas bastam. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa sobre música e sentimentos com as três formas da aula.",
+   "perg": "What do you feel like listening to now?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado sobre hábitos de música, com sounds e feel like.",
+   "perg": "Which one sounds better to you?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "Montar a playlist de um dia em passos, com as três formas.",
+   "perg": "What do you feel like hearing in the morning?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "More songs, more feelings.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "reminds me of",
+    "sounds like",
+    "sounds",
+    "feel like + -ing"
+   ],
+   "cartas": [
+    {
+     "k": "RAIN",
+     "q": "What kind of music do you feel like on a rainy day?",
+     "fup": "Why?",
+     "st": [
+      "I feel like listening to …",
+      "Rain sounds …"
+     ],
+     "ex": "I feel like listening to jazz. Rain sounds calm with jazz."
+    },
+    {
+     "k": "CHILDHOOD",
+     "q": "What sound reminds you of your childhood?",
+     "fup": "Where were you?",
+     "st": [
+      "… reminds me of …"
+     ],
+     "ex": "The ice cream truck reminds me of my street when I was a kid."
+    },
+    {
+     "k": "A FOREIGN SONG",
+     "q": "Is there a song you like in a language you don’t speak?",
+     "fup": "What does it sound like to you?",
+     "st": [
+      "It sounds like …",
+      "It sounds …"
+     ],
+     "ex": "Yes, a Korean song. It sounds happy, like a summer day."
+    },
+    {
+     "k": "MONDAY",
+     "q": "What do you feel like doing on a Monday morning?",
+     "fup": "And what music helps?",
+     "st": [
+      "I feel like …ing",
+      "… sounds good on Mondays."
+     ],
+     "ex": "I feel like staying in bed! Loud rock sounds good on Mondays."
+    },
+    {
+     "k": "A SMELL",
+     "q": "Not a song: what smell reminds you of someone?",
+     "fup": "Who is it?",
+     "st": [
+      "The smell of … reminds me of …"
+     ],
+     "ex": "The smell of coffee reminds me of my grandfather."
+    },
+    {
+     "k": "YOUR CITY",
+     "q": "What does your city sound like at night?",
+     "fup": "Do you like it?",
+     "st": [
+      "It sounds like …",
+      "It sounds …"
+     ],
+     "ex": "It sounds like cars and dogs. It sounds noisy, but I like it."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "sounds",
+    "sounds like",
+    "feel like",
+    "reminds me of"
+   ],
+   "rodadas": [
+    {
+     "q": "Old songs or new songs?",
+     "a": "Old songs",
+     "b": "New songs",
+     "fa": [
+      "Old songs. They remind me of good times."
+     ],
+     "fb": [
+      "New songs. They sound fresh."
+     ]
+    },
+    {
+     "q": "Music while you work or silence?",
+     "a": "Music",
+     "b": "Silence",
+     "fa": [
+      "Music. I feel like working more."
+     ],
+     "fb": [
+      "Silence. Music sounds like noise when I work."
+     ]
+    },
+    {
+     "q": "A live concert or a record at home?",
+     "a": "A concert",
+     "b": "At home",
+     "fa": [
+      "A concert. I feel like dancing with people."
+     ],
+     "fb": [
+      "At home. A record sounds better on my sofa."
+     ]
+    },
+    {
+     "q": "Sad songs on a sad day, or happy songs?",
+     "a": "Sad songs",
+     "b": "Happy songs",
+     "fa": [
+      "Sad songs. They sound like me that day."
+     ],
+     "fb": [
+      "Happy songs. I feel like smiling again."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Nobody won, and the record kept spinning."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "A Day in Four Songs",
+   "t": "The playlist of your perfect day.",
+   "p": "One song for each part of the day.",
+   "prof": "Ask the follow-up for each step: Why that one? Don’t ask them to sing or quote the lyrics.",
+   "passos": [
+    {
+     "q": "The morning: what do you feel like hearing?",
+     "st": [
+      "In the morning, I feel like …"
+     ],
+     "ex": "In the morning, I feel like hearing something slow, like soft piano."
+    },
+    {
+     "q": "The trip to work: what does your song sound like?",
+     "st": [
+      "It sounds …",
+      "It sounds like …"
+     ],
+     "ex": "It sounds fast. It sounds like a race."
+    },
+    {
+     "q": "Lunch: a song that reminds you of someone.",
+     "st": [
+      "… reminds me of …"
+     ],
+     "ex": "An old samba reminds me of my uncle."
+    },
+    {
+     "q": "The night: what do you feel like doing?",
+     "st": [
+      "At night, I feel like …ing"
+     ],
+     "ex": "At night, I feel like dancing in the kitchen."
+    }
+   ],
+   "fim": "Four tracks, one perfect day."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

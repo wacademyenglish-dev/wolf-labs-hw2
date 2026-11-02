@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Lizard and the Needle",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/4d647d69c7f5/the-lizard-and-the-needle/img/live-lagarto.webp",
+  "capa": "../img/live-lagarto.webp",
   "alvo": "make / let + person + verb (no to) · help + person + (to) verb · stop + person + from + -ing; never makes me to feel, stops me to eat, helps me eating",
   "abrir": "What helps you relax after a long day?",
   "fecho": "<b>Make / let</b> + person + verb, no <i>to</i>: <i>The sun makes it sleepy. My guide lets me take photos.</i> <b>Help</b> + person + (to) verb: <i>The rock helps it stay warm.</i> <b>Stop</b> + person + <b>from</b> + -ing: <i>The shade stops it from getting too hot.</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo on a desert trip. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/4d647d69c7f5/the-lizard-and-the-needle/img/live-deserto.webp",
+      "img": "../img/live-deserto.webp",
       "leg": "A dry desert road",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -101,17 +101,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The sun makes the lizard sleepy.",
-          "img": "https://wolf-labs.pages.dev/p/4d647d69c7f5/the-lizard-and-the-needle/img/live-lagarto.webp",
+          "img": "../img/live-lagarto.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "The shade stops it from getting too hot.",
-          "img": "https://wolf-labs.pages.dev/p/4d647d69c7f5/the-lizard-and-the-needle/img/live-deserto.webp",
+          "img": "../img/live-deserto.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The light helps me see in the dark kitchen.",
-          "img": "https://wolf-labs.pages.dev/p/4d647d69c7f5/the-lizard-and-the-needle/img/live-cozinha.webp",
+          "img": "../img/live-cozinha.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -157,7 +157,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/4d647d69c7f5/the-lizard-and-the-needle/img/live-lagarto.webp",
+      "img": "../img/live-lagarto.webp",
       "leg": "A lizard resting on a warm rock",
       "pede": "Look at the picture: a lizard resting on a warm rock. Write 2 or 3 sentences about the lizard and the desert. Use <b>make</b>, <b>let</b>, <b>help</b> or <b>stop</b>.",
       "ph": "The sun makes the lizard …",

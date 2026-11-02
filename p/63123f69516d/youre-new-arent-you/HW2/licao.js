@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "You're New, Aren't You?",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/63123f69516d/youre-new-arent-you/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "question tags: positive sentence + negative tag (It's hot, isn't it?), negative sentence + positive tag (You don't cook, do you?); the tag copies the auxiliary or uses do / does / did; Let's ..., shall we?",
   "abrir": "How do you start a conversation with a stranger in a class or at a party?",
   "fecho": "<b>Positive sentence, negative tag</b>: <i>You're new, aren't you?</i> <b>Negative sentence, positive tag</b>: <i>You don't cook, do you?</i> No auxiliary? Use <b>do / does / did</b>. And <i>Let's ..., shall we?</i>",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo at the first night of a cooking class. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/63123f69516d/youre-new-arent-you/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A long table under warm lamps",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -113,17 +113,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "You're new here, aren't you?",
-          "img": "https://wolf-labs.pages.dev/p/63123f69516d/youre-new-arent-you/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "You don't cook much, do you?",
-          "img": "https://wolf-labs.pages.dev/p/63123f69516d/youre-new-arent-you/img/live-capa.webp",
+          "img": "../img/live-capa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "Let's cut the onions together, shall we?",
-          "img": "https://wolf-labs.pages.dev/p/63123f69516d/youre-new-arent-you/img/live-conversa.webp",
+          "img": "../img/live-conversa.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -167,7 +167,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/63123f69516d/youre-new-arent-you/img/live-conversa.webp",
+      "img": "../img/live-conversa.webp",
       "leg": "A long wooden table under warm lamps",
       "pede": "Look at the picture: a long wooden table under warm lamps in a quiet cooking classroom. Write 2 or 3 sentences you could say to a stranger there, each ending with a question tag. Use <b>isn't it?</b>, <b>don't you?</b>, <b>did you?</b> or <b>shall we?</b>",
       "ph": "This room is big, …",

@@ -1,0 +1,139 @@
+/* ============================================================
+   TWO MICE, THREE CHILDREN · THE MEADOW NOTEBOOK · LIVE CLASS  15/10/2026
+   A base vem do kit (base.css). Identidade: o caderno de campo de um
+   naturalista, à noite — verde quase preto, trigo dourado, etiquetas de
+   espécime pequenas (cor de papel só no tamanho de uma etiqueta: nada de
+   campo claro grande). Títulos em Fraunces.
+   ============================================================ */
+:root{
+  --noite:#0a110c; --noite-rgb:10,17,12; --tinta:#eef1e4;
+  --t1:#f1f3e6; --t2:#c3cbb4; --t2-rgb:195,203,180; --t3:#8f9a83;
+  --ac:#e3bd5f; --ac2:#f2d68f; --musgo:#6f9a5b; --bt:#c99d3c; --bt2:#f2d68f;
+  --vidro:rgba(238,241,228,.05); --vidro2:rgba(238,241,228,.085); --vidro3:rgba(238,241,228,.12);
+  --fio:rgba(227,189,95,.16); --fio2:rgba(227,189,95,.3); --luz:rgba(238,241,228,.17);
+  --ok:#9bd69f; --am:#f0b866; --erro:#ff7a72; --lil:#c3a6ff;
+  --w:#f0b866; --o:#ec6a52; --l:#86c9f0; --f:#b9e27a;
+  --disp:'Urbanist',system-ui,sans-serif; --ui:'Manrope',system-ui,sans-serif; --campo:'Fraunces',Georgia,serif;
+  --r1:24px; --r2:18px; --sombra:0 24px 60px rgba(0,0,0,.75); --zoom:1;
+}
+#prox{background:var(--ac);border-color:var(--ac);color:#241a02}
+.btn.cheio{color:#241a02}
+.cab h1{font-family:var(--campo);font-weight:800;letter-spacing:-.01em}
+
+/* a capa */
+.capa{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;align-items:center}
+.capa .kick{font-family:var(--ui);letter-spacing:.16em}
+.capa h1{margin:12px 0 16px;font:900 clamp(52px,5.6vw,108px)/.98 var(--campo);letter-spacing:-.02em}
+.capa h1 b{display:block;color:var(--ac2);font-weight:900}
+.capa .sub{margin:0 0 24px;font:500 clamp(19px,1.5vw,26px)/1.45 var(--disp);color:var(--t2);max-width:28em} .capa .sub b{color:var(--t1)}
+.capa-r{display:grid;gap:16px;justify-items:center}
+.capa-r .etq:nth-child(2){transform:rotate(2deg)} .capa-r .etq:nth-child(1){transform:rotate(-3deg)}
+
+/* a etiqueta de espécime: papel pequeno, barbante dourado */
+.etq{position:relative;display:grid;gap:2px;min-width:220px;padding:12px 20px 14px 30px;border-radius:6px 14px 14px 6px;
+  background:linear-gradient(180deg,#e6dcc0,#d4c49c);color:#22311d;box-shadow:0 14px 30px rgba(0,0,0,.55)}
+.etq::before{content:'';position:absolute;left:10px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:var(--noite);box-shadow:0 0 0 2px #a88a4a}
+.etq small{font:800 11px var(--ui);letter-spacing:.18em;color:#6b5a2c}
+.etq b{font:800 clamp(24px,2.1vw,34px)/1.1 var(--campo);color:#22311d}
+.etq .etq-n{color:#9a6b12}
+.etq.novo{box-shadow:0 0 0 3px var(--ac),0 14px 30px rgba(0,0,0,.55)}
+.etqs-linha{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:18px}
+
+/* I · o caderno da casa e o contador */
+.casa-mesa{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,56px);align-items:start;max-width:1200px;margin:0 auto;width:100%}
+.caderno{display:grid;gap:8px;padding:clamp(18px,2.2vw,26px);border-radius:var(--r1);background:repeating-linear-gradient(180deg,transparent 0 41px,rgba(227,189,95,.12) 41px 42px),rgba(238,241,228,.04);border:1px solid var(--fio2)}
+.cad-t{font:800 12px var(--ui);letter-spacing:.18em;color:var(--ac2)}
+.casa-lista{display:grid;gap:6px}
+.casa-item{display:grid;grid-template-columns:56px minmax(0,1fr);align-items:baseline;gap:10px;padding:6px 10px;border-radius:12px;color:var(--t3)}
+.casa-item .etq-n{font:900 30px var(--campo);color:var(--t3);text-align:right}
+.casa-item b{font:700 clamp(20px,1.8vw,26px) var(--campo)}
+.casa-item.on{background:var(--vidro2);color:var(--t1)} .casa-item.on .etq-n{color:var(--ac2)}
+.casa-item.ja{color:var(--t1)} .casa-item.ja .etq-n{color:var(--ac)}
+.muda{color:var(--ac2);text-decoration:underline;text-decoration-color:var(--ac);text-underline-offset:5px;text-decoration-thickness:3px}
+.casa-card{display:grid;gap:14px;padding:clamp(18px,2.4vw,28px);border-radius:var(--r1);background:var(--vidro2);border:1px solid var(--fio2)}
+.casa-card small{font:800 12px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+.casa-card h2{margin:0;font:700 clamp(20px,2vw,28px)/1.3 var(--disp);color:var(--t1)}
+.casa-card>p{margin:0;color:var(--t2);font-size:18px} .casa-card>p b{color:var(--ac2)}
+.pq{margin:0;font:700 clamp(22px,2vw,30px)/1.3 var(--disp);color:var(--t1)}
+.pq-f{display:block;margin:0;font:600 clamp(17px,1.4vw,21px)/1.4 var(--disp);color:var(--ok)}
+.contador{display:flex;align-items:center;justify-content:center;gap:clamp(14px,2vw,28px)}
+.cont-n{display:grid;justify-items:center;min-width:170px}
+.cont-n b{font:900 clamp(64px,7vw,110px)/1 var(--campo);color:var(--ac2)}
+.cont-n span{font:700 clamp(22px,2vw,30px) var(--campo);color:var(--t1)}
+.pas{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;border:2px solid var(--fio2);background:var(--vidro2);color:var(--t1);font:800 30px/1 var(--disp);cursor:pointer}
+.pas:hover{border-color:var(--ac)} .pas:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.pratos-bt{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* III · as fotos para contar */
+.rolos{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:4px 0 12px}
+.foto-b{position:relative;width:132px;height:84px;border-radius:14px;border:2px solid var(--fio);background-size:cover;background-position:center;cursor:pointer;overflow:hidden;font:inherit}
+.foto-b b{position:absolute;left:0;right:0;bottom:0;padding:4px 6px;background:rgba(10,17,12,.85);font:800 11px var(--ui);letter-spacing:.12em;color:var(--t2)}
+.foto-b.on{border-color:var(--ac)} .foto-b.on b{color:var(--ac2)}
+.foto-b.feito{border-color:var(--ok)}
+.aberta{position:relative;border-radius:var(--r1);background-size:cover;background-position:center;height:clamp(170px,calc(100vh / var(--zv,1) - 520px),340px);box-shadow:inset 0 0 90px rgba(0,0,0,.6)}
+.aberta span{position:absolute;left:12px;bottom:10px;padding:4px 12px;border-radius:999px;background:rgba(10,17,12,.88);font:800 12px var(--ui);letter-spacing:.14em;color:var(--ac2)}
+
+/* peças comuns desta aula */
+@keyframes treme{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.pilula.certo{border-color:var(--ok);background:rgba(155,214,159,.16)}
+.pilula.errado{border-color:var(--erro);background:rgba(255,122,114,.12);animation:treme .35s}
+.pilula.grande-p{min-height:52px;padding:0 22px;font:700 clamp(15px,1.2vw,20px) var(--disp)}
+.tres-b{display:flex;flex-wrap:wrap;gap:8px} .tres-b.centro{justify-content:center}
+.lado-l{display:grid;gap:12px;align-content:start;justify-items:stretch}
+.rot-ouve{margin:0;font:800 11px var(--ui);letter-spacing:.14em;color:var(--t3)}
+.versoes{display:grid;gap:6px} .versao{min-height:0;padding:10px 14px;font-size:clamp(16px,1.2vw,20px);text-align:left}
+.versao.errado{border-color:var(--erro);animation:treme .35s}
+.mesa-c{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:10px}
+.pede{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2)} .pede small{font:800 11px var(--ui);letter-spacing:.16em;color:var(--ac2)} .pede b{font:600 clamp(19px,1.5vw,25px)/1.4 var(--disp)}
+.balao{display:grid;gap:6px;padding:12px 18px;border-radius:var(--r2);text-align:center;max-width:900px;margin:0 auto 10px;width:100%} .balao small{font:800 11px var(--ui);letter-spacing:.16em;color:var(--ac2)} .balao p{margin:0;font:700 clamp(22px,1.9vw,30px)/1.35 var(--disp)}
+.balao.ok-b{border-color:var(--ok)}
+.balao u{text-decoration:none;color:var(--ac2);border-bottom:3px solid var(--ok)}
+.lacuna-q{display:inline-block;min-width:3.5em;border-bottom:3px solid var(--ac);color:var(--ac)}
+.selo-v{display:grid;place-items:center;gap:6px;min-height:200px;border-radius:var(--r1);border:2px dashed var(--fio2);text-align:center}
+.selo-v b{font:900 30px var(--campo);letter-spacing:.04em;color:var(--ac2)} .selo-v small{font:600 16px var(--disp);color:var(--t2)}
+.mesa-video{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:22px;align-items:start}
+.video-col{display:grid;gap:6px} .lado-video{display:grid;gap:10px;align-content:start} .cred{font:700 12px var(--ui);color:var(--t3)}
+.caps{display:flex;flex-wrap:wrap;gap:6px} .caps .chip.feito{border-color:var(--ok)}
+
+/* VI · as quatro etiquetas da regra */
+.fitas4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:10px 0 14px}
+.fita4{display:grid;gap:6px;padding:12px 16px;border-radius:var(--r2);background:rgba(238,241,228,.04);border:1px solid var(--fio);border-top:4px solid var(--ac)}
+.fita4 small{font:800 12px var(--ui);letter-spacing:.12em;color:var(--ac2)} .fita4 b{font:600 clamp(16px,1.25vw,20px)/1.45 var(--disp)}
+.fita4.f1{border-top-color:var(--musgo)} .fita4.f2{border-top-color:var(--o)} .fita4.f3{border-top-color:var(--l)}
+
+/* VII · a página do naturalista */
+.cad-p{margin:0;font:600 clamp(18px,1.45vw,22px)/1.6 var(--campo);color:var(--t1)}
+.cad-p u{text-decoration:none;color:var(--ac2);border-bottom:2px solid var(--ac)}
+
+/* IX · a placa da loja */
+.placa{display:grid;gap:8px;padding:clamp(16px,2vw,24px);border-radius:var(--r1);border:1px solid var(--fio2);background:rgba(238,241,228,.04)}
+.placa small{font:800 12px var(--ui);letter-spacing:.18em;color:var(--ac2)}
+.placa-l{display:grid;grid-template-columns:44px minmax(0,1fr) auto auto;gap:10px;align-items:center;padding:6px 8px;border-radius:12px;background:var(--vidro)}
+.placa-l i{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--vidro3);font:900 18px var(--campo);font-style:normal;color:var(--ac2)}
+.placa-w{font:700 clamp(19px,1.6vw,24px) var(--campo);color:var(--t1)}
+.placa-l .pas{width:44px;height:44px;font-size:24px}
+
+@media (max-width:1100px){ .mesa-c,.capa,.mesa-video,.casa-mesa{grid-template-columns:1fr} .fitas4{grid-template-columns:1fr 1fr} .capa-r{justify-items:start} }
+@media (max-width:620px){ .fitas4{grid-template-columns:1fr} .etq{min-width:0} .foto-b{width:100px;height:66px} .cont-n{min-width:120px} .pas{width:48px;height:48px} }
+@media (prefers-reduced-motion:reduce){ .pilula.errado,.versao.errado{animation:none} }
+
+/* 23/10/2026 · III AFTER numa tela só: vídeo + True or Lie (▶ no tempo) + o contador que acende o que a aula já tem */
+.deb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.deb-esq{display:grid;gap:10px;min-width:0}
+.deb-esq .video{width:100%;border-radius:18px}
+.deb-cred{color:var(--t3);font:600 13px var(--ui)}
+.deb-topo{display:flex;align-items:center;gap:16px;margin-top:4px}
+.deb-topo small{font:700 12px var(--mono,var(--ui));letter-spacing:.12em;color:var(--ac2)}
+.deb-topo h3{margin:0;font:800 clamp(24px,2vw,34px)/1.1 var(--disp)}
+.deb-topo h3 b{color:var(--ac);font-variant-numeric:tabular-nums}
+.deb-dir{min-width:0;display:grid;gap:12px;align-content:start}
+.deb-dir .fm-folha{width:100%;padding:12px 20px}
+.deb-dir .fm-linhas li{padding:8px 0 8px 36px}
+.deb-dir .fm-linhas p{font-size:clamp(16px,1.2vw,20px);line-height:1.45}
+.deb-dir .f2-conversa p{font-size:15px}
+.deb-dica{text-align:center;margin:0}
+.deb-dir .fm-pista{font-size:clamp(18px,1.35vw,24px);line-height:1.35}
+@media (max-width:1100px){.deb{grid-template-columns:minmax(0,1fr)}}
+.deb-etq{margin-top:6px}
+.deb-etq .etq{background:linear-gradient(180deg,#cdbf98,#b9a878) !important;border:0 !important}
+.deb-esq .video{aspect-ratio:16/9}

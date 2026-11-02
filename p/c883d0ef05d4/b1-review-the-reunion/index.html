@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · The Reunion · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>MAIN SERIES</b><span>B1 · Unit 2 Review · The Reunion</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>The Reunion · B1 Unit 2 Review</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the review of Unit 2 (How long and how it was). No new grammar. The student pulls everything from memory.</p><p style="margin:0 0 6px"><b>The story:</b> Twenty years after school, the whole class meets again. Your student makes the “Where are they now?” slideshow. You are three old friends: Marina (pilot in Lisbon), Tom (baker who never left town) and Dani (yoga teacher on a boat).</p><p style="margin:0 0 6px"><b>About 41 min:</b> I · The Invitation (8) · II · Where Are They Now? (15) · III · Dear Younger Me (7) · IV · Would You Rather? (7) · V · I Can (4).</p><p style="margin:0"><b>Open with:</b> “The invitation has just arrived. Are you going?”</p></div><!--/prep-->
+    <p>A review is not a new lesson. Do not explain the grammar again: let the student try first. Mistakes here are useful: they show you what to review. Every review of the course uses a different mix of games, so the student never does the same thing twice.</p>
+    <h4>THE TOPICS OF THIS UNIT</h4>
+    <p>present perfect continuous · for and since · used to × present simple · should have, could have · be used to, get used to</p>
+    <h4>MEMORY</h4>
+    <p>A memory game. The student opens two cards; when they match, the student makes a sentence with the pair (example under Show answer).</p>
+    <h4>WHERE ARE THEY NOW?</h4>
+    <p>You are each old friend. Your card (only you see it) has the answers. When the student asks a question, tap it: the card fills in. If the student freezes, tap <b>Say it easier</b>. Then the student presents the friend to the class with has been …ing, used to and should have. Listen for the three slips on your screen and tap the one you heard.</p>
+    <h4>DEAR YOUNGER ME</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>WOULD YOU RATHER?</h4>
+    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I live here since 2010</i>, <i>I’m used to wake up</i>, <i>I should learned</i>, <i>I use to (for the past)</i>, <i>I’m waiting for an hour (for I’ve been waiting)</i>, <i>since two years</i>. B1: one correction per answer is enough.</p>
+    <!--conversa--><h4>THE INVITATION (I) AND THE SURPRISE QUESTION</h4>
+    <p>The lesson now opens with a decision: the reunion invitation has just arrived. Three situations (the message, the old fight, the school photo); your student chooses or says their own idea, then says why. There is no right answer: wait five seconds in silence, then use the PUSH line (only you see it) to make the choice harder. Recast quietly (haven’t seen them since, used to be, should have said); at the end, ask them to fix one or two sentences themselves.</p>
+    <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · The Invitation, II · Where Are They Now? and IV · Would You Rather?.</li>
+      <li><b>Write</b>: III · Dear Younger Me.</li>
+      <li><b>Focus</b>: V · I Can.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="pele.js"></script>
+<script src="revisao.js"></script>
+<script src="focus.js"></script>
+<script src="/kit/teclado.js"></script>
+<script data-wl="faisca-dados.js">
+/* REVIEW B1 · UNIT 2 · THE REUNION · pergunta-surpresa · 27/10/2026 · have been …ing · used to · should have · be used to */
+window.WL_FAISCA = { nivel: 'B1', qs: [
+  { cena: 'missao', tipo: 'And you?', q: 'Who from your school days are you still in touch with?',
+    opc: ['A few people', 'Only one', 'Nobody'], st: ['We’ve been friends since …', 'We used to …', 'I should have kept in touch with …'],
+    ex: 'Only one. We’ve been friends since we were twelve, and we still meet every month.', push: 'Who do you miss? Would you send them a message today?' },
+  { cena: 'cartao', tipo: 'Opinion', q: 'What is the hardest thing to get used to as an adult?',
+    opc: ['Paying bills', 'Waking up early', 'Having less free time'], st: ['It took me years to get used to …', 'I’m still not used to …'],
+    ex: 'Having less free time. I used to play video games all weekend. I’m still not used to it!', push: 'And something that was easy to get used to?' },
+  { cena: 'escolha', tipo: 'What if', q: 'What if your twelve-year-old self met you today? What would surprise them most?',
+    opc: ['My job', 'Where I live', 'My hobbies'], st: ['I used to want to be …', 'I’ve been …ing for …'],
+    ex: 'My job. I used to want to be a football player, and I’ve been working in a bank for eight years!', push: 'Would they be happy or disappointed? Why?' }
+] };
+</script><!--/faisca-dados.js-->
+<script src="/kit/faisca.js"></script>
+<script data-wl="conversa-dados.js">
+/* REVIEW B1 · UNIT 2 · THE REUNION · conversa · 27/10/2026 · regra 3×3 do Carlos
+   O dilema entra no lugar de "I · Memory" (achar pares: prática controlada) e abre a aula: o convite da
+   reunião chegou. Três decisões antes da festa. O IV (Would You Rather?) fica: é escolha A/B, aqui são
+   situações da história com três saídas e o PUSH. A gramática da unidade (have been …ing, for / since,
+   used to, should have, be used to) mora nos iniciadores. */
+window.WL_CONVERSA = { nivel: 'B1', cenas: [
+  { id: 'convite', troca: 'memoria', est: 'o', min: 8, img: 'conversa', rot: 'The Invitation', t: 'Class of 2006: twenty years. Will you go?',
+    p: 'Three decisions before the party. Choose, or say your own idea. Then say why. Your teacher pushes back.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The message', sit: '“Class of 2006: twenty years! Saturday, 8 PM.” You haven’t talked to most of them since school.',
+        q: 'Do you go?', opc: ['Yes, I’m going', 'Only for one hour', 'No, I’ll make an excuse'],
+        st: ['I haven’t seen them since …', 'I used to …, so …', 'I should have … years ago.'],
+        ex: 'Only for one hour. I haven’t seen them since school, and I used to be very shy. One hour is enough to say hi.',
+        push: 'Your best friend from school is going, and she has been asking about you. Still only one hour?' },
+      { tag: 'The old fight', sit: 'At school you had a big fight with Leo. You never talked again. He’s coming too.',
+        q: 'What do you do when you see him?', opc: ['Talk to him first', 'Wait for him', 'Stay away'],
+        st: ['I should have …', 'We used to …', 'I’ve been thinking about …'],
+        ex: 'Talk to him first. We used to be good friends, and I should have said sorry twenty years ago.',
+        push: 'He looks at you and walks away. Do you try again?' },
+      { tag: 'The photo', sit: 'The slideshow needs a school photo of you. You have one: terrible hair, terrible clothes.',
+        q: 'Do you send it?', opc: ['Send it: it’s funny', 'Find a better one', 'Send nothing'],
+        st: ['I used to have …', 'I’m used to …', 'I could have …'],
+        ex: 'Send it! I used to have crazy hair, and everybody knows it. I’m used to laughing at myself now.',
+        push: 'The photos will also go on Instagram. Still sending it?' }
+    ] }
+] };
+</script><!--/conversa-dados.js-->
+<script src="/kit/conversa.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "main",
+ "ffNome": "Fast finishers",
+ "cortes": {
+  "cv-convite": {
+   "t": "Class of 2006: will you go?",
+   "p": "Three decisions. Choose and say why."
+  },
+  "missao": {
+   "t": "Three old friends. Twenty years.",
+   "p": "Ask each friend five questions. Then present them."
+  },
+  "cartao": {
+   "t": "Dear younger me.",
+   "p": "Write four short lines to you, twenty years ago."
+  },
+  "escolha": {
+   "t": "Would you rather?",
+   "p": "Choose A or B. Say why, with because."
+  },
+  "pode": {
+   "t": "Unit 2: what can you do now?",
+   "p": "Read each line out loud. Tap what you can do."
+  }
+ },
+ "prep": {
+  "obj": "Revisão da Unidade 2 (present perfect continuous, for/since, used to, should have, be/get used to): reencontro da turma de 2006, vinte anos depois.",
+  "armadilha": "O brasileiro diz “I live here since 2010” e “I’m waiting for an hour” (presente no lugar do perfect), “since two years”, “I should learned” e “I’m used to wake up”.",
+  "pal": [
+   "have been …ing",
+   "for",
+   "since",
+   "used to",
+   "should have",
+   "could have",
+   "be used to",
+   "get used to"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Apresenta a revisão: o reencontro da turma, vinte anos depois da escola.",
+   "perg": "The invitation has just arrived. Are you going?",
+   "pula": "Só leia o título e entre na aula."
+  },
+  "cv-convite": {
+   "obj": "Três decisões antes da festa (a mensagem, a briga antiga, a foto), com o porquê.",
+   "perg": "Will you go? Why, or why not?",
+   "pula": "Duas decisões bastam."
+  },
+  "missao": {
+   "obj": "O aluno entrevista Marina, Tom e Dani e os apresenta com has been …ing, used to e should have.",
+   "perg": "What has Marina been doing since school?",
+   "pula": "Dois amigos bastam; mantenha a apresentação."
+  },
+  "cartao": {
+   "obj": "Escrita: bilhete ao eu de vinte anos atrás, com as quatro estruturas.",
+   "perg": "What should you have done differently?",
+   "pula": "Duas linhas bastam."
+  },
+  "escolha": {
+   "obj": "Would you rather: escolher A ou B e justificar com because.",
+   "perg": "Which one, and why?",
+   "pula": "Três pares bastam."
+  },
+  "pode": {
+   "obj": "Checklist “I can” da unidade; o que ficar aberto vai para a lição de casa.",
+   "perg": "Can you say how long you’ve been learning English?",
+   "pula": "Leia as linhas sem conversar. Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-conversa": {
+   "obj": "Mais conversa com as gramáticas da unidade sobre a vida do aluno.",
+   "perg": "How long have you been doing that?",
+   "pula": "Três cartas bastam."
+  },
+  "ff-lados": {
+   "obj": "Dois lados sobre reencontros e passado, misturando as estruturas.",
+   "perg": "Which side, and why?",
+   "pula": "Duas rodadas bastam."
+  },
+  "ff-passos": {
+   "obj": "O discurso do aluno na festa de reencontro, em quatro passos.",
+   "perg": "What have you been doing for twenty years?",
+   "pula": "Três passos bastam."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-conversa",
+   "formato": "cartas",
+   "est": "o",
+   "min": 5,
+   "rot": "More to Talk About",
+   "t": "How long, and how it was.",
+   "p": "Pick a card. Answer out loud.",
+   "palavras": [
+    "have been …ing",
+    "for / since",
+    "used to",
+    "should have",
+    "be used to"
+   ],
+   "cartas": [
+    {
+     "k": "YOUR HOME",
+     "q": "How long have you been living where you live now?",
+     "fup": "Are you used to the neighborhood?",
+     "st": [
+      "I’ve been living here for …",
+      "… since …"
+     ],
+     "ex": "I’ve been living here since 2019, and I’m used to the noise now."
+    },
+    {
+     "k": "AS A TEENAGER",
+     "q": "What did you use to do after school?",
+     "fup": "Do you still do it?",
+     "st": [
+      "I used to …",
+      "I don’t … anymore."
+     ],
+     "ex": "I used to play video games every afternoon. I don’t have time anymore."
+    },
+    {
+     "k": "A REGRET",
+     "q": "What should you have done at school but didn’t?",
+     "fup": "Can you still do it?",
+     "st": [
+      "I should have …",
+      "I could have …"
+     ],
+     "ex": "I should have studied English earlier. I could have traveled more."
+    },
+    {
+     "k": "A NEW HABIT",
+     "q": "What did you have to get used to as an adult?",
+     "fup": "Was it hard?",
+     "st": [
+      "I had to get used to …",
+      "Now I’m used to …"
+     ],
+     "ex": "I had to get used to paying bills. Now I’m used to it."
+    },
+    {
+     "k": "YOUR ENGLISH",
+     "q": "How long have you been studying English?",
+     "fup": "What have you been doing to practice?",
+     "st": [
+      "I’ve been studying for …",
+      "I’ve been …ing"
+     ],
+     "ex": "I’ve been studying for two years, and I’ve been watching series without subtitles."
+    },
+    {
+     "k": "OLD FRIENDS",
+     "q": "Is there an old friend you haven’t seen for years?",
+     "fup": "What do you think they’ve been doing?",
+     "st": [
+      "I haven’t seen … since …",
+      "They’ve probably been …"
+     ],
+     "ex": "I haven’t seen Lucas since 2010. He’s probably been traveling."
+    }
+   ]
+  },
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 6,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "used to",
+    "should have",
+    "since",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "School reunions: fun or awkward?",
+     "a": "Fun",
+     "b": "Awkward",
+     "fa": [
+      "Fun. You see how everybody has been living.",
+      "Old jokes come back."
+     ],
+     "fb": [
+      "Awkward. People compare jobs and money.",
+      "We used to be friends, but now we’re strangers."
+     ]
+    },
+    {
+     "q": "Was life better when we used to write letters?",
+     "a": "Yes",
+     "b": "No",
+     "fa": [
+      "Yes. People used to wait, and words mattered more.",
+      "A letter is a memory."
+     ],
+     "fb": [
+      "No. I’ve been talking to my family abroad every day.",
+      "Messages are faster and free."
+     ]
+    },
+    {
+     "q": "Should you tell an old friend about an old fight?",
+     "a": "Yes, say it",
+     "b": "No, forget it",
+     "fa": [
+      "Yes. I should have said it twenty years ago.",
+      "It’s never too late."
+     ],
+     "fb": [
+      "No. We’re used to the silence now.",
+      "Why open an old door?"
+     ]
+    },
+    {
+     "q": "Living in the same town all your life: good or bad?",
+     "a": "Good",
+     "b": "Bad",
+     "fa": [
+      "Good. Like Tom, you know everybody.",
+      "You’ve been building roots for years."
+     ],
+     "fb": [
+      "Bad. Like Marina, you should see the world.",
+      "You never get used to new things."
+     ]
+    }
+   ],
+   "fim": "Four rounds. Twenty years, and still a lot to say."
+  },
+  {
+   "k": "ff-passos",
+   "formato": "passos",
+   "est": "o",
+   "min": 6,
+   "rot": "Your Speech",
+   "t": "Your reunion speech.",
+   "p": "One step at a time. Say it to the class.",
+   "prof": "One structure per step; one correction per answer is enough at B1.",
+   "passos": [
+    {
+     "q": "Where have you been living, and for how long?",
+     "st": [
+      "I’ve been living in … for …"
+     ],
+     "ex": "I’ve been living in Curitiba for twelve years."
+    },
+    {
+     "q": "What did you use to be like at school?",
+     "st": [
+      "At school I used to …"
+     ],
+     "ex": "At school I used to sit at the back and draw."
+    },
+    {
+     "q": "What have you been doing lately?",
+     "st": [
+      "Lately I’ve been …ing"
+     ],
+     "ex": "Lately I’ve been learning English and running on weekends."
+    },
+    {
+     "q": "What should you have done, and what are you used to now?",
+     "st": [
+      "I should have …, but now I’m used to …"
+     ],
+     "ex": "I should have called you all more, but now I’m used to busy days."
+    }
+   ],
+   "fim": "Raise your glass: twenty years in four sentences."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="/kit/padrao.js"></script>
+</body>
+</html>

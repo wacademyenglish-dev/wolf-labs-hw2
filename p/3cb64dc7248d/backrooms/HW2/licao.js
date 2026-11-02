@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Backrooms",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/3cb64dc7248d/backrooms/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "present perfect: have / has + past participle (seen, gone, been); since + a starting point, for + a length of time; never, ever, yet; not with a finished time (yesterday, last year)",
   "abrir": "Have you ever been alone in a big, empty building?",
   "fecho": "<b>have / has + past participle</b> links the past to now. <b>Since</b> + a starting point (<i>since Monday</i>), <b>for</b> + a length (<i>for three years</i>). <b>Never</b> and <b>ever</b>: <i>Have you ever seen it?</i> <b>Yet</b> in questions and negatives. With <i>yesterday</i> or <i>last year</i>, use the simple past.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a strange door. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/3cb64dc7248d/backrooms/img/live-loja.webp",
+      "img": "../img/live-loja.webp",
       "leg": "A dark store, late at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -109,17 +109,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "Nobody has opened this door for years.",
-          "img": "https://wolf-labs.pages.dev/p/3cb64dc7248d/backrooms/img/live-corredor.webp",
+          "img": "../img/live-corredor.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "Have you ever seen a room like this?",
-          "img": "https://wolf-labs.pages.dev/p/3cb64dc7248d/backrooms/img/live-foto.webp",
+          "img": "../img/live-foto.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "I've been in the store since eight o'clock.",
-          "img": "https://wolf-labs.pages.dev/p/3cb64dc7248d/backrooms/img/live-loja.webp",
+          "img": "../img/live-loja.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -169,7 +169,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/3cb64dc7248d/backrooms/img/live-foto.webp",
+      "img": "../img/live-foto.webp",
       "leg": "An empty room with a dark floor",
       "pede": "Look at the picture: an empty room. Write 2 or 3 sentences about a place you know. Use <b>have been</b>, <b>since</b>, <b>for</b>, <b>never</b> or <b>yet</b>.",
       "ph": "I have never been … I've lived here for …",

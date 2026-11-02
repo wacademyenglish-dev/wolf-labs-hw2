@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "You’d Better Not Volunteer",
   "nivel": "B1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/5c4caddf844a/youd-better-not-volunteer/img/live-capitolio.webp",
+  "capa": "../img/live-capitolio.webp",
   "alvo": "advice and warnings: should / shouldn't, ought to, had better (not) + plain verb; never should to, don't should, had better to",
   "abrir": "What advice do you often give your friends?",
   "fecho": "<b>should</b> / <b>shouldn't</b> = advice. <b>ought to</b> = advice, a bit more formal. <b>had better (not)</b> = a warning: something bad may happen. All of them take the plain verb: <i>You should wear a jacket. You'd better not be late.</i> Never <i>should to</i>, <i>don't should</i> or <i>had better to</i>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Leo helps Mia get ready for a big ceremony. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/5c4caddf844a/youd-better-not-volunteer/img/live-capitolio.webp",
+      "img": "../img/live-capitolio.webp",
       "leg": "A grand building with red banners",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,17 +105,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "You'd better not be late for the ceremony.",
-          "img": "https://wolf-labs.pages.dev/p/5c4caddf844a/youd-better-not-volunteer/img/live-capitolio.webp",
+          "img": "../img/live-capitolio.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "You'd better check the map before you leave.",
-          "img": "https://wolf-labs.pages.dev/p/5c4caddf844a/youd-better-not-volunteer/img/live-mapa.webp",
+          "img": "../img/live-mapa.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "You shouldn't walk into the tunnel alone.",
-          "img": "https://wolf-labs.pages.dev/p/5c4caddf844a/youd-better-not-volunteer/img/live-mina.webp",
+          "img": "../img/live-mina.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -163,7 +163,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/5c4caddf844a/youd-better-not-volunteer/img/live-mina.webp",
+      "img": "../img/live-mina.webp",
       "leg": "A small town at dusk",
       "pede": "Look at the picture: a small town at dusk. A friend is moving there. Write 2 or 3 pieces of advice. Use <b>should</b>, <b>ought to</b> or <b>had better (not)</b>.",
       "ph": "You should … You'd better not …",

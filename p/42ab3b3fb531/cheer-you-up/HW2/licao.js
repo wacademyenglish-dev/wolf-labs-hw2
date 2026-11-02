@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "Cheer You Up",
   "nivel": "A2",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/42ab3b3fb531/cheer-you-up/img/live-casa.webp",
+  "capa": "../img/live-casa.webp",
   "alvo": "separable phrasal verbs: cheer her up, figure it out, turn it off, pick me up; a pronoun goes in the middle, never cheer up her, figure out it",
   "abrir": "What cheers you up when you are tired?",
   "fecho": "A pronoun goes <b>in the middle</b>: <b>cheer her up</b>, <b>figure it out</b>, <b>turn it off</b>, <b>pick me up</b>. Never <i>cheer up her</i> or <i>figure out it</i>. Don't lose the little word: <i>figure it</i> is not enough.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo talk about a woman alone in her house. A new scene, about 40 seconds.",
-      "img": "https://wolf-labs.pages.dev/p/42ab3b3fb531/cheer-you-up/img/live-casa.webp",
+      "img": "../img/live-casa.webp",
       "leg": "A little house at night, one light on",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -105,7 +105,7 @@ window.HW2 = {
       "frases": [
         {
           "t": "Music always cheers me up.",
-          "img": "https://wolf-labs.pages.dev/p/42ab3b3fb531/cheer-you-up/img/live-casa.webp",
+          "img": "../img/live-casa.webp",
           "au": "audio/say1.mp3"
         },
         {
@@ -159,7 +159,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/42ab3b3fb531/cheer-you-up/img/live-casa.webp",
+      "img": "../img/live-casa.webp",
       "leg": "A little house, one light on",
       "pede": "Look at the picture: a house at night. Write 2 or 3 sentences about a bad day. Who cheers you up? Use <b>cheer me up</b>, <b>figure it out</b> or <b>turn it off</b>.",
       "ph": "On a bad day, … cheers me up. I turn …",

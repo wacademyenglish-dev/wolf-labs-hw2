@@ -6,7 +6,7 @@ window.HW2 = {
   "titulo": "The Evidence Suggests",
   "nivel": "C1",
   "minutos": 10,
-  "capa": "https://wolf-labs.pages.dev/p/e431bbc9fe58/the-evidence-suggests/img/live-capa.webp",
+  "capa": "../img/live-capa.webp",
   "alvo": "academic distance: the evidence suggests (that) with a singular verb · it has been claimed that · it is widely assumed that · the study claims / purports to show · there is reason to believe · would seem to · apparently, reportedly; the empty subject IT / THERE always comes first",
   "abrir": "What is something everybody says is true, but you have never checked?",
   "fecho": "Keep your distance from a claim: <b>the evidence suggests that</b> (evidence is uncountable, so <i>suggests</i>) · <b>it has been claimed that</b> · <b>it is widely assumed that</b> · <b>the study claims / purports to show</b> · <b>there is reason to believe</b> · <b>would seem to</b>. The empty subject <b>it</b> or <b>there</b> always comes first, and <b>pretend</b> is not <b>claim</b>.",
@@ -26,7 +26,7 @@ window.HW2 = {
   "rodadas": {
     "listen": {
       "sub": "Mia and Leo review a paper on sleep and sound. A new scene, about one minute.",
-      "img": "https://wolf-labs.pages.dev/p/e431bbc9fe58/the-evidence-suggests/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A reviewer's desk, late at night",
       "audio": "audio/listen.mp3",
       "falas": [
@@ -117,17 +117,17 @@ window.HW2 = {
       "frases": [
         {
           "t": "The evidence suggests a small effect, but the sample is tiny.",
-          "img": "https://wolf-labs.pages.dev/p/e431bbc9fe58/the-evidence-suggests/img/live-mesa.webp",
+          "img": "../img/live-mesa.webp",
           "au": "audio/say1.mp3"
         },
         {
           "t": "It has been claimed for years, but nobody cites a study.",
-          "img": "https://wolf-labs.pages.dev/p/e431bbc9fe58/the-evidence-suggests/img/live-arquivo.webp",
+          "img": "../img/live-arquivo.webp",
           "au": "audio/say2.mp3"
         },
         {
           "t": "The study purports to show a lasting benefit.",
-          "img": "https://wolf-labs.pages.dev/p/e431bbc9fe58/the-evidence-suggests/img/live-quarto.webp",
+          "img": "../img/live-quarto.webp",
           "au": "audio/say3.mp3"
         }
       ]
@@ -175,7 +175,7 @@ window.HW2 = {
     },
     "write": {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
-      "img": "https://wolf-labs.pages.dev/p/e431bbc9fe58/the-evidence-suggests/img/live-mesa.webp",
+      "img": "../img/live-mesa.webp",
       "leg": "A reviewer's desk, notes and a pen",
       "pede": "Look at the picture: a desk with a pen and a notebook. Write 2 or 3 sentences about something you read or heard recently (a headline, an article, a rumor). Keep your distance from the claim: <b>the evidence suggests that</b>, <b>it is widely assumed that</b>, <b>the study claims to</b> or <b>would seem to</b>.",
       "ph": "The evidence suggests that …",
