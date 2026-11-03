@@ -30,12 +30,21 @@
    com SEIS placas (era oito): forçado ou permitido, uma placa por resposta.
    VI (era EXTRA, agora essencial, 6 min): seis cartas de pessoas da sua
    vida e as palavras para contar o que cada uma faz e deixa.
+   02/11/2026 · A CENA DUBLADA. O Carlos não gostou da III (a tira de filme
+   com cinco quadros do trailer). No lugar: três cenas de verdade do
+   Episódio 1 DUBLADO, no canal oficial da Crunchyroll (LTjH5JdxtOA, 24:05,
+   embed sim). Só start/end no iframe, nada baixado; nenhuma fala do
+   episódio escrita na tela, só perguntas curtas. Um capítulo por vez
+   (1 · o mundo, 2 · a escolha, 3 · a consequência), cada um em BEFORE →
+   WATCH → AFTER. Tempos lidos na legenda inglesa do vídeo e acertados
+   para não cortar fala no meio: 12:35–13:52, 21:24–22:58, 23:18–23:47.
+   A tira continua só de enfeite na capa (onda(TRECHOS) sem ação).
    ============================================================ */
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'mundo', est: 'o', min: 8, img: 'rua', rot: 'I · Warm-up and The Sorcerer Rules', t: 'Before the trailer: who made you do things, then the rules of curses.', p: 'Answer three questions about your life. Then read the rules of the sorcerers and say if you could live with them.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'II · The Trailer', t: 'Jujutsu Kaisen. The official trailer.', p: 'Start the clock first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
-  { k: 'letra', est: 'l', min: 7, img: 'rua', rot: 'III · Scene by Scene', t: 'Five moments of the trailer. Tap one, watch, then talk.', p: 'Each frame is a moment in the video.' },
+  { k: 'letra', est: 'l', min: 10, img: 'rua', rot: 'III · The Episode · Three Scenes', t: 'Episode 1, in English. Three real scenes, one at a time.', p: 'Pick a scene. Answer before you watch. Watch, then talk with make and let.' },
   { k: 'regra', est: 'f', min: 6, img: 'escola', rot: 'IV · Make, Let, Be Made To', t: 'They made him eat it. They let him live. He was made to fight.', p: 'Find the wrong word in each sentence. Say the right one. Then read the rule.' },
   { k: 'dominio', est: 'o', min: 7, img: 'capa', rot: 'V · Domain Expansion', t: 'Trapped in the domain. Crack the barrier.', p: 'Read the clue and tap the answer. Then say the sentence. Six seals, six cracks.' },
   { k: 'regras', est: 'o', min: 6, img: 'escola', rot: 'VI · Your Rules', t: 'Six people in your life. What do they make you do? What do they let you do?', p: 'Open a card. Tell the teacher. Tap each word when you use it.' },
@@ -66,6 +75,39 @@ var TRECHOS = [
   { k: 'Megumi and Nobara', ini: 40, fim: 48, ouvir: 'What do Megumi and Nobara want?', sentido: 'Megumi says he will help people in his own way. Nobara fights so she can stay who she is.', gram: 'Nobody <b>makes</b> her <b>change</b>.' },
   { k: 'Yuji', ini: 47, fim: 60, ouvir: 'What doesn’t Yuji want?', sentido: 'Yuji shouts that he doesn’t want to regret the way he lived.', gram: 'He <b>was made to</b> fight, but he chose it.' },
   { k: 'Choose', ini: 60, fim: 100, ouvir: 'What choice does Yuji have?', sentido: 'A voice tells Yuji to choose the hell he prefers, while he holds the cursed finger.', gram: 'They don’t <b>let</b> him <b>choose</b> an easy way.' }
+];   /* 02/11: só a capa usa (a tira de enfeite); a cena III agora é o EPISODIO */
+
+/* 02/11/2026 · III · o episódio dublado: três capítulos, um vídeo por vez. ini/fim em segundos do Episódio 1
+   (legenda inglesa do próprio vídeo). As respostas são palavras nossas, nunca a fala do episódio. */
+var EP = 'LTjH5JdxtOA', EP_CRED = 'Jujutsu Kaisen · Episode 1 · Crunchyroll (English dub)';
+var EPISODIO = [
+  { k: 'The world', sub: 'Megumi explains curses', ini: 755, fim: 832,
+    antes: [
+      { q: 'What is a curse in this world?', st: 'A curse is …', ex: 'A curse is a monster. People can’t see it, but it is real.' },
+      { q: 'Where do curses come from?', st: 'Curses come from …', ex: 'They come from bad human feelings, like fear, sadness and shame.' }
+    ],
+    depois: [
+      { q: 'What makes curses grow?', st: ['… makes curses grow.', 'Bad feelings make …'], ex: 'People’s fear and sadness make curses grow. Big, crowded places make them stronger.' },
+      { q: 'Do schools in your country have a “scary” place?', st: ['In my school, the … made me feel …', 'They didn’t let us go …'], ex: 'Yes! The old bathroom made everybody nervous. The teachers didn’t let us go there alone.' }
+    ] },
+  { k: 'The choice', sub: 'Yuji makes a dangerous choice', ini: 1284, fim: 1378,
+    antes: [
+      { q: 'Who wants to stop Yuji?', st: '… wants to stop him.', ex: 'Megumi wants to stop him. He shouts at Yuji.' },
+      { q: 'Why does Yuji do it?', st: 'He does it because …', ex: 'He wants to save his friends, and he needs cursed power to do it.' }
+    ],
+    depois: [
+      { q: 'Who let Sukuna out?', st: ['… let Sukuna out.'], ex: 'Yuji let Sukuna out when he swallowed the finger.' },
+      { q: 'What made Yuji do it?', st: ['… made him do it.', 'He was made to …'], ex: 'His friends were in danger. That made him do it. Nobody made him.' },
+      { q: 'Would you let a curse into your body to save a friend?', st: ['I would let …', 'Nothing could make me …'], ex: 'For my best friend, maybe. But nothing could make me do it for a stranger.' }
+    ] },
+  { k: 'The consequence', sub: 'Megumi follows the rules', ini: 1398, fim: 1427,
+    antes: [
+      { q: 'What will the sorcerers do now?', st: 'I think they will …', ex: 'I think they will try to kill Yuji, because Sukuna is inside him.' }
+    ],
+    depois: [
+      { q: 'Do the rules let Megumi save Yuji?', st: ['The rules don’t let him …', 'The rules make him …'], ex: 'No. The rules don’t let him save Yuji. They make him fight his new friend.' },
+      { q: 'Should rules make people do things they think are wrong?', st: ['Rules shouldn’t make people …', 'Sometimes rules have to make us …'], ex: 'No. A good rule never makes you hurt a friend. But some rules protect many people.' }
+    ] }
 ];
 
 var TRAPS = [
@@ -146,7 +188,7 @@ var VD_PESS = { formato: 'cartas', titulo: 'Open a card. Tell the teacher.', fec
 var VD_USA = { formato: 'usa', titulo: 'Tell the teacher about your life. Tap each word when you use it.', palavras: ['made me', 'let me', 'was made to', 'wasn’t allowed to', 'makes me feel'], fim: 'All five. Now the teacher tells you theirs.' };
 
 var S = { i: 0, faixa: 1, fala: {}, resp: {}, armas: {},
-  video: { p: 0 }, lt: { sel: -1, viu: {} }, dm: { n: 0, esc: -1 } };
+  video: { p: 0 }, lt: { cap: 0, p: [0, 0, 0], viu: {}, cc: 1 }, dm: { n: 0, esc: -1 } };   /* 02/11: lt = o capítulo aberto e o passo de cada um */
 
 /* a tira de filme: cada momento do trailer é um fotograma, com a minutagem e o nome da cena */
 function onda(marcas, sel, acao) {
@@ -208,13 +250,36 @@ R.video = function (c) {
   return cab(c) + corpo;
 };
 
+/* 02/11/2026 · III · o episódio: o seletor de capítulos (três portas, não uma tira), e dentro de cada um BEFORE → WATCH → AFTER.
+   Só UM iframe na tela, o do capítulo aberto; de WATCH para AFTER o src é o mesmo e o mantemVideo não recarrega o vídeo. */
+function mmss(s) { return Math.floor(s / 60) + ':' + ('0' + s % 60).slice(-2); }
+function capitulos(e) {
+  return '<div class="jk-caps" role="group" aria-label="Scenes">' + EPISODIO.map(function (x, i) {
+    var cl = (i === e.cap ? ' on' : '') + (e.viu[i] ? ' feito' : '');
+    return '<button type="button" class="jk-cap' + cl + '" data-a="ep-cap" data-n="' + i + '"' + (i === e.cap ? ' aria-current="step"' : '') + '>'
+      + '<i class="jk-cap-n" aria-hidden="true">' + (i + 1) + '</i><span><small>Scene ' + (i + 1) + ' · ' + mmss(x.ini) + ' to ' + mmss(x.fim) + '</small><b>' + x.k + '</b><em>' + x.sub + '</em></span>'
+      + '<svg class="jk-cap-ok" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg></button>';
+  }).join('') + '</div>';
+}
+function epPergunta(rot, x, chave, starters) {
+  return '<div class="jk-q"><div class="pergunta vd ja"><small>' + rot + '</small><h2>' + x.q + '</h2></div>'
+    + fala(chave, starters) + mostra(chave, x.ex, 1) + '</div>';
+}
 R.letra = function (c) {
-  var e = S.lt, x = TRECHOS[e.sel];
-  var corpo = x ? '<div class="jk-video"><div class="jk-vcol">' + iframe(YT, x.k + ' · ' + SERIE, '&start=' + x.ini + '&end=' + x.fim) + '<small class="jk-cred">' + Math.floor(x.ini / 60) + ':' + ('0' + x.ini % 60).slice(-2) + ' to ' + Math.floor(x.fim / 60) + ':' + ('0' + x.fim % 60).slice(-2) + ' · it stops by itself</small></div>'
-    + '<div class="lado-l"><div class="pergunta vd ja"><small>' + x.k + ' · watch</small><h2>' + x.ouvir + '</h2></div>'
-    + mostra('lt' + e.sel, '<span class="jk-sentido">' + x.sentido + '</span><span class="jk-gram">' + x.gram + '</span>') + '</div></div>'
-    : '<div class="jk-centro"><p class="jk-dica">Tap a frame to open that moment of the trailer.</p></div>';
-  return cab(c) + onda(TRECHOS, e.sel, 'lt') + corpo;
+  var e = S.lt, i = e.cap, x = EPISODIO[i], p = e.p[i], corpo;
+  /* 02/11 · legenda: o YouTube escolhia a língua de quem assiste (português). Com CC ligado (padrão) a faixa oficial em INGLÊS
+     vem forçada no endereço e de novo pela API ao carregar (epLegenda, abaixo); o botão CC só troca o endereço do quadro. */
+  var cc = e.cc ? '&cc_load_policy=1&cc_lang_pref=en&hl=en' : '&cc_load_policy=0&hl=en';
+  var video = '<div class="jk-vcol">' + iframe(EP, x.k + ' · ' + EP_CRED, '&start=' + x.ini + '&end=' + x.fim + cc)
+    + '<div class="jk-cred-linha"><small class="jk-cred">' + EP_CRED + ' · ' + mmss(x.ini) + ' to ' + mmss(x.fim) + ' · it stops by itself</small>'
+    + '<button type="button" class="pilula jk-cc' + (e.cc ? ' on' : '') + '" data-a="ep-cc" aria-pressed="' + (e.cc ? 'true' : 'false') + '">CC ' + (e.cc ? 'on' : 'off') + ' · English</button></div></div>';
+  if (p === 0) corpo = '<div class="jk-centro jk-antes">' + x.antes.map(function (q, n) { return epPergunta('Before you watch · ' + (n + 1), q, 'ep' + i + 'a' + n, [q.st]); }).join('')
+    + '<div class="jk-acao"><button type="button" class="btn cheio" data-a="ep-p" data-n="1">Watch the scene</button></div></div>';
+  else if (p === 1) corpo = '<div class="jk-video">' + video + '<div class="lado-l"><div class="jk-pista vd"><small>Watch for</small>' + x.antes.map(function (q) { return '<p>' + q.q + '</p>'; }).join('') + '</div>'
+    + '<div><button type="button" class="btn" data-a="ep-p" data-n="2">After the scene</button></div></div></div>';
+  else corpo = '<div class="jk-video">' + video + '<div class="lado-l">' + x.depois.map(function (q, n) { return epPergunta('After · ' + (n + 1) + ' · make / let', q, 'ep' + i + 'd' + n, q.st); }).join('')
+    + (i < EPISODIO.length - 1 ? '<div><button type="button" class="btn cheio" data-a="ep-cap" data-n="' + (i + 1) + '">Next scene · ' + EPISODIO[i + 1].k + '</button></div>' : '<p class="aprova">Three scenes. Now tell the teacher the whole story with make and let.</p>') + '</div></div>';
+  return cab(c) + capitulos(e) + abas3(['1 · BEFORE', '2 · WATCH', '3 · AFTER'], p, 'ep-p') + corpo;
 };
 
 R.regra = function (c) {
@@ -244,7 +309,28 @@ R.fim = function (c) {
 };
 
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
-TOQUES.lt = function (b, n) { S.lt.sel = n; S.lt.viu[n] = 1; };
+/* 02/11: o capítulo e o passo; chegar ao AFTER marca o capítulo como visto */
+TOQUES['ep-cap'] = function (b, n) { S.lt.cap = n; };
+TOQUES['ep-p'] = function (b, n) { S.lt.p[S.lt.cap] = n; if (n === 2) S.lt.viu[S.lt.cap] = 1; };
+TOQUES['ep-cc'] = function () { S.lt.cc = S.lt.cc ? 0 : 1; };
+/* 02/11 · reforço da legenda em inglês pela API do quadro (enablejsapi já vem no iframe()): ao carregar e de novo quando
+   o player avisa que está pronto. Só pede a faixa oficial 'en' do próprio vídeo; nenhum texto do episódio passa por aqui. */
+function epLegenda(f) {
+  var manda = function (func, args) { try { f.contentWindow.postMessage(JSON.stringify({ event: 'command', func: func, args: args || [] }), '*'); } catch (e) { /* segue */ } };
+  var liga = function () {
+    if (!S.lt.cc) { manda('unloadModule', ['captions']); return; }
+    manda('loadModule', ['captions']); manda('setOption', ['captions', 'track', { languageCode: 'en' }]);
+  };
+  var ouve = function (ev) {
+    if (ev.source !== f.contentWindow) return;
+    try { var d = JSON.parse(ev.data); if (d.event === 'onReady' || (d.event === 'onStateChange' && d.info === 1) || (d.info && d.info.playerState === 1 && !f.__wlCcPlay)) { if (d.info && d.info.playerState === 1) f.__wlCcPlay = 1; liga(); } } catch (e) { /* segue */ }
+  };
+  window.addEventListener('message', ouve);
+  f.addEventListener('load', function () { manda('addEventListener', ['onReady']); manda('addEventListener', ['onStateChange']); try { f.contentWindow.postMessage(JSON.stringify({ event: 'listening', id: 'wl-ep', channel: 'widget' }), '*'); } catch (e) { /* segue */ } setTimeout(liga, 800); setTimeout(liga, 2500); });
+}
+(window.WL_PECAS = window.WL_PECAS || []).push(function (palco) {
+  var f = palco.querySelector('.c-letra .video iframe'); if (!f || f.__wlCc) return; f.__wlCc = 1; epLegenda(f);
+});
 
 /*@@AQ*/
 /* o aquecimento desta aula (07/10): o motor está em aquece.js */

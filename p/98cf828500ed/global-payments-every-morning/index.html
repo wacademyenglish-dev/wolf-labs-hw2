@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Every Morning · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>GLOBAL PAYMENTS ENGLISH</b><span>Business · Course · Lesson 6</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Every Morning · Global Payments English · Lesson 6</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the first lesson of Unit 2 (My Day): the present simple for the daily routine (I check, we release, I don’t …) with first / then / after that.</p><p style="margin:0 0 6px"><b>The story:</b> Mark from New York asks Ana about her morning. The student does the morning routine step by step in the simulator, saying every action out loud, and writes his real routine.</p><p style="margin:0 0 6px"><b>About 55 min:</b> I · Morning Check (4) · II · Your Mornings (4) · III · Routine Verbs (8) · IV · I Check, We Release (9) · V · The Simulator (13) · VI · What Do You Do? (7) · VII · My Morning (7) · VIII · I Can (3).</p><p style="margin:0"><b>Open with:</b> “What time do you start work? Do you drink coffee in the morning?”</p></div><!--/prep-->
+    <p>The simulator is the routine: each mission is one step of the morning (check the queue, open the message, settle, deal with the payment on hold). The target is to NARRATE in the present simple: “I check”, not “I am checking” or “I checking”. In the last mission the student tells the whole morning without help: let him talk, take notes, one correction at the end.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>I check the queue every morning. · First I … Then I … After that I … · We release payments. · I don’t work on Saturday.</p>
+    <h4>MORNING CHECK</h4>
+    <p>The fixed ritual: the same kind of screen every lesson, only the data changes. The student reads the screen out loud, one question at a time; then the whole sentence three times (with you, together, alone). The Core 10 list shows the phrases that come back in every lesson; the gold one is new today.</p>
+    <h4>YOUR MORNINGS</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>ROUTINE VERBS</h4>
+    <p>Eight screen words. Tap a word: play the audio, show where it appears on the screen, and the student says it three times (tap <b>I said it</b> each time). The pronunciation tip is only on your screen. The <b>PT</b> button shows the Portuguese if the student is lost.</p>
+    <h4>I CHECK, WE RELEASE</h4>
+    <p>The explanation in blocks: English on top, Portuguese under each block. Read the card WITH the student, block by block, and play the sentence. Then the student builds the sentence by tapping the blocks, and says it out loud.</p>
+    <h4>THE SIMULATOR</h4>
+    <p>The simulator: a fictional copy of a payments system (Exchange queue, SWIFT Monitor, Unit settlement). Each mission is a task on the screen: the student does it (the mission turns green by itself) and then SAYS the sentence. If the mission is only spoken, tap <b>Mark as done</b>. The student is the expert in the real job: you take care of the English.</p>
+    <h4>WHAT DO YOU DO?</h4>
+    <p>A short audio call (American voices, a British voice in some lessons). BEFORE: one question. LISTEN: play it once without stopping (0.75× is fine), then the questions; <b>Show answer</b> after the student tries. The transcript opens only after the audio: read it together and point to the highlighted words.</p>
+    <h4>MY MORNING</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Open lines go to the homework and to Lesson 7.</p>
+    <div class="glossario-prof" style="margin:18px 0 0;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(216,192,138,.5);background:rgba(216,192,138,.06)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#d8c08a">AS SIGLAS E OS TERMOS · SÓ PARA O PROFESSOR</h4><p style="margin:0 0 8px">O aluno trabalha com pagamentos internacionais. Você não precisa ser especialista: precisa saber do que ele está falando. Cada cena mostra as siglas dela no alto (só você vê) e no painel “Preparar em 1 minuto”. Se ele perguntar algo técnico, devolva: “Can you explain it to me?” (é conversa real).</p><div class="gp-glos" data-gp-glos="queue,status,swift,settle,invoice"></div></div>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>I am check the queue (I check the queue)</i>, <i>I checking (I check)</i>, <i>I no work on Saturday (I don’t work on Saturday)</i>, <i>Everyday I check (Every day I check)</i>. A1: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · Morning Check and II · Your Mornings.</li>
+      <li><b>Listen</b>: III · Routine Verbs and VI · What Do You Do?.</li>
+      <li><b>Focus</b>: IV · I Check, We Release and V · The Simulator and VIII · I Can.</li>
+      <li><b>Write</b>: VII · My Morning.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="revisao.js"></script>
+<script src="dialogo.js"></script>
+<script src="gp.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Abertura da Unidade 2: a rotina da manhã em presente simples (I check, we release, I don’t), narrada passo a passo no simulador.",
+  "armadilha": "“I am check” e “I checking”: o aluno mistura com o be e com o -ing. Na rotina é só I + verbo. Negativo: I don’t (nunca “I no”).",
+  "pal": [
+   "I check",
+   "I open",
+   "we release",
+   "I send",
+   "I receive",
+   "every day",
+   "usually",
+   "first · then · after that",
+   "I don’t …"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Abrir a Unidade 2 (My Day): a rotina do analista.",
+   "perg": "What time do you start work?",
+   "pula": "Leia o subtítulo e entre."
+  },
+  "morning": {
+   "obj": "Ritual fixo + “What do you do first?”.",
+   "perg": "What do you do first?",
+   "pula": "Status e a última pergunta."
+  },
+  "conversa": {
+   "obj": "Small talk leve sobre as manhãs.",
+   "perg": "Do you drink coffee in the morning?",
+   "pula": "Duas perguntas bastam."
+  },
+  "termos": {
+   "obj": "Os verbos da rotina e first / then.",
+   "perg": "What do you check every day?",
+   "pula": "check, open, release, send."
+  },
+  "explica": {
+   "obj": "Presente simples (I / we), every / usually, first / then, I don’t.",
+   "perg": "How do you say “Eu confiro a fila toda manhã”?",
+   "pula": "Cartões 1 e 4."
+  },
+  "simulador": {
+   "obj": "Fazer a manhã no simulador narrando cada passo; no fim, a manhã inteira sem ajuda.",
+   "perg": "What do you do first?",
+   "pula": "Missões 1, 3 e 5."
+  },
+  "dialogo": {
+   "obj": "Ouvir a rotina da Ana.",
+   "perg": "What does she do first?",
+   "pula": "Uma escuta e duas perguntas."
+  },
+  "cartao": {
+   "obj": "Escrever a rotina real com o corretor.",
+   "perg": "What time do you start?",
+   "pula": "Três frases bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”.",
+   "perg": "Can you tell me your morning?",
+   "pula": "Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado com frase pronta.",
+   "perg": "A or B?",
+   "pula": "Pule se faltar tempo."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: você é um colega novo perguntando da rotina.",
+   "perg": "What do you do after lunch?",
+   "pula": "Pule se faltar tempo."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 5,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "I",
+    "I don’t",
+    "because"
+   ],
+   "rodadas": [
+    {
+     "q": "Emails first or the queue first?",
+     "a": "Emails first",
+     "b": "The queue first",
+     "fa": [
+      "I check my emails first."
+     ],
+     "fb": [
+      "I check the queue first."
+     ]
+    },
+    {
+     "q": "Lunch at your desk or out?",
+     "a": "At my desk",
+     "b": "Out",
+     "fa": [
+      "I have lunch at my desk. I’m busy."
+     ],
+     "fb": [
+      "I have lunch out. I need a break."
+     ]
+    },
+    {
+     "q": "Start early or start late?",
+     "a": "Early",
+     "b": "Late",
+     "fa": [
+      "I start early. The morning is quiet."
+     ],
+     "fb": [
+      "I start late. I don’t like mornings."
+     ]
+    }
+   ],
+   "fim": "Three rounds. Good job!"
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "A new colleague asks.",
+   "p": "Answer about YOUR real routine.",
+   "aluno": "Your teacher is a new colleague. Answer about your real day: I start …, I check …, I don’t …",
+   "perguntas": [
+    "What time do you start?",
+    "What do you do first?",
+    "And then?",
+    "Do you work on Saturday?",
+    "What do you do after lunch?",
+    "What time do you finish?"
+   ],
+   "st": [
+    "I start at …",
+    "First I …",
+    "Then I …",
+    "I don’t …"
+   ],
+   "ex": "I start at eight. First I check the queue. Then I open the messages. I don’t work on Saturday."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
+</body>
+</html>

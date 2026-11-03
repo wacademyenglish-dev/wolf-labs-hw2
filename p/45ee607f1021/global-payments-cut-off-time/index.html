@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · Cut-off Time · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>GLOBAL PAYMENTS ENGLISH</b><span>Business · Course · Lesson 7</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>Cut-off Time · Global Payments English · Lesson 7</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> telling the time (a.m. / p.m., noon), What time is…?, at / before / after, today / tomorrow, all through the cut-off times of each currency.</p><p style="margin:0 0 6px"><b>The story:</b> A client calls at 3:45 p.m. wanting a euro payment today: too late. The student reads the cut-off board in the simulator (the clock says 3:40 PM), decides what goes today and what goes tomorrow, and writes a note.</p><p style="margin:0 0 6px"><b>About 54 min:</b> I · Afternoon Check (4) · II · Your Day (4) · III · Time Words (8) · IV · What Time Is It? (9) · V · The Simulator (13) · VI · Today or Tomorrow? (7) · VII · The Cut-off Note (6) · VIII · I Can (3).</p><p style="margin:0"><b>Open with:</b> “What time do you finish work? Is the afternoon busy?”</p></div><!--/prep-->
+    <p>Brazilians think in 24 hours: 16h must become “4 p.m.”. The easiest way to say the time is the two numbers: “three forty”. In the simulator the clock is 3:40 PM; the cut-off board shows each currency (USD 4 p.m. open, EUR noon closed…). Hover any time to see it spelled out. The key pair of the lesson: I can’t settle it today (after the cut-off) × I can settle it before four p.m.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>It’s three forty p.m. · What time is the cut-off for euros? · The cut-off is at four p.m. · before / after the cut-off · today / tomorrow</p>
+    <h4>AFTERNOON CHECK</h4>
+    <p>The fixed ritual: the same kind of screen every lesson, only the data changes. The student reads the screen out loud, one question at a time; then the whole sentence three times (with you, together, alone). The Core 10 list shows the phrases that come back in every lesson; the gold one is new today.</p>
+    <h4>YOUR DAY</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>TIME WORDS</h4>
+    <p>Eight screen words. Tap a word: play the audio, show where it appears on the screen, and the student says it three times (tap <b>I said it</b> each time). The pronunciation tip is only on your screen. The <b>PT</b> button shows the Portuguese if the student is lost.</p>
+    <h4>WHAT TIME IS IT?</h4>
+    <p>The explanation in blocks: English on top, Portuguese under each block. Read the card WITH the student, block by block, and play the sentence. Then the student builds the sentence by tapping the blocks, and says it out loud.</p>
+    <h4>THE SIMULATOR</h4>
+    <p>The simulator: a fictional copy of a payments system (Exchange queue, SWIFT Monitor, Unit settlement). Each mission is a task on the screen: the student does it (the mission turns green by itself) and then SAYS the sentence. If the mission is only spoken, tap <b>Mark as done</b>. The student is the expert in the real job: you take care of the English.</p>
+    <h4>TODAY OR TOMORROW?</h4>
+    <p>A short audio call (American voices, a British voice in some lessons). BEFORE: one question. LISTEN: play it once without stopping (0.75× is fine), then the questions; <b>Show answer</b> after the student tries. The transcript opens only after the audio: read it together and point to the highlighted words.</p>
+    <h4>THE CUT-OFF NOTE</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Open lines go to the homework.</p>
+    <div class="glossario-prof" style="margin:18px 0 0;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(216,192,138,.5);background:rgba(216,192,138,.06)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#d8c08a">AS SIGLAS E OS TERMOS · SÓ PARA O PROFESSOR</h4><p style="margin:0 0 8px">O aluno trabalha com pagamentos internacionais. Você não precisa ser especialista: precisa saber do que ele está falando. Cada cena mostra as siglas dela no alto (só você vê) e no painel “Preparar em 1 minuto”. Se ele perguntar algo técnico, devolva: “Can you explain it to me?” (é conversa real).</p><div class="gp-glos" data-gp-glos="cutoff,ampm,settle,vd,ccy"></div></div>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>Are four hours (It’s four o’clock)</i>, <i>The cut-off is 16 (The cut-off is at four p.m.)</i>, <i>in 4 p.m. (at 4 p.m.)</i>, <i>after of the cut-off (after the cut-off)</i>. A1: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · Afternoon Check and II · Your Day.</li>
+      <li><b>Listen</b>: III · Time Words and VI · Today or Tomorrow?.</li>
+      <li><b>Focus</b>: IV · What Time Is It? and V · The Simulator and VIII · I Can.</li>
+      <li><b>Write</b>: VII · The Cut-off Note.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="revisao.js"></script>
+<script src="dialogo.js"></script>
+<script src="gp.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "As horas em inglês (a.m./p.m., noon), What time is…?, at / before / after, today / tomorrow, com o quadro de cut-off do simulador.",
+  "armadilha": "O relógio de 24h (“the cut-off is 16”) e “Are four hours”. Use os dois números (three forty) e It’s. Horário com AT.",
+  "pal": [
+   "It’s three forty p.m.",
+   "What time is …?",
+   "at four p.m.",
+   "noon",
+   "before",
+   "after",
+   "today",
+   "tomorrow",
+   "cut-off time"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "O horário limite de cada moeda: o que sai hoje e o que fica para amanhã.",
+   "perg": "What time do you finish work?",
+   "pula": "Leia o subtítulo e entre."
+  },
+  "morning": {
+   "obj": "Ritual fixo, agora no fim da tarde (3:40 PM) + que horas são.",
+   "perg": "What time is it now?",
+   "pula": "Status e a hora."
+  },
+  "conversa": {
+   "obj": "Small talk leve sobre horários.",
+   "perg": "What time do you finish work?",
+   "pula": "Duas perguntas bastam."
+  },
+  "termos": {
+   "obj": "Palavras do relógio.",
+   "perg": "What is 16h in English?",
+   "pula": "a.m., p.m., before, after."
+  },
+  "explica": {
+   "obj": "Ler a hora, a.m./p.m., before/after, What time is…?",
+   "perg": "What time is the cut-off for dollars?",
+   "pula": "Cartões 1 e 3."
+  },
+  "simulador": {
+   "obj": "Ler o quadro de cut-off (3:40 PM) e decidir hoje × amanhã; um erro de cut-off e uma liquidação a tempo.",
+   "perg": "Can you settle it today?",
+   "pula": "Missões 2, 3 e 4."
+  },
+  "dialogo": {
+   "obj": "Ouvir o cliente que liga tarde demais para o euro.",
+   "perg": "When can Ana send the euro payment?",
+   "pula": "Uma escuta e duas perguntas."
+  },
+  "cartao": {
+   "obj": "Escrever um recado: hoje × amanhã, com o motivo.",
+   "perg": "Which payment goes today?",
+   "pula": "Duas frases bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”.",
+   "perg": "What time is it now?",
+   "pula": "Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado com frase pronta.",
+   "perg": "A or B?",
+   "pula": "Pule se faltar tempo."
+  },
+  "ff-cadeira": {
+   "obj": "Ditado de horas: você diz um horário, ele escreve e lê de volta.",
+   "perg": "What time is it?",
+   "pula": "Pule se faltar tempo."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 5,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "before",
+    "after",
+    "at"
+   ],
+   "rodadas": [
+    {
+     "q": "Settle before lunch or after lunch?",
+     "a": "Before lunch",
+     "b": "After lunch",
+     "fa": [
+      "Before lunch. The cut-off is early."
+     ],
+     "fb": [
+      "After lunch. The morning is busy."
+     ]
+    },
+    {
+     "q": "A meeting at 9 a.m. or at 4 p.m.?",
+     "a": "9 a.m.",
+     "b": "4 p.m.",
+     "fa": [
+      "At 9 a.m. I’m fresh."
+     ],
+     "fb": [
+      "At 4 p.m. After the cut-off."
+     ]
+    },
+    {
+     "q": "Work late or start early?",
+     "a": "Work late",
+     "b": "Start early",
+     "fa": [
+      "I work late. I don’t like mornings."
+     ],
+     "fb": [
+      "I start early. I finish at five."
+     ]
+    }
+   ],
+   "fim": "Three rounds. Good job!"
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "What Time Is It?",
+   "t": "Say the time.",
+   "p": "Your teacher says a time. You write it and say it back.",
+   "aluno": "Listen to your teacher. Write the time with a.m. or p.m. Then say it back.",
+   "perguntas": [
+    "It’s nine fifteen a.m.",
+    "It’s twelve noon.",
+    "It’s one thirty p.m.",
+    "It’s three forty-five p.m.",
+    "It’s four o’clock.",
+    "What time is the cut-off for euros?"
+   ],
+   "st": [
+    "It’s …",
+    "at … p.m.",
+    "Can you repeat that, please?"
+   ],
+   "ex": "It’s three forty-five p.m. = 3:45 PM."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
+</body>
+</html>

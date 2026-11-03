@@ -139,3 +139,27 @@ html.wl-sala-aluno .so-aluno-c{display:grid}
 :root{--disp:'Zen Maru Gothic',system-ui,sans-serif}
 .capa h1,.cab h1,.jk-txt1{font-family:'Rampart One',system-ui,sans-serif}
 .jk-svg{width:min(100%,clamp(220px,33vh,350px))}
+
+/* 02/11/2026 · III · o episódio dublado: três portas de capítulo (escuras, número no círculo), um vídeo por vez */
+.jk-caps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:1300px;width:100%;margin:4px auto 12px}
+.jk-cap{position:relative;display:flex;align-items:center;gap:14px;min-height:0;padding:12px 16px;border-radius:var(--r1);border:1px solid var(--fio2);background-color:#120a1d;background-image:linear-gradient(135deg,rgba(155,92,240,.10),transparent 60%);color:var(--t1);font:inherit;text-align:left;cursor:pointer;transition:border-color .2s,background-color .2s}
+.jk-cap:hover{border-color:rgba(155,92,240,.6)}
+.jk-cap.on{border-color:var(--ac);background-color:#1c0f30;box-shadow:inset 0 0 0 1px var(--ac)}
+.jk-cap:focus-visible{outline:2px solid var(--ac2);outline-offset:3px}
+.jk-cap-n{flex:none;width:46px;height:46px;display:grid;place-items:center;border-radius:50%;border:1.5px solid var(--fio2);font:700 22px/1 var(--ui);font-style:normal;color:var(--ac2)}
+.jk-cap.on .jk-cap-n{border-color:var(--ac);background:var(--ac);color:#1d0a33}
+.jk-cap span{display:grid;gap:2px;min-width:0}
+.jk-cap small{font:700 13px var(--ui);color:var(--t3);font-variant-numeric:tabular-nums}
+.jk-cap b{font:700 clamp(18px,1.3vw,22px)/1.2 var(--ui);color:var(--t1)}
+.jk-cap em{font:500 14px/1.3 var(--ui);font-style:normal;color:var(--t2)}
+.jk-cap-ok{position:absolute;top:10px;right:12px;width:18px;height:18px;fill:none;stroke:var(--ok);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.jk-cap.feito .jk-cap-ok{opacity:1}
+.c-letra .tempos{max-width:1300px;width:100%;margin:0 auto 14px;display:flex;gap:8px;justify-content:center}
+.jk-antes{max-width:980px}
+.jk-q{display:grid;gap:8px}
+.jk-acao{display:flex;justify-content:center;margin-top:6px}
+.jk-pista p + p{margin-top:6px}
+.jk-cred-linha{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.jk-cc{min-height:30px;padding:0 12px;font:700 13px var(--ui);color:var(--t3);background:transparent;border:1px solid var(--fio2);border-radius:999px;cursor:pointer}
+.jk-cc.on{color:var(--ac2);border-color:var(--ac);background:rgba(155,92,240,.14)}
+@media (max-width:900px){.jk-caps{grid-template-columns:1fr}}

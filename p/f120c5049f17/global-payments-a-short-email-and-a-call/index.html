@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · A Short Email and a Call · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>GLOBAL PAYMENTS ENGLISH</b><span>Business · Course · Lesson 5</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>A Short Email and a Call · Global Payments English · Lesson 5</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> polite requests (Can you …, please?), the three-line email and a short phone call. It closes Unit 1: all ten Core phrases and the Screen Check.</p><p style="margin:0 0 6px"><b>The story:</b> A payment is on hold because the invoice is missing. Ana calls Sarah at Lumen Trading. The student follows the full flow in the simulator (queue → SWIFT message → Unit), plays the call with you, writes the email and does the Screen Check.</p><p style="margin:0 0 6px"><b>About 55 min:</b> I · Morning Check (4) · II · Can You? (3) · III · Email Words (7) · IV · Can You …, Please? (8) · V · The Simulator (12) · VI · The Call (6) · VII · The Email (7) · VIII · Screen Check (5) · IX · I Can (3).</p><p style="margin:0"><b>Open with:</b> “Do you write a lot of emails? Email or phone: what is faster?”</p></div><!--/prep-->
+    <p>This is the review lesson of Unit 1. In the simulator, mission 4 is a role play: YOU are the client (Sarah) and the student asks for the invoice. The Screen Check (VIII) uses a payment the student has not seen: do not help for two minutes, then tap what was said. Goal: 7 of 10.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>Can you send the invoice, please? · The payment is on hold. The invoice is missing. · Dear … / Best regards, · Thank you. I’ll check and confirm.</p>
+    <h4>MORNING CHECK</h4>
+    <p>The fixed ritual: the same kind of screen every lesson, only the data changes. The student reads the screen out loud, one question at a time; then the whole sentence three times (with you, together, alone). The Core 10 list shows the phrases that come back in every lesson; the gold one is new today.</p>
+    <h4>CAN YOU?</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>EMAIL WORDS</h4>
+    <p>Eight screen words. Tap a word: play the audio, show where it appears on the screen, and the student says it three times (tap <b>I said it</b> each time). The pronunciation tip is only on your screen. The <b>PT</b> button shows the Portuguese if the student is lost.</p>
+    <h4>CAN YOU …, PLEASE?</h4>
+    <p>The explanation in blocks: English on top, Portuguese under each block. Read the card WITH the student, block by block, and play the sentence. Then the student builds the sentence by tapping the blocks, and says it out loud.</p>
+    <h4>THE SIMULATOR</h4>
+    <p>The simulator: a fictional copy of a payments system (Exchange queue, SWIFT Monitor, Unit settlement). Each mission is a task on the screen: the student does it (the mission turns green by itself) and then SAYS the sentence. If the mission is only spoken, tap <b>Mark as done</b>. The student is the expert in the real job: you take care of the English.</p>
+    <h4>THE CALL</h4>
+    <p>A short audio call (American voices, a British voice in some lessons). BEFORE: one question. LISTEN: play it once without stopping (0.75× is fine), then the questions; <b>Show answer</b> after the student tries. The transcript opens only after the audio: read it together and point to the highlighted words.</p>
+    <h4>THE EMAIL</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>SCREEN CHECK</h4>
+    <p>The Screen Check of the unit: a screen the student has not seen. The student talks about it for two minutes; you tap each item they say correctly. Goal: 7 of 10. Items left open go to the next lesson’s Morning Check.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Unit 1 is done. Open lines and the Screen Check items left open go to Lesson 6.</p>
+    <div class="glossario-prof" style="margin:18px 0 0;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(216,192,138,.5);background:rgba(216,192,138,.06)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#d8c08a">AS SIGLAS E OS TERMOS · SÓ PARA O PROFESSOR</h4><p style="margin:0 0 8px">O aluno trabalha com pagamentos internacionais. Você não precisa ser especialista: precisa saber do que ele está falando. Cada cena mostra as siglas dela no alto (só você vê) e no painel “Preparar em 1 minuto”. Se ele perguntar algo técnico, devolva: “Can you explain it to me?” (é conversa real).</p><div class="gp-glos" data-gp-glos="invoice,status,numeros,vd,bene,inter,bic,settle,swift"></div></div>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>You send the invoice. (Can you send the invoice, please?)</i>, <i>Hello dear Sarah (Dear Sarah,)</i>, <i>Can you to send (Can you send)</i>, <i>I will to check (I’ll check)</i>. A1: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · Morning Check and II · Can You? and VIII · Screen Check.</li>
+      <li><b>Listen</b>: III · Email Words and VI · The Call.</li>
+      <li><b>Focus</b>: IV · Can You …, Please? and V · The Simulator and IX · I Can.</li>
+      <li><b>Write</b>: VII · The Email.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="revisao.js"></script>
+<script src="dialogo.js"></script>
+<script src="gp.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "Revisão da Unidade 1: pedido educado (Can you …, please?), e-mail de 3 linhas, ligação curta, o fluxo completo no simulador e o Screen Check.",
+  "armadilha": "Pedido em forma de ordem (“You send the invoice”) e “Can you to…”. No e-mail: “Hello dear”. Use o bloco pronto: Dear … / Best regards.",
+  "pal": [
+   "Can you …, please?",
+   "Dear …",
+   "Best regards",
+   "Thank you. I’ll check and confirm.",
+   "invoice",
+   "document",
+   "contract",
+   "urgent",
+   "email",
+   "call"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "Fechar a Unidade 1: do pagamento retido ao liberado, tudo em inglês.",
+   "perg": "Do you write a lot of emails?",
+   "pula": "Leia o subtítulo e entre."
+  },
+  "morning": {
+   "obj": "Ritual fixo + o motivo da retenção (invoice missing).",
+   "perg": "Why is it on hold?",
+   "pula": "Status e motivo."
+  },
+  "conversa": {
+   "obj": "Small talk leve com escolha entre duas respostas.",
+   "perg": "Email or phone?",
+   "pula": "Duas perguntas bastam."
+  },
+  "termos": {
+   "obj": "Palavras de e-mail e ligação.",
+   "perg": "How do you start an email?",
+   "pula": "invoice, urgent, Dear, Best regards."
+  },
+  "explica": {
+   "obj": "Can you …, please?, o e-mail de 3 linhas e o bloco “I’ll check and confirm”.",
+   "perg": "How do you ask for the invoice?",
+   "pula": "Cartões 1 e 2."
+  },
+  "simulador": {
+   "obj": "Fluxo completo: fila → SWIFT → Unit (erro) → ligação (você é a cliente) → anexar invoice → liquidar.",
+   "perg": "Can you send the invoice, please?",
+   "pula": "Missões 3, 4 e 5."
+  },
+  "dialogo": {
+   "obj": "Ouvir a ligação para a cliente pedindo a invoice.",
+   "perg": "When can Sarah send it?",
+   "pula": "Uma escuta e duas perguntas."
+  },
+  "cartao": {
+   "obj": "Escrever o e-mail de 3 linhas com o corretor.",
+   "perg": "What is the problem?",
+   "pula": "O pedido e o Best regards bastam."
+  },
+  "check": {
+   "obj": "Screen Check: tela nova, 2 minutos sem ajuda, meta 7 de 10.",
+   "perg": "Tell me about this payment.",
+   "pula": "Não pule: é a medida da unidade."
+  },
+  "pode": {
+   "obj": "Autoavaliação da Unidade 1.",
+   "perg": "Can you say the Core 10?",
+   "pula": "Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado com frase pronta.",
+   "perg": "A or B?",
+   "pula": "Pule se faltar tempo."
+  },
+  "ff-cadeira": {
+   "obj": "Role play: você é o cliente; o aluno liga e pede documentos.",
+   "perg": "Hello, how can I help?",
+   "pula": "Pule se faltar tempo."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 5,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "It’s",
+    "I can"
+   ],
+   "rodadas": [
+    {
+     "q": "Short emails or long emails?",
+     "a": "Short",
+     "b": "Long",
+     "fa": [
+      "Short. It’s clear."
+     ],
+     "fb": [
+      "Long. It’s complete."
+     ]
+    },
+    {
+     "q": "Call the client or email the client?",
+     "a": "Call",
+     "b": "Email",
+     "fa": [
+      "Call. It’s fast."
+     ],
+     "fb": [
+      "Email. It’s easy in English."
+     ]
+    },
+    {
+     "q": "Urgent or not urgent: on hold payments are…",
+     "a": "Urgent",
+     "b": "Not urgent",
+     "fa": [
+      "Urgent. The value date is today."
+     ],
+     "fb": [
+      "Not urgent. I can check tomorrow."
+     ]
+    }
+   ],
+   "fim": "Three rounds. Unit 1 is done!"
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Role Play",
+   "t": "Call the client.",
+   "p": "Your teacher is the client. Ask for a document.",
+   "aluno": "You are Ana. Call the client: say the problem and ask nicely. Your teacher answers.",
+   "perguntas": [
+    "Hello, Kaito Parts, how can I help?",
+    "Which payment?",
+    "What is the problem?",
+    "Is it urgent?",
+    "Can you spell the reference?",
+    "OK, I can send it today."
+   ],
+   "st": [
+    "This is … from …",
+    "The payment … is on hold.",
+    "Can you send the …, please?",
+    "Thank you. I’ll check and confirm."
+   ],
+   "ex": "Hi, this is Ana from Banco Aurora. The payment FX-20488 is on hold. Can you send the invoice, please? Thank you. I’ll check and confirm."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WOLF LABS · FX: Buy and Sell · Live Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@500;600;700;800&family=Urbanist:ital,wght@0,200;0,300;0,600;0,700;0,800;1,700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="aula.css">
+<link rel="stylesheet" href="/kit/padrao.css"><!-- padrão novo (01/11/2026) -->
+</head>
+<body>
+<div id="fundo" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <div class="marca"><i></i><b>GLOBAL PAYMENTS ENGLISH</b><span>Business · Course · Lesson 9</span></div>
+    <nav class="wolf" aria-label="Wolf method stations">
+      <span class="w" data-k="w"><b>W</b><em>Write</em></span>
+      <span class="o" data-k="o"><b>O</b><em>Out loud</em></span>
+      <span class="l" data-k="l"><b>L</b><em>Listen</em></span>
+      <span class="f" data-k="f"><b>F</b><em>Focus</em></span>
+    </nav>
+    <div class="ferr zm">
+      <button type="button" class="pilula" id="bguia" aria-label="Teacher guide">Guide</button>
+      <button type="button" class="pilula" id="bzoom" aria-label="Bigger text">A+</button>
+      <button type="button" class="pilula" id="btela" aria-label="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main id="palco" aria-live="polite"></main>
+  <footer class="foot">
+    <button type="button" class="go" id="ant">BACK</button>
+    <div class="trilho" id="trilho" aria-hidden="true"></div>
+    <span class="conta" id="conta"></span>
+    <button type="button" class="go" id="prox">NEXT</button>
+  </footer>
+</div>
+
+<div id="guia" hidden>
+  <div class="caixa vd" role="dialog" aria-label="Teacher guide">
+    <h2>FX: Buy and Sell · Global Payments English · Lesson 9</h2>
+    <div class="prep-1min" style="margin:0 0 16px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(198,243,107,.55);background:rgba(198,243,107,.07)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#c6f36b">PREPARE IN 1 MINUTE</h4><p style="margin:0 0 6px"><b>What this is:</b> the FX desk: reading rates with “point” (5.4380), buy / sell from the bank’s side, How much is…?, and comparing with higher / lower.</p><p style="margin:0 0 6px"><b>The story:</b> Tom from Brava Foods asks Ana for a dollar quote. The student opens the FX DESK in the simulator, reads the rates, books two deals and writes a quote email.</p><p style="margin:0 0 6px"><b>About 54 min:</b> I · Morning Check (4) · II · Money Talk (4) · III · FX Words (8) · IV · Point, Buy, Sell (9) · V · The Simulator (13) · VI · Can I Have a Quote? (7) · VII · The Quote (6) · VIII · I Can (3).</p><p style="margin:0"><b>Open with:</b> “Do you travel abroad? Dollars or euros: which is more expensive today?”</p></div><!--/prep-->
+    <p>Two traps. 1) The decimal: in English it is POINT, and after the point you say digit by digit (five point four three eight zero). 2) The side: the screen shows WE BUY / WE SELL from the BANK’s side. A client who buys dollars pays the WE SELL rate (the higher one). If the student mixes them up, ask: “Who buys: the bank or the client?”. All rates in the course are fictional.</p>
+    <h4>THE LANGUAGE OF THIS LESSON</h4>
+    <p>The rate is five point four three eight zero. · The client buys dollars. We sell at … · How much is the dollar today? · The sell rate is higher.</p>
+    <h4>MORNING CHECK</h4>
+    <p>The fixed ritual: the same kind of screen every lesson, only the data changes. The student reads the screen out loud, one question at a time; then the whole sentence three times (with you, together, alone). The Core 10 list shows the phrases that come back in every lesson; the gold one is new today.</p>
+    <h4>MONEY TALK</h4>
+    <p>Small talk: personal questions with the easier version a tap away. After each answer, wait: the student asks “And you?”.</p>
+    <h4>FX WORDS</h4>
+    <p>Eight screen words. Tap a word: play the audio, show where it appears on the screen, and the student says it three times (tap <b>I said it</b> each time). The pronunciation tip is only on your screen. The <b>PT</b> button shows the Portuguese if the student is lost.</p>
+    <h4>POINT, BUY, SELL</h4>
+    <p>The explanation in blocks: English on top, Portuguese under each block. Read the card WITH the student, block by block, and play the sentence. Then the student builds the sentence by tapping the blocks, and says it out loud.</p>
+    <h4>THE SIMULATOR</h4>
+    <p>The simulator: a fictional copy of a payments system (Exchange queue, SWIFT Monitor, Unit settlement). Each mission is a task on the screen: the student does it (the mission turns green by itself) and then SAYS the sentence. If the mission is only spoken, tap <b>Mark as done</b>. The student is the expert in the real job: you take care of the English.</p>
+    <h4>CAN I HAVE A QUOTE?</h4>
+    <p>A short audio call (American voices, a British voice in some lessons). BEFORE: one question. LISTEN: play it once without stopping (0.75× is fine), then the questions; <b>Show answer</b> after the student tries. The transcript opens only after the audio: read it together and point to the highlighted words.</p>
+    <h4>THE QUOTE</h4>
+    <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
+    <h4>I CAN</h4>
+    <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class. Open lines go to the homework.</p>
+    <div class="glossario-prof" style="margin:18px 0 0;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(216,192,138,.5);background:rgba(216,192,138,.06)"><h4 style="margin:0 0 8px;letter-spacing:.12em;color:#d8c08a">AS SIGLAS E OS TERMOS · SÓ PARA O PROFESSOR</h4><p style="margin:0 0 8px">O aluno trabalha com pagamentos internacionais. Você não precisa ser especialista: precisa saber do que ele está falando. Cada cena mostra as siglas dela no alto (só você vê) e no painel “Preparar em 1 minuto”. Se ele perguntar algo técnico, devolva: “Can you explain it to me?” (é conversa real).</p><div class="gp-glos" data-gp-glos="fx,rate,buysell,spread,fxc,numeros"></div></div>
+    <h4>THE MISTAKES TO LISTEN FOR</h4>
+    <p><i>five comma four (five point four)</i>, <i>five point four hundred thirty-eight (five point four three eight)</i>, <i>How many is the dollar? (How much is the dollar?)</i>, <i>more high (higher)</i>. A1: one correction per answer is enough.</p>
+    <h4>WOLF IN THIS LESSON</h4>
+    <ul>
+      <li><b>Out loud</b>: I · Morning Check and II · Money Talk.</li>
+      <li><b>Listen</b>: III · FX Words and VI · Can I Have a Quote?.</li>
+      <li><b>Focus</b>: IV · Point, Buy, Sell and V · The Simulator and VIII · I Can.</li>
+      <li><b>Write</b>: VII · The Quote.</li>
+    </ul>
+
+    <p style="margin-top:18px"><button type="button" class="btn" id="fguia">Close</button></p>
+  </div>
+</div>
+<script src="corretor.js"></script>
+<script src="regras.js"></script>
+<script src="motor.js"></script>
+<script src="aula.js"></script>
+<script src="revisao.js"></script>
+<script src="dialogo.js"></script>
+<script src="gp.js"></script>
+<script src="focus.js"></script>
+<script src="https://wolf-labs.pages.dev/kit/teclado.js"></script>
+<script data-wl="padrao-dados.js">
+/* padrão novo (E1–E5 + fast finishers) · 01/11/2026 · comportamento em /kit/padrao.js */
+window.WL_PADRAO = {
+ "lib": "cursos",
+ "ffNome": "Fast finishers",
+ "cortes": {},
+ "prep": {
+  "obj": "A mesa de câmbio do simulador: ler cotações com point, quem compra e quem vende (lado do banco), How much is…?, higher / lower.",
+  "armadilha": "“five comma four” e ler os decimais como número inteiro. Depois do ponto, dígito por dígito. E inverter buy/sell: a tela fala do lado do banco.",
+  "pal": [
+   "rate",
+   "point",
+   "we buy",
+   "we sell",
+   "spread",
+   "quote",
+   "deal",
+   "How much is …?",
+   "higher · lower"
+  ]
+ },
+ "notas": {
+  "capa": {
+   "obj": "A mesa de câmbio: cotação, compra, venda e a boleta.",
+   "perg": "Dollars or euros: which is more expensive?",
+   "pula": "Leia o subtítulo e entre."
+  },
+  "morning": {
+   "obj": "Ritual fixo + o cut-off da libra.",
+   "perg": "What time is the cut-off for pounds?",
+   "pula": "Status e cut-off."
+  },
+  "conversa": {
+   "obj": "Small talk leve sobre dinheiro e viagem.",
+   "perg": "Cash or card when you travel?",
+   "pula": "Duas perguntas bastam."
+  },
+  "termos": {
+   "obj": "Palavras da mesa de câmbio.",
+   "perg": "How do you read 5.4380?",
+   "pula": "rate, buy, sell, point."
+  },
+  "explica": {
+   "obj": "Decimal com point, lado do banco, How much, higher/lower.",
+   "perg": "Who buys: the bank or the client?",
+   "pula": "Cartões 1 e 2."
+  },
+  "simulador": {
+   "obj": "Ler cotações, fazer duas boletas (cliente compra / cliente vende) e comparar spreads.",
+   "perg": "What’s the total in reais?",
+   "pula": "Missões 1, 2 e 3."
+  },
+  "dialogo": {
+   "obj": "Ouvir o cliente pedindo cotação.",
+   "perg": "What’s the rate?",
+   "pula": "Uma escuta e duas perguntas."
+  },
+  "cartao": {
+   "obj": "Escrever a cotação por e-mail com o corretor.",
+   "perg": "What’s the total?",
+   "pula": "Taxa e total bastam."
+  },
+  "pode": {
+   "obj": "Autoavaliação “I can”.",
+   "perg": "How much is the dollar today?",
+   "pula": "Sobrou tempo? NEXT leva aos fast finishers."
+  },
+  "ff-lados": {
+   "obj": "Escolher um lado com frase pronta.",
+   "perg": "A or B?",
+   "pula": "Pule se faltar tempo."
+  },
+  "ff-cadeira": {
+   "obj": "Ditado de cotações: você lê, ele escreve e lê de volta.",
+   "perg": "Can you repeat the rate?",
+   "pula": "Pule se faltar tempo."
+  }
+ },
+ "ff": [
+  {
+   "k": "ff-lados",
+   "formato": "lados",
+   "est": "o",
+   "min": 5,
+   "rot": "Pick a Side",
+   "t": "Pick a side.",
+   "p": "Your teacher takes the other one.",
+   "palavras": [
+    "higher",
+    "lower",
+    "more expensive"
+   ],
+   "rodadas": [
+    {
+     "q": "Buy dollars today or next week?",
+     "a": "Today",
+     "b": "Next week",
+     "fa": [
+      "Today. The rate is lower today."
+     ],
+     "fb": [
+      "Next week. Maybe the rate is lower."
+     ]
+    },
+    {
+     "q": "A big spread or a small spread: what is better for the client?",
+     "a": "Small",
+     "b": "Big",
+     "fa": [
+      "A small spread. It’s cheaper."
+     ],
+     "fb": [
+      "A big spread. It’s good for the bank!"
+     ]
+    },
+    {
+     "q": "Travel to Europe or to the USA?",
+     "a": "Europe",
+     "b": "The USA",
+     "fa": [
+      "Europe. But the euro is more expensive."
+     ],
+     "fb": [
+      "The USA. The dollar is cheaper."
+     ]
+    }
+   ],
+   "fim": "Three rounds. Good job!"
+  },
+  {
+   "k": "ff-cadeira",
+   "formato": "cadeira",
+   "est": "o",
+   "min": 5,
+   "rot": "Rate Dictation",
+   "t": "Write the rate.",
+   "p": "Your teacher reads a rate. You write it and read it back.",
+   "aluno": "Listen. Write the rate with a point. Then read it back, digit by digit after the point.",
+   "perguntas": [
+    "Five point four one two zero.",
+    "Five point nine three one zero.",
+    "Six point eight seven one zero.",
+    "Zero point zero three five two.",
+    "One hundred and thirty-five thousand, nine hundred and fifty.",
+    "Can I have a quote for euros?"
+   ],
+   "st": [
+    "It’s … point …",
+    "Can you repeat that, please?",
+    "We sell at …"
+   ],
+   "ex": "5.4120: five point four one two zero."
+  }
+ ]
+};
+</script><!--/padrao-dados.js-->
+<script src="https://wolf-labs.pages.dev/kit/padrao.js"></script>
+</body>
+</html>

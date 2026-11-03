@@ -4,7 +4,7 @@
 window.HW2 = {
   "id": "no-room",
   "titulo": "No Room",
-  "nivel": "A1",
+  "nivel": "A2",
   "minutos": 10,
   "capa": "https://wolf-labs.pages.dev/p/ca54db2bc312/no-room/img/live-estabulo.webp",
   "alvo": "there is / there are for a place (There is a lamp. There are two beds.), there isn't / there aren't any, Is there ...?; never 'have' for a place, never 'there is' + many things",

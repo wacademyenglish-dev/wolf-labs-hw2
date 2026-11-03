@@ -346,7 +346,7 @@
     var dir = o.ordemDireita || o.pares.map(function (_, i) { return i; }).reverse();
     return folha(o.titulo || 'Match them.', '<div class="f2-liga"><div>' + o.pares.map(function (p, i) {
       var v = e.par[i]; return bt(k, 'lA', i, null, p[0], (e.a === i ? 'sel' : '') + (v != null ? (v === i ? ' on' : ' no') : ''));
-    }).join('') + '</div><div>' + dir.map(function (j) { return bt(k, 'lB', j, null, o.pares[j][1], ''); }).join('') + '</div></div><p class="fm-nota">' + (feitos === o.pares.length ? 'All matched.' : 'Tap one on the left, then its pair on the right.') + '</p>');
+    }).join('') + '</div><div>' + dir.map(function (j) { var de = -1; Object.keys(e.par).forEach(function (i) { if (e.par[i] === j) de = i * 1; }); return bt(k, 'lB', j, null, o.pares[j][1], de < 0 ? '' : (de === j ? 'on' : 'no')); }).join('') + '</div></div><p class="fm-nota">' + (feitos === o.pares.length ? 'All matched.' : 'Tap one on the left, then its pair on the right.') + '</p>');
   };
   FM.separa = function (k, o) {
     var e = E(k, { sel: -1, em: {} });
