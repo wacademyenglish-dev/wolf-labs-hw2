@@ -7,9 +7,9 @@ window.HW2 = {
   "nivel": "B1",
   "minutos": 10,
   "capa": "https://wolf-labs.pages.dev/p/8c4d21f70b93/i-do-mean-it/img/live-microfone.webp",
-  "alvo": "emphatic do / does / did: I do like it, she does know, I did go (bare verb after DO); with a helper already there, push the helper: I AM tired, I CAN swim; never 'I like, yes!' or 'I do am'",
+  "alvo": "emphatic do / does / did: I do like it, she does know, I did go (bare verb after DO); with am, can or have already there, stress that word: I AM tired, I CAN swim; never 'I like, yes!' or 'I do am'",
   "abrir": "Has anyone ever doubted you? What did you say?",
-  "fecho": "Somebody doubts you, and you push back. Put the force on <b>do, does or did</b> and keep the verb bare: <i>I do like it. She does know. I did go.</i> If a helper is already there, push it: <i>I AM tired. I CAN swim.</i> Never <i>I like, yes!</i>",
+  "fecho": "Somebody doubts you, and you push back. Put the force on <b>do, does or did</b> and keep the verb bare: <i>I do like it. She does know. I did go.</i> If am, can or have is already there, say it louder: <i>I AM tired. I CAN swim.</i> Never <i>I like, yes!</i>",
   "elenco": {
     "mia": {
       "nome": "Mia",
@@ -126,7 +126,7 @@ window.HW2 = {
     },
     "focus": {
       "sub": "Push back with DO, DOES and DID. Four quick ones.",
-      "regra": "<b>do / does / did</b> + bare verb pushes the idea: I <b>do</b> like it · she <b>does</b> know it · I <b>did</b> go. A helper already there pushes itself: I <b>AM</b> tired · I <b>CAN</b> swim.",
+      "regra": "<b>do / does / did</b> + bare verb pushes the idea: I <b>do</b> like it · she <b>does</b> know it · I <b>did</b> go. Am, can or have already there? Say it louder: I <b>AM</b> tired · I <b>CAN</b> swim.",
       "itens": [
         {
           "tipo": "monta",
@@ -165,7 +165,7 @@ window.HW2 = {
           "aceita": [
             "I'm tired!"
           ],
-          "d": "Hint: <b>am</b> is already a helper. Push <b>AM</b> itself, never <i>do am</i>."
+          "d": "Hint: <b>am</b> is already there. Push <b>AM</b> itself, never <i>do am</i>."
         }
       ]
     },
@@ -173,7 +173,7 @@ window.HW2 = {
       "sub": "Two or three sentences. Wolf helps with two things, no more.",
       "img": "https://wolf-labs.pages.dev/p/8c4d21f70b93/i-do-mean-it/img/live-despertador.webp",
       "leg": "An alarm clock at night",
-      "pede": "Look at the picture: an alarm clock at night. A friend says you are never on time. Push back in 2 or 3 sentences. Use <b>do, does, did</b> or a helper like <b>am / can</b>.",
+      "pede": "Look at the picture: an alarm clock at night. A friend says you are never on time. Push back in 2 or 3 sentences. Use <b>do, does, did</b> or a loud <b>am / can</b>.",
       "ph": "I am always on time. I do …",
       "ex": "I am always on time! I did wake up at six today, and I do take the early bus every day. I CAN be punctual when it matters."
     },
