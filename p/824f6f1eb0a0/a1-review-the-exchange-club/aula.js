@@ -13,7 +13,7 @@ var L = [
   { k: 'bingo', est: 'f', min: 8, img: 'conversa', rot: 'I · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a line, across, down or diagonal, is a BINGO.' },
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Exchange Club', t: 'Three new members. Find out what they like.', p: 'Ask each member five questions. Your teacher is the member. Then choose your partner.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
-  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
+  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose one.', p: 'Choose one. Then say it with the sentence.' },
   { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
@@ -38,7 +38,7 @@ var MISSAO = { pede: 'NEW MEMBER · ASK FIVE QUESTIONS', quem: 'member', depois:
     { k: 'MEMBER 2', tag: 'JOE', ele: 'He', v: { ama: 'playing video games', odeia: 'cooking', musica: 'hates it', comida: 'hates them', fala: 'his friends: plays with them' }, diz: '“I love playing video games.” · “I hate cooking.” · “Rock? No, I hate it.” · “Vegetables? I hate them!” · “My friends. I play online with them.”' },
     { k: 'MEMBER 3', tag: 'MEI', ele: 'She', v: { ama: 'reading and walking', odeia: 'shopping', musica: 'likes it', comida: 'loves them', fala: 'her grandma: visits her' }, diz: '“I love reading and walking.” · “I hate shopping.” · “Rock? I like it.” · “I love them! I’m vegetarian.” · “My grandma. I visit her every day.”' }],
   relato: { titulo: 'THE CLUB · CHOOSE YOUR PARTNER',
-    pede: function (x) { return 'Is ' + x.tag.charAt(0) + x.tag.slice(1).toLowerCase() + ' a good partner for you? Why?'; },
+    pede: function (x) { return 'Is ' + x.tag.charAt(0) + x.tag.slice(1).toLowerCase() + ' a good partner for you?'; },
     chips: function (x) { return [x.ele + ' loves …ing.', x.ele + ' hates …ing.', 'I love it too!', 'I don’t like it.', 'Let’s … with ' + (x.ele === 'He' ? 'him' : 'her') + '!']; },
     modelo: function (x) { var p = x.ele === 'He' ? 'him' : 'her'; return x.ele + ' loves ' + x.v.ama + ', and I love it too! ' + x.ele + ' hates ' + x.v.odeia + '. I hate it too! I want to practice with ' + p + '.'; } },
   nao: { ing: '“She loves cook” → she loves COOKING.', obj: '“I call she” → I call HER.', it: '“Yes, I like” → Yes, I like IT.' },
@@ -69,4 +69,4 @@ var PODE = [
 /* MECÂNICAS VARIADAS */
 var BINGO = [['Something you love doing', 'I love dancing.'], ['Pizza? (it)', 'I love it!'], ['Your friend + likes + -ing', 'She likes reading.'], ['Vegetables? (them)', 'I hate them.'], ['Call ___ (your mom)', 'I call her.'], ['Something you hate doing', 'I hate ironing.'], ['with ___ (you, me)', 'Come with me!'], ['Your family + hates', 'My son hates getting up early.'], ['for ___ (your kids)', 'I cook for them.']];
 var ERROS = { tipo: 'chat', rot: 'A MESSAGE FROM A NEW CLUB MEMBER', partes: ['Hi! I’m Mei. I love ', ['read', 'reading', 'love + -ing.'], ' and walking. I hate ', ['shop', 'shopping', 'hate + -ing.'], '. Rock music? I ', ['like!', 'like it!', 'Don’t drop it: I like it.'], ' My grandma is great. I visit ', ['she', 'her', 'After a verb: her.'], ' every day. Do you want to walk with ', ['I', 'me', 'After with: me.'], '?'] };
-var ESCOLHA = [{ a: 'cooking for friends', b: 'eating out with friends', chips: ['I prefer …ing', 'because …'], ex: 'Cooking for friends, because I love it.' }, { a: 'a concert', b: 'a soccer game', chips: ['I want …', 'because I love / hate …ing'], ex: 'A concert, because I love dancing.' }, { a: 'call your mom', b: 'text your mom', chips: ['I …', 'because …'], ex: 'Call her, because she loves talking.' }, { a: 'reading a book', b: 'watching a movie', chips: ['I prefer …ing', 'because …'], ex: 'Watching a movie, because I hate reading at night.' }];
+var ESCOLHA = [{ a: 'cooking for friends', b: 'eating out with friends', chips: ['I like …ing', 'I love it.'], ex: 'Cooking for friends. I love it.' }, { a: 'a concert', b: 'a soccer game', chips: ['I want a …', 'I love …ing.'], ex: 'A concert. I love dancing.' }, { a: 'call your mom', b: 'text your mom', chips: ['I call her.', 'I text her.'], ex: 'Call her. She loves talking.' }, { a: 'reading a book', b: 'watching a movie', chips: ['I like …ing', 'I hate …ing.'], ex: 'Watching a movie. I hate reading at night.' }];

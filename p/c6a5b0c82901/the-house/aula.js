@@ -51,20 +51,20 @@ var ENCARTE = [
 ];
 
 var ANTES = [
-  { q: 'Do you know the story of Odysseus? What do you know?', h: 'Yes, he is … / No, I don’t.' },
-  { q: 'A man is away from home for twenty years. Who is in his house now? Guess.', h: 'I think there is … / there are …', r: 'I think there are a lot of men in his house, and they want his wife and his house.' }
+  { q: 'Odysseus is a king. Is his house big or small?', h: 'It is …' },
+  { q: 'A man is away for twenty years. Who is in his house? Guess.', h: 'I think there is … / there are …', r: 'I think there are a lot of men in his house.' }
 ];
 var DEPOIS = [
   { q: 'What is there in the trailer? Say three things.', h: 'There is a … There are …' },
-  { q: 'Who is waiting at home for Odysseus?', h: 'His wife, his son and his dog.' }
+  { q: 'Who is at home for Odysseus?', h: 'His wife, his son and his dog.' }
 ];
 
 var TRECHOS = [
   { k: 'The sea', ini: 0, fim: 39, ouvir: 'What is there on the sea?', sentido: 'Ships on a dark sea, a big storm, and a man far from home.', gram: '<b>There is</b> a storm. <b>There are</b> many ships.' },
-  { k: 'The memory', ini: 39, fim: 55, ouvir: 'What does he remember?', sentido: 'He remembers his wife, his son and his home.', gram: '<b>his</b> wife, <b>his</b> son, <b>his</b> home' },
-  { k: 'The kingdom', ini: 55, fim: 71, ouvir: 'Who is waiting on Ithaca?', sentido: 'The island waits for its king, and his son believes his father is coming home.', gram: '<b>There is</b> a palace. <b>There isn’t</b> a king.' },
-  { k: 'The journey', ini: 71, fim: 108, ouvir: 'What is there on the journey?', sentido: 'Monsters, battles and the sea. The news spreads: the king is coming back.', gram: '<b>There are</b> monsters. <b>Is there</b> a way home?' },
-  { k: 'The end', ini: 108, fim: 150, ouvir: 'Is his old world still there?', sentido: 'Somebody tells him that his old world is gone. Then the last big images.', gram: '<b>There aren’t</b> many friends now.' }
+  { k: 'The memory', ini: 39, fim: 55, ouvir: 'What is in his memory?', sentido: 'His wife, his son and his home are in his memory.', gram: '<b>his</b> wife, <b>his</b> son, <b>his</b> home' },
+  { k: 'The kingdom', ini: 55, fim: 71, ouvir: 'Who is on Ithaca?', sentido: 'The island is without its king. His son says: my dad is coming home.', gram: '<b>There is</b> a palace. <b>There isn’t</b> a king.' },
+  { k: 'The journey', ini: 71, fim: 108, ouvir: 'What is there on the journey?', sentido: 'Monsters, battles and the sea. The news is big: the king is coming back.', gram: '<b>There are</b> monsters. <b>Is there</b> a way home?' },
+  { k: 'The end', ini: 108, fim: 150, ouvir: 'Is his old world still there?', sentido: 'Somebody says: his old world is gone. Then the last big images.', gram: '<b>There aren’t</b> many friends now.' }
 ];
 
 var TRAPS = [
@@ -79,7 +79,7 @@ var COMODOS = { hall: 'The great hall', pen: 'Penelope’s room', tel: 'Telemach
 function comPlaca(corpo, regra) { return '<div class="fm-com-regra"><div class="fm-mio">' + corpo + '</div>' + FM.regra(regra) + '</div>'; }
 var PRESA = '<b>There is</b> + one thing<br><b>There are</b> + two or more<br><b>Is there</b>…? · there <b>isn’t</b> / <b>aren’t</b><br><b>his</b> (a man) · <b>her</b> (a woman) · <b>their</b> (many)';
 /* III · antes: uma régua */
-var VD_REG = { formato: 'regua', titulo: 'Before you watch', frase: 'My home is the best place in the world.', esquerda: 'Disagree', direita: 'Agree', depois: 'Say why: There is … in my home. There are … in my home.' };
+var VD_REG = { formato: 'regua', titulo: 'Before you watch', frase: 'There is a big table in my home.', esquerda: 'No', direita: 'Yes', depois: 'Say why: There is … in my home. There are … in my home.' };
 /* III · durante: a palavra que você ouviu e duas escolhas, cada uma no minuto do trailer (legenda-dados.js) */
 var VD_SOM = { formato: 'som', itens: [
   { a: 'I remember a ', par: ['life', 'wife'], c: 1, b: '.', t: '0:41' },
@@ -213,10 +213,10 @@ TOQUES.lt = function (b, n) { S.lt.sel = n; S.lt.viu[n] = 1; };
 /* o aquecimento desta aula (07/10): o motor está em aquece.js */
 var AQ = { tipo: 'duelo', rot: 'I · This or That', t: 'Before the trailer: your home, your choice.', p: 'Pick one side. Then say why. The teacher picks too.',
   itens: [
-    { a: 'A big house', b: 'A small house', q: 'Which one do you want?', ex: 'A small house. There is less to clean!' },
-    { a: 'The sea', b: 'The mountains', q: 'Where do you want your house?', ex: 'The sea. There is a beach near my city.' },
-    { a: 'A dog', b: 'A cat', q: 'Which one is better at home?', ex: 'A dog. There is a dog in every house in my street.' },
-    { a: 'Travel', b: 'Stay at home', q: 'What do you like more?', ex: 'Stay at home. My bed is there!' },
+    { a: 'A big house', b: 'A small house', q: 'Which one is your house?', ex: 'A small house. There is a small garden.' },
+    { a: 'The sea', b: 'The mountains', q: 'Where is your house?', ex: 'The sea. There is a beach near my city.' },
+    { a: 'A dog', b: 'A cat', q: 'Which one is in your house?', ex: 'A dog. There is a dog in my house.' },
+    { a: 'Travel', b: 'Stay at home', q: 'Your weekend?', ex: 'Stay at home. There is a good bed there!' },
     { a: 'A neat room', b: 'A messy room', q: 'What is your room like?', ex: 'Messy. There are clothes everywhere.' }
   ] };
 /*AQ@@*/
@@ -225,6 +225,6 @@ var AQ = { tipo: 'duelo', rot: 'I · This or That', t: 'Before the trailer: your
 var FIM = { tipo: 'debate', rot: 'VIII · The Debate', t: 'Is a home the people, or the house?', p: 'Choose a side. The teacher takes the other one. Use there is / there are, his / her.',
   frase: 'A home is the people, not the house.',
   a: { rot: 'The people', motivos: ['There are people you love.', 'Your family is your home.', 'A house with no people is empty.'] },
-  b: { rot: 'The house too', motivos: ['There are your things in it.', 'There is your bed and your room.', 'Your house has your memories.'] },
-  frases: ['There is / There are…', 'My house has…', 'I see your point, but…'] };
+  b: { rot: 'The house too', motivos: ['Your things are in it.', 'Your bed and your room are there.', 'Your memories are in the house.'] },
+  frases: ['There is / There are…', 'My house is…', 'I see your point, but…'] };
 /*FIM@@*/

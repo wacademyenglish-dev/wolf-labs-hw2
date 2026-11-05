@@ -41,7 +41,7 @@
     <h2>And You? · Keep the Ball in Play</h2>
     <p>Your student can answer questions. The problem: the conversation stops on their answer, every time. This hour is a table-tennis match: every answer must send the ball back. When it comes back, the ball crosses the table; when it doesn’t, it falls and the rally starts again. No timer, no points: the rally only shows how long the conversation lived.</p>
     <h4>THE GRAMMAR</h4>
-    <p>They <b>asked</b> you: answer, then <b>And you?</b> / <b>What about you?</b> (the same). They <b>told</b> you: the echo copies their verb or its helper: <i>I’m tired → Are you? · I work at night → Do you? · I’ve got a dog → Have you? · I can swim → Can you? · I lived in Lisbon → Did you?</i> The voice goes UP.</p>
+    <p>They <b>asked</b> you: answer, then <b>And you?</b> / <b>What about you?</b> (the same). They <b>told</b> you: the echo copies their verb or its helper: <i>I’m tired → Are you? · She’s a nurse → Is she? · It’s cold → Is it?</i> The voice goes UP.</p>
     <!--conversa--><h4>YOUR TOP 3 (VII) AND THE SURPRISE QUESTION</h4>
     <p>After the strangers, your student ranks three small-talk topics: the weather, food, your job. There is no right order. They tap 1, 2, 3, say their number one and send the ball back to you; answer it, then show your own order and agree on one top 3 together. Wait five seconds in silence before helping; the PUSH line (only you see it) is a quick yes or no. Recast quietly; at the end, ask them to fix one sentence themselves.</p>
     <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Every answer should end with a return: And you?</p><!--/conversa-->
@@ -71,14 +71,14 @@
 <script data-wl="faisca-dados.js">
 /* AND YOU? (Main A1) · pergunta-surpresa · 27/10/2026 · And you? / What about you? / o eco */
 window.WL_FAISCA = { nivel: 'A1', qs: [
-  { cena: 'silencio', tipo: 'And you?', q: 'Do you talk to strangers?',
-    opc: ['Yes, a lot', 'No, never'], st: ['Yes, I do. Do you?', 'No, I don’t. Do you?'],
-    ex: 'Yes, I do. At the bus stop! Do you?', push: 'In the elevator? Yes or no?' },
+  { cena: 'silencio', tipo: 'And you?', q: 'Are you shy with strangers?',
+    opc: ['Yes, I am', 'No, I’m not'], st: ['Yes, I am. Are you?', 'No, I’m not. Are you?'],
+    ex: 'No, I’m not. Are you?', push: 'Shy at work too? Yes or no?' },
   { cena: 'eco', tipo: 'Would you rather', q: 'At the bus stop: talk or music?',
-    opc: ['Talk', 'My music'], st: ['I talk. And you?', 'I listen to music. What about you?'],
-    ex: 'My music! I love my headphones. What about you?', push: 'A nice stranger talks. Talk back?' },
+    opc: ['Talk', 'My music'], st: ['I talk. And you?', 'My music. What about you?'],
+    ex: 'My music! And you?', push: 'A nice stranger. Talk back?' },
   { cena: 'fila', tipo: 'And you?', q: 'Your order at a café?',
-    opc: ['Coffee', 'Tea', 'Juice'], st: ['I always get … And you?'],
+    opc: ['Coffee', 'Tea', 'Juice'], st: ['Coffee, please. And you?'],
     ex: 'Coffee with milk. And you?', push: 'With sugar? Yes or no?' }
 ] };
 </script><!--/faisca-dados.js-->
@@ -96,8 +96,8 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
     formato: 'ranking',
     q: 'The best small talk with a stranger?',
     itens: ['The weather', 'Food', 'Your job'],
-    st: ['Number one is …', 'I love food. Do you?', 'What about you?'],
-    ex: 'Number one is food. I love cheese bread. Do you?',
+    st: ['Number one is …', 'Food! What about you?', 'What about you?'],
+    ex: 'Number one is food. What about you?',
     push: 'Your job first? Yes or no?',
     prof: [0, 1, 2],
     dica: 'Tap 1, then 2, then 3. Tap again to take it out.' }
@@ -131,7 +131,7 @@ window.WL_PADRAO = {
    "p": "Listen to the end. Is there a question back?"
   },
   "rally": {
-   "t": "Eight strangers. Keep the ball in play.",
+   "t": "Seven strangers. Keep the ball in play.",
    "p": "Answer, then send it back."
   },
   "cv-top3": {
@@ -154,9 +154,9 @@ window.WL_PADRAO = {
    "And you?",
    "What about you?",
    "Are you?",
-   "Do you?",
+   "Is it?",
    "Have you?",
-   "Can you?",
+   "Is she?",
    "Did you?"
   ]
  },
@@ -239,45 +239,45 @@ window.WL_PADRAO = {
    "palavras": [
     "And you?",
     "What about you?",
-    "Do you?",
+    "Is it?",
     "Are you?",
-    "Can you?"
+    "Is she?"
    ],
    "cartas": [
     {
      "k": "YOUR COFFEE",
-     "q": "Do you drink coffee in the morning?",
-     "fup": "How many cups?",
+     "q": "Coffee or tea in the morning?",
+     "fup": "And in the evening?",
      "st": [
-      "Yes, I do. And you?",
-      "No, I don’t. What about you?"
+      "Coffee. And you?",
+      "Tea. What about you?"
      ],
-     "ex": "Yes, I do. Two cups. And you?"
+     "ex": "Coffee, strong! And you?"
     },
     {
      "k": "YOUR JOB",
-     "q": "Do you work on Saturdays?",
-     "fup": "Do you like your job?",
+     "q": "Are you a student or a worker?",
+     "fup": "Is it a good job?",
      "st": [
-      "I work … . Do you?",
-      "I don’t … . And you?"
+      "I’m a … . And you?",
+      "I’m a … . What about you?"
      ],
-     "ex": "No, I don’t. I work Monday to Friday. And you?"
+     "ex": "I’m a worker. I’m a nurse. And you?"
     },
     {
      "k": "THE WEATHER",
-     "q": "Do you like the cold?",
-     "fup": "What’s the weather like today?",
+     "q": "Is it cold or hot today?",
+     "fup": "And in your city?",
      "st": [
-      "I like … . And you?",
-      "I don’t like … . Do you?"
+      "It’s … . And you?",
+      "It’s … . What about you?"
      ],
-     "ex": "No, I don’t. I like the sun. What about you?"
+     "ex": "It’s hot today. What about you?"
     },
     {
      "k": "YOUR WEEKEND",
      "q": "Are you busy this weekend?",
-     "fup": "What are your plans?",
+     "fup": "Are you at home?",
      "st": [
       "Yes, I am. Are you?",
       "No, I’m not. What about you?"
@@ -286,23 +286,23 @@ window.WL_PADRAO = {
     },
     {
      "k": "YOUR TALENT",
-     "q": "Can you cook?",
-     "fup": "What can you make?",
+     "q": "Are you a good cook?",
+     "fup": "Is your mother a good cook?",
      "st": [
-      "Yes, I can. Can you?",
-      "No, I can’t. And you?"
+      "Yes, I am. Are you?",
+      "No, I’m not. And you?"
      ],
-     "ex": "Yes, I can. I make good rice. Can you cook?"
+     "ex": "No, I’m not. My mother is a good cook. Are you?"
     },
     {
      "k": "YOUR PET",
-     "q": "Have you got a pet?",
+     "q": "A cat or a dog?",
      "fup": "What’s its name?",
      "st": [
-      "Yes, I have. Have you?",
-      "No, I haven’t. And you?"
+      "A cat. And you?",
+      "A dog. What about you?"
      ],
-     "ex": "Yes, I have. I’ve got a cat. Have you got a pet?"
+     "ex": "A dog. Its name is Bob. And you?"
     }
    ]
   },
@@ -336,7 +336,7 @@ window.WL_PADRAO = {
      "a": "Coffee",
      "b": "Tea",
      "fa": [
-      "Coffee. I need energy. And you?"
+      "Coffee. It is strong. And you?"
      ],
      "fb": [
       "Tea. It is calm. What about you?"
@@ -350,7 +350,7 @@ window.WL_PADRAO = {
       "The weather. It is easy. And you?"
      ],
      "fb": [
-      "Food. Everybody eats! What about you?"
+      "Food. It is fun! What about you?"
      ]
     },
     {
@@ -361,7 +361,7 @@ window.WL_PADRAO = {
       "Text. It is fast. And you?"
      ],
      "fb": [
-      "Call. I like to hear the voice. What about you?"
+      "Call. It is warm. What about you?"
      ]
     }
    ],
@@ -381,25 +381,25 @@ window.WL_PADRAO = {
      "q": "The stranger says: “Cold today, isn’t it?”",
      "st": [
       "Yes, it is. Are you …?",
-      "I don’t like … . Do you?"
+      "It’s … . What about you?"
      ],
-     "ex": "Yes, it is. I don’t like the cold. Do you?"
+     "ex": "Yes, it is. It’s very cold. And you?"
     },
     {
-     "q": "The stranger says: “I’m going to work.”",
+     "q": "The stranger says: “I’m a teacher.”",
      "st": [
-      "Are you? I’m going to …",
-      "Me too. Where do you …?"
+      "Are you? I’m a …",
+      "Me too! What about you?"
      ],
-     "ex": "Are you? I’m going to work too. Where do you work?"
+     "ex": "Are you? I’m a nurse. What about you?"
     },
     {
-     "q": "The stranger says: “I work at a hospital.”",
+     "q": "The stranger says: “I’m from Italy.”",
      "st": [
-      "Do you? I work …",
-      "Do you like it?"
+      "Are you? I’m from …",
+      "Is Italy nice?"
      ],
-     "ex": "Do you? I work in an office. Do you like it?"
+     "ex": "Are you? I’m from Brazil. Is Italy nice?"
     },
     {
      "q": "The bus is here. Say goodbye.",

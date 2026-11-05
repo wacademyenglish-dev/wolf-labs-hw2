@@ -42,8 +42,8 @@ var SERIE = 'Breaking Bad', ANO = '2008', CENA = 'The first scene';
 var YT = 'Nu2A6NoCeT8', DUR = 220;
 
 var ENCARTE = [
-  ['The show', '<i>Breaking Bad</i> is an American TV series (2008–2013), created by Vince Gilligan. It has five seasons and many people say it is one of the best shows ever.'],
-  ['The man', 'Walter White is a chemistry teacher in Albuquerque, New Mexico. He is fifty years old, he has a wife, Skyler, and a son, and a baby is on the way. Bryan Cranston plays him.'],
+  ['The show', '<i>Breaking Bad</i> is an American TV series (2008–2013), created by Vince Gilligan. It has five seasons and many people love it.'],
+  ['The man', 'Walter White is a chemistry teacher in Albuquerque, New Mexico. He is fifty years old, he has a wife, Skyler, and a son. A new baby comes soon. Bryan Cranston plays him.'],
   ['This scene', 'It is the first scene of the first episode. An old RV, a desert road, a man with a video camera, and sirens. It is the end of the story first: the show then goes back in time.']
 ];
 
@@ -77,7 +77,7 @@ var CAMPOS = [
   { campo: 'Age', resp: '50 years old', r: 'How old <b>are</b> you?', depois: 'How old are you? Is your birthday soon?' },
   { campo: 'City', resp: 'Albuquerque, New Mexico', r: 'Where <b>do</b> you live?', depois: 'Where do you live? Is it hot or cold there?' },
   { campo: 'Job', resp: 'A chemistry teacher', r: 'What <b>do</b> you do?', depois: 'What do you do? Do you like it?' },
-  { campo: 'Wife', resp: 'Skyler', r: 'Who <b>is</b> your wife?', depois: 'Who is the most important person in your family?' },
+  { campo: 'Wife', resp: 'Skyler', r: 'Who <b>is</b> your wife?', depois: 'Who is an important person in your family?' },
   { campo: 'Why here?', resp: 'Because the police are coming', r: 'Why <b>are</b> you on the road?', depois: 'The file is full. What is one more question for Walter?' }
 ];
 
@@ -236,6 +236,6 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Walt
     { q: 'Where do you live?', ex: 'I live in Albuquerque, New Mexico.' },
     { q: 'What do you do?', ex: 'I am a chemistry teacher.' },
     { q: 'Who is in the RV?', ex: 'Jesse, my old student, is in the RV.' },
-    { q: 'Why are you here?', ex: 'Because… I can’t say!' }
+    { q: 'Why are you here?', ex: 'Because… it is a secret!' }
   ] };
 /*FIM@@*/

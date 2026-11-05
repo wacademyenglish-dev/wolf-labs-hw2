@@ -76,7 +76,7 @@ var EP = {
       img: 'img/live-capa.jpg',
       nota: 'Talk only. Open one card at a time. The post-it brings a follow-up with starters the student can tap.',
       cartas: [
-        { frente: 'Hi!', verso: 'What\'s your name?', dica: 'I\'m …', cor: 'var(--fran)', fw: { q: 'Nice to meet you! Who in your family has a short name?', st: ['I\'m …', 'My name is …', 'Nice to meet you!'], help: 'Say: “I\'m (your name). Nice to meet you!”' } },
+        { frente: 'Hi!', verso: 'What\'s your name?', dica: 'I\'m …', cor: 'var(--fran)', fw: { q: 'Nice to meet you! Is your name short or long?', st: ['I\'m …', 'My name is …', 'Nice to meet you!'], help: 'Say: “I\'m (your name). Nice to meet you!”' } },
         { frente: '25?', verso: 'How old are you?', dica: 'I\'m … (not “I have”)', cor: 'var(--bob)', fw: { q: 'How old is your best friend?', st: ['I\'m …', 'She\'s …', 'He\'s …'], help: 'In English we use I\'m for age: “I\'m 30.”' } },
         { frente: 'From?', verso: 'Where are you from?', dica: 'I\'m from …', cor: 'var(--paula)', fw: { q: 'Is your city big or small?', st: ['I\'m from …', 'It\'s big.', 'It\'s small.'], help: 'Use from + city: “I\'m from Recife.”' } }
       ] },
@@ -91,13 +91,13 @@ var EP = {
         { f: 'Fran is from Cambridge.', ok: 1 },
         { f: 'Bob is twenty-five.', ok: 0 },
         { f: 'Paula is from Rochester.', ok: 1 },
-        { f: 'They have seven days.', ok: 0 }
+        { f: 'The race is seven days.', ok: 0 }
       ] },
     { k: 'cartas', est: 'o', rot: 'the contestants', titulo: 'Meet the <em>contestants</em>', pt: 'Vire a carta e apresente a pessoa: “She\'s Fran. She\'s 25.”',
       nota: 'The student flips a card and presents the person in the third person: She\'s / He\'s. Then the post-it asks about someone they know.',
       cartas: [
         { frente: 'Fran', sob: 'bike', verso: 'I\'m Fran. I\'m 25. I\'m from Cambridge.', dica: 'She\'s … · She\'s from …', cor: 'var(--fran)', fw: { q: 'Present Fran to me: name, age, city.', st: ['She\'s Fran.', 'She\'s twenty-five.', 'She\'s from Cambridge.'], help: 'Fran is a woman: she. Bob is a man: he.' } },
-        { frente: 'Bob', sob: 'train', verso: 'Hello, I\'m Bob. I\'m 20. I\'m from York.', dica: 'He\'s … · He\'s from …', cor: 'var(--bob)', fw: { q: 'Now Bob. How old is Bob?', st: ['He\'s Bob.', 'He\'s twenty.', 'He\'s from York.'], help: 'Older = mais velho, younger = mais novo.' } },
+        { frente: 'Bob', sob: 'train', verso: 'Hello, I\'m Bob. I\'m 20. I\'m from York.', dica: 'He\'s … · He\'s from …', cor: 'var(--bob)', fw: { q: 'Now Bob. How old is Bob?', st: ['He\'s Bob.', 'He\'s twenty.', 'He\'s from York.'], help: 'Bob is twenty: “He\'s twenty.”' } },
         { frente: 'Paula', sob: 'bus', verso: 'Hi. I\'m Paula and I\'m from Rochester.', dica: 'She\'s … · She\'s from …', cor: 'var(--paula)', fw: { q: 'Now present a friend of yours like a contestant.', st: ['This is …', 'She\'s …', 'He\'s from …'], help: '“This is Ana. She\'s 31. She\'s from Natal.”' } }
       ] },
     { k: 'regra', est: 'f', rot: 'the rule', titulo: '<em>I\'m</em> does three jobs', pt: 'I\'m = I am. Para nome, idade e cidade.',
@@ -129,7 +129,7 @@ var EP = {
         { f: 'Hi. ___ Fran.', ops: ['I\'m', 'I have'], ok: 0 },
         { f: 'I\'m 20 and I\'m ___ York.', ops: ['of', 'from'], ok: 1 },
         { f: 'Here ___ your money. One hundred pounds.', ops: ['is', 'are'], ok: 0 },
-        { f: 'You have ___ days.', ops: ['five', 'fifteen'], ok: 0 }
+        { f: 'Bob is ___ years old.', ops: ['twenty', 'twelve'], ok: 0 }
       ] },
     { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your contestant <em>badge</em>', pt: 'Escreva o seu crachá do desafio. Toque nas peças para começar.',
       ph: 'Hi! I\'m …',
@@ -137,9 +137,9 @@ var EP = {
       banco: ['Hi!', 'I\'m', 'I\'m from', 'Nice to meet you!', 'years old'],
       regras: [['\\bI have \\d+', 'Check: age is I\'m 25, not I have 25.'], ['\\bI\'?m of\\b', 'Check: I\'m from (city), not I\'m of.'], ['\\bI from\\b', 'Check: I\'m from, with the \'m.']] },
     { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Bus, train, or bike?',
-      tx: 'The train is fast, but it\'s expensive. The bike is cheap, but it\'s slow. Who chooses what?',
+      tx: 'The train is fast, but it\'s expensive. The bike is cheap, but it\'s slow. Who is on the train? Who is on the bike?',
       ganchos: [['Fran', 'a bike?'], ['Bob', 'the train?'], ['Paula', 'still in London?']],
-      nota: 'Ask: and you? Train, bus or bike? Why? That is the start of Episode 2.' }
+      nota: 'Ask: and you? Train, bus or bike? That is the start of Episode 2.' }
   ]
 };
 </script>
@@ -265,7 +265,7 @@ window.WL_PADRAO = {
     {
      "k": "YOUR NAME",
      "q": "What's your name? And your nickname?",
-     "fup": "Do you like your name?",
+     "fup": "Is it long or short?",
      "st": [
       "I'm …",
       "My nickname is …"
@@ -294,7 +294,7 @@ window.WL_PADRAO = {
     },
     {
      "k": "£100",
-     "q": "You have one hundred pounds. Is it a lot?",
+     "q": "One hundred pounds. Is it a lot?",
      "fup": "Is it a lot for five days?",
      "st": [
       "Yes, it's a lot.",
@@ -399,16 +399,16 @@ window.WL_PADRAO = {
     "Hello! What's your name?",
     "How old are you, Bob?",
     "Where are you from?",
-    "How much money have you got?",
+    "How much is your ticket?",
     "Are you happy today?",
     "Train or bike for you?"
    ],
    "st": [
     "I'm …",
     "I'm from …",
-    "I've got … pounds."
+    "My ticket is … pounds."
    ],
-   "ex": "Hello, I'm Bob. I'm happy today. I've got one hundred pounds."
+   "ex": "Hello, I'm Bob. I'm happy today. My ticket is thirty pounds."
   }
  ]
 };

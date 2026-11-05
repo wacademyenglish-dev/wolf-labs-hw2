@@ -76,7 +76,7 @@ var CARIMBOS = [
 ];
 
 var NADIA = [
-  { ela: 'Hi! Street Voices. Can I ask you some questions? Where are you from?', pede: 'I’m from … And where are you from?', resp: 'I’m from Leeds, in the north of England.' },
+  { ela: 'Hi! Street Voices. A few questions, please. Where are you from?', pede: 'I’m from … And where are you from?', resp: 'I’m from Leeds, in the north of England.' },
   { ela: 'And where do you live now?', pede: 'I live in … Where do you live?', resp: 'In a small apartment in London. Very small!' },
   { ela: 'What do you do?', pede: 'I’m a … / I work at … What do you do?', resp: 'Me? I ask people questions all day!' },
   { ela: 'Last one. Who do you live with?', pede: 'I live with … Who do you live with?', resp: 'My cat, Pepper. She never answers my questions.' }

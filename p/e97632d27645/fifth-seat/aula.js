@@ -36,10 +36,10 @@ var TR = {
 var ICON = { doc: '🩺', pil: '✈️', eng: '⚙️', tra: '🌐', coo: '🍳', cap: '⚓', bio: '🧬', mec: '🔧', rad: '📻' };
 
 var ABRE = [
-  { k: 'YOUR JOB', q: 'What is your job? One word, then a sentence.', fup: 'Where do you work?', st: ['I’m a / an …'], ex: 'Teacher. I’m a teacher.' },
-  { k: 'FAMILY', q: 'Someone in your family: what is their job?', fup: 'Where does that person work?', st: ['My … is a / an …'], ex: 'My sister is an engineer.' },
+  { k: 'YOUR JOB', q: 'What is your job? One word, then a sentence.', fup: 'Is it a good job?', st: ['I’m a / an …'], ex: 'Teacher. I’m a teacher.' },
+  { k: 'FAMILY', q: 'Someone in your family: what is their job?', fup: 'Is he or she happy?', st: ['My … is a / an …'], ex: 'My sister is an engineer.' },
   { k: 'FRIEND', q: 'Your best friend: what is their job? Where are they from?', fup: 'Is that a good job?', st: ['My friend is a / an …', 'He is from … / She is from …'], ex: 'My friend Paulo is a cook. He is from Recife.' },
-  { k: 'DREAM', q: 'A job you love. What is it?', fup: 'Is it a hard job?', st: ['I want to be a / an …'], ex: 'I want to be an astronaut, because I love the stars.' }
+  { k: 'DREAM', q: 'A dream job: what is it?', fup: 'Is it a hard job?', st: ['In my dream, I’m a / an …'], ex: 'In my dream, I’m an astronaut. It’s a big job.' }
 ];
 var FORMAS = [{ k: 'art', t: 'A / AN + JOB' }, { k: 'she', t: 'HE IS / SHE IS' }, { k: 'sem', t: 'SHE IS DOCTOR', erro: 1 }, { k: 'dupla', t: 'IS SHE IS…?', erro: 1 }];
 
@@ -83,7 +83,7 @@ var PARES = [
 
 var CREW = [{ n: 'Anders', i: 'cap', s: 'Anders is a captain.' }, { n: 'Rita', i: 'bio', s: 'Rita is a biologist.' }, { n: 'Kwame', i: 'mec', s: 'Kwame is a mechanic.' }, { n: 'Lena', i: 'rad', s: 'Lena is a radio operator.' }];
 
-var PERG_E = ['What is your job?', 'Where are you from?', 'Who is your best friend? What is their job?', 'Is anybody in your family a doctor or a cook?', 'Are you a good cook?', 'Why are you the right person for this seat?'];
+var PERG_E = ['What is your job?', 'Where are you from?', 'What is your best friend’s job?', 'Is your father a doctor or a cook?', 'Are you a good cook?', 'Are you the right person for this seat?'];
 var PARTES_E = [{ k: 'art', t: 'I’M A / AN …' }, { k: 'ele', t: 'HE IS / SHE IS …' }, { k: 'curta', t: 'YES, SHE IS / NO, HE ISN’T' }];
 var CAND = [{ n: 'Nadia', por: 'because she is a doctor' }, { n: 'Tomás', por: 'because he is a pilot' }, { n: 'Ivo', por: 'because he is a cook' }, { n: 'Mei', por: 'because she is a translator' }, { n: 'Me', por: 'because I am …' }];
 

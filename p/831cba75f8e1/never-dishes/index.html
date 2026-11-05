@@ -74,10 +74,10 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'regua', tipo: 'And you?', q: 'How often are you late?',
     opc: ['Never', 'Sometimes', 'Often'], st: ['I am never late.', 'I am sometimes late.', 'I am often late.'],
     ex: 'I am often late. Sorry!', push: 'For class too? Yes or no?' },
-  { cena: 'antes', tipo: 'Would you rather', q: 'Cook or do the dishes?',
+  { cena: 'antes', tipo: 'Choose one', q: 'Cook or do the dishes?',
     opc: ['Cook', 'Do the dishes'], st: ['Cook. I usually cook …', 'The dishes. I always …'],
     ex: 'Cook! I often cook pasta.', push: 'Every day? Yes or no?' },
-  { cena: 'provas', tipo: 'Opinion', q: 'A good roommate: Bea or Marco?',
+  { cena: 'provas', tipo: 'Choose one', q: 'A good roommate: Bea or Marco?',
     opc: ['Bea', 'Marco'], st: ['Bea. She often does the dishes.', 'Marco. He is usually …'],
     ex: 'Bea. She often does the dishes!', push: 'And you? A good roommate? Yes or no?' }
 ] };
@@ -100,7 +100,7 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
         st: ['I always do the dishes.', 'We share. I usually …', 'I never do the dishes!'],
         ex: 'We share. I usually wash, and my sister often dries.',
         push: 'Every day? Yes or no?' },
-      { tag: 'The fight', sit: 'Marco and Bea, again.', q: 'Who is more right?',
+      { tag: 'The fight', sit: 'Marco and Bea, again.', q: 'Who is right?',
         opc: ['Marco', 'Bea', 'Nobody'],
         st: ['Marco. Bea often …', 'Bea. Marco rarely …', 'Nobody. They are never fair.'],
         ex: 'Nobody! Bea often does the dishes. Marco sometimes leaves the light on.',
@@ -377,7 +377,7 @@ window.WL_PADRAO = {
      ]
     }
    ],
-   "fim": "Four rounds. Nobody won, and nobody was always right."
+   "fim": "Four rounds. Nobody won, and nobody is always right."
   },
   {
    "k": "ff-passos",

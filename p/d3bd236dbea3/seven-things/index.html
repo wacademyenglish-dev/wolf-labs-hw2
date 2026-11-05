@@ -44,12 +44,12 @@
     <p><b>can / can’t</b> + the plain verb, one form for everyone: <i>he can</i>, never <i>he cans</i>; <i>can swim</i>, never <i>can to swim</i>. Questions and short answers with no <i>do</i>: <b>Can you…? Yes, I can. / No, I can’t.</b> One word, three jobs: ability, permission, possibility. In speech, <i>can</i> is short and weak (/kən/); <i>can’t</i> is long and strong.</p>
     <h4>THE AUDIO</h4>
     <p>Every line has pause and 0.75×, and the transcript opens only after listening. All transcripts were checked against the audio. The four questions in scene XI are the house asking the student about their own life (<i>What can you do that most people cannot?</i> and three more).</p>
-    <!--conversa--><h4>OK OR NOT OK? (VII) AND THE SURPRISE QUESTION</h4>
-    <p>Three things the smart house can do in your student’s home: open the door for the neighbour, play loud music at seven, talk to the cat. Green OK or red Not OK, then the sentence with can or can’t. This keeps the permission job of can alive before the night log. There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it) to make it a little harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <!--conversa--><h4>YOUR SMART HOUSE (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Three things the smart house can do in your student’s home: open the door for the neighbour, play loud music at seven, talk to the cat. Two choices each, then the sentence with can or can’t. This keeps the permission job of can alive before the night log. There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it) to make it a little harder. Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
     <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
-      <li><b>Out loud</b>: I You First, II Can You?, III The Panel, VII OK or Not OK? (green or red, then can / can’t), IX She Has a Key, X Sell Me the House.</li>
+      <li><b>Out loud</b>: I You First, II Can You?, III The Panel, VII Your Smart House (a choice, then can / can’t), IX She Has a Key, X Sell Me the House.</li>
       <li><b>Listen</b>: V No Hands, VI Hey, House (the student wakes the house out loud, asks, then hears the answer), XI Lights Off.</li>
       <li><b>Focus</b>: IV It Never Changes, VIII The Night Log. Don’t give the mystery away: let the red list from scene V do the work.</li>
       <li><b>Write</b>: XI, their own house, with the red wavy line for <i>cans</i>, <i>can to</i>, <i>don’t can</i>, <i>Do you can</i> and <i>can drives</i>. It goes to their My notes.</li>
@@ -93,25 +93,25 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    O painel (III), a regra (IV), o registro e a chave (VIII–IX) e a venda (X) ficam.
    A gramática da aula (can / can’t + verbo, uma forma para todos) mora nos iniciadores. */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
-  { id: 'ok', troca: 'tres', est: 'o', min: 5, img: 'sala', rot: 'OK or Not OK?', t: 'Your smart house. OK, or not OK?',
+  { id: 'ok', troca: 'tres', est: 'o', min: 5, img: 'sala', rot: 'Your Smart House', t: 'Your smart house. You choose.',
     p: 'Choose one. Your teacher answers first. Then say it with can or can’t.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'The door', sit: 'Your neighbour is at the door.', q: 'The house can open it. OK?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK. She can come in.', 'Not OK. She can’t come in.'],
-        ex: 'Not OK! She can’t come in. She can wait.',
-        push: 'And your best friend? OK?' },
-      { tag: 'Music', sit: 'Seven in the morning.', q: 'The house can play loud music. OK?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK. It can play music.', 'Not OK. It can’t play music now.'],
-        ex: 'Not OK. It can’t play music at seven. I sleep!',
-        push: 'At nine? OK?' },
-      { tag: 'The cat', sit: 'Your cat is alone all day.', q: 'The house can talk to your cat. OK?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK. It can talk to my cat.', 'Not OK. It can’t talk to him.'],
-        ex: 'OK! It can talk to my cat. He can listen to music too.',
-        push: 'Can the cat open the door? Yes or no?' }
+      { tag: 'The door', sit: 'Somebody is at the door.', q: 'The house opens the door for…',
+        opc: ['My neighbour', 'My best friend'],
+        st: ['My neighbour can come in.', 'Only my best friend can come in.'],
+        ex: 'My best friend can come in. My neighbour can wait.',
+        push: 'And your mother? Yes or no?' },
+      { tag: 'Music', sit: 'The house can play music.', q: 'Music at seven or at nine?',
+        opc: ['At seven', 'At nine'],
+        st: ['It can play music at seven.', 'It can’t play music at seven.'],
+        ex: 'At nine. It can’t play music at seven. I sleep!',
+        push: 'On Saturday? Yes or no?' },
+      { tag: 'The cat', sit: 'Your cat is alone all day.', q: 'The house can talk to him, or play music for him?',
+        opc: ['Talk to him', 'Play music'],
+        st: ['It can talk to him.', 'It can play music for him.'],
+        ex: 'Play music! He can listen all day.',
+        push: 'Does the cat like jazz? Yes or no?' }
     ] }
 ] };
 </script><!--/conversa-dados.js-->
@@ -147,7 +147,7 @@ window.WL_PADRAO = {
    "p": "Say Hey, House! Ask. Then listen."
   },
   "cv-ok": {
-   "t": "Your smart house. OK or not OK?",
+   "t": "Your smart house. You choose.",
    "p": "Choose. Your teacher goes first. Use can or can’t."
   },
   "registro": {

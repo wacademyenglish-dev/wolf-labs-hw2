@@ -77,11 +77,11 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
     opc: ['My family', 'A friend', 'Me!'], st: ['It’s from …', 'I love it.'],
     ex: 'A watch. It’s from my brother. I love it!', push: 'Every day?' },
   { cena: 'porta', tipo: 'Would you rather', q: 'A party for you: big or small?',
-    opc: ['Big', 'Small'], st: ['I invite them.', 'I cook for them.'],
+    opc: ['Big', 'Small'], st: ['Big. I invite them all.', 'Small. I cook for them.'],
     ex: 'Small! I invite my friends and I cook for them.', push: 'Cake?' },
   { cena: 'roda', tipo: 'What if', q: 'You don’t like a present. What do you say?',
-    opc: ['“I love it!”', '“Thank you for it.”', 'The truth'], st: ['I love it!', 'Thank you for it.'],
-    ex: '“Thank you for it!” And a big smile.', push: 'Really?' }
+    opc: ['“I love it!”', '“Thank you!”', 'The truth'], st: ['I say “I love it!”', 'I say “Thank you!”'],
+    ex: '“Thank you!” And I give it to my cousin.', push: 'In front of her? Yes or no?' }
 ] };
 </script><!--/faisca-dados.js-->
 <script src="/kit/faisca.js"></script>
@@ -93,7 +93,7 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    verbo: give her, buy him, love it / them) mora nos iniciadores. */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
   { id: 'presente', troca: 'quiz', est: 'o', min: 5, img: 'presentes', rot: 'The Best Present', t: 'Your best friend’s birthday. You choose.',
-    p: 'Your teacher answers first. Put the presents in order and say why.',
+    p: 'Your teacher answers first. Put the presents in order. Then say it.',
     formato: 'ranking',
     q: 'A present for your best friend?',
     itens: ['Flowers', 'A book', 'Chocolate'],
@@ -129,7 +129,7 @@ window.WL_PADRAO = {
   },
   "cv-presente": {
    "t": "Your best friend’s birthday.",
-   "p": "Put the presents in order. Say why."
+   "p": "Put the presents in order. Say it."
   },
   "fim": {
    "t": "Write the thank-you notes.",
@@ -234,10 +234,7 @@ window.WL_PADRAO = {
      "k": "YOUR MOM",
      "q": "What do you usually give your mom?",
      "fup": "Does she like it?",
-     "st": [
-      "I give her …",
-      "She likes it because …"
-     ],
+     "st":["I give her …","She likes it."],
      "ex": "I give her flowers. She loves them."
     },
     {
@@ -283,12 +280,7 @@ window.WL_PADRAO = {
     {
      "k": "NEXT BIRTHDAY",
      "q": "What do you want for your birthday?",
-     "fup": "Who can buy it for you?",
-     "st": [
-      "I want …",
-      "My … can buy it for me."
-     ],
-     "ex": "I want new headphones. My sister can buy them for me."
+     "fup":"Who buys it for you?","st":["I want …","My … buys it for me."],"ex":"I want new headphones. My sister buys them for me."
     }
    ]
   },
@@ -310,24 +302,12 @@ window.WL_PADRAO = {
      "q": "Flowers or chocolates for Grandma Rosa?",
      "a": "Flowers",
      "b": "Chocolates",
-     "fa": [
-      "Flowers. She can look at them every day."
-     ],
-     "fb": [
-      "Chocolates. She can eat them with us."
-     ]
-    },
+     "fa":["Flowers. She sees them every day."],"fb":["Chocolates. She eats them with us."]},
     {
      "q": "Open presents at the party or at home?",
      "a": "At the party",
      "b": "At home",
-     "fa": [
-      "At the party. Everybody can see them."
-     ],
-     "fb": [
-      "At home. I can open them slowly."
-     ]
-    },
+     "fa":["At the party. Everybody sees them."],"fb":["At home. I open them slowly."]},
     {
      "q": "Buy a present or make it?",
      "a": "Buy it",
@@ -346,10 +326,7 @@ window.WL_PADRAO = {
      "fa": [
       "Call her. She loves my voice."
      ],
-     "fb": [
-      "Send her a message. She can read it again."
-     ]
-    }
+     "fb":["Send her a message. She reads it again."]}
    ],
    "fim": "Four rounds. Nobody won, and every present found its person."
   },
@@ -364,18 +341,13 @@ window.WL_PADRAO = {
    "aluno": "Listen to your teacher’s question. Answer as Grandma Rosa.",
    "perguntas": [
     "Happy birthday! Do you like the party?",
-    "Who gave you the scarf? Do you like it?",
+    "Who is the scarf from? Do you like it?",
     "Do you like your grandchildren’s presents?",
     "Who do you want to dance with?",
-    "Who made the cake for you?",
+    "Who is the cake for?",
     "Do you want to call your friends after the party?"
    ],
-   "st": [
-    "Yes, I love it.",
-    "My grandson gave it to me.",
-    "I want to dance with …"
-   ],
-   "ex": "My granddaughter gave it to me. I love it, and I love her."
+   "st":["Yes, I love it.","It’s from my grandson.","I want to dance with …"],"ex":"It’s from my granddaughter. I love it, and I love her."
   }
  ]
 };

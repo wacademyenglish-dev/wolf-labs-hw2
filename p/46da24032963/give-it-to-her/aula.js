@@ -45,7 +45,7 @@ var POR = { sujeito: 'That word starts a sentence. After to, for, with or a verb
 var CONV = [
   { k: 'AUNT SUE', diz: 'Hi! I have flowers for Grandma. Where is she?', ops: [['She’s in the garden. Give them to her.', 'ok'], ['Give them to she.', 'sujeito'], ['Give to her.', 'semit']] },
   { k: 'MR. KIM', diz: 'Do you like my hat?', ops: [['Yes, I love it!', 'ok'], ['Yes, I love!', 'semit'], ['Yes, I love him!', 'coisa']] },
-  { k: 'THE TWINS', diz: 'Can you play with us?', ops: [['Sure, I can play with you.', 'ok'], ['Sure, I can play with your.', 'poss'], ['Sure, I can play with they.', 'sujeito']] },
+  { k: 'THE TWINS', diz: 'Do you want to play with us?', ops: [['Yes, I want to play with you.', 'ok'], ['Yes, I want to play with your.', 'poss'], ['Yes, I want to play with they.', 'sujeito']] },
   { k: 'UNCLE TOM', diz: 'Where are the balloons? I need them.', ops: [['Here they are. Take them!', 'ok'], ['Here they are. Take!', 'semit'], ['Here they are. Take it them!', 'dobro']] },
   { k: 'THE NEIGHBOR', diz: 'I have a present for you and your sister.', ops: [['Thank you! Is it for us?', 'ok'], ['Thank you! Is it for we?', 'sujeito'], ['Thank you! Is it for our?', 'poss']] },
   { k: 'GRANDPA JOE', diz: 'Do you know my wife? I love her!', ops: [['Yes, I know her. She’s great!', 'ok'], ['Yes, I know she.', 'sujeito'], ['Yes, I know him.', 'genero']] },
@@ -69,7 +69,7 @@ var FATIAS = [
 var AVO = [
   { q: 'Hello, dear! Thank you for the party. The red scarf: who is it from?', ex: 'It’s from Uncle Tom. He loves you, Grandma.', resp: 'Oh, Tom! I love it. It’s so warm.' },
   { q: 'And the twins? Do they like the kites?', ex: 'Yes, they love them!', resp: 'Wonderful. Say hello to them for me.' },
-  { q: 'Do you have my cake plate? I can’t find it.', ex: 'Yes, I have it. I can bring it to you on Sunday.', resp: 'Thank you, dear. Bring it on Sunday.' },
+  { q: 'Do you have my cake plate? I don’t see it.', ex: 'Yes, I have it. It is at my house.', resp: 'Thank you, dear. Bring it on Sunday.' },
   { q: 'And you? Do you like your book?', ex: 'Yes, I love it! Thank you, Grandma.', resp: 'Perfect! Come and see me soon.' }
 ];
 
@@ -77,7 +77,7 @@ var QUIZ = [
   { f: 'This scarf is for Grandma. Give it to ___.', op: ['her', 'she', 'hers'], nao: 'After TO: her.' },
   { f: 'Do you like the cake? Yes, I like ___.', op: ['it', '(nothing)', 'him'], nao: 'Say the thing: it.' },
   { f: 'The kites are for the twins. Give them to ___.', op: ['them', 'they', 'their'], nao: 'After TO: them.' },
-  { f: 'Uncle Tom is here. Can you help ___?', op: ['him', 'he', 'his'], nao: 'After a verb: him.' },
+  { f: 'Uncle Tom is here. Please help ___ .', op: ['him', 'he', 'his'], nao: 'After a verb: him.' },
   { f: 'The cake is for ___!', op: ['us', 'we', 'our'], nao: 'After FOR: us.' },
   { f: 'Call ___ tomorrow, OK?', op: ['me', 'I', 'my'], nao: 'After a verb: me.' }
 ];

@@ -60,7 +60,7 @@ var LISTA = [
 
 var MOMENTOS = [
   { hora: '8:00 AM', q: 'You arrive at work. Your boss is there.', o: ['Hiya!', 'Hello. Good morning.', 'Hey!'], a: 1, por: 'Hello is safe with everybody. Hey is for friends.' },
-  { hora: '1:00 PM', q: 'A friend calls you.', o: ['Hey! Hi!', 'Hello, I am speaking.', 'Good night.'], a: 0, por: 'With a friend, short is normal.' },
+  { hora: '1:00 PM', q: 'A friend calls you.', o: ['Hey! Hi!', 'Goodbye, my friend.', 'Good night.'], a: 0, por: 'With a friend, short is normal.' },
   { hora: '3:00 PM', q: 'A colleague you see every day walks by.', o: ['Hi!', 'Nice to meet you.', 'Goodbye.'], a: 0, por: 'Nice to meet you is only for the first time.' },
   { hora: '7:00 PM', q: 'You meet your friend’s mother for the first time.', o: ['Hey.', 'Hello. Nice to meet you.', 'Hiya, Mom.'], a: 1, por: 'First time: Nice to meet you.' },
   { hora: '10:00 PM', q: 'The party is over. Say goodbye.', o: ['Bye! See you!', 'Hello!', 'Nice to meet you.'], a: 0, por: 'Bye for friends. Goodbye is a little more formal.' }

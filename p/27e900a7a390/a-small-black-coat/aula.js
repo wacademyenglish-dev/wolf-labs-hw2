@@ -13,7 +13,7 @@
 var YT = 'FnMVGYhlE-M';
 var L = [
   { k: 'capa', est: null, img: 'vitrine' },
-  { k: 'veste', est: 'o', min: 7, img: 'rua', rot: 'I · What Are You Wearing?', t: 'Before Bob: you.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
+  { k: 'veste', est: 'o', min: 7, img: 'rua', rot: 'I · Your Clothes', t: 'Before Bob: you.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
   { k: 'historia', est: 'l', min: 7, img: 'estacao', rot: 'II · The Story So Far', t: 'Day four of the race. Where is everyone?', p: 'Listen to a card first. Answer the question. Then open the transcript and read it out loud.' },
   { k: 'video1', est: 'l', min: 7, img: 'rua', rot: 'III · Cold in Cambridge', t: 'Watch Bob in Cambridge. Six words matter.', p: 'Ears only. Tap each word when you hear it.' },
   { k: 'quero', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'IV · I Want a Coat', t: 'Bob speaks. Hear it, say it, then see it.', p: 'One word changes each time. Then say it with something you really want.' },
@@ -21,7 +21,7 @@ var L = [
   { k: 'tamanho', est: 'f', min: 6, img: 'espelho', rot: 'VI · The Sizes', t: 'Hold each coat up against Bob. Only one fits.', p: 'Say the size out loud. Then put the coat on him.' },
   { k: 'video2', est: 'l', min: 7, img: 'vitrine', rot: 'VII · In the Shop', t: 'Bob in the shop. You know every one of these words.', p: 'Tap each word when you hear it. Then one question.' },
   { k: 'tags', est: 'f', min: 6, extra: 1, img: 'etiqueta', rot: 'VIII · The Tags', t: 'Three tags for every thing: SIZE, COLOR, THING.', p: 'Say it first. Then hang the tags. They only hang in one order.' },
-  { k: 'arara', est: 'o', min: 7, extra: 1, img: 'arara', rot: 'IX · The Rack', t: 'Six coats. Bob has £100 for five days.', p: 'Say the whole coat. Tap it to see the price. Expensive or cheap? Then Bob buys one.' },
+  { k: 'arara', est: 'o', min: 7, extra: 1, img: 'arara', rot: 'IX · The Rack', t: 'Six coats. Bob’s money: £100 for five days.', p: 'Say the whole coat. Tap it to see the price. Expensive or cheap? Then Bob buys one.' },
   { k: 'cliente', est: 'o', min: 7, extra: 1, img: 'vitrine', rot: 'X · The Shop Assistant', t: 'Your turn to shop. Your teacher works in the shop.', p: 'Three friends, three things. Say what you want, ask the price, and decide.' },
   { k: 'guarda', est: 'o', min: 7, extra: 1, img: 'arara', rot: 'XI · Your Wardrobe', t: 'Now your own clothes.', p: 'Answer out loud. Then the follow-up comes.' },
   { k: 'fim', est: 'w', min: 6, img: 'estacao', rot: 'XII · Your Shopping List', t: 'Bob is warm on the train. Now your list.', p: 'Write four things you want, each with a size and a color: I want a small black coat. The red line watches the order. It goes to your My notes.' }
@@ -52,9 +52,9 @@ function manequim(roupa) {
 /* I · o que você está vestindo */
 var VESTE = [
   { k: 'YOUR SHIRT', q: 'What color is your shirt right now?', fup: 'Is it big or small? Say it with the thing: a … shirt.', st: ['It’s …', 'My shirt is …'], ex: 'It’s blue. It’s a big blue shirt.' },
-  { k: 'YOUR SHOES', q: 'Look down. What color are your shoes?', fup: 'Are they old or new?', st: ['They’re …', 'I have … shoes.'], ex: 'They’re white. I have old white shoes.' },
-  { k: 'COLD DAYS', q: 'What do you wear when it is very cold?', fup: 'What color is it?', st: ['I wear a …', 'My … is …'], ex: 'I wear a long black coat and a red hat.' },
-  { k: 'YOUR BAG', q: 'Do you have a bag with you today? What is it like?', fup: 'Is it new or old?', st: ['I have a … bag.', 'It’s …'], ex: 'I have a small brown bag. It’s old, but it’s nice.' }
+  { k: 'YOUR SHOES', q: 'Look down. What color are your shoes?', fup: 'Are they old or new?', st: ['They’re …', 'My shoes are …'], ex: 'They’re white. They’re old white shoes.' },
+  { k: 'COLD DAYS', q: 'It is very cold today. What do you want?', fup: 'What color is it?', st: ['I want a …', 'My … is …'], ex: 'I want a long black coat and a red hat.' },
+  { k: 'YOUR BAG', q: 'Your bag today: what is it like?', fup: 'Is it new or old?', st: ['It’s a … bag.', 'It’s …'], ex: 'It’s a small brown bag. It’s old, but it’s nice.' }
 ];
 
 /* II · a história */
@@ -66,8 +66,8 @@ var HIST = [
 
 /* III e VII · os trechos do vídeo */
 var VIDEOS = {
-  video1: { ini: 36, fim: 86, cred: 'Video: from 0:36 to 1:26', antes: 'Where is Bob? What is the weather like? Guess before you watch.', pal: ['Cambridge', 'cold', 'coat', 'train', 'three hours', 'want'], trans: 'I am in Edinburgh. Fran is here, Paula is in London, and Bob is in Cambridge. Bob is in Cambridge. He is cold, and he does not have a coat. I am in Cambridge. My train leaves in three hours. It is very cold today. I want a coat.', q: 'Why does Bob want a coat?', st: ['Because it is …', 'He is …'], ex: 'Because it is very cold today, and he does not have a coat.', fecho: 'COLD and COAT: the two words of the hour. Two different sounds.' },
-  video2: { ini: 118, fim: 194, cred: 'Video: from 1:58 to 3:14', antes: 'What color do you think Bob buys?', pal: ['black', 'yellow', 'red', 'small', 'medium', 'large'], trans: 'Black? Yellow? Red? Maybe red. Small? Medium? Large? Yeah. I want a small, black coat. It is so warm.', q: 'Bob nearly buys one color, and then buys another. Which ones?', st: ['Maybe …', 'Then he buys a …'], ex: 'Maybe red… and then a small black coat. “It is so warm.”', fecho: 'Maybe red… and then a small, black coat.' }
+  video1: { ini: 36, fim: 86, cred: 'Video: from 0:36 to 1:26', antes: 'Where is Bob? What is the weather like? Guess before you watch.', pal: ['Cambridge', 'cold', 'coat', 'train', 'three hours', 'want'], trans: 'I am in Edinburgh. Fran is here, Paula is in London, and Bob is in Cambridge. Bob is in Cambridge. He is cold, and he does not have a coat. I am in Cambridge. My train leaves in three hours. It is very cold today. I want a coat.', q: 'Why is Bob cold?', st: ['Because it is …', 'He is …'], ex: 'Because it is very cold today.', fecho: 'COLD and COAT: the two words of the hour. Two different sounds.' },
+  video2: { ini: 118, fim: 194, cred: 'Video: from 1:58 to 3:14', antes: 'What color do you think Bob buys?', pal: ['black', 'yellow', 'red', 'small', 'medium', 'large'], trans: 'Black? Yellow? Red? Maybe red. Small? Medium? Large? Yeah. I want a small, black coat. It is so warm.', q: 'Maybe one color, then another. Which ones?', st: ['Maybe …', 'Then a …'], ex: 'Maybe red… and then a small black coat. “It is so warm.”', fecho: 'Maybe red… and then a small, black coat.' }
 };
 
 /* IV · eu quero */
@@ -113,17 +113,17 @@ var ESCALA = { small: .78, medium: .9, large: 1 };
 
 /* X · a vendedora */
 var CLIENTES = [
-  { k: 'FOR YOUR MOTHER', pede: 'something warm · she is small · she loves red', ex: 'Hello! I want a small red coat for my mother. How much is it? … OK, I’ll take it.' },
-  { k: 'FOR YOUR BROTHER', pede: 'something for his head · he is big · blue, please', ex: 'I want a large blue hat. How much is it? … Twenty pounds? I’ll take it.' },
+  { k: 'FOR YOUR MOTHER', pede: 'something warm · she is small · red', ex: 'Hello! I want a small red coat for my mother. How much is it? … OK, yes, please.' },
+  { k: 'FOR YOUR BROTHER', pede: 'something for his head · he is big · blue, please', ex: 'I want a large blue hat. How much is it? … Twenty pounds? Yes, please.' },
   { k: 'FOR YOU', pede: 'your choice · your size · your color', ex: 'I want a medium green sweater. How much is it? … Sixty pounds? No, thank you!' }
 ];
-var PARTES = [{ k: 'quero', t: 'I WANT A …' }, { k: 'ordem', t: 'SIZE · COLOR · THING' }, { k: 'preco', t: 'HOW MUCH IS IT?' }, { k: 'decide', t: 'I’LL TAKE IT / NO, THANK YOU' }];
+var PARTES = [{ k: 'quero', t: 'I WANT A …' }, { k: 'ordem', t: 'SIZE · COLOR · THING' }, { k: 'preco', t: 'HOW MUCH IS IT?' }, { k: 'decide', t: 'YES, PLEASE / NO, THANK YOU' }];
 
 /* XI · seu guarda-roupa */
 var GUARDA = [
-  { q: 'Describe your favorite piece of clothing.', fup: 'Why is it your favorite?', st: ['My favorite is a …', 'It’s a … … …'], ex: 'My favorite is a big green sweater. It’s from my grandmother.' },
-  { q: 'What color do you never wear?', fup: 'Why not?', st: ['I never wear …', 'Because …'], ex: 'I never wear yellow. I look sick in yellow!' },
-  { q: 'What do you want to buy this month?', fup: 'How much is it?', st: ['I want a …', 'It’s about …'], ex: 'I want a small black backpack. It’s about forty dollars.' },
+  { q: 'Your favorite piece of clothing: what is it?', fup: 'Is it new or old?', st: ['My favorite is a …', 'It’s a … … …'], ex: 'My favorite is a big green sweater. It’s old.' },
+  { q: 'Is yellow your color?', fup: 'And black?', st: ['Yes, it is.', 'No, it isn’t.'], ex: 'No, it isn’t. Yellow is not my color!' },
+  { q: 'A thing for this month: what is it?', fup: 'How much is it?', st: ['I want a …', 'It’s about …'], ex: 'I want a small black backpack. It’s about forty dollars.' },
   { q: 'Your turn. Ask me: what do you want?', fup: 'Now ask me about my favorite coat.', st: ['What do you want?', 'What color is …?'], ex: 'What do you want? What color is your favorite coat?' }
 ];
 

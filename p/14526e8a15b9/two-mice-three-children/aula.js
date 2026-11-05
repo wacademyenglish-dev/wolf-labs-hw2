@@ -21,33 +21,33 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'loja', rot: 'I · My Home in Numbers', t: 'How many? Count your life.', p: 'Answer with a number. Your teacher taps + and −. Look at the word: does it change?' },
   { k: 'palavras', est: 'l', min: 5, img: 'ninho', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
-  { k: 'conta', est: 'o', min: 7, img: 'caixa', rot: 'III · Count Them', t: 'Five photos. Count the animals.', p: 'Pick a photo. Count out loud. Say: “There are … mice.” Your teacher taps what you said.' },
+  { k: 'conta', est: 'o', min: 7, img: 'caixa', rot: 'III · Count Them', t: 'Five photos. Count the animals.', p: 'Pick a photo. Count out loud. Say: “Three mice.” Your teacher taps what you said.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'IV · Day 1 to Day 80', t: 'One mouse on day one. And on day eighty?', p: 'Answer first. Then the video plays in four short parts. Then True or Lie.' },
   { k: 'regra', est: 'f', min: 6, img: 'ninho', rot: 'VI · The Labels', t: 'One mouse, two mice.', p: 'Read the four labels out loud. Then fix the four traps.' },
   { k: 'escreve', est: 'w', min: 6, img: 'loja', rot: 'VII · My Notebook', t: 'Your home, in numbers.', p: 'Three short lines. How many people? Children? Pets? Rooms?' },
   { k: 'quiz', est: 'f', min: 5, extra: 1, img: 'caixa', rot: 'VIII · Quick Check', t: 'Five quick lines.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'fim', est: 'o', min: 6, img: 'loja', rot: 'IX · Your Pet Shop', t: 'Open your own little pet shop.', p: 'Choose your animals. Then tell your teacher: “I have three mice and …”' }
+  { k: 'fim', est: 'o', min: 6, img: 'loja', rot: 'IX · Your Pet Shop', t: 'Open your own little pet shop.', p: 'Choose your animals. Then tell your teacher: “Three mice, two fish …”' }
 ];
 
 /* I · o aquecimento: o contador da casa. O aluno diz um número; o professor toca + e −;
    a palavra embaixo muda sozinha (1 person / 3 people). No fim, a etiqueta da casa inteira. */
 var CONTA = [
   { um: 'person', v: 'people', q: 'How many people live in your house?', f: 'Your house: how many people?', ex: 'Three people. Me, my wife and my son.', ini: 3 },
-  { um: 'child', v: 'children', q: 'Do you have children? How many?', f: 'Children: yes or no?', ex: 'Yes, two children. / No children.', ini: 0 },
-  { um: 'pet', v: 'pets', q: 'Do you have a pet?', f: 'A dog? A cat? A fish?', ex: 'Yes, one dog. / No pets.', ini: 0 },
+  { um: 'child', v: 'children', q: 'Children: how many?', f: 'Children: yes or no?', ex: 'Yes, two children. / No children.', ini: 0 },
+  { um: 'pet', v: 'pets', q: 'A pet in your house: yes or no?', f: 'A dog? A cat? A fish?', ex: 'Yes, one dog. / No pets.', ini: 0 },
   { um: 'bedroom', v: 'bedrooms', q: 'How many bedrooms are in your house?', f: 'Bedrooms: how many?', ex: 'Two bedrooms.', ini: 2 },
-  { um: 'coffee', v: 'coffees', q: 'How many coffees do you drink a day?', f: 'Coffee: how many a day?', ex: 'Four coffees! / No coffee.', ini: 1 }
+  { um: 'coffee', v: 'coffees', q: 'Coffees a day: how many?', f: 'Coffee: how many a day?', ex: 'Four coffees! / No coffee.', ini: 1 }
 ];
 function forma(x, n) { return n === 1 ? x.um : x.v; }
 function muda(x) { return x.um + 's' !== x.v; }   /* people, children: a palavra que não é só + s */
 
 /* III · as fotos para contar: o aluno conta e diz; o professor toca a versão que ouviu */
 var FOTOS = [
-  { k: 'THE BOX', img: 'caixa', q: 'How many mice are in the box?', ops: [['There are three mice.', 'ok'], ['There are three mouses.', 'mouses'], ['There are three mouse.', 'um']] },
-  { k: 'THE TANK', img: 'peixes', q: 'How many fish can you see?', ops: [['I can see six fish.', 'ok'], ['I can see six fishs.', 'fishs']] },
-  { k: 'THE FIELD', img: 'ovelhas', q: 'How many sheep are in the field?', ops: [['There are five sheep.', 'ok'], ['There are five sheeps.', 'sheeps'], ['There are five ship.', 'ship']] },
-  { k: 'THE ROAD', img: 'gansos', q: 'How many geese are on the road?', ops: [['There are six geese.', 'ok'], ['There are six gooses.', 'gooses'], ['There are six goose.', 'um']] },
-  { k: 'THE NEST', img: 'ninho', q: 'How many babies are in the nest?', ops: [['There are three babies.', 'ok'], ['There are three babys.', 'babys'], ['There are three baby.', 'um']] }
+  { k: 'THE BOX', img: 'caixa', q: 'How many mice are in the box?', ops: [['Three mice.', 'ok'], ['Three mouses.', 'mouses'], ['Three mouse.', 'um']] },
+  { k: 'THE TANK', img: 'peixes', q: 'How many fish are in the tank?', ops: [['Six fish.', 'ok'], ['Six fishs.', 'fishs']] },
+  { k: 'THE FIELD', img: 'ovelhas', q: 'How many sheep are in the field?', ops: [['Five sheep.', 'ok'], ['Five sheeps.', 'sheeps'], ['Five ship.', 'ship']] },
+  { k: 'THE ROAD', img: 'gansos', q: 'How many geese are on the road?', ops: [['Six geese.', 'ok'], ['Six gooses.', 'gooses'], ['Six goose.', 'um']] },
+  { k: 'THE NEST', img: 'ninho', q: 'How many babies are in the nest?', ops: [['Three babies.', 'ok'], ['Three babys.', 'babys'], ['Three baby.', 'um']] }
 ];
 var NAO = {
   mouses: 'mouse → MICE. A new word! one mouse, three mice.',
@@ -60,7 +60,7 @@ var NAO = {
 };
 
 var ANTES = [
-  { q: 'Do you like mice? Yes or no?', h: 'No! / Yes, small mice are cute.' },
+  { q: 'Mice: cute or scary?', h: 'Cute. / Scary.' },
   { q: 'Is a mouse a good pet?', h: 'Maybe. It is small and cute.' }
 ];
 /* 16/10/2026 · A1 friendly (o Carlos: "12 minutos para um A1, ele vai ficar assustado"): as partes tocam SEM SOM
@@ -89,17 +89,17 @@ var DEB_GO = {
     [
       "Yes",
       "Yes. Mice are small and cute.",
-      "“True. But they have a lot of babies!”"
+      "“True. But the babies are many!”"
     ],
     [
       "No",
-      "No. They have a lot of babies.",
+      "No. They are too many.",
       "“Right. One mouse, then seventeen!”"
     ],
     [
       "Maybe",
-      "Maybe. I have a big house.",
-      "“Then you can have two mice. Not seventeen!”"
+      "Maybe. My house is big.",
+      "“Then two mice are OK. Not seventeen!”"
     ]
   ]
 };
@@ -120,18 +120,18 @@ window.addEventListener('load', function () {
 
 var FITAS = [['+ S · + ES', 'cat → cats · box → boxes · bus → buses'], ['Y → IES', 'baby → babies · city → cities'], ['A NEW WORD', 'mouse → mice · child → children · man → men · woman → women · person → people'], ['OO → EE · NO CHANGE', 'tooth → teeth · foot → feet · goose → geese · fish → fish · sheep → sheep']];
 var ARMAS = [
-  ['CHILD', 'I have two childrens.', 'I have two <b>children</b>.', 'children is already plural. No -s.'],
-  ['PERSON', 'Five peoples live in my house.', 'Five <b>people</b> live in my house.', 'people is already plural. No -s.'],
+  ['CHILD', 'Two childrens are here.', 'Two <b>children</b> are here.', 'children is already plural. No -s.'],
+  ['PERSON', 'Five peoples are in my house.', 'Five <b>people</b> are in my house.', 'people is already plural. No -s.'],
   ['FOOT', 'My foots are cold.', 'My <b>feet</b> are cold.', 'one foot, two feet.'],
   ['ONE', 'One people is at the door.', 'One <b>person</b> is at the door.', 'one person, two people.']
 ];
 
 var QUIZ = [
-  { f: 'I have two ___.', op: ['children', 'childrens', 'child'], nao: 'child → children. No -s.' },
-  { f: 'There are three ___ in the box.', op: ['mice', 'mouses', 'mouse'], nao: 'mouse → mice.' },
+  { f: 'Two ___ are here.', op: ['children', 'childrens', 'child'], nao: 'child → children. No -s.' },
+  { f: 'Three ___ are in the box.', op: ['mice', 'mouses', 'mouse'], nao: 'mouse → mice.' },
   { f: 'My ___ are cold.', op: ['feet', 'foots', 'foot'], nao: 'foot → feet.' },
-  { f: 'Five ___ live in my house.', op: ['people', 'peoples', 'person'], nao: 'person → people. No -s.' },
-  { f: 'The mouse has four ___.', op: ['babies', 'babys', 'baby'], nao: 'baby → babies: y → ies.' }
+  { f: 'Five ___ are in my house.', op: ['people', 'peoples', 'person'], nao: 'person → people. No -s.' },
+  { f: 'Four ___ are in the nest.', op: ['babies', 'babys', 'baby'], nao: 'baby → babies: y → ies.' }
 ];
 
 /* IX · a loja do aluno: ele escolhe quantos de cada; a placa mostra a forma certa */
@@ -140,9 +140,9 @@ var LOJA = [
   { um: 'rabbit', v: 'rabbits', ic: 'R' }, { um: 'goose', v: 'geese', ic: 'G' }
 ];
 var PERG_LOJA = [
-  { q: 'What animals do you have?', f: 'Mice? Fish? Puppies?', voce: ['I have … mice.', 'I have … fish and … puppies.', 'I have one …'] },
-  { q: 'Which animal is your favorite?', f: 'Your favorite: what animal?', voce: ['My favorite is the …', 'I love the …'] },
-  { q: 'Day 80! Your mice have babies. How many mice now?', f: 'Mice have babies. How many now?', voce: ['Now I have … mice!', 'Oh no! … mice!'] }
+  { q: 'Your pet shop: what animals?', f: 'Mice? Fish? Puppies?', voce: ['… mice.', '… fish and … puppies.', 'One …'] },
+  { q: 'Which animal is your favorite?', f: 'Your favorite: what animal?', voce: ['My favorite is the …', 'The … is great.'] },
+  { q: 'Day 80! How many mice now?', f: 'Day 80: how many mice?', voce: ['Now … mice!', 'Oh no! … mice!'] }
 ];
 
 var S = { i: 0, faixa: 1, fala: {}, resp: {}, armas: {},

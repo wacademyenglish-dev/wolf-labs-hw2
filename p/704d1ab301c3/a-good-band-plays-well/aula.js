@@ -27,7 +27,7 @@ var L = [
 var VOCE = [
   { k: 'WELL', q: 'What do you do well?', fup: 'Who cooks well in your family?', st: ['I … well.', 'I can … very well.'], ex: 'I cook well. My grandmother cooks very well too.' },
   { k: 'A GOOD THING', q: 'What is a good thing you have?', fup: 'Why is it good?', st: ['I have a good …', 'My … is good.'], ex: 'I have a good bike. It’s old, but it’s fast.' },
-  { k: 'BADLY', q: 'What do you do badly, and enjoy anyway?', fup: 'When do you do it?', st: ['I … badly, but I love it.'], ex: 'I sing badly, but I love it. I sing in the shower.' },
+  { k: 'BADLY', q: 'What do you do badly, but love?', fup: 'When do you do it?', st: ['I … badly, but I love it.'], ex: 'I sing badly, but I love it. I sing in the shower.' },
   { k: 'A BAND', q: 'Who is a good band or singer for you?', fup: 'What do they do well?', st: ['… is a good band.', 'She sings …', 'They play …'], ex: 'Coldplay is a good band. They play very well live.' }
 ];
 
@@ -93,7 +93,7 @@ var PADS = [
 
 /* VIII · o balcão */
 var BALCAO = [
-  { tag: 'THE BAND', au: 'c-band.mp3', slow: 'c-band-slow.mp3', q: 'So, do you like the band?', st: ['They’re good.', 'They play well.', 'They play …'], ex: 'They’re good. They play really well.', fup: 'And the drummer? How does he play?', fst: ['He played …', 'He’s a … drummer.'], fex: 'He played fast and loudly. He’s a good drummer.' },
+  { tag: 'THE BAND', au: 'c-band.mp3', slow: 'c-band-slow.mp3', q: 'So, do you like the band?', st: ['They’re good.', 'They play well.', 'They play …'], ex: 'They’re good. They play really well.', fup: 'And the drummer? How does he play?', fst: ['He plays …', 'He’s a … drummer.'], fex: 'He plays fast and loudly. He’s a good drummer.' },
   { tag: 'THE SINGER', au: 'c-singer.mp3', slow: 'c-singer-slow.mp3', q: 'And the singer? Can she really sing?', st: ['Yes. She sings …', 'She’s a … singer.'], ex: 'Yes. She sings very well. She’s a good singer.', fup: 'Who sings well in your family?', fst: ['My … sings …', 'Nobody! We all sing …'], fex: 'My sister sings well. I sing badly!' },
   { tag: 'YOU', au: 'c-you.mp3', slow: 'c-you-slow.mp3', q: 'Do you play anything yourself?', st: ['A little. I play …', 'No, but I …'], ex: 'A little. I play the guitar badly, but I love it.', fup: 'What do you want to play well one day?', fst: ['One day I want to play … well.'], fex: 'One day I want to play the piano well.' }
 ];

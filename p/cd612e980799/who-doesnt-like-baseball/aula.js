@@ -47,11 +47,11 @@ var ENCARTE = [
 
 var ANTES = [
   { q: 'Do you like superhero shows? Which one?', h: 'Yes, I like … / No, I don’t like …' },
-  { q: 'A family moves from a big city to a farm. Do the kids like it? Guess.', h: 'I think they …' }
+  { q: 'A family moves to a farm. Do the kids like it?', h: 'I think they …' }
 ];
 var DEPOIS = [
   { q: 'What does Jonathan like? What does Jordan like?', h: 'Jonathan likes … Jordan likes …' },
-  { q: 'Do you like the farm or the big city? Why?', h: 'I like … because …' }
+  { q: 'Do you like the farm or the big city?', h: 'I like the … / I love …ing.' }
 ];
 
 var TRECHOS = [

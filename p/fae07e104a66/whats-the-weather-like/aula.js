@@ -153,7 +153,7 @@ R.video = function (c) {
       + CAPS.map(function (x, i) { return '<button type="button" class="chip' + (e.cap === i ? ' on' : '') + (e.viu[i] ? ' feito' : '') + '" data-a="vd-c" data-n="' + i + '">' + x.ic + ' ' + (i + 1) + '</button>'; }).join('') + '</div>'
       + '<div class="pergunta vd ja"><small>CHAPTER ' + (e.cap + 1) + '</small><h2>' + k.q + '</h2></div>' + fala('vc' + e.cap, ['It’s …', 'It’s … and …'], []) + mostra('vd' + e.cap, k.h)
       + '<div class="acoes">' + (e.cap < 4 ? '<button type="button" class="btn" data-a="vd-c" data-n="' + (e.cap + 1) + '">Next chapter</button>' : '<button type="button" class="btn" data-a="vd-p" data-n="2">After the video</button>') + '</div></div></div>';
-  } else corpo = '<div class="foco"><div class="pergunta vd ja"><small>AFTER</small><h2>Is the weather in the video like the weather in your city? Then pick one season and give the weather on TV, in two sentences.</h2></div>' + fala('vb', ['In my city, it …', 'Good evening! It’s …'], []) + mostra('vb', 'No. In my city, it never snows. Good evening! It’s fall. It’s cloudy and cool.', 1) + '</div>';
+  } else corpo = '<div class="foco"><div class="pergunta vd ja"><small>AFTER</small><h2>Pick one season. Give the weather on TV, like a presenter.</h2></div>' + fala('vb', ['Good evening! It’s …', 'It’s … and …'], []) + mostra('vb', 'Good evening! It’s fall. It’s cloudy and cool.', 1) + '</div>';
   return cab(c) + passos + corpo;
 };
 
@@ -188,7 +188,7 @@ R.dial = function (c) {
 R.walt = function (c) {
   var e = S.walt, n = e.n, fim = n >= WALT.length;
   var foto = '<div class="aberta vd" style="background-image:url(' + img('janela') + ')"><span>WALT · ON THE PHONE</span></div>';
-  if (fim) return cab(c) + '<div class="mesa-par">' + foto + '<div class="lado-l">' + follow('THE BIG QUESTION', 'Sun or snow: which weather makes you happy? Why?', ['… makes me happy, because …', 'When it’s …, I …'], ['sunny', 'snowy', 'warm', 'cold'], 'big', mostra('big', 'Sun makes me happy. When it’s sunny, I go to the park.', 1)) + '</div></div>';
+  if (fim) return cab(c) + '<div class="mesa-par">' + foto + '<div class="lado-l">' + follow('THE BIG QUESTION', 'Sun or snow: which do you like?', ['I like …', 'It’s … and …'], ['sunny', 'snowy', 'warm', 'cold'], 'big', mostra('big', 'I like sun. It’s warm and nice.', 1)) + '</div></div>';
   var x = WALT[n], viu = e.viu[n];
   return cab(c) + '<div class="mesa-par">' + foto + '<div class="lado-l">' + trilha(WALT, n) + '<div class="balao vd"><small>WALT</small><p>“' + x.ela + '”</p></div><div class="pede vd"><small>YOUR ANSWER</small><b>' + x.pede + '</b></div>'
     + (viu ? '<div class="balao vd resp"><small>WALT</small><p>“' + x.resp + '”</p></div><div><button type="button" class="btn" data-a="wt-prox">Next</button></div>' : '<div><button type="button" class="btn so-prof" data-a="wt-viu">Answered · Walt replies</button><p class="dica-aluno">Answer Walt with It’s …</p></div>') + '</div></div>';

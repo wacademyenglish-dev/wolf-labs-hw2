@@ -14,7 +14,7 @@ var L = [
   { k: 'escada', est: 'f', min: 8, img: 'conversa', rot: 'I · The Ladder', t: 'Climb from easy to hard.', p: 'One step at a time. A good answer, and you go up.' },
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · Postcards', t: 'Three friends call from far away.', p: 'Ask each friend five questions. Your teacher is the friend. Then tell your family the news.' },
   { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
+  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose one.', p: 'Choose one. Then say it with because.' },
   { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
@@ -52,7 +52,7 @@ var CARTAO = { ph: 'Hi from Salvador!\nIt’s sunny and very hot.\nI have a litt
   modelo: 'Hi from Salvador! It’s sunny and very hot.<br>I have a little sunburn, so I stay in the shade.<br>It’s smaller than São Paulo, but the beaches are the best!' };
 
 var CONVERSA = [
-  { q: 'What’s your favorite weather? Why?', f: 'Hot or cold?', voce: ['I like it when it’s …', 'because …'], ex: 'I like it when it’s cold, because I can drink hot chocolate.' },
+  { q: 'What’s your favorite weather?', f: 'Hot or cold?', voce: ['I like it when it’s …', 'because …'], ex: 'I like it when it’s cold, because I can drink hot chocolate.' },
   { q: 'What do you do when you have a cold?', f: 'A cold: what do you do?', voce: ['I …', 'I should …, but …'], ex: 'I drink tea and I go to bed early.' },
   { q: 'Which is better: the beach or the mountains?', f: 'Beach or mountains?', voce: ['… is better than …', 'because …'], ex: 'The beach is better, because it’s hotter!' },
   { q: 'What’s the most beautiful place in your country?', f: 'The most beautiful place?', voce: ['The most beautiful place is …', 'It’s …'], ex: 'Lençóis Maranhenses. It’s the most beautiful place I know.' },

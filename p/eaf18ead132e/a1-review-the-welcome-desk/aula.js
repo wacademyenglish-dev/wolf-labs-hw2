@@ -54,7 +54,7 @@ var CONVERSA = [
   { q: 'Where are you from? And your family?', f: 'Your family: from where?', voce: ['I’m from …', 'My family is from …'], ex: 'I’m from Bahia. My family is from Bahia too.' },
   { q: 'Where do you live now? Is it a big city?', f: 'Your city: big or small?', voce: ['I live in …', 'It’s a big / small city.'], ex: 'I live in Campinas. It’s a big city.' },
   { q: 'Who is your best friend? What’s his or her job?', f: 'Your best friend: name? job?', voce: ['My best friend is …', 'He / She is a …'], ex: 'My best friend is Rafa. He is a cook.' },
-  { q: 'What day is your favorite day? Why?', f: 'Your favorite day?', voce: ['My favorite day is …', 'Because …'], ex: 'Saturday! Because I’m not tired.' },
+  { q: 'Your favorite day: Saturday or Sunday?', f: 'Your favorite day?', voce: ['My favorite day is …', 'I’m … on …'], ex: 'Saturday! I’m not tired on Saturday.' },
   { q: 'Are you tired or happy today?', f: 'Today: tired? happy?', voce: ['I’m …', 'I’m not …'], ex: 'I’m happy. I’m not tired.' }
 ];
 

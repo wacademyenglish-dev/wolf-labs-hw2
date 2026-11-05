@@ -73,7 +73,7 @@ var JANELAS = [
   { quem: 'Chihiro', faz: 'walk through the tunnel', ops: ['Chihiro is walking through the tunnel.'], resp: 'Chihiro <b>is walking</b> through the tunnel.', depois: 'Where are you walking tomorrow?' },
   { quem: 'Her parents', faz: 'eat (a lot!)', ops: ['Her parents are eating.'], resp: 'Her parents <b>are eating</b>.', depois: 'What is your favorite food?' },
   { quem: 'The spirits', faz: 'take a bath', ops: ['The spirits are taking a bath.'], resp: 'The spirits <b>are taking</b> a bath.', depois: 'Do you like hot baths?' },
-  { quem: 'Haku, the dragon', faz: 'fly in the sky', ops: ['Haku is flying in the sky.'], resp: 'Haku <b>is flying</b> in the sky.', depois: 'Which animal do you want to be? Why?' },
+  { quem: 'Haku, the dragon', faz: 'fly in the sky', ops: ['Haku is flying in the sky.'], resp: 'Haku <b>is flying</b> in the sky.', depois: 'Which animal do you want to be?' },
   { quem: 'You ask', faz: 'Chihiro · cry?', ops: ['Is Chihiro crying?'], resp: '<b>Is</b> Chihiro <b>crying</b>?', depois: 'Ask the teacher: “Are you … right now?”' },
   { quem: 'Yubaba, the witch', faz: 'not sleep (she is watching everything)', ops: ['Yubaba isn’t sleeping.'], resp: 'Yubaba <b>isn’t sleeping</b>.', depois: 'The bathhouse is full of light. What are you doing right now?' }
 ];
@@ -219,7 +219,7 @@ TOQUES.lt = function (b, n) { S.lt.sel = n; S.lt.viu[n] = 1; };
 
 /*@@AQ*/
 /* o aquecimento desta aula (07/10): o motor está em aquece.js */
-var AQ = { tipo: 'ranking', rot: 'I · A Walk at Night', t: 'Before the trailer: where do you want to walk tonight?', p: 'Tap the places in order. Then explain the top and the bottom.',
+var AQ = { tipo: 'ranking', rot: 'I · A Walk at Night', t: 'Before the trailer: where do you want to walk tonight?', p: 'Tap the places in order. Then say your number 1.',
   rotulo: 'A walk at night', q: 'Where do you want to walk tonight? Put them in order.',
   itens: ['A night market', 'A beach', 'A big park', 'A train station', 'An old bathhouse'],
   depois: 'Number 1: what are people doing there right now?', ex: 'Number 1 is the night market. People are eating and talking there right now.' };

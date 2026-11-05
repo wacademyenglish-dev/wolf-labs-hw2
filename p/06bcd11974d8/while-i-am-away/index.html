@@ -42,12 +42,12 @@
     <p>Marta leaves her farm for a week, and the student looks after it. On the fridge, a page of routines (<b>every day</b>). On the screen, four LIVE cameras (<b>now</b>): the red dot blinks, the clock runs, the rain falls. On day three, the other house-sitter’s answers give him away: he copied the page and was never there. No timer, no points.</p>
     <h4>THE GRAMMAR</h4>
     <p><b>I feed / he feeds</b> = every day (one piece). <b>I am / he is / they are + -ing</b> = now (two pieces). The verbs a camera can’t film take no -ing: <b>want, need, know, see, understand</b>. Two questions: <i>What do you do?</i> (job) × <i>What are you doing?</i> (this minute). Portuguese pushes <i>He feeding</i> and <i>I am work every day</i>.</p>
-    <!--conversa--><h4>OK OR NOT OK? (VII) AND THE SURPRISE QUESTION</h4>
-    <p>Right after Day Three, your student judges the other house-sitter three times: green OK or red Not OK (sleeping at noon, watching TV inside, not there on day three). There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it) for a yes/no follow-up. The starters keep both presents in their mouth (<i>He works at six / Nobody is feeding the horses</i>). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <!--conversa--><h4>THE OTHER HOUSE-SITTER (VII) AND THE SURPRISE QUESTION</h4>
+    <p>Right after Day Three, your student chooses three times about the other house-sitter (sleeping or working at noon, watching TV or helping, not there on day three). There is no right answer. Answer first yourself, then let your student choose, wait five seconds in silence, and use the PUSH line (only you see it) for a yes/no follow-up. The starters keep both presents in their mouth (<i>He works at six / Nobody is feeding the horses</i>). Recast mistakes quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
     <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
-      <li><b>Out loud</b> — I You, Live; VII OK or Not OK? (judge the other house-sitter); VIII The Video Call (first you are the owner and ask; then swap).</li>
+      <li><b>Out loud</b> — I You, Live; VII The Other House-Sitter (choose, then say it); VIII The Video Call (first you are the owner and ask; then swap).</li>
       <li><b>Listen</b> — V The First Reports and VI Day Three (voice messages: NOW or EVERY DAY; THERE or NOT THERE). Play Marta first.</li>
       <li><b>Focus</b> — II Four Cameras, One Page; III Two Presents; IV The Live Caption (BE, then the -ing form).</li>
       <li><b>Write</b> — IX Your Report to Marta, with the red wavy line for <i>He feeding</i>, <i>I am work</i>, <i>I am wanting</i>, <i>-ing + every day</i> and <i>he feed</i>. It goes to their My notes.</li>
@@ -92,24 +92,24 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    A1 bem leve: duas opções coloridas, frase quase pronta, o professor responde primeiro.
    Gramática da aula (I feed × I am feeding · be + -ing) nos iniciadores. */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
-  { id: 'okay', apos: 'dia3', est: 'o', min: 5, img: 'chuva', rot: 'OK or Not OK?', t: 'The other house-sitter. You decide.',
-    p: 'Read it. OK or not OK? Your teacher answers first. Then say it with the sentence.',
+  { id: 'okay', apos: 'dia3', est: 'o', min: 5, img: 'chuva', rot: 'The Other House-Sitter', t: 'The other house-sitter. You choose.',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'Noon', sit: 'Noon. He is sleeping.', q: 'OK or not OK?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK. He works at six.', 'Not OK. The horses are waiting!'],
-        ex: 'OK! He feeds the horses at six. Now he is resting.',
+      { tag: 'Noon', sit: 'It is noon. The horses are eating.', q: 'The house-sitter: sleeping or working?',
+        opc: ['Sleeping', 'Working'],
+        st: ['He is sleeping.', 'He is working.'],
+        ex: 'Working! He feeds the horses at six. Now he is cleaning.',
         push: 'Every day? Yes or no?' },
-      { tag: 'The sofa', sit: 'He is watching TV inside.', q: 'OK or not OK?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK. He is relaxing.', 'Not OK. It is Marta’s house.'],
-        ex: 'Not OK. It is raining, and the chickens are in the yard.',
+      { tag: 'The sofa', sit: 'It is raining. The chickens are in the yard.', q: 'He is inside. Watching TV or helping?',
+        opc: ['Watching TV', 'Helping'],
+        st: ['He is watching TV.', 'He is helping the chickens.'],
+        ex: 'Helping! It is raining, and the chickens are in the yard.',
         push: 'With Marta’s snacks? Yes or no?' },
-      { tag: 'Day three', sit: 'Day three. He isn’t there.', q: 'OK or not OK?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['Not OK. Nobody is feeding …', 'OK. The animals are …'],
-        ex: 'Not OK! Nobody is feeding the horses.',
+      { tag: 'Day three', sit: 'Day three. He isn’t there.', q: 'Who feeds the horses? You or nobody?',
+        opc: ['I do', 'Nobody'],
+        st: ['I feed them.', 'Nobody is feeding them.'],
+        ex: 'I feed them! Nobody is feeding them now.',
         push: 'Does he get the money? Yes or no?' }
     ] }
 ] };
@@ -142,7 +142,7 @@ window.WL_PADRAO = {
    "p": "Play his answer. Is he really there?"
   },
   "cv-okay": {
-   "t": "The other house-sitter. OK or not?",
+   "t": "The other house-sitter. You choose.",
    "p": "Your teacher answers first. Then you say it."
   },
   "chamada": {
@@ -392,7 +392,7 @@ window.WL_PADRAO = {
     "What are you doing at this moment?",
     "What do you do every morning on the farm?",
     "What time do you feed the horses?",
-    "Why are you watching TV inside?",
+    "Are you watching TV inside?",
     "Do you really live on the farm this week?"
    ],
    "st": [

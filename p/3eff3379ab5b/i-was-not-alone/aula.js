@@ -86,14 +86,14 @@ var SONS = [
   { k: '3:02 AM', s: 'A door, downstairs.', q: 'How were you? Where were you?' },
   { k: '3:10 AM', s: 'Water in the bathroom.', q: 'How were you? Was the light on?' },
   { k: '3:25 AM', s: 'Cups in the kitchen.', q: 'How were you? Were you in bed?' },
-  { k: '3:40 AM', s: 'Nothing. Rex was quiet.', q: 'How were you? Why was Rex quiet?' }
+  { k: '3:40 AM', s: 'Nothing. Rex was quiet.', q: 'How were you? Was Rex quiet?' }
 ];
 var SENTES = ['scared', 'cold', 'tired', 'nervous', 'hungry', 'OK'];
 
 var ENTR = [
   { au: 'q1.mp3', q: 'Were you alone?', fup: 'Are you sure?', st: ['Yes, I was.', 'No, I wasn’t.'], ex: 'Yes, I was. Well… I think I was.' },
   { au: 'q2.mp3', q: 'Was the door open?', fup: 'And in the morning?', st: ['No, it wasn’t.', 'Yes, it was.'], ex: 'No, it wasn’t. It was locked all night.' },
-  { au: 'q3.mp3', q: 'Were you scared?', fup: 'Why?', st: ['Yes, I was.', 'No, I wasn’t.'], ex: 'Yes, I was. There was a noise in the kitchen at three.' },
+  { au: 'q3.mp3', q: 'Were you scared?', fup: 'Was it dark?', st: ['Yes, I was.', 'No, I wasn’t.'], ex: 'Yes, I was. It was dark, and there was a noise in the kitchen.' },
   { au: 'q4.mp3', q: 'Was Rex quiet?', fup: 'Is he always quiet?', st: ['Yes, he was.', 'No, he wasn’t.'], ex: 'Yes, he was. Very quiet. That was strange!' },
   { au: 'q5.mp3', q: 'Were the windows shut?', fup: 'All of them?', st: ['Yes, they were.', 'No, they weren’t.'], ex: 'Yes, they were. But in the morning one was open.' },
   { au: 'q6.mp3', q: 'Was it cold in there?', fup: 'Were you in bed?', st: ['Yes, it was.', 'No, it wasn’t.'], ex: 'Yes, it was. I was cold and scared.' }

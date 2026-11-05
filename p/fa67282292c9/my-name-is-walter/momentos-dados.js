@@ -22,7 +22,7 @@ window.WL_MOMENTOS = [
     contexto: 'Now the message is for his wife, Skyler. His voice changes.',
     diretor: 'Now he talks to his wife, Skyler. What does he say to her?',
     frase: 'Skyler, you are <b>the love of my life</b>. I hope you know that.',
-    explica: '<i>The love of my life</i> = the most important person, the one I love most.',
+    explica: '<i>The love of my life</i> = the person I love very much.',
     formula: '<b>Who</b> is Skyler? → She’s his wife. · <b>What</b> does he say?',
     tente: 'Who is very important in your life? Why?',
     ex: 'My grandmother. She takes care of everybody.' },

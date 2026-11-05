@@ -22,11 +22,11 @@ var L = [
 
 var PORTAS = [
   { k: 'WAS, WERE', tema: 'was / were', t: 'Where were you yesterday at 8 AM, at 1 PM and at 9 PM?', ex: 'At 8 AM I was at home. At 1 PM I was at work. At 9 PM I was in bed.', trap: 'I / he / she was; you / we / they were.' },
-  { k: 'THERE WAS', tema: 'there was / there were', t: 'Describe your old school: two things there were, one thing there wasn’t.', ex: 'There was a big garden. There were two old computers. There wasn’t a library.', trap: '“Had a garden” → THERE WAS a garden.' },
+  { k: 'THERE WAS', tema: 'there was / there were', t: 'Your old school: two things there were, one thing there wasn’t.', ex: 'There was a big garden. There were two old computers. There wasn’t a library.', trap: '“Had a garden” → THERE WAS a garden.' },
   { k: 'YESTERDAY', tema: 'past simple: -ed and irregulars', t: 'Three things you did yesterday. One with -ed, two irregular.', ex: 'I worked. I went to the market. I ate pizza.', trap: 'go → went, eat → ate, have → had. “goed” → went.' },
   { k: 'DIDN’T', tema: 'didn’t + verb, Did…?', t: 'Two things you didn’t do yesterday. Then ask your teacher one “Did you…?”', ex: 'I didn’t cook. I didn’t watch TV. Did you go out?', trap: 'didn’t + verb with no -ed: “didn’t went” → didn’t go.' },
   { k: 'GOING TO', tema: 'going to for plans', t: 'Three plans for next weekend.', ex: 'I’m going to visit my mother. I’m going to sleep late. I’m not going to work!', trap: 'be + going to + verb: “I going to” → I’m going to.' },
-  { k: 'ALREADY, YET', tema: 'still / already / not … yet', t: 'Today: something you already did, something you didn’t do yet, something you still do every day.', ex: 'I already had lunch. I didn’t do my homework yet. I still drink coffee every morning.', trap: 'already in the middle, yet at the end.' }
+  { k: 'ALREADY, YET', tema: 'still / already / not … yet', t: 'Three sentences: already, not yet, still.', ex: 'I already had lunch. I didn’t do my homework yet. I still drink coffee every morning.', trap: 'already in the middle, yet at the end.' }
 ];
 
 var MISSAO = { pede: 'ABOUT LAST NIGHT · ASK FIVE QUESTIONS', quem: 'customer', depois: 'Call the owner',
@@ -56,9 +56,9 @@ var CARTAO = { ph: 'Last weekend I was at the beach with my family.\nWe swam and
 var CONVERSA = [
   { q: 'Where were you on your last birthday?', f: 'Your last birthday: where?', voce: ['I was …', 'I was with …'], ex: 'I was at a restaurant with my friends.' },
   { q: 'What did you do last night?', f: 'Last night?', voce: ['I …ed / I went …', 'I didn’t …'], ex: 'I cooked dinner and I watched a movie.' },
-  { q: 'Is there something you didn’t do yet this year?', f: 'Not yet this year?', voce: ['I didn’t … yet.', 'I already …'], ex: 'I didn’t travel yet. But I already started English!' },
+  { q: 'Did you travel this year?', f: 'Travel this year?', voce: ['Yes, I did. I went to …', 'No, I didn’t. I’m going to …'], ex: 'No, I didn’t. I’m going to travel in July.' },
   { q: 'What are you going to do after this class?', f: 'After class?', voce: ['I’m going to …', 'I’m not going to …'], ex: 'I’m going to have lunch and walk my dog.' },
-  { q: 'What was your favorite lesson in Book A1? Why?', f: 'Your favorite lesson?', voce: ['My favorite was …', 'because …'], ex: 'The hotel one, because I was the receptionist!' }
+  { q: 'What was your favorite lesson in Book A1?', f: 'Your favorite lesson?', voce: ['My favorite was …', 'because …'], ex: 'The hotel one, because I was the receptionist!' }
 ];
 
 var PODE = [

@@ -74,14 +74,14 @@
 <script data-wl="faisca-dados.js">
 /* ONE BECOMES TWO (Main A1) · pergunta-surpresa · 27/10/2026 · plural */
 window.WL_FAISCA = { nivel: 'A1', qs: [
-  { cena: 'caixa', tipo: 'And you?', q: 'Do you go to the market?',
-    opc: ['Yes, I do.', 'No, I don’t.'], st: ['Yes. I buy …', 'No. I buy my vegetables at …'],
-    ex: 'Yes! I buy bananas and tomatoes every Saturday.', push: 'Every week? Yes or no?' },
+  { cena: 'caixa', tipo: 'And you?', q: 'Are you at the market on Saturday?',
+    opc: ['Yes, I am.', 'No, I’m not.'], st: ['Yes. … and …', 'No. I’m at …'],
+    ex: 'Yes! Bananas and tomatoes, every Saturday.', push: 'Every week? Yes or no?' },
   { cena: 'garfo', tipo: 'Would you rather', q: 'Strawberries or cherries?',
-    opc: ['Strawberries', 'Cherries'], st: ['Strawberries! They are …', 'Cherries. I love cherries.'],
+    opc: ['Strawberries', 'Cherries'], st: ['Strawberries! They are …', 'Cherries. Cherries are great.'],
     ex: 'Strawberries, with chocolate!', push: 'Every day? Yes or no?' },
   { cena: 'teimosos', tipo: 'And you?', q: 'How many people live in your house?',
-    opc: ['One or two', 'Three or four', 'Five or more'], st: ['Two people live in my house.', 'There are … people.'],
+    opc: ['One or two', 'Three or four', 'Five or more'], st: ['Two people in my house.', '… people.'],
     ex: 'Three people: my two brothers and me.', push: 'And pets? Yes or no?' }
 ] };
 </script><!--/faisca-dados.js-->
@@ -97,21 +97,21 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
     p: 'Choose OK or Not OK. Your teacher answers first. Then say it with the sentence.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'The cherries', sit: 'A man is at the stall.', q: 'He eats two cherries.',
+      { tag: 'The cherries', sit: 'A man is at the stall.', q: 'Two cherries for free.',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
         st: ['OK. Two cherries are fine.', 'Not OK. Ask Vera first!'],
         ex: 'OK! Two cherries are fine. Ten cherries, not OK!',
         push: 'Five cherries? Yes or no?' },
-      { tag: 'The bags', sit: 'A woman buys three apples.', q: 'She takes ten bags.',
+      { tag: 'The bags', sit: 'A woman: three apples.', q: 'Ten bags for three apples.',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
         st: ['OK. The bags are free.', 'Not OK. One bag is fine.'],
         ex: 'Not OK! Ten bags for three apples? One bag is fine.',
-        push: 'Do you bring your bag? Yes or no?' },
-      { tag: 'The peaches', sit: 'Two children are at the stall.', q: 'They touch all the peaches.',
+        push: 'Is your bag big? Yes or no?' },
+      { tag: 'The peaches', sit: 'Two children are at the stall.', q: 'The children are at the peaches.',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
         st: ['OK. Children are children.', 'Not OK. The peaches are soft.'],
         ex: 'Not OK. The peaches are soft! But children are children.',
-        push: 'Do you touch the fruit? Yes or no?' }
+        push: 'Are your hands clean? Yes or no?' }
     ] }
 ] };
 </script><!--/conversa-dados.js-->
@@ -265,63 +265,63 @@ window.WL_PADRAO = {
    "cartas": [
     {
      "k": "YOUR FRUIT",
-     "q": "What fruit do you eat every week?",
+     "q": "Two fruits in your kitchen: what are they?",
      "fup": "How many?",
      "st": [
-      "I eat …",
-      "I buy … every week."
+      "… and …",
+      "Six … and ten …"
      ],
-     "ex": "I eat bananas. I buy ten bananas every week."
+     "ex": "Bananas and apples. Ten bananas and six apples."
     },
     {
      "k": "YOUR FRIDGE",
      "q": "What is in your fridge right now?",
-     "fup": "How many eggs are there?",
+     "fup": "How many eggs are in it?",
      "st": [
-      "There are …",
-      "There are two …"
+      "… are in my …",
+      "Two …"
      ],
-     "ex": "There are some tomatoes and there are six eggs."
+     "ex": "Tomatoes and six eggs are in my fridge."
     },
     {
      "k": "YOUR KITCHEN",
      "q": "How many knives and glasses are in your kitchen?",
-     "fup": "Do you need more?",
+     "fup": "Are they new or old?",
      "st": [
-      "I have … knives.",
-      "I have … glasses."
+      "… knives.",
+      "… glasses."
      ],
-     "ex": "I have four knives and twelve glasses."
+     "ex": "Four knives and twelve glasses."
     },
     {
      "k": "YOUR STREET",
-     "q": "Are there many people on your street?",
-     "fup": "Are there children?",
+     "q": "Your street: how many people? Children?",
+     "fup": "Are the children loud?",
      "st": [
-      "There are a lot of …",
-      "There are some …"
+      "A lot of …",
+      "Some …"
      ],
-     "ex": "There are a lot of people. There are some children too."
+     "ex": "A lot of people and some children."
     },
     {
      "k": "YOUR MARKET",
-     "q": "Where do you buy vegetables?",
+     "q": "Vegetables: market or supermarket?",
      "fup": "Are they cheap there?",
      "st": [
-      "I buy … at …",
+      "At the …",
       "The … are …"
      ],
-     "ex": "I buy potatoes at the market. The potatoes are cheap there."
+     "ex": "The market. The potatoes are cheap there."
     },
     {
      "k": "YOUR BAG",
      "q": "What is in your bag after the market?",
      "fup": "Is it heavy?",
      "st": [
-      "There are …",
-      "I have three …"
+      "… are in my …",
+      "Three …"
      ],
-     "ex": "There are two loaves of bread and three peaches."
+     "ex": "Two loaves of bread and three peaches are in my bag."
     }
    ]
   },
@@ -359,7 +359,7 @@ window.WL_PADRAO = {
       "The street market. The tomatoes are fresh."
      ],
      "fb": [
-      "The supermarket. There are no lines."
+      "The supermarket. The lines are short."
      ]
     },
     {
@@ -367,10 +367,10 @@ window.WL_PADRAO = {
      "a": "With children",
      "b": "Quiet",
      "fa": [
-      "With children. They make it happy."
+      "With children. They are happy."
      ],
      "fb": [
-      "Quiet. I can think."
+      "Quiet. It is calm."
      ]
     },
     {
@@ -378,7 +378,7 @@ window.WL_PADRAO = {
      "a": "Potatoes",
      "b": "Sandwiches",
      "fa": [
-      "Potatoes. I love them."
+      "Potatoes. They are great."
      ],
      "fb": [
       "Sandwiches. They are fast."
@@ -397,19 +397,19 @@ window.WL_PADRAO = {
    "p": "Your teacher interviews you.",
    "aluno": "Listen to your teacher’s question. Answer as Vera.",
    "perguntas": [
-    "What do you sell at your stall?",
-    "How many peaches do you have today?",
-    "Do children come to your stall?",
+    "What are three things at your stall?",
+    "How many peaches are in the stall?",
+    "Are children at your stall?",
     "Are your tomatoes cheap?",
-    "How many loaves of bread do you sell?",
-    "What do people buy the most?"
+    "How many loaves of bread are here?",
+    "Are people here on Saturday?"
    ],
    "st": [
-    "I sell …",
-    "I have … today.",
-    "People buy …"
+    "… and …",
+    "… are here today.",
+    "Yes, they are."
    ],
-   "ex": "I sell apples, peaches and cherries. I have twenty peaches today."
+   "ex": "Apples, peaches and cherries. Twenty peaches are here today."
   }
  ]
 };

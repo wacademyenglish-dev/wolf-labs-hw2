@@ -20,10 +20,10 @@ var L = [
 var PORTAS = [
   { k: 'A OR AN?', tema: 'a / an by the sound', t: 'Say a or an: umbrella, bag, egg, house, orange, hour.', ex: 'an umbrella, a bag, an egg, a house, an orange, an hour.', trap: 'an before a vowel SOUND: an hour (h is silent).' },
   { k: 'SMALL BLACK BAG', tema: 'size + color + thing', t: 'Describe two things near you. Size, color, thing.', ex: 'a small black phone and a big white cup.', trap: '“a bag black” → a black bag. Adjective first.' },
-  { k: 'BUT OR AND?', tema: 'but × and', t: 'Say one sentence about your phone with and, and one with but.', ex: 'My phone is old and slow, but it’s my favorite.', trap: 'but = a surprise, the other side. “more cheap” → cheaper.' },
+  { k: 'BUT OR AND?', tema: 'but × and', t: 'Say one sentence about your phone with and, and one with but.', ex: 'My phone is old and slow, but it’s my favorite.', trap: 'but = a surprise, the other side.' },
   { k: 'ONE, TWO', tema: 'the plural', t: 'Say the plural: book, box, baby, child, person, foot.', ex: 'books, boxes, babies, children, people, feet.', trap: 'children / people: no -s. Not “childrens”.' },
   { k: 'THIS OR THESE?', tema: 'this / that / these / those', t: 'Point and say: one thing near you, two things near you, one thing far.', ex: 'This is my pen. These are my keys. That is the door.', trap: 'these + are (plural). “this keys” → these keys.' },
-  { k: 'WHO IS IT?', tema: 'describing people', t: 'Describe a person in your family in two short lines.', ex: 'My brother is tall and funny. He has short black hair.', trap: 'Adjective before the noun: short black hair.' }
+  { k: 'WHO IS IT?', tema: 'describing people', t: 'Describe a person in your family in two short lines.', ex: 'My brother is tall and funny. His hair is short and black.', trap: 'is + adjective: tall, funny, short, black.' }
 ];
 
 var MISSAO = { pede: 'AT THE DESK · ASK FIVE QUESTIONS', quem: 'owner', depois: 'Give the things back',
@@ -38,24 +38,24 @@ var MISSAO = { pede: 'AT THE DESK · ASK FIVE QUESTIONS', quem: 'owner', depois:
     { k: 'OWNER 2', tag: 'TICKET 32', ele: 'these', v: { coisa: 'keys', quantos: 'three', tam: 'small', cor: 'silver', velho: 'new' }, diz: '“They’re keys.” · “Three keys.” · “They’re small.” · “They’re silver.” · “They’re new.”', frase: 'three small silver keys' },
     { k: 'OWNER 3', tag: 'TICKET 33', ele: 'this', v: { coisa: 'a suitcase', quantos: 'one', tam: 'big', cor: 'blue', velho: 'new' }, diz: '“It’s a suitcase.” · “Just one.” · “It’s very big.” · “It’s blue.” · “It’s new and expensive!”', frase: 'a big blue suitcase' }],
   relato: { titulo: 'THE OWNER IS BACK · GIVE IT BACK',
-    pede: function (x) { return 'Hello! I’m here for ' + x.tag.toLowerCase() + '. Do you have my things?'; },
+    pede: function (x) { return 'Hello! I’m here for ' + x.tag.toLowerCase() + '. Are my things here?'; },
     chips: function (x) { return x.ele === 'these' ? ['Are these your …?', 'Here you are.', 'They are …'] : ['Is this your …?', 'Here you are.', 'It is a …']; },
     modelo: function (x) { return x.ele === 'these' ? 'Are these your keys? Three small silver keys. Here you are!' : 'Is this your ' + x.v.coisa.replace(/^an? /, '') + '? ' + x.frase.charAt(0).toUpperCase() + x.frase.slice(1) + '. Here you are!'; } },
   nao: { an: '“a umbrella” → AN umbrella. A vowel sound: an.', ordem: '“a umbrella black” → a black umbrella. Color first.', these: '“this keys” → THESE keys. Plural: these.' },
   fim: 'Three owners, three happy endings. a / an, size + color + thing, plurals and this / these: all of Unit 2 at one desk.' };
 
-var CARTAO = { ph: 'It’s a small red backpack.\nIt’s new.\nIn the backpack there are two books\nand an old phone.', rot: 'My lost thing',
-  chips: ['It’s a ', 'It’s an ', ' small ', ' big ', 'It’s ', 'They’re ', ' new', ' old', 'There are two ', ' and an '],
+var CARTAO = { ph: 'It’s a small red backpack.\nIt’s new.\nTwo books and an old phone\nare in the backpack.', rot: 'My lost thing',
+  chips: ['It’s a ', 'It’s an ', ' small ', ' big ', 'It’s ', 'They’re ', ' new', ' old', 'Two ', ' and an '],
   perg: ['YOUR LOST THING', 'What is it? Size? Color? New or old? What’s inside?'],
   exemploRot: 'TICKET 34', exemplo: [['THING', 'a backpack'], ['HOW MANY', 'one'], ['SIZE', 'small'], ['COLOR', 'red'], ['NEW / OLD', 'new']],
-  modelo: 'It’s a small red backpack. It’s new.<br>In the backpack there are two books and an old phone.' };
+  modelo: 'It’s a small red backpack. It’s new.<br>Two books and an old phone are in the backpack.' };
 
 var CONVERSA = [
-  { q: 'What is in your bag right now?', f: 'Your bag: what’s in it?', voce: ['There is a …', 'I have a … and an …'], ex: 'My phone, a black pen and an apple.' },
-  { q: 'Do you lose things? What things?', f: 'Do you lose keys? Phones?', voce: ['Yes, I lose my …', 'No, never.'], ex: 'Yes! I lose my keys every week.' },
+  { q: 'What is in your bag right now?', f: 'Your bag: what’s in it?', voce: ['A … is in my bag.', 'A … and an … are in my bag.'], ex: 'My phone, a black pen and an apple.' },
+  { q: 'Your keys, your phone: which is always lost?', f: 'Keys? Phone? Wallet?', voce: ['My … is always lost.', 'My … are always lost.'], ex: 'My keys are always lost!' },
   { q: 'What is your favorite thing in your house? Describe it.', f: 'Your favorite thing?', voce: ['My favorite thing is …', 'It’s a big / small …'], ex: 'My sofa. It’s a big blue sofa, and it’s very old.' },
-  { q: 'Describe your best friend.', f: 'Your friend: tall? short?', voce: ['He / She is …', 'He / She has … hair.'], ex: 'She is short and funny. She has long black hair.' },
-  { q: 'How many people are in your family?', f: 'Your family: how many?', voce: ['There are … people.', 'I have two …'], ex: 'Five people. I have two children.' }
+  { q: 'Describe your best friend.', f: 'Your friend: tall? short?', voce: ['He / She is …', 'His / Her hair is …'], ex: 'She is short and funny. Her hair is long and black.' },
+  { q: 'How many people are in your family?', f: 'Your family: how many?', voce: ['… people.', '… children.'], ex: 'Five people. Two children.' }
 ];
 
 var PODE = [
@@ -68,5 +68,5 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 var BINGO = [['a or an: umbrella', 'an umbrella'], ['Plural: child', 'children'], ['Describe your phone: size + color', 'a small black phone'], ['Plural: box', 'boxes'], ['this or these: ___ keys', 'these keys'], ['and or but: It’s old, ___ I love it.', 'but'], ['Plural: person', 'people'], ['a or an: hour', 'an hour'], ['Point far, one thing: ___ door', 'that door']];
-var ERROS = { tipo: 'nota', rot: 'A LOST ITEM REPORT · TICKET 35', partes: ['I lost ', ['a umbrella', 'an umbrella', 'A vowel sound: an.'], ' and two ', ['keys silver', 'silver keys', 'The color comes first.'], '. In my bag there are three ', ['book', 'books', 'Three: plural.'], ' and ', ['a old phone', 'an old phone', 'old starts with a vowel sound: an.'], '. ', ['This keys', 'These keys', 'Plural: these.'], ' are very important!'] };
-var ESCOLHA = [{ a: 'a big old house', b: 'a small new apartment', chips: ['I prefer …', 'because it’s …'], ex: 'A small new apartment, because it’s easy to clean.' }, { a: 'two cats', b: 'one big dog', chips: ['I want …', 'because …'], ex: 'One big dog, because dogs are fun.' }, { a: 'a red car', b: 'a black car', chips: ['A … car.', 'because …'], ex: 'A red car, because it’s happy!' }, { a: 'three children', b: 'no children', chips: ['I want …', 'because …'], ex: 'Three children! I love big families.' }];
+var ERROS = { tipo: 'nota', rot: 'A LOST ITEM REPORT · TICKET 35', partes: ['I lost ', ['a umbrella', 'an umbrella', 'A vowel sound: an.'], ' and two ', ['keys silver', 'silver keys', 'The color comes first.'], '. In my bag: three ', ['book', 'books', 'Three: plural.'], ' and ', ['a old phone', 'an old phone', 'old starts with a vowel sound: an.'], '. ', ['This keys', 'These keys', 'Plural: these.'], ' are very important!'] };
+var ESCOLHA = [{ a: 'a big old house', b: 'a small new apartment', chips: ['A … , because it’s …'], ex: 'A small new apartment, because it’s easy.' }, { a: 'two cats', b: 'one big dog', chips: ['… , because …'], ex: 'One big dog, because dogs are fun.' }, { a: 'a red car', b: 'a black car', chips: ['A … car.', 'because …'], ex: 'A red car, because it’s happy!' }, { a: 'three children', b: 'no children', chips: ['… children, because …'], ex: 'Three children! Big families are great.' }];

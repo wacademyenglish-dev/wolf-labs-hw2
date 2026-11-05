@@ -22,8 +22,8 @@ window.WL_LORE = {
     { k: 'THE DOCTOR', nome: 'The Doctor', dur: 'THE BAD NEWS', x: 72, y: 26, img: 'ficha',
       h: 'Very bad news',
       t: 'One day, Walter goes to the doctor. The news is very bad: he is very sick. He thinks about his family. Who pays for the house?',
-      q: 'Who is the most important person in your life? Why?', st: ['The most important person is my …', 'because …'],
-      ex: 'The most important person is my daughter, because she is my best friend.' },
+      q: 'Who is an important person in your life? Why?', st: ['An important person is my …', 'because …'],
+      ex: 'An important person is my daughter, because she is my best friend.' },
     { k: 'THE RV', nome: 'The RV', dur: 'A NEW PARTNER', x: 78, y: 66, img: 'cena2-estrada',
       h: 'An old RV and an old student',
       t: 'Walter decides to do something very bad to get money. It is a crime. His partner is Jesse, an old student.',
@@ -32,7 +32,7 @@ window.WL_LORE = {
     { k: 'THE ROAD', nome: 'The Road', dur: 'THE FIRST SCENE', x: 30, y: 76, img: 'cena5-sirene',
       h: 'Sirens on the road',
       t: 'The first scene is the end of the first story. The RV is on a desert road. Walter hears sirens.',
-      q: 'If you record a message for your family, what do you say first?', st: ['My name is …', 'I want to say …'],
+      q: 'You record a message for your family. What do you say first?', st: ['My name is …', 'I want to say …'],
       ex: 'My name is Ana.' }
   ]
 };

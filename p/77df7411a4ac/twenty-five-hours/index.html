@@ -78,7 +78,7 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'face', tipo: 'And you?', q: 'What time is it now? In words.',
     opc: ['Morning', 'Afternoon', 'Evening'], st: ['It is half past …', 'It is quarter to …'],
     ex: 'It is quarter past seven, in the evening.', push: 'Are you hungry? Yes or no?' },
-  { cena: 'quadro', tipo: 'Would you rather', q: 'Day train or night train?',
+  { cena: 'quadro', tipo: 'Choose one', q: 'Day train or night train?',
     opc: ['Day train', 'Night train'], st: ['The day train. It leaves at … AM.', 'The night train. It leaves at … PM.'],
     ex: 'The night train! It leaves at eleven PM, and I sleep.', push: 'Ten hours? Yes or no?' },
   { cena: 'dia', tipo: 'What if', q: 'One more hour a day. When?',
@@ -369,10 +369,10 @@ window.WL_PADRAO = {
      "a": "The day train",
      "b": "The night train",
      "fa": [
-      "The day train. I can see the view."
+      "The day train. I see the view."
      ],
      "fb": [
-      "The night train. I can sleep on it."
+      "The night train. I sleep on it."
      ]
     }
    ],
@@ -389,11 +389,11 @@ window.WL_PADRAO = {
    "prof": "Be the station voice. If they say a number, ask: in words?",
    "passos": [
     {
-     "q": "Where are you going?",
+     "q": "Where is your train?",
      "st": [
-      "I’m going to …"
+      "It goes to …"
      ],
-     "ex": "I’m going to the mountains."
+     "ex": "It goes to the mountains."
     },
     {
      "q": "What time does your train leave?",

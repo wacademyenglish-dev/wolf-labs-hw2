@@ -54,7 +54,7 @@ var LEO = [
   { leo: 'What’s this?', img: 'xicara', ok: 'This is my cup. It’s tea.', dica: 'one · near' },
   { leo: 'What are these?', img: 'tenis', ok: 'These are my shoes.', dica: 'more · near' },
   { leo: 'Is that my present?', img: 'presente', ok: 'No! That’s… a box for books.', dica: 'one · far' },
-  { leo: 'Can I have those socks?', img: 'meias', ok: 'Yes, those are your socks. Go to bed!', dica: 'more · far' }
+  { leo: 'Are those my socks?', img: 'meias', ok: 'Yes, those are your socks. Go to bed!', dica: 'more · far' }
 ];
 
 var LUGARES = [
@@ -68,11 +68,11 @@ var APONTA = [{ n: 1, d: 'perto', ok: 'this' }, { n: 3, d: 'longe', ok: 'those' 
 var PERG_A = { this: 'What’s this?', that: 'What’s that?', these: 'What are these?', those: 'What are those?' };
 
 var PLANO = [
-  { q: 'What is a nice present for you?', fup: 'Do you still have it? Show it if it is near you!', st: ['A nice present is …'], ex: 'A guitar! A guitar is a nice present.' },
-  { q: 'A present is in your home. Where is it? Guess!', fup: 'Say it: I’d hide it in that … / under this …', st: ['I’d hide it in that …', 'under this …'], ex: 'I’d hide it in that box on the shelf.' },
-  { q: 'Do you like surprises?', fup: 'Do you like surprises?', st: ['I love surprises …', 'I don’t like …'], ex: 'Yes! I love surprises. Parties are great.' },
+  { q: 'What is a nice present for you?', fup: 'Is it near you? Show it!', st: ['A nice present is …'], ex: 'A guitar! A guitar is a nice present.' },
+  { q: 'A present is in your home. Where is it? Guess!', fup: 'Say it: It’s in that … / under this …', st: ['It’s in that …', 'under this …'], ex: 'It’s in that box on the shelf.' },
+  { q: 'Surprises: nice or not nice?', fup: 'And parties?', st: ['Surprises are …', 'Parties are …'], ex: 'Surprises are nice. Parties are great.' },
   { q: 'Look around your room. What is your favorite thing near you?', fup: 'And far from you?', st: ['This is my favorite …', 'That … over there'], ex: 'This is my favorite pen. And that plant over there.' },
-  { q: 'How do you celebrate your birthday?', fup: 'Who is with you?', st: ['I have dinner with …'], ex: 'I have dinner with my family.' },
+  { q: 'Your birthday: a dinner or a party?', fup: 'Who is with you?', st: ['A … with …'], ex: 'A dinner with my family.' },
   { q: 'Your turn. Ask me two questions about the things in my room.', fup: 'Use What’s that? and What are those?', st: ['What’s that?', 'What are those?'], ex: 'What’s that on the wall? What are those?' }
 ];
 

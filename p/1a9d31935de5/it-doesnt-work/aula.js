@@ -21,7 +21,7 @@
 var L = [
   { k: 'capa', est: null, img: 'salao' },
   { k: 'casa', est: 'o', min: 7, img: 'salao', rot: 'I · Your House', t: 'Before the laundromat: your own house.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
-  { k: 'maquinas', est: 'o', min: 7, img: 'salao', rot: 'II · Eight Machines', t: 'Eight machines. Six are running. Two have a sign.', p: 'Tap each machine. Read its line out loud.' },
+  { k: 'maquinas', est: 'o', min: 7, img: 'salao', rot: 'II · Eight Machines', t: 'Eight machines. Six work. Two have a sign.', p: 'Tap each machine. Read its line out loud.' },
   { k: 'move', est: 'f', min: 6, img: 'caixa', rot: 'III · The S Moves', t: 'The S never disappears. It moves.', p: 'Say the top line. Tap the S. Watch it move into DOES. Say the new line.' },
   { k: 'conta', est: 'f', min: 6, img: 'salao', rot: 'IV · One, or More?', t: 'Count the machines. The count chooses the word.', p: 'Tap a group, then its box. One thing: doesn’t. More than one: don’t. Then say the lines.' },
   { k: 'dois', est: 'f', min: 6, img: 'caixa', rot: 'V · Never Two', t: 'Each line has the S in two places.', p: 'Say the line. Tap the word with the extra S. Then say it right.' },
@@ -41,7 +41,7 @@ var CASA = [
 ];
 
 var MAQ = [
-  { n: '01', luz: 1, fr: 'Machine one works. It’s running now.' },
+  { n: '01', luz: 1, fr: 'Machine one works. It gets hot.' },
   { n: '02', luz: 1, fr: 'Machine two works.' },
   { n: '03', luz: 0, fr: 'Machine three doesn’t work. It doesn’t take coins.', aviso: 'NO COINS' },
   { n: '04', luz: 1, fr: 'Machine four works, but it doesn’t get hot.' },

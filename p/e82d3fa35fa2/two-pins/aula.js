@@ -50,7 +50,7 @@ var TR = {
 /* I · as três perguntas do quadro: fala primeiro, o Check mostra um exemplo e os alfinetes aparecem */
 var ABRE = [
   { pista: '<span class="ano">The left pin</span>Where are you from?', resp: 'For example: <b>I’m from</b> Denver. It’s a big city.', depois: 'Is it a big city or a small town?' },
-  { pista: '<span class="ano">The right pin</span>Where do you live now?', resp: 'For example: <b>I live in</b> Chicago now. I like it.', depois: 'Do you like it there?' },
+  { pista: '<span class="ano">The right pin</span>Where do you live now?', resp: 'For example: <b>I live in</b> Chicago now. I like it.', depois: 'Is it nice there?' },
   { pista: '<span class="ano">The string</span>Say both pins in one line.', resp: 'For example: <b>I’m from</b> Denver, and <b>I live in</b> Chicago.', depois: 'Same city or two cities?' }
 ];
 
@@ -84,10 +84,10 @@ var PRESA = 'I’m <b>from</b> Oxford · the old city<br>I live <b>in</b> London
 var PERG = [
   { pista: '“I’m from Mexico.”', resp: 'Where <b>are</b> you <b>from</b>?', depois: 'Now you: where are you from?' },
   { pista: '“In a small town near Paris.”', resp: 'Where <b>do</b> you <b>live</b>?', depois: 'Now you: where do you live?' },
-  { pista: '“I live in Tokyo now.”', resp: 'Where <b>do</b> you <b>live</b>?', depois: 'Do you like your city?' },
+  { pista: '“I live in Tokyo now.”', resp: 'Where <b>do</b> you <b>live</b>?', depois: 'Is your city big or small?' },
   { pista: '“Originally from Ghana.”', resp: 'Where <b>are</b> you <b>from</b>?', depois: 'Where is your family from?' },
-  { pista: '“Near the station.”', resp: 'Where <b>do</b> you <b>live</b>?', depois: 'Where is the station in your city?' },
-  { pista: '“She’s from Brazil, but she lives in Rome.”', resp: 'Where <b>is</b> she <b>from</b>, and where <b>does</b> she <b>live</b>?', depois: 'Who do you know in another country?' }
+  { pista: '“Near the station.”', resp: 'Where <b>do</b> you <b>live</b>?', depois: 'Is your house big or small?' },
+  { pista: '“She’s from Brazil, but she lives in Rome.”', resp: 'Where <b>is</b> she <b>from</b>, and where <b>does</b> she <b>live</b>?', depois: 'Where is your best friend from?' }
 ];
 
 var CASAS = [

@@ -17,8 +17,8 @@ var L = [
   { k: 'buracos', est: 'f', min: 6, img: 'mesa', rot: 'II · Four Holes', t: 'Four short conversations. The English is right, and all four died.', p: 'Read both lines out loud. Then pick what sends the ball back.' },
   { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'III · Two Ways to Send It Back', t: 'A question, or a sentence? That decides the return.', p: 'Read the cards out loud. Then fix the four traps.' },
   { k: 'eco', est: 'o', min: 7, img: 'mesa', rot: 'IV · The Echo', t: 'The best return: their verb, back as a question.', p: 'Pick the echo. Then pick how the voice goes. Then say it.' },
-  { k: 'voltou', est: 'l', min: 7, img: 'fila', rot: 'V · Is It Back?', t: 'Six recordings. The same answer twice: once dead, once alive.', p: 'Listen to the end. Is there a question back?' },
-  { k: 'rally', est: 'o', min: 7, img: 'sala', rot: 'VI · Rally with Strangers', t: 'Eight strangers start a conversation. Keep the ball in play.', p: 'Play the stranger. Answer, and send it back. Every return is one more hit.' },
+  { k: 'voltou', est: 'l', min: 7, img: 'fila', rot: 'V · Is It Back?', t: 'Four recordings. The same answer twice: once dead, once alive.', p: 'Listen to the end. Is there a question back?' },
+  { k: 'rally', est: 'o', min: 7, img: 'sala', rot: 'VI · Rally with Strangers', t: 'Seven strangers start a conversation. Keep the ball in play.', p: 'Play the stranger. Answer, and send it back. Every return is one more hit.' },
   { k: 'fila', est: 'o', min: 7, extra: 1, img: 'fila', rot: 'VII · The Café Queue', t: 'A long queue, four topics, you and your teacher.', p: 'Your teacher opens a topic. Keep it going for four hits.' },
   { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'VIII · Your Small Talk', t: 'Write a small talk where the ball never falls.', p: 'Six lines, you and a stranger. Every answer sends the ball back. The red line watches the returns. It goes to your My notes.' }
 ];
@@ -26,64 +26,61 @@ var L = [
 /* I · quatro segundos */
 var SILENCIO = [
   { q: 'Where are you from?', morto: 'The ball is on the floor. The conversation stops.', ex: 'I’m from Curitiba. And you?' },
-  { q: 'Do you live near here?', morto: 'Again, the ball is on the floor.', ex: 'Yes, ten minutes away. Do you?' },
-  { q: 'What do you do?', morto: 'Three times. Always right after your answer.', ex: 'I’m a designer. What about you?' }
+  { q: 'Are you from around here?', morto: 'Again, the ball is on the floor.', ex: 'Yes, I am. Are you?' },
+  { q: 'Are you a student?', morto: 'Three times. Always right after your answer.', ex: 'No, I’m a designer. What about you?' }
 ];
 
 /* II · os buracos: a primeira opção é a certa */
 var BURACOS = [
-  { a: 'Where are you from?', b: 'I’m from Lima.', o: ['And you?', 'Are you?', 'Can you?'], w: 'They asked you: answer, then send it back: And you? or What about you?' },
-  { a: 'Do you live near here?', b: 'Yes, two streets away.', o: ['Do you?', 'Are you?', 'Can you?'], w: 'The echo copies the verb of the question: DO you?' },
-  { a: 'I work at the hospital.', b: 'Oh, nice.', o: ['What about you?', 'Can you?', 'Am you?'], w: 'Send it back: What about you? (Can you? has the wrong verb.)' },
-  { a: 'I’ve got two kids.', b: 'That’s a lot!', o: ['Have you?', 'Are you?', 'Got you?'], w: 'I’ve got → HAVE you? The echo keeps have.' }
+  { a: 'Where are you from?', b: 'I’m from Lima.', o: ['And you?', 'Are you?', 'Is you?'], w: 'They asked you: answer, then send it back: And you? or What about you?' },
+  { a: 'Are you a student?', b: 'No, I’m a nurse.', o: ['What about you?', 'Is you?', 'Am you?'], w: 'Send it back: What about you? or And you?' },
+  { a: 'I’m a nurse.', b: 'Oh, nice.', o: ['What about you?', 'Is you?', 'Am you?'], w: 'Send it back: What about you?' },
+  { a: 'I’m very tired today.', b: 'Oh, sorry.', o: ['Are you?', 'Is you?', 'Am you?'], w: 'I’m → ARE you? The echo keeps the verb to be.' }
 ];
 
 /* IV · o eco */
 var ECOS = [
-  { f: 'I’m from Rio.', ok: 'Are you?', o: ['Are you?', 'Do you?', 'Am you?'], n: 'am becomes ARE: now you ask about the other person.' },
-  { f: 'I work at night.', ok: 'Do you?', o: ['Do you?', 'Work you?', 'Are you?'], n: 'A normal present verb takes DO.' },
-  { f: 'I’m a nurse.', ok: 'Are you?', o: ['Are you?', 'Do you?', 'Am you?'], n: 'am becomes ARE: now you ask about the other person.' },
-  { f: 'I like pizza.', ok: 'Do you?', o: ['Do you?', 'Like you?', 'Are you?'], n: 'A normal present verb takes DO.' },
-  { f: 'I’m tired today.', ok: 'Are you?', o: ['Are you?', 'Do you?', 'Tired you?'], n: 'am becomes ARE.' },
-  { f: 'I live near here.', ok: 'Do you?', o: ['Do you?', 'Live you?', 'Are you?'], n: 'A normal present verb takes DO.' }
+  { f: 'I’m from Rio.', ok: 'Are you?', o: ['Are you?', 'Is you?', 'Am you?'], n: 'am becomes ARE: now you ask about the other person.' },
+  { f: 'My sister is a nurse.', ok: 'Is she?', o: ['Is she?', 'Are she?', 'Am she?'], n: 'IS stays IS: now you ask about her.' },
+  { f: 'I’m a nurse.', ok: 'Are you?', o: ['Are you?', 'Is you?', 'Am you?'], n: 'am becomes ARE: now you ask about the other person.' },
+  { f: 'I’m a student.', ok: 'Are you?', o: ['Are you?', 'Is you?', 'Am you?'], n: 'am becomes ARE: now you ask about the other person.' },
+  { f: 'I’m tired today.', ok: 'Are you?', o: ['Are you?', 'Is you?', 'Tired you?'], n: 'am becomes ARE.' },
+  { f: 'My brother is twenty.', ok: 'Is he?', o: ['Is he?', 'Are he?', 'Am he?'], n: 'IS stays IS: now you ask about him.' }
 ];
 
 /* V · voltou? */
 var VOLTOU = [
   { au: 'a1.mp3', perg: 'Where are you from?', t: 'I’m from Recife.', volta: 0 },
   { au: 'a2.mp3', perg: 'Where are you from?', t: 'I’m from Recife. And you?', volta: 1 },
-  { au: 'a3.mp3', perg: 'Do you live near here?', t: 'Yeah, two streets away.', volta: 0 },
-  { au: 'a4.mp3', perg: 'Do you live near here?', t: 'Yeah, two streets away. Do you?', volta: 1 },
   { au: 'a5.mp3', perg: 'I work at the hospital.', t: 'Oh, nice.', volta: 0 },
   { au: 'a6.mp3', perg: 'I work at the hospital.', t: 'Oh, nice. What about you?', volta: 1 }
 ];
 
 /* VI · os estranhos */
 var ESTRANHOS = [
-  { au: 's1.mp3', k: 'THE WAITING ROOM', t: 'Terrible weather today, isn’t it?', ex: 'Yes, it is! I hate the rain. Do you?' },
-  { au: 's2.mp3', k: 'THE BUS STOP', t: 'Have you been waiting long?', ex: 'No, only ten minutes. And you?' },
+  { au: 's1.mp3', k: 'THE WAITING ROOM', t: 'Terrible weather today, isn’t it?', ex: 'Yes, it is! Very bad. And you?' },
   { au: 's3.mp3', k: 'THE NEW CAFÉ', t: 'Is this your first time here?', ex: 'Yes, it is. What about you?' },
-  { au: 's4.mp3', k: 'THE MARKET', t: 'That’s a nice bag. Where’s it from?', ex: 'Thanks! It’s from a market in Recife. Do you like markets?' },
+  { au: 's4.mp3', k: 'THE MARKET', t: 'That’s a nice bag. Where’s it from?', ex: 'Thanks! It’s from a market in Recife. And you?' },
   { au: 's5.mp3', k: 'THE PARK', t: 'Are you from around here?', ex: 'No, I’m from Rio. And you?' },
-  { au: 's6.mp3', k: 'THE BANK QUEUE', t: 'Long queue this morning.', ex: 'Yes, very long! Do you come here every week?' },
-  { au: 's7.mp3', k: 'THE GYM', t: 'Is it always this busy?', ex: 'I don’t know, it’s my first week. Do you come here a lot?' },
-  { au: 's8.mp3', k: 'THE OFFICE KITCHEN', t: 'I hate Mondays. You?', ex: 'Me too! What about Fridays? Do you like Fridays?' }
+  { au: 's6.mp3', k: 'THE BANK QUEUE', t: 'Long queue this morning.', ex: 'Yes, very long! What about you?' },
+  { au: 's7.mp3', k: 'THE GYM', t: 'Is it always this busy?', ex: 'No, it’s my first week! And you?' },
+  { au: 's8.mp3', k: 'THE OFFICE KITCHEN', t: 'I hate Mondays. You?', ex: 'Me too! Fridays are good. And you?' }
 ];
-var DEVOLVE = ['And you?', 'What about you?', 'Do you?', 'Are you?', 'Have you?', 'Can you?', 'Did you?'];
+var DEVOLVE = ['And you?', 'What about you?', 'Are you?', 'Is it?', 'Is she?'];
 
 /* VII · a fila do café */
 var TEMAS = [
-  { k: 'THE WEATHER', abre: 'Cold today, isn’t it?', ex: 'Yes, it is! I love cold days. Do you?' },
+  { k: 'THE WEATHER', abre: 'Cold today, isn’t it?', ex: 'Yes, it is! Very cold. And you?' },
   { k: 'WORK OR STUDY', abre: 'Are you a student?', ex: 'No, I’m not. I work at a bank. What about you?' },
-  { k: 'THE WEEKEND', abre: 'I love the beach on Saturdays.', ex: 'Do you? Me too! Which beach?' },
-  { k: 'FOOD', abre: 'I always get the chocolate cake here.', ex: 'Do you? I always get the cheese bread. And you, do you like coffee?' }
+  { k: 'THE WEEKEND', abre: 'I’m at the beach on Saturdays.', ex: 'Are you? Me too! Which beach?' },
+  { k: 'FOOD', abre: 'The chocolate cake is great here.', ex: 'Is it? Nice! What about the cheese bread?' }
 ];
 
 /* ---------- o corretor (nível 1: a regra desta aula) ---------- */
 WolfCorretor.regras = function (frase, m) {
   var A = WolfCorretor.acha, out = [];
   out = out.concat(A(/\b(am you)\b/g, m, 1, 'The echo of “I am” is ARE you?'));
-  out = out.concat(A(/(?:^\s*|[.!?]\s*|\b(?:oh|really|wow|yes|no),?\s+)\b((?:work|live|like|love|go|play|speak|study|eat|drink|want|need|know|cook|swim|drive|lived|worked|went|liked|got|going) you)\s*\?/g, m, 1, 'Echo with a helper: Are you? Do you?'));
+  out = out.concat(A(/(?:^\s*|[.!?]\s*|\b(?:oh|really|wow|yes|no),?\s+)\b((?:work|live|like|love|go|play|speak|study|eat|drink|want|need|know|cook|swim|drive|lived|worked|went|liked|got|going) you)\s*\?/g, m, 1, 'Echo with the verb to be: Are you? Is it?'));
   out = out.concat(A(/\b(and you|what about you|how about you)\s*(?:[.!]|$)/g, m, 1, 'Send it back as a question: And you?'));
   out = out.concat(A(/\b(you also\?|you too\?)/g, m, 1, 'Send it back: And you? / What about you?'));
   return out;
@@ -109,7 +106,7 @@ var R = {};
 R.capa = function () {
   return '<div class="capa"><div class="lado-a"><span class="kick">MAIN SERIES · TABLE TENNIS · A1</span><h1>And <b>You?</b></h1>'
     + '<p class="sub">You can answer any question. The game is sending the ball back.</p>'
-    + '<div class="chipsx"><span class="pilula">And you? · What about you?</span><span class="pilula">Do you? · Are you? · Have you?</span><span class="pilula">Live Class · W·O·L·F</span></div>'
+    + '<div class="chipsx"><span class="pilula">And you? · What about you?</span><span class="pilula">Are you? · Is it? · Is she?</span><span class="pilula">Live Class · W·O·L·F</span></div>'
     + '<button type="button" class="btn cheio" data-a="ir" data-n="1">Serve</button>' + faixaLive() + '</div>'
     + '<div class="foto"><img src="' + img('pingpong') + '" alt="A table tennis table at night, the ball in the air"></div></div>';
 };
@@ -133,12 +130,12 @@ R.buracos = function (c) {
 R.regra = function (c) {
   var cartoes = '<div class="cartoes">'
     + '<div class="cr vd"><small>1 · THEY ASKED YOU</small><h3>answer + <em>And you?</em> / <em>What about you?</em></h3><div class="ex"><span>I’m from Lima. <u>And you?</u></span></div></div>'
-    + '<div class="cr vd"><small>2 · A SENTENCE</small><h3>the echo: <em>copy their verb</em></h3><div class="ex"><span>I’m tired. → <u>Are you?</u></span><span>I work at night. → <u>Do you?</u></span></div></div>'
-    + '<div class="cr vd"><small>3 · THE HELPER</small><h3><em>am → are</em> · <em>work → do</em> · <em>can → can</em></h3><div class="ex"><span>I can swim. → <u>Can you?</u></span><span>I’ve got a dog. → <u>Have you?</u></span></div></div>'
+    + '<div class="cr vd"><small>2 · A SENTENCE</small><h3>the echo: <em>copy their verb</em></h3><div class="ex"><span>I’m tired. → <u>Are you?</u></span><span>She’s a nurse. → <u>Is she?</u></span></div></div>'
+    + '<div class="cr vd"><small>3 · THE VERB TO BE</small><h3><em>am → are</em> · <em>is → is</em></h3><div class="ex"><span>I’m a nurse. → <u>Are you?</u></span><span>It’s cold. → <u>Is it?</u></span></div></div>'
     + '<div class="cr vd"><small>4 · THE VOICE</small><h3>the echo goes <em>up</em> ↗</h3><div class="ex"><span>Are you? ↗ = tell me more!</span></div></div></div>';
   return cab(c) + cartoes + armas([
     ['AM YOU', 'I’m from Rio. — Am you?', 'I’m from Rio. — Are you?', 'Now it’s about the other person: ARE you?'],
-    ['THE WRONG VERB', 'I work at night. — Are you?', 'I work at night. — Do you?', 'A normal verb takes DO.'],
+    ['THE WRONG VERB', 'She’s a nurse. — Are she?', 'She’s a nurse. — Is she?', 'IS stays IS: you ask about her.'],
     ['THE NAME', 'I’m Ana. — Are you?', 'I’m Ana. — Nice to meet you, Ana. I’m …', 'A name: say yours back.'],
     ['NO RETURN', 'Where are you from? — I’m from Recife.', 'I’m from Recife. And you?', 'An answer alone drops the ball.']], 'THE FOUR TRAPS · TAP TO FIX');
 };
@@ -155,7 +152,7 @@ R.eco = function (c) {
 };
 R.voltou = function (c) {
   var v = S.vo, n = v.n, fim = n >= VOLTOU.length, x = VOLTOU[Math.min(n, VOLTOU.length - 1)];
-  if (fim) return cab(c) + trilha(VOLTOU, n) + mesa('vo', 3, 0) + '<div class="foco"><div class="pergunta vd"><small>SIX RECORDINGS</small><h2>Same voice, same answer. Two words decide if the ball comes back.</h2></div></div>';
+  if (fim) return cab(c) + trilha(VOLTOU, n) + mesa('vo', 2, 0) + '<div class="foco"><div class="pergunta vd"><small>FOUR RECORDINGS</small><h2>Same voice, same answer. Two words decide if the ball comes back.</h2></div></div>';
   var certo = v.esc === x.volta;
   return cab(c) + trilha(VOLTOU, n) + mesa('vo', certo && x.volta ? 1 : 0, certo && !x.volta ? 1 : 0) + '<div class="foco"><div class="conversa vd"><div class="bolha a">' + x.perg + '</div><div class="bolha b toca">' + tocar(x.au) + '<span>' + (certo ? x.t : 'Play the answer.') + '</span></div></div>'
     + (certo ? '<p class="aprova">GOT IT. ' + (x.volta ? 'The last words send it back.' : 'No question at the end: the ball is down. Now say it alive: “' + x.t + ' And you?”') + '</p><div style="text-align:center"><button type="button" class="btn" data-a="vo-prox">Next recording</button></div>'
@@ -164,7 +161,7 @@ R.voltou = function (c) {
 };
 R.rally = function (c) {
   var r = S.ra, n = r.n, fim = n >= ESTRANHOS.length, x = ESTRANHOS[Math.min(n, ESTRANHOS.length - 1)];
-  if (fim) return cab(c) + trilha(ESTRANHOS, n) + mesa('ra', r.hits, 0, ['YOU', 'THE STRANGERS']) + '<div class="foco"><div class="pergunta vd"><small>EIGHT STRANGERS</small><h2>Longest rally today: ' + r.melhor + ' hits. Every hit is an answer plus a return.</h2></div></div>';
+  if (fim) return cab(c) + trilha(ESTRANHOS, n) + mesa('ra', r.hits, 0, ['YOU', 'THE STRANGERS']) + '<div class="foco"><div class="pergunta vd"><small>SEVEN STRANGERS</small><h2>Longest rally today: ' + r.melhor + ' hits. Every hit is an answer plus a return.</h2></div></div>';
   var foi = r.foi[n];
   return cab(c) + trilha(ESTRANHOS, n) + '<div class="mesa-rally">' + mesa('ra', r.hits, r.caiu, ['YOU', x.k]) + '<div class="lado-rally"><div class="toca-linha vd">' + tocar(x.au) + '<span><small>' + x.k + '</small>' + (foi || r.caiu ? '“' + x.t + '”' : 'Play the stranger.') + '</span></div>'
     + '<div class="diz"><h5>SEND IT BACK WITH</h5><div class="chips">' + DEVOLVE.map(function (d) { return '<span class="chip palavra">' + d + '</span>'; }).join('') + '</div></div>'
@@ -185,10 +182,10 @@ R.fila = function (c) {
     + '</div></div>';
 };
 R.fim = function (c) {
-  return cab(c) + '<div class="fim">' + escritaFinal('fim', (S.txt || {}).fim || '', (S.salvo || {}).fim, 'A: Long queue today, isn’t it?\nB: Yes, it is! Do you come here a lot?\nA: Every morning. What about you?', 'Your small talk',
-    ['And you? ', 'What about you? ', 'Do you? ', 'Are you? ', 'Have you? ', 'Did you? '], ['YOUR SMALL TALK', 'Six lines, you and a stranger. The ball never falls: every answer sends it back.'])
-    + '<div class="lado-fim"><div class="grande vd"><span><b>And you?</b> · a question</span><span><b>Do you?</b> · a sentence</span><span><b>Are you?</b> ↗ · tell me more</span><small>A question? Answer and send it back. A sentence? Echo their verb (am → are, work → do), and the voice goes up.</small></div>'
-    + mostra('fim', 'A: Long queue today, isn’t it?<br>B: Yes, it is! Do you come here a lot?<br>A: Every morning. What about you?<br>B: It’s my first time. I’m new in the city.<br>A: Are you? Where are you from?<br>B: I’m from Recife. And you?', 1)
+  return cab(c) + '<div class="fim">' + escritaFinal('fim', (S.txt || {}).fim || '', (S.salvo || {}).fim, 'A: Long queue today, isn’t it?\nB: Yes, it is! Are you here every day?\nA: Every morning. What about you?', 'Your small talk',
+    ['And you? ', 'What about you? ', 'Are you? ', 'Is it? ', 'Is she? '], ['YOUR SMALL TALK', 'Six lines, you and a stranger. The ball never falls: every answer sends it back.'])
+    + '<div class="lado-fim"><div class="grande vd"><span><b>And you?</b> · a question</span><span><b>Is it?</b> · a sentence</span><span><b>Are you?</b> ↗ · tell me more</span><small>A question? Answer and send it back. A sentence? Echo their verb (am → are, is → is), and the voice goes up.</small></div>'
+    + mostra('fim', 'A: Long queue today, isn’t it?<br>B: Yes, it is! Are you here every day?<br>A: Every morning. What about you?<br>B: It’s my first time. I’m new in the city.<br>A: Are you? Where are you from?<br>B: I’m from Recife. And you?', 1)
     + '<p class="hw"><a class="pilula" href="HW/" target="_blank" rel="noopener">Homework for the student →</a></p></div></div>';
 };
 

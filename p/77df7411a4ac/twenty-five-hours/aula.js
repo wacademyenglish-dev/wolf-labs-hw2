@@ -19,13 +19,13 @@
    ============================================================ */
 var L = [
   { k: 'capa', est: null, img: 'estacao' },
-  { k: 'ontem', est: 'o', min: 7, img: 'mesa', rot: 'I · Yesterday', t: 'Before the clock: your day.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
+  { k: 'ontem', est: 'o', min: 7, img: 'mesa', rot: 'I · Your Day', t: 'Before the clock: your day.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
   { k: 'face', est: 'l', min: 7, img: 'estacao', rot: 'II · Read the Face', t: 'Short hand: the hour. Long hand: the minutes.', p: 'Look at the six clocks. Tap a clock, then its time in words. Then play the station voice and say it with her.' },
   { k: 'regra', est: 'f', min: 7, img: 'estacao', rot: 'III · How the Clock Talks', t: 'Four ways to say the time, and one word you never need.', p: 'Sort six times into the four ways to say them. Then find the broken part of four lines.' },
   { k: 'ajusta', est: 'l', min: 7, img: 'estacao', rot: 'IV · Set the Clock', t: 'You are the station chief. Your teacher calls the trains.', p: 'Listen to the departure. Drag the hands with your finger. Then check.' },
   { k: 'quadro', est: 'f', min: 6, img: 'estacao', rot: 'V · The Departures Board', t: 'The board only shows numbers. Give it the words.', p: 'Tap the words in order. When they are right, the board flips.' },
   { k: 'ampm', est: 'l', min: 7, img: 'estacao', rot: 'VI · Day Train or Night Train', t: 'Same hands, two trains. Only the voice tells you which.', p: 'Play the voice. Pick the day train or the night train. Then say it out loud.' },
-  { k: 'dia', est: 'f', min: 6, extra: 1, img: 'xicaras', rot: 'VII · Twenty-Five Hours', t: 'She posted her perfect day. Add it up.', p: 'Read each block out loud: from … to … Then put it on her day.' },
+  { k: 'dia', est: 'f', min: 6, extra: 1, img: 'xicaras', rot: 'VII · Twenty-Five Hours', t: 'This is her perfect day. Add it up.', p: 'Read each block out loud: from … to … Then put it on her day.' },
   { k: 'conversa', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'VIII · What Time Do You…?', t: 'No clock now. Your times.', p: 'Answer out loud. Then the follow-up comes.' },
   { k: 'fim', est: 'w', min: 6, img: 'estacao', rot: 'IX · Your Perfect Day', t: 'Your perfect day, hour by hour. In words.', p: 'Write five lines. Times in words: half past seven, not 7:30. The red line watches the clock. It goes to your My notes.' }
 ];
@@ -61,8 +61,8 @@ function relogio(h, m, o) {
 var ONTEM = [
   { k: 'WAKE UP', q: 'What time do you wake up?', fup: 'Is that early or late?', st: ['I wake up at …', 'At half past …', 'At … o’clock.'], ex: 'I wake up at half past six. That’s early!' },
   { k: 'BEDTIME', q: 'What time do you go to sleep?', fup: 'What do you do before that?', st: ['I go to sleep at …', 'At quarter to …'], ex: 'I go to sleep at quarter to eleven. Before that, I watch a series.' },
-  { k: 'LUNCH', q: 'What time do you have lunch?', fup: 'Where do you have it?', st: ['I had lunch at …', 'At … o’clock.'], ex: 'I had lunch at one o’clock, at home.' },
-  { k: 'A TRAIN', q: 'Do you take a bus or a train? What time?', fup: 'Is it on time?', st: ['It left at …', 'Last …, at …'], ex: 'Every day, at quarter past eight. It’s always late!' }
+  { k: 'LUNCH', q: 'What time do you have lunch?', fup: 'Where do you have it?', st: ['I have lunch at …', 'At … o’clock.'], ex: 'I have lunch at one o’clock, at home.' },
+  { k: 'A TRAIN', q: 'Do you take a bus or a train? What time?', fup: 'Is it on time?', st: ['It leaves at …', 'Every day, at …'], ex: 'Every day, at quarter past eight. It’s always late!' }
 ];
 
 /* II · o mostrador: a primeira opção é a certa */

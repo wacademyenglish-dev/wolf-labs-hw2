@@ -54,7 +54,7 @@ var CONVERSA = [
   { q: 'Have you got a pet? What’s its name?', f: 'A pet? Its name?', voce: ['Yes, I have. Its name is …', 'No, I haven’t.'], ex: 'Yes, I have. A dog. Its name is Pipoca.' },
   { q: 'Whose car do you use: yours or your family’s?', f: 'Your car or your family’s?', voce: ['I use my …’s car.', 'It’s mine.'], ex: 'I use my husband’s car. I haven’t got a car.' },
   { q: 'What has your house got? A garden? A balcony?', f: 'A garden? A balcony?', voce: ['It has got …', 'It hasn’t got …'], ex: 'It has got a small balcony, but it hasn’t got a garden.' },
-  { q: 'Describe your best friend’s family.', f: 'Your friend: brothers? sisters?', voce: ['His / Her family is …', 'He / She has got …'], ex: 'Her family is big. She has got three sisters.' },
+  { q: 'Has your best friend got brothers or sisters?', f: 'Your friend: brothers? sisters?', voce: ['His / Her family is …', 'He / She has got …'], ex: 'Her family is big. She has got three sisters.' },
   { q: 'What’s your favorite thing? Is it yours or your family’s?', f: 'Your favorite thing?', voce: ['My favorite thing is …', 'It’s my …’s.'], ex: 'My watch. It’s my grandfather’s old watch, but now it’s mine.' }
 ];
 

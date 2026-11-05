@@ -49,12 +49,12 @@
     <p>The cover is an anime training ground in a forest at dusk. I: the village (the show, the boy, the story). III: the trailer in three steps. <b>Before:</b> clues, one by one, to guess who is coming home. <b>Watch:</b> One word is wrong (say the right one) and Which word did you hear?, each line with a ▶ time: tap it and the video jumps to that moment. <b>After:</b> an old friend says “you got all grown up. Impressive.” and the student picks how Naruto answers (the answer changes); then a slider (can Naruto do everything?) and the student says why. IV: five frames on the film strip. <b>V, Can, Can’t, Yet:</b> Naruto’s notebook has five mistakes (can to fly, cans, can copies, don’t can, Do you can). The student says the right words out loud, then taps Check; the rule appears. The rule stays in the corner on the next pages. <b>VI, The Training Scroll:</b> six seals on an ink scroll (Naruto as a kid, Naruto now, Sakura, Gaara, a question, Naruto’s dream). For each one the student says if the sentence is true or a lie, and if it is a lie, says the true sentence out loud. Every right answer lights a seal, fills the chakra bar and raises the rank from Academy to Hokage. <b>VII, Your Ninja File:</b> the student builds six Can you…? questions out loud (swim, cook, drive, an instrument, languages, one thing you can’t do yet), taps Check and interviews the teacher. VIII: the questions.</p>
     <h4>THE COMMON ERRORS</h4>
     <p><i>He can to fly</i>, <i>she cans</i>, <i>he can makes</i>, <i>I don’t can</i>, <i>No, I not can</i>, <i>Do you can…?</i>, <i>Can you to…?</i>, <i>he is can</i>.</p>
-    <!--conversa--><h4>OK OR NOT OK? (IV) AND THE SURPRISE QUESTION</h4>
-    <p>Right after the trailer: three things from Naruto’s story, now in your student’s life. Training every day for two years, stopping and trying again tomorrow, and friends who say “Show us!” (sing for them?). Two colored buttons, OK or Not OK, and an almost-ready sentence with can / can’t … yet. There is no right answer. Answer first yourself, then wait five seconds in silence and use the PUSH line (only you see it). Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <!--conversa--><h4>NARUTO’S WAY (IV) AND THE SURPRISE QUESTION</h4>
+    <p>Right after the trailer: three things from Naruto’s story, now in your student’s life. Training every day for two years, stopping and trying again tomorrow, and friends who say “Show us!” (sing for them?). Two choices each, and an almost-ready sentence with can / can’t … yet. There is no right answer. Answer first yourself, then wait five seconds in silence and use the PUSH line (only you see it). Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
     <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one short personal question at any moment. Use it when the lesson has been only exercises for a while.</p><!--/conversa--><!--paren-ok-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
-      <li><b>Out loud</b>: I The Village, IV OK or Not OK?, VII The Training Scroll and VIII Your Ninja File.</li>
+      <li><b>Out loud</b>: I The Village, IV Naruto’s Way, VII The Training Scroll and VIII Your Ninja File.</li>
       <li><b>Listen</b>: II The Words, III The Trailer and V Line by Line.</li>
       <li><b>Focus</b>: VI Can, Can’t, Yet.</li>
       <li><b>Write</b>: IX Questions.</li>
@@ -106,25 +106,25 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    "show us!" dos amigos. A1 bem leve: duas opções coloridas, frase quase pronta, o professor responde
    primeiro. Gramática da aula (can / can't + yet) nos iniciadores. 49 → 54 min (59 com o extra). */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
-  { id: 'okay', apos: 'video', est: 'o', min: 5, img: 'treino', rot: 'OK or Not OK?', t: 'Naruto’s way. And your way?',
-    p: 'Read it. OK or not OK? Your teacher answers first. Then say it with the sentence.',
+  { id: 'okay', apos: 'video', est: 'o', min: 5, img: 'treino', rot: 'Naruto’s Way', t: 'Naruto’s way. And your way?',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'Training', sit: 'He trains every day. Two years.', q: 'You, every day, two years?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK! I can do it.', 'Not OK. I can’t do it… yet.'],
-        ex: 'OK! I can study English every day.',
+      { tag: 'Training', sit: 'He trains every day. Two years.', q: 'Training: every day or only Sunday?',
+        opc: ['Every day', 'Only Sunday'],
+        st: ['Every day. I can do it.', 'Only Sunday. I can’t train every day… yet.'],
+        ex: 'Every day! I can study English every day.',
         push: 'At six a.m.? Yes or no?' },
-      { tag: 'Not yet', sit: 'It’s hard. He can’t do it yet.', q: 'Stop and try tomorrow?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK. I can try tomorrow.', 'Not OK! I can do it now!'],
-        ex: 'OK. I can’t do it yet, but I can try tomorrow.',
+      { tag: 'Not yet', sit: 'It’s hard. He can’t do it yet.', q: 'It’s hard: try again or stop?',
+        opc: ['Try again', 'Stop'],
+        st: ['Try again. I can try tomorrow.', 'Stop. I can’t do it… yet.'],
+        ex: 'Try again. I can’t do it yet, but I can try tomorrow.',
         push: 'Ten times? Yes or no?' },
-      { tag: 'Show us!', sit: 'His friends say: show us!', q: 'Sing for your friends?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK! I can sing.', 'Not OK. I can’t sing… yet.'],
-        ex: 'Not OK! I can’t sing… yet!',
-        push: 'One song? Yes or no?' }
+      { tag: 'Show us!', sit: 'His friends say: show us!', q: 'Show your skill: sing or cook?',
+        opc: ['Sing', 'Cook'],
+        st: ['I can sing.', 'I can cook. I can’t sing… yet.'],
+        ex: 'Cook! I can’t sing… yet!',
+        push: 'For ten people? Yes or no?' }
     ] }
 ] };
 </script><!--/conversa-dados.js-->
@@ -149,7 +149,7 @@ window.WL_PADRAO = {
   },
   "cv-okay": {
    "t": "Naruto’s way. And your way?",
-   "p": "OK or not OK? Say it with the sentence."
+   "p": "Choose one. Say it with the sentence."
   },
   "falas": {
    "t": "Every line, one by one.",
@@ -269,14 +269,8 @@ window.WL_PADRAO = {
    ],
    "cartas": [
     {
-     "k": "AS A KID",
-     "q": "What can you do now that you can’t do as a kid?",
-     "fup": "Is it easy now?",
-     "st": [
-      "Now I can …",
-      "As a kid, I can’t …"
-     ],
-     "ex": "Now I can drive. As a kid, I can’t."
+     "k": "YOUR SPORT",
+     "q": "What sport can you play?","fup": "Can you play it well?","st": ["I can play …","I can’t play … yet."],"ex": "I can play volleyball. I can’t play tennis yet."
     },
     {
      "k": "NOT YET",
@@ -301,10 +295,7 @@ window.WL_PADRAO = {
     {
      "k": "SUPER POWER",
      "q": "Fly or be invisible: what can you do in your dream?",
-     "fup": "Why?",
-     "st": [
-      "In my dream, I can …"
-     ],
+     "fup": "Where can you go?","st": ["In my dream, I can …"],
      "ex": "In my dream, I can fly over my city."
     },
     {

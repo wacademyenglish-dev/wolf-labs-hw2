@@ -33,7 +33,7 @@ var TR = {
 
 var ABRE = [
   { k: 'THIS MONTH', q: 'What bad thing happened to you this month?', fup: 'What happened next?', st: ['I lost …', 'I missed …'], ex: 'I lost my keys, so I waited outside for an hour.' },
-  { k: 'LAST WEEK', q: 'What didn’t go well last week?', fup: 'Why not?', st: ['I didn’t …', '… didn’t work.'], ex: 'I didn’t sleep well, and I was late for work.' },
+  { k: 'LAST WEEK', q: 'What didn’t go well last week?', fup: 'Were you tired?', st: ['I didn’t …', '… didn’t work.'], ex: 'I didn’t sleep well, and I was late for work.' },
   { k: 'A QUESTION', q: 'Ask me about my weekend.', fup: 'And one more question?', st: ['Did you …?', 'What did you …?'], ex: 'Did you go out on Saturday?' }
 ];
 var FORMAS = [{ k: 'past', t: 'A PAST VERB (LOST, MISSED…)' }, { k: 'neg', t: 'DIDN’T + PLAIN VERB' }, { k: 'dwent', t: 'DIDN’T WENT', erro: 1 }, { k: 'dsaw', t: 'DID YOU SAW?', erro: 1 }];

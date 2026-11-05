@@ -23,7 +23,7 @@ var L = [
   { k: 'cidades', est: 'l', min: 7, img: 'london', rot: 'VI · Four Towns', t: 'Four people, one question: what is there in your town?', p: 'Tap a town. Listen first. Then read the five lines out loud.' },
   { k: 'pergunta', est: 'f', min: 6, extra: 1, img: 'placa', rot: 'VII · Is There a …?', t: 'To ask, the two words change places.', p: 'Turn the sentence around. Say both out loud.' },
   { k: 'nao', est: 'f', min: 6, extra: 1, img: 'fila', rot: 'VIII · What Is Not There', t: 'The same sentence, saying no.', p: 'One thing: there isn’t. More than one: there aren’t any.' },
-  { k: 'portas', est: 'o', min: 7, extra: 1, img: 'petworth', rot: 'IX · You Decide', t: 'No town has everything. Where do you move?', p: 'Pick a town. Say the good half with there is, and the bad half with there isn’t.' },
+  { k: 'portas', est: 'o', min: 7, extra: 1, img: 'petworth', rot: 'IX · You Decide', t: 'No town has everything. Pick one.', p: 'Pick a town. Say what there is, and what there isn’t.' },
   { k: 'cidade', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'X · Your Town', t: 'Now about a real place: yours.', p: 'One true sentence for each card. If it isn’t true, it doesn’t count.' },
   { k: 'fim', est: 'w', min: 6, img: 'placa', rot: 'XI · There Is', t: 'Write about your town.', p: 'There is, there are, there isn’t, there aren’t any, and one Is there…? The red line watches the front and the back. It goes to your My notes.' }
 ];
@@ -39,9 +39,9 @@ var TR = {
 };
 
 var ABRE = [
-  { k: 'ON YOUR STREET', q: 'Say one thing that is on your street.', fup: 'Do you go there?', st: ['On my street …'], ex: 'There is a small bakery on my street.' },
-  { k: 'NOT THERE', q: 'Now one thing that is not on it.', fup: 'Do you miss it?', st: ['… isn’t …'], ex: 'There isn’t a park on my street.' },
-  { k: 'HOW MANY', q: 'How many shops are on it? Say the number in a sentence.', fup: 'What kind of shops?', st: ['… two shops.'], ex: 'There are three shops and a pharmacy.' }
+  { k: 'ON YOUR STREET', q: 'Say one thing that is on your street.', fup: 'Is it big or small?', st: ['There is a … on my street.'], ex: 'There is a small bakery on my street.' },
+  { k: 'NOT THERE', q: 'Now one thing that is not on it.', fup: 'Is there one near?', st: ['There isn’t a … on my street.'], ex: 'There isn’t a park on my street.' },
+  { k: 'HOW MANY', q: 'How many shops are there? Say the number.', fup: 'Are they big?', st: ['There are … shops.'], ex: 'There are three shops and a pharmacy.' }
 ];
 var FORMAS = [{ k: 'there', t: 'THERE IS / ARE' }, { k: 'q', t: 'IS THERE…?' }, { k: 'have', t: 'HAVE A PARK (NO THERE)', erro: 1 }, { k: 'vazia', t: 'IS A PARK (EMPTY FRONT)', erro: 1 }];
 
@@ -155,7 +155,7 @@ R.cidades = function (c) {
 R.portas = function (c) {
   var p = S.portas;
   return cab(c) + '<div class="mesa-lista"><div class="portas-d">' + PORTAS.map(function (t, i) { return '<button type="button" class="porta-d vd' + (p === i ? ' on' : '') + '" data-a="pt" data-n="' + i + '"><span>' + (i + 1) + '</span>' + t + '</button>'; }).join('') + '</div>'
-    + '<div class="lado-l">' + (p >= 0 ? fala('pt', ['I choose … because there is …', '… but there isn’t …'], []) + mostra('pt', 'I choose Cambridge because there is a river and there are two universities, but there isn’t a water park.') : '<p class="dica-aluno">Pick a town.</p>') + '</div></div>';
+    + '<div class="lado-l">' + (p >= 0 ? fala('pt', ['I choose … There is …', 'There isn’t …'], []) + mostra('pt', 'I choose Cambridge. There is a river and there are two universities. There isn’t a water park.') : '<p class="dica-aluno">Pick a town.</p>') + '</div></div>';
 };
 
 R.cidade = function (c) {

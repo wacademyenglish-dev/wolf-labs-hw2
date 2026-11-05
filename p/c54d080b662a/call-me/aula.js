@@ -27,44 +27,44 @@ var L = [
 
 /* I · boas notícias */
 var NOTICIA = [
-  { k: 'GOOD NEWS', q: 'Who do you call first with good news?', fup: 'Why do you call them first?', st: ['I call my …', 'I call him / her because …'], ex: 'I call my sister. I call her first because she always listens.' },
+  { k: 'GOOD NEWS', q: 'Who do you call first with good news?', fup: 'Do you call him or her every day?', st: ['I call my …', 'I call him / her first.'], ex: 'I call my sister. I call her first, every time.' },
   { k: 'THE MOST', q: 'Who calls you the most?', fup: 'Do you always answer them?', st: ['My … calls me …', 'He / She calls me every …'], ex: 'My mother calls me every day. I don’t always answer her!' },
   { k: 'A PARTY', q: 'Who do you always invite to a party?', fup: 'What do they bring?', st: ['I always invite …', 'They bring …'], ex: 'I always invite my cousins. They bring the music.' },
-  { k: 'A SECRET', q: 'Who do you tell your secrets to?', fup: 'Do they keep them?', st: ['I tell them to …', 'He / She keeps them.'], ex: 'I tell them to my best friend. She keeps them, always.' }
+  { k: 'A SECRET', q: 'Who do you tell your secrets to?', fup: 'Do they keep them?', st: ['I tell my secrets to …', 'He / She keeps them.'], ex: 'I tell my secrets to my best friend. She keeps them.' }
 ];
 
 /* II · dois times */
 var FICHAS = [
-  { w: 'I', k: 'a', fr: 'I called.' }, { w: 'me', k: 'd', fr: 'Call me.' }, { w: 'he', k: 'a', fr: 'He called.' }, { w: 'him', k: 'd', fr: 'Call him.' },
-  { w: 'she', k: 'a', fr: 'She called.' }, { w: 'her', k: 'd', fr: 'Call her.' }, { w: 'we', k: 'a', fr: 'We called.' }, { w: 'us', k: 'd', fr: 'Call us.' },
-  { w: 'they', k: 'a', fr: 'They called.' }, { w: 'them', k: 'd', fr: 'Call them.' }, { w: 'you', k: 'x', fr: 'You called. · Call you.' }, { w: 'it', k: 'x', fr: 'It rings. · Answer it.' }
+  { w: 'I', k: 'a', fr: 'I call.' }, { w: 'me', k: 'd', fr: 'Call me.' }, { w: 'he', k: 'a', fr: 'He calls.' }, { w: 'him', k: 'd', fr: 'Call him.' },
+  { w: 'she', k: 'a', fr: 'She calls.' }, { w: 'her', k: 'd', fr: 'Call her.' }, { w: 'we', k: 'a', fr: 'We call.' }, { w: 'us', k: 'd', fr: 'Call us.' },
+  { w: 'they', k: 'a', fr: 'They call.' }, { w: 'them', k: 'd', fr: 'Call them.' }, { w: 'you', k: 'x', fr: 'You call. · Call you.' }, { w: 'it', k: 'x', fr: 'It rings. · Answer it.' }
 ];
 
 /* III · a agenda: o[0] é a certa; o[1] é a forma de sujeito */
 var CONTATOS = [
   { n: 'Lia', s: 'birthday girl', c: 'L', a: 'The surprise', f: 'It’s a surprise. Don’t tell ___ !', o: ['her', 'she', 'him', 'it'] },
-  { n: 'Tom', s: 'has a car', c: 'T', a: 'The ride', f: 'Tom can drive. Call ___ first.', o: ['him', 'he', 'her', 'them'] },
+  { n: 'Tom', s: 'has a car', c: 'T', a: 'The ride', f: 'Tom has a car. Call ___ first.', o: ['him', 'he', 'her', 'them'] },
   { n: 'Ana & Ben', s: 'the twins', c: 'AB', a: 'The music', f: 'The twins have speakers. Ask ___ for music.', o: ['them', 'they', 'him', 'us'] },
   { n: 'Mrs. Kim', s: 'next door', c: 'K', a: 'The neighbor', f: 'Mrs. Kim hears everything. Invite ___ too.', o: ['her', 'she', 'them', 'it'] },
-  { n: 'The cake', s: 'at the bakery', c: '🎂', a: 'The cake', f: 'The cake is ready at six. Can you get ___ ?', o: ['it', 'its', 'him', 'her'] },
+  { n: 'The cake', s: 'at the bakery', c: '🎂', a: 'The cake', f: 'The cake is ready at six. Please get ___ .', o: ['it', 'its', 'him', 'her'] },
   { n: 'Sara', s: 'Lia’s sister', c: 'S', a: 'The address', f: 'Sara says: “Send ___ the address.”', o: ['me', 'I', 'her', 'you'] },
-  { n: 'Sara & you', s: 'the team', c: 'US', a: 'The team', f: 'Tom says: “I can drive ___ both.”', o: ['us', 'we', 'them', 'you'] },
+  { n: 'Sara & you', s: 'the team', c: 'US', a: 'The team', f: 'Tom says: “I take ___ both.”', o: ['us', 'we', 'them', 'you'] },
   { n: 'The band', s: 'plays at nine', c: '♪', a: 'The band', f: 'The band wants the money. Pay ___ on Saturday.', o: ['them', 'they', 'it', 'him'] }
 ];
 
 /* IV · eu vi ele */
 var VIELE = [
   { ok: 'I see him every day.', mau: 'I see he every day.', nota: 'He starts a sentence. After a verb it becomes him.' },
-  { ok: 'I talked to her.', mau: 'I talked to she.', nota: 'After to, with, for too: to her.' },
+  { ok: 'I talk to her.', mau: 'I talk to she.', nota: 'After to, with, for too: to her.' },
   { ok: 'She works with them.', mau: 'She works with they.', nota: 'With them. Same rule, same place.' },
-  { ok: 'He called us on Monday.', mau: 'He called we on Monday.', nota: 'We starts. Us follows.' },
+  { ok: 'He calls us on Monday.', mau: 'He calls we on Monday.', nota: 'We starts. Us follows.' },
   { ok: 'Call me tonight.', mau: 'Call to me tonight.', nota: 'Call + person. No TO in the middle.' },
   { ok: 'I go with him.', mau: 'I go with he.', nota: 'After a verb or a little word like with, it changes.' },
   { ok: 'They know her very well.', mau: 'They know she very well.', nota: 'They starts and her follows. Both in one line.' }
 ];
 
 /* V · diga rápido */
-var SOM = [{ e: 'Call him.', f: 'CALL-im' }, { e: 'Tell her.', f: 'TELL-er' }, { e: 'I saw him.', f: 'I SEE-im' }, { e: 'Give her the cake.', f: 'GIVE-er the cake' }];
+var SOM = [{ e: 'Call him.', f: 'CALL-im' }, { e: 'Tell her.', f: 'TELL-er' }, { e: 'I see him.', f: 'I SEE-im' }, { e: 'Give her the cake.', f: 'GIVE-er the cake' }];
 
 /* VI · dois na mesma linha */
 var LINHAS = [
@@ -74,22 +74,22 @@ var LINHAS = [
 
 /* VII · as ligações */
 var CHAMADAS = [
-  { n: 'Tom', c: 'T', p: 'Can I pick up Lia at seven?', m: 'No! Don’t pick her up. Pick up the cake. Get it at six.', t: 'cake' },
+  { n: 'Tom', c: 'T', p: 'Do I pick up Lia at seven?', m: 'No! Don’t pick her up. Pick up the cake. Get it at six.', t: 'cake' },
   { n: 'Ana', c: 'AB', p: 'Do you want the speakers? Ben has them.', m: 'Yes, bring them, please. Ask him to come early.', t: 'music' },
-  { n: 'Mrs. Kim', c: 'K', p: 'Can I bring my dog?', m: 'Of course, bring him! But keep him quiet.', t: 'guests' },
+  { n: 'Mrs. Kim', c: 'K', p: 'I have a dog. Do I bring him?', m: 'Of course, bring him! But keep him quiet.', t: 'guests' },
   { n: 'Sara', c: 'S', p: 'Lia is asking about Saturday. What do I tell her?', m: 'Tell her we have dinner at my place. Don’t tell her about the party!', t: 'secret' },
-  { n: 'The band', c: '♪', p: 'Where do we send the bill?', m: 'Send it to me. I can pay you on Saturday.', t: 'band' }
+  { n: 'The band', c: '♪', p: 'Where do we send the bill?', m: 'Send it to me. I pay you on Saturday.', t: 'band' }
 ];
 var LISTA = { cake: 'The cake', music: 'The music', guests: 'The guests', secret: 'The secret', band: 'The band' };
 var PARTES = [{ k: 'depois', t: 'PRONOUN AFTER THE VERB' }, { k: 'pessoa', t: 'THE RIGHT PERSON (HIM / HER / THEM / IT)' }];
 
 /* VIII · de quem falamos */
 var CASOS = [
-  { sit: 'Your sister is waiting outside.', pista: ['tell', 'one woman', 'to come in'], r: 'Tell her to come in.' },
+  { sit: 'Your sister is outside.', pista: ['tell', 'one woman', 'to come in'], r: 'Tell her to come in.' },
   { sit: 'The clients want the new prices.', pista: ['send', 'more than one person', 'the list'], r: 'Send them the list.' },
-  { sit: 'Your phone is ringing on the table.', pista: ['answer', 'a thing'], r: 'Answer it.' },
+  { sit: 'Your phone rings on the table.', pista: ['answer', 'a thing'], r: 'Answer it.' },
   { sit: 'Your brother’s keys are at your house.', pista: ['call', 'one man', 'now'], r: 'Call him now.' },
-  { sit: 'Two friends are asking about the class.', pista: ['explain', 'a thing', 'to', 'two people'], r: 'Explain it to them.' },
+  { sit: 'Two friends ask about the class.', pista: ['explain', 'a thing', 'to', 'two people'], r: 'Explain it to them.' },
   { sit: 'Your friend wants to see your new photos.', pista: ['show', 'one woman', 'the photos'], r: 'Show her the photos.' }
 ];
 
@@ -97,9 +97,9 @@ var CASOS = [
 var MEUS = [
   { q: 'Who do you call when you need help?', fup: 'What does he or she do for you?', st: ['I call my …', 'I call him / her because …'], ex: 'I call my brother. He always helps me with my car.' },
   { q: 'Who do you text every day?', fup: 'What do you text them about?', st: ['I text …', 'I text them about …'], ex: 'I text my friends. I text them about football.' },
-  { q: 'Who do you never call? Why?', fup: 'How do you talk to them, then?', st: ['I never call …', 'I send them …'], ex: 'I never call my boss. I send her emails.' },
+  { q: 'Who do you never call?', fup: 'Do you send them messages?', st: ['I never call …', 'I send them …'], ex: 'I never call my boss. I send her emails.' },
   { q: 'What do you do with old photos on your phone?', fup: 'Do you print any?', st: ['I keep them.', 'I delete them.'], ex: 'I keep them all. I never delete them!' },
-  { q: 'Who can you tell a secret to?', fup: 'Why do you trust them?', st: ['I can tell it to …'], ex: 'I can tell it to my grandmother. She never tells anybody.' }
+  { q: 'Who do you tell a secret to?', fup: 'Do you trust them?', st: ['I tell it to …'], ex: 'I tell it to my grandmother. She never tells anybody.' }
 ];
 
 /* ---------- o estado ---------- */
@@ -125,11 +125,11 @@ R.times = function (c) {
   var e = S.times, x = e.sel >= 0 ? FICHAS[e.sel] : null;
   var fichas = '<div class="fichas">' + FICHAS.map(function (f, i) { return '<button type="button" class="ficha' + (e.sel === i ? ' on' : '') + (e.feitos[i] ? ' feito' : '') + '" data-a="tm-sel" data-n="' + i + '"' + (e.feitos[i] ? ' disabled' : '') + '>' + f.w + '</button>'; }).join('') + '</div>';
   var lista = function (k) { return FICHAS.filter(function (f, i) { return e.feitos[i] && (f.k === k || f.k === 'x'); }).map(function (f) { return '<span>' + f.w + '</span>'; }).join(''); };
-  var caixas = '<div class="times-cx">' + [['a', 'IT STARTS', 'He called.'], ['d', 'IT FOLLOWS', 'Call him.']].map(function (b) {
+  var caixas = '<div class="times-cx">' + [['a', 'IT STARTS', 'He calls.'], ['d', 'IT FOLLOWS', 'Call him.']].map(function (b) {
     return '<button type="button" class="time' + (x && e.err === b[0] ? ' errado' : '') + '" data-a="tm" data-v="' + b[0] + '"' + (x && !e.feitos[e.sel] ? '' : ' disabled') + '><small>' + b[1] + '</small><em>' + b[2] + '</em><div class="dentro">' + (lista(b[0]) || '<i>empty</i>') + '</div></button>';
   }).join('') + '</div>';
   var meio = x ? (e.feitos[e.sel] ? '<p class="aprova">GOT IT. ' + (x.k === 'x' ? '<b>' + x.w + '</b> is the same on both teams.' : '“' + x.fr + '”') + '</p>'
-    : '<div class="pergunta vd"><small>SAY IT</small><h2>' + x.fr + '</h2></div>' + (e.err ? '<p class="recusa">' + (x.k === 'a' ? 'Can you say “Call ' + x.w + '”? No: this one starts a sentence.' : 'Can you say “' + x.w.charAt(0).toUpperCase() + x.w.slice(1) + ' called”? No: this one follows the verb.') + '</p>' : ''))
+    : '<div class="pergunta vd"><small>SAY IT</small><h2>' + x.fr + '</h2></div>' + (e.err ? '<p class="recusa">' + (x.k === 'a' ? 'Do we say “Call ' + x.w + '”? No: this one starts a sentence.' : 'Do we say “' + x.w.charAt(0).toUpperCase() + x.w.slice(1) + ' calls”? No: this one follows the verb.') + '</p>' : ''))
     : '<p class="dica-aluno" style="text-align:center">Pick a word.</p>';
   var fim = Object.keys(e.feitos).length === FICHAS.length ? '<p class="aprova" style="text-align:center">Five pairs change. YOU and IT never do.</p>' : '';
   return cab(c) + fichas + '<div class="foco">' + meio + '</div>' + caixas + fim;

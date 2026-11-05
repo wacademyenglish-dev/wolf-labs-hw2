@@ -70,12 +70,12 @@ var MESA = [
   { q: 'everybody', c: 'ALL', quer: 'the check', ex: 'Could we get the check, please?' }
 ];
 var PROB = [
-  { au: 'w3.mp3', g: 'Is everything all right here?', sit: 'Your food is cold.', ok: 'Actually, I think this is a little cold.', mau: 'No. This food is cold.' },
-  { g: 'Here’s your fish.', sit: 'You ordered the chicken.', ok: 'Sorry, I think I ordered the chicken.', mau: 'This is not my order.' },
-  { au: 'w4.mp3', g: 'I’m sorry, we’re out of the fish tonight.', sit: 'Your friend wanted the fish. Choose something else.', ok: 'That’s OK. Could she have the pasta, then?', mau: 'Then give her the pasta.' },
+  { au: 'w3.mp3', g: 'Is everything all right here?', sit: 'Your food is cold.', ok: 'Sorry, I think this is cold.', mau: 'No. This food is cold.' },
+  { g: 'Here’s your fish.', sit: 'You want the chicken. This is the fish.', ok: 'Sorry, I’d like the chicken, please.', mau: 'This is not my order.' },
+  { au: 'w4.mp3', g: 'I’m sorry, we’re out of the fish tonight.', sit: 'Your friend wants the fish. Choose something else.', ok: 'That’s OK. Could she have the pasta, then?', mau: 'Then give her the pasta.' },
   { au: 'w5.mp3', g: 'Would you like to see the dessert menu?', sit: 'You want dessert.', ok: 'Yes, please. Could we see it?', mau: 'Yes. Bring it.' },
   { au: 'w6.mp3', g: 'Are you paying together or separately?', sit: 'Each person pays.', ok: 'Separately, please.', mau: 'We pay separate.' },
-  { g: 'Here’s your bill.', sit: 'There’s a wine on the bill. Nobody had wine.', ok: 'Excuse me, I think there’s a mistake here. We had no wine.', mau: 'This bill is wrong.', conta: 1 }
+  { g: 'Here’s your bill.', sit: 'There is a wine on the bill. Nobody wants wine.', ok: 'Excuse me, I think there’s a mistake. We have no wine.', mau: 'This bill is wrong.', conta: 1 }
 ];
 var CONTA = [['Grilled chicken', 14], ['Pasta with tomato', 12], ['Red wine', 9, 1], ['Sparkling water', 4]];
 var FORA = [
@@ -89,8 +89,8 @@ var FORA = [
 var FICHA = [
   { q: 'What do you always order in a restaurant?', fup: 'And to drink?', st: ['I usually have …', 'I always order …'], ex: 'I usually have the fish. And sparkling water, please.' },
   { q: 'You need a day off next week. What do you say to your boss?', fup: 'And if your boss says no?', st: ['Could I have … off?'], ex: 'Could I have Friday off, please? I have a family party.' },
-  { q: 'Your food comes wrong. What do you say?', fup: 'And if it happens again?', st: ['Sorry, I think …'], ex: 'Sorry, I think I ordered the chicken.' },
-  { q: 'Is it hard for you to ask for things? Why?', fup: 'In English or in Portuguese?', st: ['It’s easy / hard for me because …'], ex: 'It’s hard for me. I don’t like to bother people.' }
+  { q: 'Your food comes wrong. What do you say?', fup: 'And if it happens again?', st: ['Sorry, I think …'], ex: 'Sorry, I think this is cold.' },
+  { q: 'Is it hard for you to ask for things?', fup: 'In English or in Portuguese?', st: ['It’s easy for me.', 'It’s hard for me.'], ex: 'It’s hard for me. I don’t like to bother people.' }
 ];
 
 var S = { i: 0, faixa: 1, fala: {}, resp: {}, armas: {}, temp: 50,

@@ -75,9 +75,9 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'janelas', tipo: 'And you?', q: 'Right now, what is your family doing?',
     opc: ['Working', 'Sleeping', 'I don’t know!'], st: ['My … is …ing.', 'They’re …ing.'],
     ex: 'My sister is working. My cat is sleeping!', push: 'And your friends?' },
-  { cena: 'filme', tipo: 'Opinion', q: 'The boy is sleeping in class. Is it OK?',
-    opc: ['Yes, it’s OK.', 'No, it isn’t.'], st: ['He’s …ing, so …', 'He isn’t …ing.'],
-    ex: 'Yes, it’s OK. He’s dreaming about his family!', push: 'Every day?' },
+  { cena: 'filme', tipo: 'Would you rather', q: 'The boy is sleepy. Coffee or a nap?',
+    opc: ['Coffee', 'A nap'], st: ['He’s drinking coffee.', 'He’s taking a nap.'],
+    ex: 'A nap! He’s dreaming about his family.', push: 'In class? Yes or no?' },
   { cena: 'fim', tipo: 'What if', q: 'Your boss is calling now. What are you doing?',
     opc: ['I’m working.', 'I’m eating.', 'I’m sleeping!'], st: ['I’m …ing.', 'I’m not …ing.'],
     ex: 'I’m eating… but I say: “I’m working!”', push: 'Really?' }
@@ -283,7 +283,7 @@ window.WL_PADRAO = {
     },
     {
      "k": "YOUR BODY",
-     "q": "How are you sitting right now?",
+     "q": "Are you sitting or standing right now?",
      "fup": "Are you drinking anything?",
      "st": [
       "I’m …ing.",
@@ -333,7 +333,7 @@ window.WL_PADRAO = {
      "a": "A nap",
      "b": "A coffee",
      "fa": [
-      "A nap. My body is asking for it."
+      "A nap. I’m very sleepy."
      ],
      "fb": [
       "A coffee. My boss is watching me."
@@ -344,7 +344,7 @@ window.WL_PADRAO = {
      "a": "Wake him up",
      "b": "Leave",
      "fa": [
-      "Wake him up. We are wasting time."
+      "Wake him up. We are waiting."
      ],
      "fb": [
       "Leave. Everybody is going home."

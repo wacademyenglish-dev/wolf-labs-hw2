@@ -3,7 +3,7 @@
    A1, já com can / can’t … yet. */
 window.WL_MUNDO = {
   forma: 'ordem',
-  cena: { rot: 'Warm-up and Put It in Order', t: 'Before the trailer: what you can do, then a boy who couldn’t.', p: 'Answer three questions about you. Then put four moments of Naruto’s story in order and tell it.' },
+  cena: { rot: 'Warm-up and Put It in Order', t: 'Before the trailer: what you can do, then Naruto’s story.', p: 'Answer three questions about you. Then put four moments of Naruto’s story in order and tell it.' },
   mundoRot: 'Put It in Order',
   guia: '<b>Warm-up and Put It in Order (I)</b>: two parts. <b>1 · Warm-up:</b> three questions about the student’s life, one at a time (big on the screen, with “Ask more” under each and one short line about the anime under the photo). A1: short answers are fine. <b>2 · Put It in Order:</b> four cards of Naruto’s story, shuffled. The student taps them in order (“First… then…”); then the cards show the real order, and the student tells the story with can / can’t.',
   foto: 'capa',
@@ -22,7 +22,7 @@ window.WL_MUNDO = {
   contaEx: 'First, Naruto can’t do a simple trick. Then he is in a team, and Sasuke can do everything. After that, he trains every day. In the end, he can do amazing things.',
   vida: [],
   antes: [
-    { q: 'Naruto couldn’t do a simple trick at school. Now, after two years, what can he do? Guess.', h: 'I think he can … / He can’t … yet.' },
-    { q: 'What can you do now that you couldn’t do two years ago?', h: 'Now I can … Two years ago, I couldn’t …' }
+    { q: 'Naruto can’t do a simple trick at school. After two years, what can he do? Guess.', h: 'I think he can … / He can’t … yet.' },
+    { q: 'What can you do now? What can’t you do yet?', h: 'Now I can … I can’t … yet.' }
   ]
 };

@@ -80,14 +80,14 @@
 /* THE AUCTION HOUSE (Main A1) · pergunta-surpresa · 27/10/2026 · a / an + adjetivo (máx. 3 no A1) */
 window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'video', tipo: 'What if', q: 'Your phone is old. Sell it?',
-    opc: ['Yes, sell it!', 'No, never!'], st: ['It’s an old phone, but …', 'Yes! I want a new …'],
+    opc: ['Yes, sell it!', 'No, never!'], st: ['It’s an old phone, but …', 'Yes! A new …'],
     ex: 'No, never! It’s an old phone, but it works.', push: 'For fifty dollars? Yes or no?' },
-  { cena: 'pulo', tipo: 'And you?', q: 'Do you have an umbrella?',
-    opc: ['Yes, an old one', 'Yes, a new one', 'No!'], st: ['I have an old umbrella.', 'I have a new umbrella.'],
-    ex: 'Yes, I have a big black umbrella.', push: 'In your bag? Yes or no?' },
+  { cena: 'pulo', tipo: 'And you?', q: 'Is an umbrella in your bag?',
+    opc: ['Yes, an old one', 'Yes, a new one', 'No!'], st: ['It is an old umbrella.', 'It is a new umbrella.'],
+    ex: 'Yes, it is a big black umbrella.', push: 'Is it old? Yes or no?' },
   { cena: 'balanca', tipo: 'And you?', q: 'Your bag today: heavy or light?',
     opc: ['Heavy', 'Light'], st: ['My bag is heavy.', 'It’s a light bag.'],
-    ex: 'Heavy! I have a big book in it.', push: 'Every day? Yes or no?' }
+    ex: 'Heavy! A big book is in it.', push: 'Every day? Yes or no?' }
 ] };
 </script><!--/faisca-dados.js-->
 <script src="/kit/faisca.js"></script>
@@ -100,23 +100,23 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    coisa; the na segunda vez) mora nas opções e nos iniciadores. */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
   { id: 'escolha', troca: 'memoria', est: 'o', min: 6, img: 'salao', rot: 'Your Pick', t: 'Three lots. Choose one, three times.',
-    p: 'Choose one. Your teacher answers first. Then say it with I want the …',
+    p: 'Choose one. Your teacher answers first. Then say it: The …, please.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'Your $100', sit: 'You have 100 dollars.', q: 'Which lot?',
+      { tag: 'Your $100', sit: 'Your money: 100 dollars.', q: 'Which lot?',
         opc: ['an old clock', 'a small lamp', 'a big mirror'],
-        st: ['I want the old clock.', 'I want the small lamp.', 'I want the big mirror.'],
-        ex: 'I want the old clock. Old things are beautiful.',
+        st: ['The old clock, please.', 'The small lamp, please.', 'The big mirror, please.'],
+        ex: 'The old clock, please. Old things are beautiful.',
         push: 'Ninety dollars? Yes or no?' },
       { tag: 'A gift', sit: 'A gift for your best friend.', q: 'Which one?',
         opc: ['an expensive ring', 'a new radio', 'a cheap chair'],
-        st: ['I want the expensive ring.', 'I want the new radio.', 'I want the cheap chair.'],
-        ex: 'I want the new radio. My friend loves music.',
+        st: ['The expensive ring, please.', 'The new radio, please.', 'The cheap chair, please.'],
+        ex: 'The new radio, please. It is a nice gift.',
         push: 'Expensive or cheap? One word.' },
-      { tag: 'Your home', sit: 'One new thing for your home.', q: 'What do you want?',
+      { tag: 'Your home', sit: 'One new thing for your home.', q: 'Which one?',
         opc: ['a big TV', 'a new bed', 'an old sofa'],
-        st: ['I want a big TV.', 'I want a new bed.', 'I want an old sofa.'],
-        ex: 'I want a new bed. My bed is very old!',
+        st: ['A big TV, please.', 'A new bed, please.', 'An old sofa, please.'],
+        ex: 'A new bed, please. My bed is very old!',
         push: 'Big or small? One word.' }
     ] }
 ] };
@@ -298,34 +298,34 @@ window.WL_PADRAO = {
      "q": "What is in your bag right now?",
      "fup": "Is it old or new?",
      "st": [
-      "There is a … in my bag.",
+      "A … is in my bag.",
       "The … is …"
      ],
-     "ex": "There is a black wallet in my bag. The wallet is old."
+     "ex": "A black wallet is in my bag. The wallet is old."
     },
     {
      "k": "YOUR KITCHEN",
      "q": "What is a useful thing in your kitchen?",
      "fup": "Is it big or small?",
      "st": [
-      "I have a / an …",
+      "A / An … is in my kitchen.",
       "The … is …"
      ],
-     "ex": "I have a small coffee machine. The machine is very useful."
+     "ex": "A small coffee machine is in my kitchen. It is very useful."
     },
     {
      "k": "A GIFT",
-     "q": "What is a nice gift you got?",
-     "fup": "Was it cheap or expensive?",
+     "q": "A nice gift: what is it?",
+     "fup": "Is it cheap or expensive?",
      "st": [
-      "I got a / an …",
-      "It was …"
+      "It is a / an …",
+      "It is …"
      ],
-     "ex": "I got an old watch from my grandfather. It was expensive."
+     "ex": "It is an old watch. It is expensive."
     },
     {
      "k": "YOUR CLOTHES",
-     "q": "What is your favorite thing to wear?",
+     "q": "What is your favorite thing in your closet?",
      "fup": "Is it new or old?",
      "st": [
       "My favorite is a / an …",
@@ -335,23 +335,23 @@ window.WL_PADRAO = {
     },
     {
      "k": "SHOPPING",
-     "q": "What is the last thing you bought?",
-     "fup": "Was it a good price?",
+     "q": "In a shop: what is a cheap thing?",
+     "fup": "Is it a good price?",
      "st": [
-      "I bought a / an …",
-      "The … was …"
+      "A cheap … is …",
+      "The … is …"
      ],
-     "ex": "I bought an orange umbrella. The umbrella was cheap."
+     "ex": "A cheap umbrella is orange. The umbrella is two dollars."
     },
     {
      "k": "YOUR DREAM",
-     "q": "What expensive thing do you want one day?",
-     "fup": "Why do you want it?",
+     "q": "An expensive thing: what is it?",
+     "fup": "Is it big or small?",
      "st": [
-      "I want a / an …",
-      "I want it because …"
+      "It is a / an …",
+      "It is …"
      ],
-     "ex": "I want a big red car. I want it for long trips."
+     "ex": "It is a big red car. It is very expensive."
     }
    ]
   },
@@ -375,10 +375,10 @@ window.WL_PADRAO = {
      "a": "An old house",
      "b": "A new apartment",
      "fa": [
-      "An old house. It has a story."
+      "An old house. It is beautiful."
      ],
      "fb": [
-      "A new apartment. Everything works."
+      "A new apartment. It is clean."
      ]
     },
     {
@@ -386,10 +386,10 @@ window.WL_PADRAO = {
      "a": "A cheap phone",
      "b": "An expensive phone",
      "fa": [
-      "A cheap phone. I lose phones."
+      "A cheap phone. It is easy."
      ],
      "fb": [
-      "An expensive phone. It takes good pictures."
+      "An expensive phone. It is very good."
      ]
     },
     {
@@ -408,10 +408,10 @@ window.WL_PADRAO = {
      "a": "A heavy book",
      "b": "A light e-reader",
      "fa": [
-      "A heavy book. I love paper."
+      "A heavy book. Paper is nice."
      ],
      "fb": [
-      "A light e-reader. It goes in my bag."
+      "A light e-reader. It is easy."
      ]
     }
    ],
@@ -429,10 +429,10 @@ window.WL_PADRAO = {
    "perguntas": [
     "What is the first lot tonight?",
     "Is it old or new?",
-    "Who wants an expensive lot?",
-    "What is the cheapest thing in the room?",
-    "Is there a strange lot tonight?",
-    "What do you buy with the money?"
+    "Is the ring expensive?",
+    "What is a cheap thing in the room?",
+    "Is the last lot strange?",
+    "Is the money big tonight?"
    ],
    "st": [
     "The first lot is a / an …",

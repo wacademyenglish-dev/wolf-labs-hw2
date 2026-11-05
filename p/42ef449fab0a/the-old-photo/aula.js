@@ -24,19 +24,19 @@ var VOCE = [
   { k: 'YOUR TOWN', q: 'Where do you live? Is it a big city or a small town?', fup: 'Do you like it?', st: ['I live in …', 'It’s a …'], ex: 'I live in Campinas. It’s a big city.' },
   { k: 'YOUR STREET', q: 'What is there on your street?', fup: 'Is there a park?', st: ['There is a …', 'There are …'], ex: 'There is a bakery, and there are a lot of trees.' },
   { k: 'OLD PHOTOS', q: 'Do you have old family photos? Where are they?', fup: 'Who is in them?', st: ['They are in …'], ex: 'Yes! They are in a box at my mom’s house.' },
-  { k: 'GRANDPARENTS', q: 'Where did your grandparents live? A city or a small town?', fup: 'Did you go there as a child?', st: ['In a small town in …'], ex: 'In a small town in Minas Gerais.' }
+  { k: 'GRANDPARENTS', q: 'Do your grandparents live in a city or a small town?', fup: 'Do you go there?', st: ['In a small town in …'], ex: 'In a small town in Minas Gerais.' }
 ];
 
 var FOTOS = [
   { k: 'MAIN STREET', img: 'rua', cap: 'This is Main Street in 1970. I was sixteen. There was a small cinema, and there were two coffee shops. There was a bakery, too. There weren’t any traffic lights. Life was slow.', pistas: ['1 cinema', '2 coffee shops', '1 bakery', '0 traffic lights'], q: 'How many coffee shops were there?',
     ops: [['There was a cinema, and there were two coffee shops.', 'ok'], ['It had a cinema, and it had two coffee shops.', 'had'], ['There was a cinema, and there was two coffee shops.', 'sing']] },
-  { k: 'THE STATION', img: 'estacao', cap: 'This is the train station. There was one train in the morning and one train at night. There weren’t any buses in Maple Falls. On Sundays, there wasn’t a train. People walked!', pistas: ['2 trains a day', '0 buses', 'Sunday: no train'], q: 'Was there a train on Sundays?',
+  { k: 'THE STATION', img: 'estacao', cap: 'This is the train station. There was one train in the morning and one train at night. There weren’t any buses in Maple Falls. On Sundays, there wasn’t a train.', pistas: ['2 trains a day', '0 buses', 'Sunday: no train'], q: 'Was there a train on Sundays?',
     ops: [['There was two trains a day. There wasn’t a train on Sundays.', 'sing'], ['There were two trains a day. There wasn’t a train on Sundays.', 'ok'], ['There are two trains a day. There isn’t a train on Sundays.', 'pres']] },
-  { k: 'THE SQUARE', img: 'praca', cap: 'This is the town square. There was a big fountain in the middle, and there were a lot of old trees. On Saturday nights, there was music in the bandstand. There wasn’t a mall. The square was our mall!', pistas: ['1 fountain', 'a lot of trees', 'music on Saturdays', '0 malls'], q: 'What was there on Saturday nights?',
+  { k: 'THE SQUARE', img: 'praca', cap: 'This is the town square. There was a big fountain in the middle, and there were a lot of old trees. On Saturday nights, there was music. There wasn’t a mall. The square was our mall!', pistas: ['1 fountain', 'a lot of trees', 'music on Saturdays', '0 malls'], q: 'What was there on Saturday nights?',
     ops: [['Had a fountain, and had a lot of trees.', 'had'], ['There were a fountain, and there was a lot of trees.', 'sing'], ['There was a fountain, and there were a lot of trees.', 'ok']] },
   { k: 'THE RIVER', img: 'ponte', cap: 'This is the river. There was an old wooden bridge. There weren’t any cars on the bridge, only bikes and one old truck. There were a lot of fish in the river. The water was very clean.', pistas: ['1 wooden bridge', '0 cars', 'a lot of bikes', 'a lot of fish'], q: 'Were there cars on the bridge?',
     ops: [['No, there weren’t any cars. There were only bikes.', 'ok'], ['No, there wasn’t any cars. There was only bikes.', 'sing'], ['No, there weren’t no cars. There were only bikes.', 'any']] },
-  { k: 'MY KITCHEN', img: 'cozinha', cap: 'This is my mother’s kitchen. There wasn’t a TV in our house. There was a big radio, and at night we listened to music. Was there a phone? No, there wasn’t! There was only one phone on the whole street.', pistas: ['0 TVs', '1 big radio', '1 phone on the street'], q: 'Was there a TV in the kitchen?',
+  { k: 'MY KITCHEN', img: 'cozinha', cap: 'This is my mother’s kitchen. There wasn’t a TV in our house. There was a big radio, and there was music at night. Was there a phone? No, there wasn’t! There was only one phone on the whole street.', pistas: ['0 TVs', '1 big radio', '1 phone on the street'], q: 'Was there a TV in the kitchen?',
     ops: [['No, there isn’t a TV. There is a big radio.', 'pres'], ['No, there wasn’t a TV. There was a big radio.', 'ok'], ['No, didn’t have a TV. Had a big radio.', 'had']] }
 ];
 var POR = { had: 'A place with something in it: there was / there were, never had.', sing: 'One thing: was. Many things: were.', pres: 'This is 1970: was / were, not is / are.', any: 'One no is enough: weren’t any.', troca: 'Then is was / were; now is is / are. They swapped.', q: 'A question: Was there… first.' };
@@ -65,7 +65,7 @@ var FATIAS = [
   { k: 'THE TV', q: 'When you were a child, how many TVs were there at home?', h: 'There was one TV, in the living room.' },
   { k: 'THE SHOPS', q: 'Was there a supermarket near your house?', h: 'No, there wasn’t. There was a small market.' },
   { k: 'YOUR ROOM', q: 'What was there in your bedroom?', h: 'There was a bed, a desk and a lot of posters.' },
-  { k: 'NEW IN TOWN', q: 'What is there in your town now that wasn’t there before?', h: 'There is a big mall now. There wasn’t a mall before.' }
+  { k: 'NEW IN TOWN', q: 'What is new in your town now?', h: 'There is a big mall now. There wasn’t a mall before.' }
 ];
 
 var LEO = [

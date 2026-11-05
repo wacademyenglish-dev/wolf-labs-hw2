@@ -78,10 +78,10 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
     ex: 'No, he isn’t. He is a teacher.', push: 'Is it a good job? Yes or no?' },
   { cena: 'pergunta', tipo: 'Would you rather', q: 'Be a pilot or a doctor?',
     opc: ['A pilot', 'A doctor'], st: ['A pilot. I am a pilot!', 'A doctor. I am a doctor!'],
-    ex: 'A pilot! I love airplanes.', push: 'Night flights too? Yes or no?' },
-  { cena: 'mentiroso', tipo: 'Opinion', q: 'Ivo lied. Is he a bad person?',
-    opc: ['Yes, he is.', 'No, he isn’t.'], st: ['Yes, he is. He …', 'No, he isn’t. He is a …'],
-    ex: 'No, he isn’t. He is a cook, and he wants the seat.', push: 'Ivo is your friend. Still yes?' }
+    ex: 'A pilot! Airplanes are great.', push: 'Night flights too? Yes or no?' },
+  { cena: 'mentiroso', tipo: 'And you?', q: 'Is your mother a good cook?',
+    opc: ['Yes, he is.', 'No, he isn’t.'], st: ['Yes, she is. She is …', 'No, she isn’t. She is a …'],
+    ex: 'No, she isn’t. She is a doctor!', push: 'Is she a good doctor? Yes or no?' }
 ] };
 </script><!--/faisca-dados.js-->
 <script src="/kit/faisca.js"></script>
@@ -101,7 +101,7 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
         opc: ['Tomás', 'Mei'],
         st: ['Tomás. He is a pilot.', 'Mei. She is a translator.'],
         ex: 'Mei. She is a translator. She is from Singapore!',
-        push: 'Tomás snores. Change? Yes or no?' },
+        push: 'Tomás is loud. Change? Yes or no?' },
       { tag: 'One day', sit: 'A job on the ship, for one day.', q: 'Captain or radio operator?',
         opc: ['A captain', 'A radio operator'],
         st: ['I am a captain!', 'I am a radio operator!'],
@@ -277,32 +277,32 @@ window.WL_PADRAO = {
      "ex": "My best friend is a nurse. She is from Recife."
     },
     {
-     "k": "AS A CHILD",
-     "q": "As a child, what job did you want?",
+     "k": "YOUR FATHER",
+     "q": "What is your father’s job?",
      "fup": "Is it a good job?",
      "st": [
-      "I wanted to be a …"
+      "He is a / an …"
      ],
-     "ex": "I wanted to be a pilot. It is a great job."
+     "ex": "My father is a driver. He is from Minas."
     },
     {
-     "k": "YOUR STREET",
-     "q": "Who works on your street?",
-     "fup": "Is he friendly?",
+     "k": "YOUR NEIGHBOR",
+     "q": "Your neighbor: what is the job?",
+     "fup": "Is he or she friendly?",
      "st": [
-      "There is a …",
+      "She is a / an …",
       "He is a …"
      ],
-     "ex": "There is a baker. He is from Portugal."
+     "ex": "My neighbor is an engineer. He is friendly."
     },
     {
      "k": "THE SHIP",
-     "q": "On the Polaris, what job is the hardest?",
+     "q": "On the Polaris: is the cook’s job hard?",
      "fup": "Is the captain a man or a woman?",
      "st": [
-      "The … is …"
+      "Yes, it is. The … is …"
      ],
-     "ex": "The cook’s job is the hardest. He is up at five."
+     "ex": "Yes, it is. The cook is very busy."
     },
     {
      "k": "A GUESS",
@@ -318,10 +318,10 @@ window.WL_PADRAO = {
      "q": "A new job for one year. What is it?",
      "fup": "Where is it?",
      "st": [
-      "I want to be a …",
+      "I am a …",
       "… in …"
      ],
-     "ex": "I want to be a translator in Canada."
+     "ex": "I am a translator in Canada."
     }
    ]
   },
@@ -355,10 +355,10 @@ window.WL_PADRAO = {
      "a": "A doctor",
      "b": "An engineer",
      "fa": [
-      "A doctor. She can help me."
+      "A doctor. She is kind."
      ],
      "fb": [
-      "An engineer. He can fix things."
+      "An engineer. He is clever."
      ]
     },
     {
@@ -401,7 +401,7 @@ window.WL_PADRAO = {
     "Where are you from?",
     "Are you a good cook?",
     "Is your wife on the ship?",
-    "Why do you want the fifth seat?"
+    "Are you happy on the ship, Ivo?"
    ],
    "st": [
     "Yes, I am. / No, I’m not.",

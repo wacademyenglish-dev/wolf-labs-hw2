@@ -78,7 +78,7 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'adesivos', tipo: 'And you?', q: 'Whose birthday do you never forget?',
     opc: ['My sister’s', 'My best friend’s', 'My own!'], st: ['It’s on the … of …'],
     ex: 'My best friend’s. It’s on the twelfth of May.', push: 'A present every year? Yes or no?' },
-  { cena: 'onin', tipo: 'Would you rather', q: 'Travel in July or in December?',
+  { cena: 'onin', tipo: 'Choose one', q: 'Travel in July or in December?',
     opc: ['In July', 'In December'], st: ['I travel in …', 'On the … of …'],
     ex: 'In December. On the twentieth!', push: 'To the beach? Yes or no?' }
 ] };
@@ -91,7 +91,7 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    A1 bem leve: duas opções, frase quase pronta, o professor responde primeiro.
    A gramática da aula (ordinais · the … of … · on + dia, in + mês) mora nos iniciadores. */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
-  { id: 'prefere', troca: 'volta', est: 'o', min: 5, img: 'calendario', rot: 'Would You Rather', t: 'Your dates, your choice. Three times.',
+  { id: 'prefere', troca: 'volta', est: 'o', min: 5, img: 'calendario', rot: 'Your Choice', t: 'Your dates, your choice. Three times.',
     p: 'Choose one. Your teacher answers first. Then say it with the date.',
     formato: 'escolha',
     rodadas: [
@@ -266,13 +266,13 @@ window.WL_PADRAO = {
     },
     {
      "k": "THE FIRST DAY",
-     "q": "When was your first day at work or school?",
-     "fup": "Was it in January?",
+     "q": "When does your work or school start each year?",
+     "fup": "Is it in January?",
      "st": [
-      "It was on …",
-      "It was in …"
+      "It starts on …",
+      "It starts in …"
      ],
-     "ex": "It was in February, on the tenth."
+     "ex": "It starts in February, on the tenth."
     },
     {
      "k": "NEXT MONTH",

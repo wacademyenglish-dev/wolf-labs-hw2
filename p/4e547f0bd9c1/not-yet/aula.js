@@ -25,7 +25,7 @@ var L = [
 
 var ABRE = [
   { k: 'THIS WEEKEND', q: 'What are you going to do this weekend?', fup: 'Who are you going to see?', st: ['I’m going to …', 'On Saturday I’m going to …'], ex: 'I’m going to sleep a lot and visit my parents.' },
-  { k: 'NOT', q: 'One thing you are NOT going to do this weekend?', fup: 'Why not?', st: ['I’m not going to …'], ex: 'I’m not going to work. Not this weekend!' },
+  { k: 'NOT', q: 'One thing you are NOT going to do this weekend?', fup: 'And on Sunday?', st: ['I’m not going to …'], ex: 'I’m not going to work. Not this weekend!' },
   { k: 'TONIGHT', q: 'What are you going to eat tonight?', fup: 'Who is going to cook?', st: ['I’m going to eat …', 'My … is going to cook.'], ex: 'I’m going to eat pizza. Nobody is going to cook!' },
   { k: 'THIS YEAR', q: 'One big plan for this year?', fup: 'When are you going to start?', st: ['This year I’m going to …'], ex: 'This year I’m going to learn to drive.' }
 ];
@@ -79,14 +79,14 @@ var FAIXAS = [
   { k: 'y', t: 'THIS YEAR', ini: 'This year I’m going to', cor: '#3d7fb0', cartas: ['travel abroad', 'change jobs', 'run ten kilometers', 'learn to drive', 'move'] }
 ];
 var PARTES_Q = [{ k: 'going', t: 'AM / IS / ARE GOING TO' }, { k: 'tempo', t: 'A TIME WORD' }];
-var COACH_Q = ['Why are you going to do it?', 'When are you going to start?', 'What are you not going to do, to make time for it?', 'Is it going to be hard? Why?'];
+var COACH_Q = ['Why are you going to do it?', 'When are you going to start?', 'What are you not going to do this week?', 'Is it going to be hard?'];
 var PARTES_C = [{ k: 'going', t: 'GOING TO + VERB' }, { k: 'neg', t: 'ISN’T / I’M NOT GOING TO' }, { k: 'porque', t: 'BECAUSE …' }];
 var RESERVA = ['go to the gym', 'save some money', 'travel abroad'];
 
 var APOSTA = [
   { sit: 'Your phone is at 4% and you are not home.', q: 'What is going to happen in ten minutes?', ex: 'My phone is going to die.' },
   { sit: 'It’s Friday and you have no plans yet.', q: 'What are you going to do on Saturday?', ex: 'I think I’m going to stay home. Maybe I’m going to call a friend.' },
-  { sit: 'You start something new next month.', q: 'What is going to be different in your week?', ex: 'I’m going to wake up earlier, and I’m not going to have free time on Mondays.' }
+  { sit: 'You start something new next month.', q: 'What is going to be different in your week?', ex: 'I’m going to wake up earlier. I’m not going to sleep late.' }
 ];
 
 var S = { i: 0, faixa: 1, fala: {}, resp: {}, armas: {},

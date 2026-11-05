@@ -7,11 +7,11 @@
    conta para a dona do apartamento quem é o melhor: “She gets up at seven. She never smokes.”
    ============================================================ */
 var REV = { nivel: 'A1', unidade: 6, titulo: ['The', 'Flatmate'], tema: 'My day', placa: 'ROOM TO RENT', lugarConversa: 'THE LIVING ROOM', cor: '#9db7f0', cor2: '#cbdaf8',
-  sub: 'Unit 6 review. There is a free room in your apartment. Six doors, three people who want it, and you choose the best flatmate.' };
+  sub: 'Unit 6 review. There is a free room in your apartment. Six doors, three people who want it, and you choose a flatmate.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'I · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Flatmate', t: 'Three people want the room. Interview them.', p: 'Ask each person five questions. Your teacher is the person. Then tell the owner who is the best.' },
+  { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Flatmate', t: 'Three people want the room. Interview them.', p: 'Ask each person five questions. Your teacher is the person. Then tell the owner who is good.' },
   { k: 'cartao', est: 'w', min: 6, img: 'conversa', rot: 'III · Your Day', t: 'Now you want a room. Write about your day.', p: 'Four short lines: when you get up, what you do, how often, your birthday.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
   { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
@@ -37,7 +37,7 @@ var MISSAO = { pede: 'THE INTERVIEW · ASK FIVE QUESTIONS', quem: 'person', depo
     { k: 'PERSON 1', tag: 'SOFIA', ele: 'She', v: { levanta: 'at seven', trabalho: 'a nurse, works at night', cozinha: 'always', gosta: 'quiet music', niver: 'on April 2nd' }, diz: '“I get up at seven o’clock.” · “I’m a nurse. I work at the hospital at night.” · “I always cook.” · “Yes, I like music, but I never play it loud.” · “On April second.”' },
     { k: 'PERSON 2', tag: 'MARCUS', ele: 'He', v: { levanta: 'at eleven', trabalho: 'a DJ, works at home', cozinha: 'never', gosta: 'loud music', niver: 'on July 21st' }, diz: '“I get up at eleven.” · “I’m a DJ. I work at home.” · “I never cook. I eat pizza.” · “Yes! I love music. I always play it loud.” · “On July twenty-first.”' },
     { k: 'PERSON 3', tag: 'HANA', ele: 'She', v: { levanta: 'at half past six', trabalho: 'a teacher, works at a school', cozinha: 'sometimes', gosta: 'jazz, not loud', niver: 'on December 3rd' }, diz: '“I get up at half past six.” · “I’m a teacher. I work at a school.” · “I sometimes cook.” · “I like jazz, but I don’t play it loud.” · “On December third.”' }],
-  relato: { titulo: 'THE OWNER CALLS · WHO IS THE BEST FLATMATE?',
+  relato: { titulo: 'THE OWNER CALLS · WHO IS A GOOD FLATMATE?',
     pede: function (x) { return 'So, tell me about ' + x.tag.charAt(0) + x.tag.slice(1).toLowerCase() + '. Is ' + x.ele.toLowerCase() + ' a good flatmate?'; },
     chips: function (x) { return [x.ele + ' gets up at …', x.ele + ' works …', x.ele + ' always / never cooks.', x.ele + ' doesn’t …', x.ele + ' likes …']; },
     modelo: function (x) { var v = x.v, e = x.ele; return e + ' gets up ' + v.levanta + '. ' + e + ' is ' + v.trabalho.replace(', works', ' and works') + '. ' + e + ' ' + v.cozinha + ' cooks, and ' + e.toLowerCase() + ' likes ' + v.gosta + '.'; } },

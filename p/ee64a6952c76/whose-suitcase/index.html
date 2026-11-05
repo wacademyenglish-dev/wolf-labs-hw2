@@ -46,8 +46,8 @@
     <p>Many learners pick his / her from the thing or its color (the pink suitcase → <i>hers</i>), and say <i>It’s our</i>, <i>It’s us</i>, <i>the twins’s</i>, <i>Mia’s and Sam’s</i>, <i>Whose is these?</i>, <i>They’re theirs sneakers</i>, <i>It’s him</i>.</p>
     <h4>A REVIEW LESSON</h4>
     <p>Works as a follow-up to a lesson on whose and possessive pronouns: it checks the basics and spends the hour on plurals, two owners, ours and theirs.</p>
-    <!--conversa--><h4>OK OR NOT OK? (VII) AND THE SURPRISE QUESTION</h4>
-    <p>After the lost and found, three small things from real life: a pen on a desk, a brother in your T-shirt, a friend with your toothbrush. Answer first, then let them choose green or red; wait five seconds in silence and let them say the whole sentence with <i>mine / yours / his / hers</i>. There is no right answer. The PUSH line (only you see it) is a quick yes or no or one word. Recast quietly while they talk; at the end, ask them to fix one or two sentences themselves.</p>
+    <!--conversa--><h4>WHOSE IS IT? (VII) AND THE SURPRISE QUESTION</h4>
+    <p>After the lost and found, three small things from real life: a pen on a desk, a brother’s T-shirt, a toothbrush. For each one, whose is it? Answer first, then let them choose; wait five seconds in silence and let them say the whole sentence with <i>mine / yours / his / hers</i>. The PUSH line (only you see it) is a quick yes or no. Recast quietly while they talk.</p>
     <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one light personal question. Use it when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
@@ -92,25 +92,25 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    coisas de quem são em casa e no trabalho: pegar, usar, dividir. A gramática (mine / yours / his /
    hers / ours, ’s) mora nos iniciadores. */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
-  { id: 'meu', troca: 'quiz', est: 'o', min: 5, img: 'mala', rot: 'OK or Not OK?', t: 'Mine, yours, ours. You decide.',
-    p: 'Your teacher answers first. Then choose a color and say the sentence.',
+  { id: 'meu', troca: 'quiz', est: 'o', min: 5, img: 'mala', rot: 'Whose Is It?', t: 'Mine, yours, ours. You choose.',
+    p: 'Your teacher answers first. Then choose one and say the sentence.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'The pen', sit: 'A pen on a desk. Nobody is here.',
-        q: 'You take it. OK or not OK?', opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['It’s mine now.', 'It isn’t mine. It’s …’s.'],
-        ex: 'Not OK! It isn’t mine. It’s somebody’s pen.',
-        push: 'A pen? Really?' },
-      { tag: 'The T-shirt', sit: 'Your brother wears your T-shirt.',
-        q: 'OK or not OK?', opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['That’s mine!', 'OK, it’s ours.'],
-        ex: 'OK! My T-shirts are his, and his are mine.',
-        push: 'Every day?' },
-      { tag: 'The toothbrush', sit: 'Your friend uses your toothbrush!',
-        q: 'OK or not OK?', opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['It’s mine, not yours!', 'Yours is …'],
-        ex: 'Not OK! It’s mine, not hers. Hers is pink!',
-        push: 'Your sister?' }
+      { tag: 'The pen', sit: 'A pen is on a desk. Nobody is here.',
+        q: 'Whose pen is it?', opc: ['It’s mine.', 'It isn’t mine.'],
+        st: ['It’s mine.', 'It isn’t mine. It’s …’s.'],
+        ex: 'It isn’t mine. It’s somebody’s pen.',
+        push: 'Is it a blue pen? Yes or no?' },
+      { tag: 'The T-shirt', sit: 'Your brother has a T-shirt.',
+        q: 'Whose T-shirt is it?', opc: ['It’s mine.', 'It’s his.'],
+        st: ['It’s mine!', 'It’s his.'],
+        ex: 'It’s mine! It’s my T-shirt, not his.',
+        push: 'Is it a big T-shirt? Yes or no?' },
+      { tag: 'The toothbrush', sit: 'A toothbrush is in the bathroom.',
+        q: 'Whose toothbrush is it?', opc: ['It’s mine.', 'It’s hers.'],
+        st: ['It’s mine, not yours.', 'It’s hers.'],
+        ex: 'It’s mine, not hers. Hers is pink!',
+        push: 'Is yours pink? Yes or no?' }
     ] }
 ] };
 </script><!--/conversa-dados.js-->
@@ -146,8 +146,8 @@ window.WL_PADRAO = {
    "p": "Your teacher is Ms. Grant. Tell her. Then ask back."
   },
   "cv-meu": {
-   "t": "Mine, yours, ours. You decide.",
-   "p": "Your teacher answers first. Choose a color. Say it."
+   "t": "Mine, yours, ours. You choose.",
+   "p": "Your teacher answers first. Choose one. Say it."
   },
   "fim": {
    "t": "Pack your suitcase.",
@@ -202,12 +202,12 @@ window.WL_PADRAO = {
   },
   "grant": {
    "obj": "Recontar a noite de memória para a Ms. Grant, mala por mala, e perguntar de volta.",
-   "perg": "Whose suitcase had three big knives in it?",
+   "perg": "Whose suitcase has three big knives in it?",
    "pula": "Cena extra: pode pular inteira."
   },
   "cv-meu": {
-   "obj": "Conversa: três situações da vida real, verde ou vermelho, com mine/yours/his/hers.",
-   "perg": "A friend uses your toothbrush. OK or not OK?",
+   "obj": "Conversa: três coisas (caneta, camiseta, escova), de quem é: escolher entre duas respostas com mine/his/hers.",
+   "perg": "Whose toothbrush is it?",
    "pula": "Duas situações bastam."
   },
   "fim": {
@@ -217,17 +217,17 @@ window.WL_PADRAO = {
   },
   "ff-conversa": {
    "obj": "Mais conversa sobre de quem são as coisas da vida do aluno.",
-   "perg": "Whose phone is the oldest in your family?",
+   "perg": "Whose phone is old in your family?",
    "pula": "Três cartas bastam."
   },
   "ff-lados": {
    "obj": "Escolher um lado sobre dividir coisas, com mine/ours.",
-   "perg": "Mine or ours? Why?",
+   "perg": "Is it mine or ours?",
    "pula": "Duas rodadas bastam."
   },
   "ff-cadeira": {
    "obj": "O aluno vira a Ms. Grant, a gerente da noite, e responde sobre as malas.",
-   "perg": "Whose suitcase was the problem, Ms. Grant?",
+   "perg": "Whose suitcase is the problem, Ms. Grant?",
    "pula": "Quatro perguntas bastam."
   }
  },
@@ -272,33 +272,33 @@ window.WL_PADRAO = {
     },
     {
      "k": "YOUR BAG",
-     "q": "Is your bag yours or a present?",
-     "fup": "Whose present was it?",
+     "q": "Is your bag a present?",
+     "fup": "Whose present is it?",
      "st": [
-      "It’s mine. I bought it.",
-      "It was my …’s present."
+      "No. It’s mine.",
+      "Yes. It’s my …’s present."
      ],
-     "ex": "It’s mine, but it was my sister’s present."
+     "ex": "Yes. It’s my sister’s present."
     },
     {
      "k": "THE SOFA",
-     "q": "Whose place is the best place on the sofa?",
-     "fup": "Why?",
+     "q": "Whose place is on the sofa?",
+     "fup": "Is it a big place?",
      "st": [
       "It’s mine!",
       "It’s my …’s."
      ],
-     "ex": "It’s my dog’s. He sleeps there all day."
+     "ex": "It’s my dog’s. It’s a big place!"
     },
     {
      "k": "YOUR TRIP",
-     "q": "On a trip, whose suitcase is bigger: yours or your friend’s?",
+     "q": "On a trip, is your suitcase big or small?",
      "fup": "What’s in it?",
      "st": [
-      "Mine is bigger.",
-      "My friend’s is bigger."
+      "Mine is big.",
+      "Mine is small."
      ],
-     "ex": "Mine is bigger. I take a lot of shoes."
+     "ex": "Mine is big. I take a lot of shoes."
     },
     {
      "k": "THE KITCHEN",
@@ -323,8 +323,7 @@ window.WL_PADRAO = {
    "palavras": [
     "mine",
     "ours",
-    "theirs",
-    "because"
+    "theirs"
    ],
    "rodadas": [
     {
@@ -332,7 +331,7 @@ window.WL_PADRAO = {
      "a": "One for two",
      "b": "One each",
      "fa": [
-      "One for two. It’s ours. It’s cheaper."
+      "One for two. It’s ours."
      ],
      "fb": [
       "One each. Mine is mine!"
@@ -384,9 +383,9 @@ window.WL_PADRAO = {
    "p": "Your teacher interviews you.",
    "aluno": "Listen to your teacher’s question. Answer as Ms. Grant, the night manager.",
    "perguntas": [
-    "How many suitcases were on the carousel tonight?",
-    "Whose suitcase had three big knives in it?",
-    "Was the pink suitcase a woman’s? Whose was it?",
+    "How many suitcases are on the carousel?",
+    "Whose suitcase has three big knives in it?",
+    "Is the pink suitcase a woman’s? Whose is it?",
     "Is that suitcase in the corner yours?",
     "Whose are these sneakers?",
     "Is the lost and found yours or the airport’s?"

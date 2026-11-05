@@ -21,7 +21,7 @@ var L = [
   { k: 'pulo', est: 'f', min: 6, img: 'relogio', rot: 'V · The Jump', t: 'The describing word jumps in front of the thing. Then a or an?', p: 'First listen: a or an? Then pick the right label.' },
   { k: 'catalogo', est: 'o', min: 7, img: 'relogio', rot: 'VI · The Misprint', t: 'The catalog has mistakes.', p: 'Say the right label out loud. Then turn the card: it gets the AUTHENTIC stamp.' },
   { k: 'balanca', est: 'o', min: 7, img: 'balanca', rot: 'VII · The Scale', t: 'One word from the auctioneer. You say the opposite.', p: 'In a full sentence. The scale tips when you say it.' },
-  { k: 'lance', est: 'f', min: 6, extra: 1, img: 'salao', rot: 'VIII · The Bid', t: 'You and your teacher want the same lots.', p: 'Three bids per lot. The price goes up only when the sentence is right. On the third bid, the hammer falls.' },
+  { k: 'lance', est: 'f', min: 6, extra: 1, img: 'salao', rot: 'VIII · The Bid', t: 'You and your teacher: the same lots.', p: 'Three bids per lot. The price goes up only when the sentence is right. On the third bid, the hammer falls.' },
   { k: 'memoria', est: 'o', min: 7, extra: 1, img: 'leilao', rot: 'IX · The Memory Game', t: 'Like the boys in the video. Ten seconds, then the curtain closes.', p: 'Say every lot you remember, with a / an and the describing word.' },
   { k: 'venda', est: 'o', min: 7, extra: 1, img: 'duas', rot: 'X · Sell It to Me', t: 'Now you are the auctioneer.', p: 'Pick a room. Show one thing and sell it in 30 seconds. Three rounds.' },
   { k: 'conversa', est: 'o', min: 7, extra: 1, img: 'lampada', rot: 'XI · After the Sale', t: 'The sale is over. A coffee, and five questions.', p: 'Your teacher asks about the things in your life.' },
@@ -32,7 +32,7 @@ var COISAS = ['watch', 'book', 'cup', 'photo', 'toy', 'guitar', 'umbrella', 'rin
 var ADJS = ['big', 'small', 'old', 'new', 'heavy', 'light', 'cheap', 'expensive'];
 var PERG_T = [
   { q: 'Is it new or old?', fup: 'Is it big or small?' }, { q: 'How old is it?', fup: 'Is it old or new?' },
-  { q: 'What color is it?', fup: 'How much is it for you, in money and in love?' }
+  { q: 'What color is it?', fup: 'How much is it?' }
 ];
 
 var PAL_V = ['big', 'small', 'expensive', 'cheap', 'heavy', 'light'];
@@ -73,21 +73,21 @@ BAL[1].au = 'b-old.mp3';
 
 var LANCE = [
   { n: 'LOT 03', coisa: 'clock', preco: 40, p: [
-    { cue: 'There is ___ on the table.', ok: 'There is an old clock on the table.', trap: [{ t: 'There is a old clock on the table.', k: 'som' }, { t: 'There is an clock old on the table.', k: 'ordem' }] },
+    { cue: 'It is ___.', ok: 'It is an old clock.', trap: [{ t: 'It is a old clock.', k: 'som' }, { t: 'It is an clock old.', k: 'ordem' }] },
     { cue: '___ clock is ___.', ok: 'The clock is heavy.', trap: [{ t: 'A clock is heavy.', k: 'the' }, { t: 'The heavy is clock.', k: 'ordem' }] },
-    { cue: 'I want ___!', ok: 'I want the old clock!', trap: [{ t: 'I want an old clock!', k: 'the' }, { t: 'I want the clock old!', k: 'ordem' }] }] },
+    { cue: '___, please!', ok: 'The old clock, please!', trap: [{ t: 'An old clock, please!', k: 'the' }, { t: 'The clock old, please!', k: 'ordem' }] }] },
   { n: 'LOT 04', coisa: 'lamp', preco: 25, p: [
-    { cue: 'There is ___ on the table.', ok: 'There is a small lamp on the table.', trap: [{ t: 'There is an small lamp on the table.', k: 'som' }, { t: 'There is a lamp small on the table.', k: 'ordem' }] },
+    { cue: 'It is ___.', ok: 'It is a small lamp.', trap: [{ t: 'It is an small lamp.', k: 'som' }, { t: 'It is a lamp small.', k: 'ordem' }] },
     { cue: '___ lamp is ___.', ok: 'The lamp is cheap.', trap: [{ t: 'A lamp is cheap.', k: 'the' }, { t: 'The cheap is lamp.', k: 'ordem' }] },
-    { cue: 'I want ___!', ok: 'I want the small lamp!', trap: [{ t: 'I want a small lamp!', k: 'the' }, { t: 'I want the lamp small!', k: 'ordem' }] }] },
+    { cue: '___, please!', ok: 'The small lamp, please!', trap: [{ t: 'A small lamp, please!', k: 'the' }, { t: 'The lamp small, please!', k: 'ordem' }] }] },
   { n: 'LOT 06', coisa: 'ring', preco: 300, p: [
-    { cue: 'There is ___ on the table.', ok: 'There is an expensive ring on the table.', trap: [{ t: 'There is a expensive ring on the table.', k: 'som' }, { t: 'There is a ring expensive on the table.', k: 'ordem' }] },
+    { cue: 'It is ___.', ok: 'It is an expensive ring.', trap: [{ t: 'It is a expensive ring.', k: 'som' }, { t: 'It is a ring expensive.', k: 'ordem' }] },
     { cue: '___ ring is ___.', ok: 'The ring is small.', trap: [{ t: 'A ring is small.', k: 'the' }, { t: 'An ring is small.', k: 'som' }] },
-    { cue: 'I want ___!', ok: 'I want the expensive ring!', trap: [{ t: 'I want an expensive ring!', k: 'the' }, { t: 'I want the ring expensive!', k: 'ordem' }] }] },
+    { cue: '___, please!', ok: 'The expensive ring, please!', trap: [{ t: 'An expensive ring, please!', k: 'the' }, { t: 'The ring expensive, please!', k: 'ordem' }] }] },
   { n: 'LOT 05', coisa: 'mirror', preco: 80, p: [
-    { cue: 'There is ___ on the table.', ok: 'There is a big mirror on the table.', trap: [{ t: 'There is an big mirror on the table.', k: 'som' }, { t: 'There is a mirror big on the table.', k: 'ordem' }] },
+    { cue: 'It is ___.', ok: 'It is a big mirror.', trap: [{ t: 'It is an big mirror.', k: 'som' }, { t: 'It is a mirror big.', k: 'ordem' }] },
     { cue: '___ mirror is ___.', ok: 'The mirror is old.', trap: [{ t: 'A mirror is old.', k: 'the' }, { t: 'The old is mirror.', k: 'ordem' }] },
-    { cue: 'I want ___!', ok: 'I want the big mirror!', trap: [{ t: 'I want a big mirror!', k: 'the' }, { t: 'I want the mirror big!', k: 'ordem' }] }] }
+    { cue: '___, please!', ok: 'The big mirror, please!', trap: [{ t: 'A big mirror, please!', k: 'the' }, { t: 'The mirror big, please!', k: 'ordem' }] }] }
 ];
 var POR_L = { som: 'The sound after the little word decides: a vowel sound takes AN.', ordem: 'The describing word comes before the thing.', the: 'We know this one now. The second time: THE.' };
 
@@ -100,9 +100,9 @@ var ARM_V = [{ k: 'ordem', t: 'THING + WORD' }, { k: 'som', t: 'A + VOWEL SOUND'
 var CONVERSA = [
   { q: 'What is an old thing in your home?', fup: 'Is it a nice thing?', st: ['An old thing in my home is a / an …'], ex: 'An old radio. It’s small and brown. It’s very nice.' },
   { q: 'What is an expensive thing in your home?', fup: 'Is it new or old?', st: ['An expensive … '], ex: 'A big TV. It’s new and very expensive!' },
-  { q: 'Do you prefer old things or new things?', fup: 'Tell me about an old thing you love.', st: ['I prefer …', 'I love an old …'], ex: 'I prefer old things. I love an old chair in my living room.' },
-  { q: 'What is a cheap thing that makes you happy?', fup: 'How much is it?', st: ['A cheap … makes me happy.'], ex: 'A cheap coffee in the morning. It’s two dollars.' },
-  { q: 'Your turn. Ask me two questions about my things.', fup: 'Now ask me: What is an old thing in your home?', st: ['What is …?', 'Do you have a / an …?'], ex: 'What is an old thing in your home?' }
+  { q: 'Old things or new things?', fup: 'An old thing in your living room: what is it?', st: ['Old things.', 'New things.'], ex: 'Old things. An old chair is in my living room.' },
+  { q: 'What is a cheap thing in your life?', fup: 'How much is it?', st: ['A cheap … is …'], ex: 'A cheap coffee. It’s two dollars.' },
+  { q: 'Your turn. Ask me two questions about my things.', fup: 'Now ask me: What is an old thing in your home?', st: ['What is …?', 'Is it a / an …?'], ex: 'What is an old thing in your home?' }
 ];
 
 var S = { i: 0, faixa: 1, fala: {}, resp: {}, armas: {},

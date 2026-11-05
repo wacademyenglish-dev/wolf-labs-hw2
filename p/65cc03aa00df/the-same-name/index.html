@@ -44,8 +44,8 @@
     <p>The owner first, with ’s: <b>Pedro’s jacket</b>, never <i>the jacket of Pedro</i> (of is for things: <i>the door of the car</i>). Two-word names take the s at the end: <b>Marta Reis’s cap</b>. <b>Whose…?</b> asks for the owner (not <i>who’s</i>). When the thing is clear, drop it: <b>mine, yours, his, hers, ours, theirs</b>.</p>
     <h4>SCENE IV · YOU READ</h4>
     <p>The sentence appears only on your side (the student doesn’t see it). Read it once, at normal speed; the student taps the word that got the s.</p>
-    <!--conversa--><h4>WHAT IS THE WORST? (VIII) AND THE SURPRISE QUESTION</h4>
-    <p>Behind the lost and found counter, your student ranks three things: my phone, my keys, my friend’s book. What is the worst to lose? Answer first yourself, as a model; then let them tap their order, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. “Show my teacher’s order” shows yours. Recast quietly while they talk (<i>the book of my friend</i> → <i>my friend’s book</i>); at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <!--conversa--><h4>WHOSE IS IT? (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Behind the lost and found counter, three things are on the counter: a phone, some keys, a book. For each one your student chooses: mine, or somebody else’s (my friend’s, my sister’s). Answer first yourself, as a model; then let them choose and say the whole sentence, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk (<i>the book of my friend</i> → <i>my friend’s book</i>). About 5 minutes.</p>
     <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
@@ -90,16 +90,26 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    pior perder; o professor mostra a ordem dele. A1 bem leve: três itens, frase quase pronta.
    A gramática da aula ('s com o dono primeiro · mine / yours / hers) mora nos itens e nos iniciadores. */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
-  { id: 'pior', troca: 'dobra', est: 'o', min: 5, img: 'caixa', rot: 'What Is the Worst?', t: 'Lost and found. What is the worst to lose?',
-    p: 'Tap them in order: 1 is the worst. Your teacher answers first.',
-    formato: 'ranking',
-    itens: ['My phone', 'My keys', 'My friend’s book'],
-    q: 'What is the worst to lose?',
-    dica: 'Tap the worst first. Tap again to take it out.',
-    st: ['Number one is my …', 'My friend’s book! It isn’t mine.', 'My keys. They are …'],
-    ex: 'Number one is my friend’s book. It isn’t mine, it’s hers!',
-    push: 'Do you lose things? Yes or no?',
-    prof: [2, 0, 1] }
+  { id: 'pior', troca: 'dobra', est: 'o', min: 5, img: 'caixa', rot: 'Whose Is It?', t: 'Lost and found. Whose is it?',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'The phone', sit: 'A phone is on the counter.', q: 'Whose phone is it?',
+        opc: ['It’s mine.', 'It’s my friend’s.'],
+        st: ['It’s mine.', 'It’s my friend’s phone.'],
+        ex: 'It’s my friend’s phone. It isn’t mine.',
+        push: 'Is your phone with you? Yes or no?' },
+      { tag: 'The keys', sit: 'Some keys are on the counter.', q: 'Whose keys are they?',
+        opc: ['They’re mine.', 'They’re my sister’s.'],
+        st: ['They’re mine.', 'They’re my sister’s.'],
+        ex: 'They’re my sister’s. They aren’t mine.',
+        push: 'Have you got a sister? Yes or no?' },
+      { tag: 'The book', sit: 'A book is on the counter.', q: 'Whose book is it?',
+        opc: ['It’s mine.', 'It’s my friend’s.'],
+        st: ['It’s mine!', 'It’s my friend’s. It’s hers.'],
+        ex: 'It’s my friend’s book. It isn’t mine, it’s hers!',
+        push: 'Is it a big book? Yes or no?' }
+    ] }
 ] };
 </script><!--/conversa-dados.js-->
 <script src="/kit/conversa.js"></script>
@@ -138,12 +148,12 @@ window.WL_PADRAO = {
    "p": "Read the first line. Pick the short word."
   },
   "cv-pior": {
-   "t": "What is the worst to lose?",
-   "p": "Tap them in order: 1 is the worst."
+   "t": "Lost and found. Whose is it?",
+   "p": "Choose one. Say it with the sentence."
   },
   "seu": {
    "t": "Real answers now.",
-   "p": "Five questions. Answer in full sentences."
+   "p": "Four questions. Answer in full sentences."
   },
   "fim": {
    "t": "Tags for your own things.",
@@ -206,12 +216,12 @@ window.WL_PADRAO = {
    "pula": "Cena extra: pode pular inteira."
   },
   "cv-pior": {
-   "obj": "Ranking: o pior de perder (meu celular, minhas chaves, o livro do meu amigo).",
-   "perg": "What is the worst to lose?",
-   "pula": "Só o primeiro lugar e o porquê."
+   "obj": "Escolha: de quem é o celular, as chaves e o livro no balcão (mine / my friend’s).",
+   "perg": "Whose phone is it?",
+   "pula": "Duas situações bastam."
   },
   "seu": {
-   "obj": "Cinco perguntas reais sobre as coisas do aluno, em frase inteira.",
+   "obj": "Quatro perguntas reais sobre as coisas do aluno, em frase inteira.",
    "perg": "Whose car do you drive?",
    "pula": "Cena extra: pode pular inteira."
   },
@@ -226,8 +236,8 @@ window.WL_PADRAO = {
    "pula": "Três cartas bastam."
   },
   "ff-lados": {
-   "obj": "Escolhas entre dois sobre emprestar e dividir, com possessivos.",
-   "perg": "Your car or your friend’s car?",
+   "obj": "Escolhas entre dois sobre de quem é a coisa, com ’s e mine/his/hers.",
+   "perg": "A bag: yours or your friend’s?",
    "pula": "Duas rodadas bastam."
   },
   "ff-passos": {
@@ -256,13 +266,13 @@ window.WL_PADRAO = {
    "cartas": [
     {
      "k": "YOUR HOME",
-     "q": "Whose room is the biggest in your home?",
+     "q": "Whose room is next to yours?",
      "fup": "Is yours big or small?",
      "st": [
-      "My …’s room is the biggest.",
+      "My …’s room is next to mine.",
       "Mine is …"
      ],
-     "ex": "My parents’ room is the biggest. Mine is small."
+     "ex": "My parents’ room is next to mine. Mine is small."
     },
     {
      "k": "THE CAR",
@@ -276,13 +286,13 @@ window.WL_PADRAO = {
     },
     {
      "k": "YOUR PHONE",
-     "q": "Whose number do you call the most?",
+     "q": "Whose number do you call a lot?",
      "fup": "Is his or hers the first on your list?",
      "st": [
       "I call my …’s number.",
       "His / Hers is …"
      ],
-     "ex": "I call my mom’s number the most. Hers is the first on my list."
+     "ex": "I call my mom’s number a lot. Hers is the first on my list."
     },
     {
      "k": "YOUR CLOTHES",
@@ -306,7 +316,7 @@ window.WL_PADRAO = {
     },
     {
      "k": "LOST THINGS",
-     "q": "What do you lose the most?",
+     "q": "What do you lose a lot?",
      "fup": "Whose things do you find?",
      "st": [
       "I lose my …",
@@ -325,54 +335,53 @@ window.WL_PADRAO = {
    "t": "Pick a side.",
    "p": "Your teacher takes the other one.",
    "palavras": [
-    "because",
     "mine",
     "yours",
     "’s"
    ],
    "rodadas": [
     {
-     "q": "Your car or your friend’s car for a trip?",
+     "q": "A bag: yours or your friend’s?",
      "a": "Mine",
      "b": "My friend’s",
      "fa": [
-      "Mine. I know my car."
+      "It’s mine. It’s my bag."
      ],
      "fb": [
-      "My friend’s. His is bigger."
+      "It’s my friend’s. It’s her bag."
      ]
     },
     {
-     "q": "Lost phone or lost keys?",
+     "q": "Lost: a phone or keys?",
      "a": "Phone",
      "b": "Keys",
      "fa": [
-      "My phone is worse. My life is in it."
+      "The phone is mine."
      ],
      "fb": [
-      "My keys are worse. I can’t go home."
+      "The keys are mine."
      ]
     },
     {
-     "q": "Wear your sister’s jacket or buy one?",
-     "a": "Wear hers",
-     "b": "Buy one",
+     "q": "A jacket: yours or your sister’s?",
+     "a": "Mine",
+     "b": "My sister’s",
      "fa": [
-      "Wear hers. It’s free."
+      "It’s mine."
      ],
      "fb": [
-      "Buy one. I want mine."
+      "It’s my sister’s. It’s hers."
      ]
     },
     {
-     "q": "A found wallet: take it to the counter or call the owner?",
-     "a": "The counter",
-     "b": "Call the owner",
+     "q": "A wallet: his or hers?",
+     "a": "His",
+     "b": "Hers",
      "fa": [
-      "The counter. It’s their job."
+      "It’s his wallet. It’s his."
      ],
      "fb": [
-      "Call the owner. The number is in it."
+      "It’s her wallet. It’s hers."
      ]
     }
    ],

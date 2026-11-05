@@ -78,10 +78,10 @@ var TRES = [
 ];
 
 var EVENTOS = [
-  { h: '9:14 PM', ev: 'The lights go off in the living room.', k: 'casa' }, { h: '9:30 PM', ev: 'The blinds closed in the bedroom.', k: 'casa' },
-  { h: '10:02 PM', ev: 'The front door locked.', k: 'casa' }, { h: '11:45 PM', ev: 'The oven turned off.', k: 'casa' },
-  { h: '1:10 AM', ev: 'The plants got water.', k: 'casa' }, { h: '2:26 AM', ev: 'The camera recorded the front door.', k: 'casa' },
-  { h: '3:40 AM', ev: 'Somebody washed the dishes.', k: 'pessoa' }, { h: '6:05 AM', ev: 'The water stopped in the bathroom.', k: 'casa' }
+  { h: '9:14 PM', ev: 'The lights go off in the living room.', k: 'casa' }, { h: '9:30 PM', ev: 'The blinds close in the bedroom.', k: 'casa' },
+  { h: '10:02 PM', ev: 'The front door locks.', k: 'casa' }, { h: '11:45 PM', ev: 'The oven turns off.', k: 'casa' },
+  { h: '1:10 AM', ev: 'The plants get water.', k: 'casa' }, { h: '2:26 AM', ev: 'The camera records the front door.', k: 'casa' },
+  { h: '3:40 AM', ev: 'Somebody washes the dishes.', k: 'pessoa' }, { h: '6:05 AM', ev: 'The water stops in the bathroom.', k: 'casa' }
 ];
 
 var IDEIAS = ['cook dinner', 'walk the dog', 'open the garage', 'play music', 'call the police', 'clean the floor', 'talk to the cat', 'pay the bills'];
@@ -182,7 +182,7 @@ R.registro = function (c) {
 R.chave = function (c) {
   var k = S.chave;
   return cab(c) + '<div class="mesa-chave"><div class="foto-pia vd" style="background-image:url(' + img('pia') + ')"><span class="hora">6:00 AM</span></div><div class="lado-chave"><div class="fatos">'
-    + ['Somebody washed the dishes at 3:40 AM.', 'Nothing is missing from the house.', 'The door is OK. Somebody has a key.'].map(function (f, i) { return '<div class="fato vd"><span>' + (i + 1) + '</span>' + f + '</div>'; }).join('') + '</div>'
+    + ['Somebody washes the dishes at 3:40 AM.', 'Nothing is missing from the house.', 'The door is OK. Somebody has a key.'].map(function (f, i) { return '<div class="fato vd"><span>' + (i + 1) + '</span>' + f + '</div>'; }).join('') + '</div>'
     + fala('ch', ['It can be …', 'Somebody with a key …'], [])
     + (k.abre ? '<div class="mensagem vd"><small>MESSAGE FROM THE OWNER</small><p>“That’s my mother. She has a key. She <b>can</b> come in whenever she wants.”</p><em>And that can is the third job: permission.</em></div>' : '<div><button type="button" class="btn cheio" data-a="ch-abre">Open the owner’s message</button></div>') + '</div></div>';
 };

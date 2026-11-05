@@ -88,9 +88,9 @@
 window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'palavras', tipo: 'And you?', q: 'Is there a window in your room?',
     opc: ['Yes, one', 'Yes, two', 'No'], st: ['There is a window.', 'There are two windows.', 'There isn’t a window.'],
-    ex: 'Yes, there is one big window. I can see the street.', push: 'Can you see the sea? Yes or no?' },
+    ex: 'Yes, there is one big window. It is on the street.', push: 'Is the sea near? Yes or no?' },
   { cena: 'regra', tipo: 'Would you rather', q: 'A big kitchen or a big garden?',
-    opc: ['A big kitchen', 'A big garden'], st: ['I want a big kitchen.', 'There is a garden in …'],
+    opc: ['A big kitchen', 'A big garden'], st: ['A big kitchen. There is …', 'A big garden. There is …'],
     ex: 'A big garden! There are flowers and a dog.', push: 'And a pool? Yes or no?' },
   { cena: 'casa', tipo: 'And you?', q: 'Your best friend’s house: big or small?',
     opc: ['Big', 'Small'], st: ['Her house is big.', 'His house is small.'],
@@ -111,17 +111,17 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
     p: 'Read it. OK or not OK? Your teacher answers first. Then say it with the sentence.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'Guests', sit: 'Many men live in his house.', q: 'Ten guests in your house?',
+      { tag: 'Guests', sit: 'Many men are in his house.', q: 'Ten guests in your house?',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
         st: ['OK. There is space.', 'Not OK! There isn’t space.'],
         ex: 'Not OK! There is only one bathroom!',
         push: 'For one night? Yes or no?' },
-      { tag: 'His food', sit: 'They eat his food. Every day.', q: 'A friend eats your food?',
+      { tag: 'His food', sit: 'They are at his table. Every day.', q: 'A friend eats your food?',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
         st: ['OK. There is a lot.', 'Not OK! It’s my food.'],
         ex: 'OK. There is a lot of food in my kitchen.',
         push: 'Your chocolate? Yes or no?' },
-      { tag: 'His dog', sit: 'His old dog waits for him.', q: 'A dog on your bed?',
+      { tag: 'His dog', sit: 'His old dog is at the door.', q: 'A dog on your bed?',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
         st: ['OK! There is space.', 'Not OK. It’s my bed.'],
         ex: 'OK! There is a small dog on my bed every night.',
@@ -354,18 +354,18 @@ window.WL_PADRAO = {
       "A big palace. There are many rooms."
      ],
      "fb": [
-      "A small house. There is less to clean."
+      "A small house. There is a small garden."
      ]
     },
     {
-     "q": "Penelope: wait for Odysseus or start a new life?",
-     "a": "Wait",
-     "b": "New life",
+     "q": "A house with a garden or with a balcony?",
+     "a": "A garden",
+     "b": "A balcony",
      "fa": [
-      "Wait. He is her husband."
+      "A garden. There are flowers."
      ],
      "fb": [
-      "A new life. There are twenty years without him."
+      "A balcony. There is a nice view."
      ]
     },
     {
@@ -412,29 +412,29 @@ window.WL_PADRAO = {
      "ex": "There is a big party, and there are no strangers."
     },
     {
-     "q": "A new problem arrives. What is it?",
+     "q": "A new problem. What is it?",
      "st": [
       "There is a new …"
      ],
      "ex": "There is a new ship on the sea."
     },
     {
-     "q": "Who goes on the trip this time: Telemachus or Penelope?",
+     "q": "Who is on the ship this time: Telemachus or Penelope?",
      "st": [
-      "His son …",
-      "His wife …"
+      "His son is …",
+      "His wife is …"
      ],
-     "ex": "His son goes. Telemachus has his own ship now."
+     "ex": "His son is on the ship. There is a big sail."
     },
     {
      "q": "What is the last image of the film?",
      "st": [
       "There is …"
      ],
-     "ex": "There is an old dog at the door, waiting again."
+     "ex": "There is an old dog at the door."
     }
    ],
-   "fim": "The studio loves it. The next film is yours."
+   "fim": "The studio is happy. The next film is yours."
   }
  ]
 };

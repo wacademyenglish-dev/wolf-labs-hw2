@@ -35,7 +35,7 @@ var ICO = { soup: '🍲', pizza: '🍕', carrots: '🥕', potatoes: '🥔', onio
 
 var VIDEOS = {
   video1: { ini: 63, fim: 98, cred: 'Video: from 1:03 to 1:38', antes: 'London to Edinburgh, day five. Fran is hot and hungry, and she sits down in a café. What do you think happens?', pal: ['hungry', 'hot', 'look', 'okay', 'sit', 'thank you'], q: 'Why does Fran sit down?', st: ['Because she is …'], ex: 'Because she is very hot and hungry.', fecho: 'Hot and hungry, and a man says: sit down.' },
-  video2: { ini: 106, fim: 127, cred: 'Video: from 1:46 to 2:07', antes: 'The man is going to ask Fran about food. What do you think he asks?', pal: ['do', 'like', 'soup', 'yes', 'vegetables', 'have'], q: 'What does Fran answer to “Do you like soup?”', st: ['She says …'], ex: 'Two words: Yes, I do. Not like: do.', fecho: 'She sends back do, not like.' }
+  video2: { ini: 106, fim: 127, cred: 'Video: from 1:46 to 2:07', antes: 'The man asks Fran about food. What does he ask?', pal: ['do', 'like', 'soup', 'yes', 'vegetables', 'have'], q: 'What does Fran answer to “Do you like soup?”', st: ['She says …'], ex: 'Two words: Yes, I do. Not like: do.', fecho: 'She sends back do, not like.' }
 };
 
 var RESPOSTAS = [{ t: 'Yes, I do.', k: 'sim' }, { t: 'No, I don’t.', k: 'nao' }, { t: 'Yes, I like.', k: 'like' }, { t: 'No, I don’t like.', k: 'like2' }, { t: 'Yes, I am.', k: 'am' }];

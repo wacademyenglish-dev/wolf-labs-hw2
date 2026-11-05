@@ -28,7 +28,7 @@ var L = [
 
 var ABRE = [
   { k: 'YOUR SATURDAY', q: 'What do you usually do on Saturdays?', fup: 'And what did you do LAST Saturday?', st: ['I usually …', 'Last Saturday I …'], ex: 'I usually sleep late and see my friends.' },
-  { k: 'YOUR DAY', q: 'What’s your favorite day of the week? Why?', fup: 'And Monday mornings?', st: ['My favorite day is …'], ex: 'Saturday! No alarm clock.' },
+  { k: 'YOUR DAY', q: 'What’s your favorite day of the week?', fup: 'And Monday mornings?', st: ['My favorite day is …'], ex: 'Saturday! No alarm clock.' },
   { k: 'PEOPLE', q: 'Who do you usually see on the weekend?', fup: 'What do you do together?', st: ['I usually see …'], ex: 'My family. We have lunch together on Sundays.' }
 ];
 var FORMAS = [{ k: 'past', t: 'A PAST VERB (I WENT)' }, { k: 'did', t: 'DID YOU …?' }, { k: 'dobro', t: 'DID YOU WENT', erro: 1 }, { k: 'voz', t: 'YOU WENT? (ONLY THE VOICE)', erro: 1 }];

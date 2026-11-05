@@ -5,7 +5,7 @@ window.WL_LORE = {
   fimTit: 'From a lost planet to a family farm.',
   fim: 'Now you know the family. Now the trailer.',
   antes: [
-    { q: 'You know the twins now. In the trailer, who likes the farm, and who hates it? Guess.', h: 'I think … likes it, and … hates it.' },
+    { q: 'In the trailer, who likes the farm? Who hates it? Guess.', h: 'I think … likes it, and … hates it.' },
     { q: 'Clark loves his family. What do you think he hates?', h: 'I think he hates …ing.' }
   ],
   paradas: [

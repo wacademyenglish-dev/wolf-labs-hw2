@@ -20,7 +20,7 @@ var L = [
   { k: 'balcao', est: 'o', min: 7, img: 'balcao', rot: 'VI · At the Counter', t: 'People come to the counter.', p: 'Your teacher plays each one. Ask. Listen. Give it back with the right short word.' },
   { k: 'meu', est: 'f', min: 6, extra: 1, img: 'bancada', rot: 'VII · Mine, Yours, His', t: 'When the thing is clear, drop it.', p: 'Read the first line. Pick the short word for the second.' },
   { k: 'dobra', est: 'f', min: 6, extra: 1, img: 'bancada', rot: 'VIII · Fold the Sentence', t: 'This is the long way. Fold it.', p: 'Say the long one. Tap the OWNER. The sentence folds.' },
-  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'bancada', rot: 'IX · Your Things', t: 'Real answers now.', p: 'Five questions. Answer in full sentences.' },
+  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'bancada', rot: 'IX · Your Things', t: 'Real answers now.', p: 'Four questions. Answer in full sentences.' },
   { k: 'fim', est: 'w', min: 6, img: 'caixa', rot: 'X · Counter Closed', t: 'Write the tags for your own things.', p: 'Five things at home and whose they are. Owner first, and one Whose…? question. The red line watches the s. It goes to your My notes.' }
 ];
 
@@ -80,9 +80,8 @@ var DOBRA = [
 
 var SEU = [
   { q: 'Whose car do you use most?', fup: 'Is it a good car?', st: ['I use my …’s car.', 'I don’t use a car.'], ex: 'I use my mother’s car.' },
-  { q: 'Whose cooking do you miss?', fup: 'What dish?', st: ['I miss my …’s cooking.'], ex: 'I miss my grandmother’s cooking. Her beans!' },
-  { q: 'What is an old thing in your bag or your home?', fup: 'Is it your thing, or your family’s?', st: ['An old thing of mine is …'], ex: 'My watch. It’s my grandfather’s watch.' },
-  { q: 'Is there something at home that is everybody’s?', fup: 'Who uses it most?', st: ['The … is everybody’s.'], ex: 'The TV is everybody’s, but it’s really my brother’s.' },
+  { q: 'What is an old thing in your home?', fup: 'Is it yours, or your family’s?', st: ['An old … is in my home.', 'It’s my …’s.'], ex: 'My watch. It’s my grandfather’s watch.' },
+  { q: 'Whose phone is on your desk?', fup: 'Is it yours?', st: ['It’s mine.', 'It’s my …’s phone.'], ex: 'It’s my phone. It’s mine!' },
   { q: 'Whose phone number do you know by heart?', fup: 'Why that one?', st: ['I know my …’s number.'], ex: 'I know my mom’s number.' }
 ];
 

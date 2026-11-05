@@ -73,13 +73,13 @@
 window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'fita', tipo: 'And you?', q: 'What is near you now?',
     opc: ['A cup', 'My phone', 'Books'], st: ['This is my …', 'These are my …'],
-    ex: 'These are my books. And that is my cat!', push: 'Can I see it? Yes or no?' },
+    ex: 'These are my books. And that is my cat!', push: 'Is it new? Yes or no?' },
   { cena: 'perto', tipo: 'Would you rather', q: 'A big party or a small dinner?',
     opc: ['A big party', 'A small dinner'], st: ['A big party! That is fun.', 'A small dinner. That is my favorite.'],
     ex: 'A small dinner. That is my favorite.', push: 'On your birthday? Yes or no?' },
-  { cena: 'busca', tipo: 'And you?', q: 'Do you hide presents?',
-    opc: ['Yes, I do.', 'No, I don’t.'], st: ['Yes. In that drawer!', 'No. I give them fast.'],
-    ex: 'Yes! In that closet, under those boxes.', push: 'Does anyone find them? Yes or no?' }
+  { cena: 'busca', tipo: 'And you?', q: 'Hide a present: that drawer or this box?',
+    opc: ['That drawer', 'This box'], st: ['That drawer! It is …', 'This box! It is …'],
+    ex: 'That drawer, under those boxes.', push: 'Is it a good place? Yes or no?' }
 ] };
 </script><!--/faisca-dados.js-->
 <script src="/kit/faisca.js"></script>
@@ -268,7 +268,7 @@ window.WL_PADRAO = {
     {
      "k": "YOUR WALL",
      "q": "What’s that on your wall?",
-     "fup": "Do you like it?",
+     "fup": "Is it nice?",
      "st": [
       "That is a …",
       "Those are …"
@@ -297,18 +297,18 @@ window.WL_PADRAO = {
     },
     {
      "k": "YOUR BEST PRESENT",
-     "q": "Show me a present someone gave you.",
-     "fup": "Who gave it to you?",
+     "q": "A present for you: what is it? Show it!",
+     "fup": "Who is it from?",
      "st": [
       "This is a …",
       "These are …"
      ],
-     "ex": "This is a watch. My brother gave it to me."
+     "ex": "This is a watch. It is from my brother."
     },
     {
      "k": "YOUR KITCHEN",
      "q": "What are those in your kitchen?",
-     "fup": "Do you use them every day?",
+     "fup": "Are they old or new?",
      "st": [
       "Those are …",
       "That is …"
@@ -338,10 +338,10 @@ window.WL_PADRAO = {
      "a": "The ball",
      "b": "The book",
      "fa": [
-      "This ball. He likes to play."
+      "This ball. It is fun."
      ],
      "fb": [
-      "That book. He likes stories."
+      "That book. It is nice."
      ]
     },
     {
@@ -349,7 +349,7 @@ window.WL_PADRAO = {
      "a": "Chocolate",
      "b": "Strawberry",
      "fa": [
-      "This chocolate cake. It is the best."
+      "This chocolate cake. It is great."
      ],
      "fb": [
       "That strawberry cake. It is pretty."
@@ -360,7 +360,7 @@ window.WL_PADRAO = {
      "a": "The drawer",
      "b": "Under the bed",
      "fa": [
-      "That drawer. Leo never opens it."
+      "That drawer. It is small."
      ],
      "fb": [
       "Under the bed. It is dark there."
@@ -390,19 +390,19 @@ window.WL_PADRAO = {
    "p": "Your teacher interviews you.",
    "aluno": "Listen to your teacher’s question. Answer as Leo.",
    "perguntas": [
-    "Why are you on the stairs at midnight?",
+    "Are you on the stairs at midnight?",
     "What’s that in your hand?",
     "Are those your new shoes?",
-    "What’s in that drawer, do you think?",
+    "What’s in that drawer?",
     "Is this your birthday cake?",
-    "What do you want: this present or that one?"
+    "This present or that one?"
    ],
    "st": [
     "This is my …",
     "That is …",
     "Those are …"
    ],
-   "ex": "This is my book. I can’t sleep! What’s in that drawer?"
+   "ex": "This is my book. I’m not sleepy! What’s in that drawer?"
   }
  ]
 };

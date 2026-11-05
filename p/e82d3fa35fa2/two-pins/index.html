@@ -87,8 +87,8 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
     opc: ['Here, in my city', 'In another city', 'In another country'], st: ['I was born in …', '…, but I live in …'],
     ex: 'I was born in Recife, but I live in São Paulo.', push: 'Is it big? Yes or no?' },
   { cena: 'lugares', tipo: 'Would you rather', q: 'Live in London or in New York?',
-    opc: ['London', 'New York'], st: ['I want to live in …'],
-    ex: 'London! I like the old buildings.', push: 'On your own? Yes or no?' },
+    opc: ['London', 'New York'], st: ['I live in … now.'],
+    ex: 'London! It’s old and beautiful.', push: 'On your own? Yes or no?' },
   { cena: 'cartao', tipo: 'And you?', q: 'Your best friend. Where is he or she from?',
     opc: ['My city', 'Another city', 'Another country'], st: ['He’s from …', 'She’s from …, but she lives in …'],
     ex: 'She’s from Salvador, but she lives in Lisbon now.', push: 'Do you visit? Yes or no?' }
@@ -110,7 +110,7 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
     itens: ['A house with my family', 'An apartment on my own', 'An apartment with roommates'],
     prof: [1, 0, 2],
     dica: 'Tap 1, 2, 3. Tap again to take it out.',
-    st: ['Number 1: I want to live in …', 'Now I live in … with …', 'I was born in …'],
+    st: ['Number 1: …', 'Now I live in … with …', 'I was born in …'],
     ex: 'Number 1: an apartment on my own! Now I live in a house with my family.',
     push: 'With a cat? Yes or no?' }
 ] };
@@ -297,23 +297,23 @@ window.WL_PADRAO = {
     },
     {
      "k": "A DREAM CITY",
-     "q": "Where would you like to live one day?",
+     "q": "Your dream city: where is it?",
      "fup": "In a house or an apartment?",
      "st": [
-      "I’d like to live in …",
-      "In a …"
+      "My dream city is …",
+      "A house, please."
      ],
-     "ex": "I’d like to live in Lisbon, in a small apartment."
+     "ex": "My dream city is Lisbon. A small apartment, please!"
     },
     {
      "k": "YOUR STREET",
-     "q": "Where do you live? Near what?",
+     "q": "Your street: what’s the name?",
      "fup": "Do you like it?",
      "st": [
-      "I live near …",
-      "I live next to …"
+      "I live on …",
+      "It’s a … street."
      ],
-     "ex": "I live near the station. Yes, I like it."
+     "ex": "I live on Rua das Flores. It’s a small street."
     },
     {
      "k": "A FAMOUS PERSON",
@@ -347,7 +347,7 @@ window.WL_PADRAO = {
      "a": "A house",
      "b": "An apartment",
      "fa": [
-      "A house. I want a garden."
+      "A house. A garden is nice."
      ],
      "fb": [
       "An apartment. It’s safe and easy."
@@ -358,10 +358,10 @@ window.WL_PADRAO = {
      "a": "On my own",
      "b": "With roommates",
      "fa": [
-      "On my own. I like quiet."
+      "On my own. It’s quiet."
      ],
      "fb": [
-      "With roommates. It’s cheaper and more fun."
+      "With roommates. It’s cheap and fun."
      ]
     },
     {
@@ -372,7 +372,7 @@ window.WL_PADRAO = {
       "My city. My family lives there."
      ],
      "fb": [
-      "A new city. I want new people and new places."
+      "A new city. New people, new places."
      ]
     },
     {
@@ -380,10 +380,10 @@ window.WL_PADRAO = {
      "a": "A big city",
      "b": "A small town",
      "fa": [
-      "A big city. There is a lot to do."
+      "A big city. It’s big and busy."
      ],
      "fb": [
-      "A small town. Everybody knows your name."
+      "A small town. It’s quiet and nice."
      ]
     }
    ],

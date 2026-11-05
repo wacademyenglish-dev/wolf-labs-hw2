@@ -55,8 +55,8 @@
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
     <p><i>the dog of Maria</i>, <i>his dog (for a woman)</i>, <i>it have big ears</i>, <i>she have</i>, <i>Yes, I have got</i>, <i>it’s my (for mine)</i>. A1: one correction per answer is enough.</p>
-    <!--conversa--><h4>YOUR FAVORITE GUEST (III) AND THE SURPRISE QUESTION</h4>
-    <p>After the pets go home, a light ranking: Bolt, Miso and Pip from 1 to 3. Tap “Show my teacher’s order” to give yours; the student taps theirs and says why (Ken’s cat, it has got…). Answer first yourself, as a model. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk; at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <!--conversa--><h4>WHOSE PET? (III) AND THE SURPRISE QUESTION</h4>
+    <p>After the pets go home, three quick choices: whose dog is Bolt, whose cat is Miso, whose rabbit is Pip. The student chooses the owner and says the sentence (Miso is Ken’s cat. It has got green eyes.). Answer first yourself, as a model. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk. About 5 minutes.</p>
     <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the review has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
@@ -96,16 +96,26 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    Formato curto: UM momento leve (ranking de 3, com a ordem do professor) no MEIO, depois da missão (II).
    Os três hóspedes da missão, com o 's no nome. Gramática da unidade 3 nos iniciadores: 's, its, has got. */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
-  { id: 'favorito', apos: 'missao', est: 'o', min: 5, img: 'conversa', rot: 'Your Favorite Guest', t: 'Three pets. Who is your favorite?',
-    p: 'Your teacher shows their order first. Then tap yours, from 1 to 3, and say why.',
-    formato: 'ranking',
-    q: 'Your favorite pet tonight?',
-    itens: ['Bolt, Maria’s dog', 'Miso, Ken’s cat', 'Pip, the twins’ rabbit'],
-    prof: [1, 2, 0],
-    dica: 'Tap 1, 2, 3. Tap again to take it out.',
-    st: ['Number one is …’s … ', 'It has got …', 'Its name is …'],
-    ex: 'Number one is Ken’s cat. Its name is Miso. It has got green eyes!',
-    push: 'Have you got a cat? Yes or no?' }
+  { id: 'favorito', apos: 'missao', est: 'o', min: 5, img: 'conversa', rot: 'Whose Pet?', t: 'Three pets. Whose is it?',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
+    formato: 'escolha',
+    rodadas: [
+      { tag: 'Bolt', sit: 'A dog with big ears.', q: 'Whose dog is Bolt?',
+        opc: ['Maria’s', 'Ken’s'],
+        st: ['Bolt is Maria’s dog.', 'It has got big ears.'],
+        ex: 'Bolt is Maria’s dog. It has got big ears.',
+        push: 'Have you got a dog? Yes or no?' },
+      { tag: 'Miso', sit: 'A cat with green eyes.', q: 'Whose cat is Miso?',
+        opc: ['Ken’s', 'The twins’'],
+        st: ['Miso is Ken’s cat.', 'It has got green eyes.'],
+        ex: 'Miso is Ken’s cat. It has got green eyes.',
+        push: 'Have you got a cat? Yes or no?' },
+      { tag: 'Pip', sit: 'A rabbit with long ears.', q: 'Whose rabbit is Pip?',
+        opc: ['Maria’s', 'The twins’'],
+        st: ['Pip is the twins’ rabbit.', 'It has got long ears.'],
+        ex: 'Pip is the twins’ rabbit. It has got long ears.',
+        push: 'Has it got a toy? Yes or no?' }
+    ] }
 ] };
 </script><!--/conversa-dados.js-->
 <script src="/kit/conversa.js"></script>
@@ -124,8 +134,8 @@ window.WL_PADRAO = {
    "p": "Ask each owner five questions. Then give the pets back."
   },
   "cv-favorito": {
-   "t": "Who is your favorite guest?",
-   "p": "Tap your order, 1 to 3. Say why."
+   "t": "Three pets. Whose is it?",
+   "p": "Choose one. Say it with the sentence."
   },
   "memoria": {
    "t": "Find the pairs.",
@@ -171,9 +181,9 @@ window.WL_PADRAO = {
    "pula": "Dois donos bastam."
   },
   "cv-favorito": {
-   "obj": "Ranking leve dos três pets; o aluno justifica com ’s e has got.",
-   "perg": "Why is it your favorite?",
-   "pula": "Só o primeiro lugar e o porquê."
+   "obj": "Escolha entre dois donos para cada um dos três pets, com ’s e has got.",
+   "perg": "Whose dog is Bolt?",
+   "pula": "Duas situações bastam."
   },
   "memoria": {
    "obj": "Jogo da memória: cada par vira uma frase com a gramática da unidade.",
@@ -257,13 +267,13 @@ window.WL_PADRAO = {
     },
     {
      "k": "YOUR HOME",
-     "q": "Whose room is the biggest in your home?",
+     "q": "Whose room is next to yours?",
      "fup": "What has it got?",
      "st": [
-      "My …’s room is …",
+      "My …’s room is next to mine.",
       "It’s got …"
      ],
-     "ex": "My parents’ room is the biggest. It’s got a big window."
+     "ex": "My parents’ room is next to mine. It’s got a big window."
     },
     {
      "k": "YOUR CAR",
@@ -296,7 +306,6 @@ window.WL_PADRAO = {
    "t": "Pick a side.",
    "p": "Your teacher takes the other one.",
    "palavras": [
-    "because",
     "has got",
     "its",
     "their"

@@ -50,7 +50,7 @@ var PRACA = [
   { k: 'THE MUSEUM', alvo: 6, liga: [2], q: 'Grandma loves the museum. Where is it?', ini: 'It’s opposite …', ops: [['It’s opposite the pharmacy.', 'ok'], ['It’s in front of the pharmacy.', 'frente'], ['It’s in the opposite of the pharmacy.', 'oposto']] },
   { k: 'THE MARKET', alvo: 7, liga: [0], q: 'I need water. Where is the market?', ini: 'It’s next to …', ops: [['It’s next to the town hall.', 'ok'], ['It’s near of the town hall.', 'near'], ['It’s next of the town hall.', 'nextof']] },
   { k: 'THE PHARMACY', alvo: 2, liga: [1, 3], q: 'My feet hurt! Where is the pharmacy?', ini: 'It’s on your right, between …', ops: [['It’s on your right, between the post office and the ice cream shop.', 'ok'], ['It’s on your right, between of the post office and the ice cream shop.', 'entre'], ['It’s in your right, between the post office and the ice cream shop.', 'em']] },
-  { k: 'THE FOUNTAIN', alvo: -1, liga: [], q: 'Grandma drew a fountain on her map. Where is it?', ini: 'It’s in the …', ops: [['It’s in the middle of the square.', 'ok'], ['It’s in the half of the square.', 'meio'], ['It’s on the middle of the square.', 'onmid']] }
+  { k: 'THE FOUNTAIN', alvo: -1, liga: [], q: 'Grandma’s map has a fountain. Where is it?', ini: 'It’s in the …', ops: [['It’s in the middle of the square.', 'ok'], ['It’s in the half of the square.', 'meio'], ['It’s on the middle of the square.', 'onmid']] }
 ];
 
 var ARMAS = [
@@ -70,10 +70,10 @@ var PASSOS = [
   { vai: [36, 50], diz: 'OK, I’m at the corner with the church. The line turns here, down Mill Lane.', ini: 'Turn …', ops: [['Turn right at the church.', 'ok'], ['Turn right in the church.', 'in'], ['Turn to right at the church.', 'turnto']] },
   { vai: [56, 50], diz: 'Mmm, fresh bread! I’m at the corner with the bakery. The line turns again.', ini: 'Turn …', ops: [['Turn left at the bakery.', 'ok'], ['Turning left at the bakery.', 'ing'], ['Turn left in the bakery.', 'in']] },
   { vai: [68, 50], diz: 'There’s a big street in front of me: Church Street. The line goes to the other side.', ini: 'Cross …', ops: [['Cross Church Street.', 'ok'], ['Traverse Church Street.', 'traverse'], ['Cross the Church Street.', 'the']] },
-  { vai: [88, 50], diz: 'I’m on the other side. I can see a bank. The line goes straight, past it.', ini: 'Go straight …', ops: [['Go straight. Go past the bank.', 'ok'], ['Go straight. Pass for the bank.', 'passfor'], ['Go straight. Go past of the bank.', 'pastof']] },
+  { vai: [88, 50], diz: 'I’m on the other side. I see a bank. The line goes straight, past it.', ini: 'Go straight …', ops: [['Go straight. Go past the bank.', 'ok'], ['Go straight. Pass for the bank.', 'passfor'], ['Go straight. Go past of the bank.', 'pastof']] },
   { vai: [88, 80], diz: 'Now the line goes down to the sea. It’s the first street on the right.', ini: 'Take …', ops: [['Take the first right.', 'ok'], ['Get the first right.', 'get'], ['Take the first at right.', 'atright']] },
-  { vai: [60, 80], diz: 'I can see the sea! The line turns right again. And there’s a little café.', ini: 'Turn right. The café is …', ops: [['Turn right. The café is on your right.', 'ok'], ['Turn right. The café is in your right.', 'em'], ['Turn right. The café is at right.', 'atright']] },
-  { vai: [48, 80], diz: 'Grandma’s note: “the box is under the old bench, across the street from the lighthouse.” Yesterday I dug at the lighthouse door!', ini: 'Stop! It’s …', ops: [['Stop! It’s opposite the lighthouse.', 'ok'], ['Stop! It’s in front of the lighthouse.', 'frente'], ['Stop! It’s opposite of the lighthouse.', 'oposto']] }
+  { vai: [60, 80], diz: 'I see the sea! The line turns right again. And there’s a little café.', ini: 'Turn right. The café is …', ops: [['Turn right. The café is on your right.', 'ok'], ['Turn right. The café is in your right.', 'em'], ['Turn right. The café is at right.', 'atright']] },
+  { vai: [48, 80], diz: 'Grandma’s note: “the box is under the old bench, across the street from the lighthouse.” And I’m at the lighthouse door!', ini: 'Stop! It’s …', ops: [['Stop! It’s opposite the lighthouse.', 'ok'], ['Stop! It’s in front of the lighthouse.', 'frente'], ['Stop! It’s opposite of the lighthouse.', 'oposto']] }
 ];
 
 var BRENNAN = [

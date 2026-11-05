@@ -22,7 +22,7 @@ var L = [
   { k: 'album', est: 'l', min: 7, extra: 1, img: 'park', rot: 'VII · Paula’s Album', t: 'Three photos from Paula. Every caption lost one word.', p: 'Play the caption. Put the word back. Then say it about your photo.' },
   { k: 'video2', est: 'l', min: 7, extra: 1, img: 'bridge', rot: 'VIII · Watch: Paula in London', t: 'Paula in London. You know every one of these words.', p: 'Tap each word when you hear it. Then one question.' },
   { k: 'colunas', est: 'f', min: 6, extra: 1, img: 'album', rot: 'IX · Sort Them, Fast', t: 'Nine places. One takes no word at all.', p: 'Say the whole sentence. Then drop it in a column.' },
-  { k: 'suas', est: 'o', min: 7, extra: 1, img: 'album', rot: 'X · Your Three Photos', t: 'Your turn. Three photos from your phone.', p: 'For each photo: where you are, what it’s like, and what you’re doing.' },
+  { k: 'suas', est: 'o', min: 7, extra: 1, img: 'album', rot: 'X · Your Three Photos', t: 'Your turn. Three photos from your phone.', p: 'For each photo: where you are, what it’s like, and who is with you.' },
   { k: 'fim', est: 'w', min: 6, img: 'album', rot: 'XI · Your Album', t: 'Write the captions for your album.', p: 'Five captions: where you are (at, in, on) and what it’s like (very…). The red line watches the little words. It goes to your My notes.' }
 ];
 
@@ -30,7 +30,7 @@ var FOTO = [
   { k: 'RIGHT NOW', q: 'Where are you right now?', fup: 'And your family?', st: ['I’m in …', 'I’m at …'], ex: 'I’m at home, in my room. My parents are at work.' },
   { k: 'LAST PHOTO', q: 'Look at a photo on your phone. Where are you?', fup: 'What is there in the photo?', st: ['I’m in …', 'I’m on …', 'I’m at …'], ex: 'I’m on the beach with my cousins. There is a big umbrella.' },
   { k: 'FAVORITE', q: 'What is your favorite photo on your phone? Where are you in it?', fup: 'Who is with you?', st: ['I’m in …', 'I’m on …'], ex: 'I’m on a boat in Bahia. My sister is with me.' },
-  { k: 'TRAVEL', q: 'Where are you in your best travel photo?', fup: 'Are there a lot of people?', st: ['I’m in …', 'I’m at …'], ex: 'I’m in Buenos Aires, at a café. It was very busy!' }
+  { k: 'TRAVEL', q: 'Where are you in your best travel photo?', fup: 'Are there a lot of people?', st: ['I’m in …', 'I’m at …'], ex: 'I’m in Buenos Aires, at a café. It’s very busy!' }
 ];
 var FORMAS = [{ k: 'in', t: 'IN …' }, { k: 'on', t: 'ON …' }, { k: 'at', t: 'AT …' }, { k: 'nada', t: 'NO WORD / ANOTHER WORD', erro: 1 }];
 
@@ -80,7 +80,7 @@ var COLS = [
   { t: 'school', k: 'at' }, { t: 'a plane', k: 'on' }, { t: 'Brazil', k: 'in' }, { t: 'the bus stop', k: 'at' }, { t: 'my room', k: 'in' },
   { t: 'home', k: '-', d: 'HOME takes no word: I’m home.' }, { t: 'the street', k: 'on' }, { t: 'the station', k: 'at' }, { t: 'a taxi', k: 'in', d: 'A taxi is small: you sit IN it, like a car.' }
 ];
-var PARTES = [{ k: 'lugar', t: 'WHERE? → I’M IN / ON / AT …' }, { k: 'very', t: 'WHAT IS IT LIKE? → IT’S VERY …' }, { k: 'mais', t: 'WHAT ARE YOU DOING? → I’M …ING' }];
+var PARTES = [{ k: 'lugar', t: 'WHERE? → I’M IN / ON / AT …' }, { k: 'very', t: 'WHAT IS IT LIKE? → IT’S VERY …' }, { k: 'mais', t: 'WHO IS WITH YOU? → I’M WITH …' }];
 
 var S = { i: 0, faixa: 1, fala: {}, resp: {}, armas: {},
   foto: { sel: -1, foi: {}, formas: {} }, video1: { p: 0, ouviu: {} }, video2: { p: 0, ouviu: {} }, ouve: { n: 0, viu: 0, vezes: 0 },
@@ -183,11 +183,11 @@ R.suas = function (c) {
   var s = S.suas, n = s.n, fim = n >= 3, pt = s.partes[n] || {};
   if (fim) return cab(c) + '<div class="foco"><div class="pergunta vd"><small>THREE PHOTOS</small><h2>Your places, your words.</h2></div></div>';
   return cab(c) + trilha([0, 1, 2], n) + '<div class="mesa-suas"><div class="polaroid-grande vd"><span>📱</span><small>YOUR PHOTO ' + (n + 1) + '</small><p>Show it on your camera, or describe it.</p></div><div class="lado-suas">'
-    + ['Where are you in this photo?', 'What is it like there?', 'What are you doing in it?'].map(function (q) { return '<p class="q-suas">' + q + '</p>'; }).join('')
+    + ['Where are you in this photo?', 'What is it like there?', 'Who is with you?'].map(function (q) { return '<p class="q-suas">' + q + '</p>'; }).join('')
     + '<div class="partes"><h5>WHAT YOU HEAR</h5>' + PARTES.map(function (p) { return '<button type="button" class="chip frase' + (pt[p.k] ? ' on' : '') + '" data-a="su-parte" data-v="' + p.k + '">' + p.t + '</button>'; }).join('')
     + '<button type="button" class="chip frase erro-ouvido' + (s.erro ? ' on' : '') + '" data-a="su-erro">MISTAKE HEARD: in the bus / at London</button></div>'
     + (s.erro ? '<p class="recusa">The bus is a surface: on the bus. A city is a box: in London.</p>' : '')
-    + mostra('su' + n, 'I’m on a boat in Bahia. It’s very hot and very beautiful. I’m eating an ice cream.', 1) + '<div><button type="button" class="btn" data-a="su-prox">Next photo</button></div></div></div>';
+    + mostra('su' + n, 'I’m on a boat in Bahia. It’s very hot and very beautiful. My sister is with me.', 1) + '<div><button type="button" class="btn" data-a="su-prox">Next photo</button></div></div></div>';
 };
 
 R.fim = function (c) {

@@ -40,11 +40,11 @@ var MISSAO = { pede: 'SAY THE WAY · FIVE PARTS', quem: 'tourist', depois: 'Plan
     { k: 'TOURIST 2', tag: 'THE BEACH', ele: 'beach', v: { sai: 'Go out and turn right.', reto: 'Go straight to the church.', vira: 'Turn right at the church.', onde: 'It’s at the end of the street.', nao: 'Don’t forget your sunscreen!' }, diz: 'You ask: “How do I get to the beach?” The way: out, right → straight to the church → right at the church → at the end of the street. A good warning: don’t forget your sunscreen.' },
     { k: 'TOURIST 3', tag: 'THE BAKERY', ele: 'bakery', v: { sai: 'Go out of the hotel.', reto: 'Cross the street.', vira: 'Turn left at the pharmacy.', onde: 'It’s opposite the school, between a bank and a café.', nao: 'Don’t go at night. It’s closed!' }, diz: 'You ask: “Is there a bakery near here?” The way: out → cross the street → left at the pharmacy → opposite the school, between a bank and a café. A good warning: don’t go at night (it’s closed).' }],
   relato: { titulo: 'TONIGHT · PLAN THE EVENING WITH THE TOURIST',
-    pede: function (x) { return 'We’re free tonight! What can we do near the ' + x.ele + '?'; },
+    pede: function (x) { return 'We’re free tonight! What do we do near the ' + x.ele + '?'; },
     chips: function () { return ['Let’s …', 'Let’s not …', 'Shall we …?', 'First, … Then, …']; },
     modelo: function (x) { return 'Let’s go to the ' + x.ele + ' first. Then let’s have dinner at the café. Let’s not take a taxi. Shall we walk?'; } },
   nao: { you: '“You turn left” → TURN left. Verb first.', no: '“No take the bus” → DON’T take the bus.', lets: '“Let’s to go” → LET’S GO.' },
-  fim: 'Three tourists found their way. The imperative, don’t, let’s and directions: all of Unit 5 at one desk.' };
+  fim: 'Three tourists get to their place. The imperative, don’t, let’s and directions: all of Unit 5 at one desk.' };
 
 var CARTAO = { ph: 'Go out of the metro station.\nGo straight for one block.\nTurn right at the supermarket.\nMy house is the blue one, next to a pharmacy.\nDon’t ring the bell. Call me!', rot: 'The way to my house',
   chips: ['Go straight ', 'Turn left at ', 'Turn right at ', 'It’s on your ', ' next to ', 'opposite ', 'Don’t ', 'First, ', 'Then '],
@@ -57,7 +57,7 @@ var CONVERSA = [
   { q: 'Give me one rule from your home.', f: 'A rule at home?', voce: ['Don’t …', 'Please …'], ex: 'Don’t wear shoes in the house!' },
   { q: 'Tell me how to make your favorite food. Three steps.', f: 'Your favorite food: how?', voce: ['First, …', 'Then, …', 'Finally, …'], ex: 'First, cut the onion. Then cook the rice. Finally, add the beans.' },
   { q: 'It’s Saturday. What’s your plan for us?', f: 'Saturday: your idea?', voce: ['Let’s …', 'Shall we …?', 'Let’s not …'], ex: 'Let’s go to the park! Let’s not watch TV. Shall we have lunch out?' },
-  { q: 'Is there a place a tourist must see in your city? How do I get there?', f: 'A nice place? The way?', voce: ['Go to …', 'Take the …', 'It’s next to …'], ex: 'Go to the old market. Take the metro. It’s next to the river.' }
+  { q: 'Is there a nice place in your city for a tourist? How do I get there?', f: 'A nice place? The way?', voce: ['Go to …', 'Take the …', 'It’s next to …'], ex: 'Go to the old market. Take the metro. It’s next to the river.' }
 ];
 
 var PODE = [

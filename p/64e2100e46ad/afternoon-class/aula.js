@@ -26,8 +26,8 @@ var L = [
 
 var ABRE = [
   { k: 'RIGHT NOW', q: 'Where are you right now? What are you doing?', fup: 'And what is your family doing?', st: ['I’m at …', 'I’m …ing.'], ex: 'I’m at home, in my bedroom. I’m studying English!' },
-  { k: 'AFTER LUNCH', q: 'What do you usually do after lunch? Work, study, or sleep?', fup: 'Do you feel sleepy?', st: ['I usually …', 'Sometimes I …'], ex: 'I usually work. Sometimes I sleep for twenty minutes!' },
-  { k: 'HELP!', q: 'Coffee, a walk, or a nap? What helps you in the afternoon?', fup: 'How many cups?', st: ['… helps me.'], ex: 'Coffee! Two cups.' }
+  { k: 'AFTER LUNCH', q: 'It is two o’clock. Are you working, studying, or sleeping?', fup: 'Are you sleepy?', st: ['I’m …ing.', 'I’m not …ing.'], ex: 'I’m working. I’m not sleeping!' },
+  { k: 'HELP!', q: 'Two o’clock, and you are sleepy. What are you doing?', fup: 'How many cups?', st: ['I’m drinking coffee.', 'I’m taking a nap.'], ex: 'I’m drinking coffee. Two cups!' }
 ];
 var FORMAS = [{ k: 'ing', t: 'AM / IS / ARE + -ING' }, { k: 'simples', t: 'SIMPLE PRESENT (I WORK)' }, { k: 'semis', t: 'NO IS (I STUDYING)', erro: 1 }, { k: 'seming', t: 'NO -ING (I AM STUDY)', erro: 1 }];
 
@@ -66,7 +66,7 @@ var ING = [
 ];
 
 var FILME = {
-  antes: 'The film is called Afternoon Class. It’s two o’clock. What do you think is happening in the class?',
+  antes: 'It’s two o’clock in a class. What is happening?',
   caps: [
     { k: 'THE CLOCK', ini: 0, fim: 14, q: 'What is the teacher doing? And the boy?', h: 'The teacher is writing on the board. The boy is sitting at his desk. He’s looking at the clock.' },
     { k: 'THE CLASS', ini: 14, fim: 32, q: 'Look at the other students. What are they doing?', h: 'They’re sleeping! A girl is looking at the ceiling.' },
@@ -76,7 +76,7 @@ var FILME = {
     { k: 'THE DREAM', ini: 117, fim: 179, q: 'Everything is dark and full of colors. What is he doing now?', h: 'He’s sleeping. He’s dreaming about his family and his home.' },
     { k: 'THE END', ini: 179, fim: 212, q: 'The end! What is the teacher doing now?', h: 'He’s sitting at his desk… and he’s falling asleep too!' }
   ],
-  depois: 'Imagine your school or office at two o’clock. What are the people doing?'
+  depois: 'Your school or office at two o’clock: what are the people doing?'
 };
 
 var ZOOM = [

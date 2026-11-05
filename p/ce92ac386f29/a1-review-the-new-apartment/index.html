@@ -50,7 +50,7 @@
     <h4>YOUR HOME</h4>
     <p>The writing card: short lines with the model on the side. One correction per line is enough.</p>
     <h4>WOULD YOU RATHER?</h4>
-    <p>Would you rather: the student taps A or B and says why, with because. Then you answer too, and agree or disagree.</p>
+    <p>Would you rather: the student taps A or B and says one sentence with there is / there are. You answer first.</p>
     <h4>I CAN</h4>
     <p>The student reads each “I can” line out loud and taps the ones they can do. You confirm and stamp the unit. Lines left open go to the homework, and to your next class.</p>
     <h4>THE MISTAKES TO LISTEN FOR</h4>
@@ -82,9 +82,9 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'rapido', tipo: 'And you?', q: 'Where is your phone now?',
     opc: ['On the table', 'In my hand', 'In my bag'], st: ['It’s on / in …', 'My phone is …'],
     ex: 'It’s in my hand! I’m in class.', push: 'Is it new? Yes or no?' },
-  { cena: 'cartao', tipo: 'Opinion', q: 'A good home: what is there?',
-    opc: ['A big kitchen', 'A balcony', 'A garden'], st: ['In a good home, there is a …'],
-    ex: 'In a good home, there is a balcony with plants.', push: 'Is there a balcony in your home? Yes or no?' },
+  { cena: 'cartao', tipo: 'And you?', q: 'What is there in your home?',
+    opc: ['A big kitchen', 'A balcony', 'A garden'], st: ['In my home, there is a …'],
+    ex: 'In my home, there is a balcony with plants.', push: 'Is there a balcony in your home? Yes or no?' },
   { cena: 'escolha', tipo: 'What if', q: 'A friend sleeps over. Where?',
     opc: ['On the sofa', 'In my bed', 'On the floor'], st: ['On the … ! There is …'],
     ex: 'On the sofa! There is a big sofa in my living room.', push: 'Is your sofa big? Yes or no?' }
@@ -104,13 +104,13 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
       { tag: 'Hill Road', sit: 'Apartment 3: there isn’t a kitchen.', q: 'No kitchen. OK for you?',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
         st: ['OK. There is a … near.', 'Not OK! I need a …'],
-        ex: 'Not OK! I need a kitchen. I cook every day.',
-        push: 'Do you cook every day? Yes or no?' },
+        ex: 'Not OK! I need a kitchen.',
+        push: 'Is there a kitchen in your home? Yes or no?' },
       { tag: 'The school', sit: 'It’s in front of a school.', q: 'A school in front. OK?',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
         st: ['OK. There are …', 'Not OK. There is a lot of …'],
-        ex: 'Not OK! There are children, and there is a lot of noise at 7 a.m.',
-        push: 'Do you get up early? Yes or no?' },
+        ex: 'Not OK! There are children, and there is a lot of noise.',
+        push: 'Is there a school near your home? Yes or no?' },
       { tag: 'The top floor', sit: 'It’s on the top floor.', q: 'No elevator. OK?',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
         st: ['OK! There are …, but …', 'Not OK. There isn’t …'],
@@ -143,8 +143,8 @@ window.WL_PADRAO = {
    "p": "Four lines: rooms, what there is, where."
   },
   "escolha": {
-   "t": "A or B? Choose and say why.",
-   "p": "Choose one. Say why, with because."
+   "t": "A or B? Choose one.",
+   "p": "Choose one. Say it with there is."
   },
   "pode": {
    "t": "Unit 4: what can you do now?",
@@ -193,8 +193,8 @@ window.WL_PADRAO = {
    "pula": "Três linhas bastam."
   },
   "escolha": {
-   "obj": "Would you rather: A ou B com because; o professor concorda ou discorda.",
-   "perg": "Why?",
+   "obj": "A ou B: o aluno escolhe e diz a frase com there is / there are; o professor responde primeiro.",
+   "perg": "A park or a mall?",
    "pula": "Duas perguntas bastam."
   },
   "pode": {
@@ -209,7 +209,7 @@ window.WL_PADRAO = {
   },
   "ff-lados": {
    "obj": "Escolher um lado sobre casas e bairros.",
-   "perg": "Why?",
+   "perg": "Is there a park near you?",
    "pula": "Duas rodadas bastam."
   },
   "ff-cadeira": {
@@ -335,7 +335,7 @@ window.WL_PADRAO = {
      ]
     },
     {
-     "q": "Live next to a park or next to a mall?",
+     "q": "Next to a park or next to a mall?",
      "a": "A park",
      "b": "A mall",
      "fa": [

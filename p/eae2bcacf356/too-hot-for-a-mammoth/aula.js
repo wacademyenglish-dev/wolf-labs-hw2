@@ -48,7 +48,7 @@ var ENCARTE = [
 
 var ANTES = [
   { q: 'Do you know the Ice Age films? Who is your favorite?', h: 'Yes. My favorite is … / No, I don’t.' },
-  { q: 'A mammoth in a world of lava. Is it a good place for him? Why?', h: 'No, it is too …' }
+  { q: 'A mammoth in a world of lava. Is it a good place for him?', h: 'No, it is too …' }
 ];
 var DEPOIS = [
   { q: 'What explodes in the teaser? What happens to the ice?', h: 'A volcano explodes. The ice …' },

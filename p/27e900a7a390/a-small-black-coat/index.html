@@ -74,7 +74,7 @@
 <script data-wl="faisca-dados.js">
 /* A SMALL BLACK COAT (Main A1) · pergunta-surpresa · 27/10/2026 · tamanho + cor + coisa · I want a … (máx. 3 no A1) */
 window.WL_FAISCA = { nivel: 'A1', qs: [
-  { cena: 'cores', tipo: 'Opinion', q: 'A new coat. What color?',
+  { cena: 'cores', tipo: 'And you?', q: 'A new coat. What color?',
     opc: ['Black', 'Red', 'Yellow'], st: ['I want a … coat.'],
     ex: 'I want a red coat! Black is boring.', push: 'Yellow? Yes or no?' },
   { cena: 'tamanho', tipo: 'And you?', q: 'Your shirts: small, medium or large?',
@@ -93,7 +93,7 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    primeiro no lugar do Bob? Os tamanhos e as cores ficam para o VI e o V; aqui entra o "I want a …" da aula.
    A1 bem leve: três itens curtos, frase quase pronta, o professor mostra a ordem dele. */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
-  { id: 'lista', troca: 'quero', est: 'o', min: 6, img: 'rua', rot: 'What Does Bob Want?', t: 'It’s 3 °C. You are Bob.',
+  { id: 'lista', troca: 'quero', est: 'o', min: 6, img: 'rua', rot: 'Bob’s Wish List', t: 'It’s 3 °C. You are Bob.',
     p: 'Put them in order: 1 is the top. Then say it with I want a …',
     formato: 'ranking',
     q: 'Cambridge. Very cold. What do you want first?',
@@ -273,27 +273,27 @@ window.WL_PADRAO = {
    "cartas": [
     {
      "k": "YOUR COAT",
-     "q": "Do you have a coat? What is it like?",
+     "q": "A coat: what is it like?",
      "fup": "Is it warm?",
      "st": [
-      "I have a …",
+      "It is a …",
       "It's warm. / It's not warm."
      ],
-     "ex": "I have a long black coat. It's warm."
+     "ex": "It's a long black coat. It's warm."
     },
     {
      "k": "YOUR SHOES",
-     "q": "What shoes are you wearing?",
+     "q": "Your shoes: what color are they?",
      "fup": "Big or small?",
      "st": [
-      "I'm wearing …",
+      "My shoes are …",
       "They're …"
      ],
-     "ex": "I'm wearing old white shoes."
+     "ex": "My shoes are old and white."
     },
     {
      "k": "A GIFT",
-     "q": "It's your friend's birthday. What do you buy?",
+     "q": "A gift for your friend: what is it?",
      "fup": "How much is it?",
      "st": [
       "I want a … for her.",
@@ -316,21 +316,21 @@ window.WL_PADRAO = {
      "q": "What's in your bag today?",
      "fup": "What color is it?",
      "st": [
-      "There's a …",
+      "A … is in my bag.",
       "It's …"
      ],
-     "ex": "There's a small black phone and a blue pen."
+     "ex": "A small black phone is in my bag."
     },
     {
      "k": "SHOPPING",
-     "q": "Do you like shopping for clothes?",
-     "fup": "Online or in a shop?",
+     "q": "Shopping for clothes: online or in a shop?",
+     "fup": "Is it fun?",
      "st": [
-      "Yes, I like it.",
-      "No, I don't like it.",
-      "Online. / In a shop."
+      "Online.",
+      "In a shop.",
+      "Yes, it is. / No, it isn’t."
      ],
-     "ex": "Yes, I like it. In a shop."
+     "ex": "In a shop. Yes, it is fun."
     }
    ]
   },
@@ -376,10 +376,10 @@ window.WL_PADRAO = {
      "a": "Cheap",
      "b": "Expensive",
      "fa": [
-      "A cheap coat. Bob has £100 for five days."
+      "A cheap coat. Bob's money is £100."
      ],
      "fb": [
-      "An expensive coat. It's warm for ten years."
+      "An expensive coat. It's very warm."
      ]
     },
     {
@@ -407,25 +407,25 @@ window.WL_PADRAO = {
    "prof": "Every thing with size + color + thing. Push for the a: a small blue hat.",
    "passos": [
     {
-     "q": "Bob has his coat. What does he want on his head?",
+     "q": "Bob's coat is ready. A hat for Bob: what is it?",
      "st": [
-      "He wants a …"
+      "A … for Bob."
      ],
-     "ex": "He wants a big gray hat."
+     "ex": "A big gray hat for Bob."
     },
     {
      "q": "And on his hands?",
      "st": [
-      "He wants … gloves."
+      "… gloves."
      ],
-     "ex": "He wants black gloves."
+     "ex": "Black gloves."
     },
     {
-     "q": "What does he want for the train?",
+     "q": "And a hot drink for the train?",
      "st": [
-      "He wants a …"
+      "A … for Bob."
      ],
-     "ex": "He wants a small hot coffee."
+     "ex": "A small hot coffee."
     },
     {
      "q": "And you? What do you want in Edinburgh?",

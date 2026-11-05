@@ -14,7 +14,7 @@ var L = [
   { k: 'rapido', est: 'f', min: 6, img: 'conversa', rot: 'I · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The New Apartment', t: 'Three apartments. Ask the owner.', p: 'Ask five questions about each apartment. Your teacher is the owner. Then describe one to the client.' },
   { k: 'cartao', est: 'w', min: 6, img: 'conversa', rot: 'III · Your Home', t: 'Your home is for rent! Write the ad.', p: 'Four short lines: rooms, what there is, where it is.' },
-  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
+  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose one.', p: 'Choose one. Then say it with there is / there are.' },
   { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
@@ -24,7 +24,7 @@ var PORTAS = [
   { k: 'THERE IS', tema: 'there is / there are', t: 'What is there in your kitchen? Three sentences.', ex: 'There is a fridge. There are two chairs. There isn’t a microwave.', trap: '“Have a fridge in my kitchen” → THERE IS a fridge.' },
   { k: 'IS THERE…?', tema: 'Is there…? / Are there…?', t: 'Ask your teacher three questions about their house.', ex: 'Is there a garden? Are there any plants?', trap: 'Is there + one thing; Are there + many.' },
   { k: 'SOME, ANY', tema: 'some / any', t: 'In your fridge now: say two things with some, one with any.', ex: 'There is some milk and some eggs. There isn’t any cheese.', trap: 'some in yes-sentences; any in no and questions.' },
-  { k: 'HOW MANY?', tema: 'how much / how many', t: 'Ask your teacher two questions: one with how many, one with how much.', ex: 'How many people live in your house? How much water do you drink?', trap: 'how many + plural things; how much + water, money, time.' }
+  { k: 'HOW MANY?', tema: 'how much / how many', t: 'Ask your teacher two questions: one with how many, one with how much.', ex: 'How many rooms are there in your house? How much milk is there in your fridge?', trap: 'how many + plural things; how much + water, money, time.' }
 ];
 
 var MISSAO = { pede: 'ASK THE OWNER FIVE QUESTIONS', quem: 'apartment', depois: 'The client is here',
@@ -54,9 +54,9 @@ var CARTAO = { ph: 'There are two bedrooms.\nThere is a small kitchen with some 
 var CONVERSA = [
   { q: 'Is there a park near your house?', f: 'A park near you?', voce: ['Yes, there is.', 'No, there isn’t.', 'It’s next to …'], ex: 'Yes, there is. It’s in front of my building.' },
   { q: 'What is there on your desk right now?', f: 'Your desk: what is on it?', voce: ['There is a …', 'There are some …'], ex: 'There is a laptop, and there are some papers.' },
-  { q: 'Where do you usually study English? At home? At work?', f: 'At home? At work?', voce: ['At home, in my …', 'At work.'], ex: 'At home, in the kitchen. It’s quiet.' },
+  { q: 'Where is your English book? At home? At work?', f: 'At home? At work?', voce: ['It’s at home.', 'It’s in my bag.'], ex: 'It’s on my desk, at home.' },
   { q: 'How many rooms are there in your house?', f: 'Rooms: how many?', voce: ['There are …', 'There is only one …'], ex: 'There are five rooms, and there is one bathroom.' },
-  { q: 'Is there anything you need for your house?', f: 'Your house needs…?', voce: ['I need some …', 'There isn’t any …'], ex: 'I need some new chairs. There aren’t any good chairs!' }
+  { q: 'Are there any plants in your house?', f: 'Plants at home?', voce: ['Yes, there are some …', 'No, there aren’t any …'], ex: 'Yes, there are some plants in the kitchen.' }
 ];
 
 var PODE = [
@@ -69,4 +69,4 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 var RAPIDO = { seg: 60, itens: [['The phone is ___ the table.', 'on'], ['I’m ___ home.', 'at'], ['There ___ two chairs.', 'are'], ['There ___ a sofa.', 'is'], ['___ there a park?', 'Is'], ['How ___ chairs?', 'many'], ['How ___ water?', 'much'], ['There isn’t ___ milk.', 'any'], ['The café is ___ to the bank.', 'next'], ['She lives ___ Recife.', 'in']] };
-var ESCOLHA = [{ a: 'an apartment next to a park', b: 'an apartment next to a mall', chips: ['I prefer …', 'because there is / there are …'], ex: 'Next to a park, because there are trees and it’s quiet.' }, { a: 'a big kitchen', b: 'a big bedroom', chips: ['A big …', 'because …'], ex: 'A big kitchen, because I love cooking.' }, { a: 'the first floor', b: 'the top floor', chips: ['The … floor', 'because …'], ex: 'The top floor: there is a great view.' }, { a: 'a house in the city', b: 'a house on the beach', chips: ['In the city / On the beach', 'because …'], ex: 'On the beach, of course!' }];
+var ESCOLHA = [{ a: 'an apartment next to a park', b: 'an apartment next to a mall', chips: ['A … for me.', 'There is / there are …'], ex: 'Next to a park. There are trees.' }, { a: 'a big kitchen', b: 'a big bedroom', chips: ['A big …', 'There is …'], ex: 'A big kitchen. There is a big table.' }, { a: 'the first floor', b: 'the top floor', chips: ['The … floor', 'There is …'], ex: 'The top floor. There is a great view.' }, { a: 'a house in the city', b: 'a house on the beach', chips: ['In the city / On the beach', 'There is …'], ex: 'On the beach. There is a lot of sun!' }];

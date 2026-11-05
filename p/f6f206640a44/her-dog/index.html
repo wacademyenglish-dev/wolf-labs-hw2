@@ -42,8 +42,8 @@
     <p>An easy reader in five chapters, and the title is the wrong sentence. A vet’s waiting room on a dark Tuesday morning: a woman holds the leash of a big old dog, and for four chapters everybody in the room (and your student) says <i>her dog</i>. In chapter five the vet reads the name on the card, and it is a man’s name. The story is the one rebuilt on 23/09; in the Live version the student reads line by line, makes a bet that comes back in chapter five, watches the patient card fill in, and turns the dog’s tag with a finger.</p>
     <h4>THE GRAMMAR</h4>
     <p><b>His, her, their, its</b> choose by the <b>owner</b>, never by the thing. In Portuguese the possessive agrees with the thing, so <i>his mother</i> about a woman’s mother is not carelessness: it is the first language. Say this once, then let the scenes work. No S on the word (<i>her books</i>, never <i>hers books</i>); <i>its</i> has no apostrophe. When you don’t know the owner, English won’t let you finish: <b>Whose is it?</b></p>
-    <!--conversa--><h4>OK OR NOT OK? (VIII) AND THE SURPRISE QUESTION</h4>
-    <p>Back in the waiting room, your student judges three things people do: his bag on a chair, her loud phone call, their cookies for Bruno. Green or red, no right answer. Answer first yourself, as a model. Then let your student choose, wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk (a man with <i>her bag</i> → <i>his bag</i>); at the end, ask them to fix one sentence themselves. About 5 minutes.</p>
+    <!--conversa--><h4>IN THE WAITING ROOM (VIII) AND THE SURPRISE QUESTION</h4>
+    <p>Back in the waiting room, your student chooses between two things for three people: his bag on the chair or on the floor, her phone old or new, their cookies big or small. No right answer. Answer first yourself, as a model. Then let your student choose and say the whole sentence with <i>his / her / their</i>. Wait five seconds in silence, and ask the PUSH line (only you see it): a yes / no question. Recast quietly while they talk (a man with <i>her bag</i> → <i>his bag</i>). About 5 minutes.</p>
     <p>The <b>Surprise question</b> button (bottom right, only you see it) opens one personal question at any moment. There are three; use one when the lesson has been only exercises for a while.</p><!--/conversa-->
     <h4>WOLF IN THIS LESSON</h4>
     <ul>
@@ -91,25 +91,25 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
    o aluno julga o que as pessoas fazem ali. A1 bem leve: duas opções, frase quase pronta, o professor responde primeiro.
    A gramática da aula (his / her / their: quem escolhe é o dono) mora nos iniciadores. */
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
-  { id: 'sala', troca: 'conserta', est: 'o', min: 5, img: 'sala', rot: 'OK or Not OK?', t: 'The waiting room. Is it OK?',
-    p: 'Choose OK or Not OK. Your teacher answers first. Then say it with the sentence.',
+  { id: 'sala', troca: 'conserta', est: 'o', min: 5, img: 'sala', rot: 'In the Waiting Room', t: 'The waiting room. Choose one.',
+    p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'The bag', sit: 'The room is full.', q: 'His bag on a chair?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK. It’s his bag.', 'Not OK. His bag goes on the floor.'],
-        ex: 'Not OK. His bag goes on the floor. A woman wants the chair!',
-        push: 'Your bag on a chair? Yes or no?' },
-      { tag: 'The phone', sit: 'A woman is on the phone.', q: 'Her call is very loud.',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK. Her call is important.', 'Not OK. Her call is too loud.'],
-        ex: 'Not OK. Her call is too loud. The dogs are scared!',
-        push: 'And you? Loud on the phone? Yes or no?' },
-      { tag: 'The cookies', sit: 'Two kids have cookies.', q: 'Their cookies for Bruno?',
-        opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK. Their cookies are nice.', 'Not OK. Ask the owner first.'],
-        ex: 'Not OK. Their cookies are for kids. Ask the owner first.',
-        push: 'Do you give food to dogs? Yes or no?' }
+      { tag: 'The bag', sit: 'A man is in the waiting room.', q: 'Where is his bag?',
+        opc: ['On the chair', 'On the floor'],
+        st: ['His bag is on the chair.', 'His bag is on the floor.'],
+        ex: 'His bag is on the floor.',
+        push: 'Is your bag big? Yes or no?' },
+      { tag: 'The phone', sit: 'A woman is on the phone.', q: 'Is her phone old or new?',
+        opc: ['Old', 'New'],
+        st: ['Her phone is old.', 'Her phone is new.'],
+        ex: 'Her phone is new.',
+        push: 'Is your phone new? Yes or no?' },
+      { tag: 'The cookies', sit: 'Two kids have cookies.', q: 'Are their cookies big or small?',
+        opc: ['Big', 'Small'],
+        st: ['Their cookies are big.', 'Their cookies are small.'],
+        ex: 'Their cookies are big.',
+        push: 'Do you like cookies? Yes or no?' }
     ] }
 ] };
 </script><!--/conversa-dados.js-->
@@ -139,8 +139,8 @@ window.WL_PADRAO = {
    "p": "Read it out loud, line by line. Then answer."
   },
   "cv-sala": {
-   "t": "The waiting room. OK or not OK?",
-   "p": "Choose OK or Not OK. Say it with the sentence."
+   "t": "The waiting room. Choose one.",
+   "p": "Choose one. Say it with the sentence."
   },
   "cap4": {
    "p": "Read it out loud. Then turn the tag over."
@@ -214,8 +214,8 @@ window.WL_PADRAO = {
    "pula": "Cena extra: pode pular inteira."
   },
   "cv-sala": {
-   "obj": "Conversa: julgar três atitudes na sala de espera (OK ou não) usando possessivos.",
-   "perg": "His bag is on a chair. Is it OK?",
+   "obj": "Conversa: escolher entre duas opções sobre três coisas na sala de espera, usando his/her/their.",
+   "perg": "Where is his bag? On the chair or on the floor?",
    "pula": "Duas situações bastam."
   },
   "cap4": {
@@ -244,8 +244,8 @@ window.WL_PADRAO = {
    "pula": "Três cartas bastam."
   },
   "ff-lados": {
-   "obj": "Escolher um lado sobre situações da sala de espera, com his/her/their.",
-   "perg": "Her dog, her rules?",
+   "obj": "Escolher um lado entre duas opções (bolsa, telefone, cachorro, plaquinha), com his/her/their/its.",
+   "perg": "Is her phone old or new?",
    "pula": "Duas rodadas bastam."
   },
   "ff-passos": {
@@ -322,13 +322,13 @@ window.WL_PADRAO = {
     },
     {
      "k": "YOUR CITY",
-     "q": "What is your city famous for?",
-     "fup": "What is its best place?",
+     "q": "Is your city big or small?",
+     "fup": "What is its name?",
      "st": [
-      "My city is famous for …",
-      "Its best place is …"
+      "My city is …",
+      "Its name is …"
      ],
-     "ex": "My city is famous for its food. Its best place is the market."
+     "ex": "My city is big. Its name is São Paulo."
     }
    ]
   },
@@ -341,54 +341,54 @@ window.WL_PADRAO = {
    "t": "Pick a side.",
    "p": "Your teacher takes the other one.",
    "palavras": [
-    "because",
     "his",
     "her",
-    "their"
+    "their",
+    "its"
    ],
    "rodadas": [
     {
-     "q": "A man puts his bag on a chair. OK or not OK?",
-     "a": "OK",
-     "b": "Not OK",
+     "q": "His bag: on the chair or on the floor?",
+     "a": "On the chair",
+     "b": "On the floor",
      "fa": [
-      "OK. The room is empty and his bag is heavy."
+      "His bag is on the chair."
      ],
      "fb": [
-      "Not OK. A woman needs a chair for her son."
+      "His bag is on the floor."
      ]
     },
     {
-     "q": "A woman talks on her phone, very loud. OK or not OK?",
-     "a": "OK",
-     "b": "Not OK",
+     "q": "Her phone: old or new?",
+     "a": "Old",
+     "b": "New",
      "fa": [
-      "OK. Maybe her call is important."
+      "Her phone is old."
      ],
      "fb": [
-      "Not OK. Their dogs are nervous."
+      "Her phone is new."
      ]
     },
     {
-     "q": "A family gives their cookies to a dog. OK or not OK?",
-     "a": "OK",
-     "b": "Not OK",
+     "q": "Their dog: big or small?",
+     "a": "Big",
+     "b": "Small",
      "fa": [
-      "OK. It is a nice thing and the dog is happy."
+      "Their dog is big."
      ],
      "fb": [
-      "Not OK. It is not their dog."
+      "Their dog is small."
      ]
     },
     {
-     "q": "You see a dog with a woman. Do you say “her dog”?",
-     "a": "Yes",
-     "b": "No, I ask",
+     "q": "Its tag: red or blue?",
+     "a": "Red",
+     "b": "Blue",
      "fa": [
-      "Yes. She has its leash."
+      "Its tag is red."
      ],
      "fb": [
-      "No, I ask. Maybe it is her father’s dog."
+      "Its tag is blue."
      ]
     }
    ],
@@ -419,10 +419,10 @@ window.WL_PADRAO = {
      "ex": "His job is in a hospital. He is a nurse."
     },
     {
-     "q": "Who is in the person’s family?",
+     "q": "Name one person in the family.",
      "st": [
-      "His … / Her … is …",
-      "Their … is …"
+      "His … is …",
+      "Her … is …"
      ],
      "ex": "His wife is a teacher. Their son is ten."
     },

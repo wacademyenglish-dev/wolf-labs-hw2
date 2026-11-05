@@ -14,13 +14,13 @@ window.WL_MUNDO = {
   foto: 'cena5-varanda',
   revela: 'A man from a lost planet, Krypton. He grew up on a farm, he writes for a newspaper, and he has a family. And he is Superman.',
   aquece: [
-    { img: 'planeta', q: 'Do you like watching films about space? Why or why not?', st: ['I love / like / hate watching …'], filme: 'In this show, a baby comes to Earth from a planet far away.', mais: 'What is your favorite?', ex: 'I love watching films about space, because I like the stars.' },
-    { img: 'cena1-celeiro', q: 'As a child, what did you love doing? What did you hate doing?', st: ['I loved …ing.', 'I hated …ing.'], filme: 'The baby grows up on a farm.', mais: 'And now?', ex: 'I loved playing in the street. I hated doing homework!' },
+    { img: 'planeta', q: 'Do you like watching films about space?', st: ['I love / like / hate watching …'], filme: 'In this show, a baby comes to Earth from a planet far away.', mais: 'What is your favorite?', ex: 'Yes, I love watching films about space.' },
+    { img: 'cena1-celeiro', q: 'What do you love doing? What do you hate doing?', st: ['I love …ing.', 'I hate …ing.'], filme: 'The baby grows up on a farm.', mais: 'And your mother?', ex: 'I love playing games. I hate doing homework!' },
     { img: 'metropole', q: 'Do you like living in a big city or a small town?', st: ['I like living in …', 'I don’t like …ing.'], filme: 'He moves to a big city, and then back to the farm.', mais: 'Where do you want to live one day?', ex: 'I like living in a big city, but I don’t like driving in traffic.' }
   ],
   vida: [],
   antes: [
-    { q: 'You know Clark now. In the trailer, who likes the farm, and who hates it? Guess.', h: 'I think … likes it, and … hates it.' },
+    { q: 'In the trailer, who likes the farm? Who hates it? Guess.', h: 'I think … likes it, and … hates it.' },
     { q: 'Clark loves his family. What do you think he hates?', h: 'I think he hates …ing.' }
   ]
 };

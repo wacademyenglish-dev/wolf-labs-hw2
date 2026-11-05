@@ -81,9 +81,9 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'bingo', tipo: 'And you?', q: 'What color is your phone?',
     opc: ['Black', 'White', 'Another color'], st: ['It’s a small … phone.', 'My phone is …'],
     ex: 'It’s a small black phone. It’s old!', push: 'Is it new? Yes or no?' },
-  { cena: 'erros', tipo: 'What if', q: 'Keys on the bus! You…',
-    opc: ['call the driver', 'take them home', 'leave them'], st: ['I … These keys are …'],
-    ex: 'I call the driver. These keys are important!', push: 'Do you lose keys? Yes or no?' },
+  { cena: 'erros', tipo: 'And you?', q: 'Keys on the bus. Are they yours?',
+    opc: ['Yes, they are.', 'No, they aren’t.', 'Maybe.'], st: ['Yes, they are. These keys are …'],
+    ex: 'No, they aren’t. Those keys are old.', push: 'Are your keys small? Yes or no?' },
   { cena: 'escolha', tipo: 'Would you rather', q: 'Which house for you?',
     opc: ['A big old house', 'A small new house'], st: ['A … house, but …'],
     ex: 'A small new house. It’s small, but it’s nice.', push: 'Is your house big? Yes or no?' }
@@ -100,16 +100,16 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
     p: 'Choose one of three. Your teacher answers first. Then say it with the sentence.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'The worst', sit: 'You lose ONE thing today.', q: 'Which one is the worst?',
+      { tag: 'The worst', sit: 'One thing is lost today.', q: 'Which one is it?',
         opc: ['My phone', 'My keys', 'My wallet'],
         st: ['My … ! It’s a small black …', 'It’s old, but …'],
         ex: 'My phone! It’s a small black phone. It’s old, but my photos are in it.',
         push: 'Is your phone new? Yes or no?' },
-      { tag: 'The thank-you', sit: 'An owner says: “Thank you! Take one.”', q: 'Which gift do you take?',
+      { tag: 'The thank-you', sit: 'An owner says: “Thank you! Take one.”', q: 'Which gift is for you?',
         opc: ['A big red umbrella', 'Two small cakes', 'A blue cup'],
         st: ['This … , please!', 'These … , please!'],
         ex: 'These two small cakes, please! They’re for my family.',
-        push: 'Do you share the cakes? Yes or no?' }
+        push: 'Are the cakes big? Yes or no?' }
     ] }
 ] };
 </script><!--/conversa-dados.js-->
@@ -234,30 +234,30 @@ window.WL_PADRAO = {
      "q": "What is in your bag?",
      "fup": "What color is it?",
      "st": [
-      "There is a …",
-      "I have an …"
+      "A … is here.",
+      "An … is in my bag."
      ],
-     "ex": "I have a small black wallet and an old phone."
+     "ex": "A small black wallet and an old phone are in my bag."
     },
     {
      "k": "YOUR KEYS",
-     "q": "How many keys do you have?",
+     "q": "How many keys are on your key ring?",
      "fup": "Are they big or small?",
      "st": [
-      "I have … keys.",
+      "… keys.",
       "These are my …"
      ],
-     "ex": "I have four keys. These are my house keys."
+     "ex": "Four keys. These are my house keys."
     },
     {
      "k": "YOUR FAMILY",
-     "q": "Are there children in your family?",
+     "q": "Children in your family: how many?",
      "fup": "How old are they?",
      "st": [
-      "There are … children.",
-      "There is a …"
+      "… children.",
+      "A … is here."
      ],
-     "ex": "There are two children: a boy and a girl."
+     "ex": "Two children: a boy and a girl."
     },
     {
      "k": "A FRIEND",
@@ -281,13 +281,13 @@ window.WL_PADRAO = {
     },
     {
      "k": "YOUR CLOTHES",
-     "q": "What are you wearing today?",
+     "q": "Your shirt today: what color is it?",
      "fup": "What is your favorite color?",
      "st": [
-      "I’m wearing a …",
+      "It’s a …",
       "These are …"
      ],
-     "ex": "I’m wearing a white shirt. These are my old jeans."
+     "ex": "It’s a white shirt. These are my old jeans."
     }
    ]
   },
@@ -312,7 +312,7 @@ window.WL_PADRAO = {
      "a": "A big bag",
      "b": "A small bag",
      "fa": [
-      "A big bag, because I carry a lot."
+      "A big bag, because it is big."
      ],
      "fb": [
       "A small bag, because it is light."
@@ -326,7 +326,7 @@ window.WL_PADRAO = {
       "A black umbrella. It is classic."
      ],
      "fb": [
-      "A red umbrella. You never lose it."
+      "A red umbrella. It is happy."
      ]
     },
     {
@@ -337,7 +337,7 @@ window.WL_PADRAO = {
       "My keys, because they are cheap."
      ],
      "fb": [
-      "My phone, because I need a new one!"
+      "My phone, because it is old!"
      ]
     },
     {
@@ -368,7 +368,7 @@ window.WL_PADRAO = {
      "q": "What is lost?",
      "st": [
       "My … is lost.",
-      "I can’t find my …"
+      "My … is not here."
      ],
      "ex": "My umbrella is lost."
     },
@@ -380,12 +380,12 @@ window.WL_PADRAO = {
      "ex": "It is a small black umbrella."
     },
     {
-     "q": "What is special about it?",
+     "q": "What is special: a color, a name, a thing?",
      "st": [
-      "It has …",
-      "There is … on it."
+      "The … is …",
+      "A … is on it."
      ],
-     "ex": "It has a white handle."
+     "ex": "The handle is white."
     },
     {
      "q": "The teacher finds it. Answer.",

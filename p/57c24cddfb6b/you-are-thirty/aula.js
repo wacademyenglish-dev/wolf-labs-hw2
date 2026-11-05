@@ -37,9 +37,9 @@ var BOLSA = [
   { t: 'hungry', k: 'am', s: 'I am hungry.' }, { t: 'two brothers', k: 'have', s: 'I have two brothers.' }, { t: 'a dog', k: 'have', s: 'I have a dog.' }, { t: 'cold', k: 'am', s: 'I am cold.' }
 ];
 var VELAS = [
-  { p: 'hungry', ic: '🍽️', c: 'It’s nine at night and there’s no dinner.' }, { p: 'thirsty', ic: '🥤', c: 'The bottle is empty.' }, { p: 'cold', ic: '🥶', c: 'The window is open. It’s snowing.' },
-  { p: 'hot', ic: '🥵', c: 'The fan is off. It’s 35 degrees.' }, { p: 'afraid', ic: '😨', c: 'The room is dark. There’s a noise.' }, { p: 'sleepy', ic: '😴', c: 'It’s one in the morning.' },
-  { p: 'tired', ic: '😮‍💨', c: 'You worked for ten hours.' }, { p: 'thirty', ic: '🎂', c: 'Today is your 30th birthday.' }
+  { p: 'hungry', ic: '🍽️', c: 'It’s nine at night. No dinner.' }, { p: 'thirsty', ic: '🥤', c: 'The bottle is empty.' }, { p: 'cold', ic: '🥶', c: 'The window is open. It’s winter.' },
+  { p: 'hot', ic: '🥵', c: 'The fan is off. It’s 35 degrees.' }, { p: 'afraid', ic: '😨', c: 'The room is dark. A noise!' }, { p: 'sleepy', ic: '😴', c: 'It’s one in the morning.' },
+  { p: 'tired', ic: '😮‍💨', c: 'Ten hours of work today.' }, { p: 'thirty', ic: '🎂', c: 'Today is your 30th birthday.' }
 ];
 var OUVIR = ['y-thirty.mp3', 'y-im.mp3', 'y-hungry.mp3', 'y-cold.mp3', 'y-have.mp3'];
 var PARES = [

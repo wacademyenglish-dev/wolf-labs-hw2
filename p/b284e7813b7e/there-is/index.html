@@ -73,13 +73,13 @@
 window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'escuta', tipo: 'And you?', q: 'Is there a park near your house?',
     opc: ['Yes, there is.', 'No, there isn’t.'], st: ['Yes, there is. It’s …', 'No, there isn’t.'],
-    ex: 'Yes, there is. It’s small, but nice.', push: 'Do you go there? Yes or no?' },
+    ex: 'Yes, there is. It’s small, but nice.', push: 'Big or small?' },
   { cena: 'lista', tipo: 'Would you rather', q: 'A town with a beach or lots of shops?',
     opc: ['A beach', 'Lots of shops'], st: ['There is a beach!', 'There are lots of shops!'],
-    ex: 'A beach! There is a beach, so I’m happy.', push: 'And no shops? OK?' },
+    ex: 'A beach! There is a beach, so I’m happy.', push: 'And no shops? Yes or no?' },
   { cena: 'fundo', tipo: 'And you?', q: 'Cinemas in your town?',
     opc: ['None', 'One', 'Lots!'], st: ['There is one cinema.', 'There are … cinemas.', 'There aren’t any.'],
-    ex: 'There are two cinemas, but they’re small.', push: 'Do you go? Yes or no?' }
+    ex: 'There are two cinemas, but they’re small.', push: 'Are they big? Yes or no?' }
 ] };
 </script><!--/faisca-dados.js-->
 <script src="/kit/faisca.js"></script>
@@ -143,8 +143,8 @@ window.WL_PADRAO = {
    "p": "Put them in order. Say it with there is."
   },
   "portas": {
-   "t": "No town has everything. Where do you move?",
-   "p": "Pick a town. Say the good and the bad."
+   "t": "No town has everything. Pick one.",
+   "p": "Pick a town. Say what there is, and what there isn’t."
   },
   "cidade": {
    "t": "Now your real town.",
@@ -213,7 +213,7 @@ window.WL_PADRAO = {
   "cv-nova": {
    "obj": "O aluno ordena três coisas novas para a cidade e fala com there is / there isn’t.",
    "perg": "Is there a beach in your town?",
-   "pula": "Só o primeiro lugar e o porquê."
+   "pula": "Só o primeiro lugar."
   },
   "portas": {
    "obj": "Escolher uma cidade dizendo o lado bom (there is) e o ruim (there isn’t).",
@@ -305,12 +305,12 @@ window.WL_PADRAO = {
     {
      "k": "YOUR CITY",
      "q": "Is there a beach in your city?",
-     "fup": "What is there for tourists?",
+     "fup": "Is there a museum?",
      "st": [
       "Yes, there is.",
       "No, there isn’t. But there is …"
      ],
-     "ex": "No, there isn’t. But there are a lot of good museums."
+     "ex": "No, there isn’t. But there is a big park."
     },
     {
      "k": "YOUR WEEKEND",
@@ -333,10 +333,10 @@ window.WL_PADRAO = {
    "t": "Pick a side.",
    "p": "Your teacher takes the other one.",
    "palavras": [
-    "because",
     "there is",
     "there isn’t",
-    "there are"
+    "there are",
+    "there aren’t any"
    ],
    "rodadas": [
     {
@@ -397,12 +397,12 @@ window.WL_PADRAO = {
    "prof": "Ask Is there…? after each step. Listen for the front seat: no “has a park”.",
    "passos": [
     {
-     "q": "Where is your town? Is there a beach or mountains?",
+     "q": "Your town: a beach or mountains?",
      "st": [
       "There is a …",
       "There are …"
      ],
-     "ex": "My town is in the south. There are mountains and there is a lake."
+     "ex": "There are mountains and there is a lake."
     },
     {
      "q": "What is there in the center?",
@@ -413,7 +413,7 @@ window.WL_PADRAO = {
      "ex": "In the center there is a big square and there are some cafés."
     },
     {
-     "q": "What isn’t there? Nothing bad!",
+     "q": "What isn’t there? Say one thing.",
      "st": [
       "There isn’t any …",
       "There aren’t any …"

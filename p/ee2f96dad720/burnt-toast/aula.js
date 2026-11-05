@@ -28,7 +28,7 @@ var L = [
 /* I · sua semana */
 var SEMANA = [
   { k: 'LAST NIGHT', q: 'What did you do last night?', fup: 'What time did you go to bed?', st: ['I watched …', 'I worked …', 'I went to …'], ex: 'I cooked pasta and watched a series. I went to bed at eleven.' },
-  { k: 'WENT WRONG', q: 'What went wrong this week?', fup: 'What did you do then?', st: ['I lost …', 'I burned …', 'I missed …'], ex: 'I missed the bus on Monday. I walked to work in the rain!' },
+  { k: 'WENT WRONG', q: 'What did you lose or miss this week?', fup: 'What did you do then?', st: ['I lost …', 'I burned …', 'I missed …'], ex: 'I missed the bus on Monday. I walked to work in the rain!' },
   { k: 'THE WEEKEND', q: 'Where did you go last weekend?', fup: 'Who did you go with?', st: ['I went to …', 'I stayed at home.'], ex: 'I went to the beach with my cousins.' },
   { k: 'DINNER', q: 'What did you eat for dinner yesterday?', fup: 'Who cooked it?', st: ['I ate …', 'I cooked …', 'My … cooked.'], ex: 'I ate rice and chicken. My father cooked it.' }
 ];

@@ -70,21 +70,21 @@ var EP = {
     { k: 'cartas', est: 'o', rot: 'previously on', titulo: 'Previously on <em>The Challenge</em>', pt: 'Vire as cartas: quem é quem?',
       nota: 'A quick recap of Episode 1 in the student\'s words: She\'s… He\'s… from…',
       cartas: [
-        { frente: 'Fran', sob: 'Episode 1', verso: 'I\'m Fran. I\'m 25. I\'m from Cambridge.', dica: 'She\'s …', cor: 'var(--fran)', fw: { q: 'Who is the winner? Guess. Why?', st: ['I think Fran is the winner.', 'She\'s …', 'He\'s …'], help: 'Just a guess: “I think Bob is the winner. He\'s young.”' } },
+        { frente: 'Fran', sob: 'Episode 1', verso: 'I\'m Fran. I\'m 25. I\'m from Cambridge.', dica: 'She\'s …', cor: 'var(--fran)', fw: { q: 'Who is the winner? Guess.', st: ['I think Fran is the winner.', 'She\'s …', 'He\'s …'], help: 'Just a guess: “I think Bob is the winner. He\'s young.”' } },
         { frente: 'Bob', sob: 'Episode 1', verso: 'Hello, I\'m Bob. I\'m 20. I\'m from York.', dica: 'He\'s …', cor: 'var(--bob)' },
         { frente: 'Paula', sob: 'Episode 1', verso: 'Hi, I\'m Paula. I\'m from Rochester.', dica: 'She\'s from …', cor: 'var(--paula)' }
       ] },
-    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'How do <em>you</em> travel?', pt: 'Abra uma carta e responda em voz alta.',
+    { k: 'cartas', est: 'o', rot: 'talk, don\'t write', titulo: 'Your <em>transport</em>', pt: 'Abra uma carta e responda em voz alta.',
       nota: 'Talk only. Push for an adjective in every answer: cheap, expensive, fast, slow.',
       cartas: [
-        { frente: 'Bus?', verso: 'How do you go to work or school?', dica: 'I go by bus / by car / on foot.', cor: 'var(--paula)', fw: { q: 'Is it fast or slow?', st: ['It\'s fast.', 'It\'s slow.', 'It\'s fast, but it\'s expensive.'], help: 'Say: “I go by bus. It\'s cheap, but it\'s slow.”' } },
+        { frente: 'Bus?', verso: 'Your transport: bus, car or bike?', dica: 'It\'s the bus / the car / the bike.', cor: 'var(--paula)', fw: { q: 'Is it fast or slow?', st: ['It\'s fast.', 'It\'s slow.', 'It\'s fast, but it\'s expensive.'], help: 'Say: “My bus is cheap, but it\'s slow.”' } },
         { frente: '£?', verso: 'Is the bus cheap in your city?', dica: 'It\'s cheap. / It isn\'t cheap.', cor: 'var(--bob)', fw: { q: 'How much is it?', st: ['It\'s … reais.', 'It\'s cheap.', 'It isn\'t cheap.'], help: 'Use a number: “It\'s five reais.”' } },
         { frente: 'Fast?', verso: 'Train or plane: which is fast?', dica: 'The plane is fast, but …', cor: 'var(--fran)', fw: { q: 'And which is cheap?', st: ['The train is cheap.', 'The plane is expensive.', '… but …'], help: '“The plane is fast, but it\'s expensive.”' } }
       ] },
     { k: 'video', est: 'l', rot: 'Episode 2 · 8:04', titulo: 'Watch <em>Episode 2</em>', pt: 'Responda antes. O vídeo destrava depois.',
       nota: 'Before: two guesses, no wrong answer. The video unlocks. Watch the whole episode. After: true or false.',
       antes: [ { q: 'Which is cheap?', ops: [{ t: 'the train' }, { t: 'the bus' }, { t: 'the bike' }] }, { q: 'Which is fast?', ops: [{ t: 'the train' }, { t: 'the bus' }, { t: 'the bike' }] } ],
-      durante: 'Listen: what does Fran choose? And Bob? And where is Paula?',
+      durante: 'Listen: Fran, Bob and Paula. Where is each one?',
       depois: [ { f: 'The train is cheap.', ok: 0 }, { f: 'Cycling is twenty pounds.', ok: 1 }, { f: 'Bob\'s train is cancelled.', ok: 1 }, { f: 'Paula is in Manchester.', ok: 0 } ] },
     { k: 'regra', est: 'f', rot: 'the rule', titulo: '<em>But</em> or <em>and</em>?', pt: 'but = mas (ideia diferente) · and = e (mesma direção) · isn\'t = is not.',
       nota: 'Read each card. The red card is the Portuguese trap: “não é rápido” becomes “is no fast”.',
@@ -96,7 +96,7 @@ var EP = {
     { k: 'cartas', est: 'o', rot: 'your choice', titulo: 'Train, bus or <em>bike</em>?', pt: 'Escolha um transporte e defenda a escolha.',
       nota: 'The student chooses for their own trip London to Edinburgh, and defends it with but.',
       cartas: [
-        { frente: 'Train', sob: 'Bob', verso: 'Fast. Expensive. (And sometimes cancelled!)', dica: 'It\'s fast, but …', cor: 'var(--bob)', fw: { q: 'Why the train?', st: ['It\'s fast, but it\'s expensive.', 'It isn\'t slow.', 'I like trains.'], help: 'Use but: “It\'s expensive, but it\'s fast.”' } },
+        { frente: 'Train', sob: 'Bob', verso: 'Fast. Expensive. (And sometimes cancelled!)', dica: 'It\'s fast, but …', cor: 'var(--bob)', fw: { q: 'Why the train?', st: ['It\'s fast, but it\'s expensive.', 'It isn\'t slow.', 'It\'s very good.'], help: 'Use but: “It\'s expensive, but it\'s fast.”' } },
         { frente: 'Bike', sob: 'Fran', verso: 'Twenty pounds. Cheap. Very slow.', dica: 'It\'s cheap, but …', cor: 'var(--fran)', fw: { q: 'Why the bike?', st: ['It\'s cheap, but it\'s slow.', 'It\'s good for me.', 'It isn\'t expensive.'], help: '“It\'s cheap, but it\'s slow.”' } },
         { frente: 'Bus', sob: 'Paula?', verso: 'Cheap. Slow. Very, very long!', dica: 'It isn\'t fast …', cor: 'var(--paula)', fw: { q: 'Why the bus?', st: ['It\'s cheap.', 'It isn\'t fast, but …', 'It\'s good.'], help: '“It isn\'t fast, but it\'s cheap.”' } }
       ] },
@@ -107,8 +107,8 @@ var EP = {
       nota: 'Four lines from the episode. Ask the student to read each one out loud.',
       itens: [ { f: 'The train is fast, ___ it\'s expensive.', ops: ['but', 'and'], ok: 0 }, { f: 'Cycling is cheap, but it\'s ___.', ops: ['slow', 'fast'], ok: 0 }, { f: 'The train ___ fast today.', ops: ['isn\'t', 'is no'], ok: 0 }, { f: 'London is big ___ busy.', ops: ['and', 'but'], ok: 0 } ] },
     { k: 'escrever', est: 'w', rot: 'it goes to your My notes', titulo: 'Your <em>trip</em>', pt: 'Escreva como você vai ao trabalho ou à escola. Toque nas peças.',
-      ph: 'I go by bus. It\'s cheap, but it\'s slow.', nota: 'The line under the paper catches “it\'s no fast” and “but is fast”. SAVE sends it to My notes.',
-      banco: ['I go by', 'It\'s', 'It isn\'t', 'but', 'and', 'cheap', 'expensive', 'fast', 'slow'],
+      ph: 'My bus is cheap, but it\'s slow.', nota: 'The line under the paper catches “it\'s no fast” and “but is fast”. SAVE sends it to My notes.',
+      banco: ['My transport is', 'It\'s', 'It isn\'t', 'but', 'and', 'cheap', 'expensive', 'fast', 'slow'],
       regras: [['\\bit\'?s no\\b', 'Check: it isn\'t (fast), not it\'s no.'], ['\\bbut is\\b', 'Check: but it\'s (fast).']] },
     { k: 'proximo', img: 'img/live-prox.jpg', titulo: 'Look at my pictures!', tx: 'Paula is still in London. Big, busy, amazing: the shops, the park, the river…',
       ganchos: [['Paula', 'in London'], ['Bob', 'in Cambridge'], ['Fran', 'on the road']], nota: 'Ask: what is your favorite place in a big city? That opens Episode 3.' }
@@ -366,12 +366,12 @@ window.WL_PADRAO = {
    "prof": "The student plans their own London to Edinburgh trip; push for one adjective and one but in every answer.",
    "passos": [
     {
-     "q": "How do you go: train, bus or bike?",
+     "q": "Train, bus or bike for you?",
      "st": [
-      "I go by …",
-      "I go on a bike."
+      "My choice is the …",
+      "My choice is a bike."
      ],
-     "ex": "I go by bus."
+     "ex": "My choice is the bus."
     },
     {
      "q": "Is it fast or slow? Cheap or expensive?",
@@ -382,15 +382,15 @@ window.WL_PADRAO = {
      "ex": "It’s slow, but it’s cheap."
     },
     {
-     "q": "Who goes with you: Fran, Bob or Paula?",
+     "q": "Fran, Bob or Paula: who is with you?",
      "st": [
-      "I go with …",
+      "… is with me.",
       "… is fun, but …"
      ],
-     "ex": "I go with Fran. She’s fun, but her bike is slow!"
+     "ex": "Fran is with me. She’s fun, but her bike is slow!"
     },
     {
-     "q": "Are you the winner? Why?",
+     "q": "Are you the winner?",
      "st": [
       "Yes! I’m …",
       "No. I’m …, but …"

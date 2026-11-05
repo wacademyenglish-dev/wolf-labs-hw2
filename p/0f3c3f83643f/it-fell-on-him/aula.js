@@ -70,7 +70,7 @@ var TRAPS = [
 
 /* o catálogo: o gesto forte */
 var PRODUTOS = [
-  { nome: 'Anvil', ico: '⚓', gag: 'The anvil falls on ___ (the coyote).', r: 'The anvil falls on <b>him</b>.', piada: 'It falls on him. Ouch!', depois: 'Has something ever fallen on you?' },
+  { nome: 'Anvil', ico: '⚓', gag: 'The anvil falls on ___ (the coyote).', r: 'The anvil falls on <b>him</b>.', piada: 'It falls on him. Ouch!', depois: 'Does your cat jump on you?' },
   { nome: 'Rocket skates', ico: '🛼', gag: 'The coyote buys rocket skates. He loves ___.', r: 'He loves <b>them</b>.', piada: 'He loves them… for three seconds.', depois: 'What do you love in your house?' },
   { nome: 'Bird seed', ico: '🌾', gag: 'The coyote puts bird seed on the road. The Road Runner eats ___.', r: 'The Road Runner eats <b>it</b>.', piada: 'He eats it, and he runs. Meep meep!', depois: 'What do you eat every morning?' },
   { nome: 'Spring shoes', ico: '👟', gag: 'The coyote jumps too high. He shouts: “Help ___!”', r: 'Help <b>me</b>!', piada: 'Nobody helps him.', depois: 'Who helps you when you have a problem?' },

@@ -41,16 +41,16 @@ var L = [
 ];
 
 var ABRE = [
-  { k: 'HALLOWEEN', q: 'Is Halloween a big thing where you live?', fup: 'What do people do?', st: ['Yes, …', 'Not really, …'], ex: 'Not really. Some bars have a Halloween party.' },
-  { k: 'COSTUMES', q: 'Do you wear costumes? At Carnival, at parties?', fup: 'What is a good costume for you?', st: ['Yes, I do. …', 'No, I don’t. …'], ex: 'Yes! A vampire. It’s got big fangs and a black cape.' },
+  { k: 'HALLOWEEN', q: 'Is there a Halloween party near you?', fup: 'Do you go? Yes or no?', st: ['Yes, …', 'Not really, …'], ex: 'Not really. Some bars have a Halloween party.' },
+  { k: 'COSTUMES', q: 'Do you wear costumes? At Carnival, at parties?', fup: 'A vampire, a witch or a ghost?', st: ['Yes, I do. …', 'No, I don’t. …'], ex: 'Yes! A vampire. It’s got big fangs and a black cape.' },
   { k: 'HORROR FILMS', q: 'Do you watch horror films?', fup: 'Alone or with friends?', st: ['Yes, I …', 'No, I …'], ex: 'Yes, but never alone! I watch them with my sister.' },
-  { k: 'THE SCARIEST', q: 'Do you know a scary film? What is it?', fup: 'Why is it scary?', st: ['It’s …', 'For me, …'], ex: 'The Exorcist. The girl’s voice is terrible.' },
-  { k: 'THE BEST MONSTER', q: 'Vampires, zombies or ghosts?', fup: 'Why?', st: ['Vampires, because …', 'Zombies, because …'], ex: 'Vampires. They’re elegant, and they never get old.' }
+  { k: 'A SCARY FILM', q: 'Do you know a scary film? What is it?', fup: 'Is it old or new?', st: ['It’s …', 'It’s old.', 'It’s new.'], ex: 'The Exorcist. It’s old, and it’s scary.' },
+  { k: 'THE BEST MONSTER', q: 'Vampires, zombies or ghosts?', fup: 'Has it got fangs?', st: ['Vampires. They’ve got …', 'Zombies. They’ve got …'], ex: 'Vampires. They’ve got long white fangs.' }
 ];
 var FORMAS = [{ k: 'got', t: 'HE’S GOT / HE HAS' }, { k: 'nao', t: 'IT HASN’T GOT' }, { k: 'have', t: 'HE HAVE GOT', erro: 1 }, { k: 'ordem', t: 'HAIR BLACK', erro: 1 }];
 
 var ANTES = [
-  { q: 'This is a trailer for Frankenstein. Do you know the story?', h: 'Yes. A scientist makes a man from dead bodies.' },
+  { q: 'This is a trailer for Frankenstein. Do you know the story?', h: 'Yes. A man makes a creature.' },
   { q: 'Imagine the creature. What has it got?', h: 'It’s got scars. It’s got big, sad eyes.' }
 ];
 var CAPS = [
@@ -63,22 +63,22 @@ var DEB_VM = { formato: "verdadeOuMentira", titulo: "True or Lie? If it’s a li
   {"f": "He finds a name: Victor Frankenstein.", "t": true, "tm": "0:52"},
   {"f": "He calls Victor “my friend”.", "t": false, "tm": "1:08", "c": "No. “My creator.”"},
   {"f": "He asks Victor for money.", "t": false, "tm": "1:17", "c": "No. He wants one thing: love."},
-  {"f": "If Victor says no, the creature is angry.", "t": true, "tm": "1:33"}
+  {"f": "At the end, the creature is angry.", "t": true, "tm": "1:33"}
 ] };
 var DEB_GO = {
   "formato": "reacao",
-  "titulo": "Last call · Monster or victim?",
+  "titulo": "Last call · Sad or angry?",
   "quem": "The director",
-  "fala": "The director: “One last question for the film. Is the creature a monster or a victim?”",
+  "fala": "The director: “One last question for the film. Is the creature sad or angry?”",
   "reacoes": [
     [
-      "A victim",
-      "A victim. He hasn’t got a family. He hasn’t got a name.",
-      "“Yes. That is why the audience loves him.”"
+      "Sad",
+      "Sad. He hasn’t got a family. He hasn’t got a name.",
+      "“Yes. Poor creature.”"
     ],
     [
-      "A monster",
-      "A monster. He’s got scars and he’s angry.",
+      "Angry",
+      "Angry. He’s got scars and he’s angry.",
       "“Scary. Good for a horror film.”"
     ],
     [
@@ -143,7 +143,7 @@ var HIST = {
   txt: 'This is an old story from Ireland. On October 31st, people are afraid of bad spirits. So they take a turnip, a small white vegetable, and they make a face in it. They put a little light inside. The face is scary, and the spirits go away! Then Irish families go to America. In America there are pumpkins. A pumpkin is big, it’s orange, and it’s easy to cut. So now we make faces in pumpkins. Its name is jack-o’-lantern.',
   qs: [
     { q: 'Where is this story from?', h: 'From Ireland.' },
-    { q: 'What has the face got? Look.', h: 'In a turnip, a small white vegetable.' },
+    { q: 'What is the face in?', h: 'In a turnip, a small white vegetable.' },
     { q: 'Is the face scary or funny?', h: 'It’s scary, for the bad spirits.' },
     { q: 'What is a pumpkin like?', h: 'It’s big, it’s orange, and it’s easy to cut.' }
   ]

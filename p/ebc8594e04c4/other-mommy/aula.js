@@ -211,7 +211,7 @@ function hipotese() {
 }
 
 /* IV · as três pistas e o quadro */
-var EV_CX = { ver: 'I can see it', inc: 'I’m not sure' };
+var EV_CX = { ver: 'I see it', inc: 'I’m not sure' };
 function evAbas(e) {
   return '<div class="ev-abas" role="tablist">' + PISTAS.map(function (p, i) { var feitas = p.f.filter(function (f, j) { return e.cl[i * 2 + j]; }).length; return '<button type="button" role="tab" class="ev-aba' + (e.pista === i ? ' sel' : '') + '" data-a="ev-pista" data-n="' + i + '" aria-selected="' + (e.pista === i) + '">' + p.k + '<i>' + feitas + ' / 2</i></button>'; }).join('')
     + '<button type="button" role="tab" class="ev-aba quadro' + (e.pista === 3 ? ' sel' : '') + '" data-a="ev-pista" data-n="3" aria-selected="' + (e.pista === 3) + '">Your board<i>' + Object.keys(e.cl).length + ' / 6</i></button></div>';
@@ -302,7 +302,7 @@ var AQ = { tipo: 'imagem', img: 'armario', alt: 'A dark bedroom at night, the cl
 /*@@FIM*/
 var FIM = { tipo: 'perguntas', rot: 'VIII · Questions', t: 'Questions: what do you know about her?', p: 'Use your board from VI. Answer with she + -s, she doesn’t, and Does she…? Then the teacher asks: How do you know?',
   itens: [
-    { get q() { var v = FRASES.filter(function (f, k) { return S.ev.cl[k] === 'ver'; }).length; return 'Describe the woman in the yellow dress in three sentences.<small class="fm-apoio">Your board has ' + v + ' “I can see it” sentence' + (v === 1 ? '' : 's') + '. Help: She has … · She wears … · She …s</small>'; },
+    { get q() { var v = FRASES.filter(function (f, k) { return S.ev.cl[k] === 'ver'; }).length; return 'Describe the woman in the yellow dress in three sentences.<small class="fm-apoio">Your board has ' + v + ' “I see it” sentence' + (v === 1 ? '' : 's') + '. Help: She has … · She wears … · She …s</small>'; },
       ex: 'She has long dark hair and bangs. She wears a yellow dress. She smiles a lot.' },
     { get q() { var r = S.ev.rev >= 0 ? S.ev.rev : S.ev.hip; return 'What don’t you know about her?<small class="fm-apoio">Your guess: ' + (r >= 0 ? HIPOTESES[r] : 'no guess yet') + ' Help: She doesn’t … · I’m not sure she …</small>'; },
       ex: 'She doesn’t say her name. I’m not sure she is the mommy.' },

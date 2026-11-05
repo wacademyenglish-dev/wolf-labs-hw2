@@ -83,14 +83,14 @@
 /* TWO MICE, THREE CHILDREN (Main A1) · pergunta-surpresa · 27/10/2026 · os plurais */
 window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'conta', tipo: 'And you?', q: 'How many pillows are on your bed?',
-    opc: ['One', 'Two', 'Lots!'], st: ['I have … pillows.', 'I have one pillow.'],
-    ex: 'Four pillows! I love pillows.', push: 'And blankets? One?' },
+    opc: ['One', 'Two', 'Lots!'], st: ['… pillows.', 'One pillow.'],
+    ex: 'Four pillows! Pillows are great.', push: 'And blankets? One?' },
   { cena: 'video', tipo: 'Would you rather', q: 'Two mice or two fish?',
     opc: ['Two mice', 'Two fish'], st: ['Two mice. They are cute.', 'Two fish. They are quiet.'],
     ex: 'Two fish. Fish are quiet!', push: 'Seventeen fish? Yes or no?' },
   { cena: 'regra', tipo: 'And you?', q: 'Children on your street: many?',
-    opc: ['A lot', 'A few', 'No children'], st: ['There are … children.'],
-    ex: 'A lot! There are ten children on my street.', push: 'Noisy? Yes or no?' }
+    opc: ['A lot', 'A few', 'No children'], st: ['… children.'],
+    ex: 'A lot! Ten children on my street.', push: 'Noisy? Yes or no?' }
 ] };
 </script><!--/faisca-dados.js-->
 <script src="/kit/faisca.js"></script>
@@ -105,19 +105,19 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
     p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'The kitchen', sit: 'Your friend has two cats.', q: 'Cats on the kitchen table?',
+      { tag: 'The kitchen', sit: 'Your friend: two cats.', q: 'Cats on the kitchen table?',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
         st: ['OK. Cats are clean.', 'Not OK! Cats on the table!'],
         ex: 'Not OK! Two cats on the table? No!',
         push: 'One small fish? OK?' },
       { tag: 'The bed', q: 'Three dogs in your bed?',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK! Three dogs, one bed.', 'Not OK. Dogs have big feet!'],
-        ex: 'Not OK! Three dogs have twelve feet!',
+        st: ['OK! Three dogs, one bed.', 'Not OK. Dogs’ feet are big!'],
+        ex: 'Not OK! Three dogs: twelve feet!',
         push: 'One puppy? OK?' },
       { tag: 'The office', q: 'Two mice in the office?',
         opc: [{ t: 'OK', cor: 'g' }, { t: 'Not OK', cor: 'r' }],
-        st: ['OK. Mice are small.', 'Not OK! People don’t like mice.'],
+        st: ['OK. Mice are small.', 'Not OK! People are afraid of mice.'],
         ex: 'OK, in a box. Mice are cute!',
         push: 'Seventeen mice? OK?' }
     ] }
@@ -258,63 +258,63 @@ window.WL_PADRAO = {
    "cartas": [
     {
      "k": "YOUR FAMILY",
-     "q": "How many people are there in your family?",
+     "q": "How many people are in your family?",
      "fup": "How many children?",
      "st": [
-      "There are … people.",
-      "There are … children."
+      "… people.",
+      "… children."
      ],
-     "ex": "There are six people in my family. There are two children."
+     "ex": "Six people in my family. Two children."
     },
     {
      "k": "YOUR PETS",
-     "q": "Do you have pets?",
-     "fup": "How many?",
+     "q": "Pets: how many?",
+     "fup": "Cats, dogs or fish?",
      "st": [
-      "I have two …",
-      "I don’t have pets."
+      "Two …",
+      "No pets."
      ],
-     "ex": "I have two cats and three fish."
+     "ex": "Two cats and three fish."
     },
     {
      "k": "YOUR STREET",
-     "q": "Are there animals on your street?",
-     "fup": "Are there mice?",
+     "q": "Animals on your street: which ones?",
+     "fup": "Mice? Yes or no?",
      "st": [
-      "There are some …",
-      "There are no …"
+      "Some …",
+      "No …"
      ],
-     "ex": "There are some dogs. There are no mice, I hope."
+     "ex": "Some dogs. No mice, I hope."
     },
     {
      "k": "YOUR WORK",
-     "q": "How many people work with you?",
-     "fup": "Are there men and women?",
+     "q": "How many people are in your team?",
+     "fup": "Men and women: how many?",
      "st": [
-      "… people work with me.",
-      "There are … men and … women."
+      "… people.",
+      "… men and … women."
      ],
-     "ex": "Ten people work with me. There are four men and six women."
+     "ex": "Ten people. Four men and six women."
     },
     {
      "k": "YOUR SHOES",
-     "q": "How many pairs of shoes do you have?",
+     "q": "How many pairs of shoes are in your closet?",
      "fup": "Are your feet big or small?",
      "st": [
-      "I have … pairs.",
+      "… pairs.",
       "My feet are …"
      ],
-     "ex": "I have five pairs. My feet are big."
+     "ex": "Five pairs. My feet are big."
     },
     {
      "k": "THE FARM",
-     "q": "Do you know a farm? What animals are there?",
-     "fup": "Are there sheep?",
+     "q": "A farm: what animals are on it?",
+     "fup": "Are sheep on it?",
      "st": [
-      "There are …",
-      "There are no …"
+      "… and …",
+      "No …"
      ],
-     "ex": "My uncle has a farm. There are sheep, geese and two horses."
+     "ex": "Sheep, geese and two horses."
     }
    ]
   },
@@ -341,7 +341,7 @@ window.WL_PADRAO = {
       "Two cats. They are quiet."
      ],
      "fb": [
-      "Two dogs. They love people."
+      "Two dogs. They are friendly."
      ]
     },
     {
@@ -352,7 +352,7 @@ window.WL_PADRAO = {
       "Cute. Their feet are tiny."
      ],
      "fb": [
-      "Scary. They have big teeth."
+      "Scary. Their teeth are big."
      ]
     },
     {
@@ -363,7 +363,7 @@ window.WL_PADRAO = {
       "With children. It is happy."
      ],
      "fb": [
-      "Quiet. I can read."
+      "Quiet. It is calm."
      ]
     },
     {
@@ -374,7 +374,7 @@ window.WL_PADRAO = {
       "Fish. They are easy."
      ],
      "fb": [
-      "Birds. They sing."
+      "Birds. They are pretty."
      ]
     }
    ],
@@ -390,19 +390,19 @@ window.WL_PADRAO = {
    "p": "Your teacher interviews you.",
    "aluno": "Listen to your teacher’s question. Answer as the naturalist.",
    "perguntas": [
-    "How many mice are there on day one?",
-    "How many mice are there on day eighty?",
+    "On day one: how many mice?",
+    "On day eighty: how many mice?",
     "What are the names of the first mice?",
-    "Where do the babies live?",
-    "Do the mice have big teeth?",
+    "Where are the babies?",
+    "Are the mice small?",
     "Is a mouse a good pet?"
    ],
    "st": [
-    "There is one …",
+    "One …",
     "There are … mice.",
-    "They have …"
+    "They are …"
    ],
-   "ex": "On day one there is one mouse, Bernard. On day eighty there are seventeen mice."
+   "ex": "On day one: one mouse, Bernard. On day eighty: seventeen mice."
   }
  ]
 };

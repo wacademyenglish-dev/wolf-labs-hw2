@@ -20,12 +20,12 @@ var PORTAS = [];
 
 var LEITURA = { rot: 'A NOTE ON THE FRIDGE · APARTMENT 4B', tipo: 'nota',
   antes: { q: 'Where are your keys right now? Point and say.', h: 'In my bag. / On the table.' },
-  texto: 'Hi! Thank you for your help!\nThe keys are {on} the shelf, {next to} the plant.\nMochi’s food is {in} the kitchen, {under} the sink.\nThe plants are {on} the balcony. Water them on Monday.\nMochi sleeps {behind} the TV or {between} the cushions.\nSee you on Friday! Lia',
+  texto: 'Hi! Thank you for your help!\nThe keys are {on} the shelf, {next to} the plant.\nMochi’s food is {in} the kitchen, {under} the sink.\nThe plants are {on} the balcony.\nMochi is {behind} the TV or {between} the cushions.\nSee you on Friday! Lia',
   perguntas: [
     { q: 'Who is Mochi?', h: 'The cat. Lia’s cat.' },
     { q: 'Where are the keys?', h: 'On the shelf, next to the plant.' },
     { q: 'Where is Mochi’s food?', h: 'In the kitchen, under the sink.' },
-    { q: 'Where does Mochi sleep?', h: 'Behind the TV or between the cushions.' }],
+    { q: 'Where is Mochi? Two places.', h: 'Behind the TV or between the cushions.' }],
   olha: 'Find six little words of place. Which one is for “inside”?' };
 
 var DESCOBRE = {
@@ -58,9 +58,9 @@ var MISSAO = { pede: 'WHERE IS IT? · ASK FIVE QUESTIONS', quem: 'lost thing', d
 
 var CONVERSA = [
   { q: 'Where is your phone now?', f: 'Your phone: where?', voce: ['It’s in my …', 'It’s on the …'], ex: 'It’s on the table, next to my coffee.' },
-  { q: 'Where do you put your keys at home?', f: 'Your keys at home?', voce: ['On a …', 'In a …'], ex: 'In a small box next to the door.' },
+  { q: 'Where are your keys at home?', f: 'Your keys at home?', voce: ['On a …', 'In a …'], ex: 'In a small box next to the door.' },
   { q: 'What is on your desk or table?', f: 'Your table: what is on it?', voce: ['There is a …', 'My … is on it.'], ex: 'My computer, a cup and a plant.' },
-  { q: 'Do you have a pet? Where does it sleep?', f: 'A pet? Where does it sleep?', voce: ['Yes, a … It sleeps …', 'No, I don’t.'], ex: 'Yes, a dog. He sleeps under my bed!' },
+  { q: 'Is there a pet in your home? Where is it?', f: 'A pet? Where is it?', voce: ['Yes, a … It’s …', 'No, there isn’t.'], ex: 'Yes, a dog. He is under my bed!' },
   { q: 'What is next to your bed?', f: 'Next to your bed?', voce: ['There is a …', 'My … is next to it.'], ex: 'A lamp and a glass of water.' }
 ];
 

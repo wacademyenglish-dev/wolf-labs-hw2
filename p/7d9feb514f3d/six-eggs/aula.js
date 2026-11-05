@@ -27,7 +27,7 @@ var L = [
 ];
 
 var MANHA = [
-  { k: 'LEAVING', q: 'What time do you leave home in the morning? How do you go?', fup: 'Is it a good way to go? Why?', st: ['I leave at …, and I take …'], ex: 'I leave at seven, and I take the bus.' },
+  { k: 'LEAVING', q: 'What time do you leave home in the morning? How do you go?', fup: 'Do you like it?', st: ['I leave at …, and I take …'], ex: 'I leave at seven, and I take the bus.' },
   { k: 'YOUR BAG', q: 'What do you always have in your bag? Why?', fup: 'And what is never in your bag?', st: ['I always have …, because …'], ex: 'I always have an umbrella, because it rains a lot here.' },
   { k: 'MORNINGS', q: 'Do you like mornings?', fup: 'What is the best part?', st: ['I like …, but …'], ex: 'I like mornings, but I don’t like getting up.' },
   { k: 'LOSING', q: 'Do you lose things? What do you do then?', fup: 'What do you often lose?', st: ['I sometimes lose my …, so I …'], ex: 'I sometimes lose my keys, so I keep them in my bag.' }

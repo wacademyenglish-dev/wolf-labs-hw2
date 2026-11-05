@@ -22,10 +22,10 @@ var L = [
 ];
 
 var ABRE = [
-  { k: 'EVERY WEEK', q: 'What do you buy every week at the market?', fup: 'How many? Say the numbers.', st: ['I buy …', 'two … / six …'], ex: 'I buy six eggs, two lemons and a lot of tomatoes.' },
-  { k: 'NEVER', q: 'What do you never buy? Why?', fup: 'Who buys it in your house?', st: ['I never buy …'], ex: 'I never buy cherries. They’re very expensive.' },
-  { k: 'YOUR KITCHEN', q: 'How many knives, cups and glasses are in your kitchen?', fup: 'Too many, or too few?', st: ['There are … knives', 'We have …'], ex: 'We have six knives and too many glasses.' },
-  { k: 'PEOPLE', q: 'How many people live in your house? Any children?', fup: 'Who does the shopping?', st: ['… people live …', 'two children …'], ex: 'Four people live in my house: two adults and two children.' }
+  { k: 'EVERY WEEK', q: 'A market list: say three things with numbers.', fup: 'How many eggs? Say the number.', st: ['Six …', 'Two …'], ex: 'Six eggs, two lemons and ten tomatoes.' },
+  { k: 'NEVER', q: 'Cherries, grapes or peaches: which are expensive?', fup: 'Which are cheap?', st: ['… are expensive.'], ex: 'Cherries are very expensive.' },
+  { k: 'YOUR KITCHEN', q: 'How many knives, cups and glasses are in your kitchen?', fup: 'Too many, or too few?', st: ['… knives.', '… glasses.'], ex: 'Six knives and ten glasses.' },
+  { k: 'PEOPLE', q: 'How many people are in your house? Any children?', fup: 'Who is at the market on Saturday?', st: ['… people.', '… children.'], ex: 'Four people: two adults and two children.' }
 ];
 var FORMAS = [{ k: 's', t: 'A CLEAR -S (APPLES)' }, { k: 'irr', t: 'AN IRREGULAR (PEOPLE…)' }, { k: 'sem', t: 'NO S (TWO TOMATO)', erro: 1 }, { k: 'dupla', t: 'CHILDS / PEOPLES', erro: 1 }];
 
@@ -48,14 +48,14 @@ var GARFO = [
 ];
 
 var FACAS = [
-  { a: 'knife', b: 'knives', s: 'Two knives on the table.' }, { a: 'loaf', b: 'loaves', s: 'She sells three loaves a day.' },
-  { a: 'half', b: 'halves', s: 'Cut it into two halves.' }, { a: 'leaf', b: 'leaves', s: 'The leaves are on the ground.' },
-  { a: 'shelf', b: 'shelves', s: 'Vera has four shelves.' }, { a: 'wife', b: 'wives', s: 'Their wives run the next stall.' }
+  { a: 'knife', b: 'knives', s: 'Two knives on the table.' }, { a: 'loaf', b: 'loaves', s: 'Three loaves are on the table.' },
+  { a: 'half', b: 'halves', s: 'Two halves are one whole.' }, { a: 'leaf', b: 'leaves', s: 'The leaves are on the ground.' },
+  { a: 'shelf', b: 'shelves', s: 'The shelves are in the stall.' }, { a: 'wife', b: 'wives', s: 'Their wives are at the next stall.' }
 ];
 var TEIMOSOS = [
-  { a: 'man', b: 'men', s: 'Two men are waiting.' }, { a: 'woman', b: 'women', s: 'The women know Vera.' },
-  { a: 'child', b: 'children', s: 'Three children are running.' }, { a: 'foot', b: 'feet', s: 'My feet hurt today.' },
-  { a: 'tooth', b: 'teeth', s: 'Brush your teeth at night.' }, { a: 'person', b: 'people', s: 'Many people come on Saturday.' }
+  { a: 'man', b: 'men', s: 'Two men are at the stall.' }, { a: 'woman', b: 'women', s: 'The women are at Vera’s stall.' },
+  { a: 'child', b: 'children', s: 'Three children are here.' }, { a: 'foot', b: 'feet', s: 'My feet are tired today.' },
+  { a: 'tooth', b: 'teeth', s: 'My teeth are white.' }, { a: 'person', b: 'people', s: 'Many people are here on Saturday.' }
 ];
 var TRAP = [{ w: 'children', ok: 1 }, { w: 'childrens' }, { w: 'people', ok: 1 }, { w: 'peoples' }, { w: 'men', ok: 1 }, { w: 'feet', ok: 1 }];
 
@@ -82,7 +82,7 @@ var BARRACAS = [
   { k: 'casa', t: 'KITCHEN THINGS', ic: '🔪', itens: ['knives', 'dishes', 'glasses', 'boxes', 'brushes'] },
   { k: 'kids', t: 'TOYS', ic: '🧸', itens: ['balls', 'dolls', 'games', 'cars', 'puzzles'] }
 ];
-var CLIENTES = ['How much are the {x}?', 'Do you have any {x} for children?', 'Can I have six, please? And two boxes?'];
+var CLIENTES = ['How much are the {x}?', 'Are the {x} for children?', 'Six, please! And two boxes?'];
 var PARTES = [{ k: 's', t: '-S THAT BUZZES /z/' }, { k: 'es', t: '-ES WITH A BEAT' }, { k: 'irr', t: 'AN ODD ONE (KNIVES, LOAVES)' }];
 
 var S = { i: 0, faixa: 1, fala: {}, resp: {}, armas: {},

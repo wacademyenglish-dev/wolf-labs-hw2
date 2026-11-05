@@ -91,9 +91,7 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
     ex: 'It’s on the table. It isn’t ringing!', push: 'Is it on silent? Yes or no?' },
   { cena: 'regra', tipo: 'What if', q: 'The spirit town. What are you doing?',
     opc: ['Running home', 'Eating', 'Exploring'], st: ['I’m running home!', 'I’m eating the food.', 'I’m exploring the town.'],
-    ex: 'I’m exploring the town. I’m taking photos!', push: 'Alone? Yes or no?' },
-  { cena: 'janelas', tipo: 'Opinion', q: 'The spirit town: fun or scary?',
-    opc: ['Fun', 'Scary'], st: ['It’s fun! Spirits are taking baths.', 'It’s scary. Nobody is talking.'],
+    ex: 'I’m exploring the town. I’m taking photos!', push: 'Alone? Yes or no?' },{ cena: 'janelas', tipo: 'Would you rather', q: 'The spirit town: fun or scary?',opc: ['Fun', 'Scary'], st: ['It’s fun! Spirits are taking baths.', 'It’s scary. Nobody is talking.'],
     ex: 'Fun! The spirits are taking baths and eating.', push: 'A night there? Yes or no?' }
 ] };
 </script><!--/faisca-dados.js-->
@@ -302,8 +300,7 @@ window.WL_PADRAO = {
     },
     {
      "k": "THIS WEEK",
-     "q": "Are you working a lot or resting this week?",
-     "fup": "Why?",
+     "q": "Are you working a lot or resting this week?","fup": "Are you tired?",
      "st": [
       "I’m …ing a lot.",
       "I’m not …ing."
@@ -347,7 +344,7 @@ window.WL_PADRAO = {
    ],
    "rodadas": [
     {
-     "q": "Chihiro’s parents are eating the spirits’ food. You are there. Are you eating too?",
+     "q": "The parents are eating the spirits’ food. And you?",
      "a": "I’m eating",
      "b": "I’m not eating",
      "fa": [
@@ -369,7 +366,7 @@ window.WL_PADRAO = {
      ]
     },
     {
-     "q": "Chihiro is working in the bathhouse. Is she working or running away?",
+     "q": "Chihiro: working or running away?",
      "a": "Working",
      "b": "Running away",
      "fa": [
@@ -380,7 +377,7 @@ window.WL_PADRAO = {
      ]
     },
     {
-     "q": "Haku is flying. Are you riding the dragon or watching it?",
+     "q": "Haku is flying. You: riding or watching?",
      "a": "Riding it",
      "b": "Watching it",
      "fa": [

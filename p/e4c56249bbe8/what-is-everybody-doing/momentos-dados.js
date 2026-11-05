@@ -35,10 +35,10 @@ window.WL_MOMENTOS = [
     frase: 'Once you’ve met someone, you <b>never really forget</b> them.',
     explica: 'This is a general truth, so it is in the simple present. But right now Chihiro <b>is remembering</b> something important.',
     formula: 'always true: you <b>never forget</b> · now: she <b>is remembering</b>',
-    tente: 'Who are you thinking about right now? Why?',
+    tente: 'Who are you thinking about right now?',
     ex: 'I’m thinking about my best friend from school. I never forget her birthday.' }
 ];
 
 window.WL_MOMENTOS_ESTILO = { forma: 'jogo', cor: '#e36b5c', titulo: 'Five moments in the spirit world.', sub: 'Tap a moment, hear it, and say what everybody is doing right now.', rot: { por: 'WHAT IT MEANS', padrao: 'AM · IS · ARE + -ING', voce: 'YOUR TURN', ex: 'LIKE THIS' } };
 /* JOGO-PREPARO (21/10/2026 · a IA no preparo do Line by Line com jogos: palavras trocadas e iscas do bingo) */
-window.WL_MOMENTOS_JOGO = [{"mentira":[["old","new"],["entrance","exit"]],"iscas":["books","cold","distance","light"],"pergunta":"Have you ever walked into an old building and felt curious about its story?"},{"mentira":[["now","later"]],"iscas":["how","hair","house","wet"],"pergunta":"Have you ever had to leave a place quickly? What happened?"},{"mentira":[["come","go"],["replenish","hide"]],"iscas":["path","horse","wear","calm"],"pergunta":"Where do you go when you need to recharge and feel better?"},{"mentira":[["afraid","late"],["just","never"]],"iscas":["paid","must","went","held"],"pergunta":"Who do you want to help most in your life, and why?"},{"mentira":[["met","lost"],["them","him"]],"iscas":["wet","sum","wants","then"],"pergunta":"Is there someone you met once and still remember very well?"}];
+window.WL_MOMENTOS_JOGO = [{"mentira":[["old","new"],["entrance","exit"]],"iscas":["books","cold","distance","light"],"pergunta":"Is there an old building in your city?"},{"mentira":[["now","later"]],"iscas":["how","hair","house","wet"],"pergunta":"Right now, are you staying or leaving?"},{"mentira":[["come","go"],["replenish","hide"]],"iscas":["path","horse","wear","calm"],"pergunta":"Where do you go to rest?"},{"mentira":[["afraid","late"],["just","never"]],"iscas":["paid","must","went","held"],"pergunta":"Who do you help every day?"},{"mentira":[["met","lost"],["them","him"]],"iscas":["wet","sum","wants","then"],"pergunta":"Is there a friend you never forget?"}];

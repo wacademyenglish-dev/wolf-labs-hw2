@@ -26,7 +26,7 @@ var L = [
 
 /* I · você, ao vivo */
 var VOCE = [
-  { k: 'EVERY DAY', q: 'What do you usually do every day at six in the evening?', fup: 'Do you do the same on Sundays?', st: ['At six I usually …', 'Every day I …'], ex: 'At six I usually cook dinner. On Sundays I don’t: we eat out.' },
+  { k: 'EVERY DAY', q: 'What do you do at six in the evening?', fup: 'Do you do the same on Sundays?', st: ['At six I usually …', 'Every day I …'], ex: 'At six I usually cook dinner. On Sundays I don’t: we eat out.' },
   { k: 'RIGHT NOW', q: 'What are you doing right now, besides this class?', fup: 'What can you see from your chair?', st: ['I’m …ing.', 'I’m drinking …'], ex: 'I’m drinking coffee and sitting on my bed. I can see the window.' },
   { k: 'AT HOME', q: 'Is anybody at home with you? What are they doing?', fup: 'What do they usually do at this time?', st: ['My … is …ing.', 'Nobody. I’m alone.'], ex: 'My wife is watching TV. She usually reads at this time.' },
   { k: 'ANIMALS', q: 'Do you have an animal? What is it doing now?', fup: 'Where does it sleep every night?', st: ['My dog is …ing.', 'No, I don’t.'], ex: 'Yes, a cat. She’s sleeping on the sofa. She sleeps in the kitchen every night.' }
@@ -67,7 +67,7 @@ var RELATOS = [
 /* VI · o terceiro dia */
 var DIA3 = [
   { au: 'd1.mp3', t: 'I am cleaning the stable.', la: 1, pq: 'BE + -ing. He can see it happening.' },
-  { au: 'd2.mp3', t: 'I feed the horses at six.', la: 0, pq: 'She asked about NOW. He answered with the page: a routine.' },
+  { au: 'd2.mp3', t: 'I feed the horses at six.', la: 0, pq: 'She asks about NOW. He answers with the page: a routine.' },
   { au: 'd3.mp3', t: 'I see a fox near the gate.', la: 1, pq: 'No -ing, and still live: a camera can’t film “see”, so it never takes -ing.' },
   { au: 'd4.mp3', t: 'I close the gate every night.', la: 0, pq: '“Every night”: that’s the page, not the farm.' },
   { au: 'd5.mp3', t: 'I need more hay.', la: 1, pq: 'No -ing, and live: “need” never takes -ing.' },

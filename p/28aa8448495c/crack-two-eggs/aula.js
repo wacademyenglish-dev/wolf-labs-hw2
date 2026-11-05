@@ -29,7 +29,7 @@ var L = [
 /* I · a sua cozinha */
 var VOCE = [
   { k: 'BREAKFAST', q: 'What do you eat for breakfast?', fup: 'Who makes it?', st: ['I eat …', 'I drink …'], ex: 'I eat bread and eggs. I drink coffee. I make it.' },
-  { k: 'COOKING', q: 'Do you cook? What do you make?', fup: 'What is your best dish?', st: ['I make …', 'I can’t cook!'], ex: 'I make rice and eggs. That’s all!' },
+  { k: 'COOKING', q: 'Do you cook? What do you make?', fup: 'What is your best dish?', st: ['I make …', 'I don’t cook.'], ex: 'I make rice and eggs. That’s all!' },
   { k: 'YOUR FRIDGE', q: 'What is in your fridge right now?', fup: 'What do you need to buy?', st: ['There is …', 'There are …'], ex: 'Milk, eggs, cheese and some old pizza.' },
   { k: 'VIDEOS', q: 'Do you watch cooking videos? Where?', fup: 'Do you try the recipes?', st: ['Yes, on …', 'No, I …'], ex: 'Yes, on my phone. Short videos. I never try them!' },
   { k: 'A FAVORITE', q: 'What is your favorite food? Who makes it?', fup: 'When do you eat it?', st: ['My favorite food is …', '… makes it.'], ex: 'My mother’s cake. She makes it on Sundays.' }
@@ -83,7 +83,7 @@ var FATIAS = [
 var SAM = [
   { ele: 'Help! I want to make eggs. What do I do first?', voce: 'First, crack two eggs into a bowl. Do you have a pan?', resp: 'A pan? Yes… I think it’s a pan.' },
   { ele: 'OK, the eggs are in the bowl. Now what?', voce: 'Mix them. Then add some salt. Do you have salt?', resp: 'Salt, yes. Sugar, yes. Which one?!' },
-  { ele: 'The pan is very hot. Can I touch it?', voce: 'No! Don’t touch it! Are you OK?', resp: 'Yes, I’m OK. Thanks!' },
+  { ele: 'The pan is very hot. Do I touch it?', voce: 'No! Don’t touch it! Are you OK?', resp: 'Yes, I’m OK. Thanks!' },
   { ele: 'The eggs are ready. What now?', voce: 'Put them on a plate. Don’t forget the bread! What time is your date?', resp: 'In ten minutes! Wish me luck!' }
 ];
 

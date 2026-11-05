@@ -75,7 +75,7 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'portas', tipo: 'And you?', q: 'How are you today, really?',
     opc: ['I’m fine.', 'I’m tired.', 'I’m hungry!'], st: ['I’m … today.', 'I’m not …'],
     ex: 'I’m hungry! I’m not tired.', push: 'Coffee or dinner? One word.' },
-  { cena: 'cartao', tipo: 'Opinion', q: 'A good receptionist is…',
+  { cena: 'cartao', tipo: 'Would you rather', q: 'At the desk: friendly, fast or funny?',
     opc: ['friendly', 'fast', 'funny'], st: ['A good receptionist is …', 'I’m … too.'],
     ex: 'Friendly! And I’m friendly too.', push: 'Are you fast? Yes or no?' },
   { cena: 'conversa', tipo: 'Would you rather', q: 'A free hotel night: which day?',
@@ -101,7 +101,7 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
       { tag: 'A new city', sit: 'Tom lives in Toronto. Yuki lives in Osaka.', q: 'Would you rather live in…',
         opc: ['Toronto', 'Osaka'],
         st: ['In … ! It’s a big city.', 'I live in …, but …'],
-        ex: 'In Osaka! I live in Recife, but I love Japanese food.',
+        ex: 'In Osaka! I live in Recife, but Japanese food is great.',
         push: 'Is it far from Brazil? Yes or no?' }
     ] }
 ] };
@@ -222,7 +222,7 @@ window.WL_PADRAO = {
    "cartas": [
     {
      "k": "YOUR NAME",
-     "q": "What’s your name? Can you spell it?",
+     "q": "What’s your name? How do you spell it?",
      "fup": "And your last name?",
      "st": [
       "My name is …",
@@ -242,18 +242,18 @@ window.WL_PADRAO = {
     },
     {
      "k": "YOUR JOB",
-     "q": "What do you do?",
-     "fup": "Do you like it?",
+     "q": "What’s your job?",
+     "fup": "Is it a good job?",
      "st": [
       "I’m a …",
       "I’m an …"
      ],
-     "ex": "I’m an engineer. Yes, I like it."
+     "ex": "I’m an engineer. Yes, it is."
     },
     {
      "k": "HOW ARE YOU",
      "q": "How are you today?",
-     "fup": "Why?",
+     "fup": "Is it a busy day?",
      "st": [
       "I’m …",
       "I’m a little …"
@@ -263,12 +263,12 @@ window.WL_PADRAO = {
     {
      "k": "YOUR WEEK",
      "q": "What is your favorite day of the week?",
-     "fup": "What do you do on that day?",
+     "fup": "Is it a free day?",
      "st": [
       "My favorite day is …",
-      "On … I …"
+      "It is …"
      ],
-     "ex": "My favorite day is Saturday. On Saturday I go to the beach."
+     "ex": "My favorite day is Saturday. It is a free day."
     },
     {
      "k": "A FRIEND",
@@ -301,7 +301,7 @@ window.WL_PADRAO = {
      "a": "At the desk",
      "b": "In the café",
      "fa": [
-      "At the desk. I like meeting new people."
+      "At the desk. The guests are nice."
      ],
      "fb": [
       "In the café. I’m good with coffee."
@@ -326,7 +326,7 @@ window.WL_PADRAO = {
       "Small. It’s quiet and friendly."
      ],
      "fb": [
-      "Big. There is a pool."
+      "Big. The pool is great."
      ]
     },
     {

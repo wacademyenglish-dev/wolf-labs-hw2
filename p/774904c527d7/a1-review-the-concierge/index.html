@@ -78,13 +78,13 @@
 <script data-wl="faisca-dados.js">
 /* MAIN SERIES · A1 · REVISÃO 05 · THE CONCIERGE · pergunta-surpresa · 27/10/2026 · imperativo, don't, let's */
 window.WL_FAISCA = { nivel: 'A1', qs: [
-  { cena: 'escada', tipo: 'Opinion', q: 'One tip for a tourist here?',
+  { cena: 'escada', tipo: 'Choose one', q: 'One tip for a tourist here?',
     opc: ['Try the food.', 'Don’t drive.', 'Learn some Portuguese.'], st: ['Try …', 'Don’t …'],
     ex: 'Try the food! And don’t forget sunscreen.', push: 'Do you like tourists? Yes or no?' },
   { cena: 'missao', tipo: 'What if', q: 'A tourist asks you the way.',
     opc: ['I help.', 'I point.', 'I say “Sorry!”'], st: ['I help. Go straight …', 'Turn left at …'],
     ex: 'I help! Go straight and turn left at the bank.', push: 'Do you know your city well? Yes or no?' },
-  { cena: 'cadeira', tipo: 'Would you rather', q: 'Saturday night. What’s the plan?',
+  { cena: 'cadeira', tipo: 'Choose one', q: 'Saturday night. What’s the plan?',
     opc: ['Let’s stay home.', 'Let’s go out!'], st: ['Let’s …', 'Let’s not …'],
     ex: 'Let’s go out! Let’s not watch TV.', push: 'Shall we dance? Yes or no?' }
 ] };
@@ -100,12 +100,12 @@ window.WL_CONVERSA = { nivel: 'A1', cenas: [
     p: 'Choose one. Your teacher answers first. Then say it with the sentence.',
     formato: 'escolha',
     rodadas: [
-      { tag: 'The place', sit: 'One free morning in your city.', q: 'Would you rather show…',
+      { tag: 'The place', sit: 'One free morning in your city.', q: 'What do you show?',
         opc: ['A market', 'A museum'],
         st: ['Let’s go to the … !', 'First, … Then, …'],
         ex: 'Let’s go to the market! First, we eat. Then, we buy fruit.',
         push: 'Is there a market near you? Yes or no?' },
-      { tag: 'The way', q: 'Would you rather go…',
+      { tag: 'The way', q: 'How do you go?',
         opc: ['On foot', 'By bus'],
         st: ['Let’s go … !', 'Don’t take the …'],
         ex: 'On foot! Don’t take the bus. It’s slow.',
@@ -272,7 +272,7 @@ window.WL_PADRAO = {
     {
      "k": "HOTEL RULES",
      "q": "You are the concierge. Give two hotel rules.",
-     "fup": "Which rule is the most important?",
+     "fup": "Which rule is important?",
      "st": [
       "Please …",
       "Don’t …"

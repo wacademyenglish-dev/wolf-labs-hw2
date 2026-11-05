@@ -9,7 +9,7 @@ window.HW2 = {
   "minutos": 10,
   "capa": "../img/capa.jpg",
   "alvo": "and / but / so / because to join two ideas in ONE sentence: a comma before and, but, so; so + result; because + reason",
-  "abrir": "What did you buy this week, and why?",
+  "abrir": "What do you often buy, and why?",
   "fecho": "<b>So</b> puts the result second; <b>because</b> puts the reason second: <i>It was cold, so I took a coat</i> = <i>I took a coat because it was cold</i>.",
   "elenco": {
     "mia": { "nome": "Mia", "voz": "en-US-AvaNeural", "cor": "#86c9f0" },
@@ -69,7 +69,7 @@ window.HW2 = {
       "sub": "Two questions about you. Say it or type it.",
       "perguntas": [
         { "q": "What do you always have in your bag? Why?", "ph": "I always have … because …", "ex": "I always have an umbrella because it rains a lot here." },
-        { "q": "What did you buy this week, and why?", "ph": "I bought … because …", "ex": "I bought eggs because I wanted to make a cake." }
+        { "q": "What do you often buy, and why?", "ph": "I often buy … because …", "ex": "I often buy eggs because I like cake." }
       ]
     }
   }

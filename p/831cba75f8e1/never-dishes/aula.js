@@ -63,21 +63,21 @@ var DEPOIS = [
 ];
 var PROVAS = [
   { quem: 'BEA', o: 'does the dishes', dias: [1, 0, 1, 1, 0, 1, 0], acusa: 'never', verd: 'often' },
-  { quem: 'MARCO', o: 'left the light on', dias: [0, 1, 0, 0, 0, 1, 0], acusa: 'always', verd: 'sometimes' },
-  { quem: 'BEA', o: 'left the bike in the hall', dias: [1, 1, 1, 0, 1, 1, 1], acusa: 'always', verd: 'usually' },
+  { quem: 'MARCO', o: 'leaves the light on', dias: [0, 1, 0, 0, 0, 1, 0], acusa: 'always', verd: 'sometimes' },
+  { quem: 'BEA', o: 'leaves the bike in the hall', dias: [1, 1, 1, 0, 1, 1, 1], acusa: 'always', verd: 'usually' },
   { quem: 'MARCO', o: 'takes the trash out', dias: [0, 0, 0, 1, 0, 0, 0], acusa: 'never', verd: 'rarely' }
 ];
 var JUSTA = [
   { fato: 'Bea does the dishes 4 days out of 7.', fr: 'You ? do the dishes.', ok: 'often', au: 'v-marco1.mp3', nao: { usually: 'Usually is five or six. Four is one step down.' } },
-  { fato: 'Marco left the light on 2 days out of 7.', fr: 'You ? leave the light on.', ok: 'sometimes', au: 'v-bea1.mp3', nao: {} },
-  { fato: 'Bea left the bike in the hall 6 days out of 7.', fr: 'You ? leave your bike in the hall.', ok: 'usually', au: 'v-marco2.mp3', nao: {} },
+  { fato: 'Marco leaves the light on 2 days out of 7.', fr: 'You ? leave the light on.', ok: 'sometimes', au: 'v-bea1.mp3', nao: {} },
+  { fato: 'Bea leaves the bike in the hall 6 days out of 7.', fr: 'You ? leave your bike in the hall.', ok: 'usually', au: 'v-marco2.mp3', nao: {} },
   { fato: 'Marco takes the trash out once in three weeks.', fr: 'You ? take the trash out.', ok: 'rarely', au: 'v-bea2.mp3', nao: {} }
 ];
 var OPS_J = ['usually', 'often', 'sometimes', 'rarely'];
 var BILHETE = [
   { q: 'Name one thing. Most days, you do it.', h: 'I usually …', ex: 'I usually make dinner.' },
   { q: 'Say one thing the other person does a lot.', h: 'You often …', ex: 'You often wash the pans. Thank you!' },
-  { q: 'Ask for one thing, fairly.', h: 'Can you sometimes …?', ex: 'Can you sometimes take the trash out?' }
+  { q: 'Ask for one thing, fairly.', h: 'Please …', ex: 'Please take the trash out on Mondays.' }
 ];
 
 var S = { i: 0, faixa: 1, fala: {}, resp: {}, armas: {},

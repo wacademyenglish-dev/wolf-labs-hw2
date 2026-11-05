@@ -9,8 +9,8 @@ window.WL_MUNDO = {
   foto: 'capa',
   aquece: [
     { img: 'estrada', q: 'Right now, what are you thinking about?', st: ['Right now, I am thinking about …'], filme: 'Chihiro is ten. She is sitting in the car. She isn’t smiling.', mais: 'And what are you doing tonight?', ex: 'Right now, I am thinking about my dinner. Tonight, I am cooking pasta.' },
-    { img: 'banquete', q: 'What food can you eat and eat and never stop?', st: ['I can eat … all day.'], filme: 'In this film, the parents are eating and eating in an empty town.', mais: 'Who cooks it for you?', ex: 'I can eat pizza all day. My brother makes it on Sundays.' },
-    { img: 'capa', q: 'Who is helping you this year? How?', st: ['My … is helping me with …'], filme: 'Chihiro is working in a big bathhouse for spirits.', mais: 'And who are you helping?', ex: 'My sister is helping me with my English. I am helping my father with his phone.' }
+    { img: 'banquete', q: 'What are you eating a lot these days?', st: ['I’m eating … a lot.'], filme: 'In this film, the parents are eating and eating in an empty town.', mais: 'Who cooks it for you?', ex: 'I’m eating pizza a lot. My brother is making it on Sundays.' },
+    { img: 'capa', q: 'Who is helping you this year?', st: ['My … is helping me with …'], filme: 'Chihiro is working in a big bathhouse for spirits.', mais: 'And who are you helping?', ex: 'My sister is helping me with my English. I am helping my father with his phone.' }
   ],
   itens: [
     { img: 'estrada', nome: 'the car', q: 'A family is in the car. What are they doing? Is the girl happy?', ex: 'They are moving to a new town. The girl isn’t smiling.' },
@@ -25,7 +25,7 @@ window.WL_MUNDO = {
   contaEx: 'Chihiro is moving to a new town. Her parents are eating in a strange town. Now she is working in a bathhouse to save them.',
   vida: [],
   antes: [
-    { q: 'You saw the spirit town. In the trailer, what is Chihiro doing? Guess.', h: 'I think she is …ing.' },
+    { q: 'In the trailer, what is Chihiro doing? Guess.', h: 'I think she is …ing.' },
     { q: 'It is night in the spirit town. What are the spirits doing?', h: 'They are …ing.' }
   ]
 };

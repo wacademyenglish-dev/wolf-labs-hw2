@@ -26,7 +26,7 @@
    ============================================================ */
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'mundo', est: 'o', min: 8, img: 'vila', rot: 'I · Warm-up and Put It in Order', t: 'Before the trailer: what you can do, then a boy who couldn’t.', p: 'Answer three questions about you. Then put four moments of Naruto’s story in order and tell it.' },
+  { k: 'mundo', est: 'o', min: 8, img: 'vila', rot: 'I · Warm-up and Put It in Order', t: 'Before the trailer: what you can do, then Naruto’s story.', p: 'Answer three questions about you. Then put four moments of Naruto’s story in order and tell it.' },
   { k: 'palavras', est: 'l', min: 5, img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Naruto Shippuden. Back home after two years.', p: 'Guess first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', min: 5, extra: 1, img: 'rolo', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
@@ -74,7 +74,7 @@ function comPlaca(corpo, regra) { return '<div class="fm-com-regra"><div class="
 var PRESA = '<b>He can fly.</b> can + verb · no -s, no to<br><b>She can’t swim.</b> can’t = cannot<br><b>Can you cook?</b> no do · Yes, I can<br><b>I can’t do it… yet.</b> yet = not now, but one day';
 /* III · antes: adivinhar quem volta para casa */
 var VD_REV = { formato: 'revela', titulo: 'Before you watch · who is coming home?', pistas: [
-  'He grew up alone.', 'At ninja school he was the worst student.', 'He could not do a simple trick.', 'His dream: to be Hokage, the leader of the village.'
+  'He grew up alone.', 'At ninja school he is the worst student.', 'He can’t do a simple trick.', 'His dream: to be Hokage, the leader of the village.'
 ], resposta: 'Naruto Uzumaki. After two years of training, he is back in his village.', mais: 'Next clue', botao: 'I know it! Show' };
 /* III · durante: a palavra errada e a palavra que você ouviu, cada uma no minuto do trailer (legenda-dados.js) */
 var VD_ERRO = { formato: 'erro', titulo: 'One word is wrong. Say the right one.', itens: [
@@ -93,7 +93,7 @@ var VD_REA = { formato: 'reacao', titulo: 'After the trailer · an old friend sa
   ['Be honest', 'I can’t do everything. I can’t be Hokage… yet.', 'Yet. I like that word.'],
   ['Say thanks', 'Thanks! I can run faster and fight better now.', 'Good. We need you.']
 ] };
-var VD_REG = { formato: 'regua', titulo: 'Your opinion', frase: 'After two years, Naruto can do everything.', esquerda: 'Disagree', direita: 'Agree', depois: 'Say why: He can … but he can’t … yet.' };
+var VD_REG = { formato: 'regua', titulo: 'After the trailer', frase: 'After two years, Naruto can do everything.', esquerda: 'No', direita: 'Yes', depois: 'Say it: He can … but he can’t … yet.' };
 /* V · o caderno do Naruto: achar o erro e falar a palavra certa */
 var ERR = { formato: 'erro', titulo: 'Naruto’s notebook has five mistakes. Say the right words.', itens: [
   { f: 'Naruto can <u>to fly</u> very high.', r: 'fly' },

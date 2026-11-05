@@ -32,9 +32,9 @@ var ORD = ['', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh'
 
 /* I · datas */
 var DATAS = [
-  { k: 'YOUR BIRTHDAY', q: 'When is your birthday?', fup: 'What do you do on your birthday?', st: ['My birthday is on the … of …', 'It’s on … the …'], ex: 'My birthday is on the ninth of July. Last year I had dinner with friends.' },
+  { k: 'YOUR BIRTHDAY', q: 'When is your birthday?', fup: 'What do you do on your birthday?', st: ['My birthday is on the … of …', 'It’s on … the …'], ex: 'My birthday is on the ninth of July. I have dinner with friends.' },
   { k: 'SOMEONE CLOSE', q: 'When is the birthday of someone close to you?', fup: 'What do you usually give them?', st: ['My mom’s birthday is on the …'], ex: 'My mom’s birthday is on the twelfth of May. I usually give her flowers.' },
-  { k: 'THIS YEAR', q: 'Tell me an important date for you.', fup: 'What happened?', st: ['On the … of …, I …'], ex: 'The third of February. It’s my mother’s birthday.' },
+  { k: 'THIS YEAR', q: 'Tell me an important date for you.', fup: 'Why is it important?', st: ['It’s on the … of …'], ex: 'The third of February. It’s my mother’s birthday.' },
   { k: 'NEXT HOLIDAY', q: 'When is your next holiday or day off?', fup: 'What do you do on that day?', st: ['It’s on the …', 'It’s in …'], ex: 'It’s on the twentieth of November. I have a party.' }
 ];
 
@@ -72,7 +72,7 @@ var OUVE = [
 var ONIN = [
   { f: 'Dad’s birthday is ___ the fourteenth.', op: ['on', 'in'], pq: 'One day: ON.' },
   { f: 'My birthday is ___ June.', op: ['in', 'on'], pq: 'A month: IN.' },
-  { f: 'Baby Leo’s birthday is ___ May.', op: ['in', 'on'], pq: 'A year: IN.' },
+  { f: 'Baby Leo’s birthday is ___ May.', op: ['in', 'on'], pq: 'A month: IN.' },
   { f: 'The class is ___ Monday.', op: ['(nothing)', 'on'], pq: 'NEXT and LAST push the little word out.' },
   { f: 'The party is ___ Saturday the twentieth.', op: ['on', 'in'], pq: 'The day decides: ON.' },
   { f: 'We always travel ___ December.', op: ['in', 'on'], pq: 'A month: IN.' }
@@ -90,8 +90,8 @@ var VOLTA = [
 /* VIII · o dia extra */
 var EXTRA = [
   { q: 'Say her date both ways.', ex: 'The twenty-ninth of February. February the twenty-ninth.' },
-  { q: 'She is forty. How many real birthdays has she had?', ex: 'Ten. Forty divided by four is ten.' },
-  { q: 'Her birthday is the twenty-ninth of February. In other years, is her party on the twenty-eighth of February or on the first of March?', ex: 'On the first of March, because the twenty-ninth comes after the twenty-eighth.' }
+  { q: 'She is forty. How many real birthdays is that?', ex: 'Ten. Forty divided by four is ten.' },
+  { q: 'Her birthday is on the twenty-ninth of February. In other years: the twenty-eighth, or the first of March?', ex: 'On the first of March. The twenty-ninth comes after the twenty-eighth.' }
 ];
 
 /* ---------- o corretor (nível 1: a regra desta aula) ---------- */

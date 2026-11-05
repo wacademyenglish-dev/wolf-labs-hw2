@@ -80,12 +80,12 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
   { cena: 'leitura', tipo: 'And you?', q: 'Where are your shoes now?',
     opc: ['Under the bed', 'Next to the door', 'On my feet!'], st: ['They’re …'],
     ex: 'They’re next to the door.', push: 'Under the bed? Yes or no?' },
-  { cena: 'descobre', tipo: 'What if', q: 'Your keys are lost. Look where first?',
-    opc: ['In my bag', 'On the table', 'Under the sofa'], st: ['I look in / on / under …'],
-    ex: 'I look in my bag. They’re always in my bag!', push: 'In the fridge? Yes or no?' },
+  { cena: 'descobre', tipo: 'What if', q: 'Your keys are lost. Where are they?',
+    opc: ['In my bag', 'On the table', 'Under the sofa'], st: ['They’re in / on / under …'],
+    ex: 'They’re in my bag. They’re always in my bag!', push: 'In the fridge? Yes or no?' },
   { cena: 'missao', tipo: 'Would you rather', q: 'A cat or a dog at home?',
-    opc: ['A cat', 'A dog'], st: ['A …, please!', 'It sleeps on / under …'],
-    ex: 'A cat! It sleeps on the sofa.', push: 'Two cats? Yes or no?' }
+    opc: ['A cat', 'A dog'], st: ['A …, please!', 'It’s on / under …'],
+    ex: 'A cat! It’s on the sofa.', push: 'Two cats? Yes or no?' }
 ] };
 </script><!--/faisca-dados.js-->
 <script src="/kit/faisca.js"></script>
@@ -109,14 +109,14 @@ window.WL_FAISCA = { nivel: 'A1', qs: [
 
 window.WL_CONVERSA = { nivel: 'A1', cenas: [
   { id: 'cama', apos: 'missao', est: 'o', min: 6, img: 'capa', rot: 'Mochi’s Bed', t: 'Mochi needs a bed. You choose.',
-    p: 'Put three places in order. Then say why.',
+    p: 'Put three places in order. Then say it.',
     formato: 'ranking',
     q: 'Best place for Mochi’s bed?',
     itens: ['Under the sofa', 'On the bed', 'Next to the window'],
     prof: [2, 0, 1],
     dica: 'Tap 1, 2, 3. Your teacher answers first.',
-    st: ['Number 1 is … the …', 'because it’s …'],
-    ex: 'Number 1: next to the window, because it’s warm. Mochi likes the sun.',
+    st: ['Number 1: under the …', 'Number 1: next to the …'],
+    ex: 'Number 1: next to the window. It’s warm.',
     push: 'On YOUR bed? Yes or no?' }
 ] };
 </script><!--/conversa-dados.js-->
@@ -141,7 +141,7 @@ window.WL_PADRAO = {
   },
   "cv-cama": {
    "t": "Mochi needs a bed. You choose.",
-   "p": "Put three places in order. Say why."
+   "p": "Put three places in order. Say it."
   },
   "conversa": {
    "t": "Your home: where are your things?",
@@ -185,7 +185,7 @@ window.WL_PADRAO = {
   },
   "cv-cama": {
    "obj": "Ordenar três lugares para a cama da Mochi e combinar um top 3.",
-   "perg": "Where does Mochi sleep? Why?",
+   "perg": "Where is Mochi’s bed?",
    "pula": "Só o número 1 basta."
   },
   "conversa": {
@@ -199,13 +199,13 @@ window.WL_PADRAO = {
    "pula": "Três cartas bastam."
   },
   "ff-lados": {
-   "obj": "Escolher um lado sobre onde ficam as coisas, com preposições e porquê.",
+   "obj": "Escolher um lado sobre onde ficam as coisas, com preposições.",
    "perg": "Keys in a bag or next to the door?",
    "pula": "Duas rodadas bastam."
   },
   "ff-cadeira": {
    "obj": "O aluno é a Mochi; você pergunta onde ela estava e onde ficam as coisas.",
-   "perg": "Mochi, where were you?",
+   "perg": "Mochi, where are you?",
    "pula": "Quatro perguntas bastam."
   }
  },
@@ -258,14 +258,14 @@ window.WL_PADRAO = {
      "ex": "It’s in the cupboard, behind the sugar."
     },
     {
-     "k": "LOST THINGS",
-     "q": "What do you always lose at home?",
-     "fup": "Where is it usually?",
+     "k": "THE SOFA",
+     "q": "What is on your sofa?",
+     "fup": "And under it?",
      "st": [
-      "I always lose my …",
-      "It’s usually …"
+      "There is a …",
+      "There are some …"
      ],
-     "ex": "I always lose my glasses. They’re usually on the sofa."
+     "ex": "There is a blue cushion. Under it there are some coins."
     },
     {
      "k": "YOUR STREET",
@@ -279,12 +279,12 @@ window.WL_PADRAO = {
     },
     {
      "k": "YOUR PET",
-     "q": "Where does your pet sleep, or where do pets sleep in your family?",
+     "q": "Is there a pet in your family? Where is it?",
      "fup": "On the bed or under it?",
      "st": [
-      "It sleeps in / on …"
+      "It’s in / on …"
      ],
-     "ex": "My dog sleeps on the sofa, next to me."
+     "ex": "My dog is on the sofa, next to me."
     }
    ]
   },
@@ -297,9 +297,9 @@ window.WL_PADRAO = {
    "t": "Pick a side.",
    "p": "Your teacher takes the other one.",
    "palavras": [
-    "because",
     "in",
     "on",
+    "under",
     "next to"
    ],
    "rodadas": [
@@ -311,18 +311,18 @@ window.WL_PADRAO = {
       "In my bag. They are always with me."
      ],
      "fb": [
-      "Next to the door. I see them when I go out."
+      "Next to the door. It’s easy."
      ]
     },
     {
-     "q": "A cat sleeps on the bed or in its own bed?",
+     "q": "A cat: on your bed or in its bed?",
      "a": "On my bed",
      "b": "In its bed",
      "fa": [
       "On my bed. It’s warm!"
      ],
      "fb": [
-      "In its own bed. My bed is for me."
+      "In its bed. It’s clean."
      ]
     },
     {
@@ -330,10 +330,10 @@ window.WL_PADRAO = {
      "a": "Bedroom",
      "b": "Living room",
      "fa": [
-      "In the bedroom. I watch in bed."
+      "In the bedroom. It’s nice."
      ],
      "fb": [
-      "In the living room. The bedroom is for sleeping."
+      "In the living room. It’s for everybody."
      ]
     },
     {
@@ -341,10 +341,10 @@ window.WL_PADRAO = {
      "a": "On the table",
      "b": "In my pocket",
      "fa": [
-      "On the table. Maybe somebody calls."
+      "On the table. It’s near me."
      ],
      "fb": [
-      "In my pocket. Dinner is for talking."
+      "In my pocket. It’s quiet."
      ]
     }
    ],
@@ -360,19 +360,19 @@ window.WL_PADRAO = {
    "p": "Your teacher interviews you.",
    "aluno": "Listen to your teacher’s question. Answer as Mochi, the cat.",
    "perguntas": [
-    "Mochi, where were you? Under the sofa?",
+    "Mochi, where are you? Under the sofa?",
     "Where is your favorite place in the apartment?",
     "Where is your food?",
-    "Where are Lia’s keys? Do you know?",
-    "Where do you sleep in the afternoon?",
+    "Where are Lia’s keys?",
+    "Where are you in the afternoon?",
     "What is behind the sofa?"
    ],
    "st": [
     "It’s in / on / under …",
     "They’re next to …",
-    "I sleep …"
+    "I’m …"
    ],
-   "ex": "I was under the sofa. My favorite place is on the window, next to the plants."
+   "ex": "I’m under the sofa. My favorite place is on the window, next to the plants."
   }
  ]
 };

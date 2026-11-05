@@ -37,7 +37,7 @@ var L = [
 ];
 
 var ABRE = [
-  { k: 'FINISHED', q: 'One thing in your day that is finished. And early?', fup: 'Was it early?', st: ['I already …', '… is already …'], ex: 'My coffee is already finished. It’s only nine!' },
+  { k: 'FINISHED', q: 'One thing in your day that is finished. And early?', fup: 'Is it early?', st: ['I already …', '… is already …'], ex: 'My coffee is already finished. It’s only nine!' },
   { k: 'NOT FINISHED', q: 'One thing that is not finished.', fup: 'When is it going to be finished?', st: ['… is not … yet.'], ex: 'My report is not ready yet.' },
   { k: 'NEVER CHANGES', q: 'One thing in your house that never changes.', fup: 'Is that good or bad?', st: ['… is still …'], ex: 'The kitchen light is still broken.' },
   { k: 'WAITING', q: 'Ask me about something you are waiting for.', fup: 'And you? What are you waiting for?', st: ['Is … here yet?', 'Are you … yet?'], ex: 'Is your new phone here yet?' }
@@ -48,50 +48,50 @@ var CAPS = {
   cap1: { n: 'One', tit: 'Thirty Minutes', hora: 'MONDAY · 7:30 AM', img: 'cozinha',
     linhas: ['Bea and Marco live in a small apartment with a big old fridge.', 'This week Marco is on the night shift. He gets home at eight in the morning.', 'Bea leaves for work at half past seven.', 'Thirty minutes, every day, and the two of them never meet.', 'So they do not talk. They write, and the fridge door is where they write.', 'On Monday there are four notes on it. One of them is under a red magnet, at the bottom.'],
     papel: ['BREAD: there is none', 'GAS BILL: pay it by Thursday', 'THE PLANT: I cannot reach it'],
-    perg: ['What time does Bea leave? What time does Marco get home?', 'The fourth note is not on the paper here. Where is it, and what color is the magnet?'],
+    perg: ['What time does Bea leave? What time does Marco get home?', 'Where is the fourth note? What color is the magnet?'],
     ex: ['Bea leaves at 7:30 AM. Marco gets home at 8:00 AM.', 'It is at the bottom, under a red magnet.'] },
   cap2: { n: 'Two', tit: 'A Full Door', hora: 'WEDNESDAY · 7:20 AM', img: 'mesa',
     linhas: ['It is Wednesday. There are four notes on the door.', 'They are not the same four. The gas bill is not there any more.', 'There is a new one about the window, because the window does not close.', 'The bread note is <b>still</b> on the door. Nobody goes to the store at eight in the morning.', 'And at the bottom, under the red magnet, there is the one from Monday.', 'Nobody takes it down. It is going yellow at the top.'],
     papel: ['THE WINDOW: it does not close', 'BREAD: still none'],
     perg: ['Which note is not on the door now? Why?', 'The Monday note is old now. How many days?'],
-    ex: ['The gas bill. Marco paid it.', 'Three days.'] },
+    ex: ['The gas bill. It is paid.', 'Three days.'] },
   cap3: { n: 'Three', tit: 'Almost Empty', hora: 'FRIDAY · 7:25 AM', img: 'sala',
     linhas: ['Friday. The door is not full any more.', 'The gas bill is paid. The plant is watered.', 'Three notes are left: the bread, the window, and one more.', 'The last one is at the bottom, under the red magnet. It went up on Monday.', 'It is five words long, in Bea’s writing, and the top of the paper is yellow now.', 'Bea reads it every morning. Marco reads it every night. Neither of them takes it down.'],
-    perg: ['How many notes are left on the door?', 'Both of them read it every day. Why does nobody take it down?'],
-    ex: ['Three notes.', 'Maybe they are afraid of the answer.'] },
+    perg: ['How many notes are left on the door?', 'Does Marco read the note?'],
+    ex: ['Three notes.', 'Yes. Marco reads it every night.'] },
   cap4: { n: 'Four', tit: 'Five Words', hora: 'SATURDAY · 7:00 AM', img: 'mesa', nota: 'ARE YOU STILL HAPPY HERE?',
     linhas: ['On Saturday morning Bea is in the kitchen at seven.', 'She takes the note off the door. The paper is soft, and the top of it is yellow.', 'It is her own writing, from Monday. Five words, and a question mark.'],
-    perg: ['Whose writing is it? Who is the question for?', 'She reads it and puts it back. What do you think happens on Sunday?'],
-    ex: ['It is Bea’s writing. The question is for Marco.', 'I think Marco answers.'] },
+    perg: ['Whose writing is it? Who is the question for?', 'Does she take it down?'],
+    ex: ['It is Bea’s writing. The question is for Marco.', 'No. She puts it back.'] },
   cap5: { n: 'Five', tit: 'The Empty Door', hora: 'SUNDAY · 9:00 AM', img: 'cozinha', nota: 'I AM STILL HERE.', virar: 1,
     linhas: ['Sunday. Marco is not at work.', 'Bea comes into the kitchen at nine. The door is empty.', 'Every note is gone. The red magnet is on the table.', 'The Monday note is on the table too, turned over.', 'On the back there are four words, in Marco’s writing.', 'He is at the window with two cups of coffee. “You are <b>already</b> awake,” he says. “And I am not going to bed <b>yet</b>.”'],
-    perg: ['What is on the fridge door on Sunday?', 'The question and the answer use the same word. What does it mean in each one?'],
-    ex: ['Nothing. The door is empty.', 'Still means nothing has changed. On Monday it is a worry. On Sunday it is an answer.'] }
+    perg: ['What is on the fridge door on Sunday?', 'What does Marco write on the back?'],
+    ex: ['Nothing. The door is empty.', 'I am still here.'] }
 };
 
 var R1 = [
-  { dia: 2, alvo: 'gas', cab: 'Tuesday. The bill said Thursday, and Marco paid it on Monday night, before bed.', fr: 'The gas bill is __ paid.', ok: 'already', fb: 'Already. It is done, and it is done early. That second half is the whole word.', nao: { still: 'Still says nothing has changed and the bill is sitting there. Look at the door: it came down.', yet: 'Yet only lives in a no and in a question. This sentence is a yes.' } },
-  { dia: 2, alvo: 'bread', cab: 'The same Tuesday. The bread note went up on Monday, and nobody goes to the store at eight in the morning.', fr: 'The bread note is __ on the door.', ok: 'still', fb: 'Still. It was there yesterday. It is there today. Nothing has changed.', nao: { already: 'Already says something happened, and early. Nothing happened to the bread.', yet: 'Yet needs a no: the bread is not here yet. This sentence is a yes.' } },
-  { dia: 3, alvo: 'bread', cab: 'Wednesday. Bea opens the cupboard and looks.', fr: 'The bread is not here __.', ok: 'yet', fb: 'Yet. A no, and everybody is waiting for it. The word sits at the end.', nao: { already: 'A no never takes already.', still: 'Still in a no goes in front of the not, not at the end.' } },
-  { dia: 3, alvo: 'plant', cab: 'The same Wednesday. Marco read the note about the plant on Monday, the first day.', fr: 'Marco __ knows about the plant.', ok: 'already', fb: 'Already, in front of the verb. He knew before anybody asked twice.', nao: { still: 'Nobody says he still knows. Knowing does not stop.', yet: 'A yes never takes yet.' } }
+  { dia: 2, alvo: 'gas', cab: 'Tuesday. The bill is for Thursday. It is paid, and the note is gone.', fr: 'The gas bill is __ paid.', ok: 'already', fb: 'Already: it is done, and early.', nao: { still: 'Still says nothing changed. But the note is gone.', yet: 'Yet is for a no or a question. This is a yes.' } },
+  { dia: 2, alvo: 'bread', cab: 'Tuesday. The bread note is on the door. Nobody goes to the store.', fr: 'The bread note is __ on the door.', ok: 'still', fb: 'Still: it is there today, like yesterday. Nothing changes.', nao: { already: 'Already means early. Nothing is early here.', yet: 'Yet is for a no or a question. This is a yes.' } },
+  { dia: 3, alvo: 'bread', cab: 'Wednesday. Bea looks in the cupboard. There is no bread.', fr: 'The bread is not here __.', ok: 'yet', fb: 'Yet: a no, and you wait. It goes at the end.', nao: { already: 'A no never takes already.', still: 'Still goes before not, not at the end.' } },
+  { dia: 3, alvo: 'plant', cab: 'Wednesday. Marco knows about the plant from Monday.', fr: 'Marco __ knows about the plant.', ok: 'already', fb: 'Already, before the verb. He knows early.', nao: { still: 'Still does not fit here. Knowing does not stop.', yet: 'A yes never takes yet.' } }
 ];
 var R2 = [
-  { dia: 1, cab: 'Monday, half past seven. Bea puts her coat on. Marco gets home at eight.', fr: 'Marco is not home __.', ok: 'yet', fb: 'Yet. A no with a promise in it: he is coming in thirty minutes. And the word sits at the end.', nao: { already: 'A no sentence never takes already.', still: 'Still in a no means he is late. He is not late: it is half past seven.' } },
-  { dia: 1, cab: 'Eight o’clock, the same Monday. Marco opens the door. The coffee cup on the table is warm.', fr: 'Bea is __ at work.', ok: 'already', fb: 'Already. Eight is early to be at work, and the cup is warm. The word carries the surprise.', nao: { still: 'Still says nothing changed. Something did change: she left.', yet: 'Yet does not go into a yes, and it does not go in the middle.' } },
-  { dia: 3, cab: 'Wednesday. The bread note went up on Monday and it is on the door, going yellow at the corner.', fr: 'The bread is __ on the list.', ok: 'still', fb: 'Still. Three days, and nothing has changed.', nao: { already: 'Already needs something to happen early. Nothing happened.', yet: 'Yet needs a no or a question.' } },
-  { dia: 6, cab: 'Saturday. Marco stops at the store on his way home, at eight in the morning.', fr: 'The bread is __ in the kitchen.', ok: 'already', fb: 'Already. Bea gets up and the bread is there. A surprise, and early.', nao: { still: 'Still says it was always there. It was not.', yet: 'A yes never takes yet.' } }
+  { dia: 1, cab: 'Monday, 7:30. Bea has her coat on. Marco is on his way.', fr: 'Marco is not home __.', ok: 'yet', fb: 'Yet: a no, and he is coming. At the end.', nao: { already: 'A no never takes already.', still: 'Still is for a long wait. He is not late.' } },
+  { dia: 1, cab: 'Monday, 8:00. Marco is home. The coffee cup is warm.', fr: 'Bea is __ at work.', ok: 'already', fb: 'Already: early, and a surprise.', nao: { still: 'Still says nothing changed. Bea left.', yet: 'Yet is for a no or a question.' } },
+  { dia: 3, cab: 'Wednesday. The bread note is on the door. It is going yellow.', fr: 'The bread is __ on the list.', ok: 'still', fb: 'Still: three days, and no change.', nao: { already: 'Already needs something early.', yet: 'Yet needs a no or a question.' } },
+  { dia: 6, cab: 'Saturday, 8:00. Marco stops at the store on his way home.', fr: 'The bread is __ in the kitchen.', ok: 'already', fb: 'Already: a surprise, and early.', nao: { still: 'Still says it is always there.', yet: 'A yes never takes yet.' } }
 ];
 var LUGAR = [
-  { dia: 3, cab: 'Wednesday. The bread note went up on Monday, and it is on the door.', f: ['The bread is still on the list.', 'The bread is on the list still.', 'The bread still is on the list.'], fb: 'After is, and nothing between them.', nao: ['', 'Still never sits at the end. The end belongs to yet.', 'With am, is and are, the word goes after the verb.'] },
-  { dia: 3, cab: 'The same Wednesday. Every morning, Marco reads the note about the plant.', f: ['He already knows about the plant.', 'He knows already about the plant.', 'Already he knows about the plant.'], fb: 'With a normal verb, the word comes before it.', nao: ['', 'With a normal verb, already goes in front of it.', 'Keep the word in the middle, not at the start.'] },
-  { dia: 5, cab: 'Friday, half past seven. Bea is at the door with her coat on.', f: ['Marco is not home yet.', 'Marco is not already home.', 'Marco is yet not home.'], fb: 'A no: yet, at the end.', nao: ['', 'A no never takes already.', 'Yet goes at the end of the sentence, always.'] },
-  { dia: 5, cab: 'The same Friday. Bea reads the Monday note again before she goes to work.', f: ['She still reads it every morning.', 'She reads it still every morning.', 'She reads still it every morning.'], fb: 'In front of the normal verb.', nao: ['', 'Nothing between the verb and its thing: in front of the verb.', 'Never between the verb and its thing.'] }
+  { dia: 3, cab: 'Wednesday. The bread note is on the door.', f: ['The bread is still on the list.', 'The bread is on the list still.', 'The bread still is on the list.'], fb: 'After is, and nothing between them.', nao: ['', 'Still never goes at the end.', 'After is, the word goes after the verb.'] },
+  { dia: 3, cab: 'Wednesday. Marco reads the plant note every morning.', f: ['He already knows about the plant.', 'He knows already about the plant.', 'Already he knows about the plant.'], fb: 'With a normal verb, the word comes before it.', nao: ['', 'Already goes before a normal verb.', 'Keep the word in the middle.'] },
+  { dia: 5, cab: 'Friday, 7:30. Bea is at the door with her coat on.', f: ['Marco is not home yet.', 'Marco is not already home.', 'Marco is yet not home.'], fb: 'A no: yet, at the end.', nao: ['', 'A no never takes already.', 'Yet goes at the end.'] },
+  { dia: 5, cab: 'Friday. Bea reads the Monday note again before work.', f: ['She still reads it every morning.', 'She reads it still every morning.', 'She reads still it every morning.'], fb: 'In front of the normal verb.', nao: ['', 'Put still before the verb.', 'Never between the verb and its thing.'] }
 ];
 var DOIS = [
-  { dia: 1, cab: 'A yes, and he is earlier than you thought.', fr: 'He is __ home.', ok: 'already', fb: 'Already. A yes takes already, every time.', nao: { yet: 'Yet only comes out in a no or in a question. This line is a yes.' } },
-  { dia: 1, cab: 'The same idea, but now it is a question, and you are waiting.', fr: 'Is he home __?', ok: 'yet', fb: 'Yet, at the end. The question mark changed the word.', nao: { already: 'The most common mistake of the hour. In a question you are waiting, and waiting is yet.' } },
-  { dia: 3, cab: 'A no, and the bread is coming.', fr: 'I do not have the bread __.', ok: 'yet', fb: 'Yet. Not … yet: a no with a promise. At the end.', nao: { already: 'Already cannot go into a no. There is no such sentence in English.' } },
-  { dia: 4, cab: 'A yes, and you knew it before they told you.', fr: 'I __ know.', ok: 'already', fb: 'Already, in front of the verb.', nao: { yet: 'A yes never takes yet.' } }
+  { dia: 1, cab: 'A yes, and he is early.', fr: 'He is __ home.', ok: 'already', fb: 'Already. A yes takes already.', nao: { yet: 'Yet is for a no or a question. This is a yes.' } },
+  { dia: 1, cab: 'A question, and you are waiting.', fr: 'Is he home __?', ok: 'yet', fb: 'Yet, at the end. In a question, you wait.', nao: { already: 'In a question you wait: yet.' } },
+  { dia: 3, cab: 'A no, and the bread is coming.', fr: 'I do not have the bread __.', ok: 'yet', fb: 'Not … yet: at the end.', nao: { already: 'Already never goes in a no.' } },
+  { dia: 4, cab: 'A yes, and you knew before.', fr: 'I __ know.', ok: 'already', fb: 'Already, before the verb.', nao: { yet: 'A yes never takes yet.' } }
 ];
 
 var NOTINHAS = [

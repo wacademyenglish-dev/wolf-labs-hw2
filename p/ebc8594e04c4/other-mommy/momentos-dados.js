@@ -15,7 +15,7 @@ window.WL_MOMENTOS = [
     explica: '<i>How do I look?</i> = Am I beautiful? Is it OK? We ask it in front of a mirror or before a party.',
     formula: 'I <b>need</b> → she <b>needs</b> · I <b>look</b> → she <b>looks</b>',
     tente: 'What does someone in your family need right now?',
-    ex: 'My father needs new glasses. He can’t see very well.',
+    ex: 'My father needs new glasses. He doesn’t see very well.',
     sente: { q: 'How strange is this moment?', de: 'normal', a: 'very strange', st: 'It’s … because she …' } },
   { i: [7], k: 'Other Mommy', quem: 'In the trailer',
     contexto: 'The little girl talks about a new “mother” that only she can see.',

@@ -25,8 +25,8 @@ var L = [
 
 var ABRE = [
   { k: 'FIRST', q: 'We have one hour and a full van. What do we do first?', fup: 'And then?', st: ['… start with the boxes.'], ex: 'Let’s start with the small boxes.' },
-  { k: 'RAIN', q: 'It’s raining! Say: Let’s …', fup: 'Is that a good idea?', st: ['… wait for the rain to stop.'], ex: 'Let’s wait in the van for five minutes.' },
-  { k: 'NOT', q: 'Now suggest something you don’t want to do.', fup: 'Why not?', st: ['… not …'], ex: 'Let’s not carry the piano today.' }
+  { k: 'RAIN', q: 'It’s raining! Say: Let’s …', fup: 'Yes or no?', st: ['… wait for the rain to stop.'], ex: 'Let’s wait in the van for five minutes.' },
+  { k: 'NOT', q: 'Now suggest something you don’t want to do.', fup: 'Today or tomorrow?', st: ['… not …'], ex: 'Let’s not carry the piano today.' }
 ];
 var FORMAS = [{ k: 'lets', t: 'LET’S + VERB' }, { k: 'shall', t: 'SHALL WE…?' }, { k: 'wego', t: 'WE GO… / WE WILL…', erro: 1 }, { k: 'to', t: 'LET’S TO…', erro: 1 }];
 
@@ -50,7 +50,7 @@ var C2 = [
 
 var NAO = [
   { fato: 'the mattress is too big for that door', fr: '? take it that way.', ok: 'Let’s not', fb: 'The not sits between the two words. That’s the whole shape.' },
-  { fato: 'the rain has stopped', fr: '? open the boxes outside.', ok: 'Let’s', fb: 'Good news, so no not this time.' },
+  { fato: 'the rain is over', fr: '? open the boxes outside.', ok: 'Let’s', fb: 'Good news, so no not this time.' },
   { fato: 'the neighbors are asleep', fr: '? move the piano tonight.', ok: 'Let’s not', fb: 'A refusal is still an invitation. It waits for an answer.' },
   { fato: 'you are both tired', fr: '? do the kitchen today.', ok: 'Let’s not', fb: 'Every no has not in the middle.' }
 ];
@@ -60,8 +60,8 @@ var NAO_N = { 'Let’s don’t': 'Two negatives, and English only wants one. Use
 var SHALL = [
   { fato: 'you don’t know where to start', fr: '? start with the boxes?', ok: 'Shall we', fb: 'Shall we asks. Let’s decides. Same idea, other hand.' },
   { fato: 'it’s nearly seven', fr: '? stop for ten minutes?', ok: 'Shall we', fb: 'Two words, and they never change.' },
-  { fato: 'the neighbor is watching', fr: '? ask him to help?', ok: 'Shall we', fb: 'A good question. And the verb after it is plain.' },
-  { fato: 'there is one box left, and you both want to finish', fr: '? do the last one now.', ok: 'Let’s', fb: 'No question mark: you decide together. Let’s.' },
+  { fato: 'the neighbor is outside', fr: '? ask him to help?', ok: 'Shall we', fb: 'A good question. And the verb after it is plain.' },
+  { fato: 'one box is left, and you want to finish', fr: '? do the last one now.', ok: 'Let’s', fb: 'No question mark: you decide together. Let’s.' },
   { fato: 'you are both hungry', fr: '? order something?', ok: 'Shall we', fb: 'Question mark: ask. Full stop: decide.' }
 ];
 var OPS_S = ['Shall we', 'Let’s', 'Do we', 'Shall us'];
