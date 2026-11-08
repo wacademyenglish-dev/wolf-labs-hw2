@@ -64,7 +64,7 @@
     'body .cab .rot b{border-radius:var(--pl-raio-p,50%);background:var(--ac);color:var(--pl-sobre-ac,#140f1c)}',
     'body .cab h1{font:var(--pl-tit-peso,800) clamp(28px,2.5vw,50px)/1.04 var(--pl-tit);letter-spacing:var(--pl-tit-esp,-.02em);text-transform:var(--pl-tit-caixa,none);font-style:var(--pl-tit-estilo,normal);color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.6)}',
     'body .cab p{font:500 clamp(14px,1vw,17px)/1.5 var(--ui);color:var(--t2);max-width:62ch}',
-    'body .fm-cena,body .fm-folha,body .vd:not(.wla-quadro),body .fm-poster,body .fm-canhoto{background:var(--pl-vidro)!important;-webkit-backdrop-filter:blur(22px) saturate(1.15);backdrop-filter:blur(22px) saturate(1.15);border:1px solid var(--pl-borda)!important;border-radius:var(--pl-raio,22px)!important;box-shadow:0 30px 70px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05)!important}',
+    'body .fm-cena,body .fm-folha,body .vd:not(.wla-quadro):not([style*="background-image"]),body .fm-poster,body .fm-canhoto{background:var(--pl-vidro)!important;-webkit-backdrop-filter:blur(22px) saturate(1.15);backdrop-filter:blur(22px) saturate(1.15);border:1px solid var(--pl-borda)!important;border-radius:var(--pl-raio,22px)!important;box-shadow:0 30px 70px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05)!important}',
     'body .fm-cena::before{display:none}',
     'body .fm-cena-n,body .fm-folha-t b,body .fm-placa-t,body .fm-depois span,body .fm-canhoto b{font-family:var(--pl-tit);font-style:var(--pl-tit-estilo,normal);text-transform:var(--pl-tit-caixa,none);color:var(--ac2)}',
     'body .fm-pista b{border-bottom-color:var(--ac)}',

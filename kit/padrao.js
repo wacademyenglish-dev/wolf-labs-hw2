@@ -304,3 +304,112 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', liga); else liga();
 })();
+
+/* ============================================================
+   O PLAYER DE ÁUDIO DAS AULAS                          06/11/2026
+   Pedido do Carlos: "um botão de voltar ou uma barra de progresso
+   para voltar a um momento específico. Um player luxuoso."
+   Enfeita o .player do motor.js (tocar, 0.75× e a transcrição seguem
+   com ele): voltar 5 s, onda que dá para arrastar e o tempo. Na sala,
+   o salto vai para o outro lado pelo estado da aula, e os botões
+   novos são data-wl-local para o fio não repetir o clique.
+   ============================================================ */
+(function () {
+  if (window.__wlPlayer || typeof window.som !== 'function') return;
+  window.__wlPlayer = true;
+  var BARRAS = 46;
+  var dois = function (n) { return (n < 10 ? '0' : '') + n; };
+  var hora = function (s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + dois(s % 60); };
+  /* a onda é desenho fixo por áudio, igual nas duas telas; o que vale é a posição */
+  function onda(nome) {
+    var h = 7, o = '';
+    for (var k = 0; k < nome.length; k++) h = (h * 31 + nome.charCodeAt(k)) >>> 0;
+    for (var i = 0; i < BARRAS; i++) {
+      h = (h * 1664525 + 1013904223) >>> 0;
+      o += '<i style="height:' + (24 + (h >>> 8) % 77) + '%"></i>';
+    }
+    return o;
+  }
+  function pintaTempo(nome) {
+    var a = window.SONS && window.SONS[nome]; if (!a) return;
+    var d = isFinite(a.duration) ? a.duration : 0, t = a.currentTime || 0, p = d ? Math.min(100, t / d * 100) : 0;
+    [].forEach.call(document.querySelectorAll('.wlp-onda[data-x="' + nome + '"]'), function (w) {
+      w.style.setProperty('--p', p + '%');
+      w.setAttribute('aria-valuenow', Math.round(t)); w.setAttribute('aria-valuemax', Math.round(d));
+      w.setAttribute('aria-valuetext', hora(t) + ' of ' + hora(d));
+      var c = w.parentNode.querySelector('.wlp-tempo'); if (c) c.textContent = hora(t) + ' / ' + hora(d);
+    });
+  }
+  /* O site das aulas entrega o áudio inteiro, sem pedaços, e o navegador não consegue pular nele.
+     Por isso o áudio vem para a memória uma vez (são poucos KB); daí em diante o salto funciona. */
+  function prepara(nome, depois) {
+    var a = window.som(nome);
+    if (a.__wlpOk || /^(data|blob):/.test(a.src)) { a.__wlpOk = true; if (depois) depois(); return; }
+    a.__wlpFila = a.__wlpFila || [];
+    if (depois) a.__wlpFila.push(depois);
+    if (a.__wlpBusca) return;
+    a.__wlpBusca = true;
+    var fim = function () { a.__wlpOk = true; var l = a.__wlpFila; a.__wlpFila = []; l.forEach(function (f) { f(); }); };
+    fetch(a.src).then(function (r) { if (!r.ok) throw new Error('audio'); return r.blob(); }).then(function (bl) {
+      var t = a.currentTime, tocava = !a.paused, vel = a.playbackRate;
+      a.addEventListener('loadedmetadata', function () {
+        try { a.currentTime = t; } catch (e) { /* segue */ }
+        a.playbackRate = vel;
+        if (tocava) { var p = a.play(); if (p && p.catch) p.catch(function () {}); }
+        fim();
+      }, { once: true });
+      a.src = URL.createObjectURL(bl);
+      a.load();
+    }).catch(fim);
+  }
+  function salta(nome, t, avisa) {
+    prepara(nome, function () {
+      var a = window.som(nome), d = isFinite(a.duration) ? a.duration : 0;
+      try { a.currentTime = Math.max(0, d ? Math.min(d - .05, t) : t); } catch (e) { /* ainda sem dados */ }
+      pintaTempo(nome);
+      if (avisa && window.__wlSalaEstado) window.__wlSalaEstado({ wlp: { x: nome, t: a.currentTime } });
+    });
+  }
+
+  function liga(nome) {
+    var a = window.som(nome); if (a.__wlp) return; a.__wlp = true;
+    var anda = function () { pintaTempo(nome); if (!a.paused) requestAnimationFrame(anda); };
+    a.addEventListener('play', anda);
+    ['loadedmetadata', 'durationchange', 'seeked', 'pause', 'ended'].forEach(function (e) { a.addEventListener(e, function () { pintaTempo(nome); }); });
+  }
+  function enfeita(p) {
+    if (p.classList.contains('wlp')) return;
+    var b = p.querySelector('.play[data-x]'); if (!b) return;
+    var nome = b.getAttribute('data-x');
+    liga(nome);
+    prepara(nome);
+    p.classList.add('wlp');
+    var volta = document.createElement('button');
+    volta.type = 'button'; volta.className = 'wlp-volta'; volta.setAttribute('data-wl-local', '1');
+    volta.setAttribute('aria-label', 'Back 5 seconds'); volta.title = 'Back 5 seconds';
+    volta.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.6-5.9L4 8.5"/><path d="M4 4v4.5h4.5"/></svg><b>5</b>';
+    volta.addEventListener('click', function (e) { e.stopPropagation(); salta(nome, window.som(nome).currentTime - 5, true); });
+    var meio = document.createElement('span');
+    meio.className = 'wlp-meio'; meio.setAttribute('data-wl-local', '1');
+    meio.innerHTML = '<span class="wlp-onda" data-x="' + nome + '" role="slider" tabindex="0" aria-label="Audio position" aria-valuemin="0"><span>' + onda(nome) + '</span><span class="cheia" aria-hidden="true">' + onda(nome) + '</span></span><span class="wlp-tempo">0:00 / 0:00</span>';
+    b.insertAdjacentElement('afterend', volta);
+    volta.insertAdjacentElement('afterend', meio);
+    var w = meio.querySelector('.wlp-onda');
+    var ponto = function (e) { var r = w.getBoundingClientRect(); return Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)); };
+    var vai = function (e, avisa) { var a = window.som(nome); if (isFinite(a.duration) && a.duration) salta(nome, ponto(e) * a.duration, avisa); };
+    w.addEventListener('pointerdown', function (e) { e.preventDefault(); e.stopPropagation(); w.setPointerCapture(e.pointerId); w.classList.add('puxando'); vai(e, false); });
+    w.addEventListener('pointermove', function (e) { if (w.classList.contains('puxando')) vai(e, false); });
+    w.addEventListener('pointerup', function (e) { if (!w.classList.contains('puxando')) return; w.classList.remove('puxando'); vai(e, true); });
+    w.addEventListener('pointercancel', function () { w.classList.remove('puxando'); });
+    w.addEventListener('click', function (e) { e.stopPropagation(); });
+    w.addEventListener('keydown', function (e) {
+      var d = { ArrowLeft: -5, ArrowDown: -5, ArrowRight: 5, ArrowUp: 5 }[e.key]; if (!d) return;
+      e.preventDefault(); e.stopPropagation(); salta(nome, window.som(nome).currentTime + d, true);
+    });
+    pintaTempo(nome);
+  }
+  function varre() { [].forEach.call(document.querySelectorAll('.player'), enfeita); }
+  window.addEventListener('wl-sala-estado', function (ev) { var m = ev.detail && ev.detail.wlp; if (m && m.x && typeof m.t === 'number') salta(m.x, m.t, false); });
+  new MutationObserver(varre).observe(document.documentElement, { childList: true, subtree: true });
+  varre();
+})();
