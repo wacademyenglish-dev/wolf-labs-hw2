@@ -24,7 +24,7 @@ function ordem(lista, semente) { var a = lista.slice(), n = a.length; var r = se
 function img(n) { return (window.__WL_IMG && window.__WL_IMG[n]) || 'img/live-' + n + '.webp'; }   /* __WL_IMG: o HTML de teste, tudo num arquivo */
 /* 21/10/2026 · nome sem extensão ('c1') pedia audio/c1 e o site devolvia o porteiro: aula sem som */
 function aud(n) { if (!/\.\w+$/.test(n)) n += '.mp3'; return (window.__WL_AUD && window.__WL_AUD[n]) || 'audio/' + n; }
-function cab(c) { return '<div class="cab st-' + c.est + '"><span class="rot"><b>' + c.est.toUpperCase() + '</b>' + EST[c.est] + ' · ' + c.rot + (c.extra ? '<em class="so-prof" style="margin-left:10px;padding:2px 10px;border-radius:999px;border:1px dashed currentColor;font-style:normal;opacity:.8">EXTRA · skip if you’re short on time</em>' : '') + '</span><h1>' + c.t + '</h1><p>' + c.p + '</p></div>'; }   /* 09/10: o selo EXTRA (proposta da Susana), só para o professor */
+function cab(c) { return '<div class="cab st-' + c.est + '"><span class="rot"><b>' + c.est.toUpperCase() + '</b>' + EST[c.est] + ' · ' + c.rot + (c.extra ? '<em class="so-prof" style="margin-left:10px;padding:2px 10px;border-radius:999px;border:1px dashed currentColor;font-style:normal;opacity:.8">FAST FINISHERS · extra</em>' : '') + '</span><h1>' + c.t + '</h1><p>' + c.p + '</p></div>'; }   /* 09/10: o selo EXTRA (proposta da Susana), só para o professor */
 function fala(chave, frases, palavras) {
   var on = S.fala[chave] || {};
   return '<div class="diz"><h5>SAY IT WITH</h5><div class="chips">' + frases.map(function (f, i) { return '<button type="button" class="chip frase' + (on['f' + i] ? ' on' : '') + '" data-a="fala" data-c="' + chave + '" data-x="f' + i + '">' + f + '</button>'; }).join('') + '</div>'
@@ -186,12 +186,13 @@ function pinta() {
   if (window.WolfLegenda) WolfLegenda.pinta(palco);
   (window.WL_PECAS || []).forEach(function (f) { try { f(palco, c); } catch (e) { /* uma peça com erro não derruba a aula */ } });   /* 08/10: as peças do kit (capa.js…) se ligam aqui */
   voltaPasso(palco);   /* depois das peças: elas podem redesenhar a cena */
+  fastFinishers(palco);   /* 09/11 · T3 */
   document.getElementById('fundo').style.backgroundImage = 'url(' + img(c.img) + ')';
   var vistas = {}; for (var i = 0; i < S.i; i++) if (L[i].est) vistas[L[i].est] = 1;
   [].forEach.call(document.querySelectorAll('.wolf span'), function (sp) { var k = sp.getAttribute('data-k'); sp.classList.toggle('agora', k === c.est); sp.classList.toggle('feita', !!vistas[k] && k !== c.est); });
   document.getElementById('trilho').innerHTML = L.map(function (x, i) { return '<i class="' + (i === S.i ? 'agora' : i < S.i ? 'feita' : '') + '" style="--c:var(--' + (x.est || 'o') + ')"></i>'; }).join('');
   document.getElementById('conta').textContent = S.i + ' / ' + (L.length - 1);
-  document.getElementById('ant').disabled = S.i === 0; document.getElementById('prox').disabled = S.i === L.length - 1;
+  document.getElementById('ant').disabled = S.i === 0; document.getElementById('prox').disabled = !(L[S.i] && L[S.i].extra) && S.i >= ultimoNucleo();
 }
 function vai(n) { if (n < 0 || n >= L.length) return; S.i = n; pinta(); document.getElementById('palco').scrollTop = 0; window.scrollTo(0, 0); }
 window.vai = vai;
@@ -218,6 +219,7 @@ document.addEventListener('click', function (ev) {
   guardaPasso(a);
   switch (a) {
     case 'ir': vai(n); return;
+    case 'ff': S.ff = !S.ff; break;   /* 09/11 · T3: o Fast finishers liga e desliga */
     case 'passo-ant': var foto = (__WL_PASSOS[S.i] || []).pop(); if (!foto) return; var velho = JSON.parse(foto); Object.keys(S).forEach(function (k) { delete S[k]; }); for (var k in velho) S[k] = velho[k]; break;
     case 'faixa': S.faixa = 0; break;
     case 'resp': S.resp[c] = 1; break;
@@ -248,16 +250,61 @@ document.addEventListener('input', function (ev) {
 document.addEventListener('keydown', function (ev) {
   if (window.teclaDaAula && window.teclaDaAula(ev)) return;
   if (ALUNO || /^(TEXTAREA|INPUT)$/.test((ev.target.tagName || ''))) return;
-  if (ev.key === 'ArrowRight') vai(S.i + 1); else if (ev.key === 'ArrowLeft') vai(S.i - 1);
+  if (ev.key === 'ArrowRight') passo(1); else if (ev.key === 'ArrowLeft') passo(-1);   /* 09/11 · T3: pula as extras */
   else if (ev.key === 'g' || ev.key === 'G') guia(true); else if (ev.key === 'Escape') guia(false);
 });
 function guia(abre) { document.getElementById('guia').hidden = !abre; }
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('prox').onclick = function () { vai(S.i + 1); };
-  document.getElementById('ant').onclick = function () { vai(S.i - 1); };
+  document.getElementById('prox').onclick = function () { passo(1); };
+  document.getElementById('ant').onclick = function () { passo(-1); };
   document.getElementById('bguia').onclick = function () { guia(true); };
   document.getElementById('fguia').onclick = function () { guia(false); };
   document.getElementById('bzoom').onclick = function () { var z = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--zoom')) || 1); z = z >= 1.2 ? 1 : +(z + .1).toFixed(1); document.documentElement.style.setProperty('--zoom', z); };
   document.getElementById('btela').onclick = function () { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(function () {}); else document.exitFullscreen(); };
   pinta();
 });
+
+/* ============================================================
+   09/11/2026 · CATÁLOGO LUXO · T1 + T3 · A HORA E O FAST FINISHERS
+   A aula corre pelo NÚCLEO: Next, ‹ › e as setas pulam as cenas extra:true.
+   Na última página do núcleo, o Fast finishers: a chave só o professor vê;
+   ligada, a lista das extras aparece para os dois (o toque viaja pelo fio).
+   Dentro de uma extra, Next anda pelas extras e "Back to the end" volta.
+   ============================================================ */
+function ultimoNucleo() { for (var i = L.length - 1; i > 0; i--) if (L[i] && !L[i].extra && L[i].k !== 'capa') return i; return L.length - 1; }
+function passo(dir) {
+  var n = S.i + dir, emExtra = !!(L[S.i] && L[S.i].extra);
+  if (emExtra) { while (n > 0 && n < L.length && !L[n].extra) n += dir; if (n <= 0 || n >= L.length) n = ultimoNucleo(); }
+  else { while (n > 0 && n < L.length && L[n] && L[n].extra) n += dir; }
+  vai(n);
+}
+function ffEstilo() {
+  if (ffEstilo.ok) return; ffEstilo.ok = 1;
+  try {
+    var st = document.createElement('style'); st.id = 'wl-ff-css';
+    st.textContent = '.ff{margin:28px auto 8px;max-width:760px;display:grid;gap:14px;padding:18px 20px;border-radius:20px;border:1px solid rgba(232,200,142,.35);background:rgba(232,200,142,.06)}'
+      + '.ff-cab{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.ff-cab b{font:800 18px var(--ui,system-ui);color:#e8c88e;letter-spacing:.01em}.ff-cab small{flex:1;min-width:160px;font:500 13px var(--ui,system-ui);color:var(--t3,#a9a3bd)}'
+      + '.ff-chave{display:inline-flex;align-items:center;gap:9px;min-height:36px;padding:0 14px 0 8px;border-radius:999px;border:1px solid rgba(232,200,142,.5);background:transparent;color:#e8c88e;font:700 13px var(--ui,system-ui);cursor:pointer}'
+      + '.ff-chave i{position:relative;width:34px;height:20px;border-radius:999px;background:rgba(245,241,251,.12)}.ff-chave i::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#e6e0f3;transition:left .2s}'
+      + '.ff-chave[aria-checked=true] i{background:linear-gradient(180deg,#f0d9a8,#e8c88e)}.ff-chave[aria-checked=true] i::after{left:16px;background:#2a1f08}'
+      + '.ff-lista{display:flex;flex-wrap:wrap;gap:10px}.ff-item{display:inline-flex;align-items:baseline;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #e8c88e;background:transparent;color:#e8c88e;font:700 15px var(--ui,system-ui);cursor:pointer}.ff-item:hover{background:rgba(232,200,142,.1)}.ff-item small{font-weight:600;opacity:.75}'
+      + '.ff-volta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;padding:10px 14px;border-radius:14px;border:1px dashed rgba(232,200,142,.45);color:#e8c88e;font:800 13px var(--ui,system-ui);letter-spacing:.06em;text-transform:uppercase}'
+      + '.ff button:focus-visible,.ff-volta button:focus-visible{outline:2px solid #e8c88e;outline-offset:3px}';
+    (document.head || document.documentElement).appendChild(st);
+  } catch (e) { /* sem estilo, os botões seguem funcionando */ }
+}
+function fastFinishers(palco) {
+  var sec = palco.querySelector('section.cena'); if (!sec) return;
+  var extras = []; for (var i = 1; i < L.length; i++) if (L[i] && L[i].extra) extras.push(i);
+  if (!extras.length) return;
+  ffEstilo();
+  var fim = ultimoNucleo();
+  if (L[S.i] && L[S.i].extra) {
+    sec.insertAdjacentHTML('afterbegin', '<div class="ff-volta"><span>Fast finishers</span><button type="button" class="btn" data-a="ir" data-n="' + fim + '">Back to the end</button></div>');
+    return;
+  }
+  if (S.i !== fim) return;
+  var lista = S.ff ? '<div class="ff-lista">' + extras.map(function (i) { var x = L[i]; return '<button type="button" class="ff-item" data-a="ir" data-n="' + i + '"><b>' + h(String(x.rot || 'Extra').replace(/^[IVXLC]+\s*·\s*/, '')) + '</b>' + (x.min ? '<small>' + x.min + ' min</small>' : '') + '</button>'; }).join('') + '</div>' : '';
+  sec.insertAdjacentHTML('beforeend', '<div class="ff' + (S.ff ? ' on' : ' so-prof') + '"><div class="ff-cab"><b>Fast finishers</b><small class="so-prof">' + (S.ff ? 'Your student sees these now. Tap one to go there.' : 'Only you see this. Turn it on when there is time left.') + '</small>'
+    + '<button type="button" class="ff-chave so-prof" role="switch" aria-checked="' + (S.ff ? 'true' : 'false') + '" data-a="ff"><i></i>' + (S.ff ? 'On' : 'Off') + '</button></div>' + lista + '</div>');
+}

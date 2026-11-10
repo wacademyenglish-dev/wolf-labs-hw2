@@ -64,7 +64,7 @@
     'body .cab .rot b{border-radius:var(--pl-raio-p,50%);background:var(--ac);color:var(--pl-sobre-ac,#140f1c)}',
     'body .cab h1{font:var(--pl-tit-peso,800) clamp(28px,2.5vw,50px)/1.04 var(--pl-tit);letter-spacing:var(--pl-tit-esp,-.02em);text-transform:var(--pl-tit-caixa,none);font-style:var(--pl-tit-estilo,normal);color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.6)}',
     'body .cab p{font:500 clamp(14px,1vw,17px)/1.5 var(--ui);color:var(--t2);max-width:62ch}',
-    'body .fm-cena,body .fm-folha,body .vd:not(.wla-quadro):not([style*="background-image"]),body .fm-poster,body .fm-canhoto{background:var(--pl-vidro)!important;-webkit-backdrop-filter:blur(22px) saturate(1.15);backdrop-filter:blur(22px) saturate(1.15);border:1px solid var(--pl-borda)!important;border-radius:var(--pl-raio,22px)!important;box-shadow:0 30px 70px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05)!important}',
+    'body .fm-cena,body .fm-folha,body .vd,body .fm-poster,body .fm-canhoto{background:var(--pl-vidro)!important;-webkit-backdrop-filter:blur(22px) saturate(1.15);backdrop-filter:blur(22px) saturate(1.15);border:1px solid var(--pl-borda)!important;border-radius:var(--pl-raio,22px)!important;box-shadow:0 30px 70px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05)!important}',
     'body .fm-cena::before{display:none}',
     'body .fm-cena-n,body .fm-folha-t b,body .fm-placa-t,body .fm-depois span,body .fm-canhoto b{font-family:var(--pl-tit);font-style:var(--pl-tit-estilo,normal);text-transform:var(--pl-tit-caixa,none);color:var(--ac2)}',
     'body .fm-pista b{border-bottom-color:var(--ac)}',
@@ -106,6 +106,112 @@
   }
   window.WL_PELE_UTIL = util;
   window.__wlAplicaPele = aplica;
+})();
+
+/* ============================================================
+   09/11/2026 · CATÁLOGO LUXO · LEVA 2 · N1–N8 + N10 · OS MUNDOS
+   O Carlos escolheu "manter as 18 e somar": cada linha continua com as
+   suas 3 peles em rodízio, e por cima delas entra a MOLDURA DO MUNDO,
+   igual nas três:
+     · o selo do mundo no canto de cada cena (o objeto da linha:
+       a edição da revista, o memorando, a sessão de cinema, a faixa do
+       disco, a missão, a passagem, a parada da viagem, a ferramenta);
+     · o enquadramento (data-mundo no <html>: tarja de cinema, cantos de
+       HUD, picote do cartão de embarque, régua fina da revista…).
+   N10 · cada aula com rosto próprio: a cor da CAPA da aula tinge de leve
+   o fundo (sem trocar o --ac que a aula escolheu).
+   Nenhum mundo usa o roxo da plataforma. Fotofobia: tudo escuro.
+   Montado no pele.js pelo monta_pele.py (depois do _base.js).
+   ============================================================ */
+(function () {
+  function linha() { var b = document.querySelector('.marca b'); return b ? b.textContent.trim().toUpperCase() : ''; }
+  var CURSOS = { 'WOLF.DEV': 'terminal', 'SELLING SERVICES': 'proposta', 'AU PAIR': 'agenda', 'DET PREP': 'prova', 'HEALTH ENGLISH': 'prontuario', 'DESIGN ENGLISH': 'prancheta', 'GLOBAL PAYMENTS ENGLISH': 'fatura', 'WOLF HIRED': 'curriculo' };
+  /* o selo: o que aparece no canto da cena (n = número da cena no núcleo, de = quantas) */
+  var MUNDOS = {
+    'MAIN SERIES': { m: 'revista', selo: function (n, de) { return 'THE WEEKEND · PAGE ' + n; } },
+    'BUSINESS': { m: 'memo', selo: function (n, de) { return 'MEMO · ITEM ' + n + ' OF ' + de; } },
+    'WOLF BUSINESS': { m: 'memo', selo: function (n, de) { return 'MEMO · ITEM ' + n + ' OF ' + de; } },
+    'WOLFLIX': { m: 'cinema', selo: function (n, de) { return 'NOW SHOWING · REEL ' + n; } },
+    'WOLFFY': { m: 'disco', selo: function (n, de) { return 'SIDE A · TRACK ' + ('0' + n).slice(-2); } },
+    'WOLFSTATION': { m: 'hud', selo: function (n, de) { return 'MISSION ' + ('0' + n).slice(-2) + ' · ' + n + '/' + de; } },
+    'WOLFAITH': { m: 'silencio', selo: function (n, de) { return n + ' · ' + de; } },
+    'WOLF ROAD': { m: 'embarque', selo: function (n, de) { return 'STOP ' + ('0' + n).slice(-2) + ' · GATE ' + String.fromCharCode(64 + Math.min(26, de)) + n; } }
+  };
+  var FERRAMENTA = { terminal: function (n) { return '$ step ' + n; }, proposta: function (n) { return 'PROPOSAL · §' + n; }, agenda: function (n) { return 'HOUSE NOTES · ' + n; }, prova: function (n) { return 'EXAM · PART ' + n; },
+    prontuario: function (n) { return 'CHART · NOTE ' + n; }, prancheta: function (n) { return 'ARTBOARD ' + n; }, fatura: function (n) { return 'INVOICE · LINE ' + n; }, curriculo: function (n) { return 'INTERVIEW · Q' + n; } };
+
+  function mundo() {
+    var l = linha();
+    if (MUNDOS[l]) return MUNDOS[l];
+    var f = CURSOS[l];
+    if (f) return { m: 'oficio', f: f, selo: function (n) { return FERRAMENTA[f](n); } };
+    return null;
+  }
+  var M = mundo();
+  if (!M) return;
+  document.documentElement.setAttribute('data-mundo', M.m);
+  if (M.f) document.documentElement.setAttribute('data-oficio', M.f);
+
+  /* o enquadramento de cada mundo (só moldura: a letra do título continua a da pele) */
+  var CSS = [
+    '.pl-selo{position:absolute;top:0;right:0;font:700 11px/1 var(--pl-selo-letra,"IBM Plex Mono",ui-monospace,monospace);letter-spacing:.14em;text-transform:uppercase;color:var(--ac2,var(--ac));opacity:.85;white-space:nowrap;pointer-events:none}',
+    'body .cab{position:relative;padding-right:min(34%,260px)}',
+    '@media (max-width:700px){body .cab{padding-right:0;padding-top:20px}.pl-selo{left:0;right:auto}}',
+    /* revista: a régua fina em cima do título, como abertura de matéria */
+    '[data-mundo=revista] body .cab h1{border-top:1px solid rgba(255,255,255,.22);padding-top:10px}',
+    '[data-mundo=revista] .pl-selo{font-family:var(--pl-tit);font-style:italic;letter-spacing:.04em;text-transform:none;font-size:15px;font-weight:400}',
+    /* memorando: o cabeçalho de documento (linha dupla embaixo do rótulo) */
+    '[data-mundo=memo] body .cab .rot{padding-bottom:8px;border-bottom:3px double rgba(255,255,255,.18)}',
+    /* cinema: a tarja preta em cima e embaixo da tela */
+    '[data-mundo=cinema] #fundo::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(#000 0,#000 3.2vh,transparent 3.2vh,transparent calc(100% - 3.2vh),#000 calc(100% - 3.2vh))}',
+    /* disco: o selo vira a etiqueta redonda do vinil */
+    '[data-mundo=disco] .pl-selo::before{content:"";display:inline-block;width:9px;height:9px;margin-right:8px;border-radius:50%;background:radial-gradient(circle,#0b0a10 0 2px,var(--ac) 2.5px);vertical-align:-1px}',
+    /* HUD: os cantos de mira em volta do título */
+    '[data-mundo=hud] body .cab{padding-left:16px}',
+    '[data-mundo=hud] body .cab::before,[data-mundo=hud] body .cab::after{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--ac);pointer-events:none}',
+    '[data-mundo=hud] body .cab::before{left:0;top:0;border-right:0;border-bottom:0}[data-mundo=hud] body .cab::after{left:0;bottom:0;border-right:0;border-top:0}',
+    /* silêncio: mais ar, nada competindo */
+    '[data-mundo=silencio] body .cab{gap:10px;margin-bottom:14px}[data-mundo=silencio] .pl-selo{letter-spacing:.3em;opacity:.6}',
+    /* embarque: o picote do cartão de embarque embaixo do título */
+    '[data-mundo=embarque] body .cab{padding-bottom:14px;border-bottom:2px dashed rgba(255,255,255,.16)}',
+    /* ofício: a barra de ferramenta em cima da cena */
+    '[data-mundo=oficio] body .cab .rot{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}',
+    '[data-mundo=oficio] .pl-selo{font-family:"JetBrains Mono","IBM Plex Mono",ui-monospace,monospace;letter-spacing:.06em;text-transform:none}',
+    /* N10: a cor da capa, bem de leve, por cima do fundo */
+    '#fundo::after{box-shadow:inset 0 0 0 100vmax rgba(var(--pl-capa-rgb,0,0,0),var(--pl-capa-a,0))}'
+  ].join('');
+  try { var st = document.createElement('style'); st.setAttribute('data-mundo', M.m); st.textContent = CSS; (document.head || document.documentElement).appendChild(st); } catch (e) { /* segue */ }
+
+  /* o selo em cada cena (peça do motor: roda depois de cada pintura) */
+  function nucleo() { var out = []; try { for (var i = 1; i < L.length; i++) if (L[i] && !L[i].extra && L[i].k !== 'capa') out.push(i); } catch (e) { /* segue */ } return out; }
+  (window.WL_PECAS = window.WL_PECAS || []).push(function (palco) {
+    var cab = palco.querySelector('section.cena .cab'); if (!cab || cab.querySelector('.pl-selo')) return;
+    var nn = nucleo(), pos = nn.indexOf(S.i);
+    var n = pos >= 0 ? pos + 1 : null; if (n == null) return;   /* capa e extras ficam sem selo */
+    cab.insertAdjacentHTML('afterbegin', '<span class="pl-selo" aria-hidden="true">' + M.selo(n, nn.length) + '</span>');
+  });
+
+  /* N10: a cor média da imagem de capa (a mesma imagem nos dois lados da sala) */
+  function tingeDaCapa() {
+    try {
+      var src = (window.__WL_IMG && window.__WL_IMG[(L[0] && L[0].img) || 'capa']) || ('img/live-' + ((L[0] && L[0].img) || 'capa') + '.webp');
+      var im = new Image(); im.decoding = 'async';
+      im.onload = function () {
+        try {
+          var c = document.createElement('canvas'); c.width = 24; c.height = 24; var x = c.getContext('2d');
+          x.drawImage(im, 0, 0, 24, 24); var d = x.getImageData(0, 0, 24, 24).data, r = 0, g = 0, b = 0, n = 0;
+          for (var i = 0; i < d.length; i += 4) { var mx = Math.max(d[i], d[i + 1], d[i + 2]), mn = Math.min(d[i], d[i + 1], d[i + 2]); if (mx - mn < 24) continue; r += d[i]; g += d[i + 1]; b += d[i + 2]; n++; }
+          if (n < 20) return;   /* capa sem cor (cinza): fica como está */
+          r = Math.round(r / n); g = Math.round(g / n); b = Math.round(b / n);
+          /* o roxo da plataforma não entra: puxa para o neutro */
+          if (b > r + 30 && b > g + 30 && r > g) { r = g = b = Math.round((r + g + b) / 3); }
+          var s = document.documentElement.style; s.setProperty('--pl-capa-rgb', r + ',' + g + ',' + b); s.setProperty('--pl-capa-a', '.10');
+        } catch (e) { /* imagem de outro endereço: sem tinta */ }
+      };
+      im.src = src;
+    } catch (e) { /* segue */ }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', tingeDaCapa); else tingeDaCapa();
 })();
 
 /* WOLFSTATION · ARCADE: um fliperama à noite. Marquise de néon, tela CRT (scanlines suaves, sem piscar), PRESS START e as cenas como tabela de recordes. */
@@ -261,6 +367,41 @@ WL_PELES.devocional = { linhas: ['WOLFAITH'], nome: 'Devocional',
       + '<p class="dx-jt">Tonight’s journey</p><div class="dx-jornada">' + j + '</div>' + d.faixa;
   } };
 
+/* 09/11/2026 · WOLF ROAD · N7 "O CARTÃO DE EMBARQUE": a capa é um cartão de embarque à noite —
+   a foto da parada no canhoto, a cidade em letra de painel de aeroporto, os campos do bilhete e o
+   itinerário (as cenas) como paradas. Referência: Apple Wallet, Airbnb, Polarsteps. */
+WL_PELES.embarque = { linhas: ['WOLF ROAD'], nome: 'Embarque',
+  fontes: 'family=Big+Shoulders+Display:wght@600;800&family=IBM+Plex+Mono:wght@500;600',
+  tokens: '--pl-tit:"Big Shoulders Display","Archivo Narrow",sans-serif;--pl-tit-peso:800;--pl-tit-esp:.01em;--pl-tit-caixa:uppercase;--pl-escuro:9,10,14;--pl-vidro:rgba(14,15,20,.72);--pl-borda:rgba(255,255,255,.1);--pl-raio:18px;--pl-raio-p:6px;--pl-sobre-ac:#140d05;--pl-selo-letra:"IBM Plex Mono",ui-monospace,monospace',
+  css: 'body .eb-cartao{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);min-height:clamp(420px,62vh,640px);border-radius:26px;overflow:hidden;background:#0e0f14;border:1px solid rgba(255,255,255,.1);box-shadow:0 40px 90px rgba(0,0,0,.6)}'
+    + 'body .eb-foto{position:relative;background:var(--arte) center/cover;min-height:260px}body .eb-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,rgba(14,15,20,.95)),linear-gradient(0deg,rgba(14,15,20,.75),transparent 45%)}'
+    + 'body .eb-picote{position:absolute;top:0;bottom:0;left:calc(52.5% - 1px);width:2px;background:repeating-linear-gradient(180deg,rgba(255,255,255,.22) 0 8px,transparent 8px 16px);z-index:2}'
+    + 'body .eb-picote::before,body .eb-picote::after{content:"";position:absolute;left:-13px;width:28px;height:28px;border-radius:50%;background:var(--bg,#08090c)}body .eb-picote::before{top:-14px}body .eb-picote::after{bottom:-14px}'
+    + 'body .eb-tx{position:relative;z-index:1;display:grid;align-content:space-between;gap:20px;padding:clamp(22px,3vw,40px)}'
+    + 'body .eb-cia{display:flex;justify-content:space-between;align-items:center;gap:12px;font:600 12px/1 "IBM Plex Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:#9aa0ad}body .eb-cia b{color:var(--ac)}'
+    + 'body .eb-tx h1{margin:0;font:800 clamp(54px,6.4vw,118px)/.86 var(--pl-tit);text-transform:uppercase;color:#fff;letter-spacing:.005em;text-wrap:balance}'
+    + 'body .eb-sub{margin:0;font:500 clamp(15px,1.1vw,18px)/1.55 var(--ui);color:#c8ccd6;max-width:44ch}'
+    + 'body .eb-campos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}body .eb-campos div{display:grid;gap:4px}'
+    + 'body .eb-campos small{font:600 10.5px "IBM Plex Mono",monospace;letter-spacing:.16em;color:#8a90a0}body .eb-campos b{font:800 22px/1 var(--pl-tit);text-transform:uppercase;color:#fff}'
+    + 'body .eb-ir{justify-self:start;display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 26px;border-radius:14px;border:0;background:var(--ac);color:var(--pl-sobre-ac);font:800 16px var(--ui);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 14px 30px -10px var(--ac)}'
+    + 'body .eb-ir:focus-visible,body .eb-parada:focus-visible{outline:3px solid #fff;outline-offset:3px}'
+    + 'body .eb-rota{margin-top:20px;display:grid;gap:0}body .eb-rota-t{margin:0 0 8px;font:600 12px "IBM Plex Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:#8a90a0}'
+    + 'body .eb-parada{position:relative;display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:14px;padding:12px 4px;border:0;border-top:1px solid rgba(255,255,255,.08);background:none;text-align:left;color:var(--t1);cursor:pointer}'
+    + 'body .eb-parada i{width:12px;height:12px;justify-self:center;border-radius:50%;border:2px solid var(--ac);background:#0e0f14}body .eb-parada span{font:700 15px var(--ui)}body .eb-parada small{font:600 12px "IBM Plex Mono",monospace;color:#8a90a0}'
+    + 'body .eb-parada:hover span{color:var(--ac)}body .eb-parada.extra i{border-style:dashed;opacity:.7}'
+    + '@media (max-width:860px){body .eb-cartao{grid-template-columns:1fr}body .eb-picote{display:none}body .eb-foto::after{background:linear-gradient(0deg,rgba(14,15,20,.95),transparent 60%)}}',
+  capa: function (d, u) {
+    var cenas = u.cenas(), nuc = cenas.filter(function (c) { return !c.extra; });
+    var nivel = (d.chips.filter(function (c) { return /^(A1|A2|B1|B2|C1|C2)$/i.test(c); })[0]) || '';
+    var paradas = cenas.map(function (c) { return '<button type="button" class="eb-parada' + (c.extra ? ' extra' : '') + '" data-a="ir" data-n="' + c.i + '"><i></i><span>' + u.h(c.t) + '</span><small>' + (c.extra ? 'fast finishers' : c.min + ' min') + '</small></button>'; }).join('');
+    return '<section class="eb-cartao" style="--arte:url(\'' + d.img + '\')"><div class="eb-foto" role="img" aria-label="' + u.h(d.alt || d.titulo) + '"></div><span class="eb-picote" aria-hidden="true"></span>'
+      + '<div class="eb-tx"><div class="eb-cia"><span>Wolf Road · Boarding pass</span><b>' + u.h(d.chips.slice(-1)[0] || '') + '</b></div>'
+      + '<div style="display:grid;gap:14px"><h1>' + u.h(d.titulo) + '</h1><p class="eb-sub">' + d.sub + '</p></div>'
+      + '<div class="eb-campos"><div><small>STOPS</small><b>' + nuc.length + '</b></div><div><small>TIME</small><b>' + u.totalMin() + ' MIN</b></div><div><small>LEVEL</small><b>' + u.h(nivel || '—') + '</b></div></div>'
+      + '<button type="button" class="eb-ir" data-a="ir" data-n="' + d.ir + '">' + u.h(d.botao) + '</button></div></section>'
+      + '<nav class="eb-rota" aria-label="Stops"><p class="eb-rota-t">Itinerary</p>' + paradas + '</nav>' + d.faixa;
+  } };
+
 /* BUSINESS · INBOX: a aula como um e-mail aberto num cliente de e-mail escuro — as cenas são as conversas da caixa de entrada, começar é "Reply". */
 WL_PELES.inbox = { linhas: ['BUSINESS', 'WOLF BUSINESS', 'WOLF HIRED'], nome: 'Inbox',
   fontes: 'family=Bricolage+Grotesque:opsz,wght@12..96,500..800',
@@ -368,6 +509,40 @@ WL_PELES.livro = { linhas: ['MAIN SERIES'], nome: 'Livro',
     return '<div class="lv-capa"><section class="lv-livro" style="--arte:url(\'' + d.img + '\')"><span class="lv-sc">' + ed + '</span><div><span class="lv-orn" aria-hidden="true"></span><h1>' + u.h(d.titulo) + '</h1><span class="lv-orn" aria-hidden="true"></span></div><span class="lv-placa" role="img" aria-label="' + u.h(d.alt) + '"></span><span class="lv-sc">Wolf Labs</span></section>'
       + '<section class="lv-front" style="--arte:url(\'' + d.img + '\')">' + (d.banda ? '<em>' + d.banda + '</em>' : '') + '<p class="lv-sub">' + d.sub + '</p><button type="button" class="lv-ler" data-a="ir" data-n="' + d.ir + '">' + u.h(d.botao) + '</button></section></div>'
       + '<nav class="lv-sum" aria-label="Scenes"><p class="lv-sum-t">Contents</p><div class="lv-cols">' + caps + '</div></nav>' + d.faixa;
+  } };
+
+/* 09/11/2026 · CURSOS · N8 "A FERRAMENTA DO OFÍCIO": a capa é a ferramenta que o aluno usa no trabalho —
+   terminal no WOLF.DEV, proposta no Selling Services, fatura no Global Payments, prontuário no Health,
+   prova no Det Prep, notas da casa no Au Pair, prancheta no Design. Um molde, oito objetos (N11 do
+   catálogo cabe aqui sem custo). Referência: Vercel, Raycast, GitHub, Linear. */
+WL_PELES.oficio = { linhas: ['WOLF.DEV', 'SELLING SERVICES', 'AU PAIR', 'DET PREP', 'HEALTH ENGLISH', 'DESIGN ENGLISH', 'GLOBAL PAYMENTS ENGLISH'], nome: 'Ofício',
+  fontes: 'family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;700',
+  tokens: '--pl-tit:"Space Grotesk","Archivo",sans-serif;--pl-tit-peso:700;--pl-tit-esp:-.025em;--pl-escuro:9,11,13;--pl-vidro:rgba(13,15,18,.74);--pl-borda:rgba(255,255,255,.09);--pl-raio:14px;--pl-raio-p:5px;--pl-sobre-ac:#071210;--pl-selo-letra:"JetBrains Mono",ui-monospace,monospace',
+  css: 'body .of-janela{position:relative;border-radius:18px;overflow:hidden;background:#0d0f12;border:1px solid rgba(255,255,255,.1);box-shadow:0 40px 90px rgba(0,0,0,.6)}'
+    + 'body .of-barra{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.08);background:#111419;font:600 12.5px "JetBrains Mono",monospace;color:#8b93a1}'
+    + 'body .of-barra i{width:9px;height:9px;border-radius:50%;background:#2a2f38}body .of-barra i:first-child{background:var(--ac)}body .of-barra span{margin-left:6px;color:#c9d0db}body .of-barra em{margin-left:auto;font-style:normal;color:var(--ac)}'
+    + 'body .of-corpo{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);min-height:clamp(380px,56vh,600px)}'
+    + 'body .of-tx{display:grid;align-content:center;gap:18px;padding:clamp(24px,3.2vw,48px)}'
+    + 'body .of-linha{font:600 13px "JetBrains Mono",monospace;color:var(--ac)}body .of-linha::before{content:attr(data-p);color:#5d6573;margin-right:8px}'
+    + 'body .of-tx h1{margin:0;font:700 clamp(44px,5vw,92px)/.95 var(--pl-tit);letter-spacing:-.03em;color:#fff;text-wrap:balance}'
+    + 'body .of-sub{margin:0;font:500 clamp(15px,1.1vw,18px)/1.6 var(--ui);color:#bfc6d1;max-width:46ch}'
+    + 'body .of-ir{justify-self:start;display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:12px;border:0;background:var(--ac);color:var(--pl-sobre-ac);font:700 15.5px var(--ui);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 14px 30px -12px var(--ac)}'
+    + 'body .of-arte{position:relative;background:var(--arte) center/cover;border-left:1px solid rgba(255,255,255,.08)}body .of-arte::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0d0f12 0%,transparent 35%)}'
+    + 'body .of-passos{margin-top:18px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(13,15,18,.7);overflow:hidden}'
+    + 'body .of-passo{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:12px;width:100%;padding:11px 16px;border:0;border-top:1px solid rgba(255,255,255,.06);background:none;text-align:left;color:var(--t1);cursor:pointer}body .of-passo:first-child{border-top:0}'
+    + 'body .of-passo b{font:700 12.5px "JetBrains Mono",monospace;color:var(--ac)}body .of-passo span{font:600 15px var(--ui)}body .of-passo small{font:500 12px "JetBrains Mono",monospace;color:#7d8594}'
+    + 'body .of-passo:hover{background:rgba(255,255,255,.03)}body .of-passo:hover span{color:var(--ac)}body .of-passo.extra b{color:#7d8594}'
+    + 'body .of-ir:focus-visible,body .of-passo:focus-visible{outline:3px solid #fff;outline-offset:-3px}'
+    + '@media (max-width:860px){body .of-corpo{grid-template-columns:1fr}body .of-arte{min-height:200px;order:-1;border-left:0}body .of-arte::after{background:linear-gradient(0deg,#0d0f12,transparent 60%)}}',
+  capa: function (d, u) {
+    var f = document.documentElement.getAttribute('data-oficio') || 'terminal';
+    var OBJ = { terminal: ['interview.sh', '$', 'running'], proposta: ['Proposal.doc', '§', 'draft'], fatura: ['Invoice', '#', 'due'], prontuario: ['Patient chart', '›', 'open'],
+      prova: ['Exam booklet', 'Q', 'timed'], agenda: ['House notes', '·', 'today'], prancheta: ['Artboard', '◻', 'v1'], curriculo: ['Interview notes', 'Q', 'live'] }[f] || ['Workspace', '›', ''];
+    var passos = u.cenas().map(function (c, k) { return '<button type="button" class="of-passo' + (c.extra ? ' extra' : '') + '" data-a="ir" data-n="' + c.i + '"><b>' + (OBJ[1] === '$' ? '$ ' + (k + 1) : OBJ[1] + (k + 1)) + '</b><span>' + u.h(c.t) + '</span><small>' + (c.extra ? 'fast finishers' : c.min + ' min') + '</small></button>'; }).join('');
+    return '<section class="of-janela"><div class="of-barra"><i></i><i></i><i></i><span>' + OBJ[0] + ' — ' + u.h(d.linha.toLowerCase()) + '</span><em>' + u.h(d.chips.join(' · ')) + '</em></div>'
+      + '<div class="of-corpo"><div class="of-tx"><p class="of-linha" data-p="' + OBJ[1] + '">' + OBJ[2] + ' · ' + u.totalMin() + ' min</p><h1>' + u.h(d.titulo) + '</h1><p class="of-sub">' + d.sub + '</p>'
+      + '<button type="button" class="of-ir" data-a="ir" data-n="' + d.ir + '">' + u.h(d.botao) + '</button></div><div class="of-arte" style="--arte:url(\'' + d.img + '\')" role="img" aria-label="' + u.h(d.alt || d.titulo) + '"></div></div></section>'
+      + '<nav class="of-passos" aria-label="Steps">' + passos + '</nav>' + d.faixa;
   } };
 
 /* WOLFAITH · PERGAMINHO: manuscrito iluminado à luz de vela. Velino escuro, capitular em fraktur dourada, a arte como iluminura com filete de ouro; as cenas como capítulos e versículos. */
