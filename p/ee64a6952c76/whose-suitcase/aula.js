@@ -14,12 +14,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'terminal', rot: 'I · You and Your Bags', t: 'Before the airport: you, your trips, your things.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'esteira', est: 'o', min: 7, img: 'esteira', rot: 'II · The Carousel', t: 'Five suitcases, five claim forms. Find the owners.', p: 'Tap a suitcase. Read the chapter out loud, answer the question, then say whose it is.' },
-  { k: 'regra', est: 'f', min: 6, img: 'balcao', rot: 'III · The Rule', t: 'Look at the owner. Only the owner.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'balcao', est: 'o', min: 7, img: 'portao', rot: 'IV · The Claim Desk', t: 'Eight tags, eight people at the desk.', p: 'Your teacher is the person at the desk. Answer at once.' },
-  { k: 'roda', est: 'o', min: 7, img: 'mala', rot: 'V · Mine or Ours?', t: 'Your real things. Whose are they?', p: 'Pick a card. Answer with mine, ours, his, hers, theirs, or a name with ’s.' },
-  { k: 'grant', est: 'o', min: 7, extra: 1, img: 'balcao', rot: 'VI · The Night Manager Calls', t: 'Ms. Grant wants the story of tonight.', p: 'Your teacher is Ms. Grant. Tell her, suitcase by suitcase, from memory. Then ask her back.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'terminal', rot: 'VII · Quick Check', t: 'Six quick lines from the desk.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'mala', rot: 'VIII · Your Suitcase', t: 'Pack your suitcase.', p: 'Four things in it, and whose they are. The red line watches ’s and the short words. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'esteira', rot: 'III · Right, Not This', t: 'Six lines from Gate 7. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'regra', est: 'f', min: 6, img: 'balcao', rot: 'IV · The Rule', t: 'Look at the owner. Only the owner.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'balcao', est: 'o', min: 7, img: 'portao', rot: 'V · The Claim Desk', t: 'Eight tags, eight people at the desk.', p: 'Your teacher is the person at the desk. Answer at once.' },
+  { k: 'roda', est: 'o', min: 7, img: 'mala', rot: 'VI · Mine or Ours?', t: 'Your real things. Whose are they?', p: 'Pick a card. Answer with mine, ours, his, hers, theirs, or a name with ’s.' },
+  { k: 'grant', est: 'o', min: 7, extra: 1, img: 'balcao', rot: 'VII · The Night Manager Calls', t: 'Ms. Grant wants the story of tonight.', p: 'Your teacher is Ms. Grant. Tell her, suitcase by suitcase, from memory. Then ask her back.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'terminal', rot: 'VIII · Quick Check', t: 'Six quick lines from the desk.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'mala', rot: 'IX · Your Suitcase', t: 'Pack your suitcase.', p: 'Four things in it, and whose they are. The red line watches ’s and the short words. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -187,3 +188,18 @@ TOQUES.rd = function (b, n) { S.roda.sel = n; S.roda.foi[n] = 1; };
 TOQUES['gr-viu'] = function () { S.grant.viu[S.grant.n] = 1; };
 TOQUES['gr-prox'] = function () { S.grant.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'Whose suitcase is this?', x: 'Who’s suitcase is this?', d: 'To ask about the owner: whose.' },
+    { c: 'The blue suitcase is mine.', x: 'The blue suitcase is me.', d: 'mine, yours, his, hers, ours, theirs: the owner word.' },
+    { c: 'That bag is hers.', x: 'That bag is her.', d: 'No noun after it: hers, with the S.' },
+    { c: 'These are the twins’ bags.', x: 'These are the twin’s bags.', d: 'Two twins: the apostrophe goes after the S.' },
+    { c: 'The bag is Mia and Sam’s.', x: 'The bag is Mia’s and Sam’s.', d: 'One bag, two owners: the ’s goes only on the last name.' },
+    { c: 'The red one is ours.', x: 'The red one is our.', d: 'No noun after it: ours.' }
+  ],
+  nota: 'Ask with <b>whose</b>. Answer with <b>mine, yours, his, hers, ours, theirs</b> when no noun comes after. For names: <b>’s</b> for one owner (Mia’s), <b>s’</b> for many (the twins’).',
+  uso: { p: 'Your turn. Look at your things. Say two sentences: one thing is yours, one is somebody else’s.', molde: ['This … is mine.', 'That … is his / hers.'], ex: 'This phone is mine. That backpack is my brother’s: it is his.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

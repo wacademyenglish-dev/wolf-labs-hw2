@@ -21,14 +21,15 @@ var L = [
   { k: 'result', est: 'l', min: 7, img: 'cidade', rot: 'II · Four B2s', t: 'This is Lena. She moved for work. Her English was tested.', p: 'Play the result. Then say her score in a full sentence.' },
   { k: 'memo1', est: 'l', min: 7, img: 'caneca', rot: 'III · Memo One', t: 'Lena records a voice memo every night. This is the first one.', p: 'Look at the wave. Play it. Then answer.' },
   { k: 'fone', est: 'f', min: 6, img: 'fone', rot: 'IV · Seven Rings', t: 'Day twelve. Lena is home. She doesn’t know the number.', p: 'Tap RING seven times. Say nothing. Then one question.' },
-  { k: 'fenda', est: 'o', min: 7, img: 'palco', rot: 'V · The Middle Word', t: 'The verb is easy now. The small word in the middle is not.', p: 'Say the WHOLE sentence with the middle word. Then tap it. Each one makes you less nervous.' },
-  { k: 'recado', est: 'l', min: 7, extra: 1, img: 'fone', rot: 'VI · The Voicemail', t: 'She didn’t answer. They left a message.', p: 'Play the fast one once. Say how much you understood. Then the slow one.' },
-  { k: 'regra', est: 'f', min: 6, extra: 1, img: 'palco', rot: 'VII · The Rule', t: 'After a preposition: -ING. The small word doesn’t translate.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'ounao', est: 'f', min: 6, extra: 1, img: 'caneca', rot: 'VIII · Fear or Action', t: 'Both are English. They don’t say the same thing.', p: 'The thing she fears, or something she doesn’t do because of the fear? Say it, then tap.' },
-  { k: 'memo12', est: 'l', min: 7, extra: 1, img: 'caneca', rot: 'IX · Memo Twelve', t: 'The same night as the call. She is not reading this one.', p: 'Compare the waves. Play it. Then answer.' },
-  { k: 'dias', est: 'f', min: 6, extra: 1, img: 'cidade', rot: 'X · Six Days', t: 'Six memos, no sound. You build what she said.', p: 'Say the sentence first. Then tap the adjective, the small word and the -ing verb.' },
-  { k: 'mic', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'XI · Open Mic', t: 'Your minute. Something you love doing.', p: 'One prompt at a time. Say it into the mic. The last one turns it ON AIR.' },
-  { k: 'fim', est: 'w', min: 6, img: 'caneca', rot: 'XII · Three Blanks Again', t: 'Day thirty. And your three sentences, again.', p: 'Write your three blanks again: good at, scared of, tired of. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'palco', rot: 'V · Of or To?', t: 'Two scared sentences. Two different jobs.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'fenda', est: 'o', min: 7, img: 'palco', rot: 'VI · The Middle Word', t: 'The verb is easy now. The small word in the middle is not.', p: 'Say the WHOLE sentence with the middle word. Then tap it. Each one makes you less nervous.' },
+  { k: 'recado', est: 'l', min: 7, extra: 1, img: 'fone', rot: 'VII · The Voicemail', t: 'She didn’t answer. They left a message.', p: 'Play the fast one once. Say how much you understood. Then the slow one.' },
+  { k: 'regra', est: 'f', min: 6, extra: 1, img: 'palco', rot: 'VIII · The Rule', t: 'After a preposition: -ING. The small word doesn’t translate.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'ounao', est: 'f', min: 6, extra: 1, img: 'caneca', rot: 'IX · Fear or Action', t: 'Both are English. They don’t say the same thing.', p: 'The thing she fears, or something she doesn’t do because of the fear? Say it, then tap.' },
+  { k: 'memo12', est: 'l', min: 7, extra: 1, img: 'caneca', rot: 'X · Memo Twelve', t: 'The same night as the call. She is not reading this one.', p: 'Compare the waves. Play it. Then answer.' },
+  { k: 'dias', est: 'f', min: 6, extra: 1, img: 'cidade', rot: 'XI · Six Days', t: 'Six memos, no sound. You build what she said.', p: 'Say the sentence first. Then tap the adjective, the small word and the -ing verb.' },
+  { k: 'mic', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'XII · Open Mic', t: 'Your minute. Something you love doing.', p: 'One prompt at a time. Say it into the mic. The last one turns it ON AIR.' },
+  { k: 'fim', est: 'w', min: 6, img: 'caneca', rot: 'XIII · Three Blanks Again', t: 'Day thirty. And your three sentences, again.', p: 'Write your three blanks again: good at, scared of, tired of. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -239,3 +240,20 @@ TOQUES.q12 = function (b, n, v) { S.q12[n] = +v; };
 TOQUES.di = function (b, n, v) { S.dias.pick[n] = v; };
 TOQUES['di-prox'] = function () { S.dias = { n: S.dias.n + 1, pick: [null, null, null] }; };
 TOQUES.mc = function () { S.mic.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de fenda.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Scared of or scared to? Two moments in Lena’s life.',
+  a: { t: 'The fear itself', falas: [['A friend', 'What are you scared of, Lena?'], ['Lena', 'I’m scared <mark>of speaking</mark> in meetings.']], d: 'The speaking is the fear. The thing she fears comes after <b>of</b>, with -ing.' },
+  b: { t: 'The fear stops me', falas: [['A friend', 'Why didn’t you pick up the phone on day twelve?'], ['Lena', 'I was scared <mark>to answer</mark> it.']], d: 'Because of the fear, she did not do it. After <b>to</b>, the verb she didn’t do.' },
+  pergunta: 'Same word, scared. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Name the fear itself: the open mic.', o: ['I’m scared of going on stage.', 'I’m scared to go on stage.'], c: 0, d: 'You name the fear: of + -ing.' },
+    { p: 'Say what Lena doesn’t do, because of the fear: she doesn’t answer.', o: ['She’s scared of answering.', 'She’s scared to answer.'], c: 1, d: 'The fear stops the action: to + verb.' },
+    { p: 'Name the fear itself: making mistakes.', o: ['I’m scared of making mistakes.', 'I’m scared to make mistakes.'], c: 0, d: 'The mistakes are the fear: of + -ing.' },
+    { p: 'Say what you don’t do, because of the fear: you don’t ask the teacher.', o: ['I’m scared of asking questions.', 'I’m scared to ask questions.'], c: 1, d: 'You don’t do it: to + verb.' }
+  ],
+  nota: 'Two forms, two jobs. <b>scared of + -ing</b>: the fear itself (scared of speaking). <b>scared to + verb</b>: the fear stops the action (scared to answer). Other small words also take -ing: good <b>at</b> cooking, tired <b>of</b> waiting.',
+  uso: { p: 'Your turn. One thing you are scared of, and one thing you are scared to do.', molde: ['I’m scared of …ing.', 'I’m scared to …'], ex: 'I’m scared of flying. I’m scared to speak in front of a big group.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

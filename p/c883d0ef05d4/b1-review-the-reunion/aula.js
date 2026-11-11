@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · Where Are They Now?', t: 'Three old friends. Twenty years. Ask.', p: 'Ask each friend five questions. Your teacher is the friend. Then present them to the class.' },
   { k: 'cartao', est: 'w', min: 7, img: 'conversa', rot: 'III · Dear Younger Me', t: 'Write a note to you, twenty years ago.', p: 'Four short lines: what you used to do, what you’ve been doing, what you should have done, what you’re used to now.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Reunion Pairs', t: 'Five pairs from the class reunion.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -64,3 +65,9 @@ var ESCOLHA = [
   { a: 'live in the same town all your life', b: 'move to a new country every five years', chips: ['I’d choose …', 'It’s hard to get used to …'], ex: 'Move. I get used to new places quickly.' },
   { a: 'a job you’ve been doing for years', b: 'a new job you’ve never done', chips: ['I’ve been … for …', 'I should have …'], ex: 'A new job. I’ve been doing the same thing for ten years.' },
   { a: 'wake up at 5 AM every day', b: 'go to bed at 3 AM every day', chips: ['I’m used to …', 'I could never get used to …'], ex: '5 AM. I’m used to waking up early.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'I’ve lived here since 2010.', x: 'I live here since 2010.', d: 'Since a point in the past: have + <b>lived</b>.' }, { c: 'I’m used to waking up early.', x: 'I’m used to wake up early.', d: 'be used to + <b>-ing</b>.' }, { c: 'I should have learned more.', x: 'I should learned more.', d: 'should + <b>have</b> + participle.' }, { c: 'We’ve been talking for two hours.', x: 'We’re talking since two hours.', d: 'How long: <b>have been</b> + -ing + for.' }, { c: 'I used to play the drums.', x: 'I use to play the drums.', d: 'A past habit: <b>used</b> to.' }], nota: 'How long until now: <b>have been -ing</b> with <b>for / since</b>. Then and now: <b>used to</b> + verb, but <b>be used to</b> + -ing. A regret: <b>should have</b> + participle.', uso: { p: 'Your turn. Tell an old classmate about your life: how long you have lived or worked there, and what you used to do.', molde: ['I’ve been … for …', 'I used to …, but now I …'], ex: 'I’ve been working at a bank for six years. I used to be a teacher, but now I work with numbers.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

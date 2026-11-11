@@ -12,10 +12,11 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 8, kick: 'DUOLINGO ENGLISH TEST
   nota: 'Big picture → places → details → a guess. Four steps, and 90 seconds pass fast.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'I · The Route', t: 'Which sentence works better?', p: 'Compare A and B. Then look at the four steps of the plan.' },
-  { k: 'transforma', est: 'o', min: 7, img: 'capa', rot: 'II · Make It Richer', t: 'A flat sentence. Make it richer.', p: 'Read the sentence and the clue. Say it with more detail.' },
-  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'III · Three Photos', t: 'Twenty seconds to prepare. Then speak.', p: 'Follow the plan: big picture, places, details, a guess.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'I · The Photo in Blocks', t: 'Three sentences about one photo.', p: 'Read the blocks out loud. Notice the job of each one. Then build a sentence and say your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · The Route', t: 'Which sentence works better?', p: 'Compare A and B. Then look at the four steps of the plan.' },
+  { k: 'transforma', est: 'o', min: 7, img: 'capa', rot: 'III · Make It Richer', t: 'A flat sentence. Make it richer.', p: 'Read the sentence and the clue. Say it with more detail.' },
+  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'IV · Three Photos', t: 'Twenty seconds to prepare. Then speak.', p: 'Follow the plan: big picture, places, details, a guess.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var DESCOBRE = {
@@ -57,3 +58,18 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 08: descobre · transforma · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'A market photo, in blocks. Each block has a job.',
+  frases: [
+    { b: [['This photo shows', 'OVERVIEW', 'aux'], ['a market', 'WHAT'], ['in the evening', 'WHEN']], d: 'The big picture comes first.' },
+    { b: [['In the foreground,', 'PLACE'], ['there are', 'THERE ARE', 'aux'], ['crates of oranges', 'THINGS']], d: 'A place, then there are, then the things.' },
+    { b: [['It might be', 'GUESS', 'aux'], ['a market in Spain', 'WHAT'], ['because the fruit looks fresh', 'REASON']], d: 'A guess always has a reason.' }
+  ],
+  nota: 'A photo answer has a route: <b>This photo shows</b> (big picture), then a <b>place</b> + <b>there is / there are</b> (details), then <b>It might be … because …</b> (a guess with a reason).',
+  monta: { p: 'Build the next sentence about the photo. Then say it.', pecas: [['next to the apples.', 'PLACE'], ['There are', 'THERE ARE', 'aux'], ['some tomatoes', 'THINGS']], ordem: [1, 2, 0] },
+  uso: { p: 'Your turn. Look at a place near you. Say the big picture, one detail and one guess.', molde: ['This photo shows …', 'On the left, there is …', 'It might be … because …'], ex: 'This photo shows my kitchen in the morning. On the left, there is a coffee machine. It might be seven o’clock, because the light is soft.' },
+  prof: 'Read the blocks with the student: the words on top, the job under each one.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

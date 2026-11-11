@@ -22,12 +22,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'janela', rot: 'I · You and Your Trips', t: 'Before the trip: you, your bags and your worst journey ever.', p: 'Tap a card. Answer out loud. Then your teacher answers too.' },
   { k: 'passes', est: 'o', min: 7, img: 'portao', rot: 'II · Five Boarding Passes', t: 'Tess’s worst trips and best trips, one boarding pass each.', p: 'Tap a pass. Read Tess’s long note out loud. Then say it as one short headline.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mala', rot: 'III · The Rule', t: 'The whole description becomes one adjective, and it goes first.', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
-  { k: 'blog', est: 'o', min: 7, img: 'mesa', rot: 'IV · The Blog Goes Live', t: 'The Carry-On Diaries is live. The readers want answers, fast.', p: 'Your teacher reads each comment. Answer at once as Tess, with a compound adjective. Every right answer publishes a post.' },
-  { k: 'roda', est: 'o', min: 7, img: 'vista', rot: 'V · Your Trips in Headlines', t: 'Your real trips, as short headlines.', p: 'Tap any five. Answer with one compound adjective, then add one detail.' },
-  { k: 'podcast', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'VI · On the Podcast', t: 'Tess is a guest on a travel podcast. The host has questions.', p: 'Your teacher is the host. Answer as Tess, from memory. Then Tess asks back.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'janela', rot: 'VII · Quick Check', t: 'Five quick lines from the blog.', p: 'Say the whole sentence. Then tap the words.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Worst, Your Best', t: 'Was your worst trip secretly your best?', p: 'Tell it as three blog headlines. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mala', rot: 'III · Headlines in Blocks', t: 'One long description, one short adjective.', p: 'Read the blocks out loud. Notice the hyphen. Then build a headline and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mala', rot: 'IV · The Rule', t: 'The whole description becomes one adjective, and it goes first.', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
+  { k: 'blog', est: 'o', min: 7, img: 'mesa', rot: 'V · The Blog Goes Live', t: 'The Carry-On Diaries is live. The readers want answers, fast.', p: 'Your teacher reads each comment. Answer at once as Tess, with a compound adjective. Every right answer publishes a post.' },
+  { k: 'roda', est: 'o', min: 7, img: 'vista', rot: 'VI · Your Trips in Headlines', t: 'Your real trips, as short headlines.', p: 'Tap any five. Answer with one compound adjective, then add one detail.' },
+  { k: 'podcast', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'VII · On the Podcast', t: 'Tess is a guest on a travel podcast. The host has questions.', p: 'Your teacher is the host. Answer as Tess, from memory. Then Tess asks back.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'janela', rot: 'VIII · Quick Check', t: 'Five quick lines from the blog.', p: 'Say the whole sentence. Then tap the words.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Worst, Your Best', t: 'Was your worst trip secretly your best?', p: 'Tell it as three blog headlines. It goes to your My notes.' }
 ];
 
 var VOCE = [
@@ -177,3 +178,18 @@ TOQUES['pc-r'] = function () { S.pc.resp = 1; };
 TOQUES['pc-prox'] = function () { S.pc = { n: S.pc.n + 1, resp: 0 }; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Tess’s headlines, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Tess took', 'ACTION', 'acao'], ['a ten-hour', 'ONE ADJECTIVE', 'aux'], ['flight', 'THING', 'o']], d: 'ten + hour = one adjective. No -s on hour.' },
+    { b: [['She stayed at', 'ACTION', 'acao'], ['a well-known', 'ONE ADJECTIVE', 'aux'], ['hotel', 'THING', 'o']], d: 'well + known: the -ed form joins the adverb.' },
+    { b: [['She met', 'ACTION', 'acao'], ['an Italian-speaking', 'ONE ADJECTIVE', 'aux'], ['guide', 'THING', 'o']], d: 'noun + -ing: speaking Italian becomes Italian-speaking.' },
+    { b: [['The cafe sold', 'ACTION', 'acao'], ['hand-made', 'ONE ADJECTIVE', 'aux'], ['bread', 'THING', 'o']], d: 'noun + -ed: made by hand becomes hand-made.' }
+  ],
+  nota: 'The long description becomes <b>one adjective</b> with a hyphen, and it goes <b>before</b> the thing. The first part never takes -s: a ten-<b>hour</b> flight, not “a ten-hours flight”.',
+  monta: { p: 'Build Tess’s next headline. Then say it.', pecas: [['flight', 'THING', 'o'], ['a five-hour', 'ONE ADJECTIVE', 'aux'], ['Tess hated', 'ACTION', 'acao']], ordem: [2, 1, 0] },
+  uso: { p: 'Now a real trip. Describe one trip or one place you know, with a compound adjective.', molde: ['I took a … -hour …', 'We stayed at a well-… …'], ex: 'I took a six-hour bus ride. We stayed at a well-known hotel.' },
+  prof: 'Read the blocks with the student, top to bottom. Point at the hyphen and at the missing -s.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

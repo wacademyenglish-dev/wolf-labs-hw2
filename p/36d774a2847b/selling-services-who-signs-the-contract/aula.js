@@ -17,13 +17,14 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Company', t: 'Who signs the contracts at your company?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 7, img: 'mesa', rot: 'II · “Our Team”', t: 'A client’s website: the “Our team” page.', p: 'Read it out loud. Then answer the questions.' },
-  { k: 'separa', est: 'f', min: 6, img: 'capa', rot: 'III · Decides or Influences?', t: 'Eight people and facts from the client.', p: 'Does this person decide, or only influence? Say why, then tap.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'IV · “Who Signs?”, Not “Who Does Sign?”', t: 'Two questions. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'multipla', est: 'l', min: 6, img: 'conversa', rot: 'V · Who Is It?', t: 'Six people talk about their job.', p: 'Listen. Who is it? Then say it: “She’s the …”.' },
-  { k: 'cliente', est: 'o', min: 10, img: 'conversa', rot: 'VI · The Mystery Client', t: 'A client loves your proposal. But who decides?', p: 'Ask who, what, where and when. Find the decision maker.' },
-  { k: 'conta', est: 'w', min: 6, img: 'mesa', rot: 'VII · The Account Board', t: 'Fill in the board of one client.', p: 'A real client (no secret data) or an invented one. Then present it.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VIII · The Client’s Team', t: 'The team of a real client, in sentences.', p: 'Who decides, who influences, who uses. Then present it out loud.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 20: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'separa', est: 'f', extra: 1, min: 6, img: 'capa', rot: 'III · Decides or Influences?', t: 'Eight people and facts from the client.', p: 'Does this person decide, or only influence? Say why, then tap.' },
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'IV · The Flip', t: 'The sentence becomes a question.', p: 'Flip each sentence. Notice what moves. Then flip four on your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'V · “Who Signs?”, Not “Who Does Sign?”', t: 'Two questions. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'multipla', est: 'l', min: 6, img: 'conversa', rot: 'VI · Who Is It?', t: 'Six people talk about their job.', p: 'Listen. Who is it? Then say it: “She’s the …”.' },
+  { k: 'cliente', est: 'o', min: 10, img: 'conversa', rot: 'VII · The Mystery Client', t: 'A client loves your proposal. But who decides?', p: 'Ask who, what, where and when. Find the decision maker.' },
+  { k: 'conta', est: 'w', extra: 1, min: 6, img: 'mesa', rot: 'VIII · The Account Board', t: 'Fill in the board of one client.', p: 'A real client (no secret data) or an invented one. Then present it.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'IX · The Client’s Team', t: 'The team of a real client, in sentences.', p: 'Who decides, who influences, who uses. Then present it out loud.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'X · I Can', t: 'Lesson 20: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -114,3 +115,24 @@ var CONTA = { rot: 'ACCOUNT BOARD',
     { r: 'NEXT STEP', ph: 'What happens next', ex: 'A meeting with Helen in March' }],
   chips: ['It’s a … company.', 'The decision maker is …', '… has the budget.', '… influences the decision.', 'Their problem is …', 'The next step is …'],
   modelo: 'Fenwick Foods is a food company. The decision maker is Helen Ward, the CFO. Sam, the controller, and Tom, from procurement, influence the decision. Their problem is slow, manual payroll. They use TOTVS and a lot of spreadsheets. The next step is a meeting with Helen in March.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'From a fact to a question. Watch the words move.',
+  frases: [
+    { de: ['The CFO', 'signs', 'the contract', '.'], para: ['+Who', 'signs', 'the contract', '?'], d: 'Who is the subject: no does.' },
+    { de: ['She', '*works', 'in Curitiba', '.'], para: ['+Where', '+does', 'she', '*work', '?'], d: 'The -s goes into does. work is clean.' },
+    { de: ['He', '*has', 'a big team', '.'], para: ['+Does', 'he', '*have', 'a big team', '?'], d: 'After does: have, not has.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: '<b>Who</b> is the subject: <b>Who signs</b> the contract? No does. For where and what: <b>Where does she work?</b> The -s moves into <b>does</b>, and the verb is clean.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'The CEO decides the budget.', r: 'Who <b>decides</b> the budget?' },
+    { de: 'She works at Orla Beverages.', r: 'Where <b>does</b> she <b>work</b>?' },
+    { de: 'He has the budget.', r: '<b>Does</b> he <b>have</b> the budget?' },
+    { de: 'The CFO signs the contracts.', r: 'Who <b>signs</b> the contracts?' }
+  ],
+  uso: { p: 'Your turn. Ask two questions about a person in a client’s company.', molde: ['Who …?', 'Where does she …?', 'Does he have …?'], ex: 'Who signs the contract? Where does she work? Does he have the budget?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

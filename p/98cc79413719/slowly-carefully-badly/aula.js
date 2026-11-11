@@ -22,12 +22,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'cozinha', rot: 'III · The Film', t: 'A short film with no words: an old fridge and the man who loves it.', p: 'Answer first. Then it plays in four short chapters. No words, only music: you tell the story, and HOW.' },
   { k: 'falas', est: 'l', extra: 1, img: 'cozinha', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'pista', est: 'o', min: 7, img: 'pista', rot: 'V · The Grand Prix', t: 'Eight racers, one track. You are the commentator.', p: 'Tap a racer. Say the line live, with the clue word. A right answer moves the racer to the finish.' },
-  { k: 'regra', est: 'f', min: 6, img: 'cabine', rot: 'VI · The Rule', t: 'How? Adjective + -ly. Four words break the rule.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'aovivo', est: 'o', min: 7, img: 'estadio', rot: 'VII · Live on Air', t: 'Live on air: eight replays from the race.', p: 'Your teacher reads the replay. Say it in one sentence, at once. Every good line fills the applause meter.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'trofeu', rot: 'VIII · How Do You Do It?', t: 'Your life: how do you do things?', p: 'Spin. Answer with an adverb: -ly, well, fast, hard or late.' },
-  { k: 'radio', est: 'o', min: 7, extra: 1, img: 'trofeu', rot: 'IX · The Radio Interview', t: 'After the race, the radio interviews you, the commentator.', p: 'Your teacher is the reporter. Answer with an adverb of manner.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'pista', rot: 'X · Quick Check', t: 'Six quick lines from the booth.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · After the Race', t: 'Is it better to do things fast, or to do them well?', p: 'Write how you do three real things: one fast, one well, one badly. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cabine', rot: 'VI · Find the Rule', t: 'Four pairs from the Grand Prix. One rule.', p: 'Read the four pairs out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'cabine', rot: 'VII · The Rule', t: 'How? Adjective + -ly. Four words break the rule.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'aovivo', est: 'o', min: 7, img: 'estadio', rot: 'VIII · Live on Air', t: 'Live on air: eight replays from the race.', p: 'Your teacher reads the replay. Say it in one sentence, at once. Every good line fills the applause meter.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'trofeu', rot: 'IX · How Do You Do It?', t: 'Your life: how do you do things?', p: 'Spin. Answer with an adverb: -ly, well, fast, hard or late.' },
+  { k: 'radio', est: 'o', min: 7, extra: 1, img: 'trofeu', rot: 'X · The Radio Interview', t: 'After the race, the radio interviews you, the commentator.', p: 'Your teacher is the reporter. Answer with an adverb of manner.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'pista', rot: 'XI · Quick Check', t: 'Six quick lines from the booth.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · After the Race', t: 'Is it better to do things fast, or to do them well?', p: 'Write how you do three real things: one fast, one well, one badly. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -244,3 +245,19 @@ TOQUES.rd = function () { S.roda.g++; S.roda.anim = 1; setTimeout(function () { 
 TOQUES['ra-viu'] = function () { S.radio.viu[S.radio.n] = 1; };
 TOQUES['ra-prox'] = function () { S.radio.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four pairs from the race. Find the rule yourself.',
+  exemplos: [
+    'The fridge is <b>slow</b>. It moves <u>slowly</u>.',
+    'The man is <b>careful</b>. He opens the door <u>carefully</u>.',
+    'The toaster is <b>fast</b>. It runs <u>fast</u>.',
+    'The blender is <b>good</b>. It races <u>well</u>.'
+  ],
+  pergunta: 'To say HOW someone does something, we …',
+  opcoes: ['add -ly to the adjective, but four words are different', 'always use the adjective: runs slow, speaks careful', 'always add -ly: runs fastly, plays goodly'], c: 0,
+  nao: 'Not that one. Read the four lit pairs again: slow, slowly · fast, fast · good, well.',
+  regra: 'HOW? <b>Adjective + -ly</b>: slowly, carefully, noisily. Four words break the rule: <b>well</b>, <b>fast</b>, <b>hard</b>, <b>late</b>. After <b>be</b>, <b>look</b> and <b>feel</b>, use the adjective: the fridge looks sad.',
+  uso: { p: 'Your turn. One thing you do slowly, one thing you do carefully, and one thing you do well.', molde: ['I … slowly.', 'I … carefully.', 'I … well.'], ex: 'I walk slowly. I drive carefully. I cook well.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

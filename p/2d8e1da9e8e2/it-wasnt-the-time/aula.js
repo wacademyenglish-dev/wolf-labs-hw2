@@ -29,15 +29,16 @@
 var L = [
   { k: 'capa', est: null, img: 'mesa' },
   { k: 'corte', est: 'o', min: 7, img: 'caderno', rot: 'I · Interrupted', t: 'Talk about your day. The screen will stop you. Then go back to your sentence.', p: 'Three rounds. Nothing here is corrected.' },
-  { k: 'moldes', est: 'f', min: 7, img: 'mesa', rot: 'II · Two Shapes', t: 'A fact-checker’s note. English has two ways to put the focus on one part of a sentence.', p: 'Read the note out loud. Tap the words that move the focus. Then finish the rule.' },
-  { k: 'foco', est: 'o', min: 7, img: 'mesa', rot: 'III · Rack Focus', t: 'One plain sentence. Pull the focus to one part, and the sentence rebuilds itself around it.', p: 'Tap each part in turn. Say the new sentence, and what it was NOT.' },
-  { k: 'ouvir', est: 'l', min: 7, img: 'plateia', rot: 'IV · Sixty-Three', t: 'A researcher describes a study about how good people think they are at multitasking.', p: 'Listen once. Tap a line, then its box: did she say it? Then say the finding as a cleft.' },
-  { k: 'placar', est: 'f', min: 6, img: 'pista', rot: 'V · Five out of Two Hundred', t: 'Two hundred people drove a simulator while talking on a phone.', p: 'Guess each number out loud. Tap a question, then its number. The scoreboard fills in.' },
-  { k: 'falta', est: 'f', min: 6, img: 'mesa', rot: 'VI · The Missing It', t: 'Six headlines are broken at the front or in the middle.', p: 'Find the broken part in each line. Say the fix. Then tap Check.' },
-  { k: 'tribunal', est: 'o', min: 7, extra: 1, img: 'fundo', rot: 'VII · The Claims Court', t: 'Six famous claims about focus. Stamp each one, then correct it in one sentence.', p: 'Tap the stamp: BACKED (the evidence supports it), NOT SHOWN (nobody has proved it) or MISQUOTED (the source says something else). Then say the correction.' },
-  { k: 'voz', est: 'l', min: 7, extra: 1, img: 'plateia', rot: 'VIII · The Confident Voice', t: 'A speaker on stage. Everything is said with total confidence.', p: 'Listen once. Tap KEEP or STRIKE on every line.' },
-  { k: 'debate', est: 'o', min: 7, extra: 1, img: 'fundo', rot: 'IX · The Debate', t: 'Motion: multitasking is a myth. One side each, and in the middle, you swap.', p: 'Every answer needs a cleft. Start the clock. Your teacher taps the shapes heard.' },
-  { k: 'fim', est: 'w', min: 6, img: 'caderno', rot: 'X · What You Lost', t: 'Back to the first scene.', p: 'Write what you lost, with what it was NOT. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'II · The Flip', t: 'One plain sentence. Pull the focus to one part.', p: 'Flip each sentence. Notice what comes after was. Then flip four on your own.' },
+  { k: 'moldes', est: 'f', min: 7, img: 'mesa', rot: 'III · Two Shapes', t: 'A fact-checker’s note. English has two ways to put the focus on one part of a sentence.', p: 'Read the note out loud. Tap the words that move the focus. Then finish the rule.' },
+  { k: 'foco', est: 'o', min: 7, img: 'mesa', rot: 'IV · Rack Focus', t: 'One plain sentence. Pull the focus to one part, and the sentence rebuilds itself around it.', p: 'Tap each part in turn. Say the new sentence, and what it was NOT.' },
+  { k: 'ouvir', est: 'l', min: 7, img: 'plateia', rot: 'V · Sixty-Three', t: 'A researcher describes a study about how good people think they are at multitasking.', p: 'Listen once. Tap a line, then its box: did she say it? Then say the finding as a cleft.' },
+  { k: 'placar', est: 'f', min: 6, img: 'pista', rot: 'VI · Five out of Two Hundred', t: 'Two hundred people drove a simulator while talking on a phone.', p: 'Guess each number out loud. Tap a question, then its number. The scoreboard fills in.' },
+  { k: 'falta', est: 'f', min: 6, img: 'mesa', rot: 'VII · The Missing It', t: 'Six headlines are broken at the front or in the middle.', p: 'Find the broken part in each line. Say the fix. Then tap Check.' },
+  { k: 'tribunal', est: 'o', min: 7, extra: 1, img: 'fundo', rot: 'VIII · The Claims Court', t: 'Six famous claims about focus. Stamp each one, then correct it in one sentence.', p: 'Tap the stamp: BACKED (the evidence supports it), NOT SHOWN (nobody has proved it) or MISQUOTED (the source says something else). Then say the correction.' },
+  { k: 'voz', est: 'l', min: 7, extra: 1, img: 'plateia', rot: 'IX · The Confident Voice', t: 'A speaker on stage. Everything is said with total confidence.', p: 'Listen once. Tap KEEP or STRIKE on every line.' },
+  { k: 'debate', est: 'o', min: 7, extra: 1, img: 'fundo', rot: 'X · The Debate', t: 'Motion: multitasking is a myth. One side each, and in the middle, you swap.', p: 'Every answer needs a cleft. Start the clock. Your teacher taps the shapes heard.' },
+  { k: 'fim', est: 'w', min: 6, img: 'caderno', rot: 'XI · What You Lost', t: 'Back to the first scene.', p: 'Write what you lost, with what it was NOT. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -254,3 +255,23 @@ TOQUES['db-l'] = function (b, n, v) { S.db.lado = v; };
 TOQUES['db-f'] = function (b, n, v) { S.db.conta[v] = (S.db.conta[v] || 0) + 1; S.db.erro = ''; };
 TOQUES['db-e'] = function (b, n, v) { S.db.erro = v; };
 TOQUES['db-prox'] = function () { S.db.n++; S.db.erro = ''; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de moldes.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'Plain sentence, then focus. Watch the words move.',
+  frases: [
+    { de: ['*The phone', 'distracted', 'the drivers', '.'], para: ['+It was', '*the phone', '+that', 'distracted', 'the drivers', '.'], d: 'The part in focus goes after It was. That brings back the rest.' },
+    { de: ['*Dr. Lee', 'ran', 'the study', '.'], para: ['+It was', '*Dr. Lee', '+who', 'ran', 'the study', '.'], d: 'A person: who. The same move.' },
+    { de: ['I', 'lost', '*my focus', '.'], para: ['+What', 'I', 'lost', '+was', '*my focus', '.'], d: 'The other shape: What + the rest + was + the part in focus.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'Two shapes, one job: put the focus on one part. <b>It was … that / who …</b> and <b>What … was …</b>. The part in focus goes after <b>was</b>. Never forget the <b>It</b>: not “Was the phone that …”.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'The noise broke my focus.', r: '<b>It was the noise that</b> broke my focus.' },
+    { de: 'Sara found the mistake.', r: '<b>It was Sara who</b> found the mistake.' },
+    { de: 'I needed a quiet room.', r: '<b>What</b> I needed <b>was</b> a quiet room.' },
+    { de: 'The tests started at 9 AM.', r: '<b>It was at 9 AM that</b> the tests started.' }
+  ],
+  uso: { p: 'Your turn. Something that went wrong today. Put the focus on what really caused it.', molde: ['It wasn’t …, it was …', 'What I lost was …'], ex: 'It wasn’t the traffic. It was my phone that made me late. What I lost was an hour.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

@@ -17,12 +17,13 @@ var L = [
   { k: 'julga', est: 'f', min: 6, img: 'elevador', rot: 'II · Three Answers', t: 'Three real answers. All correct English. All wrong.', p: 'Read it out loud. Say the problem. Then tap it.' },
   { k: 'cola', est: 'o', min: 7, img: 'elevador', rot: 'III · The Glue', t: 'Five words that glue. Your answer will use all five.', p: 'Say the example. Then your own sentence with that word.' },
   { k: 'emenda', est: 'f', min: 6, img: 'elevador', rot: 'IV · The Seam', t: 'Same two halves. The word changes the meaning.', p: 'Read the whole sentence out loud with a word. Then tap it.' },
-  { k: 'blocos', est: 'o', min: 7, img: 'elevador', rot: 'V · Three Blocks', t: 'Now, before, next. Two or three sentences each.', p: 'Say each line out loud. Your teacher taps it when you glue it with a connector.' },
-  { k: 'tesoura', est: 'f', min: 6, img: 'elevador', rot: 'VI · The Scissors', t: 'Cut it down. It still has to work.', p: 'Tap the words that carry nothing. Then read what’s left.' },
-  { k: 'subida', est: 'o', min: 7, extra: 1, img: 'elevador', rot: 'VII · The Elevator, Three Times', t: 'Your whole answer. Three rides: 90, 60, 45 seconds.', p: 'Press START and talk. Every connector your teacher hears takes the elevator up one floor.' },
-  { k: 'recruta', est: 'o', min: 7, extra: 1, img: 'elevador', rot: 'VIII · The Recruiter', t: 'Floor 12. Your teacher is the recruiter.', p: 'Answer each question with at least one connector.' },
-  { k: 'espelho', est: 'o', min: 7, extra: 1, img: 'elevador', rot: 'IX · Say It Back', t: 'Your teacher repeats your answer, wrong.', p: 'Correct it out loud, in a whole sentence, with a connector.' },
-  { k: 'fim', est: 'w', min: 6, img: 'elevador', rot: 'X · Doors Open', t: 'Your sixty seconds, on paper.', p: 'Write your answer: now, before, next, with the five glue words. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 3, img: 'elevador', rot: 'V · Before, Now, Next', t: 'Where does each sentence of your 60 seconds live?', p: 'Tap a sentence, then its place on the line. Notice the verbs and the glue words. Then say three lines about you.' },
+  { k: 'blocos', est: 'o', min: 7, img: 'elevador', rot: 'VI · Three Blocks', t: 'Now, before, next. Two or three sentences each.', p: 'Say each line out loud. Your teacher taps it when you glue it with a connector.' },
+  { k: 'tesoura', est: 'f', min: 6, img: 'elevador', rot: 'VII · The Scissors', t: 'Cut it down. It still has to work.', p: 'Tap the words that carry nothing. Then read what’s left.' },
+  { k: 'subida', est: 'o', min: 7, extra: 1, img: 'elevador', rot: 'VIII · The Elevator, Three Times', t: 'Your whole answer. Three rides: 90, 60, 45 seconds.', p: 'Press START and talk. Every connector your teacher hears takes the elevator up one floor.' },
+  { k: 'recruta', est: 'o', min: 7, extra: 1, img: 'elevador', rot: 'IX · The Recruiter', t: 'Floor 12. Your teacher is the recruiter.', p: 'Answer each question with at least one connector.' },
+  { k: 'espelho', est: 'o', min: 7, extra: 1, img: 'elevador', rot: 'X · Say It Back', t: 'Your teacher repeats your answer, wrong.', p: 'Correct it out loud, in a whole sentence, with a connector.' },
+  { k: 'fim', est: 'w', min: 6, img: 'elevador', rot: 'XI · Doors Open', t: 'Your sixty seconds, on paper.', p: 'Write your answer: now, before, next, with the five glue words. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -189,3 +190,20 @@ TOQUES['sb-up'] = function () { if (S.sb.andar < 8) S.sb.andar++; };
 TOQUES.rc = function (b, n, v) { var p = S.rc.partes[S.rc.n] = S.rc.partes[S.rc.n] || {}; p[v] = !p[v]; };
 TOQUES['rc-prox'] = function () { S.rc.n++; };
 TOQUES['es-prox'] = function () { S.esp.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de blocos.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'Sixty seconds, three blocks. Where does each sentence go?',
+  marcos: [{ t: 'BEFORE', s: 'my story so far' }, { t: 'NOW', s: 'my job today' }, { t: 'NEXT', s: 'my plan' }],
+  frases: [
+    { f: 'I studied design in college.', c: 0, d: 'studied · finished' },
+    { f: 'But I wasn’t happy in my first job.', c: 0, d: 'but · a problem' },
+    { f: 'I work as a designer at a bank.', c: 1, d: 'work · true now' },
+    { f: 'I like it because my team is great.', c: 1, d: 'because · the cause' },
+    { f: 'I want to lead a team one day.', c: 2, d: 'want to · the plan' },
+    { f: 'So I’m taking a management course.', c: 2, d: 'so · the result' }
+  ],
+  nota: 'Your 60 seconds have three blocks: <b>before</b> (past), <b>now</b> (present), <b>next</b> (plan). Glue them: <b>but</b>, <b>so</b>, <b>because</b>, <b>after that</b>. <b>Because</b> gives the cause. <b>So</b> gives the result.',
+  uso: { p: 'Your turn. Three sentences about you: one before, one now, one next. Glue two of them with so or because.', molde: ['Before, I …', 'Now I …', 'Next, I want to …'], ex: 'Before, I studied law. Now I work in sales because I like talking to people. Next, I want to start my own company.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

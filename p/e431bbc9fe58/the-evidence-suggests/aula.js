@@ -39,11 +39,12 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'palco', rot: 'III · The Talk', t: 'A sleep scientist says a sound can make your sleep deeper.', p: 'Tap your guess first. Then the talk plays in five short chapters: tap true or lie, and tap the time to listen again.' },
   { k: 'falas', est: 'l', extra: 1, img: 'palco', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'manu', est: 'f', min: 6, img: 'mesa', rot: 'V · The Manuscript', t: 'Six lines from the talk, on your desk. How strong is each claim?', p: 'Place each line on the ruler: tap a line, then its box. Then read the green lines like a reviewer.' },
-  { k: 'regra', est: 'f', min: 6, img: 'arquivo', rot: 'VI · The Rule', t: 'A reviewer never says “it proves”. They keep a distance.', p: 'Match each frame to what it tells the reader. Then say each frame out loud.' },
-  { k: 'parecer', est: 'o', min: 7, img: 'mesa', rot: 'VII · The Referee Report', t: 'A press release about the study goes too far. The intern rewrote six lines, and each one has a mistake.', p: 'Find the mistake in each line. Say the fix. Then tap Check.' },
-  { k: 'veredito', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'VIII · Your Verdict', t: 'Things people “know” about sleep and health.', p: 'Tap a card. Answer with one distancing frame. The teacher takes the other side.' },
-  { k: 'editor', est: 'o', min: 7, img: 'arquivo', rot: 'IX · The Editor Calls', t: 'The journal editor has read your report. Defend it, and keep your distance.', p: 'The teacher is the editor. Tap how you answer. Then say your own answer.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'X · The Decision', t: 'Would you trust a device that promises deeper sleep?', p: 'Three claims from your own life, each with a distance. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'arquivo', rot: 'VI · Find the Rule', t: 'Four sentences from the manuscript. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'arquivo', rot: 'VII · The Rule', t: 'A reviewer never says “it proves”. They keep a distance.', p: 'Match each frame to what it tells the reader. Then say each frame out loud.' },
+  { k: 'parecer', est: 'o', min: 7, img: 'mesa', rot: 'VIII · The Referee Report', t: 'A press release about the study goes too far. The intern rewrote six lines, and each one has a mistake.', p: 'Find the mistake in each line. Say the fix. Then tap Check.' },
+  { k: 'veredito', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'IX · Your Verdict', t: 'Things people “know” about sleep and health.', p: 'Tap a card. Answer with one distancing frame. The teacher takes the other side.' },
+  { k: 'editor', est: 'o', min: 7, img: 'arquivo', rot: 'X · The Editor Calls', t: 'The journal editor has read your report. Defend it, and keep your distance.', p: 'The teacher is the editor. Tap how you answer. Then say your own answer.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · The Decision', t: 'Would you trust a device that promises deeper sleep?', p: 'Three claims from your own life, each with a distance. They go to your My notes.' }
 ];
 
 var YT = '1U2qMRGihGg';
@@ -236,3 +237,19 @@ R.fim = function (c) {
 
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
 TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences from the sleep study. Find the rule yourself.',
+  exemplos: [
+    'The <b>evidence suggests</b> a small effect.',
+    'The <b>evidence</b> on sound and sleep <b>is</b> mixed.',
+    'There <b>is</b> some <b>evidence</b> that the sound helps.',
+    'The <b>evidence has</b> been questioned.'
+  ],
+  pergunta: 'The word evidence is …',
+  opcoes: ['uncountable: no -s, and the verb is singular', 'countable: evidences, and the verb is plural', 'always plural: the evidence suggest'], c: 0,
+  nao: 'Not that one. Read the four lit words again: is there an -s on evidence? Is the verb plural?',
+  regra: '<b>evidence</b> is uncountable: <b>the evidence suggests</b>, never <b>the evidences suggest</b>. A reviewer keeps a distance: <b>suggests</b>, <b>indicates</b>, <b>would seem to</b>.',
+  uso: { p: 'Your turn. Something you read about sleep, health or food. Use the evidence + a careful verb.', molde: ['The evidence suggests …', 'There is some evidence that …'], ex: 'The evidence suggests that coffee after 3 PM hurts sleep.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

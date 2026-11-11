@@ -32,10 +32,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Disclosure Day, 2026. The final trailer.', p: 'Spin first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'ceu', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'V · Will', t: 'The weather woman’s messages: what will happen?', p: 'Tap the will and won’t in the messages. Then finish the rule.' },
-  { k: 'radar', est: 'o', min: 7, img: 'capa', rot: 'VI · The Crisis Room', t: 'The truth is out. Predict the world, sector by sector.', p: 'Say a sentence for each card. Tap the card when you say it.' },
-  { k: 'futuro', est: 'o', min: 6, extra: 1, img: 'ceu', rot: 'VII · Your Future', t: 'Six questions about your future. Will it happen?', p: 'Tap yes or no. Then say why.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Interview', t: 'The interview.', p: 'Interview.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sala', rot: 'V · Mistake Hunter', t: 'Six predictions after Disclosure Day. Each one has a wrong word.', p: 'Tap the wrong word. Say the prediction right. Then check.' },
+  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'VI · Will', t: 'The weather woman’s messages: what will happen?', p: 'Tap the will and won’t in the messages. Then finish the rule.' },
+  { k: 'radar', est: 'o', min: 7, img: 'capa', rot: 'VII · The Crisis Room', t: 'The truth is out. Predict the world, sector by sector.', p: 'Say a sentence for each card. Tap the card when you say it.' },
+  { k: 'futuro', est: 'o', min: 6, extra: 1, img: 'ceu', rot: 'VIII · Your Future', t: 'Six questions about your future. Will it happen?', p: 'Tap yes or no. Then say why.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Interview', t: 'The interview.', p: 'Interview.' }
 ];
 
 var FILME = 'Disclosure Day', ANO = '2026';
@@ -254,3 +255,19 @@ var FIM = { tipo: 'entrevista', rot: 'VIII · The Interview', t: 'Interview the 
     { q: 'What won’t change?', ex: 'People won’t stop watching the weather!' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six predictions.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'The internet [[wills]] stop for a day.', r: 'The internet <b>will</b> stop for a day.', d: 'Will never takes an -s.' },
+    { f: 'People will [[to]] call their families.', r: 'People will <b>call</b> their families.', d: 'will + the clean verb. No to.' },
+    { f: 'Schools [[don’t]] will open on Monday.', r: 'Schools <b>won’t</b> open on Monday.', d: 'The no is won’t. Never don’t will.' },
+    { f: '[[Do]] they will tell the truth?', r: '<b>Will</b> they tell the truth?', d: 'In a question, will goes first. No do.' },
+    { f: 'I think the sky will [[changed]].', r: 'I think the sky will <b>change</b>.', d: 'will + the clean verb. No past.' },
+    { f: 'There will [[have]] a big speech tonight.', r: 'There will <b>be</b> a big speech tonight.', d: 'There will be. Not there will have.' }
+  ],
+  nota: 'A prediction: <b>will / won’t + the clean verb</b>. A question starts with will: <b>Will</b> they …? Something exists: there <b>will be</b>.',
+  uso: { p: 'Your turn. The truth is out. Make three predictions about your city next week.', molde: ['… will …', 'I think … will …', '… won’t …'], ex: 'The streets will be empty. I think people will stay home. The shops won’t open.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

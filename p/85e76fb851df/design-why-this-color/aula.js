@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 5, kick: 'ENGLISH FOR DESIGNERS
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · Where Do I Start?', t: 'A designer’s first three color tips.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 12, img: 'capa', rot: 'II · Too Much, Not Enough', t: 'The small words that make feedback precise.', p: 'Compare A and B. Which one is right? Why?' },
-  { k: 'escolha', est: 'o', min: 14, img: 'conversa', rot: 'III · This One or That One?', t: 'Two options. Choose and explain.', p: 'Imagine both options. Choose one and describe why.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Mistake Hunter', t: 'Five comments about a design. Each one has a wrong word.', p: 'Tap the wrong word. Say the comment right. Then check.' },
+  { k: 'descobre', est: 'f', min: 12, img: 'capa', rot: 'III · Too Much, Not Enough', t: 'The small words that make feedback precise.', p: 'Compare A and B. Which one is right? Why?' },
+  { k: 'escolha', est: 'o', min: 14, img: 'conversa', rot: 'IV · This One or That One?', t: 'Two options. Choose and explain.', p: 'Imagine both options. Choose one and describe why.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'C1rQQ_YpgcI', titulo: 'How to Not Suck at Color: 5 Color Theory Tips', fonte: 'THE FUTUR ACADEMY · 0:46–3:28', inicio: 46, fim: 208,
@@ -53,3 +54,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 05: video · descobre · escolha (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Five comments about a design.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'The contrast isn’t [[enough strong]].', r: 'The contrast isn’t <b>strong enough</b>.', d: 'adjective + enough: strong enough.' },
+    { f: 'It [[feels like]] calm.', r: 'It <b>feels</b> calm.', d: 'feels + adjective. Use like only before a noun: It feels like a spa.' },
+    { f: 'The text is [[very]] small to read.', r: 'The text is <b>too</b> small to read.', d: 'too = more than we want: a problem.' },
+    { f: 'It’s a [[blue-ish like]] gray.', r: 'It’s a <b>bluish</b> gray.', d: '-ish means a little.' },
+    { f: 'We need [[more big]] titles.', r: 'We need <b>bigger</b> titles.', d: 'big becomes bigger.' }
+  ],
+  nota: 'Small words, big difference: <b>too</b> is a problem (too small), <b>enough</b> comes after the adjective (strong enough), <b>feels</b> + adjective, <b>looks like</b> + noun, <b>-ish</b> means a little.',
+  uso: { p: 'Your turn. Describe a design you can see now: one thing that is too much, one that is not enough.', molde: ['It’s too …', 'It isn’t … enough.', 'It feels …'], ex: 'The title is too small. The contrast isn’t strong enough. It feels calm.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

@@ -18,14 +18,15 @@ var L = [
   { k: 'fotos', est: 'o', min: 7, img: 'hall-noite', rot: 'I · Five Snapshots', t: 'Before the house: your day yesterday.', p: 'Pick a time. Where were you? Answer out loud. Then the follow-up.' },
   { k: 'nove', est: 'l', min: 7, img: 'cozinha-noite', rot: 'II · Nine O’Clock', t: 'Nine o’clock. Seven things in the house. Now, in the present.', p: 'Play the house first. Then say one sentence about each thing, in the present.' },
   { k: 'volta', est: 'f', min: 6, img: 'hall-manha', rot: 'III · She Is Back', t: '7:40 AM. Mrs. Reed is home. The same seven, now in the past.', p: 'Choose WAS or WERE, and say the whole sentence. The room lights up.' },
-  { k: 'regra', est: 'f', min: 6, img: 'hall-manha', rot: 'IV · The Rule', t: 'The rule of the house.', p: 'Read the table out loud. Then fix the four traps.' },
-  { k: 'xicaras', est: 'o', min: 7, img: 'cozinha-manha', rot: 'V · Four Cups', t: 'The kitchen, in the morning. Things appear on the table.', p: 'Say what was there: There was… or There were… Then tap.' },
-  { k: 'gap', est: 'o', min: 7, img: 'sala', rot: 'VI · Night Card, Morning Card', t: 'You have the NIGHT card. Your teacher has the MORNING card.', p: 'Ask Was…? or Were…? Your teacher answers from the morning card. Find what changed.' },
-  { k: 'curtas', est: 'l', min: 7, extra: 1, img: 'hall-noite', rot: 'VII · Short and Long', t: 'Was not, wasn’t. Were not, weren’t.', p: 'Play it. Did you hear the long way or the short way? Then say it both ways.' },
-  { k: 'nao', est: 'o', min: 7, extra: 1, img: 'hall-manha', rot: 'VIII · No, It Wasn’t', t: 'Mrs. Reed guesses. Her guesses are wrong.', p: 'Correct her: wasn’t or weren’t. Then the true sentence.' },
-  { k: 'sustos', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'IX · Three in the Morning', t: '3:00 AM. Four sounds in the house. How were you?', p: 'Pick a feeling and say it: I was scared.' },
-  { k: 'entrevista', est: 'l', min: 7, extra: 1, img: 'cozinha-manha', rot: 'X · Mrs. Reed Asks', t: 'Mrs. Reed sits at the kitchen table.', p: 'Play her question first. Then answer out loud. Then the follow-up.' },
-  { k: 'fim', est: 'w', min: 6, img: 'hall-manha', rot: 'XI · Your Night', t: 'Your own night: yesterday, at home.', p: 'Write five lines with was, were, there was, there were. And one feeling. The red line watches them. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cozinha-noite', rot: 'IV · The Flip', t: 'The house, then the question.', p: 'Flip each sentence. Notice where was or were goes. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'hall-manha', rot: 'V · The Rule', t: 'The rule of the house.', p: 'Read the table out loud. Then fix the four traps.' },
+  { k: 'xicaras', est: 'o', min: 7, img: 'cozinha-manha', rot: 'VI · Four Cups', t: 'The kitchen, in the morning. Things appear on the table.', p: 'Say what was there: There was… or There were… Then tap.' },
+  { k: 'gap', est: 'o', min: 7, img: 'sala', rot: 'VII · Night Card, Morning Card', t: 'You have the NIGHT card. Your teacher has the MORNING card.', p: 'Ask Was…? or Were…? Your teacher answers from the morning card. Find what changed.' },
+  { k: 'curtas', est: 'l', min: 7, extra: 1, img: 'hall-noite', rot: 'VIII · Short and Long', t: 'Was not, wasn’t. Were not, weren’t.', p: 'Play it. Did you hear the long way or the short way? Then say it both ways.' },
+  { k: 'nao', est: 'o', min: 7, extra: 1, img: 'hall-manha', rot: 'IX · No, It Wasn’t', t: 'Mrs. Reed guesses. Her guesses are wrong.', p: 'Correct her: wasn’t or weren’t. Then the true sentence.' },
+  { k: 'sustos', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'X · Three in the Morning', t: '3:00 AM. Four sounds in the house. How were you?', p: 'Pick a feeling and say it: I was scared.' },
+  { k: 'entrevista', est: 'l', min: 7, extra: 1, img: 'cozinha-manha', rot: 'XI · Mrs. Reed Asks', t: 'Mrs. Reed sits at the kitchen table.', p: 'Play her question first. Then answer out loud. Then the follow-up.' },
+  { k: 'fim', est: 'w', min: 6, img: 'hall-manha', rot: 'XII · Your Night', t: 'Your own night: yesterday, at home.', p: 'Write five lines with was, were, there was, there were. And one feeling. The red line watches them. It goes to your My notes.' }
 ];
 
 var FOTOS = [
@@ -223,3 +224,23 @@ TOQUES.na = function (b, n, v) { var x = NAO[S.nao.n]; if (!x || S.nao.esc === x
 TOQUES['na-prox'] = function () { S.nao = { n: S.nao.n + 1, esc: '' }; };
 TOQUES.su = function (b, n, v) { S.sustos.sente[S.sustos.n] = v; };
 TOQUES['su-prox'] = function () { S.sustos.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The sentence, then the question. Watch the words move.',
+  frases: [
+    { de: ['There', '*was', 'a cup', 'on the table', '.'], para: ['*Was', 'there', 'a cup', 'on the table', '?'], d: 'The question starts with Was. There comes after.' },
+    { de: ['The window', '*was', 'open', '.'], para: ['*Was', 'the window', 'open', '?'], d: 'Was jumps to the front.' },
+    { de: ['You', '*were', 'scared', '.'], para: ['*Were', 'you', 'scared', '?'], d: 'Were jumps to the front.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'In a question, <b>was</b> or <b>were</b> goes first: <b>Was</b> the window open? <b>Were</b> you scared? No do, no did.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'Rex was in the kitchen.', r: '<b>Was</b> Rex in the kitchen?' },
+    { de: 'The door was open.', r: '<b>Was</b> the door open?' },
+    { de: 'There were two cups on the table.', r: '<b>Were</b> there two cups on the table?' },
+    { de: 'You were home at nine.', r: '<b>Were</b> you home at nine?' }
+  ],
+  uso: { p: 'Your turn. Ask your teacher three questions about last night. Start with Was or Were.', molde: ['Were you …?', 'Was it …?'], ex: 'Were you at home at 9 PM? Was it a quiet night? Were your friends with you?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

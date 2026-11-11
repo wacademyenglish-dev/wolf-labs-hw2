@@ -16,12 +16,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · You and LinkedIn', t: 'Do you use LinkedIn for work?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'dialogo', est: 'l', min: 9, img: 'conversa', rot: 'II · She Calls Back', t: 'Leo sent a LinkedIn message. Now the client calls.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'III · I’d Like To, Not “I Like To”', t: 'Two sentences. Which one is right?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'erros', est: 'f', min: 8, img: 'mesa', rot: 'IV · Fix the Message', t: 'A new seller wrote a LinkedIn message. Five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
-  { k: 'cadeira', est: 'o', min: 9, img: 'conversa', rot: 'V · The Chat', t: 'Your teacher is a client on LinkedIn. You write first.', p: 'Do each task out loud, like a chat. Invite, offer, and get a call.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'mesa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your 3 Messages', t: 'Three LinkedIn messages for a real client.', p: 'Connect, follow up, invite. Then read them out loud.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 21: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'III · Find the Rule', t: 'Four sentences. You find the rule.', p: 'Read the four sentences out loud. Look at the lit word. Choose the rule. Then say your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'IV · I’d Like To, Not “I Like To”', t: 'Two sentences. Which one is right?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'erros', est: 'f', min: 8, img: 'mesa', rot: 'V · Fix the Message', t: 'A new seller wrote a LinkedIn message. Five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
+  { k: 'cadeira', est: 'o', min: 9, img: 'conversa', rot: 'VI · The Chat', t: 'Your teacher is a client on LinkedIn. You write first.', p: 'Do each task out loud, like a chat. Invite, offer, and get a call.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'mesa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your 3 Messages', t: 'Three LinkedIn messages for a real client.', p: 'Connect, follow up, invite. Then read them out loud.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 21: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -98,3 +99,20 @@ var PODE = [
   'I can say yes or no politely: I’d love to. / I’d like to, but…',
   'I know the difference: I like (always) and I’d like (now).'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.',
+  exemplos: [
+    'I’d like <b>to</b> connect with you.',
+    'I’d like <b>to</b> show you a case study.',
+    'Would you like <b>to</b> meet next week?',
+    'I’d like <b>to</b> send you a short message.'
+  ],
+  pergunta: 'After I’d like and Would you like, what comes?',
+  opcoes: ['to + a simple verb', 'a verb with -ing', 'just the simple verb'], c: 0,
+  nao: 'Not that one. Look at the lit word again: what is between like and the verb?',
+  regra: '<b>I’d like to</b> + verb: polite, for now. <b>Would you like to</b> + verb? is the invitation. Not “I like to meet you on Monday” (that means you always enjoy it).',
+  uso: { p: 'Your turn. Invite a client to something, and say what you’d like to do.', molde: ['I’d like to …', 'Would you like to …?'], ex: 'I’d like to show you our case study. Would you like to meet next week?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

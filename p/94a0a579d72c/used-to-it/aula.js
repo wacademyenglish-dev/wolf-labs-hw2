@@ -19,14 +19,15 @@ var L = [
   { k: 'capa', est: null, img: 'mala' },
   { k: 'abre', est: 'o', min: 7, img: 'mudanca', rot: 'I · Strange at First', t: 'Three questions about things that changed.', p: 'Answer out loud, in whole sentences. Nothing gets corrected yet.' },
   { k: 'prateleira', est: 'f', min: 6, img: 'mudanca', rot: 'II · Over, or Ordinary?', t: 'Eight sentences. One place is finished. The other is today.', p: 'Read it out loud. Put it in the box, or keep it on the table.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mala', rot: 'III · That TO Is a Preposition', t: 'I used to wake up early. · I’m used to waking up early.', p: 'Three questions. Choose, then say why.' },
-  { k: 'ana', est: 'o', min: 7, img: 'neve', rot: 'IV · Ana’s First Year', t: 'Ana moved from a warm city to Toronto. Six moments of her first year.', p: 'Choose the words. Old habits go in the box. Everything else lights up the year.' },
-  { k: 'metades', est: 'f', min: 6, img: 'neve', rot: 'V · What Comes After TO', t: 'Six sentences. One piece decides each.', p: 'Choose the piece. Then say the whole sentence.' },
-  { k: 'voz', est: 'l', min: 7, img: 'mudanca', rot: 'VI · The Word You Swallow', t: 'At speed, the two are almost the same sound.', p: 'Your teacher reads ONE sentence of the pair. Say which one you heard. Then you both say both.' },
-  { k: 'entrevista', est: 'o', min: 7, extra: 1, img: 'mudanca', rot: 'VII · The Interview', t: 'Your teacher moved to another country three years ago. Interview them.', p: 'Tap a question card. Ask it out loud. Listen, then ask one follow-up.' },
-  { k: 'conserta', est: 'f', min: 6, extra: 1, img: 'mala', rot: 'VIII · Eight Broken Lines', t: 'Six broken, two clean. You’d understand all of them; that’s why nobody corrects them.', p: 'Say what’s wrong, or that nothing is. Then say the correct sentence.' },
-  { k: 'linha', est: 'o', min: 7, extra: 1, img: 'neve', rot: 'IX · Three Moments', t: 'Not three rules. Three moments on one line.', p: 'Before, during, or after? Choose, then say it. Then one change of your own, at all three.' },
-  { k: 'fim', est: 'w', min: 6, img: 'mala', rot: 'X · Your Line, in Shape', t: 'Your answers from scene I come back.', p: 'Write one change in your life at all three moments. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mudanca', rot: 'III · Over or Normal?', t: 'Two scenes with Ana. Two meanings.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mala', rot: 'IV · That TO Is a Preposition', t: 'I used to wake up early. · I’m used to waking up early.', p: 'Three questions. Choose, then say why.' },
+  { k: 'ana', est: 'o', min: 7, img: 'neve', rot: 'V · Ana’s First Year', t: 'Ana moved from a warm city to Toronto. Six moments of her first year.', p: 'Choose the words. Old habits go in the box. Everything else lights up the year.' },
+  { k: 'metades', est: 'f', min: 6, img: 'neve', rot: 'VI · What Comes After TO', t: 'Six sentences. One piece decides each.', p: 'Choose the piece. Then say the whole sentence.' },
+  { k: 'voz', est: 'l', min: 7, img: 'mudanca', rot: 'VII · The Word You Swallow', t: 'At speed, the two are almost the same sound.', p: 'Your teacher reads ONE sentence of the pair. Say which one you heard. Then you both say both.' },
+  { k: 'entrevista', est: 'o', min: 7, extra: 1, img: 'mudanca', rot: 'VIII · The Interview', t: 'Your teacher moved to another country three years ago. Interview them.', p: 'Tap a question card. Ask it out loud. Listen, then ask one follow-up.' },
+  { k: 'conserta', est: 'f', min: 6, extra: 1, img: 'mala', rot: 'IX · Eight Broken Lines', t: 'Six broken, two clean. You’d understand all of them; that’s why nobody corrects them.', p: 'Say what’s wrong, or that nothing is. Then say the correct sentence.' },
+  { k: 'linha', est: 'o', min: 7, extra: 1, img: 'neve', rot: 'X · Three Moments', t: 'Not three rules. Three moments on one line.', p: 'Before, during, or after? Choose, then say it. Then one change of your own, at all three.' },
+  { k: 'fim', est: 'w', min: 6, img: 'mala', rot: 'XI · Your Line, in Shape', t: 'Your answers from scene I come back.', p: 'Write one change in your life at all three moments. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -220,3 +221,20 @@ TOQUES['vz-prox'] = function () { S.vz = { n: S.vz.n + 1, ouviu: '', disse: '' }
 TOQUES.cs = function (b, n, v) { S.cs.esc = v; };
 TOQUES['cs-prox'] = function () { S.cs = { n: S.cs.n + 1, esc: '' }; };
 TOQUES.ln = function (b, n, v) { S.ln[n] = v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'This or that? Two scenes with Ana.',
+  a: { t: 'Over', falas: [['A friend', 'Do you miss the warm city, Ana?'], ['Ana', 'A little. I <mark>used to</mark> wear sandals every day.']], d: 'The habit is finished: <b>used to</b> + verb. She doesn’t wear sandals now.' },
+  b: { t: 'Normal now', falas: [['A coworker', 'Isn’t the snow hard for you?'], ['Ana', 'Not anymore. I’m <mark>used to</mark> <mark>walking</mark> in it.']], d: 'It is normal today: <b>be used to</b> + -ing. It was strange before, and now it isn’t.' },
+  pergunta: 'Same two words, two meanings. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Ana’s old job in Lisbon is over. She tells a friend:', o: ['I used to start work at nine.', 'I’m used to starting work at nine.'], c: 0, d: 'A finished habit.' },
+    { p: 'It is February. Ana has lived in Toronto for a year, and the cold feels normal:', o: ['I used to wear a coat.', 'I’m used to wearing a coat.'], c: 1, d: 'It is normal now.' },
+    { p: 'Ana remembers her old street in Lisbon:', o: ['I used to hear the trams at night.', 'I’m used to hearing the trams at night.'], c: 0, d: 'The trams are far away now: finished.' },
+    { p: 'A coworker asks: “Does the long winter bother you?” Ana says:', o: ['I’m used to long winters.', 'I used to have long winters.'], c: 0, d: 'A fact about today.' }
+  ],
+  nota: 'No <b>be</b>: <b>used to</b> + verb = a habit that stopped. With <b>be</b>: <b>I’m used to</b> + -ing (or a noun) = it is normal now. That TO is a preposition, so the verb takes -ing.',
+  uso: { p: 'Your turn. One thing you did in the past and don’t do now, and one thing that is normal for you today.', molde: ['I used to …', 'I’m used to …ing'], ex: 'I used to live with my parents. I’m used to cooking for myself.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

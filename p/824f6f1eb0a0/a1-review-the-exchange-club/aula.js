@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Exchange Club', t: 'Three new members. Find out what they like.', p: 'Ask each member five questions. Your teacher is the member. Then choose your partner.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose one.', p: 'Choose one. Then say it with the sentence.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Exchange Club Card', t: 'Four lines about likes.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -70,3 +71,9 @@ var PODE = [
 var BINGO = [['Something you love doing', 'I love dancing.'], ['Pizza? (it)', 'I love it!'], ['Your friend + likes + -ing', 'She likes reading.'], ['Vegetables? (them)', 'I hate them.'], ['Call ___ (your mom)', 'I call her.'], ['Something you hate doing', 'I hate ironing.'], ['with ___ (you, me)', 'Come with me!'], ['Your family + hates', 'My son hates getting up early.'], ['for ___ (your kids)', 'I cook for them.']];
 var ERROS = { tipo: 'chat', rot: 'A MESSAGE FROM A NEW CLUB MEMBER', partes: ['Hi! I’m Mei. I love ', ['read', 'reading', 'love + -ing.'], ' and walking. I hate ', ['shop', 'shopping', 'hate + -ing.'], '. Rock music? I ', ['like!', 'like it!', 'Don’t drop it: I like it.'], ' My grandma is great. I visit ', ['she', 'her', 'After a verb: her.'], ' every day. Do you want to walk with ', ['I', 'me', 'After with: me.'], '?'] };
 var ESCOLHA = [{ a: 'cooking for friends', b: 'eating out with friends', chips: ['I like …ing', 'I love it.'], ex: 'Cooking for friends. I love it.' }, { a: 'a concert', b: 'a soccer game', chips: ['I want a …', 'I love …ing.'], ex: 'A concert. I love dancing.' }, { a: 'call your mom', b: 'text your mom', chips: ['I call her.', 'I text her.'], ex: 'Call her. She loves talking.' }, { a: 'reading a book', b: 'watching a movie', chips: ['I like …ing', 'I hate …ing.'], ex: 'Watching a movie. I hate reading at night.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 7.', rotulo: 'What I like', linhas: ['I love <b>cooking</b> · she likes <b>reading</b> · after love, like, hate: -ing', 'Yes, I like <b>it</b> · I love <b>them</b> · don’t drop it', 'I call <b>her</b> · he calls <b>me</b> · after the verb: me, him, her, them', 'with <b>me</b> · for <b>him</b> · Call <b>me</b> (no to)'], uso: { p: 'Your turn. Choose a partner in the club. Say what you love, what she loves, and an idea for you two.', molde: ['I love …', 'She loves …', 'Let’s … with her.'], ex: 'I love cooking. She loves it too. Let’s cook with her!' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

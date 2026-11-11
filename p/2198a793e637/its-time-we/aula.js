@@ -29,10 +29,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'clube', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'clube', rot: 'III · The Trailer', t: 'X-Men ’97. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'mansao', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'clube', rot: 'V · I’d Rather, It’s Time', t: 'Cyclops writes to the team. Find the pattern.', p: 'Read the message out loud. Tap the words after rather and after it’s time. Then finish the rule.' },
-  { k: 'votacao', est: 'o', min: 7, img: 'capa', rot: 'VI · The Team Vote', t: 'Six mutants, one vote. Every right sentence wins a voice.', p: 'Read who is voting and the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'dilemas', est: 'o', min: 7, extra: 1, img: 'clube', rot: 'VII · Would You Rather?', t: 'Six hard choices. Would you rather…?', p: 'Open a card. Answer with I’d rather … than … Then ask your teacher.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · A Message to the Team', t: 'Write a message to your team.', p: 'Use I’d rather, I’d rather you, it’s time we. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mansao', rot: 'V · Who Does It?', t: 'Two moments in the mansion. Two ways to say rather.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'regra', est: 'f', min: 6, img: 'clube', rot: 'VI · I’d Rather, It’s Time', t: 'Cyclops writes to the team. Find the pattern.', p: 'Read the message out loud. Tap the words after rather and after it’s time. Then finish the rule.' },
+  { k: 'votacao', est: 'o', min: 7, img: 'capa', rot: 'VII · The Team Vote', t: 'Six mutants, one vote. Every right sentence wins a voice.', p: 'Read who is voting and the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'dilemas', est: 'o', min: 7, extra: 1, img: 'clube', rot: 'VIII · Would You Rather?', t: 'Six hard choices. Would you rather…?', p: 'Open a card. Answer with I’d rather … than … Then ask your teacher.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · A Message to the Team', t: 'Write a message to your team.', p: 'Use I’d rather, I’d rather you, it’s time we. It goes to your My notes.' }
 ];
 
 var FILME = 'X-Men ’97', ANO = '2024';
@@ -236,3 +237,20 @@ var AQ = { tipo: 'imagem', img: 'capa', alt: 'An empty futuristic training room 
     { q: 'Would you rather lead a team or be in one?', ex: 'I’d rather be in one. Leading is stressful.' }
   ] };
 /*AQ@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'This or that? Two moments with the team.',
+  a: { t: 'I do it', falas: [['Cyclops', 'We lost the Professor. Should we split up?'], ['Storm', 'No. I<mark>’d rather</mark> stay with the team.']], d: 'The same person stays: I. So after rather comes the plain verb: <b>I’d rather stay</b>.' },
+  b: { t: 'Someone else does it', falas: [['Wolverine', 'Cyclops wants to go out alone tonight.'], ['Storm', 'I<mark>’d rather</mark> he <mark>stayed</mark> with us.']], d: 'A different person: he. Now the verb goes to the past, even for tonight: <b>I’d rather he stayed</b>.' },
+  pergunta: 'Same word, two forms. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Rogue wants the team to stay home. You agree. You say about yourself:', o: ['I’d rather stay home.', 'I’d rather stayed home.'], c: 0, d: 'You do it: the plain verb.' },
+    { p: 'Wolverine goes out alone every night. You say about him:', o: ['I’d rather he stay with us.', 'I’d rather he stayed with us.'], c: 1, d: 'He does it: the past form.' },
+    { p: 'The team is afraid. You say: “It’s time we …”', o: ['it’s time we fight back.', 'it’s time we fought back.'], c: 1, d: 'it’s time + we + past.' },
+    { p: 'Jubilee asks you to join a dangerous mission. You say no, politely:', o: ['I’d rather not.', 'I’d rather not to.'], c: 0, d: 'For no: rather not. Nothing after it.' }
+  ],
+  nota: 'Same word, two jobs. <b>I’d rather</b> + verb: you do it. <b>I’d rather</b> + person + <b>past</b>: they do it. <b>It’s time we</b> + past works the same way.',
+  uso: { p: 'Your turn. One thing you would rather do this weekend, and one thing you would rather a friend did.', molde: ['I’d rather …', 'I’d rather you …'], ex: 'I’d rather stay home on Saturday. I’d rather you called me before you come.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_rather', GX_EXPLICA); };

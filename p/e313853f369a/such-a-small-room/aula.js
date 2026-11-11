@@ -19,13 +19,14 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'corredor', rot: 'I · A Place You Stayed', t: 'Think of a place you stayed in. Was it amazing, or terrible?', p: 'Tap one. Answer the three questions out loud. Keep your big sentence: it comes back.' },
   { k: 'maior', est: 'l', min: 7, img: 'festa', rot: 'II · Whose Version Is Bigger?', t: 'Two guests stayed on the same floor. Same facts, different stories.', p: 'Read the fact. Play both versions. Tap the one that makes the night sound bigger, then read it out loud.' },
   { k: 'degrau', est: 'o', min: 7, img: 'quarto', rot: 'III · One Step Up', t: 'The same night, told four times. Each time, one step bigger.', p: 'Say the sentence. Press the button. Say the new one. Four steps, four times.' },
-  { k: 'regra', est: 'f', min: 6, img: 'quarto', rot: 'IV · What Comes After?', t: 'One question decides it: is there a noun after the adjective?', p: 'Choose the word. Then say the sentence.' },
-  { k: 'vozes', est: 'l', min: 7, img: 'janela', rot: 'V · Four Versions', t: 'Four guests describe the same room.', p: 'Play all four. Then tap them in order, from the smallest version to the biggest.' },
-  { k: 'planta', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'VI · Room 34', t: 'Room 34. Every correct complaint lights up a problem in its place.', p: 'Say the complaint like an angry guest. Your teacher taps what you said.' },
-  { k: 'that', est: 'l', min: 7, extra: 1, img: 'manha', rot: 'VII · That Is Why', t: 'THAT opens the result. Six sentences from the guests.', p: 'Choose the ending. Play it to check. Say the whole sentence.' },
-  { k: 'ligacao', est: 'o', min: 7, extra: 1, img: 'sino', rot: 'VIII · Call the Front Desk', t: 'It’s 2 AM. You call the front desk. Your teacher is the night manager.', p: 'Say your complaint. Your teacher taps what you said, answers, and you push for something better.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'quarto', rot: 'IX · Checkout', t: 'At checkout, Room 34 writes a review. Five sentences have a problem.', p: 'Choose the fix. Then say the whole sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'quarto', rot: 'X · Your Place, Again', t: 'Your place from scene I comes back.', p: 'Write a review of your place: one line with so, one with such, one with that. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'quarto', rot: 'IV · Find the Rule', t: 'Four sentences from Room 34. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'quarto', rot: 'V · What Comes After?', t: 'One question decides it: is there a noun after the adjective?', p: 'Choose the word. Then say the sentence.' },
+  { k: 'vozes', est: 'l', min: 7, img: 'janela', rot: 'VI · Four Versions', t: 'Four guests describe the same room.', p: 'Play all four. Then tap them in order, from the smallest version to the biggest.' },
+  { k: 'planta', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'VII · Room 34', t: 'Room 34. Every correct complaint lights up a problem in its place.', p: 'Say the complaint like an angry guest. Your teacher taps what you said.' },
+  { k: 'that', est: 'l', min: 7, extra: 1, img: 'manha', rot: 'VIII · That Is Why', t: 'THAT opens the result. Six sentences from the guests.', p: 'Choose the ending. Play it to check. Say the whole sentence.' },
+  { k: 'ligacao', est: 'o', min: 7, extra: 1, img: 'sino', rot: 'IX · Call the Front Desk', t: 'It’s 2 AM. You call the front desk. Your teacher is the night manager.', p: 'Say your complaint. Your teacher taps what you said, answers, and you push for something better.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'quarto', rot: 'X · Checkout', t: 'At checkout, Room 34 writes a review. Five sentences have a problem.', p: 'Choose the fix. Then say the whole sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'quarto', rot: 'XI · Your Place, Again', t: 'Your place from scene I comes back.', p: 'Write a review of your place: one line with so, one with such, one with that. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -233,3 +234,19 @@ TOQUES.lg = function (b, n, v) { S.lg.esc = v; };
 TOQUES['lg-prox'] = function () { S.lg = { n: S.lg.n + 1, esc: '' }; };
 TOQUES.er = function (b, n) { S.er.esc = n; };
 TOQUES['er-prox'] = function () { S.er = { n: S.er.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences from Room 34. Find the rule yourself.',
+  exemplos: [
+    'The room is <b>so</b> <u>small</u>.',
+    'It is <b>such</b> <u>a small room</u>.',
+    'The music is <b>so</b> <u>loud</u>.',
+    'It is <b>such</b> <u>loud music</u>.'
+  ],
+  pergunta: 'Look at what comes after so and after such.',
+  opcoes: ['so + adjective alone · such + (a) + adjective + noun', 'so + a + adjective + noun · such + adjective alone', 'so and such are the same: use either one'], c: 0,
+  nao: 'Not that one. Look at the four lit parts again: is there a noun after so? after such?',
+  regra: '<b>so + adjective</b>: so small, so loud. <b>such (a) + adjective + noun</b>: such a small room, such loud music. Then <b>that</b> gives the result: so small <b>that</b> I couldn’t sleep.',
+  uso: { p: 'Your turn. Think of a place you stayed in. Say one sentence with so and one with such.', molde: ['It was so …', 'It was such a …'], ex: 'The bed was so hard. It was such a hard bed!' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

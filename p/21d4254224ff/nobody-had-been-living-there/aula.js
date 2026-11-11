@@ -32,13 +32,14 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'cidade', rot: 'I · Town Legends', t: 'Every town has a story. What’s yours?', p: 'Pick a card. Real life. Nobody is corrected here.' },
   { k: 'video', est: 'l', min: 10, img: 'cidade', rot: 'II · Hawkins, 1983', t: 'A small town, a missing boy, a secret.', p: 'Answer out loud. Watch the trailer. Then True or Lie.' },
-  { k: 'regra', est: 'f', min: 6, img: 'arquivo', rot: 'III · The Rule', t: 'The house had been empty for years.', p: 'Up to a moment in the past: had been + -ing. Finished, counted or a state: had + past participle. Say each trap right, then tap it.' },
-  { k: 'arquivo', est: 'o', min: 7, img: 'arquivo', rot: 'IV · The Archive', t: 'Six clippings from the Millbrook Herald.', p: 'Tap a clipping. Read it. Answer the question, then tap what you said.' },
-  { k: 'barbante', est: 'o', min: 7, img: 'mapa', rot: 'V · The Red String', t: 'Two pins, one sentence.', p: 'Join the two moments with had been + -ing. Say it, then check.' },
-  { k: 'vizinho', est: 'o', min: 7, extra: 1, img: 'casa', rot: 'VI · The Neighbor, 1998', t: 'Interview the man who lived next door.', p: 'Ask him the question. Your teacher answers as Mr. Okafor.' },
-  { k: 'jack', est: 'l', min: 7, extra: 1, img: 'lanterna', rot: 'VII · Stingy Jack', t: 'Why do we carve pumpkins?', p: 'Your teacher reads the old Irish story. Then answer.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'arquivo', rot: 'VIII · Quick Check', t: 'Six quick ones before the archive closes.', p: 'Say the whole sentence. Then tap the words.' },
-  { k: 'fim', est: 'w', min: 6, img: 'casa', rot: 'IX · The Front Page', t: 'Write the story the town never read.', p: 'About 120 words: what had been happening at Crow Hill. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'arquivo', rot: 'III · Mistake Hunter', t: 'Six clippings from the Millbrook Herald. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'regra', est: 'f', min: 6, img: 'arquivo', rot: 'IV · The Rule', t: 'The house had been empty for years.', p: 'Up to a moment in the past: had been + -ing. Finished, counted or a state: had + past participle. Say each trap right, then tap it.' },
+  { k: 'arquivo', est: 'o', min: 7, img: 'arquivo', rot: 'V · The Archive', t: 'Six clippings from the Millbrook Herald.', p: 'Tap a clipping. Read it. Answer the question, then tap what you said.' },
+  { k: 'barbante', est: 'o', min: 7, img: 'mapa', rot: 'VI · The Red String', t: 'Two pins, one sentence.', p: 'Join the two moments with had been + -ing. Say it, then check.' },
+  { k: 'vizinho', est: 'o', min: 7, extra: 1, img: 'casa', rot: 'VII · The Neighbor, 1998', t: 'Interview the man who lived next door.', p: 'Ask him the question. Your teacher answers as Mr. Okafor.' },
+  { k: 'jack', est: 'l', min: 7, extra: 1, img: 'lanterna', rot: 'VIII · Stingy Jack', t: 'Why do we carve pumpkins?', p: 'Your teacher reads the old Irish story. Then answer.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'arquivo', rot: 'IX · Quick Check', t: 'Six quick ones before the archive closes.', p: 'Say the whole sentence. Then tap the words.' },
+  { k: 'fim', est: 'w', min: 6, img: 'casa', rot: 'X · The Front Page', t: 'Write the story the town never read.', p: 'About 120 words: what had been happening at Crow Hill. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -291,3 +292,19 @@ TOQUES['vz-viu'] = function () { S.vz.viu[S.vz.n] = 1; };
 TOQUES['vz-prox'] = function () { S.vz.n++; };
 TOQUES['jk-ouviu'] = function () { S.jack.ouviu = 1; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six clippings from the archive.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'The house [[was]] empty since 1980.', r: 'The house <b>had been</b> empty since 1980.', d: 'Up to a moment in the past: had been.' },
+    { f: 'The neighbors [[were waiting]] for two hours when the door opened.', r: 'The neighbors <b>had been waiting</b> for two hours when the door opened.', d: 'What was going on up to that moment: had been + -ing.' },
+    { f: 'The lights [[have been]] flickering for weeks before the fire.', r: 'The lights <b>had been</b> flickering for weeks before the fire.', d: 'have been is for now. Before a past moment: had been.' },
+    { f: 'Mr. Okafor had [[been knowing]] the family for years.', r: 'Mr. Okafor had <b>known</b> the family for years.', d: 'A state verb takes no -ing: had known.' },
+    { f: 'Someone had been living there [[since]] two years.', r: 'Someone had been living there <b>for</b> two years.', d: 'A length of time: for. A starting point: since.' },
+    { f: 'The reporter had [[been writing]] three articles.', r: 'The reporter had <b>written</b> three articles.', d: 'A counted, finished result: had + participle.' }
+  ],
+  nota: 'For what was going on up to a moment in the past: <b>had been</b> + -ing, with <b>for</b> or <b>since</b>. For what was finished or counted, or a state: <b>had</b> + participle.',
+  uso: { p: 'Your turn. A place you know that nobody uses now. Say what had been happening there before it closed.', molde: ['People had been …', 'It had been … for …'], ex: 'People had been dancing there for years. The old cinema had been empty since 2015.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

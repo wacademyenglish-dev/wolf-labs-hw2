@@ -15,9 +15,10 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 4, titulo: ['So Strange', 'Was I
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Gazette', t: 'The night the valley woke up.', p: 'Read the article out loud, like a radio reporter. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Normal or Dramatic?', t: 'Same story, two styles.', p: 'Compare A and B. What moves to the front?' },
-  { k: 'bingo', est: 'f', min: 8, img: 'conversa', rot: 'III · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a row, across, down or diagonal, is a BINGO.' },
-  { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'IV · The Mystery Board', t: 'Roll, move, make it dramatic.', p: 'Your teacher rolls the die. Tell the strange event on your square with So… or Such…' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Find the Rule', t: 'Four sentences from the Gazette. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Normal or Dramatic?', t: 'Same story, two styles.', p: 'Compare A and B. What moves to the front?' },
+  { k: 'bingo', est: 'f', min: 8, img: 'conversa', rot: 'IV · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a row, across, down or diagonal, is a BINGO.' },
+  { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'V · The Mystery Board', t: 'Roll, move, make it dramatic.', p: 'Your teacher rolls the die. Tell the strange event on your square with So… or Such…' }
 ];
 var PORTAS = [];
 
@@ -62,3 +63,9 @@ var TABULEIRO = { rot: 'THE MYSTERY BOARD', centro: 'Something strange happened.
   { k: 'THE SILENCE', t: 'A moment of total silence.', ex: 'So quiet was the room that you could hear a pin drop.' },
   { k: 'THE ANGER', t: 'Someone very angry. What did they do?', ex: 'Such was his anger that he left without paying.' },
   { k: 'THE LEGEND', t: 'Tell a strange legend from your town, with drama.', ex: 'So strange was the light on the hill that people still talk about it.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences from the Gazette. Find the rule yourself.', exemplos: ['<b>So strange was</b> the light that nobody slept.', '<b>So quickly did</b> it happen that nobody saw it.', '<b>Such was</b> the noise that the dogs ran away.', '<b>Such was</b> her anger that she left.'], pergunta: 'After So + adjective or Such, the verb …', opcoes: ['comes before the person: so strange was the light', 'stays after the person: so strange the light was', 'is missing: so strange the light'], c: 0, nao: 'Not that one. Read the four lit starts again: where is was? where is did?', regra: '<b>So + adjective/adverb + verb + person</b> and <b>Such + was + noun</b>, then <b>that</b> + result. The normal order: It was <b>so strange</b> that … / It was <b>such a strange</b> light that …', uso: { p: 'Your turn. A strange thing you saw or heard. Say it with So … was … that, or Such was …', molde: ['So strange was …', 'So loudly did …', 'Such was …'], ex: 'So loud was the music that I could not hear my friend. Such was the crowd that we left early.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

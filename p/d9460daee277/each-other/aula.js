@@ -13,13 +13,14 @@ var L = [
   { k: 'capa', est: null, img: 'padaria' },
   { k: 'abre', est: 'o', min: 7, img: 'paes', rot: 'I · Two of Your Stories', t: 'Three questions about you. Nothing to solve yet.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'mics', est: 'f', min: 6, img: 'ilha', rot: 'II · Two Microphones', t: 'Separate interviews. Neither brother heard the other.', p: 'Read both lines out loud. Same story, or not?' },
-  { k: 'seta', est: 'o', min: 7, img: 'padaria', rot: 'III · The Arrow', t: 'The action goes one of two ways. There is no third.', p: 'Tap a shape. Say the sentence. Then try the other shape.' },
-  { k: 'trilhos', est: 'f', min: 6, img: 'padaria', rot: 'IV · Which Way?', t: 'Both shapes are correct English. What changes is what happened.', p: 'Read the situation. Choose the arrow. Then say the sentence.' },
-  { k: 'tira', est: 'f', min: 6, img: 'paes', rot: 'V · What English Throws Away', t: 'Some sentences have one word too many.', p: 'Tap the extra word. If nothing is extra, tap NOTHING TO TAKE.' },
-  { k: 'sala', est: 'f', min: 6, img: 'padaria', rot: 'VI · Count the Room', t: 'Alone, or by myself? Count the people first.', p: 'Say how many people are there. Then choose.' },
-  { k: 'corte', est: 'o', min: 7, extra: 1, img: 'ilha', rot: 'VII · The Editor’s Cut', t: 'Ten minutes of film, and only one version fits.', p: 'Choose the version that goes out. Your teacher is Dana and pushes back three times.' },
-  { k: 'creditos', est: 'f', min: 6, extra: 1, img: 'ilha', rot: 'VIII · The Credits', t: 'Each credit line is missing one piece.', p: 'Read the line. Choose the piece. Say the whole line.' },
-  { k: 'fim', est: 'w', min: 6, img: 'paes', rot: 'IX · Your Stories, Again', t: 'Write your two stories.', p: 'Something you taught yourself, and something you and someone taught each other. It goes to My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'padaria', rot: 'III · Self or Each Other?', t: 'Two bakery stories. Two different arrows.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'seta', est: 'o', min: 7, img: 'padaria', rot: 'IV · The Arrow', t: 'The action goes one of two ways. There is no third.', p: 'Tap a shape. Say the sentence. Then try the other shape.' },
+  { k: 'trilhos', est: 'f', min: 6, img: 'padaria', rot: 'V · Which Way?', t: 'Both shapes are correct English. What changes is what happened.', p: 'Read the situation. Choose the arrow. Then say the sentence.' },
+  { k: 'tira', est: 'f', min: 6, img: 'paes', rot: 'VI · What English Throws Away', t: 'Some sentences have one word too many.', p: 'Tap the extra word. If nothing is extra, tap NOTHING TO TAKE.' },
+  { k: 'sala', est: 'f', min: 6, img: 'padaria', rot: 'VII · Count the Room', t: 'Alone, or by myself? Count the people first.', p: 'Say how many people are there. Then choose.' },
+  { k: 'corte', est: 'o', min: 7, extra: 1, img: 'ilha', rot: 'VIII · The Editor’s Cut', t: 'Ten minutes of film, and only one version fits.', p: 'Choose the version that goes out. Your teacher is Dana and pushes back three times.' },
+  { k: 'creditos', est: 'f', min: 6, extra: 1, img: 'ilha', rot: 'IX · The Credits', t: 'Each credit line is missing one piece.', p: 'Read the line. Choose the piece. Say the whole line.' },
+  { k: 'fim', est: 'w', min: 6, img: 'paes', rot: 'X · Your Stories, Again', t: 'Write your two stories.', p: 'Something you taught yourself, and something you and someone taught each other. It goes to My notes.' }
 ];
 
 var ABRE = [
@@ -195,3 +196,20 @@ TOQUES.ct = function (b, n, v) { S.corte = { k: v, obj: 0 }; };
 TOQUES['ct-ob'] = function () { S.corte.obj++; };
 TOQUES.cr = function (b, n, v) { S.cred.esc = v; };
 TOQUES['cr-prox'] = function () { S.cred = { n: S.cred.n + 1, esc: '' }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de seta.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Myself or each other? Two moments in the bakery.',
+  a: { t: 'The action comes back', falas: [['Dana', 'What happened in the kitchen?'], ['The older brother', 'I burned <mark>myself</mark> on the oven.']], d: 'The same person does it and gets it: <b>myself</b>.' },
+  b: { t: 'The action goes both ways', falas: [['Dana', 'And the two of you?'], ['The older brother', 'We don’t call <mark>each other</mark> any more.']], d: 'Two people, and each one does it to the other: <b>each other</b>.' },
+  pergunta: 'Two small words, two arrows. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'He cut his own finger.', o: ['He cut himself.', 'He cut each other.'], c: 0, d: 'One person: himself.' },
+    { p: 'Brother A trusts Brother B. Brother B trusts Brother A.', o: ['They trust themselves.', 'They trust each other.'], c: 1, d: 'Both ways between two people.' },
+    { p: 'The baker looked in the mirror.', o: ['He looked at himself.', 'He looked at each other.'], c: 0, d: 'One person, one mirror: himself.' },
+    { p: 'We leave notes for the other one. Both of us do it.', o: ['We write each other notes.', 'We write ourselves notes.'], c: 0, d: 'Both ways: each other.' }
+  ],
+  nota: 'The action comes back to the same person: <b>myself, himself, themselves</b>. The action goes both ways between two people: <b>each other</b>. Some verbs don’t need -self at all: he relaxes, she felt tired.',
+  uso: { p: 'Your turn. One thing you did to yourself, and one thing you and a friend do for each other.', molde: ['I … myself.', 'We … each other.'], ex: 'I burned myself yesterday. My best friend and I help each other every week.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

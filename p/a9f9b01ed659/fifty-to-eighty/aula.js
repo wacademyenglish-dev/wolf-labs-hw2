@@ -36,17 +36,18 @@
 var L = [
   { k: 'capa', est: null, img: 'carvalho' },
   { k: 'decisao', est: 'o', min: 7, img: 'caminho', rot: 'I · An Old Decision', t: 'Think of a decision from years ago that still shapes your life today.', p: 'Tap what it was about. Then answer three questions out loud.' },
-  { k: 'arvore', est: 'f', min: 6, img: 'carvalho', rot: 'II · Roots and Crown', t: 'The root is a closed past. The crown is today. The result decides its own tense.', p: 'Is each sentence right? If it is wrong, say the fix. Every right answer grows a branch.' },
-  { k: 'outra', est: 'f', min: 6, img: 'carvalho', rot: 'III · The Other Direction', t: 'Now the root is something always true about you. The result happened in the past.', p: 'Tap a sentence, then its box. Is the result still true today, or finished? Then say it.' },
-  { k: 'vozes', est: 'l', min: 7, img: 'domingo', rot: 'IV · Two Men, 1938', t: 'Two men entered the study in the same year. Then a researcher, and a wife.', p: 'Play each voice. Tap what it says. Then say the sentence.' },
-  { k: 'tabela', est: 'o', min: 7, extra: 1, img: 'arquivo', rot: 'V · At Fifty, At Eighty', t: 'Five things they measured at fifty. Which ones predicted health at eighty?', p: 'Guess out loud. Then tap PREDICTED or DIDN’T.' },
-  { k: 'palavras', est: 'l', img: 'arquivo', rot: 'VI · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
-  { k: 'video', est: 'l', min: 10, img: 'arquivo', rot: 'VII · The Talk', t: 'The director of the study. Two and a half minutes: the clearest message.', p: 'Tap your guess first. Then watch and tap true or lie. Then say what the study found.' },
-  { k: 'falas', est: 'l', extra: 1, img: 'arquivo', rot: 'VIII · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'longe', est: 'f', min: 6, extra: 1, img: 'arquivo', rot: 'IX · Too Far', t: 'Four write-ups of the study. Some claim more than it found.', p: 'Read it out loud. Tap THE STUDY or TOO FAR, and say why.' },
-  { k: 'explica', est: 'o', min: 7, img: 'carvalho', rot: 'X · Explain It', t: 'A friend has never heard of the study. Explain it, with roots and crowns.', p: 'Your teacher is the friend. Tap a card. Answer out loud in one minute.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'domingo', rot: 'XI · Rich Now', t: 'Five sentences have a problem.', p: 'Find the problem in each line. Say the fix. Then tap Check.' },
-  { k: 'fim', est: 'w', min: 6, img: 'caminho', rot: 'XII · Your Decision, Again', t: 'Your decision from scene I, with a root in the past and a crown today.', p: 'Write it, and one sentence the other way. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'carvalho', rot: 'II · The Study on One Line', t: 'A closed decision, and a result that lands at different times.', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'arvore', est: 'f', min: 6, img: 'carvalho', rot: 'III · Roots and Crown', t: 'The root is a closed past. The crown is today. The result decides its own tense.', p: 'Is each sentence right? If it is wrong, say the fix. Every right answer grows a branch.' },
+  { k: 'outra', est: 'f', min: 6, img: 'carvalho', rot: 'IV · The Other Direction', t: 'Now the root is something always true about you. The result happened in the past.', p: 'Tap a sentence, then its box. Is the result still true today, or finished? Then say it.' },
+  { k: 'vozes', est: 'l', min: 7, img: 'domingo', rot: 'V · Two Men, 1938', t: 'Two men entered the study in the same year. Then a researcher, and a wife.', p: 'Play each voice. Tap what it says. Then say the sentence.' },
+  { k: 'tabela', est: 'o', min: 7, extra: 1, img: 'arquivo', rot: 'VI · At Fifty, At Eighty', t: 'Five things they measured at fifty. Which ones predicted health at eighty?', p: 'Guess out loud. Then tap PREDICTED or DIDN’T.' },
+  { k: 'palavras', est: 'l', img: 'arquivo', rot: 'VII · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
+  { k: 'video', est: 'l', min: 10, img: 'arquivo', rot: 'VIII · The Talk', t: 'The director of the study. Two and a half minutes: the clearest message.', p: 'Tap your guess first. Then watch and tap true or lie. Then say what the study found.' },
+  { k: 'falas', est: 'l', extra: 1, img: 'arquivo', rot: 'IX · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
+  { k: 'longe', est: 'f', min: 6, extra: 1, img: 'arquivo', rot: 'X · Too Far', t: 'Four write-ups of the study. Some claim more than it found.', p: 'Read it out loud. Tap THE STUDY or TOO FAR, and say why.' },
+  { k: 'explica', est: 'o', min: 7, img: 'carvalho', rot: 'XI · Explain It', t: 'A friend has never heard of the study. Explain it, with roots and crowns.', p: 'Your teacher is the friend. Tap a card. Answer out loud in one minute.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'domingo', rot: 'XII · Rich Now', t: 'Five sentences have a problem.', p: 'Find the problem in each line. Say the fix. Then tap Check.' },
+  { k: 'fim', est: 'w', min: 6, img: 'caminho', rot: 'XIII · Your Decision, Again', t: 'Your decision from scene I, with a root in the past and a crown today.', p: 'Write it, and one sentence the other way. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -243,3 +244,20 @@ TOQUES.tb = function (b, n, v) { S.tb[n] = v; };
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
 TOQUES.lg = function (b, n, v) { S.lg.esc = v; };
 TOQUES['lg-prox'] = function () { S.lg = { n: S.lg.n + 1, esc: '' }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de arvore.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'A life on one line. Where does each sentence go?',
+  marcos: [{ t: 'LONG AGO', s: 'a closed decision' }, { t: 'LAST YEAR', s: 'a finished result' }, { t: 'NOW', s: 'the result today' }],
+  frases: [
+    { f: 'Rob chose the army in 1960.', c: 0, d: 'chose · closed past' },
+    { f: 'Ann left college in 1975.', c: 0, d: 'left · closed past' },
+    { f: 'She would have started her own firm last year.', c: 1, d: 'would have + participle · finished' },
+    { f: 'He would have gone to the funeral last spring.', c: 1, d: 'would have + participle · finished' },
+    { f: 'He would be healthier today.', c: 2, d: 'would + verb · true today' },
+    { f: 'They would have more friends now.', c: 2, d: 'would + verb · true today' }
+  ],
+  nota: 'A closed past decision: <b>if + had + participle</b>. If the result is still true today: <b>would + verb</b>. If the result is finished: <b>would have + participle</b>. The result decides its own tense.',
+  uso: { p: 'Your turn. One decision from years ago, and what it changed today.', molde: ['If I had …, I would … now.', 'If I had …, I would have … last year.'], ex: 'If I had moved to Berlin, I would speak German now.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

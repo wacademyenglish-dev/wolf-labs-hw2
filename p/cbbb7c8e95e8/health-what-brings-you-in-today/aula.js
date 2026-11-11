@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 2, kick: 'ENGLISH FOR HEALTHCAR
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · SOCRATES', t: 'A doctor asks about chest pain.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'II · How Long Have You Had…?', t: 'The question every patient hears.', p: 'Compare A and B. Which one is right? Why?' },
-  { k: 'cadeira', est: 'o', min: 14, img: 'conversa', rot: 'III · Take a History', t: 'Your teacher is the patient. You ask.', p: 'Ask about each letter of SOCRATES. Listen and react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · For or Since?', t: 'Two answers about the same pain.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'III · How Long Have You Had…?', t: 'The question every patient hears.', p: 'Compare A and B. Which one is right? Why?' },
+  { k: 'cadeira', est: 'o', min: 14, img: 'conversa', rot: 'IV · Take a History', t: 'Your teacher is the patient. You ask.', p: 'Ask about each letter of SOCRATES. Listen and react.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'SqYToJR73hc', titulo: 'SOCRATES Example | History Taking', fonte: 'GEEKY MEDICS · 0:00–1:47', fim: 107,
@@ -58,3 +59,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 02: video · descobre · cadeira (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'For or since? Two answers about the same pain.',
+  a: { t: 'A period', falas: [['Doctor', 'How long have you had this pain?'], ['Patient', 'I’ve had it <mark>for</mark> three days.']], d: '<b>for</b> + how long: three days, a week, a month.' },
+  b: { t: 'A starting point', falas: [['Doctor', 'And when did it start?'], ['Patient', 'I’ve had it <mark>since</mark> Monday.']], d: '<b>since</b> + when it started: Monday, last night, 8 AM.' },
+  pergunta: 'Same pain, two answers. What is different?',
+  pergunta2: 'Now you. For or since?',
+  itens: [
+    { p: 'The patient says: “I’ve had a cough … two weeks.”', o: ['for', 'since'], c: 0, d: 'Two weeks is a period.' },
+    { p: 'The patient says: “I’ve had a headache … this morning.”', o: ['for', 'since'], c: 1, d: 'This morning is a starting point.' },
+    { p: 'The patient says: “I’ve felt dizzy … last Friday.”', o: ['for', 'since'], c: 1, d: 'Last Friday is a starting point.' },
+    { p: 'The patient says: “I’ve had back pain … six months.”', o: ['for', 'since'], c: 0, d: 'Six months is a period.' }
+  ],
+  nota: 'Count or point? A period of time (three days, a month): <b>for</b>. A starting point (Monday, 8 AM, last night): <b>since</b>. Both go with <b>have had</b>.',
+  uso: { p: 'Your turn. Ask a patient how long, then answer as the patient.', molde: ['How long have you had …?', 'I’ve had it for …', 'I’ve had it since …'], ex: 'How long have you had this cough? I’ve had it for a week. I’ve had it since last Monday.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

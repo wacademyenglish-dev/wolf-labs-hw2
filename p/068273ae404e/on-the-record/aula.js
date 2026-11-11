@@ -34,10 +34,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Superman, 2025. The official trailer.', p: 'React first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'redacao', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'coletiva', rot: 'V · He Said, She Asked', t: 'He said he had stopped a war. She asked if he had asked the President.', p: 'Tap what people said, asked and told. Then finish the rule.' },
-  { k: 'pagina', est: 'o', min: 7, img: 'redacao', rot: 'VI · The Front Page', t: 'Report every quote right, and it goes on the front page.', p: 'Read the quote. Report it out loud. Then tap Check.' },
-  { k: 'fofoca', est: 'o', min: 6, img: 'coletiva', rot: 'VII · What Did They Say?', t: 'Tell the story of your day: who said what?', p: 'Tap each word when you use it. Then say it to the teacher.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'f', min: 4, img: 'redacao', rot: 'V · Flip to Reported', t: 'What they said, and what you write in the paper.', p: 'Flip each line. Notice what moves back. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'coletiva', rot: 'VI · He Said, She Asked', t: 'He said he had stopped a war. She asked if he had asked the President.', p: 'Tap what people said, asked and told. Then finish the rule.' },
+  { k: 'pagina', est: 'o', min: 7, img: 'redacao', rot: 'VII · The Front Page', t: 'Report every quote right, and it goes on the front page.', p: 'Read the quote. Report it out loud. Then tap Check.' },
+  { k: 'fofoca', est: 'o', min: 6, img: 'coletiva', rot: 'VIII · What Did They Say?', t: 'Tell the story of your day: who said what?', p: 'Tap each word when you use it. Then say it to the teacher.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var FILME = 'Superman', ANO = '2025';
@@ -247,3 +248,23 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Supe
     { q: 'What did your parents tell you when you were young?', ex: 'They told me to always help people.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The newsroom, flipped. Watch the words move.',
+  frases: [
+    { de: ['Lois:', '“I', '*am', 'ready.”'], para: ['Lois', 'said', '+she', '*was', 'ready', '.'], d: 'One step back: am → was. I becomes she.' },
+    { de: ['Clark to Lois:', '“I', '*will', 'call', 'you.”'], para: ['Clark', 'told', 'Lois', '+he', '*would', 'call', '+her', '.'], d: 'will → would. I → he, you → her.' },
+    { de: ['Perry:', '“Where', '*do', 'you', 'live', '?”'], para: ['Perry', 'asked', 'me', 'where', '+I', '*lived', '.'], d: 'A question goes back to sentence order. No do, no did.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'Go one step back: is → <b>was</b>, will → <b>would</b>, can → <b>could</b>. The pronouns change too: I → she. <b>told</b> needs a person; <b>said</b> doesn’t. Questions: asked <b>where I lived</b>, asked <b>if</b> I liked it. Orders: told him <b>to</b> go, <b>not to</b> go.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'He said: “I can fly.”', r: 'He said he <b>could</b> fly.' },
+    { de: 'She said: “I’m tired.”', r: 'She said she <b>was</b> tired.' },
+    { de: 'Perry asked: “Do you like it?”', r: 'Perry asked <b>if</b> I <b>liked</b> it.' },
+    { de: 'Lois said to him: “Don’t go.”', r: 'Lois told him <b>not to go</b>.' }
+  ],
+  uso: { p: 'Your turn. Something a friend or a coworker said to you. Report it.', molde: ['She said she …', 'He told me he …'], ex: 'My sister said she was tired. My teacher told me I would pass.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

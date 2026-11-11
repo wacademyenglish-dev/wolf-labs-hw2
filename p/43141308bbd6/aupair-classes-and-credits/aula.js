@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 23, kick: 'AU PAIR · MODULE 6 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 5, img: 'conversa', rot: 'I · English Tips', t: 'Au pairs share how they improved.', p: 'One question first, then the video, then more questions.' },
-  { k: 'leitura', est: 'l', min: 9, img: 'capa', rot: 'II · The Course Catalog', t: 'Lakeview Community College (fictional).', p: 'Read the catalog. Then answer the questions.' },
-  { k: 'multipla', est: 'f', min: 12, img: 'conversa', rot: 'III · Do the Math', t: 'Six credits, $500 from the family.', p: 'Read the case. Choose. Then explain the numbers.' },
-  { k: 'formulario', est: 'w', min: 10, img: 'capa', rot: 'IV · Enroll', t: 'Fill in Mariana’s enrollment form.', p: 'Read her choices. Fill in every field. Then check.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 23: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'l', min: 4, img: 'conversa', rot: 'II · Teen or Ty?', t: 'Numbers that sound almost the same.', p: 'Listen to the pairs. Then the ear test. Then say yours.' },
+  { k: 'leitura', est: 'l', min: 9, img: 'capa', rot: 'III · The Course Catalog', t: 'Lakeview Community College (fictional).', p: 'Read the catalog. Then answer the questions.' },
+  { k: 'multipla', est: 'f', min: 12, img: 'conversa', rot: 'IV · Do the Math', t: 'Six credits, $500 from the family.', p: 'Read the case. Choose. Then explain the numbers.' },
+  { k: 'formulario', est: 'w', min: 10, img: 'capa', rot: 'V · Enroll', t: 'Fill in Mariana’s enrollment form.', p: 'Read her choices. Fill in every field. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 23: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'LaOBVqvYvl4', titulo: 'Matching tips 3: Tips for improving your English as an au pair', fonte: 'CULTURAL CARE AU PAIR · 40 SEC',
@@ -67,3 +68,24 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 23: video · leitura · multipla · formulario (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G11 · uma cena curta nova (k: gx) antes de leitura.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'som2', titulo: 'Thirteen or thirty? Listen first.',
+  toque: 'Tap ▶ and listen. The teens (thirteen) end long and strong. The ty numbers (thirty) have the strong part first, and end short.',
+  pares: [
+    [{ t: 'thirteen', fala: 'The college is thirteen miles away.' }, { t: 'thirty', fala: 'The college is thirty miles away.' }],
+    [{ t: 'fifteen', fala: 'The class costs fifteen dollars.' }, { t: 'fifty', fala: 'The class costs fifty dollars.' }]
+  ],
+  pergunta: 'The ear test. Which one do you hear?',
+  itens: [
+    { fala: 'The book costs sixteen dollars.', o: ['$16', '$60'], c: 0 },
+    { fala: 'The class has thirty students.', o: ['13', '30'], c: 1 },
+    { fala: 'The family pays fifty dollars for the book.', o: ['$15', '$50'], c: 1 },
+    { fala: 'The college is thirteen miles away.', o: ['13', '30'], c: 0 }
+  ],
+  nota: '<b>-teen</b> ends long and strong: thir<b>TEEN</b>. <b>-ty</b> ends short, and the first part is strong: <b>THIR</b>ty. Listen to the end of the word.',
+  uso: { p: 'Your turn. Say three numbers about your English class: a price, a time, and a number of people. Your teacher says which ones they heard.', molde: ['It costs …', 'It starts at …', 'There are … students.'], ex: 'It costs sixty dollars. It starts at four fifteen. There are thirteen students.' },
+  prof: 'The ▶ uses the voice of the browser. No sound? Say the numbers yourself: -teen long and strong, -ty short.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_som', GX_EXPLICA); };

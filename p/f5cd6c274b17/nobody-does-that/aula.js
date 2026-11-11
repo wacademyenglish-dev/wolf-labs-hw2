@@ -16,14 +16,15 @@ var L = [
   { k: 'capa', est: null, img: 'museu' },
   { k: 'abre', est: 'o', min: 7, img: 'album', rot: 'I · When You Were Ten', t: 'Before the museum: your own life.', p: 'Pick a card. Any English you have. Nobody is corrected here.' },
   { k: 'vitrine', est: 'l', min: 7, img: 'museu', rot: 'II · Eight Cases', t: 'Eight ordinary things. Everybody did them. Then everybody stopped.', p: 'Open a case. Play the plaque. Engrave the verb. Then answer the question.' },
-  { k: 'portas', est: 'f', min: 6, img: 'museu', rot: 'III · Two Doors', t: 'A sentence needs two open doors to say USED TO.', p: 'Answer each door out loud. Then tap. Both must open.' },
-  { k: 'teste', est: 'f', min: 6, img: 'museu', rot: 'IV · The Door Test', t: 'Ten sentences. Six of them can’t get in.', p: 'Both doors, out loud. Then the verdict.' },
-  { k: 'd', est: 'f', min: 6, img: 'vhs', rot: 'V · The D', t: 'In speech nobody hears it. On paper it is the mistake.', p: 'Say it right, twice. Then tap it.' },
-  { k: 'tres', est: 'o', min: 7, img: 'album', rot: 'VI · Turn It Over', t: 'One sentence, three faces.', p: 'Say the negative out loud, then the question. Your teacher opens each one.' },
-  { k: 'placa', est: 'l', min: 7, extra: 1, img: 'payphone', rot: 'VII · Case Nine', t: 'The Sunday phone call.', p: 'Listen first. The text opens after. Then five questions.' },
-  { k: 'entrevista', est: 'o', min: 7, extra: 1, img: 'album', rot: 'VIII · Interview a Grandparent', t: 'Your teacher is seventy-five now. Interview them.', p: 'Pick a card. Build the question out loud. Check it. Then ask, and listen.' },
-  { k: 'caixa', est: 'o', min: 7, extra: 1, img: 'museu', rot: 'IX · Your Case', t: 'One case is still empty. It has your name on it.', p: 'Say the plaque. Then say when it stopped.' },
-  { k: 'fim', est: 'w', min: 6, img: 'museu', rot: 'X · Closing Time', t: 'The museum closes. Write your own plaque.', p: 'Three things you used to do, and one you didn’t use to like. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 3, img: 'museu', rot: 'III · Then, Stopped, Now', t: 'Where does each sentence live in time?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'portas', est: 'f', min: 6, img: 'museu', rot: 'IV · Two Doors', t: 'A sentence needs two open doors to say USED TO.', p: 'Answer each door out loud. Then tap. Both must open.' },
+  { k: 'teste', est: 'f', min: 6, img: 'museu', rot: 'V · The Door Test', t: 'Ten sentences. Six of them can’t get in.', p: 'Both doors, out loud. Then the verdict.' },
+  { k: 'd', est: 'f', min: 6, img: 'vhs', rot: 'VI · The D', t: 'In speech nobody hears it. On paper it is the mistake.', p: 'Say it right, twice. Then tap it.' },
+  { k: 'tres', est: 'o', min: 7, img: 'album', rot: 'VII · Turn It Over', t: 'One sentence, three faces.', p: 'Say the negative out loud, then the question. Your teacher opens each one.' },
+  { k: 'placa', est: 'l', min: 7, extra: 1, img: 'payphone', rot: 'VIII · Case Nine', t: 'The Sunday phone call.', p: 'Listen first. The text opens after. Then five questions.' },
+  { k: 'entrevista', est: 'o', min: 7, extra: 1, img: 'album', rot: 'IX · Interview a Grandparent', t: 'Your teacher is seventy-five now. Interview them.', p: 'Pick a card. Build the question out loud. Check it. Then ask, and listen.' },
+  { k: 'caixa', est: 'o', min: 7, extra: 1, img: 'museu', rot: 'X · Your Case', t: 'One case is still empty. It has your name on it.', p: 'Say the plaque. Then say when it stopped.' },
+  { k: 'fim', est: 'w', min: 6, img: 'museu', rot: 'XI · Closing Time', t: 'The museum closes. Write your own plaque.', p: 'Three things you used to do, and one you didn’t use to like. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -235,3 +236,19 @@ TOQUES.p9 = function (b, n, v) { S.p9[n] = +v; };
 TOQUES.en = function (b, n) { S.ent.sel = n; };
 TOQUES['en-ok'] = function () { S.ent.feito[S.ent.sel] = 1; };
 TOQUES.cx = function (b, n) { S.caixa.sel = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de portas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'The museum case on one line. Where does each sentence go?',
+  marcos: [{ t: 'THEN', s: 'many times, long ago' }, { t: 'IT STOPPED', s: 'one event, the end' }, { t: 'NOW', s: 'today' }],
+  frases: [
+    { f: 'People used to rent movies at the video store.', c: 0, d: 'used to · many times, then over' },
+    { f: 'Then streaming came. The store closed.', c: 1, d: 'closed · one event' },
+    { f: 'Now we watch movies at home.', c: 2, d: 'watch · true today' },
+    { f: 'I didn’t use to have a phone.', c: 0, d: 'didn’t use to · a state that ended' },
+    { f: 'One day, my last payphone card ended.', c: 1, d: 'ended · one event' },
+    { f: 'Now I carry my phone everywhere.', c: 2, d: 'carry · true today' }
+  ],
+  nota: '<b>Used to</b> lives on the left: it happened many times, and it is over. One event is the past simple. Today is the present: I <b>carry</b> my phone. Question and no: <b>did you use to</b>, <b>didn’t use to</b>, with no d.',
+  uso: { p: 'Your turn. One thing you used to do, the day it stopped, and what you do now.', molde: ['I used to …', 'Then …', 'Now I …'], ex: 'I used to play outside every day. Then I got my first computer. Now I play online.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

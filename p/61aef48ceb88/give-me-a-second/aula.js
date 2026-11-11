@@ -15,14 +15,15 @@
 var L = [
   { k: 'capa', est: null, img: 'ampulheta' },
   { k: 'abre', est: 'o', min: 7, img: 'cafe', rot: 'I · Where You Stop', t: 'Four questions. One of them will stop you.', p: 'Pick a card. Answer out loud, even badly. Your teacher counts the silences.' },
-  { k: 'regra', est: 'f', min: 6, img: 'ampulheta', rot: 'II · Four Moves', t: 'The hole is the problem, not what you put in it.', p: 'Read each move out loud. Then open when to use it.' },
-  { k: 'pratel', est: 'f', min: 6, img: 'cafe', rot: 'III · Keep the Floor', t: 'Three moves keep the conversation. Three hand it away.', p: 'Read it out loud. After this, is the other person waiting, or talking?' },
-  { k: 'amp', est: 'o', min: 7, img: 'ampulheta', rot: 'IV · The Hourglass', t: 'Six hard questions. The sand runs while you’re silent.', p: 'Say a move out loud and tap it: the hourglass flips. Then answer.' },
-  { k: 'ouve', est: 'l', min: 7, img: 'ampulheta', rot: 'V · What She Does While She Thinks', t: 'Four moves, none longer than a breath.', p: 'Listen, or hear your teacher. A little time, or a lot?' },
-  { k: 'desvio', est: 'o', min: 7, img: 'porta', rot: 'VI · Say It Without the Word', t: 'Six things. You don’t get to use the word.', p: 'Peek at the card (teacher, look away). Describe it until your teacher guesses.' },
-  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'VII · Six About You', t: 'The moves are yours now.', p: 'Answer out loud. Then the follow-up.' },
-  { k: 'cartas', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'VIII · Eight Cold Questions', t: 'Eight questions, no warning.', p: 'Turn a card. Say the move out loud. Then answer.' },
-  { k: 'fim', est: 'w', min: 6, img: 'porta', rot: 'IX · Your Own Line', t: 'Write it the way you’d say it.', p: 'Answer a hard question in writing, with one move and one “it’s a kind of”. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 3, img: 'cafe', rot: 'II · Pocket Moves', t: 'Four moves to buy a second. Keep them in the corner.', p: 'Read one line at a time. Then keep the moves in the corner for the hard questions.' },
+  { k: 'regra', est: 'f', min: 6, img: 'ampulheta', rot: 'III · Four Moves', t: 'The hole is the problem, not what you put in it.', p: 'Read each move out loud. Then open when to use it.' },
+  { k: 'pratel', est: 'f', min: 6, img: 'cafe', rot: 'IV · Keep the Floor', t: 'Three moves keep the conversation. Three hand it away.', p: 'Read it out loud. After this, is the other person waiting, or talking?' },
+  { k: 'amp', est: 'o', min: 7, img: 'ampulheta', rot: 'V · The Hourglass', t: 'Six hard questions. The sand runs while you’re silent.', p: 'Say a move out loud and tap it: the hourglass flips. Then answer.' },
+  { k: 'ouve', est: 'l', min: 7, img: 'ampulheta', rot: 'VI · What She Does While She Thinks', t: 'Four moves, none longer than a breath.', p: 'Listen, or hear your teacher. A little time, or a lot?' },
+  { k: 'desvio', est: 'o', min: 7, img: 'porta', rot: 'VII · Say It Without the Word', t: 'Six things. You don’t get to use the word.', p: 'Peek at the card (teacher, look away). Describe it until your teacher guesses.' },
+  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'VIII · Six About You', t: 'The moves are yours now.', p: 'Answer out loud. Then the follow-up.' },
+  { k: 'cartas', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'IX · Eight Cold Questions', t: 'Eight questions, no warning.', p: 'Turn a card. Say the move out loud. Then answer.' },
+  { k: 'fim', est: 'w', min: 6, img: 'porta', rot: 'X · Your Own Line', t: 'Write it the way you’d say it.', p: 'Answer a hard question in writing, with one move and one “it’s a kind of”. It goes to your My notes.' }
 ];
 
 var TR = { 'h2.mp3': 'That’s a good question, actually.', 'h3.mp3': 'How do I put it…' };
@@ -182,3 +183,15 @@ TOQUES.ov = function (b, n, v) { S.ouv[n] = v; };
 TOQUES.dv = function (b, n) { S.desvio.sel = n; };
 TOQUES['dv-ok'] = function () { S.desvio.foi[S.desvio.sel] = 1; };
 TOQUES.cf = function (b, n) { S.cartas[n] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four moves to keep in your pocket.', rotulo: 'When you need a second',
+  linhas: [
+    '<b>Hold on</b>, let me think.',
+    '<b>That’s a good question.</b>',
+    '<b>How do I put it…</b>',
+    '<b>It’s a kind of…</b> · the word will not come'
+  ],
+  uso: { p: 'Your turn. Someone asks you a hard question: Where will you be in five years? Use one move first, then answer.', molde: ['Hold on, …', 'How do I put it …'], ex: 'That’s a good question. Hold on… I think I will be in a bigger city, with a better job.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

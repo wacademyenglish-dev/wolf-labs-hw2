@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 11, kick: 'DUOLINGO ENGLISH TES
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · A Model Answer', t: 'Read a three-minute answer.', p: 'Read it out loud. Then find the five steps.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'II · Your Plan', t: 'Five steps, five short lines.', p: 'Plan your own story: one line for each step.' },
-  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'III · The Real Thing', t: 'Thirty seconds to prepare. Up to three minutes.', p: 'Use your plan. Look at the camera. Finish with what you learned.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'II · The Story Line', t: 'Where does each sentence live in a long answer?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'III · Your Plan', t: 'Five steps, five short lines.', p: 'Plan your own story: one line for each step.' },
+  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'IV · The Real Thing', t: 'Thirty seconds to prepare. Up to three minutes.', p: 'Use your plan. Look at the camera. Finish with what you learned.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'THE TOPIC: A CHALLENGE YOU FACED', tipo: 'fala',
@@ -54,3 +55,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 11: leitura · cartao · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de cartao.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'A challenge story on one line. Where does each sentence go?',
+  marcos: [{ t: 'THE START', s: 'two years ago' }, { t: 'THE CHANGE', s: 'what I did' }, { t: 'THE RESULT', s: 'six months later' }],
+  frases: [
+    { f: 'Two years ago, I started my first job.', c: 0, d: 'started · where it began' },
+    { f: 'I was the youngest person on the team.', c: 0, d: 'was · the situation' },
+    { f: 'So I decided to change.', c: 1, d: 'decided · the turn' },
+    { f: 'I wrote three questions before every meeting.', c: 1, d: 'wrote · my action' },
+    { f: 'My manager noticed me.', c: 2, d: 'noticed · the result' },
+    { f: 'Six months later, I was presenting to a client in Canada.', c: 2, d: 'six months later · the result' }
+  ],
+  nota: 'A long answer is a line with three marks: <b>the start</b> (Two years ago, I started …), <b>the change</b> (So I decided to …), <b>the result</b> (As a result, … Six months later, …). The story uses the past simple.',
+  uso: { p: 'Your turn. Your own challenge in three lines: the start, the change, the result.', molde: ['Two years ago, I …', 'So I decided to …', 'As a result, …'], ex: 'Two years ago, I moved to a new city. So I decided to join a club. As a result, I made five new friends.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

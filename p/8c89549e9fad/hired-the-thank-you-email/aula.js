@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 11, kick: 'WOLF HIRED · MODULE
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · The Three Ingredients', t: 'An HR leader shares her template and two real emails.', p: 'One question before, then the video, then the questions.' },
-  { k: 'erros', est: 'f', min: 10, img: 'capa', rot: 'II · Fix the Email', t: 'A candidate wrote a thank-you email with five problems.', p: 'Find the five problems. Say a better version, then tap.' },
-  { k: 'formulario', est: 'w', min: 16, img: 'conversa', rot: 'III · Write Yours', t: 'Use your interview notes to write the email.', p: 'Read the notes. Write each part of the email in short, clear English.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · The Email in Blocks', t: 'Three lines of a thank-you email.', p: 'Read the blocks out loud. Notice the job of each one. Then build a line and say your own.' },
+  { k: 'erros', est: 'f', min: 10, img: 'capa', rot: 'III · Fix the Email', t: 'A candidate wrote a thank-you email with five problems.', p: 'Find the five problems. Say a better version, then tap.' },
+  { k: 'formulario', est: 'w', min: 16, img: 'conversa', rot: 'IV · Write Yours', t: 'Use your interview notes to write the email.', p: 'Read the notes. Write each part of the email in short, clear English.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'HZw-DY6ryQo', titulo: 'How to Write a Thank You Email After the Interview', fonte: 'SELF MADE MILLENNIAL · 1:44–4:43', inicio: 104, fim: 283,
@@ -55,3 +56,18 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 11: video · erros · formulario (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de erros.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'A thank-you email, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Thank you', 'THANKS'], ['for taking the time', 'WHY'], ['to meet with me today.', 'WHEN']], d: 'Gratitude first, with the reason.' },
+    { b: [['I really enjoyed', 'FEELING'], ['hearing about', 'LINK', 'aux'], ['your new family trips.', 'SPECIFIC']], d: 'One specific detail from the interview.' },
+    { b: [['I look forward to', 'NEXT STEP', 'acao'], ['hearing about', 'LINK', 'aux'], ['next steps.', 'WHAT']], d: 'Enthusiasm, not pressure.' }
+  ],
+  nota: 'A thank-you email has three ingredients: <b>thank you</b> with the reason, <b>one specific detail</b> from the interview, and <b>enthusiasm</b> with the next step. Short, warm, sent within 24 hours.',
+  monta: { p: 'Build the closing line. Then say it.', pecas: [['next steps.', 'WHAT'], ['I look forward to', 'NEXT STEP', 'acao'], ['hearing about', 'LINK', 'aux']], ordem: [1, 2, 0] },
+  uso: { p: 'Your turn. The three lines for your own interview: thanks, one detail, next step.', molde: ['Thank you for …', 'I really enjoyed …', 'I look forward to …'], ex: 'Thank you for taking the time to meet with me. I really enjoyed hearing about your new office. I look forward to hearing about next steps.' },
+  prof: 'Read the blocks with the student: the words on top, the job under each one.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

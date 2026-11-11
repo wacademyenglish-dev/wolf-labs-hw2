@@ -15,10 +15,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 2, titulo: ['That’ll Be', 'the
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'capa', rot: 'I · A Normal Afternoon', t: 'Bell, phone, messages: who is it?', p: 'Read the afternoon out loud. Answer the questions. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Future or Guess?', t: 'Is will about tomorrow, or about right now?', p: 'Compare A and B. What is will or would doing?' },
-  { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'IV · Three Phone Calls', t: 'You need to find three people. Today.', p: 'Call each assistant and ask five questions. Your teacher is the assistant. Then tell your boss.' },
-  { k: 'conversa', est: 'o', min: 7, img: 'conversa', rot: 'V · Your Guesses', t: 'Guess about the people in your life, right now.', p: 'Answer with a confident guess. Then ask the question back.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Guess Line', t: 'Where does each guess live in time?', p: 'Tap a guess, then its place on the line. Notice the verbs. Then say three guesses about your own day.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Future or Guess?', t: 'Is will about tomorrow, or about right now?', p: 'Compare A and B. What is will or would doing?' },
+  { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'IV · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
+  { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'V · Three Phone Calls', t: 'You need to find three people. Today.', p: 'Call each assistant and ask five questions. Your teacher is the assistant. Then tell your boss.' },
+  { k: 'conversa', est: 'o', min: 7, img: 'conversa', rot: 'VI · Your Guesses', t: 'Guess about the people in your life, right now.', p: 'Answer with a confident guess. Then ask the question back.' }
 ];
 var PORTAS = [];
 
@@ -81,3 +82,9 @@ var PARES = [
   ['He won’t have', 'read it yet.', 'I sent it at five. He won’t have read it yet.'],
   ['That photo would be', 'about 1965.', 'Look at the car! That photo would be about 1965.'],
   ['In that photo he’d be', 'about twenty.', 'In that photo he’d be about twenty.']];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'Guesses on one afternoon. Where does each sentence go?', marcos: [{ t: 'RIGHT NOW', s: 'will + verb' }, { t: 'BEFORE NOW', s: 'will have + participle' }, { t: 'LONG AGO', s: 'would be' }], frases: [{ f: 'That’ll be the courier at the door.', c: 0, d: 'will be · a guess about now' }, { f: 'Ana’ll be at work now.', c: 0, d: 'will be · a guess about now' }, { f: 'He’ll have left by now.', c: 1, d: 'will have left · done before now' }, { f: 'The parcel won’t have arrived yet.', c: 1, d: 'won’t have arrived · not done before now' }, { f: 'That would be about 1995.', c: 2, d: 'would be · a guess about the past' }, { f: 'She’d be about twenty then.', c: 2, d: 'would be · a guess about the past' }], nota: 'A confident guess about <b>now</b>: <b>will</b> + verb: that’ll be the courier. About <b>before now</b>: <b>will have</b> + participle: he’ll have left. About <b>long ago</b>: <b>would</b>: that would be 1995. It is a deduction, not the future.', uso: { p: 'Your turn. The phone rings. Say one guess about who it is, one about where they are now, and one about what they have already done.', molde: ['That’ll be …', 'She’ll be at …', 'He’ll have …'], ex: 'That’ll be my sister. She’ll be at the airport now. Her flight will have landed an hour ago.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

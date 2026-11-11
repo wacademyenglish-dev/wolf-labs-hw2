@@ -19,12 +19,13 @@ var L = [
   { k: 'vozes', est: 'l', min: 7, img: 'fundo', rot: 'II · Six Voices', t: 'The shop asked six customers about their favorite book.', p: 'Play one. Did they say what the book IS, with a joining word?' },
   { k: 'fichas', est: 'f', min: 6, img: 'estante', rot: 'III · The Card Catalog', t: 'Eight cards. Three drawers.', p: 'Say the whole line. Then put the card in the right drawer.' },
   { k: 'puxa', est: 'f', min: 6, img: 'estante', rot: 'IV · Pull the Word', t: 'Some joining words can disappear. Some can’t.', p: 'Guess first: can the word go? Then read the rest.' },
-  { k: 'regra', est: 'f', min: 6, img: 'estante', rot: 'V · The Rule', t: 'Three drawers, one job: describe without naming.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'ded', est: 'l', min: 7, img: 'livro', rot: 'VI · Written Inside', t: 'Four books on the shelf. Each one has a line written inside.', p: 'Play it. Answer. Then describe the book with a joining word.' },
-  { k: 'registro', est: 'l', min: 7, extra: 1, img: 'fundo', rot: 'VII · The Ledger', t: 'The shop keeps a ledger. Listen to three days.', p: 'Play it. Then answer, one line at a time.' },
-  { k: 'erro', est: 'f', min: 6, extra: 1, img: 'estante', rot: 'VIII · Two Cards, One Right', t: 'Two cards for the same thing. Only one goes in the catalog.', p: 'Say the good one twice. Then tap it.' },
-  { k: 'adivinha', est: 'o', min: 7, extra: 1, img: 'estante', rot: 'IX · Don’t Say It', t: 'Your turn to write the cards. Think of something. Don’t say it.', p: 'Describe it with the frame. Your teacher guesses.' },
-  { k: 'fim', est: 'w', min: 6, img: 'livro', rot: 'X · Your Card', t: 'The book you keep, on a card.', p: 'Describe your book without its name, and the person who gave it or the place where you found it. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'estante', rot: 'V · Find the Rule', t: 'Four sentences from the shop. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'estante', rot: 'VI · The Rule', t: 'Three drawers, one job: describe without naming.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'ded', est: 'l', min: 7, img: 'livro', rot: 'VII · Written Inside', t: 'Four books on the shelf. Each one has a line written inside.', p: 'Play it. Answer. Then describe the book with a joining word.' },
+  { k: 'registro', est: 'l', min: 7, extra: 1, img: 'fundo', rot: 'VIII · The Ledger', t: 'The shop keeps a ledger. Listen to three days.', p: 'Play it. Then answer, one line at a time.' },
+  { k: 'erro', est: 'f', min: 6, extra: 1, img: 'estante', rot: 'IX · Two Cards, One Right', t: 'Two cards for the same thing. Only one goes in the catalog.', p: 'Say the good one twice. Then tap it.' },
+  { k: 'adivinha', est: 'o', min: 7, extra: 1, img: 'estante', rot: 'X · Don’t Say It', t: 'Your turn to write the cards. Think of something. Don’t say it.', p: 'Describe it with the frame. Your teacher guesses.' },
+  { k: 'fim', est: 'w', min: 6, img: 'livro', rot: 'XI · Your Card', t: 'The book you keep, on a card.', p: 'Describe your book without its name, and the person who gave it or the place where you found it. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -223,3 +224,19 @@ TOQUES.er = function (b, n, v) { S.er.esc = v; };
 TOQUES['er-prox'] = function () { S.er = { n: S.er.n + 1, esc: '' }; };
 TOQUES['ad-ok'] = function () { S.adv.ok[Math.min(S.adv.n, ADIV.length - 1)] = 1; };
 TOQUES['ad-prox'] = function () { S.adv.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.',
+  exemplos: [
+    'The book <b>I</b> keep on my desk is very old.',
+    'The man <b>my sister</b> loves works at the shop.',
+    'The place <b>where</b> I live has a small garden.',
+    'The woman <b>who</b> owns the shop knows every book.'
+  ],
+  pergunta: 'Between the noun and the new part, a joining word …',
+  opcoes: ['can disappear before a new subject (the book I keep), but where stays', 'always stays: who, that or where, every time', 'always disappears, even where'], c: 0,
+  nao: 'Not that one. Read the four sentences again: which ones have no joining word? Is there a new subject there?',
+  regra: 'Before a <b>new subject</b> (I, my sister), <b>that</b> or <b>who</b> can go away: the book <b>I</b> keep. Before a verb, they stay: the woman <b>who owns</b> the shop. And <b>where</b> never goes away: the place <b>where</b> I live.',
+  uso: { p: 'Your turn. A book, a person and a place you love. Describe them without saying the name.', molde: ['The book (that) I …', 'The person who …', 'The place where …'], ex: 'The book I read every year is small and red. The person who calls me every day is my mother. The place where I feel calm is my grandma’s kitchen.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

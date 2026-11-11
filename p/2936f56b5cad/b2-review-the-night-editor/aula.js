@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · Twenty Minutes to Print', t: 'Three reporters. Check every story.', p: 'Ask each reporter five questions. Your teacher is the reporter. Then dictate the headline and the first line.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'conversa', est: 'o', min: 8, img: 'conversa', rot: 'IV · On the Rooftop', t: 'After the paper prints: just talk.', p: 'Answer in detail, then turn the question back.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Night Editor Rule', t: 'Four lines from the headlines. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then write your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -63,3 +64,9 @@ var PARES = [
   ['The photos must', 'be approved.', 'The photos must be approved before midnight.'],
   ['I need to have', 'my laptop fixed.', 'I need to have my laptop fixed before Monday.']];
 var ERROS = { tipo: 'nota', rot: 'DRAFT · PAGE 1 · NOT CHECKED', partes: ['A lost painting ', ['says to have been found', 'is said to have been found', 'Passive reporting: is said to.'], ' in a garage. It ', ['believes', 'is believed', 'Passive: is believed.'], ' to have been painted in 1890. It is expected ', ['to sell', 'to be sold', 'Passive infinitive: to be sold.'], ' for millions. The garage roof is ', ['thought to fall', 'thought to have fallen', 'The past: to have fallen.'], ' last winter, and the painting ', ['could be damaged', 'could have been damaged', 'The past: could have been.'], '. The owner will ', ['have checked the painting', 'have the painting checked', 'have + thing + participle.'], ' by experts.'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four headlines. Find the rule yourself.', exemplos: ['The bridge <b>is said</b> to <u>be</u> the oldest in town.', 'The mayor <b>is believed</b> to <u>have left</u> the city.', 'Prices <b>are expected</b> to <u>rise</u>.', 'The tower <b>is thought</b> to <u>have been</u> built in 1890.'], pergunta: 'To report what people say or think, we use …', opcoes: ['is said / believed / thought / expected + to + verb (to have + participle for the past)', 'they says that + a verb with -ing', 'it believes + that + the infinitive'], c: 0, nao: 'Not that one. Look at the lit words: is + participle + to?', regra: '<b>is said / believed / thought / expected + to + verb</b>. For the past: <b>to have + participle</b>. The mayor is believed to have left.', uso: { p: 'Your turn. You are the night editor. Write one headline with is said to or is expected to.', molde: ['… is said to …', '… is expected to …'], ex: 'The new bridge is expected to open in May. The mayor is said to have resigned.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

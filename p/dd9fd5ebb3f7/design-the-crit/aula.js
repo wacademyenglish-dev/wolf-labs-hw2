@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 7, kick: 'ENGLISH FOR DESIGNERS
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · Three Tips for a Crit', t: 'How to give feedback that helps.', p: 'One question before, then the video, then the questions.' },
-  { k: 'erros', est: 'f', min: 10, img: 'capa', rot: 'II · Fix the Feedback', t: 'A colleague gave bad feedback. Make it useful.', p: 'Find the five problems. Say a better version, then tap.' },
-  { k: 'cadeira', est: 'o', min: 16, img: 'conversa', rot: 'III · Your Turn in the Crit', t: 'Your teacher shows work. You give feedback.', p: 'Follow the steps. Your teacher answers as the designer.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Find the Rule', t: 'Four crit sentences. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'erros', est: 'f', min: 10, img: 'capa', rot: 'III · Fix the Feedback', t: 'A colleague gave bad feedback. Make it useful.', p: 'Find the five problems. Say a better version, then tap.' },
+  { k: 'cadeira', est: 'o', min: 16, img: 'conversa', rot: 'IV · Your Turn in the Crit', t: 'Your teacher shows work. You give feedback.', p: 'Follow the steps. Your teacher answers as the designer.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'CBm9gdwshf8', titulo: 'UX Design Critiques: 3 Tips for Effective Feedback', fonte: 'NIELSEN NORMAN GROUP · 0:28–3:15', inicio: 28, fim: 195,
@@ -55,3 +56,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 07: video · erros · cadeira (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de erros.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences from a crit. Find the rule yourself.',
+  exemplos: [
+    'What’s <b>working</b> is the clear headline.',
+    'I <b>wonder if</b> the text is too small.',
+    'It <b>might</b> help to add more contrast.',
+    'You <b>could try</b> a darker blue.'
+  ],
+  pergunta: 'What do wonder if, might and could try do?',
+  opcoes: ['They soften the feedback and invite ideas', 'They give a strict order', 'They ask a yes or no question'], c: 0,
+  nao: 'Not that one. Read the four sentences again: does anyone give an order?',
+  regra: '<b>Soft words</b> keep the designer thinking, not defending: <b>I wonder if …</b>, <b>It might …</b>, <b>You could try …</b>. Start with <b>What’s working</b>, then say what and why.',
+  uso: { p: 'Your turn. A colleague shows a poster with small text. Give one positive comment and one soft suggestion.', molde: ['What’s working is …', 'I wonder if …', 'You could try …'], ex: 'What’s working is the strong image. I wonder if the text is a little small. You could try a bigger size.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

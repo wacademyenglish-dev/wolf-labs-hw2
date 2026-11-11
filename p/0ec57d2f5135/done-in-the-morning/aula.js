@@ -36,10 +36,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Severance. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'mesa', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 7, img: 'neve', rot: 'V · The Memo', t: 'A memo from Lumon. It was done. Nobody says by whom.', p: 'Read the memo out loud. Tap the passive verbs. Then finish the rule.' },
-  { k: 'macro', est: 'o', min: 7, img: 'mesa', rot: 'VI · Macrodata Refinement', t: 'Six scary groups of numbers. Right or wrong? Say it right, and the group is refined.', p: 'Read the sentence. Tap Right or Wrong. If it is wrong, say it right out loud.' },
-  { k: 'arquivo', est: 'o', min: 7, img: 'neve', rot: 'VII · Your File', t: 'Interview your teacher: where was it made, when was it built?', p: 'Build each question out loud. Tap Check. Then ask it, and find one thing you have in common.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · One Minute', t: 'One minute.', p: 'Minute.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'V · Flip to Passive', t: 'Active on the left. Passive on the right.', p: 'Flip each sentence. Notice what steps to the front. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 7, img: 'neve', rot: 'VI · The Memo', t: 'A memo from Lumon. It was done. Nobody says by whom.', p: 'Read the memo out loud. Tap the passive verbs. Then finish the rule.' },
+  { k: 'macro', est: 'o', min: 7, img: 'mesa', rot: 'VII · Macrodata Refinement', t: 'Six scary groups of numbers. Right or wrong? Say it right, and the group is refined.', p: 'Read the sentence. Tap Right or Wrong. If it is wrong, say it right out loud.' },
+  { k: 'arquivo', est: 'o', min: 7, img: 'neve', rot: 'VIII · Your File', t: 'Interview your teacher: where was it made, when was it built?', p: 'Build each question out loud. Tap Check. Then ask it, and find one thing you have in common.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · One Minute', t: 'One minute.', p: 'Minute.' }
 ];
 
 var SERIE = 'Severance', ANO = '2022';
@@ -250,3 +251,23 @@ var FIM = { tipo: 'minuto', rot: 'VIII · One Minute', t: 'One minute of passive
   ],
   palavras: ['is made', 'was built', 'is known for', 'were told', 'will be', 'by'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The office, flipped. Watch the words move.',
+  frases: [
+    { de: ['Lumon', 'built', 'the office', '.'], para: ['*The office', '+was built', '*by Lumon', '.'], d: 'The thing goes first. Was + built. The doer moves to the end, with by.' },
+    { de: ['The team', 'refines', 'the numbers', 'every day', '.'], para: ['*The numbers', '+are refined', '*by the team', 'every day', '.'], d: 'Now: are + refined. More than one number: are.' },
+    { de: ['*Did', 'Lumon', 'tell', 'Mark', '?'], para: ['*Was', '*Mark', '+told', '?'], d: 'A question: was goes first. No did.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'What the action happens to goes first. Then <b>be + third form</b>: was built, are refined, was told. The doer is optional: by Lumon only when it matters. In a question, <b>Was</b> Mark told?',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'Someone moved the files last night.', r: 'The files <b>were moved</b> last night.' },
+    { de: 'Someone writes the memo every morning.', r: 'The memo <b>is written</b> every morning.' },
+    { de: 'Did they tell Mark about the door?', r: '<b>Was</b> Mark <b>told</b> about the door?' },
+    { de: 'They didn’t finish the work.', r: 'The work <b>wasn’t finished</b>.' }
+  ],
+  uso: { p: 'Your turn. Something that is done at your work or school every day. Say it in the passive.', molde: ['The reports are …', 'The office is …'], ex: 'The reports are checked every morning. The office is cleaned at night.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

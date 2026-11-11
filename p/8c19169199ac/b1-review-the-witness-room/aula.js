@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Witness Room', t: 'Three witnesses. Who saw what?', p: 'Ask each witness five questions. Your teacher is the witness. Then report to the chief.' },
   { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
   { k: 'conversa', est: 'o', min: 8, img: 'conversa', rot: 'IV · Your Stories', t: 'Your turn: real stories, your life.', p: 'Answer, then ask the question back: “What about you?”' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Witness Rule', t: 'Four sentences from the witnesses. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -65,3 +66,9 @@ var PODE = [
 var ORDEM = { rot: 'THE NIGHT OF THE CAKE', pede: 'Tap the events in the right order.', chips: ['First,', 'While …,', 'When …,', 'Since then,'],
   modelo: 'First, the judge’s dog ran away at ten. While the judge was looking for him, the dog was walking into the contest hall. When the guard heard a crash, the cake was already gone. Since then, everybody has laughed about it: the dog has become famous!',
   passos: ['The judge’s dog ran away at ten.', 'The dog was walking into the contest hall.', 'The guard heard a crash at eleven.', 'The cake was gone.', 'The judge found his dog, with cream on its nose.', 'Since then, the dog has become famous in town!'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four statements. Find the rule yourself.', exemplos: ['I <b>was working</b> when the lights <u>went</u> out.', 'While she <b>was walking</b>, she <u>heard</u> a crash.', 'They <b>were sleeping</b> when the thief <u>came</u> in.', 'He <b>was cooking</b> when I <u>called</u>.'], pergunta: 'The long action and the short action:', opcoes: ['was / were + -ing for the long one, past simple for the short one', 'past simple for both actions', 'was / were + -ing for both actions'], c: 0, nao: 'Not that one. Which action was in progress? Which one interrupted it?', regra: 'The long action in progress: <b>was / were + -ing</b>. The short action that interrupts it: <b>past simple</b>. I was working when the lights went out.', uso: { p: 'Your turn. You are a witness. Say what you were doing last night at eleven, and what happened.', molde: ['At eleven I was …', 'When … , I …'], ex: 'At eleven I was watching TV when I heard a loud noise.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

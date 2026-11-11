@@ -14,7 +14,8 @@ var L = [
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · Messages from Gate 14', t: 'Still waiting.', p: 'Read the messages out loud with your teacher. Then look closer.' },
   { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'II · How Long?', t: 'The Portuguese trap.', p: 'Compare A and B. Which one does an English speaker say? Why?' },
   { k: 'missao', est: 'o', min: 15, img: 'conversa', rot: 'III · Three Passengers', t: 'Everybody has a story.', p: 'Ask each passenger five questions. Your teacher is the passenger. Then tell the airline.' },
-  { k: 'conversa', est: 'o', min: 8, img: 'capa', rot: 'IV · Your Long Waits', t: 'You and waiting.', p: 'Answer, then ask the question back: “And you?”' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'IV · Gate Pairs', t: 'Five pairs from the delayed flight.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'conversa', est: 'o', min: 8, img: 'capa', rot: 'V · Your Long Waits', t: 'You and waiting.', p: 'Answer, then ask the question back: “And you?”' }
 ];
 var PORTAS = [];
 
@@ -67,3 +68,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* B1 · I’ve Been Waiting: leitura · descobre · missao · conversa */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de conversa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'She has been waiting since 7:30.', x: 'She waits since 7:30.', d: 'From a time until now: has been + <b>waiting</b>.' }, { c: 'We have been here for six hours.', x: 'We have been here since six hours.', d: 'A period of time: <b>for</b>.' }, { c: 'How long have you been waiting?', x: 'How long are you waiting?', d: 'How long until now: <b>have you been</b> + -ing.' }, { c: 'I’ve read two books today.', x: 'I’ve been reading two books today.', d: 'A number of books: the simple form, <b>read</b>.' }, { c: 'I’ve known her since school.', x: 'I’ve been knowing her since school.', d: 'know is a state verb: no -ing.' }], nota: '<b>Have been -ing</b> says how long it has gone on: for six hours, since 7:30. A number or a result: <b>have read</b>. A state verb like know: no -ing.', uso: { p: 'Your turn. You are at the gate. Tell the passenger next to you how long you have been waiting, and what you have done.', molde: ['I’ve been waiting for …', 'I’ve read / drunk / watched …'], ex: 'I’ve been waiting for four hours. I’ve read two chapters and I’ve drunk three coffees.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

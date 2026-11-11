@@ -14,7 +14,8 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'II · The Letters', t: 'Roll, move, answer the reader.', p: 'Your teacher rolls the die and reads the letter. You answer, out loud, like Ivy.' },
   { k: 'cartao', est: 'w', min: 7, img: 'conversa', rot: 'III · This Week’s Answer', t: 'Choose one letter. Write Ivy’s answer.', p: 'Four lines: what will happen if…, provided that…, if I were you…, and if only…' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Mistake Hunter', t: 'Five letters to Ivy. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -53,3 +54,9 @@ var ESCOLHA = [
   { a: 'go back and change one decision', b: 'see one day of your future', chips: ['If I could go back, I would have …', 'If I saw …, I’d …'], ex: 'Change one decision. If I had studied music, I would be happier.' },
   { a: 'lend money to a friend, provided they sign a paper', b: 'never lend money to friends', chips: ['provided that …', 'unless …'], ex: 'Never, unless it’s an emergency.' },
   { a: 'win a big prize but lose your best friend', b: 'stay the same', chips: ['If I won, I would …', 'I’d rather …'], ex: 'Stay the same. If I lost my friend, the money wouldn’t matter.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Dear Ivy.', toque: 'Advanced learners often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'If you [[will call]] her, she’ll understand.', r: 'If you <b>call</b> her, she’ll understand.', d: 'After if: the present. No will.' }, { f: 'I’ll help you [[unless you don’t]] want me to.', r: 'I’ll help you <b>unless</b> you want me to.', d: 'unless already means if not. No second not.' }, { f: 'If I [[would win]] the lottery, I’d travel.', r: 'If I <b>won</b> the lottery, I’d travel.', d: 'Imagine it: if + past, would + verb.' }, { f: 'I wish I [[have]] more time.', r: 'I wish I <b>had</b> more time.', d: 'wish + past.' }, { f: 'If you [[would have]] asked, I would have helped.', r: 'If you <b>had</b> asked, I would have helped.', d: 'if + had + participle. No would in the if part.' }], nota: 'Never <b>would</b> in the if part: If you <b>call</b>, If I <b>won</b>, If you <b>had asked</b>. <b>Unless</b> = if not. <b>Wish</b> + past.', uso: { p: 'Your turn. Give Ivy’s reader some advice: one real condition and one imaginary one.', molde: ['If you …, you’ll …', 'If I were you, I’d …'], ex: 'If you talk to her tonight, she’ll listen. If I were you, I’d write her a letter.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

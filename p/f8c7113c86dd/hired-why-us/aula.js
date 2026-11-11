@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 5, kick: 'WOLF HIRED · MODULE 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · Not About You, About Them', t: 'A former CEO explains what they want to hear.', p: 'One question before, then the video, then the questions.' },
-  { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · Read the Company Page', t: 'A fictional company and a strong answer.', p: 'Read the page and the answer out loud. Then answer the questions.' },
-  { k: 'transforma', est: 'o', min: 14, img: 'conversa', rot: 'III · From Generic to Specific', t: 'Turn a weak answer into a memorable one.', p: 'Read the generic line and the clue. Say the specific version.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'II · The Pocket Rule', t: 'Four phrases for “Why us?”.', p: 'Read one line at a time. Then keep the rule in the corner for the next pages.' },
+  { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'III · Read the Company Page', t: 'A fictional company and a strong answer.', p: 'Read the page and the answer out loud. Then answer the questions.' },
+  { k: 'transforma', est: 'o', min: 14, img: 'conversa', rot: 'IV · From Generic to Specific', t: 'Turn a weak answer into a memorable one.', p: 'Read the generic line and the clue. Say the specific version.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'fN927yxTOYs', titulo: 'Why Do You Want To Work Here? Best Answer', fonte: 'THE COMPANIES EXPERT · 0:00–3:26', inicio: 0, fim: 206,
@@ -55,3 +56,16 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 05: video · leitura · transforma (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de leitura.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'Why us?',
+  linhas: [
+    '<b>What drew me to</b> your company is your mentoring program.',
+    'I’ve <b>always been interested in</b> healthy food. · I’ve been using your app <b>for two years</b>.',
+    'I was <b>impressed by</b> your growth: three new offices in two years.',
+    'This role is <b>a great fit because</b> it combines data and customers.'
+  ],
+  uso: { p: 'Your turn. Choose a real company. One fact about them and one reason the job fits you.', molde: ['What drew me to … is …', 'This role is a great fit because …'], ex: 'What drew me to your company is your training program. This role is a great fit because I love teaching new people.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

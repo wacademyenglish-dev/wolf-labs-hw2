@@ -19,15 +19,16 @@
 var L = [
   { k: 'capa', est: null, img: 'cracha' },
   { k: 'cracha', est: 'o', min: 7, img: 'cracha', rot: 'I · Write Your Badge', t: 'An empty conference badge. Two ways to say the same true thing.', p: 'Pick a side for each line. Then finish the last line out loud, and confirm three things about your teacher with a tag.' },
-  { k: 'maquina', est: 'f', min: 6, img: 'corredor', rot: 'II · The Tag Machine', t: 'Three things travel into the tag: the auxiliary, the person, and the sign.', p: 'Read the sentence. Choose the tag. Say the whole thing.' },
-  { k: 'curva', est: 'o', min: 7, img: 'corredor', rot: 'III · Up or Down?', t: 'Same words, two meanings. Only the last note changes.', p: 'Read the situation. Choose the line. Then say it with that melody, and then the other way.' },
-  { k: 'erros', est: 'f', min: 6, img: 'corredor', rot: 'IV · Not Isn’t It for Everything', t: '“Isn’t it?” only fits sentences with IS and IT.', p: 'Every sentence has a wrong tag. Choose the right one, and say the whole sentence.' },
-  { k: 'situacoes', est: 'o', min: 7, img: 'cadeiras', rot: 'V · Four Situations', t: 'Four work situations. Neither answer is wrong.', p: 'Pick the side closer to you. Say the inner voice with a falling tag. Then answer the question.' },
-  { k: 'elogio', est: 'o', min: 7, img: 'cadeiras', rot: 'VI · Somebody Said You Were Good', t: 'Your teacher pays you a compliment. Answer without thinking.', p: 'Answer out loud. Then your teacher taps the shape your answer had.' },
-  { k: 'estudo', est: 'l', min: 7, extra: 1, img: 'arquivo', rot: 'VII · Nine to Eighty-Two', t: 'Sixty-two studies about feeling like a fraud at work, and none of them agreed.', p: 'Play all three parts. Then take a side.' },
-  { k: 'evento', est: 'o', min: 7, extra: 1, img: 'corredor', rot: 'VIII · The Networking Event', t: 'Three people at a conference. You read their badges, but you’re not sure about everything.', p: 'Confirm each fact with a tag. Sure? Falling. Not sure? Rising. Your teacher answers as that person.' },
-  { k: 'semtag', est: 'o', min: 7, extra: 1, img: 'saida', rot: 'IX · Take the Tag Off', t: 'Same idea, one thing missing: the doubt at the end.', p: 'Say it with the tag. Then remove the tag and say it flat.' },
-  { k: 'fim', est: 'w', min: 6, img: 'cracha', rot: 'X · Your Badge Again', t: 'Your badge from scene I comes back.', p: 'Write your badge with no tag at the end, and three sentences with tags about people you know. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cracha', rot: 'II · The Tag Flip', t: 'A statement grows a tag.', p: 'Watch the words. Notice what the tag copies and what it flips. Then add tags to four sentences.' },
+  { k: 'maquina', est: 'f', min: 6, img: 'corredor', rot: 'III · The Tag Machine', t: 'Three things travel into the tag: the auxiliary, the person, and the sign.', p: 'Read the sentence. Choose the tag. Say the whole thing.' },
+  { k: 'curva', est: 'o', min: 7, img: 'corredor', rot: 'IV · Up or Down?', t: 'Same words, two meanings. Only the last note changes.', p: 'Read the situation. Choose the line. Then say it with that melody, and then the other way.' },
+  { k: 'erros', est: 'f', min: 6, img: 'corredor', rot: 'V · Not Isn’t It for Everything', t: '“Isn’t it?” only fits sentences with IS and IT.', p: 'Every sentence has a wrong tag. Choose the right one, and say the whole sentence.' },
+  { k: 'situacoes', est: 'o', min: 7, img: 'cadeiras', rot: 'VI · Four Situations', t: 'Four work situations. Neither answer is wrong.', p: 'Pick the side closer to you. Say the inner voice with a falling tag. Then answer the question.' },
+  { k: 'elogio', est: 'o', min: 7, img: 'cadeiras', rot: 'VII · Somebody Said You Were Good', t: 'Your teacher pays you a compliment. Answer without thinking.', p: 'Answer out loud. Then your teacher taps the shape your answer had.' },
+  { k: 'estudo', est: 'l', min: 7, extra: 1, img: 'arquivo', rot: 'VIII · Nine to Eighty-Two', t: 'Sixty-two studies about feeling like a fraud at work, and none of them agreed.', p: 'Play all three parts. Then take a side.' },
+  { k: 'evento', est: 'o', min: 7, extra: 1, img: 'corredor', rot: 'IX · The Networking Event', t: 'Three people at a conference. You read their badges, but you’re not sure about everything.', p: 'Confirm each fact with a tag. Sure? Falling. Not sure? Rising. Your teacher answers as that person.' },
+  { k: 'semtag', est: 'o', min: 7, extra: 1, img: 'saida', rot: 'X · Take the Tag Off', t: 'Same idea, one thing missing: the doubt at the end.', p: 'Say it with the tag. Then remove the tag and say it flat.' },
+  { k: 'fim', est: 'w', min: 6, img: 'cracha', rot: 'XI · Your Badge Again', t: 'Your badge from scene I comes back.', p: 'Write your badge with no tag at the end, and three sentences with tags about people you know. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -204,3 +205,23 @@ TOQUES.ev = function (b, n, v) { S.ev.esc = v; };
 TOQUES['ev-prox'] = function () { var e = S.ev; e.esc = ''; e.f++; if (e.f > 2) { e.f = 0; e.p++; } };
 TOQUES.sm = function () { S.sm.sem = 1; };
 TOQUES['sm-prox'] = function () { S.sm = { n: S.sm.n + 1, sem: 0 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de maquina.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'A statement, then the same one with a tag. Watch the words.',
+  frases: [
+    { de: ['She', '*is', 'a lawyer', '.'], para: ['She', '*is', 'a lawyer,', '+isn’t she', '?'], d: 'The helper flips its sign and comes back: is, isn’t she.' },
+    { de: ['You', '*like', 'the job', '.'], para: ['You', '*like', 'the job,', '+don’t you', '?'], d: 'No be in the sentence: the helper is do.' },
+    { de: ['They', '*didn’t', 'call', '.'], para: ['They', '*didn’t', 'call,', '+did they', '?'], d: 'A no sentence gets a yes tag.' }
+  ],
+  notaBotao: 'What changes?',
+  nota: 'The tag copies the <b>helper</b> and the <b>person</b>, and it flips the <b>sign</b>: yes + no, or no + yes. Voice down = I am telling you. Voice up = I am asking.',
+  pergunta: 'Your turn. Add the tag out loud, then check.',
+  treino: [
+    { de: 'He works here.', r: 'He works here, <b>doesn’t he</b>?' },
+    { de: 'We aren’t late.', r: 'We aren’t late, <b>are we</b>?' },
+    { de: 'You can swim.', r: 'You can swim, <b>can’t you</b>?' },
+    { de: 'It was a good talk.', r: 'It was a good talk, <b>wasn’t it</b>?' }
+  ],
+  uso: { p: 'Your turn. Three things you know about your teacher. Say each one with a tag.', molde: ['You live in …, don’t you?', 'You aren’t …, are you?'], ex: 'You work in the morning, don’t you? You aren’t tired, are you?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

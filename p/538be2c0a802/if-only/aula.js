@@ -31,10 +31,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Toy Story 5. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'caixa', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'quarto', rot: 'V · I Wish, If Only', t: 'An old toy writes a note. Find the pattern.', p: 'Read the note out loud. Tap the wishes. Then finish the rule.' },
-  { k: 'caixa', est: 'o', min: 7, img: 'caixa', rot: 'VI · The Attic Box', t: 'Four toys in the box. Choose how you answer each one.', p: 'Read what the toy says. Pick your answer. Then say the talk out loud.' },
-  { k: 'desejos', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'VII · Your Wishes', t: 'Six wishes from your own life.', p: 'Spin for a question. Answer with I wish / If only / I hope.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Debate', t: 'The debate.', p: 'Debate.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sotao', rot: 'V · Back, Now, Habit', t: 'Where does each wish live?', p: 'Tap a wish, then its place on the line. Notice the verbs. Then say three wishes about you.' },
+  { k: 'regra', est: 'f', min: 6, img: 'quarto', rot: 'VI · I Wish, If Only', t: 'An old toy writes a note. Find the pattern.', p: 'Read the note out loud. Tap the wishes. Then finish the rule.' },
+  { k: 'caixa', est: 'o', min: 7, img: 'caixa', rot: 'VII · The Attic Box', t: 'Four toys in the box. Choose how you answer each one.', p: 'Read what the toy says. Pick your answer. Then say the talk out loud.' },
+  { k: 'desejos', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'VIII · Your Wishes', t: 'Six wishes from your own life.', p: 'Spin for a question. Answer with I wish / If only / I hope.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Debate', t: 'The debate.', p: 'Debate.' }
 ];
 
 var FILME = 'Toy Story 5', ANO = '2026';
@@ -274,3 +275,20 @@ var FIM = { tipo: 'debate', rot: 'VIII · The Debate', t: 'Should children play 
   b: { rot: 'No, it’s not so simple', motivos: ['I wish I had had a tablet as a child!', 'Tablets can teach a lot.', 'If only parents had more time to play.'] },
   frases: ['I wish…', 'If only…', 'I see your point, but…'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'The toys in the attic box. Where does each wish go?',
+  marcos: [{ t: 'BEFORE', s: 'it already happened' }, { t: 'NOW', s: 'not true today' }, { t: 'A HABIT', s: 'it keeps happening' }],
+  frases: [
+    { f: 'If only she hadn’t left the toy in the attic.', c: 0, d: 'had + left · about before' },
+    { f: 'I wish I were new.', c: 1, d: 'were · about now' },
+    { f: 'I wish that tablet would stop talking.', c: 2, d: 'would · a habit that annoys me' },
+    { f: 'If only I hadn’t stayed in the box.', c: 0, d: 'had + stayed · about before' },
+    { f: 'I wish she played with me.', c: 1, d: 'played · about now' },
+    { f: 'I wish the kids would play with me again.', c: 2, d: 'would · somebody else’s habit' }
+  ],
+  nota: 'A wish takes the verb <b>back</b>. Before: <b>had</b> + the third form. Now: a past form (<b>were</b> for I, he, she). A habit that annoys you: <b>would</b>. Never “I wish she plays”, and never “I wish I would”.',
+  uso: { p: 'Your turn. One thing you wish had been different before, one thing you wish were different now, and one habit you wish somebody would stop.', molde: ['If only I had …', 'I wish I were …', 'I wish he would stop …'], ex: 'If only I had saved money. I wish I were taller. I wish my neighbor would stop playing loud music.' },
+  prof: 'Let the student place the wishes alone. A wrong place comes back with one tap.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

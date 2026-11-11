@@ -21,12 +21,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'noite', est: 'o', min: 7, img: 'janela', rot: 'I · You and the Night', t: 'Before the train: you, the night and the things you miss.', p: 'One question at a time. Then your teacher answers too.' },
   { k: 'planos', est: 'o', min: 7, img: 'plataforma', rot: 'II · Six Shots', t: 'The night in six shots. Every shot punches the ticket.', p: 'Read the shot out loud like a movie script. Answer the question. Then join the two ideas in one sentence.' },
-  { k: 'regra', est: 'f', min: 6, img: 'corredor', rot: 'III · The Rule', t: 'The clause has no subject. It borrows the one after the comma.', p: 'Read the four kinds. Then say each trap the right way before you tap it.' },
-  { k: 'relatorio', est: 'f', min: 6, img: 'cabine', rot: 'IV · The Conductor’s Report', t: '3 AM. Every line of the report hides who did it.', p: 'Your teacher reads the line as the inspector. Put the real subject back after the comma. The black bar lifts.' },
-  { k: 'inspetor', est: 'o', min: 7, img: 'plataforma', rot: 'V · The Inspector at Dawn', t: '6 AM. Kessel Station. You are Nora. Tell the night again.', p: 'Your teacher is the inspector. Answer from memory, with one clause. Then ask him back.' },
-  { k: 'quiz', est: 'f', min: 6, img: 'janela', rot: 'VI · Quick Check', t: 'Six quick lines from the night train.', p: 'Say the whole sentence. Then tap.' },
-  { k: 'bilhete', est: 'o', min: 7, extra: 1, img: 'maleta', rot: 'VII · Your Night Shots', t: 'Your real life, in short shots.', p: 'Print a ticket. Answer in one short, cinematic sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Missed Train', t: 'What did you once miss that turned out to be lucky?', p: 'Write it like a thriller, in three short shots. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'plataforma', rot: 'III · The Flip', t: 'Watch the two sentences become one.', p: 'Flip each pair of sentences into one. Notice who does both actions. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'corredor', rot: 'IV · The Rule', t: 'The clause has no subject. It borrows the one after the comma.', p: 'Read the four kinds. Then say each trap the right way before you tap it.' },
+  { k: 'relatorio', est: 'f', min: 6, img: 'cabine', rot: 'V · The Conductor’s Report', t: '3 AM. Every line of the report hides who did it.', p: 'Your teacher reads the line as the inspector. Put the real subject back after the comma. The black bar lifts.' },
+  { k: 'inspetor', est: 'o', min: 7, img: 'plataforma', rot: 'VI · The Inspector at Dawn', t: '6 AM. Kessel Station. You are Nora. Tell the night again.', p: 'Your teacher is the inspector. Answer from memory, with one clause. Then ask him back.' },
+  { k: 'quiz', est: 'f', min: 6, img: 'janela', rot: 'VII · Quick Check', t: 'Six quick lines from the night train.', p: 'Say the whole sentence. Then tap.' },
+  { k: 'bilhete', est: 'o', min: 7, extra: 1, img: 'maleta', rot: 'VIII · Your Night Shots', t: 'Your real life, in short shots.', p: 'Print a ticket. Answer in one short, cinematic sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Missed Train', t: 'What did you once miss that turned out to be lucky?', p: 'Write it like a thriller, in three short shots. It goes to your My notes.' }
 ];
 
 var NOITE = [
@@ -202,3 +203,23 @@ TOQUES['ip-prox'] = function () { S.ip.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
 TOQUES.bl = function () { if (S.bl.n < 5) S.bl.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'Two sentences, then one. Watch the words move.',
+  frases: [
+    { de: ['Nora', '*missed', 'the 9:40 train', ',', 'so', 'she', 'took', 'the night train'], para: ['+Having', '*missed', 'the 9:40 train', ',', 'Nora', 'took', 'the night train'], d: 'Having + -ed: the first thing happened before. Nora does both.' },
+    { de: ['Nora', '*sat', 'alone', ',', 'and', 'she', 'watched', 'the clock'], para: ['+Sitting', 'alone', ',', 'Nora', 'watched', 'the clock'], d: '-ing: the two things happen at the same time.' },
+    { de: ['Nora', '*didn’t know', 'whose case it was', ',', 'so', 'she', 'checked', 'the label'], para: ['+Not', '*knowing', 'whose case it was', ',', 'Nora', 'checked', 'the label'], d: 'Not + -ing for the no.' }
+  ],
+  notaBotao: 'Who does it?',
+  nota: 'The first part has no subject. It borrows the one right after the comma: <b>Nora</b> missed it, and <b>Nora</b> took the night train. Never: Having missed the train, the rain started.',
+  pergunta: 'Your turn. Join the two sentences out loud, then check.',
+  treino: [
+    { de: 'Nora saw the empty seat. She sat down.', r: '<b>Seeing</b> the empty seat, Nora sat down.' },
+    { de: 'Nora lost her phone. She couldn’t call anyone.', r: '<b>Having lost</b> her phone, Nora couldn’t call anyone.' },
+    { de: 'Nora didn’t have a ticket. She talked to the conductor.', r: '<b>Not having</b> a ticket, Nora talked to the conductor.' },
+    { de: 'Nora opened the case. She found a letter.', r: '<b>Having opened</b> the case, Nora found a letter.' }
+  ],
+  uso: { p: 'Your turn. Two things that happened to you in one day. Join them with a clause, and make sure the same person does both.', molde: ['Having …, I …', 'Not … , I …'], ex: 'Having missed the bus, I walked to work. Not knowing the address, I called my friend.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

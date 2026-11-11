@@ -25,14 +25,15 @@ var L = [
   { k: 'lab', est: 'l', min: 7, img: 'sala', rot: 'II · The Lab', t: 'Two groups, the same math problems. One worked in silence. The other worked for money, on camera.', p: 'Listen once. Then choose, and say your reason out loud first.' },
   { k: 'lista', est: 'o', min: 7, img: 'caldeira', rot: 'III · Fourteen Questions', t: 'Fourteen questions about your arena, not about your whole life.', p: 'Read each one out loud. Tap the ones that are true for you. There’s no good answer, only a true one.' },
   { k: 'porque', est: 'f', min: 6, img: 'dominos', rot: 'IV · Because, or Because Of?', t: 'A sentence takes BECAUSE. A thing takes BECAUSE OF.', p: 'Is there a verb after the gap? Choose, then say the whole sentence.' },
-  { k: 'regra', est: 'f', min: 6, img: 'dominos', rot: 'V · The Three Links', t: 'Every explanation has three links: cause, effect, purpose.', p: 'Tap a link. Read the rule out loud. Then make one from your arena.' },
-  { k: 'perfil', est: 'o', min: 7, img: 'caldeira', rot: 'VI · The Profile', t: 'Two numbers, two different problems, and the cures are opposites.', p: 'Read your result out loud, including the two lines of advice.' },
-  { k: 'para', est: 'f', min: 6, extra: 1, img: 'dominos', rot: 'VII · To, For, or So That?', t: 'A verb takes TO. A thing takes FOR. A new subject takes SO THAT.', p: 'Choose. Then say the whole sentence out loud.' },
-  { k: 'casos', est: 'l', min: 7, extra: 1, img: 'sala', rot: 'VIII · Two Cases', t: 'Two people, two bad days. They sound the same, and they aren’t.', p: 'Listen. Which type is it? Then say why, with BECAUSE.' },
-  { k: 'corrente', est: 'o', min: 7, extra: 1, img: 'caldeira', rot: 'IX · The Chain', t: 'Six facts. Three links each: cause, effect, and the purpose that opens the valve.', p: 'Tap the links in order. Say the whole sentence before the last one.' },
-  { k: 'sua', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'X · Your Own Chain', t: 'The same three links, about your arena, and about somebody else.', p: 'Answer about yourself. Then the same about another person.' },
-  { k: 'relato', est: 'l', min: 7, extra: 1, img: 'caldeira', rot: 'XI · The Report', t: 'Explain your arena to somebody who knows nothing. Six markers.', p: 'One marker at a time, without stopping. Then listen to the coach.' },
-  { k: 'fim', est: 'w', min: 6, img: 'dominos', rot: 'XII · The Arena Again', t: 'Your three sentences from scene I come back, with the right links.', p: 'Write your arena in one chain: cause, effect, purpose. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'caldeira', rot: 'V · The Chain in Blocks', t: 'Cause, effect, purpose. Each block has a job.', p: 'Read the blocks out loud. Notice the little link words. Then build a chain and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'dominos', rot: 'VI · The Three Links', t: 'Every explanation has three links: cause, effect, purpose.', p: 'Tap a link. Read the rule out loud. Then make one from your arena.' },
+  { k: 'perfil', est: 'o', min: 7, img: 'caldeira', rot: 'VII · The Profile', t: 'Two numbers, two different problems, and the cures are opposites.', p: 'Read your result out loud, including the two lines of advice.' },
+  { k: 'para', est: 'f', min: 6, extra: 1, img: 'dominos', rot: 'VIII · To, For, or So That?', t: 'A verb takes TO. A thing takes FOR. A new subject takes SO THAT.', p: 'Choose. Then say the whole sentence out loud.' },
+  { k: 'casos', est: 'l', min: 7, extra: 1, img: 'sala', rot: 'IX · Two Cases', t: 'Two people, two bad days. They sound the same, and they aren’t.', p: 'Listen. Which type is it? Then say why, with BECAUSE.' },
+  { k: 'corrente', est: 'o', min: 7, extra: 1, img: 'caldeira', rot: 'X · The Chain', t: 'Six facts. Three links each: cause, effect, and the purpose that opens the valve.', p: 'Tap the links in order. Say the whole sentence before the last one.' },
+  { k: 'sua', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'XI · Your Own Chain', t: 'The same three links, about your arena, and about somebody else.', p: 'Answer about yourself. Then the same about another person.' },
+  { k: 'relato', est: 'l', min: 7, extra: 1, img: 'caldeira', rot: 'XII · The Report', t: 'Explain your arena to somebody who knows nothing. Six markers.', p: 'One marker at a time, without stopping. Then listen to the coach.' },
+  { k: 'fim', est: 'w', min: 6, img: 'dominos', rot: 'XIII · The Arena Again', t: 'Your three sentences from scene I come back, with the right links.', p: 'Write your arena in one chain: cause, effect, purpose. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -257,3 +258,18 @@ TOQUES['ch-prox'] = function () { S.ch = { n: S.ch.n + 1, feitos: 0, erro: 0 }; 
 TOQUES['su-outro'] = function () { S.su.outro = 1; };
 TOQUES['su-prox'] = function () { S.su = { n: S.su.n + 1, outro: 0 }; };
 TOQUES.rl = function (b, n) { S.rl.n = Math.max(S.rl.n, n + 1); };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Pressure, in blocks. Each block has a job.',
+  frases: [
+    { b: [['I lost points', 'EFFECT', 'acao'], ['because', 'LINK', 'aux'], ['I was nervous', 'CAUSE', 'quando']], d: 'Because + a whole sentence.' },
+    { b: [['I lost points', 'EFFECT', 'acao'], ['because of', 'LINK', 'aux'], ['the pressure', 'CAUSE', 'quando']], d: 'Because of + a thing. No verb after it.' },
+    { b: [['Too much worry', 'CAUSE', 'quando'], ['leads to', 'LINK', 'aux'], ['mistakes', 'EFFECT', 'acao']], d: 'Leads to + a thing.' },
+    { b: [['I breathe slowly', 'ACTION', 'acao'], ['to', 'LINK', 'aux'], ['calm down', 'PURPOSE', 'quem']], d: 'To + verb: the purpose.' }
+  ],
+  nota: 'Every explanation has links. <b>because</b> + a sentence. <b>because of</b> + a thing. <b>leads to</b> + a thing. <b>to</b> + a verb for the purpose.',
+  monta: { p: 'Build a chain about the golfer. Then say it.', pecas: [['a bad shot', 'EFFECT', 'acao'], ['Looking at the crowd', 'CAUSE', 'quando'], ['leads to', 'LINK', 'aux']], ordem: [1, 2, 0] },
+  uso: { p: 'Now your own arena. Say one cause, one effect and one purpose.', molde: ['I get nervous because …', 'That leads to …', 'I … to …'], ex: 'I get nervous because the room is silent. That leads to a fast heartbeat. I breathe slowly to calm down.' },
+  prof: 'Read the blocks with the student, top to bottom: the words on top, the job under them. Point at the little link words.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

@@ -11,11 +11,12 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 19, kick: 'AU PAIR · MODULE 5 
   nota: 'With allergies, there is no “a little bit”. If you are not sure, don’t give it, and ask the parents.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'I · Some or Any?', t: 'Small words in the kitchen.', p: 'Compare A and B. Then see the rule.' },
-  { k: 'multipla', est: 'f', min: 12, img: 'capa', rot: 'II · Read the Label', t: 'Leo is allergic to peanuts. Emma can’t have milk.', p: 'Read each label. Can the kids eat it?' },
-  { k: 'escolha', est: 'o', min: 8, img: 'conversa', rot: 'III · The Picky Eater', t: 'Two ideas for a child who won’t eat.', p: 'Choose one and say why. Then your teacher answers too.' },
-  { k: 'conversa', est: 'o', min: 8, img: 'capa', rot: 'IV · Food Talk', t: 'Talk about food with the family.', p: 'Answer, then ask back: “And you?”' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 19: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'I · Find the Rule', t: 'Four sentences from the kitchen. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Some or Any?', t: 'Small words in the kitchen.', p: 'Compare A and B. Then see the rule.' },
+  { k: 'multipla', est: 'f', min: 12, img: 'capa', rot: 'III · Read the Label', t: 'Leo is allergic to peanuts. Emma can’t have milk.', p: 'Read each label. Can the kids eat it?' },
+  { k: 'escolha', est: 'o', min: 8, img: 'conversa', rot: 'IV · The Picky Eater', t: 'Two ideas for a child who won’t eat.', p: 'Choose one and say why. Then your teacher answers too.' },
+  { k: 'conversa', est: 'o', min: 8, img: 'capa', rot: 'V · Food Talk', t: 'Talk about food with the family.', p: 'Answer, then ask back: “And you?”' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 19: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var DESCOBRE = {
@@ -55,3 +56,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 19: descobre · multipla · escolha · conversa (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.',
+  exemplos: [
+    'There is <b>some</b> milk in the fridge.',
+    'There isn’t <b>any</b> bread.',
+    'Are there <b>any</b> apples?',
+    'Would you like <b>some</b> juice?'
+  ],
+  pergunta: 'When do we use any?',
+  opcoes: ['in no sentences and in most questions', 'in every sentence with food', 'only before plural words'], c: 0,
+  nao: 'Not that one. Look at the lit words again: which sentences are a no? Which are a question?',
+  regra: '<b>some</b> in yes sentences and in offers: There is some milk. Would you like some juice? <b>any</b> in no sentences and in most questions: There isn’t any bread. Are there any apples?',
+  uso: { p: 'Your turn. Open the fridge in your head. One thing you have some of, one thing you don’t have any of, and an offer for the kids.', molde: ['We have some …', 'We don’t have any …', 'Would you like some …?'], ex: 'We have some cheese. We don’t have any apples. Would you like some water?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

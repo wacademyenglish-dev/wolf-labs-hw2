@@ -13,7 +13,8 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 16, img: 'capa', rot: 'II · The Whole Book', t: 'Twelve squares. Ten units. One last walk.', p: 'Your teacher rolls the die. Each square brings back a unit of Book C1. Do it out loud.' },
   { k: 'cartao', est: 'w', min: 10, img: 'conversa', rot: 'III · The Closing Speech', t: 'Write the last speech of the night.', p: 'Five lines: a hook, a story, a tricolon, a contrast and a close.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'IV · Questions for Your Teacher', t: 'Now YOU ask me anything.', p: 'Ask your teacher about teaching, learning and what comes next.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Book C1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'V · Find the Rule', t: 'Four lines from a closing speech. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Book C1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -60,3 +61,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me what you should do next with your English.', dica: 'What would you recommend I do next?', resp: 'Read every day, speak every week, and never stop being curious.' },
   { alvo: 'Ask me what I learned from teaching you.', dica: 'What did you learn from teaching me?', resp: 'That patience and humor work better than any book.' },
   { alvo: 'Ask me one last question: anything you want.', dica: '…?', resp: 'That’s a great question. Let me think about that for a second…' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines from the closing ceremony. Find the rule yourself.', exemplos: ['We came, we <b>learned</b>, we <b>grew</b>.', 'It was not the <b>end</b>, it was the <b>beginning</b>.', 'We <b>ask</b> a lot, we <b>give</b> a lot, we <b>trust</b> a lot.', 'Not <b>what</b> we know, but <b>who</b> we became.'], pergunta: 'What makes these lines memorable?', opcoes: ['a pattern: three items, or two opposites, in the same shape', 'long sentences with many difficult words', 'a list of facts with numbers'], c: 0, nao: 'Not that one. Read the lit words again: how many? are they the same shape?', regra: 'Rhetoric is <b>pattern</b>: a <b>tricolon</b> (three parts: we came, we learned, we grew), <b>parallelism</b> (the same shape: we ask a lot, we give a lot) and <b>antithesis</b> (two opposites: not the end, the beginning).', uso: { p: 'Your turn. The last line of your own speech. Say it as a tricolon, or as two opposites.', molde: ['We …, we …, we …', 'It was not …, it was …'], ex: 'We worked, we failed, we tried again. It was not a course, it was a journey.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

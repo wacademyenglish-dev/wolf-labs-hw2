@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 3, kick: 'WOLF HIRED · MODULE 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 7, img: 'conversa', rot: 'I · Always Be Telling Stories', t: 'A recruiter answers the weakness question.', p: 'One question before, then the video, then the questions.' },
-  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'II · Good Answer or Red Flag?', t: 'What would make an interviewer worried?', p: 'Read each answer out loud. Good answer or red flag?' },
-  { k: 'transforma', est: 'o', min: 16, img: 'conversa', rot: 'III · Weakness + Action + Result', t: 'Turn a weakness into a strong answer.', p: 'Read the weakness and the clue. Say the full answer.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Three Ways to Start', t: 'One honest weakness, three steps.', p: 'Look at the three steps. Tap the step of each sentence. Then say a weakness of your own.' },
+  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'III · Good Answer or Red Flag?', t: 'What would make an interviewer worried?', p: 'Read each answer out loud. Good answer or red flag?' },
+  { k: 'transforma', est: 'o', min: 16, img: 'conversa', rot: 'IV · Weakness + Action + Result', t: 'Turn a weakness into a strong answer.', p: 'Read the weakness and the clue. Say the full answer.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 't2MpQuaMn7U', titulo: 'What Is Your Greatest Weakness? Answer Samples', fonte: 'SELF MADE MILLENNIAL · 0:28–2:30', inicio: 28, fim: 150,
@@ -55,3 +56,26 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 03: video · separa · transforma (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'A weakness answer. Three ways to start.',
+  usos: [
+    { t: 'THE HABIT', f: 'I tend to get stressed with many tasks.', d: 'I tend to: what you usually do, honestly.' },
+    { t: 'WHAT I’M DOING', f: 'I’m working on my English presentations.', d: 'I’m working on: the action you take now.' },
+    { t: 'WHAT CHANGED', f: 'I’ve started to plan my week every Monday.', d: 'I’ve started to: a change that began and still goes on.' }
+  ],
+  pergunta: 'Which step is it?',
+  itens: [
+    { f: 'I tend to do everything myself.', c: 0 },
+    { f: 'I’m taking a course on delegating.', c: 1 },
+    { f: 'I’ve started to delegate more tasks.', c: 2 },
+    { f: 'I tend to talk too fast when I’m nervous.', c: 0 },
+    { f: 'I’m practicing with my team every Friday.', c: 1 },
+    { f: 'I’ve started to write the key points first.', c: 2 }
+  ],
+  nota: 'A good weakness answer has three steps: <b>I tend to</b> (the habit), <b>I’m working on</b> (what you do now), <b>I’ve started to</b> (the change). Honest, and with an action.',
+  uso: { p: 'Your turn. Say a real weakness in three short sentences.', molde: ['I tend to …', 'I’m working on …', 'I’ve started to …'], ex: 'I tend to say yes to everything. I’m working on my priorities. I’ve started to say no politely.' },
+  prof: 'Read the three steps out loud with the student. Then the student taps a step for each sentence. The steps are the rule.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

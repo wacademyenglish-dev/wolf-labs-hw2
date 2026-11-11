@@ -36,10 +36,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Sunrise on the Reaping. The official trailer.', p: 'Spin the wheel first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'capitolio', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'distrito', rot: 'V · Should or Had Better', t: 'A letter from your mentor: what should you do?', p: 'Tap the advice and the warnings. Then finish the rule.' },
-  { k: 'arena', est: 'o', min: 7, img: 'capa', rot: 'VI · The Sponsors', t: 'Six pieces of advice. Every one you build brings a parachute.', p: 'Read the words. Say the advice. Then tap Check.' },
-  { k: 'conselhos', est: 'o', min: 7, img: 'distrito', rot: 'VII · Your Advice', t: 'Two people need your advice. Which one first?', p: 'The teacher picks A or B. Give the advice.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · Questions', t: 'Questions.', p: 'Questions.' }
+  { k: 'gx', est: 'f', min: 4, img: 'distrito', rot: 'V · The Ladder', t: 'One piece of advice, five steps.', p: 'Read each step out loud, then go one step up. Notice what changes. Then climb with your own advice.' },
+  { k: 'regra', est: 'f', min: 6, img: 'distrito', rot: 'VI · Should or Had Better', t: 'A letter from your mentor: what should you do?', p: 'Tap the advice and the warnings. Then finish the rule.' },
+  { k: 'arena', est: 'o', min: 7, img: 'capa', rot: 'VII · The Sponsors', t: 'Six pieces of advice. Every one you build brings a parachute.', p: 'Read the words. Say the advice. Then tap Check.' },
+  { k: 'conselhos', est: 'o', min: 7, img: 'distrito', rot: 'VIII · Your Advice', t: 'Two people need your advice. Which one first?', p: 'The teacher picks A or B. Give the advice.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · Questions', t: 'Questions.', p: 'Questions.' }
 ];
 
 var FILME = 'The Hunger Games: Sunrise on the Reaping', ANO = '2026';
@@ -264,3 +265,17 @@ var FIM = { tipo: 'perguntas', rot: 'VIII · Questions', t: 'Questions about adv
   ],
   depois: 'Now give the teacher two pieces of advice: one with should, one with had better.' };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One piece of advice. Climb it one step at a time.',
+  degraus: [
+    { r: 'advice', f: 'You <b>should</b> stay close to the water.', d: 'should + the clean verb: advice.' },
+    { r: 'advice', f: 'You <b>ought to</b> stay close to the water.', d: 'ought to: the same advice. Don’t forget to.' },
+    { r: 'warning', f: 'You<b>’d better</b> stay close to the water.', d: '’d better: a warning. If you don’t, there is a problem.' },
+    { r: 'no', f: 'You<b>’d better not</b> go near the fence.', d: 'The not goes after better: ’d better not.' },
+    { r: '?', f: '<b>Should</b> I stay close to the water?', d: 'A question: should goes first. ’d better has no question.' }
+  ],
+  nota: 'After <b>should</b>, <b>ought to</b> and <b>’d better</b>: the clean verb. No -s, no -ing. <b>Should</b> = advice. <b>’d better</b> = a warning, with a problem if you don’t. The no is <b>’d better not</b>, never “had better don’t”.',
+  uso: { p: 'Your turn. A friend has a big exam. Give advice (should) and one warning (’d better).', molde: ['You should …', 'You’d better …', 'You’d better not …'], ex: 'You should study tonight. You’d better sleep early. You’d better not use your phone.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

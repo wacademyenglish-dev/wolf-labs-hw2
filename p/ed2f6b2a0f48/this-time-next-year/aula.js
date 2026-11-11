@@ -25,12 +25,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'sala', rot: 'III · Earth in 2050', t: 'What could the Earth look like in 2050?', p: 'The video is locked. Answer first, then it plays in four short chapters. Then True or Lie.' },
   { k: 'falas', est: 'l', extra: 1, img: 'sala', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'torres', est: 'o', min: 7, img: 'cidade', rot: 'V · The Neon Skyline', t: '2050. A Monday, 8 AM. Eight towers. What will people be doing in each one?', p: 'Tap a tower. Make a forecast in one sentence. Your teacher taps the version they heard.' },
-  { k: 'regra', est: 'f', min: 6, img: 'cidade', rot: 'VI · The Rule', t: 'A moment in the future, and something already in progress.', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
-  { k: 'orbita', est: 'o', min: 7, img: 'orbita', rot: 'VII · The Forecast Orbit', t: 'Five moments of your future. Finish each one fast.', p: 'Your teacher reads the moment and the first words. You finish at once, about your real life.' },
-  { k: 'ligacao', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'VIII · A Call from 2050', t: 'Your phone rings. The number is strange. It’s you, calling from 2050.', p: 'Your teacher is your future self. Answer with will be + -ing, then ask back.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'cidade', rot: 'IX · Quick Check', t: 'Five quick lines from 2050.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'orbita', rot: 'X · Your 2050', t: 'Your own future: next year, and 2050.', p: 'Tap any five. Answer with will be + -ing, won’t be + -ing, or a question.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · See You in 2050', t: 'Will life in 2050 be better or worse than today?', p: 'Write a short letter to 2050. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cidade', rot: 'VI · The Moment Line', t: 'Where does each sentence live in time?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'regra', est: 'f', min: 6, img: 'cidade', rot: 'VII · The Rule', t: 'A moment in the future, and something already in progress.', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
+  { k: 'orbita', est: 'o', min: 7, img: 'orbita', rot: 'VIII · The Forecast Orbit', t: 'Five moments of your future. Finish each one fast.', p: 'Your teacher reads the moment and the first words. You finish at once, about your real life.' },
+  { k: 'ligacao', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'IX · A Call from 2050', t: 'Your phone rings. The number is strange. It’s you, calling from 2050.', p: 'Your teacher is your future self. Answer with will be + -ing, then ask back.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'cidade', rot: 'X · Quick Check', t: 'Five quick lines from 2050.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'orbita', rot: 'XI · Your 2050', t: 'Your own future: next year, and 2050.', p: 'Tap any five. Answer with will be + -ing, won’t be + -ing, or a question.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · See You in 2050', t: 'Will life in 2050 be better or worse than today?', p: 'Write a short letter to 2050. It goes to your My notes.' }
 ];
 
 var YT = '2njn71TqkjA';
@@ -281,3 +282,20 @@ TOQUES['lg-r'] = function () { S.lg.resp = 1; };
 TOQUES['lg-prox'] = function () { S.lg = { n: S.lg.n + 1, resp: 0 }; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'Three moments on one line. Where does each sentence go?',
+  marcos: [{ t: 'NOW', s: 'this week' }, { t: 'NEXT YEAR', s: 'this time, 8 AM' }, { t: '2050', s: 'a Monday, 8 AM' }],
+  frases: [
+    { f: 'I’m studying English right now.', c: 0, d: 'am studying · happening now' },
+    { f: 'This time next year, I’ll be working in a new job.', c: 1, d: 'will be working · in progress then' },
+    { f: 'Next June, we’ll be living in a bigger apartment.', c: 1, d: 'will be living · in progress then' },
+    { f: 'In 2050, people will be driving flying cars.', c: 2, d: 'will be driving · in progress then' },
+    { f: 'At 8 AM in 2050, the city will be waking up in neon light.', c: 2, d: 'will be waking up · in progress then' },
+    { f: 'My friends are waiting for me now.', c: 0, d: 'are waiting · happening now' }
+  ],
+  nota: 'Pick a moment on the right of NOW, and the action is in the middle of happening: <b>will be + -ing</b>. I’ll be working. They won’t be sleeping.',
+  uso: { p: 'Your turn. This time next year: where will you be, and what will you be doing?', molde: ['This time next year, I’ll be …ing', 'In 2050, I’ll be …ing'], ex: 'This time next year, I’ll be studying in London. In 2050, I’ll be living near the sea.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

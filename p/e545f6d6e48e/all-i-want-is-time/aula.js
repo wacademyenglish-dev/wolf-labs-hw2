@@ -15,10 +15,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 3, titulo: ['All I Want', 'Is Ti
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Interview', t: 'Why would anyone leave a famous kitchen?', p: 'Read the interview out loud with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Information or Spotlight?', t: 'Same idea, two sentences.', p: 'Compare A and B. What does B do that A doesn’t?' },
-  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'III · Turn On the Spotlight', t: 'Plain → spotlight.', p: 'Read the plain sentence. Use the clue. Say the spotlight version.' },
-  { k: 'escolha', est: 'o', min: 7, img: 'conversa', rot: 'IV · All You Need', t: 'Choose, then say it with a spotlight.', p: 'Choose A or B. Then explain with All I…, The only thing…, The reason why…' },
-  { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'V · Your Confession', t: 'Four lines about what really matters to you.', p: 'All I want…, The only thing…, The reason why…, The last thing…' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Spotlight Ladder', t: 'One idea, four steps up.', p: 'Read each step out loud, then go one step up. Notice what the sentence adds. Then climb with your own idea.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Information or Spotlight?', t: 'Same idea, two sentences.', p: 'Compare A and B. What does B do that A doesn’t?' },
+  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'IV · Turn On the Spotlight', t: 'Plain → spotlight.', p: 'Read the plain sentence. Use the clue. Say the spotlight version.' },
+  { k: 'escolha', est: 'o', min: 7, img: 'conversa', rot: 'V · All You Need', t: 'Choose, then say it with a spotlight.', p: 'Choose A or B. Then explain with All I…, The only thing…, The reason why…' },
+  { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'VI · Your Confession', t: 'Four lines about what really matters to you.', p: 'All I want…, The only thing…, The reason why…, The last thing…' }
 ];
 var PORTAS = [];
 
@@ -69,3 +70,9 @@ var ESCOLHA = [
   { a: 'a big house far from everyone', b: 'a tiny flat near your friends', chips: ['The reason why I’d choose … is …', 'The last thing I want is …'], ex: 'The tiny flat. The last thing I want is to be lonely.' },
   { a: 'one perfect week of holiday a year', b: 'one free afternoon every week', chips: ['All I need is …', 'The one thing …'], ex: 'One free afternoon a week. All I need is a little time, often.' },
   { a: 'never cook again', b: 'never watch a series again', chips: ['The only thing I’d miss is …', 'The reason why …'], ex: 'Never cook again. The only thing I’d miss is my mother’s soup.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One idea. Climb it, and turn on the spotlight.', degraus: [{ r: 'plain', f: 'I want time.', d: 'The plain information.' }, { r: 'all', f: '<b>All I want is</b> time.', d: 'All + I want + is. No “what”: not all what.' }, { r: 'only', f: '<b>The only thing I miss is</b> my old team.', d: 'The only thing (that) + I miss + is. Same shape.' }, { r: 'reason', f: '<b>The reason I left was</b> exhaustion.', d: 'The reason (why) + I left + was. Not “the reason is because”.' }, { r: 'last', f: '<b>The last thing I expected was</b> to win.', d: 'A surprise: the last thing I expected was + to + verb.' }], nota: 'Put the idea at the <b>end</b>, after <b>is / was</b>. The sentence starts with a frame: <b>All I want is</b>, <b>The only thing I miss is</b>, <b>The reason I left was</b>. After the frame, one thing: the spotlight.', uso: { p: 'Your turn. Choose what really matters to you. Say it with the frames: all, the only thing, the reason.', molde: ['All I want is …', 'The only thing I miss is …', 'The reason I … was …'], ex: 'All I want is a quiet weekend. The only thing I miss is my old kitchen. The reason I moved was the noise.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

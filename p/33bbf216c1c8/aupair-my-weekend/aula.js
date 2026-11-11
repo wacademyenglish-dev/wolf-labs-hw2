@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 22, kick: 'AU PAIR · MODULE 6 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 10, img: 'conversa', rot: 'I · Wiktoria in New York', t: 'An au pair’s weekend trip.', p: 'One question before, then the video, then the questions.' },
-  { k: 'conversa', est: 'o', min: 10, img: 'capa', rot: 'II · How Was Your Weekend?', t: 'Monday morning: the family asks.', p: 'Answer in the past. Then ask back: “And you?”' },
-  { k: 'cartao', est: 'w', min: 12, img: 'conversa', rot: 'III · Your Weekend Plan', t: 'Plan a weekend trip.', p: 'Where, with whom, how, what you are going to do, and the safety plan.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 22: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · The Weekend Line', t: 'Where does each sentence live in time?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'conversa', est: 'o', min: 10, img: 'capa', rot: 'III · How Was Your Weekend?', t: 'Monday morning: the family asks.', p: 'Answer in the past. Then ask back: “And you?”' },
+  { k: 'cartao', est: 'w', min: 12, img: 'conversa', rot: 'IV · Your Weekend Plan', t: 'Plan a weekend trip.', p: 'Where, with whom, how, what you are going to do, and the safety plan.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 22: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'QtdzZGKsOX4', titulo: 'Life with APiA | Wiktoria’s 4th vlog', fonte: 'AU PAIR IN AMERICA · 6 MIN',
@@ -51,3 +52,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 22: video · conversa · cartao (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de conversa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'Wiktoria’s weekend on one line. Where does each sentence go?',
+  marcos: [{ t: 'LAST WEEKEND', s: 'finished' }, { t: 'RIGHT NOW', s: 'Monday morning' }, { t: 'NEXT WEEKEND', s: 'a plan' }],
+  frases: [
+    { f: 'We took the train to New York.', c: 0, d: 'took · finished' },
+    { f: 'We visited the big museum.', c: 0, d: 'visited · finished' },
+    { f: 'The kids are eating breakfast.', c: 1, d: 'are eating · happening now' },
+    { f: 'I’m drinking my coffee.', c: 1, d: 'I’m drinking · happening now' },
+    { f: 'We’re going to see a show.', c: 2, d: 'going to · a plan' },
+    { f: 'I’m going to visit Chicago.', c: 2, d: 'going to · a plan' }
+  ],
+  nota: 'Left is finished: <b>took</b>, <b>visited</b>. In the middle, it is happening: <b>are eating</b>. On the right, a plan: <b>going to</b> + verb.',
+  uso: { p: 'Your turn. One thing you did last weekend, one thing you are doing now, and one plan for next weekend.', molde: ['Last weekend I …', 'Right now I’m …', 'Next weekend I’m going to …'], ex: 'Last weekend I visited a friend. Right now I’m drinking tea. Next weekend I’m going to see a movie.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

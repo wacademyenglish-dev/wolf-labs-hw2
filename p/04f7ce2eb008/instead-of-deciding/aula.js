@@ -19,12 +19,13 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'quarto', rot: 'I · Instead Of', t: 'Think of something you did this week instead of making a decision.', p: 'Tap what you did. Then answer out loud.' },
   { k: 'alcance', est: 'o', min: 7, img: 'celular', rot: 'II · Who Could Have Told You', t: 'Six things went wrong. For most of history, only some could ever reach you.', p: 'Read it out loud. Tap NEAR (someone could walk over and tell you) or FAR (nobody could).' },
   { k: 'portao', est: 'f', min: 7, img: 'peneira', rot: 'III · The Gate', t: 'Tuesday, 11:40 PM. Nina writes a note to herself.', p: 'Read the note out loud. Tap every verb that comes right after a preposition. Then finish the rule.' },
-  { k: 'dois', est: 'f', min: 6, img: 'peneira', rot: 'IV · Two Kinds of TO', t: 'Some TOs want a verb. Some are prepositions and want -ING.', p: 'Say the sentence out loud: a verb or -ING after the TO? Tap Check. Then look at the IT test.' },
-  { k: 'vozes', est: 'l', min: 7, img: 'celular', rot: 'V · Six Voices', t: 'Six people say one thing each about their phone.', p: 'Play a voice. Build your question to that person out loud. Tap Check. Then ask it: your teacher answers.' },
-  { k: 'noite', est: 'o', min: 7, img: 'poltrona', rot: 'VI · The Evening Plan', t: '7 PM to 10 PM. A real evening, without endless scrolling.', p: 'Say the plan for each hour out loud. Tap Check. Then answer the question about your own evening.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'peneira', rot: 'VII · Stuck at the Gate', t: 'Six sentences are stuck at the gate.', p: 'Say each sentence the right way, out loud. Then tap Check.' },
-  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'VIII · About You', t: 'Four cards about your habits.', p: 'Tap a card. Answer with the frame, then add a detail.' },
-  { k: 'fim', est: 'w', min: 6, img: 'poltrona', rot: 'IX · What Gets Through', t: 'Your sentence from scene I, and tonight.', p: 'Write it through the gate. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'celular', rot: 'IV · Mistake Hunter', t: 'Six sentences at the gate. Each one has a wrong word.', p: 'Tap the wrong word. Say the sentence right. Then check.' },
+  { k: 'dois', est: 'f', min: 6, img: 'peneira', rot: 'V · Two Kinds of TO', t: 'Some TOs want a verb. Some are prepositions and want -ING.', p: 'Say the sentence out loud: a verb or -ING after the TO? Tap Check. Then look at the IT test.' },
+  { k: 'vozes', est: 'l', min: 7, img: 'celular', rot: 'VI · Six Voices', t: 'Six people say one thing each about their phone.', p: 'Play a voice. Build your question to that person out loud. Tap Check. Then ask it: your teacher answers.' },
+  { k: 'noite', est: 'o', min: 7, img: 'poltrona', rot: 'VII · The Evening Plan', t: '7 PM to 10 PM. A real evening, without endless scrolling.', p: 'Say the plan for each hour out loud. Tap Check. Then answer the question about your own evening.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'peneira', rot: 'VIII · Stuck at the Gate', t: 'Six sentences are stuck at the gate.', p: 'Say each sentence the right way, out loud. Then tap Check.' },
+  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'IX · About You', t: 'Four cards about your habits.', p: 'Tap a card. Answer with the frame, then add a detail.' },
+  { k: 'fim', est: 'w', min: 6, img: 'poltrona', rot: 'X · What Gets Through', t: 'Your sentence from scene I, and tonight.', p: 'Write it through the gate. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -202,3 +203,19 @@ R.fim = function (c) {
 
 TOQUES['ab-t'] = function (b, n, v) { S.ab.tema = v; };
 TOQUES.al = function (b, n, v) { S.al[n] = v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de dois.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six sentences at the gate.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'Instead of [[sleep]], Nina scrolls her phone.', r: 'Instead of <b>sleeping</b>, Nina scrolls her phone.', d: 'After a preposition: -ing.' },
+    { f: 'He left without [[to say]] goodbye.', r: 'He left without <b>saying</b> goodbye.', d: 'without + -ing. No to.' },
+    { f: 'I look forward [[to hear]] from you.', r: 'I look forward to <b>hearing</b> from you.', d: 'This to is a preposition: -ing.' },
+    { f: 'My brother insisted [[to pay]] the bill.', r: 'My brother insisted <b>on paying</b> the bill.', d: 'insist on + -ing.' },
+    { f: 'They succeeded [[to open]] the old file.', r: 'They succeeded <b>in opening</b> the old file.', d: 'succeed in + -ing.' },
+    { f: 'After [[to check]] my email, I went to bed.', r: 'After <b>checking</b> my email, I went to bed.', d: 'After + -ing.' }
+  ],
+  nota: 'After a preposition (<b>instead of, without, after, before, on, in</b>): <b>-ing</b>. And some <b>to</b> are prepositions: <b>look forward to</b>, <b>be used to</b>. Test: can you put <b>it</b> after the to? Then -ing.',
+  uso: { p: 'Your turn. Three sentences about your evening and your phone, with instead of, without or after + -ing.', molde: ['Instead of …ing, I …', 'I never go to bed without …ing', 'After …ing, I …'], ex: 'Instead of watching videos, I read. I never go to bed without charging my phone. After eating dinner, I check the news.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

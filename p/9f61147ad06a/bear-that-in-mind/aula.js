@@ -15,10 +15,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 1, titulo: ['Bear That', 'in Min
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Email', t: 'An email before the big meeting.', p: 'Read it out loud. Answer the questions. Then find the verb + noun pairs.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Which Verb?', t: 'Same noun, different verb. Only one is right.', p: 'Compare A and B. Which verb goes with the noun?' },
-  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'III · Make It Formal', t: 'From the kitchen to the boardroom.', p: 'Read the informal sentence. Use the clue. Say the formal version.' },
-  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'IV · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
-  { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'V · The Meeting', t: 'You chair the meeting. Three teams report.', p: 'Ask each team five questions. Your teacher is the team. Then sum up for the director.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · In the Boardroom', t: 'The manager and you, before the meeting. Some partners are lit.', p: 'Read it together. Tap the lit words: why this verb? Then use two of them yourself.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Which Verb?', t: 'Same noun, different verb. Only one is right.', p: 'Compare A and B. Which verb goes with the noun?' },
+  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'IV · Make It Formal', t: 'From the kitchen to the boardroom.', p: 'Read the informal sentence. Use the clue. Say the formal version.' },
+  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'V · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
+  { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'VI · The Meeting', t: 'You chair the meeting. Three teams report.', p: 'Ask each team five questions. Your teacher is the team. Then sum up for the director.' }
 ];
 var PORTAS = [];
 
@@ -77,3 +78,9 @@ var PODE = [];
 /* MECÂNICAS VARIADAS */
 /* C1 · Bear That in Mind: leitura · descobre · transforma · erros · missao */
 var ERROS = { tipo: 'nota', rot: 'DRAFT MINUTES · NOT SENT YET', partes: ['Minutes of the Atlas review. First, we ', ['did a full review', 'carried out a full review', 'carry out a review.'], ' of the project. Dev ', ['lifted a concern', 'raised a concern', 'raise a concern.'], ' about testing. Carla ', ['took the conclusion', 'drew the conclusion', 'draw a conclusion.'], ' that Asia is too expensive. We could not ', ['reach the deadline', 'meet the deadline', 'meet a deadline.'], ' of 1 March, so we ', ['arrived at an agreement on', 'reached an agreement on', 'reach an agreement.'], ' April. Please ', ['have in mind', 'bear in mind', 'bear in mind.'], ' that the budget will change.'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'Ten minutes before the meeting. Tap the lit words.', falas: [{ q: 'Manager', f: 'Before we start, please [[bear in mind]] the budget.' }, { q: 'You', f: 'Of course. I will [[take into account]] the new costs.' }, { q: 'Manager', f: 'The client may [[raise a concern]] about the date.' }, { q: 'You', f: 'Then we must [[meet the deadline]] and [[address the issue]] early.' }, { q: 'Manager', f: 'Good. Afterwards, [[carry out a review]] and [[make a recommendation]].' }, { q: 'You', f: 'I think we can [[reach an agreement]] by Friday.' }], porques: ['A formal pair: bear + in mind. Not “have in mind”.', 'Take + into account: to consider a fact. Not “put in account”.', 'Raise a concern: you bring it up. Not “lift” a concern.', 'Meet a deadline: arrive on time. Not “reach” the deadline.', 'Address an issue: deal with it. Not “do” an issue.', 'Carry out a review: a formal job. “Do a review” is plain.', 'Make a recommendation: you make it, you do not “do” it.', 'Reach an agreement: you get to it together. Not “arrive to” an agreement.'], nota: 'Formal English likes fixed partners: <b>bear in mind, take into account, raise a concern, meet a deadline, address an issue, reach an agreement</b>. A literal translation (do a review, lift a concern) sounds plain or odd.', uso: { p: 'Your turn. You chair a meeting at work. Say three sentences with the partners above: a warning, a deadline, and a next step.', molde: ['Please bear in mind …', 'We must meet the deadline …', 'I will make a recommendation …'], ex: 'Please bear in mind that the client is in Tokyo. We must meet the deadline on Friday. I will make a recommendation after the review.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

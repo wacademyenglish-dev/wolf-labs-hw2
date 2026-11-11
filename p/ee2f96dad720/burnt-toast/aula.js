@@ -15,14 +15,15 @@ var L = [
   { k: 'capa', est: null, img: 'alarme' },
   { k: 'semana', est: 'o', min: 7, img: 'predio', rot: 'I · Your Week', t: 'Before the file: your week.', p: 'Pick a card. Answer out loud, in the past. Then the follow-up comes.' },
   { k: 'cofre', est: 'f', min: 6, img: 'alarme', rot: 'II · Tubes or Vault?', t: 'English verbs do one of two things in the past.', p: 'Pick a verb. Say the past out loud. Then send it: -ED to the tubes, a new word to the vault.' },
-  { k: 'tubos', est: 'l', min: 7, img: 'alarme', rot: 'III · Three Tubes', t: 'Three sounds behind the same two letters.', p: 'Play it first. Clap the beats. Then the word appears: drop it in the tube that matches the SOUND.' },
-  { k: 'frio', est: 'o', min: 7, img: 'predio', rot: 'IV · Twelve, Cold', t: 'No story, no help. Just the verb.', p: 'Say the past before you flip the card.' },
-  { k: 'noite', est: 'o', min: 7, img: 'predio', rot: 'V · Build Your Alibi', t: 'The manager wants your night. Six hours of it.', p: 'For each hour, pick a line and say it. Or say your own. It goes into your alibi file.' },
-  { k: 'ordem', est: 'f', min: 6, extra: 1, img: 'predio', rot: 'VI · First, Then, After That', t: 'A night isn’t a list. It has an order, and the order has words.', p: 'Tap the four lines in order. Then say the whole story.' },
-  { k: 'reuniao', est: 'o', min: 7, extra: 1, img: 'predio', rot: 'VII · The Building Meeting', t: 'The next morning: who did what before 11:40?', p: 'Knock on a door. Tell the meeting what the neighbor did, in order.' },
-  { k: 'denovo', est: 'o', min: 7, extra: 1, img: 'alarme', rot: 'VIII · Your Alibi, Cold', t: 'The file is closed. Tell your night again.', p: 'Hour by hour. Only the order word is on the screen.' },
-  { k: 'torrada', est: 'f', min: 6, extra: 1, img: 'predio', rot: 'IX · So Who Did It?', t: 'Three facts on the table.', p: 'Read them out loud. Say what happened. Then open the photo.' },
-  { k: 'fim', est: 'w', min: 6, img: 'predio', rot: 'X · Your Real Night', t: 'The invented night is over. Now a real one.', p: 'Write what you did last night, in order: First, Then, After that, Finally. The red line watches the past. It goes to your My notes.' }
+  { k: 'gx', est: 'l', min: 4, img: 'alarme', rot: 'III · One Beat or Two?', t: 'Same two letters, different sounds.', p: 'Listen to the pairs. Then the ear test: one beat or two? Then say yours.' },
+  { k: 'tubos', est: 'l', min: 7, img: 'alarme', rot: 'IV · Three Tubes', t: 'Three sounds behind the same two letters.', p: 'Play it first. Clap the beats. Then the word appears: drop it in the tube that matches the SOUND.' },
+  { k: 'frio', est: 'o', min: 7, img: 'predio', rot: 'V · Twelve, Cold', t: 'No story, no help. Just the verb.', p: 'Say the past before you flip the card.' },
+  { k: 'noite', est: 'o', min: 7, img: 'predio', rot: 'VI · Build Your Alibi', t: 'The manager wants your night. Six hours of it.', p: 'For each hour, pick a line and say it. Or say your own. It goes into your alibi file.' },
+  { k: 'ordem', est: 'f', min: 6, extra: 1, img: 'predio', rot: 'VII · First, Then, After That', t: 'A night isn’t a list. It has an order, and the order has words.', p: 'Tap the four lines in order. Then say the whole story.' },
+  { k: 'reuniao', est: 'o', min: 7, extra: 1, img: 'predio', rot: 'VIII · The Building Meeting', t: 'The next morning: who did what before 11:40?', p: 'Knock on a door. Tell the meeting what the neighbor did, in order.' },
+  { k: 'denovo', est: 'o', min: 7, extra: 1, img: 'alarme', rot: 'IX · Your Alibi, Cold', t: 'The file is closed. Tell your night again.', p: 'Hour by hour. Only the order word is on the screen.' },
+  { k: 'torrada', est: 'f', min: 6, extra: 1, img: 'predio', rot: 'X · So Who Did It?', t: 'Three facts on the table.', p: 'Read them out loud. Say what happened. Then open the photo.' },
+  { k: 'fim', est: 'w', min: 6, img: 'predio', rot: 'XI · Your Real Night', t: 'The invented night is over. Now a real one.', p: 'Write what you did last night, in order: First, Then, After that, Finally. The red line watches the past. It goes to your My notes.' }
 ];
 
 /* I · sua semana */
@@ -232,3 +233,23 @@ TOQUES['rn-foi'] = function () { S.reuniao.foi[S.reuniao.sel] = 1; };
 TOQUES['dn-prox'] = function () { S.denovo.n++; };
 TOQUES.tr = function (b, n) { if (S.torrada.esc === 0) return false; S.torrada.esc = n; };
 TOQUES['tr-foto'] = function () { S.torrada.foto = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G11 · uma cena curta nova (k: gx) antes de tubos.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'som2', titulo: 'The past with -ed. Listen first.',
+  toque: 'Tap ▶ and listen. Count the beats in the verb: walked has one, wanted has two.',
+  pares: [
+    [{ t: 'walked', fala: 'We walked home.' }, { t: 'called', fala: 'We called home.' }],
+    [{ t: 'wanted', fala: 'We wanted toast.' }, { t: 'watched', fala: 'We watched the news.' }]
+  ],
+  pergunta: 'The ear test. How many beats in the verb?',
+  itens: [
+    { fala: 'We cooked dinner.', o: ['1 beat', '2 beats'], c: 0 },
+    { fala: 'We waited for the bus.', o: ['1 beat', '2 beats'], c: 1 },
+    { fala: 'I called my mom.', o: ['1 beat', '2 beats'], c: 0 },
+    { fala: 'He needed help.', o: ['1 beat', '2 beats'], c: 1 }
+  ],
+  nota: 'After <b>t</b> or <b>d</b>, -ed is a new beat: wait-ed, need-ed, want-ed. After any other sound, -ed adds no beat: cooked, called, walked.',
+  uso: { p: 'Your turn. Say what you did last night: one verb with one beat, one verb with two beats.', molde: ['I cooked …', 'I wanted …'], ex: 'I cooked dinner. Then I waited for the toast.' },
+  prof: 'The ▶ uses the voice of the browser. No sound? Say the pairs yourself: one beat, then two beats.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_som', GX_EXPLICA); };

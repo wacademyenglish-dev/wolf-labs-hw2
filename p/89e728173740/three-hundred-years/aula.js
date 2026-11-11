@@ -30,14 +30,15 @@ var L = [
   { k: 'capa', est: null, img: 'sala' },
   { k: 'abre', est: 'o', min: 7, img: 'estojo', rot: 'I · Nobody Was Watching', t: 'Think of something you did well even though nobody saw it.', p: 'Tap what it was. Then answer out loud.' },
   { k: 'teste', est: 'l', min: 7, img: 'sala', rot: 'II · The Blind Test', t: 'Paris, 2014. Twenty-one soloists in the dark, in goggles. Six violins: three old, three new.', p: 'Play both players. Tap True or Lie for each line. Then say two true things in one sentence.' },
-  { k: 'portas', est: 'f', min: 6, img: 'salao', rot: 'III · Two Doors', t: 'A sentence goes through the wide door. A thing goes through the narrow one.', p: 'Tap a piece, then its door: a sentence, or a thing? Then say the whole sentence.' },
-  { k: 'coisa', est: 'f', min: 6, img: 'salao', rot: 'IV · A Thing or a Sentence?', t: 'Before the door, look at what comes after it.', p: 'Say a full sentence with each piece, through the right door. Tap each piece when you have used it.' },
-  { k: 'enrico', est: 'o', min: 7, img: 'loja', rot: 'V · The Dealer', t: 'Enrico has sold violins for forty years. He pushes back, and he isn’t being difficult.', p: 'Play his line. Tap how you answer. Then say it out loud and hear what he does.' },
-  { k: 'outra', est: 'l', min: 7, img: 'sala', rot: 'VI · The Other Door', t: 'Same idea, other door. One reader, same speed: only the connector changes.', p: 'Say each ALTHOUGH idea the other way, out loud. Match it to its DESPITE or IN SPITE OF version. Then play both and compare.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'estojo', rot: 'VII · Despite Of', t: 'Five sentences are broken.', p: 'Find the broken part in each line. Say the fix. Then tap Check.' },
-  { k: 'mesmo', est: 'f', min: 6, extra: 1, img: 'loja', rot: 'VIII · It Happened, or It Might', t: 'EVEN THOUGH is a fact. EVEN IF is imagined.', p: 'Read it. Tap EVEN THOUGH or EVEN IF. Say the whole sentence.' },
-  { k: 'debate', est: 'o', min: 7, extra: 1, img: 'salao', rot: 'IX · Concede, Then Disagree', t: 'Four claims from your teacher. Every answer concedes first, then disagrees.', p: 'Tap a card. Answer with the frame. Your teacher pushes back once.' },
-  { k: 'fim', est: 'w', min: 6, img: 'sala', rot: 'X · Both Are Right', t: 'It came last. It still costs millions. Both are true.', p: 'Your story from scene I, in one sentence, with one door. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sala', rot: 'III · The Ladder', t: 'One idea, five ways to say it.', p: 'Read each step out loud, then go one step up. Notice what comes after the connector. Then climb with your own idea.' },
+  { k: 'portas', est: 'f', min: 6, img: 'salao', rot: 'IV · Two Doors', t: 'A sentence goes through the wide door. A thing goes through the narrow one.', p: 'Tap a piece, then its door: a sentence, or a thing? Then say the whole sentence.' },
+  { k: 'coisa', est: 'f', min: 6, img: 'salao', rot: 'V · A Thing or a Sentence?', t: 'Before the door, look at what comes after it.', p: 'Say a full sentence with each piece, through the right door. Tap each piece when you have used it.' },
+  { k: 'enrico', est: 'o', min: 7, img: 'loja', rot: 'VI · The Dealer', t: 'Enrico has sold violins for forty years. He pushes back, and he isn’t being difficult.', p: 'Play his line. Tap how you answer. Then say it out loud and hear what he does.' },
+  { k: 'outra', est: 'l', min: 7, img: 'sala', rot: 'VII · The Other Door', t: 'Same idea, other door. One reader, same speed: only the connector changes.', p: 'Say each ALTHOUGH idea the other way, out loud. Match it to its DESPITE or IN SPITE OF version. Then play both and compare.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'estojo', rot: 'VIII · Despite Of', t: 'Five sentences are broken.', p: 'Find the broken part in each line. Say the fix. Then tap Check.' },
+  { k: 'mesmo', est: 'f', min: 6, extra: 1, img: 'loja', rot: 'IX · It Happened, or It Might', t: 'EVEN THOUGH is a fact. EVEN IF is imagined.', p: 'Read it. Tap EVEN THOUGH or EVEN IF. Say the whole sentence.' },
+  { k: 'debate', est: 'o', min: 7, extra: 1, img: 'salao', rot: 'X · Concede, Then Disagree', t: 'Four claims from your teacher. Every answer concedes first, then disagrees.', p: 'Tap a card. Answer with the frame. Your teacher pushes back once.' },
+  { k: 'fim', est: 'w', min: 6, img: 'sala', rot: 'XI · Both Are Right', t: 'It came last. It still costs millions. Both are true.', p: 'Your story from scene I, in one sentence, with one door. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -219,3 +220,17 @@ R.fim = function (c) {
 TOQUES['ab-t'] = function (b, n, v) { S.ab.tema = v; };
 TOQUES.ms = function (b, n, v) { S.ms[n] = v; };
 TOQUES['en-prox'] = function () { S.en.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de portas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One idea. Climb it one door at a time.',
+  degraus: [
+    { r: 'although', f: '<b>Although</b> the old violins are famous, the soloists chose a new one.', d: 'although + a full sentence.' },
+    { r: 'even though', f: '<b>Even though</b> the old violins are famous, the soloists chose a new one.', d: 'even though: the same, stronger. A fact.' },
+    { r: 'despite + noun', f: '<b>Despite</b> the famous name, the soloists chose a new one.', d: 'despite + a thing: the famous name.' },
+    { r: 'in spite of', f: '<b>In spite of</b> the famous name, the soloists chose a new one.', d: 'in spite of = despite. Never “despite of”.' },
+    { r: 'despite + -ing', f: '<b>Despite</b> being famous, the old violins lost.', d: 'despite + -ing is a thing too.' }
+  ],
+  nota: 'Same idea, two doors. A sentence goes through <b>although</b> or <b>even though</b>. A thing goes through <b>despite</b> or <b>in spite of</b> (never “despite of”).',
+  uso: { p: 'Your turn. Something you did well even though it was hard. Say it through both doors.', molde: ['Although I was …, I …', 'Despite …, I …'], ex: 'Although I was nervous, I spoke well. Despite my nerves, I spoke well.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

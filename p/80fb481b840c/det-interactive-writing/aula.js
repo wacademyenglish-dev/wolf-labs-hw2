@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 13, kick: 'DUOLINGO ENGLISH TES
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · A Model Paragraph', t: 'What makes this paragraph work?', p: 'Read it out loud. Then find the structure and the connectors.' },
-  { k: 'transforma', est: 'w', min: 8, img: 'capa', rot: 'II · Better Connectors', t: 'Same idea, better connector.', p: 'Read the sentence and the clue. Say it with the new connector.' },
-  { k: 'prova', est: 'w', min: 18, img: 'conversa', rot: 'III · Five, Then Three', t: 'The real clock: 5 minutes, then a follow-up.', p: 'Write about the topic. Then answer the new question.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 13: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Three Connectors', t: 'Three small words that build a paragraph.', p: 'Look at the three connectors. Tap the right one for each gap. Then say three of your own.' },
+  { k: 'transforma', est: 'w', min: 8, img: 'capa', rot: 'III · Better Connectors', t: 'Same idea, better connector.', p: 'Read the sentence and the clue. Say it with the new connector.' },
+  { k: 'prova', est: 'w', min: 18, img: 'conversa', rot: 'IV · Five, Then Three', t: 'The real clock: 5 minutes, then a follow-up.', p: 'Write about the topic. Then answer the new question.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 13: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'TOPIC: A TIME TECHNOLOGY MADE YOUR LIFE EASIER', tipo: 'nota',
@@ -56,3 +57,26 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 13: leitura · transforma · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Three connectors. Three jobs.',
+  usos: [
+    { t: 'ADD MORE', f: 'Moreover, the app sends me a message every time I spend money.', d: 'Moreover: one more good point.' },
+    { t: 'GIVE AN EXAMPLE', f: 'For instance, last month I changed my habits.', d: 'For instance: a real example.' },
+    { t: 'WRAP UP', f: 'Overall, this small app saves me time and money.', d: 'Overall: the last sentence of the paragraph.' }
+  ],
+  pergunta: 'Which connector fits the gap?',
+  itens: [
+    { f: 'The app is fast. … , it is free.', c: 0 },
+    { f: 'I use maps a lot. … , yesterday I found a new route.', c: 1 },
+    { f: 'The trip was long and tiring. … , it was worth it.', c: 2 },
+    { f: 'The phone is small. … , the battery lasts two days.', c: 0 },
+    { f: 'Many people save money with apps. … , my friend saved a lot.', c: 1 },
+    { f: 'We tried three apps. … , this one is the best.', c: 2 }
+  ],
+  nota: 'Different connectors raise your writing score: <b>moreover</b> adds a point, <b>for instance</b> gives an example, <b>overall</b> closes the paragraph.',
+  uso: { p: 'Your turn. About your phone: one more point with moreover, an example with for instance, and a closing with overall.', molde: ['Moreover, …', 'For instance, …', 'Overall, …'], ex: 'Moreover, my phone is also my camera. For instance, I took ten photos today. Overall, it makes my life easier.' },
+  prof: 'Read the three jobs out loud with the student. Then the student taps a connector for each gap. The jobs are the rule.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

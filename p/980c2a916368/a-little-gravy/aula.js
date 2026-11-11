@@ -12,12 +12,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'torta', rot: 'I · Your Holidays', t: 'Before the dinner: you and big family meals.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'lista', est: 'o', min: 7, img: 'sacola', rot: 'II · The Shopping List', t: 'The shopping list is wrong. Fix every line.', p: 'Tap a line. Read the clue. Say what you really need: how much, or how many?' },
-  { k: 'regra', est: 'f', min: 6, img: 'despensa', rot: 'III · The Rule', t: 'Can you count it? That’s the whole question.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'mesa', est: 'o', min: 7, img: 'capa', rot: 'IV · Twelve Plates', t: 'Twelve guests, and everybody wants something.', p: 'Your teacher is the guest. Answer at once.' },
-  { k: 'roda', est: 'o', min: 7, img: 'molho', rot: 'V · A Lot, a Little', t: 'Your life in quantities.', p: 'Pick a card. Answer with a lot of, a few, a little, not much or not many.' },
-  { k: 'josie', est: 'o', min: 7, extra: 1, img: 'sacola', rot: 'VI · The Phone Call', t: 'Cousin Josie calls from the supermarket.', p: 'Your teacher is Josie. Tell her what you need.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'torta', rot: 'VII · Quick Check', t: 'Six quick lines from the kitchen.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · After Dinner', t: 'Write the list for your own party.', p: 'A lot of, a few, a little, not much, not many. The red line watches count / can’t count. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'despensa', rot: 'III · Mistake Hunter', t: 'Six lines from the shopping list. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'regra', est: 'f', min: 6, img: 'despensa', rot: 'IV · The Rule', t: 'Can you count it? That’s the whole question.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'mesa', est: 'o', min: 7, img: 'capa', rot: 'V · Twelve Plates', t: 'Twelve guests, and everybody wants something.', p: 'Your teacher is the guest. Answer at once.' },
+  { k: 'roda', est: 'o', min: 7, img: 'molho', rot: 'VI · A Lot, a Little', t: 'Your life in quantities.', p: 'Pick a card. Answer with a lot of, a few, a little, not much or not many.' },
+  { k: 'josie', est: 'o', min: 7, extra: 1, img: 'sacola', rot: 'VII · The Phone Call', t: 'Cousin Josie calls from the supermarket.', p: 'Your teacher is Josie. Tell her what you need.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'torta', rot: 'VIII · Quick Check', t: 'Six quick lines from the kitchen.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · After Dinner', t: 'Write the list for your own party.', p: 'A lot of, a few, a little, not much, not many. The red line watches count / can’t count. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -181,3 +182,19 @@ TOQUES['jo-prox'] = function () { S.josie.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
 /* duas opções erradas com o mesmo erro acendiam juntas: cada uma ganha um código próprio */
 [LISTA, MESA].forEach(function (lista) { lista.forEach(function (x) { var visto = {}; x.ops.forEach(function (o) { if (visto[o[1]]) { var novo = o[1] + '2'; NOTA[novo] = NOTA[o[1]]; o[1] = novo; } visto[o[1]] = 1; }); }); });
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines for Thanksgiving.',
+  toque: 'People who speak Portuguese often say these. Ask: can I count it? Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'How [[many]] gravy do we need?', r: 'How <b>much</b> gravy do we need?', d: 'You can’t count gravy: much.' },
+    { f: 'There are only a [[little]] beans.', r: 'There are only a <b>few</b> beans.', d: 'You can count beans: a few.' },
+    { f: 'We don’t have [[many]] cream.', r: 'We don’t have <b>much</b> cream.', d: 'Cream is not countable: much.' },
+    { f: 'How [[much]] guests are coming?', r: 'How <b>many</b> guests are coming?', d: 'You can count guests: how many.' },
+    { f: 'Put [[a few]] gravy on the turkey.', r: 'Put <b>a little</b> gravy on the turkey.', d: 'A little goes with things you can’t count.' },
+    { f: 'There aren’t [[much]] chairs for twelve people.', r: 'There aren’t <b>many</b> chairs for twelve people.', d: 'Chairs: you can count them. Many.' }
+  ],
+  nota: 'Can you count it? <b>many</b>, <b>a few</b> and <b>How many</b> go with things you count: beans, guests, chairs. <b>much</b>, <b>a little</b> and <b>How much</b> go with things you can’t count: gravy, cream, rice. <b>a lot of</b> works with both.',
+  uso: { p: 'Your turn. Your own party table: one thing you need a little of, one thing you need a few of, and one question with How much or How many.', molde: ['We need a little …', 'We need a few …', 'How much / How many …?'], ex: 'We need a little salt. We need a few more chairs. How many guests are coming?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

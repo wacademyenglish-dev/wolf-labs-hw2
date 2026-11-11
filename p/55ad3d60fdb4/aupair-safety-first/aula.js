@@ -14,9 +14,10 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 18, kick: 'AU PAIR · MODULE 5 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 6, img: 'conversa', rot: 'I · You Are Supported', t: 'How an agency keeps au pairs safe.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'II · Must, Mustn’t, Don’t Have To', t: 'Three small words, three different rules.', p: 'Compare A and B. What is the difference?' },
-  { k: 'separa', est: 'f', min: 14, img: 'conversa', rot: 'III · Must or Mustn’t?', t: 'Twelve safety rules.', p: 'Choose the side and say the full rule.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 18: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 5, img: 'conversa', rot: 'II · Three Small Words', t: 'One word, three different rules.', p: 'Read the three rules. Tap the right one for each new sentence. Then say your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'III · Must, Mustn’t, Don’t Have To', t: 'Three small words, three different rules.', p: 'Compare A and B. What is the difference?' },
+  { k: 'separa', est: 'f', min: 14, img: 'conversa', rot: 'IV · Must or Mustn’t?', t: 'Twelve safety rules.', p: 'Choose the side and say the full rule.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 18: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'zjegko3wgpw', titulo: 'Is Being an Au Pair in the USA Safe in 2026?', fonte: 'AUPAIRCARE · 1 MIN',
@@ -61,3 +62,25 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 18: video · descobre · separa (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Must, mustn’t, don’t have to. Three rules for the kids.',
+  usos: [
+    { t: 'MUST', f: 'You must use a car seat.', d: 'It is necessary. It is the law.' },
+    { t: 'MUSTN’T', f: 'You mustn’t leave a baby alone in the bath.', d: 'It is not allowed. It is dangerous.' },
+    { t: 'DON’T HAVE TO', f: 'You don’t have to cook for the adults.', d: 'It is not necessary. It is not your job.' }
+  ],
+  pergunta: 'Which rule is it?',
+  itens: [
+    { f: 'You … hold a small child’s hand near the street.', c: 0, d: 'It is necessary: a car can come.' },
+    { f: 'You … give the kids your own medicine.', c: 1, d: 'It is not allowed.' },
+    { f: 'You … clean the whole house.', c: 2, d: 'It is not part of your duties.' },
+    { f: 'Medicine … be out of reach.', c: 0, d: 'It is necessary for safety.' },
+    { f: 'You … wake the baby to change a clean diaper.', c: 2, d: 'It is not necessary. Let the baby sleep.' },
+    { f: 'You … leave the kids alone at the pool.', c: 1, d: 'It is never allowed.' }
+  ],
+  nota: '<b>must</b> + verb: it is necessary. <b>mustn’t</b> + verb: it is not allowed. <b>don’t have to</b> + verb: you can, but you don’t need to. The verb stays clean: no to, no -s.',
+  uso: { p: 'Your turn. About your au pair year: one thing you must do, one thing you mustn’t do, and one thing you don’t have to do.', molde: ['I must …', 'I mustn’t …', 'I don’t have to …'], ex: 'I must watch the kids at the pool. I mustn’t use my phone when I drive. I don’t have to cook for the parents.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

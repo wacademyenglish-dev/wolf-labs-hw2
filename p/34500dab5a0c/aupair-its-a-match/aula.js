@@ -12,10 +12,11 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 12, kick: 'AU PAIR · MODULE 3 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 6, img: 'conversa', rot: 'I · Matching Tips', t: 'Three tips in 48 seconds.', p: 'One question before, then the video, then the questions.' },
-  { k: 'transforma', est: 'f', min: 9, img: 'capa', rot: 'II · Yes and No, Politely', t: 'Make it kind and clear.', p: 'Read the idea and the clue. Say it the polite way.' },
-  { k: 'escolha', est: 'o', min: 8, img: 'conversa', rot: 'III · Family A or Family B?', t: 'Two families. Which one, and why?', p: 'Choose. Give two reasons. There is no wrong answer.' },
-  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'IV · Your Match Message', t: 'Say yes and plan the arrival.', p: 'Five lines: yes, thanks, feelings, plans, questions.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Now or Planned?', t: 'Two messages to your host family.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'transforma', est: 'f', min: 9, img: 'capa', rot: 'III · Yes and No, Politely', t: 'Make it kind and clear.', p: 'Read the idea and the clue. Say it the polite way.' },
+  { k: 'escolha', est: 'o', min: 8, img: 'conversa', rot: 'IV · Family A or Family B?', t: 'Two families. Which one, and why?', p: 'Choose. Give two reasons. There is no wrong answer.' },
+  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'V · Your Match Message', t: 'Say yes and plan the arrival.', p: 'Five lines: yes, thanks, feelings, plans, questions.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'fniMzo8IVRA', titulo: 'Matching tips 1: How to manage your connections as an au pair', fonte: 'CULTURAL CARE AU PAIR · 1 MIN',
@@ -57,3 +58,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 12: video · transforma · escolha · cartao (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'I’ll or I’m going to? Two messages to the family.',
+  a: { t: 'Decided now', falas: [['Host mom', 'Can you call us tomorrow?'], ['You', 'Of course! I<mark>’ll</mark> call at six.']], d: 'You decide as you speak. That is <b>I’ll</b>.' },
+  b: { t: 'Already planned', falas: [['Host mom', 'When do you arrive?'], ['You', 'I<mark>’m going to</mark> arrive on March 10. The agency booked my flight.']], d: 'The plan is already made. That is <b>I’m going to</b>.' },
+  pergunta: 'Same future, two forms. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'The host dad writes: “Could you send a photo of your room?” You decide now:', o: ['I’ll send it tonight.', 'I’m going to send it tonight.'], c: 0, d: 'A quick yes, right now.' },
+    { p: 'Your calendar says: orientation on March 12. You tell the family:', o: ['I’ll go to orientation on March 12.', 'I’m going to go to orientation on March 12.'], c: 1, d: 'The date is already in your calendar.' },
+    { p: 'The host mom asks: “Can you take a call on Saturday?” You say yes:', o: ['Sure, I’ll be there.', 'Sure, I’m going to be there.'], c: 0, d: 'You decide when she asks.' },
+    { p: 'You bought your ticket yesterday. The family asks about the flight:', o: ['I’ll fly on March 10.', 'I’m going to fly on March 10.'], c: 1, d: 'The ticket is bought: the plan is made.' }
+  ],
+  nota: 'One test: is the plan already made, or do you decide as you speak? Already made: <b>I’m going to</b>. Decided now: <b>I’ll</b>.',
+  uso: { p: 'Your turn. One plan you already have for your arrival, and one quick promise to the family.', molde: ['I’m going to …', 'I’ll …'], ex: 'I’m going to arrive on March 10. I’ll send you a message when I land.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

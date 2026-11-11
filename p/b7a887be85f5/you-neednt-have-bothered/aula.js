@@ -28,11 +28,12 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'lareira', rot: 'I · You and Your Bags', t: 'Before the trip: you, your bags, and the things you never use.', p: 'Tap a card. The student answers; then the teacher answers too.' },
   { k: 'mala', est: 'f', min: 7, img: 'portamalas', rot: 'II · The Unpacking', t: 'Priya writes to her sister from the cabin. What did they bring for nothing?', p: 'Read Priya’s message out loud. Tap the six verb phrases. Then finish the rule.' },
-  { k: 'regra', est: 'f', min: 6, img: 'cozinha', rot: 'III · Six Traps', t: 'Six lines from the trip. Each one fell into a trap.', p: 'Say each line the right way out loud. Then tap Check. Ask: did they do it?' },
-  { k: 'neve', est: 'o', min: 7, img: 'estrada', rot: 'IV · Snowed In', t: 'The snowed-in night. Six moments around the cabin. Finish each one fast.', p: 'Read the moment. The student finishes it out loud, then taps Check. Watch which lane it lands in.' },
-  { k: 'roda', est: 'o', min: 7, img: 'janela', rot: 'V · What For?', t: 'Your life: the things you did for nothing, and the chances you missed.', p: 'Tap a card. Answer about your real life.' },
-  { k: 'dona', est: 'o', min: 7, img: 'lareira', rot: 'VI · The Owner Calls', t: 'January 1st. The cabin owner calls to wish you a happy New Year.', p: 'The teacher is the owner. Answer with needn’t have, didn’t need to, could have.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VII · Traveling Light', t: 'Is it better to overprepare, or to travel light?', p: 'Your last trip, in three lines. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cozinha', rot: 'III · Mistake Hunter', t: 'Six lines from the cabin. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'regra', est: 'f', min: 6, img: 'cozinha', rot: 'IV · Six Traps', t: 'Six lines from the trip. Each one fell into a trap.', p: 'Say each line the right way out loud. Then tap Check. Ask: did they do it?' },
+  { k: 'neve', est: 'o', min: 7, img: 'estrada', rot: 'V · Snowed In', t: 'The snowed-in night. Six moments around the cabin. Finish each one fast.', p: 'Read the moment. The student finishes it out loud, then taps Check. Watch which lane it lands in.' },
+  { k: 'roda', est: 'o', min: 7, img: 'janela', rot: 'VI · What For?', t: 'Your life: the things you did for nothing, and the chances you missed.', p: 'Tap a card. Answer about your real life.' },
+  { k: 'dona', est: 'o', min: 7, img: 'lareira', rot: 'VII · The Owner Calls', t: 'January 1st. The cabin owner calls to wish you a happy New Year.', p: 'The teacher is the owner. Answer with needn’t have, didn’t need to, could have.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Traveling Light', t: 'Is it better to overprepare, or to travel light?', p: 'Your last trip, in three lines. They go to your My notes.' }
 ];
 
 var VOCE = [
@@ -161,3 +162,18 @@ R.fim = function (c) {
     + '<p class="hw"><a class="pilula" href="HW/" target="_blank" rel="noopener">Homework for the student →</a></p></div></div>';
 };
 
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines from the cabin.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'We needn’t [[to]] have packed so much.', r: 'We needn’t have packed so much.', d: 'needn’t + have + the -ed form. No to.' },
+    { f: 'You needn’t have [[bring]] the chains.', r: 'You needn’t have <b>brought</b> the chains.', d: 'needn’t have + the past form: brought.' },
+    { f: 'Priya [[didn’t need to have]] cooked: we ate out.', r: 'Priya <b>didn’t need to</b> cook: we ate out.', d: 'didn’t need to + the plain verb. No have.' },
+    { f: 'We could [[buy]] a better map, but we didn’t.', r: 'We could <b>have bought</b> a better map, but we didn’t.', d: 'A chance that passed: could have + the -ed form.' },
+    { f: 'He needn’t [[had]] come back for the keys.', r: 'He needn’t <b>have</b> come back for the keys.', d: 'needn’t have. Never needn’t had.' },
+    { f: 'You [[mustn’t have]] brought all that food: we had plenty.', r: 'You <b>needn’t have</b> brought all that food: we had plenty.', d: 'You did it, and it was not necessary: needn’t have.' }
+  ],
+  nota: 'Three shapes, three meanings: <b>needn’t have</b> + -ed (you did it for nothing), <b>didn’t need to</b> + plain verb (it was not necessary), <b>could have</b> + -ed (a chance that passed).',
+  uso: { p: 'Your turn. One thing you did for nothing, and one chance you missed.', molde: ['I needn’t have …', 'I could have …'], ex: 'I needn’t have taken an umbrella. I could have gone to the beach.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

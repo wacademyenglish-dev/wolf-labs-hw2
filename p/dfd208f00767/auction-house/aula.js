@@ -18,14 +18,15 @@ var L = [
   { k: 'palavras', est: 'l', img: 'leilao', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'leilao', rot: 'III · Catch Six', t: 'Two boys play a memory game with a list of things.', p: 'Six words. Tap each one when you hear it. Then hear the list again, slower.' },
   { k: 'falas', est: 'l', extra: 1, img: 'leilao', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'pulo', est: 'f', min: 6, img: 'relogio', rot: 'V · The Jump', t: 'The describing word jumps in front of the thing. Then a or an?', p: 'First listen: a or an? Then pick the right label.' },
-  { k: 'catalogo', est: 'o', min: 7, img: 'relogio', rot: 'VI · The Misprint', t: 'The catalog has mistakes.', p: 'Say the right label out loud. Then turn the card: it gets the AUTHENTIC stamp.' },
-  { k: 'balanca', est: 'o', min: 7, img: 'balanca', rot: 'VII · The Scale', t: 'One word from the auctioneer. You say the opposite.', p: 'In a full sentence. The scale tips when you say it.' },
-  { k: 'lance', est: 'f', min: 6, extra: 1, img: 'salao', rot: 'VIII · The Bid', t: 'You and your teacher: the same lots.', p: 'Three bids per lot. The price goes up only when the sentence is right. On the third bid, the hammer falls.' },
-  { k: 'memoria', est: 'o', min: 7, extra: 1, img: 'leilao', rot: 'IX · The Memory Game', t: 'Like the boys in the video. Ten seconds, then the curtain closes.', p: 'Say every lot you remember, with a / an and the describing word.' },
-  { k: 'venda', est: 'o', min: 7, extra: 1, img: 'duas', rot: 'X · Sell It to Me', t: 'Now you are the auctioneer.', p: 'Pick a room. Show one thing and sell it in 30 seconds. Three rounds.' },
-  { k: 'conversa', est: 'o', min: 7, extra: 1, img: 'lampada', rot: 'XI · After the Sale', t: 'The sale is over. A coffee, and five questions.', p: 'Your teacher asks about the things in your life.' },
-  { k: 'fim', est: 'w', min: 6, img: 'salao', rot: 'XII · Lot 00', t: 'The last lot of the night is yours.', p: 'Write the catalog of your own room: five lots, a / an the first time, the after that. The red line watches. It goes to your My notes.' }
+  { k: 'gx', est: 'l', min: 4, img: 'lampada', rot: 'V · A or An?', t: 'Two little words that sound different.', p: 'Listen to the pairs. Then the ear test: a or an? Then say yours.' },
+  { k: 'pulo', est: 'f', min: 6, img: 'relogio', rot: 'VI · The Jump', t: 'The describing word jumps in front of the thing. Then a or an?', p: 'First listen: a or an? Then pick the right label.' },
+  { k: 'catalogo', est: 'o', min: 7, img: 'relogio', rot: 'VII · The Misprint', t: 'The catalog has mistakes.', p: 'Say the right label out loud. Then turn the card: it gets the AUTHENTIC stamp.' },
+  { k: 'balanca', est: 'o', min: 7, img: 'balanca', rot: 'VIII · The Scale', t: 'One word from the auctioneer. You say the opposite.', p: 'In a full sentence. The scale tips when you say it.' },
+  { k: 'lance', est: 'f', min: 6, extra: 1, img: 'salao', rot: 'IX · The Bid', t: 'You and your teacher: the same lots.', p: 'Three bids per lot. The price goes up only when the sentence is right. On the third bid, the hammer falls.' },
+  { k: 'memoria', est: 'o', min: 7, extra: 1, img: 'leilao', rot: 'X · The Memory Game', t: 'Like the boys in the video. Ten seconds, then the curtain closes.', p: 'Say every lot you remember, with a / an and the describing word.' },
+  { k: 'venda', est: 'o', min: 7, extra: 1, img: 'duas', rot: 'XI · Sell It to Me', t: 'Now you are the auctioneer.', p: 'Pick a room. Show one thing and sell it in 30 seconds. Three rounds.' },
+  { k: 'conversa', est: 'o', min: 7, extra: 1, img: 'lampada', rot: 'XII · After the Sale', t: 'The sale is over. A coffee, and five questions.', p: 'Your teacher asks about the things in your life.' },
+  { k: 'fim', est: 'w', min: 6, img: 'salao', rot: 'XIII · Lot 00', t: 'The last lot of the night is yours.', p: 'Write the catalog of your own room: five lots, a / an the first time, the after that. The red line watches. It goes to your My notes.' }
 ];
 
 var COISAS = ['watch', 'book', 'cup', 'photo', 'toy', 'guitar', 'umbrella', 'ring'];
@@ -240,3 +241,23 @@ TOQUES['vd-s'] = function (b, n) { S.venda.sala = n; };
 TOQUES['vd-f'] = function (b, n, v) { S.venda.formas[v] = !S.venda.formas[v]; };
 TOQUES['vd-a'] = function (b, n, v) { S.venda.arm[v] = !S.venda.arm[v]; };
 TOQUES['vd-prox'] = function () { var v = S.venda; S.venda = { sala: v.sala, r: v.r + 1, formas: {}, arm: {} }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G11 · uma cena curta nova (k: gx) antes de pulo.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'som2', titulo: 'A or an? Listen first.',
+  toque: 'Tap ▶ and listen. Before a consonant sound: a. Before a vowel sound: an.',
+  pares: [
+    [{ t: 'a big clock', fala: 'a big clock' }, { t: 'an old clock', fala: 'an old clock' }],
+    [{ t: 'a new lamp', fala: 'a new lamp' }, { t: 'an expensive lamp', fala: 'an expensive lamp' }]
+  ],
+  pergunta: 'The ear test. Which one do you hear?',
+  itens: [
+    { fala: 'It is an old TV.', o: ['a', 'an'], c: 1 },
+    { fala: 'It is a small table.', o: ['a', 'an'], c: 0 },
+    { fala: 'It is an expensive ring.', o: ['a', 'an'], c: 1 },
+    { fala: 'It is a heavy box.', o: ['a', 'an'], c: 0 }
+  ],
+  nota: 'The word <b>right after</b> a / an decides. A vowel sound (old, expensive) takes <b>an</b>. A consonant sound (big, new, heavy) takes <b>a</b>. Listen, don’t look at the letter: an old TV, a new TV.',
+  uso: { p: 'Your turn. Two things in your room. Say each one with a or an and a describing word.', molde: ['It is a …', 'It is an …'], ex: 'It is a small desk. It is an old chair.' },
+  prof: 'The ▶ uses the voice of the browser. No sound? Say the sentences yourself, with a soft and an clear.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_som', GX_EXPLICA); };

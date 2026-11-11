@@ -17,11 +17,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Calls', t: 'Who answers the phone at your company?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · Easy Reader: The Gatekeeper', t: 'Leo’s First Big Client · Chapter 2.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'multipla', est: 'l', min: 6, img: 'conversa', rot: 'III · The Assistant Says…', t: 'Six things an assistant says on the phone.', p: 'Listen. Choose the best answer. Then say it out loud.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'IV · “This Is Leo”, Not “Here Is Leo”', t: 'Two sentences. Which one is English on the phone?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'cliente', est: 'o', min: 10, img: 'conversa', rot: 'V · The Gatekeeper', t: 'You call Mr. Duarte. Your teacher is Nina, his assistant.', p: 'Be polite. Find out four things. Leave a message.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'mesa', rot: 'VI · Mini-Debate: Phone or E-mail?', t: 'Two sides. Your teacher takes the other side.', p: 'Choose a side. Say “I think … is better because …”. Then answer your teacher.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VII · Your Call Script', t: 'Your script for a real cold call.', p: 'Write it. Then call your teacher and use it.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 17: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'IV · The Gatekeeper’s Phone', t: 'Leo calls Orla. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then make your own call.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'V · “This Is Leo”, Not “Here Is Leo”', t: 'Two sentences. Which one is English on the phone?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'cliente', est: 'o', min: 10, img: 'conversa', rot: 'VI · The Gatekeeper', t: 'You call Mr. Duarte. Your teacher is Nina, his assistant.', p: 'Be polite. Find out four things. Leave a message.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'mesa', rot: 'VII · Mini-Debate: Phone or E-mail?', t: 'Two sides. Your teacher takes the other side.', p: 'Choose a side. Say “I think … is better because …”. Then answer your teacher.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VIII · Your Call Script', t: 'Your script for a real cold call.', p: 'Write it. Then call your teacher and use it.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 17: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -91,3 +92,25 @@ var PODE = [
   'I can ask for a person: Can I speak to…, please?',
   'I can leave a message with an assistant.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The phone call. Tap the lit words.',
+  falas: [
+    { q: 'Nina', f: 'Orla Beverages, good morning.' },
+    { q: 'You', f: 'Hi, [[this is]] Leo Martins, from Bluepeak.' },
+    { q: 'Nina', f: 'How can I help you?' },
+    { q: 'You', f: '[[I’m calling about]] our proposal. [[Can I speak to]] Mr. Duarte, please?' },
+    { q: 'Nina', f: 'He’s in a meeting right now.' },
+    { q: 'You', f: '[[Could you take a message]], please?' }
+  ],
+  porques: [
+    'On the phone, your name: this is. Not “here is”.',
+    'The reason for the call: I’m calling about …',
+    'To ask for a person: Can I speak to …, please?',
+    'Nina takes a message. You leave a message.'
+  ],
+  nota: 'Four phone lines: <b>This is</b> + your name. <b>I’m calling about</b> + the reason. <b>Can I speak to</b> + the person? <b>Could you take a message?</b>',
+  uso: { p: 'Your turn. You call a client. Say your name, the reason, and who you want.', molde: ['This is …, from …', 'I’m calling about …', 'Can I speak to …, please?'], ex: 'This is Ana Costa, from Bluepeak. I’m calling about the contract. Can I speak to Mr. Lima, please?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

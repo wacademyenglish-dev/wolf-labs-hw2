@@ -30,11 +30,12 @@ var L = [
   { k: 'corte', est: 'o', min: 7, img: 'corte', rot: 'III · The Court Is Open', t: 'Five cases on the table. You are the judge.', p: 'Pick a scroll. Read the case out loud and answer the question. Then give your verdict in ONE sentence. Your teacher taps what you said.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'IV · Solomon’s Paradox', t: 'Why was that so easy? The video has the answer.', p: 'Answer first. Then the video in four chapters. Then True or Lie.' },
   { k: 'falas', est: 'l', min: 5, extra: 1, img: 'capa', rot: 'V · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'balanca', rot: 'VI · The Scale', t: 'After the verb: TO or -ING?', p: 'Read the four cards out loud. Then fix the four traps.' },
-  { k: 'pergaminho', est: 'w', min: 6, img: 'camara', rot: 'VII · The Last Scroll', t: 'One more case arrives. It has your name on it.', p: 'Write your own case like the other scrolls: your name, not “I”. What do you want? What do you keep doing? What are you afraid of?' },
-  { k: 'veredito', est: 'o', min: 7, extra: 1, img: 'capa', rot: 'VIII · The Judge’s Chair', t: 'Read your scroll like it’s someone else’s case. Then judge it.', p: 'Your teacher is the court. Answer out loud, one question at a time.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'balanca', rot: 'IX · Quick Check', t: 'Five quick lines from the court.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'camara', rot: 'X · The Royal Decree', t: 'The judge signs one last paper: a decree for yourself.', p: 'Write three lines to yourself: stop…, start…, don’t be afraid of… It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'balanca', rot: 'VI · Find the Rule', t: 'Four sentences from the court. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'balanca', rot: 'VII · The Scale', t: 'After the verb: TO or -ING?', p: 'Read the four cards out loud. Then fix the four traps.' },
+  { k: 'pergaminho', est: 'w', min: 6, img: 'camara', rot: 'VIII · The Last Scroll', t: 'One more case arrives. It has your name on it.', p: 'Write your own case like the other scrolls: your name, not “I”. What do you want? What do you keep doing? What are you afraid of?' },
+  { k: 'veredito', est: 'o', min: 7, extra: 1, img: 'capa', rot: 'IX · The Judge’s Chair', t: 'Read your scroll like it’s someone else’s case. Then judge it.', p: 'Your teacher is the court. Answer out loud, one question at a time.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'balanca', rot: 'X · Quick Check', t: 'Five quick lines from the court.', p: 'Say the whole sentence out loud. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'camara', rot: 'XI · The Royal Decree', t: 'The judge signs one last paper: a decree for yourself.', p: 'Write three lines to yourself: stop…, start…, don’t be afraid of… It goes to your My notes.' }
 ];
 
 /* o aquecimento (11/10, pedido do Carlos: nada de cartas): A BALANÇA. Em cada situação o aluno
@@ -304,3 +305,19 @@ TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n
 TOQUES['vr-prox'] = function () { S.vr.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences from the court. Find the rule yourself.',
+  exemplos: [
+    'The king <b>wants</b> <u>to know</u> the truth.',
+    'The woman <b>keeps</b> <u>asking</u> for her baby.',
+    'The judge <b>decided</b> <u>to wait</u>.',
+    'The other woman was <b>afraid of</b> <u>losing</u> the case.'
+  ],
+  pergunta: 'The verb after want and decide has … The verb after keep and afraid of has …',
+  opcoes: ['to after want and decide, -ing after keep and afraid of', '-ing after want and decide, to after keep and afraid of', 'to after all of them'], c: 0,
+  nao: 'Not that one. Read the four lit pairs again: which ones have to? which ones have -ing?',
+  regra: '<b>want / need / decide / try + to</b> + verb. <b>keep / stop / avoid / enjoy</b> and a preposition like <b>afraid of</b> + <b>-ing</b>. Two meanings: stop <b>smoking</b> = quit. stop <b>to smoke</b> = stop in order to smoke.',
+  uso: { p: 'Your turn. One thing you want to do, one thing you keep doing, one thing you are afraid of.', molde: ['I want to …', 'I keep …ing', 'I’m afraid of …ing'], ex: 'I want to learn the guitar. I keep forgetting my keys. I’m afraid of speaking in public.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

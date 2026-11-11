@@ -25,14 +25,15 @@ var L = [
   { k: 'capa', est: null, img: 'mesa' },
   { k: 'abre', est: 'o', min: 7, img: 'corredor', rot: 'I · Somebody Near You', t: 'Think of someone near you who does something you would change.', p: 'Tap who it is. Answer the three questions out loud. Keep your last sentence: it comes back.' },
   { k: 'dois', est: 'f', min: 7, img: 'mesa', rot: 'II · Who Is Doing It?', t: 'You: I’d rather + plain verb. Someone else: I’d rather you + past form.', p: 'Read Anna’s note out loud. Tap the verbs after “rather” and “time”. Then finish the rule.' },
-  { k: 'escada', est: 'l', min: 7, img: 'mesa', rot: 'III · Three Steps Back', t: 'Three recordings. The same idea, three distances.', p: 'Play it. Say it back. Then tap: is it about tonight, or already done?' },
-  { k: 'hora', est: 'f', min: 6, img: 'corredor', rot: 'IV · It’s Time', t: 'It’s time + person + past form: it should already be happening.', p: 'Match each situation to its sentence. Then say each pair out loud.' },
-  { k: 'ouve', est: 'l', min: 7, img: 'vazio', rot: 'V · Room to Say No', t: 'Anna and Mark share a flat. Six lines.', p: 'Play it. Is it POLITE (they can say no) or FIRM (no real choice)? Say why.' },
-  { k: 'prazo', est: 'o', min: 7, img: 'mesa', rot: 'VI · One More Week', t: 'Your report is due Friday the 10th. You need one more week.', p: 'Your teacher is the boss. Start the clock and negotiate. Tap each tool when you use it: the hourglass turns.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VII · I’d Rather You Go', t: 'Six sentences. Four of them have a problem.', p: 'Tap Right or Wrong. If it is wrong, say the fix.' },
-  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'corredor', rot: 'VIII · About You', t: 'Five quick cards about your life.', p: 'Pick a card. Answer with the frame, and add one reason.' },
-  { k: 'sua', est: 'o', min: 7, extra: 1, img: 'vazio', rot: 'IX · Your Sentence, Again', t: 'The person from scene I. Say it again, with the form, and leave room.', p: 'Choose the version that leaves room. Then say your own.' },
-  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'X · The Door You Leave Open', t: 'One more week, and a few wishes about other people.', p: 'Write three wishes: about you, about someone else, and about time. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'III · Mistake Hunter', t: 'Six sentences from the apartment. Each one has a wrong word.', p: 'Tap the wrong word. Say the sentence right. Then check.' },
+  { k: 'escada', est: 'l', min: 7, img: 'mesa', rot: 'IV · Three Steps Back', t: 'Three recordings. The same idea, three distances.', p: 'Play it. Say it back. Then tap: is it about tonight, or already done?' },
+  { k: 'hora', est: 'f', min: 6, img: 'corredor', rot: 'V · It’s Time', t: 'It’s time + person + past form: it should already be happening.', p: 'Match each situation to its sentence. Then say each pair out loud.' },
+  { k: 'ouve', est: 'l', min: 7, img: 'vazio', rot: 'VI · Room to Say No', t: 'Anna and Mark share a flat. Six lines.', p: 'Play it. Is it POLITE (they can say no) or FIRM (no real choice)? Say why.' },
+  { k: 'prazo', est: 'o', min: 7, img: 'mesa', rot: 'VII · One More Week', t: 'Your report is due Friday the 10th. You need one more week.', p: 'Your teacher is the boss. Start the clock and negotiate. Tap each tool when you use it: the hourglass turns.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VIII · I’d Rather You Go', t: 'Six sentences. Four of them have a problem.', p: 'Tap Right or Wrong. If it is wrong, say the fix.' },
+  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'corredor', rot: 'IX · About You', t: 'Five quick cards about your life.', p: 'Pick a card. Answer with the frame, and add one reason.' },
+  { k: 'sua', est: 'o', min: 7, extra: 1, img: 'vazio', rot: 'X · Your Sentence, Again', t: 'The person from scene I. Say it again, with the form, and leave room.', p: 'Choose the version that leaves room. Then say your own.' },
+  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'XI · The Door You Leave Open', t: 'One more week, and a few wishes about other people.', p: 'Write three wishes: about you, about someone else, and about time. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -203,3 +204,19 @@ TOQUES.eg = function (b, n, v) { S.eg.esc[n] = +v; };
 TOQUES.ov = function (b, n, v) { S.ov.esc = v; };
 TOQUES['ov-prox'] = function () { S.ov = { n: S.ov.n + 1, esc: '' }; };
 TOQUES.sa = function (b, n) { S.sa.esc = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de escada.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six sentences from the apartment.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'I’d rather [[to]] stay home tonight.', r: 'I’d rather <b>stay</b> home tonight.', d: 'I’d rather + the clean verb: no to.' },
+    { f: 'I’d rather you [[go]] to your room now.', r: 'I’d rather you <b>went</b> to your room now.', d: 'About another person: the past form. It is about now.' },
+    { f: 'It’s time we [[leave]].', r: 'It’s time we <b>left</b>.', d: 'It’s time + person + past.' },
+    { f: 'I’d rather you didn’t [[said]] that.', r: 'I’d rather you didn’t <b>say</b> that.', d: 'After didn’t: the clean verb.' },
+    { f: 'I’d rather [[going]] to bed early.', r: 'I’d rather <b>go</b> to bed early.', d: 'No -ing after rather.' },
+    { f: 'Mark, it’s time you [[do]] the dishes.', r: 'Mark, it’s time you <b>did</b> the dishes.', d: 'Time + person: the past form.' }
+  ],
+  nota: 'About yourself: <b>I’d rather + clean verb</b> (I’d rather stay). About another person: <b>I’d rather you + past</b> (I’d rather you went). The past here is not yesterday: it means “not real”. Same with <b>It’s time we left</b>.',
+  uso: { p: 'Your turn. One thing you’d rather do this weekend, and one thing you’d rather a friend did.', molde: ['I’d rather …', 'I’d rather you …'], ex: 'I’d rather stay home on Saturday. I’d rather you called before you come.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

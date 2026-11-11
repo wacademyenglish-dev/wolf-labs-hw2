@@ -16,8 +16,9 @@ var L = [
   { k: 'missao', est: 'o', min: 14, img: 'capa', rot: 'II · The Lost Wallet', t: 'Whose wallet is it? Ask about last night.', p: 'Ask each customer five questions. Your teacher is the customer. Then call the owner of the wallet.' },
   { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with first, then, after that, finally.' },
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'IV · Small Talk', t: 'Book A1 is almost done. Let’s talk.', p: 'Answer, then ask the question back: “And you?”' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'V · I Can', t: 'Unit 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' },
-  { k: 'ponte', est: 'l', min: 3, img: 'conversa', rot: 'VI · The Next Book', t: 'Book A1 is done. Here is Book A2.', p: 'Read the three cards out loud. Which one do you want first?' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Lost Wallet Card', t: 'Four lines from yesterday.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VI · I Can', t: 'Unit 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' },
+  { k: 'ponte', est: 'l', min: 3, img: 'conversa', rot: 'VII · The Next Book', t: 'Book A1 is done. Here is Book A2.', p: 'Read the three cards out loud. Which one do you want first?' }
 ];
 
 var PORTAS = [
@@ -79,3 +80,9 @@ var PONTE = { nivel: 'A2', titulo: 'Book 2 · Tell, compare, plan',
 /* MECÂNICAS VARIADAS */
 var ORDEM = { rot: 'LAST NIGHT AT THE CAFÉ', pede: 'Tap the cards in the right order.', chips: ['First,', 'Then,', 'After that,', 'Finally,'], modelo: 'First, Dani and her colleague arrived at six. Then they had a cake. After that, Dani saw a black wallet. Finally, she called the café in the morning.',
   passos: ['Dani and her colleague arrived at six.', 'They had a cake and worked.', 'Dani saw a black wallet on the next table.', 'The café closed at ten.', 'In the morning, Dani called the café.', 'The owner got her wallet back!'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 10.', rotulo: 'Yesterday and tomorrow', linhas: ['I / he / she <b>was</b> · you / we / they <b>were</b> · <b>there was</b> a wallet', 'yesterday I <b>went</b>, <b>ate</b>, <b>had</b> · not “goed”', 'she <b>didn’t</b> see it · <b>Did</b> you see it? · the verb stays clean', 'I’m <b>going to</b> call her · <b>already</b> in the middle · <b>yet</b> at the end'], uso: { p: 'Your turn. You are the manager. Tell the owner where a customer was, what she did, and what you are going to do.', molde: ['She was …', 'She didn’t …', 'I’m going to …'], ex: 'Ms. Lee was here at six. She didn’t see it. I’m going to call her tonight.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

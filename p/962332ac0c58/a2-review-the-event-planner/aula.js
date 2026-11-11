@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 14, img: 'capa', rot: 'II · The Event Planner', t: 'Three clients. Three big days.', p: 'Ask each client five questions. Your teacher is the client. Then tell your team the plan.' },
   { k: 'cartao', est: 'w', min: 6, img: 'conversa', rot: 'III · Your Agenda', t: 'Your next week. Write the plan.', p: 'Four short lines: what is booked, what you are going to do, and one prediction.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'V · The Planner’s Card', t: 'Four lines from Unit 6.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -66,3 +67,9 @@ var ESCOLHA = [
   { a: 'plan everything months before', b: 'decide everything on the day', chips: ['I prefer …', 'I’m going to … / I’ll …'], ex: 'Plan everything before. I’m going to start next month!' },
   { a: 'a party on Friday night', b: 'a party on Sunday afternoon', chips: ['On …', 'because …'], ex: 'On Sunday afternoon, because I’m always tired on Friday.' },
   { a: 'travel by bus', b: 'travel by car', chips: ['I’d get on / into …', 'because …'], ex: 'By bus. I get on, I sleep, and I get off in the city!' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 6.', rotulo: 'Plans and predictions', linhas: ['<b>at</b> nine · <b>on</b> Friday · <b>in</b> June · <b>at</b> home', 'into · out of · through the door · get <b>on</b> / <b>off</b> the bus', 'a plan: I’m <b>going to</b> book the hall · it is on the calendar: I’m <b>meeting</b> Ana at six', 'decide now: OK, I’<b>ll</b> call them · a guess: it <b>will</b> rain'], uso: { p: 'Your turn. Say one plan you have for next week, and one quick decision for your teacher right now.', molde: ['On Friday I’m going to …', 'OK, I’ll …'], ex: 'On Friday I’m going to meet a client at ten. You look busy: OK, I’ll answer the phone.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

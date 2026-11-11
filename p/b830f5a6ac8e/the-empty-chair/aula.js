@@ -21,15 +21,16 @@
 var L = [
   { k: 'capa', est: null, img: 'cadeira' },
   { k: 'troca', est: 'o', min: 7, img: 'cadeira', rot: 'I · The Chair Swap', t: 'Think of someone you admire. Put them in your chair, last week.', p: 'Tap a seat. Say what they would have done. Then say what you didn’t do.' },
-  { k: 'porta', est: 'f', min: 6, img: 'sala', rot: 'II · The Door Closes', t: 'While the door is open, it’s advice. When it closes, it’s the past.', p: 'Say the open sentence. Close the door. Say it again.' },
-  { k: 'gavetas', est: 'f', min: 6, img: 'sala', rot: 'III · Three Drawers', t: 'Every regret goes in a drawer: DUTY, CHANCE or IMPOSSIBLE.', p: 'Read the fact. Was anybody counting on you? Tap the drawer. Then say the full sentence.' },
-  { k: 'vozes', est: 'l', min: 7, img: 'sala', rot: 'IV · Four Confessions', t: 'A leadership group. Four people, each walking towards a confession.', p: 'Play a voice. Say the confession for them. Then choose the drawer.' },
-  { k: 'fez', est: 'f', min: 6, img: 'espera', rot: 'V · Did It or Didn’t?', t: 'Two kinds of regret: what you didn’t do, and what you did.', p: 'Read it. Did it happen? Tap. Then say the regret.' },
-  { k: 'rascunho', est: 'o', min: 7, img: 'carta', rot: 'VI · The Draft, Never Sent', t: 'In Daniel’s drafts folder: an email to Maya. Written in July. Never sent.', p: 'Every line is crossed out. Choose it right, and the line comes back. Then decide: send or keep?' },
-  { k: 'cadeira', est: 'o', min: 7, extra: 1, img: 'cadeira', rot: 'VII · Change Chairs', t: 'Put an empty chair in front of you. Maya is sitting in it.', p: 'First you are Daniel, talking to her. Then you stand up, change chairs, and answer as Maya.' },
-  { k: 'tribunal', est: 'o', min: 7, extra: 1, img: 'trem', rot: 'VIII · The Tribunal', t: 'Three short cases. You are the judge.', p: 'Read the case. Put every person in a drawer. Say their sentence. Then answer the last question.' },
-  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'cadeira', rot: 'IX · Your Own Chair', t: 'Now you. Small regrets only: work, study, decisions.', p: 'Four questions. Your teacher asks; you answer.' },
-  { k: 'fim', est: 'w', min: 6, img: 'cadeira', rot: 'X · Your Chair, Again', t: 'Back to the first scene. Here is how you said it.', p: 'Write it again, with the door closed. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'espera', rot: 'II · Open or Closed?', t: 'Where does each sentence live in time?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'porta', est: 'f', min: 6, img: 'sala', rot: 'III · The Door Closes', t: 'While the door is open, it’s advice. When it closes, it’s the past.', p: 'Say the open sentence. Close the door. Say it again.' },
+  { k: 'gavetas', est: 'f', min: 6, img: 'sala', rot: 'IV · Three Drawers', t: 'Every regret goes in a drawer: DUTY, CHANCE or IMPOSSIBLE.', p: 'Read the fact. Was anybody counting on you? Tap the drawer. Then say the full sentence.' },
+  { k: 'vozes', est: 'l', min: 7, img: 'sala', rot: 'V · Four Confessions', t: 'A leadership group. Four people, each walking towards a confession.', p: 'Play a voice. Say the confession for them. Then choose the drawer.' },
+  { k: 'fez', est: 'f', min: 6, img: 'espera', rot: 'VI · Did It or Didn’t?', t: 'Two kinds of regret: what you didn’t do, and what you did.', p: 'Read it. Did it happen? Tap. Then say the regret.' },
+  { k: 'rascunho', est: 'o', min: 7, img: 'carta', rot: 'VII · The Draft, Never Sent', t: 'In Daniel’s drafts folder: an email to Maya. Written in July. Never sent.', p: 'Every line is crossed out. Choose it right, and the line comes back. Then decide: send or keep?' },
+  { k: 'cadeira', est: 'o', min: 7, extra: 1, img: 'cadeira', rot: 'VIII · Change Chairs', t: 'Put an empty chair in front of you. Maya is sitting in it.', p: 'First you are Daniel, talking to her. Then you stand up, change chairs, and answer as Maya.' },
+  { k: 'tribunal', est: 'o', min: 7, extra: 1, img: 'trem', rot: 'IX · The Tribunal', t: 'Three short cases. You are the judge.', p: 'Read the case. Put every person in a drawer. Say their sentence. Then answer the last question.' },
+  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'cadeira', rot: 'X · Your Own Chair', t: 'Now you. Small regrets only: work, study, decisions.', p: 'Four questions. Your teacher asks; you answer.' },
+  { k: 'fim', est: 'w', min: 6, img: 'cadeira', rot: 'XI · Your Chair, Again', t: 'Back to the first scene. Here is how you said it.', p: 'Write it again, with the door closed. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -248,3 +249,20 @@ TOQUES['cd-n'] = function () { S.cd.n++; };
 TOQUES['cd-t'] = function () { S.cd = { lado: 1, n: 0 }; };
 TOQUES.tb = function (b, n, v) { S.tb.foi[n] = v; };
 TOQUES['tb-prox'] = function () { S.tb = { n: S.tb.n + 1, foi: {} }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de porta.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'Daniel’s calendar on one line. Where does each sentence go?',
+  marcos: [{ t: 'THE DOOR IS OPEN', s: 'April · advice' }, { t: 'THE DOOR IS CLOSED', s: 'July · regret' }],
+  frases: [
+    { f: 'He should have called her in April.', c: 1, d: 'should have + participle · too late' },
+    { f: 'He should call her today.', c: 0, d: 'should + verb · advice' },
+    { f: 'He could have asked her in May.', c: 1, d: 'could have + participle · a lost chance' },
+    { f: 'You could ask her this week.', c: 0, d: 'could + verb · a chance now' },
+    { f: 'He shouldn’t wait any longer.', c: 0, d: 'shouldn’t + verb · advice' },
+    { f: 'He shouldn’t have waited so long.', c: 1, d: 'shouldn’t have + participle · regret' }
+  ],
+  nota: 'While the door is open, it is advice: <b>should</b> + verb. When it closes, it is the past: <b>should have</b> + participle. <b>could have</b> = a chance he had. <b>couldn’t have</b> = it was impossible. Never “should of”, never “should have went”.',
+  uso: { p: 'Your turn. One small thing you did not do last week. Say it with should have, and one chance you had with could have.', molde: ['I should have …', 'I could have …'], ex: 'I should have called my mother. I could have gone to the gym, but I stayed at home.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

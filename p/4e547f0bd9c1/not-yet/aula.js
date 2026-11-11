@@ -11,16 +11,17 @@
 var L = [
   { k: 'capa', est: null, img: 'quadro' },
   { k: 'abre', est: 'o', min: 7, img: 'sala', rot: 'I · This Weekend', t: 'What are you going to do this weekend?', p: 'Pick a card. One full sentence, any way you can. Your teacher taps what you used. Don’t worry about it yet.' },
-  { k: 'peca', est: 'f', min: 6, img: 'quadro', rot: 'II · The Missing Piece', t: 'Going to never walks alone. It needs am, is or are.', p: 'Choose the piece. Then say the whole sentence.' },
-  { k: 'duas', est: 'f', min: 6, img: 'quadro', rot: 'III · Every Week, or One Day?', t: 'A habit, or one plan?', p: 'Read the sentence out loud. Then put it in the right calendar.' },
-  { k: 'sala', est: 'o', min: 7, img: 'sala', rot: 'IV · Look Again', t: 'Nothing has happened in this room. Yet.', p: 'Tap a thing. Read the evidence. Choose the verb. Say the whole sentence.' },
-  { k: 'armadilha', est: 'f', min: 6, img: 'quadro', rot: 'V · Tomorrow I Travel', t: 'Both look correct. Only one is a plan.', p: 'Read the situation. Choose the sentence that says it. Say it out loud.' },
-  { k: 'gonna', est: 'o', min: 7, img: 'quadro', rot: 'VI · Gonna', t: 'Nobody says all four words out loud.', p: 'Your teacher says it both ways. You say it fast, four times.' },
-  { k: 'nao', est: 'f', min: 6, extra: 1, img: 'quadro', rot: 'VII · Not, and Are You?', t: 'Only the first word moves. Going to sits still.', p: 'Say the negative before you open it. Then the question. Then all three.' },
-  { k: 'quadro', est: 'o', min: 7, extra: 1, img: 'quadro', rot: 'VIII · The Goal Board', t: 'Three lanes. Two goals in each.', p: 'Pick a lane and a goal, or say your own. Say the whole sentence, and it goes on the board.' },
-  { k: 'coach', est: 'o', min: 7, extra: 1, img: 'quadro', rot: 'IX · The Coach', t: 'Your teacher is your coach now.', p: 'The coach asks about three goals on your board. Defend each one.' },
-  { k: 'aposta', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'X · Certain, or Maybe?', t: 'Three situations. What happens next?', p: 'Say the sentence out loud. Then say how sure you are.' },
-  { k: 'fim', est: 'w', min: 6, img: 'quadro', rot: 'XI · Not Yet', t: 'Write your goal board.', p: 'Five goals with I’m going to, one with I’m not going to, and when you are going to start. The red line watches the little words. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'quadro', rot: 'II · Mistake Hunter', t: 'Six lines from the goal board. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'peca', est: 'f', min: 6, img: 'quadro', rot: 'III · The Missing Piece', t: 'Going to never walks alone. It needs am, is or are.', p: 'Choose the piece. Then say the whole sentence.' },
+  { k: 'duas', est: 'f', min: 6, img: 'quadro', rot: 'IV · Every Week, or One Day?', t: 'A habit, or one plan?', p: 'Read the sentence out loud. Then put it in the right calendar.' },
+  { k: 'sala', est: 'o', min: 7, img: 'sala', rot: 'V · Look Again', t: 'Nothing has happened in this room. Yet.', p: 'Tap a thing. Read the evidence. Choose the verb. Say the whole sentence.' },
+  { k: 'armadilha', est: 'f', min: 6, img: 'quadro', rot: 'VI · Tomorrow I Travel', t: 'Both look correct. Only one is a plan.', p: 'Read the situation. Choose the sentence that says it. Say it out loud.' },
+  { k: 'gonna', est: 'o', min: 7, img: 'quadro', rot: 'VII · Gonna', t: 'Nobody says all four words out loud.', p: 'Your teacher says it both ways. You say it fast, four times.' },
+  { k: 'nao', est: 'f', min: 6, extra: 1, img: 'quadro', rot: 'VIII · Not, and Are You?', t: 'Only the first word moves. Going to sits still.', p: 'Say the negative before you open it. Then the question. Then all three.' },
+  { k: 'quadro', est: 'o', min: 7, extra: 1, img: 'quadro', rot: 'IX · The Goal Board', t: 'Three lanes. Two goals in each.', p: 'Pick a lane and a goal, or say your own. Say the whole sentence, and it goes on the board.' },
+  { k: 'coach', est: 'o', min: 7, extra: 1, img: 'quadro', rot: 'X · The Coach', t: 'Your teacher is your coach now.', p: 'The coach asks about three goals on your board. Defend each one.' },
+  { k: 'aposta', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'XI · Certain, or Maybe?', t: 'Three situations. What happens next?', p: 'Say the sentence out loud. Then say how sure you are.' },
+  { k: 'fim', est: 'w', min: 6, img: 'quadro', rot: 'XII · Not Yet', t: 'Write your goal board.', p: 'Five goals with I’m going to, one with I’m not going to, and when you are going to start. The red line watches the little words. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -245,3 +246,19 @@ TOQUES['co-e'] = function () { S.coach.erro = !S.coach.erro; };
 TOQUES['co-prox'] = function () { S.coach.n++; S.coach.erro = 0; };
 TOQUES.ap = function (b, n, v) { S.aposta.esc = v; };
 TOQUES['ap-prox'] = function () { S.aposta = { n: S.aposta.n + 1, esc: '' }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de peca.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines on the goal board.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'I bought the ticket. Tomorrow I [[travel]] to Recife.', r: 'Tomorrow I’m <b>going to travel</b> to Recife.', d: 'A plan: am / is / are + going to + verb.' },
+    { f: 'I [[going]] to study tonight.', r: 'I’m <b>going to</b> study tonight.', d: 'Going to never walks alone: it needs am, is or are.' },
+    { f: 'She is going [[to studies]] medicine.', r: 'She is going <b>to study</b> medicine.', d: 'After going to, the verb is clean: no -s.' },
+    { f: 'They [[not are]] going to come.', r: 'They <b>aren’t</b> going to come.', d: 'The no goes after am, is or are: aren’t.' },
+    { f: '[[Going to]] you call him tonight?', r: '<b>Are you going to</b> call him tonight?', d: 'In a question, am, is or are goes first.' },
+    { f: 'Look at the clouds! It [[goes]] to rain.', r: 'It’s <b>going to</b> rain.', d: 'Now you see it: it’s going to.' }
+  ],
+  nota: 'Going to: <b>am / is / are</b> + going to + the clean verb. Only the first word moves: I’m not going to …, Are you going to …?',
+  uso: { p: 'Your turn. Three plans for this week. One with not.', molde: ['I’m going to …', 'I’m not going to …', 'My … is going to …'], ex: 'I’m going to see a movie on Friday. I’m not going to cook on Sunday. My brother is going to visit me.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

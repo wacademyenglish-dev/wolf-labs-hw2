@@ -17,9 +17,10 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · A Story You Remember', t: 'What story do you always tell?', p: 'Answer with detail. Then ask the question back.' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · The Baker’s Story', t: 'Minute two of her talk.', p: 'Read the story out loud, like a speaker. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · The Signposts', t: 'Where are we in the story?', p: 'Compare A and B. What does the signpost tell the audience?' },
-  { k: 'ordem', est: 'o', min: 7, img: 'capa', rot: 'IV · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
-  { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'V · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'III · The Story Ladder', t: 'One story, five steps.', p: 'Read each step out loud, then go one step up. Notice the signpost. Then climb with your own story.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'IV · The Signposts', t: 'Where are we in the story?', p: 'Compare A and B. What does the signpost tell the audience?' },
+  { k: 'ordem', est: 'o', min: 7, img: 'capa', rot: 'V · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
+  { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'VI · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' }
 ];
 var PORTAS = [];
 
@@ -66,3 +67,9 @@ var PARES = [
   ['It turned out', 'that…', 'It turned out that he wrote a famous blog.'],
   ['Fast forward', 'to today…', 'Fast forward to today: we have three bakeries.'],
   ['Looking', 'back…', 'Looking back, the lesson was simple.']];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'The baker’s story. Climb it one signpost at a time.', degraus: [{ r: 'start', f: '<b>It all started when</b> I opened my first bakery.', d: 'A signpost for the beginning. Then the simple past: opened.' }, { r: 'problem', f: '<b>At first</b>, we were selling five loaves a day. <b>Things got worse when</b> a big supermarket opened next door.', d: 'Was selling = the background. Opened = the event that interrupts it.' }, { r: 'turn', f: '<b>That’s when</b> I decided to bake only at night.', d: 'The turning point. The audience feels the change.' }, { r: 'twist', f: '<b>It turned out that</b> people loved warm bread at six in the morning.', d: 'A surprise. It turned out that + a clause. Not “it turned out what”.' }, { r: 'end', f: '<b>Fast forward to</b> today: four bakeries. <b>Looking back</b>, I had been afraid for nothing. <b>The lesson I learned was</b> to start small.', d: 'Jump in time. Had been = before the story’s moment.' }], nota: 'A good story uses <b>signposts</b> to tell the audience where they are: <b>It all started when, At first, Things got worse when, That’s when, It turned out that, Fast forward to, Looking back</b>. The verbs stay in the past: simple past for events, past continuous for the scene, past perfect for what came before.', uso: { p: 'Your turn. A real story from your life that taught you something. Say three lines with signposts.', molde: ['It all started when …', 'That’s when …', 'It turned out that …'], ex: 'It all started when I lost my keys in Rome. That’s when a stranger offered me his phone. It turned out that he was a locksmith.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

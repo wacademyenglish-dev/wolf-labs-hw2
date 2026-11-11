@@ -19,11 +19,12 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'cozinha', rot: 'III · The Listening Lab', t: 'Two people talk about their daily routines.', p: 'Four short parts. Tap when, after, before or then every time you hear it.' },
   { k: 'falas', est: 'l', extra: 1, img: 'cozinha', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'relogio', est: 'o', min: 7, img: 'relogio', rot: 'V · Lena’s Morning', t: 'An easy story in six short chapters.', p: 'Tap a time. Read the chapter, answer, then join two actions in one sentence.' },
-  { k: 'regra', est: 'f', min: 6, img: 'janela', rot: 'VI · The Rule', t: 'Talking about tomorrow? The time half stays in the present.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'sol', est: 'o', min: 7, img: 'cidade', rot: 'VII · Before the Sun Comes Up', t: 'Tonight Lena plans her first day.', p: 'Your teacher reads the situation and the first words. You are Lena: finish at once. Each plan lifts the sun.' },
-  { k: 'lena', est: 'o', min: 7, extra: 1, img: 'onibus', rot: 'VIII · A Call from the Bus', t: 'The next morning, Lena calls you from the bus.', p: 'Your teacher is Lena. You are her friend: answer about your own day.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'relogio', rot: 'IX · Quick Check', t: 'Five quick lines about tomorrow morning.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'X · Your Tomorrow', t: 'Plan your real tomorrow morning.', p: 'From the alarm to the door. Use the present for time and will for the plan. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'janela', rot: 'VI · Find the Rule', t: 'Four sentences about tomorrow. You find the rule.', p: 'Read the four sentences out loud. Look at the lit verbs. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'janela', rot: 'VII · The Rule', t: 'Talking about tomorrow? The time half stays in the present.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'sol', est: 'o', min: 7, img: 'cidade', rot: 'VIII · Before the Sun Comes Up', t: 'Tonight Lena plans her first day.', p: 'Your teacher reads the situation and the first words. You are Lena: finish at once. Each plan lifts the sun.' },
+  { k: 'lena', est: 'o', min: 7, extra: 1, img: 'onibus', rot: 'IX · A Call from the Bus', t: 'The next morning, Lena calls you from the bus.', p: 'Your teacher is Lena. You are her friend: answer about your own day.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'relogio', rot: 'X · Quick Check', t: 'Five quick lines about tomorrow morning.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · Your Tomorrow', t: 'Plan your real tomorrow morning.', p: 'From the alarm to the door. Use the present for time and will for the plan. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -194,3 +195,19 @@ TOQUES['sl-prox'] = function () { S.sol = { n: S.sol.n + 1, esc: '' }; };
 TOQUES['le-viu'] = function () { S.lena.viu[S.lena.n] = 1; };
 TOQUES['le-prox'] = function () { S.lena.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences about tomorrow. Find the rule yourself.',
+  exemplos: [
+    'I’ll call you <b>as soon as</b> I <u>get</u> to the hospital.',
+    'Lena will wait <b>until</b> the nurse <u>comes</u>.',
+    '<b>When</b> the alarm <u>rings</u>, she’ll get up.',
+    'We’ll leave <b>before</b> the sun <u>comes</u> up.'
+  ],
+  pergunta: 'After as soon as, until, when and before, talking about tomorrow, the verb …',
+  opcoes: ['stays in the present: I get, she comes', 'takes will: as soon as I will get', 'takes would: until she would come'], c: 0,
+  nao: 'Not that one. Read the four lit verbs again: is there a will in the time half?',
+  regra: '<b>Time word + present</b>, even for tomorrow: I’ll call you as soon as I <b>get</b> there. The <b>will</b> goes in the OTHER half: I <b>will</b> call you …',
+  uso: { p: 'Your turn. Tomorrow morning. Say two plans: one with as soon as, one with until.', molde: ['As soon as I wake up, I’ll …', 'I’ll … until …'], ex: 'As soon as I wake up, I’ll make coffee. I’ll stay in bed until the alarm rings.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

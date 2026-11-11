@@ -17,14 +17,15 @@
 var L = [
   { k: 'capa', est: null, img: 'sofa' },
   { k: 'teste', est: 'o', min: 7, img: 'sofa', rot: 'I · How Bad Is It?', t: 'Ten sentences about you. Often, sometimes or never?', p: 'Read each one out loud before you tap. At the end, pick the ONE that is most true.' },
-  { k: 'verbos', est: 'f', min: 6, img: 'mesa', rot: 'II · Three Hands, One Day', t: 'The plan, the loop and what really happened.', p: 'Read the three out loud. Then say the same three about your morning. Then fix the traps.' },
-  { k: 'relogio', est: 'o', min: 7, img: 'mesa', rot: 'III · The Saturday Clock', t: 'Last Saturday: five plans. Not one happened the way it was planned.', p: 'Pick a task. Say the KEPT line, then the ENDED UP line. Your teacher taps what you said. Then read all three as one story.' },
-  { k: 'palavras', est: 'o', min: 5, img: 'sofa', rot: 'IV · The Words for It', t: 'Eight things people say about the thing they aren’t doing.', p: 'Read the expression. Guess what it means out loud, then tap. Then use it about you.' },
-  { k: 'metades', est: 'f', min: 6, img: 'bolsa', rot: 'V · Six Plans, Six Excuses', t: 'Every plan died for a reason. A short one.', p: 'Read the plan. Choose the reason. Say the whole sentence out loud.' },
-  { k: 'lacuna', est: 'f', min: 6, img: 'mesa', rot: 'VI · Only One Fits', t: 'The plan, the loop, or the result?', p: 'Say the whole sentence out loud first. Then tap.' },
-  { k: 'voce', est: 'o', min: 7, extra: 1, img: 'bolsa', rot: 'VII · Finish It, About You', t: 'Six beginnings. The end is yours, and it has to be true.', p: 'Pick a card. Finish it out loud about yourself. Then your teacher does it too.' },
-  { k: 'ultima', est: 'o', min: 7, extra: 1, img: 'sofa', rot: 'VIII · The Last Word', t: 'No more cards. Just questions, and one WILL at the end.', p: 'Your teacher asks. You answer. The last answer starts with I’ll.' },
-  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'IX · Your Own Clock', t: 'Your week, on the clock.', p: 'Write the plan, the loop and what really happened. Then one thing you WILL do today. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'II · Mistake Hunter', t: 'Six sentences about last Saturday. Each one has a wrong word.', p: 'Tap the wrong word. Say the sentence right. Then check.' },
+  { k: 'verbos', est: 'f', min: 6, img: 'mesa', rot: 'III · Three Hands, One Day', t: 'The plan, the loop and what really happened.', p: 'Read the three out loud. Then say the same three about your morning. Then fix the traps.' },
+  { k: 'relogio', est: 'o', min: 7, img: 'mesa', rot: 'IV · The Saturday Clock', t: 'Last Saturday: five plans. Not one happened the way it was planned.', p: 'Pick a task. Say the KEPT line, then the ENDED UP line. Your teacher taps what you said. Then read all three as one story.' },
+  { k: 'palavras', est: 'o', min: 5, img: 'sofa', rot: 'V · The Words for It', t: 'Eight things people say about the thing they aren’t doing.', p: 'Read the expression. Guess what it means out loud, then tap. Then use it about you.' },
+  { k: 'metades', est: 'f', min: 6, img: 'bolsa', rot: 'VI · Six Plans, Six Excuses', t: 'Every plan died for a reason. A short one.', p: 'Read the plan. Choose the reason. Say the whole sentence out loud.' },
+  { k: 'lacuna', est: 'f', min: 6, img: 'mesa', rot: 'VII · Only One Fits', t: 'The plan, the loop, or the result?', p: 'Say the whole sentence out loud first. Then tap.' },
+  { k: 'voce', est: 'o', min: 7, extra: 1, img: 'bolsa', rot: 'VIII · Finish It, About You', t: 'Six beginnings. The end is yours, and it has to be true.', p: 'Pick a card. Finish it out loud about yourself. Then your teacher does it too.' },
+  { k: 'ultima', est: 'o', min: 7, extra: 1, img: 'sofa', rot: 'IX · The Last Word', t: 'No more cards. Just questions, and one WILL at the end.', p: 'Your teacher asks. You answer. The last answer starts with I’ll.' },
+  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'X · Your Own Clock', t: 'Your week, on the clock.', p: 'Write the plan, the loop and what really happened. Then one thing you WILL do today. It goes to your My notes.' }
 ];
 
 var TESTE = [
@@ -235,3 +236,19 @@ TOQUES['me-prox'] = function () { S.me = { n: S.me.n + 1, esc: -1 }; };
 TOQUES.la = function (b, n) { S.la.esc = n; };
 TOQUES['la-prox'] = function () { S.la = { n: S.la.n + 1, esc: -1 }; };
 TOQUES['ul-prox'] = function () { S.ul.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de verbos.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six sentences about last Saturday.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'I was [[go]] to clean the garage.', r: 'I <b>was going</b> to clean the garage.', d: 'The plan: was going to + verb.' },
+    { f: 'I kept [[to check]] my phone.', r: 'I kept <b>checking</b> my phone.', d: 'kept + -ing. No to.' },
+    { f: 'I ended up [[to order]] a pizza.', r: 'I ended up <b>ordering</b> a pizza.', d: 'ended up + -ing. No to.' },
+    { f: 'I ended up [[watch]] TV all day.', r: 'I ended up <b>watching</b> TV all day.', d: 'ended up + -ing.' },
+    { f: 'I kept [[look]] at the clock.', r: 'I kept <b>looking</b> at the clock.', d: 'kept + -ing.' },
+    { f: 'I [[am going]] to call my mom, but I forgot.', r: 'I <b>was going</b> to call my mom, but I forgot.', d: 'The plan was in the past: was going to.' }
+  ],
+  nota: 'Three hands: <b>was going to</b> + verb (the plan), <b>kept + -ing</b> (the loop), <b>ended up + -ing</b> (what really happened). Never “kept to check” or “ended up to do”.',
+  uso: { p: 'Your turn. Last Saturday: one plan, one loop, one result.', molde: ['I was going to …', 'I kept …-ing', 'I ended up …-ing'], ex: 'I was going to clean my room. I kept checking my phone. I ended up watching videos all afternoon.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

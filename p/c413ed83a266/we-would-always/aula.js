@@ -16,14 +16,15 @@
 var L = [
   { k: 'capa', est: null, img: 'casa' },
   { k: 'abre', est: 'o', min: 7, img: 'estrada', rot: 'I · Every Summer', t: 'Your summers first.', p: 'Pick a card. Answer out loud. Mistakes are okay. Nobody corrects you.' },
-  { k: 'rolo', est: 'f', min: 6, img: 'casa', rot: 'II · The Home Movie', t: 'When I was ten, every summer… Eight frames on the reel.', p: 'Say the line with WOULD or USED TO. Then tap. WOULD on a state leaves the frame empty.' },
-  { k: 'camera', est: 'f', min: 6, img: 'lago', rot: 'III · Could You Film It?', t: 'One question decides the verb.', p: 'Read it out loud. Could a camera film it? Tap.' },
-  { k: 'umavez', est: 'f', min: 6, img: 'janela', rot: 'IV · The Summer It Stopped', t: 'The last summer. Each thing happened once.', p: 'Read the situation. Pick. Read the sentence out loud.' },
-  { k: 'ouve', est: 'l', min: 7, img: 'casa', rot: 'V · Which Past Was That?', t: 'Four lines at normal speed.', p: 'Play. Repeated, or once? The text opens after you listen.' },
-  { k: 'depois', est: 'o', min: 7, img: 'estrada', rot: 'VI · What Replaced It', t: 'Every habit that ended left another behind.', p: 'Say the old habit with WOULD. Open it. Then: …, but now …' },
-  { k: 'melhor', est: 'o', min: 7, extra: 1, img: 'lago', rot: 'VII · The Best Summer', t: 'Your best summer. Your teacher wants details.', p: 'Answer each question. Then your teacher asks for more.' },
-  { k: 'moldes', est: 'o', min: 7, extra: 1, img: 'casa', rot: 'VIII · Say the Five', t: 'Only the shape on the screen. The sentence is yours.', p: 'Say a whole sentence for each shape, about your life.' },
-  { k: 'fim', est: 'w', min: 6, img: 'janela', rot: 'IX · The Last Reel', t: 'Your answers from scene I come back.', p: 'Write your summer: the period, two habits, one state, and the year it stopped. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'lago', rot: 'II · Find the Rule', t: 'Four sentences about summer. You find the rule.', p: 'Read the four sentences out loud. Look at the lit verbs. Choose the rule. Then say your own.' },
+  { k: 'rolo', est: 'f', min: 6, img: 'casa', rot: 'III · The Home Movie', t: 'When I was ten, every summer… Eight frames on the reel.', p: 'Say the line with WOULD or USED TO. Then tap. WOULD on a state leaves the frame empty.' },
+  { k: 'camera', est: 'f', min: 6, img: 'lago', rot: 'IV · Could You Film It?', t: 'One question decides the verb.', p: 'Read it out loud. Could a camera film it? Tap.' },
+  { k: 'umavez', est: 'f', min: 6, img: 'janela', rot: 'V · The Summer It Stopped', t: 'The last summer. Each thing happened once.', p: 'Read the situation. Pick. Read the sentence out loud.' },
+  { k: 'ouve', est: 'l', min: 7, img: 'casa', rot: 'VI · Which Past Was That?', t: 'Four lines at normal speed.', p: 'Play. Repeated, or once? The text opens after you listen.' },
+  { k: 'depois', est: 'o', min: 7, img: 'estrada', rot: 'VII · What Replaced It', t: 'Every habit that ended left another behind.', p: 'Say the old habit with WOULD. Open it. Then: …, but now …' },
+  { k: 'melhor', est: 'o', min: 7, extra: 1, img: 'lago', rot: 'VIII · The Best Summer', t: 'Your best summer. Your teacher wants details.', p: 'Answer each question. Then your teacher asks for more.' },
+  { k: 'moldes', est: 'o', min: 7, extra: 1, img: 'casa', rot: 'IX · Say the Five', t: 'Only the shape on the screen. The sentence is yours.', p: 'Say a whole sentence for each shape, about your life.' },
+  { k: 'fim', est: 'w', min: 6, img: 'janela', rot: 'X · The Last Reel', t: 'Your answers from scene I come back.', p: 'Write your summer: the period, two habits, one state, and the year it stopped. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -203,3 +204,19 @@ TOQUES['dp-v'] = function () { S.dp.viu[Math.min(S.dp.n, DEPOIS.length - 1)] = 1
 TOQUES['dp-prox'] = function () { S.dp.n++; };
 TOQUES['me-prox'] = function () { S.me.n++; };
 TOQUES['mo-prox'] = function () { S.mo.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de rolo.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four summers. Find the rule yourself.',
+  exemplos: [
+    'Every summer we <b>would</b> <u>swim</u> in the lake.',
+    'Grandma <b>would</b> <u>bake</u> a cake on Sundays.',
+    'My uncle always <b>would</b> <u>lose</u> at cards.',
+    'We <b>used to</b> <u>have</u> a small boat.'
+  ],
+  pergunta: 'We say would + verb for …',
+  opcoes: ['things we did again and again', 'something that happened one time', 'how a place was, with no action'], c: 0,
+  nao: 'Not that one. Read the four lit verbs again: could you film them every summer?',
+  regra: '<b>would + verb</b> for a habit in the past, after you say the period: Every summer we <b>would swim</b>. For a state, use <b>used to</b>: We <b>used to have</b> a boat. For one time, the past: She <b>sold</b> the house that spring.',
+  uso: { p: 'Your turn. One thing you did every summer when you were a kid.', molde: ['Every summer I would …', 'We used to have …'], ex: 'Every summer I would ride my bike to the river. We used to have a dog.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

@@ -13,15 +13,16 @@
 var L = [
   { k: 'capa', est: null, img: 'balcao' },
   { k: 'abre', est: 'o', min: 7, img: 'bancada', rot: 'I · Your Desk', t: 'Three things near you right now. Whose are they?', p: 'Pick a card. Point and say it, any words you have. Your teacher taps what you used. Don’t worry about it yet.' },
-  { k: 'regra', est: 'f', min: 6, img: 'balcao', rot: 'II · The Owner Comes First', t: 'Three pieces, and they never change places.', p: 'Tap each piece and read the line out loud. The tag builds itself.' },
-  { k: 'etiqueta', est: 'f', min: 6, img: 'bancada', rot: 'III · Seven Tags', t: 'Build each tag. Then say it out loud.', p: 'Tap the pieces in order: the owner, the small s, the thing.' },
-  { k: 'som', est: 'l', min: 7, img: 'balcao', rot: 'IV · The Sound', t: 'Your teacher reads a line. Where is the small s?', p: 'Listen to your teacher. Tap the word that got the s.' },
-  { k: 'gaveta', est: 'f', min: 6, img: 'caixa', rot: 'V · The Drawers', t: 'Seven things, no tags. Read the clue. Find the owner.', p: 'Say “I think it’s …’s, because …”. Then open the drawer.' },
-  { k: 'balcao', est: 'o', min: 7, img: 'balcao', rot: 'VI · At the Counter', t: 'People come to the counter.', p: 'Your teacher plays each one. Ask. Listen. Give it back with the right short word.' },
-  { k: 'meu', est: 'f', min: 6, extra: 1, img: 'bancada', rot: 'VII · Mine, Yours, His', t: 'When the thing is clear, drop it.', p: 'Read the first line. Pick the short word for the second.' },
-  { k: 'dobra', est: 'f', min: 6, extra: 1, img: 'bancada', rot: 'VIII · Fold the Sentence', t: 'This is the long way. Fold it.', p: 'Say the long one. Tap the OWNER. The sentence folds.' },
-  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'bancada', rot: 'IX · Your Things', t: 'Real answers now.', p: 'Four questions. Answer in full sentences.' },
-  { k: 'fim', est: 'w', min: 6, img: 'caixa', rot: 'X · Counter Closed', t: 'Write the tags for your own things.', p: 'Five things at home and whose they are. Owner first, and one Whose…? question. The red line watches the s. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'balcao', rot: 'II · The Tag in Blocks', t: 'Owner first, then the small s.', p: 'Read the blocks out loud. Notice what comes first. Then build a tag and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'balcao', rot: 'III · The Owner Comes First', t: 'Three pieces, and they never change places.', p: 'Tap each piece and read the line out loud. The tag builds itself.' },
+  { k: 'etiqueta', est: 'f', min: 6, img: 'bancada', rot: 'IV · Seven Tags', t: 'Build each tag. Then say it out loud.', p: 'Tap the pieces in order: the owner, the small s, the thing.' },
+  { k: 'som', est: 'l', min: 7, img: 'balcao', rot: 'V · The Sound', t: 'Your teacher reads a line. Where is the small s?', p: 'Listen to your teacher. Tap the word that got the s.' },
+  { k: 'gaveta', est: 'f', min: 6, img: 'caixa', rot: 'VI · The Drawers', t: 'Seven things, no tags. Read the clue. Find the owner.', p: 'Say “I think it’s …’s, because …”. Then open the drawer.' },
+  { k: 'balcao', est: 'o', min: 7, img: 'balcao', rot: 'VII · At the Counter', t: 'People come to the counter.', p: 'Your teacher plays each one. Ask. Listen. Give it back with the right short word.' },
+  { k: 'meu', est: 'f', min: 6, extra: 1, img: 'bancada', rot: 'VIII · Mine, Yours, His', t: 'When the thing is clear, drop it.', p: 'Read the first line. Pick the short word for the second.' },
+  { k: 'dobra', est: 'f', min: 6, extra: 1, img: 'bancada', rot: 'IX · Fold the Sentence', t: 'This is the long way. Fold it.', p: 'Say the long one. Tap the OWNER. The sentence folds.' },
+  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'bancada', rot: 'X · Your Things', t: 'Real answers now.', p: 'Four questions. Answer in full sentences.' },
+  { k: 'fim', est: 'w', min: 6, img: 'caixa', rot: 'XI · Counter Closed', t: 'Write the tags for your own things.', p: 'Five things at home and whose they are. Owner first, and one Whose…? question. The red line watches the s. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -201,3 +202,16 @@ TOQUES.mu = function (b, n) { S.meu.esc = n; };
 TOQUES['mu-prox'] = function () { S.meu = { n: S.meu.n + 1, esc: -1 }; };
 TOQUES.db = function (b, n) { var d = S.dobra, x = DOBRA[d.n]; if (!x) return false; if (n === x.k) d.dobrou = 1; else d.err = n; };
 TOQUES['db-prox'] = function () { S.dobra = { n: S.dobra.n + 1, dobrou: 0, err: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'The lost-and-found tags, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Pedro', 'WHO'], ['’s', 'THE S', 'aux'], ['jacket', 'WHAT']], d: 'The owner comes first. Then the small s. Then the thing.' },
+    { b: [['Whose', 'QUESTION'], ['jacket', 'WHAT'], ['is this', 'HELPER', 'aux']], d: 'Whose asks about the owner.' },
+    { b: [['It', 'WHAT'], ['’s', 'IS', 'aux'], ['mine', 'WHO']], d: 'When the thing is clear, drop it: mine, yours, his, hers.' }
+  ],
+  nota: 'The owner comes <b>first</b>: <b>Pedro’s</b> jacket. The small <b>’s</b> sticks to the owner. Never the jacket of Pedro.',
+  monta: { p: 'Build the tag for Marta’s bag. Then say it.', pecas: [['bag', 'WHAT'], ['Marta', 'WHO'], ['’s', 'THE S', 'aux']], ordem: [1, 2, 0] },
+  uso: { p: 'Your turn. Three things near you right now. Whose are they?', molde: ['That’s …’s …', 'Whose … is this?'], ex: 'That’s my teacher’s pen. Whose phone is this? It’s mine.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

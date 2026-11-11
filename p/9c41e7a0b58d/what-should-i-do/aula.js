@@ -15,14 +15,15 @@ var L = [
   { k: 'capa', est: null, img: 'estudio' },
   { k: 'abre', est: 'o', min: 7, img: 'estudio', rot: 'I · Your Problem', t: 'What’s one small problem you have this week?', p: 'Pick a card. Answer out loud, however it comes out. Then ask your teacher for help.' },
   { k: 'ontem', est: 'l', min: 7, img: 'mesa', rot: 'II · Last Night’s Show', t: 'Last night a night guard called the show.', p: 'Read his question out loud. Play the advice. Say it back. The transcript opens after.' },
-  { k: 'forma', est: 'f', min: 6, img: 'estudio', rot: 'III · No To, No S', t: 'Should never changes. No TO. No S. No DO.', p: 'Pick the correct sentence. Then say it.' },
-  { k: 'duas', est: 'f', min: 6, img: 'estudio', rot: 'IV · Two Different Questions', t: 'Both are correct English. They ask different things.', p: 'Read both. Say the difference out loud. Then open it.' },
-  { k: 'cartas', est: 'o', min: 7, img: 'cartas', rot: 'V · The Letter Stack', t: 'Six letters. Two pieces of advice for each.', p: 'Read the letter out loud. Give one SHOULD and one SHOULDN’T.' },
-  { k: 'ordem', est: 'f', min: 6, img: 'estudio', rot: 'VI · Asking for Advice', t: 'Now you ask. Should jumps to the front.', p: 'Tap the words in order. Then ask your teacher.' },
-  { k: 'linhas', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'VII · The Phone Lines Are Open', t: 'Live. Your teacher calls the show five times.', p: 'Answer each caller. Ask a question first, then give advice.' },
-  { k: 'voz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VIII · The Voice Falls', t: 'Advice ends with the voice going down.', p: 'Your teacher says it. You repeat it. Then tap: does the voice go down or up?' },
-  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'IX · Your Turn to Call', t: 'Now you call the show. Your teacher is the host.', p: 'Tell a real problem. Ask for advice. Answer the host’s questions.' },
-  { k: 'fim', est: 'w', min: 6, img: 'amanhecer', rot: 'X · Off Air', t: 'Sunrise. Your problem from scene I comes back.', p: 'Write a letter to the show and answer it yourself. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'estudio', rot: 'III · Right, Not This', t: 'Six pieces of advice from the late show. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'forma', est: 'f', min: 6, img: 'estudio', rot: 'IV · No To, No S', t: 'Should never changes. No TO. No S. No DO.', p: 'Pick the correct sentence. Then say it.' },
+  { k: 'duas', est: 'f', min: 6, img: 'estudio', rot: 'V · Two Different Questions', t: 'Both are correct English. They ask different things.', p: 'Read both. Say the difference out loud. Then open it.' },
+  { k: 'cartas', est: 'o', min: 7, img: 'cartas', rot: 'VI · The Letter Stack', t: 'Six letters. Two pieces of advice for each.', p: 'Read the letter out loud. Give one SHOULD and one SHOULDN’T.' },
+  { k: 'ordem', est: 'f', min: 6, img: 'estudio', rot: 'VII · Asking for Advice', t: 'Now you ask. Should jumps to the front.', p: 'Tap the words in order. Then ask your teacher.' },
+  { k: 'linhas', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'VIII · The Phone Lines Are Open', t: 'Live. Your teacher calls the show five times.', p: 'Answer each caller. Ask a question first, then give advice.' },
+  { k: 'voz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'IX · The Voice Falls', t: 'Advice ends with the voice going down.', p: 'Your teacher says it. You repeat it. Then tap: does the voice go down or up?' },
+  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'X · Your Turn to Call', t: 'Now you call the show. Your teacher is the host.', p: 'Tell a real problem. Ask for advice. Answer the host’s questions.' },
+  { k: 'fim', est: 'w', min: 6, img: 'amanhecer', rot: 'XI · Off Air', t: 'Sunrise. Your problem from scene I comes back.', p: 'Write a letter to the show and answer it yourself. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -209,3 +210,18 @@ TOQUES['ln-prox'] = function () { S.ln.n++; };
 TOQUES.vz = function (b, n, v) { S.vz.esc = v; };
 TOQUES['vz-prox'] = function () { S.vz = { n: S.vz.n + 1, esc: '' }; };
 TOQUES['se-prox'] = function () { S.seu.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de forma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right advice.',
+  pares: [
+    { c: 'You should call him.', x: 'You should to call him.', d: 'No to after should.' },
+    { c: 'She should rest tonight.', x: 'She shoulds rest tonight.', d: 'Should never changes: no s.' },
+    { c: 'They shouldn’t drive at night.', x: 'They don’t should drive at night.', d: 'No do. The no is shouldn’t.' },
+    { c: 'What should I do?', x: 'What I should do?', d: 'In a question, should jumps in front of the person.' },
+    { c: 'Should I tell her?', x: 'Do I should tell her?', d: 'No do with should.' },
+    { c: 'You should ask your boss for help.', x: 'You should asking your boss for help.', d: 'Should + the clean verb.' }
+  ],
+  nota: 'After <b>should</b> or <b>shouldn’t</b>: the clean verb. No <b>to</b>, no <b>-s</b>, no <b>-ing</b>, no <b>do</b>.',
+  uso: { p: 'Your turn. A caller says: I’m always tired. Give one piece of advice with should and one with shouldn’t.', molde: ['You should …', 'You shouldn’t …'], ex: 'You should go to bed early. You shouldn’t drink coffee at night.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

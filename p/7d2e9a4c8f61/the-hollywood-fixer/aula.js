@@ -24,13 +24,14 @@ var L = [
   { k: 'capa', est: null, img: 'fundo' },
   { k: 'abre', est: 'o', min: 7, img: 'mesa', rot: 'I · The Desk', t: 'Nine at night. You fix problems for famous people.', p: 'Pick a card. Answer out loud. Any answer is OK. Nobody corrects you.' },
   { k: 'recados', est: 'l', min: 7, img: 'fundo', rot: 'II · Four Voicemails', t: 'The photo leaked at eleven. Four messages are the whole evening.', p: 'Play one. Then say who DID the thing, not who is speaking.' },
-  { k: 'falta', est: 'f', min: 6, img: 'fundo', rot: 'III · The Missing Person', t: 'Same words. One person of difference.', p: 'Read each line out loud. Tap a line, then tap the person who does the second verb.' },
-  { k: 'holofote', est: 'f', min: 6, img: 'fundo', rot: 'IV · The Spotlight', t: 'The light goes where the sentence sends it.', p: 'Read the clue. Put a person in the gap, or leave it empty. Watch the light. Say the line.' },
-  { k: 'bilhetes', est: 'o', min: 7, img: 'mesa', rot: 'V · Set Notes', t: 'Six notes. You pass them on, one by one.', p: 'Read the note. Build how you pass it on, out loud. Tap Check. Then say it to your teacher, as if they were the person.' },
-  { k: 'say', est: 'f', min: 6, img: 'fundo', rot: 'VI · Say Takes Nobody', t: 'Four verbs. Three carry a person. One never does.', p: 'Right or wrong? If it is wrong, say the line right.' },
-  { k: 'culpa', est: 'f', min: 6, extra: 1, img: 'garagem', rot: 'VII · Who Asked Who', t: 'Eleven twenty. The studio is about to blame Nadia.', p: 'Read the message. Read the receipt. Then answer, one step at a time.' },
-  { k: 'crises', est: 'o', min: 7, img: 'espera', rot: 'VIII · Three Crises', t: 'You are the fixer. Three crises on set.', p: 'Your teacher plays everybody else. Solve each crisis out loud, with a person in every gap. Then tap the twist.' },
-  { k: 'fim', est: 'w', min: 6, img: 'fundo', rot: 'IX · That’s a Wrap', t: 'The official note goes out. Your sentences from scene I come back.', p: 'Write three notes to pass on: one want, one ask, one tell. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'III · Theo on the Phone', t: 'Theo and you, at night. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then pass on your own messages.' },
+  { k: 'falta', est: 'f', min: 6, img: 'fundo', rot: 'IV · The Missing Person', t: 'Same words. One person of difference.', p: 'Read each line out loud. Tap a line, then tap the person who does the second verb.' },
+  { k: 'holofote', est: 'f', min: 6, img: 'fundo', rot: 'V · The Spotlight', t: 'The light goes where the sentence sends it.', p: 'Read the clue. Put a person in the gap, or leave it empty. Watch the light. Say the line.' },
+  { k: 'bilhetes', est: 'o', min: 7, img: 'mesa', rot: 'VI · Set Notes', t: 'Six notes. You pass them on, one by one.', p: 'Read the note. Build how you pass it on, out loud. Tap Check. Then say it to your teacher, as if they were the person.' },
+  { k: 'say', est: 'f', min: 6, img: 'fundo', rot: 'VII · Say Takes Nobody', t: 'Four verbs. Three carry a person. One never does.', p: 'Right or wrong? If it is wrong, say the line right.' },
+  { k: 'culpa', est: 'f', min: 6, extra: 1, img: 'garagem', rot: 'VIII · Who Asked Who', t: 'Eleven twenty. The studio is about to blame Nadia.', p: 'Read the message. Read the receipt. Then answer, one step at a time.' },
+  { k: 'crises', est: 'o', min: 7, img: 'espera', rot: 'IX · Three Crises', t: 'You are the fixer. Three crises on set.', p: 'Your teacher plays everybody else. Solve each crisis out loud, with a person in every gap. Then tap the twist.' },
+  { k: 'fim', est: 'w', min: 6, img: 'fundo', rot: 'X · That’s a Wrap', t: 'The official note goes out. Your sentences from scene I come back.', p: 'Write three notes to pass on: one want, one ask, one tell. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -199,3 +200,26 @@ TOQUES.ho = function (b, n, v) { S.ho.esc = v || ''; };
 TOQUES['ho-prox'] = function () { S.ho = { n: S.ho.n + 1, esc: null }; };
 TOQUES.cu = function (b, n) { S.cu.esc = n; };
 TOQUES['cu-prox'] = function () { S.cu = { n: S.cu.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de falta.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The fixer’s phone. Tap the lit words.',
+  falas: [
+    { q: 'Theo', f: 'Margo [[wants me to]] call the press. [[She told me]] to say nothing.' },
+    { q: 'You', f: 'Did she [[ask you to]] hide the photo?' },
+    { q: 'Theo', f: 'No. She [[asked me to]] find who leaked it.' },
+    { q: 'You', f: '[[Tell her]] I need an hour. [[Say]] that the photo is old.' },
+    { q: 'Theo', f: 'OK. Nadia [[said]] that she wants it fixed tonight.' }
+  ],
+  porques: [
+    'want + a person + to + verb. Not “wants that I call”.',
+    'tell + a person + to + verb. The person comes right after tell.',
+    'ask + a person + to + verb.',
+    'ask again: asked me to find.',
+    'tell + a person: tell her. A person comes right after.',
+    'say never takes a person: say that. Not “say her”.',
+    'said + that: no person after said.'
+  ],
+  nota: '<b>want / ask / tell</b> + <b>a person</b> + <b>to</b> + verb: Margo wants <b>me to</b> call. <b>Say</b> never takes a person: say that.',
+  uso: { p: 'Your turn. Pass on three messages from your boss or your family.', molde: ['She wants me to …', 'He asked me to …', 'They told me to …'], ex: 'My boss wants me to finish early. My sister asked me to call her. My mother told me to eat more.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

@@ -29,10 +29,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'fumaca', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'fumaca', rot: 'III · The Clip', t: 'The Office. The fire drill.', p: 'Answer first. Watch the clip. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'fumaca', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'escritorio', rot: 'V · Absolutely, Not Very', t: 'Which words take very? Which take absolutely?', p: 'Sort the words into the two boxes. Then read the rule.' },
-  { k: 'dundies', est: 'o', min: 7, img: 'capa', rot: 'VI · The Dundies', t: 'Six trophies on the shelf. Every right sentence wins one.', p: 'Read the category and the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'escalas', est: 'o', min: 7, extra: 1, img: 'escritorio', rot: 'VII · Turn It Up', t: 'Six feelings. Normal and extreme.', p: 'Match each normal word to its extreme word. Then say both: very … / absolutely …' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · One Minute', t: 'One minute.', p: 'One minute.' }
+  { k: 'gx', est: 'f', min: 4, img: 'escritorio', rot: 'V · Very or Absolutely?', t: 'Two scenes at the office. Two kinds of adjective.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'regra', est: 'f', min: 6, img: 'escritorio', rot: 'VI · Absolutely, Not Very', t: 'Which words take very? Which take absolutely?', p: 'Sort the words into the two boxes. Then read the rule.' },
+  { k: 'dundies', est: 'o', min: 7, img: 'capa', rot: 'VII · The Dundies', t: 'Six trophies on the shelf. Every right sentence wins one.', p: 'Read the category and the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'escalas', est: 'o', min: 7, extra: 1, img: 'escritorio', rot: 'VIII · Turn It Up', t: 'Six feelings. Normal and extreme.', p: 'Match each normal word to its extreme word. Then say both: very … / absolutely …' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · One Minute', t: 'One minute.', p: 'One minute.' }
 ];
 
 var FILME = 'The Office', ANO = '2009';
@@ -239,3 +240,20 @@ var FIM = { tipo: 'minuto', rot: 'VIII · One Minute', t: 'One minute of extreme
   ],
   palavras: ['absolutely', 'really', 'totally', 'terrified', 'exhausted', 'hilarious'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Very or absolutely? Two scenes at the office.',
+  a: { t: 'An extreme word', falas: [['Jim', 'Are you scared of the fire drill?'], ['Dwight', 'I’m <mark>absolutely terrified</mark>.']], d: 'Terrified is already extreme. It takes <b>absolutely, really, totally</b>.' },
+  b: { t: 'A normal word', falas: [['Pam', 'Is the office cold today?'], ['Oscar', 'Yes, it’s <mark>very cold</mark>.']], d: 'Cold is a normal word. It takes <b>very, a bit, extremely</b>.' },
+  pergunta: 'Same idea, two kinds of word. What is different about the adjective?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Dwight, after twelve hours at his desk: “I’m …”', o: ['absolutely exhausted.', 'absolutely tired.'], c: 0, d: 'Exhausted is extreme: absolutely. Tired is normal: very.' },
+    { p: 'The coffee is not hot. It is warm. Pam says: “It’s …”', o: ['very warm.', 'absolutely warm.'], c: 0, d: 'Warm is a normal word: very.' },
+    { p: 'The office in July, no air conditioning: “It’s …”', o: ['very boiling.', 'absolutely boiling.'], c: 1, d: 'Boiling is extreme. Never very boiling.' },
+    { p: 'Oscar eats a big bag of chips at 11 AM: “I’m …”', o: ['very hungry.', 'absolutely hungry.'], c: 0, d: 'Hungry is normal. Starving is the extreme word.' }
+  ],
+  nota: 'Look at the adjective. An extreme word (<b>terrified, freezing, exhausted, starving</b>) takes <b>absolutely</b>. A normal word (<b>scared, cold, tired, hungry</b>) takes <b>very</b>.',
+  uso: { p: 'Your turn. Two true sentences about you this week: one with very and a normal word, one with absolutely and an extreme word.', molde: ['I’m very …', 'My day was absolutely …'], ex: 'I’m very tired today. My Monday was absolutely terrible.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

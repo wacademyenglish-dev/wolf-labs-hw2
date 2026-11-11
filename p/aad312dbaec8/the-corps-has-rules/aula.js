@@ -32,10 +32,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Demon Slayer. The official trailer in English.', p: 'Choose your answer first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'espada', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'espada', rot: 'V · The Rules of the Corps', t: 'A letter from the Corps: what must you do?', p: 'Tap the rules in the letter. Then finish the rule.' },
-  { k: 'lamina', est: 'o', min: 7, img: 'capa', rot: 'VI · The Nichirin Blade', t: 'The Final Selection. Six rules, three boxes. Every right one lights your blade.', p: 'Tap a rule card, then its box. Then say each rule.' },
-  { k: 'livro', est: 'o', min: 6, img: 'casa', rot: 'VII · Real Rules', t: 'Six places in your life. What are the rules?', p: 'Tap a card. Say one rule with must, mustn’t, have to or don’t have to.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Rule Book', t: 'Your own rule book: four rules for your life.', p: 'must, mustn’t, have to, don’t have to. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'espada', rot: 'V · Right, Not This', t: 'Six lines from the Corps. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'regra', est: 'f', min: 6, img: 'espada', rot: 'VI · The Rules of the Corps', t: 'A letter from the Corps: what must you do?', p: 'Tap the rules in the letter. Then finish the rule.' },
+  { k: 'lamina', est: 'o', min: 7, img: 'capa', rot: 'VII · The Nichirin Blade', t: 'The Final Selection. Six rules, three boxes. Every right one lights your blade.', p: 'Tap a rule card, then its box. Then say each rule.' },
+  { k: 'livro', est: 'o', min: 6, img: 'casa', rot: 'VIII · Real Rules', t: 'Six places in your life. What are the rules?', p: 'Tap a card. Say one rule with must, mustn’t, have to or don’t have to.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Rule Book', t: 'Your own rule book: four rules for your life.', p: 'must, mustn’t, have to, don’t have to. It goes to your My notes.' }
 ];
 
 var SERIE = 'Demon Slayer', ANO = '2019';
@@ -231,3 +232,18 @@ var AQ = { tipo: 'ranking', rot: 'I · The Hardest Training', t: 'Before the tra
   itens: ['Waking up at 5 a.m.', 'Running 10 km', 'Cold showers', 'No sugar for a month', 'Studying 3 hours a day'],
   depois: 'Which one do you have to do in your life?', ex: 'Number 1 is waking up at 5 a.m. I hate it! The easiest is no sugar. And I have to study every day.' };
 /*AQ@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'You must train every morning.', x: 'You must to train every morning.', d: 'must + a clean verb. No to.' },
+    { c: 'You mustn’t take off the mask.', x: 'You don’t must take off the mask.', d: 'For no: mustn’t. Never don’t must.' },
+    { c: 'She has to leave at dawn.', x: 'She have to leave at dawn.', d: 'He, she, it: has to.' },
+    { c: 'He doesn’t have to wear the uniform.', x: 'He don’t have to wear the uniform.', d: 'He, she, it: doesn’t.' },
+    { c: 'Do I have to pass the Final Selection?', x: 'Have I to pass the Final Selection?', d: 'A question with have to: Do I have to?' },
+    { c: 'Yesterday Tanjiro had to climb the mountain.', x: 'Yesterday Tanjiro must climb the mountain.', d: 'The past of must is had to.' }
+  ],
+  nota: 'One shape for each. <b>must</b> + a clean verb (no to, no -s). <b>has to</b> for he, she, it. Questions: <b>Do I have to …?</b> Past: <b>had to</b>. Not allowed: <b>mustn’t</b>. Not necessary: <b>don’t have to</b>.',
+  uso: { p: 'Your turn. The rules of a place you know: one thing you must do, one thing you mustn’t do, and one thing you had to do yesterday.', molde: ['I must …', 'You mustn’t …', 'Yesterday I had to …'], ex: 'I must arrive before eight. You mustn’t use your phone in class. Yesterday I had to finish a report.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

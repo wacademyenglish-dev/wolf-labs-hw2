@@ -23,14 +23,15 @@ var L = [
   { k: 'casa', est: 'o', min: 7, img: 'salao', rot: 'I · Your House', t: 'Before the laundromat: your own house.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
   { k: 'maquinas', est: 'o', min: 7, img: 'salao', rot: 'II · Eight Machines', t: 'Eight machines. Six work. Two have a sign.', p: 'Tap each machine. Read its line out loud.' },
   { k: 'move', est: 'f', min: 6, img: 'caixa', rot: 'III · The S Moves', t: 'The S never disappears. It moves.', p: 'Say the top line. Tap the S. Watch it move into DOES. Say the new line.' },
-  { k: 'conta', est: 'f', min: 6, img: 'salao', rot: 'IV · One, or More?', t: 'Count the machines. The count chooses the word.', p: 'Tap a group, then its box. One thing: doesn’t. More than one: don’t. Then say the lines.' },
-  { k: 'dois', est: 'f', min: 6, img: 'caixa', rot: 'V · Never Two', t: 'Each line has the S in two places.', p: 'Say the line. Tap the word with the extra S. Then say it right.' },
-  { k: 'ficha', est: 'o', min: 7, img: 'caixa', rot: 'VI · The Service Form', t: 'You’re the technician. Check each machine with a question.', p: 'Build each question out loud. Tap Check. The machine answers, and the form lights up.' },
-  { k: 'avisos', est: 'o', min: 7, img: 'porta', rot: 'VII · The Signs', t: 'Six pieces of paper, taped up by someone tired.', p: 'Match each sign to its sentence. Then say the sentence out loud.' },
-  { k: 'suporte', est: 'o', min: 7, extra: 1, img: 'caixa', rot: 'VIII · The Support Call', t: 'A phone call to technical support.', p: 'Round 1: you call, your teacher is support. Round 2: you are support.' },
-  { k: 'mulher', est: 'o', min: 7, extra: 1, img: 'cadeira', rot: 'IX · The Woman at the Back', t: 'Six things. None of them says who she is.', p: 'Open the lines one by one. Read each out loud. When you know why she is here, tap I know it.' },
-  { k: 'porta', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'X · The Door', t: 'One sign, and it isn’t about a machine.', p: 'Open one step at a time. Say each step before the next.' },
-  { k: 'fim', est: 'w', min: 6, img: 'salao', rot: 'XI · Your Service Form', t: 'Your own house: a service form.', p: 'Write five lines: what doesn’t work, what you don’t use, and two Does it…? questions. The red line watches the S. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'caixa', rot: 'IV · Right, Not This', t: 'Six pairs from the laundromat. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'conta', est: 'f', min: 6, img: 'salao', rot: 'V · One, or More?', t: 'Count the machines. The count chooses the word.', p: 'Tap a group, then its box. One thing: doesn’t. More than one: don’t. Then say the lines.' },
+  { k: 'dois', est: 'f', min: 6, img: 'caixa', rot: 'VI · Never Two', t: 'Each line has the S in two places.', p: 'Say the line. Tap the word with the extra S. Then say it right.' },
+  { k: 'ficha', est: 'o', min: 7, img: 'caixa', rot: 'VII · The Service Form', t: 'You’re the technician. Check each machine with a question.', p: 'Build each question out loud. Tap Check. The machine answers, and the form lights up.' },
+  { k: 'avisos', est: 'o', min: 7, img: 'porta', rot: 'VIII · The Signs', t: 'Six pieces of paper, taped up by someone tired.', p: 'Match each sign to its sentence. Then say the sentence out loud.' },
+  { k: 'suporte', est: 'o', min: 7, extra: 1, img: 'caixa', rot: 'IX · The Support Call', t: 'A phone call to technical support.', p: 'Round 1: you call, your teacher is support. Round 2: you are support.' },
+  { k: 'mulher', est: 'o', min: 7, extra: 1, img: 'cadeira', rot: 'X · The Woman at the Back', t: 'Six things. None of them says who she is.', p: 'Open the lines one by one. Read each out loud. When you know why she is here, tap I know it.' },
+  { k: 'porta', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'XI · The Door', t: 'One sign, and it isn’t about a machine.', p: 'Open one step at a time. Say each step before the next.' },
+  { k: 'fim', est: 'w', min: 6, img: 'salao', rot: 'XII · Your Service Form', t: 'Your own house: a service form.', p: 'Write five lines: what doesn’t work, what you don’t use, and two Does it…? questions. The red line watches the S. It goes to your My notes.' }
 ];
 
 var CASA = [
@@ -231,3 +232,18 @@ TOQUES['sp-parte'] = function (b, n, v) { var s = S.sup; s.partes[s.n] = s.parte
 TOQUES['sp-erro'] = function () { var s = S.sup; s.erro[s.n] = !s.erro[s.n]; };
 TOQUES['sp-prox'] = function () { S.sup.n++; };
 TOQUES.pt = function () { S.porta.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de conta.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'Machine 4 <b>doesn’t work</b>.', x: 'Machine 4 doesn’t works.', d: 'The S is in doesn’t. work stays clean.' },
+    { c: 'The dryers <b>don’t</b> take coins.', x: 'The dryers doesn’t take coins.', d: 'More than one machine: don’t.' },
+    { c: '<b>Does</b> it spin?', x: 'Do it spin?', d: 'It is one thing: does.' },
+    { c: 'It <b>doesn’t</b> dry the clothes.', x: 'It no dry the clothes.', d: 'For no: doesn’t + verb.' },
+    { c: '<b>Does</b> the door <b>close</b>?', x: 'Does the door closes?', d: 'The S is in does. Never two.' },
+    { c: 'I <b>don’t</b> have coins.', x: 'I doesn’t have coins.', d: 'I, you, we, they: don’t.' }
+  ],
+  nota: 'The S lives in one place only. With <b>does</b> or <b>doesn’t</b>, the verb has no S: it doesn’t work, does it spin?',
+  uso: { p: 'Your turn. Something in your house: one thing that doesn’t work, and one question for the technician.', molde: ['My … doesn’t …', 'Does it …?'], ex: 'My microwave doesn’t heat the food. Does it need a new part?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

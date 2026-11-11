@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'A2', unidade: 1, titulo: ['Not a', 'Normal Day
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'capa', rot: 'I · The Group Chat', t: 'The power is out. The phones are on.', p: 'Read the chat out loud with your teacher. Then look closer.' },
-  { k: 'separa', est: 'f', min: 9, img: 'conversa', rot: 'II · Usually or Right Now?', t: 'A habit or this moment?', p: 'Read each sentence. Is it USUALLY or RIGHT NOW? Say why, then tap.' },
-  { k: 'transforma', est: 'f', min: 8, img: 'capa', rot: 'III · But Tonight…', t: 'Every evening… but tonight…', p: 'Read the habit. Use the clue. Say what is happening tonight.' },
-  { k: 'conversa', est: 'o', min: 9, img: 'conversa', rot: 'IV · Your Not-Normal Day', t: 'Your normal day, and a strange one.', p: 'Answer, then ask the question back: “And you?”' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'II · Habit or Now?', t: 'Where does each sentence live?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'separa', est: 'f', min: 9, img: 'conversa', rot: 'III · Usually or Right Now?', t: 'A habit or this moment?', p: 'Read each sentence. Is it USUALLY or RIGHT NOW? Say why, then tap.' },
+  { k: 'transforma', est: 'f', min: 8, img: 'capa', rot: 'IV · But Tonight…', t: 'Every evening… but tonight…', p: 'Read the habit. Use the clue. Say what is happening tonight.' },
+  { k: 'conversa', est: 'o', min: 9, img: 'conversa', rot: 'V · Your Not-Normal Day', t: 'Your normal day, and a strange one.', p: 'Answer, then ask the question back: “And you?”' }
 ];
 var PORTAS = [];
 
@@ -60,3 +61,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* A2 · Not a Normal Day: leitura · separa · transforma · conversa */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'The night the power went out. Where does each sentence go?', marcos: [{ t: 'EVERY EVENING', s: 'a habit' }, { t: 'RIGHT NOW', s: 'this moment, with -ing' }], frases: [{ f: 'I usually watch TV at seven.', c: 0, d: 'watch · the normal routine' }, { f: 'My neighbors cook dinner every night.', c: 0, d: 'cook · the normal routine' }, { f: 'Ben always checks his phone after work.', c: 0, d: 'checks · always, every day' }, { f: 'Tonight I’m reading by candlelight.', c: 1, d: 'am reading · happening now' }, { f: 'The kids are playing cards right now.', c: 1, d: 'are playing · happening now' }, { f: 'We’re waiting for the lights to come back.', c: 1, d: 'are waiting · happening now' }], nota: 'The habit keeps the normal verb: I <b>watch</b>, Ben <b>checks</b>. This moment uses <b>be + -ing</b>: I’m <b>reading</b>, we’re <b>waiting</b>. Verbs like <b>know, like, want</b> stay normal, even now: I know, not I’m knowing.', uso: { p: 'Your turn. One thing you usually do in the evening, and one thing you are doing right now.', molde: ['Every evening I …', 'Right now I’m …'], ex: 'Every evening I cook dinner. Right now I’m sitting in my kitchen.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

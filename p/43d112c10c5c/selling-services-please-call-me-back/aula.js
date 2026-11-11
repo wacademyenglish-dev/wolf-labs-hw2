@@ -17,11 +17,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Phone', t: 'Do you listen to your voicemails?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'ditado', est: 'l', min: 10, img: 'mesa', rot: 'II · A Message from Ana', t: 'A client leaves a voicemail. Six sentences.', p: 'Listen up to three times. Type every word. Numbers: use digits (3, 10, 555). E-mails: type the words you hear (at, dot).' },
   { k: 'formulario', est: 'w', min: 10, img: 'mesa', rot: 'III · The Message in the CRM', t: 'Another voicemail. Put it in the CRM.', p: 'Read the message. Fill in every field: numbers in digits, times with a.m. or p.m. Then check.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'IV · “Call Me Back”, Not “Return Me”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'V · Call Him Back', t: 'You call Victor back. Your teacher is Victor.', p: 'Do each task. Say the numbers and times clearly.' },
-  { k: 'escolha', est: 'o', min: 5, img: 'mesa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VII · Your Voicemail', t: 'Your thirty-second message for a real client.', p: 'Write it. Then say it out loud: your teacher writes your number and your e-mail.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 18: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'IV · The Pocket Rule', t: 'Four lines. Keep them in the corner.', p: 'Read one line at a time. Then keep the rule in the corner for the next pages.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'V · “Call Me Back”, Not “Return Me”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'VI · Call Him Back', t: 'You call Victor back. Your teacher is Victor.', p: 'Do each task. Say the numbers and times clearly.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 5, img: 'mesa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VIII · Your Voicemail', t: 'Your thirty-second message for a real client.', p: 'Write it. Then say it out loud: your teacher writes your number and your e-mail.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 18: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -87,3 +88,16 @@ var PODE = [
   'I can say times with a.m. and p.m., not “15h”.',
   'I can take a message and put it in the CRM.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'On the voicemail',
+  linhas: [
+    '<b>Please call me back</b> at 555-0143.',
+    'numbers: digit by digit · 0 = <b>oh</b>',
+    'times: 1 to 12 + <b>a.m.</b> or <b>p.m.</b> · 3 p.m., not 15h',
+    'e-mail: <b>at</b> and <b>dot</b> · ana at bluepeak dot com'
+  ],
+  uso: { p: 'Your turn. Leave a short message: your name, your number, a time.', molde: ['Hi, this is … Please call me back at …', 'I’m free at …'], ex: 'Hi, this is Leo. Please call me back at 555-0143. I’m free at 3 p.m.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

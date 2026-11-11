@@ -35,13 +35,14 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'estudio', rot: 'I · Night Noises', t: 'Before the show: your nights, your noises.', p: 'Pick a card. Real life. Nobody is corrected here.' },
   { k: 'video', est: 'l', min: 10, img: 'estrada', rot: 'II · Only the Sound', t: 'A movie where nobody can make a sound.', p: 'Tap your answers first. Then listen with no picture, then watch: tap again. ▶ plays a line again.' },
-  { k: 'regra', est: 'f', min: 7, img: 'estudio', rot: 'III · The Rule', t: 'I heard someone walking. I saw him close the door.', p: 'A part of it: -ing. All of it: the base verb. Find the broken part of six lines and say the fix.' },
-  { k: 'linhas', est: 'l', min: 7, img: 'casa', rot: 'IV · Night Calls', t: 'Three listeners are on the line.', p: 'Your teacher reads the call. Listen. Then tap True or Lie, and say what the caller heard and saw.' },
-  { k: 'historia', est: 'l', min: 7, img: 'fogueira', rot: 'V · The History Minute', t: 'Station break: where does Halloween come from?', p: 'Your teacher reads the history minute. Then tap True or Lie: the sentences use today’s grammar too.' },
-  { k: 'ligue', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'VI · You’re On Air', t: 'Now you call the show.', p: 'Pick a card and tell your story. Start with I heard… or I saw…' },
-  { k: 'porta', est: 'f', min: 6, extra: 1, img: 'casa', rot: 'VII · Open or Opening?', t: 'Did they see all of it, or only a part?', p: 'Read the sentence. Did they see all of it, or only a part? Tap, then say why.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'estudio', rot: 'VIII · Quick Check', t: 'Six quick ones before the show ends.', p: 'Tap Right or Wrong. If it is wrong, say the fix.' },
-  { k: 'fim', est: 'w', min: 6, img: 'estrada', rot: 'IX · The Last Call', t: 'Write your call for tomorrow’s show.', p: 'About 80 words: what you heard, what you saw, and what it really was. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'estudio', rot: 'III · The Call in Blocks', t: 'Hear someone, then a verb. Two shapes.', p: 'Read the blocks out loud. Notice the verb after the person. Then build a line and say your own.' },
+  { k: 'regra', est: 'f', min: 7, img: 'estudio', rot: 'IV · The Rule', t: 'I heard someone walking. I saw him close the door.', p: 'A part of it: -ing. All of it: the base verb. Find the broken part of six lines and say the fix.' },
+  { k: 'linhas', est: 'l', min: 7, img: 'casa', rot: 'V · Night Calls', t: 'Three listeners are on the line.', p: 'Your teacher reads the call. Listen. Then tap True or Lie, and say what the caller heard and saw.' },
+  { k: 'historia', est: 'l', min: 7, img: 'fogueira', rot: 'VI · The History Minute', t: 'Station break: where does Halloween come from?', p: 'Your teacher reads the history minute. Then tap True or Lie: the sentences use today’s grammar too.' },
+  { k: 'ligue', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'VII · You’re On Air', t: 'Now you call the show.', p: 'Pick a card and tell your story. Start with I heard… or I saw…' },
+  { k: 'porta', est: 'f', min: 6, extra: 1, img: 'casa', rot: 'VIII · Open or Opening?', t: 'Did they see all of it, or only a part?', p: 'Read the sentence. Did they see all of it, or only a part? Tap, then say why.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'estudio', rot: 'IX · Quick Check', t: 'Six quick ones before the show ends.', p: 'Tap Right or Wrong. If it is wrong, say the fix.' },
+  { k: 'fim', est: 'w', min: 6, img: 'estrada', rot: 'X · The Last Call', t: 'Write your call for tomorrow’s show.', p: 'About 80 words: what you heard, what you saw, and what it really was. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -277,3 +278,17 @@ TOQUES['vd-olho'] = function () { S.video.olho = 1; };
 TOQUES['ln-ouviu'] = function () { S.ln.ouviu = 1; };
 TOQUES['ln-prox'] = function () { S.ln = { n: S.ln.n + 1, q: 0, ouviu: 0, esc: S.ln.esc }; };
 TOQUES['hs-ouviu'] = function () { S.hist.ouviu = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'What the callers heard, in blocks. Each block has a job.',
+  frases: [
+    { b: [['I', 'WHO'], ['heard', 'ACTION'], ['someone', 'WHO'], ['walking', 'ONLY A PART (-ING)', 'como'], ['upstairs', 'WHERE']], d: 'I heard only a part. It was still going on.' },
+    { b: [['I', 'WHO'], ['saw', 'ACTION'], ['him', 'WHO'], ['close', 'ALL OF IT', 'o'], ['the door', 'WHAT', 'aux']], d: 'I saw all of it, from start to end. The verb is clean.' },
+    { b: [['We', 'WHO'], ['heard', 'ACTION'], ['them', 'WHO'], ['singing', 'ONLY A PART (-ING)', 'como'], ['in the dark', 'WHERE']], d: 'After the person: him, her, them. Never he, she, they.' }
+  ],
+  nota: 'After <b>hear, see, feel, watch</b> + a person, the next verb has two shapes. <b>-ing</b>: I saw only a part. <b>Clean verb</b>: I saw all of it. Never to, never -s or -ed.',
+  monta: { p: 'Build the caller’s line: he heard the whole door close. Then say it.', pecas: [['close', 'ALL OF IT', 'o'], ['I', 'WHO'], ['the door', 'WHAT', 'aux'], ['heard', 'ACTION']], ordem: [1, 3, 2, 0] },
+  uso: { p: 'Your turn. You call the show. Say what you heard and saw last night: one with -ing and one with a clean verb.', molde: ['I heard someone …-ing', 'I saw him …'], ex: 'I heard the neighbors arguing. I saw the cat jump on the table.' },
+  prof: 'Read the blocks with the student, top to bottom. Point at the colored block: -ing is a part, a clean verb is all of it.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

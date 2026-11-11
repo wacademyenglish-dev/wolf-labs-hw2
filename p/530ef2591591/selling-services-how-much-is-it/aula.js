@@ -17,11 +17,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Week', t: 'How many e-mails do you get in a day?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · The Proposal Summary', t: 'Cost today, price, savings: one page.', p: 'Read it out loud, numbers too. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 8, img: 'conversa', rot: 'III · “So, How Much Is It?”', t: 'A finance director asks about the price.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Thousand, Not “Thousands”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'multipla', est: 'f', min: 7, img: 'mesa', rot: 'V · Numbers in the Proposal', t: 'Six lines from a proposal.', p: 'Read the line out loud. Choose. Then say why.' },
-  { k: 'calculo', est: 'o', min: 6, img: 'conversa', rot: 'VI · The Savings Calculator', t: 'Change the numbers. Watch the savings.', p: 'Put in the client’s numbers. Then say the result: “You save … a month.”' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your Three Numbers', t: 'Cost today, your price, the savings.', p: 'Write them. Then say them out loud, slowly and clearly.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'l', min: 4, img: 'capa', rot: 'IV · Teen or Ty?', t: 'Two numbers that sound almost the same.', p: 'Listen to the pairs. Then the ear test: teen or ty? Then say yours.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · Thousand, Not “Thousands”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'multipla', est: 'f', extra: 1, min: 7, img: 'mesa', rot: 'VI · Numbers in the Proposal', t: 'Six lines from a proposal.', p: 'Read the line out loud. Choose. Then say why.' },
+  { k: 'calculo', est: 'o', min: 6, img: 'conversa', rot: 'VII · The Savings Calculator', t: 'Change the numbers. Watch the savings.', p: 'Put in the client’s numbers. Then say the result: “You save … a month.”' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your Three Numbers', t: 'Cost today, your price, the savings.', p: 'Write them. Then say them out loud, slowly and clearly.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -109,3 +110,24 @@ var CALCULO = { rot: 'SAVINGS CALCULATOR', cliente: 'Serra Steel (fictional)',
     { k: 'pct', r: 'Work we automate', v: 40, un: '%' }],
   fala: 'Say it: “You save … hours a month. That is R$ … a month, and R$ … a year.”',
   modelo: 'With these numbers, you save one hundred and sixty hours a month. That is nine thousand six hundred reais a month, and one hundred and fifteen thousand two hundred reais a year.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G11 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'som2', titulo: 'Thirteen or thirty? Listen first.',
+  toque: 'Tap ▶ and listen. The teens end strong: thir-TEEN. The tens start strong: THIR-ty.',
+  pares: [
+    [{ t: 'thirteen', fala: 'There are thirteen factories.' }, { t: 'thirty', fala: 'There are thirty factories.' }],
+    [{ t: 'fifteen', fala: 'It costs fifteen thousand.' }, { t: 'fifty', fala: 'It costs fifty thousand.' }]
+  ],
+  pergunta: 'The ear test. Which number do you hear?',
+  itens: [
+    { fala: 'We save fifteen percent.', o: ['15 percent', '50 percent'], c: 0 },
+    { fala: 'There are thirty employees.', o: ['13 employees', '30 employees'], c: 1 },
+    { fala: 'It costs sixty thousand.', o: ['16 thousand', '60 thousand'], c: 1 },
+    { fala: 'There are fourteen stores.', o: ['14 stores', '40 stores'], c: 0 }
+  ],
+  nota: 'The teens end in <b>-teen</b> and the last beat is strong: thir<b>TEEN</b>. The tens end in <b>-ty</b> and the first beat is strong: <b>THIR</b>ty. In a price, that is a big difference.',
+  uso: { p: 'Your turn. Say two numbers about your company: one teen and one ten. Your teacher says which one they heard.', molde: ['We have thirteen …', 'We have thirty …'], ex: 'We have fifteen clients in Brazil and fifty clients in total.' },
+  prof: 'The ▶ uses the voice of the browser. No sound? Say the pairs yourself: the last beat strong for teen, the first beat strong for ty.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_som', GX_EXPLICA); };

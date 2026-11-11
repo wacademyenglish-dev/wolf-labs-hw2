@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 6, titulo: ['The House', 'Rules'
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · The Rules on the Fridge', t: 'Welcome to Flat 3.', p: 'Read the rules out loud with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'II · Mustn’t or Don’t Have To?', t: 'One word, a big difference.', p: 'Compare A and B. What is the difference in meaning?' },
-  { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · The Angry Note', t: 'A flatmate left an angry note. Five mistakes.', p: 'Find a mistake, say the right form, then tap.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'IV · Your House Rules', t: 'Now write the rules of YOUR home.', p: 'Five rules: must, mustn’t, don’t have to, should.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Not Allowed or Not Needed?', t: 'Two notes on the fridge. Two meanings.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new rules.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'III · Mustn’t or Don’t Have To?', t: 'One word, a big difference.', p: 'Compare A and B. What is the difference in meaning?' },
+  { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'IV · The Angry Note', t: 'A flatmate left an angry note. Five mistakes.', p: 'Find a mistake, say the right form, then tap.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'V · Your House Rules', t: 'Now write the rules of YOUR home.', p: 'Five rules: must, mustn’t, don’t have to, should.' }
 ];
 var PORTAS = [];
 
@@ -52,3 +53,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* B1 · The House Rules: leitura · descobre · erros · cartao */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Not allowed or not needed? Two rules in Flat 3.', a: { t: 'Forbidden', falas: [['The note', 'Be careful with the stove.'], ['Flatmate', 'You<mark> mustn’t leave</mark> it on at night.']], d: 'It is dangerous, so it is not allowed. That is <b>mustn’t</b>.' }, b: { t: 'Not necessary', falas: [['The note', 'We buy milk every week.'], ['Flatmate', 'You<mark> don’t have to buy</mark> it. We have some.']], d: 'You can buy it, but it is your choice. That is <b>don’t have to</b>.' }, pergunta: 'Same shape, two meanings. What is different?', pergunta2: 'Now you. Which one fits?', itens: [{ p: 'Smoking in the flat is against the rules.', o: ['You mustn’t smoke here.', 'You don’t have to smoke here.'], c: 0, d: 'It is forbidden. mustn’t.' }, { p: 'Dinner is at eight, but you can eat alone if you want.', o: ['You mustn’t come to dinner.', 'You don’t have to come to dinner.'], c: 1, d: 'It is your choice. don’t have to.' }, { p: 'The neighbours sleep at ten. Loud music is not OK.', o: ['You mustn’t play loud music.', 'You don’t have to play loud music.'], c: 0, d: 'It is not allowed. mustn’t.' }, { p: 'The cleaner comes on Fridays, so cleaning is not your job.', o: ['You mustn’t clean on Fridays.', 'You don’t have to clean on Fridays.'], c: 1, d: 'It is not necessary. don’t have to.' }], nota: '<b>Mustn’t</b> = do not do it, it is forbidden. <b>Don’t have to</b> = it is not necessary, you can choose. <b>Must</b> and <b>have to</b> = it is necessary.', uso: { p: 'Your turn. One rule in your home that is forbidden, and one thing that is not necessary.', molde: ['You mustn’t …', 'You don’t have to …'], ex: 'You mustn’t wear shoes inside. You don’t have to wash the plates today: I will do it.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

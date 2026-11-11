@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Pet Hotel', t: 'Three pets check in tonight.', p: 'Ask each owner five questions. Your teacher is the owner. Then give the pets back.' },
   { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Mistake Hunter', t: 'Five lines from the pet hotel. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -70,3 +71,9 @@ var PODE = [
 var PARES = [['he', 'his'], ['she', 'her'], ['they', 'their'], ['it', 'its'], ['I', 'mine'], ['you', 'yours']];
 PARES = PARES.map(function (p) { return [p[0], p[1], { his: 'Leo is my friend. His dog is big.', her: 'Ana has a cat. Her cat is white.', their: 'The twins love their rabbit.', its: 'The dog loves its red ball.', mine: 'This pen is mine.', yours: 'Is this bag yours?' }[p[1]]]; });
 var CADEIRA = { itens: [{ alvo: 'Ask about my pets.', dica: 'Have you got a pet?', resp: 'Yes, I have. A cat.' }, { alvo: 'Ask about my pet’s name.', dica: 'What’s its name?', resp: 'Its name is Biscuit.' }, { alvo: 'Ask about my car.', dica: 'Have you got a car? What color is it?', resp: 'Yes, a small grey car.' }, { alvo: 'Ask whose bag is on my chair.', dica: 'Whose bag is this?', resp: 'It’s my sister’s.' }, { alvo: 'Ask about my family.', dica: 'Have you got brothers or sisters?', resp: 'I’ve got one brother.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Whose pet is it?', toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'Where is the [[dog of Maria]]?', r: 'Where is <b>Maria’s dog</b>?', d: 'The owner + ’s + the thing.' }, { f: 'It [[have]] big ears.', r: 'It <b>has</b> big ears.', d: 'he, she, it: has.' }, { f: 'Maria is a woman. [[His]] dog is here.', r: 'Maria is a woman. <b>Her</b> dog is here.', d: 'his / her = the OWNER.' }, { f: 'Have you got a cat? Yes, I [[have got]].', r: 'Have you got a cat? Yes, I <b>have</b>.', d: 'The short answer: just have.' }, { f: 'Whose bag is this? It’s [[my]].', r: 'Whose bag is this? It’s <b>mine</b>.', d: 'Alone, without the thing: mine.' }], nota: 'The owner decides: <b>his</b> or <b>her</b>. <b>Maria’s dog</b>, not the dog of Maria. <b>He / she / it has</b>. Alone: <b>mine</b>.', uso: { p: 'Your turn. Tell the teacher about a pet, yours or a friend’s: whose is it, and what has it got?', molde: ['It’s … ’s dog / cat.', 'It has got …', 'Her / His … is …'], ex: 'It’s my sister’s cat. It has got green eyes. Her cat is very small.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

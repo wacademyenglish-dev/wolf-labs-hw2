@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 5, titulo: ['Neither Yes', 'nor 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · The Owner’s Reply', t: 'One star, and a careful answer.', p: 'Read the review and the reply out loud with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'II · Where Did the People Go?', t: 'Who did it? The sentence doesn’t say.', p: 'Compare A and B. Which one has more distance? When is that good, and when is it a problem?' },
-  { k: 'transforma', est: 'f', min: 8, img: 'conversa', rot: 'III · Cool and Professional', t: 'Personal → distant.', p: 'Read the personal sentence. Use the clue. Say the distant version.' },
-  { k: 'escolha', est: 'o', min: 8, img: 'capa', rot: 'IV · Distance or Honesty?', t: 'Two replies. Which is better here?', p: 'Choose A or B for each situation. Say why. There is no single right answer.' }
+  { k: 'gx', est: 'f', min: 5, img: 'capa', rot: 'II · Three Ways to Answer', t: 'One bad review. Three replies.', p: 'Look at the three replies. Tap the one each sentence uses. Then say three of your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'III · Where Did the People Go?', t: 'Who did it? The sentence doesn’t say.', p: 'Compare A and B. Which one has more distance? When is that good, and when is it a problem?' },
+  { k: 'transforma', est: 'f', min: 8, img: 'conversa', rot: 'IV · Cool and Professional', t: 'Personal → distant.', p: 'Read the personal sentence. Use the clue. Say the distant version.' },
+  { k: 'escolha', est: 'o', min: 8, img: 'capa', rot: 'V · Distance or Honesty?', t: 'Two replies. Which is better here?', p: 'Choose A or B for each situation. Say why. There is no single right answer.' }
 ];
 var PORTAS = [];
 
@@ -57,3 +58,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* C1 · Neither Yes nor No: leitura · descobre · transforma · escolha */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'A one-star review. What kind of reply is it?', usos: [{ t: 'DISTANCE', f: 'Your concerns have been passed on to the kitchen.', d: 'The passive, with no agent. Calm and professional. Nobody is named.' }, { t: 'NO SIDE', f: 'Neither the food nor the service was perfect that night.', d: 'Neither … nor, either … or: you do not take a side.' }, { t: 'OWN IT', f: 'We made a mistake, and we are sorry.', d: 'Active, with we. Honest. Better when you are really at fault.' }], pergunta: 'Which kind of reply is it?', itens: [{ f: 'The booking was cancelled by mistake.', c: 0 }, { f: 'We lost your booking, and we are very sorry.', c: 2 }, { f: 'Either the oven or the cook was too slow.', c: 1 }, { f: 'It has been decided that the menu will change.', c: 0 }, { f: 'Not only the soup but also the bread was cold: we are sorry.', c: 2 }, { f: 'Neither the guests nor the staff knew the rule.', c: 1 }], nota: 'The passive with no agent gives <b>distance</b> (The booking was cancelled). <b>Neither … nor / either … or</b> does not take a side. But <b>mistakes were made</b> can sound like running away: when you are at fault, say <b>we made a mistake</b>.', uso: { p: 'Your turn. You own a restaurant. A guest says the food was cold. Reply with distance, with no side, and then own it.', molde: ['Your comments have been …', 'Neither … nor …', 'We made a mistake …'], ex: 'Your comments have been passed on to the chef. Neither the oven nor the waiter was ready that night. We made a mistake, and we are sorry.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

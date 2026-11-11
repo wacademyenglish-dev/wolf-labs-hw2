@@ -32,10 +32,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'cena2-estrada', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'cena2-estrada', rot: 'III · The Tape', t: 'Breaking Bad, 2008. The very first scene.', p: 'Guess first. Watch the scene. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'cena1-camera', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'ficha', rot: 'V · How to Ask', t: 'What goes with what? Match the question with the answer.', p: 'Tap one on the left, then its pair on the right. Then read the rule.' },
-  { k: 'ficha', est: 'o', min: 7, img: 'cena5-sirene', rot: 'VI · The Field File', t: 'You are the first police officer on the road. Ask, and the file fills.', p: 'Read the answer on the file. Ask the question out loud. Then tap Check.' },
-  { k: 'ele', est: 'o', min: 6, img: 'cena2-estrada', rot: 'VII · You or He?', t: 'Now ask about Walter: you → he.', p: 'One word is wrong in each question. Say the right one. Then tap Check.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'Walter on the road.', p: 'The hot seat.' }
+  { k: 'gx', est: 'f', min: 4, img: 'ficha', rot: 'V · The Flip', t: 'The sentence, then the question.', p: 'Flip each sentence. Notice where is or does goes. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'ficha', rot: 'VI · How to Ask', t: 'What goes with what? Match the question with the answer.', p: 'Tap one on the left, then its pair on the right. Then read the rule.' },
+  { k: 'ficha', est: 'o', min: 7, img: 'cena5-sirene', rot: 'VII · The Field File', t: 'You are the first police officer on the road. Ask, and the file fills.', p: 'Read the answer on the file. Ask the question out loud. Then tap Check.' },
+  { k: 'ele', est: 'o', min: 6, img: 'cena2-estrada', rot: 'VIII · You or He?', t: 'Now ask about Walter: you → he.', p: 'One word is wrong in each question. Say the right one. Then tap Check.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · The Hot Seat', t: 'Walter on the road.', p: 'The hot seat.' }
 ];
 
 var SERIE = 'Breaking Bad', ANO = '2008', CENA = 'The first scene';
@@ -239,3 +240,23 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Walt
     { q: 'Why are you here?', ex: 'Because… it is a secret!' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The sentence, then the question. Watch the words move.',
+  frases: [
+    { de: ['Walter', '*is', 'fifty', '.'], para: ['+How old', '*is', 'Walter', '?'], d: 'How old + is + who. For age: be.' },
+    { de: ['Walter', '*lives', 'in Albuquerque', '.'], para: ['+Where', '*does', 'Walter', '*live', '?'], d: 'Where + does + who + the clean verb. The -s goes into does.' },
+    { de: ['He', '*has', 'two children', '.'], para: ['+How many children', '*does', 'he', '*have', '?'], d: 'How many + things + does + who + have.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'A question word goes first. Then the helper: <b>is</b> or <b>does</b>. Then who. Then the clean verb: Where <b>does</b> Walter <b>live</b>? How old <b>is</b> he? Never “Where Walter lives?”.',
+  pergunta: 'Your turn. Ask about Walter. Flip it out loud, then check.',
+  treino: [
+    { de: 'Walter works at a school.', r: '<b>Where does</b> Walter <b>work</b>?' },
+    { de: 'His son is sixteen.', r: '<b>How old is</b> his son?' },
+    { de: 'Walter drives a car.', r: '<b>What does</b> Walter <b>drive</b>?' },
+    { de: 'The young man is Walter’s son.', r: '<b>Who is</b> the young man?' }
+  ],
+  uso: { p: 'Your turn. Ask your teacher about a family. Three questions with a question word.', molde: ['Where does …?', 'How old is …?'], ex: 'Where does your family live? How old is your brother? How many cousins do you have?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

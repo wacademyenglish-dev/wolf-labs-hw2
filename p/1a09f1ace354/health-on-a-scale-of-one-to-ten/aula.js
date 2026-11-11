@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 3, kick: 'ENGLISH FOR HEALTHCAR
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 7, img: 'conversa', rot: 'I · The Pain Scale', t: 'A nurse helps a patient choose a number.', p: 'One question before, then the video, then the questions.' },
-  { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'II · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'multipla', est: 'l', min: 10, img: 'conversa', rot: 'III · Five Patients', t: 'Listen. Which word describes the pain?', p: 'Play each patient once. Choose the word.' },
-  { k: 'prova', est: 'o', min: 8, img: 'capa', rot: 'IV · Explain the Scale', t: 'Your patient doesn’t understand the numbers.', p: 'Explain the scale in your words, in about 45 seconds.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'II · The Pocket Rule', t: 'Four lines. Keep them in the corner.', p: 'Read one line at a time. Then keep the rule in the corner for the next pages.' },
+  { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
+  { k: 'multipla', est: 'l', min: 10, img: 'conversa', rot: 'IV · Five Patients', t: 'Listen. Which word describes the pain?', p: 'Play each patient once. Choose the word.' },
+  { k: 'prova', est: 'o', min: 8, img: 'capa', rot: 'V · Explain the Scale', t: 'Your patient doesn’t understand the numbers.', p: 'Explain the scale in your words, in about 45 seconds.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'TjrkevRQQSY', titulo: 'How to Help Patients Accurately Rate Their Pain Using a Pain Scale', fonte: 'ENGLISHMEDED · 2 MIN',
@@ -59,3 +60,16 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 03: video · memoria · multipla (áudio) · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de memoria.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'Talking about pain',
+  linhas: [
+    'ask: <b>On a scale of zero to ten</b>, how bad is the pain?',
+    '<b>mild</b> 1 to 3 · <b>moderate</b> 4 to 6 · <b>severe</b> 7 to 10',
+    '<b>sharp</b> like a knife · <b>dull</b> a heavy ache',
+    '<b>throbbing</b> beats like a pulse · <b>burning</b> feels hot'
+  ],
+  uso: { p: 'Your turn. Ask a patient about the pain, then answer as the patient.', molde: ['On a scale of zero to ten, …', 'It’s a … pain.'], ex: 'On a scale of zero to ten, how bad is the pain? It’s a seven. It’s a sharp pain.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

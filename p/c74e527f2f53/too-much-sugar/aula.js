@@ -33,10 +33,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Clip', t: 'Everybody Hates Chris. Halloween at the Rocks’.', p: 'Answer first. Watch the clip. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'porta', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'doces', rot: 'V · Count It or Don’t', t: 'Many candy bars, much sugar. Sort the words.', p: 'Tap a word, then tap its box. When all six are right, the rule appears.' },
-  { k: 'nota', est: 'o', min: 7, img: 'capa', rot: 'VI · Rochelle’s Receipt', t: 'Every question prints a line. Watch the total.', p: 'Build the question out loud, tap Check, then ask your teacher. The teacher answers.' },
-  { k: 'casa', est: 'o', min: 7, img: 'doces', rot: 'VII · Your House', t: 'Six things in your life. Too much, too many, or not enough?', p: 'Roll the dice. Say a true sentence with the three words. Tap Got it! for each one.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'f', min: 4, img: 'doces', rot: 'V · Find the Rule', t: 'Four sentences from Halloween. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'doces', rot: 'VI · Count It or Don’t', t: 'Many candy bars, much sugar. Sort the words.', p: 'Tap a word, then tap its box. When all six are right, the rule appears.' },
+  { k: 'nota', est: 'o', min: 7, img: 'capa', rot: 'VII · Rochelle’s Receipt', t: 'Every question prints a line. Watch the total.', p: 'Build the question out loud, tap Check, then ask your teacher. The teacher answers.' },
+  { k: 'casa', est: 'o', min: 7, img: 'doces', rot: 'VIII · Your House', t: 'Six things in your life. Too much, too many, or not enough?', p: 'Roll the dice. Say a true sentence with the three words. Tap Got it! for each one.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var SERIE = 'Everybody Hates Chris', ANO = '2005';
@@ -229,3 +230,19 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Juli
     { q: 'Do your kids eat much candy?', ex: 'No! Not much. Candy costs too much.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.',
+  exemplos: [
+    'Rochelle bought <b>too many</b> <u>candy bars</u>.',
+    'There is <b>too much</b> <u>sugar</u> in this bag.',
+    'How <b>many</b> <u>kids</u> are in the house?',
+    'How <b>much</b> <u>money</u> does Julius have?'
+  ],
+  pergunta: 'Look at the word after the lit words. Many or much?',
+  opcoes: ['many + things you can count, much + things you can’t count', 'many + singular words, much + plural words', 'many in questions only, much in sentences only'], c: 0,
+  nao: 'Not that one. Look at candy bars, kids, sugar, money: can you count them one by one?',
+  regra: '<b>many</b> / <b>too many</b> + things you can count: candy bars, kids. <b>much</b> / <b>too much</b> + things you can’t count: sugar, money. And <b>a lot of</b> works for both.',
+  uso: { p: 'Your turn. Look at your day. One thing you have too much of, and one thing you have too many of.', molde: ['I have too much …', 'I have too many …'], ex: 'I have too much work. I have too many meetings.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

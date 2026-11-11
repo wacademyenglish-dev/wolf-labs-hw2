@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 14, kick: 'DUOLINGO ENGLISH TES
   nota: 'Write like a future student, not like a text message: no “gonna”, no “u”, no “lol”. Be clear, polite and personal.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'I · The Right Register', t: 'A message to a friend, or a text for a university?', p: 'Compare A and B. Which one belongs in the Writing Sample? Why?' },
-  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'II · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
-  { k: 'prova', est: 'w', min: 14, img: 'conversa', rot: 'III · The Real Thing', t: 'Thirty seconds to plan. Five minutes to write.', p: 'Plan three parts in your head. Then write. Save 30 seconds to check.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 14: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'I · Formal, Not Casual', t: 'Six lines for a university. One is right.', p: 'Read both out loud. Tap the formal one. The casual one gets crossed out.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · The Right Register', t: 'A message to a friend, or a text for a university?', p: 'Compare A and B. Which one belongs in the Writing Sample? Why?' },
+  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
+  { k: 'prova', est: 'w', min: 14, img: 'conversa', rot: 'IV · The Real Thing', t: 'Thirty seconds to plan. Five minutes to write.', p: 'Plan three parts in your head. Then write. Save 30 seconds to check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 14: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var DESCOBRE = {
@@ -49,3 +50,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 14: descobre · erros · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Formal, not casual. Tap the right one.',
+  pares: [
+    { c: 'I am going to apply for a master’s degree.', x: 'I’m gonna apply for a master’s.', d: 'In writing: going to, never gonna.' },
+    { c: 'This program would help me work in renewable energy.', x: 'This program is super cool.', d: 'A specific reason, not “super cool”.' },
+    { c: 'In addition, I have volunteered in my community.', x: 'Also, I did volunteer stuff.', d: 'A connector and a precise verb. “Stuff” is too informal.' },
+    { c: 'I believe this experience prepared me well.', x: 'I think it was good, you know?', d: 'No “you know”. Say what you believe.' },
+    { c: 'I have little experience in this area.', x: 'I have little experience in this area, tbh.', d: 'No abbreviations like tbh in writing.' },
+    { c: 'It is a good opportunity.', x: 'It’s a great chance, lol.', d: 'No slang like lol.' }
+  ],
+  nota: 'Writing for a university is <b>formal</b>: going to (not gonna), a specific reason (not super cool), a connector like <b>in addition</b>, and no slang, no lol, no tbh.',
+  uso: { p: 'Your turn. One formal sentence about why you want to study, with going to or would.', molde: ['I am going to …', 'This program would help me …'], ex: 'I am going to apply for a master’s degree. This program would help me work in renewable energy.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

@@ -14,9 +14,10 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 16, kick: 'AU PAIR · MODULE 4 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 10, img: 'conversa', rot: 'I · What a Post Can Show', t: 'A safety expert reads a family’s posts.', p: 'One question before, then the video, then the questions.' },
-  { k: 'separa', est: 'f', min: 12, img: 'capa', rot: 'II · Safe or Not Safe?', t: 'Twelve situations, online and out.', p: 'Choose the side. Say why.' },
-  { k: 'transforma', est: 'o', min: 8, img: 'conversa', rot: 'III · Ask Politely', t: 'Ask before you post, tell before you go.', p: 'Read the idea and the clue. Say it the polite way.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 16: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Right, Not This', t: 'Six polite lines. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'separa', est: 'f', min: 12, img: 'capa', rot: 'III · Safe or Not Safe?', t: 'Twelve situations, online and out.', p: 'Choose the side. Say why.' },
+  { k: 'transforma', est: 'o', min: 8, img: 'conversa', rot: 'IV · Ask Politely', t: 'Ask before you post, tell before you go.', p: 'Read the idea and the clue. Say it the polite way.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 16: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'hsm8TP-01-M', titulo: 'Why You Should Rethink Posting Photos Of Your Children On Social Media', fonte: 'TODAY · 1:03–3:50', inicio: 63, fim: 230,
@@ -60,3 +61,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 16: video · separa · transforma (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Ask the right way. Tap the right one.',
+  pares: [
+    { c: 'Can I share this photo of Emma?', x: 'I can share this photo of Emma?', d: 'A question starts with the helper: Can I …?' },
+    { c: 'I’m going to a café tonight.', x: 'I’m go to a café tonight.', d: 'Two parts: I’m + going.' },
+    { c: 'I’m running late, sorry!', x: 'I’m run late, sorry!', d: 'Right now: be + -ing. I’m running.' },
+    { c: 'Could you please take it down?', x: 'Could you please to take it down?', d: 'Could you + clean verb. No to.' },
+    { c: 'I’d rather not be in photos.', x: 'I’d rather no be in photos.', d: 'The negative is not: I’d rather not.' },
+    { c: 'Is this the ride for Ana?', x: 'This is the ride for Ana?', d: 'To ask, the verb goes first: Is this …?' }
+  ],
+  nota: 'Polite questions start with a helper: <b>Can I</b>, <b>Could you</b>, <b>Is this</b>. After <b>could</b> and <b>can</b>, the verb stays clean: no to, no -s.',
+  uso: { p: 'Your turn. Ask the host mom one polite question before you post a photo, and tell her one plan for tonight.', molde: ['Can I …?', 'Could I …?', 'Just so you know, I’m going to …'], ex: 'Can I post a photo of the park? Just so you know, I’m going to a café tonight.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

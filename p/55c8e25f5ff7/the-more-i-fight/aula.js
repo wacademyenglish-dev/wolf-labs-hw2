@@ -35,10 +35,11 @@ var L = [
   { k: 'mundo', est: 'o', min: 8, img: 'templo', rot: 'I · Warm-up and The Hunter Rules', t: 'Before the trailer: your habits, then the rules of the gates.', p: 'Answer three questions about your life. Then read the rules of the hunters and say if you could live with them.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'II · The Trailer', t: 'Solo Leveling. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'letra', est: 'l', min: 7, img: 'templo', rot: 'III · Scene by Scene', t: 'Five moments of the trailer. Tap one, watch, then talk.', p: 'Each frame is a moment in the video.' },
-  { k: 'regra', est: 'f', min: 6, img: 'teto', rot: 'IV · The More, the Stronger', t: 'The more I fight, the stronger I get. Which one needs more?', p: 'Sort the words into three boxes. Then read the rule.' },
-  { k: 'sistema', est: 'o', min: 7, img: 'capa', rot: 'V · The System', t: 'Six daily quests. Every match ranks you up.', p: 'Tap the start of a quest, then its ending. Say each full sentence out loud.' },
-  { k: 'diaria', est: 'o', min: 7, img: 'teto', rot: 'VI · Your Daily Quest', t: 'Six things in your life that grow. The more…, the more…?', p: 'Open a card and finish the sentence out loud. Tap Got it! for each true sentence.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VII · The Interview', t: 'The interview.', p: 'Interview.' }
+  { k: 'gx', est: 'f', min: 4, img: 'portal', rot: 'IV · The Flip', t: 'Watch the words jump to the front.', p: 'Flip each pair of sentences. Notice what moves. Then join four on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'teto', rot: 'V · The More, the Stronger', t: 'The more I fight, the stronger I get. Which one needs more?', p: 'Sort the words into three boxes. Then read the rule.' },
+  { k: 'sistema', est: 'o', min: 7, img: 'capa', rot: 'VI · The System', t: 'Six daily quests. Every match ranks you up.', p: 'Tap the start of a quest, then its ending. Say each full sentence out loud.' },
+  { k: 'diaria', est: 'o', min: 7, img: 'teto', rot: 'VII · Your Daily Quest', t: 'Six things in your life that grow. The more…, the more…?', p: 'Open a card and finish the sentence out loud. Tap Got it! for each true sentence.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Interview', t: 'The interview.', p: 'Interview.' }
 ];
 
 var SERIE = 'Solo Leveling', ANO = '2024';
@@ -240,3 +241,24 @@ var FIM = { tipo: 'entrevista', rot: 'VIII · The Interview', t: 'Interview the 
     { q: 'The more power you have, the happier you are?', ex: 'No. The more power I have, the more I worry about my family.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'Two plain sentences, then one strong one. Watch the words move.',
+  frases: [
+    { de: ['I fight', '*more', '.', 'I get', '*stronger', '.'], para: ['+The', '*more', 'I fight', ',', '+the', '*stronger', 'I get', '.'], d: 'The comparative jumps up front, after THE. Twice, with a comma between.' },
+    { de: ['We train', '*harder', '.', 'We win', '*faster', '.'], para: ['+The', '*harder', 'we train', ',', '+the', '*faster', 'we win', '.'], d: 'Same shape: THE + comparative + the sentence.' },
+    { de: ['It goes', '*deeper', '.', 'It gets', '*more dangerous', '.'], para: ['+The', '*deeper', 'it goes', ',', '+the', '*more dangerous', 'it gets', '.'], d: 'A long adjective keeps more: the more dangerous.' },
+    { de: ['We come', '*sooner', '.', 'It is', '*better', '.'], para: ['+The', '*sooner', 'we come', ',', '+the', '*better', '.'], d: 'The short form drops the rest: the sooner, the better.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'The comparative jumps to the front: <b>the</b> + comparative + sentence, a comma, then <b>the</b> + comparative + sentence. <b>The more I fight, the stronger I get.</b> A long adjective: <b>the more dangerous</b>.',
+  pergunta: 'Your turn. Join them out loud, then check.',
+  treino: [
+    { de: 'I train more. I get stronger.', r: '<b>The more</b> I train<b>, the stronger</b> I get.' },
+    { de: 'The gate is deeper. It is more dangerous.', r: '<b>The deeper</b> the gate is<b>, the more dangerous</b> it is.' },
+    { de: 'We run faster. We arrive sooner.', r: '<b>The faster</b> we run<b>, the sooner</b> we arrive.' },
+    { de: 'I level up more. I want more.', r: '<b>The more</b> I level up<b>, the more</b> I want.' }
+  ],
+  uso: { p: 'Your turn. Something that grows in your life: the more you do it, the more it grows.', molde: ['The more I …, the …er I …', 'The more …, the more …'], ex: 'The more I practice English, the more confident I feel.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

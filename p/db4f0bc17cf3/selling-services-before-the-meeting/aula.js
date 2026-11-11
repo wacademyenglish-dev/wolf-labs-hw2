@@ -17,11 +17,12 @@ var L = [
   { k: 'cliente', est: 'o', min: 9, img: 'conversa', rot: 'I · The Small Talk Lift', t: 'You are early. The director is early, too. Two minutes of small talk.', p: 'Ask about her life. After each answer, say “And you?”.' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · Easy Reader: The Elevator', t: 'Leo’s First Big Client · Chapter 1.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'multipla', est: 'l', min: 7, img: 'conversa', rot: 'III · Hear It, Answer It', t: 'Six small talk questions. Hear each one.', p: 'Listen. Choose the best answer. Then say it out loud.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Like Playing, Not “Like Play”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'V · Your Turn to Ask', t: 'Your teacher is a client. The meeting starts in two minutes.', p: 'You ask the small talk questions. Listen, react, and say “And you?”.' },
-  { k: 'escolha', est: 'o', min: 5, img: 'mesa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VII · Your 5 Icebreakers', t: 'Five small talk lines for your next meeting.', p: 'Write them. Then use them with your teacher, one by one.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 16: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'o', min: 3, img: 'mesa', rot: 'IV · Yes, I Did', t: 'Small talk ping-pong. Short answers.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · Like Playing, Not “Like Play”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'VI · Your Turn to Ask', t: 'Your teacher is a client. The meeting starts in two minutes.', p: 'You ask the small talk questions. Listen, react, and say “And you?”.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 5, img: 'mesa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VIII · Your 5 Icebreakers', t: 'Five small talk lines for your next meeting.', p: 'Write them. Then use them with your teacher, one by one.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 16: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CLIENTE = { rot: 'SMALL TALK LIFT', codigo: 'IA-10',
@@ -91,3 +92,19 @@ var PODE = [
   'I can answer “Did you…?” with Yes, I did / No, I didn’t.',
   'I can react, say “And you?”, and start the meeting.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Small talk. Short answers, fast.',
+  perguntas: [
+    { q: 'Did you go to the beach?', s: 'Yes, I <mark>did</mark>.', n: 'No, I <mark>didn’t</mark>.', mais: 'Then: What did you do on Saturday?' },
+    { q: 'Do you like cooking?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.', mais: 'Say one thing you like: I like …-ing.' },
+    { q: 'Was your weekend good?', s: 'Yes, it <mark>was</mark>.', n: 'No, it <mark>wasn’t</mark>.', mais: 'Say it with it: It was great!' },
+    { q: 'Did you play tennis?', s: 'Yes, I <mark>did</mark>.', n: 'No, I <mark>didn’t</mark>.' },
+    { q: 'Do you love traveling?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.', mais: 'Where do you love to go? I love …-ing.' },
+    { q: 'Did you rest on Sunday?', s: 'Yes, I <mark>did</mark>.', n: 'No, I <mark>didn’t</mark>.' }
+  ],
+  nota: 'The short answer uses the same helper as the question: Did you …? Yes, I <b>did</b>. Do you …? Yes, I <b>do</b>. Was it …? Yes, it <b>was</b>. After like or love, add <b>-ing</b>: I like <b>playing</b>.',
+  uso: { p: 'Your turn. Ask your teacher three small talk questions before a meeting.', molde: ['Did you …?', 'Do you like …-ing?', 'How was your weekend?'], ex: 'Did you go to the beach? Do you like swimming? How was your weekend?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

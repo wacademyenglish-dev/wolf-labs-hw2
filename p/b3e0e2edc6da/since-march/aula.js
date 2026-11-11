@@ -15,15 +15,16 @@
 var L = [
   { k: 'capa', est: null, img: 'porta' },
   { k: 'abre', est: 'o', min: 7, img: 'porta', rot: 'I · At the Door', t: 'Before she gives you the key, the landlady asks about you.', p: 'Pick a card. Answer in ONE sentence. Nobody is corrected here.' },
-  { k: 'dois', est: 'f', min: 6, img: 'sala', rot: 'II · Two Kinds of Fact', t: 'Eight facts from the landlady. Did it stop?', p: 'Read it out loud. Then choose: FINISHED or STILL TRUE.' },
-  { k: 'arm', est: 'f', min: 6, img: 'sala', rot: 'III · I Live Here Since…', t: 'Every word in the wrong one is correct. The shape is not.', p: 'Read the situation. Say the right one twice. Then tap it.' },
-  { k: 'regua', est: 'f', min: 6, img: 'sala', rot: 'IV · The Ruler', t: 'Both words end at NOW. They start differently.', p: 'A point or a length? Say the sentence. Then tap SINCE or FOR.' },
-  { k: 'geladeira', est: 'o', min: 7, img: 'geladeira', rot: 'V · The Fridge', t: 'Today is June 23. The fridge is running. Somebody is paying that bill.', p: 'Read the date. Older or newer than March? Then say how long it has been here.' },
-  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'VI · The Rule', t: 'This one is not about the past. It is about now.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'cal', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'VII · The Calendar', t: 'March, on the bedroom wall. Crossed out up to the 13th. Then nothing.', p: 'Say the sentence for the next day. Tap the verb. The day gets crossed.' },
-  { k: 'contra', est: 'f', min: 6, extra: 1, img: 'porta', rot: 'VIII · The Contradiction', t: 'Two sentences. Sometimes they live together. Sometimes one is a lie.', p: 'Read one out loud. Open two. Then decide.' },
-  { k: 'entrevista', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'IX · The Room Interview', t: 'Now you want the room. The landlady interviews you.', p: 'Answer out loud first. Then check the model.' },
-  { k: 'fim', est: 'w', min: 6, img: 'hospital', rot: 'X · Since March', t: 'One chair by the door. A folded jacket on the seat.', p: 'Write your own answers to the landlady: have / has + since or for. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sala', rot: 'II · Since or For?', t: 'Two scenes in apartment 4B.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'dois', est: 'f', min: 6, img: 'sala', rot: 'III · Two Kinds of Fact', t: 'Eight facts from the landlady. Did it stop?', p: 'Read it out loud. Then choose: FINISHED or STILL TRUE.' },
+  { k: 'arm', est: 'f', min: 6, img: 'sala', rot: 'IV · I Live Here Since…', t: 'Every word in the wrong one is correct. The shape is not.', p: 'Read the situation. Say the right one twice. Then tap it.' },
+  { k: 'regua', est: 'f', min: 6, img: 'sala', rot: 'V · The Ruler', t: 'Both words end at NOW. They start differently.', p: 'A point or a length? Say the sentence. Then tap SINCE or FOR.' },
+  { k: 'geladeira', est: 'o', min: 7, img: 'geladeira', rot: 'VI · The Fridge', t: 'Today is June 23. The fridge is running. Somebody is paying that bill.', p: 'Read the date. Older or newer than March? Then say how long it has been here.' },
+  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'VII · The Rule', t: 'This one is not about the past. It is about now.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'cal', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'VIII · The Calendar', t: 'March, on the bedroom wall. Crossed out up to the 13th. Then nothing.', p: 'Say the sentence for the next day. Tap the verb. The day gets crossed.' },
+  { k: 'contra', est: 'f', min: 6, extra: 1, img: 'porta', rot: 'IX · The Contradiction', t: 'Two sentences. Sometimes they live together. Sometimes one is a lie.', p: 'Read one out loud. Open two. Then decide.' },
+  { k: 'entrevista', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'X · The Room Interview', t: 'Now you want the room. The landlady interviews you.', p: 'Answer out loud first. Then check the model.' },
+  { k: 'fim', est: 'w', min: 6, img: 'hospital', rot: 'XI · Since March', t: 'One chair by the door. A folded jacket on the seat.', p: 'Write your own answers to the landlady: have / has + since or for. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -230,3 +231,20 @@ TOQUES.ct = function (b, n, v) { S.ct.esc = +v; };
 TOQUES['ct-prox'] = function () { S.ct = { n: S.ct.n + 1, b: 0, esc: -1 }; };
 TOQUES['en-prox'] = function () { S.ent.n++; };
 TOQUES.fn = function () { S.fin++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de dois.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'This or that? Two scenes in apartment 4B.',
+  a: { t: 'A starting point', falas: [['The landlady', 'How long have you lived here?'], ['You', 'I’ve lived here <mark>since</mark> March.']], d: 'March is a point on the calendar. That is <b>since</b>.' },
+  b: { t: 'A length of time', falas: [['The landlady', 'And the rent?'], ['You', 'I haven’t paid it <mark>for</mark> two months.']], d: 'Two months is a length. That is <b>for</b>.' },
+  pergunta: 'Same idea, two words. What is different?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'The fridge broke on Tuesday. Today is Friday:', o: ['It’s been broken since Tuesday.', 'It’s been broken for Tuesday.'], c: 0, d: 'Tuesday is a point.' },
+    { p: 'You got the key two months ago:', o: ['I’ve had the key since two months.', 'I’ve had the key for two months.'], c: 1, d: 'Two months is a length.' },
+    { p: 'The landlady asks: How long have you been here?', o: ['Since six weeks.', 'For six weeks.'], c: 1, d: 'Six weeks is a length.' },
+    { p: 'The last payment was in March:', o: ['I haven’t paid since March.', 'I haven’t paid for March.'], c: 0, d: 'March is a point.' }
+  ],
+  nota: 'Both words go with <b>have / has + participle</b>. <b>Since</b> + a point (March, Tuesday, 2020). <b>For</b> + a length (two months, three weeks).',
+  uso: { p: 'Your turn. Something that is still true about you. Say it with since, and again with for.', molde: ['I’ve lived here since …', 'I’ve worked here for …'], ex: 'I’ve lived in this apartment since 2022. I’ve worked here for three years.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

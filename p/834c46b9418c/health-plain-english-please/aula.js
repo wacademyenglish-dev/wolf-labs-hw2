@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 8, kick: 'ENGLISH FOR HEALTHCAR
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · Explaining Diabetes', t: 'Simple words, then a teach-back.', p: 'One question before, then the video, then the questions.' },
-  { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'II · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'transforma', est: 'o', min: 11, img: 'conversa', rot: 'III · Say It Simply', t: 'From the chart to the patient.', p: 'Read the clinical sentence and the clue. Say it in plain English.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Plain or Jargon?', t: 'Six pairs. Which one would a patient understand?', p: 'Read both out loud. Tap the one a patient understands. The other one gets crossed out.' },
+  { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
+  { k: 'transforma', est: 'o', min: 11, img: 'conversa', rot: 'IV · Say It Simply', t: 'From the chart to the patient.', p: 'Read the clinical sentence and the clue. Say it in plain English.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'wHAKLSSc6P8', titulo: 'Type 2 Diabetes Counselling - OSCE Guide', fonte: 'GEEKY MEDICS · 3:04–5:30', inicio: 184, fim: 330,
@@ -55,3 +56,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 08: video · memoria · transforma (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de memoria.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Plain English for a patient. Tap the plain one.',
+  toque: 'Read both out loud. Tap the one a patient understands.',
+  pares: [
+    { c: 'You suddenly became short of breath.', x: 'You present with acute onset dyspnea.', d: 'Short, everyday words.' },
+    { c: 'The good news is that the spot is not cancer.', x: 'The lesion is benign.', d: 'Say the meaning, not the label.' },
+    { c: 'Your blood pressure is still too high.', x: 'Your hypertension is uncontrolled.', d: 'Plain words for the number.' },
+    { c: 'There is a small crack in a bone in your arm.', x: 'There is a hairline fracture of the radius.', d: 'A picture a patient can see.' },
+    { c: 'We’ll give you a painkiller through a drip.', x: 'We will administer an analgesic intravenously.', d: 'Give, painkiller, drip.' },
+    { c: 'Can you tell me in your own words what we’ll do?', x: 'Do you comprehend the plan?', d: 'The teach-back: your own words.' }
+  ],
+  nota: '<b>Plain words</b>: short, everyday, one idea at a time. Say what it is, not the label. Then check with a teach-back: <b>Can you tell me in your own words …?</b>',
+  uso: { p: 'Your turn. Take one word from your job that patients don’t know. Say it in plain English.', molde: ['That means …', 'In other words, …'], ex: 'Hypertension means your blood pressure is too high.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

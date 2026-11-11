@@ -11,15 +11,16 @@ var REV = { tipo: 'aula', aula: 10, nivel: 'A1', unidade: 2, kick: 'GLOBAL PAYME
   nota: 'Do you have the invoice? Yes, I do. No, I don’t. Short and polite.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'morning', est: 'o', min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
+  { k: 'morning', est: 'o', extra: 1, min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
   { k: 'conversa', est: 'o', min: 3, img: 'conversa', rot: 'II · Paper or Screen?', t: 'A short chat about papers.', p: 'Choose an answer. Say it. Then ask: “And you?”' },
   { k: 'termos', est: 'l', min: 7, img: 'capa', rot: 'III · Document Words', t: 'Eight words for the papers.', p: 'Listen. Look. Say each word three times.', sig: ['invoice', 'proforma', 'bl', 'fxc', 'di'] },
-  { k: 'explica', est: 'f', min: 8, img: 'mesa', rot: 'IV · Do You Have …?', t: 'Ask for a document. Say what you need.', p: 'Read the card with your teacher. Then build the sentence.' },
-  { k: 'simulador', est: 'f', min: 12, img: 'capa', rot: 'V · The Simulator', t: 'Check the papers.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['invoice', 'proforma', 'bl', 'fxc', 'di'] },
-  { k: 'dialogo', est: 'l', min: 6, img: 'conversa', rot: 'VI · The Missing Papers', t: 'Call the client about two documents.', p: 'One question before. Listen. Then the questions.', sig: ['bl', 'di'] },
-  { k: 'cartao', est: 'w', min: 6, img: 'mesa', rot: 'VII · The Document Email', t: 'Ask for the missing documents.', p: 'We need … Do you have …? Can you send …, please?' },
-  { k: 'check', est: 'o', min: 5, img: 'capa', rot: 'VIII · Screen Check', t: 'A new screen. Two minutes. In English.', p: 'Talk about the payment. Your teacher checks the list.', sig: ['status', 'cutoff', 'ampm', 'rate', 'bl', 'di'] },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
+  { k: 'gx', est: 'o', min: 3, img: 'conversa', rot: 'IV · Yes, I Do', t: 'Ping-pong about the documents.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'explica', est: 'f', min: 8, img: 'mesa', rot: 'V · Do You Have …?', t: 'Ask for a document. Say what you need.', p: 'Read the card with your teacher. Then build the sentence.' },
+  { k: 'simulador', est: 'f', min: 12, img: 'capa', rot: 'VI · The Simulator', t: 'Check the papers.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['invoice', 'proforma', 'bl', 'fxc', 'di'] },
+  { k: 'dialogo', est: 'l', min: 6, img: 'conversa', rot: 'VII · The Missing Papers', t: 'Call the client about two documents.', p: 'One question before. Listen. Then the questions.', sig: ['bl', 'di'] },
+  { k: 'cartao', est: 'w', min: 6, img: 'mesa', rot: 'VIII · The Document Email', t: 'Ask for the missing documents.', p: 'We need … Do you have …? Can you send …, please?' },
+  { k: 'check', est: 'o', min: 5, img: 'capa', rot: 'IX · Screen Check', t: 'A new screen. Two minutes. In English.', p: 'Talk about the payment. Your teacher checks the list.', sig: ['status', 'cutoff', 'ampm', 'rate', 'bl', 'di'] },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'X · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
 ];
 
 var MORNING = { rot: 'OPERATIONS QUEUE · 08:00', ref: 'FX-20486',
@@ -123,3 +124,19 @@ var PT = {
   cartao: 'Escreva um e-mail pedindo os documentos que faltam.',
   check: 'Uma tela. Fale tudo o que você consegue sobre esse pagamento, por 2 minutos.',
   pode: 'Leia cada frase em voz alta e toque nas que você já consegue fazer.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de explica.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Three words, fast.',
+  perguntas: [
+    { q: 'Do you have the invoice?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.', mais: 'Now ask your teacher: Do you have the invoice?' },
+    { q: 'Does Vela Foods have the contract?', s: 'Yes, it <mark>does</mark>.', n: 'No, it <mark>doesn’t</mark>.', mais: 'What do we need? We need the contract.' },
+    { q: 'Do you have the bill of lading?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.', mais: 'Then say: We need the bill of lading.' },
+    { q: 'Do the documents have a signature?', s: 'Yes, they <mark>do</mark>.', n: 'No, they <mark>don’t</mark>.' },
+    { q: 'Does the bank have all the documents?', s: 'Yes, it <mark>does</mark>.', n: 'No, it <mark>doesn’t</mark>.', mais: 'What is missing? The invoice is missing.' },
+    { q: 'Do you have a paper copy?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.' }
+  ],
+  nota: 'The short answer repeats the helper, never the verb: Do you have …? Yes, I <b>do</b>. No, I <b>don’t</b>. Not “Yes, I have”. And for a missing paper: We <b>need</b> the invoice. No “of”.',
+  uso: { p: 'Your turn. You are the analyst. Ask your teacher about two documents, then say what you need.', molde: ['Do you have …?', 'We need …'], ex: 'Do you have the invoice? Do you have the bill of lading? We need the bill of lading, please.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

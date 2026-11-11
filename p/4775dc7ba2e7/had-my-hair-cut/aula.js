@@ -17,12 +17,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'cabelo', rot: 'I · Your Services', t: 'Who does things for you?', p: 'Pick a card. Answer out loud. Then your teacher answers too.' },
   { k: 'trilho', est: 'o', min: 7, img: 'capa', rot: 'II · The Claim Tags', t: 'Lena’s wedding week. Eight jobs. She did none of them herself.', p: 'Pick a tag. Say what Lena had done. Your teacher taps what you said. The right sentence stamps it READY.' },
-  { k: 'regra', est: 'f', min: 6, img: 'vestido', rot: 'III · Who Held the Scissors?', t: 'Somebody else did the work.', p: 'Read the three parts out loud. Then fix the four mistakes.' },
-  { k: 'semana', est: 'o', min: 7, img: 'telefone', rot: 'IV · The Wedding Week', t: 'The planner is calling. Every day, one question.', p: 'Your teacher asks. Answer with the right tense of HAVE. Fast.' },
-  { k: 'diy', est: 'o', min: 7, img: 'jardim', rot: 'V · DIY or Pay?', t: 'Do it yourself, or have it done?', p: 'Pick a card. Choose a side and defend it. Your teacher takes the other side.' },
-  { k: 'marco', est: 'o', min: 7, extra: 1, img: 'telefone', rot: 'VI · The Planner Calls', t: 'Marco, the wedding planner, is checking everything. You are Lena.', p: 'Your teacher is Marco. Answer with have / get something done, and ask him one question back.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'sapatos', rot: 'VII · Quick Check', t: 'Six quick sentences from the wedding week.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · The Big Day', t: 'Is it better to do things yourself, or to pay someone?', p: 'Write about you: the last thing you had done, and one thing you need to have done. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cabelo', rot: 'III · Lena’s Week in Blocks', t: 'Who did the work? Look at the blocks.', p: 'Read the blocks out loud. Notice who holds the scissors. Then build a sentence and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'vestido', rot: 'IV · Who Held the Scissors?', t: 'Somebody else did the work.', p: 'Read the three parts out loud. Then fix the four mistakes.' },
+  { k: 'semana', est: 'o', min: 7, img: 'telefone', rot: 'V · The Wedding Week', t: 'The planner is calling. Every day, one question.', p: 'Your teacher asks. Answer with the right tense of HAVE. Fast.' },
+  { k: 'diy', est: 'o', min: 7, img: 'jardim', rot: 'VI · DIY or Pay?', t: 'Do it yourself, or have it done?', p: 'Pick a card. Choose a side and defend it. Your teacher takes the other side.' },
+  { k: 'marco', est: 'o', min: 7, extra: 1, img: 'telefone', rot: 'VII · The Planner Calls', t: 'Marco, the wedding planner, is checking everything. You are Lena.', p: 'Your teacher is Marco. Answer with have / get something done, and ask him one question back.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'sapatos', rot: 'VIII · Quick Check', t: 'Six quick sentences from the wedding week.', p: 'Say the whole sentence out loud. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · The Big Day', t: 'Is it better to do things yourself, or to pay someone?', p: 'Write about you: the last thing you had done, and one thing you need to have done. It goes to your My notes.' }
 ];
 
 var VOCE = [
@@ -178,3 +179,17 @@ TOQUES.lado = function (b, n, v) { S.lado[n] = v; };
 TOQUES['mc-prox'] = function () { S.mc.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Lena’s wedding week, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Lena', 'WHO'], ['cut', 'ACTION'], ['her hair', 'WHAT']], d: 'Lena herself held the scissors.' },
+    { b: [['Lena', 'WHO'], ['had', 'HAVE', 'aux'], ['her hair', 'WHAT'], ['cut', 'DONE', 'acao']], d: 'Somebody else cut it. had + thing + done.' },
+    { b: [['She', 'WHO'], ['is getting', 'GET', 'aux'], ['her dress', 'WHAT'], ['fixed', 'DONE', 'acao']], d: 'get is more informal. Same order.' }
+  ],
+  nota: 'Someone else did the work: <b>have / get</b> + the thing + <b>past participle</b>. She <b>had</b> her hair <b>cut</b>. Only have changes tense: she has her car washed, she will have it washed. Order matters: not “had washed her car”.',
+  monta: { p: 'Build the next line. Then say it.', pecas: [['her car', 'WHAT'], ['washed', 'DONE', 'acao'], ['Lena', 'WHO'], ['had', 'HAVE', 'aux']], ordem: [2, 3, 0, 1], outras: [[2, 3, 1, 0]] },
+  uso: { p: 'Now you. What did somebody do for you recently? Say two sentences.', molde: ['I had my … …ed', 'I got my … …ed'], ex: 'I had my laptop fixed. I got my hair cut last week.' },
+  prof: 'Read the blocks with the student. Ask: who held the scissors? Point at the done word.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

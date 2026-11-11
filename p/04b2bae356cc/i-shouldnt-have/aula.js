@@ -39,10 +39,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Obsession. The official trailer.', p: 'Open the clues first. Watch the trailer. Then three short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'loja', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'vhs', rot: 'V · Should Have', t: 'Bear’s texts: one word is wrong in every message.', p: 'Find the wrong word. Say the right one. Then tap Check.' },
-  { k: 'fita', est: 'o', min: 7, img: 'vhs', rot: 'VI · The Rewind', t: 'Rewind the night. Six regrets take the tape back to before the wish.', p: 'Read the time and the clue. Say the sentence. Tap the card when you say it.' },
-  { k: 'volta', est: 'o', min: 6, img: 'loja', rot: 'VII · Your Rewind', t: 'Six moments from your life. What should you have done?', p: 'Tap yes or no. Then say the sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · A Letter to Last Year', t: 'Write a letter to last year.', p: 'Use should have, shouldn’t have, could have, needn’t have. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'vhs', rot: 'V · The Ladder', t: 'One regret, six steps.', p: 'Read each step out loud, then go one step up. Notice the word after have. Then climb with your own regret.' },
+  { k: 'regra', est: 'f', min: 6, img: 'vhs', rot: 'VI · Should Have', t: 'Bear’s texts: one word is wrong in every message.', p: 'Find the wrong word. Say the right one. Then tap Check.' },
+  { k: 'fita', est: 'o', min: 7, img: 'vhs', rot: 'VII · The Rewind', t: 'Rewind the night. Six regrets take the tape back to before the wish.', p: 'Read the time and the clue. Say the sentence. Tap the card when you say it.' },
+  { k: 'volta', est: 'o', min: 6, img: 'loja', rot: 'VIII · Your Rewind', t: 'Six moments from your life. What should you have done?', p: 'Tap yes or no. Then say the sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · A Letter to Last Year', t: 'Write a letter to last year.', p: 'Use should have, shouldn’t have, could have, needn’t have. It goes to your My notes.' }
 ];
 
 var FILME = 'Obsession', ANO = '2026';
@@ -234,3 +235,18 @@ var AQ = { tipo: 'imagem', img: 'vhs', alt: 'An old video tape on a table next t
     { q: 'If you had one wish today, would you use it, or save it?', ex: 'I would save it. I am afraid of wishes.' }
   ] };
 /*AQ@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'Bear’s regret. Climb it one step at a time.',
+  degraus: [
+    { r: 'should have', f: 'Bear <b>should have told</b> Nikki the truth.', d: 'should have + the third form: told. A better choice, and it is too late.' },
+    { r: 'shouldn’t have', f: 'He <b>shouldn’t have made</b> the wish.', d: 'The same idea with no: shouldn’t have + made.' },
+    { r: 'could have', f: 'He <b>could have asked</b> her out.', d: 'There was another way: could have + the third form.' },
+    { r: 'couldn’t have', f: 'He <b>couldn’t have known</b> the price.', d: 'It was impossible: couldn’t have + known.' },
+    { r: 'needn’t have', f: 'He <b>needn’t have bought</b> the branch.', d: 'He did it, but it wasn’t necessary: needn’t have + bought.' },
+    { r: '?', f: '<b>What should</b> he <b>have done</b>?', d: 'In a question, should goes first. Then he, then have + the third form.' }
+  ],
+  nota: 'Always <b>should / could / needn’t + have + the third form</b>. Never the base verb after have: not “should have make”. And it is have, never “should of”.',
+  uso: { p: 'Your turn. Climb the ladder with something from last year: I should have …, I shouldn’t have …, I could have …', molde: ['I should have …', 'I shouldn’t have …', 'I could have …'], ex: 'I should have saved more money. I shouldn’t have bought that car. I could have asked for help.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

@@ -17,11 +17,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Clients', t: 'What do your clients say about your price?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · Easy Reader: The Price', t: 'Leo’s First Big Client · Chapter 3.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 8, img: 'conversa', rot: 'III · Three Objections', t: 'A finance director has three problems with the proposal.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'IV · But, Because, So', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'portas', est: 'o', min: 12, img: 'mesa', rot: 'V · Six Objection Cards', t: 'Six cards. Your teacher is the client and reads each objection.', p: 'Pick a card. Answer with but, because or so. One minute per card.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'VI · Mini-Debate: Is a Discount a Good Idea?', t: 'Two sides. Your teacher takes the other side.', p: 'Choose a side. Say “I think … because …”. Then answer your teacher: “I agree / I don’t agree because …”.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VII · Your 3 Answers', t: 'Three objections from your real clients. Three answers.', p: 'Write them. Then your teacher says the objections, and you answer.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 19: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'mesa', rot: 'IV · Three Small Words', t: 'But, because, so.', p: 'Look at the three words. Tap the right one for each sentence. Then say your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'V · But, Because, So', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'portas', est: 'o', min: 12, img: 'mesa', rot: 'VI · Six Objection Cards', t: 'Six cards. Your teacher is the client and reads each objection.', p: 'Pick a card. Answer with but, because or so. One minute per card.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VII · Mini-Debate: Is a Discount a Good Idea?', t: 'Two sides. Your teacher takes the other side.', p: 'Choose a side. Say “I think … because …”. Then answer your teacher: “I agree / I don’t agree because …”.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VIII · Your 3 Answers', t: 'Three objections from your real clients. Three answers.', p: 'Write them. Then your teacher says the objections, and you answer.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 19: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -100,3 +101,25 @@ var PODE = [
   'I can give a result with so (not “then”).',
   'I can answer three real objections from my clients.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'But, because, so. Three small words.',
+  usos: [
+    { t: 'BUT', f: 'I understand, but it includes training.', d: 'You listen first. Then you give the other side.' },
+    { t: 'BECAUSE', f: 'It’s a good price because our team does the work.', d: 'The reason.' },
+    { t: 'SO', f: 'It’s automatic, so you save time.', d: 'The result.' }
+  ],
+  pergunta: 'Which word fits?',
+  itens: [
+    { f: 'I understand the price is high, … it includes training.', c: 0, d: 'but: the other side.' },
+    { f: 'It’s cheaper … it’s automatic.', c: 1, d: 'because: the reason.' },
+    { f: 'It’s automatic, … your team goes home on time.', c: 2, d: 'so: the result.' },
+    { f: 'It’s a good price … our team does the work.', c: 1, d: 'because: the reason.' },
+    { f: 'The system is fast, … you save time every week.', c: 2, d: 'so: the result.' },
+    { f: 'I understand the budget is small, … we have a small plan.', c: 0, d: 'but: the other side.' }
+  ],
+  nota: 'Three small words: <b>but</b> gives the other side (I understand, but …), <b>because</b> gives the reason, <b>so</b> gives the result. Not “then” for a result, and not “why” for a reason.',
+  uso: { p: 'Your turn. A client says: “It’s too expensive.” Answer with but, because and so.', molde: ['I understand, but …', 'It’s … because …', '…, so …'], ex: 'I understand, but it includes training. It’s a good price because our team does the work. It’s automatic, so you save time.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

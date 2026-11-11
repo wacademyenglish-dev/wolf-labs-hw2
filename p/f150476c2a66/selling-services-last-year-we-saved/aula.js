@@ -16,11 +16,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Week', t: 'How was your weekend?', p: 'Answer in the past, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · The Case Study', t: 'One page: the problem, what we did, the result.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 8, img: 'conversa', rot: 'III · A Story for the CFO', t: 'A new CFO asks: “Do you have a client like us?”', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Saved, Not “Save”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'transforma', est: 'f', min: 7, img: 'mesa', rot: 'V · Tell It in the Past', t: 'This year → last year.', p: 'Read the sentence and the time. Say it in the past. Then check.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your Mini Case', t: 'A real project in three or four sentences.', p: 'The problem, what you did, the result. Then tell it out loud.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'IV · Mistake Hunter', t: 'Six lines from a case study. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · Saved, Not “Save”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'transforma', est: 'f', min: 7, img: 'mesa', rot: 'VI · Tell It in the Past', t: 'This year → last year.', p: 'Read the sentence and the time. Say it in the past. Then check.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your Mini Case', t: 'A real project in three or four sentences.', p: 'The problem, what you did, the result. Then tell it out loud.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -99,3 +100,20 @@ var PODE = [
   'I can use didn’t + verb (never “didn’t saved”).',
   'I can tell a mini case in three or four sentences, with a number.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines about last year.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'Last year we [[save]] 20%.', r: 'Last year we <b>saved</b> 20%.', d: 'The verb shows the past: -ed.' },
+    { f: 'We didn’t [[needed]] a new ERP.', r: 'We didn’t <b>need</b> a new ERP.', d: 'Didn’t is already the past. The verb stays simple.' },
+    { f: 'It [[was don’t]] easy.', r: 'It <b>wasn’t</b> easy.', d: 'With be in the past: wasn’t or weren’t.' },
+    { f: 'We [[maked]] a new calendar.', r: 'We <b>made</b> a new calendar.', d: 'Make is different: made.' },
+    { f: 'They [[sended]] the report on Friday.', r: 'They <b>sent</b> the report on Friday.', d: 'Send is different: sent.' },
+    { f: 'The CFO [[were]] happy.', r: 'The CFO <b>was</b> happy.', d: 'One person: was. Were is for you, we and they.' }
+  ],
+  nota: 'A regular verb in the past ends in <b>-ed</b>: saved, connected. A few are different: <b>made, had, sent, began</b>. After <b>didn’t</b>, the verb is clean. With be: <b>was</b> or <b>wasn’t</b>.',
+  uso: { p: 'Your turn. A success story: what your company did last year. Three sentences.', molde: ['Last year we …', 'We made …', 'It wasn’t …'], ex: 'Last year we saved 20% for a client. We made a new calendar. It wasn’t easy.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

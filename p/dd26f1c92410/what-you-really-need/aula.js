@@ -30,11 +30,12 @@ var L = [
   { k: 'linhas', est: 'o', min: 7, img: 'linhas', rot: 'III · The Lines Are Open', t: 'Five callers, five problems. You’re the host.', p: 'Pick a line. Read the call out loud. Then give your advice on air. Your teacher taps what you said.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'IV · Solomon’s Paradox', t: 'Why was that so easy? The video has an answer.', p: 'Answer before you watch. Then watch it in four short chapters. Then True or Lie.' },
   { k: 'falas', est: 'l', min: 5, extra: 1, img: 'mesa', rot: 'V · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line, listen, and say it.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'VI · The Mixing Desk', t: 'How a host gives advice: put the important part last.', p: 'Read the four faders out loud. Then fix the four traps.' },
-  { k: 'carta', est: 'w', min: 6, img: 'cartas', rot: 'VII · Tonight’s Letter', t: 'One more letter arrives. It’s from you.', p: 'Write your own letter to the show, in the third person: who you are, what you want, what is stopping you.' },
-  { k: 'noar', est: 'o', min: 7, extra: 1, img: 'capa', rot: 'VIII · On Air', t: 'Read your letter on air. Then answer it.', p: 'You are the host. Answer the letter like it’s from a stranger.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'IX · Quick Check', t: 'Five quick lines from the show.', p: 'Say the whole sentence out loud. Then tap the right words.' },
-  { k: 'fim', est: 'w', min: 6, img: 'cartas', rot: 'X · Sign-off', t: 'The host signs off with advice for one person: you.', p: 'Write three lines you need to hear. What I really need is…, All I have to do is…, The thing I keep avoiding is…' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'VI · Advice in Blocks', t: 'The advice goes last. Each block has a job.', p: 'Read the blocks out loud. Notice what comes after is. Then build a line of advice and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'VII · The Mixing Desk', t: 'How a host gives advice: put the important part last.', p: 'Read the four faders out loud. Then fix the four traps.' },
+  { k: 'carta', est: 'w', min: 6, img: 'cartas', rot: 'VIII · Tonight’s Letter', t: 'One more letter arrives. It’s from you.', p: 'Write your own letter to the show, in the third person: who you are, what you want, what is stopping you.' },
+  { k: 'noar', est: 'o', min: 7, extra: 1, img: 'capa', rot: 'IX · On Air', t: 'Read your letter on air. Then answer it.', p: 'You are the host. Answer the letter like it’s from a stranger.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'X · Quick Check', t: 'Five quick lines from the show.', p: 'Say the whole sentence out loud. Then tap the right words.' },
+  { k: 'fim', est: 'w', min: 6, img: 'cartas', rot: 'XI · Sign-off', t: 'The host signs off with advice for one person: you.', p: 'Write three lines you need to hear. What I really need is…, All I have to do is…, The thing I keep avoiding is…' }
 ];
 
 /* I · o dial: quatro estações, cada programa uma pergunta (só conversa) */
@@ -264,3 +265,19 @@ TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n
 TOQUES['na-prox'] = function () { S.na.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'The host gives advice, in blocks. Each block has a job.',
+  frases: [
+    { b: [['What you need', 'SET UP', 'quando'], ['is', 'LINK', 'aux'], ['a good night’s sleep', 'THING', 'o']], d: 'What you need is + a thing.' },
+    { b: [['What you need to do', 'SET UP', 'quando'], ['is', 'LINK', 'aux'], ['call her', 'ACTION', 'acao']], d: 'After is: the plain verb.' },
+    { b: [['All you have to do', 'SET UP', 'quando'], ['is', 'LINK', 'aux'], ['say sorry', 'ACTION', 'acao']], d: 'Again the plain verb. No to, no -ing.' },
+    { b: [['The problem', 'SET UP', 'quando'], ['is', 'LINK', 'aux'], ['that you don’t listen', 'A WHOLE SENTENCE', 'o']], d: 'The problem is that + a sentence.' },
+    { b: [['What you want', 'SET UP', 'quando'], ['is', 'LINK', 'aux'], ['to feel safe', 'TO + VERB', 'acao']], d: 'What you want is TO + verb.' }
+  ],
+  nota: 'The advice goes <b>last</b>. The first part sets it up: What you need… All you have to do… The problem… Then <b>is</b>. After <b>is</b>: a thing, a plain verb, or <b>to</b> + verb for what you want.',
+  monta: { p: 'Build the host’s advice. Then say it.', pecas: [['is', 'LINK', 'aux'], ['What you need to do', 'SET UP', 'quando'], ['talk to her', 'ACTION', 'acao']], ordem: [1, 0, 2] },
+  uso: { p: 'Now a friend with a problem. Give your friend advice with what you need is, all you have to do is, or the problem is.', molde: ['What you need is …', 'All you have to do is …'], ex: 'What you need is a break. All you have to do is say no.' },
+  prof: 'Read the blocks with the student, top to bottom. Point at the word is and at what comes after it.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

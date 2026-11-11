@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · Carriage 7', t: 'Three passengers. Nobody got off.', p: 'Ask each passenger five questions. Your teacher is the passenger. Then sum up the case.' },
   { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
   { k: 'conversa', est: 'o', min: 8, img: 'conversa', rot: 'IV · In the Fog', t: 'Your own stories, said with style.', p: 'Answer with one elaborate sentence, then turn the question back.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Night Train Pairs', t: 'Five lines from the detective.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -59,3 +60,9 @@ var RAPIDO = { seg: 60, itens: [['___ (finish) dinner, she went to bed. (partici
 var ORDEM = { rot: 'THE NECKLACE', pede: 'Tap the events in the right order. Then tell the story with style.', chips: ['Having …,', 'It was … who …', 'Not only …, but …', 'Had …, …'],
   modelo: 'Having checked every cabin, the guard went to the safe at 3:05. It was the young lawyer who saw him walk past. Having taken the necklace, the guard hid it in the pianist’s flower box and opened a window to confuse everyone. Had he closed that window, nobody would have suspected him!',
   passos: ['The guard checked every cabin.', 'At 3:05 he walked past the dining car.', 'He opened the safe and took the necklace.', 'He hid it in the pianist’s flower box.', 'He opened a window in carriage 7 to confuse everyone.', 'The inspector found the necklace in the flowers.'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'Having finished the interview, she left.', x: 'Having finish the interview, she left.', d: 'having + <b>participle</b>.' }, { c: 'Never have I seen such a thing.', x: 'Never I have seen such a thing.', d: 'Never first: the helper goes before I.' }, { c: 'It can’t have been the guard.', x: 'It can’t been the guard.', d: 'can’t + <b>have</b> + participle.' }, { c: 'It was the guard who took it.', x: 'It was the guard who he took it.', d: '<b>who</b> already replaces he.' }, { c: 'Had I known, I would have locked it.', x: 'Had I known, I would locked it.', d: 'would + <b>have</b> + participle.' }], nota: 'A past guess: <b>must have / can’t have + participle</b>. After a negative word at the start: the helper first: <b>Never have I</b>. Focus: <b>It was … who</b>.', uso: { p: 'Your turn. You are the inspector. Say who you think took the necklace, and why it can’t have been someone else.', molde: ['It must have been …', 'It can’t have been … because …', 'It was … who …'], ex: 'It must have been the waiter. It can’t have been the guard because he was asleep.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

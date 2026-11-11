@@ -23,14 +23,15 @@ var L = [
   { k: 'capa', est: null, img: 'fundo' },
   { k: 'abre', est: 'o', min: 7, img: 'carro', rot: 'I · The First Song', t: 'One song you know by heart.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'vozes', est: 'l', min: 7, img: 'cozinha', rot: 'II · Four Voices', t: 'Four people, four songs.', p: 'Tap a voice. Listen first. Then tap the answers and say the sentence out loud.' },
-  { k: 'regra', est: 'f', min: 7, img: 'fundo', rot: 'III · The Note', t: 'A note inside an old record.', p: 'Read the note out loud. Tap the words about songs and feelings. Then finish the rule.' },
-  { k: 'discos', est: 'f', min: 6, img: 'fundo', rot: 'IV · Six Tracks', t: 'Every right sentence brings the needle down.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'som', est: 'f', min: 6, img: 'carro', rot: 'V · Sounds, or Sounds Like?', t: 'One question decides it: adjective, or noun?', p: 'Read each line out loud. Right or wrong? If it’s wrong, say it right.' },
-  { k: 'lembra', est: 'f', min: 6, img: 'cozinha', rot: 'VI · Remember or Remind', t: 'The song does it, not you. Now ask your teacher.', p: 'Build each question out loud. Tap Check. Then ask it, and listen to the answer.' },
-  { k: 'lab', est: 'l', min: 7, extra: 1, img: 'fundo', rot: 'VII · The Lab', t: 'Some of your songs are not yours.', p: 'Listen first. Then say which result surprised the scientists.' },
-  { k: 'ela', est: 'l', min: 7, extra: 1, img: 'carro', rot: 'VIII · Two More Stories', t: 'Two more people. Two different reasons.', p: 'Listen first. Then tap True or False. If it’s false, say the truth.' },
-  { k: 'trilha', est: 'o', min: 7, img: 'fundo', rot: 'IX · Your Soundtrack', t: 'The soundtrack of your life, in four tracks.', p: 'For each track: name a song, answer, then the follow-up.' },
-  { k: 'fim', est: 'w', min: 6, img: 'fundo', rot: 'X · Side B', t: 'Write your four tracks.', p: 'Reminds me of, sounds like, sounds, feel like. The red line watches the small words. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cozinha', rot: 'III · Sounds Like or Sounds?', t: 'Two ways to say what a song is like.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new songs.' },
+  { k: 'regra', est: 'f', min: 7, img: 'fundo', rot: 'IV · The Note', t: 'A note inside an old record.', p: 'Read the note out loud. Tap the words about songs and feelings. Then finish the rule.' },
+  { k: 'discos', est: 'f', min: 6, img: 'fundo', rot: 'V · Six Tracks', t: 'Every right sentence brings the needle down.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'som', est: 'f', min: 6, img: 'carro', rot: 'VI · Sounds, or Sounds Like?', t: 'One question decides it: adjective, or noun?', p: 'Read each line out loud. Right or wrong? If it’s wrong, say it right.' },
+  { k: 'lembra', est: 'f', min: 6, img: 'cozinha', rot: 'VII · Remember or Remind', t: 'The song does it, not you. Now ask your teacher.', p: 'Build each question out loud. Tap Check. Then ask it, and listen to the answer.' },
+  { k: 'lab', est: 'l', min: 7, extra: 1, img: 'fundo', rot: 'VIII · The Lab', t: 'Some of your songs are not yours.', p: 'Listen first. Then say which result surprised the scientists.' },
+  { k: 'ela', est: 'l', min: 7, extra: 1, img: 'carro', rot: 'IX · Two More Stories', t: 'Two more people. Two different reasons.', p: 'Listen first. Then tap True or False. If it’s false, say the truth.' },
+  { k: 'trilha', est: 'o', min: 7, img: 'fundo', rot: 'X · Your Soundtrack', t: 'The soundtrack of your life, in four tracks.', p: 'For each track: name a song, answer, then the follow-up.' },
+  { k: 'fim', est: 'w', min: 6, img: 'fundo', rot: 'XI · Side B', t: 'Write your four tracks.', p: 'Reminds me of, sounds like, sounds, feel like. The red line watches the small words. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -221,3 +222,20 @@ TOQUES.vz = function (b, n) { S.voz.sel = n; };
 TOQUES.lb = function (b, n, v) { S.lab = +v; };
 TOQUES['tl-foi'] = function () { S.trilha.foi[S.trilha.n] = 1; };
 TOQUES['tl-prox'] = function () { S.trilha.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Sounds like or sounds? Two ways to talk about a song.',
+  a: { t: 'Compare it to something', falas: [['Friend', 'What does this song sound like?'], ['You', 'It sounds <mark>like</mark> a rainy night.']], d: 'You compare it to a thing. A noun needs <b>like</b>.' },
+  b: { t: 'Describe it', falas: [['Friend', 'How does this song sound?'], ['You', 'It sounds <mark>sad</mark>.']], d: 'You describe it with a word. An adjective comes right after <b>sounds</b>: no like.' },
+  pergunta: 'Same verb, two shapes. What is different after sounds?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Describe the song with one feeling word: sad.', o: ['It sounds sad.', 'It sounds like sad.'], c: 0, d: 'A feeling word comes right after sounds.' },
+    { p: 'Compare the song to a place: the beach.', o: ['It sounds like the beach.', 'It sounds the beach.'], c: 0, d: 'A noun needs like.' },
+    { p: 'Describe the song with one word: happy.', o: ['It sounds like happy.', 'It sounds happy.'], c: 1, d: 'A describing word: no like.' },
+    { p: 'Compare the song to a place: my grandma’s kitchen.', o: ['It sounds like my grandma’s kitchen.', 'It sounds my grandma’s kitchen.'], c: 0, d: 'A noun needs like.' }
+  ],
+  nota: 'A noun needs <b>like</b>: sounds <b>like</b> a rainy night. A describing word doesn’t: sounds <b>sad</b>. And when a song makes you think of someone: it <b>reminds me of</b> my father.',
+  uso: { p: 'Your turn. Pick a song you know. What does it sound like, and who does it remind you of?', molde: ['It sounds …', 'It sounds like …', 'It reminds me of …'], ex: 'It sounds happy. It sounds like a summer party. It reminds me of my cousin.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

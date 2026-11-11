@@ -16,14 +16,15 @@ var L = [
   { k: 'eu', est: 'o', min: 7, img: 'sala', rot: 'I · You First', t: 'Three things you can do well. One thing you can’t do.', p: 'Say them out loud, any words you have. Your teacher taps what you said. Don’t worry about it yet.' },
   { k: 'consigo', est: 'o', min: 7, img: 'sala', rot: 'II · Can You?', t: 'Six questions, all about you.', p: 'Your teacher asks. Answer Yes, I can or No, I can’t. Then say the whole sentence.' },
   { k: 'painel', est: 'o', min: 7, img: 'sala', rot: 'III · The Panel', t: 'The control panel. Seven functions, seven rooms.', p: 'Tap a function. Say what the house can do. It switches on.' },
-  { k: 'naomuda', est: 'f', min: 6, img: 'sala', rot: 'IV · It Never Changes', t: 'Eight people. The word in the middle never moves.', p: 'Pick the right piece. Then read the whole sentence.' },
-  { k: 'limites', est: 'l', min: 7, img: 'pia', rot: 'V · No Hands', t: 'The house knows exactly where it stops.', p: 'Listen first. Say both halves. Then see the words, and the function turns red.' },
-  { k: 'hey', est: 'l', min: 7, extra: 1, img: 'sala', rot: 'VI · Hey, House', t: 'The house is asleep. Wake it up, then ask.', p: 'Say Hey, House! out loud. Ask the question. Then listen to the house.' },
-  { k: 'tres', est: 'f', min: 6, extra: 1, img: 'chave', rot: 'VII · Three Jobs', t: 'One word, three jobs.', p: 'Read it out loud. Then pick the job.' },
-  { k: 'registro', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'VIII · The Night Log', t: 'The house has a list of everything it does tonight.', p: 'Read each line out loud: the house can do that, or it can’t. One line is not its work.' },
-  { k: 'chave', est: 'o', min: 7, extra: 1, img: 'pia', rot: 'IX · She Has a Key', t: 'Six in the morning. The plates are still drying.', p: 'Read the three facts. Say who it is. Then open the message.' },
-  { k: 'venda', est: 'o', min: 7, extra: 1, img: 'chave', rot: 'X · Sell Me the House', t: 'A salesperson and a suspicious customer.', p: 'Round 1: your teacher sells, you ask. Round 2: you sell.' },
-  { k: 'fim', est: 'w', min: 6, img: 'sala', rot: 'XI · Lights Off', t: 'The house has four questions for you.', p: 'Listen, answer out loud, then see the words. Then write about your own house. The red line watches can. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sala', rot: 'IV · Right, Not This', t: 'Six lines from the smart house. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'naomuda', est: 'f', min: 6, img: 'sala', rot: 'V · It Never Changes', t: 'Eight people. The word in the middle never moves.', p: 'Pick the right piece. Then read the whole sentence.' },
+  { k: 'limites', est: 'l', min: 7, img: 'pia', rot: 'VI · No Hands', t: 'The house knows exactly where it stops.', p: 'Listen first. Say both halves. Then see the words, and the function turns red.' },
+  { k: 'hey', est: 'l', min: 7, extra: 1, img: 'sala', rot: 'VII · Hey, House', t: 'The house is asleep. Wake it up, then ask.', p: 'Say Hey, House! out loud. Ask the question. Then listen to the house.' },
+  { k: 'tres', est: 'f', min: 6, extra: 1, img: 'chave', rot: 'VIII · Three Jobs', t: 'One word, three jobs.', p: 'Read it out loud. Then pick the job.' },
+  { k: 'registro', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'IX · The Night Log', t: 'The house has a list of everything it does tonight.', p: 'Read each line out loud: the house can do that, or it can’t. One line is not its work.' },
+  { k: 'chave', est: 'o', min: 7, extra: 1, img: 'pia', rot: 'X · She Has a Key', t: 'Six in the morning. The plates are still drying.', p: 'Read the three facts. Say who it is. Then open the message.' },
+  { k: 'venda', est: 'o', min: 7, extra: 1, img: 'chave', rot: 'XI · Sell Me the House', t: 'A salesperson and a suspicious customer.', p: 'Round 1: your teacher sells, you ask. Round 2: you sell.' },
+  { k: 'fim', est: 'w', min: 6, img: 'sala', rot: 'XII · Lights Off', t: 'The house has four questions for you.', p: 'Listen, answer out loud, then see the words. Then write about your own house. The red line watches can. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -231,3 +232,18 @@ TOQUES['vd-p'] = function (b, n, v) { S.venda.partes[v] = !S.venda.partes[v]; };
 TOQUES['vd-e'] = function () { S.venda.erro = !S.venda.erro; };
 TOQUES['vd-prox'] = function () { S.venda = { r: S.venda.r + 1, partes: {}, erro: 0, ideias: {} }; };
 TOQUES['fq-prox'] = function () { S.fimq.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de naomuda.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'The house can open the door.', x: 'The house cans open the door.', d: 'Can never takes an S. It never changes.' },
+    { c: 'The house can’t wash the dishes.', x: 'The house doesn’t can wash the dishes.', d: 'For no: can’t. Not doesn’t can.' },
+    { c: 'Can the house turn on the lights?', x: 'Does the house can turn on the lights?', d: 'For a question, can goes first. No does.' },
+    { c: 'I can cook dinner.', x: 'I can to cook dinner.', d: 'After can, the verb is alone: no to.' },
+    { c: 'She can’t cook dinner.', x: 'She can’t cooks dinner.', d: 'After can’t, the verb has no S.' },
+    { c: 'We can’t open the window.', x: 'We no can open the window.', d: 'Not no can. The word is can’t.' }
+  ],
+  nota: 'Can never changes: not cans, not to. For no: <b>can’t</b>. For a question: <b>Can</b> goes first. After can, the verb is clean: I can <b>cook</b>.',
+  uso: { p: 'Your turn. Two things in your home: one thing it can do, and one thing it can’t do.', molde: ['My phone can …', 'My house can’t …'], ex: 'My phone can wake me up. My house can’t clean itself.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

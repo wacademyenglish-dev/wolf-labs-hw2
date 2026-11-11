@@ -17,14 +17,15 @@ var L = [
   { k: 'capa', est: null, img: 'radio' },
   { k: 'abre', est: 'l', min: 7, img: 'plataforma', rot: 'I · Arrival', t: 'An announcement. Everybody moves. You didn’t catch it.', p: 'Play it once. Then pick a card and answer your teacher.' },
   { k: 'tres', est: 'l', min: 7, img: 'plataforma', rot: 'II · Three Words', t: 'You don’t need every word. You need three.', p: 'Play the same announcement. Tap the three things a traveler needs.' },
-  { k: 'saidas', est: 'o', min: 7, img: 'radio', rot: 'III · Five Ways Out', t: 'You’ll use these more than any other English on a trip.', p: 'Say the phrase out loud. Then do what the card asks.' },
-  { k: 'polido', est: 'f', min: 6, img: 'radio', rot: 'IV · Not “What?”', t: 'Short can sound rude. Choose the one that keeps them talking.', p: 'Say the better one out loud. Then tap it.' },
-  { k: 'chiado', est: 'l', min: 7, img: 'radio', rot: 'V · The Static', t: 'Six messages. Static covers the word you need.', p: 'Play it. Say what you need, out loud. Then tap it, and the static clears.' },
-  { k: 'cabine', est: 'l', min: 7, extra: 1, img: 'cabine', rot: 'VI · The Booth', t: 'Every border asks three questions, in three different times.', p: 'Play the officer. Choose the time. Then answer out loud.' },
-  { k: 'garcom', est: 'o', min: 7, extra: 1, img: 'hostel', rot: 'VII · The Waiter', t: 'Dinner. The waiter speaks fast.', p: 'Play it. Ask about the word you don’t know. Then answer.' },
-  { k: 'rapido', est: 'o', min: 7, extra: 1, img: 'hostel', rot: 'VIII · The Fast Talker', t: 'Your teacher speaks fast on purpose. Interrupt, politely.', p: 'Your teacher reads each message fast. Use a way out every time.' },
-  { k: 'dorm', est: 'o', min: 7, extra: 1, img: 'dorm', rot: 'IX · The Dorm', t: 'Midnight. Somebody talks to you in the dark.', p: 'Play it. Answer, and ask a question back.' },
-  { k: 'fim', est: 'w', min: 6, img: 'radio', rot: 'X · Signal Clear', t: 'Your ways out, in your own words.', p: 'Write what you’ll say the next time you don’t understand. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'hostel', rot: 'III · At the Desk', t: 'The hostel desk, and a receptionist who talks fast. Some words are lit.', p: 'Read it together. Tap the lit words: why this phrase? Then say your own.' },
+  { k: 'saidas', est: 'o', min: 7, img: 'radio', rot: 'IV · Five Ways Out', t: 'You’ll use these more than any other English on a trip.', p: 'Say the phrase out loud. Then do what the card asks.' },
+  { k: 'polido', est: 'f', min: 6, img: 'radio', rot: 'V · Not “What?”', t: 'Short can sound rude. Choose the one that keeps them talking.', p: 'Say the better one out loud. Then tap it.' },
+  { k: 'chiado', est: 'l', min: 7, img: 'radio', rot: 'VI · The Static', t: 'Six messages. Static covers the word you need.', p: 'Play it. Say what you need, out loud. Then tap it, and the static clears.' },
+  { k: 'cabine', est: 'l', min: 7, extra: 1, img: 'cabine', rot: 'VII · The Booth', t: 'Every border asks three questions, in three different times.', p: 'Play the officer. Choose the time. Then answer out loud.' },
+  { k: 'garcom', est: 'o', min: 7, extra: 1, img: 'hostel', rot: 'VIII · The Waiter', t: 'Dinner. The waiter speaks fast.', p: 'Play it. Ask about the word you don’t know. Then answer.' },
+  { k: 'rapido', est: 'o', min: 7, extra: 1, img: 'hostel', rot: 'IX · The Fast Talker', t: 'Your teacher speaks fast on purpose. Interrupt, politely.', p: 'Your teacher reads each message fast. Use a way out every time.' },
+  { k: 'dorm', est: 'o', min: 7, extra: 1, img: 'dorm', rot: 'X · The Dorm', t: 'Midnight. Somebody talks to you in the dark.', p: 'Play it. Answer, and ask a question back.' },
+  { k: 'fim', est: 'w', min: 6, img: 'radio', rot: 'XI · Signal Clear', t: 'Your ways out, in your own words.', p: 'Write what you’ll say the next time you don’t understand. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -211,3 +212,27 @@ TOQUES['ga-prox'] = function () { S.gar.n++; };
 TOQUES.rp = function (b, n, v) { var p = S.rap.partes[S.rap.n] = S.rap.partes[S.rap.n] || {}; p[v] = !p[v]; };
 TOQUES['rp-prox'] = function () { S.rap.n++; };
 TOQUES['dm-prox'] = function () { S.dorm.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de saidas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'Check-in at the hostel. Tap the lit words.',
+  falas: [
+    { q: 'Receptionist', f: 'Welcome! Your room is on the second floor, and breakfast is at seven.' },
+    { q: 'You', f: '[[Sorry?]] I didn’t catch that.' },
+    { q: 'Receptionist', f: 'The second floor. Room twelve. Breakfast, seven o’clock, in the common room next to the lockers.' },
+    { q: 'You', f: '[[Could you speak more slowly]], please?' },
+    { q: 'Receptionist', f: 'Of course. Breakfast. At seven. In the common room.' },
+    { q: 'You', f: '[[Do you mean]] the room next to the lockers?' },
+    { q: 'Receptionist', f: 'Yes, exactly.' },
+    { q: 'You', f: '[[What does “locker” mean?]] And [[how do you spell it?]]' }
+  ],
+  porques: [
+    'A quick, polite way out: Sorry? Not “What?”.',
+    'Too fast? Ask: Could you speak more slowly? Add please.',
+    'Do you mean …? Say what you understood. They say yes or no.',
+    'A new word: What does … mean? One word, one question.',
+    'And the letters: How do you spell it?'
+  ],
+  nota: 'Five ways out when you don’t understand: <b>Sorry?</b> · <b>Could you say that again?</b> · <b>Could you speak more slowly?</b> · <b>Do you mean …?</b> · <b>How do you spell that?</b> Never just “What?”.',
+  uso: { p: 'Your turn. The receptionist speaks too fast. Write two things you say to keep the talk going.', molde: ['Sorry? …', 'Could you …?', 'Do you mean …?'], ex: 'Sorry? Could you say that again, please? Do you mean the second floor?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

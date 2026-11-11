@@ -14,9 +14,10 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 8, kick: 'AU PAIR · MODULE 2 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · Libby Takes Off', t: 'A real au pair, from home to orientation.', p: 'First one question, then the video, then more questions.' },
-  { k: 'separa', est: 'f', min: 10, img: 'capa', rot: 'II · Carry-On or Suitcase?', t: 'Where does it go?', p: 'Choose the bag and say why.' },
-  { k: 'cartao', est: 'w', min: 12, img: 'conversa', rot: 'III · My Before-You-Fly List', t: 'Write your own list.', p: 'Documents, contacts, health, money, the first day.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Trip Line', t: 'Where does each step of the trip go?', p: 'Tap a sentence, then its place on the line. Notice where each thing is. Then say your own steps.' },
+  { k: 'separa', est: 'f', min: 10, img: 'capa', rot: 'III · Carry-On or Suitcase?', t: 'Where does it go?', p: 'Choose the bag and say why.' },
+  { k: 'cartao', est: 'w', min: 12, img: 'conversa', rot: 'IV · My Before-You-Fly List', t: 'Write your own list.', p: 'Documents, contacts, health, money, the first day.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'g9FUBsn9e2k', titulo: 'Life with APiA | Libby’s 1st vlog', fonte: 'AU PAIR IN AMERICA · 0:00–2:16', inicio: 0, fim: 136,
@@ -57,3 +58,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 08: video · separa · cartao (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'The trip on one line. Where does each step go?',
+  marcos: [{ t: 'AT HOME', s: 'before you leave' }, { t: 'AT THE AIRPORT', s: 'check-in and immigration' }, { t: 'AT ORIENTATION', s: 'after you land' }],
+  frases: [
+    { f: 'I make a copy of my passport and visa.', c: 0, d: 'copies stay in another place' },
+    { f: 'I put my medicine in my carry-on.', c: 0, d: 'put in the carry-on' },
+    { f: 'I show my passport and visa at immigration.', c: 1, d: 'the originals, at the airport' },
+    { f: 'I keep my DS-2019 with my passport.', c: 1, d: 'with me, not in the big bag' },
+    { f: 'I give my DS-2019 to the orientation team.', c: 2, d: 'after you land' },
+    { f: 'I show my driving permit if they ask.', c: 2, d: 'at orientation' }
+  ],
+  nota: 'A trip is a line: <b>at home</b>, <b>at the airport</b>, <b>at orientation</b>. Use <b>in</b> for what is inside something (in my carry-on) and <b>at</b> for a place where you are (at the airport).',
+  uso: { p: 'Your turn. Three steps of your own trip.', molde: ['At home, I …', 'At the airport, I …', 'At orientation, I …'], ex: 'At home, I make copies of my documents. At the airport, I show my passport. At orientation, I give them my DS-2019.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

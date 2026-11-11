@@ -14,7 +14,8 @@ var L = [
   { k: 'leitura', est: 'l', min: 9, img: 'capa', rot: 'I · The Note', t: 'Your neighbor left a note.', p: 'Read the note out loud with your teacher. Then look closer.' },
   { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · In, On or Under?', t: 'Small words, big difference.', p: 'Compare A and B. Which one is right? Why?' },
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'III · Where Is Mochi?', t: 'Three things are lost.', p: 'Ask your teacher five questions for each thing. Then say where it is.' },
-  { k: 'conversa', est: 'o', min: 7, img: 'conversa', rot: 'IV · Your Home', t: 'Your home: where are your things?', p: 'Answer, then ask the question back: “And you?”' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'IV · Where Is It?', t: 'Four lines from Mochi’s house. You find the rule.', p: 'Read the four lines out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'conversa', est: 'o', min: 7, img: 'conversa', rot: 'V · Your Home', t: 'Your home: where are your things?', p: 'Answer, then ask the question back: “And you?”' }
 ];
 var PORTAS = [];
 
@@ -68,3 +69,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* A1 · Under the Sofa: leitura · descobre · missao · conversa */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de conversa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines. Find the rule yourself.', exemplos: ['Where <b>is</b> the cat? It <b>is</b> under the sofa.', 'Where <b>are</b> the keys? They <b>are</b> on the table.', 'Where <b>is</b> the bowl? It <b>is</b> next to the door.', 'Where <b>are</b> the toys? They <b>are</b> behind the chair.'], pergunta: 'Is or are? It depends on …', opcoes: ['one thing (is) or many things (are)', 'the place: on or under', 'the cat: it is always is'], c: 0, nao: 'Not that one. Look at the lit is / are and the thing before it: cat, keys, bowl, toys.', regra: 'One thing: <b>Where is …? It is …</b> Many things: <b>Where are …? They are …</b> Then the place: under, on, next to, behind.', uso: { p: 'Your turn. Where are two things in your house? Say one thing, then two things.', molde: ['My … is on / in …', 'My … are next to …'], ex: 'My phone is on the table. My keys are in the bag.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

@@ -27,10 +27,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Superman & Lois. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'estrada', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 7, img: 'celeiro', rot: 'V · Martha’s Letter', t: 'Kansas, 1979. Martha writes about the night the light fell.', p: 'Read the letter out loud. Tap the verbs in the past. Then finish the rule.' },
-  { k: 'album', est: 'o', min: 7, img: 'celeiro', rot: 'VI · The Barn Album', t: 'Clark’s life, one photo at a time. Hang them on the wall.', p: 'Read the year and the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'vida', est: 'o', min: 7, img: 'estrada', rot: 'VII · Ask Me', t: 'Now you are the reporter. Interview your teacher.', p: 'Build each question out loud. Tap Check. Then ask it, and find one thing you have in common.' },
-  { k: 'saida', est: 'o', min: 8, img: 'capa', rot: 'VIII · The Hot Seat', t: 'Last scene. The teacher picks A or B.', p: 'Talk for three minutes. Then one minute to write what you take home.' }
+  { k: 'gx', est: 'f', min: 3, img: 'estrada', rot: 'V · Clark’s Timeline', t: 'Where does each sentence live in time?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'regra', est: 'f', min: 7, img: 'celeiro', rot: 'VI · Martha’s Letter', t: 'Kansas, 1979. Martha writes about the night the light fell.', p: 'Read the letter out loud. Tap the verbs in the past. Then finish the rule.' },
+  { k: 'album', est: 'o', min: 7, img: 'celeiro', rot: 'VII · The Barn Album', t: 'Clark’s life, one photo at a time. Hang them on the wall.', p: 'Read the year and the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'vida', est: 'o', min: 7, img: 'estrada', rot: 'VIII · Ask Me', t: 'Now you are the reporter. Interview your teacher.', p: 'Build each question out loud. Tap Check. Then ask it, and find one thing you have in common.' },
+  { k: 'saida', est: 'o', min: 8, img: 'capa', rot: 'IX · The Hot Seat', t: 'Last scene. The teacher picks A or B.', p: 'Talk for three minutes. Then one minute to write what you take home.' }
 ];
 
 var SERIE = 'Superman & Lois', ANO = '2021';
@@ -250,3 +251,20 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Clar
     { q: 'Why did you come back?', ex: 'My family needed me more than the world.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'Clark’s life on one line. Where does each sentence go?',
+  marcos: [{ t: 'LONG AGO', s: '1979 · Kansas' }, { t: 'NOT LONG AGO', s: 'back to the farm' }, { t: 'NOW', s: 'every day' }],
+  frases: [
+    { f: 'A ship came down in a field.', c: 0, d: 'came · finished' },
+    { f: 'Martha and Jonathan found a baby.', c: 0, d: 'found · finished' },
+    { f: 'Clark and Lois moved back to Smallville.', c: 1, d: 'moved · finished' },
+    { f: 'Clark told his sons the big secret.', c: 1, d: 'told · finished' },
+    { f: 'Clark lives on the Kent farm.', c: 2, d: 'lives · true today' },
+    { f: 'He works for the Daily Planet.', c: 2, d: 'works · true today' }
+  ],
+  nota: 'The past lives on the left, and it is finished: <b>came, found, moved, told</b>. NOW keeps the normal verb: he <b>lives</b>, he <b>works</b>.',
+  uso: { p: 'Your turn. One thing you did long ago, one thing you did last year, one thing you do now.', molde: ['When I was a kid, I …', 'Last year I …', 'Now I …'], ex: 'When I was a kid, I lived in a small town. Last year I moved to the city. Now I work from home.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

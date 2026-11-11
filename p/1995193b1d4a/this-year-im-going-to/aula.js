@@ -19,12 +19,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'sala', rot: 'I · You and Your New Year', t: 'Before the tracker: you, your New Year, your habits.', p: 'Pick a card. Answer out loud, however it comes out. Then your teacher answers too.' },
   { k: 'tracker', est: 'f', min: 6, img: 'quadro', rot: 'II · The January Tracker', t: 'Five resolutions. Thirty-one days. Which ones survive?', p: 'Pick a person. Read the chapter out loud. Answer the question. Then say their line.' },
-  { k: 'regra', est: 'f', min: 6, img: 'janela', rot: 'III · When Was It Decided?', t: 'The card is going to. The window is will.', p: 'Read each wrong line out loud and say it the right way. Then tap Fix it.' },
-  { k: 'fogos', est: 'o', min: 7, img: 'ceu', rot: 'IV · The Countdown', t: 'December 31, 11:52 PM. Five people talk to you.', p: 'Your teacher plays each person. Answer fast. Every good line lights a firework.' },
-  { k: 'ano', est: 'o', min: 7, img: 'sala', rot: 'V · Your Year', t: 'Your real plans, goals and promises.', p: 'Pick five cards. Answer with going to, will, want to, would like to or was going to.' },
-  { k: 'clara', est: 'o', min: 7, img: 'piscina', rot: 'VI · Aunt Clara Calls', t: 'February 1. Aunt Clara wants the January story.', p: 'Your teacher is Aunt Clara. Tell her what happened, from memory. Then ask her back.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'quadro', rot: 'VII · Quick Check', t: 'Five quick lines from the Carter house.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Card', t: 'Row six on the tracker is empty. It’s yours.', p: 'Write your card: one plan, one goal, one promise. Will you keep it? It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'quadro', rot: 'III · Card or Window?', t: 'Two scenes from the Carter house. Two futures.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'regra', est: 'f', min: 6, img: 'janela', rot: 'IV · When Was It Decided?', t: 'The card is going to. The window is will.', p: 'Read each wrong line out loud and say it the right way. Then tap Fix it.' },
+  { k: 'fogos', est: 'o', min: 7, img: 'ceu', rot: 'V · The Countdown', t: 'December 31, 11:52 PM. Five people talk to you.', p: 'Your teacher plays each person. Answer fast. Every good line lights a firework.' },
+  { k: 'ano', est: 'o', min: 7, img: 'sala', rot: 'VI · Your Year', t: 'Your real plans, goals and promises.', p: 'Pick five cards. Answer with going to, will, want to, would like to or was going to.' },
+  { k: 'clara', est: 'o', min: 7, img: 'piscina', rot: 'VII · Aunt Clara Calls', t: 'February 1. Aunt Clara wants the January story.', p: 'Your teacher is Aunt Clara. Tell her what happened, from memory. Then ask her back.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'quadro', rot: 'VIII · Quick Check', t: 'Five quick lines from the Carter house.', p: 'Say the whole sentence out loud. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Card', t: 'Row six on the tracker is empty. It’s yours.', p: 'Write your card: one plan, one goal, one promise. Will you keep it? It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -216,3 +217,20 @@ TOQUES['fg-prox'] = function () { S.fg = { n: S.fg.n + 1, esc: '' }; };
 TOQUES['cl-prox'] = function () { S.cl.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Going to or will? Two scenes at the Carters’.',
+  a: { t: 'Decided before', falas: [['Aunt Clara', 'What’s your plan for this year, Mia?'], ['Mia', 'I’m <mark>going to</mark> run every morning.']], d: 'The plan is old: it is already on the card. That is <b>going to</b>.' },
+  b: { t: 'Decided now', falas: [['Dad', 'The fireworks are starting! Where is the camera?'], ['Mia', 'I<mark>’ll</mark> get it!']], d: 'Something happens and you decide right now. That is <b>will</b>.' },
+  pergunta: 'Same future, two forms. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'It’s January 1. Your list on the fridge says: “Learn guitar.” You say:', o: ['I’ll learn guitar this year.', 'I’m going to learn guitar this year.'], c: 1, d: 'The plan is on the list: decided before.' },
+    { p: 'Dad can’t find his glasses. You say:', o: ['I’ll look for them.', 'I’m going to look for them.'], c: 0, d: 'A quick offer, right now.' },
+    { p: 'You look at the dark clouds. You say:', o: ['It’s going to rain.', 'I think it will rain.'], c: 0, d: 'You see the proof in front of you.' },
+    { p: 'Aunt Clara says: “Please call me on Sunday.” You decide now:', o: ['I’ll call you on Sunday.', 'I’m going to call you on Sunday.'], c: 0, d: 'You decide when she asks.' }
+  ],
+  nota: 'Ask: when was it decided? Before, or with proof in front of you: <b>going to</b>. Right now, a promise, or <b>I think</b>: <b>will</b>.',
+  uso: { p: 'Your turn. One plan you made before, and one quick promise to a friend right now.', molde: ['This year I’m going to …', 'OK, I’ll …'], ex: 'This year I’m going to save money. Don’t worry, I’ll help you move on Saturday.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_contraste', GX_EXPLICA); };

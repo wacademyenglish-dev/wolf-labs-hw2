@@ -12,10 +12,11 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 6, kick: 'DUOLINGO ENGLISH TEST
   nota: 'Listen once for the meaning, once for the details, and once to check. Grammar helps with the words you miss.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'descobre', est: 'l', min: 9, img: 'conversa', rot: 'I · Where Words Hide', t: 'What you hear is not what you type.', p: 'Compare A and B. Which one do you type? Why?' },
-  { k: 'ditado', est: 'l', min: 16, img: 'capa', rot: 'II · Eight Sentences', t: 'Listen up to three times. Type every word.', p: 'Play, type, play again, check. Six different accents.' },
-  { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'l', min: 4, img: 'capa', rot: 'I · What You Hear, What You Type', t: 'Fast speech hides words.', p: 'Listen to the pairs. Then the ear test: what do you type? Then say yours.' },
+  { k: 'descobre', est: 'l', min: 9, img: 'conversa', rot: 'II · Where Words Hide', t: 'What you hear is not what you type.', p: 'Compare A and B. Which one do you type? Why?' },
+  { k: 'ditado', est: 'l', min: 16, img: 'capa', rot: 'III · Eight Sentences', t: 'Listen up to three times. Type every word.', p: 'Play, type, play again, check. Six different accents.' },
+  { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'IV · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var DESCOBRE = {
@@ -53,3 +54,24 @@ var PARES = [
   ['weak', 'week', 'I felt weak all week.'],
   ['hear', 'here', 'Can you hear me from here?'],
   ['write', 'right', 'Write the right answer.']];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G11 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'som2', titulo: 'What you hear, what you type. Listen first.',
+  toque: 'Tap ▶ and listen. In fast speech, want to becomes wanna and going to becomes gonna. You always type the full form.',
+  pares: [
+    [{ t: 'want to', fala: 'I want to go home.' }, { t: 'wanna', fala: 'I wanna go home.' }],
+    [{ t: 'going to', fala: 'We are going to leave.' }, { t: 'gonna', fala: 'We are gonna leave.' }]
+  ],
+  pergunta: 'The ear test. What do you type?',
+  itens: [
+    { fala: 'She’s gonna call you tonight.', o: ['She is going to call you tonight.', 'She was going to call you tonight.'], c: 0 },
+    { fala: 'I wanna learn English.', o: ['I want to learn English.', 'I went to learn English.'], c: 0 },
+    { fala: 'Yesterday he walked to work.', o: ['Yesterday he walk to work.', 'Yesterday he walked to work.'], c: 1 },
+    { fala: 'Can I have a cup of tea?', o: ['Can I have a cup a tea?', 'Can I have a cup of tea?'], c: 1 }
+  ],
+  nota: 'Fast speech makes words weak: <b>wanna</b>, <b>gonna</b>, <b>of</b> sounds like “a”, and <b>-ed</b> is almost silent. You always type the <b>full written form</b>, and grammar tells you the endings.',
+  uso: { p: 'Your turn. Say one sentence with want to and one with going to, fast, the way people really talk. Your teacher types them.', molde: ['I wanna …', 'I’m gonna …'], ex: 'I wanna practice more. I’m gonna study tonight.' },
+  prof: 'The ▶ uses the voice of the browser. No sound? Say the pairs yourself, once slowly and once fast.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_som', GX_EXPLICA); };

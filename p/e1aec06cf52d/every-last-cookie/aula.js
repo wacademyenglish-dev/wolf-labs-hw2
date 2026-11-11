@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'A2', unidade: 4, titulo: ['Every Last', 'Cooki
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · Notes on the Fridge', t: 'The jar is empty. The notes are angry.', p: 'Read the notes out loud with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'II · Every or All?', t: 'Small words that count.', p: 'Compare A and B. Which one is right? Why?' },
-  { k: 'missao', est: 'o', min: 15, img: 'conversa', rot: 'III · The Investigation', t: 'Three colleagues. One empty jar.', p: 'Ask each colleague five questions. Your teacher is the colleague. Then tell the boss who did it.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with all, every, some or none.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Mistake Hunter', t: 'Six angry notes. Each one has a wrong word.', p: 'Tap the wrong word. Say the note right. Then check.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'III · Every or All?', t: 'Small words that count.', p: 'Compare A and B. Which one is right? Why?' },
+  { k: 'missao', est: 'o', min: 15, img: 'conversa', rot: 'IV · The Investigation', t: 'Three colleagues. One empty jar.', p: 'Ask each colleague five questions. Your teacher is the colleague. Then tell the boss who did it.' },
+  { k: 'escolha', est: 'o', min: 6, img: 'capa', rot: 'V · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with all, every, some or none.' }
 ];
 var PORTAS = [];
 
@@ -65,3 +66,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* A2 · Every Last Cookie: leitura · descobre · missao · escolha */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six notes on the office fridge.', toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'Everybody [[are]] angry about the jar!', r: 'Everybody <b>is</b> angry about the jar!', d: 'Everybody is one person-word: is, not are.' }, { f: '[[All]] colleague wants a cookie.', r: '<b>Every</b> colleague wants a cookie.', d: 'Every + one person: every colleague. All + plural: all colleagues.' }, { f: 'There aren’t [[no]] cookies left.', r: 'There aren’t <b>any</b> cookies left.', d: 'One no only: aren’t + any, or there are no cookies.' }, { f: '[[Nobody]] didn’t see the thief.', r: '<b>Nobody</b> saw the thief.', d: 'Nobody is already a no. No didn’t.' }, { f: 'All the cookies [[is]] gone!', r: 'All the cookies <b>are</b> gone!', d: 'All the cookies: more than one, so are.' }, { f: 'Is there [[some]] coffee left?', r: 'Is there <b>any</b> coffee left?', d: 'In a question: any, not some.' }], nota: '<b>Every / everybody / nobody / somebody</b> take a singular verb: everybody <b>is</b>. <b>All</b> + plural = <b>are</b>. In a no sentence or a question: <b>any</b>.', uso: { p: 'Your turn. You are the boss of the office. Write three short notes about the kitchen. Use everybody, nobody and any.', molde: ['Everybody is …', 'Nobody …', 'There aren’t any …'], ex: 'Everybody is hungry at four. Nobody cleans the sink. There aren’t any clean cups!' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

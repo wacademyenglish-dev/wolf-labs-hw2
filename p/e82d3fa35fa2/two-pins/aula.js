@@ -29,13 +29,14 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'cortica', rot: 'I · Your Two Pins', t: 'Before anything else: your own two pins.', p: 'Read the question. Say your answer out loud. Then tap Check. Nobody is corrected here.' },
   { k: 'gente', est: 'l', min: 7, img: 'cidade-velha', rot: 'II · Four People', t: 'Four people. Not one of them lives where they are from.', p: 'Play each person. Match the name to the two pins. Then say both pins out loud.' },
   { k: 'lugares', est: 'l', min: 7, img: 'cidade-velha', rot: 'III · Six Places', t: 'The four say where they are from, fast.', p: 'Press play. Tap a city, then its box: the old city or the city now.' },
-  { k: 'regra', est: 'f', min: 7, img: 'cortica', rot: 'IV · Left Pin, Right Pin', t: 'A postcard from Tim. One word decides which pin you mean.', p: 'Read the postcard out loud. Tap from and live. Then finish the rule.' },
-  { k: 'perg', est: 'f', min: 6, img: 'cidade-nova', rot: 'V · Which Question?', t: 'Six answers. Which question came first?', p: 'Read the answer out loud. Say the question. Then tap Check.' },
-  { k: 'casa', est: 'l', min: 7, img: 'cidade-nova', rot: 'VI · Home and People', t: 'Inside the right pin: what kind of home, and who with?', p: 'Play the short lines and say each one. Then play a person and tap their home.' },
-  { k: 'cartao', est: 'o', min: 7, extra: 1, img: 'cidade-nova', rot: 'VII · The Landing Card', t: 'You land in a new country.', p: 'Read the officer’s question. Answer in a full sentence. Then tap Check: the line fills.' },
-  { k: 'nasci', est: 'f', min: 6, extra: 1, img: 'cidade-velha', rot: 'VIII · A Third Pin', t: 'Some people have three pins.', p: 'Read the story. One word is wrong in each line. Say the right one. Then tap Check.' },
-  { k: 'povo', est: 'o', min: 7, extra: 1, img: 'cortica', rot: 'IX · Your People', t: 'Your family and friends on the board.', p: 'Build each question out loud. Tap Check. Then ask your teacher.' },
-  { k: 'fim', est: 'w', min: 6, img: 'cortica', rot: 'X · Your Line, Again', t: 'Write your pins.', p: 'Born, from, live, home, who with. The red line watches from and in. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cortica', rot: 'IV · Left Pin or Right Pin?', t: 'Two questions, two pins. Same board.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new people.' },
+  { k: 'regra', est: 'f', min: 7, img: 'cortica', rot: 'V · Left Pin, Right Pin', t: 'A postcard from Tim. One word decides which pin you mean.', p: 'Read the postcard out loud. Tap from and live. Then finish the rule.' },
+  { k: 'perg', est: 'f', min: 6, img: 'cidade-nova', rot: 'VI · Which Question?', t: 'Six answers. Which question came first?', p: 'Read the answer out loud. Say the question. Then tap Check.' },
+  { k: 'casa', est: 'l', min: 7, img: 'cidade-nova', rot: 'VII · Home and People', t: 'Inside the right pin: what kind of home, and who with?', p: 'Play the short lines and say each one. Then play a person and tap their home.' },
+  { k: 'cartao', est: 'o', min: 7, extra: 1, img: 'cidade-nova', rot: 'VIII · The Landing Card', t: 'You land in a new country.', p: 'Read the officer’s question. Answer in a full sentence. Then tap Check: the line fills.' },
+  { k: 'nasci', est: 'f', min: 6, extra: 1, img: 'cidade-velha', rot: 'IX · A Third Pin', t: 'Some people have three pins.', p: 'Read the story. One word is wrong in each line. Say the right one. Then tap Check.' },
+  { k: 'povo', est: 'o', min: 7, extra: 1, img: 'cortica', rot: 'X · Your People', t: 'Your family and friends on the board.', p: 'Build each question out loud. Tap Check. Then ask your teacher.' },
+  { k: 'fim', est: 'w', min: 6, img: 'cortica', rot: 'XI · Your Line, Again', t: 'Write your pins.', p: 'Born, from, live, home, who with. The red line watches from and in. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -233,3 +234,19 @@ R.fim = function (c) {
     + '<p class="hw"><a class="pilula" href="HW/" target="_blank" rel="noopener">Homework for the student →</a></p></div></div>';
 };
 
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Two pins on the board. Which one is it?',
+  a: { t: 'The left pin', falas: [['Teacher', 'Where are you from?'], ['You', 'I<mark>’m from</mark> Denver.']], d: 'The left pin is the old city. You start there. That is <b>I’m from</b>.' },
+  b: { t: 'The right pin', falas: [['Teacher', 'Where do you live now?'], ['You', 'I <mark>live in</mark> Chicago.']], d: 'The right pin is the city now. You are there today. That is <b>I live in</b>.' },
+  pergunta: 'Two questions, two pins. What is different?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Tim grew up in Oxford. Where is he from?', o: ['He’s from Oxford.', 'He lives in Oxford.'], c: 0, d: 'The left pin: the old city.' },
+    { p: 'Tim has an apartment in London now. Where does he live?', o: ['He lives in London.', 'He’s from London.'], c: 0, d: 'The right pin: the city now.' },
+    { p: 'Sian grew up in Swansea. She says:', o: ['I’m from Swansea.', 'I live in Swansea.'], c: 0, d: 'Where you started: from.' },
+    { p: 'Buli has an apartment in Cambridge today. He says:', o: ['I live in Cambridge.', 'I’m from Cambridge.'], c: 0, d: 'Where you are today: live in.' }
+  ],
+  nota: 'Left pin: <b>I’m from</b> + the old city. Right pin: <b>I live in</b> + the city now. It can be the same city: I’m from Denver, and I live in Denver.',
+  uso: { p: 'Your turn. Say both of your pins: where you are from, and where you live now.', molde: ['I’m from …', 'I live in …'], ex: 'I’m from Recife. I live in São Paulo now.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_pins', GX_EXPLICA); };

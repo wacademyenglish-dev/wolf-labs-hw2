@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 14, img: 'capa', rot: 'II · The Phone Shop', t: 'Three customers. What do they need?', p: 'Ask each customer five questions. Your teacher is the customer. Then recommend a phone.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Phone Shop Pairs', t: 'Five pairs from the phone shop.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -62,3 +63,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me about the best app on my phone.', dica: 'What’s the best app on your phone?', resp: 'The map. I’m bad at directions!' },
   { alvo: 'Ask me what I’m good at.', dica: 'What are you good at?', resp: 'I’m good at cooking.' },
   { alvo: 'Ask me something I find boring.', dica: 'What do you think is boring?', resp: 'Long meetings are so boring!' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'The Nova 5 is faster than the Nova 2.', x: 'The Nova 5 is more fast than the Nova 2.', d: 'Short adjective: fast + <b>-er</b>.' }, { c: 'The Pebble is the cheapest phone.', x: 'The Pebble is the most cheap phone.', d: 'the + short adjective + <b>-est</b>.' }, { c: 'This phone works well.', x: 'This phone works good.', d: 'How it works: <b>well</b>. A good phone, but it works well.' }, { c: 'I’m bored with my old phone.', x: 'I’m boring with my old phone.', d: 'You feel it: <b>-ed</b>. The thing is boring.' }, { c: 'The Nova 2 is as big as the Pebble.', x: 'The Nova 2 is as big than the Pebble.', d: 'as … <b>as</b>, never as … than.' }], nota: 'Short words: <b>-er</b> and <b>-est</b> (faster, the cheapest). How you do it: <b>well</b>, not good. Feeling: <b>-ed</b>. The thing: <b>-ing</b>.', uso: { p: 'Your turn. Compare two phones, or two things you have. Say one difference and one thing that is the same.', molde: ['… is faster / cheaper than …', '… is as … as …'], ex: 'My phone is older than my brother’s phone. It is as big as his phone.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

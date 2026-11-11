@@ -11,14 +11,15 @@ var REV = { tipo: 'aula', aula: 7, nivel: 'A1', unidade: 2, kick: 'GLOBAL PAYMEN
   nota: 'In English, 16h is 4 p.m. The day has two halves: a.m. and p.m.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'morning', est: 'o', min: 4, img: 'mesa', rot: 'I · Afternoon Check', t: 'One payment, late in the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'cutoff'] },
+  { k: 'morning', est: 'o', extra: 1, min: 4, img: 'mesa', rot: 'I · Afternoon Check', t: 'One payment, late in the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'cutoff'] },
   { k: 'conversa', est: 'o', min: 4, img: 'conversa', rot: 'II · Your Day', t: 'A short chat about time.', p: 'Choose an answer. Say it. Then ask: “And you?”' },
   { k: 'termos', est: 'l', min: 8, img: 'capa', rot: 'III · Time Words', t: 'Eight words for the clock.', p: 'Listen. Look. Say each word three times.', sig: ['ampm', 'cutoff'] },
-  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'IV · What Time Is It?', t: 'Read the clock. Say the cut-off.', p: 'Read the card with your teacher. Then build the sentence.', sig: ['ampm', 'cutoff'] },
-  { k: 'simulador', est: 'f', min: 13, img: 'capa', rot: 'V · The Simulator', t: 'It’s 3:40 PM. Beat the clock.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['cutoff', 'ampm', 'settle', 'vd'] },
-  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VI · Today or Tomorrow?', t: 'A client calls late in the day.', p: 'One question before. Listen. Then the questions.', sig: ['cutoff'] },
-  { k: 'cartao', est: 'w', min: 6, img: 'mesa', rot: 'VII · The Cut-off Note', t: 'Write a note about two payments.', p: 'Today or tomorrow? Before or after the cut-off?' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
+  { k: 'gx', est: 'f', min: 3, img: 'mesa', rot: 'IV · The Cut-off Line', t: 'Where does each sentence live around 4 p.m.?', p: 'Tap a sentence, then its place on the line. Notice the times. Then say three lines about your day.' },
+  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'V · What Time Is It?', t: 'Read the clock. Say the cut-off.', p: 'Read the card with your teacher. Then build the sentence.', sig: ['ampm', 'cutoff'] },
+  { k: 'simulador', est: 'f', min: 13, img: 'capa', rot: 'VI · The Simulator', t: 'It’s 3:40 PM. Beat the clock.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['cutoff', 'ampm', 'settle', 'vd'] },
+  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VII · Today or Tomorrow?', t: 'A client calls late in the day.', p: 'One question before. Listen. Then the questions.', sig: ['cutoff'] },
+  { k: 'cartao', est: 'w', min: 6, img: 'mesa', rot: 'VIII · The Cut-off Note', t: 'Write a note about two payments.', p: 'Today or tomorrow? Before or after the cut-off?' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
 ];
 
 var MORNING = { rot: 'OPERATIONS QUEUE · 3:40 PM', ref: 'FX-20486',
@@ -115,3 +116,21 @@ var PT = {
   dialogo: 'Um cliente liga às 15h45 querendo pagar em euro hoje.',
   cartao: 'Escreva um recado: um pagamento sai hoje, outro só amanhã, e por quê.',
   pode: 'Leia cada frase em voz alta e toque nas que você já consegue fazer.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de explica.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'The cut-off is at 4 p.m. Where does each sentence go?',
+  marcos: [{ t: 'BEFORE 4 P.M.', s: 'open: settle today' }, { t: 'AT 4 P.M.', s: 'the cut-off' }, { t: 'AFTER 4 P.M.', s: 'closed: tomorrow' }],
+  frases: [
+    { f: 'It’s three forty p.m. We can settle it today.', c: 0, d: 'three forty · before four' },
+    { f: 'The payment leaves at noon.', c: 0, d: 'noon · before four' },
+    { f: 'The cut-off is at four p.m.', c: 1, d: 'at four p.m. · the cut-off' },
+    { f: 'At four o’clock the window closes.', c: 1, d: 'at four o’clock · the cut-off' },
+    { f: 'It’s four fifteen. It’s after the cut-off.', c: 2, d: 'four fifteen · after four' },
+    { f: 'We settle it tomorrow at nine a.m.', c: 2, d: 'tomorrow · after the cut-off' }
+  ],
+  nota: 'Times use <b>at</b>: at three forty, at four p.m., at noon. <b>Before</b> the cut-off, you can settle today. <b>After</b> it, tomorrow.',
+  uso: { p: 'Your turn. Say your day: when you start, when you have lunch, when you finish.', molde: ['I start at …', 'I have lunch at …', 'I finish at …'], ex: 'I start at 8 a.m. I have lunch at noon. I finish at 5 p.m.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

@@ -37,11 +37,12 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'cabine', rot: 'III · Seat 1D', t: 'A passenger in seat 1D: three things he learned while his plane went down.', p: 'Guess first. Then six chapters: read the task, play, tap your answers. Tap ▶ to hear a moment again.' },
   { k: 'falas', est: 'l', extra: 1, img: 'cabine', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'rota', est: 'o', min: 7, img: 'bifurcacao', rot: 'V · The Other Path', t: 'Five turning points of that day. What happened, and what could have happened.', p: 'Match each turning point to its other path. Then read the other paths out loud.' },
-  { k: 'regra', est: 'f', min: 7, img: 'caixa', rot: 'VI · The Letter', t: 'A letter from the passenger to his daughter, on the bus home.', p: 'Read the letter out loud. Tap every inversion. Then finish the rule.' },
-  { k: 'caixa', est: 'f', min: 6, img: 'caixa', rot: 'VII · The Black Box', t: 'Six IF-sentences from the flight recorder. Flip the switch on each one.', p: 'Read the IF-sentence. Say it inverted out loud. Then tap Check: the switch flips.' },
-  { k: 'ano', est: 'o', min: 7, extra: 1, img: 'vinho', rot: 'VIII · Had You Only a Year', t: 'Big questions, elegant answers. Now you interview your teacher.', p: 'Build each question out loud. Tap Check. Then ask it, and answer with an inversion.' },
-  { k: 'amigo', est: 'o', min: 7, img: 'palco', rot: 'IX · Your Turning Point', t: 'You meet an old friend after ten years. They ask about your life.', p: 'The teacher is the old friend. Say each answer with an inversion. Then tap Check.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'X · Your Speech', t: 'What would you do differently, had you only a year left?', p: 'Three sentences: one Had, one Were, one Should. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cabine', rot: 'VI · The Invert Ladder', t: 'One IF-sentence, five steps.', p: 'Read each step out loud, then go one step up. Notice what leaves and what moves. Then climb with your own sentence.' },
+  { k: 'regra', est: 'f', min: 7, img: 'caixa', rot: 'VII · The Letter', t: 'A letter from the passenger to his daughter, on the bus home.', p: 'Read the letter out loud. Tap every inversion. Then finish the rule.' },
+  { k: 'caixa', est: 'f', min: 6, img: 'caixa', rot: 'VIII · The Black Box', t: 'Six IF-sentences from the flight recorder. Flip the switch on each one.', p: 'Read the IF-sentence. Say it inverted out loud. Then tap Check: the switch flips.' },
+  { k: 'ano', est: 'o', min: 7, extra: 1, img: 'vinho', rot: 'IX · Had You Only a Year', t: 'Big questions, elegant answers. Now you interview your teacher.', p: 'Build each question out loud. Tap Check. Then ask it, and answer with an inversion.' },
+  { k: 'amigo', est: 'o', min: 7, img: 'palco', rot: 'X · Your Turning Point', t: 'You meet an old friend after ten years. They ask about your life.', p: 'The teacher is the old friend. Say each answer with an inversion. Then tap Check.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · Your Speech', t: 'What would you do differently, had you only a year left?', p: 'Three sentences: one Had, one Were, one Should. They go to your My notes.' }
 ];
 
 var YT = '8_zk2DpgLCs';
@@ -251,3 +252,17 @@ R.fim = function (c) {
 
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
 TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One IF-sentence. Climb it one step at a time.',
+  degraus: [
+    { r: 'if', f: 'If I <b>had known</b> about the engine, I would have changed seats.', d: 'The normal way, with IF.' },
+    { r: 'drop', f: '<b>Had I known</b> about the engine, I would have changed seats.', d: 'IF leaves. Had jumps in front of I.' },
+    { r: 'now', f: '<b>Were I</b> the pilot, I would stay calm.', d: 'The same move for now: were jumps in front of I.' },
+    { r: 'maybe', f: '<b>Should you</b> ever sit in seat 1D, stay calm.', d: 'A possible future: should jumps in front of you.' },
+    { r: 'not', f: '<b>Had I not</b> seen the river, I would not have believed it.', d: 'NOT goes after the subject: Had I not. Never hadn’t I.' }
+  ],
+  nota: 'Take out <b>if</b>, then move the helper in front of the subject: <b>Had I known</b>, <b>Were I</b>, <b>Should you</b>. No contraction, and <b>not</b> comes after the subject.',
+  uso: { p: 'Your turn. One thing you would do differently if you could go back. Say it with Had I, then with If.', molde: ['Had I known …', 'If I had known …'], ex: 'Had I known about the exam, I would have studied. If I had known, I would have called you.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

@@ -36,10 +36,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Severance. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'elevador', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'V · As If, As Though', t: 'What is true? Match it with the sentence.', p: 'Tap one on the left, then its pair on the right. Then read the rule.' },
-  { k: 'sessao', est: 'o', min: 7, img: 'sala', rot: 'VI · The Wellness Session', t: 'Six calm facts. Every one you say warms the room.', p: 'Read the clue. Say the sentence softly. Then tap Check.' },
-  { k: 'parece', est: 'o', min: 7, img: 'elevador', rot: 'VII · As If', t: 'Six people. How do they look?', p: 'Tap a card. Say how they look with as if or as though.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Interview', t: 'The interview.', p: 'Interview.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sala', rot: 'V · True or Not True?', t: 'Two scenes at Lumon. Two verbs.', p: 'Read A and B out loud. Say what is different, then check. Then choose for three new moments.' },
+  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'VI · As If, As Though', t: 'What is true? Match it with the sentence.', p: 'Tap one on the left, then its pair on the right. Then read the rule.' },
+  { k: 'sessao', est: 'o', min: 7, img: 'sala', rot: 'VII · The Wellness Session', t: 'Six calm facts. Every one you say warms the room.', p: 'Read the clue. Say the sentence softly. Then tap Check.' },
+  { k: 'parece', est: 'o', min: 7, img: 'elevador', rot: 'VIII · As If', t: 'Six people. How do they look?', p: 'Tap a card. Say how they look with as if or as though.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Interview', t: 'The interview.', p: 'Interview.' }
 ];
 
 var FILME = 'Severance', ANO = '2022';
@@ -258,3 +259,19 @@ var FIM = { tipo: 'entrevista', rot: 'VIII · The Interview', t: 'Interview Mark
     { q: 'Do you act happy at work?', ex: 'I smile as if I were happy. It’s not as if I had a choice.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'As if … Two scenes at the office.',
+  a: { t: 'Not true', falas: [['Helly', 'He talks to me <mark>as if he knew</mark> me.'], ['You', 'But he doesn’t know you. You never met.']], d: 'It is not true, so the verb steps back: <b>as if he knew</b>.' },
+  b: { t: 'Looks true', falas: [['Irving', 'The elevator isn’t moving.'], ['You', 'It looks <mark>as if it’s</mark> stuck.']], d: 'It may be true, so the verb stays in the present: <b>as if it’s stuck</b>.' },
+  pergunta: 'Same two words, two forms. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Mark has no sister. He talks about her every day. He talks …', o: ['as if she were here.', 'as if she is here.'], c: 0, d: 'She is not here: the verb steps back.' },
+    { p: 'The lights are off and nobody answers the door. It looks …', o: ['as if nobody is home.', 'as if nobody were home.'], c: 0, d: 'It may be true: the verb stays.' },
+    { p: 'Mark has never seen the sea. He describes it …', o: ['as though he had been there.', 'as though he has been there.'], c: 0, d: 'He was not there: had been.' }
+  ],
+  nota: 'If it is <b>not true</b>, the verb steps back: <b>as if he knew</b>, <b>as though he had never been here</b>. If it <b>looks true</b>, the verb stays: <b>as if it’s stuck</b>.',
+  uso: { p: 'Your turn. Someone acts as if something is true, and it is not. Then something that looks true right now.', molde: ['He acts as if he …', 'It looks as if …'], ex: 'My boss talks as if he were the owner. It looks as if the meeting is over.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_asif', GX_EXPLICA); };

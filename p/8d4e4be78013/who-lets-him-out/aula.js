@@ -45,10 +45,11 @@ var L = [
   { k: 'mundo', est: 'o', min: 8, img: 'rua', rot: 'I · Warm-up and The Sorcerer Rules', t: 'Before the trailer: who made you do things, then the rules of curses.', p: 'Answer three questions about your life. Then read the rules of the sorcerers and say if you could live with them.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'II · The Trailer', t: 'Jujutsu Kaisen. The official trailer.', p: 'Start the clock first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'letra', est: 'l', min: 10, img: 'rua', rot: 'III · The Episode · Three Scenes', t: 'Episode 1, in English. Three real scenes, one at a time.', p: 'Pick a scene. Answer before you watch. Watch, then talk with make and let.' },
-  { k: 'regra', est: 'f', min: 6, img: 'escola', rot: 'IV · Make, Let, Be Made To', t: 'They made him eat it. They let him live. He was made to fight.', p: 'Find the wrong word in each sentence. Say the right one. Then read the rule.' },
-  { k: 'dominio', est: 'o', min: 7, img: 'capa', rot: 'V · Domain Expansion', t: 'Trapped in the domain. Crack the barrier.', p: 'Read the clue and tap the answer. Then say the sentence. Six seals, six cracks.' },
-  { k: 'regras', est: 'o', min: 6, img: 'escola', rot: 'VI · Your Rules', t: 'Six people in your life. What do they make you do? What do they let you do?', p: 'Open a card. Tell the teacher. Tap each word when you use it.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'f', min: 4, img: 'escola', rot: 'IV · Find the Rule', t: 'Four sentences. You find the rule.', p: 'Read the four sentences out loud. Look at the lit verbs. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'escola', rot: 'V · Make, Let, Be Made To', t: 'They made him eat it. They let him live. He was made to fight.', p: 'Find the wrong word in each sentence. Say the right one. Then read the rule.' },
+  { k: 'dominio', est: 'o', min: 7, img: 'capa', rot: 'VI · Domain Expansion', t: 'Trapped in the domain. Crack the barrier.', p: 'Read the clue and tap the answer. Then say the sentence. Six seals, six cracks.' },
+  { k: 'regras', est: 'o', min: 6, img: 'escola', rot: 'VII · Your Rules', t: 'Six people in your life. What do they make you do? What do they let you do?', p: 'Open a card. Tell the teacher. Tap each word when you use it.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var SERIE = 'Jujutsu Kaisen', ANO = '2020';
@@ -355,3 +356,19 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Yuji
     { q: 'What does Sukuna make you feel?', ex: 'He makes me feel angry, and a little afraid.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.',
+  exemplos: [
+    'They <b>made</b> him <u>eat</u> it.',
+    'Gojo <b>let</b> him <u>live</u>.',
+    'The school <b>makes</b> the students <u>train</u> every day.',
+    'My mother <b>let</b> me <u>stay</u> up late.'
+  ],
+  pergunta: 'After make or let + a person, the verb …',
+  opcoes: ['has no to: made him eat', 'has to: made him to eat', 'ends in -ing: let him living'], c: 0,
+  nao: 'Not that one. Read the four lit verbs again: is there a to? an -ing?',
+  regra: '<b>make / let + person + verb</b>, no to: They made him <b>eat</b> it. They let him <b>live</b>. In the passive, the to comes back: He <b>was made to</b> fight.',
+  uso: { p: 'Your turn. One thing your parents made you do when you were a kid, and one thing they let you do.', molde: ['My parents made me …', 'They let me …'], ex: 'My parents made me study piano. They let me play video games on Fridays.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

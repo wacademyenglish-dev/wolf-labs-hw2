@@ -15,14 +15,15 @@ var L = [
   { k: 'capa', est: null, img: 'mesa' },
   { k: 'abre', est: 'o', min: 7, img: 'janela', rot: 'I · Look at Me', t: 'Before the patient comes in: guess about your teacher.', p: 'Pick a card. Answer out loud, then say how sure you are. Nobody is corrected here.' },
   { k: 'ouve', est: 'l', min: 7, img: 'sala', rot: 'II · What He Says', t: 'Patient 07 talks. Only what he really said goes on the chart.', p: 'Your teacher reads his words. Then file each note: HE SAID IT, or HE DIDN’T.' },
-  { k: 'deve', est: 'f', min: 6, img: 'mesa', rot: 'III · Must, or Have To?', t: 'One is you reading the proof. The other is somebody forcing him.', p: 'Read the situation. Say the right one out loud. Then tap it.' },
-  { k: 'ponteiro', est: 'o', min: 7, img: 'sala', rot: 'IV · Set the Needle', t: 'Read the proof. Set the needle. Then say the sentence.', p: '0% can’t be · 50% might be · 100% must be. The needle comes first.' },
-  { k: 'bate', est: 'f', min: 6, img: 'xicara', rot: 'V · Match the Dial', t: 'The needle is already set. Pick the sentence that matches it.', p: 'Read the dial. Say the sentence. Then tap it.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'VI · The Rule', t: 'Not what is true: how sure you are.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'ficha', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'VII · The Chart', t: 'Build each line of the chart from the pieces.', p: 'Read the proof. Say the sentence from the pieces. Then open it.' },
-  { k: 'bolsas', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'VIII · Three Bags', t: 'Three strangers left their bags in the waiting room.', p: 'Look at the bag. Guess the owner’s life. Your teacher asks: are you sure?' },
-  { k: 'semana', est: 'o', min: 7, extra: 1, img: 'xicara', rot: 'IX · Your Week', t: 'Real life now. Answer, then guess about somebody you know.', p: 'Pick a card. Answer it. The follow-up asks for a deduction.' },
-  { k: 'fim', est: 'w', min: 6, img: 'porta', rot: 'X · The Conclusion', t: 'The doctor opens the door. Your chart is the conclusion.', p: 'Write three lines about somebody you know: one must be, one might be, one can’t be. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 5, img: 'sala', rot: 'III · How Sure Am I?', t: 'Patient 07, in the waiting room. Three levels of sure.', p: 'Look at the three levels. Tap the level of each sentence. Then say three of your own.' },
+  { k: 'deve', est: 'f', min: 6, img: 'mesa', rot: 'IV · Must, or Have To?', t: 'One is you reading the proof. The other is somebody forcing him.', p: 'Read the situation. Say the right one out loud. Then tap it.' },
+  { k: 'ponteiro', est: 'o', min: 7, img: 'sala', rot: 'V · Set the Needle', t: 'Read the proof. Set the needle. Then say the sentence.', p: '0% can’t be · 50% might be · 100% must be. The needle comes first.' },
+  { k: 'bate', est: 'f', min: 6, img: 'xicara', rot: 'VI · Match the Dial', t: 'The needle is already set. Pick the sentence that matches it.', p: 'Read the dial. Say the sentence. Then tap it.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'VII · The Rule', t: 'Not what is true: how sure you are.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'ficha', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'VIII · The Chart', t: 'Build each line of the chart from the pieces.', p: 'Read the proof. Say the sentence from the pieces. Then open it.' },
+  { k: 'bolsas', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'IX · Three Bags', t: 'Three strangers left their bags in the waiting room.', p: 'Look at the bag. Guess the owner’s life. Your teacher asks: are you sure?' },
+  { k: 'semana', est: 'o', min: 7, extra: 1, img: 'xicara', rot: 'X · Your Week', t: 'Real life now. Answer, then guess about somebody you know.', p: 'Pick a card. Answer it. The follow-up asks for a deduction.' },
+  { k: 'fim', est: 'w', min: 6, img: 'porta', rot: 'XI · The Conclusion', t: 'The doctor opens the door. Your chart is the conclusion.', p: 'Write three lines about somebody you know: one must be, one might be, one can’t be. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -214,3 +215,24 @@ TOQUES.bt = function (b, n, v) { S.bate.esc = v; };
 TOQUES['bt-prox'] = function () { S.bate = { n: S.bate.n + 1, esc: '' }; };
 TOQUES.fc = function (b, n) { S.ficha.sel = n; };
 TOQUES.bl = function (b, n) { S.bolsa.sel = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de deve.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'How sure am I? Three levels.',
+  usos: [
+    { t: 'SURE (100%)', f: 'He must be tired.', d: 'The proof is strong. You are almost sure.', img: 'xicara' },
+    { t: 'MAYBE (50%)', f: 'It might be a woman’s bag.', d: 'Some proof, but not enough.', img: 'bolsa1' },
+    { t: 'NO WAY (0%)', f: 'He can’t be the doctor.', d: 'The proof says no.', img: 'porta' }
+  ],
+  pergunta: 'How sure is the speaker?',
+  itens: [
+    { f: 'He has four empty cups of coffee. He <b>must be</b> very tired.', c: 0 },
+    { f: 'The bag is red and small. It <b>might be</b> a woman’s bag.', c: 1 },
+    { f: 'He is only ten years old. He <b>can’t be</b> the doctor.', c: 2 },
+    { f: 'The light is on and the door is open. Somebody <b>must be</b> inside.', c: 0 },
+    { f: 'I don’t know the answer. She <b>might be</b> a nurse.', c: 1 },
+    { f: 'That bag is empty. It <b>can’t be</b> heavy.', c: 2 }
+  ],
+  nota: 'Not what is true: how <b>sure</b> you are. <b>must be</b> = almost sure, <b>might be</b> = maybe, <b>can’t be</b> = no way. Always the clean verb after: must be, never “must to be”.',
+  uso: { p: 'Your turn. Look at your teacher. Make three guesses: one you are sure about, one maybe, one no way.', molde: ['You must be …', 'You might be …', 'You can’t be …'], ex: 'You must be tired. You might be a morning person. You can’t be younger than me!' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

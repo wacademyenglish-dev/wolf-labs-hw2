@@ -33,12 +33,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'janela', rot: 'I · You and Meetings', t: 'Before the meeting: you, rules, and the voice you use at work.', p: 'Tap a card. The student answers; then the teacher answers too.' },
   { k: 'ata', est: 'f', min: 6, img: 'ata', rot: 'II · The Treasurer’s Notes', t: 'The treasurer sends his demands like text messages. The minutes need them in formal English.', p: 'Tap a note, then its formal line. It goes into the book in ink. Read it out loud, slowly, like a secretary.' },
-  { k: 'regra', est: 'f', min: 7, img: 'arquivo', rot: 'III · The Charter, 1974', t: 'The old charter of the lighthouse. Read it like a lawyer.', p: 'Read the charter out loud. Tap every verb after THAT. Then finish the rule.' },
-  { k: 'lente', est: 'o', min: 7, img: 'sala', rot: 'IV · Around the Table', t: 'Thursday, 7 PM. Six voices. Put each one in the minutes, fast.', p: 'The teacher reads each voice in character. The student says the formal line out loud, then taps Check: a panel of the lamp lights up.' },
-  { k: 'carimbo', est: 'f', min: 6, img: 'arquivo', rot: 'V · Demand or Fact?', t: 'Insisted that he WAS: a fact. Insisted that he BE: a demand.', p: 'Read the line. Stamp it DEMAND or FACT. Then say what it means.' },
-  { k: 'mocao', est: 'o', min: 7, img: 'farol', rot: 'VI · Your Formal Voice', t: 'Your life, in the voice of the minutes.', p: 'Tap a card. Answer about real life: it is vital that, I suggest that, I insist that.' },
-  { k: 'herald', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'VII · The Newspaper Calls', t: '9:40 PM. A reporter calls the new board secretary. That’s you.', p: 'The teacher is the reporter. Answer on the record, in formal English.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Motion', t: 'Should an old building be protected, even when it no longer earns its keep?', p: 'Three formal demands for your building, street or city. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'ata', rot: 'III · Right, Not This', t: 'Six lines for the minutes. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'regra', est: 'f', min: 7, img: 'arquivo', rot: 'IV · The Charter, 1974', t: 'The old charter of the lighthouse. Read it like a lawyer.', p: 'Read the charter out loud. Tap every verb after THAT. Then finish the rule.' },
+  { k: 'lente', est: 'o', min: 7, img: 'sala', rot: 'V · Around the Table', t: 'Thursday, 7 PM. Six voices. Put each one in the minutes, fast.', p: 'The teacher reads each voice in character. The student says the formal line out loud, then taps Check: a panel of the lamp lights up.' },
+  { k: 'carimbo', est: 'f', min: 6, img: 'arquivo', rot: 'VI · Demand or Fact?', t: 'Insisted that he WAS: a fact. Insisted that he BE: a demand.', p: 'Read the line. Stamp it DEMAND or FACT. Then say what it means.' },
+  { k: 'mocao', est: 'o', min: 7, img: 'farol', rot: 'VII · Your Formal Voice', t: 'Your life, in the voice of the minutes.', p: 'Tap a card. Answer about real life: it is vital that, I suggest that, I insist that.' },
+  { k: 'herald', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'VIII · The Newspaper Calls', t: '9:40 PM. A reporter calls the new board secretary. That’s you.', p: 'The teacher is the reporter. Answer on the record, in formal English.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Motion', t: 'Should an old building be protected, even when it no longer earns its keep?', p: 'Three formal demands for your building, street or city. They go to your My notes.' }
 ];
 
 var VOCE = [
@@ -193,3 +194,18 @@ R.fim = function (c) {
 
 TOQUES.sj = function (b, n) { S.sj = n; };
 TOQUES.cb = function (b, n, v) { S.cb[n] = v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'The minutes. Tap the right one.',
+  pares: [
+    { c: 'It is vital that she take notes.', x: 'It is vital that she takes notes.', d: 'After vital: the base verb, for every subject. No -s.' },
+    { c: 'We recommend that he not sign.', x: 'We recommend that he doesn’t sign.', d: 'The negative is not + the base verb.' },
+    { c: 'They proposed that the budget be approved.', x: 'They proposed that the budget approved.', d: 'A passive needs be + the -ed form.' },
+    { c: 'The charter requires that the light be kept burning.', x: 'The charter requires that the light will be kept burning.', d: 'No will. Just be.' },
+    { c: 'I recommend that you attend.', x: 'I recommend you to attend.', d: 'recommend + that + the base verb.' },
+    { c: 'It is essential that he be told today.', x: 'It is essential that he be tell today.', d: 'be + the -ed form: told.' }
+  ],
+  nota: 'After <b>vital</b>, <b>essential</b>, <b>recommend</b>, <b>insist</b>, <b>require</b> + that, the verb is the <b>base form</b>: that he <b>be</b>, that she <b>take</b>. For no: <b>not</b> + base.',
+  uso: { p: 'Your turn. Two demands for your own meeting: one about a person, one about a thing.', molde: ['It is essential that …', 'We recommend that … be …'], ex: 'It is essential that everyone arrive on time. We recommend that the report be sent on Monday.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

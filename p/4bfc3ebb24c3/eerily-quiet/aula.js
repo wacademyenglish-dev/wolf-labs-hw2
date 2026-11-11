@@ -31,13 +31,14 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'vela', rot: 'I · What Scares You', t: 'Before we write: what really frightens you?', p: 'Pick a card. Real opinions. Nobody is corrected here.' },
   { k: 'video', est: 'l', min: 10, img: 'quarto', rot: 'II · The Tell-Tale Heart', t: 'Edgar Allan Poe, 1843. Two short pieces.', p: 'Watch the opening and the night scene. Listen for how the narrator builds fear.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'III · The Rule', t: 'The adverb chooses the adjective.', p: 'Eerily quiet, bitterly cold, utterly terrified. Say each trap the right way, then tap it.' },
-  { k: 'dial', est: 'o', min: 7, img: 'mesa', rot: 'IV · The Dial', t: 'Eight adjectives. Which adverb belongs?', p: 'Say the sentence with the adverb that sounds natural. Then tap it.' },
-  { k: 'editor', est: 'o', min: 7, img: 'pagina', rot: 'V · The Editor', t: 'A beginner wrote this. Make it frightening.', p: 'Rewrite each “very” out loud. Then compare with the editor’s version.' },
-  { k: 'origem', est: 'l', min: 7, extra: 1, img: 'tempestade', rot: 'VI · Why We Tell Them', t: 'Where do gothic stories come from?', p: 'Your teacher reads the story behind the stories. Then answer.' },
-  { k: 'leitura', est: 'o', min: 7, extra: 1, img: 'vela', rot: 'VII · Read It Like Poe', t: 'Read the opening as the narrator.', p: 'Slowly. Stress the adverbs. Your teacher listens and gives one note.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VIII · Quick Check', t: 'Six pairs before the candle goes out.', p: 'Say the whole phrase. Then tap the adverb.' },
-  { k: 'fim', est: 'w', min: 6, img: 'quarto', rot: 'IX · Your First Page', t: 'Write the opening of your own gothic tale.', p: 'About 150 words, at least five collocations from today. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'vela', rot: 'III · Find the Pattern', t: 'Four lines from the writing room. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'IV · The Rule', t: 'The adverb chooses the adjective.', p: 'Eerily quiet, bitterly cold, utterly terrified. Say each trap the right way, then tap it.' },
+  { k: 'dial', est: 'o', min: 7, img: 'mesa', rot: 'V · The Dial', t: 'Eight adjectives. Which adverb belongs?', p: 'Say the sentence with the adverb that sounds natural. Then tap it.' },
+  { k: 'editor', est: 'o', min: 7, img: 'pagina', rot: 'VI · The Editor', t: 'A beginner wrote this. Make it frightening.', p: 'Rewrite each “very” out loud. Then compare with the editor’s version.' },
+  { k: 'origem', est: 'l', min: 7, extra: 1, img: 'tempestade', rot: 'VII · Why We Tell Them', t: 'Where do gothic stories come from?', p: 'Your teacher reads the story behind the stories. Then answer.' },
+  { k: 'leitura', est: 'o', min: 7, extra: 1, img: 'vela', rot: 'VIII · Read It Like Poe', t: 'Read the opening as the narrator.', p: 'Slowly. Stress the adverbs. Your teacher listens and gives one note.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'IX · Quick Check', t: 'Six pairs before the candle goes out.', p: 'Say the whole phrase. Then tap the adverb.' },
+  { k: 'fim', est: 'w', min: 6, img: 'quarto', rot: 'X · Your First Page', t: 'Write the opening of your own gothic tale.', p: 'About 150 words, at least five collocations from today. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -223,3 +224,19 @@ TOQUES['ed-prox'] = function () { S.ed.n++; };
 TOQUES['og-ouviu'] = function () { S.org.ouviu = 1; };
 TOQUES.lt = function (b, n) { S.lt.nota[n] = !S.lt.nota[n]; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines by candlelight. Find the rule yourself.',
+  exemplos: [
+    'The narrator was <b>utterly</b> <u>terrified</u>.',
+    'The corridor was <b>absolutely</b> <u>freezing</u>.',
+    'The old man was <b>deeply</b> <u>suspicious</u>.',
+    'The ending was <b>extremely</b> <u>scary</u>.'
+  ],
+  pergunta: 'Which adverbs go with which adjectives?',
+  opcoes: ['extreme adjectives (terrified, freezing) take utterly or absolutely · gradable ones (suspicious, scary) take deeply or extremely', 'every adjective takes very: very terrified, very freezing', 'the adverb goes after the adjective: terrified utterly'], c: 0,
+  nao: 'Not that one. Read the four lit pairs again: which adjectives are already extreme?',
+  regra: '<b>Extreme</b> adjective + <b>utterly / absolutely / completely</b>: utterly terrified. <b>Gradable</b> adjective + <b>very / extremely / deeply / highly</b>: deeply sorry. Never <b>very terrified</b>.',
+  uso: { p: 'Your turn. Describe the scariest room you know: one extreme adjective, one gradable adjective, each with the right adverb.', molde: ['The room was utterly …', 'The night was deeply …'], ex: 'The cellar was absolutely freezing. The silence was deeply unsettling.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

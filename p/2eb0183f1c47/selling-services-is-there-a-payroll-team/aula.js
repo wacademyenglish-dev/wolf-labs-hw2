@@ -16,11 +16,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Week', t: 'Do you have calls today?', p: 'Answer with a short answer. Then ask your teacher.' },
   { k: 'leitura', est: 'l', min: 7, img: 'mesa', rot: 'II · The CFO’s E-mail', t: 'A CFO says yes to a call.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 9, img: 'conversa', rot: 'III · The Discovery Call', t: 'Leo asks. The CFO answers, short.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Make a Real Question', t: 'Two questions. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'transforma', est: 'f', min: 7, img: 'mesa', rot: 'V · Ask the Client', t: 'Turn the notes into questions.', p: 'Read the note and the helper. Say the question. Then check.' },
-  { k: 'escolha', est: 'o', min: 5, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your Call Script', t: 'Six questions for your next discovery call.', p: 'Write them. Then ask them: your teacher is the CFO.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'o', min: 4, img: 'conversa', rot: 'IV · Yes, We Do', t: 'Ping-pong with Karen, the CFO.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · Make a Real Question', t: 'Two questions. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'transforma', est: 'f', min: 7, img: 'mesa', rot: 'VI · Ask the Client', t: 'Turn the notes into questions.', p: 'Read the note and the helper. Say the question. Then check.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 5, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your Call Script', t: 'Six questions for your next discovery call.', p: 'Write them. Then ask them: your teacher is the CFO.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -99,3 +100,19 @@ var PODE = [
   'I can give short answers: Yes, we do. No, it isn’t.',
   'I can write and ask six questions in a discovery call.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Three words, fast.',
+  perguntas: [
+    { q: 'Is there a payroll team at Lumen?', s: 'Yes, there <mark>is</mark>.', n: 'No, there <mark>isn’t</mark>.', mais: 'How many people? There are five.' },
+    { q: 'Do you use Oracle for payroll?', s: 'Yes, we <mark>do</mark>.', n: 'No, we <mark>don’t</mark>.', mais: 'What do you use? We use spreadsheets.' },
+    { q: 'Are there problems at the end of the month?', s: 'Yes, there <mark>are</mark>.', n: 'No, there <mark>aren’t</mark>.', mais: 'What kind? The reports are late.' },
+    { q: 'Is the tax team in the same office?', s: 'Yes, it <mark>is</mark>.', n: 'No, it <mark>isn’t</mark>.', mais: 'Where is it? It’s in Curitiba.' },
+    { q: 'Does the CFO like long meetings?', s: 'Yes, she <mark>does</mark>.', n: 'No, she <mark>doesn’t</mark>.' },
+    { q: 'Do you have a budget for this project?', s: 'Yes, we <mark>do</mark>.', n: 'No, we <mark>don’t</mark>.', mais: 'For when? For next year.' }
+  ],
+  nota: 'The short answer repeats the helper, never the verb: Do you use …? Yes, we <b>do</b>. Is there …? No, there <b>isn’t</b>. Not “Yes, we use”.',
+  uso: { p: 'Your turn. You are the seller. Ask your teacher three questions about their company. Your teacher answers the short way.', molde: ['Is there …?', 'Do you …?', 'Are there …?'], ex: 'Is there a payroll team? Do you use SAP? Are there problems at the end of the month?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

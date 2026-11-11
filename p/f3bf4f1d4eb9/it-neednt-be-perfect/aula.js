@@ -16,10 +16,11 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Rules', t: 'Rules in your life.', p: 'Answer with detail. Then ask the question back.' },
   { k: 'leitura', est: 'l', min: 9, img: 'capa', rot: 'II · The Welcome Note', t: 'A note on the kitchen table.', p: 'Read it out loud. Answer the questions. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Kind or Strict?', t: 'Not necessary, or not allowed?', p: 'Compare A and B. How does the guest feel in each one?' },
-  { k: 'bingo', est: 'f', min: 8, img: 'capa', rot: 'IV · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a row (across, down or diagonal) is a BINGO.' },
-  { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'V · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'VI · Your House Rules', t: 'A guest is coming to your home.', p: 'Write four rules: one must, one mustn’t, two needn’t / don’t have to.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'III · Right, Not This', t: 'Six pairs from the welcome note. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'IV · Kind or Strict?', t: 'Not necessary, or not allowed?', p: 'Compare A and B. How does the guest feel in each one?' },
+  { k: 'bingo', est: 'f', min: 8, img: 'capa', rot: 'V · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a row (across, down or diagonal) is a BINGO.' },
+  { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'VI · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'VII · Your House Rules', t: 'A guest is coming to your home.', p: 'Write four rules: one must, one mustn’t, two needn’t / don’t have to.' }
 ];
 var PORTAS = [];
 
@@ -64,3 +65,9 @@ var PODE = [];
 /* C1 · It Needn’t Be Perfect: conversa · leitura · descobre · bingo · erros · cartao */
 var BINGO = [['not necessary, modal: You ___ bring towels.', 'needn’t'], ['forbidden: You ___ smoke here.', 'mustn’t'], ['It’s free! You don’t ___ pay.', 'have to'], ['There’s no ___ to call me.', 'need'], ['You needn’t ___ (worry). (to or not?)', 'worry (no to)'], ['You don’t need ___ (bring) anything.', 'to bring'], ['a rule of the beach: You aren’t ___ to have fires.', 'allowed'], ['mustn’t or don’t have to? Dress code: casual. You ___ wear a tie.', 'don’t have to'], ['mustn’t or don’t have to? Exam room: You ___ use your phone.', 'mustn’t']];
 var ERROS = { tipo: 'chat', rot: 'A MESSAGE FROM A FRIEND · YOUR PARTY', partes: ['Hi! About Saturday: you ', ['mustn’t bring', 'needn’t bring', 'Not necessary, not forbidden.'], ' anything, we have plenty of food. You ', ['don’t must', 'mustn’t', 'must → mustn’t.'], ' park in front of the garage, my neighbor gets angry. You ', ['needn’t to', 'needn’t', 'needn’t + verb, no to.'], ' dress up, it’s casual. There’s no need ', ['bring', 'to bring', 'no need TO + verb.'], ' a gift. And you ', ['don’t allowed to', 'aren’t allowed to', 'be allowed to.'], ' leave before the cake!'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'You needn’t take your shoes off.', x: 'You needn’t to take your shoes off.', d: 'Needn’t + the clean verb. No to.' }, { c: 'You don’t need to buy milk.', x: 'You don’t must buy milk.', d: 'Don’t must does not exist. Not necessary: don’t need to.' }, { c: 'There’s no need to book a taxi.', x: 'There’s no need of book a taxi.', d: 'There’s no need to + verb.' }, { c: 'Guests aren’t allowed to smoke here.', x: 'Guests needn’t smoke here.', d: 'Forbidden is not needn’t. Use aren’t allowed to, or mustn’t.' }, { c: 'You don’t have to wash the cups.', x: 'You mustn’t wash the cups.', d: 'It is optional: don’t have to. Mustn’t would mean: it is forbidden.' }, { c: 'She needn’t wait for us.', x: 'She needn’t waits for us.', d: 'No -s after needn’t.' }], nota: '<b>Needn’t, don’t need to, don’t have to, there’s no need to</b> = it is not necessary (kind). <b>Mustn’t, aren’t allowed to</b> = it is forbidden (strict). Needn’t takes the clean verb: no <b>to</b>, no <b>-s</b>.', uso: { p: 'Your turn. A guest is coming to your home. Tell them one thing they needn’t do, and one thing that is not allowed.', molde: ['You needn’t …', 'There’s no need to …', 'You’re not allowed to …'], ex: 'You needn’t bring anything. There’s no need to call first. You’re not allowed to park in front of the garage.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

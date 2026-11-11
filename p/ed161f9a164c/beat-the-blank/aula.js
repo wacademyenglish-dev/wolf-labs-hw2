@@ -20,15 +20,16 @@ var L = [
   { k: 'capa', est: null, img: 'mesa' },
   { k: 'branco', est: 'o', min: 7, img: 'mesa', rot: 'I · The First Blank', t: 'Four ordinary things on the table, and one feeling. You probably can’t name them in English.', p: 'Describe each one out loud. When nothing comes, tap I GOT STUCK. It costs nothing today.' },
   { k: 'reacao', est: 'l', min: 7, img: 'mesa', rot: 'II · What You Do Now', t: 'Everybody does one of these five when a word disappears.', p: 'Read all five out loud. Which one was yours in scene I? Then listen to three fluent people.' },
-  { k: 'moldes', est: 'f', min: 6, img: 'fichas', rot: 'III · The Four Detours', t: 'English goes around a gap with a shape. There are only four.', p: 'Pick the detour that fits. Then say the whole sentence out loud.' },
-  { k: 'tempo', est: 'l', min: 7, img: 'cinto', rot: 'IV · Buying Time', t: 'Silence in English doesn’t read as thinking. Fill the gap with an English noise.', p: 'Play one. Copy the sound. Then answer a question with it.' },
-  { k: 'cartas', est: 'o', min: 7, img: 'fichas', rot: 'V · The Forbidden Cards', t: 'Six cards. Describe the word without saying it, or any of the forbidden words.', p: 'Your teacher guesses and watches the forbidden words. Every detour scores a point.' },
-  { k: 'qual', est: 'o', min: 7, extra: 1, img: 'fichas', rot: 'VI · Which One Am I?', t: 'Four things that are almost the same. Pick one in your head.', p: 'Don’t touch the screen. Describe it until your teacher can point at the right one.' },
-  { k: 'junta', est: 'l', min: 7, extra: 1, img: 'fichas', rot: 'VII · The Joint', t: 'Every detour has a small word in the middle. Miss it and the sentence falls over.', p: 'Pick the joint. Then say the whole sentence out loud.' },
-  { k: 'verbo', est: 'f', min: 6, extra: 1, img: 'fichas', rot: 'VIII · When It’s a Verb', t: 'Going around a thing is easy. Going around a VERB is what really stops people.', p: 'Tap the pieces in order. Then say: “You know when you need…” and the sentence.' },
-  { k: 'porta', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'IX · The Side Door', t: 'Sometimes the sentence is the problem. Change it, and the hard word disappears.', p: 'Read the hard sentence. Say your easier version. Then compare.' },
-  { k: 'semvolta', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'X · No Take-Backs', t: 'One topic, and the words keep leaving. Going quiet is the only way to lose.', p: 'Pick a topic and talk. Your teacher bans another word whenever they like.' },
-  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'XI · The First Blank Again', t: 'The same five from scene I. Describe them again. Then they get their names.', p: 'Write a description of three things in your home that you can’t name in English. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'fichas', rot: 'III · The Detours in Blocks', t: 'Four detours. Each block has a job.', p: 'Read the blocks out loud. Notice the joint in the middle. Then build a detour and say your own.' },
+  { k: 'moldes', est: 'f', min: 6, img: 'fichas', rot: 'IV · The Four Detours', t: 'English goes around a gap with a shape. There are only four.', p: 'Pick the detour that fits. Then say the whole sentence out loud.' },
+  { k: 'tempo', est: 'l', min: 7, img: 'cinto', rot: 'V · Buying Time', t: 'Silence in English doesn’t read as thinking. Fill the gap with an English noise.', p: 'Play one. Copy the sound. Then answer a question with it.' },
+  { k: 'cartas', est: 'o', min: 7, img: 'fichas', rot: 'VI · The Forbidden Cards', t: 'Six cards. Describe the word without saying it, or any of the forbidden words.', p: 'Your teacher guesses and watches the forbidden words. Every detour scores a point.' },
+  { k: 'qual', est: 'o', min: 7, extra: 1, img: 'fichas', rot: 'VII · Which One Am I?', t: 'Four things that are almost the same. Pick one in your head.', p: 'Don’t touch the screen. Describe it until your teacher can point at the right one.' },
+  { k: 'junta', est: 'l', min: 7, extra: 1, img: 'fichas', rot: 'VIII · The Joint', t: 'Every detour has a small word in the middle. Miss it and the sentence falls over.', p: 'Pick the joint. Then say the whole sentence out loud.' },
+  { k: 'verbo', est: 'f', min: 6, extra: 1, img: 'fichas', rot: 'IX · When It’s a Verb', t: 'Going around a thing is easy. Going around a VERB is what really stops people.', p: 'Tap the pieces in order. Then say: “You know when you need…” and the sentence.' },
+  { k: 'porta', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'X · The Side Door', t: 'Sometimes the sentence is the problem. Change it, and the hard word disappears.', p: 'Read the hard sentence. Say your easier version. Then compare.' },
+  { k: 'semvolta', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'XI · No Take-Backs', t: 'One topic, and the words keep leaving. Going quiet is the only way to lose.', p: 'Pick a topic and talk. Your teacher bans another word whenever they like.' },
+  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'XII · The First Blank Again', t: 'The same five from scene I. Describe them again. Then they get their names.', p: 'Write a description of three things in your home that you can’t name in English. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -250,3 +251,18 @@ TOQUES['pt-prox'] = function () { S.pt.n++; };
 TOQUES.sv = function (b, n) { S.sv.tema = n; };
 TOQUES['sv-b'] = function (b, n) { S.sv.bans[n] = !S.sv.bans[n]; if (!S.sv.bans[n]) delete S.sv.bans[n]; };
 TOQUES['fm-abre'] = function () { S.fm.abre = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de moldes.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'A detour in blocks. Each block has a job.',
+  frases: [
+    { b: [['It’s a kind of', 'DETOUR', 'aux'], ['tool', 'WHAT'], ['that', 'JOINT', 'aux'], ['cuts paper', 'ACTION']], d: 'A kind of + a big word you know. Then what it does.' },
+    { b: [['It’s the thing', 'DETOUR', 'aux'], ['you use for', 'JOINT', 'aux'], ['opening cans', 'ACTION']], d: 'The thing you use for + the -ing.' },
+    { b: [['It’s when', 'DETOUR', 'aux'], ['you', 'WHO'], ['feel nervous', 'ACTION'], ['before a test', 'WHEN']], d: 'It’s when + a full sentence.' },
+    { b: [['It’s like a chair,', 'DETOUR', 'aux'], ['but', 'JOINT', 'aux'], ['it’s soft', 'HOW']], d: 'Like …, but … : what is the same, what is different.' }
+  ],
+  nota: 'Every detour does the same job: it goes around the missing word. Start with the <b>DETOUR</b>, add the <b>JOINT</b> (that, you use for, but), then the detail.',
+  monta: { p: 'Build a detour for “a stapler”. Then say it.', pecas: [['you use for', 'JOINT', 'aux'], ['It’s the thing', 'DETOUR', 'aux'], ['joining papers', 'ACTION']], ordem: [1, 0, 2] },
+  uso: { p: 'Your turn. Pick something in your room. Don’t say its name. Use a detour.', molde: ['It’s a kind of …', 'It’s the thing you use for …'], ex: 'It’s the thing you use for cleaning the floor.' },
+  prof: 'Read the blocks top to bottom with the student. Point at the JOINT: it is the small word that keeps the sentence standing.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

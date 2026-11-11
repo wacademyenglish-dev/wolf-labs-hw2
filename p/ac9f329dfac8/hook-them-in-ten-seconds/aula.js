@@ -14,10 +14,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 10, titulo: ['Hook Them in', 'Te
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · Three Openings', t: 'Same talk. Three first sentences.', p: 'Read the three openings out loud, like a speaker. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Which One Hooks You?', t: 'Boring or brilliant?', p: 'Compare A and B. Which one makes you want to listen? Why?' },
-  { k: 'transforma', est: 'f', min: 8, img: 'capa', rot: 'III · Fix the Opening', t: 'Boring → hook.', p: 'Read the boring opening. Use the clue. Say a hook.' },
-  { k: 'bingo', est: 'f', min: 8, img: 'capa', rot: 'IV · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a row, across, down or diagonal, is a BINGO.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'conversa', rot: 'V · Your First Ten Seconds', t: 'Write the opening of your own talk.', p: 'Choose a topic you love. Write a hook, a bridge and a promise.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Find the Rule', t: 'Four hooks. You find the rule.', p: 'Read the four openings out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Which One Hooks You?', t: 'Boring or brilliant?', p: 'Compare A and B. Which one makes you want to listen? Why?' },
+  { k: 'transforma', est: 'f', min: 8, img: 'capa', rot: 'IV · Fix the Opening', t: 'Boring → hook.', p: 'Read the boring opening. Use the clue. Say a hook.' },
+  { k: 'bingo', est: 'f', min: 8, img: 'capa', rot: 'V · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a row, across, down or diagonal, is a BINGO.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'conversa', rot: 'VI · Your First Ten Seconds', t: 'Write the opening of your own talk.', p: 'Choose a topic you love. Write a hook, a bridge and a promise.' }
 ];
 var PORTAS = [];
 
@@ -64,3 +65,9 @@ var PODE = [];
 /* MECÂNICAS VARIADAS */
 /* C1 · Hook Them in Ten Seconds: leitura · descobre · transforma · bingo · cartao */
 var BINGO = [['A hook with a question about a mystery', 'Have you ever wondered why…?'], ['A hook with a number', 'Did you know that…?'], ['A hook that creates a picture', 'Imagine…'], ['A hook that makes the audience move', 'Raise your hand if…'], ['A hook with your own story', 'Last year, I…'], ['A promise', 'By the end of this talk, you’ll…'], ['Fix it: “Have you ever wondered why do we dream?”', 'why we dream'], ['Never start with…', 'an apology / “my name is…”'], ['Say a hook for a talk about coffee', 'e.g. Did you know that coffee is the second most traded product in the world?']];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four openings of a talk about sleep. Find the rule yourself.', exemplos: ['<b>Have you ever wondered</b> why we dream?', '<b>Did you know that</b> we spend a third of our lives asleep?', '<b>Imagine</b> you never slept again.', '<b>By the end of this talk, you’ll</b> know how to sleep better.'], pergunta: 'A good hook speaks to …', opcoes: ['the listener: you, imagine, have you ever', 'the speaker: I am, my name is, I will talk about', 'nobody: only facts, no question, no you'], c: 0, nao: 'Not that one. Read the four lit starts again: who is in the sentence?', regra: 'A hook puts the <b>listener</b> in the first sentence: a <b>question</b> (Have you ever wondered …?), a <b>surprise</b> (Did you know that …?), <b>Imagine …</b>, or a <b>promise</b> (By the end, you’ll …). Do not start with: “Hello, my name is … today I will talk about …”.', uso: { p: 'Your turn. Choose a topic you love. Say the first ten seconds of your talk: one hook and one promise.', molde: ['Have you ever wondered …?', 'Imagine …', 'By the end of this talk, you’ll …'], ex: 'Have you ever wondered why we love music? Imagine a day without it. By the end of this talk, you’ll know why songs get stuck in your head.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

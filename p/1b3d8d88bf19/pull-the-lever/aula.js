@@ -32,10 +32,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Clip', t: 'The Good Place. The trolley problem comes to life.', p: 'Race the clock first. Watch the clip. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'sala', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'V · Have To', t: 'Chidi’s notes: one word is wrong in every line.', p: 'Say the right word for each line. Then tap Check.' },
-  { k: 'placar', est: 'o', min: 7, img: 'capa', rot: 'VI · The Point Board', t: 'Six deeds. Is it necessary? The trolley is coming.', p: 'Tap a deed, then its box. Every right one adds points. Then you choose.' },
-  { k: 'etica', est: 'o', min: 7, img: 'sala', rot: 'VII · Ethics Class', t: 'Michael’s class: real life, no trains.', p: 'Read the situation. Tap how you answer. Then say it in your words.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Debate', t: 'The debate.', p: 'Debate.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'V · Three Ways to Say It', t: 'Have to, don’t have to, had to. Three moments.', p: 'Look at the three ways. Tap the right one for each sentence. Then say three of your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'VI · Have To', t: 'Chidi’s notes: one word is wrong in every line.', p: 'Say the right word for each line. Then tap Check.' },
+  { k: 'placar', est: 'o', min: 7, img: 'capa', rot: 'VII · The Point Board', t: 'Six deeds. Is it necessary? The trolley is coming.', p: 'Tap a deed, then its box. Every right one adds points. Then you choose.' },
+  { k: 'etica', est: 'o', min: 7, img: 'sala', rot: 'VIII · Ethics Class', t: 'Michael’s class: real life, no trains.', p: 'Read the situation. Tap how you answer. Then say it in your words.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Debate', t: 'The debate.', p: 'Debate.' }
 ];
 
 var SERIE = 'The Good Place', ANO = '2016';
@@ -273,3 +274,25 @@ var FIM = { tipo: 'debate', rot: 'VIII · The Debate', t: 'Do you have to pull t
   b: { rot: 'Don’t pull it', motivos: ['You don’t have to hurt anyone.', 'It isn’t your decision.', 'The one person has a family too.'] },
   frases: ['You have to… / You don’t have to…', 'Do we really have to…?', 'I see your point, but…'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Have to, don’t have to, had to. Three ways.',
+  usos: [
+    { t: 'HAVE TO', f: 'You have to pull the lever.', d: 'It is necessary now. You have no choice.', img: 'capa' },
+    { t: 'DON’T HAVE TO', f: 'You don’t have to pull it.', d: 'It is not necessary. You can choose.', img: 'sala' },
+    { t: 'HAD TO', f: 'Chidi had to choose fast.', d: 'It was necessary yesterday.', img: 'bairro' }
+  ],
+  pergunta: 'Which way is it?',
+  itens: [
+    { f: 'Chidi, hurry! The trolley is coming. You have to pull the lever!', c: 0 },
+    { f: 'Relax, Eleanor. We don’t have to decide today. The class is tomorrow.', c: 1 },
+    { f: 'Yesterday Eleanor had to run to the lever.', c: 2 },
+    { f: 'Tahani doesn’t have to come to the class. It is optional.', c: 1 },
+    { f: 'Last night Michael had to explain the points again.', c: 2 },
+    { f: 'Eleanor has to answer. Nobody else can.', c: 0 }
+  ],
+  nota: 'Same two words, three moments. <b>have to</b> / <b>has to</b> = it is necessary. <b>don’t have to</b> / <b>doesn’t have to</b> = it is not necessary: you can choose. <b>had to</b> = it was necessary, in the past. Never “he have to”.',
+  uso: { p: 'Your turn. One thing you have to do this week, one thing you don’t have to do, and one thing you had to do yesterday.', molde: ['I have to …', 'I don’t have to …', 'Yesterday I had to …'], ex: 'I have to finish a report. I don’t have to work on Saturday. Yesterday I had to wake up at five.' },
+  prof: 'Read the three ways out loud with the student. Then the student taps one for each sentence. No rule to read: the three ways are the rule.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

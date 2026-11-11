@@ -14,15 +14,16 @@
 var L = [
   { k: 'capa', est: null, img: 'festa' },
   { k: 'noticia', est: 'o', min: 7, img: 'festa', rot: 'I · Good News', t: 'Before the party: your people.', p: 'Pick a card. Answer out loud with a full sentence. Then the follow-up comes.' },
-  { k: 'times', est: 'f', min: 6, img: 'festa', rot: 'II · Two Teams', t: 'English has two teams of pronouns.', p: 'Pick a word. Say the short sentence. Then send it: does it START a sentence, or FOLLOW the verb?' },
-  { k: 'agenda', est: 'f', min: 6, img: 'festa', rot: 'III · The Contact Book', t: 'Eight contacts. Each wire needs one word.', p: 'Pick a contact. Read the note out loud with the right word. Then plug the wire in.' },
-  { k: 'viele', est: 'f', min: 6, img: 'festa', rot: 'IV · I See He', t: 'The wrong one sounds right. Choose anyway.', p: 'Read both out loud. Tap the right one. Say it again.' },
-  { k: 'som', est: 'o', min: 7, img: 'festa', rot: 'V · Say It Fast', t: 'You write HIM. You say IM.', p: 'Your teacher says both. Repeat four times: the fourth one counts.' },
-  { k: 'ordem', est: 'f', min: 6, img: 'festa', rot: 'VI · Two in One Line', t: 'Two people in one line. The order is the test.', p: 'Tap the pieces in order. Then read the line out loud.' },
-  { k: 'festa', est: 'o', min: 7, extra: 1, img: 'festa', rot: 'VII · The Phone Keeps Ringing', t: 'Friday night. Everybody calls you with a question.', p: 'Answer the call. Your teacher is the caller. Answer with a person or a thing after the verb.' },
-  { k: 'quem', est: 'o', min: 7, extra: 1, img: 'festa', rot: 'VIII · Who Are You Talking About?', t: 'The situation and the pieces. You build the sentence.', p: 'Say the whole sentence first. Then check it.' },
-  { k: 'contatos', est: 'o', min: 7, extra: 1, img: 'festa', rot: 'IX · Your Own Contacts', t: 'Now your real people.', p: 'Answer out loud. Every answer ends with a person or a thing.' },
-  { k: 'fim', est: 'w', min: 6, img: 'festa', rot: 'X · The Group Chat', t: 'Saturday morning. Write to the party group.', p: 'Five messages: who brings what, who picks up who. A person or a thing after every verb. The red line watches the pronouns. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 3, img: 'festa', rot: 'II · The Pocket Rule', t: 'Four lines. Keep them in the corner.', p: 'Read one line at a time. Then keep the rule in the corner for the party scenes.' },
+  { k: 'times', est: 'f', min: 6, img: 'festa', rot: 'III · Two Teams', t: 'English has two teams of pronouns.', p: 'Pick a word. Say the short sentence. Then send it: does it START a sentence, or FOLLOW the verb?' },
+  { k: 'agenda', est: 'f', min: 6, img: 'festa', rot: 'IV · The Contact Book', t: 'Eight contacts. Each wire needs one word.', p: 'Pick a contact. Read the note out loud with the right word. Then plug the wire in.' },
+  { k: 'viele', est: 'f', min: 6, img: 'festa', rot: 'V · I See He', t: 'The wrong one sounds right. Choose anyway.', p: 'Read both out loud. Tap the right one. Say it again.' },
+  { k: 'som', est: 'o', min: 7, img: 'festa', rot: 'VI · Say It Fast', t: 'You write HIM. You say IM.', p: 'Your teacher says both. Repeat four times: the fourth one counts.' },
+  { k: 'ordem', est: 'f', min: 6, img: 'festa', rot: 'VII · Two in One Line', t: 'Two people in one line. The order is the test.', p: 'Tap the pieces in order. Then read the line out loud.' },
+  { k: 'festa', est: 'o', min: 7, extra: 1, img: 'festa', rot: 'VIII · The Phone Keeps Ringing', t: 'Friday night. Everybody calls you with a question.', p: 'Answer the call. Your teacher is the caller. Answer with a person or a thing after the verb.' },
+  { k: 'quem', est: 'o', min: 7, extra: 1, img: 'festa', rot: 'IX · Who Are You Talking About?', t: 'The situation and the pieces. You build the sentence.', p: 'Say the whole sentence first. Then check it.' },
+  { k: 'contatos', est: 'o', min: 7, extra: 1, img: 'festa', rot: 'X · Your Own Contacts', t: 'Now your real people.', p: 'Answer out loud. Every answer ends with a person or a thing.' },
+  { k: 'fim', est: 'w', min: 6, img: 'festa', rot: 'XI · The Group Chat', t: 'Saturday morning. Write to the party group.', p: 'Five messages: who brings what, who picks up who. A person or a thing after every verb. The red line watches the pronouns. It goes to your My notes.' }
 ];
 
 /* I · boas notícias */
@@ -233,3 +234,15 @@ TOQUES['fs-parte'] = function (b, n, v) { var f = S.festa; f.partes[f.n] = f.par
 TOQUES['fs-erro'] = function () { var f = S.festa; f.erro[f.n] = !f.erro[f.n]; };
 TOQUES['fs-prox'] = function () { var f = S.festa, x = CHAMADAS[f.n]; if (x) f.foi[x.t] = 1; f.n++; f.atendeu = 0; };
 TOQUES['qm-prox'] = function () { S.quem.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de times.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'Two teams',
+  linhas: [
+    '<b>I · you · he · she · we · they</b> start the sentence',
+    '<b>me · you · him · her · it · us · them</b> come after the verb',
+    'with · for · to · about + <b>her</b>, <b>them</b>, <b>me</b>',
+    'a person: <b>him / her</b> · a thing: <b>it</b> · more than one: <b>them</b>'
+  ],
+  uso: { p: 'Your turn. Two people from your life. One sentence about what they do, one about what you do for them.', molde: ['They … me.', 'I … them.'], ex: 'My parents call me every Sunday. I always cook for them on holidays.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

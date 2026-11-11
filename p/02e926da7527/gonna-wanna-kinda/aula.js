@@ -15,9 +15,10 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Series and Films', t: 'What do you watch in English?', p: 'Answer with detail. Then ask the question back.' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · The Voice Message', t: 'Leo sends a message to Ana.', p: 'Read it out loud, fast and relaxed, like Leo. Then decode it.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Spoken or Written?', t: 'Same words, two worlds.', p: 'Compare A and B. Where does each one belong?' },
-  { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'IV · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'V · Where Would You Say It?', t: 'Gonna in a job interview? Choose.', p: 'Choose A or B. Then explain: spoken or written? Friends or work?' }
+  { k: 'gx', est: 'l', min: 4, img: 'conversa', rot: 'III · Say It Like Leo', t: 'The words melt together when we talk fast.', p: 'Listen to the pairs. Then the ear test: which one do you hear? Then say yours, fast and relaxed.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'IV · Spoken or Written?', t: 'Same words, two worlds.', p: 'Compare A and B. Where does each one belong?' },
+  { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'V · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
+  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'VI · Where Would You Say It?', t: 'Gonna in a job interview? Choose.', p: 'Choose A or B. Then explain: spoken or written? Friends or work?' }
 ];
 var PORTAS = [];
 
@@ -66,3 +67,9 @@ var ESCOLHA = [
   { a: 'write “wanna” to your best friend', b: 'write “want to” to your best friend', chips: ['With friends, …', 'It sounds …'], ex: 'Wanna! “Want to” sounds a bit cold with my best friend.' },
   { a: 'write “gonna” in an email to a client', b: 'write “going to” in an email to a client', chips: ['To a client, I’d write …', 'Never …'], ex: 'Going to. Gonna would look unprofessional.' },
   { a: 'use “y’know” in a presentation', b: 'avoid it in a presentation', chips: ['Too many y’knows sound …', 'One or two …'], ex: 'Avoid it. One is fine, but ten sound nervous.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G11 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'som2', titulo: 'Careful or relaxed? Listen first.', toque: 'Tap ▶ and listen. The careful one is slow and clear. The relaxed one melts: going to → gonna, want to → wanna.', pares: [[{ t: 'I’m going to come.', fala: 'I am going to come to the show.' }, { t: 'I’m gonna come.', fala: 'I am gonna come to the show.' }], [{ t: 'Do you want to go?', fala: 'Do you want to go with me?' }, { t: 'D’you wanna go?', fala: 'Do you wanna go with me?' }], [{ t: 'Let me see.', fala: 'Let me see the tickets.' }, { t: 'Lemme see.', fala: 'Lemme see the tickets.' }]], pergunta: 'The ear test. Which one do you hear?', itens: [{ fala: 'We are gonna be late.', o: ['going to', 'gonna'], c: 1 }, { fala: 'I am going to call you tomorrow.', o: ['going to', 'gonna'], c: 0 }, { fala: 'I wanna see the band.', o: ['want to', 'wanna'], c: 1 }, { fala: 'I want to see the band.', o: ['want to', 'wanna'], c: 0 }], nota: 'Spoken English joins words: <b>going to → gonna</b>, <b>want to → wanna</b>, <b>got to → gotta</b>, <b>kind of → kinda</b>, <b>let me → lemme</b>. Understand them in films. Say them with friends. Never write them in an e-mail to work, and never say <b>I’m gonna to</b>.', uso: { p: 'Your turn. Tell your friend two plans for the weekend, relaxed and fast, with gonna and wanna.', molde: ['I’m gonna …', 'I wanna …', 'Do you wanna …?'], ex: 'I’m gonna see a band on Saturday. I wanna dance all night. Do you wanna come?' }, prof: 'The ▶ uses the voice of the browser. No sound? Say the sentences yourself, careful first and relaxed second.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_som', GX_EXPLICA); };

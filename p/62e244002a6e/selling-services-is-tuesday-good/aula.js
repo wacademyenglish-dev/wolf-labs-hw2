@@ -16,11 +16,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Week', t: 'What time do you start work?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 7, img: 'mesa', rot: 'II · A Chat about a Demo', t: 'Leo and a client look for a time.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 8, img: 'conversa', rot: 'III · The Meeting Moves', t: 'A client calls: she can’t do Thursday.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · On Monday, at 10, in the Morning', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'erros', est: 'f', min: 8, img: 'mesa', rot: 'V · Fix the Message', t: 'A message to move a meeting. Five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
-  { k: 'escolha', est: 'o', min: 5, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your Meeting Message', t: 'Move a real meeting: sorry + two new options.', p: 'Write it. Then read it out loud, times too.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'IV · On, At or In?', t: 'Three words for time.', p: 'Look at the three kinds of time. Tap the right word for each sentence. Then invite your teacher.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · On Monday, at 10, in the Morning', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'erros', est: 'f', min: 8, img: 'mesa', rot: 'VI · Fix the Message', t: 'A message to move a meeting. Five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 5, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your Meeting Message', t: 'Move a real meeting: sorry + two new options.', p: 'Write it. Then read it out loud, times too.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -98,3 +99,26 @@ var PODE = [
   'I can say in the morning, in the afternoon, in March.',
   'I can invite a client and move a meeting by message.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'On, at or in? Three kinds of time.',
+  usos: [
+    { t: 'ON', f: 'Can we meet on Monday?', d: 'Days and dates: on Friday, on March 12, on Friday morning.' },
+    { t: 'AT', f: 'The call is at 10 a.m.', d: 'Clock times: at 10 a.m., at noon, at night.' },
+    { t: 'IN', f: 'I’m free in the morning.', d: 'Parts of the day, months and years: in the afternoon, in March, in 2027.' }
+  ],
+  pergunta: 'Which word fits the gap?',
+  itens: [
+    { f: 'The demo is … Tuesday.', c: 0 },
+    { f: 'Can you call me … 3 p.m.?', c: 1 },
+    { f: 'We are free … the afternoon.', c: 2 },
+    { f: 'Let’s meet … March 12.', c: 0 },
+    { f: 'The meeting starts … noon.', c: 1 },
+    { f: 'The contract starts … January.', c: 2 }
+  ],
+  nota: 'A day or a date: <b>on</b>. A clock time: <b>at</b>. A part of the day, a month or a year: <b>in</b>. The clock goes from 1 to 12 with <b>a.m.</b> or <b>p.m.</b>: 15h is 3 p.m.',
+  uso: { p: 'Your turn. Invite your teacher to a meeting: the day, the time and the part of the day you are free.', molde: ['Can we meet on …?', 'The call is at …', 'I’m free in the …'], ex: 'Can we meet on Thursday? The call is at 3 p.m. I’m free in the afternoon.' },
+  prof: 'Read the three kinds of time out loud with the student. Then the student taps the word for each sentence. No rule to read: the three kinds are the rule.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

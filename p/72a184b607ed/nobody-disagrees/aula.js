@@ -18,15 +18,16 @@
 var L = [
   { k: 'capa', est: null, img: 'reuniao' },
   { k: 'abre', est: 'o', min: 7, img: 'sala', rot: 'I · The Thing You Don’t Say', t: 'Think of someone you disagree with, and you don’t say it.', p: 'Tap who it is. Then answer the three questions out loud. Keep your first words: they come back.' },
-  { k: 'termo', est: 'o', min: 7, img: 'reuniao', rot: 'II · The Chairs', t: 'Eight lines from real meetings. Watch the chairs.', p: 'Read it out loud. Tap HOT or COOL. A hot line pushes the chairs away. Then say the careful version.' },
-  { k: 'tres', est: 'l', min: 7, img: 'mesa', rot: 'III · One Fact, Three Ways', t: 'The deadline is too early. Everybody knows it. Three ways to say it.', p: 'Play each line. Say it back. Then tap what it does to the room.' },
-  { k: 'frases', est: 'f', min: 6, img: 'mesa', rot: 'IV · Cool It Down', t: 'Six hot lines. Choose the careful version that still disagrees.', p: 'It must still say no, and be correct English. Say it out loud with a calm voice.' },
-  { k: 'voz', est: 'l', min: 7, img: 'sala', rot: 'V · Up or Down', t: 'The same words, said two ways. One really asks. One tells.', p: 'Play both. Tap the one that sounds like a real question.' },
-  { k: 'gravada', est: 'l', min: 7, extra: 1, img: 'sala', rot: 'VI · The Recorded Meeting', t: 'Anna wants the March date. Mark isn’t sure. Six turns.', p: 'Play each turn. Is the speaker ASKING or TELLING? The line appears after you choose.' },
-  { k: 'ideias', est: 'o', min: 7, extra: 1, img: 'reuniao', rot: 'VII · Four Bad Ideas', t: 'Your teacher is the boss, with four bad ideas.', p: 'Disagree, and keep the chairs at the table. Say your careful opening and finish it. Your teacher pushes back once.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VIII · I’m Not Agree', t: 'Five sentences have a problem. One is right.', p: 'Choose the fix. Then say the whole sentence.' },
-  { k: 'sua', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'IX · Your Line, Three Ways', t: 'Your disagreement from scene I comes back.', p: 'Say it three ways, out loud. Then tell your teacher which one you would really use.' },
-  { k: 'fim', est: 'w', min: 6, img: 'reuniao', rot: 'X · The Room, Again', t: 'The meeting is over. The chairs are still at the table.', p: 'Write a careful disagreement for your real week. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'reuniao', rot: 'II · In the Meeting', t: 'Anna and Mark in the meeting. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then disagree in your own words.' },
+  { k: 'termo', est: 'o', min: 7, img: 'reuniao', rot: 'III · The Chairs', t: 'Eight lines from real meetings. Watch the chairs.', p: 'Read it out loud. Tap HOT or COOL. A hot line pushes the chairs away. Then say the careful version.' },
+  { k: 'tres', est: 'l', min: 7, img: 'mesa', rot: 'IV · One Fact, Three Ways', t: 'The deadline is too early. Everybody knows it. Three ways to say it.', p: 'Play each line. Say it back. Then tap what it does to the room.' },
+  { k: 'frases', est: 'f', min: 6, img: 'mesa', rot: 'V · Cool It Down', t: 'Six hot lines. Choose the careful version that still disagrees.', p: 'It must still say no, and be correct English. Say it out loud with a calm voice.' },
+  { k: 'voz', est: 'l', min: 7, img: 'sala', rot: 'VI · Up or Down', t: 'The same words, said two ways. One really asks. One tells.', p: 'Play both. Tap the one that sounds like a real question.' },
+  { k: 'gravada', est: 'l', min: 7, extra: 1, img: 'sala', rot: 'VII · The Recorded Meeting', t: 'Anna wants the March date. Mark isn’t sure. Six turns.', p: 'Play each turn. Is the speaker ASKING or TELLING? The line appears after you choose.' },
+  { k: 'ideias', est: 'o', min: 7, extra: 1, img: 'reuniao', rot: 'VIII · Four Bad Ideas', t: 'Your teacher is the boss, with four bad ideas.', p: 'Disagree, and keep the chairs at the table. Say your careful opening and finish it. Your teacher pushes back once.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'IX · I’m Not Agree', t: 'Five sentences have a problem. One is right.', p: 'Choose the fix. Then say the whole sentence.' },
+  { k: 'sua', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'X · Your Line, Three Ways', t: 'Your disagreement from scene I comes back.', p: 'Say it three ways, out loud. Then tell your teacher which one you would really use.' },
+  { k: 'fim', est: 'w', min: 6, img: 'reuniao', rot: 'XI · The Room, Again', t: 'The meeting is over. The chairs are still at the table.', p: 'Write a careful disagreement for your real week. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -216,3 +217,27 @@ TOQUES.id = function (b, n, v) { S.id.esc = v; };
 TOQUES['id-prox'] = function () { S.id = { n: S.id.n + 1, esc: '' }; };
 TOQUES.er = function (b, n) { S.er.esc = n; };
 TOQUES['er-prox'] = function () { S.er = { n: S.er.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de termo.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The meeting, at the table. Tap the lit words.',
+  falas: [
+    { q: 'Boss', f: 'We’ll finish the whole report by Friday.' },
+    { q: 'Anna', f: '[[I see what you mean, but]] Friday is very early.' },
+    { q: 'Boss', f: 'Then we’ll skip the tests.' },
+    { q: 'Mark', f: '[[I’m not sure that]] it’s safe.' },
+    { q: 'Anna', f: '[[Isn’t it]] a bit risky?' },
+    { q: 'Mark', f: '[[Wouldn’t it be better to]] wait until Monday?' },
+    { q: 'Boss', f: 'So you don’t like my idea?' },
+    { q: 'Anna', f: 'It’s not that. [[I don’t agree]] with the date.' }
+  ],
+  porques: [
+    'It shows you listened first. Then but, and the real no.',
+    'A soft no: you doubt it, you don’t say “wrong”.',
+    'A negative question: soft and still clear. Isn’t it a bit …?',
+    'A suggestion as a question: Wouldn’t it be better to + verb?',
+    'I don’t agree. Never “I’m not agree”: agree is a verb, no be.'
+  ],
+  nota: 'The same no, in cooler words: <b>I see what you mean, but …</b> · <b>I’m not sure that …</b> · <b>Isn’t it a bit …?</b> · <b>Wouldn’t it be better to …?</b> And always <b>I don’t agree</b>, never “I’m not agree”.',
+  uso: { p: 'Your turn. Your boss says: “Let’s have the meeting at 7 AM.” Disagree in two careful ways.', molde: ['I see what you mean, but …', 'Wouldn’t it be better to …?'], ex: 'I see what you mean, but 7 AM is very early. Wouldn’t it be better to meet at nine?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

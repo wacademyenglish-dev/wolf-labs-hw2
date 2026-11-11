@@ -17,12 +17,13 @@ var L = [
   { k: 'video1', est: 'l', min: 7, img: 'porta', rot: 'III · Four People', t: 'Four people meet for the first time.', p: 'Don’t worry about every word. Catch the names.' },
   { k: 'fila', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'IV · The Queue', t: 'Four guests in the queue. Answer each one.', p: 'Play the guest. Answer with three things: hello, your name, nice to meet you. The guest gets a badge and goes in.' },
   { k: 'soletra', est: 'f', min: 6, img: 'crachas', rot: 'V · Spell It', t: 'The badge printer needs the letters.', p: 'Spell each name out loud. Your teacher taps the letters. Letters that sound alike live in the same family.' },
-  { k: 'hisher', est: 'l', min: 7, img: 'crachas', rot: 'VI · His or Her', t: 'Sian has a list, and one name is missing.', p: 'Watch, listen for HIS and HER. Then help Sian: choose, and say the whole sentence.' },
-  { k: 'momentos', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'VII · Five Moments', t: 'Someone arrives. What do you say?', p: 'Choose. Then say it to your teacher, who plays the person.' },
-  { k: 'monta', est: 'f', min: 6, extra: 1, img: 'cafe', rot: 'VIII · Build It', t: 'Four sentences for every day.', p: 'Tap the words in order. Then say the sentence out loud.' },
-  { k: 'festa', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'IX · The Welcome Party', t: 'Three new guests. You start every conversation.', p: 'Your teacher plays the guest. Say all five things, and the guest joins your circle.' },
-  { k: 'gente', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'X · Your People', t: 'Now real people from your life.', p: 'Your teacher asks. You answer, with his and her.' },
-  { k: 'fim', est: 'w', min: 6, img: 'porta', rot: 'XI · Goodbye', t: 'Tim says goodbye. Write your first conversation.', p: 'Hello, your name, the spelling, a question, nice to meet you. The red line watches the little words. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'crachas', rot: 'VI · Find the Rule', t: 'Four badges. His or her?', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'hisher', est: 'l', min: 7, img: 'crachas', rot: 'VII · His or Her', t: 'Sian has a list, and one name is missing.', p: 'Watch, listen for HIS and HER. Then help Sian: choose, and say the whole sentence.' },
+  { k: 'momentos', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'VIII · Five Moments', t: 'Someone arrives. What do you say?', p: 'Choose. Then say it to your teacher, who plays the person.' },
+  { k: 'monta', est: 'f', min: 6, extra: 1, img: 'cafe', rot: 'IX · Build It', t: 'Four sentences for every day.', p: 'Tap the words in order. Then say the sentence out loud.' },
+  { k: 'festa', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'X · The Welcome Party', t: 'Three new guests. You start every conversation.', p: 'Your teacher plays the guest. Say all five things, and the guest joins your circle.' },
+  { k: 'gente', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'XI · Your People', t: 'Now real people from your life.', p: 'Your teacher asks. You answer, with his and her.' },
+  { k: 'fim', est: 'w', min: 6, img: 'porta', rot: 'XII · Goodbye', t: 'Tim says goodbye. Write your first conversation.', p: 'Hello, your name, the spelling, a question, nice to meet you. The red line watches the little words. It goes to your My notes.' }
 ];
 
 var ABC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -244,3 +245,19 @@ TOQUES['mo-zera'] = function () { S.monta.usados = []; S.monta.err = -1; };
 TOQUES['mo-prox'] = function () { S.monta = { n: S.monta.n + 1, usados: [], err: -1 }; };
 TOQUES['fs-p'] = function (b, n, v) { var f = S.festa; f.partes[f.n] = f.partes[f.n] || {}; f.partes[f.n][v] = !f.partes[f.n][v]; };
 TOQUES['fs-prox'] = function () { S.festa.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de hisher.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four badges. Find the rule yourself.',
+  exemplos: [
+    'Tim is a man. <b>His</b> name is Tim.',
+    'Sian is a woman. <b>Her</b> name is Sian.',
+    'Paul is at the desk. <b>His</b> badge is blue.',
+    'Ana is at the door. <b>Her</b> badge is green.'
+  ],
+  pergunta: 'We say his or her. How do we choose?',
+  opcoes: ['his = a man, her = a woman', 'his = a woman, her = a man', 'his = my, her = your'], c: 0,
+  nao: 'Not that one. Look at the person in each sentence again: Tim, Sian, Paul, Ana.',
+  regra: '<b>His</b> = the person is a man. <b>Her</b> = the person is a woman. His name is Tim. Her name is Sian.',
+  uso: { p: 'Your turn. Say the name of a man and a woman you know. Use his and her.', molde: ['His name is …', 'Her name is …'], ex: 'His name is Pedro. Her name is Clara.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

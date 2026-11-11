@@ -29,12 +29,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'lareira', rot: 'I · Your Holidays', t: 'Before dinner: you, your family and the end of the year.', p: 'Tap a gift tag. The student answers; then the teacher answers too.' },
   { k: 'tesoura', est: 'o', min: 7, img: 'crackers', rot: 'II · The Crackers', t: 'Little Leo wrote the answers inside the crackers. Every one is way too long.', p: 'Read the cracker’s question. Answer short, out loud. Then tap Check: the scissors cut Leo’s answer.' },
-  { k: 'regra', est: 'f', min: 7, img: 'cozinha', rot: 'III · The Rule', t: 'Don’t repeat. Keep one small word.', p: 'Read the table talk out loud. Tap the small word in each answer. Then finish the rule.' },
-  { k: 'aux', est: 'f', min: 6, img: 'cozinha', rot: 'IV · The Tense Decides', t: 'So … I, Neither … I, She …? The auxiliary comes from their sentence.', p: 'One helper is wrong in each answer. Say the answer the right way out loud. Then tap Check.' },
-  { k: 'guirlanda', est: 'o', min: 7, img: 'guirlanda', rot: 'V · The Wreath', t: 'Six quick lines from around the table. Each right match lights the wreath.', p: 'Tap what they say, then the short answer. Then say each pair out loud, fast.' },
-  { k: 'ruth', est: 'o', min: 7, img: 'janela', rot: 'VI · Aunt Ruth on Speaker', t: 'Aunt Ruth couldn’t come this year. The phone goes around the table.', p: 'Read Aunt Ruth’s line. Answer short, add one detail. Then tap Check and ask her back.' },
-  { k: 'real', est: 'o', min: 7, extra: 1, img: 'presentes', rot: 'VII · Short and Real', t: 'Now it’s your life. Short answer first, then the story.', p: 'Tap the short answer that is true for you. Say it. Then add one real detail.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Own Table', t: 'Who talks the most at your holiday table, and what do you say back?', p: 'Three lines your family always says, and your short answers. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'lareira', rot: 'III · At the Long Table', t: 'Grandma Edith’s table. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then answer your teacher with one small word.' },
+  { k: 'regra', est: 'f', min: 7, img: 'cozinha', rot: 'IV · The Rule', t: 'Don’t repeat. Keep one small word.', p: 'Read the table talk out loud. Tap the small word in each answer. Then finish the rule.' },
+  { k: 'aux', est: 'f', min: 6, img: 'cozinha', rot: 'V · The Tense Decides', t: 'So … I, Neither … I, She …? The auxiliary comes from their sentence.', p: 'One helper is wrong in each answer. Say the answer the right way out loud. Then tap Check.' },
+  { k: 'guirlanda', est: 'o', min: 7, img: 'guirlanda', rot: 'VI · The Wreath', t: 'Six quick lines from around the table. Each right match lights the wreath.', p: 'Tap what they say, then the short answer. Then say each pair out loud, fast.' },
+  { k: 'ruth', est: 'o', min: 7, img: 'janela', rot: 'VII · Aunt Ruth on Speaker', t: 'Aunt Ruth couldn’t come this year. The phone goes around the table.', p: 'Read Aunt Ruth’s line. Answer short, add one detail. Then tap Check and ask her back.' },
+  { k: 'real', est: 'o', min: 7, extra: 1, img: 'presentes', rot: 'VIII · Short and Real', t: 'Now it’s your life. Short answer first, then the story.', p: 'Tap the short answer that is true for you. Say it. Then add one real detail.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Own Table', t: 'Who talks the most at your holiday table, and what do you say back?', p: 'Three lines your family always says, and your short answers. They go to your My notes.' }
 ];
 
 /* a mesa: doze lugares (0 = cabeceira) */
@@ -206,3 +207,31 @@ R.fim = function (c) {
     + '<p class="hw"><a class="pilula" href="HW/" target="_blank" rel="noopener">Homework for the student →</a></p></div></div>';
 };
 
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'Christmas Eve at the long table. Tap the lit words.',
+  falas: [
+    { q: 'Grandma Edith', f: 'Will it snow on Christmas Eve?' },
+    { q: 'You', f: '[[I hope so]]. I love the snow.' },
+    { q: 'Leo', f: 'I can’t stand the cold.' },
+    { q: 'You', f: '[[Neither can I]]. But I love the fire.' },
+    { q: 'Grandma Edith', f: 'Are you staying until Sunday?' },
+    { q: 'You', f: '[[I’m afraid not]]. I start work on Saturday.' },
+    { q: 'Leo', f: 'I always sleep late on the holidays.' },
+    { q: 'You', f: '[[So do I]]. Until 10 AM.' },
+    { q: 'Aunt Ruth', f: 'Your grandma put a cup of sugar in the cake.' },
+    { q: 'You', f: '[[She did?]] I thought it was perfect.' },
+    { q: 'Grandma Edith', f: 'Would you like to help with the dishes?' },
+    { q: 'You', f: 'Sure, [[I’d love to]].' }
+  ],
+  porques: [
+    'Don’t repeat the whole sentence. One small word holds it: so.',
+    'A no sentence with can’t: neither can I. The helper comes from their sentence.',
+    'The answer is no, and you are sorry: not. Not “I’m afraid no”.',
+    'A yes sentence with a plain verb: so do I. The helper is do.',
+    'An echo question: the same helper as theirs, to show you are listening.',
+    'After to, the verb stays out. You don’t say it again: I’d love to.'
+  ],
+  nota: 'Don’t repeat the whole sentence. Keep one small word: <b>so</b> or <b>not</b> after think, hope, be afraid. Copy their helper: <b>So do I</b>, <b>Neither can I</b>, <b>She did?</b>. After <b>to</b>, the verb stays out: <b>I’d love to</b>.',
+  uso: { p: 'Your turn. Your teacher says a sentence. Answer with one small word: so, not, neither, or an echo.', molde: ['I think …', 'Neither …', 'So …'], ex: 'Teacher: I can’t cook. You: Neither can I. Teacher: I love pizza. You: So do I.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

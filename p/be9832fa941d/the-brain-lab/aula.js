@@ -25,11 +25,12 @@ var L = [
   { k: 'palavras', est: 'l', img: 'lab', rot: 'III · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'lab', reg: 2, rot: 'IV · The Video', t: 'What does a second language do to your brain?', p: 'The video is locked. Answer first, then it plays in four short chapters. Then True or Lie.' },
   { k: 'falas', est: 'l', extra: 1, img: 'lab', rot: 'V · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'dial', est: 'f', min: 6, img: 'lab', reg: 3, rot: 'VI · The Dial', t: 'Not just “faster”. How MUCH faster?', p: 'Read the numbers. Say the sentence. Your teacher taps the degree you used.' },
-  { k: 'tipos', est: 'o', min: 7, img: 'lab', reg: 4, rot: 'VII · Which Bilingual Are You?', t: 'Three bilinguals in one family. Three different brains.', p: 'Read about each person. Guess the type. Then: which one are you?' },
-  { k: 'troca', est: 'o', min: 7, extra: 1, img: 'lab', reg: 5, rot: 'VIII · The Switch Test', t: 'Violet border: English. Green border: Portuguese.', p: 'Say each number in the language of its border. Round one: one language. Round two: switching. Your teacher taps after each card.' },
-  { k: 'mito', est: 'o', min: 7, extra: 1, img: 'lab', reg: 6, rot: 'IX · Myth or Fact?', t: 'Six things people say about bilinguals.', p: 'Vote out loud. Then say it with a degree: much, far, a bit, slightly.' },
-  { k: 'laudo', est: 'w', min: 6, img: 'capa', reg: 7, rot: 'X · Your Brain Report', t: 'Is it ever too late to learn a language?', p: 'Read your numbers out loud with the grammar. Then write your report. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'lab', reg: 2, rot: 'VI · Three Sizes', t: 'The same words, three sizes of difference.', p: 'Look at the three sizes. Tap the size of each sentence. Then say three of your own.' },
+  { k: 'dial', est: 'f', min: 6, img: 'lab', reg: 3, rot: 'VII · The Dial', t: 'Not just “faster”. How MUCH faster?', p: 'Read the numbers. Say the sentence. Your teacher taps the degree you used.' },
+  { k: 'tipos', est: 'o', min: 7, img: 'lab', reg: 4, rot: 'VIII · Which Bilingual Are You?', t: 'Three bilinguals in one family. Three different brains.', p: 'Read about each person. Guess the type. Then: which one are you?' },
+  { k: 'troca', est: 'o', min: 7, extra: 1, img: 'lab', reg: 5, rot: 'IX · The Switch Test', t: 'Violet border: English. Green border: Portuguese.', p: 'Say each number in the language of its border. Round one: one language. Round two: switching. Your teacher taps after each card.' },
+  { k: 'mito', est: 'o', min: 7, extra: 1, img: 'lab', reg: 6, rot: 'X · Myth or Fact?', t: 'Six things people say about bilinguals.', p: 'Vote out loud. Then say it with a degree: much, far, a bit, slightly.' },
+  { k: 'laudo', est: 'w', min: 6, img: 'capa', reg: 7, rot: 'XI · Your Brain Report', t: 'Is it ever too late to learn a language?', p: 'Read your numbers out loud with the grammar. Then write your report. It goes to your My notes.' }
 ];
 
 var PASSA = [
@@ -286,3 +287,24 @@ TOQUES['tr-erro'] = function () { S.tr.erros[S.tr.r]++; };
 TOQUES['tr-ok'] = function () { var e = S.tr; e.i++; if (e.i >= 10) { e.tempos[e.r] = Date.now() - e.t0; e.r++; e.i = -1; } };
 TOQUES.mt = function (b, n, v) { S.mt.esc = v; };
 TOQUES['mt-prox'] = function () { S.mt = { n: S.mt.n + 1, esc: '' }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de dial.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'How big is the difference? Three sizes.',
+  usos: [
+    { t: 'A BIG DIFFERENCE', f: 'much / a lot / far + -er', d: 'Much faster. The gap is big.' },
+    { t: 'A SMALL DIFFERENCE', f: 'a bit / slightly + -er', d: 'A bit faster. The gap is small.' },
+    { t: 'FAR BEHIND', f: 'not nearly as … as', d: 'Not nearly as fast as. The second one is far behind.' }
+  ],
+  pergunta: 'Which size is it?',
+  itens: [
+    { f: 'The bilingual group was <b>far</b> faster than the other group.', c: 0 },
+    { f: 'The test took <b>a bit</b> longer in English. Only two seconds.', c: 1 },
+    { f: 'Portuguese is <b>not nearly as</b> hard for me as English.', c: 2 },
+    { f: 'Her scan looks <b>slightly</b> brighter than before.', c: 1 },
+    { f: 'He is <b>a lot</b> more careful than last year.', c: 0 },
+    { f: 'My English is <b>not nearly as</b> fast as my Portuguese.', c: 2 }
+  ],
+  nota: 'Never “very faster”. Choose the size of the difference: <b>much / a lot / far</b> + -er (big), <b>a bit / slightly</b> + -er (small), <b>not nearly as … as</b> (far behind).',
+  uso: { p: 'Your turn. Compare two things in your life, with three different sizes.', molde: ['… is much …er than …', '… is a bit …er', '… isn’t nearly as … as …'], ex: 'My phone is much newer than my laptop. My coffee is a bit stronger today. My bike isn’t nearly as fast as a car.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

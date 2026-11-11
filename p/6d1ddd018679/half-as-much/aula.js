@@ -29,12 +29,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 6, img: 'fundo', rot: 'I · Your Gears', t: 'Your phone is gear A. What does it turn?', p: 'Pick what you do on your phone, then what changes with it. Together, or against each other?' },
   { k: 'bea', est: 'l', min: 7, img: 'quarto', rot: 'II · Bea’s Week', t: 'Bea used her phone for six hours a day. This week she’s trying half as much.', p: 'Listen to day one. Make your predictions. Then listen to day seven. Then True or Lie.' },
-  { k: 'regra', est: 'f', min: 8, img: 'fundo', rot: 'III · Bigger, Better, Half As Much', t: 'One fact, two ways to say it: calmer than, or not as stressed as.', p: 'Pick a word and how big the change is. Say both sentences out loud.' },
-  { k: 'vozes', est: 'l', min: 7, img: 'quarto', rot: 'IV · Five Voices', t: 'Five people talk about their phones.', p: 'Listen. Say what they mean with a comparison. Then answer the question about you.' },
-  { k: 'numeros', est: 'o', min: 7, img: 'fundo', rot: 'V · Before and After', t: 'Bea’s numbers, last week and this week.', p: 'Tap a line. Describe the change. Then tell us your number.' },
-  { k: 'debate', est: 'o', min: 8, img: 'quarto', rot: 'VI · The Debate', t: 'Six ideas about phones and screens. Agree, or say why not.', p: 'Your teacher reads the idea and takes the other side. Answer in your own words.' },
-  { k: 'notas', est: 'f', min: 5, extra: 1, img: 'fundo', rot: 'VII · Fix Bea’s Notes', t: 'Bea wrote her notes fast. Five lines have a problem.', p: 'Read each line out loud the right way. Then tap it. One line is already right.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Challenge', t: 'Your own week: one thing, half as much.', p: 'Choose your challenge. Write what you think will change. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'quarto', rot: 'III · The Ladder', t: 'One change, five steps.', p: 'Read each step out loud, then go one step up. Notice how the change grows. Then climb with your own week.' },
+  { k: 'regra', est: 'f', min: 8, img: 'fundo', rot: 'IV · Bigger, Better, Half As Much', t: 'One fact, two ways to say it: calmer than, or not as stressed as.', p: 'Pick a word and how big the change is. Say both sentences out loud.' },
+  { k: 'vozes', est: 'l', min: 7, img: 'quarto', rot: 'V · Five Voices', t: 'Five people talk about their phones.', p: 'Listen. Say what they mean with a comparison. Then answer the question about you.' },
+  { k: 'numeros', est: 'o', min: 7, img: 'fundo', rot: 'VI · Before and After', t: 'Bea’s numbers, last week and this week.', p: 'Tap a line. Describe the change. Then tell us your number.' },
+  { k: 'debate', est: 'o', min: 8, img: 'quarto', rot: 'VII · The Debate', t: 'Six ideas about phones and screens. Agree, or say why not.', p: 'Your teacher reads the idea and takes the other side. Answer in your own words.' },
+  { k: 'notas', est: 'f', min: 5, extra: 1, img: 'fundo', rot: 'VIII · Fix Bea’s Notes', t: 'Bea wrote her notes fast. Five lines have a problem.', p: 'Read each line out loud the right way. Then tap it. One line is already right.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Challenge', t: 'Your own week: one thing, half as much.', p: 'Choose your challenge. Write what you think will change. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -352,3 +353,17 @@ TOQUES.nu = function (b, n) { S.nu.n = n; };
 TOQUES['db-prox'] = function () { S.db.n++; };
 TOQUES.nt = function (b, n) { S.nt[n] = 1; };
 TOQUES.dz = function (b, n, v) { S.dz = v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One change. Climb it one step at a time.',
+  degraus: [
+    { r: 'calm', f: 'Bea is calm.', d: 'One fact.' },
+    { r: 'than', f: 'Bea is <b>calmer than</b> last week.', d: 'a short adjective: -er + than. A long one: more relaxed than.' },
+    { r: 'much', f: 'She is <b>much calmer than</b> last week.', d: 'much, a bit, far: how big the change is.' },
+    { r: 'as', f: 'Last week she wasn’t <b>as calm as</b> she is now.', d: 'The same idea, the other way: not as … as.' },
+    { r: 'half', f: 'She uses her phone <b>half as much as</b> before.', d: 'half as much as · twice as many as' }
+  ],
+  nota: 'One idea, many steps: <b>calmer than</b>, <b>much calmer than</b>, <b>not as calm as</b>, <b>half as much as</b>. Never more better, never two times more.',
+  uso: { p: 'Your turn. Climb the ladder with your own phone week: …er than, much …er than, not as … as, half as much as.', molde: ['I’m … than last week.', 'Not as … as …'], ex: 'I’m calmer than last week. I’m much happier than before. I’m not as tired as I was. I use my phone half as much as before.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

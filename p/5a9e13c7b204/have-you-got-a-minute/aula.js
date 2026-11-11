@@ -23,12 +23,13 @@ var L = [
   { k: 'regra', est: 'f', min: 7, img: 'casaco', rot: 'III · One Helper', t: 'HAVE GOT is HAVE, in everyday English.', p: 'Read the cards out loud. Then find the broken part in each line. Say the fix. Tap Check.' },
   { k: 'curta', est: 'o', min: 6, img: 'casaco', rot: 'IV · The Short Way', t: '’VE for most people. ’S for one at a time.', p: 'Tap a person, then tap its box: ’VE got or ’S got. Then say it fast.' },
   { k: 'ouve', est: 'l', min: 7, img: 'cozinha', rot: 'V · Two Words or Three', t: 'Four lines at normal speed.', p: 'Play it. HAVE, or HAVE GOT? Then the transcript opens.' },
-  { k: 'bolsos', est: 'o', min: 7, img: 'casaco', rot: 'VI · The Coat', t: 'Six pockets. Something is in each one.', p: 'Pick a pocket. Ask about one thing: Have you got … in this pocket? The pocket answers the short way.' },
-  { k: 'sobra', est: 'f', min: 6, extra: 1, img: 'casaco', rot: 'VII · The Word Left Over', t: 'Build it. One word in the tray isn’t needed.', p: 'Say the sentence first. Then tap the words in order. The extra word stays behind.' },
-  { k: 'mala', est: 'o', min: 7, extra: 1, img: 'bolsa', rot: 'VIII · The Travel Check', t: 'Tomorrow you travel. Your teacher checks your bag.', p: 'Your teacher asks: Have you got …? Answer the short way. Then you check your teacher’s bag.' },
-  { k: 'coisa', est: 'f', min: 6, extra: 1, img: 'cozinha', rot: 'IX · Not Only Things', t: 'A brother, a headache, no time.', p: 'Read it out loud. Then say what kind of thing it is.' },
-  { k: 'voce', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'X · About You', t: 'Five questions. They all start the same way.', p: 'Answer the short way first. Then say more.' },
-  { k: 'fim', est: 'w', min: 6, img: 'bolsa', rot: 'XI · My Bag', t: 'What have you got in your bag, your pockets, your life?', p: 'Write five lines with I’ve got and I haven’t got. The red line watches the helpers. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'casaco', rot: 'VI · Yes, I Have', t: 'Ping-pong. Three words for each answer.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'bolsos', est: 'o', min: 7, img: 'casaco', rot: 'VII · The Coat', t: 'Six pockets. Something is in each one.', p: 'Pick a pocket. Ask about one thing: Have you got … in this pocket? The pocket answers the short way.' },
+  { k: 'sobra', est: 'f', min: 6, extra: 1, img: 'casaco', rot: 'VIII · The Word Left Over', t: 'Build it. One word in the tray isn’t needed.', p: 'Say the sentence first. Then tap the words in order. The extra word stays behind.' },
+  { k: 'mala', est: 'o', min: 7, extra: 1, img: 'bolsa', rot: 'IX · The Travel Check', t: 'Tomorrow you travel. Your teacher checks your bag.', p: 'Your teacher asks: Have you got …? Answer the short way. Then you check your teacher’s bag.' },
+  { k: 'coisa', est: 'f', min: 6, extra: 1, img: 'cozinha', rot: 'X · Not Only Things', t: 'A brother, a headache, no time.', p: 'Read it out loud. Then say what kind of thing it is.' },
+  { k: 'voce', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'XI · About You', t: 'Five questions. They all start the same way.', p: 'Answer the short way first. Then say more.' },
+  { k: 'fim', est: 'w', min: 6, img: 'bolsa', rot: 'XII · My Bag', t: 'What have you got in your bag, your pockets, your life?', p: 'Write five lines with I’ve got and I haven’t got. The red line watches the helpers. It goes to your My notes.' }
 ];
 
 var BOLSA = [
@@ -226,3 +227,18 @@ TOQUES['ml-parte'] = function (b, n, v) { S.mala.partes[v] = !S.mala.partes[v]; 
 TOQUES['ml-erro'] = function () { S.mala.erro = !S.mala.erro; };
 TOQUES['cs-sel'] = function (b, n) { S.coisa.sel = n; S.coisa.err = ''; };
 TOQUES.cs = function (b, n, v) { var e = S.coisa, x = COISA[e.sel]; if (!x) return false; if (v === x.k) { e.feitos[e.sel] = 1; e.err = ''; } else e.err = v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de bolsos.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Three words, fast.',
+  perguntas: [
+    { q: 'Have you got a pen?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'Now ask your teacher: Have you got a pen?' },
+    { q: 'Has your phone got a case?', s: 'Yes, it <mark>has</mark>.', n: 'No, it <mark>hasn’t</mark>.', mais: 'What color is it?' },
+    { q: 'Have you got any brothers or sisters?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'Say how many: I’ve got two sisters.' },
+    { q: 'Have you got a headache today?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.' },
+    { q: 'Have you got time after the class?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'Why? I’ve got …' },
+    { q: 'Have your parents got a dog?', s: 'Yes, they <mark>have</mark>.', n: 'No, they <mark>haven’t</mark>.', mais: 'What’s its name?' }
+  ],
+  nota: 'The short answer repeats the helper, never got: Yes, I <b>have</b>. No, it <b>hasn’t</b>. Not “Yes, I got”, and not “Yes, I do”.',
+  uso: { p: 'Your turn. Ask your teacher three Have you got …? questions. Your teacher answers the short way.', molde: ['Have you got …?', 'Has your … got …?'], ex: 'Have you got a car? Has your house got a garden?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

@@ -23,15 +23,16 @@
 var L = [
   { k: 'capa', est: null, img: 'piquenique' },
   { k: 'fds', est: 'o', min: 7, img: 'porta', rot: 'I · Your Weekend', t: 'What are you doing this weekend, and what if the weather changes?', p: 'Tap your plan and the weather. Then say your plan B out loud, the way it comes out. Keep it: it comes back.' },
-  { k: 'carta', est: 'f', min: 7, img: 'palco', rot: 'II · Sam’s Message', t: 'Saturday: a concert in the park, and the radar says rain.', p: 'Read Sam’s message out loud. Tap the IF half of each plan. Then finish the rule.' },
-  { k: 'radar', est: 'o', min: 7, img: 'piquenique', rot: 'III · The Radar', t: 'Six places, six forecasts. Lock each one on the radar.', p: 'Read the forecast. Say the plan B out loud. Then tap Check: the right plan locks the blip.' },
-  { k: 'quando', est: 'f', min: 6, img: 'porta', rot: 'IV · Maybe or Sure?', t: 'IF is a possibility. WHEN is sure: it will happen.', p: 'Read the situation. Say the sentence with IF or WHEN out loud. Then tap Check.' },
-  { k: 'voz', est: 'l', min: 7, img: 'prisma', rot: 'V · The Same Sentence, Twice', t: 'Four short lines. Lines 1 and 2 are the same sentence with one word changed.', p: 'Play each line. Tap the small word you hear. Then tell your teacher: in which line is the speaker sure?' },
-  { k: 'pergunta', est: 'o', min: 6, img: 'porta', rot: 'VI · Ask Me', t: 'Your turn to ask. What will your teacher do if…?', p: 'Build each question out loud. Tap Check. Then ask your teacher, and compare.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'piquenique', rot: 'VII · If It Will Rain', t: 'Six sentences. Each one has one mistake.', p: 'Say each sentence the right way out loud. Then tap Check.' },
-  { k: 'evento', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'VIII · The Concert in the Park', t: 'Saturday, a concert in the park. Your teacher is Sam, the nervous manager.', p: 'Say your plan B for each risk out loud. Tap Check. Then Sam asks: “And what if…?” Answer him.' },
-  { k: 'cadeia', est: 'o', min: 7, extra: 1, img: 'piquenique', rot: 'IX · The Chain', t: 'Each result becomes the next IF. Put the chain in order.', p: 'Tap the five links in order. Tap Check. Then say the whole chain, and make your own.' },
-  { k: 'fim', est: 'w', min: 6, img: 'piquenique', rot: 'X · Back to Your Weekend', t: 'Your weekend plan from scene I comes back.', p: 'Write your plan B with if, in case and unless. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'palco', rot: 'II · Right, Not This', t: 'Six lines about the concert and the rain. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'carta', est: 'f', min: 7, img: 'palco', rot: 'III · Sam’s Message', t: 'Saturday: a concert in the park, and the radar says rain.', p: 'Read Sam’s message out loud. Tap the IF half of each plan. Then finish the rule.' },
+  { k: 'radar', est: 'o', min: 7, img: 'piquenique', rot: 'IV · The Radar', t: 'Six places, six forecasts. Lock each one on the radar.', p: 'Read the forecast. Say the plan B out loud. Then tap Check: the right plan locks the blip.' },
+  { k: 'quando', est: 'f', min: 6, img: 'porta', rot: 'V · Maybe or Sure?', t: 'IF is a possibility. WHEN is sure: it will happen.', p: 'Read the situation. Say the sentence with IF or WHEN out loud. Then tap Check.' },
+  { k: 'voz', est: 'l', min: 7, img: 'prisma', rot: 'VI · The Same Sentence, Twice', t: 'Four short lines. Lines 1 and 2 are the same sentence with one word changed.', p: 'Play each line. Tap the small word you hear. Then tell your teacher: in which line is the speaker sure?' },
+  { k: 'pergunta', est: 'o', min: 6, img: 'porta', rot: 'VII · Ask Me', t: 'Your turn to ask. What will your teacher do if…?', p: 'Build each question out loud. Tap Check. Then ask your teacher, and compare.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'piquenique', rot: 'VIII · If It Will Rain', t: 'Six sentences. Each one has one mistake.', p: 'Say each sentence the right way out loud. Then tap Check.' },
+  { k: 'evento', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'IX · The Concert in the Park', t: 'Saturday, a concert in the park. Your teacher is Sam, the nervous manager.', p: 'Say your plan B for each risk out loud. Tap Check. Then Sam asks: “And what if…?” Answer him.' },
+  { k: 'cadeia', est: 'o', min: 7, extra: 1, img: 'piquenique', rot: 'X · The Chain', t: 'Each result becomes the next IF. Put the chain in order.', p: 'Tap the five links in order. Tap Check. Then say the whole chain, and make your own.' },
+  { k: 'fim', est: 'w', min: 6, img: 'piquenique', rot: 'XI · Back to Your Weekend', t: 'Your weekend plan from scene I comes back.', p: 'Write your plan B with if, in case and unless. It goes to your My notes.' }
 ];
 
 var TR = { 'f1.mp3': 'If I see her, I’ll tell her.', 'f2.mp3': 'When I see her, I’ll tell her.', 'f3.mp3': 'We won’t start unless everyone’s here.', 'f4.mp3': 'Take a coat in case it gets cold later.' };
@@ -221,3 +222,18 @@ R.fim = function (c) {
 
 TOQUES['fd-p'] = function (b, n) { S.fd.p = n; };
 TOQUES['fd-t'] = function (b, n) { S.fd.t = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de carta.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'If it rains on Saturday, we’ll move the show inside.', x: 'If it will rain on Saturday, we’ll move the show inside.', d: 'After if, the present: it rains. The will goes in the other half.' },
+    { c: 'We won’t start unless it stops raining.', x: 'We won’t start unless it doesn’t rain.', d: 'unless already means if not. No second not.' },
+    { c: 'I’ll bring an umbrella in case it rains.', x: 'I’ll bring an umbrella in case it will rain.', d: 'After in case, the present too.' },
+    { c: 'If it rains, what will you do?', x: 'If it rains, what do you will do?', d: 'will is a helper. No do before it.' },
+    { c: 'As soon as the rain stops, we’ll start.', x: 'As soon as the rain will stop, we’ll start.', d: 'As soon as and when: the present, like if.' },
+    { c: 'If the stage is wet, we won’t play.', x: 'If the stage is wet, we don’t will play.', d: 'The no is won’t. Never don’t will.' }
+  ],
+  nota: 'The first half uses the present: <b>if it rains</b>, <b>unless it stops</b>, <b>in case it rains</b>. The will stays in the other half: <b>we’ll move</b>, <b>we won’t play</b>.',
+  uso: { p: 'Your turn. It is Saturday and the radar says rain. Say your plan B with if, and one thing you won’t do unless the sky clears.', molde: ['If it rains, I’ll …', 'I won’t … unless …'], ex: 'If it rains, I’ll watch a movie at home. I won’t go to the park unless the sun comes out.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

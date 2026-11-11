@@ -19,13 +19,14 @@ var L = [
   { k: 'lombadas', est: 'o', min: 7, img: 'estante', rot: 'I · Six Spines', t: 'Six books, no titles. Only the color and the kind of book.', p: 'Two books light up. Say which you’d rather read, with THAN. Then give one reason.' },
   { k: 'pagina', est: 'o', min: 7, img: 'marcador', rot: 'II · Page Thirty-Four', t: 'Every one of these books was started. How far did each reader get?', p: 'Guess out loud. Tap. Then answer the question underneath.' },
   { k: 'emvez', est: 'l', min: 7, img: 'cabeceira', rot: 'III · Instead', t: 'Behind every bookmark there’s a night. Listen to each reader.', p: 'Play the recording. Choose what they’d rather do. Say the whole sentence.' },
-  { k: 'ponte', est: 'f', min: 6, img: 'estante', rot: 'IV · To or Than', t: 'PREFER takes TO. RATHER takes THAN.', p: 'Choose the word that finishes the sentence. Then say the whole thing.' },
-  { k: 'quem', est: 'l', min: 7, img: 'estante', rot: 'V · Who Chose It', t: 'Who put each book in that person’s hands?', p: 'Listen again if you need to. Choose who chose it. At the end: what do the five have in common?' },
-  { k: 'sexto', est: 'f', min: 6, extra: 1, img: 'ultima', rot: 'VI · The Sixth Book', t: 'The dark green one. Travel writing. 302 pages.', p: 'Five short questions.' },
-  { k: 'nao', est: 'o', min: 7, extra: 1, img: 'vazia', rot: 'VII · Not Tonight', t: 'Four people offer you something. You don’t owe anybody a reason.', p: 'Read the offer. Answer out loud with one sentence. Then tap it.' },
-  { k: 'clube', est: 'o', min: 7, extra: 1, img: 'vazia', rot: 'VIII · The Book Club', t: 'You start a book club with your teacher. What kind of reader are they?', p: 'Ask the question. Your teacher answers. Then answer it yourself, with RATHER, then with PREFER.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'estante', rot: 'IX · No To After Rather', t: 'Rather never takes TO. Prefer does.', p: 'Five sentences have a problem. One is right. Choose the fix.' },
-  { k: 'fim', est: 'w', min: 6, img: 'estante', rot: 'X · Your Shelf', t: 'Your picks from scene I come back.', p: 'Write about your own shelf: what you’d rather read, what you prefer, and one book you’d rather not. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'estante', rot: 'IV · Right, Not This', t: 'Six pairs from the night shelf. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'ponte', est: 'f', min: 6, img: 'estante', rot: 'V · To or Than', t: 'PREFER takes TO. RATHER takes THAN.', p: 'Choose the word that finishes the sentence. Then say the whole thing.' },
+  { k: 'quem', est: 'l', min: 7, img: 'estante', rot: 'VI · Who Chose It', t: 'Who put each book in that person’s hands?', p: 'Listen again if you need to. Choose who chose it. At the end: what do the five have in common?' },
+  { k: 'sexto', est: 'f', min: 6, extra: 1, img: 'ultima', rot: 'VII · The Sixth Book', t: 'The dark green one. Travel writing. 302 pages.', p: 'Five short questions.' },
+  { k: 'nao', est: 'o', min: 7, extra: 1, img: 'vazia', rot: 'VIII · Not Tonight', t: 'Four people offer you something. You don’t owe anybody a reason.', p: 'Read the offer. Answer out loud with one sentence. Then tap it.' },
+  { k: 'clube', est: 'o', min: 7, extra: 1, img: 'vazia', rot: 'IX · The Book Club', t: 'You start a book club with your teacher. What kind of reader are they?', p: 'Ask the question. Your teacher answers. Then answer it yourself, with RATHER, then with PREFER.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'estante', rot: 'X · No To After Rather', t: 'Rather never takes TO. Prefer does.', p: 'Five sentences have a problem. One is right. Choose the fix.' },
+  { k: 'fim', est: 'w', min: 6, img: 'estante', rot: 'XI · Your Shelf', t: 'Your picks from scene I come back.', p: 'Write about your own shelf: what you’d rather read, what you prefer, and one book you’d rather not. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -235,3 +236,18 @@ TOQUES.no = function () { S.no.n++; };
 TOQUES['cl-prox'] = function () { S.cl.n++; };
 TOQUES.er = function (b, n) { S.er.esc = n; };
 TOQUES['er-prox'] = function () { S.er = { n: S.er.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de ponte.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'I’d rather read tonight.', x: 'I’d rather to read tonight.', d: 'After rather: the clean verb. No to.' },
+    { c: 'I prefer reading to scrolling.', x: 'I prefer read to scrolling.', d: 'After prefer: -ing, then to, then -ing.' },
+    { c: 'I’d rather sleep than watch TV.', x: 'I’d rather sleep to watch TV.', d: 'Rather goes with than.' },
+    { c: 'I prefer novels to magazines.', x: 'I prefer novels than magazines.', d: 'Prefer goes with to.' },
+    { c: 'Would you rather read or sleep?', x: 'Would you rather to read or sleep?', d: 'Would you rather + clean verb. No to.' },
+    { c: 'Another chapter? I’d rather not.', x: 'Another chapter? I’d rather no.', d: 'For no: I’d rather not. It is a whole answer.' }
+  ],
+  nota: 'Two pairs. <b>Rather</b> + clean verb + <b>than</b>: I’d rather read than watch. <b>Prefer</b> + <b>-ing</b> + <b>to</b> + <b>-ing</b>: I prefer reading to watching. And <b>I’d rather not</b> is a whole answer.',
+  uso: { p: 'Your turn. One thing you’d rather do tonight, and one thing you prefer, with to.', molde: ['I’d rather … than …', 'I prefer …ing to …ing'], ex: 'I’d rather cook than order food. I prefer walking to driving.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

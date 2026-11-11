@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 6, kick: 'AU PAIR · MODULE 2 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · A Reference Letter', t: 'What does a good reference say?', p: 'Read the letter out loud. Then answer the questions.' },
-  { k: 'transforma', est: 'o', min: 8, img: 'capa', rot: 'II · Health Words', t: 'Say it the way a form asks.', p: 'Read the Portuguese idea and the clue. Say it in English.' },
-  { k: 'formulario', est: 'w', min: 12, img: 'conversa', rot: 'III · The Health Form', t: 'Fill in Mariana’s health form.', p: 'Read her notes from the doctor. Fill in every field. Then check.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Letter in Blocks', t: 'Three lines of a reference letter.', p: 'Read the blocks out loud. Notice the job of each one. Then build a line and say your own.' },
+  { k: 'transforma', est: 'o', min: 8, img: 'capa', rot: 'III · Health Words', t: 'Say it the way a form asks.', p: 'Read the Portuguese idea and the clue. Say it in English.' },
+  { k: 'formulario', est: 'w', min: 12, img: 'conversa', rot: 'IV · The Health Form', t: 'Fill in Mariana’s health form.', p: 'Read her notes from the doctor. Fill in every field. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'A REFERENCE FOR MARIANA (FICTIONAL)', tipo: 'nota',
@@ -56,3 +57,18 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 06: leitura · transforma · formulario (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'A reference letter, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Mariana', 'WHO'], ['worked', 'ACTION', 'acao'], ['as a volunteer assistant', 'ROLE'], ['three afternoons a week', 'WHEN']], d: 'A finished job: the past simple.' },
+    { b: [['She', 'WHO'], ['is', 'BE', 'aux'], ['patient, responsible and creative', 'QUALITIES']], d: 'Who she is: is + adjectives.' },
+    { b: [['I', 'WHO'], ['recommend', 'ACTION', 'acao'], ['her', 'WHO'], ['without hesitation', 'HOW']], d: 'The last line: your recommendation.' }
+  ],
+  nota: 'A reference letter has three jobs: <b>what she did</b> (past simple: worked, prepared), <b>who she is</b> (is + adjectives) and <b>your recommendation</b> (I recommend her).',
+  monta: { p: 'Build another line of the letter. Then say it.', pecas: [['at lunch time.', 'WHEN'], ['She', 'WHO'], ['helped', 'ACTION', 'acao'], ['the children', 'WHO']], ordem: [1, 2, 3, 0] },
+  uso: { p: 'Your turn. Two lines about a person you know who is good with kids: what they did, and what they are like.', molde: ['She / He worked …', 'She / He is …'], ex: 'My aunt taught in a small school. She is patient and kind.' },
+  prof: 'Read the blocks with the student: the words on top, the job under each one.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

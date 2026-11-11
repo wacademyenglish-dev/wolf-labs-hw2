@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · Three Flats', t: 'Three owners. Ask about each flat.', p: 'Ask each owner five questions. Your teacher is the owner. Then tell your friend which flat you’d rather take.' },
   { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Flat Hunt Pocket', t: 'Four lines from the flat hunt.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -63,3 +64,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me what my parents let me do as a kid.', dica: 'What did your parents let you do?', resp: 'They let me play in the street.' },
   { alvo: 'Ask me something I stopped doing.', dica: 'What have you stopped doing?', resp: 'I stopped eating meat last year.' },
   { alvo: 'Ask me: city or countryside?', dica: 'Would you rather live in the city or in the countryside?', resp: 'I’d rather live near the sea!' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 8.', rotulo: 'Describing and choosing', linhas: ['people: <b>who</b> · things: <b>which</b> · both: <b>that</b>', 'a place: <b>where</b> I grew up (no “there” at the end)', 'make / let / help + person + <b>verb</b>: she lets me <b>paint</b> the walls', 'stop + <b>-ing</b> · I heard her <b>singing</b> · I’d rather <b>live</b> here'], uso: { p: 'Your turn. Describe the street where you live, and say which flat you would rather take.', molde: ['I live on a street where …', 'My neighbor is someone who …', 'I’d rather …'], ex: 'I live on a street where everybody knows me. My neighbor is someone who plays the drums. I’d rather take the flat with the garden.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

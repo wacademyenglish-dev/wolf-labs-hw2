@@ -16,12 +16,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Calls', t: 'How many calls do you make in a week?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'dialogo', est: 'l', min: 8, img: 'mesa', rot: 'II · A Full Call', t: 'Leo calls a new client: Pine Hotels.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'III · The Helper in the Question', t: 'Two questions. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'transforma', est: 'f', min: 7, img: 'mesa', rot: 'IV · From Notes to Questions', t: 'CRM notes are answers. What was the question?', p: 'Read the note. Use the clue. Say the question.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'V · Your Call Script', t: 'Write your call: hello, six questions, the next step.', p: 'Write it now. You use it in the next scene!' },
-  { k: 'cliente', est: 'o', min: 12, img: 'conversa', rot: 'VI · The Discovery Call', t: 'A new client. Your teacher is the client.', p: 'Use your script. Find the five facts. Then ask for the next step.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'mesa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 25: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'III · Questions, in Blocks', t: 'Four questions, four helpers.', p: 'Read the blocks out loud. Notice what each block does. Then build a question and say your own.' },
+  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'IV · The Helper in the Question', t: 'Two questions. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'transforma', est: 'f', min: 7, img: 'mesa', rot: 'V · From Notes to Questions', t: 'CRM notes are answers. What was the question?', p: 'Read the note. Use the clue. Say the question.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VI · Your Call Script', t: 'Write your call: hello, six questions, the next step.', p: 'Write it now. You use it in the next scene!' },
+  { k: 'cliente', est: 'o', min: 12, img: 'conversa', rot: 'VII · The Discovery Call', t: 'A new client. Your teacher is the client.', p: 'Use your script. Find the five facts. Then ask for the next step.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'mesa', rot: 'VIII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 25: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -106,3 +107,19 @@ var PODE = [
   'I can find five facts about a new client.',
   'I can ask for the next step and write my call script.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Client questions, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Do', 'HELPER', 'aux'], ['you', 'WHO', 'quem'], ['use', 'ACTION', 'acao'], ['SAP?', 'WHAT', 'o']], d: 'A yes or no question starts with the helper.' },
+    { b: [['What system', 'QUESTION', 'q'], ['do', 'HELPER', 'aux'], ['you', 'WHO', 'quem'], ['use?', 'ACTION', 'acao']], d: 'The question words first. Then the helper.' },
+    { b: [['How many employees', 'QUESTION', 'q'], ['does', 'HELPER', 'aux'], ['the company', 'WHO', 'quem'], ['have?', 'ACTION', 'acao']], d: 'does has the -s. have stays clean.' },
+    { b: [['Where', 'QUESTION', 'q'], ['is', 'BE', 'aux'], ['the office?', 'WHAT', 'o']], d: 'With be, no helper: Where is …?' }
+  ],
+  nota: 'A question needs a helper: <b>Do</b> you …? <b>Does</b> she …? With be: <b>Is</b> it …? <b>Where is</b> …? After the helper, the verb is simple: does the company <b>have</b>.',
+  monta: { p: 'Build a question for a new client, then say it.', pecas: [['the CFO', 'WHO', 'quem'], ['sign', 'ACTION', 'acao'], ['Does', 'HELPER', 'aux'], ['the contracts?', 'WHAT', 'o']], ordem: [2, 0, 1, 3] },
+  uso: { p: 'Your turn. Two questions for a new client: one with Do you and one with How many.', molde: ['Do you …?', 'How many … do you have?'], ex: 'Do you use SAP? How many employees do you have?' },
+  prof: 'Read the blocks with the student, top to bottom: the words on top, the job under them.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

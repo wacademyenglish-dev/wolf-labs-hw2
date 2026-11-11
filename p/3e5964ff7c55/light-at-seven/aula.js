@@ -16,13 +16,14 @@ var L = [
   { k: 'capa', est: null, img: 'noite' },
   { k: 'abre', est: 'o', min: 7, img: 'manha', rot: 'I · Someone in Your House', t: 'Think of one person in your house.', p: 'Pick a card. Answer out loud, any words you have. Your teacher taps what you used. Don’t worry about it yet.' },
   { k: 'noites', est: 'l', min: 7, img: 'noite', rot: 'II · Every Night', t: 'Every night, the same four things.', p: 'Listen first. Say the sentence. Then the window across the courtyard shows it.' },
-  { k: 'gang', est: 'f', min: 6, img: 'noite', rot: 'III · One S Only', t: 'The S has one place: the front, or the verb. Never both.', p: 'Tap the side that takes the S. Then say the sentence.' },
-  { k: 'predio', est: 'f', min: 6, img: 'noite', rot: 'IV · The Building', t: 'Eight windows, eight neighbors.', p: 'Read the card. Pick the verb. Then say the whole sentence with the hour, and the window lights up.' },
-  { k: 'grafia', est: 'f', min: 6, img: 'manha', rot: 'V · Four Endings', t: 'Four ways to write the S.', p: 'Look at the end of the word. Pick the ending. Then say it.' },
-  { k: 'escuro', est: 'l', min: 7, img: 'uma', rot: 'VI · Friday, Saturday', t: 'Friday: the window stays dark. Saturday: there are two cups.', p: 'Listen first. Then say it. Friday is doesn’t; Saturday is they, and the S goes away.' },
-  { k: 'historia', est: 'l', min: 7, extra: 1, img: 'duas', rot: 'VII · The Whole Story', t: 'Listen first. The text is hidden.', p: 'Listen twice. Answer three questions. Then open the text and read it out loud.' },
-  { k: 'vizinhos', est: 'o', min: 7, extra: 1, img: 'noite', rot: 'VIII · Curious Neighbors', t: 'Now you invent three neighbors.', p: 'For each window: who they are, what they do, and when.' },
-  { k: 'fim', est: 'w', min: 6, img: 'noite', rot: 'IX · Lights Off', t: 'Write your own building.', p: 'Four neighbors, four routines: he / she …s, they … (no s), and the hour. The red line watches the S. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'noite', rot: 'III · Find the Rule', t: 'Four sentences about the windows. You find the rule.', p: 'Read the four sentences out loud. Look at the lit verbs. Choose the rule. Then say your own.' },
+  { k: 'gang', est: 'f', min: 6, img: 'noite', rot: 'IV · One S Only', t: 'The S has one place: the front, or the verb. Never both.', p: 'Tap the side that takes the S. Then say the sentence.' },
+  { k: 'predio', est: 'f', min: 6, img: 'noite', rot: 'V · The Building', t: 'Eight windows, eight neighbors.', p: 'Read the card. Pick the verb. Then say the whole sentence with the hour, and the window lights up.' },
+  { k: 'grafia', est: 'f', min: 6, img: 'manha', rot: 'VI · Four Endings', t: 'Four ways to write the S.', p: 'Look at the end of the word. Pick the ending. Then say it.' },
+  { k: 'escuro', est: 'l', min: 7, img: 'uma', rot: 'VII · Friday, Saturday', t: 'Friday: the window stays dark. Saturday: there are two cups.', p: 'Listen first. Then say it. Friday is doesn’t; Saturday is they, and the S goes away.' },
+  { k: 'historia', est: 'l', min: 7, extra: 1, img: 'duas', rot: 'VIII · The Whole Story', t: 'Listen first. The text is hidden.', p: 'Listen twice. Answer three questions. Then open the text and read it out loud.' },
+  { k: 'vizinhos', est: 'o', min: 7, extra: 1, img: 'noite', rot: 'IX · Curious Neighbors', t: 'Now you invent three neighbors.', p: 'For each window: who they are, what they do, and when.' },
+  { k: 'fim', est: 'w', min: 6, img: 'noite', rot: 'X · Lights Off', t: 'Write your own building.', p: 'Four neighbors, four routines: he / she …s, they … (no s), and the hour. The red line watches the S. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -185,3 +186,19 @@ TOQUES['es-sab'] = function () { S.escuro = { fase: 1, n: 0 }; };
 TOQUES['vz-p'] = function (b, n, v) { var z = S.viz; z.partes[z.n] = z.partes[z.n] || {}; z.partes[z.n][v] = !z.partes[z.n][v]; };
 TOQUES['vz-e'] = function () { S.viz.erro = !S.viz.erro; };
 TOQUES['vz-prox'] = function () { S.viz.n++; S.viz.erro = 0; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de gang.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences about the neighbors. Find the rule yourself.',
+  exemplos: [
+    'The man in the red window <b>works</b> at night.',
+    'She <b>doesn’t</b> <u>read</u> on Fridays.',
+    '<b>Does</b> he <u>cook</u> on Saturday?',
+    'They <u>read</u> on Saturday.'
+  ],
+  pergunta: 'In each sentence, the -s …',
+  opcoes: ['has one place only: the verb, or does / doesn’t', 'goes in two places: she doesn’t works', 'goes in does and in the verb: Does he cooks?'], c: 0,
+  nao: 'Not that one. Read the four sentences again: where is the -s?',
+  regra: 'The S has <b>one</b> place only: she work<b>s</b>, or she <b>doesn’t</b> work, or <b>Does</b> he cook? With they, there is no S: they read.',
+  uso: { p: 'Your turn. A neighbor, or a person in your family. Say what he or she does, and one thing he or she doesn’t do.', molde: ['He / She … every day.', 'He / She doesn’t …'], ex: 'My neighbor works at night. He doesn’t sleep before two.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

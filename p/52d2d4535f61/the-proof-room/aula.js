@@ -26,14 +26,15 @@ var L = [
   { k: 'capa', est: null, img: 'saida' },
   { k: 'claims', est: 'o', min: 6, img: 'piscina', rot: 'I · Warm-up', t: 'Before the room: things you could do.', p: 'Answer out loud, in full sentences. Your teacher keeps your answers for the end.' },
   { k: 'pote', est: 'f', min: 5, img: 'pote1', rot: 'II · The Jar', t: 'Last night, a jar. Why not COULD?', p: 'Read the story out loud, one picture at a time. Then answer: years, or one moment?' },
-  { k: 'chaves', est: 'f', min: 6, img: 'chaves', rot: 'III · The Four Keys', t: 'Four keys. Each one opens a different kind of lock.', p: 'Read each key out loud. Then make one sentence about your life with each.' },
-  { k: 'ligacao', est: 'l', min: 8, img: 'saida', rot: 'IV · The Escape Call', t: 'Tom just got out of an escape room. Listen.', p: 'Listen once for the story. Then line by line: which key did they use?' },
-  { k: 'fitas', est: 'f', min: 5, img: 'porta', rot: 'V · Years or One Moment?', t: 'Two sentences. Which one is ONE moment?', p: 'Read A and B. Tap the one that happened once. Say why.' },
-  { k: 'cadeados', est: 'o', min: 6, img: 'caixa', rot: 'VI · The Six Locks', t: 'Six locks between you and the door. Each one needs the right key.', p: 'Choose a key, say the whole sentence, then answer the quick question.' },
-  { k: 'contra', est: 'f', min: 4, img: 'caixa', rot: 'VII · The Trap', t: 'Three of these five are fine. Two are broken.', p: 'Fine as it is, or does it need another key? Then say the fixed one.' },
-  { k: 'entrevista', est: 'o', min: 7, img: 'bicicleta', rot: 'VIII · The Interview', t: 'Ask your teacher. Then your teacher asks you.', p: 'Pick a card, ask it, and always ask one more: “When exactly?”' },
-  { k: 'historia', est: 'o', min: 7, img: 'porta', rot: 'IX · Your Escape Story', t: 'Tell a real problem you solved: at work, at home, anywhere.', p: 'One step at a time. Your teacher will ask: when, exactly?' },
-  { k: 'fim', est: 'w', min: 5, img: 'chaves', rot: 'X · Your Three Sentences', t: 'Your warm-up answers come back. Fix them with the right keys.', p: 'Write them again with the right keys. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'chaves', rot: 'III · The Timeline', t: 'Years, one day, or one hard day?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'chaves', est: 'f', min: 6, img: 'chaves', rot: 'IV · The Four Keys', t: 'Four keys. Each one opens a different kind of lock.', p: 'Read each key out loud. Then make one sentence about your life with each.' },
+  { k: 'ligacao', est: 'l', min: 8, img: 'saida', rot: 'V · The Escape Call', t: 'Tom just got out of an escape room. Listen.', p: 'Listen once for the story. Then line by line: which key did they use?' },
+  { k: 'fitas', est: 'f', extra: 1, min: 5, img: 'porta', rot: 'VI · Years or One Moment?', t: 'Two sentences. Which one is ONE moment?', p: 'Read A and B. Tap the one that happened once. Say why.' },
+  { k: 'cadeados', est: 'o', min: 6, img: 'caixa', rot: 'VII · The Six Locks', t: 'Six locks between you and the door. Each one needs the right key.', p: 'Choose a key, say the whole sentence, then answer the quick question.' },
+  { k: 'contra', est: 'f', extra: 1, min: 4, img: 'caixa', rot: 'VIII · The Trap', t: 'Three of these five are fine. Two are broken.', p: 'Fine as it is, or does it need another key? Then say the fixed one.' },
+  { k: 'entrevista', est: 'o', min: 7, img: 'bicicleta', rot: 'IX · The Interview', t: 'Ask your teacher. Then your teacher asks you.', p: 'Pick a card, ask it, and always ask one more: “When exactly?”' },
+  { k: 'historia', est: 'o', min: 7, img: 'porta', rot: 'X · Your Escape Story', t: 'Tell a real problem you solved: at work, at home, anywhere.', p: 'One step at a time. Your teacher will ask: when, exactly?' },
+  { k: 'fim', est: 'w', min: 5, img: 'chaves', rot: 'XI · Your Three Sentences', t: 'Your warm-up answers come back. Fix them with the right keys.', p: 'Write them again with the right keys. It goes to your My notes.' }
 ];
 
 var CHAVES = {
@@ -336,3 +337,20 @@ TOQUES.co = function (b, n, v) { S.co.esc = v; };
 TOQUES['co-prox'] = function () { S.co = { n: S.co.n + 1, esc: '' }; };
 TOQUES['hi-push'] = function () { S.hi.push = 1; };
 TOQUES['hi-prox'] = function () { S.hi = { n: S.hi.n + 1, push: 0 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de chaves.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'Which key opens it? Put each sentence on the line.',
+  marcos: [{ t: 'YEARS', s: 'when I was a kid' }, { t: 'ONE DAY', s: 'last night' }, { t: 'ONE HARD DAY', s: 'it cost something' }],
+  frases: [
+    { f: 'I could swim when I was six.', c: 0, d: 'could · a window of years' },
+    { f: 'We could play outside every summer.', c: 0, d: 'could · a window of years' },
+    { f: 'I was able to open the jar last night.', c: 1, d: 'was able to · one day' },
+    { f: 'She was able to finish the report on Friday.', c: 1, d: 'was able to · one day' },
+    { f: 'I managed to open the door after ten minutes.', c: 2, d: 'managed to · it was hard' },
+    { f: 'He managed to find the key at the last second.', c: 2, d: 'managed to · it was hard' }
+  ],
+  nota: 'A window of years: <b>could</b>. One day: <b>was able to</b>. One day, and it was hard: <b>managed to</b>. And <b>couldn’t</b> works for all three.',
+  uso: { p: 'Your turn. One thing you could do as a kid, one thing you were able to do yesterday, and one thing you managed to do.', molde: ['When I was a kid, I could …', 'Yesterday I was able to …', 'I managed to … after …'], ex: 'When I was a kid, I could ride a bike with no hands. Yesterday I was able to finish early. I managed to fix my phone after an hour.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

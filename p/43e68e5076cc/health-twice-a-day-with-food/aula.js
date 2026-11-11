@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 7, kick: 'ENGLISH FOR HEALTHCAR
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 11, img: 'conversa', rot: 'I · A New Prescription', t: 'A pharmacist explains a new medicine.', p: 'One question before, then the video, then the questions.' },
-  { k: 'transforma', est: 'o', min: 10, img: 'capa', rot: 'II · Label to Plain English', t: 'Turn the label into words a patient understands.', p: 'Read the label and the clue. Say it to the patient.' },
-  { k: 'multipla', est: 'f', min: 9, img: 'conversa', rot: 'III · Read the Instructions', t: 'Five instructions. What do they mean?', p: 'Choose. Then explain it to the patient.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Mistake Hunter', t: 'Five label instructions. Each one has a wrong word.', p: 'Tap the wrong word. Say the instruction right. Then check.' },
+  { k: 'transforma', est: 'o', min: 10, img: 'capa', rot: 'III · Label to Plain English', t: 'Turn the label into words a patient understands.', p: 'Read the label and the clue. Say it to the patient.' },
+  { k: 'multipla', est: 'f', min: 9, img: 'conversa', rot: 'IV · Read the Instructions', t: 'Five instructions. What do they mean?', p: 'Choose. Then explain it to the patient.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'kKZ68sImQaQ', titulo: 'PEBC OSCE Practice Station - Patient picking up new prescription', fonte: 'PHARMACHIEVE · 0:23–5:00', inicio: 23, fim: 300,
@@ -53,3 +54,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 07: video · transforma · multipla (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Five instructions for the patient.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'Take one tablet [[two times by day]].', r: 'Take one tablet <b>twice a day</b>.', d: 'Twice a day is one phrase. Three times: three times a day.' },
+    { f: 'Take it [[in]] an empty stomach.', r: 'Take it <b>on</b> an empty stomach.', d: 'On an empty stomach: on.' },
+    { f: 'You must [[to]] finish the whole course.', r: 'You must <b>finish</b> the whole course.', d: 'must + clean verb. No to.' },
+    { f: 'Take one tablet every eight hours [[since]] seven days.', r: 'Take one tablet every eight hours <b>for</b> seven days.', d: 'A period of time: for.' },
+    { f: 'This medicine may make you [[sleeping]].', r: 'This medicine may make you <b>sleepy</b>.', d: 'make you + a feeling word: sleepy, dizzy.' }
+  ],
+  nota: 'Four small tools for a label: <b>twice a day</b>, <b>on an empty stomach</b>, <b>for seven days</b>, and <b>must</b> + clean verb. Dose, how often, food, how long.',
+  uso: { p: 'Your turn. Explain a medicine to a patient: how many, how often, and one warning.', molde: ['Take one … a day.', 'Take it with …', 'You must not …'], ex: 'Take one tablet three times a day with food. You must not drink alcohol.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

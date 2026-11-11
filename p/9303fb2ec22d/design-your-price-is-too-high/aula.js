@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 3, kick: 'ENGLISH FOR DESIGNERS
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · What Is It Worth?', t: 'A designer asks about value before price.', p: 'One question before, then the video, then the questions.' },
-  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'II · Confident or Sorry?', t: 'Which answer keeps your value?', p: 'Read each answer out loud. Is it confident or apologetic?' },
-  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'III · Four Clients on the Phone', t: 'Four clients, four price objections.', p: 'Play the client, start the clock, answer in about 40 seconds.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Three Moves', t: 'Value, scope, option.', p: 'Look at the three moves. Tap the right one for each client sentence. Then say your own.' },
+  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'III · Confident or Sorry?', t: 'Which answer keeps your value?', p: 'Read each answer out loud. Is it confident or apologetic?' },
+  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'IV · Four Clients on the Phone', t: 'Four clients, four price objections.', p: 'Play the client, start the clock, answer in about 40 seconds.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'RFk8ZmIDrFM', titulo: 'When Client Says “Your Price Is Too High”: Role Play', fonte: 'THE FUTUR · 0:00–1:50', inicio: 0, fim: 110,
@@ -67,3 +68,25 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 03: video · separa · prova (áudio) (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Your price is too high. Three calm moves.',
+  usos: [
+    { t: 'VALUE', f: 'What problem does this solve for you?', d: 'Talk about what the client gets, not the hours.' },
+    { t: 'SCOPE', f: 'Here’s what’s included: three logo options and two rounds of changes.', d: 'Say clearly what is in the price.' },
+    { t: 'OPTION', f: 'If the budget is smaller, I could do one logo option.', d: 'Change the scope, not the price.' }
+  ],
+  pergunta: 'Which move do you make?',
+  itens: [
+    { f: 'The client says: “That’s a bit expensive.”', c: 0, d: 'Go back to value first.' },
+    { f: 'The client asks: “What do I get for this price?”', c: 1, d: 'Say what is included.' },
+    { f: 'The client says: “We only have half of that budget.”', c: 2, d: 'Offer a smaller scope.' },
+    { f: 'The client says: “Why does a logo cost so much?”', c: 0, d: 'Value: what problem does it solve?' },
+    { f: 'The client asks: “Does that include the social media files?”', c: 1, d: 'Scope: say what is in and what is out.' },
+    { f: 'The client says: “Can you do it cheaper?”', c: 2, d: 'An option: If …, I could …' }
+  ],
+  nota: 'Three calm moves: <b>value</b> (What problem does this solve?), <b>scope</b> (Here’s what’s included), <b>option</b> (If …, I could …). No “sorry”, and no discount without a smaller scope.',
+  uso: { p: 'Your turn. A client says your price is too high. Say one sentence for each move.', molde: ['What problem …?', 'Here’s what’s included: …', 'If …, I could …'], ex: 'What problem does the new site solve for you? Here’s what’s included: five pages and two rounds of changes. If the budget is smaller, I could do three pages.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

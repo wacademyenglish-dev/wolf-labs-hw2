@@ -14,8 +14,9 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'II · Debate Night', t: 'Roll, move, defend your idea.', p: 'Your teacher rolls the die. Do the task on your square, out loud. Your teacher may disagree!' },
   { k: 'cartao', est: 'w', min: 7, img: 'conversa', rot: 'III · Your Opening Speech', t: 'Write your opening speech.', p: 'Four short lines: your idea, why, the other side, and your goal.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'V · I Can', t: 'Unit 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' },
-  { k: 'ponte', est: 'l', min: 3, img: 'conversa', rot: 'VI · The Next Book', t: 'Book B1 is done. Here is Book B2.', p: 'Read the three cards out loud. Which one do you want first?' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Debate Rule', t: 'Four lines from the debate. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VI · I Can', t: 'Unit 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' },
+  { k: 'ponte', est: 'l', min: 3, img: 'conversa', rot: 'VII · The Next Book', t: 'Book B1 is done. Here is Book B2.', p: 'Read the three cards out loud. Which one do you want first?' }
 ];
 var PORTAS = [];
 
@@ -68,3 +69,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me what too much coffee leads to.', dica: 'What does too much coffee lead to?', resp: 'It leads to bad sleep!' },
   { alvo: 'Ask me for my opinion on working from home.', dica: 'What do you think about working from home?', resp: 'I like it. However, I miss my colleagues.' },
   { alvo: 'Say you don’t believe me. Make me insist!', dica: 'I don’t believe you did your homework!', resp: 'I did do it! I do work hard!' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.', exemplos: ['<b>Despite</b> <u>the rain</u>, the debate started on time.', '<b>Despite</b> <u>being</u> tired, she spoke for an hour.', '<b>In spite of</b> <u>the noise</u>, he kept talking.', '<b>Although</b> <u>it was late</u>, nobody went home.'], pergunta: 'After despite and in spite of, we put …', opcoes: ['a noun or an -ing: despite the rain, despite being tired', 'a full sentence: despite it was raining', 'to + verb: despite to be tired'], c: 0, nao: 'Not that one. Look at what comes after despite in the first three lines: is there a full sentence? a to?', regra: '<b>despite / in spite of</b> + a noun or an -ing: Despite the rain. Despite being tired. <b>although / even though</b> + a full sentence: Although it was late, nobody went home.', uso: { p: 'Your turn. You are on the debate team. Answer this: is it good to work from home? Use one sentence with despite and one with although.', molde: ['Despite …, …', 'Although …, …'], ex: 'Despite the noise at home, I work better there. Although the office is quiet, I lose two hours on the bus.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

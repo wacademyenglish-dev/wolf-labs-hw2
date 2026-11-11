@@ -25,12 +25,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'cabine', rot: 'III · A Real Conversation', t: 'Two people, one topic: mistakes. No script.', p: 'The video is sealed. Answer first, then it plays in four short chapters. Then True or Lie.' },
   { k: 'falas', est: 'l', extra: 1, img: 'cabine', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'mesa', est: 'o', min: 7, img: 'mesa', rot: 'V · The Mixing Desk', t: 'Off Script, episode 41: “The Worst Trip Ever”. Six channels, six moments. You steer.', p: 'Tap a channel. Your teacher reads Jo’s line. Read the card, then say the line it asks for.' },
-  { k: 'regra', est: 'f', min: 6, img: 'estudio', rot: 'VI · The Rule', t: 'Six little words, six jobs.', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
-  { k: 'aovivo', est: 'o', min: 7, img: 'plateia', rot: 'VII · On Air', t: 'Off Script, live. Tonight’s guest: Chef Rosa Lind. Five cue cards.', p: 'Your teacher is Rosa. The card says the job. React at once.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'sofa', rot: 'VIII · Hot Topics', t: 'Tonight’s hot topics are about you.', p: 'Tap any five. Answer with at least one marker. Your teacher may interrupt on purpose.' },
-  { k: 'sofa', est: 'o', min: 7, extra: 1, img: 'sofa', rot: 'IX · Your Talk Show', t: 'You are the host now. Sam Park, a travel vlogger, is on the couch.', p: 'Your teacher is Sam. Answer, then steer the show with a marker.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'X · Quick Check', t: 'Five quick lines from the show.', p: 'Say the whole sentence. Then tap the words.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · Off Air', t: 'Is it rude to change the subject in a conversation?', p: 'Write your own mini talk show, with you as the host. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'estudio', rot: 'VI · On Air', t: 'Off Script, in the middle of a story. Six words are lit.', p: 'Read it together. Tap the lit words: what is their job? Then tell your own story.' },
+  { k: 'regra', est: 'f', min: 6, img: 'estudio', rot: 'VII · The Rule', t: 'Six little words, six jobs.', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
+  { k: 'aovivo', est: 'o', min: 7, img: 'plateia', rot: 'VIII · On Air', t: 'Off Script, live. Tonight’s guest: Chef Rosa Lind. Five cue cards.', p: 'Your teacher is Rosa. The card says the job. React at once.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'sofa', rot: 'IX · Hot Topics', t: 'Tonight’s hot topics are about you.', p: 'Tap any five. Answer with at least one marker. Your teacher may interrupt on purpose.' },
+  { k: 'sofa', est: 'o', min: 7, extra: 1, img: 'sofa', rot: 'X · Your Talk Show', t: 'You are the host now. Sam Park, a travel vlogger, is on the couch.', p: 'Your teacher is Sam. Answer, then steer the show with a marker.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'XI · Quick Check', t: 'Five quick lines from the show.', p: 'Say the whole sentence. Then tap the words.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · Off Air', t: 'Is it rude to change the subject in a conversation?', p: 'Write your own mini talk show, with you as the host. It goes to your My notes.' }
 ];
 
 var YT = 'eK5Tsornvng';
@@ -278,3 +279,27 @@ TOQUES['sf-r'] = function () { S.sf.resp = 1; };
 TOQUES['sf-prox'] = function () { S.sf = { n: S.sf.n + 1, resp: 0 }; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'Off Script, on air. Tap the lit words.',
+  falas: [
+    { q: 'Host', f: 'Jo, you went to Boston in January because it was cheap, right?' },
+    { q: 'Jo', f: '[[Actually]], it wasn’t cheap at all. The snow made everything worse.' },
+    { q: 'Host', f: 'Wow. [[By the way]], did you ever find your lost bag?' },
+    { q: 'Jo', f: 'Not yet. [[Anyway]], back to the snow: the train stopped for six hours.' },
+    { q: 'Host', f: 'Six hours! [[Mind you]], the trip was free, so who is complaining?' },
+    { q: 'Jo', f: '[[To be honest]], I was not brave. I cried on the platform.' },
+    { q: 'Host', f: 'Sorry, my producer is waving at me. [[As I was saying]], it takes courage to tell that story on air.' }
+  ],
+  porques: [
+    'Actually fixes a fact. It does not mean “now”: it was NOT cheap.',
+    'By the way opens a side topic. The bag is not the main story.',
+    'Anyway brings you back to the main topic: the snow.',
+    'Mind you gives the other side, like a small “but”: the trip was free.',
+    'To be honest says the true thing, and it is not easy to say.',
+    'As I was saying picks the sentence up again after an interruption.'
+  ],
+  nota: 'Each little word has <b>one job</b>: <b>actually</b> fixes a fact, <b>by the way</b> opens a side topic, <b>anyway</b> goes back, <b>mind you</b> gives the other side, <b>to be honest</b> says the truth, <b>as I was saying</b> starts again after a break.',
+  uso: { p: 'Your turn. Tell your teacher about a trip or a day that went wrong. Use actually, by the way, and anyway, one time each.', molde: ['Actually, …', 'By the way, …', 'Anyway, …'], ex: 'Actually, my flight was not late: I was late. By the way, did you hear about the storm? Anyway, I missed the first meeting.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

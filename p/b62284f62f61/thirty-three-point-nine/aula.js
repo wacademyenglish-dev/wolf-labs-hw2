@@ -19,15 +19,16 @@
 var L = [
   { k: 'capa', est: null, img: 'envelope' },
   { k: 'envelope', est: 'o', min: 7, img: 'envelope', rot: 'I · The Envelope', t: 'Five things. How many days would each one take you?', p: 'Say your number out loud first. Then tap the closest one. Nobody checks.' },
-  { k: 'streak', est: 'f', min: 6, img: 'poeira', rot: 'II · The Streak', t: 'Every sentence with have been + -ing keeps the streak alive. One mistake, and it goes back to zero.', p: 'Choose the right form. Then say the whole sentence.' },
-  { k: 'forsince', est: 'f', min: 6, img: 'poeira', rot: 'III · For or Since', t: 'SINCE marks the point where it started. FOR measures the piece of time.', p: 'Tap FOR or SINCE for each one. Then say a sentence with it.' },
-  { k: 'estudo', est: 'l', min: 7, img: 'envelope', rot: 'IV · Their Own Number', t: '1994. A room of students, and one question about their own paper.', p: 'Play the researcher once. Then guess each number.' },
-  { k: 'caixa', est: 'o', min: 7, img: 'caixa', rot: 'V · The Worst Case', t: 'One more question: imagine everything going wrong. How long then?', p: 'Match each line to its number. They get bigger: realistic, worst case, what really happened.' },
-  { k: 'quinta', est: 'l', min: 7, img: 'mesa', rot: 'VI · Thursday’s Bill', t: 'A man describes putting something off.', p: 'Listen once. Sort what he got tonight from what he paid on Thursday.' },
-  { k: 'quanto', est: 'o', min: 7, extra: 1, img: 'poeira', rot: 'VII · Who’s Been Doing It Longest', t: 'Four habit trackers. Ask how long, then find out who has been going the longest.', p: 'Choose the right question and ask it. Read the answer. At the end, add yourself and your teacher.' },
-  { k: 'quando', est: 'l', min: 7, extra: 1, img: 'casaco', rot: 'VIII · When and Where', t: 'The one practical finding in this hour.', p: 'Listen once. Three questions. Then make your own plan out loud.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'IX · Still Going', t: 'Five sentences have a problem. One is right.', p: 'Choose the fix. Then say the whole sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'envelope', rot: 'X · Your Number', t: 'Your five numbers from scene I, next to theirs.', p: 'Write what you’ve been putting off, how long, and when and where you’ll start. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'envelope', rot: 'II · Since, For, Done', t: 'Where does each sentence live in time?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say two lines about you.' },
+  { k: 'streak', est: 'f', min: 6, img: 'poeira', rot: 'III · The Streak', t: 'Every sentence with have been + -ing keeps the streak alive. One mistake, and it goes back to zero.', p: 'Choose the right form. Then say the whole sentence.' },
+  { k: 'forsince', est: 'f', min: 6, img: 'poeira', rot: 'IV · For or Since', t: 'SINCE marks the point where it started. FOR measures the piece of time.', p: 'Tap FOR or SINCE for each one. Then say a sentence with it.' },
+  { k: 'estudo', est: 'l', min: 7, img: 'envelope', rot: 'V · Their Own Number', t: '1994. A room of students, and one question about their own paper.', p: 'Play the researcher once. Then guess each number.' },
+  { k: 'caixa', est: 'o', min: 7, img: 'caixa', rot: 'VI · The Worst Case', t: 'One more question: imagine everything going wrong. How long then?', p: 'Match each line to its number. They get bigger: realistic, worst case, what really happened.' },
+  { k: 'quinta', est: 'l', min: 7, img: 'mesa', rot: 'VII · Thursday’s Bill', t: 'A man describes putting something off.', p: 'Listen once. Sort what he got tonight from what he paid on Thursday.' },
+  { k: 'quanto', est: 'o', min: 7, extra: 1, img: 'poeira', rot: 'VIII · Who’s Been Doing It Longest', t: 'Four habit trackers. Ask how long, then find out who has been going the longest.', p: 'Choose the right question and ask it. Read the answer. At the end, add yourself and your teacher.' },
+  { k: 'quando', est: 'l', min: 7, extra: 1, img: 'casaco', rot: 'IX · When and Where', t: 'The one practical finding in this hour.', p: 'Listen once. Three questions. Then make your own plan out loud.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'X · Still Going', t: 'Five sentences have a problem. One is right.', p: 'Choose the fix. Then say the whole sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'envelope', rot: 'XI · Your Number', t: 'Your five numbers from scene I, next to theirs.', p: 'Write what you’ve been putting off, how long, and when and where you’ll start. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -217,3 +218,20 @@ TOQUES.qu = function (b, n) { S.qu.esc = n; if (n === 0) S.qu.feitos[S.qu.n] = 1
 TOQUES['qu-prox'] = function () { S.qu.n++; S.qu.esc = -1; };
 TOQUES.er = function (b, n) { S.er.esc = n; };
 TOQUES['er-prox'] = function () { S.er = { n: S.er.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de streak.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'The streak on one line. Where does each sentence go?',
+  marcos: [{ t: 'SINCE', s: 'it started at a point' }, { t: 'FOR', s: 'a piece of time' }, { t: 'DONE', s: 'it is over' }],
+  frases: [
+    { f: 'I’ve been writing since nine o’clock.', c: 0, d: 'have been + -ing · since + a point' },
+    { f: 'She’s been studying English since 2020.', c: 0, d: 'has been + -ing · since + a point' },
+    { f: 'We’ve been waiting for two hours.', c: 1, d: 'have been + -ing · for + a piece of time' },
+    { f: 'He’s been working here for five years.', c: 1, d: 'has been + -ing · for + a piece of time' },
+    { f: 'I worked all morning, and now I’m done.', c: 2, d: 'worked · finished, so the past' },
+    { f: 'They waited for an hour, then they left.', c: 2, d: 'waited · finished, so the past' }
+  ],
+  nota: 'Started in the past and still going? <b>have / has been + -ing</b>. <b>Since</b> + the point it started (since March). <b>For</b> + the piece of time (for three weeks). Finished? Use the past: I waited.',
+  uso: { p: 'Your turn. Something you’ve been doing for a while: once with since, once with for.', molde: ['I’ve been … since …', 'I’ve been … for …'], ex: 'I’ve been learning English since January. I’ve been working here for two years.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

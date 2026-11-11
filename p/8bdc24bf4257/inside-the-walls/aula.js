@@ -32,10 +32,11 @@ var L = [
   { k: 'lore', est: 'o', min: 8, img: 'cidade', rot: 'I · The World', t: 'Before the trailer: the world inside the walls.', p: 'Tap the next stop on the map. Read the page out loud. Then answer the question.' },
   { k: 'video', est: 'l', min: 10, img: 'portao', rot: 'II · The Trailer', t: 'Attack on Titan, 2013. The official trailer.', p: 'Two quick opinions. Watch the trailer. Then two short tasks: tap ▶ to see any moment again.' },
   { k: 'letra', est: 'l', min: 7, img: 'portao', rot: 'III · Scene by Scene', t: 'Five moments of the trailer. Tap one, watch, then True or Lie.', p: 'Each frame is a moment in the video.' },
-  { k: 'regra', est: 'f', min: 6, img: 'capa', rot: 'IV · The Rules of the Wall', t: 'A soldier’s notice on the wall. Find the pattern.', p: 'Read the notice out loud. Tap can, could and allowed to. Then finish the rule.' },
-  { k: 'muralhas', est: 'o', min: 7, img: 'portao', rot: 'V · The Three Walls', t: 'Six gates, from the center to the outside. Every right answer opens one.', p: 'Say the sentence out loud. Then tap the card and the box that fits: now, before, or a rule.' },
-  { k: 'regras', est: 'o', min: 6, img: 'cidade', rot: 'VI · Your Walls', t: 'Four places in your life. What can you do there? What aren’t you allowed to do?', p: 'Open a card and answer out loud. Tap the counter for each sentence you say.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VII · The Interview', t: 'The interview.', p: 'Interview.' }
+  { k: 'gx', est: 'f', min: 3, img: 'portao', rot: 'IV · Then and Now', t: 'Where does each sentence live in time?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'regra', est: 'f', min: 6, img: 'capa', rot: 'V · The Rules of the Wall', t: 'A soldier’s notice on the wall. Find the pattern.', p: 'Read the notice out loud. Tap can, could and allowed to. Then finish the rule.' },
+  { k: 'muralhas', est: 'o', min: 7, img: 'portao', rot: 'VI · The Three Walls', t: 'Six gates, from the center to the outside. Every right answer opens one.', p: 'Say the sentence out loud. Then tap the card and the box that fits: now, before, or a rule.' },
+  { k: 'regras', est: 'o', min: 6, img: 'cidade', rot: 'VII · Your Walls', t: 'Four places in your life. What can you do there? What aren’t you allowed to do?', p: 'Open a card and answer out loud. Tap the counter for each sentence you say.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · The Interview', t: 'The interview.', p: 'Interview.' }
 ];
 
 var SERIE = 'Attack on Titan', ANO = '2013';
@@ -346,3 +347,20 @@ var FIM = { tipo: 'entrevista', rot: 'VIII · The Interview', t: 'Interview a so
     { q: 'What can people inside the walls do to help you?', ex: 'They can make food and fix the gear.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'Life inside the walls. Where does each sentence go?',
+  marcos: [{ t: 'LONG AGO', s: 'before the walls' }, { t: 'YESTERDAY', s: 'last night' }, { t: 'NOW', s: 'today' }],
+  frases: [
+    { f: 'People couldn’t leave the city.', c: 0, d: 'couldn’t · past' },
+    { f: 'Soldiers weren’t allowed to open the gate.', c: 0, d: 'weren’t allowed to · past' },
+    { f: 'Armin couldn’t find his book.', c: 1, d: 'couldn’t · past' },
+    { f: 'The guard wasn’t allowed to talk to us.', c: 1, d: 'wasn’t allowed to · past' },
+    { f: 'Mikasa can carry the heavy box.', c: 2, d: 'can · now' },
+    { f: 'We aren’t allowed to open the gate.', c: 2, d: 'aren’t allowed to · now' }
+  ],
+  nota: 'The past is <b>could / couldn’t</b> and <b>was / were allowed to</b>. Now is <b>can / can’t</b> and <b>am / is / are allowed to</b>. For yesterday, never can’t: it is couldn’t.',
+  uso: { p: 'Your turn. One thing you couldn’t do as a kid, one thing you can do now, and one rule you are not allowed to break.', molde: ['As a kid, I couldn’t …', 'Now I can …', 'I’m not allowed to …'], ex: 'As a kid, I couldn’t swim. Now I can swim well. I’m not allowed to park in front of my building.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

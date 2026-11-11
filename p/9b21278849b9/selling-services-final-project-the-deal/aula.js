@@ -15,13 +15,14 @@ var REV = { tipo: 'aula', nivel: 'A1+', unidade: 30, kick: 'SELLING SERVICES · 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 4, img: 'conversa', rot: 'I · Thirty Lessons', t: 'Thirty lessons! What was your favorite?', p: 'Answer, then ask your teacher: “And you?”' },
-  { k: 'leitura', est: 'l', min: 6, img: 'mesa', rot: 'II · Easy Reader: It’s a Deal', t: 'Leo’s First Big Client · Chapter 8, the last one.', p: 'Read it out loud. Then answer the questions.' },
-  { k: 'descobre', est: 'f', min: 6, img: 'capa', rot: 'III · Your Top 4 Traps', t: 'The four big traps of the course.', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'cliente', est: 'o', min: 12, img: 'conversa', rot: 'IV · The Discovery Meeting', t: 'A new client from the story. Your teacher is the client.', p: 'Pitch first. Then find the five facts and ask for the next step.' },
-  { k: 'dialogo', est: 'l', min: 6, img: 'mesa', rot: 'V · The Closing', t: 'Two weeks later. Leo closes with Ivy.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'raciocinio', est: 'o', min: 10, img: 'conversa', rot: 'VI · Your Sales Storyline', t: 'Build the story of the sale. Then tell it to Ivy.', p: 'Tap a card for each step. Then present it, card by card. Your teacher is Ivy.' },
-  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'VII · Your Sales Kit', t: 'Four parts for your real job.', p: 'LinkedIn message, pitch, six questions, closing e-mail. Finish at home if you need to.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 30: the end of the course!', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'leitura', est: 'l', extra: 1, min: 6, img: 'mesa', rot: 'II · Easy Reader: It’s a Deal', t: 'Leo’s First Big Client · Chapter 8, the last one.', p: 'Read it out loud. Then answer the questions.' },
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'III · The Closing', t: 'Ivy and Leo, at the end. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then close a deal of your own.' },
+  { k: 'descobre', est: 'f', min: 6, img: 'capa', rot: 'IV · Your Top 4 Traps', t: 'The four big traps of the course.', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'cliente', est: 'o', min: 12, img: 'conversa', rot: 'V · The Discovery Meeting', t: 'A new client from the story. Your teacher is the client.', p: 'Pitch first. Then find the five facts and ask for the next step.' },
+  { k: 'dialogo', est: 'l', min: 6, img: 'mesa', rot: 'VI · The Closing', t: 'Two weeks later. Leo closes with Ivy.', p: 'One question before. Listen. Then the questions.' },
+  { k: 'raciocinio', est: 'o', min: 10, img: 'conversa', rot: 'VII · Your Sales Storyline', t: 'Build the story of the sale. Then tell it to Ivy.', p: 'Tap a card for each step. Then present it, card by card. Your teacher is Ivy.' },
+  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'VIII · Your Sales Kit', t: 'Four parts for your real job.', p: 'LinkedIn message, pitch, six questions, closing e-mail. Finish at home if you need to.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 30: the end of the course!', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -123,3 +124,27 @@ var RACIOCINIO = { rot: 'SALES STORYLINE', cliente: 'Ivy Carter, Skyline Air (fi
     { t: 'Our office is very beautiful.', e: -1 }],
   fala: ['Your problem is …', 'Because of this, …', 'We can …', 'For example, …', 'Can we …?'],
   modelo: 'Your problem is payroll: night shifts and overtime make it complicated. Because of this, your team works late every month, and the reports are late. We can do your payroll with your SAP, every month. For example, Brava Foods saved twenty percent in the first year. Can I send you a proposal by Friday?' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The closing. Tap the lit words.',
+  falas: [
+    { q: 'Ivy', f: 'Leo, [[have you ever]] worked with a company like ours?' },
+    { q: 'Leo', f: 'Yes, [[we have]]. We worked with Orla Beverages in 2024.' },
+    { q: 'Ivy', f: 'What [[does it include]]?' },
+    { q: 'Leo', f: 'It includes training. It [[doesn’t include]] travel.' },
+    { q: 'Ivy', f: 'OK. When can we start?' },
+    { q: 'Leo', f: 'We’re [[going to start]] in March. [[I’ll send]] the contract today.' }
+  ],
+  porques: [
+    'A question about experience: Have you ever + -ed?',
+    'The short answer repeats the helper: Yes, we have.',
+    'A question with does: does has the -s, include is clean.',
+    'No, with it: doesn’t include.',
+    'A plan: be + going to + verb.',
+    'A decision now: I’ll + verb.'
+  ],
+  nota: 'Six small tools from the course: <b>Have you ever …?</b> with <b>Yes, we have</b>, <b>Does it include …?</b> with <b>It doesn’t include</b>, <b>We’re going to</b> for a plan, and <b>I’ll</b> for a decision now.',
+  uso: { p: 'Your turn. Close a deal: one plan with going to and one decision with I’ll.', molde: ['We’re going to …', 'I’ll …'], ex: 'We’re going to start in March. I’ll send the contract today.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

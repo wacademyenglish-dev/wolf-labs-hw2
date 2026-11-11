@@ -12,12 +12,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'caixa', rot: 'I · You and Your Town', t: 'Before the album: you, your town and your family photos.', p: 'Pick a card. Answer out loud. Then your teacher answers too.' },
   { k: 'album', est: 'o', min: 7, img: 'capa', rot: 'II · Grandma’s Album', t: 'Bring the old photos back to color.', p: 'Tap a photo. Read the chapter out loud. Answer the question. Then describe the photo.' },
-  { k: 'regra', est: 'f', min: 6, img: 'cozinha', rot: 'III · The Rule', t: 'Then or now? One thing or many? That’s the whole rule.', p: 'Say each one the right way out loud. Then tap to fix it.' },
-  { k: 'agora', est: 'o', min: 7, img: 'hoje', rot: 'IV · Then and Now', t: 'You visited Maple Falls last week. Grandma asks about her town today.', p: 'Your teacher is Grandma. Answer fast: 1970, and today.' },
-  { k: 'roda', est: 'o', min: 7, img: 'praca', rot: 'V · Your Town, Then and Now', t: 'The place where you were a child, and today.', p: 'Spin. Answer with there was, there were, there wasn’t, and there is / there are for today.' },
-  { k: 'leo', est: 'o', min: 7, extra: 1, img: 'caixa', rot: 'VI · Cousin Leo Calls', t: 'Leo never saw the album. Tell him, from memory.', p: 'Your teacher is Leo. Tell the story again, photo by photo.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'estacao', rot: 'VII · Quick Check', t: 'Five quick lines from the album.', p: 'Pick the word. Then say the whole sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Old Photo', t: 'The album is in color now. One page is empty. It’s for you.', p: 'What was there in your town when you were a child, and what is there now? The red line watches was / were. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'rua', rot: 'III · The Photo Ladder', t: 'One street, five steps.', p: 'Read each step out loud, then go one step up. Notice was and were. Then climb with your own town.' },
+  { k: 'regra', est: 'f', min: 6, img: 'cozinha', rot: 'IV · The Rule', t: 'Then or now? One thing or many? That’s the whole rule.', p: 'Say each one the right way out loud. Then tap to fix it.' },
+  { k: 'agora', est: 'o', min: 7, img: 'hoje', rot: 'V · Then and Now', t: 'You visited Maple Falls last week. Grandma asks about her town today.', p: 'Your teacher is Grandma. Answer fast: 1970, and today.' },
+  { k: 'roda', est: 'o', min: 7, img: 'praca', rot: 'VI · Your Town, Then and Now', t: 'The place where you were a child, and today.', p: 'Spin. Answer with there was, there were, there wasn’t, and there is / there are for today.' },
+  { k: 'leo', est: 'o', min: 7, extra: 1, img: 'caixa', rot: 'VII · Cousin Leo Calls', t: 'Leo never saw the album. Tell him, from memory.', p: 'Your teacher is Leo. Tell the story again, photo by photo.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'estacao', rot: 'VIII · Quick Check', t: 'Five quick lines from the album.', p: 'Pick the word. Then say the whole sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Old Photo', t: 'The album is in color now. One page is empty. It’s for you.', p: 'What was there in your town when you were a child, and what is there now? The red line watches was / were. It goes to your My notes.' }
 ];
 
 var VOCE = [
@@ -167,3 +168,17 @@ TOQUES['le-viu'] = function () { S.leo.viu = 1; };
 TOQUES['le-prox'] = function () { S.leo = { n: S.leo.n + 1, viu: 0 }; };
 TOQUES.qz = function (b, n) { S.quiz.esc = n; };
 TOQUES['qz-prox'] = function () { S.quiz = { n: S.quiz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One old street. Climb it one step at a time.',
+  degraus: [
+    { r: 'one', f: 'There <b>was</b> a bakery on Main Street.', d: 'One thing, long ago: was.' },
+    { r: 'many', f: 'There <b>were</b> two old cars in the square.', d: 'More than one: were.' },
+    { r: 'not', f: 'There <b>wasn’t</b> a bank. There <b>weren’t any</b> shops.', d: 'No: wasn’t for one, weren’t any for many.' },
+    { r: '?', f: '<b>Was there</b> a school? <b>Were there</b> any trees?', d: 'A question: Was or Were goes first.' },
+    { r: 'now', f: 'Today there <b>is</b> a parking lot. There <b>are</b> three cafes.', d: 'Today: is and are.' }
+  ],
+  nota: 'One thing: <b>there was</b>. Many things: <b>there were</b>. No: <b>wasn’t</b> or <b>weren’t any</b>. A question: <b>Was there…?</b> or <b>Were there…?</b> Today: <b>there is</b> and <b>there are</b>.',
+  uso: { p: 'Your turn. Climb the ladder with your town ten years ago: there was…, there wasn’t…, Was there…?', molde: ['There was …', 'There weren’t any …', 'Was there …?'], ex: 'There was a small cinema near my house. There weren’t any big stores. Was there a park? Yes, there was.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

@@ -17,9 +17,10 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 13, kick: 'AU PAIR · MODULE 4 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 12, img: 'conversa', rot: 'I · The Five Numbers', t: 'A host family learns the rules.', p: 'One question before, then the video, then the questions.' },
-  { k: 'leitura', est: 'l', min: 9, img: 'capa', rot: 'II · Your Rights Card', t: 'The program rules and your rights.', p: 'Read the card out loud. Then answer the questions.' },
-  { k: 'multipla', est: 'f', min: 12, img: 'conversa', rot: 'III · Count the Hours', t: 'Six real weeks. Inside the rules or not?', p: 'Count. Choose. Then say why.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 13: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'II · The Pocket Rule', t: 'Four lines. Keep them in the corner.', p: 'Read one line at a time. Then keep the rule in the corner for the rights card.' },
+  { k: 'leitura', est: 'l', min: 9, img: 'capa', rot: 'III · Your Rights Card', t: 'The program rules and your rights.', p: 'Read the card out loud. Then answer the questions.' },
+  { k: 'multipla', est: 'f', min: 12, img: 'conversa', rot: 'IV · Count the Hours', t: 'Six real weeks. Inside the rules or not?', p: 'Count. Choose. Then say why.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 13: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: '4gmpcqs9NrU', titulo: '45 hours a week: scheduling your au pair without breaking the J-1 rules', fonte: 'AUPAIRSYNC · 0:44–6:06', inicio: 44, fim: 366,
@@ -60,3 +61,16 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 13: video · leitura · multipla (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de leitura.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'Your rights, in numbers',
+  linhas: [
+    'work: <b>up to 10 hours</b> a day · <b>45 hours</b> a week',
+    'time off: <b>1½ days</b> a week · <b>one full weekend</b> a month',
+    'vacation: <b>2 weeks</b>, paid',
+    'school: the family pays <b>up to $500</b>'
+  ],
+  uso: { p: 'Your turn. Tell a friend the rules: how many hours you can work, and how much time off you have.', molde: ['I can work up to …', 'I have … off every week.'], ex: 'I can work up to ten hours a day and 45 hours a week. I have a day and a half off every week.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

@@ -19,14 +19,15 @@ var L = [
   { k: 'capa', est: null, img: 'caixa' },
   { k: 'sua', est: 'o', min: 7, img: 'terra', rot: 'I · Your 2016 Box', t: 'Before the dig: ten years ago, in your life.', p: 'Pick a card. Every answer goes into your own box. Nobody is corrected here.' },
   { k: 'chao', est: 'o', min: 7, img: 'buraco', rot: 'II · The Ground', t: 'Park Hill School, 2026. The box is under four layers of earth.', p: 'Dig one layer at a time. Read each object out loud and say what happened.' },
-  { k: 'seta', est: 'f', min: 6, img: 'terra', rot: 'III · Back or Forward?', t: 'The rule of the arrow. Which happened first?', p: 'Read the sentence. Say which happened first. Then tap BACK or FORWARD.' },
-  { k: 'ponteiro', est: 'o', min: 7, img: 'terra', rot: 'IV · The Arrow', t: 'Eight moments. The arrow already points the right way.', p: 'Say the sentence. Then tap the version you said.' },
-  { k: 'filmes', est: 'f', min: 6, img: 'chao', rot: 'V · Two Films', t: 'Two short films, one sentence. Which film is it?', p: 'Describe both films. Then pick the one the sentence tells.' },
-  { k: 'bilhete', est: 'o', min: 7, img: 'bilhete', rot: 'VI · The Folded Note', t: 'At the bottom of the box: a folded note from Nina.', p: 'Open it one fold at a time. Don’t decide until the last line.' },
-  { k: 'recibo', est: 'f', min: 6, extra: 1, img: 'bilhete', rot: 'VII · The Receipt', t: 'Under the note, a post office receipt. It is the proof.', p: 'Read the receipt. Answer three questions.' },
-  { k: 'caixa', est: 'o', min: 7, extra: 1, img: 'caixa', rot: 'VIII · Your Own Box', t: 'Now you bury a box for 2036. Pick a part of your life.', p: 'Say three things: a memory, a reminder, and a habit you stopped.' },
-  { k: 'carta', est: 'o', min: 7, extra: 1, img: 'terra', rot: 'IX · A Letter to 2036', t: 'Dictate a short letter to yourself in 2036.', p: 'Your teacher asks. You answer. Then you ask back.' },
-  { k: 'fim', est: 'w', min: 6, img: 'bilhete', rot: 'X · The Line You Write', t: 'The box is closed again.', p: 'Write the note for your own box: a memory, a reminder, a habit you stopped. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'caixa', rot: 'III · Right, Not This', t: 'Six pairs from the capsule. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'seta', est: 'f', min: 6, img: 'terra', rot: 'IV · Back or Forward?', t: 'The rule of the arrow. Which happened first?', p: 'Read the sentence. Say which happened first. Then tap BACK or FORWARD.' },
+  { k: 'ponteiro', est: 'o', min: 7, img: 'terra', rot: 'V · The Arrow', t: 'Eight moments. The arrow already points the right way.', p: 'Say the sentence. Then tap the version you said.' },
+  { k: 'filmes', est: 'f', min: 6, img: 'chao', rot: 'VI · Two Films', t: 'Two short films, one sentence. Which film is it?', p: 'Describe both films. Then pick the one the sentence tells.' },
+  { k: 'bilhete', est: 'o', min: 7, img: 'bilhete', rot: 'VII · The Folded Note', t: 'At the bottom of the box: a folded note from Nina.', p: 'Open it one fold at a time. Don’t decide until the last line.' },
+  { k: 'recibo', est: 'f', min: 6, extra: 1, img: 'bilhete', rot: 'VIII · The Receipt', t: 'Under the note, a post office receipt. It is the proof.', p: 'Read the receipt. Answer three questions.' },
+  { k: 'caixa', est: 'o', min: 7, extra: 1, img: 'caixa', rot: 'IX · Your Own Box', t: 'Now you bury a box for 2036. Pick a part of your life.', p: 'Say three things: a memory, a reminder, and a habit you stopped.' },
+  { k: 'carta', est: 'o', min: 7, extra: 1, img: 'terra', rot: 'X · A Letter to 2036', t: 'Dictate a short letter to yourself in 2036.', p: 'Your teacher asks. You answer. Then you ask back.' },
+  { k: 'fim', est: 'w', min: 6, img: 'bilhete', rot: 'XI · The Line You Write', t: 'The box is closed again.', p: 'Write the note for your own box: a memory, a reminder, a habit you stopped. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -205,3 +206,18 @@ TOQUES.rc = function (b, n, v) { S.rc[n] = +v; };
 TOQUES['cx-t'] = function (b, n) { S.cx.tema = n; };
 TOQUES['cx-p'] = function (b, n, v) { var p = S.cx.pecas[S.cx.tema] = S.cx.pecas[S.cx.tema] || {}; p[v] = !p[v]; };
 TOQUES['ct-prox'] = function () { S.ct.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de seta.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'I stopped smoking in 2006. I don’t smoke now.', x: 'I stopped to smoke in 2006. I don’t smoke now.', d: 'The old habit is finished: stop + -ing.' },
+    { c: 'On the way, Clara stopped to buy a shovel.', x: 'On the way, Clara stopped buying a shovel.', d: 'She stopped walking and did something new: stop + to.' },
+    { c: 'Don’t forget to bring the box!', x: 'Don’t forget bringing the box!', d: 'A reminder for later: forget + to.' },
+    { c: 'I remember burying the box in 2006.', x: 'I remember to bury the box in 2006.', d: 'A memory of the past: remember + -ing.' },
+    { c: 'I forgot to buy milk, so there is none.', x: 'I forgot buying milk, so there is none.', d: 'I did not do it: forget + to.' },
+    { c: 'Remember to lock the door tonight!', x: 'Remember locking the door tonight!', d: 'A reminder for later: remember + to.' }
+  ],
+  nota: 'The arrow points <b>back</b> to something that already happened: remember <b>burying</b>, stop <b>smoking</b>. It points <b>forward</b> to something to do: remember <b>to post</b>, forget <b>to buy</b>, stop <b>to buy</b>.',
+  uso: { p: 'Your turn. One thing you remember doing as a kid, and one thing you must remember to do tomorrow.', molde: ['I remember …ing …', 'I must remember to …'], ex: 'I remember playing in the rain. I must remember to call my mother.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

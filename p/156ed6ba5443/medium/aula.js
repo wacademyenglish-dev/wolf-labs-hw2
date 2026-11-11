@@ -11,16 +11,17 @@
 var L = [
   { k: 'capa', est: null, img: 'caixas' },
   { k: 'abre', est: 'o', min: 7, img: 'caixas', rot: 'I · Same Size Everywhere?', t: 'Compare yourself. Any words you have.', p: 'Pick a card. Answer out loud. Your teacher taps the forms you used. Don’t worry about it yet.' },
-  { k: 'gavetas', est: 'f', min: 6, img: 'caixas', rot: 'II · Short Word, Long Word', t: 'One thing decides the whole hour: how long the word is.', p: 'Clap it. Put it in a drawer. Then say it with its noun.' },
-  { k: 'regua', est: 'f', min: 6, img: 'quatro', rot: 'III · The Ruler', t: 'Two things on the ruler. Say which one is more.', p: 'Pick the form. Then the little word after it. Then say the whole sentence.' },
-  { k: 'than', est: 'f', min: 6, img: 'quatro', rot: 'IV · Than, Not Then', t: 'Three words that sound almost the same.', p: 'Pick the word. Then read the sentence out loud, fast.' },
-  { k: 'arara', est: 'o', min: 7, img: 'quatro', rot: 'V · The Rack', t: 'Four shirts on one rack. Any two.', p: 'Two shirts light up. Say a sentence about them. Then check.' },
-  { k: 'tres', est: 'f', min: 6, img: 'quatro', rot: 'VI · Good, Bad, Far', t: 'Three words follow no rule.', p: 'Pick the form. Then read the sentence.' },
-  { k: 'etiquetas', est: 'o', min: 7, extra: 1, img: 'quatro', rot: 'VII · Four Labels', t: 'Turn the labels over.', p: 'Tap each label. Read the size and the width. Compare two.' },
-  { k: 'loja', est: 'o', min: 7, extra: 1, img: 'caixas', rot: 'VIII · At the Store', t: 'Now you ask. The clerk answers.', p: 'Read the problem. Ask the clerk. Then see one way to say it.' },
-  { k: 'tabela', est: 'o', min: 7, extra: 1, img: 'quatro', rot: 'IX · The Size Chart', t: 'A store in another country. Which size is yours?', p: 'Read the chart. Compare out loud. Then choose.' },
-  { k: 'medio', est: 'o', min: 7, extra: 1, img: 'quatro', rot: 'X · So What Is Medium?', t: 'Three facts, and they don’t agree.', p: 'Answer first. Then open the answer.' },
-  { k: 'fim', est: 'w', min: 6, img: 'caixas', rot: 'XI · Your Closet', t: 'Compare the things in your closet.', p: 'Five sentences with -er or more, and than. The red line watches the little words. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'quatro', rot: 'II · The Ladder', t: 'One word, five steps.', p: 'Read each step out loud, then go one step up. Notice what happens to the word. Then climb with your own shirts.' },
+  { k: 'gavetas', est: 'f', min: 6, img: 'caixas', rot: 'III · Short Word, Long Word', t: 'One thing decides the whole hour: how long the word is.', p: 'Clap it. Put it in a drawer. Then say it with its noun.' },
+  { k: 'regua', est: 'f', min: 6, img: 'quatro', rot: 'IV · The Ruler', t: 'Two things on the ruler. Say which one is more.', p: 'Pick the form. Then the little word after it. Then say the whole sentence.' },
+  { k: 'than', est: 'f', min: 6, img: 'quatro', rot: 'V · Than, Not Then', t: 'Three words that sound almost the same.', p: 'Pick the word. Then read the sentence out loud, fast.' },
+  { k: 'arara', est: 'o', min: 7, img: 'quatro', rot: 'VI · The Rack', t: 'Four shirts on one rack. Any two.', p: 'Two shirts light up. Say a sentence about them. Then check.' },
+  { k: 'tres', est: 'f', min: 6, img: 'quatro', rot: 'VII · Good, Bad, Far', t: 'Three words follow no rule.', p: 'Pick the form. Then read the sentence.' },
+  { k: 'etiquetas', est: 'o', min: 7, extra: 1, img: 'quatro', rot: 'VIII · Four Labels', t: 'Turn the labels over.', p: 'Tap each label. Read the size and the width. Compare two.' },
+  { k: 'loja', est: 'o', min: 7, extra: 1, img: 'caixas', rot: 'IX · At the Store', t: 'Now you ask. The clerk answers.', p: 'Read the problem. Ask the clerk. Then see one way to say it.' },
+  { k: 'tabela', est: 'o', min: 7, extra: 1, img: 'quatro', rot: 'X · The Size Chart', t: 'A store in another country. Which size is yours?', p: 'Read the chart. Compare out loud. Then choose.' },
+  { k: 'medio', est: 'o', min: 7, extra: 1, img: 'quatro', rot: 'XI · So What Is Medium?', t: 'Three facts, and they don’t agree.', p: 'Answer first. Then open the answer.' },
+  { k: 'fim', est: 'w', min: 6, img: 'caixas', rot: 'XII · Your Closet', t: 'Compare the things in your closet.', p: 'Five sentences with -er or more, and than. The red line watches the little words. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -235,3 +236,17 @@ TOQUES['tb-p'] = function (b, n, v) { var t = S.tab; t.partes[t.n] = t.partes[t.
 TOQUES['tb-e'] = function () { S.tab.erro = !S.tab.erro; };
 TOQUES['tb-prox'] = function () { S.tab.n++; S.tab.erro = 0; };
 TOQUES['md-abre'] = function () { S.medio.abre = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de gavetas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One word. Climb it one step at a time.',
+  degraus: [
+    { r: 'word', f: 'small', d: 'A short word, clean.' },
+    { r: '-er', f: 'The red shirt is <b>smaller</b>.', d: 'A short word: add -er.' },
+    { r: 'than', f: 'The red shirt is <b>smaller than</b> the blue shirt.', d: 'To say which one: than.' },
+    { r: 'long', f: 'The blue shirt is <b>more expensive than</b> the red shirt.', d: 'A long word: more + the word. No -er.' },
+    { r: 'rebel', f: 'The green shirt is <b>better than</b> both.', d: 'Good is a rebel: better. Never gooder.' }
+  ],
+  nota: 'A short word: <b>-er than</b>. A long word: <b>more … than</b>. Never both: not “more bigger”. And <b>good</b> becomes <b>better</b>.',
+  uso: { p: 'Your turn. Climb with two things in your closet. Say which one is bigger, and which one is more expensive.', molde: ['My jacket is … than …', 'My shoes are more … than …'], ex: 'My jacket is warmer than my sweater. My shoes are more expensive than my jacket.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

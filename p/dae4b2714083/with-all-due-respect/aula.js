@@ -15,9 +15,10 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 5, titulo: ['With All', 'Due Res
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Meeting', t: 'The garden: pool or vegetables?', p: 'Read the meeting out loud with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Direct or Diplomatic?', t: 'Same message, different temperature.', p: 'Compare A and B. How would the other person feel?' },
-  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'III · Cool It Down', t: 'Hot → diplomatic.', p: 'Read the direct sentence. Use the clue. Say the diplomatic version.' },
-  { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'IV · The Mediator', t: 'Three neighbors. Three strong opinions.', p: 'Ask each neighbor five questions. Your teacher is the neighbor. Then answer each one, diplomatically.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Hot or Cool?', t: 'Two neighbors. One idea. Two temperatures.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Direct or Diplomatic?', t: 'Same message, different temperature.', p: 'Compare A and B. How would the other person feel?' },
+  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'IV · Cool It Down', t: 'Hot → diplomatic.', p: 'Read the direct sentence. Use the clue. Say the diplomatic version.' },
+  { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'V · The Mediator', t: 'Three neighbors. Three strong opinions.', p: 'Ask each neighbor five questions. Your teacher is the neighbor. Then answer each one, diplomatically.' }
 ];
 var PORTAS = [];
 
@@ -75,3 +76,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* C1 · With All Due Respect: leitura · descobre · transforma · missao */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Hot or cool? Two answers at the garden meeting.', a: { t: 'Direct', falas: [['Neighbor', 'I want a pool in the garden.'], ['You', 'No. <mark>You are wrong.</mark> It costs too much.']], d: 'Short and hard. The neighbor feels attacked.' }, b: { t: 'Diplomatic', falas: [['Neighbor', 'I want a pool in the garden.'], ['You', '<mark>I take your point, but</mark> I see it <mark>slightly differently</mark>. It might cost more than we think.']], d: 'You accept the person, soften the idea, and still say no.' }, pergunta: 'Same opinion, two temperatures. What is different?', pergunta2: 'Now you. Which one is more diplomatic?', itens: [{ p: 'You disagree with the budget.', o: ['I don’t agree with you.', 'I’m not sure I’d go that far.'], c: 1, d: 'It softens the no.' }, { p: 'You think the colleague made a mistake.', o: ['Correct me if I’m wrong, but I thought it was Tuesday.', 'You are wrong. It was Tuesday.'], c: 0, d: 'It leaves a door open.' }, { p: 'You want to say the idea is weak, politely.', o: ['That’s a bad idea.', 'That’s one way of looking at it. However, …'], c: 1, d: 'It does not attack the idea.' }, { p: 'You want to disagree without hurting.', o: ['I hear what you’re saying. However, I might see it a bit differently.', 'I hear you, but you are completely wrong.'], c: 0, d: 'Soft words: might, a bit.' }], nota: 'To disagree with diplomacy: <b>accept first</b> (I take your point, I hear what you’re saying), then <b>soften</b> (slightly, a bit, might, perhaps), then say your idea. <b>With all due respect</b> is strong: it can sound like an insult.', uso: { p: 'Your turn. Your neighbor wants to paint the building pink, and you do not agree. Say it with diplomacy, in two sentences.', molde: ['I take your point, but …', 'I see it slightly differently …'], ex: 'I take your point, but I see it slightly differently. I’m not sure pink would please everybody.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

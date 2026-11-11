@@ -14,12 +14,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'corredor', rot: 'I · You and Your Health', t: 'Before the clinic: you, colds, doctors and sleep.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
   { k: 'sala', est: 'o', min: 7, img: 'sala', rot: 'II · The Waiting Room', t: 'Eight chairs, eight tickets. Nurse Rosa calls each number.', p: 'Call a ticket. Read what we see. You are the patient: say what’s wrong. Then tap your sentence.' },
-  { k: 'regra', est: 'f', min: 6, img: 'balcao', rot: 'III · The Rule', t: 'You HAVE a problem. You FEEL a way. A part of you HURTS.', p: 'Read the four cards out loud. Then fix the four traps.' },
-  { k: 'relogio', est: 'o', min: 7, img: 'consultorio', rot: 'IV · Nine to Noon', t: 'The clock says 9 AM. Eight moments until lunch.', p: 'Your teacher reads the moment. Answer at once, as the patient or as the doctor. The clock moves with every answer.' },
-  { k: 'rosa', est: 'o', min: 7, img: 'balcao', rot: 'V · Your Ticket', t: 'Tuesday, 8 AM. Now YOU take a ticket.', p: 'Your teacher is Nurse Rosa. You are the patient: yourself, with a problem you choose.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'remedios', rot: 'VI · Quick Check', t: 'Six quick lines from the waiting room.', p: 'Say the whole sentence first. Then tap the word.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'cha', rot: 'VII · Your Health', t: 'Your real life: colds, headaches and good advice.', p: 'Spin the wheel. Answer with I have a, I feel, my … hurts or you should.' },
-  { k: 'fim', est: 'w', min: 6, img: 'cha', rot: 'VIII · A Note to the Doctor', t: 'You feel sick today. Write a note to the doctor.', p: 'What do you have? How do you feel? What hurts? Then one piece of advice for a friend. The red line watches it. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sala', rot: 'III · Find the Rule', t: 'Four tickets from the waiting room. You find the rule.', p: 'Read the four sentences out loud. Look at the lit verbs. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'balcao', rot: 'IV · The Rule', t: 'You HAVE a problem. You FEEL a way. A part of you HURTS.', p: 'Read the four cards out loud. Then fix the four traps.' },
+  { k: 'relogio', est: 'o', min: 7, img: 'consultorio', rot: 'V · Nine to Noon', t: 'The clock says 9 AM. Eight moments until lunch.', p: 'Your teacher reads the moment. Answer at once, as the patient or as the doctor. The clock moves with every answer.' },
+  { k: 'rosa', est: 'o', min: 7, img: 'balcao', rot: 'VI · Your Ticket', t: 'Tuesday, 8 AM. Now YOU take a ticket.', p: 'Your teacher is Nurse Rosa. You are the patient: yourself, with a problem you choose.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'remedios', rot: 'VII · Quick Check', t: 'Six quick lines from the waiting room.', p: 'Say the whole sentence first. Then tap the word.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'cha', rot: 'VIII · Your Health', t: 'Your real life: colds, headaches and good advice.', p: 'Spin the wheel. Answer with I have a, I feel, my … hurts or you should.' },
+  { k: 'fim', est: 'w', min: 6, img: 'cha', rot: 'IX · A Note to the Doctor', t: 'You feel sick today. Write a note to the doctor.', p: 'What do you have? How do you feel? What hurts? Then one piece of advice for a friend. The red line watches it. It goes to your My notes.' }
 ];
 
 var VOCE = [
@@ -182,3 +183,19 @@ TOQUES.qz = function (b, n) { if (S.quiz.esc === 0) return false; S.quiz.esc = n
 TOQUES['qz-prox'] = function () { S.quiz = { n: S.quiz.n + 1, esc: -1 }; };
 TOQUES['rd-gira'] = function () { S.roda.giros++; };
 TOQUES['rd-foi'] = function () { var r = S.roda; r.foi[(r.giros * 3 - 3) % FATIAS.length] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four patients at the Maple Street Clinic. Find the rule yourself.',
+  exemplos: [
+    'I <b>have</b> a headache.',
+    'She <b>has</b> a cold.',
+    'I <b>feel</b> tired.',
+    'My back <b>hurts</b>.'
+  ],
+  pergunta: 'To say what is wrong with you, we use …',
+  opcoes: ['have + a problem, feel + how, my … hurts', 'am with + a problem', 'am + a problem: I am a headache'], c: 0,
+  nao: 'Not that one. Read the four lit verbs again: is there an am? a with?',
+  regra: '<b>I have a</b> + problem: I have a headache. <b>I feel</b> + how: I feel tired. <b>My</b> + part of the body + <b>hurts</b>. Not “I am with a headache”.',
+  uso: { p: 'Your turn. You are at the clinic. Nurse Rosa asks. Say one problem you have, how you feel, and what hurts.', molde: ['I have a …', 'I feel …', 'My … hurts.'], ex: 'I have a cold. I feel tired. My throat hurts.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

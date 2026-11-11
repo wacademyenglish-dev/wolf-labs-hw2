@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Crossroads', t: 'Three guests, three big decisions.', p: 'Ask each guest five questions. Your teacher is the guest. Then give your advice on the air.' },
   { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Mistake Hunter', t: 'Five lines from the crossroads. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -57,3 +58,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me what I would do with a million dollars.', dica: 'What would you do if you had a million dollars?', resp: 'I’d buy a house by the sea.' },
   { alvo: 'Ask me for advice: “What would you do if you were me?”', dica: 'What would you do if you were me?', resp: 'If I were you, I’d talk to your boss.' },
   { alvo: 'Ask me about a decision I’d change in the past.', dica: 'Is there anything you would have done differently?', resp: 'If I had known, I would have studied music.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. The Crossroads podcast.', toque: 'Advanced learners often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'If it [[will rain]], I’ll stay home.', r: 'If it <b>rains</b>, I’ll stay home.', d: 'After if: the present. No will.' }, { f: 'If I [[was]] you, I’d take the job.', r: 'If I <b>were</b> you, I’d take the job.', d: 'If I were you: were.' }, { f: 'If I [[would have]] known, I would have called.', r: 'If I <b>had</b> known, I would have called.', d: 'if + had + participle.' }, { f: 'I’ll go [[if not]] it rains.', r: 'I’ll go <b>unless</b> it rains.', d: 'unless = if not.' }, { f: 'If I [[have]] more time, I would learn the piano.', r: 'If I <b>had</b> more time, I would learn the piano.', d: 'Imagine it: if + past, would + verb.' }], nota: 'The if part never has <b>will</b> or <b>would</b>: If it <b>rains</b>, If I <b>had</b>, If I <b>had known</b>. <b>Unless</b> = if not. <b>If I were you</b>, I’d …', uso: { p: 'Your turn. A guest is at a crossroads. Give advice: one with If I were you, and one with unless.', molde: ['If I were you, I’d …', 'You’ll …, unless …'], ex: 'If I were you, I’d take the job. You’ll be happy, unless the boss is terrible.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

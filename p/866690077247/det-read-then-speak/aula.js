@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 9, kick: 'DUOLINGO ENGLISH TEST
   nota: 'Answer the question in your first sentence. Then reason, example, wrap-up. The guide questions on the card are your map.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'I · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
-  { k: 'dado', est: 'f', min: 8, img: 'capa', rot: 'II · The Die', t: 'Roll the die. The number chooses.', p: 'Your teacher rolls. Do the challenge out loud, from memory.' },
-  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'III · Three Topics', t: 'The real thing: 20 seconds, then speak.', p: 'Read the topic. Use the guide questions as your map.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'I · The Ladder', t: 'One answer, four steps.', p: 'Read each step out loud, then go one step up. Notice what each step does. Then climb with your own topic.' },
+  { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'II · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
+  { k: 'dado', est: 'f', min: 8, img: 'capa', rot: 'III · The Die', t: 'Roll the die. The number chooses.', p: 'Your teacher rolls. Do the challenge out loud, from memory.' },
+  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'IV · Three Topics', t: 'The real thing: 20 seconds, then speak.', p: 'Read the topic. Use the guide questions as your map.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var ORDEM = { rot: 'TOPIC: YOUR FAVORITE SEASON', pede: 'Tap the four pieces in order: answer, reason, example, wrap-up.',
@@ -56,3 +57,17 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 09: ordem · dado (PORTAS) · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de ordem.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One topic. Climb the answer one step at a time.',
+  degraus: [
+    { r: 'answer', f: '<b>My favorite season is</b> autumn.', d: 'Answer first. One short sentence.' },
+    { r: 'reason', f: '<b>The main reason is</b> the weather.', d: 'One reason, not five.' },
+    { r: 'example', f: '<b>For example,</b> last October I walked to work every day.', d: 'A real example. If it happened, use the past.' },
+    { r: 'wrap-up', f: '<b>That’s why</b> autumn is the season I wait for.', d: 'Close the circle with That’s why.' }
+  ],
+  nota: 'Four moves, every time: <b>My … is …</b>, <b>The main reason is …</b>, <b>For example, …</b>, <b>That’s why …</b>. You always know what comes next.',
+  uso: { p: 'Your turn. Topic: your favorite month. Climb the four steps.', molde: ['My favorite month is …', 'The main reason is …', 'For example, …', 'That’s why …'], ex: 'My favorite month is July. The main reason is the holiday. For example, last July I traveled to the beach. That’s why July is special for me.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

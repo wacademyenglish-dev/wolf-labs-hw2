@@ -15,14 +15,15 @@ var L = [
   { k: 'capa', est: null, img: 'fundo' },
   { k: 'abre', est: 'o', min: 7, img: 'mala', rot: 'I · Warm-Up Round', t: 'Three questions before the game. No wrong answers yet.', p: 'Pick a card. Answer with a whole sentence. Nobody corrects you here.' },
   { k: 'prova', est: 'f', min: 6, img: 'copo', rot: 'II · What Happens Next', t: 'Nothing is moving yet, and you can see it coming.', p: 'Point at the proof. Say what happens next. Then tap it.' },
-  { k: 'portas', est: 'f', min: 6, img: 'fundo', rot: 'III · Two Doors', t: 'Two doors to the future. The question is when it started.', p: 'Read the sentence out loud. Send it through the right door.' },
-  { k: 'semana', est: 'o', min: 7, img: 'mala', rot: 'IV · Your Week', t: 'Now your own week. Some of it is booked. Some of it isn’t.', p: 'Say the whole sentence first. Your teacher puts it in a box.' },
-  { k: 'buzz1', est: 'o', min: 7, img: 'fundo', rot: 'V · The Buzzer Round', t: 'Six situations. Nobody planned any of them.', p: 'Press the buzzer. Answer in one sentence with I’ll or I won’t.' },
-  { k: 'previsao', est: 'f', min: 6, img: 'ceu', rot: 'VI · The Forecast', t: 'Somebody predicts the weather for a living. Here is how far they can see.', p: 'Read the two bars. Then answer the question.' },
-  { k: 'casos', est: 'f', min: 6, extra: 1, img: 'fundo', rot: 'VII · Two Contestants', t: 'Two people on the same stage. Only one of them planned anything.', p: 'Read what each one says. Choose the true sentence.' },
-  { k: 'buzz2', est: 'o', min: 7, extra: 1, img: 'fundo', rot: 'VIII · Promise, Offer, Refuse', t: 'Three jobs GOING TO can’t do.', p: 'Press. Do the task out loud, starting with I’ll or I won’t.' },
-  { k: 'host', est: 'o', min: 7, extra: 1, img: 'fundo', rot: 'IX · Now You Host', t: 'You’ve answered for forty minutes. Now you hold the questions.', p: 'Tap a card. Ask your teacher out loud. Listen to the answer.' },
-  { k: 'fim', est: 'w', min: 6, img: 'fundo', rot: 'X · The Scoreboard', t: 'Your warm-up answers come back.', p: 'Write one plan, one thing you decide right now, and one promise. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'fundo', rot: 'III · Planned or Now?', t: 'Two moments on the game show stage.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'portas', est: 'f', min: 6, img: 'fundo', rot: 'IV · Two Doors', t: 'Two doors to the future. The question is when it started.', p: 'Read the sentence out loud. Send it through the right door.' },
+  { k: 'semana', est: 'o', min: 7, img: 'mala', rot: 'V · Your Week', t: 'Now your own week. Some of it is booked. Some of it isn’t.', p: 'Say the whole sentence first. Your teacher puts it in a box.' },
+  { k: 'buzz1', est: 'o', min: 7, img: 'fundo', rot: 'VI · The Buzzer Round', t: 'Six situations. Nobody planned any of them.', p: 'Press the buzzer. Answer in one sentence with I’ll or I won’t.' },
+  { k: 'previsao', est: 'f', min: 6, img: 'ceu', rot: 'VII · The Forecast', t: 'Somebody predicts the weather for a living. Here is how far they can see.', p: 'Read the two bars. Then answer the question.' },
+  { k: 'casos', est: 'f', min: 6, extra: 1, img: 'fundo', rot: 'VIII · Two Contestants', t: 'Two people on the same stage. Only one of them planned anything.', p: 'Read what each one says. Choose the true sentence.' },
+  { k: 'buzz2', est: 'o', min: 7, extra: 1, img: 'fundo', rot: 'IX · Promise, Offer, Refuse', t: 'Three jobs GOING TO can’t do.', p: 'Press. Do the task out loud, starting with I’ll or I won’t.' },
+  { k: 'host', est: 'o', min: 7, extra: 1, img: 'fundo', rot: 'X · Now You Host', t: 'You’ve answered for forty minutes. Now you hold the questions.', p: 'Tap a card. Ask your teacher out loud. Listen to the answer.' },
+  { k: 'fim', est: 'w', min: 6, img: 'fundo', rot: 'XI · The Scoreboard', t: 'Your warm-up answers come back.', p: 'Write one plan, one thing you decide right now, and one promise. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -187,3 +188,20 @@ TOQUES.pr = function (b, n, v) { S.prev = v; pontua('prev', v === 'ok'); };
 TOQUES.cs = function (b, n, v) { S.cs[n] = v; pontua('cs' + n, v === 'ok'); };
 TOQUES.hs = function (b, n) { S.host.sel = n; };
 TOQUES['hs-ok'] = function () { S.host.feito[S.host.sel] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de portas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Two doors to the future. Which one is it?',
+  a: { t: 'Already planned', falas: [['The host', 'What are you doing after the show?'], ['You', 'I<mark>’m going to</mark> see my sister. I bought the tickets on Monday.']], d: 'The plan was there before the question. That is <b>going to</b>.' },
+  b: { t: 'Decided now', falas: [['The host', 'Oh no! Your phone is at two percent!'], ['You', 'OK, I<mark>’ll</mark> charge it. I<mark>won’t</mark> use it on stage.']], d: 'It is born right now: an offer or a promise. That is <b>will</b> or <b>won’t</b>.' },
+  pergunta: 'Same future, two doors. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'The buzzer is stuck! The host looks at you. You:', o: ['I’ll fix it.', 'I’m going to fix it.'], c: 0, d: 'A quick offer, right now.' },
+    { p: 'You have two tickets in your hand for Saturday. A friend asks about your weekend:', o: ['I’ll go to a concert.', 'I’m going to go to a concert.'], c: 1, d: 'The tickets are bought: the plan is old.' },
+    { p: 'The host: “Nobody wants to go first.” You:', o: ['I’ll go first.', 'I’m going to go first.'], c: 0, d: 'You decide when you hear it.' },
+    { p: 'Your notebook, written last week: “On Friday …”', o: ['I’ll call the bank.', 'I’m going to call the bank.'], c: 1, d: 'An old plan, written down.' }
+  ],
+  nota: 'Look at when the decision was born. Before the question: <b>going to</b>. Right now (an offer, a promise, a refusal): <b>will</b> or <b>won’t</b>.',
+  uso: { p: 'Your turn. One plan you already have for this week, and one quick offer for your teacher right now.', molde: ['This week I’m going to …', 'OK, I’ll …'], ex: 'This week I’m going to visit my aunt. You look cold: I’ll close the window!' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

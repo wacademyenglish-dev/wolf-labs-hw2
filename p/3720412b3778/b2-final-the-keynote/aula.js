@@ -16,8 +16,9 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'II · Questions from the Floor', t: 'Roll, move, answer the audience.', p: 'Your teacher rolls the die and asks as that person. Hedge, concede, disagree, and stay calm.' },
   { k: 'cartao', est: 'w', min: 7, img: 'conversa', rot: 'III · Your Closing Words', t: 'Write the last minute of your talk.', p: 'Four lines: moving on…, it could be argued…, what this means is…, to sum up…' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'V · I Can', t: 'Unit 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' },
-  { k: 'ponte', est: 'l', min: 3, img: 'conversa', rot: 'VI · The Next Book', t: 'Book B2 is done. Here is Book C1.', p: 'Read the three cards out loud. Which one do you want first?' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Keynote Rule', t: 'Four lines from the keynote. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VI · I Can', t: 'Unit 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' },
+  { k: 'ponte', est: 'l', min: 3, img: 'conversa', rot: 'VII · The Next Book', t: 'Book B2 is done. Here is Book C1.', p: 'Read the three cards out loud. Which one do you want first?' }
 ];
 
 var PORTAS = [
@@ -70,3 +71,9 @@ var ESCOLHA = [
   { a: 'always say exactly what you think', b: 'always hedge and stay diplomatic', chips: ['It could be argued that …', 'Having said that, …'], ex: 'Hedge. Having said that, sometimes you need to be direct.' },
   { a: 'work four days in the office', b: 'work five days at home', chips: ['People tend to …', 'Mind you, …'], ex: 'Four in the office. Mind you, I’d want a short commute.' },
   { a: 'a job you love with an average salary', b: 'a job you don’t mind with a great salary', chips: ['What this means is …', 'Actually, …'], ex: 'The job I love. Actually, money tends to matter less than people think.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.', exemplos: ['People <b>tend to</b> <u>forget</u> the details.', 'It <b>seems to</b> <u>work</u> well.', 'She <b>appears to</b> <u>agree</u>.', 'Customers <b>tend to</b> <u>buy</u> more in the morning.'], pergunta: 'After seem to, appear to and tend to, the verb is …', opcoes: ['clean: tend to forget', 'with -ing: tend to forgetting', 'in the past: tend to forgot'], c: 0, nao: 'Not that one. Look at the lit verbs: is there an -ing? an -ed?', regra: '<b>seem / appear / tend + to + clean verb</b>: It seems to work. Hedging makes a strong idea softer: <b>it could be argued that</b>, <b>arguably</b>.', uso: { p: 'Your turn. Make a strong idea softer. Use one hedge, then add a concession.', molde: ['It seems to …', 'People tend to …', 'I see your point; having said that, …'], ex: 'People tend to prefer short talks. I see your point; having said that, long talks can be better.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

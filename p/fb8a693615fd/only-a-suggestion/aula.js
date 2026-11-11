@@ -27,14 +27,15 @@ var L = [
   { k: 'capa', est: null, img: 'sala' },
   { k: 'abre', est: 'o', min: 7, img: 'corredor', rot: 'I · Ten to Eleven', t: 'Ten minutes before a meeting. What would you suggest to improve your work?', p: 'Tap the topic. Then answer out loud.' },
   { k: 'quadro', est: 'f', min: 7, img: 'sala', rot: 'II · Ada’s Minutes', t: 'After the meeting, Ada sends the minutes. Every decision has a name on it.', p: 'Read the minutes out loud. Tap each verb with its person. Then finish the rule.' },
-  { k: 'cadeiras', est: 'f', min: 5, img: 'sala', rot: 'III · Who Has a Chair?', t: 'Some verbs have a chair for a person right next to them. Some don’t. The meaning won’t tell you.', p: 'Say the verb with a name after it. Tap CHAIR or NO CHAIR.' },
-  { k: 'conserta', est: 'f', min: 6, img: 'ata', rot: 'IV · Keep the Person', t: 'No chair after the verb? Keep the person anyway: THAT + person + plain verb, or TO + person at the end.', p: 'Build each line out loud. Tap Check. Then say the -ING version.' },
-  { k: 'tira', est: 'f', min: 5, img: 'ata', rot: 'V · The -s Comes Off', t: 'After suggest / recommend / insist that, the verb goes back to its plain form, even with he, she, it.', p: 'One word is wrong in each line. Say the right one out loud. Then tap Check.' },
-  { k: 'quatro', est: 'f', min: 6, img: 'corredor', rot: 'VI · Four O’Clock', t: 'Five lines from the meeting. Who walked out knowing it was their job?', p: 'Read it out loud. Tap A NAME or NOBODY.' },
-  { k: 'reuniao', est: 'o', min: 7, img: 'caderno', rot: 'VII · Eleven O’Clock', t: 'The meeting. Four items. Every decision goes on the board, with a name.', p: 'Your teacher chairs. Say your line out loud, then tap Check. Then decide it your way.' },
-  { k: 'erros', est: 'f', min: 5, extra: 1, img: 'ata', rot: 'VIII · No Owner', t: 'Six lines. Some left a card with no owner.', p: 'Read each line out loud. Tap Correct or Wrong. If it’s wrong, say it right.' },
-  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'corredor', rot: 'IX · Your Advice', t: 'Three cards. Give real advice.', p: 'Tap a card. Answer with the frame and add a reason.' },
-  { k: 'fim', est: 'w', min: 6, img: 'sala', rot: 'X · On the Record', t: 'Your suggestion from scene I, with a name on it.', p: 'Write it for the board. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'ata', rot: 'III · Mistake Hunter', t: 'Six lines from the meeting. Each one has a wrong part.', p: 'Tap the wrong part. Say the line right. Then check.' },
+  { k: 'cadeiras', est: 'f', min: 5, img: 'sala', rot: 'IV · Who Has a Chair?', t: 'Some verbs have a chair for a person right next to them. Some don’t. The meaning won’t tell you.', p: 'Say the verb with a name after it. Tap CHAIR or NO CHAIR.' },
+  { k: 'conserta', est: 'f', min: 6, img: 'ata', rot: 'V · Keep the Person', t: 'No chair after the verb? Keep the person anyway: THAT + person + plain verb, or TO + person at the end.', p: 'Build each line out loud. Tap Check. Then say the -ING version.' },
+  { k: 'tira', est: 'f', min: 5, img: 'ata', rot: 'VI · The -s Comes Off', t: 'After suggest / recommend / insist that, the verb goes back to its plain form, even with he, she, it.', p: 'One word is wrong in each line. Say the right one out loud. Then tap Check.' },
+  { k: 'quatro', est: 'f', min: 6, img: 'corredor', rot: 'VII · Four O’Clock', t: 'Five lines from the meeting. Who walked out knowing it was their job?', p: 'Read it out loud. Tap A NAME or NOBODY.' },
+  { k: 'reuniao', est: 'o', min: 7, img: 'caderno', rot: 'VIII · Eleven O’Clock', t: 'The meeting. Four items. Every decision goes on the board, with a name.', p: 'Your teacher chairs. Say your line out loud, then tap Check. Then decide it your way.' },
+  { k: 'erros', est: 'f', min: 5, extra: 1, img: 'ata', rot: 'IX · No Owner', t: 'Six lines. Some left a card with no owner.', p: 'Read each line out loud. Tap Correct or Wrong. If it’s wrong, say it right.' },
+  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'corredor', rot: 'X · Your Advice', t: 'Three cards. Give real advice.', p: 'Tap a card. Answer with the frame and add a reason.' },
+  { k: 'fim', est: 'w', min: 6, img: 'sala', rot: 'XI · On the Record', t: 'Your suggestion from scene I, with a name on it.', p: 'Write it for the board. It goes to your My notes.' }
 ];
 
 var GENTE = { Marina: 'MA', Paulo: 'PA', Ines: 'IN', Hugo: 'HU', Ada: 'AD', 'the team': '··' };
@@ -207,3 +208,18 @@ TOQUES['ab-t'] = function (b, n, v) { S.ab.tema = v; };
 TOQUES.cd = function (b, n, v) { S.cd[n] = v; };
 TOQUES.q4 = function (b, n, v) { S.q4[n] = v; };
 
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de cadeiras.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines from the minutes.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong part before you see the answer.',
+  itens: [
+    { f: 'I suggest [[Marina to send]] the file.', r: 'I suggest <b>that Marina send</b> the file.', d: 'No person right after suggest. Use that + person + plain verb.' },
+    { f: 'Hugo [[explained me]] the problem.', r: 'Hugo explained the problem <b>to me</b>.', d: 'explain has no chair for a person: explain + thing + to + person.' },
+    { f: 'Ada insisted [[to pay]] for lunch.', r: 'Ada insisted <b>on paying</b> for lunch.', d: 'insist + on + -ing.' },
+    { f: 'I suggest that Paulo [[takes]] the lead.', r: 'I suggest that Paulo <b>take</b> the lead.', d: 'After suggest that, the -s comes off.' },
+    { f: 'I suggest [[to move]] the meeting.', r: 'I suggest <b>moving</b> the meeting.', d: 'An idea with no owner: suggest + -ing.' },
+    { f: 'She [[recommended me]] to call the client.', r: 'She <b>recommended that I call</b> the client.', d: 'recommend has no chair either. Use that + person + plain verb.' }
+  ],
+  nota: 'Suggest, recommend, explain and mention have <b>no chair</b> for a person right after them. Keep the person with <b>that + person + plain verb</b> or <b>to + person</b> at the end. Or use <b>-ing</b> when nobody owns the idea.',
+  uso: { p: 'Your turn. Advice for a colleague. One line with suggest that and one with recommend + -ing.', molde: ['I suggest that you …', 'I recommend …ing …'], ex: 'I suggest that you send the report today. I recommend checking the numbers first.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

@@ -15,7 +15,8 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 16, img: 'capa', rot: 'II · The Motions', t: 'Roll, move, argue for one minute.', p: 'Your teacher rolls the die and reads the motion. Argue it, out loud, with the tools of the unit.' },
   { k: 'escolha', est: 'o', min: 7, img: 'conversa', rot: 'III · Pick a Side', t: 'A or B, and persuade me.', p: 'Choose A or B. Persuade your teacher in three sentences.' },
   { k: 'conversa', est: 'o', min: 7, img: 'conversa', rot: 'IV · After the Debate', t: 'Feedback and real opinions.', p: 'Answer, then ask the question back.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'V · The Debater’s Card', t: 'Four lines from Unit 7.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -61,3 +62,9 @@ var TABULEIRO = { rot: 'THE FINAL · TWELVE MOTIONS', centro: 'One minute per mo
   { k: 'THE PAST', t: 'Persuade with a mixed conditional: a decision your city made.', ex: 'If the city had built the metro in 1990, we wouldn’t have this traffic today.' },
   { k: 'SUMMARY', t: 'Summarize the whole debate in two sentences.', ex: 'In short, every motion has two sides. The bottom line is: evidence wins, not volume.' },
   { k: 'VICTORY', t: 'Closing speech: persuade the judges you won.', ex: 'Granted, my opponents were excellent. Be that as it may, only we answered every question. Imagine giving us the trophy!' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 7.', rotulo: 'Argue and persuade', linhas: ['sum up: <b>the bottom line is</b> … · <b>in short</b>, …', 'concede: <b>granted</b>, … · <b>be that as it may</b>, …', 'contrast: <b>on the contrary</b> (no!) · <b>on the other hand</b> (another side) · <b>conversely</b>', 'conditions: <b>assuming that</b> · <b>given that</b> · <b>providing</b> · <b>in case</b> (a precaution, not if)'], uso: { p: 'Your turn. Defend this motion: Cities should ban cars. Two sentences, with a phrase from the card.', molde: ['Granted, …', 'The bottom line is …', 'Providing that …'], ex: 'Granted, some people need a car. The bottom line is that cities would be cleaner and quieter.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

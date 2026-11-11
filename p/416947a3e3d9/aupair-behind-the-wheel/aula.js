@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 20, kick: 'AU PAIR · MODULE 5 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 10, img: 'conversa', rot: 'I · Can Au Pairs Drive?', t: 'An agency answers the driving questions.', p: 'First one question, then the video, then more questions.' },
-  { k: 'transforma', est: 'o', min: 8, img: 'capa', rot: 'II · Give Advice', t: 'A problem. Your advice.', p: 'Read the problem and the clue. Give advice with should or shouldn’t.' },
-  { k: 'separa', est: 'f', min: 12, img: 'conversa', rot: 'III · Should or Shouldn’t?', t: 'Twelve driving situations.', p: 'Choose the side and say the full sentence.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 20: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Advice or Rule?', t: 'Two moments in the car.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'transforma', est: 'o', min: 8, img: 'capa', rot: 'III · Give Advice', t: 'A problem. Your advice.', p: 'Read the problem and the clue. Give advice with should or shouldn’t.' },
+  { k: 'separa', est: 'f', min: 12, img: 'conversa', rot: 'IV · Should or Shouldn’t?', t: 'Twelve driving situations.', p: 'Choose the side and say the full sentence.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 20: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'gzhG25X78DE', titulo: 'Can My Au Pair Drive While in the United States?', fonte: 'AU PAIR IN AMERICA (US OFFICE) · 4 MIN',
@@ -60,3 +61,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 20: video · transforma · separa (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Should or must? Two moments in the car.',
+  a: { t: 'Advice', falas: [['You', 'I’m nervous about driving in snow.'], ['Host dad', 'You <mark>should</mark> practice on a quiet road first.']], d: 'A good idea, but it is your choice. That is <b>should</b>.' },
+  b: { t: 'A rule', falas: [['Host mom', 'Can the kids ride without seat belts?'], ['You', 'No. Everyone <mark>must</mark> wear a seat belt.']], d: 'A rule: no choice. That is <b>must</b>.' },
+  pergunta: 'Same car, two strengths. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'You can leave ten minutes early. A friend says:', o: ['You should leave early.', 'You must leave early.'], c: 0, d: 'A good idea, not a rule.' },
+    { p: 'The law says children under eight need a car seat. The agency says:', o: ['You should use a car seat.', 'You must use a car seat.'], c: 1, d: 'It is the law: must.' },
+    { p: 'It is raining very hard. Your host mom says:', o: ['Maybe you should wait.', 'Maybe you must wait.'], c: 0, d: 'She gives advice. You decide.' },
+    { p: 'You are tired. Your host dad says: “It is only a suggestion.”', o: ['You should rest first.', 'You must rest first.'], c: 0, d: 'A suggestion is advice: should.' }
+  ],
+  nota: 'Same situation, two strengths. <b>should</b> = good advice, your choice. <b>must</b> = a rule, no choice. Both go with a clean verb: should practice, must wear.',
+  uso: { p: 'Your turn. One piece of advice for a new driver, and one rule you must follow in the car.', molde: ['You should …', 'I must …'], ex: 'You should practice on quiet roads. I must wear my seat belt every time.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · Backstage', t: 'Three performers. The show starts in ten minutes.', p: 'Ask each performer five questions. Your teacher is the performer. Then talk to the director on the radio.' },
   { k: 'cartao', est: 'w', min: 6, img: 'conversa', rot: 'III · Your Act', t: 'You are in the show too! Write your card.', p: 'Four short lines: what you can do, what you can’t, what you are doing now, what you’d like.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Mistake Hunter', t: 'Six lines backstage. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -70,3 +71,9 @@ var PODE = [
 /* MECÂNICAS VARIADAS */
 var RAPIDO = { seg: 60, itens: [['run → -ing', 'running'], ['make → -ing', 'making'], ['swim → -ing', 'swimming'], ['write → -ing', 'writing'], ['She ___ sing. (can)', 'She can sing.'], ['___ you swim?', 'Can'], ['Polite: “Give me water”', 'Could I have some water, please?'], ['Now: I ___ (talk)', 'I’m talking'], ['Every day: he ___ (work)', 'he works'], ['sit → -ing', 'sitting']] };
 var CADEIRA = { itens: [{ alvo: 'Ask me what I can do.', dica: 'What can you do?', resp: 'I can play the guitar.' }, { alvo: 'Ask me what I can’t do.', dica: 'Can you dance?', resp: 'No, I can’t!' }, { alvo: 'Ask me what I’m doing now.', dica: 'What are you doing right now?', resp: 'I’m teaching you!' }, { alvo: 'Ask me what I usually do on Sundays.', dica: 'What do you usually do on Sundays?', resp: 'I usually go to the park.' }, { alvo: 'Ask me for something, nicely.', dica: 'Could I have …, please?', resp: 'Of course. Here you are.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Backstage at the talent show.', toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'He can [[to]] sing.', r: 'He can <b>sing</b>.', d: 'can + verb. No to.' }, { f: 'She can [[sings]] and dance.', r: 'She can <b>sing</b> and dance.', d: 'After can: the clean verb. No -s.' }, { f: 'He is [[practice]] now.', r: 'He is <b>practicing</b> now.', d: 'am / is / are + -ing.' }, { f: 'He is [[runing]] on stage.', r: 'He is <b>running</b> on stage.', d: 'run: double the n.' }, { f: 'I [[want]] a coffee.', r: 'Could I <b>have</b> a coffee, please?', d: 'Polite: Could I have …, please?' }, { f: 'I usually [[am working]] at night.', r: 'I usually <b>work</b> at night.', d: 'Every day: the simple form.' }], nota: 'After <b>can</b>: the clean verb. Right now: <b>is + -ing</b>. Every day: the simple form. To ask nicely: <b>Could I have …, please?</b>', uso: { p: 'Your turn. You are backstage on the radio. Say what one artist can do, and what he or she is doing right now.', molde: ['She can …', 'She can’t …', 'Right now she’s …'], ex: 'Leo can sing, but he can’t dance. Right now he’s practicing.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

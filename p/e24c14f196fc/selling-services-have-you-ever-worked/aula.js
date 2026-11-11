@@ -17,12 +17,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'portas', est: 'o', min: 9, img: 'conversa', rot: 'I · Six Doors', t: 'Six questions about you and your work. Pick a door.', p: 'Answer: Yes, I have / No, I haven’t + one detail. Then ask: “And you?”' },
   { k: 'dialogo', est: 'l', min: 8, img: 'mesa', rot: 'II · “Have You Worked with a Company Like Us?”', t: 'Nora, a controller, asks Leo about his experience.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'III · Have You Ever…?', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'multipla', est: 'f', min: 6, img: 'mesa', rot: 'IV · Yes, We Have or Yes, We Did?', t: 'Six client questions and answers.', p: 'Choose the right word. Then read the sentence out loud.' },
-  { k: 'cartao', est: 'w', min: 7, img: 'capa', rot: 'V · Your 3 Experience Lines', t: 'Three sentences about your company’s experience.', p: 'Write them now. You use them in the next scene!' },
-  { k: 'cliente', est: 'o', min: 12, img: 'conversa', rot: 'VI · The Tough Client', t: 'Victor, a CFO, has doubts. Your teacher is Victor.', p: 'Find his four doubts. Answer each one with your experience.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'mesa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 27: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'mesa', rot: 'III · Right, Not This', t: 'Six lines about experience. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'IV · Have You Ever…?', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'multipla', est: 'f', min: 6, img: 'mesa', rot: 'V · Yes, We Have or Yes, We Did?', t: 'Six client questions and answers.', p: 'Choose the right word. Then read the sentence out loud.' },
+  { k: 'cartao', est: 'w', min: 7, img: 'capa', rot: 'VI · Your 3 Experience Lines', t: 'Three sentences about your company’s experience.', p: 'Write them now. You use them in the next scene!' },
+  { k: 'cliente', est: 'o', min: 12, img: 'conversa', rot: 'VII · The Tough Client', t: 'Victor, a CFO, has doubts. Your teacher is Victor.', p: 'Find his four doubts. Answer each one with your experience.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'mesa', rot: 'VIII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 27: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -107,3 +108,19 @@ var PODE = [
   'I can use a time with the past: We worked with them in 2025.',
   'I can answer a client’s doubts with real experience.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Experience questions. Tap the right one.',
+  pares: [
+    { c: 'Have you ever worked with SAP?', x: 'You already worked with SAP?', d: 'A question needs the helper: Have you ever …?' },
+    { c: 'Have you ever used Oracle?', x: 'Have you ever use Oracle?', d: 'have + the -ed word: used.' },
+    { c: 'Yes, we have.', x: 'Yes, we do.', d: 'Same helper as the question: Have you …? Yes, we have.' },
+    { c: 'No, I haven’t.', x: 'No, I not have.', d: 'The no is haven’t.' },
+    { c: 'We worked with them in 2024.', x: 'We have worked with them in 2024.', d: 'With a year, use the past: worked.' },
+    { c: 'We’ve never had a late payroll.', x: 'We never have had a late payroll.', d: 'never goes after we’ve.' }
+  ],
+  nota: 'Experience, no time: <b>Have you ever</b> + -ed? Yes, I <b>have</b>. No, I <b>haven’t</b>. With a time (in 2024, last year): the past, <b>we worked</b>.',
+  uso: { p: 'Your turn. Ask your teacher about experience, then say one thing with a year.', molde: ['Have you ever …?', 'We worked with … in …'], ex: 'Have you ever worked with a BPO? We worked with Orla Beverages in 2024.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

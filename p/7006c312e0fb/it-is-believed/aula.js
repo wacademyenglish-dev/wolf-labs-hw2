@@ -38,10 +38,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Disclosure Day. The official trailer.', p: 'Sort first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'antena', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'estudio', rot: 'V · It Is Believed', t: 'It is believed that we are not alone.', p: 'Match what people say with the careful way. Then read the rule.' },
-  { k: 'arquivo', est: 'o', min: 7, img: 'capa', rot: 'VI · The Redacted File', t: 'Six black bars on the page. Every right answer removes one.', p: 'Right or wrong? If it is wrong, say it the careful way out loud.' },
-  { k: 'boatos', est: 'o', min: 5, img: 'estudio', rot: 'VII · What People Say', t: 'Six things people say where you live.', p: 'Spin the wheel. Answer with It is said that… / … is said to…' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Interview', t: 'The interview.', p: 'Interview.' }
+  { k: 'gx', est: 'f', min: 4, img: 'estudio', rot: 'V · The Two Doors', t: 'What people say, said the careful way.', p: 'Flip each sentence. Notice what moves. Then flip three on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'estudio', rot: 'VI · It Is Believed', t: 'It is believed that we are not alone.', p: 'Match what people say with the careful way. Then read the rule.' },
+  { k: 'arquivo', est: 'o', min: 7, img: 'capa', rot: 'VII · The Redacted File', t: 'Six black bars on the page. Every right answer removes one.', p: 'Right or wrong? If it is wrong, say it the careful way out loud.' },
+  { k: 'boatos', est: 'o', min: 5, img: 'estudio', rot: 'VIII · What People Say', t: 'Six things people say where you live.', p: 'Spin the wheel. Answer with It is said that… / … is said to…' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Interview', t: 'The interview.', p: 'Interview.' }
 ];
 
 var FILME = 'Disclosure Day', ANO = '2026';
@@ -271,3 +272,22 @@ var FIM = { tipo: 'entrevista', rot: 'VIII · The Interview', t: 'Interview the 
     { q: 'What was reported about you?', ex: 'I was reported to have lost my voice on air.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The redacted file. Two doors for what people say.',
+  frases: [
+    { de: ['People', '*say', 'that', 'the file', 'is', 'real', '.'], para: ['+It', '+is said', 'that', 'the file', 'is', 'real', '.'], d: 'Door one: It is said that + the same sentence.' },
+    { de: ['People', '*believe', 'that', 'the government', '*hid', 'the truth', '.'], para: ['+The government', '+is believed', '+to have hidden', 'the truth', '.'], d: 'Door two: the subject goes first. For the past: to have + participle.' },
+    { de: ['Experts', '*know', 'that', 'he', 'is', 'alive', '.'], para: ['+He', '+is known', '+to be', 'alive', '.'], d: 'Door two, for now: to be.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'Two doors for what people say. <b>It is said that</b> + a full sentence. Or the subject goes first: <b>He is said to be</b> … For the past: <b>to have</b> + participle. Never “It says that”.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'People think that the signal is old.', r: '<b>It is thought that</b> the signal is old. · The signal <b>is thought to be</b> old.' },
+    { de: 'Experts believe that the pilot saw something.', r: 'The pilot <b>is believed to have seen</b> something.' },
+    { de: 'People say that the town is empty.', r: 'The town <b>is said to be</b> empty.' }
+  ],
+  uso: { p: 'Your turn. Something people say about your city or your country. Use is said to or it is said that.', molde: ['It is said that …', '… is said to …'], ex: 'It is said that the coffee here is the best. My city is said to have the oldest church in the country.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

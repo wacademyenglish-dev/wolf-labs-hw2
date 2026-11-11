@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 17, kick: 'AU PAIR · MODULE 5 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 10, img: 'conversa', rot: 'I · A Day With Gabi', t: 'A real au pair’s working day.', p: 'One question first, then the video, then the questions.' },
-  { k: 'transforma', est: 'o', min: 9, img: 'capa', rot: 'II · Kind and Clear', t: 'From bossy to kind, still clear.', p: 'Read the bossy instruction and the clue. Say it the kind way.' },
-  { k: 'ordem', est: 'f', min: 7, img: 'conversa', rot: 'III · The Morning in Order', t: 'A school morning, in pieces.', p: 'Tap the steps in order. Then tell the morning with first, then, after that.' },
-  { k: 'conversa', est: 'o', min: 8, img: 'capa', rot: 'IV · Your Routine', t: 'Talk about routines.', p: 'Answer, then ask back: “And you?”' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 17: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Mistake Hunter', t: 'Five instructions for the kids. Each one has a wrong word.', p: 'Tap the wrong word. Say the instruction right. Then check.' },
+  { k: 'transforma', est: 'o', min: 9, img: 'capa', rot: 'III · Kind and Clear', t: 'From bossy to kind, still clear.', p: 'Read the bossy instruction and the clue. Say it the kind way.' },
+  { k: 'ordem', est: 'f', min: 7, img: 'conversa', rot: 'IV · The Morning in Order', t: 'A school morning, in pieces.', p: 'Tap the steps in order. Then tell the morning with first, then, after that.' },
+  { k: 'conversa', est: 'o', min: 8, img: 'capa', rot: 'V · Your Routine', t: 'Talk about routines.', p: 'Answer, then ask back: “And you?”' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 17: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'jxW9txGgiSo', titulo: 'Life with APiA | Gabi’s 2nd Vlog', fonte: 'AU PAIR IN AMERICA · 7 MIN',
@@ -58,3 +59,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 17: video · transforma · ordem · conversa (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Five instructions for the kids.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: '[[Putting]] your shoes on, please!', r: '<b>Put</b> your shoes on, please!', d: 'An instruction uses the clean verb: no -ing.' },
+    { f: 'Let’s [[to]] brush our teeth.', r: '<b>Let’s brush</b> our teeth.', d: 'Let’s + verb. No to.' },
+    { f: 'First we get dressed, [[after]] you can watch one show.', r: 'First we get dressed, <b>then</b> you can watch one show.', d: 'First … then …' },
+    { f: 'Don’t [[running]] in the house!', r: 'Don’t <b>run</b> in the house!', d: 'Don’t + clean verb.' },
+    { f: 'Wash [[the]] hands before lunch.', r: 'Wash <b>your</b> hands before lunch.', d: 'With the body, we say your: your hands.' }
+  ],
+  nota: 'An instruction is the clean verb, first: <b>Put</b>, <b>Wash</b>, <b>Don’t run</b>, <b>Let’s go</b>. No -ing, no to. With kids, short is kind: one instruction at a time.',
+  uso: { p: 'Your turn. It is 7:30 AM. Give the kids three short instructions to leave for school.', molde: ['… on, please.', 'Let’s …', 'Don’t forget your …'], ex: 'Shoes on, please. Let’s get your backpack. Don’t forget your lunch box!' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

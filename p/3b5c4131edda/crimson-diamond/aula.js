@@ -14,16 +14,17 @@
 var L = [
   { k: 'capa', est: null, img: 'vitrine-b' },
   { k: 'abre', est: 'o', min: 7, img: 'rua', rot: 'I · Your Alibi', t: 'What were you doing yesterday at 10 PM?', p: 'Pick a card. Answer out loud. Nobody corrects you here.' },
-  { k: 'pecas', est: 'f', min: 6, img: 'galeria', rot: 'II · An Alibi Is a Tense', t: 'Five cards. Each one asks for a sentence.', p: 'Read the card. Say your own sentence out loud.' },
-  { k: 'ordem', est: 'f', min: 6, img: 'galeria', rot: 'III · The Question', t: 'Detectives ask the same question all night.', p: 'Tap the words in order. Then ask it out loud.' },
-  { k: 'ing', est: 'f', min: 6, img: 'galeria', rot: 'IV · Keep the -ing', t: 'Two pieces, always: was / were AND -ing.', p: 'Say the sentence that works. Then tap it.' },
-  { k: 'arthur', est: 'l', min: 7, img: 'corredor', rot: 'V · Suspect One: Arthur', t: 'Arthur, the night guard. Thirty-four years here.', p: 'Ask the question on the screen. Play his answer. Then mark the two lies.' },
-  { k: 'eleanor', est: 'l', min: 7, img: 'galeria', rot: 'VI · Suspect Two: Eleanor', t: 'Eleanor, a guest. She is very calm.', p: 'Ask. Play. Then mark the three things she really said.' },
-  { k: 'marco', est: 'l', min: 7, extra: 1, img: 'bar', rot: 'VII · Suspect Three: Marco', t: 'Marco, the barman. Nobody asked him anything.', p: 'Ask. Play. Then mark the three things he really said.' },
-  { k: 'quadro', est: 'f', min: 6, extra: 1, img: 'galeria', rot: 'VIII · The Board', t: 'Three alibis. Put the strings on the board.', p: 'Pick a suspect. Say the alibi in one sentence. Look at the evidence. Is the alibi true?' },
-  { k: 'interroga', est: 'o', min: 7, extra: 1, img: 'vitrine-a', rot: 'IX · The Husband', t: 'Mr. Smith is in the room. Your teacher is Mr. Smith, and he lies.', p: 'Ask the questions. Listen. Catch the lie. Then name the thief.' },
-  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'X · Your Alibis', t: 'Now the detective asks you.', p: 'Answer with was / were + -ing. Then ask your teacher the same question.' },
-  { k: 'fim', est: 'w', min: 6, img: 'galeria', rot: 'XI · Case Closed', t: 'Your alibi from scene I comes back.', p: 'Write your alibis for yesterday: 7 AM, 1 PM, 10 PM. It goes to My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'galeria', rot: 'II · The Alibi Ladder', t: 'One verb, six steps.', p: 'Read each step out loud, then go one step up. Notice the -ing. Then climb with your own verb.' },
+  { k: 'pecas', est: 'f', min: 6, img: 'galeria', rot: 'III · An Alibi Is a Tense', t: 'Five cards. Each one asks for a sentence.', p: 'Read the card. Say your own sentence out loud.' },
+  { k: 'ordem', est: 'f', min: 6, img: 'galeria', rot: 'IV · The Question', t: 'Detectives ask the same question all night.', p: 'Tap the words in order. Then ask it out loud.' },
+  { k: 'ing', est: 'f', min: 6, img: 'galeria', rot: 'V · Keep the -ing', t: 'Two pieces, always: was / were AND -ing.', p: 'Say the sentence that works. Then tap it.' },
+  { k: 'arthur', est: 'l', min: 7, img: 'corredor', rot: 'VI · Suspect One: Arthur', t: 'Arthur, the night guard. Thirty-four years here.', p: 'Ask the question on the screen. Play his answer. Then mark the two lies.' },
+  { k: 'eleanor', est: 'l', min: 7, img: 'galeria', rot: 'VII · Suspect Two: Eleanor', t: 'Eleanor, a guest. She is very calm.', p: 'Ask. Play. Then mark the three things she really said.' },
+  { k: 'marco', est: 'l', min: 7, extra: 1, img: 'bar', rot: 'VIII · Suspect Three: Marco', t: 'Marco, the barman. Nobody asked him anything.', p: 'Ask. Play. Then mark the three things he really said.' },
+  { k: 'quadro', est: 'f', min: 6, extra: 1, img: 'galeria', rot: 'IX · The Board', t: 'Three alibis. Put the strings on the board.', p: 'Pick a suspect. Say the alibi in one sentence. Look at the evidence. Is the alibi true?' },
+  { k: 'interroga', est: 'o', min: 7, extra: 1, img: 'vitrine-a', rot: 'X · The Husband', t: 'Mr. Smith is in the room. Your teacher is Mr. Smith, and he lies.', p: 'Ask the questions. Listen. Catch the lie. Then name the thief.' },
+  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'XI · Your Alibis', t: 'Now the detective asks you.', p: 'Answer with was / were + -ing. Then ask your teacher the same question.' },
+  { k: 'fim', est: 'w', min: 6, img: 'galeria', rot: 'XII · Case Closed', t: 'Your alibi from scene I comes back.', p: 'Write your alibis for yesterday: 7 AM, 1 PM, 10 PM. It goes to My notes.' }
 ];
 
 var TR = {
@@ -201,3 +202,18 @@ TOQUES['it-p'] = function (b, n, v) { var p = S.it.partes[S.it.n] = S.it.partes[
 TOQUES['it-prox'] = function () { S.it.n++; };
 TOQUES['it-c'] = function (b, n, v) { S.it.culpa = v; };
 TOQUES['se-prox'] = function () { S.seu.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de pecas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One verb. Climb it one step at a time.',
+  degraus: [
+    { r: 'verb', f: 'watch', d: 'The verb, clean.' },
+    { r: '+ ing', f: 'Arthur <b>was watching</b> the gallery.', d: 'was + -ing: the action at that moment.' },
+    { r: 'not', f: 'Arthur <b>wasn’t watching</b> the gallery.', d: 'wasn’t + -ing.' },
+    { r: '?', f: '<b>Was</b> Arthur <b>watching</b> the gallery?', d: 'Was goes first.' },
+    { r: 'what', f: 'What <b>was</b> Arthur <b>doing</b> at ten?', d: 'The question word, then was.' },
+    { r: 'short', f: 'Yes, he <b>was</b>. · No, he <b>wasn’t</b>.', d: 'The short answer keeps was.' }
+  ],
+  nota: 'Two pieces, always: <b>was / were</b> and <b>-ing</b>. Never one without the other.',
+  uso: { p: 'Your turn. Your alibi for last night at ten. Climb the ladder: I was …, I wasn’t …, Was I …?', molde: ['At ten I was …', 'I wasn’t …', 'Were you …?'], ex: 'At ten I was cooking. I wasn’t watching TV. Were you sleeping? Yes, I was.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

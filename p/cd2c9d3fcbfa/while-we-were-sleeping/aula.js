@@ -38,10 +38,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Invasion. The official trailer.', p: 'Talk for 30 seconds first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'campo', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 7, img: 'relogios', rot: 'V · Was Doing, When It Happened', t: 'The long action, or the moment that cut it? Sort the clues.', p: 'Tap a clue, then its box. Then say the long action and the moment together.' },
-  { k: 'feeds', est: 'o', min: 7, img: 'capa', rot: 'VI · The Night Feeds', t: 'Six places, one moment. Rebuild the night, feed by feed.', p: 'Match each moment to what people were doing. Then say the whole sentence out loud.' },
-  { k: 'alibi', est: 'o', min: 7, img: 'relogios', rot: 'VII · Your Alibi', t: 'The detective asks you. Now you ask your teacher.', p: 'Build each question out loud. Tap Check. Then ask it, and listen to the alibi.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Interview', t: 'The interview.', p: 'Interview.' }
+  { k: 'gx', est: 'f', min: 3, img: 'relogios', rot: 'V · The Long Part, the Moment', t: 'Where does each sentence live on the night?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'regra', est: 'f', min: 7, img: 'relogios', rot: 'VI · Was Doing, When It Happened', t: 'The long action, or the moment that cut it? Sort the clues.', p: 'Tap a clue, then its box. Then say the long action and the moment together.' },
+  { k: 'feeds', est: 'o', min: 7, img: 'capa', rot: 'VII · The Night Feeds', t: 'Six places, one moment. Rebuild the night, feed by feed.', p: 'Match each moment to what people were doing. Then say the whole sentence out loud.' },
+  { k: 'alibi', est: 'o', min: 7, img: 'relogios', rot: 'VIII · Your Alibi', t: 'The detective asks you. Now you ask your teacher.', p: 'Build each question out loud. Tap Check. Then ask it, and listen to the alibi.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Interview', t: 'The interview.', p: 'Interview.' }
 ];
 
 var SERIE = 'Invasion', ANO = '2021';
@@ -237,3 +238,19 @@ var FIM = { tipo: 'entrevista', rot: 'VIII · The Interview', t: 'Interview the 
     { q: 'What were you thinking at that moment?', ex: 'I was thinking: this is not my problem anymore.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'One night. What was going on, and what cut it?',
+  marcos: [{ t: 'WAS DOING', s: 'the long part, in progress' }, { t: 'THEN, SUDDENLY', s: 'the moment, short' }],
+  frases: [
+    { f: 'We were sleeping.', c: 0, d: 'were + -ing · long' },
+    { f: 'The lights went out.', c: 1, d: 'went · short, finished' },
+    { f: 'My brother was watching TV.', c: 0, d: 'was + -ing · long' },
+    { f: 'The phone rang.', c: 1, d: 'rang · short, finished' },
+    { f: 'People were walking in the street.', c: 0, d: 'were + -ing · long' },
+    { f: 'A loud noise woke us up.', c: 1, d: 'woke · short, finished' }
+  ],
+  nota: 'The long part is <b>was / were + -ing</b>. The moment that cuts it is the past simple. You join them with <b>when</b>: We were sleeping <b>when</b> the lights went out.',
+  uso: { p: 'Your turn. A night when something happened. What were you doing? What happened?', molde: ['I was …ing when …', 'While I was …ing, …'], ex: 'I was cooking dinner when the lights went out. While I was looking for a candle, my phone rang.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

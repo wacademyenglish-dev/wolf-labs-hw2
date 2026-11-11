@@ -37,10 +37,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Obsession. The official trailer.', p: 'Open the cards first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'quarto', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'salgueiro', rot: 'V · If I Had, I Would', t: 'If I had one wish, I would… If I were you, I wouldn’t.', p: 'Read Bear’s message. Tap the verbs of the imagined situation. Then finish the rule.' },
-  { k: 'contrato', est: 'o', min: 7, img: 'capa', rot: 'VI · The Wish Contract', t: 'Every wish has a price. Say it, then read the small print.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'desejos', est: 'o', min: 7, img: 'quarto', rot: 'VII · What Would You Do?', t: 'Six impossible situations. What would you do?', p: 'Spin the wheel. Answer with If…, I would… The teacher taps Got it! for each sentence.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · One Minute', t: 'One minute.', p: 'Minute.' }
+  { k: 'gx', est: 'f', min: 4, img: 'lampada', rot: 'V · The Wish Ladder', t: 'One wish, five steps.', p: 'Read each step out loud, then go one step up. Notice the verbs. Then climb with your own wish.' },
+  { k: 'regra', est: 'f', min: 6, img: 'salgueiro', rot: 'VI · If I Had, I Would', t: 'If I had one wish, I would… If I were you, I wouldn’t.', p: 'Read Bear’s message. Tap the verbs of the imagined situation. Then finish the rule.' },
+  { k: 'contrato', est: 'o', min: 7, img: 'capa', rot: 'VII · The Wish Contract', t: 'Every wish has a price. Say it, then read the small print.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'desejos', est: 'o', min: 7, img: 'quarto', rot: 'VIII · What Would You Do?', t: 'Six impossible situations. What would you do?', p: 'Spin the wheel. Answer with If…, I would… The teacher taps Got it! for each sentence.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · One Minute', t: 'One minute.', p: 'Minute.' }
 ];
 
 var FILME = 'Obsession', ANO = '2026';
@@ -248,3 +249,18 @@ var FIM = { tipo: 'minuto', rot: 'VIII · One Minute', t: 'One minute of wishes.
   ],
   palavras: ['If I had', 'I would', 'I wouldn’t', 'If I were you', 'If I could', 'What would you do'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One wish. Climb it one step at a time.',
+  degraus: [
+    { r: 'idea', f: 'I <b>have</b> one wish.', d: 'Today, for real: have.' },
+    { r: 'if', f: 'If I <b>had</b> one wish…', d: 'Not real today. The verb steps back: had.' },
+    { r: 'result', f: 'If I had one wish, I <b>would ask</b> for a quiet life.', d: 'The result takes would + a clean verb.' },
+    { r: 'not', f: 'If I had one wish, I <b>wouldn’t waste</b> it.', d: 'For no: wouldn’t + a clean verb.' },
+    { r: '?', f: 'What <b>would</b> you <b>do</b> if you <b>had</b> one wish?', d: 'Would goes first. The if-half stays in the past.' },
+    { r: 'advice', f: 'If I <b>were</b> you, I <b>wouldn’t sign</b> it.', d: 'Advice: were, even with I.' }
+  ],
+  nota: 'After <b>if</b>, the verb steps back: <b>had</b>, <b>were</b>. The result takes <b>would</b> + a clean verb. Never would after if.',
+  uso: { p: 'Your turn. One wish of yours. Climb the ladder: If I had …, I would … Then ask your teacher.', molde: ['If I had …, I would …', 'What would you do if …?'], ex: 'If I had one wish, I would travel the world. What would you do if you had one wish?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

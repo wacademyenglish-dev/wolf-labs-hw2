@@ -14,11 +14,12 @@ var L = [
   { k: 'morning', est: 'o', min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
   { k: 'conversa', est: 'o', min: 4, img: 'conversa', rot: 'II · Monday Morning', t: 'A short chat before work.', p: 'Choose an answer. Say it. Then ask: “And you?”' },
   { k: 'termos', est: 'l', min: 8, img: 'capa', rot: 'III · Screen Words', t: 'Eight words from the queue.', p: 'Listen. Look. Say each word three times.', sig: ['status', 'ccy', 'vd'] },
-  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'IV · Is, Are, Numbers', t: 'The status, the amount, the date.', p: 'Read the card with your teacher. Then build the sentence.', sig: ['numeros', 'vd'] },
-  { k: 'simulador', est: 'f', min: 12, img: 'capa', rot: 'V · The Simulator', t: 'Filter the queue. Read it.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['status', 'ccy', 'numeros', 'vd'] },
-  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VI · A Call From London', t: 'A colleague asks about a payment.', p: 'One question before. Listen. Then the questions.', sig: ['status', 'vd'] },
-  { k: 'cartao', est: 'w', min: 7, img: 'mesa', rot: 'VII · The Status Report', t: 'Write the status of two payments.', p: 'Status, amount, currency, value date.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'IV · The Queue in Blocks', t: 'The same report, in blocks.', p: 'Read the blocks out loud. Notice what changes. Then build a line and say your own.' },
+  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'V · Is, Are, Numbers', t: 'The status, the amount, the date.', p: 'Read the card with your teacher. Then build the sentence.', sig: ['numeros', 'vd'] },
+  { k: 'simulador', est: 'f', min: 12, img: 'capa', rot: 'VI · The Simulator', t: 'Filter the queue. Read it.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['status', 'ccy', 'numeros', 'vd'] },
+  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VII · A Call From London', t: 'A colleague asks about a payment.', p: 'One question before. Listen. Then the questions.', sig: ['status', 'vd'] },
+  { k: 'cartao', est: 'w', min: 7, img: 'mesa', rot: 'VIII · The Status Report', t: 'Write the status of two payments.', p: 'Status, amount, currency, value date.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
 ];
 
 var MORNING = { rot: 'OPERATIONS QUEUE · 08:02', ref: 'FX-20482',
@@ -118,3 +119,18 @@ var PT = {
   dialogo: 'Uma colega de Londres liga perguntando de um pagamento. Ouça sem parar.',
   cartao: 'Escreva a situação de dois pagamentos: status, valor e data.',
   pode: 'Leia cada frase em voz alta e toque nas que você já consegue fazer.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de explica.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'A line from the queue, in blocks. Each block has a job.',
+  frases: [
+    { b: [['FX-20481', 'WHAT', 'o'], ['is', 'IS', 'aux'], ['pending', 'STATUS', 'como']], d: 'One payment: is.' },
+    { b: [['The amount', 'WHAT', 'o'], ['is', 'IS', 'aux'], ['25,000.00 dollars', 'AMOUNT', 'acao']], d: 'Say it: twenty-five thousand. The comma and the dot change places in English.' },
+    { b: [['The value date', 'WHAT', 'o'], ['is', 'IS', 'aux'], ['May twelfth', 'DATE', 'quando']], d: 'The date: the month, then the number: May twelfth.' },
+    { b: [['Two payments', 'WHAT', 'o'], ['are', 'ARE', 'aux'], ['on hold', 'STATUS', 'como']], d: 'More than one: are.' }
+  ],
+  nota: 'One payment: <b>is</b>. Two or more: <b>are</b>. After it: the status, the amount or the date.',
+  monta: { p: 'Build a line for the status report. Then say it.', pecas: [['is', 'IS', 'aux'], ['May fourteenth', 'DATE', 'quando'], ['The value date', 'WHAT', 'o']], ordem: [2, 0, 1] },
+  uso: { p: 'Now your own report. Say the status of one payment and the amount.', molde: ['FX-… is …', 'The amount is …'], ex: 'FX-20487 is approved. The amount is 9,999 dollars.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

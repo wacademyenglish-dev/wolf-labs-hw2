@@ -16,11 +16,12 @@ var L = [
   { k: 'agora', est: 'o', min: 7, img: 'mensagem', rot: 'I · Where Are They Now?', t: 'Before the map: where are your people right now?', p: 'Pick a card. Answer out loud. Then you get another question.' },
   { k: 'duas', est: 'f', min: 6, img: 'mensagem', rot: 'II · Two Messages', t: 'The same girl, the same time, one week apart.', p: 'Read both messages out loud. Then decide what changed.' },
   { k: 'mapa', est: 'l', min: 7, img: 'mapa', rot: 'III · The Map', t: 'Nine voice messages. Nobody says where they are.', p: 'Play a message. Then drop the pin: inside, as one of them, or at the door, only there.' },
-  { k: 'regra', est: 'f', min: 6, img: 'escola', rot: 'IV · The Person Decides', t: 'The article isn’t about the place. It’s about the person.', p: 'Read the cards out loud. Then fix the four mistakes.' },
-  { k: 'placas', est: 'f', min: 6, img: 'mapa', rot: 'V · Station Signs', t: 'Eight signs in the station. Some need THE. Some never do.', p: 'Read the sign. Tap ∅ or THE. Then read it out loud.' },
-  { k: 'porta', est: 'f', min: 6, img: 'corredor', rot: 'VI · The Wrong Door', t: 'Nothing here is wrong English. Somebody still went to the wrong place.', p: 'Tap the line with the mistake. Then say the right sentence.' },
-  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'escola', rot: 'VII · Monday, 8 AM', t: 'No map now. Your places.', p: 'Answer out loud. Then you get another question.' },
-  { k: 'fim', est: 'w', min: 6, img: 'corredor', rot: 'VIII · Your Week', t: 'Where are you this week?', p: 'Write four lines about your week. The red line checks the article. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'mapa', rot: 'IV · Look First', t: 'Four pictures from Ana’s day.', p: 'Look at the picture. Guess what they say. Then tap to see it, and say it.' },
+  { k: 'regra', est: 'f', min: 6, img: 'escola', rot: 'V · The Person Decides', t: 'The article isn’t about the place. It’s about the person.', p: 'Read the cards out loud. Then fix the four mistakes.' },
+  { k: 'placas', est: 'f', min: 6, img: 'mapa', rot: 'VI · Station Signs', t: 'Eight signs in the station. Some need THE. Some never do.', p: 'Read the sign. Tap ∅ or THE. Then read it out loud.' },
+  { k: 'porta', est: 'f', min: 6, img: 'corredor', rot: 'VII · The Wrong Door', t: 'Nothing here is wrong English. Somebody still went to the wrong place.', p: 'Tap the line with the mistake. Then say the right sentence.' },
+  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'escola', rot: 'VIII · Monday, 8 AM', t: 'No map now. Your places.', p: 'Answer out loud. Then you get another question.' },
+  { k: 'fim', est: 'w', min: 6, img: 'corredor', rot: 'IX · Your Week', t: 'Where are you this week?', p: 'Write four lines about your week. The red line checks the article. It goes to your My notes.' }
 ];
 
 /* I · onde estão agora */
@@ -191,3 +192,16 @@ TOQUES['pin-prox'] = function () { S.mapa = { n: S.mapa.n + 1, ouviu: 0, pin: ''
 TOQUES.pl = function (b, n, v) { S.pl.esc = v; };
 TOQUES['pl-prox'] = function () { S.pl = { n: S.pl.n + 1, esc: '' }; };
 TOQUES.porta = function (b, n) { if (S.porta.esc >= 0 && PORTA[S.porta.esc].ok) return false; S.porta.esc = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What do they say?',
+  cenas: [
+    { img: 'escola', antes: 'Ana is a student. It’s 8 AM. She is inside the building with the other students.', frase: '“Where is Ana?” “She’s <mark>at school</mark>.”' },
+    { img: 'corredor', antes: 'Ana’s mother is not a student. She is waiting in the hall for a meeting with the teacher.', frase: '“Where is Ana’s mother?” “She’s at <mark>the school</mark>.”' },
+    { img: 'mapa', antes: 'Class is over. Ana goes back. She takes the bus.', frase: '“How does she go?” “She goes <mark>home by bus</mark>.”' },
+    { img: 'mensagem', antes: 'A voice message at night. Ana is tired.', frase: '“Where is she?” “She’s <mark>in bed</mark>.”' }
+  ],
+  nota: 'The article is about the person, not the place. Inside, as one of them: <b>no THE</b> (at school, in bed, at work). Only visiting or waiting: <b>THE</b> (at the school).',
+  uso: { p: 'Your turn. Where are you on a normal Monday at 8 AM? And on Sunday night?', molde: ['At 8 AM I’m at …', 'On Sunday night I’m in …'], ex: 'At 8 AM I’m at work. On Sunday night I’m in bed.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

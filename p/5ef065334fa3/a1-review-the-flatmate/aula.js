@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Flatmate', t: 'Three people want the room. Interview them.', p: 'Ask each person five questions. Your teacher is the person. Then tell the owner who is good.' },
   { k: 'cartao', est: 'w', min: 6, img: 'conversa', rot: 'III · Your Day', t: 'Now you want a room. Write about your day.', p: 'Four short lines: when you get up, what you do, how often, your birthday.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Flatmate Rule', t: 'Four lines about the flatmates. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -70,3 +71,9 @@ var PODE = [
 var PARES = [['7:30', 'half past seven'], ['always', 'every day'], ['never', 'not one day'], ['May 1st', 'the first of May'], ['he work', 'he works'], ['she don’t', 'she doesn’t']];
 PARES = PARES.map(function (p, i) { return [p[0], p[1], ['I get up at half past seven.', 'I always drink coffee: every day!', 'I never smoke.', 'My birthday is on May first.', 'My father works in a bank.', 'She doesn’t like rain.'][i]]; });
 var CADEIRA = { itens: [{ alvo: 'Ask what time I get up.', dica: 'What time do you get up?', resp: 'At six thirty.' }, { alvo: 'Ask if I like my job.', dica: 'Do you like your job?', resp: 'Yes, I do!' }, { alvo: 'Ask how often I cook.', dica: 'How often do you cook?', resp: 'I usually cook on weekends.' }, { alvo: 'Ask about my best friend’s job.', dica: 'What does your best friend do?', resp: 'She teaches music.' }, { alvo: 'Ask when my birthday is.', dica: 'When is your birthday?', resp: 'On November tenth.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.', exemplos: ['She <b>works</b> at night.', 'He <b>watches</b> TV every day.', 'She <b>doesn’t</b> <u>work</u> on Sundays.', 'He <b>doesn’t</b> <u>cook</u> at home.'], pergunta: 'With he or she, the S goes …', opcoes: ['on the verb in a yes sentence: works. After doesn’t: no S', 'on every verb, even after doesn’t: doesn’t works', 'nowhere: she work'], c: 0, nao: 'Not that one. Look at the verbs after doesn’t: is there an S?', regra: 'With he or she: <b>works</b>, <b>watches</b>. With <b>doesn’t</b>, the S goes into doesn’t and the verb is clean: she doesn’t <b>work</b>. One S only.', uso: { p: 'Your turn. Tell the flat owner about a person you know: one thing he or she does, and one thing he or she doesn’t do.', molde: ['She … every day.', 'He doesn’t …'], ex: 'My friend gets up at six. He doesn’t eat breakfast.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

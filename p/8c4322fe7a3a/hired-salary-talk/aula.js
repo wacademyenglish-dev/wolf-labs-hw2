@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 7, kick: 'WOLF HIRED · MODULE 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · The Example Conversation', t: 'An HR leader shows how to negotiate after an offer.', p: 'One question before, then the video, then the questions.' },
-  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'II · Strong or Weak?', t: 'Which lines help you, and which ones hurt you?', p: 'Read each line out loud. Strong or weak?' },
-  { k: 'prova', est: 'o', min: 18, img: 'conversa', rot: 'III · Three Calls From Recruiters', t: 'Three recruiters, three money moments.', p: 'Play the recruiter, start the clock, answer in about 45 seconds.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · The Ladder', t: 'A salary answer, five steps.', p: 'Read each step out loud, then go one step up. Notice what each step adds. Then climb with your own numbers.' },
+  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'III · Strong or Weak?', t: 'Which lines help you, and which ones hurt you?', p: 'Read each line out loud. Strong or weak?' },
+  { k: 'prova', est: 'o', min: 18, img: 'conversa', rot: 'IV · Three Calls From Recruiters', t: 'Three recruiters, three money moments.', p: 'Play the recruiter, start the clock, answer in about 45 seconds.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'XaKAVwOroyo', titulo: 'Salary Negotiation Conversation Example', fonte: 'SELF MADE MILLENNIAL · 2:27–5:00', inicio: 147, fim: 300,
@@ -61,3 +62,18 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 07: video · separa · prova (áudio) (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'A salary answer. Climb it one step at a time.',
+  degraus: [
+    { r: 'thanks', f: '<b>Thank you so much</b> for the offer.', d: 'Gratitude first. People become more open.' },
+    { r: 'ask', f: '<b>Could you tell me</b> how the bonus works?', d: 'Clarify before you counter.' },
+    { r: 'number', f: '<b>Based on</b> my experience, <b>I’m targeting</b> 9,000 a month.', d: 'A clear number, with a reason.' },
+    { r: 'if', f: '<b>If we could</b> get closer to 9,000, <b>I’d be ready</b> to sign this week.', d: 'If + could, then I’d. A soft condition that moves things forward.' },
+    { r: 'wait', f: '<b>Is it possible</b> to make up the difference?', d: 'Then stop talking and let them answer.' }
+  ],
+  nota: 'Four small moves: <b>thank</b>, <b>ask</b>, <b>name a number</b> with <b>based on …</b>, then <b>If we could …, I’d …</b>. After the question, stay quiet.',
+  uso: { p: 'Your turn. A recruiter offers 7,000 and you want 8,000. Say your number and your condition.', molde: ['Based on …, I’m targeting …', 'If we could …, I’d be ready to …'], ex: 'Based on my experience, I’m targeting 8,000 a month. If we could get closer to 8,000, I’d be ready to sign this week.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

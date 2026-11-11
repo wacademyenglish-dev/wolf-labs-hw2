@@ -16,9 +16,10 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Plans', t: 'Plans with conditions.', p: 'Answer with detail. Then ask the question back.' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · The Plan', t: 'An email three weeks before the festival.', p: 'Read it aloud. Answer the questions. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · How Sure Are You?', t: 'Five ways to say “if”.', p: 'Compare A and B. What does each word tell you?' },
-  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'IV · Say It Precisely', t: 'If → the precise word.', p: 'Read the sentence with if. Use the clue. Say it more precisely.' },
-  { k: 'tabuleiro', est: 'o', min: 14, img: 'capa', rot: 'V · The Planning Board', t: 'Roll, move, plan with conditions.', p: 'Your teacher rolls the die. Plan your square with the right condition word.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'III · If or In Case?', t: 'Two plans for the festival. Two different ideas.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'IV · How Sure Are You?', t: 'Five ways to say “if”.', p: 'Compare A and B. What does each word tell you?' },
+  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'V · Say It Precisely', t: 'If → the precise word.', p: 'Read the sentence with if. Use the clue. Say it more precisely.' },
+  { k: 'tabuleiro', est: 'o', min: 14, img: 'capa', rot: 'VI · The Planning Board', t: 'Roll, move, plan with conditions.', p: 'Your teacher rolls the die. Plan your square with the right condition word.' }
 ];
 var PORTAS = [];
 
@@ -77,3 +78,9 @@ var TABULEIRO = { rot: 'THE PLANNING BOARD', centro: 'Plan a weekend trip with f
   { k: 'THE PET', t: 'Who looks after the dog?', ex: 'My neighbor will feed the dog, providing I bring her a present.' },
   { k: 'THE DELAY', t: 'Imagine the bus is late.', ex: 'Supposing the bus is late, we can take a taxi.' },
   { k: 'THE PITCH', t: 'Convince your friends to go, with three condition words.', ex: 'Given that we all need a break, and assuming the weather is good, let’s go, as long as nobody brings work!' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'If or in case? Two plans for the festival.', a: { t: 'A condition', falas: [['Organizer', 'What if it rains on Saturday?'], ['You', 'We’ll move the stage inside<mark> if it rains</mark>.']], d: 'Only when it rains, we move the stage. The rain is the condition. That is <b>if</b>.' }, b: { t: 'A precaution', falas: [['Organizer', 'The forecast looks fine.'], ['You', 'I’ll still bring ponchos<mark> in case it rains</mark>.']], d: 'Maybe it will not rain, but I prepare now. That is <b>in case</b>.' }, pergunta: 'Same rain, two ideas. What is different?', pergunta2: 'Now you. Which one fits?', itens: [{ p: 'You buy extra water now, because it might be hot.', o: ['I’ll buy extra water in case it’s hot.', 'I’ll buy extra water if it’s hot.'], c: 0, d: 'You act before. in case.' }, { p: 'You will open the second gate only when the crowd is big.', o: ['We’ll open the gate in case the crowd is big.', 'We’ll open the gate providing the crowd is big.'], c: 1, d: 'Only on this condition: providing.' }, { p: 'A fact you already know: tickets are sold out.', o: ['Supposing the tickets are sold out, add a second night.', 'Given that the tickets are sold out, we should add a second night.'], c: 1, d: 'A real fact: given that.' }, { p: 'You can enter the VIP area, but only on one condition: you have a pass.', o: ['You can enter providing you have a pass.', 'You can enter in case you have a pass.'], c: 0, d: 'Only on one condition: providing.' }], nota: '<b>If / providing / as long as</b> = only on that condition. <b>In case</b> = a precaution, you prepare now. <b>Given that</b> = a fact. <b>Supposing</b> = a what-if. <b>In the event of</b> + noun = formal.', uso: { p: 'Your turn. You plan an outdoor party. Say one thing you will do in case something happens, and one thing you will do only if it happens.', molde: ['I’ll bring … in case …', 'We’ll … providing …'], ex: 'I’ll bring umbrellas in case it rains. We’ll start the music at nine, providing the neighbors agree.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

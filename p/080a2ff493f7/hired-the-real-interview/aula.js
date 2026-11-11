@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 12, kick: 'WOLF HIRED · MODULE
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · A Mock Interview With Feedback', t: 'A student answers; a career coach gives feedback.', p: 'One question before, then the video, then the questions.' },
-  { k: 'cadeira', est: 'o', min: 20, img: 'capa', rot: 'II · The Full Interview', t: 'Your teacher is the interviewer. Answer everything.', p: 'Your teacher asks. You answer with what you practiced in the course.' },
-  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'III · Three Final Questions', t: 'A new interviewer, three recorded questions.', p: 'Play the question, start the clock, answer.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'II · The Pocket Rule', t: 'Four lines from the whole course.', p: 'Read one line at a time. Then keep the rule in the corner for the full interview.' },
+  { k: 'cadeira', est: 'o', min: 20, img: 'capa', rot: 'III · The Full Interview', t: 'Your teacher is the interviewer. Answer everything.', p: 'Your teacher asks. You answer with what you practiced in the course.' },
+  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'IV · Three Final Questions', t: 'A new interviewer, three recorded questions.', p: 'Play the question, start the clock, answer.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'R_dxlajqA4s', titulo: 'Mock Interview Preparation: Common Questions with Feedback', fonte: 'CURRY COLLEGE · 0:03–2:55', inicio: 3, fim: 175,
@@ -63,3 +64,16 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 12: video · cadeira · prova (áudio) (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de cadeira.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'The real interview',
+  linhas: [
+    'I’m a … <b>I started</b> … <b>I’ve worked</b> … <b>since</b> … · <b>I’m most proud of</b> …',
+    '<b>Last year, I was working</b> … <b>I had to</b> … <b>As a result</b>, …',
+    '<b>I tend to</b> … <b>I’m working on</b> … · <b>What drew me to</b> … <b>I was impressed by</b> …',
+    '<b>Could you tell me</b> what … is? · <b>Based on</b> …, <b>I’m targeting</b> …'
+  ],
+  uso: { p: 'Your turn. The first line of your real answer to “Tell me about yourself”.', molde: ['I’m a … with … years of experience.', 'I started …', 'I’ve … since …'], ex: 'I’m a project manager with six years of experience. I started in sales, and I’ve led teams since 2021.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

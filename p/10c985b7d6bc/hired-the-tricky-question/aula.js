@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 6, kick: 'WOLF HIRED · MODULE 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · Explain Your Thinking', t: 'A career coach on questions nobody can answer.', p: 'One question before, then the video, then the questions.' },
-  { k: 'multipla', est: 'l', min: 12, img: 'capa', rot: 'II · Five Tricky Questions', t: 'Listen to the interviewer. Choose the best answer.', p: 'Play the question. Read the three answers. Which one is best?' },
-  { k: 'transforma', est: 'o', min: 14, img: 'conversa', rot: 'III · Buy Time, Then Answer', t: 'From panic to a calm, professional answer.', p: 'Read the panic answer and the clue. Then say the calm answer.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Buy Time', t: 'A tricky question. Some words are lit.', p: 'Read it together. Tap the lit phrases: what is each one for? Then try it with your teacher.' },
+  { k: 'multipla', est: 'l', min: 12, img: 'capa', rot: 'III · Five Tricky Questions', t: 'Listen to the interviewer. Choose the best answer.', p: 'Play the question. Read the three answers. Which one is best?' },
+  { k: 'transforma', est: 'o', min: 14, img: 'conversa', rot: 'IV · Buy Time, Then Answer', t: 'From panic to a calm, professional answer.', p: 'Read the panic answer and the clue. Then say the calm answer.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: '-mH8C5pdeRI', titulo: 'Top 10 Tricky Interview Questions & Best Response Strategies', fonte: 'INDEED · 12:49–14:45', inicio: 769, fim: 885,
@@ -52,3 +53,27 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 06: video · multipla (áudio) · transforma (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de multipla.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'A tricky question. Tap the lit phrases.',
+  falas: [
+    { q: 'Interviewer', f: 'What would you do if two managers asked for different things on the same day?' },
+    { q: 'You', f: '[[That’s a good question. Let me think about that for a second.]]' },
+    { q: 'Interviewer', f: 'Take your time.' },
+    { q: 'You', f: '[[Just to make sure I understand]], you mean two managers with different priorities?' },
+    { q: 'Interviewer', f: 'Exactly.' },
+    { q: 'You', f: '[[I don’t know exactly, but I’d start by]] asking both of them what is more urgent.' },
+    { q: 'Interviewer', f: 'And have you done that before?' },
+    { q: 'You', f: '[[I haven’t managed managers, but I have]] balanced two big clients, so I’m ready.' }
+  ],
+  porques: [
+    'Buy time with a calm phrase. Not “Uh… um…”.',
+    'Check the question before you answer. This also buys time.',
+    'When you are not sure: don’t know exactly, but I’d start by + a clean verb.',
+    'I haven’t …, but I have …: honest first, then a strength. The present perfect for your experience until now.'
+  ],
+  nota: 'Don’t freeze. <b>That’s a good question. Let me think about that for a second.</b> Then check: <b>Just to make sure I understand, …?</b> If you are not sure: <b>I don’t know exactly, but I’d start by …</b>',
+  uso: { p: 'Your turn. Your teacher asks a tricky question. Buy time, check it, then answer.', molde: ['That’s a good question. Let me think …', 'Just to make sure I understand, …?', 'I’d start by …'], ex: 'That’s a good question. Let me think for a second. I’d start by listing the priorities.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

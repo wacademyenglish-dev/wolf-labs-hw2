@@ -16,7 +16,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Blue Vase', t: 'Three guests. Who could it have been?', p: 'Ask each guest five questions. Your teacher is the guest. Then say what you think: must have, might have, can’t have.' },
   { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
   { k: 'conversa', est: 'o', min: 8, img: 'conversa', rot: 'IV · By the Fire', t: 'Rules and guesses in your life.', p: 'Answer, then ask back: “What about you?”' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Manor Card', t: 'Four lines from the manor.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -71,3 +72,9 @@ var PARES = [
   ['I managed to', 'finish my game.', 'I didn’t sleep, but I managed to finish my game.'],
   ['It can’t be', 'the cat.', 'It can’t be the cat. The cat is sleeping on my bed.'],
   ['It must have been', 'the wind.', 'The window was open. It must have been the wind.']];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 6.', rotulo: 'Rules and guesses', linhas: ['<b>mustn’t</b> = not allowed · <b>don’t have to</b> = not necessary', 'you’re <b>supposed to</b> bring a gift · I <b>managed to</b> finish (not “could”)', 'now: it <b>must be</b> the wind · it <b>can’t be</b> him', 'the past: it <b>must have been</b> · he <b>can’t have</b> broken it'], uso: { p: 'Your turn. The vase is broken. Say one rule of the house, and one guess about what happened.', molde: ['You mustn’t …', 'It must have been …', 'It can’t have been …'], ex: 'You mustn’t open the windows at night. It must have been the wind. It can’t have been the cat.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

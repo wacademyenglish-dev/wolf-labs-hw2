@@ -21,12 +21,13 @@ var L = [
   { k: 'faixas', est: 'f', min: 6, img: 'portao', rot: 'II · Two Lanes', t: 'The front lane is the moment you’re telling. The back lane was already over.', p: 'Read both events. Tap the one that happened FIRST: it slides to the back lane. Then say the sentence.' },
   { k: 'sentido', est: 'f', min: 6, img: 'plataforma', rot: 'III · Did You See It?', t: 'One word changes the story.', p: 'Read the sentence. Did you see it happen, or was it already over?' },
   { k: 'sala', est: 'l', min: 7, img: 'sala', rot: 'IV · The Empty Room', t: '2014. People sat alone in an empty room for fifteen minutes. One box, one button.', p: 'Listen once. Then tap the four things in the order they happened, before the door closed.' },
-  { k: 'regra', est: 'f', min: 6, img: 'portao', rot: 'V · The Past of the Past', t: 'HAD + the third form, and only when there are two past moments.', p: 'Say the whole sentence out loud before you tap.' },
-  { k: 'botao', est: 'o', min: 7, img: 'botao', rot: 'VI · One Hundred and Ninety', t: 'Forty-two people, one button. Where does each card belong?', p: 'Read the card out loud, say the column, then tap.' },
-  { k: 'copo', est: 'l', min: 7, extra: 1, img: 'copo', rot: 'VII · The Plastic Cup', t: 'Another study: can boredom help you think?', p: 'Listen once. Then answer three questions.' },
-  { k: 'viagem', est: 'o', min: 7, extra: 1, img: 'mala', rot: 'VIII · Your Worst Trip', t: 'The board shows four disasters. Choose one, real or imagined, and tell the story.', p: 'Say the first sentence; your teacher taps what you said. Then tell the story. Your teacher asks: “What had happened before that?”' },
-  { k: 'cerebro', est: 'l', min: 7, extra: 1, img: 'portao', rot: 'IX · A Brain That Doesn’t Stop', t: 'What does the brain do when you stop working?', p: 'Listen once. Then answer three questions.' },
-  { k: 'fim', est: 'w', min: 6, img: 'plataforma', rot: 'X · Too Late, Again', t: 'Your story from scene I comes back.', p: 'Fix the three sentences out loud. Then write your own too-late story with had. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'portao', rot: 'V · Before the Past', t: 'Which past comes first?', p: 'Tap a sentence, then its place on the line. Notice had. Then say three lines about a trip.' },
+  { k: 'regra', est: 'f', min: 6, img: 'portao', rot: 'VI · The Past of the Past', t: 'HAD + the third form, and only when there are two past moments.', p: 'Say the whole sentence out loud before you tap.' },
+  { k: 'botao', est: 'o', min: 7, img: 'botao', rot: 'VII · One Hundred and Ninety', t: 'Forty-two people, one button. Where does each card belong?', p: 'Read the card out loud, say the column, then tap.' },
+  { k: 'copo', est: 'l', min: 7, extra: 1, img: 'copo', rot: 'VIII · The Plastic Cup', t: 'Another study: can boredom help you think?', p: 'Listen once. Then answer three questions.' },
+  { k: 'viagem', est: 'o', min: 7, extra: 1, img: 'mala', rot: 'IX · Your Worst Trip', t: 'The board shows four disasters. Choose one, real or imagined, and tell the story.', p: 'Say the first sentence; your teacher taps what you said. Then tell the story. Your teacher asks: “What had happened before that?”' },
+  { k: 'cerebro', est: 'l', min: 7, extra: 1, img: 'portao', rot: 'X · A Brain That Doesn’t Stop', t: 'What does the brain do when you stop working?', p: 'Listen once. Then answer three questions.' },
+  { k: 'fim', est: 'w', min: 6, img: 'plataforma', rot: 'XI · Too Late, Again', t: 'Your story from scene I comes back.', p: 'Fix the three sentences out loud. Then write your own too-late story with had. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -216,3 +217,19 @@ TOQUES['vg-prox'] = function () { S.vg = { n: S.vg.n + 1, esc: '' }; };
 TOQUES.cb = function (b, n) { S.cb.esc = n; };
 TOQUES['cb-prox'] = function () { S.cb = { n: S.cb.n + 1, esc: -1 }; };
 TOQUES.cf = function (b, n) { S.cf[n] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'The departure board, on one line. Where does each sentence go?',
+  marcos: [{ t: 'FIRST', s: 'before the other past' }, { t: 'THEN', s: 'the past moment' }, { t: 'NOW', s: 'today' }],
+  frases: [
+    { f: 'The train had left.', c: 0, d: 'had left · it happened first' },
+    { f: 'I had lost my passport.', c: 0, d: 'had lost · it happened first' },
+    { f: 'I arrived at the station.', c: 1, d: 'arrived · the past moment we talk about' },
+    { f: 'The board said CANCELLED.', c: 1, d: 'said · the past moment we talk about' },
+    { f: 'I always check the board now.', c: 2, d: 'check · true today' },
+    { f: 'I’m at the gate today.', c: 2, d: 'am · true today' }
+  ],
+  nota: 'Two moments in the past: the one that happened <b>first</b> takes <b>had + third form</b> (had left, had lost). The later one is the normal past: I arrived. And the verb is the third form: had <b>gone</b>, not had went.',
+  uso: { p: 'Your turn. A trip or a day that went wrong. What had happened before you arrived?', molde: ['When I got there, the … had …', 'I had already …'], ex: 'When I got to the airport, the plane had already left. I had forgotten my passport at home.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

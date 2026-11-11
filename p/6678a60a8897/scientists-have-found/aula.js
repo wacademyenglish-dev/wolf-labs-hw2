@@ -27,12 +27,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'marte', rot: 'III · The Mars Story', t: 'A rock on Mars, and a question everybody is asking.', p: 'The video is locked. Answer first, then it plays in four short parts. Then True or Lie.' },
   { k: 'falas', est: 'l', extra: 1, img: 'marte', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'bancada', est: 'o', min: 7, img: 'laboratorio', rot: 'V · The Sample Rack', t: 'Six stories tonight, one on each sample tube.', p: 'Pick a tube. Read the lab note out loud and answer the question. Then say the news in ONE sentence. Your teacher taps what you said.' },
-  { k: 'regra', est: 'f', min: 6, img: 'laboratorio', rot: 'VI · The Thing First', t: 'New news: have / has + participle. The thing first: has been + participle.', p: 'Read the four lines out loud. Then fix the four traps.' },
-  { k: 'letreiro', est: 'o', min: 7, img: 'estudio', rot: 'VII · The Flap Board', t: '8:52 PM. Five headlines for the 9 PM bulletin.', p: 'Read each headline on the air as a full sentence, the thing first. Your teacher taps what you said. The last two are from a rival website.' },
-  { k: 'dana', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'VIII · On the Air at 9', t: '9:01 PM. You are live. Dana, the anchor, asks about Mars.', p: 'Your teacher is Dana. You are the science reporter. Answer on the air.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'redacao', rot: 'IX · Quick Check', t: 'Five quick lines from tonight’s news.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'redacao', rot: 'X · Your Own News', t: 'The news about your life, your street and your city.', p: 'Pick a card. Answer like a news reporter.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · After the Bulletin', t: 'Should we believe a science headline before the scientists are sure?', p: 'Write three headlines about your own city, then each one as a full sentence. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'laboratorio', rot: 'VI · Find the Rule', t: 'Four headlines. You find the rule.', p: 'Read the four headlines out loud. Look at the lit verbs. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'laboratorio', rot: 'VII · The Thing First', t: 'New news: have / has + participle. The thing first: has been + participle.', p: 'Read the four lines out loud. Then fix the four traps.' },
+  { k: 'letreiro', est: 'o', min: 7, img: 'estudio', rot: 'VIII · The Flap Board', t: '8:52 PM. Five headlines for the 9 PM bulletin.', p: 'Read each headline on the air as a full sentence, the thing first. Your teacher taps what you said. The last two are from a rival website.' },
+  { k: 'dana', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'IX · On the Air at 9', t: '9:01 PM. You are live. Dana, the anchor, asks about Mars.', p: 'Your teacher is Dana. You are the science reporter. Answer on the air.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'redacao', rot: 'X · Quick Check', t: 'Five quick lines from tonight’s news.', p: 'Say the whole sentence out loud. Then tap the word.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'redacao', rot: 'XI · Your Own News', t: 'The news about your life, your street and your city.', p: 'Pick a card. Answer like a news reporter.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · After the Bulletin', t: 'Should we believe a science headline before the scientists are sure?', p: 'Write three headlines about your own city, then each one as a full sentence. It goes to your My notes.' }
 ];
 
 var VOCE = [
@@ -270,3 +271,19 @@ TOQUES['lt-prox'] = function () { S.lt = { n: S.lt.n + 1, esc: '' }; };
 TOQUES['dn-prox'] = function () { S.dn.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four headlines. Find the rule yourself.',
+  exemplos: [
+    'A strange rock <b>has been found</b> on Mars.',
+    'Three samples <b>have been sent</b> to the lab.',
+    'The results <b>haven’t been published</b> yet.',
+    'Life <b>hasn’t been found</b> yet.'
+  ],
+  pergunta: 'When the news is about the thing, and not about who did it, the verb is …',
+  opcoes: ['has / have + been + participle: has been found', 'has / have + participle only: has found by scientists', 'was / were + -ing: was finding'], c: 0,
+  nao: 'Not that one. Read the four lit verbs again: what comes after has or have?',
+  regra: '<b>has / have + been + participle</b> when the thing is the news and the doer is not important: A rock <b>has been found</b>. Never “has found a rock” without a person, and never “has being found”.',
+  uso: { p: 'Your turn. One piece of news about your city or your life, with the thing first.', molde: ['A new … has been …', 'The … have been …'], ex: 'A new bridge has been built. The old school has been closed.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

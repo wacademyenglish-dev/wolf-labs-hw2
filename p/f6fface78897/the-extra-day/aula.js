@@ -16,13 +16,14 @@ var L = [
   { k: 'capa', est: null, img: 'calendario' },
   { k: 'datas', est: 'o', min: 7, img: 'calendario', rot: 'I · Three Birthdays', t: 'Before the calendar: your dates.', p: 'Pick a card. Say the date out loud, any way you can. Then the follow-up comes.' },
   { k: 'numero', est: 'f', min: 6, img: 'quadro', rot: 'II · The Number Changes', t: 'A number can’t be a date until it becomes another word.', p: 'Say the number. Pick how it changes. Then watch it become a date.' },
-  { k: 'regra', est: 'f', min: 6, img: 'quadro', rot: 'III · The Last Number', t: 'Big numbers: look only at the last one.', p: 'Read the cards out loud. Then fix the four traps.' },
-  { k: 'adesivos', est: 'l', min: 7, img: 'calendario', rot: 'IV · The Family Calendar', t: 'Your teacher says the birthdays. You put them on the wall.', p: 'Listen. Drag the sticker to the day, or tap the sticker and then the day.' },
-  { k: 'ouve', est: 'l', min: 7, img: 'quadro', rot: 'V · Fourteenth or Fortieth?', t: 'Six messages. Some numbers sound almost the same.', p: 'Play it once. Say the date back. Then pick it.' },
-  { k: 'onin', est: 'f', min: 6, img: 'calendario', rot: 'VI · On, In', t: 'A day is small: ON. A month or a year is big: IN.', p: 'Read the line with the right word. One takes nothing.' },
-  { k: 'volta', est: 'o', min: 7, extra: 1, img: 'calendario', rot: 'VII · Ten Days Later', t: 'The same month. These cards don’t give numbers.', p: 'Read the clue. Find the day. Say the date out loud. Then tap it.' },
-  { k: 'extra', est: 'o', min: 7, extra: 1, img: 'quadro', rot: 'VIII · The Extra Day', t: 'One year in four, February gets one more day.', p: 'Play her two messages. Answer. Then plan YOUR extra day.' },
-  { k: 'fim', est: 'w', min: 6, img: 'calendario', rot: 'IX · Your Calendar', t: 'Five dates that matter to you.', p: 'Write five lines with a date and ON or IN. The red line watches the dates. It goes to your My notes.' }
+  { k: 'gx', est: 'l', min: 4, img: 'calendario', rot: 'III · Listen to the End', t: 'Two numbers that sound almost the same.', p: 'Listen to the pairs. Then the ear test. Then say your dates.' },
+  { k: 'regra', est: 'f', min: 6, img: 'quadro', rot: 'IV · The Last Number', t: 'Big numbers: look only at the last one.', p: 'Read the cards out loud. Then fix the four traps.' },
+  { k: 'adesivos', est: 'l', min: 7, img: 'calendario', rot: 'V · The Family Calendar', t: 'Your teacher says the birthdays. You put them on the wall.', p: 'Listen. Drag the sticker to the day, or tap the sticker and then the day.' },
+  { k: 'ouve', est: 'l', min: 7, img: 'quadro', rot: 'VI · Fourteenth or Fortieth?', t: 'Six messages. Some numbers sound almost the same.', p: 'Play it once. Say the date back. Then pick it.' },
+  { k: 'onin', est: 'f', min: 6, img: 'calendario', rot: 'VII · On, In', t: 'A day is small: ON. A month or a year is big: IN.', p: 'Read the line with the right word. One takes nothing.' },
+  { k: 'volta', est: 'o', min: 7, extra: 1, img: 'calendario', rot: 'VIII · Ten Days Later', t: 'The same month. These cards don’t give numbers.', p: 'Read the clue. Find the day. Say the date out loud. Then tap it.' },
+  { k: 'extra', est: 'o', min: 7, extra: 1, img: 'quadro', rot: 'IX · The Extra Day', t: 'One year in four, February gets one more day.', p: 'Play her two messages. Answer. Then plan YOUR extra day.' },
+  { k: 'fim', est: 'w', min: 6, img: 'calendario', rot: 'X · Your Calendar', t: 'Five dates that matter to you.', p: 'Write five lines with a date and ON or IN. The red line watches the dates. It goes to your My notes.' }
 ];
 
 /* o mês da parede: março de 2027 começa na segunda */
@@ -259,3 +260,23 @@ document.addEventListener('drop', function (ev) {
   if (S.ad.sel !== v) { var s = document.querySelector('[data-a="ad"][data-v="' + v + '"]'); if (s) s.click(); }
   var alvo = document.querySelector('[data-a="dia"][data-n="' + n + '"]'); if (alvo) alvo.click();
 });
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G11 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'som2', titulo: 'The end of the word. Listen first.',
+  toque: 'Tap ▶ and listen. Say both out loud. Listen to which part is strong.',
+  pares: [
+    [{ t: 'fourteenth', fala: 'The party is on the fourteenth of June.' }, { t: 'fortieth', fala: 'It is her fortieth birthday.' }],
+    [{ t: 'thirteenth', fala: 'The meeting is on the thirteenth.' }, { t: 'thirtieth', fala: 'The meeting is on the thirtieth.' }]
+  ],
+  pergunta: 'The ear test. Which one do you hear?',
+  itens: [
+    { fala: 'The party is on the fourteenth of June.', o: ['14th', '40th'], c: 0 },
+    { fala: 'It is his fortieth birthday in May.', o: ['14th', '40th'], c: 1 },
+    { fala: 'The exam is on the thirteenth of March.', o: ['13th', '30th'], c: 0 },
+    { fala: 'Our trip starts on the thirtieth.', o: ['13th', '30th'], c: 1 }
+  ],
+  nota: 'In <b>fourteenth</b>, the strong part is at the end: four<b>TEENTH</b> (14th). In <b>fortieth</b>, it is at the start: <b>FOR</b>tieth (40th). A date is always an ordinal: the fourteenth of June.',
+  uso: { p: 'Your turn. Say three dates that matter to you. Your teacher says which number they heard.', molde: ['My birthday is on the …', 'The party is on the …'], ex: 'My birthday is on the fourteenth of June. The party is on the thirtieth.' },
+  prof: 'The ▶ uses the voice of the browser. No sound? Say the dates yourself, with the strong part clear.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_som', GX_EXPLICA); };

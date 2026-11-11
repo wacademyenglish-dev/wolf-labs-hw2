@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 24, kick: 'AU PAIR · MODULE 6 �
   nota: 'Everything you learned fits in one card and one smile. Welcome to your year.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'leitura', est: 'l', min: 8, img: 'conversa', rot: 'I · A Message From Your Coordinator', t: 'Your coordinator writes on day one.', p: 'Read it out loud. Then answer the questions.' },
-  { k: 'prova', est: 'o', min: 14, img: 'capa', rot: 'II · Arrival Day', t: 'Mrs. Parker welcomes you. Answer.', p: 'Play each line, start the clock, answer in about 30 seconds.' },
-  { k: 'cartao', est: 'w', min: 14, img: 'conversa', rot: 'III · My Safety Card', t: 'Write your Safety Card.', p: 'Contacts, rights, phrases. Then save it in your phone and on paper.' },
-  { k: 'pode', est: 'f', min: 5, img: 'capa', rot: 'IV · I Can', t: 'The course is done. What can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms and stamps the course.' }
+  { k: 'gx', est: 'o', min: 4, img: 'capa', rot: 'I · Yes, I Am', t: 'Ping-pong with your host mom. Short answers.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'leitura', est: 'l', min: 8, img: 'conversa', rot: 'II · A Message From Your Coordinator', t: 'Your coordinator writes on day one.', p: 'Read it out loud. Then answer the questions.' },
+  { k: 'prova', est: 'o', min: 14, img: 'capa', rot: 'III · Arrival Day', t: 'Mrs. Parker welcomes you. Answer.', p: 'Play each line, start the clock, answer in about 30 seconds.' },
+  { k: 'cartao', est: 'w', min: 14, img: 'conversa', rot: 'IV · My Safety Card', t: 'Write your Safety Card.', p: 'Contacts, rights, phrases. Then save it in your phone and on paper.' },
+  { k: 'pode', est: 'f', min: 5, img: 'capa', rot: 'V · I Can', t: 'The course is done. What can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms and stamps the course.' }
 ];
 
 var LEITURA = { rot: 'A MESSAGE FROM KAREN, YOUR LOCAL COORDINATOR (FICTIONAL)', tipo: 'chat',
@@ -62,3 +63,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 24 · projeto final: leitura · prova (áudio) · cartao (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de leitura.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Arrival day. Short answers, fast.',
+  perguntas: [
+    { q: 'Are you tired after the flight?', s: 'Yes, I <mark>am</mark>.', n: 'No, I’m <mark>not</mark>.', mais: 'Then: I’m a little tired, but I’m happy to be here.' },
+    { q: 'Did you eat on the plane?', s: 'Yes, I <mark>did</mark>.', n: 'No, I <mark>didn’t</mark>.', mais: 'What did you eat?' },
+    { q: 'Do you have your coordinator’s number?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.', mais: 'Say where it is: It’s on my Safety Card.' },
+    { q: 'Is your room OK?', s: 'Yes, it <mark>is</mark>.', n: 'No, it <mark>isn’t</mark>.', mais: 'Say one thing you like about it.' },
+    { q: 'Are the kids’ allergies on your list?', s: 'Yes, they <mark>are</mark>.', n: 'No, they <mark>aren’t</mark>.' },
+    { q: 'Can you call your family tonight?', s: 'Yes, I <mark>can</mark>.', n: 'No, I <mark>can’t</mark>.', mais: 'Why? Say a reason.' }
+  ],
+  nota: 'The short answer repeats the helper word of the question, never the main verb: Are you …? Yes, I <b>am</b>. Did you …? Yes, I <b>did</b>. Do you …? No, I <b>don’t</b>.',
+  uso: { p: 'Your turn. Ask your teacher three questions about the house. Your teacher answers the short way.', molde: ['Do you …?', 'Is there …?', 'Can I …?'], ex: 'Do you eat dinner at six? Is there a washer in the house? Can I use the kitchen?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

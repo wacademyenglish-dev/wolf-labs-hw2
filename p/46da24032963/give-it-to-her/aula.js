@@ -15,12 +15,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'presentes', rot: 'I · You and Presents', t: 'Before the party: you and presents.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
   { k: 'mesa', est: 'o', min: 7, img: 'capa', rot: 'II · The Wrong Tags', t: 'Six presents, six wrong tags.', p: 'Pick a present. Say who it’s for, with a pronoun. Then tap your sentence: a right one turns the tag.' },
-  { k: 'regra', est: 'f', min: 6, img: 'bolo', rot: 'III · The Rule', t: 'Two lists: before the verb, and after it.', p: 'Read the three cards out loud. Then fix the four traps.' },
-  { k: 'porta', est: 'o', min: 7, img: 'porta', rot: 'IV · Ding Dong!', t: 'Eight guests at the door. Answer fast, with a pronoun.', p: 'Open the door. Your teacher is the guest. Answer at once, then tap your sentence.' },
-  { k: 'roda', est: 'o', min: 7, img: 'presentes', rot: 'V · Presents for Everyone', t: 'A present for everybody in your life.', p: 'Spin the wheel. What do you give this person? I give her… I buy him…' },
-  { k: 'avo', est: 'o', min: 7, extra: 1, img: 'bolo', rot: 'VI · Thank You, Dear', t: 'The next day, Grandma calls you.', p: 'Your teacher is Grandma. Answer with pronouns. Then she replies.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'capa', rot: 'VII · Quick Check', t: 'Six quick lines from the party.', p: 'Say the whole sentence first. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'sala', rot: 'VIII · Thank-You Notes', t: 'The party is over. Write the thank-you notes.', p: 'Five notes: a present, who it is from, and what you think of it. A pronoun in every line. The red line watches them. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'presentes', rot: 'III · The Gift in Blocks', t: 'The same present, told three ways.', p: 'Read the blocks out loud. Notice what changes. Then build a sentence and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'bolo', rot: 'IV · The Rule', t: 'Two lists: before the verb, and after it.', p: 'Read the three cards out loud. Then fix the four traps.' },
+  { k: 'porta', est: 'o', min: 7, img: 'porta', rot: 'V · Ding Dong!', t: 'Eight guests at the door. Answer fast, with a pronoun.', p: 'Open the door. Your teacher is the guest. Answer at once, then tap your sentence.' },
+  { k: 'roda', est: 'o', min: 7, img: 'presentes', rot: 'VI · Presents for Everyone', t: 'A present for everybody in your life.', p: 'Spin the wheel. What do you give this person? I give her… I buy him…' },
+  { k: 'avo', est: 'o', min: 7, extra: 1, img: 'bolo', rot: 'VII · Thank You, Dear', t: 'The next day, Grandma calls you.', p: 'Your teacher is Grandma. Answer with pronouns. Then she replies.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'capa', rot: 'VIII · Quick Check', t: 'Six quick lines from the party.', p: 'Say the whole sentence first. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'sala', rot: 'IX · Thank-You Notes', t: 'The party is over. Write the thank-you notes.', p: 'Five notes: a present, who it is from, and what you think of it. A pronoun in every line. The red line watches them. It goes to your My notes.' }
 ];
 
 var VOCE = [
@@ -178,3 +179,17 @@ TOQUES['rd-gira'] = function () { S.roda.giros++; };
 TOQUES['rd-foi'] = function () { var r = S.roda; r.foi[(r.giros * 3 - 3) % FATIAS.length] = 1; };
 TOQUES.qz = function (b, n) { if (S.quiz.esc === 0) return false; S.quiz.esc = n; };
 TOQUES['qz-prox'] = function () { S.quiz = { n: S.quiz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Grandma’s present, in blocks. Each block has a job.',
+  frases: [
+    { b: [['I', 'WHO'], ['gave', 'ACTION'], ['the scarf', 'WHAT'], ['to Grandma', 'FOR WHO', 'quem']], d: 'Names and things come after the verb.' },
+    { b: [['I', 'WHO'], ['gave', 'ACTION'], ['it', 'PRONOUN', 'aux'], ['to her', 'PRONOUN', 'aux']], d: 'The scarf is it. Grandma is her. Short words, same places.' },
+    { b: [['Sit', 'ACTION'], ['with', 'LINK', 'aux'], ['us', 'PRONOUN', 'aux'], ['Grandma', 'WHO']], d: 'After with, to and for: me, him, her, us, them.' }
+  ],
+  nota: 'After the verb, and after <b>to</b>, <b>for</b> and <b>with</b>, the little word changes: I is <b>me</b>, he is <b>him</b>, she is <b>her</b>, we are <b>us</b>, they are <b>them</b>. And <b>it</b> never stays out: I like <b>it</b>.',
+  monta: { p: 'Build the next line from the party. Then say it.', pecas: [['to him', 'PRONOUN', 'aux'], ['We', 'WHO'], ['it', 'PRONOUN', 'aux'], ['gave', 'ACTION']], ordem: [1, 3, 2, 0], outras: [] },
+  uso: { p: 'Your turn. A present you gave to somebody. Say two sentences, with a pronoun after the verb.', molde: ['I gave it to …', 'I like it.'], ex: 'I gave my mother a book. I gave it to her on her birthday.' },
+  prof: 'Read the blocks with the student, top to bottom: the word on top, its job under it. Point at the short word after the verb.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

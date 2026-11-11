@@ -10,15 +10,16 @@
 var L = [
   { k: 'capa', est: null, img: 'barraca' },
   { k: 'abre', est: 'o', min: 7, img: 'cesta', rot: 'I · Your Market', t: 'What do you buy every week?', p: 'Pick a card. Name things, and say how many. Your teacher taps what you used. Don’t worry about it yet.' },
-  { k: 'caixa', est: 'f', min: 6, img: 'engradado', rot: 'II · One Becomes Two', t: 'Twelve words. Some just take S. Some need a beat.', p: 'Say the plural. Clap the beats. Then tap + S or + ES.' },
-  { k: 'garganta', est: 'o', min: 7, img: 'engradado', rot: 'III · Your Throat Knows', t: 'Hand on your throat. Say the word. Does it buzz?', p: 'No buzz: the /s/ crate. A buzz: the /z/ crate.' },
-  { k: 'garfo', est: 'f', min: 6, img: 'cesta', rot: 'IV · The Y Fork', t: 'Look at the letter BEFORE the Y.', p: 'A consonant before it: the Y goes, -IES comes. A vowel before it: just + S.' },
-  { k: 'facas', est: 'o', min: 7, img: 'cesta', rot: 'V · The Knife Drawer', t: 'A small family: the F turns into V.', p: 'Say the plural before you open. Then the sentence.' },
-  { k: 'teimosos', est: 'o', min: 7, img: 'cesta', rot: 'VI · The Stubborn Ones', t: 'No rule here. Only your mouth remembers these.', p: 'Say the plural before you open. Then find the two words that don’t exist.' },
-  { k: 'grito', est: 'f', min: 6, extra: 1, img: 'barraca', rot: 'VII · Vera Shouts', t: 'Vera shouts one thing at a time. Put each one in its place.', p: 'Your teacher shouts. You say the plural. Spelling first: -ES, -IES or odd? Only a plain +S goes by sound.' },
-  { k: 'placas', est: 'f', min: 6, extra: 1, img: 'placas', rot: 'VIII · The Signs', t: 'Vera’s price signs are a mess.', p: 'Tap a sign. Fix it out loud, or say it’s right.' },
-  { k: 'barraca', est: 'o', min: 7, extra: 1, img: 'barraca', rot: 'IX · Your Own Stall', t: 'Saturday. You have a stall too. Shout what you sell.', p: 'Pick a stall. Shout five things with numbers. Then the customers come.' },
-  { k: 'fim', est: 'w', min: 6, img: 'engradado', rot: 'X · Market Closed', t: 'Write your shopping list.', p: 'Six things with numbers, and one sentence about people or children. The red line watches every ending. It goes to your My notes.' }
+  { k: 'gx', est: 'l', min: 4, img: 'engradado', rot: 'II · One or Many?', t: 'Two words that sound almost the same.', p: 'Listen to the pairs. Then the ear test: one or many? Then say yours.' },
+  { k: 'caixa', est: 'f', min: 6, img: 'engradado', rot: 'III · One Becomes Two', t: 'Twelve words. Some just take S. Some need a beat.', p: 'Say the plural. Clap the beats. Then tap + S or + ES.' },
+  { k: 'garganta', est: 'o', min: 7, img: 'engradado', rot: 'IV · Your Throat Knows', t: 'Hand on your throat. Say the word. Does it buzz?', p: 'No buzz: the /s/ crate. A buzz: the /z/ crate.' },
+  { k: 'garfo', est: 'f', min: 6, img: 'cesta', rot: 'V · The Y Fork', t: 'Look at the letter BEFORE the Y.', p: 'A consonant before it: the Y goes, -IES comes. A vowel before it: just + S.' },
+  { k: 'facas', est: 'o', min: 7, img: 'cesta', rot: 'VI · The Knife Drawer', t: 'A small family: the F turns into V.', p: 'Say the plural before you open. Then the sentence.' },
+  { k: 'teimosos', est: 'o', min: 7, img: 'cesta', rot: 'VII · The Stubborn Ones', t: 'No rule here. Only your mouth remembers these.', p: 'Say the plural before you open. Then find the two words that don’t exist.' },
+  { k: 'grito', est: 'f', min: 6, extra: 1, img: 'barraca', rot: 'VIII · Vera Shouts', t: 'Vera shouts one thing at a time. Put each one in its place.', p: 'Your teacher shouts. You say the plural. Spelling first: -ES, -IES or odd? Only a plain +S goes by sound.' },
+  { k: 'placas', est: 'f', min: 6, extra: 1, img: 'placas', rot: 'IX · The Signs', t: 'Vera’s price signs are a mess.', p: 'Tap a sign. Fix it out loud, or say it’s right.' },
+  { k: 'barraca', est: 'o', min: 7, extra: 1, img: 'barraca', rot: 'X · Your Own Stall', t: 'Saturday. You have a stall too. Shout what you sell.', p: 'Pick a stall. Shout five things with numbers. Then the customers come.' },
+  { k: 'fim', est: 'w', min: 6, img: 'engradado', rot: 'XI · Market Closed', t: 'Write your shopping list.', p: 'Six things with numbers, and one sentence about people or children. The red line watches every ending. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -221,3 +222,23 @@ TOQUES.bg = function (b, n) { S.barraca.gritou[n] = 1; };
 TOQUES.bp = function (b, n, v) { S.barraca.partes[v] = !S.barraca.partes[v]; };
 TOQUES.be = function () { S.barraca.erro = !S.barraca.erro; };
 TOQUES.bcl = function () { S.barraca.cli++; S.barraca.partes = {}; S.barraca.erro = 0; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G11 · uma cena curta nova (k: gx) antes de caixa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'som2', titulo: 'One or many? Listen first.',
+  toque: 'Tap ▶ and listen. Say both out loud. Can you hear the extra beat?',
+  pares: [
+    [{ t: 'peach', fala: 'one peach' }, { t: 'peaches', fala: 'two peaches' }],
+    [{ t: 'box', fala: 'one box' }, { t: 'boxes', fala: 'two boxes' }]
+  ],
+  pergunta: 'The ear test. Which one do you hear?',
+  itens: [
+    { fala: 'Vera has two boxes.', o: ['box', 'boxes'], c: 1 },
+    { fala: 'I want one peach.', o: ['peach', 'peaches'], c: 0 },
+    { fala: 'The market sells fresh peaches.', o: ['peach', 'peaches'], c: 1 },
+    { fala: 'Give me a glass of juice.', o: ['glass', 'glasses'], c: 0 }
+  ],
+  nota: 'After <b>s, x, ch, sh</b> the plural is a whole new beat: peach → peach<b>es</b>. After other sounds it is only a little s: books, bags. Listen for the extra beat.',
+  uso: { p: 'Your turn. Tell your teacher three things you buy at the market, with numbers. Your teacher says which ones had the extra beat.', molde: ['I buy two …', 'three …'], ex: 'I buy two peaches, three boxes of eggs and four bananas.' },
+  prof: 'The ▶ uses the voice of the browser. No sound? Say the words yourself, with the extra beat.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_som', GX_EXPLICA); };

@@ -14,14 +14,15 @@
 var L = [
   { k: 'capa', est: null, img: 'bolo' },
   { k: 'bolsa', est: 'f', min: 6, img: 'mesa', rot: 'I · On You or in the Bag', t: 'What you are, and what you have.', p: 'Say the sentence out loud. Then put the card where it goes: on you, or in the bag.' },
-  { k: 'velas', est: 'o', min: 7, img: 'bolo', rot: 'II · The Family of Am', t: 'Eight states. Every sentence starts the same way.', p: 'Read the situation. Say the whole sentence. Then light the candle.' },
-  { k: 'ouvir', est: 'l', min: 7, img: 'bolo', rot: 'III · Listen', t: 'The same shape every time.', p: 'Listen first. Say it three times. Then see the words.' },
-  { k: 'batida', est: 'l', min: 7, img: 'bolo', rot: 'IV · Where the Beat Falls', t: 'Same sounds, different beat.', p: 'Play. Clap the beat. Choose it. Then say the number.' },
-  { k: 'idades', est: 'l', min: 7, img: 'mesa', rot: 'V · How Old Is She?', t: 'Six people at the party say hello.', p: 'Listen to each one. Tap the age. Then tell your teacher: She’s … / He’s …' },
-  { k: 'pergunta', est: 'l', min: 7, extra: 1, img: 'bolo', rot: 'VI · The Question', t: 'How old are you? is one fast block.', p: 'Play. Say it three times, faster each time.' },
-  { k: 'mimica', est: 'o', min: 7, extra: 1, img: 'frio', rot: 'VII · Guess How I Am', t: 'A mime game.', p: 'One mimes, one guesses: Are you …? Yes, I am. / No, I’m not.' },
-  { k: 'festa', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'VIII · The Family Party', t: 'A party for your family. Four cakes.', p: 'Who are they, and how old are they? Your teacher asks questions.' },
-  { k: 'fim', est: 'w', min: 6, img: 'bolo', rot: 'IX · Blow Out the Candles', t: 'Write your birthday card.', p: 'Your age, your family’s ages, and three states. The red line watches have. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'bolo', rot: 'II · Yes, I Am', t: 'Ping-pong at the party. Three words for each answer.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'velas', est: 'o', min: 7, img: 'bolo', rot: 'III · The Family of Am', t: 'Eight states. Every sentence starts the same way.', p: 'Read the situation. Say the whole sentence. Then light the candle.' },
+  { k: 'ouvir', est: 'l', min: 7, img: 'bolo', rot: 'IV · Listen', t: 'The same shape every time.', p: 'Listen first. Say it three times. Then see the words.' },
+  { k: 'batida', est: 'l', min: 7, img: 'bolo', rot: 'V · Where the Beat Falls', t: 'Same sounds, different beat.', p: 'Play. Clap the beat. Choose it. Then say the number.' },
+  { k: 'idades', est: 'l', min: 7, img: 'mesa', rot: 'VI · How Old Is She?', t: 'Six people at the party say hello.', p: 'Listen to each one. Tap the age. Then tell your teacher: She’s … / He’s …' },
+  { k: 'pergunta', est: 'l', min: 7, extra: 1, img: 'bolo', rot: 'VII · The Question', t: 'How old are you? is one fast block.', p: 'Play. Say it three times, faster each time.' },
+  { k: 'mimica', est: 'o', min: 7, extra: 1, img: 'frio', rot: 'VIII · Guess How I Am', t: 'A mime game.', p: 'One mimes, one guesses: Are you …? Yes, I am. / No, I’m not.' },
+  { k: 'festa', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'IX · The Family Party', t: 'A party for your family. Four cakes.', p: 'Who are they, and how old are they? Your teacher asks questions.' },
+  { k: 'fim', est: 'w', min: 6, img: 'bolo', rot: 'X · Blow Out the Candles', t: 'Write your birthday card.', p: 'Your age, your family’s ages, and three states. The red line watches have. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -167,3 +168,18 @@ TOQUES['mm-p'] = function (b, n, v) { S.mim.partes[v] = !S.mim.partes[v]; };
 TOQUES['mm-prox'] = function () { S.mim = { c: -1, partes: {}, feitas: S.mim.feitas + 1 }; };
 TOQUES['fs-p'] = function (b, n, v) { var p = S.festa.partes[S.festa.n] = S.festa.partes[S.festa.n] || {}; p[v] = !p[v]; };
 TOQUES['fs-prox'] = function () { S.festa.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de velas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Three words, fast.',
+  perguntas: [
+    { q: 'Are you thirty?', s: 'Yes, I <mark>am</mark>.', n: 'No, I’m <mark>not</mark>.', mais: 'How old are you? I’m …' },
+    { q: 'Are you hungry?', s: 'Yes, I <mark>am</mark>.', n: 'No, I’m <mark>not</mark>.', mais: 'Say it: I’m hungry. / I’m not hungry.' },
+    { q: 'Is your mother fifty?', s: 'Yes, she <mark>is</mark>.', n: 'No, she <mark>isn’t</mark>.', mais: 'How old is she? She’s …' },
+    { q: 'Is it cold in the room?', s: 'Yes, it <mark>is</mark>.', n: 'No, it <mark>isn’t</mark>.' },
+    { q: 'Are your friends here?', s: 'Yes, they <mark>are</mark>.', n: 'No, they <mark>aren’t</mark>.', mais: 'How old are they? They’re …' },
+    { q: 'Are you afraid of dogs?', s: 'Yes, I <mark>am</mark>.', n: 'No, I’m <mark>not</mark>.' }
+  ],
+  nota: 'The short answer repeats the be: Yes, I <b>am</b>. No, she <b>isn’t</b>. Not “Yes, I’m”, and not “Yes, I do”.',
+  uso: { p: 'Your turn. Ask your teacher three questions with Are you …? or Is your …? Your teacher answers the short way.', molde: ['Are you …?', 'Is your … thirty?'], ex: 'Are you tired? Is your brother thirty? Are your friends here?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

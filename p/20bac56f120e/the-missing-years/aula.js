@@ -34,10 +34,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'The Odyssey, 2026. The official trailer.', p: 'Open a card. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'mar', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'ilha', rot: 'V · Was, Were, Didn’t', t: 'Penelope writes to Odysseus. Find the pattern.', p: 'Read the letter out loud. Tap the verbs in the past. Then finish the rule.' },
-  { k: 'rota', est: 'o', min: 7, img: 'mar', rot: 'VI · The Sea Route', t: 'Ask about each island, and the ship sails on.', p: 'Build the question out loud, tap Check, then ask your teacher. The teacher answers in the past.' },
-  { k: 'viagem', est: 'o', min: 7, img: 'ilha', rot: 'VII · Your Journey', t: 'Six questions about a trip you remember.', p: 'Spin for a question. Answer in the past, and tap each verb when you use it.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · Questions', t: 'Questions.', p: 'Questions.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mar', rot: 'V · The Ladder', t: 'One verb, five steps, one long voyage.', p: 'Read each step out loud, then go one step up. Notice where the past lives. Then climb with your own verb.' },
+  { k: 'regra', est: 'f', min: 6, img: 'ilha', rot: 'VI · Was, Were, Didn’t', t: 'Penelope writes to Odysseus. Find the pattern.', p: 'Read the letter out loud. Tap the verbs in the past. Then finish the rule.' },
+  { k: 'rota', est: 'o', min: 7, img: 'mar', rot: 'VII · The Sea Route', t: 'Ask about each island, and the ship sails on.', p: 'Build the question out loud, tap Check, then ask your teacher. The teacher answers in the past.' },
+  { k: 'viagem', est: 'o', min: 7, img: 'ilha', rot: 'VIII · Your Journey', t: 'Six questions about a trip you remember.', p: 'Spin for a question. Answer in the past, and tap each verb when you use it.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · Questions', t: 'Questions.', p: 'Questions.' }
 ];
 
 var FILME = 'The Odyssey', ANO = '2026';
@@ -238,3 +239,17 @@ var FIM = { tipo: 'perguntas', rot: 'VIII · Questions', t: 'Questions about you
   ],
   depois: 'Now you ask the teacher two of these questions.' };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One verb. Climb it one step at a time.',
+  degraus: [
+    { r: 'verb', f: 'take', d: 'The verb, clean.' },
+    { r: 'past', f: 'Odysseus <b>took</b> a ship from Troy.', d: 'took: the past, finished.' },
+    { r: 'not', f: 'He <b>didn’t take</b> the short way home.', d: 'The past goes into didn’t. take is clean again.' },
+    { r: '?', f: '<b>Did</b> he <b>take</b> the short way?', d: 'Did goes first. take stays clean.' },
+    { r: 'short', f: 'Yes, he <b>did</b>. · No, he <b>didn’t</b>.', d: 'The short answer keeps did.' }
+  ],
+  nota: 'The past lives in <b>one place only</b>: in the verb (he took) or in <b>did / didn’t</b> (he didn’t take, Did he take?). Never two. And was / were: he was, they were.',
+  uso: { p: 'Your turn. A trip you remember. Climb the ladder with one verb: I …, I didn’t …, Did you …?', molde: ['Last year I took …', 'I didn’t …', 'Did you …?'], ex: 'Last year I took a boat to an island. I didn’t take my phone. Did you take a trip too? Yes, I did.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

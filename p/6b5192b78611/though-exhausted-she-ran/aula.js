@@ -33,11 +33,12 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'largada', rot: 'I · You and the Long Run', t: 'Before the race: you, your hard days, and the things you finish.', p: 'Tap a card. The student answers; then the teacher answers too.' },
   { k: 'notas', est: 'o', min: 7, img: 'percurso', rot: 'II · The Race Notes', t: 'Mom’s race notes, mile by mile. You are her daughter: make them literary.', p: 'Read the note. Say it like a novel, in ONE sentence. Then tap Check.' },
-  { k: 'regra', est: 'f', min: 7, img: 'farol', rot: 'III · The Rule', t: 'Cut the subject and the verb. Keep the rest.', p: 'Tap the clauses with no verb in June’s page. Then finish the rule.' },
-  { k: 'corte', est: 'f', min: 6, img: 'pagina', rot: 'IV · The Cut', t: 'The editor sends back the last chapter. Six lines, and every line has one wrong part.', p: 'Find the wrong part in each line. Say the fix out loud. Then tap Check.' },
-  { k: 'editora', est: 'o', min: 7, img: 'farol', rot: 'V · The Editor Calls', t: 'Monday morning. The editor of a small literary magazine calls about the story.', p: 'The teacher is the editor. Tap how you answer. Then say your own answer, with a verbless clause.' },
-  { k: 'milhas', est: 'o', min: 7, img: 'meta', rot: 'VI · Your Hard Miles', t: 'Your real life, told like fiction.', p: 'Tap a card. Answer in one literary sentence, then add one more detail.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VII · The Finish Line', t: 'What is the hardest thing you ever finished, and would you do it again?', p: 'Three literary sentences about it. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'farol', rot: 'III · The Cut Ladder', t: 'One sentence, five steps. Cut a little each time.', p: 'Read each step out loud, then go one step up. Notice what disappears. Then climb with your own sentence.' },
+  { k: 'regra', est: 'f', min: 7, img: 'farol', rot: 'IV · The Rule', t: 'Cut the subject and the verb. Keep the rest.', p: 'Tap the clauses with no verb in June’s page. Then finish the rule.' },
+  { k: 'corte', est: 'f', min: 6, img: 'pagina', rot: 'V · The Cut', t: 'The editor sends back the last chapter. Six lines, and every line has one wrong part.', p: 'Find the wrong part in each line. Say the fix out loud. Then tap Check.' },
+  { k: 'editora', est: 'o', min: 7, img: 'farol', rot: 'VI · The Editor Calls', t: 'Monday morning. The editor of a small literary magazine calls about the story.', p: 'The teacher is the editor. Tap how you answer. Then say your own answer, with a verbless clause.' },
+  { k: 'milhas', est: 'o', min: 7, img: 'meta', rot: 'VII · Your Hard Miles', t: 'Your real life, told like fiction.', p: 'Tap a card. Answer in one literary sentence, then add one more detail.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · The Finish Line', t: 'What is the hardest thing you ever finished, and would you do it again?', p: 'Three literary sentences about it. They go to your My notes.' }
 ];
 
 var VOCE = [
@@ -182,3 +183,16 @@ R.fim = function (c) {
     + '<p class="hw"><a class="pilula" href="HW/" target="_blank" rel="noopener">Homework for the student →</a></p></div></div>';
 };
 
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'Dee at the finish. Cut one piece at a time.',
+  degraus: [
+    { r: 'full', f: 'She was exhausted, but she ran.', d: 'The full sentence, with a subject and a verb.' },
+    { r: 'link', f: '<b>Though</b> she was exhausted, she ran.', d: 'The link word, though, joins the two parts.' },
+    { r: 'cut', f: 'Though <b>exhausted</b>, she ran.', d: 'Cut she was. Keep though and the adjective.' },
+    { r: 'open', f: '<b>Exhausted</b>, she ran.', d: 'Even the link word can go. The adjective opens the sentence.' },
+    { r: 'place', f: '<b>Alone at the start line</b>, Dee waited.', d: 'A place works too. The subject after the comma is the one who is alone.' }
+  ],
+  nota: 'Cut the subject and the verb <b>be</b>, keep the link word and the rest. The subject after the comma must be the person: <b>Though exhausted, she ran</b>.',
+  uso: { p: 'Your turn. Something hard you finished. Climb the ladder: full, then cut.', molde: ['Though … , I …', '… , I …'], ex: 'Though nervous, I gave the talk. Tired but happy, I went home.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

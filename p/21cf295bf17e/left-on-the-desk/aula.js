@@ -21,12 +21,13 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'mesa', rot: 'I · Your Desk', t: 'Look at your desk, right now. Pick one object on it.', p: 'Tap the object. Then answer out loud, in detail.' },
   { k: 'bilhete', est: 'f', min: 6, img: 'luminaria', rot: 'II · The Desk at 7:50', t: 'Your colleague left yesterday. A meeting starts at 9 AM. The handover is one page. Read it cold.', p: 'Read the line. Answer the question out loud. Then tap.' },
   { k: 'memo', est: 'l', min: 7, img: 'mesa', rot: 'III · The Memo', t: 'She recorded the handover before she left. Listen.', p: 'Play the memo. Say TRUE or FALSE out loud, and why. Then tap.' },
-  { k: 'compressor', est: 'f', min: 6, img: 'luminaria', rot: 'IV · The Compressor', t: 'Cut who / which / that + BE. Nothing else. No BE? Nothing to cut.', p: 'Tap the blocks to cut. If nothing can go, tap NOTHING TO CUT. Then say the short sentence.' },
-  { k: 'seta', est: 'f', min: 6, img: 'corredor', rot: 'V · Does It or Receives It?', t: '-ING: the noun does it. -ED / third form: the noun receives it.', p: 'Choose the form. Watch the arrow. Say the whole sentence.' },
-  { k: 'quem', est: 'f', min: 6, img: 'corredor', rot: 'VI · Who Did It?', t: '-ED deletes the person, unless BY holds on to them.', p: 'Read it out loud. Tap SAYS WHO or DOESN’T SAY.' },
-  { k: 'cena', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'VII · The Scene', t: 'An office at 7 AM. Something is wrong. Describe the scene, short and exact.', p: 'Tap an evidence marker. Choose the compressed description. Say it. Then describe it your way.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VIII · Cut Too Much', t: 'Five sentences were cut wrong. One is fine.', p: 'Choose the fix. Then say the whole sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'luminaria', rot: 'IX · Nine O’Clock', t: 'Your object from scene I. Say it long, then compress it.', p: 'Write your own handover: short and exact. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'luminaria', rot: 'IV · Look First', t: 'Four moments at the desk, before the 9 AM meeting.', p: 'Look at the picture. Guess what they say. Then tap to see it, and say it.' },
+  { k: 'compressor', est: 'f', min: 6, img: 'luminaria', rot: 'V · The Compressor', t: 'Cut who / which / that + BE. Nothing else. No BE? Nothing to cut.', p: 'Tap the blocks to cut. If nothing can go, tap NOTHING TO CUT. Then say the short sentence.' },
+  { k: 'seta', est: 'f', min: 6, img: 'corredor', rot: 'VI · Does It or Receives It?', t: '-ING: the noun does it. -ED / third form: the noun receives it.', p: 'Choose the form. Watch the arrow. Say the whole sentence.' },
+  { k: 'quem', est: 'f', min: 6, img: 'corredor', rot: 'VII · Who Did It?', t: '-ED deletes the person, unless BY holds on to them.', p: 'Read it out loud. Tap SAYS WHO or DOESN’T SAY.' },
+  { k: 'cena', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'VIII · The Scene', t: 'An office at 7 AM. Something is wrong. Describe the scene, short and exact.', p: 'Tap an evidence marker. Choose the compressed description. Say it. Then describe it your way.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'IX · Cut Too Much', t: 'Five sentences were cut wrong. One is fine.', p: 'Choose the fix. Then say the whole sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'luminaria', rot: 'X · Nine O’Clock', t: 'Your object from scene I. Say it long, then compress it.', p: 'Write your own handover: short and exact. It goes to your My notes.' }
 ];
 
 var TR = { 'memo.mp3': 'Morning. Sorry, I’m out today. The proposal discussed yesterday was rejected. The client, waiting since March, wants a date. The file sent on Friday needs a signature. The invoice approved last week is still unpaid. Anyone asking about the launch should go to Marta. Nine o’clock. Good luck.' };
@@ -204,3 +205,16 @@ TOQUES.cn = function (b, n) { S.cn.sel = n; };
 TOQUES['cn-v'] = function (b, n) { S.cn.esc[S.cn.sel] = n; };
 TOQUES.er = function (b, n) { S.er.esc = n; };
 TOQUES['er-prox'] = function () { S.er = { n: S.er.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de compressor.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What do they say?',
+  cenas: [
+    { img: 'mesa', antes: 'The handover, 7:50 AM. A report is on the desk. Lena wrote it yesterday.', frase: '“Which report?” “The report <mark>written by Lena</mark>.”' },
+    { img: 'luminaria', antes: 'A lamp is on. A woman is sitting under it, reading.', frase: '“Who is Lena?” “The woman <mark>sitting under the lamp</mark>.”' },
+    { img: 'corredor', antes: 'In the hall, a man is waiting for the 9 AM meeting.', frase: '“Who is Tom?” “The man <mark>waiting in the hall</mark>.”' },
+    { img: 'sala', antes: 'There is a box in the meeting room. Nobody knows who left it.', frase: '“Which box?” “The box <mark>left in the room</mark>.”' }
+  ],
+  nota: 'Cut <b>who / which / that + BE</b>, and nothing else. The noun does it: <b>-ing</b> (the woman sitting there). The noun receives it: <b>-ed</b> (the report written by Lena). No BE in the sentence? Nothing to cut.',
+  uso: { p: 'Your turn. Look at your desk or your room. Describe two things, short and exact.', molde: ['The cup … next to …', 'The notes … by …'], ex: 'The cup standing next to my laptop is cold. The notes written by my boss are on the left.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

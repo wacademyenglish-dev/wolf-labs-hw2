@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The City Survey', t: 'Three people stop to answer. Ask them.', p: 'Ask each person five questions. Your teacher is the person. Then report to your boss.' },
   { k: 'cartao', est: 'w', min: 6, img: 'conversa', rot: 'III · Your Answers', t: 'Now you answer the survey.', p: 'Four short lines: your usual day, what you are doing these days, and one thing you never do.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The City Survey Card', t: 'Four lines from the survey.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -74,3 +75,9 @@ var ESCOLHA = [
   { a: 'work from home', b: 'work in an office', chips: ['I prefer …', 'These days I’m …ing'], ex: 'Work from home. These days I’m working from home and I love it.' },
   { a: 'a night bus', b: 'a taxi', chips: ['I usually take …', 'because …'], ex: 'A taxi. I never take the night bus.' },
   { a: 'learn a new language', b: 'learn a new instrument', chips: ['I’d learn …', 'Right now I’m learning …'], ex: 'A new language! Right now I’m learning English, of course.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 1.', rotulo: 'Habit and now', linhas: ['every day: she <b>works</b> · right now: she <b>is working</b>', 'Could you <b>say that again</b>? · What does … <b>mean</b>?', 'Give me <b>a second</b> · How do I <b>put it</b>?', '<b>So do I</b> · <b>Me too</b> (yes) · <b>Neither do I</b> · <b>Me neither</b> (no)'], uso: { p: 'Your turn. Tell the survey about a person you know: what she usually does, and what she is doing right now.', molde: ['She usually …', 'Right now she is …'], ex: 'My sister usually works at home. Right now she is cooking dinner.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

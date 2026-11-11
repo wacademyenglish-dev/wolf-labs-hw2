@@ -12,10 +12,11 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 7, kick: 'DUOLINGO ENGLISH TEST
   nota: 'The best answer is what a real person would say next: it answers the question AND keeps the conversation going.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'multipla', est: 'l', min: 14, img: 'conversa', rot: 'I · Two Conversations', t: 'What would you say next?', p: 'Listen to each line. Choose the best answer. Say it out loud.' },
-  { k: 'lacunas', est: 'l', min: 8, img: 'capa', rot: 'II · Listen and Complete', t: 'A voice message. Complete the notes.', p: 'Play the message. Then complete the notes with the missing letters.' },
-  { k: 'prova', est: 'w', min: 8, img: 'conversa', rot: 'III · Summarize It', t: 'Write what happened, in a few sentences.', p: 'You have 75 seconds. Who, what problem, what solution.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'I · In the Office', t: 'A student and Professor Hayes. Some words are lit.', p: 'Read it together. Tap the lit words: why is it a good answer? Then answer your teacher.' },
+  { k: 'multipla', est: 'l', min: 14, img: 'conversa', rot: 'II · Two Conversations', t: 'What would you say next?', p: 'Listen to each line. Choose the best answer. Say it out loud.' },
+  { k: 'lacunas', est: 'l', min: 8, img: 'capa', rot: 'III · Listen and Complete', t: 'A voice message. Complete the notes.', p: 'Play the message. Then complete the notes with the missing letters.' },
+  { k: 'prova', est: 'w', min: 8, img: 'conversa', rot: 'IV · Summarize It', t: 'Write what happened, in a few sentences.', p: 'You have 75 seconds. Who, what problem, what solution.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var MULTIPLA = { rot: 'INTERACTIVE LISTENING', fim: 'In the test, you hear each line once. Answer the question, then move the conversation on.', itens: [
@@ -44,3 +45,24 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 07: multipla · lacunas · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de multipla.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'In the professor’s office. Tap the lit words.',
+  falas: [
+    { q: 'Professor', f: 'Hi, come in. You wanted to talk about the essay?' },
+    { q: 'You', f: '[[Yes. I wanted to ask if I could have a few more days.]]' },
+    { q: 'Professor', f: 'I see. What happened?' },
+    { q: 'You', f: '[[I was sick last week, and I couldn’t finish the research.]]' },
+    { q: 'Professor', f: 'Okay, that’s fine. Can you send it to me by Monday?' },
+    { q: 'You', f: '[[Yes, Monday works. Thank you so much.]]' }
+  ],
+  porques: [
+    'It answers the question (Yes) and says why you came.',
+    'He asks what happened: give a real reason, in the past.',
+    'Accept the deadline and say thank you.'
+  ],
+  nota: 'A good reply does three things: it <b>answers</b> the question, it <b>adds a short reason</b>, and it keeps the <b>tense</b> of the question. Never a one-word answer, never a new topic.',
+  uso: { p: 'Your turn. Your teacher asks: Can you send it by Friday? Answer, add a reason, and say thank you.', molde: ['Yes, … works.', 'I … because …', 'Thank you …'], ex: 'Yes, Friday works. I finished the research yesterday. Thank you so much.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Welcome Desk', t: 'Three guests arrive. You are at the desk.', p: 'Ask each guest five questions. Your teacher is the guest. Then tell the manager about one guest.' },
   { k: 'cartao', est: 'w', min: 6, img: 'chave', rot: 'III · Your Card', t: 'Now you are the guest. Write your card.', p: 'Four short lines about you. Then one line about a friend.' },
   { k: 'conversa', est: 'o', min: 8, img: 'capa', rot: 'IV · Small Talk', t: 'The lobby is quiet. Let’s talk.', p: 'Answer, then ask the question back: “And you?”' },
-  { k: 'pode', est: 'f', min: 4, img: 'chave', rot: 'V · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Welcome Desk Card', t: 'Four lines from Unit 1.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'chave', rot: 'VI · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -65,3 +66,9 @@ var PODE = [
   'I can talk about a person: he is / she is a …',
   'I can answer “How are you?” and ask “And you?”'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 1.', rotulo: 'Hello, I’m…', linhas: ['I’m <b>34</b> · not “I have 34” · age is <b>be</b>', 'I’m <b>from</b> Brazil · I live <b>in</b> Recife', 'He is <b>a</b> teacher · She is <b>an</b> engineer', '<b>his</b> = a man · <b>her</b> = a woman · <b>on</b> Monday'], uso: { p: 'Your turn. Tell the manager about one guest: name, where from, age and job.', molde: ['His name is … / Her name is …', 'He is from … / She is from …', 'He is a … / She is an …'], ex: 'Her name is Yuki. She is from Japan. She is 27. She is a nurse.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

@@ -17,11 +17,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Week', t: 'How many calls did you have this week?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 7, img: 'mesa', rot: 'II · The Phone Tips', t: 'A page from the Bluepeak sales training.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 9, img: 'conversa', rot: 'III · A Bad Line', t: 'A client calls. The line is bad, and he is fast.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Polite, Not “What?”', t: 'Two answers. Which one is better on the phone?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'erros', est: 'f', min: 8, img: 'mesa', rot: 'V · Fix the Call Script', t: 'A new colleague wrote a call script. Five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
-  { k: 'escolha', est: 'o', min: 5, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your Phone Card', t: 'Your four phrases and your e-mail, in words.', p: 'Write them. Then spell your e-mail out loud: your teacher writes it.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 14: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'IV · A Bad Line', t: 'Leo and Mark, on a bad line. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then say your own e-mail.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · Polite, Not “What?”', t: 'Two answers. Which one is better on the phone?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'erros', est: 'f', min: 8, img: 'mesa', rot: 'VI · Fix the Call Script', t: 'A new colleague wrote a call script. Five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 5, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your Phone Card', t: 'Your four phrases and your e-mail, in words.', p: 'Write them. Then spell your e-mail out loud: your teacher writes it.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 14: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -101,3 +102,28 @@ var PODE = [
   'I can say an e-mail in English: at, dot, underscore, dash.',
   'I can spell my name and my e-mail on the phone.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'A bad line. Tap the lit words.',
+  falas: [
+    { q: 'Mark', f: 'Hello, Leo? I can’t hear you well.' },
+    { q: 'Leo', f: 'Sorry, the line is bad. [[Could you repeat that]], please?' },
+    { q: 'Mark', f: 'It’s Mark Evans, from Westfield Plastics.' },
+    { q: 'Leo', f: 'Thank you. [[Could you spell]] your last name, please?' },
+    { q: 'Mark', f: 'E-V-A-N-S. My e-mail is [[mark dot evans at westfield dot com]].' },
+    { q: 'Leo', f: 'Thanks, Mark. Could you speak [[more slowly]], please?' },
+    { q: 'Mark', f: 'Of course. Sorry about that.' },
+    { q: 'Leo', f: 'No problem. [[Can I call you back]] in five minutes?' }
+  ],
+  porques: [
+    'Not “What?”. Start with Could you …? It is polite on a call.',
+    'Could you spell + the word. Ask for the spelling of a name.',
+    'An e-mail: dot for the point, at for the @. Never “arroba” or “point”.',
+    'Speak more slowly: with -ly. Never “more slow”.',
+    'Can I call you back? A polite way to give yourself time.'
+  ],
+  nota: 'On a call, be polite: <b>Could you repeat that?</b> <b>Could you spell that?</b> <b>Could you speak more slowly?</b> Say an e-mail with <b>at</b> and <b>dot</b>.',
+  uso: { p: 'Your turn. Say your own e-mail out loud, and ask your teacher to spell their name.', molde: ['My e-mail is … at … dot com.', 'Could you spell your name, please?'], ex: 'My e-mail is rita dot lima at mail dot com. Could you spell your last name, please?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

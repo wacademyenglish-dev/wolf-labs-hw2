@@ -17,12 +17,13 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'cozinha', rot: 'I · Your Week', t: 'Three numbers about your own week.', p: 'Numbers only, out of seven. No words yet. Your teacher writes them down.' },
   { k: 'briga', est: 'l', min: 7, img: 'corredor', rot: 'II · The Argument', t: 'Four things, out loud.', p: 'Listen first. Say it back with the same angry face. Then see the words.' },
   { k: 'regua', est: 'o', min: 7, img: 'mesa', rot: 'III · Seven Squares', t: 'Six words, and every one is a number.', p: 'Tap a word. Count the squares out loud. Then one true sentence about you.' },
-  { k: 'antes', est: 'f', min: 6, img: 'sala', rot: 'IV · Before the Verb', t: 'The word has two possible places.', p: 'Say the whole sentence first. Then tap the gap. With a normal verb, nothing gets between the word and the verb.' },
-  { k: 'depois', est: 'f', min: 6, img: 'sala', rot: 'V · Except With BE', t: 'One verb changes the rule.', p: 'Same six words. With am, is and are, the word goes on the other side.' },
-  { k: 'provas', est: 'o', min: 7, img: 'mesa', rot: 'VI · The Evidence', t: 'Somebody has the week. Open it and count.', p: 'Open a week. Count the full squares out loud. Who is right?' },
-  { k: 'justa', est: 'l', min: 7, extra: 1, img: 'mesa', rot: 'VII · Say It Fairly', t: 'The same complaint, with the right number.', p: 'Choose the true word. Then listen: they say it fairly.' },
-  { k: 'bilhete', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'VIII · The Note', t: 'Morning. Two mugs, and a piece of paper.', p: 'Three lines for the table. No always, no never.' },
-  { k: 'fim', est: 'w', min: 6, img: 'corredor', rot: 'IX · Your Own Week', t: 'Your week, and the numbers from scene I.', p: 'Six sentences, one for each word. The number picks the word. The red line watches the place. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cozinha', rot: 'IV · The Week in Blocks', t: 'Marco and Bea, in blocks.', p: 'Read the blocks out loud. Notice where the word goes. Then build a sentence and say your own.' },
+  { k: 'antes', est: 'f', min: 6, img: 'sala', rot: 'V · Before the Verb', t: 'The word has two possible places.', p: 'Say the whole sentence first. Then tap the gap. With a normal verb, nothing gets between the word and the verb.' },
+  { k: 'depois', est: 'f', min: 6, img: 'sala', rot: 'VI · Except With BE', t: 'One verb changes the rule.', p: 'Same six words. With am, is and are, the word goes on the other side.' },
+  { k: 'provas', est: 'o', min: 7, img: 'mesa', rot: 'VII · The Evidence', t: 'Somebody has the week. Open it and count.', p: 'Open a week. Count the full squares out loud. Who is right?' },
+  { k: 'justa', est: 'l', min: 7, extra: 1, img: 'mesa', rot: 'VIII · Say It Fairly', t: 'The same complaint, with the right number.', p: 'Choose the true word. Then listen: they say it fairly.' },
+  { k: 'bilhete', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'IX · The Note', t: 'Morning. Two mugs, and a piece of paper.', p: 'Three lines for the table. No always, no never.' },
+  { k: 'fim', est: 'w', min: 6, img: 'corredor', rot: 'X · Your Own Week', t: 'Your week, and the numbers from scene I.', p: 'Six sentences, one for each word. The number picks the word. The red line watches the place. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -170,3 +171,17 @@ TOQUES['pv-c'] = function (b, n) { S.prova.contou[n] = 1; };
 TOQUES.js = function (b, n, v) { S.justa.esc = v; };
 TOQUES['js-prox'] = function () { S.justa = { n: S.justa.n + 1, esc: '' }; };
 TOQUES.bl = function (b, n) { S.bil[n] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de antes.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Bea’s week, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Marco', 'WHO'], ['often', 'HOW OFTEN', 'quando'], ['takes out', 'ACTION'], ['the trash', 'WHAT']], d: 'The word of frequency is before the action.' },
+    { b: [['Marco', 'WHO'], ['is', 'BE', 'aux'], ['never', 'HOW OFTEN', 'quando'], ['late', 'HOW']], d: 'With be, the word goes after.' },
+    { b: [['Bea', 'WHO'], ['doesn’t', 'NOT', 'aux'], ['always', 'HOW OFTEN', 'quando'], ['cook', 'ACTION']], d: 'In a no sentence: after doesn’t.' }
+  ],
+  nota: 'Always, usually, often, sometimes, rarely, never go <b>before</b> a normal verb: Bea <b>always</b> cooks. They go <b>after</b> <b>be</b>: Marco is <b>never</b> late. Never is already a no.',
+  monta: { p: 'Build the next line. Then say it.', pecas: [['the dishes', 'WHAT'], ['usually', 'HOW OFTEN', 'quando'], ['Bea', 'WHO'], ['washes', 'ACTION']], ordem: [2, 1, 3, 0], outras: [[2, 3, 1, 0]] },
+  uso: { p: 'Now you. Say two sentences about your week with a frequency word.', molde: ['I always …', 'I am rarely …'], ex: 'I always drink coffee. I am rarely late.' },
+  prof: 'Read the blocks with the student, top to bottom. Point at the place of the frequency word.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

@@ -19,12 +19,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'rua', rot: 'I · You and Your Places', t: 'Before the guide: you and the places in your life.', p: 'Pick a card. Real life. No one corrects you here.' },
   { k: 'guia', est: 'o', min: 7, img: 'guia', rot: 'II · The Guidebook', t: 'Six places, six short pages. Rosa and Ben’s story is on the map.', p: 'Tap a pin. Read the page out loud, answer, then join the two ideas in one sentence.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'III · The Rule', t: 'where or which? Say the second half alone.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'luzes', est: 'o', min: 7, img: 'terraco', rot: 'IV · Ben’s Five Clues', t: 'Their anniversary. Ben is not home. Say his five clues, fast.', p: 'Your teacher reads the two facts and the first words. You are Ben: say the clue at once. Each one lights a bulb.' },
-  { k: 'lucy', est: 'o', min: 7, img: 'guia', rot: 'V · Lucy Calls', t: 'Ben’s sister moves to Portland next week. She wants the whole story.', p: 'Your teacher is Lucy. You are Rosa: tell the story again, from memory.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VI · Quick Check', t: 'Five quick lines from the guidebook.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'ponte', rot: 'VII · Your City Guide', t: 'Your real city, one page at a time.', p: 'Spin. Answer with who, which, that, where, or no word at all.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Little Guide', t: 'Which place in your city tells your story?', p: 'Write three pages of your own guide. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'guia', rot: 'III · Find the Rule', t: 'Four places from the guide. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'IV · The Rule', t: 'where or which? Say the second half alone.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'luzes', est: 'o', min: 7, img: 'terraco', rot: 'V · Ben’s Five Clues', t: 'Their anniversary. Ben is not home. Say his five clues, fast.', p: 'Your teacher reads the two facts and the first words. You are Ben: say the clue at once. Each one lights a bulb.' },
+  { k: 'lucy', est: 'o', min: 7, img: 'guia', rot: 'VI · Lucy Calls', t: 'Ben’s sister moves to Portland next week. She wants the whole story.', p: 'Your teacher is Lucy. You are Rosa: tell the story again, from memory.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VII · Quick Check', t: 'Five quick lines from the guidebook.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'ponte', rot: 'VIII · Your City Guide', t: 'Your real city, one page at a time.', p: 'Spin. Answer with who, which, that, where, or no word at all.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Little Guide', t: 'Which place in your city tells your story?', p: 'Write three pages of your own guide. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -211,3 +212,19 @@ TOQUES['lc-viu'] = function () { S.lucy.viu[S.lucy.n] = 1; };
 TOQUES['lc-prox'] = function () { S.lucy.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
 TOQUES.rd = function () { S.roda.g++; S.roda.anim = 1; setTimeout(function () { S.roda.anim = 0; }, 1300); };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four places from the guide. Find the rule yourself.',
+  exemplos: [
+    'It’s the café <b>where</b> we met. · we met <u>there</u>',
+    'It’s the café <b>which</b> we loved. · we loved <u>it</u>',
+    'This is the bench <b>where</b> we sat. · we sat <u>there</u>',
+    'This is the bridge <b>which</b> we crossed. · we crossed <u>it</u>'
+  ],
+  pergunta: 'Say the second half alone. When do we use where, and when which?',
+  opcoes: ['there → where · it → which', 'where for places, always', 'which for places, always'], c: 0,
+  nao: 'Not that one. Say the second half alone: we met THERE, we loved IT.',
+  regra: 'Say the second half alone. <b>There</b> → <b>where</b>: the café where we met. <b>It</b> → <b>which</b>: the café which we loved. The word <b>it</b> disappears: never “which we loved it”.',
+  uso: { p: 'Your turn. Two places in your city: one sentence with where, and one with which.', molde: ['It’s the place where I …', 'It’s the place which I …'], ex: 'It’s the park where I run on Sundays. It’s the café which my sister loves.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

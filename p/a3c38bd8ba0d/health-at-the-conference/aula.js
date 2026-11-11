@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 15, kick: 'ENGLISH FOR HEALTHCA
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · A One-Minute Pitch', t: 'A physiotherapist presents a poster.', p: 'Read it out loud like a presenter. Then answer the questions.' },
-  { k: 'transforma', est: 'f', min: 9, img: 'capa', rot: 'II · Proves or Suggests?', t: 'Make the claim careful and accurate.', p: 'Read the strong claim and the clue. Say it in a careful, scientific way.' },
-  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'III · Questions From the Audience', t: 'Four questions after your talk.', p: 'Play the question, start the clock, and answer in about 40 seconds.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 15: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Proves or Suggests?', t: 'Two answers from the stage.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'transforma', est: 'f', min: 9, img: 'capa', rot: 'III · Proves or Suggests?', t: 'Make the claim careful and accurate.', p: 'Read the strong claim and the clue. Say it in a careful, scientific way.' },
+  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'IV · Questions From the Audience', t: 'Four questions after your talk.', p: 'Play the question, start the clock, and answer in about 40 seconds.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 15: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'POSTER PITCH · TEXT REMINDERS AND MISSED PHYSIO APPOINTMENTS (FICTIONAL STUDY)', tipo: 'fala',
@@ -58,3 +59,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 15: leitura · transforma · prova (áudio) (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Proves or suggests? Two answers from the stage.',
+  a: { t: 'Too strong', falas: [['Audience', 'Does it work for everyone?'], ['Presenter', 'This <mark>proves</mark> that reminders work in every hospital.']], d: 'One small study can’t prove it. Too strong.' },
+  b: { t: 'Careful', falas: [['Audience', 'Does it work for everyone?'], ['Presenter', 'This <mark>suggests</mark> that reminders <mark>may</mark> help. More research is needed.']], d: '<b>suggests</b> and <b>may</b>: honest, and more credible.' },
+  pergunta: 'Same result, two claims. What is different?',
+  pergunta2: 'Now you. Which one is better for a small study?',
+  itens: [
+    { p: 'You studied 40 patients in one clinic. You say:', o: ['This proves that the exercise works for all patients.', 'This suggests that the exercise may help patients like these.'], c: 1, d: 'Forty patients are a sample. Use careful words.' },
+    { p: '32 of 40 patients liked text messages. You say:', o: ['All patients love text messages.', 'Most patients in our sample preferred text messages.'], c: 1, d: 'In our sample: only the people you studied.' },
+    { p: 'The new technique worked better in your group. You say:', o: ['The technique appeared to be more effective in this group.', 'The technique is better everywhere.'], c: 0, d: 'appeared to be: careful and accurate.' },
+    { p: 'Someone asks about something you didn’t study. You say:', o: ['We didn’t look at that, but it would be interesting to explore.', 'I don’t know.'], c: 0, d: 'An honest answer, with a next step.' }
+  ],
+  nota: 'Strong claims need big proof. For a small study use careful words: <b>suggests</b>, <b>may</b>, <b>appeared to</b>, <b>in our sample</b>. Careful sounds more credible, not less.',
+  uso: { p: 'Your turn. One result from your job or a study you know, said in a careful way.', molde: ['This suggests that …', 'In our sample, …', 'It may …'], ex: 'In our sample, most patients came back for the next visit. This suggests that the reminder may help.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

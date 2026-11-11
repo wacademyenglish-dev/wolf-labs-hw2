@@ -18,13 +18,14 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Video Calls', t: 'How many video calls do you have this week?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'dialogo', est: 'l', min: 8, img: 'mesa', rot: 'II · “You’re Breaking Up!”', t: 'Leo presents the proposal to Mark on video. Problems!', p: 'One question before. Listen. Then the questions.' },
-  { k: 'multipla', est: 'l', min: 7, img: 'conversa', rot: 'III · What’s Happening?', t: 'Six moments from real video calls.', p: 'Listen. Choose the best answer. Then say it out loud.' },
-  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'IV · You’re Breaking Up, Not “You Breaking Up”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'V · The Debate: Camera On or Off?', t: 'Three small debates about video calls.', p: 'Choose a side and say why. Your teacher takes the other side.' },
-  { k: 'leitura', est: 'l', min: 6, img: 'mesa', rot: 'VI · Easy Reader: The Airport Call', t: 'Leo’s First Big Client · Chapter 7.', p: 'Read it out loud. Then answer the questions.' },
-  { k: 'cadeira', est: 'o', min: 7, img: 'conversa', rot: 'VII · Save the Call', t: 'Your teacher is the client on a bad call.', p: 'Do each task. Say what’s happening, and fix it.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VIII · Your Video Call Kit', t: 'The phrases you need on your real calls.', p: 'Start, problems, fix, end. Then read your kit out loud.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 26: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'III · The Call Line', t: 'A habit or right now?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about your video calls.' },
+  { k: 'multipla', est: 'l', min: 7, img: 'conversa', rot: 'IV · What’s Happening?', t: 'Six moments from real video calls.', p: 'Listen. Choose the best answer. Then say it out loud.' },
+  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'V · You’re Breaking Up, Not “You Breaking Up”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VI · The Debate: Camera On or Off?', t: 'Three small debates about video calls.', p: 'Choose a side and say why. Your teacher takes the other side.' },
+  { k: 'leitura', est: 'l', min: 6, img: 'mesa', rot: 'VII · Easy Reader: The Airport Call', t: 'Leo’s First Big Client · Chapter 7.', p: 'Read it out loud. Then answer the questions.' },
+  { k: 'cadeira', est: 'o', min: 7, img: 'conversa', rot: 'VIII · Save the Call', t: 'Your teacher is the client on a bad call.', p: 'Do each task. Say what’s happening, and fix it.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'IX · Your Video Call Kit', t: 'The phrases you need on your real calls.', p: 'Start, problems, fix, end. Then read your kit out loud.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'X · I Can', t: 'Lesson 26: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -113,3 +114,20 @@ var PODE = [
   'I can fix a problem politely on a video call.',
   'I can use my own video call kit.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de multipla.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'A video call. Habit or right now?',
+  marcos: [{ t: 'EVERY WEEK', s: 'a habit' }, { t: 'RIGHT NOW', s: 'on the call' }],
+  frases: [
+    { f: 'I send proposals.', c: 0, d: 'send · a habit' },
+    { f: 'I’m sharing my screen.', c: 1, d: 'I’m sharing · right now' },
+    { f: 'We use Teams every week.', c: 0, d: 'use · a habit' },
+    { f: 'You’re breaking up.', c: 1, d: 'You’re breaking · right now' },
+    { f: 'My camera isn’t working.', c: 1, d: 'isn’t working · right now' },
+    { f: 'The client works from home on Fridays.', c: 0, d: 'works · a habit' }
+  ],
+  nota: 'Right now: <b>am / is / are + -ing</b>: I’m sharing, you’re breaking up. A habit: the normal verb. And <b>hear</b> and <b>see</b> don’t take -ing: <b>Can you hear me?</b>',
+  uso: { p: 'Your turn. One thing you do every week on video calls, and one thing happening right now.', molde: ['I … every week.', 'I’m …-ing now.', 'Can you hear me?'], ex: 'I have two video calls every week. I’m sharing my screen now. Can you hear me?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

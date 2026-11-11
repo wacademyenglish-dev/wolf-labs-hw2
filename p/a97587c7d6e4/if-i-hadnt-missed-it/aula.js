@@ -14,7 +14,8 @@ var L = [
   { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · Eight Seconds', t: 'Lena tells her story.', p: 'Read the story out loud with your teacher. Then look closer.' },
   { k: 'ordem', est: 'f', min: 8, img: 'capa', rot: 'II · The Chain', t: 'One thing led to another.', p: 'Tap the six events in order. Then connect them with if sentences.' },
   { k: 'transforma', est: 'f', min: 9, img: 'conversa', rot: 'III · The Other Life', t: 'What if it hadn’t happened?', p: 'Read the fact. Use the clue. Say the conditional: past → past or past → now.' },
-  { k: 'conversa', est: 'o', min: 10, img: 'capa', rot: 'IV · Your Sliding Doors', t: 'Your small moments that changed everything.', p: 'Answer, then ask the question back: “And you?”' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'IV · Seven Forty-Two Pairs', t: 'Four lines about the train Lena missed.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'conversa', est: 'o', min: 10, img: 'capa', rot: 'V · Your Sliding Doors', t: 'Your small moments that changed everything.', p: 'Answer, then ask the question back: “And you?”' }
 ];
 var PORTAS = [];
 
@@ -54,3 +55,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* B2 · If I Hadn’t Missed It: leitura · ordem · transforma · conversa */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de conversa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'If I hadn’t missed the train, I wouldn’t have met him.', x: 'If I wouldn’t have missed the train, I wouldn’t have met him.', d: 'No would in the if part: <b>hadn’t missed</b>.' }, { c: 'If I hadn’t missed it, I wouldn’t be here now.', x: 'If I hadn’t missed it, I wouldn’t have been here now.', d: 'The result is now: <b>wouldn’t be</b>.' }, { c: 'If I were braver, I would have said hello.', x: 'If I would be braver, I would have said hello.', d: 'A fact about now: <b>were</b>.' }, { c: 'Lena should have left earlier.', x: 'Lena should had left earlier.', d: 'should + <b>have</b> + participle.' }], nota: 'The if part: <b>had + participle</b> (past) or <b>were</b> (now). The result: <b>would have</b> + participle (past) or <b>would be</b> (now). Never <b>would</b> in the if part.', uso: { p: 'Your turn. Tell the story of a small accident that changed your life. Say what would have happened if it hadn’t happened.', molde: ['If I hadn’t …, I wouldn’t have …', 'If I hadn’t …, I wouldn’t be …'], ex: 'If I hadn’t missed the bus, I wouldn’t have met my husband. If I hadn’t met him, I wouldn’t be here now.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

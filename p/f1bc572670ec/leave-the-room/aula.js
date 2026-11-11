@@ -23,14 +23,15 @@ var L = [
   { k: 'janelas', est: 'o', min: 7, img: 'quarto', rot: 'II · The Two Windows', t: '11:40 PM. Nadia sent the same message to two windows. One of them is a machine.', p: 'Read both replies out loud. First tap: which would you RATHER get tonight? Second tap: which one is the MACHINE?' },
   { k: 'razoes', est: 'f', min: 6, img: 'tela', rot: 'III · Why She Went There', t: 'Nobody was awake. That isn’t the whole reason.', p: 'Read the sentence out loud. Choose what it really means.' },
   { k: 'r1966', est: 'l', min: 7, img: 'sala1966', rot: 'IV · Nineteen Sixty-Six', t: 'Sixty years ago: four pages of code, and the sentence this lesson is named after.', p: 'Listen once. Then tap the four things in the order they happened.' },
-  { k: 'regra', est: 'f', min: 6, img: 'tela', rot: 'V · If, Past, Would', t: 'The past form isn’t doing past. It’s the sign that the thing is imagined.', p: 'Say the whole sentence out loud before you tap.' },
-  { k: 'portas', est: 'o', min: 7, img: 'porta', rot: 'VI · The Other Door', t: 'Now YOU are the other window. Nadia types, you answer.', p: 'Before you send: “If I sent that one, she would…” After you send, read the other door out loud.' },
-  { k: 'colunas', est: 'o', min: 7, extra: 1, img: 'tela', rot: 'VII · Forty-Seven', t: 'A 2026 study with 1,600 people. Three columns, and the middle one matters most.', p: 'Read the card, say its column out loud, then tap.' },
-  { k: 'pergunta', est: 'l', min: 7, extra: 1, img: 'quarto', rot: 'VIII · It Answers, She Asks', t: 'A therapist describes her job. Then three pairs: now BOTH replies ask a question.', p: 'Listen once. Then find the machine. The difference is WHAT they ask about.' },
-  { k: 'ensaio', est: 'l', min: 7, extra: 1, img: 'cozinha', rot: 'IX · What It’s Good For', t: 'One more voice, and this one is on its side.', p: 'Listen once. Then answer.' },
-  { k: 'dilemas', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'X · Four Dilemmas', t: 'Four situations that aren’t real. Choose your door and defend it.', p: 'Say the whole sentence with WOULD. Your teacher pushes back once.' },
-  { k: 'discorda', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'XI · Make It Disagree', t: '4:12 AM. Five things Nadia typed to make it say no. Two worked.', p: 'Guess out loud: AGREED or PUSHED BACK. Then tap.' },
-  { k: 'fim', est: 'w', min: 6, img: 'amanhecer', rot: 'XII · Back to the Room', t: 'Morning. Your sentence from scene I comes back.', p: 'Fix the three sentences out loud. Then write your own other world. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'porta', rot: 'V · Right, Not This', t: 'Six pairs from Nadia’s night. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'regra', est: 'f', min: 6, img: 'tela', rot: 'VI · If, Past, Would', t: 'The past form isn’t doing past. It’s the sign that the thing is imagined.', p: 'Say the whole sentence out loud before you tap.' },
+  { k: 'portas', est: 'o', min: 7, img: 'porta', rot: 'VII · The Other Door', t: 'Now YOU are the other window. Nadia types, you answer.', p: 'Before you send: “If I sent that one, she would…” After you send, read the other door out loud.' },
+  { k: 'colunas', est: 'o', min: 7, extra: 1, img: 'tela', rot: 'VIII · Forty-Seven', t: 'A 2026 study with 1,600 people. Three columns, and the middle one matters most.', p: 'Read the card, say its column out loud, then tap.' },
+  { k: 'pergunta', est: 'l', min: 7, extra: 1, img: 'quarto', rot: 'IX · It Answers, She Asks', t: 'A therapist describes her job. Then three pairs: now BOTH replies ask a question.', p: 'Listen once. Then find the machine. The difference is WHAT they ask about.' },
+  { k: 'ensaio', est: 'l', min: 7, extra: 1, img: 'cozinha', rot: 'X · What It’s Good For', t: 'One more voice, and this one is on its side.', p: 'Listen once. Then answer.' },
+  { k: 'dilemas', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'XI · Four Dilemmas', t: 'Four situations that aren’t real. Choose your door and defend it.', p: 'Say the whole sentence with WOULD. Your teacher pushes back once.' },
+  { k: 'discorda', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'XII · Make It Disagree', t: '4:12 AM. Five things Nadia typed to make it say no. Two worked.', p: 'Guess out loud: AGREED or PUSHED BACK. Then tap.' },
+  { k: 'fim', est: 'w', min: 6, img: 'amanhecer', rot: 'XIII · Back to the Room', t: 'Morning. Your sentence from scene I comes back.', p: 'Fix the three sentences out loud. Then write your own other world. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -276,3 +277,18 @@ TOQUES['di-prox'] = function () { S.di.n++; };
 TOQUES.ds = function (b, n) { S.ds.esc = n; };
 TOQUES['ds-prox'] = function () { S.ds = { n: S.ds.n + 1, esc: -1 }; };
 TOQUES.cf = function (b, n) { S.cf[n] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'If I had more time, I would call my sister.', x: 'If I would have more time, I would call my sister.', d: 'Would never goes in the if half: had.' },
+    { c: 'If I were you, I would apologize.', x: 'If I were you, I will apologize.', d: 'An imagined half takes would, not will.' },
+    { c: 'If Nadia left the room, she would feel better.', x: 'If Nadia leaves the room, she would feel better.', d: 'An imagined if takes the past: left.' },
+    { c: 'She would ask her sister to come.', x: 'She would asked her sister to come.', d: 'After would: the clean verb.' },
+    { c: 'What would you do if the machine disagreed?', x: 'What would you do if the machine would disagree?', d: 'No would inside the if half.' },
+    { c: 'I would go to the kitchen and talk to her.', x: 'I would to go to the kitchen and talk to her.', d: 'would + verb: no to.' }
+  ],
+  nota: 'Two halves: <b>If + past</b>, <b>would + clean verb</b>. The past is not “yesterday”: it means “not real”. Never would in the if half, and never to after would.',
+  uso: { p: 'Your turn. Two imagined sentences: where would you go if you could leave this room, and what would you say to an old friend?', molde: ['If I could leave, I would …', 'If I saw …, I would say …'], ex: 'If I could leave this room, I would go to the beach. If I saw my old friend, I would say hello.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

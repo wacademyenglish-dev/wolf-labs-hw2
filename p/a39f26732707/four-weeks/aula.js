@@ -22,16 +22,17 @@ var L = [
   { k: 'capa', est: null, img: 'sutura' },
   { k: 'metodo', est: 'o', min: 7, img: 'biblio', rot: 'I · How You Study', t: 'How do you actually learn something new?', p: 'Tap your method. Then answer three questions out loud.' },
   { k: 'grupos', est: 'o', min: 7, img: 'sutura', rot: 'II · Two Groups', t: '2006. Surgical residents learning to stitch. Same materials, same total hours.', p: 'Read the facts. Predict out loud, with a reason. Then read the finding.' },
-  { k: 'virgulas', est: 'f', min: 6, img: 'lampada', rot: 'III · Some, or All', t: 'Same words. Two commas decide if the chart shows two groups or everybody.', p: 'Read what you need to say. Add or remove the commas. Watch the chart. Then say it.' },
-  { k: 'portas', est: 'f', min: 6, img: 'lampada', rot: 'IV · Four Doors', t: 'THAT picks out a thing. WHICH adds something extra. WHO is a person. WHAT has no noun in front.', p: 'Choose the door. Say the whole sentence.' },
-  { k: 'pausa', est: 'l', min: 7, extra: 1, img: 'ampulheta', rot: 'V · The Pause You Can Hear', t: 'A comma is a silence. Two readings, identical words.', p: 'Play each reading. Tap SOME or ALL. Then read the next ones yourself.' },
-  { k: 'derruba', est: 'f', min: 6, extra: 1, img: 'biblio', rot: 'VI · Drop It?', t: 'English drops THAT or WHO when a new subject comes next. It stays when it does the verb.', p: 'Say both versions. Tap DROP IT or IT STAYS.' },
-  { k: 'palavras', est: 'l', img: 'lampada', rot: 'VII · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
-  { k: 'video', est: 'l', min: 10, img: 'lampada', rot: 'VIII · The Source', t: 'Four minutes: the study, the brain, three techniques.', p: 'Guess first. Then watch. Then True or Lie.' },
-  { k: 'falas', est: 'l', extra: 1, img: 'lampada', rot: 'IX · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'explica', est: 'o', min: 7, extra: 1, img: 'ampulheta', rot: 'X · Outside the Field', t: 'A friend with no science background asks about the study. Every question is “which ones?”', p: 'Your teacher is the friend. Choose the clear answer, say it, then answer in your own words.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'sutura', rot: 'XI · Fix the Report', t: 'Five sentences from a report have a problem. One is right.', p: 'Choose the fix. Then say the whole sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'biblio', rot: 'XII · Your Method, Again', t: 'Your method from scene I, with a clause that says exactly which one.', p: 'Write it, and the finding one last time. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sutura', rot: 'III · The Study, Told', t: 'You tell a friend about the study. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then say your own.' },
+  { k: 'virgulas', est: 'f', min: 6, img: 'lampada', rot: 'IV · Some, or All', t: 'Same words. Two commas decide if the chart shows two groups or everybody.', p: 'Read what you need to say. Add or remove the commas. Watch the chart. Then say it.' },
+  { k: 'portas', est: 'f', min: 6, img: 'lampada', rot: 'V · Four Doors', t: 'THAT picks out a thing. WHICH adds something extra. WHO is a person. WHAT has no noun in front.', p: 'Choose the door. Say the whole sentence.' },
+  { k: 'pausa', est: 'l', min: 7, extra: 1, img: 'ampulheta', rot: 'VI · The Pause You Can Hear', t: 'A comma is a silence. Two readings, identical words.', p: 'Play each reading. Tap SOME or ALL. Then read the next ones yourself.' },
+  { k: 'derruba', est: 'f', min: 6, extra: 1, img: 'biblio', rot: 'VII · Drop It?', t: 'English drops THAT or WHO when a new subject comes next. It stays when it does the verb.', p: 'Say both versions. Tap DROP IT or IT STAYS.' },
+  { k: 'palavras', est: 'l', img: 'lampada', rot: 'VIII · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
+  { k: 'video', est: 'l', min: 10, img: 'lampada', rot: 'IX · The Source', t: 'Four minutes: the study, the brain, three techniques.', p: 'Guess first. Then watch. Then True or Lie.' },
+  { k: 'falas', est: 'l', extra: 1, img: 'lampada', rot: 'X · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
+  { k: 'explica', est: 'o', min: 7, extra: 1, img: 'ampulheta', rot: 'XI · Outside the Field', t: 'A friend with no science background asks about the study. Every question is “which ones?”', p: 'Your teacher is the friend. Choose the clear answer, say it, then answer in your own words.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'sutura', rot: 'XII · Fix the Report', t: 'Five sentences from a report have a problem. One is right.', p: 'Choose the fix. Then say the whole sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'biblio', rot: 'XIII · Your Method, Again', t: 'Your method from scene I, with a clause that says exactly which one.', p: 'Write it, and the finding one last time. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -290,3 +291,27 @@ TOQUES.ex = function (b, n) { S.ex.esc = n; };
 TOQUES['ex-prox'] = function () { S.ex = { n: S.ex.n + 1, esc: -1 }; };
 TOQUES.er = function (b, n) { S.er.esc = n; };
 TOQUES['er-prox'] = function () { S.er = { n: S.er.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de virgulas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The study, told to a friend. Tap the lit words.',
+  falas: [
+    { q: 'Friend', f: 'Which residents did better?' },
+    { q: 'You', f: 'The residents [[who studied over four weeks]] did better.' },
+    { q: 'Friend', f: 'And who were they?' },
+    { q: 'You', f: 'The residents[[, who were all surgeons,]] studied the same hours.' },
+    { q: 'Friend', f: 'Which technique worked best?' },
+    { q: 'You', f: 'The technique [[that spreads the lessons out]] worked best.' },
+    { q: 'Friend', f: 'And why does it work?' },
+    { q: 'You', f: 'The brain[[, which needs sleep,]] stores the lesson at night. [[What]] helped most was time.' }
+  ],
+  porques: [
+    'No commas: it picks out WHICH ones. Only that group did better.',
+    'Two commas: extra information about ALL of them. They were all surgeons.',
+    'No commas: it picks out WHICH technique.',
+    'Two commas: extra information, so which, never that. The brain always needs sleep.',
+    'What = the thing that. No noun in front of it.'
+  ],
+  nota: 'No commas: <b>the residents who studied</b> picks out which ones. Two commas: <b>the residents, who were surgeons, studied</b> adds extra news about all of them. <b>That</b> never goes between commas: use <b>which</b> or <b>who</b>.',
+  uso: { p: 'Your turn. Two sentences about how you study: one with no commas, and one with two commas.', molde: ['The apps that …', 'My phone, which …, …'], ex: 'The apps that send me daily reminders help me most. My phone, which is always with me, is my best teacher.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

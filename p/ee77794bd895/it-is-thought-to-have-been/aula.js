@@ -36,12 +36,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'biblioteca', rot: 'III · A Famous Hill', t: 'Did an ancient city from an old story really exist?', p: 'Answer first. Then the video plays in four short chapters. Read the two lines before you press play.' },
   { k: 'falas', est: 'l', extra: 1, img: 'biblioteca', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'amostra', est: 'o', min: 7, img: 'trincheira', rot: 'V · Report, Section 1: The Core', t: 'One soil core from Trench A. Six layers, from today down to the first houses.', p: 'Read the field note. Say the report line out loud, without signing it. Then tap Check.' },
-  { k: 'regra', est: 'f', min: 7, img: 'barraca', rot: 'VI · The Rule', t: 'The belief is now. The event is before now.', p: 'One part of each line is wrong. Find it and say it right out loud. The five kinds are in the corner. Then tap Check.' },
-  { k: 'radio', est: 'f', min: 7, img: 'monte', rot: 'VII · Report, Section 2: The Radio', t: 'Five trenches call in. The tag decides the form.', p: 'Your teacher reads the radio note. Tap the tag. Then say the report line.' },
-  { k: 'achados', est: 'o', min: 7, extra: 1, img: 'achados', rot: 'VIII · Your Own Layers', t: 'Your life, like a dig site.', p: 'Tap a card. A find comes up. Answer about your real life, in report language.' },
-  { k: 'radialista', est: 'o', min: 7, extra: 1, img: 'monte', rot: 'IX · Report, Section 3: The Interview', t: 'The local radio calls the dig. You are the trench supervisor.', p: 'Your teacher is the radio host. Tap a card, start the clock, and answer on air. Then ask her back.' },
-  { k: 'quiz', est: 'f', min: 6, img: 'trincheira', rot: 'X · Quick Check', t: 'Five quick lines from the season report.', p: 'Right or wrong? If it is wrong, say the whole sentence right.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · End of the Season', t: 'In 3,000 years, someone digs up your phone. What will they think it was?', p: 'Write their museum label, and one of your own. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'trincheira', rot: 'VI · Two Times in Blocks', t: 'A belief now, an event before.', p: 'Read the blocks out loud. Notice what changes. Then build a sentence and say your own.' },
+  { k: 'regra', est: 'f', min: 7, img: 'barraca', rot: 'VII · The Rule', t: 'The belief is now. The event is before now.', p: 'One part of each line is wrong. Find it and say it right out loud. The five kinds are in the corner. Then tap Check.' },
+  { k: 'radio', est: 'f', min: 7, img: 'monte', rot: 'VIII · Report, Section 2: The Radio', t: 'Five trenches call in. The tag decides the form.', p: 'Your teacher reads the radio note. Tap the tag. Then say the report line.' },
+  { k: 'achados', est: 'o', min: 7, extra: 1, img: 'achados', rot: 'IX · Your Own Layers', t: 'Your life, like a dig site.', p: 'Tap a card. A find comes up. Answer about your real life, in report language.' },
+  { k: 'radialista', est: 'o', min: 7, extra: 1, img: 'monte', rot: 'X · Report, Section 3: The Interview', t: 'The local radio calls the dig. You are the trench supervisor.', p: 'Your teacher is the radio host. Tap a card, start the clock, and answer on air. Then ask her back.' },
+  { k: 'quiz', est: 'f', min: 6, img: 'trincheira', rot: 'XI · Quick Check', t: 'Five quick lines from the season report.', p: 'Right or wrong? If it is wrong, say the whole sentence right.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · End of the Season', t: 'In 3,000 years, someone digs up your phone. What will they think it was?', p: 'Write their museum label, and one of your own. It goes to your My notes.' }
 ];
 
 var YT = 'gQbZX9JEQsQ';
@@ -263,3 +264,17 @@ R.fim = function (c) {
 
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
 TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'The dig report, in blocks. Each block has a job.',
+  frases: [
+    { b: [['The city', 'WHO', 'quem'], ['is thought', 'THE BELIEF · NOW', 'aux'], ['to have been', 'BEFORE NOW', 'quando'], ['destroyed', 'WHAT HAPPENED', 'acao'], ['by fire', 'HOW', 'como']], d: 'The belief is now: is thought. The fire is before: to have been.' },
+    { b: [['The king', 'WHO', 'quem'], ['is believed', 'THE BELIEF · NOW', 'aux'], ['to have built', 'BEFORE NOW', 'quando'], ['the first wall', 'WHAT', 'o']], d: 'He did it, so no been: to have built.' },
+    { b: [['The site', 'WHO', 'quem'], ['is being excavated', 'IN PROGRESS NOW', 'acao'], ['this season', 'WHEN']], d: 'Happening right now, to the site: is being + -ed.' }
+  ],
+  nota: 'Two times in one sentence. The belief is now: <b>is thought</b>, <b>is said</b>, <b>is believed</b>. The event is before: <b>to have been</b> + participle (it was done to it), or <b>to have</b> + participle (it did it).',
+  monta: { p: 'Build the next line of the report. Then say it.', pecas: [['a fortress', 'WHAT', 'o'], ['to have been', 'BEFORE NOW', 'quando'], ['The hill', 'WHO', 'quem'], ['is believed', 'THE BELIEF · NOW', 'aux']], ordem: [2, 3, 1, 0], outras: [] },
+  uso: { p: 'Your turn. Something people believe about an old place or a famous person. Two sentences.', molde: ['It is said that …', '… is thought to have been …'], ex: 'The old castle is believed to have been a prison. The first king is said to have built it in 1200.' },
+  prof: 'Read the blocks with the student, top to bottom: the word on top, its job under it. Point at the two times.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

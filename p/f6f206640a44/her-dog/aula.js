@@ -17,14 +17,15 @@ var L = [
   { k: 'cap1', est: 'o', min: 7, img: 'sala', rot: 'II · Chapter One', t: 'The waiting room.', p: 'Read it out loud, one line at a time. Then answer the questions.' },
   { k: 'aposta', est: 'o', min: 7, img: 'bruno', rot: 'III · Whose Dog?', t: 'Make a bet. Chapter five pays it.', p: 'Pick one. Then say why, out loud.' },
   { k: 'cap2', est: 'o', min: 7, img: 'caixas', rot: 'IV · Chapter Two', t: 'The card.', p: 'Read it out loud, one line at a time. Watch the card fill in.' },
-  { k: 'dono', est: 'f', min: 6, img: 'caixas', rot: 'V · Find the Owner First', t: 'Tap the owner. Then the word appears.', p: 'In each sentence, tap the person, animal or place that HAS the thing.' },
-  { k: 'fichas', est: 'f', min: 6, img: 'caixas', rot: 'VI · Eight Cards', t: 'Read the OWNER line out loud. The owner chooses the word.', p: 'Say the sentence first. Then tap his, her, their or its.' },
-  { k: 'cap3', est: 'o', min: 7, extra: 1, img: 'caixas', rot: 'VII · Chapter Three', t: 'The others.', p: 'Read it out loud, one line at a time. Then answer the questions.' },
-  { k: 'conserta', est: 'f', min: 6, extra: 1, img: 'bruno', rot: 'VIII · The Animal Doesn’t Decide', t: 'People in the room say these lines. One word is wrong.', p: 'Read it out loud. Tap the wrong word. Then say the line right.' },
-  { k: 'cap4', est: 'o', min: 7, extra: 1, img: 'tag', rot: 'IX · Chapter Four', t: 'The tag.', p: 'Read it out loud. Then turn the tag over with your finger.' },
-  { k: 'saber', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'X · You Have to Know First', t: 'Can you say the sentence? Or do you ask first?', p: 'Read the situation. Tap SAY IT or ASK FIRST. Then say the sentence.' },
-  { k: 'cap5', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'XI · Chapter Five', t: 'The door.', p: 'Read it out loud, one line at a time. Then look at your bet.' },
-  { k: 'fim', est: 'w', min: 6, img: 'casa', rot: 'XII · Six of Your Own', t: 'Six words, six real people.', p: 'One sentence for each word: his, her, their, its, my, our. Owner first. The red line watches the owner. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sala', rot: 'V · Who Owns It?', t: 'Two moments in the waiting room. Two kinds of owner.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'dono', est: 'f', min: 6, img: 'caixas', rot: 'VI · Find the Owner First', t: 'Tap the owner. Then the word appears.', p: 'In each sentence, tap the person, animal or place that HAS the thing.' },
+  { k: 'fichas', est: 'f', min: 6, img: 'caixas', rot: 'VII · Eight Cards', t: 'Read the OWNER line out loud. The owner chooses the word.', p: 'Say the sentence first. Then tap his, her, their or its.' },
+  { k: 'cap3', est: 'o', min: 7, extra: 1, img: 'caixas', rot: 'VIII · Chapter Three', t: 'The others.', p: 'Read it out loud, one line at a time. Then answer the questions.' },
+  { k: 'conserta', est: 'f', min: 6, extra: 1, img: 'bruno', rot: 'IX · The Animal Doesn’t Decide', t: 'People in the room say these lines. One word is wrong.', p: 'Read it out loud. Tap the wrong word. Then say the line right.' },
+  { k: 'cap4', est: 'o', min: 7, extra: 1, img: 'tag', rot: 'X · Chapter Four', t: 'The tag.', p: 'Read it out loud. Then turn the tag over with your finger.' },
+  { k: 'saber', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'XI · You Have to Know First', t: 'Can you say the sentence? Or do you ask first?', p: 'Read the situation. Tap SAY IT or ASK FIRST. Then say the sentence.' },
+  { k: 'cap5', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'XII · Chapter Five', t: 'The door.', p: 'Read it out loud, one line at a time. Then look at your bet.' },
+  { k: 'fim', est: 'w', min: 6, img: 'casa', rot: 'XIII · Six of Your Own', t: 'Six words, six real people.', p: 'One sentence for each word: his, her, their, its, my, our. Owner first. The red line watches the owner. It goes to your My notes.' }
 ];
 
 var GENTE = [
@@ -199,3 +200,20 @@ TOQUES['cs-prox'] = function () { S.cons = { n: S.cons.n + 1, toc: -1 }; };
 TOQUES.tag = function () { S.tag = S.tag ? 0 : 1; };
 TOQUES.sb = function (b, n, v) { S.saber.esc = v; };
 TOQUES['sb-prox'] = function () { S.saber = { n: S.saber.n + 1, esc: '' }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de dono.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'This or that? Two moments at the vet.',
+  a: { t: 'A person', falas: [['Nurse', 'Whose bag is on the chair?'], ['You', 'It’s Paulo’s. It’s <mark>his</mark> bag.']], d: 'The owner is a person: <b>his, her or their</b>. Look at who it is.' },
+  b: { t: 'A thing', falas: [['Nurse', 'Is the garden big?'], ['You', 'No. <mark>Its</mark> trees are small.']], d: 'The owner is a place, a thing or an animal: <b>its</b>. No apostrophe.' },
+  pergunta: 'Same idea, two words. What is different about the owner?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Paulo has a cat. You say:', o: ['It is his cat.', 'It is her cat.'], c: 0, d: 'Paulo is a man: his.' },
+    { p: 'The clinic has a small garden. You say:', o: ['Her garden is small.', 'Its garden is small.'], c: 1, d: 'A place: its.' },
+    { p: 'Elena and Marco have a rabbit. You say:', o: ['It is their rabbit.', 'It is his rabbit.'], c: 0, d: 'Two owners: their.' },
+    { p: 'The waiting room has a big clock. You say:', o: ['Their clock is big.', 'Its clock is big.'], c: 1, d: 'One room, one thing: its.' }
+  ],
+  nota: 'No rule to learn by heart. Look at the owner: a <b>man</b> is his, a <b>woman</b> is her, <b>two or more</b> are their, an <b>animal, a thing or a place</b> is its.',
+  uso: { p: 'Your turn. Look at the people and things around you. Say two sentences about what they have.', molde: ['It is his / her …', 'Its … is …'], ex: 'My uncle has a car. It is his car. Its color is blue.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

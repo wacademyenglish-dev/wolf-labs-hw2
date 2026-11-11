@@ -13,14 +13,15 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'loja', rot: 'I · What Do You Do Well?', t: 'Before the music: you.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
   { k: 'loja', est: 'l', min: 7, img: 'caixas', rot: 'II · The Shop', t: 'Saturday, four in the afternoon.', p: 'Listen to each card first. Then read the transcript out loud and answer. Then find the two words that do the job.' },
-  { k: 'fader', est: 'f', min: 6, img: 'mesa', rot: 'III · Two Faders', t: 'Two channels. Each word only moves its own fader.', p: 'Push the right fader all the way up. The word goes into the sentence. Then play it and say it.' },
-  { k: 'decide', est: 'l', min: 7, img: 'mesa', rot: 'IV · Listen and Decide', t: 'Hear it. Say it. Then send it to a channel.', p: 'Is the word about the thing, or about the doing?' },
-  { k: 'maquina', est: 'f', min: 6, img: 'vitrola', rot: 'V · The -LY Machine', t: 'A thing-word goes in. A doing-word comes out.', p: 'Pick a word. Say the new form. Then choose the bin it falls into.' },
-  { k: 'erro', est: 'f', min: 6, img: 'mesa', rot: 'VI · Feedback!', t: 'Six sentences, and each one squeals.', p: 'Tap the word on the wrong channel. Then play the clean sentence and say it.' },
-  { k: 'nove', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'VII · Nine Pads', t: 'One word on each pad. A whole sentence from your mouth.', p: 'Tap a pad. Say a full sentence with good or well. Then check.' },
-  { k: 'balcao', est: 'o', min: 7, extra: 1, img: 'vitrola', rot: 'VIII · The Counter', t: 'Closing time. The owner has three questions.', p: 'Play the question. Answer out loud. Then the follow-up comes.' },
-  { k: 'show', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'IX · The Talent Show', t: 'You and your teacher are the judges.', p: 'Look at the scores. Say what the person is like, and how they do it.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'X · Your Review', t: 'Write a short review of a band or a singer you know.', p: 'Five lines: what they are like (good) and how they do it (well, -ly). The red line watches the channels. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'III · Good or Well?', t: 'Two moments in the record shop.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'fader', est: 'f', min: 6, img: 'mesa', rot: 'IV · Two Faders', t: 'Two channels. Each word only moves its own fader.', p: 'Push the right fader all the way up. The word goes into the sentence. Then play it and say it.' },
+  { k: 'decide', est: 'l', min: 7, img: 'mesa', rot: 'V · Listen and Decide', t: 'Hear it. Say it. Then send it to a channel.', p: 'Is the word about the thing, or about the doing?' },
+  { k: 'maquina', est: 'f', min: 6, img: 'vitrola', rot: 'VI · The -LY Machine', t: 'A thing-word goes in. A doing-word comes out.', p: 'Pick a word. Say the new form. Then choose the bin it falls into.' },
+  { k: 'erro', est: 'f', min: 6, img: 'mesa', rot: 'VII · Feedback!', t: 'Six sentences, and each one squeals.', p: 'Tap the word on the wrong channel. Then play the clean sentence and say it.' },
+  { k: 'nove', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'VIII · Nine Pads', t: 'One word on each pad. A whole sentence from your mouth.', p: 'Tap a pad. Say a full sentence with good or well. Then check.' },
+  { k: 'balcao', est: 'o', min: 7, extra: 1, img: 'vitrola', rot: 'IX · The Counter', t: 'Closing time. The owner has three questions.', p: 'Play the question. Answer out loud. Then the follow-up comes.' },
+  { k: 'show', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'X · The Talent Show', t: 'You and your teacher are the judges.', p: 'Look at the scores. Say what the person is like, and how they do it.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · Your Review', t: 'Write a short review of a band or a singer you know.', p: 'Five lines: what they are like (good) and how they do it (well, -ly). The red line watches the channels. It goes to your My notes.' }
 ];
 
 /* I · você */
@@ -304,3 +305,20 @@ TOQUES['pad-foi'] = function () { S.pads.foi[S.pads.sel] = 1; };
 TOQUES['sh-parte'] = function (b, n, v) { var s = S.show; s.partes[s.n] = s.partes[s.n] || {}; s.partes[s.n][v] = !s.partes[s.n][v]; };
 TOQUES['sh-erro'] = function () { var s = S.show; s.erro[s.n] = !s.erro[s.n]; };
 TOQUES['sh-prox'] = function () { S.show.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de fader.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'This or that? Two moments in the shop.',
+  a: { t: 'The thing', falas: [['Owner', 'Do you like the band?'], ['You', 'Yes. The singer is <mark>good</mark>.']], d: 'You talk about a person or a thing: the singer, the band, the guitar. That is <b>good</b>.' },
+  b: { t: 'The doing', falas: [['Owner', 'How does the drummer play?'], ['You', 'He plays <mark>well</mark>.']], d: 'You talk about how someone does it: plays, sings, runs. That is <b>well</b>.' },
+  pergunta: 'Good and well. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'About the guitar player:', o: ['She is a good guitar player.', 'She is a well guitar player.'], c: 0, d: 'A person: good.' },
+    { p: 'About the singer. How does she sing?', o: ['She sings good.', 'She sings well.'], c: 1, d: 'How she does it: well.' },
+    { p: 'About the new song:', o: ['It’s a good song.', 'It’s a well song.'], c: 0, d: 'A thing: good.' },
+    { p: 'About the drummer. How does he play?', o: ['He plays well.', 'He plays good.'], c: 0, d: 'How he does it: well.' }
+  ],
+  nota: 'Who or what: <b>good</b> (a good band). How someone does it: <b>well</b> (plays well). Not “plays good”.',
+  uso: { p: 'Your turn. One band or one singer you know. Say what is good, and how they play or sing.', molde: ['… is a good …', '… sings well.'], ex: 'My favorite band has a good drummer. He plays really well.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

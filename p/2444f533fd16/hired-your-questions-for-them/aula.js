@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 8, kick: 'WOLF HIRED · MODULE 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 7, img: 'conversa', rot: 'I · Never Say “No Questions”', t: 'An interview coach shares five questions.', p: 'First one question, then the video, then the questions.' },
-  { k: 'transforma', est: 'f', min: 14, img: 'capa', rot: 'II · Direct to Polite', t: 'Make every question more professional.', p: 'Read the direct question and the clue. Say the polite version.' },
-  { k: 'cadeira', est: 'o', min: 14, img: 'conversa', rot: 'III · Your Turn to Interview Them', t: 'Your teacher is the interviewer. You ask.', p: 'Ask each question politely. Listen and react to the answers.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Flip', t: 'Watch the words move.', p: 'Flip each direct question. Notice where the verb goes. Then flip four on your own.' },
+  { k: 'transforma', est: 'f', min: 14, img: 'capa', rot: 'III · Direct to Polite', t: 'Make every question more professional.', p: 'Read the direct question and the clue. Say the polite version.' },
+  { k: 'cadeira', est: 'o', min: 14, img: 'conversa', rot: 'IV · Your Turn to Interview Them', t: 'Your teacher is the interviewer. You ask.', p: 'Ask each question politely. Listen and react to the answers.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: '2u_5Lyz6TCA', titulo: 'Top 5 Questions to Ask at the End of an Interview', fonte: 'CAREERVIDZ · 0:00–2:55', inicio: 0, fim: 175,
@@ -56,3 +57,24 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 08: video · transforma · cadeira (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The direct question, then the polite one. Watch the words move.',
+  frases: [
+    { de: ['What', '*is', 'the team', 'like', '?'], para: ['+Could you tell me', 'what', 'the team', '*is', 'like', '?'], d: 'After the polite start: sentence order. The team is.' },
+    { de: ['How', '*do', 'you', 'measure', 'success', '?'], para: ['+I was wondering', 'how', 'you', 'measure', 'success', '.'], d: 'No do. And it is a statement now.' },
+    { de: ['*Is', 'there', 'training', '?'], para: ['+Could you tell me', '+if', 'there', '*is', 'training', '?'], d: 'A yes or no question needs if.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'The polite start does the asking. After it, the words go back to sentence order: <b>what the team is like</b>, <b>how you measure success</b>, <b>if there is training</b>. No do, does or did.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'What are the biggest challenges?', r: 'I’d love to know what the biggest challenges <b>are</b>.' },
+    { de: 'When will I hear from you?', r: 'Could you tell me when I <b>will hear</b> from you?' },
+    { de: 'Is this a new role?', r: 'Could you tell me <b>if</b> this is a new role?' },
+    { de: 'Why did the last person leave?', r: 'I was wondering why the last person <b>left</b>.' }
+  ],
+  uso: { p: 'Your turn. One question for the end of a real interview. Start polite, then sentence order.', molde: ['Could you tell me …', 'I was wondering …'], ex: 'Could you tell me what a typical day looks like?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

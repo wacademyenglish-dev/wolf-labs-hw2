@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 1, kick: 'ENGLISH FOR HEALTHCAR
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · AIDET', t: 'A nurse explains a five-step routine.', p: 'First one question, then the video, then more questions.' },
-  { k: 'ordem', est: 'f', min: 7, img: 'capa', rot: 'II · At the Dentist', t: 'A dentist’s first contact, in pieces.', p: 'Tap the five steps in order. Then say it like a dentist.' },
-  { k: 'transforma', est: 'o', min: 9, img: 'conversa', rot: 'III · I’m Going To…', t: 'Tell the patient what you will do.', p: 'Read the action and the clue. Say it to the patient.' },
-  { k: 'prova', est: 'o', min: 12, img: 'capa', rot: 'IV · Your First Contact', t: 'Your profession, your patient.', p: 'Twenty seconds to plan. Then the five steps, out loud.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · AIDET, in Blocks', t: 'Five small sentences, five jobs.', p: 'Read the blocks out loud. Notice what each block does. Then build a sentence and say your own.' },
+  { k: 'ordem', est: 'f', min: 7, img: 'capa', rot: 'III · At the Dentist', t: 'A dentist’s first contact, in pieces.', p: 'Tap the five steps in order. Then say it like a dentist.' },
+  { k: 'transforma', est: 'o', min: 9, img: 'conversa', rot: 'IV · I’m Going To…', t: 'Tell the patient what you will do.', p: 'Read the action and the clue. Say it to the patient.' },
+  { k: 'prova', est: 'o', min: 12, img: 'capa', rot: 'V · Your First Contact', t: 'Your profession, your patient.', p: 'Twenty seconds to plan. Then the five steps, out loud.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'r3IxkCqdMCI', titulo: 'AIDET for Patient Communication', fonte: 'LECTURIO NURSING · 4 MIN',
@@ -59,3 +60,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 01: video · ordem · transforma · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de ordem.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'AIDET, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Good morning, Mr. Lee.', 'ACKNOWLEDGE', 'quem'], ['I’m Dr. Silva,', 'INTRODUCE', 'aux'], ['your dentist today.', 'ROLE', 'o']], d: 'You greet the patient by name first.' },
+    { b: [['It will take', 'DURATION', 'quando'], ['about ten minutes.', 'HOW LONG', 'quando']], d: 'The patient knows how long it takes.' },
+    { b: [['I’m going to', 'EXPLAIN', 'aux'], ['check', 'ACTION', 'acao'], ['your teeth.', 'WHAT', 'o']], d: 'The patient knows what you will do.' },
+    { b: [['Thank you', 'THANK', 'q'], ['for waiting.', 'WHY', 'o']], d: 'The last block is thanks.' }
+  ],
+  nota: 'Each step has its own small sentence. After <b>I’m going to</b>, the verb stays clean: I’m going to <b>check</b>, not “checks”.',
+  monta: { p: 'Build the explanation for your next patient, then say it.', pecas: [['take', 'ACTION', 'acao'], ['your blood pressure.', 'WHAT', 'o'], ['I’m going to', 'EXPLAIN', 'aux']], ordem: [2, 0, 1] },
+  uso: { p: 'Your turn. Your job, your patient: one sentence with I’m going to and one with It will take.', molde: ['I’m going to …', 'It will take about …'], ex: 'I’m going to check your blood pressure. It will take about two minutes.' },
+  prof: 'Read the blocks with the student, top to bottom: the words on top, the job under them.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

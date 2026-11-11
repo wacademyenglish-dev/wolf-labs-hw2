@@ -29,12 +29,13 @@ var L = [
   { k: 'ponte', est: 'o', min: 7, img: 'ponte', rot: 'V · The Pause', t: 'The video stopped. Now YOU solve it, trip by trip.', p: 'Think out loud with must be, might be, can’t be. Then tap your decision.' },
   { k: 'resposta', est: 'l', min: 7, extra: 1, img: 'ponte', rot: 'VI · The Answer', t: 'Was your plan right? The last chapter.', p: 'Watch the answer. Then True or Lie.' },
   { k: 'quadro', est: 'o', min: 7, extra: 1, img: 'quadro', rot: 'VII · Four Small Mysteries', t: 'Four notes, four small mysteries. Read the clues and guess.', p: 'Pick a note. Read the clues out loud and answer with a guess. Your teacher taps what you said.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'VIII · How Sure Are You?', t: 'The lantern says how sure you are.', p: 'Read the three lanterns out loud. Then fix the four traps.' },
-  { k: 'caso', est: 'o', min: 7, img: 'mansao', rot: 'IX · The Ashford House Case', t: 'The Blue Star diamond is missing. Eight clues, four suspects.', p: 'Your teacher reads the clue. Deduce at once, with the modal on the card. Each suspect’s lantern shows the answer.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'estudo', rot: 'X · Your Own Mysteries', t: 'Small mysteries from your own life.', p: 'Pick a card. Guess out loud, and say how sure you are. Your teacher gives a different guess.' },
-  { k: 'riley', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'XI · Locked Out', t: 'Riley, your roommate, is calling from your front door.', p: 'Your teacher is Riley. Help solve the mystery with a guess each time.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'XII · Quick Check', t: 'Five quick guesses.', p: 'Say the whole sentence out loud. Then tap the words.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XIII · Case Closed', t: 'Is it better to guess fast, or to wait for all the facts?', p: 'Write three small mysteries from your week, and solve them. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 5, img: 'mansao', rot: 'VIII · Three Flames', t: 'One start, three levels of sure.', p: 'Look at the three flames. Tap the flame of each sentence. Then say three of your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'IX · How Sure Are You?', t: 'The lantern says how sure you are.', p: 'Read the three lanterns out loud. Then fix the four traps.' },
+  { k: 'caso', est: 'o', min: 7, img: 'mansao', rot: 'X · The Ashford House Case', t: 'The Blue Star diamond is missing. Eight clues, four suspects.', p: 'Your teacher reads the clue. Deduce at once, with the modal on the card. Each suspect’s lantern shows the answer.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'estudo', rot: 'XI · Your Own Mysteries', t: 'Small mysteries from your own life.', p: 'Pick a card. Guess out loud, and say how sure you are. Your teacher gives a different guess.' },
+  { k: 'riley', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'XII · Locked Out', t: 'Riley, your roommate, is calling from your front door.', p: 'Your teacher is Riley. Help solve the mystery with a guess each time.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'XIII · Quick Check', t: 'Five quick guesses.', p: 'Say the whole sentence out loud. Then tap the words.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XIV · Case Closed', t: 'Is it better to guess fast, or to wait for all the facts?', p: 'Write three small mysteries from your week, and solve them. It goes to your My notes.' }
 ];
 
 var VOCE = [
@@ -322,3 +323,25 @@ TOQUES['cs-prox'] = function () { S.cs = { n: S.cs.n + 1, esc: '' }; };
 TOQUES['ri-prox'] = function () { S.ri.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'How sure is the detective? Three flames.',
+  usos: [
+    { t: 'SURE: YES', f: 'It must be the butler.', d: 'Full flame. You are almost 100% sure it is true.', img: 'mansao' },
+    { t: 'MAYBE', f: 'It might be the butler.', d: 'Half flame. It may be, it could be. You are not sure.', img: 'quadro' },
+    { t: 'SURE: NO', f: 'It can’t be the butler.', d: 'No flame. You are almost 100% sure it is not true.', img: 'porta' }
+  ],
+  pergunta: 'How sure is the detective?',
+  itens: [
+    { f: 'The window is locked and the glass is not broken. “It can’t be a thief from outside.”', c: 2 },
+    { f: 'Lord Ashford’s coat is wet and smells like smoke. “He must be the one who was in the garden.”', c: 0 },
+    { f: '“I don’t know who has the key. It might be the cook.”', c: 1 },
+    { f: 'The butler was on the phone with his mother all night. “It can’t be him.”', c: 2 },
+    { f: 'Only Lady Ashford knows the code of the safe. “It must be her.”', c: 0 },
+    { f: 'A man in a black hat is walking in the garden. “It could be the gardener.”', c: 1 }
+  ],
+  nota: 'The same start every time: <b>It … be</b> + the name. Only the middle word changes how sure you are: <b>must</b> (sure it is), <b>might / may / could</b> (maybe), <b>can’t</b> (sure it isn’t).',
+  uso: { p: 'Your turn. Look around your room. Say one thing you are sure about, one maybe, and one thing you are sure is not true.', molde: ['It must be …', 'It might be …', 'It can’t be …'], ex: 'The phone is ringing: it must be my mom. The box might be a gift. That can’t be my key: it’s too small.' },
+  prof: 'Read the three flames out loud with the student. Then the student taps a flame for each sentence. The flames are the rule.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

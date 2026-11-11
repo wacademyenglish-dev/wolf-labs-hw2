@@ -29,7 +29,7 @@
   var D = window.WL_LEGENDA; if (!D || !D.cues) return;
   var SEM_LETRA = !!window.WL_SEM_LETRA;   /* 11/10/2026: aula de música, nenhuma linha da letra na tela */
   function aluno() { return /(^|[?&])papel=aluno/.test(location.search) || document.documentElement.classList.contains('wl-sala-aluno'); }
-  var E = { cc: false, todos: true, aberta: null, feitas: {}, resp: {}, t: 0, base: 0, toc: false, rate: 1, lento: !!D.vel, velPosta: false, velPlay: false };
+  var E = { cc: false, todos: true, aberta: null, feitas: {}, resp: {}, t: 0, base: 0, toc: false, rate: 1, lento: false, velPosta: false, velPlay: false };
   var quadro = null, fios = null, sobre = null, ultimo = '';
   /* 09/10/2026 (noite) · pedido do Carlos: "a análise pode ser só feita na página seguinte ao trailer".
      Durante o vídeo a palavra amarela só acende (não é botão, não pausa, sem dica); a explicação mora

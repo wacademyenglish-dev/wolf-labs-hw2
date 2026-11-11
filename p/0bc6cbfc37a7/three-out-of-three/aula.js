@@ -20,14 +20,15 @@ var L = [
   { k: 'capa', est: null, img: 'pele' },
   { k: 'dado', est: 'o', min: 7, img: 'corredor', rot: 'I · Done for You', t: 'This year, things were done for you, by people you may not even remember.', p: 'Tap three starters. Finish each one out loud, with something true.' },
   { k: 'mulher', est: 'o', min: 7, img: 'pele', rot: 'II · The Tank Room', t: 'Five things were done to the same woman, over several years.', p: 'Say what most people would feel. Then choose what she felt.' },
-  { k: 'palco', est: 'f', min: 6, img: 'corredor', rot: 'III · The Spotlight', t: 'The thing the action happens to steps into the light. The doer goes to the wings.', p: 'Two taps per sentence: the verb, then what happens to the doer. Then say it.' },
-  { k: 'be', est: 'f', min: 6, img: 'cilindro', rot: 'IV · Be and the Third Form', t: 'BE and the third form. And some verbs never step into the light at all.', p: 'Choose the form. Then say the whole sentence.' },
-  { k: 'neuro', est: 'l', min: 7, img: 'corredor', rot: 'V · What the Neurologist Saw', t: 'Listen once. Then finish five sentences from what you heard.', p: 'Watch out: one verb can’t go into the passive.' },
-  { k: 'coluna', est: 'o', min: 7, img: 'respiro', rot: 'VI · The Empty Column', t: 'Everything they tested was in the room. Put each threat in its column.', p: 'Read the card out loud, then tap the column.' },
-  { k: 'panico', est: 'l', min: 7, extra: 1, img: 'mascara', rot: 'VII · Three Out of Three', t: '2013. Three patients with no amygdala and twelve healthy people were given one breath of air with 35% CO₂.', p: 'Play the researcher once. Then guess each number.' },
-  { k: 'jornal', est: 'o', min: 7, extra: 1, img: 'microfone', rot: 'VIII · The Newsroom', t: 'You edit the science page. Every headline goes into the passive before it’s printed.', p: 'Read the raw note. Choose the headline. Read it like a news anchor, then comment.' },
-  { k: 'corpo', est: 'l', min: 7, extra: 1, img: 'cilindro', rot: 'IX · The Same Body', t: 'One more study, about a word.', p: 'Listen once. Answer four questions. Then say what you think.' },
-  { k: 'fim', est: 'w', min: 6, img: 'pele', rot: 'X · Done for You, Again', t: 'Your three sentences from scene I come back.', p: 'Write them again, and the woman’s story in passive sentences. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'pele', rot: 'III · From Doer to Light', t: 'One sentence, five steps.', p: 'Read each step out loud, then go one step up. Notice who steps into the light. Then climb with your own sentence.' },
+  { k: 'palco', est: 'f', min: 6, img: 'corredor', rot: 'IV · The Spotlight', t: 'The thing the action happens to steps into the light. The doer goes to the wings.', p: 'Two taps per sentence: the verb, then what happens to the doer. Then say it.' },
+  { k: 'be', est: 'f', min: 6, img: 'cilindro', rot: 'V · Be and the Third Form', t: 'BE and the third form. And some verbs never step into the light at all.', p: 'Choose the form. Then say the whole sentence.' },
+  { k: 'neuro', est: 'l', min: 7, img: 'corredor', rot: 'VI · What the Neurologist Saw', t: 'Listen once. Then finish five sentences from what you heard.', p: 'Watch out: one verb can’t go into the passive.' },
+  { k: 'coluna', est: 'o', min: 7, img: 'respiro', rot: 'VII · The Empty Column', t: 'Everything they tested was in the room. Put each threat in its column.', p: 'Read the card out loud, then tap the column.' },
+  { k: 'panico', est: 'l', min: 7, extra: 1, img: 'mascara', rot: 'VIII · Three Out of Three', t: '2013. Three patients with no amygdala and twelve healthy people were given one breath of air with 35% CO₂.', p: 'Play the researcher once. Then guess each number.' },
+  { k: 'jornal', est: 'o', min: 7, extra: 1, img: 'microfone', rot: 'IX · The Newsroom', t: 'You edit the science page. Every headline goes into the passive before it’s printed.', p: 'Read the raw note. Choose the headline. Read it like a news anchor, then comment.' },
+  { k: 'corpo', est: 'l', min: 7, extra: 1, img: 'cilindro', rot: 'X · The Same Body', t: 'One more study, about a word.', p: 'Listen once. Answer four questions. Then say what you think.' },
+  { k: 'fim', est: 'w', min: 6, img: 'pele', rot: 'XI · Done for You, Again', t: 'Your three sentences from scene I come back.', p: 'Write them again, and the woman’s story in passive sentences. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -225,3 +226,17 @@ TOQUES['qz-prox'] = function (b, n, v, c) { S.q[c] = { n: S.q[c].n + 1, esc: -1 
 TOQUES.co = function (b, n, v) { S.co[n] = +v; };
 TOQUES.jn = function (b, n) { S.jn.esc = n; };
 TOQUES['jn-prox'] = function () { S.jn = { n: S.jn.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de palco.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One sentence. Climb it one step at a time.',
+  degraus: [
+    { r: 'active', f: 'The doctors <b>tested</b> the woman for years.', d: 'The doers come first.' },
+    { r: 'passive', f: 'The woman <b>was tested</b> by the doctors.', d: 'The woman steps into the light: was + third form.' },
+    { r: 'no doer', f: 'The woman <b>was tested</b> for years.', d: 'Who did it is not important: no by.' },
+    { r: 'plural', f: 'Three patients <b>were given</b> one breath of CO₂.', d: 'More than one: were + third form.' },
+    { r: 'not', f: 'The woman <b>wasn’t frightened</b> by the snakes.', d: 'Not: wasn’t + third form.' }
+  ],
+  nota: 'What the action happens to steps into the light: <b>was / were + third form</b>. The doer goes behind (by …) or disappears. Some verbs never go in: nothing is “was happened”.',
+  uso: { p: 'Your turn. Something someone did for you this year. Say it active, then in the passive.', molde: ['My boss gave me …', 'I was given … by …'], ex: 'My boss gave me a new laptop. I was given a new laptop last week.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

@@ -13,15 +13,16 @@ var L = [
   { k: 'capa', est: null, img: 'bandeja' },
   { k: 'abre', est: 'o', min: 7, img: 'bandeja', rot: 'I · Your Phone First', t: 'Take out your own phone.', p: 'Pick a card. Answer out loud. Your teacher taps what you used. Don’t worry about it yet.' },
   { k: 'tela', est: 'l', min: 7, img: 'bandeja', rot: 'II · Nine Apps', t: 'No name on the lock screen. Only nine apps.', p: 'Listen first. Then guess from the icon, tap it, and say the line. It goes on her card.' },
-  { k: 'depois', est: 'f', min: 6, img: 'bandeja', rot: 'III · After the Verb', t: 'After like, love and hate, the verb changes, and nothing else gets in.', p: 'Pick the piece. Then read the whole sentence.' },
-  { k: 'objeto', est: 'f', min: 6, img: 'bandeja', rot: 'IV · Yes, I Like It', t: 'The answer can’t stop at the verb.', p: 'Read the question. Pick the last word. Then say the whole answer.' },
-  { k: 'rolo', est: 'o', min: 7, img: 'bandeja', rot: 'V · The Photo Roll', t: '451 photos in six piles. One is much bigger.', p: 'Tap a pile. Read the number out loud. Then say the sentence.' },
-  { k: 'cartas', est: 'l', min: 7, img: 'bandeja', rot: 'VI · Three Cards', t: 'Three cards. They name your answers.', p: 'Listen first. Then open the card and answer its question.' },
-  { k: 'nao', est: 'f', min: 6, extra: 1, img: 'bandeja', rot: 'VII · What She Doesn’t Like', t: 'A phone says no without words.', p: 'Read the evidence. Pick the piece. Say the sentence.' },
-  { k: 'busca', est: 'o', min: 7, extra: 1, img: 'bandeja', rot: 'VIII · Ask the Phone', t: 'The search bar only says yes or no.', p: 'Ask the question out loud first. Then tap it and read the answer.' },
-  { k: 'dona', est: 'l', min: 7, extra: 1, img: 'coleiras', rot: 'IX · The Owner', t: 'Her card is ready. Then the door opens.', p: 'Read her card. Listen to the owner. Which line on the card is wrong?' },
-  { k: 'devolver', est: 'o', min: 7, extra: 1, img: 'balcao', rot: 'X · Is It Really Yours?', t: 'Two people say the phone is theirs.', p: 'Ask Do you like …? to find the owner. Round 1: a stranger. Round 2: the owner.' },
-  { k: 'fim', est: 'w', min: 6, img: 'balcao', rot: 'XI · In the Drawer', t: 'Write your own profile card.', p: 'Six lines: three things you like or love doing, two you don’t like, and one you do every day but don’t like. The red line watches. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'bandeja', rot: 'III · Phone Blocks', t: 'The same sentence, about the phone’s owner.', p: 'Read the blocks out loud. Notice what changes. Then build a sentence and say your own.' },
+  { k: 'depois', est: 'f', min: 6, img: 'bandeja', rot: 'IV · After the Verb', t: 'After like, love and hate, the verb changes, and nothing else gets in.', p: 'Pick the piece. Then read the whole sentence.' },
+  { k: 'objeto', est: 'f', min: 6, img: 'bandeja', rot: 'V · Yes, I Like It', t: 'The answer can’t stop at the verb.', p: 'Read the question. Pick the last word. Then say the whole answer.' },
+  { k: 'rolo', est: 'o', min: 7, img: 'bandeja', rot: 'VI · The Photo Roll', t: '451 photos in six piles. One is much bigger.', p: 'Tap a pile. Read the number out loud. Then say the sentence.' },
+  { k: 'cartas', est: 'l', min: 7, img: 'bandeja', rot: 'VII · Three Cards', t: 'Three cards. They name your answers.', p: 'Listen first. Then open the card and answer its question.' },
+  { k: 'nao', est: 'f', min: 6, extra: 1, img: 'bandeja', rot: 'VIII · What She Doesn’t Like', t: 'A phone says no without words.', p: 'Read the evidence. Pick the piece. Say the sentence.' },
+  { k: 'busca', est: 'o', min: 7, extra: 1, img: 'bandeja', rot: 'IX · Ask the Phone', t: 'The search bar only says yes or no.', p: 'Ask the question out loud first. Then tap it and read the answer.' },
+  { k: 'dona', est: 'l', min: 7, extra: 1, img: 'coleiras', rot: 'X · The Owner', t: 'Her card is ready. Then the door opens.', p: 'Read her card. Listen to the owner. Which line on the card is wrong?' },
+  { k: 'devolver', est: 'o', min: 7, extra: 1, img: 'balcao', rot: 'XI · Is It Really Yours?', t: 'Two people say the phone is theirs.', p: 'Ask Do you like …? to find the owner. Round 1: a stranger. Round 2: the owner.' },
+  { k: 'fim', est: 'w', min: 6, img: 'balcao', rot: 'XII · In the Drawer', t: 'Write your own profile card.', p: 'Six lines: three things you like or love doing, two you don’t like, and one you do every day but don’t like. The red line watches. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -207,3 +208,17 @@ TOQUES.dn = function (b, n) { if (!(S.ouviu || {})['dona.mp3']) return false; S.
 TOQUES['dv-p'] = function (b, n, v) { S.dev.partes[v] = !S.dev.partes[v]; };
 TOQUES['dv-e'] = function () { S.dev.erro = !S.dev.erro; };
 TOQUES['dv-prox'] = function () { S.dev = { r: S.dev.r + 1, partes: {}, erro: 0 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de depois.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'The owner’s phone, in blocks. Each block has a job.',
+  frases: [
+    { b: [['She', 'WHO'], ['loves', 'FEELING', 'aux'], ['taking', 'ACTION + ING', 'acao'], ['photos', 'WHAT']], d: 'Her phone has 451 of them.' },
+    { b: [['I', 'WHO'], ['hate', 'FEELING', 'aux'], ['waiting', 'ACTION + ING', 'acao'], ['for the bus', 'WHAT']], d: 'After hate, the next verb gets -ing: waiting.' },
+    { b: [['She', 'WHO'], ['doesn’t like', 'NOT', 'aux'], ['walking', 'ACTION + ING', 'acao'], ['seven dogs', 'WHAT']], d: 'With doesn’t like, the next verb still gets -ing.' }
+  ],
+  nota: 'After <b>like</b>, <b>love</b> and <b>hate</b>, the next verb takes <b>-ing</b>: she loves <b>taking</b>, I hate <b>waiting</b>. With she, only the first verb gets the -s: she love<b>s</b> taking.',
+  monta: { p: 'Build the next line about the phone. Then say it.', pecas: [['music', 'WHAT'], ['loves', 'FEELING', 'aux'], ['listening to', 'ACTION + ING', 'acao'], ['She', 'WHO']], ordem: [3, 1, 2, 0] },
+  uso: { p: 'Now you. Say two things you love or hate doing every week.', molde: ['I love …ing …', 'I hate …ing …'], ex: 'I love cooking on Sundays. I hate cleaning the bathroom.' },
+  prof: 'Read the blocks with the student, top to bottom: the word on top, its job under it. Point at the -ing after the feeling.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

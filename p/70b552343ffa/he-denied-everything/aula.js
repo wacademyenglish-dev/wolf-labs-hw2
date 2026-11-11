@@ -33,10 +33,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Digger. The official trailer.', p: 'Slide first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'gelo', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'podio', rot: 'V · What They Really Said', t: 'The reporter’s notes: which verbs, and what comes after them?', p: 'Tap the reporting verbs in the notes. Then finish the rule.' },
-  { k: 'coletiva', est: 'o', min: 7, img: 'podio', rot: 'VI · The Press Conference', t: 'Six statements at the podium. Report each one.', p: 'Read what they said. Say the report out loud. Then tap Check.' },
-  { k: 'relate', est: 'o', min: 6, img: 'gelo', rot: 'VII · Report It', t: 'Six things people said to you this year. Report them.', p: 'Build each report from the clues. Say it. Then tap Check.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'f', min: 4, img: 'podio', rot: 'V · The Flip', t: 'Watch the words move.', p: 'Flip each statement into a report. Notice the verb after the reporting verb. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'podio', rot: 'VI · What They Really Said', t: 'The reporter’s notes: which verbs, and what comes after them?', p: 'Tap the reporting verbs in the notes. Then finish the rule.' },
+  { k: 'coletiva', est: 'o', min: 7, img: 'podio', rot: 'VII · The Press Conference', t: 'Six statements at the podium. Report each one.', p: 'Read what they said. Say the report out loud. Then tap Check.' },
+  { k: 'relate', est: 'o', min: 6, img: 'gelo', rot: 'VIII · Report It', t: 'Six things people said to you this year. Report them.', p: 'Build each report from the clues. Say it. Then tap Check.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var FILME = 'Digger', ANO = '2026';
@@ -229,3 +230,23 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Digg
     { q: 'Will you apologize?', ex: 'I already apologized for causing the mess. Next question.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'What he said, then the report. Watch the words move.',
+  frases: [
+    { de: ['“I', '*didn’t cause', 'the crack.”'], para: ['+He', '+denied', '*causing', 'the crack', '.'], d: 'deny + -ing. No to, no that.' },
+    { de: ['“I’ll', '*fix', 'the engine.”'], para: ['+He', '+promised', '*to fix', 'the engine', '.'], d: 'promise + to + verb.' },
+    { de: ['“Digger,', 'you', '*broke', 'the radio!”'], para: ['+She', '+blamed', 'Digger', '+for', '*breaking', 'the radio', '.'], d: 'blame someone for + -ing.' }
+  ],
+  notaBotao: 'What changes?',
+  nota: 'Each reporting verb has its own shape after it: <b>deny / admit</b> + -ing, <b>promise / refuse</b> + to + verb, <b>blame someone for</b> + -ing, <b>accuse someone of</b> + -ing.',
+  pergunta: 'Your turn. Report it out loud, then check.',
+  treino: [
+    { de: '“I didn’t take the money.” (deny)', r: 'He denied <b>taking</b> the money.' },
+    { de: '“I won’t answer.” (refuse)', r: 'He refused <b>to answer</b>.' },
+    { de: '“You lied to us!” (accuse)', r: 'She accused him <b>of lying</b> to us.' },
+    { de: '“I’m sorry I was late.” (apologize)', r: 'He apologized <b>for being</b> late.' }
+  ],
+  uso: { p: 'Your turn. Report something a friend said to you this week. Use deny, promise, refuse or blame.', molde: ['My friend promised to …', 'He denied …-ing'], ex: 'My friend promised to call me back. My brother denied eating my cake.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

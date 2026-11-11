@@ -17,9 +17,10 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 9, titulo: ['The Small', 'Print'
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 11, img: 'capa', rot: 'I · The Contract', t: 'A flat rental agreement, clause by clause.', p: 'Read the clauses out loud. Answer the questions in plain English. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Contract or Plain English?', t: 'What does it REALLY mean?', p: 'Compare A and B. Do they say the same thing?' },
-  { k: 'rapido', est: 'f', min: 6, img: 'conversa', rot: 'III · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
-  { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'IV · Three Worried Clients', t: 'They signed. Now they have questions.', p: 'Ask each client five questions. Your teacher is the client. Then explain their contract in plain English.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Find the Rule', t: 'Four clauses from a contract. You find the rule.', p: 'Read the four clauses out loud. Look at the lit words. Choose the rule. Then say it in plain English.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Contract or Plain English?', t: 'What does it REALLY mean?', p: 'Compare A and B. Do they say the same thing?' },
+  { k: 'rapido', est: 'f', min: 6, img: 'conversa', rot: 'IV · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
+  { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'V · Three Worried Clients', t: 'They signed. Now they have questions.', p: 'Ask each client five questions. Your teacher is the client. Then explain their contract in plain English.' }
 ];
 var PORTAS = [];
 
@@ -69,3 +70,9 @@ var PODE = [];
 /* MECÂNICAS VARIADAS */
 /* C1 · The Small Print: leitura · descobre · rapido · missao */
 var RAPIDO = { seg: 60, itens: [['shall (in a contract) = ?', 'must'], ['shall not = ?', 'must not'], ['prior to = ?', 'before'], ['subject to = ?', 'it depends on / only if'], ['Prior to ___ (sign)…', 'signing'], ['liable ___ damage', 'for'], ['terminate = ?', 'end'], ['upon signing = ?', 'when you sign'], ['notwithstanding = ?', 'despite'], ['provided that = ?', 'only if']] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four clauses from a flat contract. Find the rule yourself.', exemplos: ['The Tenant <b>shall</b> pay the rent on the first day.', 'The Tenant <b>shall not</b> keep animals in the flat.', 'The Landlord <b>shall</b> repair the heating.', 'The Tenant <b>shall</b> give notice before leaving.'], pergunta: 'In a contract, shall means …', opcoes: ['you must: it is an obligation', 'you will: it is only the future', 'you may: it is a choice'], c: 0, nao: 'Not that one. Read the four clauses again: what happens to the tenant if he does not do it?', regra: 'In a contract, <b>shall</b> = <b>must</b>: it is a duty. <b>Shall not</b> = <b>must not</b>. In plain English: The Tenant <b>must</b> pay the rent on the first day. The Tenant <b>must not</b> keep animals.', uso: { p: 'Your turn. You work at a gym. A new member asks about a clause. Say it in plain English, with must and must not.', molde: ['It means you must …', 'You must not …', 'You can …, if …'], ex: 'It means you must pay by the fifth of the month. You must not share your card. You can cancel, if you tell us a month before.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

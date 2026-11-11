@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 6, kick: 'ENGLISH FOR HEALTHCAR
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 12, img: 'conversa', rot: 'I · Explaining a Result', t: 'A doctor explains anemia and the next steps.', p: 'One question before, then the video, then the questions.' },
-  { k: 'ordem', est: 'f', min: 8, img: 'capa', rot: 'II · Steps in Order', t: 'Explaining a dental filling.', p: 'Tap the steps in order. Then explain it with first, then, after that.' },
-  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'III · Your Explanation', t: 'Explain a test or procedure from your job.', p: 'Thirty seconds to plan. Then explain it, step by step.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Steps Line', t: 'Where does each step live?', p: 'Tap a sentence, then its place on the line. Notice the little words. Then explain a test of your own.' },
+  { k: 'ordem', est: 'f', min: 8, img: 'capa', rot: 'III · Steps in Order', t: 'Explaining a dental filling.', p: 'Tap the steps in order. Then explain it with first, then, after that.' },
+  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'IV · Your Explanation', t: 'Explain a test or procedure from your job.', p: 'Thirty seconds to plan. Then explain it, step by step.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'SSJFJpk0osU', titulo: 'Clinical communication skills - explanation skills', fonte: 'UNIVERSITY OF NOTTINGHAM · 0:47–5:30', inicio: 47, fim: 330,
@@ -50,3 +51,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 06: video · ordem · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de ordem.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'An X-ray, step by step. Where does each sentence go?',
+  marcos: [{ t: 'BEFORE', s: 'first' }, { t: 'DURING', s: 'then' }, { t: 'AFTER', s: 'after that' }],
+  frases: [
+    { f: 'First, you’ll take off your necklace.', c: 0, d: 'you’ll take · the first step' },
+    { f: 'You’ll put on a gown.', c: 0, d: 'you’ll put · before the picture' },
+    { f: 'Then I’ll ask you to stand very still.', c: 1, d: 'I’ll ask · now it begins' },
+    { f: 'You’ll hold your breath for five seconds.', c: 1, d: 'you’ll hold · during the picture' },
+    { f: 'After that, you can get dressed.', c: 2, d: 'you can · it is over' },
+    { f: 'The doctor will call you with the results.', c: 2, d: 'will call · later' }
+  ],
+  nota: 'The steps use <b>will</b> + clean verb: you’ll take, I’ll ask, the doctor will call. The little words tell the order: <b>first</b>, <b>then</b>, <b>after that</b>.',
+  uso: { p: 'Your turn. Explain a test from your job in three steps: first, then, after that.', molde: ['First, you’ll …', 'Then I’ll …', 'After that, …'], ex: 'First, you’ll lie down. Then I’ll put the cold gel on your stomach. After that, you can wipe it off.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

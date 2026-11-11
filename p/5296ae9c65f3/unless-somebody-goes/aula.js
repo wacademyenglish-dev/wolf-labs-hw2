@@ -35,10 +35,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Prologue', t: 'The Lord of the Rings. How it all began.', p: 'True or lie first. Watch the prologue. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'fogo', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'V · If, Unless, When', t: 'If you don’t find a way, no one will.', p: 'Match the two halves of each sentence. Then read the rule.' },
-  { k: 'conselho', est: 'o', min: 7, img: 'capa', rot: 'VI · The Council', t: 'Six voices at the table. Every right answer gives one the floor.', p: 'Read the clue. Tap who is speaking. Then say the sentence.' },
-  { k: 'escolhas', est: 'o', min: 7, img: 'mesa', rot: 'VII · Your Crossroads', t: 'Six choices in your life. What will happen if…?', p: 'The teacher picks A or B. Answer the three questions. Tap each word when you use it.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Debate', t: 'The debate.', p: 'Debate.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'V · Find the Rule', t: 'Four lines from the Council. You find the rule.', p: 'Read the four sentences out loud. Look at the lit word. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'VI · If, Unless, When', t: 'If you don’t find a way, no one will.', p: 'Match the two halves of each sentence. Then read the rule.' },
+  { k: 'conselho', est: 'o', min: 7, img: 'capa', rot: 'VII · The Council', t: 'Six voices at the table. Every right answer gives one the floor.', p: 'Read the clue. Tap who is speaking. Then say the sentence.' },
+  { k: 'escolhas', est: 'o', min: 7, img: 'mesa', rot: 'VIII · Your Crossroads', t: 'Six choices in your life. What will happen if…?', p: 'The teacher picks A or B. Answer the three questions. Tap each word when you use it.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Debate', t: 'The debate.', p: 'Debate.' }
 ];
 
 var FILME = 'The Lord of the Rings', ANO = '2001';
@@ -260,3 +261,19 @@ var FIM = { tipo: 'debate', rot: 'VIII · The Debate', t: 'Can the smallest pers
   b: { rot: 'No, they can’t', motivos: ['If the job is huge, you will need power.', 'Unless you have help, you will fail.', 'If you are weak, the Ring will win.'] },
   frases: ['If…, … will…', 'Unless…, …', 'I see your point, but…'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines from the Council. Find the rule yourself.',
+  exemplos: [
+    'Sauron will win <b>unless</b> somebody destroys the Ring.',
+    'Frodo won’t reach the mountain <b>unless</b> his friends help him.',
+    'The Council will fail <b>unless</b> the nine walkers stay together.',
+    'Nobody will find the Ring <b>unless</b> you tell them.'
+  ],
+  pergunta: 'Unless means …',
+  opcoes: ['when: it will happen for sure', 'if … not, so there is no second not', 'if, but only for the past'], c: 1,
+  nao: 'Not that one. Read the four lit words again: what happens if the second thing does NOT happen?',
+  regra: '<b>unless</b> = <b>if … not</b>. So the verb after it is positive, in the present: unless somebody <b>destroys</b> the Ring. Not “unless somebody doesn’t destroy it”, and not “unless somebody will destroy it”. The other half keeps <b>will</b>.',
+  uso: { p: 'Your turn. One thing you will do tomorrow unless something stops you, and one thing you won’t do unless something happens.', molde: ['I’ll … unless …', 'I won’t … unless …'], ex: 'I’ll walk to work unless it rains. I won’t go out unless my friend calls.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

@@ -16,7 +16,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · Three Directors', t: 'Get the facts before five.', p: 'Ask each director five questions. Your teacher is the director. Then write one line for the statement.' },
   { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'IV · Off the Record', t: 'Now YOU ask me. I answer short.', p: 'Ask your teacher. Notice the short answers and the rephrasing.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'V · Find the Rule', t: 'Four lines from the press office. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -58,3 +59,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me to explain my job in simple words.', dica: 'Could you explain your job in simple words?', resp: 'Think of it as a translator between experts and normal people.' },
   { alvo: 'Ask me what has been decided about a change at my work.', dica: 'What has been decided recently?', resp: 'It has been agreed that we start earlier on Mondays.' },
   { alvo: 'Ask me a question I won’t understand at first. Then rephrase it.', dica: '…? In other words, …?', resp: 'Ah, now I see what you mean.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines from the statement. Find the rule yourself.', exemplos: ['<b>It has been suggested that</b> the plant close.', 'The director has <b>reportedly</b> resigned.', 'Is the factory closing? <b>If so</b>, we will tell the staff.', '<b>Having led</b> the project, she knows the figures.'], pergunta: 'These phrases help the speaker to …', opcoes: ['keep distance and save words', 'sound very personal and warm', 'add a long story to every fact'], c: 0, nao: 'Not that one. Read the four lit parts again: is there a name? is anything repeated?', regra: 'Press language keeps <b>distance</b>: <b>it has been suggested that</b>, <b>reportedly</b>, <b>allegedly</b>, <b>according to</b>. And it <b>saves words</b>: <b>if so</b>, <b>if not</b>, <b>having led</b> the project.', uso: { p: 'Your turn. You are the press officer. Say two lines about a crisis, with distance.', molde: ['It has been suggested that …', 'The CEO has reportedly …', 'If so, …'], ex: 'It has been suggested that the product be recalled. The CEO has reportedly cancelled all meetings.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

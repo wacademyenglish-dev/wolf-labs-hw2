@@ -36,12 +36,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'palco', rot: 'III · The Talk', t: 'A psychologist says we all think we are finished. We are not.', p: 'Answer first. Then the talk plays in five short chapters. Read the two lines before you press play.' },
   { k: 'falas', est: 'l', extra: 1, img: 'palco', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'manchetes', est: 'o', min: 7, img: 'mesa', rot: 'V · The Claim Meter', t: 'Tomorrow’s front page. Six headlines claim more than the evidence.', p: 'Read the headline and what the study found. Say it again, carefully, out loud. Then tap Check: the needle comes down.' },
-  { k: 'regra', est: 'f', min: 7, img: 'arquivo', rot: 'VI · The Rule', t: 'An editor never prints more than the evidence. Four careful tools.', p: 'Read the editor’s note out loud. Tap the careful tools. Then finish the rule.' },
-  { k: 'chapa', est: 'f', min: 6, img: 'prensa', rot: 'VII · The Press', t: 'The article goes to print in minutes. Six sentences go too far.', p: 'Say each line again out loud, with the tool in the margin. Then tap the tool: the line is set in lead.' },
-  { k: 'pauta', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'VIII · Your Headlines', t: 'Your life, your news.', p: 'Tap a story card. Roll the dice. Answer with at least one of the three tools. Your teacher pushes back: “Is that proven?”' },
-  { k: 'reporter', est: 'o', min: 7, img: 'mesa', rot: 'IX · The Reporter Calls', t: 'The reporter wrote the article. You changed six sentences.', p: 'Your teacher is the reporter. Pick how you answer. Say it out loud. See what she says.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'arquivo', rot: 'X · Quick Check', t: 'Six quick lines from tomorrow’s paper.', p: 'One word in each line is wrong. Say the right one. Then tap Check.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · To Print', t: 'Will you be the same person in ten years?', p: 'Write three careful headlines about your own life. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'prensa', rot: 'VI · The Ladder', t: 'One headline, five steps down.', p: 'Read each step out loud, then go one step down. Notice how the claim gets careful. Then climb with your own headline.' },
+  { k: 'regra', est: 'f', min: 7, img: 'arquivo', rot: 'VII · The Rule', t: 'An editor never prints more than the evidence. Four careful tools.', p: 'Read the editor’s note out loud. Tap the careful tools. Then finish the rule.' },
+  { k: 'chapa', est: 'f', min: 6, img: 'prensa', rot: 'VIII · The Press', t: 'The article goes to print in minutes. Six sentences go too far.', p: 'Say each line again out loud, with the tool in the margin. Then tap the tool: the line is set in lead.' },
+  { k: 'pauta', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'IX · Your Headlines', t: 'Your life, your news.', p: 'Tap a story card. Roll the dice. Answer with at least one of the three tools. Your teacher pushes back: “Is that proven?”' },
+  { k: 'reporter', est: 'o', min: 7, img: 'mesa', rot: 'X · The Reporter Calls', t: 'The reporter wrote the article. You changed six sentences.', p: 'Your teacher is the reporter. Pick how you answer. Say it out loud. See what she says.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'arquivo', rot: 'XI · Quick Check', t: 'Six quick lines from tomorrow’s paper.', p: 'One word in each line is wrong. Say the right one. Then tap Check.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · To Print', t: 'Will you be the same person in ten years?', p: 'Write three careful headlines about your own life. They go to your My notes.' }
 ];
 
 var YT = 'XNbaR54Gpj4';
@@ -260,3 +261,17 @@ R.fim = function (c) {
 
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
 TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One headline. Make it careful, one step at a time.',
+  degraus: [
+    { r: 'claim', f: 'People <b>never change</b>.', d: 'Too strong: the evidence does not prove it.' },
+    { r: 'appear', f: 'People <b>appear to</b> change less than they think.', d: 'appear to + a clean verb.' },
+    { r: 'it', f: '<b>It would appear that</b> people change less than they think.', d: 'It first, never “Would appear that”.' },
+    { r: 'may', f: 'This <b>may have been caused</b> by a short survey.', d: 'may / might / could + have + been + a past participle.' },
+    { r: 'verb', f: 'The study <b>suggests</b> a link. It doesn’t <b>prove</b> it.', d: 'suggest, indicate: careful. prove, show: strong.' }
+  ],
+  nota: 'An editor never prints more than the evidence. Careful tools: <b>appear to</b>, <b>it would appear that</b>, <b>may / might / could have + past participle</b>, and <b>suggests</b> instead of proves.',
+  uso: { p: 'Your turn. Take a strong claim from the news and make it careful with one tool from the ladder.', molde: ['It would appear that …', 'This may have been caused by …'], ex: 'It would appear that remote work helps people sleep more. This may have been caused by shorter commutes.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

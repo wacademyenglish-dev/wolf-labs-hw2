@@ -14,7 +14,8 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'II · Open the Capsule', t: 'Roll, move, take an object out.', p: 'Your teacher rolls the die. Do the task on your square, out loud.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Time Capsule Rule', t: 'Four lines from the time capsule. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -56,3 +57,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me about a time I arrived too late.', dica: 'Have you ever arrived when everything had finished?', resp: 'Yes! The party had ended.' },
   { alvo: 'Ask me about my plans for next year.', dica: 'What are you going to do next year?', resp: 'I’m going to move house.' },
   { alvo: 'Ask me what I’ll be doing this time tomorrow.', dica: 'What will you be doing this time tomorrow?', resp: 'I’ll be teaching another class.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.', exemplos: ['The show <b>had</b> already <u>started</u> when we arrived.', 'She was tired because she <b>hadn’t</b> <u>slept</u>.', 'When we opened the capsule, the ink <b>had</b> <u>faded</u>.', 'I <b>had</b> never <u>seen</u> that toy before.'], pergunta: 'Had + participle tells us about …', opcoes: ['the earlier action: it happened before another past moment', 'what is happening right now', 'a plan for the future'], c: 0, nao: 'Not that one. Read the four sentences again: is there a past moment that comes later?', regra: '<b>had + participle</b> is the earlier past: the thing that happened BEFORE another moment in the past. The show had started when we arrived.', uso: { p: 'Your turn. Open your own capsule. Say one thing that had already happened before you started school, or before you got your first phone.', molde: ['Before I …, I had already …', 'I had never …'], ex: 'Before I got my first phone, I had already learned to ride a bike. I had never used the internet.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

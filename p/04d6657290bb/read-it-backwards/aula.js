@@ -32,11 +32,12 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'bandeja', rot: 'I · An Object of Yours', t: 'Pick an object you use every day.', p: 'Tap it. Then describe it out loud.' },
   { k: 'cabeca', est: 'f', min: 6, img: 'bandeja', rot: 'II · Find the Head', t: 'The phrase is about its LAST word. Find it, then read backwards.', p: 'Tap the head. Watch the lamp move left. Then choose what it means.' },
   { k: 'ordem', est: 'f', min: 6, img: 'bancada', rot: 'III · The Drawers', t: 'Opinion · size · age · shape · color · origin · material · purpose.', p: 'Tap the modifiers in order, left to right. Each one drops into its drawer. Say the label.' },
-  { k: 'regra', est: 'f', min: 6, img: 'bancada', rot: 'IV · The Rule', t: 'English builds to the LEFT of the noun, and joins with nothing.', p: 'Read the curator’s letter out loud. Tap the head of each phrase. Then finish the rule.' },
-  { k: 'hifen', est: 'f', min: 6, img: 'bandeja', rot: 'V · The Hyphen', t: 'The car is two years old. It is a two-year-old car.', p: 'Read each sentence. Say the phrase before the noun. Then tap Check.' },
-  { k: 'longe', est: 'f', min: 6, img: 'plaina', rot: 'VI · Too Far', t: 'Every stack here is grammatical. Some went too far.', p: 'Read it out loud. READABLE or TOO FAR? For each TOO FAR, break it with OF or FOR.' },
-  { k: 'venda', est: 'o', min: 7, extra: 1, img: 'plaina', rot: 'VII · Sell It', t: 'You run a small online shop. The teacher is the customer.', p: 'Read what the customer says. Each label has one mistake: say the right one. Then sell your own object.' },
-  { k: 'fim', est: 'w', min: 6, img: 'bancada', rot: 'VIII · Your Label', t: 'Your object from scene I, as a museum label.', p: 'One great label, then unpack it backwards. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'bancada', rot: 'IV · The Stack in Blocks', t: 'A noun stack, block by block.', p: 'Read the blocks backwards. Notice the order. Then build a stack and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'bancada', rot: 'V · The Rule', t: 'English builds to the LEFT of the noun, and joins with nothing.', p: 'Read the curator’s letter out loud. Tap the head of each phrase. Then finish the rule.' },
+  { k: 'hifen', est: 'f', min: 6, img: 'bandeja', rot: 'VI · The Hyphen', t: 'The car is two years old. It is a two-year-old car.', p: 'Read each sentence. Say the phrase before the noun. Then tap Check.' },
+  { k: 'longe', est: 'f', min: 6, img: 'plaina', rot: 'VII · Too Far', t: 'Every stack here is grammatical. Some went too far.', p: 'Read it out loud. READABLE or TOO FAR? For each TOO FAR, break it with OF or FOR.' },
+  { k: 'venda', est: 'o', min: 7, extra: 1, img: 'plaina', rot: 'VIII · Sell It', t: 'You run a small online shop. The teacher is the customer.', p: 'Read what the customer says. Each label has one mistake: say the right one. Then sell your own object.' },
+  { k: 'fim', est: 'w', min: 6, img: 'bancada', rot: 'IX · Your Label', t: 'Your object from scene I, as a museum label.', p: 'One great label, then unpack it backwards. It goes to your My notes.' }
 ];
 
 var OBJ = ['a bag', 'a mug', 'a lamp', 'a jacket', 'a phone case', 'a notebook'];
@@ -205,3 +206,17 @@ TOQUES['cb-prox'] = function () { S.cb = { n: S.cb.n + 1, cab: 0, erro: -1, esc:
 TOQUES['or-t'] = function (b, n) { var e = S.or, x = ORD[e.n]; if (n === e.seq.length) { e.seq.push(n); e.erro = ''; } else e.erro = x.pecas[n]; };
 TOQUES['or-prox'] = function () { S.or = { n: S.or.n + 1, seq: [], erro: '' }; };
 TOQUES.lg = function (b, n, v) { S.lg[n] = v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Objects from the workshop, in blocks. Read each one backwards.',
+  frases: [
+    { b: [['a lovely', 'OPINION', 'q'], ['old', 'AGE', 'quando'], ['leather', 'MATERIAL', 'o'], ['bag', 'THE HEAD', 'acao']], d: 'Read it backwards: the last word is the head. It is a bag.' },
+    { b: [['a small', 'SIZE', 'onde'], ['round', 'SHAPE', 'aux'], ['wooden', 'MATERIAL', 'o'], ['table', 'THE HEAD', 'acao']], d: 'Size, then shape, then material. It is a table.' },
+    { b: [['a two-year-old', 'AGE', 'quando'], ['French', 'ORIGIN', 'como'], ['car', 'THE HEAD', 'acao']], d: 'A number inside the stack stays singular: year, never years.' }
+  ],
+  nota: 'The last word is the <b>head</b>; everything before it describes it. The order: opinion · size · age · shape · color · origin · material · purpose. With a number: <b>a two-year-old car</b>, never years.',
+  monta: { p: 'Build the stack. Then say it.', pecas: [['wooden', 'MATERIAL', 'o'], ['workbench', 'THE HEAD', 'acao'], ['a big', 'SIZE', 'onde'], ['old', 'AGE', 'quando']], ordem: [2, 3, 0, 1] },
+  uso: { p: 'Your turn. An object on your desk. Describe it with at least three words before the noun.', molde: ['It’s a … … … …'], ex: 'It’s a small old silver watch.' },
+  prof: 'Read each stack with the student from the last word back to the first. Point at the head first.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

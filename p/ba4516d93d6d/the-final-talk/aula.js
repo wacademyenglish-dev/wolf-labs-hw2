@@ -16,9 +16,10 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'dado', est: 'f', min: 8, img: 'conversa', rot: 'I · The Die', t: 'Roll the die. The number chooses.', p: 'Your teacher rolls. Do the challenge out loud, from memory.' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · A Model Talk', t: 'Five minutes, from hook to close.', p: 'Read the model talk out loud. Find every tool you learned. Then plan yours.' },
-  { k: 'cartao', est: 'w', min: 12, img: 'conversa', rot: 'III · Your Talk Plan', t: 'Write the skeleton of your five minutes.', p: 'Hook, story, main point with nuance, the other side, and a close. Then give your talk!' },
-  { k: 'conversa', est: 'o', min: 10, img: 'conversa', rot: 'IV · Questions from the Floor', t: 'Your talk is over. Now the questions.', p: 'Your teacher asks about YOUR talk. Use the Q&A tools: buy time, check, admit, park, close.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Book C1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'III · Right, Not This', t: 'Six pairs from the graduation night. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'cartao', est: 'w', min: 12, img: 'conversa', rot: 'IV · Your Talk Plan', t: 'Write the skeleton of your five minutes.', p: 'Hook, story, main point with nuance, the other side, and a close. Then give your talk!' },
+  { k: 'conversa', est: 'o', min: 10, img: 'conversa', rot: 'V · Questions from the Floor', t: 'Your talk is over. Now the questions.', p: 'Your teacher asks about YOUR talk. Use the Q&A tools: buy time, check, admit, park, close.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Book C1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -64,3 +65,9 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* C1 · The Final Talk: dado · leitura · cartao · conversa · pode (dado usa as PORTAS: as seis ferramentas) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de cartao.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the better line for a talk.', pares: [{ c: 'Have you ever wondered why we dream?', x: 'Hello, my name is Ana and today I will talk about dreams.', d: 'Start with a hook for the audience, not with your name.' }, { c: 'It all started when I missed my flight.', x: 'In the story, the beginning is that I missed my flight.', d: 'Use a signpost: It all started when.' }, { c: 'It might be a good idea to start earlier.', x: 'You must start earlier, no discussion.', d: 'In a talk, soften with a modal: might, could, seems.' }, { c: 'On the one hand, it is cheap. On the other hand, it is slow.', x: 'It is cheap. On the contrary, it is slow.', d: 'Two sides of one coin: on the other hand.' }, { c: 'In other words, we spend less.', x: 'Or be, we spend less.', d: 'To rephrase: in other words, what I mean is.' }, { c: 'Thank you. Does that answer your question?', x: 'I don’t know. Next question.', d: 'Be calm in the Q&A: check, then close.' }], nota: 'Your five minutes need <b>tools</b>: a <b>hook</b> (Have you ever wondered …?), a <b>story</b> with signposts (It all started when), <b>nuance</b> (it might be), <b>contrast</b> (on the other hand), <b>rephrase</b> (in other words) and a <b>calm Q&A</b> (Does that answer your question?).', uso: { p: 'Your turn. You are the last speaker of the night. Say your first ten seconds: a hook and a promise.', molde: ['Have you ever wondered …?', 'By the end of this talk, you’ll …'], ex: 'Have you ever wondered why the last day of a course feels so strange? By the end of this talk, you’ll know why it is also the best.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

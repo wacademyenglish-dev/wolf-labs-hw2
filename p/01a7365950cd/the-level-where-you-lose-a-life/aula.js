@@ -26,10 +26,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Jumanji: Open World. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'selva', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'tabuleiro', rot: 'V · Who, Which, Where', t: 'A person who, a thing which, a place where.', p: 'Match each one to its clue. Then read the rule.' },
-  { k: 'jogo', est: 'o', min: 7, img: 'tabuleiro', rot: 'VI · The Board', t: 'Every square has a wrong word. Find it, and the gem moves on.', p: 'Read the sentences. Say the fixes out loud. Then tap Check.' },
-  { k: 'enigma', est: 'o', min: 7, extra: 1, img: 'selva', rot: 'VII · Your Riddles', t: 'Riddles from your life. Who, which or where?', p: 'Spin for a topic. Describe it without the name. The teacher guesses.' },
-  { k: 'saida', est: 'o', min: 8, img: 'capa', rot: 'VIII · The Last Square', t: 'Last square. The teacher picks A or B.', p: 'Talk for three minutes. Then one minute to write what you take home.' }
+  { k: 'gx', est: 'f', min: 4, img: 'tabuleiro', rot: 'V · Three Squares', t: 'A person, a thing, a place.', p: 'Look at the three squares. Tap the square of each sentence. Then say three of your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'tabuleiro', rot: 'VI · Who, Which, Where', t: 'A person who, a thing which, a place where.', p: 'Match each one to its clue. Then read the rule.' },
+  { k: 'jogo', est: 'o', min: 7, img: 'tabuleiro', rot: 'VII · The Board', t: 'Every square has a wrong word. Find it, and the gem moves on.', p: 'Read the sentences. Say the fixes out loud. Then tap Check.' },
+  { k: 'enigma', est: 'o', min: 7, extra: 1, img: 'selva', rot: 'VIII · Your Riddles', t: 'Riddles from your life. Who, which or where?', p: 'Spin for a topic. Describe it without the name. The teacher guesses.' },
+  { k: 'saida', est: 'o', min: 8, img: 'capa', rot: 'IX · The Last Square', t: 'Last square. The teacher picks A or B.', p: 'Talk for three minutes. Then one minute to write what you take home.' }
 ];
 
 var FILME = 'Jumanji: Open World', ANO = '2026';
@@ -249,3 +250,24 @@ var FIM = { tipo: 'minuto', rot: 'VIII · One Minute', t: 'One minute of riddles
   ],
   palavras: ['who', 'which', 'that', 'where', 'the one who', 'the place where'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'The board has three kinds of squares.',
+  usos: [
+    { t: 'A PERSON', f: 'a player who never gives up', d: 'A person: who. After who, the verb has -s: who plays.', img: 'capa' },
+    { t: 'A THING', f: 'a game that starts on its own', d: 'A thing or an animal: which or that.', img: 'cartucho' },
+    { t: 'A PLACE', f: 'a jungle where the animals run', d: 'A place: where.', img: 'selva' }
+  ],
+  pergunta: 'Which square is it?',
+  itens: [
+    { f: 'She is the girl who finds the key.', c: 0 },
+    { f: 'It is the game that starts on its own.', c: 1 },
+    { f: 'This is the jungle where the rhinos live.', c: 2 },
+    { f: 'He is the guy who plays the strong hero.', c: 0 },
+    { f: 'Here is the board which shows the map.', c: 1 },
+    { f: 'That is the place where we lose a life.', c: 2 }
+  ],
+  nota: 'Pick the word by the noun. A <b>person</b>: <b>who</b>. A <b>thing</b>: <b>which</b> or <b>that</b>. A <b>place</b>: <b>where</b>. After who, the verb agrees: the player who <b>plays</b>.',
+  uso: { p: 'Your turn. Describe a person, a thing and a place from your life with who, which and where.', molde: ['I have a friend who …', 'I have a … which …', 'I know a place where …'], ex: 'I have a friend who plays guitar. I have a phone which is very old. I know a café where they make great pizza.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

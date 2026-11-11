@@ -17,14 +17,15 @@
 var L = [
   { k: 'capa', est: null, img: 'agenda' },
   { k: 'abre', est: 'o', min: 7, img: 'agenda', rot: 'I · Your Week Already', t: 'What is already fixed in your week?', p: 'Pick a card. Answer out loud. Mistakes are OK. Nobody corrects you.' },
-  { k: 'agora', est: 'f', min: 6, img: 'agenda', rot: 'II · Now or Already?', t: 'Same three words. The day does the rest.', p: 'Read the whole line out loud. Happening now, or already arranged?' },
-  { k: 'convites', est: 'o', min: 7, img: 'agenda', rot: 'III · Four Slots, Six Invitations', t: 'Four free slots. Six invitations. You spend each slot once.', p: 'Say the sentence out loud first. Then accept. You can’t change it.' },
-  { k: 'recusa', est: 'o', min: 7, img: 'cafe', rot: 'IV · The Two You Turned Down', t: 'Two people. Neither of them hears the word no.', p: 'Your teacher plays the person who invited you. Turn them down with what you’re doing instead.' },
-  { k: 'ouve', est: 'l', min: 7, img: 'agenda', rot: 'V · The Day Comes Last', t: 'Both halves sound the same until the last words.', p: 'Play it. Right now, or arranged? The text opens after you listen.' },
-  { k: 'will', est: 'f', min: 6, extra: 1, img: 'agenda', rot: 'VI · Who Agreed, and When?', t: 'Two ways to say it. Only one keeps the appointment.', p: 'Read the situation out loud. Pick one. Then read the whole line.' },
-  { k: 'duas', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'VII · Two Calendars', t: 'Coffee with your teacher this week. One slot works.', p: 'Ask: “What are you doing on Monday at nine?” Your teacher taps that slot and answers. Then book it.' },
-  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'VIII · Six About Your Week', t: 'Every question is about a day that hasn’t come.', p: 'Answer out loud. Then ask your teacher the same.' },
-  { k: 'fim', est: 'w', min: 6, img: 'porta', rot: 'IX · Your Week, Written', t: 'Your week from scene I comes back.', p: 'Write three plans that are already arranged, and one you’re NOT doing. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'agenda', rot: 'II · Yes, I Am', t: 'Ping-pong about your planner. Three words for each answer.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'agora', est: 'f', min: 6, img: 'agenda', rot: 'III · Now or Already?', t: 'Same three words. The day does the rest.', p: 'Read the whole line out loud. Happening now, or already arranged?' },
+  { k: 'convites', est: 'o', min: 7, img: 'agenda', rot: 'IV · Four Slots, Six Invitations', t: 'Four free slots. Six invitations. You spend each slot once.', p: 'Say the sentence out loud first. Then accept. You can’t change it.' },
+  { k: 'recusa', est: 'o', min: 7, img: 'cafe', rot: 'V · The Two You Turned Down', t: 'Two people. Neither of them hears the word no.', p: 'Your teacher plays the person who invited you. Turn them down with what you’re doing instead.' },
+  { k: 'ouve', est: 'l', min: 7, img: 'agenda', rot: 'VI · The Day Comes Last', t: 'Both halves sound the same until the last words.', p: 'Play it. Right now, or arranged? The text opens after you listen.' },
+  { k: 'will', est: 'f', min: 6, extra: 1, img: 'agenda', rot: 'VII · Who Agreed, and When?', t: 'Two ways to say it. Only one keeps the appointment.', p: 'Read the situation out loud. Pick one. Then read the whole line.' },
+  { k: 'duas', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'VIII · Two Calendars', t: 'Coffee with your teacher this week. One slot works.', p: 'Ask: “What are you doing on Monday at nine?” Your teacher taps that slot and answers. Then book it.' },
+  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'IX · Six About Your Week', t: 'Every question is about a day that hasn’t come.', p: 'Answer out loud. Then ask your teacher the same.' },
+  { k: 'fim', est: 'w', min: 6, img: 'porta', rot: 'X · Your Week, Written', t: 'Your week from scene I comes back.', p: 'Write three plans that are already arranged, and one you’re NOT doing. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -215,3 +216,18 @@ TOQUES['wl-prox'] = function () { S.wl = { n: S.wl.n + 1, esc: -1 }; };
 TOQUES['du-v'] = function (b, n, v) { S.du.vis[v] = 1; };
 TOQUES.du = function (b, n, v) { S.du.esc = v; var p = v.split('-'); S.du.vis[v] = 1; };
 TOQUES['se-prox'] = function () { S.seu.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de agora.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers about your week. Three words, fast.',
+  perguntas: [
+    { q: 'Are you working on Saturday?', s: 'Yes, I <mark>am</mark>.', n: 'No, I’m <mark>not</mark>.', mais: 'Now ask your teacher: Are you working on Saturday?' },
+    { q: 'Is your boss traveling this week?', s: 'Yes, he <mark>is</mark>.', n: 'No, he <mark>isn’t</mark>.', mais: 'Where is he going?' },
+    { q: 'Are your friends coming to your house on Friday?', s: 'Yes, they <mark>are</mark>.', n: 'No, they <mark>aren’t</mark>.', mais: 'What are you doing together?' },
+    { q: 'Are you seeing the doctor this month?', s: 'Yes, I <mark>am</mark>.', n: 'No, I’m <mark>not</mark>.' },
+    { q: 'Is your sister studying tonight?', s: 'Yes, she <mark>is</mark>.', n: 'No, she <mark>isn’t</mark>.', mais: 'What is she doing instead?' },
+    { q: 'Are we meeting on Thursday at one?', s: 'Yes, we <mark>are</mark>.', n: 'No, we <mark>aren’t</mark>.', mais: 'Then say: See you on Thursday!' }
+  ],
+  nota: 'The short answer keeps the helper: Yes, I <b>am</b>. No, he <b>isn’t</b>. Not “Yes, I working”, and not “Yes, I do”.',
+  uso: { p: 'Your turn. Ask your teacher three questions about next week with Are you …ing? Your teacher answers the short way.', molde: ['Are you …ing on …?', 'Is your … …ing on …?'], ex: 'Are you working on Monday? Is your family visiting on Sunday?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

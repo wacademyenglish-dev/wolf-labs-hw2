@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 10, kick: 'AU PAIR · MODULE 3 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 10, img: 'conversa', rot: 'I · What Host Moms Look For', t: 'Three host moms give advice.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'II · If… I Would…', t: 'Imaginary situations in English.', p: 'Compare A and B. Then see the pattern.' },
-  { k: 'tabuleiro', est: 'o', min: 16, img: 'conversa', rot: 'III · Twelve Situations', t: 'Roll, move, answer the situation.', p: 'Your teacher rolls. Say what you would do, and why.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · What Would You Do?', t: 'A host mom asks tricky questions. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then answer your teacher.' },
+  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'III · If… I Would…', t: 'Imaginary situations in English.', p: 'Compare A and B. Then see the pattern.' },
+  { k: 'tabuleiro', est: 'o', min: 16, img: 'conversa', rot: 'IV · Twelve Situations', t: 'Roll, move, answer the situation.', p: 'Your teacher rolls. Say what you would do, and why.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'h29mUcy-Y9k', titulo: 'Host Moms Give Advice To Future Au Pairs About Matching Process', fonte: 'AU PAIR IN AMERICA · 3 MIN',
@@ -60,3 +61,24 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 10: video · descobre · tabuleiro (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'Tricky questions. Tap the lit words.',
+  falas: [
+    { q: 'Host mom', f: 'What would you do if the baby didn’t stop crying?' },
+    { q: 'You', f: '[[If the baby didn’t stop crying, I would check his diaper and try a bottle.]]' },
+    { q: 'Host mom', f: 'And what would you do if a child got hurt?' },
+    { q: 'You', f: '[[I would stay calm and call the parents.]]' },
+    { q: 'Host mom', f: 'A friend asks me about au pairs. What would you tell her?' },
+    { q: 'You', f: '[[If I were you, I would call the agency first.]]' }
+  ],
+  porques: [
+    'An imaginary situation: if + past (didn’t stop), then would + the clean verb.',
+    'Would + the clean verb: would stay, would call. No -ed after would.',
+    'For advice: If I were you, I would … It is were, not was.'
+  ],
+  nota: 'For imaginary situations: <b>if + past</b> (If a child got hurt), then <b>would + the clean verb</b> (I would call the parents). For advice: <b>If I were you, I would …</b>',
+  uso: { p: 'Your turn. Answer: What would you do if a child cried at night?', molde: ['If a child cried, I would …', 'I would …'], ex: 'If a child cried at night, I would go to his room. I would stay calm and sit with him.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

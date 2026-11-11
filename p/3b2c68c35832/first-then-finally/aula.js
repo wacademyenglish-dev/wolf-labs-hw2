@@ -15,12 +15,13 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'parque', rot: 'I · You and Your Stories', t: 'Before the film: your day, and the stories you like.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'video', est: 'l', min: 10, img: 'fonte', rot: 'II · The Short Film', t: 'A short film with no words and a busy little hero.', p: 'Four short chapters. There are no words: you are the voice of the film.' },
   { k: 'quadros', est: 'o', min: 7, img: 'fonte', rot: 'III · The Storyboard', t: 'Eight panels around the fountain, all mixed up.', p: 'Say what happened first, then next. Tap the panel. Then say it in one sentence.' },
-  { k: 'regra', est: 'f', min: 6, img: 'maquina', rot: 'IV · The Rule', t: 'A story: in the past, and in order.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'final', est: 'o', min: 7, img: 'maquina', rot: 'V · Change the Ending', t: 'The Wishgranter’s control panel. Eight “what if” cards.', p: 'Your teacher reads the card. Tell a new ending at once, in two sentences, with the notes.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'banco', rot: 'VI · Your Story', t: 'Your real life, told in order.', p: 'Pick a card. Tell it in three or four steps.' },
-  { k: 'sam', est: 'o', min: 7, extra: 1, img: 'parque', rot: 'VII · Tell a Friend', t: 'Sam missed class and wants the whole story.', p: 'Your teacher is Sam. Tell the film in order, then your new ending.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'moedas', rot: 'VIII · Quick Check', t: 'Six quick lines from the story.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · The End', t: 'Write a real story from your life.', p: 'Four steps, in the past, in order. The red line watches after, at the end and the verbs. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 3, img: 'fonte', rot: 'IV · The Story Line', t: 'Where does each sentence live in the story?', p: 'Tap a sentence, then its place on the line. Notice the first word. Then tell three steps of your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'maquina', rot: 'V · The Rule', t: 'A story: in the past, and in order.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'final', est: 'o', min: 7, img: 'maquina', rot: 'VI · Change the Ending', t: 'The Wishgranter’s control panel. Eight “what if” cards.', p: 'Your teacher reads the card. Tell a new ending at once, in two sentences, with the notes.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'banco', rot: 'VII · Your Story', t: 'Your real life, told in order.', p: 'Pick a card. Tell it in three or four steps.' },
+  { k: 'sam', est: 'o', min: 7, extra: 1, img: 'parque', rot: 'VIII · Tell a Friend', t: 'Sam missed class and wants the whole story.', p: 'Your teacher is Sam. Tell the film in order, then your new ending.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'moedas', rot: 'IX · Quick Check', t: 'Six quick lines from the story.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'X · The End', t: 'Write a real story from your life.', p: 'Four steps, in the past, in order. The red line watches after, at the end and the verbs. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -214,3 +215,19 @@ TOQUES['sm-prox'] = function () { S.sam.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
 /* dois erros com o mesmo código acendiam juntos: código único */
 [QUADROS, CARTAS].forEach(function (lista) { lista.forEach(function (x) { var visto = {}; x.ops.forEach(function (o) { if (visto[o[1]]) { var novo = o[1] + '2'; NOTA[novo] = NOTA[o[1]]; o[1] = novo; } visto[o[1]] = 1; }); }); });
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'The Wishgranter’s story on one line. Where does each sentence go?',
+  marcos: [{ t: 'THE START', s: 'First, …' }, { t: 'THE MIDDLE', s: 'Then … · Next, …' }, { t: 'THE END', s: 'Finally, … · In the end, …' }],
+  frases: [
+    { f: 'First, the Wishgranter worked under the fountain.', c: 0, d: 'First · worked' },
+    { f: 'At first, he worked alone.', c: 0, d: 'At first · worked' },
+    { f: 'Then coins fell into his machine.', c: 1, d: 'Then · fell' },
+    { f: 'Next, they threw their coins at the same time.', c: 1, d: 'Next · threw' },
+    { f: 'Finally, the man and the woman met.', c: 2, d: 'Finally · met' },
+    { f: 'In the end, two people met by the fountain.', c: 2, d: 'In the end · met' }
+  ],
+  nota: 'A story goes in order: <b>First</b>, then <b>Then / After that / Next</b>, and <b>Finally / In the end</b>. Every verb stays in the past: <b>worked, fell, threw, met</b>.',
+  uso: { p: 'Your turn. Tell your morning in three steps: First, Then, Finally.', molde: ['First, I …', 'Then I …', 'Finally, I …'], ex: 'First, I woke up at six. Then I made coffee. Finally, I took the bus to work.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

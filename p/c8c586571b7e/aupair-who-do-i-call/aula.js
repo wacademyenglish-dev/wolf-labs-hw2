@@ -15,10 +15,11 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 15, kick: 'AU PAIR · MODULE 4 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · Your Local Coordinator', t: 'What a local coordinator does.', p: 'One question before, then the video, then the questions.' },
-  { k: 'multipla', est: 'f', min: 12, img: 'capa', rot: 'II · Who Do I Call?', t: 'Eight situations. Who is the right call?', p: 'Choose. Then say why.' },
-  { k: 'ordem', est: 'o', min: 8, img: 'conversa', rot: 'III · A 911 Call', t: 'A clear emergency call, in order.', p: 'Tap the sentences in order. Then say the call out loud, slowly.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'IV · My Contacts', t: 'Write your safety contacts.', p: 'Who, what for, and the number. You will finish the card in Lesson 24.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 15: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Three Calls', t: 'Three situations, three phone numbers.', p: 'Read the three calls. Tap the right one for each new situation. Then say your own.' },
+  { k: 'multipla', est: 'f', min: 12, img: 'capa', rot: 'III · Who Do I Call?', t: 'Eight situations. Who is the right call?', p: 'Choose. Then say why.' },
+  { k: 'ordem', est: 'o', min: 8, img: 'conversa', rot: 'IV · A 911 Call', t: 'A clear emergency call, in order.', p: 'Tap the sentences in order. Then say the call out loud, slowly.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'V · My Contacts', t: 'Write your safety contacts.', p: 'Who, what for, and the number. You will finish the card in Lesson 24.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 15: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'HwxbBFkS7VM', titulo: 'InterExchange Au Pair USA Local Coordinators', fonte: 'INTEREXCHANGE · 1:33–3:05', inicio: 93, fim: 185,
@@ -61,3 +62,25 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 15: video · multipla · ordem · cartao (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de multipla.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Who do you call? Three kinds of situation.',
+  usos: [
+    { t: 'EMERGENCY', f: 'A child is hurt. There is a fire.', d: 'Danger now. Call <b>911</b> first.' },
+    { t: 'COORDINATOR', f: 'The host mom changed my hours again.', d: 'A problem in the house. Call your <b>local coordinator</b>.' },
+    { t: 'AGENCY', f: 'My coordinator doesn’t answer.', d: 'Call the <b>agency</b>. Then the State Department help line.' }
+  ],
+  pergunta: 'Who do you call?',
+  itens: [
+    { f: 'A child is not breathing.', c: 0, d: 'Danger now: 911.' },
+    { f: 'The host dad asks you to work 55 hours this week.', c: 1, d: 'A problem with the family: your coordinator first.' },
+    { f: 'You called your coordinator three times. No answer. The problem is still here.', c: 2, d: 'Go up: the agency.' },
+    { f: 'A car hits the school bus. People are hurt.', c: 0, d: 'People are hurt: 911.' },
+    { f: 'The family promised a private room, but there is no room.', c: 1, d: 'A problem in the house: your coordinator.' },
+    { f: 'Your coordinator says “I can’t help,” but you still need help.', c: 2, d: 'The agency, then the help line.' }
+  ],
+  nota: 'One question: how fast? <b>Danger now</b> = 911. <b>A problem in the house</b> = your coordinator. <b>The coordinator doesn’t help</b> = the agency, then the State Department help line.',
+  uso: { p: 'Your turn. Say who you call: one emergency, one problem with the family, and one thing your coordinator can’t solve.', molde: ['In an emergency, I call …', 'If the family …, I call …', 'If my coordinator doesn’t help, I call …'], ex: 'In an emergency, I call 911. If the family changes my hours, I call my coordinator. If my coordinator doesn’t help, I call the agency.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

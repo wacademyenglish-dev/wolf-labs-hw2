@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 4, kick: 'DUOLINGO ENGLISH TEST
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 8, img: 'conversa', rot: 'I · The Method', t: 'Four steps for three minutes.', p: 'Read the coach’s note out loud. Then answer the questions.' },
-  { k: 'lacunas', est: 'w', min: 14, img: 'capa', rot: 'II · Two Paragraphs', t: 'Three minutes each. Read first, then type.', p: 'Tap Start. Read the whole paragraph before the first gap.' },
-  { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Mistake Hunter', t: 'Six gaps filled the wrong way.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'lacunas', est: 'w', min: 14, img: 'capa', rot: 'III · Two Paragraphs', t: 'Three minutes each. Read first, then type.', p: 'Tap Start. Read the whole paragraph before the first gap.' },
+  { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'IV · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'A NOTE FROM YOUR COACH', tipo: 'nota',
@@ -46,3 +47,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 04: leitura · lacunas · erros (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de lacunas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six wrong answers in a gap.',
+  toque: 'These are wrong answers students type in a gap. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'Could you [[reminded]] me tomorrow?', r: 'Could you <b>remind</b> me tomorrow?', d: 'After could, the verb stays clean.' },
+    { f: 'The museum is [[close]] on Mondays.', r: 'The museum is <b>closed</b> on Mondays.', d: 'is + -ed: something is done to the museum.' },
+    { f: 'She has a lot of [[experienced]].', r: 'She has a lot of <b>experience</b>.', d: 'After a lot of: a noun.' },
+    { f: 'He speaks very [[clear]].', r: 'He speaks very <b>clearly</b>.', d: 'How does he speak? An adverb with -ly.' },
+    { f: 'She [[have]] a lot of friends.', r: 'She <b>has</b> a lot of friends.', d: 'She, he, it: has.' },
+    { f: 'We [[needs]] more time.', r: 'We <b>need</b> more time.', d: 'We, you, they: no -s.' }
+  ],
+  nota: 'Before you type, ask the grammar question: a verb (clean, -s, -ed, -ing)? A noun? An adverb with -ly? <b>The words around the gap</b> give the answer.',
+  uso: { p: 'Your turn. Three sentences, each with a clue before the gap: one with could, one with was + -ed, one with a lot of.', molde: ['Could you …?', 'It was …ed.', 'a lot of …'], ex: 'Could you help me? The class was cancelled. She has a lot of experience.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

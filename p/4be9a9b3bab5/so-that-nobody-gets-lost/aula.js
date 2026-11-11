@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'B2', unidade: 8, titulo: ['So That Nobody', 'G
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · The Ranger’s Notes', t: 'Why every marker is there.', p: 'Read the notes out loud with your teacher. Then look closer.' },
-  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'II · Purpose or Reason?', t: 'What for? Or why?', p: 'Read each sentence. Is it PURPOSE (para quê?) or REASON (por quê?)? Say why, then tap.' },
-  { k: 'transforma', est: 'f', min: 8, img: 'conversa', rot: 'III · Join the Ideas', t: 'Two sentences become one.', p: 'Read the two ideas. Use the clue. Say one sentence.' },
-  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'IV · Your Trail', t: 'Design a trail in a place you know.', p: 'Five lines: what you put there, and what for.' }
+  { k: 'gx', est: 'f', min: 5, img: 'capa', rot: 'II · Three Ways to Say What For', t: 'One question: what is it for?', p: 'Look at the three ways. Tap the way each sentence uses. Then say three of your own.' },
+  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'III · Purpose or Reason?', t: 'What for? Or why?', p: 'Read each sentence. Is it PURPOSE (para quê?) or REASON (por quê?)? Say why, then tap.' },
+  { k: 'transforma', est: 'f', min: 8, img: 'conversa', rot: 'IV · Join the Ideas', t: 'Two sentences become one.', p: 'Read the two ideas. Use the clue. Say one sentence.' },
+  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'V · Your Trail', t: 'Design a trail in a place you know.', p: 'Five lines: what you put there, and what for.' }
 ];
 var PORTAS = [];
 
@@ -58,3 +59,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* B2 · So That Nobody Gets Lost: leitura · separa · transforma · cartao */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'What is it for? Three ways on Ana’s trail.', usos: [{ t: 'SO THAT + SOMEONE', f: 'She put a lantern at the bridge so that hikers can see the path.', d: 'A new subject after so that: hikers. Then can, will or won’t.' }, { t: 'IN ORDER TO + VERB', f: 'She painted the markers red in order to make them easy to see.', d: 'The same person does both things, so we use to + verb.' }, { t: 'IN ORDER NOT TO + VERB', f: 'She built the path far from the river in order not to flood it.', d: 'A purpose with no: in order not to + verb.' }], pergunta: 'Which way is it?', itens: [{ f: 'The signs are in English so that tourists will understand them.', c: 0 }, { f: 'Ana walks the trail every morning in order to check the markers.', c: 1 }, { f: 'They closed the old path in order not to hurt the young trees.', c: 2 }, { f: 'There is a map at the gate so that nobody can get lost.', c: 0 }, { f: 'She wears orange in order to be seen from far away.', c: 1 }, { f: 'Walk in a group in order not to lose anyone.', c: 2 }], nota: 'Same question, <b>what for?</b> Different subject: <b>so that</b> + subject + can / will. Same subject: <b>in order to</b> + verb. With no: <b>in order not to</b> + verb. For a reason, not a purpose: <b>because</b>.', uso: { p: 'Your turn. You design a trail. Say three sentences: what you put there, and what for.', molde: ['I would put … so that …', 'I would paint … in order to …', '… in order not to …'], ex: 'I would put a bench at the top so that people can rest. I would paint the stones white in order to see them at night. I would add a fence in order not to lose children.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

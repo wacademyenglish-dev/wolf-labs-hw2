@@ -26,12 +26,13 @@ var L = [
   { k: 'numero', est: 'l', min: 7, img: 'quarto', rot: 'II · Guess the Number', t: 'Five numbers about phones and people. You guess first; the recording answers.', p: 'Guess out loud. Tap your guess. Play the answer. Then do the Your turn line.' },
   { k: 'gauge', est: 'o', min: 7, img: 'mesa2', rot: 'III · The Gauge', t: 'Six gauges of your day. Somewhere on each one, a good amount stops being good.', p: 'Tap your real number. The needle moves. Read the sentence out loud, all of it.' },
   { k: 'dois', est: 'o', min: 7, extra: 1, img: 'mesa2', rot: 'IV · Same Number, Two People', t: 'One number, two different people. The number doesn’t change; the words do.', p: 'Read each person. Pick a label for them: it’s your opinion. Then say why.' },
-  { k: 'erros', est: 'f', min: 6, img: 'quarto', rot: 'V · Count It First', t: 'Before you pick much or many, ask one question: can I count it?', p: 'Find the broken part in each line. Say the fix. The rule is in the corner. Then tap Check.' },
-  { k: 'post', est: 'o', min: 7, img: 'mesa2', rot: 'VI · Eighty Against a Third', t: 'Online, about 80% of what we say is about ourselves. Face to face, about a third.', p: 'Tell each story twice: first as a post, then as if your teacher were across the table.' },
-  { k: 'escuro', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'VII · The Screen Goes Dark', t: 'The gauge goes dark. Look away and talk.', p: 'Nothing to read here.' },
-  { k: 'amigo', est: 'o', min: 7, extra: 1, img: 'bolso', rot: 'VIII · A Tired Friend', t: 'Four friends tell you about their week.', p: 'Match each friend to the problem. Then give each one a piece of advice out loud. Your teacher plays the friend.' },
-  { k: 'falta', est: 'f', min: 6, extra: 1, img: 'janela', rot: 'IX · What Isn’t Enough', t: 'Not enough is a complaint, and a complaint needs a reason.', p: 'Tap a word, then its box: does ENOUGH go before it or after it? Then say a complaint with each one.' },
-  { k: 'fim', est: 'w', min: 6, img: 'manha', rot: 'X · Your Gauge Again', t: 'Your five guesses from scene I come back.', p: 'Write your own gauge: one too much, one too many, one not enough, one just enough. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'quarto', rot: 'V · The Late Call', t: 'Ana and you, on the phone. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then say your own.' },
+  { k: 'erros', est: 'f', min: 6, img: 'quarto', rot: 'VI · Count It First', t: 'Before you pick much or many, ask one question: can I count it?', p: 'Find the broken part in each line. Say the fix. The rule is in the corner. Then tap Check.' },
+  { k: 'post', est: 'o', min: 7, img: 'mesa2', rot: 'VII · Eighty Against a Third', t: 'Online, about 80% of what we say is about ourselves. Face to face, about a third.', p: 'Tell each story twice: first as a post, then as if your teacher were across the table.' },
+  { k: 'escuro', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'VIII · The Screen Goes Dark', t: 'The gauge goes dark. Look away and talk.', p: 'Nothing to read here.' },
+  { k: 'amigo', est: 'o', min: 7, extra: 1, img: 'bolso', rot: 'IX · A Tired Friend', t: 'Four friends tell you about their week.', p: 'Match each friend to the problem. Then give each one a piece of advice out loud. Your teacher plays the friend.' },
+  { k: 'falta', est: 'f', min: 6, extra: 1, img: 'janela', rot: 'X · What Isn’t Enough', t: 'Not enough is a complaint, and a complaint needs a reason.', p: 'Tap a word, then its box: does ENOUGH go before it or after it? Then say a complaint with each one.' },
+  { k: 'fim', est: 'w', min: 6, img: 'manha', rot: 'XI · Your Gauge Again', t: 'Your five guesses from scene I come back.', p: 'Write your own gauge: one too much, one too many, one not enough, one just enough. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -196,3 +197,26 @@ TOQUES['gg-v'] = function (b, n) { S.gg.val[S.gg.sel] = n; };
 TOQUES.dd = function (b, n, v) { var p = v.split(':'); S.dd[p[0]] = p[1]; };
 TOQUES['dd-prox'] = function () { S.dd = { n: S.dd.n + 1, a: '', b: '' }; };
 TOQUES['ps-prox'] = function () { S.ps.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de erros.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'A late call. Tap the lit words.',
+  falas: [
+    { q: 'Ana', f: 'I’m so tired. I drank [[too much]] coffee today.' },
+    { q: 'You', f: 'And I bet you have [[too many]] meetings.' },
+    { q: 'Ana', f: 'Yes! Do you think I have [[enough]] time to sleep?' },
+    { q: 'You', f: 'No. The days aren’t [[long enough]].' },
+    { q: 'Ana', f: 'And my phone is [[too loud]] at night.' },
+    { q: 'You', f: 'Turn it off. One hour without it is [[enough]].' }
+  ],
+  porques: [
+    'Coffee: you can’t count it. too much + a thing you can’t count.',
+    'Meetings: you can count them. too many + more than one.',
+    'enough goes before a noun: enough time.',
+    'enough goes after an adjective: long enough.',
+    'too + an adjective: too loud. No much, no many.',
+    'enough can stand alone: One hour is enough.'
+  ],
+  nota: 'Can you count it? Yes: <b>too many</b> (meetings). No: <b>too much</b> (coffee). <b>enough</b> goes before a noun, and after an adjective. <b>too</b> + adjective, never much or many.',
+  uso: { p: 'Your turn. Your day: one too much, one too many, and one not enough.', molde: ['I drink too much …', 'I have too many …', 'I don’t have enough …'], ex: 'I drink too much coffee. I have too many emails. I don’t have enough time for the gym.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

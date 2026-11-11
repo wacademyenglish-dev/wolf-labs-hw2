@@ -16,10 +16,11 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 7, img: 'conversa', rot: 'I · Your Weather, Your Coffee', t: 'Before the words: you.', p: 'Answer with detail. Then ask the question back.' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · The Blog', t: '48 hours in a very wet Lisbon.', p: 'Read it out loud. Answer the questions. Then find the word pairs.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Which One Sounds Native?', t: 'Two sentences. Both are “correct”. One is natural.', p: 'Compare A and B. Which one would a native say? Why?' },
-  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'IV · Upgrade It', t: 'Make it sound native.', p: 'Read the plain sentence. Use the clue. Say the upgraded version.' },
-  { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'V · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'VI · Your Review', t: 'Write a short review, native style.', p: 'A place you visited: four lines, at least four word pairs from today.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'III · Right, Not This', t: 'Six pairs from Lisbon. One sounds native.', p: 'Read both out loud. Tap the natural one. The other one gets crossed out.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'IV · Which One Sounds Native?', t: 'Two sentences. Both are “correct”. One is natural.', p: 'Compare A and B. Which one would a native say? Why?' },
+  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'V · Upgrade It', t: 'Make it sound native.', p: 'Read the plain sentence. Use the clue. Say the upgraded version.' },
+  { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'VI · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'VII · Your Review', t: 'Write a short review, native style.', p: 'A place you visited: four lines, at least four word pairs from today.' }
 ];
 var PORTAS = [];
 
@@ -79,3 +80,9 @@ var PARES = [
   ['bitterly', 'disappointed', 'The fans were bitterly disappointed with the result.'],
   ['highly', 'qualified', 'She’s highly qualified for the job.'],
   ['a narrow', 'escape', 'The car missed us by a metre: a narrow escape!']];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the natural one.', pares: [{ c: 'It was heavy rain all weekend.', x: 'It was strong rain all weekend.', d: 'Rain is heavy, not strong. Coffee is strong.' }, { c: 'I am deeply grateful for your help.', x: 'I am very grateful for your help.', d: 'Very is correct but flat. <b>Deeply</b> grateful has weight.' }, { c: 'It was bitterly cold on the tram.', x: 'It was very cold on the tram.', d: 'Bitterly cold: the pair native speakers expect.' }, { c: 'The restaurant is highly recommended.', x: 'The restaurant is strongly recommended.', d: 'Highly + recommended, unlikely, successful.' }, { c: 'We had a narrow escape from the storm.', x: 'We had a small escape from the storm.', d: 'A narrow escape: a close call.' }, { c: 'I grabbed a quick bite near the river.', x: 'I grabbed a fast bite near the river.', d: 'A quick bite, a quick look. Fast is for speed.' }], nota: 'A word <b>pairs</b> with some words and not with others. Learn them together: <b>heavy rain</b>, <b>strong coffee</b>, <b>deeply grateful</b>, <b>bitterly cold</b>, <b>highly unlikely</b>. A direct translation sounds plain.', uso: { p: 'Your turn. Describe the weather and a drink from your last trip. Use two word pairs from the pairs above.', molde: ['It was … rain / cold …', 'I had … coffee …'], ex: 'It was bitterly cold, and the rain was heavy. I had a strong coffee and was deeply happy to sit down.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

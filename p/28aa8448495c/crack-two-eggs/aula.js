@@ -17,13 +17,14 @@ var L = [
   { k: 'capa', est: null, img: 'panquecas' },
   { k: 'voce', est: 'o', min: 7, img: 'geladeira', rot: 'I · Your Kitchen', t: 'Do you cook?', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
   { k: 'fichas', est: 'o', min: 7, img: 'capa', rot: 'II · The Recipe Cards', t: 'Eight recipe cards. Look at the picture. Say the order.', p: 'Pick a card. Say the order out loud. Then tap your sentence: a right one goes on the recipe.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mistura', rot: 'III · The Rule', t: 'An order is the verb alone.', p: 'Read the three cards out loud. Then fix the four traps.' },
-  { k: 'video', est: 'l', min: 10, img: 'panquecas', rot: 'IV · The Silent Video', t: 'The video has no voice. You are the chef.', p: 'Play a chapter. Then give the orders out loud, like a TV chef. Then tap your sentence.' },
-  { k: 'perigo', est: 'o', min: 7, img: 'fogo', rot: 'V · Kitchen Dangers', t: 'Five dangers in the kitchen. Warn your friend.', p: 'Pick a danger. Say the warning with DON’T. A right one puts up the sign.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'VI · House Rules', t: 'Every house has rules.', p: 'Spin the wheel. Say one DO and one DON’T. Then your teacher says theirs.' },
-  { k: 'sam', est: 'o', min: 7, extra: 1, img: 'ovos', rot: 'VII · Sam Can’t Cook', t: 'Your friend Sam has a date tonight. He can’t cook.', p: 'Your teacher is Sam. Give him the orders. Then ask him a question back.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'panquecas', rot: 'VIII · Quick Check', t: 'Six quick orders from the kitchen.', p: 'Say the whole sentence first. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'panquecas', rot: 'IX · Your Recipe', t: 'Your favorite easy recipe, on a card.', p: 'Write the orders: First… Then… Next… Finally… And one Don’t. The red line watches the verbs. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mistura', rot: 'III · Find the Rule', t: 'Four orders from the silent kitchen. You find the rule.', p: 'Read the four orders out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mistura', rot: 'IV · The Rule', t: 'An order is the verb alone.', p: 'Read the three cards out loud. Then fix the four traps.' },
+  { k: 'video', est: 'l', min: 10, img: 'panquecas', rot: 'V · The Silent Video', t: 'The video has no voice. You are the chef.', p: 'Play a chapter. Then give the orders out loud, like a TV chef. Then tap your sentence.' },
+  { k: 'perigo', est: 'o', min: 7, img: 'fogo', rot: 'VI · Kitchen Dangers', t: 'Five dangers in the kitchen. Warn your friend.', p: 'Pick a danger. Say the warning with DON’T. A right one puts up the sign.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'VII · House Rules', t: 'Every house has rules.', p: 'Spin the wheel. Say one DO and one DON’T. Then your teacher says theirs.' },
+  { k: 'sam', est: 'o', min: 7, extra: 1, img: 'ovos', rot: 'VIII · Sam Can’t Cook', t: 'Your friend Sam has a date tonight. He can’t cook.', p: 'Your teacher is Sam. Give him the orders. Then ask him a question back.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'panquecas', rot: 'IX · Quick Check', t: 'Six quick orders from the kitchen.', p: 'Say the whole sentence first. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'panquecas', rot: 'X · Your Recipe', t: 'Your favorite easy recipe, on a card.', p: 'Write the orders: First… Then… Next… Finally… And one Don’t. The red line watches the verbs. It goes to your My notes.' }
 ];
 
 /* I · a sua cozinha */
@@ -228,3 +229,19 @@ TOQUES['rd-gira'] = function () { S.roda.giros++; };
 TOQUES['rd-foi'] = function () { var r = S.roda; r.foi[(r.giros * 3 - 3) % FATIAS.length] = 1; };
 TOQUES.qz = function (b, n) { if (S.quiz.esc === 0) return false; S.quiz.esc = n; };
 TOQUES['qz-prox'] = function () { S.quiz = { n: S.quiz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four orders from the kitchen. Find the rule yourself.',
+  exemplos: [
+    '<b>Crack</b> two eggs.',
+    '<b>Stir</b> the mix.',
+    '<b>Don’t touch</b> the hot pan.',
+    '<b>Please add</b> some milk.'
+  ],
+  pergunta: 'An order for a friend: the verb …',
+  opcoes: ['comes alone, first: no you, no to, no -s', 'needs you first: You crack two eggs', 'needs to: To crack two eggs'], c: 0,
+  nao: 'Not that one. Read the four orders again: is there a you? a to?',
+  regra: '<b>An order = the verb alone.</b> Crack two eggs. No you, no to, no -s. For no: <b>Don’t + verb</b>. To be polite: <b>please</b>.',
+  uso: { p: 'Your turn. Tell a friend how to make a sandwich. Three orders, and one Don’t.', molde: ['First, …', 'Then …', 'Don’t …'], ex: 'First, cut the bread. Then put the cheese on it. Don’t burn it!' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

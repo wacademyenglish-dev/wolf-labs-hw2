@@ -13,11 +13,12 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'palavras', est: 'f', min: 3, img: 'conversa', rot: 'I · Read and Select', t: 'Real words only.', p: 'One round, one minute.' },
   { k: 'lacunas', est: 'w', min: 7, img: 'capa', rot: 'II · Fill in and Complete', t: 'Three sentences, then a paragraph.', p: 'Twenty seconds per sentence. Three minutes for the paragraph.' },
-  { k: 'ditado', est: 'l', min: 5, img: 'conversa', rot: 'III · Listen and Type', t: 'Three sentences. Up to three plays each.', p: 'Type every word.' },
+  { k: 'ditado', est: 'l', extra: 1, min: 5, img: 'conversa', rot: 'III · Listen and Type', t: 'Three sentences. Up to three plays each.', p: 'Type every word.' },
   { k: 'multipla', est: 'l', min: 7, img: 'capa', rot: 'IV · Listening and Reading', t: 'A phone call, then a short text.', p: 'Listen once to each line. Then read and choose.' },
   { k: 'prova', est: 'o', min: 22, img: 'conversa', rot: 'V · Speaking and Writing', t: 'Six tasks with the real clock.', p: 'Two photos, a paragraph, two questions and the speaking sample.' },
-  { k: 'cartao', est: 'w', min: 6, img: 'capa', rot: 'VI · Your Test-Day Plan', t: 'Write your plan.', p: 'Five lines: the week before, the day before, the room, the day, during the test.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VII · Ready', t: 'The course is done. Are you ready?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'VI · The Plan Line', t: 'Where does each step of the plan go?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say your own plan.' },
+  { k: 'cartao', est: 'w', min: 6, img: 'capa', rot: 'VII · Your Test-Day Plan', t: 'Write your plan.', p: 'Five lines: the week before, the day before, the room, the day, during the test.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VIII · Ready', t: 'The course is done. Are you ready?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PALAVRAS = { seg: 60, fim: 'Part I done.', rodadas: [
@@ -78,3 +79,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 16 · simulado 2 + o plano: palavras · lacunas · ditado · multipla · prova · cartao (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de cartao.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'A test-day plan on one line. Where does each step go?',
+  marcos: [{ t: 'THE WEEK BEFORE', s: 'practice' }, { t: 'THE DAY BEFORE', s: 'check everything' }, { t: 'ON THE DAY', s: 'the test' }],
+  frases: [
+    { f: 'I do one practice a day, the weak part first.', c: 0, d: 'every day, before the test' },
+    { f: 'I take a full mock test on the weekend.', c: 0, d: 'the week before' },
+    { f: 'I check my ID, my camera and my microphone.', c: 1, d: 'the day before' },
+    { f: 'I test my internet and choose a quiet room.', c: 1, d: 'the day before' },
+    { f: 'I put my phone in another room.', c: 2, d: 'on the day' },
+    { f: 'I use all the time and keep talking until the clock stops.', c: 2, d: 'during the test' }
+  ],
+  nota: 'A plan is a line with three marks: <b>the week before</b>, <b>the day before</b>, <b>on the day</b>. Use the simple present: I check, I take, I put. And read the official rules before you book.',
+  uso: { p: 'Your turn. Your own plan in three lines.', molde: ['The week before, I …', 'The day before, I …', 'On the day, I …'], ex: 'The week before, I do one practice a day. The day before, I check my ID. On the day, I drink water and stay calm.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

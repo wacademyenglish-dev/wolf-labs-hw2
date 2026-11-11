@@ -33,10 +33,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Pluribus. The official trailer.', p: 'Pick a spot first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'casa', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 7, img: 'cidade', rot: 'V · The Little Word', t: 'A note under Carol’s door. Find the six verbs.', p: 'Read the note out loud. Tap the six verbs. Then finish the rule.' },
-  { k: 'mapa', est: 'o', min: 7, img: 'capa', rot: 'VI · The Happy Map', t: 'Each sentence spreads the smile to a neighborhood.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'dias', est: 'o', min: 7, img: 'casa', rot: 'VII · Your Bad Days', t: 'Three people need you. How do you answer?', p: 'Pick how you answer. Then read the talk out loud.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · A Note for a Bad Day', t: 'Write a note for a friend on a bad day.', p: 'Use three of the verbs. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cidade', rot: 'V · Right, Not This', t: 'Six small orders. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'regra', est: 'f', min: 7, img: 'cidade', rot: 'VI · The Little Word', t: 'A note under Carol’s door. Find the six verbs.', p: 'Read the note out loud. Tap the six verbs. Then finish the rule.' },
+  { k: 'mapa', est: 'o', min: 7, img: 'capa', rot: 'VII · The Happy Map', t: 'Each sentence spreads the smile to a neighborhood.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'dias', est: 'o', min: 7, img: 'casa', rot: 'VIII · Your Bad Days', t: 'Three people need you. How do you answer?', p: 'Pick how you answer. Then read the talk out loud.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · A Note for a Bad Day', t: 'Write a note for a friend on a bad day.', p: 'Use three of the verbs. It goes to your My notes.' }
 ];
 
 var SERIE = 'Pluribus', ANO = '2025';
@@ -237,3 +238,18 @@ var AQ = { tipo: 'dado', rot: 'I · The Bad Day Die', t: 'Before the trailer: yo
     { q: 'What do you do to cheer a friend up?', ex: 'I cook for them.' }
   ] };
 /*AQ@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'Cheer her up.', x: 'Cheer up her.', d: 'A pronoun goes in the middle.' },
+    { c: 'Please turn it off.', x: 'Please turn off it.', d: 'It goes between turn and off.' },
+    { c: 'Can you pick me up?', x: 'Can you pick up me?', d: 'Me goes in the middle too.' },
+    { c: 'Give it back.', x: 'Give back it.', d: 'A pronoun never goes at the end here.' },
+    { c: 'Look it up.', x: 'Look up it.', d: 'Look it up: the pronoun in the middle.' },
+    { c: 'Put it on.', x: 'Put on it.', d: 'Put it on.' }
+  ],
+  nota: 'With a pronoun (<b>it, her, me, them</b>), the little word waits at the end: cheer <b>her</b> up, turn <b>it</b> off. With a noun, both are fine: turn off the TV, turn the TV off.',
+  uso: { p: 'Your turn. Help a friend who is having a bad day. Say three things you will do, with a pronoun in the middle.', molde: ['I’ll cheer … up.', 'I’ll pick … up.', 'I’ll turn … off.'], ex: 'I’ll cheer her up. I’ll pick her up at six. I’ll turn it off, the TV is too loud.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

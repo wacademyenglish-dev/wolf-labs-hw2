@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · Postcards', t: 'Three friends call from far away.', p: 'Ask each friend five questions. Your teacher is the friend. Then tell your family the news.' },
   { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose one.', p: 'Choose one. Then say it with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Postcard Pairs', t: 'Five lines for your postcards.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -71,3 +72,9 @@ var PODE = [
 var PARES = [['big', 'bigger'], ['good', 'better'], ['bad', 'worse'], ['hot', 'the hottest'], ['expensive', 'more expensive'], ['quick', 'quickly']];
 PARES = PARES.map(function (p, i) { return [p[0], p[1], ['My city is bigger than yours!', 'Summer is better than winter.', 'Rain is worse than cold.', 'January is the hottest month here.', 'London is more expensive than Lisbon.', 'She speaks very quickly.'][i]]; });
 var ESCOLHA = [{ a: 'a hot beach', b: 'a cold mountain', chips: ['I prefer …', 'because it’s …er'], ex: 'A hot beach, because it’s more relaxing.' }, { a: 'London', b: 'Tokyo', chips: ['… is better', 'because …'], ex: 'Tokyo, because the food is the best!' }, { a: 'travel by train', b: 'travel by plane', chips: ['By …', 'because it’s faster / cheaper'], ex: 'By plane, because it’s faster.' }, { a: 'stay in bed with a cold', b: 'go to work with a cold', chips: ['I …', 'so / because …'], ex: 'Stay in bed, because I feel terrible.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'It’s very hot.', x: 'Is very hot.', d: 'The weather: <b>It’s</b> …' }, { c: 'Lisbon is bigger than Rio.', x: 'Lisbon is more big than Rio.', d: 'A short adjective: big + <b>-er</b>.' }, { c: 'I sleep well.', x: 'I sleep good.', d: 'How you do it: <b>well</b>.' }, { c: 'I have a headache.', x: 'I’m with headache.', d: 'Health: <b>I have</b> a …' }, { c: 'It’s the best hotel.', x: 'It’s the most good hotel.', d: 'good → the <b>best</b>.' }], nota: 'The weather starts with <b>It’s</b>. A short word + <b>-er</b>: bigger. <b>Good</b> is a thing; <b>well</b> is an action. Pain: <b>I have</b> a headache.', uso: { p: 'Your turn. Write a postcard: the weather, how you feel, and one comparison.', molde: ['It’s … and …', 'I feel …', '… is bigger / better than …'], ex: 'It’s hot and sunny. I feel great. This beach is better than the one in my city.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

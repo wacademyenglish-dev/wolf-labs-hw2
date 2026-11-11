@@ -16,9 +16,10 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Lost in Explanation', t: 'When did someone confuse you?', p: 'Answer with detail. Then ask the question back.' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · The Appointment', t: 'A very confused client.', p: 'Read the conversation out loud with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Same Idea, Clearer', t: 'What does each phrase do?', p: 'Compare A and B. What is the speaker doing in B?' },
-  { k: 'rapido', est: 'f', min: 6, img: 'capa', rot: 'IV · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
-  { k: 'cadeira', est: 'o', min: 9, img: 'conversa', rot: 'V · Explain It to Me', t: 'I explain badly. You make me rephrase.', p: 'Your teacher explains something in a complicated way. Ask for clarity, then rephrase it yourself.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'III · The Appointment', t: 'The adviser and the client. Some phrases are lit.', p: 'Read it together. Tap the lit words: what is the speaker doing? Then say two lines of your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'IV · Same Idea, Clearer', t: 'What does each phrase do?', p: 'Compare A and B. What is the speaker doing in B?' },
+  { k: 'rapido', est: 'f', min: 6, img: 'capa', rot: 'V · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
+  { k: 'cadeira', est: 'o', min: 9, img: 'conversa', rot: 'VI · Explain It to Me', t: 'I explain badly. You make me rephrase.', p: 'Your teacher explains something in a complicated way. Ask for clarity, then rephrase it yourself.' }
 ];
 var PORTAS = [];
 
@@ -62,3 +63,9 @@ var CADEIRA = { itens: [
   { alvo: 'Summarize what I just said, starting with “So, if I understand correctly…”', dica: 'So, if I understand correctly, …', resp: 'Exactly! You understood perfectly.' },
   { alvo: 'Ask me to explain a word I use.', dica: 'What do you mean by “…”?', resp: 'Good question. Let me rephrase that.' },
   { alvo: 'Explain your own job in one complicated sentence, then simply.', dica: 'In my job I… To put it simply, …', resp: 'Ah, now I get it. In other words, you…' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'At the bank. Tap the lit words.', falas: [{ q: 'Adviser', f: 'The fund has a variable yield with a floating rate.' }, { q: 'Client', f: '[[What exactly do you mean by]] floating?' }, { q: 'Adviser', f: '[[In other words]], the rate goes up and down. [[Let me rephrase that]]: it is not fixed.' }, { q: 'Client', f: '[[Are you saying that]] I could lose money?' }, { q: 'Adviser', f: '[[What I mean is]] it depends. Or [[rather]], it depends on the market.' }, { q: 'Client', f: 'Could you [[put it simply]]?' }, { q: 'Adviser', f: '[[To put it another way]]: it is not a savings account.' }], porques: ['A polite way to ask what a word means. By + the word.', 'It repeats the idea in simpler words.', 'The speaker offers a new version. No “or be”.', 'You check if you understood. Are you saying that + a clause.', 'It clarifies what the speaker wants to say. Not “I want to say”.', 'A correction in the middle of the sentence: or rather.', 'You ask for a simple version: put it simply.', 'A new angle on the same idea. Not “in other way”.'], nota: 'To make an idea clearer: <b>In other words, …</b>, <b>That is to say, …</b>, <b>What I mean is …</b>, <b>To put it another way, …</b>. To ask for it: <b>What exactly do you mean by …?</b>, <b>Are you saying that …?</b>', uso: { p: 'Your turn. Explain something from your work in a hard way, then rephrase it for a friend in simple words.', molde: ['In other words, …', 'What I mean is …', 'To put it simply, …'], ex: 'We reduced our operating costs. In other words, we spend less every month. To put it simply, we have more money.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

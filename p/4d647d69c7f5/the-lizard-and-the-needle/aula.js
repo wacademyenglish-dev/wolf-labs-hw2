@@ -22,14 +22,15 @@ var L = [
   { k: 'capa', est: null, img: 'lagarto' },
   { k: 'geladeira', est: 'o', min: 7, img: 'cozinha', rot: 'I · The Fridge Poll', t: 'Before the science: you and food.', p: 'Five notes on the fridge. Tap one, answer out loud, then the follow-up.' },
   { k: 'sinal', est: 'l', min: 7, img: 'bancada', rot: 'II · The Two-Minute Signal', t: 'A researcher explains why your own hormone is useless as a medicine.', p: 'Listen once. Four questions. Then one sentence with a lever.' },
-  { k: 'alavancas', est: 'f', min: 6, img: 'caneta', rot: 'III · The Four Levers', t: 'Four levers, four molds. Each one changes what comes after the person.', p: 'Read who, the lever, whom and the action. Say the sentence. Your teacher taps what they heard.' },
-  { k: 'cadeia', est: 'o', min: 7, img: 'deserto', rot: 'IV · The Mechanism Chain', t: 'From your plate to a desert in 1992. Six links.', p: 'Read what happens. Choose the lever. Then say the whole sentence.' },
-  { k: 'ruido', est: 'l', min: 7, img: 'cozinha', rot: 'V · Food Noise', t: 'A person who uses the pen describes the strangest effect.', p: 'Listen once. Three questions, then two about you.' },
-  { k: 'mito', est: 'f', min: 6, extra: 1, img: 'caneta', rot: 'VI · Myth or Mechanism?', t: 'Six things people say about the pen. Which are true?', p: 'Read it out loud and decide. If it’s a myth, say the true sentence.' },
-  { k: 'curva', est: 'l', min: 7, extra: 1, img: 'frasco', rot: 'VII · When People Stop', t: 'A doctor talks about a study: what happens when people stop the pen.', p: 'Listen once. Four questions. The curve appears as you answer.' },
-  { k: 'painel', est: 'o', min: 7, extra: 1, img: 'bancada', rot: 'VIII · The Panel', t: 'Should the pen be sold to everyone, without a doctor?', p: 'Choose your side. Your teacher plays four people. Answer each one with two different levers.' },
-  { k: 'regras', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'IX · Your Own Rules', t: 'No science now. Your rules, your family, your habits.', p: 'Four questions. Answer, then the follow-up. The last one, you ask.' },
-  { k: 'fim', est: 'w', min: 6, img: 'lagarto', rot: 'X · Close the Leaflet', t: 'The leaflet closes. Now you write your own.', p: 'Explain the pen in four sentences, one lever each. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'caneta', rot: 'III · The Levers in Blocks', t: 'The lever, the person, the action.', p: 'Read the blocks out loud. Notice what comes after the person. Then build a sentence and say your own.' },
+  { k: 'alavancas', est: 'f', min: 6, img: 'caneta', rot: 'IV · The Four Levers', t: 'Four levers, four molds. Each one changes what comes after the person.', p: 'Read who, the lever, whom and the action. Say the sentence. Your teacher taps what they heard.' },
+  { k: 'cadeia', est: 'o', min: 7, img: 'deserto', rot: 'V · The Mechanism Chain', t: 'From your plate to a desert in 1992. Six links.', p: 'Read what happens. Choose the lever. Then say the whole sentence.' },
+  { k: 'ruido', est: 'l', min: 7, img: 'cozinha', rot: 'VI · Food Noise', t: 'A person who uses the pen describes the strangest effect.', p: 'Listen once. Three questions, then two about you.' },
+  { k: 'mito', est: 'f', min: 6, extra: 1, img: 'caneta', rot: 'VII · Myth or Mechanism?', t: 'Six things people say about the pen. Which are true?', p: 'Read it out loud and decide. If it’s a myth, say the true sentence.' },
+  { k: 'curva', est: 'l', min: 7, extra: 1, img: 'frasco', rot: 'VIII · When People Stop', t: 'A doctor talks about a study: what happens when people stop the pen.', p: 'Listen once. Four questions. The curve appears as you answer.' },
+  { k: 'painel', est: 'o', min: 7, extra: 1, img: 'bancada', rot: 'IX · The Panel', t: 'Should the pen be sold to everyone, without a doctor?', p: 'Choose your side. Your teacher plays four people. Answer each one with two different levers.' },
+  { k: 'regras', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'X · Your Own Rules', t: 'No science now. Your rules, your family, your habits.', p: 'Four questions. Answer, then the follow-up. The last one, you ask.' },
+  { k: 'fim', est: 'w', min: 6, img: 'lagarto', rot: 'XI · Close the Leaflet', t: 'The leaflet closes. Now you write your own.', p: 'Explain the pen in four sentences, one lever each. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -263,3 +264,17 @@ TOQUES['pa-lado'] = function (b, n, v) { S.pa.lado = v; };
 TOQUES['pa-r'] = function (b, n) { S.pa.r = n; };
 TOQUES['pa-l'] = function (b, n, v) { var o = S.pa.ouv[S.pa.r] = S.pa.ouv[S.pa.r] || {}; if (o[v]) delete o[v]; else o[v] = 1; };
 TOQUES['pa-ver'] = function (b, n, v) { S.pa.ver = v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de alavancas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Four levers, in blocks. Each block has a job.',
+  frases: [
+    { b: [['The pen', 'WHO'], ['makes', 'LEVER', 'aux'], ['me', 'WHOM', 'quem'], ['feel', 'ACTION'], ['full', 'HOW']], d: 'make + person + a clean verb.' },
+    { b: [['My doctor', 'WHO'], ['lets', 'LEVER', 'aux'], ['me', 'WHOM', 'quem'], ['eat', 'ACTION'], ['pasta', 'WHAT']], d: 'let + person + a clean verb.' },
+    { b: [['The pen', 'WHO'], ['helps', 'LEVER', 'aux'], ['me', 'WHOM', 'quem'], ['stop', 'ACTION'], ['snacking', 'WHAT']], d: 'help + person + a verb. The to is optional.' },
+    { b: [['The pen', 'WHO'], ['stops', 'LEVER', 'aux'], ['me', 'WHOM', 'quem'], ['from eating', 'FROM + ING', 'acao'], ['at night', 'WHEN']], d: 'stop + person + from + -ing.' }
+  ],
+  nota: 'After <b>make</b> and <b>let</b>: the person and a clean verb, no to. After <b>help</b>: a verb, with or without to. After <b>stop</b>: <b>from</b> + -ing.',
+  monta: { p: 'Build the next line from the leaflet. Then say it.', pecas: [['me', 'WHOM', 'quem'], ['makes', 'LEVER', 'aux'], ['eat less', 'ACTION'], ['The pen', 'WHO']], ordem: [3, 1, 0, 2], outras: [] },
+  uso: { p: 'Your turn. Two sentences about people and rules in your life: one with make or let, one with stop.', molde: ['My boss makes me …', 'My mother never lets me …', 'Rain stops me from …'], ex: 'My boss makes me wear a tie. Rain stops me from running outside.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

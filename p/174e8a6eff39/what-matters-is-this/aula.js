@@ -36,11 +36,12 @@ var L = [
   { k: 'palavras', est: 'l', img: 'plateia', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'plateia', rot: 'III · The Talk', t: 'A teacher and poet on stage: the danger of silence.', p: 'Answer first. Then four short chapters: read the task before you play, tap the answer. Tap ▶ to hear a moment again.' },
   { k: 'falas', est: 'l', extra: 1, img: 'plateia', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'desmonte', est: 'o', min: 7, img: 'microfone', rot: 'V · The Teardown', t: 'Rosa runs a library on wheels. Her pitch is true, but it’s flat.', p: 'Read Rosa’s flat line. Say it again out loud with the frame, the light on the right words. Then tap Check.' },
-  { k: 'regra', est: 'f', min: 6, img: 'roteiro', rot: 'VI · Rosa’s Final Draft', t: 'The night of the show. Every frame holds the idea back, then lands on it.', p: 'Read Rosa’s pitch out loud. Tap the six frames. Then finish the rule.' },
-  { k: 'sessenta', est: 'o', min: 7, img: 'holofote', rot: 'VII · Sixty Seconds', t: 'Six speakers, six flat lines. Fix each one in one breath.', p: 'Read the flat line. The student says it again at once with the frame, then taps Check.' },
-  { k: 'pitch', est: 'o', min: 7, img: 'microfone', rot: 'VIII · Your Sixty Seconds', t: 'Your turn under the light. Pick a real cause: something your town, school or company should fund, fix or save.', p: 'Build it beat by beat. Then the whole pitch, in under sixty seconds.' },
-  { k: 'fim', est: 'w', min: 6, img: 'cortina', rot: 'IX · The Ghost Light', t: 'What is one thing you would never stay silent about?', p: 'Write your pitch. It goes to your My notes.' }
+  { k: 'desmonte', est: 'o', extra: 1, min: 7, img: 'microfone', rot: 'V · The Teardown', t: 'Rosa runs a library on wheels. Her pitch is true, but it’s flat.', p: 'Read Rosa’s flat line. Say it again out loud with the frame, the light on the right words. Then tap Check.' },
+  { k: 'gx', est: 'f', min: 4, img: 'roteiro', rot: 'VI · The Flip', t: 'Watch the idea move to the end.', p: 'Flip each flat sentence. Notice where the big idea lands. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'roteiro', rot: 'VII · Rosa’s Final Draft', t: 'The night of the show. Every frame holds the idea back, then lands on it.', p: 'Read Rosa’s pitch out loud. Tap the six frames. Then finish the rule.' },
+  { k: 'sessenta', est: 'o', min: 7, img: 'holofote', rot: 'VIII · Sixty Seconds', t: 'Six speakers, six flat lines. Fix each one in one breath.', p: 'Read the flat line. The student says it again at once with the frame, then taps Check.' },
+  { k: 'pitch', est: 'o', min: 7, img: 'microfone', rot: 'IX · Your Sixty Seconds', t: 'Your turn under the light. Pick a real cause: something your town, school or company should fund, fix or save.', p: 'Build it beat by beat. Then the whole pitch, in under sixty seconds.' },
+  { k: 'fim', est: 'w', min: 6, img: 'cortina', rot: 'X · The Ghost Light', t: 'What is one thing you would never stay silent about?', p: 'Write your pitch. It goes to your My notes.' }
 ];
 
 var YT = 'NiKtZgImdlY';
@@ -208,3 +209,23 @@ R.fim = function (c) {
 
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
 TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The flat line, then the strong one. Watch the words move.',
+  frases: [
+    { de: ['Rosa', 'needs', 'a van', '.'], para: ['+What', 'Rosa', 'needs', '+is', '*a van', '.'], d: 'What + sentence + is: the big idea waits at the end.' },
+    { de: ['*Rosa', 'built', 'the library', '.'], para: ['+It was', '*Rosa', '+who', 'built', 'the library', '.'], d: 'It was + the person + who: the light falls on Rosa.' },
+    { de: ['Rosa', 'loved', 'the project', '.'], para: ['Rosa', '+did', '*love', 'the project', '.'], d: 'did + the base verb: the feeling gets strong. Not did loved.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'Hold the idea back, then land on it: <b>What</b> matters <b>is</b> …, <b>It was</b> … <b>that</b> …, <b>did</b> + base verb.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'Kids need books.', r: 'What kids need <b>is</b> books.' },
+    { de: 'The council ignored the library.', r: 'It was the council <b>that</b> ignored the library.' },
+    { de: 'We are late because the road is closed.', r: 'The reason we are late <b>is that</b> the road is closed.' },
+    { de: 'I love this town.', r: 'I <b>do love</b> this town.' }
+  ],
+  uso: { p: 'Your turn. A cause you care about. Say it flat, then with What … is.', molde: ['The town needs …', 'What the town needs is …'], ex: 'The town needs a new bus line. What the town needs is a bus every ten minutes.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

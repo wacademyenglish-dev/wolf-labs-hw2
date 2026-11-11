@@ -18,12 +18,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'estudio', rot: 'III · Four Weekends', t: 'Four friends, four weekends.', p: 'Listen to the answers, and to the questions. The video plays in four short chapters.' },
   { k: 'falas', est: 'l', extra: 1, img: 'estudio', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'praca', est: 'o', min: 7, img: 'praca', rot: 'V · Maple Street Plaza', t: 'Eight people. You have their answers. Ask the questions.', p: 'Tap a person, read what they said, and ask the question for it.' },
-  { k: 'regra', est: 'f', min: 6, img: 'estudio', rot: 'VI · The Rule', t: 'In a past question, did carries the past.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'guest', est: 'o', min: 7, img: 'grafica', rot: 'VII · The Mystery Guest', t: 'Page one: a mystery guest. Who is she?', p: 'Ask Did you …? about each clue. Your teacher is the guest, then Nora, the editor: give her the short answer.' },
-  { k: 'nora', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'VIII · Monday, 8 AM', t: 'Nora calls. She asks about YOUR Saturday.', p: 'Short answer first, then one more sentence. Then ask her back.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'praca', rot: 'IX · Quick Check', t: 'Five lines from your notebook.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'parque', rot: 'X · Your Weekend', t: 'The microphone turns around.', p: 'Pick a card. Answer, then ask your teacher the same question.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · The Monday Page', t: 'Write your own interview.', p: 'Three questions about last Saturday, and your answers. The red line watches did. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'praca', rot: 'VI · The Flip', t: 'Watch the question appear.', p: 'Flip each sentence into a question. Notice the verb. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'estudio', rot: 'VII · The Rule', t: 'In a past question, did carries the past.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'guest', est: 'o', min: 7, img: 'grafica', rot: 'VIII · The Mystery Guest', t: 'Page one: a mystery guest. Who is she?', p: 'Ask Did you …? about each clue. Your teacher is the guest, then Nora, the editor: give her the short answer.' },
+  { k: 'nora', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'IX · Monday, 8 AM', t: 'Nora calls. She asks about YOUR Saturday.', p: 'Short answer first, then one more sentence. Then ask her back.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'praca', rot: 'X · Quick Check', t: 'Five lines from your notebook.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'parque', rot: 'XI · Your Weekend', t: 'The microphone turns around.', p: 'Pick a card. Answer, then ask your teacher the same question.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · The Monday Page', t: 'Write your own interview.', p: 'Three questions about last Saturday, and your answers. The red line watches did. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -211,3 +212,23 @@ TOQUES['nr-viu'] = function () { S.nora.viu[S.nora.n] = 1; };
 TOQUES['nr-prox'] = function () { S.nora.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
 TOQUES.rd = function (b, n) { S.roda.sel = n; S.roda.foi[n] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The sentence, then the question. Watch the words move.',
+  frases: [
+    { de: ['You', 'went', 'to the park', 'on Saturday', '.'], para: ['+Did', 'you', '*go', 'to the park', 'on Saturday', '?'], d: 'Did carries the past. So go is clean again.' },
+    { de: ['Ana', 'saw', 'a movie', '.'], para: ['+Did', 'Ana', '*see', 'a movie', '?'], d: 'Same: Did + the person + a clean verb.' },
+    { de: ['You', 'met', 'Pedro', 'at the plaza', '.'], para: ['+Where', '+did', 'you', '*meet', 'Pedro', '?'], d: 'The question word goes first. Then did. Then you.' }
+  ],
+  notaBotao: 'What changes?',
+  nota: 'The question starts with <b>Did</b> (or a question word + did). Did carries the past, so the verb goes back to clean: you went, Did you <b>go</b>? Never Did you went.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'You cooked on Sunday.', r: 'Did you <b>cook</b> on Sunday?' },
+    { de: 'Nora called you on Monday.', r: 'Did Nora <b>call</b> you on Monday?' },
+    { de: 'You had lunch at the plaza.', r: 'Did you <b>have</b> lunch at the plaza?' },
+    { de: 'Your friend visited a museum on Saturday.', r: 'Did your friend <b>visit</b> a museum on Saturday?' }
+  ],
+  uso: { p: 'Your turn. Ask your teacher about last Saturday: two questions.', molde: ['Did you …?', 'Where did you …?'], ex: 'Did you go to the park? Where did you have lunch?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

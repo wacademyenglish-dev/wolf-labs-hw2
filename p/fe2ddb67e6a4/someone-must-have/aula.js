@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'B2', unidade: 4, titulo: ['Someone', 'Must Hav
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · The Clues', t: 'The detective’s notebook.', p: 'Read the notes out loud with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'II · How Sure Are You?', t: 'Must, might, can’t… + have.', p: 'Compare A and B. How sure is the speaker in each one?' },
-  { k: 'missao', est: 'o', min: 15, img: 'conversa', rot: 'III · Three Suspects', t: 'Who took a bite?', p: 'Ask each suspect five questions. Your teacher is the suspect. Then give your deduction.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say what should have happened.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Sure or Maybe?', t: 'Two detectives. Two levels of sure.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new clues.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'III · How Sure Are You?', t: 'Must, might, can’t… + have.', p: 'Compare A and B. How sure is the speaker in each one?' },
+  { k: 'missao', est: 'o', min: 15, img: 'conversa', rot: 'IV · Three Suspects', t: 'Who took a bite?', p: 'Ask each suspect five questions. Your teacher is the suspect. Then give your deduction.' },
+  { k: 'escolha', est: 'o', min: 6, img: 'capa', rot: 'V · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say what should have happened.' }
 ];
 var PORTAS = [];
 
@@ -66,3 +67,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* B2 · Someone Must Have: leitura · descobre · missao · escolha */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Sure or maybe? Two detectives at the bakery.', a: { t: 'Almost sure', falas: [['Mrs. Hale', 'The back door is open. Who locked up last night?'], ['Detective', 'Somebody<mark> must have forgotten</mark> to lock it.']], d: 'You see strong proof: the door is open. That is <b>must have</b>.' }, b: { t: 'Only possible', falas: [['Mrs. Hale', 'Tom has a key. Was he here at night?'], ['Detective', 'He<mark> might have come</mark> back. I am not sure.']], d: 'No proof yet, only an idea. That is <b>might have</b> (or could have).' }, pergunta: 'Same past, two levels of sure. What is different in the clues?', pergunta2: 'Now you. Which one fits?', itens: [{ p: 'There are tiny round prints in the flour. You are almost sure.', o: ['A cat must have walked here.', 'A cat might have walked here.'], c: 0, d: 'Strong proof: the prints. must have.' }, { p: 'Biscotti is not in his basket. Maybe he is hiding.', o: ['He must have run away.', 'He might have run away.'], c: 1, d: 'You only guess. might have.' }, { p: 'The cake has a bite, and nobody was in the kitchen. You are sure.', o: ['Someone must have come in.', 'Someone might have come in.'], c: 0, d: 'Strong proof. must have.' }, { p: 'Nobody saw Tom. Maybe he was at home.', o: ['He must have been at home.', 'He could have been at home.'], c: 1, d: 'No proof, only possible. could have.' }], nota: 'Look at the proof. Strong proof: <b>must have</b> + participle. Only an idea: <b>might / could have</b> + participle. Impossible: <b>can’t have</b>.', uso: { p: 'Your turn. Something happened at home or at work and you did not see it. Say one sentence you are almost sure about and one that is only possible.', molde: ['Someone must have …', 'It might have …'], ex: 'Someone must have opened the window, because it is cold. The wind might have done it.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

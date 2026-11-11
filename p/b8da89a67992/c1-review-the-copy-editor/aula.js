@@ -16,7 +16,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Writers', t: 'Three writers. Three drafts. Talk to them.', p: 'Ask each writer five questions. Your teacher is the writer. Then give your editing advice.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the correct form, then tap.' },
   { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'IV · The Editor’s Note', t: 'Write a short note to one writer.', p: 'Four lines. Use at least four precise word pairs from the unit.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'V · The Editor’s Card', t: 'Four lines from Unit 1.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -62,3 +63,9 @@ var PARES = [
   ['move', 'the needle', 'The new ad didn’t really move the needle.'],
   ['off the beaten', 'track', 'We found a café off the beaten track.']];
 var ERROS = { tipo: 'nota', rot: 'DRAFT · “THE VILLAGE THAT SLEEPS” · NOT EDITED', partes: ['We arrived in ', ['strong rain', 'heavy rain', 'Rain is heavy.'], '. The village was ', ['very very quiet', 'eerily quiet', 'One precise word.'], ', and we saw old houses ', ['and stuff', 'with blue doors', 'Be specific in writing.'], '. The mayor ', ['did a review', 'carried out a review', 'carry out a review.'], ' of tourism and ', ['took a conclusion', 'drew a conclusion', 'draw a conclusion.'], ': visitors don’t really move the needle for the economy. I was ', ['very thankful', 'deeply grateful', 'deeply grateful.'], ' to the people who opened their doors.'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 1.', rotulo: 'The right word', linhas: ['adverb + adjective: <b>eerily</b> quiet · <b>painfully</b> slow · <b>deeply</b> grateful', 'adjective + noun: <b>heavy</b> rain · <b>strong</b> coffee · a <b>narrow</b> escape', 'verb + noun, formal: <b>raise</b> a concern · <b>draw</b> a conclusion · <b>meet</b> a deadline', 'vague talk: <b>kind of</b> · <b>sort of</b> · <b>and stuff</b> · business: <b>move the needle</b>'], uso: { p: 'Your turn. You edit a draft. Say a note to the writer with two precise word pairs.', molde: ['Instead of very …, try …', 'You could raise …'], ex: 'Instead of very quiet, try eerily quiet. You could also draw a clearer conclusion at the end.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

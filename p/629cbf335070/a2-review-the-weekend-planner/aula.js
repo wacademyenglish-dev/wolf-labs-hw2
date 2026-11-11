@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 14, img: 'capa', rot: 'II · The Weekend Planner', t: 'Three friends, one weekend. Plan it.', p: 'Ask each friend five questions. Your teacher is the friend. Then tell the group the plan.' },
   { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Weekend Card', t: 'Four lines for the weekend plan.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -55,3 +56,9 @@ var ESCOLHA = [
   { a: 'plan every hour', b: 'decide on the day', chips: ['I prefer …', 'I enjoy …ing'], ex: 'Decide on the day. I enjoy surprises.' },
   { a: 'go even if it rains', b: 'stay home if it rains', chips: ['If it rains, I’ll …', 'unless …'], ex: 'I’ll go, unless there’s a storm.' },
   { a: 'forget your charger', b: 'forget your toothbrush', chips: ['I’d prefer to forget …', 'because …'], ex: 'My toothbrush! I can buy one. I can’t live without my phone.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 9.', rotulo: 'If, and verb + verb', linhas: ['if you heat ice, it <b>melts</b> · if it rains, I <b>will</b> stay · never “if it will rain”', 'want / need / decide <b>to</b> go · enjoy / avoid <b>-ing</b>', 'she told <b>me to</b> call · not “told that I call”', 'remember <b>to</b> lock the door · <b>stop -ing</b> = quit it'], uso: { p: 'Your turn. Make a weekend plan B: what you will do if it rains, and one thing you want to do.', molde: ['If it rains, we’ll …', 'I want to …', 'I enjoy …ing'], ex: 'If it rains, we’ll stay at the hotel. I want to visit the museum. I enjoy walking in the rain.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

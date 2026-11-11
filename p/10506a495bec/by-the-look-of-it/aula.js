@@ -32,11 +32,12 @@ var L = [
   { k: 'quem', est: 'o', min: 7, img: 'bairro', rot: 'II · Who Are They?', t: 'Matt and Fisk: who are they, really?', p: 'Read one card. Then talk: answer each question out loud with the starters, and say why.' },
   { k: 'video', est: 'l', min: 6, img: 'mesa', rot: 'III · The Trailer', t: 'Daredevil: Born Again. The whole trailer.', p: 'Guess what Matt’s senses notice at the table. Watch the whole trailer. Then say how it looked and sounded.' },
   { k: 'dilema', est: 'o', min: 7, img: 'igreja', rot: 'IV · What Would You Do?', t: 'No right answer. Only your reasons.', p: 'Read the situation. Pick a side, or make your own. Say why, out loud. Then defend Matt or Fisk for one minute.' },
-  { k: 'regra', est: 'f', min: 6, img: 'igreja', rot: 'V · Looks, Sounds, Seems', t: 'It looks expensive. It looks like a trap. Which one needs like?', p: 'Sort the words into three boxes. Then read the rule.' },
-  { k: 'sonar', est: 'o', min: 7, img: 'mesa', rot: 'VI · The Sound Map', t: 'Work like Matt: in the dark. Every question lights up the room.', p: 'Matt can’t see. Build each question out loud, tap Check, then ask your teacher.' },
-  { k: 'mentira', est: 'o', min: 7, img: 'dd-coracao', rot: 'VII · The Lie Detector', t: 'Three stories. One is a lie. Be Matt: listen to the heart.', p: 'Pick a topic. Tell three short stories in one minute; one is not true. Your teacher says how you sound. Then swap.' },
-  { k: 'pistas', est: 'o', min: 7, extra: 1, img: 'capa', rot: 'VIII · Clues Around You', t: 'Six clues. What does it look, sound or seem like?', p: 'Tap what fits the clue. Then say the whole sentence.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'f', min: 4, img: 'dd-mesa', rot: 'V · Right, Not This', t: 'Six pairs from Matt’s world. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'regra', est: 'f', min: 6, img: 'igreja', rot: 'VI · Looks, Sounds, Seems', t: 'It looks expensive. It looks like a trap. Which one needs like?', p: 'Sort the words into three boxes. Then read the rule.' },
+  { k: 'sonar', est: 'o', min: 7, img: 'mesa', rot: 'VII · The Sound Map', t: 'Work like Matt: in the dark. Every question lights up the room.', p: 'Matt can’t see. Build each question out loud, tap Check, then ask your teacher.' },
+  { k: 'mentira', est: 'o', extra: 1, min: 7, img: 'dd-coracao', rot: 'VIII · The Lie Detector', t: 'Three stories. One is a lie. Be Matt: listen to the heart.', p: 'Pick a topic. Tell three short stories in one minute; one is not true. Your teacher says how you sound. Then swap.' },
+  { k: 'pistas', est: 'o', min: 7, extra: 1, img: 'capa', rot: 'IX · Clues Around You', t: 'Six clues. What does it look, sound or seem like?', p: 'Tap what fits the clue. Then say the whole sentence.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'X · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var SERIE = 'Daredevil: Born Again', ANO = '2025';
@@ -401,3 +402,18 @@ var FIM = { tipo: 'cadeira', rot: 'IX · The Hot Seat', t: 'The hot seat: Matt M
     { q: 'You look tired. Are you OK?', ex: 'I am. It’s been a long night.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'It <b>looks expensive</b>.', x: 'It looks like expensive.', d: 'An adjective: looks + the adjective. No like.' },
+    { c: 'It <b>looks like a trap</b>.', x: 'It looks like trap.', d: 'A noun needs like, and a or an: like a trap.' },
+    { c: 'Matt’s voice <b>sounds calm</b>.', x: 'Matt’s voice sounds calmly.', d: 'After sounds: an adjective, never -ly.' },
+    { c: 'That <b>sounds like</b> a glass on the table.', x: 'That sounds a glass on the table.', d: 'Sounds + a noun needs like.' },
+    { c: 'It <b>seems like</b> he’s lying.', x: 'It seems like he lying.', d: 'After like, a full sentence keeps its verb: he’s lying.' },
+    { c: 'It <b>sounds like</b> it’s raining.', x: 'It sounds it’s raining.', d: 'Sounds + a full sentence also needs like.' }
+  ],
+  nota: 'An adjective? <b>looks / sounds / seems</b> + the adjective: looks expensive. A noun or a sentence? Add <b>like</b>: looks like a trap, sounds like it’s raining.',
+  uso: { p: 'Your turn. Look around you right now. Say one thing with an adjective and one thing with like.', molde: ['It looks …', 'It sounds like …'], ex: 'My coffee looks cold. It sounds like somebody is cooking next door.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

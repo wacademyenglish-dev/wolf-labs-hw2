@@ -38,10 +38,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Dune: Part Three. The official trailer.', p: 'Open a card. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'palacio', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'sietch', rot: 'V · It Was Written', t: 'A letter from Chani. Find the pattern.', p: 'Read the letter out loud. Tap the verbs of destiny, plans and promises. Then finish the rule.' },
-  { k: 'visoes', est: 'o', min: 7, img: 'capa', rot: 'VI · The Visions', t: 'Six visions in the sand. What was to be, and what was.', p: 'Tap a plan on the left, then what happened on the right. Then say each pair out loud.' },
-  { k: 'planos', est: 'o', min: 7, img: 'sietch', rot: 'VII · Your Plans', t: 'Three friends talk about plans and promises. What do you say?', p: 'Read what your friend says. Pick how you answer. Then read the talk out loud.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'f', min: 5, img: 'dunas', rot: 'V · Three Futures in the Past', t: 'One story, three kinds of future.', p: 'Look at the three kinds. Tap the kind of each sentence. Then say three of your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'sietch', rot: 'VI · It Was Written', t: 'A letter from Chani. Find the pattern.', p: 'Read the letter out loud. Tap the verbs of destiny, plans and promises. Then finish the rule.' },
+  { k: 'visoes', est: 'o', min: 7, img: 'capa', rot: 'VII · The Visions', t: 'Six visions in the sand. What was to be, and what was.', p: 'Tap a plan on the left, then what happened on the right. Then say each pair out loud.' },
+  { k: 'planos', est: 'o', min: 7, img: 'sietch', rot: 'VIII · Your Plans', t: 'Three friends talk about plans and promises. What do you say?', p: 'Read what your friend says. Pick how you answer. Then read the talk out loud.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var FILME = 'Dune: Part Three', ANO = '2026';
@@ -248,3 +249,25 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Paul
     { q: 'Were you ever to go home again?', ex: 'No. I was never to see my home again.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Looking back at the future. Three kinds.',
+  usos: [
+    { t: 'DESTINY', f: 'He was to rule the desert.', d: 'It was written: it had to happen. was to + verb.', img: 'dunas' },
+    { t: 'A PLAN THAT FAILED', f: 'The peace was supposed to last.', d: 'The plan was one thing. Then life was another.', img: 'palacio' },
+    { t: 'A PROMISE, TOLD LATER', f: 'Chani said she would wait for him.', d: 'We tell an old promise with would, not will.', img: 'chani' }
+  ],
+  pergunta: 'Which kind is it?',
+  itens: [
+    { f: 'The prophecy said a boy was to lead the people.', c: 0 },
+    { f: 'The guards were supposed to watch the gate, but they fell asleep.', c: 1 },
+    { f: 'Paul told her he would come back before the storm.', c: 2 },
+    { f: 'He was never to see his home again.', c: 0 },
+    { f: 'The meeting was supposed to end at noon. It lasted all day.', c: 1 },
+    { f: 'Chani promised she would never leave the desert.', c: 2 }
+  ],
+  nota: 'Looking back from later: <b>was to</b> = it had to happen (destiny). <b>was supposed to</b> = the plan, and it did not work. <b>would</b> = the promise we tell later. Never “was to led”, never “promised he will”.',
+  uso: { p: 'Your turn. Three sentences about the past: one destiny, one plan that failed, one promise.', molde: ['I was never to …', 'I was supposed to …, but …', 'He said he would …'], ex: 'I was supposed to call my mom, but I forgot. My friend said he would come at 8 PM. She was never to leave her town, but she did.' },
+  prof: 'Read the three kinds out loud with the student. Then the student taps a kind for each sentence. No rule to read: the kinds are the rule.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

@@ -37,10 +37,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Avengers: Doomsday. The official trailer.', p: 'Match first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'ceu', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 7, img: 'sala', rot: 'V · Who, Which, That, Whose', t: 'A person, a thing, a place, an owner. Sort the clues.', p: 'Tap a clue, then its box. Then find the wrong word and say the fix.' },
-  { k: 'mesa', est: 'o', min: 7, img: 'capa', rot: 'VI · The Assembly Table', t: 'Six seats at the table. Every sentence brings a hero.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'herois', est: 'o', min: 7, img: 'sala', rot: 'VII · Your Heroes', t: 'Now you are the reporter. Ask your teacher about their people.', p: 'Build each question out loud. Tap Check. Then ask it, and find one thing you have in common.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · Questions', t: 'Questions.', p: 'Questions.' }
+  { k: 'gx', est: 'f', min: 4, img: 'escudo', rot: 'V · Mistake Hunter', t: 'Six lines about the Avengers. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'regra', est: 'f', min: 7, img: 'sala', rot: 'VI · Who, Which, That, Whose', t: 'A person, a thing, a place, an owner. Sort the clues.', p: 'Tap a clue, then its box. Then find the wrong word and say the fix.' },
+  { k: 'mesa', est: 'o', min: 7, img: 'capa', rot: 'VII · The Assembly Table', t: 'Six seats at the table. Every sentence brings a hero.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'herois', est: 'o', min: 7, img: 'sala', rot: 'VIII · Your Heroes', t: 'Now you are the reporter. Ask your teacher about their people.', p: 'Build each question out loud. Tap Check. Then ask it, and find one thing you have in common.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · Questions', t: 'Questions.', p: 'Questions.' }
 ];
 
 var FILME = 'Avengers: Doomsday', ANO = '2026';
@@ -265,3 +266,19 @@ var FIM = { tipo: 'perguntas', rot: 'VIII · Questions', t: 'Questions about the
   ],
   depois: 'Now you ask the teacher two of these questions.' };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines at the assembly table.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'This is the shield [[what]] Steve carried.', r: 'This is the shield <b>that</b> Steve carried.', d: 'What never connects a thing to its noun: that or which.' },
+    { f: 'The man [[which]] wears the mask is Doom.', r: 'The man <b>who</b> wears the mask is Doom.', d: 'A person: who or that.' },
+    { f: 'Everything [[what]] he said is true.', r: 'Everything <b>that</b> he said is true.', d: 'After everything: that, never what.' },
+    { f: 'The shield that Steve carried [[it]] is old.', r: 'The shield that Steve carried is <b>old</b>.', d: 'That already stands for the shield: no it.' },
+    { f: 'Thor is the hero [[who]] hammer is lost.', r: 'Thor is the hero <b>whose</b> hammer is lost.', d: 'The owner: whose.' },
+    { f: 'Latveria is the country [[which]] Doom lives.', r: 'Latveria is the country <b>where</b> Doom lives.', d: 'A place: where.' }
+  ],
+  nota: 'Pick the word by what you describe: a person = <b>who</b>, a thing = <b>that / which</b>, a place = <b>where</b>, an owner = <b>whose</b>. Never <b>what</b>, and never repeat the object.',
+  uso: { p: 'Your turn. Describe three people or things from your life.', molde: ['My friend … who …', 'It is a place where …', 'I have a … that …'], ex: 'My sister is the person who calls every day. It is a cafe where we meet. I have a phone that is very old.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

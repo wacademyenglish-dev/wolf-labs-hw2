@@ -36,10 +36,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Clip', t: 'Star Wars: A New Hope. Obi-Wan and Luke.', p: 'Guess first. Watch the clip. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'nave', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'cave', rot: 'V · -ing as a Noun', t: 'A message from Obi-Wan. Find the pattern.', p: 'Read the message out loud. Tap the -ing words. Then finish the rule.' },
-  { k: 'remoto', est: 'o', min: 7, img: 'nave', rot: 'VI · The Training Remote', t: 'The remote fires. Say it right, and the saber blocks the shot.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'mestre', est: 'o', min: 7, img: 'cave', rot: 'VII · Your Training', t: 'One minute about learning. Use your -ing words.', p: 'Start the clock and talk for 45 seconds. Tap each -ing phrase when you use it.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · A Master’s Advice', t: 'Write advice for someone who is learning English.', p: 'Use -ing as a subject and after a preposition. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cave', rot: 'V · Find the Rule', t: 'Four sentences from the training. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'cave', rot: 'VI · -ing as a Noun', t: 'A message from Obi-Wan. Find the pattern.', p: 'Read the message out loud. Tap the -ing words. Then finish the rule.' },
+  { k: 'remoto', est: 'o', min: 7, img: 'nave', rot: 'VII · The Training Remote', t: 'The remote fires. Say it right, and the saber blocks the shot.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'mestre', est: 'o', min: 7, img: 'cave', rot: 'VIII · Your Training', t: 'One minute about learning. Use your -ing words.', p: 'Start the clock and talk for 45 seconds. Tap each -ing phrase when you use it.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · A Master’s Advice', t: 'Write advice for someone who is learning English.', p: 'Use -ing as a subject and after a preposition. It goes to your My notes.' }
 ];
 
 var FILME = 'Star Wars: A New Hope', ANO = '1977';
@@ -228,3 +229,19 @@ var AQ = { tipo: 'imagem', img: 'cave', alt: 'A quiet desert cave at night lit b
     { q: 'Is learning alone better than learning with a teacher?', ex: 'No. Learning with a teacher is faster.' }
   ] };
 /*AQ@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.',
+  exemplos: [
+    '<u>Learning</u> the Force <b>takes</b> years.',
+    'Luke is good at <u>flying</u>.',
+    'He is afraid of <u>failing</u>.',
+    '<u>Trusting</u> your feelings <b>is</b> hard.'
+  ],
+  pergunta: 'When a verb is the subject, or comes after at, of or before, it …',
+  opcoes: ['ends in -ing: learning, flying, failing', 'stays clean: learn, fly, fail', 'has to: to learn, to fly, to fail'], c: 0,
+  nao: 'Not that one. Look at the four lit words again: how do they end?',
+  regra: '<b>-ing</b> works like a noun. As a subject (<b>Learning</b> takes years: the verb is singular) and after a preposition (good at <b>flying</b>, afraid of <b>failing</b>, before <b>leaving</b>).',
+  uso: { p: 'Your turn. One thing that is hard to learn, and one thing you are good at.', molde: ['Learning … is …', 'I’m good at …'], ex: 'Learning English is fun. I’m good at cooking.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

@@ -14,7 +14,8 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'II · The Party Board', t: 'Roll, move, plan the party.', p: 'Your teacher rolls the die. Do the task on your square, out loud.' },
   { k: 'cartao', est: 'w', min: 6, img: 'conversa', rot: 'III · The Invitation', t: 'Write the invitation and the shopping list.', p: 'Four short lines: when, where, what to bring, how much / how many.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Party Rules', t: 'Four lines for the big party.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -53,3 +54,9 @@ var ESCOLHA = [
   { a: 'too much food', b: 'not enough food', chips: ['Too much / not enough, because …'], ex: 'Too much food. Nobody likes a hungry guest!' },
   { a: 'a party at home', b: 'a party at a restaurant', chips: ['At …', 'because there is / there isn’t …'], ex: 'At home, because there isn’t any noise.' },
   { a: 'cook something', b: 'buy something', chips: ['I’d …', 'because …'], ex: 'Buy something! I can’t cook anything.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 4.', rotulo: 'The party rules', linhas: ['<b>a few</b>, <b>many</b> + things you count · <b>a little</b>, <b>much</b> + things you don’t', '<b>too much</b> ice · <b>too many</b> cups · <b>enough</b> chairs', '<b>somebody</b>, <b>anybody</b>, <b>nobody</b> · only ONE no: I don’t see <b>anybody</b>', '<b>a</b> cake · <b>an</b> idea · <b>the</b> cake we already bought'], uso: { p: 'Your turn. You are planning a party. Say what you have too much of, what you don’t have enough of, and who is coming.', molde: ['We have too much …', 'We don’t have enough …', 'Nobody …'], ex: 'We have too much ice. We don’t have enough chairs. Nobody brings the music!' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

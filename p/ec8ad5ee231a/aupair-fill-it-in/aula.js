@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 5, kick: 'AU PAIR · MODULE 2 �
   nota: 'In the USA, 03/07/2003 is March 7th, not July 3rd. One date in the wrong order can change a whole document.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'descobre', est: 'f', min: 10, img: 'conversa', rot: 'I · The Traps of a Form', t: 'Same information, two ways. Which one is right?', p: 'Compare A and B. Then see the rules for forms.' },
-  { k: 'rapido', est: 'f', min: 6, img: 'capa', rot: 'II · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
-  { k: 'formulario', est: 'w', min: 14, img: 'conversa', rot: 'III · The Practice Form', t: 'Fill in the form for Mariana.', p: 'Read her profile. Fill in every field. Then check.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'I · The Pocket Rule', t: 'Four traps of a form.', p: 'Read one line at a time. Then keep the rule in the corner for the form.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'conversa', rot: 'II · The Traps of a Form', t: 'Same information, two ways. Which one is right?', p: 'Compare A and B. Then see the rules for forms.' },
+  { k: 'rapido', est: 'f', min: 6, img: 'capa', rot: 'III · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
+  { k: 'formulario', est: 'w', min: 14, img: 'conversa', rot: 'IV · The Practice Form', t: 'Fill in the form for Mariana.', p: 'Read her profile. Fill in every field. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var DESCOBRE = {
@@ -54,3 +55,16 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 05: descobre · rapido · formulario (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'Filling in a form',
+  linhas: [
+    '<b>Surname</b> = the family name. <b>Given name</b> = your first name.',
+    'Date <b>MM/DD/YYYY</b>: the month comes first. March 7, 2003 = 03/07/2003.',
+    'Marital status: <b>single</b>, married, divorced. Never “alone”.',
+    'Emergency contact: <b>another person</b>. Lúcia Ribeiro · Mother.'
+  ],
+  uso: { p: 'Your turn. Use a made-up person. Say the name, the date of birth and the marital status the way a form asks.', molde: ['Surname: … Given name: …', 'Date of birth: …', 'Marital status: …'], ex: 'Surname: Lima. Given name: Rita. Date of birth: 11/25/2001. Marital status: single.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

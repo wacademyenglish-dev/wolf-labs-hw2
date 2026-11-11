@@ -37,10 +37,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Clip', t: 'The Office. The time prank.', p: 'Answer first. Watch the clip. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'relogio', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'rua', rot: 'V · At, On, In', t: 'The office board has five mistakes. Find the fix.', p: 'Say the right word for each mistake out loud. Then tap Check and read the rule.' },
-  { k: 'ponto', est: 'o', min: 7, img: 'capa', rot: 'VI · The Time Card', t: 'Punch the card. Every right sentence moves the clock to five.', p: 'Read the line and the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'semana', est: 'o', min: 7, img: 'relogio', rot: 'VII · Your Week', t: 'Three people ask you about time. How do you answer?', p: 'Read what they say. Pick how you answer. Then read the talk out loud.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Interview', t: 'The interview.', p: 'Interview.' }
+  { k: 'gx', est: 'f', min: 5, img: 'relogio', rot: 'V · At, On or In?', t: 'Three small words. Three kinds of time.', p: 'Look at the three kinds of time. Tap the word for each sentence. Then say three of your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'rua', rot: 'VI · At, On, In', t: 'The office board has five mistakes. Find the fix.', p: 'Say the right word for each mistake out loud. Then tap Check and read the rule.' },
+  { k: 'ponto', est: 'o', min: 7, img: 'capa', rot: 'VII · The Time Card', t: 'Punch the card. Every right sentence moves the clock to five.', p: 'Read the line and the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'semana', est: 'o', min: 7, img: 'relogio', rot: 'VIII · Your Week', t: 'Three people ask you about time. How do you answer?', p: 'Read what they say. Pick how you answer. Then read the talk out loud.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Interview', t: 'The interview.', p: 'Interview.' }
 ];
 
 var SERIE = 'The Office', ANO = '2010';
@@ -248,3 +249,25 @@ var FIM = { tipo: 'entrevista', rot: 'VIII · The Interview', t: 'Interview Erin
     { q: 'When does everybody go home today?', ex: 'At five. In about ten minutes, really.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'At, on or in? Three kinds of time.',
+  usos: [
+    { t: 'AT · A POINT', f: 'Jim starts the prank <b>at</b> 4:15 PM.', d: 'A clock time. Also at night, at noon.' },
+    { t: 'ON · A DAY', f: 'The office party is <b>on</b> Friday.', d: 'A day or a date: on Friday, on March 3rd.' },
+    { t: 'IN · A LONG TIME', f: 'Dwight comes back <b>in</b> ten minutes.', d: 'A month, a year, a part of the day, or time from now.' }
+  ],
+  pergunta: 'Which word is it?',
+  itens: [
+    { f: 'The meeting is ___ 9 AM.', c: 0 },
+    { f: 'Pam’s birthday is ___ October.', c: 2 },
+    { f: 'The clock hits five ___ Monday.', c: 1 },
+    { f: 'Michael calls ___ the afternoon.', c: 2 },
+    { f: 'Everyone goes home ___ 5 PM.', c: 0 },
+    { f: 'The party is ___ December 24th.', c: 1 }
+  ],
+  nota: 'A clock time: <b>at</b>. A day or a date: <b>on</b>. A month, a year, a part of the day or “from now”: <b>in</b>. Careful: <b>at</b> night, but <b>in</b> the morning.',
+  uso: { p: 'Your turn. Three sentences about your week: a clock time, a day, and a month.', molde: ['I wake up at …', 'On … I …', 'In … I …'], ex: 'I wake up at 7 AM. On Fridays I go to the gym. In July I travel.' },
+  prof: 'Read the three kinds of time out loud. The student taps at, on or in. The kinds are the rule.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

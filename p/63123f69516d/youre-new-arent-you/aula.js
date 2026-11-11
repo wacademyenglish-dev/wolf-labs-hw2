@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 9, titulo: ['You’re New,', 'Ar
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · Breaking the Ice', t: 'Two strangers, one onion.', p: 'Read the conversation out loud with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'II · The English “né?”', t: 'How does the tag change?', p: 'Compare A and B. Which one is right? What is the rule?' },
-  { k: 'transforma', est: 'f', min: 8, img: 'conversa', rot: 'III · Add the Tag', t: 'Make it a friendly question.', p: 'Read the sentence. Add the right tag. Say it with a falling voice.' },
-  { k: 'cadeira', est: 'o', min: 10, img: 'capa', rot: 'IV · Your Turn to Break the Ice', t: 'Your teacher is a stranger in the class.', p: 'Start conversations with question tags. Listen, react, continue.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Ladder', t: 'One sentence, five steps.', p: 'Read each step out loud, then go one step up. Notice the helper in the tag. Then climb with your own sentence.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'III · The English “né?”', t: 'How does the tag change?', p: 'Compare A and B. Which one is right? What is the rule?' },
+  { k: 'transforma', est: 'f', min: 8, img: 'conversa', rot: 'IV · Add the Tag', t: 'Make it a friendly question.', p: 'Read the sentence. Add the right tag. Say it with a falling voice.' },
+  { k: 'cadeira', est: 'o', min: 10, img: 'capa', rot: 'V · Your Turn to Break the Ice', t: 'Your teacher is a stranger in the class.', p: 'Start conversations with question tags. Listen, react, continue.' }
 ];
 var PORTAS = [];
 
@@ -58,3 +59,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* B1 · You’re New, Aren’t You?: leitura · descobre · transforma · cadeira */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One sentence. Climb it one step at a time.', degraus: [{ r: 'say it', f: 'You’re new.', d: 'A plain sentence. You are almost sure.' }, { r: 'yes, so no', f: 'You’re new, <b>aren’t you</b>?', d: 'A yes sentence gets a no tag: the same helper, with n’t.' }, { r: 'no, so yes', f: 'You aren’t from here, <b>are you</b>?', d: 'A no sentence gets a yes tag. No n’t this time.' }, { r: 'other helper', f: 'You <b>like</b> onions, <b>don’t you</b>? · She <b>cooked</b>, <b>didn’t she</b>?', d: 'No be? Then the tag borrows do, does or did.' }, { r: 'the voice', f: 'You’re new, aren’t you? ↘ (I know) · ↗ (I ask)', d: 'Falling voice: you check. Rising voice: you really ask.' }], nota: 'The tag copies the helper of the sentence (<b>are, can, have, will</b>) and flips it: yes → <b>n’t</b>, no → plain. No helper? Use <b>do, does, did</b>. Special: I’m … <b>aren’t I</b>? · Let’s … <b>shall we</b>?', uso: { p: 'Your turn. You are new in a class. Say three friendly sentences to the person next to you, each with a tag.', molde: ['You’re …, aren’t you?', 'You don’t …, do you?', 'It was …, wasn’t it?'], ex: 'You’re the teacher’s friend, aren’t you? You don’t cook much, do you? This onion is huge, isn’t it?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

@@ -14,11 +14,12 @@ var L = [
   { k: 'morning', est: 'o', min: 3, img: 'mesa', rot: 'I · Morning Check', t: 'Your profile in the system.', p: 'Read the screen out loud. Small answers.', sig: ['queue'] },
   { k: 'conversa', est: 'o', min: 4, img: 'conversa', rot: 'II · Good Morning', t: 'A short chat before work.', p: 'Choose an answer. Say it. Then ask: “And you?”' },
   { k: 'termos', est: 'l', min: 8, img: 'capa', rot: 'III · Screen Words', t: 'Eight words from your screen.', p: 'Listen. Look. Say each word three times.', sig: ['queue', 'fx', 'swift'] },
-  { k: 'explica', est: 'f', min: 8, img: 'mesa', rot: 'IV · I’m, This Is, It’s', t: 'Three small words. A lot of English.', p: 'Read the card with your teacher. Then build the sentence.' },
-  { k: 'simulador', est: 'f', min: 12, img: 'capa', rot: 'V · The Simulator', t: 'This is Exchange. Your queue.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['queue', 'ref', 'bene', 'status'] },
-  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VI · A Video Call', t: 'A new colleague from New York.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'cartao', est: 'w', min: 7, img: 'mesa', rot: 'VII · My Job', t: 'Three sentences about you.', p: 'Write. Then read it out loud.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
+  { k: 'gx', est: 'f', min: 3, img: 'mesa', rot: 'IV · The Pocket Rule', t: 'Three lines. Keep them in the corner.', p: 'Read one line at a time. Then keep the rule in the corner for the next pages.' },
+  { k: 'explica', est: 'f', min: 8, img: 'mesa', rot: 'V · I’m, This Is, It’s', t: 'Three small words. A lot of English.', p: 'Read the card with your teacher. Then build the sentence.' },
+  { k: 'simulador', est: 'f', min: 12, img: 'capa', rot: 'VI · The Simulator', t: 'This is Exchange. Your queue.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['queue', 'ref', 'bene', 'status'] },
+  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VII · A Video Call', t: 'A new colleague from New York.', p: 'One question before. Listen. Then the questions.' },
+  { k: 'cartao', est: 'w', min: 7, img: 'mesa', rot: 'VIII · My Job', t: 'Three sentences about you.', p: 'Write. Then read it out loud.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
 ];
 
 var MORNING = { perfil: [['NAME', 'Ana Reis'], ['JOB', 'Payments analyst'], ['TEAM', 'International payments'], ['SYSTEM', 'Exchange'], ['OFFICE', 'São Paulo'], ['QUEUE TODAY', '8 operations']],
@@ -115,3 +116,15 @@ var PT = {
   dialogo: 'Ouça a ligação uma vez sem parar. Depois responda às perguntas.',
   cartao: 'Escreva 3 frases sobre você: nome, trabalho, sistema. Use os blocos “Tap to add”.',
   pode: 'Leia cada frase em voz alta e toque nas que você já consegue fazer.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de explica.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Three small words to keep in your pocket.', rotulo: 'I’m · This is · It’s',
+  linhas: [
+    '<b>I’m</b> Leo. I’m a payments analyst.',
+    '<b>This is</b> Exchange. This is my queue.',
+    '<b>It’s</b> a payment. It’s in the queue.'
+  ],
+  uso: { p: 'Your turn. Say who you are, and one thing on your screen.', molde: ['I’m …', 'This is …', 'It’s …'], ex: 'I’m Rui. This is my queue. It’s a payment from Japan.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

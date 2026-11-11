@@ -16,9 +16,10 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 9, titulo: ['Formal', 'or Friend
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · Two Messages', t: 'The same delay. Two people.', p: 'Read both messages out loud. Answer the questions. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Which Voice?', t: 'Formal or friendly: what changes?', p: 'Compare A and B. Who is each one for? What exactly changed?' },
-  { k: 'transforma', est: 'f', min: 8, img: 'capa', rot: 'III · Switch the Register', t: 'Friendly → formal.', p: 'Read the friendly sentence. Use the clue. Say the formal version.' },
-  { k: 'cartao', est: 'w', min: 10, img: 'conversa', rot: 'IV · Your Two Messages', t: 'One problem. Write it twice.', p: 'You’re sick and can’t go to work, or to a party. Write to your boss, then to a friend.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Register Ladder', t: 'One message, five steps up.', p: 'Read each step out loud, then go one step up. Notice what gets more formal. Then climb with your own message.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Which Voice?', t: 'Formal or friendly: what changes?', p: 'Compare A and B. Who is each one for? What exactly changed?' },
+  { k: 'transforma', est: 'f', min: 8, img: 'capa', rot: 'IV · Switch the Register', t: 'Friendly → formal.', p: 'Read the friendly sentence. Use the clue. Say the formal version.' },
+  { k: 'cartao', est: 'w', min: 10, img: 'conversa', rot: 'V · Your Two Messages', t: 'One problem. Write it twice.', p: 'You’re sick and can’t go to work, or to a party. Write to your boss, then to a friend.' }
 ];
 var PORTAS = [];
 
@@ -64,3 +65,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* C1 · Formal or Friendly?: leitura · descobre · transforma · cartao */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One delay. Climb it from friendly to formal.', degraus: [{ r: 'friend', f: 'Hi Jo! Flight’s late, can’t make it. Sorry!', d: 'Short, with a greeting from a friend.' }, { r: 'full words', f: 'Hello Jo, my flight is late and I cannot make it. I’m sorry.', d: 'No short forms, full sentences.' }, { r: 'polite ask', f: 'Dear Ms. Reed, <b>would it be possible to</b> move our meeting?', d: 'A formal opening, and an indirect question.' }, { r: 'latin verbs', f: 'I would like to <b>postpone</b> the meeting, as my flight has been <b>delayed</b>.', d: 'Formal verbs: postpone (put off), delayed (held up).' }, { r: 'fixed phrases', f: 'I am writing to <b>inform you that</b> … <b>I apologise for any inconvenience</b>. <b>Kind regards</b>', d: 'The fixed frames of a formal e-mail.' }], nota: 'Going up the ladder: <b>full words</b> (no short forms), <b>indirect questions</b> (would it be possible to), <b>Latin verbs</b> (postpone, not put off), <b>fixed phrases</b> (I am writing to inform you that). Do not mix: no Dear Sir … cheers!', uso: { p: 'Your turn. You are sick and cannot go to work. Say it to your boss, in a formal way, in two sentences.', molde: ['I am writing to inform you that …', 'Would it be possible to …?'], ex: 'I am writing to inform you that I am unwell and cannot come in today. Would it be possible to work from home tomorrow?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

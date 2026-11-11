@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 3, kick: 'DUOLINGO ENGLISH TEST
   nota: 'Before you type, ask: verb, noun, adjective or adverb? The sentence tells you.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'descobre', est: 'f', min: 10, img: 'conversa', rot: 'I · The Clue Around the Gap', t: 'Same word, different form. Why?', p: 'Compare A and B. What tells you the form of the word?' },
-  { k: 'multipla', est: 'f', min: 6, img: 'capa', rot: 'II · What Kind of Word?', t: 'Before you type: what kind of word goes here?', p: 'Choose. Then say the clue that told you.' },
-  { k: 'lacunas', est: 'w', min: 12, img: 'conversa', rot: 'III · Eight Sentences', t: 'Twenty seconds each. Finish the word.', p: 'Tap Start, read the whole sentence, type the missing letters.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'I · Find the Rule', t: 'Four sentences with a gap. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'conversa', rot: 'II · The Clue Around the Gap', t: 'Same word, different form. Why?', p: 'Compare A and B. What tells you the form of the word?' },
+  { k: 'multipla', est: 'f', min: 6, img: 'capa', rot: 'III · What Kind of Word?', t: 'Before you type: what kind of word goes here?', p: 'Choose. Then say the clue that told you.' },
+  { k: 'lacunas', est: 'w', min: 12, img: 'conversa', rot: 'IV · Eight Sentences', t: 'Twenty seconds each. Finish the word.', p: 'Tap Start, read the whole sentence, type the missing letters.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var DESCOBRE = {
@@ -53,3 +54,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 03: descobre · multipla · lacunas (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.',
+  exemplos: [
+    '<b>Could</b> you <u>remind</u> me tomorrow?',
+    'She <b>wants to</b> <u>finish</u> early.',
+    'We <b>will</b> <u>send</u> the files today.',
+    'He <b>can</b> <u>speak</u> clearly.'
+  ],
+  pergunta: 'After could, to, will and can, the verb …',
+  opcoes: ['ends in -ed: reminded', 'is clean, with nothing added: remind', 'ends in -ing: reminding'], c: 1,
+  nao: 'Not that one. Read the four lit verbs again: is there an -ed, an -ing, an -s?',
+  regra: '<b>could / can / will / to + the clean verb</b>: remind, finish, send, speak. After <b>was</b> or <b>has</b>, the gap often wants -ed (was delayed). After <b>a lot of</b>, a noun. <b>How?</b> asks for -ly.',
+  uso: { p: 'Your turn. Two sentences: one with could and a verb, one with was and an -ed word.', molde: ['Could you …?', 'The … was …ed.'], ex: 'Could you repeat that? The flight was delayed.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

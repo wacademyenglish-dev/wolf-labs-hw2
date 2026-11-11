@@ -11,14 +11,15 @@ var REV = { tipo: 'aula', aula: 9, nivel: 'A1', unidade: 2, kick: 'GLOBAL PAYMEN
   nota: 'In English the decimal is a point: 5.4380 = five point four three eight zero.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'morning', est: 'o', min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
+  { k: 'morning', est: 'o', extra: 1, min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
   { k: 'conversa', est: 'o', min: 4, img: 'conversa', rot: 'II · Money Talk', t: 'A short chat about money and travel.', p: 'Choose an answer. Say it. Then ask: “And you?”' },
   { k: 'termos', est: 'l', min: 8, img: 'capa', rot: 'III · FX Words', t: 'Eight words from the FX desk.', p: 'Listen. Look. Say each word three times.', sig: ['fx', 'rate', 'buysell', 'spread'] },
-  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'IV · Point, Buy, Sell', t: 'Read a rate. Give a quote.', p: 'Read the card with your teacher. Then build the sentence.', sig: ['rate', 'buysell'] },
-  { k: 'simulador', est: 'f', min: 13, img: 'capa', rot: 'V · The Simulator', t: 'The FX desk is open.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['rate', 'buysell', 'spread', 'fxc'] },
-  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VI · Can I Have a Quote?', t: 'A client asks for a rate.', p: 'One question before. Listen. Then the questions.', sig: ['rate', 'buysell'] },
-  { k: 'cartao', est: 'w', min: 6, img: 'mesa', rot: 'VII · The Quote', t: 'Write a quote for a client.', p: 'The rate is … The total is …' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
+  { k: 'gx', est: 'f', min: 3, img: 'mesa', rot: 'IV · Buy or Sell?', t: 'Two clients at the FX desk. Two rates.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'V · Point, Buy, Sell', t: 'Read a rate. Give a quote.', p: 'Read the card with your teacher. Then build the sentence.', sig: ['rate', 'buysell'] },
+  { k: 'simulador', est: 'f', min: 13, img: 'capa', rot: 'VI · The Simulator', t: 'The FX desk is open.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['rate', 'buysell', 'spread', 'fxc'] },
+  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VII · Can I Have a Quote?', t: 'A client asks for a rate.', p: 'One question before. Listen. Then the questions.', sig: ['rate', 'buysell'] },
+  { k: 'cartao', est: 'w', min: 6, img: 'mesa', rot: 'VIII · The Quote', t: 'Write a quote for a client.', p: 'The rate is … The total is …' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
 ];
 
 var MORNING = { rot: 'OPERATIONS QUEUE · 08:00', ref: 'FX-20484',
@@ -116,3 +117,21 @@ var PT = {
   dialogo: 'Um cliente pede uma cotação de dólar por telefone.',
   cartao: 'Escreva um e-mail curto com a cotação: taxa, valor e total.',
   pode: 'Leia cada frase em voz alta e toque nas que você já consegue fazer.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de explica.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Buy or sell? Two clients at the FX desk.',
+  a: { t: 'The client sells', falas: [['Client', 'I want to sell 10,000 dollars to the bank.'], ['Bank', 'OK. We <mark>buy</mark> at five point four three eight zero.']], d: 'The bank takes the dollars. For the bank, that is <b>buy</b>.' },
+  b: { t: 'The client buys', falas: [['Client', 'I want to buy 10,000 dollars.'], ['Bank', 'OK. We <mark>sell</mark> at five point four four two zero.']], d: 'The bank gives the dollars. For the bank, that is <b>sell</b>, at the higher rate.' },
+  pergunta: 'Same dollars, two words. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'The client has dollars and needs reais. The bank says:', o: ['We buy your dollars.', 'We sell your dollars.'], c: 0, d: 'The bank takes the dollars.' },
+    { p: 'The client needs dollars for a supplier in Japan. The bank says:', o: ['We buy at 5.4380.', 'We sell at 5.4420.'], c: 1, d: 'The bank gives the dollars: sell, the higher rate.' },
+    { p: 'The board: WE BUY 5.4380 · WE SELL 5.4420. The client wants to buy dollars. Which rate is it?', o: ['5.4380', '5.4420'], c: 1, d: 'The client buys, so the bank sells.' },
+    { p: 'The client sells 5,000 euros to the bank. The bank:', o: ['buys the euros.', 'sells the euros.'], c: 0, d: 'The bank takes the euros.' }
+  ],
+  nota: 'The screen speaks for the <b>bank</b>. <b>WE BUY</b>: the bank takes the money, the client sells. <b>WE SELL</b>: the bank gives the money, the client buys. Say the rate with <b>point</b>: five point four three eight zero.',
+  uso: { p: 'Your turn. Quote one rate to a client, then say what the bank does.', molde: ['We buy … at …', 'We sell … at …'], ex: 'We buy dollars at five point four three eight zero. We sell dollars at five point four four two zero.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

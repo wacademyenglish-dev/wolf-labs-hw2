@@ -17,10 +17,11 @@ var L = [
   { k: 'video1', est: 'l', min: 7, img: 'chuva', rot: 'II · Hot and Hungry', t: 'Day five. Fran is in Edinburgh.', p: 'Six words matter. The rest can pass.' },
   { k: 'pratos', est: 'f', min: 6, img: 'mesa', rot: 'III · Two Plates', t: 'Everything on the table goes on one plate.', p: 'Say the whole sentence first: I like … / I don’t like … Then the food moves. There is no wrong plate.' },
   { k: 'video2', est: 'l', min: 7, img: 'balcao', rot: 'IV · The Question', t: 'The man asks Fran a question.', p: 'Listen to her answer. Two words.' },
-  { k: 'bandeja', est: 'f', min: 6, img: 'mesa', rot: 'V · The Short Answer', t: 'The tray only takes short answers.', p: 'Your teacher asks Do you like …? Yes: the food goes on your tray. No: back to the counter.' },
-  { k: 'balcao', est: 'o', min: 7, img: 'balcao', rot: 'VI · At the Counter', t: 'You are in the café. Your teacher is the waiter.', p: 'Lunch, a drink, dessert. Answer short, then order with please.' },
-  { k: 'pesquisa', est: 'o', min: 7, extra: 1, img: 'chuva', rot: 'VII · Your Survey', t: 'Your turn to ask.', p: 'Ask Do you like …? Your teacher answers short, then one more sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'chuva', rot: 'VIII · Full', t: 'Write your café.', p: 'What you like, what you don’t, and two short answers. The red line watches like and do. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'balcao', rot: 'V · Yes, I Do', t: 'Ping-pong. Two words for each answer.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'bandeja', est: 'f', min: 6, img: 'mesa', rot: 'VI · The Short Answer', t: 'The tray only takes short answers.', p: 'Your teacher asks Do you like …? Yes: the food goes on your tray. No: back to the counter.' },
+  { k: 'balcao', est: 'o', min: 7, img: 'balcao', rot: 'VII · At the Counter', t: 'You are in the café. Your teacher is the waiter.', p: 'Lunch, a drink, dessert. Answer short, then order with please.' },
+  { k: 'pesquisa', est: 'o', min: 7, extra: 1, img: 'chuva', rot: 'VIII · Your Survey', t: 'Your turn to ask.', p: 'Ask Do you like …? Your teacher answers short, then one more sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'chuva', rot: 'IX · Full', t: 'Write your café.', p: 'What you like, what you don’t, and two short answers. The red line watches like and do. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -138,3 +139,18 @@ TOQUES['bd-prox'] = function () { var x = COMIDA[S.band.n]; S.band.onde[x] = S.b
 TOQUES['bc-p'] = function (b, n, v) { var p = S.balc.partes[S.balc.r] = S.balc.partes[S.balc.r] || {}; p[v] = !p[v]; };
 TOQUES['bc-prox'] = function () { S.balc.r++; };
 TOQUES.pq = function (b, n, v) { var a = v.split('|'); S.pesq[a[0]] = a[1]; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de bandeja.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Two words, fast.',
+  perguntas: [
+    { q: 'Do you like soup?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.', mais: 'Now ask your teacher: Do you like soup?' },
+    { q: 'Do you like coffee?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.', mais: 'When? I like coffee in the morning.' },
+    { q: 'Does your mother like tea?', s: 'Yes, she <mark>does</mark>.', n: 'No, she <mark>doesn’t</mark>.', mais: 'Does your father like tea?' },
+    { q: 'Do you like cold water?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.' },
+    { q: 'Do your friends like pizza?', s: 'Yes, they <mark>do</mark>.', n: 'No, they <mark>don’t</mark>.', mais: 'Which pizza? I like cheese pizza.' },
+    { q: 'Does your teacher like fish?', s: 'Yes, he <mark>does</mark>. · Yes, she <mark>does</mark>.', n: 'No, he <mark>doesn’t</mark>. · No, she <mark>doesn’t</mark>.' }
+  ],
+  nota: 'The short answer repeats <b>do</b>, never like: Yes, I <b>do</b>. No, I <b>don’t</b>. Not “Yes, I like”. With he or she: <b>does</b> and <b>doesn’t</b>.',
+  uso: { p: 'Your turn. Ask your teacher three Do you like …? questions about food. Your teacher answers the short way.', molde: ['Do you like …?', 'Does your … like …?'], ex: 'Do you like soup? Do you like cold coffee? Does your mother like fish?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

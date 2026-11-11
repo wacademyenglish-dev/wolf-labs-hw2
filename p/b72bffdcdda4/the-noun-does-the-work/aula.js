@@ -19,14 +19,15 @@
 var L = [
   { k: 'capa', est: null, img: 'gavetas' },
   { k: 'ontem', est: 'o', min: 7, img: 'pia', rot: 'I · Yesterday', t: 'Think about yesterday. Which of these did you do?', p: 'Tap one. Then answer out loud.' },
-  { k: 'mapa', est: 'f', min: 6, img: 'gavetas', rot: 'II · The Verb Map', t: 'Every noun lives somewhere on the map. A few live on the border.', p: 'Read the noun. Say it with a verb. Tap the territory. The pin drops.' },
-  { k: 'seis', est: 'f', min: 6, img: 'mesa', rot: 'III · Six Lines, Three Wrong', t: 'Six things people said at work. Three used the wrong verb.', p: 'Read it out loud. Tap RIGHT or WRONG.' },
-  { k: 'so', est: 'f', min: 6, img: 'mesa', rot: 'IV · Only One Works', t: 'For each gap, only one verb works.', p: 'Choose the verb. Say the whole sentence.' },
-  { k: 'ouve', est: 'l', min: 7, img: 'mesa', rot: 'V · Which One Went In', t: 'These verbs are fast and quiet. Four lines at normal speed.', p: 'Play each line. Tap the verb you heard. The line appears after.' },
-  { k: 'alem', est: 'f', min: 6, img: 'gavetas', rot: 'VI · Beyond the Kitchen', t: 'The same four verbs at work, in the news, in life.', p: 'Choose the verb. Say the whole sentence.' },
-  { k: 'dia', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'VII · A Whole Day', t: 'Tell the story of one real day, with eight collocations.', p: 'For each part of the day, choose the model line. Say it. Then say your own. The counter keeps score.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'pia', rot: 'VIII · Wrong Territory', t: 'Five phrases are in the wrong place. One is fine.', p: 'Choose the fix. Then say the whole sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'pia', rot: 'IX · Your Yesterday, Again', t: 'Your yesterday from scene I, every noun in its place.', p: 'Write it with at least four verbs. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'II · Three Jobs', t: 'The noun chooses the verb.', p: 'Look at the three jobs. Tap the job of each sentence. Then say three of your own.' },
+  { k: 'mapa', est: 'f', min: 6, img: 'gavetas', rot: 'III · The Verb Map', t: 'Every noun lives somewhere on the map. A few live on the border.', p: 'Read the noun. Say it with a verb. Tap the territory. The pin drops.' },
+  { k: 'seis', est: 'f', min: 6, img: 'mesa', rot: 'IV · Six Lines, Three Wrong', t: 'Six things people said at work. Three used the wrong verb.', p: 'Read it out loud. Tap RIGHT or WRONG.' },
+  { k: 'so', est: 'f', min: 6, img: 'mesa', rot: 'V · Only One Works', t: 'For each gap, only one verb works.', p: 'Choose the verb. Say the whole sentence.' },
+  { k: 'ouve', est: 'l', min: 7, img: 'mesa', rot: 'VI · Which One Went In', t: 'These verbs are fast and quiet. Four lines at normal speed.', p: 'Play each line. Tap the verb you heard. The line appears after.' },
+  { k: 'alem', est: 'f', min: 6, img: 'gavetas', rot: 'VII · Beyond the Kitchen', t: 'The same four verbs at work, in the news, in life.', p: 'Choose the verb. Say the whole sentence.' },
+  { k: 'dia', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'VIII · A Whole Day', t: 'Tell the story of one real day, with eight collocations.', p: 'For each part of the day, choose the model line. Say it. Then say your own. The counter keeps score.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'pia', rot: 'IX · Wrong Territory', t: 'Five phrases are in the wrong place. One is fine.', p: 'Choose the fix. Then say the whole sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'pia', rot: 'X · Your Yesterday, Again', t: 'Your yesterday from scene I, every noun in its place.', p: 'Write it with at least four verbs. It goes to your My notes.' }
 ];
 
 var TR = { 'v1.mp3': 'I need to make a decision before Friday.', 'v2.mp3': 'I need to do the shopping before Friday.', 'v3.mp3': 'Can I take a look at that?', 'v4.mp3': 'Can I have a look at that?' };
@@ -198,3 +199,24 @@ TOQUES.di = function (b, n) { S.di.esc = n; };
 TOQUES['di-prox'] = function () { S.di.conta += DIA[S.di.n].n; S.di.n++; S.di.esc = -1; };
 TOQUES.er = function (b, n) { S.er.esc = n; };
 TOQUES['er-prox'] = function () { S.er = { n: S.er.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de mapa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'The noun chooses the verb. Three jobs.',
+  usos: [
+    { t: 'MAKE', f: 'make a decision', d: 'You create or produce something: a call, a mistake, a plan.', img: 'mesa' },
+    { t: 'DO', f: 'do the dishes', d: 'A task, a job, a duty: homework, a favor, exercise.', img: 'pia' },
+    { t: 'TAKE OR HAVE', f: 'take a break · have lunch', d: 'A moment or an experience: a photo, a shower, a meeting.', img: 'gavetas' }
+  ],
+  pergunta: 'Which verb does the noun want?',
+  itens: [
+    { f: 'Yesterday I ___ the laundry.', c: 1 },
+    { f: 'Please ___ a quick call to the client.', c: 0 },
+    { f: 'I need to ___ a break.', c: 2 },
+    { f: 'She ___ a big decision on Monday.', c: 0 },
+    { f: 'We ___ homework at the library.', c: 1 },
+    { f: 'Let’s ___ a look at the map.', c: 2 }
+  ],
+  nota: 'The noun picks the verb: <b>make</b> a decision, a call, a mistake · <b>do</b> the dishes, homework, a favor · <b>take</b> or <b>have</b> a break, a shower, a look, lunch.',
+  uso: { p: 'Your turn. Yesterday: one thing you made, one thing you did, and one thing you took or had.', molde: ['I made …', 'I did …', 'I took / had …'], ex: 'I made a quick call. I did the laundry. I had lunch with a friend.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

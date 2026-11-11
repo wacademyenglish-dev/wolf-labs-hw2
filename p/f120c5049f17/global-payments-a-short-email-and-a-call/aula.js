@@ -11,15 +11,16 @@ var REV = { tipo: 'aula', aula: 5, nivel: 'A1', unidade: 1, kick: 'GLOBAL PAYMEN
   nota: 'Can you …, please? is the most useful question in your job.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'morning', est: 'o', min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
+  { k: 'morning', est: 'o', extra: 1, min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
   { k: 'conversa', est: 'o', min: 3, img: 'conversa', rot: 'II · Can You?', t: 'A short chat before work.', p: 'Choose an answer. Say it. Then ask: “And you?”' },
   { k: 'termos', est: 'l', min: 7, img: 'capa', rot: 'III · Email Words', t: 'Eight words for emails and calls.', p: 'Listen. Look. Say each word three times.', sig: ['invoice'] },
-  { k: 'explica', est: 'f', min: 8, img: 'mesa', rot: 'IV · Can You …, Please?', t: 'Ask nicely. Write it short.', p: 'Read the card with your teacher. Then build the sentence.', sig: ['invoice'] },
-  { k: 'simulador', est: 'f', min: 12, img: 'capa', rot: 'V · The Simulator', t: 'One payment, from hold to released.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['status', 'bene', 'invoice', 'settle'] },
-  { k: 'dialogo', est: 'l', min: 6, img: 'conversa', rot: 'VI · The Call', t: 'Call the client about the invoice.', p: 'One question before. Listen. Then the questions.', sig: ['invoice', 'vd'] },
-  { k: 'cartao', est: 'w', min: 7, img: 'mesa', rot: 'VII · The Email', t: 'Write a three-line email.', p: 'Dear … · The payment … · Can you …, please? · Best regards.', sig: ['invoice'] },
-  { k: 'check', est: 'o', min: 5, img: 'capa', rot: 'VIII · Screen Check', t: 'A new screen. Two minutes. In English.', p: 'Talk about the payment. Your teacher checks the list.', sig: ['status', 'numeros', 'vd', 'bene', 'inter', 'bic'] },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'IV · The Email in Blocks', t: 'The same request, three times.', p: 'Read the blocks out loud. Notice the job of each one. Then build a request and say your own.' },
+  { k: 'explica', est: 'f', min: 8, img: 'mesa', rot: 'V · Can You …, Please?', t: 'Ask nicely. Write it short.', p: 'Read the card with your teacher. Then build the sentence.', sig: ['invoice'] },
+  { k: 'simulador', est: 'f', min: 12, img: 'capa', rot: 'VI · The Simulator', t: 'One payment, from hold to released.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['status', 'bene', 'invoice', 'settle'] },
+  { k: 'dialogo', est: 'l', min: 6, img: 'conversa', rot: 'VII · The Call', t: 'Call the client about the invoice.', p: 'One question before. Listen. Then the questions.', sig: ['invoice', 'vd'] },
+  { k: 'cartao', est: 'w', min: 7, img: 'mesa', rot: 'VIII · The Email', t: 'Write a three-line email.', p: 'Dear … · The payment … · Can you …, please? · Best regards.', sig: ['invoice'] },
+  { k: 'check', est: 'o', min: 5, img: 'capa', rot: 'IX · Screen Check', t: 'A new screen. Two minutes. In English.', p: 'Talk about the payment. Your teacher checks the list.', sig: ['status', 'numeros', 'vd', 'bene', 'inter', 'bic'] },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'X · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
 ];
 
 var MORNING = { rot: 'OPERATIONS QUEUE · 08:01', ref: 'FX-20482',
@@ -120,3 +121,18 @@ var PT = {
   cartao: 'Escreva um e-mail curto para a cliente: o problema, o pedido e o obrigado.',
   check: 'Uma tela nova. Fale tudo o que você consegue sobre esse pagamento, por 2 minutos.',
   pode: 'Leia cada frase em voz alta e toque nas que você já consegue fazer.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de explica.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Ana’s email, in blocks. Each block has a job.',
+  frases: [
+    { b: [['The payment FX-20482', 'WHAT'], ['is on hold', 'PROBLEM']], d: 'Line 1 of the email: the problem.' },
+    { b: [['Can you', 'ASK', 'aux'], ['send', 'ACTION', 'acao'], ['the invoice', 'WHAT'], ['please?', 'POLITE']], d: 'Line 2: the request. Four blocks.' },
+    { b: [['Can you', 'ASK', 'aux'], ['check', 'ACTION', 'acao'], ['the BIC', 'WHAT'], ['please?', 'POLITE']], d: 'Same blocks, a new action and a new thing.' }
+  ],
+  nota: 'A polite request has four blocks: <b>Can you</b> + a clean <b>verb</b> + the thing + <b>please</b>. The verb never changes: Can you send, Can you check, Can you call.',
+  monta: { p: 'Build the next request for the client. Then say it.', pecas: [['please?', 'POLITE'], ['Can you', 'ASK', 'aux'], ['call', 'ACTION', 'acao'], ['us today', 'WHEN']], ordem: [1, 2, 3, 0] },
+  uso: { p: 'Your turn. Ask your teacher for two things: one for work, one for the class.', molde: ['Can you … , please?', 'Can you … , please?'], ex: 'Can you send me the document, please? Can you repeat that, please?' },
+  prof: 'Read the blocks with the student: the words on top, the job under each one. Point at the clean verb in the middle.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

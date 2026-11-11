@@ -14,9 +14,10 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 14, kick: 'AU PAIR · MODULE 4 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · Five Red Flags', t: 'Warning signs when you look for a family.', p: 'One question before, then the video, then the questions.' },
-  { k: 'separa', est: 'f', min: 14, img: 'capa', rot: 'II · OK or Red Flag?', t: 'Twelve situations, before and after you arrive.', p: 'Choose the side. Say why.' },
-  { k: 'erros', est: 'f', min: 8, img: 'conversa', rot: 'III · Spot the Scam', t: 'A message from a “family”. Find the red flags.', p: 'Tap every red flag and say why it is dangerous.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 14: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Ladder', t: 'Something feels wrong. What do you do next?', p: 'Read each step out loud, then go one step up. Notice who you talk to. Then say two steps in your own words.' },
+  { k: 'separa', est: 'f', min: 14, img: 'capa', rot: 'III · OK or Red Flag?', t: 'Twelve situations, before and after you arrive.', p: 'Choose the side. Say why.' },
+  { k: 'erros', est: 'f', min: 8, img: 'conversa', rot: 'IV · Spot the Scam', t: 'A message from a “family”. Find the red flags.', p: 'Tap every red flag and say why it is dangerous.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 14: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'OvFelSVNTcw', titulo: '5 red flags when looking for a host family', fonte: 'AUPAIRWORLD · 4 MIN',
@@ -61,3 +62,18 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 14: video · separa · erros (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'A red flag. Climb the ladder one step at a time.',
+  degraus: [
+    { r: 'feel', f: 'Something feels <b>wrong</b>.', d: 'Trust your feelings. Stop and think.' },
+    { r: 'say', f: 'I’m <b>not comfortable</b> with that.', d: 'Say it kindly and clearly.' },
+    { r: 'ask', f: 'I need to <b>talk to my coordinator</b> about this.', d: 'Ask the program for help.' },
+    { r: 'call', f: 'I’m going to <b>call the agency</b> today.', d: 'Your coordinator doesn’t help? Go up.' },
+    { r: 'now', f: 'This is an <b>emergency</b>. I’m calling 911.', d: 'In danger, 911 comes first.' }
+  ],
+  nota: 'Start small and go up: <b>say it</b>, <b>ask your coordinator</b>, <b>call the agency</b>. In danger, go straight to <b>911</b>. A red flag is a reason to talk, not to panic.',
+  uso: { p: 'Your turn. A host family asks you to work 12 hours today. Say what you say at step 2 and at step 3.', molde: ['I’m not comfortable …', 'I need to talk to …'], ex: 'I’m not comfortable working 12 hours. I need to talk to my coordinator about the schedule.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

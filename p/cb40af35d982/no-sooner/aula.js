@@ -30,11 +30,12 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'tenda', rot: 'I · Your Worst Trip', t: 'Every traveler has one disastrous trip.', p: 'Tap a card. The student tells it plainly; then the teacher tells one too.' },
   { k: 'diario', est: 'f', min: 7, img: 'diario', rot: 'II · The Journal', t: 'May 1921. A page from Captain Elin Hale’s journal.', p: 'Read the page out loud, with drama. Tap the words that jump to the front. Then finish the rule.' },
-  { k: 'regra', est: 'f', min: 6, img: 'tenda', rot: 'III · At Once or Only Then?', t: 'Six moments from the journal. Did the second thing come at once, or only then?', p: 'Tap a moment, then its box. Then say it as one sentence, with the opening of the box.' },
-  { k: 'rota', est: 'o', min: 7, img: 'gelo', rot: 'IV · The Route', t: 'The route home, camp by camp. The ice is moving: tell it fast.', p: 'Read the two events and the first words. Say one dramatic sentence out loud. Then tap Check: the team moves on.' },
-  { k: 'debate', est: 'o', min: 7, img: 'aurora', rot: 'V · Brave or Selfish?', t: 'Is it brave, or selfish, to risk your life for discovery?', p: 'Tap a card. Take a side and defend it. The teacher takes the other side.' },
-  { k: 'porto', est: 'o', min: 7, img: 'navio', rot: 'VI · The Harbor', t: 'Oslo harbor, 1921. A journalist wants the story for tomorrow’s front page.', p: 'The teacher is the journalist. Answer as the captain, with drama.' },
-  { k: 'fim', est: 'w', min: 6, img: 'aurora', rot: 'VII · The Last Page', t: 'Your disastrous trip, told like a 1921 journal.', p: 'Three dramatic sentences. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'diario', rot: 'III · The Journal in Blocks', t: 'Two facts, one after the other.', p: 'Read the blocks out loud. Notice where the helper goes. Then build a sentence and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'tenda', rot: 'IV · At Once or Only Then?', t: 'Six moments from the journal. Did the second thing come at once, or only then?', p: 'Tap a moment, then its box. Then say it as one sentence, with the opening of the box.' },
+  { k: 'rota', est: 'o', min: 7, img: 'gelo', rot: 'V · The Route', t: 'The route home, camp by camp. The ice is moving: tell it fast.', p: 'Read the two events and the first words. Say one dramatic sentence out loud. Then tap Check: the team moves on.' },
+  { k: 'debate', est: 'o', min: 7, img: 'aurora', rot: 'VI · Brave or Selfish?', t: 'Is it brave, or selfish, to risk your life for discovery?', p: 'Tap a card. Take a side and defend it. The teacher takes the other side.' },
+  { k: 'porto', est: 'o', min: 7, img: 'navio', rot: 'VII · The Harbor', t: 'Oslo harbor, 1921. A journalist wants the story for tomorrow’s front page.', p: 'The teacher is the journalist. Answer as the captain, with drama.' },
+  { k: 'fim', est: 'w', min: 6, img: 'aurora', rot: 'VIII · The Last Page', t: 'Your disastrous trip, told like a 1921 journal.', p: 'Three dramatic sentences. They go to your My notes.' }
 ];
 
 var VOCE = [
@@ -171,3 +172,16 @@ R.fim = function (c) {
     + '<p class="hw"><a class="pilula" href="HW/" target="_blank" rel="noopener">Homework for the student →</a></p></div></div>';
 };
 
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Captain Hale’s journal, in blocks. Each block has a job.',
+  frases: [
+    { b: [['No sooner', 'FIRST', 'quando'], ['had', 'HELPER', 'aux'], ['we', 'WHO', 'quem'], ['landed', 'FIRST FACT', 'acao'], ['than', 'LINK', 'aux'], ['the ice began to move', 'SECOND FACT', 'o']], d: 'The helper jumps before we. The link is than.' },
+    { b: [['Hardly', 'FIRST', 'quando'], ['had', 'HELPER', 'aux'], ['the crew', 'WHO', 'quem'], ['set up camp', 'FIRST FACT', 'acao'], ['when', 'LINK', 'aux'], ['the fog came down', 'SECOND FACT', 'o']], d: 'Hardly goes with when. Same shape.' },
+    { b: [['Not until', 'FIRST', 'quando'], ['the fog lifted', 'ONE EVENT', 'o'], ['did', 'HELPER', 'aux'], ['we', 'WHO', 'quem'], ['see', 'ACTION', 'acao'], ['the ship', 'WHAT', 'o']], d: 'The helper comes in the second part, and the verb is clean.' }
+  ],
+  nota: 'The first word opens the sentence, and the <b>helper</b> comes before the subject: <b>No sooner had we</b> … <b>than</b> …; <b>Hardly had we</b> … <b>when</b> …; <b>Not until</b> … <b>did we</b> …',
+  monta: { p: 'Build the next line of the journal. Then say it.', pecas: [['than', 'LINK', 'aux'], ['No sooner', 'FIRST', 'quando'], ['the sun came up', 'SECOND FACT', 'o'], ['had', 'HELPER', 'aux'], ['we', 'WHO', 'quem'], ['left camp', 'FIRST FACT', 'acao']], ordem: [1, 3, 4, 5, 0, 2] },
+  uso: { p: 'Now your own disaster. Two facts from a bad trip, with No sooner or Hardly.', molde: ['No sooner had we … than …', 'Hardly had I … when …'], ex: 'No sooner had we checked in than the hotel lost our reservation.' },
+  prof: 'Read the blocks top to bottom with the student. Point at the helper: it jumps in front of the subject.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

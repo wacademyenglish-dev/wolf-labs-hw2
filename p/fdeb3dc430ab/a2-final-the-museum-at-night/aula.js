@@ -13,8 +13,9 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'II · The Night Round', t: 'Roll, walk, check every room.', p: 'Your teacher rolls the die. Do the task in your room, out loud.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'V · I Can', t: 'Unit 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' },
-  { k: 'ponte', est: 'l', min: 3, img: 'conversa', rot: 'VI · The Next Book', t: 'Book A2 is done. Here is Book B1.', p: 'Read the three cards out loud. Which one do you want first?' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'V · Find the Rule', t: 'Four sentences from the museum. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VI · I Can', t: 'Unit 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' },
+  { k: 'ponte', est: 'l', min: 3, img: 'conversa', rot: 'VII · The Next Book', t: 'Book A2 is done. Here is Book B1.', p: 'Read the three cards out loud. Which one do you want first?' }
 ];
 var PORTAS = [];
 
@@ -62,3 +63,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me to turn something on or off.', dica: 'Could you turn … on / off?', resp: 'Sure, I’ll turn it off.' },
   { alvo: 'Ask me about a person who helped me.', dica: 'Who is a person who helped you?', resp: 'My first English teacher.' },
   { alvo: 'Show me a photo and ask me to guess.', dica: 'Where do you think this is?', resp: 'It must be Paris. It might be Lyon.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences from the night round. Find the rule yourself.', exemplos: ['The statue <b>is made</b> of bronze.', 'The old maps <b>are kept</b> in this room.', 'The doors <b>are locked</b> at ten.', 'These paintings <b>were found</b> in a cave.'], pergunta: 'When the object is the star, the verb …', opcoes: ['uses be + the participle: is made, are kept', 'uses be + the clean verb: is make, are keep', 'uses be + -ing: is making, are keeping'], c: 0, nao: 'Not that one. Read the four lit verbs again: is there a be? what comes after it?', regra: 'The passive: <b>be + participle</b>. The statue <b>is made</b> of bronze. The maps <b>are kept</b> here. We use it when the thing matters more than the person.', uso: { p: 'Your turn. Choose a thing in your city or your job. Say how it is made, kept or used.', molde: ['It is made …', 'They are kept …', 'It is used for …'], ex: 'The bread is made in the morning. It is sold in the shop downstairs. It is eaten with coffee.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

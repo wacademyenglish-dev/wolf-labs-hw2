@@ -27,15 +27,16 @@
 var L = [
   { k: 'capa', est: null, img: 'feed' },
   { k: 'hoje', est: 'o', min: 7, img: 'feed', rot: 'I · Today, on Your Phone', t: 'What have you seen on your phone today? And when did you see it?', p: 'Tap what you’ve seen and say it. Then tap when, and say it again.' },
-  { k: 'feed', est: 'f', min: 6, img: 'feed', rot: 'II · The Phone and the Drawer', t: 'No finished time? It stays on the phone. A finished time? It goes to the drawer.', p: 'Tap a post. Then tap the phone or the drawer. Then read each one out loud.' },
-  { k: 'numeros', est: 'l', min: 7, img: 'tela', rot: 'III · Fifty Point Four', t: 'A big study in 2023: 23,000 people let researchers measure their whole feed for three months.', p: 'Guess out loud, then tap. At the end, the author speaks.' },
-  { k: 'aprende', est: 'l', min: 7, img: 'feed', rot: 'IV · How It Learns', t: 'An engineer explains how a feed learns what you want.', p: 'Listen once. Then tap the four steps in the order they happen.' },
-  { k: 'ever', est: 'f', min: 6, img: 'feed', rot: 'V · Have You Ever…?', t: 'The question is in the present perfect. The follow-up goes to a finished time.', p: 'Read the question and the answer. Build the follow-up out loud. Then tap Check.' },
-  { k: 'mao', est: 'f', min: 6, img: 'espera', rot: 'VI · Who Did the Filtering?', t: 'A study of ten million people, 2015.', p: 'Read the card out loud. Was it the machine, your own hand, or did nobody measure it?' },
-  { k: 'desligou', est: 'l', min: 7, extra: 1, img: 'tela', rot: 'VII · They Turned It Off', t: 'No ranking, only time order, for three months.', p: 'Listen once. Then answer four questions.' },
-  { k: 'conversa', est: 'o', min: 7, extra: 1, img: 'espera', rot: 'VIII · Have You Ever Asked?', t: 'Five cards. Ask your teacher. Follow up in the past simple. Then answer it yourself.', p: 'Spin the wheel. Ask your teacher the question. Follow up, and tap the counter for each follow-up.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'feed', rot: 'IX · I Have Seen It Yesterday', t: 'Five sentences have a problem. One is right.', p: 'Right or wrong? If it is wrong, say the whole sentence right.' },
-  { k: 'fim', est: 'w', min: 6, img: 'feed', rot: 'X · Your Feed, Again', t: 'Your two sentences from scene I come back.', p: 'Write about your feed: three things you’ve done, and when you did them. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'feed', rot: 'II · Phone or Drawer?', t: 'Two questions about one app. Two forms.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'feed', est: 'f', min: 6, img: 'feed', rot: 'III · The Phone and the Drawer', t: 'No finished time? It stays on the phone. A finished time? It goes to the drawer.', p: 'Tap a post. Then tap the phone or the drawer. Then read each one out loud.' },
+  { k: 'numeros', est: 'l', min: 7, img: 'tela', rot: 'IV · Fifty Point Four', t: 'A big study in 2023: 23,000 people let researchers measure their whole feed for three months.', p: 'Guess out loud, then tap. At the end, the author speaks.' },
+  { k: 'aprende', est: 'l', min: 7, img: 'feed', rot: 'V · How It Learns', t: 'An engineer explains how a feed learns what you want.', p: 'Listen once. Then tap the four steps in the order they happen.' },
+  { k: 'ever', est: 'f', min: 6, img: 'feed', rot: 'VI · Have You Ever…?', t: 'The question is in the present perfect. The follow-up goes to a finished time.', p: 'Read the question and the answer. Build the follow-up out loud. Then tap Check.' },
+  { k: 'mao', est: 'f', min: 6, img: 'espera', rot: 'VII · Who Did the Filtering?', t: 'A study of ten million people, 2015.', p: 'Read the card out loud. Was it the machine, your own hand, or did nobody measure it?' },
+  { k: 'desligou', est: 'l', min: 7, extra: 1, img: 'tela', rot: 'VIII · They Turned It Off', t: 'No ranking, only time order, for three months.', p: 'Listen once. Then answer four questions.' },
+  { k: 'conversa', est: 'o', min: 7, extra: 1, img: 'espera', rot: 'IX · Have You Ever Asked?', t: 'Five cards. Ask your teacher. Follow up in the past simple. Then answer it yourself.', p: 'Spin the wheel. Ask your teacher the question. Follow up, and tap the counter for each follow-up.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'feed', rot: 'X · I Have Seen It Yesterday', t: 'Five sentences have a problem. One is right.', p: 'Right or wrong? If it is wrong, say the whole sentence right.' },
+  { k: 'fim', est: 'w', min: 6, img: 'feed', rot: 'XI · Your Feed, Again', t: 'Your two sentences from scene I come back.', p: 'Write about your feed: three things you’ve done, and when you did them. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -218,3 +219,20 @@ TOQUES.ap = function (b, n) { var e = S.ap; if (n === e.pick.length) { e.pick.pu
 TOQUES.mo = function (b, n) { S.mo.sel = n; S.mo.err = ''; };
 TOQUES['mo-c'] = function (b, n) { var e = S.mo; if (e.sel < 0) { e.err = 'Tap a card first.'; return; } if (FICHAS[e.sel].c === n) { e.pos[e.sel] = n; e.sel = -1; e.err = ''; } else e.err = 'Did the post arrive? If it did, it wasn’t the machine.'; };
 TOQUES.dl = function (b, n, v) { S.dl.esc[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de feed.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'This or that? Two chats about one app.',
+  a: { t: 'On the phone', falas: [['Ana', 'Have you ever deleted an app?'], ['Leo', 'Yes, I <mark>have deleted</mark> a few.']], d: 'No time is named. It is your life until now: <b>have + the third form</b>. The post stays on the phone.' },
+  b: { t: 'In the drawer', falas: [['Ana', 'When did you delete it?'], ['Leo', 'I <mark>deleted</mark> it <mark>last Christmas</mark>.']], d: 'A finished time is named: last Christmas. Now it is the <b>past simple</b>: deleted. The post goes to the drawer.' },
+  pergunta: 'Same app, two forms. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Ana asks about the day you did it: “… that post?”', o: ['Have you deleted', 'When did you delete'], c: 1, d: 'You want the finished time: When did you …?' },
+    { p: 'Ana asks about your life, no time: “… a post?”', o: ['Have you ever deleted', 'When did you delete'], c: 0, d: 'No time is named: Have you ever …?' },
+    { p: 'Leo gives the day: “I … it on Friday.”', o: ['have deleted', 'deleted'], c: 1, d: 'Friday is a finished time: deleted.' },
+    { p: 'Leo counts his life so far, with no day: “I … three apps.”', o: ['have deleted', 'deleted'], c: 0, d: 'No finished time: have deleted.' }
+  ],
+  nota: 'No finished time? Keep it on the phone: <b>have / has + the third form</b>. A finished time (yesterday, last Christmas, in 2019)? It goes to the drawer: the <b>past simple</b>. The question starts with <b>Have you ever …?</b>, the follow-up is <b>When did you …?</b>',
+  uso: { p: 'Your turn. One thing you’ve done with your phone, and when you did it.', molde: ['I’ve … once.', 'I … last …'], ex: 'I’ve deleted social media once. I deleted it last summer, and I felt better.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

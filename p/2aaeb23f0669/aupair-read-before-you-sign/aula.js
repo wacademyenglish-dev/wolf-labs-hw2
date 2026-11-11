@@ -14,9 +14,10 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 7, kick: 'AU PAIR · MODULE 2 ·
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · The Agreement', t: 'Read the Millers’ agreement.', p: 'Read it out loud. Then answer the questions.' },
-  { k: 'separa', est: 'f', min: 12, img: 'capa', rot: 'II · OK or Ask First?', t: 'Ten lines from different agreements.', p: 'Is it OK to sign, or do you need to ask first? Say why.' },
-  { k: 'cadeira', est: 'o', min: 10, img: 'conversa', rot: 'III · Ask Before You Sign', t: 'Your teacher is the host mom. You ask.', p: 'Ask politely about the lines you don’t understand.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Mistake Hunter', t: 'Six lines from the agreement. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'separa', est: 'f', min: 12, img: 'capa', rot: 'III · OK or Ask First?', t: 'Ten lines from different agreements.', p: 'Is it OK to sign, or do you need to ask first? Say why.' },
+  { k: 'cadeira', est: 'o', min: 10, img: 'conversa', rot: 'IV · Ask Before You Sign', t: 'Your teacher is the host mom. You ask.', p: 'Ask politely about the lines you don’t understand.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'THE MILLER FAMILY · AU PAIR AGREEMENT (FICTIONAL)', tipo: 'nota',
@@ -57,3 +58,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 07: leitura · separa · cadeira (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines from an agreement.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'The au pair works up [[of]] 45 hours per week.', r: 'The au pair works up <b>to</b> 45 hours per week.', d: 'Up to: the limit.' },
+    { f: 'She [[musts]] be home by 11 p.m.', r: 'She <b>must</b> be home by 11 p.m.', d: 'Must never takes an -s.' },
+    { f: 'You must [[to]] call the parents.', r: 'You must <b>call</b> the parents.', d: 'After must: the clean verb, no to.' },
+    { f: 'You [[don’t must]] use the phone while driving.', r: 'You <b>must not</b> use the phone while driving.', d: 'For forbidden: must not.' },
+    { f: 'Ten hours [[for]] day, at most.', r: 'Ten hours <b>per</b> day, at most.', d: 'Per: each day, each week.' },
+    { f: 'The car is only for use [[in]] weekends.', r: 'The car is only for use <b>on</b> weekends.', d: 'Days and weekends: on.' }
+  ],
+  nota: 'Read the agreement word by word: <b>up to</b> is a limit, <b>per week</b> is each week, <b>must</b> is a rule, <b>must not</b> is forbidden. After must: no -s, no to.',
+  uso: { p: 'Your turn. One rule for an au pair and one forbidden thing.', molde: ['The au pair must …', 'She must not …'], ex: 'The au pair must be home by 11 p.m. She must not use her phone while driving.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

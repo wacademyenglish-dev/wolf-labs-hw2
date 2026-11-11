@@ -15,9 +15,10 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'I · How Do You Learn?', t: 'Choose, then explain.', p: 'Choose A or B. Then tell your teacher why, with an example.' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · The Memoir', t: 'Chapter 7: the night I stopped shaking.', p: 'Read it out loud. Answer the questions. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Where’s the Verb?', t: 'Only… and then what?', p: 'Compare A and B. Where does the inversion go?' },
-  { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'IV · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the matching pair. Then make a sentence with it.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'V · Your Turning Point', t: 'Write the moment everything changed.', p: 'Write four lines. Use Only… + inversion at least twice.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'III · The Turning Point in Blocks', t: 'The same turn, in blocks.', p: 'Read the blocks out loud. Notice where the helper goes. Then build a sentence and say your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'IV · Where’s the Verb?', t: 'Only… and then what?', p: 'Compare A and B. Where does the inversion go?' },
+  { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'V · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the matching pair. Then make a sentence with it.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VI · Your Turning Point', t: 'Write the moment everything changed.', p: 'Write four lines. Use Only… + inversion at least twice.' }
 ];
 var PORTAS = [];
 
@@ -66,3 +67,9 @@ var PARES = [
   ['Only after the show', 'did I relax.', 'Only after the show did I relax and eat something.'],
   ['Only by practising every day', 'did I improve.', 'Only by practising every day did I improve my accent.'],
   ['Only if you accept the fear', 'will you be free.', 'Only if you accept the fear will you be free of it.']];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'The night she stopped shaking, in blocks. Each block has a job.', frases: [{ b: [['Only then', 'WHEN'], ['did', 'HELPER', 'aux'], ['I', 'WHO'], ['see', 'ACTION'], ['the light', 'WHAT']], d: 'The time goes first. Then the helper, then the person. The verb stays clean.' }, { b: [['Only later', 'WHEN'], ['did', 'HELPER', 'aux'], ['I', 'WHO'], ['realize', 'ACTION'], ['it was only fear', 'WHAT']], d: 'The same four blocks in the same order.' }, { b: [['Only when the lights went down', 'WHEN'], ['did', 'HELPER', 'aux'], ['I', 'WHO'], ['relax', 'ACTION']], d: 'A long time block, but the helper still comes right after it.' }], nota: 'After <b>Only + time</b>, the order is: <b>TIME + helper + person + clean verb</b>. The helper (did, had, can, will) moves before the person. The first part (when the lights went down) keeps the normal order.', monta: { p: 'Build the line. Then say it.', pecas: [['did', 'HELPER', 'aux'], ['Only after the show', 'WHEN'], ['relax', 'ACTION'], ['I', 'WHO']], ordem: [1, 0, 3, 2], outras: [] }, uso: { p: 'Your turn. Think of a moment when something changed for you. Say two sentences that start with Only.', molde: ['Only then did I …', 'Only after … did I …'], ex: 'Only after the exam did I breathe again. Only then did I understand how tired I was.' }, prof: 'Read the blocks with the student, left to right. Point at the helper block: it always sits between the time and the person.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

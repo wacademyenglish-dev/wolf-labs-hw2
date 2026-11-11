@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 1, kick: 'ENGLISH FOR DESIGNERS
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · Before the Brief', t: 'Ten questions to ask a new client.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'II · Open the Door', t: 'Questions that make the client talk.', p: 'Compare A and B. Which one gets a better answer? Why?' },
-  { k: 'cadeira', est: 'o', min: 16, img: 'conversa', rot: 'III · Your First Client Call', t: 'Your teacher is the client. You ask.', p: 'Ask each question. Listen, take notes, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Questions, in Blocks', t: 'Four client questions, four patterns.', p: 'Read the blocks out loud. Notice what each block does. Then build a question and say your own.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'III · Open the Door', t: 'Questions that make the client talk.', p: 'Compare A and B. Which one gets a better answer? Why?' },
+  { k: 'cadeira', est: 'o', min: 16, img: 'conversa', rot: 'IV · Your First Client Call', t: 'Your teacher is the client. You ask.', p: 'Ask each question. Listen, take notes, react.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'cJrpeLgW_Wc', titulo: '10 Questions to Ask a Client Before Creating a Design Brief', fonte: 'WEBFX · 0:35–3:12', inicio: 35, fim: 192,
@@ -59,3 +60,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 01: video · descobre · cadeira (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Client questions, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Can you tell me', 'OPEN', 'aux'], ['about', 'LINK', 'aux'], ['your company?', 'WHAT', 'o']], d: 'An open question: the client talks.' },
+    { b: [['What', 'QUESTION', 'q'], ['are you hoping to', 'GOAL', 'aux'], ['achieve', 'ACTION', 'acao'], ['with the new website?', 'WHAT', 'o']], d: 'hoping to + a clean verb.' },
+    { b: [['Who', 'QUESTION', 'q'], ['is it', 'BE', 'aux'], ['for?', 'WHO', 'quem']], d: 'The preposition goes at the end.' },
+    { b: [['What', 'QUESTION', 'q'], ['don’t you', 'HELPER', 'aux'], ['like', 'ACTION', 'acao'], ['about your logo?', 'WHAT', 'o']], d: 'The helper comes before you.' }
+  ],
+  nota: 'Four small patterns: <b>Can you tell me about …?</b> opens the door. <b>hoping to</b> + verb is for goals. The preposition goes <b>at the end</b>: Who is it for? And the helper comes before you: What <b>do you</b> want to change?',
+  monta: { p: 'Build a goal question for a new client, then say it.', pecas: [['to change?', 'ACTION', 'acao'], ['What', 'QUESTION', 'q'], ['are you hoping', 'GOAL', 'aux']], ordem: [1, 2, 0] },
+  uso: { p: 'Your turn. A client brings a new project. Ask two open questions.', molde: ['Can you tell me about …?', 'What are you hoping to …?'], ex: 'Can you tell me about your customers? What are you hoping to change?' },
+  prof: 'Read the blocks with the student, top to bottom: the words on top, the job under them.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

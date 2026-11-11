@@ -12,10 +12,11 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 10, kick: 'DUOLINGO ENGLISH TES
   nota: 'Listen to the TENSE of the question: “Do you…?” present, “Have you ever…?” present perfect, “If you had…?” would.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'I · Answer + 1 + 1', t: 'Two answers to the same question.', p: 'Compare A and B. Which one gets more points? Why?' },
-  { k: 'prova', est: 'o', min: 16, img: 'capa', rot: 'II · Six Questions', t: 'Listen once. Answer for about 35 seconds.', p: 'Play the question, then start the clock. Answer + one detail + one example.' },
-  { k: 'escolha', est: 'o', min: 7, img: 'conversa', rot: 'III · Quick Choices', t: 'A or B? Say why, in 30 seconds.', p: 'Choose quickly. Then give a reason and an example.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'o', min: 4, img: 'capa', rot: 'I · Match the Question', t: 'Ping-pong. Short answers, then one detail.', p: 'The teacher asks. Tap your true answer and say it fast. Then add one detail.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Answer + 1 + 1', t: 'Two answers to the same question.', p: 'Compare A and B. Which one gets more points? Why?' },
+  { k: 'prova', est: 'o', min: 16, img: 'capa', rot: 'III · Six Questions', t: 'Listen once. Answer for about 35 seconds.', p: 'Play the question, then start the clock. Answer + one detail + one example.' },
+  { k: 'escolha', est: 'o', min: 7, img: 'conversa', rot: 'IV · Quick Choices', t: 'A or B? Say why, in 30 seconds.', p: 'Choose quickly. Then give a reason and an example.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var DESCOBRE = {
@@ -63,3 +64,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 10: descobre · prova (com áudio) · escolha (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Match the question. Short, then one detail.',
+  perguntas: [
+    { q: 'Has your routine changed this year?', s: 'Yes, it <mark>has</mark>.', n: 'No, it <mark>hasn’t</mark>.', mais: 'Add one detail: I’ve started …' },
+    { q: 'Do you usually cook at home?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.', mais: 'Add one detail and one example.' },
+    { q: 'Did you travel last year?', s: 'Yes, I <mark>did</mark>.', n: 'No, I <mark>didn’t</mark>.', mais: 'Where did you go?' },
+    { q: 'Would you live abroad?', s: 'Yes, I <mark>would</mark>.', n: 'No, I <mark>wouldn’t</mark>.', mais: 'Why? I would …' },
+    { q: 'Are you studying English right now?', s: 'Yes, I <mark>am</mark>.', n: 'No, I’m <mark>not</mark>.', mais: 'Add: I’m studying for …' },
+    { q: 'Can you describe your city in one sentence?', s: 'Yes, I <mark>can</mark>.', n: 'No, I <mark>can’t</mark>.', mais: 'Now do it: My city is …' }
+  ],
+  nota: 'Match the question: Has …? Yes, it <b>has</b>. Did …? Yes, I <b>did</b>. Would …? Yes, I <b>would</b>. Then add <b>one detail</b> and <b>one example</b>, in the same tense.',
+  uso: { p: 'Your turn. Ask your teacher three questions: one with Has, one with Did, one with Would. Your teacher answers short, then adds a detail.', molde: ['Has your … changed?', 'Did you …?', 'Would you …?'], ex: 'Has your routine changed? Did you travel last year? Would you live abroad?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 14, img: 'capa', rot: 'II · The Blackout', t: 'Three neighbors. Where were they at nine?', p: 'Ask each neighbor five questions. Your teacher is the neighbor. Then call the electric company.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'conversa', est: 'o', min: 8, img: 'conversa', rot: 'IV · Small Talk', t: 'Old photos on the shelf. Let’s talk.', p: 'Answer, then ask the question back: “And you?”' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Blackout Pairs', t: 'Five pairs from the blackout.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -62,3 +63,9 @@ var PARES = [
   ['What were you', 'doing at nine?', 'What were you doing at nine last night?'],
   ['They weren’t', 'sleeping.', 'They weren’t sleeping. They were playing cards.']];
 var ERROS = { tipo: 'chat', rot: 'A MESSAGE FROM APARTMENT 4D', partes: ['Hi! Last night I ', ['were watching', 'was watching', 'I was (not were).'], ' a movie when the lights ', ['go out', 'went out', 'The short action: past simple.'], '. My kids ', ['was sleeping', 'were sleeping', 'They were.'], ', so they didn’t notice. I ', ['use to', 'used to', 'In the past: used to.'], ' keep candles in the kitchen, but now I don’t. While I ', ['was look', 'was looking', 'was + -ing.'], ' for my phone, the lights came back!'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'She was cooking at nine.', x: 'She were cooking at nine.', d: 'she / he / it: <b>was</b>. you / we / they: were.' }, { c: 'I was cooking when the lights went out.', x: 'I was cook when the lights went out.', d: 'was + <b>-ing</b>.' }, { c: 'I used to live here.', x: 'I use to live here.', d: 'Something in the past: <b>used</b> to.' }, { c: 'We didn’t use to have a lift.', x: 'We didn’t used to have a lift.', d: 'After didn’t: <b>use</b> to.' }, { c: 'What were you doing at nine?', x: 'What you were doing at nine?', d: 'In a question, <b>were</b> comes before you.' }], nota: 'The long action: <b>was / were + -ing</b>. The short one that interrupts: past simple. An old habit: <b>used to</b>, but after didn’t: <b>use to</b>.', uso: { p: 'Your turn. The lights went out last night. Say what you were doing, and what happened.', molde: ['At nine I was …', 'When the lights went out, I …'], ex: 'At nine I was cooking pasta. When the lights went out, I found a candle.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

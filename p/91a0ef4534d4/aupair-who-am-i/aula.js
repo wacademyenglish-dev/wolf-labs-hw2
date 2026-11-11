@@ -12,10 +12,11 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 1, kick: 'AU PAIR · MODULE 1 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 10, img: 'conversa', rot: 'I · Meet Laura', t: 'A real au pair tells her story.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'II · Say It Right', t: 'Small words, big difference.', p: 'Compare A and B. Which one is right? Why?' },
-  { k: 'conversa', est: 'o', min: 9, img: 'conversa', rot: 'III · Tell Me About You', t: 'A host mom asks. You answer.', p: 'Answer, then ask the question back: “And you?”' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'IV · Your First Lines', t: 'Write five lines about you.', p: 'Name, age, where you live, what you love, what you can do.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Right, Not This', t: 'Six lines for a host family. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'III · Say It Right', t: 'Small words, big difference.', p: 'Compare A and B. Which one is right? Why?' },
+  { k: 'conversa', est: 'o', min: 9, img: 'conversa', rot: 'IV · Tell Me About You', t: 'A host mom asks. You answer.', p: 'Answer, then ask the question back: “And you?”' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'V · Your First Lines', t: 'Write five lines about you.', p: 'Name, age, where you live, what you love, what you can do.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'oMgQ1e0kEz8', titulo: 'What is an Au Pair | Meet Laura from Spain', fonte: 'AUPAIRCARE · 2 MIN',
@@ -60,3 +61,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 01: video · descobre · conversa · cartao (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'I am 22 years old.', x: 'I have 22 years.', d: 'In English we are our age: I am 22.' },
+    { c: 'I can drive.', x: 'I can to drive.', d: 'After can: the clean verb, no to.' },
+    { c: 'My sister loves kids.', x: 'My sister love kids.', d: 'She, he, it: the verb takes an S.' },
+    { c: 'I love playing with kids.', x: 'I love play with kids.', d: 'After love: -ing (or to + verb).' },
+    { c: 'I don’t smoke.', x: 'I no smoke.', d: 'For no: don’t + the clean verb.' },
+    { c: 'She is from Spain.', x: 'She is of Spain.', d: 'Where you come from: from.' }
+  ],
+  nota: 'Four small rules for your first lines: your age with <b>am</b>, <b>can</b> + a clean verb, <b>she loves</b> with an S, and <b>love + -ing</b>.',
+  uso: { p: 'Your turn. Say your age, one thing you can do and one thing you love.', molde: ['I am … years old.', 'I can …', 'I love …ing'], ex: 'I am 24 years old. I can drive. I love playing with kids.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

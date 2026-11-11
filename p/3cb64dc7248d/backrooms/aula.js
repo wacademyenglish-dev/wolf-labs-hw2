@@ -37,10 +37,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Backrooms. The official trailer.', p: 'Talk for one minute. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'loja', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'vhs', rot: 'V · Someone Has Been Here', t: 'Since or for? Sort the times. Then see the rule.', p: 'Tap a time, then its box. When all six are right, the rule appears.' },
-  { k: 'mapa', est: 'o', min: 7, img: 'capa', rot: 'VI · The Map', t: 'Level 0, room by room. Every right sentence draws one.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'desde', est: 'o', min: 7, img: 'loja', rot: 'VII · Since and For', t: 'Roll the dice: three things from your life, from the past until now.', p: 'Roll, then say one sentence for each word. Then start the clock.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'o', min: 4, img: 'vhs', rot: 'V · Yes, I Have', t: 'Ping-pong in the dark. Three words for each answer.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'regra', est: 'f', min: 6, img: 'vhs', rot: 'VI · Someone Has Been Here', t: 'Since or for? Sort the times. Then see the rule.', p: 'Tap a time, then its box. When all six are right, the rule appears.' },
+  { k: 'mapa', est: 'o', min: 7, img: 'capa', rot: 'VII · The Map', t: 'Level 0, room by room. Every right sentence draws one.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'desde', est: 'o', min: 7, img: 'loja', rot: 'VIII · Since and For', t: 'Roll the dice: three things from your life, from the past until now.', p: 'Roll, then say one sentence for each word. Then start the clock.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var FILME = 'Backrooms', ANO = '2026';
@@ -233,3 +234,18 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Clar
     { q: 'Why have you gone back so many times?', ex: 'Because I haven’t found the end yet.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Three words, fast.',
+  perguntas: [
+    { q: 'Have you ever been in a place with no windows?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'Where? When?' },
+    { q: 'Has your phone ever died in the dark?', s: 'Yes, it <mark>has</mark>.', n: 'No, it <mark>hasn’t</mark>.', mais: 'What did you do?' },
+    { q: 'Have you ever watched a scary video alone?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'Say it: I’ve watched …' },
+    { q: 'Have you been awake since six o’clock?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'Say it: I’ve been awake since …' },
+    { q: 'Have your friends ever got lost in a mall?', s: 'Yes, they <mark>have</mark>.', n: 'No, they <mark>haven’t</mark>.' },
+    { q: 'Has your city ever had a big storm?', s: 'Yes, it <mark>has</mark>.', n: 'No, it <mark>hasn’t</mark>.', mais: 'When was it?' }
+  ],
+  nota: 'The short answer repeats the helper: Yes, I <b>have</b>. No, it <b>hasn’t</b>. Not “Yes, I did”, and not “Yes, I have been”.',
+  uso: { p: 'Your turn. Ask your teacher three questions with Have you ever…? Your teacher answers the short way.', molde: ['Have you ever …?', 'Has your … ever …?'], ex: 'Have you ever lost your keys? Has your car ever broken down?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

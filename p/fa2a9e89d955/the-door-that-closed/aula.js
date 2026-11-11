@@ -20,13 +20,14 @@ var L = [
   { k: 'escolha', est: 'o', min: 7, img: 'estacao', rot: 'I · A Choice That Changed Things', t: 'Think of a choice that changed your life, big or small.', p: 'Tap what kind of choice it was. Then answer three questions out loud.' },
   { k: 'portas', est: 'f', min: 6, img: 'porta', rot: 'II · Open or Shut?', t: 'The tense follows the door, not the feeling. Can it still happen?', p: 'Read the situation. Say why. Then tap OPEN or SHUT.' },
   { k: 'agulha', est: 'o', min: 7, img: 'agulha', rot: 'III · Flip the Switch', t: 'Five stories on the main track. Flip the switch, and the train takes the other one.', p: 'Build it in two taps: the IF half, then the WOULD HAVE half. Then say the whole sentence.' },
-  { k: 'regra', est: 'f', min: 6, img: 'agulha', rot: 'IV · Both Halves Move Back', t: 'Say the whole sentence before you tap.', p: 'Choose the form. One of them is an open door on purpose.' },
-  { k: 'voz', est: 'l', min: 7, img: 'alavanca', rot: 'V · Two ’d, Two Words', t: 'Two apostrophes, one sound, two different words.', p: 'Play the line. Tap what each ’d means. Then say it at normal speed.' },
-  { k: 'erros', est: 'f', min: 6, img: 'alavanca', rot: 'VI · If I Would Have', t: 'Five sentences have a problem. One is right.', p: 'Choose the fix. Then say the whole sentence.' },
-  { k: 'semif', est: 'o', min: 7, extra: 1, img: 'estacao', rot: 'VII · No IF Needed', t: 'Sometimes the IF is only in the situation.', p: 'Read it. Answer out loud with “I would have …” or “I wouldn’t have …”, and say why.' },
-  { k: 'tres', est: 'o', min: 7, extra: 1, img: 'agulha', rot: 'VIII · Three of Your Choices', t: 'Three of your own choices. Flip the switch, and keep going down the other track.', p: 'Choose the right frame and say your sentence. Your teacher asks: “And then what would have happened?”' },
-  { k: 'cartas', est: 'o', min: 7, extra: 1, img: 'alavanca', rot: 'IX · Quick Switches', t: 'Five quick switches. No thinking time.', p: 'One full sentence for each card. Fast.' },
-  { k: 'fim', est: 'w', min: 6, img: 'estacao', rot: 'X · Back to Your Choice', t: 'Your choice from scene I comes back, on the other track.', p: 'Write your choice, and the other track, in three sentences. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'agulha', rot: 'IV · The Ladder Back', t: 'One missed train, five steps back in time.', p: 'Read each step out loud, then go one step up. Notice both halves. Then climb with your own story.' },
+  { k: 'regra', est: 'f', min: 6, img: 'agulha', rot: 'V · Both Halves Move Back', t: 'Say the whole sentence before you tap.', p: 'Choose the form. One of them is an open door on purpose.' },
+  { k: 'voz', est: 'l', min: 7, img: 'alavanca', rot: 'VI · Two ’d, Two Words', t: 'Two apostrophes, one sound, two different words.', p: 'Play the line. Tap what each ’d means. Then say it at normal speed.' },
+  { k: 'erros', est: 'f', min: 6, img: 'alavanca', rot: 'VII · If I Would Have', t: 'Five sentences have a problem. One is right.', p: 'Choose the fix. Then say the whole sentence.' },
+  { k: 'semif', est: 'o', min: 7, extra: 1, img: 'estacao', rot: 'VIII · No IF Needed', t: 'Sometimes the IF is only in the situation.', p: 'Read it. Answer out loud with “I would have …” or “I wouldn’t have …”, and say why.' },
+  { k: 'tres', est: 'o', min: 7, extra: 1, img: 'agulha', rot: 'IX · Three of Your Choices', t: 'Three of your own choices. Flip the switch, and keep going down the other track.', p: 'Choose the right frame and say your sentence. Your teacher asks: “And then what would have happened?”' },
+  { k: 'cartas', est: 'o', min: 7, extra: 1, img: 'alavanca', rot: 'X · Quick Switches', t: 'Five quick switches. No thinking time.', p: 'One full sentence for each card. Fast.' },
+  { k: 'fim', est: 'w', min: 6, img: 'estacao', rot: 'XI · Back to Your Choice', t: 'Your choice from scene I comes back, on the other track.', p: 'Write your choice, and the other track, in three sentences. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -229,3 +230,17 @@ TOQUES['er-prox'] = function () { S.er = { n: S.er.n + 1, esc: -1 }; };
 TOQUES.tr = function (b, n) { S.tr.esc = n; };
 TOQUES['tr-elo'] = function () { S.tr.elos = Math.min(S.tr.elos + 1, 4); };
 TOQUES['tr-prox'] = function () { S.tr = { n: S.tr.n + 1, esc: -1, elos: 0 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One missed train. Climb back one step at a time.',
+  degraus: [
+    { r: 'past', f: 'I <b>missed</b> the train.', d: 'The real story. It is finished.' },
+    { r: 'if', f: 'If I <b>had caught</b> the train…', d: 'The other track: had + participle after if.' },
+    { r: 'result', f: 'If I had caught the train, I <b>would have met</b> her.', d: 'The result: would have + participle.' },
+    { r: 'not', f: 'If I <b>hadn’t missed</b> it, I <b>wouldn’t have changed</b> jobs.', d: 'The sign flips in the half you need.' },
+    { r: '?', f: 'What <b>would</b> you <b>have done</b> if you <b>had missed</b> it?', d: 'Would goes first, then have + participle.' }
+  ],
+  nota: 'Both halves step back: <b>if + had + participle</b> and <b>would have + participle</b>. A past that did not happen.',
+  uso: { p: 'Your turn. One thing you did not do, and what would have happened. Climb the ladder.', molde: ['If I had …, I would have …', 'If I hadn’t …'], ex: 'If I had studied more, I would have passed. If I hadn’t missed the bus, I would have arrived on time.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

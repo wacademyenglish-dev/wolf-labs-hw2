@@ -16,14 +16,15 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'celular', rot: 'I · Your Turn First', t: 'One bad thing that happened to you this month.', p: 'Pick a card. Before you hear anybody else’s story, tell yours. Your teacher taps what you used.' },
   { k: 'ouvir', est: 'l', min: 7, img: 'celular', rot: 'II · Marcos', t: 'One man, one morning.', p: 'Listen first, twice. Then tap only what he really said: each one stands up as a domino.' },
   { k: 'cadeia', est: 'f', min: 6, img: 'dominos', rot: 'III · One Thing After Another', t: 'A bad day is never one thing.', p: 'Six dominoes, mixed up. Say each card out loud, then put them in order.' },
-  { k: 'onde', est: 'o', min: 7, img: 'dominos', rot: 'IV · Where the Past Lives', t: 'In a no or a question, the past moves into DID.', p: 'Read the sentence. Say the no, then the question. Then open them.' },
-  { k: 'fila', est: 'f', min: 6, img: 'dominos', rot: 'V · The Domino Row', t: 'Eight dominoes. Each one falls only with the right words.', p: 'Say the full sentence out loud, then pick. A wrong pick and the domino just wobbles.' },
-  { k: 'marcos', est: 'o', min: 7, img: 'chuva', rot: 'VI · Ask Marcos', t: 'Now you ask. Your teacher is Marcos.', p: 'Build the question from the note. Say it. Then Marcos answers.' },
-  { k: 'pior', est: 'o', min: 7, extra: 1, img: 'chuva', rot: 'VII · My Day Was Worse', t: 'A contest. Your teacher had a bad day. Yours was worse.', p: 'Your teacher says a line. Top it with didn’t, a question back, because or so.' },
-  { k: 'cola', est: 'f', min: 6, extra: 1, img: 'dominos', rot: 'VIII · The Glue', t: 'Two dominoes need glue: because, or so?', p: 'Pick the word. Then say the whole sentence out loud.' },
-  { k: 'conta', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'IX · All of It', t: 'Every piece is on the table. Tell the whole morning.', p: 'Answer each question out loud. Then the whole story, with no screen.' },
-  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'chuva', rot: 'X · Your Worst Day', t: 'Enough about Marcos. Now a real day.', p: 'Tell it as a chain: each thing caused the next. Your teacher adds a domino for every link.' },
-  { k: 'fim', est: 'w', min: 6, img: 'porta', rot: 'XI · The Last Domino', t: 'Write your worst day as a chain.', p: 'Five links: didn’t, wasn’t, so, because, and one question in the past. The red line watches did. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'dominos', rot: 'IV · The Ladder', t: 'One verb, five steps.', p: 'Read each step out loud, then go one step up. Notice where the past goes. Then climb with your own morning.' },
+  { k: 'onde', est: 'o', min: 7, img: 'dominos', rot: 'V · Where the Past Lives', t: 'In a no or a question, the past moves into DID.', p: 'Read the sentence. Say the no, then the question. Then open them.' },
+  { k: 'fila', est: 'f', min: 6, img: 'dominos', rot: 'VI · The Domino Row', t: 'Eight dominoes. Each one falls only with the right words.', p: 'Say the full sentence out loud, then pick. A wrong pick and the domino just wobbles.' },
+  { k: 'marcos', est: 'o', min: 7, img: 'chuva', rot: 'VII · Ask Marcos', t: 'Now you ask. Your teacher is Marcos.', p: 'Build the question from the note. Say it. Then Marcos answers.' },
+  { k: 'pior', est: 'o', min: 7, extra: 1, img: 'chuva', rot: 'VIII · My Day Was Worse', t: 'A contest. Your teacher had a bad day. Yours was worse.', p: 'Your teacher says a line. Top it with didn’t, a question back, because or so.' },
+  { k: 'cola', est: 'f', min: 6, extra: 1, img: 'dominos', rot: 'IX · The Glue', t: 'Two dominoes need glue: because, or so?', p: 'Pick the word. Then say the whole sentence out loud.' },
+  { k: 'conta', est: 'o', min: 7, extra: 1, img: 'porta', rot: 'X · All of It', t: 'Every piece is on the table. Tell the whole morning.', p: 'Answer each question out loud. Then the whole story, with no screen.' },
+  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'chuva', rot: 'XI · Your Worst Day', t: 'Enough about Marcos. Now a real day.', p: 'Tell it as a chain: each thing caused the next. Your teacher adds a domino for every link.' },
+  { k: 'fim', est: 'w', min: 6, img: 'porta', rot: 'XII · The Last Domino', t: 'Write your worst day as a chain.', p: 'Five links: didn’t, wasn’t, so, because, and one question in the past. The red line watches did. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -223,3 +224,17 @@ TOQUES['cl-prox'] = function () { S.cola = { n: S.cola.n + 1, esc: '' }; };
 TOQUES['ct-prox'] = function () { S.conta.n++; };
 TOQUES['su-mais'] = function () { if (S.seu.elos < 6) S.seu.elos++; };
 TOQUES['su-menos'] = function () { if (S.seu.elos > 0) S.seu.elos--; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de onde.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One verb. Climb it one step at a time.',
+  degraus: [
+    { r: 'verb', f: 'wake', d: 'The verb, clean.' },
+    { r: 'past', f: 'Marcos <b>woke</b> up at ten.', d: 'The past is inside the verb: woke.' },
+    { r: 'not', f: 'Marcos <b>didn’t wake</b> up at seven.', d: 'The past moves into didn’t. wake is clean again.' },
+    { r: '?', f: '<b>Did</b> Marcos <b>wake</b> up at seven?', d: 'Did goes first. wake stays clean.' },
+    { r: 'short', f: 'No, he <b>didn’t</b>.', d: 'The short answer keeps did.' }
+  ],
+  nota: 'Only one past in each sentence: in the verb (he woke), or in <b>did</b> / <b>didn’t</b>. Never two: not “didn’t woke”. The verb be is the exception: his wallet <b>wasn’t</b> in his pocket.',
+  uso: { p: 'Your turn. Climb with your own morning: one thing you did, one thing you didn’t do, and one question for your teacher.', molde: ['This morning I …', 'I didn’t …', 'Did you …?'], ex: 'This morning I woke up at six. I didn’t have breakfast. Did you sleep well?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

@@ -29,14 +29,15 @@ var L = [
   { k: 'capa', est: null, img: 'mesa' },
   { k: 'vida', est: 'o', min: 7, img: 'sala', rot: 'I · Few or a Few?', t: 'Before the phones start: four questions about you.', p: 'Tap what is true for you. Say the sentence out loud, and why. Your answers come back at the end.' },
   { k: 'manchete', est: 'f', min: 7, img: 'jornais', rot: 'II · The Report', t: 'The survey report, before the paper changed one letter.', p: 'Read it out loud. Tap every few and little. Then finish the rule.' },
-  { k: 'zero', est: 'f', min: 6, img: 'jornais', rot: 'III · Which Side of Zero?', t: 'Above the line: some, and it’s fine. Below the line: almost none.', p: 'Tap a sentence, then what it means. Then read them out loud.' },
-  { k: 'painel', est: 'o', min: 7, img: 'mesa', rot: 'IV · The Help Desk', t: 'Six lines are blinking. Every caller is angry about the headline.', p: 'Read the caller. Explain it out loud in your own words. Then tap Check. The light goes off.' },
-  { k: 'most', est: 'f', min: 6, img: 'sala', rot: 'V · Most of the What?', t: 'Three shapes. The word after most picks one.', p: 'One shape is wrong in each line. Say it the right way out loud. Then tap Check.' },
-  { k: 'conta', est: 'f', min: 6, img: 'mesa', rot: 'VI · Can You Count It?', t: 'Same rule. Now the noun decides which pair you can use.', p: 'Tap a word, then its box. Then say a sentence with two of them.' },
-  { k: 'palavra', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'VII · The Word That Decides', t: 'Five teachers answered the survey. One small word, or a gap, decides.', p: 'Read each line. True or lie? If it is a lie, say the truth.' },
-  { k: 'proibidas', est: 'f', min: 6, extra: 1, img: 'jornais', rot: 'VIII · The Banned Words', t: 'Three words are switched off: MOST, MANY, A LOT.', p: 'Read the number. Say it without most, many or a lot. Then tap Check.' },
-  { k: 'correcao', est: 'o', min: 7, extra: 1, img: 'jornais', rot: 'IX · Write the Correction', t: 'Tomorrow’s paper prints a correction. Short, and right.', p: 'Fix the wrong word in each draft. Then tell the correction: tap each word you use.' },
-  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'X · Back to You', t: 'The phones are quiet. Your four answers come back.', p: 'Write about your life with a few, few, a little, little and most of. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'jornais', rot: 'III · Few or A Few?', t: 'Two phone calls. One tiny letter.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'zero', est: 'f', min: 6, img: 'jornais', rot: 'IV · Which Side of Zero?', t: 'Above the line: some, and it’s fine. Below the line: almost none.', p: 'Tap a sentence, then what it means. Then read them out loud.' },
+  { k: 'painel', est: 'o', min: 7, img: 'mesa', rot: 'V · The Help Desk', t: 'Six lines are blinking. Every caller is angry about the headline.', p: 'Read the caller. Explain it out loud in your own words. Then tap Check. The light goes off.' },
+  { k: 'most', est: 'f', min: 6, img: 'sala', rot: 'VI · Most of the What?', t: 'Three shapes. The word after most picks one.', p: 'One shape is wrong in each line. Say it the right way out loud. Then tap Check.' },
+  { k: 'conta', est: 'f', min: 6, img: 'mesa', rot: 'VII · Can You Count It?', t: 'Same rule. Now the noun decides which pair you can use.', p: 'Tap a word, then its box. Then say a sentence with two of them.' },
+  { k: 'palavra', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'VIII · The Word That Decides', t: 'Five teachers answered the survey. One small word, or a gap, decides.', p: 'Read each line. True or lie? If it is a lie, say the truth.' },
+  { k: 'proibidas', est: 'f', min: 6, extra: 1, img: 'jornais', rot: 'IX · The Banned Words', t: 'Three words are switched off: MOST, MANY, A LOT.', p: 'Read the number. Say it without most, many or a lot. Then tap Check.' },
+  { k: 'correcao', est: 'o', min: 7, extra: 1, img: 'jornais', rot: 'X · Write the Correction', t: 'Tomorrow’s paper prints a correction. Short, and right.', p: 'Fix the wrong word in each draft. Then tell the correction: tap each word you use.' },
+  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'XI · Back to You', t: 'The phones are quiet. Your four answers come back.', p: 'Write about your life with a few, few, a little, little and most of. It goes to your My notes.' }
 ];
 
 var VIDA = [
@@ -204,3 +205,19 @@ R.fim = function (c) {
     + '<p class="hw"><a class="pilula" href="HW/" target="_blank" rel="noopener">Homework for the student →</a></p></div></div>';
 };
 
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de zero.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Few or a few? Two teachers on the phone.',
+  a: { t: 'A few', falas: [['Teacher 1', 'A few teachers still ask for paper copies.'], ['You', 'Good. <mark>A few</mark> means some. It’s fine.']], d: '<b>A few</b> and <b>a little</b> mean “some, enough”. The feeling is good.' },
+  b: { t: 'Few', falas: [['Teacher 2', 'Few teachers still ask for paper copies.'], ['You', 'Hmm. <mark>Few</mark> means almost none. That is a complaint.']], d: '<b>Few</b> and <b>little</b> mean “almost none”. The feeling is bad.' },
+  pergunta: 'One letter is gone. What is different in the meaning?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'I have ___ friends in this city, so I’m lonely.', o: ['a few', 'few'], c: 1, d: 'Almost none: a complaint.' },
+    { p: 'We have ___ time, so we can have a coffee.', o: ['a little', 'little'], c: 0, d: 'Some time: enough for a coffee.' },
+    { p: '___ people came to the meeting. It was empty.', o: ['A few', 'Few'], c: 1, d: 'Almost nobody: a complaint.' },
+    { p: 'There is ___ money left, so we can’t buy it.', o: ['a little', 'little'], c: 1, d: 'Almost none. Not enough.' }
+  ],
+  nota: '<b>a few / a little</b>: some, and it is fine. <b>few / little</b>: almost none, and it is a problem. Count it: few / a few people. Can’t count it: little / a little money. And <b>most of the</b> teachers, never “the most of the”.',
+  uso: { p: 'Your turn. One sentence with a few or a little, and one with few or little.', molde: ['I have a few …', 'I have little …'], ex: 'I have a few good friends. I have little free time.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

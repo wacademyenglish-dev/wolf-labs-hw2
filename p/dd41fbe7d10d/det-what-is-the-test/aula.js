@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 1, kick: 'DUOLINGO ENGLISH TEST
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · The Test in One Page', t: 'One hour. One score. Here is how it works.', p: 'Read the fact sheet out loud. Then answer the questions.' },
-  { k: 'multipla', est: 'f', min: 6, img: 'capa', rot: 'II · True to the Test', t: 'Do you remember the facts?', p: 'Choose one answer. Then say why.' },
-  { k: 'palavras', est: 'f', min: 5, img: 'conversa', rot: 'III · First Taste: Real or Fake?', t: 'Your first real task: real words only.', p: 'Tap only the real English words. The clock is the real one.' },
-  { k: 'prova', est: 'o', min: 8, img: 'capa', rot: 'IV · First Taste: Read, Then Speak', t: 'Your second real task: speak with the clock.', p: '20 seconds to prepare. Then speak until the clock stops.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'II · The Pocket Rule', t: 'Four facts about the test.', p: 'Read one line at a time. Then keep the rule in the corner for the next pages.' },
+  { k: 'multipla', est: 'f', min: 6, img: 'capa', rot: 'III · True to the Test', t: 'Do you remember the facts?', p: 'Choose one answer. Then say why.' },
+  { k: 'palavras', est: 'f', min: 5, img: 'conversa', rot: 'IV · First Taste: Real or Fake?', t: 'Your first real task: real words only.', p: 'Tap only the real English words. The clock is the real one.' },
+  { k: 'prova', est: 'o', min: 8, img: 'capa', rot: 'V · First Taste: Read, Then Speak', t: 'Your second real task: speak with the clock.', p: '20 seconds to prepare. Then speak until the clock stops.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'THE TEST · FACT SHEET', tipo: 'nota',
@@ -56,3 +57,16 @@ var PODE = [
 /* DET 01: leitura · multipla · palavras · prova */
 var PALAVRAS = { seg: 60, dica: 'Fake words look real on purpose. If the student is not sure, ask: “Have you ever seen it?” Not sure? Leave it.', rodadas: [
   [['weather', 1], ['flomber', 0], ['journey', 1], ['borrow', 1], ['drimply', 0], ['honest', 1], ['sporcate', 0], ['thirsty', 1], ['neighbor', 1], ['blenter', 0], ['decide', 1], ['quistful', 0], ['quiet', 1], ['prenth', 0], ['knowledge', 1]]] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de multipla.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'The test in four lines',
+  linhas: [
+    'You take it <b>at home</b>, on a computer. It takes <b>about one hour</b>.',
+    'It is <b>adaptive</b>: good answers make the next question harder.',
+    '<b>One score</b> from 10 to 160, plus <b>four subscores</b>.',
+    'The writing and speaking samples <b>aren’t scored</b>, but universities <b>can see</b> them.'
+  ],
+  uso: { p: 'Your turn. Tell a friend about the test in three sentences: where, how long, and how the score works.', molde: ['You take it …', 'It takes about …', 'You get …'], ex: 'You take it at home, on a computer. It takes about one hour. You get one score from 10 to 160.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

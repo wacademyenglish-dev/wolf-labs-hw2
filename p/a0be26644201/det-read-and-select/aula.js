@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 2, kick: 'DUOLINGO ENGLISH TEST
   nota: 'In the test, a fake word you tap costs points. Missing a real word costs less. When in doubt, leave it.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'descobre', est: 'f', min: 10, img: 'conversa', rot: 'I · How Fake Words Are Made', t: 'Real or fake? Compare.', p: 'Look at A and B. Which one is real? What changed?' },
-  { k: 'palavras', est: 'f', min: 12, img: 'capa', rot: 'II · Three Rounds', t: 'Real words only. Three rounds, harder each time.', p: 'Tap only the real English words before the clock stops.' },
-  { k: 'rapido', est: 'f', min: 6, img: 'conversa', rot: 'III · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'I · Real, Not Fake', t: 'Six pairs of words. One is real.', p: 'Read both out loud. Tap the real one. The fake one gets crossed out.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'conversa', rot: 'II · How Fake Words Are Made', t: 'Real or fake? Compare.', p: 'Look at A and B. Which one is real? What changed?' },
+  { k: 'palavras', est: 'f', min: 12, img: 'capa', rot: 'III · Three Rounds', t: 'Real words only. Three rounds, harder each time.', p: 'Tap only the real English words before the clock stops.' },
+  { k: 'rapido', est: 'f', min: 6, img: 'conversa', rot: 'IV · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var DESCOBRE = {
@@ -44,3 +45,19 @@ var RAPIDO = { seg: 60, itens: [
   ['happy → the noun', 'happiness'], ['decide → the noun', 'decision'], ['beauty → the adjective', 'beautiful'], ['agree → the opposite', 'disagree'],
   ['possible → the opposite', 'impossible'], ['know → the noun', 'knowledge'], ['quick → the adverb', 'quickly'], ['friend → the noun with -ship', 'friendship'],
   ['use → the adjective with -less', 'useless'], ['child → the plural', 'children'], ['care → the adverb', 'carefully'], ['achieve → the noun', 'achievement']] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Real, not fake. Tap the real word.',
+  pares: [
+    { c: 'She has a beautiful voice.', x: 'She has a beautyful voice.', d: 'beauty + ful: the y becomes i.' },
+    { c: 'I want happiness.', x: 'I want happyness.', d: 'happy + ness: the y becomes i.' },
+    { c: 'He looks unhappy.', x: 'He looks dishappy.', d: 'The prefix for happy is un-, not dis-.' },
+    { c: 'Reading builds knowledge.', x: 'Reading builds knowlege.', d: 'One letter is missing: the d in knowledge.' },
+    { c: 'It was a hard decision.', x: 'It was a hard decidement.', d: 'The noun of decide is decision.' },
+    { c: 'It is impossible.', x: 'It is unpossible.', d: 'The prefix for possible is im-.' }
+  ],
+  nota: 'A fake word uses <b>real pieces</b> in the wrong place. Check three things: <b>y → i</b> (happiness), the <b>prefix</b> (un-, dis-, im-), and the <b>ending</b> (-ful, -ness, -ion). Then count every letter.',
+  uso: { p: 'Your turn. Use two real words from this page in your own sentences.', molde: ['Her voice is …', 'It was a … decision.'], ex: 'Her voice is beautiful. It was a hard decision.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

@@ -16,10 +16,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 8, titulo: ['It Has Been', 'Sugg
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Memo', t: 'News from the board.', p: 'Read the memo out loud. Answer the questions. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Personal or Impersonal?', t: 'Who said it? Does it matter?', p: 'Compare A and B. When would you write B?' },
-  { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'IV · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'conversa', rot: 'V · Your Memo', t: 'Write a short memo to your team.', p: 'Four lines: it has been suggested…, it was agreed…, it has come to our attention…, it is hoped…' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Right, Not This', t: 'Six pairs from the memo. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Personal or Impersonal?', t: 'Who said it? Does it matter?', p: 'Compare A and B. When would you write B?' },
+  { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'IV · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
+  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'V · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'conversa', rot: 'VI · Your Memo', t: 'Write a short memo to your team.', p: 'Four lines: it has been suggested…, it was agreed…, it has come to our attention…, it is hoped…' }
 ];
 var PORTAS = [];
 
@@ -64,3 +65,9 @@ var PARES = [
   ['It is hoped', 'that all teams will reply.', 'It is hoped that all teams will reply by 15 February.'],
   ['It should be noted', 'that salaries won’t change.', 'It should be noted that no salaries will change.']];
 var ERROS = { tipo: 'nota', rot: 'DRAFT MINUTES · DO NOT SEND', partes: ['Minutes of the board meeting. ', ['It was suggested to start', 'It was suggested that we start', 'suggest + that, never + to.'], ' the trial in March. ', ['It agreed that', 'It was agreed that', 'Passive: it was agreed.'], ' the trial will last three months. ', ['It has come to our attentions', 'It has come to our attention', 'attention, singular.'], ' that some staff work unpaid. It was proposed that this practice ', ['stops', 'stop', 'Formal subjunctive: base form.'], '. ', ['There is thought that there is', 'There is thought to be', 'There is thought to be…'], ' a risk for customer service. It is hoped that all teams ', ['should to reply', 'will reply', 'will / should + verb.'], ' by 15 February.'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'It has been suggested that staff work from home on Fridays.', x: 'It has been suggested to staff work from home on Fridays.', d: 'Suggest + that + a clause. Not suggest to.' }, { c: 'It was agreed that the meeting be postponed.', x: 'It was agreed that the meeting to be postponed.', d: 'After that: a clause, no to. The formal be is clean.' }, { c: 'It is proposed that she attend the training.', x: 'It is proposed that she attends the training.', d: 'Formal memo: that she attend (no -s).' }, { c: 'It has come to our attention that the printer is broken.', x: 'It has come to our attention the printer being broken.', d: 'It has come to our attention + that + clause.' }, { c: 'It is widely believed that the plan will work.', x: 'It is widely believed the plan to work.', d: 'It is believed that + clause.' }, { c: 'There is thought to be a problem with the budget.', x: 'It is thought to be a problem with the budget.', d: 'With there: there is thought to be.' }], nota: 'In memos, the person disappears: <b>It has been suggested that …</b>, <b>It was agreed that …</b>. After <b>that</b>, a full clause. With <b>suggest, propose, recommend</b>, the formal verb has no -s: that she <b>attend</b>, that he <b>be</b>.', uso: { p: 'Your turn. You write a short memo to your team. Say three lines: a suggestion, an agreement, and a problem.', molde: ['It has been suggested that …', 'It was agreed that …', 'It has come to our attention that …'], ex: 'It has been suggested that we meet on Mondays. It was agreed that the report be sent by Friday. It has come to our attention that the room is too small.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

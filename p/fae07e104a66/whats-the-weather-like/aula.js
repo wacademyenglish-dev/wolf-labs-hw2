@@ -17,12 +17,13 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'janela', rot: 'I · You and the Weather', t: 'Before the show: you and the weather.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'video', est: 'l', min: 10, img: 'estacoes', rot: 'II · One Year, Forty Seconds', t: 'One camera, one garden, one whole year.', p: 'Five short chapters, one for each season. You are the weather presenter.' },
   { k: 'parede', est: 'o', min: 7, img: 'estudio', rot: 'III · The Weather Wall', t: 'Five live pictures. You are on air in five minutes.', p: 'Tap a city. Dana, the producer, asks. Answer from the picture: the magnet only sticks to a whole sentence.' },
-  { k: 'regra', est: 'f', min: 6, img: 'estudio', rot: 'IV · The Rule', t: 'The weather always starts with It’s.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'dial', est: 'o', min: 7, img: 'capa', rot: 'V · The Season Dial', t: 'Eight cities, eight months. You are live.', p: 'Say the season AND the weather at once. South of the equator, the dial turns around.' },
-  { k: 'walt', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'VI · A Viewer Calls', t: 'After the show, Walt calls the studio.', p: 'Your teacher is Walt. Answer with It’s … and in …' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'chuva', rot: 'VII · Quick Check', t: 'Six lines from the weather desk.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'sol', rot: 'VIII · Your Weather', t: 'Your weather, your seasons.', p: 'Pick a card. Answer with It’s … or In …, it’s … Your teacher answers too.' },
-  { k: 'fim', est: 'w', min: 6, img: 'neve', rot: 'IX · Good Night from the Weather Desk', t: 'Write tonight’s weather for your city.', p: 'Like a presenter: today, and every season. The red line watches It’s. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'estacoes', rot: 'IV · Look at the Weather', t: 'Four live pictures from the weather desk.', p: 'Look at the picture. Guess what Dana says. Then tap to see it, and say it.' },
+  { k: 'regra', est: 'f', min: 6, img: 'estudio', rot: 'V · The Rule', t: 'The weather always starts with It’s.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'dial', est: 'o', min: 7, img: 'capa', rot: 'VI · The Season Dial', t: 'Eight cities, eight months. You are live.', p: 'Say the season AND the weather at once. South of the equator, the dial turns around.' },
+  { k: 'walt', est: 'o', min: 7, extra: 1, img: 'janela', rot: 'VII · A Viewer Calls', t: 'After the show, Walt calls the studio.', p: 'Your teacher is Walt. Answer with It’s … and in …' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'chuva', rot: 'VIII · Quick Check', t: 'Six lines from the weather desk.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'sol', rot: 'IX · Your Weather', t: 'Your weather, your seasons.', p: 'Pick a card. Answer with It’s … or In …, it’s … Your teacher answers too.' },
+  { k: 'fim', est: 'w', min: 6, img: 'neve', rot: 'X · Good Night from the Weather Desk', t: 'Write tonight’s weather for your city.', p: 'Like a presenter: today, and every season. The red line watches It’s. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -229,3 +230,16 @@ TOQUES['wt-viu'] = function () { S.walt.viu[S.walt.n] = 1; };
 TOQUES['wt-prox'] = function () { S.walt.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
 TOQUES.rd = function (b, n) { S.roda.sel = n; S.roda.foi[n] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What does Dana say?',
+  cenas: [
+    { img: 'chuva', antes: 'Channel 9, 7 PM. Dana points at the screen: a gray city.', frase: '“What’s the weather like in London?” “<mark>It’s raining.</mark>”' },
+    { img: 'sol', antes: 'A city by the sea. It is July.', frase: '“How is it today?” “<mark>It’s sunny</mark> and hot.”' },
+    { img: 'neve', antes: 'A mountain town. White everywhere.', frase: '“<mark>In winter</mark>, it’s cold. Today <mark>it’s snowing</mark>.”' },
+    { img: 'vento', antes: 'The beach. The flags move fast.', frase: '“It’s <mark>windy</mark> and cloudy.”' }
+  ],
+  nota: 'The weather starts with <b>It’s</b>: It’s sunny. It’s cold. It’s 31 degrees. For rain and snow: <b>It’s raining</b>, <b>It’s snowing</b>. For a season or a month: <b>in</b> winter, <b>in</b> July.',
+  uso: { p: 'Your turn. You are on air. Say the weather in your city today, and in one season.', molde: ['It’s … today.', 'In …, it’s …'], ex: 'It’s cloudy today. In summer, it’s hot and it’s raining a lot.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

@@ -16,11 +16,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Week', t: 'What do you do on Monday mornings?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · What We Do', t: 'The page every client reads first.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 8, img: 'conversa', rot: 'III · “So, Do You Sell SAP?”', t: 'An IT manager asks Leo some direct questions.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Don’t or Isn’t?', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'erros', est: 'f', min: 8, img: 'mesa', rot: 'V · Fix the E-mail', t: 'A new colleague wrote this e-mail. Five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
-  { k: 'escolha', est: 'o', min: 5, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your 30-Second Pitch', t: 'Write it. Then say it in thirty seconds.', p: 'Two things you do, one thing you don’t do, one thing you aren’t.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'IV · Two Calls', t: 'Two calls. Two negatives.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · Don’t or Isn’t?', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'erros', est: 'f', min: 8, img: 'mesa', rot: 'VI · Fix the E-mail', t: 'A new colleague wrote this e-mail. Five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 5, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your 30-Second Pitch', t: 'Write it. Then say it in thirty seconds.', p: 'Two things you do, one thing you don’t do, one thing you aren’t.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -96,3 +97,21 @@ var PODE = [
   'I can choose: action → don’t / doesn’t; be → isn’t / aren’t.',
   'I can give a 30-second pitch.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Don’t or isn’t? Two lines from a client call.',
+  a: { t: 'An action', falas: [['Mark', 'Do you sell SAP?'], ['Leo', 'No, we <mark>don’t sell</mark> SAP. We connect it.']], d: 'Sell is an action. For no: <b>don’t</b> + verb.' },
+  b: { t: 'Just be', falas: [['Mark', 'Is the price per hour?'], ['Leo', 'No, it <mark>isn’t</mark>. It’s a monthly fee.']], d: 'No action, just what it is. For no: <b>isn’t</b>.' },
+  pergunta: 'Same idea, no. Two different negatives. What is different?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'A client asks: “Do you replace our finance team?” Leo:', o: ['No, we don’t replace it.', 'No, we aren’t replace it.'], c: 0, d: 'Replace is an action: don’t.' },
+    { p: 'A client asks: “Is Bluepeak a software company?” Leo:', o: ['No, we don’t a software company.', 'No, we aren’t a software company.'], c: 1, d: 'A company is what we are: aren’t.' },
+    { p: 'About the CFO and long meetings. Mark says:', o: ['He doesn’t like them.', 'He isn’t like them.'], c: 0, d: 'Like is an action. He + action: doesn’t.' },
+    { p: 'About the price. Leo says:', o: ['It doesn’t cheap.', 'It isn’t cheap.'], c: 1, d: 'Cheap just describes: isn’t.' }
+  ],
+  nota: 'One test. Is there an action (sell, use, work)? <b>don’t</b> or <b>doesn’t</b> + verb. No action, just be? <b>isn’t</b> or <b>aren’t</b>.',
+  uso: { p: 'Your turn. About your company: one thing it doesn’t do and one thing it isn’t.', molde: ['We don’t …', 'We aren’t …'], ex: 'We don’t sell software. We aren’t a big company.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

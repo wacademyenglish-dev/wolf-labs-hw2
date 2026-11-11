@@ -43,9 +43,10 @@ var L = [
   { k: 'falas', est: 'l', extra: 1, img: 'corredor', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'letra', est: 'l', min: 7, img: 'corredor', rot: 'V · Three Clues', t: 'What can you see? What are you not sure about?', p: 'Watch each clue again. Put each sentence in a box. You can change your mind.' },
   { k: 'regra', est: 'f', min: 6, img: 'cozinha', rot: 'VI · She Wears, She Has', t: 'Bela’s notebook. Find the pattern.', p: 'Read the notebook out loud. Tap the verbs after she. Then finish the rule.' },
-  { k: 'lanterna', est: 'o', min: 7, img: 'chapeu', rot: 'VII · Two Mothers', t: 'Two mothers in the dark. The flashlight finds one difference at a time.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'familia', est: 'o', min: 6, img: 'cozinha', rot: 'VIII · Your People', t: 'Spin the wheel: a person in your life. What do they wear, have, do?', p: 'Spin, talk about that person, and tap each form when you use it.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Questions', t: 'Questions.', p: 'Answer.' }
+  { k: 'gx', est: 'f', min: 4, img: 'chapeu', rot: 'VII · The Ladder', t: 'One verb, five steps.', p: 'Read each step out loud, then go one step up. Notice where the -s goes. Then climb with your own verb.' },
+  { k: 'lanterna', est: 'o', min: 7, img: 'chapeu', rot: 'VIII · Two Mothers', t: 'Two mothers in the dark. The flashlight finds one difference at a time.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'familia', est: 'o', min: 6, img: 'cozinha', rot: 'IX · Your People', t: 'Spin the wheel: a person in your life. What do they wear, have, do?', p: 'Spin, talk about that person, and tap each form when you use it.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'X · Questions', t: 'Questions.', p: 'Answer.' }
 ];
 
 var FILME = 'Other Mommy', ANO = '2026';
@@ -311,3 +312,17 @@ var FIM = { tipo: 'perguntas', rot: 'VIII · Questions', t: 'Questions: what do 
   ],
   depois: 'The teacher asks: <b>How do you know?</b> Answer with a clue: “In the car, she wears…”. Then swap: you ask the teacher.' };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de lanterna.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One verb. Climb it one step at a time.',
+  degraus: [
+    { r: 'verb', f: 'sing', d: 'The verb, clean.' },
+    { r: 'she', f: 'Other Mommy <b>sings</b> at night.', d: 'she, he, Mommy: the verb + -s' },
+    { r: 'not', f: 'Mommy <b>doesn’t sing</b> at night.', d: 'The -s goes into doesn’t. sing is clean again.' },
+    { r: '?', f: '<b>Does</b> Other Mommy <b>sing</b> at night?', d: 'Does goes first. sing stays clean.' },
+    { r: 'short', f: 'Yes, she <b>does</b>. · No, she <b>doesn’t</b>.', d: 'The short answer keeps does.' }
+  ],
+  nota: 'Only one <b>-s</b> in each sentence: in the verb (she sing<b>s</b>), or in <b>does</b> / <b>doesn’t</b>. Never two.',
+  uso: { p: 'Your turn. A person in your house. Climb the ladder with one verb: she …, she doesn’t …, Does she …?', molde: ['My mother wears …', 'She doesn’t …', 'Does she …?'], ex: 'My mother wears glasses. She doesn’t wear them at night. Does she wear them in the car? Yes, she does.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

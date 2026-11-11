@@ -38,10 +38,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Disclosure Day. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'trem', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 7, img: 'motel', rot: 'V · The 2 a.m. Message', t: 'At 2:04 a.m., a message goes out to the whole world.', p: 'Read the message out loud. Tap the verbs about tomorrow. Then finish the rule.' },
-  { k: 'relogios', est: 'o', min: 8, img: 'capa', rot: 'VI · The World Clocks', t: 'The truth comes out at 9 a.m. in Kansas City. Six cities, one moment.', p: 'Read the local time and the person’s day. Say what they will be doing at that moment. Then tap Check.' },
-  { k: 'amanha', est: 'o', min: 7, img: 'trem', rot: 'VII · Ask Me', t: 'Now you ask. What will your teacher be doing tomorrow?', p: 'Say each question out loud. Tap Check. Then ask it, and compare your tomorrows.' },
-  { k: 'saida', est: 'w', min: 8, img: 'capa', rot: 'VIII · This Time Tomorrow', t: 'Last scene. The teacher picks A or B.', p: 'Talk for three minutes. Then one minute to write about your tomorrow. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'trem', rot: 'V · Look First', t: 'Four pictures from tomorrow.', p: 'Look at the picture. Guess what happens. Then tap to see it, and say it.' },
+  { k: 'regra', est: 'f', min: 7, img: 'motel', rot: 'VI · The 2 a.m. Message', t: 'At 2:04 a.m., a message goes out to the whole world.', p: 'Read the message out loud. Tap the verbs about tomorrow. Then finish the rule.' },
+  { k: 'relogios', est: 'o', min: 8, img: 'capa', rot: 'VII · The World Clocks', t: 'The truth comes out at 9 a.m. in Kansas City. Six cities, one moment.', p: 'Read the local time and the person’s day. Say what they will be doing at that moment. Then tap Check.' },
+  { k: 'amanha', est: 'o', min: 7, img: 'trem', rot: 'VIII · Ask Me', t: 'Now you ask. What will your teacher be doing tomorrow?', p: 'Say each question out loud. Tap Check. Then ask it, and compare your tomorrows.' },
+  { k: 'saida', est: 'w', min: 8, img: 'capa', rot: 'IX · This Time Tomorrow', t: 'Last scene. The teacher picks A or B.', p: 'Talk for three minutes. Then one minute to write about your tomorrow. It goes to your My notes.' }
 ];
 
 var FILME = 'Disclosure Day', ANO = '2026';
@@ -219,3 +220,16 @@ var AQ = { tipo: 'imagem', img: 'motel', alt: 'A small motel room at 2 a.m. with
     { q: 'Do you think the truth about aliens is hidden somewhere?', ex: 'Maybe. Some people must know something.' }
   ] };
 /*AQ@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What will they be doing?',
+  cenas: [
+    { img: 'motel', antes: 'A small motel in Kansas. It is 2 AM. The TV is on.', frase: '“This time tomorrow, the whole world <mark>will be watching</mark>.”' },
+    { img: 'trem', antes: 'A night train. A woman looks out of the window.', frase: '“This time tomorrow, I <mark>will be sitting</mark> in a new city.”' },
+    { img: 'bicicleta', antes: 'A boy on his bike, on a hill road, early in the morning.', frase: '“At 9 AM tomorrow, he <mark>will be riding</mark> to school.”' },
+    { img: 'montanha', antes: 'A mountain. Nobody is there yet.', frase: '“This time next week, we <mark>will be climbing</mark> it.”' }
+  ],
+  nota: 'Picture a moment in the future: the action will be in progress. Use <b>will be + -ing</b>: will be watching, will be riding. For no: <b>won’t be</b> + -ing.',
+  uso: { p: 'Your turn. Look at the clock. What will you be doing this time tomorrow?', molde: ['This time tomorrow, I’ll be …', 'At 6 PM, I’ll be …'], ex: 'This time tomorrow, I’ll be having lunch at my desk. At 6 PM, I’ll be driving home.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

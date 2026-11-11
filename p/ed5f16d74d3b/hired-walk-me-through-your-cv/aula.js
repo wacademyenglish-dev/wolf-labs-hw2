@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 2, kick: 'WOLF HIRED · MODULE 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · Ninety Seconds, Not Ten Minutes', t: 'A recruiter’s formula and a real example.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 12, img: 'capa', rot: 'II · Finished or Still True?', t: 'The tense tells the interviewer if it’s over.', p: 'Compare A and B. Which one is right? Why?' },
-  { k: 'cadeira', est: 'o', min: 14, img: 'conversa', rot: 'III · The Follow-Up Questions', t: 'Your teacher is the interviewer. You walk them through your CV.', p: 'Follow the steps. Your teacher asks follow-ups as the interviewer.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Finished or Still True?', t: 'Two answers in an interview. Two forms.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'descobre', est: 'f', min: 12, img: 'capa', rot: 'III · Finished or Still True?', t: 'The tense tells the interviewer if it’s over.', p: 'Compare A and B. Which one is right? Why?' },
+  { k: 'cadeira', est: 'o', min: 14, img: 'conversa', rot: 'IV · The Follow-Up Questions', t: 'Your teacher is the interviewer. You walk them through your CV.', p: 'Follow the steps. Your teacher asks follow-ups as the interviewer.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'bbirGRlxsW8', titulo: 'How to Answer “Walk Me Through Your Resume”', fonte: 'SELF MADE MILLENNIAL · 4:39–7:50', inicio: 279, fim: 470,
@@ -56,3 +57,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 02: video · descobre · cadeira (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'This or that? Two answers from Mia.',
+  a: { t: 'Finished', falas: [['Interviewer', 'Tell me about your job at the bank.'], ['Mia', 'I <mark>worked</mark> there from 2018 to 2021.']], d: 'The job is over and the time is finished. That is the <b>past simple</b>.' },
+  b: { t: 'Still true', falas: [['Interviewer', 'And your current job?'], ['Mia', 'I<mark>’ve worked</mark> here since 2022.']], d: 'The job is not over. It started in the past and it is true now. That is the <b>present perfect</b>.' },
+  pergunta: 'Same verb, two forms. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Your last job ended in 2021. You say:', o: ['I worked there for three years.', 'I’ve worked there for three years.'], c: 0, d: 'The job is finished.' },
+    { p: 'You still work at the same company. You say:', o: ['I’ve led the team since 2023.', 'I led the team since 2023.'], c: 0, d: 'Still true: present perfect and since.' },
+    { p: 'You joined this company two years ago. You say:', o: ['I joined the company two years ago.', 'I’ve joined the company two years ago.'], c: 0, d: 'Ago goes with the past simple.' },
+    { p: 'You are still a customer support specialist. You say:', o: ['I was a specialist for four years.', 'I’ve been a specialist for four years.'], c: 1, d: 'It is still true today.' }
+  ],
+  nota: 'A finished time, <b>in 2021</b> or <b>two years ago</b>: <b>past simple</b>. Still true today, <b>since 2022</b> or <b>for four years</b>: <b>present perfect</b>. If someone else promoted you: <b>I was promoted</b>.',
+  uso: { p: 'Your turn. One job that is finished and one that is still true.', molde: ['I worked at … from … to …', 'I’ve … since …'], ex: 'I worked at a small bank from 2018 to 2021. I’ve worked at a software company since 2022.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 9, kick: 'WOLF HIRED · MODULE 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 6, img: 'conversa', rot: 'I · Set It Up Right', t: 'Tips for an online interview.', p: 'One question before, then the video, then the questions.' },
-  { k: 'multipla', est: 'l', min: 12, img: 'capa', rot: 'II · Five Things That Go Wrong', t: 'Listen to the interviewer. What do you say?', p: 'Play the line. Read the three answers. Which one is best?' },
-  { k: 'erros', est: 'f', min: 12, img: 'conversa', rot: 'III · Fix the Call', t: 'A candidate made five mistakes on a video call.', p: 'Find the five problems. Say a better version, then tap.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'o', min: 4, img: 'capa', rot: 'II · Can You Hear Me?', t: 'Ping-pong on a video call.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'multipla', est: 'l', min: 12, img: 'capa', rot: 'III · Five Things That Go Wrong', t: 'Listen to the interviewer. What do you say?', p: 'Play the line. Read the three answers. Which one is best?' },
+  { k: 'erros', est: 'f', min: 12, img: 'conversa', rot: 'IV · Fix the Call', t: 'A candidate made five mistakes on a video call.', p: 'Find the five problems. Say a better version, then tap.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: '9SHEJXbtMnI', titulo: 'Video Interview Tips: How to Ace an Online Job Interview', fonte: 'THE COMPANIES EXPERT · 0:00–2:00', inicio: 0, fim: 120,
@@ -52,3 +53,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 09: video · multipla (áudio) · erros (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de multipla.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers on a video call. Fast.',
+  perguntas: [
+    { q: 'Can you hear me?', s: 'Yes, I <mark>can</mark>.', n: 'No, I <mark>can’t</mark>.', mais: 'Then say: You’re on mute.' },
+    { q: 'Can you see my screen?', s: 'Yes, I <mark>can</mark>.', n: 'No, I <mark>can’t</mark>.', mais: 'Then say: Give me one second.' },
+    { q: 'Are you on mute?', s: 'Yes, I <mark>am</mark>.', n: 'No, I’m <mark>not</mark>.', mais: 'Say: Sorry about that! Can you hear me now?' },
+    { q: 'Is my video working?', s: 'Yes, it <mark>is</mark>.', n: 'No, it <mark>isn’t</mark>.', mais: 'Say: I’ll turn it off and on again.' },
+    { q: 'Do you hear an echo?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.', mais: 'Say: Let me put on my headphones.' },
+    { q: 'Did the connection drop?', s: 'Yes, it <mark>did</mark>.', n: 'No, it <mark>didn’t</mark>.', mais: 'Say: Sorry, I lost you for a moment.' }
+  ],
+  nota: 'The short answer repeats the helper: Can you hear me? Yes, I <b>can</b>. Are you on mute? No, I’m <b>not</b>. Do you hear an echo? Yes, I <b>do</b>. Then add one short fix: <b>Sorry about that!</b>',
+  uso: { p: 'Your turn. You are in a video interview. Ask your teacher three questions about the call.', molde: ['Can you hear me?', 'Can you see …?', 'Is …?'], ex: 'Can you hear me? Can you see my screen? Is the sound OK?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

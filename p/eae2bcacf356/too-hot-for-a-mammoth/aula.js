@@ -31,10 +31,11 @@ var L = [
   { k: 'mundo', est: 'o', min: 8, img: 'gelo', rot: 'I · Warm-up and Two Truths and a Lie', t: 'Before the teaser: hot and cold, then a world of ice.', p: 'Answer three questions about your life. Then find the lie about the animals.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'II · The Teaser', t: 'Ice Age: Boiling Point, 2027. The official teaser.', p: 'Guess first. Watch the teaser. Then a short task: tap ▶ to see a part again.' },
   { k: 'letra', est: 'l', min: 7, img: 'lava', rot: 'III · Scene by Scene', t: 'Five moments of the teaser. Tap one, watch, then talk.', p: 'Each frame is a moment in the video.' },
-  { k: 'regra', est: 'f', min: 6, img: 'gelo', rot: 'IV · Too Hot', t: 'Too means a problem. I am cold, not I have cold.', p: 'Tap the sentence, then the box: a good thing, or a problem. Then read the rule.' },
-  { k: 'ponte', est: 'o', min: 7, img: 'lava', rot: 'V · The Ice Bridge', t: 'The bridge is melting over the lava. Every right answer freezes one block.', p: 'True or lie? If it is a lie, say the right sentence out loud.' },
-  { k: 'demais', est: 'o', min: 5, img: 'gelo', rot: 'VI · Too Hot, Too Cold', t: 'Sid is melting. Then four things in your life.', p: 'Choose your answer. Then flip a card and say a sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'f', min: 4, img: 'lava', rot: 'IV · Very or Too?', t: 'Two words, two feelings.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'regra', est: 'f', min: 6, img: 'gelo', rot: 'V · Too Hot', t: 'Too means a problem. I am cold, not I have cold.', p: 'Tap the sentence, then the box: a good thing, or a problem. Then read the rule.' },
+  { k: 'ponte', est: 'o', min: 7, img: 'lava', rot: 'VI · The Ice Bridge', t: 'The bridge is melting over the lava. Every right answer freezes one block.', p: 'True or lie? If it is a lie, say the right sentence out loud.' },
+  { k: 'demais', est: 'o', min: 5, img: 'gelo', rot: 'VII · Too Hot, Too Cold', t: 'Sid is melting. Then four things in your life.', p: 'Choose your answer. Then flip a card and say a sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var FILME = 'Ice Age: Boiling Point', ANO = '2027';
@@ -245,3 +246,20 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Sid 
     { q: 'What is too dangerous for you here?', ex: 'Everything! The volcano is too close.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Very or too? Two scenes with the herd.',
+  a: { t: 'A good thing', falas: [['Sid', 'Try the berries, Manny.'], ['Manny', 'Mmm. They are <mark>very</mark> good!']], d: '<b>very</b> only says how much. It is a good thing, or just a fact.' },
+  b: { t: 'A problem', falas: [['Diego', 'Can we walk on the lava?'], ['Sid', 'No! It is <mark>too</mark> hot!']], d: '<b>too</b> means more than we want. It is a problem.' },
+  pergunta: 'Both words come before an adjective. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Sid loves his ice cream. He says:', o: ['This ice cream is very good!', 'This ice cream is too good!'], c: 0, d: 'A good thing: very.' },
+    { p: 'Manny wants to jump over the lava, but he can’t. He says:', o: ['The lava is very wide.', 'The lava is too wide!'], c: 1, d: 'A problem: too.' },
+    { p: 'Ellie is a great friend to the herd. Diego says:', o: ['She is very kind.', 'She is too kind.'], c: 0, d: 'A good thing again.' },
+    { p: 'The dinosaur is huge. The herd can’t fight it. Manny says:', o: ['It’s very big.', 'It’s too big!'], c: 1, d: 'A problem: too.' }
+  ],
+  nota: 'Both go before an adjective. <b>very</b> = a lot, and it is good or just a fact. <b>too</b> = more than we want: a problem. Not “too much hot”: it is <b>too hot</b>.',
+  uso: { p: 'Your turn. One thing in your life that is very good, and one thing that is too … for you.', molde: ['My … is very …', 'It’s too … to …'], ex: 'My coffee is very good. My room is too small to dance.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_contraste', GX_EXPLICA); };

@@ -30,10 +30,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'cena2-milharal', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'cena2-milharal', rot: 'III · The Trailer', t: 'Superman & Lois, 2021. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'cena4-estadio', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'geladeira', rot: 'V · Love It, Hate It', t: 'The fridge door has five mistakes. Find the fix.', p: 'Say the right word for each mistake out loud. Then tap Check and read the rule.' },
-  { k: 'geladeira', est: 'o', min: 7, img: 'geladeira', rot: 'VI · The Kent Fridge', t: 'Six notes for the fridge. Say it right, and the note goes up.', p: 'Read who and the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'voce2', est: 'o', min: 7, img: 'cena5-varanda', rot: 'VII · Love It or Hate It?', t: 'Six things. Love it, like it, or hate it?', p: 'Tap one for each thing. Then say it about you and a person in your family.' },
-  { k: 'fim', est: 'w', min: 6, img: 'geladeira', rot: 'VIII · Your Fridge Note', t: 'Your family’s fridge note: who loves what, who hates what.', p: 'like / love / hate + -ing. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'geladeira', rot: 'V · The Ladder', t: 'One Kent sentence, five steps.', p: 'Read each step out loud, then go one step up. Notice the -s and the -ing. Then climb with your own family.' },
+  { k: 'regra', est: 'f', min: 6, img: 'geladeira', rot: 'VI · Love It, Hate It', t: 'The fridge door has five mistakes. Find the fix.', p: 'Say the right word for each mistake out loud. Then tap Check and read the rule.' },
+  { k: 'geladeira', est: 'o', min: 7, img: 'geladeira', rot: 'VII · The Kent Fridge', t: 'Six notes for the fridge. Say it right, and the note goes up.', p: 'Read who and the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'voce2', est: 'o', min: 7, img: 'cena5-varanda', rot: 'VIII · Love It or Hate It?', t: 'Six things. Love it, like it, or hate it?', p: 'Tap one for each thing. Then say it about you and a person in your family.' },
+  { k: 'fim', est: 'w', min: 6, img: 'geladeira', rot: 'IX · Your Fridge Note', t: 'Your family’s fridge note: who loves what, who hates what.', p: 'like / love / hate + -ing. It goes to your My notes.' }
 ];
 
 var SERIE = 'Superman & Lois', ANO = '2021';
@@ -220,3 +221,17 @@ var AQ = { tipo: 'pilha', rot: 'I · Finish It', t: 'Before the trailer: what do
     { q: 'Everybody likes … but I don’t.', ex: '… going to the beach.' }
   ] };
 /*AQ@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'Jonathan and baseball. Climb it one step at a time.',
+  degraus: [
+    { r: 'verb', f: 'love + play', d: 'The verb, clean. After love, like and hate: the next verb gets -ing.' },
+    { r: 'he', f: 'Jonathan <b>loves playing</b> baseball.', d: 'he, she, Jonathan: love + <b>s</b>, then play + <b>ing</b>.' },
+    { r: 'not', f: 'Jordan <b>doesn’t like playing</b> baseball.', d: 'The -s goes into doesn’t. like is clean again. Then -ing.' },
+    { r: '?', f: '<b>Does</b> Jordan <b>like playing</b> baseball?', d: 'Does goes first. like stays clean.' },
+    { r: 'short', f: 'Yes, he <b>does</b>. · No, he <b>doesn’t</b>.', d: 'The short answer keeps does.' }
+  ],
+  nota: 'Only one <b>-s</b> in each sentence: in loves, or in doesn’t / does. After love, like, hate, the second verb takes <b>-ing</b>: loves play<b>ing</b>, hates go<b>ing</b>.',
+  uso: { p: 'Your turn. A person in your family. Climb the ladder with love, like or hate: she …, she doesn’t …, Does she …?', molde: ['My brother loves …', 'He doesn’t like …', 'Does he like …?'], ex: 'My brother loves playing video games. He doesn’t like cooking. Does he like washing dishes? No, he doesn’t.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

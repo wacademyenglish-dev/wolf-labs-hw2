@@ -29,13 +29,14 @@ var L = [
   { k: 'capa', est: null, img: 'ceu' },
   { k: 'abre', est: 'o', min: 7, img: 'bilhetes', rot: 'I · Something Different', t: 'Think of one thing in your life you would like to be different right now.', p: 'Tap the area. Then answer out loud. Share only what you want.' },
   { k: 'dado', est: 'o', min: 7, img: 'arena', rot: 'II · Sixty-Two Point Six', t: 'Almost a thousand people were asked for the biggest regret of their life.', p: 'Predict. Say why. Then choose.' },
-  { k: 'rebobina', est: 'f', min: 7, img: 'ceu', rot: 'III · The Rewind', t: 'A wish rewinds the verb. Now: one step back. Then: two steps back. Someone else: WOULD.', p: 'Read the fact. Say the wish out loud. Tap Check and watch the verb slide back.' },
-  { k: 'duas', est: 'f', min: 6, img: 'folha-luz', rot: 'IV · Two Correct Sentences', t: '“I wanted to go” is perfect English. It says nothing about whether you went.', p: 'Tap a sentence, then its box. Does the grammar SAY it didn’t happen?' },
-  { k: 'vozes', est: 'l', min: 7, img: 'mural', rot: 'V · Four Submissions', t: 'Four people sent in a regret. None of them says “I wish”.', p: 'Play each one. Tap what the person wishes. Then say it with I wish or If only.' },
-  { k: 'tipos', est: 'f', min: 6, img: 'arena', rot: 'VI · Four Kinds of Regret', t: 'Foundation, boldness, moral, connection.', p: 'Read the case. Tap the kind. Then say it with IF ONLY.' },
-  { k: 'dias', est: 'o', min: 7, extra: 1, img: 'ceu', rot: 'VII · Twenty-Six Thousand Days', t: 'About twenty-six thousand days is a long life. Three calm questions about yours.', p: 'Tap a card. Say the answer with a wish. Then answer for real.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'folha-luz', rot: 'VIII · Catch the Broken One', t: 'Five wishes are broken.', p: 'Find the broken part in each line. Say the fix. Then tap Check.' },
-  { k: 'fim', est: 'w', min: 6, img: 'bilhetes', rot: 'IX · Your Wish, Exactly', t: 'Your area from scene I, as one exact wish.', p: 'One wish for now, one for then. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'ceu', rot: 'III · The Ladder', t: 'One fact, five steps back in time.', p: 'Read each step out loud, then go one step up. Notice what happens to the verb. Then climb with your own wish.' },
+  { k: 'rebobina', est: 'f', min: 7, img: 'ceu', rot: 'IV · The Rewind', t: 'A wish rewinds the verb. Now: one step back. Then: two steps back. Someone else: WOULD.', p: 'Read the fact. Say the wish out loud. Tap Check and watch the verb slide back.' },
+  { k: 'duas', est: 'f', min: 6, img: 'folha-luz', rot: 'V · Two Correct Sentences', t: '“I wanted to go” is perfect English. It says nothing about whether you went.', p: 'Tap a sentence, then its box. Does the grammar SAY it didn’t happen?' },
+  { k: 'vozes', est: 'l', min: 7, img: 'mural', rot: 'VI · Four Submissions', t: 'Four people sent in a regret. None of them says “I wish”.', p: 'Play each one. Tap what the person wishes. Then say it with I wish or If only.' },
+  { k: 'tipos', est: 'f', min: 6, img: 'arena', rot: 'VII · Four Kinds of Regret', t: 'Foundation, boldness, moral, connection.', p: 'Read the case. Tap the kind. Then say it with IF ONLY.' },
+  { k: 'dias', est: 'o', min: 7, extra: 1, img: 'ceu', rot: 'VIII · Twenty-Six Thousand Days', t: 'About twenty-six thousand days is a long life. Three calm questions about yours.', p: 'Tap a card. Say the answer with a wish. Then answer for real.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'folha-luz', rot: 'IX · Catch the Broken One', t: 'Five wishes are broken.', p: 'Find the broken part in each line. Say the fix. Then tap Check.' },
+  { k: 'fim', est: 'w', min: 6, img: 'bilhetes', rot: 'X · Your Wish, Exactly', t: 'Your area from scene I, as one exact wish.', p: 'One wish for now, one for then. They go to your My notes.' }
 ];
 
 var TR = {
@@ -197,3 +198,17 @@ TOQUES['ab-t'] = function (b, n, v) { S.ab.tema = v; };
 TOQUES.dd = function (b, n) { S.dd.esc = n; };
 TOQUES.vz = function (b, n) { S.vz.esc = n; };
 TOQUES['vz-prox'] = function () { S.vz = { n: S.vz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de rebobina.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One fact. Climb it one step at a time.',
+  degraus: [
+    { r: 'fact', f: 'I don’t call my sister.', d: 'This is true now. I want it to change.' },
+    { r: 'wish', f: 'I wish I <b>called</b> my sister.', d: 'About now: the verb steps back. call becomes called.' },
+    { r: 'before', f: 'I didn’t call her last year.', d: 'This is true about before.' },
+    { r: 'wish', f: 'I wish I <b>had called</b> her last year.', d: 'About before: two steps back. had + called.' },
+    { r: 'would', f: 'She never answers. I wish she <b>would</b> answer.', d: 'About somebody else’s habit: wish + would.' }
+  ],
+  nota: 'A wish takes the verb <b>back</b>. Now: <b>I wish I called</b> (a past form). Before: <b>I wish I had called</b>. Somebody else: <b>I wish she would</b>. Never “I wish I call”, and never “I wish I would”.',
+  uso: { p: 'Your turn. One thing you wish were different now, and one thing you wish you had done before.', molde: ['I wish I …', 'I wish I had …'], ex: 'I wish I lived near the beach. I wish I had studied piano when I was a kid.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

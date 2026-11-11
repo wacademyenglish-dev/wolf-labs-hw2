@@ -16,13 +16,14 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Pipeline', t: 'How many leads do you have right now?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'dialogo', est: 'l', min: 8, img: 'mesa', rot: 'II · The Pipeline Meeting', t: 'Friday. Sara asks about every lead.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'III · I’ll, Not “I Call”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'separa', est: 'f', min: 8, img: 'mesa', rot: 'IV · Move Forward or Not Yet?', t: 'Eight leads. Is each one ready for the next step?', p: 'Choose a side and say why. Then say your decision: “OK, I’ll…”' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'V · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'leitura', est: 'l', min: 6, img: 'mesa', rot: 'VI · Easy Reader: Three Slides', t: 'Leo’s First Big Client · Chapter 6.', p: 'Read it out loud. Then answer the questions.' },
-  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'VII · Problem → Decision', t: 'A problem. Decide now!', p: 'Read the problem. Use the clue. Say your decision with I’ll.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'VIII · Next Steps for 4 Leads', t: 'Your pipeline: four leads, four next steps.', p: 'Write them. Then present them to Sara (your teacher).' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 24: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'III · Mistake Hunter', t: 'Five decisions. Each one has a wrong word.', p: 'Tap the wrong word. Say the sentence right. Then check.' },
+  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'IV · I’ll, Not “I Call”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'separa', est: 'f', min: 8, img: 'mesa', rot: 'V · Move Forward or Not Yet?', t: 'Eight leads. Is each one ready for the next step?', p: 'Choose a side and say why. Then say your decision: “OK, I’ll…”' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'leitura', est: 'l', min: 6, img: 'mesa', rot: 'VII · Easy Reader: Three Slides', t: 'Leo’s First Big Client · Chapter 6.', p: 'Read it out loud. Then answer the questions.' },
+  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'VIII · Problem → Decision', t: 'A problem. Decide now!', p: 'Read the problem. Use the clue. Say your decision with I’ll.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'IX · Next Steps for 4 Leads', t: 'Your pipeline: four leads, four next steps.', p: 'Write them. Then present them to Sara (your teacher).' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'X · I Can', t: 'Lesson 24: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -112,3 +113,19 @@ var PODE = [
   'I can say if a lead moves forward or not yet, and why.',
   'I can write the next step for four leads.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Five decisions.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'OK, I [[call]] him tomorrow.', r: 'OK, <b>I’ll call</b> him tomorrow.', d: 'A decision now: I’ll + verb.' },
+    { f: 'I’ll [[to]] send the e-mail today.', r: 'I’ll <b>send</b> the e-mail today.', d: 'After I’ll: the simple verb. No to.' },
+    { f: 'OK, I’ll [[calling]] the CFO.', r: 'OK, I’ll <b>call</b> the CFO.', d: 'No -ing after will.' },
+    { f: 'I [[don’t will]] call this month.', r: 'I <b>won’t</b> call this month.', d: 'No: won’t.' },
+    { f: '[[You will]] help me with the demo?', r: '<b>Will you</b> help me with the demo?', d: 'A question: Will you …?' }
+  ],
+  nota: 'A decision now: <b>I’ll</b> + simple verb. No: <b>I won’t</b>. A question: <b>Will you</b> …? Never “I call” for a decision, and never “I’ll to”.',
+  uso: { p: 'Your turn. Three decisions for your Friday: two with I’ll and one with I won’t.', molde: ['OK, I’ll …', 'I won’t …'], ex: 'OK, I’ll call the client on Monday. I’ll send the proposal today. I won’t call Mr. Silva this week.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

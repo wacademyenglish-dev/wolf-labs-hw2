@@ -17,14 +17,15 @@ var L = [
   { k: 'capa', est: null, img: 'quarto' },
   { k: 'numeros', est: 'o', min: 7, img: 'xicara', rot: 'I · Last Night in Numbers', t: 'Before the study: your last night, in three numbers.', p: 'Answer out loud. Your teacher taps your numbers. Then pick a card.' },
   { k: 'vozes', est: 'l', min: 7, img: 'lab', rot: 'II · Three Sleepers', t: 'Three people from the sleep lab. Each one found a rule about their own body.', p: 'Play the voice. Then say the rule you heard.' },
-  { k: 'regra', est: 'f', min: 6, img: 'lab', rot: 'III · The Rule of the Body', t: 'Two halves, both in the present.', p: 'Say the whole sentence. Then tap the second half you used.' },
-  { k: 'curva', est: 'o', min: 7, img: 'quarto', rot: 'IV · Your Curve', t: 'Six evening habits. What do they do to YOUR sleep?', p: 'Say your rule with if. Your teacher taps what it does, and the curve changes.' },
-  { k: 'domino', est: 'o', min: 7, img: 'telefone', rot: 'V · The Domino', t: 'A bad night is a chain. The end of every rule is the start of the next one.', p: 'Say each rule. The domino falls. Then break the chain.' },
-  { k: 'ifwhen', est: 'f', min: 6, extra: 1, img: 'telefone', rot: 'VI · If or When?', t: 'WHEN = it always happens. IF = it may happen, or not.', p: 'Say the sentence with the right word. Then tap it.' },
-  { k: 'irmaos', est: 'l', min: 7, extra: 1, img: 'telefone', rot: 'VII · Same House, Two Bodies', t: 'A sister and a brother, and two different bodies.', p: 'Play each one. Then tell the rule about her and about him. Don’t forget the -s.' },
-  { k: 'lab', est: 'l', min: 7, extra: 1, img: 'lab', rot: 'VIII · The Study', t: 'A real sleep study. Listen for the rule.', p: 'Play it. Then answer, and argue.' },
-  { k: 'coach', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'IX · The Sleep Coach', t: 'You are the sleep coach. Your teacher is a patient who can’t sleep.', p: 'The patient tells a problem. Give a rule with if. The patient argues back.' },
-  { k: 'fim', est: 'w', min: 6, img: 'xicara', rot: 'X · Your Seven Rules', t: 'The study is over. Your numbers are back.', p: 'Write your rules for a good night: if + present, present. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'lab', rot: 'III · The Rule in Blocks', t: 'The rule of the body, in blocks.', p: 'Read the blocks out loud. Notice what changes. Then build a rule and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'lab', rot: 'IV · The Rule of the Body', t: 'Two halves, both in the present.', p: 'Say the whole sentence. Then tap the second half you used.' },
+  { k: 'curva', est: 'o', min: 7, img: 'quarto', rot: 'V · Your Curve', t: 'Six evening habits. What do they do to YOUR sleep?', p: 'Say your rule with if. Your teacher taps what it does, and the curve changes.' },
+  { k: 'domino', est: 'o', min: 7, img: 'telefone', rot: 'VI · The Domino', t: 'A bad night is a chain. The end of every rule is the start of the next one.', p: 'Say each rule. The domino falls. Then break the chain.' },
+  { k: 'ifwhen', est: 'f', min: 6, extra: 1, img: 'telefone', rot: 'VII · If or When?', t: 'WHEN = it always happens. IF = it may happen, or not.', p: 'Say the sentence with the right word. Then tap it.' },
+  { k: 'irmaos', est: 'l', min: 7, extra: 1, img: 'telefone', rot: 'VIII · Same House, Two Bodies', t: 'A sister and a brother, and two different bodies.', p: 'Play each one. Then tell the rule about her and about him. Don’t forget the -s.' },
+  { k: 'lab', est: 'l', min: 7, extra: 1, img: 'lab', rot: 'IX · The Study', t: 'A real sleep study. Listen for the rule.', p: 'Play it. Then answer, and argue.' },
+  { k: 'coach', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'X · The Sleep Coach', t: 'You are the sleep coach. Your teacher is a patient who can’t sleep.', p: 'The patient tells a problem. Give a rule with if. The patient argues back.' },
+  { k: 'fim', est: 'w', min: 6, img: 'xicara', rot: 'XI · Your Seven Rules', t: 'The study is over. Your numbers are back.', p: 'Write your rules for a good night: if + present, present. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -227,3 +228,16 @@ TOQUES.dm = function () { S.dom++; };
 TOQUES.iw = function (b, n, v) { S.iw[n] = v; };
 TOQUES['co-viu'] = function () { S.coach.viu[S.coach.n] = 1; };
 TOQUES['co-prox'] = function () { S.coach.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'A rule of the body, in blocks. Each block has a job.',
+  frases: [
+    { b: [['If', 'IF', 'aux'], ['I drink coffee at night', 'CONDITION', 'quando'], ['I can’t sleep', 'RESULT', 'acao']], d: 'Both halves are in the present. No will.' },
+    { b: [['If', 'IF', 'aux'], ['he', 'WHO'], ['drinks', 'ACTION + S', 'acao'], ['tea', 'WHAT'], ['he', 'WHO'], ['sleeps', 'ACTION + S', 'acao'], ['well', 'HOW']], d: 'About him? The -s comes back, twice.' },
+    { b: [['If', 'IF', 'aux'], ['I don’t sleep', 'NOT', 'quando'], ['I feel tired', 'RESULT', 'acao']], d: 'With don’t, the verb is clean.' }
+  ],
+  nota: 'A rule of the body has <b>two halves</b>, both in the <b>present</b>: if + present, present. No will. With he, she, it, the -s appears in both halves.',
+  monta: { p: 'Build the next rule from the sleep lab. Then say it.', pecas: [['I feel tired', 'RESULT', 'acao'], ['If', 'IF', 'aux'], ['I sleep late', 'CONDITION', 'quando']], ordem: [1, 2, 0], outras: [[0, 1, 2]] },
+  uso: { p: 'Now your body. Say two rules about your sleep with if.', molde: ['If I …, I …', 'If I don’t …, I …'], ex: 'If I eat late, I wake up at night. If I don’t exercise, I feel tired.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

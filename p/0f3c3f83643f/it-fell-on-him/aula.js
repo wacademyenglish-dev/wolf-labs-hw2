@@ -29,10 +29,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Coyote vs. ACME, 2026. The official trailer.', p: 'Guess first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'caixa', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'tribunal', rot: 'V · Me, Him, Them', t: 'After the verb: me, you, him, her, it, us, them.', p: 'One word is wrong in each sentence. Say the right one. Then tap Check.' },
-  { k: 'catalogo', est: 'o', min: 7, img: 'caixa', rot: 'VI · The ACME Catalog', t: 'Six products. Say the right word, and ACME delivers.', p: 'Read the gag. Say the sentence with the right word. Then tap Check.' },
-  { k: 'gags', est: 'o', min: 5, img: 'capa', rot: 'VII · Make the Gag', t: 'Make your own gag. Use me, him, her, it, us and them.', p: 'Tell a gag. Tap each word when you use it.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · One Minute', t: 'One minute.', p: 'Talk.' }
+  { k: 'gx', est: 'f', min: 4, img: 'caixa', rot: 'V · Right, Not This', t: 'Six lines from the ACME desert. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'regra', est: 'f', min: 6, img: 'tribunal', rot: 'VI · Me, Him, Them', t: 'After the verb: me, you, him, her, it, us, them.', p: 'One word is wrong in each sentence. Say the right one. Then tap Check.' },
+  { k: 'catalogo', est: 'o', min: 7, img: 'caixa', rot: 'VII · The ACME Catalog', t: 'Six products. Say the right word, and ACME delivers.', p: 'Read the gag. Say the sentence with the right word. Then tap Check.' },
+  { k: 'gags', est: 'o', min: 5, img: 'capa', rot: 'VIII · Make the Gag', t: 'Make your own gag. Use me, him, her, it, us and them.', p: 'Tell a gag. Tap each word when you use it.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · One Minute', t: 'One minute.', p: 'Talk.' }
 ];
 
 var FILME = 'Coyote vs. ACME', ANO = '2026';
@@ -228,3 +229,18 @@ var FIM = { tipo: 'minuto', rot: 'VIII · One Minute', t: 'One minute: talk abou
   ],
   palavras: ['me', 'him', 'her', 'it', 'us', 'them'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'The big box falls on him.', x: 'The big box falls on he.', d: 'After on: him, not he.' },
+    { c: 'Help me, please!', x: 'Help I, please!', d: 'After the verb: me, not I.' },
+    { c: 'The rockets hit them.', x: 'The rockets hit they.', d: 'After the verb: them, not they.' },
+    { c: 'Listen to me!', x: 'Listen me!', d: 'Listen needs to: listen to me.' },
+    { c: 'The Road Runner is fast. Coyote can’t catch him.', x: 'The Road Runner is fast. Coyote can’t catch it.', d: 'A character with a name is a person here: him or her, not it.' },
+    { c: 'ACME sends us the box.', x: 'ACME sends we the box.', d: 'After the verb: us, not we.' }
+  ],
+  nota: 'After the verb, and after on, to or at, use <b>me, you, him, her, it, us, them</b>. Not <b>I, he, she, we, they</b>.',
+  uso: { p: 'Your turn. One person you love and one thing you use every day. Say what you do with them.', molde: ['I love …', 'I use it …'], ex: 'I call my mother every day. I love her. I use my phone all day. I can’t live without it.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

@@ -18,12 +18,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'feira', rot: 'III · Real Voices', t: 'Four friends, four cities.', p: 'Four short parts. Tap a question word every time you hear it.' },
   { k: 'falas', est: 'l', extra: 1, img: 'feira', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'fichas', est: 'o', min: 7, img: 'microfone', rot: 'V · The Lost Questions', t: 'The wind broke the microphone. Six answers, zero questions.', p: 'Tap a card. Read the answer. Give the question for it.' },
-  { k: 'regra', est: 'f', min: 6, img: 'passaporte', rot: 'VI · The Rule', t: 'Question word, helper, person, verb. The little word goes at the end.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'carimbo', est: 'o', min: 7, img: 'estudio', rot: 'VII · Live at 7 PM', t: 'The show is live. Ask, and stamp the passport.', p: 'The producer shows a card. Ask about that person at once, with does or is.' },
-  { k: 'nadia', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'VIII · Your Turn at the Mic', t: 'Next day, Nadia is on YOUR street.', p: 'Your teacher is Nadia. Answer, then ask her the same question back.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'passaporte', rot: 'IX · Quick Check', t: 'Six quick questions from the show.', p: 'Say the whole question. Then tap the word.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'X · Interview Me', t: 'You are the reporter now.', p: 'Pick a card. Ask your teacher the question. Then your teacher asks it back.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · After the Show', t: 'Write three ID cards.', p: 'Three people in your life: a question and an answer for each. The red line watches do and from. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'microfone', rot: 'VI · Questions in Blocks', t: 'Nadia’s questions, in blocks.', p: 'Read the blocks out loud. Notice where the helper goes. Then build a question and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'passaporte', rot: 'VII · The Rule', t: 'Question word, helper, person, verb. The little word goes at the end.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'carimbo', est: 'o', min: 7, img: 'estudio', rot: 'VIII · Live at 7 PM', t: 'The show is live. Ask, and stamp the passport.', p: 'The producer shows a card. Ask about that person at once, with does or is.' },
+  { k: 'nadia', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'IX · Your Turn at the Mic', t: 'Next day, Nadia is on YOUR street.', p: 'Your teacher is Nadia. Answer, then ask her the same question back.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'passaporte', rot: 'X · Quick Check', t: 'Six quick questions from the show.', p: 'Say the whole question. Then tap the word.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'XI · Interview Me', t: 'You are the reporter now.', p: 'Pick a card. Ask your teacher the question. Then your teacher asks it back.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · After the Show', t: 'Write three ID cards.', p: 'Three people in your life: a question and an answer for each. The red line watches do and from. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -214,3 +215,17 @@ TOQUES['nd-viu'] = function () { S.nadia.viu[S.nadia.n] = 1; };
 TOQUES['nd-prox'] = function () { S.nadia.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
 TOQUES.rd = function (b, n) { S.roda.sel = n; S.roda.foi[n] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Nadia’s questions, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Where', 'QUESTION'], ['do', 'HELPER', 'aux'], ['you', 'WHO'], ['live', 'ACTION']], d: 'Nadia asks you. The helper do comes second.' },
+    { b: [['Where', 'QUESTION'], ['does', 'HELPER', 'aux'], ['Omar', 'WHO'], ['come', 'ACTION'], ['from', 'AT THE END', 'aux']], d: 'About one person: does. The verb stays clean, and from goes to the end.' },
+    { b: [['Where', 'QUESTION'], ['is', 'BE', 'aux'], ['Omar', 'WHO'], ['from', 'AT THE END', 'aux']], d: 'With be: no do, no does. Be goes second.' }
+  ],
+  nota: 'The order never changes: <b>QUESTION WORD + do / does + WHO + ACTION</b>. The little word stays at the end: Where does Omar come <b>from</b>? With be, there is no helper: Where <b>is</b> Omar from?',
+  monta: { p: 'Nadia’s next question, about a baker. Build it. Then say it.', pecas: [['does', 'HELPER', 'aux'], ['work', 'ACTION'], ['the baker', 'WHO'], ['Where', 'QUESTION']], ordem: [3, 0, 2, 1] },
+  uso: { p: 'Your turn. You are Nadia. Ask your teacher two questions about a person in their life: one with does, one with is.', molde: ['Where does your … live?', 'Where is your … from?'], ex: 'Where does your sister live? Where is your mother from?' },
+  prof: 'Read the blocks with the student, top to bottom. Point at the little word at the end: it never moves to the front.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

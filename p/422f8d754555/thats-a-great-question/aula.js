@@ -16,9 +16,10 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 10, titulo: ['That’s a Great',
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Q&A', t: 'Four questions after a talk about city bees.', p: 'Read the Q&A out loud with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Panic or Professional?', t: 'Two ways to answer the same question.', p: 'Compare A and B. Which speaker keeps control?' },
-  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'III · Keep Calm', t: 'Panic → professional.', p: 'Read the weak answer. Use the clue. Say the professional version.' },
-  { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'IV · Questions from the Floor', t: 'Roll, move, answer the question.', p: 'Your teacher rolls and asks a question about YOUR topic. Handle it like a pro.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · The Answer in Blocks', t: 'A calm answer has five blocks.', p: 'Read the blocks out loud. Notice what each block does. Then build an answer and say your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Panic or Professional?', t: 'Two ways to answer the same question.', p: 'Compare A and B. Which speaker keeps control?' },
+  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'IV · Keep Calm', t: 'Panic → professional.', p: 'Read the weak answer. Use the clue. Say the professional version.' },
+  { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'V · Questions from the Floor', t: 'Roll, move, answer the question.', p: 'Your teacher rolls and asks a question about YOUR topic. Handle it like a pro.' }
 ];
 var PORTAS = [];
 
@@ -71,3 +72,9 @@ var TABULEIRO = { rot: 'QUESTIONS FROM THE FLOOR', centro: 'Your teacher asks ab
   { k: 'THE MISTAKE', t: 'Someone finds a mistake in your slides.', ex: 'You’re absolutely right, thanks for catching that.' },
   { k: 'THE CHECK', t: 'Finish an answer and check.', ex: 'Does that answer your question?' },
   { k: 'THE CLOSE', t: 'Time’s up. Close the Q&A.', ex: 'I’m afraid that’s all we have time for. Thank you for your great questions!' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'A question about the bees, in blocks. Each block has a job.', frases: [{ b: [['That’s a great question.', 'BUY TIME', 'quando'], ['If I understand you correctly, you’re asking …', 'CHECK', 'q'], ['whether the bees hurt people.', 'THE QUESTION', 'o']], d: 'First breathe and check. You have not answered yet, and that is fine.' }, { b: [['I don’t have the figures with me, but …', 'ADMIT', 'aux'], ['I’d have to check.', 'HONEST', 'acao'], ['Can I come back to that at the end?', 'PARK', 'onde']], d: 'Do not invent an answer. Be honest and offer a time.' }, { b: [['I can see why you’d think that.', 'RESPECT', 'quem'], ['However, …', 'TURN', 'como'], ['the research shows the opposite.', 'ANSWER', 'o'], ['Does that answer your question?', 'CLOSE', 'como']], d: 'A hard question: agree with the person first, then turn it.' }], nota: 'Five jobs, one answer: <b>buy time</b> (That’s a great question), <b>check</b> (If I understand you correctly), <b>admit</b> (I’d have to check), <b>park</b> (Can I come back to that?), <b>close</b> (Does that answer your question?). Not “I don’t know”, and not “good question” ten times.', monta: { p: 'Build the calm answer. Then say it.', pecas: [['Does that answer your question?', 'CLOSE', 'como'], ['That’s a great question.', 'BUY TIME', 'quando'], ['I’d have to check.', 'HONEST', 'acao'], ['I don’t have the figures with me, but …', 'ADMIT', 'aux']], ordem: [1, 3, 2, 0], outras: [] }, uso: { p: 'Your turn. Someone asks you a hard question about your work. Answer in three sentences with the blocks.', molde: ['That’s a great question. …', 'I’d have to check …', 'Does that answer …?'], ex: 'That’s a great question. I don’t have the figures with me, but I’d have to check. Does that answer your question?' }, prof: 'Read the blocks with the student, top to bottom. Point at the label under each block: that is its job.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

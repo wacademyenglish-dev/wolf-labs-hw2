@@ -26,12 +26,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'banco', rot: 'III · The Interview', t: 'A job interview at a bank. Mr. Wang wants to be a bank teller.', p: 'The video is locked. Answer first, then it plays in five short chapters. Then True or Lie.' },
   { k: 'falas', est: 'l', extra: 1, img: 'banco', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'bloco', est: 'o', min: 7, img: 'cracha', rot: 'V · The Blunt Notes', t: 'Your notepad has eight questions for the interviewer. They are too blunt.', p: 'Pick a note. Say it with the polite starter. Your teacher taps the version you said: a right one rewrites the note.' },
-  { k: 'regra', est: 'f', min: 6, img: 'relogio', rot: 'VI · The Machine', t: 'A polite start, then a normal sentence.', p: 'Read the machine out loud. Then fix the four traps.' },
-  { k: 'mesa', est: 'o', min: 7, img: 'capa', rot: 'VII · Five Minutes Left', t: '“We have five minutes. Any questions?” Eight topics. Ask fast.', p: 'Your teacher points to a topic. Ask at once, with a different starter each time.' },
-  { k: 'rude', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'VIII · Is It Rude?', t: 'Is it rude to ask this in an interview?', p: 'Pick five cards. Rude, OK, or smart? Defend it. Your teacher takes the other side.' },
-  { k: 'clark', est: 'o', min: 7, extra: 1, img: 'banco', rot: 'IX · Your Questions', t: 'Mrs. Clark has five more minutes. She answers your questions.', p: 'Your teacher is Mrs. Clark. Ask polite questions about a job you really want.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'relogio', rot: 'X · Quick Check', t: 'Six quick questions from the interview.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'elevador', rot: 'XI · After the Interview', t: 'In the elevator: was it rude to ask about money?', p: 'Write your five questions for your dream job. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cracha', rot: 'VI · The Flip', t: 'Watch the words move.', p: 'Flip each blunt question. Notice where the verb goes. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'relogio', rot: 'VII · The Machine', t: 'A polite start, then a normal sentence.', p: 'Read the machine out loud. Then fix the four traps.' },
+  { k: 'mesa', est: 'o', min: 7, img: 'capa', rot: 'VIII · Five Minutes Left', t: '“We have five minutes. Any questions?” Eight topics. Ask fast.', p: 'Your teacher points to a topic. Ask at once, with a different starter each time.' },
+  { k: 'rude', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'IX · Is It Rude?', t: 'Is it rude to ask this in an interview?', p: 'Pick five cards. Rude, OK, or smart? Defend it. Your teacher takes the other side.' },
+  { k: 'clark', est: 'o', min: 7, extra: 1, img: 'banco', rot: 'X · Your Questions', t: 'Mrs. Clark has five more minutes. She answers your questions.', p: 'Your teacher is Mrs. Clark. Ask polite questions about a job you really want.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'relogio', rot: 'XI · Quick Check', t: 'Six quick questions from the interview.', p: 'Say the whole sentence out loud. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'elevador', rot: 'XII · After the Interview', t: 'In the elevator: was it rude to ask about money?', p: 'Write your five questions for your dream job. It goes to your My notes.' }
 ];
 
 var VOCE = [
@@ -283,3 +284,23 @@ TOQUES['ms-pausa'] = function () { S.ms.rodando = 0; paraTimer(); };
 TOQUES['cl-prox'] = function () { S.cl.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The blunt question, then the polite one. Watch the words move.',
+  frases: [
+    { de: ['Where', '*is', 'the office', '?'], para: ['+Could you tell me', 'where', 'the office', '*is', '?'], d: 'After the polite start: sentence order. The office is.' },
+    { de: ['When', '*does', 'the job', 'start', '?'], para: ['+Do you know', 'when', 'the job', '*starts', '?'], d: 'No does. The verb takes the -s back: it starts.' },
+    { de: ['*Is', 'it', 'a full-time job', '?'], para: ['+Can I ask', '+if', 'it', '*is', 'a full-time job', '?'], d: 'A yes or no question: if.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'The polite start does the asking. After it, the words go back to sentence order: <b>where the office is</b>, <b>when it starts</b>, <b>if it is</b>. No do, does or did.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'What is the salary?', r: 'Could you tell me what the salary <b>is</b>?' },
+    { de: 'When will I hear from you?', r: 'Could you tell me when I <b>will hear</b> from you?' },
+    { de: 'Do I need a uniform?', r: 'Can I ask <b>if</b> I need a uniform?' },
+    { de: 'Where did the last bank teller go?', r: 'Do you know where the last bank teller <b>went</b>?' }
+  ],
+  uso: { p: 'Your turn. One real question for an interview for your dream job. Start polite, then sentence order.', molde: ['Could you tell me …', 'I was wondering if …'], ex: 'Could you tell me how many days I can work from home?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

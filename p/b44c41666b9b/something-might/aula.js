@@ -16,12 +16,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'sala', rot: 'I · Noises at Night', t: 'Your house at night. What do you hear?', p: 'Pick a card. Real life. Nobody is corrected here.' },
   { k: 'portas', est: 'o', min: 7, img: 'capa', rot: 'II · Six Doors', t: 'Six doors, six noises. Guess before you open the door.', p: 'Tap a door. Read the noise. Guess out loud. Then open it.' },
-  { k: 'regra', est: 'f', min: 6, img: 'lanterna', rot: 'III · The Rule', t: 'A guess about now: might or may.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'sombra', est: 'o', min: 7, img: 'escada', rot: 'IV · The Flashlight', t: 'Eight shadows on the wall. Two guesses for each, fast.', p: 'Your teacher reads the clue. Guess at once: might, then might not.' },
-  { k: 'roda', est: 'o', min: 7, img: 'janela', rot: 'V · Tonight, Maybe', t: 'What might happen tonight? Nobody knows. Guess!', p: 'Spin. Answer with might or might not, and say why.' },
-  { k: 'sam', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'VI · Sam Is Scared', t: 'Sam is home alone and hears noises. Calm Sam down.', p: 'Your teacher is Sam. Answer with might, may or might not.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'lanterna', rot: 'VII · Quick Check', t: 'Six quick guesses from the house.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'sala', rot: 'VIII · Lights On', t: 'The power is back. What might be in YOUR house tonight?', p: 'Three guesses: one with might, one with may, one with might not. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'janela', rot: 'III · Look First', t: 'Four pictures from the house at night.', p: 'Look at the picture. Guess what they say. Then tap to see it, and say it.' },
+  { k: 'regra', est: 'f', min: 6, img: 'lanterna', rot: 'IV · The Rule', t: 'A guess about now: might or may.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'sombra', est: 'o', min: 7, img: 'escada', rot: 'V · The Flashlight', t: 'Eight shadows on the wall. Two guesses for each, fast.', p: 'Your teacher reads the clue. Guess at once: might, then might not.' },
+  { k: 'roda', est: 'o', min: 7, img: 'janela', rot: 'VI · Tonight, Maybe', t: 'What might happen tonight? Nobody knows. Guess!', p: 'Spin. Answer with might or might not, and say why.' },
+  { k: 'sam', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'VII · Sam Is Scared', t: 'Sam is home alone and hears noises. Calm Sam down.', p: 'Your teacher is Sam. Answer with might, may or might not.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'lanterna', rot: 'VIII · Quick Check', t: 'Six quick guesses from the house.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'sala', rot: 'IX · Lights On', t: 'The power is back. What might be in YOUR house tonight?', p: 'Three guesses: one with might, one with may, one with might not. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -213,3 +214,16 @@ TOQUES.rd = function () { S.roda.g++; S.roda.anim = 1; setTimeout(function () { 
 TOQUES['sm-viu'] = function () { S.sam.viu[S.sam.n] = 1; };
 TOQUES['sm-prox'] = function () { S.sam.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What do they say?',
+  cenas: [
+    { img: 'cozinha', antes: 'Midnight. The kitchen is dark. You hear a drip, drip, drip.', frase: '“What is that noise?” “It <mark>might</mark> be the faucet.”' },
+    { img: 'escada', antes: 'The stairs. Something goes tap, tap, tap. You hold a flashlight.', frase: '“Who is there?” “It <mark>may</mark> be the cat.”' },
+    { img: 'janela', antes: 'The window is open a little. A white shape moves.', frase: '“Is it a ghost?” “It <mark>might not</mark> be a ghost. <mark>Maybe</mark> it is the curtain.”' },
+    { img: 'sala', antes: 'The living room. A big shape sits in the old chair.', frase: '“Who is that?” “It <mark>might be</mark> Grandpa. He <mark>may be</mark> asleep.”' }
+  ],
+  nota: 'A guess about now: <b>might</b> or <b>may</b> + the clean verb: It might <b>be</b> the cat. No -s, no to. For no: <b>might not</b>. And <b>maybe</b> opens the sentence: Maybe it is the cat. Never “It can be the cat”.',
+  uso: { p: 'Your turn. You hear a noise at home tonight. Say two guesses about what it is.', molde: ['It might be …', 'It may not be …', 'Maybe it is …'], ex: 'It might be the wind. It may not be my neighbor. Maybe it is the refrigerator.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

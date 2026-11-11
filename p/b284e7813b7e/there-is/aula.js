@@ -17,15 +17,16 @@ var L = [
   { k: 'capa', est: null, img: 'cadeira' },
   { k: 'abre', est: 'o', min: 7, img: 'rua', rot: 'I · Your Street', t: 'Two true things about the street where you live.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'escuta', est: 'l', min: 7, img: 'rua', rot: 'II · Five Sentences', t: 'Five sentences. All five start with the same word.', p: 'Listen first. Say it out loud. Then see the words.' },
-  { k: 'frente', est: 'f', min: 6, img: 'cadeira', rot: 'III · The Front Seat', t: 'Somebody has to sit at the front.', p: 'Say the whole sentence first. Then fill the front seat. It can’t stay empty.' },
-  { k: 'fundo', est: 'f', min: 6, img: 'cadeira', rot: 'IV · The Back of the Sentence', t: 'Is or are? The answer is at the back.', p: 'Cover the front with your hand. Read only the end. One thing: is. More: are.' },
-  { k: 'lista', est: 'l', min: 7, img: 'brighton', rot: 'V · Six Things in Brighton', t: 'Five of these six are really there. One is not.', p: 'Ears only. Read the six words, press play, tap each one when you hear it.' },
-  { k: 'cidades', est: 'l', min: 7, img: 'london', rot: 'VI · Four Towns', t: 'Four people, one question: what is there in your town?', p: 'Tap a town. Listen first. Then read the five lines out loud.' },
-  { k: 'pergunta', est: 'f', min: 6, extra: 1, img: 'placa', rot: 'VII · Is There a …?', t: 'To ask, the two words change places.', p: 'Turn the sentence around. Say both out loud.' },
-  { k: 'nao', est: 'f', min: 6, extra: 1, img: 'fila', rot: 'VIII · What Is Not There', t: 'The same sentence, saying no.', p: 'One thing: there isn’t. More than one: there aren’t any.' },
-  { k: 'portas', est: 'o', min: 7, extra: 1, img: 'petworth', rot: 'IX · You Decide', t: 'No town has everything. Pick one.', p: 'Pick a town. Say what there is, and what there isn’t.' },
-  { k: 'cidade', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'X · Your Town', t: 'Now about a real place: yours.', p: 'One true sentence for each card. If it isn’t true, it doesn’t count.' },
-  { k: 'fim', est: 'w', min: 6, img: 'placa', rot: 'XI · There Is', t: 'Write about your town.', p: 'There is, there are, there isn’t, there aren’t any, and one Is there…? The red line watches the front and the back. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cadeira', rot: 'III · The Flip', t: 'Watch the two seats change places.', p: 'Flip each sentence. Notice which words move. Then flip four on your own.' },
+  { k: 'frente', est: 'f', min: 6, img: 'cadeira', rot: 'IV · The Front Seat', t: 'Somebody has to sit at the front.', p: 'Say the whole sentence first. Then fill the front seat. It can’t stay empty.' },
+  { k: 'fundo', est: 'f', min: 6, img: 'cadeira', rot: 'V · The Back of the Sentence', t: 'Is or are? The answer is at the back.', p: 'Cover the front with your hand. Read only the end. One thing: is. More: are.' },
+  { k: 'lista', est: 'l', min: 7, img: 'brighton', rot: 'VI · Six Things in Brighton', t: 'Five of these six are really there. One is not.', p: 'Ears only. Read the six words, press play, tap each one when you hear it.' },
+  { k: 'cidades', est: 'l', min: 7, img: 'london', rot: 'VII · Four Towns', t: 'Four people, one question: what is there in your town?', p: 'Tap a town. Listen first. Then read the five lines out loud.' },
+  { k: 'pergunta', est: 'f', min: 6, extra: 1, img: 'placa', rot: 'VIII · Is There a …?', t: 'To ask, the two words change places.', p: 'Turn the sentence around. Say both out loud.' },
+  { k: 'nao', est: 'f', min: 6, extra: 1, img: 'fila', rot: 'IX · What Is Not There', t: 'The same sentence, saying no.', p: 'One thing: there isn’t. More than one: there aren’t any.' },
+  { k: 'portas', est: 'o', min: 7, extra: 1, img: 'petworth', rot: 'X · You Decide', t: 'No town has everything. Pick one.', p: 'Pick a town. Say what there is, and what there isn’t.' },
+  { k: 'cidade', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'XI · Your Town', t: 'Now about a real place: yours.', p: 'One true sentence for each card. If it isn’t true, it doesn’t count.' },
+  { k: 'fim', est: 'w', min: 6, img: 'placa', rot: 'XII · There Is', t: 'Write about your town.', p: 'There is, there are, there isn’t, there aren’t any, and one Is there…? The red line watches the front and the back. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -183,3 +184,23 @@ TOQUES['ls-falta'] = function () { S.lista.falta = 1; };
 TOQUES.cd = function (b, n) { S.cid.sel = n; };
 TOQUES.pt = function (b, n) { S.portas = n; };
 TOQUES.cc = function (b, n) { S.cidade[n] = !S.cidade[n]; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de frente.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The sentence, then the question. Watch the words move.',
+  frases: [
+    { de: ['*There', '*is', 'a park', 'near here', '.'], para: ['*Is', '*there', 'a park', 'near here', '?'], d: 'There and is change places.' },
+    { de: ['*There', '*are', 'two', 'cafes', 'on my street', '.'], para: ['*Are', '*there', '+any', 'cafes', 'on my street', '?'], d: 'Two or more: Are there? And two becomes any.' },
+    { de: ['*There', '*is', 'a bank', 'next to the cafe', '.'], para: ['*Is', '*there', 'a bank', 'next to the cafe', '?'], d: 'The same flip. Answer: Yes, there is. No, there isn’t.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'To ask, <b>there</b> and <b>is / are</b> change places: There is → <b>Is there</b> …? With more than one, <b>any</b> comes in: <b>Are there any</b> cafes?',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'There is a bench in the park.', r: '<b>Is there</b> a bench in the park?' },
+    { de: 'There are three schools in my town.', r: '<b>Are there any</b> schools in your town?' },
+    { de: 'There is a pharmacy near here.', r: '<b>Is there</b> a pharmacy near here?' },
+    { de: 'There are two beds in the room.', r: '<b>Are there any</b> beds in the room?' }
+  ],
+  uso: { p: 'Your turn. Ask your teacher two questions about the place where they live.', molde: ['Is there a … in your town?', 'Are there any … near your house?'], ex: 'Is there a cinema in your town? Are there any parks near your house?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

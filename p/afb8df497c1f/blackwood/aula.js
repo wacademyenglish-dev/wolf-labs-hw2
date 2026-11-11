@@ -23,16 +23,17 @@ var L = [
   { k: 'capa', est: null, img: 'cabana' },
   { k: 'velas', est: 'o', min: 7, img: 'sala', rot: 'I · Four Candles', t: 'Before the tapes: four candles, four questions about your own nights.', p: 'Answer out loud. Your teacher taps your kind of answer, then asks the follow-up.' },
   { k: 'fita1', est: 'l', min: 7, img: 'estrada', rot: 'II · Tape 1 · The Road', t: 'A hiker left a recorder at the radio station. It was found in an empty cabin in the forest.', p: 'Play the tape, track by track. Then tell it back with the six words.' },
-  { k: 'duas', est: 'f', min: 6, img: 'estrada', rot: 'III · Two Tracks', t: 'Three sentences from Tape 1. Which part is the long track, and which is the red pin?', p: 'Read each sentence out loud. Then answer.' },
-  { k: 'regra', est: 'f', min: 6, img: 'portacab', rot: 'IV · The Rule on the Door', t: 'Someone carved two rules into the cabin door.', p: 'Play the door. Read our rule out loud. Then fix the four traps.' },
-  { k: 'pinos', est: 'o', min: 7, img: 'estrada', rot: 'V · The Tape', t: 'Five moments from the tapes and from tonight. Say each one with two tracks.', p: 'Say the sentence. Your teacher taps what you said, the pin drops, and you say it again starting with While.' },
-  { k: 'homens', est: 'l', min: 7, img: 'caderno', rot: 'VI · Tape 2 · Four Men', t: 'A metal box in the cabin, and a notebook from 1961.', p: 'Play each man. Say what he was doing when it happened. Then guess: did he open the door?' },
-  { k: 'linhas', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'VII · The Call Board', t: 'The tapes are on air, and the phones start ringing.', p: 'Your teacher is the caller. Ask two questions: what they were doing, and what they did.' },
-  { k: 'fita3', est: 'l', min: 7, extra: 1, img: 'sala', rot: 'VIII · Tape 3 · The Voice', t: 'The last tape from the cabin. Recorded at four in the morning.', p: 'Play the six tracks in order. Then tell what happened, with two tracks.' },
-  { k: 'ultima', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'IX · The Last Call', t: '5:40 AM. Line 6 has no name.', p: 'Your teacher reads each part slowly. Answer the question after each one. Then decide.' },
-  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'telefone', rot: 'X · Your Strangest Night', t: 'Now you are the caller. Pick a night from your own life and tell it.', p: 'Your story needs three things: a long track, a pin with when, and a while.' },
-  { k: 'fala', est: 'o', min: 7, extra: 1, img: 'amanhecer', rot: 'XI · On Air', t: 'The sun is up. Four last messages from the listeners.', p: 'Answer each one. The last one is a swap: you ask your teacher.' },
-  { k: 'fim', est: 'w', min: 6, img: 'amanhecer', rot: 'XII · Sign Off', t: '6:00 AM. Write the next call to Blackwood Night Radio.', p: 'Your own strange night, with two tracks. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'estrada', rot: 'III · Long Track, Red Pin', t: 'Where does each sentence live on the tape?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say two lines about you.' },
+  { k: 'duas', est: 'f', min: 6, img: 'estrada', rot: 'IV · Two Tracks', t: 'Three sentences from Tape 1. Which part is the long track, and which is the red pin?', p: 'Read each sentence out loud. Then answer.' },
+  { k: 'regra', est: 'f', min: 6, img: 'portacab', rot: 'V · The Rule on the Door', t: 'Someone carved two rules into the cabin door.', p: 'Play the door. Read our rule out loud. Then fix the four traps.' },
+  { k: 'pinos', est: 'o', min: 7, img: 'estrada', rot: 'VI · The Tape', t: 'Five moments from the tapes and from tonight. Say each one with two tracks.', p: 'Say the sentence. Your teacher taps what you said, the pin drops, and you say it again starting with While.' },
+  { k: 'homens', est: 'l', min: 7, img: 'caderno', rot: 'VII · Tape 2 · Four Men', t: 'A metal box in the cabin, and a notebook from 1961.', p: 'Play each man. Say what he was doing when it happened. Then guess: did he open the door?' },
+  { k: 'linhas', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'VIII · The Call Board', t: 'The tapes are on air, and the phones start ringing.', p: 'Your teacher is the caller. Ask two questions: what they were doing, and what they did.' },
+  { k: 'fita3', est: 'l', min: 7, extra: 1, img: 'sala', rot: 'IX · Tape 3 · The Voice', t: 'The last tape from the cabin. Recorded at four in the morning.', p: 'Play the six tracks in order. Then tell what happened, with two tracks.' },
+  { k: 'ultima', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'X · The Last Call', t: '5:40 AM. Line 6 has no name.', p: 'Your teacher reads each part slowly. Answer the question after each one. Then decide.' },
+  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'telefone', rot: 'XI · Your Strangest Night', t: 'Now you are the caller. Pick a night from your own life and tell it.', p: 'Your story needs three things: a long track, a pin with when, and a while.' },
+  { k: 'fala', est: 'o', min: 7, extra: 1, img: 'amanhecer', rot: 'XII · On Air', t: 'The sun is up. Four last messages from the listeners.', p: 'Answer each one. The last one is a swap: you ask your teacher.' },
+  { k: 'fim', est: 'w', min: 6, img: 'amanhecer', rot: 'XIII · Sign Off', t: '6:00 AM. Write the next call to Blackwood Night Radio.', p: 'Your own strange night, with two tracks. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -263,3 +264,19 @@ TOQUES['ul-f'] = function (b, n, v) { S.ul.fim = v; };
 TOQUES['se-t'] = function (b, n) { S.seu.tema = n; };
 TOQUES['se-p'] = function (b, n, v) { S.seu.partes[v] = !S.seu.partes[v]; };
 TOQUES['fl-prox'] = function () { S.fl.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de duas.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'The tape from the cabin. Where does each sentence go?',
+  marcos: [{ t: 'THE LONG TRACK', s: 'it was going on' }, { t: 'THE RED PIN', s: 'it happened' }],
+  frases: [
+    { f: 'Ana was walking through the forest.', c: 0, d: 'was walking · a long track' },
+    { f: 'The rain was falling all night.', c: 0, d: 'was falling · a long track' },
+    { f: 'The men were sleeping in the cabin.', c: 0, d: 'were sleeping · a long track' },
+    { f: 'The recorder fell on the floor.', c: 1, d: 'fell · the red pin' },
+    { f: 'Someone knocked on the door.', c: 1, d: 'knocked · the red pin' },
+    { f: 'The tape stopped.', c: 1, d: 'stopped · the red pin' }
+  ],
+  nota: 'The long track: <b>was / were + -ing</b> (it was raining). The red pin: the past simple (the tape stopped). Put them together: <b>while</b> + the long track, or <b>when</b> + the pin. While Ana was walking, the recorder fell. Ana was walking when the recorder fell.',
+  uso: { p: 'Your turn. A strange night in your life: what were you doing (the long track), and what happened (the red pin)?', molde: ['I was … when …', 'While I was …, …'], ex: 'I was cooking when the lights went out. While I was looking for a candle, my phone rang.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

@@ -16,7 +16,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Pitches', t: 'Three inventors. One investment.', p: 'Ask each inventor five questions. Your teacher is the inventor. Then announce your decision.' },
   { k: 'cartao', est: 'w', min: 7, img: 'conversa', rot: 'III · Your Pitch', t: 'Now you pitch your own idea.', p: 'Four lines: what it is (which…), who it’s for (people …ing), why (which is why…), and what people do instead.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Pitch Night Pairs', t: 'Four pairs from the inventors.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -68,3 +69,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me what I do instead of watching TV.', dica: 'What do you do instead of watching TV?', resp: 'Instead of watching TV, I listen to podcasts.' },
   { alvo: 'Invite me to something. I’ll answer short.', dica: 'Would you like to come to dinner on Friday?', resp: 'I’d love to!' },
   { alvo: 'Ask me about the hardest decision I’ve made.', dica: 'What’s the hardest decision you’ve ever made?', resp: 'I made the decision to change careers at forty.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'It’s a lamp which changes color.', x: 'It’s a lamp what changes color.', d: 'A thing: <b>which</b> or that. Never what.' }, { c: 'Instead of changing their routine, they bought a robot.', x: 'Instead of change their routine, they bought a robot.', d: 'After a preposition: <b>-ing</b>.' }, { c: 'I made a big decision.', x: 'I did a big decision.', d: 'We <b>make</b> a decision.' }, { c: 'My aunt, who is a nurse, invented it.', x: 'My aunt, that is a nurse, invented it.', d: 'Extra information between commas: <b>who</b>, never that.' }], nota: 'A thing: <b>which</b>. A person with extra information: <b>who</b> between commas. After a preposition: <b>-ing</b>. A decision or a mistake: <b>make</b>.', uso: { p: 'Your turn. Pitch an invention to the investors. Say what it is with which or who, and what it does instead of the old way.', molde: ['It’s a … which …', 'Instead of …ing, you …'], ex: 'It’s a bottle which tells you when to drink. Instead of forgetting, you get a message.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

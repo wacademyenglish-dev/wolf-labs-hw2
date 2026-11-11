@@ -34,10 +34,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Avengers: Doomsday. The official trailer.', p: 'Guess first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'ceu', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 7, img: 'trono', rot: 'V · May Not Be Able To', t: 'A note was left on the war table. Find the key phrases.', p: 'Read the note out loud. Tap the key phrases. Then finish the rule.' },
-  { k: 'mesa', est: 'o', min: 7, img: 'capa', rot: 'VI · The War Table', t: 'Six regions on the map. Every right match lights one.', p: 'Match the halves. Then say the whole sentence out loud.' },
-  { k: 'pesos', est: 'o', min: 7, extra: 1, img: 'ceu', rot: 'VII · Weigh It', t: 'How ready is your team? Then tell your plan.', p: 'Tap the ruler. Then tell your plan and tap each phrase when you use it.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'f', min: 5, img: 'mapa', rot: 'V · Three Kinds of Hard News', t: 'One war table, three tools.', p: 'Look at the three kinds. Tap the kind of each sentence. Then say three of your own.' },
+  { k: 'regra', est: 'f', min: 7, img: 'trono', rot: 'VI · May Not Be Able To', t: 'A note was left on the war table. Find the key phrases.', p: 'Read the note out loud. Tap the key phrases. Then finish the rule.' },
+  { k: 'mesa', est: 'o', min: 7, img: 'capa', rot: 'VII · The War Table', t: 'Six regions on the map. Every right match lights one.', p: 'Match the halves. Then say the whole sentence out loud.' },
+  { k: 'pesos', est: 'o', min: 7, extra: 1, img: 'ceu', rot: 'VIII · Weigh It', t: 'How ready is your team? Then tell your plan.', p: 'Tap the ruler. Then tell your plan and tap each phrase when you use it.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var FILME = 'Avengers: Doomsday', ANO = '2026';
@@ -242,3 +243,25 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: the 
     { q: 'Is there another way?', ex: 'There may be, but it will be far more dangerous.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Hard news at the war table. Three kinds.',
+  usos: [
+    { t: 'THE RISK', f: 'We may not be able to stop him.', d: 'Maybe it is not possible: may not be able to + verb.', img: 'oficina' },
+    { t: 'THE GAP', f: 'He is far stronger than any of us.', d: 'far + comparative: a much bigger difference.', img: 'multiverso' },
+    { t: 'THE PRICE', f: 'Unless we act now, it will be for nothing.', d: 'unless or otherwise: what happens if we don’t.', img: 'trono' }
+  ],
+  pergunta: 'Which kind is it?',
+  itens: [
+    { f: 'Doom’s army is far bigger than ours.', c: 1 },
+    { f: 'The team may not be able to reach the portal in time.', c: 0 },
+    { f: 'We close the gate now. Otherwise, the whole map falls.', c: 2 },
+    { f: 'We have far less time than we thought.', c: 1 },
+    { f: 'Unless the heroes agree, Doom wins.', c: 2 },
+    { f: 'I may not be able to hold the line alone.', c: 0 }
+  ],
+  nota: 'Three tools for a hard moment. <b>may not be able to</b> + verb: maybe it is not possible. <b>far</b> + comparative: a much bigger gap (far stronger, far less). <b>unless</b> or <b>otherwise</b>: what happens if we don’t act. Never “may not can”, never “very stronger”.',
+  uso: { p: 'Your turn. A hard goal at work or in your life. Say the risk, the gap and the price.', molde: ['I may not be able to …', '… is far more … than …', 'Unless I …, …'], ex: 'I may not be able to finish the report today. The deadline is far closer than I expected. Unless I get help, the client will be upset.' },
+  prof: 'Read the three kinds out loud with the student. Then the student taps a kind for each sentence. No rule to read: the kinds are the rule.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

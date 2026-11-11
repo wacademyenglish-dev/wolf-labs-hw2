@@ -11,14 +11,15 @@ var REV = { tipo: 'aula', aula: 4, nivel: 'A1', unidade: 1, kick: 'GLOBAL PAYMEN
   nota: 'The screen gives orders: Select. Confirm. Settle. The verb comes first.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'morning', est: 'o', min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
+  { k: 'morning', est: 'o', extra: 1, min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
   { k: 'conversa', est: 'o', min: 4, img: 'conversa', rot: 'II · Can You?', t: 'A short chat before work.', p: 'Choose an answer. Say it. Then ask: “And you?”' },
   { k: 'termos', est: 'l', min: 8, img: 'capa', rot: 'III · Button Words', t: 'Eight words from the Unit screen.', p: 'Listen. Look. Say each word three times.', sig: ['settle', 'imperativo'] },
-  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'IV · Buttons, Can, Can’t', t: 'What the screen says. What you can do.', p: 'Read the card with your teacher. Then build the sentence.', sig: ['imperativo', 'settle', 'cutoff'] },
-  { k: 'simulador', est: 'f', min: 14, img: 'capa', rot: 'V · The Simulator', t: 'Settle the payments in Unit.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['settle', 'bic', 'cutoff', 'imperativo'] },
-  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VI · Can You Settle It?', t: 'Your manager asks about two payments.', p: 'One question before. Listen. Then the questions.', sig: ['cutoff', 'bic'] },
-  { k: 'cartao', est: 'w', min: 6, img: 'mesa', rot: 'VII · A Note to Your Manager', t: 'Write a short note about two payments.', p: 'I can … · I can’t … The … is …' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'IV · Mistake Hunter', t: 'Six lines on the Unit screen. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'V · Buttons, Can, Can’t', t: 'What the screen says. What you can do.', p: 'Read the card with your teacher. Then build the sentence.', sig: ['imperativo', 'settle', 'cutoff'] },
+  { k: 'simulador', est: 'f', min: 14, img: 'capa', rot: 'VI · The Simulator', t: 'Settle the payments in Unit.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['settle', 'bic', 'cutoff', 'imperativo'] },
+  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VII · Can You Settle It?', t: 'Your manager asks about two payments.', p: 'One question before. Listen. Then the questions.', sig: ['cutoff', 'bic'] },
+  { k: 'cartao', est: 'w', min: 6, img: 'mesa', rot: 'VIII · A Note to Your Manager', t: 'Write a short note about two payments.', p: 'I can … · I can’t … The … is …' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
 ];
 
 var MORNING = { rot: 'OPERATIONS QUEUE · 08:03', ref: 'FX-20483',
@@ -117,3 +118,20 @@ var PT = {
   dialogo: 'O gerente pergunta se a Ana consegue liquidar dois pagamentos.',
   cartao: 'Escreva um recado para o gerente: o que você consegue e não consegue fazer, e por quê.',
   pode: 'Leia cada frase em voz alta e toque nas que você já consegue fazer.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de explica.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines in Unit.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'You [[are can]] settle it today.', r: 'You <b>can</b> settle it today.', d: 'Can is the helper already. No are.' },
+    { f: 'I can [[to]] settle the payment.', r: 'I can <b>settle</b> the payment.', d: 'After can, the verb comes straight: no to.' },
+    { f: '[[Selects]] the payment.', r: '<b>Select</b> the payment.', d: 'A button is an order: the clean verb, no -s.' },
+    { f: 'I [[no can]] settle it.', r: 'I <b>can’t</b> settle it.', d: 'For no with can: can’t.' },
+    { f: 'She [[cans]] settle it.', r: 'She <b>can</b> settle it.', d: 'Can never takes an -s.' },
+    { f: 'The BIC [[invalid]].', r: 'The BIC <b>is invalid</b>.', d: 'Invalid describes the BIC, so the sentence needs is.' }
+  ],
+  nota: 'The screen gives orders with a clean verb: <b>Select</b>, <b>Confirm</b>, <b>Settle</b>. After <b>can</b> or <b>can’t</b>, the verb stays clean too: I can settle it.',
+  uso: { p: 'Your turn. In Unit: one payment you can settle, and one you can’t. Say why.', molde: ['I can …', 'I can’t … The … is …'], ex: 'I can settle FX-20483. I can’t settle FX-20484. The BIC is invalid.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

@@ -30,10 +30,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Clip', t: 'Friends. The best food moments.', p: 'Answer first. Watch the clip. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'cozinha', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'V · Should', t: 'A note on the fridge. Find the pattern.', p: 'Read the note out loud. Tap the words after should, shouldn’t and Should. Then finish the rule.' },
-  { k: 'sofa', est: 'o', min: 7, img: 'capa', rot: 'VI · The Laugh Meter', t: 'Every friend on the couch needs advice. Make the audience laugh.', p: 'Read the problem. Say the advice out loud. Then tap Check.' },
-  { k: 'conselho', est: 'o', min: 7, img: 'mesa', rot: 'VII · Ask the Couch', t: 'Three friends with a problem. How do you answer?', p: 'Read what your friend says. Pick how you answer. Then read the talk out loud.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · One Minute', t: 'One minute.', p: 'Minute.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'V · Mistake Hunter', t: 'Six pieces of advice on the orange couch. Each one has a wrong word.', p: 'Tap the wrong word. Say the advice right. Then check.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'VI · Should', t: 'A note on the fridge. Find the pattern.', p: 'Read the note out loud. Tap the words after should, shouldn’t and Should. Then finish the rule.' },
+  { k: 'sofa', est: 'o', min: 7, img: 'capa', rot: 'VII · The Laugh Meter', t: 'Every friend on the couch needs advice. Make the audience laugh.', p: 'Read the problem. Say the advice out loud. Then tap Check.' },
+  { k: 'conselho', est: 'o', min: 7, img: 'mesa', rot: 'VIII · Ask the Couch', t: 'Three friends with a problem. How do you answer?', p: 'Read what your friend says. Pick how you answer. Then read the talk out loud.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · One Minute', t: 'One minute.', p: 'Minute.' }
 ];
 
 var SERIE = 'Friends', ANO = '1994';
@@ -256,3 +257,19 @@ var FIM = { tipo: 'minuto', rot: 'VIII · One Minute', t: 'One minute of advice.
   ],
   palavras: ['should', 'shouldn’t', 'Should I…?', 'I think', 'maybe', 'never'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six pieces of advice for Joey.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'Joey should [[to]] share his fries.', r: 'Joey should <b>share</b> his fries.', d: 'should + the clean verb. No to.' },
+    { f: 'Monica [[shoulds]] call him.', r: 'Monica <b>should</b> call him.', d: 'should never takes an -s.' },
+    { f: 'Ross [[don’t should]] eat that.', r: 'Ross <b>shouldn’t</b> eat that.', d: 'For no: shouldn’t. Not don’t should.' },
+    { f: '[[Do]] I should ask Joey first?', r: '<b>Should</b> I ask Joey first?', d: 'The question starts with should. No do.' },
+    { f: 'Rachel should [[sharing]] the pizza.', r: 'Rachel should <b>share</b> the pizza.', d: 'No -ing after should.' },
+    { f: 'He should [[took]] a break.', r: 'He should <b>take</b> a break.', d: 'No past after should. The clean verb.' }
+  ],
+  nota: 'After <b>should</b> or <b>shouldn’t</b>, the verb is clean: no to, no -s, no -ing, no past. For a question, should goes first: <b>Should</b> I share?',
+  uso: { p: 'Your turn. A friend has a problem. Give your friend advice with should and shouldn’t.', molde: ['You should …', 'You shouldn’t …', 'Should I …?'], ex: 'You should talk to your boss. You shouldn’t wait. Should I go with you?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

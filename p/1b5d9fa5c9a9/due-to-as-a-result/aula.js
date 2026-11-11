@@ -27,12 +27,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'navio', rot: 'III · The Explainer', t: 'How do ocean currents work?', p: 'The video is locked. Answer first, then it plays in four short chapters. Then True or Lie.' },
   { k: 'falas', est: 'l', extra: 1, img: 'navio', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'deriva', est: 'o', min: 7, img: 'mapa', rot: 'V · The Drift Map', t: 'The Drift Lab, night shift. Six stations on the map, six links in the chain.', p: 'Tap a station. Read the log out loud. Answer, then join the cause and the effect in one sentence.' },
-  { k: 'regra', est: 'f', min: 6, img: 'laboratorio', rot: 'VI · The Rule', t: 'What comes after the linker? A noun, or a whole sentence?', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
-  { k: 'esteira', est: 'o', min: 7, img: 'abismo', rot: 'VII · The Deep Conveyor', t: 'Eight links, one loop. Build each link fast, with the linker on the card.', p: 'Your teacher reads the fact and the linker. Build the sentence at once.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'farol', rot: 'VIII · Your Chain Reactions', t: 'Your life is a chain of causes and effects too.', p: 'Tap any four. Answer in two links: the cause, then the effect.' },
-  { k: 'june', est: 'o', min: 7, extra: 1, img: 'praia', rot: 'IX · The Beachcomber Calls', t: '2 AM at the Drift Lab. June found an old duck on the beach.', p: 'Your teacher is June. Explain the duck’s journey, with a linker in every answer.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mapa', rot: 'X · Quick Check', t: 'Five quick lines from the lab log.', p: 'Say the whole sentence. Then tap the words.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · End of the Shift', t: 'What small thing in your life led to something big?', p: 'Write your own chain reaction, four links long. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mapa', rot: 'VI · The Ladder', t: 'One cause, five ways to say it.', p: 'Read each step out loud, then go one step up. Notice what comes after the linker. Then climb with your own chain.' },
+  { k: 'regra', est: 'f', min: 6, img: 'laboratorio', rot: 'VII · The Rule', t: 'What comes after the linker? A noun, or a whole sentence?', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
+  { k: 'esteira', est: 'o', min: 7, img: 'abismo', rot: 'VIII · The Deep Conveyor', t: 'Eight links, one loop. Build each link fast, with the linker on the card.', p: 'Your teacher reads the fact and the linker. Build the sentence at once.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'farol', rot: 'IX · Your Chain Reactions', t: 'Your life is a chain of causes and effects too.', p: 'Tap any four. Answer in two links: the cause, then the effect.' },
+  { k: 'june', est: 'o', min: 7, extra: 1, img: 'praia', rot: 'X · The Beachcomber Calls', t: '2 AM at the Drift Lab. June found an old duck on the beach.', p: 'Your teacher is June. Explain the duck’s journey, with a linker in every answer.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mapa', rot: 'XI · Quick Check', t: 'Five quick lines from the lab log.', p: 'Say the whole sentence. Then tap the words.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · End of the Shift', t: 'What small thing in your life led to something big?', p: 'Write your own chain reaction, four links long. It goes to your My notes.' }
 ];
 
 var YT = 'p4pWafuvdrY';
@@ -292,3 +293,17 @@ TOQUES['ju-r'] = function () { S.ju.resp = 1; };
 TOQUES['ju-prox'] = function () { S.ju = { n: S.ju.n + 1, resp: 0 }; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One storm. Climb it one step at a time.',
+  degraus: [
+    { r: 'two lines', f: 'A storm hit the Pacific. The ship lost its containers.', d: 'Two short sentences. The link is only in your head.' },
+    { r: 'because', f: 'The ship lost its containers <b>because</b> a storm hit the Pacific.', d: 'because + a whole sentence.' },
+    { r: 'due to', f: 'The ship lost its containers <b>due to</b> a storm in the Pacific.', d: 'due to + a noun. No verb after it.' },
+    { r: 'result', f: 'A storm hit the Pacific. <b>As a result,</b> the ship lost its containers.', d: 'As a result starts a new sentence, with a comma. It is the effect.' },
+    { r: 'led to', f: 'The ship lost its containers, <b>which led to</b> thousands of rubber ducks floating across the ocean.', d: 'which led to + a noun or -ing: the next link.' }
+  ],
+  nota: 'The cause is a noun after <b>due to</b>, <b>owing to</b>, <b>because of</b>: due to <b>the storm</b>. The cause is a sentence after <b>because</b>. <b>As a result</b> starts the effect: a new sentence.',
+  uso: { p: 'Your turn. One thing that happened to you, and what it led to. Climb the ladder: because, due to, as a result.', molde: ['I … because …', 'Due to …, …', 'As a result, …'], ex: 'I missed my flight because the traffic was terrible. Due to the traffic, I arrived late. As a result, I lost the first meeting.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

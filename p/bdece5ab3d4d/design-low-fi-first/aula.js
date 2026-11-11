@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 6, kick: 'ENGLISH FOR DESIGNERS
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 6, img: 'conversa', rot: 'I · Is It Too Early?', t: 'Should you show sketches to your boss?', p: 'One question before, then the video, then the questions.' },
-  { k: 'transforma', est: 'f', min: 12, img: 'capa', rot: 'II · Final or Not Yet?', t: 'Make it clear what is finished and what may change.', p: 'Read the line and the clue. Say it the work-in-progress way.' },
-  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'III · Present the Sketch', t: 'Two early designs. You present them.', p: 'Read the card, prepare, start the clock, present.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · The Sketch Line', t: 'Final, rough or next?', p: 'Tap a sentence, then its place on the line. Notice the little words. Then present a sketch of your own.' },
+  { k: 'transforma', est: 'f', min: 12, img: 'capa', rot: 'III · Final or Not Yet?', t: 'Make it clear what is finished and what may change.', p: 'Read the line and the clue. Say it the work-in-progress way.' },
+  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'IV · Present the Sketch', t: 'Two early designs. You present them.', p: 'Read the card, prepare, start the clock, present.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'k63MiRRszLk', titulo: 'Presenting Low-Fidelity Prototypes to Stakeholders', fonte: 'NIELSEN NORMAN GROUP · 0:00–1:22', inicio: 0, fim: 82,
@@ -57,3 +58,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 06: video · transforma · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'A sketch on the wall. Where does each sentence go?',
+  marcos: [{ t: 'FINAL', s: 'done' }, { t: 'STILL ROUGH', s: 'for now' }, { t: 'NEXT STEP', s: 'a plan' }],
+  frases: [
+    { f: 'The order of the steps is final.', c: 0, d: 'is final · done' },
+    { f: 'The layout is approved.', c: 0, d: 'is approved · done' },
+    { f: 'This is still a rough version.', c: 1, d: 'still · not finished' },
+    { f: 'The colors might change.', c: 1, d: 'might · not sure' },
+    { f: 'We’ll add the photos next week.', c: 2, d: 'we’ll · next step' },
+    { f: 'We’re going to test it with five users.', c: 2, d: 'going to · a plan' }
+  ],
+  nota: 'Three kinds of sentence: what is <b>final</b> (is final), what is <b>still rough</b> (still, for now, might), and the <b>next step</b> (we’ll, we’re going to). Say which one it is first, and you get the right feedback.',
+  uso: { p: 'Your turn. Show an unfinished work from your job: one thing that is final, one that might change, one next step.', molde: ['… is final.', '… might change.', 'Next, we’re going to …'], ex: 'The order is final. The colors might change. Next, we’re going to test it with five users.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

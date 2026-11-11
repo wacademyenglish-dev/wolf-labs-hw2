@@ -25,13 +25,14 @@ var L = [
   { k: 'palavras', est: 'l', img: 'muralha', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'muralha', rot: 'III · The Future of Cities', t: 'Ten thousand years of cities in four minutes.', p: 'The video is sealed. Answer first, then it plays in five chapters. Then True or Lie.' },
   { k: 'falas', est: 'l', extra: 1, img: 'muralha', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'trem', rot: 'V · The Rule', t: 'Stand in 2040. Look back, and look around.', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
-  { k: 'planta', est: 'o', min: 7, img: 'capa', rot: 'VI · The 2040 Blueprint', t: 'Eight empty plots on the 2040 blueprint. Predict each one, fast.', p: 'Your teacher reads the plot. Predict with BY 2040 … WILL HAVE or IN 2040 … WILL BE. The right form raises the building.' },
-  { k: 'capsula', est: 'o', min: 7, img: 'capsula', rot: 'VII · The Capsule', t: 'Six slips for the capsule. A message to the person who opens it, maybe you.', p: 'Two sentences per slip: what you will have done, and what you will be doing. Your teacher taps each form they heard.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'fazenda', rot: 'VIII · The 2040 Wheel', t: 'Will the future be better, or just different?', p: 'Tap any five. Predict, and defend it. Your teacher takes the other side.' },
-  { k: 'noa', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'IX · A Call from 2040', t: 'Noa is a radio reporter in 2040. She found your message in the capsule.', p: 'Your teacher is Noa. Answer about your real plans, then ask back.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'telhado', rot: 'X · Quick Check', t: 'Six quick sentences about 2040.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · Open in 2040', t: 'Will the future be better, or just different?', p: 'Write your own letter to 2040. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capsula', rot: 'V · Two Futures on a Line', t: 'Where does each sentence live around 2040?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say two lines about you.' },
+  { k: 'regra', est: 'f', min: 6, img: 'trem', rot: 'VI · The Rule', t: 'Stand in 2040. Look back, and look around.', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
+  { k: 'planta', est: 'o', min: 7, img: 'capa', rot: 'VII · The 2040 Blueprint', t: 'Eight empty plots on the 2040 blueprint. Predict each one, fast.', p: 'Your teacher reads the plot. Predict with BY 2040 … WILL HAVE or IN 2040 … WILL BE. The right form raises the building.' },
+  { k: 'capsula', est: 'o', min: 7, img: 'capsula', rot: 'VIII · The Capsule', t: 'Six slips for the capsule. A message to the person who opens it, maybe you.', p: 'Two sentences per slip: what you will have done, and what you will be doing. Your teacher taps each form they heard.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'fazenda', rot: 'IX · The 2040 Wheel', t: 'Will the future be better, or just different?', p: 'Tap any five. Predict, and defend it. Your teacher takes the other side.' },
+  { k: 'noa', est: 'o', min: 7, extra: 1, img: 'estudio', rot: 'X · A Call from 2040', t: 'Noa is a radio reporter in 2040. She found your message in the capsule.', p: 'Your teacher is Noa. Answer about your real plans, then ask back.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'telhado', rot: 'XI · Quick Check', t: 'Six quick sentences about 2040.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · Open in 2040', t: 'Will the future be better, or just different?', p: 'Write your own letter to 2040. It goes to your My notes.' }
 ];
 
 var YT = 'fKnAJCSGSdk';
@@ -297,3 +298,20 @@ TOQUES['noa-r'] = function () { S.noa.resp = 1; };
 TOQUES['noa-prox'] = function () { S.noa = { n: S.noa.n + 1, resp: 0 }; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'The time capsule on one line. Where does each sentence go?',
+  marcos: [{ t: 'TODAY', s: 'the capsule goes under the park' }, { t: 'BY 2040', s: 'finished before then' }, { t: 'IN 2040', s: 'in progress at that moment' }],
+  frases: [
+    { f: 'The capsule is under the park today.', c: 0, d: 'is · true today' },
+    { f: 'By 2040 the city will have built two bridges.', c: 1, d: 'will have + built · finished before' },
+    { f: 'In 2040 people will be riding quiet trains.', c: 2, d: 'will be + riding · in progress' },
+    { f: 'By the time you open it, we will have forgotten this day.', c: 1, d: 'will have + forgotten · finished before' },
+    { f: 'In 2040 the farm will be growing food on the roofs.', c: 2, d: 'will be + growing · in progress' },
+    { f: 'We bury the capsule at noon.', c: 0, d: 'bury · today' }
+  ],
+  nota: 'Standing in 2040: <b>will have + -ed</b> looks back (it is finished before then). <b>will be + -ing</b> looks around (it is in progress at that moment).',
+  uso: { p: 'Your turn. One thing you will have done by 2040, and one thing you will be doing in 2040.', molde: ['By 2040 I will have …', 'In 2040 I will be …-ing'], ex: 'By 2040 I will have finished my master’s degree. In 2040 I will be living by the sea.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

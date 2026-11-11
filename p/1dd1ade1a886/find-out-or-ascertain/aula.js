@@ -15,10 +15,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 9, titulo: ['Find Out', 'or Asce
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Meeting and the Report', t: 'Same problem, two texts.', p: 'Read both texts out loud. Answer the questions. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Spoken or Written?', t: 'Same meaning, different world.', p: 'Compare A and B. Where would you say A? Where would you write B?' },
-  { k: 'bingo', est: 'f', min: 8, img: 'conversa', rot: 'III · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a row, across, down or diagonally, is a BINGO.' },
-  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'IV · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
-  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'V · The Hot Seat', t: 'Now YOU ask me about my work.', p: 'Ask with phrasal verbs, like in a real conversation. React naturally.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Meeting or Report?', t: 'Two moments in the hotel. Same problem, two voices.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Spoken or Written?', t: 'Same meaning, different world.', p: 'Compare A and B. Where would you say A? Where would you write B?' },
+  { k: 'bingo', est: 'f', min: 8, img: 'conversa', rot: 'IV · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a row, across, down or diagonally, is a BINGO.' },
+  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'V · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
+  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'VI · The Hot Seat', t: 'Now YOU ask me about my work.', p: 'Ask with phrasal verbs, like in a real conversation. React naturally.' }
 ];
 var PORTAS = [];
 
@@ -57,3 +58,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me how I came up with an idea.', dica: 'How did you come up with that idea?', resp: 'I came up with it in the shower, like all my ideas.' },
   { alvo: 'Ask me what I found out recently.', dica: 'What have you found out recently?', resp: 'I found out my neighbor is a famous chef!' },
   { alvo: 'Ask me if I ever turned down a job.', dica: 'Have you ever turned down a job offer?', resp: 'Once. I turned it down because it was too far.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Meeting or report? One problem at the hotel.', a: { t: 'Said to the team', falas: [['Manager', 'The guests keep complaining about the noise.'], ['You', 'Let’s <mark>look into</mark> it. I’ll <mark>find out</mark> who is <mark>putting up</mark> the speakers.']], d: 'Said out loud, to people you know. Phrasal verbs sound natural.' }, b: { t: 'Written in the report', falas: [['Report', 'Guests reported excessive noise on the third floor.'], ['You', 'The management will <mark>investigate</mark> the matter and <mark>ascertain</mark> the cause.']], d: 'Written, formal, for the file. One-word verbs sound right.' }, pergunta: 'Same problem, two worlds. What is different?', pergunta2: 'Now you. Which one fits?', itens: [{ p: 'A quick chat with a colleague in the corridor.', o: ['Can you carry on with the check-in?', 'Can you continue with the check-in?'], c: 0, d: 'Spoken, friendly: carry on.' }, { p: 'A line in the annual report.', o: ['The hotel turned down the offer.', 'The hotel rejected the offer.'], c: 1, d: 'Written, formal: rejected.' }, { p: 'You explain a problem to a new waiter.', o: ['We have to deal with late arrivals.', 'We must address late arrivals.'], c: 0, d: 'Spoken: deal with.' }, { p: 'A formal letter to a guest.', o: ['We have set up a new procedure.', 'We have established a new procedure.'], c: 1, d: 'Written: established.' }], nota: 'Phrasal verbs are for <b>talking</b>: find out, look into, carry on, put up with. One-word verbs are for <b>writing</b>: ascertain, investigate, continue, tolerate. Use the one that fits the situation, not the one that looks easy.', uso: { p: 'Your turn. A problem at your work. Say it to a colleague with a phrasal verb, and then write the same idea for a report.', molde: ['Let’s look into …', 'We will investigate …'], ex: 'Let’s look into why the printer keeps jamming. The department will investigate the cause of the printer faults.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

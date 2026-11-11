@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 3, titulo: ['Never Before', 'Had
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · The Opening', t: 'One hundred words of light.', p: 'Read the opening out loud with your teacher, slowly. Then look closer.' },
-  { k: 'transforma', est: 'f', min: 9, img: 'capa', rot: 'II · Make It Land', t: 'Plain sentence → dramatic sentence.', p: 'Read the plain sentence. Use the clue. Say it with inversion or fronting.' },
-  { k: 'erros', est: 'f', min: 8, img: 'conversa', rot: 'III · The Editor’s Pen', t: 'The intern’s draft has five problems.', p: 'Find a problem, say the right form, then tap.' },
-  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'IV · Your Opening', t: 'The first lines of your best trip.', p: 'Write four or five lines. Use one inversion and one fronting. Make the reader feel it.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Mistake Hunter', t: 'Six lines about the northern lights. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'transforma', est: 'f', min: 9, img: 'capa', rot: 'III · Make It Land', t: 'Plain sentence → dramatic sentence.', p: 'Read the plain sentence. Use the clue. Say it with inversion or fronting.' },
+  { k: 'erros', est: 'f', min: 8, img: 'conversa', rot: 'IV · The Editor’s Pen', t: 'The intern’s draft has five problems.', p: 'Find a problem, say the right form, then tap.' },
+  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'V · Your Opening', t: 'The first lines of your best trip.', p: 'Write four or five lines. Use one inversion and one fronting. Make the reader feel it.' }
 ];
 var PORTAS = [];
 
@@ -55,3 +56,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* C1 · Never Before Had I: leitura · transforma · erros · cartao */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines under the lights.', toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'Never before [[I had]] seen such a sky.', r: 'Never before <b>had I</b> seen such a sky.', d: 'After never before: the helper first. Had I seen.' }, { f: 'Rarely [[it snows]] here in October.', r: 'Rarely <b>does it snow</b> here in October.', d: 'Rarely + does + it + clean verb.' }, { f: 'Not once [[we felt]] cold.', r: 'Not once <b>did we feel</b> cold.', d: 'Not once + did + we + feel.' }, { f: 'Hardly had we arrived [[than]] the lights appeared.', r: 'Hardly had we arrived <b>when</b> the lights appeared.', d: 'Hardly … when. (No sooner … than.)' }, { f: 'Above us [[the lights danced]].', r: 'Above us <b>danced the lights</b>.', d: 'A place first, then the verb, then the subject: a poetic order.' }, { f: 'Little [[we knew]] about the storm.', r: 'Little <b>did we know</b> about the storm.', d: 'Little + did + we + clean verb.' }], nota: 'After <b>never, rarely, not once, hardly</b>: the helper comes <b>before the person</b> (never before <b>had I</b> seen). <b>Hardly had …</b> goes with <b>when</b>. For poetry: <b>place + verb + subject</b>: above us danced the lights.', uso: { p: 'Your turn. The opening of your best trip. Say three dramatic sentences: one with never before, one with not once, one with a place first.', molde: ['Never before had I …', 'Not once did I …', 'Above me stood …'], ex: 'Never before had I seen so many stars. Not once did I look at my phone. Above me stood the old mountain.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

@@ -15,9 +15,10 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Next Week', t: 'What’s coming up for you?', p: 'Answer with detail. Then ask the question back.' },
   { k: 'leitura', est: 'l', min: 9, img: 'capa', rot: 'II · The Morning News', t: 'City Radio, 7 AM.', p: 'Read the bulletin out loud, like a news presenter. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · How Sure?', t: 'Same event, different certainty.', p: 'Compare A and B. What exactly is the difference?' },
-  { k: 'rapido', est: 'f', min: 6, img: 'capa', rot: 'IV · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
-  { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'V · The Prediction Board', t: 'Roll, move, predict.', p: 'Your teacher rolls the die. Make a prediction for your square with the right phrase.' }
+  { k: 'gx', est: 'f', min: 5, img: 'capa', rot: 'III · Three Levels of Sure', t: 'One future, three levels.', p: 'Look at the three levels. Tap the level of each sentence. Then say three of your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'IV · How Sure?', t: 'Same event, different certainty.', p: 'Compare A and B. What exactly is the difference?' },
+  { k: 'rapido', est: 'f', min: 6, img: 'capa', rot: 'V · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
+  { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'VI · The Prediction Board', t: 'Roll, move, predict.', p: 'Your teacher rolls the die. Make a prediction for your square with the right phrase.' }
 ];
 var PORTAS = [];
 
@@ -68,3 +69,9 @@ var TABULEIRO = { rot: 'THE PREDICTION BOARD', centro: 'How sure are you? Choose
   { k: 'YOUR JOB', t: 'Your work or studies: something due soon.', ex: 'My report is due to be submitted on Monday.' },
   { k: 'THE TEACHER', t: 'Predict something about your teacher’s weekend.', ex: 'You’re bound to watch a series. You’re unlikely to wake up early!' },
   { k: 'IN 2030', t: 'Three predictions for 2030, from sure to unsure.', ex: 'Cars are bound to be electric, cities are likely to be greener, and we’re unlikely to live on Mars.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'How sure is the future? Three levels on City Radio.', usos: [{ t: 'BOUND TO', f: 'The price is bound to go up.', d: 'You are sure: it will happen, nothing can stop it. Also: be certain to.' }, { t: 'LIKELY / UNLIKELY TO', f: 'The match is likely to start late.', d: 'It is probable. Likely = probably yes, unlikely = probably not.' }, { t: 'ABOUT TO', f: 'The mayor is about to speak.', d: 'It happens in a moment. Also: on the verge of + -ing.' }], pergunta: 'Which level is it?', itens: [{ f: 'Look at the sky. It is bound to rain.', c: 0 }, { f: 'Quiet, please. The film is about to begin.', c: 2 }, { f: 'The bus is unlikely to arrive before nine.', c: 1 }, { f: 'With this traffic, we are bound to be late.', c: 0 }, { f: 'The company is on the verge of closing.', c: 2 }, { f: 'She is likely to say yes.', c: 1 }], nota: 'Not <b>must happen</b>: must is about obligation. Use <b>bound to</b> (sure), <b>likely / unlikely to</b> (probable), <b>about to</b> (any second). Official times: <b>due to</b> (the train is due at six). Planned news: <b>set to</b> (the mayor is set to resign).', uso: { p: 'Your turn. Three predictions for your city or your job next week: one you are sure of, one probable, one for right now.', molde: ['… is bound to …', '… is likely to …', '… is about to …'], ex: 'The shops are bound to be full on Saturday. My boss is likely to change the plan. The meeting is about to start.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

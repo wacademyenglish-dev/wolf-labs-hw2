@@ -14,7 +14,8 @@ var L = [
   { k: 'leitura', est: 'l', min: 9, img: 'capa', rot: 'II · The Speech', t: 'Thirty seconds on stage.', p: 'Read the speech out loud, with feeling. Answer the questions. Then find the emphasis.' },
   { k: 'transforma', est: 'f', min: 8, img: 'conversa', rot: 'III · Turn On the Spotlight', t: 'Neutral → emphatic.', p: 'Read the neutral sentence. Use the clue. Say it with emphasis.' },
   { k: 'conversa', est: 'o', min: 8, img: 'conversa', rot: 'IV · After the Gala', t: 'Your life, with emphasis.', p: 'Answer with a cleft or fronting. Then ask the question back.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'V · The Spotlight Card', t: 'Four lines from Unit 3.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -55,3 +56,9 @@ var PODE = [
 /* MECÂNICAS VARIADAS */
 /* C1 R3: rapido · leitura · transforma · conversa */
 var RAPIDO = { seg: 60, itens: [['It was my mother ___ taught me.', 'who'], ['___ matters is who you cook for.', 'What'], ['It wasn’t until 2019 ___ I opened it.', 'that'], ['All we had ___ twelve chairs. (be)', 'was'], ['The reason why we survived ___ our customers.', 'is / was'], ['I ___ believe it! (emphatic)', 'do'], ['She ___ call me, in the end! (emphatic, past)', 'did'], ['It ___ the music that I loved. (be, past)', 'was'], ['What I need ___ a holiday.', 'is'], ['This night I ___ never forget.', 'will']] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 3.', rotulo: 'Emphasis', linhas: ['<b>It was</b> my mother <b>who</b> taught me to cook. · <b>It is</b> patience <b>that</b> matters.', '<b>What</b> matters <b>is</b> the people. · <b>What</b> I love <b>is</b> the smell.', '<b>This</b> I will never forget. · <b>I do</b> believe it. (do = stronger)', '<b>All I want is</b> time. · <b>The only thing</b> I miss <b>is</b> home. · <b>The reason I</b> left <b>was</b> …'], uso: { p: 'Your turn. You win an award. Thank someone, with emphasis, in two sentences.', molde: ['It was … who …', 'What I will never forget is …'], ex: 'It was my mother who taught me to cook. What I will never forget is the smell of her kitchen.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

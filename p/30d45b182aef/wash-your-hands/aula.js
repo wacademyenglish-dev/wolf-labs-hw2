@@ -31,10 +31,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Clip', t: 'The Office. Where is Dwight’s desk?', p: 'Open the cards first. Watch the clip. Then three short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'impressora', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'impressora', rot: 'V · Do This, Don’t Do That', t: 'Which kind of order is it? Do, don’t, or let’s.', p: 'Tap a card, then a box. Read the order out loud.' },
-  { k: 'parede', est: 'o', min: 7, img: 'escritorio', rot: 'VI · The Memo Wall', t: 'Six memos for the office wall. Say the order, and it prints.', p: 'Read who says it and the idea. Say the order out loud. Then tap Check.' },
-  { k: 'casa', est: 'o', min: 6, img: 'capa', rot: 'VII · The Rules of Your House', t: 'Six places. What are the rules there?', p: 'Tap a rule. Then say two more: do, don’t, please.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · One Minute', t: 'One minute.', p: 'Talk.' }
+  { k: 'gx', est: 'f', min: 4, img: 'escritorio', rot: 'V · Dwight on the Phone', t: 'Dwight and you, at the office. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then give your own orders.' },
+  { k: 'regra', est: 'f', min: 6, img: 'impressora', rot: 'VI · Do This, Don’t Do That', t: 'Which kind of order is it? Do, don’t, or let’s.', p: 'Tap a card, then a box. Read the order out loud.' },
+  { k: 'parede', est: 'o', min: 7, img: 'escritorio', rot: 'VII · The Memo Wall', t: 'Six memos for the office wall. Say the order, and it prints.', p: 'Read who says it and the idea. Say the order out loud. Then tap Check.' },
+  { k: 'casa', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Rules of Your House', t: 'Six places. What are the rules there?', p: 'Tap a rule. Then say two more: do, don’t, please.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · One Minute', t: 'One minute.', p: 'Talk.' }
 ];
 
 var SERIE = 'The Office', ANO = '2005';
@@ -234,3 +235,27 @@ var FIM = { tipo: 'minuto', rot: 'VIII · One Minute', t: 'One minute of orders.
   ],
   palavras: ['do', 'don’t', 'let’s', 'please', 'be', 'never'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The office, at nine. Tap the lit words.',
+  falas: [
+    { q: 'Dwight', f: '[[Give]] me the keys, now. [[Don’t touch]] my desk!' },
+    { q: 'You', f: '[[Let’s]] calm down, Dwight. [[Be]] quiet, please.' },
+    { q: 'Dwight', f: '[[Don’t be]] late for the meeting. [[Open]] the door!' },
+    { q: 'You', f: '[[Please]] wash your hands first.' },
+    { q: 'Dwight', f: 'Fine. [[Let’s go]] to the kitchen.' }
+  ],
+  porques: [
+    'An order: the verb first. No you, no to: Give me.',
+    'The no order: Don’t + verb. Don’t touch.',
+    'Let’s + verb: you and me, together.',
+    'With an adjective, the order starts with Be: Be quiet.',
+    'Don’t be + adjective: Don’t be late.',
+    'Another order: the verb alone, first. Open.',
+    'Please makes an order polite. It can go first or last.',
+    'Let’s go: Let’s + the clean verb. No to, no -ing.'
+  ],
+  nota: 'An order starts with the clean verb: <b>Give</b>, <b>Open</b>. For no: <b>Don’t</b> + verb. Together: <b>Let’s</b> + verb. With an adjective: <b>Be quiet</b>, <b>Don’t be late</b>. Add <b>please</b> to be polite.',
+  uso: { p: 'Your turn. You are the boss at the office. Give two orders: one with don’t, one with let’s.', molde: ['Open the …', 'Don’t …', 'Let’s …'], ex: 'Close the window. Don’t be late. Let’s start the meeting.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

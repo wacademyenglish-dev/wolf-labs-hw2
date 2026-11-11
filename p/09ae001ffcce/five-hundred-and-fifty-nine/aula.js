@@ -20,12 +20,13 @@ var L = [
   { k: 'numero', est: 'f', min: 6, img: 'painel', rot: 'II · The Number', t: 'Why a list of phrasal verbs doesn’t work.', p: 'Guess first, out loud. Then tap.' },
   { k: 'take', est: 'o', min: 7, img: 'painel', rot: 'III · One Verb, Four Switches', t: 'Same verb, TAKE. Four small words. Four different verbs.', p: 'Guess the meaning out loud first. Then flip the switch.' },
   { k: 'familias', est: 'f', min: 6, img: 'painel', rot: 'IV · Six Small Words', t: 'Twelve verbs. Six small words. Each small word has an idea.', p: 'Tap a verb, say why, then tap the small word it belongs to.' },
-  { k: 'passos', est: 'f', min: 6, img: 'painel', rot: 'V · Three Steps', t: 'Three questions. The third one is the hour.', p: 'Pick. Then read the right one out loud.' },
-  { k: 'vozes', est: 'l', min: 7, img: 'telefone', rot: 'VI · Four Voices', t: 'Four real sentences. Catch the small word.', p: 'Play it. Pick what you heard. The text opens after.' },
-  { k: 'casa', est: 'f', min: 6, extra: 1, img: 'painel', rot: 'VII · The Dark Apartment', t: 'Six rooms, all dark. Six instructions.', p: 'Say each one again with a pronoun. Put the pronoun in the right place, and the room lights up.' },
-  { k: 'nunca', est: 'f', min: 6, extra: 1, img: 'painel', rot: 'VIII · Five That Never Open', t: 'Some verbs never split. The object waits at the end, even IT.', p: 'Say it with IT out loud. Then pick.' },
-  { k: 'ligacao', est: 'o', min: 7, extra: 1, img: 'telefone', rot: 'IX · The Broken One', t: 'Something arrived broken. You call the store.', p: 'Your teacher is the store. Answer out loud, then open the model.' },
-  { k: 'fim', est: 'w', min: 6, img: 'painel', rot: 'X · Your Six, Again', t: 'Your six from scene I come back.', p: 'Write four instructions for your home, with it or them. It goes to My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sala', rot: 'V · The Small Word Ladder', t: 'One phrasal verb, five steps.', p: 'Read each step out loud, then go one step up. Notice where the small word goes. Then climb with your own verb.' },
+  { k: 'passos', est: 'f', min: 6, img: 'painel', rot: 'VI · Three Steps', t: 'Three questions. The third one is the hour.', p: 'Pick. Then read the right one out loud.' },
+  { k: 'vozes', est: 'l', min: 7, img: 'telefone', rot: 'VII · Four Voices', t: 'Four real sentences. Catch the small word.', p: 'Play it. Pick what you heard. The text opens after.' },
+  { k: 'casa', est: 'f', min: 6, extra: 1, img: 'painel', rot: 'VIII · The Dark Apartment', t: 'Six rooms, all dark. Six instructions.', p: 'Say each one again with a pronoun. Put the pronoun in the right place, and the room lights up.' },
+  { k: 'nunca', est: 'f', min: 6, extra: 1, img: 'painel', rot: 'IX · Five That Never Open', t: 'Some verbs never split. The object waits at the end, even IT.', p: 'Say it with IT out loud. Then pick.' },
+  { k: 'ligacao', est: 'o', min: 7, extra: 1, img: 'telefone', rot: 'X · The Broken One', t: 'Something arrived broken. You call the store.', p: 'Your teacher is the store. Answer out loud, then open the model.' },
+  { k: 'fim', est: 'w', min: 6, img: 'painel', rot: 'XI · Your Six, Again', t: 'Your six from scene I come back.', p: 'Write four instructions for your home, with it or them. It goes to My notes.' }
 ];
 
 var TR = {
@@ -228,3 +229,17 @@ TOQUES['cs-prox'] = function () { S.cs = { n: S.cs.n + 1, esc: '' }; };
 TOQUES.nc = function (b, n, v) { S.nc.esc = v; };
 TOQUES['nc-prox'] = function () { S.nc = { n: S.nc.n + 1, esc: '' }; };
 TOQUES['lg-prox'] = function () { S.lg.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de passos.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One phrasal verb. Climb it one step at a time.',
+  degraus: [
+    { r: 'verb', f: 'Turn <b>on</b> the light.', d: 'The small word is part of the verb. With a noun, it can go before it.' },
+    { r: 'noun', f: 'Turn the light <b>on</b>.', d: 'Or after the noun. Both work.' },
+    { r: 'it', f: 'Turn <b>it</b> on.', d: 'With it, them, him, her, me: only the middle.' },
+    { r: 'them', f: 'Pick <b>them</b> up.', d: 'Same with them. The pronoun goes in the middle.' },
+    { r: 'never opens', f: 'Look <b>for</b> it.', d: 'Some never open: look for it, deal with it.' }
+  ],
+  nota: 'With a noun, two ways: turn <b>on the light</b> or turn <b>the light on</b>. With a pronoun, only the middle: turn <b>it</b> on. Some phrasal verbs never open: look <b>for</b> it, deal <b>with</b> it.',
+  uso: { p: 'Your turn. You enter a dark apartment. Say three sentences with turn on, pick up or look for.', molde: ['Turn on the …', 'Turn the … on.', 'Turn it on.'], ex: 'Turn on the light. Pick the box up. Look for it under the bed.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

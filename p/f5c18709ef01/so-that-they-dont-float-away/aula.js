@@ -24,12 +24,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'modulo', rot: 'III · Life in Space', t: 'How people sleep, eat and stay healthy on the space station.', p: 'The video is sealed. Answer first, then it plays in four short chapters. Then True or Lie.' },
   { k: 'falas', est: 'l', extra: 1, img: 'modulo', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'leitor', est: 'o', min: 7, img: 'cozinha', rot: 'V · A Day on the Station', t: 'An easy reader in six short chapters. From the alarm to the eye mask.', p: 'Read the chapter out loud. Pick the true sentence. Then explain WHY. Your teacher taps what you said, and the tether clips on.' },
-  { k: 'regra', est: 'f', min: 6, img: 'treino', rot: 'VI · Who Does the Second Part?', t: 'Same person: to. Its own subject: so that. What you avoid: so as not to.', p: 'Read the four lines out loud. Then fix the four traps.' },
-  { k: 'doca', est: 'o', min: 7, img: 'doca', rot: 'VII · The Docking Ring', t: 'Five moments on the station. Finish each one fast, and a capsule docks.', p: 'Your teacher reads the moment and the first words. Finish at once. Your teacher taps what you said.' },
-  { k: 'radio', est: 'o', min: 7, extra: 1, img: 'cupula', rot: 'VIII · The School Radio Call', t: 'A school on Earth calls the station by radio. You are Mia.', p: 'Your teacher is Alex, 11. Tell them about your day with to, so that and so as not to.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'modulo', rot: 'IX · Quick Check', t: 'Five quick lines from the station log.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'cupula', rot: 'X · What For?', t: 'Your real day: what you do, and what you do it for.', p: 'Pick a card. Answer with to, in order to, so that or so as not to.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · Good Night, Station', t: 'Would you live on the station for six months?', p: 'Write your own day with a reason for everything. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'doca', rot: 'VI · Find the Rule', t: 'Four sentences from the station. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'treino', rot: 'VII · Who Does the Second Part?', t: 'Same person: to. Its own subject: so that. What you avoid: so as not to.', p: 'Read the four lines out loud. Then fix the four traps.' },
+  { k: 'doca', est: 'o', min: 7, img: 'doca', rot: 'VIII · The Docking Ring', t: 'Five moments on the station. Finish each one fast, and a capsule docks.', p: 'Your teacher reads the moment and the first words. Finish at once. Your teacher taps what you said.' },
+  { k: 'radio', est: 'o', min: 7, extra: 1, img: 'cupula', rot: 'IX · The School Radio Call', t: 'A school on Earth calls the station by radio. You are Mia.', p: 'Your teacher is Alex, 11. Tell them about your day with to, so that and so as not to.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'modulo', rot: 'X · Quick Check', t: 'Five quick lines from the station log.', p: 'Say the whole sentence out loud. Then tap the word.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'cupula', rot: 'XI · What For?', t: 'Your real day: what you do, and what you do it for.', p: 'Pick a card. Answer with to, in order to, so that or so as not to.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XII · Good Night, Station', t: 'Would you live on the station for six months?', p: 'Write your own day with a reason for everything. It goes to your My notes.' }
 ];
 
 var VOCE = [
@@ -291,3 +292,19 @@ TOQUES['dc-prox'] = function () { S.dc = { n: S.dc.n + 1, esc: '' }; };
 TOQUES['ax-prox'] = function () { S.ax.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.',
+  exemplos: [
+    'Mia uses a tether <b>to</b> <u>keep</u> her tools close.',
+    'Ken ties the bag <b>so that</b> <u>it won’t</u> float away.',
+    'Mia checks the straps <b>so that</b> <u>Ken can</u> work safely.',
+    'Ken wears an eye mask <b>to</b> <u>sleep</u> better.'
+  ],
+  pergunta: 'When do we use so that, and not to?',
+  opcoes: ['When the second part has its own subject: so that it won’t float', 'When the same person does both parts: so that I keep', 'Always. It is the same as to, but longer'], c: 0,
+  nao: 'Not that one. Look at the two to sentences: who does the second part? Then look at the so that ones.',
+  regra: '<b>to</b> + verb when the same person does both parts: Mia uses a tether <b>to keep</b> her tools. <b>so that</b> + its own subject + <b>can / will / won’t</b> when someone or something else does the second part: so that <b>it won’t</b> float away. Never <b>for</b> + verb.',
+  uso: { p: 'Your turn. One thing you do for yourself, and one thing you do so that someone else can do something.', molde: ['I … to …', 'I … so that … can …'], ex: 'I set an alarm to wake up early. I clean the table so that my kids can do homework.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

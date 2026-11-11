@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 9, kick: 'ENGLISH FOR DESIGNERS
   nota: '“I’ll have sent it by Friday” is a promise about a finished action before a time. Use it only when you are sure.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · The Email Thread', t: 'A designer and a client agree on the last changes.', p: 'Read the emails out loud. Then answer the questions.' },
-  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'II · By or Until?', t: 'Two small words, two different meanings.', p: 'Read each sentence. Does it need BY or UNTIL?' },
-  { k: 'transforma', est: 'w', min: 14, img: 'conversa', rot: 'III · Your Status Update', t: 'Turn a to-do list into a clear update.', p: 'Read the task and the clue. Say the sentence. Then write the full update.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'I · By or Until?', t: 'Two answers about the same project.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'II · The Email Thread', t: 'A designer and a client agree on the last changes.', p: 'Read the emails out loud. Then answer the questions.' },
+  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'III · By or Until?', t: 'Two small words, two different meanings.', p: 'Read each sentence. Does it need BY or UNTIL?' },
+  { k: 'transforma', est: 'w', min: 14, img: 'conversa', rot: 'IV · Your Status Update', t: 'Turn a to-do list into a clear update.', p: 'Read the task and the clue. Say the sentence. Then write the full update.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'EMAIL THREAD · RIVERSIDE BOOK FESTIVAL POSTERS (FICTIONAL)', tipo: 'nota',
@@ -54,3 +55,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 09: leitura · separa · transforma (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de leitura.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'By or until? Two answers about the same project.',
+  a: { t: 'A deadline', falas: [['Client', 'When do you need the files?'], ['You', 'I’ll send them <mark>by</mark> Friday.']], d: '<b>by</b> + a time: at that time, or before. A deadline.' },
+  b: { t: 'How long', falas: [['Client', 'How long will you work on the mobile version?'], ['You', 'I’ll work on it <mark>until</mark> Wednesday.']], d: '<b>until</b> + a time: it continues up to that time.' },
+  pergunta: 'Two small words. What is different in the situation?',
+  pergunta2: 'Now you. By or until?',
+  itens: [
+    { p: 'The files must be ready on Friday at the latest. You say:', o: ['I’ll send them by Friday.', 'I’ll send them until Friday.'], c: 0, d: 'A deadline: by.' },
+    { p: 'You work on the app every day, Monday to Wednesday. You say:', o: ['I’ll work on it by Wednesday.', 'I’ll work on it until Wednesday.'], c: 1, d: 'It continues up to Wednesday: until.' },
+    { p: 'The client is on holiday up to June 5. You say:', o: ['I’ll wait until June 5.', 'I’ll wait by June 5.'], c: 0, d: 'You wait for a period: until.' },
+    { p: 'You need the photos, Tuesday at the latest. You write:', o: ['Could you send me the photos until Tuesday?', 'Could you send me the photos by Tuesday?'], c: 1, d: 'A deadline: by.' }
+  ],
+  nota: 'One test: a <b>deadline</b> or <b>how long</b>? A deadline, at the latest: <b>by</b> Friday. Something that continues up to a time: <b>until</b> Friday. With a finished action: I’ll have finished <b>by</b> Wednesday.',
+  uso: { p: 'Your turn. A deadline and something that lasts, for a project of yours.', molde: ['I’ll send … by …', 'I’ll work on … until …'], ex: 'I’ll send the first version by Wednesday. I’ll work on the mobile version until Thursday.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

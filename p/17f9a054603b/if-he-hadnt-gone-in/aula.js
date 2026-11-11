@@ -37,10 +37,11 @@ var L = [
   { k: 'mundo', est: 'o', min: 8, img: 'estatua', rot: 'I · Warm-up and The System', t: 'Before the trailer: the doors you opened, then a blue window only he can see.', p: 'Answer three questions about your life. Then read the System’s messages out loud and say what would have happened otherwise.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'II · The Trailer', t: 'Solo Leveling. The official trailer, again.', p: 'Tap an answer first. Watch the trailer. Then short tasks: tap ▶ to see any moment again.' },
   { k: 'letra', est: 'l', min: 7, img: 'estatua', rot: 'III · Scene by Scene', t: 'Five moments of the trailer. Tap one, watch, then answer.', p: 'Each frame is a moment in the video.' },
-  { k: 'regra', est: 'f', min: 6, img: 'corredor', rot: 'IV · If He Hadn’t', t: 'If he hadn’t gone in, none of this would have happened. Sort the pieces.', p: 'Sort the six pieces into three boxes. Then read the rule.' },
-  { k: 'replay', est: 'o', min: 7, img: 'capa', rot: 'V · The Replay', t: 'Six panels of the double dungeon. Every Check rewrites one.', p: 'Read the panel and the clue. Build the other road out loud. Then tap Check.' },
-  { k: 'esses', est: 'o', min: 7, img: 'corredor', rot: 'VI · Your What-Ifs', t: 'Three friends talk about the past. What do you say?', p: 'Read what your friend says. Pick how you answer. Then read the talk out loud.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VII · The Debate', t: 'The debate.', p: 'Debate.' }
+  { k: 'gx', est: 'f', min: 4, img: 'corredor', rot: 'IV · Find the Rule', t: 'Four sentences about the dungeon. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'corredor', rot: 'V · If He Hadn’t', t: 'If he hadn’t gone in, none of this would have happened. Sort the pieces.', p: 'Sort the six pieces into three boxes. Then read the rule.' },
+  { k: 'replay', est: 'o', min: 7, img: 'capa', rot: 'VI · The Replay', t: 'Six panels of the double dungeon. Every Check rewrites one.', p: 'Read the panel and the clue. Build the other road out loud. Then tap Check.' },
+  { k: 'esses', est: 'o', min: 7, img: 'corredor', rot: 'VII · Your What-Ifs', t: 'Three friends talk about the past. What do you say?', p: 'Read what your friend says. Pick how you answer. Then read the talk out loud.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Debate', t: 'The debate.', p: 'Debate.' }
 ];
 
 var FILME = 'Solo Leveling', ANO = '2024';
@@ -365,3 +366,19 @@ var FIM = { tipo: 'debate', rot: 'VIII · The Debate', t: 'Can one choice decide
   b: { rot: 'No, it’s many choices', motivos: ['He would have become strong anyway.', 'Many small choices matter more.', 'If one door had closed, another would have opened.'] },
   frases: ['If I hadn’t…, I wouldn’t have…', 'It would have happened anyway.', 'I see your point, but…'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four what-ifs. Find the rule yourself.',
+  exemplos: [
+    'If he <b>hadn’t gone</b> in, none of this <u>would have happened</u>.',
+    'If she <b>had studied</b>, she <u>would have passed</u>.',
+    'If we <b>hadn’t met</b>, we <u>might have been</u> strangers.',
+    'If you <b>had told</b> me, I <u>could have helped</u>.'
+  ],
+  pergunta: 'For a past that did not happen, the if part and the result are …',
+  opcoes: ['had + participle, and would / might / could have + participle', 'the past simple, and would + verb', 'would have, and would have again'], c: 0,
+  nao: 'Not that one. Read the four sentences again: what comes after if? what comes after the comma?',
+  regra: '<b>if + had + participle</b>, <b>would / might / could have + participle</b>. Not “if he would have gone”: no would in the if part.',
+  uso: { p: 'Your turn. A door you did not open, and what would have happened.', molde: ['If I had …, I would have …', 'If I hadn’t …, I might have …'], ex: 'If I had taken that job, I would have moved to Spain.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

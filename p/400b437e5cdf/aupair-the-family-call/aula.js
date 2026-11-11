@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 9, kick: 'AU PAIR · MODULE 3 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 7, img: 'conversa', rot: 'I · What to Ask', t: 'An au pair’s tips for the interview.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'II · Make a Good Question', t: 'Two questions. Which one is right?', p: 'Compare A and B. Then see the question patterns.' },
-  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'III · The Host Mom Asks', t: 'Listen to Mrs. Parker. Answer.', p: 'Play the question, start the clock, answer in about 45 seconds.' },
-  { k: 'cadeira', est: 'o', min: 9, img: 'capa', rot: 'IV · Now You Ask', t: 'Your teacher is Mrs. Parker. You ask.', p: 'Ask about the kids, a typical day and the family.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · The Flip', t: 'Watch a sentence turn into a question.', p: 'Flip each sentence. Notice where the helper goes. Then flip four on your own.' },
+  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'III · Make a Good Question', t: 'Two questions. Which one is right?', p: 'Compare A and B. Then see the question patterns.' },
+  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'IV · The Host Mom Asks', t: 'Listen to Mrs. Parker. Answer.', p: 'Play the question, start the clock, answer in about 45 seconds.' },
+  { k: 'cadeira', est: 'o', min: 9, img: 'capa', rot: 'V · Now You Ask', t: 'Your teacher is Mrs. Parker. You ask.', p: 'Ask about the kids, a typical day and the family.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'RrHaYBpm3lA', titulo: 'Matching tips 2: What interview questions to ask a host family', fonte: 'CULTURAL CARE AU PAIR · 1 MIN',
@@ -68,3 +69,24 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 09: video · descobre · prova (áudio) · cadeira (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'From a sentence to a question for the host mom. Watch the words move.',
+  frases: [
+    { de: ['The kids', 'like', 'pizza'], para: ['+What', '+do', 'the kids', 'like', '?'], d: 'The helper do comes first. The verb stays clean.' },
+    { de: ['I', '*will', 'work', 'eight hours'], para: ['+How many hours', '*will', 'I', 'work', '?'], d: 'Will jumps in front of I.' },
+    { de: ['A typical day', '*looks', 'like', 'this'], para: ['+What', '+does', 'a typical day', 'look', 'like', '?'], d: 'Does takes the S. The verb look is clean.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'To ask, the helper goes before the subject: <b>do / does</b> (What do the kids like?), <b>are</b> (How old are they?), <b>will</b> (How many hours will I work?). The main verb stays clean.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'The children go to school at eight.', r: 'What time <b>do</b> the children go to school?' },
+    { de: 'The children are eight and ten.', r: 'How old <b>are</b> the children?' },
+    { de: 'I will use the car on weekends.', r: '<b>Will</b> I use the car on weekends?' },
+    { de: 'The boy likes soccer.', r: 'What <b>does</b> the boy like?' }
+  ],
+  uso: { p: 'Your turn. Two questions for the host family about the kids.', molde: ['What do the kids …?', 'How old …?'], ex: 'What do the kids like to eat? How old are your children?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

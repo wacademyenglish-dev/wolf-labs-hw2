@@ -15,16 +15,17 @@
 var L = [
   { k: 'capa', est: null, img: 'mesa' },
   { k: 'abre', est: 'o', min: 7, img: 'frango', rot: 'I · Order It Now', t: 'No warm-up. The first English of the hour is an order.', p: 'Play the waiter. Read the menu. Order out loud. Your teacher writes it down.' },
-  { k: 'pares', est: 'f', min: 6, img: 'mesa', rot: 'II · Both Are Correct', t: 'Two sentences. Both are correct English. One is rude.', p: 'Read both out loud. Tap the one the waiter likes. Watch the thermometer.' },
-  { k: 'pergunta', est: 'f', min: 6, img: 'mesa', rot: 'III · Asking Is Softer', t: 'Turn the order into a request.', p: 'Read the situation. Tap the request. Then say it out loud.' },
-  { k: 'menu', est: 'o', min: 7, img: 'frango', rot: 'IV · The Order Pad', t: 'Order the whole meal. The pad stays empty until you ask properly.', p: 'Pick an opening. Tap a dish. Say it all out loud. Five lines on the pad.' },
-  { k: 'voz', est: 'o', min: 7, img: 'mesa', rot: 'V · Say It Softer', t: 'The voice does half the work.', p: 'Your teacher says it two ways: flat, then warm. You say both.' },
-  { k: 'please', est: 'f', min: 6, img: 'mesa', rot: 'VI · Please Is Not Enough', t: 'Two versions, both with please. Only one is a request.', p: 'Read both. Tap the request. Say it out loud.' },
-  { k: 'mesa', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'VII · The Whole Table', t: 'Order for other people.', p: 'Read who wants what. Order for them out loud. Then check.' },
-  { k: 'problema', est: 'l', min: 7, extra: 1, img: 'conta', rot: 'VIII · When It Goes Wrong', t: 'Dinner goes wrong. The waiter keeps coming back.', p: 'Play the waiter first. Then choose what you say, and say it softly.' },
-  { k: 'fora', est: 'o', min: 7, extra: 1, img: 'conta', rot: 'IX · Not Only Restaurants', t: 'Take it off the table and it still works.', p: 'Read the situation. Ask for it out loud. Then check.' },
-  { k: 'ficha', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'X · Your Own Table', t: 'Real answers now.', p: 'Answer out loud. Then the follow-up comes.' },
-  { k: 'fim', est: 'w', min: 6, img: 'conta', rot: 'XI · One Hour Ago', t: 'Your first order comes back. Now write it your new way.', p: 'Five polite requests: in a restaurant, at work, in a store. The red line watches the commands. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'frango', rot: 'II · The Ladder', t: 'One order, five steps.', p: 'Read each step out loud, then go one step up. Notice how it gets softer. Then climb with your own order.' },
+  { k: 'pares', est: 'f', min: 6, img: 'mesa', rot: 'III · Both Are Correct', t: 'Two sentences. Both are correct English. One is rude.', p: 'Read both out loud. Tap the one the waiter likes. Watch the thermometer.' },
+  { k: 'pergunta', est: 'f', min: 6, img: 'mesa', rot: 'IV · Asking Is Softer', t: 'Turn the order into a request.', p: 'Read the situation. Tap the request. Then say it out loud.' },
+  { k: 'menu', est: 'o', min: 7, img: 'frango', rot: 'V · The Order Pad', t: 'Order the whole meal. The pad stays empty until you ask properly.', p: 'Pick an opening. Tap a dish. Say it all out loud. Five lines on the pad.' },
+  { k: 'voz', est: 'o', min: 7, img: 'mesa', rot: 'VI · Say It Softer', t: 'The voice does half the work.', p: 'Your teacher says it two ways: flat, then warm. You say both.' },
+  { k: 'please', est: 'f', min: 6, img: 'mesa', rot: 'VII · Please Is Not Enough', t: 'Two versions, both with please. Only one is a request.', p: 'Read both. Tap the request. Say it out loud.' },
+  { k: 'mesa', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'VIII · The Whole Table', t: 'Order for other people.', p: 'Read who wants what. Order for them out loud. Then check.' },
+  { k: 'problema', est: 'l', min: 7, extra: 1, img: 'conta', rot: 'IX · When It Goes Wrong', t: 'Dinner goes wrong. The waiter keeps coming back.', p: 'Play the waiter first. Then choose what you say, and say it softly.' },
+  { k: 'fora', est: 'o', min: 7, extra: 1, img: 'conta', rot: 'X · Not Only Restaurants', t: 'Take it off the table and it still works.', p: 'Read the situation. Ask for it out loud. Then check.' },
+  { k: 'ficha', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'XI · Your Own Table', t: 'Real answers now.', p: 'Answer out loud. Then the follow-up comes.' },
+  { k: 'fim', est: 'w', min: 6, img: 'conta', rot: 'XII · One Hour Ago', t: 'Your first order comes back. Now write it your new way.', p: 'Five polite requests: in a restaurant, at work, in a store. The red line watches the commands. It goes to your My notes.' }
 ];
 
 var PRATOS0 = [['Grilled chicken', '$14'], ['Fish of the day', '$16'], ['Vegetable soup', '$9'], ['Pasta with tomato', '$12'], ['Orange juice', '$5'], ['Sparkling water', '$4']];
@@ -218,3 +219,17 @@ TOQUES['ms-prox'] = function () { S.mesa.n++; };
 TOQUES.pb = function (b, n) { if (S.prob.esc === 0) return false; S.prob.esc = n; aplicaTemp(n === 0); };
 TOQUES['pb-prox'] = function () { S.prob = { n: S.prob.n + 1, esc: -1 }; };
 TOQUES['fr-prox'] = function () { S.fora.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de pares.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One order. Climb it one step at a time.',
+  degraus: [
+    { r: 'blunt', f: 'I want the chicken.', d: 'Correct English, but it sounds like a command.' },
+    { r: 'softer', f: 'I’d <b>like</b> the chicken.', d: 'I’d like is the polite start.' },
+    { r: 'quick', f: 'I’ll <b>have</b> the chicken.', d: 'I’ll have: a quick, friendly order.' },
+    { r: 'ask', f: '<b>Could I have</b> the chicken?', d: 'A question is softer than a sentence.' },
+    { r: 'warm', f: 'Could I have the chicken, <b>please</b>?', d: 'And please at the end. Now the waiter smiles.' }
+  ],
+  nota: 'Each step is softer. <b>I want</b> sounds like a command. <b>I’d like</b>, <b>I’ll have</b> and <b>Could I have …?</b> sound polite. A question is the softest.',
+  uso: { p: 'Your turn. Climb the ladder with a drink: I want …, I’d like …, Could I have …?', molde: ['I want a …', 'I’d like a …', 'Could I have a …, please?'], ex: 'I want a coffee. I’d like a coffee. Could I have a coffee, please?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

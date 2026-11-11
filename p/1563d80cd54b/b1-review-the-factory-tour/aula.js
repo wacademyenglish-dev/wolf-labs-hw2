@@ -14,7 +14,8 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'II · The Tour', t: 'Roll, move, explain each room.', p: 'Your teacher rolls the die. You are the guide: explain your square, out loud.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Factory Pairs', t: 'Five pairs from the chocolate factory.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -55,3 +56,9 @@ var ESCOLHA = [
   { a: 'a cake made by a famous chef', b: 'a cake made by your grandmother', chips: ['I’d choose the one made by …', 'because …'], ex: 'The one made by my grandmother. Nothing is better.' },
   { a: 'have your hair cut by a friend for free', b: 'get it done at a salon', chips: ['I’d have it done …', 'I’d rather …'], ex: 'At a salon. My friend isn’t good with scissors!' },
   { a: 'live in a house built in 1900', b: 'live in a house built last year', chips: ['A house that was built …', 'because …'], ex: 'One built in 1900. Old houses have stories.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'The factory was built in 1910.', x: 'The factory was build in 1910.', d: 'be + participle: was <b>built</b>.' }, { c: 'Cocoa is grown by farmers.', x: 'Cocoa grows by farmers.', d: 'Farmers do it, so the passive: is <b>grown</b> by farmers.' }, { c: 'The first bar was invented by Ana Lume.', x: 'The first bar was invented from Ana Lume.', d: 'Who did it? <b>by</b>.' }, { c: 'The oldest recipe has been found!', x: 'The oldest recipe has been find!', d: 'News now: has been + <b>found</b>.' }, { c: 'We had the machines checked last week.', x: 'We had the machines check last week.', d: 'Someone else did it: had + thing + <b>checked</b>.' }], nota: 'The passive is <b>be + participle</b>: is made, was built, has been found. Add <b>by</b> only when we care who did it. For a job someone does for you: <b>have</b> + thing + participle.', uso: { p: 'Your turn. You are the guide at a factory. Say three sentences about a product you know: how it is made, where, and by whom.', molde: ['It is made of …', 'It was invented in …', 'It is sold in …'], ex: 'Coffee is grown in Brazil. It is picked by hand. It was brought to Europe in the 1600s.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

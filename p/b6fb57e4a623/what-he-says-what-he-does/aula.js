@@ -35,10 +35,11 @@ var L = [
   { k: 'mundo', est: 'o', min: 8, img: 'sala', rot: 'I · Warm-up and Two Truths and a Lie', t: 'Before the trailer: your days, then a family full of secrets.', p: 'Answer three questions about your life. Then find the lie about the Forger family.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'II · The Trailer', t: 'Spy x Family. The main trailer.', p: 'Open the cards first. Watch the trailer. Then two short tasks: tap ▶ to see a moment again.' },
   { k: 'letra', est: 'l', min: 7, img: 'sala', rot: 'III · Scene by Scene', t: 'Five moments of the trailer. Tap one, watch, then talk.', p: 'Each frame is a moment in the video.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'IV · Every Day × Right Now', t: 'He works every day. Right now, he’s spying.', p: 'Put each sentence in its box. Then read the rule.' },
-  { k: 'dossie', est: 'o', min: 7, img: 'capa', rot: 'V · The Double Dossier', t: 'What he says, what he does. Fill the dossier.', p: 'Read the clue. Say the sentence. Then pick the page: what he says, or what he does.' },
-  { k: 'agora', est: 'o', min: 6, img: 'sala', rot: 'VI · Your Two Lives', t: 'Six questions about your two lives.', p: 'Build each question and tap Check. Ask the teacher. Then answer.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VII · The Debate', t: 'The debate.', p: 'Debate.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'IV · Every Day or Right Now?', t: 'Two scenes in the Forger house.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'V · Every Day × Right Now', t: 'He works every day. Right now, he’s spying.', p: 'Put each sentence in its box. Then read the rule.' },
+  { k: 'dossie', est: 'o', min: 7, img: 'capa', rot: 'VI · The Double Dossier', t: 'What he says, what he does. Fill the dossier.', p: 'Read the clue. Say the sentence. Then pick the page: what he says, or what he does.' },
+  { k: 'agora', est: 'o', min: 6, img: 'sala', rot: 'VII · Your Two Lives', t: 'Six questions about your two lives.', p: 'Build each question and tap Check. Ask the teacher. Then answer.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Debate', t: 'The debate.', p: 'Debate.' }
 ];
 
 var SERIE = 'Spy x Family', ANO = '2022';
@@ -260,3 +261,20 @@ var FIM = { tipo: 'debate', rot: 'VIII · The Debate', t: 'Is it OK to lie to yo
   b: { rot: 'No, never', motivos: ['A family needs the truth.', 'Lies always come out one day.', 'If I lie, my family doesn’t really know me.'] },
   frases: ['I think… because…', 'Right now, in my family…', 'I see your point, but…'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'What he says, what he does. Two scenes.',
+  a: { t: 'Every day', falas: [['Anya', 'What does Loid do?'], ['You', 'He <mark>works</mark> at a hospital every day.']], d: 'Every day is a routine: present simple. <b>works</b>.' },
+  b: { t: 'Right now', falas: [['Anya', 'Look! What is he doing?'], ['You', 'He <mark>is spying</mark> on a man right now.']], d: 'Right now, look!: present continuous. <b>is spying</b>.' },
+  pergunta: 'Same man, two forms. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Yor goes to the office at nine every day. You say:', o: ['She goes to the office at nine.', 'She is going to the office at nine.'], c: 0, d: 'A routine.' },
+    { p: 'Look! Yor is at the door with a dark bag. You say:', o: ['She is carrying a dark bag.', 'She carries a dark bag.'], c: 0, d: 'Right now.' },
+    { p: 'Anya loves peanuts. You say:', o: ['She loves peanuts.', 'She is loving peanuts.'], c: 0, d: 'Feelings and knowing do not take -ing.' },
+    { p: 'Loid is listening at the wall right now. Anya asks:', o: ['What is he doing?', 'What does he do?'], c: 0, d: 'Right now: is he doing.' }
+  ],
+  nota: '<b>Every day</b> or always true: <b>works</b>, <b>loves</b>. <b>Right now</b> (look!): <b>is spying</b>. Verbs for feelings and knowing do not take -ing: I know, she likes.',
+  uso: { p: 'Your turn. One thing you do every day and one thing you are doing right now.', molde: ['Every day I …', 'Right now I’m …'], ex: 'Every day I drink coffee at eight. Right now I’m talking to my teacher.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_dois', GX_EXPLICA); };

@@ -19,13 +19,14 @@ var L = [
   { k: 'numero', est: 'o', min: 7, img: 'regua', rot: 'I · Out of Ten', t: 'How intelligent are you, from 0 to 10? No scale. Just a number.', p: 'Tap your number. Then defend it out loud.' },
   { k: 'afirma', est: 'l', min: 7, img: 'palco', rot: 'II · The Claim', t: 'A speaker makes a claim about intelligence. People usually remember only half of it.', p: 'Play it. Then, for each line: SAID or NOT SAID.' },
   { k: 'balanca', est: 'o', min: 7, img: 'regua', rot: 'III · The Balance', t: 'The claim goes on one side. The evidence goes on the other. Make them balance.', p: 'Read the claim and the evidence out loud. Choose the sentence that balances. Say it.' },
-  { k: 'forma', est: 'f', min: 6, img: 'mesa', rot: 'IV · The Form', t: 'tend to / seem to + bare verb. arguably before the claim. to some extent: always TO.', p: 'Choose the word. Say the whole sentence.' },
-  { k: 'evid', est: 'f', min: 6, img: 'mesa', rot: 'V · Claim or Evidence?', t: 'A claim says what is true. Evidence says what somebody saw.', p: 'Read it out loud. Tap CLAIM or EVIDENCE. Hedge every claim.' },
-  { k: 'critico', est: 'l', min: 7, img: 'mesa', rot: 'VI · The Critic', t: 'Now somebody takes the theory apart. Listen to what they actually say.', p: 'Play it. Then, for each line: SAID or NOT SAID.' },
-  { k: 'debate', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'VII · Three Claims', t: 'Your teacher states three claims at 100%. You answer below 100%, with a reason.', p: 'Read the claim. Choose the answer. Say it. Then say what you really think.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VIII · Too Sure', t: 'Five sentences have a problem, in the form or in the certainty. One is fine.', p: 'Choose the fix. Then say the whole sentence.' },
-  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'IX · About You', t: 'Four cards about how your mind works.', p: 'Tap a card. Answer with the frame, then add one piece of evidence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'regua', rot: 'X · Your Number, Again', t: 'Intelligence isn’t your shoe size. Neither is certainty.', p: 'Defend your number again, below 100%. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'palco', rot: 'IV · On the Radio', t: 'A talk about intelligence. Four phrases are lit.', p: 'Read it together. Tap the lit phrases: what is their job? Then hedge your own claim.' },
+  { k: 'forma', est: 'f', min: 6, img: 'mesa', rot: 'V · The Form', t: 'tend to / seem to + bare verb. arguably before the claim. to some extent: always TO.', p: 'Choose the word. Say the whole sentence.' },
+  { k: 'evid', est: 'f', min: 6, img: 'mesa', rot: 'VI · Claim or Evidence?', t: 'A claim says what is true. Evidence says what somebody saw.', p: 'Read it out loud. Tap CLAIM or EVIDENCE. Hedge every claim.' },
+  { k: 'critico', est: 'l', min: 7, img: 'mesa', rot: 'VII · The Critic', t: 'Now somebody takes the theory apart. Listen to what they actually say.', p: 'Play it. Then, for each line: SAID or NOT SAID.' },
+  { k: 'debate', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'VIII · Three Claims', t: 'Your teacher states three claims at 100%. You answer below 100%, with a reason.', p: 'Read the claim. Choose the answer. Say it. Then say what you really think.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'IX · Too Sure', t: 'Five sentences have a problem, in the form or in the certainty. One is fine.', p: 'Choose the fix. Then say the whole sentence.' },
+  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'X · About You', t: 'Four cards about how your mind works.', p: 'Tap a card. Answer with the frame, then add one piece of evidence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'regua', rot: 'XI · Your Number, Again', t: 'Intelligence isn’t your shoe size. Neither is certainty.', p: 'Defend your number again, below 100%. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -204,3 +205,24 @@ TOQUES.db = function (b, n) { S.db.esc = n; };
 TOQUES['db-prox'] = function () { S.db = { n: S.db.n + 1, esc: -1 }; };
 TOQUES.er = function (b, n) { S.er.esc = n; };
 TOQUES['er-prox'] = function () { S.er = { n: S.er.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de forma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The radio talk. Tap the lit phrases.',
+  falas: [
+    { q: 'Host', f: 'Is intelligence just something you are born with?' },
+    { q: 'You', f: 'Not just that. People [[tend to]] improve at what they practice.' },
+    { q: 'Host', f: 'But some children learn much faster.' },
+    { q: 'You', f: 'Yes. Fast learners [[seem to]] practice more. And [[arguably]], practice matters more than talent.' },
+    { q: 'Host', f: 'So the theory is true?' },
+    { q: 'You', f: '[[To some extent]]. I only have the results from one school.' }
+  ],
+  porques: [
+    'tend to + the bare verb: it happens often, but not always. Not “tend to improving”.',
+    'seem to + the bare verb: this is how it looks in the evidence. Not “seem be”.',
+    'arguably goes BEFORE the claim: you say it, and you know others disagree.',
+    'to some extent: always TO. It says: partly, not all. Not “in some extent”.'
+  ],
+  nota: 'A claim cannot be stronger than the evidence. <b>tend to</b> and <b>seem to</b> + the bare verb. <b>arguably</b> goes before the claim. <b>to some extent</b>: always TO.',
+  uso: { p: 'Your turn. Say what you think about learning, memory or talent. Hedge it, and add one piece of evidence.', molde: ['People tend to …', 'They seem to …', 'Arguably, …'], ex: 'Adults tend to learn slowly at first. They seem to remember better with examples. Arguably, practice matters more than age.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

@@ -16,12 +16,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Two Weeks', t: 'How was your weekend? What do you love doing?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'dialogo', est: 'l', min: 8, img: 'mesa', rot: 'II · The Follow-Up Call', t: 'A week after the meeting, Leo calls Karen, the CFO.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 7, img: 'capa', rot: 'III · Thirteen Lessons, Four Traps', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'tabuleiro', est: 'o', min: 15, img: 'conversa', rot: 'IV · Close the Deal', t: 'Twelve squares. Roll, move, do the challenge.', p: 'Your teacher rolls. Do the task out loud. Any good answer counts.' },
-  { k: 'erros', est: 'f', min: 7, img: 'mesa', rot: 'V · Fix the Follow-Up', t: 'Leo’s follow-up e-mail has five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VI · Your Follow-Up E-mail', t: 'Write a follow-up after a real meeting.', p: 'Thank you, what’s included, one thing you have to do, the next step.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 29: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'III · The Pocket Rule', t: 'Four lines from the whole review.', p: 'Read one line at a time. Then keep the rule in the corner for the board.' },
+  { k: 'descobre', est: 'f', min: 7, img: 'capa', rot: 'IV · Thirteen Lessons, Four Traps', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'tabuleiro', est: 'o', min: 15, img: 'conversa', rot: 'V · Close the Deal', t: 'Twelve squares. Roll, move, do the challenge.', p: 'Your teacher rolls. Do the task out loud. Any good answer counts.' },
+  { k: 'erros', est: 'f', min: 7, img: 'mesa', rot: 'VI · Fix the Follow-Up', t: 'Leo’s follow-up e-mail has five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VII · Your Follow-Up E-mail', t: 'Write a follow-up after a real meeting.', p: 'Thank you, what’s included, one thing you have to do, the next step.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VIII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 29: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -106,3 +107,16 @@ var PODE = [
   'I can talk about experience and what a proposal includes.',
   'I can write a follow-up e-mail after a meeting.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'Four traps to remember',
+  linhas: [
+    'small talk: I love <b>sailing</b> · How <b>was</b> your weekend?',
+    'decide: OK, <b>I’ll</b> call him · <b>I won’t</b> call this month',
+    'ask: <b>Do you</b> use SAP? · <b>Have you ever</b> worked with …?',
+    'proposal: It <b>includes</b> training · It <b>doesn’t include</b> travel'
+  ],
+  uso: { p: 'Your turn. Say one sentence from each line to your teacher.', molde: ['I love …-ing.', 'OK, I’ll …', 'Have you ever …?', 'It doesn’t include …'], ex: 'I love cooking. OK, I’ll send the e-mail. Have you ever used SAP? It doesn’t include travel.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

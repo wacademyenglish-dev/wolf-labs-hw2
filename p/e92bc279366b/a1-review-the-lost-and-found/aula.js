@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Lost and Found', t: 'Three people lost something. Find it.', p: 'Ask each owner five questions. Your teacher is the owner. Then give the things back.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Lost and Found Pairs', t: 'Four pairs from the lost and found.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -70,3 +71,9 @@ var PODE = [
 var BINGO = [['a or an: umbrella', 'an umbrella'], ['Plural: child', 'children'], ['Describe your phone: size + color', 'a small black phone'], ['Plural: box', 'boxes'], ['this or these: ___ keys', 'these keys'], ['and or but: It’s old, ___ I love it.', 'but'], ['Plural: person', 'people'], ['a or an: hour', 'an hour'], ['Point far, one thing: ___ door', 'that door']];
 var ERROS = { tipo: 'nota', rot: 'A LOST ITEM REPORT · TICKET 35', partes: ['I lost ', ['a umbrella', 'an umbrella', 'A vowel sound: an.'], ' and two ', ['keys silver', 'silver keys', 'The color comes first.'], '. In my bag: three ', ['book', 'books', 'Three: plural.'], ' and ', ['a old phone', 'an old phone', 'old starts with a vowel sound: an.'], '. ', ['This keys', 'These keys', 'Plural: these.'], ' are very important!'] };
 var ESCOLHA = [{ a: 'a big old house', b: 'a small new apartment', chips: ['A … , because it’s …'], ex: 'A small new apartment, because it’s easy.' }, { a: 'two cats', b: 'one big dog', chips: ['… , because …'], ex: 'One big dog, because dogs are fun.' }, { a: 'a red car', b: 'a black car', chips: ['A … car.', 'because …'], ex: 'A red car, because it’s happy!' }, { a: 'three children', b: 'no children', chips: ['… children, because …'], ex: 'Three children! Big families are great.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'This is an umbrella.', x: 'This is a umbrella.', d: 'A vowel SOUND: <b>an</b> umbrella.' }, { c: 'It is a black bag.', x: 'It is a bag black.', d: 'The color goes first: a <b>black</b> bag.' }, { c: 'These keys are mine.', x: 'This keys are mine.', d: 'More than one thing: <b>these</b> keys.' }, { c: 'The children are here.', x: 'The childrens are here.', d: 'A special plural: <b>children</b>, no -s.' }], nota: 'A vowel sound: <b>an</b>. The color before the thing: <b>a black bag</b>. One thing: <b>this</b>. Many things: <b>these</b>.', uso: { p: 'Your turn. You lost something. Tell the desk: what is it, what size, what color?', molde: ['I lost a / an …', 'It’s small / big …', 'It’s black / blue …'], ex: 'I lost a small black bag. It has two keys inside.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

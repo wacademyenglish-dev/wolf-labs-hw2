@@ -16,11 +16,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Week', t: 'What are you working on this week?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · A Status E-mail', t: 'Leo tells a client what is happening.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 8, img: 'conversa', rot: 'III · “How Is It Going?”', t: 'The client calls for news about the proposal.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Now or Every Week?', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'transforma', est: 'f', min: 7, img: 'mesa', rot: 'V · Routine or Right Now?', t: 'Change the time word. Change the verb.', p: 'Read the sentence and the clue. Say the new sentence. Then check.' },
-  { k: 'escolha', est: 'o', min: 5, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your Status Update', t: 'Write a status e-mail to a client.', p: 'What you’re doing, what your team is doing, one routine. Then read it.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'IV · Find the Rule', t: 'Four lines from the status e-mail. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · Now or Every Week?', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'transforma', est: 'f', min: 7, img: 'mesa', rot: 'VI · Routine or Right Now?', t: 'Change the time word. Change the verb.', p: 'Read the sentence and the clue. Say the new sentence. Then check.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 5, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your Status Update', t: 'Write a status e-mail to a client.', p: 'What you’re doing, what your team is doing, one routine. Then read it.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -98,3 +99,20 @@ var PODE = [
   'I can choose: now → -ing; every / usually → simple.',
   'I can write a short status e-mail to a client.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines from a status e-mail. Find the rule yourself.',
+  exemplos: [
+    'We<b>’re</b> <u>working</u> on your proposal right now.',
+    'Sara<b>’s</b> <u>talking</u> with the IT team today.',
+    'I<b>’m</b> <u>preparing</u> the timeline this week.',
+    'They<b>’re</b> <u>checking</u> the numbers now.'
+  ],
+  pergunta: 'For something that is happening now or this week, the verb …',
+  opcoes: ['is only the simple verb: we work', 'has be + -ing: we’re working', 'has be + the simple verb: we’re work'], c: 1,
+  nao: 'Not that one. Read the four lit parts again: what comes before each verb? What comes at the end of it?',
+  regra: '<b>Now or this week: be + verb-ing</b>: I’m, she’s, we’re, they’re + working. A routine, with every or usually, stays simple: We <b>send</b> an update every Monday.',
+  uso: { p: 'Your turn. What are you working on this week, and what do you do every Monday?', molde: ['I’m working on …', 'Every Monday I …'], ex: 'I’m working on a proposal this week. Every Monday I send an update.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

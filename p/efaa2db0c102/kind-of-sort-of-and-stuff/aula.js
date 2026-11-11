@@ -37,11 +37,12 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'estudio', rot: 'III · Trick Questions', t: 'A street interview in Washington, D.C. Trick questions, real answers, no script.', p: 'Tap your answers first. Then the video plays in four short chapters: tap True or Lie, and ▶ to hear a line again.' },
   { k: 'falas', est: 'l', extra: 1, img: 'estudio', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'memos', est: 'o', min: 7, img: 'esteira', rot: 'V · Voice Memos to Her Sister', t: 'Friday, 9:12 PM, Denver. The bag never comes out. Six voice memos to her sister.', p: 'Read the exact fact. Say the memo the way you really talk. Then tap Check: the vague words glow.' },
-  { k: 'regra', est: 'f', min: 7, img: 'fone', rot: 'VI · The Rule', t: 'Vague is not wrong. It depends on who is listening.', p: 'Read the clues. Guess what the four lines share. Then find the broken part of five lines.' },
-  { k: 'esteira', est: 'o', min: 7, img: 'balcao', rot: 'VII · Carousel 5', t: '11 PM. The desk and the sister, one after the other.', p: 'Tap an answer, then the one who is listening: the DESK or HER SISTER. Then say it again in the other voice.' },
-  { k: 'real', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'VIII · Your Two Versions', t: 'Your real life, casual first.', p: 'Tap a card. Answer like a voice memo to a friend.' },
-  { k: 'irma', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'IX · Her Sister Calls', t: '11:30 PM. Her sister calls. You are the traveler, in a hotel room with no suitcase.', p: 'The teacher is the sister. Casual, except when you repeat what you told the desk.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'X · Two Versions', t: 'When is it better to be vague, and when do you have to be exact?', p: 'One moment of your week, twice: a voice memo, then an email to your boss.' }
+  { k: 'gx', est: 'f', min: 4, img: 'balcao', rot: 'VI · Vague or Exact?', t: 'One lost bag, two listeners.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'regra', est: 'f', min: 7, img: 'fone', rot: 'VII · The Rule', t: 'Vague is not wrong. It depends on who is listening.', p: 'Read the clues. Guess what the four lines share. Then find the broken part of five lines.' },
+  { k: 'esteira', est: 'o', min: 7, img: 'balcao', rot: 'VIII · Carousel 5', t: '11 PM. The desk and the sister, one after the other.', p: 'Tap an answer, then the one who is listening: the DESK or HER SISTER. Then say it again in the other voice.' },
+  { k: 'real', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'IX · Your Two Versions', t: 'Your real life, casual first.', p: 'Tap a card. Answer like a voice memo to a friend.' },
+  { k: 'irma', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'X · Her Sister Calls', t: '11:30 PM. Her sister calls. You are the traveler, in a hotel room with no suitcase.', p: 'The teacher is the sister. Casual, except when you repeat what you told the desk.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'XI · Two Versions', t: 'When is it better to be vague, and when do you have to be exact?', p: 'One moment of your week, twice: a voice memo, then an email to your boss.' }
 ];
 
 var YT = 'iO4lwmO5EMY';
@@ -220,3 +221,20 @@ R.fim = function (c) {
 
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
 TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Vague or exact? Same bag, two listeners.',
+  a: { t: 'To her sister', falas: [['Sister', 'How was the flight?'], ['You', 'It was <mark>kind of</mark> long, and my bag is <mark>sort of</mark> lost, you know, <mark>and stuff</mark>.']], d: 'A friend gets the feeling. <b>kind of</b>, <b>sort of</b>, <b>and stuff</b> are fine.' },
+  b: { t: 'To the baggage desk', falas: [['Agent', 'Can you describe your bag?'], ['You', '<mark>A dark blue hard-shell suitcase, about 25 inches, with a red tag.</mark>']], d: 'The agent needs facts. No vague words: be exact.' },
+  pergunta: 'Same night, two listeners. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Your sister asks about the hotel:', o: ['It’s kind of small, and the breakfast is okay and stuff.', 'The room is 118 square feet, and breakfast ends at 10:30 AM.'], c: 0, d: 'A friend: vague is natural.' },
+    { p: 'The desk agent asks when the bag arrived:', o: ['I got in sort of late, nine-ish.', 'My flight landed at 9:12 PM.'], c: 1, d: 'A form needs the exact time.' },
+    { p: 'A friend asks how you feel:', o: ['I’m kind of tired.', 'I slept five hours and 20 minutes.'], c: 0, d: 'A friend: the feeling is enough.' },
+    { p: 'The desk agent asks what is inside the bag:', o: ['Clothes and stuff.', 'Two jackets, one laptop charger and a pair of black shoes.'], c: 1, d: 'The agent needs a list.' }
+  ],
+  nota: 'Vague is not wrong. It depends on who is listening: <b>kind of</b>, <b>sort of</b>, <b>and stuff</b>, <b>-ish</b> for a friend; exact words for the desk and the form.',
+  uso: { p: 'Your turn. Tell your teacher about your day twice: first vague, for a friend, then exact, for a form.', molde: ['It was kind of …', 'At 8:15 AM I …'], ex: 'It was kind of busy and stuff. Exact: I left home at 8:15 AM and got to work at 9 AM.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

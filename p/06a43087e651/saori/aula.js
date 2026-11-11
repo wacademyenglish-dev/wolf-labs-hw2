@@ -20,14 +20,15 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'antes', rot: 'I · Before You Sleep', t: 'Your own day, before anything else.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'video', est: 'l', min: 10, img: 'd1', rot: 'II · One Day, Filmed', t: 'This really happened.', p: 'Watch the whole video. Then three questions.' },
   { k: 'varal', est: 'o', min: 7, img: 'd3', rot: 'III · Hang the Day', t: 'Six photos on the table. One line.', p: 'Say the sentence for the photo that comes next. Then tap it: it goes on the line.' },
-  { k: 'nos', est: 'f', min: 6, img: 'd4', rot: 'IV · Tie the Knots', t: 'Two photos, one knot. Before, after or when?', p: 'Choose the knot. Then say the whole sentence.' },
-  { k: 'armadilha', est: 'f', min: 6, img: 'd2', rot: 'V · Before To, After Will', t: 'Two shapes that don’t exist.', p: 'Read both. Tap the one that exists. Say it twice.' },
-  { k: 'duas', est: 'o', min: 7, extra: 1, img: 'd5', rot: 'VI · Two Ways, Both Right', t: 'A whole sentence, or -ing. Both open.', p: 'Say both out loud. Then open the note.' },
-  { k: 'outro', est: 'o', min: 7, extra: 1, img: 'd6', rot: 'VII · The Other End', t: 'Same facts. The other word.', p: 'Read it. Say it with the other word. Then check.' },
-  { k: 'dia', est: 'o', min: 7, extra: 1, img: 'antes', rot: 'VIII · The Day That Divides', t: 'Every life has a day like Meaty’s.', p: 'Open three cards. Say your before, then your after.' },
-  { k: 'conta', est: 'o', min: 7, extra: 1, img: 'd3', rot: 'IX · How You Met', t: 'Somebody important. How did you meet?', p: 'Five steps, in order. Before, when, after.' },
+  { k: 'gx', est: 'f', min: 4, img: 'd4', rot: 'IV · Right, Not This', t: 'Five pairs about Meaty’s day. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'nos', est: 'f', min: 6, img: 'd4', rot: 'V · Tie the Knots', t: 'Two photos, one knot. Before, after or when?', p: 'Choose the knot. Then say the whole sentence.' },
+  { k: 'armadilha', est: 'f', min: 6, img: 'd2', rot: 'VI · Before To, After Will', t: 'Two shapes that don’t exist.', p: 'Read both. Tap the one that exists. Say it twice.' },
+  { k: 'duas', est: 'o', min: 7, extra: 1, img: 'd5', rot: 'VII · Two Ways, Both Right', t: 'A whole sentence, or -ing. Both open.', p: 'Say both out loud. Then open the note.' },
+  { k: 'outro', est: 'o', min: 7, extra: 1, img: 'd6', rot: 'VIII · The Other End', t: 'Same facts. The other word.', p: 'Read it. Say it with the other word. Then check.' },
+  { k: 'dia', est: 'o', min: 7, extra: 1, img: 'antes', rot: 'IX · The Day That Divides', t: 'Every life has a day like Meaty’s.', p: 'Open three cards. Say your before, then your after.' },
+  { k: 'conta', est: 'o', min: 7, extra: 1, img: 'd3', rot: 'X · How You Met', t: 'Somebody important. How did you meet?', p: 'Five steps, in order. Before, when, after.' },
   { k: 'saori', est: null, img: 'antes' },
-  { k: 'fim', est: 'w', min: 6, img: 'd6', rot: 'X · The Whole Line', t: 'Write a day that divides your life.', p: 'Before, after, when, with a whole sentence after every knot. It goes to your My notes.' }
+  { k: 'fim', est: 'w', min: 6, img: 'd6', rot: 'XI · The Whole Line', t: 'Write a day that divides your life.', p: 'Before, after, when, with a whole sentence after every knot. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -184,3 +185,17 @@ TOQUES.du = function (b, n) { S.duas[n] = 1; };
 TOQUES.ot = function (b, n) { S.outro[n] = 1; };
 TOQUES.di = function (b, n) { S.dia[n] = 1; };
 TOQUES.sa = function () { S.saori = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de nos.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: '<b>Before he got</b> home, Meaty slept in the car.', x: 'Before to get home, Meaty slept in the car.', d: 'Before + a whole sentence. Never to.' },
+    { c: 'After he <b>eats</b>, Meaty goes out.', x: 'After he will eat, Meaty goes out.', d: 'No will after after. The present is enough.' },
+    { c: '<b>When</b> Meaty saw the garden, he ran.', x: 'When Meaty see the garden, he ran.', d: 'Both sides in the same tense: saw, ran.' },
+    { c: '<b>Before sleeping</b>, Meaty drinks water.', x: 'Before sleep, Meaty drinks water.', d: 'Before / after + -ing is fine: before sleeping.' },
+    { c: 'After he <b>arrived</b>, he smelled the garden.', x: 'After he arrive, he smelled the garden.', d: 'A whole sentence after the knot: he arrived.' }
+  ],
+  nota: 'After <b>before, after, when</b>: a whole sentence (he got home) or -ing (before sleeping). Never <b>to</b>, and no <b>will</b> after the knot.',
+  uso: { p: 'Your turn. Your morning. One thing before and one thing after, each with a whole sentence.', molde: ['Before I …, I …', 'After I …, I …'], ex: 'Before I leave home, I check my keys. After I eat breakfast, I brush my teeth.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

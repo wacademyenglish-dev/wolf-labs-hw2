@@ -19,7 +19,8 @@ var L = [
   { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Opinion or Argument?', t: 'What makes a sentence academic?', p: 'Compare A and B. Which one belongs in a C1 essay?' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'ordem', est: 'o', min: 7, img: 'capa', rot: 'IV · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
-  { k: 'cartao', est: 'w', min: 10, img: 'conversa', rot: 'V · Your Essay Plan', t: 'Plan your own essay in five lines.', p: 'Thesis, two arguments, the other side with a refutation, and a conclusion.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'V · The Essay Card', t: 'Five lines. Keep them in the corner.', p: 'Read one line at a time. Then keep the card in the corner for your essay plan.' },
+  { k: 'cartao', est: 'w', min: 10, img: 'conversa', rot: 'VI · Your Essay Plan', t: 'Plan your own essay in five lines.', p: 'Thesis, two arguments, the other side with a refutation, and a conclusion.' }
 ];
 var PORTAS = [];
 
@@ -60,3 +61,9 @@ var ERROS = { tipo: 'nota', rot: 'A STUDENT’S ESSAY · FIRST DRAFT', partes: [
 var ORDEM = { rot: 'THE ESSAY SKELETON', pede: 'Tap the parts of the model essay in the right order.', chips: ['This essay will argue that…', 'Firstly, …', 'A further argument is that…', 'It is often argued that…', 'However, this view overlooks…', 'On balance, …'],
   modelo: 'Free university is a debated issue. This essay will argue that it should be free, with standards. Firstly, it increases social mobility: for instance, Germany. A further argument is that it benefits the economy. It is often argued that it is too expensive. However, this view overlooks the long-term return. On balance, it is an investment, not an expense.',
   passos: ['The topic: free university is a debated issue.', 'The thesis: it should be free, with academic standards.', 'Argument 1 + evidence: social mobility; Germany, 2014.', 'Argument 2: the whole economy benefits.', 'The other side + refutation: too expensive? Graduates pay more tax.', 'The conclusion: an investment, not an expense.'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de cartao.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Five lines to keep in your pocket.', rotulo: 'The skeleton of an essay', linhas: ['thesis: <b>This essay will argue that</b> …', 'each paragraph: <b>Firstly, …</b> · <b>A further argument is that …</b>', 'evidence: <b>For instance, …</b> · <b>According to …</b>', 'the other side: <b>It is often argued that …</b> · <b>However, this view overlooks …</b> · <b>While it is true that …, …</b>', 'the end: <b>In conclusion, …</b> or <b>On balance, …</b> (not “I think” in the last line)'], uso: { p: 'Your turn. The question: should university be free? Say your thesis and one argument in two sentences.', molde: ['This essay will argue that …', 'Firstly, …', 'For instance, …'], ex: 'This essay will argue that university should be free. Firstly, education benefits the whole country. For instance, graduates pay higher taxes.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

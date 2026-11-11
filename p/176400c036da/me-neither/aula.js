@@ -16,10 +16,11 @@ var L = [
   { k: 'ouve', est: 'l', min: 7, img: 'cozinha', rot: 'II · Six Answers', t: 'Two voices. Did the second person agree?', p: 'Play both. Choose. Then say the answer out loud, the same way.' },
   { k: 'espelhos', est: 'f', min: 6, img: 'planta', rot: 'III · Two Mirrors', t: 'Marina says something. Which mirror echoes it?', p: 'Is her sentence a YES or a NO? Tap the mirror. Then say both echoes.' },
   { k: 'verbo', est: 'f', min: 6, img: 'cozinha', rot: 'IV · The Little Verb', t: 'SO and NEITHER borrow her little verb.', p: 'Say the echo out loud. Then tap the little verb.' },
-  { k: 'regra', est: 'f', min: 6, img: 'planta', rot: 'V · The Rule', t: 'The NOT in her sentence chooses the mirror.', p: 'Fix each wrong line. Say it out loud. Then tap it.' },
-  { k: 'discorda', est: 'o', min: 7, img: 'flat2', rot: 'VI · I Don’t!', t: 'Sometimes you don’t agree. That’s short too.', p: 'Marina says it. You disagree, out loud. Then tap what you said.' },
-  { k: 'comum', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'VII · Five in Common', t: 'Find five things you and your teacher have in common.', p: 'Your teacher says a sentence. You echo it, or you disagree. Five SAMEs win.' },
-  { k: 'fim', est: 'w', min: 6, img: 'planta', rot: 'VIII · Saturday', t: 'Marina chose. Your turn to write.', p: 'One thing you and a friend both do, one thing neither of you does. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'planta', rot: 'V · Marina on the Phone', t: 'Marina talks, you echo. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then echo your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'planta', rot: 'VI · The Rule', t: 'The NOT in her sentence chooses the mirror.', p: 'Fix each wrong line. Say it out loud. Then tap it.' },
+  { k: 'discorda', est: 'o', min: 7, img: 'flat2', rot: 'VII · I Don’t!', t: 'Sometimes you don’t agree. That’s short too.', p: 'Marina says it. You disagree, out loud. Then tap what you said.' },
+  { k: 'comum', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'VIII · Five in Common', t: 'Find five things you and your teacher have in common.', p: 'Your teacher says a sentence. You echo it, or you disagree. Five SAMEs win.' },
+  { k: 'fim', est: 'w', min: 6, img: 'planta', rot: 'IX · Saturday', t: 'Marina chose. Your turn to write.', p: 'One thing you and a friend both do, one thing neither of you does. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -196,3 +197,29 @@ TOQUES.di = function (b, n, v) { S.disc.esc = v; };
 TOQUES['di-prox'] = function () { S.disc = { n: S.disc.n + 1, esc: '' }; };
 TOQUES.cm = function (b, n) { S.comum.sel = S.comum.sel === n ? -1 : n; };
 TOQUES['cm-r'] = function (b, n, v) { S.comum.r[S.comum.sel] = v; S.comum.sel = -1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'Marina, on the phone. Tap the lit words.',
+  falas: [
+    { q: 'Marina', f: 'I really like the flat above the bakery.' },
+    { q: 'You', f: '[[So do I]]. It smells like bread.' },
+    { q: 'Marina', f: 'I can’t pay much for the rent.' },
+    { q: 'You', f: '[[Neither can I]]. Not this month.' },
+    { q: 'Marina', f: 'I’m not sure about the flat near the park.' },
+    { q: 'You', f: '[[Neither am I]]. But I love the garden.' },
+    { q: 'Marina', f: 'I’ve seen both flats twice.' },
+    { q: 'You', f: '[[So have I]]. I was there on Saturday.' },
+    { q: 'Marina', f: 'I love getting up early.' },
+    { q: 'You', f: '[[I don’t]]. I hate it!' }
+  ],
+  porques: [
+    'A yes and a yes: So + her little verb + I. She says like, so the little verb is do.',
+    'A no and a no: Neither + her little verb + I. She says can’t, so the little verb is can. Only one no.',
+    'Her sentence has am, so: Neither am I.',
+    'Her sentence has have, so: So have I.',
+    'You don’t agree: short and strong. She loves it. You don’t: I don’t.'
+  ],
+  nota: 'A <b>yes</b> echoes with <b>So + little verb + I</b>. A <b>no</b> echoes with <b>Neither + little verb + I</b>. The little verb comes from her sentence: like → <b>do</b>, can’t → <b>can</b>, I’m → <b>am</b>. You don’t agree? <b>I do. / I don’t.</b>',
+  uso: { p: 'Your turn. Marina says: I love pizza. I can’t swim. Echo both. Then say one thing about you for your teacher to echo.', molde: ['So … I.', 'Neither … I.'], ex: 'So do I. Neither can I. I’m afraid of spiders.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

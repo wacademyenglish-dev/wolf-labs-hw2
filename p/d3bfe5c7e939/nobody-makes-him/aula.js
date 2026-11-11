@@ -20,11 +20,12 @@ var L = [
   { k: 'videoA', est: 'l', min: 7, img: 'cozinha', rot: 'II · Seven in the Morning', t: 'One of the best-paid football players alive. This is his morning.', p: 'Answer first. Then watch the clip once.' },
   { k: 'quadro', est: 'f', min: 6, img: 'campo', rot: 'III · The Training Board', t: 'His board. Every task gets a stamp.', p: 'Read the task. Say the whole sentence. Then stamp it.' },
   { k: 'forma', est: 'f', min: 6, img: 'campo', rot: 'IV · A Normal Verb', t: 'HAVE TO behaves like a normal verb.', p: 'Say the right one out loud. Then tap it.' },
-  { k: 'regra', est: 'f', min: 6, img: 'campo', rot: 'V · The Rule', t: 'Three stamps, one verb.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'proibido', est: 'f', min: 6, img: 'vazio', rot: 'VI · Free, or Forbidden?', t: 'Two negatives that look alike. They are opposites.', p: 'Read it out loud. A free choice, or not allowed?' },
-  { k: 'videoB', est: 'l', min: 7, extra: 1, img: 'vazio', rot: 'VII · Sixteen, and Alone', t: 'Now go back. A long way back.', p: 'Two short chapters. Answer first, then watch each one once.' },
-  { k: 'troca', est: 'o', min: 7, extra: 1, img: 'vazio', rot: 'VIII · Would You Swap?', t: 'His board and yours. Would you swap lives?', p: 'Answer about you. Then compare with him. Then answer the next question.' },
-  { k: 'fim', est: 'w', min: 6, img: 'cozinha', rot: 'IX · Your Board', t: 'Your board for next week.', p: 'Two things you have to do, one you don’t have to, one you had to do as a teenager. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'campo', rot: 'V · Duty, Free, Forbidden', t: 'Three stamps for the training board.', p: 'Look at the three stamps. Tap the stamp for each sentence. Then say three of your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'campo', rot: 'VI · The Rule', t: 'Three stamps, one verb.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'proibido', est: 'f', min: 6, img: 'vazio', rot: 'VII · Free, or Forbidden?', t: 'Two negatives that look alike. They are opposites.', p: 'Read it out loud. A free choice, or not allowed?' },
+  { k: 'videoB', est: 'l', min: 7, extra: 1, img: 'vazio', rot: 'VIII · Sixteen, and Alone', t: 'Now go back. A long way back.', p: 'Two short chapters. Answer first, then watch each one once.' },
+  { k: 'troca', est: 'o', min: 7, extra: 1, img: 'vazio', rot: 'IX · Would You Swap?', t: 'His board and yours. Would you swap lives?', p: 'Answer about you. Then compare with him. Then answer the next question.' },
+  { k: 'fim', est: 'w', min: 6, img: 'cozinha', rot: 'X · Your Board', t: 'Your board for next week.', p: 'Two things you have to do, one you don’t have to, one you had to do as a teenager. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -190,3 +191,24 @@ TOQUES['vb-p'] = function (b, n) { S.vb.p = n; };
 TOQUES['vb-c'] = function (b, n) { S.vb.viu[S.vb.cap] = 1; S.vb.cap = n; };
 TOQUES['tc-viu'] = function () { S.troca.viu[S.troca.n] = 1; };
 TOQUES['tc-prox'] = function () { S.troca.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Three stamps. Which one is it?',
+  usos: [
+    { t: 'HAVE TO', f: 'He has to train at ten.', d: 'A duty. The club says so.' },
+    { t: 'DON’T HAVE TO', f: 'He doesn’t have to cook. He wants to.', d: 'Free. Nobody makes him.' },
+    { t: 'MUSTN’T', f: 'You mustn’t touch the trophy.', d: 'Forbidden. Not allowed.' }
+  ],
+  pergunta: 'Which stamp is it?',
+  itens: [
+    { f: '“Every player has to be at the gym at eight.”', c: 0 },
+    { f: '“You don’t have to wear a suit. A T-shirt is fine.”', c: 1 },
+    { f: '“You mustn’t use your phone in the locker room.”', c: 2 },
+    { f: '“I don’t have to wake up early on Sundays.”', c: 1 },
+    { f: '“Players mustn’t go on the field with dirty boots.”', c: 2 },
+    { f: '“She has to pay for her own plane ticket.”', c: 0 }
+  ],
+  nota: '<b>have to</b> is a duty. <b>don’t have to</b> is free: you choose. <b>mustn’t</b> is forbidden. The last two are opposites. And have to is a normal verb: he <b>has</b> to, he <b>doesn’t</b> have to.',
+  uso: { p: 'Your turn. One thing you have to do, one you don’t have to do, and one you mustn’t do at work.', molde: ['I have to …', 'I don’t have to …', 'I mustn’t …'], ex: 'I have to start at eight. I don’t have to wear a tie. I mustn’t use my phone in meetings.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

@@ -16,12 +16,13 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'sofa', rot: 'I · Your Weekend', t: 'Before Tom’s chat: your weekend.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'msg', est: 'f', min: 6, img: 'sofa', rot: 'II · The Message', t: 'Sunday. A long film. In the middle, Tom writes to Ana.', p: 'Read Tom’s message out loud. Then answer two questions.' },
   { k: 'chat', est: 'f', min: 6, img: 'sofa', rot: 'III · The Chat', t: 'Tom tries again. You choose his endings. Ana answers.', p: 'Read Tom’s message out loud with an ending. Tap -ED or -ING. Watch Ana’s reply.' },
-  { k: 'regra', est: 'f', min: 6, img: 'sofa', rot: 'IV · The Rule', t: 'Two slots, and the slot chooses the ending.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'ouve', est: 'l', min: 7, img: 'onibus', rot: 'V · Listen', t: 'Nobody says -ED or -ING loudly.', p: 'Play. Choose the ending you heard. Then say it back.' },
-  { k: 'metades', est: 'o', min: 7, img: 'onibus', rot: 'VI · Match the Halves', t: 'The second half proves the first.', p: 'Tap a beginning, then its ending. Say the pair out loud.' },
-  { k: 'conserta', est: 'f', min: 6, extra: 1, img: 'sofa', rot: 'VII · Five Messages to Fix', t: 'Five messages from real students. One has nothing wrong.', p: 'Read it out loud. Tap the wrong word, or NOTHING IS WRONG.' },
-  { k: 'semana', est: 'o', min: 7, extra: 1, img: 'onibus', rot: 'VIII · Rate Your Week', t: 'Four things from your week. Rate them, then say both halves.', p: 'Tap the stars. Then say: It was ___ing, so I was ___ed.' },
-  { k: 'fim', est: 'w', min: 6, img: 'sofa', rot: 'IX · Tom Tries Again', t: 'Write your own message to a friend.', p: 'Something from your week: the thing (-ing) and you (-ed). It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sofa', rot: 'IV · Who Feels It?', t: 'Two small scenes on the sofa. Two endings.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'regra', est: 'f', min: 6, img: 'sofa', rot: 'V · The Rule', t: 'Two slots, and the slot chooses the ending.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'ouve', est: 'l', min: 7, img: 'onibus', rot: 'VI · Listen', t: 'Nobody says -ED or -ING loudly.', p: 'Play. Choose the ending you heard. Then say it back.' },
+  { k: 'metades', est: 'o', min: 7, img: 'onibus', rot: 'VII · Match the Halves', t: 'The second half proves the first.', p: 'Tap a beginning, then its ending. Say the pair out loud.' },
+  { k: 'conserta', est: 'f', min: 6, extra: 1, img: 'sofa', rot: 'VIII · Five Messages to Fix', t: 'Five messages from real students. One has nothing wrong.', p: 'Read it out loud. Tap the wrong word, or NOTHING IS WRONG.' },
+  { k: 'semana', est: 'o', min: 7, extra: 1, img: 'onibus', rot: 'IX · Rate Your Week', t: 'Four things from your week. Rate them, then say both halves.', p: 'Tap the stars. Then say: It was ___ing, so I was ___ed.' },
+  { k: 'fim', est: 'w', min: 6, img: 'sofa', rot: 'X · Tom Tries Again', t: 'Write your own message to a friend.', p: 'Something from your week: the thing (-ing) and you (-ed). It goes to your My notes.' }
 ];
 
 var TR = { 'a2ol-ouve1.mp3': 'The film was boring.', 'a2ol-ouve2.mp3': 'I was bored on Sunday.', 'a2ol-ouve3.mp3': 'The end is surprising.', 'a2ol-ouve4.mp3': 'I was surprised, honestly.', 'a2ol-ouve5.mp3': 'The trip was tiring.' };
@@ -184,3 +185,20 @@ TOQUES['mt-a'] = function (b, n) { S.mt.sel = n; S.mt.err = -1; };
 TOQUES['mt-b'] = function (b, n) { if (S.mt.sel < 0) return; if (n === S.mt.sel) { S.mt.par[n] = 1; S.mt.sel = -1; S.mt.err = -1; } else S.mt.err = n; };
 TOQUES.cs = function (b, n, v) { S.cs[n] = v; };
 TOQUES.st = function (b, n, v) { S.sem.estrelas[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'This or that? Two scenes on the sofa.',
+  a: { t: 'Who feels it', falas: [['Ana', 'Are you OK? You’re so quiet.'], ['Tom', 'I’m <mark>bored</mark>. I’m also tired.']], d: 'Tom is the person who feels it. That is <b>-ed</b>.' },
+  b: { t: 'What causes it', falas: [['Ana', 'Why are you so quiet?'], ['Tom', 'The film is <mark>boring</mark>. It’s too long.']], d: 'The film is the thing that causes it. That is <b>-ing</b>.' },
+  pergunta: 'Same word, two endings. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Ana: “How was the trip?” Tom:', o: ['It was tiring.', 'It was tired.'], c: 0, d: 'The trip makes you tired: -ing.' },
+    { p: 'Tom just watched a scary movie. He says:', o: ['I’m frightened.', 'I’m frightening.'], c: 0, d: 'Tom feels it: -ed.' },
+    { p: 'Ana got a big present. She says:', o: ['I’m so surprised!', 'I’m so surprising!'], c: 0, d: 'She feels it: -ed.' },
+    { p: 'Tom tells a long story. Ana says:', o: ['That’s so interesting!', 'That’s so interested!'], c: 0, d: 'The story causes it: -ing.' }
+  ],
+  nota: 'Look at who it is. The person who feels it: <b>-ed</b> (I’m bored). The thing that causes it: <b>-ing</b> (the film is boring). The verb be never changes.',
+  uso: { p: 'Your turn. One thing from your week, and how you felt about it.', molde: ['The … was …ing.', 'I was …ed.'], ex: 'The meeting was boring, so I was really tired.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

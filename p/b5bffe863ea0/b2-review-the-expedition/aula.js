@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Documentary', t: 'Three explorers. Fourteen months. Ask.', p: 'Ask each explorer five questions. Your teacher is the explorer. Then record the voice-over.' },
   { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
   { k: 'conversa', est: 'o', min: 8, img: 'conversa', rot: 'IV · In the Cabin', t: 'Your own layers of time.', p: 'Answer in detail, then turn the question back.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Mistake Hunter', t: 'Five lines from the expedition. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -66,3 +67,9 @@ var PODE = [
 var ORDEM = { rot: 'THE DIARY IN THE LIGHTHOUSE', pede: 'Tap the events in the order they really happened. Then tell it, in layers.', chips: ['In 1962,', 'By the time …, … had …', 'Fourteen months ago,', 'By next year,'],
   modelo: 'In 1962 a lighthouse keeper had been living alone on the island for ten years when he wrote his last page. By the time the team arrived, nobody had read his diary. Maya found it fourteen months ago, and by next year it will have been published with her photos.',
   passos: ['A keeper lived alone in the lighthouse for ten years.', 'In 1962 he wrote the last page of his diary and left.', 'For sixty years nobody visited the lighthouse.', 'The team arrived on the island.', 'Maya found the diary.', 'Next year the diary will be published with her photos.'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. The island documentary.', toque: 'Advanced learners often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'I’m used to [[sleep]] on the floor.', r: 'I’m used to <b>sleeping</b> on the floor.', d: 'be used to + -ing, never + verb.' }, { f: 'I [[was counting]] nests for six hours when the storm hit.', r: 'I <b>had been counting</b> nests for six hours when the storm hit.', d: 'The activity that lasted up to that moment: had been + -ing.' }, { f: 'By next year we [[will publish]] the report.', r: 'By next year we <b>will have published</b> the report.', d: 'Finished before a future point: will have + participle.' }, { f: 'When we arrived, they [[left]] already.', r: 'When we arrived, they <b>had</b> already <b>left</b>.', d: 'The earlier past: had + participle.' }, { f: 'The report is due [[until]] Friday.', r: 'The report is due <b>by</b> Friday.', d: 'by = no later than. until = all the time up to.' }], nota: 'The earlier past: <b>had done</b>. Up to a past moment: <b>had been doing</b>. Finished before a future point: <b>will have done</b>. <b>By</b> = deadline; <b>until</b> = all the time.', uso: { p: 'Your turn. Tell the camera about your year: one thing that had happened before January, and one thing you will have done by next December.', molde: ['By January I had …', 'By next December I will have …'], ex: 'By January I had changed jobs. By next December I will have saved enough for a trip.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

@@ -24,12 +24,13 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'mesa', rot: 'I · Ten People, One Bill', t: 'Ten friends had dinner on Friday. The bill went to Bea. On Monday, it’s still hers.', p: 'Pick a card. Answer out loud. Nobody corrects you here.' },
   { k: 'setas', est: 'f', min: 6, img: 'mesa', rot: 'II · Who Did What', t: 'The group is trying to remember Friday. Every message is an arrow.', p: 'Read the message out loud. Tap the person who DID it. The arrow starts there.' },
   { k: 'duas', est: 'o', min: 7, img: 'mesa', rot: 'III · Two Questions', t: 'One arrow, two questions.', p: 'Tap the end you want to ask about. Say the question out loud.' },
-  { k: 'regra', est: 'f', min: 7, img: 'mesa', rot: 'IV · The Rule', t: 'Doer: ask the sentence. Other one: bring in DID.', p: 'Tap a rule, then its example. Then ask one question of your own.' },
-  { k: 'bea', est: 'l', min: 7, img: 'tela', rot: 'V · Bea Asks', t: 'Bea asks. You point.', p: 'Play the question. Say it the same way. Then tap the answer on the table.' },
-  { k: 'escolhe', est: 'f', min: 7, img: 'mesa', rot: 'VI · The Question Mark', t: 'The question mark sits on one end of the arrow.', p: 'Read the arrow. Say the question out loud. Then tap Check.' },
-  { k: 'conserta', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VII · Find the Broken Part', t: 'Six questions are broken.', p: 'Find the broken part in each question. Say the fix. Then tap Check.' },
-  { k: 'conta', est: 'o', min: 7, extra: 1, img: 'tela', rot: 'VIII · Who Didn’t Pay?', t: 'Nine friends owe Bea money. One didn’t pay. Your teacher has Bea’s notebook.', p: 'Ask the questions. Your teacher answers. Then name the one who didn’t pay.' },
-  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'IX · The Message', t: 'Your message from scene I comes back.', p: 'Write to Caio: who did he pay, who called him, what happened? It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'IV · Doer or Other?', t: 'Two questions about the same arrow.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new questions.' },
+  { k: 'regra', est: 'f', min: 7, img: 'mesa', rot: 'V · The Rule', t: 'Doer: ask the sentence. Other one: bring in DID.', p: 'Tap a rule, then its example. Then ask one question of your own.' },
+  { k: 'bea', est: 'l', min: 7, img: 'tela', rot: 'VI · Bea Asks', t: 'Bea asks. You point.', p: 'Play the question. Say it the same way. Then tap the answer on the table.' },
+  { k: 'escolhe', est: 'f', min: 7, img: 'mesa', rot: 'VII · The Question Mark', t: 'The question mark sits on one end of the arrow.', p: 'Read the arrow. Say the question out loud. Then tap Check.' },
+  { k: 'conserta', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'VIII · Find the Broken Part', t: 'Six questions are broken.', p: 'Find the broken part in each question. Say the fix. Then tap Check.' },
+  { k: 'conta', est: 'o', min: 7, extra: 1, img: 'tela', rot: 'IX · Who Didn’t Pay?', t: 'Nine friends owe Bea money. One didn’t pay. Your teacher has Bea’s notebook.', p: 'Ask the questions. Your teacher answers. Then name the one who didn’t pay.' },
+  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'X · The Message', t: 'Your message from scene I comes back.', p: 'Write to Caio: who did he pay, who called him, what happened? It goes to your My notes.' }
 ];
 
 var TR = { 'wc-b1.mp3': 'Who called Caio?', 'wc-b2.mp3': 'Who did Caio invite?', 'wc-b3.mp3': 'Who paid the waiter?', 'wc-b4.mp3': 'Who did Sara drive home?', 'wc-b5.mp3': 'Who texted Davi?', 'wc-b6.mp3': 'Who did Iuri text?' };
@@ -213,3 +214,20 @@ TOQUES.bea = function (b, n, v) { S.bea.esc[n] = v; };
 TOQUES['bea-prox'] = function () { S.bea.n = (S.bea.n || 0) + 1; };
 TOQUES.ct = function (b, n) { S.ct.feitos[n] = 1; };
 TOQUES['ct-f'] = function (b, n, v) { S.ct.final = v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Same arrow, two questions. Who is the question?',
+  a: { t: 'The doer is the question', falas: [['Bea', 'Somebody called Caio on Friday.'], ['You', '<mark>Who called</mark> Caio?']], d: 'You ask about the person who DID it. Ask like a sentence: Who called. No did.' },
+  b: { t: 'The other one is the question', falas: [['Bea', 'Marina called somebody on Friday.'], ['You', '<mark>Who did</mark> Marina <mark>call</mark>?']], d: 'You ask about the person who RECEIVED it. Bring in did: Who did Marina call? The verb is clean.' },
+  pergunta: 'Same dinner, two questions. What is different?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Sara drove somebody home. You ask about the person who got a ride:', o: ['Who did Sara drive home?', 'Who drove Sara home?'], c: 0, d: 'Sara is the doer. The question is the other one: did.' },
+    { p: 'Somebody paid the bill. You ask who:', o: ['Who paid the bill?', 'Who did pay the bill?'], c: 0, d: 'The doer is the question: no did.' },
+    { p: 'Iuri ate something. You ask what:', o: ['What did Iuri eat?', 'What ate Iuri?'], c: 0, d: 'Iuri did it. Ask about the thing: did.' },
+    { p: 'Something happened at dinner. You ask what:', o: ['What happened at dinner?', 'What did happen at dinner?'], c: 0, d: 'happened is the doer: no did.' }
+  ],
+  nota: 'If the question word is the one who <b>did</b> it: ask like a sentence, <b>Who called Caio?</b> If the question word is the other end of the arrow: bring in <b>did</b>, <b>Who did Marina call?</b>',
+  uso: { p: 'Your turn. Something that happened at a party. One question about the doer, one about the other one.', molde: ['Who …ed …?', 'Who did … …?'], ex: 'Who brought the cake? Who did Paulo invite?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

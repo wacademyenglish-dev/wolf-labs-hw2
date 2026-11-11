@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 12, kick: 'DUOLINGO ENGLISH TES
   nota: 'Quality beats quantity here: two correct, rich sentences are better than five short ones with mistakes.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'transforma', est: 'w', min: 9, img: 'conversa', rot: 'I · Build It Up', t: 'From flat to rich, one step at a time.', p: 'Read the sentence and the clue. Say the richer sentence. Then write it.' },
-  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'II · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
-  { k: 'prova', est: 'w', min: 14, img: 'conversa', rot: 'III · Three Photos', t: 'One minute each. Write.', p: 'Start the clock and write about the photo. Aim for two rich sentences.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'I · The Ladder', t: 'One photo sentence, five steps.', p: 'Read each step out loud, then go one step up. Notice what each step adds. Then climb with your own photo.' },
+  { k: 'transforma', est: 'w', min: 9, img: 'conversa', rot: 'II · Build It Up', t: 'From flat to rich, one step at a time.', p: 'Read the sentence and the clue. Say the richer sentence. Then write it.' },
+  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
+  { k: 'prova', est: 'w', min: 14, img: 'conversa', rot: 'IV · Three Photos', t: 'One minute each. Write.', p: 'Start the clock and write about the photo. Aim for two rich sentences.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var TRANSFORMA = { rot: 'BUILD IT UP', fim: 'That is the formula: place + details + adjectives + which / where / with.', itens: [
@@ -50,3 +51,18 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 12: transforma · erros · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One photo. Build the sentence one step at a time.',
+  degraus: [
+    { r: 'start', f: '<b>There is</b> a tent.', d: 'The first sentence: what is in the photo.' },
+    { r: 'place', f: 'There is a tent <b>by a lake</b>.', d: 'Add a place.' },
+    { r: 'adjectives', f: 'There is a <b>small</b> tent by a <b>calm</b> lake.', d: 'Add adjectives before the nouns.' },
+    { r: 'with', f: 'There is a small tent by a calm lake, <b>with a campfire</b> in front of it.', d: 'Add with and one more detail.' },
+    { r: 'where', f: 'This is a small camp by a calm lake, <b>where</b> a campfire is burning.', d: 'Join the ideas with where or which.' }
+  ],
+  nota: 'The formula for one rich sentence: <b>place + details + adjectives + which / where / with</b>. Add one piece at a time, and the sentence grows.',
+  uso: { p: 'Your turn. Look at the room you are in. Build one sentence with the ladder.', molde: ['There is a … by …', '… with …', '… where …'], ex: 'There is a small table by a bright window, with a green plant on it.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

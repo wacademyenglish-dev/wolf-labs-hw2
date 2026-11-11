@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Secret Inspector', t: 'Three guests. How was the stay?', p: 'Ask each guest five questions. Your teacher is the guest. Then give the hotel its stars.' },
   { k: 'cartao', est: 'w', min: 7, img: 'conversa', rot: 'III · Your Review', t: 'Write a review of a place you stayed.', p: 'Four short lines: too much / not enough, both or neither, one -ed and one -ing word.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Mistake Hunter', t: 'Five reviews from the Hotel Marlow. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -58,3 +59,9 @@ var ESCOLHA = [
   { a: 'a hotel with too many rules', b: 'a hotel with too much noise', chips: ['Neither, but …', 'I’d choose …'], ex: 'Neither! But I’d choose the rules. I need to sleep.' },
   { a: 'a few close friends', b: 'a lot of friends you see a little', chips: ['I’d rather have a few …', 'Both are …'], ex: 'A few close friends. A lot of friends is tiring.' },
   { a: 'a relaxing beach holiday', b: 'an exciting city holiday', chips: ['I get bored when …', 'I find … exciting / tiring'], ex: 'The city. I get bored on the beach after two days.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. The inspector’s notes.', toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'There are too [[much]] people in the lobby.', r: 'There are too <b>many</b> people in the lobby.', d: 'People you can count: many.' }, { f: 'The water is not [[enough hot]].', r: 'The water is not <b>hot enough</b>.', d: 'enough comes after an adjective.' }, { f: 'I was very [[boring]] after the long wait.', r: 'I was very <b>bored</b> after the long wait.', d: 'How you feel: -ed.' }, { f: 'I have [[a few]] time before dinner.', r: 'I have <b>a little</b> time before dinner.', d: 'Time: you can’t count it. a little.' }, { f: 'The staff was [[very]] excellent.', r: 'The staff was <b>absolutely</b> excellent.', d: 'Strong words go with absolutely or really.' }], nota: '<b>Many</b> people, <b>much</b> noise. Adjective + <b>enough</b>. You feel <b>bored</b>; the show is <b>boring</b>. Strong words: <b>absolutely</b> exhausted.', uso: { p: 'Your turn. Write one line for your hotel review: one thing too much, one thing not enough.', molde: ['There are too many …', 'The … is not … enough.'], ex: 'There are too many stairs. The breakfast is not big enough.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

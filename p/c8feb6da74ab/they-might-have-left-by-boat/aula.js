@@ -33,12 +33,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'bussola', rot: 'III · The Lost Colony', t: 'What happened to the lost colony of Roanoke?', p: 'Pick a reaction first. The video plays in four short chapters: tap True or Lie, and ▶ plays any moment again.' },
   { k: 'falas', est: 'l', extra: 1, img: 'bussola', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'carta', est: 'o', min: 7, img: 'farol', rot: 'V · Kestrel Rock', t: 'October 14, 9:10 AM. The supply boat arrives at Kestrel Rock. Nora Vance is gone.', p: 'Tap a marker on the chart. Read the clue. Say your theory out loud. Then build it and tap Check.' },
-  { k: 'regra', est: 'f', min: 6, img: 'farol', rot: 'VI · The Rule', t: 'How sure are you? Modal + have + past participle.', p: 'Read the three flags. Then find the broken part of six lines and say the fix.' },
-  { k: 'bandeiras', est: 'f', min: 6, img: 'tempestade', rot: 'VII · The Signal Flags', t: 'Six pieces of evidence. How sure are you? Raise the right flag.', p: 'Your teacher reads the evidence. Tap the flag: CERTAIN, POSSIBLE or IMPOSSIBLE. Then say the theory out loud.' },
-  { k: 'guarda', est: 'o', min: 7, extra: 1, img: 'barco', rot: 'VIII · The Coast Guard Calls', t: '11 AM. The Coast Guard calls. Share your theories.', p: 'Your teacher is the officer. Answer with must have, might have and can’t have.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'farol', rot: 'IX · Quick Check', t: 'Six quick lines from the case file.', p: 'Tap Right or Wrong. If it is wrong, say the fix.' },
-  { k: 'mist', est: 'o', min: 7, extra: 1, img: 'fogueira', rot: 'X · Your Mysteries', t: 'Small mysteries from your own life.', p: 'Light a flare. Answer with a guess about the past. Your teacher adds another theory.' },
-  { k: 'fim', est: 'w', min: 6, img: 'amanhecer', rot: 'XI · The Last Page of the Log', t: 'What really happened to the people of Roanoke?', p: 'Three sentences: must have, might have, can’t have. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'farol', rot: 'VI · Mistake Hunter', t: 'Six lines from the case file. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'regra', est: 'f', min: 6, img: 'farol', rot: 'VII · The Rule', t: 'How sure are you? Modal + have + past participle.', p: 'Read the three flags. Then find the broken part of six lines and say the fix.' },
+  { k: 'bandeiras', est: 'f', min: 6, img: 'tempestade', rot: 'VIII · The Signal Flags', t: 'Six pieces of evidence. How sure are you? Raise the right flag.', p: 'Your teacher reads the evidence. Tap the flag: CERTAIN, POSSIBLE or IMPOSSIBLE. Then say the theory out loud.' },
+  { k: 'guarda', est: 'o', min: 7, extra: 1, img: 'barco', rot: 'IX · The Coast Guard Calls', t: '11 AM. The Coast Guard calls. Share your theories.', p: 'Your teacher is the officer. Answer with must have, might have and can’t have.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'farol', rot: 'X · Quick Check', t: 'Six quick lines from the case file.', p: 'Tap Right or Wrong. If it is wrong, say the fix.' },
+  { k: 'mist', est: 'o', min: 7, extra: 1, img: 'fogueira', rot: 'XI · Your Mysteries', t: 'Small mysteries from your own life.', p: 'Light a flare. Answer with a guess about the past. Your teacher adds another theory.' },
+  { k: 'fim', est: 'w', min: 6, img: 'amanhecer', rot: 'XII · The Last Page of the Log', t: 'What really happened to the people of Roanoke?', p: 'Three sentences: must have, might have, can’t have. They go to your My notes.' }
 ];
 
 var YT = '6RVrVV-rgdo';
@@ -257,3 +258,19 @@ TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n
 TOQUES.ct = function (b, n) { S.ct.sel = n; };
 TOQUES['gd-prox'] = function () { S.gd.n++; };
 TOQUES.mi = function () { if (S.mi.n < 5) S.mi.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines from the case file.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'They must [[to]] have left before the storm.', r: 'They <b>must have left</b> before the storm.', d: 'After must: no to.' },
+    { f: 'Nora might have [[went]] to Gannet Island.', r: 'Nora might have <b>gone</b> to Gannet Island.', d: 'After have: the participle. gone, not went.' },
+    { f: 'She [[mustn’t]] have fallen. Her boots are dry.', r: 'She <b>can’t</b> have fallen. Her boots are dry.', d: 'For impossible: can’t have. Not mustn’t.' },
+    { f: 'The boat may [[left]] at 6 AM.', r: 'The boat may <b>have left</b> at 6 AM.', d: 'may + have + participle. Don’t lose have.' },
+    { f: 'The fog could [[has]] hidden the dock.', r: 'The fog could <b>have</b> hidden the dock.', d: 'After could: have. Never has.' },
+    { f: 'Someone [[had to]] take the radio. It is gone.', r: 'Someone <b>must have taken</b> the radio. It is gone.', d: 'had to is an obligation. For a guess: must have + participle.' }
+  ],
+  nota: 'A guess about the past: <b>must / might / may / could / can’t</b> + <b>have</b> + participle. No to, no -s, and the right participle: gone, taken, seen.',
+  uso: { p: 'Your turn. Something small is missing in your house. Give two guesses.', molde: ['It must have …', 'It might have …', 'It can’t have …'], ex: 'My keys are missing. I might have left them in the car. They can’t have fallen in the sink: I never open it.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

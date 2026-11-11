@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Meeting', t: 'Three colleagues. Who said what?', p: 'Ask each colleague five questions. Your teacher is the colleague. Then report to the director.' },
   { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Meeting Card', t: 'Four lines from the meeting.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -56,3 +57,9 @@ var ESCOLHA = [
   { a: 'a boss who admits mistakes', b: 'a boss who never makes them', chips: ['I’d choose …', 'someone who admits …ing'], ex: 'One who admits making them. Nobody is perfect.' },
   { a: 'a ten-hour flight in first class', b: 'a two-hour flight in a tiny seat', chips: ['a …-hour flight', 'absolutely …'], ex: 'The two-hour flight. Ten hours is absolutely exhausting, even in first class.' },
   { a: 'promise something and fail', b: 'refuse to promise anything', chips: ['I’d rather promise to …', 'I’d refuse to …'], ex: 'Refuse to promise. Then nobody is disappointed.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 7.', rotulo: 'Reporting and describing', linhas: ['<b>deny</b> / <b>admit</b> / <b>suggest</b> + <b>-ing</b> · <b>promise</b> / <b>refuse</b> + <b>to</b>', '<b>insist on</b> + -ing · she said <b>that</b> … · he suggested <b>that we launch</b>', 'absolutely <b>furious</b> · really <b>tiny</b> · not “very furious”', 'a <b>ten-hour</b> flight (no s) · the <b>more</b> we talk, the <b>less</b> we agree'], uso: { p: 'Your turn. You are in HR. Tell the director who said what in the meeting. Use one reporting verb with -ing and one with to.', molde: ['She denied …ing', 'He promised to …', 'They suggested …ing'], ex: 'Marta admitted forgetting the date. Paulo promised to fix it. They suggested moving the launch.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

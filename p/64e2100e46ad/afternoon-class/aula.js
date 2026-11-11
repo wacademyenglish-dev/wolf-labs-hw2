@@ -15,13 +15,14 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'capa', rot: 'I · Two O’Clock', t: 'Your afternoon, right now.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'janelas', est: 'o', min: 7, img: 'predio', rot: 'II · The School Windows', t: 'Eight windows. Something is happening in every one.', p: 'Open a window. Say what is happening right now.' },
-  { k: 'regra', est: 'f', min: 6, img: 'travesseiro', rot: 'III · The Rule', t: 'Right now: two pieces, always.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'ing', est: 'f', min: 6, img: 'travesseiro', rot: 'IV · Spell the -ing', t: 'Add -ing. Sometimes the verb changes a little.', p: 'Say it, then tap the right spelling.' },
-  { k: 'filme', est: 'l', min: 10, img: 'capa', rot: 'V · The Film', t: 'Afternoon Class: a short film with no words.', p: 'It plays in chapters. After each one, you are the voice of the film.' },
-  { k: 'zoom', est: 'o', min: 7, extra: 1, img: 'capa', rot: 'VI · Zoom In', t: 'Very close, very blurry. What is happening?', p: 'Ask: Is it …ing? Are they …ing? Every no opens the photo a little.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'capa', rot: 'VII · Quick Check', t: 'Six sentences from the afternoon.', p: 'Say the whole sentence. Then tap the words.' },
-  { k: 'maya', est: 'o', min: 7, extra: 1, img: 'celular', rot: 'VIII · The Phone Call', t: 'Your friend Maya is calling, from her afternoon class!', p: 'Your teacher is Maya. Answer about your real life, then ask her.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · The Last Bell', t: 'Right now, in your home.', p: 'Five things happening right now, and one that isn’t. The red line watches the two pieces. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'travesseiro', rot: 'III · The Ladder', t: 'One verb, five steps.', p: 'Read each step out loud, then go one step up. Notice the two pieces. Then climb with your own verb.' },
+  { k: 'regra', est: 'f', min: 6, img: 'travesseiro', rot: 'IV · The Rule', t: 'Right now: two pieces, always.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'ing', est: 'f', min: 6, img: 'travesseiro', rot: 'V · Spell the -ing', t: 'Add -ing. Sometimes the verb changes a little.', p: 'Say it, then tap the right spelling.' },
+  { k: 'filme', est: 'l', min: 10, img: 'capa', rot: 'VI · The Film', t: 'Afternoon Class: a short film with no words.', p: 'It plays in chapters. After each one, you are the voice of the film.' },
+  { k: 'zoom', est: 'o', min: 7, extra: 1, img: 'capa', rot: 'VII · Zoom In', t: 'Very close, very blurry. What is happening?', p: 'Ask: Is it …ing? Are they …ing? Every no opens the photo a little.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'capa', rot: 'VIII · Quick Check', t: 'Six sentences from the afternoon.', p: 'Say the whole sentence. Then tap the words.' },
+  { k: 'maya', est: 'o', min: 7, extra: 1, img: 'celular', rot: 'IX · The Phone Call', t: 'Your friend Maya is calling, from her afternoon class!', p: 'Your teacher is Maya. Answer about your real life, then ask her.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'X · The Last Bell', t: 'Right now, in your home.', p: 'Five things happening right now, and one that isn’t. The red line watches the two pieces. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -216,3 +217,17 @@ TOQUES['zm-prox'] = function () { S.zoom = { n: S.zoom.n + 1, nao: 0, achou: 0 }
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
 TOQUES['my-viu'] = function () { S.maya.viu[S.maya.n] = 1; };
 TOQUES['my-prox'] = function () { S.maya.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One verb. Climb it one step at a time.',
+  degraus: [
+    { r: 'verb', f: 'sleep', d: 'The verb, clean.' },
+    { r: 'now', f: 'The teacher <b>is sleeping</b>.', d: 'is + sleep + ing: two pieces, always.' },
+    { r: 'not', f: 'The teacher <b>isn’t sleeping</b>.', d: 'The no goes after is.' },
+    { r: '?', f: '<b>Is</b> the teacher <b>sleeping</b>?', d: 'Is jumps to the front.' },
+    { r: 'short', f: 'Yes, he <b>is</b>. · No, he <b>isn’t</b>.', d: 'The short answer keeps is.' }
+  ],
+  nota: 'Two pieces, always: <b>am / is / are</b> + verb<b>-ing</b>. Never only one: not he sleeping, not he is sleep.',
+  uso: { p: 'Your turn. Look around you. Climb the ladder with one person or animal: …ing, isn’t …ing, Is … …ing?', molde: ['My dog is …ing.', 'He isn’t …ing.', 'Is he …ing?'], ex: 'My dog is sleeping on the sofa. He isn’t barking. Is he dreaming? Yes, he is.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

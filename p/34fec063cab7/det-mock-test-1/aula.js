@@ -12,12 +12,13 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 15, kick: 'DUOLINGO ENGLISH TES
   nota: 'Treat it like the real day: quiet room, water, phone away. Your teacher only helps after each part.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'palavras', est: 'f', min: 3, img: 'conversa', rot: 'I · Read and Select', t: 'Real words only.', p: 'One round, one minute.' },
-  { k: 'lacunas', est: 'w', min: 7, img: 'capa', rot: 'II · Fill in and Complete', t: 'Three sentences, then a paragraph.', p: 'Twenty seconds per sentence. Three minutes for the paragraph.' },
-  { k: 'ditado', est: 'l', min: 5, img: 'conversa', rot: 'III · Listen and Type', t: 'Three sentences. Up to three plays each.', p: 'Type every word.' },
-  { k: 'multipla', est: 'l', min: 7, img: 'capa', rot: 'IV · Listening and Reading', t: 'A conversation, then a short text.', p: 'Listen once to each line. Then read and choose.' },
-  { k: 'prova', est: 'o', min: 20, img: 'conversa', rot: 'V · Speaking and Writing', t: 'Five tasks with the real clock.', p: 'A photo, a topic, two questions, and the writing sample.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · Results', t: 'Mock test 1: how did it go?', p: 'Read each line. Tap the ones that went well. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'I · The Pocket Rule', t: 'Four lines for the whole mock test.', p: 'Read one line at a time. Then keep the rule in the corner while you take the mock.' },
+  { k: 'palavras', est: 'f', min: 3, img: 'conversa', rot: 'II · Read and Select', t: 'Real words only.', p: 'One round, one minute.' },
+  { k: 'lacunas', est: 'w', min: 7, img: 'capa', rot: 'III · Fill in and Complete', t: 'Three sentences, then a paragraph.', p: 'Twenty seconds per sentence. Three minutes for the paragraph.' },
+  { k: 'ditado', est: 'l', min: 5, img: 'conversa', rot: 'IV · Listen and Type', t: 'Three sentences. Up to three plays each.', p: 'Type every word.' },
+  { k: 'multipla', est: 'l', min: 7, img: 'capa', rot: 'V · Listening and Reading', t: 'A conversation, then a short text.', p: 'Listen once to each line. Then read and choose.' },
+  { k: 'prova', est: 'o', min: 20, img: 'conversa', rot: 'VI · Speaking and Writing', t: 'Five tasks with the real clock.', p: 'A photo, a topic, two questions, and the writing sample.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VII · Results', t: 'Mock test 1: how did it go?', p: 'Read each line. Tap the ones that went well. Your teacher confirms.' }
 ];
 
 var PALAVRAS = { seg: 60, fim: 'Part I done. Next: the gaps.', rodadas: [
@@ -69,3 +70,16 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 15 · simulado 1: palavras · lacunas · ditado · multipla · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de palavras.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'Mock test 1',
+  linhas: [
+    '<b>Read and Select</b>: tap only the real words. A fake word uses real pieces in the wrong place.',
+    '<b>Fill in the blanks</b>: the words around the gap give the form: could + <b>clean verb</b>, was + <b>-ed</b>.',
+    '<b>Listen and Type</b>: type the <b>full form</b>: want to, going to, of.',
+    '<b>Speak and Write</b>: answer, reason, example, wrap-up. <b>That’s why …</b>'
+  ],
+  uso: { p: 'Your turn. Which question type is hardest for you, and what is your plan for it?', molde: ['The hardest part is …', 'My plan is to …'], ex: 'The hardest part is Listen and Type. My plan is to practice ten sentences a day.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

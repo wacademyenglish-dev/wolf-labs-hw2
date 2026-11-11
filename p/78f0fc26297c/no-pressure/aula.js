@@ -33,10 +33,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Teaser', t: 'Harry Potter. The HBO series teaser.', p: 'Role-play first. Watch the teaser. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'corujas', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'lareira', rot: 'V · Want Him to Go', t: 'They expect him to win. They don’t want him to fail.', p: 'Tap what people want, expect and ask. Then finish the rule.' },
-  { k: 'cartas', est: 'o', min: 7, img: 'lareira', rot: 'VI · The Letters', t: 'Everybody writes to Harry. Read each letter right.', p: 'Build each sentence from the words. Say it. Then tap Check.' },
-  { k: 'pressao', est: 'o', min: 5, img: 'corujas', rot: 'VII · Your Letters', t: 'Two letters for you. The teacher picks.', p: 'The teacher picks A or B. Say what they want you to do.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Debate', t: 'The debate.', p: 'Debate.' }
+  { k: 'gx', est: 'f', min: 4, img: 'lareira', rot: 'V · Letters in Blocks', t: 'Everybody wants something from Harry.', p: 'Read the blocks out loud. Notice what changes. Then build a sentence and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'lareira', rot: 'VI · Want Him to Go', t: 'They expect him to win. They don’t want him to fail.', p: 'Tap what people want, expect and ask. Then finish the rule.' },
+  { k: 'cartas', est: 'o', min: 7, img: 'lareira', rot: 'VII · The Letters', t: 'Everybody writes to Harry. Read each letter right.', p: 'Build each sentence from the words. Say it. Then tap Check.' },
+  { k: 'pressao', est: 'o', min: 5, img: 'corujas', rot: 'VIII · Your Letters', t: 'Two letters for you. The teacher picks.', p: 'The teacher picks A or B. Say what they want you to do.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Debate', t: 'The debate.', p: 'Debate.' }
 ];
 
 var SERIE = 'Harry Potter', ANO = '2026';
@@ -250,3 +251,17 @@ var FIM = { tipo: 'debate', rot: 'VIII · The Debate', t: 'Should a school decid
   b: { rot: 'No, it shouldn’t', motivos: ['I want students to choose for themselves.', 'Nobody should expect an eleven-year-old to know.', 'Labels make kids feel pressure.'] },
   frases: ['I want… to…', 'They expect us to…', 'I see your point, but…'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'The letters, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Uncle Vernon', 'WHO WANTS', 'quem'], ['wants', 'WANT', 'aux'], ['him', 'WHO DOES IT', 'o'], ['to be quiet', 'TO + ACTION', 'acao']], d: 'One person wants. Another person does.' },
+    { b: [['Hagrid', 'WHO WANTS', 'quem'], ['asked', 'ASK', 'aux'], ['him', 'WHO DOES IT', 'o'], ['to come', 'TO + ACTION', 'acao']], d: 'Same four blocks with asked.' },
+    { b: [['Aunt Petunia', 'WHO WANTS', 'quem'], ['told', 'TELL', 'aux'], ['him', 'WHO DOES IT', 'o'], ['not to go', 'NOT + TO + ACTION', 'acao']], d: 'For no: not goes before to.' }
+  ],
+  nota: 'The same blocks every time: <b>who wants</b> + the word + <b>him / her / me</b> + <b>to</b> + action. The person after the word is him, not he. For no: <b>not to</b>.',
+  monta: { p: 'Build the next line. Then say it.', pecas: [['him', 'WHO DOES IT', 'o'], ['to read', 'TO + ACTION', 'acao'], ['Hagrid', 'WHO WANTS', 'quem'], ['the letter', 'WHAT', 'o'], ['wants', 'WANT', 'aux']], ordem: [2, 4, 0, 1, 3] },
+  uso: { p: 'Your turn. What do people expect you to do? Say two sentences.', molde: ['My boss wants me to …', 'My mother asked me to …'], ex: 'My boss wants me to finish the report today. My mother asked me to call her tonight.' },
+  prof: 'Read the blocks with the student, top to bottom: the word on top, its job under it. Point at him before to.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

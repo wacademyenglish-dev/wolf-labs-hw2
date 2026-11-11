@@ -16,12 +16,13 @@ var L = [
   { k: 'capa', est: null, img: 'portao' },
   { k: 'voce', est: 'o', min: 7, img: 'cozinha', rot: 'I · You, Live', t: 'Before the farm: you, every day and right now.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
   { k: 'cameras', est: 'f', min: 6, img: 'cavalos', rot: 'II · Four Cameras, One Page', t: 'The page on the fridge says what happens every day. The cameras show what is happening now.', p: 'Play Marta’s message. Open a camera. Send each line to NOW or EVERY DAY. Then say it.' },
-  { k: 'regra', est: 'f', min: 6, img: 'estabulo', rot: 'III · Two Presents', t: 'Every day is one piece. Now is two pieces.', p: 'Read the cards out loud. Then fix the four traps.' },
-  { k: 'monta', est: 'f', min: 6, img: 'galinhas', rot: 'IV · The Live Caption', t: 'Every live caption needs two pieces: BE and -ing.', p: 'Pick BE. Then the verb. Then read the caption out loud.' },
-  { k: 'relatos', est: 'l', min: 7, img: 'cozinha', rot: 'V · The First Reports', t: 'Marta is on the train. The voice messages arrive.', p: 'Play a message. Is he talking about NOW, or EVERY DAY? Then say it back.' },
-  { k: 'dia3', est: 'l', min: 7, img: 'chuva', rot: 'VI · Day Three', t: 'Day three. Marta asks the same question six times.', p: 'Play his answer. Is he really there, looking at the farm?' },
-  { k: 'chamada', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'VII · The Video Call', t: 'A video call with the owner. Then swap.', p: 'First you are the house-sitter. Then you are the owner. Answer and ask out loud.' },
-  { k: 'fim', est: 'w', min: 6, img: 'portao', rot: 'VIII · Your Report', t: 'Your report to Marta, live from the farm.', p: 'Write five lines: what is happening now, and what you do every day. The red line watches the two pieces. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'galinhas', rot: 'III · Two Pieces', t: 'The live caption, in blocks.', p: 'Read the blocks out loud. Notice the two pieces. Then build a caption and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'estabulo', rot: 'IV · Two Presents', t: 'Every day is one piece. Now is two pieces.', p: 'Read the cards out loud. Then fix the four traps.' },
+  { k: 'monta', est: 'f', min: 6, img: 'galinhas', rot: 'V · The Live Caption', t: 'Every live caption needs two pieces: BE and -ing.', p: 'Pick BE. Then the verb. Then read the caption out loud.' },
+  { k: 'relatos', est: 'l', min: 7, img: 'cozinha', rot: 'VI · The First Reports', t: 'Marta is on the train. The voice messages arrive.', p: 'Play a message. Is he talking about NOW, or EVERY DAY? Then say it back.' },
+  { k: 'dia3', est: 'l', min: 7, img: 'chuva', rot: 'VII · Day Three', t: 'Day three. Marta asks the same question six times.', p: 'Play his answer. Is he really there, looking at the farm?' },
+  { k: 'chamada', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'VIII · The Video Call', t: 'A video call with the owner. Then swap.', p: 'First you are the house-sitter. Then you are the owner. Answer and ask out loud.' },
+  { k: 'fim', est: 'w', min: 6, img: 'portao', rot: 'IX · Your Report', t: 'Your report to Marta, live from the farm.', p: 'Write five lines: what is happening now, and what you do every day. The red line watches the two pieces. It goes to your My notes.' }
 ];
 
 /* I · você, ao vivo */
@@ -226,3 +227,16 @@ TOQUES.re = function (b, n, v) { var x = RELATOS[S.re.n]; if (!x || S.re.esc ===
 TOQUES['re-prox'] = function () { S.re = { n: S.re.n + 1, esc: '' }; };
 TOQUES.d3 = function (b, n) { var x = DIA3[S.d3.n]; if (!x || S.d3.esc === x.la) return false; S.d3.esc = n; };
 TOQUES['d3-prox'] = function () { S.d3.n++; S.d3.esc = -1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'The farm, in blocks. Each block has a job.',
+  frases: [
+    { b: [['I', 'WHO'], ['feed', 'ACTION'], ['the horses', 'WHAT'], ['at six', 'WHEN']], d: 'Every day: one piece.' },
+    { b: [['I', 'WHO'], ['am', 'BE', 'aux'], ['feeding', 'ACTION + ING', 'acao'], ['the horses', 'WHAT'], ['now', 'WHEN']], d: 'Right now: two pieces, BE and -ing.' },
+    { b: [['The chickens', 'WHO'], ['are', 'BE', 'aux'], ['eating', 'ACTION + ING', 'acao'], ['by the barn', 'WHERE']], d: 'More than one: are.' }
+  ],
+  nota: 'Right now needs <b>two pieces</b>: <b>am / is / are</b> + the verb with <b>-ing</b>. Every day needs one: I feed. Never “I feeding” and never “I am feed”.',
+  monta: { p: 'Build the live caption for the camera. Then say it.', pecas: [['is', 'BE', 'aux'], ['eating', 'ACTION + ING', 'acao'], ['The horse', 'WHO'], ['hay', 'WHAT']], ordem: [2, 0, 1, 3], outras: [] },
+  uso: { p: 'Your turn. Look around you. What is happening right now? Say two sentences with am, is or are.', molde: ['I am …-ing', 'My … is …-ing'], ex: 'I am talking to my teacher. My dog is sleeping on the sofa.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

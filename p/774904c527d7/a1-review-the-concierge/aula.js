@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Concierge', t: 'Three tourists. Give them the way.', p: 'For each tourist, say the way in five parts. Your teacher taps each part you say. Then plan the evening together.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Mistake Hunter', t: 'Six lines from the concierge. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -71,3 +72,9 @@ var PODE = [
 /* MECÂNICAS VARIADAS */
 var ERROS = { tipo: 'nota', rot: 'A NOTE FOR THE TOURIST · FROM THE OLD CONCIERGE', partes: ['To the museum: ', ['You go', 'Go', 'Verb first, no you.'], ' out of the hotel. ', ['Turn left in', 'Turn left at', 'turn left AT the bank.'], ' the bank. It’s on your right, ', ['next the', 'next to the', 'next TO.'], ' park. ', ['No take', 'Don’t take', 'Don’t + verb.'], ' the bus! Tonight ', ['let’s to go', 'let’s go', 'let’s + verb.'], ' to the old town.'] };
 var CADEIRA = { itens: [{ alvo: 'Ask me the way to a bakery.', dica: 'Excuse me, where is the bakery?', resp: 'Go straight and turn right at the bank.' }, { alvo: 'Ask me to help you, nicely.', dica: 'Please help me with this map.', resp: 'Sure!' }, { alvo: 'Invite me to do something tonight.', dica: 'Let’s … / Shall we …?', resp: 'Good idea! Let’s go.' }, { alvo: 'Ask me for one rule in my house.', dica: 'What’s a rule in your house?', resp: 'Don’t eat in the bedroom!' }, { alvo: 'Ask me how to make my favorite drink.', dica: 'How do you make it?', resp: 'Cut a lemon, add water and sugar.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. The way to the museum.', toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.', itens: [{ f: '[[You]] turn left at the bank.', r: '<b>Turn</b> left at the bank.', d: 'An order: the verb first. No you.' }, { f: '[[No]] take the bus.', r: '<b>Don’t</b> take the bus.', d: 'For no: don’t + verb.' }, { f: 'Let’s [[to]] go!', r: 'Let’s <b>go</b>!', d: 'Let’s + verb. No to.' }, { f: 'Turn left [[in]] the bank.', r: 'Turn left <b>at</b> the bank.', d: 'A point on the way: at.' }, { f: 'The museum is [[in]] your right.', r: 'The museum is <b>on</b> your right.', d: 'on your left, on your right.' }, { f: 'Please [[to]] sit down.', r: 'Please <b>sit</b> down.', d: 'Please + verb. No to.' }], nota: 'An order is the clean verb, first: <b>Turn</b>, <b>Go</b>, <b>Sit</b>. No you, no to. For no: <b>Don’t</b>. Together: <b>Let’s go</b>.', uso: { p: 'Your turn. A tourist asks for the bank. Give three steps with a verb first.', molde: ['Go straight …', 'Turn left at …', 'It’s on your right.'], ex: 'Go straight. Turn left at the hotel. The bank is on your right.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

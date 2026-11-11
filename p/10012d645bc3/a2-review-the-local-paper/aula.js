@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 14, img: 'capa', rot: 'II · The Local Paper', t: 'Three people saw something yesterday. Interview them.', p: 'Ask each person five questions. Your teacher is the person. Then dictate the story to your editor.' },
   { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Local Paper Rule', t: 'Four questions from the reporter. You find the rule.', p: 'Read the four questions out loud. Look at the lit words. Choose the rule. Then ask your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [];
@@ -59,3 +60,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me something I didn’t do.', dica: 'Did you swim?', resp: 'No, I didn’t. The water was cold!' },
   { alvo: 'Ask me who called me yesterday.', dica: 'Who called you yesterday?', resp: 'My mother called me, of course.' }] };
 var PORTAS = [];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four questions. Find the rule yourself.', exemplos: ['Who <b>called</b> the firefighters?', 'Who <b>did</b> you <u>call</u>?', 'What <b>happened</b> last night?', 'What <b>did</b> she <u>see</u>?'], pergunta: 'When who or what is the one that DID it, the question …', opcoes: ['has no did: Who called the firefighters?', 'always has did: Who did call the firefighters?', 'ends in -ed: Who did called?'], c: 0, nao: 'Not that one. Compare lines 1 and 2: which one has did?', regra: '<b>Who / What + verb</b> when it is the one who did it: Who <b>called</b>? What <b>happened</b>? If you ask about the object, did comes back: Who <b>did</b> you <b>call</b>?', uso: { p: 'Your turn. You are the reporter. Ask a witness one question about who did it, and one with did.', molde: ['Who …?', 'What did you …?'], ex: 'Who called the police? What did you see?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

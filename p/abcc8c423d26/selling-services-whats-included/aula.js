@@ -17,12 +17,13 @@ var L = [
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Proposals', t: 'How many proposals do you send in a month?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · The One-Page Proposal', t: 'Bluepeak’s proposal for Oakridge Paper.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'III · “Is Training Included?”', t: 'Nora reads the proposal. She has three questions.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'IV · It Includes, Send It', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'separa', est: 'f', min: 7, img: 'mesa', rot: 'V · Included or Not Included?', t: 'Eight things from the proposal.', p: 'Choose a side. Say it: “It includes… / It doesn’t include…”' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'VI · The Debate: Is a Discount a Good Idea?', t: 'Three small debates about price.', p: 'Choose a side and say why. Your teacher takes the other side.' },
-  { k: 'formulario', est: 'w', min: 7, img: 'mesa', rot: 'VII · The CRM Record', t: 'After the call, Leo updates the CRM.', p: 'Read the notes. Fill in every field. Then check.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VIII · Your 4-Line Summary', t: 'Your proposal, in four lines.', p: 'Write it. Then say it to the client (your teacher).' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 28: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'IV · The Ladder', t: 'One verb, six steps.', p: 'Read each step out loud, then go one step up. Notice where the -s goes. Then climb with your own verb.' },
+  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'V · It Includes, Send It', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'separa', est: 'f', min: 7, img: 'mesa', rot: 'VI · Included or Not Included?', t: 'Eight things from the proposal.', p: 'Choose a side. Say it: “It includes… / It doesn’t include…”' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VII · The Debate: Is a Discount a Good Idea?', t: 'Three small debates about price.', p: 'Choose a side and say why. Your teacher takes the other side.' },
+  { k: 'formulario', est: 'w', min: 7, img: 'mesa', rot: 'VIII · The CRM Record', t: 'After the call, Leo updates the CRM.', p: 'Read the notes. Fill in every field. Then check.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'IX · Your 4-Line Summary', t: 'Your proposal, in four lines.', p: 'Write it. Then say it to the client (your teacher).' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'X · I Can', t: 'Lesson 28: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -118,3 +119,19 @@ var PODE = [
   'I can use it and them: I’ll send it. We check them.',
   'I can write a proposal summary in four lines.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One verb. Climb it one step at a time.',
+  degraus: [
+    { r: 'verb', f: '<b>include</b>', d: 'The verb, clean.' },
+    { r: 'it', f: 'The price <b>includes</b> training.', d: 'The price is it: include + s.' },
+    { r: 'not', f: 'It <b>doesn’t include</b> travel.', d: 'The -s goes into doesn’t. include is clean again.' },
+    { r: '?', f: '<b>Does</b> it <b>include</b> training?', d: 'Does goes first. include stays clean.' },
+    { r: 'be', f: '<b>Is</b> training <b>included</b>?', d: 'Another way: be + included.' },
+    { r: 'it · them', f: 'I’ll send <b>it</b> today. We check <b>them</b> every month.', d: 'After a verb: it, them. Not “they”.' }
+  ],
+  nota: 'Only one -s: <b>It includes</b>. <b>It doesn’t include</b>. <b>Does it include</b>? Or <b>Is it included</b>? After a verb, use <b>it</b> and <b>them</b>: send it, check them.',
+  uso: { p: 'Your turn. A proposal of yours: what it includes, and what it doesn’t include.', molde: ['It includes …', 'It doesn’t include …', 'Does it include …?'], ex: 'It includes training. It doesn’t include travel. Does it include support? Yes, it does.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

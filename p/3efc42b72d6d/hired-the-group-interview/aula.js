@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 10, kick: 'WOLF HIRED · MODULE
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · Three Candidates, One Room', t: 'A mock group interview with commentary.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 12, img: 'capa', rot: 'II · Build, Don’t Interrupt', t: 'The phrases of a good team player.', p: 'Compare A and B. Which one works better in a group? Why?' },
-  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'III · The Group Task', t: 'Your teacher plays the other candidates.', p: 'Read the task, prepare, start the clock, discuss.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Three Group Moves', t: 'Build, disagree softly, take turns.', p: 'Look at the three moves. Tap the move of each sentence. Then say three of your own.' },
+  { k: 'descobre', est: 'f', min: 12, img: 'capa', rot: 'III · Build, Don’t Interrupt', t: 'The phrases of a good team player.', p: 'Compare A and B. Which one works better in a group? Why?' },
+  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'IV · The Group Task', t: 'Your teacher plays the other candidates.', p: 'Read the task, prepare, start the clock, discuss.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'eLxA6hPaStw', titulo: 'How to Ace Your Group Interview: Mock Job Interview', fonte: 'INDEED · 0:49–4:50', inicio: 49, fim: 290,
@@ -53,3 +54,25 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 10: video · descobre · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'The group interview. Three moves.',
+  usos: [
+    { t: 'BUILD', f: 'Building on what Chloe said, we could also …', d: 'Give credit, then add your idea.' },
+    { t: 'DISAGREE SOFTLY', f: 'I see it slightly differently, because …', d: 'A soft start, then a reason.' },
+    { t: 'TAKE TURNS', f: 'Sorry, go ahead. · What do you think, Michael?', d: 'Give the turn, or invite the quiet person.' }
+  ],
+  pergunta: 'Which move is it?',
+  itens: [
+    { f: 'To add to that, I think the budget is small.', c: 0 },
+    { f: 'I’m not sure I agree, because the time is short.', c: 1 },
+    { f: 'We haven’t heard from Ana. What do you think?', c: 2 },
+    { f: 'Building on that idea, we could use two teams.', c: 0 },
+    { f: 'I see it slightly differently. What if we start small?', c: 1 },
+    { f: 'Sorry, go ahead. You were first.', c: 2 }
+  ],
+  nota: 'Three moves in a group: <b>build</b> (Building on what … said), <b>disagree softly</b> (I see it slightly differently), <b>take turns</b> (Sorry, go ahead. What do you think, …?). Never “my idea is better”.',
+  uso: { p: 'Your turn. Your group must choose a team name. Say one idea, one soft disagreement and one invitation.', molde: ['Building on …', 'I see it slightly differently …', 'What do you think, …?'], ex: 'Building on Ana’s idea, we could use Blue Team. I see it slightly differently: it’s too common. What do you think, Michael?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

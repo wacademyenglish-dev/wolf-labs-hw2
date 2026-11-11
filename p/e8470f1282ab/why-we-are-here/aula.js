@@ -32,10 +32,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Silo. The official trailer.', p: 'Guess first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'tela', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 7, img: 'oficina', rot: 'V · The Question Inside', t: 'The direct question and the polite question. Match them.', p: 'Match each direct question to the polite one. Then say both, out loud.' },
-  { k: 'escada', est: 'o', min: 7, img: 'capa', rot: 'VI · Down the Stairs', t: 'Six landings. Every question you build takes you one landing down.', p: 'Build the question out loud. Tap Check. The lantern goes down.' },
-  { k: 'curioso', est: 'o', min: 7, img: 'oficina', rot: 'VII · What You Wonder', t: 'Three people in the silo talk to you. How do you answer?', p: 'Pick how you answer. Then read the talk out loud.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · Questions', t: 'Questions.', p: 'Questions.' }
+  { k: 'gx', est: 'f', min: 4, img: 'escadaria', rot: 'V · The Flip', t: 'Watch the words move.', p: 'Flip each blunt question. Notice where the verb goes. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 7, img: 'oficina', rot: 'VI · The Question Inside', t: 'The direct question and the polite question. Match them.', p: 'Match each direct question to the polite one. Then say both, out loud.' },
+  { k: 'escada', est: 'o', min: 7, img: 'capa', rot: 'VII · Down the Stairs', t: 'Six landings. Every question you build takes you one landing down.', p: 'Build the question out loud. Tap Check. The lantern goes down.' },
+  { k: 'curioso', est: 'o', min: 7, img: 'oficina', rot: 'VIII · What You Wonder', t: 'Three people in the silo talk to you. How do you answer?', p: 'Pick how you answer. Then read the talk out loud.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · Questions', t: 'Questions.', p: 'Questions.' }
 ];
 
 var SERIE = 'Silo', ANO = '2023';
@@ -248,3 +249,23 @@ var FIM = { tipo: 'perguntas', rot: 'VIII · Questions', t: 'Questions with a qu
   ],
   depois: 'Now ask the teacher two questions with Do you know…? or Can you tell me…?' };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The blunt question, then the polite one. Watch the words move.',
+  frases: [
+    { de: ['Why', '*are', 'we', 'here', '?'], para: ['+Do you know', 'why', 'we', '*are', 'here', '?'], d: 'After the polite start: sentence order. We are.' },
+    { de: ['Where', '*does', 'the stair', 'go', '?'], para: ['+Can you tell me', 'where', 'the stair', '*goes', '?'], d: 'No does. The verb takes the -s back: it goes.' },
+    { de: ['*Is', 'the door', 'safe', '?'], para: ['+I wonder', '+if', 'the door', '*is', 'safe', '.'], d: 'A yes or no question: if. And I wonder ends with a period.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'The polite start does the asking. After it, the words go back to sentence order: <b>why we are here</b>, <b>where it goes</b>, <b>if it is safe</b>. No do, does or did.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'How deep is the silo?', r: 'Do you know how deep the silo <b>is</b>?' },
+    { de: 'Why did the people go down?', r: 'Can you tell me why the people <b>went</b> down?' },
+    { de: 'Is the air safe outside?', r: 'I wonder <b>if</b> the air <b>is</b> safe outside.' },
+    { de: 'When will the door open?', r: 'Do you know when the door <b>will open</b>?' }
+  ],
+  uso: { p: 'Your turn. Three questions for the people of the silo. Start polite.', molde: ['Can you tell me …', 'I wonder if …'], ex: 'Can you tell me why nobody goes outside? I wonder if anyone has seen the sky.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 14, kick: 'ENGLISH FOR HEALTHCA
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · A Model Case', t: 'Read a two-minute case presentation.', p: 'Read it out loud like a presenter. Then answer the questions.' },
-  { k: 'transforma', est: 'f', min: 10, img: 'capa', rot: 'II · Active to Passive', t: 'Make it sound like a case presentation.', p: 'Read the sentence and the clue. Say it in the passive.' },
-  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'III · Present Your Case', t: 'Present a case in two minutes.', p: 'One minute to plan with the card. Then present.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 14: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Flip', t: 'The patient moves to the front.', p: 'Flip each active sentence. Notice what moves. Then flip four on your own.' },
+  { k: 'transforma', est: 'f', min: 10, img: 'capa', rot: 'III · Active to Passive', t: 'Make it sound like a case presentation.', p: 'Read the sentence and the clue. Say it in the passive.' },
+  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'IV · Present Your Case', t: 'Present a case in two minutes.', p: 'One minute to plan with the card. Then present.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 14: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'CASE PRESENTATION · WARD 4 (FICTIONAL)', tipo: 'nota',
@@ -51,3 +52,24 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 14: leitura · transforma · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'We did it, then it was done. Watch the words move.',
+  frases: [
+    { de: ['We', '*admitted', 'him', 'on Monday', '.'], para: ['+He', '+was', '*admitted', 'on Monday', '.'], d: 'The patient comes first. Then was + admitted.' },
+    { de: ['We', '*treated', 'her', 'with antibiotics', '.'], para: ['+She', '+was', '*treated', 'with antibiotics', '.'], d: 'The same flip: was + the -ed word.' },
+    { de: ['We', '*referred', 'him', 'to a cardiologist', '.'], para: ['+He', '+was', '*referred', 'to a cardiologist', '.'], d: 'No more we: the story is about the patient.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'The patient moves to the front: <b>He was admitted</b>. After <b>was</b> comes the -ed word (or its special form: was given, was seen). Nobody says “we” any more.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'We discharged him on Friday.', r: 'He <b>was discharged</b> on Friday.' },
+    { de: 'The team mobilized her on day 2.', r: 'She <b>was mobilized</b> on day 2.' },
+    { de: 'The dentist extracted the tooth.', r: 'The tooth <b>was extracted</b>.' },
+    { de: 'We gave him a painkiller.', r: 'He <b>was given</b> a painkiller.' }
+  ],
+  uso: { p: 'Your turn. Tell one patient’s story in two sentences with was: when the patient was admitted, and what was done.', molde: ['He was admitted …', 'He was treated with …'], ex: 'She was admitted on Monday with chest pain. She was treated with aspirin.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

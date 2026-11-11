@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 11, kick: 'ENGLISH FOR DESIGNER
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · A Structure for Any App', t: 'A product designer’s three steps.', p: 'One question before, then the video, then the questions.' },
-  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'II · Strong or Weak?', t: 'Which comments show real critical thinking?', p: 'Read each comment out loud. Is it strong or weak?' },
-  { k: 'prova', est: 'o', min: 18, img: 'conversa', rot: 'III · Critique It Live', t: 'Two apps. Two minutes each.', p: 'Read the card, prepare, start the clock, critique out loud.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Three Comments', t: 'Like, problem, idea.', p: 'Look at the three comments. Tap the right kind for each new sentence. Then say your own.' },
+  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'III · Strong or Weak?', t: 'Which comments show real critical thinking?', p: 'Read each comment out loud. Is it strong or weak?' },
+  { k: 'prova', est: 'o', min: 18, img: 'conversa', rot: 'IV · Critique It Live', t: 'Two apps. Two minutes each.', p: 'Read the card, prepare, start the clock, critique out loud.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'EtJzi6jmyFM', titulo: 'How to ACE Your Design App Critique in Interviews', fonte: 'CHUNBUNS · 3:24–6:23', inicio: 204, fim: 383,
@@ -59,3 +60,25 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 11: video · separa · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'An app critique. Three kinds of comment.',
+  usos: [
+    { t: 'I LIKE …', f: 'I like the big photo because it shows the product.', d: 'A strength, with a reason.' },
+    { t: 'THE PROBLEM IS …', f: 'The problem is that the button is hard to find.', d: 'A weakness, with a reason.' },
+    { t: 'I WOULD TRY …', f: 'I would try a brighter color for the button.', d: 'An idea to make it better.' }
+  ],
+  pergunta: 'What kind of comment is it?',
+  itens: [
+    { f: 'The menu has too many options, and users get lost.', c: 1, d: 'A weakness with a reason.' },
+    { f: 'The checkout is short and clear, so people finish fast.', c: 0, d: 'A strength with a reason.' },
+    { f: 'Let’s move the search bar to the top, to save users time.', c: 2, d: 'An idea.' },
+    { f: 'The font is too small on a phone.', c: 1, d: 'A weakness.' },
+    { f: 'The orange button stands out, which helps users act.', c: 0, d: 'A strength.' },
+    { f: 'A progress bar might help people see how long it takes.', c: 2, d: 'An idea.' }
+  ],
+  nota: 'A strong critique has three kinds of comment: <b>I like</b> + why, <b>The problem is</b> + why, and <b>I would try</b> + an idea. To buy time, say: <b>Let me think for a second.</b>',
+  uso: { p: 'Your turn. Pick an app on your phone. One thing you like, one problem, one idea.', molde: ['I like … because …', 'The problem is that …', 'I would try …'], ex: 'I like the big photos because they show the food. The problem is that the cart is hard to find. I would try a button at the bottom.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

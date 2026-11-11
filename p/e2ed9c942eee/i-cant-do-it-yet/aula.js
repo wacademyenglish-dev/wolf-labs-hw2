@@ -30,10 +30,11 @@ var L = [
   { k: 'palavras', est: 'l', min: 5, img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Naruto Shippuden. Back home after two years.', p: 'Guess first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', min: 5, extra: 1, img: 'rolo', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'rolo', rot: 'V · Can, Can’t, Yet', t: 'Naruto’s notebook has mistakes. Can you find them?', p: 'Find the wrong words. Say the right ones out loud. Then tap Check.' },
-  { k: 'rolo', est: 'o', min: 7, img: 'capa', rot: 'VI · The Training Scroll', t: 'Six seals. Every right answer lights one, and your rank goes up.', p: 'Is the sentence true or a lie? If it is a lie, say the true one out loud.' },
-  { k: 'ficha', est: 'o', min: 7, img: 'vila', rot: 'VII · Your Ninja File', t: 'Interview the teacher: what can they do, and what can’t they do... yet?', p: 'Build each question out loud. Then tap Check and ask the teacher.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Questions', t: 'Questions.', p: 'Answer.' }
+  { k: 'gx', est: 'o', min: 4, img: 'treino', rot: 'V · Can You?', t: 'Ping-pong. Three words for each answer.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'regra', est: 'f', min: 6, img: 'rolo', rot: 'VI · Can, Can’t, Yet', t: 'Naruto’s notebook has mistakes. Can you find them?', p: 'Find the wrong words. Say the right ones out loud. Then tap Check.' },
+  { k: 'rolo', est: 'o', min: 7, img: 'capa', rot: 'VII · The Training Scroll', t: 'Six seals. Every right answer lights one, and your rank goes up.', p: 'Is the sentence true or a lie? If it is a lie, say the true one out loud.' },
+  { k: 'ficha', est: 'o', min: 7, img: 'vila', rot: 'VIII · Your Ninja File', t: 'Interview the teacher: what can they do, and what can’t they do... yet?', p: 'Build each question out loud. Then tap Check and ask the teacher.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Questions', t: 'Questions.', p: 'Answer.' }
 ];
 
 var SERIE = 'Naruto Shippuden', ANO = '2007';
@@ -235,3 +236,18 @@ var FIM = { tipo: 'perguntas', rot: 'VIII · Questions', t: 'Questions about you
   ],
   depois: 'Now you ask the teacher two of these questions.' };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Three words, fast.',
+  perguntas: [
+    { q: 'Can you run fast?', s: 'Yes, I <mark>can</mark>.', n: 'No, I <mark>can’t</mark>.', mais: 'Now ask your teacher: Can you run fast?' },
+    { q: 'Can you cook?', s: 'Yes, I <mark>can</mark>.', n: 'No, I <mark>can’t</mark>.', mais: 'What can you cook?' },
+    { q: 'Can you speak Japanese?', s: 'Yes, I <mark>can</mark>.', n: 'No, I <mark>can’t</mark>.', mais: 'Add one word: I can’t speak it … yet.' },
+    { q: 'Can your friends dance?', s: 'Yes, they <mark>can</mark>.', n: 'No, they <mark>can’t</mark>.' },
+    { q: 'Can Naruto jump very high?', s: 'Yes, he <mark>can</mark>.', n: 'No, he <mark>can’t</mark>.', mais: 'What else can he do?' },
+    { q: 'Can you draw a ninja?', s: 'Yes, I <mark>can</mark>.', n: 'No, I <mark>can’t</mark>.', mais: 'Say it with yet: I can’t draw one yet.' }
+  ],
+  nota: 'The short answer repeats can: Yes, I <b>can</b>. No, I <b>can’t</b>. Not “Yes, I can to” and not “Yes, I do”. Add <b>yet</b> at the end for something you will learn: I can’t do it <b>yet</b>.',
+  uso: { p: 'Your turn. Ask your teacher three Can you …? questions. Then tell one thing you can’t do yet.', molde: ['Can you …?', 'I can’t … yet.'], ex: 'Can you swim? Can you play the guitar? I can’t ride a bike yet.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

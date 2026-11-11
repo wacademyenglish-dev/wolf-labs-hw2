@@ -21,14 +21,15 @@ var L = [
   { k: 'capa', est: null, img: 'mesa' },
   { k: 'mesa', est: 'o', min: 7, img: 'mesa', rot: 'I · The Desk at Seven', t: 'The prototype was on this desk last night. This morning it’s gone.', p: 'Three questions. Answer out loud. Nothing gets corrected yet.' },
   { k: 'log', est: 'f', min: 6, img: 'porta', rot: 'II · The Door Log', t: 'The badge reader at the front door. Facts, not stories.', p: 'Read the claim out loud. Is it in the log, or not?' },
-  { k: 'forma', est: 'f', min: 6, img: 'porta', rot: 'III · Now, or Last Night?', t: 'One shape for now, one for last night. The modal never moves.', p: 'Read the situation. Choose the sentence about last night. Then say why the other one is wrong.' },
-  { k: 'medidor', est: 'o', min: 7, img: 'copa', rot: 'IV · How Much Proof?', t: 'Three degrees. The only question is how much proof you have.', p: 'Read the proof. Set the meter. Then say the sentence.' },
-  { k: 'vozes', est: 'l', min: 7, img: 'copa', rot: 'V · Three Voices', t: 'Three alibis. Nobody is telling the whole truth.', p: 'Play all three. Then decide: did they say it, or not?' },
-  { k: 'planta', est: 'o', min: 7, img: 'mancha', rot: 'VI · Seven Markers', t: 'Seven yellow markers on the floor plan. Each one is a piece of proof.', p: 'Open a marker. Set the meter. Say the deduction out loud.' },
-  { k: 'couldnt', est: 'f', min: 6, extra: 1, img: 'garagem', rot: 'VII · Couldn’t, or Can’t Have?', t: 'COULDN’T is about ability. CAN’T HAVE is about what happened.', p: 'Read what you mean. Choose the shape that says it.' },
-  { k: 'chefe', est: 'o', min: 7, extra: 1, img: 'garagem', rot: 'VIII · The Report to the Boss', t: 'The boss wasn’t here last night and has read nothing. Present the case.', p: 'Cover one point out loud. Your teacher, the boss, pushes back. Defend it.' },
-  { k: 'noite', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'IX · Your Own Last Night', t: 'Now your night, and deductions about other people.', p: 'Answer the question. Then make the deduction with the degree on the card.' },
-  { k: 'fim', est: 'w', min: 6, img: 'mancha', rot: 'X · Case Closed', t: 'Your first sentence about last night comes back.', p: 'Write the case in four sentences, all three degrees. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'III · The Clues, Lit Up', t: 'Two detectives, one wet stain. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then say your own.' },
+  { k: 'forma', est: 'f', min: 6, img: 'porta', rot: 'IV · Now, or Last Night?', t: 'One shape for now, one for last night. The modal never moves.', p: 'Read the situation. Choose the sentence about last night. Then say why the other one is wrong.' },
+  { k: 'medidor', est: 'o', min: 7, img: 'copa', rot: 'V · How Much Proof?', t: 'Three degrees. The only question is how much proof you have.', p: 'Read the proof. Set the meter. Then say the sentence.' },
+  { k: 'vozes', est: 'l', min: 7, img: 'copa', rot: 'VI · Three Voices', t: 'Three alibis. Nobody is telling the whole truth.', p: 'Play all three. Then decide: did they say it, or not?' },
+  { k: 'planta', est: 'o', min: 7, img: 'mancha', rot: 'VII · Seven Markers', t: 'Seven yellow markers on the floor plan. Each one is a piece of proof.', p: 'Open a marker. Set the meter. Say the deduction out loud.' },
+  { k: 'couldnt', est: 'f', min: 6, extra: 1, img: 'garagem', rot: 'VIII · Couldn’t, or Can’t Have?', t: 'COULDN’T is about ability. CAN’T HAVE is about what happened.', p: 'Read what you mean. Choose the shape that says it.' },
+  { k: 'chefe', est: 'o', min: 7, extra: 1, img: 'garagem', rot: 'IX · The Report to the Boss', t: 'The boss wasn’t here last night and has read nothing. Present the case.', p: 'Cover one point out loud. Your teacher, the boss, pushes back. Defend it.' },
+  { k: 'noite', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'X · Your Own Last Night', t: 'Now your night, and deductions about other people.', p: 'Answer the question. Then make the deduction with the degree on the card.' },
+  { k: 'fim', est: 'w', min: 6, img: 'mancha', rot: 'XI · Case Closed', t: 'Your first sentence about last night comes back.', p: 'Write the case in four sentences, all three degrees. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -242,3 +243,23 @@ TOQUES['ch-push'] = function () { S.ch.push = 1; };
 TOQUES['ch-prox'] = function () { S.ch = { n: S.ch.n + 1, push: 0 }; };
 TOQUES['no-foi'] = function () { S.no.foi = 1; };
 TOQUES['no-prox'] = function () { S.no = { n: S.no.n + 1, foi: 0 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de forma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The empty desk. Tap the lit words.',
+  falas: [
+    { q: 'Partner', f: 'The tea stain was still wet at 11. Someone [[must have been]] at the desk after ten.' },
+    { q: 'You', f: 'The door log says Elena left at 9. She [[can’t have made]] that stain.' },
+    { q: 'Partner', f: 'And Marcus? He was in the garage at 9:40.' },
+    { q: 'You', f: 'He [[might have come]] back by 11. We don’t know yet.' },
+    { q: 'Partner', f: 'Then it [[could have been]] Arthur. Let’s ask him.' }
+  ],
+  porques: [
+    'Strong proof: the wet stain. must have + third form.',
+    'A clue says no: she was already gone. can’t have + third form.',
+    'Not sure: only a maybe. might have + third form.',
+    'Another maybe: could have + third form.'
+  ],
+  nota: 'The degree is the proof: <b>must have</b> (strong proof), <b>might / could have</b> (maybe), <b>can’t have</b> (a clue says no). Then the third form: must have <b>been</b>, can’t have <b>made</b>.',
+  uso: { p: 'Your turn. Something is missing at home or at work. Say what happened, with your proof.', molde: ['Someone must have …', 'It can’t have …', 'He might have …'], ex: 'The cake is gone. Someone must have eaten it. My dog can’t have done it: he was outside.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

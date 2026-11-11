@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 9, kick: 'ENGLISH FOR HEALTHCAR
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · Breaking Bad News', t: 'A doctor updates a patient’s son.', p: 'One question before, then the video, then the questions.' },
-  { k: 'ordem', est: 'f', min: 8, img: 'capa', rot: 'II · The SPIKES Route', t: 'Six steps, in order.', p: 'Tap the six sentences in order. Then name each step.' },
-  { k: 'descobre', est: 'f', min: 8, img: 'conversa', rot: 'III · Clear and Kind', t: 'Too blunt, too vague, or clear and kind?', p: 'Compare A and B. Which one helps the patient?' },
-  { k: 'prova', est: 'o', min: 14, img: 'capa', rot: 'IV · Your Conversation', t: 'A difficult conversation from your profession.', p: 'Thirty seconds to plan. Then up to two minutes, slowly.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · The Family Room', t: 'A difficult conversation. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then give your own difficult news.' },
+  { k: 'ordem', est: 'f', min: 8, img: 'capa', rot: 'III · The SPIKES Route', t: 'Six steps, in order.', p: 'Tap the six sentences in order. Then name each step.' },
+  { k: 'descobre', est: 'f', min: 8, img: 'conversa', rot: 'IV · Clear and Kind', t: 'Too blunt, too vague, or clear and kind?', p: 'Compare A and B. Which one helps the patient?' },
+  { k: 'prova', est: 'o', min: 14, img: 'capa', rot: 'V · Your Conversation', t: 'A difficult conversation from your profession.', p: 'Thirty seconds to plan. Then up to two minutes, slowly.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'NmNBq3TwtqE', titulo: 'Breaking Bad News - RCSEd Communications Skills Video Competition 2016', fonte: 'ROYAL COLLEGE OF SURGEONS OF EDINBURGH · 3 MIN',
@@ -60,3 +61,27 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 09: video · ordem · descobre · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de ordem.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'Difficult news, in order. Tap the lit words.',
+  falas: [
+    { q: 'Doctor', f: '[[I’m afraid]] I have some difficult news.' },
+    { q: 'Patient', f: 'Please, tell me.' },
+    { q: 'Doctor', f: '[[The biopsy shows cancer cells.]] It’s at an early stage.' },
+    { q: 'Patient', f: 'Oh … I don’t know what to say.' },
+    { q: 'Doctor', f: '[[I can see]] this is very hard to hear. Take your time.' },
+    { q: 'Patient', f: 'What happens now?' },
+    { q: 'Doctor', f: '[[Here’s what we’ll do next.]] [[What questions do you have?]]' }
+  ],
+  porques: [
+    'A warning shot first: I’m afraid … It gives the person a second to prepare.',
+    'Then the key fact, clearly, in plain words. No jargon.',
+    'Name the emotion: I can see … Then give time.',
+    'A plan: Here’s what we’ll do next.',
+    'An open invitation: What questions …? Not “Any questions?”.'
+  ],
+  nota: 'Four moves in order: a <b>warning shot</b> (I’m afraid …), the fact in <b>plain words</b>, the <b>emotion</b> (I can see …), then a <b>plan</b> and <b>What questions do you have?</b>',
+  uso: { p: 'Your turn. Give difficult news from your job in two sentences: a warning shot, then the fact.', molde: ['I’m afraid …', 'The results show …'], ex: 'I’m afraid I have some difficult news. The X-ray shows a broken bone.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

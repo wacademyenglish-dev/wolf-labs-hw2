@@ -12,15 +12,16 @@
 var L = [
   { k: 'capa', est: null, img: 'van' },
   { k: 'abre', est: 'o', min: 7, img: 'rua', rot: 'I · Before It Arrives', t: 'Three real suggestions. Say them to me, out loud.', p: 'Pick a card. Nobody is corrected here. Just suggest. Your teacher taps what you used.' },
-  { k: 'caixa1', est: 'f', min: 6, img: 'van', rot: 'II · The First Box', t: 'You and me, now.', p: 'Say the whole sentence out loud first. Then pick the front of it, and the thing goes to its room.' },
-  { k: 'nao', est: 'f', min: 6, img: 'van', rot: 'III · Let’s Not', t: 'Half of a move is what you refuse.', p: 'Read the fact. Say it out loud. Then choose: yes, or not?' },
-  { k: 'caixa2', est: 'f', min: 6, img: 'van', rot: 'IV · Six More', t: 'Six things left, and the light is going.', p: 'Same rule. Say it before you tap.' },
-  { k: 'shall', est: 'f', min: 6, img: 'placa', rot: 'V · Shall We?', t: 'Sometimes you don’t decide. You ask.', p: 'Look at the end of the line: a question mark asks, a full stop decides.' },
-  { k: 'duas', est: 'f', min: 6, img: 'rua', rot: 'VI · Two Kinds of Plan', t: 'An invitation, or already decided?', p: 'Read the situation. An invitation waits for an answer. A plan doesn’t.' },
-  { k: 'papel', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'VII · On the Sidewalk', t: 'Six lines, two people, one van and no time.', p: 'You take one side, your teacher the other. Then swap. The second time, cover the lines.' },
-  { k: 'responde', est: 'o', min: 7, extra: 1, img: 'placa', rot: 'VIII · Yes, Let’s', t: 'An invitation that nobody answers is not an invitation.', p: 'Invite your teacher. Your teacher answers for real, and says no once.' },
-  { k: 'quarto', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'IX · Your Room', t: 'Now a real room. Yours.', p: 'Five suggestions about a room you actually live in.' },
-  { k: 'fim', est: 'w', min: 6, img: 'van', rot: 'X · Let’s', t: 'Write a plan for your room, for two people.', p: 'Let’s, let’s not, Shall we…?, and one thing already decided. The red line watches. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'van', rot: 'II · At the Van', t: 'Lia and you, at six in the evening. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then make your own suggestions.' },
+  { k: 'caixa1', est: 'f', min: 6, img: 'van', rot: 'III · The First Box', t: 'You and me, now.', p: 'Say the whole sentence out loud first. Then pick the front of it, and the thing goes to its room.' },
+  { k: 'nao', est: 'f', min: 6, img: 'van', rot: 'IV · Let’s Not', t: 'Half of a move is what you refuse.', p: 'Read the fact. Say it out loud. Then choose: yes, or not?' },
+  { k: 'caixa2', est: 'f', min: 6, img: 'van', rot: 'V · Six More', t: 'Six things left, and the light is going.', p: 'Same rule. Say it before you tap.' },
+  { k: 'shall', est: 'f', min: 6, img: 'placa', rot: 'VI · Shall We?', t: 'Sometimes you don’t decide. You ask.', p: 'Look at the end of the line: a question mark asks, a full stop decides.' },
+  { k: 'duas', est: 'f', min: 6, img: 'rua', rot: 'VII · Two Kinds of Plan', t: 'An invitation, or already decided?', p: 'Read the situation. An invitation waits for an answer. A plan doesn’t.' },
+  { k: 'papel', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'VIII · On the Sidewalk', t: 'Six lines, two people, one van and no time.', p: 'You take one side, your teacher the other. Then swap. The second time, cover the lines.' },
+  { k: 'responde', est: 'o', min: 7, extra: 1, img: 'placa', rot: 'IX · Yes, Let’s', t: 'An invitation that nobody answers is not an invitation.', p: 'Invite your teacher. Your teacher answers for real, and says no once.' },
+  { k: 'quarto', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'X · Your Room', t: 'Now a real room. Yours.', p: 'Five suggestions about a room you actually live in.' },
+  { k: 'fim', est: 'w', min: 6, img: 'van', rot: 'XI · Let’s', t: 'Write a plan for your room, for two people.', p: 'Let’s, let’s not, Shall we…?, and one thing already decided. The red line watches. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -186,3 +187,27 @@ TOQUES['pp-cobre'] = function () { S.papel.cobre = S.papel.cobre ? 0 : 1; };
 TOQUES.rp = function (b, n) { S.resp2.r[S.resp2.n] = n; };
 TOQUES['rp-prox'] = function () { S.resp2.n++; };
 TOQUES.qt = function (b, n) { S.quarto[n] = !S.quarto[n]; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de caixa1.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The van, before dark. Tap the lit words.',
+  falas: [
+    { q: 'Lia', f: 'The van is full, and it is almost dark. [[Let’s carry]] the boxes inside.' },
+    { q: 'You', f: 'OK. [[Let’s not]] take the sofa first. It is too heavy.' },
+    { q: 'Lia', f: 'Good idea. [[Shall we]] start with the lamp?' },
+    { q: 'You', f: 'Yes, let’s. [[Let’s put]] it in the living room.' },
+    { q: 'Lia', f: 'And tomorrow? [[We’re going to]] paint the kitchen. The paint is already here.' },
+    { q: 'You', f: '[[Shall we]] take a break first? [[Let’s have]] some water.' }
+  ],
+  porques: [
+    'An invitation to do it together: Let’s + the clean verb. No to, no -ing.',
+    'To say no together: Let’s not + verb.',
+    'A question that waits for an answer: Shall we …?',
+    'A short yes: Yes, let’s. Then Let’s + verb again.',
+    'This is not an invitation. The plan is already decided: going to.',
+    'Shall we + verb asks. The other person answers.',
+    'Let’s + a clean verb: Let’s have.'
+  ],
+  nota: 'To invite someone to do it with you: <b>Let’s</b> + verb. Not this: <b>Let’s not</b> + verb. To ask: <b>Shall we</b> + verb? A plan that is already decided is <b>going to</b>.',
+  uso: { p: 'Your turn. You and a friend are cleaning a room. Make two suggestions, one with let’s and one with Shall we.', molde: ['Let’s …', 'Let’s not …', 'Shall we …?'], ex: 'Let’s open the windows. Let’s not move the table. Shall we start with the books?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

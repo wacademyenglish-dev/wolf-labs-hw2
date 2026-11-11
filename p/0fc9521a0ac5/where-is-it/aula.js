@@ -18,12 +18,13 @@ var L = [
   { k: 'palavras', est: 'l', img: 'pos-start', rot: 'III · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'pos-start', rot: 'IV · Watch', t: 'A person, a box and a chair.', p: 'Ears only. Tap each word when you hear it.' },
   { k: 'falas', est: 'l', extra: 1, img: 'pos-start', rot: 'V · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'casa', est: 'f', min: 6, img: 'casa', rot: 'VI · Move It', t: 'The ghost shows where each thing goes.', p: 'Say the whole sentence. Then pick the position, and the thing slides there.' },
-  { k: 'placas', est: 'f', min: 6, img: 'casa', rot: 'VII · Fix the Labels', t: 'Six little labels in the house. Some are wrong.', p: 'Read it out loud. Right or wrong? If it’s wrong, say the fix.' },
-  { k: 'descreve', est: 'o', min: 7, extra: 1, img: 'casa', rot: 'VIII · Describe My Room', t: 'Your teacher can’t see this room. Describe it.', p: 'Five things. Your teacher repeats each sentence and taps the thing when it’s right.' },
-  { k: 'difere', est: 'o', min: 7, extra: 1, img: 'casa', rot: 'IX · Five Differences', t: 'Two rooms, almost the same.', p: 'You see room A. Your teacher sees room B. Ask: Where is the …? in your room?' },
-  { k: 'quarto', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'X · Your Room', t: 'Your real room, now with the words.', p: 'Four questions. The last one, you ask.' },
-  { k: 'fim', est: 'w', min: 6, img: 'casa', rot: 'XI · Close the House', t: 'Write your room.', p: 'Five things and where they are. One between, with both halves. The red line watches of and to. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'pos-between', rot: 'VI · Look First', t: 'Four pictures. Four places.', p: 'Look at the picture. Guess where the figure is. Then tap to see the sentence, and say it.' },
+  { k: 'casa', est: 'f', min: 6, img: 'casa', rot: 'VII · Move It', t: 'The ghost shows where each thing goes.', p: 'Say the whole sentence. Then pick the position, and the thing slides there.' },
+  { k: 'placas', est: 'f', min: 6, img: 'casa', rot: 'VIII · Fix the Labels', t: 'Six little labels in the house. Some are wrong.', p: 'Read it out loud. Right or wrong? If it’s wrong, say the fix.' },
+  { k: 'descreve', est: 'o', min: 7, extra: 1, img: 'casa', rot: 'IX · Describe My Room', t: 'Your teacher can’t see this room. Describe it.', p: 'Five things. Your teacher repeats each sentence and taps the thing when it’s right.' },
+  { k: 'difere', est: 'o', min: 7, extra: 1, img: 'casa', rot: 'X · Five Differences', t: 'Two rooms, almost the same.', p: 'You see room A. Your teacher sees room B. Ask: Where is the …? in your room?' },
+  { k: 'quarto', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'XI · Your Room', t: 'Your real room, now with the words.', p: 'Four questions. The last one, you ask.' },
+  { k: 'fim', est: 'w', min: 6, img: 'casa', rot: 'XII · Close the House', t: 'Write your room.', p: 'Five things and where they are. One between, with both halves. The red line watches of and to. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -189,3 +190,16 @@ TOQUES.pl = function (b, n, v) { S.pl.esc[n] = +v; };
 TOQUES.ds = function (b, n, v) { S.desc[v] = !S.desc[v]; };
 TOQUES['df-peek'] = function () { S.dif.peek = !S.dif.peek; };
 TOQUES.df = function (b, n, v) { if (SALA_A[v] !== SALA_B[v]) S.dif.achou[v] = !S.dif.achou[v]; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de casa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. Where is the wooden figure?',
+  cenas: [
+    { img: 'pos-infront', antes: 'The chair is on the left. The box is big. The figure is close to you.', frase: 'The figure is <mark>in front of</mark> the box.' },
+    { img: 'pos-behind', antes: 'You can only see the head and the shoulders of the figure.', frase: 'The figure is <mark>behind</mark> the box.' },
+    { img: 'pos-between', antes: 'The chair is on the left. The box is on the right.', frase: 'The figure is <mark>between</mark> the chair <mark>and</mark> the box.' },
+    { img: 'pos-nextto', antes: 'Three things in a row: the chair, the box, the figure.', frase: 'The box is <mark>next to</mark> the figure.' }
+  ],
+  nota: 'A place word has its own friends: <b>in front of</b> the box, <b>next to</b> the figure, <b>between</b> the chair <b>and</b> the box. No <b>of</b> after behind or between, and no <b>the</b> right after in front.',
+  uso: { p: 'Your turn. Look at your desk. Say where three things are.', molde: ['My phone is next to …', 'The lamp is behind …', 'My bag is between … and …'], ex: 'My phone is next to the keyboard. The lamp is behind the screen. My bag is between the chair and the wall.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

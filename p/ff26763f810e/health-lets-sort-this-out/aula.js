@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 12, kick: 'ENGLISH FOR HEALTHCA
   nota: 'Listen first. Then: I can see… I’m sorry that… Here’s what I can do… And if someone becomes abusive: a calm, clear limit.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'descobre', est: 'f', min: 10, img: 'conversa', rot: 'I · Words That Help', t: 'Two answers to the same angry patient.', p: 'Compare A and B. Which one lowers the temperature?' },
-  { k: 'separa', est: 'f', min: 10, img: 'capa', rot: 'II · Helps or Makes It Worse?', t: 'Twelve reactions.', p: 'Choose A or B and say why.' },
-  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'III · Four Angry Patients', t: 'Listen. Answer calmly.', p: 'Play the patient, start the clock, answer in about 30 seconds.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'I · Three Moves', t: 'Listen, name it, offer. In this order.', p: 'Look at the three moves. Tap the right one for each new moment. Then say your own.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'conversa', rot: 'II · Words That Help', t: 'Two answers to the same angry patient.', p: 'Compare A and B. Which one lowers the temperature?' },
+  { k: 'separa', est: 'f', min: 10, img: 'capa', rot: 'III · Helps or Makes It Worse?', t: 'Twelve reactions.', p: 'Choose A or B and say why.' },
+  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'IV · Four Angry Patients', t: 'Listen. Answer calmly.', p: 'Play the patient, start the clock, answer in about 30 seconds.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var DESCOBRE = {
@@ -63,3 +64,25 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 12: descobre · separa · prova (áudio) (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Three moves with an angry patient.',
+  usos: [
+    { t: 'LISTEN', f: 'Tell me what happened.', d: 'First, let the patient talk.' },
+    { t: 'NAME IT', f: 'I can see you’re frustrated. I’m sorry that you waited so long.', d: 'Name the feeling. Be sorry for the experience.' },
+    { t: 'OFFER', f: 'Here’s what I can do: I’ll check with the doctor in fifteen minutes.', d: 'A way forward, with a time.' }
+  ],
+  pergunta: 'Which move comes now?',
+  itens: [
+    { f: 'The patient starts to shout. You don’t know why yet.', c: 0, d: 'First listen.' },
+    { f: 'The patient says: “I’ve been here three hours!”', c: 1, d: 'Name the feeling and be sorry for the wait.' },
+    { f: 'The patient says: “So, when do I see a doctor?”', c: 2, d: 'Give a plan with a time.' },
+    { f: 'The patient says: “This is a disaster!” You don’t know what happened.', c: 0, d: 'Ask first: Tell me what happened.' },
+    { f: 'The patient is calmer now. He asks what happens next.', c: 2, d: 'Offer what you can do.' },
+    { f: 'The patient says: “Nobody ever explains anything here!”', c: 1, d: 'Name it: I can see you’re upset.' }
+  ],
+  nota: 'Three moves, in this order: <b>listen</b>, <b>name it</b> and say sorry for the experience, <b>offer what you can do</b>. Never “calm down”.',
+  uso: { p: 'Your turn. An angry patient waited two hours. Say one line for each move.', molde: ['Tell me what happened.', 'I’m sorry that …', 'Here’s what I can do …'], ex: 'Tell me what happened. I’m sorry that you waited two hours. Here’s what I can do: I’ll ask the doctor to see you in ten minutes.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

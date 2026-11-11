@@ -21,15 +21,16 @@ var L = [
   { k: 'capa', est: null, img: 'portas' },
   { k: 'chute', est: 'o', min: 7, img: 'sala', rot: 'I · Before the Test', t: 'Before any door opens, the examiner wants to know you.', p: 'Answer the three questions. Then, for each door, say a full sentence; your teacher taps the step you used. No comments yet.' },
   { k: 'ideia', est: 'l', min: 7, img: 'portas', rot: 'II · The Idea', t: 'The examiner explains the idea behind the test.', p: 'Listen once. Then choose only the three things you really heard.' },
-  { k: 'lingua', est: 'f', min: 6, img: 'sala', rot: 'III · How to Say It', t: 'Ability takes AT. Soften it. Be honest.', p: 'Read the ladder out loud, with one thing you do for each step. Then fix the four traps.' },
-  { k: 'prova', est: 'o', min: 7, img: 'sala', rot: 'IV · Doors 1–3 · Proof', t: 'Three doors you can judge yourself, but only with proof.', p: 'Answer the question. Your teacher fills one bubble for each proof. Then the door locks with a number.' },
-  { k: 'evid', est: 'o', min: 7, img: 'jardim', rot: 'V · Doors 4–6 · Evidence', t: 'Three doors you can’t judge by feeling. Choose the line that is true.', p: 'Your evidence gives the number. Then say it as a full sentence, with a date or a place.' },
-  { k: 'escala', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'VI · Doors 7–8 · Scale', t: 'The last two doors. Nobody can score these by looking at you.', p: 'Read each sentence out loud, say why, and tap how true it is for you.' },
-  { k: 'forma', est: 'o', min: 7, extra: 1, img: 'portas', rot: 'VII · Your Shape', t: 'The solid line is what you proved. The dashed line is what you guessed.', p: 'Look for fifteen seconds before anybody speaks. Then answer the three questions.' },
-  { k: 'critica', est: 'l', min: 7, extra: 1, img: 'portas', rot: 'VIII · The Other Side', t: 'The examiner has one more page.', p: 'Listen. Then say how much you believe the idea.' },
-  { k: 'yet', est: 'f', min: 6, extra: 1, img: 'jardim', rot: 'IX · Can’t or Not Yet?', t: 'A real limit, or a door that is still open?', p: 'Decide, then say the better sentence. The last one is about you.' },
-  { k: 'entrevista', est: 'o', min: 7, extra: 1, img: 'entrevista', rot: 'X · The Job Interview', t: 'A job interview. Your teacher is the interviewer. Use your report.', p: 'Not too humble, not too proud. Give evidence.' },
-  { k: 'laudo', est: 'w', min: 6, img: 'portas', rot: 'XI · Your Report', t: 'Form 8-D is ready.', p: 'Read your report out loud. Then write it in your own words. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'portas', rot: 'III · Right, Not This', t: 'Five lines from the test. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'lingua', est: 'f', min: 6, img: 'sala', rot: 'IV · How to Say It', t: 'Ability takes AT. Soften it. Be honest.', p: 'Read the ladder out loud, with one thing you do for each step. Then fix the four traps.' },
+  { k: 'prova', est: 'o', min: 7, img: 'sala', rot: 'V · Doors 1–3 · Proof', t: 'Three doors you can judge yourself, but only with proof.', p: 'Answer the question. Your teacher fills one bubble for each proof. Then the door locks with a number.' },
+  { k: 'evid', est: 'o', min: 7, img: 'jardim', rot: 'VI · Doors 4–6 · Evidence', t: 'Three doors you can’t judge by feeling. Choose the line that is true.', p: 'Your evidence gives the number. Then say it as a full sentence, with a date or a place.' },
+  { k: 'escala', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'VII · Doors 7–8 · Scale', t: 'The last two doors. Nobody can score these by looking at you.', p: 'Read each sentence out loud, say why, and tap how true it is for you.' },
+  { k: 'forma', est: 'o', min: 7, extra: 1, img: 'portas', rot: 'VIII · Your Shape', t: 'The solid line is what you proved. The dashed line is what you guessed.', p: 'Look for fifteen seconds before anybody speaks. Then answer the three questions.' },
+  { k: 'critica', est: 'l', min: 7, extra: 1, img: 'portas', rot: 'IX · The Other Side', t: 'The examiner has one more page.', p: 'Listen. Then say how much you believe the idea.' },
+  { k: 'yet', est: 'f', min: 6, extra: 1, img: 'jardim', rot: 'X · Can’t or Not Yet?', t: 'A real limit, or a door that is still open?', p: 'Decide, then say the better sentence. The last one is about you.' },
+  { k: 'entrevista', est: 'o', min: 7, extra: 1, img: 'entrevista', rot: 'XI · The Job Interview', t: 'A job interview. Your teacher is the interviewer. Use your report.', p: 'Not too humble, not too proud. Give evidence.' },
+  { k: 'laudo', est: 'w', min: 6, img: 'portas', rot: 'XII · Your Report', t: 'Form 8-D is ready.', p: 'Read your report out loud. Then write it in your own words. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -225,3 +226,17 @@ TOQUES.yt = function (b, n, v) { S.yt.esc = v; };
 TOQUES['yt-prox'] = function () { S.yt = { n: S.yt.n + 1, esc: '' }; };
 TOQUES['en-prox'] = function () { S.en.n++; };
 TOQUES.imprime = function () { try { window.print(); } catch (e) { } };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de lingua.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'I’m good <b>at</b> music.', x: 'I’m good in music.', d: 'Ability always takes AT.' },
+    { c: 'She’s <b>good at</b> math.', x: 'She’s intelligent in math.', d: 'Say good at math. AT, always.' },
+    { c: 'I <b>haven’t</b> tried it <b>yet</b>.', x: 'I didn’t try it yet.', d: 'With yet: haven’t + -ed.' },
+    { c: 'I’m not good at <b>anything</b> artistic.', x: 'I’m not good at nothing artistic.', d: 'One no is enough: not … anything.' },
+    { c: 'I’m <b>better at</b> reading <b>than at</b> running.', x: 'I’m better in reading than running.', d: 'better AT … than AT …' }
+  ],
+  nota: 'Ability takes <b>at</b>: good at, better at, not very good at. Say <b>not … anything</b>, never “nothing” after a no. With <b>yet</b>, use <b>haven’t</b>: I haven’t tried yet.',
+  uso: { p: 'Your turn. Two doors, two sentences: one thing you are good at, and one thing you haven’t tried yet.', molde: ['I’m good at …', 'I haven’t … yet.'], ex: 'I’m good at cooking. I haven’t tried skiing yet.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

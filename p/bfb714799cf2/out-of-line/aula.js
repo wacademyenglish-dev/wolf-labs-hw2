@@ -30,15 +30,16 @@
 var L = [
   { k: 'capa', est: null, img: 'pulpito' },
   { k: 'abre', est: 'o', min: 7, img: 'plateia', rot: 'I · Never Before', t: 'Think of something you had never seen before, until that day.', p: 'Tap what it was. Say your answer out loud. Then tap Check.' },
-  { k: 'palco', est: 'f', min: 7, img: 'pulpito', rot: 'II · The Spotlight', t: 'A farewell speech at the pulpit. The negative word steps into the spotlight.', p: 'Read the speech out loud. Tap every inversion. Then finish the rule.' },
-  { k: 'did', est: 'f', min: 6, img: 'pulpito', rot: 'III · Nothing to Move', t: 'No helper in the sentence? Borrow one: do / does / did, and the verb goes plain.', p: 'One word is wrong in each line. Say it the right way out loud. Then tap Check.' },
-  { k: 'semif', est: 'f', min: 6, img: 'microfone', rot: 'IV · The IF Disappears', t: 'A formal third conditional can drop IF: If I had known → Had I known.', p: 'Read the sentence with IF. Say it without IF. Then tap Check.' },
-  { k: 'peso', est: 'l', min: 7, img: 'microfone', rot: 'V · Where the Weight Falls', t: 'The same sentence, twice. Same speaker, almost the same words.', p: 'Play both. Then tap your answers. Say both yourself.' },
-  { k: 'metades', est: 'f', min: 6, img: 'plateia', rot: 'VI · Two Halves', t: 'Hardly … when. No sooner … than. The second event lands almost on top of the first.', p: 'Tap a first half, then its second half. Then say the whole sentence.' },
-  { k: 'mereceu', est: 'l', min: 7, extra: 1, img: 'plateia', rot: 'VII · Earned or Showing Off?', t: 'Two recordings, same grammar. One earned it.', p: 'Play both. True or lie? If it is a lie, say the truth.' },
-  { k: 'discurso', est: 'o', min: 7, img: 'pulpito', rot: 'VIII · One Minute at the Pulpit', t: 'A one-minute speech for a colleague who is leaving. Two inversions, no more.', p: 'Read your part. Say it out loud. Then tap Check: it joins the speech. Watch the costume meter.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'microfone', rot: 'IX · Out of Order', t: 'Six sentences. Three are out of order.', p: 'Tap a sentence, then its box. Then say the fix for each one that is out of order.' },
-  { k: 'fim', est: 'w', min: 6, img: 'plateia', rot: 'X · Step Down', t: 'Your “never before” from scene I, at the pulpit.', p: 'Write it with the weight at the front, and once plainly. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'pulpito', rot: 'II · The Flip', t: 'Watch the negative word jump to the front.', p: 'Flip each sentence. Notice where the helper goes. Then flip four on your own.' },
+  { k: 'palco', est: 'f', min: 7, img: 'pulpito', rot: 'III · The Spotlight', t: 'A farewell speech at the pulpit. The negative word steps into the spotlight.', p: 'Read the speech out loud. Tap every inversion. Then finish the rule.' },
+  { k: 'did', est: 'f', min: 6, img: 'pulpito', rot: 'IV · Nothing to Move', t: 'No helper in the sentence? Borrow one: do / does / did, and the verb goes plain.', p: 'One word is wrong in each line. Say it the right way out loud. Then tap Check.' },
+  { k: 'semif', est: 'f', min: 6, img: 'microfone', rot: 'V · The IF Disappears', t: 'A formal third conditional can drop IF: If I had known → Had I known.', p: 'Read the sentence with IF. Say it without IF. Then tap Check.' },
+  { k: 'peso', est: 'l', min: 7, img: 'microfone', rot: 'VI · Where the Weight Falls', t: 'The same sentence, twice. Same speaker, almost the same words.', p: 'Play both. Then tap your answers. Say both yourself.' },
+  { k: 'metades', est: 'f', min: 6, img: 'plateia', rot: 'VII · Two Halves', t: 'Hardly … when. No sooner … than. The second event lands almost on top of the first.', p: 'Tap a first half, then its second half. Then say the whole sentence.' },
+  { k: 'mereceu', est: 'l', min: 7, extra: 1, img: 'plateia', rot: 'VIII · Earned or Showing Off?', t: 'Two recordings, same grammar. One earned it.', p: 'Play both. True or lie? If it is a lie, say the truth.' },
+  { k: 'discurso', est: 'o', min: 7, img: 'pulpito', rot: 'IX · One Minute at the Pulpit', t: 'A one-minute speech for a colleague who is leaving. Two inversions, no more.', p: 'Read your part. Say it out loud. Then tap Check: it joins the speech. Watch the costume meter.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'microfone', rot: 'X · Out of Order', t: 'Six sentences. Three are out of order.', p: 'Tap a sentence, then its box. Then say the fix for each one that is out of order.' },
+  { k: 'fim', est: 'w', min: 6, img: 'plateia', rot: 'XI · Step Down', t: 'Your “never before” from scene I, at the pulpit.', p: 'Write it with the weight at the front, and once plainly. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -230,3 +231,22 @@ R.fim = function (c) {
     + '<p class="hw"><a class="pilula" href="HW/" target="_blank" rel="noopener">Homework for the student →</a></p></div></div>';
 };
 
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de palco.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The normal sentence, then the speech. Watch the words move.',
+  frases: [
+    { de: ['*I', '*have', 'never', 'seen', 'such courage', '.'], para: ['+Never', '*have', '*I', 'seen', 'such courage', '.'], d: 'The negative word goes first. The helper jumps before the subject.' },
+    { de: ['She', 'rarely', '*calls', 'her father', '.'], para: ['+Rarely', '+does', 'she', '*call', 'her father', '.'], d: 'No helper? Add do, does or did. The verb is clean again.' },
+    { de: ['+If I had', 'known', 'the truth', ',', 'I would have left', '.'], para: ['+Had I', 'known', 'the truth', ',', 'I would have left', '.'], d: 'The if disappears. Had goes before I.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'A negative word goes first, for weight: <b>Never</b>, <b>Rarely</b>, <b>Hardly</b>. Then the helper jumps before the subject: <b>have I</b>. With no helper: <b>do, does, did</b> + a clean verb: <b>Rarely does she call</b>.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'I have never heard such a speech.', r: 'Never <b>have I heard</b> such a speech.' },
+    { de: 'He seldom gives a speech.', r: 'Seldom <b>does he give</b> a speech.' },
+    { de: 'We had hardly sat down when the lights went out.', r: 'Hardly <b>had we sat</b> down when the lights went out.' },
+    { de: 'If I had known, I would have come.', r: '<b>Had I known</b>, I would have come.' }
+  ],
+  uso: { p: 'Your turn. A farewell speech: one thing you have never done, and one thing you rarely do.', molde: ['Never have I …', 'Rarely do I …'], ex: 'Never have I felt so proud. Rarely do I speak in front of people.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

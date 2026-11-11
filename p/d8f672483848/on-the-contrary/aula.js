@@ -15,10 +15,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 7, titulo: ['On the', 'Contrary'
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Column', t: 'Are big cities bad for us?', p: 'Read the column out loud. Answer the questions. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Opposite or Other Side?', t: 'They look similar. They are not.', p: 'Compare A and B. Which one says “no”?' },
-  { k: 'bingo', est: 'f', min: 8, img: 'conversa', rot: 'III · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a line, across, down or diagonal, is a BINGO.' },
-  { k: 'escolha', est: 'o', min: 8, img: 'capa', rot: 'IV · City or Village?', t: 'Choose and contrast.', p: 'Choose A or B. Then contrast it with on the other hand, or deny with on the contrary.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'V · Your Column', t: 'Write a short opinion column.', p: 'Four lines: a myth, “on the contrary”, “on the other hand”, and a contrast.' }
+  { k: 'gx', est: 'f', min: 5, img: 'conversa', rot: 'II · Three Ways to Contrast', t: 'Three phrases that look alike. Three jobs.', p: 'Look at the three jobs. Tap the phrase each sentence needs. Then say three of your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Opposite or Other Side?', t: 'They look similar. They are not.', p: 'Compare A and B. Which one says “no”?' },
+  { k: 'bingo', est: 'f', min: 8, img: 'conversa', rot: 'IV · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a line, across, down or diagonal, is a BINGO.' },
+  { k: 'escolha', est: 'o', min: 8, img: 'capa', rot: 'V · City or Village?', t: 'Choose and contrast.', p: 'Choose A or B. Then contrast it with on the other hand, or deny with on the contrary.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'conversa', rot: 'VI · Your Column', t: 'Write a short opinion column.', p: 'Four lines: a myth, “on the contrary”, “on the other hand”, and a contrast.' }
 ];
 var PORTAS = [];
 
@@ -61,3 +62,9 @@ var ESCOLHA = [
   { a: 'work from home', b: 'work in an office', chips: ['In contrast to …, …', 'On the other hand, …'], ex: 'From home. On the other hand, I miss my colleagues.' },
   { a: 'a cheap old car', b: 'an expensive new bike', chips: ['Conversely, …', 'Far from …'], ex: 'The bike. The car is cheap; conversely, the bike costs more but saves money every day.' },
   { a: 'social media every day', b: 'no social media at all', chips: ['Is it bad? On the contrary, …', 'Quite the opposite: …'], ex: 'Every day, but carefully. Is it all bad? Far from it: I found my job there.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Contrast phrases, three jobs. Which one says no?', usos: [{ t: 'ON THE CONTRARY', f: 'Is the city boring? On the contrary, it’s fascinating.', d: 'It says no to the idea, and gives the opposite.' }, { t: 'ON THE OTHER HAND', f: 'Cities are noisy. On the other hand, they are full of life.', d: 'The other side of the same coin. Both are true.' }, { t: 'IN CONTRAST / CONVERSELY', f: 'The city is crowded. In contrast, the village is empty.', d: 'You compare two different things.' }], pergunta: 'Which phrase fits?', itens: [{ f: 'Was the film dull? ___, I loved every minute.', c: 0 }, { f: 'Rent in the city is high. ___, the salaries are better.', c: 1 }, { f: 'Rio is hot and busy. ___, Curitiba is cool and quiet.', c: 2 }, { f: 'Is she lazy? Far from it. ___, she works every weekend.', c: 0 }, { f: 'Living alone is lonely. ___, you have all the freedom.', c: 1 }, { f: 'My brother loves cities. ___, my sister hates them.', c: 2 }], nota: '<b>On the contrary</b> = no, the opposite is true. <b>On the other hand</b> = another side of the same thing. <b>In contrast / conversely</b> = two different things side by side. Do not use <b>on the contrary</b> for everything.', uso: { p: 'Your turn. Talk about cities. Say one sentence with On the contrary, one with On the other hand, and one with In contrast.', molde: ['People say …. On the contrary, …', '…. On the other hand, …', '… . In contrast, …'], ex: 'People say big cities are cold. On the contrary, mine is very friendly. Rent is expensive. On the other hand, there are many jobs. My city is fast. In contrast, my hometown is calm.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

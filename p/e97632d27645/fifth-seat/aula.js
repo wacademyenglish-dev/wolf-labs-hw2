@@ -16,13 +16,14 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'base', rot: 'I · Your Job', t: 'What is your job? And someone in your family?', p: 'Pick a card. One word is enough, then a sentence. Your teacher taps what you used. Don’t worry about it yet.' },
   { k: 'radio', est: 'l', min: 7, img: 'base', rot: 'II · Radio Log', t: 'Five transmissions. No notes.', p: 'Listen. Say it back. Then print it in the log.' },
   { k: 'fichas', est: 'l', min: 7, img: 'base', rot: 'III · Four Files', t: 'Four people applied for the last seat.', p: 'Each one says I am… Listen. Then say it about them: She is… / He is…' },
-  { k: 'artigo', est: 'f', min: 6, img: 'base', rot: 'IV · The Missing Word', t: 'The word that isn’t in Portuguese.', p: 'Say the sentence out loud. Then tap the missing word.' },
-  { k: 'pergunta', est: 'l', min: 7, img: 'base', rot: 'V · The Verb Jumps', t: 'To ask, the verb jumps to the front.', p: 'Tap the verb and watch it move. Ask out loud. Then listen to the answer.' },
-  { k: 'carimbo', est: 'f', min: 6, extra: 1, img: 'base', rot: 'VI · Stamp the Files', t: 'Eight facts. The evidence arrived.', p: 'Pick a fact. Ask the question out loud. Open the evidence. Stamp it.' },
-  { k: 'mentiroso', est: 'o', min: 7, extra: 1, img: 'navio', rot: 'VII · Who Is Lying', t: 'He isn’t. He is.', p: 'Tap each person. Say both halves in one breath.' },
-  { k: 'bordo', est: 'o', min: 7, extra: 1, img: 'navio', rot: 'VIII · Already on Board', t: 'Four seats are taken.', p: 'Tap each person. Say what they are. Then read what is missing.' },
-  { k: 'entrevista', est: 'o', min: 7, extra: 1, img: 'navio', rot: 'IX · The Interview', t: 'There’s a fifth candidate: you.', p: 'Your teacher interviews you for the seat. Then you decide who goes, and why.' },
-  { k: 'fim', est: 'w', min: 6, img: 'base', rot: 'X · The Gate Closes', t: 'Write the file of your family.', p: 'Three people: name, job (with a or an), country. One question about them. The red line watches. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'navio', rot: 'IV · Right, Not This', t: 'Six pairs about the Polaris. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'artigo', est: 'f', min: 6, img: 'base', rot: 'V · The Missing Word', t: 'The word that isn’t in Portuguese.', p: 'Say the sentence out loud. Then tap the missing word.' },
+  { k: 'pergunta', est: 'l', min: 7, img: 'base', rot: 'VI · The Verb Jumps', t: 'To ask, the verb jumps to the front.', p: 'Tap the verb and watch it move. Ask out loud. Then listen to the answer.' },
+  { k: 'carimbo', est: 'f', min: 6, extra: 1, img: 'base', rot: 'VII · Stamp the Files', t: 'Eight facts. The evidence arrived.', p: 'Pick a fact. Ask the question out loud. Open the evidence. Stamp it.' },
+  { k: 'mentiroso', est: 'o', min: 7, extra: 1, img: 'navio', rot: 'VIII · Who Is Lying', t: 'He isn’t. He is.', p: 'Tap each person. Say both halves in one breath.' },
+  { k: 'bordo', est: 'o', min: 7, extra: 1, img: 'navio', rot: 'IX · Already on Board', t: 'Four seats are taken.', p: 'Tap each person. Say what they are. Then read what is missing.' },
+  { k: 'entrevista', est: 'o', min: 7, extra: 1, img: 'navio', rot: 'X · The Interview', t: 'There’s a fifth candidate: you.', p: 'Your teacher interviews you for the seat. Then you decide who goes, and why.' },
+  { k: 'fim', est: 'w', min: 6, img: 'base', rot: 'XI · The Gate Closes', t: 'Write the file of your family.', p: 'Three people: name, job (with a or an), country. One question about them. The red line watches. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -212,3 +213,18 @@ TOQUES['en-p'] = function (b, n, v) { var e = S.ent; e.partes[e.n] = e.partes[e.
 TOQUES['en-e'] = function () { S.ent.erro = !S.ent.erro; };
 TOQUES['en-prox'] = function () { S.ent.n++; S.ent.erro = 0; };
 TOQUES['en-c'] = function (b, n) { S.ent.esc = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de artigo.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'Nadia <b>is a</b> doctor.', x: 'Nadia is doctor.', d: 'A job needs a or an.' },
+    { c: 'He <b>is an</b> engineer.', x: 'He is a engineer.', d: 'Engineer starts with a vowel sound: an.' },
+    { c: '<b>She is</b> from Egypt.', x: 'She from Egypt.', d: 'No verb is not a sentence. Say is.' },
+    { c: '<b>Is she</b> a cook?', x: 'She is a cook?', d: 'To ask, the verb jumps to the front.' },
+    { c: 'He <b>isn’t</b> a pilot.', x: 'He no is a pilot.', d: 'For no: isn’t.' },
+    { c: 'They <b>are</b> sailors.', x: 'They is sailors.', d: 'They: are.' }
+  ],
+  nota: 'Three small things: the <b>verb</b> (he <b>is</b>, they <b>are</b>), the word <b>a / an</b> before a job, and the verb at the <b>front</b> for a question: Is she a cook?',
+  uso: { p: 'Your turn. Someone in your family: say their job, and ask your teacher one question about a job.', molde: ['My … is a …', 'Is he a …?'], ex: 'My sister is a nurse. Is your brother an engineer?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

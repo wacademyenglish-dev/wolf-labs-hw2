@@ -15,15 +15,16 @@
 var L = [
   { k: 'capa', est: null, img: 'cinema' },
   { k: 'abre', est: 'o', min: 7, img: 'fila', rot: 'I · Best and Worst', t: 'Lena reads movie reviews at night. First, yours.', p: 'Pick a card. Answer out loud with one word for how the movie made you feel.' },
-  { k: 'pares', est: 'f', min: 6, img: 'fila', rot: 'II · Normal and Extreme', t: 'Every normal adjective has an extreme partner that means “very, very”.', p: 'Find the partner. Then say both: very tired, absolutely exhausted.' },
-  { k: 'termo', est: 'f', min: 6, img: 'cinema', rot: 'III · The Thermometer', t: 'VERY goes up to three. ABSOLUTELY goes to five. REALLY works with both.', p: 'Pick the word that can go before the adjective. Then say a full sentence.' },
-  { k: 'ouve', est: 'l', min: 7, img: 'fones', rot: 'IV · Six Reviewers', t: 'Six reviewers left voice notes.', p: 'Play each one. Which word could go before the adjective you heard?' },
-  { k: 'erros', est: 'f', min: 6, img: 'fila', rot: 'V · Very Exhausted', t: 'Five sentences have a problem. One is right.', p: 'Pick the fix. Then say the whole sentence.' },
-  { k: 'fila', est: 'o', min: 7, img: 'mesa', rot: 'VI · Lena’s Queue', t: 'Lena approves a review only when the words match the stars.', p: 'Read the stars. Pick the words that match. Then read the review out loud, with feeling.' },
-  { k: 'escala', est: 'o', min: 7, extra: 1, img: 'cinema', rot: 'VII · Climb the Scale', t: 'Four scales. Climb each one out loud.', p: 'Say all four steps. Then use one of them in a true sentence.' },
-  { k: 'lugares', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'VIII · Your Review', t: 'Three places. Rate each one and review it out loud. Lena is listening.', p: 'Tap the stars. Use the words that match. Your teacher asks one question after each review.' },
-  { k: 'apagada', est: 'f', min: 6, extra: 1, img: 'fila', rot: 'IX · The Deleted Review', t: 'Lena deleted a review: “This movie is bored.” Nobody could tell what it meant.', p: 'Rewrite it in three clear sentences.' },
-  { k: 'fim', est: 'w', min: 6, img: 'cinema', rot: 'X · Your Movies Again', t: 'Your two movies from scene I come back.', p: 'Write a review of your best and your worst movie. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cinema', rot: 'II · Find the Rule', t: 'Four reviews from Lena’s queue. One rule.', p: 'Read the four reviews out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pares', est: 'f', min: 6, img: 'fila', rot: 'III · Normal and Extreme', t: 'Every normal adjective has an extreme partner that means “very, very”.', p: 'Find the partner. Then say both: very tired, absolutely exhausted.' },
+  { k: 'termo', est: 'f', min: 6, img: 'cinema', rot: 'IV · The Thermometer', t: 'VERY goes up to three. ABSOLUTELY goes to five. REALLY works with both.', p: 'Pick the word that can go before the adjective. Then say a full sentence.' },
+  { k: 'ouve', est: 'l', min: 7, img: 'fones', rot: 'V · Six Reviewers', t: 'Six reviewers left voice notes.', p: 'Play each one. Which word could go before the adjective you heard?' },
+  { k: 'erros', est: 'f', min: 6, img: 'fila', rot: 'VI · Very Exhausted', t: 'Five sentences have a problem. One is right.', p: 'Pick the fix. Then say the whole sentence.' },
+  { k: 'fila', est: 'o', min: 7, img: 'mesa', rot: 'VII · Lena’s Queue', t: 'Lena approves a review only when the words match the stars.', p: 'Read the stars. Pick the words that match. Then read the review out loud, with feeling.' },
+  { k: 'escala', est: 'o', min: 7, extra: 1, img: 'cinema', rot: 'VIII · Climb the Scale', t: 'Four scales. Climb each one out loud.', p: 'Say all four steps. Then use one of them in a true sentence.' },
+  { k: 'lugares', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'IX · Your Review', t: 'Three places. Rate each one and review it out loud. Lena is listening.', p: 'Tap the stars. Use the words that match. Your teacher asks one question after each review.' },
+  { k: 'apagada', est: 'f', min: 6, extra: 1, img: 'fila', rot: 'X · The Deleted Review', t: 'Lena deleted a review: “This movie is bored.” Nobody could tell what it meant.', p: 'Rewrite it in three clear sentences.' },
+  { k: 'fim', est: 'w', min: 6, img: 'cinema', rot: 'XI · Your Movies Again', t: 'Your two movies from scene I come back.', p: 'Write a review of your best and your worst movie. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -217,3 +218,19 @@ TOQUES['lg-n'] = function (b, n) { S.lg.nota[Math.min(S.lg.n, LUGARES.length - 1
 TOQUES['lg-prox'] = function () { S.lg.n++; };
 TOQUES.ap = function (b, n) { S.ap.esc = n; };
 TOQUES['ap-prox'] = function () { S.ap = { n: S.ap.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pares.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four reviews. Find the rule yourself.',
+  exemplos: [
+    'I was <b>very</b> <u>tired</u> after the movie.',
+    'I was <b>absolutely</b> <u>exhausted</u> after the movie.',
+    'The ending was <b>very</b> <u>funny</u>.',
+    'The ending was <b>absolutely</b> <u>hilarious</u>.'
+  ],
+  pergunta: 'Very goes with normal adjectives. Absolutely goes with …',
+  opcoes: ['extreme ones: exhausted, hilarious', 'normal ones: tired, funny', 'every adjective'], c: 0,
+  nao: 'Not that one. Look at the word after each lit word: tired, exhausted, funny, hilarious.',
+  regra: '<b>very</b> + a normal adjective: very tired, very funny. <b>absolutely</b> + an extreme adjective: absolutely exhausted, absolutely hilarious. Never “very exhausted”. <b>really</b> works with both.',
+  uso: { p: 'Your turn. Two movies: one you liked a lot, one you hated. One sentence each.', molde: ['The movie was very …', 'The ending was absolutely …'], ex: 'The movie was very long. The ending was absolutely terrible.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

@@ -29,10 +29,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'tunel', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'tunel', rot: 'III · The Trailer', t: 'Spirited Away, 2001. The official trailer.', p: 'Guess who first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'ponte', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'capa', rot: 'V · Right Now', t: 'A letter from Chihiro: what is happening right now?', p: 'Tap the words with am, is or are + -ing. Then finish the rule.' },
-  { k: 'janelas', est: 'o', min: 7, img: 'capa', rot: 'VI · The Bathhouse Windows', t: 'Six windows. Say what they are doing, and the window lights up.', p: 'Read who and what. Say the sentence out loud. Then tap Check.' },
-  { k: 'agora', est: 'o', min: 7, img: 'ponte', rot: 'VII · Right Now, Out There', t: 'Six people in your life. What are they doing right now?', p: 'Say a sentence for each one. Then tap the name.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · The Interview', t: 'The interview.', p: 'Interview.' }
+  { k: 'gx', est: 'f', min: 4, img: 'ponte', rot: 'V · The Flip', t: 'Watch the words move.', p: 'Flip each sentence into a question. Notice where the helper goes. Then flip four on your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'capa', rot: 'VI · Right Now', t: 'A letter from Chihiro: what is happening right now?', p: 'Tap the words with am, is or are + -ing. Then finish the rule.' },
+  { k: 'janelas', est: 'o', min: 7, img: 'capa', rot: 'VII · The Bathhouse Windows', t: 'Six windows. Say what they are doing, and the window lights up.', p: 'Read who and what. Say the sentence out loud. Then tap Check.' },
+  { k: 'agora', est: 'o', min: 7, img: 'ponte', rot: 'VIII · Right Now, Out There', t: 'Six people in your life. What are they doing right now?', p: 'Say a sentence for each one. Then tap the name.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · The Interview', t: 'The interview.', p: 'Interview.' }
 ];
 
 var FILME = 'Spirited Away', ANO = '2001';
@@ -236,3 +237,23 @@ var FIM = { tipo: 'entrevista', rot: 'VIII · The Interview', t: 'Interview Chih
     { q: 'Are you smiling or crying now?', ex: 'I am smiling a little.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The sentence, then the question. Watch the words move.',
+  frases: [
+    { de: ['Chihiro', '*is', 'cleaning', 'the bath', '.'], para: ['*Is', 'Chihiro', 'cleaning', 'the bath', '?'], d: 'The word is jumps to the front.' },
+    { de: ['The spirits', '*are', 'eating', 'dinner', '.'], para: ['*Are', 'the spirits', 'eating', 'dinner', '?'], d: 'Same trick with are.' },
+    { de: ['Haku', '*is', 'flying', '.'], para: ['*Is', 'Haku', 'flying', '?'], d: 'Helper first, then the name, then the -ing word.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'To ask, flip the helper: <b>is</b> or <b>are</b> goes first. The -ing word stays where it is. Is she crying? Are they eating?',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'Yubaba is talking.', r: '<b>Is</b> Yubaba talking?' },
+    { de: 'The workers are sleeping.', r: '<b>Are</b> the workers sleeping?' },
+    { de: 'No-Face is waiting.', r: '<b>Is</b> No-Face waiting?' },
+    { de: 'Chihiro and Haku are running.', r: '<b>Are</b> Chihiro and Haku running?' }
+  ],
+  uso: { p: 'Your turn. Ask your teacher two questions about right now.', molde: ['Are you …?', 'Is it …?'], ex: 'Are you sitting? Is it raining?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

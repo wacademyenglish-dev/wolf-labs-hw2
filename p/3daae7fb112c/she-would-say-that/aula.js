@@ -16,9 +16,10 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'I · Who Does That?', t: 'Annoying or charming? Choose and explain.', p: 'Choose A or B. Then say who in your life does it.' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · Two Siblings', t: 'Clearing out Grandma’s house.', p: 'Read the dialogue out loud, with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Future or Character?', t: 'Will and would, but no future at all.', p: 'Compare A and B. What is will or would doing here?' },
-  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'IV · Say It With Character', t: 'Neutral → typical.', p: 'Read the neutral sentence. Use the clue. Say it with will or would.' },
-  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'V · The Hot Seat', t: 'Now YOU ask about my family.', p: 'Ask your teacher about the people in their life. React with will / would.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'III · Mistake Hunter', t: 'Six lines in Grandma’s house. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'IV · Future or Character?', t: 'Will and would, but no future at all.', p: 'Compare A and B. What is will or would doing here?' },
+  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'V · Say It With Character', t: 'Neutral → typical.', p: 'Read the neutral sentence. Use the clue. Say it with will or would.' },
+  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'VI · The Hot Seat', t: 'Now YOU ask about my family.', p: 'Ask your teacher about the people in their life. React with will / would.' }
 ];
 var PORTAS = [];
 
@@ -69,3 +70,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me about a habit that drives me crazy.', dica: 'What habit drives you crazy?', resp: 'People who will talk on the phone in the cinema!' },
   { alvo: 'Tell me something a politician said. Let me react.', dica: 'The minister says the economy is great.', resp: 'Well, he would say that, wouldn’t he?' },
   { alvo: 'Ask me what I was always doing as a teenager.', dica: 'What were you always doing as a teenager?', resp: 'I was always losing my keys. I still am!' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines about the family.', toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'She [[was going to]] say that, wouldn’t she?', r: 'She <b>would</b> say that, wouldn’t she?', d: 'It is what we expect from her: would. Not was going to.' }, { f: 'Grandpa [[would live]] in a small house by the sea.', r: 'Grandpa <b>used to live</b> in a small house by the sea.', d: 'A state in the past (live, have, be): used to. Would is for actions that repeat.' }, { f: 'He [[always leave]] his socks everywhere!', r: 'He <b>is always leaving</b> his socks everywhere!', d: 'An annoying habit: is always + -ing. The -ing is the complaint.' }, { f: 'My brother [[would]] leave the lights on, even today.', r: 'My brother <b>will</b> leave the lights on, even today.', d: 'Today, typical: will. Past, typical: would.' }, { f: 'She [[would be]] a teacher for ten years before she retired.', r: 'She <b>was</b> a teacher for ten years before she retired.', d: 'A fact with a number of years: simple past. Not would.' }, { f: 'Grandma [[sitting]] by the window for hours, remember?', r: 'Grandma <b>would sit</b> by the window for hours, remember?', d: 'A past habit: would + the clean verb.' }], nota: '<b>Would</b> = typical in the past: Grandpa <b>would sit</b> by the window. <b>Will</b> = typical now: he <b>will</b> leave his socks everywhere. <b>Is always -ing</b> = the habit that annoys me. For a past state: <b>used to</b>.', uso: { p: 'Your turn. Someone in your family. Say what they would do years ago, what they will do now, and one thing that annoys you.', molde: ['My grandfather would …', 'My brother will …', 'She is always …'], ex: 'My grandfather would sit on the porch every evening. My brother will eat everything in the fridge. My sister is always losing her keys.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

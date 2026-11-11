@@ -14,11 +14,12 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Week', t: 'Is there a big meeting this week?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'dialogo', est: 'l', min: 9, img: 'mesa', rot: 'II · A First Meeting', t: 'Leo meets the finance director of Serra Steel.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'cadeira', est: 'o', min: 12, img: 'conversa', rot: 'III · Your Meeting', t: 'Now you are the seller. Your teacher is the director.', p: 'Do each task. Ask, listen, react.' },
-  { k: 'escolha', est: 'o', min: 7, img: 'mesa', rot: 'IV · The Next Step', t: 'The meeting is over. What now?', p: 'Choose A or B and say why. Your teacher answers first.' },
-  { k: 'erros', est: 'f', min: 8, img: 'capa', rot: 'V · Fix the Follow-up', t: 'A follow-up e-mail with five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
-  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'VI · Your Follow-up E-mail', t: 'Write your follow-up e-mail.', p: 'Thank you, two facts, what you do, the next step.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VII · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'mesa', rot: 'III · The Pocket Rule', t: 'Four lines from Lessons 1 to 4.', p: 'Read one line at a time. Then keep the rule in the corner for your meeting.' },
+  { k: 'cadeira', est: 'o', min: 12, img: 'conversa', rot: 'IV · Your Meeting', t: 'Now you are the seller. Your teacher is the director.', p: 'Do each task. Ask, listen, react.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 7, img: 'mesa', rot: 'V · The Next Step', t: 'The meeting is over. What now?', p: 'Choose A or B and say why. Your teacher answers first.' },
+  { k: 'erros', est: 'f', min: 8, img: 'capa', rot: 'VI · Fix the Follow-up', t: 'A follow-up e-mail with five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
+  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'VII · Your Follow-up E-mail', t: 'Write your follow-up e-mail.', p: 'Thank you, two facts, what you do, the next step.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -88,3 +89,16 @@ var PODE = [
   'I can propose the next step: Is Friday good for …?',
   'I can write a short follow-up e-mail.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de cadeira.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'The first meeting',
+  linhas: [
+    'We <b>don’t</b> sell SAP. We <b>aren’t</b> a reseller.',
+    '<b>There are</b> four thousand employees. <b>There isn’t</b> a shared service center.',
+    '<b>Do you</b> use SAP? Yes, we <b>do</b>. · <b>Is there</b> a team? No, there <b>isn’t</b>.',
+    'The next step: <b>Is Friday good</b> for a second meeting?'
+  ],
+  uso: { p: 'Your turn. You are the seller in the meeting. Say what you do and what you don’t do. Then ask one question.', molde: ['We do …', 'We don’t …', 'Is there …?'], ex: 'We do payroll and tax. We don’t sell software. Is there a finance team in each factory?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

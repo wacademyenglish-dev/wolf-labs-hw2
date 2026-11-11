@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 4, kick: 'ENGLISH FOR HEALTHCAR
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · Shadow a Nurse', t: 'Listen and repeat: admission phrases.', p: 'Watch, repeat each phrase in the pause, then answer.' },
-  { k: 'transforma', est: 'o', min: 10, img: 'capa', rot: 'II · Build the Questions', t: 'From your notes to a full question.', p: 'Read the note and the clue. Ask the full question out loud.' },
-  { k: 'formulario', est: 'w', min: 12, img: 'conversa', rot: 'III · The Admission Form', t: 'Fill in Mrs. Harper’s form.', p: 'Read what she told you. Fill in every field. Then check.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Which Question?', t: 'Three kinds of question, three time frames.', p: 'Look at the three questions. Tap the right one for each new situation. Then say your own.' },
+  { k: 'transforma', est: 'o', min: 10, img: 'capa', rot: 'III · Build the Questions', t: 'From your notes to a full question.', p: 'Read the note and the clue. Ask the full question out loud.' },
+  { k: 'formulario', est: 'w', min: 12, img: 'conversa', rot: 'IV · The Admission Form', t: 'Fill in Mrs. Harper’s form.', p: 'Read what she told you. Fill in every field. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'vrxbZCA3_vk', titulo: 'Speak Like a Nurse | Patient Admission Shadowing Practice', fonte: 'FLUENT NURSE MEDICAL ENGLISH · 0:00–1:52', fim: 112,
@@ -60,3 +61,25 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 04: video · transforma · formulario (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Do you, are you taking, have you ever had. Three time frames.',
+  usos: [
+    { t: 'DO YOU …?', f: 'Do you smoke?', d: 'A habit: what you do every day or every week.' },
+    { t: 'ARE YOU TAKING …?', f: 'Are you taking any medication?', d: 'Now: this week, this month.' },
+    { t: 'HAVE YOU EVER HAD …?', f: 'Have you ever had an operation?', d: 'Any time in your whole life.' }
+  ],
+  pergunta: 'Which question do you ask?',
+  itens: [
+    { f: 'You want to know how often the patient drinks alcohol.', c: 0, d: 'A habit: Do you drink …?' },
+    { f: 'You want to know about the pills the patient takes this week.', c: 1, d: 'Now: Are you taking …?' },
+    { f: 'You want to know if the patient had surgery at any time in life.', c: 2, d: 'Whole life: Have you ever had …?' },
+    { f: 'You want to know if the patient exercises.', c: 0, d: 'A habit: Do you exercise?' },
+    { f: 'You want to know about a vitamin the patient started yesterday.', c: 1, d: 'Now: Are you taking …?' },
+    { f: 'You want to know if the patient broke a bone as a child.', c: 2, d: 'Any time in life: Have you ever broken …?' }
+  ],
+  nota: 'Three time frames. <b>Do you</b> + verb: a habit. <b>Are you taking</b>: now. <b>Have you ever had</b>: any time in life. After Do you, the verb stays clean: Do you smoke?, never “Do you smokes?”.',
+  uso: { p: 'Your turn. Three questions for a new patient, one of each kind.', molde: ['Do you …?', 'Are you taking …?', 'Have you ever had …?'], ex: 'Do you smoke? Are you taking any medication? Have you ever had an operation?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

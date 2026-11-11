@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'DET', unidade: 5, kick: 'DUOLINGO ENGLISH TEST
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · The Text', t: 'Read it once for the meaning.', p: 'Read the text out loud. Then read the questions. Then look at the connecting words.' },
-  { k: 'multipla', est: 'f', min: 10, img: 'capa', rot: 'II · Five Tasks', t: 'The five tasks of Interactive Reading.', p: 'Choose. Then show where in the text you found it.' },
-  { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connecting words.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Three Signal Words', t: 'Three small words that guide the text.', p: 'Look at the three signal words. Tap the right one for each gap. Then say three of your own.' },
+  { k: 'multipla', est: 'f', min: 10, img: 'capa', rot: 'III · Five Tasks', t: 'The five tasks of Interactive Reading.', p: 'Choose. Then show where in the text you found it.' },
+  { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'IV · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connecting words.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'THE TEXT · MORE THAN BOOKS', tipo: 'nota',
@@ -49,3 +50,25 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DET 05: leitura · multipla · ordem (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de multipla.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Three signal words. Three jobs.',
+  usos: [
+    { t: 'HOWEVER', f: 'However, the opposite happened.', d: 'A turn: the text says the contrary now.' },
+    { t: 'AS A RESULT', f: 'As a result, librarians do much more.', d: 'A consequence: this happened because of that.' },
+    { t: 'IN OTHER WORDS', f: 'In other words, the library is the living room of the city.', d: 'The same idea, said again and shorter.' }
+  ],
+  pergunta: 'Which signal word goes in the gap?',
+  itens: [
+    { f: 'It rained all day. … , the game was cancelled.', c: 1 },
+    { f: 'Many people predicted the end of libraries. … , visits are growing.', c: 0 },
+    { f: 'The library is free, quiet and open to all. … , it is the living room of the city.', c: 2 },
+    { f: 'She studied for months. … , she passed the test.', c: 1 },
+    { f: 'The test looks hard. … , it is possible with practice.', c: 0 },
+    { f: 'He explained it twice. … , he said it again in simple words.', c: 2 }
+  ],
+  nota: 'Signal words tell you where the text goes: <b>however</b> turns it, <b>as a result</b> gives the consequence, <b>in other words</b> says it again. Find them first, then answer the questions.',
+  uso: { p: 'Your turn. Three sentences about your week, each with one signal word.', molde: ['However, …', 'As a result, …', 'In other words, …'], ex: 'I slept badly. As a result, I was tired. However, I finished my work. In other words, it was a hard but good day.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

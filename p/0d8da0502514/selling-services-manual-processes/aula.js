@@ -15,11 +15,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Week', t: 'How many meetings are there this week?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · The Client Notes', t: 'The notes about a new client.', p: 'Read them out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 8, img: 'conversa', rot: 'III · Prepare with Your Manager', t: 'Leo tells his manager about the client.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · There Is or There Are?', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'multipla', est: 'f', min: 7, img: 'mesa', rot: 'V · Is or Are?', t: 'Six lines from client notes.', p: 'Read the line out loud. Choose. Then say why.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your Client X-Ray', t: 'Describe a client in five lines.', p: 'Size, teams, systems, one problem. Then read it out loud.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'IV · Mistake Hunter', t: 'Six lines from client notes. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · There Is or There Are?', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'multipla', est: 'f', min: 7, img: 'mesa', rot: 'VI · Is or Are?', t: 'Six lines from client notes.', p: 'Read the line out loud. Choose. Then say why.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your Client X-Ray', t: 'Describe a client in five lines.', p: 'Size, teams, systems, one problem. Then read it out loud.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -95,3 +96,20 @@ var PODE = [
   'I can ask: Is there a …? Are there any …?',
   'I can write a client x-ray.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines from the client notes.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'There [[is]] three systems in this company.', r: 'There <b>are</b> three systems in this company.', d: 'More than one: there are.' },
+    { f: 'In this company [[have]] two ERPs.', r: 'In this company <b>there are</b> two ERPs.', d: 'To say a thing exists: there is, there are. Not have.' },
+    { f: 'There [[are]] a manual process in finance.', r: 'There <b>is</b> a manual process in finance.', d: 'One thing: there is.' },
+    { f: 'There are [[a lot]] problems with payroll.', r: 'There are <b>a lot of</b> problems with payroll.', d: 'a lot of, with the of.' },
+    { f: 'There [[isn’t]] many reports.', r: 'There <b>aren’t</b> many reports.', d: 'Many reports: aren’t.' },
+    { f: '[[Have]] a lot of manual processes at Brava Foods.', r: '<b>There are</b> a lot of manual processes at Brava Foods.', d: 'Start with there. English needs it.' }
+  ],
+  nota: 'One thing: <b>there is</b> a system. More than one: <b>there are</b> three systems, a lot of problems. Never “have” to say something exists.',
+  uso: { p: 'Your turn. Describe a client in three lines: one thing, many things, and something that isn’t there.', molde: ['There is a …', 'There are …', 'There aren’t any …'], ex: 'There is one big ERP. There are a lot of manual processes. There aren’t any automatic reports.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

@@ -20,12 +20,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'pulseiras', rot: 'I · You and Big Nights Out', t: 'Before the festival: you, music and plans that go wrong.', p: 'Pick a card. Answer out loud. Then your teacher answers too.' },
   { k: 'mapa', est: 'o', min: 7, img: 'botas', rot: 'II · Eight Torn Tickets', t: 'Eight things went wrong, and something went right every time.', p: 'Pick a ticket. Join the bad half and the good half in ONE sentence, any way you like. Your teacher taps what you said.' },
-  { k: 'regra', est: 'f', min: 6, img: 'palco', rot: 'III · The Stitch', t: 'After the word: a clause, or a noun? That’s the whole question.', p: 'Read the three stitches out loud. Then fix the four traps.' },
-  { k: 'prazo', est: 'o', min: 7, img: 'mesa', rot: 'IV · The Midnight Deadline', t: 'The review is due at 12 AM. Eight lines. Each line has its own word.', p: 'Your teacher reads the notes. Say the line with the word on the ticket, at once.' },
-  { k: 'rosa', est: 'o', min: 7, img: 'luzes', rot: 'V · The Organizer Calls', t: 'Sunday morning. The organizer read your review, and she has questions.', p: 'Your teacher is Rosa. Answer with despite, although, even though, however.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'pulseiras', rot: 'VI · Quick Check', t: 'Six quick lines from the festival.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'tudo', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'VII · Despite Everything', t: 'Your life: the good and the bad in one sentence.', p: 'Pick five cards. Answer with despite, in spite of, although, even though or however.' },
-  { k: 'fim', est: 'w', min: 6, img: 'luzes', rot: 'VIII · After the Festival', t: 'The field is empty, the lights are still on, and the review is out.', p: 'Write your own review of a night out: five stars or one? Use despite, although and however. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'palco', rot: 'III · The Stitch in Blocks', t: 'The same night, told in three ways.', p: 'Read the blocks out loud. Notice what changes. Then build a sentence and say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'palco', rot: 'IV · The Stitch', t: 'After the word: a clause, or a noun? That’s the whole question.', p: 'Read the three stitches out loud. Then fix the four traps.' },
+  { k: 'prazo', est: 'o', min: 7, img: 'mesa', rot: 'V · The Midnight Deadline', t: 'The review is due at 12 AM. Eight lines. Each line has its own word.', p: 'Your teacher reads the notes. Say the line with the word on the ticket, at once.' },
+  { k: 'rosa', est: 'o', min: 7, img: 'luzes', rot: 'VI · The Organizer Calls', t: 'Sunday morning. The organizer read your review, and she has questions.', p: 'Your teacher is Rosa. Answer with despite, although, even though, however.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'pulseiras', rot: 'VII · Quick Check', t: 'Six quick lines from the festival.', p: 'Say the whole sentence out loud. Then tap the word.' },
+  { k: 'tudo', est: 'o', min: 7, extra: 1, img: 'palco', rot: 'VIII · Despite Everything', t: 'Your life: the good and the bad in one sentence.', p: 'Pick five cards. Answer with despite, in spite of, although, even though or however.' },
+  { k: 'fim', est: 'w', min: 6, img: 'luzes', rot: 'IX · After the Festival', t: 'The field is empty, the lights are still on, and the review is out.', p: 'Write your own review of a night out: five stars or one? Use despite, although and however. It goes to your My notes.' }
 ];
 
 var VOCE = [
@@ -174,3 +175,17 @@ TOQUES['pz-prox'] = function () { S.pz = { n: S.pz.n + 1, esc: '' }; };
 TOQUES['ro-prox'] = function () { S.ro.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'The rainy festival, in blocks. Each block has a job.',
+  frases: [
+    { b: [['Although', 'LINK', 'aux'], ['it rained', 'A WHOLE SENTENCE', 'quem'], ['the fans stayed', 'RESULT', 'acao']], d: 'Although opens a whole sentence: it rained.' },
+    { b: [['Despite', 'LINK', 'aux'], ['the rain', 'A NOUN', 'o'], ['the fans stayed', 'RESULT', 'acao']], d: 'Despite opens a noun: the rain.' },
+    { b: [['Despite', 'LINK', 'aux'], ['waiting in the mud', '-ING', 'como'], ['the fans sang', 'RESULT', 'acao']], d: 'Despite can also open an -ing.' }
+  ],
+  nota: 'After <b>although</b> or <b>even though</b>: a whole sentence (who + verb). After <b>despite</b> or <b>in spite of</b>: a noun or an -ing. Never “despite of”, and never although + but.',
+  monta: { p: 'Build the next line from the festival. Then say it.', pecas: [['the lights went out', 'A WHOLE SENTENCE', 'quem'], ['Although', 'LINK', 'aux'], ['everybody kept dancing', 'RESULT', 'acao']], ordem: [1, 0, 2], outras: [[2, 1, 0]] },
+  uso: { p: 'Your turn. A night out that went wrong, but you stayed. Say two sentences: one with although, one with despite.', molde: ['Although …, …', 'Despite …, …'], ex: 'Although it was cold, we stayed until midnight. Despite the long line, we got in.' },
+  prof: 'Read the blocks with the student, top to bottom: the word on top, its job under it. Point at what comes after the link.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

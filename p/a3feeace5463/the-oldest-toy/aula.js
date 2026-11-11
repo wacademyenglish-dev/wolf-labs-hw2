@@ -35,10 +35,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Toy Story 5. The official trailer.', p: 'Say where you stand first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'quarto', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'brecho', rot: 'V · The Oldest, the Best', t: 'Which tag does the word take? Sort the words.', p: 'Tap a word, then tap its box. Then read the rule.' },
-  { k: 'prateleira', est: 'o', min: 7, img: 'brecho', rot: 'VI · The Thrift Shelf', t: 'Six forgotten toys. Pick the right tag for each one.', p: 'Read the clue. Tap the tag. Then say the whole sentence.' },
-  { k: 'premio', est: 'o', min: 7, img: 'quarto', rot: 'VII · The Best and the Worst', t: 'Spin the wheel: the best and the worst of your life.', p: 'Answer with a superlative. Then spin again.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Toy Box Awards', t: 'Give three awards to the things and people in your life.', p: 'Three superlatives. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'brecho', rot: 'V · Find the Rule', t: 'Four toys on the shelf. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'brecho', rot: 'VI · The Oldest, the Best', t: 'Which tag does the word take? Sort the words.', p: 'Tap a word, then tap its box. Then read the rule.' },
+  { k: 'prateleira', est: 'o', min: 7, img: 'brecho', rot: 'VII · The Thrift Shelf', t: 'Six forgotten toys. Pick the right tag for each one.', p: 'Read the clue. Tap the tag. Then say the whole sentence.' },
+  { k: 'premio', est: 'o', min: 7, img: 'quarto', rot: 'VIII · The Best and the Worst', t: 'Spin the wheel: the best and the worst of your life.', p: 'Answer with a superlative. Then spin again.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Toy Box Awards', t: 'Give three awards to the things and people in your life.', p: 'Three superlatives. It goes to your My notes.' }
 ];
 
 var FILME = 'Toy Story 5', ANO = '2026';
@@ -254,3 +255,19 @@ var AQ = { tipo: 'imagem', img: 'quarto', alt: 'A child’s bedroom floor at nig
     { q: 'Where are your old toys now?', ex: 'In a box at my mother’s house, I think.' }
   ] };
 /*AQ@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four toys. Find the rule yourself.',
+  exemplos: [
+    'Woody is <b>the oldest</b> toy in the box.',
+    'This robot is <b>the funniest</b> toy of my life.',
+    'The yo-yo is <b>the most useful</b> toy on the shelf.',
+    'Buzz is <b>the best</b> toy in the store.'
+  ],
+  pergunta: 'To say number one, we use …',
+  opcoes: ['the + -est (short words), the most (long words), the best / the worst', 'more + word + than', 'the + -er (short words), the most + -est (long words)'], c: 0,
+  nao: 'Not that one. Read the four lit parts again: is there a than? two endings together?',
+  regra: '<b>the + -est</b> for short words (the oldest; y becomes -iest: the funniest). <b>the most</b> + a long word (the most useful). Odd ones: <b>the best</b>, <b>the worst</b>. Then <b>in</b> a place (in the box) or <b>of</b> a time (of my life).',
+  uso: { p: 'Your turn. Choose three things from your home: the oldest, the most useful, the best.', molde: ['The oldest … in my house is …', 'The most useful … is …'], ex: 'The oldest thing in my house is a clock. The most useful thing is my phone. The best thing is my bed.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

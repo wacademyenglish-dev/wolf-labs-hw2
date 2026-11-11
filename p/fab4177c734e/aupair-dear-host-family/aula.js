@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 2, kick: 'AU PAIR · MODULE 1 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · What Families Want', t: 'An agency’s tips for your letter.', p: 'First one question, then the video, then more questions.' },
-  { k: 'transforma', est: 'f', min: 9, img: 'capa', rot: 'II · Join Your Ideas', t: 'Two short sentences. Make one.', p: 'Read the sentences and the clue. Say them as one sentence.' },
-  { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'III · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
-  { k: 'cartao', est: 'w', min: 12, img: 'capa', rot: 'IV · Your Letter', t: 'Write your letter.', p: 'Six lines. One unique detail. One memory with children.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · And, Because, So', t: 'Three small words that join your ideas.', p: 'Look at the three words. Tap the right one for each gap. Then say three of your own.' },
+  { k: 'transforma', est: 'f', min: 9, img: 'capa', rot: 'III · Join Your Ideas', t: 'Two short sentences. Make one.', p: 'Read the sentences and the clue. Say them as one sentence.' },
+  { k: 'ordem', est: 'o', min: 7, img: 'conversa', rot: 'IV · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
+  { k: 'cartao', est: 'w', min: 12, img: 'capa', rot: 'V · Your Letter', t: 'Write your letter.', p: 'Six lines. One unique detail. One memory with children.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'ln-Q__22LeQ', titulo: 'Profile tips 3: Your host family letter', fonte: 'CULTURAL CARE AU PAIR · 1 MIN',
@@ -57,3 +58,26 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 02: video · transforma · ordem · cartao (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Join your ideas. Three small words.',
+  usos: [
+    { t: 'AND', f: 'I love children and outdoor games.', d: 'And adds one more thing.' },
+    { t: 'BECAUSE', f: 'I want to be an au pair because I want to know a new culture.', d: 'Because gives the reason.' },
+    { t: 'SO', f: 'My cousins are little, so I babysit them every weekend.', d: 'So gives the result.' }
+  ],
+  pergunta: 'Which word fits the gap?',
+  itens: [
+    { f: 'I can drive, … I can take the kids to school.', c: 2 },
+    { f: 'I’m a little nervous … it’s my first time abroad.', c: 1 },
+    { f: 'I make a great cake … I love baking with kids.', c: 0 },
+    { f: 'I want to learn English … I want to talk to the family.', c: 1 },
+    { f: 'My host mom is very busy, … she needs help with the kids.', c: 2 },
+    { f: 'I love music … dancing.', c: 0 }
+  ],
+  nota: 'Three small words join your ideas: <b>and</b> adds, <b>because</b> gives the reason, <b>so</b> gives the result. After <b>because</b> comes the reason. After <b>so</b> comes the result.',
+  uso: { p: 'Your turn. Say why you want to be an au pair with because, and one result with so.', molde: ['I want to … because …', '… , so …'], ex: 'I want to be an au pair because I love kids. I can drive, so I can take the kids to school.' },
+  prof: 'Read the three words out loud with the student. Then the student taps a word for each gap. The jobs are the rule.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

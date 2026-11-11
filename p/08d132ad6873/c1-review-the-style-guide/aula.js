@@ -15,7 +15,8 @@ var L = [
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · The Style Guide', t: 'One page. Six rules.', p: 'Read the guide out loud. Answer the questions. Then find the examples of each register.' },
   { k: 'transforma', est: 'f', min: 8, img: 'conversa', rot: 'III · Switch the Voice', t: 'Formal ↔ friendly, written ↔ spoken.', p: 'Read the sentence and the clue. Say it in the other register.' },
   { k: 'escolha', est: 'o', min: 7, img: 'conversa', rot: 'IV · Which Voice?', t: 'A or B: which voice fits?', p: 'Choose A or B. Then explain: who is it for? where?' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'V · The Style Card', t: 'Four lines from Unit 9.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 9: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -55,3 +56,9 @@ var PODE = [
 /* MECÂNICAS VARIADAS */
 /* C1 R9: bingo · leitura · transforma · escolha */
 var BINGO = [['formal of “Can we put it off?”', 'Would it be possible to postpone it?'], ['spoken of “investigate”', 'look into'], ['written of “gonna”', 'going to'], ['plain English of “shall”', 'must'], ['plain English of “prior to”', 'before'], ['understatement of “very expensive”', 'not exactly cheap'], ['euphemism of “fired”', 'let go'], ['“I don’t care at all” (idiom)', 'I couldn’t care less'], ['friendly of “I am writing to let you know”', 'Just a heads-up']];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 9.', rotulo: 'Register and style', linhas: ['spoken: <b>gonna, wanna, kinda</b> (friends, films) · written for work: <b>going to, want to, rather</b>', 'talk: <b>find out, look into, carry on</b> · report: <b>ascertain, investigate, continue</b>', 'contract: <b>shall</b> = must · <b>subject to</b> = only if · <b>prior to</b> + -ing', 'tone: <b>not exactly cheap</b> (= expensive) · <b>I’m all for it</b> · <b>I couldn’t care less</b> (= I do not care)'], uso: { p: 'Your turn. Say one sentence to a friend and then the same idea for your boss. Change the register.', molde: ['I’m gonna …', 'I would like to …'], ex: 'I’m gonna be late, sorry! I would like to inform you that I will arrive at ten.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

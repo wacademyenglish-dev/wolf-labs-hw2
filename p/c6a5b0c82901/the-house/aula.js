@@ -35,10 +35,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'cena5-janela', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'cena5-janela', rot: 'III · The Trailer', t: 'The Odyssey, 2026. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'cena6-portas', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'cena2-pao', rot: 'V · There Is, There Are', t: 'Five sentences have a mistake. Find the fix.', p: 'Say the right words out loud. Then tap Check and read the rule.' },
-  { k: 'casa', est: 'o', min: 7, img: 'capa', rot: 'VI · The House Plan', t: 'You are the art director. Put six things in their rooms.', p: 'Tap the sentence, then its room. Then say it: there is … / there are …' },
-  { k: 'tua', est: 'o', min: 6, img: 'cena4-tear', rot: 'VII · Your House', t: 'Walk through your house. Say what there is.', p: 'Say what there is. The teacher taps Got it! for each sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · The Debate', t: 'The debate.', p: 'Debate.' }
+  { k: 'gx', est: 'o', min: 4, img: 'cena6-portas', rot: 'V · Look First', t: 'Five pictures from the house.', p: 'Look at the picture. Guess what they say. Then tap to see it, and say it.' },
+  { k: 'regra', est: 'f', min: 6, img: 'cena2-pao', rot: 'VI · There Is, There Are', t: 'Five sentences have a mistake. Find the fix.', p: 'Say the right words out loud. Then tap Check and read the rule.' },
+  { k: 'casa', est: 'o', min: 7, img: 'capa', rot: 'VII · The House Plan', t: 'You are the art director. Put six things in their rooms.', p: 'Tap the sentence, then its room. Then say it: there is … / there are …' },
+  { k: 'tua', est: 'o', min: 6, img: 'cena4-tear', rot: 'VIII · Your House', t: 'Walk through your house. Say what there is.', p: 'Say what there is. The teacher taps Got it! for each sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · The Debate', t: 'The debate.', p: 'Debate.' }
 ];
 
 var FILME = 'The Odyssey', ANO = '2026';
@@ -228,3 +229,17 @@ var FIM = { tipo: 'debate', rot: 'VIII · The Debate', t: 'Is a home the people,
   b: { rot: 'The house too', motivos: ['Your things are in it.', 'Your bed and your room are there.', 'Your memories are in the house.'] },
   frases: ['There is / There are…', 'My house is…', 'I see your point, but…'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What is there?',
+  cenas: [
+    { img: 'cena6-portas', antes: 'The hall of the stone house. A torch is on the wall.', frase: '“What is in the hall?” “<mark>There’s</mark> a torch. <mark>There are</mark> three doors.”' },
+    { img: 'cena3-cao', antes: 'Outside, at the door of the house.', frase: '“Is there a dog at the door?” “Yes, <mark>there is</mark>. <mark>There’s</mark> a dog on the step.”' },
+    { img: 'cena2-pao', antes: 'A table in the dark.', frase: '“What is on the table?” “<mark>There’s</mark> some bread and <mark>there’s</mark> a cup. <mark>There isn’t</mark> any food.”' },
+    { img: 'cena4-tear', antes: 'Up the stairs, in a room under the roof.', frase: '“What is in the room?” “<mark>There’s</mark> a loom and <mark>there’s</mark> a bed. <mark>There isn’t</mark> a TV.”' },
+    { img: 'cena5-janela', antes: 'A window. It is night.', frase: '“What is outside?” “<mark>There’s</mark> the sea. <mark>There aren’t</mark> any boats tonight.”' }
+  ],
+  nota: 'One thing: <b>there is</b> (there’s). More than one: <b>there are</b>. For no: <b>there isn’t</b>, <b>there aren’t</b>. Not “have”: not “have a dog”.',
+  uso: { p: 'Your turn. Look at your room. Say what there is, and what there isn’t.', molde: ['There’s a …', 'There are …', 'There isn’t a …'], ex: 'There’s a bed and a lamp. There are two windows. There isn’t a TV.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

@@ -16,11 +16,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Week', t: 'Is this week busier than last week?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · The Proposal Page', t: 'Page 2 of a proposal: in-house or Bluepeak?', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 8, img: 'conversa', rot: 'III · “Why Not a New Team?”', t: 'An HR director wants five new people. Leo compares.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Cheaper, Not “More Cheap”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'multipla', est: 'f', min: 7, img: 'mesa', rot: 'V · Which Word?', t: 'Six lines from proposals.', p: 'Read the line out loud. Choose. Then say why.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and compare.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your Comparison', t: 'In-house or your company? Three sentences.', p: 'Cost, time, quality. One number. Then say it out loud.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'IV · The Comparison in Blocks', t: 'Three comparisons, five blocks each.', p: 'Read the blocks out loud. Notice the job of each one. Then build a comparison and say your own.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · Cheaper, Not “More Cheap”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'multipla', est: 'f', min: 7, img: 'mesa', rot: 'VI · Which Word?', t: 'Six lines from proposals.', p: 'Read the line out loud. Choose. Then say why.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and compare.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your Comparison', t: 'In-house or your company? Three sentences.', p: 'Cost, time, quality. One number. Then say it out loud.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -99,3 +100,18 @@ var PODE = [
   'I can say better and worse (never “more better”).',
   'I can compare in-house and my service in three sentences.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'Bluepeak against a new team, in blocks. Each block has a job.',
+  frases: [
+    { b: [['A BPO', 'WHAT'], ['is', 'BE', 'aux'], ['cheaper', 'COMPARE', 'acao'], ['than', 'THAN'], ['a new team', 'THE OTHER']], d: 'A short word takes -er. Then than.' },
+    { b: [['Our process', 'WHAT'], ['is', 'BE', 'aux'], ['more efficient', 'COMPARE', 'acao'], ['than', 'THAN'], ['your spreadsheets', 'THE OTHER']], d: 'A long word takes more in front. The same blocks.' },
+    { b: [['Our reports', 'WHAT'], ['are', 'BE', 'aux'], ['better', 'COMPARE', 'acao'], ['than', 'THAN'], ['the old reports', 'THE OTHER']], d: 'Better is already a comparison.' }
+  ],
+  nota: 'Five blocks: the thing, <b>be</b>, the comparison, <b>than</b>, the other thing. A short word: <b>cheaper</b>. A long word: <b>more efficient</b>. Good: <b>better</b>, never “more better”.',
+  monta: { p: 'Build the next comparison. Then say it.', pecas: [['than', 'THAN'], ['Payroll', 'WHAT'], ['faster', 'COMPARE', 'acao'], ['is', 'BE', 'aux'], ['the old system', 'THE OTHER']], ordem: [1, 3, 2, 0, 4] },
+  uso: { p: 'Your turn. Compare two things from your work: two systems, two tools or two ways to do a job.', molde: ['… is cheaper than …', '… is more … than …'], ex: 'E-mail is faster than a letter. A call is more personal than an e-mail.' },
+  prof: 'Read the blocks with the student: the word on top, the job under it. Point at than every time.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

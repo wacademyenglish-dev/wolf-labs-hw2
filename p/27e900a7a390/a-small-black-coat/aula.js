@@ -18,13 +18,14 @@ var L = [
   { k: 'video1', est: 'l', min: 7, img: 'rua', rot: 'III · Cold in Cambridge', t: 'Watch Bob in Cambridge. Six words matter.', p: 'Ears only. Tap each word when you hear it.' },
   { k: 'quero', est: 'o', min: 7, extra: 1, img: 'rua', rot: 'IV · I Want a Coat', t: 'Bob speaks. Hear it, say it, then see it.', p: 'One word changes each time. Then say it with something you really want.' },
   { k: 'cores', est: 'l', min: 7, extra: 1, img: 'arara', rot: 'V · The Colors', t: 'The coat on the hanger takes your color.', p: 'Say the whole sentence first. Then tap the color, and check with the voice.' },
-  { k: 'tamanho', est: 'f', min: 6, img: 'espelho', rot: 'VI · The Sizes', t: 'Hold each coat up against Bob. Only one fits.', p: 'Say the size out loud. Then put the coat on him.' },
-  { k: 'video2', est: 'l', min: 7, img: 'vitrine', rot: 'VII · In the Shop', t: 'Bob in the shop. You know every one of these words.', p: 'Tap each word when you hear it. Then one question.' },
-  { k: 'tags', est: 'f', min: 6, extra: 1, img: 'etiqueta', rot: 'VIII · The Tags', t: 'Three tags for every thing: SIZE, COLOR, THING.', p: 'Say it first. Then hang the tags. They only hang in one order.' },
-  { k: 'arara', est: 'o', min: 7, extra: 1, img: 'arara', rot: 'IX · The Rack', t: 'Six coats. Bob’s money: £100 for five days.', p: 'Say the whole coat. Tap it to see the price. Expensive or cheap? Then Bob buys one.' },
-  { k: 'cliente', est: 'o', min: 7, extra: 1, img: 'vitrine', rot: 'X · The Shop Assistant', t: 'Your turn to shop. Your teacher works in the shop.', p: 'Three friends, three things. Say what you want, ask the price, and decide.' },
-  { k: 'guarda', est: 'o', min: 7, extra: 1, img: 'arara', rot: 'XI · Your Wardrobe', t: 'Now your own clothes.', p: 'Answer out loud. Then the follow-up comes.' },
-  { k: 'fim', est: 'w', min: 6, img: 'estacao', rot: 'XII · Your Shopping List', t: 'Bob is warm on the train. Now your list.', p: 'Write four things you want, each with a size and a color: I want a small black coat. The red line watches the order. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'arara', rot: 'VI · Look First', t: 'Four pictures from Bob’s day.', p: 'Look at the picture. Guess what Bob says. Then tap to see it, and say it.' },
+  { k: 'tamanho', est: 'f', min: 6, img: 'espelho', rot: 'VII · The Sizes', t: 'Hold each coat up against Bob. Only one fits.', p: 'Say the size out loud. Then put the coat on him.' },
+  { k: 'video2', est: 'l', min: 7, img: 'vitrine', rot: 'VIII · In the Shop', t: 'Bob in the shop. You know every one of these words.', p: 'Tap each word when you hear it. Then one question.' },
+  { k: 'tags', est: 'f', min: 6, extra: 1, img: 'etiqueta', rot: 'IX · The Tags', t: 'Three tags for every thing: SIZE, COLOR, THING.', p: 'Say it first. Then hang the tags. They only hang in one order.' },
+  { k: 'arara', est: 'o', min: 7, extra: 1, img: 'arara', rot: 'X · The Rack', t: 'Six coats. Bob’s money: £100 for five days.', p: 'Say the whole coat. Tap it to see the price. Expensive or cheap? Then Bob buys one.' },
+  { k: 'cliente', est: 'o', min: 7, extra: 1, img: 'vitrine', rot: 'XI · The Shop Assistant', t: 'Your turn to shop. Your teacher works in the shop.', p: 'Three friends, three things. Say what you want, ask the price, and decide.' },
+  { k: 'guarda', est: 'o', min: 7, extra: 1, img: 'arara', rot: 'XII · Your Wardrobe', t: 'Now your own clothes.', p: 'Answer out loud. Then the follow-up comes.' },
+  { k: 'fim', est: 'w', min: 6, img: 'estacao', rot: 'XIII · Your Shopping List', t: 'Bob is warm on the train. Now your list.', p: 'Write four things you want, each with a size and a color: I want a small black coat. The red line watches the order. It goes to your My notes.' }
 ];
 
 /* as cores e os desenhos */
@@ -273,3 +274,16 @@ TOQUES['ar-compra'] = function () { S.ar.comprou = S.ar.sel; };
 TOQUES['cli-parte'] = function (b, n, v) { var e = S.cli; e.partes[e.n] = e.partes[e.n] || {}; e.partes[e.n][v] = !e.partes[e.n][v]; };
 TOQUES['cli-erro'] = function () { var e = S.cli; e.erro[e.n] = !e.erro[e.n]; };
 TOQUES['cli-prox'] = function () { S.cli.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de tamanho.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What does Bob say?',
+  cenas: [
+    { img: 'rua', antes: 'Cambridge. It is three degrees. Bob has no coat.', frase: '“I want <mark>a coat</mark>.”' },
+    { img: 'vitrine', antes: 'The shop window. The coat on the hanger is not big.', frase: '“I want <mark>a small</mark> coat.”' },
+    { img: 'arara', antes: 'The rack. Six coats. Bob points at the dark one.', frase: '“I want a small <mark>black</mark> coat.”' },
+    { img: 'etiqueta', antes: 'The tag has three lines: size, color, thing.', frase: '“A <mark>small black coat</mark>, please.”' }
+  ],
+  nota: 'Three tags, always in this order: <b>size → color → thing</b>. A <b>small black coat</b>. Not “a black small coat”, and no “and”.',
+  uso: { p: 'Your turn. You are in the shop. Say what you want: size, color, thing.', molde: ['I want a … … …', 'A … … …, please.'], ex: 'I want a large blue sweater. A small red bag, please.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

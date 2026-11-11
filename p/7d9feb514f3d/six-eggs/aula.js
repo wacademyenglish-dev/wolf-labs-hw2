@@ -15,15 +15,16 @@ var L = [
   { k: 'cap1', est: 'l', min: 7, img: 'cap1', rot: 'II · Chapter One', t: 'The 7:40', p: 'Listen first, with the text closed. Then open it and read it together. Then two questions.' },
   { k: 'aposta', est: 'o', min: 7, img: 'cap1', rot: 'III · What Is Inside?', t: 'A stranger’s notebook. Old, nearly full, no name.', p: 'Choose one and say why, with because.' },
   { k: 'cap2', est: 'l', min: 7, extra: 1, img: 'cap2', rot: 'IV · Chapter Two', t: 'Six Eggs', p: 'Listen first. Then the text. Look at the list: one line nobody can read.' },
-  { k: 'junta', est: 'f', min: 6, img: 'cap2', rot: 'V · Four Words', t: 'Two facts, one word.', p: 'Read both facts out loud. Pick the word that joins them. Then say the whole sentence.' },
-  { k: 'cap3', est: 'l', min: 7, img: 'cap3', rot: 'VI · Chapter Three', t: 'Page Four', p: 'Listen first. Then the text. Then stop for a moment before the questions.' },
-  { k: 'vira', est: 'f', min: 6, extra: 1, img: 'cap3', rot: 'VII · Turn It Around', t: 'The same two facts, in the other order.', p: 'Read the SO sentence. Tap the result, then BECAUSE, then the reason.' },
-  { k: 'faria', est: 'o', min: 7, extra: 1, img: 'cap3', rot: 'VIII · What Do You Do?', t: 'No name. No number. And a cat that is not eating.', p: 'Choose one and say why, with because. Then say what you don’t do.' },
-  { k: 'cap4', est: 'l', min: 7, extra: 1, img: 'cap4', rot: 'IX · Chapter Four', t: 'Seventy-Three', p: 'Listen first. Then the text. Then find the street, and say why.' },
-  { k: 'ordem', est: 'o', min: 7, extra: 1, img: 'cap4', rot: 'X · Tell It Back', t: 'First, then, in the end.', p: 'Tap what happens next. Say it with the word on the left.' },
-  { k: 'cap5', est: 'l', min: 7, extra: 1, img: 'cap5', rot: 'XI · Chapter Five', t: 'In the End', p: 'Listen first. Then the text. Then read the last line of the list.' },
-  { k: 'semana', est: 'o', min: 7, extra: 1, img: 'cap5', rot: 'XII · Your Week', t: 'One true story from your week.', p: 'Five sentences. It does not have to be interesting. Use the four words.' },
-  { k: 'fim', est: 'w', min: 6, img: 'cap5', rot: 'XIII · Six Eggs', t: 'Write your true story.', p: 'Five sentences with and, but, so and because. A comma before and, but, so.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cap3', rot: 'V · Result or Reason?', t: 'Two lines from the notebook. Two little words.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'junta', est: 'f', min: 6, img: 'cap2', rot: 'VI · Four Words', t: 'Two facts, one word.', p: 'Read both facts out loud. Pick the word that joins them. Then say the whole sentence.' },
+  { k: 'cap3', est: 'l', min: 7, img: 'cap3', rot: 'VII · Chapter Three', t: 'Page Four', p: 'Listen first. Then the text. Then stop for a moment before the questions.' },
+  { k: 'vira', est: 'f', min: 6, extra: 1, img: 'cap3', rot: 'VIII · Turn It Around', t: 'The same two facts, in the other order.', p: 'Read the SO sentence. Tap the result, then BECAUSE, then the reason.' },
+  { k: 'faria', est: 'o', min: 7, extra: 1, img: 'cap3', rot: 'IX · What Do You Do?', t: 'No name. No number. And a cat that is not eating.', p: 'Choose one and say why, with because. Then say what you don’t do.' },
+  { k: 'cap4', est: 'l', min: 7, extra: 1, img: 'cap4', rot: 'X · Chapter Four', t: 'Seventy-Three', p: 'Listen first. Then the text. Then find the street, and say why.' },
+  { k: 'ordem', est: 'o', min: 7, extra: 1, img: 'cap4', rot: 'XI · Tell It Back', t: 'First, then, in the end.', p: 'Tap what happens next. Say it with the word on the left.' },
+  { k: 'cap5', est: 'l', min: 7, extra: 1, img: 'cap5', rot: 'XII · Chapter Five', t: 'In the End', p: 'Listen first. Then the text. Then read the last line of the list.' },
+  { k: 'semana', est: 'o', min: 7, extra: 1, img: 'cap5', rot: 'XIII · Your Week', t: 'One true story from your week.', p: 'Five sentences. It does not have to be interesting. Use the four words.' },
+  { k: 'fim', est: 'w', min: 6, img: 'cap5', rot: 'XIV · Six Eggs', t: 'Write your true story.', p: 'Five sentences with and, but, so and because. A comma before and, but, so.' }
 ];
 
 var MANHA = [
@@ -194,3 +195,20 @@ TOQUES['vr-prox'] = function () { S.vira = { n: S.vira.n + 1, usados: [], err: -
 TOQUES.od = function (b, n) { var o = S.ordem; if (n === o.n) { o.n++; o.err = -1; } else o.err = n; };
 TOQUES['sm-p'] = function (b, n) { S.semana.pal[n] = !S.semana.pal[n]; };
 TOQUES['sm-e'] = function (b, n, v) { S.semana.erros[v] = !S.semana.erros[v]; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de junta.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'This or that? Two lines about the cat.',
+  a: { t: 'First the problem', falas: [['Sofia', 'The cat isn’t eating, <mark>so</mark> I’m going to the shop.'], ['You', 'I see. First the problem, then what happens.']], d: 'The problem comes first, then what it makes happen. That is <b>so</b>: the result.' },
+  b: { t: 'First the result', falas: [['Sofia', 'I’m going to the shop <mark>because</mark> the cat isn’t eating.'], ['You', 'I see. First what she does, then why.']], d: 'What happens comes first, then the reason. That is <b>because</b>: the reason.' },
+  pergunta: 'Same two facts, two words. What is different?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'Sofia can’t read the address. The page is wet. “Sofia can’t read the address … the page is wet.”', o: ['so', 'because'], c: 1, d: 'The wet page is the reason.' },
+    { p: 'There are no eggs at home. She goes to the shop. “There are no eggs, … she goes to the shop.”', o: ['so', 'because'], c: 0, d: 'No eggs is the problem. The shop is the result.' },
+    { p: 'The box is big. It is very heavy. “It is heavy … the box is big.”', o: ['so', 'because'], c: 1, d: 'The big box is the reason.' },
+    { p: 'The train is late. He has no time. “The train is late, … he has no time.”', o: ['so', 'because'], c: 0, d: 'The late train is the problem. No time is the result.' }
+  ],
+  nota: '<b>So</b> starts the result: the cat isn’t eating, <b>so</b> she goes to the shop. <b>Because</b> starts the reason: she goes to the shop <b>because</b> the cat isn’t eating. Put a comma before <b>so</b>.',
+  uso: { p: 'Your turn. One thing you did this week. Say it with so, and with because.', molde: ['I was tired, so I …', 'I … because …'], ex: 'I was tired, so I went to bed early. I went to bed early because I was tired.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

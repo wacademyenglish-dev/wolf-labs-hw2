@@ -16,7 +16,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · Three Delicate Guests', t: 'Each guest has a problem. Listen first.', p: 'Ask each guest five questions. Your teacher is the guest. Then answer, diplomatically.' },
   { k: 'transforma', est: 'f', min: 7, img: 'conversa', rot: 'III · Say It the New Way', t: 'Change the sentence.', p: 'Read the sentence and the clue. Say it the new way, out loud.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'IV · Delicate Questions', t: 'Now YOU ask me difficult things, nicely.', p: 'Ask your teacher delicate questions with distance and softeners.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'V · The Host’s Card', t: 'Four lines from Unit 5.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -71,3 +72,9 @@ var CADEIRA = { itens: [
   { alvo: 'Tell me some bad news about the homework, with empathy.', dica: 'I’m afraid I haven’t finished the homework…', resp: 'Thank you for telling me. It’s essential that we find time.' },
   { alvo: 'Disagree with me: I say grammar is the most important thing.', dica: 'I take your point, but…', resp: 'Fair enough. You might be right!' },
   { alvo: 'Ask me about a mistake in my career, without blaming me.', dica: 'Were there ever times when mistakes were made?', resp: 'Of course. Mistakes were made, and I learned a lot.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 5.', rotulo: 'Diplomacy', linhas: ['hedging: <b>the evidence suggests</b> · <b>it would appear that</b> · <b>this may be</b>', 'a polite ask: <b>I was wondering whether we might</b> … · <b>Would it be possible to</b> …', 'a hard moment: <b>mistakes were made</b> (no agent) · <b>I’m afraid</b> … · <b>it’s essential that</b> he <b>be</b> told', 'disagree: <b>I take your point, but</b> … · <b>I see it slightly differently</b>'], uso: { p: 'Your turn. A guest asks you for something you cannot give. Say no, with diplomacy, in two sentences.', molde: ['I’m afraid …', 'I was wondering whether we might …'], ex: 'I’m afraid that table is already taken. I was wondering whether we might offer you one by the window.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

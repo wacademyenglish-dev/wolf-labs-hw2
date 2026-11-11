@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 3, kick: 'AU PAIR · MODULE 1 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 10, img: 'conversa', rot: 'I · A Real Video', t: 'Watch a real application video.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'II · I Have… or I …ed?', t: 'Life experience or a moment in the past?', p: 'Compare A and B. When do we use each one?' },
-  { k: 'escada', est: 'f', min: 8, img: 'conversa', rot: 'III · The Ladder', t: 'Climb from easy to hard.', p: 'Go step by step. Give a good answer and you move up.' },
-  { k: 'prova', est: 'o', min: 12, img: 'capa', rot: 'IV · Your First Take', t: 'Record your video, live.', p: 'Thirty seconds to plan, up to two minutes. Look at the camera and smile.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · Life or Moment?', t: 'Two answers to a host mom. Two forms.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'III · I Have… or I …ed?', t: 'Life experience or a moment in the past?', p: 'Compare A and B. When do we use each one?' },
+  { k: 'escada', est: 'f', min: 8, img: 'conversa', rot: 'IV · The Ladder', t: 'Climb from easy to hard.', p: 'Go step by step. Give a good answer and you move up.' },
+  { k: 'prova', est: 'o', min: 12, img: 'capa', rot: 'V · Your First Take', t: 'Record your video, live.', p: 'Thirty seconds to plan, up to two minutes. Look at the camera and smile.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'q_NC7ZcRDRk', titulo: 'My AIFS Aupair Application Video', fonte: 'A REAL APPLICANT · 3 MIN',
@@ -63,3 +64,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 03: video · descobre · escada (PORTAS) · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'This or that? Two answers to a host mom.',
+  a: { t: 'Any time in my life', falas: [['Host mom', 'Have you ever worked with babies?'], ['Ana', 'Yes, I <mark>have babysat</mark> my cousins many times.']], d: 'No time is said. It is life experience: <b>have</b> + participle.' },
+  b: { t: 'A moment', falas: [['Host mom', 'When did you babysit them?'], ['Ana', 'I <mark>babysat</mark> them last Saturday.']], d: 'A time is said: last Saturday. That is the <b>past simple</b>.' },
+  pergunta: 'Same verb, two forms. What is different in the situation?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'You say WHEN it happened:', o: ['I traveled alone in 2023.', 'I have traveled alone in 2023.'], c: 0, d: 'With a time like in 2023: past simple.' },
+    { p: 'You say your experience, with no time:', o: ['I have worked in a kindergarten.', 'I worked in a kindergarten last year.'], c: 0, d: 'No time said: have + participle.' },
+    { p: 'The host mom asks about last weekend. You:', o: ['I have cooked pasta with the kids.', 'I cooked pasta with the kids.'], c: 1, d: 'Last weekend is a time: past simple.' },
+    { p: 'The host mom asks: “Have you ever worked with babies?” You:', o: ['Yes, I have.', 'Yes, I did.'], c: 0, d: 'The short answer repeats the helper: have.' }
+  ],
+  nota: 'No time, your whole life: <b>have + participle</b> (I have babysat). With a time, <b>last Saturday</b> or <b>in 2023</b>: <b>past simple</b> (I babysat).',
+  uso: { p: 'Your turn. One thing you have done with kids, and one thing you did last week.', molde: ['I have …', 'Last week I …'], ex: 'I have taught my cousin to swim. Last week I made a cake with him.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

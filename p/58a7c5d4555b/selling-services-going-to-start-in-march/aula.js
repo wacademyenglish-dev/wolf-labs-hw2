@@ -16,11 +16,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Week', t: 'What are you going to do this week?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 7, img: 'mesa', rot: 'II · The Plan E-mail', t: 'Leo sends the project plan to the client.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 9, img: 'conversa', rot: 'III · “So, What’s the Plan?”', t: 'The client’s project manager asks about the plan.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Going To, Not “Go To”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'ordem', est: 'f', min: 8, img: 'mesa', rot: 'V · Put the Plan in Order', t: 'Five steps, one project.', p: 'Tap the five steps in the right order. Then read the plan out loud.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your 4-Step Plan', t: 'A plan for a real client, in four steps.', p: 'Kick-off, work, tests, go-live. Then present it out loud.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 13: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'IV · The Ladder', t: 'One plan, five steps.', p: 'Read each step out loud, then go one step up. Notice what moves. Then climb with a plan of your own.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · Going To, Not “Go To”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'ordem', est: 'f', min: 8, img: 'mesa', rot: 'VI · Put the Plan in Order', t: 'Five steps, one project.', p: 'Tap the five steps in the right order. Then read the plan out loud.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your 4-Step Plan', t: 'A plan for a real client, in four steps.', p: 'Kick-off, work, tests, go-live. Then present it out loud.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 13: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -101,3 +102,18 @@ var PODE = [
   'I can explain a project in steps: kick-off, tests, go-live.',
   'I can write a four-step implementation plan.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One plan. Climb it one step at a time.',
+  degraus: [
+    { r: 'I', f: '<b>I’m going to</b> call the CFO.', d: 'A plan: be + going to + the clean verb.' },
+    { r: 'we', f: '<b>We’re going to</b> start in March.', d: 'The be changes: I’m, you’re, we’re, it’s.' },
+    { r: 'when', f: 'It’s going to start <b>on June 1</b>.', d: 'The date goes at the end. The verb stays clean: start.' },
+    { r: 'not', f: 'We’re <b>not</b> going to test it in April.', d: 'For no: not goes after be.' },
+    { r: '?', f: '<b>Is</b> the CFO going to come?', d: 'For a question: be goes first.' }
+  ],
+  nota: 'A plan is <b>be + going to + a clean verb</b>: we’re going to start. For no, <b>not</b> goes after be. For a question, <b>be</b> goes first. Never “we go to start”.',
+  uso: { p: 'Your turn. Climb the ladder with a plan of yours: a plan, a date, a no, and a question for your teacher.', molde: ['I’m going to …', 'We’re not going to …', 'Are you going to …?'], ex: 'I’m going to start a new course in March. I’m not going to work on Saturdays. Are you going to join me?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

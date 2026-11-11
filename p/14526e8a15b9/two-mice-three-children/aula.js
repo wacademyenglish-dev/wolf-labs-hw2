@@ -23,10 +23,11 @@ var L = [
   { k: 'palavras', est: 'l', min: 5, img: 'ninho', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'conta', est: 'o', min: 7, img: 'caixa', rot: 'III · Count Them', t: 'Five photos. Count the animals.', p: 'Pick a photo. Count out loud. Say: “Three mice.” Your teacher taps what you said.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'IV · Day 1 to Day 80', t: 'One mouse on day one. And on day eighty?', p: 'Answer first. Then the video plays in four short parts. Then True or Lie.' },
-  { k: 'regra', est: 'f', min: 6, img: 'ninho', rot: 'VI · The Labels', t: 'One mouse, two mice.', p: 'Read the four labels out loud. Then fix the four traps.' },
-  { k: 'escreve', est: 'w', min: 6, img: 'loja', rot: 'VII · My Notebook', t: 'Your home, in numbers.', p: 'Three short lines. How many people? Children? Pets? Rooms?' },
-  { k: 'quiz', est: 'f', min: 5, extra: 1, img: 'caixa', rot: 'VIII · Quick Check', t: 'Five quick lines.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'fim', est: 'o', min: 6, img: 'loja', rot: 'IX · Your Pet Shop', t: 'Open your own little pet shop.', p: 'Choose your animals. Then tell your teacher: “Three mice, two fish …”' }
+  { k: 'gx', est: 'l', min: 4, img: 'ninho', rot: 'VI · Mouse or Mice?', t: 'Listen: the word changes.', p: 'Listen to the pairs. Then the ear test: which one do you hear? Then say yours.' },
+  { k: 'regra', est: 'f', min: 6, img: 'ninho', rot: 'VII · The Labels', t: 'One mouse, two mice.', p: 'Read the four labels out loud. Then fix the four traps.' },
+  { k: 'escreve', est: 'w', min: 6, img: 'loja', rot: 'VIII · My Notebook', t: 'Your home, in numbers.', p: 'Three short lines. How many people? Children? Pets? Rooms?' },
+  { k: 'quiz', est: 'f', min: 5, extra: 1, img: 'caixa', rot: 'IX · Quick Check', t: 'Five quick lines.', p: 'Say the whole sentence out loud. Then tap the word.' },
+  { k: 'fim', est: 'o', min: 6, img: 'loja', rot: 'X · Your Pet Shop', t: 'Open your own little pet shop.', p: 'Choose your animals. Then tell your teacher: “Three mice, two fish …”' }
 ];
 
 /* I · o aquecimento: o contador da casa. O aluno diz um número; o professor toca + e −;
@@ -292,3 +293,24 @@ TOQUES['lj+'] = function (b, n) { if (S.loja.v[n] < 20) S.loja.v[n]++; };
 TOQUES['lj-'] = function (b, n) { if (S.loja.v[n] > 0) S.loja.v[n]--; };
 TOQUES['lj-f'] = function () { S.loja.fac[Math.min(S.loja.n, PERG_LOJA.length - 1)] = 1; };
 TOQUES['lj-prox'] = function () { S.loja.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G11 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'som2', titulo: 'Mouse or mice? Listen first.',
+  toque: 'Tap ▶ and listen. The vowel changes. Then say both out loud.',
+  pares: [
+    [{ t: 'one mouse', fala: 'one mouse' }, { t: 'two mice', fala: 'two mice' }],
+    [{ t: 'one foot', fala: 'one foot' }, { t: 'two feet', fala: 'two feet' }],
+    [{ t: 'one goose', fala: 'one goose' }, { t: 'two geese', fala: 'two geese' }]
+  ],
+  pergunta: 'The ear test. Which one do you hear?',
+  itens: [
+    { fala: 'There is a mouse in the nest.', o: ['mouse', 'mice'], c: 0 },
+    { fala: 'Bernard has three mice.', o: ['mouse', 'mice'], c: 1 },
+    { fala: 'My feet are cold.', o: ['foot', 'feet'], c: 1 },
+    { fala: 'Look at the geese on the lake.', o: ['goose', 'geese'], c: 1 }
+  ],
+  nota: '<b>mouse</b> → <b>mice</b>, <b>foot</b> → <b>feet</b>, <b>goose</b> → <b>geese</b>: the vowel changes. Not mouses, not foots. Most words just add <b>-s</b>: cat, cats.',
+  uso: { p: 'Your turn. Count your life: say a number and the right plural: mice, feet, teeth, children or people.', molde: ['I have two …', 'There are three …'], ex: 'I have two feet and thirty-two teeth. There are three children in my family.' },
+  prof: 'The ▶ uses the voice of the browser. No sound? Say the pairs yourself, and let the student hear the vowel change.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_som', GX_EXPLICA); };

@@ -11,14 +11,15 @@ var REV = { tipo: 'aula', aula: 8, nivel: 'A1', unidade: 2, kick: 'GLOBAL PAYMEN
   nota: 'There is one. There are two. In Portuguese it is the same word: “tem”.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'morning', est: 'o', min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
+  { k: 'morning', est: 'o', extra: 1, min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
   { k: 'conversa', est: 'o', min: 4, img: 'conversa', rot: 'II · Your Office', t: 'A short chat about your office.', p: 'Choose an answer. Say it. Then ask: “And you?”' },
   { k: 'termos', est: 'l', min: 8, img: 'capa', rot: 'III · Counting Words', t: 'Eight words for counting the queue.', p: 'Listen. Look. Say each word three times.', sig: ['queue', 'status'] },
-  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'IV · There Is, There Are', t: '“Tem” in English: there is, there are.', p: 'Read the card with your teacher. Then build the sentence.' },
-  { k: 'simulador', est: 'f', min: 13, img: 'capa', rot: 'V · The Simulator', t: 'Count the queue.', p: 'Use the filters. Count. Say it with there is / there are.', sig: ['status', 'ccy', 'queue'] },
-  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VI · The End-of-Day Call', t: 'Your manager asks for the numbers.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'cartao', est: 'w', min: 7, img: 'mesa', rot: 'VII · The Daily Report', t: 'Write the end-of-day report.', p: 'There are … There is … There aren’t any …' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'IV · The End-of-Day Call', t: 'Mark and Ana, at the end of the day. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then say what there is in your office.' },
+  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'V · There Is, There Are', t: '“Tem” in English: there is, there are.', p: 'Read the card with your teacher. Then build the sentence.' },
+  { k: 'simulador', est: 'f', min: 13, img: 'capa', rot: 'VI · The Simulator', t: 'Count the queue.', p: 'Use the filters. Count. Say it with there is / there are.', sig: ['status', 'ccy', 'queue'] },
+  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VII · The End-of-Day Call', t: 'Your manager asks for the numbers.', p: 'One question before. Listen. Then the questions.' },
+  { k: 'cartao', est: 'w', min: 7, img: 'mesa', rot: 'VIII · The Daily Report', t: 'Write the end-of-day report.', p: 'There are … There is … There aren’t any …' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
 ];
 
 var MORNING = { rot: 'OPERATIONS QUEUE · 08:00', ref: 'FX-20488',
@@ -116,3 +117,28 @@ var PT = {
   dialogo: 'O gerente pede os números do fim do dia.',
   cartao: 'Escreva o relatório do fim do dia: total, status e o que não tem.',
   pode: 'Leia cada frase em voz alta e toque nas que você já consegue fazer.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de explica.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The end-of-day call. Tap the lit words.',
+  falas: [
+    { q: 'Mark', f: 'How many payments [[are there]] in the queue?' },
+    { q: 'Ana', f: '[[There are]] eight. [[There is]] one on hold.' },
+    { q: 'Mark', f: '[[Is there]] a problem with the hold?' },
+    { q: 'Ana', f: 'Yes, [[there is]]. The invoice is missing.' },
+    { q: 'Mark', f: '[[Are there]] any urgent payments?' },
+    { q: 'Ana', f: 'No, [[there aren’t]]. All of them are for tomorrow.' }
+  ],
+  porques: [
+    'How many + the thing + are there? The question ends with are there.',
+    'More than one thing: there are.',
+    'One thing: there is.',
+    'A yes or no question: Is there …? The helper goes first.',
+    'The short answer repeats it: Yes, there is.',
+    'More than one, and a question: Are there …? With any.',
+    'The short answer for no: No, there aren’t.'
+  ],
+  nota: 'One thing: <b>there is</b>. Two or more: <b>there are</b>. A question: <b>Is there</b> …? <b>Are there</b> …? The short answer repeats it: Yes, there is. No, there aren’t.',
+  uso: { p: 'Your turn. Tell Mark about your office: one thing there is, and two things there are.', molde: ['There is …', 'There are … in …'], ex: 'There is a coffee machine. There are ten desks in my office.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

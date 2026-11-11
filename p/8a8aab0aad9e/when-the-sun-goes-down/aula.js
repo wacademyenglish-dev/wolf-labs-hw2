@@ -36,10 +36,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'From. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'estrada', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 7, img: 'casa', rot: 'V · The Sheriff’s Notice', t: 'The sheriff nailed a notice on the door. Finish the rule.', p: 'Read the notice out loud. Tap the verbs in the present. Then finish the rule.' },
-  { k: 'placa', est: 'o', min: 7, img: 'capa', rot: 'VI · The Town Rules', t: 'Six rules on the board. Every rule brings the night closer.', p: 'Read the clue. Say the rule out loud. Then tap Check.' },
-  { k: 'suas', est: 'o', min: 7, img: 'casa', rot: 'VII · Your Rules', t: 'Three people ask you. How do you answer?', p: 'Pick how you answer. Then read the talk out loud.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · One Minute', t: 'One minute.', p: 'One minute.' }
+  { k: 'gx', est: 'f', min: 4, img: 'talisma', rot: 'V · The Sheriff’s Radio', t: 'The sheriff and you, before dark. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then say a rule of your own.' },
+  { k: 'regra', est: 'f', min: 7, img: 'casa', rot: 'VI · The Sheriff’s Notice', t: 'The sheriff nailed a notice on the door. Finish the rule.', p: 'Read the notice out loud. Tap the verbs in the present. Then finish the rule.' },
+  { k: 'placa', est: 'o', min: 7, img: 'capa', rot: 'VII · The Town Rules', t: 'Six rules on the board. Every rule brings the night closer.', p: 'Read the clue. Say the rule out loud. Then tap Check.' },
+  { k: 'suas', est: 'o', min: 7, img: 'casa', rot: 'VIII · Your Rules', t: 'Three people ask you. How do you answer?', p: 'Pick how you answer. Then read the talk out loud.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · One Minute', t: 'One minute.', p: 'One minute.' }
 ];
 
 var FILME = 'From', ANO = '2022';
@@ -246,3 +247,27 @@ var FIM = { tipo: 'minuto', rot: 'VIII · One Minute', t: 'One minute of rules.'
   ],
   palavras: ['If …, …', 'When …', 'as soon as', 'always', 'never', 'don’t'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The sheriff, at sunset. Tap the lit words.',
+  falas: [
+    { q: 'Sheriff', f: 'When the sun [[goes]] down, the creatures [[come]] out.' },
+    { q: 'You', f: 'What [[happens]] if somebody [[stays]] outside?' },
+    { q: 'Sheriff', f: 'If you [[don’t go]] home, they [[find]] you.' },
+    { q: 'You', f: 'And if I [[hold]] the talisman?' },
+    { q: 'Sheriff', f: 'Then you [[are]] safe. Always.' }
+  ],
+  porques: [
+    'when + the present: the sun goes. No will. One thing (the sun): -s.',
+    'The other half is the present too: they come. It is always true.',
+    'What is the subject: what happens. No does.',
+    'somebody is one person: stays, with -s.',
+    'The no: don’t + a clean verb. Not “if you not go”.',
+    'they: no -s. find.',
+    'After I, the clean verb: hold. No will.',
+    'A fact that is always true: you are safe.'
+  ],
+  nota: 'A rule that is always true: <b>if</b> or <b>when</b> + the present, and the present again. No <b>will</b>: <b>when the sun goes down</b>. Watch the <b>-s</b> with the sun, somebody and it.',
+  uso: { p: 'Your turn. A rule in your house or your town that is always true. Use when or if.', molde: ['When …, …', 'If you …, …'], ex: 'When it rains, the streets flood. If you leave the door open, the dog runs out.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

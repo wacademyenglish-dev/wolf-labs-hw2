@@ -38,10 +38,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'The Boys. The official trailer.', p: 'Beat the clock first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'palco', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'V · Then and Now', t: 'Past → now, or now → past? Sort the sentences.', p: 'Tap a sentence, then its box. Then read the rule.' },
-  { k: 'ranking', est: 'o', min: 7, img: 'sala', rot: 'VI · The Vought Ranking', t: 'Six heroes on the board. Every sentence you say moves one.', p: 'Read the clue. Say the sentence. Then tap Check.' },
-  { k: 'mistos', est: 'o', min: 6, img: 'palco', rot: 'VII · Your Other Life', t: 'Two ways to talk about your other life.', p: 'The teacher picks A or B. Use mixed conditionals.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · One Minute', t: 'One minute.', p: 'One minute.' }
+  { k: 'gx', est: 'f', min: 4, img: 'sala', rot: 'V · Right, Not This', t: 'Five lines about The Boys. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'VI · Then and Now', t: 'Past → now, or now → past? Sort the sentences.', p: 'Tap a sentence, then its box. Then read the rule.' },
+  { k: 'ranking', est: 'o', min: 7, img: 'sala', rot: 'VII · The Vought Ranking', t: 'Six heroes on the board. Every sentence you say moves one.', p: 'Read the clue. Say the sentence. Then tap Check.' },
+  { k: 'mistos', est: 'o', min: 6, img: 'palco', rot: 'VIII · Your Other Life', t: 'Two ways to talk about your other life.', p: 'The teacher picks A or B. Use mixed conditionals.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · One Minute', t: 'One minute.', p: 'One minute.' }
 ];
 
 var FILME = 'The Boys', ANO = '2019';
@@ -248,3 +249,17 @@ var FIM = { tipo: 'minuto', rot: 'VIII · One Minute', t: 'One minute of your ot
   ],
   palavras: ['If I had…', 'I would be', 'If I were', 'would have', 'now', 'last year'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'If Hughie hadn’t met Annie, he wouldn’t be here.', x: 'If Hughie didn’t meet Annie, he wouldn’t be here.', d: 'A closed past: had + participle in the if part.' },
+    { c: 'If Homelander were honest, he would have told the truth.', x: 'If Homelander would be honest, he would have told the truth.', d: 'Never would in the if part: were.' },
+    { c: 'If A-Train hadn’t run, Robin would be alive.', x: 'If A-Train hadn’t run, Robin would have been alive now.', d: 'The result is today: would + verb, no have.' },
+    { c: 'If Butcher had trusted Hughie, they would be friends now.', x: 'If Butcher had trusted Hughie, they would had friends now.', d: 'Would is followed by a clean verb.' },
+    { c: 'If Starlight hadn’t joined the Seven, she would have a quieter life today.', x: 'If Starlight didn’t join the Seven, she would have a quieter life today.', d: 'Past before now: had joined, not joined.' }
+  ],
+  nota: 'The two halves have different clocks. The past that changed: <b>if + had + participle</b>. The result today: <b>would + verb</b>. An always-true fact: <b>were</b>, and the result finished: <b>would have + participle</b>.',
+  uso: { p: 'Your turn. A moment that changed your life, and what is different today.', molde: ['If I hadn’t …, I wouldn’t …now.', 'If I had …, I would …today.'], ex: 'If I hadn’t joined that class, I wouldn’t speak English today.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

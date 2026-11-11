@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 10, kick: 'ENGLISH FOR HEALTHCA
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · Patient and Family', t: 'A nurse talks to a patient and her husband.', p: 'One question before, then the video, then the questions.' },
-  { k: 'multipla', est: 'l', min: 11, img: 'capa', rot: 'II · Five Worried People', t: 'Listen. Choose the most caring answer.', p: 'Play each person once. Choose. Then say it with a warm voice.' },
-  { k: 'transforma', est: 'o', min: 10, img: 'conversa', rot: 'III · From Cold to Caring', t: 'Same information, more care.', p: 'Read the cold answer and the clue. Say it the caring way.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Find the Rule', t: 'Four caring sentences. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'multipla', est: 'l', min: 11, img: 'capa', rot: 'III · Five Worried People', t: 'Listen. Choose the most caring answer.', p: 'Play each person once. Choose. Then say it with a warm voice.' },
+  { k: 'transforma', est: 'o', min: 10, img: 'conversa', rot: 'IV · From Cold to Caring', t: 'Same information, more care.', p: 'Read the cold answer and the clue. Say it the caring way.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'UxLBXCjD-yM', titulo: 'CUSP: Effective Patient and Family Communication', fonte: 'AHRQ (U.S. AGENCY FOR HEALTHCARE RESEARCH AND QUALITY) · 2 MIN',
@@ -53,3 +54,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 10: video · multipla (áudio) · transforma (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de multipla.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.',
+  exemplos: [
+    'I can see you’re <b>worried</b>.',
+    'It sounds like you’re <b>frightened</b>.',
+    'I understand why you’re <b>upset</b>.',
+    'I can imagine this is <b>very hard</b> for you.'
+  ],
+  pergunta: 'What do all four sentences do first?',
+  opcoes: ['They name the feeling', 'They give advice', 'They ask for information'], c: 0,
+  nao: 'Not that one. Read the lit words again: what is the person feeling?',
+  regra: '<b>I can see you’re + feeling</b>: name it first. Then say it is normal: <b>That’s completely understandable.</b> Then help: <b>Let me explain what’s happening.</b>',
+  uso: { p: 'Your turn. A patient is worried about the wait. Name the feeling, then say it is understandable.', molde: ['I can see you’re …', 'That’s completely understandable.'], ex: 'I can see you’re worried about the results. That’s completely understandable.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

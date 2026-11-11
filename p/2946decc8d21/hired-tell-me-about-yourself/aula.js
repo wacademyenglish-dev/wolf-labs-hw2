@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 1, kick: 'WOLF HIRED · MODULE 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · What They Really Want', t: 'A career coach explains the right answer.', p: 'One question before, then the video, then the questions.' },
-  { k: 'ordem', est: 'f', min: 9, img: 'capa', rot: 'II · Put the Pitch in Order', t: 'Five sentences, one strong answer.', p: 'Tap the five parts in the right order.' },
-  { k: 'prova', est: 'o', min: 18, img: 'conversa', rot: 'III · Your First 60 Seconds', t: 'Prepare and give your own pitch.', p: 'Read the card, prepare, start the clock, speak.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · The Pitch Timeline', t: 'Where does each sentence of the pitch live in time?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'ordem', est: 'f', min: 9, img: 'capa', rot: 'III · Put the Pitch in Order', t: 'Five sentences, one strong answer.', p: 'Tap the five parts in the right order.' },
+  { k: 'prova', est: 'o', min: 18, img: 'conversa', rot: 'IV · Your First 60 Seconds', t: 'Prepare and give your own pitch.', p: 'Read the card, prepare, start the clock, speak.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'kayOhGRcNt4', titulo: 'Tell Me About Yourself: A Good Answer to This Interview Question', fonte: 'LINDA RAYNIER · 1:34–6:20', inicio: 94, fim: 380,
@@ -54,3 +55,21 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 01: video · ordem · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de ordem.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'A pitch on one line. Where does each sentence go?',
+  marcos: [{ t: 'WHERE I STARTED', s: 'past simple · finished' }, { t: 'UNTIL NOW', s: 'present perfect · still true' }, { t: 'WHO I AM', s: 'present · now' }],
+  frases: [
+    { f: 'I started my career at a small startup.', c: 0, d: 'started · finished' },
+    { f: 'I answered about sixty tickets a day.', c: 0, d: 'answered · finished' },
+    { f: 'I’ve worked with software companies for four years.', c: 1, d: 'I’ve worked · for four years, until now' },
+    { f: 'I’ve led a team of five since 2023.', c: 1, d: 'I’ve led · since 2023, until now' },
+    { f: 'I’m a customer support specialist.', c: 2, d: 'I’m · who I am now' },
+    { f: 'I love turning customer problems into ideas.', c: 2, d: 'love · true today' }
+  ],
+  nota: 'The past simple is finished: <b>started, answered</b>. The present perfect, <b>I’ve worked, I’ve led</b> + for or since, started before and is still true. The present, <b>I’m</b>, says who you are today.',
+  uso: { p: 'Your turn. Your own story in three lines: who you are, where you started, what you’ve done.', molde: ['I’m a …', 'I started …', 'I’ve … for / since …'], ex: 'I’m a project manager. I started in sales at a small company. I’ve led teams for six years.' },
+  prof: 'Let the student place the sentences alone. A wrong place comes back with one tap.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

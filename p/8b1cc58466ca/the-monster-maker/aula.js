@@ -31,13 +31,14 @@ var L = [
   { k: 'palavras', est: 'l', img: 'estudio', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'estudio', rot: 'III · The Trailer', t: 'Frankenstein: the creature tells his story.', p: 'Before and during the trailer: answer out loud. Then True or Lie.' },
   { k: 'falas', est: 'l', extra: 1, img: 'estudio', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'camarim', rot: 'V · The Rule', t: 'He’s got long black hair.', p: 'has / has got · hasn’t got · Has it got…? Say each trap the right way, then tap it.' },
-  { k: 'oficina', est: 'o', min: 7, img: 'camarim', rot: 'VI · The Creature Sheet', t: 'Design the creature. Say every part.', p: 'Choose a part. Then say the sentence: It’s got …' },
-  { k: 'adivinha', est: 'o', min: 7, img: 'estudio', rot: 'VII · Casting', t: 'Eight monsters in the casting files. Your teacher chose one.', p: 'Ask: Has it got fangs? Then tap the monsters that are out.' },
-  { k: 'historia', est: 'l', min: 7, extra: 1, img: 'abobora', rot: 'VIII · Why Pumpkins?', t: 'Why do we make faces in pumpkins?', p: 'Your teacher reads the story. Then answer.' },
-  { k: 'ditado', est: 'l', min: 7, extra: 1, img: 'camarim', rot: 'IX · The Wrap Party', t: 'Three guests in costume. Your teacher describes one. You draw it.', p: 'Listen and draw on paper (or on the board). Then compare.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'estudio', rot: 'X · Quick Check', t: 'Six quick ones before the wrap.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'abobora', rot: 'XI · Your Creature', t: 'Write the creature file for your film.', p: 'Five sentences. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'camarim', rot: 'V · Yes, It Has', t: 'Ping-pong. Three words for each answer.', p: 'The teacher asks. Tap your answer and say it fast. Then you ask.' },
+  { k: 'regra', est: 'f', min: 6, img: 'camarim', rot: 'VI · The Rule', t: 'He’s got long black hair.', p: 'has / has got · hasn’t got · Has it got…? Say each trap the right way, then tap it.' },
+  { k: 'oficina', est: 'o', min: 7, img: 'camarim', rot: 'VII · The Creature Sheet', t: 'Design the creature. Say every part.', p: 'Choose a part. Then say the sentence: It’s got …' },
+  { k: 'adivinha', est: 'o', min: 7, img: 'estudio', rot: 'VIII · Casting', t: 'Eight monsters in the casting files. Your teacher chose one.', p: 'Ask: Has it got fangs? Then tap the monsters that are out.' },
+  { k: 'historia', est: 'l', min: 7, extra: 1, img: 'abobora', rot: 'IX · Why Pumpkins?', t: 'Why do we make faces in pumpkins?', p: 'Your teacher reads the story. Then answer.' },
+  { k: 'ditado', est: 'l', min: 7, extra: 1, img: 'camarim', rot: 'X · The Wrap Party', t: 'Three guests in costume. Your teacher describes one. You draw it.', p: 'Listen and draw on paper (or on the board). Then compare.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'estudio', rot: 'XI · Quick Check', t: 'Six quick ones before the wrap.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'abobora', rot: 'XII · Your Creature', t: 'Write the creature file for your film.', p: 'Five sentences. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -341,3 +342,17 @@ TOQUES['hs-ouviu'] = function () { S.hist.ouviu = 1; };
 TOQUES['dt-mostra'] = function () { S.dt.mostra = 1; };
 TOQUES['dt-prox'] = function () { S.dt = { n: S.dt.n + 1, mostra: 0 }; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Three words, fast.',
+  perguntas: [
+    { q: 'Has it got fangs?', s: 'Yes, it <mark>has</mark>.', n: 'No, it <mark>hasn’t</mark>.', mais: 'Say what it’s got: It’s got two big fangs.' },
+    { q: 'Has he got scars?', s: 'Yes, he <mark>has</mark>.', n: 'No, he <mark>hasn’t</mark>.', mais: 'Where? He’s got a scar on his face.' },
+    { q: 'Have you got a costume?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'What are you? Ask your teacher too.' },
+    { q: 'Have the monsters got long hair?', s: 'Yes, they <mark>have</mark>.', n: 'No, they <mark>haven’t</mark>.', mais: 'What color is it?' },
+    { q: 'Has the creature got a mouth?', s: 'Yes, it <mark>has</mark>.', n: 'No, it <mark>hasn’t</mark>.' }
+  ],
+  nota: 'The short answer repeats the helper, never got: Yes, it <b>has</b>. No, they <b>haven’t</b>. Not Yes, it got.',
+  uso: { p: 'Your turn. Choose a monster in your head. Your teacher asks Has it got …? and you answer the short way.', molde: ['Has it got …?', 'Yes, it has. · No, it hasn’t.'], ex: 'Has it got wings? Yes, it has. Has it got a tail? No, it hasn’t.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

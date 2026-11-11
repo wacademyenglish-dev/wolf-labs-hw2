@@ -22,12 +22,13 @@ var L = [
   { k: 'ontem', est: 'o', min: 7, img: 'mesa', rot: 'I · Your Day', t: 'Before the clock: your day.', p: 'Pick a card. Answer out loud. Then the follow-up comes.' },
   { k: 'face', est: 'l', min: 7, img: 'estacao', rot: 'II · Read the Face', t: 'Short hand: the hour. Long hand: the minutes.', p: 'Look at the six clocks. Tap a clock, then its time in words. Then play the station voice and say it with her.' },
   { k: 'regra', est: 'f', min: 7, img: 'estacao', rot: 'III · How the Clock Talks', t: 'Four ways to say the time, and one word you never need.', p: 'Sort six times into the four ways to say them. Then find the broken part of four lines.' },
-  { k: 'ajusta', est: 'l', min: 7, img: 'estacao', rot: 'IV · Set the Clock', t: 'You are the station chief. Your teacher calls the trains.', p: 'Listen to the departure. Drag the hands with your finger. Then check.' },
-  { k: 'quadro', est: 'f', min: 6, img: 'estacao', rot: 'V · The Departures Board', t: 'The board only shows numbers. Give it the words.', p: 'Tap the words in order. When they are right, the board flips.' },
-  { k: 'ampm', est: 'l', min: 7, img: 'estacao', rot: 'VI · Day Train or Night Train', t: 'Same hands, two trains. Only the voice tells you which.', p: 'Play the voice. Pick the day train or the night train. Then say it out loud.' },
-  { k: 'dia', est: 'f', min: 6, extra: 1, img: 'xicaras', rot: 'VII · Twenty-Five Hours', t: 'This is her perfect day. Add it up.', p: 'Read each block out loud: from … to … Then put it on her day.' },
-  { k: 'conversa', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'VIII · What Time Do You…?', t: 'No clock now. Your times.', p: 'Answer out loud. Then the follow-up comes.' },
-  { k: 'fim', est: 'w', min: 6, img: 'estacao', rot: 'IX · Your Perfect Day', t: 'Your perfect day, hour by hour. In words.', p: 'Write five lines. Times in words: half past seven, not 7:30. The red line watches the clock. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 3, img: 'estacao', rot: 'IV · The Pocket Rule', t: 'Four ways to say the time. Keep them in the corner.', p: 'Read one line at a time. Then keep the rule in the corner for the next pages.' },
+  { k: 'ajusta', est: 'l', min: 7, img: 'estacao', rot: 'V · Set the Clock', t: 'You are the station chief. Your teacher calls the trains.', p: 'Listen to the departure. Drag the hands with your finger. Then check.' },
+  { k: 'quadro', est: 'f', min: 6, img: 'estacao', rot: 'VI · The Departures Board', t: 'The board only shows numbers. Give it the words.', p: 'Tap the words in order. When they are right, the board flips.' },
+  { k: 'ampm', est: 'l', min: 7, img: 'estacao', rot: 'VII · Day Train or Night Train', t: 'Same hands, two trains. Only the voice tells you which.', p: 'Play the voice. Pick the day train or the night train. Then say it out loud.' },
+  { k: 'dia', est: 'f', min: 6, extra: 1, img: 'xicaras', rot: 'VIII · Twenty-Five Hours', t: 'This is her perfect day. Add it up.', p: 'Read each block out loud: from … to … Then put it on her day.' },
+  { k: 'conversa', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'IX · What Time Do You…?', t: 'No clock now. Your times.', p: 'Answer out loud. Then the follow-up comes.' },
+  { k: 'fim', est: 'w', min: 6, img: 'estacao', rot: 'X · Your Perfect Day', t: 'Your perfect day, hour by hour. In words.', p: 'Write five lines. Times in words: half past seven, not 7:30. The red line watches the clock. It goes to your My notes.' }
 ];
 
 /* ---------- as horas em palavras ---------- */
@@ -337,3 +338,15 @@ TOQUES.ap = function (b, n) { var x = AP[S.ap.n]; if (!x || S.ap.esc === x.dia) 
 TOQUES['ap-prox'] = function () { S.ap = { n: S.ap.n + 1, esc: -1 }; };
 TOQUES.bloco = function (b, n) { S.dia.foi[n] = 1; };
 TOQUES['dia-esc'] = function (b, n) { if (S.dia.esc === 0) return false; S.dia.esc = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de ajusta.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'How the clock talks',
+  linhas: [
+    '<b>o’clock</b> · 7:00 · seven o’clock',
+    '<b>half past</b> · 7:30 · half past seven',
+    '<b>quarter past</b> · 7:15 · quarter past seven',
+    '<b>quarter to</b> · 7:45 · quarter to eight'
+  ],
+  uso: { p: 'Your turn. Three times from your day. Say them the way the clock talks.', molde: ['I wake up at …', 'I have lunch at half past …', 'I leave at quarter to …'], ex: 'I wake up at seven AM. I have lunch at half past twelve. I leave work at quarter to six PM.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

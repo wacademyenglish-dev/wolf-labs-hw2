@@ -27,12 +27,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'festa', rot: 'I · Party Talk', t: 'Before we look for the bag: you and parties.', p: 'Pick a card. Real life. Nobody is corrected here.' },
   { k: 'video', est: 'l', min: 10, img: 'hotel', rot: 'II · Do Not Disturb', t: 'A hotel only for monsters. Then somebody arrives.', p: 'Before, during and after the trailer. Then True or Lie.' },
-  { k: 'regra', est: 'f', min: 6, img: 'festa', rot: 'III · The Rule', t: 'Somebody, anybody, nobody, everybody.', p: 'Positive: some-. Question and not: any-. no- is already negative. Say each trap the right way, then tap it.' },
-  { k: 'busca', est: 'o', min: 7, img: 'corredor', rot: 'IV · The Search', t: 'Six rooms. Where is the bag?', p: 'Tap a room. Look at what’s there. Say what you see, then tap what you said.' },
-  { k: 'convidados', est: 'o', min: 7, img: 'fantasias', rot: 'V · Six Guests', t: 'Ask the guests. Everybody was wearing a costume.', p: 'Ask each guest the question. Your teacher answers as the guest.' },
-  { k: 'historia', est: 'l', min: 7, extra: 1, img: 'rua', rot: 'VI · Trick or Treat?', t: 'Where does trick-or-treating come from?', p: 'Your teacher reads the story. Then answer the questions.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'festa', rot: 'VII · Quick Check', t: 'Six quick ones before the party ends.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'corredor', rot: 'VIII · The Group Chat', t: 'Tell the building what happened.', p: 'Four or five sentences for the group chat. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'festa', rot: 'III · Mistake Hunter', t: 'Six lines from the party. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'regra', est: 'f', min: 6, img: 'festa', rot: 'IV · The Rule', t: 'Somebody, anybody, nobody, everybody.', p: 'Positive: some-. Question and not: any-. no- is already negative. Say each trap the right way, then tap it.' },
+  { k: 'busca', est: 'o', min: 7, img: 'corredor', rot: 'V · The Search', t: 'Six rooms. Where is the bag?', p: 'Tap a room. Look at what’s there. Say what you see, then tap what you said.' },
+  { k: 'convidados', est: 'o', min: 7, img: 'fantasias', rot: 'VI · Six Guests', t: 'Ask the guests. Everybody was wearing a costume.', p: 'Ask each guest the question. Your teacher answers as the guest.' },
+  { k: 'historia', est: 'l', min: 7, extra: 1, img: 'rua', rot: 'VII · Trick or Treat?', t: 'Where does trick-or-treating come from?', p: 'Your teacher reads the story. Then answer the questions.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'festa', rot: 'VIII · Quick Check', t: 'Six quick ones before the party ends.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'corredor', rot: 'IX · The Group Chat', t: 'Tell the building what happened.', p: 'Four or five sentences for the group chat. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -272,3 +273,19 @@ TOQUES['cv-viu'] = function () { S.cv.viu[S.cv.n] = 1; };
 TOQUES['cv-prox'] = function () { S.cv.n++; };
 TOQUES['hs-ouviu'] = function () { S.hist.ouviu = 1; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines from Mia’s party.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'There isn’t [[nothing]] in the hallway.', r: 'There isn’t <b>anything</b> in the hallway.', d: 'Only one no. isn’t + anything, or is + nothing.' },
+    { f: 'Nobody [[didn’t]] see the bag.', r: 'Nobody <b>saw</b> the bag.', d: 'Nobody is already a no. The verb is a yes.' },
+    { f: 'There’s [[anybody]] in the kitchen.', r: 'There’s <b>somebody</b> in the kitchen.', d: 'In a yes sentence: some-.' },
+    { f: 'Everybody [[are]] in a costume.', r: 'Everybody <b>is</b> in a costume.', d: 'everybody, somebody, nobody: one person at a time. is.' },
+    { f: 'I can’t find my keys [[nowhere]].', r: 'I can’t find my keys <b>anywhere</b>.', d: 'After not: any-. anywhere.' },
+    { f: 'Did you see [[something]] strange?', r: 'Did you see <b>anything</b> strange?', d: 'In a question: any-.' }
+  ],
+  nota: 'One no only: <b>nothing</b>, or <b>not … anything</b>. In a yes sentence: <b>some-</b>. In a no or a question: <b>any-</b>. And <b>everybody</b>, <b>nobody</b>, <b>somebody</b> take <b>is</b>.',
+  uso: { p: 'Your turn. You were at Mia’s party. Say one thing you saw, one thing you didn’t see, and ask one question.', molde: ['I saw somebody …', 'I didn’t see anything.', 'Did you see anybody …?'], ex: 'I saw somebody near the door. I didn’t see anything strange. Did you see anybody with a black bag?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

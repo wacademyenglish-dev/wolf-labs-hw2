@@ -37,10 +37,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Supergirl. The official trailer.', p: 'Read the card. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'cidade', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'janela', rot: 'V · Used To, Used To It', t: 'Used to, used to it, getting used to it. What does each one mean?', p: 'Match each form to its meaning. When all five are right, the rule appears.' },
-  { k: 'manual', est: 'o', min: 7, img: 'capa', rot: 'VI · The Earth Manual', t: 'Six pages of her notebook. Every right stamp writes one.', p: 'Read the clue and pick the stamp. Then say the line for her manual out loud.' },
-  { k: 'novos', est: 'o', min: 7, img: 'cidade', rot: 'VII · New for You', t: 'Something that was new for you once.', p: 'The teacher picks A or B. Talk about it, and tap each form when you use it.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'f', min: 5, img: 'krypto', rot: 'V · Three Shapes', t: 'One small phrase, three meanings.', p: 'Look at the three meanings. Tap the one in each sentence. Then say three of your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'janela', rot: 'VI · Used To, Used To It', t: 'Used to, used to it, getting used to it. What does each one mean?', p: 'Match each form to its meaning. When all five are right, the rule appears.' },
+  { k: 'manual', est: 'o', min: 7, img: 'capa', rot: 'VII · The Earth Manual', t: 'Six pages of her notebook. Every right stamp writes one.', p: 'Read the clue and pick the stamp. Then say the line for her manual out loud.' },
+  { k: 'novos', est: 'o', min: 7, img: 'cidade', rot: 'VIII · New for You', t: 'Something that was new for you once.', p: 'The teacher picks A or B. Talk about it, and tap each form when you use it.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var FILME = 'Supergirl', ANO = '2026';
@@ -249,3 +250,25 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: Kara
     { q: 'What do you miss?', ex: 'The quiet. I used to hear nothing at night.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Used to, used to it, getting used to it. Three meanings.',
+  usos: [
+    { t: 'USED TO + VERB', f: 'She used to live under a red sun.', d: 'A habit in the past. It is over now.', img: 'argo' },
+    { t: 'BE USED TO + -ING', f: 'Krypto is used to flying.', d: 'It is normal for him now.', img: 'krypto' },
+    { t: 'GET USED TO + -ING', f: 'She is getting used to eating Earth food.', d: 'It is becoming normal, little by little.', img: 'cidade' }
+  ],
+  pergunta: 'Which meaning is it?',
+  itens: [
+    { f: 'Back home, Kara used to fly over the city every night.', c: 0 },
+    { f: 'Now she is used to the noise of the street.', c: 1 },
+    { f: 'Every day it gets easier. She is getting used to wearing glasses.', c: 2 },
+    { f: 'Krypto isn’t used to the cold yet. He still shivers.', c: 1 },
+    { f: 'Kara didn’t use to hide her powers. Now she does.', c: 0 },
+    { f: 'It was strange at first, but she is getting used to sleeping at night.', c: 2 }
+  ],
+  nota: 'Three shapes, three meanings. <b>used to</b> + verb: it was true, but not now. <b>be used to</b> + -ing or a noun: it is normal for you now. <b>get used to</b> + -ing: it is becoming normal. Only the first one takes a clean verb.',
+  uso: { p: 'Your turn. One thing you used to do as a kid, one thing you are used to now, and one thing you are getting used to.', molde: ['I used to …', 'I’m used to …-ing', 'I’m getting used to …-ing'], ex: 'I used to hate coffee. I’m used to waking up early. I’m getting used to working from home.' },
+  prof: 'Read the three meanings with the student, one by one. Then the student taps a meaning for each sentence. The meanings are the rule.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

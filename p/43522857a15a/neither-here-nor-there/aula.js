@@ -19,7 +19,8 @@ var L = [
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · The Phone-In', t: 'Should we close streets on Sundays?', p: 'Read the callers out loud, each with a different temperature. Then look closer.' },
   { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · What’s the Temperature?', t: 'Strongly for, against, or in the middle?', p: 'Compare A and B. How strong is each opinion?' },
   { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'IV · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'tabuleiro', est: 'o', min: 14, img: 'capa', rot: 'V · The Opinion Board', t: 'Roll, move, give your opinion.', p: 'Your teacher rolls the die. Give your opinion on the topic with a nuanced phrase.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'V · The Opinion Card', t: 'Four lines. Keep them in the corner.', p: 'Read one line at a time. Then keep the card in the corner for the board.' },
+  { k: 'tabuleiro', est: 'o', min: 14, img: 'capa', rot: 'VI · The Opinion Board', t: 'Roll, move, give your opinion.', p: 'Your teacher rolls the die. Give your opinion on the topic with a nuanced phrase.' }
 ];
 var PORTAS = [];
 
@@ -76,3 +77,9 @@ var TABULEIRO = { rot: 'THE OPINION BOARD', centro: 'Give your opinion, with its
   { k: 'EARLY MORNINGS', t: 'Waking up at 5 AM every day.', ex: 'To be fair, it works for some people. Not my cup of tea!' },
   { k: 'CASH', t: 'A world without cash.', ex: 'If you ask me, it’s coming anyway. I’m all for it.' },
   { k: 'YOUR TOPIC', t: 'Choose a topic you care about. Defend it with three phrases.', ex: 'The way I see it, libraries are essential. I’m all for more funding. For what it’s worth, my library changed my life.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de tabuleiro.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'How strong is your opinion?', linhas: ['for: <b>I’m all for it</b> · <b>if you ask me</b>, it’s a great idea', 'in the middle: <b>I’m in two minds</b> · <b>I have mixed feelings</b> · <b>I’m sitting on the fence</b>', 'against: <b>it’s not my cup of tea</b> · <b>I couldn’t care less</b> (= I do not care at all)', 'step back: <b>to be fair</b> · <b>for what it’s worth</b> · <b>it’s neither here nor there</b> (= not important)'], uso: { p: 'Your turn. The city wants to close streets to cars on Sundays. Give your opinion in two sentences, with a phrase from the card.', molde: ['If you ask me, …', 'I’m in two minds about …', 'To be fair, …'], ex: 'If you ask me, it’s a great idea. To be fair, the shops might lose a few customers.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

@@ -17,9 +17,10 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'I · Honest or Polite?', t: 'Would you say it directly?', p: 'Choose A or B. Then say why: honesty or kindness?' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · The Review', t: 'A very polite critic.', p: 'Read the review out loud, in a calm British voice. Then decode it.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · What Does It Really Mean?', t: 'The words say one thing…', p: 'Compare A and B. What is the real message?' },
-  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'IV · Tone It Down', t: 'Direct → diplomatic.', p: 'Read the direct sentence. Use the clue. Say the softer version.' },
-  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'V · The Hot Seat', t: 'Ask me. I’ll answer… very politely.', p: 'Ask your teacher about things. Decode the real meaning of each answer.' }
+  { k: 'gx', est: 'f', min: 5, img: 'capa', rot: 'III · Three Ways to Soften', t: 'Three ways to say less than you mean.', p: 'Look at the three ways. Tap the way each sentence uses. Then say three of your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'IV · What Does It Really Mean?', t: 'The words say one thing…', p: 'Compare A and B. What is the real message?' },
+  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'V · Tone It Down', t: 'Direct → diplomatic.', p: 'Read the direct sentence. Use the clue. Say the softer version.' },
+  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'VI · The Hot Seat', t: 'Ask me. I’ll answer… very politely.', p: 'Ask your teacher about things. Decode the real meaning of each answer.' }
 ];
 var PORTAS = [];
 
@@ -70,3 +71,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me about my English when I was a beginner.', dica: 'How was your English at the start?', resp: 'It could have been better. Much better!' },
   { alvo: 'Ask me about a film I saw recently.', dica: 'What did you think of the last film you saw?', resp: 'Not bad at all, actually. (A compliment!)' },
   { alvo: 'Ask me about my city’s traffic.', dica: 'What’s the traffic like in your city?', resp: 'Let’s say it’s a bit of a challenge.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'The critic is very polite. What is he really doing?', usos: [{ t: 'UNDERSTATEMENT', f: 'The soup was not exactly warm.', d: 'The soup was cold. A small word for a big thing.' }, { t: 'EUPHEMISM', f: 'The waiter is between jobs.', d: 'A soft way to say something hard: he lost his job.' }, { t: 'IRONY', f: 'Oh, great. The only table by the kitchen.', d: 'You say the opposite of what you mean. The voice tells you.' }], pergunta: 'Which way is it?', itens: [{ f: 'The price was not exactly cheap.', c: 0 }, { f: 'Our chef was let go last week.', c: 1 }, { f: 'Brilliant. They forgot our order again.', c: 2 }, { f: 'The dessert could be better.', c: 0 }, { f: 'My grandfather passed away in May.', c: 1 }, { f: 'That went well, didn’t it? Everything is on the floor.', c: 2 }], nota: '<b>Understatement</b> makes a big thing small (<b>not bad</b> is a compliment). <b>Euphemism</b> makes a hard thing soft (<b>let go</b> = fired). <b>Irony</b> says the opposite, and the voice shows it. Do not translate word for word.', uso: { p: 'Your turn. A bad restaurant. Say three things like a very polite critic: one understatement, one euphemism, one ironic line.', molde: ['It was not exactly …', 'The waiter was … between jobs / let go …', 'Oh, great. …'], ex: 'The soup was not exactly warm. The manager was let go last week, I heard. Oh, great: another hour of waiting.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

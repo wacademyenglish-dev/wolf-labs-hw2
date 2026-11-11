@@ -24,16 +24,17 @@ var L = [
   { k: 'capa', est: null, img: 'cozinha' },
   { k: 'abre', est: 'o', min: 7, img: 'cozinha', rot: 'I · Before the Door', t: 'Four short answers about today.', p: 'Pick a card. Answer out loud. Your teacher writes it down and says nothing.' },
   { k: 'cap1', est: 'o', min: 7, img: 'cozinha', rot: 'II · Chapter One', t: 'Thirty Minutes', p: 'Read it together, line by line. Then the questions.' },
-  { k: 'porta1', est: 'f', min: 6, img: 'cozinha', rot: 'III · The First Days', t: 'The door is the question. Read it before you choose.', p: 'One round at a time. When you get it right, the door moves.' },
-  { k: 'cap2', est: 'o', min: 7, img: 'mesa', rot: 'IV · Chapter Two', t: 'A Full Door', p: 'Read it together. Then the questions.' },
-  { k: 'porta2', est: 'f', min: 6, img: 'mesa', rot: 'V · Seven Days', t: 'Read the day on the door. Then say the whole sentence.', p: 'Already, still or yet. Then the sentence, out loud.' },
-  { k: 'cap3', est: 'o', min: 7, img: 'sala', rot: 'VI · Chapter Three', t: 'Almost Empty', p: 'Read it together. Then the questions.' },
-  { k: 'lugar', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'VII · Where the Word Goes', t: 'Three sentences, and two put the word in the wrong place.', p: 'Say all three out loud. Then pick the one that sounds right.' },
-  { k: 'cap4', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'VIII · Chapter Four', t: 'Five Words', p: 'Read it together. Then open the note.' },
-  { k: 'dois', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'IX · Yes, or No?', t: 'In many languages one word does both jobs. In English it is two.', p: 'A yes takes already. A no or a question takes yet. Read the situation first.' },
-  { k: 'cap5', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'X · Chapter Five', t: 'The Empty Door', p: 'Read it together. Then turn the note over.' },
-  { k: 'sua', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'XI · Your Own Door', t: 'Your kitchen now. Six notes, and every one is true.', p: 'One real sentence for each. Say it out loud, and the note goes up on your door.' },
-  { k: 'fim', est: 'w', min: 6, img: 'cozinha', rot: 'XII · Still', t: 'Write your own fridge door.', p: 'Six notes: already, not … yet, still, still not, a question with yet. The red line watches the place of the word. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cozinha', rot: 'III · Right, Not This', t: 'Five pairs from the fridge door. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'porta1', est: 'f', min: 6, img: 'cozinha', rot: 'IV · The First Days', t: 'The door is the question. Read it before you choose.', p: 'One round at a time. When you get it right, the door moves.' },
+  { k: 'cap2', est: 'o', min: 7, img: 'mesa', rot: 'V · Chapter Two', t: 'A Full Door', p: 'Read it together. Then the questions.' },
+  { k: 'porta2', est: 'f', min: 6, img: 'mesa', rot: 'VI · Seven Days', t: 'Read the day on the door. Then say the whole sentence.', p: 'Already, still or yet. Then the sentence, out loud.' },
+  { k: 'cap3', est: 'o', min: 7, img: 'sala', rot: 'VII · Chapter Three', t: 'Almost Empty', p: 'Read it together. Then the questions.' },
+  { k: 'lugar', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'VIII · Where the Word Goes', t: 'Three sentences, and two put the word in the wrong place.', p: 'Say all three out loud. Then pick the one that sounds right.' },
+  { k: 'cap4', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'IX · Chapter Four', t: 'Five Words', p: 'Read it together. Then open the note.' },
+  { k: 'dois', est: 'f', min: 6, extra: 1, img: 'mesa', rot: 'X · Yes, or No?', t: 'In many languages one word does both jobs. In English it is two.', p: 'A yes takes already. A no or a question takes yet. Read the situation first.' },
+  { k: 'cap5', est: 'o', min: 7, extra: 1, img: 'cozinha', rot: 'XI · Chapter Five', t: 'The Empty Door', p: 'Read it together. Then turn the note over.' },
+  { k: 'sua', est: 'o', min: 7, extra: 1, img: 'mesa', rot: 'XII · Your Own Door', t: 'Your kitchen now. Six notes, and every one is true.', p: 'One real sentence for each. Say it out loud, and the note goes up on your door.' },
+  { k: 'fim', est: 'w', min: 6, img: 'cozinha', rot: 'XIII · Still', t: 'Write your own fridge door.', p: 'Six notes: already, not … yet, still, still not, a question with yet. The red line watches the place of the word. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -183,3 +184,17 @@ TOQUES['ds-prox'] = function () { S.dois = { n: S.dois.n + 1, esc: '' }; };
 TOQUES.lg = function (b, n) { S.lugar.esc = n; };
 TOQUES['lg-prox'] = function () { S.lugar = { n: S.lugar.n + 1, esc: -1 }; };
 TOQUES.su = function (b, n) { S.sua[n] = !S.sua[n]; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de porta1.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'The note is still on the door.', x: 'The note still is on the door.', d: 'After is, am, are: still. In the middle.' },
+    { c: 'Bea isn’t home yet.', x: 'Bea isn’t home already.', d: 'For no: yet, at the end. Already is for yes.' },
+    { c: 'Marco is already home.', x: 'Marco is home yet.', d: 'A yes sentence: already.' },
+    { c: 'Is Bea home yet?', x: 'Is yet Bea home?', d: 'A question: yet goes at the end.' },
+    { c: 'She already has the keys.', x: 'She has already the keys.', d: 'Before a normal verb: already has.' }
+  ],
+  nota: 'Three small words, three jobs. <b>Already</b> is for yes: Marco is already home. <b>Yet</b> is for no and questions, at the end: Bea isn’t home yet. <b>Still</b> stays in the middle: the note is still there.',
+  uso: { p: 'Your turn. Look at your kitchen. Say one thing that is still there and one thing that isn’t ready yet.', molde: ['The … is still …', 'The … isn’t … yet.'], ex: 'The milk is still in the fridge. Dinner isn’t ready yet.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_porta', GX_EXPLICA); };

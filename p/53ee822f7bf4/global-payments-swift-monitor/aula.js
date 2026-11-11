@@ -14,11 +14,12 @@ var L = [
   { k: 'morning', est: 'o', min: 4, img: 'mesa', rot: 'I · Morning Check', t: 'Your first payment of the day.', p: 'Read the line out loud. One question at a time.', sig: ['status', 'numeros', 'vd'] },
   { k: 'conversa', est: 'o', min: 4, img: 'conversa', rot: 'II · Tuesday Morning', t: 'A short chat before work.', p: 'Choose an answer. Say it. Then ask: “And you?”' },
   { k: 'termos', est: 'l', min: 8, img: 'capa', rot: 'III · Message Words', t: 'Eight words from the SWIFT message.', p: 'Listen. Look. Say each word three times.', sig: ['sndrcv', 'bene', 'inter', 'bic'] },
-  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'IV · Who, What, Spell It', t: 'Ask about the message.', p: 'Read the card with your teacher. Then build the question.', sig: ['bic', 'bene'] },
-  { k: 'simulador', est: 'f', min: 13, img: 'capa', rot: 'V · The Simulator', t: 'Open the SWIFT Monitor.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['swift', 'mt103', 'pacs008', 'bic', 'bene', 'inter', 'sndrcv'] },
-  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VI · Spell It, Please', t: 'A call with the intermediary bank.', p: 'One question before. Listen. Then the questions.', sig: ['bic', 'inter'] },
-  { k: 'cartao', est: 'w', min: 6, img: 'mesa', rot: 'VII · Questions for a Call', t: 'Write three questions about a payment.', p: 'Who is …? What is …? Then read them out loud.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'IV · The Flip', t: 'Watch the words move.', p: 'Flip each statement into a question. Notice where is goes. Then flip four on your own.' },
+  { k: 'explica', est: 'f', min: 9, img: 'mesa', rot: 'V · Who, What, Spell It', t: 'Ask about the message.', p: 'Read the card with your teacher. Then build the question.', sig: ['bic', 'bene'] },
+  { k: 'simulador', est: 'f', min: 13, img: 'capa', rot: 'VI · The Simulator', t: 'Open the SWIFT Monitor.', p: 'Do each mission on the screen. Then say it out loud.', sig: ['swift', 'mt103', 'pacs008', 'bic', 'bene', 'inter', 'sndrcv'] },
+  { k: 'dialogo', est: 'l', min: 7, img: 'conversa', rot: 'VII · Spell It, Please', t: 'A call with the intermediary bank.', p: 'One question before. Listen. Then the questions.', sig: ['bic', 'inter'] },
+  { k: 'cartao', est: 'w', min: 6, img: 'mesa', rot: 'VIII · Questions for a Call', t: 'Write three questions about a payment.', p: 'Who is …? What is …? Then read them out loud.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 3: what can you do now?', p: 'Read each line out loud. Tap what you can do.' }
 ];
 
 var MORNING = { rot: 'OPERATIONS QUEUE · 08:05', ref: 'FX-20481',
@@ -118,3 +119,24 @@ var PT = {
   dialogo: 'Uma ligação com o banco intermediário. A Ana soletra um código.',
   cartao: 'Escreva 3 perguntas para uma ligação sobre um pagamento.',
   pode: 'Leia cada frase em voz alta e toque nas que você já consegue fazer.' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de explica.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The statement, then the question. Watch the words move.',
+  frases: [
+    { de: ['The sender', '*is', 'Northline Bank', '.'], para: ['+Who', '*is', 'the sender', '?'], d: 'Who + is first. Who asks about a person or a bank.' },
+    { de: ['The reference', '*is', 'FX-20481', '.'], para: ['+What', '*is', 'the reference', '?'], d: 'What + is first. What asks about a thing.' },
+    { de: ['The BIC', '*is', 'the address of a bank', '.'], para: ['+What', '*is', 'a BIC', '?'], d: 'Same shape: What is a BIC?' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'The question starts with <b>Who</b> or <b>What</b>, then <b>is</b>, then the thing: <b>Who is</b> the sender? <b>What is</b> the reference? The answer: The sender <b>is</b> Northline Bank.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'The sender is Alba Trading.', r: '<b>Who is</b> the sender?' },
+    { de: 'The amount is 5,000 dollars.', r: '<b>What is</b> the amount?' },
+    { de: 'The beneficiary is Orla Marsh.', r: '<b>Who is</b> the beneficiary?' },
+    { de: 'The message type is MT103.', r: '<b>What is</b> the message type?' }
+  ],
+  uso: { p: 'Your turn. You are on a call about a payment. Write two questions for the other bank.', molde: ['Who is …?', 'What is …?'], ex: 'Who is the beneficiary? What is the reference?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

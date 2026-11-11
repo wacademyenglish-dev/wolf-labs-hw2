@@ -12,14 +12,15 @@
 var L = [
   { k: 'capa', est: null, img: 'sala' },
   { k: 'mostra', est: 'o', min: 7, img: 'sala', rot: 'I · Show Me', t: 'Before the search: things from your own home.', p: 'Do what the card says, on the camera, and say the sentence. Your teacher taps the word you used.' },
-  { k: 'fita', est: 'f', min: 6, img: 'presente', rot: 'II · The Ribbon Box', t: 'The ribbon cuts the present into four.', p: 'Look at the photo. Say the sentence. Then tap its part of the box.' },
-  { k: 'perto', est: 'f', min: 6, img: 'quarto', rot: 'III · Near or Far?', t: 'Leo’s room. You are standing by the door.', p: 'Say the sentence. Then pick your sentence.' },
-  { k: 'leo', est: 'o', min: 7, img: 'escada', rot: 'IV · Leo Is Awake', t: 'Leo is on the stairs. He points and asks.', p: 'Your teacher is Leo. Answer him, and don’t tell him about the present!' },
-  { k: 'busca', est: 'o', min: 7, img: 'quarto', rot: 'V · Hot and Cold', t: 'Find the present. It is in one of four places.', p: 'Pick a place and ask the right question. Your teacher answers: warmer, colder, or you found it!' },
-  { k: 'aponta', est: 'o', min: 7, img: 'sala', rot: 'VI · Point and Ask', t: 'Now you ask. One or more? Near or far?', p: 'Read the card. Ask the right question. Then your teacher shows something and answers.' },
-  { k: 'plano', est: 'o', min: 7, extra: 1, img: 'presente', rot: 'VII · The Birthday Plan', t: 'Leo is asleep. Time to talk about presents.', p: 'Six questions about you.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'VIII · Quick Quiz', t: 'Eight quick lines.', p: 'Pick the word. Then say the whole sentence.' },
-  { k: 'fim', est: 'w', min: 6, img: 'escada', rot: 'IX · Back to Bed', t: 'It’s 1 AM. The present is wrapped. Write your room.', p: 'Six sentences about the things around you: this, that, these, those. The red line watches. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'presente', rot: 'II · Look First', t: 'Four pictures from Leo’s house.', p: 'Look at the picture. Guess what you say. Then tap to see it, and say it.' },
+  { k: 'fita', est: 'f', min: 6, img: 'presente', rot: 'III · The Ribbon Box', t: 'The ribbon cuts the present into four.', p: 'Look at the photo. Say the sentence. Then tap its part of the box.' },
+  { k: 'perto', est: 'f', min: 6, img: 'quarto', rot: 'IV · Near or Far?', t: 'Leo’s room. You are standing by the door.', p: 'Say the sentence. Then pick your sentence.' },
+  { k: 'leo', est: 'o', min: 7, img: 'escada', rot: 'V · Leo Is Awake', t: 'Leo is on the stairs. He points and asks.', p: 'Your teacher is Leo. Answer him, and don’t tell him about the present!' },
+  { k: 'busca', est: 'o', min: 7, img: 'quarto', rot: 'VI · Hot and Cold', t: 'Find the present. It is in one of four places.', p: 'Pick a place and ask the right question. Your teacher answers: warmer, colder, or you found it!' },
+  { k: 'aponta', est: 'o', min: 7, img: 'sala', rot: 'VII · Point and Ask', t: 'Now you ask. One or more? Near or far?', p: 'Read the card. Ask the right question. Then your teacher shows something and answers.' },
+  { k: 'plano', est: 'o', min: 7, extra: 1, img: 'presente', rot: 'VIII · The Birthday Plan', t: 'Leo is asleep. Time to talk about presents.', p: 'Six questions about you.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'IX · Quick Quiz', t: 'Eight quick lines.', p: 'Pick the word. Then say the whole sentence.' },
+  { k: 'fim', est: 'w', min: 6, img: 'escada', rot: 'X · Back to Bed', t: 'It’s 1 AM. The present is wrapped. Write your room.', p: 'Six sentences about the things around you: this, that, these, those. The red line watches. It goes to your My notes.' }
 ];
 
 var CANTOS = [{ k: 'this', n: 'ONE', d: 'NEAR' }, { k: 'that', n: 'ONE', d: 'FAR' }, { k: 'these', n: 'MORE', d: 'NEAR' }, { k: 'those', n: 'MORE', d: 'FAR' }];
@@ -195,3 +196,16 @@ TOQUES['ap-viu'] = function () { S.aponta.viu = 1; };
 TOQUES['ap-prox'] = function () { S.aponta = { n: S.aponta.n + 1, viu: 0 }; };
 TOQUES.qz = function (b, n) { S.quiz.esc = n; };
 TOQUES['qz-prox'] = function () { S.quiz = { n: S.quiz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de fita.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What do you say?',
+  cenas: [
+    { img: 'presente', antes: 'The present is in your hand. It is close to you. It is one box.', frase: '“<mark>This</mark> is the present.”' },
+    { img: 'gaveta', antes: 'The drawer is on the other side of the room. You point at it. It is one drawer.', frase: '“<mark>That</mark> is the drawer.”' },
+    { img: 'meias', antes: 'Some socks are in your hands. More than one, and close to you.', frase: '“<mark>These</mark> are my socks.”' },
+    { img: 'livros', antes: 'The books are on a shelf far from you. More than one.', frase: '“<mark>Those</mark> are Leo’s books.”' }
+  ],
+  nota: 'Close to you: <b>this</b> (one) and <b>these</b> (more than one). Far from you: <b>that</b> (one) and <b>those</b> (more than one). Point at it!',
+  uso: { p: 'Your turn. Point at two things near you and two things far from you. Say what they are.', molde: ['This is …', 'These are …', 'That is …', 'Those are …'], ex: 'This is my phone. These are my keys. That is the window. Those are my neighbors’ plants.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

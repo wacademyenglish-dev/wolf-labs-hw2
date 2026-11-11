@@ -33,16 +33,17 @@ var L = [
   { k: 'capa', est: null, img: 'gavetas' },
   { k: 'regra', est: 'o', min: 7, img: 'ficha', rot: 'I · The Rule You Hear', t: 'Think of a rule for success that you hear all the time.', p: 'Tap the rule. Then answer out loud.' },
   { k: 'copa', est: 'l', min: 7, img: 'sala', rot: 'II · Who Counted?', t: 'Two colleagues at the coffee machine. One repeats the rule. The other asks a question.', p: 'Play the four lines in order. Follow the chain back to the start. Then tap True or Lie.' },
-  { k: 'nome', est: 'f', min: 7, img: 'gaveta', rot: 'III · Move the Name', t: 'Each rumor has a vague owner. Move the name to the front.', p: 'Read the rumor. Say it with the name first. Then tap Check.' },
-  { k: 'tempo', est: 'f', min: 6, img: 'ficha', rot: 'IV · The Time Goes Inside', t: 'The reporting verb stays present. The time goes inside: to be (now) or to have + third form (before).', p: 'Tap a sentence, then its box: is the time now, or before? Then say each one about a famous person.' },
-  { k: 'portas', est: 'f', min: 6, extra: 1, img: 'gaveta', rot: 'V · Whose Sentence Is It?', t: 'Both doors are correct. Choose the one that keeps YOUR TOPIC as the subject.', p: 'Tap a situation, then the sentence that keeps your topic as the subject. Say it.' },
-  { k: 'palavras', est: 'l', img: 'sala', rot: 'VI · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
-  { k: 'video', est: 'l', min: 10, img: 'sala', rot: 'VII · One Minute, Count the Owners', t: 'One minute about practice. Count the owners of each claim.', p: 'Slide the ruler. Watch. Tap True or Lie (and ▶ to hear a line again). Then match each claim to its owner.' },
-  { k: 'falas', est: 'l', extra: 1, img: 'sala', rot: 'VIII · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'escada', est: 'l', min: 7, extra: 1, img: 'sala', rot: 'IX · The Evidence Ladder', t: 'Said, thought, believed: a rumor or an opinion. Reported: somebody published it. Known: an established fact.', p: 'Play the researcher. Tap the verb she used. Watch the claim climb. Say why it fits.' },
-  { k: 'explica', est: 'o', min: 7, extra: 1, img: 'ficha', rot: 'X · Keep Your Distance', t: 'A friend is sure about the ten-thousand-hour rule. Explain it, without signing it.', p: 'Your teacher is the friend. Tap a card. Answer without signing the claim.' },
-  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'gaveta', rot: 'XI · He Is Said That', t: 'Five sentences are broken.', p: 'Find the broken part in each line. Say the fix. Then tap Check.' },
-  { k: 'fim', est: 'w', min: 6, img: 'gavetas', rot: 'XII · File It', t: 'Your rule from scene I, without signing it.', p: 'Write it, and one thing people say about your city. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'ficha', rot: 'III · The Flip', t: 'Watch the name jump to the front.', p: 'Flip each rumor. Notice the verb after to. Then flip four on your own.' },
+  { k: 'nome', est: 'f', min: 7, img: 'gaveta', rot: 'IV · Move the Name', t: 'Each rumor has a vague owner. Move the name to the front.', p: 'Read the rumor. Say it with the name first. Then tap Check.' },
+  { k: 'tempo', est: 'f', min: 6, img: 'ficha', rot: 'V · The Time Goes Inside', t: 'The reporting verb stays present. The time goes inside: to be (now) or to have + third form (before).', p: 'Tap a sentence, then its box: is the time now, or before? Then say each one about a famous person.' },
+  { k: 'portas', est: 'f', min: 6, extra: 1, img: 'gaveta', rot: 'VI · Whose Sentence Is It?', t: 'Both doors are correct. Choose the one that keeps YOUR TOPIC as the subject.', p: 'Tap a situation, then the sentence that keeps your topic as the subject. Say it.' },
+  { k: 'palavras', est: 'l', img: 'sala', rot: 'VII · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
+  { k: 'video', est: 'l', min: 10, img: 'sala', rot: 'VIII · One Minute, Count the Owners', t: 'One minute about practice. Count the owners of each claim.', p: 'Slide the ruler. Watch. Tap True or Lie (and ▶ to hear a line again). Then match each claim to its owner.' },
+  { k: 'falas', est: 'l', extra: 1, img: 'sala', rot: 'IX · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
+  { k: 'escada', est: 'l', min: 7, extra: 1, img: 'sala', rot: 'X · The Evidence Ladder', t: 'Said, thought, believed: a rumor or an opinion. Reported: somebody published it. Known: an established fact.', p: 'Play the researcher. Tap the verb she used. Watch the claim climb. Say why it fits.' },
+  { k: 'explica', est: 'o', min: 7, extra: 1, img: 'ficha', rot: 'XI · Keep Your Distance', t: 'A friend is sure about the ten-thousand-hour rule. Explain it, without signing it.', p: 'Your teacher is the friend. Tap a card. Answer without signing the claim.' },
+  { k: 'erros', est: 'f', min: 6, extra: 1, img: 'gaveta', rot: 'XII · He Is Said That', t: 'Five sentences are broken.', p: 'Find the broken part in each line. Say the fix. Then tap Check.' },
+  { k: 'fim', est: 'w', min: 6, img: 'gavetas', rot: 'XIII · File It', t: 'Your rule from scene I, without signing it.', p: 'Write it, and one thing people say about your city. It goes to your My notes.' }
 ];
 
 var YT = 'jLOuMXnM5wk';
@@ -261,3 +262,23 @@ R.fim = function (c) {
 
 TOQUES['rg-t'] = function (b, n, v) { S.rg.tema = v; };
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de nome.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The rumor, then the careful version. Watch the name move.',
+  frases: [
+    { de: ['People say that', '*Ava', 'practices', 'ten hours a day', '.'], para: ['*Ava', '+is said to', 'practice', 'ten hours a day', '.'], d: 'The name goes first. No that. After to, the clean verb.' },
+    { de: ['People believe that', '*Mr. Reed', '*wrote', 'the rule', '.'], para: ['*Mr. Reed', '+is believed to have', '*written', 'the rule', '.'], d: 'Before now: to have + the third form.' },
+    { de: ['Experts report that', '*the study', 'shows', 'a clear pattern', '.'], para: ['*The study', '+is reported to', 'show', 'a clear pattern', '.'], d: 'Same door. said, thought, believed, reported: the same shape.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'The name goes to the front and <b>that</b> disappears: <b>Ava is said to practice</b>. Now = <b>to + verb</b>. Before = <b>to have + third form</b>. Never “She is said that she …”.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'People say that Ben sleeps six hours a night.', r: 'Ben is <b>said to sleep</b> six hours a night.' },
+    { de: 'Everyone thinks that Lia started the rumor.', r: 'Lia is <b>thought to have started</b> the rumor.' },
+    { de: 'They believe that the coach trains alone.', r: 'The coach is <b>believed to train</b> alone.' },
+    { de: 'Experts report that the school lost the files.', r: 'The school is <b>reported to have lost</b> the files.' }
+  ],
+  uso: { p: 'Your turn. Something people say about a famous person or about your city. Say it without that.', molde: ['… is said to …', '… is believed to have …'], ex: 'My city is said to have the best coffee. The mayor is believed to have started the plan.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

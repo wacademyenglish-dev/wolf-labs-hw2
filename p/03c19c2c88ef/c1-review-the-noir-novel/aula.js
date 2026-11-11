@@ -15,7 +15,8 @@ var L = [
   { k: 'ordem', est: 'o', min: 7, img: 'capa', rot: 'II · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'escolha', est: 'o', min: 7, img: 'conversa', rot: 'IV · Choose the Ending', t: 'Two endings. Choose, and say it with inversion.', p: 'Choose A or B. Then explain with Had I…, Never…, Not only…, So … was…' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'V · Find the Rule', t: 'Four lines from chapter twelve. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -38,3 +39,9 @@ var ESCOLHA = [
   { a: 'Vale catches the captain on the last page', b: 'the captain escapes, and there’s a sequel', chips: ['Had I written it, …', 'Not only … but …'], ex: 'The captain escapes. Not only is it more exciting, but it also sells the next book!' },
   { a: 'a detective who never breaks the rules', b: 'a detective who breaks every rule', chips: ['Under no circumstances would …', 'Never would …'], ex: 'Breaks every rule. Never would I read a book about a perfect detective.' },
   { a: 'read the last page first', b: 'never read the ending early', chips: ['Little did I know …', 'Only after … do I …'], ex: 'Never. Only after the last page do I find out the truth, like the detective.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines from the noir novel. Find the rule yourself.', exemplos: ['<b>Had I known</b>, I would have stayed home.', '<b>Never</b> had he <b>seen</b> such a night.', '<b>Not only did</b> she lie, she ran.', '<b>No sooner had</b> I arrived than the lights went out.'], pergunta: 'In these lines, the helper (had, did) …', opcoes: ['comes before the person', 'comes after the person, as usual', 'disappears from the sentence'], c: 0, nao: 'Not that one. Read the four lit starts again: where is had? where is did?', regra: 'After a negative or limiting start (<b>never, not only, no sooner, little, under no circumstances, only then</b>) the helper comes <b>before the person</b>, like a question: never <b>had he</b> seen. In <b>Had I known</b>, the inversion replaces <b>if</b>.', uso: { p: 'Your turn. You write the last line of a thriller. Start with Never, Not only or No sooner.', molde: ['Never had I …', 'Not only did …', 'No sooner had …'], ex: 'No sooner had the detective opened the door than the lights went out. Never had she felt so afraid.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

@@ -16,11 +16,12 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Week', t: 'How was your week? Did you close a deal?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'dialogo', est: 'l', min: 9, img: 'mesa', rot: 'II · The Last Meeting', t: 'The CFO likes the proposal. But the price…', p: 'One question before. Listen. Then the questions.' },
-  { k: 'cadeira', est: 'o', min: 12, img: 'conversa', rot: 'III · Your Negotiation', t: 'Now you are the seller. Your teacher is the CFO.', p: 'Do each task. Offer, answer, close.' },
-  { k: 'escolha', est: 'o', min: 7, img: 'mesa', rot: 'IV · The Arena', t: 'Three hard choices for a seller.', p: 'Choose A or B and say why. Your teacher answers first.' },
-  { k: 'erros', est: 'f', min: 8, img: 'capa', rot: 'V · Fix the Closing E-mail', t: 'A closing e-mail with five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
-  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'VI · Your Closing E-mail', t: 'Write your closing e-mail.', p: 'Thank you, the plan, one reason, the next step.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VII · I Can', t: 'Lesson 15: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'mesa', rot: 'III · The Pocket Rule', t: 'Four lines from Lessons 6 to 14.', p: 'Read one line at a time. Then keep the rule in the corner for your negotiation.' },
+  { k: 'cadeira', est: 'o', min: 12, img: 'conversa', rot: 'IV · Your Negotiation', t: 'Now you are the seller. Your teacher is the CFO.', p: 'Do each task. Offer, answer, close.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 7, img: 'mesa', rot: 'V · The Arena', t: 'Three hard choices for a seller.', p: 'Choose A or B and say why. Your teacher answers first.' },
+  { k: 'erros', est: 'f', min: 8, img: 'capa', rot: 'VI · Fix the Closing E-mail', t: 'A closing e-mail with five mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
+  { k: 'cartao', est: 'w', min: 10, img: 'capa', rot: 'VII · Your Closing E-mail', t: 'Write your closing e-mail.', p: 'Thank you, the plan, one reason, the next step.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 15: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -89,3 +90,16 @@ var PODE = [
   'I can close: Do we have a deal? It’s a deal.',
   'I can write a closing e-mail.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de cadeira.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'The last meeting',
+  linhas: [
+    'She <b>works</b> here. He <b>doesn’t</b> send it. <b>Can you</b> send the numbers?',
+    'We’re <b>going to</b> start <b>in</b> March, <b>on</b> June 1, <b>at</b> 10 a.m.',
+    'It’s <b>cheaper than</b> a new team. It’s <b>more efficient</b>.',
+    '<b>What about</b> April? · We <b>can offer</b> a pilot. · <b>Do we have a deal</b>? · OK, it’s a deal.'
+  ],
+  uso: { p: 'Your turn. You are in the last meeting. Make an offer and ask for the deal.', molde: ['We can offer …', 'It’s cheaper than …', 'Do we have a deal?'], ex: 'We can offer a three-month pilot. It’s cheaper than a new team. Do we have a deal?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

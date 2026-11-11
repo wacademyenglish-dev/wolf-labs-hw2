@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 4, kick: 'WOLF HIRED · MODULE 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · Always Finish the Story', t: 'A recruiter tells a story in three steps.', p: 'One question before, then the video, then the questions.' },
-  { k: 'ordem', est: 'f', min: 9, img: 'capa', rot: 'II · Situation, Task, Action, Result', t: 'A story about an angry client.', p: 'Tap the five sentences in the right order.' },
-  { k: 'prova', est: 'o', min: 20, img: 'conversa', rot: 'III · Two Stories, Two Minutes', t: 'Two classic questions. Your stories.', p: 'Read the question, prepare your story, start the clock, tell it.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Find the Rule', t: 'Four lines from a work story. You find the rule.', p: 'Read the four sentences out loud. Look at the lit verbs. Choose the rule. Then say your own.' },
+  { k: 'ordem', est: 'f', min: 9, img: 'capa', rot: 'III · Situation, Task, Action, Result', t: 'A story about an angry client.', p: 'Tap the five sentences in the right order.' },
+  { k: 'prova', est: 'o', min: 20, img: 'conversa', rot: 'IV · Two Stories, Two Minutes', t: 'Two classic questions. Your stories.', p: 'Read the question, prepare your story, start the clock, tell it.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'ZSSID5mp93o', titulo: 'Answering Behavioral Interview Questions Using the STAR Method', fonte: 'SELF MADE MILLENNIAL · 6:00–8:00', inicio: 360, fim: 480,
@@ -59,3 +60,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* HIRED 04: video · ordem · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de ordem.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines from a story. Find the rule yourself.',
+  exemplos: [
+    'I <u>was working</u> as an account manager when the client called.',
+    'They <u>were opening</u> a new store on Monday.',
+    'We <u>had sent</u> the order to the wrong city.',
+    'I <u>called</u> three drivers and <u>organized</u> a new delivery.'
+  ],
+  pergunta: 'In a work story, what job does each lit verb do?',
+  opcoes: ['was working: my actions · had sent: the background · called: what happened before', 'all the verbs do the same job', 'was working: the background · had sent: what happened before · called: my actions'], c: 2,
+  nao: 'Not that one. Read the four lit verbs again: which one sets the scene? Which one is an earlier problem? Which one is what you did?',
+  regra: 'Three tenses, three jobs. <b>Past continuous</b> (was working, were opening) sets the scene. <b>Past perfect</b> (had sent) shows what happened before. <b>Past simple</b> (called, organized) tells what YOU did.',
+  uso: { p: 'Your turn. Start a story from your work: the scene, the problem and your action.', molde: ['I was working as …', 'We had …', 'So I …'], ex: 'I was working as a shift leader. We had lost our best machine. So I called a supplier.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

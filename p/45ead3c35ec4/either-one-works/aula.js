@@ -19,12 +19,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'voce', est: 'o', min: 7, img: 'janela', rot: 'I · You and Big Choices', t: 'Before Nico calls: you, your home and your big choices.', p: 'Pick a card. Answer out loud. Then your teacher answers too.' },
   { k: 'duas', est: 'o', min: 7, img: 'chaves', rot: 'II · Two Keys', t: 'Denver on the left, Portland on the right. Compare every line.', p: 'Pick a line. Compare the two sides in one sentence. Your teacher taps the version you said: a right one stamps both keys.' },
-  { k: 'regra', est: 'f', min: 6, img: 'caixas', rot: 'III · The Rule', t: 'Yes to the two, one or the other, or no to the two?', p: 'Read the three keys out loud. Then fix the four mistakes.' },
-  { k: 'moeda', est: 'o', min: 7, img: 'moeda', rot: 'IV · Heads or Tails', t: 'Friday, 5 PM. One hour left. Nico wants to flip a coin.', p: 'Your teacher reads Nico’s message and the first words. Finish at once.' },
-  { k: 'nico', est: 'o', min: 7, img: 'janela', rot: 'V · Nico Calls Back', t: 'Twenty minutes before 6 PM. Nico calls you to decide, together.', p: 'Your teacher is Nico. Answer with both, either, neither.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'caixas', rot: 'VI · Quick Check', t: 'Six quick lines from Nico’s week.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'opcoes', est: 'o', min: 7, extra: 1, img: 'estrada', rot: 'VII · Your Two Options', t: 'Your life: two options, side by side.', p: 'Pick five cards. Answer with both, either or neither.' },
-  { k: 'fim', est: 'w', min: 6, img: 'estrada', rot: 'VIII · Either One Works', t: 'March 1. Nico and Biscuit drive to Portland.', p: 'Write your own two options: what both have, what neither has, and if either one works. It goes to My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'chaves', rot: 'III · Both, Either, Neither', t: 'Two keys, three ways to talk about them.', p: 'Look at the three ways. Tap the right one for each sentence. Then say three of your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'caixas', rot: 'IV · The Rule', t: 'Yes to the two, one or the other, or no to the two?', p: 'Read the three keys out loud. Then fix the four mistakes.' },
+  { k: 'moeda', est: 'o', min: 7, img: 'moeda', rot: 'V · Heads or Tails', t: 'Friday, 5 PM. One hour left. Nico wants to flip a coin.', p: 'Your teacher reads Nico’s message and the first words. Finish at once.' },
+  { k: 'nico', est: 'o', min: 7, img: 'janela', rot: 'VI · Nico Calls Back', t: 'Twenty minutes before 6 PM. Nico calls you to decide, together.', p: 'Your teacher is Nico. Answer with both, either, neither.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'caixas', rot: 'VII · Quick Check', t: 'Six quick lines from Nico’s week.', p: 'Say the whole sentence out loud. Then tap the word.' },
+  { k: 'opcoes', est: 'o', min: 7, extra: 1, img: 'estrada', rot: 'VIII · Your Two Options', t: 'Your life: two options, side by side.', p: 'Pick five cards. Answer with both, either or neither.' },
+  { k: 'fim', est: 'w', min: 6, img: 'estrada', rot: 'IX · Either One Works', t: 'March 1. Nico and Biscuit drive to Portland.', p: 'Write your own two options: what both have, what neither has, and if either one works. It goes to My notes.' }
 ];
 
 var VOCE = [
@@ -176,3 +177,24 @@ TOQUES['mo-prox'] = function () { S.mo = { n: S.mo.n + 1, esc: '' }; };
 TOQUES['ni-prox'] = function () { S.ni.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Denver and Portland. Three ways to talk about two things.',
+  usos: [
+    { t: 'BOTH', f: 'Both apartments have a balcony.', d: 'Yes to the two. Denver: yes. Portland: yes.', img: 'chaves' },
+    { t: 'EITHER', f: 'Either apartment works for me.', d: 'One or the other. It doesn’t matter which.', img: 'moeda' },
+    { t: 'NEITHER', f: 'Neither apartment allows dogs.', d: 'No to the two. Denver: no. Portland: no.', img: 'caixas' }
+  ],
+  pergunta: 'Both, either or neither?',
+  itens: [
+    { f: 'Denver has a balcony. Portland has a balcony.', c: 0 },
+    { f: 'It is Friday, 5:50 PM. Nico can sign any contract. It doesn’t matter which.', c: 1 },
+    { f: 'Denver doesn’t allow Biscuit. Portland doesn’t allow Biscuit.', c: 2 },
+    { f: 'The two keys open the front door.', c: 0 },
+    { f: 'The coin says heads or tails. Nico is happy with the two answers.', c: 1 },
+    { f: 'Denver isn’t cheap. Portland isn’t cheap.', c: 2 }
+  ],
+  nota: '<b>Both</b> = yes to the two. <b>Either</b> = one or the other, you choose. <b>Neither</b> = no to the two, and the verb has no not: neither apartment <b>allows</b> dogs.',
+  uso: { p: 'Your turn. Two things in your life, like two jobs or two cities. Say one sentence with both, one with either and one with neither.', molde: ['Both … are …', 'Either … works.', 'Neither … is …'], ex: 'Both my phones are old. Either one works for calls. Neither one has a good camera.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

@@ -23,12 +23,13 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'carta', rot: 'I · A Long Email', t: 'Think of a long, formal email you wrote recently.', p: 'Tap who it was to. Then answer out loud.' },
   { k: 'carta', est: 'l', min: 7, img: 'carta', rot: 'II · The Letter', t: 'A letter from the city. Somewhere inside it, a school bus stops running.', p: 'Read the whole letter out loud. Then answer three questions, or say that you can’t.' },
   { k: 'raiox', est: 'f', min: 6, img: 'carta', rot: 'III · The X-Ray', t: 'Every noun in the letter has a verb inside it, and a person who does it.', p: 'Tap a noun to X-ray it. Choose the verb. Then say who would do it.' },
-  { k: 'regra', est: 'f', min: 6, img: 'predio', rot: 'IV · How English Builds Them', t: '-tion, -ment, -al, -ance, and a fifth form with no ending at all.', p: 'Choose the noun. Say a short phrase with it.' },
-  { k: 'encolhe', est: 'f', min: 6, img: 'predio', rot: 'V · Who Disappeared?', t: 'Six long sentences for a one-page report. Condense the verbs into nouns.', p: 'Choose the short version. Then say who disappeared: they go on the wall.' },
-  { k: 'pilha', est: 'f', min: 6, img: 'carta', rot: 'VI · Stack It', t: 'English stacks before the noun instead of hanging chains of OF behind it.', p: 'Choose the stacked version. Read it from the end.' },
-  { k: 'resposta', est: 'o', min: 7, extra: 1, img: 'predio', rot: 'VII · The Reply That Worked', t: 'Two residents replied to the city. Only one got a meeting.', p: 'Read both replies. Answer the questions out loud. Is it fair?' },
-  { k: 'projeto', est: 'o', min: 7, extra: 1, img: 'carta', rot: 'VIII · Sixty Seconds', t: 'Summarize a project in sixty seconds for a busy director. Use the nouns, and keep the people.', p: 'Choose each part. Say it. Then say your own version.' },
-  { k: 'fim', est: 'w', min: 6, img: 'parada', rot: 'IX · Your Email, Shorter', t: 'Your email from scene I. Shorter, with nouns, and you still in it.', p: 'Write the short version and name who is responsible. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'carta', rot: 'IV · The Ladder', t: 'One long sentence, five steps to a short one.', p: 'Read each step out loud, then go one step up. Notice who disappears. Then climb with your own sentence.' },
+  { k: 'regra', est: 'f', min: 6, img: 'predio', rot: 'V · How English Builds Them', t: '-tion, -ment, -al, -ance, and a fifth form with no ending at all.', p: 'Choose the noun. Say a short phrase with it.' },
+  { k: 'encolhe', est: 'f', min: 6, img: 'predio', rot: 'VI · Who Disappeared?', t: 'Six long sentences for a one-page report. Condense the verbs into nouns.', p: 'Choose the short version. Then say who disappeared: they go on the wall.' },
+  { k: 'pilha', est: 'f', min: 6, img: 'carta', rot: 'VII · Stack It', t: 'English stacks before the noun instead of hanging chains of OF behind it.', p: 'Choose the stacked version. Read it from the end.' },
+  { k: 'resposta', est: 'o', min: 7, extra: 1, img: 'predio', rot: 'VIII · The Reply That Worked', t: 'Two residents replied to the city. Only one got a meeting.', p: 'Read both replies. Answer the questions out loud. Is it fair?' },
+  { k: 'projeto', est: 'o', min: 7, extra: 1, img: 'carta', rot: 'IX · Sixty Seconds', t: 'Summarize a project in sixty seconds for a busy director. Use the nouns, and keep the people.', p: 'Choose each part. Say it. Then say your own version.' },
+  { k: 'fim', est: 'w', min: 6, img: 'parada', rot: 'X · Your Email, Shorter', t: 'Your email from scene I. Shorter, with nouns, and you still in it.', p: 'Write the short version and name who is responsible. It goes to your My notes.' }
 ];
 
 var DEST = ['my boss', 'a client', 'a school', 'a landlord', 'a company', 'my team'];
@@ -218,3 +219,17 @@ TOQUES.pi = function (b, n) { S.pi.esc = n; };
 TOQUES['pi-prox'] = function () { S.pi = { n: S.pi.n + 1, esc: -1 }; };
 TOQUES.pr = function (b, n) { S.pr.esc = n; };
 TOQUES['pr-prox'] = function () { S.pr = { n: S.pr.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One long sentence. Make it shorter, one step at a time.',
+  degraus: [
+    { r: 'verb', f: 'The city <b>decided</b> to cut the school bus line.', d: 'A verb and a person. Long.' },
+    { r: 'noun', f: 'The <b>decision</b> to cut the line surprised the families.', d: 'decide → decision. The verb became a noun, and the person is gone.' },
+    { r: 'zero', f: 'The <b>cut</b> surprised the families.', d: 'Some nouns have no ending at all: a cut, a rise, a delay.' },
+    { r: 'stack', f: 'The <b>bus line cut</b> surprised the families.', d: 'Stack before the noun. No chain of of.' },
+    { r: 'who', f: 'The <b>mayor’s decision</b> to cut the bus line surprised the families.', d: 'When the reader needs to know who, put the person back.' }
+  ],
+  nota: 'A verb can become a noun: <b>decide → decision</b>, <b>improve → improvement</b>, <b>refuse → refusal</b>. Some nouns have no ending: <b>a cut, a rise</b>. Watch who disappears.',
+  uso: { p: 'Your turn. Take one long sentence from your last email and make it shorter with a noun.', molde: ['We decided to … → Our decision to …', 'They improved … → The improvement in …'], ex: 'We decided to cancel the trip → Our decision to cancel the trip surprised everyone.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

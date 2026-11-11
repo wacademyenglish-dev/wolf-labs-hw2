@@ -13,8 +13,9 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · The Wedding Chat', t: 'Eleven p.m. Three problems.', p: 'Read the chat out loud with your teacher. Then look closer.' },
   { k: 'separa', est: 'f', min: 8, img: 'capa', rot: 'II · Now or Before?', t: 'Decided now, or planned before?', p: 'Read each sentence. Is it WILL (now: promise, offer, decision) or GOING TO (a plan)? Say why, then tap.' },
-  { k: 'cadeira', est: 'o', min: 10, img: 'conversa', rot: 'III · Save the Wedding', t: 'Your teacher is Bia. Offer help!', p: 'Bia tells you a problem. Offer help or make a promise with will or Shall I…?' },
-  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say what you will do.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'III · Bia’s Pocket', t: 'Four lines for the night before the wedding.', p: 'Read one line at a time. Then keep the card in the corner for the next pages.' },
+  { k: 'cadeira', est: 'o', min: 10, img: 'conversa', rot: 'IV · Save the Wedding', t: 'Your teacher is Bia. Offer help!', p: 'Bia tells you a problem. Offer help or make a promise with will or Shall I…?' },
+  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'V · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say what you will do.' }
 ];
 var PORTAS = [];
 
@@ -56,3 +57,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* B1 · I Will Call You: leitura · separa · cadeira · escolha */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de cadeira.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from this lesson.', rotulo: 'Will or going to?', linhas: ['a promise: <b>I’ll</b> call you · <b>I won’t</b> forget', 'an offer: <b>I’ll</b> carry it · <b>Shall I</b> carry it?', 'decided now: OK, <b>I’ll</b> take the bus', 'already planned: I’m <b>going to</b> wear the blue dress'], uso: { p: 'Your turn. It is the night before the wedding and everything goes wrong. Make one promise, one offer, and say one plan you already have.', molde: ['I’ll …', 'Shall I …?', 'I’m going to …'], ex: 'I’ll call you at seven, I promise. Shall I carry the cake? I’m going to wear my green shoes.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

@@ -13,12 +13,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'irlanda', rot: 'I · You and the World', t: 'Before the trip: you, travel and home.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'post', est: 'o', min: 7, img: 'japao', rot: 'II · Postcards Home', t: 'One year, three countries. Six postcards to Grandma Ruth.', p: 'Tap a postcard. Read the situation, then tell Grandma what is happening. A correct answer gets the postmark.' },
-  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'III · The Rule', t: 'The first verb chooses. To, or -ing?', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'noite', est: 'o', min: 7, img: 'mala', rot: 'IV · The Last Night', t: 'The flight home is at 6 AM. Eight friends, eight questions.', p: 'Your teacher is the friend. Answer at once. Every right answer moves the clock one hour.' },
-  { k: 'mae', est: 'o', min: 7, img: 'nz', rot: 'V · Mom Calls', t: 'The airline told Mom: you are not on the plane.', p: 'Your teacher is Mom. Explain your decision with to and -ing.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'irlanda', rot: 'VI · Quick Check', t: 'Six quick lines from the gap year.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'VII · Your Choices', t: 'Your life: what you enjoy, what you want, what you decided.', p: 'Spin. Answer with the verb in the question. Your teacher answers too.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · One Year Later', t: 'A new postcard to Grandma Ruth, from the same lake.', p: 'Is there a place where you want to stay? Write it with one to and one -ing. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'irlanda', rot: 'III · Find the Rule', t: 'Four postcards for Grandma Ruth. One rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'sala', rot: 'IV · The Rule', t: 'The first verb chooses. To, or -ing?', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'noite', est: 'o', min: 7, img: 'mala', rot: 'V · The Last Night', t: 'The flight home is at 6 AM. Eight friends, eight questions.', p: 'Your teacher is the friend. Answer at once. Every right answer moves the clock one hour.' },
+  { k: 'mae', est: 'o', min: 7, img: 'nz', rot: 'VI · Mom Calls', t: 'The airline told Mom: you are not on the plane.', p: 'Your teacher is Mom. Explain your decision with to and -ing.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'irlanda', rot: 'VII · Quick Check', t: 'Six quick lines from the gap year.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'roda', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'VIII · Your Choices', t: 'Your life: what you enjoy, what you want, what you decided.', p: 'Spin. Answer with the verb in the question. Your teacher answers too.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · One Year Later', t: 'A new postcard to Grandma Ruth, from the same lake.', p: 'Is there a place where you want to stay? Write it with one to and one -ing. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -218,3 +219,19 @@ TOQUES['ma-viu'] = function () { S.mae.viu[S.mae.n] = 1; };
 TOQUES['ma-prox'] = function () { S.mae.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
 TOQUES.rd = function () { S.roda.g++; S.roda.anim = 1; setTimeout(function () { S.roda.anim = 0; }, 1300); };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four postcards. Find the rule yourself.',
+  exemplos: [
+    'I <b>want</b> <u>to stay</u> at the lake.',
+    'I <b>decided</b> <u>to move</u> to Kyoto.',
+    'We <b>enjoy</b> <u>walking</u> by the water.',
+    'He <b>avoids</b> <u>flying</u> at night.'
+  ],
+  pergunta: 'The first verb chooses. Want and decide take …, enjoy and avoid take …',
+  opcoes: ['to + verb · then -ing', '-ing · then to + verb', 'the clean verb · the clean verb'], c: 0,
+  nao: 'Not that one. Read the four lit pairs again: want to stay, decided to move, enjoy walking, avoids flying.',
+  regra: '<b>want / need / plan / hope / decide + to + verb</b>: I decided <b>to stay</b>. <b>enjoy / avoid / finish / mind / keep + -ing</b>: I enjoy <b>walking</b>. Never to + -ing.',
+  uso: { p: 'Your turn. Grandma Ruth asks about your life. One thing you decided to do, and one thing you enjoy doing.', molde: ['I decided to …', 'I enjoy …ing'], ex: 'I decided to learn English. I enjoy talking to new people.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

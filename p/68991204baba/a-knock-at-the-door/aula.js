@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'A2', unidade: 4, titulo: ['A Knock at', 'the D
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · The Box', t: 'A knock, a box, a note.', p: 'Read the story out loud with your teacher. Then look closer.' },
-  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'II · A or The?', t: 'New, or we know which one?', p: 'Read each sentence. Does the gap need A / AN or THE? Say why, then tap.' },
-  { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · The Message to the Neighbor', t: 'Your message has five mistakes.', p: 'Find a mistake, say the right form, then tap.' },
-  { k: 'cadeira', est: 'o', min: 9, img: 'capa', rot: 'IV · The Hot Seat', t: 'Your teacher left the box. Ask!', p: 'Your teacher is the mystery person. Ask, listen, react.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · New or Known?', t: 'Two scenes at the door. A or the?', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'separa', est: 'f', min: 9, img: 'capa', rot: 'III · A or The?', t: 'New, or we know which one?', p: 'Read each sentence. Does the gap need A / AN or THE? Say why, then tap.' },
+  { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'IV · The Message to the Neighbor', t: 'Your message has five mistakes.', p: 'Find a mistake, say the right form, then tap.' },
+  { k: 'cadeira', est: 'o', min: 9, img: 'capa', rot: 'V · The Hot Seat', t: 'Your teacher left the box. Ask!', p: 'Your teacher is the mystery person. Ask, listen, react.' }
 ];
 var PORTAS = [];
 
@@ -54,3 +55,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* A2 · A Knock at the Door: leitura · separa · erros · cadeira */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'New or known? Two scenes at the door.', a: { t: 'First time', falas: [['Narrator', 'Ten p.m. Someone knocks.'], ['You', 'There is<mark> a box</mark> on the floor, and<mark> a note</mark> on top.']], d: 'You see it for the first time, and the listener does not know it. That is <b>a / an</b>.' }, b: { t: 'We know which one', falas: [['Friend', 'What is in the box?'], ['You', 'I opened<mark> the box</mark>. Inside is<mark> a key</mark>, and<mark> the note</mark> says: Open the door.']], d: 'We both know which box and which note. That is <b>the</b>. The new key is still <b>a</b>.' }, pergunta: 'Same words, two articles. What is different?', pergunta2: 'Now you. Which one fits?', itens: [{ p: 'First time you mention it: Someone left …', o: ['a bag at my door.', 'the bag at my door.'], c: 0, d: 'New for the listener: a.' }, { p: 'You already told your friend about the bag. Now: I took …', o: ['a bag inside.', 'the bag inside.'], c: 1, d: 'We both know it: the.' }, { p: 'Only one in the sky: I can see …', o: ['a sun.', 'the sun.'], c: 1, d: 'There is only one: the.' }, { p: 'Your job: My sister is …', o: ['a nurse.', 'the nurse.'], c: 0, d: 'A job: a or an.' }], nota: '<b>A / an</b> = new, or one of many. <b>The</b> = we both know which one, or there is only one. No article for things in general: I love <b>cats</b>.', uso: { p: 'Your turn. Tell a short story: something you found or got. First time with a, then with the.', molde: ['I found a …', 'The … was …'], ex: 'I found a wallet on the bus. The wallet had a card inside, and the card had a name.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

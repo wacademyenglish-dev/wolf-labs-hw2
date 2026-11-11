@@ -34,10 +34,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Street Fighter, 2026. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'rua', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'dojo', rot: 'V · Could', t: 'The scoreboard has five mistakes. Find the fix.', p: 'Say the right word for each mistake out loud. Then tap Check and read the rule.' },
-  { k: 'luta', est: 'o', min: 7, img: 'capa', rot: 'VI · The Final Round', t: 'You against Ryu. Every right sentence is a hit.', p: 'Read the fighter and the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'antes', est: 'o', min: 7, img: 'dojo', rot: 'VII · When You Were Ten', t: 'Six things. Could you do them when you were ten?', p: 'Open a card and answer. Then tell your story and tap each form when you use it.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · Questions', t: 'Questions.', p: 'Questions.' }
+  { k: 'gx', est: 'o', min: 4, img: 'dojo', rot: 'V · Yes, I Could', t: 'Ping-pong. Two words for each answer.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'regra', est: 'f', min: 6, img: 'dojo', rot: 'VI · Could', t: 'The scoreboard has five mistakes. Find the fix.', p: 'Say the right word for each mistake out loud. Then tap Check and read the rule.' },
+  { k: 'luta', est: 'o', min: 7, img: 'capa', rot: 'VII · The Final Round', t: 'You against Ryu. Every right sentence is a hit.', p: 'Read the fighter and the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'antes', est: 'o', min: 7, img: 'dojo', rot: 'VIII · When You Were Ten', t: 'Six things. Could you do them when you were ten?', p: 'Open a card and answer. Then tell your story and tap each form when you use it.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · Questions', t: 'Questions.', p: 'Questions.' }
 ];
 
 var FILME = 'Street Fighter', ANO = '2026';
@@ -237,3 +238,18 @@ var FIM = { tipo: 'perguntas', rot: 'VIII · Questions', t: 'Questions about you
   ],
   depois: 'Now you ask the teacher two of these questions.' };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Could and couldn’t, fast.',
+  perguntas: [
+    { q: 'Could you run fast when you were ten?', s: 'Yes, I <mark>could</mark>.', n: 'No, I <mark>couldn’t</mark>.', mais: 'Who was faster, you or your friends?' },
+    { q: 'Could Ken beat Ryu twenty-five years ago?', s: 'Yes, he <mark>could</mark>.', n: 'No, he <mark>couldn’t</mark>.', mais: 'Why not? He couldn’t …' },
+    { q: 'Could you swim when you were seven?', s: 'Yes, I <mark>could</mark>.', n: 'No, I <mark>couldn’t</mark>.', mais: 'Where did you learn?' },
+    { q: 'Could your parents drive when they were eighteen?', s: 'Yes, they <mark>could</mark>.', n: 'No, they <mark>couldn’t</mark>.' },
+    { q: 'Could you play video games all night when you were a kid?', s: 'Yes, I <mark>could</mark>.', n: 'No, I <mark>couldn’t</mark>.', mais: 'Which game?' },
+    { q: 'Could Ryu see the next punch?', s: 'Yes, he <mark>could</mark>.', n: 'No, he <mark>couldn’t</mark>.', mais: 'How? He could …' }
+  ],
+  nota: 'The short answer repeats <b>could</b> or <b>couldn’t</b>. No did: not “Yes, I did could”. The question never needs did either: <b>Could you</b> swim?',
+  uso: { p: 'Your turn. Ask your teacher three Could you …? questions about the past. Your teacher answers the short way.', molde: ['Could you … when you were ten?', 'Could your … ?'], ex: 'Could you ride a bike when you were six? Could your father speak English?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

@@ -12,15 +12,16 @@ var L = [
   { k: 'capa', est: null, img: 'feira' },
   { k: 'abre', est: 'o', min: 7, img: 'tenda', rot: 'I · Before the Fair', t: 'Three questions about your life.', p: 'Pick a card. Any words you have. Your teacher taps what you used. Don’t worry about it yet.' },
   { k: 'podio', est: 'o', min: 7, img: 'feira', rot: 'II · The Podium', t: 'Two contests. Put the winner on top.', p: 'Read the numbers. Say the sentence. Then tap the winner.' },
-  { k: 'roseta', est: 'f', min: 6, img: 'fitas', rot: 'III · Pin the Ribbon', t: 'Eight ribbons. Each one only sticks with the right words.', p: 'Clap the word. Then pick the words for the ribbon, and say them.' },
-  { k: 'video1', est: 'l', min: 7, img: 'feira', rot: 'IV · Watch: Who Is the Tallest?', t: 'Four friends. Who is the tallest?', p: 'Ears only. Tap each word when you hear it.' },
-  { k: 'altura', est: 'o', min: 7, img: 'tenda', rot: 'V · The Height Check', t: 'One guess, then three friends.', p: 'Guess out loud. Then read the numbers and say it.' },
-  { k: 'placa', est: 'f', min: 6, extra: 1, img: 'feira', rot: 'VI · Paint the Signs', t: 'Six winner signs. Six spellings.', p: 'Look at the end of the word. Pick the spelling rule. Then say it.' },
-  { k: 'bolo', est: 'o', min: 7, extra: 1, img: 'bolos', rot: 'VII · The Angry Baker', t: 'The cakes are judged. The baker is not happy.', p: 'Your teacher is the baker. Pick the polite, correct answer. Then say it to him.' },
-  { k: 'video2', est: 'l', min: 7, extra: 1, img: 'bolos', rot: 'VIII · Watch: The Cake Contest', t: 'Another judge, another contest.', p: 'Tap each word when you hear it. Then two questions.' },
-  { k: 'jornal', est: 'f', min: 6, extra: 1, img: 'feira', rot: 'IX · The Newspaper', t: 'The local paper has a story about your fair, with one mistake in each paragraph.', p: 'Read all three lines out loud. Tap the wrong one. Say it right.' },
-  { k: 'juri', est: 'o', min: 7, extra: 1, img: 'fitas', rot: 'X · Judge Your Life', t: 'Now you are the judge of your own life.', p: 'Three categories. Give the prize, and say why.' },
-  { k: 'fim', est: 'w', min: 6, img: 'fitas', rot: 'XI · Ribbons Given', t: 'Write your own prizes.', p: 'Five prizes from your life: the -est, the most …, the best, the worst. And why. The red line watches. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'fitas', rot: 'III · Three Kinds of Winner', t: 'Three ways to say who wins.', p: 'Look at the three ways. Tap the way of each sentence. Then say three of your own.' },
+  { k: 'roseta', est: 'f', min: 6, img: 'fitas', rot: 'IV · Pin the Ribbon', t: 'Eight ribbons. Each one only sticks with the right words.', p: 'Clap the word. Then pick the words for the ribbon, and say them.' },
+  { k: 'video1', est: 'l', min: 7, img: 'feira', rot: 'V · Watch: Who Is the Tallest?', t: 'Four friends. Who is the tallest?', p: 'Ears only. Tap each word when you hear it.' },
+  { k: 'altura', est: 'o', min: 7, img: 'tenda', rot: 'VI · The Height Check', t: 'One guess, then three friends.', p: 'Guess out loud. Then read the numbers and say it.' },
+  { k: 'placa', est: 'f', min: 6, extra: 1, img: 'feira', rot: 'VII · Paint the Signs', t: 'Six winner signs. Six spellings.', p: 'Look at the end of the word. Pick the spelling rule. Then say it.' },
+  { k: 'bolo', est: 'o', min: 7, extra: 1, img: 'bolos', rot: 'VIII · The Angry Baker', t: 'The cakes are judged. The baker is not happy.', p: 'Your teacher is the baker. Pick the polite, correct answer. Then say it to him.' },
+  { k: 'video2', est: 'l', min: 7, extra: 1, img: 'bolos', rot: 'IX · Watch: The Cake Contest', t: 'Another judge, another contest.', p: 'Tap each word when you hear it. Then two questions.' },
+  { k: 'jornal', est: 'f', min: 6, extra: 1, img: 'feira', rot: 'X · The Newspaper', t: 'The local paper has a story about your fair, with one mistake in each paragraph.', p: 'Read all three lines out loud. Tap the wrong one. Say it right.' },
+  { k: 'juri', est: 'o', min: 7, extra: 1, img: 'fitas', rot: 'XI · Judge Your Life', t: 'Now you are the judge of your own life.', p: 'Three categories. Give the prize, and say why.' },
+  { k: 'fim', est: 'w', min: 6, img: 'fitas', rot: 'XII · Ribbons Given', t: 'Write your own prizes.', p: 'Five prizes from your life: the -est, the most …, the best, the worst. And why. The red line watches. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -200,3 +201,24 @@ TOQUES['jn-prox'] = function () { S.jornal = { n: S.jornal.n + 1, esc: -1 }; };
 TOQUES['jr-p'] = function (b, n, v) { var j = S.juri; j.partes[j.n] = j.partes[j.n] || {}; j.partes[j.n][v] = !j.partes[j.n][v]; };
 TOQUES['jr-e'] = function () { S.juri.erro = !S.juri.erro; };
 TOQUES['jr-prox'] = function () { S.juri.n++; S.juri.erro = 0; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de roseta.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Who wins? Three ways to say it.',
+  usos: [
+    { t: 'SHORT WORD', f: 'the tall<b>est</b>', d: 'tall, big, fast: the + -est.' },
+    { t: 'LONG WORD', f: 'the <b>most</b> beautiful', d: 'beautiful, delicious: the most + the word.' },
+    { t: 'ODD ONES', f: 'the best · the worst', d: 'good and bad change completely.' }
+  ],
+  pergunta: 'Which way is it?',
+  itens: [
+    { f: 'Olga’s cake is the <b>most delicious</b> cake at the fair.', c: 1 },
+    { f: 'Leo’s pumpkin is the <b>biggest</b> pumpkin.', c: 0 },
+    { f: 'This is the <b>best</b> jam in Riverside.', c: 2 },
+    { f: 'Tom’s horse is the <b>fastest</b> horse.', c: 0 },
+    { f: 'That was the <b>worst</b> pie of the day.', c: 2 },
+    { f: 'Her dress is the <b>most colorful</b> dress here.', c: 1 }
+  ],
+  nota: 'Short word: <b>the + -est</b> (the biggest, the fastest). Long word: <b>the most + word</b> (the most delicious). Two odd ones: <b>the best</b> and <b>the worst</b>. Never “the most big” or “the goodest”.',
+  uso: { p: 'Your turn. You are the judge of a fair. Give three prizes: a short word, a long word, and the best.', molde: ['The …est … goes to …', 'The most … goes to …', 'The best … goes to …'], ex: 'The tallest sunflower goes to Ana. The most beautiful quilt goes to Rita. The best soup goes to Leo.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

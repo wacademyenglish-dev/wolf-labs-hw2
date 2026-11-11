@@ -17,13 +17,14 @@ var L = [
   { k: 'corrida', est: 'l', min: 7, img: 'bridge', rot: 'II · The Race', t: 'Three cards. The story before the photos.', p: 'Listen to each card first. Then open the transcript and read it out loud.' },
   { k: 'video1', est: 'l', min: 7, img: 'album', rot: 'III · Watch: The Start', t: 'The race begins. Six words matter.', p: 'Ears only. Tap each word when you hear it.' },
   { k: 'ouve', est: 'l', min: 7, extra: 1, img: 'album', rot: 'IV · Listen', t: 'Five places. Hear it, say it three times, then see it.', p: 'Play it. Say it three times. Then show it: it goes into its frame.' },
-  { k: 'molduras', est: 'f', min: 6, img: 'album', rot: 'V · The Three Frames', t: 'Three frames. A photo only sticks in the right one.', p: 'Say the sentence first. Then drop the photo into a frame.' },
-  { k: 'very', est: 'o', min: 7, img: 'bridge', rot: 'VI · Very', t: 'One small word. The photo gets bigger, and so does your voice.', p: 'Play it. Say it. Then zoom, and say it bigger.' },
-  { k: 'album', est: 'l', min: 7, extra: 1, img: 'park', rot: 'VII · Paula’s Album', t: 'Three photos from Paula. Every caption lost one word.', p: 'Play the caption. Put the word back. Then say it about your photo.' },
-  { k: 'video2', est: 'l', min: 7, extra: 1, img: 'bridge', rot: 'VIII · Watch: Paula in London', t: 'Paula in London. You know every one of these words.', p: 'Tap each word when you hear it. Then one question.' },
-  { k: 'colunas', est: 'f', min: 6, extra: 1, img: 'album', rot: 'IX · Sort Them, Fast', t: 'Nine places. One takes no word at all.', p: 'Say the whole sentence. Then drop it in a column.' },
-  { k: 'suas', est: 'o', min: 7, extra: 1, img: 'album', rot: 'X · Your Three Photos', t: 'Your turn. Three photos from your phone.', p: 'For each photo: where you are, what it’s like, and who is with you.' },
-  { k: 'fim', est: 'w', min: 6, img: 'album', rot: 'XI · Your Album', t: 'Write the captions for your album.', p: 'Five captions: where you are (at, in, on) and what it’s like (very…). The red line watches the little words. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'album', rot: 'V · Look First', t: 'Four photos from Paula.', p: 'Look at the picture. Guess what she says. Then tap to see it, and say it.' },
+  { k: 'molduras', est: 'f', min: 6, img: 'album', rot: 'VI · The Three Frames', t: 'Three frames. A photo only sticks in the right one.', p: 'Say the sentence first. Then drop the photo into a frame.' },
+  { k: 'very', est: 'o', min: 7, img: 'bridge', rot: 'VII · Very', t: 'One small word. The photo gets bigger, and so does your voice.', p: 'Play it. Say it. Then zoom, and say it bigger.' },
+  { k: 'album', est: 'l', min: 7, extra: 1, img: 'park', rot: 'VIII · Paula’s Album', t: 'Three photos from Paula. Every caption lost one word.', p: 'Play the caption. Put the word back. Then say it about your photo.' },
+  { k: 'video2', est: 'l', min: 7, extra: 1, img: 'bridge', rot: 'IX · Watch: Paula in London', t: 'Paula in London. You know every one of these words.', p: 'Tap each word when you hear it. Then one question.' },
+  { k: 'colunas', est: 'f', min: 6, extra: 1, img: 'album', rot: 'X · Sort Them, Fast', t: 'Nine places. One takes no word at all.', p: 'Say the whole sentence. Then drop it in a column.' },
+  { k: 'suas', est: 'o', min: 7, extra: 1, img: 'album', rot: 'XI · Your Three Photos', t: 'Your turn. Three photos from your phone.', p: 'For each photo: where you are, what it’s like, and who is with you.' },
+  { k: 'fim', est: 'w', min: 6, img: 'album', rot: 'XII · Your Album', t: 'Write the captions for your album.', p: 'Five captions: where you are (at, in, on) and what it’s like (very…). The red line watches the little words. It goes to your My notes.' }
 ];
 
 var FOTO = [
@@ -215,3 +216,16 @@ TOQUES.cl = function (b, n, v) { var e = S.cols, x = COLS[e.sel]; if (!x) return
 TOQUES['su-parte'] = function (b, n, v) { var s = S.suas; s.partes[s.n] = s.partes[s.n] || {}; s.partes[s.n][v] = !s.partes[s.n][v]; };
 TOQUES['su-erro'] = function () { S.suas.erro = !S.suas.erro; };
 TOQUES['su-prox'] = function () { S.suas.n++; S.suas.erro = 0; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de molduras.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What does Paula say?',
+  cenas: [
+    { img: 'shops', antes: 'Paula takes a photo outside the door. She is at one point on the map.', frase: '“Where are you?” “I’m <mark>at the shops</mark>.”' },
+    { img: 'park', antes: 'Paula takes a photo. The whole park is around her, like a big box.', frase: '“Where are you?” “I’m <mark>in the park</mark>.”' },
+    { img: 'bridge', antes: 'Paula takes a photo from a bus. She is on top of a surface.', frase: '“Where are you?” “I’m <mark>on the bus</mark>.”' },
+    { img: 'album', antes: 'Paula is back in her room with the photos.', frase: '“Where are you now?” “I’m <mark>home</mark>.”' }
+  ],
+  nota: 'Three frames: <b>at</b> a point (at the shops), <b>in</b> a box (in London, in the park), <b>on</b> a surface (on the bus). And <b>home</b> takes no small word.',
+  uso: { p: 'Your turn. Look at your last photo. Where are you, or where is it?', molde: ['I’m at …', 'I’m in …', 'I’m on …'], ex: 'I’m at the beach. I’m in my car. I’m on the train.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

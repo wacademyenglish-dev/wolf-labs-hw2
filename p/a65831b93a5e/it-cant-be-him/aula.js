@@ -36,10 +36,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'The Batman. The official trailer.', p: 'Spin the wheel first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'salao', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'V · Must, Might, Can’t', t: 'A note from the Riddler: how sure is he?', p: 'Tap the words that show how sure he is. Then finish the rule.' },
-  { k: 'cartas', est: 'o', min: 7, img: 'capa', rot: 'VI · The Riddler’s Cards', t: 'Six cards. Every deduction you say turns one over.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
-  { k: 'deduz', est: 'o', min: 7, img: 'mesa', rot: 'VII · Your Deductions', t: 'Five strange things. What is going on?', p: 'Tap a thing, then its deduction. Then say why.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
+  { k: 'gx', est: 'f', min: 4, img: 'cartao', rot: 'V · Mistake Hunter', t: 'Six clues from the Riddler. Each one has a wrong word.', p: 'Tap the wrong word. Say it right. Then check.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'VI · Must, Might, Can’t', t: 'A note from the Riddler: how sure is he?', p: 'Tap the words that show how sure he is. Then finish the rule.' },
+  { k: 'cartas', est: 'o', min: 7, img: 'capa', rot: 'VII · The Riddler’s Cards', t: 'Six cards. Every deduction you say turns one over.', p: 'Read the clue. Say the sentence out loud. Then tap Check.' },
+  { k: 'deduz', est: 'o', min: 7, img: 'mesa', rot: 'VIII · Your Deductions', t: 'Five strange things. What is going on?', p: 'Tap a thing, then its deduction. Then say why.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Hot Seat', t: 'The hot seat.', p: 'Hot seat.' }
 ];
 
 var SERIE = 'The Batman', ANO = '2022';
@@ -254,3 +255,19 @@ var FIM = { tipo: 'cadeira', rot: 'VIII · The Hot Seat', t: 'The hot seat: the 
     { q: 'Where might he go next?', ex: 'He might go after the mayor’s friends. We have to be fast.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Six lines from the case.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'It must [[to]] be the Riddler.', r: 'It must <b>be</b> the Riddler.', d: 'must + the clean verb: no to.' },
+    { f: 'It [[mustn’t]] be Gordon: he was with me.', r: 'It <b>can’t</b> be Gordon: he was with me.', d: 'mustn’t means don’t do it. For “sure it isn’t”: can’t be.' },
+    { f: 'It might [[is]] a trap.', r: 'It might <b>be</b> a trap.', d: 'After might: the clean verb be.' },
+    { f: 'Who [[he]] could be?', r: 'Who <b>could he</b> be?', d: 'A question: the modal goes first.' },
+    { f: 'It [[can]] be the mayor, but I’m not sure.', r: 'It <b>might</b> be the mayor, but I’m not sure.', d: 'For a maybe: might or could, not can.' },
+    { f: 'We [[don’t can]] be sure.', r: 'We <b>can’t</b> be sure.', d: 'No do with a modal: can’t.' }
+  ],
+  nota: 'Pick the level by the clue: <b>must be</b> (sure it is), <b>might / could be</b> (maybe), <b>can’t be</b> (sure it isn’t). Always the clean verb after: no to, no -s. <b>mustn’t</b> is for rules, not clues.',
+  uso: { p: 'Your turn. A mystery: someone knocks on your door at night. Say who it must be, who it might be, and who it can’t be.', molde: ['It must be …', 'It might be …', 'It can’t be …'], ex: 'It must be my neighbor. It might be a delivery. It can’t be my mother: she’s in Spain.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

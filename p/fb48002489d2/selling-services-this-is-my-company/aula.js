@@ -16,11 +16,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'I · Your Week', t: 'How is your week?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · The LinkedIn Message', t: 'A first message to a new lead.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'dialogo', est: 'l', min: 8, img: 'conversa', rot: 'III · Coffee at an Event', t: 'Two people meet at a business event.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'IV · Isn’t, Not “Don’t Is”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'transforma', est: 'f', min: 7, img: 'mesa', rot: 'V · Make It Negative', t: 'Say the sentence with not.', p: 'Read the sentence. Say the negative. Then check.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'VI · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VII · Your Profile', t: 'Write your LinkedIn “About”: three sentences.', p: 'You, your company, your clients. Then read it out loud.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'IV · Right, Not This', t: 'Six lines from client notes. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'V · Isn’t, Not “Don’t Is”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'transforma', est: 'f', min: 7, img: 'mesa', rot: 'VI · Make It Negative', t: 'Say the sentence with not.', p: 'Read the sentence. Say the negative. Then check.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VII · You Choose', t: 'A or B? Choose and say why.', p: 'Your teacher answers first. Then you.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'capa', rot: 'VIII · Your Profile', t: 'Write your LinkedIn “About”: three sentences.', p: 'You, your company, your clients. Then read it out loud.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 1: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -96,3 +97,19 @@ var PODE = [
   'I can use isn’t and aren’t (and never “don’t is”).',
   'I can write a three-sentence LinkedIn profile.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'The report <b>isn’t</b> ready.', x: 'The report don’t is ready.', d: 'With is, the negative is isn’t. Never don’t is.' },
+    { c: 'Our clients <b>aren’t</b> small.', x: 'Our clients don’t are small.', d: 'They, we, you: aren’t.' },
+    { c: 'I’m <b>not</b> the decision maker.', x: 'I amn’t the decision maker.', d: 'I am: I’m not. There is no amn’t.' },
+    { c: 'It <b>isn’t</b> a software company.', x: 'It no is a software company.', d: 'For no with be: isn’t.' },
+    { c: 'He <b>isn’t</b> at the office today.', x: 'He don’t is at the office today.', d: 'he, she, it: isn’t.' },
+    { c: 'Payroll <b>isn’t</b> a problem for us.', x: 'Payroll not is a problem for us.', d: 'The not goes after is: isn’t.' }
+  ],
+  nota: 'With <b>be</b> (am, is, are), the negative is just <b>not</b>: isn’t, aren’t, I’m not. No “don’t”.',
+  uso: { p: 'Your turn. Your company: one thing it is, and one thing it isn’t.', molde: ['We’re a …', 'We aren’t …'], ex: 'We’re a BPO company. We aren’t a software company.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

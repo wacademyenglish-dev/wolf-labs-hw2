@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 16, kick: 'ENGLISH FOR HEALTHCA
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · What Are You Worried About?', t: 'A student finds the patient’s real fear.', p: 'One question before, then the video, then the questions.' },
-  { k: 'cadeira', est: 'o', min: 16, img: 'capa', rot: 'II · The Full Consultation', t: 'Your teacher is the patient. You lead.', p: 'Follow the steps. Ask, listen, react. Your teacher answers as the patient.' },
-  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'III · Plan and Handover', t: 'Explain the plan. Then call a colleague.', p: 'Read the card, prepare, start the clock, speak.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 16: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'conversa', rot: 'II · The Pocket Rule', t: 'Four lines. Keep them in the corner.', p: 'Read one line at a time. Then keep the rule in the corner for the consultation.' },
+  { k: 'cadeira', est: 'o', min: 16, img: 'capa', rot: 'III · The Full Consultation', t: 'Your teacher is the patient. You lead.', p: 'Follow the steps. Ask, listen, react. Your teacher answers as the patient.' },
+  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'IV · Plan and Handover', t: 'Explain the plan. Then call a colleague.', p: 'Read the card, prepare, start the clock, speak.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 16: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'eiRIm6BOzP4', titulo: 'Chest Pain History Taking | OSCE', fonte: 'GEEKY MEDICS · 2:33–4:22', inicio: 153, fim: 262,
@@ -63,3 +64,16 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 16: video · cadeira · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de cadeira.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'ICE and a summary',
+  linhas: [
+    'ideas: <b>What do you think</b> could be causing it?',
+    'concerns: <b>What are you worried about?</b>',
+    'expectations: <b>What were you hoping</b> we could do today?',
+    'summary: <b>So, if I understand correctly</b>, …'
+  ],
+  uso: { p: 'Your turn. Ask your teacher, the patient, one question about ideas and one about concerns.', molde: ['What do you think …?', 'What are you worried about?'], ex: 'What do you think could be causing the pain? What are you worried about?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

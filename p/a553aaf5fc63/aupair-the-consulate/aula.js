@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 11, kick: 'AU PAIR · MODULE 3 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · What the J-1 Is', t: 'The U.S. government explains the program.', p: 'First one question, then the video, then more questions.' },
-  { k: 'separa', est: 'f', min: 10, img: 'capa', rot: 'II · Good or Risky?', t: 'Eight answers. Which ones help you?', p: 'Choose the side and say why.' },
-  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'III · The Officer Asks', t: 'Five questions. Short and true.', p: 'Play the question, start the clock, answer in about 20 seconds.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Officer’s Voice', t: 'A short interview. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then answer two questions about you.' },
+  { k: 'separa', est: 'f', min: 10, img: 'capa', rot: 'III · Good or Risky?', t: 'Eight answers. Which ones help you?', p: 'Choose the side and say why.' },
+  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'IV · The Officer Asks', t: 'Five questions. Short and true.', p: 'Play the question, start the clock, answer in about 20 seconds.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'UtmzBXmOxfA', titulo: 'J-1 Visa Exchange Visitor Program', fonte: 'U.S. DEPARTMENT OF STATE (ECA) · 2 MIN',
@@ -65,3 +66,27 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 11: video · separa · prova (áudio) (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de separa.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The visa interview. Tap the lit words.',
+  falas: [
+    { q: 'Officer', f: 'Good morning. [[What will you do]] in the United States?' },
+    { q: 'You', f: '[[I’m going to]] take care of two children.' },
+    { q: 'Officer', f: '[[How long]] will you stay?' },
+    { q: 'You', f: '[[Twelve months.]] Then I go home.' },
+    { q: 'Officer', f: '[[Do you have]] a letter from the agency?' },
+    { q: 'You', f: '[[Yes, I do.]] Here it is.' }
+  ],
+  porques: [
+    'A question about the plan: what will you do? Listen for the verb.',
+    'A plan, and a true one: I’m going to + verb.',
+    'How long = how much time. The answer has a number.',
+    'A short answer is enough: the number and the unit.',
+    'A yes or no question: Do you have …?',
+    'The short answer repeats do: Yes, I do. Not “Yes, I have”.'
+  ],
+  nota: 'Short and true: answer only the question. A number, a short phrase, or <b>Yes, I do</b>. If you don’t understand, say: <b>Could you repeat that, please?</b>',
+  uso: { p: 'Your turn. The officer asks: Why are you going to the United States? How long will you stay? Answer with two short, true sentences.', molde: ['I’m going to …', 'I’ll stay for …'], ex: 'I’m going to work as an au pair. I’ll stay for twelve months.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

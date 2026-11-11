@@ -32,12 +32,13 @@ var L = [
   { k: 'falas', est: 'l', extra: 1, img: 'sala', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'numeros', est: 'o', min: 7, img: 'urna', rot: 'V · The Numbers', t: 'Four numbers from the video. Comment on each one.', p: 'Read the number and the fact. Say the comment with WHICH out loud. Then tap Check.' },
   { k: 'arco', est: 'f', min: 7, img: 'domino', rot: 'VI · The Anchor’s Notes', t: 'Election night. The anchor’s notes for the live show.', p: 'Read the notes out loud. Tap every “, which …” comment. Then finish the rule.' },
-  { k: 'regra', est: 'f', min: 6, img: 'urna', rot: 'VII · The Rule', t: 'Six lines from the newsroom. One word is wrong in each.', p: 'Say each line the right way out loud. Then tap Check.' },
-  { k: 'cola', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'VIII · The Comma Glue', t: 'A comma can’t glue two sentences. It cracks.', p: 'Read the cracked sentence. Say it as one sentence with WHICH. Then tap Check.' },
-  { k: 'urna', est: 'o', min: 7, extra: 1, img: 'urna', rot: 'IX · The Ballot Box', t: 'Six stories, six comments. Match them and drop them in the box.', p: 'Tap a story, then its comment. Then say the whole sentence out loud, fast.' },
-  { k: 'opiniao', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'X · Your Opinion', t: 'Big questions about voting. Answer, then comment on your own answer.', p: 'Tap a card. Answer, then add: “…, which …”.' },
-  { k: 'noite', est: 'o', min: 7, img: 'sala', rot: 'XI · Election Night', t: 'A friend in Ohio calls you on election night.', p: 'The teacher is the friend. React to each piece of news with WHICH.' },
-  { k: 'fim', est: 'w', min: 6, img: 'prefeitura', rot: 'XII · Your Country', t: 'Three facts about your country, each with a comment.', p: 'Write them. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'urna', rot: 'VII · Find the Rule', t: 'Four newsroom lines. One rule.', p: 'Read the four lines out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'urna', rot: 'VIII · The Rule', t: 'Six lines from the newsroom. One word is wrong in each.', p: 'Say each line the right way out loud. Then tap Check.' },
+  { k: 'cola', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'IX · The Comma Glue', t: 'A comma can’t glue two sentences. It cracks.', p: 'Read the cracked sentence. Say it as one sentence with WHICH. Then tap Check.' },
+  { k: 'urna', est: 'o', min: 7, extra: 1, img: 'urna', rot: 'X · The Ballot Box', t: 'Six stories, six comments. Match them and drop them in the box.', p: 'Tap a story, then its comment. Then say the whole sentence out loud, fast.' },
+  { k: 'opiniao', est: 'o', min: 7, extra: 1, img: 'cafe', rot: 'XI · Your Opinion', t: 'Big questions about voting. Answer, then comment on your own answer.', p: 'Tap a card. Answer, then add: “…, which …”.' },
+  { k: 'noite', est: 'o', min: 7, img: 'sala', rot: 'XII · Election Night', t: 'A friend in Ohio calls you on election night.', p: 'The teacher is the friend. React to each piece of news with WHICH.' },
+  { k: 'fim', est: 'w', min: 6, img: 'prefeitura', rot: 'XIII · Your Country', t: 'Three facts about your country, each with a comment.', p: 'Write them. They go to your My notes.' }
 ];
 
 var YT = 'ps8dFDnjLY4';
@@ -294,3 +295,19 @@ R.fim = function (c) {
 
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
 TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines from election night. Find the rule yourself.',
+  exemplos: [
+    'Turnout was low, <b>which</b> <u>surprised</u> everyone.',
+    'All 435 seats are open, <b>which</b> <u>is why</u> the night matters.',
+    'The count is slow, <b>which</b> <u>means</u> we wait.',
+    'Polls close late, <b>which</b> <u>explains</u> the long night.'
+  ],
+  pergunta: 'After the comma, which points to …',
+  opcoes: ['the whole idea before it', 'only the last word before it', 'a new person'], c: 0,
+  nao: 'Not that one. Read the four lines again: what is surprising, what is the reason, what is slow? The whole first part.',
+  regra: '<b>, which</b> comments on the <b>whole idea</b> before the comma: turnout was low, <b>which</b> surprised everyone. Always a comma first. Not “, what is why”, not “, that means”, and not “, this means”.',
+  uso: { p: 'Your turn. One fact about your city or country, and your comment with , which.', molde: ['…, which means …', '…, which is why …'], ex: 'Rent is very high in my city, which is why many people live with their parents.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

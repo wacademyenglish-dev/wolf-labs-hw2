@@ -14,10 +14,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 4, titulo: ['Little Did', 'They 
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Audio Guide', t: 'Room 3: the night of 1911.', p: 'Read it out loud, like a museum guide. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Story or Sign?', t: 'Where does the verb go?', p: 'Compare A and B. Which one sounds like a story, and which like a law?' },
-  { k: 'rapido', est: 'f', min: 6, img: 'conversa', rot: 'III · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
-  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'IV · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
-  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'V · The Hot Seat', t: 'Now YOU ask me about my life.', p: 'Ask your teacher. Your teacher answers with a little drama.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · At the Lighthouse', t: 'The guide and the visitor. Some openings are lit.', p: 'Read it together. Tap the lit words: why this order? Then say two lines of your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Story or Sign?', t: 'Where does the verb go?', p: 'Compare A and B. Which one sounds like a story, and which like a law?' },
+  { k: 'rapido', est: 'f', min: 6, img: 'conversa', rot: 'IV · Speed Round', t: 'Sixty seconds. How many can you do?', p: 'Answer fast. Your teacher taps Right or Pass. Then try to beat your score.' },
+  { k: 'erros', est: 'f', min: 7, img: 'capa', rot: 'V · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
+  { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'VI · The Hot Seat', t: 'Now YOU ask me about my life.', p: 'Ask your teacher. Your teacher answers with a little drama.' }
 ];
 var PORTAS = [];
 
@@ -56,3 +57,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me about something I have never seen before.', dica: 'What had you never seen before your last trip?', resp: 'Snow! Never before had I seen snow.' },
   { alvo: 'Ask me if a difficult thing was easy.', dica: 'Was it easy to learn English?', resp: 'In no way was it easy. But it was worth it.' },
   { alvo: 'Ask me if I ever thought of giving up.', dica: 'Did you ever think of giving up?', resp: 'At no time did I think of giving up. Well, maybe once!' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'At the lighthouse museum. Tap the lit words.', falas: [{ q: 'Guide', f: 'Room 3. The night of 1911. [[Little did they know]] that the storm was coming.' }, { q: 'Visitor', f: 'And the keeper? Was he afraid?' }, { q: 'Guide', f: '[[Never before had he seen]] waves this high.' }, { q: 'Visitor', f: 'Can we touch the old lamp?' }, { q: 'Guide', f: '[[Under no circumstances should you]] touch it. [[On no account must you]] go up the stairs alone.' }, { q: 'Visitor', f: 'Is the island safe now?' }, { q: 'Guide', f: '[[In no way is it]] dangerous today. [[At no time did anyone]] get hurt.' }], porques: ['A story: a negative opening, then the helper before the person. Not “little they knew”.', 'Never before + had + he + seen. The helper had comes first.', 'A formal sign: under no circumstances + should + you. Not “under no circumstances you should”.', 'On no account + must + you. The same shape.', 'In no way + is + it. The verb be goes first.', 'At no time + did + anyone + get. A helper again, and the verb is clean.'], nota: 'A negative or limiting expression at the start of the sentence pulls the helper to the front: <b>Little did they know</b>, <b>Never before had he seen</b>, <b>Under no circumstances should you</b>. Story or sign: the order is the same.', uso: { p: 'Your turn. You work at a museum. Give two safety rules to a visitor, and say one dramatic thing about the building.', molde: ['Under no circumstances should you …', 'On no account must you …', 'Never before had …'], ex: 'Under no circumstances should you touch the paintings. On no account must you take photos with flash. Never before had the museum had so many visitors.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

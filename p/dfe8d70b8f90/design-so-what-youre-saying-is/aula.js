@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 2, kick: 'ENGLISH FOR DESIGNERS
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · Creative Direction', t: 'A brand designer’s questions about the look.', p: 'One question before, then the video, then the questions.' },
-  { k: 'transforma', est: 'f', min: 10, img: 'capa', rot: 'II · What Do You Mean by…?', t: 'Turn a vague word into a clear question.', p: 'Read what the client said and the clue. Ask the clarifying question.' },
-  { k: 'formulario', est: 'w', min: 14, img: 'conversa', rot: 'III · Write the Brief', t: 'Turn the client’s email into a brief.', p: 'Read the email. Fill in the brief in short, clear English.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Ladder', t: 'One vague word, five steps to a clear brief.', p: 'Read each step out loud, then go one step up. Notice how the question gets clearer. Then climb with your own client word.' },
+  { k: 'transforma', est: 'f', min: 10, img: 'capa', rot: 'III · What Do You Mean by…?', t: 'Turn a vague word into a clear question.', p: 'Read what the client said and the clue. Ask the clarifying question.' },
+  { k: 'formulario', est: 'w', min: 14, img: 'conversa', rot: 'IV · Write the Brief', t: 'Turn the client’s email into a brief.', p: 'Read the email. Fill in the brief in short, clear English.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'kS5jGXKVzB4', titulo: 'SECRET Questions Pro Designers Ask Their Clients', fonte: 'ABI CONNICK · 3:58–5:53', inicio: 238, fim: 353,
@@ -57,3 +58,18 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 02: video · transforma · formulario (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de transforma.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'The client says “modern”. Climb to a clear brief.',
+  degraus: [
+    { r: 'vague', f: 'Client: “I want it to look <b>modern</b>.”', d: 'One word, many meanings.' },
+    { r: 'ask', f: 'What do you mean by “modern”?', d: 'Clear, but a little blunt.' },
+    { r: 'two', f: 'When you say “modern”, <b>do you mean</b> minimal, or bold and colorful?', d: 'Two options: easy to answer.' },
+    { r: 'show', f: '<b>Could you show me</b> an example you like?', d: 'A picture says a lot.' },
+    { r: 'say back', f: '<b>So what you’re saying is</b>: clean, simple, and one bright color. Is that right?', d: 'Say it back. Then write it in the brief.' }
+  ],
+  nota: 'Five steps from a vague word to a clear brief: <b>ask what it means</b>, <b>offer two options</b>, <b>ask for an example</b>, and <b>say it back</b>: So what you’re saying is …, right?',
+  uso: { p: 'Your turn. The client says: “Make it fun.” Ask what they mean, then say it back.', molde: ['When you say “fun”, do you mean …?', 'So what you’re saying is …'], ex: 'When you say “fun”, do you mean playful colors or a funny tone? So what you’re saying is: playful colors, right?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

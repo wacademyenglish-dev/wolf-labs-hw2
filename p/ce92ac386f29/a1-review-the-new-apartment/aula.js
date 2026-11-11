@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The New Apartment', t: 'Three apartments. Ask the owner.', p: 'Ask five questions about each apartment. Your teacher is the owner. Then describe one to the client.' },
   { k: 'cartao', est: 'w', min: 6, img: 'conversa', rot: 'III · Your Home', t: 'Your home is for rent! Write the ad.', p: 'Four short lines: rooms, what there is, where it is.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose one.', p: 'Choose one. Then say it with there is / there are.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The New Apartment Card', t: 'Four lines from Unit 4.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -70,3 +71,9 @@ var PODE = [
 /* MECÂNICAS VARIADAS */
 var RAPIDO = { seg: 60, itens: [['The phone is ___ the table.', 'on'], ['I’m ___ home.', 'at'], ['There ___ two chairs.', 'are'], ['There ___ a sofa.', 'is'], ['___ there a park?', 'Is'], ['How ___ chairs?', 'many'], ['How ___ water?', 'much'], ['There isn’t ___ milk.', 'any'], ['The café is ___ to the bank.', 'next'], ['She lives ___ Recife.', 'in']] };
 var ESCOLHA = [{ a: 'an apartment next to a park', b: 'an apartment next to a mall', chips: ['A … for me.', 'There is / there are …'], ex: 'Next to a park. There are trees.' }, { a: 'a big kitchen', b: 'a big bedroom', chips: ['A big …', 'There is …'], ex: 'A big kitchen. There is a big table.' }, { a: 'the first floor', b: 'the top floor', chips: ['The … floor', 'There is …'], ex: 'The top floor. There is a great view.' }, { a: 'a house in the city', b: 'a house on the beach', chips: ['In the city / On the beach', 'There is …'], ex: 'On the beach. There is a lot of sun!' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 4.', rotulo: 'Where things are', linhas: ['<b>at</b> home · <b>in</b> Recife · <b>on</b> the table', '<b>next to</b> the park · <b>between</b> a bank and a café · <b>in front of</b> the door', '<b>There is</b> a fridge · <b>There are</b> two bedrooms · <b>Is there</b> a garden?', '<b>some</b> in yes · <b>any</b> in no and questions · <b>How many</b> chairs? · <b>How much</b> space?'], uso: { p: 'Your turn. Describe an apartment to a client: how many rooms, where it is, one thing it has.', molde: ['There are …', 'It’s next to …', 'There is a …'], ex: 'There are two bedrooms. It’s next to a park. There is a small balcony.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

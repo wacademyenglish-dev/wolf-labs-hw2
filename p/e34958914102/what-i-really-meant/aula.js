@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 3, titulo: ['What I', 'Really Me
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · The Correction Episode', t: 'Episode 112: “About last week…”', p: 'Read the transcript out loud with your teacher. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'II · Where Is the Spotlight?', t: 'Same facts, different focus.', p: 'Compare A and B. What does B put in the spotlight? How does it sound?' },
-  { k: 'transforma', est: 'f', min: 8, img: 'conversa', rot: 'III · Set It Straight', t: 'A misunderstanding → a clear correction.', p: 'Read the wrong idea. Use the clue. Say the cleft sentence.' },
-  { k: 'cadeira', est: 'o', min: 10, img: 'capa', rot: 'IV · The Interview', t: 'Your teacher is a journalist. Correct them.', p: 'The journalist gets your words wrong. Correct each one with a cleft sentence.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Right, Not This', t: 'Six pairs from the podcast. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'III · Where Is the Spotlight?', t: 'Same facts, different focus.', p: 'Compare A and B. What does B put in the spotlight? How does it sound?' },
+  { k: 'transforma', est: 'f', min: 8, img: 'conversa', rot: 'IV · Set It Straight', t: 'A misunderstanding → a clear correction.', p: 'Read the wrong idea. Use the clue. Say the cleft sentence.' },
+  { k: 'cadeira', est: 'o', min: 10, img: 'capa', rot: 'V · The Interview', t: 'Your teacher is a journalist. Correct them.', p: 'The journalist gets your words wrong. Correct each one with a cleft sentence.' }
 ];
 var PORTAS = [];
 
@@ -59,3 +60,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* C1 · What I Really Meant: leitura · descobre · transforma · cadeira */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.', pares: [{ c: 'What I meant was that the soup was too salty.', x: 'What I meant it was that the soup was too salty.', d: 'What + I meant + was. No it after the first part.' }, { c: 'It wasn’t the chef that I criticized. It was the service.', x: 'It wasn’t the chef what I criticized. It was the service.', d: 'It was … that (or who) + clause. Never what.' }, { c: 'All I said was that it needed salt.', x: 'All what I said was that it needed salt.', d: 'All + I said + was. Never all what.' }, { c: 'What I didn’t say was that the cook was bad.', x: 'What I didn’t said was that the cook was bad.', d: 'Didn’t + clean verb: say.' }, { c: 'The thing I regret is not calling the chef.', x: 'The thing I regret are not calling the chef.', d: 'The thing is one thing: is.' }, { c: 'It’s not that I dislike spice, it’s that I can’t eat it.', x: 'It’s not that I dislike spice, is that I can’t eat it.', d: 'Repeat it’s: it’s not that …, it’s that …' }], nota: 'To correct a misunderstanding, put the right idea at the end: <b>What I meant was …</b>, <b>It wasn’t X that …, it was Y</b>, <b>All I said was …</b>, <b>It’s not that …, it’s that …</b>. Never <b>what</b> after <b>It was</b>.', uso: { p: 'Your turn. Someone understood you wrongly. Correct them in three sentences.', molde: ['What I meant was …', 'It wasn’t … that …, it was …', 'All I said was …'], ex: 'What I meant was that I’m busy on Friday. It wasn’t the party that I disliked, it was the date. All I said was that I might be late.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

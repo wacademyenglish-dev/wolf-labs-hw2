@@ -15,10 +15,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 8, titulo: ['If So,', 'If Not'],
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Emails', t: 'Booking a cabin by the lake.', p: 'Read the emails out loud. Answer the questions. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Long or Short?', t: 'Same meaning, fewer words.', p: 'Compare A and B. Which one sounds natural in English?' },
-  { k: 'bingo', est: 'f', min: 8, img: 'conversa', rot: 'III · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a line, across, down or diagonal, is a BINGO.' },
-  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You?', t: 'Answer short, then explain.', p: 'Choose A or B. Start with a short answer: I suppose so, I’d rather not, I don’t see why not…' },
-  { k: 'conversa', est: 'o', min: 7, img: 'conversa', rot: 'V · Quick Answers', t: 'Your teacher asks. You answer short and smart.', p: 'Answer with a short form first. Then add one sentence.' }
+  { k: 'gx', est: 'o', min: 4, img: 'conversa', rot: 'II · Short Answers', t: 'Ping-pong. Short and smart.', p: 'The teacher asks. Say the short answer, then add one sentence. Then you ask.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Long or Short?', t: 'Same meaning, fewer words.', p: 'Compare A and B. Which one sounds natural in English?' },
+  { k: 'bingo', est: 'f', min: 8, img: 'conversa', rot: 'IV · Bingo', t: 'Nine squares. Make a line!', p: 'Pick a square and do it out loud. Three in a line, across, down or diagonal, is a BINGO.' },
+  { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'V · Would You?', t: 'Answer short, then explain.', p: 'Choose A or B. Start with a short answer: I suppose so, I’d rather not, I don’t see why not…' },
+  { k: 'conversa', est: 'o', min: 7, img: 'conversa', rot: 'VI · Quick Answers', t: 'Your teacher asks. You answer short and smart.', p: 'Answer with a short form first. Then add one sentence.' }
 ];
 var PORTAS = [];
 
@@ -59,3 +60,9 @@ var CONVERSA = [
   { q: 'Are you going to travel this year? If so, where?', f: 'Travel this year?', voce: ['I hope so. If so, …', 'I don’t think so. If not, …'], ex: 'I hope so. If so, I’d love to see Chile.' },
   { q: 'Is your city getting more expensive?', f: 'More expensive?', voce: ['I’m afraid so.', 'If anything, …'], ex: 'I’m afraid so. If anything, rent has doubled.' },
   { q: 'Can you help me move house on Sunday?', f: 'Help me move?', voce: ['I suppose so.', 'I’d rather not, but …', 'I don’t see why not.'], ex: 'I suppose so, if you buy the pizza!' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Two or three words, fast.', perguntas: [{ q: 'Is the cabin free in July?', s: 'I suppose <mark>so</mark>.', n: 'I’m afraid <mark>not</mark>.', mais: 'Add one sentence: why?' }, { q: 'Can I bring my dog?', s: 'I don’t see <mark>why not</mark>.', n: 'I’d <mark>rather not</mark>.', mais: 'Say what you prefer.' }, { q: 'Is there a fee for a late arrival?', s: 'If <mark>so</mark>, it’s small.', n: 'Not that <mark>I know of</mark>.', mais: 'Ask a follow-up question.' }, { q: 'Will it rain this weekend?', s: 'I hope <mark>so</mark>.', n: 'I hope <mark>not</mark>.', mais: 'Why do you hope so?' }, { q: 'Is breakfast included?', s: 'So I <mark>gather</mark>.', n: 'I suppose <mark>not</mark>.', mais: 'Where did you hear it?' }, { q: 'Do you need a parking spot?', s: 'If <mark>possible</mark>.', n: 'If <mark>not</mark>, no problem.', mais: 'Say what you need.' }], nota: 'In English we do not repeat the whole sentence: <b>I suppose so</b>, <b>I’m afraid not</b>, <b>if so</b>, <b>if not</b>, <b>if possible</b>, <b>not that I know of</b>. Not “I think no”, not “if yes”.', uso: { p: 'Your turn. Ask your teacher three questions about a trip. Your teacher answers with a short form. You react.', molde: ['Is …?', 'Can I …?', 'Do I need …?'], ex: 'Is the room by the lake? Can I check in early? Do I need to bring towels?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

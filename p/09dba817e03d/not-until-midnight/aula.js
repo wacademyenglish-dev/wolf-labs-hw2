@@ -15,10 +15,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 4, titulo: ['Not Until', 'Midnig
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · The Night on the Mountain', t: 'A hiker tells her story.', p: 'Read it out loud, like a storyteller. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · Fact or Story?', t: 'Same event. One sentence is a story.', p: 'Compare A and B. Where does the verb go?' },
-  { k: 'transforma', est: 'f', min: 8, img: 'capa', rot: 'III · Make It Dramatic', t: 'Plain → dramatic.', p: 'Read the plain sentence. Start with the clue. Say it with inversion.' },
-  { k: 'ordem', est: 'o', min: 7, img: 'capa', rot: 'IV · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
-  { k: 'conversa', est: 'o', min: 7, img: 'conversa', rot: 'V · Your Story', t: 'Tell your own stories, with drama.', p: 'Answer with one inversion. Then ask the question back.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · The Flip', t: 'Watch the words move.', p: 'Flip each plain sentence. Notice where the helper goes. Then flip four on your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · Fact or Story?', t: 'Same event. One sentence is a story.', p: 'Compare A and B. Where does the verb go?' },
+  { k: 'transforma', est: 'f', min: 8, img: 'capa', rot: 'IV · Make It Dramatic', t: 'Plain → dramatic.', p: 'Read the plain sentence. Start with the clue. Say it with inversion.' },
+  { k: 'ordem', est: 'o', min: 7, img: 'capa', rot: 'V · The Story in Order', t: 'What happened first?', p: 'Tap the cards in order. Then tell the story with the connectors.' },
+  { k: 'conversa', est: 'o', min: 7, img: 'conversa', rot: 'VI · Your Story', t: 'Tell your own stories, with drama.', p: 'Answer with one inversion. Then ask the question back.' }
 ];
 var PORTAS = [];
 
@@ -68,3 +69,9 @@ var PODE = [];
 var ORDEM = { rot: 'THE LONGEST NIGHT', pede: 'Tap the events in order. Then tell the story with at least three inversions.', chips: ['Not once did …', 'Not until … did …', 'Not since … had …', 'Nowhere have I …'],
   modelo: 'We left the hut at two. Not once did we check the weather. Not until it was dark did we realize we were lost. Not until midnight did the team reach us. Not since I was a child had I felt so grateful, and nowhere have I seen such stars.',
   passos: ['They left the hut at two, without checking the weather.', 'At five, the fog came down.', 'When it got dark, they realized they were lost.', 'They waited under a rock and blew the whistle.', 'At midnight, the rescue team found them.', 'The fog cleared, and they saw the stars.'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'The plain sentence, then the dramatic one. Watch the words move.', frases: [{ de: ['They', 'did not arrive', 'until midnight', '.'], para: ['+Not', 'until midnight', '*did', 'they', '*arrive', '.'], d: 'The time goes first, then the helper, then the person: did they arrive.' }, { de: ['We', 'did not stop', 'once', '.'], para: ['+Not', 'once', '*did', 'we', '*stop', '.'], d: 'The same shape: a no word first, then did we stop.' }, { de: ['It', 'has not snowed', 'since 1990', '.'], para: ['+Not', 'since 1990', '*has', 'it', '*snowed', '.'], d: 'With has: not since 1990 has it snowed.' }], notaBotao: 'What moves?', nota: 'After <b>Not until + time</b>, the helper comes before the person, like in a question: <b>did they</b> arrive, <b>has it</b> snowed. The inversion is in the <b>second</b> part: Not until I saw the map <b>did I</b> understand.', pergunta: 'Your turn. Flip it out loud, then check.', treino: [{ de: 'She did not call until Friday.', r: 'Not until Friday <b>did she call</b>.' }, { de: 'I have not seen such stars anywhere.', r: 'Nowhere <b>have I seen</b> such stars.' }, { de: 'They did not leave once in three days.', r: 'Not once in three days <b>did they leave</b>.' }, { de: 'The rain did not stop until dawn.', r: 'Not until dawn <b>did the rain stop</b>.' }], uso: { p: 'Your turn. A night you will never forget. Start with Not until … did I …', molde: ['Not until … did I …', 'Not once did I …'], ex: 'Not until the sun came up did I understand where I was. Not once did I feel afraid.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };

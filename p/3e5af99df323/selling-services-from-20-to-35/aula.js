@@ -17,11 +17,12 @@ var L = [
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Numbers', t: 'What number is important in your job?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'leitura', est: 'l', min: 8, img: 'mesa', rot: 'II · Easy Reader: The Numbers', t: 'Leo’s First Big Client · Chapter 4.', p: 'Read it out loud. Then answer the questions.' },
   { k: 'ditado', est: 'l', min: 8, img: 'mesa', rot: 'III · Listen to the Numbers', t: 'Six results from different clients.', p: 'Listen up to three times. Type every word. Numbers in digits: 15, 300, 35%.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'IV · By, From, To', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'slides', est: 'o', min: 10, img: 'conversa', rot: 'V · Your 3-Slide Pitch', t: 'Three slides, three numbers. Then present.', p: 'Write a title and one number for each slide. Your teacher is the CFO and asks one question.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'mesa', rot: 'VI · Mini-Debate: 3 or 10 Numbers?', t: 'Two sides. Your teacher takes the other side.', p: 'Choose a side. Say “I think … because …”. Then answer your teacher: “I agree / I don’t agree because …”.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VII · Your Slide', t: 'Your slide: three real numbers, three sentences.', p: 'Write them. Then present the slide out loud, in one minute.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'VIII · I Can', t: 'Lesson 22: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'IV · The Ladder', t: 'One slide sentence, five steps.', p: 'Read each step out loud, then go one step up. Notice what you add. Then climb with your own number.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'capa', rot: 'V · By, From, To', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'slides', est: 'o', min: 10, img: 'conversa', rot: 'VI · Your 3-Slide Pitch', t: 'Three slides, three numbers. Then present.', p: 'Write a title and one number for each slide. Your teacher is the CFO and asks one question.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'mesa', rot: 'VII · Mini-Debate: 3 or 10 Numbers?', t: 'Two sides. Your teacher takes the other side.', p: 'Choose a side. Say “I think … because …”. Then answer your teacher: “I agree / I don’t agree because …”.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VIII · Your Slide', t: 'Your slide: three real numbers, three sentences.', p: 'Write them. Then present the slide out loud, in one minute.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 22: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -93,3 +94,18 @@ var SLIDES = { rot: '3-SLIDE PITCH',
     { rt: 'The savings', ph: 'Savings per year', pn: 'R$ 115,000' }],
   chips: ['Slide 1: the problem. …', 'It went up / down by …', 'from … to …', 'This means …', 'Any questions?'],
   modelo: 'Slide one is the problem: four hundred hours of manual work a month. Slide two is the result: reports are forty percent faster. They went from ten days to six days. Slide three is the savings: one hundred and fifteen thousand reais a year. Any questions?' };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One slide sentence. Add one piece at a time.',
+  degraus: [
+    { r: 'verb', f: 'Errors <b>went down</b>.', d: 'What happened.' },
+    { r: 'by', f: 'Errors went down <b>by</b> 80%.', d: 'by = how much.' },
+    { r: 'from to', f: 'Errors went down <b>from</b> 300 <b>to</b> 60.', d: 'from = the start. to = the end.' },
+    { r: 'when', f: '<b>In one year</b>, errors went down from 300 to 60.', d: 'When? You can put it first.' },
+    { r: 'point', f: 'Revenue went up to <b>1.5</b> million: one <b>point</b> five.', d: 'In English, decimals use a point.' }
+  ],
+  nota: 'One slide sentence, one piece at a time: <b>went down</b> (what), <b>by</b> (how much), <b>from … to</b> (start and end), and a <b>point</b> in 1.5. Not “in 15%”, and not “grew up”.',
+  uso: { p: 'Your turn. One number from your job: climb the ladder with it.', molde: ['… went up / down.', '… by …', '… from … to …'], ex: 'Costs went down. Costs went down by 15%. Costs went down from 20% to 5%.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

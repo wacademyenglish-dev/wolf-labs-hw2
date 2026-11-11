@@ -14,7 +14,8 @@ var L = [
   { k: 'missao', est: 'o', min: 15, img: 'capa', rot: 'II · The Witnesses', t: 'Three witnesses. One very late cake.', p: 'Ask each witness five questions. Your teacher is the witness. Then give the jury’s verdict.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Jury Rule', t: 'Four lines from the jury room. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 3: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -61,3 +62,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me where I would be now if I had chosen another job.', dica: 'If you had chosen another job, where would you be now?', resp: 'I’d probably be a lawyer in São Paulo.' },
   { alvo: 'Ask me about something I could have done but didn’t.', dica: 'What could you have done, but didn’t?', resp: 'I could have lived in Canada. I said no.' },
   { alvo: 'Ask me about my personality and a past result.', dica: 'If you weren’t so…, would you have…?', resp: 'If I weren’t so stubborn, I would have listened to my dad.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences. Find the rule yourself.', exemplos: ['If he <b>had called</b>, I <u>would have come</u>.', 'If she <b>had known</b>, she <u>would have left</u>.', 'If they <b>had checked</b> the oven, the cake <u>would have been</u> on time.', 'If we <b>hadn’t waited</b>, we <u>would have won</u>.'], pergunta: 'In the if part of the third conditional, we use …', opcoes: ['had + participle, never would', 'would have + participle', 'the past simple'], c: 0, nao: 'Not that one. Look at the lit words after if: is there a would?', regra: '<b>If + had + participle</b>, <b>would have + participle</b>: If he had called, I would have come. Never would in the if part.', uso: { p: 'Your turn. You are the jury president. Say what would have happened if the driver had left earlier.', molde: ['If the driver had …, the cake would have …', 'If the baker hadn’t …'], ex: 'If the driver had left earlier, the cake would have arrived on time.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

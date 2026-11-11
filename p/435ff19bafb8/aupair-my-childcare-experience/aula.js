@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'A2+', unidade: 4, kick: 'AU PAIR · MODULE 1 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · How Agencies Check You', t: 'From the application to the training school.', p: 'One question before, then the video, then the questions.' },
-  { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'II · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
-  { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
-  { k: 'prova', est: 'o', min: 12, img: 'capa', rot: 'IV · Your Best Story', t: 'Tell a real story with a child.', p: 'Twenty seconds to plan. Then up to 90 seconds.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Find the Rule', t: 'Four lines from a childcare story. You find the rule.', p: 'Read the four sentences out loud. Look at the lit verbs. Choose the rule. Then say your own.' },
+  { k: 'memoria', est: 'l', min: 8, img: 'capa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
+  { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'IV · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
+  { k: 'prova', est: 'o', min: 12, img: 'capa', rot: 'V · Your Best Story', t: 'Tell a real story with a child.', p: 'Twenty seconds to plan. Then up to 90 seconds.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'eCNU1oWEKWQ', titulo: 'How are Au Pairs Screened and Trained?', fonte: 'CULTURAL CARE AU PAIR · 2 MIN',
@@ -59,3 +60,20 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 04: video · memoria · erros · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de memoria.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines from a story. Find the rule yourself.',
+  exemplos: [
+    'Last summer, I <u>took</u> care of my two cousins.',
+    'It <u>rained</u> all day, so we <u>made</u> a tent.',
+    'The little one <b>didn’t</b> <u>want</u> to sleep.',
+    'I <u>read</u> him three stories.'
+  ],
+  pergunta: 'In a story about the past, the verbs …',
+  opcoes: ['all take -ed: taked, maked', 'take -ed (rained) or change (took, made, read); after didn’t the verb is clean (want)', 'take -ed after didn’t: didn’t wanted'], c: 1,
+  nao: 'Not that one. Read the four lit verbs again: which ones end in -ed? Which ones are different? What comes after didn’t?',
+  regra: '<b>Regular</b> verbs take -ed: rained. <b>Different</b> verbs change: take → took, make → made, read → read. After <b>didn’t</b>, the verb is clean: didn’t want, never didn’t wanted.',
+  uso: { p: 'Your turn. Tell one thing you did with a child: one regular verb, one different verb, and one didn’t.', molde: ['We played …', 'We made …', 'He didn’t …'], ex: 'We played in the park. We made a paper boat. He didn’t want to go home.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

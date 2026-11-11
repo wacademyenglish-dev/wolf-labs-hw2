@@ -15,7 +15,8 @@ var L = [
   { k: 'missao', est: 'o', min: 14, img: 'capa', rot: 'II · The Casting', t: 'Three people want to be the new host.', p: 'Ask each person five questions. Your teacher is the person. Then tell the director who is the best.' },
   { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Mistake Hunter', t: 'Five lines from the casting. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -64,3 +65,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me how long I’ve been a teacher.', dica: 'How long have you been a teacher?', resp: 'For ten years.' },
   { alvo: 'Ask me about something I haven’t done yet.', dica: 'Is there something you haven’t done yet?', resp: 'I haven’t seen the ocean in Asia yet.' },
   { alvo: 'Ask me what I’ve just done.', dica: 'What have you just done?', resp: 'I’ve just had a coffee!' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. The casting.', toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'I [[have gone]] to Japan in 2022.', r: 'I <b>went</b> to Japan in 2022.', d: 'A finished time (in 2022): past simple.' }, { f: 'I have [[saw]] this show.', r: 'I have <b>seen</b> this show.', d: 'have + participle: seen, gone, eaten.' }, { f: 'I [[live]] here since 2020.', r: 'I <b>have lived</b> here since 2020.', d: 'since + a point: present perfect.' }, { f: 'I [[haven’t never]] eaten sushi.', r: 'I’ve <b>never</b> eaten sushi.', d: 'never already means not ever. One no only.' }, { f: 'I’ve [[yet]] finished.', r: 'I’ve <b>already</b> finished.', d: 'In a yes sentence: already. yet is for no and questions.' }], nota: '<b>Have + participle</b> for experience. A finished time (in 2022): <b>past simple</b>. <b>Since / for</b> with have. <b>Already</b> in a yes sentence, <b>yet</b> at the end of a no.', uso: { p: 'Your turn. The producer asks: tell me about your experience. Say one thing you have done, and give the detail in the past.', molde: ['I’ve been to …', 'I went there in …'], ex: 'I’ve been to Chile. I went there in 2021 for my brother’s wedding.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

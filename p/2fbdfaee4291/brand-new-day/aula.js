@@ -33,10 +33,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Spider-Man: Brand New Day. The official trailer.', p: 'Slide first. Watch the trailer. Then two short tasks: tap ▶ to hear a line again.' },
   { k: 'falas', est: 'l', img: 'telhado', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'corredor', rot: 'V · Used To × Have Been', t: 'One word is wrong in every message.', p: 'Find the wrong word. Say the right one. Then tap Check.' },
-  { k: 'tela', est: 'o', min: 7, img: 'capa', rot: 'VI · The Split Screen', t: 'Before and now. Six captions for Peter’s split screen.', p: 'Read the words. Say the caption. Then tap Check.' },
-  { k: 'vida', est: 'o', min: 6, img: 'telhado', rot: 'VII · Your Then and Now', t: 'Two moments from your life. How do you answer?', p: 'Tap an answer. Read the conversation. Then say your own.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Debate', t: 'The debate.', p: 'Debate.' }
+  { k: 'gx', est: 'f', min: 3, img: 'queens', rot: 'V · Peter’s Timeline', t: 'Where does each sentence live in time?', p: 'Tap a sentence, then its place on the line. Notice the verbs. Then say three lines about you.' },
+  { k: 'regra', est: 'f', min: 6, img: 'corredor', rot: 'VI · Used To × Have Been', t: 'One word is wrong in every message.', p: 'Find the wrong word. Say the right one. Then tap Check.' },
+  { k: 'tela', est: 'o', min: 7, img: 'capa', rot: 'VII · The Split Screen', t: 'Before and now. Six captions for Peter’s split screen.', p: 'Read the words. Say the caption. Then tap Check.' },
+  { k: 'vida', est: 'o', min: 6, img: 'telhado', rot: 'VIII · Your Then and Now', t: 'Two moments from your life. How do you answer?', p: 'Tap an answer. Read the conversation. Then say your own.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Debate', t: 'The debate.', p: 'Debate.' }
 ];
 
 var FILME = 'Spider-Man: Brand New Day', ANO = '2026';
@@ -264,3 +265,19 @@ var FIM = { tipo: 'debate', rot: 'VIII · The Debate', t: 'Is it better to be fo
   b: { rot: 'No, it isn’t', motivos: ['He used to have a family, and now he has nobody.', 'Friends should choose for themselves.', 'Nobody has ever been happy alone.'] },
   frases: ['He used to… but now…', 'Since then, he has…', 'I see your point, but…'] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G2 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'linhaTempo', titulo: 'Peter’s life on one line. Where does each sentence go?',
+  marcos: [{ t: 'LONG AGO', s: 'finished' }, { t: 'FROM THEN UNTIL NOW', s: 'still going' }, { t: 'RIGHT NOW', s: 'today' }],
+  frases: [
+    { f: 'Peter used to walk to school.', c: 0, d: 'used to · finished' },
+    { f: 'He used to have a normal life.', c: 0, d: 'used to · it stopped' },
+    { f: 'He has been a hero for three years.', c: 1, d: 'has been + for · still true' },
+    { f: 'He has lived in Queens since he was a kid.', c: 1, d: 'has lived + since · still true' },
+    { f: 'He is on a rooftop.', c: 2, d: 'is · right now' },
+    { f: 'He looks at the city.', c: 2, d: 'looks · right now' }
+  ],
+  nota: 'The left side is finished: <b>used to</b> + verb. The middle starts before and is still true: <b>has been / has lived</b> + <b>for</b> or <b>since</b>. The right side is today: the normal verb.',
+  uso: { p: 'Your turn. One thing you used to do, one thing you have done for years, and one thing you do now.', molde: ['I used to …', 'I’ve … for …', 'Now I …'], ex: 'I used to play football every week. I’ve worked here for four years. Now I run in the morning.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tempo', GX_EXPLICA); };

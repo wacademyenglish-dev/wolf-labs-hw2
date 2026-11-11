@@ -16,12 +16,13 @@ var L = [
   { k: 'abre', est: 'o', min: 7, img: 'corredor', rot: 'I · Bed to Kitchen', t: 'Describe the way. Every step, out loud.', p: 'Pick a card. Any words you have. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'dois', est: 'f', min: 6, img: 'labirinto', rot: 'II · Place or Path?', t: 'Same word, one letter more. One sits still; one moves.', p: 'Read both out loud. Tap the one that is MOVING.' },
   { k: 'verbo', est: 'f', min: 6, img: 'corredor', rot: 'III · One Verb, Six Roads', t: 'GO never changes. The road does.', p: 'Say the sentence with the road. Then tap it, and watch the arrow.' },
-  { k: 'regra', est: 'f', min: 6, img: 'labirinto', rot: 'IV · Enter In, Go Out The', t: 'Two slips everybody makes, and three more.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'planta', est: 'o', min: 7, img: 'labirinto', rot: 'V · The Floor Plan', t: 'Six legs across the house. The ball follows your words.', p: 'Say the whole leg out loud. Then tap the road, and the ball moves.' },
-  { k: 'tres', est: 'o', min: 7, img: 'corredor', rot: 'VI · Through, Across, Past', t: 'Three roads people mix up.', p: 'Say the example. Then answer the question about your life.' },
-  { k: 'guia', est: 'o', min: 7, extra: 1, img: 'bau', rot: 'VII · Eyes Closed', t: 'Your teacher closes their eyes. You guide them to the treasure.', p: 'Say each instruction. Your teacher moves only with your words.' },
-  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'corredor', rot: 'VIII · Your Real Routes', t: 'Real places now.', p: 'Answer out loud with at least two road words.' },
-  { k: 'fim', est: 'w', min: 6, img: 'labirinto', rot: 'IX · Out of the Maze', t: 'Bed to kitchen, again.', p: 'Write your real route with into, out of, through, past. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'labirinto', rot: 'IV · Look First', t: 'Three pictures from the house.', p: 'Look at the picture. Guess what you say. Then tap to see it, and say it.' },
+  { k: 'regra', est: 'f', min: 6, img: 'labirinto', rot: 'V · Enter In, Go Out The', t: 'Two slips everybody makes, and three more.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'planta', est: 'o', min: 7, img: 'labirinto', rot: 'VI · The Floor Plan', t: 'Six legs across the house. The ball follows your words.', p: 'Say the whole leg out loud. Then tap the road, and the ball moves.' },
+  { k: 'tres', est: 'o', min: 7, img: 'corredor', rot: 'VII · Through, Across, Past', t: 'Three roads people mix up.', p: 'Say the example. Then answer the question about your life.' },
+  { k: 'guia', est: 'o', min: 7, extra: 1, img: 'bau', rot: 'VIII · Eyes Closed', t: 'Your teacher closes their eyes. You guide them to the treasure.', p: 'Say each instruction. Your teacher moves only with your words.' },
+  { k: 'seu', est: 'o', min: 7, extra: 1, img: 'corredor', rot: 'IX · Your Real Routes', t: 'Real places now.', p: 'Answer out loud with at least two road words.' },
+  { k: 'fim', est: 'w', min: 6, img: 'labirinto', rot: 'X · Out of the Maze', t: 'Bed to kitchen, again.', p: 'Write your real route with into, out of, through, past. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -232,3 +233,15 @@ TOQUES.gu = function (b, n, v) { S.guia.esc = v; };
 TOQUES['gu-olhos'] = function () { S.guia.olhos = 1; };
 TOQUES['gu-prox'] = function () { S.guia = { n: S.guia.n + 1, esc: '', olhos: S.guia.olhos }; };
 TOQUES['se-prox'] = function () { S.seu.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What do you say?',
+  cenas: [
+    { img: 'corredor', antes: 'You are in the hallway. The kitchen is ahead, behind a door.', frase: '“I walk <mark>through</mark> the hallway and <mark>into</mark> the kitchen.”' },
+    { img: 'labirinto', antes: 'You are inside the maze. The way out is ahead.', frase: '“I go <mark>across</mark> the yard and <mark>out of</mark> the maze.”' },
+    { img: 'bau', antes: 'The treasure chest is on the table. You open it.', frase: '“I take the key <mark>out of</mark> the chest.”' }
+  ],
+  nota: '<b>in</b> is a place: I’m in the kitchen. <b>into</b> is a path: I walk into the kitchen. <b>out of</b>, <b>through</b>, <b>across</b> and <b>past</b> also show the way.',
+  uso: { p: 'Your turn. Walk through your own house with words: two sentences with into, out of or through.', molde: ['I go into …', 'I walk through …', 'I go out of …'], ex: 'I go out of my bedroom. I walk through the hallway and into the kitchen.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

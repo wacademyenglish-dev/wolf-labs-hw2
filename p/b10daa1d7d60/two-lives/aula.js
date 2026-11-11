@@ -18,14 +18,15 @@ var L = [
   { k: 'capa', est: null, img: 'fundo' },
   { k: 'abre', est: 'o', min: 7, img: 'cidade', rot: 'I · Your Two Lives', t: 'Everybody has two lives to compare.', p: 'Pick a card. Answer out loud. Nobody corrects you here.' },
   { k: 'vozes', est: 'l', min: 7, img: 'cidade', rot: 'II · Three Voices', t: 'Three people who changed their lives.', p: 'Play one. Pick what is true. Then say the whole sentence. You can read the text after.' },
-  { k: 'regra', est: 'f', min: 6, img: 'fundo', rot: 'III · Six Shapes', t: 'Six shapes, and none of them says better.', p: 'Read each shape out loud. Then make one of your own.' },
-  { k: 'balanca', est: 'f', min: 6, img: 'fundo', rot: 'IV · The Scale', t: 'Equal keeps the scale level. Not as … as: the side with MORE goes down.', p: 'Read the sentence out loud. Then tap: level, or which side goes down?' },
-  { k: 'numeros', est: 'f', min: 6, img: 'fundo', rot: 'V · How Much, Exactly?', t: 'Two numbers. Pick the shape.', p: 'Read the two facts. Pick. Then say the whole sentence.' },
-  { k: 'palavra', est: 'f', min: 6, img: 'fundo', rot: 'VI · One Wrong Word', t: 'Every mistake here is one word long.', p: 'Read it out loud. Tap the wrong word. Then say it right.' },
-  { k: 'estudo', est: 'l', min: 7, extra: 1, img: 'cidade', rot: 'VII · The Study', t: '1,600 people. Six months. Two days a week at home.', p: 'Guess first, out loud. Then play the result.' },
-  { k: 'estranhos', est: 'l', min: 7, extra: 1, img: 'campo', rot: 'VIII · Two Strangers', t: 'Two people you will never meet.', p: 'Play. Pick the right line. Then say it about them: She says… / He says…' },
-  { k: 'debate', est: 'o', min: 7, extra: 1, img: 'campo', rot: 'IX · City or Country?', t: 'A short debate. You pick a side. Your teacher takes the other.', p: 'For each topic: your point, your teacher’s answer, your reply.' },
-  { k: 'fim', est: 'w', min: 6, img: 'fundo', rot: 'X · Both Sides', t: 'Your answers from scene I come back.', p: 'Write your two lives: as … as, not as … as, the same as, different from. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'fundo', rot: 'III · Right, Not This', t: 'Five comparisons about Rosa and Nuno. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'regra', est: 'f', min: 6, img: 'fundo', rot: 'IV · Six Shapes', t: 'Six shapes, and none of them says better.', p: 'Read each shape out loud. Then make one of your own.' },
+  { k: 'balanca', est: 'f', min: 6, img: 'fundo', rot: 'V · The Scale', t: 'Equal keeps the scale level. Not as … as: the side with MORE goes down.', p: 'Read the sentence out loud. Then tap: level, or which side goes down?' },
+  { k: 'numeros', est: 'f', min: 6, img: 'fundo', rot: 'VI · How Much, Exactly?', t: 'Two numbers. Pick the shape.', p: 'Read the two facts. Pick. Then say the whole sentence.' },
+  { k: 'palavra', est: 'f', min: 6, img: 'fundo', rot: 'VII · One Wrong Word', t: 'Every mistake here is one word long.', p: 'Read it out loud. Tap the wrong word. Then say it right.' },
+  { k: 'estudo', est: 'l', min: 7, extra: 1, img: 'cidade', rot: 'VIII · The Study', t: '1,600 people. Six months. Two days a week at home.', p: 'Guess first, out loud. Then play the result.' },
+  { k: 'estranhos', est: 'l', min: 7, extra: 1, img: 'campo', rot: 'IX · Two Strangers', t: 'Two people you will never meet.', p: 'Play. Pick the right line. Then say it about them: She says… / He says…' },
+  { k: 'debate', est: 'o', min: 7, extra: 1, img: 'campo', rot: 'X · City or Country?', t: 'A short debate. You pick a side. Your teacher takes the other.', p: 'For each topic: your point, your teacher’s answer, your reply.' },
+  { k: 'fim', est: 'w', min: 6, img: 'fundo', rot: 'XI · Both Sides', t: 'Your answers from scene I come back.', p: 'Write your two lives: as … as, not as … as, the same as, different from. It goes to your My notes.' }
 ];
 
 var TR = {
@@ -227,3 +228,17 @@ TOQUES.es = function (b, n) { S.es.esc = n; };
 TOQUES.et = function (b, n, v) { S.et.esc[n] = +v; };
 TOQUES.db = function (b, n, v) { S.db.lado = v; };
 TOQUES['db-prox'] = function () { S.db.n++; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right one.',
+  pares: [
+    { c: 'Rosa’s farm is <b>as</b> big <b>as</b> a small town.', x: 'Rosa’s farm is as big than a small town.', d: 'as … as. Never than.' },
+    { c: 'Nuno’s salary is <b>the same as</b> before.', x: 'Nuno’s salary is the same that before.', d: 'the same AS.' },
+    { c: 'Rosa’s life is <b>different from</b> Nuno’s life.', x: 'Rosa’s life is different of Nuno’s life.', d: 'different FROM.' },
+    { c: 'The flat is <b>twice as</b> expensive <b>as</b> the farmhouse.', x: 'The flat is twice more expensive than the farmhouse.', d: 'twice AS … AS.' },
+    { c: 'The village is <b>not as</b> noisy <b>as</b> the city.', x: 'The village is not so noisy than the city.', d: 'not as … as.' }
+  ],
+  nota: 'Equal: <b>as … as</b>. Not equal: <b>not as … as</b>. The same: <b>the same as</b>. Different: <b>different from</b>. <b>Than</b> only comes back for “more”: taller <b>than</b>.',
+  uso: { p: 'Your turn. Two lives of yours, before and now. Compare them with as … as and different from.', molde: ['My … is as … as …', 'My … is different from …'], ex: 'My new job is as busy as my old job. My city is different from my hometown.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

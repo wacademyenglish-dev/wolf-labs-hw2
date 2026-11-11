@@ -13,7 +13,8 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'II · The Board', t: 'Roll, move, do the square.', p: 'Your teacher rolls the die. Do the task on your square, out loud.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'conversa', est: 'o', min: 8, img: 'conversa', rot: 'IV · Small Talk', t: 'By the lake at night. Let’s talk.', p: 'Answer, then ask the question back: “And you?”' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Find the Rule', t: 'Four sentences from the camp. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 7: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -50,3 +51,9 @@ var TABULEIRO = { rot: 'LAKE CAMP · DAY 1', centro: 'Help the new campers, squa
   { k: 'SECRET', t: 'Another leader breaks a rule! What should he do?', ex: 'He shouldn’t swim at night. He should say sorry.' },
   { k: 'FINISH', t: 'Say goodnight to the campers with one last piece of advice.', ex: 'Good night, everybody! You should sleep well: tomorrow we have to get up at seven.' }] };
 var ERROS = { tipo: 'nota', rot: 'THE RULES ON THE CAMP DOOR · WRITTEN BY A NEW LEADER', partes: ['Campers ', ['must to wear', 'must wear', 'must + verb, no to.'], ' a life jacket in the boat. You ', ['don’t must', 'mustn’t', 'Not allowed: mustn’t.'], ' swim at night. Every camper ', ['have to', 'has to', 'he / she / every camper: has to.'], ' wash his plate. You ', ['should to', 'should', 'should + verb, no to.'], ' bring a raincoat. Yesterday we ', ['must clean', 'had to clean', 'must has no past: had to.'], ' all the tents. You ', ['haven’t to', 'don’t have to', 'Not necessary: don’t have to.'], ' wear a uniform.'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four rules from the lake camp. Find the rule yourself.', exemplos: ['You <b>should</b> <u>wear</u> a hat.', 'Kids <b>mustn’t</b> <u>swim</u> alone.', 'She <b>has to</b> <u>get</u> up at six.', 'We <b>don’t have to</b> <u>bring</u> food.'], pergunta: 'After should, must, mustn’t and have to, the verb …', opcoes: ['is clean: no to, no -s, no -ing', 'takes to: should to wear', 'takes -s with she: she should wears'], c: 0, nao: 'Not that one. Read the four lit verbs again: is there a to? an -s? an -ing?', regra: '<b>should / must / mustn’t</b> + the clean verb: you should <b>wear</b>. With <b>have to</b>, the -s goes into has: she <b>has to get</b>. Past: <b>had to</b>. Never “musted”.', uso: { p: 'Your turn. It is your first day at a camp. Say one piece of advice, one rule, and one thing you have to do.', molde: ['You should …', 'You mustn’t …', 'I have to …'], ex: 'You should bring a jacket. You mustn’t go to the lake at night. I have to wake up at six.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

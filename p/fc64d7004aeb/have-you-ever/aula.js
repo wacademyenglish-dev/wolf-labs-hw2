@@ -18,12 +18,13 @@ var L = [
   { k: 'palavras', est: 'l', img: 'janela', rot: 'III · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'janela', rot: 'IV · The Street Interview', t: 'Toronto. Strangers answer one question: have you ever lived abroad?', p: 'Answer first. Then the video plays in five short chapters.' },
   { k: 'falas', est: 'l', extra: 1, img: 'janela', rot: 'V · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'passaporte', rot: 'VI · The Rule', t: 'The experience has no date. The detail goes to the past.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'pass', est: 'o', min: 7, img: 'passaporte', rot: 'VII · The Passport', t: 'Your teacher’s passport. Six stamps.', p: 'Tap a stamp. Ask Have you ever…? Then ask for the detail, in the past.' },
-  { k: 'nunca', est: 'o', min: 7, extra: 1, img: 'cartas', rot: 'VIII · Never Have I Ever', t: 'Spin. Say one true thing you have never done.', p: 'Your teacher says one too. Then ask why!' },
-  { k: 'rua', est: 'o', min: 7, extra: 1, img: 'cidade', rot: 'IX · On the Street', t: 'A street interview. The camera is on you.', p: 'Your teacher is the interviewer. Answer about your real life, then ask back.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mala', rot: 'X · Quick Check', t: 'Six quick sentences.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'casa', rot: 'XI · Home', t: 'The question from the street.', p: 'What does home mean to you? Write it, with one experience. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'mala', rot: 'VI · Yes, I Have', t: 'Ping-pong. Three words for each answer.', p: 'The teacher asks. Tap your true answer and say it fast. Then you ask.' },
+  { k: 'regra', est: 'f', min: 6, img: 'passaporte', rot: 'VII · The Rule', t: 'The experience has no date. The detail goes to the past.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'pass', est: 'o', min: 7, img: 'passaporte', rot: 'VIII · The Passport', t: 'Your teacher’s passport. Six stamps.', p: 'Tap a stamp. Ask Have you ever…? Then ask for the detail, in the past.' },
+  { k: 'nunca', est: 'o', min: 7, extra: 1, img: 'cartas', rot: 'IX · Never Have I Ever', t: 'Spin. Say one true thing you have never done.', p: 'Your teacher says one too. Then ask why!' },
+  { k: 'rua', est: 'o', min: 7, extra: 1, img: 'cidade', rot: 'X · On the Street', t: 'A street interview. The camera is on you.', p: 'Your teacher is the interviewer. Answer about your real life, then ask back.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'mala', rot: 'XI · Quick Check', t: 'Six quick sentences.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'casa', rot: 'XII · Home', t: 'The question from the street.', p: 'What does home mean to you? Write it, with one experience. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -250,3 +251,18 @@ TOQUES.nv = function () { S.nv.g++; S.nv.anim = 1; setTimeout(function () { S.nv
 TOQUES['ru-viu'] = function () { S.rua.viu[S.rua.n] = 1; };
 TOQUES['ru-prox'] = function () { S.rua.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Three words, fast.',
+  perguntas: [
+    { q: 'Have you ever been to Toronto?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'Now ask your teacher: Have you ever been to Canada?' },
+    { q: 'Have you ever lived in another country?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'When? Say it in the past: I lived there in 2018.' },
+    { q: 'Have you ever lost a passport?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'What happened? I lost it at the airport.' },
+    { q: 'Have your parents ever visited another country?', s: 'Yes, they <mark>have</mark>.', n: 'No, they <mark>haven’t</mark>.', mais: 'Where did they go?' },
+    { q: 'Has your best friend ever been on a plane?', s: 'Yes, he or she <mark>has</mark>.', n: 'No, he or she <mark>hasn’t</mark>.' },
+    { q: 'Have you ever missed a flight?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'When? Where were you?' }
+  ],
+  nota: 'The short answer repeats <b>have</b> or <b>haven’t</b>, and nothing else: Yes, I <b>have</b>. No, I <b>haven’t</b>. Not “Yes, I did”. Then the detail goes to the past: Yes, I have. I <b>went</b> there in 2018.',
+  uso: { p: 'Your turn. Ask your teacher three Have you ever…? questions. Your teacher answers the short way, then you ask When? or Where?', molde: ['Have you ever …?', 'When did you …?'], ex: 'Have you ever been to Japan? When did you go? Have you ever seen snow?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

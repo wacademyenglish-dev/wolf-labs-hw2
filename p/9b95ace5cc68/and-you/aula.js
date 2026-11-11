@@ -15,12 +15,13 @@ var L = [
   { k: 'capa', est: null, img: 'pingpong' },
   { k: 'silencio', est: 'o', min: 7, img: 'fria', rot: 'I · Four Seconds', t: 'Three questions. Answer, and then do nothing.', p: 'Answer out loud. Then watch the ball.' },
   { k: 'buracos', est: 'f', min: 6, img: 'mesa', rot: 'II · Four Holes', t: 'Four short conversations. The English is right, and all four died.', p: 'Read both lines out loud. Then pick what sends the ball back.' },
-  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'III · Two Ways to Send It Back', t: 'A question, or a sentence? That decides the return.', p: 'Read the cards out loud. Then fix the four traps.' },
-  { k: 'eco', est: 'o', min: 7, img: 'mesa', rot: 'IV · The Echo', t: 'The best return: their verb, back as a question.', p: 'Pick the echo. Then pick how the voice goes. Then say it.' },
-  { k: 'voltou', est: 'l', min: 7, img: 'fila', rot: 'V · Is It Back?', t: 'Four recordings. The same answer twice: once dead, once alive.', p: 'Listen to the end. Is there a question back?' },
-  { k: 'rally', est: 'o', min: 7, img: 'sala', rot: 'VI · Rally with Strangers', t: 'Seven strangers start a conversation. Keep the ball in play.', p: 'Play the stranger. Answer, and send it back. Every return is one more hit.' },
-  { k: 'fila', est: 'o', min: 7, extra: 1, img: 'fila', rot: 'VII · The Café Queue', t: 'A long queue, four topics, you and your teacher.', p: 'Your teacher opens a topic. Keep it going for four hits.' },
-  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'VIII · Your Small Talk', t: 'Write a small talk where the ball never falls.', p: 'Six lines, you and a stranger. Every answer sends the ball back. The red line watches the returns. It goes to your My notes.' }
+  { k: 'gx', est: 'o', min: 4, img: 'pingpong', rot: 'III · Ping-Pong Answers', t: 'The ball comes to you. Answer short, then send it back.', p: 'The teacher says a line and asks you. Tap your true answer and say it fast. Then send the ball back.' },
+  { k: 'regra', est: 'f', min: 6, img: 'mesa', rot: 'IV · Two Ways to Send It Back', t: 'A question, or a sentence? That decides the return.', p: 'Read the cards out loud. Then fix the four traps.' },
+  { k: 'eco', est: 'o', min: 7, img: 'mesa', rot: 'V · The Echo', t: 'The best return: their verb, back as a question.', p: 'Pick the echo. Then pick how the voice goes. Then say it.' },
+  { k: 'voltou', est: 'l', min: 7, img: 'fila', rot: 'VI · Is It Back?', t: 'Four recordings. The same answer twice: once dead, once alive.', p: 'Listen to the end. Is there a question back?' },
+  { k: 'rally', est: 'o', min: 7, img: 'sala', rot: 'VII · Rally with Strangers', t: 'Seven strangers start a conversation. Keep the ball in play.', p: 'Play the stranger. Answer, and send it back. Every return is one more hit.' },
+  { k: 'fila', est: 'o', min: 7, extra: 1, img: 'fila', rot: 'VIII · The Café Queue', t: 'A long queue, four topics, you and your teacher.', p: 'Your teacher opens a topic. Keep it going for four hits.' },
+  { k: 'fim', est: 'w', min: 6, img: 'mesa', rot: 'IX · Your Small Talk', t: 'Write a small talk where the ball never falls.', p: 'Six lines, you and a stranger. Every answer sends the ball back. The red line watches the returns. It goes to your My notes.' }
 ];
 
 /* I · quatro segundos */
@@ -205,3 +206,18 @@ TOQUES['ra-prox'] = function () { S.ra.n++; S.ra.caiu = 0; };
 TOQUES['fi-hit'] = function () { S.fi.hits++; S.fi.caiu = 0; };
 TOQUES['fi-cai'] = function () { S.fi.hits = 0; S.fi.caiu = 1; };
 TOQUES['fi-prox'] = function () { S.fi = { n: S.fi.n + 1, hits: 0, caiu: 0 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G8 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'respostaCurta', titulo: 'Short answers. Three words, then back to the table.',
+  perguntas: [
+    { q: 'I’m from Recife. Are you from here?', s: 'Yes, I <mark>am</mark>.', n: 'No, I’m <mark>not</mark>.', mais: 'Send the ball back: And you?' },
+    { q: 'I can swim. Can you swim?', s: 'Yes, I <mark>can</mark>.', n: 'No, I <mark>can’t</mark>.', mais: 'Send it back: Can you?' },
+    { q: 'I work on Saturdays. Do you work on Saturdays?', s: 'Yes, I <mark>do</mark>.', n: 'No, I <mark>don’t</mark>.', mais: 'Send it back: Do you?' },
+    { q: 'I’ve got a dog. Have you got a pet?', s: 'Yes, I <mark>have</mark>.', n: 'No, I <mark>haven’t</mark>.', mais: 'Send it back: Have you?' },
+    { q: 'I had coffee this morning. Did you have coffee?', s: 'Yes, I <mark>did</mark>.', n: 'No, I <mark>didn’t</mark>.', mais: 'Send it back: Did you?' },
+    { q: 'My sister lives in Lisbon. Does your sister live there?', s: 'Yes, she <mark>does</mark>.', n: 'No, she <mark>doesn’t</mark>.', mais: 'Send it back: Does yours?' }
+  ],
+  nota: 'The short answer, and the echo, copy the <b>helper</b> from the question: <b>Do you?</b> → I <b>do</b>. <b>Are you?</b> → I <b>am</b>. <b>Can you?</b> → I <b>can</b>. Not “Yes, I like”, and not only “Yes”.',
+  uso: { p: 'Your turn. Say one thing about you, then ask your teacher with the echo. Your teacher answers short and sends the ball back.', molde: ['I … Do you?', 'I can … Can you?'], ex: 'I live near the beach. Do you? I can cook. Can you?' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_curta', GX_EXPLICA); };

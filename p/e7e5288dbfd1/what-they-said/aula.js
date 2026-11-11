@@ -30,15 +30,16 @@
 var L = [
   { k: 'capa', est: null, img: 'telefones' },
   { k: 'abre', est: 'o', min: 7, img: 'fita', rot: 'I · It Stuck', t: 'Three questions about things people said to you.', p: 'Answer out loud. Report what they said. Nothing gets corrected yet.' },
-  { k: 'regra', est: 'f', min: 7, img: 'telefones', rot: 'II · The Meeting Notes', t: 'Priya writes down what everybody said in Monday’s meeting.', p: 'Read the notes out loud. Tap the words that report. Then finish the rule.' },
-  { k: 'corrente', est: 'o', min: 7, img: 'telefones', rot: 'III · The Chain', t: 'Six messages. Each one passes to the next person.', p: 'Read what was said. Say how the next person reports it out loud. Then tap Check: the string lights up.' },
-  { k: 'passo', est: 'o', min: 7, img: 'sala', rot: 'IV · Still True?', t: 'Reporting is not a table. One question decides how far back it goes.', p: 'Is it still true? Tap your answer. Then say the report out loud.' },
-  { k: 'pergunta', est: 'f', min: 6, img: 'fita', rot: 'V · The Question That Forgot', t: 'A reported question isn’t a question anymore.', p: 'Read each report. Find the question order and say it flat. Then tap Check.' },
-  { k: 'simnao', est: 'o', min: 7, img: 'fita', rot: 'VI · Yes or No', t: 'Questions with no question word take IF.', p: 'Build each report out loud. Then tap Check.' },
-  { k: 'would', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'VII · The Promise That Moved', t: 'Promises are about the future. Reported later, WILL becomes WOULD.', p: 'Right or wrong? The promise is old. If it’s wrong, say it right.' },
-  { k: 'recados', est: 'o', min: 7, extra: 1, img: 'escritorio', rot: 'VIII · Pass It On', t: 'Three messages came in while your colleague was out.', p: 'Read the message. Tell your teacher (the colleague) what it said, out loud. Then tap Check.' },
-  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'IX · Your Own Words', t: 'Three things somebody actually said to you.', p: 'One minute. Say the exact words first. Then report them. Count your reports.' },
-  { k: 'fim', est: 'w', min: 6, img: 'telefones', rot: 'X · Back to the Start', t: 'Your three reports from scene I come back.', p: 'Write them again: told me, asked if, said they would. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'telefones', rot: 'II · The Chain Ladder', t: 'One message, five steps back.', p: 'Read each step out loud, then go one step up. Notice what moves back. Then climb with your own message.' },
+  { k: 'regra', est: 'f', min: 7, img: 'telefones', rot: 'III · The Meeting Notes', t: 'Priya writes down what everybody said in Monday’s meeting.', p: 'Read the notes out loud. Tap the words that report. Then finish the rule.' },
+  { k: 'corrente', est: 'o', min: 7, img: 'telefones', rot: 'IV · The Chain', t: 'Six messages. Each one passes to the next person.', p: 'Read what was said. Say how the next person reports it out loud. Then tap Check: the string lights up.' },
+  { k: 'passo', est: 'o', min: 7, img: 'sala', rot: 'V · Still True?', t: 'Reporting is not a table. One question decides how far back it goes.', p: 'Is it still true? Tap your answer. Then say the report out loud.' },
+  { k: 'pergunta', est: 'f', min: 6, img: 'fita', rot: 'VI · The Question That Forgot', t: 'A reported question isn’t a question anymore.', p: 'Read each report. Find the question order and say it flat. Then tap Check.' },
+  { k: 'simnao', est: 'o', min: 7, img: 'fita', rot: 'VII · Yes or No', t: 'Questions with no question word take IF.', p: 'Build each report out loud. Then tap Check.' },
+  { k: 'would', est: 'f', min: 6, extra: 1, img: 'sala', rot: 'VIII · The Promise That Moved', t: 'Promises are about the future. Reported later, WILL becomes WOULD.', p: 'Right or wrong? The promise is old. If it’s wrong, say it right.' },
+  { k: 'recados', est: 'o', min: 7, extra: 1, img: 'escritorio', rot: 'IX · Pass It On', t: 'Three messages came in while your colleague was out.', p: 'Read the message. Tell your teacher (the colleague) what it said, out loud. Then tap Check.' },
+  { k: 'vida', est: 'o', min: 7, extra: 1, img: 'sala', rot: 'X · Your Own Words', t: 'Three things somebody actually said to you.', p: 'One minute. Say the exact words first. Then report them. Count your reports.' },
+  { k: 'fim', est: 'w', min: 6, img: 'telefones', rot: 'XI · Back to the Start', t: 'Your three reports from scene I come back.', p: 'Write them again: told me, asked if, said they would. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -213,3 +214,16 @@ R.fim = function (c) {
     + '<p class="hw"><a class="pilula" href="HW/" target="_blank" rel="noopener">Homework for the student →</a></p></div></div>';
 };
 
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One message. Climb it one step at a time.',
+  degraus: [
+    { r: 'real words', f: 'Maya: I’m late.', d: 'What she really says.' },
+    { r: 'said', f: 'Maya <b>said</b> she <b>was</b> late.', d: 'One step back: am → was. After said, no person.' },
+    { r: 'told me', f: 'Maya <b>told me</b> she <b>was</b> late.', d: 'With a person: told me.' },
+    { r: 'will', f: 'Leo said he <b>would</b> call.', d: 'will → would.' },
+    { r: 'question', f: 'Priya asked me <b>where I lived</b>.', d: 'A question goes back to sentence order. No did.' }
+  ],
+  nota: 'Go one step back: am → <b>was</b>, will → <b>would</b>, can → <b>could</b>. <b>said</b> has no person; <b>told me</b> has one. A question goes back to sentence order: asked me <b>where I lived</b>, asked me <b>if</b> I was ready.',
+  uso: { p: 'Your turn. Pass on a message: something a friend or a coworker said to you today.', molde: ['My friend said …', 'She told me …'], ex: 'My boss told me the meeting was at ten. She said she would send the notes.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

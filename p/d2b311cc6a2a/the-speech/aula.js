@@ -37,11 +37,12 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'lua', rot: 'III · Why the Moon?', t: 'A stadium in Texas, September 12, 1962. A president, a hot crowd, and one very expensive idea.', p: 'Tap your answers first. Then the speech plays in four short chapters: tap True or Lie, and ▶ to hear a line again.' },
   { k: 'falas', est: 'l', extra: 1, img: 'lua', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'sala', est: 'o', min: 7, img: 'biblioteca', rot: 'V · The Sleeping Hall', t: 'Thursday, 9 PM. The town hall is empty. Tomorrow the council votes on the library.', p: 'Read the flat line. Say it so nobody could sleep through it. Then tap Check: a right line draws its shape.' },
-  { k: 'regra', est: 'f', min: 7, img: 'podio', rot: 'VI · The Rule', t: 'Rhetoric is grammar you can hear: the same shape, again and again.', p: 'Find the broken part in each line. Say the fix. The five devices are in the corner. Then tap Check.' },
-  { k: 'foco', est: 'o', min: 7, img: 'podio', rot: 'VII · Ninety Seconds', t: 'Friday, 7 PM. The red light is on: you are live on the town radio. Six beats.', p: 'Start the clock. The teacher reads each beat. Deliver the line at once, and tap each device when you use it.' },
-  { k: 'radio', est: 'o', min: 7, extra: 1, img: 'radio', rot: 'VIII · Night Line', t: 'After the vote, the town radio calls. You are live again.', p: 'The teacher is the late-night host. Answer each question with the device in brackets.' },
-  { k: 'causa', est: 'o', min: 7, extra: 1, img: 'cortina', rot: 'IX · Your Cause', t: 'Your life, your causes. Two lines, then stand up and say them.', p: 'Tap a card. Write two lines with a device, then deliver them.' },
-  { k: 'fim', est: 'w', min: 6, img: 'biblioteca', rot: 'X · The Lamp Stays On', t: 'What would you stand at a podium to save?', p: 'Your place from scene I, in three lines: a question, an antithesis, the same words three times.' }
+  { k: 'gx', est: 'f', min: 4, img: 'podio', rot: 'VI · Three Shapes of a Line', t: 'One speech, three shapes.', p: 'Look at the three shapes. Tap the shape of each line. Then say three of your own.' },
+  { k: 'regra', est: 'f', min: 7, img: 'podio', rot: 'VII · The Rule', t: 'Rhetoric is grammar you can hear: the same shape, again and again.', p: 'Find the broken part in each line. Say the fix. The five devices are in the corner. Then tap Check.' },
+  { k: 'foco', est: 'o', min: 7, img: 'podio', rot: 'VIII · Ninety Seconds', t: 'Friday, 7 PM. The red light is on: you are live on the town radio. Six beats.', p: 'Start the clock. The teacher reads each beat. Deliver the line at once, and tap each device when you use it.' },
+  { k: 'radio', est: 'o', min: 7, extra: 1, img: 'radio', rot: 'IX · Night Line', t: 'After the vote, the town radio calls. You are live again.', p: 'The teacher is the late-night host. Answer each question with the device in brackets.' },
+  { k: 'causa', est: 'o', min: 7, extra: 1, img: 'cortina', rot: 'X · Your Cause', t: 'Your life, your causes. Two lines, then stand up and say them.', p: 'Tap a card. Write two lines with a device, then deliver them.' },
+  { k: 'fim', est: 'w', min: 6, img: 'biblioteca', rot: 'XI · The Lamp Stays On', t: 'What would you stand at a podium to save?', p: 'Your place from scene I, in three lines: a question, an antithesis, the same words three times.' }
 ];
 
 var YT = 'WZyRbnpGyzQ';
@@ -221,3 +222,25 @@ R.fim = function (c) {
 
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
 TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'Three shapes you can hear. Which one is it?',
+  usos: [
+    { t: 'THREE ITEMS', f: 'The library gives us books, quiet, and hope.', d: 'Three items, and the strongest comes last.', img: 'biblioteca' },
+    { t: 'SAME START', f: 'We read here. We learn here. We grow here.', d: 'The same first words, on purpose.', img: 'podio' },
+    { t: 'NOT X, BUT Y', f: 'This is not a garage. It is a home for stories.', d: 'One idea against the other.', img: 'sala' }
+  ],
+  pergunta: 'Which shape is it?',
+  itens: [
+    { f: 'We will not close it. We will not sell it. We will not forget it.', c: 1 },
+    { f: 'The town needs a lamp, a book, and a voice.', c: 0 },
+    { f: 'We save it not for the past, but for the future.', c: 2 },
+    { f: 'Every child deserves a chance. Every child deserves a book. Every child deserves a lamp.', c: 1 },
+    { f: 'We read, we write, we remember.', c: 0 },
+    { f: 'Not a place for cars, but a place for people.', c: 2 }
+  ],
+  nota: 'Rhetoric is grammar you can hear. <b>Three items</b>: the same grammar, the biggest last. <b>The same start</b>: repeat on purpose. <b>Not X, but Y</b>: one idea against the other.',
+  uso: { p: 'Your turn. Three lines about something you would save: one with three items, one with the same start, one with not … but …', molde: ['… , … , and …', 'We … We … We …', 'Not …, but …'], ex: 'Our park gives us shade, quiet, and friends. We play here. We rest here. We live here. It is not just grass, but our memory.' },
+  prof: 'Read the three shapes out loud with the student, with the pauses. Then the student taps a shape for each line.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

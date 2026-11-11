@@ -14,7 +14,8 @@ var L = [
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · The Report', t: 'One page from the annual report.', p: 'Read it out loud. Answer the questions. Then find how it packs so much into each sentence.' },
   { k: 'erros', est: 'f', min: 7, img: 'conversa', rot: 'III · Find the Mistakes', t: 'Something is wrong here.', p: 'Read it. Find the mistakes, say the right form, then tap.' },
   { k: 'cartao', est: 'w', min: 10, img: 'conversa', rot: 'IV · Rewrite It', t: 'From chat to report.', p: 'Rewrite the informal message as a formal paragraph: nouns, participles, formal links.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'V · Find the Rule', t: 'Four lines from the report. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 6: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -52,3 +53,9 @@ var PARES = [
   ['despite these results', 'notwithstanding these results', 'Notwithstanding these results, risks remain.'],
   ['he must be informed', 'it is vital that he be informed', 'It is vital that the council be informed.']];
 var ERROS = { tipo: 'nota', rot: 'DRAFT · ANNUAL REPORT · PAGE 4', partes: ['', ['We reduced the costs and this', 'The reduction in costs', 'Nominalisation: a noun as subject.'], ' was significant. ', ['Having review', 'Having reviewed', 'Having + participle.'], ' the budget, the board approved the plan. ', ['Though was tired', 'Though tired', 'Verbless clause: no verb.'], ', the team finished on time. ', ['In light to', 'In light of', 'in light of.'], ' these results, the trust will grow. It is vital that the council ', ['is informed', 'be informed', 'Subjunctive: be.'], ' and that funding ', ['continues', 'continue', 'Subjunctive: base form.'], '.'] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines from the annual report. Find the rule yourself.', exemplos: ['<b>The decision</b> to close the lab surprised us.', '<b>Having reviewed</b> the data, the team changed the plan.', '<b>Though exhausted</b>, the volunteers kept working.', 'It is vital that the fund <b>be</b> protected.'], pergunta: 'A formal text packs more into each sentence by …', opcoes: ['turning verbs into nouns and shortening clauses', 'using more short forms and phrasal verbs', 'repeating every subject and every verb'], c: 0, nao: 'Not that one. Read the four lit parts again: is there a full verb with a subject?', regra: 'Dense writing: <b>nominalization</b> (we decided → the decision), <b>participle clauses</b> (Having reviewed the data, …), <b>clauses without a verb</b> (Though exhausted, …), and the <b>subjunctive</b> after vital, essential, recommend: that the fund <b>be</b> protected.', uso: { p: 'Your turn. Rewrite one informal sentence for a report: We decided to stop the project because we were out of money.', molde: ['The decision to …', 'Having …, the team …'], ex: 'The decision to stop the project was due to a lack of funds. Having reviewed the budget, the board confirmed it.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

@@ -13,9 +13,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 13, kick: 'ENGLISH FOR HEALTHCA
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · An SBAR Call', t: 'A night nurse calls a doctor.', p: 'One question before, then the video, then the questions.' },
-  { k: 'ordem', est: 'f', min: 8, img: 'capa', rot: 'II · SBAR in Order', t: 'A physio calls the doctor.', p: 'Tap the eight sentences in order: S, B, A, R.' },
-  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'III · Your Handover', t: 'Two cases. Give the SBAR.', p: 'You have forty-five seconds to read the case. Then you speak for about 75 seconds.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 13: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · The Night Call', t: 'An SBAR call. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then give your own S and R.' },
+  { k: 'ordem', est: 'f', min: 8, img: 'capa', rot: 'III · SBAR in Order', t: 'A physio calls the doctor.', p: 'Tap the eight sentences in order: S, B, A, R.' },
+  { k: 'prova', est: 'o', min: 16, img: 'conversa', rot: 'IV · Your Handover', t: 'Two cases. Give the SBAR.', p: 'You have forty-five seconds to read the case. Then you speak for about 75 seconds.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 13: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'nbJPAumzJrc', titulo: 'TeamSTEPPS: SBAR in Inpatient Medical Teams', fonte: 'AHRQ (U.S. AGENCY FOR HEALTHCARE RESEARCH AND QUALITY) · 2 MIN',
@@ -55,3 +56,25 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 13: video · ordem · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de ordem.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'A call at night. Tap the lit words.',
+  falas: [
+    { q: 'Nurse', f: '[[I’m calling about]] Mr. Lee in bed 4. He has chest pain.' },
+    { q: 'Doctor', f: 'OK. What’s his history?' },
+    { q: 'Nurse', f: '[[He was admitted]] yesterday with a chest infection.' },
+    { q: 'Doctor', f: 'And how is he now?' },
+    { q: 'Nurse', f: '[[I think]] it could be his heart.' },
+    { q: 'Nurse', f: '[[Could you]] come and see him in the next fifteen minutes?' }
+  ],
+  porques: [
+    'S, Situation: who, and what is wrong, in one sentence.',
+    'B, Background: only the history that matters. He was admitted: the passive.',
+    'A, Assessment: what you think. I think it could be …',
+    'R, Recommendation: say what you need and when. Could you …?'
+  ],
+  nota: 'SBAR in four short sentences: <b>S</b> who and what, <b>B</b> the history that matters, <b>A</b> what you think, <b>R</b> what you need and when.',
+  uso: { p: 'Your turn. A patient in your job: say your S and your R.', molde: ['I’m calling about …', 'Could you … in the next … minutes?'], ex: 'I’m calling about Mrs. Diaz. She has a fever. Could you see her in the next twenty minutes?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

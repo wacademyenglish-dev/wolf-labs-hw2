@@ -36,10 +36,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'capa', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'capa', rot: 'III · The Trailer', t: 'Dark Matter. The official trailer.', p: 'Answer first. Watch the trailer. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'caixa', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'cozinha', rot: 'V · Was Going To', t: 'The plan, the moment just before, and what he knew.', p: 'Tap a sentence, then the box it belongs to. Then read each box out loud.' },
-  { k: 'vidas', est: 'o', min: 7, img: 'capa', rot: 'VI · The Other Lives', t: 'Six windows, six lives. Every right match lights one.', p: 'Match each plan to what really happened. Then say it: “He was going to …, but …”.' },
-  { k: 'planos', est: 'o', min: 7, img: 'cozinha', rot: 'VII · Your Other Lives', t: 'Three people ask about your plans. How do you answer?', p: 'Pick how you answer. Then read the talk out loud.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · Questions', t: 'Questions.', p: 'Questions.' }
+  { k: 'gx', est: 'f', min: 5, img: 'cozinha', rot: 'V · Three Ways to Look Back', t: 'One past, three kinds of future.', p: 'Look at the three moments. Tap the kind of each sentence. Then say three about your own other life.' },
+  { k: 'regra', est: 'f', min: 6, img: 'cozinha', rot: 'VI · Was Going To', t: 'The plan, the moment just before, and what he knew.', p: 'Tap a sentence, then the box it belongs to. Then read each box out loud.' },
+  { k: 'vidas', est: 'o', min: 7, img: 'capa', rot: 'VII · The Other Lives', t: 'Six windows, six lives. Every right match lights one.', p: 'Match each plan to what really happened. Then say it: “He was going to …, but …”.' },
+  { k: 'planos', est: 'o', min: 7, img: 'cozinha', rot: 'VIII · Your Other Lives', t: 'Three people ask about your plans. How do you answer?', p: 'Pick how you answer. Then read the talk out loud.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · Questions', t: 'Questions.', p: 'Questions.' }
 ];
 
 var FILME = 'Dark Matter', ANO = '2024';
@@ -257,3 +258,25 @@ var FIM = { tipo: 'perguntas', rot: 'VIII · Questions', t: 'Questions about the
   ],
   depois: 'Now ask the teacher two questions with “What were you going to…?”' };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'The future, told from the past. Three moments.',
+  usos: [
+    { t: 'THE PLAN', f: 'Jason <b>was going to</b> cook dinner.', d: 'He had a plan. Maybe it didn’t happen.' },
+    { t: 'JUST BEFORE', f: 'He <b>was about to</b> open the door.', d: 'One second more, and it happens.' },
+    { t: 'THE DEAL', f: 'He <b>was supposed to</b> be home at six.', d: 'Other people expected it. That was the agreement.' }
+  ],
+  pergunta: 'Which moment is it?',
+  itens: [
+    { f: 'Daniela said: “I’m going to write a book.” Years later: she was going to write a book.', c: 0 },
+    { f: 'Jason had the glass in his hand, and then the lights went out. He was about to drink.', c: 1 },
+    { f: 'The lab asked him to arrive at nine. He was supposed to arrive at nine.', c: 2 },
+    { f: 'Ryan had a plan to buy the lab. He was going to buy the lab.', c: 0 },
+    { f: 'The door was open, and Jason’s foot was in the air. He was about to step in.', c: 1 },
+    { f: 'His son expected him at the concert. He was supposed to be there.', c: 2 }
+  ],
+  nota: 'Always a form of <b>be</b> + the phrase + a clean verb: was going <b>to</b> go, was about <b>to</b> go, was supposed <b>to</b> go. The <b>to</b> never disappears.',
+  uso: { p: 'Your turn. Three sentences about last week: one plan, one almost, one agreement.', molde: ['I was going to …', 'I was about to …', 'I was supposed to …'], ex: 'I was going to go to the gym. I was about to leave when my boss called. I was supposed to send a report.' },
+  prof: 'Read the three moments out loud with the student. Then the student taps a moment for each sentence. The moments are the rule.' };
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

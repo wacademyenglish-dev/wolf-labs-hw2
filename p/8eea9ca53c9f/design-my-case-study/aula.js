@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 10, kick: 'ENGLISH FOR DESIGNER
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 9, img: 'conversa', rot: 'I · The Case Study Section', t: 'A design lead explains what interviewers want to see.', p: 'One question before, then the video, then the questions.' },
-  { k: 'ordem', est: 'f', min: 9, img: 'capa', rot: 'II · Put the Story in Order', t: 'A case study in six steps.', p: 'Tap the six parts in the right order.' },
-  { k: 'prova', est: 'o', min: 18, img: 'conversa', rot: 'III · Present Your Project', t: 'Two minutes, one project.', p: 'Read the card (or use your own project), prepare, start the clock, present.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'II · The Pocket Rule', t: 'Four lines. Keep them in the corner.', p: 'Read one line at a time. Then keep the rule in the corner for the next pages.' },
+  { k: 'ordem', est: 'f', min: 9, img: 'capa', rot: 'III · Put the Story in Order', t: 'A case study in six steps.', p: 'Tap the six parts in the right order.' },
+  { k: 'prova', est: 'o', min: 18, img: 'conversa', rot: 'IV · Present Your Project', t: 'Two minutes, one project.', p: 'Read the card (or use your own project), prepare, start the clock, present.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 10: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'w-PoV_sIWos', titulo: 'Presenting Portfolio Projects in a Design Interview', fonte: 'FEMKE.DESIGN · 3:56–6:50', inicio: 236, fim: 410,
@@ -55,3 +56,16 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 10: video · ordem · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de ordem.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep in your pocket.', rotulo: 'A case study, in order',
+  linhas: [
+    '<b>The problem</b>: the client needed …',
+    '<b>The goal</b>: we wanted to …',
+    '<b>My part</b>: I designed … · we tested …',
+    '<b>The result</b>: sales went up by …'
+  ],
+  uso: { p: 'Your turn. Say the first two lines of one project of yours.', molde: ['The client needed …', 'We wanted to …'], ex: 'The client needed a new website. We wanted to get more online orders.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

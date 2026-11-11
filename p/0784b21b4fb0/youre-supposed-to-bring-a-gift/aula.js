@@ -21,12 +21,13 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'festas', est: 'o', min: 7, img: 'bolo', rot: 'I · You and Parties', t: 'Before the wedding: you and big parties. This or that?', p: 'Choose a side fast. Then tell a real story. Your teacher answers too.' },
   { k: 'convite', est: 'o', min: 7, img: 'convite', rot: 'II · The Invitation', t: 'Eight gold seals, eight lines of the guest guide. What are the guests supposed to do?', p: 'Open a seal. Read the line. Say what guests have to do. Your teacher taps what they heard.' },
-  { k: 'regra', est: 'f', min: 6, img: 'envelope', rot: 'III · The Rule', t: 'A person, then BE, then supposed to, then the verb.', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
-  { k: 'mesas', est: 'o', min: 7, img: 'mesas', rot: 'IV · The Seating Chart', t: 'The reception. Eight tables, eight guests, and everybody has a question.', p: 'Your teacher is the guest. Answer at once, starting with the words under the line.' },
-  { k: 'manha', est: 'o', min: 7, img: 'jardim', rot: 'V · The Morning After', t: 'Your friend Leo calls. He has a wedding in Japan next month.', p: 'Your teacher is Leo. Tell the story and explain the etiquette. Then ask Leo one question.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'bolo', rot: 'VI · Quick Check', t: 'Six quick lines from the wedding.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'regras', est: 'o', min: 7, extra: 1, img: 'presente', rot: 'VII · Your Rules', t: 'Your life has etiquette too. What are you supposed to do?', p: 'Tap any five. Answer with supposed to, expected to, not supposed to, or was supposed to.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'VIII · Your Guest Guide', t: 'What is everybody supposed to do at a party in your country, and what does nobody really do?', p: 'Write the guest guide for a party in your city. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'convite', rot: 'III · The Ladder', t: 'One shape, five steps.', p: 'Read each step out loud, then go one step up. Notice what changes. Then climb with your own party.' },
+  { k: 'regra', est: 'f', min: 6, img: 'envelope', rot: 'IV · The Rule', t: 'A person, then BE, then supposed to, then the verb.', p: 'Say each wrong line the right way out loud. Then tap SHOW ME.' },
+  { k: 'mesas', est: 'o', min: 7, img: 'mesas', rot: 'V · The Seating Chart', t: 'The reception. Eight tables, eight guests, and everybody has a question.', p: 'Your teacher is the guest. Answer at once, starting with the words under the line.' },
+  { k: 'manha', est: 'o', min: 7, img: 'jardim', rot: 'VI · The Morning After', t: 'Your friend Leo calls. He has a wedding in Japan next month.', p: 'Your teacher is Leo. Tell the story and explain the etiquette. Then ask Leo one question.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'bolo', rot: 'VII · Quick Check', t: 'Six quick lines from the wedding.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'regras', est: 'o', min: 7, extra: 1, img: 'presente', rot: 'VIII · Your Rules', t: 'Your life has etiquette too. What are you supposed to do?', p: 'Tap any five. Answer with supposed to, expected to, not supposed to, or was supposed to.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Your Guest Guide', t: 'What is everybody supposed to do at a party in your country, and what does nobody really do?', p: 'Write the guest guide for a party in your city. It goes to your My notes.' }
 ];
 
 var FESTAS = [
@@ -197,3 +198,17 @@ TOQUES['mh-r'] = function () { S.mh.resp = 1; };
 TOQUES['mh-prox'] = function () { S.mh = { n: S.mh.n + 1, resp: 0 }; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One shape. Climb it one step at a time.',
+  degraus: [
+    { r: 'plan', f: 'bring a gift', d: 'The action, clean.' },
+    { r: 'rule', f: 'Guests are <b>supposed to</b> bring a gift.', d: 'The rule: be + supposed to + verb.' },
+    { r: 'not', f: 'Guests are <b>not supposed to</b> wear white.', d: 'The etiquette says no. It is not the same as don’t have to.' },
+    { r: '?', f: '<b>Are</b> we <b>supposed to</b> bring a gift?', d: 'Be goes first.' },
+    { r: 'past', f: 'We <b>were supposed to</b> bring a gift. We forgot.', d: 'Was or were: the plan that did not happen.' }
+  ],
+  nota: 'One shape: person + <b>be</b> + <b>supposed to</b> + verb. The rule is <b>am / is / are supposed to</b>. The plan that did not happen is <b>was / were supposed to</b>. Never “suppose to”, never “supposed bring”.',
+  uso: { p: 'Your turn. A wedding or a party in your country: two things guests are supposed to do, and one thing they are not supposed to do.', molde: ['Guests are supposed to …', 'They aren’t supposed to …'], ex: 'Guests are supposed to bring a small gift. They aren’t supposed to arrive early.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 5, kick: 'ENGLISH FOR HEALTHCAR
   nota: 'Four small tools: Could you…? · for me · just · Let me know if…' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'descobre', est: 'f', min: 10, img: 'conversa', rot: 'I · Bossy or Gentle?', t: 'Same instruction, two ways.', p: 'Compare A and B. What makes one gentler?' },
-  { k: 'transforma', est: 'o', min: 12, img: 'capa', rot: 'II · By Profession', t: 'Make it gentle.', p: 'Read the bossy instruction and the clue. Say it the gentle way.' },
-  { k: 'rapido', est: 'o', min: 7, img: 'conversa', rot: 'III · Speed Round', t: 'Sixty seconds of instructions.', p: 'Your teacher says the action. You say the gentle instruction. Fast!' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'I · The Ladder', t: 'One instruction, five steps kinder.', p: 'Read each step out loud, then go one step up. Notice what is new. Then climb with your own action.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'conversa', rot: 'II · Bossy or Gentle?', t: 'Same instruction, two ways.', p: 'Compare A and B. What makes one gentler?' },
+  { k: 'transforma', est: 'o', min: 12, img: 'capa', rot: 'III · By Profession', t: 'Make it gentle.', p: 'Read the bossy instruction and the clue. Say it the gentle way.' },
+  { k: 'rapido', est: 'o', min: 7, img: 'conversa', rot: 'IV · Speed Round', t: 'Sixty seconds of instructions.', p: 'Your teacher says the action. You say the gentle instruction. Fast!' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 5: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var DESCOBRE = {
@@ -51,3 +52,18 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 05: descobre · transforma · rapido (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'One instruction. Make it kinder, one step at a time.',
+  degraus: [
+    { r: 'order', f: 'Open your mouth.', d: 'It works, but it sounds like an order.' },
+    { r: 'ask', f: '<b>Could you</b> open your mouth?', d: 'Could you + verb: a request.' },
+    { r: 'for me', f: 'Could you open wide <b>for me</b>?', d: 'for me: kind and personal.' },
+    { r: 'just', f: 'I’m <b>just</b> going to check your teeth. Could you open wide for me?', d: 'just: small and quick. And you warn first.' },
+    { r: 'control', f: '… <b>Let me know if</b> anything hurts, and I’ll stop.', d: 'The patient has control.' }
+  ],
+  nota: 'Same action, five steps: an order, a request, <b>for me</b>, <b>just</b>, <b>Let me know if</b>. After Could you, the verb stays clean: open, not “opens”.',
+  uso: { p: 'Your turn. Pick one action from your job and climb it: Could you …? for me. Then add a warning.', molde: ['Could you … for me?', 'I’m just going to …', 'Let me know if …'], ex: 'Could you lie on your back for me? I’m just going to press on your stomach. Let me know if it hurts.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

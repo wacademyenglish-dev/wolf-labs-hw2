@@ -14,9 +14,10 @@ var REV = { tipo: 'aula', nivel: 'B1', unidade: 21, kick: 'AU PAIR · MODULE 6 �
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 7, img: 'conversa', rot: 'I · Culture Shock', t: 'What it is, and how to deal with it.', p: 'One question before, then the video, then the questions.' },
-  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'II · Kind and Firm', t: 'Too soft, too hard, or just right?', p: 'Compare A and B. Which one is kind AND firm?' },
-  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'III · The Host Dad Asks', t: 'Five requests. Answer kindly and firmly.', p: 'Play the request, start the clock, answer in about 30 seconds.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 21: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Kind and Firm, in Blocks', t: 'A kind “no” has three blocks.', p: 'Read the blocks out loud. Notice what each block does. Then build a sentence and say your own.' },
+  { k: 'descobre', est: 'f', min: 10, img: 'capa', rot: 'III · Kind and Firm', t: 'Too soft, too hard, or just right?', p: 'Compare A and B. Which one is kind AND firm?' },
+  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'IV · The Host Dad Asks', t: 'Five requests. Answer kindly and firmly.', p: 'Play the request, start the clock, answer in about 30 seconds.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 21: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'QWH0QddMqME', titulo: 'What is culture shock and how can you overcome it?', fonte: 'AU PAIR IN AMERICA · 1 MIN',
@@ -64,3 +65,18 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* AU PAIR 21: video · descobre · prova (áudio) (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'A kind and firm answer, in blocks. Each block has a job.',
+  frases: [
+    { b: [['I understand,', 'LISTEN', 'quem'], ['but', 'LINK', 'aux'], ['I’m not comfortable', 'SAY NO', 'acao'], ['with that.', 'WHAT', 'o']], d: 'First you listen. Then you say no, clearly.' },
+    { b: [['I understand,', 'LISTEN', 'quem'], ['but', 'LINK', 'aux'], ['that’s not', 'SAY NO', 'acao'], ['part of my duties.', 'WHY', 'o']], d: 'The no gets a reason.' },
+    { b: [['Could we', 'NEXT STEP', 'q'], ['write the schedule down', 'WHAT', 'o'], ['together?', 'WITH WHO', 'como']], d: 'The last block offers a next step.' }
+  ],
+  nota: 'Three jobs: <b>listen</b> (I understand), <b>say no clearly</b> (I’m not comfortable with that), <b>offer a next step</b> (Could we …?). Kind in the first block, firm in the second.',
+  monta: { p: 'The host mom asks: “Can you babysit tonight? It’s your day off.” Build your answer, then say it.', pecas: [['tonight.', 'WHEN', 'quando'], ['I’m not available', 'SAY NO', 'acao'], ['I understand,', 'LISTEN', 'quem'], ['but', 'LINK', 'aux']], ordem: [2, 3, 1, 0] },
+  uso: { p: 'Your turn. The host mom asks you to clean the whole house. Answer kindly and firmly.', molde: ['I understand, but …', 'Could we …?'], ex: 'I understand, but cleaning the house isn’t part of my duties. Could we talk to my coordinator?' },
+  prof: 'Read the blocks with the student, left to right: the first block is kind, the second is firm.' };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

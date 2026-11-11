@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 12, kick: 'ENGLISH FOR DESIGNER
   nota: 'A great pitch is a story: the client had a problem, you understood it, you made choices for a reason, and something changed.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'I · A Model Pitch', t: 'An interior designer presents a project to a new client.', p: 'Read it out loud like a presenter. Then answer the questions.' },
-  { k: 'cadeira', est: 'o', min: 14, img: 'capa', rot: 'II · Step by Step With the Client', t: 'Your teacher is the client. You present your project.', p: 'Follow the steps. Your teacher reacts and asks questions as the client.' },
-  { k: 'prova', est: 'o', min: 18, img: 'conversa', rot: 'III · Your Final Pitch', t: 'Three minutes. Then the questions.', p: 'Prepare, start the clock, pitch your project from brief to delivery.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 3, img: 'capa', rot: 'I · Mistake Hunter', t: 'Five pitch sentences. Each one has a wrong word.', p: 'Tap the wrong word. Say the sentence right. Then check.' },
+  { k: 'leitura', est: 'l', min: 10, img: 'conversa', rot: 'II · A Model Pitch', t: 'An interior designer presents a project to a new client.', p: 'Read it out loud like a presenter. Then answer the questions.' },
+  { k: 'cadeira', est: 'o', min: 14, img: 'capa', rot: 'III · Step by Step With the Client', t: 'Your teacher is the client. You present your project.', p: 'Follow the steps. Your teacher reacts and asks questions as the client.' },
+  { k: 'prova', est: 'o', min: 18, img: 'conversa', rot: 'IV · Your Final Pitch', t: 'Three minutes. Then the questions.', p: 'Prepare, start the clock, pitch your project from brief to delivery.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 12: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var LEITURA = { rot: 'PITCH · A HOME OFFICE FOR A NIGHT NURSE (FICTIONAL)', tipo: 'fala',
@@ -55,3 +56,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 12: leitura · cadeira · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de leitura.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. Five sentences from a pitch.',
+  toque: 'People who speak Portuguese often say these. Tap the wrong word before you see the answer.',
+  itens: [
+    { f: 'Last week we [[have chosen]] a new font.', r: 'Last week we <b>chose</b> a new font.', d: 'A finished time (last week): the past simple.' },
+    { f: 'The client [[was needing]] a new logo.', r: 'The client <b>needed</b> a new logo.', d: 'need does not like -ing: needed.' },
+    { f: 'We changed the color [[for]] the button is easy to see.', r: 'We changed the color <b>so that</b> the button is easy to see.', d: 'so that + a full sentence.' },
+    { f: 'It [[make]] the page cleaner.', r: 'It <b>makes</b> the page cleaner.', d: 'it: the verb gets an -s.' },
+    { f: 'The sales increased [[of]] 20 percent.', r: 'The sales increased <b>by</b> 20 percent.', d: 'increase by + a number.' }
+  ],
+  nota: 'A pitch is a story in the past: <b>chose</b>, <b>needed</b>, <b>increased by</b>. For the reason: <b>so that</b> + a sentence. And for it, the verb gets an <b>-s</b>.',
+  uso: { p: 'Your turn. Tell the first three sentences of your pitch: the client, the problem, what you chose.', molde: ['The client needed …', 'The problem was …', 'We chose … because …'], ex: 'The client needed a new menu. The problem was that people didn’t read it. We chose big photos because they are easy to see.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

@@ -16,13 +16,14 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'conversa', est: 'o', min: 5, img: 'conversa', rot: 'I · Your Inbox', t: 'How many e-mails do you get every day?', p: 'Answer, then ask your teacher: “And you?”' },
   { k: 'dialogo', est: 'l', min: 7, img: 'mesa', rot: 'II · “Forty E-mails, Sara!”', t: 'Monday, 8 a.m. Leo and Sara look at his inbox.', p: 'One question before. Listen. Then the questions.' },
-  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'III · Need To, Not “Need Send”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
-  { k: 'ordem', est: 'f', min: 7, img: 'mesa', rot: 'IV · Six E-mails in Order', t: 'Six e-mails. Which one first?', p: 'Tap them from most urgent to least urgent. Then say your plan out loud.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'conversa', rot: 'V · The Debate: Phone or E-mail?', t: 'Three small debates for busy sellers.', p: 'Choose a side and say why. Your teacher takes the other side.' },
-  { k: 'leitura', est: 'l', min: 7, img: 'mesa', rot: 'VI · Easy Reader: We Have to Talk', t: 'Leo’s First Big Client · Chapter 5.', p: 'Read it out loud. Then answer the questions.' },
-  { k: 'erros', est: 'f', min: 6, img: 'capa', rot: 'VII · Fix the Reply', t: 'Leo’s reply has four mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
-  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'VIII · Your Two Replies', t: 'Two real e-mails: one urgent, one that can wait.', p: 'Write two short replies. Then read them to your teacher.' },
-  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'IX · I Can', t: 'Lesson 23: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mesa', rot: 'III · Have To or Not?', t: 'Two answers about the same inbox.', p: 'Read A and B out loud. Say what is different, then check. Then choose for four new moments.' },
+  { k: 'descobre', est: 'f', min: 8, img: 'capa', rot: 'IV · Need To, Not “Need Send”', t: 'Two sentences. Which one is English?', p: 'Compare. Say the difference. Then see the rule.' },
+  { k: 'ordem', est: 'f', min: 7, img: 'mesa', rot: 'V · Six E-mails in Order', t: 'Six e-mails. Which one first?', p: 'Tap them from most urgent to least urgent. Then say your plan out loud.' },
+  { k: 'escolha', est: 'o', extra: 1, min: 6, img: 'conversa', rot: 'VI · The Debate: Phone or E-mail?', t: 'Three small debates for busy sellers.', p: 'Choose a side and say why. Your teacher takes the other side.' },
+  { k: 'leitura', est: 'l', min: 7, img: 'mesa', rot: 'VII · Easy Reader: We Have to Talk', t: 'Leo’s First Big Client · Chapter 5.', p: 'Read it out loud. Then answer the questions.' },
+  { k: 'erros', est: 'f', min: 6, img: 'capa', rot: 'VIII · Fix the Reply', t: 'Leo’s reply has four mistakes.', p: 'Find a mistake. Say the right form. Then tap it.' },
+  { k: 'cartao', est: 'w', min: 8, img: 'capa', rot: 'IX · Your Two Replies', t: 'Two real e-mails: one urgent, one that can wait.', p: 'Write two short replies. Then read them to your teacher.' },
+  { k: 'pode', est: 'f', min: 3, img: 'capa', rot: 'X · I Can', t: 'Lesson 23: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var CONVERSA = [
@@ -112,3 +113,21 @@ var PODE = [
   'I can put e-mails in order: what is urgent, what can wait.',
   'I can write two short replies to real e-mails.'
 ];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G5 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'contraste', titulo: 'Have to or don’t have to? Two answers about the inbox.',
+  a: { t: 'Necessary', falas: [['Sara', 'Do you answer the CFO today?'], ['Leo', 'Yes. I <mark>have to</mark> answer him today.']], d: '<b>have to</b> or <b>need to</b> + verb: it is necessary.' },
+  b: { t: 'Not necessary', falas: [['Sara', 'Do you read the newsletter today?'], ['Leo', 'No. I <mark>don’t have to</mark>. It can wait.']], d: '<b>don’t have to</b> + verb: it is not necessary.' },
+  pergunta: 'Same inbox, two answers. What is different?',
+  pergunta2: 'Now you. Which one fits?',
+  itens: [
+    { p: 'The CFO needs the price today. Leo says:', o: ['I have to send it today.', 'I don’t have to send it today.'], c: 0, d: 'It is necessary.' },
+    { p: 'The newsletter can wait until next week. Leo says:', o: ['I have to read it today.', 'I don’t have to read it today.'], c: 1, d: 'It can wait: not necessary.' },
+    { p: 'The boss wants the report by Friday. Leo says about Sara:', o: ['She doesn’t have to write it.', 'She has to write it.'], c: 1, d: 'She: has to.' },
+    { p: 'The meeting is optional. Leo says:', o: ['I don’t have to go.', 'I have to go.'], c: 0, d: 'Optional: not necessary.' }
+  ],
+  nota: 'One test: is it necessary? <b>have to</b> or <b>need to</b> + verb. Not necessary? <b>don’t have to</b>. With he, she, it: <b>has to</b>, <b>doesn’t have to</b>.',
+  uso: { p: 'Your turn. About your Monday: one thing you have to do, and one thing you don’t have to do.', molde: ['I have to …', 'I don’t have to …'], ex: 'I have to answer two e-mails. I don’t have to go to the office.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_isso', GX_EXPLICA); };

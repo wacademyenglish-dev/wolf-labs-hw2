@@ -14,8 +14,9 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 9, img: 'conversa', rot: 'I · Nina’s Instructions', t: 'A note on the kitchen table.', p: 'Read the instructions out loud with your teacher. Then look closer.' },
   { k: 'transforma', est: 'f', min: 9, img: 'capa', rot: 'II · Problem → Instruction', t: 'A problem, and what to do.', p: 'Read the problem and the clue. Say an if sentence.' },
-  { k: 'cartao', est: 'w', min: 9, img: 'conversa', rot: 'III · Your Instructions', t: 'A friend is staying in YOUR home.', p: 'Write four if sentences for your friend.' },
-  { k: 'escolha', est: 'o', min: 6, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with if.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'III · If, Then', t: 'Five notes Nina could write.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'cartao', est: 'w', min: 9, img: 'conversa', rot: 'IV · Your Instructions', t: 'A friend is staying in YOUR home.', p: 'Write four if sentences for your friend.' },
+  { k: 'escolha', est: 'o', min: 6, img: 'capa', rot: 'V · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with if.' }
 ];
 var PORTAS = [];
 
@@ -54,3 +55,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* A2 · If It Rains, Take This: leitura · transforma · cartao · escolha */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de cartao.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'Right, not this. Tap the right note.', pares: [{ c: 'If it rains, take the umbrella.', x: 'If it will rain, take the umbrella.', d: 'After if: the present. No <b>will</b>.' }, { c: 'If Biscuit barks, don’t worry.', x: 'If Biscuit barks, no worry.', d: 'For no, use <b>don’t</b> + verb.' }, { c: 'If the washer is noisy, turn it off.', x: 'If the washer is noisy, to turn it off.', d: 'An order: the verb first, no to.' }, { c: 'If you go out, close the window.', x: 'If you go out close the window.', d: 'When if comes first, put a <b>comma</b>.' }, { c: 'Call me if you need help.', x: 'Call me if you will need help.', d: 'if + present, even when we talk about later.' }], nota: 'After <b>if</b>, use the present, never will: If it <b>rains</b>. Then the order: <b>take</b> the umbrella. If the if part comes first, add a comma.', uso: { p: 'Your turn. A friend will take care of your home. Write two notes with If.', molde: ['If … , …', 'If … , don’t …'], ex: 'If the doorbell rings, don’t open the door. If the cat is hungry, give her the blue bowl.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

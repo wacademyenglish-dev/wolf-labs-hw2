@@ -26,12 +26,13 @@ var L = [
   { k: 'video', est: 'l', min: 10, img: 'genkan', rot: 'III · An Insider’s Guide', t: 'A short guide to good manners in Japan.', p: 'The video is locked. Answer first, then it plays in four short chapters. Then True or Lie.' },
   { k: 'falas', est: 'l', extra: 1, img: 'genkan', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
   { k: 'diario', est: 'o', min: 7, img: 'diario', rot: 'V · Lia’s Diary', t: 'Four pages, four cities, four rules.', p: 'Pick a page. Read it out loud, answer, then say the rule for the book.' },
-  { k: 'regra', est: 'f', min: 6, img: 'genkan', rot: 'VI · Three Signs', t: 'MUST is a rule. MUSTN’T is a wall. DON’T HAVE TO is an open door.', p: 'Read the three signs out loud. Then fix the four mistakes.' },
-  { k: 'passaporte', est: 'o', min: 7, img: 'carimbo', rot: 'VII · Passport Control', t: 'Five signs on the way. Say the rule fast, and get a stamp.', p: 'Your teacher reads the sign. Say the rule at once: must, mustn’t or don’t have to.' },
-  { k: 'casa', est: 'o', min: 7, extra: 1, img: 'casa', rot: 'VIII · Your House Rules', t: 'Your home has a rule book too.', p: 'Pick five cards. Answer with must, mustn’t or don’t have to. Your teacher tells a rule from their home too.' },
-  { k: 'yuki', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'IX · The Houseguest', t: 'Yuki is coming to stay with you for a week. She has questions.', p: 'Your teacher is Yuki. Answer with the real rules of your home and city.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'diario', rot: 'X · Quick Check', t: 'Five quick lines from the trip.', p: 'Say the whole sentence out loud. Then tap the word.' },
-  { k: 'fim', est: 'w', min: 6, img: 'aviao', rot: 'XI · The Flight Home', t: 'The trip is over. The rule book is full.', p: 'Write the rules of your home for a guest: two musts, two mustn’ts, two don’t-have-tos.' }
+  { k: 'gx', est: 'f', min: 4, img: 'carimbo', rot: 'VI · At the Border', t: 'Lia and the officer. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then tell a visitor your rules.' },
+  { k: 'regra', est: 'f', min: 6, img: 'genkan', rot: 'VII · Three Signs', t: 'MUST is a rule. MUSTN’T is a wall. DON’T HAVE TO is an open door.', p: 'Read the three signs out loud. Then fix the four mistakes.' },
+  { k: 'passaporte', est: 'o', min: 7, img: 'carimbo', rot: 'VIII · Passport Control', t: 'Five signs on the way. Say the rule fast, and get a stamp.', p: 'Your teacher reads the sign. Say the rule at once: must, mustn’t or don’t have to.' },
+  { k: 'casa', est: 'o', min: 7, extra: 1, img: 'casa', rot: 'IX · Your House Rules', t: 'Your home has a rule book too.', p: 'Pick five cards. Answer with must, mustn’t or don’t have to. Your teacher tells a rule from their home too.' },
+  { k: 'yuki', est: 'o', min: 7, extra: 1, img: 'quarto', rot: 'X · The Houseguest', t: 'Yuki is coming to stay with you for a week. She has questions.', p: 'Your teacher is Yuki. Answer with the real rules of your home and city.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'diario', rot: 'XI · Quick Check', t: 'Five quick lines from the trip.', p: 'Say the whole sentence out loud. Then tap the word.' },
+  { k: 'fim', est: 'w', min: 6, img: 'aviao', rot: 'XII · The Flight Home', t: 'The trip is over. The rule book is full.', p: 'Write the rules of your home for a guest: two musts, two mustn’ts, two don’t-have-tos.' }
 ];
 
 var ABRE = [
@@ -289,3 +290,27 @@ TOQUES['pp-prox'] = function () { S.pp = { n: S.pp.n + 1, esc: '' }; };
 TOQUES['yk-prox'] = function () { S.yk.n++; };
 TOQUES.qz = function (b, n) { S.qz.esc = n; };
 TOQUES['qz-prox'] = function () { S.qz = { n: S.qz.n + 1, esc: -1 }; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'Passport control, Tokyo. Tap the lit words.',
+  falas: [
+    { q: 'Officer', f: 'Welcome to Japan. [[You must]] show your passport.' },
+    { q: 'Lia', f: 'Here it is. Can I take a photo of the sign?' },
+    { q: 'Officer', f: 'Sure. But [[you mustn’t]] take photos of the officers.' },
+    { q: 'Lia', f: 'OK. [[Do I have to]] pay for the stamp?' },
+    { q: 'Officer', f: 'No, [[you don’t have to]] pay. It’s free.' },
+    { q: 'Lia', f: 'Great. Yesterday, at the other airport, [[I had to]] wait two hours.' },
+    { q: 'Officer', f: 'Today is quick. [[You don’t have to]] wait.' }
+  ],
+  porques: [
+    'A rule from the officer: must + the clean verb. No to: you must show.',
+    'A wall: mustn’t means it is not allowed.',
+    'A question about a rule: Do I have to …? Not Must I …?',
+    'An open door: don’t have to means it is not necessary. The stamp is free.',
+    'The past of must is had to: I had to wait. Never I must wait yesterday.',
+    'Not necessary again: today there is no line.'
+  ],
+  nota: 'Three signs: <b>must</b> is a rule, <b>mustn’t</b> is a wall (not allowed), <b>don’t have to</b> is an open door (not necessary). For a question and for the past: <b>Do I have to …?</b> and <b>had to</b>.',
+  uso: { p: 'Your turn. You are at passport control in your own country. Tell a visitor one thing they must do, one thing they mustn’t do, and one thing they don’t have to do.', molde: ['You must …', 'You mustn’t …', 'You don’t have to …'], ex: 'You must show your ID. You mustn’t take photos here. You don’t have to pay for the bus.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

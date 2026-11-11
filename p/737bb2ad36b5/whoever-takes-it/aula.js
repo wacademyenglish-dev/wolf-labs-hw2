@@ -38,10 +38,11 @@ var L = [
   { k: 'palavras', est: 'l', img: 'caverna', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'caverna', rot: 'III · The Prologue', t: 'The Lord of the Rings. How it began.', p: 'Spin the wheel. Watch the prologue. Then two short tasks: tap ▶ to hear any moment again.' },
   { k: 'falas', est: 'l', img: 'rio', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'regra', est: 'f', min: 6, img: 'caverna', rot: 'V · Whoever Takes It', t: 'Whoever, whatever, wherever. What do they mean?', p: 'Match each word to its meaning. When all five are right, the rule appears.' },
-  { k: 'mapa', est: 'o', min: 7, img: 'capa', rot: 'VI · The Bearers', t: 'Six hands, one Ring. Every right answer carries it one stop.', p: 'Is the sentence true or a lie? If it is a lie, say the true one out loud.' },
-  { k: 'quemquer', est: 'o', min: 7, img: 'rio', rot: 'VII · Whatever You Say', t: 'Six questions with -ever.', p: 'Open a card, then start the clock and answer for 30 seconds without stopping.' },
-  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'VIII · The Interview', t: 'The interview.', p: 'Interview.' }
+  { k: 'gx', est: 'f', min: 4, img: 'caverna', rot: 'V · Find the Rule', t: 'Four sentences about the Ring. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'regra', est: 'f', min: 6, img: 'caverna', rot: 'VI · Whoever Takes It', t: 'Whoever, whatever, wherever. What do they mean?', p: 'Match each word to its meaning. When all five are right, the rule appears.' },
+  { k: 'mapa', est: 'o', min: 7, img: 'capa', rot: 'VII · The Bearers', t: 'Six hands, one Ring. Every right answer carries it one stop.', p: 'Is the sentence true or a lie? If it is a lie, say the true one out loud.' },
+  { k: 'quemquer', est: 'o', min: 7, img: 'rio', rot: 'VIII · Whatever You Say', t: 'Six questions with -ever.', p: 'Open a card, then start the clock and answer for 30 seconds without stopping.' },
+  { k: 'fim', est: 'o', min: 6, img: 'capa', rot: 'IX · The Interview', t: 'The interview.', p: 'Interview.' }
 ];
 
 var FILME = 'The Lord of the Rings', ANO = '2001';
@@ -242,3 +243,19 @@ var FIM = { tipo: 'entrevista', rot: 'VIII · The Interview', t: 'Interview Bilb
     { q: 'Whatever happens, will you miss it?', ex: 'Whatever happens, yes. And that is the problem.' }
   ] };
 /*FIM@@*/
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four sentences about the Ring. Find the rule yourself.',
+  exemplos: [
+    'The Ring changes <b>whoever</b> carries it.',
+    'Sam follows Frodo <b>wherever</b> he goes.',
+    '<b>Whatever</b> you choose, the road will be hard.',
+    '<b>Whenever</b> the Ring is near, Frodo feels afraid.'
+  ],
+  pergunta: 'A word with -ever means …',
+  opcoes: ['it does not matter which person, thing, place or time', 'one special person, thing, place or time', 'a question that is not finished'], c: 0,
+  nao: 'Not that one. Read the four lit words again: does the sentence choose one person, or any person?',
+  regra: '<b>who / what / where / when + -ever</b> = it does not matter which. Whoever carries it is changed. After whoever, the verb agrees: whoever <b>takes</b> it.',
+  uso: { p: 'Your turn. Two sentences with -ever about your life.', molde: ['I’ll help whoever …', 'I eat whatever …'], ex: 'I’ll help whoever asks me. I eat whatever my mother cooks.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_ever', GX_EXPLICA); };

@@ -12,9 +12,10 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 4, kick: 'ENGLISH FOR DESIGNERS
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 8, img: 'conversa', rot: 'I · Before the Meeting', t: 'How to prepare and how to answer feedback.', p: 'One question before, then the video, then the questions.' },
-  { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'II · A Walkthrough', t: 'A UX designer presents three decisions.', p: 'Read it out loud like a presenter. Then answer the questions.' },
-  { k: 'transforma', est: 'f', min: 12, img: 'conversa', rot: 'III · Decision + Reason', t: 'Say what you did and why.', p: 'Read the decision and the clue. Say one full sentence with the reason.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'II · Right, Not This', t: 'Six decisions with a reason. One is right.', p: 'Read both out loud. Tap the right one. The other one gets crossed out.' },
+  { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'III · A Walkthrough', t: 'A UX designer presents three decisions.', p: 'Read it out loud like a presenter. Then answer the questions.' },
+  { k: 'transforma', est: 'f', min: 12, img: 'conversa', rot: 'IV · Decision + Reason', t: 'Say what you did and why.', p: 'Read the decision and the clue. Say one full sentence with the reason.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: 'dNHTZLW58jk', titulo: 'How to Present Design Decisions to Stakeholders', fonte: 'SYNTHESIS · 3:41–5:43', inicio: 221, fim: 343,
@@ -55,3 +56,19 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 04: video · leitura · transforma (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G3 · uma cena curta nova (k: gx) antes de leitura.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'certoErrado', titulo: 'A decision and its reason. Tap the right one.',
+  pares: [
+    { c: 'We made the font bigger so that older users can read it.', x: 'We made the font bigger for older users to can read it.', d: 'so that + a full sentence: users can read.' },
+    { c: 'We chose dark blue because it feels trustworthy.', x: 'We chose dark blue because of it feels trustworthy.', d: 'because + a sentence. because of + a noun.' },
+    { c: 'We used a sliding door to save space.', x: 'We used a sliding door for save space.', d: 'to + verb gives the purpose.' },
+    { c: 'We removed two fields. The idea is to make signing up faster.', x: 'We removed two fields. The idea is make signing up faster.', d: 'The idea is to + verb.' },
+    { c: 'We left a lot of empty space so that the date stands out.', x: 'We left a lot of empty space so that the date stand out.', d: 'The date is it: stands.' },
+    { c: 'Can you help me understand what doesn’t work?', x: 'Can you help me understand what doesn’t works?', d: 'After doesn’t, the verb is clean.' }
+  ],
+  nota: 'Every decision gets a reason. <b>so that</b> + a full sentence. <b>to</b> + verb for the purpose. <b>because</b> + a sentence. After <b>The idea is</b> comes <b>to</b> + verb.',
+  uso: { p: 'Your turn. One decision from a project of yours, and the reason.', molde: ['We chose … because …', 'We used … to …', 'We made … so that …'], ex: 'We chose a large photo because it shows the product. We made the button bigger so that people can find it.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_certo', GX_EXPLICA); };

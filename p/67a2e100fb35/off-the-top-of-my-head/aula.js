@@ -38,11 +38,12 @@ var L = [
   { k: 'palavras', est: 'l', img: 'palco', rot: 'II · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
   { k: 'video', est: 'l', min: 10, img: 'palco', rot: 'III · The Hunt', t: 'A veteran teacher’s talk: every kid needs a champion. Hunt the expressions.', p: 'Guess first. Then four chapters: read the task, play, tap your answers. Tap ▶ to hear a moment again.' },
   { k: 'falas', est: 'l', extra: 1, img: 'palco', rot: 'IV · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'parede', est: 'o', min: 7, img: 'clube', rot: 'V · The Wall', t: 'The club’s famous wall: six idioms, painted literally.', p: 'Describe the painting and guess the idiom. Read what happened. Say it with the idiom, then tap Check.' },
-  { k: 'regra', est: 'f', min: 7, img: 'palco', rot: 'VI · The Host’s Notes', t: 'Friday night. The host writes down the best moments.', p: 'Read the notes out loud. Tap every idiom. Then finish the rule.' },
-  { k: 'mic', est: 'o', min: 7, img: 'palco', rot: 'VII · The Open Mic', t: 'Six stories at the mic. Each one ends with a broken idiom.', p: 'Tell each story out loud with the right idiom. Then tap Check. Then tell one from your own life.' },
-  { k: 'roda', est: 'o', min: 7, img: 'clube', rot: 'VIII · Off the Top of Your Head', t: 'Your life, with no time to prepare.', p: 'Tap a card. Answer fast, with the idiom on it, about your real life.' },
-  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'IX · Last Call', t: 'Do idioms make you sound more natural, or can you overdo it?', p: 'A short story from your week with two idioms from tonight. It goes to your My notes.' }
+  { k: 'parede', est: 'o', extra: 1, min: 7, img: 'clube', rot: 'V · The Wall', t: 'The club’s famous wall: six idioms, painted literally.', p: 'Describe the painting and guess the idiom. Read what happened. Say it with the idiom, then tap Check.' },
+  { k: 'gx', est: 'o', min: 4, img: 'i-bolo', rot: 'VI · Look First', t: 'Four pictures from the club wall.', p: 'Look at the picture. Guess the idiom. Then tap to see it, and say it.' },
+  { k: 'regra', est: 'f', min: 7, img: 'palco', rot: 'VII · The Host’s Notes', t: 'Friday night. The host writes down the best moments.', p: 'Read the notes out loud. Tap every idiom. Then finish the rule.' },
+  { k: 'mic', est: 'o', min: 7, img: 'palco', rot: 'VIII · The Open Mic', t: 'Six stories at the mic. Each one ends with a broken idiom.', p: 'Tell each story out loud with the right idiom. Then tap Check. Then tell one from your own life.' },
+  { k: 'roda', est: 'o', min: 7, img: 'clube', rot: 'IX · Off the Top of Your Head', t: 'Your life, with no time to prepare.', p: 'Tap a card. Answer fast, with the idiom on it, about your real life.' },
+  { k: 'fim', est: 'w', min: 6, img: 'capa', rot: 'X · Last Call', t: 'Do idioms make you sound more natural, or can you overdo it?', p: 'A short story from your week with two idioms from tonight. It goes to your My notes.' }
 ];
 
 var YT = 'SFnMTHhKdkw';
@@ -218,3 +219,16 @@ R.fim = function (c) {
 
 TOQUES['vd-p'] = function (b, n) { S.video.p = n; };
 TOQUES['vd-c'] = function (b, n) { S.video.viu[S.video.cap] = 1; S.video.cap = n; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G12 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'fotoPrimeiro', titulo: 'Look first. What do they say?',
+  cenas: [
+    { img: 'i-feijao', antes: 'The host looks at a jar of beans on the stage. Somebody just told a secret.', frase: '“Who told her?” “Ben <mark>spilled the beans</mark>.”' },
+    { img: 'i-elefante', antes: 'A huge elephant sits in the middle of the room. Nobody says a word.', frase: '“Everyone knows, but nobody talks. It’s <mark>the elephant in the room</mark>.”' },
+    { img: 'i-bolo', antes: 'A small, easy-looking cake. It takes two minutes.', frase: '“How was the test?” “<mark>A piece of cake</mark>!”' },
+    { img: 'i-passaros', antes: 'One stone, two birds.', frase: '“I’ll <mark>kill two birds with one stone</mark>: shop and see Ana.”' }
+  ],
+  nota: 'An idiom is fixed: every word stays. Only the verb or the pronoun changes: she <b>spilled</b> the beans, he <b>spills</b> the beans. Never translate word for word.',
+  uso: { p: 'Your turn. Say one sentence with an idiom from the wall. It can be about a friend, your job, or a test.', molde: ['… spilled the beans.', 'It was a piece of cake.'], ex: 'My brother spilled the beans about the surprise party.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_foto', GX_EXPLICA); };

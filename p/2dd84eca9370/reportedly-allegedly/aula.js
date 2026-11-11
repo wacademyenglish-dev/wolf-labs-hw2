@@ -15,10 +15,11 @@ var REV = { tipo: 'aula', nivel: 'C1', unidade: 8, titulo: ['Reportedly,', 'Alle
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'leitura', est: 'l', min: 10, img: 'capa', rot: 'I · Breaking News', t: 'The statue has gone.', p: 'Read the news out loud, like a radio presenter. Then look closer.' },
-  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'II · How Sure Is the Reporter?', t: 'Fact, claim, or rumour?', p: 'Compare A and B. Which one could get the reporter in trouble?' },
-  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'III · Protect Yourself', t: 'Fact → careful news.', p: 'Read the sentence. Use the clue. Say it like a careful journalist.' },
-  { k: 'missao', est: 'o', min: 14, img: 'capa', rot: 'IV · Check the Sources', t: 'Three sources. One strange story.', p: 'Ask each source five questions. Your teacher is the source. Then write the news line.' },
-  { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'V · What Have You Heard?', t: 'News, rumours and gossip.', p: 'Answer with apparently, supposedly, according to… Then ask back.' }
+  { k: 'gx', est: 'f', min: 5, img: 'conversa', rot: 'II · Three Distances', t: 'One story, three distances.', p: 'Look at the three words. Tap the word each sentence needs. Then say three of your own.' },
+  { k: 'descobre', est: 'f', min: 9, img: 'conversa', rot: 'III · How Sure Is the Reporter?', t: 'Fact, claim, or rumour?', p: 'Compare A and B. Which one could get the reporter in trouble?' },
+  { k: 'transforma', est: 'f', min: 7, img: 'capa', rot: 'IV · Protect Yourself', t: 'Fact → careful news.', p: 'Read the sentence. Use the clue. Say it like a careful journalist.' },
+  { k: 'missao', est: 'o', min: 14, img: 'capa', rot: 'V · Check the Sources', t: 'Three sources. One strange story.', p: 'Ask each source five questions. Your teacher is the source. Then write the news line.' },
+  { k: 'conversa', est: 'o', min: 6, img: 'conversa', rot: 'VI · What Have You Heard?', t: 'News, rumours and gossip.', p: 'Answer with apparently, supposedly, according to… Then ask back.' }
 ];
 var PORTAS = [];
 
@@ -82,3 +83,9 @@ var PODE = [];
 
 /* MECÂNICAS VARIADAS */
 /* C1 · Reportedly: leitura · descobre · transforma · missao · conversa */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G4 · uma cena curta nova (k: gx) antes de descobre.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'tresUsos', titulo: 'The statue is gone. How close are you to the facts?', usos: [{ t: 'REPORTEDLY', f: 'The statue has reportedly disappeared from the square.', d: 'Many sources say it. You pass it on, with a little distance.' }, { t: 'ALLEGEDLY', f: 'A man has allegedly taken the statue at night.', d: 'A claim against someone, not proven. Use it for accusations only.' }, { t: 'SUPPOSEDLY', f: 'The guard was supposedly asleep.', d: 'It is said, but you doubt it.' }], pergunta: 'Which word fits?', itens: [{ f: 'Police say a woman took it, but nothing is proven: she ___ stole it.', c: 1 }, { f: 'Five newspapers say the mayor will resign: he will ___ leave next week.', c: 0 }, { f: 'The cameras were ___ working, but they filmed nothing.', c: 2 }, { f: 'The thief ___ used a blue van.', c: 1 }, { f: 'The statue ___ weighs two tons, according to the museum.', c: 0 }, { f: 'The alarm was ___ on, yet nobody heard it.', c: 2 }], nota: '<b>Reportedly</b> = sources say so. <b>Allegedly</b> = an accusation without proof (never for good news). <b>Supposedly</b> = it is said, and I doubt it. <b>According to</b> + a source, not me: <b>in my opinion</b>.', uso: { p: 'Your turn. You are a journalist. Say three lines about a news story: one from a source, one accusation, one doubt.', molde: ['According to …, …', '… allegedly …', '… supposedly …'], ex: 'According to the mayor, the park will open in May. The builder allegedly used bad cement. The inspector was supposedly on holiday.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_tres', GX_EXPLICA); };

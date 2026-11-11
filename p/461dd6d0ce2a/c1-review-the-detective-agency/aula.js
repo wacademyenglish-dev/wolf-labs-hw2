@@ -13,7 +13,8 @@ var L = [
   { k: 'dado', est: 'f', min: 8, img: 'conversa', rot: 'I · The Die', t: 'Roll the die. The number chooses.', p: 'Your teacher rolls. Do the challenge out loud, from memory.' },
   { k: 'tabuleiro', est: 'o', min: 16, img: 'capa', rot: 'II · The Case Board', t: 'Twelve clues. Roll and deduce.', p: 'Your teacher rolls the die. Read the clue and deduce, out loud, with the right modal.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'conversa', rot: 'III · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'IV · Find the Rule', t: 'Four lines from the case. You find the rule.', p: 'Read the four sentences out loud. Look at the lit words. Choose the rule. Then say your own.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 2: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -54,3 +55,9 @@ var CADEIRA = { itens: [
   { alvo: 'Ask me what is bound to happen in my city this year.', dica: 'What’s bound to happen in your city this year?', resp: 'Rent is bound to go up again.' },
   { alvo: 'Ask me about a typical habit of someone in my family.', dica: 'What would your grandparents typically do?', resp: 'My grandmother would sing while she cooked.' },
   { alvo: 'It’s 8 PM. Ask me where my partner will be now.', dica: 'Where will your partner be now?', resp: 'He’ll be at the gym. He always is on Tuesdays.' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G10 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'achaRegra', titulo: 'Four lines from the Vane case. Find the rule yourself.', exemplos: ['She <b>needn’t have called</b> us: the necklace was in her bag.', 'We <b>didn’t need to</b> go: the case was solved.', 'The necklace <b>is bound to</b> turn up.', 'That’<b>ll be</b> the thief at the door.'], pergunta: 'Needn’t have + participle means …', opcoes: ['it happened, but it was not necessary', 'it did not happen, and it was not necessary', 'it was forbidden and it did not happen'], c: 0, nao: 'Not that one. Read the first line again: did she call? was it necessary?', regra: '<b>needn’t have + participle</b> = you did it, and it was not necessary: she needn’t have called (she did call). <b>Didn’t need to</b> = it was not necessary, and we do not say if we did it. <b>Bound to</b> = sure it will happen. <b>That’ll be</b> = a confident guess.', uso: { p: 'Your turn. Something you did that was not necessary. Say it with needn’t have, and one confident guess with that’ll be.', molde: ['I needn’t have …', 'That’ll be …'], ex: 'I needn’t have taken an umbrella: it did not rain. That’ll be the postman at the door.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_regra', GX_EXPLICA); };

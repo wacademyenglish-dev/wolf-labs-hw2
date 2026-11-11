@@ -11,10 +11,11 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 8, kick: 'ENGLISH FOR DESIGNERS
   nota: 'Behind “make the logo bigger” there is usually a real worry: “people won’t remember us”. Find the worry, then solve it your way.' };
 var L = [
   { k: 'capa', est: null, img: 'capa' },
-  { k: 'multipla', est: 'l', min: 10, img: 'conversa', rot: 'I · Five Client Comments', t: 'Listen to each client. Choose the best answer.', p: 'Play the comment. Read the three answers. Which one is best?' },
-  { k: 'transforma', est: 'f', min: 12, img: 'capa', rot: 'II · From Blunt to Polite', t: 'Same opinion, better words.', p: 'Read the too-direct answer and the clue. Say it the professional way.' },
-  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'III · Say No, Kindly', t: 'Two clients ask for changes you disagree with.', p: 'Read the card, prepare, start the clock, answer.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'IV · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'I · The Client Call', t: 'Disagree, kindly. Some words are lit.', p: 'Read it together. Tap the lit words: why this form? Then disagree with a client of your own.' },
+  { k: 'multipla', est: 'l', min: 10, img: 'conversa', rot: 'II · Five Client Comments', t: 'Listen to each client. Choose the best answer.', p: 'Play the comment. Read the three answers. Which one is best?' },
+  { k: 'transforma', est: 'f', min: 12, img: 'capa', rot: 'III · From Blunt to Polite', t: 'Same opinion, better words.', p: 'Read the too-direct answer and the clue. Say it the professional way.' },
+  { k: 'prova', est: 'o', min: 14, img: 'conversa', rot: 'IV · Say No, Kindly', t: 'Two clients ask for changes you disagree with.', p: 'Read the card, prepare, start the clock, answer.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Lesson 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var MULTIPLA = { rot: 'FIVE CLIENT COMMENTS', fim: 'Thank, ask why, then propose: the client feels heard and the design stays good.', itens: [
@@ -53,3 +54,25 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* DESIGN 08: multipla (áudio) · transforma · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G9 · uma cena curta nova (k: gx) antes de multipla.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'dialogoAceso', titulo: 'The client call. Tap the lit words.',
+  falas: [
+    { q: 'Client', f: 'Can we make the logo bigger?' },
+    { q: 'You', f: '[[I see where you’re coming from]], but a bigger logo [[might make]] the page feel crowded.' },
+    { q: 'Client', f: 'But people won’t remember us.' },
+    { q: 'You', f: '[[What if we]] make it bigger only on the cover?' },
+    { q: 'Client', f: 'I’m not sure it will look better.' },
+    { q: 'You', f: '[[Let me show you]] both versions side by side.' }
+  ],
+  porques: [
+    'First say you understand. Then the but.',
+    'might: a soft word. You say what could happen, not what will.',
+    'What if we + verb: an idea that keeps the client on your side.',
+    'Let me show you …: show, don’t argue.'
+  ],
+  nota: 'Disagree in small steps: <b>I see where you’re coming from, but …</b>, a soft <b>might</b>, <b>What if we …?</b> for an option, and <b>Let me show you …</b>.',
+  uso: { p: 'Your turn. A client wants the text in red. Disagree kindly and offer an option.', molde: ['I see where you’re coming from, but …', 'What if we …?'], ex: 'I see where you’re coming from, but red text might be hard to read. What if we use red only for the title?' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_aceso', GX_EXPLICA); };

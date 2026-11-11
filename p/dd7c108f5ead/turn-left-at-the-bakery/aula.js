@@ -15,13 +15,14 @@ var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'abre', est: 'o', min: 7, img: 'vila', rot: 'I · You and Your Street', t: 'Before the map: your street.', p: 'Pick a card. Nobody is corrected here. Your teacher taps what you used.' },
   { k: 'praca', est: 'o', min: 7, img: 'praca', rot: 'II · The Square', t: 'Kenji is at the bus stop. Where is everything?', p: 'Kenji asks. Look at the square and tell him. Think: where is he?' },
-  { k: 'regra', est: 'f', min: 6, img: 'padaria', rot: 'III · The Rule', t: 'Directions start with the verb. Places have little words.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
-  { k: 'linha', est: 'o', min: 7, img: 'mapa', rot: 'IV · The Red Line', t: 'Grandma’s red line goes to the X. Guide Kenji.', p: 'Your teacher is Kenji. Give the next step at once. The arrow shows where he is looking: his left, his right.' },
-  { k: 'brennan', est: 'o', min: 7, img: 'padaria', rot: 'V · Mrs. Brennan’s Bakery', t: 'Mrs. Brennan is an old friend of Grandma Aiko.', p: 'Your teacher is the baker. Answer her, then ask her the way.' },
-  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'farol', rot: 'VI · Quick Check', t: 'Five quick lines from Gull Harbor.', p: 'Say the whole sentence. Then tap the word.' },
-  { k: 'cidade', est: 'o', min: 7, extra: 1, img: 'vila', rot: 'VII · Your Town', t: 'Your real streets. Give directions like a local.', p: 'Pick a card. Answer about your real town.' },
-  { k: 'papel', est: 'o', min: 7, extra: 1, img: 'caixa', rot: 'VIII · Paper or Phone?', t: 'Paper map or phone map: which is better for a trip?', p: 'You first, then your teacher. Then guide your teacher to your favorite place.' },
-  { k: 'fim', est: 'w', min: 6, img: 'farol', rot: 'IX · From Your Door', t: 'Write the way from your home to a place you love.', p: 'Verb first. Turn at. On your left. Across the street: opposite. The red line watches. It goes to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'mapa', rot: 'III · The Ladder', t: 'One set of directions, five steps.', p: 'Read each step out loud, then go one step up. Notice the little words. Then climb with your own route.' },
+  { k: 'regra', est: 'f', min: 6, img: 'padaria', rot: 'IV · The Rule', t: 'Directions start with the verb. Places have little words.', p: 'Say each wrong line the right way, out loud. Then tap it.' },
+  { k: 'linha', est: 'o', min: 7, img: 'mapa', rot: 'V · The Red Line', t: 'Grandma’s red line goes to the X. Guide Kenji.', p: 'Your teacher is Kenji. Give the next step at once. The arrow shows where he is looking: his left, his right.' },
+  { k: 'brennan', est: 'o', min: 7, img: 'padaria', rot: 'VI · Mrs. Brennan’s Bakery', t: 'Mrs. Brennan is an old friend of Grandma Aiko.', p: 'Your teacher is the baker. Answer her, then ask her the way.' },
+  { k: 'quiz', est: 'f', min: 6, extra: 1, img: 'farol', rot: 'VII · Quick Check', t: 'Five quick lines from Gull Harbor.', p: 'Say the whole sentence. Then tap the word.' },
+  { k: 'cidade', est: 'o', min: 7, extra: 1, img: 'vila', rot: 'VIII · Your Town', t: 'Your real streets. Give directions like a local.', p: 'Pick a card. Answer about your real town.' },
+  { k: 'papel', est: 'o', min: 7, extra: 1, img: 'caixa', rot: 'IX · Paper or Phone?', t: 'Paper map or phone map: which is better for a trip?', p: 'You first, then your teacher. Then guide your teacher to your favorite place.' },
+  { k: 'fim', est: 'w', min: 6, img: 'farol', rot: 'X · From Your Door', t: 'Write the way from your home to a place you love.', p: 'Verb first. Turn at. On your left. Across the street: opposite. The red line watches. It goes to your My notes.' }
 ];
 
 var ABRE = [
@@ -234,3 +235,17 @@ TOQUES['br-viu'] = function () { S.br.viu[S.br.n] = 1; };
 TOQUES['br-prox'] = function () { S.br.n++; };
 TOQUES.qz = function (b, n, v) { S.quiz.esc[n] = +v; };
 TOQUES.cd = function (b, n) { S.cid.sel = n; S.cid.foi[n] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G6 · uma cena curta nova (k: gx) antes de regra.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'escada', titulo: 'Grandma’s map. Climb the directions one step at a time.',
+  degraus: [
+    { r: 'verb', f: '<b>Go</b> straight.', d: 'The verb comes first. No you.' },
+    { r: 'turn', f: '<b>Turn left at</b> the bakery.', d: 'turn left or right + at + a place.' },
+    { r: 'past', f: '<b>Go past</b> the square.', d: 'past = you pass it and keep going.' },
+    { r: 'where', f: 'The lighthouse is <b>on your right</b>.', d: 'on your left · on your right: where it is.' },
+    { r: 'X', f: 'The X is <b>opposite</b> the lighthouse.', d: 'opposite = across the street.' }
+  ],
+  nota: 'Directions start with the <b>verb</b>: go, turn, cross. Add little words for places: <b>at</b>, <b>past</b>, <b>next to</b>, <b>opposite</b>. To say where it is: <b>on your left</b>, <b>on your right</b>.',
+  uso: { p: 'Your turn. Give directions from your door to a shop near you: three steps.', molde: ['Go straight …', 'Turn … at the …', 'It’s on your …'], ex: 'Go straight. Turn right at the bank. The bakery is on your left, next to the pharmacy.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_escada', GX_EXPLICA); };

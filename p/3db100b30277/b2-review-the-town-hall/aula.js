@@ -15,7 +15,8 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'II · The Public Meeting', t: 'Roll, move, answer the voice of the town.', p: 'Your teacher rolls the die and speaks as that person. You answer: agree, concede, disagree.' },
   { k: 'cartao', est: 'w', min: 7, img: 'conversa', rot: 'III · Letter to the Council', t: 'Write to the council.', p: 'Four lines: your position, a concession, a contrast, and a result.' },
   { k: 'cadeira', est: 'o', min: 8, img: 'capa', rot: 'IV · The Hot Seat', t: 'Now YOU ask the questions.', p: 'Your teacher sits in the hot seat. Ask, listen, react.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · Mistake Hunter', t: 'Five lines from the town hall. Each one has a wrong word.', p: 'Tap the wrong word. Say the line right. Then check.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 8: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var PORTAS = [
@@ -62,3 +63,9 @@ var CADEIRA = { itens: [
   { alvo: 'Give me an opinion. I’ll concede and disagree.', dica: 'I think social media is terrible.', resp: 'Granted, it can be toxic. Having said that, it helps small businesses.' },
   { alvo: 'Ask me about a problem in my city and its result.', dica: 'What problem does your city have, and what’s the result?', resp: 'Due to the rain, the roads flood. As a result, buses are always late.' },
   { alvo: 'Ask me about something I can’t do, no matter how hard I try.', dica: 'What can’t you do, no matter how hard you try?', resp: 'No matter how hard I try, I can’t wake up early!' }] };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G14 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'cacaErro', titulo: 'Mistake hunter. The town hall.', toque: 'Advanced learners often say these. Tap the wrong word before you see the answer.', itens: [{ f: 'Despite [[it rained]], we went to the meeting.', r: 'Despite <b>the rain</b>, we went to the meeting.', d: 'despite + a noun or -ing. A full sentence needs although.' }, { f: 'The road closed due to [[there was an accident]].', r: 'The road closed due to <b>an accident</b>.', d: 'due to + a noun.' }, { f: 'Cars are noisy. [[Whereas]] bikes are quiet.', r: 'Cars are noisy, <b>whereas</b> bikes are quiet.', d: 'whereas joins two sentences with a comma. A new sentence starts with In contrast.' }, { f: 'We closed the street [[for that]] people can walk.', r: 'We closed the street <b>so that</b> people can walk.', d: 'The purpose: so that + subject + can.' }, { f: 'As a [[results]], shops lost customers.', r: 'As a <b>result</b>, shops lost customers.', d: 'As a result: one result.' }], nota: '<b>Despite</b> + noun or -ing. <b>Although</b> + a sentence. <b>Due to</b> + noun. <b>So that</b> + subject + can. <b>Whereas</b> joins; <b>in contrast</b> starts again.', uso: { p: 'Your turn. Speak at the town hall: give one cause with due to, and one contrast with whereas.', molde: ['… due to …', '…, whereas …'], ex: 'Traffic is slow due to road works, whereas bikes are fast and cheap.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_caca', GX_EXPLICA); };

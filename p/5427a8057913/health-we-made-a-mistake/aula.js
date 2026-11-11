@@ -13,10 +13,11 @@ var REV = { tipo: 'aula', nivel: 'B1+', unidade: 11, kick: 'ENGLISH FOR HEALTHCA
 var L = [
   { k: 'capa', est: null, img: 'capa' },
   { k: 'video', est: 'l', min: 10, img: 'conversa', rot: 'I · A Medication Error', t: 'A doctor tells a patient about a wrong dose.', p: 'One question before, then the video, then the questions.' },
-  { k: 'erros', est: 'f', min: 8, img: 'capa', rot: 'II · A Bad Apology', t: 'What is wrong with this apology?', p: 'Find each problem, say a better version, then tap.' },
-  { k: 'ordem', est: 'f', min: 7, img: 'conversa', rot: 'III · A Good Disclosure', t: 'Six steps, in order.', p: 'Tap the steps in order. Then say them as one conversation.' },
-  { k: 'prova', est: 'o', min: 12, img: 'capa', rot: 'IV · Your Conversation', t: 'Explain a mistake from your profession.', p: 'Thirty seconds to plan. Then up to 90 seconds.' },
-  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'V · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'capa', rot: 'II · An Honest Apology, in Blocks', t: 'Four blocks for a hard conversation.', p: 'Read the blocks out loud. Notice what each block does. Then build a sentence and say your own.' },
+  { k: 'erros', est: 'f', min: 8, img: 'capa', rot: 'III · A Bad Apology', t: 'What is wrong with this apology?', p: 'Find each problem, say a better version, then tap.' },
+  { k: 'ordem', est: 'f', min: 7, img: 'conversa', rot: 'IV · A Good Disclosure', t: 'Six steps, in order.', p: 'Tap the steps in order. Then say them as one conversation.' },
+  { k: 'prova', est: 'o', min: 12, img: 'capa', rot: 'V · Your Conversation', t: 'Explain a mistake from your profession.', p: 'Thirty seconds to plan. Then up to 90 seconds.' },
+  { k: 'pode', est: 'f', min: 4, img: 'conversa', rot: 'VI · I Can', t: 'Lesson 11: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 
 var VIDEO = { yt: '59AhfANilIg', titulo: 'Explaining a Medication Error - OSCE Guide', fonte: 'GEEKY MEDICS · 5 MIN',
@@ -58,3 +59,18 @@ var PODE = [
 
 /* MECÂNICAS VARIADAS */
 /* SAUDE 11: video · erros · ordem · prova (os dados estão no topo do aula.js) */
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G1 · uma cena curta nova (k: gx) antes de erros.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'blocos', titulo: 'An honest explanation, in blocks. Each block has a job.',
+  frases: [
+    { b: [['I’m afraid', 'WARNING', 'aux'], ['we made a mistake', 'WHAT HAPPENED', 'acao'], ['with your medicine.', 'WHERE', 'onde']], d: 'Say it clearly. No hiding.' },
+    { b: [['I’m very sorry', 'SORRY', 'q'], ['this happened.', 'WHAT', 'o']], d: 'A sincere apology. No blaming a colleague.' },
+    { b: [['We have already', 'DONE', 'quando'], ['checked your blood pressure.', 'WHAT WE DID', 'acao']], d: '“Have + done” says what is already finished.' },
+    { b: [['From now on,', 'WHEN', 'quando'], ['two nurses will check', 'WHAT CHANGES', 'acao'], ['every dose.', 'WHAT', 'o']], d: '“Will” says what changes.' }
+  ],
+  nota: 'Four jobs: <b>what happened</b>, <b>sorry</b>, <b>what we have done</b>, <b>what changes</b>. Have + done for what is finished. Will for what changes from now on.',
+  monta: { p: 'Build the line that says what changes. Then say it.', pecas: [['every dose.', 'WHAT', 'o'], ['will check', 'WHAT CHANGES', 'acao'], ['two nurses', 'WHO', 'quem'], ['From now on,', 'WHEN', 'quando']], ordem: [3, 2, 1, 0] },
+  uso: { p: 'Your turn. A small mistake at your job: say what happened and what you have already done.', molde: ['I’m afraid we …', 'We have already …'], ex: 'I’m afraid we gave you the wrong form. We have already given you the right one.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_blocos', GX_EXPLICA); };

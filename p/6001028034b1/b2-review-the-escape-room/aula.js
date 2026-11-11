@@ -15,7 +15,8 @@ var L = [
   { k: 'tabuleiro', est: 'o', min: 15, img: 'capa', rot: 'II · The Clues', t: 'Roll, move, read the clue. What happened?', p: 'Your teacher rolls the die. Read your clue and speculate, out loud: must have, might have, can’t have.' },
   { k: 'memoria', est: 'l', min: 8, img: 'conversa', rot: 'III · Memory', t: 'Find the pairs.', p: 'Open two cards. Find the pair. Then make a sentence with it.' },
   { k: 'escolha', est: 'o', min: 7, img: 'capa', rot: 'IV · Would You Rather?', t: 'A or B? Choose and say why.', p: 'Choose one. Then say why, with because.' },
-  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'V · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
+  { k: 'gx', est: 'f', min: 4, img: 'conversa', rot: 'V · The Escape Room Card', t: 'Four lines from the captain’s cabin.', p: 'Read one line at a time. Then keep the card in the corner for the last page.' },
+  { k: 'pode', est: 'f', min: 4, img: 'capa', rot: 'VI · I Can', t: 'Unit 4: what can you do now?', p: 'Read each line out loud. Tap the ones you can do. Your teacher confirms.' }
 ];
 var PORTAS = [];
 
@@ -55,3 +56,9 @@ var ESCOLHA = [
   { a: 'go back and say something you didn’t say', b: 'go back and not say something you said', chips: ['I wish I had …', 'I shouldn’t have …'], ex: 'Not say it. I shouldn’t have shouted at my brother.' },
   { a: 'solve an escape room in five minutes', b: 'enjoy it for the full hour', chips: ['I’d rather …', 'It must be …'], ex: 'The full hour. Five minutes must be boring!' },
   { a: 'find an old diary of a stranger', b: 'find an old letter from your grandparents', chips: ['It might have …', 'They must have …'], ex: 'The letter. My grandparents must have had a fascinating life.' }];
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G13 · uma cena curta nova (k: gx) antes de pode.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'regraBolso', titulo: 'Four lines to keep from Unit 4.', rotulo: 'Wishes and guesses', linhas: ['now: I <b>wish</b> I <b>had</b> more time · If only it <b>were</b> Friday', 'the past: I wish I <b>had listened</b> · If only I <b>hadn’t gone</b>', 'regret: I <b>should have</b> stayed · I <b>shouldn’t have</b> said that', 'a guess about the past: he <b>must have</b> left · it <b>can’t have</b> been him · they <b>might have</b> gone by boat'], uso: { p: 'Your turn. The captain is gone. Say what you think happened to him, and one thing you wish.', molde: ['He must have …', 'He can’t have …', 'I wish I …'], ex: 'He must have left at night. He can’t have taken the boat. I wish I had a better clue.' } };
+var R = R || {};
+R.gx = function (c) { return cab(c) + FM.ex('gx_bolso', GX_EXPLICA); };

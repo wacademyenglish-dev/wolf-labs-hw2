@@ -29,15 +29,16 @@ var L = [
   { k: 'capa', est: null, img: 'envelopes' },
   { k: 'abre', est: 'o', min: 6, img: 'monitor', rot: 'I · Your Gears', t: 'Something you do is gear A. What does it turn?', p: 'Pick an activity, then say what changes with it. Do they turn together, or against each other?' },
   { k: 'nave', est: 'o', min: 6, img: 'marte', rot: 'II · Mars, 1997', t: 'The spacecraft landed, sent pictures, then went quiet. It wasn’t broken. It had power.', p: 'Three theories. Pick one and defend it. Then your teacher opens the file.' },
-  { k: 'dois', est: 'f', min: 8, img: 'monitor', rot: 'III · The Two THEs', t: 'Two THEs, one comma. The first amount pulls the second one.', p: 'Link the columns: tap a first half, then the half that finishes it. Read each sentence with a pause at the comma.' },
-  { k: 'vozes', est: 'l', min: 8, img: 'mesa-som', rot: 'IV · Six Voices', t: 'Six people describe a proportion, without the structure.', p: 'Listen. Choose the sentence that says what they mean. Then answer the question about you.' },
-  { k: 'palavras', est: 'l', img: 'monitor', rot: 'V · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
-  { k: 'video', est: 'l', min: 10, img: 'monitor', rot: 'VI · The Machines', t: 'What computers learned about managing time.', p: 'Guess first. Then watch. Then True or Lie.' },
-  { k: 'falas', est: 'l', extra: 1, img: 'monitor', rot: 'VII · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
-  { k: 'debate', est: 'o', min: 10, img: 'envelopes', rot: 'VIII · The Debate', t: 'Five ideas about work and life. Agree, or push back.', p: 'Your teacher reads the idea and takes the other side. Answer in your own words, with two THEs.' },
-  { k: 'vezes', est: 'o', min: 6, img: 'monitor', rot: 'IX · Your Numbers', t: 'Twice as long, three times longer, half as many: the numbers of your life.', p: 'Answer with a real number. The teacher builds the blocks while you talk.' },
-  { k: 'erros', est: 'f', min: 5, extra: 1, img: 'monitor', rot: 'X · Fix the Findings', t: 'Six findings from the lab. Five have a problem.', p: 'Read each one out loud the right way. Then tap it.' },
-  { k: 'leis', est: 'w', min: 6, img: 'marte', rot: 'XI · Your Laws', t: 'Three laws of your life, with two THEs each.', p: 'Write them. Your teacher pushes back on one. They go to your My notes.' }
+  { k: 'gx', est: 'f', min: 4, img: 'monitor', rot: 'III · The Flip', t: 'Two sentences become one. Watch the words move.', p: 'Flip each pair. Notice where the two THEs go. Then flip four on your own.' },
+  { k: 'dois', est: 'f', min: 8, img: 'monitor', rot: 'IV · The Two THEs', t: 'Two THEs, one comma. The first amount pulls the second one.', p: 'Link the columns: tap a first half, then the half that finishes it. Read each sentence with a pause at the comma.' },
+  { k: 'vozes', est: 'l', extra: 1, min: 8, img: 'mesa-som', rot: 'V · Six Voices', t: 'Six people describe a proportion, without the structure.', p: 'Listen. Choose the sentence that says what they mean. Then answer the question about you.' },
+  { k: 'palavras', est: 'l', img: 'monitor', rot: 'VI · The Words', t: 'Five words from the video.', p: 'Learn the words before you watch. Then listen for them: they turn yellow in the video.' },
+  { k: 'video', est: 'l', min: 10, img: 'monitor', rot: 'VII · The Machines', t: 'What computers learned about managing time.', p: 'Guess first. Then watch. Then True or Lie.' },
+  { k: 'falas', est: 'l', extra: 1, img: 'monitor', rot: 'VIII · Line by Line', t: 'Every line of the video, one by one.', p: 'Tap a line. Hear it again. The lines with yellow words open the explanation.' },
+  { k: 'debate', est: 'o', min: 10, img: 'envelopes', rot: 'IX · The Debate', t: 'Five ideas about work and life. Agree, or push back.', p: 'Your teacher reads the idea and takes the other side. Answer in your own words, with two THEs.' },
+  { k: 'vezes', est: 'o', min: 6, img: 'monitor', rot: 'X · Your Numbers', t: 'Twice as long, three times longer, half as many: the numbers of your life.', p: 'Answer with a real number. The teacher builds the blocks while you talk.' },
+  { k: 'erros', est: 'f', min: 5, extra: 1, img: 'monitor', rot: 'XI · Fix the Findings', t: 'Six findings from the lab. Five have a problem.', p: 'Read each one out loud the right way. Then tap it.' },
+  { k: 'leis', est: 'w', min: 6, img: 'marte', rot: 'XII · Your Laws', t: 'Three laws of your life, with two THEs each.', p: 'Write them. Your teacher pushes back on one. They go to your My notes.' }
 ];
 
 var YT = 'iDbdXTMnOmE';
@@ -469,3 +470,23 @@ TOQUES['db-prox'] = function () { S.db.n++; };
 TOQUES['vx-x'] = function (b, n, v) { S.vx.x = +v; };
 TOQUES['vx-prox'] = function () { S.vx = { n: S.vx.n + 1, x: 0 }; };
 TOQUES.ac = function (b, n) { S.ac[n] = 1; };
+
+/* 10/11/2026 · AS EXPLICAÇÕES (kit/formatos3.js) · G7 · uma cena curta nova (k: gx) antes de dois.
+   Explicação 100% em inglês: see → notice → use (o aluno fala ou escreve uma frase dele no fim). */
+var GX_EXPLICA = { formato: 'vira', titulo: 'Two sentences, then one. Watch the words move.',
+  frases: [
+    { de: ['You', 'sleep', '*more', '.', 'You', 'feel', '*better', '.'], para: ['+The', '*more', 'you', 'sleep', ',', '+the', '*better', 'you', 'feel', '.'], d: 'The two changing words move to the front. Both get THE. A comma in the middle.' },
+    { de: ['You', 'practice', '*more', '.', 'You', 'make', '*fewer', 'mistakes', '.'], para: ['+The', '*more', 'you', 'practice', ',', '+the', '*fewer', 'mistakes', 'you', 'make', '.'], d: 'With a noun, the noun goes with its word: the fewer mistakes.' },
+    { de: ['Call', 'me', '*soon', '.', 'It’s', '*good', '.'], para: ['+The', '*sooner', ',', '+the', '*better', '.'], d: 'The short form: no verbs at all. The sooner, the better.' }
+  ],
+  notaBotao: 'What moves?',
+  nota: 'Two THEs and one comma. The changing word goes first in <b>both</b> halves (<b>the more</b>, <b>the -er</b>). The first half pulls the second one.',
+  pergunta: 'Your turn. Flip it out loud, then check.',
+  treino: [
+    { de: 'You read more. You learn more.', r: 'The <b>more</b> you read, the <b>more</b> you learn.' },
+    { de: 'You practice more. You make fewer mistakes.', r: 'The <b>more</b> you practice, the <b>fewer</b> mistakes you make.' },
+    { de: 'The deadline is close. You feel more stress.', r: 'The <b>closer</b> the deadline, the <b>more</b> stress you feel.' },
+    { de: 'You wake up early. You feel better.', r: 'The <b>earlier</b> you wake up, the <b>better</b> you feel.' }
+  ],
+  uso: { p: 'Your turn. One law of your life, with two THEs.', molde: ['The more I …, the more …', 'The …er I …, the …er I …'], ex: 'The more I work, the less I sleep. The earlier I leave, the calmer I am.' } };
+R.gx = function (c) { return cab(c) + FM.ex('gx_vira', GX_EXPLICA); };
